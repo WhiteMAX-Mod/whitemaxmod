@@ -1,61 +1,142 @@
-.class public final Loxi;
-.super Liwi;
+.class public abstract Loxi;
+.super Lfxi;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic c:Lqxi;
-
-
-# direct methods
-.method public constructor <init>(Lqxi;)V
-    .locals 0
-
-    iput-object p1, p0, Loxi;->c:Lqxi;
-
-    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
-
-    return-void
-.end method
-
-
 # virtual methods
-.method public final bridge synthetic get(I)Ljava/lang/Object;
-    .locals 2
+.method public final T(ILandroid/os/Parcel;Landroid/os/Parcel;)Z
+    .locals 3
 
-    iget-object v0, p0, Loxi;->c:Lqxi;
+    packed-switch p1, :pswitch_data_0
 
-    iget v1, v0, Lqxi;->o:I
+    :pswitch_0
+    const/4 p1, 0x0
 
-    invoke-static {p1, v1}, Lqaj;->c(II)V
+    return p1
 
-    iget-object v0, v0, Lqxi;->d:[Ljava/lang/Object;
+    :pswitch_1
+    sget-object p1, Ldyi;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    add-int/2addr p1, p1
+    invoke-static {p2, p1}, Lnxi;->a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
 
-    aget-object v1, v0, p1
+    move-result-object p1
 
-    invoke-static {v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+    check-cast p1, Ldyi;
 
-    add-int/lit8 p1, p1, 0x1
+    invoke-static {p2}, Lnxi;->b(Landroid/os/Parcel;)V
 
-    aget-object p1, v0, p1
+    goto :goto_0
 
-    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+    :pswitch_2
+    sget-object p1, Lkyi;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    new-instance v0, Ljava/util/AbstractMap$SimpleImmutableEntry;
+    invoke-static {p2, p1}, Lnxi;->a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
 
-    invoke-direct {v0, v1, p1}, Ljava/util/AbstractMap$SimpleImmutableEntry;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    move-result-object p1
 
-    return-object v0
-.end method
+    check-cast p1, Lkyi;
 
-.method public final size()I
-    .locals 1
+    invoke-static {p2}, Lnxi;->b(Landroid/os/Parcel;)V
 
-    iget-object v0, p0, Loxi;->c:Lqxi;
+    move-object p2, p0
 
-    iget v0, v0, Lqxi;->o:I
+    check-cast p2, Lsxi;
 
-    return v0
+    new-instance v0, Lnlg;
+
+    const/4 v1, 0x6
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, p2, p1, v2, v1}, Lnlg;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
+
+    iget-object p1, p2, Lsxi;->e:Landroid/os/Handler;
+
+    invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    goto :goto_0
+
+    :pswitch_3
+    sget-object p1, Lcom/google/android/gms/common/api/Status;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-static {p2, p1}, Lnxi;->a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/google/android/gms/common/api/Status;
+
+    sget-object p1, Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-static {p2, p1}, Lnxi;->a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;
+
+    invoke-static {p2}, Lnxi;->b(Landroid/os/Parcel;)V
+
+    goto :goto_0
+
+    :pswitch_4
+    sget-object p1, Lcom/google/android/gms/common/api/Status;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-static {p2, p1}, Lnxi;->a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/google/android/gms/common/api/Status;
+
+    invoke-static {p2}, Lnxi;->b(Landroid/os/Parcel;)V
+
+    goto :goto_0
+
+    :pswitch_5
+    sget-object p1, Lcom/google/android/gms/common/api/Status;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-static {p2, p1}, Lnxi;->a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/google/android/gms/common/api/Status;
+
+    invoke-static {p2}, Lnxi;->b(Landroid/os/Parcel;)V
+
+    goto :goto_0
+
+    :pswitch_6
+    sget-object p1, Lrw3;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-static {p2, p1}, Lnxi;->a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
+
+    move-result-object p1
+
+    check-cast p1, Lrw3;
+
+    sget-object p1, Lcxi;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-static {p2, p1}, Lnxi;->a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
+
+    move-result-object p1
+
+    check-cast p1, Lcxi;
+
+    invoke-static {p2}, Lnxi;->b(Landroid/os/Parcel;)V
+
+    :goto_0
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :pswitch_data_0
+    .packed-switch 0x3
+        :pswitch_6
+        :pswitch_5
+        :pswitch_0
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+    .end packed-switch
 .end method

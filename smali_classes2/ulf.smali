@@ -1,47 +1,156 @@
-.class public abstract Lulf;
-.super Lylf;
+.class public final Lulf;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/media/MediaPlayer$OnPreparedListener;
 
 
 # instance fields
-.field public final h:Ljava/math/BigInteger;
+.field public final synthetic a:Ljava/lang/String;
 
-.field public final i:Ljava/math/BigInteger;
+.field public final synthetic b:Lbmf;
 
-.field public final j:Ljava/math/BigInteger;
+.field public final synthetic c:I
 
-.field public final k:J
+.field public final synthetic d:Ljava/lang/Integer;
 
 
 # direct methods
-.method public constructor <init>(IJLjava/lang/String;Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigInteger;JLjava/lang/String;La2c;)V
-    .locals 8
+.method public constructor <init>(Ljava/lang/String;Lbmf;ILjava/lang/Integer;)V
+    .locals 0
 
-    const/4 v2, 0x1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-object v0, p0
+    iput-object p1, p0, Lulf;->a:Ljava/lang/String;
 
-    move v1, p1
+    iput-object p2, p0, Lulf;->b:Lbmf;
 
-    move-wide v3, p2
+    iput p3, p0, Lulf;->c:I
 
-    move-object v5, p4
+    iput-object p4, p0, Lulf;->d:Ljava/lang/Integer;
 
-    move-object/from16 v6, p10
+    return-void
+.end method
 
-    move-object/from16 v7, p11
 
-    invoke-direct/range {v0 .. v7}, Lylf;-><init>(IIJLjava/lang/String;Ljava/lang/String;La2c;)V
+# virtual methods
+.method public final onPrepared(Landroid/media/MediaPlayer;)V
+    .locals 7
 
-    iput-object p5, p0, Lulf;->h:Ljava/math/BigInteger;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iput-object p6, p0, Lulf;->i:Ljava/math/BigInteger;
+    const-string v1, "Playback("
 
-    iput-object p7, p0, Lulf;->j:Ljava/math/BigInteger;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-wide/from16 p1, p8
+    iget-object v2, p0, Lulf;->a:Ljava/lang/String;
 
-    iput-wide p1, p0, Lulf;->k:J
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v3, ") | player prepared"
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v3, "SimpleRingtonePlayer"
+
+    invoke-static {v3, v0}, Ltej;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lulf;->b:Lbmf;
+
+    iget v4, v0, Lbmf;->s0:F
+
+    invoke-virtual {v0}, Lbmf;->d()Z
+
+    move-result v5
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v6, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ") | requesting audio focus after player start, volume:"
+
+    invoke-virtual {v6, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v1, " isPlaying:"
+
+    invoke-virtual {v6, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v3, v1}, Ltej;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Lbmf;->h()Liz5;
+
+    move-result-object v1
+
+    check-cast v1, Lk06;
+
+    invoke-virtual {v1}, Lk06;->t()J
+
+    move-result-wide v1
+
+    const-wide/16 v3, 0x2
+
+    cmp-long v1, v1, v3
+
+    if-eqz v1, :cond_2
+
+    iget-object v1, v0, Lbmf;->o:Lv50;
+
+    iget-object v2, p0, Lulf;->d:Ljava/lang/Integer;
+
+    if-eqz v2, :cond_0
+
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0}, Lbmf;->h()Liz5;
+
+    move-result-object v0
+
+    check-cast v0, Lk06;
+
+    invoke-virtual {v0}, Lk06;->t()J
+
+    move-result-wide v2
+
+    const-wide/16 v4, 0x1
+
+    cmp-long v0, v2, v4
+
+    if-nez v0, :cond_1
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v0, 0x2
+
+    :goto_0
+    iget v2, p0, Lulf;->c:I
+
+    invoke-virtual {v1, v2, v0}, Lv50;->d(II)V
+
+    :cond_2
+    invoke-virtual {p1}, Landroid/media/MediaPlayer;->start()V
 
     return-void
 .end method

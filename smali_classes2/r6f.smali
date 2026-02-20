@@ -1,105 +1,167 @@
 .class public final Lr6f;
-.super Ltff;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ls6f;
+.implements Lw7f;
 
-# static fields
-.field public static final b:Lr6f;
+
+# instance fields
+.field public final X:Lv7f;
+
+.field public final Y:I
+
+.field public final a:Lhpg;
+
+.field public final b:J
+
+.field public final c:I
+
+.field public final d:Lhpg;
+
+.field public final o:Lt7f;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lhpg;JILgpg;Ls7f;I)V
+    .locals 2
 
-    new-instance v0, Lr6f;
+    and-int/lit8 v0, p7, 0x10
 
-    invoke-direct {v0}, Ltff;-><init>()V
+    const/4 v1, 0x0
 
-    sput-object v0, Lr6f;->b:Lr6f;
+    if-eqz v0, :cond_0
+
+    move-object p5, v1
+
+    :cond_0
+    and-int/lit8 v0, p7, 0x20
+
+    if-eqz v0, :cond_1
+
+    move-object p6, v1
+
+    :cond_1
+    and-int/lit8 p7, p7, 0x40
+
+    if-eqz p7, :cond_2
+
+    sget-object p7, Lv7f;->b:Lv7f;
+
+    goto :goto_0
+
+    :cond_2
+    sget-object p7, Lv7f;->d:Lv7f;
+
+    :goto_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lr6f;->a:Lhpg;
+
+    iput-wide p2, p0, Lr6f;->b:J
+
+    iput p4, p0, Lr6f;->c:I
+
+    iput-object p5, p0, Lr6f;->d:Lhpg;
+
+    iput-object p6, p0, Lr6f;->o:Lt7f;
+
+    iput-object p7, p0, Lr6f;->X:Lv7f;
+
+    sget p1, Lqkb;->f:I
+
+    iput p1, p0, Lr6f;->Y:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c()Lmm4;
+.method public final a()I
     .locals 1
 
-    sget-object v0, Lmm4;->c:Lmm4;
+    iget v0, p0, Lr6f;->c:I
 
-    sget-object v0, Lmm4;->c:Lmm4;
+    return v0
+.end method
+
+.method public final b()Lhpg;
+    .locals 1
+
+    iget-object v0, p0, Lr6f;->d:Lhpg;
 
     return-object v0
 .end method
 
-.method public final d(Landroid/os/Bundle;)Lnm4;
-    .locals 10
+.method public final c()Lk7f;
+    .locals 1
 
-    const-string v0, "msg_id"
+    const/4 v0, 0x0
 
-    invoke-static {v0, p1}, Lomj;->k(Ljava/lang/String;Landroid/os/Bundle;)J
-
-    move-result-wide v2
-
-    const-string v0, "attach_id"
-
-    invoke-static {v0, p1}, Lomj;->k(Ljava/lang/String;Landroid/os/Bundle;)J
-
-    move-result-wide v4
-
-    const-string v0, "local_attach_id"
-
-    invoke-static {v0, p1}, Lomj;->m(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/String;
-
-    move-result-object v6
-
-    const-string v0, "cause_ordinal"
-
-    invoke-static {v0, p1}, Lomj;->j(Ljava/lang/String;Landroid/os/Bundle;)I
-
-    move-result v7
-
-    const-string v0, "snack_bot_margin"
-
-    invoke-static {v0, p1}, Lomj;->e(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/Integer;
-
-    move-result-object v8
-
-    const-string v0, "force_dark"
-
-    invoke-static {v0, p1}, Lomj;->d(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/Boolean;
-
-    move-result-object v9
-
-    new-instance v1, Lq6f;
-
-    invoke-direct/range {v1 .. v9}, Lq6f;-><init>(JJLjava/lang/String;ILjava/lang/Integer;Ljava/lang/Boolean;)V
-
-    return-object v1
+    return-object v0
 .end method
 
-.method public final e(Lsff;)V
-    .locals 4
+.method public final d()Lhpg;
+    .locals 1
 
-    const-string v0, "local_attach_id"
+    const/4 v0, 0x0
 
-    const-string v1, "cause_ordinal"
+    return-object v0
+.end method
 
-    const-string v2, "msg_id"
+.method public final e()Lt7f;
+    .locals 1
 
-    const-string v3, "attach_id"
+    iget-object v0, p0, Lr6f;->o:Lt7f;
 
-    filled-new-array {v2, v3, v0, v1}, [Ljava/lang/String;
+    return-object v0
+.end method
 
-    move-result-object v0
+.method public final f()Lt88;
+    .locals 1
 
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
-    const/16 v2, 0xe
+    return-object v0
+.end method
 
-    const-string v3, ":dialogs/share-media"
+.method public final getItemId()J
+    .locals 2
 
-    invoke-static {p1, v3, v0, v1, v2}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
+    iget-wide v0, p0, Lr6f;->b:J
 
-    return-void
+    return-wide v0
+.end method
+
+.method public final getTitle()Lhpg;
+    .locals 1
+
+    iget-object v0, p0, Lr6f;->a:Lhpg;
+
+    return-object v0
+.end method
+
+.method public final getType()Lv7f;
+    .locals 1
+
+    iget-object v0, p0, Lr6f;->X:Lv7f;
+
+    return-object v0
+.end method
+
+.method public final m()I
+    .locals 1
+
+    iget v0, p0, Lr6f;->Y:I
+
+    return v0
+.end method
+
+.method public final t()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
 .end method

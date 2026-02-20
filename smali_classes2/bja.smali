@@ -1,23 +1,36 @@
-.class public final Lbja;
+.class public final synthetic Lbja;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljt6;
+
 
 # instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:Ljava/io/File;
+.field public final synthetic a:Z
 
 
 # direct methods
-.method public constructor <init>(Ljava/io/File;Ljava/lang/String;)V
+.method public synthetic constructor <init>(Z)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lbja;->a:Ljava/lang/String;
-
-    iput-object p1, p0, Lbja;->b:Ljava/io/File;
+    iput-boolean p1, p0, Lbja;->a:Z
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    check-cast p1, Ldl8;
+
+    iget-boolean v0, p0, Lbja;->a:Z
+
+    iput-boolean v0, p1, Ldl8;->n:Z
+
+    return-object p1
 .end method

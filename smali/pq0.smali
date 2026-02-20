@@ -1,217 +1,102 @@
-.class public abstract synthetic Lpq0;
+.class public final Lpq0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/content/DialogInterface$OnClickListener;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final b:Ljava/lang/Object;
+
 
 # direct methods
-.method public static bridge synthetic a(Landroid/graphics/Gainmap;)F
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/graphics/Gainmap;->getDisplayRatioForFullHdr()F
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static bridge synthetic b(Landroid/content/Context;)I
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/content/Context;->getDeviceId()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static bridge synthetic c(Landroid/content/Context;I)Landroid/content/Context;
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/content/Context;->createDeviceContext(I)Landroid/content/Context;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic d(Landroid/graphics/Gainmap;)Landroid/graphics/Bitmap;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/graphics/Gainmap;->getGainmapContents()Landroid/graphics/Bitmap;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic e(Landroid/graphics/Bitmap;)Landroid/graphics/Gainmap;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/graphics/Bitmap;->getGainmap()Landroid/graphics/Gainmap;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic f(Ljava/lang/Object;)Landroid/graphics/Gainmap;
-    .locals 0
-
-    check-cast p0, Landroid/graphics/Gainmap;
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic g()Landroid/hardware/camera2/CameraCharacteristics$Key;
-    .locals 1
-
-    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->CONTROL_AVAILABLE_SETTINGS_OVERRIDES:Landroid/hardware/camera2/CameraCharacteristics$Key;
-
-    return-object v0
-.end method
-
-.method public static bridge synthetic h()Landroid/hardware/camera2/CaptureRequest$Key;
-    .locals 1
-
-    sget-object v0, Landroid/hardware/camera2/CaptureRequest;->CONTROL_SETTINGS_OVERRIDE:Landroid/hardware/camera2/CaptureRequest$Key;
-
-    return-object v0
-.end method
-
-.method public static bridge synthetic i(Lkotlinx/coroutines/internal/ClassValueCtorCache$cache$1;Ljava/lang/Class;)Ljava/lang/Object;
-    .locals 0
-
-    invoke-virtual {p0, p1}, Ljava/lang/ClassValue;->get(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic j()V
+.method public constructor <init>(Landroidx/biometric/BiometricViewModel;)V
     .locals 1
 
     const/4 v0, 0x0
 
-    invoke-static {v0}, Ljava/util/concurrent/locks/LockSupport;->setCurrentBlocker(Ljava/lang/Object;)V
+    iput v0, p0, Lpq0;->a:I
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    new-instance v0, Ljava/lang/ref/WeakReference;
+
+    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object v0, p0, Lpq0;->b:Ljava/lang/Object;
 
     return-void
 .end method
 
-.method public static bridge synthetic k(Landroid/media/AudioTrack$Builder;Landroid/content/Context;)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/media/AudioTrack$Builder;->setContext(Landroid/content/Context;)Landroid/media/AudioTrack$Builder;
-
-    return-void
-.end method
-
-.method public static bridge synthetic l(Lone/me/android/deeplink/LinkInterceptorActivity;)V
+.method public constructor <init>(Landroidx/biometric/FingerprintDialogFragment;)V
     .locals 1
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0, v0, v0}, Landroid/app/Activity;->overrideActivityTransition(III)V
-
-    return-void
-.end method
-
-.method public static bridge synthetic m(Lone/me/sdk/concurrent/LinkedTransferQueue34;)V
-    .locals 0
-
-    invoke-static {p0}, Ljava/util/concurrent/locks/LockSupport;->setCurrentBlocker(Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public static bridge synthetic n(Landroid/app/NotificationManager;)Z
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/app/NotificationManager;->canUseFullScreenIntent()Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static bridge synthetic o(Landroid/graphics/Bitmap;)Z
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/graphics/Bitmap;->hasGainmap()Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static bridge synthetic p(Landroid/graphics/Gainmap;)[F
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/graphics/Gainmap;->getGamma()[F
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic q(Landroid/graphics/Gainmap;)F
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/graphics/Gainmap;->getMinDisplayRatioForHdrTransition()F
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static bridge synthetic r(Lone/me/android/deeplink/LinkInterceptorActivity;)V
-    .locals 2
 
     const/4 v0, 0x1
 
-    const/4 v1, 0x0
+    iput v0, p0, Lpq0;->a:I
 
-    invoke-virtual {p0, v0, v1, v1}, Landroid/app/Activity;->overrideActivityTransition(III)V
+    .line 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lpq0;->b:Ljava/lang/Object;
 
     return-void
 .end method
 
-.method public static bridge synthetic s(Landroid/graphics/Gainmap;)[F
+
+# virtual methods
+.method public final onClick(Landroid/content/DialogInterface;I)V
     .locals 0
 
-    invoke-virtual {p0}, Landroid/graphics/Gainmap;->getRatioMax()[F
+    iget p1, p0, Lpq0;->a:I
 
-    move-result-object p0
+    packed-switch p1, :pswitch_data_0
 
-    return-object p0
-.end method
+    iget-object p1, p0, Lpq0;->b:Ljava/lang/Object;
 
-.method public static bridge synthetic t(Landroid/graphics/Gainmap;)[F
-    .locals 0
+    check-cast p1, Landroidx/biometric/FingerprintDialogFragment;
 
-    invoke-virtual {p0}, Landroid/graphics/Gainmap;->getRatioMin()[F
+    iget-object p1, p1, Landroidx/biometric/FingerprintDialogFragment;->z1:Landroidx/biometric/BiometricViewModel;
 
-    move-result-object p0
+    const/4 p2, 0x1
 
-    return-object p0
-.end method
+    invoke-virtual {p1, p2}, Landroidx/biometric/BiometricViewModel;->g(Z)V
 
-.method public static bridge synthetic u(Landroid/graphics/Gainmap;)[F
-    .locals 0
+    return-void
 
-    invoke-virtual {p0}, Landroid/graphics/Gainmap;->getEpsilonHdr()[F
+    :pswitch_0
+    iget-object p1, p0, Lpq0;->b:Ljava/lang/Object;
 
-    move-result-object p0
+    check-cast p1, Ljava/lang/ref/WeakReference;
 
-    return-object p0
-.end method
+    invoke-virtual {p1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
-.method public static bridge synthetic v(Landroid/graphics/Gainmap;)[F
-    .locals 0
+    move-result-object p2
 
-    invoke-virtual {p0}, Landroid/graphics/Gainmap;->getEpsilonSdr()[F
+    if-eqz p2, :cond_0
 
-    move-result-object p0
+    invoke-virtual {p1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
-    return-object p0
+    move-result-object p1
+
+    check-cast p1, Landroidx/biometric/BiometricViewModel;
+
+    const/4 p2, 0x1
+
+    invoke-virtual {p1, p2}, Landroidx/biometric/BiometricViewModel;->g(Z)V
+
+    :cond_0
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

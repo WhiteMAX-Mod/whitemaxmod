@@ -1,60 +1,86 @@
-.class public final synthetic Lgei;
-.super Ljava/lang/Object;
+.class public final Lgei;
+.super Lpdg;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/function/Consumer;
+.implements Lys6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Ljava/lang/String;
 
-.field public final synthetic b:Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;
+.field public final synthetic o:Lrle;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;I)V
+.method public constructor <init>(Lrle;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lgei;->a:I
+    iput-object p1, p0, Lgei;->o:Lrle;
 
-    iput-object p1, p0, Lgei;->b:Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;
+    iput-object p2, p0, Lgei;->X:Ljava/lang/String;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lgei;->a:I
+    check-cast p1, Lnd4;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object v0, p0, Lgei;->b:Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;
+    invoke-virtual {p0, p1, p2}, Lgei;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    check-cast p1, Lhei;
+    move-result-object p1
 
-    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->a(Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;Lhei;)V
+    check-cast p1, Lgei;
 
-    return-void
+    sget-object p2, Lmah;->a:Lmah;
 
-    :pswitch_0
-    iget-object v0, p0, Lgei;->b:Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;
+    invoke-virtual {p1, p2}, Lgei;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    check-cast p1, Lhei;
+    return-object p2
+.end method
 
-    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->d(Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;Lhei;)V
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    return-void
+    new-instance p1, Lgei;
 
-    nop
+    iget-object v0, p0, Lgei;->o:Lrle;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    iget-object v1, p0, Lgei;->X:Ljava/lang/String;
+
+    invoke-direct {p1, v0, v1, p2}, Lgei;-><init>(Lrle;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    new-instance p1, Lupb;
+
+    const/4 v0, 0x1
+
+    invoke-direct {p1, v0}, Lupb;-><init>(I)V
+
+    iget-object v0, p0, Lgei;->o:Lrle;
+
+    iget-object v1, p0, Lgei;->X:Ljava/lang/String;
+
+    invoke-virtual {v0, v1, p1}, Landroid/webkit/WebView;->evaluateJavascript(Ljava/lang/String;Landroid/webkit/ValueCallback;)V
+
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
 .end method

@@ -1,139 +1,303 @@
-.class public abstract Lpib;
-.super Ljava/lang/Object;
+.class public final Lpib;
+.super Ld3;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
+# instance fields
+.field public final synthetic c:I
 
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
-
-.field public static final s:I
-
-.field public static final t:I
-
-.field public static final u:I
+.field public final synthetic d:Lqib;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lqib;I)V
+    .locals 0
 
-    sget v0, Loed;->oneme_setting_item_about:I
+    iput p2, p0, Lpib;->c:I
 
-    sput v0, Lpib;->a:I
+    iput-object p1, p0, Lpib;->d:Lqib;
 
-    sget v0, Loed;->oneme_setting_item_appearance:I
+    const/16 p1, 0xd
 
-    sput v0, Lpib;->b:I
+    packed-switch p2, :pswitch_data_0
 
-    sget v0, Loed;->oneme_setting_item_battery:I
+    sget-object p2, Lhib;->a:Lhib;
 
-    sput v0, Lpib;->c:I
-
-    sget v0, Loed;->oneme_setting_item_devices:I
-
-    sput v0, Lpib;->d:I
-
-    sget v0, Loed;->oneme_setting_item_folders:I
-
-    sput v0, Lpib;->e:I
-
-    sget v0, Loed;->oneme_setting_item_invite_friends_title:I
-
-    sput v0, Lpib;->f:I
-
-    sget v0, Loed;->oneme_setting_item_messages:I
-
-    sput v0, Lpib;->g:I
-
-    sget v0, Loed;->oneme_setting_item_notification:I
-
-    sput v0, Lpib;->h:I
-
-    sget v0, Loed;->oneme_setting_item_notification_and_sound:I
-
-    sput v0, Lpib;->i:I
-
-    sget v0, Loed;->oneme_setting_item_privacy:I
-
-    sput v0, Lpib;->j:I
-
-    sget v0, Loed;->oneme_setting_item_storage:I
-
-    sput v0, Lpib;->k:I
-
-    sget v0, Loed;->oneme_setting_item_support:I
-
-    sput v0, Lpib;->l:I
-
-    sget v0, Loed;->oneme_settings_cant_open_camera:I
-
-    sput v0, Lpib;->m:I
-
-    sget v0, Loed;->oneme_settings_change_avatar_error:I
-
-    sput v0, Lpib;->n:I
-
-    sget v0, Loed;->oneme_settings_change_avatar_success:I
-
-    sput v0, Lpib;->o:I
-
-    sget v0, Loed;->oneme_settings_change_avatar_title:I
-
-    sput v0, Lpib;->p:I
-
-    sget v0, Loed;->oneme_settings_change_avatar_upload_from_camera:I
-
-    sput v0, Lpib;->q:I
-
-    sget v0, Loed;->oneme_settings_change_avatar_upload_from_gallery:I
-
-    sput v0, Lpib;->r:I
-
-    sget v0, Loed;->oneme_settings_change_avatar_upload_from_neuroavatars:I
-
-    sput v0, Lpib;->s:I
-
-    sget v0, Loed;->oneme_settings_link_copied_snackbar_title:I
-
-    sput v0, Lpib;->t:I
-
-    sget v0, Loed;->oneme_settings_phonenumber_copied_snackbar_title:I
-
-    sput v0, Lpib;->u:I
+    invoke-direct {p0, p1, p2}, Ld3;-><init>(ILjava/lang/Object;)V
 
     return-void
+
+    :pswitch_0
+    sget-object p2, Lnib;->a:Lnib;
+
+    invoke-direct {p0, p1, p2}, Ld3;-><init>(ILjava/lang/Object;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+
+# virtual methods
+.method public final Y(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 2
+
+    iget v0, p0, Lpib;->c:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-static {p1, p2}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    check-cast p2, Loib;
+
+    check-cast p1, Loib;
+
+    sget-object p1, Lkib;->a:Lkib;
+
+    invoke-static {p2, p1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    iget-object v0, p0, Lpib;->d:Lqib;
+
+    if-eqz p1, :cond_0
+
+    const/16 p1, 0x28
+
+    int-to-float p1, p1
+
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object p2
+
+    iget p2, p2, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr p1, p2
+
+    invoke-static {p1}, Lmhj;->f(F)I
+
+    move-result p1
+
+    invoke-virtual {v0, p1}, Ldf3;->setIndicatorSize(I)V
+
+    const/4 p1, 0x4
+
+    int-to-float p1, p1
+
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object p2
+
+    iget p2, p2, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr p1, p2
+
+    invoke-static {p1}, Lmhj;->f(F)I
+
+    move-result p1
+
+    invoke-virtual {v0, p1}, Ldf3;->setTrackThickness(I)V
+
+    goto :goto_0
+
+    :cond_0
+    sget-object p1, Llib;->a:Llib;
+
+    invoke-static {p2, p1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    const/16 p1, 0x18
+
+    int-to-float p1, p1
+
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object p2
+
+    iget p2, p2, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr p1, p2
+
+    invoke-static {p1}, Lmhj;->f(F)I
+
+    move-result p1
+
+    invoke-virtual {v0, p1}, Ldf3;->setIndicatorSize(I)V
+
+    const/4 p1, 0x2
+
+    int-to-float p1, p1
+
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object p2
+
+    iget p2, p2, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr p1, p2
+
+    invoke-static {p1}, Lmhj;->f(F)I
+
+    move-result p1
+
+    invoke-virtual {v0, p1}, Ldf3;->setTrackThickness(I)V
+
+    goto :goto_0
+
+    :cond_1
+    sget-object p1, Lmib;->a:Lmib;
+
+    invoke-static {p2, p1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    const/16 p1, 0x10
+
+    int-to-float p1, p1
+
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object p2
+
+    iget p2, p2, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr p1, p2
+
+    invoke-static {p1}, Lmhj;->f(F)I
+
+    move-result p1
+
+    invoke-virtual {v0, p1}, Ldf3;->setIndicatorSize(I)V
+
+    const/4 p1, 0x1
+
+    int-to-float p1, p1
+
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object p2
+
+    iget p2, p2, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr p1, p2
+
+    invoke-static {p1}, Lmhj;->f(F)I
+
+    move-result p1
+
+    invoke-virtual {v0, p1}, Ldf3;->setTrackThickness(I)V
+
+    goto :goto_0
+
+    :cond_2
+    sget-object p1, Lnib;->a:Lnib;
+
+    invoke-static {p2, p1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_3
+
+    :goto_0
+    invoke-virtual {v0}, Landroid/view/View;->requestLayout()V
+
+    invoke-virtual {v0}, Lsm0;->invalidate()V
+
+    goto :goto_1
+
+    :cond_3
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
+
+    :cond_4
+    :goto_1
+    return-void
+
+    :pswitch_0
+    invoke-static {p1, p2}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_5
+
+    check-cast p2, Ljib;
+
+    check-cast p1, Ljib;
+
+    sget-object p1, Lfe3;->t0:Ltea;
+
+    iget-object v0, p0, Lpib;->d:Lqib;
+
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-virtual {p1, v1}, Ltea;->n(Landroid/content/Context;)Lfe3;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lfe3;->j()Llob;
+
+    move-result-object p1
+
+    invoke-static {p2, p1}, Lqib;->d(Ljib;Llob;)I
+
+    move-result p1
+
+    filled-new-array {p1}, [I
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Lsm0;->setIndicatorColor([I)V
+
+    :cond_5
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

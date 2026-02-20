@@ -1,78 +1,162 @@
 .class public final Ljt9;
-.super Lp6g;
+.super Lmt9;
 .source "SourceFile"
-
-# interfaces
-.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/sdk/messagewrite/MessageWriteWidget;
+.field public final a:Z
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final b:I
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/MessageWriteWidget;)V
+.method public constructor <init>(ZI)V
     .locals 0
 
-    iput-object p2, p0, Ljt9;->X:Lone/me/sdk/messagewrite/MessageWriteWidget;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    iput-boolean p1, p0, Ljt9;->a:Z
 
-    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput p2, p0, Ljt9;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Ljt9;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Ljt9;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Ljt9;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
-    new-instance v0, Ljt9;
+    if-ne p0, p1, :cond_0
 
-    iget-object v1, p0, Ljt9;->X:Lone/me/sdk/messagewrite/MessageWriteWidget;
+    goto :goto_1
 
-    invoke-direct {v0, p2, v1}, Ljt9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/MessageWriteWidget;)V
+    :cond_0
+    instance-of v0, p1, Ljt9;
 
-    iput-object p1, v0, Ljt9;->o:Ljava/lang/Object;
+    if-nez v0, :cond_1
 
-    return-object v0
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Ljt9;
+
+    iget-boolean v0, p0, Ljt9;->a:Z
+
+    iget-boolean v1, p1, Ljt9;->a:Z
+
+    if-eq v0, v1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget v0, p0, Ljt9;->b:I
+
+    iget p1, p1, Ljt9;->b:I
+
+    if-eq v0, p1, :cond_3
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_3
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final hashCode()I
+    .locals 2
 
-    iget-object v0, p0, Ljt9;->o:Ljava/lang/Object;
+    iget-boolean v0, p0, Ljt9;->a:Z
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    check-cast v0, Lmr9;
+    move-result v0
 
-    iget-object p1, p0, Ljt9;->X:Lone/me/sdk/messagewrite/MessageWriteWidget;
+    mul-int/lit8 v0, v0, 0x1f
 
-    invoke-static {p1, v0}, Lone/me/sdk/messagewrite/MessageWriteWidget;->A0(Lone/me/sdk/messagewrite/MessageWriteWidget;Lmr9;)V
+    iget v1, p0, Ljt9;->b:I
 
-    sget-object p1, Lb3h;->a:Lb3h;
+    invoke-static {v1}, Ly12;->t(I)I
 
-    return-object p1
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ExpandEmoji(expand="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-boolean v1, p0, Ljt9;->a:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", collapseType="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/4 v1, 0x1
+
+    iget v2, p0, Ljt9;->b:I
+
+    if-eq v2, v1, :cond_3
+
+    const/4 v1, 0x2
+
+    if-eq v2, v1, :cond_2
+
+    const/4 v1, 0x3
+
+    if-eq v2, v1, :cond_1
+
+    const/4 v1, 0x4
+
+    if-eq v2, v1, :cond_0
+
+    const-string v1, "null"
+
+    goto :goto_0
+
+    :cond_0
+    const-string v1, "BY_MEDIA_KEYBOARD"
+
+    goto :goto_0
+
+    :cond_1
+    const-string v1, "BY_EMOJI_STATE"
+
+    goto :goto_0
+
+    :cond_2
+    const-string v1, "BY_FOCUS"
+
+    goto :goto_0
+
+    :cond_3
+    const-string v1, "BY_DEFAULT"
+
+    :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

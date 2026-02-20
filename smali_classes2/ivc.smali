@@ -1,48 +1,45 @@
 .class public final Livc;
-.super Lo84;
+.super Lvl0;
+.source "SourceFile"
 
 
 # instance fields
-.field public final synthetic X:Lg4a;
-
-.field public synthetic d:Ljava/lang/Object;
-
-.field public o:I
+.field public final b:Lk24;
 
 
 # direct methods
-.method public constructor <init>(Lg4a;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(JLk24;)V
     .locals 0
 
-    iput-object p1, p0, Livc;->X:Lg4a;
+    invoke-direct {p0, p1, p2}, Lvl0;-><init>(J)V
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p3, p0, Livc;->b:Lk24;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    iput-object p1, p0, Livc;->d:Ljava/lang/Object;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget p1, p0, Livc;->o:I
+    const-string v1, "ProfileEvent{contactInfo="
 
-    const/high16 v0, -0x80000000
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    or-int/2addr p1, v0
+    iget-object v1, p0, Livc;->b:Lk24;
 
-    iput p1, p0, Livc;->o:I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    iget-object p1, p0, Livc;->X:Lg4a;
+    const/16 v1, 0x7d
 
-    const/4 v0, 0x0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, v0, p0}, Lg4a;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object v0
 
-    return-object p1
+    return-object v0
 .end method

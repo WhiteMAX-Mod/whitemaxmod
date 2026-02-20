@@ -17,16 +17,16 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/id/mapping/MappingContext;",
         "",
-        "Lahd;",
+        "Ltmd;",
         "rtcLog",
         "",
         "isIdsMappersLoggingEnabled",
         "<init>",
-        "(Lahd;Z)V",
-        "Lb3h;",
+        "(Ltmd;Z)V",
+        "Lmah;",
         "logContextIfNeeded",
         "()V",
-        "Lahd;",
+        "Ltmd;",
         "Z",
         "Ljava/lang/Exception;",
         "Lkotlin/Exception;",
@@ -56,7 +56,7 @@
 
 .field private final isIdsMappersLoggingEnabled:Z
 
-.field private final rtcLog:Lahd;
+.field private final rtcLog:Ltmd;
 
 
 # direct methods
@@ -67,19 +67,19 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/id/mapping/MappingContext$Companion;-><init>(Lso4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/id/mapping/MappingContext$Companion;-><init>(Lfq4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/id/mapping/MappingContext;->Companion:Lru/ok/android/externcalls/sdk/id/mapping/MappingContext$Companion;
 
     return-void
 .end method
 
-.method public constructor <init>(Lahd;Z)V
+.method public constructor <init>(Ltmd;Z)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/id/mapping/MappingContext;->rtcLog:Lahd;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/id/mapping/MappingContext;->rtcLog:Ltmd;
 
     iput-boolean p2, p0, Lru/ok/android/externcalls/sdk/id/mapping/MappingContext;->isIdsMappersLoggingEnabled:Z
 
@@ -109,13 +109,13 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/id/mapping/MappingContext;->rtcLog:Lahd;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/id/mapping/MappingContext;->rtcLog:Ltmd;
 
     const-string v2, "MappingContext"
 
     const-string v3, "id mapping resolve called"
 
-    invoke-interface {v1, v2, v3, v0}, Lahd;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v1, v2, v3, v0}, Ltmd;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_0
     return-void

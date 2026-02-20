@@ -27,7 +27,7 @@
         "(Landroid/os/Handler;Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluethoothDeviceScanner$Listener;)V",
         "Landroid/media/AudioManager;",
         "audioManager",
-        "Lb3h;",
+        "Lmah;",
         "startApiM",
         "(Landroid/media/AudioManager;)V",
         "stopApiM",
@@ -42,7 +42,7 @@
         "Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluethoothDeviceScanner$Listener;",
         "Landroid/media/AudioManager;",
         "callback$delegate",
-        "Lo58;",
+        "Lj88;",
         "getCallback",
         "callback",
         "Companion",
@@ -69,7 +69,7 @@
 
 .field private final audioManagerHandler:Landroid/os/Handler;
 
-.field private final callback$delegate:Lo58;
+.field private final callback$delegate:Lj88;
 
 .field private final listener:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluethoothDeviceScanner$Listener;
 
@@ -82,7 +82,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluethoothDeviceScanner$Companion;-><init>(Lso4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluethoothDeviceScanner$Companion;-><init>(Lfq4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluethoothDeviceScanner;->Companion:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluethoothDeviceScanner$Companion;
 
@@ -102,11 +102,11 @@
 
     invoke-direct {p1, p0}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluethoothDeviceScanner$callback$2;-><init>(Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluethoothDeviceScanner;)V
 
-    new-instance p2, Ln8g;
+    new-instance p2, Lbgg;
 
-    invoke-direct {p2, p1}, Ln8g;-><init>(Llq6;)V
+    invoke-direct {p2, p1}, Lbgg;-><init>(Lis6;)V
 
-    iput-object p2, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluethoothDeviceScanner;->callback$delegate:Lo58;
+    iput-object p2, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluethoothDeviceScanner;->callback$delegate:Lj88;
 
     return-void
 .end method
@@ -168,9 +168,9 @@
 .method private final getCallback()Landroid/media/AudioDeviceCallback;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluethoothDeviceScanner;->callback$delegate:Lo58;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluethoothDeviceScanner;->callback$delegate:Lj88;
 
-    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 

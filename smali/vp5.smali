@@ -1,71 +1,60 @@
-.class public final synthetic Lvp5;
+.class public final Lvp5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lpe8;
-.implements Lzx3;
+.implements Ljava/util/Enumeration;
 
 
 # instance fields
-.field public final synthetic a:Z
-
-.field public final synthetic b:I
+.field public final a:Ljava/util/Enumeration;
 
 
 # direct methods
-.method public synthetic constructor <init>(IZ)V
+.method public constructor <init>(Lwp5;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lvp5;->b:I
+    iget-object p1, p1, Lwp5;->a:Ljava/util/ArrayList;
 
-    iput-boolean p2, p0, Lvp5;->a:Z
+    invoke-static {p1}, Ljava/util/Collections;->enumeration(Ljava/util/Collection;)Ljava/util/Enumeration;
 
-    return-void
-.end method
+    move-result-object p1
 
-.method public synthetic constructor <init>(ZI)V
-    .locals 0
-
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-boolean p1, p0, Lvp5;->a:Z
-
-    iput p2, p0, Lvp5;->b:I
+    iput-object p1, p0, Lvp5;->a:Ljava/util/Enumeration;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public accept(Ljava/lang/Object;)V
-    .locals 2
+.method public final hasMoreElements()Z
+    .locals 1
 
-    iget v0, p0, Lvp5;->b:I
+    iget-object v0, p0, Lvp5;->a:Ljava/util/Enumeration;
 
-    check-cast p1, Lxcc;
+    invoke-interface {v0}, Ljava/util/Enumeration;->hasMoreElements()Z
 
-    iget-boolean v1, p0, Lvp5;->a:Z
+    move-result v0
 
-    invoke-virtual {p1, v0, v1}, Lxcc;->e0(IZ)V
-
-    return-void
+    return v0
 .end method
 
-.method public invoke(Ljava/lang/Object;)V
+.method public final nextElement()Ljava/lang/Object;
     .locals 2
 
-    iget-boolean v0, p0, Lvp5;->a:Z
+    new-instance v0, Ljava/util/HashMap;
 
-    check-cast p1, Lnbc;
+    iget-object v1, p0, Lvp5;->a:Ljava/util/Enumeration;
 
-    iget v1, p0, Lvp5;->b:I
+    invoke-interface {v1}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
 
-    invoke-interface {p1, v1, v0}, Lnbc;->l(IZ)V
+    move-result-object v1
 
-    return-void
+    check-cast v1, Ljava/util/Map;
+
+    invoke-direct {v0, v1}, Ljava/util/HashMap;-><init>(Ljava/util/Map;)V
+
+    return-object v0
 .end method

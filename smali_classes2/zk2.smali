@@ -1,130 +1,204 @@
 .class public final Lzk2;
-.super Lkk0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:J
+.field public final a:Lj88;
+
+.field public final b:Lj88;
 
 
 # direct methods
-.method public constructor <init>(JJ)V
+.method public constructor <init>(Lj88;Lj88;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lkk0;-><init>(J)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p3, p0, Lzk2;->b:J
+    iput-object p1, p0, Lzk2;->a:Lj88;
+
+    iput-object p2, p0, Lzk2;->b:Lj88;
+
+    return-void
+.end method
+
+.method public static synthetic b(Lzk2;I)V
+    .locals 1
+
+    const/high16 v0, 0x7fc00000    # Float.NaN
+
+    invoke-virtual {p0, p1, v0}, Lzk2;->a(IF)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final a(IF)V
+    .locals 25
 
-    const/4 v0, 0x1
+    move-object/from16 v0, p0
 
-    if-ne p0, p1, :cond_0
+    iget-object v1, v0, Lzk2;->a:Lj88;
 
-    return v0
-
-    :cond_0
-    if-eqz p1, :cond_1
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-interface {v1}, Lj88;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    goto :goto_0
+    check-cast v1, Lh1c;
 
-    :cond_1
-    const/4 v1, 0x0
+    iget-object v1, v1, Lh1c;->d:Lj88;
 
-    :goto_0
-    const-class v2, Lzk2;
+    invoke-interface {v1}, Lj88;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {v2, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    move-result-object v1
+
+    check-cast v1, Liz5;
+
+    check-cast v1, Lk06;
+
+    invoke-virtual {v1}, Lk06;->o()Lp05;
+
+    move-result-object v1
+
+    const-string v2, "ch_history"
+
+    invoke-virtual {v1, v2}, Lp05;->a(Ljava/lang/String;)Z
 
     move-result v1
 
-    const/4 v2, 0x0
+    if-eqz v1, :cond_0
 
-    if-nez v1, :cond_2
+    iget-object v1, v0, Lzk2;->b:Lj88;
 
-    return v2
-
-    :cond_2
-    check-cast p1, Lzk2;
-
-    iget-wide v3, p0, Lzk2;->b:J
-
-    iget-wide v5, p1, Lzk2;->b:J
-
-    cmp-long v1, v3, v5
-
-    if-nez v1, :cond_3
-
-    iget-wide v3, p0, Lkk0;->a:J
-
-    iget-wide v5, p1, Lkk0;->a:J
-
-    cmp-long p1, v3, v5
-
-    if-nez p1, :cond_3
-
-    return v0
-
-    :cond_3
-    return v2
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-wide v0, p0, Lzk2;->b:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    iget-wide v1, p0, Lkk0;->a:J
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-interface {v1}, Lj88;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    filled-new-array {v0, v1}, [Ljava/lang/Object;
+    move-object v2, v1
 
-    move-result-object v0
+    check-cast v2, Ln05;
 
-    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
+    packed-switch p1, :pswitch_data_0
 
-    move-result v0
+    const/4 v1, 0x0
 
-    return v0
-.end method
+    throw v1
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+    :pswitch_0
+    const/high16 v1, 0x41200000    # 10.0f
 
-    const-string v0, "ChatLeaveEvent(requestId="
+    :goto_0
+    move v4, v1
 
-    const-string v1, ", chatId="
+    goto :goto_1
 
-    iget-wide v2, p0, Lkk0;->a:J
+    :pswitch_1
+    const/high16 v1, 0x41100000    # 9.0f
 
-    invoke-static {v2, v3, v0, v1}, Lt02;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    goto :goto_0
 
-    move-result-object v0
+    :pswitch_2
+    const/high16 v1, 0x41000000    # 8.0f
 
-    const-string v1, ")"
+    goto :goto_0
 
-    iget-wide v2, p0, Lzk2;->b:J
+    :pswitch_3
+    const/high16 v1, 0x40e00000    # 7.0f
 
-    invoke-static {v0, v2, v3, v1}, Lva9;->f(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
+    goto :goto_0
 
-    move-result-object v0
+    :pswitch_4
+    const/high16 v1, 0x40c00000    # 6.0f
 
-    return-object v0
+    goto :goto_0
+
+    :pswitch_5
+    const/high16 v1, 0x40a00000    # 5.0f
+
+    goto :goto_0
+
+    :pswitch_6
+    const/high16 v1, 0x40800000    # 4.0f
+
+    goto :goto_0
+
+    :pswitch_7
+    const/high16 v1, 0x40400000    # 3.0f
+
+    goto :goto_0
+
+    :pswitch_8
+    const/high16 v1, 0x40000000    # 2.0f
+
+    goto :goto_0
+
+    :pswitch_9
+    const/high16 v1, 0x3f800000    # 1.0f
+
+    goto :goto_0
+
+    :goto_1
+    const/16 v23, -0x8
+
+    const/16 v24, 0x1
+
+    sget-object v3, Lm05;->s0:Lm05;
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    const/4 v8, 0x0
+
+    const/4 v9, 0x0
+
+    const/4 v10, 0x0
+
+    const/4 v11, 0x0
+
+    const/4 v12, 0x0
+
+    const/4 v13, 0x0
+
+    const/4 v14, 0x0
+
+    const/4 v15, 0x0
+
+    const/16 v16, 0x0
+
+    const/16 v17, 0x0
+
+    const/16 v18, 0x0
+
+    const/16 v19, 0x0
+
+    const/16 v20, 0x0
+
+    const/16 v21, 0x0
+
+    const/16 v22, 0x0
+
+    move/from16 v5, p2
+
+    invoke-static/range {v2 .. v24}, Ln05;->a(Ln05;Lm05;FFFFFFFFFFFFFFFFLjava/lang/String;Ljava/lang/String;Ljava/lang/String;II)V
+
+    :cond_0
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

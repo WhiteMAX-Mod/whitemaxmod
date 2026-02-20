@@ -1,156 +1,172 @@
-.class public final synthetic Lkga;
+.class public final Lkga;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lay3;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljava/lang/CharSequence;
 
-.field public final synthetic b:Lnga;
+.field public final b:Ljava/lang/CharSequence;
+
+.field public final c:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lnga;I)V
+.method public constructor <init>(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/util/Map;)V
     .locals 0
 
-    iput p2, p0, Lkga;->a:I
-
-    iput-object p1, p0, Lkga;->b:Lnga;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lkga;->a:Ljava/lang/CharSequence;
+
+    iput-object p2, p0, Lkga;->b:Ljava/lang/CharSequence;
+
+    iput-object p3, p0, Lkga;->c:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    iget v0, p0, Lkga;->a:I
+    if-ne p0, p1, :cond_0
 
-    packed-switch v0, :pswitch_data_0
-
-    check-cast p1, Ljava/lang/Long;
-
-    iget-object p1, p0, Lkga;->b:Lnga;
-
-    iget-object v0, p1, Lnga;->x0:Lkw8;
-
-    if-eqz v0, :cond_0
-
-    check-cast v0, Lru/ok/messages/media/mediabar/ActLocalMedias;
-
-    iget-object v1, v0, Lru/ok/messages/media/mediabar/ActLocalMedias;->d1:Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;
-
-    iget-object v1, v1, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->Q0:Lru/ok/messages/messages/widgets/MessageComposeEditText;
-
-    invoke-virtual {v1}, Landroid/view/View;->isFocused()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    iget-object v0, v0, Lru/ok/messages/media/mediabar/ActLocalMedias;->e1:Ln48;
-
-    iget-object v0, v0, Ln48;->b:Lm48;
-
-    iget-boolean v0, v0, Lm48;->o:Z
-
-    if-nez v0, :cond_2
+    goto :goto_1
 
     :cond_0
-    new-instance v0, Lyk0;
+    instance-of v0, p1, Lkga;
 
-    const/16 v1, 0xe
-
-    invoke-direct {v0, v1}, Lyk0;-><init>(I)V
-
-    invoke-virtual {p1, v0}, Lnga;->P0(Ldy3;)V
-
-    iget-object p1, p1, Lnga;->Y:Lru/ok/messages/media/mediabar/FrgLocalVideo;
-
-    if-nez p1, :cond_1
+    if-nez v0, :cond_1
 
     goto :goto_0
 
     :cond_1
-    const/4 v0, 0x0
+    check-cast p1, Lkga;
 
-    invoke-virtual {p1, v0}, Lru/ok/messages/media/mediabar/FrgLocalVideo;->C0(Z)V
+    iget-object v0, p0, Lkga;->a:Ljava/lang/CharSequence;
+
+    iget-object v1, p1, Lkga;->a:Ljava/lang/CharSequence;
+
+    invoke-static {v0, v1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    goto :goto_0
 
     :cond_2
-    :goto_0
-    return-void
+    iget-object v0, p0, Lkga;->b:Ljava/lang/CharSequence;
 
-    :pswitch_0
-    check-cast p1, Ljava/lang/Throwable;
+    iget-object v1, p1, Lkga;->b:Ljava/lang/CharSequence;
 
-    iget-object v0, p0, Lkga;->b:Lnga;
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    iget-object v0, v0, Lnga;->Y:Lru/ok/messages/media/mediabar/FrgLocalVideo;
+    move-result v0
 
     if-nez v0, :cond_3
 
-    goto :goto_1
+    goto :goto_0
 
     :cond_3
-    invoke-virtual {v0, p1}, Lru/ok/messages/media/mediabar/FrgLocalVideo;->F0(Ljava/lang/Throwable;)V
+    iget-object v0, p0, Lkga;->c:Ljava/lang/Object;
 
+    iget-object p1, p1, Lkga;->c:Ljava/lang/Object;
+
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_4
     :goto_1
-    return-void
+    const/4 p1, 0x1
 
-    :pswitch_1
-    check-cast p1, Lpfh;
+    return p1
+.end method
 
-    iget-object v0, p0, Lkga;->b:Lnga;
+.method public final hashCode()I
+    .locals 3
 
-    iget-object v1, v0, Lnga;->c:Lyh8;
+    iget-object v0, p0, Lkga;->a:Ljava/lang/CharSequence;
 
-    invoke-virtual {v1, p1, v0}, Lyh8;->j(Lpfh;Lj79;)V
-
-    new-instance v1, Lm52;
-
-    const/4 v2, 0x2
-
-    invoke-direct {v1, v2, p1}, Lm52;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v0, v1}, Lnga;->P0(Ldy3;)V
-
-    iget-object p1, v0, Ld3;->b:Ljava/lang/Object;
-
-    check-cast p1, Ltga;
-
-    check-cast p1, Ldha;
-
-    iget-object p1, p1, Ldha;->X:Lru/ok/messages/video/widgets/VideoView;
-
-    invoke-virtual {p1, v0}, Lru/ok/messages/video/widgets/VideoView;->a(Lwqh;)V
-
-    return-void
-
-    :pswitch_2
-    check-cast p1, Ljava/lang/Long;
-
-    new-instance p1, Llga;
+    if-nez v0, :cond_0
 
     const/4 v0, 0x0
 
-    iget-object v1, p0, Lkga;->b:Lnga;
+    goto :goto_0
 
-    invoke-direct {p1, v1, v0}, Llga;-><init>(Lnga;I)V
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    invoke-virtual {v1, p1}, Lnga;->P0(Ldy3;)V
+    move-result v0
 
-    return-void
+    :goto_0
+    const/16 v1, 0x1f
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lkga;->b:Ljava/lang/CharSequence;
+
+    invoke-static {v0, v1, v2}, Lo16;->e(IILjava/lang/CharSequence;)I
+
+    move-result v0
+
+    iget-object v1, p0, Lkga;->c:Ljava/lang/Object;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "MediaMetadata(artist="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lkga;->a:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", track="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lkga;->b:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", extras="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lkga;->c:Ljava/lang/Object;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

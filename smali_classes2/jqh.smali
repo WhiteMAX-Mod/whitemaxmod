@@ -1,34 +1,77 @@
-.class public final synthetic Ljqh;
-.super Ljava/lang/Object;
+.class public final Ljqh;
+.super Lda4;
 .source "SourceFile"
-
-# interfaces
-.implements Lorg/webrtc/VideoSink;
 
 
 # instance fields
-.field public final synthetic a:Lorg/webrtc/VideoSource;
+.field public X:Ljava/lang/String;
+
+.field public Y:Luth;
+
+.field public Z:Lawh;
+
+.field public d:Lte2;
+
+.field public o:Lvx4;
+
+.field public s0:J
+
+.field public t0:I
+
+.field public synthetic u0:Ljava/lang/Object;
+
+.field public final synthetic v0:Lpqh;
+
+.field public w0:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/webrtc/VideoSource;)V
+.method public constructor <init>(Lpqh;Lda4;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ljqh;->v0:Lpqh;
 
-    iput-object p1, p0, Ljqh;->a:Lorg/webrtc/VideoSource;
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onFrame(Lorg/webrtc/VideoFrame;)V
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 10
 
-    iget-object v0, p0, Ljqh;->a:Lorg/webrtc/VideoSource;
+    iput-object p1, p0, Ljqh;->u0:Ljava/lang/Object;
 
-    invoke-static {v0, p1}, Lorg/webrtc/VideoSource;->b(Lorg/webrtc/VideoSource;Lorg/webrtc/VideoFrame;)V
+    iget p1, p0, Ljqh;->w0:I
 
-    return-void
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Ljqh;->w0:I
+
+    const/4 v7, 0x0
+
+    const/4 v8, 0x0
+
+    iget-object v0, p0, Ljqh;->v0:Lpqh;
+
+    const/4 v1, 0x0
+
+    const-wide/16 v2, 0x0
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    move-object v9, p0
+
+    invoke-virtual/range {v0 .. v9}, Lpqh;->a(Lte2;JLvx4;Ljava/lang/String;Luth;Lawh;Ljava/lang/Float;Lda4;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

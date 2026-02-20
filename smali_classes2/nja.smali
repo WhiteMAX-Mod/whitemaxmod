@@ -1,251 +1,147 @@
-.class public final enum Lnja;
-.super Ljava/lang/Enum;
+.class public final Lnja;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/os/Parcelable;
 
 
 # static fields
-.field public static final enum X:Lnja;
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lnja;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public static final enum Y:Lnja;
 
-.field public static final enum Z:Lnja;
+# instance fields
+.field public final a:I
 
-.field public static final enum a:Lnja;
+.field public final b:Z
 
-.field public static final enum b:Lnja;
-
-.field public static final enum c:Lnja;
-
-.field public static final enum d:Lnja;
-
-.field public static final enum o:Lnja;
-
-.field public static final enum t0:Lnja;
-
-.field public static final enum u0:Lnja;
-
-.field public static final synthetic v0:[Lnja;
+.field public final c:Z
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 12
+    .locals 2
 
-    new-instance v0, Lnja;
+    new-instance v0, Lz09;
 
-    const-string v1, "CREATE_OFFER"
+    const/16 v1, 0xc
 
-    const/4 v2, 0x0
+    invoke-direct {v0, v1}, Lz09;-><init>(I)V
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lnja;->a:Lnja;
-
-    new-instance v1, Lnja;
-
-    const-string v2, "CREATE_ANSWER"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lnja;->b:Lnja;
-
-    new-instance v2, Lnja;
-
-    const-string v3, "SET_LOCAL_OFFER"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lnja;->c:Lnja;
-
-    new-instance v3, Lnja;
-
-    const-string v4, "SET_REMOTE_OFFER"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lnja;->d:Lnja;
-
-    new-instance v4, Lnja;
-
-    const-string v5, "SET_LOCAL_ANSWER"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v4, Lnja;->o:Lnja;
-
-    new-instance v5, Lnja;
-
-    const-string v6, "SET_REMOTE_ANSWER"
-
-    const/4 v7, 0x5
-
-    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v5, Lnja;->X:Lnja;
-
-    new-instance v6, Lnja;
-
-    const-string v7, "SET_LOCAL_PRANSWER"
-
-    const/4 v8, 0x6
-
-    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v6, Lnja;->Y:Lnja;
-
-    new-instance v7, Lnja;
-
-    const-string v8, "SET_REMOTE_PRANSWER"
-
-    const/4 v9, 0x7
-
-    invoke-direct {v7, v8, v9}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v7, Lnja;->Z:Lnja;
-
-    new-instance v8, Lnja;
-
-    const-string v9, "SET_LOCAL_ROLLBACK"
-
-    const/16 v10, 0x8
-
-    invoke-direct {v8, v9, v10}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v8, Lnja;->t0:Lnja;
-
-    new-instance v9, Lnja;
-
-    const-string v10, "SET_REMOTE_ROLLBACK"
-
-    const/16 v11, 0x9
-
-    invoke-direct {v9, v10, v11}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v9, Lnja;->u0:Lnja;
-
-    filled-new-array/range {v0 .. v9}, [Lnja;
-
-    move-result-object v0
-
-    sput-object v0, Lnja;->v0:[Lnja;
+    sput-object v0, Lnja;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-.method public static final a(Lorg/webrtc/SessionDescription$Type;Z)Lnja;
-    .locals 1
+.method public constructor <init>(Landroid/os/Parcel;)V
+    .locals 3
 
-    sget-object v0, Lmja;->$EnumSwitchMapping$0:[I
+    .line 5
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
+    .line 6
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
-    move-result p0
+    move-result v0
 
-    aget p0, v0, p0
+    iput v0, p0, Lnja;->a:I
 
-    const/4 v0, 0x1
+    .line 7
+    invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
-    if-eq p0, v0, :cond_6
+    move-result v0
 
-    const/4 v0, 0x2
+    const/4 v1, 0x0
 
-    if-eq p0, v0, :cond_4
+    const/4 v2, 0x1
 
-    const/4 v0, 0x3
+    if-eqz v0, :cond_0
 
-    if-eq p0, v0, :cond_2
+    move v0, v2
 
-    const/4 v0, 0x4
-
-    if-ne p0, v0, :cond_1
-
-    if-eqz p1, :cond_0
-
-    sget-object p0, Lnja;->t0:Lnja;
-
-    return-object p0
+    goto :goto_0
 
     :cond_0
-    sget-object p0, Lnja;->u0:Lnja;
+    move v0, v1
 
-    return-object p0
+    :goto_0
+    iput-boolean v0, p0, Lnja;->b:Z
+
+    .line 8
+    invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    move v1, v2
 
     :cond_1
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
+    iput-boolean v1, p0, Lnja;->c:Z
 
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p0
-
-    :cond_2
-    if-eqz p1, :cond_3
-
-    sget-object p0, Lnja;->o:Lnja;
-
-    return-object p0
-
-    :cond_3
-    sget-object p0, Lnja;->X:Lnja;
-
-    return-object p0
-
-    :cond_4
-    if-eqz p1, :cond_5
-
-    sget-object p0, Lnja;->Y:Lnja;
-
-    return-object p0
-
-    :cond_5
-    sget-object p0, Lnja;->Z:Lnja;
-
-    return-object p0
-
-    :cond_6
-    if-eqz p1, :cond_7
-
-    sget-object p0, Lnja;->c:Lnja;
-
-    return-object p0
-
-    :cond_7
-    sget-object p0, Lnja;->d:Lnja;
-
-    return-object p0
+    return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lnja;
+.method public constructor <init>(Lmja;)V
     .locals 1
 
-    const-class v0, Lnja;
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    .line 2
+    iget v0, p1, Lmja;->a:I
 
-    move-result-object p0
+    iput v0, p0, Lnja;->a:I
 
-    check-cast p0, Lnja;
+    .line 3
+    iget-boolean v0, p1, Lmja;->b:Z
 
-    return-object p0
+    iput-boolean v0, p0, Lnja;->b:Z
+
+    .line 4
+    iget-boolean p1, p1, Lmja;->c:Z
+
+    iput-boolean p1, p0, Lnja;->c:Z
+
+    return-void
 .end method
 
-.method public static values()[Lnja;
+
+# virtual methods
+.method public final describeContents()I
     .locals 1
 
-    sget-object v0, Lnja;->v0:[Lnja;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+    return v0
+.end method
 
-    move-result-object v0
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    check-cast v0, [Lnja;
+    iget p2, p0, Lnja;->a:I
 
-    return-object v0
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget-boolean p2, p0, Lnja;->b:Z
+
+    int-to-byte p2, p2
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByte(B)V
+
+    iget-boolean p2, p0, Lnja;->c:Z
+
+    int-to-byte p2, p2
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByte(B)V
+
+    return-void
 .end method

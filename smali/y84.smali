@@ -1,125 +1,38 @@
-.class public abstract Ly84;
+.class public interface abstract Ly84;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public a(La94;Lf94;Lg94;)V
-    .locals 0
+# direct methods
+.method public static a(Ly84;)J
+    .locals 2
 
-    return-void
-.end method
+    check-cast p0, Lgq4;
 
-.method public b(La94;Lf94;Lg94;)V
-    .locals 0
+    iget-object p0, p0, Lgq4;->b:Ljava/util/Map;
 
-    return-void
-.end method
+    const-string v0, "exo_len"
 
-.method public c(La94;Landroid/os/Bundle;)V
-    .locals 0
+    invoke-interface {p0, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-void
-.end method
+    move-result-object p0
 
-.method public d(La94;)V
-    .locals 0
+    check-cast p0, [B
 
-    return-void
-.end method
+    if-eqz p0, :cond_0
 
-.method public e(La94;Landroid/os/Bundle;)V
-    .locals 0
+    invoke-static {p0}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
 
-    return-void
-.end method
+    move-result-object p0
 
-.method public f(La94;)V
-    .locals 0
+    invoke-virtual {p0}, Ljava/nio/ByteBuffer;->getLong()J
 
-    return-void
-.end method
+    move-result-wide v0
 
-.method public g(La94;)V
-    .locals 0
+    return-wide v0
 
-    return-void
-.end method
+    :cond_0
+    const-wide/16 v0, -0x1
 
-.method public h(La94;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public i(La94;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public j(La94;Landroid/view/View;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public k(La94;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public l(La94;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public m(La94;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public n(La94;Landroid/view/View;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public o(La94;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public p(La94;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public q(La94;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public r(La94;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public s(La94;Landroid/view/View;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public t(La94;)V
-    .locals 0
-
-    return-void
+    return-wide v0
 .end method

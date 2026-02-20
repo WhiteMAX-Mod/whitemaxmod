@@ -3,78 +3,82 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ld76;
+.implements Ljava/io/Serializable;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:J
 
-.field public final synthetic b:Lspf;
+.field public final b:Ldn9;
 
-.field public final synthetic c:Los9;
+.field public final c:Ljava/lang/String;
+
+.field public final d:Ljava/util/List;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lspf;Los9;I)V
+.method public constructor <init>(Ljava/lang/String;Ljava/util/ArrayList;JLdn9;)V
     .locals 0
 
-    iput p3, p0, Lis9;->a:I
-
-    iput-object p1, p0, Lis9;->b:Lspf;
-
-    iput-object p2, p0, Lis9;->c:Los9;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lis9;->c:Ljava/lang/String;
+
+    iput-object p2, p0, Lis9;->d:Ljava/util/List;
+
+    iput-wide p3, p0, Lis9;->a:J
+
+    iput-object p5, p0, Lis9;->b:Ldn9;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 3
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    iget v0, p0, Lis9;->a:I
+    iget-object v0, p0, Lis9;->c:Ljava/lang/String;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {v0}, Ll1j;->f(Ljava/lang/CharSequence;)Ljava/lang/String;
 
-    new-instance v0, Lhs9;
+    move-result-object v0
 
-    iget-object v1, p0, Lis9;->c:Los9;
+    iget-object v1, p0, Lis9;->d:Ljava/util/List;
 
-    const/4 v2, 0x1
+    invoke-static {v1}, Ll0j;->b(Ljava/util/Collection;)I
 
-    invoke-direct {v0, p1, v1, v2}, Lhs9;-><init>(Lf76;Los9;I)V
+    move-result v1
 
-    iget-object p1, p0, Lis9;->b:Lspf;
+    const-string v2, "\', highlights="
 
-    invoke-virtual {p1, v0, p2}, Lspf;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    const-string v3, ", chatId=\'"
 
-    sget-object p1, Lac4;->a:Lac4;
+    const-string v4, "{, feedback=\'"
 
-    return-object p1
+    invoke-static {v1, v4, v0, v2, v3}, Ln8d;->i(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :pswitch_0
-    new-instance v0, Lhs9;
+    move-result-object v0
 
-    iget-object v1, p0, Lis9;->c:Los9;
+    iget-wide v1, p0, Lis9;->a:J
 
-    const/4 v2, 0x0
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    invoke-direct {v0, p1, v1, v2}, Lhs9;-><init>(Lf76;Los9;I)V
+    const-string v1, "\', message="
 
-    iget-object p1, p0, Lis9;->b:Lspf;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, v0, p2}, Lspf;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    iget-object v1, p0, Lis9;->b:Ldn9;
 
-    sget-object p1, Lac4;->a:Lac4;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    return-object p1
+    const-string v1, "}"
 
-    nop
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

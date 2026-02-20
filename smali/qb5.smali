@@ -1,41 +1,46 @@
-.class public final Lqb5;
-.super Lw40;
+.class public final synthetic Lqb5;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/widget/AutoCompleteTextView$OnDismissListener;
 
 
 # instance fields
-.field public final synthetic c:Lx66;
+.field public final synthetic a:Lrb5;
 
 
 # direct methods
-.method public constructor <init>(Lx66;)V
+.method public synthetic constructor <init>(Lrb5;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lqb5;->c:Lx66;
+    iput-object p1, p0, Lqb5;->a:Lrb5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c(Ljava/lang/Object;)F
-    .locals 0
+.method public final onDismiss()V
+    .locals 4
 
-    iget-object p1, p0, Lqb5;->c:Lx66;
+    const/4 v0, 0x1
 
-    iget p1, p1, Lx66;->a:F
+    iget-object v1, p0, Lqb5;->a:Lrb5;
 
-    return p1
-.end method
+    iput-boolean v0, v1, Lrb5;->m:Z
 
-.method public final d(Ljava/lang/Object;F)V
-    .locals 0
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    iget-object p1, p0, Lqb5;->c:Lx66;
+    move-result-wide v2
 
-    iput p2, p1, Lx66;->a:F
+    iput-wide v2, v1, Lrb5;->o:J
+
+    const/4 v0, 0x0
+
+    invoke-virtual {v1, v0}, Lrb5;->t(Z)V
 
     return-void
 .end method

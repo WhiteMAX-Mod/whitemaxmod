@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lnbf;
+.implements Lnjf;
 
 
 # instance fields

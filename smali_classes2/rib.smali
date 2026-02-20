@@ -4,52 +4,64 @@
 
 
 # static fields
-.field public static final a:J
+.field public static final a:I
 
-.field public static final b:J
+.field public static final b:I
 
-.field public static final c:J
+.field public static final c:I
 
-.field public static final d:J
+.field public static final d:I
 
-.field public static final e:J
+.field public static final e:I
 
-.field public static final synthetic f:I
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 1
 
-    sget v0, Ldad;->oneme_settings_ringtone_section_bottom_vh:I
+    sget v0, Lwed;->qrscanner_allow_permission:I
 
-    int-to-long v0, v0
+    sput v0, Lrib;->a:I
 
-    sput-wide v0, Lrib;->a:J
+    sget v0, Lwed;->qrscanner_blackout_view:I
 
-    sget v0, Ldad;->oneme_settings_ringtone_section_custom_add:I
+    sput v0, Lrib;->b:I
 
-    int-to-long v0, v0
+    sget v0, Lwed;->qrscanner_camera_preview:I
 
-    sput-wide v0, Lrib;->b:J
+    sput v0, Lrib;->c:I
 
-    sget v0, Ldad;->oneme_settings_ringtone_section_default:I
+    sget v0, Lwed;->qrscanner_gallery_button_image:I
 
-    int-to-long v0, v0
+    sput v0, Lrib;->d:I
 
-    sput-wide v0, Lrib;->c:J
+    sget v0, Lwed;->qrscanner_hint_view:I
 
-    sget v0, Ldad;->oneme_settings_ringtone_section_header_vh:I
+    sput v0, Lrib;->e:I
 
-    int-to-long v0, v0
+    sget v0, Lwed;->qrscanner_not_allow_permission:I
 
-    sput-wide v0, Lrib;->d:J
+    sput v0, Lrib;->f:I
 
-    sget v0, Ldad;->oneme_settings_ringtone_section_system:I
+    sget v0, Lwed;->qrscanner_overlay_view:I
 
-    int-to-long v0, v0
+    sput v0, Lrib;->g:I
 
-    sput-wide v0, Lrib;->e:J
+    sget v0, Lwed;->qrscanner_toolbar:I
+
+    sput v0, Lrib;->h:I
+
+    sget v0, Lwed;->qrscanner_torch_button_image:I
+
+    sput v0, Lrib;->i:I
 
     return-void
 .end method

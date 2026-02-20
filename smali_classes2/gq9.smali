@@ -1,141 +1,145 @@
 .class public final Lgq9;
-.super Ljava/lang/Object;
+.super Lfcb;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final b:Z
-
-.field public final c:Ljava/lang/String;
+.field public final synthetic b:Lkq9;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;ZI)V
-    .locals 2
-
-    iput p3, p0, Lgq9;->a:I
-
-    packed-switch p3, :pswitch_data_0
-
-    .line 2
-    new-instance p3, Lta7;
-
-    const/4 v0, 0x1
-
-    invoke-direct {p3, p1, v0}, Lta7;-><init>(Ljava/lang/String;I)V
-
-    .line 3
-    new-instance v0, Lta7;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, p1, v1}, Lta7;-><init>(Ljava/lang/String;I)V
-
-    const/4 v1, 0x0
-
-    .line 4
-    iput v1, p0, Lgq9;->a:I
-
-    .line 5
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 6
-    iput-object p1, p0, Lgq9;->c:Ljava/lang/String;
-
-    .line 7
-    iput-boolean p2, p0, Lgq9;->b:Z
-
-    const/4 p1, 0x3
-
-    .line 8
-    invoke-static {p1, p3}, Le8;->b(ILlq6;)Lo58;
-
-    .line 9
-    invoke-static {p1, v0}, Le8;->b(ILlq6;)Lo58;
-
-    return-void
-
-    .line 10
-    :pswitch_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lgq9;->c:Ljava/lang/String;
-
-    iput-boolean p2, p0, Lgq9;->b:Z
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x3
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public synthetic constructor <init>(ZLjava/lang/String;I)V
+.method public constructor <init>(Landroid/content/Context;Lkq9;)V
     .locals 0
 
-    .line 1
-    iput p3, p0, Lgq9;->a:I
+    iput-object p2, p0, Lgq9;->b:Lkq9;
 
-    iput-boolean p1, p0, Lgq9;->b:Z
+    const/16 p2, 0xe
 
-    iput-object p2, p0, Lgq9;->c:Ljava/lang/String;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Lfcb;-><init>(Landroid/content/Context;I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public toString()Ljava/lang/String;
-    .locals 2
+.method public final onSelectionChanged(II)V
+    .locals 1
 
-    iget v0, p0, Lgq9;->a:I
+    invoke-super {p0, p1, p2}, Landroid/widget/TextView;->onSelectionChanged(II)V
 
-    packed-switch v0, :pswitch_data_0
+    iget-object p1, p0, Lgq9;->b:Lkq9;
 
-    invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    iget-object p2, p1, Lkq9;->d:Leq9;
 
-    move-result-object v0
+    if-nez p2, :cond_0
 
-    return-object v0
+    goto :goto_0
 
-    :pswitch_0
-    new-instance v0, Ljava/lang/StringBuilder;
+    :cond_0
+    invoke-virtual {p0}, Landroid/widget/TextView;->hasSelection()Z
 
-    const-string v1, "MessageText(text=\'"
+    move-result p2
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const/4 v0, 0x1
 
-    const-string v1, "***"
+    if-eqz p2, :cond_2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object p1, p1, Lkq9;->d:Leq9;
 
-    const-string v1, "\', bundled="
+    if-eqz p1, :cond_3
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    check-cast p1, Ll17;
 
-    iget-boolean v1, p0, Lgq9;->b:Z
+    iget-object p1, p1, Ll17;->b:Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    check-cast p1, Lone/me/sdk/messagewrite/MessageWriteWidget;
 
-    const-string v1, ")"
+    sget-object p2, Lone/me/sdk/messagewrite/MessageWriteWidget;->M0:[Lv58;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1}, Lone/me/sdk/messagewrite/MessageWriteWidget;->N0()Ltr8;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object p1
 
-    move-result-object v0
+    iget-object p2, p1, Ltr8;->X:Lhxf;
 
-    return-object v0
+    invoke-virtual {p2}, Lhxf;->getValue()Ljava/lang/Object;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    move-result-object p2
+
+    check-cast p2, Lur8;
+
+    iget p2, p2, Lur8;->b:I
+
+    if-eq p2, v0, :cond_1
+
+    const-class p1, Ltr8;
+
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string p2, "Early return in textSelected cuz of _viewState.value.menuState != MenuState.HIDDEN"
+
+    invoke-static {p1, p2}, Ltej;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+
+    :cond_1
+    const/4 p2, 0x2
+
+    invoke-static {p1, p2}, Ltr8;->p(Ltr8;I)V
+
+    return-void
+
+    :cond_2
+    iget-object p1, p1, Lkq9;->d:Leq9;
+
+    if-eqz p1, :cond_3
+
+    check-cast p1, Ll17;
+
+    iget-object p1, p1, Ll17;->b:Ljava/lang/Object;
+
+    check-cast p1, Lone/me/sdk/messagewrite/MessageWriteWidget;
+
+    sget-object p2, Lone/me/sdk/messagewrite/MessageWriteWidget;->M0:[Lv58;
+
+    invoke-virtual {p1}, Lone/me/sdk/messagewrite/MessageWriteWidget;->N0()Ltr8;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {p1, v0}, Ltr8;->p(Ltr8;I)V
+
+    :cond_3
+    :goto_0
+    return-void
+.end method
+
+.method public final verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
+    .locals 1
+
+    instance-of v0, p1, Landroid/graphics/drawable/Animatable;
+
+    if-nez v0, :cond_1
+
+    invoke-super {p0, p1}, Landroid/view/View;->verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    :goto_0
+    const/4 p1, 0x1
+
+    return p1
 .end method

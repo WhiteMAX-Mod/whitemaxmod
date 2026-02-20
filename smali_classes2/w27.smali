@@ -1,64 +1,243 @@
 .class public final Lw27;
-.super Ljava/lang/Object;
+.super Landroid/graphics/drawable/Drawable;
 .source "SourceFile"
 
 # interfaces
-.implements Lx27;
+.implements Lt23;
 
 
-# static fields
-.field public static final a:Lw27;
+# instance fields
+.field public final a:Landroid/content/Context;
+
+.field public final b:F
+
+.field public final c:Landroid/graphics/Paint;
+
+.field public final d:Landroid/graphics/RectF;
+
+.field public final o:[F
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 2
 
-    new-instance v0, Lw27;
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    move-result-object v0
 
-    sput-object v0, Lw27;->a:Lw27;
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v0
+
+    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
+
+    const/high16 v1, 0x41c00000    # 24.0f
+
+    mul-float/2addr v0, v1
+
+    invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
+
+    iput-object p1, p0, Lw27;->a:Landroid/content/Context;
+
+    iput v0, p0, Lw27;->b:F
+
+    new-instance p1, Landroid/graphics/Paint;
+
+    const/4 v0, 0x1
+
+    invoke-direct {p1, v0}, Landroid/graphics/Paint;-><init>(I)V
+
+    sget-object v0, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
+
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
+
+    iput-object p1, p0, Lw27;->c:Landroid/graphics/Paint;
+
+    new-instance p1, Landroid/graphics/RectF;
+
+    invoke-direct {p1}, Landroid/graphics/RectF;-><init>()V
+
+    iput-object p1, p0, Lw27;->d:Landroid/graphics/RectF;
+
+    const/4 p1, 0x3
+
+    new-array p1, p1, [F
+
+    fill-array-data p1, :array_0
+
+    iput-object p1, p0, Lw27;->o:[F
 
     return-void
+
+    nop
+
+    :array_0
+    .array-data 4
+        0x0
+        0x3f19999a    # 0.6f
+        0x3f800000    # 1.0f
+    .end array-data
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final c(Llob;)V
+    .locals 8
+
+    new-instance v0, Landroid/graphics/LinearGradient;
+
+    iget-object p1, p0, Lw27;->d:Landroid/graphics/RectF;
+
+    iget v1, p1, Landroid/graphics/RectF;->left:F
+
+    iget v2, p1, Landroid/graphics/RectF;->top:F
+
+    iget v3, p1, Landroid/graphics/RectF;->right:F
+
+    iget v4, p1, Landroid/graphics/RectF;->bottom:F
+
+    sget-object p1, Lfe3;->t0:Ltea;
+
+    iget-object v5, p0, Lw27;->a:Landroid/content/Context;
+
+    invoke-virtual {p1, v5}, Ltea;->n(Landroid/content/Context;)Lfe3;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lfe3;->j()Llob;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Llob;->i()Lkyc;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lkyc;->c:Ljava/lang/Object;
+
+    check-cast p1, Lvd0;
+
+    iget-object p1, p1, Lvd0;->d:Ljava/lang/Object;
+
+    move-object v5, p1
+
+    check-cast v5, [I
+
+    iget-object v6, p0, Lw27;->o:[F
+
+    sget-object v7, Landroid/graphics/Shader$TileMode;->CLAMP:Landroid/graphics/Shader$TileMode;
+
+    invoke-direct/range {v0 .. v7}, Landroid/graphics/LinearGradient;-><init>(FFFF[I[FLandroid/graphics/Shader$TileMode;)V
+
+    iget-object p1, p0, Lw27;->c:Landroid/graphics/Paint;
+
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+
+    return-void
+.end method
+
+.method public final draw(Landroid/graphics/Canvas;)V
+    .locals 3
+
+    iget v0, p0, Lw27;->b:F
+
+    iget-object v1, p0, Lw27;->c:Landroid/graphics/Paint;
+
+    iget-object v2, p0, Lw27;->d:Landroid/graphics/RectF;
+
+    invoke-virtual {p1, v2, v0, v0, v1}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
+
+    return-void
+.end method
+
+.method public final getOpacity()I
     .locals 1
 
-    const/4 v0, 0x1
+    const/4 v0, -0x3
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Lw27;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
     return v0
 .end method
 
-.method public final hashCode()I
-    .locals 1
+.method public final onBoundsChange(Landroid/graphics/Rect;)V
+    .locals 9
 
-    const v0, 0x5493c731
+    invoke-super {p0, p1}, Landroid/graphics/drawable/Drawable;->onBoundsChange(Landroid/graphics/Rect;)V
 
-    return v0
+    iget-object v0, p0, Lw27;->d:Landroid/graphics/RectF;
+
+    invoke-virtual {v0, p1}, Landroid/graphics/RectF;->set(Landroid/graphics/Rect;)V
+
+    new-instance v1, Landroid/graphics/LinearGradient;
+
+    iget v3, v0, Landroid/graphics/RectF;->top:F
+
+    iget v5, v0, Landroid/graphics/RectF;->bottom:F
+
+    sget-object p1, Lfe3;->t0:Ltea;
+
+    iget-object v0, p0, Lw27;->a:Landroid/content/Context;
+
+    invoke-virtual {p1, v0}, Ltea;->n(Landroid/content/Context;)Lfe3;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lfe3;->j()Llob;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Llob;->i()Lkyc;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lkyc;->c:Ljava/lang/Object;
+
+    check-cast p1, Lvd0;
+
+    iget-object p1, p1, Lvd0;->d:Ljava/lang/Object;
+
+    move-object v6, p1
+
+    check-cast v6, [I
+
+    iget-object v7, p0, Lw27;->o:[F
+
+    sget-object v8, Landroid/graphics/Shader$TileMode;->CLAMP:Landroid/graphics/Shader$TileMode;
+
+    const/4 v2, 0x0
+
+    const/4 v4, 0x0
+
+    invoke-direct/range {v1 .. v8}, Landroid/graphics/LinearGradient;-><init>(FFFF[I[FLandroid/graphics/Shader$TileMode;)V
+
+    iget-object p1, p0, Lw27;->c:Landroid/graphics/Paint;
+
+    invoke-virtual {p1, v1}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
+
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public final setAlpha(I)V
     .locals 1
 
-    const-string v0, "Empty"
+    iget-object v0, p0, Lw27;->c:Landroid/graphics/Paint;
 
-    return-object v0
+    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setAlpha(I)V
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+
+    return-void
+.end method
+
+.method public final setColorFilter(Landroid/graphics/ColorFilter;)V
+    .locals 1
+
+    iget-object v0, p0, Lw27;->c:Landroid/graphics/Paint;
+
+    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColorFilter(Landroid/graphics/ColorFilter;)Landroid/graphics/ColorFilter;
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+
+    return-void
 .end method

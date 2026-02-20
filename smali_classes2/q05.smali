@@ -2,163 +2,204 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lr05;
+
 
 # instance fields
 .field public final a:J
 
+.field public final b:J
+
+.field public final c:J
+
+.field public final d:Lmrd;
+
 
 # direct methods
-.method public synthetic constructor <init>(J)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 20
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-object/from16 v0, p0
 
-    iput-wide p1, p0, Lq05;->a:J
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sget-object v1, Ltz4;->b:Ljava/util/concurrent/atomic/AtomicLong;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicLong;->incrementAndGet()J
+
+    move-result-wide v3
+
+    iput-wide v3, v0, Lq05;->a:J
+
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicLong;->incrementAndGet()J
+
+    move-result-wide v10
+
+    iput-wide v10, v0, Lq05;->b:J
+
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicLong;->incrementAndGet()J
+
+    move-result-wide v13
+
+    iput-wide v13, v0, Lq05;->c:J
+
+    new-instance v2, Lmm4;
+
+    sget v1, Lbjd;->oneme_settings_old_dev_menu:I
+
+    new-instance v5, Lcpg;
+
+    invoke-direct {v5, v1}, Lcpg;-><init>(I)V
+
+    sget v6, Lice;->X:I
+
+    const/16 v9, 0x8
+
+    const/4 v7, 0x0
+
+    sget-object v18, Lkm4;->a:Lkm4;
+
+    move-object/from16 v8, v18
+
+    invoke-direct/range {v2 .. v9}, Lmm4;-><init>(JLhpg;ILhpg;Lyuj;I)V
+
+    new-instance v5, Lmm4;
+
+    sget v1, Lbjd;->oneme_settings_old_logs_menu:I
+
+    new-instance v8, Lcpg;
+
+    invoke-direct {v8, v1}, Lcpg;-><init>(I)V
+
+    sget v9, Lice;->g:I
+
+    move-wide v6, v10
+
+    const/4 v10, 0x0
+
+    const/16 v12, 0x8
+
+    move-object/from16 v11, v18
+
+    invoke-direct/range {v5 .. v12}, Lmm4;-><init>(JLhpg;ILhpg;Lyuj;I)V
+
+    new-instance v12, Lmm4;
+
+    new-instance v15, Lgpg;
+
+    const-string v1, "\u0414\u0435\u0431\u0430\u0433 \u043f\u0430\u043c\u044f\u0442\u0438"
+
+    invoke-direct {v15, v1}, Lgpg;-><init>(Ljava/lang/CharSequence;)V
+
+    sget v16, Lice;->v:I
+
+    const/16 v17, 0x0
+
+    const/16 v19, 0x8
+
+    invoke-direct/range {v12 .. v19}, Lmm4;-><init>(JLhpg;ILhpg;Lyuj;I)V
+
+    filled-new-array {v2, v5, v12}, [Lmm4;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lfk3;->g([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lixf;->a(Ljava/lang/Object;)Lhxf;
+
+    move-result-object v1
+
+    new-instance v2, Lmrd;
+
+    invoke-direct {v2, v1}, Lmrd;-><init>(Lgia;)V
+
+    iput-object v2, v0, Lq05;->d:Lmrd;
 
     return-void
 .end method
 
-.method public static final synthetic a(J)Lq05;
+
+# virtual methods
+.method public final a()Laxf;
     .locals 1
 
-    new-instance v0, Lq05;
-
-    invoke-direct {v0, p0, p1}, Lq05;-><init>(J)V
+    iget-object v0, p0, Lq05;->d:Lmrd;
 
     return-object v0
 .end method
 
-.method public static b(IF)J
-    .locals 3
+.method public final c(Lmm4;)V
+    .locals 6
 
-    invoke-static {p1}, Ljava/lang/Float;->floatToIntBits(F)I
+    iget-wide v0, p1, Lmm4;->a:J
+
+    iget-wide v2, p0, Lq05;->b:J
+
+    invoke-static {v0, v1, v2, v3}, Ltz4;->a(JJ)Z
 
     move-result p1
 
-    int-to-long v0, p1
+    const/4 v2, 0x6
 
-    int-to-long p0, p0
+    const/4 v3, 0x0
 
-    const/16 v2, 0x20
+    if-eqz p1, :cond_0
 
-    shl-long/2addr p0, v2
+    sget-object p1, Lg05;->c:Lg05;
 
-    add-long/2addr v0, p0
+    invoke-virtual {p1}, Ld3;->n0()Lyn4;
 
-    return-wide v0
-.end method
+    move-result-object p1
 
-.method public static final c(JLandroid/content/Context;)F
-    .locals 0
+    const-string v0, ":settings/dev/logsviewer"
 
-    invoke-virtual {p2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    invoke-static {p1, v0, v3, v2}, Lyn4;->b(Lyn4;Ljava/lang/String;Landroid/os/Bundle;I)Z
 
-    move-result-object p2
-
-    invoke-virtual {p2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object p2
-
-    invoke-static {p0, p1, p2}, Lq05;->d(JLandroid/util/DisplayMetrics;)F
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static final d(JLandroid/util/DisplayMetrics;)F
-    .locals 2
-
-    const/16 v0, 0x20
-
-    shr-long v0, p0, v0
-
-    long-to-int v0, v0
-
-    invoke-static {p0, p1}, Lq05;->e(J)F
-
-    move-result p0
-
-    invoke-static {v0, p0, p2}, Landroid/util/TypedValue;->applyDimension(IFLandroid/util/DisplayMetrics;)F
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static final e(J)F
-    .locals 2
-
-    const-wide v0, 0xffffffffL
-
-    and-long/2addr p0, v0
-
-    long-to-int p0, p0
-
-    invoke-static {p0}, Ljava/lang/Float;->intBitsToFloat(I)F
-
-    move-result p0
-
-    return p0
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    instance-of v0, p1, Lq05;
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
+    return-void
 
     :cond_0
-    check-cast p1, Lq05;
+    iget-wide v4, p0, Lq05;->a:J
 
-    iget-wide v0, p1, Lq05;->a:J
+    invoke-static {v0, v1, v4, v5}, Ltz4;->a(JJ)Z
 
-    iget-wide v2, p0, Lq05;->a:J
-
-    cmp-long p1, v2, v0
+    move-result p1
 
     if-eqz p1, :cond_1
 
-    :goto_0
-    const/4 p1, 0x0
+    sget-object p1, Lg05;->c:Lg05;
 
-    return p1
+    invoke-virtual {p1}, Ld3;->n0()Lyn4;
+
+    move-result-object p1
+
+    const-string v0, ":settings/dev/showroom"
+
+    invoke-static {p1, v0, v3, v2}, Lyn4;->b(Lyn4;Ljava/lang/String;Landroid/os/Bundle;I)Z
+
+    return-void
 
     :cond_1
-    const/4 p1, 0x1
+    iget-wide v4, p0, Lq05;->c:J
 
-    return p1
-.end method
+    invoke-static {v0, v1, v4, v5}, Ltz4;->a(JJ)Z
 
-.method public final hashCode()I
-    .locals 2
+    move-result p1
 
-    iget-wide v0, p0, Lq05;->a:J
+    if-eqz p1, :cond_2
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    sget-object p1, Lg05;->c:Lg05;
 
-    move-result v0
+    invoke-virtual {p1}, Ld3;->n0()Lyn4;
 
-    return v0
-.end method
+    move-result-object p1
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+    const-string v0, ":settings/dev/memorydebugger"
 
-    const-string v0, "Dimension(encodedValue="
+    invoke-static {p1, v0, v3, v2}, Lyn4;->b(Lyn4;Ljava/lang/String;Landroid/os/Bundle;I)Z
 
-    const-string v1, ")"
-
-    iget-wide v2, p0, Lq05;->a:J
-
-    invoke-static {v2, v3, v0, v1}, Lcbh;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :cond_2
+    return-void
 .end method

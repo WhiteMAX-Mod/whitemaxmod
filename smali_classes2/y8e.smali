@@ -1,28 +1,34 @@
 .class public final Ly8e;
-.super Lp6g;
+.super Lpdg;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Lys6;
 
 
 # instance fields
-.field public final synthetic X:Lz8e;
+.field public final synthetic X:Le9e;
 
-.field public final synthetic o:Ljava/io/File;
+.field public final synthetic Y:J
+
+.field public final synthetic Z:J
+
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/io/File;Lz8e;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Le9e;JJLkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Ly8e;->o:Ljava/io/File;
+    iput-object p1, p0, Ly8e;->X:Le9e;
 
-    iput-object p2, p0, Ly8e;->X:Lz8e;
+    iput-wide p2, p0, Ly8e;->Y:J
+
+    iput-wide p4, p0, Ly8e;->Z:J
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p6}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -32,7 +38,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lzb4;
+    check-cast p1, Lnd4;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -42,7 +48,7 @@
 
     check-cast p1, Ly8e;
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    sget-object p2, Lmah;->a:Lmah;
 
     invoke-virtual {p1, p2}, Ly8e;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -52,59 +58,120 @@
 .end method
 
 .method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    .locals 7
 
-    new-instance p1, Ly8e;
+    new-instance v0, Ly8e;
 
-    iget-object v0, p0, Ly8e;->o:Ljava/io/File;
+    iget-wide v2, p0, Ly8e;->Y:J
 
-    iget-object v1, p0, Ly8e;->X:Lz8e;
+    iget-wide v4, p0, Ly8e;->Z:J
 
-    invoke-direct {p1, v0, v1, p2}, Ly8e;-><init>(Ljava/io/File;Lz8e;Lkotlin/coroutines/Continuation;)V
+    iget-object v1, p0, Ly8e;->X:Le9e;
 
-    return-object p1
+    move-object v6, p2
+
+    invoke-direct/range {v0 .. v6}, Ly8e;-><init>(Le9e;JJLkotlin/coroutines/Continuation;)V
+
+    return-object v0
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    .locals 12
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    iget v0, p0, Ly8e;->o:I
 
-    new-instance p1, Lnre;
+    iget-object v1, p0, Ly8e;->X:Le9e;
 
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+    const/4 v2, 0x2
 
-    iget-object v0, p0, Ly8e;->o:Ljava/io/File;
+    const/4 v3, 0x1
 
-    iput-object v0, p1, Lnre;->b:Ljava/lang/Object;
+    sget-object v4, Lod4;->a:Lod4;
 
-    sget-object v0, Landroid/os/Environment;->DIRECTORY_MOVIES:Ljava/lang/String;
+    if-eqz v0, :cond_2
 
-    iput-object v0, p1, Lnre;->a:Ljava/lang/Object;
+    if-eq v0, v3, :cond_1
 
-    sget-object v0, Lt5a;->t0:Lt5a;
+    if-ne v0, v2, :cond_0
 
-    iput-object v0, p1, Lnre;->c:Ljava/lang/Object;
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    const-string v0, "external_primary"
+    goto :goto_2
 
-    invoke-static {v0}, Landroid/provider/MediaStore$Video$Media;->getContentUri(Ljava/lang/String;)Landroid/net/Uri;
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    move-result-object v0
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    iput-object v0, p1, Lnre;->d:Ljava/lang/Object;
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    iget-object v0, p0, Ly8e;->X:Lz8e;
+    throw p1
 
-    iget-object v0, v0, Lz8e;->a:Ljce;
+    :cond_1
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    invoke-interface {v0}, Ljce;->c()Ljava/lang/String;
+    goto :goto_0
 
-    move-result-object v1
+    :cond_2
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    invoke-interface {v0, p1, v1}, Ljce;->a(Lkce;Ljava/lang/String;)Landroid/net/Uri;
+    invoke-virtual {v1}, Le9e;->d()Lrw9;
 
     move-result-object p1
+
+    iput v3, p0, Ly8e;->o:I
+
+    move-object v10, p1
+
+    check-cast v10, Lqx9;
+
+    iget-object p1, v10, Lqx9;->a:Lm8e;
+
+    new-instance v5, Ltw9;
+
+    const/4 v11, 0x2
+
+    iget-wide v6, p0, Ly8e;->Y:J
+
+    iget-wide v8, p0, Ly8e;->Z:J
+
+    invoke-direct/range {v5 .. v11}, Ltw9;-><init>(JJLqx9;I)V
+
+    const/4 v0, 0x0
+
+    invoke-static {v5, p1, p0, v3, v0}, Lfuj;->h(Lks6;Lm8e;Lkotlin/coroutines/Continuation;ZZ)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v4, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    :goto_0
+    check-cast p1, Ldp9;
+
+    if-eqz p1, :cond_5
+
+    iput v2, p0, Ly8e;->o:I
+
+    invoke-virtual {v1, p1, p0}, Le9e;->h(Ldp9;Lda4;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v4, :cond_4
+
+    :goto_1
+    return-object v4
+
+    :cond_4
+    :goto_2
+    check-cast p1, Lpo9;
+
+    return-object p1
+
+    :cond_5
+    const/4 p1, 0x0
 
     return-object p1
 .end method

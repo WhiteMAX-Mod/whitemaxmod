@@ -27,7 +27,7 @@
 
     const-string v1, "Invalid pixel format: "
 
-    invoke-static {p1, v1}, Lj27;->g(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v1}, Ltx8;->g(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -237,7 +237,7 @@
 
     const-string v0, "Framebuffer not complete, status: "
 
-    invoke-static {p1, v0}, Lj27;->g(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v0}, Ltx8;->g(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -256,7 +256,7 @@
 
     const-string v0, "x"
 
-    invoke-static {p2, v6, v7, v0}, Lj27;->h(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p2, v6, v7, v0}, Ltx8;->j(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 

@@ -1,110 +1,78 @@
-.class public final Lf3e;
-.super Lp6g;
+.class public abstract Lf3e;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lbr6;
-
-
-# instance fields
-.field public final synthetic X:Lf1e;
-
-.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Lf1e;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public static a(Landroid/app/Activity;Lfa8;)V
+    .locals 1
 
-    iput-object p1, p0, Lf3e;->X:Lf1e;
+    instance-of v0, p0, Lab8;
 
-    const/4 p1, 0x2
+    if-eqz v0, :cond_0
 
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    check-cast p0, Lab8;
 
+    invoke-interface {p0}, Lab8;->p()Lcb8;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0, p1}, Lcb8;->d(Lfa8;)V
+
+    :cond_0
     return-void
 .end method
 
+.method public static b(Landroid/app/Activity;)V
+    .locals 3
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    check-cast p1, Lzb4;
+    const/16 v1, 0x1d
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-lt v0, v1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lf3e;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    sget-object v0, Lh3e$a;->Companion:Lg3e;
 
-    move-result-object p1
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    check-cast p1, Lf3e;
+    new-instance v0, Lh3e$a;
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    invoke-direct {v0}, Lh3e$a;-><init>()V
 
-    invoke-virtual {p1, p2}, Lf3e;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Lf3e;
-
-    iget-object v0, p0, Lf3e;->X:Lf1e;
-
-    invoke-direct {p1, v0, p2}, Lf3e;-><init>(Lf1e;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    iget v0, p0, Lf3e;->o:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    goto :goto_0
+    invoke-static {p0, v0}, Lq1e;->l(Landroid/app/Activity;Lh3e$a;)V
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    invoke-virtual {p0}, Landroid/app/Activity;->getFragmentManager()Landroid/app/FragmentManager;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    move-result-object p0
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    const-string v0, "androidx.lifecycle.LifecycleDispatcher.report_fragment_tag"
 
-    throw p1
+    invoke-virtual {p0, v0}, Landroid/app/FragmentManager;->findFragmentByTag(Ljava/lang/String;)Landroid/app/Fragment;
+
+    move-result-object v1
+
+    if-nez v1, :cond_1
+
+    invoke-virtual {p0}, Landroid/app/FragmentManager;->beginTransaction()Landroid/app/FragmentTransaction;
+
+    move-result-object v1
+
+    new-instance v2, Lh3e;
+
+    invoke-direct {v2}, Landroid/app/Fragment;-><init>()V
+
+    invoke-virtual {v1, v2, v0}, Landroid/app/FragmentTransaction;->add(Landroid/app/Fragment;Ljava/lang/String;)Landroid/app/FragmentTransaction;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/app/FragmentTransaction;->commit()I
+
+    invoke-virtual {p0}, Landroid/app/FragmentManager;->executePendingTransactions()Z
 
     :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    iput v1, p0, Lf3e;->o:I
-
-    iget-object p1, p0, Lf3e;->X:Lf1e;
-
-    invoke-static {p1, p0}, Lf1e;->l(Lf1e;Lo84;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lac4;->a:Lac4;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
-    :cond_2
-    :goto_0
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
+    return-void
 .end method

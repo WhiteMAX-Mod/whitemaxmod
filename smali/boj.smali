@@ -2,123 +2,63 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
 
-# static fields
-.field public static a:Lzmj;
+
+# instance fields
+.field public final a:Lvlg;
 
 
 # direct methods
-.method public static final a(DLza5;Lza5;)D
-    .locals 6
+.method public constructor <init>()V
+    .locals 1
 
-    iget-object p3, p3, Lza5;->a:Ljava/util/concurrent/TimeUnit;
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object p2, p2, Lza5;->a:Ljava/util/concurrent/TimeUnit;
+    const/4 v0, 0x0
 
-    const-wide/16 v0, 0x1
+    iput-object v0, p0, Lboj;->a:Lvlg;
 
-    invoke-virtual {p3, v0, v1, p2}, Ljava/util/concurrent/TimeUnit;->convert(JLjava/util/concurrent/TimeUnit;)J
-
-    move-result-wide v2
-
-    const-wide/16 v4, 0x0
-
-    cmp-long v4, v2, v4
-
-    if-lez v4, :cond_0
-
-    long-to-double p2, v2
-
-    mul-double/2addr p0, p2
-
-    return-wide p0
-
-    :cond_0
-    invoke-virtual {p2, v0, v1, p3}, Ljava/util/concurrent/TimeUnit;->convert(JLjava/util/concurrent/TimeUnit;)J
-
-    move-result-wide p2
-
-    long-to-double p2, p2
-
-    div-double/2addr p0, p2
-
-    return-wide p0
+    return-void
 .end method
 
-.method public static final b(Lza5;)Ljava/lang/String;
-    .locals 3
+.method public constructor <init>(Lvlg;)V
+    .locals 0
 
-    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result v0
+    iput-object p1, p0, Lboj;->a:Lvlg;
 
-    packed-switch v0, :pswitch_data_0
+    return-void
+.end method
 
-    new-instance v0, Ljava/lang/IllegalStateException;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+# virtual methods
+.method public abstract a()V
+.end method
 
-    const-string v2, "Unknown unit: "
+.method public final run()V
+    .locals 2
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    :try_start_0
+    invoke-virtual {p0}, Lboj;->a()V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    return-void
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :catch_0
+    move-exception v0
 
-    move-result-object p0
+    iget-object v1, p0, Lboj;->a:Lvlg;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    if-eqz v1, :cond_0
 
-    move-result-object p0
+    invoke-virtual {v1, v0}, Lvlg;->c(Ljava/lang/Exception;)Z
 
-    invoke-direct {v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :pswitch_0
-    const-string p0, "d"
-
-    return-object p0
-
-    :pswitch_1
-    const-string p0, "h"
-
-    return-object p0
-
-    :pswitch_2
-    const-string p0, "m"
-
-    return-object p0
-
-    :pswitch_3
-    const-string p0, "s"
-
-    return-object p0
-
-    :pswitch_4
-    const-string p0, "ms"
-
-    return-object p0
-
-    :pswitch_5
-    const-string p0, "us"
-
-    return-object p0
-
-    :pswitch_6
-    const-string p0, "ns"
-
-    return-object p0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    :cond_0
+    return-void
 .end method

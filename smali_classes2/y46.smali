@@ -1,29 +1,19 @@
-.class public interface abstract Ly46;
-.super Ljava/lang/Object;
+.class public final Ly46;
+.super Lbm0;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a()Z
-.end method
+# instance fields
+.field public final c:Lzd7;
 
-.method public b()V
+
+# direct methods
+.method public constructor <init>(Lzd7;)V
     .locals 0
 
-    return-void
-.end method
+    invoke-direct {p0}, Lbm0;-><init>()V
 
-.method public c()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public abstract d(Ltqf;)V
-.end method
-
-.method public e()V
-    .locals 0
+    iput-object p1, p0, Ly46;->c:Lzd7;
 
     return-void
 .end method

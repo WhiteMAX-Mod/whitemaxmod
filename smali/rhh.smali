@@ -1,25 +1,121 @@
-.class public interface abstract Lrhh;
-.super Ljava/lang/Object;
+.class public final enum Lrhh;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:Lhud;
+.field public static final enum X:Lrhh;
+
+.field public static final synthetic Y:[Lrhh;
+
+.field public static final enum a:Lrhh;
+
+.field public static final enum b:Lrhh;
+
+.field public static final enum c:Lrhh;
+
+.field public static final enum d:Lrhh;
+
+.field public static final enum o:Lrhh;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 8
 
-    new-instance v0, Lohh;
+    new-instance v0, Lrhh;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const-string v1, "IMAGE_CAPTURE"
 
-    invoke-static {v0}, Lhk7;->m(Ljava/lang/Object;)Lhud;
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lrhh;->a:Lrhh;
+
+    new-instance v1, Lrhh;
+
+    const-string v2, "PREVIEW"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lrhh;->b:Lrhh;
+
+    new-instance v2, Lrhh;
+
+    const-string v3, "IMAGE_ANALYSIS"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lrhh;->c:Lrhh;
+
+    new-instance v3, Lrhh;
+
+    const-string v4, "VIDEO_CAPTURE"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Lrhh;->d:Lrhh;
+
+    new-instance v4, Lrhh;
+
+    const-string v5, "STREAM_SHARING"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v4, Lrhh;->o:Lrhh;
+
+    new-instance v5, Lrhh;
+
+    const-string v6, "METERING_REPEATING"
+
+    const/4 v7, 0x5
+
+    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v5, Lrhh;->X:Lrhh;
+
+    filled-new-array/range {v0 .. v5}, [Lrhh;
 
     move-result-object v0
 
-    sput-object v0, Lrhh;->a:Lhud;
+    sput-object v0, Lrhh;->Y:[Lrhh;
 
     return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lrhh;
+    .locals 1
+
+    const-class v0, Lrhh;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lrhh;
+
+    return-object p0
+.end method
+
+.method public static values()[Lrhh;
+    .locals 1
+
+    sget-object v0, Lrhh;->Y:[Lrhh;
+
+    invoke-virtual {v0}, [Lrhh;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lrhh;
+
+    return-object v0
 .end method

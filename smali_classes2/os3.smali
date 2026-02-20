@@ -1,131 +1,114 @@
 .class public final Los3;
-.super Lie0;
+.super Lpdg;
 .source "SourceFile"
+
+# interfaces
+.implements Lys6;
 
 
 # instance fields
-.field public final b:Ljava/lang/String;
+.field public final synthetic X:Lqs3;
 
-.field public final c:Lahc;
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Lahc;)V
-    .locals 1
+.method public constructor <init>(Lqs3;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    const/4 v0, 0x7
+    iput-object p1, p0, Los3;->X:Lqs3;
 
-    invoke-direct {p0, v0}, Lie0;-><init>(I)V
+    const/4 p1, 0x2
 
-    iput-object p1, p0, Los3;->b:Ljava/lang/String;
-
-    iput-object p2, p0, Los3;->c:Lahc;
+    invoke-direct {p0, p1, p2}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p1, Lnd4;
 
-    if-ne p0, p1, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return v0
+    invoke-virtual {p0, p1, p2}, Los3;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of v1, p1, Los3;
+    move-result-object p1
 
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
     check-cast p1, Los3;
 
-    iget-object v1, p0, Los3;->b:Ljava/lang/String;
+    sget-object p2, Lmah;->a:Lmah;
 
-    iget-object v3, p1, Los3;->b:Ljava/lang/String;
+    invoke-virtual {p1, p2}, Los3;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-result-object p1
 
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Los3;->c:Lahc;
-
-    iget-object p1, p1, Los3;->c:Lahc;
-
-    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
+    return-object p1
 .end method
 
-.method public final hashCode()I
-    .locals 2
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    iget-object v0, p0, Los3;->b:Ljava/lang/String;
+    new-instance p1, Los3;
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    iget-object v0, p0, Los3;->X:Lqs3;
 
-    move-result v0
+    invoke-direct {p1, v0, p2}, Los3;-><init>(Lqs3;Lkotlin/coroutines/Continuation;)V
 
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Los3;->c:Lahc;
-
-    invoke-virtual {v1}, Lahc;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    return-object p1
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget v0, p0, Los3;->o:I
 
-    const-string v1, "NameInputScreen(token="
+    const/4 v1, 0x1
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    if-eqz v0, :cond_1
 
-    iget-object v1, p0, Los3;->b:Ljava/lang/String;
+    if-ne v0, v1, :cond_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    const-string v1, ", presetAvatars="
+    goto :goto_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    iget-object v1, p0, Los3;->c:Lahc;
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    const-string v1, ")"
+    throw p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_1
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-object p1, p0, Los3;->X:Lqs3;
 
-    move-result-object v0
+    iget-object p1, p1, Lqs3;->a:Lzef;
+
+    iput v1, p0, Los3;->o:I
+
+    sget-object v0, Ljs3;->a:Ljs3;
+
+    invoke-virtual {p1, v0, p0}, Lzef;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lod4;->a:Lod4;
+
+    if-ne p1, v0, :cond_2
 
     return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
 .end method

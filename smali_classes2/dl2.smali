@@ -1,108 +1,94 @@
 .class public final Ldl2;
-.super Lqn2;
+.super Lujg;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final D(Lof9;Lnq6;Lbr6;)V
+# instance fields
+.field public final c:Lue2;
+
+
+# direct methods
+.method public constructor <init>(Lue2;)V
     .locals 0
 
-    check-cast p1, Llf9;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p0, p1}, Ldl2;->F(Llf9;)V
-
-    invoke-super {p0, p1, p2, p3}, Lqn2;->D(Lof9;Lnq6;Lbr6;)V
+    iput-object p1, p0, Ldl2;->c:Lue2;
 
     return-void
 .end method
 
-.method public final F(Llf9;)V
-    .locals 8
 
-    iget-object v0, p0, Ltsd;->a:Landroid/view/View;
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    check-cast v0, Lon2;
+    const/4 v0, 0x1
 
-    iget-wide v1, p1, Llf9;->a:J
+    if-ne p0, p1, :cond_0
 
-    long-to-int v1, v1
-
-    invoke-virtual {v0, v1}, Landroidx/constraintlayout/widget/ConstraintLayout;->setId(I)V
-
-    iget-object v1, p1, Llf9;->o:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Lon2;->setTitle(Ljava/lang/CharSequence;)V
-
-    iget-object v1, p1, Llf9;->Y:Ljava/lang/CharSequence;
-
-    invoke-virtual {v0, v1}, Lon2;->setLink(Ljava/lang/CharSequence;)V
-
-    iget-object v1, p1, Llf9;->X:Ljava/lang/CharSequence;
-
-    invoke-virtual {v0, v1}, Lon2;->setSubtitle(Ljava/lang/CharSequence;)V
-
-    iget-boolean v1, p1, Llf9;->Z:Z
-
-    if-eqz v1, :cond_0
-
-    iget-object p1, v0, Lon2;->K0:Lj4b;
-
-    const/4 v1, 0x0
-
-    iput-object v1, p1, Lj4b;->L0:Ljava/util/List;
-
-    iget-object p1, p1, Lj4b;->b:Lo85;
-
-    invoke-virtual {p1, v1}, Lo85;->i(Lk85;)V
-
-    iget-object v2, v0, Lon2;->K0:Lj4b;
-
-    iget-object p1, v0, Lon2;->G0:Ljava/lang/Object;
-
-    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    move-object v3, p1
-
-    check-cast v3, Landroid/graphics/drawable/Drawable;
-
-    new-instance v5, Lbh1;
-
-    const/16 p1, 0x13
-
-    invoke-direct {v5, p1}, Lbh1;-><init>(I)V
-
-    new-instance v6, Lbh1;
-
-    const/16 p1, 0x14
-
-    invoke-direct {v6, p1}, Lbh1;-><init>(I)V
-
-    const/4 v7, 0x6
-
-    const/4 v4, 0x0
-
-    invoke-static/range {v2 .. v7}, Lj4b;->q(Lj4b;Landroid/graphics/drawable/Drawable;Lc4b;Lnq6;Lnq6;I)V
-
-    invoke-virtual {v0}, Lon2;->u()V
-
-    return-void
+    return v0
 
     :cond_0
-    iget-object p1, p1, Llf9;->d:Ljava/lang/String;
+    instance-of v1, p1, Ldl2;
 
-    invoke-virtual {v0, p1}, Lon2;->setLinkPhoto(Ljava/lang/String;)V
+    const/4 v2, 0x0
 
-    return-void
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Ldl2;
+
+    iget-object v1, p0, Ldl2;->c:Lue2;
+
+    iget-object p1, p1, Ldl2;->c:Lue2;
+
+    invoke-static {v1, p1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
 .end method
 
-.method public final bridge synthetic y(Lud8;)V
-    .locals 0
+.method public final hashCode()I
+    .locals 1
 
-    check-cast p1, Llf9;
+    iget-object v0, p0, Ldl2;->c:Lue2;
 
-    invoke-virtual {p0, p1}, Ldl2;->F(Llf9;)V
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    return-void
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Response(chat="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Ldl2;->c:Lue2;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

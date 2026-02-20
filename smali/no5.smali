@@ -1,90 +1,81 @@
 .class public final Lno5;
-.super Ljo5;
+.super Lo0;
 .source "SourceFile"
+
+# interfaces
+.implements Lhd4;
+
+
+# static fields
+.field public static final a:Lno5;
+
+.field public static final b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ljava/io/InputStream;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 2
 
-    .line 3
-    invoke-direct {p0, p1}, Ljo5;-><init>(Ljava/io/InputStream;)V
+    new-instance v0, Lno5;
 
-    .line 4
-    invoke-virtual {p1}, Ljava/io/InputStream;->markSupported()Z
+    sget-object v1, Lluj;->o:Lluj;
 
-    move-result p1
+    invoke-direct {v0, v1}, Lo0;-><init>(Ldd4;)V
 
-    if-eqz p1, :cond_0
+    sput-object v0, Lno5;->a:Lno5;
 
-    .line 5
-    iget-object p1, p0, Ljo5;->a:Ljava/io/DataInputStream;
+    new-instance v0, Ljava/lang/Object;
 
-    const v0, 0x7fffffff
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p1, v0}, Ljava/io/InputStream;->mark(I)V
+    sput-object v0, Lno5;->b:Ljava/lang/Object;
 
-    return-void
+    new-instance v0, Ljava/util/ArrayList;
 
-    .line 6
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    const-string v0, "Cannot create SeekableByteOrderedDataInputStream with stream that does not support mark/reset"
+    new-instance v0, Ljava/util/LinkedHashMap;
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public constructor <init>([B)V
-    .locals 1
-
-    .line 1
-    invoke-direct {p0, p1}, Ljo5;-><init>([B)V
-
-    .line 2
-    iget-object p1, p0, Ljo5;->a:Ljava/io/DataInputStream;
-
-    const v0, 0x7fffffff
-
-    invoke-virtual {p1, v0}, Ljava/io/InputStream;->mark(I)V
+    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final l(J)V
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget v0, p0, Ljo5;->c:I
+    instance-of v0, p1, Lno5;
 
-    int-to-long v1, v0
+    if-nez v0, :cond_1
 
-    cmp-long v1, v1, p1
+    instance-of p1, p1, Loo5;
 
-    if-lez v1, :cond_0
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Ljo5;->c:I
-
-    iget-object v0, p0, Ljo5;->a:Ljava/io/DataInputStream;
-
-    invoke-virtual {v0}, Ljava/io/InputStream;->reset()V
+    if-eqz p1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    int-to-long v0, v0
+    const/4 p1, 0x0
 
-    sub-long/2addr p1, v0
+    return p1
 
+    :cond_1
     :goto_0
-    long-to-int p1, p1
+    const/4 p1, 0x1
 
-    invoke-virtual {p0, p1}, Ljo5;->d(I)V
+    return p1
+.end method
+
+.method public final k(Led4;Ljava/lang/Throwable;)V
+    .locals 0
+
+    sget-object p1, Lno5;->b:Ljava/lang/Object;
+
+    monitor-enter p1
+
+    monitor-exit p1
 
     return-void
 .end method

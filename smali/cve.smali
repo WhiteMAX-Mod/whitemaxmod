@@ -1,418 +1,737 @@
-.class public final Lcve;
+.class public Lcve;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final b:Ljava/lang/String;
+.field public static final synthetic X:Ljava/util/concurrent/atomic/AtomicLongFieldUpdater;
 
-.field public static final c:Ljava/lang/String;
+.field public static final synthetic Y:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+
+.field public static final synthetic c:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
+.field public static final synthetic d:Ljava/util/concurrent/atomic/AtomicLongFieldUpdater;
+
+.field public static final synthetic o:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
 
 # instance fields
-.field public final a:Lbve;
+.field private volatile synthetic _availablePermits$volatile:I
+
+.field public final a:I
+
+.field public final b:Lyu0;
+
+.field private volatile synthetic deqIdx$volatile:J
+
+.field private volatile synthetic enqIdx$volatile:J
+
+.field private volatile synthetic head$volatile:Ljava/lang/Object;
+
+.field private volatile synthetic tail$volatile:Ljava/lang/Object;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 3
 
-    const-string v0, "media3.session"
+    const-string v0, "head$volatile"
 
-    invoke-static {v0}, Lc59;->a(Ljava/lang/String;)V
+    const-class v1, Lcve;
 
-    sget-object v0, Lmbh;->a:Ljava/lang/String;
+    const-class v2, Ljava/lang/Object;
 
-    const/4 v0, 0x0
-
-    const/16 v1, 0x24
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+    invoke-static {v1, v2, v0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
     move-result-object v0
 
-    sput-object v0, Lcve;->b:Ljava/lang/String;
+    sput-object v0, Lcve;->c:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
-    const/4 v0, 0x1
+    const-string v0, "deqIdx$volatile"
 
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+    invoke-static {v1, v0}, Ljava/util/concurrent/atomic/AtomicLongFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicLongFieldUpdater;
 
     move-result-object v0
 
-    sput-object v0, Lcve;->c:Ljava/lang/String;
+    sput-object v0, Lcve;->d:Ljava/util/concurrent/atomic/AtomicLongFieldUpdater;
+
+    const-string v0, "tail$volatile"
+
+    invoke-static {v1, v2, v0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
+    move-result-object v0
+
+    sput-object v0, Lcve;->o:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
+    const-string v0, "enqIdx$volatile"
+
+    invoke-static {v1, v0}, Ljava/util/concurrent/atomic/AtomicLongFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicLongFieldUpdater;
+
+    move-result-object v0
+
+    sput-object v0, Lcve;->X:Ljava/util/concurrent/atomic/AtomicLongFieldUpdater;
+
+    const-string v0, "_availablePermits$volatile"
+
+    invoke-static {v1, v0}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+
+    move-result-object v0
+
+    sput-object v0, Lcve;->Y:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
 
     return-void
 .end method
 
-.method public constructor <init>(IIILjava/lang/String;Lme7;Landroid/os/Bundle;Landroid/media/session/MediaSession$Token;)V
-    .locals 11
+.method public constructor <init>(I)V
+    .locals 5
 
-    .line 16
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 17
-    new-instance v0, Ldve;
+    iput p1, p0, Lcve;->a:I
 
-    .line 18
-    invoke-virtual {p4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-lez p1, :cond_1
 
-    .line 19
-    invoke-interface/range {p5 .. p5}, Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;
+    if-ltz p1, :cond_0
 
-    move-result-object v8
-
-    .line 20
-    invoke-virtual/range {p6 .. p6}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v2, 0x0
-
-    .line 21
-    const-string v6, ""
-
-    const/4 v7, 0x0
-
-    move v1, p1
-
-    move v3, p2
-
-    move v4, p3
-
-    move-object v5, p4
-
-    move-object/from16 v9, p6
-
-    move-object/from16 v10, p7
-
-    invoke-direct/range {v0 .. v10}, Ldve;-><init>(IIIILjava/lang/String;Ljava/lang/String;Landroid/content/ComponentName;Landroid/os/IBinder;Landroid/os/Bundle;Landroid/media/session/MediaSession$Token;)V
-
-    .line 22
-    iput-object v0, p0, Lcve;->a:Lbve;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;Landroid/content/ComponentName;)V
-    .locals 12
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    const-string v0, "context must not be null"
-
-    invoke-static {p1, v0}, Lh6j;->e(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 3
-    invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
-
-    move-result-object p1
-
-    .line 4
-    invoke-virtual {p2}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
-
-    move-result-object v0
+    new-instance v0, Lfve;
 
     const/4 v1, 0x0
 
-    .line 5
-    :try_start_0
-    invoke-virtual {p1, v0, v1}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
+    const/4 v2, 0x2
 
-    move-result-object v0
+    const-wide/16 v3, 0x0
 
-    iget v0, v0, Landroid/content/pm/ApplicationInfo;->uid:I
-    :try_end_0
-    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-direct {v0, v3, v4, v1, v2}, Lfve;-><init>(JLfve;I)V
 
-    :goto_0
-    move v2, v0
+    iput-object v0, p0, Lcve;->head$volatile:Ljava/lang/Object;
 
-    goto :goto_1
+    iput-object v0, p0, Lcve;->tail$volatile:Ljava/lang/Object;
 
-    :catch_0
-    const/4 v0, -0x1
+    iput p1, p0, Lcve;->_availablePermits$volatile:I
 
-    goto :goto_0
+    new-instance p1, Lyu0;
 
-    .line 6
-    :goto_1
-    const-string v0, "androidx.media3.session.MediaLibraryService"
+    const/4 v0, 0x6
 
-    invoke-static {p1, v0, p2}, Lcve;->a(Landroid/content/pm/PackageManager;Ljava/lang/String;Landroid/content/ComponentName;)Z
+    invoke-direct {p1, v0, p0}, Lyu0;-><init>(ILjava/lang/Object;)V
 
-    move-result v0
+    iput-object p1, p0, Lcve;->b:Lyu0;
 
-    const/16 v1, 0x65
-
-    if-eqz v0, :cond_0
-
-    const/4 p1, 0x2
-
-    :goto_2
-    move v3, p1
-
-    goto :goto_3
-
-    .line 7
-    :cond_0
-    const-string v0, "androidx.media3.session.MediaSessionService"
-
-    invoke-static {p1, v0, p2}, Lcve;->a(Landroid/content/pm/PackageManager;Ljava/lang/String;Landroid/content/ComponentName;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    const/4 p1, 0x1
-
-    goto :goto_2
-
-    .line 8
-    :cond_1
-    const-string v0, "android.media.browse.MediaBrowserService"
-
-    invoke-static {p1, v0, p2}, Lcve;->a(Landroid/content/pm/PackageManager;Ljava/lang/String;Landroid/content/ComponentName;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_3
-
-    move v3, v1
-
-    :goto_3
-    if-eq v3, v1, :cond_2
-
-    .line 9
-    new-instance v1, Ldve;
-
-    .line 10
-    invoke-virtual {p2}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
-
-    move-result-object v6
-
-    .line 11
-    invoke-virtual {p2}, Landroid/content/ComponentName;->getClassName()Ljava/lang/String;
-
-    move-result-object v7
-
-    sget-object v10, Landroid/os/Bundle;->EMPTY:Landroid/os/Bundle;
-
-    const/4 v11, 0x0
-
-    const v4, 0xf4240
-
-    const/4 v5, 0x0
-
-    const/4 v9, 0x0
-
-    move-object v8, p2
-
-    .line 12
-    invoke-direct/range {v1 .. v11}, Ldve;-><init>(IIIILjava/lang/String;Ljava/lang/String;Landroid/content/ComponentName;Landroid/os/IBinder;Landroid/os/Bundle;Landroid/media/session/MediaSession$Token;)V
-
-    .line 13
-    iput-object v1, p0, Lcve;->a:Lbve;
-
-    goto :goto_4
-
-    :cond_2
-    move-object v8, p2
-
-    .line 14
-    new-instance p1, Leve;
-
-    invoke-direct {p1, v2, v8}, Leve;-><init>(ILandroid/content/ComponentName;)V
-
-    iput-object p1, p0, Lcve;->a:Lbve;
-
-    :goto_4
     return-void
 
-    :cond_3
-    move-object v8, p2
+    :cond_0
+    const-string v0, "The number of acquired permits should be in 0.."
 
-    .line 15
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    new-instance p2, Ljava/lang/StringBuilder;
-
-    const-string v0, "Failed to resolve SessionToken for "
-
-    invoke-direct {p2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p2, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, ". Manifest doesn\'t declare one of either MediaSessionService, MediaLibraryService, MediaBrowserService or MediaBrowserServiceCompat. Use service\'s full name."
-
-    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public static a(Landroid/content/pm/PackageManager;Ljava/lang/String;Landroid/content/ComponentName;)Z
-    .locals 3
-
-    new-instance v0, Landroid/content/Intent;
-
-    invoke-direct {v0, p1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p2}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
+    invoke-static {p1, v0}, Ltx8;->g(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const/16 p1, 0x80
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    invoke-virtual {p0, v0, p1}, Landroid/content/pm/PackageManager;->queryIntentServices(Landroid/content/Intent;I)Ljava/util/List;
+    move-result-object p1
 
-    move-result-object p0
+    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    const/4 p1, 0x0
-
-    if-eqz p0, :cond_2
-
-    move v0, p1
-
-    :goto_0
-    invoke-interface {p0}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    if-ge v0, v1, :cond_2
-
-    invoke-interface {p0, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/content/pm/ResolveInfo;
-
-    if-eqz v1, :cond_1
-
-    iget-object v1, v1, Landroid/content/pm/ResolveInfo;->serviceInfo:Landroid/content/pm/ServiceInfo;
-
-    if-nez v1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    iget-object v1, v1, Landroid/content/pm/ServiceInfo;->name:Ljava/lang/String;
-
-    invoke-virtual {p2}, Landroid/content/ComponentName;->getClassName()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    const/4 p0, 0x1
-
-    return p0
+    throw v0
 
     :cond_1
-    :goto_1
-    add-int/lit8 v0, v0, 0x1
+    const-string v0, "Semaphore should have at least 1 permit, but had "
 
-    goto :goto_0
+    invoke-static {p1, v0}, Ltx8;->g(ILjava/lang/String;)Ljava/lang/String;
 
-    :cond_2
-    return p1
+    move-result-object p1
+
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method
 
 
 # virtual methods
-.method public final b()Landroid/os/Bundle;
+.method public final a(Lda4;)Ljava/lang/Object;
     .locals 4
 
-    new-instance v0, Landroid/os/Bundle;
+    :cond_0
+    sget-object v0, Lcve;->Y:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
 
-    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+    invoke-virtual {v0, p0}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->getAndDecrement(Ljava/lang/Object;)I
 
-    iget-object v1, p0, Lcve;->a:Lbve;
+    move-result v1
 
-    instance-of v2, v1, Ldve;
+    iget v2, p0, Lcve;->a:I
 
-    sget-object v3, Lcve;->b:Ljava/lang/String;
+    if-gt v1, v2, :cond_0
 
-    if-eqz v2, :cond_0
+    sget-object v3, Lmah;->a:Lmah;
 
-    const/4 v2, 0x0
+    if-lez v1, :cond_1
 
-    invoke-virtual {v0, v3, v2}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+    goto :goto_2
+
+    :cond_1
+    invoke-static {p1}, Libj;->k(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lnga;->a(Lkotlin/coroutines/Continuation;)Lm72;
+
+    move-result-object p1
+
+    :try_start_0
+    invoke-virtual {p0, p1}, Lcve;->b(Lm4i;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    :cond_2
+    invoke-virtual {v0, p0}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->getAndDecrement(Ljava/lang/Object;)I
+
+    move-result v1
+
+    if-gt v1, v2, :cond_2
+
+    if-lez v1, :cond_3
+
+    iget-object v0, p0, Lcve;->b:Lyu0;
+
+    invoke-virtual {p1, v3, v0}, Lm72;->g(Ljava/lang/Object;Lat6;)V
 
     goto :goto_0
 
-    :cond_0
-    const/4 v2, 0x1
+    :cond_3
+    invoke-virtual {p0, p1}, Lcve;->b(Lm4i;)Z
 
-    invoke-virtual {v0, v3, v2}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+    move-result v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    if-eqz v1, :cond_2
+
+    :cond_4
     :goto_0
-    sget-object v2, Lcve;->c:Ljava/lang/String;
+    invoke-virtual {p1}, Lm72;->n()Ljava/lang/Object;
 
-    invoke-interface {v1}, Lbve;->f()Landroid/os/Bundle;
+    move-result-object p1
+
+    sget-object v0, Lod4;->a:Lod4;
+
+    if-ne p1, v0, :cond_5
+
+    goto :goto_1
+
+    :cond_5
+    move-object p1, v3
+
+    :goto_1
+    if-ne p1, v0, :cond_6
+
+    return-object p1
+
+    :cond_6
+    :goto_2
+    return-object v3
+
+    :catchall_0
+    move-exception v0
+
+    invoke-virtual {p1}, Lm72;->v()V
+
+    throw v0
+.end method
+
+.method public final b(Lm4i;)Z
+    .locals 14
+
+    sget-object v0, Lcve;->o:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
+    invoke-virtual {v0, p0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
-    invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
+    check-cast v1, Lfve;
 
-    return-object v0
-.end method
+    sget-object v2, Lcve;->X:Ljava/util/concurrent/atomic/AtomicLongFieldUpdater;
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    invoke-virtual {v2, p0}, Ljava/util/concurrent/atomic/AtomicLongFieldUpdater;->getAndIncrement(Ljava/lang/Object;)J
 
-    instance-of v0, p1, Lcve;
+    move-result-wide v2
 
-    if-nez v0, :cond_0
+    sget-object v4, Lave;->a:Lave;
+
+    sget v5, Leve;->f:I
+
+    int-to-long v5, v5
+
+    div-long v5, v2, v5
+
+    :goto_0
+    invoke-static {v1, v5, v6, v4}, Lkotlinx/coroutines/internal/ConcurrentLinkedListKt;->findSegmentInternal(Lkotlinx/coroutines/internal/Segment;JLys6;)Ljava/lang/Object;
+
+    move-result-object v7
+
+    invoke-static {v7}, Lkotlinx/coroutines/internal/SegmentOrClosed;->isClosed-impl(Ljava/lang/Object;)Z
+
+    move-result v8
+
+    if-nez v8, :cond_4
+
+    invoke-static {v7}, Lkotlinx/coroutines/internal/SegmentOrClosed;->getSegment-impl(Ljava/lang/Object;)Lkotlinx/coroutines/internal/Segment;
+
+    move-result-object v8
+
+    :cond_0
+    :goto_1
+    invoke-virtual {v0, p0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v9
+
+    check-cast v9, Lkotlinx/coroutines/internal/Segment;
+
+    iget-wide v10, v9, Lkotlinx/coroutines/internal/Segment;->id:J
+
+    iget-wide v12, v8, Lkotlinx/coroutines/internal/Segment;->id:J
+
+    cmp-long v10, v10, v12
+
+    if-ltz v10, :cond_1
+
+    goto :goto_2
+
+    :cond_1
+    invoke-virtual {v8}, Lkotlinx/coroutines/internal/Segment;->tryIncPointers$kotlinx_coroutines_core()Z
+
+    move-result v10
+
+    if-nez v10, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    invoke-virtual {v0, p0, v9, v8}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v10
+
+    if-eqz v10, :cond_3
+
+    invoke-virtual {v9}, Lkotlinx/coroutines/internal/Segment;->decPointers$kotlinx_coroutines_core()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    invoke-virtual {v9}, Lkotlinx/coroutines/internal/ConcurrentLinkedListNode;->remove()V
+
+    goto :goto_2
+
+    :cond_3
+    invoke-virtual {v0, p0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v10
+
+    if-eq v10, v9, :cond_2
+
+    invoke-virtual {v8}, Lkotlinx/coroutines/internal/Segment;->decPointers$kotlinx_coroutines_core()Z
+
+    move-result v9
+
+    if-eqz v9, :cond_0
+
+    invoke-virtual {v8}, Lkotlinx/coroutines/internal/ConcurrentLinkedListNode;->remove()V
+
+    goto :goto_1
+
+    :cond_4
+    :goto_2
+    invoke-static {v7}, Lkotlinx/coroutines/internal/SegmentOrClosed;->getSegment-impl(Ljava/lang/Object;)Lkotlinx/coroutines/internal/Segment;
+
+    move-result-object v0
+
+    check-cast v0, Lfve;
+
+    sget v1, Leve;->f:I
+
+    int-to-long v4, v1
+
+    rem-long/2addr v2, v4
+
+    long-to-int v1, v2
+
+    iget-object v2, v0, Lfve;->a:Ljava/util/concurrent/atomic/AtomicReferenceArray;
+
+    :cond_5
+    const/4 v3, 0x0
+
+    invoke-virtual {v2, v1, v3, p1}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->compareAndSet(ILjava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v3
+
+    const/4 v4, 0x1
+
+    if-eqz v3, :cond_6
+
+    invoke-interface {p1, v0, v1}, Lm4i;->a(Lkotlinx/coroutines/internal/Segment;I)V
+
+    return v4
+
+    :cond_6
+    invoke-virtual {v2, v1}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_5
+
+    sget-object v3, Leve;->b:Lkotlinx/coroutines/internal/Symbol;
+
+    sget-object v5, Leve;->c:Lkotlinx/coroutines/internal/Symbol;
+
+    iget-object v6, v0, Lfve;->a:Ljava/util/concurrent/atomic/AtomicReferenceArray;
+
+    :cond_7
+    invoke-virtual {v6, v1, v3, v5}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->compareAndSet(ILjava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_8
+
+    check-cast p1, Ll72;
+
+    iget-object v0, p0, Lcve;->b:Lyu0;
+
+    sget-object v1, Lmah;->a:Lmah;
+
+    invoke-interface {p1, v1, v0}, Ll72;->g(Ljava/lang/Object;Lat6;)V
+
+    return v4
+
+    :cond_8
+    invoke-virtual {v6, v1}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-eq v0, v3, :cond_7
 
     const/4 p1, 0x0
 
     return p1
-
-    :cond_0
-    check-cast p1, Lcve;
-
-    iget-object v0, p0, Lcve;->a:Lbve;
-
-    iget-object p1, p1, Lcve;->a:Lbve;
-
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
 .end method
 
-.method public final hashCode()I
-    .locals 1
+.method public final c()V
+    .locals 14
 
-    iget-object v0, p0, Lcve;->a:Lbve;
+    :cond_0
+    sget-object v0, Lcve;->Y:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v0, p0}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->getAndIncrement(Ljava/lang/Object;)I
+
+    move-result v1
+
+    iget v2, p0, Lcve;->a:I
+
+    if-ge v1, v2, :cond_11
+
+    if-ltz v1, :cond_1
+
+    goto/16 :goto_7
+
+    :cond_1
+    sget-object v0, Lcve;->c:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
+    invoke-virtual {v0, p0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lfve;
+
+    sget-object v2, Lcve;->d:Ljava/util/concurrent/atomic/AtomicLongFieldUpdater;
+
+    invoke-virtual {v2, p0}, Ljava/util/concurrent/atomic/AtomicLongFieldUpdater;->getAndIncrement(Ljava/lang/Object;)J
+
+    move-result-wide v2
+
+    sget v4, Leve;->f:I
+
+    int-to-long v4, v4
+
+    div-long v4, v2, v4
+
+    sget-object v6, Lbve;->a:Lbve;
+
+    :goto_0
+    invoke-static {v1, v4, v5, v6}, Lkotlinx/coroutines/internal/ConcurrentLinkedListKt;->findSegmentInternal(Lkotlinx/coroutines/internal/Segment;JLys6;)Ljava/lang/Object;
+
+    move-result-object v7
+
+    invoke-static {v7}, Lkotlinx/coroutines/internal/SegmentOrClosed;->isClosed-impl(Ljava/lang/Object;)Z
+
+    move-result v8
+
+    if-nez v8, :cond_6
+
+    invoke-static {v7}, Lkotlinx/coroutines/internal/SegmentOrClosed;->getSegment-impl(Ljava/lang/Object;)Lkotlinx/coroutines/internal/Segment;
+
+    move-result-object v8
+
+    :cond_2
+    :goto_1
+    invoke-virtual {v0, p0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v9
+
+    check-cast v9, Lkotlinx/coroutines/internal/Segment;
+
+    iget-wide v10, v9, Lkotlinx/coroutines/internal/Segment;->id:J
+
+    iget-wide v12, v8, Lkotlinx/coroutines/internal/Segment;->id:J
+
+    cmp-long v10, v10, v12
+
+    if-ltz v10, :cond_3
+
+    goto :goto_2
+
+    :cond_3
+    invoke-virtual {v8}, Lkotlinx/coroutines/internal/Segment;->tryIncPointers$kotlinx_coroutines_core()Z
+
+    move-result v10
+
+    if-nez v10, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    invoke-virtual {v0, p0, v9, v8}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v10
+
+    if-eqz v10, :cond_5
+
+    invoke-virtual {v9}, Lkotlinx/coroutines/internal/Segment;->decPointers$kotlinx_coroutines_core()Z
 
     move-result v0
 
-    return v0
-.end method
+    if-eqz v0, :cond_6
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    invoke-virtual {v9}, Lkotlinx/coroutines/internal/ConcurrentLinkedListNode;->remove()V
 
-    iget-object v0, p0, Lcve;->a:Lbve;
+    goto :goto_2
 
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    :cond_5
+    invoke-virtual {v0, p0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v10
+
+    if-eq v10, v9, :cond_4
+
+    invoke-virtual {v8}, Lkotlinx/coroutines/internal/Segment;->decPointers$kotlinx_coroutines_core()Z
+
+    move-result v9
+
+    if-eqz v9, :cond_2
+
+    invoke-virtual {v8}, Lkotlinx/coroutines/internal/ConcurrentLinkedListNode;->remove()V
+
+    goto :goto_1
+
+    :cond_6
+    :goto_2
+    invoke-static {v7}, Lkotlinx/coroutines/internal/SegmentOrClosed;->getSegment-impl(Ljava/lang/Object;)Lkotlinx/coroutines/internal/Segment;
 
     move-result-object v0
 
-    return-object v0
+    check-cast v0, Lfve;
+
+    invoke-virtual {v0}, Lkotlinx/coroutines/internal/ConcurrentLinkedListNode;->cleanPrev()V
+
+    iget-object v1, v0, Lfve;->a:Ljava/util/concurrent/atomic/AtomicReferenceArray;
+
+    iget-wide v6, v0, Lkotlinx/coroutines/internal/Segment;->id:J
+
+    cmp-long v0, v6, v4
+
+    const/4 v4, 0x0
+
+    if-lez v0, :cond_7
+
+    goto :goto_6
+
+    :cond_7
+    sget v0, Leve;->f:I
+
+    int-to-long v5, v0
+
+    rem-long/2addr v2, v5
+
+    long-to-int v0, v2
+
+    sget-object v2, Leve;->b:Lkotlinx/coroutines/internal/Symbol;
+
+    invoke-virtual {v1, v0, v2}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->getAndSet(ILjava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    const/4 v3, 0x1
+
+    if-nez v2, :cond_c
+
+    sget v2, Leve;->a:I
+
+    move v5, v4
+
+    :goto_3
+    if-ge v5, v2, :cond_9
+
+    invoke-virtual {v1, v0}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->get(I)Ljava/lang/Object;
+
+    move-result-object v6
+
+    sget-object v7, Leve;->c:Lkotlinx/coroutines/internal/Symbol;
+
+    if-ne v6, v7, :cond_8
+
+    :goto_4
+    move v4, v3
+
+    goto :goto_6
+
+    :cond_8
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_3
+
+    :cond_9
+    sget-object v5, Leve;->b:Lkotlinx/coroutines/internal/Symbol;
+
+    sget-object v6, Leve;->d:Lkotlinx/coroutines/internal/Symbol;
+
+    :cond_a
+    invoke-virtual {v1, v0, v5, v6}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->compareAndSet(ILjava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_b
+
+    move v4, v3
+
+    goto :goto_5
+
+    :cond_b
+    invoke-virtual {v1, v0}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    if-eq v2, v5, :cond_a
+
+    :goto_5
+    xor-int/2addr v4, v3
+
+    goto :goto_6
+
+    :cond_c
+    sget-object v0, Leve;->e:Lkotlinx/coroutines/internal/Symbol;
+
+    if-ne v2, v0, :cond_d
+
+    goto :goto_6
+
+    :cond_d
+    instance-of v0, v2, Ll72;
+
+    sget-object v1, Lmah;->a:Lmah;
+
+    if-eqz v0, :cond_e
+
+    check-cast v2, Ll72;
+
+    iget-object v0, p0, Lcve;->b:Lyu0;
+
+    invoke-interface {v2, v1, v0}, Ll72;->j(Ljava/lang/Object;Lat6;)Lkotlinx/coroutines/internal/Symbol;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_f
+
+    invoke-interface {v2, v0}, Ll72;->m(Ljava/lang/Object;)V
+
+    goto :goto_4
+
+    :cond_e
+    instance-of v0, v2, Lute;
+
+    if-eqz v0, :cond_10
+
+    check-cast v2, Lute;
+
+    check-cast v2, Ltte;
+
+    invoke-virtual {v2, p0, v1}, Ltte;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v4
+
+    :cond_f
+    :goto_6
+    if-eqz v4, :cond_0
+
+    :goto_7
+    return-void
+
+    :cond_10
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v3, "unexpected: "
+
+    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_11
+    :goto_8
+    invoke-virtual {v0, p0}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->get(Ljava/lang/Object;)I
+
+    move-result v1
+
+    if-le v1, v2, :cond_12
+
+    invoke-virtual {v0, p0, v1, v2}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->compareAndSet(Ljava/lang/Object;II)Z
+
+    move-result v1
+
+    if-nez v1, :cond_12
+
+    goto :goto_8
+
+    :cond_12
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "The number of released permits cannot be greater than "
+
+    invoke-static {v2, v1}, Ljye;->i(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method

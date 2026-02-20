@@ -1,29 +1,72 @@
-.class public abstract Ld22;
+.class public final synthetic Ld22;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lw2b;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljava/lang/Object;
+
+
+# direct methods
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
+    .locals 0
+
+    iput p1, p0, Ld22;->a:I
+
+    iput-object p2, p0, Ld22;->b:Ljava/lang/Object;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
 
 # virtual methods
-.method public a(I)V
-    .locals 0
+.method public final a(Ljava/lang/Object;)V
+    .locals 1
+
+    iget v0, p0, Ld22;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Ld22;->b:Ljava/lang/Object;
+
+    check-cast v0, Lwn6;
+
+    invoke-virtual {v0, p1}, Lvh8;->k(Ljava/lang/Object;)V
 
     return-void
-.end method
 
-.method public b(ILk22;)V
-    .locals 0
+    :pswitch_0
+    iget-object v0, p0, Ld22;->b:Ljava/lang/Object;
 
-    return-void
-.end method
+    check-cast v0, Ljoc;
 
-.method public c(ILbg3;)V
-    .locals 0
+    check-cast v0, Lgoc;
 
-    return-void
-.end method
-
-.method public d(I)V
-    .locals 0
+    invoke-virtual {v0, p1}, Lgoc;->c(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
+
+    :pswitch_1
+    iget-object v0, p0, Ld22;->b:Ljava/lang/Object;
+
+    check-cast v0, Le22;
+
+    invoke-virtual {v0, p1}, Lvh8;->k(Ljava/lang/Object;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

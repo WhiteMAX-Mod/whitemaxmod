@@ -1,81 +1,63 @@
 .class public final Lttc;
-.super Lo84;
+.super Ldg0;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic A0:Lxtc;
-
-.field public B0:I
-
-.field public X:Lsmc;
-
-.field public Y:Lumc;
-
-.field public Z:Ljava/lang/Long;
-
-.field public d:Ley3;
-
-.field public o:Lnd2;
-
-.field public t0:Ljava/util/List;
-
-.field public u0:Ljava/util/List;
-
-.field public v0:Lmgc;
-
-.field public w0:Ljava/lang/String;
-
-.field public x0:Lqhg;
-
-.field public y0:I
-
-.field public synthetic z0:Ljava/lang/Object;
+# static fields
+.field public static final b:Lttc;
 
 
 # direct methods
-.method public constructor <init>(Lxtc;Lo84;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lttc;->A0:Lxtc;
+    new-instance v0, Lttc;
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    const/16 v1, 0x10
+
+    invoke-direct {v0, v1}, Ldg0;-><init>(I)V
+
+    sput-object v0, Lttc;->b:Lttc;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iput-object p1, p0, Lttc;->z0:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    iget p1, p0, Lttc;->B0:I
+    if-ne p0, p1, :cond_0
 
-    const/high16 v0, -0x80000000
+    return v0
 
-    or-int/2addr p1, v0
+    :cond_0
+    instance-of p1, p1, Lttc;
 
-    iput p1, p0, Lttc;->B0:I
+    if-nez p1, :cond_1
 
-    const/4 v4, 0x0
+    const/4 p1, 0x0
 
-    const/4 v5, 0x0
+    return p1
 
-    iget-object v0, p0, Lttc;->A0:Lxtc;
+    :cond_1
+    return v0
+.end method
 
-    const/4 v1, 0x0
+.method public final hashCode()I
+    .locals 1
 
-    const/4 v2, 0x0
+    const v0, 0x5c26daea
 
-    const/4 v3, 0x0
+    return v0
+.end method
 
-    move-object v6, p0
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    invoke-virtual/range {v0 .. v6}, Lxtc;->f(Ley3;Lnd2;Lsmc;Lumc;Ljava/lang/Long;Lo84;)Ljava/io/Serializable;
+    const-string v0, "Save"
 
-    move-result-object p1
-
-    return-object p1
+    return-object v0
 .end method

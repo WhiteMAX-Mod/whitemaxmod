@@ -1,114 +1,59 @@
-.class public final synthetic Ln08;
-.super Ljava/lang/Object;
+.class public final Ln08;
+.super Ld3;
 .source "SourceFile"
 
-# interfaces
-.implements Lvwa;
 
-
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static final c:Ln08;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput p1, p0, Ln08;->a:I
+    new-instance v0, Ln08;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/16 v1, 0xc
+
+    invoke-direct {v0, v1}, Ld3;-><init>(I)V
+
+    sput-object v0, Ln08;->c:Ln08;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
+.method public static J0(JLjava/lang/String;)Landroid/net/Uri;
     .locals 2
 
-    iget v0, p0, Ln08;->a:I
+    new-instance v0, Lxn4;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-direct {v0}, Lxn4;-><init>()V
 
-    new-instance p2, Lcom/google/firebase/encoders/EncodingException;
+    const-string v1, ":join"
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iput-object v1, v0, Lxn4;->a:Ljava/lang/String;
 
-    const-string v1, "Couldn\'t find encoder for type "
+    const-string v1, "id"
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-object p0
 
-    move-result-object p1
+    invoke-virtual {v0, p0, v1}, Lxn4;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
+    const-string p0, "link"
 
-    move-result-object p1
+    invoke-virtual {v0, p0, p2}, Lxn4;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string p0, "no_anim"
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    sget-object p1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    move-result-object p1
+    invoke-virtual {v0, p1, p0}, Lxn4;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {p2, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0}, Lxn4;->a()Landroid/net/Uri;
 
-    throw p2
+    move-result-object p0
 
-    :pswitch_0
-    check-cast p1, Ljava/util/Map$Entry;
-
-    check-cast p2, Lwwa;
-
-    sget-object v0, Lwyc;->g:Lfz5;
-
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v1
-
-    invoke-interface {p2, v0, v1}, Lwwa;->a(Lfz5;Ljava/lang/Object;)Lwwa;
-
-    sget-object v0, Lwyc;->h:Lfz5;
-
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    invoke-interface {p2, v0, p1}, Lwwa;->a(Lfz5;Ljava/lang/Object;)Lwwa;
-
-    return-void
-
-    :pswitch_1
-    new-instance p2, Lcom/google/firebase/encoders/EncodingException;
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Couldn\'t find encoder for type "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p2, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw p2
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p0
 .end method

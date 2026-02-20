@@ -1,27 +1,29 @@
 .class public final Lu72;
-.super Ljava/lang/Object;
+.super Ljp3;
 .source "SourceFile"
 
 
+# static fields
+.field public static final synthetic c:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+
+
 # instance fields
-.field public final a:Lck9;
-
-.field public final b:Lnj9;
-
-.field public final c:I
+.field private volatile synthetic _resumed$volatile:I
 
 
 # direct methods
-.method public constructor <init>(Lck9;Lnj9;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-class v0, Lu72;
 
-    iput-object p1, p0, Lu72;->a:Lck9;
+    const-string v1, "_resumed$volatile"
 
-    iput-object p2, p0, Lu72;->b:Lnj9;
+    invoke-static {v0, v1}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
 
-    iput p3, p0, Lu72;->c:I
+    move-result-object v0
+
+    sput-object v0, Lu72;->c:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
 
     return-void
 .end method

@@ -3,113 +3,222 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/graphics/drawable/Drawable$Callback;
+.implements Lktc;
 
 
 # instance fields
-.field public final a:Lpp4;
+.field public final a:Ljava/lang/String;
 
-.field public final b:Lu36;
-
-.field public final synthetic c:Lz66;
+.field public final b:Lnl3;
 
 
 # direct methods
-.method public constructor <init>(Lz66;)V
-    .locals 2
+.method public constructor <init>(Ljava/lang/String;Lnl3;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ly66;->c:Lz66;
+    iput-object p1, p0, Ly66;->a:Ljava/lang/String;
 
-    new-instance v0, Lpp4;
-
-    const/16 v1, 0x1d
-
-    invoke-direct {v0, v1, p1}, Lpp4;-><init>(ILjava/lang/Object;)V
-
-    iput-object v0, p0, Ly66;->a:Lpp4;
-
-    new-instance v0, Lu36;
-
-    const/4 v1, 0x2
-
-    invoke-direct {v0, p1, v1, p0}, Lu36;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    iput-object v0, p0, Ly66;->b:Lu36;
+    iput-object p2, p0, Ly66;->b:Lnl3;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invalidateDrawable(Landroid/graphics/drawable/Drawable;)V
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Ly66;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Ly66;
+
+    iget-object v1, p0, Ly66;->a:Ljava/lang/String;
+
+    iget-object v3, p1, Ly66;->a:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Ly66;->b:Lnl3;
+
+    iget-object p1, p1, Ly66;->b:Lnl3;
+
+    invoke-static {v1, p1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final getItemId()J
     .locals 2
 
-    iget-object p1, p0, Ly66;->c:Lz66;
+    const/4 v0, 0x1
 
-    iget-object v0, p1, Lz66;->t0:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    int-to-long v0, v0
 
-    iget-object v1, p0, Ly66;->b:Lu36;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
-
-    :cond_0
-    iget-object p1, p1, Lz66;->t0:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
-
-    if-eqz p1, :cond_1
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
-
-    :cond_1
-    return-void
+    return-wide v0
 .end method
 
-.method public final scheduleDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;J)V
+.method public final h(Lmg8;)Z
+    .locals 5
+
+    const/4 v0, 0x1
+
+    int-to-long v1, v0
+
+    invoke-interface {p1}, Lmg8;->getItemId()J
+
+    move-result-wide v3
+
+    cmp-long p1, v1, v3
+
+    if-nez p1, :cond_0
+
+    return v0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final hashCode()I
     .locals 3
 
-    iget-object p1, p0, Ly66;->c:Lz66;
+    const/4 v0, 0x0
 
-    iget-object p2, p1, Lz66;->t0:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    iget-object v1, p0, Ly66;->a:Ljava/lang/String;
 
-    iget-object v0, p0, Ly66;->b:Lu36;
+    if-nez v1, :cond_0
 
-    if-eqz p2, :cond_0
+    move v1, v0
 
-    invoke-virtual {p2, v0}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
+    goto :goto_0
 
     :cond_0
-    iget-object p1, p1, Lz66;->t0:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
-    if-eqz p1, :cond_1
+    move-result v1
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    :goto_0
+    mul-int/lit8 v1, v1, 0x1f
 
-    move-result-wide v1
+    iget-object v2, p0, Ly66;->b:Lnl3;
 
-    sub-long/2addr p3, v1
+    if-nez v2, :cond_1
 
-    invoke-virtual {p1, v0, p3, p4}, Landroid/view/View;->postDelayed(Ljava/lang/Runnable;J)Z
+    goto :goto_1
 
     :cond_1
-    return-void
+    iget-object v0, v2, Lnl3;->a:Ljava/util/List;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    :goto_1
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
-.method public final unscheduleDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V
-    .locals 0
+.method public final k(Lmg8;)Ljava/lang/Object;
+    .locals 1
 
-    iget-object p1, p0, Ly66;->c:Lz66;
+    instance-of v0, p1, Ly66;
 
-    iget-object p1, p1, Lz66;->t0:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    if-nez v0, :cond_0
 
-    if-eqz p1, :cond_0
+    const/4 p1, 0x0
 
-    iget-object p2, p0, Ly66;->b:Lu36;
-
-    invoke-virtual {p1, p2}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
+    return-object p1
 
     :cond_0
-    return-void
+    new-instance v0, Lxtc;
+
+    check-cast p1, Ly66;
+
+    iget-object p1, p1, Ly66;->b:Lnl3;
+
+    invoke-direct {v0, p1}, Lxtc;-><init>(Lnl3;)V
+
+    return-object v0
+.end method
+
+.method public final m()I
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final q(Lmg8;)Z
+    .locals 0
+
+    invoke-virtual {p0, p1}, Ly66;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "FirstNameItem(text="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Ly66;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", errorText="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ly66;->b:Lnl3;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

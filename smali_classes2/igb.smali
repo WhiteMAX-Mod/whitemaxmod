@@ -22,46 +22,64 @@
 
 .field public static final i:I
 
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    sget v0, Lh9d;->qrscanner_allow_permission:I
+    sget v0, Lped;->oneme_messages_settings_container:I
 
     sput v0, Ligb;->a:I
 
-    sget v0, Lh9d;->qrscanner_blackout_view:I
+    sget v0, Lped;->oneme_messages_settings_content_recycler:I
 
     sput v0, Ligb;->b:I
 
-    sget v0, Lh9d;->qrscanner_camera_preview:I
+    sget v0, Lped;->oneme_messages_settings_effects:I
 
     sput v0, Ligb;->c:I
 
-    sget v0, Lh9d;->qrscanner_gallery_button_image:I
+    sget v0, Lped;->oneme_messages_settings_fast_reaction_choose:I
 
     sput v0, Ligb;->d:I
 
-    sget v0, Lh9d;->qrscanner_hint_view:I
+    sget v0, Lped;->oneme_messages_settings_fast_reaction_enable:I
 
     sput v0, Ligb;->e:I
 
-    sget v0, Lh9d;->qrscanner_not_allow_permission:I
+    sget v0, Lped;->oneme_messages_settings_highlight:I
 
     sput v0, Ligb;->f:I
 
-    sget v0, Lh9d;->qrscanner_overlay_view:I
+    sget v0, Lped;->oneme_messages_settings_linear:I
 
     sput v0, Ligb;->g:I
 
-    sget v0, Lh9d;->qrscanner_toolbar:I
+    sget v0, Lped;->oneme_messages_settings_need_divider_above_vh:I
 
     sput v0, Ligb;->h:I
 
-    sget v0, Lh9d;->qrscanner_torch_button_image:I
+    sget v0, Lped;->oneme_messages_settings_reaction_image:I
 
     sput v0, Ligb;->i:I
+
+    sget v0, Lped;->oneme_messages_settings_send_by_enter:I
+
+    sput v0, Ligb;->j:I
+
+    sget v0, Lped;->oneme_messages_settings_stickers:I
+
+    sput v0, Ligb;->k:I
+
+    sget v0, Lped;->oneme_messages_settings_toolbar:I
+
+    sput v0, Ligb;->l:I
 
     return-void
 .end method

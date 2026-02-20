@@ -1,303 +1,782 @@
-.class public abstract Le2;
-.super Lg0;
+.class public Le2;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/List;
+.implements Ljava/util/Iterator;
+.implements Ll58;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public b:I
+
+.field public final c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
+
+    .line 1
+    iput p1, p0, Le2;->a:I
+
+    iput-object p2, p0, Le2;->c:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
+.method public constructor <init>(Lnm5;)V
+    .locals 1
+
+    const/4 v0, 0x4
+
+    iput v0, p0, Le2;->a:I
+
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 3
+    iput-object p1, p0, Le2;->c:Ljava/lang/Object;
+
+    .line 4
+    iget p1, p1, Lxgc;->c:I
+
+    .line 5
+    iput p1, p0, Le2;->b:I
+
+    return-void
+.end method
+
 
 # virtual methods
-.method public final add(ILjava/lang/Object;)V
-    .locals 0
+.method public final hasNext()Z
+    .locals 2
 
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    iget v0, p0, Le2;->a:I
 
-    const-string p2, "Operation is not supported for read-only collection"
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    iget v0, p0, Le2;->b:I
 
-    throw p1
-.end method
+    iget-object v1, p0, Le2;->c:Ljava/lang/Object;
 
-.method public final addAll(ILjava/util/Collection;)Z
-    .locals 0
+    check-cast v1, Landroid/view/ViewGroup;
 
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    invoke-virtual {v1}, Landroid/view/ViewGroup;->getChildCount()I
 
-    const-string p2, "Operation is not supported for read-only collection"
+    move-result v1
 
-    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 5
+    if-ge v0, v1, :cond_0
 
     const/4 v0, 0x1
 
-    if-ne p1, p0, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Ljava/util/List;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Ljava/util/Collection;
-
-    invoke-interface {p0}, Ljava/util/Collection;->size()I
-
-    move-result v1
-
-    invoke-interface {p1}, Ljava/util/Collection;->size()I
-
-    move-result v3
-
-    if-eq v1, v3, :cond_2
-
     goto :goto_0
 
-    :cond_2
-    invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :cond_3
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_4
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v4
-
-    invoke-static {v3, v4}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_3
+    :cond_0
+    const/4 v0, 0x0
 
     :goto_0
-    return v2
-
-    :cond_4
     return v0
-.end method
 
-.method public final hashCode()I
-    .locals 3
+    :pswitch_0
+    iget v0, p0, Le2;->b:I
 
-    invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+    iget-object v1, p0, Le2;->c:Ljava/lang/Object;
 
-    move-result-object v0
+    check-cast v1, [S
 
-    const/4 v1, 0x1
+    array-length v1, v1
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    if-ge v0, v1, :cond_1
 
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    if-eqz v2, :cond_0
-
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v2
+    const/4 v0, 0x1
 
     goto :goto_1
 
-    :cond_0
-    const/4 v2, 0x0
+    :cond_1
+    const/4 v0, 0x0
 
     :goto_1
-    add-int/2addr v1, v2
+    return v0
 
-    goto :goto_0
+    :pswitch_1
+    iget v0, p0, Le2;->b:I
 
-    :cond_1
-    return v1
-.end method
+    iget-object v1, p0, Le2;->c:Ljava/lang/Object;
 
-.method public indexOf(Ljava/lang/Object;)I
-    .locals 3
+    check-cast v1, [J
 
-    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    array-length v1, v1
 
-    move-result-object v0
+    if-ge v0, v1, :cond_2
 
-    const/4 v1, 0x0
+    const/4 v0, 0x1
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    goto :goto_2
 
-    move-result v2
+    :cond_2
+    const/4 v0, 0x0
 
-    if-eqz v2, :cond_1
+    :goto_2
+    return v0
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    :pswitch_2
+    iget v0, p0, Le2;->b:I
 
-    move-result-object v2
+    iget-object v1, p0, Le2;->c:Ljava/lang/Object;
 
-    invoke-static {v2, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    check-cast v1, [I
 
-    move-result v2
+    array-length v1, v1
 
-    if-eqz v2, :cond_0
+    if-ge v0, v1, :cond_3
 
-    return v1
+    const/4 v0, 0x1
 
-    :cond_0
-    add-int/lit8 v1, v1, 0x1
+    goto :goto_3
 
-    goto :goto_0
+    :cond_3
+    const/4 v0, 0x0
 
-    :cond_1
-    const/4 p1, -0x1
+    :goto_3
+    return v0
 
-    return p1
-.end method
+    :pswitch_3
+    iget v0, p0, Le2;->b:I
 
-.method public iterator()Ljava/util/Iterator;
-    .locals 2
+    iget-object v1, p0, Le2;->c:Ljava/lang/Object;
 
-    new-instance v0, Lb2;
+    check-cast v1, [B
 
-    const/4 v1, 0x0
+    array-length v1, v1
 
-    invoke-direct {v0, v1, p0}, Lb2;-><init>(ILjava/lang/Object;)V
+    if-ge v0, v1, :cond_4
 
-    return-object v0
-.end method
+    const/4 v0, 0x1
 
-.method public lastIndexOf(Ljava/lang/Object;)I
-    .locals 2
+    goto :goto_4
 
-    invoke-interface {p0}, Ljava/util/List;->size()I
+    :cond_4
+    const/4 v0, 0x0
 
-    move-result v0
+    :goto_4
+    return v0
 
-    invoke-interface {p0, v0}, Ljava/util/List;->listIterator(I)Ljava/util/ListIterator;
+    :pswitch_4
+    iget v0, p0, Le2;->b:I
 
-    move-result-object v0
+    if-lez v0, :cond_5
 
-    :cond_0
-    invoke-interface {v0}, Ljava/util/ListIterator;->hasPrevious()Z
+    const/4 v0, 0x1
+
+    goto :goto_5
+
+    :cond_5
+    const/4 v0, 0x0
+
+    :goto_5
+    return v0
+
+    :pswitch_5
+    iget v0, p0, Le2;->b:I
+
+    iget-object v1, p0, Le2;->c:Ljava/lang/Object;
+
+    check-cast v1, Landroid/view/Menu;
+
+    invoke-interface {v1}, Landroid/view/Menu;->size()I
 
     move-result v1
 
-    if-eqz v1, :cond_1
+    if-ge v0, v1, :cond_6
 
-    invoke-interface {v0}, Ljava/util/ListIterator;->previous()Ljava/lang/Object;
+    const/4 v0, 0x1
+
+    goto :goto_6
+
+    :cond_6
+    const/4 v0, 0x0
+
+    :goto_6
+    return v0
+
+    :pswitch_6
+    iget v0, p0, Le2;->b:I
+
+    iget-object v1, p0, Le2;->c:Ljava/lang/Object;
+
+    check-cast v1, [Ljava/lang/Object;
+
+    array-length v1, v1
+
+    if-ge v0, v1, :cond_7
+
+    const/4 v0, 0x1
+
+    goto :goto_7
+
+    :cond_7
+    const/4 v0, 0x0
+
+    :goto_7
+    return v0
+
+    :pswitch_7
+    iget v0, p0, Le2;->b:I
+
+    iget-object v1, p0, Le2;->c:Ljava/lang/Object;
+
+    check-cast v1, [F
+
+    array-length v1, v1
+
+    if-ge v0, v1, :cond_8
+
+    const/4 v0, 0x1
+
+    goto :goto_8
+
+    :cond_8
+    const/4 v0, 0x0
+
+    :goto_8
+    return v0
+
+    :pswitch_8
+    iget v0, p0, Le2;->b:I
+
+    iget-object v1, p0, Le2;->c:Ljava/lang/Object;
+
+    check-cast v1, Lh2;
+
+    invoke-virtual {v1}, Lh2;->getSize()I
+
+    move-result v1
+
+    if-ge v0, v1, :cond_9
+
+    const/4 v0, 0x1
+
+    goto :goto_9
+
+    :cond_9
+    const/4 v0, 0x0
+
+    :goto_9
+    return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final next()Ljava/lang/Object;
+    .locals 4
+
+    iget v0, p0, Le2;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Le2;->c:Ljava/lang/Object;
+
+    check-cast v0, Landroid/view/ViewGroup;
+
+    iget v1, p0, Le2;->b:I
+
+    add-int/lit8 v2, v1, 0x1
+
+    iput v2, p0, Le2;->b:I
+
+    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    return-object v0
+
+    :cond_0
+    new-instance v0, Ljava/lang/IndexOutOfBoundsException;
+
+    invoke-direct {v0}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
+
+    throw v0
+
+    :pswitch_0
+    iget v0, p0, Le2;->b:I
+
+    iget-object v1, p0, Le2;->c:Ljava/lang/Object;
+
+    check-cast v1, [S
+
+    array-length v2, v1
+
+    if-ge v0, v2, :cond_1
+
+    add-int/lit8 v2, v0, 0x1
+
+    iput v2, p0, Le2;->b:I
+
+    aget-short v0, v1, v0
+
+    new-instance v1, Ls9h;
+
+    invoke-direct {v1, v0}, Ls9h;-><init>(S)V
+
+    return-object v1
+
+    :cond_1
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    iget v1, p0, Le2;->b:I
+
+    invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-direct {v0, v1}, Ljava/util/NoSuchElementException;-><init>(Ljava/lang/String;)V
 
-    move-result v1
+    throw v0
+
+    :pswitch_1
+    iget v0, p0, Le2;->b:I
+
+    iget-object v1, p0, Le2;->c:Ljava/lang/Object;
+
+    check-cast v1, [J
+
+    array-length v2, v1
+
+    if-ge v0, v2, :cond_2
+
+    add-int/lit8 v2, v0, 0x1
+
+    iput v2, p0, Le2;->b:I
+
+    aget-wide v0, v1, v0
+
+    new-instance v2, Ln9h;
+
+    invoke-direct {v2, v0, v1}, Ln9h;-><init>(J)V
+
+    return-object v2
+
+    :cond_2
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    iget v1, p0, Le2;->b:I
+
+    invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/util/NoSuchElementException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :pswitch_2
+    iget v0, p0, Le2;->b:I
+
+    iget-object v1, p0, Le2;->c:Ljava/lang/Object;
+
+    check-cast v1, [I
+
+    array-length v2, v1
+
+    if-ge v0, v2, :cond_3
+
+    add-int/lit8 v2, v0, 0x1
+
+    iput v2, p0, Le2;->b:I
+
+    aget v0, v1, v0
+
+    new-instance v1, Li9h;
+
+    invoke-direct {v1, v0}, Li9h;-><init>(I)V
+
+    return-object v1
+
+    :cond_3
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    iget v1, p0, Le2;->b:I
+
+    invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/util/NoSuchElementException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :pswitch_3
+    iget v0, p0, Le2;->b:I
+
+    iget-object v1, p0, Le2;->c:Ljava/lang/Object;
+
+    check-cast v1, [B
+
+    array-length v2, v1
+
+    if-ge v0, v2, :cond_4
+
+    add-int/lit8 v2, v0, 0x1
+
+    iput v2, p0, Le2;->b:I
+
+    aget-byte v0, v1, v0
+
+    new-instance v1, Ld9h;
+
+    invoke-direct {v1, v0}, Ld9h;-><init>(B)V
+
+    return-object v1
+
+    :cond_4
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    iget v1, p0, Le2;->b:I
+
+    invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/util/NoSuchElementException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :pswitch_4
+    iget-object v0, p0, Le2;->c:Ljava/lang/Object;
+
+    check-cast v0, Lnm5;
+
+    iget v1, v0, Lxgc;->c:I
+
+    iget v2, p0, Le2;->b:I
+
+    add-int/lit8 v3, v2, -0x1
+
+    iput v3, p0, Le2;->b:I
+
+    sub-int/2addr v1, v2
+
+    iget-object v0, v0, Lxgc;->e:[Ljava/lang/String;
+
+    aget-object v0, v0, v1
+
+    return-object v0
+
+    :pswitch_5
+    iget-object v0, p0, Le2;->c:Ljava/lang/Object;
+
+    check-cast v0, Landroid/view/Menu;
+
+    iget v1, p0, Le2;->b:I
+
+    add-int/lit8 v2, v1, 0x1
+
+    iput v2, p0, Le2;->b:I
+
+    invoke-interface {v0, v1}, Landroid/view/Menu;->getItem(I)Landroid/view/MenuItem;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_5
+
+    return-object v0
+
+    :cond_5
+    new-instance v0, Ljava/lang/IndexOutOfBoundsException;
+
+    invoke-direct {v0}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
+
+    throw v0
+
+    :pswitch_6
+    :try_start_0
+    iget-object v0, p0, Le2;->c:Ljava/lang/Object;
+
+    check-cast v0, [Ljava/lang/Object;
+
+    iget v1, p0, Le2;->b:I
+
+    add-int/lit8 v2, v1, 0x1
+
+    iput v2, p0, Le2;->b:I
+
+    aget-object v0, v0, v1
+    :try_end_0
+    .catch Ljava/lang/ArrayIndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object v0
+
+    :catch_0
+    move-exception v0
+
+    iget v1, p0, Le2;->b:I
+
+    add-int/lit8 v1, v1, -0x1
+
+    iput v1, p0, Le2;->b:I
+
+    new-instance v1, Ljava/util/NoSuchElementException;
+
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v1, v0}, Ljava/util/NoSuchElementException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+
+    :pswitch_7
+    :try_start_1
+    iget-object v0, p0, Le2;->c:Ljava/lang/Object;
+
+    check-cast v0, [F
+
+    iget v1, p0, Le2;->b:I
+
+    add-int/lit8 v2, v1, 0x1
+
+    iput v2, p0, Le2;->b:I
+
+    aget v0, v0, v1
+    :try_end_1
+    .catch Ljava/lang/ArrayIndexOutOfBoundsException; {:try_start_1 .. :try_end_1} :catch_1
+
+    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v0
+
+    return-object v0
+
+    :catch_1
+    move-exception v0
+
+    iget v1, p0, Le2;->b:I
+
+    add-int/lit8 v1, v1, -0x1
+
+    iput v1, p0, Le2;->b:I
+
+    new-instance v1, Ljava/util/NoSuchElementException;
+
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v1, v0}, Ljava/util/NoSuchElementException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+
+    :pswitch_8
+    invoke-virtual {p0}, Le2;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_6
+
+    iget-object v0, p0, Le2;->c:Ljava/lang/Object;
+
+    check-cast v0, Lh2;
+
+    iget v1, p0, Le2;->b:I
+
+    add-int/lit8 v2, v1, 0x1
+
+    iput v2, p0, Le2;->b:I
+
+    invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_6
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final remove()V
+    .locals 2
+
+    iget v0, p0, Le2;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Le2;->c:Ljava/lang/Object;
+
+    check-cast v0, Landroid/view/ViewGroup;
+
+    iget v1, p0, Le2;->b:I
+
+    add-int/lit8 v1, v1, -0x1
+
+    iput v1, p0, Le2;->b:I
+
+    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->removeViewAt(I)V
+
+    return-void
+
+    :pswitch_0
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "Operation is not supported for read-only collection"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :pswitch_1
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "Operation is not supported for read-only collection"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :pswitch_2
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "Operation is not supported for read-only collection"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :pswitch_3
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "Operation is not supported for read-only collection"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :pswitch_4
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "Operation is not supported for read-only collection"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :pswitch_5
+    iget-object v0, p0, Le2;->c:Ljava/lang/Object;
+
+    check-cast v0, Landroid/view/Menu;
+
+    iget v1, p0, Le2;->b:I
+
+    add-int/lit8 v1, v1, -0x1
+
+    iput v1, p0, Le2;->b:I
+
+    invoke-interface {v0, v1}, Landroid/view/Menu;->getItem(I)Landroid/view/MenuItem;
+
+    move-result-object v1
 
     if-eqz v1, :cond_0
 
-    invoke-interface {v0}, Ljava/util/ListIterator;->nextIndex()I
+    invoke-interface {v1}, Landroid/view/MenuItem;->getItemId()I
 
-    move-result p1
+    move-result v1
 
-    return p1
+    invoke-interface {v0, v1}, Landroid/view/Menu;->removeItem(I)V
+
+    sget-object v0, Lmah;->a:Lmah;
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    if-eqz v0, :cond_1
+
+    return-void
 
     :cond_1
-    const/4 p1, -0x1
+    new-instance v0, Ljava/lang/IndexOutOfBoundsException;
 
-    return p1
-.end method
+    invoke-direct {v0}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
 
-.method public listIterator()Ljava/util/ListIterator;
-    .locals 2
+    throw v0
 
-    .line 1
-    new-instance v0, Lc2;
+    :pswitch_6
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    const/4 v1, 0x0
+    const-string v1, "Operation is not supported for read-only collection"
 
-    invoke-direct {v0, p0, v1}, Lc2;-><init>(Le2;I)V
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    return-object v0
-.end method
+    throw v0
 
-.method public listIterator(I)Ljava/util/ListIterator;
-    .locals 1
+    :pswitch_7
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    .line 2
-    new-instance v0, Lc2;
+    const-string v1, "Operation is not supported for read-only collection"
 
-    invoke-direct {v0, p0, p1}, Lc2;-><init>(Le2;I)V
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    return-object v0
-.end method
+    throw v0
 
-.method public final remove(I)Ljava/lang/Object;
-    .locals 1
+    :pswitch_8
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    const-string v1, "Operation is not supported for read-only collection"
 
-    const-string v0, "Operation is not supported for read-only collection"
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    throw v0
 
-    throw p1
-.end method
+    nop
 
-.method public final set(ILjava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string p2, "Operation is not supported for read-only collection"
-
-    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public subList(II)Ljava/util/List;
-    .locals 1
-
-    new-instance v0, Ld2;
-
-    invoke-direct {v0, p0, p1, p2}, Ld2;-><init>(Le2;II)V
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

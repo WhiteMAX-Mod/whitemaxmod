@@ -1,137 +1,159 @@
 .class public final Lu63;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Lbyd;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public X:Z
 
-.field public final synthetic Y:Ln73;
+.field public final a:Landroidx/recyclerview/widget/RecyclerView;
 
-.field public o:I
+.field public final b:Lma3;
+
+.field public final c:Lj88;
+
+.field public final d:Lj88;
+
+.field public o:Z
 
 
 # direct methods
-.method public constructor <init>(Ln73;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lj88;Lone/me/sdk/lists/widgets/EndlessRecyclerView2;Lma3;Lj88;)V
     .locals 0
 
-    iput-object p1, p0, Lu63;->Y:Ln73;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput-object p2, p0, Lu63;->a:Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p3, p0, Lu63;->b:Lma3;
+
+    iput-object p1, p0, Lu63;->c:Lj88;
+
+    iput-object p4, p0, Lu63;->d:Lj88;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final b(Landroid/view/View;)V
     .locals 0
 
-    check-cast p1, Lbg7;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lu63;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lu63;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lu63;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public final e(Landroid/view/View;)V
+    .locals 3
 
-    new-instance v0, Lu63;
+    iget-object v0, p0, Lu63;->a:Landroidx/recyclerview/widget/RecyclerView;
 
-    iget-object v1, p0, Lu63;->Y:Ln73;
+    invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/RecyclerView;->I(Landroid/view/View;)Landroid/view/View;
 
-    invoke-direct {v0, v1, p2}, Lu63;-><init>(Ln73;Lkotlin/coroutines/Continuation;)V
+    move-result-object v1
 
-    iput-object p1, v0, Lu63;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 10
-
-    iget-object v0, p0, Lu63;->X:Ljava/lang/Object;
-
-    move-object v4, v0
-
-    check-cast v4, Lbg7;
-
-    iget v0, p0, Lu63;->o:I
-
-    sget-object v8, Lb3h;->a:Lb3h;
-
-    const/4 v9, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v9, :cond_0
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    return-object v8
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lu63;->Y:Ln73;
-
-    iget-object p1, p1, Ln73;->L0:Lspf;
-
-    new-instance v1, Lh63;
-
-    const/4 v6, 0x0
-
-    const/4 v7, 0x0
-
-    sget-object v2, Lg63;->c:Lg63;
-
-    const-string v3, ""
-
-    sget-object v5, Ldh5;->a:Ldh5;
-
-    invoke-direct/range {v1 .. v7}, Lh63;-><init>(Lg63;Ljava/lang/String;Lbg7;Ljava/util/List;ZZ)V
+    if-nez v1, :cond_0
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lu63;->X:Ljava/lang/Object;
+    goto :goto_0
 
-    iput v9, p0, Lu63;->o:I
+    :cond_0
+    invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->U(Landroid/view/View;)Lpyd;
 
-    invoke-virtual {p1, v0, v1}, Lspf;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-result-object v0
 
-    sget-object p1, Lac4;->a:Lac4;
+    :goto_0
+    instance-of v1, v0, Lnv7;
 
-    if-ne v8, p1, :cond_2
+    const/4 v2, 0x1
 
-    return-object p1
+    if-eqz v1, :cond_2
+
+    iget-boolean v0, p0, Lu63;->o:Z
+
+    if-eqz v0, :cond_1
+
+    goto :goto_2
+
+    :cond_1
+    iput-boolean v2, p0, Lu63;->o:Z
+
+    new-instance v0, Lbu6;
+
+    const/4 v1, 0x7
+
+    invoke-direct {v0, p1, v1, p0}, Lbu6;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-static {p1, v0}, Lbqb;->a(Landroid/view/View;Ljava/lang/Runnable;)Lbqb;
+
+    return-void
 
     :cond_2
-    return-object v8
+    instance-of v1, v0, Lpv5;
+
+    if-nez v1, :cond_5
+
+    instance-of v1, v0, Llv5;
+
+    if-eqz v1, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    instance-of v0, v0, Lg43;
+
+    if-eqz v0, :cond_6
+
+    new-instance v0, Lq62;
+
+    const/16 v1, 0xa
+
+    invoke-direct {v0, v1, p0}, Lq62;-><init>(ILjava/lang/Object;)V
+
+    new-instance v1, Lf95;
+
+    invoke-direct {v1, p1, v0}, Lf95;-><init>(Landroid/view/View;Lks6;)V
+
+    invoke-virtual {p1}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/ViewTreeObserver;->isAlive()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_4
+
+    invoke-virtual {v0, v1}, Landroid/view/ViewTreeObserver;->addOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
+
+    :cond_4
+    invoke-virtual {p1, v1}, Landroid/view/View;->addOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+
+    return-void
+
+    :cond_5
+    :goto_1
+    iget-boolean v0, p0, Lu63;->X:Z
+
+    if-eqz v0, :cond_7
+
+    :cond_6
+    :goto_2
+    return-void
+
+    :cond_7
+    iput-boolean v2, p0, Lu63;->X:Z
+
+    new-instance v0, Lcu6;
+
+    const/4 v1, 0x7
+
+    invoke-direct {v0, p1, v1, p0}, Lcu6;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-static {p1, v0}, Lbqb;->a(Landroid/view/View;Ljava/lang/Runnable;)Lbqb;
+
+    return-void
 .end method

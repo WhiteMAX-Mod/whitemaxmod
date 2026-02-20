@@ -1,119 +1,93 @@
 .class public final Lfhe;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Llhe;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lhhe;
-
-.field public o:I
+.field public final a:Lo60;
 
 
 # direct methods
-.method public constructor <init>(Lhhe;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lo60;)V
     .locals 0
 
-    iput-object p1, p0, Lfhe;->Y:Lhhe;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lfhe;->a:Lo60;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    check-cast p1, Ljava/lang/Throwable;
+    instance-of v0, p1, Lfhe;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-nez v0, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lfhe;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lfhe;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lfhe;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lfhe;
-
-    iget-object v1, p0, Lfhe;->Y:Lhhe;
-
-    invoke-direct {v0, v1, p2}, Lfhe;-><init>(Lhhe;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lfhe;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    iget-object v0, p0, Lfhe;->X:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/Throwable;
-
-    iget v1, p0, Lfhe;->o:I
-
-    const/4 v2, 0x1
-
-    if-eqz v1, :cond_1
-
-    if-ne v1, v2, :cond_0
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    return-object p1
+    goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    check-cast p1, Lfhe;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    iget-object p1, p1, Lfhe;->a:Lo60;
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    iget-object v0, p0, Lfhe;->a:Lo60;
 
-    throw p1
+    invoke-static {v0, p1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    move-result p1
 
+    if-nez p1, :cond_1
+
+    :goto_0
     const/4 p1, 0x0
 
-    iput-object p1, p0, Lfhe;->X:Ljava/lang/Object;
+    return p1
 
-    iput v2, p0, Lfhe;->o:I
+    :cond_1
+    const/4 p1, 0x1
 
-    iget-object p1, p0, Lfhe;->Y:Lhhe;
+    return p1
+.end method
 
-    invoke-static {p1, v0, p0}, Lhhe;->b(Lhhe;Ljava/lang/Throwable;Lo84;)Ljava/lang/Object;
+.method public final hashCode()I
+    .locals 1
 
-    move-result-object p1
+    iget-object v0, p0, Lfhe;->a:Lo60;
 
-    sget-object v0, Lac4;->a:Lac4;
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    if-ne p1, v0, :cond_2
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "AudioMessage(media="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lfhe;->a:Lo60;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
-
-    :cond_2
-    return-object p1
 .end method

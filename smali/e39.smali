@@ -1,98 +1,271 @@
 .class public final Le39;
-.super Ljava/lang/Object;
+.super Landroid/media/session/MediaController$Callback;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Ljava/lang/String;
-
-
 # instance fields
-.field public final a:Landroid/net/Uri;
+.field public final a:Ljava/lang/ref/WeakReference;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Ld49;)V
+    .locals 1
 
-    sget-object v0, Lmbh;->a:Ljava/lang/String;
+    invoke-direct {p0}, Landroid/media/session/MediaController$Callback;-><init>()V
 
-    const/16 v0, 0x24
+    new-instance v0, Ljava/lang/ref/WeakReference;
 
-    const/4 v1, 0x0
+    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    invoke-static {v1, v0}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Le39;->b:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lig5;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iget-object p1, p1, Lig5;->b:Ljava/lang/Object;
-
-    check-cast p1, Landroid/net/Uri;
-
-    iput-object p1, p0, Le39;->a:Landroid/net/Uri;
+    iput-object v0, p0, Le39;->a:Ljava/lang/ref/WeakReference;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final onAudioInfoChanged(Landroid/media/session/MediaController$PlaybackInfo;)V
+    .locals 7
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Le39;->a:Ljava/lang/ref/WeakReference;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
-    return v0
+    move-result-object v0
+
+    check-cast v0, Ld49;
+
+    if-eqz v0, :cond_0
+
+    if-eqz p1, :cond_0
+
+    new-instance v1, Lj39;
+
+    invoke-virtual {p1}, Landroid/media/session/MediaController$PlaybackInfo;->getPlaybackType()I
+
+    move-result v2
+
+    invoke-virtual {p1}, Landroid/media/session/MediaController$PlaybackInfo;->getAudioAttributes()Landroid/media/AudioAttributes;
+
+    move-result-object v3
+
+    move-object v4, v3
+
+    new-instance v3, Lq40;
+
+    new-instance v5, Lp40;
+
+    invoke-direct {v5}, Ljava/lang/Object;-><init>()V
+
+    iput-object v4, v5, Lp40;->a:Landroid/media/AudioAttributes;
+
+    invoke-direct {v3, v5}, Lq40;-><init>(Lp40;)V
+
+    invoke-virtual {p1}, Landroid/media/session/MediaController$PlaybackInfo;->getVolumeControl()I
+
+    move-result v4
+
+    invoke-virtual {p1}, Landroid/media/session/MediaController$PlaybackInfo;->getMaxVolume()I
+
+    move-result v5
+
+    invoke-virtual {p1}, Landroid/media/session/MediaController$PlaybackInfo;->getCurrentVolume()I
+
+    move-result v6
+
+    invoke-direct/range {v1 .. v6}, Lj39;-><init>(ILq40;III)V
+
+    invoke-virtual {v0, v1}, Ld49;->a(Lj39;)V
 
     :cond_0
-    instance-of v1, p1, Le39;
+    return-void
+.end method
+
+.method public final onExtrasChanged(Landroid/os/Bundle;)V
+    .locals 1
+
+    invoke-static {p1}, Lsc9;->w(Landroid/os/Bundle;)V
+
+    iget-object v0, p0, Le39;->a:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ld49;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, p1}, Ld49;->c(Landroid/os/Bundle;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onMetadataChanged(Landroid/media/MediaMetadata;)V
+    .locals 3
+
+    iget-object v0, p0, Le39;->a:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ld49;
+
+    if-eqz v0, :cond_1
+
+    sget-object v1, Lh79;->c:Lju;
+
+    if-eqz p1, :cond_0
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v1
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    invoke-virtual {p1, v1, v2}, Landroid/media/MediaMetadata;->writeToParcel(Landroid/os/Parcel;I)V
 
-    return v2
+    invoke-virtual {v1, v2}, Landroid/os/Parcel;->setDataPosition(I)V
+
+    sget-object v2, Lh79;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-interface {v2, v1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lh79;
+
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    iput-object p1, v2, Lh79;->b:Landroid/media/MediaMetadata;
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v2, 0x0
+
+    :goto_0
+    invoke-virtual {v0, v2}, Ld49;->d(Lh79;)V
 
     :cond_1
-    check-cast p1, Le39;
-
-    iget-object v1, p0, Le39;->a:Landroid/net/Uri;
-
-    iget-object p1, p1, Le39;->a:Landroid/net/Uri;
-
-    invoke-virtual {v1, p1}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    return v0
-
-    :cond_2
-    return v2
+    return-void
 .end method
 
-.method public final hashCode()I
+.method public final onPlaybackStateChanged(Landroid/media/session/PlaybackState;)V
+    .locals 2
+
+    iget-object v0, p0, Le39;->a:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ld49;
+
+    if-eqz v0, :cond_1
+
+    iget-object v1, v0, Ld49;->c:Lg39;
+
+    if-eqz v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-static {p1}, Lrec;->a(Landroid/media/session/PlaybackState;)Lrec;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Ld49;->e(Lrec;)V
+
+    :cond_1
+    :goto_0
+    return-void
+.end method
+
+.method public final onQueueChanged(Ljava/util/List;)V
     .locals 1
 
-    iget-object v0, p0, Le39;->a:Landroid/net/Uri;
+    iget-object v0, p0, Le39;->a:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {v0}, Landroid/net/Uri;->hashCode()I
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
-    move-result v0
+    move-result-object v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    check-cast v0, Ld49;
 
-    return v0
+    if-eqz v0, :cond_0
+
+    invoke-static {p1}, Lpc9;->a(Ljava/util/List;)Ljava/util/ArrayList;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Ld49;->f(Ljava/util/List;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onQueueTitleChanged(Ljava/lang/CharSequence;)V
+    .locals 1
+
+    iget-object v0, p0, Le39;->a:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ld49;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, p1}, Ld49;->g(Ljava/lang/CharSequence;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onSessionDestroyed()V
+    .locals 1
+
+    iget-object v0, p0, Le39;->a:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ld49;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, v0, Ld49;->e:Lf49;
+
+    iget-object v0, v0, Lf49;->b:Ld39;
+
+    invoke-virtual {v0}, Ld39;->w()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onSessionEvent(Ljava/lang/String;Landroid/os/Bundle;)V
+    .locals 1
+
+    invoke-static {p2}, Lsc9;->w(Landroid/os/Bundle;)V
+
+    iget-object v0, p0, Le39;->a:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ld49;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, p1, p2}, Ld49;->h(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    :cond_0
+    return-void
 .end method

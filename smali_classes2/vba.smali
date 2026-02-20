@@ -1,163 +1,94 @@
 .class public final Lvba;
-.super Licg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public c:Lxk9;
-
-.field public d:Lod2;
-
-.field public o:Ljava/lang/String;
+.field public final a:Ljava/util/ArrayList;
 
 
 # direct methods
-.method public constructor <init>(Lpq9;)V
+.method public constructor <init>(Ljava/util/ArrayList;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Licg;-><init>(Lpq9;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lvba;->a:Ljava/util/ArrayList;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(Lpq9;Ljava/lang/String;)V
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p2}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    const/4 v1, -0x1
-
-    sparse-switch v0, :sswitch_data_0
-
-    goto :goto_0
-
-    :sswitch_0
-    const-string v0, "message"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_0
-
-    goto :goto_0
+    goto :goto_1
 
     :cond_0
-    const/4 v1, 0x2
+    instance-of v0, p1, Lvba;
 
-    goto :goto_0
-
-    :sswitch_1
-    const-string v0, "chat"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_1
+    if-nez v0, :cond_1
 
     goto :goto_0
 
     :cond_1
-    const/4 v1, 0x1
+    check-cast p1, Lvba;
 
-    goto :goto_0
+    iget-object v0, p0, Lvba;->a:Ljava/util/ArrayList;
 
-    :sswitch_2
-    const-string v0, "chatAccessToken"
+    iget-object p1, p1, Lvba;->a:Ljava/util/ArrayList;
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    move-result p2
+    move-result p1
 
-    if-nez p2, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    const/4 v1, 0x0
+    if-nez p1, :cond_2
 
     :goto_0
-    packed-switch v1, :pswitch_data_0
+    const/4 p1, 0x0
 
-    invoke-virtual {p1}, Lpq9;->B()V
+    return p1
 
-    return-void
+    :cond_2
+    :goto_1
+    const/4 p1, 0x1
 
-    :pswitch_0
-    invoke-static {p1}, Lw9j;->c(Lpq9;)Lxk9;
+    return p1
+.end method
 
-    move-result-object p1
+.method public final hashCode()I
+    .locals 1
 
-    iput-object p1, p0, Lvba;->c:Lxk9;
+    iget-object v0, p0, Lvba;->a:Ljava/util/ArrayList;
 
-    return-void
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    :pswitch_1
-    invoke-static {p1}, Lod2;->a(Lpq9;)Lod2;
+    move-result v0
 
-    move-result-object p1
-
-    iput-object p1, p0, Lvba;->d:Lod2;
-
-    return-void
-
-    :pswitch_2
-    invoke-static {p1}, Lcti;->q(Lpq9;)Ljava/lang/String;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lvba;->o:Ljava/lang/String;
-
-    return-void
-
-    :sswitch_data_0
-    .sparse-switch
-        -0x7ca41f83 -> :sswitch_2
-        0x2e9358 -> :sswitch_1
-        0x38eb0007 -> :sswitch_0
-    .end sparse-switch
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 4
+    .locals 2
 
-    iget-object v0, p0, Lvba;->c:Lxk9;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lvba;->d:Lod2;
+    const-string v1, "MovieStateUpdates(updates="
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const-string v3, "Response{, message="
+    iget-object v1, p0, Lvba;->a:Ljava/util/ArrayList;
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-string v1, ")"
 
-    const-string v0, ", chat="
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, "}"
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

@@ -1,63 +1,59 @@
 .class public final Li72;
-.super Ld22;
+.super Lg1j;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final b:Landroid/graphics/Typeface;
+
+.field public final c:Lh72;
+
+.field public d:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method public constructor <init>(Lh72;Landroid/graphics/Typeface;)V
     .locals 0
-
-    iput p1, p0, Li72;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    iput-object p2, p0, Li72;->b:Landroid/graphics/Typeface;
 
-.method private final e(I)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final f(ILk22;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final g(ILbg3;)V
-    .locals 0
+    iput-object p1, p0, Li72;->c:Lh72;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(I)V
-    .locals 0
+.method public final g(I)V
+    .locals 1
 
-    iget p1, p0, Li72;->a:I
+    iget-boolean p1, p0, Li72;->d:Z
 
+    if-nez p1, :cond_0
+
+    iget-object p1, p0, Li72;->c:Lh72;
+
+    iget-object v0, p0, Li72;->b:Landroid/graphics/Typeface;
+
+    invoke-interface {p1, v0}, Lh72;->d(Landroid/graphics/Typeface;)V
+
+    :cond_0
     return-void
 .end method
 
-.method public b(ILk22;)V
+.method public final h(Landroid/graphics/Typeface;Z)V
     .locals 0
 
-    iget p1, p0, Li72;->a:I
+    iget-boolean p2, p0, Li72;->d:Z
 
-    return-void
-.end method
+    if-nez p2, :cond_0
 
-.method public c(ILbg3;)V
-    .locals 0
+    iget-object p2, p0, Li72;->c:Lh72;
 
-    iget p1, p0, Li72;->a:I
+    invoke-interface {p2, p1}, Lh72;->d(Landroid/graphics/Typeface;)V
 
+    :cond_0
     return-void
 .end method

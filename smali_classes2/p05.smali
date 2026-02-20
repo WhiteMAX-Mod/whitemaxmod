@@ -4,844 +4,211 @@
 
 
 # static fields
-.field public static volatile v:Lp05;
+.field public static final b:Lnmf;
+
+.field public static final synthetic c:[Lv58;
+
+.field public static final d:Lp05;
 
 
 # instance fields
-.field public a:I
-
-.field public b:I
-
-.field public c:I
-
-.field public d:I
-
-.field public e:I
-
-.field public f:I
-
-.field public g:I
-
-.field public h:I
-
-.field public i:I
-
-.field public j:I
-
-.field public k:I
-
-.field public l:I
-
-.field public m:I
-
-.field public n:I
-
-.field public o:I
-
-.field public p:I
-
-.field public q:I
-
-.field public r:I
-
-.field public s:F
-
-.field public t:F
-
-.field public u:F
+.field public final a:Ljava/util/Map;
 
 
 # direct methods
-.method public static a()Lp05;
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 9
 
-    sget-object v0, Lp05;->v:Lp05;
-
-    if-nez v0, :cond_1
+    new-instance v0, Lv3d;
 
     const-class v1, Lp05;
 
-    monitor-enter v1
+    const-string v2, "isAbEventEnabled"
 
-    :try_start_0
-    sget-object v0, Lp05;->v:Lp05;
+    const-string v3, "isAbEventEnabled()Z"
 
-    if-nez v0, :cond_0
+    const/4 v4, 0x0
 
-    new-instance v0, Lp05;
+    invoke-direct {v0, v1, v2, v3, v4}, Lv3d;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    sget-object v2, Lazd;->a:Lbzd;
+
+    const-string v3, "isOpcodeStatEnabled"
+
+    const-string v5, "isOpcodeStatEnabled()Z"
+
+    invoke-static {v2, v1, v3, v5, v4}, Lo16;->g(Lbzd;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lv3d;
+
+    move-result-object v2
+
+    new-instance v3, Lv3d;
+
+    const-string v5, "isChatHistoryStatEnabled"
+
+    const-string v6, "isChatHistoryStatEnabled()Z"
+
+    invoke-direct {v3, v1, v5, v6, v4}, Lv3d;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    new-instance v5, Lv3d;
+
+    const-string v6, "isUploadHangCheckEnabled"
+
+    const-string v7, "isUploadHangCheckEnabled()Z"
+
+    invoke-direct {v5, v1, v6, v7, v4}, Lv3d;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    new-instance v6, Lv3d;
+
+    const-string v7, "isMemoryStatEnabled"
+
+    const-string v8, "isMemoryStatEnabled()Z"
+
+    invoke-direct {v6, v1, v7, v8, v4}, Lv3d;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    const/4 v1, 0x5
+
+    new-array v1, v1, [Lv58;
+
+    aput-object v0, v1, v4
+
+    const/4 v0, 0x1
+
+    aput-object v2, v1, v0
+
+    const/4 v0, 0x2
+
+    aput-object v3, v1, v0
+
+    const/4 v0, 0x3
+
+    aput-object v5, v1, v0
+
+    const/4 v0, 0x4
+
+    aput-object v6, v1, v0
+
+    sput-object v1, Lp05;->c:[Lv58;
+
+    new-instance v0, Lnmf;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {v0}, Lp05;->b()V
+    sput-object v0, Lp05;->b:Lnmf;
 
-    sput-object v0, Lp05;->v:Lp05;
+    new-instance v0, Lp05;
 
-    goto :goto_0
+    new-instance v1, Lju;
 
-    :catchall_0
-    move-exception v0
+    invoke-direct {v1, v4}, Lblf;-><init>(I)V
 
-    goto :goto_1
+    invoke-direct {v0, v1}, Lp05;-><init>(Ljava/util/Map;)V
 
-    :cond_0
-    :goto_0
-    monitor-exit v1
+    sput-object v0, Lp05;->d:Lp05;
 
-    return-object v0
+    return-void
+.end method
 
-    :goto_1
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+.method public constructor <init>(Ljava/util/Map;)V
+    .locals 0
 
-    throw v0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    :cond_1
-    return-object v0
+    iput-object p1, p0, Lp05;->a:Ljava/util/Map;
+
+    return-void
 .end method
 
 
 # virtual methods
-.method public final b()V
-    .locals 22
+.method public final a(Ljava/lang/String;)Z
+    .locals 2
 
-    move-object/from16 v0, p0
+    iget-object v0, p0, Lp05;->a:Ljava/util/Map;
 
-    const/high16 v1, 0x3f800000    # 1.0f
+    sget-object v1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    float-to-int v2, v1
+    invoke-interface {v0, p1, v1}, Ljava/util/Map;->getOrDefault(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v2}, Lt05;->b(I)I
+    move-result-object p1
 
-    move-result v2
+    check-cast p1, Ljava/lang/Boolean;
 
-    iput v2, v0, Lp05;->a:I
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    const/high16 v2, 0x40000000    # 2.0f
+    move-result p1
 
-    float-to-int v3, v2
+    return p1
+.end method
 
-    invoke-static {v3}, Lt05;->b(I)I
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    move-result v3
+    const/4 v0, 0x1
 
-    iput v3, v0, Lp05;->b:I
+    if-ne p0, p1, :cond_0
 
-    const/high16 v3, 0x40400000    # 3.0f
+    return v0
 
-    float-to-int v4, v3
+    :cond_0
+    instance-of v1, p1, Lp05;
 
-    invoke-static {v4}, Lt05;->b(I)I
+    const/4 v2, 0x0
 
-    move-result v4
+    if-nez v1, :cond_1
 
-    iput v4, v0, Lp05;->c:I
+    return v2
 
-    const/high16 v4, 0x40800000    # 4.0f
+    :cond_1
+    check-cast p1, Lp05;
 
-    float-to-int v5, v4
+    iget-object v1, p0, Lp05;->a:Ljava/util/Map;
 
-    invoke-static {v5}, Lt05;->b(I)I
+    iget-object p1, p1, Lp05;->a:Ljava/util/Map;
 
-    move-result v5
+    invoke-static {v1, p1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    iput v5, v0, Lp05;->d:I
+    move-result p1
 
-    const/high16 v5, 0x40a00000    # 5.0f
+    if-nez p1, :cond_2
 
-    float-to-int v6, v5
+    return v2
 
-    invoke-static {v6}, Lt05;->b(I)I
+    :cond_2
+    return v0
+.end method
 
-    move-result v6
+.method public final hashCode()I
+    .locals 1
 
-    iput v6, v0, Lp05;->e:I
+    iget-object v0, p0, Lp05;->a:Ljava/util/Map;
 
-    const/high16 v6, 0x40c00000    # 6.0f
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    float-to-int v7, v6
+    move-result v0
 
-    invoke-static {v7}, Lt05;->b(I)I
+    return v0
+.end method
 
-    move-result v7
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    iput v7, v0, Lp05;->f:I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const/high16 v7, 0x40e00000    # 7.0f
+    const-string v1, "DevNullServerConfig(events="
 
-    float-to-int v8, v7
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v8}, Lt05;->b(I)I
+    iget-object v1, p0, Lp05;->a:Ljava/util/Map;
 
-    move-result v8
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    iput v8, v0, Lp05;->g:I
+    const-string v1, ")"
 
-    const/high16 v8, 0x41000000    # 8.0f
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    float-to-int v9, v8
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-static {v9}, Lt05;->b(I)I
+    move-result-object v0
 
-    move-result v9
-
-    iput v9, v0, Lp05;->h:I
-
-    const/high16 v9, 0x41100000    # 9.0f
-
-    float-to-int v10, v9
-
-    invoke-static {v10}, Lt05;->b(I)I
-
-    const/high16 v10, 0x41200000    # 10.0f
-
-    float-to-int v11, v10
-
-    invoke-static {v11}, Lt05;->b(I)I
-
-    move-result v11
-
-    iput v11, v0, Lp05;->i:I
-
-    const/high16 v11, 0x41300000    # 11.0f
-
-    float-to-int v12, v11
-
-    invoke-static {v12}, Lt05;->b(I)I
-
-    const/high16 v12, 0x41400000    # 12.0f
-
-    float-to-int v13, v12
-
-    invoke-static {v13}, Lt05;->b(I)I
-
-    move-result v13
-
-    iput v13, v0, Lp05;->j:I
-
-    const/high16 v13, 0x41500000    # 13.0f
-
-    float-to-int v14, v13
-
-    invoke-static {v14}, Lt05;->b(I)I
-
-    const/high16 v14, 0x41600000    # 14.0f
-
-    float-to-int v15, v14
-
-    invoke-static {v15}, Lt05;->b(I)I
-
-    const/high16 v15, 0x41700000    # 15.0f
-
-    move/from16 v16, v1
-
-    float-to-int v1, v15
-
-    invoke-static {v1}, Lt05;->b(I)I
-
-    move-result v1
-
-    iput v1, v0, Lp05;->k:I
-
-    const/high16 v1, 0x41800000    # 16.0f
-
-    move/from16 v17, v2
-
-    float-to-int v2, v1
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x41880000    # 17.0f
-
-    move/from16 v18, v1
-
-    float-to-int v1, v2
-
-    invoke-static {v1}, Lt05;->b(I)I
-
-    const/high16 v1, 0x41900000    # 18.0f
-
-    move/from16 v19, v2
-
-    float-to-int v2, v1
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x41980000    # 19.0f
-
-    move/from16 v20, v1
-
-    float-to-int v1, v2
-
-    invoke-static {v1}, Lt05;->b(I)I
-
-    const/high16 v1, 0x41a00000    # 20.0f
-
-    move/from16 v21, v2
-
-    float-to-int v2, v1
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    move-result v2
-
-    iput v2, v0, Lp05;->l:I
-
-    const/high16 v2, 0x41a80000    # 21.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x41b00000    # 22.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x41b80000    # 23.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x41c00000    # 24.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x41c80000    # 25.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    move-result v2
-
-    iput v2, v0, Lp05;->m:I
-
-    const/high16 v2, 0x41d00000    # 26.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x41d80000    # 27.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x41e00000    # 28.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x41e80000    # 29.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x41f00000    # 30.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x41f80000    # 31.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x42000000    # 32.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    move-result v2
-
-    iput v2, v0, Lp05;->n:I
-
-    const/high16 v2, 0x42040000    # 33.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x42080000    # 34.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x420c0000    # 35.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x42100000    # 36.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    move-result v2
-
-    iput v2, v0, Lp05;->o:I
-
-    const/high16 v2, 0x42140000    # 37.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x42180000    # 38.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x421c0000    # 39.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x42200000    # 40.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    move-result v2
-
-    iput v2, v0, Lp05;->p:I
-
-    const/high16 v2, 0x42240000    # 41.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x42280000    # 42.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x422c0000    # 43.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x42300000    # 44.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x42340000    # 45.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x42380000    # 46.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x423c0000    # 47.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x42400000    # 48.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x42440000    # 49.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x42480000    # 50.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x424c0000    # 51.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x42500000    # 52.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x42540000    # 53.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x42580000    # 54.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x425c0000    # 55.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x42600000    # 56.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    move-result v2
-
-    iput v2, v0, Lp05;->q:I
-
-    const/high16 v2, 0x42640000    # 57.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x42680000    # 58.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x426c0000    # 59.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x42700000    # 60.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x42740000    # 61.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x42780000    # 62.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x427c0000    # 63.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x42800000    # 64.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x42820000    # 65.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x42840000    # 66.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x42860000    # 67.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x42880000    # 68.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x428a0000    # 69.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x428c0000    # 70.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x428e0000    # 71.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x42900000    # 72.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x42920000    # 73.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x42940000    # 74.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x42960000    # 75.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x42980000    # 76.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x429a0000    # 77.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x429c0000    # 78.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x429e0000    # 79.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x42a00000    # 80.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x42a20000    # 81.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x42a40000    # 82.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x42a60000    # 83.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x42a80000    # 84.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x42aa0000    # 85.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x42ac0000    # 86.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x42ae0000    # 87.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x42b00000    # 88.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x42b20000    # 89.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x42b40000    # 90.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x42b60000    # 91.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x42b80000    # 92.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x42ba0000    # 93.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x42bc0000    # 94.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x42be0000    # 95.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x42c00000    # 96.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x42c20000    # 97.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x42c40000    # 98.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x42c60000    # 99.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    const/high16 v2, 0x42c80000    # 100.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lt05;->b(I)I
-
-    move-result v2
-
-    iput v2, v0, Lp05;->r:I
-
-    invoke-static/range {v16 .. v16}, Lt05;->e(F)F
-
-    invoke-static/range {v17 .. v17}, Lt05;->e(F)F
-
-    invoke-static {v3}, Lt05;->e(F)F
-
-    invoke-static {v4}, Lt05;->e(F)F
-
-    move-result v2
-
-    iput v2, v0, Lp05;->s:F
-
-    invoke-static {v5}, Lt05;->e(F)F
-
-    invoke-static {v6}, Lt05;->e(F)F
-
-    invoke-static {v7}, Lt05;->e(F)F
-
-    invoke-static {v8}, Lt05;->e(F)F
-
-    invoke-static {v9}, Lt05;->e(F)F
-
-    invoke-static {v10}, Lt05;->e(F)F
-
-    move-result v2
-
-    iput v2, v0, Lp05;->t:F
-
-    invoke-static {v11}, Lt05;->e(F)F
-
-    invoke-static {v12}, Lt05;->e(F)F
-
-    invoke-static {v13}, Lt05;->e(F)F
-
-    invoke-static {v14}, Lt05;->e(F)F
-
-    invoke-static {v15}, Lt05;->e(F)F
-
-    invoke-static/range {v18 .. v18}, Lt05;->e(F)F
-
-    move-result v2
-
-    iput v2, v0, Lp05;->u:F
-
-    invoke-static/range {v19 .. v19}, Lt05;->e(F)F
-
-    invoke-static/range {v20 .. v20}, Lt05;->e(F)F
-
-    invoke-static/range {v21 .. v21}, Lt05;->e(F)F
-
-    invoke-static {v1}, Lt05;->e(F)F
-
-    return-void
+    return-object v0
 .end method

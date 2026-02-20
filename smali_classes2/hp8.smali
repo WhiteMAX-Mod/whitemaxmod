@@ -1,3 +1,3 @@
-.class public interface abstract Lhp8;
-.super Ljava/lang/Object;
+.class public final Lhp8;
+.super Lk2;
 .source "SourceFile"

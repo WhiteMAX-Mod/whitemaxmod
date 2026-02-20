@@ -1,373 +1,195 @@
 .class public final Lqng;
-.super Lpj0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final i:I
+# instance fields
+.field public final a:Landroid/text/TextPaint;
+
+.field public final b:Lkd3;
+
+.field public c:F
+
+.field public d:F
+
+.field public e:Z
+
+.field public final f:Ljava/lang/ref/WeakReference;
+
+.field public g:Lkng;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lpng;)V
+    .locals 3
 
-    const/high16 v0, 0x7fc00000    # Float.NaN
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
+    new-instance v0, Landroid/text/TextPaint;
 
-    move-result v0
+    const/4 v1, 0x1
 
-    sput v0, Lqng;->i:I
+    invoke-direct {v0, v1}, Landroid/text/TextPaint;-><init>(I)V
 
-    return-void
-.end method
+    iput-object v0, p0, Lqng;->a:Landroid/text/TextPaint;
 
-.method public static l(ILjava/nio/ByteBuffer;)V
-    .locals 4
+    new-instance v0, Lkd3;
 
-    const-wide v0, 0x3e00000000200000L    # 4.656612875245797E-10
+    const/4 v2, 0x1
 
-    int-to-double v2, p0
+    invoke-direct {v0, v2, p0}, Lkd3;-><init>(ILjava/lang/Object;)V
 
-    mul-double/2addr v2, v0
+    iput-object v0, p0, Lqng;->b:Lkd3;
 
-    double-to-float p0, v2
+    iput-boolean v1, p0, Lqng;->e:Z
 
-    invoke-static {p0}, Ljava/lang/Float;->floatToIntBits(F)I
+    new-instance v0, Ljava/lang/ref/WeakReference;
 
-    move-result p0
+    const/4 v1, 0x0
 
-    sget v0, Lqng;->i:I
+    invoke-direct {v0, v1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    if-ne p0, v0, :cond_0
+    iput-object v0, p0, Lqng;->f:Ljava/lang/ref/WeakReference;
 
-    const/4 p0, 0x0
+    new-instance v0, Ljava/lang/ref/WeakReference;
 
-    invoke-static {p0}, Ljava/lang/Float;->floatToIntBits(F)I
+    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    move-result p0
-
-    :cond_0
-    invoke-virtual {p1, p0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
+    iput-object v0, p0, Lqng;->f:Ljava/lang/ref/WeakReference;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c(Ljava/nio/ByteBuffer;)V
-    .locals 5
+.method public final a(Ljava/lang/String;)F
+    .locals 1
 
-    invoke-virtual {p1}, Ljava/nio/Buffer;->position()I
+    iget-boolean v0, p0, Lqng;->e:Z
 
-    move-result v0
+    if-nez v0, :cond_0
 
-    invoke-virtual {p1}, Ljava/nio/Buffer;->limit()I
+    iget p1, p0, Lqng;->c:F
 
-    move-result v1
+    return p1
 
-    sub-int v2, v1, v0
+    :cond_0
+    invoke-virtual {p0, p1}, Lqng;->b(Ljava/lang/String;)V
 
-    iget-object v3, p0, Lpj0;->b:Ly50;
+    iget p1, p0, Lqng;->c:F
 
-    iget v3, v3, Ly50;->c:I
+    return p1
+.end method
 
-    const/16 v4, 0x15
+.method public final b(Ljava/lang/String;)V
+    .locals 4
 
-    if-eq v3, v4, :cond_3
+    const/4 v0, 0x0
 
-    const/16 v4, 0x16
+    iget-object v1, p0, Lqng;->a:Landroid/text/TextPaint;
 
-    if-eq v3, v4, :cond_2
+    const/4 v2, 0x0
 
-    const/high16 v4, 0x50000000
+    if-nez p1, :cond_0
 
-    if-eq v3, v4, :cond_1
-
-    const/high16 v4, 0x60000000
-
-    if-ne v3, v4, :cond_0
-
-    invoke-virtual {p0, v2}, Lpj0;->k(I)Ljava/nio/ByteBuffer;
-
-    move-result-object v2
-
-    :goto_0
-    if-ge v0, v1, :cond_4
-
-    add-int/lit8 v3, v0, 0x3
-
-    invoke-virtual {p1, v3}, Ljava/nio/ByteBuffer;->get(I)B
-
-    move-result v3
-
-    and-int/lit16 v3, v3, 0xff
-
-    add-int/lit8 v4, v0, 0x2
-
-    invoke-virtual {p1, v4}, Ljava/nio/ByteBuffer;->get(I)B
-
-    move-result v4
-
-    and-int/lit16 v4, v4, 0xff
-
-    shl-int/lit8 v4, v4, 0x8
-
-    or-int/2addr v3, v4
-
-    add-int/lit8 v4, v0, 0x1
-
-    invoke-virtual {p1, v4}, Ljava/nio/ByteBuffer;->get(I)B
-
-    move-result v4
-
-    and-int/lit16 v4, v4, 0xff
-
-    shl-int/lit8 v4, v4, 0x10
-
-    or-int/2addr v3, v4
-
-    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->get(I)B
-
-    move-result v4
-
-    and-int/lit16 v4, v4, 0xff
-
-    shl-int/lit8 v4, v4, 0x18
-
-    or-int/2addr v3, v4
-
-    invoke-static {v3, v2}, Lqng;->l(ILjava/nio/ByteBuffer;)V
-
-    add-int/lit8 v0, v0, 0x4
+    move v3, v2
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    invoke-direct {p1}, Ljava/lang/IllegalStateException;-><init>()V
-
-    throw p1
-
-    :cond_1
-    div-int/lit8 v2, v2, 0x3
-
-    mul-int/lit8 v2, v2, 0x4
-
-    invoke-virtual {p0, v2}, Lpj0;->k(I)Ljava/nio/ByteBuffer;
-
-    move-result-object v2
-
-    :goto_1
-    if-ge v0, v1, :cond_4
-
-    add-int/lit8 v3, v0, 0x2
-
-    invoke-virtual {p1, v3}, Ljava/nio/ByteBuffer;->get(I)B
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v3
 
-    and-int/lit16 v3, v3, 0xff
+    invoke-virtual {v1, p1, v0, v3}, Landroid/graphics/Paint;->measureText(Ljava/lang/CharSequence;II)F
 
-    shl-int/lit8 v3, v3, 0x8
+    move-result v3
 
-    add-int/lit8 v4, v0, 0x1
+    :goto_0
+    iput v3, p0, Lqng;->c:F
 
-    invoke-virtual {p1, v4}, Ljava/nio/ByteBuffer;->get(I)B
-
-    move-result v4
-
-    and-int/lit16 v4, v4, 0xff
-
-    shl-int/lit8 v4, v4, 0x10
-
-    or-int/2addr v3, v4
-
-    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->get(I)B
-
-    move-result v4
-
-    and-int/lit16 v4, v4, 0xff
-
-    shl-int/lit8 v4, v4, 0x18
-
-    or-int/2addr v3, v4
-
-    invoke-static {v3, v2}, Lqng;->l(ILjava/nio/ByteBuffer;)V
-
-    add-int/lit8 v0, v0, 0x3
+    if-nez p1, :cond_1
 
     goto :goto_1
 
-    :cond_2
-    invoke-virtual {p0, v2}, Lpj0;->k(I)Ljava/nio/ByteBuffer;
+    :cond_1
+    invoke-virtual {v1}, Landroid/graphics/Paint;->getFontMetrics()Landroid/graphics/Paint$FontMetrics;
 
-    move-result-object v2
+    move-result-object p1
 
-    :goto_2
-    if-ge v0, v1, :cond_4
+    iget p1, p1, Landroid/graphics/Paint$FontMetrics;->ascent:F
 
-    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->get(I)B
+    invoke-static {p1}, Ljava/lang/Math;->abs(F)F
 
-    move-result v3
+    move-result v2
 
-    and-int/lit16 v3, v3, 0xff
+    :goto_1
+    iput v2, p0, Lqng;->d:F
 
-    add-int/lit8 v4, v0, 0x1
-
-    invoke-virtual {p1, v4}, Ljava/nio/ByteBuffer;->get(I)B
-
-    move-result v4
-
-    and-int/lit16 v4, v4, 0xff
-
-    shl-int/lit8 v4, v4, 0x8
-
-    or-int/2addr v3, v4
-
-    add-int/lit8 v4, v0, 0x2
-
-    invoke-virtual {p1, v4}, Ljava/nio/ByteBuffer;->get(I)B
-
-    move-result v4
-
-    and-int/lit16 v4, v4, 0xff
-
-    shl-int/lit8 v4, v4, 0x10
-
-    or-int/2addr v3, v4
-
-    add-int/lit8 v4, v0, 0x3
-
-    invoke-virtual {p1, v4}, Ljava/nio/ByteBuffer;->get(I)B
-
-    move-result v4
-
-    and-int/lit16 v4, v4, 0xff
-
-    shl-int/lit8 v4, v4, 0x18
-
-    or-int/2addr v3, v4
-
-    invoke-static {v3, v2}, Lqng;->l(ILjava/nio/ByteBuffer;)V
-
-    add-int/lit8 v0, v0, 0x4
-
-    goto :goto_2
-
-    :cond_3
-    div-int/lit8 v2, v2, 0x3
-
-    mul-int/lit8 v2, v2, 0x4
-
-    invoke-virtual {p0, v2}, Lpj0;->k(I)Ljava/nio/ByteBuffer;
-
-    move-result-object v2
-
-    :goto_3
-    if-ge v0, v1, :cond_4
-
-    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->get(I)B
-
-    move-result v3
-
-    and-int/lit16 v3, v3, 0xff
-
-    shl-int/lit8 v3, v3, 0x8
-
-    add-int/lit8 v4, v0, 0x1
-
-    invoke-virtual {p1, v4}, Ljava/nio/ByteBuffer;->get(I)B
-
-    move-result v4
-
-    and-int/lit16 v4, v4, 0xff
-
-    shl-int/lit8 v4, v4, 0x10
-
-    or-int/2addr v3, v4
-
-    add-int/lit8 v4, v0, 0x2
-
-    invoke-virtual {p1, v4}, Ljava/nio/ByteBuffer;->get(I)B
-
-    move-result v4
-
-    and-int/lit16 v4, v4, 0xff
-
-    shl-int/lit8 v4, v4, 0x18
-
-    or-int/2addr v3, v4
-
-    invoke-static {v3, v2}, Lqng;->l(ILjava/nio/ByteBuffer;)V
-
-    add-int/lit8 v0, v0, 0x3
-
-    goto :goto_3
-
-    :cond_4
-    invoke-virtual {p1}, Ljava/nio/Buffer;->limit()I
-
-    move-result v0
-
-    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
-
-    invoke-virtual {v2}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
+    iput-boolean v0, p0, Lqng;->e:Z
 
     return-void
 .end method
 
-.method public final g(Ly50;)Ly50;
+.method public final c(Lkng;Landroid/content/Context;)V
     .locals 3
 
-    iget v0, p1, Ly50;->c:I
+    iget-object v0, p0, Lqng;->g:Lkng;
 
-    const/16 v1, 0x15
+    if-eq v0, p1, :cond_2
 
-    const/4 v2, 0x4
+    iput-object p1, p0, Lqng;->g:Lkng;
 
-    if-eq v0, v1, :cond_1
+    if-eqz p1, :cond_1
 
-    const/high16 v1, 0x50000000
+    iget-object v0, p0, Lqng;->a:Landroid/text/TextPaint;
 
-    if-eq v0, v1, :cond_1
+    iget-object v1, p0, Lqng;->b:Lkd3;
 
-    const/16 v1, 0x16
+    invoke-virtual {p1, p2, v0, v1}, Lkng;->f(Landroid/content/Context;Landroid/text/TextPaint;Lg1j;)V
 
-    if-eq v0, v1, :cond_1
+    iget-object v2, p0, Lqng;->f:Ljava/lang/ref/WeakReference;
 
-    const/high16 v1, 0x60000000
+    invoke-virtual {v2}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
-    if-eq v0, v1, :cond_1
+    move-result-object v2
 
-    if-ne v0, v2, :cond_0
+    check-cast v2, Lpng;
 
-    goto :goto_0
+    if-eqz v2, :cond_0
+
+    invoke-interface {v2}, Lpng;->getState()[I
+
+    move-result-object v2
+
+    iput-object v2, v0, Landroid/text/TextPaint;->drawableState:[I
 
     :cond_0
-    new-instance v0, Landroidx/media3/common/audio/AudioProcessor$UnhandledAudioFormatException;
+    invoke-virtual {p1, p2, v0, v1}, Lkng;->e(Landroid/content/Context;Landroid/text/TextPaint;Lg1j;)V
 
-    invoke-direct {v0, p1}, Landroidx/media3/common/audio/AudioProcessor$UnhandledAudioFormatException;-><init>(Ly50;)V
+    const/4 p1, 0x1
 
-    throw v0
+    iput-boolean p1, p0, Lqng;->e:Z
 
     :cond_1
-    :goto_0
-    if-eq v0, v2, :cond_2
+    iget-object p1, p0, Lqng;->f:Ljava/lang/ref/WeakReference;
 
-    new-instance v0, Ly50;
+    invoke-virtual {p1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
-    iget v1, p1, Ly50;->a:I
+    move-result-object p1
 
-    iget p1, p1, Ly50;->b:I
+    check-cast p1, Lpng;
 
-    invoke-direct {v0, v1, p1, v2}, Ly50;-><init>(III)V
+    if-eqz p1, :cond_2
 
-    return-object v0
+    invoke-interface {p1}, Lpng;->a()V
+
+    invoke-interface {p1}, Lpng;->getState()[I
+
+    move-result-object p2
+
+    invoke-interface {p1, p2}, Lpng;->onStateChange([I)Z
 
     :cond_2
-    sget-object p1, Ly50;->e:Ly50;
-
-    return-object p1
+    return-void
 .end method

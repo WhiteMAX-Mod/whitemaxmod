@@ -1,104 +1,130 @@
 .class public final Le63;
-.super Ljava/lang/Object;
+.super Lpdg;
 .source "SourceFile"
 
 # interfaces
-.implements Lrtg;
+.implements Lys6;
 
 
 # instance fields
-.field public final synthetic a:Landroid/view/View;
+.field public final synthetic X:Lo63;
 
-.field public final synthetic b:Lf63;
-
-.field public final synthetic c:Z
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;Lf63;Z)V
+.method public constructor <init>(Lo63;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Le63;->X:Lo63;
 
-    iput-object p1, p0, Le63;->a:Landroid/view/View;
+    const/4 p1, 0x2
 
-    iput-object p2, p0, Le63;->b:Lf63;
-
-    iput-boolean p3, p0, Le63;->c:Z
+    invoke-direct {p0, p1, p2}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lstg;)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lnd4;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Le63;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Le63;
+
+    sget-object p2, Lmah;->a:Lmah;
+
+    invoke-virtual {p1, p2}, Le63;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 1
 
-    iget-object p1, p0, Le63;->a:Landroid/view/View;
+    new-instance p1, Le63;
 
-    if-nez p1, :cond_0
+    iget-object v0, p0, Le63;->X:Lo63;
+
+    invoke-direct {p1, v0, p2}, Le63;-><init>(Lo63;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    iget v0, p0, Le63;->o:I
+
+    iget-object v1, p0, Le63;->X:Lo63;
+
+    const/4 v2, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v2, :cond_0
+
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
     goto :goto_0
 
     :cond_0
-    iget-object v0, p0, Le63;->b:Lf63;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    iget-object v0, v0, Lf63;->x0:Ljava/lang/String;
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    invoke-static {p1, v0}, Lc2j;->c(Landroid/view/View;Ljava/lang/String;)Landroid/view/View;
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    move-result-object p1
-
-    check-cast p1, Lymb;
-
-    iget-boolean v0, p0, Le63;->c:Z
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {p1}, Lymb;->getSearchView()Ldib;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p1}, Ldib;->d()V
-
-    return-void
+    throw p1
 
     :cond_1
-    invoke-virtual {p1}, Lymb;->getSearchView()Ldib;
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    iget-object p1, v1, Lo63;->j:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {p1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+
+    iget-object p1, v1, Lo63;->l:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->clear()V
+
+    iget-object p1, v1, Lo63;->a:Ls87;
+
+    iget-object p1, p1, Ls87;->e:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->clear()V
+
+    iput v2, p0, Le63;->o:I
+
+    invoke-virtual {v1, p0}, Lo63;->d(Lda4;)Ljava/lang/Object;
 
     move-result-object p1
 
-    if-eqz p1, :cond_2
+    sget-object v0, Lod4;->a:Lod4;
 
-    invoke-virtual {p1}, Ldib;->b()V
+    if-ne p1, v0, :cond_2
+
+    return-object v0
 
     :cond_2
     :goto_0
-    return-void
-.end method
+    iget-object p1, v1, Lo63;->k:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-.method public final b()V
-    .locals 0
+    const/4 v0, 0x0
 
-    return-void
-.end method
+    invoke-virtual {p1, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-.method public final c(Lstg;)V
-    .locals 0
+    sget-object p1, Lmah;->a:Lmah;
 
-    return-void
-.end method
-
-.method public final f()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final h(Lstg;)V
-    .locals 0
-
-    return-void
+    return-object p1
 .end method

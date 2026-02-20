@@ -3,127 +3,153 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lb01;
+.implements Loj7;
 
 
 # instance fields
-.field public final a:Lig;
+.field public final a:Landroid/media/Image;
 
-.field public final b:I
+.field public final b:[Lxh5;
+
+.field public final c:Lfd0;
 
 
 # direct methods
-.method public constructor <init>(Lig;I)V
-    .locals 0
+.method public constructor <init>(Landroid/media/Image;)V
+    .locals 7
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lgf;->a:Lig;
+    iput-object p1, p0, Lgf;->a:Landroid/media/Image;
 
-    iput p2, p0, Lgf;->b:I
+    invoke-virtual {p1}, Landroid/media/Image;->getPlanes()[Landroid/media/Image$Plane;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    array-length v2, v0
+
+    new-array v2, v2, [Lxh5;
+
+    iput-object v2, p0, Lgf;->b:[Lxh5;
+
+    :goto_0
+    array-length v2, v0
+
+    if-ge v1, v2, :cond_1
+
+    iget-object v2, p0, Lgf;->b:[Lxh5;
+
+    new-instance v3, Lxh5;
+
+    aget-object v4, v0, v1
+
+    invoke-direct {v3, v4}, Lxh5;-><init>(Ljava/lang/Object;)V
+
+    aput-object v3, v2, v1
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    new-array v0, v1, [Lxh5;
+
+    iput-object v0, p0, Lgf;->b:[Lxh5;
+
+    :cond_1
+    sget-object v2, Ljig;->b:Ljig;
+
+    invoke-virtual {p1}, Landroid/media/Image;->getTimestamp()J
+
+    move-result-wide v3
+
+    new-instance v6, Landroid/graphics/Matrix;
+
+    invoke-direct {v6}, Landroid/graphics/Matrix;-><init>()V
+
+    new-instance v1, Lfd0;
+
+    const/4 v5, 0x0
+
+    invoke-direct/range {v1 .. v6}, Lfd0;-><init>(Ljig;JILandroid/graphics/Matrix;)V
+
+    iput-object v1, p0, Lgf;->c:Lfd0;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
+.method public final close()V
     .locals 1
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lgf;->a:Landroid/media/Image;
+
+    invoke-virtual {v0}, Landroid/media/Image;->close()V
+
+    return-void
+.end method
+
+.method public final getFormat()I
+    .locals 1
+
+    iget-object v0, p0, Lgf;->a:Landroid/media/Image;
+
+    invoke-virtual {v0}, Landroid/media/Image;->getFormat()I
+
+    move-result v0
 
     return v0
 .end method
 
-.method public final b()Ljava/lang/String;
+.method public final getHeight()I
     .locals 1
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lgf;->a:Landroid/media/Image;
+
+    invoke-virtual {v0}, Landroid/media/Image;->getHeight()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final getImageInfo()Lvi7;
+    .locals 1
+
+    iget-object v0, p0, Lgf;->c:Lfd0;
 
     return-object v0
 .end method
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final getWidth()I
+    .locals 1
 
-    if-ne p1, p0, :cond_0
+    iget-object v0, p0, Lgf;->a:Landroid/media/Image;
 
-    goto :goto_0
-
-    :cond_0
-    instance-of v0, p1, Lgf;
-
-    if-eqz v0, :cond_1
-
-    check-cast p1, Lgf;
-
-    iget v0, p0, Lgf;->b:I
-
-    iget v1, p1, Lgf;->b:I
-
-    if-ne v0, v1, :cond_1
-
-    iget-object v0, p0, Lgf;->a:Lig;
-
-    iget-object p1, p1, Lgf;->a:Lig;
-
-    invoke-virtual {v0, p1}, Lig;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    :goto_0
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_1
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Lgf;->a:Lig;
-
-    invoke-virtual {v0}, Lig;->hashCode()I
+    invoke-virtual {v0}, Landroid/media/Image;->getWidth()I
 
     move-result v0
-
-    mul-int/lit16 v0, v0, 0x3f5
-
-    iget v1, p0, Lgf;->b:I
-
-    add-int/2addr v0, v1
 
     return v0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final j0()Landroid/media/Image;
+    .locals 1
 
-    invoke-static {p0}, Lhdj;->b(Ljava/lang/Object;)Lle5;
+    iget-object v0, p0, Lgf;->a:Landroid/media/Image;
 
-    move-result-object v0
+    return-object v0
+.end method
 
-    const-string v1, "imageCacheKey"
+.method public final v()[Lxh5;
+    .locals 1
 
-    iget-object v2, p0, Lgf;->a:Lig;
-
-    invoke-virtual {v0, v2, v1}, Lle5;->h(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v1, "frameIndex"
-
-    iget v2, p0, Lgf;->b:I
-
-    invoke-virtual {v0, v2, v1}, Lle5;->c(ILjava/lang/String;)V
-
-    invoke-virtual {v0}, Lle5;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    iget-object v0, p0, Lgf;->b:[Lxh5;
 
     return-object v0
 .end method

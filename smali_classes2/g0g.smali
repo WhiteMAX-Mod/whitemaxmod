@@ -2,18 +2,21 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Li0g;
+
 
 # instance fields
-.field public final a:I
+.field public final a:Z
 
 
 # direct methods
-.method public constructor <init>(I)V
+.method public constructor <init>(Z)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lg0g;->a:I
+    iput-boolean p1, p0, Lg0g;->a:Z
 
     return-void
 .end method
@@ -21,46 +24,44 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    .locals 3
+
+    const/4 v0, 0x1
 
     if-ne p0, p1, :cond_0
 
-    goto :goto_1
+    return v0
 
     :cond_0
-    instance-of v0, p1, Lg0g;
+    instance-of v1, p1, Lg0g;
 
-    if-nez v0, :cond_1
+    const/4 v2, 0x0
 
-    goto :goto_0
+    if-nez v1, :cond_1
+
+    return v2
 
     :cond_1
     check-cast p1, Lg0g;
 
-    iget v0, p0, Lg0g;->a:I
+    iget-boolean v1, p0, Lg0g;->a:Z
 
-    iget p1, p1, Lg0g;->a:I
+    iget-boolean p1, p1, Lg0g;->a:Z
 
-    if-eq v0, p1, :cond_2
+    if-eq v1, p1, :cond_2
 
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
+    return v2
 
     :cond_2
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
+    return v0
 .end method
 
 .method public final hashCode()I
     .locals 1
 
-    iget v0, p0, Lg0g;->a:I
+    iget-boolean v0, p0, Lg0g;->a:Z
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
 
     move-result v0
 
@@ -70,13 +71,13 @@
 .method public final toString()Ljava/lang/String;
     .locals 3
 
-    const-string v0, "StrokeLocalTopBarColors(primary="
+    const-string v0, "SetSelection(selected="
 
     const-string v1, ")"
 
-    iget v2, p0, Lg0g;->a:I
+    iget-boolean v2, p0, Lg0g;->a:Z
 
-    invoke-static {v2, v0, v1}, Lkz1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Ljye;->k(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
 
     move-result-object v0
 

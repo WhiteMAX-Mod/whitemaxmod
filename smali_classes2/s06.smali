@@ -1,144 +1,395 @@
 .class public final Ls06;
-.super Ltff;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lpk4;
 
-# static fields
-.field public static final b:Ls06;
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
+    .locals 0
 
-    new-instance v0, Ls06;
+    iput p1, p0, Ls06;->a:I
 
-    invoke-direct {v0}, Ltff;-><init>()V
+    iput-object p2, p0, Ls06;->b:Ljava/lang/Object;
 
-    sput-object v0, Ls06;->b:Ls06;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method private final e()V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final f()V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final g(Ldk4;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final h(Ldk4;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final i(Ldk4;)V
+    .locals 0
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c()Lmm4;
+.method public final a(Ldk4;)V
     .locals 4
 
-    new-instance v0, Lmm4;
+    iget v0, p0, Ls06;->a:I
 
-    new-instance v1, Lss5;
+    packed-switch v0, :pswitch_data_0
 
-    const/4 v2, 0x3
+    iget-object v0, p0, Ls06;->b:Ljava/lang/Object;
 
-    invoke-direct {v1, v2}, Lss5;-><init>(I)V
+    check-cast v0, Lk6e;
 
-    new-instance v2, Lss5;
+    iget-object v1, v0, Lk6e;->h:Ldk4;
 
-    const/4 v3, 0x4
+    if-ne p1, v1, :cond_0
 
-    invoke-direct {v2, v3}, Lss5;-><init>(I)V
+    check-cast p1, Lq0;
 
-    invoke-direct {v0, v1, v2}, Lmm4;-><init>(Llq6;Llq6;)V
+    invoke-virtual {p1}, Lq0;->c()F
 
-    return-object v0
-.end method
+    move-result p1
 
-.method public final d(Landroid/os/Bundle;)Lnm4;
-    .locals 13
+    invoke-virtual {v0, p1}, Lq0;->j(F)Z
 
-    const-string v0, "chat_id"
+    :cond_0
+    return-void
 
-    invoke-static {v0, p1}, Lomj;->k(Ljava/lang/String;Landroid/os/Bundle;)J
+    :pswitch_0
+    iget-object v0, p0, Ls06;->b:Ljava/lang/Object;
 
-    move-result-wide v3
+    check-cast v0, Lci7;
 
-    const-string v0, "message_id"
+    check-cast p1, Lq0;
 
-    invoke-static {v0, p1}, Lomj;->k(Ljava/lang/String;Landroid/os/Bundle;)J
+    invoke-virtual {p1}, Lq0;->c()F
 
-    move-result-wide v5
+    move-result v1
 
-    const-string v0, "attach_id"
+    invoke-virtual {p1}, Lq0;->e()Z
 
-    invoke-virtual {p1, v0}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+    move-result v2
 
-    move-result-object v7
+    if-nez v2, :cond_1
 
-    const-string v0, "file_id"
+    invoke-virtual {p1}, Lq0;->d()Z
 
-    invoke-static {v0, p1}, Lomj;->k(Ljava/lang/String;Landroid/os/Bundle;)J
+    move-result p1
 
-    move-result-wide v8
+    if-nez p1, :cond_1
 
-    const-string v0, "file_name"
+    const/4 p1, 0x1
 
-    invoke-static {v0, p1}, Lomj;->m(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/String;
+    goto :goto_0
 
-    move-result-object v10
+    :cond_1
+    const/4 p1, 0x0
 
-    const-string v0, "file_size"
+    :goto_0
+    const v2, 0x3f7d70a4    # 0.99f
 
-    invoke-static {v0, p1}, Lomj;->k(Ljava/lang/String;Landroid/os/Bundle;)J
+    cmpg-float v2, v1, v2
 
-    move-result-wide v11
+    if-gez v2, :cond_4
 
-    const-string v0, "file_url"
+    if-eqz p1, :cond_4
 
-    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object p1
 
-    if-eqz p1, :cond_0
+    invoke-virtual {p1}, Landroid/os/Looper;->isCurrentThread()Z
 
-    move-object v2, p1
+    move-result p1
 
-    check-cast v2, Landroid/net/Uri;
+    if-eqz p1, :cond_2
 
-    new-instance v1, Lr06;
+    sget-object p1, Luh7;->a:Luh7;
 
-    invoke-direct/range {v1 .. v12}, Lr06;-><init>(Landroid/net/Uri;JJLjava/lang/String;JLjava/lang/String;J)V
+    invoke-static {v0, p1}, Lci7;->m(Lci7;Lwh7;)V
 
-    return-object v1
+    iget-object p1, v0, Lci7;->N0:Ljava/lang/Object;
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    invoke-interface {p1}, Lj88;->e()Z
 
-    const-string v0, "Required value was null."
+    move-result v0
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    if-eqz v0, :cond_4
 
-    throw p1
+    invoke-interface {p1}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lv20;
+
+    const/16 v0, 0x2710
+
+    int-to-float v0, v0
+
+    mul-float/2addr v1, v0
+
+    invoke-static {v1}, Lmhj;->f(F)I
+
+    move-result v0
+
+    invoke-virtual {p1, v0}, Landroid/graphics/drawable/Drawable;->setLevel(I)Z
+
+    goto :goto_1
+
+    :cond_2
+    invoke-virtual {v0}, Landroid/view/View;->getHandler()Landroid/os/Handler;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_3
+
+    new-instance v2, Lai7;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v2, v0, v1, v3}, Lai7;-><init>(Lci7;FI)V
+
+    invoke-virtual {p1, v2}, Landroid/os/Handler;->postAtFrontOfQueue(Ljava/lang/Runnable;)Z
+
+    goto :goto_1
+
+    :cond_3
+    new-instance p1, Lai7;
+
+    const/4 v2, 0x1
+
+    invoke-direct {p1, v0, v1, v2}, Lai7;-><init>(Lci7;FI)V
+
+    invoke-virtual {v0, p1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+
+    :cond_4
+    :goto_1
+    :pswitch_1
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final e(Lsff;)V
-    .locals 5
+.method public final b(Ldk4;)V
+    .locals 2
 
-    const-string v0, "file_name"
+    iget v0, p0, Ls06;->a:I
 
-    const-string v1, "file_size"
+    packed-switch v0, :pswitch_data_0
 
-    const-string v2, "chat_id"
+    iget-object p1, p0, Ls06;->b:Ljava/lang/Object;
 
-    const-string v3, "message_id"
+    check-cast p1, Lk6e;
 
-    const-string v4, "file_id"
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    filled-new-array {v2, v3, v4, v0, v1}, [Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "file_url"
-
-    invoke-static {v1}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
-
-    move-result-object v1
-
-    const/16 v2, 0xc
-
-    const-string v3, ":dialogs/file-download-warning"
-
-    invoke-static {p1, v3, v0, v1, v2}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
-
+    :pswitch_0
     return-void
+
+    :pswitch_1
+    iget-object v0, p0, Ls06;->b:Ljava/lang/Object;
+
+    check-cast v0, Lm72;
+
+    invoke-virtual {v0}, Lm72;->r()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    check-cast p1, Lq0;
+
+    invoke-virtual {p1}, Lq0;->b()Ljava/lang/Throwable;
+
+    move-result-object p1
+
+    if-nez p1, :cond_0
+
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v1, "fail"
+
+    invoke-direct {p1, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    :cond_0
+    new-instance v1, Lc6e;
+
+    invoke-direct {v1, p1}, Lc6e;-><init>(Ljava/lang/Throwable;)V
+
+    invoke-virtual {v0, v1}, Lm72;->resumeWith(Ljava/lang/Object;)V
+
+    :cond_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final c()V
+    .locals 2
+
+    iget v0, p0, Ls06;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    :pswitch_0
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Ls06;->b:Ljava/lang/Object;
+
+    check-cast v0, Lm72;
+
+    invoke-virtual {v0}, Lm72;->r()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lm72;->h(Ljava/lang/Throwable;)Z
+
+    :cond_0
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final d(Ldk4;)V
+    .locals 3
+
+    iget v0, p0, Ls06;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Ls06;->b:Ljava/lang/Object;
+
+    check-cast v0, Lk6e;
+
+    invoke-interface {p1}, Ldk4;->h()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, v0, Lk6e;->h:Ldk4;
+
+    if-ne p1, v1, :cond_1
+
+    check-cast p1, Lq0;
+
+    iget-object p1, p1, Lq0;->a:Ljava/util/Map;
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2, p1}, Lq0;->k(Ljava/lang/Object;ZLjava/util/Map;)Z
+
+    goto :goto_0
+
+    :cond_0
+    check-cast p1, Lq0;
+
+    invoke-virtual {p1}, Lq0;->e()Z
+
+    :cond_1
+    :goto_0
+    :pswitch_0
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Ls06;->b:Ljava/lang/Object;
+
+    check-cast v0, Lm72;
+
+    invoke-virtual {v0}, Lm72;->isCancelled()Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    move-object v1, p1
+
+    check-cast v1, Lq0;
+
+    invoke-virtual {v1}, Lq0;->e()Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    invoke-interface {p1}, Ldk4;->g()Ljava/lang/Object;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Lm72;->resumeWith(Ljava/lang/Object;)V
+
+    goto :goto_2
+
+    :cond_3
+    :goto_1
+    const-string p1, "FetchBitmap"
+
+    const-string v0, "Early return in onNewResult cuz of continuation.isCancelled || !dataSource.isFinished"
+
+    invoke-static {p1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    :goto_2
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,105 +1,110 @@
-.class public final Lmh2;
+.class public final synthetic Lmh2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/io/Serializable;
-.implements Lsc3;
+.implements Luy3;
 
 
 # instance fields
-.field public final a:J
+.field public final synthetic a:Lci2;
 
-.field public final b:J
+.field public final synthetic b:Lte2;
 
 
 # direct methods
-.method public constructor <init>(JJ)V
-    .locals 4
+.method public synthetic constructor <init>(Lci2;Lte2;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lmh2;->a:J
+    iput-object p1, p0, Lmh2;->a:Lci2;
 
-    iput-wide p3, p0, Lmh2;->b:J
+    iput-object p2, p0, Lmh2;->b:Lte2;
 
-    const-wide/16 v0, -0x1
-
-    cmp-long p1, p1, v0
-
-    const-string p2, ""
-
-    const-string v2, "Chunk"
-
-    if-nez p1, :cond_0
-
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v3, "start time is -1"
-
-    invoke-direct {p1, v3}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    invoke-static {v2, p2, p1}, Lc5j;->r(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_0
-    cmp-long p1, p3, v0
-
-    if-nez p1, :cond_1
-
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string p3, "end time is -1"
-
-    invoke-direct {p1, p3}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    invoke-static {v2, p2, p1}, Lc5j;->r(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()J
-    .locals 2
-
-    iget-wide v0, p0, Lmh2;->a:J
-
-    return-wide v0
-.end method
-
-.method public final c()J
-    .locals 2
-
-    iget-wide v0, p0, Lmh2;->b:J
-
-    return-wide v0
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method public final accept(Ljava/lang/Object;)V
     .locals 4
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    check-cast p1, Lhi2;
 
-    const-string v1, "Chunk(startTime="
+    iget-object v0, p0, Lmh2;->a:Lci2;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-wide v1, p0, Lmh2;->a:J
+    invoke-virtual {p1}, Lhi2;->c()Ljava/util/Map;
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    move-result-object v1
 
-    const-string v1, ", endTime="
+    iget-object v0, v0, Lci2;->o:Lplc;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v2, v0, Lplc;->a:Lhl8;
 
-    iget-wide v1, p0, Lmh2;->b:J
+    invoke-virtual {v2}, Lqme;->s()J
 
-    const/16 v3, 0x29
+    move-result-wide v2
 
-    invoke-static {v0, v1, v2, v3}, Lpqb;->k(Ljava/lang/StringBuilder;JC)Ljava/lang/String;
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-interface {v1, v2}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget-object v1, p0, Lmh2;->b:Lte2;
+
+    invoke-virtual {v1}, Lte2;->k0()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    iget-object v0, v0, Lplc;->a:Lhl8;
+
+    invoke-virtual {v0}, Lqme;->s()J
+
+    move-result-wide v0
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
-    return-object v0
+    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/Long;
+
+    iget-object v2, p1, Lhi2;->T:Lju;
+
+    invoke-virtual {v2, v1}, Lblf;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_0
+
+    :cond_0
+    invoke-static {p1}, Lci2;->A(Lhi2;)V
+
+    const-wide/16 v0, 0x0
+
+    iput-wide v0, p1, Lhi2;->y:J
+
+    return-void
 .end method

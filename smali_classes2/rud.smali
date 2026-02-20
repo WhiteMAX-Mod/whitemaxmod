@@ -1,34 +1,101 @@
-.class public interface abstract Lrud;
+.class public final Lrud;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lsud;
+
+
+# instance fields
+.field public final a:Lcpg;
+
 
 # direct methods
-.method public static synthetic r(Lrud;JIJLo84;)Ljava/lang/Object;
-    .locals 10
+.method public constructor <init>(Lcpg;)V
+    .locals 0
 
-    const/4 v4, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-wide v7, 0x7fffffffffffffffL
+    iput-object p1, p0, Lrud;->a:Lcpg;
 
-    move-object v0, p0
-
-    move-wide v1, p1
-
-    move v3, p3
-
-    move-wide v5, p4
-
-    move-object/from16 v9, p6
-
-    invoke-interface/range {v0 .. v9}, Lrud;->p(JIIJJLo84;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method
 
 
 # virtual methods
-.method public abstract p(JIIJJLo84;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    if-ne p0, p1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    instance-of v0, p1, Lrud;
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lrud;
+
+    iget-object v0, p0, Lrud;->a:Lcpg;
+
+    iget-object p1, p1, Lrud;->a:Lcpg;
+
+    invoke-virtual {v0, p1}, Lcpg;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_2
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lrud;->a:Lcpg;
+
+    iget v0, v0, Lcpg;->c:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ShowSendScheduledMenu(actionText="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lrud;->a:Lcpg;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -6,6 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector$IdleStateProviderCast;,
         Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector$IdleStateProvider;,
         Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector$OneLogFile;,
         Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector$LooperProvider;
@@ -65,6 +66,18 @@
     .end annotation
 .end field
 
+.field private final dbCacheEnabled:Ljava/util/concurrent/atomic/AtomicReference;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/concurrent/atomic/AtomicReference<",
+            "Ljava/lang/Boolean;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private final dbHelper:Lru/ok/android/externcalls/analytics/internal/storage/DatabaseHelper;
+
 .field private final uploadLock:Ljava/util/concurrent/locks/Lock;
 
 .field private final uploader:Ljava/util/concurrent/atomic/AtomicReference;
@@ -114,7 +127,7 @@
 .end method
 
 .method private constructor <init>(Landroid/content/Context;Lru/ok/android/externcalls/analytics/internal/event/EventChannel;)V
-    .locals 1
+    .locals 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -123,6 +136,12 @@
     invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
     iput-object v0, p0, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->compressionEnabled:Ljava/util/concurrent/atomic/AtomicReference;
+
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+
+    iput-object v0, p0, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->dbCacheEnabled:Ljava/util/concurrent/atomic/AtomicReference;
 
     new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
 
@@ -140,11 +159,39 @@
 
     iput-object p2, p0, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->channel:Lru/ok/android/externcalls/analytics/internal/event/EventChannel;
 
-    new-instance p1, Ljava/util/concurrent/locks/ReentrantLock;
+    new-instance v0, Ljava/util/concurrent/locks/ReentrantLock;
 
-    invoke-direct {p1}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
+    invoke-direct {v0}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->uploadLock:Ljava/util/concurrent/locks/Lock;
+    iput-object v0, p0, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->uploadLock:Ljava/util/concurrent/locks/Lock;
+
+    invoke-direct {p0}, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->isDbCacheEnabled()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    new-instance v0, Lru/ok/android/externcalls/analytics/internal/storage/DatabaseHelper;
+
+    invoke-direct {p0}, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->isContentCompressionEnabled()Z
+
+    move-result v1
+
+    sget-object v2, Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;->INSTANCE:Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;
+
+    invoke-virtual {v2}, Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;->getLogger()Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;
+
+    move-result-object v2
+
+    invoke-direct {v0, p1, v1, p2, v2}, Lru/ok/android/externcalls/analytics/internal/storage/DatabaseHelper;-><init>(Landroid/content/Context;ZLru/ok/android/externcalls/analytics/internal/event/EventChannel;Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;)V
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    iput-object v0, p0, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->dbHelper:Lru/ok/android/externcalls/analytics/internal/storage/DatabaseHelper;
 
     return-void
 .end method
@@ -242,7 +289,7 @@
 
     sget-object v0, Lru/ok/android/commons/app/ApplicationProvider;->a:Landroid/app/Application;
 
-    invoke-static {}, Lm5j;->d()Landroid/app/Application;
+    invoke-static {}, Lhej;->d()Landroid/app/Application;
 
     move-result-object v0
 
@@ -307,7 +354,7 @@
 .end method
 
 .method private getUploader()Lru/ok/android/externcalls/analytics/internal/upload/Uploader;
-    .locals 5
+    .locals 7
 
     iget-object v0, p0, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->uploader:Ljava/util/concurrent/atomic/AtomicReference;
 
@@ -322,23 +369,25 @@
     return-object v0
 
     :cond_0
-    sget-object v0, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->looperProvider:Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector$LooperProvider;
+    sget-object v1, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->looperProvider:Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector$LooperProvider;
 
-    new-instance v1, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector$OneLogFile;
+    new-instance v2, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector$OneLogFile;
 
-    const-string v2, "upload"
+    const-string v0, "upload"
 
-    invoke-direct {v1, p0, v2}, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector$OneLogFile;-><init>(Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;Ljava/lang/String;)V
+    invoke-direct {v2, p0, v0}, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector$OneLogFile;-><init>(Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;Ljava/lang/String;)V
 
-    iget-object v2, p0, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->uploadLock:Ljava/util/concurrent/locks/Lock;
+    iget-object v3, p0, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->uploadLock:Ljava/util/concurrent/locks/Lock;
 
-    iget-object v3, p0, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->channel:Lru/ok/android/externcalls/analytics/internal/event/EventChannel;
+    iget-object v4, p0, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->channel:Lru/ok/android/externcalls/analytics/internal/event/EventChannel;
 
     invoke-direct {p0}, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->isContentCompressionEnabled()Z
 
-    move-result v4
+    move-result v5
 
-    invoke-static {v0, v1, v2, v3, v4}, Lru/ok/android/externcalls/analytics/internal/upload/Uploader;->create(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljava/util/concurrent/locks/Lock;Lru/ok/android/externcalls/analytics/internal/event/EventChannel;Z)Lru/ok/android/externcalls/analytics/internal/upload/Uploader;
+    iget-object v6, p0, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->dbHelper:Lru/ok/android/externcalls/analytics/internal/storage/DatabaseHelper;
+
+    invoke-static/range {v1 .. v6}, Lru/ok/android/externcalls/analytics/internal/upload/Uploader;->create(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljava/util/concurrent/locks/Lock;Lru/ok/android/externcalls/analytics/internal/event/EventChannel;ZLru/ok/android/externcalls/analytics/internal/storage/DatabaseHelper;)Lru/ok/android/externcalls/analytics/internal/upload/Uploader;
 
     move-result-object v0
 
@@ -374,7 +423,7 @@
 .end method
 
 .method private getWorker()Lru/ok/android/externcalls/analytics/internal/upload/Worker;
-    .locals 7
+    .locals 9
 
     iget-object v0, p0, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->worker:Ljava/util/concurrent/atomic/AtomicReference;
 
@@ -389,27 +438,31 @@
     return-object v0
 
     :cond_0
-    new-instance v3, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector$OneLogFile;
+    new-instance v4, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector$OneLogFile;
 
     const-string v0, "append"
 
-    invoke-direct {v3, p0, v0}, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector$OneLogFile;-><init>(Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;Ljava/lang/String;)V
+    invoke-direct {v4, p0, v0}, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector$OneLogFile;-><init>(Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;Ljava/lang/String;)V
 
-    new-instance v4, Ljava/util/concurrent/locks/ReentrantLock;
+    new-instance v5, Ljava/util/concurrent/locks/ReentrantLock;
 
-    invoke-direct {v4}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
-
-    new-instance v1, Lru/ok/android/externcalls/analytics/internal/upload/Worker;
-
-    sget-object v2, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->looperProvider:Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector$LooperProvider;
-
-    iget-object v5, p0, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->channel:Lru/ok/android/externcalls/analytics/internal/event/EventChannel;
+    invoke-direct {v5}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
 
     invoke-direct {p0}, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->isContentCompressionEnabled()Z
 
-    move-result v6
+    move-result v8
 
-    invoke-direct/range {v1 .. v6}, Lru/ok/android/externcalls/analytics/internal/upload/Worker;-><init>(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljava/util/concurrent/locks/Lock;Lru/ok/android/externcalls/analytics/internal/event/EventChannel;Z)V
+    new-instance v1, Lru/ok/android/externcalls/analytics/internal/upload/Worker;
+
+    iget-object v2, p0, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->context:Landroid/content/Context;
+
+    sget-object v3, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->looperProvider:Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector$LooperProvider;
+
+    iget-object v6, p0, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->channel:Lru/ok/android/externcalls/analytics/internal/event/EventChannel;
+
+    iget-object v7, p0, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->dbHelper:Lru/ok/android/externcalls/analytics/internal/storage/DatabaseHelper;
+
+    invoke-direct/range {v1 .. v8}, Lru/ok/android/externcalls/analytics/internal/upload/Worker;-><init>(Landroid/content/Context;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljava/util/concurrent/locks/Lock;Lru/ok/android/externcalls/analytics/internal/event/EventChannel;Lru/ok/android/externcalls/analytics/internal/storage/DatabaseHelper;Z)V
 
     iget-object v0, p0, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->worker:Ljava/util/concurrent/atomic/AtomicReference;
 
@@ -527,6 +580,91 @@
     return v0
 .end method
 
+.method private isDbCacheEnabled()Z
+    .locals 4
+
+    iget-object v0, p0, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->dbCacheEnabled:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Boolean;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    return v0
+
+    :cond_0
+    sget-object v0, Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;->INSTANCE:Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;
+
+    invoke-virtual {v0}, Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;->getConfig()Lru/ok/android/externcalls/analytics/config/CallAnalyticsConfig;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Lru/ok/android/externcalls/analytics/config/CallAnalyticsConfig;->getUpload()Lru/ok/android/externcalls/analytics/config/UploadConfig;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lru/ok/android/externcalls/analytics/config/UploadConfig;->getUseDbCache()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    :goto_0
+    iget-object v1, p0, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->dbCacheEnabled:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v2
+
+    :cond_2
+    const/4 v3, 0x0
+
+    invoke-virtual {v1, v3, v2}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_3
+
+    return v0
+
+    :cond_3
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_2
+
+    iget-object v0, p0, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->dbCacheEnabled:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    return v0
+.end method
+
 .method public static setIdleStateProvider(Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector$IdleStateProvider;)V
     .locals 3
 
@@ -537,11 +675,9 @@
     goto :goto_0
 
     :cond_0
-    new-instance v0, Lts4;
+    new-instance v0, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector$IdleStateProviderCast;
 
-    const/4 v1, 0x7
-
-    invoke-direct {v0, v1, p0}, Lts4;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, p0}, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector$IdleStateProviderCast;-><init>(Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector$IdleStateProvider;)V
 
     move-object p0, v0
 
@@ -703,11 +839,11 @@
 
     invoke-static {v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v2, Lts4;
+    new-instance v2, Lmk5;
 
-    const/16 v3, 0x8
+    const/4 v3, 0x1
 
-    invoke-direct {v2, v3, v1}, Lts4;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v2, v3, v1}, Lmk5;-><init>(ILjava/lang/Object;)V
 
     invoke-virtual {v0, v2}, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->grab(Ljavax/inject/Provider;)V
     :try_end_0

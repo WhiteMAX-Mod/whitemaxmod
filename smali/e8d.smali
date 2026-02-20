@@ -1,70 +1,124 @@
-.class public abstract Le8d;
+.class public final Le8d;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
-# static fields
-.field public static oneme_chatmedia_viewer_bulk_saving_all:I = 0x7f0a05fe
+# instance fields
+.field public final a:Ly59;
 
-.field public static oneme_chatmedia_viewer_bulk_saving_only_this:I = 0x7f0a05ff
+.field public final b:J
 
-.field public static oneme_chatmedia_viewer_content_level_item_view_type:I = 0x7f0a0600
+.field public final c:J
 
-.field public static oneme_chatmedia_viewer_content_level_stub_view:I = 0x7f0a0601
 
-.field public static oneme_chatmedia_viewer_info_panel_author_view:I = 0x7f0a0602
+# direct methods
+.method public constructor <init>(Ly59;JJ)V
+    .locals 0
 
-.field public static oneme_chatmedia_viewer_info_panel_date_view:I = 0x7f0a0603
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static oneme_chatmedia_viewer_info_panel_forward_message_view:I = 0x7f0a0604
+    iput-object p1, p0, Le8d;->a:Ly59;
 
-.field public static oneme_chatmedia_viewer_info_panel_view:I = 0x7f0a0605
+    iput-wide p2, p0, Le8d;->b:J
 
-.field public static oneme_chatmedia_viewer_info_panel_view_caption_text_container:I = 0x7f0a0606
+    iput-wide p4, p0, Le8d;->c:J
 
-.field public static oneme_chatmedia_viewer_pager:I = 0x7f0a0607
+    return-void
+.end method
 
-.field public static oneme_chatmedia_viewer_photo_gif_view:I = 0x7f0a0608
 
-.field public static oneme_chatmedia_viewer_photo_item_view_type:I = 0x7f0a0609
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-.field public static oneme_chatmedia_viewer_photo_view:I = 0x7f0a060a
+    const/4 v0, 0x1
 
-.field public static oneme_chatmedia_viewer_toolbar:I = 0x7f0a060b
+    if-ne p0, p1, :cond_0
 
-.field public static oneme_chatmedia_viewer_toolbar_action_forward_attach:I = 0x7f0a060c
+    return v0
 
-.field public static oneme_chatmedia_viewer_toolbar_action_goto_message:I = 0x7f0a060d
+    :cond_0
+    instance-of v1, p1, Le8d;
 
-.field public static oneme_chatmedia_viewer_toolbar_action_save_gallery:I = 0x7f0a060e
+    const/4 v2, 0x0
 
-.field public static oneme_chatmedia_viewer_toolbar_action_share:I = 0x7f0a060f
+    if-nez v1, :cond_1
 
-.field public static oneme_chatmedia_viewer_video_item_view_type:I = 0x7f0a0610
+    return v2
 
-.field public static oneme_chatmedia_viewer_video_preview_view:I = 0x7f0a0611
+    :cond_1
+    check-cast p1, Le8d;
 
-.field public static oneme_chatmedia_viewer_video_view:I = 0x7f0a0612
+    iget-wide v3, p0, Le8d;->b:J
 
-.field public static oneme_chatmedia_viewer_video_zoom_view:I = 0x7f0a0613
+    iget-wide v5, p1, Le8d;->b:J
 
-.field public static video_container:I = 0x7f0a0c3c
+    cmp-long v1, v3, v5
 
-.field public static video_container_id:I = 0x7f0a0c3d
+    if-nez v1, :cond_2
 
-.field public static video_error:I = 0x7f0a0c3f
+    iget-object v1, p0, Le8d;->a:Ly59;
 
-.field public static video_frame_id:I = 0x7f0a0c40
+    iget-object v3, p1, Le8d;->a:Ly59;
 
-.field public static video_go_to_message:I = 0x7f0a0c42
+    invoke-virtual {v1, v3}, Ly59;->equals(Ljava/lang/Object;)Z
 
-.field public static video_progressbar:I = 0x7f0a0c45
+    move-result v1
 
-.field public static video_progressbar_buffering:I = 0x7f0a0c46
+    if-eqz v1, :cond_2
 
-.field public static video_share:I = 0x7f0a0c47
+    iget-wide v3, p0, Le8d;->c:J
 
-.field public static video_toolbar_id:I = 0x7f0a0c48
+    iget-wide v5, p1, Le8d;->c:J
 
-.field public static video_webview_container:I = 0x7f0a0c49
+    cmp-long p1, v3, v5
 
-.field public static video_webview_id:I = 0x7f0a0c4a
+    if-nez p1, :cond_2
+
+    return v0
+
+    :cond_2
+    return v2
+.end method
+
+.method public final hashCode()I
+    .locals 5
+
+    iget-wide v0, p0, Le8d;->b:J
+
+    const/16 v2, 0x20
+
+    ushr-long v3, v0, v2
+
+    xor-long/2addr v0, v3
+
+    long-to-int v0, v0
+
+    const/16 v1, 0xd9
+
+    add-int/2addr v1, v0
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v0, p0, Le8d;->a:Ly59;
+
+    invoke-virtual {v0}, Ly59;->hashCode()I
+
+    move-result v0
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-wide v3, p0, Le8d;->c:J
+
+    ushr-long v1, v3, v2
+
+    xor-long/2addr v1, v3
+
+    long-to-int v1, v1
+
+    add-int/2addr v0, v1
+
+    return v0
+.end method

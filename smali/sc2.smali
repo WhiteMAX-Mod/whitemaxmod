@@ -1,61 +1,37 @@
 .class public final Lsc2;
-.super Lshc;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:[C
+# static fields
+.field public static final synthetic a:Lsc2;
 
-.field public b:I
+.field public static final b:I
 
 
-# virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 2
+# direct methods
+.method static constructor <clinit>()V
+    .locals 4
 
-    iget-object v0, p0, Lsc2;->a:[C
+    new-instance v0, Lsc2;
 
-    iget v1, p0, Lsc2;->b:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([CI)[C
+    sput-object v0, Lsc2;->a:Lsc2;
 
-    move-result-object v0
+    const/4 v0, 0x1
 
-    return-object v0
-.end method
+    const v1, 0x7ffffffe
 
-.method public final b(I)V
-    .locals 2
+    const-string v2, "kotlinx.coroutines.channels.defaultBuffer"
 
-    iget-object v0, p0, Lsc2;->a:[C
+    const/16 v3, 0x40
 
-    array-length v1, v0
+    invoke-static {v2, v3, v0, v1}, Lkotlinx/coroutines/internal/SystemPropsKt;->systemProp(Ljava/lang/String;III)I
 
-    if-ge v1, p1, :cond_1
+    move-result v0
 
-    array-length v1, v0
+    sput v0, Lsc2;->b:I
 
-    mul-int/lit8 v1, v1, 0x2
-
-    if-ge p1, v1, :cond_0
-
-    move p1, v1
-
-    :cond_0
-    invoke-static {v0, p1}, Ljava/util/Arrays;->copyOf([CI)[C
-
-    move-result-object p1
-
-    iput-object p1, p0, Lsc2;->a:[C
-
-    :cond_1
     return-void
-.end method
-
-.method public final d()I
-    .locals 1
-
-    iget v0, p0, Lsc2;->b:I
-
-    return v0
 .end method

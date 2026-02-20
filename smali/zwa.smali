@@ -1,109 +1,53 @@
 .class public final Lzwa;
-.super Ljava/lang/Object;
+.super Lda4;
 .source "SourceFile"
-
-# interfaces
-.implements La38;
 
 
 # instance fields
-.field public final a:Ljava/lang/Object;
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lone/me/android/notifications/NotificationsImagesProvider;
+
+.field public Z:I
+
+.field public d:Lnd4;
+
+.field public o:Lo01;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public constructor <init>(Lone/me/android/notifications/NotificationsImagesProvider;Lda4;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lzwa;->Y:Lone/me/android/notifications/NotificationsImagesProvider;
 
-    new-instance v0, Lnn9;
-
-    invoke-direct {v0, p0}, Lnn9;-><init>(Lzwa;)V
-
-    const/4 v1, 0x2
-
-    invoke-static {v1, v0}, Le8;->b(ILlq6;)Lo58;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lzwa;->a:Ljava/lang/Object;
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lkotlinx/serialization/json/internal/b;Ljava/lang/Object;)V
-    .locals 0
-
-    invoke-virtual {p0}, Lzwa;->d()Lxpe;
-
-    move-result-object p2
-
-    invoke-virtual {p1, p2}, Lkotlinx/serialization/json/internal/b;->a(Lxpe;)Lkotlinx/serialization/json/internal/b;
-
-    move-result-object p1
-
-    invoke-virtual {p0}, Lzwa;->d()Lxpe;
-
-    invoke-virtual {p1}, Lkotlinx/serialization/json/internal/b;->t()V
-
-    return-void
-.end method
-
-.method public final b(Lkl4;)Ljava/lang/Object;
-    .locals 3
-
-    invoke-virtual {p0}, Lzwa;->d()Lxpe;
-
-    move-result-object v0
-
-    invoke-interface {p1, v0}, Lkl4;->r(Lxpe;)Lqp3;
-
-    move-result-object p1
-
-    invoke-virtual {p0}, Lzwa;->d()Lxpe;
-
-    move-result-object v1
-
-    invoke-interface {p1, v1}, Lqp3;->e(Lxpe;)I
-
-    move-result v1
-
-    const/4 v2, -0x1
-
-    if-ne v1, v2, :cond_0
-
-    invoke-interface {p1, v0}, Lqp3;->m(Lxpe;)V
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
-
-    :cond_0
-    new-instance p1, Lkotlinx/serialization/SerializationException;
-
-    const-string v0, "Unexpected index "
-
-    invoke-static {v1, v0}, Lj27;->g(ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final d()Lxpe;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Lzwa;->a:Ljava/lang/Object;
+    iput-object p1, p0, Lzwa;->X:Ljava/lang/Object;
 
-    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+    iget p1, p0, Lzwa;->Z:I
 
-    move-result-object v0
+    const/high16 v0, -0x80000000
 
-    check-cast v0, Lxpe;
+    or-int/2addr p1, v0
 
-    return-object v0
+    iput p1, p0, Lzwa;->Z:I
+
+    iget-object p1, p0, Lzwa;->Y:Lone/me/android/notifications/NotificationsImagesProvider;
+
+    const/4 v0, 0x0
+
+    invoke-static {p1, v0, v0, p0}, Lone/me/android/notifications/NotificationsImagesProvider;->a(Lone/me/android/notifications/NotificationsImagesProvider;Lnd4;Lelf;Lda4;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

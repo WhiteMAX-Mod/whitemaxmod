@@ -1,95 +1,48 @@
 .class public final Luw7;
-.super Ljava/lang/Object;
-.source "SourceFile"
+.super Lda4;
 
 
 # instance fields
-.field public final a:Ljava/net/InetAddress;
+.field public final synthetic X:Lfb6;
 
-.field public volatile b:I
+.field public synthetic d:Ljava/lang/Object;
 
-.field public volatile c:I
-
-.field public volatile d:I
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/net/InetAddress;)V
+.method public constructor <init>(Lfb6;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Luw7;->X:Lfb6;
 
-    iput-object p1, p0, Luw7;->a:Ljava/net/InetAddress;
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 7
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-object v0, p0, Luw7;->a:Ljava/net/InetAddress;
+    iput-object p1, p0, Luw7;->d:Ljava/lang/Object;
 
-    iget v1, p0, Luw7;->b:I
+    iget p1, p0, Luw7;->o:I
 
-    iget v2, p0, Luw7;->d:I
+    const/high16 v0, -0x80000000
 
-    iget v3, p0, Luw7;->c:I
+    or-int/2addr p1, v0
 
-    iget v4, p0, Luw7;->c:I
+    iput p1, p0, Luw7;->o:I
 
-    if-eqz v4, :cond_0
+    iget-object p1, p0, Luw7;->X:Lfb6;
 
-    iget v4, p0, Luw7;->d:I
+    const/4 v0, 0x0
 
-    int-to-float v4, v4
+    invoke-virtual {p1, v0, p0}, Lfb6;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    iget v5, p0, Luw7;->c:I
+    move-result-object p1
 
-    int-to-float v5, v5
-
-    div-float/2addr v4, v5
-
-    goto :goto_0
-
-    :cond_0
-    const/high16 v4, 0x3f800000    # 1.0f
-
-    :goto_0
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    const-string v6, "Ip("
-
-    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, "|uc="
-
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v0, "|sc="
-
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, "|tc="
-
-    const-string v1, "|sr="
-
-    invoke-static {v5, v2, v0, v3, v1}, Lxi4;->q(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v0, ")"
-
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

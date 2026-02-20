@@ -1,113 +1,259 @@
 .class public final Lss;
-.super Lni3;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lnlb;
 
 
 # instance fields
-.field public final b:Lqs;
+.field public final synthetic a:Landroid/widget/TextView;
+
+.field public final synthetic b:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
 
 
 # direct methods
-.method public constructor <init>(La38;)V
-    .locals 1
+.method public constructor <init>(Landroid/widget/TextView;Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;)V
+    .locals 0
 
-    invoke-direct {p0, p1}, Lni3;-><init>(La38;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lqs;
+    iput-object p1, p0, Lss;->a:Landroid/widget/TextView;
 
-    invoke-interface {p1}, La38;->d()Lxpe;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Lvd8;-><init>(Lxpe;)V
-
-    iput-object v0, p0, Lss;->b:Lqs;
+    iput-object p2, p0, Lss;->b:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d()Lxpe;
-    .locals 1
+.method public final a(Lolb;FZ)V
+    .locals 9
 
-    iget-object v0, p0, Lss;->b:Lqs;
+    iget-object p1, p0, Lss;->b:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
 
-    return-object v0
-.end method
+    iget-object p3, p1, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->Y:Lj88;
 
-.method public final e()Ljava/lang/Object;
-    .locals 1
+    const/high16 v0, 0x3f800000    # 1.0f
 
-    new-instance v0, Ljava/util/ArrayList;
+    cmpg-float v0, p2, v0
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    const/4 v1, 0x0
 
-    return-object v0
-.end method
+    if-nez v0, :cond_0
 
-.method public final f(Ljava/lang/Object;)I
-    .locals 0
+    const/16 v0, 0x8
 
-    check-cast p1, Ljava/util/ArrayList;
+    goto :goto_0
 
-    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
+    :cond_0
+    move v0, v1
 
-    move-result p1
+    :goto_0
+    iget-object v2, p0, Lss;->a:Landroid/widget/TextView;
 
-    return p1
-.end method
+    invoke-virtual {v2, v0}, Landroid/view/View;->setVisibility(I)V
 
-.method public final g(Ljava/lang/Object;)Ljava/util/Iterator;
-    .locals 0
+    sget-object v0, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->s0:[Lv58;
 
-    check-cast p1, Ljava/util/Collection;
-
-    invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+    invoke-virtual {p1}, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->H0()Llt;
 
     move-result-object p1
 
-    return-object p1
-.end method
+    invoke-interface {p3}, Lj88;->getValue()Ljava/lang/Object;
 
-.method public final h(Ljava/lang/Object;)I
-    .locals 0
+    move-result-object v0
 
-    check-cast p1, Ljava/util/Collection;
+    check-cast v0, Lnih;
 
-    invoke-interface {p1}, Ljava/util/Collection;->size()I
+    const/4 v2, 0x1
 
-    move-result p1
+    iget-object v0, v0, Lx3;->g:Lm88;
 
-    return p1
-.end method
+    const-string v3, "app.extra.text.size.mode"
 
-.method public final k(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    invoke-virtual {v0, v3, v2}, Lm88;->getInt(Ljava/lang/String;I)I
 
-    new-instance p1, Ljava/util/ArrayList;
+    move-result v0
 
-    const/4 v0, 0x0
+    iget-object v2, p1, Llt;->B0:Lhxf;
 
-    invoke-direct {p1, v0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+    invoke-virtual {v2}, Lhxf;->getValue()Ljava/lang/Object;
 
-    return-object p1
-.end method
+    move-result-object v2
 
-.method public final l(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    check-cast v2, Lct;
 
-    check-cast p1, Ljava/util/ArrayList;
+    if-nez v2, :cond_1
 
-    return-object p1
-.end method
+    goto/16 :goto_6
 
-.method public final m(Ljava/lang/Object;ILjava/lang/Object;)V
-    .locals 0
+    :cond_1
+    iget-object v4, v2, Lct;->b:Ljava/util/List;
 
-    check-cast p1, Ljava/util/ArrayList;
+    invoke-interface {v4}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    invoke-virtual {p1, p2, p3}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
+    move-result-object v4
+
+    :cond_2
+    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v5
+
+    const/4 v6, 0x0
+
+    if-eqz v5, :cond_3
+
+    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v5
+
+    move-object v7, v5
+
+    check-cast v7, Lns;
+
+    iget-object v7, v7, Lns;->b:Ljava/lang/Boolean;
+
+    sget-object v8, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    invoke-virtual {v7, v8}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_2
+
+    goto :goto_1
+
+    :cond_3
+    move-object v5, v6
+
+    :goto_1
+    check-cast v5, Lns;
+
+    if-eqz v5, :cond_4
+
+    iget-object v4, v5, Lns;->a:Lls;
+
+    iget v4, v4, Lls;->a:I
+
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    goto :goto_2
+
+    :cond_4
+    move-object v4, v6
+
+    :goto_2
+    iget-object v2, v2, Lct;->a:Ljava/util/List;
+
+    invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :cond_5
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_6
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v5
+
+    move-object v7, v5
+
+    check-cast v7, Lvqg;
+
+    iget-boolean v7, v7, Lvqg;->a:Z
+
+    if-eqz v7, :cond_5
+
+    goto :goto_3
+
+    :cond_6
+    move-object v5, v6
+
+    :goto_3
+    check-cast v5, Lvqg;
+
+    if-eqz v5, :cond_7
+
+    invoke-virtual {v5}, Lvqg;->n()Ljava/lang/String;
+
+    move-result-object v2
+
+    goto :goto_4
+
+    :cond_7
+    move-object v2, v6
+
+    :goto_4
+    sget-object v5, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    invoke-static {v2, v4, v6, v5}, Llt;->x(Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Boolean;)Ljava/lang/String;
+
+    move-result-object v2
+
+    if-nez v2, :cond_8
+
+    goto :goto_5
+
+    :cond_8
+    const-string v4, "TEXT_SIZE"
+
+    invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v4, v0, v2}, Llt;->t(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lpu7;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lpu7;->d()Lvm8;
+
+    move-result-object v6
+
+    :goto_5
+    if-nez v6, :cond_9
+
+    goto :goto_6
+
+    :cond_9
+    invoke-virtual {p1}, Llt;->v()Lte;
+
+    move-result-object p1
+
+    invoke-interface {p1, v6}, Lte;->b(Lvm8;)V
+
+    :goto_6
+    invoke-interface {p3}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lnih;
+
+    invoke-static {p2}, Lmhj;->f(F)I
+
+    move-result p2
+
+    const/4 p3, 0x5
+
+    invoke-static {p2, v1, p3}, Liuj;->d(III)I
+
+    move-result p2
+
+    invoke-virtual {p1, p2, v3}, Lx3;->g(ILjava/lang/String;)V
+
+    iget-object p1, p1, Lnih;->i:Lso0;
+
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Lso0;->b(Ljava/lang/Object;)V
 
     return-void
 .end method

@@ -1,57 +1,88 @@
-.class public final Lz26;
-.super Lo84;
+.class public final synthetic Lz26;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lis6;
 
 
 # instance fields
-.field public X:Ljava/nio/ByteBuffer;
+.field public final synthetic a:I
 
-.field public Y:Ljava/lang/StringBuilder;
-
-.field public synthetic Z:Ljava/lang/Object;
-
-.field public d:Ldng;
-
-.field public o:Lr6h;
-
-.field public final synthetic t0:Ld36;
-
-.field public u0:I
+.field public final synthetic b:Lc36;
 
 
 # direct methods
-.method public constructor <init>(Ld36;Lo84;)V
+.method public synthetic constructor <init>(Lc36;I)V
     .locals 0
 
-    iput-object p1, p0, Lz26;->t0:Ld36;
+    iput p2, p0, Lz26;->a:I
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lz26;->b:Lc36;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 2
 
-    iput-object p1, p0, Lz26;->Z:Ljava/lang/Object;
+    iget v0, p0, Lz26;->a:I
 
-    iget p1, p0, Lz26;->u0:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-object v0, p0, Lz26;->b:Lc36;
 
-    or-int/2addr p1, v0
+    invoke-static {v0}, Lc36;->C(Lc36;)Landroid/graphics/drawable/Drawable;
 
-    iput p1, p0, Lz26;->u0:I
+    move-result-object v0
 
-    iget-object p1, p0, Lz26;->t0:Ld36;
+    return-object v0
 
-    const/4 v0, 0x0
+    :pswitch_0
+    sget v0, Lice;->N1:I
 
-    invoke-virtual {p1, v0, v0, p0}, Ld36;->e(Ldng;Lr6h;Lo84;)Ljava/lang/Object;
+    iget-object v1, p0, Lz26;->b:Lc36;
 
-    move-result-object p1
+    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    return-object p1
+    move-result-object v1
+
+    invoke-static {v1, v0}, Lh94;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_1
+    sget v0, Lice;->B0:I
+
+    iget-object v1, p0, Lz26;->b:Lc36;
+
+    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-static {v1, v0}, Lh94;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

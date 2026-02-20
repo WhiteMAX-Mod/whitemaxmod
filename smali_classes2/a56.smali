@@ -1,208 +1,169 @@
-.class public abstract La56;
-.super Ljava/lang/Object;
+.class public final La56;
+.super Lpdg;
 .source "SourceFile"
 
 # interfaces
-.implements Ly46;
+.implements Lys6;
 
 
 # instance fields
-.field public final a:Lxkg;
+.field public final synthetic X:Lc56;
 
-.field public final b:Lia1;
-
-.field public final c:Lahd;
-
-.field public d:Z
-
-.field public e:I
-
-.field public f:Ljava/lang/Long;
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Lxkg;Lia1;Lahd;)V
+.method public constructor <init>(Lc56;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, La56;->X:Lc56;
 
-    iput-object p1, p0, La56;->a:Lxkg;
+    const/4 p1, 0x2
 
-    iput-object p2, p0, La56;->b:Lia1;
-
-    iput-object p3, p0, La56;->c:Lahd;
-
-    const/4 p1, 0x1
-
-    iput p1, p0, La56;->e:I
+    invoke-direct {p0, p1, p2}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-boolean v0, p0, La56;->d:Z
+    check-cast p1, Lnd4;
 
-    return v0
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, La56;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, La56;
+
+    sget-object p2, Lmah;->a:Lmah;
+
+    invoke-virtual {p1, p2}, La56;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public d(Ltqf;)V
-    .locals 4
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    iget-boolean p1, p0, La56;->d:Z
+    new-instance p1, La56;
 
-    if-eqz p1, :cond_0
+    iget-object v0, p0, La56;->X:Lc56;
 
-    return-void
+    invoke-direct {p1, v0, p2}, La56;-><init>(Lc56;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
+
+    iget v0, p0, La56;->o:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    goto :goto_0
 
     :cond_0
-    iget-object p1, p0, La56;->f:Ljava/lang/Long;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    if-nez p1, :cond_1
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    invoke-virtual {p0}, La56;->g()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v0, "Data is received but accept event wasn\'t triggered"
-
-    iget-object v1, p0, La56;->c:Lahd;
-
-    invoke-interface {v1, p1, v0}, Lahd;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    :cond_1
-    iget-object v0, p0, La56;->a:Lxkg;
-
-    invoke-interface {v0}, Lxkg;->getMsSinceBoot()J
-
-    move-result-wide v0
-
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v2
-
-    sub-long/2addr v0, v2
-
-    invoke-static {v0, v1}, Lru/ok/android/externcalls/analytics/events/EventItemValueKt;->toEventItemValue(J)Lru/ok/android/externcalls/analytics/events/EventItemValue;
-
-    move-result-object p1
-
-    new-instance v0, Lru/ok/android/externcalls/analytics/events/EventItemsMap;
-
-    invoke-virtual {p0}, La56;->f()I
-
-    move-result v1
-
-    packed-switch v1, :pswitch_data_0
-
-    const/4 p1, 0x0
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw p1
 
-    :pswitch_0
-    const-string v1, "direct_join"
+    :cond_1
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    goto :goto_0
+    iget-object p1, p0, La56;->X:Lc56;
 
-    :pswitch_1
-    const-string v1, "server_change_topology"
+    iget-object p1, p1, Lc56;->a:Lbgg;
 
-    goto :goto_0
+    invoke-virtual {p1}, Lbgg;->getValue()Ljava/lang/Object;
 
-    :pswitch_2
-    const-string v1, "server_join_server"
+    move-result-object p1
 
-    goto :goto_0
+    check-cast p1, Ld56;
 
-    :pswitch_3
-    const-string v1, "server_incoming"
+    iput v1, p0, La56;->o:I
 
-    goto :goto_0
+    invoke-virtual {p1, p0}, Ld56;->c(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    :pswitch_4
-    const-string v1, "direct_incoming"
+    move-result-object p1
 
-    goto :goto_0
+    sget-object v0, Lod4;->a:Lod4;
 
-    :pswitch_5
-    const-string v1, "direct_outgoing"
+    if-ne p1, v0, :cond_2
 
-    goto :goto_0
+    return-object v0
 
-    :pswitch_6
-    const-string v1, ""
-
+    :cond_2
     :goto_0
-    invoke-static {v1}, Lru/ok/android/externcalls/analytics/events/EventItemValueKt;->toEventItemValue(Ljava/lang/String;)Lru/ok/android/externcalls/analytics/events/EventItemValue;
+    check-cast p1, Lx06;
 
-    move-result-object v1
+    invoke-virtual {p1}, Lx06;->a()Ljava/util/ArrayList;
 
-    const-string v2, "call_type"
+    move-result-object p1
 
-    invoke-static {v2, v1}, Ljava/util/Collections;->singletonMap(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map;
+    if-eqz p1, :cond_3
 
-    move-result-object v1
+    invoke-static {p1}, Lek3;->F(Ljava/util/List;)Ljava/lang/Object;
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/analytics/events/EventItemsMap;-><init>(Ljava/util/Map;)V
+    move-result-object p1
 
-    const-string v1, "first_media_received"
+    check-cast p1, Lv06;
 
-    iget-object v2, p0, La56;->b:Lia1;
+    goto :goto_1
 
-    check-cast v2, Lja1;
+    :cond_3
+    const/4 p1, 0x0
 
-    invoke-virtual {v2, v1, p1, v0}, Lja1;->c(Ljava/lang/String;Lru/ok/android/externcalls/analytics/events/EventItemValue;Lru/ok/android/externcalls/analytics/events/EventItemsMap;)V
+    :goto_1
+    if-eqz p1, :cond_4
 
-    const/4 p1, 0x1
+    new-instance v0, Lu06;
 
-    iput-boolean p1, p0, La56;->d:Z
+    iget-object v5, p1, Lv06;->b:Ljava/lang/String;
 
-    return-void
+    iget v2, p1, Lv06;->c:I
 
-    nop
+    iget v3, p1, Lv06;->d:I
 
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
+    iget v4, p1, Lv06;->e:I
 
-.method public f()I
-    .locals 1
+    const/4 v1, 0x3
 
-    iget v0, p0, La56;->e:I
+    invoke-direct/range {v0 .. v5}, Lu06;-><init>(IIIILjava/lang/String;)V
 
-    return v0
-.end method
+    new-instance p1, Lw06;
 
-.method public abstract g()Ljava/lang/String;
-.end method
-
-.method public final h()V
-    .locals 2
-
-    iget-object v0, p0, La56;->a:Lxkg;
-
-    invoke-interface {v0}, Lxkg;->getMsSinceBoot()J
-
-    move-result-wide v0
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
 
-    iput-object v0, p0, La56;->f:Ljava/lang/Long;
+    invoke-direct {p1, v0}, Lw06;-><init>(Ljava/util/List;)V
 
-    return-void
+    return-object p1
+
+    :cond_4
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "Required value was null."
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

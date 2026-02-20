@@ -1,250 +1,551 @@
 .class public final Lm93;
-.super Landroid/widget/FrameLayout;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Luig;
+.implements Ld96;
 
 
 # instance fields
-.field public final a:Lhgb;
+.field public final synthetic a:I
+
+.field public final synthetic b:Ld96;
+
+.field public final synthetic c:Lka3;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 5
+.method public synthetic constructor <init>(Ld96;Lka3;I)V
+    .locals 0
 
-    invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
+    iput p3, p0, Lm93;->a:I
 
-    new-instance v0, Lhgb;
+    iput-object p1, p0, Lm93;->b:Ld96;
 
-    invoke-direct {v0, p1}, Lhgb;-><init>(Landroid/content/Context;)V
+    iput-object p2, p0, Lm93;->c:Lka3;
 
-    sget-object p1, Lwfb;->a:Lwfb;
-
-    invoke-virtual {v0, p1}, Lhgb;->setAppearance(Lagb;)V
-
-    const/16 p1, 0x1c
-
-    int-to-float p1, p1
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v1, p1
-
-    invoke-static {v1}, Lq7j;->c(F)I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Lnd3;->setIndicatorSize(I)V
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lnd3;->setIndicatorDirection(I)V
-
-    const/4 v2, 0x3
-
-    int-to-float v2, v2
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v2, v3
-
-    invoke-static {v2}, Lq7j;->c(F)I
-
-    move-result v2
-
-    invoke-virtual {v0, v2}, Lnd3;->setTrackThickness(I)V
-
-    const/4 v2, 0x2
-
-    int-to-float v2, v2
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v2, v3
-
-    invoke-static {v2}, Lq7j;->c(F)I
-
-    move-result v2
-
-    invoke-virtual {v0, v2}, Lll0;->setIndicatorTrackGapSize(I)V
-
-    new-instance v2, Landroid/widget/FrameLayout$LayoutParams;
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v3, p1
-
-    invoke-static {v3}, Lq7j;->c(F)I
-
-    move-result v3
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v4
-
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v4, p1
-
-    invoke-static {v4}, Lq7j;->c(F)I
-
-    move-result v4
-
-    invoke-direct {v2, v3, v4}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
-
-    const/16 v3, 0x11
-
-    iput v3, v2, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    iput-object v0, p0, Lm93;->a:Lhgb;
-
-    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
-    const/16 v0, 0xa
-
-    int-to-float v0, v0
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v2, v0
-
-    invoke-static {v2}, Lq7j;->c(F)I
-
-    move-result v2
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v0, v3
-
-    invoke-static {v0}, Lq7j;->c(F)I
-
-    move-result v0
-
-    invoke-virtual {p0, v1, v2, v1, v0}, Landroid/view/View;->setPadding(IIII)V
-
-    new-instance v0, Landroid/widget/FrameLayout$LayoutParams;
-
-    invoke-virtual {p0}, Landroid/view/View;->getPaddingTop()I
-
-    move-result v1
-
-    invoke-virtual {p0}, Landroid/view/View;->getPaddingBottom()I
-
-    move-result v2
-
-    add-int/2addr v2, v1
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    invoke-static {p1, v1, v2}, Lxi4;->c(FFI)I
-
-    move-result p1
-
-    const/4 v1, -0x1
-
-    invoke-direct {v0, v1, p1}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
-
-    invoke-virtual {p0, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getProgress()Lhgb;
-    .locals 1
+.method public final a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 11
 
-    iget-object v0, p0, Lm93;->a:Lhgb;
+    iget v0, p0, Lm93;->a:I
 
-    return-object v0
-.end method
+    const/4 v1, 0x0
 
-.method public final onAttachedToWindow()V
-    .locals 1
+    sget-object v2, Lmah;->a:Lmah;
 
-    invoke-super {p0}, Landroid/view/View;->onAttachedToWindow()V
+    iget-object v3, p0, Lm93;->c:Lka3;
 
-    sget-object v0, Lpc3;->t0:Lkme;
+    iget-object v4, p0, Lm93;->b:Ld96;
 
-    invoke-virtual {v0, p0}, Lkme;->p(Landroid/view/View;)Lzlb;
+    const-string v5, "call to \'resume\' before \'invoke\' with coroutine"
 
-    move-result-object v0
+    sget-object v6, Lod4;->a:Lod4;
 
-    invoke-virtual {p0, v0}, Lm93;->onThemeChanged(Lzlb;)V
+    const/4 v7, 0x1
 
-    return-void
-.end method
+    const/high16 v8, -0x80000000
 
-.method public final onThemeChanged(Lzlb;)V
-    .locals 1
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lm93;->a:Lhgb;
+    instance-of v0, p2, Lfa3;
 
-    invoke-virtual {v0, p1}, Lhgb;->onThemeChanged(Lzlb;)V
+    if-eqz v0, :cond_0
 
-    return-void
+    move-object v0, p2
+
+    check-cast v0, Lfa3;
+
+    iget v9, v0, Lfa3;->o:I
+
+    and-int v10, v9, v8
+
+    if-eqz v10, :cond_0
+
+    sub-int/2addr v9, v8
+
+    iput v9, v0, Lfa3;->o:I
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v0, Lfa3;
+
+    invoke-direct {v0, p0, p2}, Lfa3;-><init>(Lm93;Lkotlin/coroutines/Continuation;)V
+
+    :goto_0
+    iget-object p2, v0, Lfa3;->d:Ljava/lang/Object;
+
+    iget v8, v0, Lfa3;->o:I
+
+    if-eqz v8, :cond_2
+
+    if-ne v8, v7, :cond_1
+
+    invoke-static {p2}, Lbvj;->i(Ljava/lang/Object;)V
+
+    goto :goto_2
+
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    invoke-direct {p1, v5}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_2
+    invoke-static {p2}, Lbvj;->i(Ljava/lang/Object;)V
+
+    check-cast p1, Ljava/util/List;
+
+    new-instance p2, Lpha;
+
+    invoke-direct {p2, v1}, Lpha;-><init>(Ljava/lang/Object;)V
+
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :cond_3
+    :goto_1
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_4
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/Number;
+
+    invoke-virtual {v1}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v8
+
+    sget-object v1, Lka3;->n1:[Lv58;
+
+    invoke-virtual {v3}, Lka3;->t()Lcc3;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v8, v9}, Lcc3;->l(J)Lmrd;
+
+    move-result-object v1
+
+    iget-object v1, v1, Lmrd;->a:Laxf;
+
+    invoke-interface {v1}, Laxf;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lte2;
+
+    if-eqz v1, :cond_3
+
+    invoke-virtual {v1}, Lte2;->p()Lwy3;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_3
+
+    invoke-virtual {v1}, Lwy3;->r()J
+
+    move-result-wide v8
+
+    invoke-virtual {p2, v8, v9}, Lpha;->a(J)Z
+
+    goto :goto_1
+
+    :cond_4
+    iput v7, v0, Lfa3;->o:I
+
+    invoke-interface {v4, p2, v0}, Ld96;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v6, :cond_5
+
+    move-object v2, v6
+
+    :cond_5
+    :goto_2
+    return-object v2
+
+    :pswitch_0
+    instance-of v0, p2, Lca3;
+
+    if-eqz v0, :cond_6
+
+    move-object v0, p2
+
+    check-cast v0, Lca3;
+
+    iget v9, v0, Lca3;->o:I
+
+    and-int v10, v9, v8
+
+    if-eqz v10, :cond_6
+
+    sub-int/2addr v9, v8
+
+    iput v9, v0, Lca3;->o:I
+
+    goto :goto_3
+
+    :cond_6
+    new-instance v0, Lca3;
+
+    invoke-direct {v0, p0, p2}, Lca3;-><init>(Lm93;Lkotlin/coroutines/Continuation;)V
+
+    :goto_3
+    iget-object p2, v0, Lca3;->d:Ljava/lang/Object;
+
+    iget v8, v0, Lca3;->o:I
+
+    if-eqz v8, :cond_8
+
+    if-ne v8, v7, :cond_7
+
+    invoke-static {p2}, Lbvj;->i(Ljava/lang/Object;)V
+
+    goto :goto_4
+
+    :cond_7
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    invoke-direct {p1, v5}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_8
+    invoke-static {p2}, Lbvj;->i(Ljava/lang/Object;)V
+
+    check-cast p1, Lyvb;
+
+    iget-object p2, p1, Lyvb;->a:Ljava/lang/Object;
+
+    check-cast p2, Lk53;
+
+    iget-object p1, p1, Lyvb;->b:Ljava/lang/Object;
+
+    check-cast p1, Ljava/util/List;
+
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :cond_9
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_a
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v5
+
+    move-object v8, v5
+
+    check-cast v8, Lfe6;
+
+    iget-object v8, v8, Lfe6;->a:Ljava/lang/String;
+
+    iget-object v9, v3, Lka3;->c:Ljava/lang/String;
+
+    invoke-static {v8, v9}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_9
+
+    move-object v1, v5
+
+    :cond_a
+    new-instance p1, Lyvb;
+
+    invoke-direct {p1, p2, v1}, Lyvb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    iput v7, v0, Lca3;->o:I
+
+    invoke-interface {v4, p1, v0}, Ld96;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v6, :cond_b
+
+    move-object v2, v6
+
+    :cond_b
+    :goto_4
+    return-object v2
+
+    :pswitch_1
+    instance-of v0, p2, Lt93;
+
+    if-eqz v0, :cond_c
+
+    move-object v0, p2
+
+    check-cast v0, Lt93;
+
+    iget v1, v0, Lt93;->o:I
+
+    and-int v9, v1, v8
+
+    if-eqz v9, :cond_c
+
+    sub-int/2addr v1, v8
+
+    iput v1, v0, Lt93;->o:I
+
+    goto :goto_5
+
+    :cond_c
+    new-instance v0, Lt93;
+
+    invoke-direct {v0, p0, p2}, Lt93;-><init>(Lm93;Lkotlin/coroutines/Continuation;)V
+
+    :goto_5
+    iget-object p2, v0, Lt93;->d:Ljava/lang/Object;
+
+    iget v1, v0, Lt93;->o:I
+
+    if-eqz v1, :cond_e
+
+    if-ne v1, v7, :cond_d
+
+    invoke-static {p2}, Lbvj;->i(Ljava/lang/Object;)V
+
+    goto :goto_6
+
+    :cond_d
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    invoke-direct {p1, v5}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_e
+    invoke-static {p2}, Lbvj;->i(Ljava/lang/Object;)V
+
+    check-cast p1, Ljava/lang/Number;
+
+    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
+
+    iget-object p1, v3, Lka3;->b:Ld34;
+
+    invoke-interface {p1}, Ld34;->a()V
+
+    iput v7, v0, Lt93;->o:I
+
+    invoke-interface {v4, v2, v0}, Ld96;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v6, :cond_f
+
+    move-object v2, v6
+
+    :cond_f
+    :goto_6
+    return-object v2
+
+    :pswitch_2
+    instance-of v0, p2, Ls93;
+
+    if-eqz v0, :cond_10
+
+    move-object v0, p2
+
+    check-cast v0, Ls93;
+
+    iget v1, v0, Ls93;->o:I
+
+    and-int v9, v1, v8
+
+    if-eqz v9, :cond_10
+
+    sub-int/2addr v1, v8
+
+    iput v1, v0, Ls93;->o:I
+
+    goto :goto_7
+
+    :cond_10
+    new-instance v0, Ls93;
+
+    invoke-direct {v0, p0, p2}, Ls93;-><init>(Lm93;Lkotlin/coroutines/Continuation;)V
+
+    :goto_7
+    iget-object p2, v0, Ls93;->d:Ljava/lang/Object;
+
+    iget v1, v0, Ls93;->o:I
+
+    if-eqz v1, :cond_12
+
+    if-ne v1, v7, :cond_11
+
+    invoke-static {p2}, Lbvj;->i(Ljava/lang/Object;)V
+
+    goto :goto_8
+
+    :cond_11
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    invoke-direct {p1, v5}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_12
+    invoke-static {p2}, Lbvj;->i(Ljava/lang/Object;)V
+
+    move-object p2, p1
+
+    check-cast p2, Ljava/lang/Number;
+
+    invoke-virtual {p2}, Ljava/lang/Number;->longValue()J
+
+    iget-object p2, v3, Lka3;->S0:Lmrd;
+
+    iget-object p2, p2, Lmrd;->a:Laxf;
+
+    invoke-interface {p2}, Laxf;->getValue()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lk53;
+
+    invoke-static {v3, p2}, Lka3;->p(Lka3;Lk53;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_13
+
+    iput v7, v0, Ls93;->o:I
+
+    invoke-interface {v4, p1, v0}, Ld96;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v6, :cond_13
+
+    move-object v2, v6
+
+    :cond_13
+    :goto_8
+    return-object v2
+
+    :pswitch_3
+    instance-of v0, p2, Ll93;
+
+    if-eqz v0, :cond_14
+
+    move-object v0, p2
+
+    check-cast v0, Ll93;
+
+    iget v1, v0, Ll93;->o:I
+
+    and-int v9, v1, v8
+
+    if-eqz v9, :cond_14
+
+    sub-int/2addr v1, v8
+
+    iput v1, v0, Ll93;->o:I
+
+    goto :goto_9
+
+    :cond_14
+    new-instance v0, Ll93;
+
+    invoke-direct {v0, p0, p2}, Ll93;-><init>(Lm93;Lkotlin/coroutines/Continuation;)V
+
+    :goto_9
+    iget-object p2, v0, Ll93;->d:Ljava/lang/Object;
+
+    iget v1, v0, Ll93;->o:I
+
+    if-eqz v1, :cond_16
+
+    if-ne v1, v7, :cond_15
+
+    invoke-static {p2}, Lbvj;->i(Ljava/lang/Object;)V
+
+    goto :goto_b
+
+    :cond_15
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    invoke-direct {p1, v5}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_16
+    invoke-static {p2}, Lbvj;->i(Ljava/lang/Object;)V
+
+    move-object p2, p1
+
+    check-cast p2, Lk53;
+
+    sget-object v1, Lka3;->n1:[Lv58;
+
+    sget-object v1, Lk53;->c:Lk53;
+
+    invoke-static {p2, v1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_17
+
+    const/4 p2, 0x0
+
+    goto :goto_a
+
+    :cond_17
+    iget-object p2, v3, Lka3;->R0:Lhxf;
+
+    invoke-virtual {p2}, Lhxf;->getValue()Ljava/lang/Object;
+
+    move-result-object p2
+
+    invoke-static {p2, v1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p2
+
+    xor-int/2addr p2, v7
+
+    :goto_a
+    if-nez p2, :cond_18
+
+    iput v7, v0, Ll93;->o:I
+
+    invoke-interface {v4, p1, v0}, Ld96;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v6, :cond_18
+
+    move-object v2, v6
+
+    :cond_18
+    :goto_b
+    return-object v2
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

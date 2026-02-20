@@ -1,127 +1,104 @@
-.class public final Ltw5;
+.class public final synthetic Ltw5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ls7;
+
 
 # instance fields
-.field public final a:Lb2e;
+.field public final synthetic a:I
 
-.field public final b:Lai;
+.field public final synthetic b:J
+
+.field public final synthetic c:Z
+
+.field public final synthetic d:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lb2e;)V
-    .locals 1
+.method public synthetic constructor <init>(Ljava/lang/Object;ZIJ)V
+    .locals 0
+
+    iput p3, p0, Ltw5;->a:I
+
+    iput-object p1, p0, Ltw5;->d:Ljava/lang/Object;
+
+    iput-wide p4, p0, Ltw5;->b:J
+
+    iput-boolean p2, p0, Ltw5;->c:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ltw5;->a:Lb2e;
-
-    new-instance p1, Lai;
-
-    const/4 v0, 0x5
-
-    invoke-direct {p1, v0}, Lai;-><init>(I)V
-
-    iput-object p1, p0, Ltw5;->b:Lai;
-
     return-void
-.end method
-
-.method public static b(ILjava/util/List;)Ljava/util/ArrayList;
-    .locals 6
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-interface {p1}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
-
-    const/4 v1, 0x0
-
-    :goto_0
-    invoke-interface {p1}, Ljava/util/List;->size()I
-
-    move-result v2
-
-    if-ge v1, v2, :cond_0
-
-    invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/Long;
-
-    new-instance v3, Lzu5;
-
-    invoke-direct {v3}, Ljava/lang/Object;-><init>()V
-
-    invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v4
-
-    iput-wide v4, v3, Lzu5;->a:J
-
-    add-int v2, p0, v1
-
-    int-to-long v4, v2
-
-    iput-wide v4, v3, Lzu5;->b:J
-
-    invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/util/List;)V
-    .locals 3
+.method public final run()V
+    .locals 7
 
-    new-instance v0, Lrw5;
+    iget v0, p0, Ltw5;->a:I
 
-    const/4 v1, 0x1
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {v0, p0, p1, v1}, Lrw5;-><init>(Ltw5;Ljava/util/List;I)V
+    iget-object v0, p0, Ltw5;->d:Ljava/lang/Object;
 
-    iget-object p1, p0, Ltw5;->a:Lb2e;
+    move-object v2, v0
 
-    const/4 v1, 0x0
+    check-cast v2, Ltx5;
 
-    const/4 v2, 0x1
+    iget-object v0, v2, Ltx5;->a:Lm8e;
 
-    invoke-static {p1, v1, v2, v0}, Lulj;->d(Lb2e;ZZLnq6;)Ljava/lang/Object;
+    new-instance v1, Lsx5;
+
+    const/4 v4, 0x0
+
+    iget-boolean v3, p0, Ltw5;->c:Z
+
+    iget-wide v5, p0, Ltw5;->b:J
+
+    invoke-direct/range {v1 .. v6}, Lsx5;-><init>(Ljava/lang/Object;ZIJ)V
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    invoke-static {v0, v2, v3, v1}, Lfuj;->f(Lm8e;ZZLks6;)Ljava/lang/Object;
 
     return-void
-.end method
 
-.method public final c()Ljava/util/List;
-    .locals 4
+    :pswitch_0
+    iget-object v0, p0, Ltw5;->d:Ljava/lang/Object;
 
-    new-instance v0, Lm75;
+    move-object v2, v0
 
-    const/16 v1, 0xf
+    check-cast v2, Ley5;
 
-    invoke-direct {v0, v1}, Lm75;-><init>(I)V
+    iget-object v0, v2, Ley5;->a:Lm8e;
 
-    iget-object v1, p0, Ltw5;->a:Lb2e;
+    new-instance v1, Lsx5;
 
-    const/4 v2, 0x1
+    const/4 v4, 0x1
 
-    const/4 v3, 0x0
+    iget-boolean v3, p0, Ltw5;->c:Z
 
-    invoke-static {v1, v2, v3, v0}, Lulj;->d(Lb2e;ZZLnq6;)Ljava/lang/Object;
+    iget-wide v5, p0, Ltw5;->b:J
 
-    move-result-object v0
+    invoke-direct/range {v1 .. v6}, Lsx5;-><init>(Ljava/lang/Object;ZIJ)V
 
-    check-cast v0, Ljava/util/List;
+    const/4 v2, 0x0
 
-    return-object v0
+    const/4 v3, 0x1
+
+    invoke-static {v0, v2, v3, v1}, Lfuj;->f(Lm8e;ZZLks6;)Ljava/lang/Object;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

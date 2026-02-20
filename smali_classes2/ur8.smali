@@ -1,142 +1,157 @@
-.class public final synthetic Lur8;
+.class public final Lur8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lay3;
-
 
 # instance fields
-.field public final synthetic a:Lwr8;
+.field public final a:Ljava/util/List;
 
-.field public final synthetic b:J
-
-.field public final synthetic c:Z
-
-.field public final synthetic d:J
+.field public final b:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lwr8;JZJ)V
+.method public constructor <init>(ILjava/util/List;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lur8;->a:Lwr8;
+    iput-object p2, p0, Lur8;->a:Ljava/util/List;
 
-    iput-wide p2, p0, Lur8;->b:J
-
-    iput-boolean p4, p0, Lur8;->c:Z
-
-    iput-wide p5, p0, Lur8;->d:J
+    iput p1, p0, Lur8;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 5
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    check-cast p1, Ljava/util/Map;
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, p0, Lur8;->a:Lwr8;
+    goto :goto_1
 
-    iget-object v1, v0, Lwr8;->e:Ljava/util/LinkedHashMap;
+    :cond_0
+    instance-of v0, p1, Lur8;
 
-    iget-wide v2, p0, Lur8;->b:J
+    if-nez v0, :cond_1
 
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    goto :goto_0
 
-    move-result-object v2
+    :cond_1
+    check-cast p1, Lur8;
 
-    invoke-virtual {v1, v2}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v0, p0, Lur8;->a:Ljava/util/List;
 
-    move-result-object v1
+    iget-object v1, p1, Lur8;->a:Ljava/util/List;
 
-    check-cast v1, Lvr8;
+    invoke-static {v0, v1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    iget-boolean v2, p0, Lur8;->c:Z
+    move-result v0
 
-    if-eqz v1, :cond_1
+    if-nez v0, :cond_2
 
-    iget-object v1, v1, Lvr8;->b:Lft8;
+    goto :goto_0
 
-    if-eqz v2, :cond_0
+    :cond_2
+    iget v0, p0, Lur8;->b:I
 
-    sget-object v3, Las8;->a:Las8;
+    iget p1, p1, Lur8;->b:I
 
-    invoke-interface {p1, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    if-eq v0, p1, :cond_3
 
-    move-result-object v3
+    :goto_0
+    const/4 p1, 0x0
 
-    check-cast v3, Lxp0;
+    return p1
 
-    invoke-virtual {v1, v3}, Lft8;->b(Lxp0;)V
+    :cond_3
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lur8;->a:Ljava/util/List;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Lur8;->b:I
+
+    invoke-static {v1}, Ly12;->t(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "MIUIContextMenuViewState(items="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lur8;->a:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", menuState="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/4 v1, 0x1
+
+    iget v2, p0, Lur8;->b:I
+
+    if-eq v2, v1, :cond_2
+
+    const/4 v1, 0x2
+
+    if-eq v2, v1, :cond_1
+
+    const/4 v1, 0x3
+
+    if-eq v2, v1, :cond_0
+
+    const-string v1, "null"
 
     goto :goto_0
 
     :cond_0
-    sget-object v3, Las8;->c:Las8;
+    const-string v1, "SHOWED"
 
-    invoke-interface {p1, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lxp0;
-
-    invoke-virtual {v1, v3}, Lft8;->b(Lxp0;)V
-
-    :goto_0
-    invoke-virtual {v1}, Lft8;->d()V
+    goto :goto_0
 
     :cond_1
-    iget-object v0, v0, Lwr8;->e:Ljava/util/LinkedHashMap;
+    const-string v1, "SELECTION"
 
-    iget-wide v3, p0, Lur8;->d:J
+    goto :goto_0
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    :cond_2
+    const-string v1, "HIDDEN"
 
-    move-result-object v1
+    :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Lvr8;
-
-    if-eqz v0, :cond_3
-
-    iget-object v0, v0, Lvr8;->b:Lft8;
-
-    if-eqz v2, :cond_2
-
-    sget-object v1, Las8;->b:Las8;
-
-    invoke-interface {p1, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lxp0;
-
-    invoke-virtual {v0, p1}, Lft8;->b(Lxp0;)V
-
-    goto :goto_1
-
-    :cond_2
-    sget-object v1, Las8;->d:Las8;
-
-    invoke-interface {p1, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lxp0;
-
-    invoke-virtual {v0, p1}, Lft8;->b(Lxp0;)V
-
-    :goto_1
-    invoke-virtual {v0}, Lft8;->d()V
-
-    :cond_3
-    return-void
+    return-object v0
 .end method

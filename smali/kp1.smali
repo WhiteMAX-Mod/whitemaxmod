@@ -1,64 +1,84 @@
-.class public final synthetic Lkp1;
-.super Ljava/lang/Object;
+.class public final Lkp1;
+.super Lpp1;
 .source "SourceFile"
-
-# interfaces
-.implements Llq6;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lmp1;
+.field public final D:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lmp1;I)V
+.method public constructor <init>(Z)V
     .locals 0
 
-    iput p2, p0, Lkp1;->a:I
+    invoke-direct {p0}, Lpp1;-><init>()V
 
-    iput-object p1, p0, Lkp1;->b:Lmp1;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-boolean p1, p0, Lkp1;->D:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    iget v0, p0, Lkp1;->a:I
+    if-ne p0, p1, :cond_0
 
-    packed-switch v0, :pswitch_data_0
+    goto :goto_1
 
-    iget-object v0, p0, Lkp1;->b:Lmp1;
+    :cond_0
+    instance-of v0, p1, Lkp1;
 
-    invoke-static {v0}, Lmp1;->w(Lmp1;)I
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lkp1;
+
+    iget-boolean v0, p0, Lkp1;->D:Z
+
+    iget-boolean p1, p1, Lkp1;->D:Z
+
+    if-eq v0, p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_2
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-boolean v0, p0, Lkp1;->D:Z
+
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
 
     move-result v0
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "ShareScreen(isEnabled="
+
+    const-string v1, ")"
+
+    iget-boolean v2, p0, Lkp1;->D:Z
+
+    invoke-static {v0, v1, v2}, Ljye;->k(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Lkp1;->b:Lmp1;
-
-    invoke-static {v0}, Lmp1;->u(Lmp1;)Lsh1;
-
-    move-result-object v0
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

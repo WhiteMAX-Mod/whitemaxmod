@@ -1,75 +1,162 @@
-.class public abstract Lhqi;
-.super Ljava/lang/Object;
+.class public final Lhqi;
+.super Lv78;
 .source "SourceFile"
+
+# interfaces
+.implements Lks6;
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljava/lang/Object;
+
+.field public final synthetic c:Ljava/lang/Object;
+
+.field public final synthetic d:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(I)V
+.method public synthetic constructor <init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p4, p0, Lhqi;->a:I
 
-    iput p1, p0, Lhqi;->a:I
+    iput-object p1, p0, Lhqi;->b:Ljava/lang/Object;
+
+    iput-object p2, p0, Lhqi;->c:Ljava/lang/Object;
+
+    iput-object p3, p0, Lhqi;->d:Ljava/lang/Object;
+
+    const/4 p1, 0x1
+
+    invoke-direct {p0, p1}, Lv78;-><init>(I)V
 
     return-void
 .end method
 
-.method public static e(Landroid/os/RemoteException;)Lcom/google/android/gms/common/api/Status;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ": "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getLocalizedMessage()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    new-instance v0, Lcom/google/android/gms/common/api/Status;
-
-    const/16 v1, 0x13
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, p0, v2, v2}, Lcom/google/android/gms/common/api/Status;-><init>(ILjava/lang/String;Landroid/app/PendingIntent;Lyv3;)V
-
-    return-object v0
-.end method
-
 
 # virtual methods
-.method public abstract a(Lcom/google/android/gms/common/api/Status;)V
-.end method
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
 
-.method public abstract b(Ljava/lang/Exception;)V
-.end method
+    iget v0, p0, Lhqi;->a:I
 
-.method public abstract c(Lepi;)V
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public abstract d(Lvnb;Z)V
+    iget-object v0, p0, Lhqi;->d:Ljava/lang/Object;
+
+    check-cast v0, Lis6;
+
+    check-cast p1, Lmj1;
+
+    :try_start_0
+    iget-object v1, p0, Lhqi;->b:Ljava/lang/Object;
+
+    check-cast v1, Loj1;
+
+    iget-object v2, p0, Lhqi;->c:Ljava/lang/Object;
+
+    check-cast v2, Lnj1;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v1, v2, Lnj1;->a:Landroid/opengl/EGLSurface;
+
+    const/4 v3, 0x0
+
+    iput-object v3, v2, Lnj1;->a:Landroid/opengl/EGLSurface;
+
+    invoke-virtual {p1, v1}, Lmj1;->d(Landroid/opengl/EGLSurface;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Lis6;->invoke()Ljava/lang/Object;
+
+    :cond_0
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
+
+    :catchall_0
+    move-exception p1
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0}, Lis6;->invoke()Ljava/lang/Object;
+
+    :cond_1
+    throw p1
+
+    :pswitch_0
+    check-cast p1, Lmj1;
+
+    iget-object p1, p0, Lhqi;->b:Ljava/lang/Object;
+
+    check-cast p1, Lnj1;
+
+    iget-object v0, p0, Lhqi;->c:Ljava/lang/Object;
+
+    invoke-virtual {p1, v0}, Lnj1;->b(Ljava/lang/Object;)V
+
+    iget-object v0, p0, Lhqi;->d:Ljava/lang/Object;
+
+    check-cast v0, Loj1;
+
+    iget-object v0, v0, Loj1;->i:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
+
+    :pswitch_1
+    check-cast p1, Ljava/lang/Throwable;
+
+    iget-object p1, p0, Lhqi;->d:Ljava/lang/Object;
+
+    check-cast p1, Lso6;
+
+    iget-object v0, p0, Lhqi;->c:Ljava/lang/Object;
+
+    check-cast v0, Lcb8;
+
+    iget-object v1, p0, Lhqi;->b:Ljava/lang/Object;
+
+    check-cast v1, Los8;
+
+    sget-object v2, Lmi5;->a:Lmi5;
+
+    invoke-virtual {v1, v2}, Lgd4;->isDispatchNeeded(Led4;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    new-instance v3, Lnlg;
+
+    const/4 v4, 0x2
+
+    invoke-direct {v3, v0, v4, p1}, Lnlg;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {v1, v2, v3}, Lgd4;->dispatch(Led4;Ljava/lang/Runnable;)V
+
+    goto :goto_0
+
+    :cond_2
+    invoke-virtual {v0, p1}, Lcb8;->f(Lxa8;)V
+
+    :goto_0
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

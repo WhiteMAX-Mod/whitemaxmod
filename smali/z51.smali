@@ -1,285 +1,938 @@
 .class public final Lz51;
-.super Landroid/widget/FrameLayout;
+.super Lx0i;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lohc;
+.field public final X:Lj88;
 
-.field public b:Z
+.field public final Y:Lb96;
 
-.field public c:Z
+.field public final Z:Lb96;
 
-.field public final d:Ljava/lang/Object;
+.field public final b:Looi;
+
+.field public final c:Lgr1;
+
+.field public final d:Lj88;
+
+.field public final o:Lj88;
+
+.field public final s0:Ly6;
+
+.field public final t0:Lb96;
+
+.field public final u0:Lhxf;
+
+.field public final v0:Lmrd;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 4
+.method public constructor <init>(Looi;Lgr1;)V
+    .locals 10
 
-    const/4 v0, 0x0
+    sget-object v0, Lm71;->a:Lm71;
 
-    const/4 v1, 0x0
-
-    invoke-direct {p0, p1, v0, v1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-
-    new-instance v0, Lohc;
-
-    invoke-direct {v0, p1}, Lohc;-><init>(Landroid/content/Context;)V
-
-    iput-object v0, p0, Lz51;->a:Lohc;
-
-    new-instance v2, Ly51;
-
-    invoke-direct {v2, p0, v1}, Ly51;-><init>(Lz51;I)V
-
-    const/4 v1, 0x3
-
-    invoke-static {v1, v2}, Le8;->b(ILlq6;)Lo58;
-
-    move-result-object v1
-
-    iput-object v1, p0, Lz51;->d:Ljava/lang/Object;
-
-    const/4 v1, -0x1
-
-    invoke-virtual {p0, v0, v1, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;II)V
-
-    invoke-direct {p0}, Lz51;->getCameraPreviewController()Lx51;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const/16 v1, 0x11
 
-    sget-object v1, Lkic;->f:Lkic;
+    invoke-virtual {v0, v1}, Lr5;->d(I)Lbgg;
 
-    invoke-static {p1}, Lmkj;->b(Landroid/content/Context;)Ln92;
+    move-result-object v0
+
+    sget-object v1, Lqo1;->a:Lj88;
+
+    sget-object v1, Lro1;->a:Lro1;
+
+    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lr5;
 
     move-result-object v1
 
-    new-instance v2, Lud;
+    const/16 v2, 0x252
 
-    const/16 v3, 0x10
+    invoke-virtual {v1, v2}, Lr5;->d(I)Lbgg;
 
-    invoke-direct {v2, v0, v3, v1}, Lud;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    move-result-object v1
 
-    invoke-static {p1}, Lu7;->d(Landroid/content/Context;)Ljava/util/concurrent/Executor;
+    invoke-static {}, Lqo1;->c()Lj88;
+
+    move-result-object v2
+
+    invoke-static {}, Lqo1;->d()Lj88;
+
+    invoke-static {}, Lqo1;->e()Lj88;
+
+    move-result-object v3
+
+    invoke-direct {p0}, Lx0i;-><init>()V
+
+    iput-object p1, p0, Lz51;->b:Looi;
+
+    iput-object p2, p0, Lz51;->c:Lgr1;
+
+    iput-object v1, p0, Lz51;->d:Lj88;
+
+    iput-object v0, p0, Lz51;->o:Lj88;
+
+    iput-object v2, p0, Lz51;->X:Lj88;
+
+    iget-object p1, p2, Lgr1;->D0:Lhxf;
+
+    iget-object v0, p2, Lgr1;->E0:Lhxf;
+
+    new-instance v2, Lp51;
+
+    const/4 v4, 0x3
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    invoke-direct {v2, v4, v5, v6}, Lp51;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    new-instance v7, Lh71;
+
+    invoke-direct {v7, p1, v0, v2, v4}, Lh71;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+
+    invoke-static {v7}, Lzka;->m(Lb96;)Lb96;
 
     move-result-object p1
 
-    invoke-virtual {v1, v2, p1}, Lbs6;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+    invoke-virtual {v1}, Lbgg;->getValue()Ljava/lang/Object;
 
-    invoke-direct {p0}, Lz51;->getCameraPreviewController()Lx51;
+    move-result-object v0
+
+    check-cast v0, Lsy1;
+
+    iget-object v0, v0, Lsy1;->v:Lbgg;
+
+    invoke-virtual {v0}, Lbgg;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lvef;
+
+    invoke-virtual {v1}, Lbgg;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lsy1;
+
+    iget-object v2, v2, Lsy1;->l:Lu21;
+
+    check-cast v2, Lq31;
+
+    iget-object v2, v2, Lq31;->F0:Lhxf;
+
+    new-instance v4, Lq51;
+
+    const/4 v7, 0x4
+
+    invoke-direct {v4, v7, v5, v6}, Lq51;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    invoke-static {v0, p1, v2, v4}, Lzka;->i(Lb96;Lb96;Lb96;Lct6;)Lxd3;
+
+    move-result-object v0
+
+    check-cast v3, Lbgg;
+
+    invoke-virtual {v3}, Lbgg;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lbjg;
+
+    check-cast v2, Lcbb;
+
+    invoke-virtual {v2}, Lcbb;->a()Lgd4;
+
+    move-result-object v2
+
+    invoke-static {v0, v2}, Lzka;->v(Lb96;Led4;)Lb96;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lz51;->Y:Lb96;
+
+    invoke-virtual {v1}, Lbgg;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lsy1;
+
+    invoke-virtual {v0}, Lsy1;->e()Lhxf;
+
+    move-result-object v0
+
+    new-instance v2, Ly6;
+
+    invoke-direct {v2, v0, v7}, Ly6;-><init>(Lb96;I)V
+
+    invoke-virtual {v1}, Lbgg;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lsy1;
+
+    iget-object v0, v0, Lsy1;->q:Lmrd;
+
+    new-instance v4, Ly6;
+
+    const/4 v7, 0x5
+
+    invoke-direct {v4, v0, v7}, Ly6;-><init>(Lb96;I)V
+
+    invoke-virtual {v1}, Lbgg;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lsy1;
+
+    invoke-virtual {v0}, Lsy1;->b()Lhxf;
+
+    move-result-object v0
+
+    new-instance v8, Ly6;
+
+    const/4 v9, 0x6
+
+    invoke-direct {v8, v0, v9}, Ly6;-><init>(Lb96;I)V
+
+    new-instance v0, Lr51;
+
+    invoke-direct {v0, v7, v5}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    invoke-static {v2, p1, v4, v8, v0}, Lzka;->j(Lb96;Lb96;Lb96;Lb96;Let6;)Lhc6;
 
     move-result-object p1
 
-    new-instance v0, Ly51;
+    invoke-interface {v3}, Lj88;->getValue()Ljava/lang/Object;
 
-    const/4 v1, 0x1
+    move-result-object v0
 
-    invoke-direct {v0, p0, v1}, Ly51;-><init>(Lz51;I)V
+    check-cast v0, Lbjg;
 
-    iput-object v0, p1, Lx51;->c:Llq6;
+    check-cast v0, Lcbb;
+
+    invoke-virtual {v0}, Lcbb;->a()Lgd4;
+
+    move-result-object v0
+
+    invoke-static {p1, v0}, Lzka;->v(Lb96;Led4;)Lb96;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lz51;->Z:Lb96;
+
+    iget-object p1, p2, Lgr1;->x0:Lmrd;
+
+    new-instance p2, Ly6;
+
+    const/4 v0, 0x7
+
+    invoke-direct {p2, p1, v0}, Ly6;-><init>(Lb96;I)V
+
+    iput-object p2, p0, Lz51;->s0:Ly6;
+
+    sget-object p2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+
+    new-instance p2, Lu96;
+
+    invoke-direct {p2, v5}, Lu96;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    new-instance v0, Lcee;
+
+    invoke-direct {v0, p2}, Lcee;-><init>(Lys6;)V
+
+    new-instance p2, Ls3;
+
+    const/16 v2, 0x8
+
+    invoke-direct {p2, v0, v1, v2}, Ls3;-><init>(Lb96;Ljava/lang/Object;I)V
+
+    invoke-interface {v3}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lbjg;
+
+    check-cast v0, Lcbb;
+
+    invoke-virtual {v0}, Lcbb;->a()Lgd4;
+
+    move-result-object v0
+
+    invoke-static {p2, v0}, Lzka;->v(Lb96;Led4;)Lb96;
+
+    move-result-object p2
+
+    iput-object p2, p0, Lz51;->t0:Lb96;
+
+    invoke-virtual {p0}, Lz51;->s()Lsy1;
+
+    move-result-object p2
+
+    iget-object p2, p2, Lsy1;->s:Lbgg;
+
+    invoke-virtual {p2}, Lbgg;->getValue()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Laxf;
+
+    invoke-interface {p2}, Laxf;->getValue()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+
+    iget-object v0, p1, Lmrd;->a:Laxf;
+
+    invoke-interface {v0}, Laxf;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lif1;
+
+    invoke-virtual {p0}, Lz51;->s()Lsy1;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Lsy1;->e()Lhxf;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Lhxf;->getValue()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lexb;
+
+    iget-object v4, v4, Lexb;->a:Luwb;
+
+    iget-object v4, v4, Luwb;->a:Lrl1;
+
+    invoke-interface {v4}, Lrl1;->h()Z
+
+    move-result v4
+
+    invoke-virtual {p0}, Lz51;->s()Lsy1;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Lsy1;->c()Lng4;
+
+    move-result-object v7
+
+    iget-boolean v7, v7, Lng4;->i:Z
+
+    invoke-static {p2, v0, v4, v7, v6}, Lz51;->p(Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;Lif1;ZZZ)Lcv0;
+
+    move-result-object p2
+
+    invoke-static {p2}, Lixf;->a(Ljava/lang/Object;)Lhxf;
+
+    move-result-object p2
+
+    iput-object p2, p0, Lz51;->u0:Lhxf;
+
+    new-instance v0, Lmrd;
+
+    invoke-direct {v0, p2}, Lmrd;-><init>(Lgia;)V
+
+    iput-object v0, p0, Lz51;->v0:Lmrd;
+
+    invoke-virtual {v1}, Lbgg;->getValue()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lsy1;
+
+    iget-object p2, p2, Lsy1;->s:Lbgg;
+
+    invoke-virtual {p2}, Lbgg;->getValue()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Laxf;
+
+    invoke-virtual {v1}, Lbgg;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lsy1;
+
+    invoke-virtual {v0}, Lsy1;->e()Lhxf;
+
+    move-result-object v0
+
+    new-instance v1, Ly6;
+
+    invoke-direct {v1, v0, v2}, Ly6;-><init>(Lb96;I)V
+
+    new-instance v0, Lo51;
+
+    invoke-direct {v0, p0, v5, v6}, Lo51;-><init>(Lx0i;Lkotlin/coroutines/Continuation;I)V
+
+    invoke-static {p2, p1, v1, v0}, Lzka;->i(Lb96;Lb96;Lb96;Lct6;)Lxd3;
+
+    move-result-object p1
+
+    invoke-interface {v3}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lbjg;
+
+    check-cast p2, Lcbb;
+
+    invoke-virtual {p2}, Lcbb;->a()Lgd4;
+
+    move-result-object p2
+
+    invoke-static {p1, p2}, Lzka;->v(Lb96;Led4;)Lb96;
+
+    move-result-object p1
+
+    iget-object p2, p0, Lx0i;->a:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {p1, p2}, Lzka;->w(Lb96;Lnd4;)Lcuf;
 
     return-void
 .end method
 
-.method private final getCameraPreviewController()Lx51;
-    .locals 1
+.method public static p(Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;Lif1;ZZZ)Lcv0;
+    .locals 7
 
-    iget-object v0, p0, Lz51;->d:Ljava/lang/Object;
+    new-instance v0, Lcv0;
 
-    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+    iget-object v1, p1, Lif1;->r:Lrx8;
 
-    move-result-object v0
+    iget-object v2, p1, Lif1;->q:Lrx8;
 
-    check-cast v0, Lx51;
+    iget-boolean v3, p1, Lif1;->g:Z
+
+    if-eqz v3, :cond_2
+
+    iget-object p1, p1, Lif1;->e:Lwt5;
+
+    instance-of p1, p1, Lvt5;
+
+    if-eqz p1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    if-eqz p2, :cond_1
+
+    sget-object p1, Lrx8;->b:Lrx8;
+
+    :goto_0
+    move-object v3, p1
+
+    goto :goto_2
+
+    :cond_1
+    sget-object p1, Lrx8;->a:Lrx8;
+
+    goto :goto_0
+
+    :cond_2
+    :goto_1
+    sget-object p1, Lrx8;->d:Lrx8;
+
+    goto :goto_0
+
+    :goto_2
+    invoke-static {p0}, Ldu8;->b(Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;)Lj91;
+
+    move-result-object v4
+
+    move v5, p3
+
+    move v6, p4
+
+    invoke-direct/range {v0 .. v6}, Lcv0;-><init>(Lrx8;Lrx8;Lrx8;Lj91;ZZ)V
 
     return-object v0
 .end method
 
 
 # virtual methods
-.method public final a(ZZ)V
-    .locals 6
+.method public final r()Ljava/util/ArrayList;
+    .locals 3
+
+    invoke-virtual {p0}, Lz51;->s()Lsy1;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lsy1;->b:Lq41;
+
+    check-cast v0, Lr41;
+
+    iget-object v0, v0, Lr41;->c:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lru/ok/android/externcalls/sdk/audio/CallsAudioManager;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Lru/ok/android/externcalls/sdk/audio/CallsAudioManager;->getAvailableAudioDevices()Ljava/util/List;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-static {v0}, Lek3;->d0(Ljava/lang/Iterable;)Ljava/util/Set;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_0
+    sget-object v0, Lcj5;->a:Lcj5;
+
+    :goto_0
+    new-instance v1, Ljava/util/ArrayList;
+
+    const/16 v2, 0xa
+
+    invoke-static {v0, v2}, Lgk3;->n(Ljava/lang/Iterable;I)I
+
+    move-result v2
+
+    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(I)V
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_1
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+
+    invoke-static {v2}, Ldu8;->b(Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;)Lj91;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_1
+
+    :cond_1
+    return-object v1
+.end method
+
+.method public final s()Lsy1;
+    .locals 1
+
+    iget-object v0, p0, Lz51;->d:Lj88;
+
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lsy1;
+
+    return-object v0
+.end method
+
+.method public final t(Lrx8;)V
+    .locals 10
+
+    sget-object v0, Lrx8;->c:Lrx8;
+
+    const-class v1, Lz51;
+
+    if-ne p1, v0, :cond_1
+
+    invoke-virtual {p0}, Lz51;->s()Lsy1;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lsy1;->l:Lu21;
+
+    check-cast p1, Lq31;
+
+    iget-object p1, p1, Lq31;->F0:Lhxf;
+
+    invoke-virtual {p1}, Lhxf;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ltb;
+
+    iget-boolean p1, p1, Ltb;->c:Z
 
     if-nez p1, :cond_0
 
-    invoke-direct {p0}, Lz51;->getCameraPreviewController()Lx51;
+    iget-object p1, p0, Lz51;->c:Lgr1;
+
+    iget-object p1, p1, Lgr1;->I0:Ltn5;
+
+    sget-object v0, Lpp1;->b:Lnp1;
+
+    invoke-static {p1, v0}, Lx0i;->n(Ltn5;Ljava/lang/Object;)V
+
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object p1
 
-    iget-object p1, p1, Lx51;->b:Lkic;
+    const-string v0, "Early return in microphoneEnable cuz of !isMicAvailableInCall"
 
-    if-eqz p1, :cond_1
-
-    invoke-virtual {p1}, Lkic;->f()V
+    invoke-static {p1, v0}, Ltej;->t(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
-    :cond_0
-    invoke-direct {p0}, Lz51;->getCameraPreviewController()Lx51;
+    :cond_1
+    iget-object v0, p0, Lz51;->o:Lj88;
+
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lu2c;
+
+    sget-object v3, Lu2c;->h:[Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Lu2c;->c([Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_2
+
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    iget-object v0, p1, Lx51;->b:Lkic;
+    check-cast p1, Lu2c;
 
-    if-nez v0, :cond_2
+    iget-object v0, p0, Lz51;->b:Looi;
 
-    :cond_1
+    sget v2, Lw8b;->G:I
+
+    invoke-virtual {p1, v0, v2}, Lu2c;->i(Looi;I)V
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "Early return in microphoneEnable cuz of shouldAskMicrophonePermission()"
+
+    invoke-static {p1, v0}, Ltej;->t(Ljava/lang/String;Ljava/lang/String;)V
+
     return-void
 
     :cond_2
-    if-eqz v0, :cond_3
+    iget-object v0, p0, Lz51;->X:Lj88;
 
-    invoke-virtual {v0}, Lkic;->f()V
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v1, v0
+
+    check-cast v1, Ly02;
+
+    invoke-virtual {p0}, Lz51;->s()Lsy1;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lsy1;->c()Lng4;
+
+    move-result-object v0
+
+    iget-object v3, v0, Lng4;->c:Ljava/lang/String;
+
+    sget-object v0, Lrx8;->b:Lrx8;
+
+    if-ne p1, v0, :cond_3
+
+    const-wide/16 v4, 0x1
+
+    goto :goto_0
 
     :cond_3
-    const/4 v1, 0x1
+    const-wide/16 v4, 0x0
 
-    xor-int/2addr p2, v1
+    :goto_0
+    invoke-virtual {p0}, Lz51;->s()Lsy1;
 
-    new-instance v2, Ljava/util/LinkedHashSet;
+    move-result-object v2
 
-    invoke-direct {v2}, Ljava/util/LinkedHashSet;-><init>()V
+    invoke-virtual {v2}, Lsy1;->c()Lng4;
 
-    const/4 v3, -0x1
+    move-result-object v2
+
+    iget-boolean v8, v2, Lng4;->i:Z
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v5
+
+    const/4 v7, 0x0
+
+    const/16 v9, 0x74
+
+    const-string v2, "AUDIO_ENABLED"
 
     const/4 v4, 0x0
 
-    if-eq p2, v3, :cond_4
+    const/4 v6, 0x0
 
-    move v3, v1
+    invoke-static/range {v1 .. v9}, Ly02;->c(Ly02;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/String;Ljava/lang/String;ZI)V
+
+    invoke-virtual {p0}, Lz51;->s()Lsy1;
+
+    move-result-object v1
+
+    if-ne p1, v0, :cond_4
+
+    const/4 p1, 0x1
+
+    goto :goto_1
+
+    :cond_4
+    const/4 p1, 0x0
+
+    :goto_1
+    invoke-virtual {v1, p1}, Lsy1;->g(Z)V
+
+    return-void
+.end method
+
+.method public final u(Lrx8;)V
+    .locals 10
+
+    sget-object v0, Lrx8;->c:Lrx8;
+
+    const-class v1, Lz51;
+
+    if-ne p1, v0, :cond_1
+
+    invoke-virtual {p0}, Lz51;->s()Lsy1;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lsy1;->l:Lu21;
+
+    check-cast p1, Lq31;
+
+    iget-object p1, p1, Lq31;->F0:Lhxf;
+
+    invoke-virtual {p1}, Lhxf;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ltb;
+
+    iget-boolean p1, p1, Ltb;->b:Z
+
+    if-nez p1, :cond_0
+
+    iget-object p1, p0, Lz51;->c:Lgr1;
+
+    iget-object p1, p1, Lgr1;->I0:Ltn5;
+
+    sget-object v0, Lpp1;->c:Lnp1;
+
+    invoke-static {p1, v0}, Lx0i;->n(Ltn5;Ljava/lang/Object;)V
+
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "Early return in videoEnable cuz of !isCameraAvailableInCall"
+
+    invoke-static {p1, v0}, Ltej;->t(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+
+    :cond_1
+    iget-object v0, p0, Lz51;->o:Lj88;
+
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lu2c;
+
+    sget-object v3, Lu2c;->m:[Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Lu2c;->c([Ljava/lang/String;)Z
+
+    move-result v2
+
+    iget-object v3, p0, Lz51;->X:Lj88;
+
+    if-nez v2, :cond_2
+
+    invoke-interface {v3}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ly02;
+
+    invoke-virtual {p0}, Lz51;->s()Lsy1;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lsy1;->c()Lng4;
+
+    move-result-object v2
+
+    iget-object v2, v2, Lng4;->c:Ljava/lang/String;
+
+    invoke-virtual {p0}, Lz51;->s()Lsy1;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Lsy1;->c()Lng4;
+
+    move-result-object v3
+
+    iget-boolean v3, v3, Lng4;->i:Z
+
+    const-string v4, "DURING_CALL"
+
+    invoke-virtual {p1, v2, v4, v3}, Ly02;->e(Ljava/lang/String;Ljava/lang/String;Z)V
+
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lu2c;
+
+    iget-object v0, p0, Lz51;->b:Looi;
+
+    invoke-virtual {p1, v0}, Lu2c;->m(Looi;)V
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "Early return in videoEnable cuz of shouldAskVideoPermission()"
+
+    invoke-static {p1, v0}, Ltej;->t(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+
+    :cond_2
+    invoke-virtual {p0}, Lz51;->s()Lsy1;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lsy1;->h:Lbje;
+
+    invoke-virtual {v0}, Lbje;->c()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "Early return in videoEnable cuz of callsController.isScreenSharingEnabled()"
+
+    invoke-static {p1, v0}, Ltej;->t(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+
+    :cond_3
+    invoke-interface {v3}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v1, v0
+
+    check-cast v1, Ly02;
+
+    invoke-virtual {p0}, Lz51;->s()Lsy1;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lsy1;->c()Lng4;
+
+    move-result-object v0
+
+    iget-object v3, v0, Lng4;->c:Ljava/lang/String;
+
+    sget-object v0, Lrx8;->b:Lrx8;
+
+    if-ne p1, v0, :cond_4
+
+    const-wide/16 v4, 0x1
 
     goto :goto_0
 
     :cond_4
-    move v3, v4
+    const-wide/16 v4, 0x0
 
     :goto_0
-    const-string v5, "The specified lens facing is invalid."
+    invoke-virtual {p0}, Lz51;->s()Lsy1;
 
-    invoke-static {v5, v3}, Ljkj;->f(Ljava/lang/String;Z)V
+    move-result-object v2
 
-    new-instance v3, Lb78;
+    invoke-virtual {v2}, Lsy1;->c()Lng4;
 
-    invoke-direct {v3, p2}, Lb78;-><init>(I)V
+    move-result-object v2
 
-    invoke-virtual {v2, v3}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+    iget-boolean v8, v2, Lng4;->i:Z
 
-    move-object p2, v2
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    new-instance v2, Ly42;
-
-    invoke-direct {v2, p2}, Ly42;-><init>(Ljava/util/LinkedHashSet;)V
-
-    new-instance p2, Lkg7;
-
-    const/4 v3, 0x2
-
-    invoke-direct {p2, v3}, Lkg7;-><init>(I)V
-
-    invoke-virtual {p2}, Lkg7;->b()Lehc;
-
-    move-result-object p2
-
-    iget-object v5, p0, Lz51;->a:Lohc;
-
-    invoke-virtual {v5}, Lohc;->getSurfaceProvider()Ldhc;
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v5
 
-    invoke-virtual {p2, v5}, Lehc;->G(Ldhc;)V
+    const/4 v7, 0x0
 
-    iget-object p1, p1, Lx51;->a:Lj88;
+    const/16 v9, 0x74
 
-    new-array v5, v1, [Leah;
+    const-string v2, "VIDEO_ENABLED"
 
-    aput-object p2, v5, v4
+    const/4 v4, 0x0
 
-    const-string p2, "CX:bindToLifecycle"
+    const/4 v6, 0x0
 
-    invoke-static {p2}, Lw0j;->j(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static/range {v1 .. v9}, Ly02;->c(Ly02;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/String;Ljava/lang/String;ZI)V
 
-    move-result-object p2
+    invoke-virtual {p0}, Lz51;->s()Lsy1;
 
-    invoke-static {p2}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
+    move-result-object v1
 
-    :try_start_0
-    iget-object p2, v0, Lkic;->d:Lj52;
+    if-ne p1, v0, :cond_5
 
-    if-nez p2, :cond_5
+    const/4 p1, 0x1
 
     goto :goto_1
 
     :cond_5
-    iget-object p2, p2, Lj52;->f:Ljx;
-
-    if-eqz p2, :cond_7
-
-    iget-object p2, p2, Ljx;->d:Ljava/lang/Object;
-
-    check-cast p2, Lfsg;
-
-    iget v4, p2, Lfsg;->b:I
+    const/4 p1, 0x0
 
     :goto_1
-    if-eq v4, v3, :cond_6
-
-    invoke-static {v0, v1}, Lkic;->b(Lkic;I)V
-
-    sget-object v4, Ldh5;->a:Ldh5;
-
-    invoke-static {v5, v1}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object p2
-
-    move-object v5, p2
-
-    check-cast v5, [Leah;
-
-    const/4 v3, 0x0
-
-    move-object v1, p1
-
-    invoke-virtual/range {v0 .. v5}, Lkic;->d(Lj88;Ly42;Lsuh;Ljava/util/List;[Leah;)Lq78;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-static {}, Landroid/os/Trace;->endSection()V
+    invoke-virtual {v1, p1}, Lsy1;->h(Z)V
 
     return-void
-
-    :catchall_0
-    move-exception v0
-
-    move-object p1, v0
-
-    goto :goto_2
-
-    :cond_6
-    :try_start_1
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string p2, "bindToLifecycle for single camera is not supported in concurrent camera mode, call unbindAll() first"
-
-    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_7
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string p2, "CameraX not initialized yet."
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    :goto_2
-    invoke-static {}, Landroid/os/Trace;->endSection()V
-
-    throw p1
 .end method

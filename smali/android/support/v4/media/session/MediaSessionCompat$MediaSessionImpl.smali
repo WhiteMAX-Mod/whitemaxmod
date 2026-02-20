@@ -21,7 +21,7 @@
 .method public abstract getCallingPackage()Ljava/lang/String;
 .end method
 
-.method public abstract getCurrentControllerInfo()Lub9;
+.method public abstract getCurrentControllerInfo()Lmd9;
 .end method
 
 .method public abstract getMediaSession()Ljava/lang/Object;
@@ -54,7 +54,7 @@
 .method public abstract setCaptioningEnabled(Z)V
 .end method
 
-.method public abstract setCurrentControllerInfo(Lub9;)V
+.method public abstract setCurrentControllerInfo(Lmd9;)V
 .end method
 
 .method public abstract setExtras(Landroid/os/Bundle;)V
@@ -75,7 +75,7 @@
 .method public abstract setPlaybackToLocal(I)V
 .end method
 
-.method public abstract setPlaybackToRemote(Ltwh;)V
+.method public abstract setPlaybackToRemote(Lb4i;)V
 .end method
 
 .method public abstract setQueue(Ljava/util/List;)V

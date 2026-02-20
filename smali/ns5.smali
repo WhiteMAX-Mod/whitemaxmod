@@ -1,100 +1,23 @@
 .class public final Lns5;
-.super Lhja;
+.super Lrbh;
 .source "SourceFile"
 
 
-# instance fields
-.field public final b:Llhg;
-
-
-# direct methods
-.method public constructor <init>(Llhg;)V
-    .locals 1
-
-    sget-object v0, Lb3h;->a:Lb3h;
-
-    invoke-direct {p0, v0}, Lhja;-><init>(Ljava/lang/Object;)V
-
-    iput-object p1, p0, Lns5;->b:Llhg;
-
-    return-void
-.end method
-
-
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final b()Ljava/lang/String;
     .locals 1
 
-    if-ne p0, p1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Lns5;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lns5;
-
-    iget-object v0, p0, Lns5;->b:Llhg;
-
-    iget-object p1, p1, Lns5;->b:Llhg;
-
-    invoke-virtual {v0, p1}, Llhg;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_2
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lns5;->b:Llhg;
-
-    iget v0, v0, Llhg;->c:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ShowSnackbar(text="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lns5;->b:Llhg;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    const-string v0, "ExoSoSource"
 
     return-object v0
+.end method
+
+.method public final g(Z)Lcom/facebook/soloader/e;
+    .locals 0
+
+    new-instance p1, Lcom/facebook/soloader/c;
+
+    invoke-direct {p1, p0, p0}, Lcom/facebook/soloader/c;-><init>(Lns5;Lns5;)V
+
+    return-object p1
 .end method

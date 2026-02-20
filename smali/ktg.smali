@@ -1,263 +1,191 @@
-.class public final synthetic Lktg;
+.class public Lktg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lc2b;
+
+# static fields
+.field public static final d:Ljtg;
 
 
 # instance fields
-.field public final synthetic a:Lltg;
+.field public a:Z
 
-.field public final synthetic b:I
+.field public b:J
 
-.field public final synthetic c:Lb27;
+.field public c:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Lltg;ILb27;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ljtg;
 
-    iput-object p1, p0, Lktg;->a:Lltg;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput p2, p0, Lktg;->b:I
-
-    iput-object p3, p0, Lktg;->c:Lb27;
+    sput-object v0, Lktg;->d:Ljtg;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lhd5;JLpj6;Z)V
-    .locals 11
+.method public a()Lktg;
+    .locals 1
 
-    iget-object v0, p0, Lktg;->a:Lltg;
+    const/4 v0, 0x0
 
-    iget v1, p0, Lktg;->b:I
+    iput-boolean v0, p0, Lktg;->a:Z
 
-    iget-object v2, p0, Lktg;->c:Lb27;
+    return-object p0
+.end method
 
-    iget-object v3, v0, Lltg;->v0:Lmtg;
+.method public b()Lktg;
+    .locals 2
 
-    iget-boolean v4, v3, Lmtg;->c:Z
+    const-wide/16 v0, 0x0
 
-    if-nez v4, :cond_0
+    iput-wide v0, p0, Lktg;->c:J
 
-    :goto_0
-    move-object v3, p1
+    return-object p0
+.end method
 
-    move-wide v4, p2
+.method public c()J
+    .locals 2
 
-    move-object v6, p4
+    iget-boolean v0, p0, Lktg;->a:Z
 
-    move/from16 v7, p5
+    if-eqz v0, :cond_0
 
-    goto/16 :goto_5
+    iget-wide v0, p0, Lktg;->b:J
+
+    return-wide v0
 
     :cond_0
-    iget-object v3, v3, Lmtg;->l:Ljava/lang/Object;
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    monitor-enter v3
+    const-string v1, "No deadline"
 
-    :try_start_0
-    iget-object v4, v0, Lltg;->v0:Lmtg;
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    iget-object v4, v4, Lmtg;->m:Le9g;
+    throw v0
+.end method
 
-    iget v5, v0, Lltg;->a:I
+.method public d(J)Lktg;
+    .locals 1
 
-    iget-object v4, v4, Le9g;->b:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    check-cast v4, Ljava/util/ArrayList;
+    iput-boolean v0, p0, Lktg;->a:Z
 
-    invoke-virtual {v4, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    iput-wide p1, p0, Lktg;->b:J
 
-    move-result-object v4
+    return-object p0
+.end method
 
-    check-cast v4, Ljtg;
+.method public e()Z
+    .locals 1
 
-    iget-object v4, v4, Ljtg;->a:Landroid/util/SparseArray;
+    iget-boolean v0, p0, Lktg;->a:Z
 
-    invoke-virtual {v4}, Landroid/util/SparseArray;->size()I
+    return v0
+.end method
 
-    move-result v4
+.method public f()V
+    .locals 4
 
-    const/4 v5, 0x1
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
-    if-le v4, v5, :cond_1
+    move-result-object v0
 
-    const/4 v4, 0x2
+    invoke-virtual {v0}, Ljava/lang/Thread;->isInterrupted()Z
 
-    if-ne v1, v4, :cond_1
+    move-result v0
 
-    monitor-exit v3
+    if-nez v0, :cond_2
+
+    iget-boolean v0, p0, Lktg;->a:Z
+
+    if-eqz v0, :cond_1
+
+    iget-wide v0, p0, Lktg;->b:J
+
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
+
+    move-result-wide v2
+
+    sub-long/2addr v0, v2
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v0, v0, v2
+
+    if-lez v0, :cond_0
 
     goto :goto_0
 
-    :catchall_0
-    move-exception v0
+    :cond_0
+    new-instance v0, Ljava/io/InterruptedIOException;
 
-    move-object p1, v0
+    const-string v1, "deadline reached"
 
-    goto/16 :goto_7
+    invoke-direct {v0, v1}, Ljava/io/InterruptedIOException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 
     :cond_1
-    monitor-exit v3
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    iget-object v1, v0, Lltg;->c:Lhq3;
-
-    iget-object v1, v1, Lhq3;->a:Lhk7;
-
-    iget v3, v0, Lltg;->a:I
-
-    invoke-interface {v1, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lid5;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const-wide v3, -0x7fffffffffffffffL    # -4.9E-324
-
-    cmp-long v1, p2, v3
-
-    const/4 v3, 0x0
-
-    if-eqz v1, :cond_2
-
-    move v1, v5
-
-    goto :goto_1
-
-    :cond_2
-    move v1, v3
-
-    :goto_1
-    const-string v4, "MediaItem duration required for sequence looping could not be extracted."
-
-    invoke-static {v4, v1}, Lh6j;->f(Ljava/lang/Object;Z)V
-
-    iget-wide v6, v0, Lltg;->u0:J
-
-    add-long/2addr v6, p2
-
-    iput-wide v6, v0, Lltg;->u0:J
-
-    iget-object v1, v0, Lltg;->v0:Lmtg;
-
-    iget-object v1, v1, Lmtg;->q:Ljava/lang/Object;
-
-    monitor-enter v1
-
-    if-eqz p5, :cond_3
-
-    :try_start_1
-    iget-object v4, v0, Lltg;->v0:Lmtg;
-
-    iget v6, v4, Lmtg;->z:I
-
-    sub-int/2addr v6, v5
-
-    iput v6, v4, Lmtg;->z:I
-
-    goto :goto_2
-
-    :catchall_1
-    move-exception v0
-
-    move-object p1, v0
-
-    goto :goto_6
-
-    :cond_3
-    :goto_2
-    iget-object v4, v0, Lltg;->v0:Lmtg;
-
-    iget v6, v4, Lmtg;->z:I
-
-    if-nez v6, :cond_4
-
-    goto :goto_3
-
-    :cond_4
-    move v5, v3
-
-    :goto_3
-    iget-wide v6, v0, Lltg;->u0:J
-
-    iget-wide v8, v4, Lmtg;->y:J
-
-    cmp-long v10, v6, v8
-
-    if-gtz v10, :cond_5
-
-    if-eqz v5, :cond_6
-
-    :cond_5
-    invoke-static {v6, v7, v8, v9}, Ljava/lang/Math;->max(JJ)J
-
-    move-result-wide v5
-
-    iput-wide v5, v4, Lmtg;->y:J
-
-    :goto_4
-    iget-object v4, v0, Lltg;->v0:Lmtg;
-
-    iget-object v4, v4, Lmtg;->k:Ljava/util/ArrayList;
-
-    invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
-
-    move-result v4
-
-    if-ge v3, v4, :cond_6
-
-    iget-object v4, v0, Lltg;->v0:Lmtg;
-
-    iget-object v4, v4, Lmtg;->k:Ljava/util/ArrayList;
-
-    invoke-virtual {v4, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Ljpe;
-
-    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_4
-
-    :cond_6
-    monitor-exit v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    goto/16 :goto_0
-
-    :goto_5
-    invoke-interface/range {v2 .. v7}, Lc2b;->a(Lhd5;JLpj6;Z)V
-
+    :goto_0
     return-void
 
-    :goto_6
-    :try_start_2
-    monitor-exit v1
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+    :cond_2
+    new-instance v0, Ljava/io/InterruptedIOException;
 
-    throw p1
+    const-string v1, "interrupted"
 
-    :goto_7
-    :try_start_3
-    monitor-exit v3
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+    invoke-direct {v0, v1}, Ljava/io/InterruptedIOException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw v0
+.end method
+
+.method public g(JLjava/util/concurrent/TimeUnit;)Lktg;
+    .locals 2
+
+    const-wide/16 v0, 0x0
+
+    cmp-long v0, p1, v0
+
+    if-ltz v0, :cond_0
+
+    invoke-virtual {p3, p1, p2}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
+
+    move-result-wide p1
+
+    iput-wide p1, p0, Lktg;->c:J
+
+    return-object p0
+
+    :cond_0
+    const-string p3, "timeout < 0: "
+
+    invoke-static {p1, p2, p3}, Ltx8;->h(JLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    new-instance p2, Ljava/lang/IllegalArgumentException;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p2, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p2
+.end method
+
+.method public h()J
+    .locals 2
+
+    iget-wide v0, p0, Lktg;->c:J
+
+    return-wide v0
 .end method

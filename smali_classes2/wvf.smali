@@ -1,79 +1,64 @@
 .class public final Lwvf;
-.super Llm4;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lxvf;
 
 
 # static fields
-.field public static final b:Lwvf;
-
-.field public static final c:Lhm4;
-
-.field public static final d:Lhm4;
-
-.field public static final e:Lhm4;
-
-.field public static final f:Lhm4;
+.field public static final a:Lwvf;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 6
+    .locals 1
 
     new-instance v0, Lwvf;
 
-    invoke-direct {v0}, Llm4;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lwvf;->b:Lwvf;
-
-    const/4 v1, 0x0
-
-    new-array v2, v1, [Ljava/lang/String;
-
-    const-string v3, ":stickers/settings"
-
-    const/4 v4, 0x0
-
-    const/16 v5, 0xe
-
-    invoke-static {v0, v3, v2, v4, v5}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
-
-    move-result-object v2
-
-    sput-object v2, Lwvf;->c:Lhm4;
-
-    const-string v2, ":stickers/recent"
-
-    new-array v3, v1, [Ljava/lang/String;
-
-    invoke-static {v0, v2, v3, v4, v5}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
-
-    move-result-object v2
-
-    sput-object v2, Lwvf;->d:Lhm4;
-
-    const-string v2, ":stickers/favorite"
-
-    new-array v1, v1, [Ljava/lang/String;
-
-    invoke-static {v0, v2, v1, v4, v5}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
-
-    move-result-object v1
-
-    sput-object v1, Lwvf;->e:Lhm4;
-
-    const-string v1, "set_id"
-
-    filled-new-array {v1}, [Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, ":stickers/set"
-
-    invoke-static {v0, v2, v1, v4, v5}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
-
-    move-result-object v0
-
-    sput-object v0, Lwvf;->f:Lhm4;
+    sput-object v0, Lwvf;->a:Lwvf;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of p1, p1, Lwvf;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, -0x479618e8
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "Success"
+
+    return-object v0
 .end method

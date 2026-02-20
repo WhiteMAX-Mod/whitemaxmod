@@ -1,19 +1,23 @@
 .class public final Ls08;
-.super Ljava/lang/Object;
+.super Lsla;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final serializer()La38;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "La38;"
-        }
-    .end annotation
+# static fields
+.field public static final b:Ls08;
 
-    sget-object v0, Lx08;->a:Lx08;
 
-    return-object v0
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Ls08;
+
+    sget-object v1, Lmah;->a:Lmah;
+
+    invoke-direct {v0, v1}, Lsla;-><init>(Ljava/lang/Object;)V
+
+    sput-object v0, Ls08;->b:Ls08;
+
+    return-void
 .end method

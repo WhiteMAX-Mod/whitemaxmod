@@ -1,35 +1,23 @@
 .class public final Luv7;
-.super Lo84;
+.super Lxv7;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:I
+.field public final a:Lcpg;
 
-.field public d:Ljava/lang/Long;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final b:Lcpg;
 
 
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+# direct methods
+.method public constructor <init>(Lcpg;Lcpg;)V
+    .locals 0
 
-    iput-object p1, p0, Luv7;->o:Ljava/lang/Object;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget p1, p0, Luv7;->X:I
+    iput-object p1, p0, Luv7;->a:Lcpg;
 
-    const/high16 v0, -0x80000000
+    iput-object p2, p0, Luv7;->b:Lcpg;
 
-    or-int/2addr p1, v0
-
-    iput p1, p0, Luv7;->X:I
-
-    const/4 p1, 0x0
-
-    invoke-static {p1, p1, p0}, Lzv7;->t(Ljava/lang/String;Lzv7;Lo84;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

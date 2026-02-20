@@ -1,48 +1,182 @@
-.class public abstract Lmpj;
+.class public final Lmpj;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Loza;
+
+
+# static fields
+.field public static final a:Lmpj;
+
+.field public static final b:Ld16;
+
+.field public static final c:Ld16;
+
+.field public static final d:Ld16;
+
+.field public static final e:Ld16;
+
+.field public static final f:Ld16;
+
 
 # direct methods
-.method public static a(Ljava/lang/String;Z)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    if-eqz p1, :cond_0
+    new-instance v0, Lmpj;
 
-    return-void
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    :cond_0
-    const/4 p1, 0x0
+    sput-object v0, Lmpj;->a:Lmpj;
 
-    invoke-static {p1, p0}, Lcom/google/android/exoplayer2/ParserException;->a(Ljava/lang/RuntimeException;Ljava/lang/String;)Lcom/google/android/exoplayer2/ParserException;
-
-    move-result-object p0
-
-    throw p0
-.end method
-
-.method public static final b(Lr4h;)V
-    .locals 2
-
-    new-instance v0, Lffe;
-
-    const/16 v1, 0x9
-
-    invoke-direct {v0, v1}, Lffe;-><init>(I)V
+    new-instance v0, Lp7j;
 
     const/4 v1, 0x1
 
-    invoke-virtual {p0, v1, v0}, Lr4h;->c(ILhs7;)V
+    invoke-direct {v0, v1}, Lp7j;-><init>(I)V
 
-    new-instance v0, Lgfe;
+    const-class v1, Lh8j;
 
-    const/16 v1, 0x1c
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
 
-    invoke-direct {v0, v1}, Lgfe;-><init>(I)V
+    move-result-object v0
 
-    const/16 v1, 0x25d
+    new-instance v2, Ld16;
 
-    invoke-virtual {p0, v1, v0}, Lr4h;->e(ILhs7;)V
+    invoke-static {v0}, Lkb0;->o(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "xMin"
+
+    invoke-direct {v2, v3, v0}, Ld16;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Lmpj;->b:Ld16;
+
+    new-instance v0, Lp7j;
+
+    const/4 v2, 0x2
+
+    invoke-direct {v0, v2}, Lp7j;-><init>(I)V
+
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Ld16;
+
+    invoke-static {v0}, Lkb0;->o(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "yMin"
+
+    invoke-direct {v2, v3, v0}, Ld16;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Lmpj;->c:Ld16;
+
+    new-instance v0, Lp7j;
+
+    const/4 v2, 0x3
+
+    invoke-direct {v0, v2}, Lp7j;-><init>(I)V
+
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Ld16;
+
+    invoke-static {v0}, Lkb0;->o(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "xMax"
+
+    invoke-direct {v2, v3, v0}, Ld16;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Lmpj;->d:Ld16;
+
+    new-instance v0, Lp7j;
+
+    const/4 v2, 0x4
+
+    invoke-direct {v0, v2}, Lp7j;-><init>(I)V
+
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Ld16;
+
+    invoke-static {v0}, Lkb0;->o(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "yMax"
+
+    invoke-direct {v2, v3, v0}, Ld16;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Lmpj;->e:Ld16;
+
+    new-instance v0, Lp7j;
+
+    const/4 v2, 0x5
+
+    invoke-direct {v0, v2}, Lp7j;-><init>(I)V
+
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v1, Ld16;
+
+    invoke-static {v0}, Lkb0;->o(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v2, "confidenceScore"
+
+    invoke-direct {v1, v2, v0}, Ld16;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v1, Lmpj;->f:Ld16;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 1
+
+    check-cast p1, Llwj;
+
+    check-cast p2, Lpza;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object p1, Lmpj;->b:Ld16;
+
+    const/4 v0, 0x0
+
+    invoke-interface {p2, p1, v0}, Lpza;->a(Ld16;Ljava/lang/Object;)Lpza;
+
+    sget-object p1, Lmpj;->c:Ld16;
+
+    invoke-interface {p2, p1, v0}, Lpza;->a(Ld16;Ljava/lang/Object;)Lpza;
+
+    sget-object p1, Lmpj;->d:Ld16;
+
+    invoke-interface {p2, p1, v0}, Lpza;->a(Ld16;Ljava/lang/Object;)Lpza;
+
+    sget-object p1, Lmpj;->e:Ld16;
+
+    invoke-interface {p2, p1, v0}, Lpza;->a(Ld16;Ljava/lang/Object;)Lpza;
+
+    sget-object p1, Lmpj;->f:Ld16;
+
+    invoke-interface {p2, p1, v0}, Lpza;->a(Ld16;Ljava/lang/Object;)Lpza;
 
     return-void
 .end method

@@ -25,28 +25,18 @@
 
 
 # instance fields
-.field public final a:Lnbg;
+.field public final a:Lcjg;
 
 
 # direct methods
 .method public constructor <init>(S)V
     .locals 3
 
-    sget-object v0, Lwob;->c:Lvqj;
+    sget-object v0, Llrb;->c:Lyr1;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const v0, 0xffff
-
-    and-int/2addr p1, v0
-
-    invoke-static {p1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v0, "0x"
-
-    invoke-virtual {v0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lyr1;->u(S)Ljava/lang/String;
 
     move-result-object p1
 
@@ -54,13 +44,13 @@
 
     const-string v1, "!"
 
-    invoke-static {v0, p1, v1}, Lj27;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p1, v1}, Ltx8;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
     invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    new-instance p1, Lnbg;
+    new-instance p1, Lcjg;
 
     invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
@@ -70,9 +60,9 @@
 
     const-string v2, "unknown.opcode"
 
-    invoke-direct {p1, v2, v0, v1}, Lnbg;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p1, v2, v0, v1}, Lcjg;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    iput-object p1, p0, Lru/ok/tamtam/api/UnknownOpcodeException;->a:Lnbg;
+    iput-object p1, p0, Lru/ok/tamtam/api/UnknownOpcodeException;->a:Lcjg;
 
     return-void
 .end method

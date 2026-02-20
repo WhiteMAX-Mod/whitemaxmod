@@ -1,5 +1,5 @@
 .class public Lru/ok/messages/views/widgets/StickyHeaderRecyclerView;
-.super Lyj5;
+.super Lml5;
 .source "SourceFile"
 
 
@@ -14,7 +14,7 @@
     return-void
 .end method
 
-.method public setStickyHeaderDecorator(Ljxf;)V
+.method public setStickyHeaderDecorator(Lu4g;)V
     .locals 0
 
     return-void

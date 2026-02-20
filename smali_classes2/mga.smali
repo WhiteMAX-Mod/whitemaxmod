@@ -1,62 +1,49 @@
-.class public final synthetic Lmga;
-.super Ljava/lang/Object;
+.class public final Lmga;
+.super Lda4;
 .source "SourceFile"
-
-# interfaces
-.implements Ldy3;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lnga;
 
-.field public final synthetic b:Z
+.field public Y:I
+
+.field public d:Lpo9;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(ZI)V
+.method public constructor <init>(Lnga;Lda4;)V
     .locals 0
 
-    iput p2, p0, Lmga;->a:I
+    iput-object p1, p0, Lmga;->X:Lnga;
 
-    iput-boolean p1, p0, Lmga;->b:Z
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget v0, p0, Lmga;->a:I
+    iput-object p1, p0, Lmga;->o:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Lmga;->Y:I
 
-    check-cast p1, Lxoh;
+    const/high16 v0, -0x80000000
 
-    iget-boolean v0, p0, Lmga;->b:Z
+    or-int/2addr p1, v0
 
-    iput-boolean v0, p1, Lxoh;->b:Z
+    iput p1, p0, Lmga;->Y:I
 
-    const/4 v0, 0x0
+    iget-object p1, p0, Lmga;->X:Lnga;
 
-    iput-boolean v0, p1, Lxoh;->c:Z
+    invoke-virtual {p1, p0}, Lnga;->c(Lda4;)Ljava/lang/Comparable;
 
-    return-void
+    move-result-object p1
 
-    :pswitch_0
-    iget-boolean v0, p0, Lmga;->b:Z
-
-    check-cast p1, Lxoh;
-
-    iput-boolean v0, p1, Lxoh;->a:Z
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

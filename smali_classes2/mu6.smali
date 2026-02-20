@@ -1,48 +1,130 @@
 .class public final Lmu6;
-.super Lo84;
+.super Lg4;
+.source "SourceFile"
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lmu6;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final synthetic X:Lku6;
-
-.field public synthetic d:Ljava/lang/Object;
-
-.field public o:I
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lku6;Lkotlin/coroutines/Continuation;)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lll4;
+
+    const/16 v1, 0x12
+
+    invoke-direct {v0, v1}, Lll4;-><init>(I)V
+
+    sput-object v0, Lmu6;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lmu6;->X:Lku6;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lmu6;->a:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final describeContents()I
     .locals 1
-
-    iput-object p1, p0, Lmu6;->d:Ljava/lang/Object;
-
-    iget p1, p0, Lmu6;->o:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lmu6;->o:I
-
-    iget-object p1, p0, Lmu6;->X:Lku6;
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0, p0}, Lku6;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    return v0
+.end method
 
-    move-result-object p1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    return-object p1
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lmu6;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lmu6;
+
+    iget-object v1, p0, Lmu6;->a:Ljava/lang/String;
+
+    iget-object p1, p1, Lmu6;->a:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lmu6;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "AsString(string="
+
+    const-string v1, ")"
+
+    iget-object v2, p0, Lmu6;->a:Ljava/lang/String;
+
+    invoke-static {v0, v2, v1}, Ltx8;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
+
+    iget-object p2, p0, Lmu6;->a:Ljava/lang/String;
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    return-void
 .end method

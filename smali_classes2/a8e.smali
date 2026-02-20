@@ -1,75 +1,60 @@
-.class public final La8e;
-.super Lnth;
+.class public final synthetic La8e;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic X:[Lz28;
+# interfaces
+.implements Ljava/util/concurrent/Callable;
 
 
 # instance fields
-.field public final b:Lo58;
+.field public final synthetic a:I
 
-.field public final c:Lo58;
-
-.field public final d:Lx07;
-
-.field public final o:Lcm5;
+.field public final synthetic b:Lis6;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public synthetic constructor <init>(ILis6;)V
+    .locals 0
 
-    new-instance v0, Lhfa;
+    iput p1, p0, La8e;->a:I
 
-    const-string v1, "enableSafeModeJob"
+    iput-object p2, p0, La8e;->b:Lis6;
 
-    const-string v2, "getEnableSafeModeJob()Lkotlinx/coroutines/Job;"
-
-    const-class v3, La8e;
-
-    invoke-direct {v0, v3, v1, v2}, Lhfa;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
-
-    sget-object v1, Lctd;->a:Ldtd;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v1, 0x1
-
-    new-array v1, v1, [Lz28;
-
-    const/4 v2, 0x0
-
-    aput-object v0, v1, v2
-
-    sput-object v1, La8e;->X:[Lz28;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public constructor <init>(Lo58;Lo58;)V
-    .locals 0
 
-    invoke-direct {p0}, Lnth;-><init>()V
+# virtual methods
+.method public final call()Ljava/lang/Object;
+    .locals 1
 
-    iput-object p1, p0, La8e;->b:Lo58;
+    iget v0, p0, La8e;->a:I
 
-    iput-object p2, p0, La8e;->c:Lo58;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-static {}, Lhlj;->b()Lx07;
+    iget-object v0, p0, La8e;->b:Lis6;
 
-    move-result-object p1
+    invoke-interface {v0}, Lis6;->invoke()Ljava/lang/Object;
 
-    iput-object p1, p0, La8e;->d:Lx07;
+    move-result-object v0
 
-    new-instance p1, Lcm5;
+    return-object v0
 
-    const/4 p2, 0x0
+    :pswitch_0
+    iget-object v0, p0, La8e;->b:Lis6;
 
-    invoke-direct {p1, p2}, Lcm5;-><init>(I)V
+    invoke-interface {v0}, Lis6;->invoke()Ljava/lang/Object;
 
-    iput-object p1, p0, La8e;->o:Lcm5;
+    move-result-object v0
 
-    return-void
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

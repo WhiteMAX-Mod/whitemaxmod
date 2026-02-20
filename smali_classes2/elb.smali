@@ -1,51 +1,67 @@
-.class public final Lelb;
-.super Lo84;
+.class public abstract Lelb;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic X:Lklb;
+# static fields
+.field public static final a:I
 
-.field public Y:I
+.field public static final b:I
 
-.field public d:Ljava/util/Iterator;
+.field public static final c:I
 
-.field public synthetic o:Ljava/lang/Object;
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
 
 
 # direct methods
-.method public constructor <init>(Lklb;Lo84;)V
-    .locals 0
-
-    iput-object p1, p0, Lelb;->X:Lklb;
-
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method static constructor <clinit>()V
     .locals 1
 
-    iput-object p1, p0, Lelb;->o:Ljava/lang/Object;
+    sget v0, Lufd;->oneme_settings_ringtone_section_bottom_vh:I
 
-    iget p1, p0, Lelb;->Y:I
+    sput v0, Lelb;->a:I
 
-    const/high16 v0, -0x80000000
+    sget v0, Lufd;->oneme_settings_ringtone_section_custom_add:I
 
-    or-int/2addr p1, v0
+    sput v0, Lelb;->b:I
 
-    iput p1, p0, Lelb;->Y:I
+    sget v0, Lufd;->oneme_settings_ringtone_section_default:I
 
-    iget-object p1, p0, Lelb;->X:Lklb;
+    sput v0, Lelb;->c:I
 
-    const/4 v0, 0x0
+    sget v0, Lufd;->oneme_settings_ringtone_section_header_vh:I
 
-    invoke-virtual {p1, v0, v0, p0}, Lklb;->a(Ljava/io/File;Ljava/lang/String;Lo84;)Ljava/lang/Object;
+    sput v0, Lelb;->d:I
 
-    move-result-object p1
+    sget v0, Lufd;->oneme_settings_ringtone_section_item_vh:I
 
-    return-object p1
+    sput v0, Lelb;->e:I
+
+    sget v0, Lufd;->oneme_settings_ringtone_section_system:I
+
+    sput v0, Lelb;->f:I
+
+    sget v0, Lufd;->oneme_settings_ringtone_section_system_default:I
+
+    sput v0, Lelb;->g:I
+
+    sget v0, Lufd;->oneme_settings_ringtone_settings_list:I
+
+    sput v0, Lelb;->h:I
+
+    sget v0, Lufd;->oneme_settings_ringtone_title:I
+
+    sput v0, Lelb;->i:I
+
+    return-void
 .end method

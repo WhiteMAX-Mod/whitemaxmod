@@ -1,56 +1,141 @@
-.class public final synthetic Lxmi;
+.class public abstract Lxmi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lcom/my/tracker/core/utils/Consumer;
 
+# static fields
+.field public static a:Z = false
 
-# instance fields
-.field public final synthetic a:I
+.field public static final b:[B
 
-.field public final synthetic b:J
+.field public static final c:[B
 
-.field public final synthetic c:Ljava/lang/String;
+.field public static final d:[B
 
-.field public final synthetic d:Ljava/lang/String;
+.field public static final e:[B
+
+.field public static final f:[B
 
 
 # direct methods
-.method public synthetic constructor <init>(IJLjava/lang/String;Ljava/lang/String;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "RIFF"
 
-    iput p1, p0, Lxmi;->a:I
+    invoke-static {v0}, Lxmi;->a(Ljava/lang/String;)[B
 
-    iput-wide p2, p0, Lxmi;->b:J
+    move-result-object v0
 
-    iput-object p4, p0, Lxmi;->c:Ljava/lang/String;
+    sput-object v0, Lxmi;->b:[B
 
-    iput-object p5, p0, Lxmi;->d:Ljava/lang/String;
+    const-string v0, "WEBP"
+
+    invoke-static {v0}, Lxmi;->a(Ljava/lang/String;)[B
+
+    move-result-object v0
+
+    sput-object v0, Lxmi;->c:[B
+
+    const-string v0, "VP8 "
+
+    invoke-static {v0}, Lxmi;->a(Ljava/lang/String;)[B
+
+    move-result-object v0
+
+    sput-object v0, Lxmi;->d:[B
+
+    const-string v0, "VP8L"
+
+    invoke-static {v0}, Lxmi;->a(Ljava/lang/String;)[B
+
+    move-result-object v0
+
+    sput-object v0, Lxmi;->e:[B
+
+    const-string v0, "VP8X"
+
+    invoke-static {v0}, Lxmi;->a(Ljava/lang/String;)[B
+
+    move-result-object v0
+
+    sput-object v0, Lxmi;->f:[B
 
     return-void
 .end method
 
+.method public static a(Ljava/lang/String;)[B
+    .locals 2
 
-# virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 6
+    :try_start_0
+    const-string v0, "ASCII"
 
-    iget-object v4, p0, Lxmi;->d:Ljava/lang/String;
+    invoke-virtual {p0, v0}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
 
-    move-object v5, p1
+    move-result-object p0
+    :try_end_0
+    .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
 
-    check-cast v5, Landroid/content/SharedPreferences$Editor;
+    return-object p0
 
-    iget v0, p0, Lxmi;->a:I
+    :catch_0
+    move-exception p0
 
-    iget-wide v1, p0, Lxmi;->b:J
+    new-instance v0, Ljava/lang/RuntimeException;
 
-    iget-object v3, p0, Lxmi;->c:Ljava/lang/String;
+    const-string v1, "ASCII not found!"
 
-    invoke-static/range {v0 .. v5}, Lcom/my/tracker/applifecycle/o/c;->b(IJLjava/lang/String;Ljava/lang/String;Landroid/content/SharedPreferences$Editor;)V
+    invoke-direct {v0, v1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    return-void
+    throw v0
+.end method
+
+.method public static b([B[BI)Z
+    .locals 4
+
+    const/4 v0, 0x0
+
+    if-eqz p1, :cond_3
+
+    array-length v1, p1
+
+    add-int/2addr v1, p2
+
+    array-length v2, p0
+
+    if-le v1, v2, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    move v1, v0
+
+    :goto_0
+    array-length v2, p1
+
+    if-ge v1, v2, :cond_2
+
+    add-int v2, v1, p2
+
+    aget-byte v2, p0, v2
+
+    aget-byte v3, p1, v1
+
+    if-eq v2, v3, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_3
+    :goto_1
+    return v0
 .end method

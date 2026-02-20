@@ -1,331 +1,157 @@
 .class public final Llo6;
-.super Ljava/lang/Object;
+.super Landroid/view/animation/AnimationSet;
 .source "SourceFile"
 
 # interfaces
-.implements Laq0;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public a:I
+.field public final a:Landroid/view/ViewGroup;
 
-.field public b:Lkg3;
+.field public final b:Landroid/view/View;
+
+.field public c:Z
+
+.field public d:Z
+
+.field public o:Z
 
 
 # direct methods
-.method public constructor <init>(ILkg3;)V
-    .locals 0
+.method public constructor <init>(Landroid/view/animation/Animation;Landroid/view/ViewGroup;Landroid/view/View;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
 
-    iput-object p2, p0, Llo6;->b:Lkg3;
+    invoke-direct {p0, v0}, Landroid/view/animation/AnimationSet;-><init>(Z)V
 
-    iput p1, p0, Llo6;->a:I
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Llo6;->o:Z
+
+    iput-object p2, p0, Llo6;->a:Landroid/view/ViewGroup;
+
+    iput-object p3, p0, Llo6;->b:Landroid/view/View;
+
+    invoke-virtual {p0, p1}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
+
+    invoke-virtual {p2, p0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public declared-synchronized a()V
-    .locals 1
-
-    monitor-enter p0
-
-    :try_start_0
-    iget-object v0, p0, Llo6;->b:Lkg3;
-
-    invoke-static {v0}, Lkg3;->f0(Lkg3;)V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Llo6;->b:Lkg3;
-
-    const/4 v0, -0x1
-
-    iput v0, p0, Llo6;->a:I
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p0
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
-.end method
-
-.method public declared-synchronized clear()V
-    .locals 1
-
-    monitor-enter p0
-
-    :try_start_0
-    invoke-virtual {p0}, Llo6;->a()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p0
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
-.end method
-
-.method public declared-synchronized l(I)Z
-    .locals 1
-
-    monitor-enter p0
-
-    :try_start_0
-    iget v0, p0, Llo6;->a:I
-
-    if-ne p1, v0, :cond_0
-
-    iget-object p1, p0, Llo6;->b:Lkg3;
-
-    invoke-static {p1}, Lkg3;->A0(Lkg3;)Z
-
-    move-result p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x1
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    monitor-exit p0
-
-    return p1
-
-    :goto_1
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
-.end method
-
-.method public declared-synchronized m()Lkg3;
-    .locals 1
-
-    monitor-enter p0
-
-    :try_start_0
-    iget-object v0, p0, Llo6;->b:Lkg3;
-
-    invoke-static {v0}, Lkg3;->H(Lkg3;)Lkg3;
-
-    move-result-object v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p0
-
-    return-object v0
-
-    :catchall_0
-    move-exception v0
-
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
-.end method
-
-.method public declared-synchronized p(ILkg3;)V
+.method public final getTransformation(JLandroid/view/animation/Transformation;)Z
     .locals 2
 
-    monitor-enter p0
+    const/4 v0, 0x1
 
-    :try_start_0
-    iget-object v0, p0, Llo6;->b:Lkg3;
+    .line 1
+    iput-boolean v0, p0, Llo6;->o:Z
 
-    if-eqz v0, :cond_1
-
-    invoke-virtual {p2}, Lkg3;->p0()Ljava/lang/Object;
-
-    move-result-object v0
-
-    iget-object v1, p0, Llo6;->b:Lkg3;
+    .line 2
+    iget-boolean v1, p0, Llo6;->c:Z
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v1}, Lkg3;->p0()Ljava/lang/Object;
+    .line 3
+    iget-boolean p1, p0, Llo6;->d:Z
 
-    move-result-object v1
+    xor-int/2addr p1, v0
 
-    check-cast v1, Landroid/graphics/Bitmap;
+    return p1
 
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
+    .line 4
     :cond_0
-    const/4 v1, 0x0
+    invoke-super {p0, p1, p2, p3}, Landroid/view/animation/AnimationSet;->getTransformation(JLandroid/view/animation/Transformation;)Z
 
-    :goto_0
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    move-result p1
 
-    move-result v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    if-nez p1, :cond_1
 
-    if-eqz v0, :cond_1
+    .line 5
+    iput-boolean v0, p0, Llo6;->c:Z
 
-    monitor-exit p0
+    .line 6
+    iget-object p1, p0, Llo6;->a:Landroid/view/ViewGroup;
 
-    return-void
+    invoke-static {p1, p0}, Lbqb;->a(Landroid/view/View;Ljava/lang/Runnable;)Lbqb;
 
     :cond_1
-    :try_start_1
-    iget-object v0, p0, Llo6;->b:Lkg3;
+    return v0
+.end method
 
-    invoke-static {v0}, Lkg3;->f0(Lkg3;)V
+.method public final getTransformation(JLandroid/view/animation/Transformation;F)Z
+    .locals 2
 
-    invoke-virtual {p2}, Lkg3;->E()Lkg3;
+    const/4 v0, 0x1
 
-    move-result-object p2
+    .line 7
+    iput-boolean v0, p0, Llo6;->o:Z
 
-    iput-object p2, p0, Llo6;->b:Lkg3;
+    .line 8
+    iget-boolean v1, p0, Llo6;->c:Z
 
-    iput p1, p0, Llo6;->a:I
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    if-eqz v1, :cond_0
 
-    monitor-exit p0
+    .line 9
+    iget-boolean p1, p0, Llo6;->d:Z
+
+    xor-int/2addr p1, v0
+
+    return p1
+
+    .line 10
+    :cond_0
+    invoke-super {p0, p1, p2, p3, p4}, Landroid/view/animation/Animation;->getTransformation(JLandroid/view/animation/Transformation;F)Z
+
+    move-result p1
+
+    if-nez p1, :cond_1
+
+    .line 11
+    iput-boolean v0, p0, Llo6;->c:Z
+
+    .line 12
+    iget-object p1, p0, Llo6;->a:Landroid/view/ViewGroup;
+
+    invoke-static {p1, p0}, Lbqb;->a(Landroid/view/View;Ljava/lang/Runnable;)Lbqb;
+
+    :cond_1
+    return v0
+.end method
+
+.method public final run()V
+    .locals 2
+
+    iget-boolean v0, p0, Llo6;->c:Z
+
+    iget-object v1, p0, Llo6;->a:Landroid/view/ViewGroup;
+
+    if-nez v0, :cond_0
+
+    iget-boolean v0, p0, Llo6;->o:Z
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Llo6;->o:Z
+
+    invoke-virtual {v1, p0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
     return-void
-
-    :goto_1
-    :try_start_2
-    monitor-exit p0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    throw p1
-.end method
-
-.method public u(ILkg3;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public declared-synchronized w()Lkg3;
-    .locals 1
-
-    monitor-enter p0
-
-    :try_start_0
-    iget-object v0, p0, Llo6;->b:Lkg3;
-
-    invoke-static {v0}, Lkg3;->H(Lkg3;)Lkg3;
-
-    move-result-object v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
-
-    :try_start_1
-    invoke-virtual {p0}, Llo6;->a()V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    monitor-exit p0
-
-    return-object v0
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_0
-
-    :catchall_1
-    move-exception v0
-
-    :try_start_2
-    invoke-virtual {p0}, Llo6;->a()V
-
-    throw v0
-
-    :goto_0
-    monitor-exit p0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    throw v0
-.end method
-
-.method public declared-synchronized y(I)Lkg3;
-    .locals 1
-
-    monitor-enter p0
-
-    :try_start_0
-    iget v0, p0, Llo6;->a:I
-
-    if-ne v0, p1, :cond_0
-
-    iget-object p1, p0, Llo6;->b:Lkg3;
-
-    invoke-static {p1}, Lkg3;->H(Lkg3;)Lkg3;
-
-    move-result-object p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
 
     :cond_0
-    const/4 p1, 0x0
+    iget-object v0, p0, Llo6;->b:Landroid/view/View;
 
-    :goto_0
-    monitor-exit p0
+    invoke-virtual {v1, v0}, Landroid/view/ViewGroup;->endViewTransition(Landroid/view/View;)V
 
-    return-object p1
+    const/4 v0, 0x1
 
-    :goto_1
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    iput-boolean v0, p0, Llo6;->d:Z
 
-    throw p1
+    return-void
 .end method

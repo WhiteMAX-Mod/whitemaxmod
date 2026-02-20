@@ -20,21 +20,21 @@
         "Lru/ok/android/externcalls/sdk/log/stat/ProductStatisticsManagerImpl;",
         "Lru/ok/android/externcalls/sdk/log/stat/BaseStatisticsManagerImpl;",
         "Lru/ok/android/externcalls/sdk/log/stat/item/ProductStatItem;",
-        "Lxkg;",
+        "Losg;",
         "timeProvider",
         "Lru/ok/android/externcalls/sdk/log/ItemToLogConverter;",
         "logConverter",
         "<init>",
-        "(Lxkg;Lru/ok/android/externcalls/sdk/log/ItemToLogConverter;)V",
+        "(Losg;Lru/ok/android/externcalls/sdk/log/ItemToLogConverter;)V",
         "",
         "timestamp",
         "getTime",
         "(J)J",
         "statItem",
-        "Lb3h;",
+        "Lmah;",
         "log",
         "(Lru/ok/android/externcalls/sdk/log/stat/item/ProductStatItem;)V",
-        "Lxkg;",
+        "Losg;",
         "calls-sdk_release"
     }
     k = 0x1
@@ -48,16 +48,16 @@
 
 
 # instance fields
-.field private final timeProvider:Lxkg;
+.field private final timeProvider:Losg;
 
 
 # direct methods
-.method public constructor <init>(Lxkg;Lru/ok/android/externcalls/sdk/log/ItemToLogConverter;)V
+.method public constructor <init>(Losg;Lru/ok/android/externcalls/sdk/log/ItemToLogConverter;)V
     .locals 0
 
     invoke-direct {p0, p2}, Lru/ok/android/externcalls/sdk/log/stat/BaseStatisticsManagerImpl;-><init>(Lru/ok/android/externcalls/sdk/log/ItemToLogConverter;)V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/log/stat/ProductStatisticsManagerImpl;->timeProvider:Lxkg;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/log/stat/ProductStatisticsManagerImpl;->timeProvider:Losg;
 
     return-void
 .end method
@@ -73,9 +73,9 @@
 
     if-nez v0, :cond_0
 
-    iget-object p1, p0, Lru/ok/android/externcalls/sdk/log/stat/ProductStatisticsManagerImpl;->timeProvider:Lxkg;
+    iget-object p1, p0, Lru/ok/android/externcalls/sdk/log/stat/ProductStatisticsManagerImpl;->timeProvider:Losg;
 
-    invoke-interface {p1}, Lxkg;->utcTimeMs()J
+    invoke-interface {p1}, Losg;->utcTimeMs()J
 
     move-result-wide p1
 

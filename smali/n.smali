@@ -1,580 +1,80 @@
 .class public final Ln;
-.super Ljava/lang/Object;
+.super Lpdg;
 .source "SourceFile"
 
 # interfaces
-.implements Lmth;
+.implements Lys6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lone/me/aboutappsettings/AboutAppSettingsScreen;
 
-.field public final synthetic b:Llq6;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILlq6;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/aboutappsettings/AboutAppSettingsScreen;)V
     .locals 0
 
-    iput p1, p0, Ln;->a:I
+    iput-object p2, p0, Ln;->X:Lone/me/aboutappsettings/AboutAppSettingsScreen;
 
-    iput-object p2, p0, Ln;->b:Llq6;
+    const/4 p2, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2, p1}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Class;)Lnth;
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Ln;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Ln;
+
+    sget-object p2, Lmah;->a:Lmah;
+
+    invoke-virtual {p1, p2}, Ln;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Ln;
+
+    iget-object v1, p0, Ln;->X:Lone/me/aboutappsettings/AboutAppSettingsScreen;
+
+    invoke-direct {v0, p2, v1}, Ln;-><init>(Lkotlin/coroutines/Continuation;Lone/me/aboutappsettings/AboutAppSettingsScreen;)V
+
+    iput-object p1, v0, Ln;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget v0, p0, Ln;->a:I
+    iget-object v0, p0, Ln;->o:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    iget-object v0, p0, Ln;->b:Llq6;
+    check-cast v0, Ljava/util/List;
 
-    check-cast v0, Lwd2;
+    iget-object p1, p0, Ln;->X:Lone/me/aboutappsettings/AboutAppSettingsScreen;
 
-    invoke-virtual {v0}, Lwd2;->invoke()Ljava/lang/Object;
+    iget-object p1, p1, Lone/me/aboutappsettings/AboutAppSettingsScreen;->c:Lmh6;
 
-    move-result-object v0
+    invoke-virtual {p1, v0}, Lfg8;->F(Ljava/util/List;)V
 
-    invoke-virtual {p1, v0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lnth;
+    sget-object p1, Lmah;->a:Lmah;
 
     return-object p1
-
-    :pswitch_0
-    iget-object v0, p0, Ln;->b:Llq6;
-
-    check-cast v0, Lxd2;
-
-    invoke-virtual {v0}, Lxd2;->invoke()Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lnth;
-
-    return-object p1
-
-    :pswitch_1
-    iget-object v0, p0, Ln;->b:Llq6;
-
-    check-cast v0, Lxd2;
-
-    invoke-virtual {v0}, Lxd2;->invoke()Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lnth;
-
-    return-object p1
-
-    :pswitch_2
-    iget-object v0, p0, Ln;->b:Llq6;
-
-    check-cast v0, Lfm1;
-
-    invoke-virtual {v0}, Lfm1;->invoke()Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lnth;
-
-    return-object p1
-
-    :pswitch_3
-    iget-object v0, p0, Ln;->b:Llq6;
-
-    check-cast v0, Lil1;
-
-    invoke-virtual {v0}, Lil1;->invoke()Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lnth;
-
-    return-object p1
-
-    :pswitch_4
-    iget-object v0, p0, Ln;->b:Llq6;
-
-    check-cast v0, Lfm1;
-
-    invoke-virtual {v0}, Lfm1;->invoke()Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lnth;
-
-    return-object p1
-
-    :pswitch_5
-    iget-object v0, p0, Ln;->b:Llq6;
-
-    check-cast v0, Lil1;
-
-    invoke-virtual {v0}, Lil1;->invoke()Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lnth;
-
-    return-object p1
-
-    :pswitch_6
-    iget-object v0, p0, Ln;->b:Llq6;
-
-    check-cast v0, Lin1;
-
-    invoke-virtual {v0}, Lin1;->invoke()Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lnth;
-
-    return-object p1
-
-    :pswitch_7
-    iget-object v0, p0, Ln;->b:Llq6;
-
-    check-cast v0, Lil1;
-
-    invoke-virtual {v0}, Lil1;->invoke()Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lnth;
-
-    return-object p1
-
-    :pswitch_8
-    iget-object v0, p0, Ln;->b:Llq6;
-
-    check-cast v0, Lvl1;
-
-    invoke-virtual {v0}, Lvl1;->invoke()Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lnth;
-
-    return-object p1
-
-    :pswitch_9
-    iget-object v0, p0, Ln;->b:Llq6;
-
-    check-cast v0, Lg31;
-
-    invoke-virtual {v0}, Lg31;->invoke()Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lnth;
-
-    return-object p1
-
-    :pswitch_a
-    iget-object v0, p0, Ln;->b:Llq6;
-
-    check-cast v0, Lh3;
-
-    invoke-virtual {v0}, Lh3;->invoke()Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lnth;
-
-    return-object p1
-
-    :pswitch_b
-    iget-object v0, p0, Ln;->b:Llq6;
-
-    check-cast v0, Lh3;
-
-    invoke-virtual {v0}, Lh3;->invoke()Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lnth;
-
-    return-object p1
-
-    :pswitch_c
-    iget-object v0, p0, Ln;->b:Llq6;
-
-    check-cast v0, Lh3;
-
-    invoke-virtual {v0}, Lh3;->invoke()Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lnth;
-
-    return-object p1
-
-    :pswitch_d
-    iget-object v0, p0, Ln;->b:Llq6;
-
-    check-cast v0, Lce1;
-
-    invoke-virtual {v0}, Lce1;->invoke()Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lnth;
-
-    return-object p1
-
-    :pswitch_e
-    iget-object v0, p0, Ln;->b:Llq6;
-
-    check-cast v0, Lh3;
-
-    invoke-virtual {v0}, Lh3;->invoke()Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lnth;
-
-    return-object p1
-
-    :pswitch_f
-    iget-object v0, p0, Ln;->b:Llq6;
-
-    check-cast v0, Lnc1;
-
-    invoke-virtual {v0}, Lnc1;->invoke()Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lnth;
-
-    return-object p1
-
-    :pswitch_10
-    iget-object v0, p0, Ln;->b:Llq6;
-
-    check-cast v0, Lgc1;
-
-    invoke-virtual {v0}, Lgc1;->invoke()Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lnth;
-
-    return-object p1
-
-    :pswitch_11
-    iget-object v0, p0, Ln;->b:Llq6;
-
-    check-cast v0, Lg31;
-
-    invoke-virtual {v0}, Lg31;->invoke()Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lnth;
-
-    return-object p1
-
-    :pswitch_12
-    iget-object v0, p0, Ln;->b:Llq6;
-
-    check-cast v0, Lg31;
-
-    invoke-virtual {v0}, Lg31;->invoke()Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lnth;
-
-    return-object p1
-
-    :pswitch_13
-    iget-object v0, p0, Ln;->b:Llq6;
-
-    check-cast v0, Lh2;
-
-    invoke-virtual {v0}, Lh2;->invoke()Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lnth;
-
-    return-object p1
-
-    :pswitch_14
-    iget-object v0, p0, Ln;->b:Llq6;
-
-    check-cast v0, Lj;
-
-    invoke-virtual {v0}, Lj;->invoke()Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lnth;
-
-    return-object p1
-
-    :pswitch_15
-    iget-object v0, p0, Ln;->b:Llq6;
-
-    check-cast v0, Lj;
-
-    invoke-virtual {v0}, Lj;->invoke()Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lnth;
-
-    return-object p1
-
-    :pswitch_16
-    iget-object v0, p0, Ln;->b:Llq6;
-
-    check-cast v0, Lj;
-
-    invoke-virtual {v0}, Lj;->invoke()Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lnth;
-
-    return-object p1
-
-    :pswitch_17
-    iget-object v0, p0, Ln;->b:Llq6;
-
-    check-cast v0, Lh2;
-
-    invoke-virtual {v0}, Lh2;->invoke()Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lnth;
-
-    return-object p1
-
-    :pswitch_18
-    iget-object v0, p0, Ln;->b:Llq6;
-
-    check-cast v0, Lj;
-
-    invoke-virtual {v0}, Lj;->invoke()Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lnth;
-
-    return-object p1
-
-    :pswitch_19
-    iget-object v0, p0, Ln;->b:Llq6;
-
-    check-cast v0, Lh2;
-
-    invoke-virtual {v0}, Lh2;->invoke()Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lnth;
-
-    return-object p1
-
-    :pswitch_1a
-    iget-object v0, p0, Ln;->b:Llq6;
-
-    check-cast v0, Lh2;
-
-    invoke-virtual {v0}, Lh2;->invoke()Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lnth;
-
-    return-object p1
-
-    :pswitch_1b
-    iget-object v0, p0, Ln;->b:Llq6;
-
-    check-cast v0, Lh3;
-
-    invoke-virtual {v0}, Lh3;->invoke()Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lnth;
-
-    return-object p1
-
-    :pswitch_1c
-    iget-object v0, p0, Ln;->b:Llq6;
-
-    check-cast v0, Lj;
-
-    invoke-virtual {v0}, Lj;->invoke()Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lnth;
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1c
-        :pswitch_1b
-        :pswitch_1a
-        :pswitch_19
-        :pswitch_18
-        :pswitch_17
-        :pswitch_16
-        :pswitch_15
-        :pswitch_14
-        :pswitch_13
-        :pswitch_12
-        :pswitch_11
-        :pswitch_10
-        :pswitch_f
-        :pswitch_e
-        :pswitch_d
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

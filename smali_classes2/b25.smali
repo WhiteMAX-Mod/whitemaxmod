@@ -1,186 +1,163 @@
-.class public final Lb25;
+.class public abstract Lb25;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static j:Ljava/util/ArrayList;
+.field public static final a:Ljava/util/HashMap;
 
-.field public static k:Lb25;
-
-.field public static final l:Ljava/util/ArrayList;
-
-.field public static final m:Lh6;
-
-
-# instance fields
-.field public final a:Ljava/util/ArrayList;
-
-.field public final b:Landroid/util/SparseIntArray;
-
-.field public final c:Ljava/util/ArrayList;
-
-.field public final d:I
-
-.field public e:I
-
-.field public final f:I
-
-.field public g:I
-
-.field public h:Z
-
-.field public final i:Lve;
+.field public static final b:Ljava/util/regex/Pattern;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 5
 
-    new-instance v0, Ljava/util/ArrayList;
+    new-instance v0, Ljava/util/HashMap;
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    sput-object v0, Lb25;->l:Ljava/util/ArrayList;
+    const/4 v1, 0x0
 
-    new-instance v0, Lh6;
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    const-string v2, "px"
+
+    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, v1}, Lh6;-><init>(I)V
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    sput-object v0, Lb25;->m:Lh6;
+    move-result-object v1
 
-    return-void
-.end method
+    const-string v2, "dip"
 
-.method public constructor <init>(I)V
-    .locals 2
+    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v2, "sp"
 
-    new-instance v0, Ljava/util/ArrayList;
+    const/4 v3, 0x2
 
-    const/16 v1, 0xa
+    const-string v4, "dp"
 
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
+    invoke-static {v0, v4, v1, v3, v2}, Lw33;->i(Ljava/util/HashMap;Ljava/lang/String;Ljava/lang/Integer;ILjava/lang/String;)V
 
-    iput-object v0, p0, Lb25;->a:Ljava/util/ArrayList;
+    const-string v1, "in"
 
-    new-instance v0, Landroid/util/SparseIntArray;
+    const/4 v2, 0x4
 
-    invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
+    const/4 v3, 0x3
 
-    iput-object v0, p0, Lb25;->b:Landroid/util/SparseIntArray;
+    const-string v4, "pt"
 
-    new-instance v0, Ljava/util/ArrayList;
+    invoke-static {v3, v0, v4, v2, v1}, Lw33;->f(ILjava/util/HashMap;Ljava/lang/String;ILjava/lang/String;)V
 
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
+    const/4 v1, 0x5
 
-    iput-object v0, p0, Lb25;->c:Ljava/util/ArrayList;
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    new-instance v0, Lve;
+    move-result-object v1
 
-    const/16 v1, 0xd
+    const-string v2, "mm"
 
-    invoke-direct {v0, v1, p0}, Lve;-><init>(ILjava/lang/Object;)V
+    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    iput-object v0, p0, Lb25;->i:Lve;
+    sput-object v0, Lb25;->a:Ljava/util/HashMap;
 
-    iput p1, p0, Lb25;->d:I
+    const-string v0, "^\\s*(\\d+(\\.\\d+)*)\\s*([a-zA-Z]+)\\s*$"
 
-    sget-object p1, La25;->j:Ljava/security/SecureRandom;
-
-    invoke-virtual {p1}, Ljava/util/Random;->nextInt()I
-
-    move-result p1
-
-    iput p1, p0, Lb25;->f:I
-
-    return-void
-.end method
-
-.method public static a(Ljava/lang/Runnable;Z)V
-    .locals 3
-
-    invoke-static {}, Lie;->b()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    invoke-static {}, Lone/me/rlottie/RLottie;->getLogger()Lwia;
-
-    move-result-object p0
-
-    new-instance p1, Ljava/lang/RuntimeException;
-
-    const-string v0, "wrong thread"
-
-    invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    invoke-interface {p0, p1}, Lwia;->o(Ljava/lang/Throwable;)V
-
-    return-void
-
-    :cond_0
-    sget-object v0, Lb25;->j:Ljava/util/ArrayList;
-
-    sget-object v1, Lb25;->m:Lh6;
-
-    if-nez v0, :cond_2
-
-    sget-object v0, Lb25;->l:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
-
-    move-result v2
-
-    if-nez v2, :cond_1
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v2
-
-    add-int/lit8 v2, v2, -0x1
-
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v0
 
-    check-cast v0, Ljava/util/ArrayList;
+    sput-object v0, Lb25;->b:Ljava/util/regex/Pattern;
 
-    sput-object v0, Lb25;->j:Ljava/util/ArrayList;
+    return-void
+.end method
 
-    goto :goto_0
+.method public static a(Landroid/content/Context;Ljava/lang/String;)F
+    .locals 2
+
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object p0
+
+    sget-object v0, Lb25;->b:Ljava/util/regex/Pattern;
+
+    invoke-virtual {v0, p1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/util/regex/Matcher;->matches()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p1, v0}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/lang/Float;->valueOf(Ljava/lang/String;)Ljava/lang/Float;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
+
+    move-result v0
+
+    const/4 v1, 0x3
+
+    invoke-virtual {p1, v1}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    sget-object v1, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
+
+    invoke-virtual {p1, v1}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
+
+    move-result-object p1
+
+    sget-object v1, Lb25;->a:Ljava/util/HashMap;
+
+    invoke-virtual {v1, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Integer;
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
+
+    move-result p1
+
+    invoke-static {p1, v0, p0}, Landroid/util/TypedValue;->applyDimension(IFLandroid/util/DisplayMetrics;)F
+
+    move-result p0
+
+    return p0
+
+    :cond_0
+    new-instance p0, Ljava/lang/NumberFormatException;
+
+    invoke-direct {p0}, Ljava/lang/NumberFormatException;-><init>()V
+
+    throw p0
 
     :cond_1
-    new-instance v0, Ljava/util/ArrayList;
+    new-instance p0, Ljava/lang/NumberFormatException;
 
-    const/16 v2, 0x64
+    invoke-direct {p0}, Ljava/lang/NumberFormatException;-><init>()V
 
-    invoke-direct {v0, v2}, Ljava/util/ArrayList;-><init>(I)V
-
-    sput-object v0, Lb25;->j:Ljava/util/ArrayList;
-
-    :goto_0
-    if-nez p1, :cond_2
-
-    invoke-static {v1}, Lie;->d(Ljava/lang/Runnable;)V
-
-    :cond_2
-    sget-object v0, Lb25;->j:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    if-eqz p1, :cond_3
-
-    sget-object p0, Lie;->a:Landroid/os/Handler;
-
-    invoke-virtual {p0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
-
-    invoke-virtual {v1}, Lh6;->run()V
-
-    :cond_3
-    return-void
+    throw p0
 .end method

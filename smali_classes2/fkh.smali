@@ -1,168 +1,59 @@
-.class public final Lfkh;
+.class public abstract synthetic Lfkh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/animation/Animator$AnimatorListener;
 
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ljkh;
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljkh;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    iput p2, p0, Lfkh;->a:I
+    const/4 v0, 0x4
 
-    iput-object p1, p0, Lfkh;->b:Ljkh;
+    invoke-static {v0}, Ly12;->x(I)[I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-result-object v1
 
-    return-void
-.end method
+    array-length v1, v1
 
-.method private final a(Landroid/animation/Animator;)V
-    .locals 0
+    new-array v1, v1, [I
 
-    return-void
-.end method
+    const/4 v2, 0x1
 
-.method private final b(Landroid/animation/Animator;)V
-    .locals 0
+    const/4 v3, 0x0
 
-    return-void
-.end method
+    :try_start_0
+    aput v2, v1, v3
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-.method private final c(Landroid/animation/Animator;)V
-    .locals 0
+    :catch_0
+    const/4 v3, 0x2
 
-    return-void
-.end method
+    :try_start_1
+    aput v3, v1, v2
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-.method private final d(Landroid/animation/Animator;)V
-    .locals 0
+    :catch_1
+    const/4 v2, 0x3
 
-    return-void
-.end method
+    :try_start_2
+    aput v2, v1, v3
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-.method private final e(Landroid/animation/Animator;)V
-    .locals 0
+    :catch_2
+    :try_start_3
+    aput v0, v1, v2
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
 
-    return-void
-.end method
-
-.method private final f(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 1
-
-    iget p1, p0, Lfkh;->a:I
-
-    packed-switch p1, :pswitch_data_0
-
-    iget-object p1, p0, Lfkh;->b:Ljkh;
-
-    invoke-static {p1}, Ljkh;->i(Ljkh;)V
-
-    return-void
-
-    :pswitch_0
-    iget-object p1, p0, Lfkh;->b:Ljkh;
-
-    iget-object p1, p1, Ljkh;->o:Llgh;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0}, Llgh;->b(Z)V
-
-    return-void
-
-    :pswitch_1
-    iget-object p1, p0, Lfkh;->b:Ljkh;
-
-    iget-object p1, p1, Ljkh;->o:Llgh;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0}, Llgh;->b(Z)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 1
-
-    iget p1, p0, Lfkh;->a:I
-
-    packed-switch p1, :pswitch_data_0
-
-    iget-object p1, p0, Lfkh;->b:Ljkh;
-
-    invoke-static {p1}, Ljkh;->i(Ljkh;)V
-
-    return-void
-
-    :pswitch_0
-    iget-object p1, p0, Lfkh;->b:Ljkh;
-
-    iget-object p1, p1, Ljkh;->o:Llgh;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0}, Llgh;->b(Z)V
-
-    return-void
-
-    :pswitch_1
-    iget-object p1, p0, Lfkh;->b:Ljkh;
-
-    iget-object p1, p1, Ljkh;->o:Llgh;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0}, Llgh;->b(Z)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final onAnimationRepeat(Landroid/animation/Animator;)V
-    .locals 0
-
-    iget p1, p0, Lfkh;->a:I
-
-    return-void
-.end method
-
-.method public final onAnimationStart(Landroid/animation/Animator;)V
-    .locals 0
-
-    iget p1, p0, Lfkh;->a:I
+    :catch_3
+    sput-object v1, Lfkh;->$EnumSwitchMapping$0:[I
 
     return-void
 .end method

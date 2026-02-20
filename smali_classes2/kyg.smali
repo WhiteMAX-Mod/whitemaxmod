@@ -1,139 +1,226 @@
 .class public final Lkyg;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lkyg;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final synthetic X:Ljava/lang/String;
+.field public final a:Ljyg;
 
-.field public final synthetic o:Lryg;
+.field public final b:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Lryg;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    new-instance v0, Ll7f;
+
+    const/16 v1, 0x17
+
+    invoke-direct {v0, v1}, Ll7f;-><init>(I)V
+
+    sput-object v0, Lkyg;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/os/Parcel;)V
+    .locals 2
+
+    .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 5
+    const-class v0, Ljyg;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
+
+    move-result-object v0
+
+    check-cast v0, Ljyg;
+
+    iput-object v0, p0, Lkyg;->a:Ljyg;
+
+    .line 6
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lkyg;->b:Ljava/util/List;
+
+    .line 7
+    sget-object v1, Ljyg;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->readTypedList(Ljava/util/List;Landroid/os/Parcelable$Creator;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljyg;Ljava/util/List;)V
     .locals 0
 
-    iput-object p1, p0, Lkyg;->o:Lryg;
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lkyg;->X:Ljava/lang/String;
+    .line 2
+    iput-object p1, p0, Lkyg;->a:Ljyg;
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    .line 3
+    iput-object p2, p0, Lkyg;->b:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final describeContents()I
+    .locals 1
 
-    check-cast p1, Lzb4;
+    const/4 v0, 0x0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lkyg;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lkyg;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lkyg;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
+    return v0
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    new-instance p1, Lkyg;
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, p0, Lkyg;->o:Lryg;
+    const/4 p1, 0x1
 
-    iget-object v1, p0, Lkyg;->X:Ljava/lang/String;
+    return p1
 
-    invoke-direct {p1, v0, v1, p2}, Lkyg;-><init>(Lryg;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
+    :cond_0
+    const/4 v0, 0x0
 
-    return-object p1
-.end method
+    if-eqz p1, :cond_3
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+    const-class v1, Lkyg;
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object p1, p0, Lkyg;->o:Lryg;
+    move-result-object v2
 
-    iget-object v0, p1, Lryg;->x0:Lspf;
-
-    invoke-virtual {v0}, Lspf;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lz0h;
-
-    instance-of v2, v1, Lw0h;
-
-    sget-object v3, Lb3h;->a:Lb3h;
-
-    if-eqz v2, :cond_1
-
-    iget-object p1, p1, Lryg;->A0:Ljava/util/concurrent/atomic/AtomicReference;
-
-    new-instance v2, Lvuf;
-
-    const/4 v4, 0x2
-
-    iget-object v5, p0, Lkyg;->X:Ljava/lang/String;
-
-    invoke-direct {v2, v5, v4}, Lvuf;-><init>(Ljava/lang/String;I)V
-
-    invoke-virtual {p1, v2}, Ljava/util/concurrent/atomic/AtomicReference;->getAndUpdate(Ljava/util/function/UnaryOperator;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/String;
-
-    check-cast v1, Lw0h;
-
-    iget-object v2, v1, Lw0h;->c:Lx0h;
-
-    iget-object v2, v2, Lx0h;->c:Lqhg;
-
-    if-eqz v2, :cond_1
-
-    invoke-static {p1, v5}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
+    if-eq v1, v2, :cond_1
 
     goto :goto_0
 
-    :cond_0
-    iget-object p1, v1, Lw0h;->c:Lx0h;
-
-    const/4 v2, 0x0
-
-    invoke-static {p1, v2}, Lx0h;->a(Lx0h;Lqhg;)Lx0h;
-
-    move-result-object p1
-
-    const/4 v4, 0x7
-
-    invoke-static {v1, v2, p1, v4}, Lw0h;->c(Lw0h;Lx0h;Lx0h;I)Lw0h;
-
-    move-result-object p1
-
-    invoke-virtual {v0, v2, p1}, Lspf;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
     :cond_1
+    check-cast p1, Lkyg;
+
+    iget-object v1, p0, Lkyg;->a:Ljyg;
+
+    iget-object v2, p1, Lkyg;->a:Ljyg;
+
+    invoke-virtual {v1, v2}, Ljyg;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v0
+
+    :cond_2
+    iget-object v0, p0, Lkyg;->b:Ljava/util/List;
+
+    iget-object p1, p1, Lkyg;->b:Ljava/util/List;
+
+    invoke-interface {v0, p1}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_3
     :goto_0
-    return-object v3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lkyg;->a:Ljyg;
+
+    invoke-virtual {v0}, Ljyg;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lkyg;->b:Ljava/util/List;
+
+    invoke-interface {v1}, Ljava/util/List;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "TrackContainer{videoTrack="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lkyg;->a:Ljyg;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", audioTracks="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lkyg;->b:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x7d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 1
+
+    iget-object v0, p0, Lkyg;->a:Ljyg;
+
+    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
+
+    iget-object p2, p0, Lkyg;->b:Ljava/util/List;
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeTypedList(Ljava/util/List;)V
+
+    return-void
 .end method

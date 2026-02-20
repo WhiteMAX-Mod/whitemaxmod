@@ -1,44 +1,34 @@
-.class public final Lsjd;
+.class public abstract Lsjd;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
-# instance fields
-.field public final a:Landroid/content/Context;
+# static fields
+.field public static audio_onboarding_intro:I = 0x7f130085
 
+.field public static complaint_dialog_description:I = 0x7f1303fd
 
-# direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 0
+.field public static complaint_dialog_title:I = 0x7f1303fe
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static pinbars_group_call_bar_button_text:I = 0x7f130b7b
 
-    iput-object p1, p0, Lsjd;->a:Landroid/content/Context;
+.field public static pinbars_group_call_bar_title:I = 0x7f130b7c
 
-    return-void
-.end method
+.field public static pinbars_pending_join_requests_title:I = 0x7f130b7d
 
+.field public static pinbars_report_and_leave:I = 0x7f130b7e
 
-# virtual methods
-.method public final a()I
-    .locals 2
+.field public static pinbars_report_and_leave_dialog_cancel_button:I = 0x7f130b7f
 
-    iget-object v0, p0, Lsjd;->a:Landroid/content/Context;
+.field public static pinbars_report_and_leave_dialog_confirm_button:I = 0x7f130b80
 
-    invoke-static {v0}, Lbnj;->a(Landroid/content/Context;)I
+.field public static pinbars_report_and_leave_dialog_description:I = 0x7f130b81
 
-    move-result v0
+.field public static pinbars_report_and_leave_dialog_title:I = 0x7f130b82
 
-    const/16 v1, 0x168
+.field public static pinbars_snackbar_unpinned:I = 0x7f130b83
 
-    if-lt v0, v1, :cond_0
+.field public static unknown_contact_add_to_contact:I = 0x7f130ed3
 
-    const/16 v0, 0x20
+.field public static unknown_contact_block_contact:I = 0x7f130ed4
 
-    return v0
-
-    :cond_0
-    const/16 v0, 0x1c
-
-    return v0
-.end method
+.field public static videomsg_player_type:I = 0x7f130f03

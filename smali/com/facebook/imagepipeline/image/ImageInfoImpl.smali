@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lai7;
+.implements Lui7;
 
 
 # instance fields
@@ -20,7 +20,7 @@
 
 .field private final height:I
 
-.field private final qualityInfo:Ll2d;
+.field private final qualityInfo:Lx7d;
 
 .field private final sizeInBytes:I
 
@@ -28,12 +28,12 @@
 
 
 # direct methods
-.method public constructor <init>(IIILl2d;Ljava/util/Map;)V
+.method public constructor <init>(IIILx7d;Ljava/util/Map;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(III",
-            "Ll2d;",
+            "Lx7d;",
             "Ljava/util/Map<",
             "Ljava/lang/String;",
             "Ljava/lang/Object;",
@@ -49,7 +49,7 @@
 
     iput p3, p0, Lcom/facebook/imagepipeline/image/ImageInfoImpl;->sizeInBytes:I
 
-    iput-object p4, p0, Lcom/facebook/imagepipeline/image/ImageInfoImpl;->qualityInfo:Ll2d;
+    iput-object p4, p0, Lcom/facebook/imagepipeline/image/ImageInfoImpl;->qualityInfo:Lx7d;
 
     iput-object p5, p0, Lcom/facebook/imagepipeline/image/ImageInfoImpl;->extras:Ljava/util/Map;
 
@@ -83,10 +83,10 @@
     return v0
 .end method
 
-.method public getQualityInfo()Ll2d;
+.method public getQualityInfo()Lx7d;
     .locals 1
 
-    iget-object v0, p0, Lcom/facebook/imagepipeline/image/ImageInfoImpl;->qualityInfo:Ll2d;
+    iget-object v0, p0, Lcom/facebook/imagepipeline/image/ImageInfoImpl;->qualityInfo:Lx7d;
 
     return-object v0
 .end method

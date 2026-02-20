@@ -1,196 +1,159 @@
-.class public abstract Lvi8;
-.super Ljava/lang/Object;
+.class public final Lvi8;
+.super Llha;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:[Ljava/util/Locale;
+# instance fields
+.field public final l:Lo4j;
+
+.field public m:Lab8;
+
+.field public n:Lwi8;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Lo4j;)V
+    .locals 1
 
-    new-instance v0, Ljava/util/Locale;
+    invoke-direct {p0}, Lvh8;-><init>()V
 
-    const-string v1, "en"
+    iput-object p1, p0, Lvi8;->l:Lo4j;
 
-    const-string v2, "XA"
+    iget-object v0, p1, Lo4j;->a:Lvi8;
 
-    invoke-direct {v0, v1, v2}, Ljava/util/Locale;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    if-nez v0, :cond_0
 
-    new-instance v1, Ljava/util/Locale;
+    iput-object p0, p1, Lo4j;->a:Lvi8;
 
-    const-string v2, "ar"
+    return-void
 
-    const-string v3, "XB"
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    invoke-direct {v1, v2, v3}, Ljava/util/Locale;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    const-string v0, "There is already a listener registered"
 
-    filled-new-array {v0, v1}, [Ljava/util/Locale;
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    move-result-object v0
+    throw p1
+.end method
 
-    sput-object v0, Lvi8;->a:[Ljava/util/Locale;
+
+# virtual methods
+.method public final g()V
+    .locals 2
+
+    iget-object v0, p0, Lvi8;->l:Lo4j;
+
+    const/4 v1, 0x1
+
+    iput-boolean v1, v0, Lo4j;->b:Z
+
+    const/4 v1, 0x0
+
+    iput-boolean v1, v0, Lo4j;->d:Z
+
+    iput-boolean v1, v0, Lo4j;->c:Z
+
+    iget-object v1, v0, Lo4j;->i:Ljava/util/concurrent/Semaphore;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/Semaphore;->drainPermits()I
+
+    invoke-virtual {v0}, Lo4j;->a()V
+
+    new-instance v1, Lxz;
+
+    invoke-direct {v1, v0}, Lxz;-><init>(Lo4j;)V
+
+    iput-object v1, v0, Lo4j;->g:Lxz;
+
+    invoke-virtual {v0}, Lo4j;->b()V
 
     return-void
 .end method
 
-.method public static a(Ljava/lang/String;)Ljava/util/Locale;
-    .locals 0
+.method public final h()V
+    .locals 2
 
-    invoke-static {p0}, Ljava/util/Locale;->forLanguageTag(Ljava/lang/String;)Ljava/util/Locale;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static b(Ljava/util/Locale;Ljava/util/Locale;)Z
-    .locals 5
-
-    invoke-virtual {p0, p1}, Ljava/util/Locale;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    goto :goto_3
-
-    :cond_0
-    invoke-virtual {p0}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
+    iget-object v0, p0, Lvi8;->l:Lo4j;
 
     const/4 v1, 0x0
 
-    if-nez v0, :cond_1
+    iput-boolean v1, v0, Lo4j;->b:Z
 
-    goto :goto_2
+    return-void
+.end method
 
-    :cond_1
-    sget-object v0, Lvi8;->a:[Ljava/util/Locale;
+.method public final j(Lw2b;)V
+    .locals 0
 
-    array-length v2, v0
+    invoke-super {p0, p1}, Lvh8;->j(Lw2b;)V
 
-    move v3, v1
+    const/4 p1, 0x0
 
-    :goto_0
-    if-ge v3, v2, :cond_3
+    iput-object p1, p0, Lvi8;->m:Lab8;
 
-    aget-object v4, v0, v3
+    iput-object p1, p0, Lvi8;->n:Lwi8;
 
-    invoke-virtual {v4, p0}, Ljava/util/Locale;->equals(Ljava/lang/Object;)Z
+    return-void
+.end method
 
-    move-result v4
+.method public final l()V
+    .locals 2
 
-    if-eqz v4, :cond_2
+    iget-object v0, p0, Lvi8;->m:Lab8;
 
-    goto :goto_2
+    iget-object v1, p0, Lvi8;->n:Lwi8;
 
-    :cond_2
-    add-int/lit8 v3, v3, 0x1
+    if-eqz v0, :cond_0
 
-    goto :goto_0
+    if-eqz v1, :cond_0
 
-    :cond_3
-    array-length v2, v0
+    invoke-super {p0, v1}, Lvh8;->j(Lw2b;)V
 
-    move v3, v1
+    invoke-virtual {p0, v0, v1}, Lvh8;->e(Lab8;Lw2b;)V
 
-    :goto_1
-    if-ge v3, v2, :cond_5
+    :cond_0
+    return-void
+.end method
 
-    aget-object v4, v0, v3
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    invoke-virtual {v4, p1}, Ljava/util/Locale;->equals(Ljava/lang/Object;)Z
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    move-result v4
+    const/16 v1, 0x40
 
-    if-eqz v4, :cond_4
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    goto :goto_2
+    const-string v1, "LoaderInfo{"
 
-    :cond_4
-    add-int/lit8 v3, v3, 0x1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_1
+    invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
-    :cond_5
-    invoke-static {p0}, Lbe7;->b(Ljava/util/Locale;)Landroid/icu/util/ULocale;
+    move-result v1
+
+    invoke-static {v1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, " #0 : "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lvi8;->l:Lo4j;
+
+    invoke-static {v0, v1}, Lzuj;->a(Ljava/lang/StringBuilder;Ljava/lang/Object;)V
+
+    const-string v1, "}}"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lbe7;->a(Ljava/lang/Object;)Landroid/icu/util/ULocale;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lbe7;->c(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_8
-
-    invoke-virtual {p0}, Ljava/util/Locale;->getCountry()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Ljava/lang/String;->isEmpty()Z
-
-    move-result v0
-
-    if-nez v0, :cond_7
-
-    invoke-virtual {p1}, Ljava/util/Locale;->getCountry()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_6
-
-    goto :goto_3
-
-    :cond_6
-    :goto_2
-    return v1
-
-    :cond_7
-    :goto_3
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_8
-    invoke-static {p1}, Lbe7;->b(Ljava/util/Locale;)Landroid/icu/util/ULocale;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lbe7;->a(Ljava/lang/Object;)Landroid/icu/util/ULocale;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lbe7;->c(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    return p0
+    return-object v0
 .end method

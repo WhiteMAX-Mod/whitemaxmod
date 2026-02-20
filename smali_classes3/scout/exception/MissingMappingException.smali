@@ -41,7 +41,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static {}, Lj6j;->c()Ljava/lang/String;
+    invoke-static {}, Lzej;->b()Ljava/lang/String;
 
     move-result-object v1
 

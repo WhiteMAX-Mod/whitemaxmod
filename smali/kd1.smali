@@ -1,60 +1,99 @@
-.class public final synthetic Lkd1;
-.super Ljava/lang/Object;
+.class public final enum Lkd1;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Llq6;
+
+# static fields
+.field public static final enum b:Lkd1;
+
+.field public static final enum c:Lkd1;
+
+.field public static final synthetic d:[Lkd1;
+
+.field public static final synthetic o:Lpm5;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lrd1;
+.field public final a:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lrd1;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput p2, p0, Lkd1;->a:I
+    new-instance v0, Lkd1;
 
-    iput-object p1, p0, Lkd1;->b:Lrd1;
+    const/4 v1, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v2, Lqid;->call_history_call_tab_all:I
+
+    const-string v3, "ALL"
+
+    invoke-direct {v0, v3, v1, v2}, Lkd1;-><init>(Ljava/lang/String;II)V
+
+    sput-object v0, Lkd1;->b:Lkd1;
+
+    new-instance v1, Lkd1;
+
+    const/4 v2, 0x1
+
+    sget v3, Lqid;->call_history_call_tab_missing:I
+
+    const-string v4, "MISSING"
+
+    invoke-direct {v1, v4, v2, v3}, Lkd1;-><init>(Ljava/lang/String;II)V
+
+    sput-object v1, Lkd1;->c:Lkd1;
+
+    filled-new-array {v0, v1}, [Lkd1;
+
+    move-result-object v0
+
+    sput-object v0, Lkd1;->d:[Lkd1;
+
+    new-instance v1, Lpm5;
+
+    invoke-direct {v1, v0}, Lpm5;-><init>([Ljava/lang/Enum;)V
+
+    sput-object v1, Lkd1;->o:Lpm5;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;II)V
+    .locals 0
 
-# virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 2
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iget v0, p0, Lkd1;->a:I
+    iput p3, p0, Lkd1;->a:I
 
-    packed-switch v0, :pswitch_data_0
+    return-void
+.end method
 
-    new-instance v0, Lmd1;
+.method public static valueOf(Ljava/lang/String;)Lkd1;
+    .locals 1
 
-    iget-object v1, p0, Lkd1;->b:Lrd1;
+    const-class v0, Lkd1;
 
-    invoke-direct {v0, v1}, Lmd1;-><init>(Lrd1;)V
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lkd1;
+
+    return-object p0
+.end method
+
+.method public static values()[Lkd1;
+    .locals 1
+
+    sget-object v0, Lkd1;->d:[Lkd1;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lkd1;
 
     return-object v0
-
-    :pswitch_0
-    new-instance v0, Lld1;
-
-    iget-object v1, p0, Lkd1;->b:Lrd1;
-
-    invoke-direct {v0, v1}, Lld1;-><init>(Lrd1;)V
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

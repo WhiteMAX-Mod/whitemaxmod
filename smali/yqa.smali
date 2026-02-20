@@ -1,51 +1,132 @@
 .class public final Lyqa;
-.super Lo84;
+.super Lo0;
 .source "SourceFile"
 
+# interfaces
+.implements Lvy7;
 
-# instance fields
-.field public final synthetic X:Lzqa;
 
-.field public Y:I
-
-.field public d:Ljava/lang/String;
-
-.field public synthetic o:Ljava/lang/Object;
+# static fields
+.field public static final a:Lyqa;
 
 
 # direct methods
-.method public constructor <init>(Lzqa;Lo84;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lyqa;->X:Lzqa;
+    new-instance v0, Lyqa;
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    sget-object v1, Lyr1;->Z:Lyr1;
+
+    invoke-direct {v0, v1}, Lo0;-><init>(Ldd4;)V
+
+    sput-object v0, Lyqa;->a:Lyqa;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final attachChild(Lgd3;)Led3;
+    .locals 0
+
+    sget-object p1, Lfra;->a:Lfra;
+
+    return-object p1
+.end method
+
+.method public final cancel(Ljava/util/concurrent/CancellationException;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final getCancellationException()Ljava/util/concurrent/CancellationException;
+    .locals 2
+
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "This job is always active"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public final getChildren()Lgwe;
     .locals 1
 
-    iput-object p1, p0, Lyqa;->o:Ljava/lang/Object;
+    sget-object v0, Lbj5;->a:Lbj5;
 
-    iget p1, p0, Lyqa;->Y:I
+    return-object v0
+.end method
 
-    const/high16 v0, -0x80000000
+.method public final invokeOnCompletion(Lks6;)Lb45;
+    .locals 0
 
-    or-int/2addr p1, v0
+    .line 1
+    sget-object p1, Lfra;->a:Lfra;
 
-    iput p1, p0, Lyqa;->Y:I
+    return-object p1
+.end method
 
-    iget-object p1, p0, Lyqa;->X:Lzqa;
+.method public final invokeOnCompletion(ZZLks6;)Lb45;
+    .locals 0
+
+    .line 2
+    sget-object p1, Lfra;->a:Lfra;
+
+    return-object p1
+.end method
+
+.method public final isActive()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final isCancelled()Z
+    .locals 1
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0, p0}, Lzqa;->h(Ljava/lang/String;Lo84;)Ljava/lang/Object;
+    return v0
+.end method
 
-    move-result-object p1
+.method public final isCompleted()Z
+    .locals 1
 
-    return-object p1
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final join(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 1
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "This job is always active"
+
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final start()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "NonCancellable"
+
+    return-object v0
 .end method

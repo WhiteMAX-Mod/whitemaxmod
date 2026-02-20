@@ -1,29 +1,24 @@
-.class public final Lqkd;
+.class public abstract Lqkd;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
-# instance fields
-.field public final a:Lb2e;
+# static fields
+.field public static share_bottom_button_copy_link:I = 0x7f130d80
 
-.field public final b:Lai;
+.field public static share_confirm_cancel:I = 0x7f130d82
 
+.field public static share_confirm_close:I = 0x7f130d83
 
-# direct methods
-.method public constructor <init>(Lb2e;)V
-    .locals 1
+.field public static share_confirmation_close_title:I = 0x7f130d84
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static share_message_hint:I = 0x7f130d8b
 
-    iput-object p1, p0, Lqkd;->a:Lb2e;
+.field public static share_search_hint:I = 0x7f130d8d
 
-    new-instance p1, Lai;
+.field public static share_success_link_send:I = 0x7f130d8e
 
-    const/16 v0, 0xf
+.field public static share_toolbar_action_cancel_selection:I = 0x7f130d90
 
-    invoke-direct {p1, v0}, Lai;-><init>(I)V
+.field public static share_toolbar_action_select:I = 0x7f130d91
 
-    iput-object p1, p0, Lqkd;->b:Lai;
-
-    return-void
-.end method
+.field public static share_toolbar_title:I = 0x7f130d92

@@ -1,125 +1,89 @@
 .class public final Lbj1;
-.super Ldj1;
+.super Lpdg;
 .source "SourceFile"
+
+# interfaces
+.implements Lys6;
 
 
 # instance fields
-.field public final a:Z
+.field public final synthetic X:Lone/me/calls/ui/bottomsheet/more/CallMoreBottomSheet;
 
-.field public final b:Lyk1;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lyk1;Z)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/bottomsheet/more/CallMoreBottomSheet;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lbj1;->X:Lone/me/calls/ui/bottomsheet/more/CallMoreBottomSheet;
 
-    iput-boolean p2, p0, Lbj1;->a:Z
+    const/4 p2, 0x2
 
-    iput-object p1, p0, Lbj1;->b:Lyk1;
+    invoke-direct {p0, p2, p1}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {p0, p1, p2}, Lbj1;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    return v0
+    move-result-object p1
 
-    :cond_0
-    instance-of v1, p1, Lbj1;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
     check-cast p1, Lbj1;
 
-    iget-boolean v1, p0, Lbj1;->a:Z
+    sget-object p2, Lmah;->a:Lmah;
 
-    iget-boolean v3, p1, Lbj1;->a:Z
+    invoke-virtual {p1, p2}, Lbj1;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-eq v1, v3, :cond_2
+    return-object p2
+.end method
 
-    return v2
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    :cond_2
-    iget-object v1, p0, Lbj1;->b:Lyk1;
+    new-instance v0, Lbj1;
 
-    iget-object p1, p1, Lbj1;->b:Lyk1;
+    iget-object v1, p0, Lbj1;->X:Lone/me/calls/ui/bottomsheet/more/CallMoreBottomSheet;
 
-    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-direct {v0, p2, v1}, Lbj1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/bottomsheet/more/CallMoreBottomSheet;)V
+
+    iput-object p1, v0, Lbj1;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Lbj1;->o:Ljava/lang/Object;
+
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    check-cast v0, Lsla;
+
+    sget-object p1, Luo1;->D:Luo1;
+
+    invoke-static {v0, p1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-nez p1, :cond_3
+    if-eqz p1, :cond_0
 
-    return v2
+    iget-object p1, p0, Lbj1;->X:Lone/me/calls/ui/bottomsheet/more/CallMoreBottomSheet;
 
-    :cond_3
-    return v0
-.end method
+    const/4 v0, 0x1
 
-.method public final hashCode()I
-    .locals 2
+    invoke-virtual {p1, v0}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->N0(Z)V
 
-    iget-boolean v0, p0, Lbj1;->a:Z
+    :cond_0
+    sget-object p1, Lmah;->a:Lmah;
 
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lbj1;->b:Lyk1;
-
-    invoke-virtual {v1}, Lyk1;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "HasOpenAction(hasAction="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-boolean v1, p0, Lbj1;->a:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", opponentId="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lbj1;->b:Lyk1;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

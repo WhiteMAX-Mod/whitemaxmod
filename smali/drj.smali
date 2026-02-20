@@ -1,127 +1,290 @@
-.class public final Ldrj;
-.super Lg4;
+.class public abstract Ldrj;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Ldrj;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
-# instance fields
-.field public final X:Ljava/lang/String;
-
-.field public final Y:Ljava/lang/String;
-
-.field public final a:Ljava/lang/String;
-
-.field public final b:Ljava/lang/String;
-
-.field public final c:Ljava/lang/String;
-
-.field public final d:Ljava/lang/String;
-
-.field public final o:Ljava/lang/String;
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public static a(Ljava/lang/String;Z)Ljava/lang/Class;
+    .locals 3
 
-    new-instance v0, Lwij;
+    if-eqz p1, :cond_0
 
-    const/16 v1, 0x11
+    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    invoke-direct {v0, v1}, Lwij;-><init>(I)V
+    move-result p1
 
-    sput-object v0, Ldrj;->CREATOR:Landroid/os/Parcelable$Creator;
+    if-eqz p1, :cond_0
 
-    return-void
+    const/4 p0, 0x0
+
+    return-object p0
+
+    :cond_0
+    :try_start_0
+    invoke-static {p0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+
+    move-result-object p0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object p0
+
+    :catch_0
+    move-exception p1
+
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    const-string v1, "An exception occurred while finding class for name "
+
+    const-string v2, ". "
+
+    invoke-static {v1, p0, v2}, Ly12;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object p0
+
+    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method
 
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
+.method public static b(Lx48;)Lorg/json/JSONObject;
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    :try_start_0
+    new-instance v0, Lorg/json/JSONObject;
 
-    iput-object p1, p0, Ldrj;->a:Ljava/lang/String;
+    invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
 
-    iput-object p2, p0, Ldrj;->b:Ljava/lang/String;
+    invoke-interface {p0}, Lx48;->q()V
 
-    iput-object p3, p0, Ldrj;->c:Ljava/lang/String;
+    :goto_0
+    invoke-interface {p0}, Lx48;->peek()I
 
-    iput-object p4, p0, Ldrj;->d:Ljava/lang/String;
+    move-result v1
 
-    iput-object p5, p0, Ldrj;->o:Ljava/lang/String;
+    const/16 v2, 0x7d
 
-    iput-object p6, p0, Ldrj;->X:Ljava/lang/String;
+    if-eq v1, v2, :cond_0
 
-    iput-object p7, p0, Ldrj;->Y:Ljava/lang/String;
+    invoke-interface {p0}, Lx48;->name()Ljava/lang/String;
 
-    return-void
+    move-result-object v1
+
+    sget-object v2, Lorg/json/JSONObject;->NULL:Ljava/lang/Object;
+
+    invoke-static {p0, v2}, Ldrj;->c(Lx48;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    goto :goto_0
+
+    :cond_0
+    invoke-interface {p0}, Lx48;->n()V
+    :try_end_0
+    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object v0
+
+    :catch_0
+    move-exception p0
+
+    new-instance v0, Ljava/lang/AssertionError;
+
+    invoke-direct {v0, p0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw v0
 .end method
 
-
-# virtual methods
-.method public final writeToParcel(Landroid/os/Parcel;I)V
+.method public static c(Lx48;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    const/16 p2, 0x4f45
+    :try_start_0
+    invoke-interface {p0}, Lx48;->peek()I
 
-    invoke-static {p1, p2}, Lsnj;->k(Landroid/os/Parcel;I)I
+    move-result v0
 
-    move-result p2
+    const/16 v1, 0x22
 
-    const/4 v0, 0x1
+    if-eq v0, v1, :cond_8
 
-    iget-object v1, p0, Ldrj;->a:Ljava/lang/String;
+    const/16 v1, 0x31
 
-    invoke-static {p1, v0, v1}, Lsnj;->g(Landroid/os/Parcel;ILjava/lang/String;)V
+    if-eq v0, v1, :cond_5
 
-    const/4 v0, 0x2
+    const/16 v1, 0x5b
 
-    iget-object v1, p0, Ldrj;->b:Ljava/lang/String;
+    if-eq v0, v1, :cond_3
 
-    invoke-static {p1, v0, v1}, Lsnj;->g(Landroid/os/Parcel;ILjava/lang/String;)V
+    const/16 v1, 0x62
 
-    const/4 v0, 0x3
+    if-eq v0, v1, :cond_2
 
-    iget-object v1, p0, Ldrj;->c:Ljava/lang/String;
+    const/16 v1, 0x6e
 
-    invoke-static {p1, v0, v1}, Lsnj;->g(Landroid/os/Parcel;ILjava/lang/String;)V
+    if-eq v0, v1, :cond_1
 
-    const/4 v0, 0x4
+    const/16 p1, 0x7b
 
-    iget-object v1, p0, Ldrj;->d:Ljava/lang/String;
+    if-ne v0, p1, :cond_0
 
-    invoke-static {p1, v0, v1}, Lsnj;->g(Landroid/os/Parcel;ILjava/lang/String;)V
+    invoke-static {p0}, Ldrj;->b(Lx48;)Lorg/json/JSONObject;
 
-    const/4 v0, 0x5
+    move-result-object p0
 
-    iget-object v1, p0, Ldrj;->o:Ljava/lang/String;
+    return-object p0
 
-    invoke-static {p1, v0, v1}, Lsnj;->g(Landroid/os/Parcel;ILjava/lang/String;)V
+    :cond_0
+    invoke-static {v0}, Lru/ok/android/api/json/JsonStateException;->d(I)Lru/ok/android/api/json/JsonStateException;
 
-    const/4 v0, 0x6
+    move-result-object p0
 
-    iget-object v1, p0, Ldrj;->X:Ljava/lang/String;
+    throw p0
 
-    invoke-static {p1, v0, v1}, Lsnj;->g(Landroid/os/Parcel;ILjava/lang/String;)V
+    :cond_1
+    invoke-interface {p0}, Lx48;->B()V
 
-    const/4 v0, 0x7
+    return-object p1
 
-    iget-object v1, p0, Ldrj;->Y:Ljava/lang/String;
+    :cond_2
+    invoke-interface {p0}, Lx48;->l0()Z
 
-    invoke-static {p1, v0, v1}, Lsnj;->g(Landroid/os/Parcel;ILjava/lang/String;)V
+    move-result p0
 
-    invoke-static {p1, p2}, Lsnj;->l(Landroid/os/Parcel;I)V
+    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    return-void
+    move-result-object p0
+
+    return-object p0
+
+    :cond_3
+    new-instance p1, Lorg/json/JSONArray;
+
+    invoke-direct {p1}, Lorg/json/JSONArray;-><init>()V
+
+    invoke-interface {p0}, Lx48;->t()V
+
+    :goto_0
+    invoke-interface {p0}, Lx48;->peek()I
+
+    move-result v0
+
+    const/16 v1, 0x5d
+
+    if-eq v0, v1, :cond_4
+
+    const/4 v0, 0x0
+
+    invoke-static {p0, v0}, Ldrj;->c(Lx48;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
+
+    goto :goto_0
+
+    :cond_4
+    invoke-interface {p0}, Lx48;->r()V
+
+    return-object p1
+
+    :cond_5
+    invoke-interface {p0}, Lx48;->f0()Ljava/lang/String;
+
+    move-result-object p0
+
+    const/16 p1, 0x2e
+
+    invoke-virtual {p0, p1}, Ljava/lang/String;->indexOf(I)I
+
+    move-result p1
+
+    if-gez p1, :cond_7
+
+    const/16 p1, 0x65
+
+    invoke-virtual {p0, p1}, Ljava/lang/String;->indexOf(I)I
+
+    move-result p1
+
+    if-gez p1, :cond_7
+
+    const/16 p1, 0x45
+
+    invoke-virtual {p0, p1}, Ljava/lang/String;->indexOf(I)I
+
+    move-result p1
+
+    if-gez p1, :cond_7
+
+    invoke-static {p0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
+
+    move-result-wide p0
+
+    const-wide/32 v0, -0x80000000
+
+    cmp-long v0, p0, v0
+
+    if-ltz v0, :cond_6
+
+    const-wide/32 v0, 0x7fffffff
+
+    cmp-long v0, p0, v0
+
+    if-gtz v0, :cond_6
+
+    long-to-int p0, p0
+
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_6
+    invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_7
+    invoke-static {p0}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
+
+    move-result-wide p0
+
+    invoke-static {p0, p1}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_8
+    invoke-interface {p0}, Lx48;->Q()Ljava/lang/String;
+
+    move-result-object p0
+    :try_end_0
+    .catch Lru/ok/android/api/json/JsonTypeMismatchException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object p0
+
+    :catch_0
+    move-exception p0
+
+    new-instance p1, Ljava/lang/AssertionError;
+
+    invoke-direct {p1, p0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw p1
 .end method

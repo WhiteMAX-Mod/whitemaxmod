@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ld4d;
+.implements Lq9d;
 
 
 # direct methods

@@ -1,8 +1,3 @@
-.class public interface abstract Luig;
-.super Ljava/lang/Object;
+.class public final Luig;
+.super Lcjg;
 .source "SourceFile"
-
-
-# virtual methods
-.method public abstract onThemeChanged(Lzlb;)V
-.end method

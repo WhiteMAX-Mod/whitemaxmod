@@ -1,77 +1,48 @@
-.class public final synthetic Lo8c;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lejb;
+.class public final Lo8c;
+.super Lda4;
 
 
 # instance fields
-.field public final synthetic a:Ls8c;
+.field public final synthetic X:Lp8c;
 
-.field public final synthetic b:Lnd2;
+.field public synthetic d:Ljava/lang/Object;
 
-.field public final synthetic c:J
-
-.field public final synthetic d:J
+.field public o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Ls8c;Lnd2;JJ)V
+.method public constructor <init>(Lp8c;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lo8c;->X:Lp8c;
 
-    iput-object p1, p0, Lo8c;->a:Ls8c;
-
-    iput-object p2, p0, Lo8c;->b:Lnd2;
-
-    iput-wide p3, p0, Lo8c;->c:J
-
-    iput-wide p5, p0, Lo8c;->d:J
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final k(Lfjb;)V
-    .locals 9
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    sget-object v0, Lfjb;->o:Lfjb;
+    iput-object p1, p0, Lo8c;->d:Ljava/lang/Object;
 
-    if-ne p1, v0, :cond_0
+    iget p1, p0, Lo8c;->o:I
 
-    iget-object v2, p0, Lo8c;->a:Ls8c;
+    const/high16 v0, -0x80000000
 
-    iget-object p1, v2, Ls8c;->d:Lzb4;
+    or-int/2addr p1, v0
 
-    iget-object v0, v2, Ls8c;->b:Lmbg;
+    iput p1, p0, Lo8c;->o:I
 
-    check-cast v0, Lj9b;
+    iget-object p1, p0, Lo8c;->X:Lp8c;
 
-    invoke-virtual {v0}, Lj9b;->b()Lsb4;
+    const/4 v0, 0x0
 
-    move-result-object v0
+    invoke-virtual {p1, v0, p0}, Lp8c;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    new-instance v1, Lp8c;
+    move-result-object p1
 
-    const/4 v8, 0x0
-
-    iget-object v3, p0, Lo8c;->b:Lnd2;
-
-    iget-wide v4, p0, Lo8c;->c:J
-
-    iget-wide v6, p0, Lo8c;->d:J
-
-    invoke-direct/range {v1 .. v8}, Lp8c;-><init>(Ls8c;Lnd2;JJLkotlin/coroutines/Continuation;)V
-
-    const/4 v2, 0x2
-
-    const/4 v3, 0x0
-
-    invoke-static {p1, v0, v3, v1, v2}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
-
-    :cond_0
-    return-void
+    return-object p1
 .end method

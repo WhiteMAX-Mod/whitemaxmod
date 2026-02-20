@@ -1,5 +1,5 @@
 .class public Lcom/google/android/material/floatingactionbutton/FloatingActionButton$BaseBehavior;
-.super Lxa4;
+.super Llc4;
 .source "SourceFile"
 
 
@@ -9,7 +9,7 @@
         "<T:",
         "Ljava/lang/Object;",
         ">",
-        "Lxa4;"
+        "Llc4;"
     }
 .end annotation
 
@@ -31,7 +31,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 3
-    sget-object v0, Lcgd;->FloatingActionButton_Behavior_Layout:[I
+    sget-object v0, Lvld;->FloatingActionButton_Behavior_Layout:[I
 
     .line 4
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
@@ -39,7 +39,7 @@
     move-result-object p1
 
     .line 5
-    sget p2, Lcgd;->FloatingActionButton_Behavior_Layout_behavior_autoHide:I
+    sget p2, Lvld;->FloatingActionButton_Behavior_Layout_behavior_autoHide:I
 
     const/4 v0, 0x1
 
@@ -64,16 +64,16 @@
     throw p1
 .end method
 
-.method public final c(Lab4;)V
+.method public final c(Loc4;)V
     .locals 1
 
-    iget v0, p1, Lab4;->h:I
+    iget v0, p1, Loc4;->h:I
 
     if-nez v0, :cond_0
 
     const/16 v0, 0x50
 
-    iput v0, p1, Lab4;->h:I
+    iput v0, p1, Loc4;->h:I
 
     :cond_0
     return-void

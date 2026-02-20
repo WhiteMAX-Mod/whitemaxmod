@@ -1,224 +1,445 @@
-.class public abstract Lg9d;
+.class public final synthetic Lg9d;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
-# static fields
-.field public static profile_avatar_select_screen:I = 0x7f0a08f4
 
-.field public static profile_change_inactive_ttl_delete_1_month:I = 0x7f0a08f8
+# instance fields
+.field public final synthetic a:I
 
-.field public static profile_change_inactive_ttl_delete_3_month:I = 0x7f0a08f9
+.field public final synthetic b:Lm9d;
 
-.field public static profile_change_inactive_ttl_delete_6_month:I = 0x7f0a08fa
 
-.field public static profile_confirmation_sheet_cancel:I = 0x7f0a0906
+# direct methods
+.method public synthetic constructor <init>(Lm9d;I)V
+    .locals 0
 
-.field public static profile_delete_contact_confirmation_sheet_confirm:I = 0x7f0a0914
+    iput p2, p0, Lg9d;->a:I
 
-.field public static profile_edit_admin_channel_type:I = 0x7f0a0916
+    iput-object p1, p0, Lg9d;->b:Lm9d;
 
-.field public static profile_edit_admin_chat_type:I = 0x7f0a0917
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static profile_edit_admin_clear_channel_history:I = 0x7f0a0918
+    return-void
+.end method
 
-.field public static profile_edit_admin_clear_chat_history:I = 0x7f0a0919
 
-.field public static profile_edit_admin_clear_chat_history_cancel:I = 0x7f0a091a
+# virtual methods
+.method public final onClick(Landroid/view/View;)V
+    .locals 7
 
-.field public static profile_edit_admin_clear_chat_history_confirm_for_all:I = 0x7f0a091b
+    iget p1, p0, Lg9d;->a:I
 
-.field public static profile_edit_admin_clear_chat_history_confirm_for_yourself:I = 0x7f0a091c
+    const/4 v0, 0x0
 
-.field public static profile_edit_admin_close_channel:I = 0x7f0a091d
+    sget-object v1, La9d;->a:La9d;
 
-.field public static profile_edit_admin_close_channel_cancel:I = 0x7f0a091e
+    const/4 v2, 0x1
 
-.field public static profile_edit_admin_close_channel_certain_confirm:I = 0x7f0a091f
+    const/4 v3, 0x0
 
-.field public static profile_edit_admin_close_channel_confirm:I = 0x7f0a0920
+    iget-object v4, p0, Lg9d;->b:Lm9d;
 
-.field public static profile_edit_admin_close_chat:I = 0x7f0a0921
+    packed-switch p1, :pswitch_data_0
 
-.field public static profile_edit_admin_close_chat_cancel:I = 0x7f0a0922
+    iget-object p1, v4, Lm9d;->d:Lp9d;
 
-.field public static profile_edit_admin_close_chat_certain_confirm:I = 0x7f0a0923
+    if-nez p1, :cond_0
 
-.field public static profile_edit_admin_close_chat_confirm:I = 0x7f0a0924
+    goto :goto_0
 
-.field public static profile_edit_admin_leave_channel:I = 0x7f0a0925
+    :cond_0
+    move-object v3, p1
 
-.field public static profile_edit_admin_leave_channel_and_change_owner_confirm:I = 0x7f0a0926
+    :goto_0
+    iget-object p1, v3, Lp9d;->t0:Lhxf;
 
-.field public static profile_edit_admin_leave_channel_cancel:I = 0x7f0a0927
+    :cond_1
+    invoke-virtual {p1}, Lhxf;->getValue()Ljava/lang/Object;
 
-.field public static profile_edit_admin_leave_channel_confirm:I = 0x7f0a0928
+    move-result-object v0
 
-.field public static profile_edit_admin_leave_chat:I = 0x7f0a0929
+    move-object v2, v0
 
-.field public static profile_edit_admin_leave_chat_and_change_owner_confirm:I = 0x7f0a092a
+    check-cast v2, Lb9d;
 
-.field public static profile_edit_admin_leave_chat_cancel:I = 0x7f0a092b
+    instance-of v3, v2, Lx8d;
 
-.field public static profile_edit_admin_leave_chat_confirm:I = 0x7f0a092c
+    if-eqz v3, :cond_2
 
-.field public static profile_edit_admin_move_rights:I = 0x7f0a092d
+    move-object v2, v1
 
-.field public static profile_edit_admin_participants_permission:I = 0x7f0a092e
+    goto :goto_1
 
-.field public static profile_edit_admin_permissions_change_chat_info:I = 0x7f0a092f
+    :cond_2
+    instance-of v3, v2, La9d;
 
-.field public static profile_edit_admin_permissions_change_owner_cancel_action:I = 0x7f0a0930
+    if-eqz v3, :cond_3
 
-.field public static profile_edit_admin_permissions_change_owner_change_action:I = 0x7f0a0931
+    sget-object v2, Lx8d;->a:Lx8d;
 
-.field public static profile_edit_admin_permissions_control_admin:I = 0x7f0a0932
+    goto :goto_1
 
-.field public static profile_edit_admin_permissions_delete_from_admins_cancel_action:I = 0x7f0a0933
+    :cond_3
+    instance-of v3, v2, Lz8d;
 
-.field public static profile_edit_admin_permissions_delete_from_admins_delete_action:I = 0x7f0a0934
+    if-nez v3, :cond_5
 
-.field public static profile_edit_admin_permissions_delete_messages:I = 0x7f0a0935
+    instance-of v3, v2, Ly8d;
 
-.field public static profile_edit_admin_permissions_edit_chat_link:I = 0x7f0a0936
+    if-eqz v3, :cond_4
 
-.field public static profile_edit_admin_permissions_edit_chat_members:I = 0x7f0a0937
+    goto :goto_1
 
-.field public static profile_edit_admin_permissions_edit_messages:I = 0x7f0a0938
+    :cond_4
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
 
-.field public static profile_edit_admin_permissions_pin_messages:I = 0x7f0a0939
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-.field public static profile_edit_admin_permissions_recycler_view:I = 0x7f0a093a
+    throw p1
 
-.field public static profile_edit_admin_permissions_send_messages:I = 0x7f0a093b
+    :cond_5
+    :goto_1
+    invoke-virtual {p1, v0, v2}, Lhxf;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-.field public static profile_edit_admin_permissions_superadmin:I = 0x7f0a093c
+    move-result v0
 
-.field public static profile_edit_admin_permissions_toolbar_view:I = 0x7f0a093d
+    if-eqz v0, :cond_1
 
-.field public static profile_edit_admin_view_stats:I = 0x7f0a093e
+    return-void
 
-.field public static profile_edit_appbar_layout:I = 0x7f0a093f
+    :pswitch_0
+    invoke-virtual {v4}, Lm9d;->getCameraApi()Lh32;
 
-.field public static profile_edit_avatar:I = 0x7f0a0940
+    move-result-object p1
 
-.field public static profile_edit_change_avatar_cancel:I = 0x7f0a0941
+    invoke-virtual {v4}, Lm9d;->getCameraApi()Lh32;
 
-.field public static profile_edit_change_avatar_remove_current:I = 0x7f0a0942
+    move-result-object v1
 
-.field public static profile_edit_change_avatar_select_neuro_avatar:I = 0x7f0a0943
+    check-cast v1, Lru/ok/tamtam/android/widgets/quickcamera/CameraxCameraApiView;
 
-.field public static profile_edit_change_avatar_upload_from_camera:I = 0x7f0a0944
+    iget-object v1, v1, Lru/ok/tamtam/android/widgets/quickcamera/CameraxCameraApiView;->c:Lja8;
 
-.field public static profile_edit_change_avatar_upload_from_gallery:I = 0x7f0a0945
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-.field public static profile_edit_collapsible_container_layout:I = 0x7f0a0946
+    invoke-static {}, Lb2j;->a()V
 
-.field public static profile_edit_confirm_exit_button:I = 0x7f0a0947
+    iget-object v1, v1, Lu42;->p:Lia8;
 
-.field public static profile_edit_confirm_save_button:I = 0x7f0a0948
+    if-nez v1, :cond_6
 
-.field public static profile_edit_contact_delete_action:I = 0x7f0a0949
+    goto :goto_2
 
-.field public static profile_edit_delete_profile_button:I = 0x7f0a094a
+    :cond_6
+    iget-object v1, v1, Lia8;->c:Ll62;
 
-.field public static profile_edit_delete_profile_cancel_button:I = 0x7f0a094b
+    iget-object v3, v1, Ll62;->B0:Ls5e;
 
-.field public static profile_edit_description_field:I = 0x7f0a094c
+    :goto_2
+    if-eqz v3, :cond_7
 
-.field public static profile_edit_first_name_field:I = 0x7f0a094d
+    iget-object v1, v3, Lgn6;->a:Lj52;
 
-.field public static profile_edit_invite_by_link:I = 0x7f0a094e
+    invoke-interface {v1}, Lj52;->h()I
 
-.field public static profile_edit_last_name_field:I = 0x7f0a094f
+    move-result v1
 
-.field public static profile_edit_link_private:I = 0x7f0a0950
+    if-nez v1, :cond_7
 
-.field public static profile_edit_link_public:I = 0x7f0a0951
+    move v0, v2
 
-.field public static profile_edit_logout_confirm_action:I = 0x7f0a0952
+    :cond_7
+    check-cast p1, Lru/ok/tamtam/android/widgets/quickcamera/CameraxCameraApiView;
 
-.field public static profile_edit_member_permissions_add_user:I = 0x7f0a0953
+    iget-object p1, p1, Lru/ok/tamtam/android/widgets/quickcamera/CameraxCameraApiView;->c:Lja8;
 
-.field public static profile_edit_member_permissions_call_to_chat:I = 0x7f0a0954
+    if-nez v0, :cond_8
 
-.field public static profile_edit_member_permissions_change_photo:I = 0x7f0a0955
+    sget-object v0, Ld62;->b:Ld62;
 
-.field public static profile_edit_member_permissions_pin_message:I = 0x7f0a0956
+    goto :goto_3
 
-.field public static profile_edit_member_permissions_see_private_link:I = 0x7f0a0957
+    :cond_8
+    sget-object v0, Ld62;->c:Ld62;
 
-.field public static profile_edit_oneme_toolbar:I = 0x7f0a0958
+    :goto_3
+    invoke-virtual {p1, v0}, Lu42;->l(Ld62;)V
 
-.field public static profile_edit_reactions:I = 0x7f0a0959
+    return-void
 
-.field public static profile_edit_reactions_settings_activation_switch:I = 0x7f0a095a
+    :pswitch_1
+    iget-object p1, v4, Lm9d;->d:Lp9d;
 
-.field public static profile_edit_reactions_settings_added_reactions:I = 0x7f0a095b
+    if-nez p1, :cond_9
 
-.field public static profile_edit_reactions_settings_added_reactions_title:I = 0x7f0a095c
+    move-object p1, v3
 
-.field public static profile_edit_reactions_settings_constraint_layout:I = 0x7f0a095d
+    :cond_9
+    iget-object v0, p1, Lp9d;->v0:Ltn5;
 
-.field public static profile_edit_reactions_settings_count_slider:I = 0x7f0a095e
+    iget-object v2, p1, Lp9d;->t0:Lhxf;
 
-.field public static profile_edit_reactions_settings_count_slider_current_value:I = 0x7f0a095f
+    invoke-virtual {v2}, Lhxf;->getValue()Ljava/lang/Object;
 
-.field public static profile_edit_reactions_settings_count_slider_max_value:I = 0x7f0a0960
+    move-result-object v4
 
-.field public static profile_edit_reactions_settings_count_slider_min_value:I = 0x7f0a0961
+    new-instance v5, Ljava/lang/StringBuilder;
 
-.field public static profile_edit_reactions_settings_error_view:I = 0x7f0a0962
+    const-string v6, "onClickTake(). State: "
 
-.field public static profile_edit_reactions_settings_exit_without_save:I = 0x7f0a0963
+    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-.field public static profile_edit_reactions_settings_linear_layout:I = 0x7f0a0964
+    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-.field public static profile_edit_reactions_settings_loading_container:I = 0x7f0a0965
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-.field public static profile_edit_reactions_settings_loading_reactions_container:I = 0x7f0a0966
+    move-result-object v4
 
-.field public static profile_edit_reactions_settings_media_keyboard_container:I = 0x7f0a0967
+    const-string v5, "QuickCameraViewModel"
 
-.field public static profile_edit_reactions_settings_save:I = 0x7f0a0968
+    invoke-static {v5, v4}, Ltej;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-.field public static profile_edit_reactions_settings_save_and_exit:I = 0x7f0a0969
+    invoke-virtual {v2}, Lhxf;->getValue()Ljava/lang/Object;
 
-.field public static profile_edit_reactions_settings_scrollview:I = 0x7f0a096a
+    move-result-object v4
 
-.field public static profile_edit_reactions_settings_slider_container:I = 0x7f0a096b
+    check-cast v4, Lb9d;
 
-.field public static profile_edit_reactions_settings_slider_title:I = 0x7f0a096c
+    instance-of v5, v4, Lx8d;
 
-.field public static profile_edit_reactions_settings_to_default_settings:I = 0x7f0a096d
+    if-eqz v5, :cond_a
 
-.field public static profile_edit_reactions_settings_toolbar:I = 0x7f0a096e
+    sget-object v1, Ly8d;->a:Ly8d;
 
-.field public static profile_edit_recycler_view:I = 0x7f0a096f
+    invoke-virtual {v2, v3, v1}, Lhxf;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-.field public static profile_edit_selectable_item_checkbox:I = 0x7f0a0970
+    new-instance v1, Lu8d;
 
-.field public static profile_edit_selectable_item_subtitle:I = 0x7f0a0971
+    iget-object p1, p1, Lp9d;->s0:Liz5;
 
-.field public static profile_edit_selectable_item_title:I = 0x7f0a0972
+    check-cast p1, Lk06;
 
-.field public static profile_edit_short_link:I = 0x7f0a0973
+    iget-object v2, p1, Lk06;->d0:Lztf;
 
-.field public static profile_edit_short_link_input_button:I = 0x7f0a0974
+    sget-object v3, Lk06;->p1:[Lv58;
 
-.field public static profile_edit_short_link_toolbar:I = 0x7f0a0975
+    const/16 v4, 0x2c
 
-.field public static profile_edit_shortlink_action_copy:I = 0x7f0a0976
+    aget-object v3, v3, v4
 
-.field public static profile_edit_shortlink_action_qr_code:I = 0x7f0a0977
+    invoke-virtual {v2, p1, v3}, Lztf;->D(Ljava/lang/Object;Lv58;)Ljava/lang/Object;
 
-.field public static profile_edit_shortlink_action_refresh_link:I = 0x7f0a0978
+    move-result-object p1
 
-.field public static profile_edit_shortlink_action_share:I = 0x7f0a0979
+    check-cast p1, Lgc5;
 
-.field public static profile_edit_shortlink_action_share_external:I = 0x7f0a097a
+    iget-wide v2, p1, Lgc5;->a:J
 
-.field public static profile_edit_shortlink_confirm_button:I = 0x7f0a097b
+    invoke-direct {v1, v2, v3}, Lu8d;-><init>(J)V
 
-.field public static profile_edit_shortlink_confirm_update:I = 0x7f0a097c
+    invoke-static {v0, v1}, Lx0i;->n(Ltn5;Ljava/lang/Object;)V
 
-.field public static profile_selectable_item_tag:I = 0x7f0a09e0
+    goto :goto_4
+
+    :cond_a
+    instance-of v5, v4, Ly8d;
+
+    if-nez v5, :cond_e
+
+    instance-of v5, v4, La9d;
+
+    if-eqz v5, :cond_c
+
+    iget-object v1, p1, Lp9d;->x0:Lt2c;
+
+    invoke-virtual {v1}, Lt2c;->l()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_b
+
+    new-instance v1, Lz8d;
+
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v4
+
+    invoke-direct {v1, v4, v5}, Lz8d;-><init>(J)V
+
+    invoke-virtual {v2, v3, v1}, Lhxf;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    iget-object v1, p1, Lp9d;->o:Lv36;
+
+    iget-object p1, p1, Lp9d;->X:Lyie;
+
+    invoke-interface {p1}, Lyie;->c()Ljava/lang/String;
+
+    move-result-object p1
+
+    check-cast v1, Lh56;
+
+    invoke-virtual {v1, p1}, Lh56;->l(Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object p1
+
+    new-instance v1, Ls8d;
+
+    invoke-direct {v1, p1}, Ls8d;-><init>(Ljava/io/File;)V
+
+    invoke-static {v0, v1}, Lx0i;->n(Ltn5;Ljava/lang/Object;)V
+
+    goto :goto_4
+
+    :cond_b
+    iget-object p1, p1, Lp9d;->w0:Ltn5;
+
+    sget-object v0, Ld9d;->a:Ld9d;
+
+    invoke-static {p1, v0}, Lx0i;->n(Ltn5;Ljava/lang/Object;)V
+
+    goto :goto_4
+
+    :cond_c
+    instance-of p1, v4, Lz8d;
+
+    if-eqz p1, :cond_d
+
+    invoke-virtual {v2, v3, v1}, Lhxf;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    sget-object p1, Lt8d;->a:Lt8d;
+
+    invoke-static {v0, p1}, Lx0i;->n(Ltn5;Ljava/lang/Object;)V
+
+    goto :goto_4
+
+    :cond_d
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
+
+    :cond_e
+    :goto_4
+    return-void
+
+    :pswitch_2
+    iget-object p1, v4, Lm9d;->d:Lp9d;
+
+    if-nez p1, :cond_f
+
+    goto :goto_5
+
+    :cond_f
+    move-object v3, p1
+
+    :goto_5
+    iget-object p1, v3, Lp9d;->u0:Lhxf;
+
+    :cond_10
+    invoke-virtual {p1}, Lhxf;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v1, v0
+
+    check-cast v1, Lg32;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    if-eqz v1, :cond_13
+
+    if-eq v1, v2, :cond_12
+
+    const/4 v3, 0x2
+
+    sget-object v4, Lg32;->a:Lg32;
+
+    if-eq v1, v3, :cond_14
+
+    const/4 v3, 0x3
+
+    if-ne v1, v3, :cond_11
+
+    goto :goto_6
+
+    :cond_11
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
+
+    :cond_12
+    sget-object v4, Lg32;->c:Lg32;
+
+    goto :goto_6
+
+    :cond_13
+    sget-object v4, Lg32;->b:Lg32;
+
+    :cond_14
+    :goto_6
+    invoke-virtual {p1, v0, v4}, Lhxf;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_10
+
+    return-void
+
+    :pswitch_3
+    iget-object p1, v4, Lm9d;->s0:Lh78;
+
+    if-eqz p1, :cond_15
+
+    iget-object p1, p1, Lh78;->b:Ljava/lang/Object;
+
+    check-cast p1, Ln42;
+
+    sget v1, Ln42;->z0:I
+
+    invoke-virtual {p1, v0, v2}, Ln42;->a(ZZ)V
+
+    invoke-virtual {p1}, Ln42;->getListener()Lm42;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_15
+
+    check-cast p1, Lone/me/chatscreen/mediabar/MediaBarWidget;
+
+    iget-object v1, p1, Lone/me/chatscreen/mediabar/MediaBarWidget;->D0:Lj88;
+
+    invoke-interface {v1}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lm6b;
+
+    iget-object v1, v1, Lm6b;->a:Lee1;
+
+    invoke-virtual {v1, v0}, Lee1;->j(Z)V
+
+    iget-object p1, p1, Lone/me/chatscreen/mediabar/MediaBarWidget;->o:Lxla;
+
+    sget-object v0, Laje;->O0:Laje;
+
+    invoke-static {p1, v0}, Lxla;->f(Lxla;Laje;)V
+
+    :cond_15
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method

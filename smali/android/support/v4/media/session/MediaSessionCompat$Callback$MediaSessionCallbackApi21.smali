@@ -34,7 +34,7 @@
 
     const/4 v0, 0x0
 
-    invoke-interface {p1, v0}, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImpl;->setCurrentControllerInfo(Lub9;)V
+    invoke-interface {p1, v0}, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImpl;->setCurrentControllerInfo(Lmd9;)V
 
     return-void
 .end method
@@ -116,13 +116,13 @@
     const-string v0, "android.media.session.MediaController"
 
     :cond_1
-    new-instance v1, Lub9;
+    new-instance v1, Lmd9;
 
     const/4 v2, -0x1
 
-    invoke-direct {v1, v0, v2, v2}, Lub9;-><init>(Ljava/lang/String;II)V
+    invoke-direct {v1, v0, v2, v2}, Lmd9;-><init>(Ljava/lang/String;II)V
 
-    invoke-interface {p1, v1}, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImpl;->setCurrentControllerInfo(Lub9;)V
+    invoke-interface {p1, v1}, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImpl;->setCurrentControllerInfo(Lmd9;)V
 
     return-void
 .end method
@@ -182,11 +182,11 @@
     :goto_0
     invoke-virtual {p1, v3, v2}, Landroid/os/Bundle;->putBinder(Ljava/lang/String;Landroid/os/IBinder;)V
 
-    invoke-virtual {p2}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->getSession2Token()Ltdh;
+    invoke-virtual {p2}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->getSession2Token()Lblh;
 
     move-result-object p2
 
-    invoke-static {p1, p2}, Lttb;->e(Landroid/os/Bundle;Ltdh;)V
+    invoke-static {p1, p2}, Ljwb;->d(Landroid/os/Bundle;Lblh;)V
 
     const/4 p2, 0x0
 

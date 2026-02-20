@@ -3,34 +3,32 @@
 
 
 # static fields
-.field public static settings_devices_auth_hint_accept_button_title:I = 0x7f130d13
+.field public static oneme_messages_settings_container:I = 0x7f0a06f7
 
-.field public static settings_devices_auth_hint_deny_button_title:I = 0x7f130d14
+.field public static oneme_messages_settings_content_recycler:I = 0x7f0a06f8
 
-.field public static settings_devices_auth_hint_description_full:I = 0x7f130d15
+.field public static oneme_messages_settings_effects:I = 0x7f0a06f9
 
-.field public static settings_devices_auth_hint_description_navigation_arrow:I = 0x7f130d16
+.field public static oneme_messages_settings_fast_reaction_choose:I = 0x7f0a06fa
 
-.field public static settings_devices_auth_hint_description_navigation_part:I = 0x7f130d17
+.field public static oneme_messages_settings_fast_reaction_enable:I = 0x7f0a06fb
 
-.field public static settings_devices_auth_hint_title:I = 0x7f130d18
+.field public static oneme_messages_settings_header_item:I = 0x7f0a06fc
 
-.field public static settings_devices_base_login_qr_error:I = 0x7f130d19
+.field public static oneme_messages_settings_highlight:I = 0x7f0a06fd
 
-.field public static settings_devices_camera_permission_denied_title:I = 0x7f130d1a
+.field public static oneme_messages_settings_linear:I = 0x7f0a06fe
 
-.field public static settings_devices_camera_request_description:I = 0x7f130d1b
+.field public static oneme_messages_settings_need_divider_above_vh:I = 0x7f0a06ff
 
-.field public static settings_devices_expired_login_qr_error:I = 0x7f130d1c
+.field public static oneme_messages_settings_reaction_image:I = 0x7f0a0700
 
-.field public static settings_devices_header_description:I = 0x7f130d1d
+.field public static oneme_messages_settings_reaction_title:I = 0x7f0a0701
 
-.field public static settings_devices_header_title:I = 0x7f130d1e
+.field public static oneme_messages_settings_send_by_enter:I = 0x7f0a0702
 
-.field public static settings_devices_login_success:I = 0x7f130d1f
+.field public static oneme_messages_settings_setting_item:I = 0x7f0a0703
 
-.field public static settings_devices_not_login_qr_error:I = 0x7f130d20
+.field public static oneme_messages_settings_stickers:I = 0x7f0a0704
 
-.field public static settings_devices_qr_scan_btn:I = 0x7f130d21
-
-.field public static settings_devices_toolbar_title:I = 0x7f130d22
+.field public static oneme_messages_settings_toolbar:I = 0x7f0a0705

@@ -1,81 +1,141 @@
-.class public Lso3;
+.class public abstract Lso3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic b:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
-
-
-# instance fields
-.field private volatile synthetic _handled$volatile:I
-
-.field public final a:Ljava/lang/Throwable;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    const-class v0, Lso3;
-
-    const-string v1, "_handled$volatile"
-
-    invoke-static {v0, v1}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
-
-    move-result-object v0
-
-    sput-object v0, Lso3;->b:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/Throwable;Z)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lso3;->a:Ljava/lang/Throwable;
-
-    iput p2, p0, Lso3;->_handled$volatile:I
-
-    return-void
-.end method
-
-
 # virtual methods
-.method public final toString()Ljava/lang/String;
+.method public final a()V
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance v0, Lht0;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    const/4 v1, 0x1
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-direct {v0, v1}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
 
-    move-result-object v1
+    invoke-virtual {p0, v0}, Lso3;->f(Lbp3;)V
 
-    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+    invoke-virtual {v0}, Lht0;->b()Ljava/lang/Object;
 
-    move-result-object v1
+    return-void
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public final c(Lso3;)Lto3;
+    .locals 2
 
-    const/16 v1, 0x5b
+    const-string v0, "other is null"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    iget-object v1, p0, Lso3;->a:Ljava/lang/Throwable;
+    new-instance v0, Lto3;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const/4 v1, 0x0
 
-    const/16 v1, 0x5d
+    invoke-direct {v0, p0, v1, p1}, Lto3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    return-object v0
+.end method
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+.method public final d(Ls7;)Lep3;
+    .locals 2
+
+    new-instance v0, Lep3;
+
+    sget-object v1, Lq4h;->d:Lnqa;
+
+    invoke-direct {v0, p0, v1, p1}, Lep3;-><init>(Lso3;Lsy3;Ls7;)V
+
+    return-object v0
+.end method
+
+.method public final e(Lsy3;)Lep3;
+    .locals 2
+
+    new-instance v0, Lep3;
+
+    sget-object v1, Lq4h;->c:Lmqa;
+
+    invoke-direct {v0, p0, p1, v1}, Lep3;-><init>(Lso3;Lsy3;Ls7;)V
+
+    return-object v0
+.end method
+
+.method public final f(Lbp3;)V
+    .locals 2
+
+    :try_start_0
+    invoke-virtual {p0, p1}, Lso3;->g(Lbp3;)V
+    :try_end_0
+    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    invoke-static {p1}, Lmxj;->e(Ljava/lang/Throwable;)V
+
+    invoke-static {p1}, Lsvj;->a(Ljava/lang/Throwable;)V
+
+    new-instance v0, Ljava/lang/NullPointerException;
+
+    const-string v1, "Actually not, but can\'t pass out an exception otherwise..."
+
+    invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+
+    throw v0
+
+    :catch_0
+    move-exception p1
+
+    throw p1
+.end method
+
+.method public abstract g(Lbp3;)V
+.end method
+
+.method public final h(Leie;)Lto3;
+    .locals 2
+
+    const-string v0, "scheduler is null"
+
+    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    new-instance v0, Lto3;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, p0, v1, p1}, Lto3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    return-object v0
+.end method
+
+.method public final i()Luza;
+    .locals 2
+
+    instance-of v0, p0, Lst6;
+
+    if-eqz v0, :cond_0
+
+    move-object v0, p0
+
+    check-cast v0, Lst6;
+
+    invoke-interface {v0}, Lst6;->b()Luza;
 
     move-result-object v0
+
+    return-object v0
+
+    :cond_0
+    new-instance v0, Lfp3;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1, p0}, Lfp3;-><init>(ILjava/lang/Object;)V
 
     return-object v0
 .end method

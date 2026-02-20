@@ -1,21 +1,43 @@
-.class public final Ler;
-.super Laq;
+.class public Ler;
+.super Lorj;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ler;
+# instance fields
+.field public final synthetic d:Landroidx/appcompat/widget/AppCompatTextView;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Landroidx/appcompat/widget/AppCompatTextView;)V
     .locals 1
 
-    new-instance v0, Ler;
+    iput-object p1, p0, Ler;->d:Landroidx/appcompat/widget/AppCompatTextView;
 
-    invoke-direct {v0}, Laq;-><init>()V
+    const/4 v0, 0x2
 
-    sput-object v0, Ler;->a:Ler;
+    invoke-direct {p0, v0, p1}, Lorj;-><init>(ILjava/lang/Object;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final v(I)V
+    .locals 1
+
+    iget-object v0, p0, Ler;->d:Landroidx/appcompat/widget/AppCompatTextView;
+
+    invoke-static {v0, p1}, Landroidx/appcompat/widget/AppCompatTextView;->g(Landroidx/appcompat/widget/AppCompatTextView;I)V
+
+    return-void
+.end method
+
+.method public final z(I)V
+    .locals 1
+
+    iget-object v0, p0, Ler;->d:Landroidx/appcompat/widget/AppCompatTextView;
+
+    invoke-static {v0, p1}, Landroidx/appcompat/widget/AppCompatTextView;->f(Landroidx/appcompat/widget/AppCompatTextView;I)V
 
     return-void
 .end method

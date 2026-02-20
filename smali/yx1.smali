@@ -1,48 +1,69 @@
 .class public final Lyx1;
-.super Lo84;
+.super Ljava/util/concurrent/AbstractExecutorService;
+.source "SourceFile"
 
 
-# instance fields
-.field public final synthetic X:Lnq1;
-
-.field public synthetic d:Ljava/lang/Object;
-
-.field public o:I
+# static fields
+.field public static final a:Lyx1;
 
 
 # direct methods
-.method public constructor <init>(Lnq1;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lyx1;->X:Lnq1;
+    new-instance v0, Lyx1;
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0}, Ljava/util/concurrent/AbstractExecutorService;-><init>()V
+
+    sput-object v0, Lyx1;->a:Lyx1;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final awaitTermination(JLjava/util/concurrent/TimeUnit;)Z
+    .locals 0
+
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final execute(Ljava/lang/Runnable;)V
+    .locals 0
+
+    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
+
+    return-void
+.end method
+
+.method public final isShutdown()Z
     .locals 1
-
-    iput-object p1, p0, Lyx1;->d:Ljava/lang/Object;
-
-    iget p1, p0, Lyx1;->o:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lyx1;->o:I
-
-    iget-object p1, p0, Lyx1;->X:Lnq1;
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0, p0}, Lnq1;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    return v0
+.end method
 
-    move-result-object p1
+.method public final isTerminated()Z
+    .locals 1
 
-    return-object p1
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final shutdown()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final shutdownNow()Ljava/util/List;
+    .locals 1
+
+    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    return-object v0
 .end method

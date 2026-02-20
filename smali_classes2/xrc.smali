@@ -1,19 +1,21 @@
 .class public final Lxrc;
-.super Ldsc;
+.super Lsla;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/lang/CharSequence;
+.field public final b:J
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/CharSequence;)V
-    .locals 0
+.method public constructor <init>(J)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Lmah;->a:Lmah;
 
-    iput-object p1, p0, Lxrc;->a:Ljava/lang/CharSequence;
+    invoke-direct {p0, v0}, Lsla;-><init>(Ljava/lang/Object;)V
+
+    iput-wide p1, p0, Lxrc;->b:J
 
     return-void
 .end method
@@ -21,7 +23,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    .locals 7
 
     const/4 v0, 0x1
 
@@ -41,15 +43,13 @@
     :cond_1
     check-cast p1, Lxrc;
 
-    iget-object v1, p0, Lxrc;->a:Ljava/lang/CharSequence;
+    iget-wide v3, p0, Lxrc;->b:J
 
-    iget-object p1, p1, Lxrc;->a:Ljava/lang/CharSequence;
+    iget-wide v5, p1, Lxrc;->b:J
 
-    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    cmp-long p1, v3, v5
 
-    move-result p1
-
-    if-nez p1, :cond_2
+    if-eqz p1, :cond_2
 
     return v2
 
@@ -57,61 +57,28 @@
     return v0
 .end method
 
-.method public final getItemId()J
+.method public final hashCode()I
     .locals 2
 
-    const v0, 0x8000
+    iget-wide v0, p0, Lxrc;->b:J
 
-    int-to-long v0, v0
-
-    return-wide v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lxrc;->a:Ljava/lang/CharSequence;
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    return v0
-
-    :cond_0
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
     move-result v0
 
     return v0
 .end method
 
-.method public final m()I
-    .locals 1
-
-    const v0, 0x8000
-
-    return v0
-.end method
-
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 4
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "LinkWithQrCodeItem(link="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lxrc;->a:Ljava/lang/CharSequence;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-string v0, "BackToChat(chatId="
 
     const-string v1, ")"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-wide v2, p0, Lxrc;->b:J
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v2, v3, v0, v1}, Lfvg;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

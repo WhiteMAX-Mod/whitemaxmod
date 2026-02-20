@@ -1,64 +1,79 @@
-.class public final synthetic Lsig;
-.super Ljava/lang/Object;
+.class public final Lsig;
+.super Lyp4;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;
-
-
-# direct methods
-.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;I)V
-    .locals 0
-
-    iput p2, p0, Lsig;->a:I
-
-    iput-object p1, p0, Lsig;->b:Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 1
+.method public final C(Landroid/net/Uri;)Landroid/net/Uri;
+    .locals 3
 
-    iget v0, p0, Lsig;->a:I
+    invoke-virtual {p1}, Landroid/net/Uri;->isHierarchical()Z
 
-    packed-switch v0, :pswitch_data_0
+    move-result v0
 
-    iget-object v0, p0, Lsig;->b:Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;
+    if-nez v0, :cond_0
 
-    invoke-static {v0}, Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;->b(Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;)V
+    invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
-    return-void
+    move-result-object p1
 
-    :pswitch_0
-    iget-object v0, p0, Lsig;->b:Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;
+    goto :goto_1
 
-    invoke-static {v0}, Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;->d(Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;)V
+    :cond_0
+    const-string v0, "bid"
 
-    return-void
+    invoke-virtual {p1, v0}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
 
-    :pswitch_1
-    iget-object v0, p0, Lsig;->b:Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;
+    move-result-object v0
 
-    invoke-static {v0}, Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;->e(Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;)V
+    const-string v1, "t"
 
-    return-void
+    invoke-virtual {p1, v1}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
 
-    nop
+    move-result-object v1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    if-eqz v0, :cond_3
+
+    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
+
+    move-result v2
+
+    if-nez v2, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    if-eqz v1, :cond_3
+
+    invoke-interface {v1}, Ljava/lang/CharSequence;->length()I
+
+    move-result v2
+
+    if-nez v2, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    const-string p1, "ok-image-cache:bid="
+
+    const-string v2, "&t="
+
+    invoke-static {p1, v0, v2, v1}, Lau1;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    goto :goto_1
+
+    :cond_3
+    :goto_0
+    invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    :goto_1
+    invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object p1
+
+    return-object p1
 .end method

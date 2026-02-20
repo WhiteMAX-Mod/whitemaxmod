@@ -1,81 +1,55 @@
-.class public final synthetic Ljog;
-.super Ljava/lang/Object;
+.class public final Ljog;
+.super Landroid/util/LruCache;
 .source "SourceFile"
-
-# interfaces
-.implements Llq6;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Llq6;
+.field public final synthetic a:Lkog;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILlq6;)V
+.method public constructor <init>(Lkog;)V
     .locals 0
 
-    iput p1, p0, Ljog;->a:I
+    iput-object p1, p0, Ljog;->a:Lkog;
 
-    iput-object p2, p0, Ljog;->b:Llq6;
+    const/4 p1, 0x3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, Landroid/util/LruCache;-><init>(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 1
+.method public final create(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
 
-    iget v0, p0, Ljog;->a:I
+    check-cast p1, Lgog;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v0, p1, Lgog;->a:Lipg;
 
-    iget-object v0, p0, Ljog;->b:Llq6;
+    iget v6, p1, Lgog;->b:I
 
-    invoke-interface {v0}, Llq6;->invoke()Ljava/lang/Object;
+    iget-object v4, p1, Lgog;->c:Lhd5;
 
-    move-result-object v0
+    new-instance v2, Landroid/text/TextPaint;
 
-    check-cast v0, Lzlb;
+    const/4 p1, 0x1
 
-    invoke-interface {v0}, Lzlb;->getIcon()Lwe7;
+    invoke-direct {v2, p1}, Landroid/text/TextPaint;-><init>(I)V
 
-    move-result-object v0
+    iget-object p1, p0, Ljog;->a:Lkog;
 
-    iget v0, v0, Lwe7;->f:I
+    iget-object v1, p1, Lkog;->a:Landroid/content/Context;
 
-    :goto_0
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    const/4 v3, 0x0
 
-    move-result-object v0
+    const/4 v5, 0x4
 
-    return-object v0
+    invoke-static/range {v0 .. v5}, Lipg;->c(Lipg;Landroid/content/Context;Landroid/text/TextPaint;Landroid/util/DisplayMetrics;Lhd5;I)V
 
-    :pswitch_0
-    iget-object v0, p0, Ljog;->b:Llq6;
+    invoke-virtual {v2, v6}, Landroid/graphics/Paint;->setColor(I)V
 
-    invoke-interface {v0}, Llq6;->invoke()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lzlb;
-
-    invoke-interface {v0}, Lzlb;->b()Lxf0;
-
-    move-result-object v0
-
-    iget v0, v0, Lxf0;->e:I
-
-    goto :goto_0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v2
 .end method

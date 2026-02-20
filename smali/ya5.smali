@@ -1,53 +1,52 @@
-.class public final Lya5;
+.class public interface abstract Lya5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lpx1;
-
-.field public final b:Lo58;
-
-.field public c:Lmmf;
-
-.field public final d:Ln8g;
-
-.field public final e:Lspf;
-
-.field public final f:Lspf;
+# static fields
+.field public static final a:Lva5;
 
 
 # direct methods
-.method public constructor <init>(Lpx1;Lo58;)V
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lva5;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lya5;->a:Lva5;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public abstract a(Lra5;Lol6;)Lna5;
+.end method
+
+.method public b(Lra5;Lol6;)Lwa5;
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object p1, Lwa5;->p:Lqq4;
 
-    iput-object p1, p0, Lya5;->a:Lpx1;
+    return-object p1
+.end method
 
-    iput-object p2, p0, Lya5;->b:Lo58;
+.method public abstract c(Landroid/os/Looper;Lzfc;)V
+.end method
 
-    new-instance p1, Lrs3;
+.method public abstract d(Lol6;)I
+.end method
 
-    const/16 p2, 0x18
+.method public prepare()V
+    .locals 0
 
-    invoke-direct {p1, p2}, Lrs3;-><init>(I)V
+    return-void
+.end method
 
-    new-instance p2, Ln8g;
-
-    invoke-direct {p2, p1}, Ln8g;-><init>(Llq6;)V
-
-    iput-object p2, p0, Lya5;->d:Ln8g;
-
-    const/4 p1, 0x0
-
-    invoke-static {p1}, Ltpf;->a(Ljava/lang/Object;)Lspf;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lya5;->e:Lspf;
-
-    iput-object p1, p0, Lya5;->f:Lspf;
+.method public release()V
+    .locals 0
 
     return-void
 .end method

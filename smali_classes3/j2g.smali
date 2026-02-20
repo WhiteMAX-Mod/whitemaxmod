@@ -1,47 +1,25 @@
 .class public final Lj2g;
-.super Lo84;
+.super Laqe;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:I
-
-.field public synthetic d:Ljava/lang/Object;
-
-.field public final synthetic o:Lw3;
+.field public final c:Ljava/util/ArrayList;
 
 
 # direct methods
-.method public constructor <init>(Lw3;Lo84;)V
-    .locals 0
-
-    iput-object p1, p0, Lj2g;->o:Lw3;
-
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public constructor <init>(Ljava/lang/String;Ljava/util/List;)V
     .locals 1
 
-    iput-object p1, p0, Lj2g;->d:Ljava/lang/Object;
+    const/4 v0, 0x2
 
-    iget p1, p0, Lj2g;->X:I
+    invoke-direct {p0, v0, p1}, Laqe;-><init>(ILjava/lang/String;)V
 
-    const/high16 v0, -0x80000000
+    new-instance p1, Ljava/util/ArrayList;
 
-    or-int/2addr p1, v0
+    invoke-direct {p1, p2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    iput p1, p0, Lj2g;->X:I
+    iput-object p1, p0, Lj2g;->c:Ljava/util/ArrayList;
 
-    iget-object p1, p0, Lj2g;->o:Lw3;
-
-    invoke-virtual {p1, p0}, Lw3;->a(Lo84;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

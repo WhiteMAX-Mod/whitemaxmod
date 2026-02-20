@@ -1,19 +1,19 @@
-.class public final Lgjb;
+.class public abstract Lgjb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:Lv40;
+# static fields
+.field public static final a:I
 
 
 # direct methods
-.method public constructor <init>(Lv40;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Ldid;->bell_anim:I
 
-    iput-object p1, p0, Lgjb;->a:Lv40;
+    sput v0, Lgjb;->a:I
 
     return-void
 .end method

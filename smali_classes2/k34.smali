@@ -1,22 +1,23 @@
 .class public final Lk34;
-.super Lo84;
+.super Lda4;
+.source "SourceFile"
 
 
 # instance fields
-.field public final synthetic X:Ld83;
+.field public X:I
 
 .field public synthetic d:Ljava/lang/Object;
 
-.field public o:I
+.field public final synthetic o:Lo34;
 
 
 # direct methods
-.method public constructor <init>(Ld83;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lo34;Lda4;)V
     .locals 0
 
-    iput-object p1, p0, Lk34;->X:Ld83;
+    iput-object p1, p0, Lk34;->o:Lo34;
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -28,19 +29,17 @@
 
     iput-object p1, p0, Lk34;->d:Ljava/lang/Object;
 
-    iget p1, p0, Lk34;->o:I
+    iget p1, p0, Lk34;->X:I
 
     const/high16 v0, -0x80000000
 
     or-int/2addr p1, v0
 
-    iput p1, p0, Lk34;->o:I
+    iput p1, p0, Lk34;->X:I
 
-    iget-object p1, p0, Lk34;->X:Ld83;
+    iget-object p1, p0, Lk34;->o:Lo34;
 
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Ld83;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-static {p1, p0}, Lo34;->d(Lo34;Lda4;)Ljava/io/Serializable;
 
     move-result-object p1
 

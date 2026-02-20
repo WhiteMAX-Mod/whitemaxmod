@@ -1,64 +1,68 @@
-.class public final Lap4;
+.class public final synthetic Lap4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Loi4;
+.implements Lih8;
 
 
 # instance fields
-.field public final a:Landroid/content/Context;
+.field public final synthetic a:I
 
-.field public final b:Lcr4;
+.field public final synthetic b:Lye;
+
+.field public final synthetic c:Ly69;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 1
+.method public synthetic constructor <init>(Lye;Ly69;I)V
+    .locals 0
 
-    new-instance v0, Lcr4;
+    iput p3, p0, Lap4;->a:I
 
-    invoke-direct {v0}, Lcr4;-><init>()V
+    iput-object p1, p0, Lap4;->b:Lye;
+
+    iput-object p2, p0, Lap4;->c:Ly69;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lap4;->a:Landroid/content/Context;
-
-    iput-object v0, p0, Lap4;->b:Lcr4;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic a()Lsi4;
-    .locals 1
+.method public final invoke(Ljava/lang/Object;)V
+    .locals 2
 
-    invoke-virtual {p0}, Lap4;->b()Lcp4;
+    iget v0, p0, Lap4;->a:I
 
-    move-result-object v0
+    packed-switch v0, :pswitch_data_0
 
-    return-object v0
-.end method
+    iget-object v0, p0, Lap4;->c:Ly69;
 
-.method public final b()Lcp4;
-    .locals 3
+    check-cast p1, Lze;
 
-    new-instance v0, Lcp4;
+    iget-object v1, p0, Lap4;->b:Lye;
 
-    iget-object v1, p0, Lap4;->b:Lcr4;
+    invoke-interface {p1, v1, v0}, Lze;->b0(Lye;Ly69;)V
 
-    invoke-virtual {v1}, Lcr4;->a()Lsi4;
+    return-void
 
-    move-result-object v1
+    :pswitch_0
+    iget-object v0, p0, Lap4;->c:Ly69;
 
-    iget-object v2, p0, Lap4;->a:Landroid/content/Context;
+    check-cast p1, Lze;
 
-    invoke-direct {v0, v2, v1}, Lcp4;-><init>(Landroid/content/Context;Lsi4;)V
+    iget-object v1, p0, Lap4;->b:Lye;
 
-    return-object v0
+    invoke-interface {p1, v1, v0}, Lze;->T0(Lye;Ly69;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

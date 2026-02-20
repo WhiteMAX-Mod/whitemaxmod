@@ -1,74 +1,24 @@
-.class public final Lkjd;
+.class public abstract Lkjd;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Landroid/view/View$OnAttachStateChangeListener;
 
 
-# instance fields
-.field public final synthetic a:Lone/me/rlottie/RLottieImageView;
+# static fields
+.field public static oneme_location_map_location_error:I = 0x7f13089c
 
-.field public final synthetic b:Lnjd;
+.field public static oneme_location_map_open_in:I = 0x7f13089d
 
-.field public final synthetic c:Lone/me/rlottie/RLottieDrawable;
+.field public static oneme_location_map_open_in_g_maps:I = 0x7f13089e
 
-.field public final synthetic d:Lljd;
+.field public static oneme_location_map_open_in_tg_maps:I = 0x7f13089f
 
-.field public final synthetic o:Lmjd;
+.field public static oneme_location_map_open_in_ya_maps:I = 0x7f1308a0
 
+.field public static oneme_location_map_open_in_ya_nav:I = 0x7f1308a1
 
-# direct methods
-.method public constructor <init>(Lone/me/rlottie/RLottieImageView;Lnjd;Lone/me/rlottie/RLottieDrawable;Lljd;Lmjd;)V
-    .locals 0
+.field public static oneme_location_map_send_geolocation:I = 0x7f1308a2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static oneme_location_map_send_place:I = 0x7f1308a3
 
-    iput-object p1, p0, Lkjd;->a:Lone/me/rlottie/RLottieImageView;
+.field public static oneme_location_map_send_unknown_address:I = 0x7f1308a4
 
-    iput-object p2, p0, Lkjd;->b:Lnjd;
-
-    iput-object p3, p0, Lkjd;->c:Lone/me/rlottie/RLottieDrawable;
-
-    iput-object p4, p0, Lkjd;->d:Lljd;
-
-    iput-object p5, p0, Lkjd;->o:Lmjd;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onViewAttachedToWindow(Landroid/view/View;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onViewDetachedFromWindow(Landroid/view/View;)V
-    .locals 1
-
-    iget-object p1, p0, Lkjd;->a:Lone/me/rlottie/RLottieImageView;
-
-    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
-
-    iget-object p1, p0, Lkjd;->b:Lnjd;
-
-    iget-object p1, p1, Lnjd;->a:Ljava/lang/String;
-
-    const-string v0, "onDetach"
-
-    invoke-static {p1, v0}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object p1, p0, Lkjd;->d:Lljd;
-
-    iget-object v0, p0, Lkjd;->c:Lone/me/rlottie/RLottieDrawable;
-
-    invoke-virtual {v0, p1}, Lone/me/rlottie/RLottieDrawable;->removeDrawableLoadListener(Lone/me/rlottie/RLottieDrawable$DrawableLoadListener;)V
-
-    iget-object p1, p0, Lkjd;->o:Lmjd;
-
-    invoke-virtual {v0, p1}, Lone/me/rlottie/RLottieDrawable;->removeOnAllFramesRenderedListener(Lone/me/rlottie/RLottieDrawable$OnAllFramesRenderedListener;)V
-
-    return-void
-.end method
+.field public static oneme_location_map_you:I = 0x7f1308a5

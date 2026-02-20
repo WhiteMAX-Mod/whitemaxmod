@@ -1,293 +1,576 @@
-.class public final synthetic Lj21;
+.class public final Lj21;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Llq6;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lj88;
 
-.field public final synthetic b:Ld31;
+.field public final b:Lj88;
 
-.field public final synthetic c:Z
+.field public final c:Lj88;
+
+.field public final d:Lj88;
+
+.field public final e:Lj88;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ld31;ZI)V
+.method public constructor <init>(Lj88;Lj88;Lj88;Lj88;Lj88;)V
     .locals 0
 
-    iput p3, p0, Lj21;->a:I
-
-    iput-object p1, p0, Lj21;->b:Ld31;
-
-    iput-boolean p2, p0, Lj21;->c:Z
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p2, p0, Lj21;->a:Lj88;
+
+    iput-object p3, p0, Lj21;->b:Lj88;
+
+    iput-object p1, p0, Lj21;->c:Lj88;
+
+    iput-object p4, p0, Lj21;->d:Lj88;
+
+    iput-object p5, p0, Lj21;->e:Lj88;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 11
+.method public final a()Lvy1;
+    .locals 1
 
-    iget v0, p0, Lj21;->a:I
+    iget-object v0, p0, Lj21;->c:Lj88;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
 
-    iget-object v0, p0, Lj21;->b:Ld31;
+    move-result-object v0
 
-    iget-boolean v5, p0, Lj21;->c:Z
+    check-cast v0, Lvy1;
 
-    sget-object v1, Lc5j;->a:Ledb;
+    return-object v0
+.end method
 
-    if-nez v1, :cond_0
+.method public final b(Landroid/content/Context;Landroid/content/Intent;Ljava/lang/String;)Z
+    .locals 22
 
-    goto :goto_0
+    move-object/from16 v0, p0
 
-    :cond_0
-    sget-object v2, Lkk8;->d:Lkk8;
+    move-object/from16 v1, p1
 
-    invoke-virtual {v1, v2}, Ledb;->b(Lkk8;)Z
+    invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
-    move-result v3
+    move-result-object v2
 
-    if-eqz v3, :cond_1
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    const-string v3, "Screen sharing in call was changed on "
+    const-string v4, "handleCallNotificationActionIntent action="
 
-    const-string v4, " success"
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v3, v4, v5}, Lmrf;->k(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v3
+    const-string v2, " from="
 
-    const/4 v4, 0x0
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v6, "CallAdminSettingsController"
+    move-object/from16 v2, p3
 
-    invoke-virtual {v1, v2, v6, v3, v4}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_1
-    :goto_0
-    iget-object v9, v0, Ld31;->F0:Lspf;
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    :cond_2
-    invoke-virtual {v9}, Lspf;->getValue()Ljava/lang/Object;
+    move-result-object v2
 
-    move-result-object v10
+    const-string v3, "CallActionsProcessor"
 
-    move-object v1, v10
+    invoke-static {v3, v2}, Ltej;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    check-cast v1, Lca;
+    invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
-    const/4 v7, 0x0
-
-    const/16 v8, 0x77
-
-    const/4 v2, 0x0
+    move-result-object v2
 
     const/4 v3, 0x0
 
-    const/4 v4, 0x0
+    if-nez v2, :cond_0
 
-    const/4 v6, 0x0
+    goto/16 :goto_3
 
-    invoke-static/range {v1 .. v8}, Lca;->a(Lca;ZZZZZZI)Lca;
+    :cond_0
+    sget-object v4, Lm71;->a:Lm71;
 
-    move-result-object v1
-
-    invoke-virtual {v9, v10, v1}, Lspf;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    iget-object v0, v0, Ld31;->D0:Li7f;
-
-    new-instance v1, Lfb;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v1, v2, v5}, Lfb;-><init>(ZZ)V
-
-    invoke-virtual {v0, v1}, Li7f;->h(Ljava/lang/Object;)Z
-
-    :goto_1
-    sget-object v0, Lb3h;->a:Lb3h;
-
-    return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Lj21;->b:Ld31;
-
-    iget-boolean v3, p0, Lj21;->c:Z
-
-    sget-object v1, Lc5j;->a:Ledb;
-
-    if-nez v1, :cond_3
-
-    goto :goto_2
-
-    :cond_3
-    sget-object v2, Lkk8;->d:Lkk8;
-
-    invoke-virtual {v1, v2}, Ledb;->b(Lkk8;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_4
-
-    const-string v4, "Cameras in call was changed on "
-
-    const-string v5, " success"
-
-    invoke-static {v4, v5, v3}, Lmrf;->k(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+    invoke-virtual {v4}, Lscout/Component;->getAccessor()Lr5;
 
     move-result-object v4
 
-    const/4 v5, 0x0
+    const/16 v5, 0x1a
 
-    const-string v6, "CallAdminSettingsController"
+    invoke-virtual {v4, v5}, Lr5;->c(I)Ljava/lang/Object;
 
-    invoke-virtual {v1, v2, v6, v4, v5}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    move-result-object v4
 
-    :cond_4
-    :goto_2
-    iget-object v9, v0, Ld31;->F0:Lspf;
+    check-cast v4, Lq41;
 
-    :cond_5
-    invoke-virtual {v9}, Lspf;->getValue()Ljava/lang/Object;
+    invoke-static {v2}, Ltea;->l(Ljava/lang/String;)Ltf1;
 
-    move-result-object v10
+    move-result-object v2
 
-    move-object v1, v10
+    sget-object v5, Lof1;->a:Lof1;
 
-    check-cast v1, Lca;
+    invoke-virtual {v2, v5}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    const/4 v7, 0x0
+    move-result v5
 
-    const/16 v8, 0x7d
+    const-string v6, "action-open-call"
 
-    const/4 v2, 0x0
+    const/high16 v7, 0x10000000
 
-    const/4 v4, 0x0
+    const-class v8, Lone/me/android/MainActivity;
 
-    const/4 v5, 0x0
+    const/4 v9, 0x1
 
-    const/4 v6, 0x0
+    if-eqz v5, :cond_1
 
-    invoke-static/range {v1 .. v8}, Lca;->a(Lca;ZZZZZZI)Lca;
+    new-instance v2, Landroid/content/Intent;
 
-    move-result-object v1
+    invoke-direct {v2, v1, v8}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    invoke-virtual {v9, v10, v1}, Lspf;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v2, v6}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    move-result v1
+    invoke-virtual {v2, v7}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    if-eqz v1, :cond_5
+    invoke-virtual {v1, v2}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
-    iget-object v0, v0, Ld31;->D0:Li7f;
+    invoke-virtual {v0}, Lj21;->c()V
 
-    new-instance v1, Lza;
+    return v9
 
-    const/4 v2, 0x1
+    :cond_1
+    sget-object v5, Ljf1;->a:Ljf1;
 
-    invoke-direct {v1, v2, v3}, Lza;-><init>(ZZ)V
+    invoke-virtual {v2, v5}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {v0, v1}, Li7f;->h(Ljava/lang/Object;)Z
+    move-result v5
+
+    const-string v10, "action-open-incoming"
+
+    const-wide/16 v11, 0x0
+
+    if-eqz v5, :cond_6
+
+    iget-object v2, v0, Lj21;->a:Lj88;
+
+    invoke-interface {v2}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lu2c;
+
+    sget-object v4, Lu2c;->h:[Ljava/lang/String;
+
+    invoke-virtual {v2, v4}, Lu2c;->c([Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_4
+
+    const-string v2, "incoming_param_is_video"
+
+    move-object/from16 v5, p2
+
+    invoke-virtual {v5, v2, v3}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+
+    move-result v2
+
+    iget-object v4, v0, Lj21;->d:Lj88;
+
+    invoke-interface {v4}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Liz5;
+
+    check-cast v4, Lk06;
+
+    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v5, Lru/ok/tamtam/android/prefs/PmsKey;->call-incoming-ab:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    invoke-virtual {v4, v5, v11, v12}, Lwme;->l(Lru/ok/tamtam/android/prefs/PmsKey;J)J
+
+    move-result-wide v4
+
+    cmp-long v4, v4, v11
+
+    if-nez v4, :cond_2
+
+    move v4, v9
+
+    goto :goto_0
+
+    :cond_2
+    move v4, v3
+
+    :goto_0
+    if-eqz v2, :cond_3
+
+    if-nez v4, :cond_3
+
+    move v3, v9
+
+    :cond_3
+    invoke-virtual {v0}, Lj21;->a()Lvy1;
+
+    move-result-object v2
+
+    check-cast v2, Lkz1;
+
+    invoke-virtual {v2, v3}, Lkz1;->f(Z)V
+
+    new-instance v2, Landroid/content/Intent;
+
+    invoke-direct {v2, v1, v8}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    invoke-virtual {v2, v6}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+
+    invoke-virtual {v2, v7}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
+
+    invoke-virtual {v1, v2}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
     goto :goto_1
 
-    :pswitch_1
-    iget-object v0, p0, Lj21;->b:Ld31;
+    :cond_4
+    move-object/from16 v5, p2
 
-    iget-boolean v4, p0, Lj21;->c:Z
+    invoke-virtual {v5}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
-    sget-object v1, Lc5j;->a:Ledb;
+    move-result-object v2
 
-    if-nez v1, :cond_6
+    new-instance v3, Landroid/content/Intent;
 
-    goto :goto_3
+    invoke-direct {v3, v1, v8}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    invoke-virtual {v3, v10}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+
+    if-eqz v2, :cond_5
+
+    invoke-virtual {v3, v2}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
+
+    :cond_5
+    invoke-virtual {v3, v7}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
+
+    invoke-virtual {v1, v3}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+
+    :goto_1
+    invoke-virtual {v0}, Lj21;->c()V
+
+    return v9
 
     :cond_6
-    sget-object v2, Lkk8;->d:Lkk8;
+    move-object/from16 v5, p2
 
-    invoke-virtual {v1, v2}, Ledb;->b(Lkk8;)Z
+    sget-object v6, Lmf1;->a:Lmf1;
 
-    move-result v3
+    invoke-virtual {v2, v6}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    if-eqz v3, :cond_7
+    move-result v6
 
-    const-string v3, "Microphone in call was changed on "
+    if-eqz v6, :cond_7
 
-    const-string v5, " success"
-
-    invoke-static {v3, v5, v4}, Lmrf;->k(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
-
-    move-result-object v3
-
-    const/4 v5, 0x0
-
-    const-string v6, "CallAdminSettingsController"
-
-    invoke-virtual {v1, v2, v6, v3, v5}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_7
-    :goto_3
-    iget-object v9, v0, Ld31;->F0:Lspf;
-
-    :cond_8
-    invoke-virtual {v9}, Lspf;->getValue()Ljava/lang/Object;
-
-    move-result-object v10
-
-    move-object v1, v10
-
-    check-cast v1, Lca;
-
-    const/4 v7, 0x0
-
-    const/16 v8, 0x7b
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x0
-
-    invoke-static/range {v1 .. v8}, Lca;->a(Lca;ZZZZZZI)Lca;
+    invoke-virtual {v0}, Lj21;->a()Lvy1;
 
     move-result-object v1
 
-    invoke-virtual {v9, v10, v1}, Lspf;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    check-cast v1, Lkz1;
+
+    invoke-virtual {v1}, Lkz1;->A()V
+
+    invoke-virtual {v0}, Lj21;->c()V
+
+    return v9
+
+    :cond_7
+    sget-object v6, Lkf1;->a:Lkf1;
+
+    invoke-virtual {v2, v6}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_9
+
+    iget-object v1, v0, Lj21;->b:Lj88;
+
+    invoke-interface {v1}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    move-object v13, v1
+
+    check-cast v13, Ly02;
+
+    invoke-virtual {v0}, Lj21;->a()Lvy1;
+
+    move-result-object v1
+
+    check-cast v1, Lkz1;
+
+    invoke-virtual {v1}, Lkz1;->m()Lng4;
+
+    move-result-object v1
+
+    iget-object v15, v1, Lng4;->c:Ljava/lang/String;
+
+    check-cast v4, Lr41;
+
+    invoke-virtual {v4}, Lr41;->d()Z
 
     move-result v1
 
     if-eqz v1, :cond_8
 
-    iget-object v0, v0, Ld31;->D0:Li7f;
+    goto :goto_2
 
-    new-instance v1, Lbb;
+    :cond_8
+    const-wide/16 v11, 0x1
 
-    const/4 v2, 0x1
+    :goto_2
+    invoke-virtual {v0}, Lj21;->a()Lvy1;
 
-    invoke-direct {v1, v2, v4}, Lbb;-><init>(ZZ)V
+    move-result-object v1
 
-    invoke-virtual {v0, v1}, Li7f;->h(Ljava/lang/Object;)Z
+    check-cast v1, Lkz1;
 
-    goto/16 :goto_1
+    invoke-virtual {v1}, Lkz1;->m()Lng4;
 
-    nop
+    move-result-object v1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    iget-boolean v1, v1, Lng4;->i:Z
+
+    invoke-virtual {v13}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v11, v12}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v17
+
+    const/16 v19, 0x0
+
+    const/16 v21, 0x74
+
+    const-string v14, "AUDIO_ENABLED"
+
+    const/16 v16, 0x0
+
+    const/16 v18, 0x0
+
+    move/from16 v20, v1
+
+    invoke-static/range {v13 .. v21}, Ly02;->c(Ly02;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/String;Ljava/lang/String;ZI)V
+
+    invoke-virtual {v4}, Lr41;->d()Z
+
+    move-result v1
+
+    xor-int/2addr v1, v9
+
+    invoke-virtual {v4, v1}, Lr41;->e(Z)V
+
+    return v9
+
+    :cond_9
+    sget-object v4, Llf1;->a:Llf1;
+
+    invoke-virtual {v2, v4}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_a
+
+    invoke-virtual {v0}, Lj21;->a()Lvy1;
+
+    move-result-object v1
+
+    sget-object v2, Ld57;->c:Ld57;
+
+    check-cast v1, Lkz1;
+
+    invoke-virtual {v1, v2}, Lkz1;->B(Ld57;)V
+
+    invoke-virtual {v0}, Lj21;->c()V
+
+    return v9
+
+    :cond_a
+    sget-object v4, Lpf1;->a:Lpf1;
+
+    invoke-virtual {v2, v4}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_c
+
+    invoke-virtual {v5}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
+
+    move-result-object v2
+
+    new-instance v3, Landroid/content/Intent;
+
+    invoke-direct {v3, v1, v8}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    invoke-virtual {v3, v10}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+
+    if-eqz v2, :cond_b
+
+    invoke-virtual {v3, v2}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
+
+    :cond_b
+    invoke-virtual {v3, v7}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
+
+    invoke-virtual {v1, v3}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+
+    invoke-virtual {v0}, Lj21;->c()V
+
+    return v9
+
+    :cond_c
+    sget-object v4, Lnf1;->a:Lnf1;
+
+    invoke-virtual {v2, v4}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_e
+
+    invoke-virtual {v5}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
+
+    move-result-object v2
+
+    new-instance v3, Landroid/content/Intent;
+
+    invoke-direct {v3, v1, v8}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    const-string v4, "action-join-link"
+
+    invoke-virtual {v3, v4}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+
+    if-eqz v2, :cond_d
+
+    invoke-virtual {v3, v2}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
+
+    :cond_d
+    invoke-virtual {v3, v7}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
+
+    invoke-virtual {v1, v3}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+
+    return v9
+
+    :cond_e
+    sget-object v4, Lqf1;->a:Lqf1;
+
+    invoke-virtual {v2, v4}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_10
+
+    invoke-virtual {v5}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
+
+    move-result-object v2
+
+    new-instance v3, Landroid/content/Intent;
+
+    invoke-direct {v3, v1, v8}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    const-string v4, "action-rate-call"
+
+    invoke-virtual {v3, v4}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+
+    if-eqz v2, :cond_f
+
+    invoke-virtual {v3, v2}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
+
+    :cond_f
+    invoke-virtual {v3, v7}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
+
+    invoke-virtual {v1, v3}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+
+    return v9
+
+    :cond_10
+    sget-object v4, Lrf1;->a:Lrf1;
+
+    invoke-virtual {v2, v4}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_12
+
+    invoke-virtual {v5}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
+
+    move-result-object v2
+
+    new-instance v3, Landroid/content/Intent;
+
+    invoke-direct {v3, v1, v8}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    const-string v4, "action-unknown-call"
+
+    invoke-virtual {v3, v4}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+
+    if-eqz v2, :cond_11
+
+    invoke-virtual {v3, v2}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
+
+    :cond_11
+    invoke-virtual {v3, v7}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
+
+    invoke-virtual {v1, v3}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+
+    return v9
+
+    :cond_12
+    sget-object v1, Lsf1;->a:Lsf1;
+
+    invoke-virtual {v2, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_13
+
+    :goto_3
+    return v3
+
+    :cond_13
+    new-instance v1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {v1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw v1
+.end method
+
+.method public final c()V
+    .locals 1
+
+    invoke-virtual {p0}, Lj21;->a()Lvy1;
+
+    move-result-object v0
+
+    check-cast v0, Lkz1;
+
+    invoke-virtual {v0}, Lkz1;->u()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lj21;->e:Lj88;
+
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Li02;
+
+    invoke-virtual {v0}, Li02;->c()V
+
+    :cond_0
+    return-void
 .end method

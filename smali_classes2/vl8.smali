@@ -1,45 +1,90 @@
-.class public abstract synthetic Lvl8;
-.super Ljava/lang/Object;
+.class public final Lvl8;
+.super Lpdg;
 .source "SourceFile"
 
+# interfaces
+.implements Lys6;
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+
+# instance fields
+.field public final synthetic o:Lxl8;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lxl8;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-static {}, Lfq9;->values()[Lfq9;
+    iput-object p1, p0, Lvl8;->o:Lxl8;
 
-    move-result-object v0
+    const/4 p1, 0x2
 
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    :try_start_0
-    sget-object v1, Lfq9;->a:Ljava/util/HashMap;
-
-    const/4 v1, 0x1
-
-    aput v1, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    :try_start_1
-    sget-object v1, Lfq9;->a:Ljava/util/HashMap;
-
-    const/4 v1, 0x2
-
-    aput v1, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
-    sput-object v0, Lvl8;->$EnumSwitchMapping$0:[I
+    invoke-direct {p0, p1, p2}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lnd4;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lvl8;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lvl8;
+
+    sget-object p2, Lmah;->a:Lmah;
+
+    invoke-virtual {p1, p2}, Lvl8;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Lvl8;
+
+    iget-object v0, p0, Lvl8;->o:Lxl8;
+
+    invoke-direct {p1, v0, p2}, Lvl8;-><init>(Lxl8;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lvl8;->o:Lxl8;
+
+    iget-object p1, p1, Lxl8;->X:Lj88;
+
+    invoke-interface {p1}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lxjg;
+
+    check-cast p1, Ldkg;
+
+    iget-object p1, p1, Ldkg;->v0:Lj88;
+
+    invoke-interface {p1}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lekg;
+
+    invoke-virtual {p1}, Lekg;->g()V
+
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
 .end method

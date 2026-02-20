@@ -1,53 +1,59 @@
 .class public final Lgl6;
-.super Lo84;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Comparable;
 
 
 # instance fields
-.field public final synthetic X:Lhl6;
+.field public final a:I
 
-.field public Y:I
+.field public final b:I
 
-.field public d:Ljava/util/List;
+.field public final c:Ljava/lang/String;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final d:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lhl6;Lo84;)V
+.method public constructor <init>(Ljava/lang/String;IILjava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lgl6;->X:Lhl6;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput p2, p0, Lgl6;->a:I
+
+    iput p3, p0, Lgl6;->b:I
+
+    iput-object p1, p0, Lgl6;->c:Ljava/lang/String;
+
+    iput-object p4, p0, Lgl6;->d:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final compareTo(Ljava/lang/Object;)I
+    .locals 2
 
-    iput-object p1, p0, Lgl6;->o:Ljava/lang/Object;
+    check-cast p1, Lgl6;
 
-    iget p1, p0, Lgl6;->Y:I
+    iget v0, p0, Lgl6;->a:I
 
-    const/high16 v0, -0x80000000
+    iget v1, p1, Lgl6;->a:I
 
-    or-int/2addr p1, v0
+    sub-int/2addr v0, v1
 
-    iput p1, p0, Lgl6;->Y:I
+    if-nez v0, :cond_0
 
-    const/4 p1, 0x0
+    iget v0, p0, Lgl6;->b:I
 
-    const-wide/16 v0, 0x0
+    iget p1, p1, Lgl6;->b:I
 
-    iget-object v2, p0, Lgl6;->X:Lhl6;
+    sub-int/2addr v0, p1
 
-    invoke-virtual {v2, v0, v1, p0, p1}, Lhl6;->b(JLo84;Ljava/util/List;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    :cond_0
+    return v0
 .end method

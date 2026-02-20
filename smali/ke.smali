@@ -1,292 +1,341 @@
-.class public final Lke;
-.super Ly48;
+.class public Lke;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Llq6;
 
 
 # instance fields
-.field public final synthetic X:I
+.field public final a:Lge;
 
-.field public final synthetic Y:I
-
-.field public final synthetic Z:Landroid/os/Bundle;
-
-.field public final synthetic a:Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;
-
-.field public final synthetic b:Landroid/content/IntentSender;
-
-.field public final synthetic c:I
-
-.field public final synthetic d:Landroid/content/Intent;
-
-.field public final synthetic o:I
+.field public final b:I
 
 
 # direct methods
-.method public constructor <init>(Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;Landroid/content/IntentSender;ILandroid/content/Intent;IIILandroid/os/Bundle;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 1
 
-    iput-object p1, p0, Lke;->a:Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;
+    const/4 v0, 0x0
 
-    iput-object p2, p0, Lke;->b:Landroid/content/IntentSender;
+    .line 1
+    invoke-static {p1, v0}, Lle;->f(Landroid/content/Context;I)I
 
-    iput p3, p0, Lke;->c:I
+    move-result v0
 
-    iput-object p4, p0, Lke;->d:Landroid/content/Intent;
+    invoke-direct {p0, p1, v0}, Lke;-><init>(Landroid/content/Context;I)V
 
-    iput p5, p0, Lke;->o:I
+    return-void
+.end method
 
-    iput p6, p0, Lke;->X:I
+.method public constructor <init>(Landroid/content/Context;I)V
+    .locals 3
 
-    iput p7, p0, Lke;->Y:I
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p8, p0, Lke;->Z:Landroid/os/Bundle;
+    .line 3
+    new-instance v0, Lge;
 
-    const/4 p1, 0x0
+    new-instance v1, Landroid/view/ContextThemeWrapper;
 
-    invoke-direct {p0, p1}, Ly48;-><init>(I)V
+    .line 4
+    invoke-static {p1, p2}, Lle;->f(Landroid/content/Context;I)I
+
+    move-result v2
+
+    invoke-direct {v1, p1, v2}, Landroid/view/ContextThemeWrapper;-><init>(Landroid/content/Context;I)V
+
+    invoke-direct {v0, v1}, Lge;-><init>(Landroid/view/ContextThemeWrapper;)V
+
+    iput-object v0, p0, Lke;->a:Lge;
+
+    .line 5
+    iput p2, p0, Lke;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 13
+.method public create()Lle;
+    .locals 12
 
-    iget-object v0, p0, Lke;->a:Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;
+    new-instance v0, Lle;
 
-    iget-object v1, v0, Landroidx/fragment/app/a;->F0:Lnm6;
+    iget-object v1, p0, Lke;->a:Lge;
 
-    const-string v2, "Fragment "
+    iget-object v2, v1, Lge;->a:Landroid/view/ContextThemeWrapper;
 
-    if-eqz v1, :cond_8
+    iget v3, p0, Lke;->b:I
 
-    const/4 v1, 0x2
+    invoke-direct {v0, v2, v3}, Lle;-><init>(Landroid/view/ContextThemeWrapper;I)V
 
-    invoke-static {v1}, Landroidx/fragment/app/c;->K(I)Z
+    iget-object v2, v1, Lge;->e:Landroid/view/View;
 
-    move-result v3
+    iget-object v3, v0, Lle;->X:Lje;
 
-    iget-object v5, p0, Lke;->b:Landroid/content/IntentSender;
+    const/4 v4, 0x0
 
-    iget v6, p0, Lke;->c:I
+    if-eqz v2, :cond_0
 
-    iget-object v7, p0, Lke;->d:Landroid/content/Intent;
-
-    iget-object v11, p0, Lke;->Z:Landroid/os/Bundle;
-
-    const-string v4, "FragmentManager"
-
-    if-eqz v3, :cond_0
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v8, " received the following in startIntentSenderForResult() requestCode: "
-
-    invoke-virtual {v3, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v8, " IntentSender: "
-
-    invoke-virtual {v3, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v8, " fillInIntent: "
-
-    invoke-virtual {v3, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v8, " options: "
-
-    invoke-virtual {v3, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v4, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    invoke-virtual {v0}, Landroidx/fragment/app/a;->v()Landroidx/fragment/app/c;
-
-    move-result-object v3
-
-    iget-object v8, v3, Landroidx/fragment/app/c;->D:Laji;
-
-    move-object v9, v8
-
-    iget v8, p0, Lke;->o:I
-
-    move-object v10, v9
-
-    iget v9, p0, Lke;->X:I
-
-    if-eqz v10, :cond_5
-
-    if-eqz v11, :cond_3
-
-    if-nez v7, :cond_1
-
-    new-instance v7, Landroid/content/Intent;
-
-    invoke-direct {v7}, Landroid/content/Intent;-><init>()V
-
-    const-string v10, "androidx.fragment.extra.ACTIVITY_OPTIONS_BUNDLE"
-
-    const/4 v12, 0x1
-
-    invoke-virtual {v7, v10, v12}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
-
-    :cond_1
-    invoke-static {v1}, Landroidx/fragment/app/c;->K(I)Z
-
-    move-result v10
-
-    if-eqz v10, :cond_2
-
-    new-instance v10, Ljava/lang/StringBuilder;
-
-    const-string v12, "ActivityOptions "
-
-    invoke-direct {v10, v12}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v12, " were added to fillInIntent "
-
-    invoke-virtual {v10, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v10, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v12, " for fragment "
-
-    invoke-virtual {v10, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v10, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v10
-
-    invoke-static {v4, v10}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_2
-    const-string v10, "androidx.activity.result.contract.extra.ACTIVITY_OPTIONS_BUNDLE"
-
-    invoke-virtual {v7, v10, v11}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/Intent;
-
-    :cond_3
-    new-instance v10, Lat7;
-
-    invoke-direct {v10, v5, v7, v8, v9}, Lat7;-><init>(Landroid/content/IntentSender;Landroid/content/Intent;II)V
-
-    new-instance v5, Lxm6;
-
-    iget-object v7, v0, Landroidx/fragment/app/a;->o:Ljava/lang/String;
-
-    invoke-direct {v5, v7, v6}, Lxm6;-><init>(Ljava/lang/String;I)V
-
-    iget-object v6, v3, Landroidx/fragment/app/c;->F:Ljava/util/ArrayDeque;
-
-    invoke-virtual {v6, v5}, Ljava/util/ArrayDeque;->addLast(Ljava/lang/Object;)V
-
-    invoke-static {v1}, Landroidx/fragment/app/c;->K(I)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_4
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, "is launching an IntentSender for result "
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v4, v0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_4
-    iget-object v0, v3, Landroidx/fragment/app/c;->D:Laji;
-
-    invoke-virtual {v0, v10}, Laji;->u(Ljava/lang/Object;)V
+    iput-object v2, v3, Lje;->w:Landroid/view/View;
 
     goto :goto_0
 
-    :cond_5
-    iget-object v0, v3, Landroidx/fragment/app/c;->w:Lnm6;
+    :cond_0
+    iget-object v2, v1, Lge;->d:Ljava/lang/CharSequence;
 
-    const/4 v1, -0x1
+    if-eqz v2, :cond_1
 
-    const-string v2, "Starting intent sender with a requestCode requires a FragmentActivity host"
+    iput-object v2, v3, Lje;->d:Ljava/lang/CharSequence;
 
-    if-ne v6, v1, :cond_7
+    iget-object v5, v3, Lje;->u:Landroid/widget/TextView;
 
-    iget-object v4, v0, Lnm6;->b:Landroidx/fragment/app/b;
+    if-eqz v5, :cond_1
 
-    if-eqz v4, :cond_6
+    invoke-virtual {v5, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    iget v10, p0, Lke;->Y:I
+    :cond_1
+    iget-object v2, v1, Lge;->c:Landroid/graphics/drawable/Drawable;
 
-    invoke-virtual/range {v4 .. v11}, Landroid/app/Activity;->startIntentSenderForResult(Landroid/content/IntentSender;ILandroid/content/Intent;IIILandroid/os/Bundle;)V
+    if-eqz v2, :cond_2
 
+    iput-object v2, v3, Lje;->s:Landroid/graphics/drawable/Drawable;
+
+    iget-object v5, v3, Lje;->t:Landroid/widget/ImageView;
+
+    if-eqz v5, :cond_2
+
+    invoke-virtual {v5, v4}, Landroid/widget/ImageView;->setVisibility(I)V
+
+    iget-object v5, v3, Lje;->t:Landroid/widget/ImageView;
+
+    invoke-virtual {v5, v2}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    :cond_2
     :goto_0
-    sget-object v0, Lb3h;->a:Lb3h;
+    iget-object v2, v1, Lge;->f:Ljava/lang/CharSequence;
 
-    return-object v0
+    if-eqz v2, :cond_3
+
+    iput-object v2, v3, Lje;->e:Ljava/lang/CharSequence;
+
+    iget-object v5, v3, Lje;->v:Landroid/widget/TextView;
+
+    if-eqz v5, :cond_3
+
+    invoke-virtual {v5, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    :cond_3
+    iget-object v2, v1, Lge;->g:Ljava/lang/CharSequence;
+
+    if-nez v2, :cond_4
+
+    goto :goto_1
+
+    :cond_4
+    const/4 v5, -0x1
+
+    iget-object v6, v1, Lge;->h:Landroid/content/DialogInterface$OnClickListener;
+
+    invoke-virtual {v3, v5, v2, v6}, Lje;->c(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
+
+    :goto_1
+    iget-object v2, v1, Lge;->i:Ljava/lang/CharSequence;
+
+    if-nez v2, :cond_5
+
+    goto :goto_2
+
+    :cond_5
+    const/4 v5, -0x2
+
+    iget-object v6, v1, Lge;->j:Landroid/content/DialogInterface$OnClickListener;
+
+    invoke-virtual {v3, v5, v2, v6}, Lje;->c(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
+
+    :goto_2
+    iget-object v2, v1, Lge;->k:Ljava/lang/CharSequence;
+
+    if-nez v2, :cond_6
+
+    goto :goto_3
 
     :cond_6
-    new-instance v0, Ljava/lang/IllegalStateException;
+    const/4 v5, -0x3
 
-    invoke-direct {v0, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    iget-object v6, v1, Lge;->l:Landroid/content/DialogInterface$OnClickListener;
 
-    throw v0
+    invoke-virtual {v3, v5, v2, v6}, Lje;->c(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
+
+    :goto_3
+    iget-object v2, v1, Lge;->n:[Ljava/lang/CharSequence;
+
+    const/4 v5, 0x1
+
+    const/4 v6, 0x0
+
+    if-nez v2, :cond_7
+
+    iget-object v2, v1, Lge;->o:Landroid/widget/ListAdapter;
+
+    if-eqz v2, :cond_c
 
     :cond_7
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object v2, v1, Lge;->b:Landroid/view/LayoutInflater;
 
-    new-instance v0, Ljava/lang/IllegalStateException;
+    iget v7, v3, Lje;->A:I
 
-    invoke-direct {v0, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, v7, v6}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    throw v0
+    move-result-object v2
+
+    check-cast v2, Landroidx/appcompat/app/AlertController$RecycleListView;
+
+    iget-boolean v7, v1, Lge;->r:Z
+
+    if-eqz v7, :cond_8
+
+    iget v7, v3, Lje;->B:I
+
+    goto :goto_4
 
     :cond_8
-    new-instance v1, Ljava/lang/IllegalStateException;
+    iget v7, v3, Lje;->C:I
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    :goto_4
+    iget-object v8, v1, Lge;->o:Landroid/widget/ListAdapter;
 
-    invoke-direct {v3, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    if-eqz v8, :cond_9
 
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    goto :goto_5
 
-    const-string v0, " not attached to Activity"
+    :cond_9
+    new-instance v8, Lie;
 
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v9, v1, Lge;->a:Landroid/view/ContextThemeWrapper;
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const v10, 0x1020014
 
-    move-result-object v0
+    iget-object v11, v1, Lge;->n:[Ljava/lang/CharSequence;
 
-    invoke-direct {v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v8, v9, v7, v10, v11}, Landroid/widget/ArrayAdapter;-><init>(Landroid/content/Context;II[Ljava/lang/Object;)V
 
-    throw v1
+    :goto_5
+    iput-object v8, v3, Lje;->x:Landroid/widget/ListAdapter;
+
+    iget v7, v1, Lge;->s:I
+
+    iput v7, v3, Lje;->y:I
+
+    iget-object v7, v1, Lge;->p:Landroid/content/DialogInterface$OnClickListener;
+
+    if-eqz v7, :cond_a
+
+    new-instance v7, Lfe;
+
+    invoke-direct {v7, v1, v3}, Lfe;-><init>(Lge;Lje;)V
+
+    invoke-virtual {v2, v7}, Landroid/widget/AdapterView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
+
+    :cond_a
+    iget-boolean v7, v1, Lge;->r:Z
+
+    if-eqz v7, :cond_b
+
+    invoke-virtual {v2, v5}, Landroid/widget/AbsListView;->setChoiceMode(I)V
+
+    :cond_b
+    iput-object v2, v3, Lje;->f:Landroidx/appcompat/app/AlertController$RecycleListView;
+
+    :cond_c
+    iget-object v2, v1, Lge;->q:Landroid/view/View;
+
+    if-eqz v2, :cond_d
+
+    iput-object v2, v3, Lje;->g:Landroid/view/View;
+
+    iput-boolean v4, v3, Lje;->h:Z
+
+    :cond_d
+    invoke-virtual {v0, v5}, Landroid/app/Dialog;->setCancelable(Z)V
+
+    invoke-virtual {v0, v5}, Landroid/app/Dialog;->setCanceledOnTouchOutside(Z)V
+
+    invoke-virtual {v0, v6}, Landroid/app/Dialog;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)V
+
+    invoke-virtual {v0, v6}, Landroid/app/Dialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
+
+    iget-object v1, v1, Lge;->m:Lul9;
+
+    if-eqz v1, :cond_e
+
+    invoke-virtual {v0, v1}, Landroid/app/Dialog;->setOnKeyListener(Landroid/content/DialogInterface$OnKeyListener;)V
+
+    :cond_e
+    return-object v0
+.end method
+
+.method public getContext()Landroid/content/Context;
+    .locals 1
+
+    iget-object v0, p0, Lke;->a:Lge;
+
+    iget-object v0, v0, Lge;->a:Landroid/view/ContextThemeWrapper;
+
+    return-object v0
+.end method
+
+.method public setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Lke;
+    .locals 2
+
+    iget-object v0, p0, Lke;->a:Lge;
+
+    iget-object v1, v0, Lge;->a:Landroid/view/ContextThemeWrapper;
+
+    invoke-virtual {v1, p1}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    iput-object p1, v0, Lge;->i:Ljava/lang/CharSequence;
+
+    iput-object p2, v0, Lge;->j:Landroid/content/DialogInterface$OnClickListener;
+
+    return-object p0
+.end method
+
+.method public setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Lke;
+    .locals 2
+
+    iget-object v0, p0, Lke;->a:Lge;
+
+    iget-object v1, v0, Lge;->a:Landroid/view/ContextThemeWrapper;
+
+    invoke-virtual {v1, p1}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    iput-object p1, v0, Lge;->g:Ljava/lang/CharSequence;
+
+    iput-object p2, v0, Lge;->h:Landroid/content/DialogInterface$OnClickListener;
+
+    return-object p0
+.end method
+
+.method public setTitle(Ljava/lang/CharSequence;)Lke;
+    .locals 1
+
+    iget-object v0, p0, Lke;->a:Lge;
+
+    iput-object p1, v0, Lge;->d:Ljava/lang/CharSequence;
+
+    return-object p0
+.end method
+
+.method public setView(Landroid/view/View;)Lke;
+    .locals 1
+
+    iget-object v0, p0, Lke;->a:Lge;
+
+    iput-object p1, v0, Lge;->q:Landroid/view/View;
+
+    return-object p0
 .end method

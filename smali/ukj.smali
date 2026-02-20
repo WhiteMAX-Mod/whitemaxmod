@@ -1,59 +1,80 @@
-.class public abstract Lukj;
+.class public final Lukj;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Loza;
+
+
+# static fields
+.field public static final a:Lukj;
+
 
 # direct methods
-.method public static a(Lob4;Lpb4;)Lob4;
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-interface {p0}, Lob4;->getKey()Lpb4;
+    new-instance v0, Lukj;
 
-    move-result-object v0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    sput-object v0, Lukj;->a:Lukj;
 
-    move-result p1
+    new-instance v0, Lp7j;
 
-    if-eqz p1, :cond_0
+    const/4 v1, 0x1
 
-    return-object p0
+    invoke-direct {v0, v1}, Lp7j;-><init>(I)V
 
-    :cond_0
-    const/4 p0, 0x0
+    const-class v1, Lh8j;
 
-    return-object p0
-.end method
-
-.method public static b(Lob4;Lpb4;)Lqb4;
-    .locals 1
-
-    invoke-interface {p0}, Lob4;->getKey()Lpb4;
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    const/4 v2, 0x2
 
-    move-result p1
+    invoke-static {v0, v2}, Leni;->i(Ljava/util/HashMap;I)Lp7j;
 
-    if-eqz p1, :cond_0
+    move-result-object v0
 
-    sget-object p0, Lxg5;->a:Lxg5;
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
 
-    :cond_0
-    return-object p0
+    move-result-object v0
+
+    const/4 v2, 0x3
+
+    invoke-static {v0, v2}, Leni;->i(Ljava/util/HashMap;I)Lp7j;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x4
+
+    invoke-static {v0, v2}, Leni;->i(Ljava/util/HashMap;I)Lp7j;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, Leni;->m(Ljava/util/HashMap;)V
+
+    return-void
 .end method
 
-.method public static c(I)Ljava/lang/String;
-    .locals 2
 
-    const-string v0, "ProfileItemId(value="
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    const-string v1, ")"
+    invoke-static {p1}, Lkb0;->d(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    invoke-static {p0, v0, v1}, Lkz1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    move-result-object p1
 
-    move-result-object p0
-
-    return-object p0
+    throw p1
 .end method

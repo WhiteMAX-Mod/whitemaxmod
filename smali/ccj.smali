@@ -1,110 +1,70 @@
-.class public abstract Lccj;
+.class public final Lccj;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Loza;
+
 
 # static fields
-.field public static a:Luia;
+.field public static final a:Lccj;
 
 
 # direct methods
-.method public static final a(Lkotlin/coroutines/Continuation;)Lg62;
-    .locals 4
+.method static constructor <clinit>()V
+    .locals 3
 
-    instance-of v0, p0, Lkotlinx/coroutines/internal/DispatchedContinuation;
+    new-instance v0, Lccj;
 
-    if-nez v0, :cond_0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lg62;
+    sput-object v0, Lccj;->a:Lccj;
+
+    new-instance v0, Lczi;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, v1, p0}, Lg62;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, v1}, Lczi;-><init>(I)V
 
-    return-object v0
+    const-class v1, Lozi;
 
-    :cond_0
-    move-object v0, p0
-
-    check-cast v0, Lkotlinx/coroutines/internal/DispatchedContinuation;
-
-    invoke-virtual {v0}, Lkotlinx/coroutines/internal/DispatchedContinuation;->claimReusableCancellableContinuation$kotlinx_coroutines_core()Lg62;
+    invoke-static {v1, v0}, Leni;->f(Ljava/lang/Class;Lczi;)Ljava/util/HashMap;
 
     move-result-object v0
 
-    if-eqz v0, :cond_3
+    const/4 v2, 0x2
 
-    sget-object v1, Lg62;->d:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+    invoke-static {v0, v2}, Leni;->h(Ljava/util/HashMap;I)Lczi;
 
-    invoke-virtual {v1, v0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object v0
 
-    move-result-object v2
+    invoke-static {v1, v0}, Leni;->f(Ljava/lang/Class;Lczi;)Ljava/util/HashMap;
 
-    instance-of v3, v2, Lqo3;
+    move-result-object v0
 
-    if-eqz v3, :cond_1
+    const/4 v2, 0x3
 
-    check-cast v2, Lqo3;
+    invoke-static {v0, v2}, Leni;->h(Ljava/util/HashMap;I)Lczi;
 
-    iget-object v2, v2, Lqo3;->d:Ljava/lang/Object;
+    move-result-object v0
 
-    if-eqz v2, :cond_1
+    invoke-static {v1, v0}, Leni;->f(Ljava/lang/Class;Lczi;)Ljava/util/HashMap;
 
-    invoke-virtual {v0}, Lg62;->i()V
+    move-result-object v0
 
-    const/4 v0, 0x0
-
-    goto :goto_0
-
-    :cond_1
-    sget-object v2, Lg62;->c:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
-
-    const v3, 0x1fffffff
-
-    invoke-virtual {v2, v0, v3}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->set(Ljava/lang/Object;I)V
-
-    sget-object v2, Lh7;->a:Lh7;
-
-    invoke-virtual {v1, v0, v2}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->set(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    :goto_0
-    if-nez v0, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    return-object v0
-
-    :cond_3
-    :goto_1
-    new-instance v0, Lg62;
-
-    const/4 v1, 0x2
-
-    invoke-direct {v0, v1, p0}, Lg62;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-object v0
-.end method
-
-.method public static final b(Lf62;Lt52;)V
-    .locals 1
-
-    instance-of v0, p0, Lg62;
-
-    if-eqz v0, :cond_0
-
-    check-cast p0, Lg62;
-
-    invoke-virtual {p0, p1}, Lg62;->q(Lroa;)V
+    invoke-static {v0}, Leni;->m(Ljava/util/HashMap;)V
 
     return-void
+.end method
 
-    :cond_0
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
 
-    const-string p1, "third-party implementation of CancellableContinuation is not supported"
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-static {p1}, Lkb0;->d(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    throw p0
+    move-result-object p1
+
+    throw p1
 .end method

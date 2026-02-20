@@ -3,336 +3,92 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lh69;
-.implements Lf69;
+.implements Ljava/util/Map$Entry;
+.implements Ll58;
 
 
 # instance fields
-.field public X:Lf69;
+.field public final a:Lpt8;
 
-.field public Y:J
+.field public final b:I
 
-.field public final a:Lvc9;
-
-.field public final b:J
-
-.field public final c:Lsm4;
-
-.field public d:Lxk0;
-
-.field public o:Lh69;
+.field public final c:I
 
 
 # direct methods
-.method public constructor <init>(Lvc9;Lsm4;J)V
+.method public constructor <init>(ILpt8;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lnt8;->a:Lvc9;
+    iput-object p2, p0, Lnt8;->a:Lpt8;
 
-    iput-object p2, p0, Lnt8;->c:Lsm4;
+    iput p1, p0, Lnt8;->b:I
 
-    iput-wide p3, p0, Lnt8;->b:J
+    iget p1, p2, Lpt8;->Z:I
 
-    const-wide p1, -0x7fffffffffffffffL    # -4.9E-324
-
-    iput-wide p1, p0, Lnt8;->Y:J
+    iput p1, p0, Lnt8;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lvc9;)V
-    .locals 4
-
-    iget-wide v0, p0, Lnt8;->Y:J
-
-    const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
-
-    cmp-long v2, v0, v2
-
-    if-eqz v2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget-wide v0, p0, Lnt8;->b:J
-
-    :goto_0
-    iget-object v2, p0, Lnt8;->d:Lxk0;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object v3, p0, Lnt8;->c:Lsm4;
-
-    invoke-virtual {v2, p1, v3, v0, v1}, Lxk0;->c(Lvc9;Lsm4;J)Lh69;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lnt8;->o:Lh69;
-
-    iget-object v2, p0, Lnt8;->X:Lf69;
-
-    if-eqz v2, :cond_1
-
-    invoke-interface {p1, p0, v0, v1}, Lh69;->r(Lf69;J)V
-
-    :cond_1
-    return-void
-.end method
-
-.method public final c(JLkke;)J
+.method public final a()V
     .locals 2
 
-    iget-object v0, p0, Lnt8;->o:Lh69;
+    iget-object v0, p0, Lnt8;->a:Lpt8;
 
-    sget-object v1, Lmbh;->a:Ljava/lang/String;
+    iget v0, v0, Lpt8;->Z:I
 
-    invoke-interface {v0, p1, p2, p3}, Lh69;->c(JLkke;)J
+    iget v1, p0, Lnt8;->c:I
 
-    move-result-wide p1
-
-    return-wide p1
-.end method
-
-.method public final d()J
-    .locals 2
-
-    iget-object v0, p0, Lnt8;->o:Lh69;
-
-    sget-object v1, Lmbh;->a:Ljava/lang/String;
-
-    invoke-interface {v0}, Lope;->d()J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public final f()V
-    .locals 1
-
-    iget-object v0, p0, Lnt8;->o:Lh69;
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0}, Lh69;->f()V
+    if-ne v0, v1, :cond_0
 
     return-void
 
     :cond_0
-    iget-object v0, p0, Lnt8;->d:Lxk0;
+    new-instance v0, Ljava/util/ConcurrentModificationException;
 
-    if-eqz v0, :cond_1
+    const-string v1, "The backing map has been modified after this entry was obtained."
 
-    invoke-virtual {v0}, Lxk0;->k()V
+    invoke-direct {v0, v1}, Ljava/util/ConcurrentModificationException;-><init>(Ljava/lang/String;)V
 
-    :cond_1
-    return-void
+    throw v0
 .end method
 
-.method public final g(Lh69;)V
-    .locals 1
-
-    iget-object p1, p0, Lnt8;->X:Lf69;
-
-    sget-object v0, Lmbh;->a:Ljava/lang/String;
-
-    invoke-interface {p1, p0}, Lf69;->g(Lh69;)V
-
-    return-void
-.end method
-
-.method public final h(J)J
+.method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
-    iget-object v0, p0, Lnt8;->o:Lh69;
-
-    sget-object v1, Lmbh;->a:Ljava/lang/String;
-
-    invoke-interface {v0, p1, p2}, Lh69;->h(J)J
-
-    move-result-wide p1
-
-    return-wide p1
-.end method
-
-.method public final i()Z
-    .locals 1
-
-    iget-object v0, p0, Lnt8;->o:Lh69;
+    instance-of v0, p1, Ljava/util/Map$Entry;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lope;->i()Z
+    check-cast p1, Ljava/util/Map$Entry;
+
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Lnt8;->getKey()Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    const/4 v0, 0x1
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
-    return v0
+    move-result-object p1
 
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final j([Lar5;[Z[Ln8e;[ZJ)J
-    .locals 12
-
-    iget-wide v0, p0, Lnt8;->Y:J
-
-    const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
-
-    cmp-long v4, v0, v2
-
-    if-eqz v4, :cond_0
-
-    iget-wide v4, p0, Lnt8;->b:J
-
-    cmp-long v4, p5, v4
-
-    if-nez v4, :cond_0
-
-    move-wide v10, v0
-
-    goto :goto_0
-
-    :cond_0
-    move-wide/from16 v10, p5
-
-    :goto_0
-    iput-wide v2, p0, Lnt8;->Y:J
-
-    iget-object v5, p0, Lnt8;->o:Lh69;
-
-    sget-object v0, Lmbh;->a:Ljava/lang/String;
-
-    move-object v6, p1
-
-    move-object v7, p2
-
-    move-object v8, p3
-
-    move-object/from16 v9, p4
-
-    invoke-interface/range {v5 .. v11}, Lh69;->j([Lar5;[Z[Ln8e;[ZJ)J
-
-    move-result-wide p1
-
-    return-wide p1
-.end method
-
-.method public final k()J
-    .locals 2
-
-    iget-object v0, p0, Lnt8;->o:Lh69;
-
-    sget-object v1, Lmbh;->a:Ljava/lang/String;
-
-    invoke-interface {v0}, Lh69;->k()J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public final l()Lmrg;
-    .locals 2
-
-    iget-object v0, p0, Lnt8;->o:Lh69;
-
-    sget-object v1, Lmbh;->a:Ljava/lang/String;
-
-    invoke-interface {v0}, Lh69;->l()Lmrg;
+    invoke-virtual {p0}, Lnt8;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
-.end method
-
-.method public final m()J
-    .locals 2
-
-    iget-object v0, p0, Lnt8;->o:Lh69;
-
-    sget-object v1, Lmbh;->a:Ljava/lang/String;
-
-    invoke-interface {v0}, Lope;->m()J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public final n(J)V
-    .locals 2
-
-    iget-object v0, p0, Lnt8;->o:Lh69;
-
-    sget-object v1, Lmbh;->a:Ljava/lang/String;
-
-    invoke-interface {v0, p1, p2}, Lope;->n(J)V
-
-    return-void
-.end method
-
-.method public final p(Lope;)V
-    .locals 1
-
-    check-cast p1, Lh69;
-
-    iget-object p1, p0, Lnt8;->X:Lf69;
-
-    sget-object v0, Lmbh;->a:Ljava/lang/String;
-
-    invoke-interface {p1, p0}, Lmpe;->p(Lope;)V
-
-    return-void
-.end method
-
-.method public final r(Lf69;J)V
-    .locals 2
-
-    iput-object p1, p0, Lnt8;->X:Lf69;
-
-    iget-object p1, p0, Lnt8;->o:Lh69;
-
-    if-eqz p1, :cond_1
-
-    iget-wide p2, p0, Lnt8;->Y:J
-
-    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
-
-    cmp-long v0, p2, v0
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget-wide p2, p0, Lnt8;->b:J
-
-    :goto_0
-    invoke-interface {p1, p0, p2, p3}, Lh69;->r(Lf69;J)V
-
-    :cond_1
-    return-void
-.end method
-
-.method public final s(Ljg8;)Z
-    .locals 1
-
-    iget-object v0, p0, Lnt8;->o:Lh69;
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0, p1}, Lope;->s(Ljg8;)Z
+    invoke-static {p1, v0}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -348,14 +104,146 @@
     return p1
 .end method
 
-.method public final t(JZ)V
+.method public final getKey()Ljava/lang/Object;
     .locals 2
 
-    iget-object v0, p0, Lnt8;->o:Lh69;
+    invoke-virtual {p0}, Lnt8;->a()V
 
-    sget-object v1, Lmbh;->a:Ljava/lang/String;
+    iget-object v0, p0, Lnt8;->a:Lpt8;
 
-    invoke-interface {v0, p1, p2, p3}, Lh69;->t(JZ)V
+    iget-object v0, v0, Lpt8;->a:[Ljava/lang/Object;
 
-    return-void
+    iget v1, p0, Lnt8;->b:I
+
+    aget-object v0, v0, v1
+
+    return-object v0
+.end method
+
+.method public final getValue()Ljava/lang/Object;
+    .locals 2
+
+    invoke-virtual {p0}, Lnt8;->a()V
+
+    iget-object v0, p0, Lnt8;->a:Lpt8;
+
+    iget-object v0, v0, Lpt8;->b:[Ljava/lang/Object;
+
+    iget v1, p0, Lnt8;->b:I
+
+    aget-object v0, v0, v1
+
+    return-object v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    invoke-virtual {p0}, Lnt8;->getKey()Ljava/lang/Object;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    goto :goto_0
+
+    :cond_0
+    move v0, v1
+
+    :goto_0
+    invoke-virtual {p0}, Lnt8;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_1
+
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    :cond_1
+    xor-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final setValue(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    invoke-virtual {p0}, Lnt8;->a()V
+
+    iget-object v0, p0, Lnt8;->a:Lpt8;
+
+    invoke-virtual {v0}, Lpt8;->c()V
+
+    iget-object v1, v0, Lpt8;->b:[Ljava/lang/Object;
+
+    if-eqz v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v1, v0, Lpt8;->a:[Ljava/lang/Object;
+
+    array-length v1, v1
+
+    if-ltz v1, :cond_1
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    iput-object v1, v0, Lpt8;->b:[Ljava/lang/Object;
+
+    :goto_0
+    iget v0, p0, Lnt8;->b:I
+
+    aget-object v2, v1, v0
+
+    aput-object p1, v1, v0
+
+    return-object v2
+
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "capacity must be non-negative."
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p0}, Lnt8;->getKey()Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x3d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Lnt8;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

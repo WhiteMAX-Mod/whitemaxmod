@@ -3,334 +3,152 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final j:Ljava/security/SecureRandom;
-
-
 # instance fields
-.field public final a:Ljava/util/LinkedList;
-
-.field public final b:Landroid/util/SparseIntArray;
-
-.field public final c:Ljava/util/LinkedList;
-
-.field public final d:I
-
-.field public e:I
-
-.field public final f:I
-
-.field public g:I
-
-.field public h:Z
-
-.field public final i:Lve;
+.field public final a:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(J)V
+    .locals 0
 
-    new-instance v0, Ljava/security/SecureRandom;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/security/SecureRandom;-><init>()V
-
-    sput-object v0, La25;->j:Ljava/security/SecureRandom;
+    iput-wide p1, p0, La25;->a:J
 
     return-void
 .end method
 
-.method public constructor <init>()V
+.method public static a(IF)J
+    .locals 3
+
+    invoke-static {p1}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result p1
+
+    int-to-long v0, p1
+
+    int-to-long p0, p0
+
+    const/16 v2, 0x20
+
+    shl-long/2addr p0, v2
+
+    add-long/2addr v0, p0
+
+    return-wide v0
+.end method
+
+.method public static final b(JLandroid/content/Context;)F
+    .locals 0
+
+    invoke-virtual {p2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object p2
+
+    invoke-static {p0, p1, p2}, La25;->c(JLandroid/util/DisplayMetrics;)F
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static final c(JLandroid/util/DisplayMetrics;)F
     .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/16 v0, 0x20
 
-    new-instance v0, Ljava/util/LinkedList;
+    shr-long v0, p0, v0
 
-    invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
+    long-to-int v0, v0
 
-    iput-object v0, p0, La25;->a:Ljava/util/LinkedList;
+    invoke-static {p0, p1}, La25;->d(J)F
 
-    new-instance v0, Landroid/util/SparseIntArray;
+    move-result p0
 
-    invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
+    invoke-static {v0, p0, p2}, Landroid/util/TypedValue;->applyDimension(IFLandroid/util/DisplayMetrics;)F
 
-    iput-object v0, p0, La25;->b:Landroid/util/SparseIntArray;
+    move-result p0
 
-    new-instance v0, Ljava/util/LinkedList;
+    return p0
+.end method
 
-    invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
+.method public static final d(J)F
+    .locals 2
 
-    iput-object v0, p0, La25;->c:Ljava/util/LinkedList;
+    const-wide v0, 0xffffffffL
 
-    new-instance v0, Lve;
+    and-long/2addr p0, v0
 
-    const/16 v1, 0xc
+    long-to-int p0, p0
 
-    invoke-direct {v0, v1, p0}, Lve;-><init>(ILjava/lang/Object;)V
+    invoke-static {p0}, Ljava/lang/Float;->intBitsToFloat(I)F
 
-    iput-object v0, p0, La25;->i:Lve;
+    move-result p0
 
-    const/4 v0, 0x4
-
-    iput v0, p0, La25;->d:I
-
-    sget-object v0, La25;->j:Ljava/security/SecureRandom;
-
-    invoke-virtual {v0}, Ljava/util/Random;->nextInt()I
-
-    move-result v0
-
-    iput v0, p0, La25;->f:I
-
-    return-void
+    return p0
 .end method
 
 
 # virtual methods
-.method public final a()Ly15;
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    new-instance v0, Ly15;
+    instance-of v0, p1, La25;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    if-nez v0, :cond_0
 
-    const-string v2, "rlottie-pool-"
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v2, p0, La25;->f:I
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v2, "-"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    sget-object v2, La25;->j:Ljava/security/SecureRandom;
-
-    invoke-virtual {v2}, Ljava/util/Random;->nextInt()I
-
-    move-result v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ly15;-><init>(Ljava/lang/String;)V
-
-    const/16 v1, 0xa
-
-    invoke-virtual {v0, v1}, Ljava/lang/Thread;->setPriority(I)V
-
-    return-object v0
-.end method
-
-.method public final b(Ljava/lang/Runnable;)V
-    .locals 11
-
-    iget-object v0, p0, La25;->c:Ljava/util/LinkedList;
-
-    invoke-virtual {v0}, Ljava/util/AbstractCollection;->isEmpty()Z
-
-    move-result v1
-
-    iget v2, p0, La25;->d:I
-
-    iget-object v3, p0, La25;->a:Ljava/util/LinkedList;
-
-    const/4 v4, 0x1
-
-    if-nez v1, :cond_1
-
-    iget v1, p0, La25;->g:I
-
-    div-int/lit8 v1, v1, 0x2
-
-    invoke-virtual {v0}, Ljava/util/LinkedList;->size()I
-
-    move-result v5
-
-    if-le v1, v5, :cond_0
-
-    invoke-virtual {v3}, Ljava/util/AbstractCollection;->isEmpty()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    iget v1, p0, La25;->e:I
-
-    if-lt v1, v2, :cond_1
+    goto :goto_0
 
     :cond_0
-    :try_start_0
-    invoke-virtual {v0}, Ljava/util/LinkedList;->removeFirst()Ljava/lang/Object;
+    check-cast p1, La25;
 
-    move-result-object v1
+    iget-wide v0, p1, La25;->a:J
 
-    check-cast v1, Ly15;
-    :try_end_0
-    .catch Ljava/util/NoSuchElementException; {:try_start_0 .. :try_end_0} :catch_0
+    iget-wide v2, p0, La25;->a:J
 
-    goto :goto_0
+    cmp-long p1, v2, v0
 
-    :catch_0
-    move-exception v1
-
-    invoke-static {}, Lone/me/rlottie/RLottie;->getLogger()Lwia;
-
-    move-result-object v5
-
-    invoke-interface {v5, v1}, Lwia;->o(Ljava/lang/Throwable;)V
-
-    const/4 v1, 0x0
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {v3}, Ljava/util/AbstractCollection;->isEmpty()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    invoke-virtual {p0}, La25;->a()Ly15;
-
-    move-result-object v1
-
-    iget v5, p0, La25;->e:I
-
-    add-int/2addr v5, v4
-
-    iput v5, p0, La25;->e:I
-
-    goto :goto_0
-
-    :cond_2
-    invoke-virtual {v3}, Ljava/util/LinkedList;->removeFirst()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ly15;
+    if-eqz p1, :cond_1
 
     :goto_0
-    iget-boolean v5, p0, La25;->h:Z
+    const/4 p1, 0x0
 
-    if-nez v5, :cond_3
+    return p1
 
-    iget-object v5, p0, La25;->i:Lve;
+    :cond_1
+    const/4 p1, 0x1
 
-    const-wide/16 v6, 0x7530
+    return p1
+.end method
 
-    invoke-static {v5, v6, v7}, Lie;->e(Ljava/lang/Runnable;J)V
+.method public final hashCode()I
+    .locals 2
 
-    iput-boolean v4, p0, La25;->h:Z
+    iget-wide v0, p0, La25;->a:J
 
-    :cond_3
-    if-nez v1, :cond_4
-
-    invoke-static {}, Lone/me/rlottie/RLottie;->getLogger()Lwia;
-
-    move-result-object v1
-
-    sget-object v5, Ljava/util/Locale;->US:Ljava/util/Locale;
-
-    invoke-virtual {v0}, Ljava/util/LinkedList;->size()I
-
-    move-result v5
-
-    iget v6, p0, La25;->g:I
-
-    invoke-virtual {v3}, Ljava/util/LinkedList;->size()I
-
-    move-result v3
-
-    iget v7, p0, La25;->e:I
-
-    const-string v8, ", totalTasksCount="
-
-    const-string v9, ", queues.size="
-
-    const-string v10, "DispatchQueuePool: queue is null \u2013 busyQueues.size="
-
-    invoke-static {v10, v5, v8, v6, v9}, Lkz1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    const-string v6, ", createdCount="
-
-    const-string v8, ", maxCount="
-
-    invoke-static {v5, v3, v6, v7, v8}, Lxi4;->q(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    new-instance v3, Ljava/lang/IllegalStateException;
-
-    const-string v5, "queue is null"
-
-    invoke-direct {v3, v5}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    invoke-interface {v1, v2, v3}, Lwia;->e(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    invoke-virtual {p0}, La25;->a()Ly15;
-
-    move-result-object v1
-
-    iget v2, p0, La25;->e:I
-
-    add-int/2addr v2, v4
-
-    iput v2, p0, La25;->e:I
-
-    :cond_4
-    iget v2, v1, Ly15;->d:I
-
-    iget v3, p0, La25;->g:I
-
-    add-int/2addr v3, v4
-
-    iput v3, p0, La25;->g:I
-
-    invoke-virtual {v0, v1}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
-
-    const/4 v0, 0x0
-
-    iget-object v3, p0, La25;->b:Landroid/util/SparseIntArray;
-
-    invoke-virtual {v3, v2, v0}, Landroid/util/SparseIntArray;->get(II)I
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
     move-result v0
 
-    add-int/2addr v0, v4
+    return v0
+.end method
 
-    invoke-virtual {v3, v2, v0}, Landroid/util/SparseIntArray;->put(II)V
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    invoke-virtual {v1}, Ljava/lang/Thread;->getPriority()I
+    const-string v0, "Dimension(encodedValue="
 
-    move-result v0
+    const-string v1, ")"
 
-    const/16 v2, 0xa
+    iget-wide v2, p0, La25;->a:J
 
-    if-eq v0, v2, :cond_5
+    invoke-static {v2, v3, v0, v1}, Lfvg;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Ljava/lang/Thread;->setPriority(I)V
+    move-result-object v0
 
-    :cond_5
-    new-instance v0, Lzi;
-
-    const/16 v2, 0x16
-
-    invoke-direct {v0, p0, p1, v1, v2}, Lzi;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    invoke-virtual {v1, v0}, Ly15;->b(Ljava/lang/Runnable;)V
-
-    return-void
+    return-object v0
 .end method

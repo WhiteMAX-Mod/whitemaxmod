@@ -1,301 +1,246 @@
-.class public abstract Lceb;
+.class public final synthetic Lceb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lis6;
 
-# static fields
-.field public static final A:I
 
-.field public static final B:I
+# instance fields
+.field public final synthetic X:Ljava/lang/Object;
 
-.field public static final C:I
+.field public final synthetic Y:Ljava/lang/Object;
 
-.field public static final D:I
+.field public final synthetic a:I
 
-.field public static final E:I
+.field public final synthetic b:Ljava/lang/Object;
 
-.field public static final F:I
+.field public final synthetic c:Ljava/lang/Object;
 
-.field public static final G:I
+.field public final synthetic d:Ljava/lang/Object;
 
-.field public static final H:I
-
-.field public static final I:I
-
-.field public static final J:I
-
-.field public static final K:I
-
-.field public static final L:I
-
-.field public static final M:I
-
-.field public static final N:I
-
-.field public static final O:I
-
-.field public static final P:I
-
-.field public static final Q:I
-
-.field public static final R:I
-
-.field public static final S:I
-
-.field public static final T:I
-
-.field public static final U:I
-
-.field public static final V:I
-
-.field public static final a:I
-
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
-
-.field public static final s:I
-
-.field public static final t:I
-
-.field public static final u:I
-
-.field public static final v:I
-
-.field public static final w:I
-
-.field public static final x:I
-
-.field public static final y:I
-
-.field public static final z:I
+.field public final synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    .locals 0
 
-    sget v0, La9d;->chat_screen_message_send_error_delete_action:I
+    .line 2
+    iput p7, p0, Lceb;->a:I
 
-    sput v0, Lceb;->a:I
+    iput-object p1, p0, Lceb;->b:Ljava/lang/Object;
 
-    sget v0, La9d;->chat_screen_message_send_error_resend_action_multi:I
+    iput-object p2, p0, Lceb;->c:Ljava/lang/Object;
 
-    sput v0, Lceb;->b:I
+    iput-object p3, p0, Lceb;->d:Ljava/lang/Object;
 
-    sget v0, La9d;->chat_screen_message_send_error_resend_action_solo:I
+    iput-object p4, p0, Lceb;->o:Ljava/lang/Object;
 
-    sput v0, Lceb;->c:I
+    iput-object p5, p0, Lceb;->X:Ljava/lang/Object;
 
-    sget v0, La9d;->messages_list_chat_description_view_id:I
+    iput-object p6, p0, Lceb;->Y:Ljava/lang/Object;
 
-    sput v0, Lceb;->d:I
-
-    sget v0, La9d;->messages_list_chat_description_view_type:I
-
-    sput v0, Lceb;->e:I
-
-    sget v0, La9d;->messages_list_confirm_cancel:I
-
-    sput v0, Lceb;->f:I
-
-    sget v0, La9d;->messages_list_confirm_complaint_extremism:I
-
-    sput v0, Lceb;->g:I
-
-    sget v0, La9d;->messages_list_confirm_complaint_fake:I
-
-    sput v0, Lceb;->h:I
-
-    sget v0, La9d;->messages_list_confirm_complaint_other:I
-
-    sput v0, Lceb;->i:I
-
-    sget v0, La9d;->messages_list_confirm_complaint_porno:I
-
-    sput v0, Lceb;->j:I
-
-    sget v0, La9d;->messages_list_confirm_complaint_spam:I
-
-    sput v0, Lceb;->k:I
-
-    sget v0, La9d;->messages_list_confirm_complaint_threat:I
-
-    sput v0, Lceb;->l:I
-
-    sget v0, La9d;->messages_list_confirm_delete:I
-
-    sput v0, Lceb;->m:I
-
-    sget v0, La9d;->messages_list_confirm_delete_for_all:I
-
-    sput v0, Lceb;->n:I
-
-    sget v0, La9d;->messages_list_confirm_delete_scheduled:I
-
-    sput v0, Lceb;->o:I
-
-    sget v0, La9d;->messages_list_confirm_pin_with_notify:I
-
-    sput v0, Lceb;->p:I
-
-    sget v0, La9d;->messages_list_confirm_pin_without_notify:I
-
-    sput v0, Lceb;->q:I
-
-    sget v0, La9d;->messages_list_context_action_copy:I
-
-    sput v0, Lceb;->r:I
-
-    sget v0, La9d;->messages_list_context_action_copy_photo:I
-
-    sput v0, Lceb;->s:I
-
-    sget v0, La9d;->messages_list_context_action_delete:I
-
-    sput v0, Lceb;->t:I
-
-    sget v0, La9d;->messages_list_context_action_delete_for_all:I
-
-    sput v0, Lceb;->u:I
-
-    sget v0, La9d;->messages_list_context_action_edit:I
-
-    sput v0, Lceb;->v:I
-
-    sget v0, La9d;->messages_list_context_action_forward:I
-
-    sput v0, Lceb;->w:I
-
-    sget v0, La9d;->messages_list_context_action_mark_as_unread:I
-
-    sput v0, Lceb;->x:I
-
-    sget v0, La9d;->messages_list_context_action_pin:I
-
-    sput v0, Lceb;->y:I
-
-    sget v0, La9d;->messages_list_context_action_reply:I
-
-    sput v0, Lceb;->z:I
-
-    sget v0, La9d;->messages_list_context_action_report:I
-
-    sput v0, Lceb;->A:I
-
-    sget v0, La9d;->messages_list_context_action_save_to_gallery:I
-
-    sput v0, Lceb;->B:I
-
-    sget v0, La9d;->messages_list_context_action_select:I
-
-    sput v0, Lceb;->C:I
-
-    sget v0, La9d;->messages_list_context_action_unpin:I
-
-    sput v0, Lceb;->D:I
-
-    sget v0, La9d;->messages_list_context_actions_view_type:I
-
-    sput v0, Lceb;->E:I
-
-    sget v0, La9d;->messages_list_context_content_container:I
-
-    sput v0, Lceb;->F:I
-
-    sget v0, La9d;->messages_list_context_member_view_type:I
-
-    sput v0, Lceb;->G:I
-
-    sget v0, La9d;->messages_list_context_members_member_cell:I
-
-    sput v0, Lceb;->H:I
-
-    sget v0, La9d;->messages_list_context_members_member_reaction:I
-
-    sput v0, Lceb;->I:I
-
-    sget v0, La9d;->messages_list_context_reactions_container:I
-
-    sput v0, Lceb;->J:I
-
-    sget v0, La9d;->messages_list_item_alias:I
-
-    sput v0, Lceb;->K:I
-
-    sget v0, La9d;->messages_list_item_date:I
-
-    sput v0, Lceb;->L:I
-
-    sget v0, La9d;->messages_list_item_keyboard_buttons:I
-
-    sput v0, Lceb;->M:I
-
-    sget v0, La9d;->messages_list_item_single_image:I
-
-    sput v0, Lceb;->N:I
-
-    sget v0, La9d;->messages_list_item_text:I
-
-    sput v0, Lceb;->O:I
-
-    sget v0, La9d;->messages_list_item_title:I
-
-    sput v0, Lceb;->P:I
-
-    sget v0, La9d;->messages_list_item_video_duration:I
-
-    sput v0, Lceb;->Q:I
-
-    sget v0, La9d;->messages_list_recycler_view:I
-
-    sput v0, Lceb;->R:I
-
-    sget v0, La9d;->messages_list_scroll_btn:I
-
-    sput v0, Lceb;->S:I
-
-    sget v0, La9d;->messages_list_share_contact_for_bot_action:I
-
-    sput v0, Lceb;->T:I
-
-    sget v0, La9d;->messages_list_warning_link_subtitle:I
-
-    sput v0, Lceb;->U:I
-
-    sget v0, La9d;->messages_list_warning_link_title:I
-
-    sput v0, Lceb;->V:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+.method public synthetic constructor <init>(Lk7e;Lj88;Lj88;Lj88;Lj88;Lj88;)V
+    .locals 1
+
+    .line 1
+    const/4 v0, 0x1
+
+    iput v0, p0, Lceb;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lceb;->Y:Ljava/lang/Object;
+
+    iput-object p2, p0, Lceb;->b:Ljava/lang/Object;
+
+    iput-object p3, p0, Lceb;->c:Ljava/lang/Object;
+
+    iput-object p4, p0, Lceb;->d:Ljava/lang/Object;
+
+    iput-object p5, p0, Lceb;->o:Ljava/lang/Object;
+
+    iput-object p6, p0, Lceb;->X:Ljava/lang/Object;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 12
+
+    iget v0, p0, Lceb;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lceb;->b:Ljava/lang/Object;
+
+    check-cast v0, Lmeg;
+
+    iget-object v1, p0, Lceb;->c:Ljava/lang/Object;
+
+    check-cast v1, Lanh;
+
+    iget-object v2, p0, Lceb;->d:Ljava/lang/Object;
+
+    check-cast v2, Lbnh;
+
+    iget-object v3, p0, Lceb;->o:Ljava/lang/Object;
+
+    move-object v9, v3
+
+    check-cast v9, Lv7d;
+
+    iget-object v3, p0, Lceb;->X:Ljava/lang/Object;
+
+    check-cast v3, Lxyd;
+
+    iget-object v4, p0, Lceb;->Y:Ljava/lang/Object;
+
+    check-cast v4, Lt2d;
+
+    iget-object v0, v0, Lmeg;->a:Lkfb;
+
+    iget-object v5, v1, Lanh;->c:Ljava/lang/String;
+
+    iget-object v6, v1, Lanh;->d:Ljava/lang/String;
+
+    iget-object v1, v2, Lbnh;->b:Lfnh;
+
+    iget v7, v1, Lfnh;->b:F
+
+    iget v8, v1, Lfnh;->c:F
+
+    iget-boolean v10, v1, Lfnh;->d:Z
+
+    new-instance v11, Lceg;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v11, v3, v4, v1}, Lceg;-><init>(Ljava/io/Serializable;Lt2d;I)V
+
+    move-object v4, v0
+
+    invoke-virtual/range {v4 .. v11}, Lkfb;->a(Ljava/lang/String;Ljava/lang/String;FFLv7d;ZLt2d;)Z
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Lceb;->Y:Ljava/lang/Object;
+
+    check-cast v0, Lk7e;
+
+    iget-object v1, p0, Lceb;->b:Ljava/lang/Object;
+
+    check-cast v1, Lj88;
+
+    iget-object v2, p0, Lceb;->c:Ljava/lang/Object;
+
+    move-object v6, v2
+
+    check-cast v6, Lj88;
+
+    iget-object v2, p0, Lceb;->d:Ljava/lang/Object;
+
+    move-object v7, v2
+
+    check-cast v7, Lj88;
+
+    iget-object v2, p0, Lceb;->o:Ljava/lang/Object;
+
+    move-object v8, v2
+
+    check-cast v8, Lj88;
+
+    iget-object v2, p0, Lceb;->X:Ljava/lang/Object;
+
+    move-object v9, v2
+
+    check-cast v9, Lj88;
+
+    new-instance v3, Lqn1;
+
+    iget-object v0, v0, Lk7e;->c:Lj88;
+
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v4, v0
+
+    check-cast v4, Landroid/content/Context;
+
+    invoke-interface {v1}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v5, v0
+
+    check-cast v5, Loye;
+
+    invoke-direct/range {v3 .. v9}, Lqn1;-><init>(Landroid/content/Context;Loye;Lj88;Lj88;Lj88;Lj88;)V
+
+    return-object v3
+
+    :pswitch_1
+    iget-object v0, p0, Lceb;->b:Ljava/lang/Object;
+
+    move-object v2, v0
+
+    check-cast v2, Lj88;
+
+    iget-object v0, p0, Lceb;->c:Ljava/lang/Object;
+
+    move-object v3, v0
+
+    check-cast v3, Lj88;
+
+    iget-object v0, p0, Lceb;->d:Ljava/lang/Object;
+
+    move-object v4, v0
+
+    check-cast v4, Lj88;
+
+    iget-object v0, p0, Lceb;->o:Ljava/lang/Object;
+
+    move-object v5, v0
+
+    check-cast v5, Lj88;
+
+    iget-object v0, p0, Lceb;->X:Ljava/lang/Object;
+
+    move-object v6, v0
+
+    check-cast v6, Lj88;
+
+    iget-object v0, p0, Lceb;->Y:Ljava/lang/Object;
+
+    move-object v7, v0
+
+    check-cast v7, Lj88;
+
+    new-instance v1, Lo8a;
+
+    invoke-direct/range {v1 .. v7}, Lo8a;-><init>(Lj88;Lj88;Lj88;Lj88;Lj88;Lj88;)V
+
+    return-object v1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

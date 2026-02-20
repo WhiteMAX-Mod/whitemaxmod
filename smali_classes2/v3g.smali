@@ -1,1226 +1,431 @@
 .class public final Lv3g;
-.super Lp6g;
+.super Lx0i;
 .source "SourceFile"
-
-# interfaces
-.implements Ldr6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final X:Lj88;
 
-.field public synthetic Y:Ljava/lang/Object;
+.field public final Y:Lj88;
 
-.field public final synthetic o:I
+.field public final Z:Lj88;
+
+.field public final b:J
+
+.field public final c:Lr2g;
+
+.field public final d:Lbjg;
+
+.field public final o:Lw2g;
+
+.field public final s0:Ltn5;
+
+.field public final t0:Ltn5;
+
+.field public final u0:Lhxf;
+
+.field public final v0:Lmrd;
+
+.field public final w0:Lju;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;)V
-    .locals 1
-
-    .line 1
-    const/16 v0, 0x9
-
-    iput v0, p0, Lv3g;->o:I
-
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
+.method public constructor <init>(JLr2g;Lbjg;Lw2g;Lj88;Lj88;Lj88;)V
     .locals 0
 
-    .line 2
-    iput p3, p0, Lv3g;->o:I
+    invoke-direct {p0}, Lx0i;-><init>()V
 
-    iput-object p1, p0, Lv3g;->Y:Ljava/lang/Object;
+    iput-wide p1, p0, Lv3g;->b:J
 
-    const/4 p1, 0x3
+    iput-object p3, p0, Lv3g;->c:Lr2g;
 
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p4, p0, Lv3g;->d:Lbjg;
+
+    iput-object p5, p0, Lv3g;->o:Lw2g;
+
+    iput-object p6, p0, Lv3g;->X:Lj88;
+
+    iput-object p7, p0, Lv3g;->Y:Lj88;
+
+    iput-object p8, p0, Lv3g;->Z:Lj88;
+
+    new-instance p1, Ltn5;
+
+    const/4 p2, 0x0
+
+    invoke-direct {p1, p2}, Ltn5;-><init>(I)V
+
+    iput-object p1, p0, Lv3g;->s0:Ltn5;
+
+    new-instance p1, Ltn5;
+
+    invoke-direct {p1, p2}, Ltn5;-><init>(I)V
+
+    iput-object p1, p0, Lv3g;->t0:Ltn5;
+
+    sget-object p1, Lyif;->c:Lyif;
+
+    invoke-static {p1}, Lixf;->a(Ljava/lang/Object;)Lhxf;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lv3g;->u0:Lhxf;
+
+    new-instance p2, Lmrd;
+
+    invoke-direct {p2, p1}, Lmrd;-><init>(Lgia;)V
+
+    iput-object p2, p0, Lv3g;->v0:Lmrd;
+
+    new-instance p1, Lju;
+
+    const/4 p2, 0x0
+
+    invoke-direct {p1, p2}, Lblf;-><init>(I)V
+
+    iput-object p1, p0, Lv3g;->w0:Lju;
+
+    iget-object p1, p3, Lr2g;->e:Lmrd;
+
+    iget-object p2, p5, Lw2g;->e:Lmrd;
+
+    invoke-interface {p6}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object p3
+
+    check-cast p3, Ldx5;
+
+    iget-object p3, p3, Ldx5;->Y:Lso0;
+
+    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance p5, Lo0b;
+
+    const/4 p6, 0x0
+
+    invoke-direct {p5, p3, p6}, Lo0b;-><init>(Li2b;I)V
+
+    new-instance p3, Lay5;
+
+    const/4 p6, 0x1
+
+    invoke-direct {p3, p6}, Lay5;-><init>(I)V
+
+    new-instance p6, Lm0b;
+
+    const/4 p7, 0x4
+
+    invoke-direct {p6, p5, p3, p7}, Lm0b;-><init>(Luza;Lzs6;I)V
+
+    invoke-static {p6}, Lrvj;->a(Luza;)Lsx1;
+
+    move-result-object p3
+
+    sget-object p5, Ls3g;->Z:Ls3g;
+
+    invoke-static {p1, p2, p3, p5}, Lzka;->i(Lb96;Lb96;Lb96;Lct6;)Lxd3;
+
+    move-result-object p1
+
+    new-instance p2, Lt3g;
+
+    const/4 p3, 0x0
+
+    invoke-direct {p2, p0, p3}, Lt3g;-><init>(Lv3g;Lkotlin/coroutines/Continuation;)V
+
+    new-instance p3, Llb6;
+
+    const/4 p5, 0x1
+
+    invoke-direct {p3, p1, p2, p5}, Llb6;-><init>(Lb96;Lys6;I)V
+
+    check-cast p4, Lcbb;
+
+    invoke-virtual {p4}, Lcbb;->b()Lgd4;
+
+    move-result-object p1
+
+    invoke-static {p3, p1}, Lzka;->v(Lb96;Led4;)Lb96;
+
+    move-result-object p1
+
+    iget-object p2, p0, Lx0i;->a:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {p1, p2}, Lzka;->w(Lb96;Lnd4;)Lcuf;
 
     return-void
 .end method
 
+.method public static r(Ljava/util/List;Ljava/util/List;)Ljava/util/List;
+    .locals 32
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    iget v0, p0, Lv3g;->o:I
-
-    packed-switch v0, :pswitch_data_0
-
-    check-cast p1, Landroid/widget/ImageView;
-
-    check-cast p2, Lzlb;
-
-    check-cast p3, Lkotlin/coroutines/Continuation;
-
-    new-instance p1, Lv3g;
-
-    iget-object v0, p0, Lv3g;->Y:Ljava/lang/Object;
-
-    check-cast v0, Lfyh;
-
-    const/16 v1, 0xc
-
-    invoke-direct {p1, v0, p3, v1}, Lv3g;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
-
-    iput-object p2, p1, Lv3g;->X:Ljava/lang/Object;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lv3g;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-
-    :pswitch_0
-    check-cast p1, Landroid/widget/LinearLayout;
-
-    check-cast p2, Lzlb;
-
-    check-cast p3, Lkotlin/coroutines/Continuation;
-
-    new-instance p2, Lv3g;
-
-    iget-object v0, p0, Lv3g;->Y:Ljava/lang/Object;
-
-    check-cast v0, Lone/me/messages/list/ui/view/WarningLinkBottomSheet;
-
-    const/16 v1, 0xb
-
-    invoke-direct {p2, v0, p3, v1}, Lv3g;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, p2, Lv3g;->X:Ljava/lang/Object;
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p2, p1}, Lv3g;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_1
-    check-cast p1, Landroid/widget/TextView;
-
-    check-cast p2, Lzlb;
-
-    check-cast p3, Lkotlin/coroutines/Continuation;
-
-    new-instance p2, Lv3g;
-
-    iget-object v0, p0, Lv3g;->Y:Ljava/lang/Object;
-
-    check-cast v0, Lone/me/chatscreen/videomsg/VideoMessageWidget;
+    new-instance v0, Ljava/util/ArrayList;
 
     const/16 v1, 0xa
 
-    invoke-direct {p2, v0, p3, v1}, Lv3g;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
+    move-object/from16 v2, p0
 
-    iput-object p1, p2, Lv3g;->X:Ljava/lang/Object;
+    invoke-static {v2, v1}, Lgk3;->n(Ljava/lang/Iterable;I)I
 
-    sget-object p1, Lb3h;->a:Lb3h;
+    move-result v3
 
-    invoke-virtual {p2, p1}, Lv3g;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v0, v3}, Ljava/util/ArrayList;-><init>(I)V
 
-    return-object p1
-
-    :pswitch_2
-    check-cast p1, Lsmh;
-
-    check-cast p2, Lzlb;
-
-    check-cast p3, Lkotlin/coroutines/Continuation;
-
-    new-instance v0, Lv3g;
-
-    const/4 v1, 0x3
-
-    invoke-direct {v0, v1, p3}, Lv3g;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lv3g;->Y:Ljava/lang/Object;
-
-    iput-object p2, v0, Lv3g;->X:Ljava/lang/Object;
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    invoke-virtual {v0, p1}, Lv3g;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_3
-    check-cast p1, Landroid/widget/FrameLayout;
-
-    check-cast p2, Lzlb;
-
-    check-cast p3, Lkotlin/coroutines/Continuation;
-
-    new-instance p2, Lv3g;
-
-    iget-object v0, p0, Lv3g;->Y:Ljava/lang/Object;
-
-    check-cast v0, Lzih;
-
-    const/16 v1, 0x8
-
-    invoke-direct {p2, v0, p3, v1}, Lv3g;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, p2, Lv3g;->X:Ljava/lang/Object;
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p2, p1}, Lv3g;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_4
-    check-cast p1, Lf76;
-
-    check-cast p2, Ljava/lang/Throwable;
-
-    check-cast p3, Lkotlin/coroutines/Continuation;
-
-    new-instance p1, Lv3g;
-
-    iget-object v0, p0, Lv3g;->Y:Ljava/lang/Object;
-
-    check-cast v0, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;
-
-    const/4 v1, 0x7
-
-    invoke-direct {p1, v0, p3, v1}, Lv3g;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
-
-    iput-object p2, p1, Lv3g;->X:Ljava/lang/Object;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lv3g;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-
-    :pswitch_5
-    check-cast p1, Landroid/view/View;
-
-    check-cast p2, Lzlb;
-
-    check-cast p3, Lkotlin/coroutines/Continuation;
-
-    new-instance p1, Lv3g;
-
-    iget-object v0, p0, Lv3g;->Y:Ljava/lang/Object;
-
-    check-cast v0, Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;
-
-    const/4 v1, 0x6
-
-    invoke-direct {p1, v0, p3, v1}, Lv3g;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
-
-    iput-object p2, p1, Lv3g;->X:Ljava/lang/Object;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lv3g;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-
-    :pswitch_6
-    check-cast p1, Landroid/view/View;
-
-    check-cast p2, Lzlb;
-
-    check-cast p3, Lkotlin/coroutines/Continuation;
-
-    new-instance p1, Lv3g;
-
-    iget-object v0, p0, Lv3g;->Y:Ljava/lang/Object;
-
-    check-cast v0, Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;
-
-    const/4 v1, 0x5
-
-    invoke-direct {p1, v0, p3, v1}, Lv3g;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
-
-    iput-object p2, p1, Lv3g;->X:Ljava/lang/Object;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lv3g;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-
-    :pswitch_7
-    check-cast p1, Landroid/view/View;
-
-    check-cast p2, Lzlb;
-
-    check-cast p3, Lkotlin/coroutines/Continuation;
-
-    new-instance p1, Lv3g;
-
-    iget-object v0, p0, Lv3g;->Y:Ljava/lang/Object;
-
-    check-cast v0, Lone/me/settings/twofa/creation/TwoFACreationScreen;
-
-    const/4 v1, 0x4
-
-    invoke-direct {p1, v0, p3, v1}, Lv3g;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
-
-    iput-object p2, p1, Lv3g;->X:Ljava/lang/Object;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lv3g;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-
-    :pswitch_8
-    check-cast p1, Landroid/view/View;
-
-    check-cast p2, Lzlb;
-
-    check-cast p3, Lkotlin/coroutines/Continuation;
-
-    new-instance p1, Lv3g;
-
-    iget-object v0, p0, Lv3g;->Y:Ljava/lang/Object;
-
-    check-cast v0, Lone/me/settings/twofa/password/TwoFACheckPassScreen;
-
-    const/4 v1, 0x3
-
-    invoke-direct {p1, v0, p3, v1}, Lv3g;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
-
-    iput-object p2, p1, Lv3g;->X:Ljava/lang/Object;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lv3g;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-
-    :pswitch_9
-    check-cast p1, Landroid/widget/ImageView;
-
-    check-cast p2, Lzlb;
-
-    check-cast p3, Lkotlin/coroutines/Continuation;
-
-    new-instance p2, Lv3g;
-
-    iget-object v0, p0, Lv3g;->Y:Ljava/lang/Object;
-
-    check-cast v0, Landroid/view/View;
-
-    const/4 v1, 0x2
-
-    invoke-direct {p2, v0, p3, v1}, Lv3g;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, p2, Lv3g;->X:Ljava/lang/Object;
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p2, p1}, Lv3g;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_a
-    check-cast p1, Lf76;
-
-    check-cast p2, Ljava/lang/Throwable;
-
-    check-cast p3, Lkotlin/coroutines/Continuation;
-
-    new-instance p1, Lv3g;
-
-    iget-object v0, p0, Lv3g;->Y:Ljava/lang/Object;
-
-    check-cast v0, Le4g;
-
-    const/4 v1, 0x1
-
-    invoke-direct {p1, v0, p3, v1}, Lv3g;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
-
-    iput-object p2, p1, Lv3g;->X:Ljava/lang/Object;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lv3g;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-
-    :pswitch_b
-    check-cast p1, Landroid/view/View;
-
-    check-cast p2, Lzlb;
-
-    check-cast p3, Lkotlin/coroutines/Continuation;
-
-    new-instance p1, Lv3g;
-
-    iget-object v0, p0, Lv3g;->Y:Ljava/lang/Object;
-
-    check-cast v0, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;
-
-    const/4 v1, 0x0
-
-    invoke-direct {p1, v0, p3, v1}, Lv3g;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
-
-    iput-object p2, p1, Lv3g;->X:Ljava/lang/Object;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lv3g;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
-
-    iget v0, p0, Lv3g;->o:I
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    const/4 v3, -0x1
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lv3g;->X:Ljava/lang/Object;
-
-    check-cast v0, Lzlb;
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lv3g;->Y:Ljava/lang/Object;
-
-    check-cast p1, Lfyh;
-
-    invoke-static {p1}, Lfyh;->a(Lfyh;)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v1
-
-    invoke-interface {v0}, Lzlb;->getIcon()Lwe7;
-
-    invoke-static {v1, v3}, Lpti;->f(Landroid/graphics/drawable/Drawable;I)V
-
-    invoke-static {p1}, Lfyh;->b(Lfyh;)Landroid/graphics/drawable/Drawable;
-
-    move-result-object p1
-
-    invoke-static {p1, v3}, Lpti;->f(Landroid/graphics/drawable/Drawable;I)V
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
-
-    :pswitch_0
-    iget-object v0, p0, Lv3g;->X:Ljava/lang/Object;
-
-    check-cast v0, Landroid/widget/LinearLayout;
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lv3g;->Y:Ljava/lang/Object;
-
-    check-cast p1, Lone/me/messages/list/ui/view/WarningLinkBottomSheet;
-
-    iget-object v3, p1, Lone/me/messages/list/ui/view/WarningLinkBottomSheet;->G0:Ljld;
-
-    sget-object v4, Lone/me/messages/list/ui/view/WarningLinkBottomSheet;->J0:[Lz28;
-
-    aget-object v2, v4, v2
-
-    invoke-interface {v3, p1, v2}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+    invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
 
-    check-cast v2, Landroid/widget/TextView;
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
-    sget-object v3, Lpc3;->t0:Lkme;
+    move-result v3
 
-    invoke-virtual {v3, v0}, Lkme;->p(Landroid/view/View;)Lzlb;
+    if-eqz v3, :cond_3
 
-    move-result-object v5
-
-    invoke-interface {v5}, Lzlb;->getText()Lrfg;
-
-    move-result-object v5
-
-    iget v5, v5, Lrfg;->e:I
-
-    invoke-virtual {v2, v5}, Landroid/widget/TextView;->setTextColor(I)V
-
-    iget-object v2, p1, Lone/me/messages/list/ui/view/WarningLinkBottomSheet;->H0:Ljld;
-
-    aget-object v1, v4, v1
-
-    invoke-interface {v2, p1, v1}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/widget/TextView;
-
-    invoke-virtual {v3, v0}, Lkme;->p(Landroid/view/View;)Lzlb;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lzlb;->getText()Lrfg;
-
-    move-result-object v0
-
-    iget v0, v0, Lrfg;->g:I
-
-    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setTextColor(I)V
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
-
-    :pswitch_1
-    iget-object v0, p0, Lv3g;->X:Ljava/lang/Object;
-
-    check-cast v0, Landroid/widget/TextView;
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    sget-object p1, Lpc3;->t0:Lkme;
-
-    invoke-virtual {p1, v0}, Lkme;->p(Landroid/view/View;)Lzlb;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Lzlb;->getText()Lrfg;
-
-    invoke-virtual {v0, v3}, Landroid/widget/TextView;->setTextColor(I)V
-
-    invoke-virtual {v0}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/graphics/drawable/GradientDrawable;
-
-    iget-object v2, p0, Lv3g;->Y:Ljava/lang/Object;
-
-    check-cast v2, Lone/me/chatscreen/videomsg/VideoMessageWidget;
-
-    sget-object v3, Lone/me/chatscreen/videomsg/VideoMessageWidget;->I0:[Lz28;
-
-    invoke-virtual {p1, v0}, Lkme;->p(Landroid/view/View;)Lzlb;
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v3
 
-    invoke-interface {v3}, Lzlb;->a()Ln13;
+    check-cast v3, Lxzf;
 
-    move-result-object v3
+    move-object/from16 v4, p1
 
-    invoke-interface {v3}, Ln13;->C()Lkl3;
+    invoke-interface {v4, v3}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
-    move-result-object v3
+    move-result v14
 
-    iget-object v3, v3, Lkl3;->b:Lbk3;
+    iget-wide v6, v3, Lxzf;->a:J
 
-    iget v3, v3, Lbk3;->l:I
+    iget-object v5, v3, Lxzf;->b:Ljava/lang/String;
 
-    invoke-virtual {v1, v3}, Landroid/graphics/drawable/GradientDrawable;->setColor(I)V
+    if-nez v5, :cond_0
 
-    iget-object v1, v2, Lone/me/chatscreen/videomsg/VideoMessageWidget;->C0:Ljava/lang/Object;
-
-    invoke-interface {v1}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/graphics/drawable/InsetDrawable;
-
-    invoke-virtual {p1, v0}, Lkme;->p(Landroid/view/View;)Lzlb;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Lzlb;->e()Lr4;
-
-    move-result-object p1
-
-    iget p1, p1, Lr4;->a:I
-
-    invoke-static {v1, p1}, Lpti;->f(Landroid/graphics/drawable/Drawable;I)V
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
-
-    :pswitch_2
-    iget-object v0, p0, Lv3g;->Y:Ljava/lang/Object;
-
-    check-cast v0, Lsmh;
-
-    iget-object v1, p0, Lv3g;->X:Ljava/lang/Object;
-
-    check-cast v1, Lzlb;
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    invoke-interface {v1}, Lzlb;->a()Ln13;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Ln13;->k()Lmki;
-
-    move-result-object p1
-
-    iget-object p1, p1, Lmki;->a:Llki;
-
-    iget p1, p1, Llki;->d:I
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->setBackgroundColor(I)V
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
-
-    :pswitch_3
-    iget-object v0, p0, Lv3g;->X:Ljava/lang/Object;
-
-    check-cast v0, Landroid/widget/FrameLayout;
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    new-instance p1, Lks0;
-
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v3
-
-    sget-object v4, Lpc3;->t0:Lkme;
-
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v5
-
-    invoke-virtual {v4, v5}, Lkme;->n(Landroid/content/Context;)Lpc3;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Lpc3;->k()Z
-
-    move-result v4
-
-    if-eqz v4, :cond_0
-
-    const v4, -0x5ceae5e1
-
-    goto :goto_0
+    const-string v5, ""
 
     :cond_0
-    const v4, -0x5c000001
+    new-instance v8, Lgpg;
 
-    :goto_0
-    const/high16 v5, 0x41200000    # 10.0f
+    invoke-direct {v8, v5}, Lgpg;-><init>(Ljava/lang/CharSequence;)V
 
-    invoke-direct {p1, v3, v4, v5, v2}, Lks0;-><init>(Landroid/content/Context;IFZ)V
+    iget-object v9, v3, Lxzf;->c:Ljava/lang/String;
 
-    iget-object v3, p0, Lv3g;->Y:Ljava/lang/Object;
+    iget-object v3, v3, Lxzf;->h:Ljava/util/List;
 
-    check-cast v3, Lzih;
+    new-instance v11, Ljava/util/ArrayList;
 
-    new-instance v4, Lvnh;
+    invoke-static {v3, v1}, Lgk3;->n(Ljava/lang/Iterable;I)I
 
-    invoke-direct {v4, v3, v2}, Lvnh;-><init>(Lzih;I)V
+    move-result v5
 
-    iput-object v4, p1, Lks0;->i:Lvnh;
+    invoke-direct {v11, v5}, Ljava/util/ArrayList;-><init>(I)V
 
-    new-instance v2, Lvnh;
-
-    invoke-direct {v2, v3, v1}, Lvnh;-><init>(Lzih;I)V
-
-    iput-object v2, p1, Lks0;->j:Lvnh;
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
-
-    :pswitch_4
-    sget-object v0, Lb3h;->a:Lb3h;
-
-    iget-object v1, p0, Lv3g;->X:Ljava/lang/Object;
-
-    check-cast v1, Ljava/lang/Throwable;
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    instance-of p1, v1, Ljava/util/concurrent/CancellationException;
-
-    if-eqz p1, :cond_1
-
-    iget-object p1, p0, Lv3g;->Y:Ljava/lang/Object;
-
-    check-cast p1, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;
-
-    iget-object p1, p1, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;->I0:Ln8g;
-
-    invoke-virtual {p1}, Ln8g;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Llgc;
-
-    iget-object p1, p1, Llgc;->e:Lpy5;
-
-    invoke-virtual {p1}, Lpy5;->z()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    iget-object p1, p0, Lv3g;->Y:Ljava/lang/Object;
-
-    check-cast p1, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;
-
-    invoke-virtual {p1}, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;->r()Lqq9;
-
-    move-result-object v1
-
-    iget-object v1, v1, Lqq9;->a:Lyo9;
-
-    filled-new-array {v1}, [Ljava/lang/Object;
-
-    move-result-object v1
-
-    const-string v2, "UploadFileAttachWorker"
-
-    const-string v3, "onUploadCancel: %s"
-
-    invoke-static {v2, v3, v1}, Lc5j;->c(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    invoke-virtual {p1}, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;->y()V
-
-    invoke-virtual {p1}, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;->t()Lv8h;
-
-    move-result-object v1
-
-    sget-object v2, Lu8h;->d:Lu8h;
-
-    invoke-virtual {p1}, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;->r()Lqq9;
+    invoke-interface {v3}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
 
-    iget-object v3, v3, Lqq9;->a:Lyo9;
+    :goto_1
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
-    iget-object v3, v3, Lyo9;->c:Ljava/lang/String;
+    move-result v5
 
-    invoke-static {v1, v2, v3}, Lhyb;->f(Lv8h;Luxb;Ljava/lang/String;)V
+    if-eqz v5, :cond_2
 
-    new-instance v1, Lle8;
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    invoke-direct {v1}, Lle8;-><init>()V
+    move-result-object v5
 
-    iput-object v1, p1, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;->Q0:Lme8;
+    check-cast v5, Lnyf;
 
-    goto :goto_1
+    new-instance v15, Lhzf;
+
+    iget-wide v12, v5, Lnyf;->a:J
+
+    move-object/from16 p0, v2
+
+    iget-wide v1, v5, Lnyf;->u0:J
+
+    iget-object v10, v5, Lnyf;->Z:Ljava/lang/String;
+
+    invoke-static {v10}, Ll1j;->c(Ljava/lang/CharSequence;)Z
+
+    move-result v16
+
+    if-eqz v16, :cond_1
+
+    iget-object v10, v5, Lnyf;->d:Ljava/lang/String;
 
     :cond_1
-    if-nez v1, :cond_2
+    move-object/from16 v22, v10
 
-    iget-object p1, p0, Lv3g;->Y:Ljava/lang/Object;
+    iget-object v10, v5, Lnyf;->v0:Ljava/lang/String;
 
-    check-cast p1, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;
+    move-wide/from16 v18, v1
 
-    invoke-virtual {p1}, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;->t()Lv8h;
+    iget-object v1, v5, Lnyf;->y0:Ljava/lang/String;
 
-    move-result-object v1
+    move-object/from16 v24, v1
 
-    iget-object p1, p0, Lv3g;->Y:Ljava/lang/Object;
+    iget-wide v1, v5, Lnyf;->a:J
 
-    check-cast p1, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;
+    const/16 v31, 0xfc0
 
-    invoke-virtual {p1}, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;->r()Lqq9;
+    const/16 v25, 0x0
 
-    move-result-object p1
+    const/16 v26, 0x0
 
-    iget-object p1, p1, Lqq9;->a:Lyo9;
+    const/16 v27, 0x0
 
-    iget-object v4, p1, Lyo9;->c:Ljava/lang/String;
+    const/16 v28, 0x0
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-wide/from16 v20, v18
 
-    const/4 v6, 0x0
+    move-wide/from16 v29, v1
 
-    const/16 v7, 0x30
+    move-object/from16 v23, v10
 
-    const-string v2, "uploaded"
+    move-wide/from16 v16, v12
 
-    const/4 v3, 0x2
+    invoke-direct/range {v15 .. v31}, Lhzf;-><init>(JJJLjava/lang/String;Ljava/lang/String;Ljava/lang/String;IIZZJI)V
 
-    const/4 v5, 0x0
+    invoke-virtual {v11, v15}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    invoke-static/range {v1 .. v7}, Lhyb;->c(Lhyb;Ljava/lang/String;ILjava/lang/String;Ljava/lang/Long;Ljfa;I)V
+    move-object/from16 v2, p0
+
+    const/16 v1, 0xa
 
     goto :goto_1
 
     :cond_2
-    iget-object p1, p0, Lv3g;->Y:Ljava/lang/Object;
+    move-object/from16 p0, v2
 
-    check-cast p1, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;
+    new-instance v5, Lj0g;
 
-    invoke-virtual {p1, v1}, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;->v(Ljava/lang/Throwable;)V
+    const/4 v10, 0x0
 
-    iget-object p1, p0, Lv3g;->Y:Ljava/lang/Object;
+    const/4 v12, 0x5
 
-    check-cast p1, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;
+    const/4 v13, 0x0
 
-    invoke-static {}, Lme8;->a()Lje8;
+    const/16 v15, 0x48
 
-    move-result-object v1
+    invoke-direct/range {v5 .. v15}, Lj0g;-><init>(JLhpg;Ljava/lang/String;Ljava/lang/Integer;Ljava/util/List;IZZI)V
 
-    iput-object v1, p1, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;->Q0:Lme8;
+    invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    :goto_1
-    return-object v0
+    const/16 v1, 0xa
 
-    :pswitch_5
-    iget-object v0, p0, Lv3g;->X:Ljava/lang/Object;
-
-    check-cast v0, Lzlb;
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lv3g;->Y:Ljava/lang/Object;
-
-    check-cast p1, Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;
-
-    sget-object v2, Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;->t0:[Lz28;
-
-    invoke-virtual {p1}, La94;->getView()Landroid/view/View;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_3
-
-    invoke-interface {v0}, Lzlb;->b()Lxf0;
-
-    move-result-object v3
-
-    iget v3, v3, Lxf0;->l:I
-
-    invoke-virtual {v2, v3}, Landroid/view/View;->setBackgroundColor(I)V
+    goto/16 :goto_0
 
     :cond_3
-    sget v2, Lfad;->oneme_settings_twofa_onboarding_content:I
+    new-instance v1, Lyw6;
 
-    invoke-virtual {p1, v2}, Lone/me/sdk/arch/Widget;->findViewById(I)Landroid/view/View;
+    const/16 v2, 0x1c
 
-    move-result-object v2
+    invoke-direct {v1, v2}, Lyw6;-><init>(I)V
 
-    check-cast v2, Ld1h;
-
-    if-eqz v2, :cond_4
-
-    invoke-virtual {v2, v0}, Ld1h;->onThemeChanged(Lzlb;)V
-
-    :cond_4
-    iget-object v2, p1, Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;->Y:Ljld;
-
-    sget-object v3, Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;->t0:[Lz28;
-
-    aget-object v1, v3, v1
-
-    invoke-interface {v2, p1, v1}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/widget/TextView;
-
-    invoke-interface {v0}, Lzlb;->getText()Lrfg;
+    invoke-static {v0, v1}, Lek3;->U(Ljava/lang/Iterable;Ljava/util/Comparator;)Ljava/util/List;
 
     move-result-object v0
 
-    iget v0, v0, Lrfg;->g:I
+    return-object v0
+.end method
 
-    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setTextColor(I)V
 
-    sget-object p1, Lb3h;->a:Lb3h;
+# virtual methods
+.method public final p()Z
+    .locals 6
 
-    return-object p1
+    iget-object v0, p0, Lv3g;->o:Lw2g;
 
-    :pswitch_6
-    iget-object v0, p0, Lv3g;->X:Ljava/lang/Object;
+    invoke-virtual {v0}, Lw2g;->a()Z
 
-    check-cast v0, Lzlb;
+    move-result v1
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    const-wide/16 v2, 0x0
 
-    iget-object p1, p0, Lv3g;->Y:Ljava/lang/Object;
+    if-eqz v1, :cond_0
 
-    check-cast p1, Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;
+    iget-object v1, v0, Lw2g;->g:Ljava/util/concurrent/atomic/AtomicReference;
 
-    sget-object v1, Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;->X:[Lz28;
-
-    invoke-virtual {p1}, La94;->getView()Landroid/view/View;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_5
-
-    invoke-interface {v0}, Lzlb;->b()Lxf0;
-
-    move-result-object v2
-
-    iget v2, v2, Lxf0;->l:I
-
-    invoke-virtual {v1, v2}, Landroid/view/View;->setBackgroundColor(I)V
-
-    :cond_5
-    sget v1, Lfad;->oneme_settings_twofa_onboarding_title:I
-
-    invoke-virtual {p1, v1}, Lone/me/sdk/arch/Widget;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Landroid/widget/TextView;
+    check-cast v1, Ls2g;
 
-    if-eqz v1, :cond_6
+    iget-wide v4, v1, Ls2g;->a:J
 
-    invoke-interface {v0}, Lzlb;->getText()Lrfg;
+    cmp-long v1, v4, v2
 
-    move-result-object v2
+    if-eqz v1, :cond_3
 
-    iget v2, v2, Lrfg;->e:I
+    iget-object v0, v0, Lw2g;->d:Lhxf;
 
-    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setTextColor(I)V
-
-    :cond_6
-    sget v1, Lfad;->oneme_settings_twofa_onboarding_subtitle:I
-
-    invoke-virtual {p1, v1}, Lone/me/sdk/arch/Widget;->findViewById(I)Landroid/view/View;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/widget/TextView;
-
-    if-eqz p1, :cond_7
-
-    invoke-interface {v0}, Lzlb;->getText()Lrfg;
+    invoke-virtual {v0}, Lhxf;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    iget v0, v0, Lrfg;->g:I
+    check-cast v0, Lt2g;
 
-    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setTextColor(I)V
+    iget-object v0, v0, Lt2g;->a:Ljava/util/List;
 
-    :cond_7
-    sget-object p1, Lb3h;->a:Lb3h;
+    if-eqz v0, :cond_3
 
-    return-object p1
+    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
 
-    :pswitch_7
-    iget-object v0, p0, Lv3g;->X:Ljava/lang/Object;
+    move-result v0
 
-    check-cast v0, Lzlb;
+    if-eqz v0, :cond_2
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    goto :goto_1
 
-    iget-object p1, p0, Lv3g;->Y:Ljava/lang/Object;
+    :cond_0
+    iget-object v0, p0, Lv3g;->c:Lr2g;
 
-    check-cast p1, Lone/me/settings/twofa/creation/TwoFACreationScreen;
+    iget-object v1, v0, Lr2g;->f:Ljava/util/concurrent/atomic/AtomicReference;
 
-    sget-object v1, Lone/me/settings/twofa/creation/TwoFACreationScreen;->x0:[Lz28;
-
-    invoke-virtual {p1}, La94;->getView()Landroid/view/View;
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
     move-result-object v1
 
-    if-eqz v1, :cond_8
+    check-cast v1, Ljava/lang/Long;
 
-    invoke-interface {v0}, Lzlb;->b()Lxf0;
+    if-nez v1, :cond_1
 
-    move-result-object v2
+    goto :goto_0
 
-    iget v2, v2, Lxf0;->l:I
+    :cond_1
+    invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
 
-    invoke-virtual {v1, v2}, Landroid/view/View;->setBackgroundColor(I)V
+    move-result-wide v4
 
-    :cond_8
-    sget v1, Lfad;->oneme_settings_twofa_onboarding_content:I
+    cmp-long v1, v4, v2
 
-    invoke-virtual {p1, v1}, Lone/me/sdk/arch/Widget;->findViewById(I)Landroid/view/View;
+    if-eqz v1, :cond_3
 
-    move-result-object v1
+    :goto_0
+    iget-object v0, v0, Lr2g;->d:Lhxf;
 
-    check-cast v1, Ld1h;
-
-    if-eqz v1, :cond_9
-
-    invoke-virtual {v1, v0}, Ld1h;->onThemeChanged(Lzlb;)V
-
-    :cond_9
-    invoke-virtual {p1}, Lone/me/settings/twofa/creation/TwoFACreationScreen;->A0()Lwxg;
-
-    move-result-object v1
-
-    sget-object v2, Lwxg;->b:Lwxg;
-
-    if-ne v1, v2, :cond_a
-
-    iget-object v1, p1, Lone/me/settings/twofa/creation/TwoFACreationScreen;->v0:Ljld;
-
-    sget-object v2, Lone/me/settings/twofa/creation/TwoFACreationScreen;->x0:[Lz28;
-
-    const/4 v3, 0x3
-
-    aget-object v2, v2, v3
-
-    invoke-interface {v1, p1, v2}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/widget/TextView;
-
-    invoke-interface {v0}, Lzlb;->getText()Lrfg;
+    invoke-virtual {v0}, Lhxf;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    iget v0, v0, Lrfg;->g:I
+    check-cast v0, Ljava/util/Collection;
 
-    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setTextColor(I)V
+    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
 
-    :cond_a
-    sget-object p1, Lb3h;->a:Lb3h;
+    move-result v0
 
-    return-object p1
+    if-nez v0, :cond_3
 
-    :pswitch_8
-    iget-object v0, p0, Lv3g;->X:Ljava/lang/Object;
+    :cond_2
+    const/4 v0, 0x1
 
-    check-cast v0, Lzlb;
+    return v0
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    :cond_3
+    :goto_1
+    const/4 v0, 0x0
 
-    iget-object p1, p0, Lv3g;->Y:Ljava/lang/Object;
-
-    check-cast p1, Lone/me/settings/twofa/password/TwoFACheckPassScreen;
-
-    sget-object v1, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->u0:[Lz28;
-
-    invoke-virtual {p1}, La94;->getView()Landroid/view/View;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_b
-
-    invoke-interface {v0}, Lzlb;->b()Lxf0;
-
-    move-result-object v2
-
-    iget v2, v2, Lxf0;->l:I
-
-    invoke-virtual {v1, v2}, Landroid/view/View;->setBackgroundColor(I)V
-
-    :cond_b
-    sget v1, Lfad;->oneme_settings_twofa_onboarding_content:I
-
-    invoke-virtual {p1, v1}, Lone/me/sdk/arch/Widget;->findViewById(I)Landroid/view/View;
-
-    move-result-object p1
-
-    check-cast p1, Ld1h;
-
-    if-eqz p1, :cond_c
-
-    invoke-virtual {p1, v0}, Ld1h;->onThemeChanged(Lzlb;)V
-
-    :cond_c
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
-
-    :pswitch_9
-    iget-object v0, p0, Lv3g;->X:Ljava/lang/Object;
-
-    check-cast v0, Landroid/widget/ImageView;
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    sget-object p1, Lpc3;->t0:Lkme;
-
-    iget-object v1, p0, Lv3g;->Y:Ljava/lang/Object;
-
-    check-cast v1, Landroid/view/View;
-
-    invoke-virtual {p1, v1}, Lkme;->p(Landroid/view/View;)Lzlb;
-
-    move-result-object v2
-
-    invoke-interface {v2}, Lzlb;->getIcon()Lwe7;
-
-    invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setColorFilter(I)V
-
-    invoke-virtual {p1, v1}, Lkme;->p(Landroid/view/View;)Lzlb;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Lzlb;->b()Lxf0;
-
-    move-result-object p1
-
-    iget-object p1, p1, Lxf0;->a:Lwf0;
-
-    iget p1, p1, Lwf0;->l:I
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->setBackgroundColor(I)V
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
-
-    :pswitch_a
-    iget-object v0, p0, Lv3g;->X:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/Throwable;
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    instance-of p1, v0, Ljava/util/concurrent/CancellationException;
-
-    if-nez p1, :cond_d
-
-    iget-object p1, p0, Lv3g;->Y:Ljava/lang/Object;
-
-    check-cast p1, Le4g;
-
-    iget-object p1, p1, Le4g;->m:Ljava/lang/String;
-
-    const-string v1, "fail in chat observing"
-
-    invoke-static {p1, v1, v0}, Lc5j;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_d
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
-
-    :pswitch_b
-    iget-object v0, p0, Lv3g;->X:Ljava/lang/Object;
-
-    check-cast v0, Lzlb;
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lv3g;->Y:Ljava/lang/Object;
-
-    check-cast p1, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;
-
-    sget-object v1, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->G0:[Lz28;
-
-    invoke-virtual {p1}, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->O0()Landroidx/appcompat/widget/AppCompatTextView;
-
-    move-result-object v1
-
-    invoke-interface {v0}, Lzlb;->getText()Lrfg;
-
-    move-result-object v2
-
-    iget v2, v2, Lrfg;->h:I
-
-    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setTextColor(I)V
-
-    invoke-virtual {p1}, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->N0()Landroid/widget/FrameLayout;
-
-    move-result-object v1
-
-    invoke-interface {v0}, Lzlb;->getIcon()Lwe7;
-
-    move-result-object v2
-
-    iget v2, v2, Lwe7;->h:I
-
-    invoke-virtual {v1, v2}, Landroid/view/View;->setBackgroundColor(I)V
-
-    iget-object v1, p1, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->C0:Lro0;
-
-    sget-object v2, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->G0:[Lz28;
-
-    const/4 v3, 0x4
-
-    aget-object v3, v2, v3
-
-    invoke-virtual {v1}, Lro0;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroidx/appcompat/widget/AppCompatImageView;
-
-    invoke-interface {v0}, Lzlb;->getIcon()Lwe7;
-
-    move-result-object v3
-
-    iget v3, v3, Lwe7;->f:I
-
-    invoke-static {v3}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v3}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
-
-    iget-object p1, p1, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->D0:Lro0;
-
-    const/4 v1, 0x5
-
-    aget-object v1, v2, v1
-
-    invoke-virtual {p1}, Lro0;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroidx/appcompat/widget/AppCompatTextView;
-
-    invoke-interface {v0}, Lzlb;->getText()Lrfg;
-
-    move-result-object v0
-
-    iget v0, v0, Lrfg;->e:I
-
-    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setTextColor(I)V
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return v0
 .end method

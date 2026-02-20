@@ -3,240 +3,509 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lozc;
+.implements Landroid/view/ScaleGestureDetector$OnScaleGestureListener;
 
 
 # instance fields
-.field public final synthetic a:Lnx1;
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lnx1;)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
+
+    iput p1, p0, Lix1;->a:I
+
+    iput-object p2, p0, Lix1;->b:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lix1;->a:Lnx1;
+    return-void
+.end method
+
+.method private final a(Landroid/view/ScaleGestureDetector;)V
+    .locals 0
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
+.method public final onScale(Landroid/view/ScaleGestureDetector;)Z
     .locals 9
 
-    iget-object v0, p0, Lix1;->a:Lnx1;
+    iget v0, p0, Lix1;->a:I
 
-    iget-object v1, v0, Lnx1;->d:Lnub;
+    const/high16 v1, 0x3f800000    # 1.0f
 
-    check-cast v1, Ldvb;
+    const/4 v2, 0x1
 
-    invoke-virtual {v1}, Ldvb;->c()Leub;
+    iget-object v3, p0, Lix1;->b:Ljava/lang/Object;
 
-    move-result-object v1
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v2, v0, Lnx1;->b:Lf41;
+    check-cast v3, Lone/me/chatscreen/videomsg/VideoMessageWidget;
 
-    check-cast v2, Lg41;
+    sget-object v0, Lone/me/chatscreen/videomsg/VideoMessageWidget;->I0:[Lv58;
 
-    invoke-virtual {v2}, Lg41;->b()Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+    invoke-virtual {v3}, Lone/me/chatscreen/videomsg/VideoMessageWidget;->P0()Luuh;
 
-    move-result-object v2
+    move-result-object v0
 
-    invoke-virtual {v2}, Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;->getDeviceType()Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$AudioDeviceType;
+    invoke-virtual {p1}, Landroid/view/ScaleGestureDetector;->getScaleFactor()F
 
-    move-result-object v2
+    move-result p1
 
-    invoke-virtual {v2}, Ljava/lang/Enum;->name()Ljava/lang/String;
+    iget-object v0, v0, Luuh;->b:Ldqh;
 
-    move-result-object v2
+    check-cast v0, Loth;
 
-    const-string v3, "speakerphone"
+    iget-object v3, v0, Loth;->G:Landroid/animation/ValueAnimator;
 
-    invoke-static {v2, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    if-eqz v3, :cond_0
 
-    move-result v2
-
-    iget-object v3, v0, Lnx1;->h:Lmce;
-
-    invoke-virtual {v3}, Lmce;->c()Z
+    invoke-virtual {v3}, Landroid/animation/ValueAnimator;->isRunning()Z
 
     move-result v3
 
-    iget-object v4, v0, Lnx1;->a:Lqx1;
+    if-ne v3, v2, :cond_0
 
-    check-cast v4, Ldy1;
+    iget-object v3, v0, Loth;->G:Landroid/animation/ValueAnimator;
 
-    invoke-virtual {v4}, Ldy1;->l()Lye4;
+    if-eqz v3, :cond_0
 
-    move-result-object v4
+    invoke-virtual {v3}, Landroid/animation/ValueAnimator;->cancel()V
 
-    iget-boolean v4, v4, Lye4;->i:Z
+    :cond_0
+    int-to-float v3, v2
 
-    const/4 v5, 0x1
+    const/high16 v4, 0x40000000    # 2.0f
 
-    const/4 v6, 0x0
+    invoke-static {p1, v3, v4, v3}, Ldna;->d(FFFF)F
 
-    if-nez v4, :cond_1
+    move-result p1
 
-    iget-object v4, v0, Lnx1;->d:Lnub;
+    iget v3, v0, Loth;->F:F
 
-    check-cast v4, Ldvb;
+    mul-float/2addr v3, p1
 
-    iget-object v4, v4, Ldvb;->A0:Lspf;
+    iput v3, v0, Loth;->F:F
 
-    invoke-virtual {v4}, Lspf;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Loth;->o()Lj52;
 
-    move-result-object v4
+    move-result-object p1
 
-    check-cast v4, Loub;
+    if-eqz p1, :cond_1
 
-    iget-boolean v4, v4, Loub;->h:Z
+    check-cast p1, Ls5e;
 
-    if-eqz v4, :cond_0
+    iget-object p1, p1, Ls5e;->b:Lj52;
+
+    invoke-interface {p1}, Lj52;->q()Lvh8;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p1}, Lvh8;->d()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lnti;
+
+    if-eqz p1, :cond_1
+
+    invoke-interface {p1}, Lnti;->b()F
+
+    move-result v1
+
+    :cond_1
+    invoke-virtual {v0}, Loth;->o()Lj52;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_2
+
+    check-cast p1, Ls5e;
+
+    iget-object p1, p1, Ls5e;->b:Lj52;
+
+    invoke-interface {p1}, Lj52;->q()Lvh8;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_2
+
+    invoke-virtual {p1}, Lvh8;->d()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lnti;
+
+    if-eqz p1, :cond_2
+
+    invoke-interface {p1}, Lnti;->a()F
+
+    move-result p1
+
+    goto :goto_0
+
+    :cond_2
+    const/high16 p1, 0x41200000    # 10.0f
+
+    :goto_0
+    invoke-static {v3, v1, p1}, Liuj;->c(FFF)F
+
+    move-result p1
+
+    iget-object v0, v0, Loth;->p:Lia8;
+
+    if-eqz v0, :cond_3
+
+    iget-object v0, v0, Lia8;->c:Ll62;
+
+    iget-object v0, v0, Ll62;->A0:Lr5e;
+
+    goto :goto_1
+
+    :cond_3
+    const/4 v0, 0x0
+
+    :goto_1
+    if-eqz v0, :cond_4
+
+    invoke-virtual {v0, p1}, Lr5e;->d(F)Lah8;
+
+    :cond_4
+    return v2
+
+    :pswitch_0
+    check-cast v3, Lkx1;
+
+    iget-object v0, v3, Lkx1;->g:Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;
+
+    const/4 v4, 0x0
+
+    if-nez v0, :cond_5
+
+    move v2, v4
+
+    goto/16 :goto_2
+
+    :cond_5
+    invoke-virtual {p1}, Landroid/view/ScaleGestureDetector;->getScaleFactor()F
+
+    move-result v5
+
+    iget-object v6, v3, Lkx1;->t:Landroid/graphics/Matrix;
+
+    invoke-static {v6}, La1j;->g(Landroid/graphics/Matrix;)F
+
+    move-result v6
+
+    mul-float v7, v6, v5
+
+    const/high16 v8, 0x40400000    # 3.0f
+
+    cmpl-float v7, v7, v8
+
+    if-lez v7, :cond_6
+
+    div-float v5, v8, v6
+
+    :cond_6
+    mul-float v7, v6, v5
+
+    cmpg-float v7, v7, v1
+
+    if-gez v7, :cond_7
+
+    div-float v5, v1, v6
+
+    :cond_7
+    invoke-virtual {p1}, Landroid/view/ScaleGestureDetector;->getFocusX()F
+
+    move-result v1
+
+    invoke-virtual {v0}, Landroid/view/View;->getLeft()I
+
+    move-result v6
+
+    int-to-float v6, v6
+
+    sub-float/2addr v1, v6
+
+    iget v6, v3, Lkx1;->c:I
+
+    div-int/lit8 v6, v6, 0x2
+
+    invoke-virtual {v0}, Landroid/view/View;->getWidth()I
+
+    move-result v7
+
+    div-int/lit8 v7, v7, 0x2
+
+    sub-int/2addr v6, v7
+
+    int-to-float v6, v6
+
+    add-float/2addr v1, v6
+
+    invoke-virtual {p1}, Landroid/view/ScaleGestureDetector;->getFocusY()F
+
+    move-result p1
+
+    invoke-virtual {v0}, Landroid/view/View;->getTop()I
+
+    move-result v6
+
+    int-to-float v6, v6
+
+    sub-float/2addr p1, v6
+
+    iget v6, v3, Lkx1;->d:I
+
+    div-int/lit8 v6, v6, 0x2
+
+    invoke-virtual {v0}, Landroid/view/View;->getHeight()I
+
+    move-result v7
+
+    div-int/lit8 v7, v7, 0x2
+
+    sub-int/2addr v6, v7
+
+    int-to-float v6, v6
+
+    add-float/2addr p1, v6
+
+    iget-object v6, v3, Lkx1;->o:[F
+
+    aput v1, v6, v4
+
+    aput p1, v6, v2
+
+    iget-object p1, v3, Lkx1;->i:Landroid/graphics/Matrix;
+
+    iget-object v1, v3, Lkx1;->p:[F
+
+    invoke-virtual {p1, v1, v6}, Landroid/graphics/Matrix;->mapPoints([F[F)V
+
+    iget-object p1, v3, Lkx1;->h:Landroid/graphics/Matrix;
+
+    iget-object v1, v3, Lkx1;->o:[F
+
+    iget-object v6, v3, Lkx1;->p:[F
+
+    invoke-virtual {p1, v1, v6}, Landroid/graphics/Matrix;->mapPoints([F[F)V
+
+    iget-object p1, v3, Lkx1;->t:Landroid/graphics/Matrix;
+
+    iget-object v1, v3, Lkx1;->o:[F
+
+    aget v4, v1, v4
+
+    aget v1, v1, v2
+
+    invoke-virtual {p1, v5, v5, v4, v1}, Landroid/graphics/Matrix;->postScale(FFFF)Z
+
+    iget-object p1, v3, Lkx1;->t:Landroid/graphics/Matrix;
+
+    iget-object v1, v3, Lkx1;->i:Landroid/graphics/Matrix;
+
+    invoke-virtual {p1, v1}, Landroid/graphics/Matrix;->invert(Landroid/graphics/Matrix;)Z
+
+    iget-object p1, v3, Lkx1;->t:Landroid/graphics/Matrix;
+
+    invoke-virtual {v0, p1}, Landroid/view/TextureView;->setTransform(Landroid/graphics/Matrix;)V
+
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+
+    iget-object p1, v3, Lkx1;->h:Landroid/graphics/Matrix;
+
+    invoke-static {p1}, La1j;->g(Landroid/graphics/Matrix;)F
+
+    move-result p1
+
+    const/4 v0, 0x0
+
+    cmpg-float v0, p1, v0
+
+    if-nez v0, :cond_8
+
+    goto :goto_2
+
+    :cond_8
+    iget-object v0, v3, Lkx1;->t:Landroid/graphics/Matrix;
+
+    invoke-static {v0}, La1j;->g(Landroid/graphics/Matrix;)F
+
+    move-result v0
+
+    div-float/2addr v0, p1
+
+    const/16 p1, 0x64
+
+    int-to-float p1, p1
+
+    mul-float/2addr v0, p1
+
+    invoke-static {v0}, Lmhj;->f(F)I
+
+    move-result p1
+
+    invoke-virtual {v3, p1}, Lkx1;->d(I)V
+
+    :goto_2
+    return v2
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final onScaleBegin(Landroid/view/ScaleGestureDetector;)Z
+    .locals 2
+
+    iget p1, p0, Lix1;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :pswitch_0
+    iget-object p1, p0, Lix1;->b:Ljava/lang/Object;
+
+    check-cast p1, Lkx1;
+
+    iget-object v0, p1, Lkx1;->t:Landroid/graphics/Matrix;
+
+    iget-object v1, p1, Lkx1;->i:Landroid/graphics/Matrix;
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Matrix;->invert(Landroid/graphics/Matrix;)Z
+
+    iget-object v0, p1, Lkx1;->a:Landroid/view/View;
+
+    invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0, v1}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
+
+    :cond_0
+    iput-boolean v1, p1, Lkx1;->x:Z
+
+    return v1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final onScaleEnd(Landroid/view/ScaleGestureDetector;)V
+    .locals 4
+
+    iget p1, p0, Lix1;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    iget-object p1, p0, Lix1;->b:Ljava/lang/Object;
+
+    check-cast p1, Lone/me/chatscreen/videomsg/VideoMessageWidget;
+
+    sget-object v0, Lone/me/chatscreen/videomsg/VideoMessageWidget;->I0:[Lv58;
+
+    invoke-virtual {p1}, Lone/me/chatscreen/videomsg/VideoMessageWidget;->P0()Luuh;
+
+    move-result-object p1
+
+    iget-object p1, p1, Luuh;->b:Ldqh;
+
+    check-cast p1, Loth;
+
+    iget-object v0, p1, Loth;->G:Landroid/animation/ValueAnimator;
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->isRunning()Z
+
+    move-result v0
+
+    if-ne v0, v1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    move v4, v6
+    iget v0, p1, Loth;->F:F
 
-    goto :goto_1
+    const/4 v2, 0x2
 
-    :cond_1
+    new-array v2, v2, [F
+
+    const/4 v3, 0x0
+
+    aput v0, v2, v3
+
+    const/high16 v0, 0x3f800000    # 1.0f
+
+    aput v0, v2, v1
+
+    invoke-static {v2}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
+
+    move-result-object v0
+
+    const-wide/16 v1, 0x96
+
+    invoke-virtual {v0, v1, v2}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
+
+    new-instance v1, Landroid/view/animation/AccelerateDecelerateInterpolator;
+
+    invoke-direct {v1}, Landroid/view/animation/AccelerateDecelerateInterpolator;-><init>()V
+
+    invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+
+    new-instance v1, Lu20;
+
+    const/16 v2, 0x1b
+
+    invoke-direct {v1, v2, p1}, Lu20;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+
+    new-instance v1, Lgg;
+
+    const/16 v2, 0xf
+
+    invoke-direct {v1, v2, p1}, Lgg;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v0, v1}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+
+    iput-object v0, p1, Loth;->G:Landroid/animation/ValueAnimator;
+
+    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->start()V
+
     :goto_0
-    move v4, v5
-
-    :goto_1
-    invoke-virtual {v0}, Lnx1;->f()Lspf;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Lspf;->getValue()Ljava/lang/Object;
-
-    move-result-object v7
-
-    check-cast v7, Lkde;
-
-    iget-object v7, v7, Lkde;->a:Llde;
-
-    sget-object v8, Llde;->a:Llde;
-
-    if-ne v7, v8, :cond_3
-
-    invoke-virtual {v0}, Lnx1;->f()Lspf;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Lspf;->getValue()Ljava/lang/Object;
-
-    move-result-object v7
-
-    check-cast v7, Lkde;
-
-    iget-object v7, v7, Lkde;->b:Lyce;
-
-    if-eqz v7, :cond_2
-
-    iget-object v7, v7, Lyce;->c:Lyk1;
-
-    goto :goto_2
-
-    :cond_2
-    const/4 v7, 0x0
-
-    :goto_2
-    iget-object v8, v1, Leub;->a:Lal1;
-
-    invoke-interface {v8}, Lal1;->getId()Lyk1;
-
-    move-result-object v8
-
-    invoke-static {v7, v8}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v7
-
-    if-nez v7, :cond_4
-
-    iget-object v1, v1, Leub;->a:Lal1;
-
-    invoke-interface {v1}, Lal1;->m()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    goto :goto_3
-
-    :cond_3
-    move v5, v6
-
-    :cond_4
-    :goto_3
-    if-nez v4, :cond_7
-
-    if-nez v2, :cond_7
-
-    if-nez v3, :cond_7
-
-    if-eqz v5, :cond_5
-
-    goto :goto_5
-
-    :cond_5
-    iget-object v0, v0, Lnx1;->j:Lpzc;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    :try_start_0
-    iget-object v0, v0, Lpzc;->f:Landroid/os/PowerManager$WakeLock;
-
-    if-eqz v0, :cond_6
-
-    invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->acquire()V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
+    :pswitch_0
     return-void
 
-    :catch_0
-    move-exception v0
-
-    goto :goto_4
-
-    :cond_6
-    return-void
-
-    :goto_4
-    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object v1
-
-    new-array v2, v6, [Ljava/lang/Object;
-
-    const-string v3, "ProximityHelperTag"
-
-    invoke-static {v3, v0, v1, v2}, Lc5j;->h(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    return-void
-
-    :cond_7
-    :goto_5
-    iget-object v0, v0, Lnx1;->j:Lpzc;
-
-    invoke-virtual {v0}, Lpzc;->c()V
-
-    return-void
-.end method
-
-.method public final b()V
-    .locals 1
-
-    iget-object v0, p0, Lix1;->a:Lnx1;
-
-    iget-object v0, v0, Lnx1;->j:Lpzc;
-
-    invoke-virtual {v0}, Lpzc;->c()V
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

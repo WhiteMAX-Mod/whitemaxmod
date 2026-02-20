@@ -1,65 +1,93 @@
 .class public final Ls5e;
-.super Ljava/lang/Object;
+.super Lgn6;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:I
+.field public final b:Lj52;
 
-.field public b:I
+.field public final c:Lj42;
 
-.field public c:I
 
-.field public d:I
+# direct methods
+.method public constructor <init>(Lj52;Lj42;)V
+    .locals 1
 
-.field public e:I
+    invoke-direct {p0, p1}, Lgn6;-><init>(Lj52;)V
 
-.field public f:I
+    iput-object p1, p0, Ls5e;->b:Lj52;
 
-.field public g:Z
+    iput-object p2, p0, Ls5e;->c:Lj42;
 
-.field public h:Z
+    invoke-interface {p2}, Lh42;->u()V
+
+    sget-object p1, Lh42;->k:Loc0;
+
+    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    invoke-interface {p2, p1, v0}, Ljrd;->a(Loc0;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object p1, Lh42;->l:Loc0;
+
+    invoke-interface {p2, p1, v0}, Ljrd;->a(Loc0;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a(II)V
-    .locals 2
+.method public final e()Lvh8;
+    .locals 1
 
-    iput p1, p0, Ls5e;->c:I
+    iget-object v0, p0, Ls5e;->b:Lj52;
 
-    iput p2, p0, Ls5e;->d:I
+    invoke-interface {v0}, Lj52;->e()Lvh8;
 
-    const/4 v0, 0x1
+    move-result-object v0
 
-    iput-boolean v0, p0, Ls5e;->h:Z
+    return-object v0
+.end method
 
-    iget-boolean v0, p0, Ls5e;->g:Z
+.method public final g()Lj52;
+    .locals 1
 
-    const/high16 v1, -0x80000000
+    iget-object v0, p0, Ls5e;->b:Lj52;
 
-    if-eqz v0, :cond_1
+    return-object v0
+.end method
 
-    if-eq p2, v1, :cond_0
+.method public final m()Z
+    .locals 1
 
-    iput p2, p0, Ls5e;->a:I
+    iget-object v0, p0, Ls5e;->b:Lj52;
 
-    :cond_0
-    if-eq p1, v1, :cond_3
+    invoke-interface {v0}, Lj52;->m()Z
 
-    iput p1, p0, Ls5e;->b:I
+    move-result v0
 
-    return-void
+    return v0
+.end method
 
-    :cond_1
-    if-eq p1, v1, :cond_2
+.method public final q()Lvh8;
+    .locals 1
 
-    iput p1, p0, Ls5e;->a:I
+    iget-object v0, p0, Ls5e;->b:Lj52;
 
-    :cond_2
-    if-eq p2, v1, :cond_3
+    invoke-interface {v0}, Lj52;->q()Lvh8;
 
-    iput p2, p0, Ls5e;->b:I
+    move-result-object v0
 
-    :cond_3
-    return-void
+    return-object v0
 .end method

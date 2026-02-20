@@ -1,35 +1,43 @@
-.class public interface abstract Laib;
+.class public abstract Laib;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public M(Ljava/lang/CharSequence;)V
-    .locals 0
+# static fields
+.field public static final a:I
 
-    return-void
-.end method
+.field public static final b:I
 
-.method public c0()V
-    .locals 0
+.field public static final c:I
 
-    return-void
-.end method
+.field public static final d:I
 
-.method public d()V
-    .locals 0
+.field public static final e:I
 
-    return-void
-.end method
 
-.method public n()V
-    .locals 0
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-    return-void
-.end method
+    sget v0, Ljhd;->profile_chat_members_list_toolbar_subtitle:I
 
-.method public q()V
-    .locals 0
+    sput v0, Laib;->a:I
+
+    sget v0, Ljhd;->profile_members_list_delete_from_channel_snackbar:I
+
+    sput v0, Laib;->b:I
+
+    sget v0, Ljhd;->profile_members_list_delete_from_chat_snackbar:I
+
+    sput v0, Laib;->c:I
+
+    sget v0, Ljhd;->profile_members_list_restore_in_channel_snackbar:I
+
+    sput v0, Laib;->d:I
+
+    sget v0, Ljhd;->profile_members_list_restore_in_chat_snackbar:I
+
+    sput v0, Laib;->e:I
 
     return-void
 .end method

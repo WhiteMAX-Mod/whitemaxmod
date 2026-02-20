@@ -2,6 +2,7 @@
 <splits>
     <module name="">
         <language>
+            <entry key="en" split="" />
             <entry key="ru" split="" />
         </language>
     </module>

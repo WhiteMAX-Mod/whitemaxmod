@@ -1,20 +1,19 @@
-.class public interface abstract Lxkg;
-.super Ljava/lang/Object;
+.class public final Lxkg;
+.super Landroid/view/TextureView;
 .source "SourceFile"
 
 
 # virtual methods
-.method public abstract getMsSinceBoot()J
+.method public final onDetachedFromWindow()V
+    .locals 0
+
+    invoke-super {p0}, Landroid/view/View;->onDetachedFromWindow()V
+
+    return-void
 .end method
 
-.method public abstract getServerTimeMs()Ljava/lang/Long;
-.end method
+.method public setListener(Lwkg;)V
+    .locals 0
 
-.method public abstract localTimeMs()J
-.end method
-
-.method public abstract mapToLocalTimeMs(J)Ljava/lang/Long;
-.end method
-
-.method public abstract utcTimeMs()J
+    return-void
 .end method

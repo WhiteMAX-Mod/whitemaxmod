@@ -1,89 +1,94 @@
-.class public final Lwlg;
+.class public Lwlg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lh0e;
-
 
 # instance fields
-.field public final b:J
-
-.field public final c:Lh0e;
+.field public final a:Lbolts/Task;
 
 
 # direct methods
-.method public constructor <init>(JLh0e;)V
-    .locals 2
+.method public constructor <init>()V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-wide/16 v0, 0x0
+    new-instance v0, Lbolts/Task;
 
-    cmp-long v0, p1, v0
+    invoke-direct {v0}, Lbolts/Task;-><init>()V
 
-    if-ltz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    const-string v1, "Timeout must be non-negative."
-
-    invoke-static {v1, v0}, Ljkj;->a(Ljava/lang/String;Z)V
-
-    iput-wide p1, p0, Lwlg;->b:J
-
-    iput-object p3, p0, Lwlg;->c:Lh0e;
+    iput-object v0, p0, Lwlg;->a:Lbolts/Task;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()J
+.method public final a()V
     .locals 2
 
-    iget-wide v0, p0, Lwlg;->b:J
+    iget-object v0, p0, Lwlg;->a:Lbolts/Task;
 
-    return-wide v0
-.end method
+    invoke-virtual {v0}, Lbolts/Task;->trySetCancelled()Z
 
-.method public final b(Lv42;)Lg0e;
-    .locals 7
+    move-result v0
 
-    iget-object v0, p0, Lwlg;->c:Lh0e;
+    if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1}, Lh0e;->b(Lv42;)Lg0e;
-
-    move-result-object v0
-
-    const-wide/16 v1, 0x0
-
-    iget-wide v3, p0, Lwlg;->b:J
-
-    cmp-long v1, v3, v1
-
-    if-lez v1, :cond_0
-
-    iget-wide v1, p1, Lv42;->c:J
-
-    iget-wide v5, v0, Lg0e;->a:J
-
-    sub-long/2addr v3, v5
-
-    cmp-long p1, v1, v3
-
-    if-ltz p1, :cond_0
-
-    sget-object p1, Lg0e;->d:Lg0e;
-
-    return-object p1
+    return-void
 
     :cond_0
-    return-object v0
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "Cannot cancel a completed task."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public final b(Ljava/lang/Exception;)V
+    .locals 1
+
+    iget-object v0, p0, Lwlg;->a:Lbolts/Task;
+
+    invoke-virtual {v0, p1}, Lbolts/Task;->trySetError(Ljava/lang/Exception;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "Cannot set the error on a completed task."
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final c(Ljava/lang/Object;)V
+    .locals 1
+
+    iget-object v0, p0, Lwlg;->a:Lbolts/Task;
+
+    invoke-virtual {v0, p1}, Lbolts/Task;->trySetResult(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "Cannot set the result of a completed task."
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

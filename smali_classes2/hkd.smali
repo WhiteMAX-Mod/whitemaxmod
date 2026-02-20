@@ -1,73 +1,56 @@
-.class public final Lhkd;
+.class public abstract Lhkd;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Landroid/view/View$OnLayoutChangeListener;
 
 
-# instance fields
-.field public final synthetic a:Likd;
+# static fields
+.field public static oneme_setting_item_about:I = 0x7f1309b3
 
-.field public final synthetic b:Landroid/view/View;
+.field public static oneme_setting_item_appearance:I = 0x7f1309b4
 
-.field public final synthetic c:J
+.field public static oneme_setting_item_battery:I = 0x7f1309b5
 
+.field public static oneme_setting_item_devices:I = 0x7f1309b6
 
-# direct methods
-.method public constructor <init>(Likd;Landroid/view/View;J)V
-    .locals 0
+.field public static oneme_setting_item_folders:I = 0x7f1309b7
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static oneme_setting_item_invite_friends_title:I = 0x7f1309b8
 
-    iput-object p1, p0, Lhkd;->a:Likd;
+.field public static oneme_setting_item_messages:I = 0x7f1309b9
 
-    iput-object p2, p0, Lhkd;->b:Landroid/view/View;
+.field public static oneme_setting_item_notification:I = 0x7f1309ba
 
-    iput-wide p3, p0, Lhkd;->c:J
+.field public static oneme_setting_item_notification_and_sound:I = 0x7f1309bb
 
-    return-void
-.end method
+.field public static oneme_setting_item_privacy:I = 0x7f1309bc
 
+.field public static oneme_setting_item_storage:I = 0x7f1309bd
 
-# virtual methods
-.method public final onLayoutChange(Landroid/view/View;IIIIIIII)V
-    .locals 0
+.field public static oneme_setting_item_support:I = 0x7f1309be
 
-    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
+.field public static oneme_settings_avatars_modal_title:I = 0x7f1309c0
 
-    iget-object p1, p0, Lhkd;->a:Likd;
+.field public static oneme_settings_cant_open_camera:I = 0x7f1309c1
 
-    iget-object p2, p1, Likd;->c:Lbz8;
+.field public static oneme_settings_change_avatar_delete_current:I = 0x7f1309c2
 
-    iget-object p2, p2, Lbz8;->b:Ljava/lang/Object;
+.field public static oneme_settings_change_avatar_error:I = 0x7f1309c3
 
-    check-cast p2, Landroid/view/View;
+.field public static oneme_settings_change_avatar_success:I = 0x7f1309c4
 
-    iget-object p3, p0, Lhkd;->b:Landroid/view/View;
+.field public static oneme_settings_change_avatar_title:I = 0x7f1309c5
 
-    if-nez p3, :cond_0
+.field public static oneme_settings_change_avatar_upload_from_camera:I = 0x7f1309c6
 
-    const/4 p2, 0x0
+.field public static oneme_settings_change_avatar_upload_from_gallery:I = 0x7f1309c7
 
-    goto :goto_0
+.field public static oneme_settings_change_avatar_upload_from_neuroavatars:I = 0x7f1309c8
 
-    :cond_0
-    invoke-static {p3, p2}, Lhvh;->c(Landroid/view/View;Landroid/view/View;)Landroid/graphics/Rect;
+.field public static oneme_settings_delete_avatar_success:I = 0x7f1309ca
 
-    move-result-object p2
+.field public static oneme_settings_item_language:I = 0x7f1309d0
 
-    :goto_0
-    if-nez p2, :cond_1
+.field public static oneme_settings_language_modal_title:I = 0x7f1309d1
 
-    return-void
+.field public static oneme_settings_link_copied_snackbar_title:I = 0x7f1309d2
 
-    :cond_1
-    iget-object p1, p1, Likd;->b:Lnjd;
-
-    iget-wide p3, p0, Lhkd;->c:J
-
-    invoke-virtual {p1, p3, p4, p2}, Lnjd;->d(JLandroid/graphics/Rect;)V
-
-    return-void
-.end method
+.field public static oneme_settings_phonenumber_copied_snackbar_title:I = 0x7f1309f0

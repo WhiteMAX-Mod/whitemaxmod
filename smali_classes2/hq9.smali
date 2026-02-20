@@ -2,52 +2,232 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic b:[Lz28;
+# interfaces
+.implements Landroid/animation/Animator$AnimatorListener;
 
 
 # instance fields
-.field public final a:Lj35;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lkq9;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public synthetic constructor <init>(Lkq9;I)V
+    .locals 0
 
-    new-instance v0, Liyc;
+    iput p2, p0, Lhq9;->a:I
 
-    const-class v1, Lhq9;
+    iput-object p1, p0, Lhq9;->b:Lkq9;
 
-    const-string v2, "prefs"
-
-    const-string v3, "getPrefs()Lru/ok/tamtam/Prefs;"
-
-    const/4 v4, 0x0
-
-    invoke-direct {v0, v1, v2, v3, v4}, Liyc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    sget-object v1, Lctd;->a:Ldtd;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v1, 0x1
-
-    new-array v1, v1, [Lz28;
-
-    aput-object v0, v1, v4
-
-    sput-object v1, Lhq9;->b:[Lz28;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public constructor <init>(Lj35;)V
+.method private final a(Landroid/animation/Animator;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    return-void
+.end method
 
-    iput-object p1, p0, Lhq9;->a:Lj35;
+.method private final b(Landroid/animation/Animator;)V
+    .locals 0
 
     return-void
+.end method
+
+.method private final c(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final d(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final e(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final f(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final g(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final h(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final i(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final j(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final k(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final l(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final m(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final n(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final o(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onAnimationCancel(Landroid/animation/Animator;)V
+    .locals 0
+
+    iget p1, p0, Lhq9;->a:I
+
+    return-void
+.end method
+
+.method public final onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 1
+
+    iget p1, p0, Lhq9;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lhq9;->b:Lkq9;
+
+    iget-object p1, p1, Lkq9;->w0:Landroid/widget/ImageView;
+
+    const/high16 v0, 0x3f800000    # 1.0f
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
+
+    return-void
+
+    :pswitch_1
+    iget-object p1, p0, Lhq9;->b:Lkq9;
+
+    iget-object p1, p1, Lkq9;->w0:Landroid/widget/ImageView;
+
+    const/high16 v0, 0x3f800000    # 1.0f
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
+
+    :pswitch_2
+    return-void
+
+    :pswitch_3
+    iget-object p1, p0, Lhq9;->b:Lkq9;
+
+    iget-object p1, p1, Lkq9;->w0:Landroid/widget/ImageView;
+
+    const/high16 v0, 0x3f800000    # 1.0f
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final onAnimationRepeat(Landroid/animation/Animator;)V
+    .locals 0
+
+    iget p1, p0, Lhq9;->a:I
+
+    return-void
+.end method
+
+.method public final onAnimationStart(Landroid/animation/Animator;)V
+    .locals 2
+
+    iget p1, p0, Lhq9;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    iget-object p1, p0, Lhq9;->b:Lkq9;
+
+    iget-object p1, p1, Lkq9;->w0:Landroid/widget/ImageView;
+
+    const/4 v0, 0x4
+
+    invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setVisibility(I)V
+
+    :pswitch_0
+    return-void
+
+    :pswitch_1
+    iget-object p1, p0, Lhq9;->b:Lkq9;
+
+    iget-object v0, p1, Lkq9;->w0:Landroid/widget/ImageView;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setAlpha(F)V
+
+    iget-object p1, p1, Lkq9;->w0:Landroid/widget/ImageView;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
+
+    :pswitch_2
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+        :pswitch_0
+    .end packed-switch
 .end method

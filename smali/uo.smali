@@ -1,127 +1,94 @@
-.class public abstract Luo;
+.class public final Luo;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Landroid/view/View;
+
+.field public final synthetic c:Landroid/view/View;
+
+.field public final synthetic d:Ljava/lang/Object;
+
 
 # direct methods
-.method public static a(Landroid/view/DragEvent;Landroid/widget/TextView;Landroid/app/Activity;)Z
-    .locals 2
+.method public synthetic constructor <init>(Ljava/lang/Object;Landroid/view/View;Landroid/view/View;I)V
+    .locals 0
 
-    invoke-virtual {p2, p0}, Landroid/app/Activity;->requestDragAndDropPermissions(Landroid/view/DragEvent;)Landroid/view/DragAndDropPermissions;
+    iput p4, p0, Luo;->a:I
 
-    invoke-virtual {p0}, Landroid/view/DragEvent;->getX()F
+    iput-object p1, p0, Luo;->d:Ljava/lang/Object;
 
-    move-result p2
+    iput-object p2, p0, Luo;->b:Landroid/view/View;
 
-    invoke-virtual {p0}, Landroid/view/DragEvent;->getY()F
+    iput-object p3, p0, Luo;->c:Landroid/view/View;
 
-    move-result v0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p1, p2, v0}, Landroid/widget/TextView;->getOffsetForPosition(FF)I
-
-    move-result p2
-
-    invoke-virtual {p1}, Landroid/widget/TextView;->beginBatchEdit()V
-
-    :try_start_0
-    invoke-virtual {p1}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/text/Spannable;
-
-    invoke-static {v0, p2}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;I)V
-
-    invoke-virtual {p0}, Landroid/view/DragEvent;->getClipData()Landroid/content/ClipData;
-
-    move-result-object p0
-
-    sget p2, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v0, 0x1f
-
-    const/4 v1, 0x3
-
-    if-lt p2, v0, :cond_0
-
-    new-instance p2, Lski;
-
-    invoke-direct {p2, p0, v1}, Lski;-><init>(Landroid/content/ClipData;I)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p2, Le74;
-
-    invoke-direct {p2}, Le74;-><init>()V
-
-    iput-object p0, p2, Le74;->b:Landroid/content/ClipData;
-
-    iput v1, p2, Le74;->c:I
-
-    :goto_0
-    invoke-interface {p2}, Ld74;->build()Lg74;
-
-    move-result-object p0
-
-    invoke-static {p1, p0}, Lxsh;->j(Landroid/view/View;Lg74;)Lg74;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-virtual {p1}, Landroid/widget/TextView;->endBatchEdit()V
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :catchall_0
-    move-exception p0
-
-    invoke-virtual {p1}, Landroid/widget/TextView;->endBatchEdit()V
-
-    throw p0
+    return-void
 .end method
 
-.method public static b(Landroid/view/DragEvent;Landroid/view/View;Landroid/app/Activity;)Z
-    .locals 2
 
-    invoke-virtual {p2, p0}, Landroid/app/Activity;->requestDragAndDropPermissions(Landroid/view/DragEvent;)Landroid/view/DragAndDropPermissions;
+# virtual methods
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 3
 
-    invoke-virtual {p0}, Landroid/view/DragEvent;->getClipData()Landroid/content/ClipData;
+    iget v0, p0, Luo;->a:I
 
-    move-result-object p0
+    packed-switch v0, :pswitch_data_0
 
-    sget p2, Landroid/os/Build$VERSION;->SDK_INT:I
+    iget-object v0, p0, Luo;->d:Ljava/lang/Object;
 
-    const/16 v0, 0x1f
+    check-cast v0, Lzhg;
 
-    const/4 v1, 0x3
+    iget-object v1, p0, Luo;->c:Landroid/view/View;
 
-    if-lt p2, v0, :cond_0
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
 
-    new-instance p2, Lski;
+    move-result p1
 
-    invoke-direct {p2, p0, v1}, Lski;-><init>(Landroid/content/ClipData;I)V
+    iget-object v2, p0, Luo;->b:Landroid/view/View;
 
-    goto :goto_0
+    invoke-virtual {v0, v2, v1, p1}, Lzhg;->c(Landroid/view/View;Landroid/view/View;F)V
 
-    :cond_0
-    new-instance p2, Le74;
+    return-void
 
-    invoke-direct {p2}, Le74;-><init>()V
+    :pswitch_0
+    iget-object v0, p0, Luo;->d:Ljava/lang/Object;
 
-    iput-object p0, p2, Le74;->b:Landroid/content/ClipData;
+    check-cast v0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;
 
-    iput v1, p2, Le74;->c:I
+    iget-object v1, p0, Luo;->b:Landroid/view/View;
 
-    :goto_0
-    invoke-interface {p2}, Ld74;->build()Lg74;
+    check-cast v1, Landroidx/coordinatorlayout/widget/CoordinatorLayout;
 
-    move-result-object p0
+    iget-object v2, p0, Luo;->c:Landroid/view/View;
 
-    invoke-static {p1, p0}, Lxsh;->j(Landroid/view/View;Lg74;)Lg74;
+    check-cast v2, Lap;
 
-    const/4 p0, 0x1
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
-    return p0
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Integer;
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    invoke-virtual {v0, v1, v2, p1}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->G(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;I)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

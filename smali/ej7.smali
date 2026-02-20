@@ -1,17 +1,59 @@
-.class public interface abstract Lej7;
-.super Ljava/lang/Object;
+.class public final Lej7;
+.super Lnl0;
 .source "SourceFile"
 
 
+# instance fields
+.field public final b:Lgm4;
+
+.field public c:J
+
+
+# direct methods
+.method public constructor <init>(Lgm4;)V
+    .locals 2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lej7;->b:Lgm4;
+
+    const-wide/16 v0, -0x1
+
+    iput-wide v0, p0, Lej7;->c:J
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public abstract a()Ljava/lang/String;
+.method public final b(Ljava/lang/String;Ljava/lang/Object;Landroid/graphics/drawable/Animatable;)V
+    .locals 2
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide p1
+
+    iget-wide v0, p0, Lej7;->c:J
+
+    sub-long/2addr p1, v0
+
+    iget-object p3, p0, Lej7;->b:Lgm4;
+
+    iput-wide p1, p3, Lgm4;->s:J
+
+    invoke-virtual {p3}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+
+    return-void
 .end method
 
-.method public abstract b(Lei5;Lgj9;Lw3e;Liyd;Landroid/graphics/ColorSpace;)Lr56;
-.end method
+.method public final g(Ljava/lang/String;)V
+    .locals 2
 
-.method public abstract c(Lxh7;)Z
-.end method
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-.method public abstract d(Lei5;Lw3e;Liyd;)Z
+    move-result-wide v0
+
+    iput-wide v0, p0, Lej7;->c:J
+
+    return-void
 .end method

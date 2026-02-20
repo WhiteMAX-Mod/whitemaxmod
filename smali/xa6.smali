@@ -1,46 +1,56 @@
 .class public final Lxa6;
-.super Lpa6;
-.source "SourceFile"
-
-# interfaces
-.implements Ls9e;
+.super Lda4;
 
 
-# static fields
-.field public static final b:Lxa6;
+# instance fields
+.field public final synthetic X:Lq96;
+
+.field public Y:Lq96;
+
+.field public Z:Ld96;
+
+.field public synthetic d:Ljava/lang/Object;
+
+.field public o:I
+
+.field public s0:Ljava/lang/Throwable;
+
+.field public t0:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lq96;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Lxa6;
+    iput-object p1, p0, Lxa6;->X:Lq96;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lxa6;->b:Lxa6;
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final f(Lxb6;)V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    sget-object v0, Lzh5;->a:Lzh5;
+    iput-object p1, p0, Lxa6;->d:Ljava/lang/Object;
 
-    invoke-interface {p1, v0}, Lz0g;->d(Lb1g;)V
+    iget p1, p0, Lxa6;->o:I
 
-    invoke-interface {p1}, Lz0g;->b()V
+    const/high16 v0, -0x80000000
 
-    return-void
-.end method
+    or-int/2addr p1, v0
 
-.method public final get()Ljava/lang/Object;
-    .locals 1
+    iput p1, p0, Lxa6;->o:I
+
+    iget-object p1, p0, Lxa6;->X:Lq96;
 
     const/4 v0, 0x0
 
-    return-object v0
+    invoke-virtual {p1, v0, p0}, Lq96;->e(Ld96;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

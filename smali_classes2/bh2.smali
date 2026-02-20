@@ -1,87 +1,70 @@
 .class public final Lbh2;
-.super Ljava/lang/Object;
+.super Lda4;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:J
+.field public X:Ljava/lang/Object;
 
-.field public final b:I
+.field public synthetic Y:Ljava/lang/Object;
 
-.field public final c:J
+.field public final synthetic Z:Lch2;
 
-.field public final d:Ljava/lang/String;
+.field public d:J
+
+.field public o:J
+
+.field public s0:I
 
 
 # direct methods
-.method public constructor <init>(Lah2;)V
-    .locals 2
+.method public constructor <init>(Lch2;Lda4;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lbh2;->Z:Lch2;
 
-    iget-wide v0, p1, Lah2;->b:J
-
-    iput-wide v0, p0, Lbh2;->a:J
-
-    iget v0, p1, Lah2;->a:I
-
-    iput v0, p0, Lbh2;->b:I
-
-    iget-wide v0, p1, Lah2;->c:J
-
-    iput-wide v0, p0, Lbh2;->c:J
-
-    iget-object p1, p1, Lah2;->d:Ljava/io/Serializable;
-
-    check-cast p1, Ljava/lang/String;
-
-    iput-object p1, p0, Lbh2;->d:Ljava/lang/String;
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iput-object p1, p0, Lbh2;->Y:Ljava/lang/Object;
 
-    const-string v1, "AdminParticipant{id="
+    iget p1, p0, Lbh2;->s0:I
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const/high16 v0, -0x80000000
 
-    iget-wide v1, p0, Lbh2;->a:J
+    or-int/2addr p1, v0
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    iput p1, p0, Lbh2;->s0:I
 
-    const-string v1, ", permissions="
+    const-wide/16 v1, 0x0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-wide/16 v3, 0x0
 
-    iget v1, p0, Lbh2;->b:I
+    iget-object v0, p0, Lbh2;->Z:Lch2;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    move-object v5, p0
 
-    const-string v1, ", inviterId="
+    invoke-virtual/range {v0 .. v5}, Lch2;->a(JJLda4;)Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object p1
 
-    iget-wide v1, p0, Lbh2;->c:J
+    sget-object v0, Lod4;->a:Lod4;
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    if-ne p1, v0, :cond_0
 
-    const-string v1, ", alias=\'"
+    return-object p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_0
+    new-instance v0, Le6e;
 
-    iget-object v1, p0, Lbh2;->d:Ljava/lang/String;
-
-    const-string v2, "\'}"
-
-    invoke-static {v0, v1, v2}, Lj27;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    invoke-direct {v0, p1}, Le6e;-><init>(Ljava/lang/Object;)V
 
     return-object v0
 .end method

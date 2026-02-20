@@ -30,7 +30,7 @@
         "(Lru/ok/android/externcalls/sdk/rate/internal/LossHintTrigger;JILjava/lang/String;)V",
         "",
         "loss",
-        "Lb3h;",
+        "Lmah;",
         "onNewLoss",
         "(F)V",
         "J",
@@ -148,7 +148,7 @@
 
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/rate/internal/LossHintTrigger$LossReporter;->this$0:Lru/ok/android/externcalls/sdk/rate/internal/LossHintTrigger;
 
-    invoke-static {v1}, Lru/ok/android/externcalls/sdk/rate/internal/LossHintTrigger;->access$getLog$p(Lru/ok/android/externcalls/sdk/rate/internal/LossHintTrigger;)Lahd;
+    invoke-static {v1}, Lru/ok/android/externcalls/sdk/rate/internal/LossHintTrigger;->access$getLog$p(Lru/ok/android/externcalls/sdk/rate/internal/LossHintTrigger;)Ltmd;
 
     move-result-object v1
 
@@ -174,7 +174,7 @@
 
     const-string v3, "RateManager"
 
-    invoke-interface {v1, v3, v2}, Lahd;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v1, v3, v2}, Ltmd;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     cmpl-float p1, p1, v0
 

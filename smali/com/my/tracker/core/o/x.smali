@@ -302,7 +302,7 @@
 .end method
 
 .method private a(Ljava/lang/String;Lcom/my/tracker/MyTrackerConfig$OkHttpClientProvider;)Lcom/my/tracker/core/net/HttpResult;
-    .locals 7
+    .locals 6
 
     const-string v0, "OkHttpGetRequest error: response code "
 
@@ -332,38 +332,36 @@
     invoke-static {v1}, Landroid/net/TrafficStats;->setThreadStatsTag(I)V
 
     .line 31
-    new-instance v1, Lho4;
+    new-instance v1, Lvp4;
 
-    const/4 v4, 0x4
+    const/4 v4, 0x5
 
-    const/4 v5, 0x0
+    invoke-direct {v1, v4}, Lvp4;-><init>(I)V
 
-    invoke-direct {v1, v4, v5}, Lho4;-><init>(IZ)V
-
-    invoke-virtual {v1, p1}, Lho4;->q(Ljava/lang/String;)V
+    invoke-virtual {v1, p1}, Lvp4;->C(Ljava/lang/String;)V
 
     .line 32
     const-string p1, "GET"
 
-    invoke-virtual {v1, p1, v3}, Lho4;->d(Ljava/lang/String;Laui;)V
+    invoke-virtual {v1, p1, v3}, Lvp4;->o(Ljava/lang/String;Le3j;)V
 
     .line 33
-    invoke-virtual {v1}, Lho4;->a()Lz8b;
+    invoke-virtual {v1}, Lvp4;->e()Lv50;
 
     move-result-object p1
 
     .line 34
-    invoke-interface {p2}, Lcom/my/tracker/MyTrackerConfig$OkHttpClientProvider;->getOkHttpClient()Ld1b;
+    invoke-interface {p2}, Lcom/my/tracker/MyTrackerConfig$OkHttpClientProvider;->getOkHttpClient()Lt3b;
 
     move-result-object p2
 
     .line 35
-    invoke-virtual {p2, p1}, Ld1b;->b(Lz8b;)Luld;
+    invoke-virtual {p2, p1}, Lt3b;->b(Lv50;)Lsrd;
 
     move-result-object p1
 
     .line 36
-    invoke-virtual {p1}, Luld;->f()Lyyd;
+    invoke-virtual {p1}, Lsrd;->f()Lh5e;
 
     move-result-object p1
     :try_end_0
@@ -371,7 +369,7 @@
 
     .line 37
     :try_start_1
-    iget p2, p1, Lyyd;->d:I
+    iget p2, p1, Lh5e;->d:I
 
     const/16 v1, 0xc8
 
@@ -416,12 +414,12 @@
     invoke-static {p2}, Lcom/my/tracker/core/Tracer;->d(Ljava/lang/String;)V
 
     .line 41
-    iget-object p2, p1, Lyyd;->Y:Lazd;
+    iget-object p2, p1, Lh5e;->Y:Lj5e;
 
     if-eqz p2, :cond_1
 
     .line 42
-    invoke-virtual {p2}, Lazd;->g0()Ljava/lang/String;
+    invoke-virtual {p2}, Lj5e;->d0()Ljava/lang/String;
 
     move-result-object p2
 
@@ -454,7 +452,7 @@
     .line 45
     :goto_2
     :try_start_2
-    invoke-virtual {p1}, Lyyd;->close()V
+    invoke-virtual {p1}, Lh5e;->close()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
@@ -472,7 +470,7 @@
     .line 46
     :goto_3
     :try_start_3
-    invoke-virtual {p1}, Lyyd;->close()V
+    invoke-virtual {p1}, Lh5e;->close()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
@@ -498,11 +496,11 @@
 
     invoke-static {p2, p1}, Lcom/my/tracker/core/Tracer;->d(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    move-object v6, v3
+    move-object v5, v3
 
     move-object v3, p2
 
-    move-object p2, v6
+    move-object p2, v5
 
     .line 48
     :goto_6
@@ -1018,13 +1016,13 @@
     const-string p2, "application/octet-stream"
 
     .line 100
-    sget-object v4, Lle9;->c:Ljava/util/regex/Pattern;
+    sget-object v4, Ldg9;->c:Ljava/util/regex/Pattern;
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
     .line 101
     :try_start_6
-    invoke-static {p2}, Lq9j;->c(Ljava/lang/String;)Lle9;
+    invoke-static {p2}, Lcjj;->a(Ljava/lang/String;)Ldg9;
 
     move-result-object p2
     :try_end_6
@@ -1039,24 +1037,24 @@
     .line 102
     :goto_1
     :try_start_7
-    new-instance v4, Lho4;
+    new-instance v4, Lvp4;
 
-    const/4 v5, 0x4
+    const/4 v5, 0x5
 
-    invoke-direct {v4, v5, v2}, Lho4;-><init>(IZ)V
+    invoke-direct {v4, v5}, Lvp4;-><init>(I)V
 
-    invoke-virtual {v4, p1}, Lho4;->q(Ljava/lang/String;)V
+    invoke-virtual {v4, p1}, Lvp4;->C(Ljava/lang/String;)V
 
     const-string p1, "Content-Encoding"
 
     const-string v5, "gzip"
 
     .line 103
-    iget-object v6, v4, Lho4;->c:Ljava/lang/Object;
+    iget-object v6, v4, Lvp4;->c:Ljava/lang/Object;
 
-    check-cast v6, Ld57;
+    check-cast v6, Llbb;
 
-    invoke-virtual {v6, p1, v5}, Ld57;->h(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v6, p1, v5}, Llbb;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 104
     invoke-virtual {v1}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
@@ -1066,17 +1064,17 @@
     const/4 v5, 0x6
 
     .line 105
-    invoke-static {p1, p2, v5}, Lkme;->m([BLle9;I)Llxd;
+    invoke-static {v5, p2, p1}, Lluj;->g(ILdg9;[B)Lu3e;
 
     move-result-object p1
 
     .line 106
     const-string p2, "POST"
 
-    invoke-virtual {v4, p2, p1}, Lho4;->d(Ljava/lang/String;Laui;)V
+    invoke-virtual {v4, p2, p1}, Lvp4;->o(Ljava/lang/String;Le3j;)V
 
     .line 107
-    invoke-virtual {v4}, Lho4;->a()Lz8b;
+    invoke-virtual {v4}, Lvp4;->e()Lv50;
 
     move-result-object p1
     :try_end_7
@@ -1103,17 +1101,17 @@
     invoke-virtual {v1}, Ljava/io/ByteArrayOutputStream;->close()V
 
     .line 110
-    invoke-interface {p4}, Lcom/my/tracker/MyTrackerConfig$OkHttpClientProvider;->getOkHttpClient()Ld1b;
+    invoke-interface {p4}, Lcom/my/tracker/MyTrackerConfig$OkHttpClientProvider;->getOkHttpClient()Lt3b;
 
     move-result-object p2
 
     .line 111
-    invoke-virtual {p2, p1}, Ld1b;->b(Lz8b;)Luld;
+    invoke-virtual {p2, p1}, Lt3b;->b(Lv50;)Lsrd;
 
     move-result-object p1
 
     .line 112
-    invoke-virtual {p1}, Luld;->f()Lyyd;
+    invoke-virtual {p1}, Lsrd;->f()Lh5e;
 
     move-result-object p1
     :try_end_8
@@ -1121,7 +1119,7 @@
 
     .line 113
     :try_start_9
-    iget p2, p1, Lyyd;->d:I
+    iget p2, p1, Lh5e;->d:I
 
     const/16 p3, 0xc8
 
@@ -1182,12 +1180,12 @@
     invoke-static {p2}, Lcom/my/tracker/core/Tracer;->d(Ljava/lang/String;)V
 
     .line 117
-    iget-object p2, p1, Lyyd;->Y:Lazd;
+    iget-object p2, p1, Lh5e;->Y:Lj5e;
 
     if-eqz p2, :cond_4
 
     .line 118
-    invoke-virtual {p2}, Lazd;->g0()Ljava/lang/String;
+    invoke-virtual {p2}, Lj5e;->d0()Ljava/lang/String;
 
     move-result-object p2
     :try_end_9
@@ -1278,7 +1276,7 @@
 
     .line 126
     :goto_8
-    invoke-virtual {p1}, Lyyd;->close()V
+    invoke-virtual {p1}, Lh5e;->close()V
 
     move-object p2, v3
 
@@ -1296,7 +1294,7 @@
     if-eqz v3, :cond_9
 
     .line 128
-    invoke-virtual {v3}, Lyyd;->close()V
+    invoke-virtual {v3}, Lh5e;->close()V
 
     .line 129
     :cond_9

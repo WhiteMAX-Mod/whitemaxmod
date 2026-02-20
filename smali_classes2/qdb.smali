@@ -1,91 +1,27 @@
-.class public abstract Lqdb;
+.class public final Lqdb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
+# instance fields
+.field public final a:Lsrd;
 
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
+.field public final b:Ljava/util/concurrent/CopyOnWriteArrayList;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lsrd;)V
+    .locals 0
 
-    sget v0, Ly8d;->media_editor_bottom_background_id:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput v0, Lqdb;->a:I
+    iput-object p1, p0, Lqdb;->a:Lsrd;
 
-    sget v0, Ly8d;->media_editor_close_id:I
+    new-instance p1, Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    sput v0, Lqdb;->b:I
+    invoke-direct {p1}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
 
-    sget v0, Ly8d;->media_editor_content_id:I
-
-    sput v0, Lqdb;->c:I
-
-    sget v0, Ly8d;->media_editor_crop_id:I
-
-    sput v0, Lqdb;->d:I
-
-    sget v0, Ly8d;->media_editor_done_id:I
-
-    sput v0, Lqdb;->e:I
-
-    sget v0, Ly8d;->media_editor_flip_horizontally_id:I
-
-    sput v0, Lqdb;->f:I
-
-    sget v0, Ly8d;->media_editor_reset_id:I
-
-    sput v0, Lqdb;->g:I
-
-    sget v0, Ly8d;->media_editor_rotate_id:I
-
-    sput v0, Lqdb;->h:I
-
-    sget v0, Ly8d;->media_picker_album_container_id:I
-
-    sput v0, Lqdb;->i:I
-
-    sget v0, Ly8d;->media_picker_container_id:I
-
-    sput v0, Lqdb;->j:I
-
-    sget v0, Ly8d;->media_picker_content_id:I
-
-    sput v0, Lqdb;->k:I
-
-    sget v0, Ly8d;->media_picker_divider_id:I
-
-    sput v0, Lqdb;->l:I
-
-    sget v0, Ly8d;->media_picker_toolbar_id:I
-
-    sput v0, Lqdb;->m:I
+    iput-object p1, p0, Lqdb;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     return-void
 .end method

@@ -1,143 +1,123 @@
 .class public final Lhq3;
-.super Ljava/lang/Object;
+.super Ldv0;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:Lhk7;
+.field public final c:Z
 
-.field public b:Lko4;
 
-.field public c:Lud5;
+# direct methods
+.method public constructor <init>(Lmk;Z)V
+    .locals 0
 
-.field public d:Z
+    invoke-direct {p0, p1}, Ldv0;-><init>(Lmk;)V
 
-.field public e:Z
+    iput-boolean p2, p0, Lhq3;->c:Z
 
-.field public f:I
-
-.field public g:Z
+    return-void
+.end method
 
 
 # virtual methods
-.method public a()Lhq3;
-    .locals 10
+.method public final m(B)V
+    .locals 1
 
-    iget-object v0, p0, Lhq3;->a:Lhk7;
+    iget-boolean v0, p0, Lhq3;->c:Z
 
-    new-instance v1, Lhq3;
+    if-eqz v0, :cond_0
 
-    iget-object v2, p0, Lhq3;->b:Lko4;
+    and-int/lit16 p1, p1, 0xff
 
-    iget-object v3, p0, Lhq3;->c:Lud5;
+    invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
-    iget-boolean v4, p0, Lhq3;->d:Z
+    move-result-object p1
 
-    iget-boolean v5, p0, Lhq3;->e:Z
+    invoke-virtual {p0, p1}, Ldv0;->w(Ljava/lang/String;)V
 
-    iget v6, p0, Lhq3;->f:I
-
-    iget-boolean v7, p0, Lhq3;->g:Z
-
-    if-eqz v7, :cond_0
-
-    if-nez v6, :cond_0
-
-    const/4 v7, 0x1
-
-    goto :goto_0
+    return-void
 
     :cond_0
-    const/4 v7, 0x0
+    and-int/lit16 p1, p1, 0xff
 
-    :goto_0
-    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+    invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    move-result-object p1
 
-    move-result-object v8
+    invoke-virtual {p0, p1}, Ldv0;->u(Ljava/lang/String;)V
 
-    invoke-interface {v8}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v9
-
-    if-eqz v9, :cond_1
-
-    invoke-interface {v8}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v8
-
-    check-cast v8, Lid5;
-
-    invoke-virtual {v8}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v8, 0x1
-
-    goto :goto_1
-
-    :cond_1
-    const/4 v8, 0x0
-
-    :goto_1
-    const-string v9, "Composition must have at least one non-looping sequence."
-
-    invoke-static {v9, v8}, Lh6j;->a(Ljava/lang/Object;Z)V
-
-    invoke-static {v0}, Lhk7;->j(Ljava/util/Collection;)Lhk7;
-
-    move-result-object v0
-
-    iput-object v0, v1, Lhq3;->a:Lhk7;
-
-    iput-object v2, v1, Lhq3;->b:Lko4;
-
-    iput-object v3, v1, Lhq3;->c:Lud5;
-
-    iput-boolean v4, v1, Lhq3;->d:Z
-
-    iput-boolean v5, v1, Lhq3;->e:Z
-
-    iput v6, v1, Lhq3;->f:I
-
-    iput-boolean v7, v1, Lhq3;->g:Z
-
-    return-object v1
+    return-void
 .end method
 
-.method public b()Lhq3;
+.method public final s(I)V
+    .locals 1
+
+    iget-boolean v0, p0, Lhq3;->c:Z
+
+    invoke-static {p1}, Ljava/lang/Integer;->toUnsignedString(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0, p1}, Ldv0;->w(Ljava/lang/String;)V
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p0, p1}, Ldv0;->u(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public final t(J)V
+    .locals 1
+
+    iget-boolean v0, p0, Lhq3;->c:Z
+
+    invoke-static {p1, p2}, Ljava/lang/Long;->toUnsignedString(J)Ljava/lang/String;
+
+    move-result-object p1
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0, p1}, Ldv0;->w(Ljava/lang/String;)V
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p0, p1}, Ldv0;->u(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public final v(S)V
     .locals 2
 
-    new-instance v0, Lhq3;
+    iget-boolean v0, p0, Lhq3;->c:Z
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const v1, 0xffff
 
-    iget-object v1, p0, Lhq3;->a:Lhk7;
+    if-eqz v0, :cond_0
 
-    iput-object v1, v0, Lhq3;->a:Lhk7;
+    and-int/2addr p1, v1
 
-    iget-object v1, p0, Lhq3;->b:Lko4;
+    invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
-    iput-object v1, v0, Lhq3;->b:Lko4;
+    move-result-object p1
 
-    iget-object v1, p0, Lhq3;->c:Lud5;
+    invoke-virtual {p0, p1}, Ldv0;->w(Ljava/lang/String;)V
 
-    iput-object v1, v0, Lhq3;->c:Lud5;
+    return-void
 
-    iget-boolean v1, p0, Lhq3;->d:Z
+    :cond_0
+    and-int/2addr p1, v1
 
-    iput-boolean v1, v0, Lhq3;->d:Z
+    invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
-    iget-boolean v1, p0, Lhq3;->e:Z
+    move-result-object p1
 
-    iput-boolean v1, v0, Lhq3;->e:Z
+    invoke-virtual {p0, p1}, Ldv0;->u(Ljava/lang/String;)V
 
-    iget v1, p0, Lhq3;->f:I
-
-    iput v1, v0, Lhq3;->f:I
-
-    iget-boolean v1, p0, Lhq3;->g:Z
-
-    iput-boolean v1, v0, Lhq3;->g:Z
-
-    return-object v0
+    return-void
 .end method

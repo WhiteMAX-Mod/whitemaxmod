@@ -1,23 +1,13 @@
-.class public interface abstract Lr7g;
-.super Ljava/lang/Object;
+.class public final Lr7g;
+.super Liag;
 .source "SourceFile"
 
 
 # virtual methods
-.method public abstract c()I
-.end method
+.method public final bridge synthetic y(Lmg8;)V
+    .locals 0
 
-.method public abstract j()I
-.end method
+    check-cast p1, Lz9g;
 
-.method public abstract m()V
-.end method
-
-.method public abstract onDismiss()V
-.end method
-
-.method public abstract p()Landroid/view/View;
-.end method
-
-.method public abstract r()I
+    return-void
 .end method

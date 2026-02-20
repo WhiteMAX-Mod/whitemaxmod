@@ -1,401 +1,420 @@
-.class public final synthetic Lf2f;
+.class public final Lf2f;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lnm4;
-.implements Lnr6;
-
-
-# static fields
-.field public static final b:Lf2f;
-
-.field public static final c:Lf2f;
-
-.field public static final d:Lf2f;
-
-.field public static final o:Lf2f;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lpo5;
+
+.field public final b:Lwo8;
+
+.field public final c:Ljava/lang/String;
+
+.field public final d:Lj88;
+
+.field public final e:Lj88;
+
+.field public final f:Lj88;
+
+.field public final g:Ljava/util/concurrent/CopyOnWriteArraySet;
+
+.field public final h:Lso0;
+
+.field public final i:Ljava/util/concurrent/CopyOnWriteArraySet;
+
+.field public final j:[Ljava/lang/String;
+
+.field public final k:[Ljava/lang/String;
+
+.field public volatile l:I
+
+.field public volatile m:I
+
+.field public final n:Ljha;
 
 
 # direct methods
-.method static synthetic constructor <clinit>()V
+.method public constructor <init>(Lq3i;Lj88;Lj88;Lj88;Lpo5;Lwo8;)V
     .locals 2
-
-    new-instance v0, Lf2f;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lf2f;-><init>(I)V
-
-    sput-object v0, Lf2f;->b:Lf2f;
-
-    new-instance v0, Lf2f;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lf2f;-><init>(I)V
-
-    sput-object v0, Lf2f;->c:Lf2f;
-
-    new-instance v0, Lf2f;
-
-    const/4 v1, 0x2
-
-    invoke-direct {v0, v1}, Lf2f;-><init>(I)V
-
-    sput-object v0, Lf2f;->d:Lf2f;
-
-    new-instance v0, Lf2f;
-
-    const/4 v1, 0x3
-
-    invoke-direct {v0, v1}, Lf2f;-><init>(I)V
-
-    sput-object v0, Lf2f;->o:Lf2f;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(I)V
-    .locals 0
-
-    iput p1, p0, Lf2f;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    iput-object p5, p0, Lf2f;->a:Lpo5;
+
+    iput-object p6, p0, Lf2f;->b:Lwo8;
+
+    const-class p5, Lf2f;
+
+    invoke-virtual {p5}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p5
+
+    iput-object p5, p0, Lf2f;->c:Ljava/lang/String;
+
+    iput-object p3, p0, Lf2f;->d:Lj88;
+
+    iput-object p2, p0, Lf2f;->e:Lj88;
+
+    iput-object p4, p0, Lf2f;->f:Lj88;
+
+    new-instance p3, Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-direct {p3}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
+
+    iput-object p3, p0, Lf2f;->g:Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    new-instance p3, Lso0;
+
+    const/4 p4, 0x0
+
+    invoke-direct {p3, p4}, Lso0;-><init>(Ljava/lang/Object;)V
+
+    iput-object p3, p0, Lf2f;->h:Lso0;
+
+    new-instance p3, Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-direct {p3}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
+
+    iput-object p3, p0, Lf2f;->i:Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    const-string p3, "no_net"
+
+    const-string p6, "disconnected"
+
+    const-string v0, "connected"
+
+    const-string v1, "logged_in"
+
+    filled-new-array {p3, p6, v0, v1}, [Ljava/lang/String;
+
+    move-result-object p3
+
+    iput-object p3, p0, Lf2f;->j:[Ljava/lang/String;
+
+    filled-new-array {p6, v0, v1}, [Ljava/lang/String;
+
+    move-result-object p3
+
+    iput-object p3, p0, Lf2f;->k:[Ljava/lang/String;
+
+    new-instance p3, Ljha;
+
+    sget-object p6, Llrb;->n3:Lpm5;
+
+    invoke-virtual {p6}, Lh2;->getSize()I
+
+    move-result p6
+
+    invoke-direct {p3, p6}, Ljha;-><init>(I)V
+
+    iput-object p3, p0, Lf2f;->n:Ljha;
+
+    invoke-interface {p2}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lcw3;
+
+    new-instance p3, Le2f;
+
+    invoke-direct {p3, p0}, Le2f;-><init>(Lf2f;)V
+
+    invoke-interface {p2, p3}, Lcw3;->c(Lbw3;)V
+
+    new-instance p2, Ltla;
+
+    const/4 p3, 0x1
+
+    invoke-direct {p2, p3, p0}, Ltla;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {p1, p2}, Lq3i;->d(Lks;)V
+
+    sget-object p1, Ltej;->a:Lafb;
+
+    if-nez p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sget-object p2, Lzm8;->d:Lzm8;
+
+    invoke-virtual {p1, p2}, Lafb;->b(Lzm8;)Z
+
+    move-result p3
+
+    if-eqz p3, :cond_1
+
+    new-instance p3, Ljava/lang/StringBuilder;
+
+    const-string p6, "ctor, "
+
+    invoke-direct {p3, p6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p3
+
+    invoke-virtual {p1, p2, p5, p3, p4}, Lafb;->c(Lzm8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
+    :goto_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 1
+.method public final a(IS)V
+    .locals 6
 
-    iget v0, p0, Lf2f;->a:I
+    const/4 v0, 0x0
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {v0, v0}, Let7;->a(II)J
 
-    new-instance v0, Lone/me/settings/privacy/ui/pincode/SetupPinCodeScreen;
+    move-result-wide v0
 
-    invoke-direct {v0}, Lone/me/settings/privacy/ui/pincode/SetupPinCodeScreen;-><init>()V
+    new-instance v2, Let7;
 
-    return-object v0
+    invoke-direct {v2, v0, v1}, Let7;-><init>(J)V
 
-    :pswitch_0
-    new-instance v0, Lone/me/settings/privacy/ui/onboarding/SafeModeOnboardingScreen;
+    iget-object v0, p0, Lf2f;->n:Ljha;
 
-    invoke-direct {v0}, Lone/me/settings/privacy/ui/onboarding/SafeModeOnboardingScreen;-><init>()V
+    invoke-virtual {v0, p2, v2}, Ljha;->d(ILet7;)Ljava/lang/Object;
 
-    return-object v0
+    move-result-object v1
 
-    :pswitch_1
-    new-instance v0, Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;
+    check-cast v1, Let7;
 
-    invoke-direct {v0}, Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;-><init>()V
+    iget-wide v1, v1, Let7;->a:J
 
-    return-object v0
+    const/16 v3, 0x20
 
-    :pswitch_2
-    new-instance v0, Lone/me/settings/privacy/ui/SettingsPrivacyScreen;
+    shr-long v3, v1, v3
 
-    invoke-direct {v0}, Lone/me/settings/privacy/ui/SettingsPrivacyScreen;-><init>()V
+    long-to-int v3, v3
 
-    return-object v0
+    add-int/lit8 v3, v3, 0x1
 
-    nop
+    const-wide v4, 0xffffffffL
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    and-long/2addr v1, v4
+
+    long-to-int v1, v1
+
+    add-int/2addr v1, p1
+
+    invoke-static {v3, v1}, Let7;->a(II)J
+
+    move-result-wide v1
+
+    new-instance p1, Let7;
+
+    invoke-direct {p1, v1, v2}, Let7;-><init>(J)V
+
+    invoke-virtual {v0, p2, p1}, Ljha;->f(ILjava/lang/Object;)Ljava/lang/Object;
+
+    return-void
 .end method
 
-.method public final equals(Ljava/lang/Object;)Z
+.method public final b(Ld2f;)V
     .locals 1
 
-    iget v0, p0, Lf2f;->a:I
+    iget-object v0, p0, Lf2f;->g:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArraySet;->add(Ljava/lang/Object;)Z
 
-    instance-of v0, p1, Lnm4;
+    iget v0, p0, Lf2f;->l:I
 
-    if-eqz v0, :cond_0
+    invoke-interface {p1, v0}, Ld2f;->d(I)V
 
-    instance-of v0, p1, Lnr6;
+    return-void
+.end method
 
-    if-eqz v0, :cond_0
+.method public final c()V
+    .locals 5
 
-    invoke-virtual {p0}, Lf2f;->getFunctionDelegate()Lgr6;
+    iget-object v0, p0, Lf2f;->e:Lj88;
+
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast p1, Lnr6;
+    check-cast v0, Lcw3;
 
-    invoke-interface {p1}, Lnr6;->getFunctionDelegate()Lgr6;
+    invoke-interface {v0}, Lcw3;->f()Z
 
-    move-result-object p1
+    move-result v0
 
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    if-nez v0, :cond_0
 
-    move-result p1
+    const/4 v0, 0x0
 
     goto :goto_0
 
     :cond_0
-    const/4 p1, 0x0
+    iget v0, p0, Lf2f;->m:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_3
+
+    const/4 v2, 0x2
+
+    if-eq v0, v1, :cond_2
+
+    if-ne v0, v2, :cond_1
+
+    const/4 v0, 0x3
+
+    goto :goto_0
+
+    :cond_1
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    iget v1, p0, Lf2f;->m:I
+
+    const-string v2, "Unknown connection status="
+
+    invoke-static {v1, v2}, Ljye;->i(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_2
+    move v0, v2
+
+    goto :goto_0
+
+    :cond_3
+    move v0, v1
 
     :goto_0
-    return p1
+    iput v0, p0, Lf2f;->l:I
 
-    :pswitch_0
-    instance-of v0, p1, Lnm4;
+    iget-object v0, p0, Lf2f;->c:Ljava/lang/String;
 
-    if-eqz v0, :cond_1
+    sget-object v1, Ltej;->a:Lafb;
 
-    instance-of v0, p1, Lnr6;
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {p0}, Lf2f;->getFunctionDelegate()Lgr6;
-
-    move-result-object v0
-
-    check-cast p1, Lnr6;
-
-    invoke-interface {p1}, Lnr6;->getFunctionDelegate()Lgr6;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
+    if-nez v1, :cond_4
 
     goto :goto_1
 
-    :cond_1
-    const/4 p1, 0x0
+    :cond_4
+    sget-object v2, Lzm8;->d:Lzm8;
 
-    :goto_1
-    return p1
+    invoke-virtual {v1, v2}, Lafb;->b(Lzm8;)Z
 
-    :pswitch_1
-    instance-of v0, p1, Lnm4;
+    move-result v3
 
-    if-eqz v0, :cond_2
+    if-eqz v3, :cond_5
 
-    instance-of v0, p1, Lnr6;
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    if-eqz v0, :cond_2
+    const-string v4, "updateState, "
 
-    invoke-virtual {p0}, Lf2f;->getFunctionDelegate()Lgr6;
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result-object v0
+    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    check-cast p1, Lnr6;
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-interface {p1}, Lnr6;->getFunctionDelegate()Lgr6;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    goto :goto_2
-
-    :cond_2
-    const/4 p1, 0x0
-
-    :goto_2
-    return p1
-
-    :pswitch_2
-    instance-of v0, p1, Lnm4;
-
-    if-eqz v0, :cond_3
-
-    instance-of v0, p1, Lnr6;
-
-    if-eqz v0, :cond_3
-
-    invoke-virtual {p0}, Lf2f;->getFunctionDelegate()Lgr6;
-
-    move-result-object v0
-
-    check-cast p1, Lnr6;
-
-    invoke-interface {p1}, Lnr6;->getFunctionDelegate()Lgr6;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    goto :goto_3
-
-    :cond_3
-    const/4 p1, 0x0
-
-    :goto_3
-    return p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final getFunctionDelegate()Lgr6;
-    .locals 10
-
-    iget v0, p0, Lf2f;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v1, Lqr6;
-
-    const-string v5, "<init>()V"
-
-    const/4 v6, 0x0
-
-    const/4 v2, 0x0
-
-    const-class v3, Lone/me/settings/privacy/ui/pincode/SetupPinCodeScreen;
-
-    const-string v4, "<init>"
-
-    invoke-direct/range {v1 .. v6}, Lqr6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    return-object v1
-
-    :pswitch_0
-    new-instance v2, Lqr6;
-
-    const-string v6, "<init>()V"
-
-    const/4 v7, 0x0
-
-    const/4 v3, 0x0
-
-    const-class v4, Lone/me/settings/privacy/ui/onboarding/SafeModeOnboardingScreen;
-
-    const-string v5, "<init>"
-
-    invoke-direct/range {v2 .. v7}, Lqr6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    return-object v2
-
-    :pswitch_1
-    new-instance v3, Lqr6;
-
-    const-string v7, "<init>()V"
-
-    const/4 v8, 0x0
+    move-result-object v3
 
     const/4 v4, 0x0
 
-    const-class v5, Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;
+    invoke-virtual {v1, v2, v0, v3, v4}, Lafb;->c(Lzm8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    const-string v6, "<init>"
+    :cond_5
+    :goto_1
+    iget-object v0, p0, Lf2f;->g:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    invoke-direct/range {v3 .. v8}, Lqr6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
 
-    return-object v3
+    move-result-object v0
 
-    :pswitch_2
-    new-instance v4, Lqr6;
+    :goto_2
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    const-string v8, "<init>()V"
+    move-result v1
 
-    const/4 v9, 0x0
+    if-eqz v1, :cond_6
 
-    const/4 v5, 0x0
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    const-class v6, Lone/me/settings/privacy/ui/SettingsPrivacyScreen;
+    move-result-object v1
 
-    const-string v7, "<init>"
+    check-cast v1, Ld2f;
 
-    invoke-direct/range {v4 .. v9}, Lqr6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    iget v2, p0, Lf2f;->l:I
 
-    return-object v4
+    invoke-interface {v1, v2}, Ld2f;->d(I)V
 
-    nop
+    goto :goto_2
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    :cond_6
+    iget-object v0, p0, Lf2f;->h:Lso0;
+
+    iget v1, p0, Lf2f;->l:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lso0;->b(Ljava/lang/Object;)V
+
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    iget v0, p0, Lf2f;->a:I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    packed-switch v0, :pswitch_data_0
+    const-string v1, "SessionStateInfoImpl@"
 
-    invoke-virtual {p0}, Lf2f;->getFunctionDelegate()Lgr6;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    invoke-static {v1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "(connStatus="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lf2f;->k:[Ljava/lang/String;
+
+    iget v2, p0, Lf2f;->m:I
+
+    aget-object v1, v1, v2
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ") -> "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lf2f;->j:[Ljava/lang/String;
+
+    iget v2, p0, Lf2f;->l:I
+
+    aget-object v1, v1, v2
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
-
-    :pswitch_0
-    invoke-virtual {p0}, Lf2f;->getFunctionDelegate()Lgr6;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
-
-    :pswitch_1
-    invoke-virtual {p0}, Lf2f;->getFunctionDelegate()Lgr6;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
-
-    :pswitch_2
-    invoke-virtual {p0}, Lf2f;->getFunctionDelegate()Lgr6;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

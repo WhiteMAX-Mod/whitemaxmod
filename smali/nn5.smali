@@ -1,88 +1,34 @@
 .class public final Lnn5;
-.super Ljava/util/concurrent/atomic/AtomicBoolean;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
-.implements Lo25;
+.implements Lqn5;
 
 
 # instance fields
-.field public final a:Ljava/lang/Runnable;
+.field public final a:J
+
+.field public final b:J
+
+.field public final c:Ljava/lang/String;
+
+.field public final d:Ly55;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Runnable;)V
+.method public constructor <init>(JJLjava/lang/String;Ly55;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lnn5;->a:Ljava/lang/Runnable;
+    iput-wide p1, p0, Lnn5;->a:J
 
-    return-void
-.end method
+    iput-wide p3, p0, Lnn5;->b:J
 
+    iput-object p5, p0, Lnn5;->c:Ljava/lang/String;
 
-# virtual methods
-.method public final dispose()V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->lazySet(Z)V
+    iput-object p6, p0, Lnn5;->d:Ly55;
 
     return-void
-.end method
-
-.method public final e()Z
-    .locals 1
-
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final run()V
-    .locals 2
-
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    return-void
-
-    :cond_0
-    const/4 v0, 0x1
-
-    :try_start_0
-    iget-object v1, p0, Lnn5;->a:Ljava/lang/Runnable;
-
-    invoke-interface {v1}, Ljava/lang/Runnable;->run()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->lazySet(Z)V
-
-    return-void
-
-    :catchall_0
-    move-exception v1
-
-    :try_start_1
-    invoke-static {v1}, Lknj;->b(Ljava/lang/Throwable;)V
-
-    throw v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    :catchall_1
-    move-exception v1
-
-    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->lazySet(Z)V
-
-    throw v1
 .end method

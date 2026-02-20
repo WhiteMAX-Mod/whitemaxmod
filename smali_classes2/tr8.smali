@@ -1,137 +1,105 @@
-.class public final synthetic Ltr8;
-.super Ljava/lang/Object;
+.class public final Ltr8;
+.super Lx0i;
 .source "SourceFile"
-
-# interfaces
-.implements Lay3;
 
 
 # instance fields
-.field public final synthetic a:Z
+.field public final X:Lhxf;
 
-.field public final synthetic b:Lwr8;
+.field public final Y:Lmrd;
 
-.field public final synthetic c:J
+.field public final Z:Ltn5;
+
+.field public final b:Z
+
+.field public final c:Landroid/content/Context;
+
+.field public final d:Lwu9;
+
+.field public final o:Lj88;
 
 
 # direct methods
-.method public synthetic constructor <init>(ZLwr8;J)V
+.method public constructor <init>(Lj88;ZLandroid/content/Context;Lwu9;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lx0i;-><init>()V
 
-    iput-boolean p1, p0, Ltr8;->a:Z
+    iput-boolean p2, p0, Ltr8;->b:Z
 
-    iput-object p2, p0, Ltr8;->b:Lwr8;
+    iput-object p3, p0, Ltr8;->c:Landroid/content/Context;
 
-    iput-wide p3, p0, Ltr8;->c:J
+    iput-object p4, p0, Ltr8;->d:Lwu9;
+
+    iput-object p1, p0, Ltr8;->o:Lj88;
+
+    new-instance p1, Lur8;
+
+    sget-object p2, Lsi5;->a:Lsi5;
+
+    const/4 p3, 0x1
+
+    invoke-direct {p1, p3, p2}, Lur8;-><init>(ILjava/util/List;)V
+
+    invoke-static {p1}, Lixf;->a(Ljava/lang/Object;)Lhxf;
+
+    move-result-object p1
+
+    iput-object p1, p0, Ltr8;->X:Lhxf;
+
+    new-instance p2, Lmrd;
+
+    invoke-direct {p2, p1}, Lmrd;-><init>(Lgia;)V
+
+    iput-object p2, p0, Ltr8;->Y:Lmrd;
+
+    new-instance p1, Ltn5;
+
+    const/4 p2, 0x0
+
+    invoke-direct {p1, p2}, Ltn5;-><init>(I)V
+
+    iput-object p1, p0, Ltr8;->Z:Ltn5;
 
     return-void
 .end method
 
+.method public static p(Ltr8;I)V
+    .locals 4
 
-# virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 8
+    iget-object v0, p0, Ltr8;->X:Lhxf;
 
-    check-cast p1, Ljava/util/Map;
+    invoke-virtual {v0}, Lhxf;->getValue()Ljava/lang/Object;
 
-    iget-boolean v0, p0, Ltr8;->a:Z
+    move-result-object v0
 
-    if-eqz v0, :cond_0
+    check-cast v0, Lur8;
 
-    sget-object v1, Las8;->a:Las8;
+    iget-object v0, v0, Lur8;->a:Ljava/util/List;
 
-    invoke-interface {p1, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v1, p0, Ltr8;->o:Lj88;
 
-    move-result-object v1
-
-    check-cast v1, Lxp0;
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v1, Las8;->c:Las8;
-
-    invoke-interface {p1, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v1}, Lj88;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lxp0;
+    check-cast v1, Lbjg;
 
-    :goto_0
-    iget-object v2, p0, Ltr8;->b:Lwr8;
+    check-cast v1, Lcbb;
 
-    iget-object v2, v2, Lwr8;->e:Ljava/util/LinkedHashMap;
+    invoke-virtual {v1}, Lcbb;->a()Lgd4;
 
-    invoke-virtual {v2}, Ljava/util/LinkedHashMap;->values()Ljava/util/Collection;
+    move-result-object v1
 
-    move-result-object v2
+    new-instance v2, Lsr8;
 
-    invoke-interface {v2}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+    const/4 v3, 0x0
 
-    move-result-object v2
+    invoke-direct {v2, p0, v0, p1, v3}, Lsr8;-><init>(Ltr8;Ljava/util/List;ILkotlin/coroutines/Continuation;)V
 
-    :goto_1
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+    const/4 p1, 0x2
 
-    move-result v3
+    invoke-static {p0, v1, v2, p1}, Lx0i;->l(Lx0i;Led4;Lys6;I)Lcuf;
 
-    if-eqz v3, :cond_3
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lvr8;
-
-    iget-object v4, v3, Lvr8;->a:Lit8;
-
-    iget-object v3, v3, Lvr8;->b:Lft8;
-
-    iget-wide v4, v4, Lit8;->j:J
-
-    iget-wide v6, p0, Ltr8;->c:J
-
-    cmp-long v4, v4, v6
-
-    if-nez v4, :cond_2
-
-    if-eqz v0, :cond_1
-
-    sget-object v4, Las8;->b:Las8;
-
-    invoke-interface {p1, v4}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lxp0;
-
-    invoke-virtual {v3, v4}, Lft8;->b(Lxp0;)V
-
-    goto :goto_2
-
-    :cond_1
-    sget-object v4, Las8;->d:Las8;
-
-    invoke-interface {p1, v4}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lxp0;
-
-    invoke-virtual {v3, v4}, Lft8;->b(Lxp0;)V
-
-    goto :goto_2
-
-    :cond_2
-    invoke-virtual {v3, v1}, Lft8;->b(Lxp0;)V
-
-    :goto_2
-    invoke-virtual {v3}, Lft8;->d()V
-
-    goto :goto_1
-
-    :cond_3
     return-void
 .end method

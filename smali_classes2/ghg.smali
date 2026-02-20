@@ -1,34 +1,47 @@
 .class public final Lghg;
-.super Ljava/lang/Object;
+.super Lda4;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/os/Parcelable$Creator;
+
+# instance fields
+.field public X:I
+
+.field public synthetic d:Ljava/lang/Object;
+
+.field public final synthetic o:Lphg;
+
+
+# direct methods
+.method public constructor <init>(Lphg;Lda4;)V
+    .locals 0
+
+    iput-object p1, p0, Lghg;->o:Lphg;
+
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    new-instance v0, Lhhg;
+    iput-object p1, p0, Lghg;->d:Ljava/lang/Object;
 
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+    iget p1, p0, Lghg;->X:I
 
-    move-result v1
+    const/high16 v0, -0x80000000
 
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+    or-int/2addr p1, v0
 
-    move-result p1
+    iput p1, p0, Lghg;->X:I
 
-    invoke-direct {v0, v1, p1}, Lhhg;-><init>(II)V
+    iget-object p1, p0, Lghg;->o:Lphg;
 
-    return-object v0
-.end method
+    invoke-virtual {p1, p0}, Lphg;->a(Lda4;)Ljava/lang/Object;
 
-.method public final newArray(I)[Ljava/lang/Object;
-    .locals 0
-
-    new-array p1, p1, [Lhhg;
+    move-result-object p1
 
     return-object p1
 .end method

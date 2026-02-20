@@ -1,26 +1,26 @@
 .class public final Lnm2;
-.super Lp6g;
+.super Lpdg;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Lys6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;
+.field public final synthetic X:Lpm2;
 
 .field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;)V
+.method public constructor <init>(Lpm2;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p2, p0, Lnm2;->X:Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;
+    iput-object p1, p0, Lnm2;->X:Lpm2;
 
-    const/4 p2, 0x2
+    const/4 p1, 0x2
 
-    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -30,6 +30,8 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    check-cast p1, Llob;
+
     check-cast p2, Lkotlin/coroutines/Continuation;
 
     invoke-virtual {p0, p1, p2}, Lnm2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
@@ -38,7 +40,7 @@
 
     check-cast p1, Lnm2;
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    sget-object p2, Lmah;->a:Lmah;
 
     invoke-virtual {p1, p2}, Lnm2;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -50,9 +52,9 @@
 
     new-instance v0, Lnm2;
 
-    iget-object v1, p0, Lnm2;->X:Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;
+    iget-object v1, p0, Lnm2;->X:Lpm2;
 
-    invoke-direct {v0, p2, v1}, Lnm2;-><init>(Lkotlin/coroutines/Continuation;Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;)V
+    invoke-direct {v0, v1, p2}, Lnm2;-><init>(Lpm2;Lkotlin/coroutines/Continuation;)V
 
     iput-object p1, v0, Lnm2;->o:Ljava/lang/Object;
 
@@ -64,158 +66,396 @@
 
     iget-object v0, p0, Lnm2;->o:Ljava/lang/Object;
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    check-cast v0, Llob;
 
-    check-cast v0, Lt45;
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    instance-of p1, v0, Ls45;
+    iget-object p1, p0, Lnm2;->X:Lpm2;
 
-    iget-object v1, p0, Lnm2;->X:Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;
+    iget-object v1, p1, Lpm2;->k:Lbgg;
 
-    if-eqz p1, :cond_1
-
-    const/4 p1, 0x0
-
-    invoke-virtual {v1, p1}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->F0(Z)V
-
-    check-cast v0, Ls45;
-
-    iget-object p1, v0, Ls45;->a:Landroid/net/Uri;
-
-    iget-object v0, v0, Ls45;->b:Ln45;
-
-    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {v1}, Lbgg;->e()Z
 
     move-result v2
 
-    packed-switch v2, :pswitch_data_0
+    if-eqz v2, :cond_0
 
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+    invoke-virtual {v1}, Lbgg;->getValue()Ljava/lang/Object;
 
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    move-result-object v1
 
-    throw p1
+    check-cast v1, Landroid/graphics/drawable/Drawable;
 
-    :pswitch_0
-    if-eqz p1, :cond_2
-
-    sget-object v0, Lbt7;->a:Ljava/lang/String;
-
-    const-string v0, "*/*"
-
-    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    invoke-interface {v0}, Llob;->getIcon()Lhob;
 
     move-result-object v2
 
-    invoke-static {v2, p1, v0}, Lbt7;->h(Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;)V
+    iget v2, v2, Lhob;->d:I
 
-    goto :goto_1
+    invoke-static {v1, v2}, Lu1j;->d(Landroid/graphics/drawable/Drawable;I)V
 
-    :pswitch_1
-    sget-object p1, Ln45;->o:Ln45;
-
-    if-ne v0, p1, :cond_0
-
-    sget p1, Lndd;->media_share_dialog_download_gif_success:I
-
-    goto :goto_0
+    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     :cond_0
-    sget p1, Lndd;->media_share_dialog_download_photo_success:I
+    iget-object v1, p1, Lpm2;->l:Lbgg;
 
-    :goto_0
-    sget v0, Lv5e;->D:I
+    invoke-virtual {v1}, Lbgg;->e()Z
 
-    invoke-virtual {v1, p1, v0}, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->O0(II)V
+    move-result v2
 
-    goto :goto_1
+    if-eqz v2, :cond_1
 
-    :pswitch_2
-    if-eqz p1, :cond_2
+    invoke-virtual {v1}, Lbgg;->getValue()Ljava/lang/Object;
 
-    sget-object v0, Lbt7;->a:Ljava/lang/String;
+    move-result-object v1
 
-    const-string v0, "image/*"
+    check-cast v1, Landroid/graphics/drawable/Drawable;
 
-    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    invoke-interface {v0}, Llob;->getIcon()Lhob;
 
     move-result-object v2
 
-    invoke-static {v2, p1, v0}, Lbt7;->h(Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;)V
+    iget v2, v2, Lhob;->d:I
 
-    goto :goto_1
+    invoke-static {v1, v2}, Lu1j;->d(Landroid/graphics/drawable/Drawable;I)V
 
-    :pswitch_3
-    sget p1, Lndd;->media_share_dialog_download_video_success:I
-
-    sget v0, Lv5e;->r:I
-
-    invoke-virtual {v1, p1, v0}, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->O0(II)V
-
-    goto :goto_1
-
-    :pswitch_4
-    if-eqz p1, :cond_2
-
-    sget-object v0, Lbt7;->a:Ljava/lang/String;
-
-    const-string v0, "video/*"
-
-    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    invoke-static {v2, p1, v0}, Lbt7;->h(Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;)V
-
-    goto :goto_1
+    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     :cond_1
-    instance-of p1, v0, Lr45;
+    iget-object v1, p1, Lpm2;->m:Lbgg;
 
-    if-eqz p1, :cond_4
+    invoke-virtual {v1}, Lbgg;->e()Z
 
-    check-cast v0, Lr45;
+    move-result v2
 
-    iget p1, v0, Lr45;->a:I
+    if-eqz v2, :cond_2
 
-    sget v0, Lv5e;->M:I
+    invoke-virtual {v1}, Lbgg;->getValue()Ljava/lang/Object;
 
-    sget-object v2, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->J0:[Lz28;
+    move-result-object v1
 
-    invoke-virtual {v1, p1, v0}, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->O0(II)V
+    check-cast v1, Landroid/graphics/drawable/Drawable;
 
-    const/4 p1, 0x1
+    invoke-interface {v0}, Llob;->getIcon()Lhob;
 
-    invoke-virtual {v1, p1}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->F0(Z)V
+    move-result-object v2
+
+    iget v2, v2, Lhob;->d:I
+
+    invoke-static {v1, v2}, Lu1j;->d(Landroid/graphics/drawable/Drawable;I)V
+
+    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     :cond_2
-    :goto_1
-    iget-object p1, v1, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->G0:Lpw4;
+    iget-object v1, p1, Lpm2;->n:Lbgg;
 
-    if-eqz p1, :cond_3
+    invoke-virtual {v1}, Lbgg;->e()Z
 
-    invoke-virtual {p1}, Lpw4;->a()V
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    invoke-virtual {v1}, Lbgg;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/graphics/drawable/Drawable;
+
+    invoke-interface {v0}, Llob;->getIcon()Lhob;
+
+    move-result-object v2
+
+    iget v2, v2, Lhob;->d:I
+
+    invoke-static {v1, v2}, Lu1j;->d(Landroid/graphics/drawable/Drawable;I)V
+
+    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     :cond_3
-    sget-object p1, Lb3h;->a:Lb3h;
+    iget-object v1, p1, Lpm2;->o:Lbgg;
 
-    return-object p1
+    invoke-virtual {v1}, Lbgg;->e()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_4
+
+    invoke-virtual {v1}, Lbgg;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/graphics/drawable/Drawable;
+
+    invoke-interface {v0}, Llob;->getIcon()Lhob;
+
+    move-result-object v2
+
+    iget v2, v2, Lhob;->d:I
+
+    invoke-static {v1, v2}, Lu1j;->d(Landroid/graphics/drawable/Drawable;I)V
+
+    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     :cond_4
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+    iget-object v1, p1, Lpm2;->p:Lbgg;
 
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    invoke-virtual {v1}, Lbgg;->e()Z
 
-    throw p1
+    move-result v2
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    if-eqz v2, :cond_5
+
+    invoke-virtual {v1}, Lbgg;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/graphics/drawable/Drawable;
+
+    invoke-interface {v0}, Llob;->getIcon()Lhob;
+
+    move-result-object v2
+
+    iget v2, v2, Lhob;->d:I
+
+    invoke-static {v1, v2}, Lu1j;->d(Landroid/graphics/drawable/Drawable;I)V
+
+    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+
+    :cond_5
+    iget-object v1, p1, Lpm2;->q:Lbgg;
+
+    invoke-virtual {v1}, Lbgg;->e()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_6
+
+    invoke-virtual {v1}, Lbgg;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/graphics/drawable/Drawable;
+
+    invoke-interface {v0}, Llob;->getIcon()Lhob;
+
+    move-result-object v2
+
+    iget v2, v2, Lhob;->d:I
+
+    invoke-static {v1, v2}, Lu1j;->d(Landroid/graphics/drawable/Drawable;I)V
+
+    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+
+    :cond_6
+    iget-object v1, p1, Lpm2;->r:Lbgg;
+
+    invoke-virtual {v1}, Lbgg;->e()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_7
+
+    invoke-virtual {v1}, Lbgg;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/graphics/drawable/Drawable;
+
+    invoke-interface {v0}, Llob;->getIcon()Lhob;
+
+    move-result-object v2
+
+    iget v2, v2, Lhob;->d:I
+
+    invoke-static {v1, v2}, Lu1j;->d(Landroid/graphics/drawable/Drawable;I)V
+
+    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+
+    :cond_7
+    iget-object v1, p1, Lpm2;->s:Lbgg;
+
+    invoke-virtual {v1}, Lbgg;->e()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_8
+
+    invoke-virtual {v1}, Lbgg;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/graphics/drawable/Drawable;
+
+    invoke-interface {v0}, Llob;->getIcon()Lhob;
+
+    move-result-object v2
+
+    iget v2, v2, Lhob;->d:I
+
+    invoke-static {v1, v2}, Lu1j;->d(Landroid/graphics/drawable/Drawable;I)V
+
+    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+
+    :cond_8
+    iget-object v1, p1, Lpm2;->t:Lbgg;
+
+    invoke-virtual {v1}, Lbgg;->e()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_9
+
+    invoke-virtual {v1}, Lbgg;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/graphics/drawable/Drawable;
+
+    invoke-interface {v0}, Llob;->getIcon()Lhob;
+
+    move-result-object v2
+
+    iget v2, v2, Lhob;->d:I
+
+    invoke-static {v1, v2}, Lu1j;->d(Landroid/graphics/drawable/Drawable;I)V
+
+    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+
+    :cond_9
+    iget-object v1, p1, Lpm2;->u:Lbgg;
+
+    invoke-virtual {v1}, Lbgg;->e()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_a
+
+    invoke-virtual {v1}, Lbgg;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/graphics/drawable/Drawable;
+
+    invoke-interface {v0}, Llob;->getIcon()Lhob;
+
+    move-result-object v2
+
+    iget v2, v2, Lhob;->d:I
+
+    invoke-static {v1, v2}, Lu1j;->d(Landroid/graphics/drawable/Drawable;I)V
+
+    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+
+    :cond_a
+    iget-object v1, p1, Lpm2;->v:Lbgg;
+
+    invoke-virtual {v1}, Lbgg;->e()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_b
+
+    invoke-virtual {v1}, Lbgg;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/graphics/drawable/Drawable;
+
+    invoke-interface {v0}, Llob;->getIcon()Lhob;
+
+    const/4 v2, -0x1
+
+    invoke-static {v1, v2}, Lu1j;->d(Landroid/graphics/drawable/Drawable;I)V
+
+    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+
+    :cond_b
+    iget-object v1, p1, Lpm2;->w:Lbgg;
+
+    invoke-virtual {v1}, Lbgg;->e()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_c
+
+    invoke-virtual {v1}, Lbgg;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lone/me/sdk/uikit/common/span/FitFontImageSpan;
+
+    invoke-virtual {v1, v0}, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->onThemeChanged(Llob;)V
+
+    :cond_c
+    iget-object v1, p1, Lpm2;->x:Lbgg;
+
+    invoke-virtual {v1}, Lbgg;->e()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_d
+
+    invoke-virtual {v1}, Lbgg;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lone/me/sdk/uikit/common/span/FitFontImageSpan;
+
+    invoke-virtual {v1, v0}, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->onThemeChanged(Llob;)V
+
+    :cond_d
+    iget-object v1, p1, Lpm2;->y:Lbgg;
+
+    invoke-virtual {v1}, Lbgg;->e()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_e
+
+    invoke-virtual {v1}, Lbgg;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lone/me/sdk/uikit/common/span/FitFontImageSpan;
+
+    invoke-virtual {v1, v0}, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->onThemeChanged(Llob;)V
+
+    :cond_e
+    iget-object v1, p1, Lpm2;->z:Lbgg;
+
+    invoke-virtual {v1}, Lbgg;->e()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_f
+
+    invoke-virtual {v1}, Lbgg;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lone/me/sdk/uikit/common/span/FitFontImageSpan;
+
+    invoke-virtual {v1, v0}, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->onThemeChanged(Llob;)V
+
+    :cond_f
+    iget-object p1, p1, Lpm2;->A:Lbgg;
+
+    invoke-virtual {p1}, Lbgg;->e()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_10
+
+    invoke-virtual {p1}, Lbgg;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lone/me/sdk/uikit/common/span/FitFontImageSpan;
+
+    invoke-virtual {p1, v0}, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->onThemeChanged(Llob;)V
+
+    :cond_10
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
 .end method

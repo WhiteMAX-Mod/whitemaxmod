@@ -1,84 +1,86 @@
-.class public final synthetic Lgrf;
-.super Ljava/lang/Object;
+.class public final Lgrf;
+.super Llrf;
 .source "SourceFile"
-
-# interfaces
-.implements Lnbf;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;
-
-.field public final synthetic c:Lnq6;
+.field public final c:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;Lnq6;I)V
-    .locals 0
+.method public constructor <init>(J)V
+    .locals 1
 
-    iput p3, p0, Lgrf;->a:I
+    const/4 v0, 0x4
 
-    iput-object p1, p0, Lgrf;->b:Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;
+    invoke-direct {p0, p1, p2, v0}, Llrf;-><init>(JI)V
 
-    iput-object p2, p0, Lgrf;->c:Lnq6;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-wide p1, p0, Lgrf;->c:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onResponse(Lorg/json/JSONObject;)V
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lgrf;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lgrf;
+
+    iget-wide v3, p0, Lgrf;->c:J
+
+    iget-wide v5, p1, Lgrf;->c:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
     .locals 2
 
-    iget v0, p0, Lgrf;->a:I
+    iget-wide v0, p0, Lgrf;->c:J
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
-    iget-object v0, p0, Lgrf;->b:Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;
+    move-result v0
 
-    iget-object v1, p0, Lgrf;->c:Lnq6;
+    return v0
+.end method
 
-    invoke-static {v0, v1, p1}, Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;->b(Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;Lnq6;Lorg/json/JSONObject;)V
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    return-void
+    const-string v0, "ChannelId(channelId="
 
-    :pswitch_0
-    iget-object v0, p0, Lgrf;->b:Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;
+    const-string v1, ")"
 
-    iget-object v1, p0, Lgrf;->c:Lnq6;
+    iget-wide v2, p0, Lgrf;->c:J
 
-    invoke-static {v0, v1, p1}, Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;->a(Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;Lnq6;Lorg/json/JSONObject;)V
+    invoke-static {v2, v3, v0, v1}, Lfvg;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    return-void
+    move-result-object v0
 
-    :pswitch_1
-    iget-object v0, p0, Lgrf;->b:Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;
-
-    iget-object v1, p0, Lgrf;->c:Lnq6;
-
-    invoke-static {v0, v1, p1}, Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;->c(Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;Lnq6;Lorg/json/JSONObject;)V
-
-    return-void
-
-    :pswitch_2
-    iget-object v0, p0, Lgrf;->b:Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;
-
-    iget-object v1, p0, Lgrf;->c:Lnq6;
-
-    invoke-static {v0, v1, p1}, Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;->g(Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;Lnq6;Lorg/json/JSONObject;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

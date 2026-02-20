@@ -1,40 +1,80 @@
-.class public abstract Lq6d;
+.class public final synthetic Lq6d;
 .super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
-# static fields
-.field public static contact_icon_corner:I = 0x7f080325
+# instance fields
+.field public final synthetic a:I
 
-.field public static done_superelips_fill_40:I = 0x7f080343
+.field public final synthetic b:Lr6d;
 
-.field public static geo_icon_corner:I = 0x7f0804cb
 
-.field public static ic_call_incoming_audio_24:I = 0x7f08053b
+# direct methods
+.method public synthetic constructor <init>(Lr6d;I)V
+    .locals 0
 
-.field public static ic_call_incoming_audio_missed_24:I = 0x7f08053c
+    iput p2, p0, Lq6d;->a:I
 
-.field public static ic_call_incoming_video_missed_24:I = 0x7f08053e
+    iput-object p1, p0, Lq6d;->b:Lr6d;
 
-.field public static ic_call_incomnig_video_24:I = 0x7f08053f
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static ic_call_outgoing_audio_24:I = 0x7f080544
+    return-void
+.end method
 
-.field public static ic_call_outgoing_video_24:I = 0x7f080545
 
-.field public static ic_chat_16:I = 0x7f08055b
+# virtual methods
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 2
 
-.field public static ic_contact_16:I = 0x7f080584
+    iget v0, p0, Lq6d;->a:I
 
-.field public static ic_geolocation_filled_28:I = 0x7f0805e4
+    packed-switch v0, :pswitch_data_0
 
-.field public static ic_reply_outline_12:I = 0x7f08074a
+    iget-object v0, p0, Lq6d;->b:Lr6d;
 
-.field public static ic_scheduled_empty_72:I = 0x7f080755
+    iget-object v1, v0, Lr6d;->a:Landroid/graphics/Paint;
 
-.field public static ic_scheduled_empty_dark_72:I = 0x7f080756
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
-.field public static link_icon_corner:I = 0x7f0807f6
+    move-result-object p1
 
-.field public static miniapp_icon_corner:I = 0x7f080872
+    check-cast p1, Ljava/lang/Integer;
 
-.field public static wallet_fill_40:I = 0x7f080958
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    invoke-virtual {v1, p1}, Landroid/graphics/Paint;->setColor(I)V
+
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+
+    return-void
+
+    :pswitch_0
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Float;
+
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+
+    move-result p1
+
+    iget-object v0, p0, Lq6d;->b:Lr6d;
+
+    iput p1, v0, Lr6d;->b:F
+
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method

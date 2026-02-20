@@ -1,48 +1,49 @@
-.class public final synthetic Lgnb;
+.class public abstract Lgnb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/webkit/ValueCallback;
 
+# static fields
+.field public static final a:I
 
-# instance fields
-.field public final synthetic a:I
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
-    .locals 0
-
-    iput p1, p0, Lgnb;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onReceiveValue(Ljava/lang/Object;)V
+.method static constructor <clinit>()V
     .locals 1
 
-    iget v0, p0, Lgnb;->a:I
+    sget v0, Lskd;->oneme_stickers_preview_action_favorite_title:I
 
-    check-cast p1, Ljava/lang/String;
+    sput v0, Lgnb;->a:I
 
-    packed-switch v0, :pswitch_data_0
+    sget v0, Lskd;->oneme_stickers_preview_action_forward_title:I
+
+    sput v0, Lgnb;->b:I
+
+    sget v0, Lskd;->oneme_stickers_preview_action_in_favorite_title:I
+
+    sput v0, Lgnb;->c:I
+
+    sget v0, Lskd;->oneme_stickers_preview_action_send_title:I
+
+    sput v0, Lgnb;->d:I
+
+    sget v0, Lskd;->oneme_stickers_preview_snackbar_favorite_added:I
+
+    sput v0, Lgnb;->e:I
+
+    sget v0, Lskd;->oneme_stickers_preview_snackbar_favorite_removed:I
+
+    sput v0, Lgnb;->f:I
 
     return-void
-
-    :pswitch_0
-    sget p1, Lcnb;->d:I
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

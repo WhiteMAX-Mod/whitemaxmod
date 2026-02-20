@@ -1,49 +1,44 @@
 .class public final Lwof;
-.super Lo84;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Comparable;
 
 
 # instance fields
-.field public X:I
+.field public final a:J
 
-.field public synthetic d:Ljava/lang/Object;
-
-.field public final synthetic o:Ldr7;
+.field public final b:D
 
 
 # direct methods
-.method public constructor <init>(Ldr7;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(JD)V
     .locals 0
 
-    iput-object p1, p0, Lwof;->o:Ldr7;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-wide p1, p0, Lwof;->a:J
+
+    iput-wide p3, p0, Lwof;->b:D
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final compareTo(Ljava/lang/Object;)I
+    .locals 4
 
-    iput-object p1, p0, Lwof;->d:Ljava/lang/Object;
+    check-cast p1, Lwof;
 
-    iget p1, p0, Lwof;->X:I
+    iget-wide v0, p0, Lwof;->a:J
 
-    const/high16 v0, -0x80000000
+    iget-wide v2, p1, Lwof;->a:J
 
-    or-int/2addr p1, v0
+    invoke-static {v0, v1, v2, v3}, Ljava/lang/Long;->compare(JJ)I
 
-    iput p1, p0, Lwof;->X:I
+    move-result p1
 
-    iget-object p1, p0, Lwof;->o:Ldr7;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Ldr7;->b(ILkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return p1
 .end method

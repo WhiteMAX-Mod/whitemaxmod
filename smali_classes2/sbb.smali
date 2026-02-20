@@ -1,48 +1,37 @@
-.class public final Lsbb;
-.super Lo84;
+.class public abstract Lsbb;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
-# instance fields
-.field public final synthetic X:Lg4a;
+# static fields
+.field public static final a:I
 
-.field public synthetic d:Ljava/lang/Object;
+.field public static final b:I
 
-.field public o:I
+.field public static final c:I
+
+.field public static final d:I
 
 
 # direct methods
-.method public constructor <init>(Lg4a;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lsbb;->X:Lg4a;
-
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method static constructor <clinit>()V
     .locals 1
 
-    iput-object p1, p0, Lsbb;->d:Ljava/lang/Object;
+    sget v0, Ldjd;->oneme_file_download_warning_confirm_btn:I
 
-    iget p1, p0, Lsbb;->o:I
+    sput v0, Lsbb;->a:I
 
-    const/high16 v0, -0x80000000
+    sget v0, Ldjd;->oneme_file_download_warning_deny_btn:I
 
-    or-int/2addr p1, v0
+    sput v0, Lsbb;->b:I
 
-    iput p1, p0, Lsbb;->o:I
+    sget v0, Ldjd;->oneme_file_download_warning_description:I
 
-    iget-object p1, p0, Lsbb;->X:Lg4a;
+    sput v0, Lsbb;->c:I
 
-    const/4 v0, 0x0
+    sget v0, Ldjd;->oneme_file_download_warning_title:I
 
-    invoke-virtual {p1, v0, p0}, Lg4a;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    sput v0, Lsbb;->d:I
 
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

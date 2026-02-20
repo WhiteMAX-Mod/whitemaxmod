@@ -1,14 +1,17 @@
-.class public final synthetic Llhh;
+.class public interface abstract Llhh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lnhh;
-
 
 # virtual methods
-.method public final run()V
-    .locals 0
+.method public abstract b(Lmhh;)V
+.end method
 
-    return-void
+.method public abstract d(Lmhh;)V
+.end method
+
+.method public abstract h(Lmhh;)V
+.end method
+
+.method public abstract o(Lmhh;)V
 .end method

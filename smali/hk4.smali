@@ -1,59 +1,150 @@
-.class public final Lhk4;
-.super Lok4;
+.class public final synthetic Lhk4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lnbg;
 
 
 # instance fields
-.field public final o:Landroid/view/View$OnClickListener;
+.field public final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(JLandroid/view/View$OnClickListener;)V
+.method public synthetic constructor <init>(I)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lok4;-><init>(J)V
+    iput p1, p0, Lhk4;->a:I
 
-    iput-object p3, p0, Lhk4;->o:Landroid/view/View$OnClickListener;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 4
+.method public final get()Ljava/lang/Object;
+    .locals 9
 
-    iget-boolean v0, p0, Lok4;->c:Z
+    iget v0, p0, Lhk4;->a:I
 
-    if-nez v0, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return-void
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
+
+    throw v0
+
+    :pswitch_0
+    sget-object v0, Lwec;->a:Lnbg;
+
+    const-class v0, Landroidx/media3/effect/DefaultVideoFrameProcessor$Factory$Builder;
+
+    return-object v0
+
+    :pswitch_1
+    new-instance v1, Lit4;
+
+    new-instance v2, Lgo4;
+
+    invoke-direct {v2}, Lgo4;-><init>()V
+
+    const/16 v5, 0x9c4
+
+    const/16 v6, 0x1388
+
+    const v3, 0xc350
+
+    const v4, 0xc350
+
+    invoke-direct/range {v1 .. v6}, Lit4;-><init>(Lgo4;IIII)V
+
+    return-object v1
+
+    :pswitch_2
+    new-instance v2, Ljt4;
+
+    new-instance v3, Lho4;
+
+    invoke-direct {v3}, Lho4;-><init>()V
+
+    const/16 v7, 0x7d0
+
+    const/4 v8, 0x0
+
+    const v4, 0xc350
+
+    const v5, 0xc350
+
+    const/16 v6, 0x3e8
+
+    invoke-direct/range {v2 .. v8}, Ljt4;-><init>(Lho4;IIIIZ)V
+
+    return-object v2
+
+    :pswitch_3
+    const/16 v0, 0xc
+
+    new-array v0, v0, [B
+
+    sget-object v1, Lcu4;->i:Ljava/util/Random;
+
+    invoke-virtual {v1, v0}, Ljava/util/Random;->nextBytes([B)V
+
+    const/16 v1, 0xa
+
+    invoke-static {v0, v1}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_4
+    invoke-static {}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor()Ljava/util/concurrent/ExecutorService;
+
+    move-result-object v0
+
+    instance-of v1, v0, Loh8;
+
+    if-eqz v1, :cond_0
+
+    check-cast v0, Loh8;
+
+    goto :goto_1
 
     :cond_0
-    const/4 v0, 0x0
+    instance-of v1, v0, Ljava/util/concurrent/ScheduledExecutorService;
 
-    iput-boolean v0, p0, Lok4;->c:Z
+    if-eqz v1, :cond_1
 
-    iget-object v0, p0, Lhk4;->o:Landroid/view/View$OnClickListener;
+    new-instance v1, Lzaa;
 
-    invoke-interface {v0, p1}, Landroid/view/View$OnClickListener;->onClick(Landroid/view/View;)V
+    check-cast v0, Ljava/util/concurrent/ScheduledExecutorService;
 
-    iget-object v0, p0, Lok4;->d:Ljava/lang/Object;
+    invoke-direct {v1, v0}, Lzaa;-><init>(Ljava/util/concurrent/ScheduledExecutorService;)V
 
-    check-cast v0, Ljw3;
+    :goto_0
+    move-object v0, v1
 
-    new-instance v1, Lve;
+    goto :goto_1
 
-    const/16 v2, 0x9
+    :cond_1
+    new-instance v1, Lwaa;
 
-    invoke-direct {v1, v2, v0}, Lve;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v0}, Lwaa;-><init>(Ljava/util/concurrent/ExecutorService;)V
 
-    iget-wide v2, p0, Lok4;->b:J
+    goto :goto_0
 
-    invoke-virtual {p1, v1, v2, v3}, Landroid/view/View;->postDelayed(Ljava/lang/Runnable;J)Z
+    :goto_1
+    return-object v0
 
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

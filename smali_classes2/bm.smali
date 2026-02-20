@@ -1,148 +1,245 @@
 .class public final Lbm;
-.super Ljava/lang/Object;
+.super Lpdg;
 .source "SourceFile"
 
 # interfaces
-.implements Lam;
+.implements Lys6;
 
 
 # instance fields
-.field public final a:Lkm;
+.field public final synthetic X:Lem;
 
-.field public final b:Lq18;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lkm;Lq18;)V
+.method public constructor <init>(Lem;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lbm;->X:Lem;
 
-    iput-object p1, p0, Lbm;->a:Lkm;
+    const/4 p1, 0x2
 
-    iput-object p2, p0, Lbm;->b:Lq18;
+    invoke-direct {p0, p1, p2}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getFailParser()Lq18;
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    sget-object v0, Lvna;->c:Lvna;
+    check-cast p1, Lbk;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lbm;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lbm;
+
+    sget-object p2, Lmah;->a:Lmah;
+
+    invoke-virtual {p1, p2}, Lbm;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lbm;
+
+    iget-object v1, p0, Lbm;->X:Lem;
+
+    invoke-direct {v0, v1, p2}, Lbm;-><init>(Lem;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lbm;->o:Ljava/lang/Object;
 
     return-object v0
 .end method
 
-.method public final getOkParser()Lq18;
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 10
 
-    iget-object v0, p0, Lbm;->b:Lq18;
+    iget-object v0, p0, Lbm;->o:Ljava/lang/Object;
 
-    return-object v0
-.end method
+    check-cast v0, Lbk;
 
-.method public final getPriority()I
-    .locals 1
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    iget-object v0, p0, Lbm;->a:Lkm;
+    iget-object p1, p0, Lbm;->X:Lem;
 
-    invoke-interface {v0}, Lkm;->getPriority()I
+    iget-object v1, p1, Lem;->X:Ljava/lang/String;
 
-    move-result v0
+    sget-object v2, Ltej;->a:Lafb;
 
-    return v0
-.end method
+    if-nez v2, :cond_0
 
-.method public final getScope()Lqm;
-    .locals 1
+    goto :goto_0
 
-    iget-object v0, p0, Lbm;->a:Lkm;
+    :cond_0
+    sget-object v3, Lzm8;->d:Lzm8;
 
-    invoke-interface {v0}, Lkm;->getScope()Lqm;
+    invoke-virtual {v2, v3}, Lafb;->b(Lzm8;)Z
 
-    move-result-object v0
+    move-result v4
 
-    return-object v0
-.end method
+    if-eqz v4, :cond_1
 
-.method public final getUri()Landroid/net/Uri;
-    .locals 1
+    iget-wide v4, v0, Lbk;->a:J
 
-    iget-object v0, p0, Lbm;->a:Lkm;
+    iget-object v6, v0, Lbk;->c:Ljava/lang/String;
 
-    invoke-interface {v0}, Lkm;->getUri()Landroid/net/Uri;
+    iget-object v7, v0, Lbk;->b:Ljava/lang/String;
 
-    move-result-object v0
+    const-string v8, "handleAnimoji #"
 
-    return-object v0
-.end method
+    const-string v9, ", "
 
-.method public final shouldGzip()Z
-    .locals 1
+    invoke-static {v8, v4, v5, v9, v6}, Lo16;->i(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lbm;->a:Lkm;
+    move-result-object v4
 
-    invoke-interface {v0}, Lkm;->shouldGzip()Z
+    invoke-static {v4, v9, v7}, Ltx8;->n(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result v0
+    move-result-object v4
 
-    return v0
-.end method
+    const/4 v5, 0x0
 
-.method public final shouldPost()Z
-    .locals 1
+    invoke-virtual {v2, v3, v1, v4, v5}, Lafb;->c(Lzm8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    iget-object v0, p0, Lbm;->a:Lkm;
+    :cond_1
+    :goto_0
+    iget-object v1, v0, Lbk;->c:Ljava/lang/String;
 
-    invoke-interface {v0}, Lkm;->shouldPost()Z
+    if-eqz v1, :cond_7
 
-    move-result v0
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
 
-    return v0
-.end method
+    move-result v1
 
-.method public final willWriteParams()Z
-    .locals 1
+    if-nez v1, :cond_2
 
-    iget-object v0, p0, Lbm;->a:Lkm;
+    goto :goto_1
 
-    invoke-interface {v0}, Lkm;->willWriteParams()Z
+    :cond_2
+    iget-object v1, p1, Lem;->o:Lek;
 
-    move-result v0
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    return v0
-.end method
+    iget-object v2, v0, Lbk;->c:Ljava/lang/String;
 
-.method public final willWriteSupplyParams()Z
-    .locals 1
+    if-eqz v2, :cond_6
 
-    iget-object v0, p0, Lbm;->a:Lkm;
+    iget-object v1, v1, Lek;->a:Ljava/util/concurrent/ConcurrentHashMap;
 
-    invoke-interface {v0}, Lkm;->willWriteSupplyParams()Z
+    new-instance v2, Lk;
 
-    move-result v0
+    const/16 v3, 0xa
 
-    return v0
-.end method
+    invoke-direct {v2, v3, v0}, Lk;-><init>(ILjava/lang/Object;)V
 
-.method public final writeParams(Li28;)V
-    .locals 1
+    new-instance v3, Ldk;
 
-    iget-object v0, p0, Lbm;->a:Lkm;
+    const/4 v4, 0x0
 
-    invoke-interface {v0, p1}, Lkm;->writeParams(Li28;)V
+    invoke-direct {v3, v4, v2}, Ldk;-><init>(ILjava/lang/Object;)V
 
-    return-void
-.end method
+    invoke-virtual {v1, v0, v3}, Ljava/util/concurrent/ConcurrentHashMap;->computeIfAbsent(Ljava/lang/Object;Ljava/util/function/Function;)Ljava/lang/Object;
 
-.method public final writeSupplyParams(Li28;)V
-    .locals 1
+    move-result-object v1
 
-    iget-object v0, p0, Lbm;->a:Lkm;
+    check-cast v1, Lone/me/rlottie/RLottieDrawable;
 
-    invoke-interface {v0, p1}, Lkm;->writeSupplyParams(Li28;)V
+    iget v2, v0, Lbk;->e:I
 
-    return-void
+    invoke-virtual {v1, v2}, Lone/me/rlottie/RLottieDrawable;->setAutoRepeat(I)V
+
+    const/4 v2, 0x1
+
+    iput-boolean v2, v1, Lone/me/rlottie/RLottieDrawable;->scaleByCanvas:Z
+
+    invoke-virtual {v1}, Lone/me/rlottie/RLottieDrawable;->isLoadingFailed()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_3
+
+    invoke-static {v1, v2}, Lone/me/rlottie/RLottieDrawableUtils;->restartDownloadFromUrl(Lone/me/rlottie/RLottieDrawable;Z)V
+
+    :cond_3
+    sget-object v2, Lxl;->d:Lxl;
+
+    invoke-virtual {p1, v2}, Lem;->k(Lxl;)V
+
+    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/graphics/Rect;->isEmpty()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_4
+
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
+
+    :cond_4
+    iget-object v2, p1, Lem;->A0:Lzl;
+
+    if-eqz v2, :cond_5
+
+    invoke-virtual {v1, v2}, Lone/me/rlottie/RLottieDrawable;->removeDrawableLoadListener(Lone/me/rlottie/RLottieDrawable$DrawableLoadListener;)V
+
+    :cond_5
+    new-instance v2, Lzl;
+
+    invoke-direct {v2, p1, v0, v1}, Lzl;-><init>(Lem;Lbk;Lone/me/rlottie/RLottieDrawable;)V
+
+    iput-object v2, p1, Lem;->A0:Lzl;
+
+    invoke-virtual {v1, v2}, Lone/me/rlottie/RLottieDrawable;->addDrawableLoadListener(Lone/me/rlottie/RLottieDrawable$DrawableLoadListener;)V
+
+    goto :goto_2
+
+    :cond_6
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "You cannot call this method without lottieUrl"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_7
+    :goto_1
+    iget-object v1, v0, Lbk;->b:Ljava/lang/String;
+
+    if-eqz v1, :cond_9
+
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
+
+    move-result v1
+
+    if-nez v1, :cond_8
+
+    goto :goto_2
+
+    :cond_8
+    iget-object v0, v0, Lbk;->b:Ljava/lang/String;
+
+    invoke-virtual {p1, v0}, Lem;->h(Ljava/lang/String;)V
+
+    :cond_9
+    :goto_2
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
 .end method

@@ -1,48 +1,54 @@
 .class public final Lci6;
-.super Lo84;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lwh6;
 
 
 # instance fields
-.field public final synthetic X:Ld83;
+.field public final a:Ljava/util/ArrayList;
 
-.field public synthetic d:Ljava/lang/Object;
+.field public final b:I
 
-.field public o:I
+.field public final c:J
 
 
 # direct methods
-.method public constructor <init>(Ld83;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Ljava/util/ArrayList;)V
+    .locals 2
 
-    iput-object p1, p0, Lci6;->X:Ld83;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lci6;->a:Ljava/util/ArrayList;
+
+    sget p1, Lsdd;->oneme_folder_widget_section_view_type:I
+
+    iput p1, p0, Lci6;->b:I
+
+    sget p1, Lsdd;->oneme_folder_widget_section_id:I
+
+    int-to-long v0, p1
+
+    iput-wide v0, p0, Lci6;->c:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final getItemId()J
+    .locals 2
+
+    iget-wide v0, p0, Lci6;->c:J
+
+    return-wide v0
+.end method
+
+.method public final m()I
     .locals 1
 
-    iput-object p1, p0, Lci6;->d:Ljava/lang/Object;
+    iget v0, p0, Lci6;->b:I
 
-    iget p1, p0, Lci6;->o:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lci6;->o:I
-
-    iget-object p1, p0, Lci6;->X:Ld83;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Ld83;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return v0
 .end method

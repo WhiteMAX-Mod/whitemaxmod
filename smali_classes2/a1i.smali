@@ -1,55 +1,72 @@
 .class public final La1i;
-.super Lo84;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ltv3;
 
 
 # instance fields
-.field public X:Lmp0;
+.field public final a:Lks6;
 
-.field public synthetic Y:Ljava/lang/Object;
+.field public final b:Lj88;
 
-.field public final synthetic Z:Lp1i;
+.field public final c:Lzef;
 
-.field public d:Ly0i;
-
-.field public o:Lzyh;
-
-.field public t0:I
+.field public final d:Llrd;
 
 
 # direct methods
-.method public constructor <init>(Lp1i;Lo84;)V
+.method public constructor <init>(Lj88;Lks6;)V
     .locals 0
 
-    iput-object p1, p0, La1i;->Z:Lp1i;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, La1i;->a:Lks6;
+
+    iput-object p1, p0, La1i;->b:Lj88;
+
+    const/4 p1, 0x0
+
+    const/4 p2, 0x7
+
+    invoke-static {p1, p1, p2}, Laff;->b(III)Lzef;
+
+    move-result-object p1
+
+    iput-object p1, p0, La1i;->c:Lzef;
+
+    new-instance p2, Llrd;
+
+    invoke-direct {p2, p1}, Llrd;-><init>(Leia;)V
+
+    iput-object p2, p0, La1i;->d:Llrd;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final a(Lnd4;Led4;Lqd4;Lys6;)Lvy7;
+    .locals 2
 
-    iput-object p1, p0, La1i;->Y:Ljava/lang/Object;
+    new-instance v0, Lz0i;
 
-    iget p1, p0, La1i;->t0:I
+    const/4 v1, 0x0
 
-    const/high16 v0, -0x80000000
+    invoke-direct {v0, p0, p4, v1}, Lz0i;-><init>(La1i;Lys6;Lkotlin/coroutines/Continuation;)V
 
-    or-int/2addr p1, v0
-
-    iput p1, p0, La1i;->t0:I
-
-    iget-object p1, p0, La1i;->Z:Lp1i;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lp1i;->h(Ljava/lang/String;Lo84;)Ljava/lang/Object;
+    invoke-static {p1, p2, p3, v0}, Lea9;->c(Lnd4;Led4;Lqd4;Lys6;)Lcuf;
 
     move-result-object p1
 
     return-object p1
+.end method
+
+.method public final e()Llrd;
+    .locals 1
+
+    iget-object v0, p0, La1i;->d:Llrd;
+
+    return-object v0
 .end method

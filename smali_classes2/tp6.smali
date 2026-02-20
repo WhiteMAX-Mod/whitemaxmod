@@ -1,101 +1,64 @@
-.class public final Ltp6;
+.class public final synthetic Ltp6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lwh7;
+.implements Ljava/lang/Runnable;
 
 
-# static fields
-.field public static final a:Ltp6;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final b:[B
+.field public final synthetic b:Lvp6;
 
-.field public static final c:[B
-
-.field public static final d:I
+.field public final synthetic c:Lkq6;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Lvp6;Lkq6;I)V
+    .locals 0
 
-    new-instance v0, Ltp6;
+    iput p3, p0, Ltp6;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ltp6;->b:Lvp6;
 
-    sput-object v0, Ltp6;->a:Ltp6;
+    iput-object p2, p0, Ltp6;->c:Lkq6;
 
-    sget-object v0, Ljd2;->b:Ljava/nio/charset/Charset;
-
-    const-string v1, "<svg"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
-
-    move-result-object v0
-
-    array-length v0, v0
-
-    invoke-static {v1}, Lpti;->a(Ljava/lang/String;)[B
-
-    move-result-object v1
-
-    sput-object v1, Ltp6;->b:[B
-
-    const-string v1, "<?xm"
-
-    invoke-static {v1}, Lpti;->a(Ljava/lang/String;)[B
-
-    move-result-object v1
-
-    sput-object v1, Ltp6;->c:[B
-
-    sput v0, Ltp6;->d:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(I[B)Lxh7;
-    .locals 1
+.method public final run()V
+    .locals 2
 
-    sget-object p1, Ltp6;->b:[B
+    iget v0, p0, Ltp6;->a:I
 
-    const/4 v0, 0x0
+    packed-switch v0, :pswitch_data_0
 
-    invoke-static {p2, p1, v0}, Lpti;->e([B[BI)Z
+    iget-object v0, p0, Ltp6;->b:Lvp6;
 
-    move-result p1
+    iget-object v1, p0, Ltp6;->c:Lkq6;
 
-    if-nez p1, :cond_1
+    iput-object v1, v0, Lvp6;->Z:Lkq6;
 
-    sget-object p1, Ltp6;->c:[B
+    return-void
 
-    invoke-static {p2, p1, v0}, Lpti;->e([B[BI)Z
+    :pswitch_0
+    iget-object v0, p0, Ltp6;->b:Lvp6;
 
-    move-result p1
+    iget-object v1, p0, Ltp6;->c:Lkq6;
 
-    if-eqz p1, :cond_0
+    iput-object v1, v0, Lvp6;->Y:Lkq6;
 
-    goto :goto_0
+    return-void
 
-    :cond_0
-    sget-object p1, Lxh7;->c:Lxh7;
+    nop
 
-    return-object p1
-
-    :cond_1
-    :goto_0
-    sget-object p1, Le2e;->a:Lxh7;
-
-    return-object p1
-.end method
-
-.method public final b()I
-    .locals 1
-
-    sget v0, Ltp6;->d:I
-
-    return v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

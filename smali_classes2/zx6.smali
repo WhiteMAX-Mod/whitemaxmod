@@ -1,51 +1,71 @@
-.class public abstract synthetic Lzx6;
+.class public final Lzx6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+# instance fields
+.field public final a:Lj88;
+
+.field public final b:Lj88;
+
+.field public final c:Lj88;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Lj88;Lj88;Lj88;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lzx6;->a:Lj88;
+
+    iput-object p2, p0, Lzx6;->b:Lj88;
+
+    iput-object p3, p0, Lzx6;->c:Lj88;
+
+    return-void
+.end method
+
+.method public static a(Lzx6;JLda4;)Ljava/lang/Object;
+    .locals 9
+
+    sget v0, Lgc5;->d:I
 
     const/4 v0, 0x3
 
-    invoke-static {v0}, Lt02;->w(I)[I
+    sget-object v1, Lmc5;->d:Lmc5;
 
-    move-result-object v1
+    invoke-static {v0, v1}, Lkwj;->g(ILmc5;)J
 
-    array-length v1, v1
+    move-result-wide v6
 
-    new-array v1, v1, [I
+    iget-object v0, p0, Lzx6;->c:Lj88;
 
-    const/4 v2, 0x1
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
 
-    const/4 v3, 0x0
+    move-result-object v0
 
-    :try_start_0
-    aput v2, v1, v3
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    check-cast v0, Lbjg;
 
-    :catch_0
-    const/4 v3, 0x2
+    check-cast v0, Lcbb;
 
-    :try_start_1
-    aput v3, v1, v2
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    invoke-virtual {v0}, Lcbb;->b()Lgd4;
 
-    :catch_1
-    :try_start_2
-    aput v0, v1, v3
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    move-result-object v0
 
-    :catch_2
-    sput-object v1, Lzx6;->$EnumSwitchMapping$0:[I
+    new-instance v2, Lyx6;
 
-    return-void
+    const/4 v8, 0x0
+
+    move-object v3, p0
+
+    move-wide v4, p1
+
+    invoke-direct/range {v2 .. v8}, Lyx6;-><init>(Lzx6;JJLkotlin/coroutines/Continuation;)V
+
+    invoke-static {v0, v2, p3}, Lea9;->r(Led4;Lys6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
 .end method

@@ -17,7 +17,7 @@
 
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000\u0015\n\u0002\u0018\u0002\n\u0002\u0010\u0010\n\u0002\u0008\u0002\n\u0002\u0010\u000e\n\u0003\u0008\u00e0\u0001\u0008\u0087\u0081\u0002\u0018\u0000 \t2\u0008\u0012\u0004\u0012\u00020\u00000\u0001:\u0001\nB\t\u0008\u0002\u00a2\u0006\u0004\u0008\u0002\u0010\u0003J\u000f\u0010\u0005\u001a\u00020\u0004H\u0016\u00a2\u0006\u0004\u0008\u0005\u0010\u0006J\u000f\u0010\u0008\u001a\u00020\u0004H\u0000\u00a2\u0006\u0004\u0008\u0007\u0010\u0006j\u0002\u0008\u000bj\u0002\u0008\u000cj\u0002\u0008\rj\u0002\u0008\u000ej\u0002\u0008\u000fj\u0002\u0008\u0010j\u0002\u0008\u0011j\u0002\u0008\u0012j\u0002\u0008\u0013j\u0002\u0008\u0014j\u0002\u0008\u0015j\u0002\u0008\u0016j\u0002\u0008\u0017j\u0002\u0008\u0018j\u0002\u0008\u0019j\u0002\u0008\u001aj\u0002\u0008\u001bj\u0002\u0008\u001cj\u0002\u0008\u001dj\u0002\u0008\u001ej\u0002\u0008\u001fj\u0002\u0008 j\u0002\u0008!j\u0002\u0008\"j\u0002\u0008#j\u0002\u0008$j\u0002\u0008%j\u0002\u0008&j\u0002\u0008\'j\u0002\u0008(j\u0002\u0008)j\u0002\u0008*j\u0002\u0008+j\u0002\u0008,j\u0002\u0008-j\u0002\u0008.j\u0002\u0008/j\u0002\u00080j\u0002\u00081j\u0002\u00082j\u0002\u00083j\u0002\u00084j\u0002\u00085j\u0002\u00086j\u0002\u00087j\u0002\u00088j\u0002\u00089j\u0002\u0008:j\u0002\u0008;j\u0002\u0008<j\u0002\u0008=j\u0002\u0008>j\u0002\u0008?j\u0002\u0008@j\u0002\u0008Aj\u0002\u0008Bj\u0002\u0008Cj\u0002\u0008Dj\u0002\u0008Ej\u0002\u0008Fj\u0002\u0008Gj\u0002\u0008Hj\u0002\u0008Ij\u0002\u0008Jj\u0002\u0008Kj\u0002\u0008Lj\u0002\u0008Mj\u0002\u0008Nj\u0002\u0008Oj\u0002\u0008Pj\u0002\u0008Qj\u0002\u0008Rj\u0002\u0008Sj\u0002\u0008Tj\u0002\u0008Uj\u0002\u0008Vj\u0002\u0008Wj\u0002\u0008Xj\u0002\u0008Yj\u0002\u0008Zj\u0002\u0008[j\u0002\u0008\\j\u0002\u0008]j\u0002\u0008^j\u0002\u0008_j\u0002\u0008`j\u0002\u0008aj\u0002\u0008bj\u0002\u0008cj\u0002\u0008dj\u0002\u0008ej\u0002\u0008fj\u0002\u0008gj\u0002\u0008hj\u0002\u0008ij\u0002\u0008jj\u0002\u0008kj\u0002\u0008lj\u0002\u0008mj\u0002\u0008nj\u0002\u0008oj\u0002\u0008pj\u0002\u0008qj\u0002\u0008rj\u0002\u0008sj\u0002\u0008tj\u0002\u0008uj\u0002\u0008vj\u0002\u0008wj\u0002\u0008xj\u0002\u0008yj\u0002\u0008zj\u0002\u0008{j\u0002\u0008|j\u0002\u0008}j\u0002\u0008~j\u0002\u0008\u007fj\u0003\u0008\u0080\u0001j\u0003\u0008\u0081\u0001j\u0003\u0008\u0082\u0001j\u0003\u0008\u0083\u0001j\u0003\u0008\u0084\u0001j\u0003\u0008\u0085\u0001j\u0003\u0008\u0086\u0001j\u0003\u0008\u0087\u0001j\u0003\u0008\u0088\u0001j\u0003\u0008\u0089\u0001j\u0003\u0008\u008a\u0001j\u0003\u0008\u008b\u0001j\u0003\u0008\u008c\u0001j\u0003\u0008\u008d\u0001j\u0003\u0008\u008e\u0001j\u0003\u0008\u008f\u0001j\u0003\u0008\u0090\u0001j\u0003\u0008\u0091\u0001j\u0003\u0008\u0092\u0001j\u0003\u0008\u0093\u0001j\u0003\u0008\u0094\u0001j\u0003\u0008\u0095\u0001j\u0003\u0008\u0096\u0001j\u0003\u0008\u0097\u0001j\u0003\u0008\u0098\u0001j\u0003\u0008\u0099\u0001j\u0003\u0008\u009a\u0001j\u0003\u0008\u009b\u0001j\u0003\u0008\u009c\u0001j\u0003\u0008\u009d\u0001j\u0003\u0008\u009e\u0001j\u0003\u0008\u009f\u0001j\u0003\u0008\u00a0\u0001j\u0003\u0008\u00a1\u0001j\u0003\u0008\u00a2\u0001j\u0003\u0008\u00a3\u0001j\u0003\u0008\u00a4\u0001j\u0003\u0008\u00a5\u0001j\u0003\u0008\u00a6\u0001j\u0003\u0008\u00a7\u0001j\u0003\u0008\u00a8\u0001j\u0003\u0008\u00a9\u0001j\u0003\u0008\u00aa\u0001j\u0003\u0008\u00ab\u0001j\u0003\u0008\u00ac\u0001j\u0003\u0008\u00ad\u0001j\u0003\u0008\u00ae\u0001j\u0003\u0008\u00af\u0001j\u0003\u0008\u00b0\u0001j\u0003\u0008\u00b1\u0001j\u0003\u0008\u00b2\u0001j\u0003\u0008\u00b3\u0001j\u0003\u0008\u00b4\u0001j\u0003\u0008\u00b5\u0001j\u0003\u0008\u00b6\u0001j\u0003\u0008\u00b7\u0001j\u0003\u0008\u00b8\u0001j\u0003\u0008\u00b9\u0001j\u0003\u0008\u00ba\u0001j\u0003\u0008\u00bb\u0001j\u0003\u0008\u00bc\u0001j\u0003\u0008\u00bd\u0001j\u0003\u0008\u00be\u0001j\u0003\u0008\u00bf\u0001j\u0003\u0008\u00c0\u0001j\u0003\u0008\u00c1\u0001j\u0003\u0008\u00c2\u0001j\u0003\u0008\u00c3\u0001j\u0003\u0008\u00c4\u0001j\u0003\u0008\u00c5\u0001j\u0003\u0008\u00c6\u0001j\u0003\u0008\u00c7\u0001j\u0003\u0008\u00c8\u0001j\u0003\u0008\u00c9\u0001j\u0003\u0008\u00ca\u0001j\u0003\u0008\u00cb\u0001j\u0003\u0008\u00cc\u0001j\u0003\u0008\u00cd\u0001j\u0003\u0008\u00ce\u0001j\u0003\u0008\u00cf\u0001j\u0003\u0008\u00d0\u0001j\u0003\u0008\u00d1\u0001j\u0003\u0008\u00d2\u0001j\u0003\u0008\u00d3\u0001j\u0003\u0008\u00d4\u0001j\u0003\u0008\u00d5\u0001j\u0003\u0008\u00d6\u0001j\u0003\u0008\u00d7\u0001j\u0003\u0008\u00d8\u0001j\u0003\u0008\u00d9\u0001j\u0003\u0008\u00da\u0001j\u0003\u0008\u00db\u0001j\u0003\u0008\u00dc\u0001j\u0003\u0008\u00dd\u0001j\u0003\u0008\u00de\u0001j\u0003\u0008\u00df\u0001j\u0003\u0008\u00e0\u0001j\u0003\u0008\u00e1\u0001j\u0003\u0008\u00e2\u0001j\u0003\u0008\u00e3\u0001\u00a8\u0006\u00e4\u0001"
+        "\u0000\u0015\n\u0002\u0018\u0002\n\u0002\u0010\u0010\n\u0002\u0008\u0002\n\u0002\u0010\u000e\n\u0003\u0008\u0080\u0002\u0008\u0087\u0081\u0002\u0018\u0000 \t2\u0008\u0012\u0004\u0012\u00020\u00000\u0001:\u0001\nB\t\u0008\u0002\u00a2\u0006\u0004\u0008\u0002\u0010\u0003J\u000f\u0010\u0005\u001a\u00020\u0004H\u0016\u00a2\u0006\u0004\u0008\u0005\u0010\u0006J\u000f\u0010\u0008\u001a\u00020\u0004H\u0000\u00a2\u0006\u0004\u0008\u0007\u0010\u0006j\u0002\u0008\u000bj\u0002\u0008\u000cj\u0002\u0008\rj\u0002\u0008\u000ej\u0002\u0008\u000fj\u0002\u0008\u0010j\u0002\u0008\u0011j\u0002\u0008\u0012j\u0002\u0008\u0013j\u0002\u0008\u0014j\u0002\u0008\u0015j\u0002\u0008\u0016j\u0002\u0008\u0017j\u0002\u0008\u0018j\u0002\u0008\u0019j\u0002\u0008\u001aj\u0002\u0008\u001bj\u0002\u0008\u001cj\u0002\u0008\u001dj\u0002\u0008\u001ej\u0002\u0008\u001fj\u0002\u0008 j\u0002\u0008!j\u0002\u0008\"j\u0002\u0008#j\u0002\u0008$j\u0002\u0008%j\u0002\u0008&j\u0002\u0008\'j\u0002\u0008(j\u0002\u0008)j\u0002\u0008*j\u0002\u0008+j\u0002\u0008,j\u0002\u0008-j\u0002\u0008.j\u0002\u0008/j\u0002\u00080j\u0002\u00081j\u0002\u00082j\u0002\u00083j\u0002\u00084j\u0002\u00085j\u0002\u00086j\u0002\u00087j\u0002\u00088j\u0002\u00089j\u0002\u0008:j\u0002\u0008;j\u0002\u0008<j\u0002\u0008=j\u0002\u0008>j\u0002\u0008?j\u0002\u0008@j\u0002\u0008Aj\u0002\u0008Bj\u0002\u0008Cj\u0002\u0008Dj\u0002\u0008Ej\u0002\u0008Fj\u0002\u0008Gj\u0002\u0008Hj\u0002\u0008Ij\u0002\u0008Jj\u0002\u0008Kj\u0002\u0008Lj\u0002\u0008Mj\u0002\u0008Nj\u0002\u0008Oj\u0002\u0008Pj\u0002\u0008Qj\u0002\u0008Rj\u0002\u0008Sj\u0002\u0008Tj\u0002\u0008Uj\u0002\u0008Vj\u0002\u0008Wj\u0002\u0008Xj\u0002\u0008Yj\u0002\u0008Zj\u0002\u0008[j\u0002\u0008\\j\u0002\u0008]j\u0002\u0008^j\u0002\u0008_j\u0002\u0008`j\u0002\u0008aj\u0002\u0008bj\u0002\u0008cj\u0002\u0008dj\u0002\u0008ej\u0002\u0008fj\u0002\u0008gj\u0002\u0008hj\u0002\u0008ij\u0002\u0008jj\u0002\u0008kj\u0002\u0008lj\u0002\u0008mj\u0002\u0008nj\u0002\u0008oj\u0002\u0008pj\u0002\u0008qj\u0002\u0008rj\u0002\u0008sj\u0002\u0008tj\u0002\u0008uj\u0002\u0008vj\u0002\u0008wj\u0002\u0008xj\u0002\u0008yj\u0002\u0008zj\u0002\u0008{j\u0002\u0008|j\u0002\u0008}j\u0002\u0008~j\u0002\u0008\u007fj\u0003\u0008\u0080\u0001j\u0003\u0008\u0081\u0001j\u0003\u0008\u0082\u0001j\u0003\u0008\u0083\u0001j\u0003\u0008\u0084\u0001j\u0003\u0008\u0085\u0001j\u0003\u0008\u0086\u0001j\u0003\u0008\u0087\u0001j\u0003\u0008\u0088\u0001j\u0003\u0008\u0089\u0001j\u0003\u0008\u008a\u0001j\u0003\u0008\u008b\u0001j\u0003\u0008\u008c\u0001j\u0003\u0008\u008d\u0001j\u0003\u0008\u008e\u0001j\u0003\u0008\u008f\u0001j\u0003\u0008\u0090\u0001j\u0003\u0008\u0091\u0001j\u0003\u0008\u0092\u0001j\u0003\u0008\u0093\u0001j\u0003\u0008\u0094\u0001j\u0003\u0008\u0095\u0001j\u0003\u0008\u0096\u0001j\u0003\u0008\u0097\u0001j\u0003\u0008\u0098\u0001j\u0003\u0008\u0099\u0001j\u0003\u0008\u009a\u0001j\u0003\u0008\u009b\u0001j\u0003\u0008\u009c\u0001j\u0003\u0008\u009d\u0001j\u0003\u0008\u009e\u0001j\u0003\u0008\u009f\u0001j\u0003\u0008\u00a0\u0001j\u0003\u0008\u00a1\u0001j\u0003\u0008\u00a2\u0001j\u0003\u0008\u00a3\u0001j\u0003\u0008\u00a4\u0001j\u0003\u0008\u00a5\u0001j\u0003\u0008\u00a6\u0001j\u0003\u0008\u00a7\u0001j\u0003\u0008\u00a8\u0001j\u0003\u0008\u00a9\u0001j\u0003\u0008\u00aa\u0001j\u0003\u0008\u00ab\u0001j\u0003\u0008\u00ac\u0001j\u0003\u0008\u00ad\u0001j\u0003\u0008\u00ae\u0001j\u0003\u0008\u00af\u0001j\u0003\u0008\u00b0\u0001j\u0003\u0008\u00b1\u0001j\u0003\u0008\u00b2\u0001j\u0003\u0008\u00b3\u0001j\u0003\u0008\u00b4\u0001j\u0003\u0008\u00b5\u0001j\u0003\u0008\u00b6\u0001j\u0003\u0008\u00b7\u0001j\u0003\u0008\u00b8\u0001j\u0003\u0008\u00b9\u0001j\u0003\u0008\u00ba\u0001j\u0003\u0008\u00bb\u0001j\u0003\u0008\u00bc\u0001j\u0003\u0008\u00bd\u0001j\u0003\u0008\u00be\u0001j\u0003\u0008\u00bf\u0001j\u0003\u0008\u00c0\u0001j\u0003\u0008\u00c1\u0001j\u0003\u0008\u00c2\u0001j\u0003\u0008\u00c3\u0001j\u0003\u0008\u00c4\u0001j\u0003\u0008\u00c5\u0001j\u0003\u0008\u00c6\u0001j\u0003\u0008\u00c7\u0001j\u0003\u0008\u00c8\u0001j\u0003\u0008\u00c9\u0001j\u0003\u0008\u00ca\u0001j\u0003\u0008\u00cb\u0001j\u0003\u0008\u00cc\u0001j\u0003\u0008\u00cd\u0001j\u0003\u0008\u00ce\u0001j\u0003\u0008\u00cf\u0001j\u0003\u0008\u00d0\u0001j\u0003\u0008\u00d1\u0001j\u0003\u0008\u00d2\u0001j\u0003\u0008\u00d3\u0001j\u0003\u0008\u00d4\u0001j\u0003\u0008\u00d5\u0001j\u0003\u0008\u00d6\u0001j\u0003\u0008\u00d7\u0001j\u0003\u0008\u00d8\u0001j\u0003\u0008\u00d9\u0001j\u0003\u0008\u00da\u0001j\u0003\u0008\u00db\u0001j\u0003\u0008\u00dc\u0001j\u0003\u0008\u00dd\u0001j\u0003\u0008\u00de\u0001j\u0003\u0008\u00df\u0001j\u0003\u0008\u00e0\u0001j\u0003\u0008\u00e1\u0001j\u0003\u0008\u00e2\u0001j\u0003\u0008\u00e3\u0001j\u0003\u0008\u00e4\u0001j\u0003\u0008\u00e5\u0001j\u0003\u0008\u00e6\u0001j\u0003\u0008\u00e7\u0001j\u0003\u0008\u00e8\u0001j\u0003\u0008\u00e9\u0001j\u0003\u0008\u00ea\u0001j\u0003\u0008\u00eb\u0001j\u0003\u0008\u00ec\u0001j\u0003\u0008\u00ed\u0001j\u0003\u0008\u00ee\u0001j\u0003\u0008\u00ef\u0001j\u0003\u0008\u00f0\u0001j\u0003\u0008\u00f1\u0001j\u0003\u0008\u00f2\u0001j\u0003\u0008\u00f3\u0001j\u0003\u0008\u00f4\u0001j\u0003\u0008\u00f5\u0001j\u0003\u0008\u00f6\u0001j\u0003\u0008\u00f7\u0001j\u0003\u0008\u00f8\u0001j\u0003\u0008\u00f9\u0001j\u0003\u0008\u00fa\u0001j\u0003\u0008\u00fb\u0001j\u0003\u0008\u00fc\u0001j\u0003\u0008\u00fd\u0001j\u0003\u0008\u00fe\u0001j\u0003\u0008\u00ff\u0001j\u0003\u0008\u0080\u0002j\u0003\u0008\u0081\u0002j\u0003\u0008\u0082\u0002j\u0003\u0008\u0083\u0002\u00a8\u0006\u0084\u0002"
     }
     d2 = {
         "Lru/ok/tamtam/android/prefs/PmsKey;",
@@ -30,7 +30,7 @@
         "fullContentString$prefs_release",
         "fullContentString",
         "Companion",
-        "hdc",
+        "ygc",
         "set-unread-timeout",
         "proxy",
         "debug-mode",
@@ -44,6 +44,7 @@
         "image-size",
         "max-msg-length",
         "max-participants",
+        "max-added-participants",
         "max-audio-length",
         "max-theme-length",
         "max-description-length",
@@ -60,7 +61,6 @@
         "max-favorite-chats",
         "disconnect-timeout",
         "max-attach-count",
-        "set-needs-attach-manually",
         "support-account",
         "support-email",
         "wakelock-on-push",
@@ -120,8 +120,8 @@
         "gc-from-p2p",
         "gc-link-pre-settings",
         "gc-wait-admin",
+        "call-pinch-to-zoom",
         "call-incoming-ab",
-        "call-custom-ringtone",
         "account-nickname-enabled",
         "send-location-enabled",
         "reconnect-call-ringtone",
@@ -132,12 +132,9 @@
         "calls-sdk-disable-init-tflite",
         "calls-sdk-remove-nonopus-audiocodecs",
         "calls-sdk-am-speaker-fix",
-        "call-icons-reorder",
-        "video-group-call",
         "calls-load-kws-by-sdk-enabled",
         "calls-sdk-wt-enabled",
         "calls-sdk-session-state",
-        "calls-sdk-majb",
         "calls-sdk-webrtc-logs",
         "calls-sdk-enable-nohost",
         "calls-sdk-summary-stats-enabled",
@@ -148,21 +145,23 @@
         "calls-use-p2p-relay-caps",
         "calls-skip-legacy-ice-restart",
         "calls-sdk-incall-stat",
-        "calls-sdk-no-old-stat",
         "calls-use-call-end-reason-fix",
-        "calls-new-call-finish-stat",
-        "calls-new-signaling-error-stat",
+        "calls-use-ws-url-validation",
         "call-permissions-interval",
+        "calls-sdk-disable-pipeline",
+        "calls-sdk-log-audio",
+        "calls-sdk-dnt-disable-audio",
         "cfs",
         "ab-status",
         "conn-timeouts",
         "media-transform",
-        "video-transcoding-enabled",
+        "video-transcoding-class",
         "call-rate",
         "call-chat-members-load-config",
         "send-queue-size",
         "webapp-ds-keys-count",
         "webapp-ss-keys-count",
+        "create-channel-type-screen",
         "edit-channel-type-screen-enabled",
         "saved-messages-aliases",
         "video-msg-config",
@@ -171,7 +170,6 @@
         "migrate-unsafe-warn",
         "media-order",
         "bad-networ-indicator-config",
-        "new-session-logic",
         "analytics-enabled",
         "mytracker-log-level",
         "search-webapps-showcase",
@@ -190,13 +188,12 @@
         "official-bot-naming-enabled",
         "webview-cache-enabled",
         "quotes-enabled",
-        "search-loader-v2-enabled",
         "upload-reusability",
         "devnull",
+        "perf-events",
         "server-side-complains-enabled",
         "channels-complaint-enabled",
         "landscape",
-        "location-map-widget-enabled",
         "utm-tag-for-trigger-link-share",
         "media-playlist-enabled",
         "show-warning-links",
@@ -207,14 +204,13 @@
         "informer-enabled",
         "camera-freeze-detector-timeout",
         "family-protection-botid",
-        "chat-media-scrollable-caption-enabled",
         "enable-unknown-contact-bottom-sheet",
+        "contact-add-bottom-sheet",
         "opcode-stat-config",
         "inline-ev-player",
         "channel-statistics-botid",
         "qr-auth-enabled",
         "ringtone-player-focus",
-        "local-pip-broadcast",
         "hide-incoming-call-notif",
         "force-play-embed",
         "new-logout-logic",
@@ -222,15 +218,18 @@
         "min-sound-hearable-level",
         "suspend-video-converter",
         "push-delivery",
-        "net-new-client-enabled",
         "official-org",
         "video-content-cache-ttl",
+        "audio-play-cache-ttl",
         "chatlist-subtitle-ver",
+        "join-requests",
         "new-year-theme-2026",
+        "horizontal-call-mode",
         "white-list-links",
         "unique-favorites",
         "set-audio-device",
-        "ringtone-stream-type",
+        "ringtone-am-mode",
+        "system-default-ringtone-opt",
         "ringtone-content-type",
         "webapp-push-open",
         "reactions-settings-enabled",
@@ -247,7 +246,40 @@
         "log-violations",
         "presence-seen-eq",
         "stickers-db-batch",
+        "stickers-controller-suspend",
+        "host-reachability",
+        "error-stat-limit",
+        "sce-emulation",
         "upload-rx-no-blocking",
+        "upload-hang-barrier",
+        "memory-slice-interval",
+        "polls-in-chats",
+        "chat-history-warm-opts",
+        "chat-history-warm-fail-interval",
+        "chat-history-notif-msg-strategy",
+        "chat-history-persist",
+        "enable-filters-for-folders",
+        "min-free-available-space-mb",
+        "net-session-suppress-bad-disconnected-state",
+        "chat-save-view-position",
+        "multi-lang",
+        "csnl",
+        "bots-channel-adding",
+        "debug-broken-contact",
+        "db-query-ex-count",
+        "db-tr-ex-count",
+        "watchdog-config",
+        "system-thread-pool-queue",
+        "speedy-upload",
+        "audio-play-cmd",
+        "audio-play-opus",
+        "open-video-from-start",
+        "speedy-voice-messages",
+        "february-23-26-theme",
+        "march-8-26-theme",
+        "cache-msg-preprocess",
+        "invalidate-db-msg-exception",
+        "invalidate-db-force",
         "prefs_release"
     }
     k = 0x1
@@ -261,11 +293,11 @@
 
 
 # static fields
-.field private static final synthetic $ENTRIES:Lzk5;
+.field private static final synthetic $ENTRIES:Lom5;
 
 .field private static final synthetic $VALUES:[Lru/ok/tamtam/android/prefs/PmsKey;
 
-.field public static final Companion:Lhdc;
+.field public static final Companion:Lygc;
 
 .field public static final enum ab-status:Lru/ok/tamtam/android/prefs/PmsKey;
 
@@ -279,6 +311,12 @@
 
 .field public static final enum async-phonebook:Lru/ok/tamtam/android/prefs/PmsKey;
 
+.field public static final enum audio-play-cache-ttl:Lru/ok/tamtam/android/prefs/PmsKey;
+
+.field public static final enum audio-play-cmd:Lru/ok/tamtam/android/prefs/PmsKey;
+
+.field public static final enum audio-play-opus:Lru/ok/tamtam/android/prefs/PmsKey;
+
 .field public static final enum audio-transcription-locales:Lru/ok/tamtam/android/prefs/PmsKey;
 
 .field public static final enum available-complaints:Lru/ok/tamtam/android/prefs/PmsKey;
@@ -291,15 +329,17 @@
 
 .field public static final enum bot-start-param:Lru/ok/tamtam/android/prefs/PmsKey;
 
+.field public static final enum bots-channel-adding:Lru/ok/tamtam/android/prefs/PmsKey;
+
+.field public static final enum cache-msg-preprocess:Lru/ok/tamtam/android/prefs/PmsKey;
+
 .field public static final enum call-chat-members-load-config:Lru/ok/tamtam/android/prefs/PmsKey;
-
-.field public static final enum call-custom-ringtone:Lru/ok/tamtam/android/prefs/PmsKey;
-
-.field public static final enum call-icons-reorder:Lru/ok/tamtam/android/prefs/PmsKey;
 
 .field public static final enum call-incoming-ab:Lru/ok/tamtam/android/prefs/PmsKey;
 
 .field public static final enum call-permissions-interval:Lru/ok/tamtam/android/prefs/PmsKey;
+
+.field public static final enum call-pinch-to-zoom:Lru/ok/tamtam/android/prefs/PmsKey;
 
 .field public static final enum call-rate:Lru/ok/tamtam/android/prefs/PmsKey;
 
@@ -307,15 +347,15 @@
 
 .field public static final enum calls-load-kws-by-sdk-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
 
-.field public static final enum calls-new-call-finish-stat:Lru/ok/tamtam/android/prefs/PmsKey;
-
-.field public static final enum calls-new-signaling-error-stat:Lru/ok/tamtam/android/prefs/PmsKey;
-
 .field public static final enum calls-sdk-ai-opus-bwe:Lru/ok/tamtam/android/prefs/PmsKey;
 
 .field public static final enum calls-sdk-am-speaker-fix:Lru/ok/tamtam/android/prefs/PmsKey;
 
 .field public static final enum calls-sdk-disable-init-tflite:Lru/ok/tamtam/android/prefs/PmsKey;
+
+.field public static final enum calls-sdk-disable-pipeline:Lru/ok/tamtam/android/prefs/PmsKey;
+
+.field public static final enum calls-sdk-dnt-disable-audio:Lru/ok/tamtam/android/prefs/PmsKey;
 
 .field public static final enum calls-sdk-enable-dtxdenoise:Lru/ok/tamtam/android/prefs/PmsKey;
 
@@ -325,9 +365,7 @@
 
 .field public static final enum calls-sdk-linear-opus-bwe:Lru/ok/tamtam/android/prefs/PmsKey;
 
-.field public static final enum calls-sdk-majb:Lru/ok/tamtam/android/prefs/PmsKey;
-
-.field public static final enum calls-sdk-no-old-stat:Lru/ok/tamtam/android/prefs/PmsKey;
+.field public static final enum calls-sdk-log-audio:Lru/ok/tamtam/android/prefs/PmsKey;
 
 .field public static final enum calls-sdk-remove-nonopus-audiocodecs:Lru/ok/tamtam/android/prefs/PmsKey;
 
@@ -347,6 +385,8 @@
 
 .field public static final enum calls-use-p2p-relay-caps:Lru/ok/tamtam/android/prefs/PmsKey;
 
+.field public static final enum calls-use-ws-url-validation:Lru/ok/tamtam/android/prefs/PmsKey;
+
 .field public static final enum camera-freeze-detector-timeout:Lru/ok/tamtam/android/prefs/PmsKey;
 
 .field public static final enum cfs:Lru/ok/tamtam/android/prefs/PmsKey;
@@ -359,7 +399,15 @@
 
 .field public static final enum channels-suggests-folder:Lru/ok/tamtam/android/prefs/PmsKey;
 
-.field public static final enum chat-media-scrollable-caption-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
+.field public static final enum chat-history-notif-msg-strategy:Lru/ok/tamtam/android/prefs/PmsKey;
+
+.field public static final enum chat-history-persist:Lru/ok/tamtam/android/prefs/PmsKey;
+
+.field public static final enum chat-history-warm-fail-interval:Lru/ok/tamtam/android/prefs/PmsKey;
+
+.field public static final enum chat-history-warm-opts:Lru/ok/tamtam/android/prefs/PmsKey;
+
+.field public static final enum chat-save-view-position:Lru/ok/tamtam/android/prefs/PmsKey;
 
 .field public static final enum chat-video-autoplay-parallel-count:Lru/ok/tamtam/android/prefs/PmsKey;
 
@@ -373,7 +421,19 @@
 
 .field public static final enum conn-timeouts:Lru/ok/tamtam/android/prefs/PmsKey;
 
+.field public static final enum contact-add-bottom-sheet:Lru/ok/tamtam/android/prefs/PmsKey;
+
+.field public static final enum create-channel-type-screen:Lru/ok/tamtam/android/prefs/PmsKey;
+
 .field public static final enum creation-2fa-config:Lru/ok/tamtam/android/prefs/PmsKey;
+
+.field public static final enum csnl:Lru/ok/tamtam/android/prefs/PmsKey;
+
+.field public static final enum db-query-ex-count:Lru/ok/tamtam/android/prefs/PmsKey;
+
+.field public static final enum db-tr-ex-count:Lru/ok/tamtam/android/prefs/PmsKey;
+
+.field public static final enum debug-broken-contact:Lru/ok/tamtam/android/prefs/PmsKey;
 
 .field public static final enum debug-mode:Lru/ok/tamtam/android/prefs/PmsKey;
 
@@ -401,7 +461,11 @@
 
 .field public static final enum edit-timeout:Lru/ok/tamtam/android/prefs/PmsKey;
 
+.field public static final enum enable-filters-for-folders:Lru/ok/tamtam/android/prefs/PmsKey;
+
 .field public static final enum enable-unknown-contact-bottom-sheet:Lru/ok/tamtam/android/prefs/PmsKey;
+
+.field public static final enum error-stat-limit:Lru/ok/tamtam/android/prefs/PmsKey;
 
 .field public static final enum fake-chats:Lru/ok/tamtam/android/prefs/PmsKey;
 
@@ -412,6 +476,8 @@
 .field public static final enum fb-exec-modifiers-names:Lru/ok/tamtam/android/prefs/PmsKey;
 
 .field public static final enum fb-exec-replace:Lru/ok/tamtam/android/prefs/PmsKey;
+
+.field public static final enum february-23-26-theme:Lru/ok/tamtam/android/prefs/PmsKey;
 
 .field public static final enum file-upload-max-size:Lru/ok/tamtam/android/prefs/PmsKey;
 
@@ -431,6 +497,10 @@
 
 .field public static final enum hide-incoming-call-notif:Lru/ok/tamtam/android/prefs/PmsKey;
 
+.field public static final enum horizontal-call-mode:Lru/ok/tamtam/android/prefs/PmsKey;
+
+.field public static final enum host-reachability:Lru/ok/tamtam/android/prefs/PmsKey;
+
 .field public static final enum image-height:Lru/ok/tamtam/android/prefs/PmsKey;
 
 .field public static final enum image-quality:Lru/ok/tamtam/android/prefs/PmsKey;
@@ -445,6 +515,10 @@
 
 .field public static final enum inline-ev-player:Lru/ok/tamtam/android/prefs/PmsKey;
 
+.field public static final enum invalidate-db-force:Lru/ok/tamtam/android/prefs/PmsKey;
+
+.field public static final enum invalidate-db-msg-exception:Lru/ok/tamtam/android/prefs/PmsKey;
+
 .field public static final enum invite-friends-sheet-frequency:Lru/ok/tamtam/android/prefs/PmsKey;
 
 .field public static final enum invite-header:Lru/ok/tamtam/android/prefs/PmsKey;
@@ -455,27 +529,29 @@
 
 .field public static final enum invite-short:Lru/ok/tamtam/android/prefs/PmsKey;
 
+.field public static final enum join-requests:Lru/ok/tamtam/android/prefs/PmsKey;
+
 .field public static final enum keep-connection:Lru/ok/tamtam/android/prefs/PmsKey;
 
-.field private static final keys$delegate:Lo58;
+.field private static final keys$delegate:Lj88;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lo58;"
+            "Lj88;"
         }
     .end annotation
 .end field
 
 .field public static final enum landscape:Lru/ok/tamtam/android/prefs/PmsKey;
 
-.field public static final enum local-pip-broadcast:Lru/ok/tamtam/android/prefs/PmsKey;
-
-.field public static final enum location-map-widget-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
-
 .field public static final enum log-full:Lru/ok/tamtam/android/prefs/PmsKey;
 
 .field public static final enum log-sensitive:Lru/ok/tamtam/android/prefs/PmsKey;
 
 .field public static final enum log-violations:Lru/ok/tamtam/android/prefs/PmsKey;
+
+.field public static final enum march-8-26-theme:Lru/ok/tamtam/android/prefs/PmsKey;
+
+.field public static final enum max-added-participants:Lru/ok/tamtam/android/prefs/PmsKey;
 
 .field public static final enum max-attach-count:Lru/ok/tamtam/android/prefs/PmsKey;
 
@@ -511,6 +587,8 @@
 
 .field public static final enum media-viewer-rotation-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
 
+.field public static final enum memory-slice-interval:Lru/ok/tamtam/android/prefs/PmsKey;
+
 .field public static final enum mentions_entity_names_limit:Lru/ok/tamtam/android/prefs/PmsKey;
 
 .field public static final enum migrate-unsafe-warn:Lru/ok/tamtam/android/prefs/PmsKey;
@@ -518,6 +596,8 @@
 .field public static final enum min-duration-playback-speed:Lru/ok/tamtam/android/prefs/PmsKey;
 
 .field public static final enum min-duration-save-audio-start-time:Lru/ok/tamtam/android/prefs/PmsKey;
+
+.field public static final enum min-free-available-space-mb:Lru/ok/tamtam/android/prefs/PmsKey;
 
 .field public static final enum min-image-side-size:Lru/ok/tamtam/android/prefs/PmsKey;
 
@@ -531,21 +611,21 @@
 
 .field public static final enum msg-get-reactions-page-size:Lru/ok/tamtam/android/prefs/PmsKey;
 
+.field public static final enum multi-lang:Lru/ok/tamtam/android/prefs/PmsKey;
+
 .field public static final enum mytracker-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
 
 .field public static final enum mytracker-log-level:Lru/ok/tamtam/android/prefs/PmsKey;
 
 .field public static final enum net-client-dns-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
 
-.field public static final enum net-new-client-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
+.field public static final enum net-session-suppress-bad-disconnected-state:Lru/ok/tamtam/android/prefs/PmsKey;
 
 .field public static final enum net-stat-config:Lru/ok/tamtam/android/prefs/PmsKey;
 
 .field public static final enum new-logout-logic:Lru/ok/tamtam/android/prefs/PmsKey;
 
 .field public static final enum new-media-upload-ui:Lru/ok/tamtam/android/prefs/PmsKey;
-
-.field public static final enum new-session-logic:Lru/ok/tamtam/android/prefs/PmsKey;
 
 .field public static final enum new-year-theme-2026:Lru/ok/tamtam/android/prefs/PmsKey;
 
@@ -573,9 +653,15 @@
 
 .field public static final enum opcode-stat-config:Lru/ok/tamtam/android/prefs/PmsKey;
 
+.field public static final enum open-video-from-start:Lru/ok/tamtam/android/prefs/PmsKey;
+
 .field public static final enum ov-media-send-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
 
+.field public static final enum perf-events:Lru/ok/tamtam/android/prefs/PmsKey;
+
 .field public static final enum player-load-control:Lru/ok/tamtam/android/prefs/PmsKey;
+
+.field public static final enum polls-in-chats:Lru/ok/tamtam/android/prefs/PmsKey;
 
 .field public static final enum presence-seen-eq:Lru/ok/tamtam/android/prefs/PmsKey;
 
@@ -601,21 +687,21 @@
 
 .field public static final enum reconnect-call-ringtone:Lru/ok/tamtam/android/prefs/PmsKey;
 
+.field public static final enum ringtone-am-mode:Lru/ok/tamtam/android/prefs/PmsKey;
+
 .field public static final enum ringtone-content-type:Lru/ok/tamtam/android/prefs/PmsKey;
 
 .field public static final enum ringtone-player-focus:Lru/ok/tamtam/android/prefs/PmsKey;
 
-.field public static final enum ringtone-stream-type:Lru/ok/tamtam/android/prefs/PmsKey;
-
 .field public static final enum saved-messages-aliases:Lru/ok/tamtam/android/prefs/PmsKey;
+
+.field public static final enum sce-emulation:Lru/ok/tamtam/android/prefs/PmsKey;
 
 .field public static final enum scheduled-faves-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
 
 .field public static final enum scheduled-messages-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
 
 .field public static final enum scheduled-posts-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
-
-.field public static final enum search-loader-v2-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
 
 .field public static final enum search-webapps-showcase:Lru/ok/tamtam/android/prefs/PmsKey;
 
@@ -627,15 +713,19 @@
 
 .field public static final enum set-audio-device:Lru/ok/tamtam/android/prefs/PmsKey;
 
-.field public static final enum set-needs-attach-manually:Lru/ok/tamtam/android/prefs/PmsKey;
-
 .field public static final enum set-unread-timeout:Lru/ok/tamtam/android/prefs/PmsKey;
 
 .field public static final enum settings-entry-banners:Lru/ok/tamtam/android/prefs/PmsKey;
 
 .field public static final enum show-warning-links:Lru/ok/tamtam/android/prefs/PmsKey;
 
+.field public static final enum speedy-upload:Lru/ok/tamtam/android/prefs/PmsKey;
+
+.field public static final enum speedy-voice-messages:Lru/ok/tamtam/android/prefs/PmsKey;
+
 .field public static final enum stat-session-background-threshold:Lru/ok/tamtam/android/prefs/PmsKey;
+
+.field public static final enum stickers-controller-suspend:Lru/ok/tamtam/android/prefs/PmsKey;
 
 .field public static final enum stickers-db-batch:Lru/ok/tamtam/android/prefs/PmsKey;
 
@@ -649,11 +739,17 @@
 
 .field public static final enum suspend-video-converter:Lru/ok/tamtam/android/prefs/PmsKey;
 
+.field public static final enum system-default-ringtone-opt:Lru/ok/tamtam/android/prefs/PmsKey;
+
+.field public static final enum system-thread-pool-queue:Lru/ok/tamtam/android/prefs/PmsKey;
+
 .field public static final enum tracer-non-fatal-crashed-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
 
 .field public static final enum typing-send-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
 
 .field public static final enum unique-favorites:Lru/ok/tamtam/android/prefs/PmsKey;
+
+.field public static final enum upload-hang-barrier:Lru/ok/tamtam/android/prefs/PmsKey;
 
 .field public static final enum upload-reusability:Lru/ok/tamtam/android/prefs/PmsKey;
 
@@ -669,17 +765,17 @@
 
 .field public static final enum video-fast-seek-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
 
-.field public static final enum video-group-call:Lru/ok/tamtam/android/prefs/PmsKey;
-
 .field public static final enum video-msg-config:Lru/ok/tamtam/android/prefs/PmsKey;
 
 .field public static final enum video-msg-download-urls-hack-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
 
-.field public static final enum video-transcoding-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
+.field public static final enum video-transcoding-class:Lru/ok/tamtam/android/prefs/PmsKey;
 
 .field public static final enum views-count-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
 
 .field public static final enum wakelock-on-push:Lru/ok/tamtam/android/prefs/PmsKey;
+
+.field public static final enum watchdog-config:Lru/ok/tamtam/android/prefs/PmsKey;
 
 .field public static final enum webapp-ds-keys-count:Lru/ok/tamtam/android/prefs/PmsKey;
 
@@ -714,7 +810,7 @@
 .method private static final synthetic $values()[Lru/ok/tamtam/android/prefs/PmsKey;
     .locals 3
 
-    const/16 v0, 0xd9
+    const/16 v0, 0xf9
 
     new-array v0, v0, [Lru/ok/tamtam/android/prefs/PmsKey;
 
@@ -796,103 +892,103 @@
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->max-audio-length:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->max-added-participants:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0xd
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->max-theme-length:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->max-audio-length:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0xe
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->max-description-length:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->max-theme-length:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0xf
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->edit-timeout:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->max-description-length:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x10
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->chats-page-size:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->edit-timeout:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x11
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->keep-connection:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->chats-page-size:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x12
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->invite-link:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->keep-connection:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x13
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->invite-short:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->invite-link:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x14
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->invite-long:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->invite-short:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x15
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->invite-header:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->invite-long:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x16
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->file-upload-max-size:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->invite-header:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x17
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->file-upload-unsupported-types:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->file-upload-max-size:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x18
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->chats-preload-period:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->file-upload-unsupported-types:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x19
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->max-favorite-chats:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->chats-preload-period:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x1a
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->disconnect-timeout:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->max-favorite-chats:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x1b
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->max-attach-count:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->disconnect-timeout:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x1c
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->set-needs-attach-manually:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->max-attach-count:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x1d
 
@@ -1252,13 +1348,13 @@
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->call-incoming-ab:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->call-pinch-to-zoom:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x59
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->call-custom-ringtone:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->call-incoming-ab:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x5a
 
@@ -1324,699 +1420,891 @@
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->call-icons-reorder:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->calls-load-kws-by-sdk-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x65
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->video-group-call:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->calls-sdk-wt-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x66
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->calls-load-kws-by-sdk-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->calls-sdk-session-state:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x67
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->calls-sdk-wt-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->calls-sdk-webrtc-logs:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x68
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->calls-sdk-session-state:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->calls-sdk-enable-nohost:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x69
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->calls-sdk-majb:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->calls-sdk-summary-stats-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x6a
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->calls-sdk-webrtc-logs:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->calls-sdk-enable-dtxdenoise:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x6b
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->calls-sdk-enable-nohost:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->calls-sdk-ai-opus-bwe:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x6c
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->calls-sdk-summary-stats-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->calls-sdk-linear-opus-bwe:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x6d
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->calls-sdk-enable-dtxdenoise:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->calls-use-p2p-relay:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x6e
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->calls-sdk-ai-opus-bwe:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->calls-use-p2p-relay-caps:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x6f
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->calls-sdk-linear-opus-bwe:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->calls-skip-legacy-ice-restart:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x70
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->calls-use-p2p-relay:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->calls-sdk-incall-stat:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x71
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->calls-use-p2p-relay-caps:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->calls-use-call-end-reason-fix:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x72
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->calls-skip-legacy-ice-restart:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->calls-use-ws-url-validation:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x73
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->calls-sdk-incall-stat:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->call-permissions-interval:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x74
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->calls-sdk-no-old-stat:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->calls-sdk-disable-pipeline:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x75
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->calls-use-call-end-reason-fix:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->calls-sdk-log-audio:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x76
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->calls-new-call-finish-stat:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->calls-sdk-dnt-disable-audio:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x77
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->calls-new-signaling-error-stat:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->cfs:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x78
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->call-permissions-interval:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->ab-status:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x79
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->cfs:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->conn-timeouts:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x7a
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->ab-status:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->media-transform:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x7b
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->conn-timeouts:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->video-transcoding-class:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x7c
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->media-transform:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->call-rate:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x7d
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->video-transcoding-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->call-chat-members-load-config:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x7e
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->call-rate:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->send-queue-size:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x7f
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->call-chat-members-load-config:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->webapp-ds-keys-count:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x80
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->send-queue-size:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->webapp-ss-keys-count:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x81
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->webapp-ds-keys-count:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->create-channel-type-screen:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x82
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->webapp-ss-keys-count:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->edit-channel-type-screen-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x83
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->edit-channel-type-screen-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->saved-messages-aliases:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x84
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->saved-messages-aliases:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->video-msg-config:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x85
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->video-msg-config:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->stat-session-background-threshold:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x86
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->stat-session-background-threshold:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->bot-start-param:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x87
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->bot-start-param:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->migrate-unsafe-warn:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x88
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->migrate-unsafe-warn:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->media-order:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x89
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->media-order:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->bad-networ-indicator-config:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x8a
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->bad-networ-indicator-config:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->analytics-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x8b
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->new-session-logic:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->mytracker-log-level:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x8c
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->analytics-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->search-webapps-showcase:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x8d
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->mytracker-log-level:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->player-load-control:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x8e
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->search-webapps-showcase:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->settings-entry-banners:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x8f
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->player-load-control:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->folders-max-count:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x90
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->settings-entry-banners:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->net-client-dns-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x91
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->folders-max-count:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->creation-2fa-config:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x92
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->net-client-dns-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->one-video-player:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x93
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->creation-2fa-config:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->one-video-uploader:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x94
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->one-video-player:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->one-video-uploader-audio:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x95
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->one-video-uploader:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->one-video-failover:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x96
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->one-video-uploader-audio:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->one-video-uploader-progress-fix:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x97
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->one-video-failover:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->y-map:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x98
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->one-video-uploader-progress-fix:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->views-count-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x99
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->y-map:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->official-bot-naming-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x9a
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->views-count-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->webview-cache-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x9b
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->official-bot-naming-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->quotes-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x9c
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->webview-cache-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->upload-reusability:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x9d
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->quotes-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->devnull:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x9e
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->search-loader-v2-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->perf-events:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0x9f
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->upload-reusability:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->server-side-complains-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0xa0
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->devnull:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->channels-complaint-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0xa1
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->server-side-complains-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->landscape:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0xa2
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->channels-complaint-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->utm-tag-for-trigger-link-share:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0xa3
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->landscape:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->media-playlist-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0xa4
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->location-map-widget-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->show-warning-links:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0xa5
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->utm-tag-for-trigger-link-share:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->async-phonebook:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0xa6
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->media-playlist-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->video-msg-download-urls-hack-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0xa7
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->show-warning-links:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->net-stat-config:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0xa8
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->async-phonebook:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->streamable-mp4:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0xa9
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->video-msg-download-urls-hack-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->informer-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0xaa
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->net-stat-config:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->camera-freeze-detector-timeout:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0xab
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->streamable-mp4:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->family-protection-botid:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0xac
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->informer-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->enable-unknown-contact-bottom-sheet:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0xad
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->camera-freeze-detector-timeout:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->contact-add-bottom-sheet:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0xae
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->family-protection-botid:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->opcode-stat-config:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0xaf
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->chat-media-scrollable-caption-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->inline-ev-player:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0xb0
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->enable-unknown-contact-bottom-sheet:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->channel-statistics-botid:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0xb1
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->opcode-stat-config:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->qr-auth-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0xb2
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->inline-ev-player:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->ringtone-player-focus:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0xb3
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->channel-statistics-botid:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->hide-incoming-call-notif:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0xb4
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->qr-auth-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->force-play-embed:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0xb5
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->ringtone-player-focus:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->new-logout-logic:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0xb6
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->local-pip-broadcast:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->reactions-sync-time:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0xb7
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->hide-incoming-call-notif:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->min-sound-hearable-level:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0xb8
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->force-play-embed:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->suspend-video-converter:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0xb9
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->new-logout-logic:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->push-delivery:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0xba
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->reactions-sync-time:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->official-org:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0xbb
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->min-sound-hearable-level:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->video-content-cache-ttl:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0xbc
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->suspend-video-converter:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->audio-play-cache-ttl:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0xbd
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->push-delivery:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->chatlist-subtitle-ver:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0xbe
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->net-new-client-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->join-requests:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0xbf
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->official-org:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->new-year-theme-2026:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0xc0
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->video-content-cache-ttl:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->horizontal-call-mode:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0xc1
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->chatlist-subtitle-ver:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->white-list-links:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0xc2
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->new-year-theme-2026:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->unique-favorites:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0xc3
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->white-list-links:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->set-audio-device:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0xc4
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->unique-favorites:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->ringtone-am-mode:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0xc5
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->set-audio-device:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->system-default-ringtone-opt:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0xc6
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->ringtone-stream-type:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->ringtone-content-type:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0xc7
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->ringtone-content-type:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->webapp-push-open:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0xc8
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->webapp-push-open:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->reactions-settings-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0xc9
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->reactions-settings-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->default-reactions-settings:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0xca
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->default-reactions-settings:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->non-contact-complaints-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0xcb
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->non-contact-complaints-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->blocking-audio-upload:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0xcc
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->blocking-audio-upload:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->ov-media-send-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0xcd
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->ov-media-send-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->typing-send-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0xce
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->typing-send-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->new-media-upload-ui:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0xcf
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->new-media-upload-ui:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->cis-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0xd0
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->cis-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->double-tap-reaction-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0xd1
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->double-tap-reaction-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->channels-suggests-folder:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0xd2
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->channels-suggests-folder:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->video-fast-seek-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0xd3
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->video-fast-seek-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->log-violations:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0xd4
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->log-violations:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->presence-seen-eq:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0xd5
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->presence-seen-eq:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->stickers-db-batch:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0xd6
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->stickers-db-batch:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->stickers-controller-suspend:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0xd7
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->upload-rx-no-blocking:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->host-reachability:Lru/ok/tamtam/android/prefs/PmsKey;
 
     const/16 v2, 0xd8
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->error-stat-limit:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/16 v2, 0xd9
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->sce-emulation:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/16 v2, 0xda
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->upload-rx-no-blocking:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/16 v2, 0xdb
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->upload-hang-barrier:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/16 v2, 0xdc
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->memory-slice-interval:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/16 v2, 0xdd
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->polls-in-chats:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/16 v2, 0xde
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->chat-history-warm-opts:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/16 v2, 0xdf
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->chat-history-warm-fail-interval:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/16 v2, 0xe0
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->chat-history-notif-msg-strategy:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/16 v2, 0xe1
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->chat-history-persist:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/16 v2, 0xe2
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->enable-filters-for-folders:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/16 v2, 0xe3
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->min-free-available-space-mb:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/16 v2, 0xe4
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->net-session-suppress-bad-disconnected-state:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/16 v2, 0xe5
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->chat-save-view-position:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/16 v2, 0xe6
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->multi-lang:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/16 v2, 0xe7
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->csnl:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/16 v2, 0xe8
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->bots-channel-adding:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/16 v2, 0xe9
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->debug-broken-contact:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/16 v2, 0xea
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->db-query-ex-count:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/16 v2, 0xeb
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->db-tr-ex-count:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/16 v2, 0xec
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->watchdog-config:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/16 v2, 0xed
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->system-thread-pool-queue:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/16 v2, 0xee
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->speedy-upload:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/16 v2, 0xef
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->audio-play-cmd:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/16 v2, 0xf0
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->audio-play-opus:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/16 v2, 0xf1
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->open-video-from-start:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/16 v2, 0xf2
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->speedy-voice-messages:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/16 v2, 0xf3
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->february-23-26-theme:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/16 v2, 0xf4
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->march-8-26-theme:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/16 v2, 0xf5
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->cache-msg-preprocess:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/16 v2, 0xf6
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->invalidate-db-msg-exception:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/16 v2, 0xf7
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->invalidate-db-force:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/16 v2, 0xf8
 
     aput-object v1, v0, v2
 
@@ -2158,9 +2446,19 @@
 
     new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
 
-    const-string v1, "max-audio-length"
+    const-string v1, "max-added-participants"
 
     const/16 v2, 0xd
+
+    invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->max-added-participants:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const-string v1, "max-audio-length"
+
+    const/16 v2, 0xe
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -2170,7 +2468,7 @@
 
     const-string v1, "max-theme-length"
 
-    const/16 v2, 0xe
+    const/16 v2, 0xf
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -2180,7 +2478,7 @@
 
     const-string v1, "max-description-length"
 
-    const/16 v2, 0xf
+    const/16 v2, 0x10
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -2190,7 +2488,7 @@
 
     const-string v1, "edit-timeout"
 
-    const/16 v2, 0x10
+    const/16 v2, 0x11
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -2200,7 +2498,7 @@
 
     const-string v1, "chats-page-size"
 
-    const/16 v2, 0x11
+    const/16 v2, 0x12
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -2210,7 +2508,7 @@
 
     const-string v1, "keep-connection"
 
-    const/16 v2, 0x12
+    const/16 v2, 0x13
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -2220,7 +2518,7 @@
 
     const-string v1, "invite-link"
 
-    const/16 v2, 0x13
+    const/16 v2, 0x14
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -2230,7 +2528,7 @@
 
     const-string v1, "invite-short"
 
-    const/16 v2, 0x14
+    const/16 v2, 0x15
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -2240,7 +2538,7 @@
 
     const-string v1, "invite-long"
 
-    const/16 v2, 0x15
+    const/16 v2, 0x16
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -2250,7 +2548,7 @@
 
     const-string v1, "invite-header"
 
-    const/16 v2, 0x16
+    const/16 v2, 0x17
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -2260,7 +2558,7 @@
 
     const-string v1, "file-upload-max-size"
 
-    const/16 v2, 0x17
+    const/16 v2, 0x18
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -2270,7 +2568,7 @@
 
     const-string v1, "file-upload-unsupported-types"
 
-    const/16 v2, 0x18
+    const/16 v2, 0x19
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -2280,7 +2578,7 @@
 
     const-string v1, "chats-preload-period"
 
-    const/16 v2, 0x19
+    const/16 v2, 0x1a
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -2290,7 +2588,7 @@
 
     const-string v1, "max-favorite-chats"
 
-    const/16 v2, 0x1a
+    const/16 v2, 0x1b
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -2300,7 +2598,7 @@
 
     const-string v1, "disconnect-timeout"
 
-    const/16 v2, 0x1b
+    const/16 v2, 0x1c
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -2310,21 +2608,11 @@
 
     const-string v1, "max-attach-count"
 
-    const/16 v2, 0x1c
-
-    invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->max-attach-count:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
-
-    const-string v1, "set-needs-attach-manually"
-
     const/16 v2, 0x1d
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->set-needs-attach-manually:Lru/ok/tamtam/android/prefs/PmsKey;
+    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->max-attach-count:Lru/ok/tamtam/android/prefs/PmsKey;
 
     new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
 
@@ -2918,23 +3206,23 @@
 
     new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
 
-    const-string v1, "call-incoming-ab"
+    const-string v1, "call-pinch-to-zoom"
 
     const/16 v2, 0x59
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->call-incoming-ab:Lru/ok/tamtam/android/prefs/PmsKey;
+    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->call-pinch-to-zoom:Lru/ok/tamtam/android/prefs/PmsKey;
 
     new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
 
-    const-string v1, "call-custom-ringtone"
+    const-string v1, "call-incoming-ab"
 
     const/16 v2, 0x5a
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->call-custom-ringtone:Lru/ok/tamtam/android/prefs/PmsKey;
+    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->call-incoming-ab:Lru/ok/tamtam/android/prefs/PmsKey;
 
     new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
 
@@ -3038,29 +3326,9 @@
 
     new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
 
-    const-string v1, "call-icons-reorder"
-
-    const/16 v2, 0x65
-
-    invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->call-icons-reorder:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
-
-    const-string v1, "video-group-call"
-
-    const/16 v2, 0x66
-
-    invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->video-group-call:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
-
     const-string v1, "calls-load-kws-by-sdk-enabled"
 
-    const/16 v2, 0x67
+    const/16 v2, 0x65
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3070,7 +3338,7 @@
 
     const-string v1, "calls-sdk-wt-enabled"
 
-    const/16 v2, 0x68
+    const/16 v2, 0x66
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3080,7 +3348,7 @@
 
     const-string v1, "calls-sdk-session-state"
 
-    const/16 v2, 0x69
+    const/16 v2, 0x67
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3088,19 +3356,9 @@
 
     new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
 
-    const-string v1, "calls-sdk-majb"
-
-    const/16 v2, 0x6a
-
-    invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->calls-sdk-majb:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
-
     const-string v1, "calls-sdk-webrtc-logs"
 
-    const/16 v2, 0x6b
+    const/16 v2, 0x68
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3110,7 +3368,7 @@
 
     const-string v1, "calls-sdk-enable-nohost"
 
-    const/16 v2, 0x6c
+    const/16 v2, 0x69
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3120,7 +3378,7 @@
 
     const-string v1, "calls-sdk-summary-stats-enabled"
 
-    const/16 v2, 0x6d
+    const/16 v2, 0x6a
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3130,7 +3388,7 @@
 
     const-string v1, "calls-sdk-enable-dtxdenoise"
 
-    const/16 v2, 0x6e
+    const/16 v2, 0x6b
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3140,7 +3398,7 @@
 
     const-string v1, "calls-sdk-ai-opus-bwe"
 
-    const/16 v2, 0x6f
+    const/16 v2, 0x6c
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3150,7 +3408,7 @@
 
     const-string v1, "calls-sdk-linear-opus-bwe"
 
-    const/16 v2, 0x70
+    const/16 v2, 0x6d
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3160,7 +3418,7 @@
 
     const-string v1, "calls-use-p2p-relay"
 
-    const/16 v2, 0x71
+    const/16 v2, 0x6e
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3170,7 +3428,7 @@
 
     const-string v1, "calls-use-p2p-relay-caps"
 
-    const/16 v2, 0x72
+    const/16 v2, 0x6f
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3180,7 +3438,7 @@
 
     const-string v1, "calls-skip-legacy-ice-restart"
 
-    const/16 v2, 0x73
+    const/16 v2, 0x70
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3190,7 +3448,7 @@
 
     const-string v1, "calls-sdk-incall-stat"
 
-    const/16 v2, 0x74
+    const/16 v2, 0x71
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3198,19 +3456,9 @@
 
     new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
 
-    const-string v1, "calls-sdk-no-old-stat"
-
-    const/16 v2, 0x75
-
-    invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->calls-sdk-no-old-stat:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
-
     const-string v1, "calls-use-call-end-reason-fix"
 
-    const/16 v2, 0x76
+    const/16 v2, 0x72
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3218,29 +3466,19 @@
 
     new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
 
-    const-string v1, "calls-new-call-finish-stat"
+    const-string v1, "calls-use-ws-url-validation"
 
-    const/16 v2, 0x77
-
-    invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->calls-new-call-finish-stat:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
-
-    const-string v1, "calls-new-signaling-error-stat"
-
-    const/16 v2, 0x78
+    const/16 v2, 0x73
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->calls-new-signaling-error-stat:Lru/ok/tamtam/android/prefs/PmsKey;
+    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->calls-use-ws-url-validation:Lru/ok/tamtam/android/prefs/PmsKey;
 
     new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
 
     const-string v1, "call-permissions-interval"
 
-    const/16 v2, 0x79
+    const/16 v2, 0x74
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3248,9 +3486,39 @@
 
     new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
 
+    const-string v1, "calls-sdk-disable-pipeline"
+
+    const/16 v2, 0x75
+
+    invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->calls-sdk-disable-pipeline:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const-string v1, "calls-sdk-log-audio"
+
+    const/16 v2, 0x76
+
+    invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->calls-sdk-log-audio:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const-string v1, "calls-sdk-dnt-disable-audio"
+
+    const/16 v2, 0x77
+
+    invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->calls-sdk-dnt-disable-audio:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
+
     const-string v1, "cfs"
 
-    const/16 v2, 0x7a
+    const/16 v2, 0x78
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3260,7 +3528,7 @@
 
     const-string v1, "ab-status"
 
-    const/16 v2, 0x7b
+    const/16 v2, 0x79
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3270,7 +3538,7 @@
 
     const-string v1, "conn-timeouts"
 
-    const/16 v2, 0x7c
+    const/16 v2, 0x7a
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3280,7 +3548,7 @@
 
     const-string v1, "media-transform"
 
-    const/16 v2, 0x7d
+    const/16 v2, 0x7b
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3288,19 +3556,19 @@
 
     new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
 
-    const-string v1, "video-transcoding-enabled"
+    const-string v1, "video-transcoding-class"
 
-    const/16 v2, 0x7e
+    const/16 v2, 0x7c
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->video-transcoding-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
+    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->video-transcoding-class:Lru/ok/tamtam/android/prefs/PmsKey;
 
     new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
 
     const-string v1, "call-rate"
 
-    const/16 v2, 0x7f
+    const/16 v2, 0x7d
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3310,7 +3578,7 @@
 
     const-string v1, "call-chat-members-load-config"
 
-    const/16 v2, 0x80
+    const/16 v2, 0x7e
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3320,7 +3588,7 @@
 
     const-string v1, "send-queue-size"
 
-    const/16 v2, 0x81
+    const/16 v2, 0x7f
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3330,7 +3598,7 @@
 
     const-string v1, "webapp-ds-keys-count"
 
-    const/16 v2, 0x82
+    const/16 v2, 0x80
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3340,7 +3608,7 @@
 
     const-string v1, "webapp-ss-keys-count"
 
-    const/16 v2, 0x83
+    const/16 v2, 0x81
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3348,9 +3616,19 @@
 
     new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
 
+    const-string v1, "create-channel-type-screen"
+
+    const/16 v2, 0x82
+
+    invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->create-channel-type-screen:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
+
     const-string v1, "edit-channel-type-screen-enabled"
 
-    const/16 v2, 0x84
+    const/16 v2, 0x83
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3360,7 +3638,7 @@
 
     const-string v1, "saved-messages-aliases"
 
-    const/16 v2, 0x85
+    const/16 v2, 0x84
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3370,7 +3648,7 @@
 
     const-string v1, "video-msg-config"
 
-    const/16 v2, 0x86
+    const/16 v2, 0x85
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3380,7 +3658,7 @@
 
     const-string v1, "stat-session-background-threshold"
 
-    const/16 v2, 0x87
+    const/16 v2, 0x86
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3390,7 +3668,7 @@
 
     const-string v1, "bot-start-param"
 
-    const/16 v2, 0x88
+    const/16 v2, 0x87
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3400,7 +3678,7 @@
 
     const-string v1, "migrate-unsafe-warn"
 
-    const/16 v2, 0x89
+    const/16 v2, 0x88
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3410,7 +3688,7 @@
 
     const-string v1, "media-order"
 
-    const/16 v2, 0x8a
+    const/16 v2, 0x89
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3420,7 +3698,7 @@
 
     const-string v1, "bad-networ-indicator-config"
 
-    const/16 v2, 0x8b
+    const/16 v2, 0x8a
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3428,19 +3706,9 @@
 
     new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
 
-    const-string v1, "new-session-logic"
-
-    const/16 v2, 0x8c
-
-    invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->new-session-logic:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
-
     const-string v1, "analytics-enabled"
 
-    const/16 v2, 0x8d
+    const/16 v2, 0x8b
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3450,7 +3718,7 @@
 
     const-string v1, "mytracker-log-level"
 
-    const/16 v2, 0x8e
+    const/16 v2, 0x8c
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3460,7 +3728,7 @@
 
     const-string v1, "search-webapps-showcase"
 
-    const/16 v2, 0x8f
+    const/16 v2, 0x8d
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3470,7 +3738,7 @@
 
     const-string v1, "player-load-control"
 
-    const/16 v2, 0x90
+    const/16 v2, 0x8e
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3480,7 +3748,7 @@
 
     const-string v1, "settings-entry-banners"
 
-    const/16 v2, 0x91
+    const/16 v2, 0x8f
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3490,7 +3758,7 @@
 
     const-string v1, "folders-max-count"
 
-    const/16 v2, 0x92
+    const/16 v2, 0x90
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3500,7 +3768,7 @@
 
     const-string v1, "net-client-dns-enabled"
 
-    const/16 v2, 0x93
+    const/16 v2, 0x91
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3510,7 +3778,7 @@
 
     const-string v1, "creation-2fa-config"
 
-    const/16 v2, 0x94
+    const/16 v2, 0x92
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3520,7 +3788,7 @@
 
     const-string v1, "one-video-player"
 
-    const/16 v2, 0x95
+    const/16 v2, 0x93
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3530,7 +3798,7 @@
 
     const-string v1, "one-video-uploader"
 
-    const/16 v2, 0x96
+    const/16 v2, 0x94
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3540,7 +3808,7 @@
 
     const-string v1, "one-video-uploader-audio"
 
-    const/16 v2, 0x97
+    const/16 v2, 0x95
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3550,7 +3818,7 @@
 
     const-string v1, "one-video-failover"
 
-    const/16 v2, 0x98
+    const/16 v2, 0x96
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3560,7 +3828,7 @@
 
     const-string v1, "one-video-uploader-progress-fix"
 
-    const/16 v2, 0x99
+    const/16 v2, 0x97
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3570,7 +3838,7 @@
 
     const-string v1, "y-map"
 
-    const/16 v2, 0x9a
+    const/16 v2, 0x98
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3580,7 +3848,7 @@
 
     const-string v1, "views-count-enabled"
 
-    const/16 v2, 0x9b
+    const/16 v2, 0x99
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3590,7 +3858,7 @@
 
     const-string v1, "official-bot-naming-enabled"
 
-    const/16 v2, 0x9c
+    const/16 v2, 0x9a
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3600,7 +3868,7 @@
 
     const-string v1, "webview-cache-enabled"
 
-    const/16 v2, 0x9d
+    const/16 v2, 0x9b
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3610,7 +3878,7 @@
 
     const-string v1, "quotes-enabled"
 
-    const/16 v2, 0x9e
+    const/16 v2, 0x9c
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3618,19 +3886,9 @@
 
     new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
 
-    const-string v1, "search-loader-v2-enabled"
-
-    const/16 v2, 0x9f
-
-    invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->search-loader-v2-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
-
     const-string v1, "upload-reusability"
 
-    const/16 v2, 0xa0
+    const/16 v2, 0x9d
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3640,7 +3898,7 @@
 
     const-string v1, "devnull"
 
-    const/16 v2, 0xa1
+    const/16 v2, 0x9e
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3648,9 +3906,19 @@
 
     new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
 
+    const-string v1, "perf-events"
+
+    const/16 v2, 0x9f
+
+    invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->perf-events:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
+
     const-string v1, "server-side-complains-enabled"
 
-    const/16 v2, 0xa2
+    const/16 v2, 0xa0
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3660,7 +3928,7 @@
 
     const-string v1, "channels-complaint-enabled"
 
-    const/16 v2, 0xa3
+    const/16 v2, 0xa1
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3670,7 +3938,7 @@
 
     const-string v1, "landscape"
 
-    const/16 v2, 0xa4
+    const/16 v2, 0xa2
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3678,19 +3946,9 @@
 
     new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
 
-    const-string v1, "location-map-widget-enabled"
-
-    const/16 v2, 0xa5
-
-    invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->location-map-widget-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
-
     const-string v1, "utm-tag-for-trigger-link-share"
 
-    const/16 v2, 0xa6
+    const/16 v2, 0xa3
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3700,7 +3958,7 @@
 
     const-string v1, "media-playlist-enabled"
 
-    const/16 v2, 0xa7
+    const/16 v2, 0xa4
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3710,7 +3968,7 @@
 
     const-string v1, "show-warning-links"
 
-    const/16 v2, 0xa8
+    const/16 v2, 0xa5
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3720,7 +3978,7 @@
 
     const-string v1, "async-phonebook"
 
-    const/16 v2, 0xa9
+    const/16 v2, 0xa6
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3730,7 +3988,7 @@
 
     const-string v1, "video-msg-download-urls-hack-enabled"
 
-    const/16 v2, 0xaa
+    const/16 v2, 0xa7
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3740,7 +3998,7 @@
 
     const-string v1, "net-stat-config"
 
-    const/16 v2, 0xab
+    const/16 v2, 0xa8
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3750,7 +4008,7 @@
 
     const-string v1, "streamable-mp4"
 
-    const/16 v2, 0xac
+    const/16 v2, 0xa9
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3760,7 +4018,7 @@
 
     const-string v1, "informer-enabled"
 
-    const/16 v2, 0xad
+    const/16 v2, 0xaa
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3770,7 +4028,7 @@
 
     const-string v1, "camera-freeze-detector-timeout"
 
-    const/16 v2, 0xae
+    const/16 v2, 0xab
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3780,7 +4038,7 @@
 
     const-string v1, "family-protection-botid"
 
-    const/16 v2, 0xaf
+    const/16 v2, 0xac
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3788,19 +4046,9 @@
 
     new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
 
-    const-string v1, "chat-media-scrollable-caption-enabled"
-
-    const/16 v2, 0xb0
-
-    invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->chat-media-scrollable-caption-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
-
     const-string v1, "enable-unknown-contact-bottom-sheet"
 
-    const/16 v2, 0xb1
+    const/16 v2, 0xad
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3808,9 +4056,19 @@
 
     new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
 
+    const-string v1, "contact-add-bottom-sheet"
+
+    const/16 v2, 0xae
+
+    invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->contact-add-bottom-sheet:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
+
     const-string v1, "opcode-stat-config"
 
-    const/16 v2, 0xb2
+    const/16 v2, 0xaf
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3820,7 +4078,7 @@
 
     const-string v1, "inline-ev-player"
 
-    const/16 v2, 0xb3
+    const/16 v2, 0xb0
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3830,7 +4088,7 @@
 
     const-string v1, "channel-statistics-botid"
 
-    const/16 v2, 0xb4
+    const/16 v2, 0xb1
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3840,7 +4098,7 @@
 
     const-string v1, "qr-auth-enabled"
 
-    const/16 v2, 0xb5
+    const/16 v2, 0xb2
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3850,7 +4108,7 @@
 
     const-string v1, "ringtone-player-focus"
 
-    const/16 v2, 0xb6
+    const/16 v2, 0xb3
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3858,19 +4116,9 @@
 
     new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
 
-    const-string v1, "local-pip-broadcast"
-
-    const/16 v2, 0xb7
-
-    invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->local-pip-broadcast:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
-
     const-string v1, "hide-incoming-call-notif"
 
-    const/16 v2, 0xb8
+    const/16 v2, 0xb4
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3880,7 +4128,7 @@
 
     const-string v1, "force-play-embed"
 
-    const/16 v2, 0xb9
+    const/16 v2, 0xb5
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3890,7 +4138,7 @@
 
     const-string v1, "new-logout-logic"
 
-    const/16 v2, 0xba
+    const/16 v2, 0xb6
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3900,7 +4148,7 @@
 
     const-string v1, "reactions-sync-time"
 
-    const/16 v2, 0xbb
+    const/16 v2, 0xb7
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3910,7 +4158,7 @@
 
     const-string v1, "min-sound-hearable-level"
 
-    const/16 v2, 0xbc
+    const/16 v2, 0xb8
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3920,7 +4168,7 @@
 
     const-string v1, "suspend-video-converter"
 
-    const/16 v2, 0xbd
+    const/16 v2, 0xb9
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3930,7 +4178,7 @@
 
     const-string v1, "push-delivery"
 
-    const/16 v2, 0xbe
+    const/16 v2, 0xba
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3938,19 +4186,9 @@
 
     new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
 
-    const-string v1, "net-new-client-enabled"
-
-    const/16 v2, 0xbf
-
-    invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->net-new-client-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
-
     const-string v1, "official-org"
 
-    const/16 v2, 0xc0
+    const/16 v2, 0xbb
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3960,7 +4198,7 @@
 
     const-string v1, "video-content-cache-ttl"
 
-    const/16 v2, 0xc1
+    const/16 v2, 0xbc
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3968,9 +4206,19 @@
 
     new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
 
+    const-string v1, "audio-play-cache-ttl"
+
+    const/16 v2, 0xbd
+
+    invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->audio-play-cache-ttl:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
+
     const-string v1, "chatlist-subtitle-ver"
 
-    const/16 v2, 0xc2
+    const/16 v2, 0xbe
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3978,9 +4226,19 @@
 
     new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
 
+    const-string v1, "join-requests"
+
+    const/16 v2, 0xbf
+
+    invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->join-requests:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
+
     const-string v1, "new-year-theme-2026"
 
-    const/16 v2, 0xc3
+    const/16 v2, 0xc0
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -3988,9 +4246,19 @@
 
     new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
 
+    const-string v1, "horizontal-call-mode"
+
+    const/16 v2, 0xc1
+
+    invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->horizontal-call-mode:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
+
     const-string v1, "white-list-links"
 
-    const/16 v2, 0xc4
+    const/16 v2, 0xc2
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -4000,7 +4268,7 @@
 
     const-string v1, "unique-favorites"
 
-    const/16 v2, 0xc5
+    const/16 v2, 0xc3
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -4010,7 +4278,7 @@
 
     const-string v1, "set-audio-device"
 
-    const/16 v2, 0xc6
+    const/16 v2, 0xc4
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -4018,19 +4286,29 @@
 
     new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
 
-    const-string v1, "ringtone-stream-type"
+    const-string v1, "ringtone-am-mode"
 
-    const/16 v2, 0xc7
+    const/16 v2, 0xc5
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->ringtone-stream-type:Lru/ok/tamtam/android/prefs/PmsKey;
+    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->ringtone-am-mode:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const-string v1, "system-default-ringtone-opt"
+
+    const/16 v2, 0xc6
+
+    invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->system-default-ringtone-opt:Lru/ok/tamtam/android/prefs/PmsKey;
 
     new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
 
     const-string v1, "ringtone-content-type"
 
-    const/16 v2, 0xc8
+    const/16 v2, 0xc7
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -4040,7 +4318,7 @@
 
     const-string v1, "webapp-push-open"
 
-    const/16 v2, 0xc9
+    const/16 v2, 0xc8
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -4050,7 +4328,7 @@
 
     const-string v1, "reactions-settings-enabled"
 
-    const/16 v2, 0xca
+    const/16 v2, 0xc9
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -4060,7 +4338,7 @@
 
     const-string v1, "default-reactions-settings"
 
-    const/16 v2, 0xcb
+    const/16 v2, 0xca
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -4070,7 +4348,7 @@
 
     const-string v1, "non-contact-complaints-enabled"
 
-    const/16 v2, 0xcc
+    const/16 v2, 0xcb
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -4080,7 +4358,7 @@
 
     const-string v1, "blocking-audio-upload"
 
-    const/16 v2, 0xcd
+    const/16 v2, 0xcc
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -4090,7 +4368,7 @@
 
     const-string v1, "ov-media-send-enabled"
 
-    const/16 v2, 0xce
+    const/16 v2, 0xcd
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -4100,7 +4378,7 @@
 
     const-string v1, "typing-send-enabled"
 
-    const/16 v2, 0xcf
+    const/16 v2, 0xce
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -4110,7 +4388,7 @@
 
     const-string v1, "new-media-upload-ui"
 
-    const/16 v2, 0xd0
+    const/16 v2, 0xcf
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -4120,7 +4398,7 @@
 
     const-string v1, "cis-enabled"
 
-    const/16 v2, 0xd1
+    const/16 v2, 0xd0
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -4130,7 +4408,7 @@
 
     const-string v1, "double-tap-reaction-enabled"
 
-    const/16 v2, 0xd2
+    const/16 v2, 0xd1
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -4140,7 +4418,7 @@
 
     const-string v1, "channels-suggests-folder"
 
-    const/16 v2, 0xd3
+    const/16 v2, 0xd2
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -4150,7 +4428,7 @@
 
     const-string v1, "video-fast-seek-enabled"
 
-    const/16 v2, 0xd4
+    const/16 v2, 0xd3
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -4160,7 +4438,7 @@
 
     const-string v1, "log-violations"
 
-    const/16 v2, 0xd5
+    const/16 v2, 0xd4
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -4170,7 +4448,7 @@
 
     const-string v1, "presence-seen-eq"
 
-    const/16 v2, 0xd6
+    const/16 v2, 0xd5
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -4180,7 +4458,7 @@
 
     const-string v1, "stickers-db-batch"
 
-    const/16 v2, 0xd7
+    const/16 v2, 0xd6
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
@@ -4188,13 +4466,343 @@
 
     new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
 
-    const-string v1, "upload-rx-no-blocking"
+    const-string v1, "stickers-controller-suspend"
+
+    const/16 v2, 0xd7
+
+    invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->stickers-controller-suspend:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const-string v1, "host-reachability"
 
     const/16 v2, 0xd8
 
     invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
 
+    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->host-reachability:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const-string v1, "error-stat-limit"
+
+    const/16 v2, 0xd9
+
+    invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->error-stat-limit:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const-string v1, "sce-emulation"
+
+    const/16 v2, 0xda
+
+    invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->sce-emulation:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const-string v1, "upload-rx-no-blocking"
+
+    const/16 v2, 0xdb
+
+    invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
+
     sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->upload-rx-no-blocking:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const-string v1, "upload-hang-barrier"
+
+    const/16 v2, 0xdc
+
+    invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->upload-hang-barrier:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const-string v1, "memory-slice-interval"
+
+    const/16 v2, 0xdd
+
+    invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->memory-slice-interval:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const-string v1, "polls-in-chats"
+
+    const/16 v2, 0xde
+
+    invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->polls-in-chats:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const-string v1, "chat-history-warm-opts"
+
+    const/16 v2, 0xdf
+
+    invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->chat-history-warm-opts:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const-string v1, "chat-history-warm-fail-interval"
+
+    const/16 v2, 0xe0
+
+    invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->chat-history-warm-fail-interval:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const-string v1, "chat-history-notif-msg-strategy"
+
+    const/16 v2, 0xe1
+
+    invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->chat-history-notif-msg-strategy:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const-string v1, "chat-history-persist"
+
+    const/16 v2, 0xe2
+
+    invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->chat-history-persist:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const-string v1, "enable-filters-for-folders"
+
+    const/16 v2, 0xe3
+
+    invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->enable-filters-for-folders:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const-string v1, "min-free-available-space-mb"
+
+    const/16 v2, 0xe4
+
+    invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->min-free-available-space-mb:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const-string v1, "net-session-suppress-bad-disconnected-state"
+
+    const/16 v2, 0xe5
+
+    invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->net-session-suppress-bad-disconnected-state:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const-string v1, "chat-save-view-position"
+
+    const/16 v2, 0xe6
+
+    invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->chat-save-view-position:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const-string v1, "multi-lang"
+
+    const/16 v2, 0xe7
+
+    invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->multi-lang:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const-string v1, "csnl"
+
+    const/16 v2, 0xe8
+
+    invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->csnl:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const-string v1, "bots-channel-adding"
+
+    const/16 v2, 0xe9
+
+    invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->bots-channel-adding:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const-string v1, "debug-broken-contact"
+
+    const/16 v2, 0xea
+
+    invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->debug-broken-contact:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const-string v1, "db-query-ex-count"
+
+    const/16 v2, 0xeb
+
+    invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->db-query-ex-count:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const-string v1, "db-tr-ex-count"
+
+    const/16 v2, 0xec
+
+    invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->db-tr-ex-count:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const-string v1, "watchdog-config"
+
+    const/16 v2, 0xed
+
+    invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->watchdog-config:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const-string v1, "system-thread-pool-queue"
+
+    const/16 v2, 0xee
+
+    invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->system-thread-pool-queue:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const-string v1, "speedy-upload"
+
+    const/16 v2, 0xef
+
+    invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->speedy-upload:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const-string v1, "audio-play-cmd"
+
+    const/16 v2, 0xf0
+
+    invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->audio-play-cmd:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const-string v1, "audio-play-opus"
+
+    const/16 v2, 0xf1
+
+    invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->audio-play-opus:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const-string v1, "open-video-from-start"
+
+    const/16 v2, 0xf2
+
+    invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->open-video-from-start:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const-string v1, "speedy-voice-messages"
+
+    const/16 v2, 0xf3
+
+    invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->speedy-voice-messages:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const-string v1, "february-23-26-theme"
+
+    const/16 v2, 0xf4
+
+    invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->february-23-26-theme:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const-string v1, "march-8-26-theme"
+
+    const/16 v2, 0xf5
+
+    invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->march-8-26-theme:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const-string v1, "cache-msg-preprocess"
+
+    const/16 v2, 0xf6
+
+    invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->cache-msg-preprocess:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const-string v1, "invalidate-db-msg-exception"
+
+    const/16 v2, 0xf7
+
+    invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->invalidate-db-msg-exception:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    new-instance v0, Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const-string v1, "invalidate-db-force"
+
+    const/16 v2, 0xf8
+
+    invoke-direct {v0, v1, v2}, Lru/ok/tamtam/android/prefs/PmsKey;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->invalidate-db-force:Lru/ok/tamtam/android/prefs/PmsKey;
 
     invoke-static {}, Lru/ok/tamtam/android/prefs/PmsKey;->$values()[Lru/ok/tamtam/android/prefs/PmsKey;
 
@@ -4202,29 +4810,29 @@
 
     sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->$VALUES:[Lru/ok/tamtam/android/prefs/PmsKey;
 
-    new-instance v1, Lal5;
+    new-instance v1, Lpm5;
 
-    invoke-direct {v1, v0}, Lal5;-><init>([Ljava/lang/Enum;)V
+    invoke-direct {v1, v0}, Lpm5;-><init>([Ljava/lang/Enum;)V
 
-    sput-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->$ENTRIES:Lzk5;
+    sput-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->$ENTRIES:Lom5;
 
-    new-instance v0, Lhdc;
+    new-instance v0, Lygc;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->Companion:Lhdc;
+    sput-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->Companion:Lygc;
 
-    new-instance v0, Lr4c;
+    new-instance v0, Lqqb;
 
-    const/16 v1, 0x9
+    const/16 v1, 0x12
 
-    invoke-direct {v0, v1}, Lr4c;-><init>(I)V
+    invoke-direct {v0, v1}, Lqqb;-><init>(I)V
 
-    new-instance v1, Ln8g;
+    new-instance v1, Lbgg;
 
-    invoke-direct {v1, v0}, Ln8g;-><init>(Llq6;)V
+    invoke-direct {v1, v0}, Lbgg;-><init>(Lis6;)V
 
-    sput-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->keys$delegate:Lo58;
+    sput-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->keys$delegate:Lj88;
 
     return-void
 .end method
@@ -4252,24 +4860,24 @@
     return-object v0
 .end method
 
-.method public static final synthetic access$getKeys$delegate$cp()Lo58;
+.method public static final synthetic access$getKeys$delegate$cp()Lj88;
     .locals 1
 
-    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->keys$delegate:Lo58;
+    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->keys$delegate:Lj88;
 
     return-object v0
 .end method
 
-.method public static getEntries()Lzk5;
+.method public static getEntries()Lom5;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lzk5;"
+            "Lom5;"
         }
     .end annotation
 
-    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->$ENTRIES:Lzk5;
+    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->$ENTRIES:Lom5;
 
     return-object v0
 .end method
@@ -4277,17 +4885,17 @@
 .method private static final keys_delegate$lambda$0()Ljava/util/Map;
     .locals 4
 
-    invoke-static {}, Lru/ok/tamtam/android/prefs/PmsKey;->getEntries()Lzk5;
+    invoke-static {}, Lru/ok/tamtam/android/prefs/PmsKey;->getEntries()Lom5;
 
     move-result-object v0
 
     const/16 v1, 0xa
 
-    invoke-static {v0, v1}, Lri3;->n(Ljava/lang/Iterable;I)I
+    invoke-static {v0, v1}, Lgk3;->n(Ljava/lang/Iterable;I)I
 
     move-result v1
 
-    invoke-static {v1}, Lss8;->h(I)I
+    invoke-static {v1}, Lmu8;->d(I)I
 
     move-result v1
 
@@ -4372,7 +4980,7 @@
 
     const-string v1, "\""
 
-    invoke-static {v1, v0, v1}, Lj27;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v0, v1}, Ltx8;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

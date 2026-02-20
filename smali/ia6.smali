@@ -1,130 +1,49 @@
 .class public final Lia6;
-.super Ljava/lang/Object;
+.super Lda4;
 .source "SourceFile"
-
-# interfaces
-.implements Ld76;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:I
 
-.field public final synthetic b:[Ld76;
+.field public synthetic d:Ljava/lang/Object;
 
-.field public final synthetic c:Lp6g;
+.field public final synthetic o:Lk96;
 
 
 # direct methods
-.method public constructor <init>([Ld76;Lhr6;)V
-    .locals 1
+.method public constructor <init>(Lk96;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    const/4 v0, 0x0
+    iput-object p1, p0, Lia6;->o:Lk96;
 
-    iput v0, p0, Lia6;->a:I
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    iput-object p1, p0, Lia6;->b:[Ld76;
-
-    check-cast p2, Lp6g;
-
-    iput-object p2, p0, Lia6;->c:Lp6g;
-
-    return-void
-.end method
-
-.method public constructor <init>([Ld76;Lir6;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lia6;->a:I
-
-    .line 3
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 4
-    iput-object p1, p0, Lia6;->b:[Ld76;
-
-    check-cast p2, Lp6g;
-
-    iput-object p2, p0, Lia6;->c:Lp6g;
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 4
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget v0, p0, Lia6;->a:I
+    iput-object p1, p0, Lia6;->d:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Lia6;->X:I
 
-    sget-object v0, Li94;->o:Li94;
+    const/high16 v0, -0x80000000
 
-    new-instance v1, Lha6;
+    or-int/2addr p1, v0
 
-    const/4 v2, 0x0
+    iput p1, p0, Lia6;->X:I
 
-    iget-object v3, p0, Lia6;->c:Lp6g;
+    iget-object p1, p0, Lia6;->o:Lk96;
 
-    invoke-direct {v1, v2, v3}, Lha6;-><init>(Lkotlin/coroutines/Continuation;Lir6;)V
+    const/4 v0, 0x0
 
-    iget-object v2, p0, Lia6;->b:[Ld76;
-
-    invoke-static {p1, v0, v1, p2, v2}, Lhwb;->a(Lf76;Llq6;Ldr6;Lkotlin/coroutines/Continuation;[Ld76;)Ljava/lang/Object;
+    invoke-virtual {p1, v0, p0}, Lk96;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 
-    sget-object p2, Lac4;->a:Lac4;
-
-    if-ne p1, p2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    :goto_0
     return-object p1
-
-    :pswitch_0
-    sget-object v0, Li94;->o:Li94;
-
-    new-instance v1, Lha6;
-
-    const/4 v2, 0x0
-
-    iget-object v3, p0, Lia6;->c:Lp6g;
-
-    invoke-direct {v1, v2, v3}, Lha6;-><init>(Lkotlin/coroutines/Continuation;Lhr6;)V
-
-    iget-object v2, p0, Lia6;->b:[Ld76;
-
-    invoke-static {p1, v0, v1, p2, v2}, Lhwb;->a(Lf76;Llq6;Ldr6;Lkotlin/coroutines/Continuation;[Ld76;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p2, Lac4;->a:Lac4;
-
-    if-ne p1, p2, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    :goto_1
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

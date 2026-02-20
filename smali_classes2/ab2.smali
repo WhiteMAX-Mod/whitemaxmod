@@ -1,73 +1,49 @@
 .class public final Lab2;
-.super Lg4;
+.super Lda4;
 .source "SourceFile"
 
 
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lab2;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
 # instance fields
-.field public final a:Lqh8;
+.field public X:I
 
-.field public final b:Ljava/lang/String;
+.field public synthetic d:Ljava/lang/Object;
+
+.field public final synthetic o:Lcb2;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lz7;
-
-    const/16 v1, 0xe
-
-    invoke-direct {v0, v1}, Lz7;-><init>(I)V
-
-    sput-object v0, Lab2;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lqh8;Ljava/lang/String;)V
+.method public constructor <init>(Lcb2;Lda4;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lab2;->o:Lcb2;
 
-    iput-object p1, p0, Lab2;->a:Lqh8;
-
-    iput-object p2, p0, Lab2;->b:Ljava/lang/String;
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
+
+    iput-object p1, p0, Lab2;->d:Ljava/lang/Object;
+
+    iget p1, p0, Lab2;->X:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lab2;->X:I
+
+    iget-object p1, p0, Lab2;->o:Lcb2;
 
     const/4 v0, 0x0
 
-    return v0
-.end method
+    invoke-static {p1, v0, p0}, Lcb2;->y(Lcb2;Lc43;Lda4;)Ljava/lang/Object;
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 1
+    move-result-object p1
 
-    iget-object v0, p0, Lab2;->a:Lqh8;
-
-    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
-
-    iget-object p2, p0, Lab2;->b:Ljava/lang/String;
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
-    return-void
+    return-object p1
 .end method

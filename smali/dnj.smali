@@ -1,115 +1,128 @@
-.class public abstract Ldnj;
+.class public final synthetic Ldnj;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ly4d;
 
-# static fields
-.field public static a:Ljava/lang/Boolean;
 
-.field public static b:Ljava/lang/Boolean;
+# instance fields
+.field public final synthetic a:I
 
-.field public static c:Ljava/lang/Boolean;
-
-.field public static d:Ljava/lang/Boolean;
+.field public final synthetic b:Lo1h;
 
 
 # direct methods
-.method public static final a(Lqb4;Ljava/lang/Throwable;)V
-    .locals 1
+.method public synthetic constructor <init>(Lo1h;I)V
+    .locals 0
 
-    instance-of v0, p1, Ljava/util/concurrent/CancellationException;
+    iput p2, p0, Ldnj;->a:I
 
-    if-eqz v0, :cond_0
+    iput-object p1, p0, Ldnj;->b:Lo1h;
 
-    return-void
-
-    :cond_0
-    :try_start_0
-    invoke-static {p1}, Lknj;->b(Ljava/lang/Throwable;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    invoke-static {p1, v0}, Lapj;->a(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
-
-    invoke-static {p0, p1}, Lglj;->a(Lqb4;Ljava/lang/Throwable;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static b(Landroid/content/Context;)Z
-    .locals 2
 
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+# virtual methods
+.method public final get()Ljava/lang/Object;
+    .locals 4
+
+    iget v0, p0, Ldnj;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v0, Lvk5;
+
+    const-string v1, "proto"
+
+    invoke-direct {v0, v1}, Lvk5;-><init>(Ljava/lang/String;)V
+
+    new-instance v1, Ltea;
+
+    const/16 v2, 0x1d
+
+    invoke-direct {v1, v2}, Ltea;-><init>(I)V
+
+    iget-object v2, p0, Ldnj;->b:Lo1h;
+
+    const-string v3, "FIREBASE_ML_SDK"
+
+    invoke-virtual {v2, v3, v0, v1}, Lo1h;->a(Ljava/lang/String;Lvk5;Lo0h;)Lp1h;
 
     move-result-object v0
 
-    sget-object v1, Ldnj;->a:Ljava/lang/Boolean;
+    return-object v0
 
-    if-nez v1, :cond_0
+    :pswitch_0
+    new-instance v0, Lvk5;
 
-    const-string v1, "android.hardware.type.watch"
+    const-string v1, "json"
 
-    invoke-virtual {v0, v1}, Landroid/content/pm/PackageManager;->hasSystemFeature(Ljava/lang/String;)Z
+    invoke-direct {v0, v1}, Lvk5;-><init>(Ljava/lang/String;)V
 
-    move-result v0
+    new-instance v1, Ljqa;
 
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    const/16 v2, 0x1d
+
+    invoke-direct {v1, v2}, Ljqa;-><init>(I)V
+
+    iget-object v2, p0, Ldnj;->b:Lo1h;
+
+    const-string v3, "FIREBASE_ML_SDK"
+
+    invoke-virtual {v2, v3, v0, v1}, Lo1h;->a(Ljava/lang/String;Lvk5;Lo0h;)Lp1h;
 
     move-result-object v0
 
-    sput-object v0, Ldnj;->a:Ljava/lang/Boolean;
+    return-object v0
 
-    :cond_0
-    sget-object v0, Ldnj;->a:Ljava/lang/Boolean;
+    :pswitch_1
+    new-instance v0, Lvk5;
 
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+    const-string v1, "proto"
 
-    sget-object v0, Ldnj;->b:Ljava/lang/Boolean;
+    invoke-direct {v0, v1}, Lvk5;-><init>(Ljava/lang/String;)V
 
-    if-nez v0, :cond_1
+    sget-object v1, Ll67;->u0:Ll67;
 
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+    iget-object v2, p0, Ldnj;->b:Lo1h;
 
-    move-result-object p0
+    const-string v3, "FIREBASE_ML_SDK"
 
-    const-string v0, "cn.google"
+    invoke-virtual {v2, v3, v0, v1}, Lo1h;->a(Ljava/lang/String;Lvk5;Lo0h;)Lp1h;
 
-    invoke-virtual {p0, v0}, Landroid/content/pm/PackageManager;->hasSystemFeature(Ljava/lang/String;)Z
+    move-result-object v0
 
-    move-result p0
+    return-object v0
 
-    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    :pswitch_2
+    new-instance v0, Lvk5;
 
-    move-result-object p0
+    const-string v1, "json"
 
-    sput-object p0, Ldnj;->b:Ljava/lang/Boolean;
+    invoke-direct {v0, v1}, Lvk5;-><init>(Ljava/lang/String;)V
 
-    :cond_1
-    sget-object p0, Ldnj;->b:Ljava/lang/Boolean;
+    sget-object v1, Ljaa;->u0:Ljaa;
 
-    invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
+    iget-object v2, p0, Ldnj;->b:Lo1h;
 
-    move-result p0
+    const-string v3, "FIREBASE_ML_SDK"
 
-    if-eqz p0, :cond_2
+    invoke-virtual {v2, v3, v0, v1}, Lo1h;->a(Ljava/lang/String;Lvk5;Lo0h;)Lp1h;
 
-    sget p0, Landroid/os/Build$VERSION;->SDK_INT:I
+    move-result-object v0
 
-    const/16 v0, 0x1e
+    return-object v0
 
-    if-lt p0, v0, :cond_2
+    nop
 
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_2
-    const/4 p0, 0x0
-
-    return p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

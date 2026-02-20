@@ -1,123 +1,73 @@
-.class public final Ltcc;
-.super Ljava/lang/Object;
+.class public final enum Ltcc;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lrcc;
+# static fields
+.field public static final enum a:Ltcc;
 
-.field public final b:Lpcc;
+.field public static final enum b:Ltcc;
 
-.field public c:I
-
-.field public d:Ljava/lang/Object;
-
-.field public final e:Landroid/os/Looper;
-
-.field public f:Z
+.field public static final synthetic c:[Ltcc;
 
 
 # direct methods
-.method public constructor <init>(Lpcc;Lrcc;Lrlg;ILandroid/os/Looper;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ltcc;
 
-    iput-object p1, p0, Ltcc;->b:Lpcc;
+    const-string v1, "TOP"
 
-    iput-object p2, p0, Ltcc;->a:Lrcc;
+    const/4 v2, 0x0
 
-    iput-object p5, p0, Ltcc;->e:Landroid/os/Looper;
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    return-void
-.end method
+    sput-object v0, Ltcc;->a:Ltcc;
 
+    new-instance v1, Ltcc;
 
-# virtual methods
-.method public final declared-synchronized a(Z)V
-    .locals 0
+    const-string v2, "BOTTOM"
 
-    monitor-enter p0
+    const/4 v3, 0x1
 
-    :try_start_0
-    invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    monitor-exit p0
+    sput-object v1, Ltcc;->b:Ltcc;
 
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
-.end method
-
-.method public final b()V
-    .locals 2
-
-    iget-boolean v0, p0, Ltcc;->f:Z
-
-    const/4 v1, 0x1
-
-    xor-int/2addr v0, v1
-
-    invoke-static {v0}, Lh6j;->g(Z)V
-
-    iput-boolean v1, p0, Ltcc;->f:Z
-
-    iget-object v0, p0, Ltcc;->b:Lpcc;
-
-    check-cast v0, Lrq5;
-
-    iget-boolean v1, v0, Lrq5;->T0:Z
-
-    if-nez v1, :cond_1
-
-    iget-object v1, v0, Lrq5;->u0:Landroid/os/Looper;
-
-    invoke-virtual {v1}, Landroid/os/Looper;->getThread()Ljava/lang/Thread;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Thread;->isAlive()Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget-object v0, v0, Lrq5;->Z:Lb9g;
-
-    const/16 v1, 0xe
-
-    invoke-virtual {v0, v1, p0}, Lb9g;->a(ILjava/lang/Object;)Lz8g;
+    filled-new-array {v0, v1}, [Ltcc;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lz8g;->b()V
+    sput-object v0, Ltcc;->c:[Ltcc;
 
     return-void
+.end method
 
-    :cond_1
-    :goto_0
-    const-string v0, "ExoPlayerImplInternal"
+.method public static valueOf(Ljava/lang/String;)Ltcc;
+    .locals 1
 
-    const-string v1, "Ignoring messages sent after release."
+    const-class v0, Ltcc;
 
-    invoke-static {v0, v1}, Li1h;->t(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    const/4 v0, 0x0
+    move-result-object p0
 
-    invoke-virtual {p0, v0}, Ltcc;->a(Z)V
+    check-cast p0, Ltcc;
 
-    return-void
+    return-object p0
+.end method
+
+.method public static values()[Ltcc;
+    .locals 1
+
+    sget-object v0, Ltcc;->c:[Ltcc;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Ltcc;
+
+    return-object v0
 .end method

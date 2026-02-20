@@ -1,66 +1,89 @@
-.class public final synthetic Lxfi;
+.class public final Lxfi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Ligi;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lone/me/sdk/arch/Widget;
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/sdk/arch/Widget;I)V
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    iput p2, p0, Lxfi;->a:I
-
-    iput-object p1, p0, Lxfi;->b:Lone/me/sdk/arch/Widget;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lxfi;->a:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lxfi;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lxfi;
+
+    iget-object v1, p0, Lxfi;->a:Ljava/lang/String;
+
+    iget-object p1, p1, Lxfi;->a:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
     .locals 1
 
-    iget v0, p0, Lxfi;->a:I
+    iget-object v0, p0, Lxfi;->a:Ljava/lang/String;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
-    iget-object v0, p0, Lxfi;->b:Lone/me/sdk/arch/Widget;
+    move-result v0
 
-    check-cast p2, Lwd3;
+    return v0
+.end method
 
-    invoke-static {v0, p1, p2}, Lone/me/sdk/arch/Widget;->r0(Lone/me/sdk/arch/Widget;Ljava/lang/Object;Lwd3;)Lb3h;
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    move-result-object p1
+    const-string v0, "ShowDownloadFileBottomSheet(fileName="
 
-    return-object p1
+    const-string v1, ")"
 
-    :pswitch_0
-    check-cast p1, Landroid/view/View;
+    iget-object v2, p0, Lxfi;->a:Ljava/lang/String;
 
-    check-cast p2, Lwd3;
+    invoke-static {v0, v2, v1}, Ltx8;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    iget-object v0, p0, Lxfi;->b:Lone/me/sdk/arch/Widget;
+    move-result-object v0
 
-    invoke-static {v0, p1, p2}, Lone/me/sdk/arch/Widget;->w0(Lone/me/sdk/arch/Widget;Landroid/view/View;Lwd3;)Lb3h;
-
-    move-result-object p1
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

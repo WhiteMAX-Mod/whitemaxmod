@@ -2,68 +2,56 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/io/Closeable;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljava/time/Duration;
 
-.field public final b:I
+.field public final b:Lnqa;
 
-.field public final c:Ljava/lang/Object;
+.field public final c:Lru/ok/android/externcalls/sdk/wt/WTSignaling$Builder$build$logger$1;
 
-.field public final d:Ljava/io/Closeable;
+.field public final d:Lsc9;
+
+.field public final e:Ljava/util/concurrent/ExecutorService;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;Ljava/io/Closeable;I)V
-    .locals 0
-
-    iput p4, p0, Lmd7;->a:I
-
-    iput p1, p0, Lmd7;->b:I
-
-    iput-object p2, p0, Lmd7;->c:Ljava/lang/Object;
-
-    iput-object p3, p0, Lmd7;->d:Ljava/io/Closeable;
+.method public constructor <init>(Ljava/time/Duration;Lru/ok/android/externcalls/sdk/wt/WTSignaling$Builder$build$logger$1;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    iput-object p1, p0, Lmd7;->a:Ljava/time/Duration;
+
+    iput-object p2, p0, Lmd7;->c:Lru/ok/android/externcalls/sdk/wt/WTSignaling$Builder$build$logger$1;
+
+    new-instance p1, Lsc9;
+
+    invoke-direct {p1, p0}, Lsc9;-><init>(Lmd7;)V
+
+    iput-object p1, p0, Lmd7;->d:Lsc9;
+
+    new-instance p1, Lnqa;
+
+    const/16 p2, 0x12
+
+    invoke-direct {p1, p2}, Lnqa;-><init>(I)V
+
+    iput-object p1, p0, Lmd7;->b:Lnqa;
+
+    new-instance p1, Lei4;
+
+    const-string p2, "http3"
+
+    const/4 v0, 0x0
+
+    invoke-direct {p1, p2, v0}, Lei4;-><init>(Ljava/lang/String;I)V
+
+    invoke-static {p1}, Ljava/util/concurrent/Executors;->newCachedThreadPool(Ljava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lmd7;->e:Ljava/util/concurrent/ExecutorService;
+
     return-void
-.end method
-
-.method private final l()V
-    .locals 0
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final close()V
-    .locals 1
-
-    iget v0, p0, Lmd7;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lmd7;->d:Ljava/io/Closeable;
-
-    check-cast v0, Ljp4;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ljp4;->close()V
-
-    :cond_0
-    :pswitch_0
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

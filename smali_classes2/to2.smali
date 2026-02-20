@@ -1,98 +1,84 @@
-.class public final synthetic Lto2;
-.super Ljava/lang/Object;
+.class public final Lto2;
+.super Lpdg;
 .source "SourceFile"
 
 # interfaces
-.implements Llq6;
+.implements Lys6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lone/me/profile/screens/media/ChatMediaListWidget;
 
-.field public final synthetic b:Luo2;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Luo2;I)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/profile/screens/media/ChatMediaListWidget;)V
     .locals 0
 
-    iput p2, p0, Lto2;->a:I
+    iput-object p2, p0, Lto2;->X:Lone/me/profile/screens/media/ChatMediaListWidget;
 
-    iput-object p1, p0, Lto2;->b:Luo2;
+    const/4 p2, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2, p1}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lto2;->a:I
+    check-cast p1, Lnq2;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object v0, p0, Lto2;->b:Luo2;
+    invoke-virtual {p0, p1, p2}, Lto2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    sget-object v1, Lpc3;->t0:Lkme;
+    move-result-object p1
 
-    invoke-virtual {v1, v0}, Lkme;->p(Landroid/view/View;)Lzlb;
+    check-cast p1, Lto2;
 
-    move-result-object v0
+    sget-object p2, Lmah;->a:Lmah;
 
-    invoke-interface {v0}, Lzlb;->b()Lxf0;
+    invoke-virtual {p1, p2}, Lto2;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v0
+    return-object p2
+.end method
 
-    iget-object v0, v0, Lxf0;->a:Lwf0;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iget v0, v0, Lwf0;->h:I
+    new-instance v0, Lto2;
 
-    new-instance v1, Landroid/graphics/drawable/ColorDrawable;
+    iget-object v1, p0, Lto2;->X:Lone/me/profile/screens/media/ChatMediaListWidget;
 
-    invoke-direct {v1, v0}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
+    invoke-direct {v0, p2, v1}, Lto2;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profile/screens/media/ChatMediaListWidget;)V
 
-    return-object v1
-
-    :pswitch_0
-    sget v0, Lv5e;->Z:I
-
-    sget-object v1, Lpc3;->t0:Lkme;
-
-    iget-object v2, p0, Lto2;->b:Luo2;
-
-    invoke-virtual {v1, v2}, Lkme;->p(Landroid/view/View;)Lzlb;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Lzlb;->getIcon()Lwe7;
-
-    move-result-object v1
-
-    iget v1, v1, Lwe7;->h:I
-
-    invoke-virtual {v2}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    invoke-static {v2, v0}, Lq74;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    invoke-static {v0, v1}, Lpti;->f(Landroid/graphics/drawable/Drawable;I)V
+    iput-object p1, v0, Lto2;->o:Ljava/lang/Object;
 
     return-object v0
+.end method
 
-    nop
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    iget-object v0, p0, Lto2;->o:Ljava/lang/Object;
+
+    check-cast v0, Lnq2;
+
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lto2;->X:Lone/me/profile/screens/media/ChatMediaListWidget;
+
+    iget-object p1, p1, Lone/me/profile/screens/media/ChatMediaListWidget;->s0:Loli;
+
+    iget-object v0, v0, Lnq2;->a:Ljava/lang/Object;
+
+    invoke-virtual {p1, v0}, Lfg8;->F(Ljava/util/List;)V
+
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
 .end method

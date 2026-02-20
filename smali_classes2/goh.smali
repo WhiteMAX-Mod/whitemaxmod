@@ -1,101 +1,57 @@
 .class public final Lgoh;
-.super Ljava/lang/Object;
+.super Lda4;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/animation/Animator$AnimatorListener;
 
 
 # instance fields
-.field public final synthetic a:Lone/me/chatscreen/videomsg/VideoMessageWidget;
+.field public final synthetic X:Lmoh;
 
-.field public final synthetic b:Z
+.field public Y:I
 
-.field public final synthetic c:Z
+.field public d:Ly30;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/chatscreen/videomsg/VideoMessageWidget;ZZ)V
+.method public constructor <init>(Lmoh;Lda4;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lgoh;->X:Lmoh;
 
-    iput-object p1, p0, Lgoh;->a:Lone/me/chatscreen/videomsg/VideoMessageWidget;
-
-    iput-boolean p2, p0, Lgoh;->b:Z
-
-    iput-boolean p3, p0, Lgoh;->c:Z
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
 
-    return-void
-.end method
+    iput-object p1, p0, Lgoh;->o:Ljava/lang/Object;
 
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 0
+    iget p1, p0, Lgoh;->Y:I
 
-    return-void
-.end method
+    const/high16 v0, -0x80000000
 
-.method public final onAnimationRepeat(Landroid/animation/Animator;)V
-    .locals 0
+    or-int/2addr p1, v0
 
-    return-void
-.end method
+    iput p1, p0, Lgoh;->Y:I
 
-.method public final onAnimationStart(Landroid/animation/Animator;)V
-    .locals 4
+    const-wide/16 v2, 0x0
 
-    sget-object p1, Lone/me/chatscreen/videomsg/VideoMessageWidget;->I0:[Lz28;
+    const-wide/16 v4, 0x0
 
-    iget-object p1, p0, Lgoh;->a:Lone/me/chatscreen/videomsg/VideoMessageWidget;
+    iget-object v0, p0, Lgoh;->X:Lmoh;
 
-    invoke-virtual {p1}, Lone/me/chatscreen/videomsg/VideoMessageWidget;->F0()Landroid/widget/ImageView;
+    const/4 v1, 0x0
 
-    move-result-object v0
+    move-object v6, p0
 
-    iget-boolean v1, p0, Lgoh;->b:Z
-
-    const/16 v2, 0x8
-
-    const/4 v3, 0x0
-
-    if-eqz v1, :cond_0
-
-    move v1, v3
-
-    goto :goto_0
-
-    :cond_0
-    move v1, v2
-
-    :goto_0
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-virtual {p1}, Lone/me/chatscreen/videomsg/VideoMessageWidget;->C0()Landroid/widget/ImageView;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-virtual {p1}, Lone/me/chatscreen/videomsg/VideoMessageWidget;->E0()Landroid/widget/TextView;
+    invoke-virtual/range {v0 .. v6}, Lmoh;->b(Lz30;JJLda4;)Ljava/lang/Object;
 
     move-result-object p1
 
-    iget-boolean v0, p0, Lgoh;->c:Z
-
-    if-eqz v0, :cond_1
-
-    move v2, v3
-
-    :cond_1
-    invoke-virtual {p1, v2}, Landroid/view/View;->setVisibility(I)V
-
-    return-void
+    return-object p1
 .end method

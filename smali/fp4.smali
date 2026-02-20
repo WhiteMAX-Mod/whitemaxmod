@@ -1,68 +1,177 @@
 .class public final Lfp4;
-.super Ljava/lang/Object;
+.super Ljava/lang/Thread;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic a:I
 
-.field public final b:Lwz5;
+.field public final synthetic b:Ljava/lang/Object;
 
-.field public c:J
-
-.field public d:J
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ljava/io/File;Ljava/lang/String;)V
+.method public synthetic constructor <init>(Ljava/lang/Object;Landroid/os/ConditionVariable;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 1
+    iput p3, p0, Lfp4;->a:I
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iput-object p1, p0, Lfp4;->c:Ljava/lang/Object;
 
-    iput-object p2, p0, Lfp4;->a:Ljava/lang/String;
+    iput-object p2, p0, Lfp4;->b:Ljava/lang/Object;
 
-    new-instance p2, Lwz5;
+    const-string p1, "ExoPlayer:SimpleCacheInit"
 
-    invoke-direct {p2, p1}, Lwz5;-><init>(Ljava/io/File;)V
+    invoke-direct {p0, p1}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
 
-    iput-object p2, p0, Lfp4;->b:Lwz5;
+    return-void
+.end method
 
-    const-wide/16 p1, -0x1
+.method public constructor <init>(Lnp4;Landroid/media/AudioTrack;)V
+    .locals 1
 
-    iput-wide p1, p0, Lfp4;->c:J
+    const/4 v0, 0x0
 
-    iput-wide p1, p0, Lfp4;->d:J
+    iput v0, p0, Lfp4;->a:I
+
+    .line 2
+    iput-object p1, p0, Lfp4;->c:Ljava/lang/Object;
+
+    iput-object p2, p0, Lfp4;->b:Ljava/lang/Object;
+
+    const-string p1, "ExoPlayer:AudioTrackReleaseThread"
+
+    invoke-direct {p0, p1}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()J
-    .locals 4
+.method public final run()V
+    .locals 2
 
-    iget-wide v0, p0, Lfp4;->d:J
+    iget v0, p0, Lfp4;->a:I
 
-    const-wide/16 v2, 0x0
+    packed-switch v0, :pswitch_data_0
 
-    cmp-long v0, v0, v2
+    iget-object v0, p0, Lfp4;->c:Ljava/lang/Object;
 
-    if-gez v0, :cond_0
+    check-cast v0, Ldlf;
 
-    iget-object v0, p0, Lfp4;->b:Lwz5;
+    monitor-enter v0
 
-    iget-object v0, v0, Lwz5;->a:Ljava/io/File;
+    :try_start_0
+    iget-object v1, p0, Lfp4;->b:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/io/File;->lastModified()J
+    check-cast v1, Landroid/os/ConditionVariable;
 
-    move-result-wide v0
+    invoke-virtual {v1}, Landroid/os/ConditionVariable;->open()V
 
-    iput-wide v0, p0, Lfp4;->d:J
+    iget-object v1, p0, Lfp4;->c:Ljava/lang/Object;
 
-    :cond_0
-    iget-wide v0, p0, Lfp4;->d:J
+    check-cast v1, Ldlf;
 
-    return-wide v0
+    invoke-static {v1}, Ldlf;->a(Ldlf;)V
+
+    iget-object v1, p0, Lfp4;->c:Ljava/lang/Object;
+
+    check-cast v1, Ldlf;
+
+    iget-object v1, v1, Ldlf;->b:Lj01;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
+
+    :pswitch_0
+    iget-object v0, p0, Lfp4;->c:Ljava/lang/Object;
+
+    check-cast v0, Lclf;
+
+    monitor-enter v0
+
+    :try_start_1
+    iget-object v1, p0, Lfp4;->b:Ljava/lang/Object;
+
+    check-cast v1, Landroid/os/ConditionVariable;
+
+    invoke-virtual {v1}, Landroid/os/ConditionVariable;->open()V
+
+    iget-object v1, p0, Lfp4;->c:Ljava/lang/Object;
+
+    check-cast v1, Lclf;
+
+    invoke-static {v1}, Lclf;->a(Lclf;)V
+
+    iget-object v1, p0, Lfp4;->c:Ljava/lang/Object;
+
+    check-cast v1, Lclf;
+
+    iget-object v1, v1, Lclf;->b:Lu88;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    monitor-exit v0
+
+    return-void
+
+    :catchall_1
+    move-exception v1
+
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    throw v1
+
+    :pswitch_1
+    iget-object v0, p0, Lfp4;->c:Ljava/lang/Object;
+
+    check-cast v0, Lnp4;
+
+    iget-object v1, p0, Lfp4;->b:Ljava/lang/Object;
+
+    check-cast v1, Landroid/media/AudioTrack;
+
+    :try_start_2
+    invoke-virtual {v1}, Landroid/media/AudioTrack;->flush()V
+
+    invoke-virtual {v1}, Landroid/media/AudioTrack;->release()V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_2
+
+    iget-object v0, v0, Lnp4;->h:Landroid/os/ConditionVariable;
+
+    invoke-virtual {v0}, Landroid/os/ConditionVariable;->open()V
+
+    return-void
+
+    :catchall_2
+    move-exception v1
+
+    iget-object v0, v0, Lnp4;->h:Landroid/os/ConditionVariable;
+
+    invoke-virtual {v0}, Landroid/os/ConditionVariable;->open()V
+
+    throw v1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

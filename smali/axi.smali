@@ -1,70 +1,396 @@
-.class public final Laxi;
+.class public abstract Laxi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lvwa;
+.implements Landroid/os/IInterface;
 
 
-# static fields
-.field public static final a:Laxi;
+# instance fields
+.field public final synthetic c:I
+
+.field public final d:Landroid/os/IBinder;
+
+.field public final e:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(Landroid/os/IBinder;Ljava/lang/String;I)V
+    .locals 0
 
-    new-instance v0, Laxi;
+    iput p3, p0, Laxi;->c:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Laxi;->d:Landroid/os/IBinder;
 
-    sput-object v0, Laxi;->a:Laxi;
+    iput-object p2, p0, Laxi;->e:Ljava/lang/String;
 
-    new-instance v0, Lbri;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lbri;-><init>(I)V
-
-    const-class v1, Lpri;
-
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public B(Landroid/os/Parcel;I)Landroid/os/Parcel;
+    .locals 3
 
-    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
-    move-result-object p1
+    move-result-object v0
 
-    throw p1
+    :try_start_0
+    iget-object v1, p0, Laxi;->d:Landroid/os/IBinder;
+
+    const/4 v2, 0x0
+
+    invoke-interface {v1, p2, p1, v0, v2}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->readException()V
+    :try_end_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
+
+    return-object v0
+
+    :catchall_0
+    move-exception p2
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p2
+
+    :try_start_1
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    throw p2
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :goto_0
+    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
+
+    throw p2
+.end method
+
+.method public T(Landroid/os/Parcel;I)Landroid/os/Parcel;
+    .locals 3
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    :try_start_0
+    iget-object v1, p0, Laxi;->d:Landroid/os/IBinder;
+
+    const/4 v2, 0x0
+
+    invoke-interface {v1, p2, p1, v0, v2}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->readException()V
+    :try_end_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
+
+    return-object v0
+
+    :catchall_0
+    move-exception p2
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p2
+
+    :try_start_1
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    throw p2
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :goto_0
+    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
+
+    throw p2
+.end method
+
+.method public U()Landroid/os/Parcel;
+    .locals 2
+
+    iget v0, p0, Laxi;->c:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    iget-object v1, p0, Laxi;->e:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    return-object v0
+
+    :pswitch_0
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    iget-object v1, p0, Laxi;->e:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    return-object v0
+
+    :pswitch_1
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    iget-object v1, p0, Laxi;->e:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public V(Landroid/os/Parcel;I)Landroid/os/Parcel;
+    .locals 3
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    :try_start_0
+    iget-object v1, p0, Laxi;->d:Landroid/os/IBinder;
+
+    const/4 v2, 0x0
+
+    invoke-interface {v1, p2, p1, v0, v2}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->readException()V
+    :try_end_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
+
+    return-object v0
+
+    :catchall_0
+    move-exception p2
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p2
+
+    :try_start_1
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    throw p2
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :goto_0
+    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
+
+    throw p2
+.end method
+
+.method public W(Landroid/os/Parcel;I)V
+    .locals 3
+
+    iget v0, p0, Laxi;->c:I
+
+    packed-switch v0, :pswitch_data_0
+
+    :pswitch_0
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    :try_start_0
+    iget-object v1, p0, Laxi;->d:Landroid/os/IBinder;
+
+    const/4 v2, 0x0
+
+    invoke-interface {v1, p2, p1, v0, v2}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->readException()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return-void
+
+    :catchall_0
+    move-exception p2
+
+    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    throw p2
+
+    :pswitch_1
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    :try_start_1
+    iget-object v1, p0, Laxi;->d:Landroid/os/IBinder;
+
+    const/4 v2, 0x0
+
+    invoke-interface {v1, p2, p1, v0, v2}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->readException()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return-void
+
+    :catchall_1
+    move-exception p2
+
+    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    throw p2
+
+    :pswitch_2
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    :try_start_2
+    iget-object v1, p0, Laxi;->d:Landroid/os/IBinder;
+
+    const/4 v2, 0x0
+
+    invoke-interface {v1, p2, p1, v0, v2}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->readException()V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_2
+
+    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return-void
+
+    :catchall_2
+    move-exception p2
+
+    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    throw p2
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_2
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
+.end method
+
+.method public final asBinder()Landroid/os/IBinder;
+    .locals 1
+
+    iget v0, p0, Laxi;->c:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Laxi;->d:Landroid/os/IBinder;
+
+    return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Laxi;->d:Landroid/os/IBinder;
+
+    return-object v0
+
+    :pswitch_1
+    iget-object v0, p0, Laxi;->d:Landroid/os/IBinder;
+
+    return-object v0
+
+    :pswitch_2
+    iget-object v0, p0, Laxi;->d:Landroid/os/IBinder;
+
+    return-object v0
+
+    :pswitch_3
+    iget-object v0, p0, Laxi;->d:Landroid/os/IBinder;
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public j(Landroid/os/Parcel;I)V
+    .locals 3
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    :try_start_0
+    iget-object v1, p0, Laxi;->d:Landroid/os/IBinder;
+
+    const/4 v2, 0x0
+
+    invoke-interface {v1, p2, p1, v0, v2}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->readException()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return-void
+
+    :catchall_0
+    move-exception p2
+
+    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    throw p2
 .end method

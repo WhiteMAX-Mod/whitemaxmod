@@ -1,73 +1,113 @@
-.class public final Lknh;
-.super Lp6g;
+.class public final synthetic Lknh;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ldr6;
+.implements Lsy3;
 
 
 # instance fields
-.field public synthetic X:Z
+.field public final synthetic a:I
 
-.field public synthetic o:J
+.field public final synthetic b:Llnh;
+
+
+# direct methods
+.method public synthetic constructor <init>(Llnh;I)V
+    .locals 0
+
+    iput p2, p0, Lknh;->a:I
+
+    iput-object p1, p0, Lknh;->b:Llnh;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final accept(Ljava/lang/Object;)V
+    .locals 5
 
-    check-cast p1, Ljava/lang/Number;
+    iget v0, p0, Lknh;->a:I
 
-    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
+    packed-switch v0, :pswitch_data_0
 
-    move-result-wide v0
+    iget-object v0, p0, Lknh;->b:Llnh;
 
-    check-cast p2, Ljava/lang/Boolean;
+    check-cast p1, Lanh;
 
-    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
+    iget-object v0, v0, Llnh;->b:Lnnh;
 
-    move-result p1
+    invoke-virtual {v0}, Lnnh;->a()Lrmf;
 
-    check-cast p3, Lkotlin/coroutines/Continuation;
+    move-result-object v0
 
-    new-instance p2, Lknh;
+    new-instance v1, Lhnh;
 
     const/4 v2, 0x3
 
-    invoke-direct {p2, v2, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v1, p1, v2}, Lhnh;-><init>(Lanh;I)V
 
-    iput-wide v0, p2, Lknh;->o:J
+    new-instance v2, Lto3;
 
-    iput-boolean p1, p2, Lknh;->X:Z
+    const/4 v3, 0x2
 
-    sget-object p1, Lb3h;->a:Lb3h;
+    invoke-direct {v2, v0, v3, v1}, Lto3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-virtual {p2, p1}, Lknh;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v2}, Lso3;->i()Luza;
 
-    move-result-object p1
+    move-result-object v0
 
-    return-object p1
-.end method
+    sget-object v1, Lq4h;->d:Lnqa;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+    new-instance v2, Lhnh;
 
-    iget-wide v0, p0, Lknh;->o:J
+    const/4 v3, 0x0
 
-    iget-boolean v2, p0, Lknh;->X:Z
+    invoke-direct {v2, p1, v3}, Lhnh;-><init>(Lanh;I)V
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    new-instance v3, Lhnh;
 
-    if-eqz v2, :cond_0
+    const/4 v4, 0x1
 
-    new-instance p1, Ljava/lang/Long;
+    invoke-direct {v3, p1, v4}, Lhnh;-><init>(Lanh;I)V
 
-    invoke-direct {p1, v0, v1}, Ljava/lang/Long;-><init>(J)V
+    invoke-static {v0, v1, v2, v3}, Llqj;->b(Luza;Lsy3;Lsy3;Ls7;)V
 
-    return-object p1
+    return-void
 
-    :cond_0
-    const/4 p1, 0x0
+    :pswitch_0
+    iget-object v0, p0, Lknh;->b:Llnh;
 
-    return-object p1
+    check-cast p1, Ly35;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-object v1, v0, Llnh;->h:Lt5i;
+
+    invoke-virtual {v1, p1}, Lt5i;->a(Ly35;)Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

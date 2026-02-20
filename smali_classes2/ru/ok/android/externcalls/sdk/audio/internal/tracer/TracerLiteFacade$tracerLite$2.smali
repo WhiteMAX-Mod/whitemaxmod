@@ -1,9 +1,9 @@
 .class final Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade$tracerLite$2;
-.super Ly48;
+.super Lv78;
 .source "SourceFile"
 
 # interfaces
-.implements Llq6;
+.implements Lis6;
 
 
 # annotations
@@ -18,8 +18,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Ly48;",
-        "Llq6;"
+        "Lv78;",
+        "Lis6;"
     }
 .end annotation
 
@@ -28,9 +28,9 @@
         "\u0000\u0008\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0010\u0003\u001a\u00020\u0000H\n\u00a2\u0006\u0004\u0008\u0001\u0010\u0002"
     }
     d2 = {
-        "Lqqg;",
+        "Lvxg;",
         "invoke",
-        "()Lqqg;",
+        "()Lvxg;",
         "<anonymous>"
     }
     k = 0x3
@@ -54,7 +54,7 @@
 
     const/4 p1, 0x0
 
-    invoke-direct {p0, p1}, Ly48;-><init>(I)V
+    invoke-direct {p0, p1}, Lv78;-><init>(I)V
 
     return-void
 .end method
@@ -65,18 +65,18 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade$tracerLite$2;->invoke()Lqqg;
+    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade$tracerLite$2;->invoke()Lvxg;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final invoke()Lqqg;
+.method public final invoke()Lvxg;
     .locals 4
 
     .line 2
-    new-instance v0, Lqqg;
+    new-instance v0, Lvxg;
 
     .line 3
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade$tracerLite$2;->$context:Landroid/content/Context;
@@ -89,26 +89,28 @@
     sget-object v2, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade$tracerLite$2$1;->INSTANCE:Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade$tracerLite$2$1;
 
     .line 5
-    new-instance v3, Loqg;
+    new-instance v3, Ltxg;
 
-    invoke-direct {v3}, Loqg;-><init>()V
+    invoke-direct {v3}, Ltxg;-><init>()V
 
-    invoke-interface {v2, v3}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v2, v3}, Lks6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 6
-    new-instance v2, Lvnb;
+    new-instance v2, Lkde;
 
-    invoke-direct {v2, v3}, Lvnb;-><init>(Loqg;)V
+    invoke-direct {v2, v3}, Lkde;-><init>(Ltxg;)V
 
     .line 7
     const-string v3, "one.video.calls.externcalls.sdk.audio"
 
-    invoke-direct {v0, v1, v3, v2}, Lqqg;-><init>(Landroid/content/Context;Ljava/lang/String;Lvnb;)V
+    invoke-direct {v0, v1, v3, v2}, Lvxg;-><init>(Landroid/content/Context;Ljava/lang/String;Lkde;)V
 
     .line 8
     const-string v1, "calls-audiomanager-version"
 
-    invoke-virtual {v0, v1}, Lqqg;->b(Ljava/lang/String;)V
+    const-string v2, "0.1.1"
+
+    invoke-virtual {v0, v1, v2}, Lvxg;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     return-object v0
 .end method

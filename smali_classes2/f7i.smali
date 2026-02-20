@@ -1,33 +1,51 @@
-.class public abstract synthetic Lf7i;
-.super Ljava/lang/Object;
+.class public final Lf7i;
+.super Lda4;
 .source "SourceFile"
 
 
+# instance fields
+.field public final synthetic X:Lv7i;
+
+.field public Y:I
+
+.field public d:Lqq0;
+
+.field public synthetic o:Ljava/lang/Object;
+
+
 # direct methods
-.method public static bridge synthetic a(Landroid/os/StrictMode$VmPolicy$Builder;)Landroid/os/StrictMode$VmPolicy$Builder;
+.method public constructor <init>(Lv7i;Lda4;)V
     .locals 0
 
-    invoke-virtual {p0}, Landroid/os/StrictMode$VmPolicy$Builder;->permitUnsafeIntentLaunch()Landroid/os/StrictMode$VmPolicy$Builder;
+    iput-object p1, p0, Lf7i;->X:Lv7i;
 
-    move-result-object p0
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
-    return-object p0
+    return-void
 .end method
 
-.method public static bridge synthetic b(Landroid/os/VibratorManager;)Landroid/os/Vibrator;
-    .locals 0
 
-    invoke-virtual {p0}, Landroid/os/VibratorManager;->getDefaultVibrator()Landroid/os/Vibrator;
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    move-result-object p0
+    iput-object p1, p0, Lf7i;->o:Ljava/lang/Object;
 
-    return-object p0
-.end method
+    iget p1, p0, Lf7i;->Y:I
 
-.method public static bridge synthetic c(Ljava/lang/Object;)Landroid/os/VibratorManager;
-    .locals 0
+    const/high16 v0, -0x80000000
 
-    check-cast p0, Landroid/os/VibratorManager;
+    or-int/2addr p1, v0
 
-    return-object p0
+    iput p1, p0, Lf7i;->Y:I
+
+    iget-object p1, p0, Lf7i;->X:Lv7i;
+
+    const/4 v0, 0x0
+
+    invoke-static {p1, v0, p0}, Lv7i;->a(Lv7i;Lqq0;Lda4;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

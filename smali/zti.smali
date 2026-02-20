@@ -1,100 +1,68 @@
-.class public final Lzti;
+.class public final synthetic Lzti;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/Iterator;
+.implements Lcom/my/tracker/core/utils/BiConsumer;
 
 
 # instance fields
-.field public a:Ljava/util/Map$Entry;
+.field public final synthetic a:I
 
-.field public final synthetic b:Ljava/util/Iterator;
+.field public final synthetic b:Landroid/app/Activity;
+
+.field public final synthetic c:Lcom/my/tracker/core/utils/TimePoint;
 
 
 # direct methods
-.method public constructor <init>(Luti;Ljava/util/Iterator;)V
+.method public synthetic constructor <init>(Landroid/app/Activity;Lcom/my/tracker/core/utils/TimePoint;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p3, p0, Lzti;->a:I
 
-    iput-object p2, p0, Lzti;->b:Ljava/util/Iterator;
+    iput-object p1, p0, Lzti;->b:Landroid/app/Activity;
+
+    iput-object p2, p0, Lzti;->c:Lcom/my/tracker/core/utils/TimePoint;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final hasNext()Z
-    .locals 1
-
-    iget-object v0, p0, Lzti;->b:Ljava/util/Iterator;
-
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final next()Ljava/lang/Object;
-    .locals 1
-
-    iget-object v0, p0, Lzti;->b:Ljava/util/Iterator;
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/Map$Entry;
-
-    iput-object v0, p0, Lzti;->a:Ljava/util/Map$Entry;
-
-    invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final remove()V
+.method public final accept(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 2
 
-    iget-object v0, p0, Lzti;->a:Ljava/util/Map$Entry;
+    iget v0, p0, Lzti;->a:I
 
-    if-eqz v0, :cond_0
+    check-cast p1, Lcom/my/tracker/core/EngineCore;
 
-    const/4 v0, 0x1
+    check-cast p2, Lcom/my/tracker/core/handlers/MyTrackerActivityHandler;
 
-    goto :goto_0
+    packed-switch v0, :pswitch_data_0
 
-    :cond_0
-    const/4 v0, 0x0
+    iget-object v0, p0, Lzti;->b:Landroid/app/Activity;
 
-    :goto_0
-    const-string v1, "no calls to next() since the last call to remove()"
+    iget-object v1, p0, Lzti;->c:Lcom/my/tracker/core/utils/TimePoint;
 
-    invoke-static {v1, v0}, Lqaj;->e(Ljava/lang/String;Z)V
-
-    iget-object v0, p0, Lzti;->a:Ljava/util/Map$Entry;
-
-    invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/Collection;
-
-    iget-object v1, p0, Lzti;->b:Ljava/util/Iterator;
-
-    invoke-interface {v1}, Ljava/util/Iterator;->remove()V
-
-    invoke-interface {v0}, Ljava/util/Collection;->size()I
-
-    invoke-interface {v0}, Ljava/util/Collection;->clear()V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lzti;->a:Ljava/util/Map$Entry;
+    invoke-static {v0, v1, p1, p2}, Lcom/my/tracker/core/o/a;->e(Landroid/app/Activity;Lcom/my/tracker/core/utils/TimePoint;Lcom/my/tracker/core/EngineCore;Lcom/my/tracker/core/handlers/MyTrackerActivityHandler;)V
 
     return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lzti;->b:Landroid/app/Activity;
+
+    iget-object v1, p0, Lzti;->c:Lcom/my/tracker/core/utils/TimePoint;
+
+    invoke-static {v0, v1, p1, p2}, Lcom/my/tracker/core/o/a;->c(Landroid/app/Activity;Lcom/my/tracker/core/utils/TimePoint;Lcom/my/tracker/core/EngineCore;Lcom/my/tracker/core/handlers/MyTrackerActivityHandler;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

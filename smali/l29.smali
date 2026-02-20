@@ -1,218 +1,128 @@
-.class public final synthetic Ll29;
+.class public final Ll29;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ln29;
-.implements Lfb9;
-
 
 # instance fields
-.field public final synthetic a:Llbc;
+.field public final a:Ljava/lang/String;
+
+.field public final b:Z
+
+.field public final c:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Llbc;)V
+.method public constructor <init>(Ljava/lang/String;ZZ)V
     .locals 0
 
-    iput-object p1, p0, Ll29;->a:Llbc;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ll29;->a:Ljava/lang/String;
+
+    iput-boolean p2, p0, Ll29;->b:Z
+
+    iput-boolean p3, p0, Ll29;->c:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lka9;I)V
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget-object v0, p0, Ll29;->a:Llbc;
+    const/4 v0, 0x1
 
-    invoke-interface {p1, p2, v0}, Lka9;->f(ILlbc;)V
+    if-ne p0, p1, :cond_0
 
-    return-void
-.end method
-
-.method public c(Le29;)V
-    .locals 10
-
-    iget-object v0, p1, Le29;->a:Li19;
-
-    invoke-virtual {p1}, Le29;->isConnected()Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    goto/16 :goto_3
+    return v0
 
     :cond_0
-    iget-object v1, p1, Le29;->w:Llbc;
+    const/4 v1, 0x0
 
-    iget-object v2, p0, Ll29;->a:Llbc;
-
-    invoke-static {v1, v2}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    goto/16 :goto_3
-
-    :cond_1
-    iput-object v2, p1, Le29;->w:Llbc;
-
-    iget-object v1, p1, Le29;->x:Llbc;
-
-    iget-object v3, p1, Le29;->v:Llbc;
-
-    invoke-static {v3, v2}, Le29;->m(Llbc;Llbc;)Llbc;
-
-    move-result-object v2
-
-    iput-object v2, p1, Le29;->x:Llbc;
-
-    invoke-virtual {v2, v1}, Llbc;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    const/4 v3, 0x0
-
-    if-nez v1, :cond_2
-
-    iget-object v1, p1, Le29;->s:Lhud;
-
-    iget-object v4, p1, Le29;->t:Lhud;
-
-    iget-object v5, p1, Le29;->r:Lhk7;
-
-    iget-object v6, p1, Le29;->q:Lhk7;
-
-    iget-object v7, p1, Le29;->u:Ljte;
-
-    iget-object v8, p1, Le29;->x:Llbc;
-
-    iget-object v9, p1, Le29;->D:Landroid/os/Bundle;
-
-    invoke-static {v5, v6, v7, v8, v9}, Le29;->X(Ljava/util/List;Ljava/util/List;Ljte;Llbc;Landroid/os/Bundle;)Lhud;
-
-    move-result-object v5
-
-    iput-object v5, p1, Le29;->s:Lhud;
-
-    iget-object v6, p1, Le29;->q:Lhk7;
-
-    iget-object v7, p1, Le29;->D:Landroid/os/Bundle;
-
-    iget-object v8, p1, Le29;->u:Ljte;
-
-    iget-object v9, p1, Le29;->x:Llbc;
-
-    invoke-static {v5, v6, v7, v8, v9}, Le29;->W(Lhud;Ljava/util/List;Landroid/os/Bundle;Ljte;Llbc;)Lhud;
-
-    move-result-object v5
-
-    iput-object v5, p1, Le29;->t:Lhud;
-
-    iget-object v5, p1, Le29;->s:Lhud;
-
-    invoke-virtual {v5, v1}, Lhk7;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    xor-int/2addr v1, v2
-
-    iget-object v5, p1, Le29;->t:Lhud;
-
-    invoke-virtual {v5, v4}, Lhk7;->equals(Ljava/lang/Object;)Z
-
-    move-result v4
-
-    xor-int/2addr v4, v2
-
-    iget-object v5, p1, Le29;->h:Lve8;
-
-    new-instance v6, Ls19;
-
-    const/4 v7, 0x4
-
-    invoke-direct {v6, p1, v7}, Ls19;-><init>(Le29;I)V
-
-    const/16 p1, 0xd
-
-    invoke-virtual {v5, p1, v6}, Lve8;->f(ILqe8;)V
-
-    goto :goto_0
-
-    :cond_2
-    move v1, v3
-
-    move v4, v1
-
-    :goto_0
-    if-eqz v4, :cond_4
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
-
-    move-result-object p1
-
-    iget-object v4, v0, Li19;->o:Landroid/os/Handler;
-
-    invoke-virtual {v4}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
-
-    move-result-object v4
-
-    if-ne p1, v4, :cond_3
-
-    move p1, v2
-
-    goto :goto_1
-
-    :cond_3
-    move p1, v3
-
-    :goto_1
-    invoke-static {p1}, Lh6j;->g(Z)V
-
-    iget-object p1, v0, Li19;->d:Lg19;
+    if-eqz p1, :cond_2
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    :cond_4
-    if-eqz v1, :cond_6
+    move-result-object v2
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const-class v3, Ll29;
 
-    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+    if-eq v2, v3, :cond_1
 
-    move-result-object p1
+    goto :goto_0
 
-    iget-object v1, v0, Li19;->o:Landroid/os/Handler;
+    :cond_1
+    check-cast p1, Ll29;
 
-    invoke-virtual {v1}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
+    iget-object v2, p0, Ll29;->a:Ljava/lang/String;
 
-    move-result-object v1
+    iget-object v3, p1, Ll29;->a:Ljava/lang/String;
 
-    if-ne p1, v1, :cond_5
+    invoke-static {v2, v3}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
-    goto :goto_2
+    move-result v2
 
-    :cond_5
+    if-eqz v2, :cond_2
+
+    iget-boolean v2, p0, Ll29;->b:Z
+
+    iget-boolean v3, p1, Ll29;->b:Z
+
+    if-ne v2, v3, :cond_2
+
+    iget-boolean v2, p0, Ll29;->c:Z
+
+    iget-boolean p1, p1, Ll29;->c:Z
+
+    if-ne v2, p1, :cond_2
+
+    return v0
+
+    :cond_2
+    :goto_0
+    return v1
+.end method
+
+.method public final hashCode()I
+    .locals 5
+
+    iget-object v0, p0, Ll29;->a:Ljava/lang/String;
+
+    const/16 v1, 0x1f
+
+    invoke-static {v1, v1, v0}, Lj64;->d(IILjava/lang/String;)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Ll29;->b:Z
+
+    const/16 v3, 0x4d5
+
+    const/16 v4, 0x4cf
+
+    if-eqz v2, :cond_0
+
+    move v2, v4
+
+    goto :goto_0
+
+    :cond_0
     move v2, v3
 
-    :goto_2
-    invoke-static {v2}, Lh6j;->g(Z)V
+    :goto_0
+    add-int/2addr v0, v2
 
-    iget-object p1, v0, Li19;->d:Lg19;
+    mul-int/2addr v0, v1
 
-    invoke-interface {p1}, Lg19;->I()V
+    iget-boolean v1, p0, Ll29;->c:Z
 
-    :cond_6
-    :goto_3
-    return-void
+    if-eqz v1, :cond_1
+
+    move v3, v4
+
+    :cond_1
+    add-int/2addr v0, v3
+
+    return v0
 .end method

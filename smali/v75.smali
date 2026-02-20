@@ -1,87 +1,247 @@
-.class public abstract Lv75;
-.super Ljava/lang/Object;
+.class public final Lv75;
+.super Ljava/lang/Thread;
 .source "SourceFile"
 
 
+# instance fields
+.field public volatile X:Lt75;
+
+.field public volatile Y:Z
+
+.field public Z:Ljava/lang/Exception;
+
+.field public final a:Le85;
+
+.field public final b:Lh85;
+
+.field public final c:Lb85;
+
+.field public final d:Z
+
+.field public final o:I
+
+.field public s0:J
+
+
 # direct methods
-.method public static a(Landroid/graphics/drawable/Drawable;Landroid/content/res/Resources$Theme;)V
+.method public constructor <init>(Le85;Lh85;Lb85;ZILt75;)V
     .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/graphics/drawable/Drawable;->applyTheme(Landroid/content/res/Resources$Theme;)V
+    invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
+
+    iput-object p1, p0, Lv75;->a:Le85;
+
+    iput-object p2, p0, Lv75;->b:Lh85;
+
+    iput-object p3, p0, Lv75;->c:Lb85;
+
+    iput-boolean p4, p0, Lv75;->d:Z
+
+    iput p5, p0, Lv75;->o:I
+
+    iput-object p6, p0, Lv75;->X:Lt75;
+
+    const-wide/16 p1, -0x1
+
+    iput-wide p1, p0, Lv75;->s0:J
 
     return-void
 .end method
 
-.method public static b(Landroid/graphics/drawable/Drawable;)Z
+
+# virtual methods
+.method public final a(Z)V
     .locals 0
 
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->canApplyTheme()Z
+    if-eqz p1, :cond_0
 
-    move-result p0
+    const/4 p1, 0x0
 
-    return p0
-.end method
+    iput-object p1, p0, Lv75;->X:Lt75;
 
-.method public static c(Landroid/graphics/drawable/Drawable;)Landroid/graphics/ColorFilter;
-    .locals 0
+    :cond_0
+    iget-boolean p1, p0, Lv75;->Y:Z
 
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getColorFilter()Landroid/graphics/ColorFilter;
+    if-nez p1, :cond_1
 
-    move-result-object p0
+    const/4 p1, 0x1
 
-    return-object p0
-.end method
+    iput-boolean p1, p0, Lv75;->Y:Z
 
-.method public static d(Landroid/graphics/drawable/Drawable;Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;Landroid/content/res/Resources$Theme;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lorg/xmlpull/v1/XmlPullParserException;,
-            Ljava/io/IOException;
-        }
-    .end annotation
+    iget-object p1, p0, Lv75;->b:Lh85;
 
-    invoke-virtual {p0, p1, p2, p3, p4}, Landroid/graphics/drawable/Drawable;->inflate(Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;Landroid/content/res/Resources$Theme;)V
+    invoke-interface {p1}, Lh85;->cancel()V
 
+    invoke-virtual {p0}, Ljava/lang/Thread;->interrupt()V
+
+    :cond_1
     return-void
 .end method
 
-.method public static e(Landroid/graphics/drawable/Drawable;FF)V
-    .locals 0
+.method public final b(JJF)V
+    .locals 1
 
-    invoke-virtual {p0, p1, p2}, Landroid/graphics/drawable/Drawable;->setHotspot(FF)V
+    iget-object v0, p0, Lv75;->c:Lb85;
 
+    iput-wide p3, v0, Lb85;->a:J
+
+    iget-object p3, p0, Lv75;->c:Lb85;
+
+    iput p5, p3, Lb85;->b:F
+
+    iget-wide p3, p0, Lv75;->s0:J
+
+    cmp-long p3, p1, p3
+
+    if-eqz p3, :cond_0
+
+    iput-wide p1, p0, Lv75;->s0:J
+
+    iget-object p3, p0, Lv75;->X:Lt75;
+
+    if-eqz p3, :cond_0
+
+    const/16 p4, 0x20
+
+    shr-long p4, p1, p4
+
+    long-to-int p4, p4
+
+    long-to-int p1, p1
+
+    const/16 p2, 0xb
+
+    invoke-virtual {p3, p2, p4, p1, p0}, Landroid/os/Handler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/os/Message;->sendToTarget()V
+
+    :cond_0
     return-void
 .end method
 
-.method public static f(Landroid/graphics/drawable/Drawable;IIII)V
-    .locals 0
+.method public final run()V
+    .locals 8
 
-    invoke-virtual {p0, p1, p2, p3, p4}, Landroid/graphics/drawable/Drawable;->setHotspotBounds(IIII)V
+    :try_start_0
+    iget-boolean v0, p0, Lv75;->d:Z
 
-    return-void
-.end method
+    if-eqz v0, :cond_0
 
-.method public static g(Landroid/graphics/drawable/Drawable;I)V
-    .locals 0
+    iget-object v0, p0, Lv75;->b:Lh85;
 
-    invoke-virtual {p0, p1}, Landroid/graphics/drawable/Drawable;->setTint(I)V
+    invoke-interface {v0}, Lh85;->remove()V
 
-    return-void
-.end method
+    goto :goto_2
 
-.method public static h(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
-    .locals 0
+    :catch_0
+    move-exception v0
 
-    invoke-virtual {p0, p1}, Landroid/graphics/drawable/Drawable;->setTintList(Landroid/content/res/ColorStateList;)V
+    goto :goto_1
 
-    return-void
-.end method
+    :cond_0
+    const/4 v0, 0x0
 
-.method public static i(Landroid/graphics/drawable/Drawable;Landroid/graphics/PorterDuff$Mode;)V
-    .locals 0
+    const-wide/16 v1, -0x1
 
-    invoke-virtual {p0, p1}, Landroid/graphics/drawable/Drawable;->setTintMode(Landroid/graphics/PorterDuff$Mode;)V
+    move v3, v0
 
+    :cond_1
+    :goto_0
+    iget-boolean v4, p0, Lv75;->Y:Z
+    :try_end_0
+    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_2
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    if-nez v4, :cond_4
+
+    :try_start_1
+    iget-object v4, p0, Lv75;->b:Lh85;
+
+    invoke-interface {v4, p0}, Lh85;->a(Lv75;)V
+    :try_end_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
+    .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_2
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+
+    goto :goto_2
+
+    :catch_1
+    move-exception v4
+
+    :try_start_2
+    iget-boolean v5, p0, Lv75;->Y:Z
+
+    if-nez v5, :cond_1
+
+    iget-object v5, p0, Lv75;->c:Lb85;
+
+    iget-wide v5, v5, Lb85;->a:J
+
+    cmp-long v7, v5, v1
+
+    if-eqz v7, :cond_2
+
+    move v3, v0
+
+    move-wide v1, v5
+
+    :cond_2
+    add-int/lit8 v5, v3, 0x1
+
+    iget v6, p0, Lv75;->o:I
+
+    if-gt v5, v6, :cond_3
+
+    mul-int/lit16 v3, v3, 0x3e8
+
+    const/16 v4, 0x1388
+
+    invoke-static {v3, v4}, Ljava/lang/Math;->min(II)I
+
+    move-result v3
+
+    int-to-long v3, v3
+
+    invoke-static {v3, v4}, Ljava/lang/Thread;->sleep(J)V
+
+    move v3, v5
+
+    goto :goto_0
+
+    :cond_3
+    throw v4
+    :try_end_2
+    .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
+
+    :goto_1
+    iput-object v0, p0, Lv75;->Z:Ljava/lang/Exception;
+
+    goto :goto_2
+
+    :catch_2
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Thread;->interrupt()V
+
+    :cond_4
+    :goto_2
+    iget-object v0, p0, Lv75;->X:Lt75;
+
+    if-eqz v0, :cond_5
+
+    const/16 v1, 0xa
+
+    invoke-virtual {v0, v1, p0}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
+
+    :cond_5
     return-void
 .end method

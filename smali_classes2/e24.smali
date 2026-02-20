@@ -1,68 +1,43 @@
-.class public final Le24;
-.super Ljef;
+.class public abstract synthetic Le24;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final D(Ls14;)V
-    .locals 5
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
-    iget-object v0, p0, Ltsd;->a:Landroid/view/View;
 
-    check-cast v0, Lk7b;
+# direct methods
+.method static constructor <clinit>()V
+    .locals 4
 
-    iget-wide v1, p1, Ls14;->a:J
+    const/4 v0, 0x2
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
+    invoke-static {v0}, Ly12;->x(I)[I
 
-    move-result v3
+    move-result-object v1
 
-    invoke-virtual {v0, v3}, Landroid/view/View;->setId(I)V
+    array-length v1, v1
 
-    iget-object v3, p1, Ls14;->b:Ljava/lang/CharSequence;
+    new-array v1, v1, [I
 
-    invoke-virtual {v0, v3}, Lk7b;->setTitle(Ljava/lang/CharSequence;)V
-
-    iget-object v3, p1, Ls14;->o:Ljava/lang/CharSequence;
-
-    invoke-virtual {v0, v3}, Lk7b;->setSubtitle(Ljava/lang/CharSequence;)V
-
-    iget-boolean v3, p1, Ls14;->t0:Z
-
-    invoke-virtual {v0, v3}, Lk7b;->setVerified(Z)V
-
-    invoke-virtual {v0}, Lk7b;->f()V
+    const/4 v2, 0x1
 
     const/4 v3, 0x0
 
-    invoke-virtual {v0, v3}, Lk7b;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    :try_start_0
+    aput v2, v1, v3
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    iget-object v4, p1, Ls14;->u0:Ljava/lang/CharSequence;
+    :catch_0
+    :try_start_1
+    aput v0, v1, v2
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    iget-object p1, p1, Ls14;->Y:Landroid/net/Uri;
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    :cond_0
-    invoke-virtual {v0, v1, v2, v4, v3}, Lk7b;->g(JLjava/lang/CharSequence;Ljava/lang/String;)V
-
-    const/4 p1, 0x0
-
-    invoke-virtual {v0, p1}, Lk7b;->setSelectionEnabled(Z)V
-
-    return-void
-.end method
-
-.method public final bridge synthetic y(Lud8;)V
-    .locals 0
-
-    check-cast p1, Ls14;
-
-    invoke-virtual {p0, p1}, Le24;->D(Ls14;)V
+    :catch_1
+    sput-object v1, Le24;->$EnumSwitchMapping$0:[I
 
     return-void
 .end method

@@ -1,181 +1,142 @@
-.class public abstract Lnj5;
-.super Ljava/lang/Object;
+.class public final enum Lnj5;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
+# interfaces
+.implements Ld8d;
 
-# instance fields
-.field public final a:Lcom/google/android/material/textfield/TextInputLayout;
 
-.field public final b:Lmj5;
+# static fields
+.field public static final enum a:Lnj5;
 
-.field public final c:Landroid/content/Context;
-
-.field public final d:Lcom/google/android/material/internal/CheckableImageButton;
+.field public static final synthetic b:[Lnj5;
 
 
 # direct methods
-.method public constructor <init>(Lmj5;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lnj5;
 
-    iget-object v0, p1, Lmj5;->a:Lcom/google/android/material/textfield/TextInputLayout;
+    const-string v1, "INSTANCE"
 
-    iput-object v0, p0, Lnj5;->a:Lcom/google/android/material/textfield/TextInputLayout;
+    const/4 v2, 0x0
 
-    iput-object p1, p0, Lnj5;->b:Lmj5;
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    sput-object v0, Lnj5;->a:Lnj5;
+
+    filled-new-array {v0}, [Lnj5;
 
     move-result-object v0
 
-    iput-object v0, p0, Lnj5;->c:Landroid/content/Context;
-
-    iget-object p1, p1, Lmj5;->u0:Lcom/google/android/material/internal/CheckableImageButton;
-
-    iput-object p1, p0, Lnj5;->d:Lcom/google/android/material/internal/CheckableImageButton;
+    sput-object v0, Lnj5;->b:[Lnj5;
 
     return-void
+.end method
+
+.method public static a(Ljava/lang/Throwable;Lc8g;)V
+    .locals 1
+
+    sget-object v0, Lnj5;->a:Lnj5;
+
+    invoke-interface {p1, v0}, Lc8g;->e(Le8g;)V
+
+    invoke-interface {p1, p0}, Lc8g;->onError(Ljava/lang/Throwable;)V
+
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lnj5;
+    .locals 1
+
+    const-class v0, Lnj5;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lnj5;
+
+    return-object p0
+.end method
+
+.method public static values()[Lnj5;
+    .locals 1
+
+    sget-object v0, Lnj5;->b:[Lnj5;
+
+    invoke-virtual {v0}, [Lnj5;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lnj5;
+
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public a()V
+.method public final cancel()V
     .locals 0
 
     return-void
 .end method
 
-.method public b()V
+.method public final clear()V
     .locals 0
 
     return-void
 .end method
 
-.method public c()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public d()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public e()Landroid/view/View$OnFocusChangeListener;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public f()Landroid/view/View$OnClickListener;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public g()Landroid/view/View$OnFocusChangeListener;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public h()Lts4;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public i(I)Z
+.method public final g(J)V
     .locals 0
 
-    const/4 p1, 0x1
+    invoke-static {p1, p2}, Lh8g;->f(J)Z
+
+    return-void
+.end method
+
+.method public final h(I)I
+    .locals 0
+
+    const/4 p1, 0x2
 
     return p1
 .end method
 
-.method public j()Z
+.method public final isEmpty()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final offer(Ljava/lang/Object;)Z
+    .locals 1
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "Should not be called!"
+
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final poll()Ljava/lang/Object;
     .locals 1
 
     const/4 v0, 0x0
 
-    return v0
+    return-object v0
 .end method
 
-.method public k()Z
+.method public final toString()Ljava/lang/String;
     .locals 1
 
-    instance-of v0, p0, Lea5;
+    const-string v0, "EmptySubscription"
 
-    return v0
-.end method
-
-.method public l()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public m(Landroid/widget/EditText;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public n(Lg5;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public o(Landroid/view/accessibility/AccessibilityEvent;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public p(Z)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final q()V
-    .locals 2
-
-    iget-object v0, p0, Lnj5;->b:Lmj5;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lmj5;->f(Z)V
-
-    return-void
-.end method
-
-.method public r()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public s()V
-    .locals 0
-
-    return-void
+    return-object v0
 .end method

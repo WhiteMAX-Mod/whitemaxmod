@@ -1,259 +1,71 @@
 .class public final Lhch;
-.super Ljava/lang/Object;
+.super Lda4;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:F
+.field public X:Ljava/lang/String;
 
-.field public final b:F
+.field public Y:Ljava/lang/Object;
 
-.field public final c:F
+.field public Z:Ljava/util/Collection;
 
-.field public final d:F
+.field public d:J
 
-.field public final e:F
+.field public o:J
 
-.field public final f:[F
+.field public s0:Ljava/util/Iterator;
+
+.field public t0:Ljava/util/Collection;
+
+.field public u0:I
+
+.field public v0:I
+
+.field public w0:I
+
+.field public synthetic x0:Ljava/lang/Object;
+
+.field public final synthetic y0:Lmch;
+
+.field public z0:I
 
 
 # direct methods
-.method public constructor <init>(FFFFF[F)V
+.method public constructor <init>(Lmch;Lda4;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lhch;->y0:Lmch;
 
-    iput p1, p0, Lhch;->a:F
-
-    iput p2, p0, Lhch;->b:F
-
-    iput p3, p0, Lhch;->c:F
-
-    iput p4, p0, Lhch;->d:F
-
-    iput p5, p0, Lhch;->e:F
-
-    iput-object p6, p0, Lhch;->f:[F
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lhch;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lhch;
-
-    iget v1, p0, Lhch;->a:F
-
-    iget v3, p1, Lhch;->a:F
-
-    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget v1, p0, Lhch;->b:F
-
-    iget v3, p1, Lhch;->b:F
-
-    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget v1, p0, Lhch;->c:F
-
-    iget v3, p1, Lhch;->c:F
-
-    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
-
-    move-result v1
-
-    if-eqz v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget v1, p0, Lhch;->d:F
-
-    iget v3, p1, Lhch;->d:F
-
-    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
-
-    move-result v1
-
-    if-eqz v1, :cond_5
-
-    return v2
-
-    :cond_5
-    iget v1, p0, Lhch;->e:F
-
-    iget v3, p1, Lhch;->e:F
-
-    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
-
-    move-result v1
-
-    if-eqz v1, :cond_6
-
-    return v2
-
-    :cond_6
-    iget-object v1, p0, Lhch;->f:[F
-
-    iget-object p1, p1, Lhch;->f:[F
-
-    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_7
-
-    return v2
-
-    :cond_7
-    return v0
-.end method
-
-.method public final hashCode()I
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 3
 
-    iget v0, p0, Lhch;->a:F
+    iput-object p1, p0, Lhch;->x0:Ljava/lang/Object;
 
-    invoke-static {v0}, Ljava/lang/Float;->hashCode(F)I
+    iget p1, p0, Lhch;->z0:I
 
-    move-result v0
+    const/high16 v0, -0x80000000
 
-    const/16 v1, 0x1f
+    or-int/2addr p1, v0
 
-    mul-int/2addr v0, v1
+    iput p1, p0, Lhch;->z0:I
 
-    iget v2, p0, Lhch;->b:F
+    const-wide/16 v0, 0x0
 
-    invoke-static {v0, v2, v1}, Lob3;->b(IFI)I
+    const/4 p1, 0x0
 
-    move-result v0
+    iget-object v2, p0, Lhch;->y0:Lmch;
 
-    iget v2, p0, Lhch;->c:F
+    invoke-virtual {v2, v0, v1, p1, p0}, Lmch;->d(JLmu;Lda4;)Ljava/lang/Object;
 
-    invoke-static {v0, v2, v1}, Lob3;->b(IFI)I
+    move-result-object p1
 
-    move-result v0
-
-    iget v2, p0, Lhch;->d:F
-
-    invoke-static {v0, v2, v1}, Lob3;->b(IFI)I
-
-    move-result v0
-
-    iget v2, p0, Lhch;->e:F
-
-    invoke-static {v0, v2, v1}, Lob3;->b(IFI)I
-
-    move-result v0
-
-    iget-object v1, p0, Lhch;->f:[F
-
-    invoke-static {v1}, Ljava/util/Arrays;->hashCode([F)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    iget-object v0, p0, Lhch;->f:[F
-
-    invoke-static {v0}, Ljava/util/Arrays;->toString([F)Ljava/lang/String;
-
-    move-result-object v0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "GradientEllipse(cx="
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v2, p0, Lhch;->a:F
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v2, ", cy="
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v2, p0, Lhch;->b:F
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v2, ", rx="
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v2, p0, Lhch;->c:F
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v2, ", ry="
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v2, p0, Lhch;->d:F
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v2, ", rotation="
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v2, p0, Lhch;->e:F
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v2, ", stops="
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, ")"
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

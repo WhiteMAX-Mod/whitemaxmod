@@ -1,23 +1,23 @@
 .class public final Lwdh;
-.super Ljava/lang/Object;
+.super Lvl0;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lxdh;
+.field public final b:J
 
-.field public final b:Lydh;
+.field public final c:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Lxdh;Lydh;)V
+.method public constructor <init>(JLjava/util/List;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lvl0;-><init>()V
 
-    iput-object p1, p0, Lwdh;->a:Lxdh;
+    iput-wide p1, p0, Lwdh;->b:J
 
-    iput-object p2, p0, Lwdh;->b:Lydh;
+    iput-object p3, p0, Lwdh;->c:Ljava/util/List;
 
     return-void
 .end method
@@ -25,7 +25,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    .locals 7
 
     const/4 v0, 0x1
 
@@ -45,24 +45,22 @@
     :cond_1
     check-cast p1, Lwdh;
 
-    iget-object v1, p0, Lwdh;->a:Lxdh;
+    iget-wide v3, p0, Lwdh;->b:J
 
-    iget-object v3, p1, Lwdh;->a:Lxdh;
+    iget-wide v5, p1, Lwdh;->b:J
 
-    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    cmp-long v1, v3, v5
 
-    move-result v1
-
-    if-nez v1, :cond_2
+    if-eqz v1, :cond_2
 
     return v2
 
     :cond_2
-    iget-object v1, p0, Lwdh;->b:Lydh;
+    iget-object v1, p0, Lwdh;->c:Ljava/util/List;
 
-    iget-object p1, p1, Lwdh;->b:Lydh;
+    iget-object p1, p1, Lwdh;->c:Ljava/util/List;
 
-    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -77,17 +75,17 @@
 .method public final hashCode()I
     .locals 2
 
-    const/high16 v0, 0x1f000000
+    iget-wide v0, p0, Lwdh;->b:J
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
     move-result v0
 
     mul-int/lit8 v0, v0, 0x1f
 
-    const/high16 v1, 0x29000000
+    iget-object v1, p0, Lwdh;->c:Ljava/util/List;
 
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
     move-result v1
 
@@ -97,23 +95,23 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 3
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "VfxButtonIconOverlayPlainColors(elevation1="
+    const-string v1, "UpdateMessagesEvent(chatId="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lwdh;->a:Lxdh;
+    iget-wide v1, p0, Lwdh;->b:J
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    const-string v1, ", elevation2="
+    const-string v1, ", messageIds="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lwdh;->b:Lydh;
+    iget-object v1, p0, Lwdh;->c:Ljava/util/List;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

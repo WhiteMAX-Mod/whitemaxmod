@@ -1,359 +1,200 @@
-.class public final Lg25;
+.class public final synthetic Lg25;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ltvh;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:Landroid/graphics/Rect;
+.field public final synthetic a:I
 
-.field public final synthetic b:Landroid/graphics/Rect;
-
-.field public final synthetic c:Landroid/view/View;
-
-.field public final synthetic d:Landroid/view/View;
-
-.field public final synthetic e:Landroid/graphics/Rect;
-
-.field public final synthetic f:I
-
-.field public final synthetic g:I
+.field public final synthetic b:Li25;
 
 
 # direct methods
-.method public constructor <init>(Landroid/graphics/Rect;Landroid/view/View;Landroid/view/View;Landroid/graphics/Rect;II)V
+.method public synthetic constructor <init>(Li25;I)V
     .locals 0
 
+    iput p2, p0, Lg25;->a:I
+
+    iput-object p1, p0, Lg25;->b:Li25;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lg25;->b:Landroid/graphics/Rect;
-
-    iput-object p2, p0, Lg25;->c:Landroid/view/View;
-
-    iput-object p3, p0, Lg25;->d:Landroid/view/View;
-
-    iput-object p4, p0, Lg25;->e:Landroid/graphics/Rect;
-
-    iput p5, p0, Lg25;->f:I
-
-    iput p6, p0, Lg25;->g:I
-
-    new-instance p1, Landroid/graphics/Rect;
-
-    invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
-
-    iput-object p1, p0, Lg25;->a:Landroid/graphics/Rect;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 0
+.method public final run()V
+    .locals 5
 
-    return-void
-.end method
+    iget v0, p0, Lg25;->a:I
 
-.method public final c(Landroid/graphics/Rect;Landroid/view/View;)V
-    .locals 9
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lg25;->a:Landroid/graphics/Rect;
+    iget-object v0, p0, Lg25;->b:Li25;
 
-    invoke-static {v0, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
+    iget-object v1, v0, Lru1;->n:Lf21;
 
     if-eqz v1, :cond_0
 
-    return-void
+    invoke-virtual {v1, v0}, Lf21;->D(Lru1;)V
 
     :cond_0
-    invoke-virtual {v0, p1}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+    iget-object v1, v0, Li25;->I:Lt9g;
 
-    iget-object v0, p0, Lg25;->c:Landroid/view/View;
+    new-instance v2, Lswg;
 
-    invoke-virtual {v0}, Landroid/view/View;->getWidth()I
+    iget-wide v3, v0, Lru1;->t:J
+
+    const/4 v0, 0x1
+
+    invoke-direct {v2, v3, v4, v0}, Lswg;-><init>(JI)V
+
+    invoke-virtual {v1, v2}, Lt9g;->f(Lswg;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lg25;->b:Li25;
+
+    invoke-virtual {v0}, Lru1;->F()Z
 
     move-result v1
 
-    invoke-virtual {v0}, Landroid/view/View;->getHeight()I
+    if-eqz v1, :cond_4
 
-    move-result v2
+    iget-object v1, v0, Li25;->C:Ljava/util/HashMap;
 
-    iget-object v3, p0, Lg25;->b:Landroid/graphics/Rect;
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v3, v4, v4, v1, v2}, Landroid/graphics/Rect;->set(IIII)V
-
-    sget-object v1, Lxsh;->a:Ljava/util/WeakHashMap;
-
-    invoke-static {p2}, Lmsh;->a(Landroid/view/View;)Lxhi;
-
-    move-result-object p2
-
-    const/4 v1, 0x0
-
-    if-eqz p2, :cond_1
-
-    const/4 v2, 0x7
-
-    iget-object v5, p2, Lxhi;->a:Lvhi;
-
-    invoke-virtual {v5, v2}, Lvhi;->f(I)Lcs7;
-
-    move-result-object v2
-
-    goto :goto_0
-
-    :cond_1
-    move-object v2, v1
-
-    :goto_0
-    if-eqz p2, :cond_2
-
-    iget-object p2, p2, Lxhi;->a:Lvhi;
-
-    invoke-virtual {p2}, Lvhi;->e()Li25;
+    invoke-virtual {v1}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
 
     move-result-object v1
 
-    :cond_2
-    if-eqz v2, :cond_3
+    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
-    iget p2, v2, Lcs7;->a:I
+    move-result-object v1
+
+    :cond_1
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_4
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/util/Map$Entry;
+
+    invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljl1;
+
+    invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ltzb;
+
+    invoke-virtual {v2}, Ltzb;->A()Lorg/webrtc/PeerConnection$IceConnectionState;
+
+    move-result-object v2
+
+    sget-object v4, Lorg/webrtc/PeerConnection$IceConnectionState;->CONNECTED:Lorg/webrtc/PeerConnection$IceConnectionState;
+
+    if-eq v2, v4, :cond_1
+
+    invoke-virtual {v0, v3}, Lru1;->w(Ljl1;)Lol1;
+
+    move-result-object v1
+
+    const/4 v2, 0x1
+
+    iput-boolean v2, v0, Lru1;->b:Z
+
+    iget-object v2, v0, Lru1;->e:Lwmd;
+
+    if-eqz v1, :cond_2
+
+    iget-object v1, v1, Lol1;->l:Ljava/lang/String;
+
+    goto :goto_0
+
+    :cond_2
+    const/4 v1, 0x0
+
+    :goto_0
+    const-string v3, "DIRECT_CONNECTION_TIMEOUT"
+
+    invoke-static {v2, v3, v1}, Lj9a;->d(Lwmd;Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v1, v0, Lru1;->n:Lf21;
+
+    if-eqz v1, :cond_3
+
+    invoke-virtual {v1, v0}, Lf21;->D(Lru1;)V
+
+    :cond_3
+    iget-object v1, v0, Li25;->I:Lt9g;
+
+    new-instance v2, Lswg;
+
+    iget-wide v3, v0, Lru1;->u:J
+
+    const/4 v0, 0x0
+
+    invoke-direct {v2, v3, v4, v0}, Lswg;-><init>(JI)V
+
+    invoke-virtual {v1, v2}, Lt9g;->f(Lswg;)V
+
+    :cond_4
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lg25;->b:Li25;
+
+    iget-object v1, v0, Li25;->C:Ljava/util/HashMap;
+
+    invoke-virtual {v1}, Ljava/util/HashMap;->values()Ljava/util/Collection;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_1
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_5
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ltzb;
+
+    invoke-virtual {v2}, Ltzb;->A()Lorg/webrtc/PeerConnection$IceConnectionState;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v2, v3}, Li25;->Y(Ltzb;Lorg/webrtc/PeerConnection$IceConnectionState;)V
 
     goto :goto_1
 
-    :cond_3
-    move p2, v4
-
-    :goto_1
-    if-eqz v1, :cond_4
-
-    invoke-virtual {v1}, Li25;->a()I
-
-    move-result v1
-
-    goto :goto_2
-
-    :cond_4
-    move v1, v4
-
-    :goto_2
-    invoke-static {p2, v1}, Ljava/lang/Math;->max(II)I
-
-    move-result p2
-
-    iget-object v1, p0, Lg25;->d:Landroid/view/View;
-
-    iget-object v2, p0, Lg25;->e:Landroid/graphics/Rect;
-
-    invoke-virtual {v1, v2}, Landroid/view/View;->getWindowVisibleDisplayFrame(Landroid/graphics/Rect;)V
-
-    if-eqz p2, :cond_5
-
-    neg-int p2, p2
-
-    invoke-virtual {v2, p2, v4}, Landroid/graphics/Rect;->offset(II)V
-
-    invoke-virtual {p1, p2, v4}, Landroid/graphics/Rect;->offset(II)V
-
     :cond_5
-    iget p2, p0, Lg25;->f:I
-
-    invoke-virtual {v2, p2, p2}, Landroid/graphics/Rect;->inset(II)V
-
-    invoke-virtual {v2}, Landroid/graphics/Rect;->centerX()I
-
-    move-result p2
-
-    invoke-virtual {p1}, Landroid/graphics/Rect;->centerX()I
-
-    move-result v1
-
-    const/4 v4, 0x3
-
-    const/4 v5, 0x5
-
-    if-ge p2, v1, :cond_6
-
-    move p2, v5
-
-    goto :goto_3
-
-    :cond_6
-    move p2, v4
-
-    :goto_3
-    invoke-virtual {v2}, Landroid/graphics/Rect;->centerY()I
-
-    move-result v1
-
-    invoke-virtual {p1}, Landroid/graphics/Rect;->centerY()I
-
-    move-result v6
-
-    const/16 v7, 0x30
-
-    const/16 v8, 0x50
-
-    if-ge v1, v6, :cond_7
-
-    move v1, v8
-
-    goto :goto_4
-
-    :cond_7
-    move v1, v7
-
-    :goto_4
-    or-int/2addr p2, v1
-
-    and-int/lit8 v1, p2, 0x5
-
-    if-ne v1, v5, :cond_8
-
-    iget v1, p1, Landroid/graphics/Rect;->right:I
-
-    invoke-virtual {v3}, Landroid/graphics/Rect;->width()I
-
-    move-result v4
-
-    sub-int/2addr v1, v4
-
-    iget v4, v3, Landroid/graphics/Rect;->top:I
-
-    invoke-virtual {v3, v1, v4}, Landroid/graphics/Rect;->offsetTo(II)V
-
-    goto :goto_5
-
-    :cond_8
-    and-int/lit8 v1, p2, 0x3
-
-    if-ne v1, v4, :cond_9
-
-    iget v1, p1, Landroid/graphics/Rect;->left:I
-
-    iget v4, v3, Landroid/graphics/Rect;->top:I
-
-    invoke-virtual {v3, v1, v4}, Landroid/graphics/Rect;->offsetTo(II)V
-
-    :cond_9
-    :goto_5
-    and-int/lit8 v1, p2, 0x50
-
-    iget v4, p0, Lg25;->g:I
-
-    if-ne v1, v8, :cond_a
-
-    iget p2, v3, Landroid/graphics/Rect;->left:I
-
-    iget p1, p1, Landroid/graphics/Rect;->top:I
-
-    invoke-virtual {v3}, Landroid/graphics/Rect;->height()I
-
-    move-result v1
-
-    sub-int/2addr p1, v1
-
-    sub-int/2addr p1, v4
-
-    invoke-virtual {v3, p2, p1}, Landroid/graphics/Rect;->offsetTo(II)V
-
-    goto :goto_6
-
-    :cond_a
-    and-int/2addr p2, v7
-
-    if-ne p2, v7, :cond_b
-
-    iget p2, v3, Landroid/graphics/Rect;->left:I
-
-    iget p1, p1, Landroid/graphics/Rect;->bottom:I
-
-    add-int/2addr p1, v4
-
-    invoke-virtual {v3, p2, p1}, Landroid/graphics/Rect;->offsetTo(II)V
-
-    :cond_b
-    :goto_6
-    invoke-virtual {v2, v3}, Landroid/graphics/Rect;->contains(Landroid/graphics/Rect;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_f
-
-    iget p1, v3, Landroid/graphics/Rect;->left:I
-
-    iget p2, v2, Landroid/graphics/Rect;->left:I
-
-    if-ge p1, p2, :cond_c
-
-    iget p1, v3, Landroid/graphics/Rect;->top:I
-
-    invoke-virtual {v3, p2, p1}, Landroid/graphics/Rect;->offsetTo(II)V
-
-    :cond_c
-    iget p1, v3, Landroid/graphics/Rect;->top:I
-
-    iget p2, v2, Landroid/graphics/Rect;->top:I
-
-    if-ge p1, p2, :cond_d
-
-    iget p1, v3, Landroid/graphics/Rect;->left:I
-
-    invoke-virtual {v3, p1, p2}, Landroid/graphics/Rect;->offsetTo(II)V
-
-    :cond_d
-    iget p1, v3, Landroid/graphics/Rect;->bottom:I
-
-    iget p2, v2, Landroid/graphics/Rect;->bottom:I
-
-    if-le p1, p2, :cond_e
-
-    iget p1, v3, Landroid/graphics/Rect;->left:I
-
-    invoke-virtual {v3}, Landroid/graphics/Rect;->height()I
-
-    move-result v1
-
-    sub-int/2addr p2, v1
-
-    invoke-virtual {v3, p1, p2}, Landroid/graphics/Rect;->offsetTo(II)V
-
-    :cond_e
-    iget p1, v3, Landroid/graphics/Rect;->right:I
-
-    iget p2, v2, Landroid/graphics/Rect;->right:I
-
-    if-le p1, p2, :cond_f
-
-    invoke-virtual {v3}, Landroid/graphics/Rect;->width()I
-
-    move-result p1
-
-    sub-int/2addr p2, p1
-
-    iget p1, v3, Landroid/graphics/Rect;->top:I
-
-    invoke-virtual {v3, p2, p1}, Landroid/graphics/Rect;->offsetTo(II)V
-
-    :cond_f
-    iget p1, v3, Landroid/graphics/Rect;->left:I
-
-    int-to-float p1, p1
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->setX(F)V
-
-    iget p1, v3, Landroid/graphics/Rect;->top:I
-
-    int-to-float p1, p1
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->setY(F)V
-
     return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

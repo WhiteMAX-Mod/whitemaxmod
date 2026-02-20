@@ -2,42 +2,41 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lmg8;
 
-# instance fields
-.field public final a:Llgb;
+
+# static fields
+.field public static final a:Lxv5;
 
 
 # direct methods
-.method public constructor <init>(Llgb;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lxv5;
 
-    iput-object p1, p0, Lxv5;->a:Llgb;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lxv5;->a:Lxv5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lsef;
-    .locals 3
+.method public final getItemId()J
+    .locals 2
 
-    iget-object v0, p0, Lxv5;->a:Llgb;
+    const-wide/high16 v0, -0x8000000000000000L
 
-    invoke-virtual {v0}, Llgb;->E()Lrza;
+    return-wide v0
+.end method
 
-    move-result-object v0
+.method public final m()I
+    .locals 1
 
-    new-instance v1, Lfv5;
+    sget v0, Lkeb;->s:I
 
-    const/16 v2, 0xc
-
-    invoke-direct {v1, v2}, Lfv5;-><init>(I)V
-
-    invoke-virtual {v0, v1}, Lkef;->h(Lcr6;)Lsef;
-
-    move-result-object v0
-
-    return-object v0
+    return v0
 .end method

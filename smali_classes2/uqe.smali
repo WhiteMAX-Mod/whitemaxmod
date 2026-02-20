@@ -1,215 +1,209 @@
 .class public final Luqe;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Lxqe;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/devmenu/tools/server/ServerHostBottomSheet;
+.field public final a:Lcpg;
 
-.field public final synthetic Y:Landroid/view/View;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final b:I
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/devmenu/tools/server/ServerHostBottomSheet;Landroid/view/View;)V
-    .locals 0
+.method public constructor <init>(Lcpg;)V
+    .locals 1
 
-    iput-object p2, p0, Luqe;->X:Lone/me/devmenu/tools/server/ServerHostBottomSheet;
+    sget v0, Lflb;->g:I
 
-    iput-object p3, p0, Luqe;->Y:Landroid/view/View;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    iput-object p1, p0, Luqe;->a:Lcpg;
 
-    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    sget p1, Lelb;->a:I
+
+    iput p1, p0, Luqe;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a()I
+    .locals 1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/4 v0, 0x4
 
-    invoke-virtual {p0, p1, p2}, Luqe;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Luqe;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Luqe;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
+    return v0
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 3
 
-    new-instance v0, Luqe;
+    const/4 v0, 0x1
 
-    iget-object v1, p0, Luqe;->X:Lone/me/devmenu/tools/server/ServerHostBottomSheet;
+    if-ne p0, p1, :cond_0
 
-    iget-object v2, p0, Luqe;->Y:Landroid/view/View;
+    return v0
 
-    invoke-direct {v0, p2, v1, v2}, Luqe;-><init>(Lkotlin/coroutines/Continuation;Lone/me/devmenu/tools/server/ServerHostBottomSheet;Landroid/view/View;)V
+    :cond_0
+    instance-of v1, p1, Luqe;
 
-    iput-object p1, v0, Luqe;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 10
-
-    iget-object v0, p0, Luqe;->X:Lone/me/devmenu/tools/server/ServerHostBottomSheet;
-
-    iget-object v1, v0, Lone/me/devmenu/tools/server/ServerHostBottomSheet;->I0:Ljld;
-
-    iget-object v2, v0, Lone/me/devmenu/tools/server/ServerHostBottomSheet;->G0:Ljld;
-
-    iget-object v3, v0, Lone/me/devmenu/tools/server/ServerHostBottomSheet;->E0:Landroid/transition/AutoTransition;
-
-    iget-object v4, p0, Luqe;->o:Ljava/lang/Object;
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    check-cast v4, Lkb7;
-
-    instance-of p1, v4, Lhb7;
-
-    const/4 v5, 0x1
-
-    if-eqz p1, :cond_0
-
-    invoke-static {v0}, Lg3j;->d(La94;)V
-
-    invoke-virtual {v0, v5}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->F0(Z)V
+    if-nez v1, :cond_1
 
     goto :goto_0
 
-    :cond_0
-    instance-of p1, v4, Lib7;
-
-    const/4 v6, 0x2
-
-    const/4 v7, 0x0
-
-    iget-object v8, p0, Luqe;->Y:Landroid/view/View;
-
-    const/16 v9, 0x8
-
-    if-eqz p1, :cond_2
-
-    check-cast v8, Landroid/view/ViewGroup;
-
-    invoke-static {v8, v3}, Landroid/transition/TransitionManager;->beginDelayedTransition(Landroid/view/ViewGroup;Landroid/transition/Transition;)V
-
-    sget-object p1, Lone/me/devmenu/tools/server/ServerHostBottomSheet;->L0:[Lz28;
-
-    aget-object v3, p1, v7
-
-    invoke-interface {v2, v0, v3}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Landroidx/recyclerview/widget/RecyclerView;
-
-    invoke-virtual {v2, v9}, Landroid/view/View;->setVisibility(I)V
-
-    aget-object v2, p1, v6
-
-    invoke-interface {v1, v0, v2}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/widget/LinearLayout;
-
-    invoke-virtual {v1, v7}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object v1, v0, Lone/me/devmenu/tools/server/ServerHostBottomSheet;->J0:Ljld;
-
-    const/4 v2, 0x3
-
-    aget-object p1, p1, v2
-
-    invoke-interface {v1, v0, p1}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lwlb;
-
-    check-cast v4, Lib7;
-
-    iget-object v0, v4, Lib7;->a:Ljava/lang/String;
-
-    if-nez v0, :cond_1
-
-    const-string v0, ""
-
     :cond_1
-    invoke-virtual {p1, v0}, Lwlb;->setText(Ljava/lang/CharSequence;)V
+    check-cast p1, Luqe;
+
+    iget-object v1, p0, Luqe;->a:Lcpg;
+
+    iget-object p1, p1, Luqe;->a:Lcpg;
+
+    invoke-virtual {v1, p1}, Lcpg;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
 
     goto :goto_0
 
     :cond_2
-    instance-of p1, v4, Ljb7;
+    sget-wide v1, Lflb;->a:J
+
+    cmp-long p1, v1, v1
 
     if-eqz p1, :cond_3
 
-    check-cast v8, Landroid/view/ViewGroup;
-
-    invoke-static {v8, v3}, Landroid/transition/TransitionManager;->beginDelayedTransition(Landroid/view/ViewGroup;Landroid/transition/Transition;)V
-
-    sget-object p1, Lone/me/devmenu/tools/server/ServerHostBottomSheet;->L0:[Lz28;
-
-    aget-object v3, p1, v7
-
-    invoke-interface {v2, v0, v3}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Landroidx/recyclerview/widget/RecyclerView;
-
-    invoke-virtual {v2, v9}, Landroid/view/View;->setVisibility(I)V
-
-    aget-object v2, p1, v6
-
-    invoke-interface {v1, v0, v2}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/widget/LinearLayout;
-
-    invoke-virtual {v1, v9}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object v1, v0, Lone/me/devmenu/tools/server/ServerHostBottomSheet;->H0:Ljld;
-
-    aget-object p1, p1, v5
-
-    invoke-interface {v1, v0, p1}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lhgb;
-
-    invoke-virtual {p1, v7}, Landroid/view/View;->setVisibility(I)V
-
     :goto_0
-    sget-object p1, Lb3h;->a:Lb3h;
+    const/4 p1, 0x0
 
-    return-object p1
+    return p1
 
     :cond_3
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+    return v0
+.end method
 
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+.method public final g()Z
+    .locals 1
 
-    throw p1
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final getItemId()J
+    .locals 2
+
+    sget-wide v0, Lflb;->a:J
+
+    return-wide v0
+.end method
+
+.method public final getTitle()Lhpg;
+    .locals 1
+
+    iget-object v0, p0, Luqe;->a:Lcpg;
+
+    return-object v0
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    iget-object v0, p0, Luqe;->a:Lcpg;
+
+    iget v0, v0, Lcpg;->c:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    const/4 v2, 0x1
+
+    invoke-static {v2, v0, v1}, Ljye;->d(III)I
+
+    move-result v0
+
+    sget-wide v2, Lflb;->a:J
+
+    invoke-static {v0, v1, v2, v3}, Leni;->a(IIJ)I
+
+    move-result v0
+
+    const/4 v1, 0x4
+
+    invoke-static {v1}, Ly12;->t(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final m()I
+    .locals 1
+
+    iget v0, p0, Luqe;->b:I
+
+    return v0
+.end method
+
+.method public final t()I
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    sget-wide v0, Lflb;->a:J
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "Bottom(title="
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v3, p0, Luqe;->a:Lcpg;
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v3, ", sectionId=1, itemId="
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v0, ", sectionItemType="
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/4 v0, 0x4
+
+    invoke-static {v0}, Ln8d;->o(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, ")"
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -1,64 +1,64 @@
-.class public final Lhh9;
+.class public abstract Lhh9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lih9;
-
-
-# static fields
-.field public static final a:Lhh9;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lhh9;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lhh9;->a:Lhh9;
-
-    return-void
-.end method
+.implements Lmg8;
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final h(Lmg8;)Z
+    .locals 4
 
-    const/4 v0, 0x1
+    instance-of v0, p1, Lhh9;
 
-    if-ne p0, p1, :cond_0
+    if-nez v0, :cond_0
 
-    return v0
+    goto :goto_0
 
     :cond_0
-    instance-of p1, p1, Lhh9;
+    invoke-virtual {p0}, Lhh9;->j()J
+
+    move-result-wide v0
+
+    check-cast p1, Lhh9;
+
+    invoke-virtual {p1}, Lhh9;->j()J
+
+    move-result-wide v2
+
+    cmp-long v0, v0, v2
+
+    if-nez v0, :cond_1
+
+    invoke-virtual {p0}, Lhh9;->i()J
+
+    move-result-wide v0
+
+    invoke-virtual {p1}, Lhh9;->i()J
+
+    move-result-wide v2
+
+    cmp-long p1, v0, v2
 
     if-nez p1, :cond_1
 
-    const/4 p1, 0x0
+    const/4 p1, 0x1
 
     return p1
 
     :cond_1
-    return v0
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
 .end method
 
-.method public final hashCode()I
-    .locals 1
-
-    const v0, -0x27fcdd22
-
-    return v0
+.method public abstract i()J
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+.method public abstract j()J
+.end method
 
-    const-string v0, "OnSelfClicked"
-
-    return-object v0
+.method public abstract l()Z
 .end method

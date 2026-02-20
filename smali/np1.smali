@@ -1,166 +1,168 @@
-.class public final synthetic Lnp1;
-.super Ljava/lang/Object;
+.class public final Lnp1;
+.super Lpp1;
 .source "SourceFile"
-
-# interfaces
-.implements Llq6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final D:Lvo1;
 
-.field public final synthetic b:Z
+.field public final E:Lhpg;
 
-.field public final synthetic c:Ljava/lang/Object;
-
-.field public final synthetic d:Ljava/lang/Object;
-
-.field public final synthetic o:Ljava/lang/Object;
+.field public final F:Ljava/lang/Integer;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;Ljava/lang/Object;ZLjava/lang/Object;I)V
-    .locals 0
+.method public constructor <init>(Lhpg;Ljava/lang/Integer;)V
+    .locals 1
 
-    iput p5, p0, Lnp1;->a:I
+    invoke-direct {p0}, Lpp1;-><init>()V
 
-    iput-object p1, p0, Lnp1;->c:Ljava/lang/Object;
+    sget-object v0, Lvo1;->a:Lvo1;
 
-    iput-object p2, p0, Lnp1;->d:Ljava/lang/Object;
+    iput-object v0, p0, Lnp1;->D:Lvo1;
 
-    iput-object p4, p0, Lnp1;->o:Ljava/lang/Object;
+    iput-object p1, p0, Lnp1;->E:Lhpg;
 
-    iput-boolean p3, p0, Lnp1;->b:Z
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lnp1;->F:Ljava/lang/Integer;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 6
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget v0, p0, Lnp1;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, p0, Lnp1;->c:Ljava/lang/Object;
+    return v0
 
-    check-cast v0, Lxl6;
+    :cond_0
+    instance-of v1, p1, Lnp1;
 
-    iget-object v1, p0, Lnp1;->d:Ljava/lang/Object;
+    const/4 v2, 0x0
 
-    check-cast v1, Lwnb;
+    if-nez v1, :cond_1
 
-    iget-object v2, p0, Lnp1;->o:Ljava/lang/Object;
+    return v2
 
-    check-cast v2, Lshg;
+    :cond_1
+    check-cast p1, Lnp1;
 
-    iget-object v0, v0, Lxl6;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+    iget-object v1, p0, Lnp1;->D:Lvo1;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+    iget-object v3, p1, Lnp1;->D:Lvo1;
 
-    move-result-object v0
+    if-eq v1, v3, :cond_2
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    return v2
 
-    move-result v3
+    :cond_2
+    iget-object v1, p0, Lnp1;->E:Lhpg;
 
-    if-eqz v3, :cond_0
+    iget-object v3, p1, Lnp1;->E:Lhpg;
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-static {v1, v3}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result-object v3
+    move-result v1
 
-    check-cast v3, Leob;
+    if-nez v1, :cond_3
 
-    iget-boolean v4, p0, Lnp1;->b:Z
+    return v2
 
-    invoke-interface {v3, v1, v2, v4}, Leob;->d(Lwnb;Lshg;Z)V
+    :cond_3
+    iget-object v1, p0, Lnp1;->F:Ljava/lang/Integer;
+
+    iget-object p1, p1, Lnp1;->F:Ljava/lang/Integer;
+
+    invoke-static {v1, p1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    return v2
+
+    :cond_4
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-object v0, p0, Lnp1;->D:Lvo1;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lnp1;->E:Lhpg;
+
+    invoke-static {v0, v1, v2}, Lkb0;->c(IILhpg;)I
+
+    move-result v0
+
+    iget-object v1, p0, Lnp1;->F:Ljava/lang/Integer;
+
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x0
 
     goto :goto_0
 
     :cond_0
-    sget-object v0, Lb3h;->a:Lb3h;
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
-    return-object v0
+    move-result v1
 
-    :pswitch_0
-    iget-object v0, p0, Lnp1;->c:Ljava/lang/Object;
+    :goto_0
+    add-int/2addr v0, v1
 
-    check-cast v0, Lsq1;
+    return v0
+.end method
 
-    iget-object v0, v0, Lsq1;->c:Lnx1;
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    iget-object v1, p0, Lnp1;->d:Ljava/lang/Object;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    check-cast v1, Lzv8;
+    const-string v1, "ShowSnackbar(priority="
 
-    iget-object v2, p0, Lnp1;->o:Ljava/lang/Object;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    check-cast v2, Lzv8;
+    iget-object v1, p0, Lnp1;->D:Lvo1;
 
-    const/4 v3, 0x0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const/4 v4, 0x1
+    const-string v1, ", textSource="
 
-    sget-object v5, Lzv8;->b:Lzv8;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-ne v1, v5, :cond_1
+    iget-object v1, p0, Lnp1;->E:Lhpg;
 
-    move v1, v4
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    goto :goto_1
+    const-string v1, ", icon="
 
-    :cond_1
-    move v1, v3
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :goto_1
-    if-ne v2, v5, :cond_2
+    iget-object v1, p0, Lnp1;->F:Ljava/lang/Integer;
 
-    move v3, v4
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    :cond_2
-    invoke-virtual {v0, v1}, Lnx1;->g(Z)V
+    const-string v1, ")"
 
-    invoke-virtual {v0, v3}, Lnx1;->h(Z)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-boolean v1, p0, Lnp1;->b:Z
-
-    if-eqz v1, :cond_3
-
-    goto :goto_2
-
-    :cond_3
-    const/4 v4, 0x2
-
-    :goto_2
-    iget-object v0, v0, Lnx1;->e:Lw51;
-
-    invoke-virtual {v0}, Lw51;->a()Lru/ok/android/externcalls/sdk/video/CameraManager;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    if-eqz v0, :cond_4
-
-    new-instance v1, Lu42;
-
-    invoke-direct {v1, v4}, Lu42;-><init>(I)V
-
-    invoke-interface {v0, v1}, Lru/ok/android/externcalls/sdk/video/CameraManager;->switchCamera(Lu42;)V
-
-    :cond_4
-    sget-object v0, Lb3h;->a:Lb3h;
-
     return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

@@ -1,265 +1,488 @@
-.class public final synthetic Lh71;
+.class public final Lh71;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lnq6;
+.implements Lb96;
 
 
 # instance fields
-.field public final synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Ljava/io/Serializable;
-
 .field public final synthetic a:I
 
-.field public final synthetic b:J
+.field public final synthetic b:Ljava/lang/Object;
 
 .field public final synthetic c:Ljava/lang/Object;
 
 .field public final synthetic d:Ljava/lang/Object;
 
-.field public final synthetic o:Ljava/lang/Object;
-
 
 # direct methods
-.method public synthetic constructor <init>(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+.method public constructor <init>(Lhxf;Lys6;Lur7;)V
     .locals 1
 
-    .line 1
-    const/4 v0, 0x1
+    const/4 v0, 0x6
 
     iput v0, p0, Lh71;->a:I
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lh71;->b:J
+    .line 3
+    iput-object p1, p0, Lh71;->b:Ljava/lang/Object;
 
-    iput-object p3, p0, Lh71;->c:Ljava/lang/Object;
+    check-cast p2, Lpdg;
 
-    iput-object p4, p0, Lh71;->d:Ljava/lang/Object;
+    iput-object p2, p0, Lh71;->c:Ljava/lang/Object;
 
-    iput-object p5, p0, Lh71;->o:Ljava/lang/Object;
-
-    iput-object p6, p0, Lh71;->X:Ljava/lang/Object;
-
-    iput-object p7, p0, Lh71;->Y:Ljava/io/Serializable;
+    iput-object p3, p0, Lh71;->d:Ljava/lang/Object;
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lorg/json/JSONObject;JLcnf;Lk71;Lrx1;Lsy0;)V
+.method public constructor <init>(Ljava/lang/Object;Lb96;Lat6;)V
     .locals 1
 
-    .line 2
-    const/4 v0, 0x0
+    const/4 v0, 0x2
 
     iput v0, p0, Lh71;->a:I
 
+    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lh71;->c:Ljava/lang/Object;
+    .line 5
+    iput-object p1, p0, Lh71;->b:Ljava/lang/Object;
 
-    iput-wide p2, p0, Lh71;->b:J
+    iput-object p2, p0, Lh71;->c:Ljava/lang/Object;
 
-    iput-object p4, p0, Lh71;->d:Ljava/lang/Object;
+    check-cast p3, Lpdg;
 
-    iput-object p5, p0, Lh71;->o:Ljava/lang/Object;
+    iput-object p3, p0, Lh71;->d:Ljava/lang/Object;
 
-    iput-object p6, p0, Lh71;->X:Ljava/lang/Object;
+    return-void
+.end method
 
-    iput-object p7, p0, Lh71;->Y:Ljava/io/Serializable;
+.method public synthetic constructor <init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    .locals 0
+
+    .line 1
+    iput p4, p0, Lh71;->a:I
+
+    iput-object p1, p0, Lh71;->b:Ljava/lang/Object;
+
+    iput-object p2, p0, Lh71;->c:Ljava/lang/Object;
+
+    iput-object p3, p0, Lh71;->d:Ljava/lang/Object;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
+.method public final e(Ld96;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 10
 
     iget v0, p0, Lh71;->a:I
 
+    const/4 v1, 0x1
+
+    const/4 v2, 0x4
+
+    const/4 v3, 0x2
+
+    const/4 v4, 0x0
+
+    sget-object v5, Lmah;->a:Lmah;
+
+    iget-object v6, p0, Lh71;->d:Ljava/lang/Object;
+
+    iget-object v7, p0, Lh71;->c:Ljava/lang/Object;
+
+    sget-object v8, Lod4;->a:Lod4;
+
+    iget-object v9, p0, Lh71;->b:Ljava/lang/Object;
+
     packed-switch v0, :pswitch_data_0
 
-    iget-wide v0, p0, Lh71;->b:J
+    check-cast v9, Lhxf;
 
-    iget-object v2, p0, Lh71;->c:Ljava/lang/Object;
+    new-instance v0, Lx51;
 
-    check-cast v2, Ljava/lang/String;
+    check-cast v7, Lj88;
 
-    iget-object v3, p0, Lh71;->d:Ljava/lang/Object;
+    check-cast v6, Lzyh;
 
-    check-cast v3, Ljava/lang/String;
+    invoke-direct {v0, p1, v7, v6}, Lx51;-><init>(Ld96;Lj88;Lzyh;)V
 
-    iget-object v4, p0, Lh71;->o:Ljava/lang/Object;
+    invoke-virtual {v9, v0, p2}, Lhxf;->e(Ld96;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    check-cast v4, Ljava/lang/String;
+    return-object v8
 
-    iget-object v5, p0, Lh71;->X:Ljava/lang/Object;
+    :pswitch_0
+    check-cast v9, Lcee;
 
-    check-cast v5, Ljava/lang/String;
+    new-instance v0, Llz;
 
-    iget-object v6, p0, Lh71;->Y:Ljava/io/Serializable;
+    check-cast v7, Lheh;
 
-    check-cast v6, Ljava/lang/String;
+    check-cast v6, Lefh;
 
-    check-cast p1, Lf7e;
+    const/16 v1, 0x13
 
-    const-string v7, "INSERT OR REPLACE INTO contact_title (docid, link, allNormalizedTitles, allOriginalTitles, allNormalizedTitlesWithoutEmoji, allOriginalTitlesWithoutEmoji) VALUES(?, ?, ?, ?, ?, ?)"
+    invoke-direct {v0, p1, v7, v6, v1}, Llz;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
-    invoke-interface {p1, v7}, Lf7e;->x0(Ljava/lang/String;)Lk7e;
+    invoke-virtual {v9, v0, p2}, Lcee;->e(Ld96;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 
-    const/4 v7, 0x1
+    if-ne p1, v8, :cond_0
 
-    :try_start_0
-    invoke-interface {p1, v7, v0, v1}, Lk7e;->b(IJ)V
+    move-object v5, p1
 
-    const/4 v0, 0x2
+    :cond_0
+    return-object v5
 
-    invoke-interface {p1, v0, v2}, Lk7e;->G(ILjava/lang/String;)V
+    :pswitch_1
+    check-cast v9, Lba3;
 
-    const/4 v0, 0x3
+    new-instance v0, Llz;
 
-    invoke-interface {p1, v0, v3}, Lk7e;->G(ILjava/lang/String;)V
+    check-cast v7, Lq4a;
 
-    const/4 v0, 0x4
+    check-cast v6, Lime;
 
-    invoke-interface {p1, v0, v4}, Lk7e;->G(ILjava/lang/String;)V
+    const/16 v1, 0xf
 
-    const/4 v0, 0x5
+    invoke-direct {v0, p1, v7, v6, v1}, Llz;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
-    if-nez v5, :cond_0
+    invoke-virtual {v9, v0, p2}, Lba3;->e(Ld96;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    invoke-interface {p1, v0}, Lk7e;->e(I)V
+    move-result-object p1
+
+    if-ne p1, v8, :cond_1
+
+    move-object v5, p1
+
+    :cond_1
+    return-object v5
+
+    :pswitch_2
+    check-cast v9, Lb96;
+
+    new-instance v0, Llz;
+
+    check-cast v7, Lnd4;
+
+    check-cast v6, Lur7;
+
+    const/16 v1, 0xd
+
+    invoke-direct {v0, p1, v7, v6, v1}, Llz;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+
+    invoke-interface {v9, v0, p2}, Lb96;->e(Ld96;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v8, :cond_2
+
+    move-object v5, p1
+
+    :cond_2
+    return-object v5
+
+    :pswitch_3
+    check-cast v9, Lb96;
+
+    new-instance v0, Llz;
+
+    check-cast v7, Lpdg;
+
+    check-cast v6, Lur7;
+
+    invoke-direct {v0, p1, v7, v6}, Llz;-><init>(Ld96;Lys6;Lur7;)V
+
+    invoke-interface {v9, v0, p2}, Lb96;->e(Ld96;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v8, :cond_3
+
+    move-object v5, p1
+
+    :cond_3
+    return-object v5
+
+    :pswitch_4
+    check-cast v9, [Lb96;
+
+    new-instance v0, Lqg1;
+
+    invoke-direct {v0, v9, v2}, Lqg1;-><init>([Lb96;I)V
+
+    new-instance v1, Lka6;
+
+    check-cast v7, Ljava/util/List;
+
+    check-cast v6, Lp37;
+
+    invoke-direct {v1, v4, v7, v6}, Lka6;-><init>(Lkotlin/coroutines/Continuation;Ljava/util/List;Lp37;)V
+
+    invoke-static {p1, v0, v1, p2, v9}, Lrrj;->a(Ld96;Lis6;Lat6;Lkotlin/coroutines/Continuation;[Lb96;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v8, :cond_4
+
+    move-object v5, p1
+
+    :cond_4
+    return-object v5
+
+    :pswitch_5
+    check-cast v9, Lb96;
+
+    new-instance v0, Llz;
+
+    check-cast v7, Lm8e;
+
+    check-cast v6, Lks6;
+
+    const/16 v1, 0xb
+
+    invoke-direct {v0, p1, v7, v6, v1}, Llz;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+
+    invoke-interface {v9, v0, p2}, Lb96;->e(Ld96;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v8, :cond_5
+
+    move-object v5, p1
+
+    :cond_5
+    return-object v5
+
+    :pswitch_6
+    check-cast v9, Lb96;
+
+    check-cast v7, Lb96;
+
+    new-array v0, v3, [Lb96;
+
+    const/4 v3, 0x0
+
+    aput-object v9, v0, v3
+
+    aput-object v7, v0, v1
+
+    sget-object v1, Lxa4;->o:Lxa4;
+
+    new-instance v3, Lwq1;
+
+    check-cast v6, Lat6;
+
+    invoke-direct {v3, v6, v4, v2}, Lwq1;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
+
+    invoke-static {p1, v1, v3, p2, v0}, Lrrj;->a(Ld96;Lis6;Lat6;Lkotlin/coroutines/Continuation;[Lb96;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v8, :cond_6
+
+    move-object v5, p1
+
+    :cond_6
+    return-object v5
+
+    :pswitch_7
+    instance-of v0, p2, Lec6;
+
+    if-eqz v0, :cond_7
+
+    move-object v0, p2
+
+    check-cast v0, Lec6;
+
+    iget v2, v0, Lec6;->o:I
+
+    const/high16 v6, -0x80000000
+
+    and-int v7, v2, v6
+
+    if-eqz v7, :cond_7
+
+    sub-int/2addr v2, v6
+
+    iput v2, v0, Lec6;->o:I
 
     goto :goto_0
 
-    :catchall_0
-    move-exception v0
+    :cond_7
+    new-instance v0, Lec6;
 
-    goto :goto_2
-
-    :cond_0
-    invoke-interface {p1, v0, v5}, Lk7e;->G(ILjava/lang/String;)V
+    invoke-direct {v0, p0, p2}, Lec6;-><init>(Lh71;Lkotlin/coroutines/Continuation;)V
 
     :goto_0
-    const/4 v0, 0x6
+    iget-object p2, v0, Lec6;->d:Ljava/lang/Object;
 
-    if-nez v6, :cond_1
+    iget v2, v0, Lec6;->o:I
 
-    invoke-interface {p1, v0}, Lk7e;->e(I)V
+    if-eqz v2, :cond_a
+
+    if-eq v2, v1, :cond_9
+
+    if-ne v2, v3, :cond_8
+
+    invoke-static {p2}, Lbvj;->i(Ljava/lang/Object;)V
+
+    goto :goto_3
+
+    :cond_8
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p2, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_9
+    iget-object p1, v0, Lec6;->s0:Lyyd;
+
+    iget-object v1, v0, Lec6;->Z:Ld96;
+
+    iget-object v2, v0, Lec6;->Y:Lh71;
+
+    invoke-static {p2}, Lbvj;->i(Ljava/lang/Object;)V
 
     goto :goto_1
 
-    :cond_1
-    invoke-interface {p1, v0, v6}, Lk7e;->G(ILjava/lang/String;)V
+    :cond_a
+    invoke-static {p2}, Lbvj;->i(Ljava/lang/Object;)V
+
+    new-instance p2, Lyyd;
+
+    invoke-direct {p2}, Ljava/lang/Object;-><init>()V
+
+    iput-object v9, p2, Lyyd;->a:Ljava/lang/Object;
+
+    iput-object p0, v0, Lec6;->Y:Lh71;
+
+    iput-object p1, v0, Lec6;->Z:Ld96;
+
+    iput-object p2, v0, Lec6;->s0:Lyyd;
+
+    iput v1, v0, Lec6;->o:I
+
+    invoke-interface {p1, v9, v0}, Ld96;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    if-ne v1, v8, :cond_b
+
+    goto :goto_2
+
+    :cond_b
+    move-object v2, p0
+
+    move-object v1, p1
+
+    move-object p1, p2
 
     :goto_1
-    invoke-interface {p1}, Lk7e;->t0()Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    iget-object p2, v2, Lh71;->c:Ljava/lang/Object;
 
-    invoke-interface {p1}, Ljava/lang/AutoCloseable;->close()V
+    check-cast p2, Lb96;
 
-    sget-object p1, Lb3h;->a:Lb3h;
+    new-instance v6, Llz;
 
-    return-object p1
+    iget-object v2, v2, Lh71;->d:Ljava/lang/Object;
+
+    check-cast v2, Lpdg;
+
+    invoke-direct {v6, p1, v2, v1}, Llz;-><init>(Lyyd;Lat6;Ld96;)V
+
+    iput-object v4, v0, Lec6;->Y:Lh71;
+
+    iput-object v4, v0, Lec6;->Z:Ld96;
+
+    iput-object v4, v0, Lec6;->s0:Lyyd;
+
+    iput v3, v0, Lec6;->o:I
+
+    invoke-interface {p2, v6, v0}, Lb96;->e(Ld96;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v8, :cond_c
 
     :goto_2
-    invoke-interface {p1}, Ljava/lang/AutoCloseable;->close()V
+    move-object v5, v8
 
-    throw v0
+    :cond_c
+    :goto_3
+    return-object v5
 
-    :pswitch_0
-    iget-object v0, p0, Lh71;->c:Ljava/lang/Object;
+    :pswitch_8
+    check-cast v9, Lb96;
 
-    check-cast v0, Lorg/json/JSONObject;
+    new-instance v0, Llz;
 
-    iget-object v1, p0, Lh71;->d:Ljava/lang/Object;
+    check-cast v7, Lji8;
 
-    check-cast v1, Lcnf;
+    check-cast v6, Landroid/content/Context;
 
-    iget-object v2, p0, Lh71;->o:Ljava/lang/Object;
+    const/4 v1, 0x6
 
-    check-cast v2, Lk71;
+    invoke-direct {v0, p1, v7, v6, v1}, Llz;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
-    iget-object v3, p0, Lh71;->X:Ljava/lang/Object;
-
-    check-cast v3, Lrx1;
-
-    iget-object v4, p0, Lh71;->Y:Ljava/io/Serializable;
-
-    check-cast v4, Lsy0;
-
-    check-cast p1, Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;
-
-    invoke-virtual {v0}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;->setPayload(Ljava/lang/String;)Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;
+    invoke-interface {v9, v0, p2}, Lb96;->e(Ld96;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 
-    iget-wide v5, p0, Lh71;->b:J
+    if-ne p1, v8, :cond_d
 
-    invoke-static {v5, v6}, Llub;->b(J)Lru/ok/android/externcalls/sdk/id/ParticipantId;
+    move-object v5, p1
 
-    move-result-object v0
+    :cond_d
+    return-object v5
 
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setMyId(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
+    :pswitch_9
+    check-cast v9, Li20;
 
-    move-result-object p1
+    new-instance v0, Llz;
 
-    check-cast p1, Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;
+    check-cast v7, Lk71;
 
-    iget-boolean v0, v1, Lcnf;->b:Z
+    check-cast v6, Lte2;
 
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setStartWithVideo(Z)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
+    invoke-direct {v0, p1, v7, v6, v3}, Llz;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
-    move-result-object p1
-
-    check-cast p1, Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;
-
-    iget-object v0, v2, Lk71;->b:Lo58;
-
-    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lvy1;
-
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setEventListener(Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
+    invoke-virtual {v9, v0, p2}, Li20;->e(Ld96;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;
+    if-ne p1, v8, :cond_e
 
-    invoke-virtual {p1, v3}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setOnPrepared(Lnq6;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
+    move-object v5, p1
 
-    move-result-object p1
-
-    check-cast p1, Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;
-
-    invoke-virtual {p1, v4}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setOnError(Lnq6;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
-
-    move-result-object p1
-
-    check-cast p1, Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;
-
-    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;->build()Lru/ok/android/externcalls/sdk/factory/CreateConfParams;
-
-    move-result-object p1
-
-    return-object p1
+    :cond_e
+    return-object v5
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

@@ -1,367 +1,224 @@
 .class public final Lhdg;
-.super Ljava/lang/Object;
+.super Lko;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic b:I
+# interfaces
+.implements Lokg;
+.implements Lw2c;
 
 
 # instance fields
-.field public final a:Llcg;
+.field public final d:J
+
+.field public final e:J
+
+.field public final f:Z
 
 
 # direct methods
-.method public constructor <init>(Llcg;)V
+.method public constructor <init>(JJZJ)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Lko;-><init>(J)V
 
-    iput-object p1, p0, Lhdg;->a:Llcg;
+    iput-wide p3, p0, Lhdg;->d:J
+
+    iput-wide p6, p0, Lhdg;->e:J
+
+    iput-boolean p5, p0, Lhdg;->f:Z
 
     return-void
 .end method
 
-.method public static a(Llcg;Lfdg;)J
-    .locals 7
-
-    sget-object v0, Lc5j;->a:Ledb;
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v1, Lkk8;->d:Lkk8;
-
-    invoke-virtual {v0, v1}, Ledb;->b(Lkk8;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "execute "
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    const/4 v3, 0x0
-
-    const-string v4, "hdg"
-
-    invoke-virtual {v0, v1, v4, v2, v3}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
-    :goto_0
-    iget-boolean v0, p1, Lfdg;->b:Z
-
-    if-eqz v0, :cond_3
-
-    iget-object v3, p1, Lfdg;->a:Lvm;
-
-    iget-wide v4, p1, Lfdg;->d:J
-
-    iget v6, p1, Lfdg;->e:I
-
-    move-object v2, p0
-
-    check-cast v2, Lrcg;
-
-    instance-of p0, v3, Lb0c;
-
-    if-eqz p0, :cond_2
-
-    iget-object p0, v2, Lrcg;->t0:Lo58;
-
-    invoke-interface {p0}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lyab;
-
-    invoke-virtual {p0}, Lyab;->c()Ljava/util/concurrent/ExecutorService;
-
-    move-result-object p0
-
-    new-instance v1, Lo22;
-
-    invoke-direct/range {v1 .. v6}, Lo22;-><init>(Lrcg;Lvm;JI)V
-
-    invoke-interface {p0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
-    iget-wide p0, v3, Lvm;->a:J
-
-    return-wide p0
-
-    :cond_2
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string p1, "task must be instance of PersistableTask"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_3
-    iget-object v0, p1, Lfdg;->a:Lvm;
-
-    move-object v1, v0
-
-    check-cast v1, Ledg;
-
-    iget-boolean p1, p1, Lfdg;->c:Z
-
-    check-cast p0, Lrcg;
-
-    invoke-virtual {p0, v0, v1, p1}, Lrcg;->b(Lvm;Ledg;Z)J
-
-    move-result-wide p0
-
-    return-wide p0
-.end method
-
-.method public static synthetic c(Lhdg;Lvm;ZI)J
-    .locals 8
-
-    and-int/lit8 v0, p3, 0x2
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    move v4, v1
-
-    goto :goto_0
-
-    :cond_0
-    move v4, p2
-
-    :goto_0
-    and-int/lit8 p2, p3, 0x8
-
-    if-eqz p2, :cond_1
-
-    :goto_1
-    move v7, v1
-
-    goto :goto_2
-
-    :cond_1
-    const/4 v1, 0x1
-
-    goto :goto_1
-
-    :goto_2
-    const-wide/16 v5, 0x0
-
-    move-object v2, p0
-
-    move-object v3, p1
-
-    invoke-virtual/range {v2 .. v7}, Lhdg;->b(Lvm;ZJI)J
-
-    move-result-wide p0
-
-    return-wide p0
-.end method
-
 
 # virtual methods
-.method public final b(Lvm;ZJI)J
+.method public final c(Lujg;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final d(Lcjg;)V
+    .locals 0
+
+    iget-object p1, p1, Lcjg;->b:Ljava/lang/String;
+
+    invoke-static {p1}, Llxj;->a(Ljava/lang/String;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    invoke-virtual {p0}, Lhdg;->g()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final f()I
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final g()V
     .locals 13
 
-    sget-object v0, Lkk8;->d:Lkk8;
+    invoke-virtual {p0}, Lko;->u()Lnmg;
 
-    sget-object v1, Lc5j;->a:Ledb;
+    move-result-object v0
+
+    iget-wide v1, p0, Lko;->a:J
+
+    invoke-virtual {v0, v1, v2}, Lnmg;->d(J)V
+
+    invoke-virtual {p0}, Lko;->o()Lci2;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v1, Luh2;
 
     const/4 v2, 0x0
 
-    const-string v3, "hdg"
+    const/4 v3, 0x0
 
-    if-nez v1, :cond_1
+    invoke-direct {v1, v3, v2}, Luh2;-><init>(ZI)V
 
-    :cond_0
-    move-wide/from16 v10, p3
+    iget-wide v4, p0, Lhdg;->d:J
 
-    move/from16 v12, p5
+    invoke-virtual {v0, v4, v5, v3, v1}, Lci2;->s(JZLuy3;)Lte2;
 
-    goto :goto_0
+    invoke-virtual {p0}, Lko;->n()Lqy0;
 
-    :cond_1
-    invoke-virtual {v1, v0}, Ledb;->b(Lkk8;)Z
+    move-result-object v0
 
-    move-result v4
+    new-instance v6, Lrc3;
 
-    if-eqz v4, :cond_0
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    new-instance v4, Ljava/lang/StringBuilder;
+    move-result-object v1
 
-    const-string v5, "executeAndSave "
+    invoke-static {v1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v7
 
-    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const/4 v11, 0x0
 
-    const-string v5, ", "
+    const/16 v12, 0x7c
 
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v8, 0x0
 
-    invoke-virtual {v4, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    const/4 v9, 0x0
 
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v10, 0x0
 
-    move-wide/from16 v10, p3
+    invoke-direct/range {v6 .. v12}, Lrc3;-><init>(Ljava/util/Collection;ZZLvx4;Ljnc;I)V
 
-    invoke-virtual {v4, v10, v11}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v6}, Lqy0;->c(Ljava/lang/Object;)V
 
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p0}, Lko;->n()Lqy0;
 
-    move/from16 v12, p5
+    move-result-object v0
 
-    invoke-virtual {v4, v12}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    new-instance v1, Lk84;
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-wide v2, p0, Lhdg;->e:J
 
-    move-result-object v4
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    invoke-virtual {v1, v0, v3, v4, v2}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    move-result-object v2
 
-    :goto_0
-    new-instance v6, Lfdg;
+    invoke-static {v2}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
-    const/4 v8, 0x1
+    move-result-object v2
 
-    move-object v7, p1
+    invoke-direct {v1, v2}, Lk84;-><init>(Ljava/util/Collection;)V
 
-    move v9, p2
+    invoke-virtual {v0, v1}, Lqy0;->c(Ljava/lang/Object;)V
 
-    invoke-direct/range {v6 .. v12}, Lfdg;-><init>(Lvm;ZZJI)V
-
-    sget-object p1, Lc5j;->a:Ledb;
-
-    if-nez p1, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    invoke-virtual {p1, v0}, Ledb;->b(Lkk8;)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_3
-
-    new-instance p2, Ljava/lang/StringBuilder;
-
-    const-string v1, "tamService != null, execute task "
-
-    invoke-direct {p2, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p2, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, " "
-
-    invoke-virtual {p2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-virtual {p1, v0, v3, p2, v2}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_3
-    :goto_1
-    iget-object p1, p0, Lhdg;->a:Llcg;
-
-    invoke-static {p1, v6}, Lhdg;->a(Llcg;Lfdg;)J
-
-    move-result-wide p1
-
-    return-wide p1
+    return-void
 .end method
 
-.method public final d(Lj2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 11
+.method public final getId()J
+    .locals 2
 
-    new-instance v0, Lg62;
+    iget-wide v0, p0, Lko;->a:J
 
-    invoke-static {p2}, Lo1j;->d(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    return-wide v0
+.end method
 
-    move-result-object p2
+.method public final getType()Lx2c;
+    .locals 1
 
-    const/4 v1, 0x1
+    sget-object v0, Lx2c;->J0:Lx2c;
 
-    invoke-direct {v0, v1, p2}, Lg62;-><init>(ILkotlin/coroutines/Continuation;)V
+    return-object v0
+.end method
 
-    invoke-virtual {v0}, Lg62;->o()V
+.method public final i()[B
+    .locals 3
 
-    new-instance p2, Lgdg;
+    new-instance v0, Lru/ok/tamtam/nano/Tasks$SuspendBot;
 
-    invoke-direct {p2, v0}, Lgdg;-><init>(Lg62;)V
+    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$SuspendBot;-><init>()V
 
-    iget-object v1, p0, Lhdg;->a:Llcg;
+    iget-wide v1, p0, Lko;->a:J
 
-    check-cast v1, Lrcg;
+    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$SuspendBot;->requestId:J
 
-    iget-object v2, v1, Lrcg;->w0:Lo58;
+    iget-wide v1, p0, Lhdg;->d:J
 
-    invoke-interface {v2}, Lo58;->getValue()Ljava/lang/Object;
+    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$SuspendBot;->chatId:J
 
-    move-result-object v3
+    iget-wide v1, p0, Lhdg;->e:J
 
-    check-cast v3, Ltcg;
+    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$SuspendBot;->botId:J
 
-    const/4 v4, 0x0
+    iget-boolean v1, p0, Lhdg;->f:Z
 
-    invoke-virtual {v3, v4}, Ltcg;->c(Z)V
+    iput-boolean v1, v0, Lru/ok/tamtam/nano/Tasks$SuspendBot;->suspend:Z
 
-    new-instance v10, Ly2e;
+    invoke-static {v0}, Lhr9;->toByteArray(Lhr9;)[B
 
-    invoke-direct {v10, p2}, Ly2e;-><init>(Ljava/lang/Object;)V
+    move-result-object v0
 
-    invoke-interface {v2}, Lo58;->getValue()Ljava/lang/Object;
+    return-object v0
+.end method
 
-    move-result-object p2
+.method public final j()I
+    .locals 1
 
-    check-cast p2, Ltcg;
+    const v0, 0xf4240
 
-    invoke-virtual {v1, p1}, Lrcg;->c(Lj2;)J
+    return v0
+.end method
 
-    move-result-wide v8
+.method public final k()Lk2;
+    .locals 4
 
-    iget-object p2, p2, Ltcg;->X:Ljava/util/concurrent/atomic/AtomicReference;
+    new-instance v0, Lwyf;
 
-    invoke-virtual {p2}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    const/4 v1, 0x0
 
-    move-result-object p2
+    const/4 v2, 0x2
 
-    move-object v5, p2
+    invoke-direct {v0, v1, v2}, Lwyf;-><init>(Llrb;I)V
 
-    check-cast v5, Lhte;
+    const-string v1, "botId"
 
-    if-nez v5, :cond_0
+    iget-wide v2, p0, Lhdg;->e:J
 
-    goto :goto_0
+    invoke-virtual {v0, v2, v3, v1}, Lk2;->x(JLjava/lang/String;)V
 
-    :cond_0
-    const/4 v7, 0x0
+    const-string v1, "value"
 
-    move-object v6, p1
+    iget-boolean v2, p0, Lhdg;->f:Z
 
-    invoke-virtual/range {v5 .. v10}, Lhte;->k(Lj2;ZJLfbg;)V
+    invoke-virtual {v0, v1, v2}, Lk2;->g(Ljava/lang/String;Z)V
 
-    :goto_0
-    invoke-virtual {v0}, Lg62;->n()Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-object v0
 .end method

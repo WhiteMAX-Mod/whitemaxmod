@@ -1,64 +1,75 @@
-.class public final Lpw9;
+.class public abstract Lpw9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ltw9;
-
 
 # static fields
-.field public static final a:Lpw9;
+.field public static final a:Lj88;
+
+.field public static final b:Lj88;
+
+.field public static final c:Lj88;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 3
 
-    new-instance v0, Lpw9;
+    sget-object v0, Lqw9;->a:Lqw9;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
 
-    sput-object v0, Lpw9;->a:Lpw9;
+    move-result-object v1
+
+    const/16 v2, 0x70
+
+    invoke-virtual {v1, v2}, Lr5;->d(I)Lbgg;
+
+    move-result-object v1
+
+    sput-object v1, Lpw9;->a:Lj88;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v1
+
+    const/16 v2, 0xf4
+
+    invoke-virtual {v1, v2}, Lr5;->d(I)Lbgg;
+
+    move-result-object v1
+
+    sput-object v1, Lpw9;->b:Lj88;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v0
+
+    const/16 v1, 0x235
+
+    invoke-virtual {v0, v1}, Lr5;->d(I)Lbgg;
+
+    move-result-object v0
+
+    sput-object v0, Lpw9;->c:Lj88;
 
     return-void
 .end method
 
+.method public static a()Lj88;
+    .locals 2
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    sget-object v0, Lqw9;->a:Lqw9;
 
-    const/4 v0, 0x1
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
 
-    if-ne p0, p1, :cond_0
+    move-result-object v0
 
-    return v0
+    const/16 v1, 0x29
 
-    :cond_0
-    instance-of p1, p1, Lpw9;
+    invoke-virtual {v0, v1}, Lr5;->d(I)Lbgg;
 
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, -0x2d4a0842
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "OnKeyboardSwap"
+    move-result-object v0
 
     return-object v0
 .end method

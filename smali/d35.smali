@@ -1,21 +1,26 @@
-.class public interface abstract annotation Ld35;
+.class public interface abstract Ld35;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/annotation/Annotation;
 
+# virtual methods
+.method public abstract a(Ljava/lang/Object;Ljava/lang/String;)Ls16;
+.end method
 
-# annotations
-.annotation runtime Ljava/lang/annotation/Retention;
-    value = .enum Ljava/lang/annotation/RetentionPolicy;->CLASS:Ljava/lang/annotation/RetentionPolicy;
-.end annotation
+.method public abstract b()V
+.end method
 
-.annotation runtime Ljava/lang/annotation/Target;
-    value = {
-        .enum Ljava/lang/annotation/ElementType;->TYPE:Ljava/lang/annotation/ElementType;,
-        .enum Ljava/lang/annotation/ElementType;->FIELD:Ljava/lang/annotation/ElementType;,
-        .enum Ljava/lang/annotation/ElementType;->METHOD:Ljava/lang/annotation/ElementType;,
-        .enum Ljava/lang/annotation/ElementType;->CONSTRUCTOR:Ljava/lang/annotation/ElementType;
-    }
-.end annotation
+.method public abstract c(Lsq4;)J
+.end method
+
+.method public abstract d()Ljava/util/Collection;
+.end method
+
+.method public abstract e(Ljava/lang/String;Lelf;)Lg4c;
+.end method
+
+.method public abstract f()V
+.end method
+
+.method public abstract isExternal()Z
+.end method

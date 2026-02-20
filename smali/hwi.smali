@@ -1,70 +1,144 @@
 .class public final Lhwi;
-.super Ljava/lang/Object;
+.super Lv78;
 .source "SourceFile"
 
 # interfaces
-.implements Lvwa;
+.implements Lks6;
 
 
-# static fields
-.field public static final a:Lhwi;
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lxyd;
+
+.field public final synthetic c:Lxyd;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(Lxyd;Lxyd;I)V
+    .locals 0
 
-    new-instance v0, Lhwi;
+    iput p3, p0, Lhwi;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lhwi;->b:Lxyd;
 
-    sput-object v0, Lhwi;->a:Lhwi;
+    iput-object p2, p0, Lhwi;->c:Lxyd;
 
-    new-instance v0, Lbri;
+    const/4 p1, 0x1
 
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lbri;-><init>(I)V
-
-    const-class v1, Lpri;
-
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
+    invoke-direct {p0, p1}, Lv78;-><init>(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
 
-    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    iget v0, p0, Lhwi;->a:I
 
-    move-result-object p1
+    packed-switch v0, :pswitch_data_0
 
-    throw p1
+    check-cast p1, Lntf;
+
+    iget-object v0, p0, Lhwi;->b:Lxyd;
+
+    iget-wide v1, v0, Lxyd;->a:J
+
+    iget-object v3, p1, Lntf;->h:Ljava/math/BigInteger;
+
+    const-wide/16 v4, 0x0
+
+    if-eqz v3, :cond_0
+
+    invoke-virtual {v3}, Ljava/math/BigInteger;->longValue()J
+
+    move-result-wide v6
+
+    goto :goto_0
+
+    :cond_0
+    move-wide v6, v4
+
+    :goto_0
+    add-long/2addr v1, v6
+
+    iput-wide v1, v0, Lxyd;->a:J
+
+    iget-object v0, p0, Lhwi;->c:Lxyd;
+
+    iget-wide v1, v0, Lxyd;->a:J
+
+    iget-object p1, p1, Lntf;->i:Ljava/math/BigInteger;
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p1}, Ljava/math/BigInteger;->longValue()J
+
+    move-result-wide v4
+
+    :cond_1
+    add-long/2addr v1, v4
+
+    iput-wide v1, v0, Lxyd;->a:J
+
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
+
+    :pswitch_0
+    check-cast p1, Lmtf;
+
+    iget-object v0, p0, Lhwi;->b:Lxyd;
+
+    iget-wide v1, v0, Lxyd;->a:J
+
+    iget-object v3, p1, Lmtf;->h:Ljava/math/BigInteger;
+
+    const-wide/16 v4, 0x0
+
+    if-eqz v3, :cond_2
+
+    invoke-virtual {v3}, Ljava/math/BigInteger;->longValue()J
+
+    move-result-wide v6
+
+    goto :goto_1
+
+    :cond_2
+    move-wide v6, v4
+
+    :goto_1
+    add-long/2addr v1, v6
+
+    iput-wide v1, v0, Lxyd;->a:J
+
+    iget-object v0, p0, Lhwi;->c:Lxyd;
+
+    iget-wide v1, v0, Lxyd;->a:J
+
+    iget-object p1, p1, Lmtf;->i:Ljava/math/BigInteger;
+
+    if-eqz p1, :cond_3
+
+    invoke-virtual {p1}, Ljava/math/BigInteger;->longValue()J
+
+    move-result-wide v4
+
+    :cond_3
+    add-long/2addr v1, v4
+
+    iput-wide v1, v0, Lxyd;->a:J
+
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

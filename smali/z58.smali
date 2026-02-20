@@ -3,112 +3,301 @@
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/util/TreeSet;
+# static fields
+.field public static final synthetic c:I
 
-.field public b:J
+
+# instance fields
+.field public final a:I
+
+.field public final b:Lx58;
 
 
 # direct methods
-.method public constructor <init>()V
+.method static constructor <clinit>()V
+    .locals 3
+
+    new-instance v0, Lz58;
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v2, v1}, Lz58;-><init>(ILs8h;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(ILs8h;)V
     .locals 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/TreeSet;
+    iput p1, p0, Lz58;->a:I
 
-    new-instance v1, Lyz5;
+    iput-object p2, p0, Lz58;->b:Lx58;
 
-    const/4 v2, 0x6
+    const/4 v0, 0x0
 
-    invoke-direct {v1, v2}, Lyz5;-><init>(I)V
+    const/4 v1, 0x1
 
-    invoke-direct {v0, v1}, Ljava/util/TreeSet;-><init>(Ljava/util/Comparator;)V
+    if-nez p1, :cond_0
 
-    iput-object v0, p0, Lz58;->a:Ljava/util/TreeSet;
+    move v2, v1
+
+    goto :goto_0
+
+    :cond_0
+    move v2, v0
+
+    :goto_0
+    if-nez p2, :cond_1
+
+    move v0, v1
+
+    :cond_1
+    if-ne v2, v0, :cond_2
 
     return-void
+
+    :cond_2
+    if-eqz p1, :cond_6
+
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    const-string v0, "The projection variance "
+
+    invoke-direct {p2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    const/4 v0, 0x1
+
+    if-eq p1, v0, :cond_5
+
+    const/4 v0, 0x2
+
+    if-eq p1, v0, :cond_4
+
+    const/4 v0, 0x3
+
+    if-eq p1, v0, :cond_3
+
+    const-string p1, "null"
+
+    goto :goto_1
+
+    :cond_3
+    const-string p1, "OUT"
+
+    goto :goto_1
+
+    :cond_4
+    const-string p1, "IN"
+
+    goto :goto_1
+
+    :cond_5
+    const-string p1, "INVARIANT"
+
+    :goto_1
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, " requires type to be specified."
+
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    goto :goto_2
+
+    :cond_6
+    const-string p1, "Star projection must have no type specified."
+
+    :goto_2
+    new-instance p2, Ljava/lang/IllegalArgumentException;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p2, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p2
 .end method
 
 
 # virtual methods
-.method public final a(Lnz0;J)V
-    .locals 4
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    :goto_0
-    iget-wide v0, p0, Lz58;->b:J
+    if-ne p0, p1, :cond_0
 
-    add-long/2addr v0, p2
+    goto :goto_1
 
-    const-wide/32 v2, 0x6400000
+    :cond_0
+    instance-of v0, p1, Lz58;
 
-    cmp-long v0, v0, v2
-
-    if-lez v0, :cond_0
-
-    iget-object v0, p0, Lz58;->a:Ljava/util/TreeSet;
-
-    invoke-virtual {v0}, Ljava/util/TreeSet;->isEmpty()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lz58;->a:Ljava/util/TreeSet;
-
-    invoke-virtual {v0}, Ljava/util/TreeSet;->first()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Le01;
-
-    move-object v1, p1
-
-    check-cast v1, Lbdf;
-
-    monitor-enter v1
-
-    :try_start_0
-    invoke-virtual {v1, v0}, Lbdf;->j(Le01;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit v1
+    if-nez v0, :cond_1
 
     goto :goto_0
 
-    :catchall_0
-    move-exception p1
+    :cond_1
+    check-cast p1, Lz58;
 
-    :try_start_1
-    monitor-exit v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    iget v0, p0, Lz58;->a:I
 
-    throw p1
+    iget v1, p1, Lz58;->a:I
 
-    :cond_0
-    return-void
+    if-eq v0, v1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v0, p0, Lz58;->b:Lx58;
+
+    iget-object p1, p1, Lz58;->b:Lx58;
+
+    invoke-static {v0, p1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_3
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
-.method public final b(Lbdf;Ledf;)V
-    .locals 4
+.method public final hashCode()I
+    .locals 3
 
-    iget-object v0, p0, Lz58;->a:Ljava/util/TreeSet;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0, p2}, Ljava/util/TreeSet;->add(Ljava/lang/Object;)Z
+    iget v1, p0, Lz58;->a:I
 
-    iget-wide v0, p0, Lz58;->b:J
+    if-nez v1, :cond_0
 
-    iget-wide v2, p2, Le01;->c:J
+    move v1, v0
 
-    add-long/2addr v0, v2
+    goto :goto_0
 
-    iput-wide v0, p0, Lz58;->b:J
+    :cond_0
+    invoke-static {v1}, Ly12;->t(I)I
 
-    const-wide/16 v0, 0x0
+    move-result v1
 
-    invoke-virtual {p0, p1, v0, v1}, Lz58;->a(Lnz0;J)V
+    :goto_0
+    mul-int/lit8 v1, v1, 0x1f
 
-    return-void
+    iget-object v2, p0, Lz58;->b:Lx58;
+
+    if-nez v2, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    :goto_1
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    const/4 v0, -0x1
+
+    iget v1, p0, Lz58;->a:I
+
+    if-nez v1, :cond_0
+
+    move v1, v0
+
+    goto :goto_0
+
+    :cond_0
+    sget-object v2, Ly58;->$EnumSwitchMapping$0:[I
+
+    invoke-static {v1}, Ly12;->t(I)I
+
+    move-result v1
+
+    aget v1, v2, v1
+
+    :goto_0
+    if-eq v1, v0, :cond_4
+
+    const/4 v0, 0x1
+
+    iget-object v2, p0, Lz58;->b:Lx58;
+
+    if-eq v1, v0, :cond_3
+
+    const/4 v0, 0x2
+
+    if-eq v1, v0, :cond_2
+
+    const/4 v0, 0x3
+
+    if-ne v1, v0, :cond_1
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "out "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_1
+    new-instance v0, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {v0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw v0
+
+    :cond_2
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "in "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_3
+    invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_4
+    const-string v0, "*"
+
+    return-object v0
 .end method

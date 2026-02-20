@@ -1,139 +1,125 @@
-.class public Lasg;
-.super Ljava/lang/Object;
+.class public final Lasg;
+.super Lby4;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:I
+.field public final c:Lfoc;
 
-.field public b:I
+.field public final d:I
 
-.field public c:I
+.field public final e:Lr4e;
 
-.field public d:I
-
-.field public e:I
-
-.field public f:I
-
-.field public g:I
-
-.field public h:I
-
-.field public i:I
-
-.field public j:I
-
-.field public k:Z
-
-.field public l:Lhk7;
-
-.field public m:I
-
-.field public n:Lhk7;
-
-.field public o:I
-
-.field public p:I
-
-.field public q:I
-
-.field public r:Lhk7;
-
-.field public s:Lhk7;
-
-.field public t:I
-
-.field public u:Z
-
-.field public v:Z
-
-.field public w:Z
-
-.field public x:Lyrg;
-
-.field public y:Lsk7;
+.field public final synthetic f:Lhb;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 3
+.method public constructor <init>(Lhb;Lkl0;Lfoc;I)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lasg;->f:Lhb;
 
-    const v0, 0x7fffffff
+    invoke-direct {p0, p2}, Lby4;-><init>(Lkl0;)V
 
-    iput v0, p0, Lasg;->a:I
+    iput-object p3, p0, Lasg;->c:Lfoc;
 
-    iput v0, p0, Lasg;->b:I
+    iput p4, p0, Lasg;->d:I
 
-    iput v0, p0, Lasg;->c:I
+    check-cast p3, Lom0;
 
-    iput v0, p0, Lasg;->d:I
+    iget-object p1, p3, Lom0;->a:Lwj7;
 
-    iput v0, p0, Lasg;->i:I
+    iget-object p1, p1, Lwj7;->h:Lr4e;
 
-    iput v0, p0, Lasg;->j:I
-
-    const/4 v1, 0x1
-
-    iput-boolean v1, p0, Lasg;->k:Z
-
-    sget-object v1, Lhk7;->b:Lac6;
-
-    sget-object v1, Lhud;->o:Lhud;
-
-    iput-object v1, p0, Lasg;->l:Lhk7;
-
-    const/4 v2, 0x0
-
-    iput v2, p0, Lasg;->m:I
-
-    iput-object v1, p0, Lasg;->n:Lhk7;
-
-    iput v2, p0, Lasg;->o:I
-
-    iput v0, p0, Lasg;->p:I
-
-    iput v0, p0, Lasg;->q:I
-
-    iput-object v1, p0, Lasg;->r:Lhk7;
-
-    iput-object v1, p0, Lasg;->s:Lhk7;
-
-    iput v2, p0, Lasg;->t:I
-
-    iput-boolean v2, p0, Lasg;->u:Z
-
-    iput-boolean v2, p0, Lasg;->v:Z
-
-    iput-boolean v2, p0, Lasg;->w:Z
-
-    sget-object v0, Lyrg;->b:Lyrg;
-
-    iput-object v0, p0, Lasg;->x:Lyrg;
-
-    sget v0, Lsk7;->c:I
-
-    sget-object v0, Lnud;->u0:Lnud;
-
-    iput-object v0, p0, Lasg;->y:Lsk7;
+    iput-object p1, p0, Lasg;->e:Lr4e;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(II)Lasg;
-    .locals 0
+.method public final f(Ljava/lang/Throwable;)V
+    .locals 4
 
-    iput p1, p0, Lasg;->i:I
+    iget v0, p0, Lasg;->d:I
 
-    iput p2, p0, Lasg;->j:I
+    add-int/lit8 v0, v0, 0x1
 
-    const/4 p1, 0x1
+    iget-object v1, p0, Lasg;->c:Lfoc;
 
-    iput-boolean p1, p0, Lasg;->k:Z
+    iget-object v2, p0, Lasg;->f:Lhb;
 
-    return-object p0
+    iget-object v3, p0, Lby4;->b:Lkl0;
+
+    invoke-virtual {v2, v0, v3, v1}, Lhb;->c(ILkl0;Lfoc;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    invoke-virtual {v3, p1}, Lkl0;->e(Ljava/lang/Throwable;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final h(ILjava/lang/Object;)V
+    .locals 3
+
+    check-cast p2, Lsj5;
+
+    iget-object v0, p0, Lby4;->b:Lkl0;
+
+    if-eqz p2, :cond_1
+
+    invoke-static {p1}, Lkl0;->b(I)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    iget-object v1, p0, Lasg;->e:Lr4e;
+
+    invoke-static {p2, v1}, Lq8j;->d(Lsj5;Lr4e;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    :cond_0
+    invoke-virtual {v0, p1, p2}, Lkl0;->g(ILjava/lang/Object;)V
+
+    return-void
+
+    :cond_1
+    invoke-static {p1}, Lkl0;->a(I)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    invoke-static {p2}, Lsj5;->k(Lsj5;)V
+
+    iget p1, p0, Lasg;->d:I
+
+    const/4 p2, 0x1
+
+    add-int/2addr p1, p2
+
+    iget-object v1, p0, Lasg;->c:Lfoc;
+
+    iget-object v2, p0, Lasg;->f:Lhb;
+
+    invoke-virtual {v2, p1, v0, v1}, Lhb;->c(ILkl0;Lfoc;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    const/4 p1, 0x0
+
+    invoke-virtual {v0, p2, p1}, Lkl0;->g(ILjava/lang/Object;)V
+
+    :cond_2
+    return-void
 .end method

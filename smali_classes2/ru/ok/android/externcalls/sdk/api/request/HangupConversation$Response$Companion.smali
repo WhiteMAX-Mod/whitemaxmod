@@ -22,13 +22,13 @@
         "",
         "<init>",
         "()V",
-        "Lq18;",
+        "Ln48;",
         "Lru/ok/android/externcalls/sdk/api/request/HangupConversation$Response;",
         "kotlin.jvm.PlatformType",
         "PARSER",
-        "Lq18;",
+        "Ln48;",
         "getPARSER",
-        "()Lq18;",
+        "()Ln48;",
         "calls-sdk_release"
     }
     k = 0x1
@@ -51,7 +51,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lso4;)V
+.method public synthetic constructor <init>(Lfq4;)V
     .locals 0
 
     .line 1
@@ -62,16 +62,16 @@
 
 
 # virtual methods
-.method public final getPARSER()Lq18;
+.method public final getPARSER()Ln48;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lq18;"
+            "Ln48;"
         }
     .end annotation
 
-    invoke-static {}, Lru/ok/android/externcalls/sdk/api/request/HangupConversation$Response;->access$getPARSER$cp()Lq18;
+    invoke-static {}, Lru/ok/android/externcalls/sdk/api/request/HangupConversation$Response;->access$getPARSER$cp()Ln48;
 
     move-result-object v0
 

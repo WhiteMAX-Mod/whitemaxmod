@@ -9,19 +9,19 @@
 
 
 # static fields
-.field public static O0:Z = false
+.field public static N0:Z = false
 
 
 # instance fields
-.field public J0:Z
+.field public I0:Z
 
-.field public K0:Lcom/google/android/gms/auth/api/signin/internal/SignInConfiguration;
+.field public J0:Lcom/google/android/gms/auth/api/signin/internal/SignInConfiguration;
 
-.field public L0:Z
+.field public K0:Z
 
-.field public M0:I
+.field public L0:I
 
-.field public N0:Landroid/content/Intent;
+.field public M0:Landroid/content/Intent;
 
 
 # direct methods
@@ -32,7 +32,7 @@
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/google/android/gms/auth/api/signin/internal/SignInHubActivity;->J0:Z
+    iput-boolean v0, p0, Lcom/google/android/gms/auth/api/signin/internal/SignInHubActivity;->I0:Z
 
     return-void
 .end method
@@ -46,7 +46,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p1, v1, v1, v1}, Lcom/google/android/gms/common/api/Status;-><init>(ILjava/lang/String;Landroid/app/PendingIntent;Lyv3;)V
+    invoke-direct {v0, p1, v1, v1, v1}, Lcom/google/android/gms/common/api/Status;-><init>(ILjava/lang/String;Landroid/app/PendingIntent;Lrw3;)V
 
     new-instance p1, Landroid/content/Intent;
 
@@ -62,7 +62,7 @@
 
     invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
-    sput-boolean v0, Lcom/google/android/gms/auth/api/signin/internal/SignInHubActivity;->O0:Z
+    sput-boolean v0, Lcom/google/android/gms/auth/api/signin/internal/SignInHubActivity;->N0:Z
 
     return-void
 .end method
@@ -78,7 +78,7 @@
 .method public final onActivityResult(IILandroid/content/Intent;)V
     .locals 4
 
-    iget-boolean v0, p0, Lcom/google/android/gms/auth/api/signin/internal/SignInHubActivity;->J0:Z
+    iget-boolean v0, p0, Lcom/google/android/gms/auth/api/signin/internal/SignInHubActivity;->I0:Z
 
     if-eqz v0, :cond_0
 
@@ -115,22 +115,22 @@
 
     if-eqz v1, :cond_2
 
-    invoke-static {p0}, Lakj;->L(Landroid/content/Context;)Lakj;
+    invoke-static {p0}, Lorj;->N(Landroid/content/Context;)Lorj;
 
     move-result-object v2
 
-    iget-object p1, p0, Lcom/google/android/gms/auth/api/signin/internal/SignInHubActivity;->K0:Lcom/google/android/gms/auth/api/signin/internal/SignInConfiguration;
+    iget-object p1, p0, Lcom/google/android/gms/auth/api/signin/internal/SignInHubActivity;->J0:Lcom/google/android/gms/auth/api/signin/internal/SignInConfiguration;
 
     iget-object p1, p1, Lcom/google/android/gms/auth/api/signin/internal/SignInConfiguration;->b:Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions;
 
     monitor-enter v2
 
     :try_start_0
-    iget-object v3, v2, Lakj;->a:Ljava/lang/Object;
+    iget-object v3, v2, Lorj;->b:Ljava/lang/Object;
 
-    check-cast v3, Lnxf;
+    check-cast v3, Ly4g;
 
-    invoke-virtual {v3, v1, p1}, Lnxf;->c(Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions;)V
+    invoke-virtual {v3, v1, p1}, Ly4g;->c(Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -146,27 +146,29 @@
 
     const/4 p1, 0x1
 
-    iput-boolean p1, p0, Lcom/google/android/gms/auth/api/signin/internal/SignInHubActivity;->L0:Z
+    iput-boolean p1, p0, Lcom/google/android/gms/auth/api/signin/internal/SignInHubActivity;->K0:Z
 
-    iput p2, p0, Lcom/google/android/gms/auth/api/signin/internal/SignInHubActivity;->M0:I
+    iput p2, p0, Lcom/google/android/gms/auth/api/signin/internal/SignInHubActivity;->L0:I
 
-    iput-object p3, p0, Lcom/google/android/gms/auth/api/signin/internal/SignInHubActivity;->N0:Landroid/content/Intent;
+    iput-object p3, p0, Lcom/google/android/gms/auth/api/signin/internal/SignInHubActivity;->M0:Landroid/content/Intent;
 
     new-instance p1, Landroidx/loader/app/b;
 
-    invoke-virtual {p0}, Lfp3;->h()Luth;
+    invoke-virtual {p0}, Lwp3;->e()Le1i;
 
     move-result-object p2
 
-    invoke-direct {p1, p0, p2}, Landroidx/loader/app/b;-><init>(Lj88;Luth;)V
+    invoke-direct {p1, p0, p2}, Landroidx/loader/app/b;-><init>(Lab8;Le1i;)V
 
-    new-instance p2, Lkbf;
+    new-instance p2, Le5;
 
-    invoke-direct {p2, p0}, Lkbf;-><init>(Ljava/lang/Object;)V
+    const/16 p3, 0x1d
 
-    invoke-virtual {p1, p2}, Landroidx/loader/app/b;->b(Lkbf;)Luwi;
+    invoke-direct {p2, p3, p0}, Le5;-><init>(ILjava/lang/Object;)V
 
-    sput-boolean v0, Lcom/google/android/gms/auth/api/signin/internal/SignInHubActivity;->O0:Z
+    invoke-virtual {p1, p2}, Landroidx/loader/app/b;->b(Le5;)Lo4j;
+
+    sput-boolean v0, Lcom/google/android/gms/auth/api/signin/internal/SignInHubActivity;->N0:Z
 
     return-void
 
@@ -324,11 +326,11 @@
     return-void
 
     :cond_3
-    iput-object v0, p0, Lcom/google/android/gms/auth/api/signin/internal/SignInHubActivity;->K0:Lcom/google/android/gms/auth/api/signin/internal/SignInConfiguration;
+    iput-object v0, p0, Lcom/google/android/gms/auth/api/signin/internal/SignInHubActivity;->J0:Lcom/google/android/gms/auth/api/signin/internal/SignInConfiguration;
 
     if-nez p1, :cond_6
 
-    sget-boolean p1, Lcom/google/android/gms/auth/api/signin/internal/SignInHubActivity;->O0:Z
+    sget-boolean p1, Lcom/google/android/gms/auth/api/signin/internal/SignInHubActivity;->N0:Z
 
     if-eqz p1, :cond_4
 
@@ -343,7 +345,7 @@
     :cond_4
     const/4 p1, 0x1
 
-    sput-boolean p1, Lcom/google/android/gms/auth/api/signin/internal/SignInHubActivity;->O0:Z
+    sput-boolean p1, Lcom/google/android/gms/auth/api/signin/internal/SignInHubActivity;->N0:Z
 
     new-instance v0, Landroid/content/Intent;
 
@@ -369,7 +371,7 @@
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
     :goto_1
-    iget-object v1, p0, Lcom/google/android/gms/auth/api/signin/internal/SignInHubActivity;->K0:Lcom/google/android/gms/auth/api/signin/internal/SignInConfiguration;
+    iget-object v1, p0, Lcom/google/android/gms/auth/api/signin/internal/SignInHubActivity;->J0:Lcom/google/android/gms/auth/api/signin/internal/SignInConfiguration;
 
     invoke-virtual {v0, v3, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
@@ -383,7 +385,7 @@
     return-void
 
     :catch_0
-    iput-boolean p1, p0, Lcom/google/android/gms/auth/api/signin/internal/SignInHubActivity;->J0:Z
+    iput-boolean p1, p0, Lcom/google/android/gms/auth/api/signin/internal/SignInHubActivity;->I0:Z
 
     const-string p1, "Could not launch sign in Intent. Google Play Service is probably being updated..."
 
@@ -402,7 +404,7 @@
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/google/android/gms/auth/api/signin/internal/SignInHubActivity;->L0:Z
+    iput-boolean v0, p0, Lcom/google/android/gms/auth/api/signin/internal/SignInHubActivity;->K0:Z
 
     if-eqz v0, :cond_7
 
@@ -412,7 +414,7 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/google/android/gms/auth/api/signin/internal/SignInHubActivity;->M0:I
+    iput v0, p0, Lcom/google/android/gms/auth/api/signin/internal/SignInHubActivity;->L0:I
 
     const-string v0, "signInResultData"
 
@@ -424,23 +426,25 @@
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iput-object p1, p0, Lcom/google/android/gms/auth/api/signin/internal/SignInHubActivity;->N0:Landroid/content/Intent;
+    iput-object p1, p0, Lcom/google/android/gms/auth/api/signin/internal/SignInHubActivity;->M0:Landroid/content/Intent;
 
     new-instance p1, Landroidx/loader/app/b;
 
-    invoke-virtual {p0}, Lfp3;->h()Luth;
+    invoke-virtual {p0}, Lwp3;->e()Le1i;
 
     move-result-object v0
 
-    invoke-direct {p1, p0, v0}, Landroidx/loader/app/b;-><init>(Lj88;Luth;)V
+    invoke-direct {p1, p0, v0}, Landroidx/loader/app/b;-><init>(Lab8;Le1i;)V
 
-    new-instance v0, Lkbf;
+    new-instance v0, Le5;
 
-    invoke-direct {v0, p0}, Lkbf;-><init>(Ljava/lang/Object;)V
+    const/16 v1, 0x1d
 
-    invoke-virtual {p1, v0}, Landroidx/loader/app/b;->b(Lkbf;)Luwi;
+    invoke-direct {v0, v1, p0}, Le5;-><init>(ILjava/lang/Object;)V
 
-    sput-boolean v5, Lcom/google/android/gms/auth/api/signin/internal/SignInHubActivity;->O0:Z
+    invoke-virtual {p1, v0}, Landroidx/loader/app/b;->b(Le5;)Lo4j;
+
+    sput-boolean v5, Lcom/google/android/gms/auth/api/signin/internal/SignInHubActivity;->N0:Z
 
     :cond_7
     return-void
@@ -449,27 +453,27 @@
 .method public final onSaveInstanceState(Landroid/os/Bundle;)V
     .locals 2
 
-    invoke-super {p0, p1}, Lfp3;->onSaveInstanceState(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lwp3;->onSaveInstanceState(Landroid/os/Bundle;)V
 
     const-string v0, "signingInGoogleApiClients"
 
-    iget-boolean v1, p0, Lcom/google/android/gms/auth/api/signin/internal/SignInHubActivity;->L0:Z
+    iget-boolean v1, p0, Lcom/google/android/gms/auth/api/signin/internal/SignInHubActivity;->K0:Z
 
     invoke-virtual {p1, v0, v1}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
 
-    iget-boolean v0, p0, Lcom/google/android/gms/auth/api/signin/internal/SignInHubActivity;->L0:Z
+    iget-boolean v0, p0, Lcom/google/android/gms/auth/api/signin/internal/SignInHubActivity;->K0:Z
 
     if-eqz v0, :cond_0
 
     const-string v0, "signInResultCode"
 
-    iget v1, p0, Lcom/google/android/gms/auth/api/signin/internal/SignInHubActivity;->M0:I
+    iget v1, p0, Lcom/google/android/gms/auth/api/signin/internal/SignInHubActivity;->L0:I
 
     invoke-virtual {p1, v0, v1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
 
     const-string v0, "signInResultData"
 
-    iget-object v1, p0, Lcom/google/android/gms/auth/api/signin/internal/SignInHubActivity;->N0:Landroid/content/Intent;
+    iget-object v1, p0, Lcom/google/android/gms/auth/api/signin/internal/SignInHubActivity;->M0:Landroid/content/Intent;
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 

@@ -1,23 +1,42 @@
-.class public final Lhlg;
+.class public interface abstract Lhlg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljrd;
 
-# instance fields
-.field public final a:Lbz6;
 
-.field public final b:J
+# static fields
+.field public static final e0:Loc0;
+
+.field public static final f0:Loc0;
 
 
 # direct methods
-.method public constructor <init>(Lbz6;J)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Loc0;
 
-    iput-object p1, p0, Lhlg;->a:Lbz6;
+    const-string v1, "camerax.core.target.name"
 
-    iput-wide p2, p0, Lhlg;->b:J
+    const-class v2, Ljava/lang/String;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v0, v1, v2, v3}, Loc0;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Lhlg;->e0:Loc0;
+
+    new-instance v0, Loc0;
+
+    const-string v1, "camerax.core.target.class"
+
+    const-class v2, Ljava/lang/Class;
+
+    invoke-direct {v0, v1, v2, v3}, Loc0;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Lhlg;->f0:Loc0;
 
     return-void
 .end method

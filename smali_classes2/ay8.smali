@@ -1,254 +1,379 @@
 .class public final Lay8;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:Lfy8;
+.field public final a:Lnwf;
 
-.field public final synthetic Y:Loba;
+.field public final b:Losg;
 
-.field public final synthetic Z:Ljava/lang/Long;
+.field public final c:Ltmd;
 
-.field public o:I
+.field public d:J
+
+.field public final e:Lyx8;
+
+.field public f:Lvzb;
+
+.field public g:I
+
+.field public h:Lvx8;
+
+.field public final i:Ljava/util/concurrent/CopyOnWriteArrayList;
 
 
 # direct methods
-.method public constructor <init>(Lfy8;Loba;Ljava/lang/Long;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Lnwf;Lyx8;Losg;Ltmd;)V
+    .locals 2
 
-    iput-object p1, p0, Lay8;->X:Lfy8;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lay8;->Y:Loba;
+    iput-object p1, p0, Lay8;->a:Lnwf;
 
-    iput-object p3, p0, Lay8;->Z:Ljava/lang/Long;
+    iput-object p3, p0, Lay8;->b:Losg;
 
-    const/4 p1, 0x2
+    iput-object p4, p0, Lay8;->c:Ltmd;
 
-    invoke-direct {p0, p1, p4}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    if-eqz p2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p2, Lyx8;
+
+    invoke-direct {p2}, Lyx8;-><init>()V
+
+    :goto_0
+    iput-object p2, p0, Lay8;->e:Lyx8;
+
+    const/4 p3, 0x1
+
+    iput p3, p0, Lay8;->g:I
+
+    new-instance p3, Lvx8;
+
+    const-wide/16 v0, 0x0
+
+    invoke-direct {p3, v0, v1, v0, v1}, Lvx8;-><init>(DD)V
+
+    iput-object p3, p0, Lay8;->h:Lvx8;
+
+    new-instance p3, Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-direct {p3}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
+
+    iput-object p3, p0, Lay8;->i:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    new-instance p3, Ljava/lang/StringBuilder;
+
+    const-string v0, "Media adaptation control enabled. Configuration is "
+
+    invoke-direct {p3, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    const-string p3, "MediaAdaptation"
+
+    invoke-interface {p4, p3, p2}, Ltmd;->log(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object p1, p1, Lnwf;->j:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {p1, p0}, Ljava/util/concurrent/CopyOnWriteArrayList;->contains(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_1
+
+    return-void
+
+    :cond_1
+    invoke-virtual {p1, p0}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a(I)Lvzb;
+    .locals 19
 
-    check-cast p1, Lzb4;
+    move-object/from16 v0, p0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v1, v0, Lay8;->f:Lvzb;
 
-    invoke-virtual {p0, p1, p2}, Lay8;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    const-string v2, "maintain-framerate"
 
-    move-result-object p1
+    if-nez v1, :cond_0
 
-    check-cast p1, Lay8;
+    const/16 v1, 0x500
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    const/16 v3, 0x3e8
 
-    invoke-virtual {p1, p2}, Lay8;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    const/16 v4, 0x1e
 
-    move-result-object p1
+    const/4 v5, 0x0
 
-    return-object p1
-.end method
+    move v9, v1
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
+    move v10, v9
 
-    new-instance p1, Lay8;
+    move-object v13, v2
 
-    iget-object v0, p0, Lay8;->Y:Loba;
+    move v11, v3
 
-    iget-object v1, p0, Lay8;->Z:Ljava/lang/Long;
+    move v12, v4
 
-    iget-object v2, p0, Lay8;->X:Lfy8;
-
-    invoke-direct {p1, v2, v0, v1, p2}, Lay8;-><init>(Lfy8;Loba;Ljava/lang/Long;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 11
-
-    iget-object v0, p0, Lay8;->X:Lfy8;
-
-    iget-object v1, v0, Lfy8;->y0:Lspf;
-
-    iget-object v2, v0, Lfy8;->X:Lo58;
-
-    iget v3, p0, Lay8;->o:I
-
-    const/4 v4, 0x1
-
-    if-eqz v3, :cond_1
-
-    if-ne v3, v4, :cond_0
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    goto/16 :goto_2
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    invoke-interface {v2}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lth8;
-
-    iget-object p1, p1, Lth8;->f:Lgne;
-
-    iget-object v6, p1, Lgne;->j:Ljava/lang/CharSequence;
-
-    invoke-interface {v2}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lth8;
-
-    iget-object p1, p1, Lth8;->f:Lgne;
-
-    const/4 v3, 0x0
-
-    iput-object v3, p1, Lgne;->j:Ljava/lang/CharSequence;
-
-    invoke-virtual {v1}, Lspf;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lx00;
-
-    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result p1
-
-    if-eqz p1, :cond_3
-
-    if-ne p1, v4, :cond_2
-
-    move v8, v4
-
-    goto :goto_0
-
-    :cond_2
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
-
-    :cond_3
-    const/4 p1, 0x0
-
-    move v8, p1
-
-    :goto_0
-    invoke-interface {v2}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lth8;
-
-    iget-object p1, p1, Lth8;->f:Lgne;
-
-    invoke-virtual {v1}, Lspf;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lx00;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v3, Lw00;->$EnumSwitchMapping$0:[I
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    aget v1, v3, v1
-
-    if-eq v1, v4, :cond_5
-
-    const/4 v3, 0x2
-
-    if-ne v1, v3, :cond_4
+    move-object v14, v5
 
     goto :goto_1
 
-    :cond_4
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+    :cond_0
+    iget v3, v1, Lvzb;->a:I
 
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    iget v4, v1, Lvzb;->b:I
 
-    throw p1
+    iget v5, v1, Lvzb;->c:I
 
-    :cond_5
-    const/4 v3, 0x3
+    iget v6, v1, Lvzb;->d:I
+
+    iget-object v7, v1, Lvzb;->f:Lxzb;
+
+    iget-object v1, v1, Lvzb;->e:Ljava/lang/String;
+
+    if-nez v1, :cond_1
+
+    move-object v13, v2
+
+    :goto_0
+    move v9, v3
+
+    move v10, v4
+
+    move v11, v5
+
+    move v12, v6
+
+    move-object v14, v7
+
+    goto :goto_1
+
+    :cond_1
+    move-object v13, v1
+
+    goto :goto_0
 
     :goto_1
-    invoke-virtual {p1, v3}, Lgne;->p(I)V
+    sget-object v1, Lzx8;->$EnumSwitchMapping$0:[I
 
-    iget-object p1, v0, Lfy8;->D0:Lcm5;
+    invoke-static/range {p1 .. p1}, Ly12;->t(I)I
 
-    new-instance v5, Lox8;
+    move-result v2
 
-    invoke-interface {v2}, Lo58;->getValue()Ljava/lang/Object;
+    aget v1, v1, v2
+
+    const/4 v2, 0x1
+
+    iget-object v3, v0, Lay8;->e:Lyx8;
+
+    if-eq v1, v2, :cond_4
+
+    const/4 v2, 0x2
+
+    if-eq v1, v2, :cond_3
+
+    iget-object v1, v0, Lay8;->f:Lvzb;
+
+    if-nez v1, :cond_2
+
+    new-instance v8, Lvzb;
+
+    invoke-static/range {p1 .. p1}, Ltx8;->q(I)Ljava/lang/String;
+
+    move-result-object v17
+
+    const/4 v15, 0x1
+
+    const/16 v16, 0x0
+
+    invoke-direct/range {v8 .. v17}, Lvzb;-><init>(IIIILjava/lang/String;Lxzb;IILjava/lang/String;)V
+
+    return-object v8
+
+    :cond_2
+    new-instance v9, Lvzb;
+
+    iget v10, v1, Lvzb;->a:I
+
+    iget v11, v1, Lvzb;->b:I
+
+    iget v12, v1, Lvzb;->c:I
+
+    iget v13, v1, Lvzb;->d:I
+
+    iget-object v15, v1, Lvzb;->f:Lxzb;
+
+    iget v1, v1, Lvzb;->h:I
+
+    invoke-static/range {p1 .. p1}, Ltx8;->q(I)Ljava/lang/String;
+
+    move-result-object v18
+
+    const-string v14, "maintain-framerate"
+
+    const/16 v16, 0x1
+
+    move/from16 v17, v1
+
+    invoke-direct/range {v9 .. v18}, Lvzb;-><init>(IIIILjava/lang/String;Lxzb;IILjava/lang/String;)V
+
+    return-object v9
+
+    :cond_3
+    new-instance v8, Lvzb;
+
+    iget-object v1, v3, Lyx8;->a:Lwx8;
+
+    const/16 v16, 0x3
+
+    invoke-static/range {p1 .. p1}, Ltx8;->q(I)Ljava/lang/String;
+
+    move-result-object v17
+
+    const/4 v15, 0x4
+
+    invoke-direct/range {v8 .. v17}, Lvzb;-><init>(IIIILjava/lang/String;Lxzb;IILjava/lang/String;)V
+
+    return-object v8
+
+    :cond_4
+    new-instance v8, Lvzb;
+
+    iget-object v1, v3, Lyx8;->a:Lwx8;
+
+    const/16 v16, 0x2
+
+    invoke-static/range {p1 .. p1}, Ltx8;->q(I)Ljava/lang/String;
+
+    move-result-object v17
+
+    const/4 v15, 0x2
+
+    invoke-direct/range {v8 .. v17}, Lvzb;-><init>(IIIILjava/lang/String;Lxzb;IILjava/lang/String;)V
+
+    return-object v8
+.end method
+
+.method public final b(ILvx8;)V
+    .locals 3
+
+    iget v0, p0, Lay8;->g:I
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "Update network condition. Current condition is "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-static {v0}, Ltx8;->r(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, ", new one is "
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-static {p1}, Ltx8;->r(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, ", state is "
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "MediaAdaptation"
+
+    iget-object v2, p0, Lay8;->c:Ltmd;
+
+    invoke-interface {v2, v1, v0}, Ltmd;->log(Ljava/lang/String;Ljava/lang/String;)V
+
+    iput p1, p0, Lay8;->g:I
+
+    iput-object p2, p0, Lay8;->h:Lvx8;
+
+    invoke-virtual {p0}, Lay8;->c()V
+
+    return-void
+.end method
+
+.method public final c()V
+    .locals 8
+
+    iget-object v0, p0, Lay8;->i:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lth8;
+    check-cast v1, Lsx8;
 
-    iget-object v1, v1, Lth8;->f:Lgne;
+    new-instance v2, Lux8;
 
-    invoke-virtual {v1}, Lgne;->d()Ljava/util/ArrayList;
+    iget v3, p0, Lay8;->g:I
 
-    move-result-object v7
+    iget-object v4, p0, Lay8;->h:Lvx8;
 
-    iget-object v9, p0, Lay8;->Y:Loba;
+    invoke-virtual {p0, v3}, Lay8;->a(I)Lvzb;
 
-    iget-object v10, p0, Lay8;->Z:Ljava/lang/Long;
+    move-result-object v5
 
-    invoke-direct/range {v5 .. v10}, Lox8;-><init>(Ljava/lang/CharSequence;Ljava/util/ArrayList;ZLoba;Ljava/lang/Long;)V
+    iget v6, p0, Lay8;->g:I
 
-    invoke-static {p1, v5}, Lnth;->q(Lcm5;Ljava/lang/Object;)V
+    const/4 v7, 0x1
 
-    iget-object p1, v0, Lfy8;->A0:Lyw0;
+    if-eq v6, v7, :cond_0
 
-    new-instance v0, Lmw8;
+    iget-object v6, p0, Lay8;->e:Lyx8;
 
-    invoke-direct {v0, v4}, Lmw8;-><init>(Z)V
+    iget-object v6, v6, Lyx8;->a:Lwx8;
 
-    iput v4, p0, Lay8;->o:I
+    goto :goto_1
 
-    invoke-interface {p1, v0, p0}, Lioe;->h(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    :cond_0
+    const/4 v7, 0x0
 
-    move-result-object p1
+    :goto_1
+    invoke-direct {v2, v3, v4, v5, v7}, Lux8;-><init>(ILvx8;Lvzb;Z)V
 
-    sget-object v0, Lac4;->a:Lac4;
+    invoke-interface {v1, v2}, Lsx8;->n(Lux8;)V
 
-    if-ne p1, v0, :cond_6
+    goto :goto_0
 
-    return-object v0
-
-    :cond_6
-    :goto_2
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
+    :cond_1
+    return-void
 .end method

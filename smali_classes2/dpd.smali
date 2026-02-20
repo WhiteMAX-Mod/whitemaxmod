@@ -1,180 +1,74 @@
 .class public final Ldpd;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Landroid/view/View$OnAttachStateChangeListener;
 
 
 # instance fields
-.field public final synthetic X:Lfpd;
+.field public final synthetic a:Lone/me/rlottie/RLottieImageView;
 
-.field public final synthetic Y:J
+.field public final synthetic b:Lgpd;
 
-.field public o:I
+.field public final synthetic c:Lone/me/rlottie/RLottieDrawable;
+
+.field public final synthetic d:Lepd;
+
+.field public final synthetic o:Lfpd;
 
 
 # direct methods
-.method public constructor <init>(Lfpd;JLkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lone/me/rlottie/RLottieImageView;Lgpd;Lone/me/rlottie/RLottieDrawable;Lepd;Lfpd;)V
     .locals 0
 
-    iput-object p1, p0, Ldpd;->X:Lfpd;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p2, p0, Ldpd;->Y:J
+    iput-object p1, p0, Ldpd;->a:Lone/me/rlottie/RLottieImageView;
 
-    const/4 p1, 0x2
+    iput-object p2, p0, Ldpd;->b:Lgpd;
 
-    invoke-direct {p0, p1, p4}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p3, p0, Ldpd;->c:Lone/me/rlottie/RLottieDrawable;
+
+    iput-object p4, p0, Ldpd;->d:Lepd;
+
+    iput-object p5, p0, Ldpd;->o:Lfpd;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final onViewAttachedToWindow(Landroid/view/View;)V
     .locals 0
 
-    check-cast p1, Lzb4;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Ldpd;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Ldpd;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Ldpd;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
+.method public final onViewDetachedFromWindow(Landroid/view/View;)V
+    .locals 1
 
-    new-instance p1, Ldpd;
+    iget-object p1, p0, Ldpd;->a:Lone/me/rlottie/RLottieImageView;
 
-    iget-object v0, p0, Ldpd;->X:Lfpd;
+    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
 
-    iget-wide v1, p0, Ldpd;->Y:J
+    iget-object p1, p0, Ldpd;->b:Lgpd;
 
-    invoke-direct {p1, v0, v1, v2, p2}, Ldpd;-><init>(Lfpd;JLkotlin/coroutines/Continuation;)V
+    iget-object p1, p1, Lgpd;->a:Ljava/lang/String;
 
-    return-object p1
-.end method
+    const-string v0, "onDetach"
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+    invoke-static {p1, v0}, Ltej;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget v0, p0, Ldpd;->o:I
+    iget-object p1, p0, Ldpd;->d:Lepd;
 
-    const/4 v1, 0x1
+    iget-object v0, p0, Ldpd;->c:Lone/me/rlottie/RLottieDrawable;
 
-    iget-object v2, p0, Ldpd;->X:Lfpd;
+    invoke-virtual {v0, p1}, Lone/me/rlottie/RLottieDrawable;->removeDrawableLoadListener(Lone/me/rlottie/RLottieDrawable$DrawableLoadListener;)V
 
-    if-eqz v0, :cond_1
+    iget-object p1, p0, Ldpd;->o:Lfpd;
 
-    if-ne v0, v1, :cond_0
+    invoke-virtual {v0, p1}, Lone/me/rlottie/RLottieDrawable;->removeOnAllFramesRenderedListener(Lone/me/rlottie/RLottieDrawable$OnAllFramesRenderedListener;)V
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    sget-object p1, Lfpd;->Q0:[Lz28;
-
-    invoke-virtual {v2}, Lfpd;->B()Lcqd;
-
-    move-result-object p1
-
-    iput v1, p0, Ldpd;->o:I
-
-    iget-wide v0, p0, Ldpd;->Y:J
-
-    invoke-interface {p1, v0, v1, p0}, Lcqd;->e(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lac4;->a:Lac4;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
-    :cond_2
-    :goto_0
-    sget-object p1, Lfpd;->Q0:[Lz28;
-
-    invoke-virtual {v2}, Lfpd;->x()Lsnd;
-
-    move-result-object p1
-
-    invoke-virtual {v2}, Lfpd;->B()Lcqd;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lcqd;->i()Ljava/lang/String;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_3
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    int-to-long v0, v0
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    goto :goto_1
-
-    :cond_3
-    const/4 v0, 0x0
-
-    :goto_1
-    invoke-interface {p1, v0}, Lsnd;->g(Ljava/lang/Long;)V
-
-    invoke-virtual {v2}, Lfpd;->D()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_4
-
-    invoke-virtual {v2}, Lfpd;->x()Lsnd;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Lsnd;->a()V
-
-    goto :goto_2
-
-    :cond_4
-    invoke-virtual {v2}, Lfpd;->x()Lsnd;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Lsnd;->b()V
-
-    :goto_2
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
+    return-void
 .end method

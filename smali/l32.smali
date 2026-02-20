@@ -1,88 +1,121 @@
-.class public interface abstract Ll32;
-.super Ljava/lang/Object;
+.class public final enum Ll32;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:Lk32;
+.field public static final enum X:Ll32;
+
+.field public static final synthetic Y:[Ll32;
+
+.field public static final enum a:Ll32;
+
+.field public static final enum b:Ll32;
+
+.field public static final enum c:Ll32;
+
+.field public static final enum d:Ll32;
+
+.field public static final enum o:Ll32;
 
 
 # direct methods
 .method static constructor <clinit>()V
+    .locals 8
+
+    new-instance v0, Ll32;
+
+    const-string v1, "UNKNOWN"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Ll32;->a:Ll32;
+
+    new-instance v1, Ll32;
+
+    const-string v2, "INACTIVE"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Ll32;->b:Ll32;
+
+    new-instance v2, Ll32;
+
+    const-string v3, "SEARCHING"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Ll32;->c:Ll32;
+
+    new-instance v3, Ll32;
+
+    const-string v4, "FLASH_REQUIRED"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Ll32;->d:Ll32;
+
+    new-instance v4, Ll32;
+
+    const-string v5, "CONVERGED"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v4, Ll32;->o:Ll32;
+
+    new-instance v5, Ll32;
+
+    const-string v6, "LOCKED"
+
+    const/4 v7, 0x5
+
+    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v5, Ll32;->X:Ll32;
+
+    filled-new-array/range {v0 .. v5}, [Ll32;
+
+    move-result-object v0
+
+    sput-object v0, Ll32;->Y:[Ll32;
+
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Ll32;
     .locals 1
 
-    new-instance v0, Lk32;
+    const-class v0, Ll32;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    sput-object v0, Ll32;->a:Lk32;
+    move-result-object p0
 
-    return-void
+    check-cast p0, Ll32;
+
+    return-object p0
 .end method
 
+.method public static values()[Ll32;
+    .locals 1
 
-# virtual methods
-.method public a()V
-    .locals 0
+    sget-object v0, Ll32;->Y:[Ll32;
 
-    return-void
-.end method
+    invoke-virtual {v0}, [Ll32;->clone()Ljava/lang/Object;
 
-.method public abstract b(F)Lie8;
-.end method
+    move-result-object v0
 
-.method public abstract c(Lmr3;)V
-.end method
+    check-cast v0, [Ll32;
 
-.method public abstract d(F)Lie8;
-.end method
-
-.method public abstract e()Landroid/graphics/Rect;
-.end method
-
-.method public abstract f(I)V
-.end method
-
-.method public abstract g(Lp2g;)Lie8;
-.end method
-
-.method public h(Lnh7;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public abstract i(Ljava/util/ArrayList;II)Lie8;
-.end method
-
-.method public abstract j(Llte;)V
-.end method
-
-.method public abstract k(Z)Lie8;
-.end method
-
-.method public l(II)Lie8;
-    .locals 0
-
-    new-instance p1, Lj32;
-
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
-
-    invoke-static {p1}, Lnge;->g(Ljava/lang/Object;)Llj7;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public abstract m()Lmr3;
-.end method
-
-.method public abstract n()V
-.end method
-
-.method public o()V
-    .locals 0
-
-    return-void
+    return-object v0
 .end method

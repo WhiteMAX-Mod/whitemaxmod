@@ -1,55 +1,100 @@
-.class public final Lr8;
+.class public abstract Lr8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:I
+.field public final a:Landroid/content/Context;
 
-.field public final b:I
-
-.field public final c:Ljava/util/List;
-
-.field public final d:Ljava/util/List;
-
-.field public final e:Ljava/util/List;
-
-.field public final f:Ljava/util/List;
+.field public b:Lgae;
 
 
 # direct methods
-.method public constructor <init>(IILjava/util/ArrayList;Ljava/util/List;Ljava/util/List;Ljava/util/List;)V
+.method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lr8;->a:I
+    iput-object p1, p0, Lr8;->a:Landroid/content/Context;
 
-    iput p2, p0, Lr8;->b:I
+    return-void
+.end method
 
-    invoke-static {p3}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+# virtual methods
+.method public a()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public abstract b()Z
+.end method
+
+.method public abstract c()Landroid/view/View;
+.end method
+
+.method public d(Lxl9;)Landroid/view/View;
+    .locals 0
+
+    invoke-virtual {p0}, Lr8;->c()Landroid/view/View;
 
     move-result-object p1
 
-    iput-object p1, p0, Lr8;->c:Ljava/util/List;
+    return-object p1
+.end method
 
-    invoke-static {p4}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+.method public abstract e()Z
+.end method
 
-    move-result-object p1
+.method public f(Ls7g;)V
+    .locals 0
 
-    iput-object p1, p0, Lr8;->d:Ljava/util/List;
+    return-void
+.end method
 
-    invoke-static {p5}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+.method public abstract g()Z
+.end method
 
-    move-result-object p1
+.method public h(Lgae;)V
+    .locals 2
 
-    iput-object p1, p0, Lr8;->e:Ljava/util/List;
+    iget-object v0, p0, Lr8;->b:Lgae;
 
-    invoke-static {p6}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+    if-eqz v0, :cond_0
 
-    move-result-object p1
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iput-object p1, p0, Lr8;->f:Ljava/util/List;
+    const-string v1, "setVisibilityListener: Setting a new ActionProvider.VisibilityListener when one is already set. Are you reusing this "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, " instance while it is still in use somewhere else?"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "ActionProvider(support)"
+
+    invoke-static {v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    iput-object p1, p0, Lr8;->b:Lgae;
 
     return-void
 .end method

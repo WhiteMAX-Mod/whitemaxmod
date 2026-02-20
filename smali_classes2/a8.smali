@@ -1,154 +1,149 @@
-.class public final La8;
+.class public final synthetic La8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/view/View$OnClickListener;
+
 
 # instance fields
-.field public final a:I
+.field public final synthetic a:I
 
-.field public final b:I
-
-.field public final c:Landroid/content/Intent;
+.field public final synthetic b:Lis6;
 
 
 # direct methods
-.method public constructor <init>(IILandroid/content/Intent;)V
+.method public synthetic constructor <init>(ILis6;)V
     .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput p1, p0, La8;->a:I
 
-    iput p2, p0, La8;->b:I
+    iput-object p2, p0, La8;->b:Lis6;
 
-    iput-object p3, p0, La8;->c:Landroid/content/Intent;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final onClick(Landroid/view/View;)V
+    .locals 1
 
-    const/4 v0, 0x1
+    iget p1, p0, La8;->a:I
 
-    if-ne p0, p1, :cond_0
+    iget-object v0, p0, La8;->b:Lis6;
 
-    return v0
+    packed-switch p1, :pswitch_data_0
 
-    :cond_0
-    instance-of v1, p1, La8;
+    invoke-interface {v0}, Lis6;->invoke()Ljava/lang/Object;
 
-    const/4 v2, 0x0
+    return-void
 
-    if-nez v1, :cond_1
+    :pswitch_0
+    invoke-interface {v0}, Lis6;->invoke()Ljava/lang/Object;
 
-    return v2
+    return-void
 
-    :cond_1
-    check-cast p1, La8;
+    :pswitch_1
+    invoke-interface {v0}, Lis6;->invoke()Ljava/lang/Object;
 
-    iget v1, p0, La8;->a:I
+    return-void
 
-    iget v3, p1, La8;->a:I
+    :pswitch_2
+    invoke-interface {v0}, Lis6;->invoke()Ljava/lang/Object;
 
-    if-eq v1, v3, :cond_2
+    return-void
 
-    return v2
+    :pswitch_3
+    invoke-interface {v0}, Lis6;->invoke()Ljava/lang/Object;
 
-    :cond_2
-    iget v1, p0, La8;->b:I
+    return-void
 
-    iget v3, p1, La8;->b:I
+    :pswitch_4
+    invoke-interface {v0}, Lis6;->invoke()Ljava/lang/Object;
 
-    if-eq v1, v3, :cond_3
+    return-void
 
-    return v2
+    :pswitch_5
+    invoke-interface {v0}, Lis6;->invoke()Ljava/lang/Object;
 
-    :cond_3
-    iget-object v1, p0, La8;->c:Landroid/content/Intent;
+    return-void
 
-    iget-object p1, p1, La8;->c:Landroid/content/Intent;
+    :pswitch_6
+    invoke-interface {v0}, Lis6;->invoke()Ljava/lang/Object;
 
-    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    return-void
 
-    move-result p1
+    :pswitch_7
+    if-eqz v0, :cond_0
 
-    if-nez p1, :cond_4
-
-    return v2
-
-    :cond_4
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget v0, p0, La8;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, La8;->b:I
-
-    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
-
-    move-result v0
-
-    iget-object v1, p0, La8;->c:Landroid/content/Intent;
-
-    if-nez v1, :cond_0
-
-    const/4 v1, 0x0
-
-    goto :goto_0
+    invoke-interface {v0}, Lis6;->invoke()Ljava/lang/Object;
 
     :cond_0
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    return-void
 
-    move-result v1
+    :pswitch_8
+    invoke-interface {v0}, Lis6;->invoke()Ljava/lang/Object;
 
-    :goto_0
-    add-int/2addr v0, v1
+    return-void
 
-    return v0
-.end method
+    :pswitch_9
+    invoke-interface {v0}, Lis6;->invoke()Ljava/lang/Object;
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+    return-void
 
-    const-string v0, ", resultCode="
+    :pswitch_a
+    invoke-interface {v0}, Lis6;->invoke()Ljava/lang/Object;
 
-    const-string v1, ", data="
+    return-void
 
-    const-string v2, "ActivityResult(requestCode="
+    :pswitch_b
+    sget p1, Lone/me/sdk/uikit/common/views/EmptySearchView;->o:I
 
-    iget v3, p0, La8;->a:I
+    invoke-interface {v0}, Lis6;->invoke()Ljava/lang/Object;
 
-    iget v4, p0, La8;->b:I
+    return-void
 
-    invoke-static {v2, v3, v0, v4, v1}, Lkz1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    :pswitch_c
+    invoke-interface {v0}, Lis6;->invoke()Ljava/lang/Object;
 
-    move-result-object v0
+    return-void
 
-    iget-object v1, p0, La8;->c:Landroid/content/Intent;
+    :pswitch_d
+    invoke-interface {v0}, Lis6;->invoke()Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    return-void
 
-    const-string v1, ")"
+    :pswitch_e
+    invoke-interface {v0}, Lis6;->invoke()Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return-void
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :pswitch_f
+    invoke-interface {v0}, Lis6;->invoke()Ljava/lang/Object;
 
-    move-result-object v0
+    return-void
 
-    return-object v0
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_f
+        :pswitch_e
+        :pswitch_d
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

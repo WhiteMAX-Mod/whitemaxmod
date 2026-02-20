@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements Lzs6;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart;->execute(Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart$Params;)Lkef;
+    value = Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart;->execute(Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart$Params;)Limf;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

@@ -1,102 +1,93 @@
 .class public final Lmyh;
-.super Luc2;
+.super Ld3;
 .source "SourceFile"
 
 
 # instance fields
-.field public final c:J
+.field public final synthetic c:I
+
+.field public final synthetic d:Lnyh;
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 2
+.method public constructor <init>(Lnyh;I)V
+    .locals 0
 
-    const/4 v0, 0x2
+    iput p2, p0, Lmyh;->c:I
 
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    iput-object p1, p0, Lmyh;->d:Lnyh;
 
-    move-result-object v1
+    const/16 p1, 0xd
 
-    invoke-direct {p0, v1, v0}, Luc2;-><init>(Ljava/lang/Long;I)V
+    packed-switch p2, :pswitch_data_0
 
-    iput-wide p1, p0, Lmyh;->c:J
+    const/4 p2, 0x0
+
+    invoke-direct {p0, p1, p2}, Ld3;-><init>(ILjava/lang/Object;)V
 
     return-void
+
+    :pswitch_0
+    sget-object p2, Lhyh;->a:Lhyh;
+
+    invoke-direct {p0, p1, p2}, Ld3;-><init>(ILjava/lang/Object;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Long;
-    .locals 2
+.method public final Y(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 1
 
-    iget-wide v0, p0, Lmyh;->c:J
+    iget v0, p0, Lmyh;->c:I
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lmyh;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lmyh;
-
-    iget-wide v3, p0, Lmyh;->c:J
-
-    iget-wide v5, p1, Lmyh;->c:J
-
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Lmyh;->c:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    invoke-static {p1, p2}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
-    return v0
-.end method
+    if-nez v0, :cond_0
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+    check-cast p2, Lhyh;
 
-    const-string v0, "DialogBotId(sourceId="
+    check-cast p1, Lhyh;
 
-    const-string v1, ")"
+    iget-object p1, p0, Lmyh;->d:Lnyh;
 
-    iget-wide v2, p0, Lmyh;->c:J
+    invoke-virtual {p1}, Landroid/view/View;->requestLayout()V
 
-    invoke-static {v2, v3, v0, v1}, Lcbh;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    :cond_0
+    return-void
 
-    move-result-object v0
+    :pswitch_0
+    invoke-static {p1, p2}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    return-object v0
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    check-cast p2, Lkyh;
+
+    check-cast p1, Lkyh;
+
+    iget-object p1, p0, Lmyh;->d:Lnyh;
+
+    invoke-virtual {p1}, Landroid/view/View;->requestLayout()V
+
+    :cond_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

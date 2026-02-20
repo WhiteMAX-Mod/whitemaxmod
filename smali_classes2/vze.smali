@@ -1,29 +1,52 @@
-.class public final Lvze;
+.class public abstract Lvze;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic a:Lvze;
+# instance fields
+.field public final a:J
 
-.field public static final b:Luze;
+.field public b:Luq9;
+
+.field public c:J
+
+.field public d:Z
+
+.field public e:Ljava/lang/String;
+
+.field public f:Lwx4;
+
+.field public g:Lbea;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(J)V
     .locals 1
 
-    new-instance v0, Lvze;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x1
 
-    sput-object v0, Lvze;->a:Lvze;
+    iput-boolean v0, p0, Lvze;->d:Z
 
-    new-instance v0, Luze;
+    sget-object v0, Lbea;->c:Lbea;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object v0, p0, Lvze;->g:Lbea;
 
-    sput-object v0, Lvze;->b:Luze;
+    iput-wide p1, p0, Lvze;->a:J
 
     return-void
+.end method
+
+
+# virtual methods
+.method public abstract a()Lwze;
+.end method
+
+.method public b(Lwx4;)Lvze;
+    .locals 0
+
+    iput-object p1, p0, Lvze;->f:Lwx4;
+
+    return-object p0
 .end method

@@ -1,50 +1,57 @@
-.class public final synthetic Lam4;
-.super Lqr6;
+.class public final Lam4;
+.super Lda4;
 .source "SourceFile"
 
-# interfaces
-.implements Lnq6;
 
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
 
-# static fields
-.field public static final a:Lam4;
+.field public final synthetic Y:Lbm4;
+
+.field public Z:I
+
+.field public d:J
+
+.field public o:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(Lbm4;Lda4;)V
+    .locals 0
 
-    new-instance v0, Lam4;
+    iput-object p1, p0, Lam4;->Y:Lbm4;
 
-    const-string v4, "toLong(Ljava/lang/String;)J"
-
-    const/4 v5, 0x1
-
-    const/4 v1, 0x1
-
-    const-class v2, Lrzf;
-
-    const-string v3, "toLong"
-
-    invoke-direct/range {v0 .. v5}, Lqr6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    sput-object v0, Lam4;->a:Lam4;
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    check-cast p1, Ljava/lang/String;
+    iput-object p1, p0, Lam4;->X:Ljava/lang/Object;
 
-    invoke-static {p1}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
+    iget p1, p0, Lam4;->Z:I
 
-    move-result-wide v0
+    const/high16 v0, -0x80000000
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lam4;->Z:I
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    iget-object v0, p0, Lam4;->Y:Lbm4;
+
+    const-wide/16 v1, 0x0
+
+    move-object v5, p0
+
+    invoke-virtual/range {v0 .. v5}, Lbm4;->b(JZLjava/lang/String;Lda4;)Ljava/lang/Object;
 
     move-result-object p1
 

@@ -3,14 +3,12 @@
 
 
 # static fields
-.field public static oneme_stickers_preview_action_favorite_title:I = 0x7f130a64
+.field public static oneme_bottom_sheet_popup:I = 0x7f0a05b3
 
-.field public static oneme_stickers_preview_action_forward_title:I = 0x7f130a65
+.field public static oneme_bottom_sheet_popup_card:I = 0x7f0a05b4
 
-.field public static oneme_stickers_preview_action_in_favorite_title:I = 0x7f130a66
+.field public static oneme_bottom_sheet_popup_top_anchor:I = 0x7f0a05b5
 
-.field public static oneme_stickers_preview_action_send_title:I = 0x7f130a67
+.field public static oneme_bottom_sheet_toolbar:I = 0x7f0a05b6
 
-.field public static oneme_stickers_preview_snackbar_favorite_added:I = 0x7f130a68
-
-.field public static oneme_stickers_preview_snackbar_favorite_removed:I = 0x7f130a69
+.field public static oneme_too_many_requests_bottomsheet_positive_button:I = 0x7f0a088d

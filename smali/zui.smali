@@ -1,19 +1,56 @@
-.class public abstract Lzui;
+.class public final synthetic Lzui;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lcom/my/tracker/core/utils/Consumer;
 
-# static fields
-.field public static final synthetic a:I
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:J
+
+.field public final synthetic c:Ljava/lang/String;
+
+.field public final synthetic d:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(IJLjava/lang/String;Ljava/lang/String;)V
+    .locals 0
 
-    const-class v0, Lzui;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
+    iput p1, p0, Lzui;->a:I
+
+    iput-wide p2, p0, Lzui;->b:J
+
+    iput-object p4, p0, Lzui;->c:Ljava/lang/String;
+
+    iput-object p5, p0, Lzui;->d:Ljava/lang/String;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final accept(Ljava/lang/Object;)V
+    .locals 6
+
+    iget-object v4, p0, Lzui;->d:Ljava/lang/String;
+
+    move-object v5, p1
+
+    check-cast v5, Landroid/content/SharedPreferences$Editor;
+
+    iget v0, p0, Lzui;->a:I
+
+    iget-wide v1, p0, Lzui;->b:J
+
+    iget-object v3, p0, Lzui;->c:Ljava/lang/String;
+
+    invoke-static/range {v0 .. v5}, Lcom/my/tracker/applifecycle/o/c;->b(IJLjava/lang/String;Ljava/lang/String;Landroid/content/SharedPreferences$Editor;)V
 
     return-void
 .end method

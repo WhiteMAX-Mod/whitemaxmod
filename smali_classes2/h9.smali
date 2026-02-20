@@ -3,161 +3,151 @@
 .source "SourceFile"
 
 # interfaces
-.implements La7c;
-
-
-# static fields
-.field public static final synthetic i:[Lz28;
+.implements Lr05;
 
 
 # instance fields
-.field public final a:J
+.field public final a:Lj88;
 
-.field public final b:Lo58;
+.field public final b:J
 
-.field public final c:Lo58;
+.field public final c:Lkotlinx/coroutines/internal/ContextScope;
 
-.field public d:Lzb4;
+.field public d:Lyz7;
 
-.field public final e:Li7f;
-
-.field public final f:Lold;
-
-.field public final g:Lx07;
-
-.field public final h:Z
+.field public final e:Lmrd;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
-
-    new-instance v0, Lhfa;
-
-    const-string v1, "processActionJob"
-
-    const-string v2, "getProcessActionJob()Lkotlinx/coroutines/Job;"
-
-    const-class v3, Lh9;
-
-    invoke-direct {v0, v3, v1, v2}, Lhfa;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
-
-    sget-object v1, Lctd;->a:Ldtd;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v1, 0x1
-
-    new-array v1, v1, [Lz28;
-
-    const/4 v2, 0x0
-
-    aput-object v0, v1, v2
-
-    sput-object v1, Lh9;->i:[Lz28;
-
-    return-void
-.end method
-
-.method public constructor <init>(JLo58;Lo58;)V
-    .locals 2
+.method public constructor <init>(Lj88;Lj88;)V
+    .locals 8
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lh9;->a:J
+    iput-object p2, p0, Lh9;->a:Lj88;
 
-    iput-object p3, p0, Lh9;->b:Lo58;
+    sget-object p2, Ltz4;->b:Ljava/util/concurrent/atomic/AtomicLong;
 
-    iput-object p4, p0, Lh9;->c:Lo58;
+    invoke-virtual {p2}, Ljava/util/concurrent/atomic/AtomicLong;->incrementAndGet()J
 
-    const p4, 0x7fffffff
+    move-result-wide v1
 
-    const/4 v0, 0x5
+    iput-wide v1, p0, Lh9;->b:J
 
-    const/4 v1, 0x0
-
-    invoke-static {v1, p4, v0}, Lj7f;->b(III)Li7f;
-
-    move-result-object p4
-
-    iput-object p4, p0, Lh9;->e:Li7f;
-
-    new-instance v0, Lold;
-
-    invoke-direct {v0, p4}, Lold;-><init>(Llfa;)V
-
-    iput-object v0, p0, Lh9;->f:Lold;
-
-    invoke-static {}, Lhlj;->b()Lx07;
-
-    move-result-object p4
-
-    iput-object p4, p0, Lh9;->g:Lx07;
-
-    invoke-interface {p3}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object p3
-
-    check-cast p3, Lla3;
-
-    invoke-virtual {p3, p1, p2}, Lla3;->k(J)Lpld;
+    invoke-interface {p1}, Lj88;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    iget-object p1, p1, Lpld;->a:Llpf;
+    check-cast p1, Lbjg;
 
-    invoke-interface {p1}, Llpf;->getValue()Ljava/lang/Object;
+    check-cast p1, Lcbb;
+
+    invoke-virtual {p1}, Lcbb;->a()Lgd4;
 
     move-result-object p1
 
-    check-cast p1, Lnd2;
+    invoke-static {p1}, Lztj;->a(Led4;)Lkotlinx/coroutines/internal/ContextScope;
 
-    if-eqz p1, :cond_0
+    move-result-object p1
 
-    invoke-virtual {p1}, Lnd2;->P()Z
+    iput-object p1, p0, Lh9;->c:Lkotlinx/coroutines/internal/ContextScope;
 
-    move-result p1
+    new-instance p1, Lxo3;
 
-    const/4 p2, 0x1
+    invoke-direct {p1}, Lxo3;-><init>()V
 
-    if-ne p1, p2, :cond_0
+    sget-object p2, Lmah;->a:Lmah;
 
-    move v1, p2
+    invoke-virtual {p1, p2}, Lyz7;->makeCompleting$kotlinx_coroutines_core(Ljava/lang/Object;)Z
 
-    :cond_0
-    iput-boolean v1, p0, Lh9;->h:Z
+    iput-object p1, p0, Lh9;->d:Lyz7;
+
+    new-instance v0, Lmm4;
+
+    sget p1, Lbjd;->oneme_settings_dump_active_notifications:I
+
+    new-instance v3, Lcpg;
+
+    invoke-direct {v3, p1}, Lcpg;-><init>(I)V
+
+    sget v4, Lice;->v:I
+
+    sget-object v6, Ljm4;->a:Ljm4;
+
+    const/16 v7, 0x8
+
+    const/4 v5, 0x0
+
+    invoke-direct/range {v0 .. v7}, Lmm4;-><init>(JLhpg;ILhpg;Lyuj;I)V
+
+    filled-new-array {v0}, [Lmm4;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lfk3;->h([Ljava/lang/Object;)Ljava/util/ArrayList;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lixf;->a(Ljava/lang/Object;)Lhxf;
+
+    move-result-object p1
+
+    new-instance p2, Lmrd;
+
+    invoke-direct {p2, p1}, Lmrd;-><init>(Lgia;)V
+
+    iput-object p2, p0, Lh9;->e:Lmrd;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
+.method public final a()Laxf;
     .locals 1
+
+    iget-object v0, p0, Lh9;->e:Lmrd;
+
+    return-object v0
+.end method
+
+.method public final c(Lmm4;)V
+    .locals 4
+
+    iget-wide v0, p1, Lmm4;->a:J
+
+    iget-wide v2, p0, Lh9;->b:J
+
+    invoke-static {v0, v1, v2, v3}, Ltz4;->a(JJ)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    iget-object p1, p0, Lh9;->d:Lyz7;
+
+    invoke-interface {p1}, Lvy7;->isActive()Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    new-instance p1, Lg9;
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lh9;->d:Lzb4;
+    invoke-direct {p1, p0, v0}, Lg9;-><init>(Lh9;Lkotlin/coroutines/Continuation;)V
 
-    return-void
-.end method
+    const/4 v1, 0x3
 
-.method public final b(Lq6c;)V
-    .locals 0
+    iget-object v2, p0, Lh9;->c:Lkotlinx/coroutines/internal/ContextScope;
 
-    return-void
-.end method
+    invoke-static {v2, v0, v0, p1, v1}, Lea9;->d(Lnd4;Led4;Lqd4;Lys6;I)Lcuf;
 
-.method public final d(J)V
-    .locals 0
+    move-result-object p1
 
-    return-void
-.end method
+    iput-object p1, p0, Lh9;->d:Lyz7;
 
-.method public final e(Lkotlinx/coroutines/internal/ContextScope;)V
-    .locals 0
-
-    iput-object p1, p0, Lh9;->d:Lzb4;
-
+    :cond_0
     return-void
 .end method

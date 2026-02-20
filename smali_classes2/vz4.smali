@@ -1,28 +1,24 @@
-.class public final synthetic Lvz4;
+.class public final Lvz4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Llq6;
+.implements Lks6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Landroid/content/Context;
-
-.field public final synthetic c:Lwz4;
+.field public final synthetic b:Lug3;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/content/Context;Lwz4;I)V
+.method public synthetic constructor <init>(Lug3;I)V
     .locals 0
 
-    iput p3, p0, Lvz4;->a:I
+    iput p2, p0, Lvz4;->a:I
 
-    iput-object p1, p0, Lvz4;->b:Landroid/content/Context;
-
-    iput-object p2, p0, Lvz4;->c:Lwz4;
+    iput-object p1, p0, Lvz4;->b:Lug3;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -31,102 +27,180 @@
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 5
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
     iget v0, p0, Lvz4;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    new-instance v0, Lto8;
+    check-cast p1, Ljava/lang/Boolean;
 
-    iget-object v1, p0, Lvz4;->b:Landroid/content/Context;
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    invoke-direct {v0, v1}, Lto8;-><init>(Landroid/content/Context;)V
+    iget-object v0, p0, Lvz4;->b:Lug3;
 
-    new-instance v1, Landroid/widget/LinearLayout$LayoutParams;
+    check-cast v0, Lhl8;
 
-    const/4 v2, -0x2
+    iget-object v1, v0, Lhl8;->A0:Lvye;
 
-    invoke-direct {v1, v2, v2}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
+    sget-object v2, Lhl8;->U0:[Lv58;
 
-    const/4 v2, 0x1
+    const/16 v3, 0x12
 
-    iput v2, v1, Landroid/widget/LinearLayout$LayoutParams;->gravity:I
+    aget-object v2, v2, v3
 
-    const/16 v2, 0x8
+    invoke-virtual {v1, v0, v2, p1}, Lvye;->N(Ljava/lang/Object;Lv58;Ljava/lang/Object;)V
 
-    int-to-float v2, v2
+    sget-object p1, Lmah;->a:Lmah;
 
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v3, v2
-
-    invoke-static {v3}, Lq7j;->c(F)I
-
-    move-result v3
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v4
-
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v2, v4
-
-    invoke-static {v2}, Lq7j;->c(F)I
-
-    move-result v2
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v0, v4, v3, v4, v2}, Landroid/view/View;->setPadding(IIII)V
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    const/4 v1, 0x4
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setTextAlignment(I)V
-
-    new-instance v1, Lc6;
-
-    const/16 v2, 0x17
-
-    iget-object v3, p0, Lvz4;->c:Lwz4;
-
-    invoke-direct {v1, v2, v3}, Lc6;-><init>(ILjava/lang/Object;)V
-
-    invoke-static {v0, v1}, Ljmj;->d(Landroid/view/View;Landroid/view/View$OnClickListener;)V
-
-    invoke-static {v0, v3}, Lu5j;->c(Landroid/view/View;Landroid/view/ViewGroup;)V
-
-    return-object v0
+    return-object p1
 
     :pswitch_0
-    iget-object v0, p0, Lvz4;->b:Landroid/content/Context;
+    check-cast p1, Ljava/lang/Boolean;
 
-    iget-object v1, p0, Lvz4;->c:Lwz4;
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    invoke-static {v0, v1}, Lwz4;->a(Landroid/content/Context;Lwz4;)Landroid/widget/TextView;
+    iget-object v0, p0, Lvz4;->b:Lug3;
 
-    move-result-object v0
+    check-cast v0, Lhl8;
 
-    return-object v0
+    iget-object v1, v0, Lhl8;->Q0:Lvye;
+
+    sget-object v2, Lhl8;->U0:[Lv58;
+
+    const/16 v3, 0x22
+
+    aget-object v2, v2, v3
+
+    invoke-virtual {v1, v0, v2, p1}, Lvye;->N(Ljava/lang/Object;Lv58;Ljava/lang/Object;)V
+
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
+
+    :pswitch_1
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    iget-object v0, p0, Lvz4;->b:Lug3;
+
+    check-cast v0, Lhl8;
+
+    iget-object v1, v0, Lhl8;->S0:Lvye;
+
+    sget-object v2, Lhl8;->U0:[Lv58;
+
+    const/16 v3, 0x24
+
+    aget-object v2, v2, v3
+
+    invoke-virtual {v1, v0, v2, p1}, Lvye;->N(Ljava/lang/Object;Lv58;Ljava/lang/Object;)V
+
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
+
+    :pswitch_2
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    iget-object v0, p0, Lvz4;->b:Lug3;
+
+    check-cast v0, Lhl8;
+
+    iget-object v1, v0, Lhl8;->R0:Lvye;
+
+    sget-object v2, Lhl8;->U0:[Lv58;
+
+    const/16 v3, 0x23
+
+    aget-object v2, v2, v3
+
+    invoke-virtual {v1, v0, v2, p1}, Lvye;->N(Ljava/lang/Object;Lv58;Ljava/lang/Object;)V
+
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
+
+    :pswitch_3
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    iget-object v0, p0, Lvz4;->b:Lug3;
+
+    check-cast v0, Lhl8;
+
+    iget-object v1, v0, Lhl8;->x0:Lvye;
+
+    sget-object v2, Lhl8;->U0:[Lv58;
+
+    const/16 v3, 0xf
+
+    aget-object v2, v2, v3
+
+    invoke-virtual {v1, v0, v2, p1}, Lvye;->N(Ljava/lang/Object;Lv58;Ljava/lang/Object;)V
+
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
+
+    :pswitch_4
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    iget-object v0, p0, Lvz4;->b:Lug3;
+
+    check-cast v0, Lhl8;
+
+    iget-object v1, v0, Lhl8;->z0:Lvye;
+
+    sget-object v2, Lhl8;->U0:[Lv58;
+
+    const/16 v3, 0x11
+
+    aget-object v2, v2, v3
+
+    invoke-virtual {v1, v0, v2, p1}, Lvye;->N(Ljava/lang/Object;Lv58;Ljava/lang/Object;)V
+
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
+
+    :pswitch_5
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    iget-object v0, p0, Lvz4;->b:Lug3;
+
+    check-cast v0, Lhl8;
+
+    iget-object v1, v0, Lhl8;->y0:Lvye;
+
+    sget-object v2, Lhl8;->U0:[Lv58;
+
+    const/16 v3, 0x10
+
+    aget-object v2, v2, v3
+
+    invoke-virtual {v1, v0, v2, p1}, Lvye;->N(Ljava/lang/Object;Lv58;Ljava/lang/Object;)V
+
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

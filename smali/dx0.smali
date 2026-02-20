@@ -2,286 +2,531 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ll80;
+
 
 # instance fields
-.field public final a:Lxz5;
+.field public final a:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-.field public final b:Lxz0;
+.field public final b:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-.field public final c:Lyi;
+.field public final c:Ljava/util/concurrent/ConcurrentLinkedQueue;
 
-.field public final d:Ljava/util/concurrent/Executor;
+.field public final d:Lywe;
 
-.field public final e:Ljava/util/concurrent/Executor;
+.field public final e:Ljava/lang/Object;
 
-.field public final f:Llh7;
+.field public f:Lcx0;
 
-.field public final g:Limf;
+.field public final g:Ln80;
+
+.field public final h:I
+
+.field public final i:I
+
+.field public final j:I
+
+.field public final k:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+.field public l:I
 
 
 # direct methods
-.method public constructor <init>(Lxz5;Lxz0;Lyi;Ljava/util/concurrent/Executor;Ljava/util/concurrent/Executor;Llh7;)V
-    .locals 0
+.method public constructor <init>(Ln80;Lbc0;)V
+    .locals 8
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ldx0;->a:Lxz5;
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    iput-object p2, p0, Ldx0;->b:Lxz0;
+    const/4 v1, 0x0
 
-    iput-object p3, p0, Ldx0;->c:Lyi;
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
-    iput-object p4, p0, Ldx0;->d:Ljava/util/concurrent/Executor;
+    iput-object v0, p0, Ldx0;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    iput-object p5, p0, Ldx0;->e:Ljava/util/concurrent/Executor;
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    iput-object p6, p0, Ldx0;->f:Llh7;
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
-    new-instance p1, Limf;
+    iput-object v0, p0, Ldx0;->b:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    const/4 p2, 0x0
+    new-instance v0, Ljava/util/concurrent/ConcurrentLinkedQueue;
 
-    const/4 p3, 0x0
+    invoke-direct {v0}, Ljava/util/concurrent/ConcurrentLinkedQueue;-><init>()V
 
-    invoke-direct {p1, p2, p3}, Limf;-><init>(IZ)V
+    iput-object v0, p0, Ldx0;->c:Ljava/util/concurrent/ConcurrentLinkedQueue;
 
-    new-instance p2, Ljava/util/HashMap;
+    sget-object v0, Lm50;->c:Lm50;
 
-    invoke-direct {p2}, Ljava/util/HashMap;-><init>()V
+    if-eqz v0, :cond_0
 
-    iput-object p2, p1, Limf;->b:Ljava/lang/Object;
+    sget-object v0, Lm50;->c:Lm50;
 
-    iput-object p1, p0, Ldx0;->g:Limf;
+    goto :goto_1
+
+    :cond_0
+    const-class v0, Lm50;
+
+    monitor-enter v0
+
+    :try_start_0
+    sget-object v2, Lm50;->c:Lm50;
+
+    if-nez v2, :cond_1
+
+    new-instance v2, Lm50;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v2, v3}, Lm50;-><init>(I)V
+
+    sput-object v2, Lm50;->c:Lm50;
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_3
+
+    :cond_1
+    :goto_0
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    sget-object v0, Lm50;->c:Lm50;
+
+    :goto_1
+    new-instance v2, Lywe;
+
+    invoke-direct {v2, v0}, Lywe;-><init>(Ljava/util/concurrent/Executor;)V
+
+    iput-object v2, p0, Ldx0;->d:Lywe;
+
+    new-instance v0, Ljava/lang/Object;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iput-object v0, p0, Ldx0;->e:Ljava/lang/Object;
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Ldx0;->f:Lcx0;
+
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
+
+    iput-object v0, p0, Ldx0;->k:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    iput-object p1, p0, Ldx0;->g:Ln80;
+
+    invoke-virtual {p2}, Lbc0;->a()I
+
+    move-result p1
+
+    iput p1, p0, Ldx0;->h:I
+
+    iget p2, p2, Lbc0;->b:I
+
+    iput p2, p0, Ldx0;->i:I
+
+    int-to-long v2, p1
+
+    const-wide/16 v4, 0x0
+
+    cmp-long v0, v2, v4
+
+    const/4 v2, 0x1
+
+    if-lez v0, :cond_2
+
+    move v0, v2
+
+    goto :goto_2
+
+    :cond_2
+    move v0, v1
+
+    :goto_2
+    const-string v3, "mBytesPerFrame must be greater than 0."
+
+    invoke-static {v3, v0}, Lmtj;->a(Ljava/lang/String;Z)V
+
+    int-to-long v6, p2
+
+    cmp-long p2, v6, v4
+
+    if-lez p2, :cond_3
+
+    move v1, v2
+
+    :cond_3
+    const-string p2, "mSampleRate must be greater than 0."
+
+    invoke-static {p2, v1}, Lmtj;->a(Ljava/lang/String;Z)V
+
+    const/16 p2, 0x1f4
+
+    iput p2, p0, Ldx0;->j:I
+
+    mul-int/lit16 p1, p1, 0x400
+
+    iput p1, p0, Ldx0;->l:I
 
     return-void
+
+    :goto_3
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
 .end method
 
 
 # virtual methods
 .method public final a()V
-    .locals 3
+    .locals 2
 
-    iget-object v0, p0, Ldx0;->g:Limf;
+    iget-object v0, p0, Ldx0;->b:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    invoke-virtual {v0}, Limf;->h()V
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v0
+
+    xor-int/lit8 v0, v0, 0x1
+
+    const-string v1, "AudioStream has been released."
+
+    invoke-static {v1, v0}, Lmtj;->f(Ljava/lang/String;Z)V
+
+    return-void
+.end method
+
+.method public final b()V
+    .locals 5
+
+    iget-object v0, p0, Ldx0;->k:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    iget v0, p0, Ldx0;->l:I
+
+    invoke-static {v0}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
+
+    move-result-object v0
+
+    iget-object v1, p0, Ldx0;->g:Ln80;
+
+    invoke-virtual {v1, v0}, Ln80;->read(Ljava/nio/ByteBuffer;)Lec0;
+
+    move-result-object v1
+
+    new-instance v2, Lcx0;
+
+    iget v3, p0, Ldx0;->h:I
+
+    iget v4, p0, Ldx0;->i:I
+
+    invoke-direct {v2, v0, v1, v3, v4}, Lcx0;-><init>(Ljava/nio/ByteBuffer;Lec0;II)V
+
+    iget v0, p0, Ldx0;->j:I
+
+    iget-object v1, p0, Ldx0;->e:Ljava/lang/Object;
+
+    monitor-enter v1
 
     :try_start_0
-    new-instance v0, Lcx0;
+    iget-object v3, p0, Ldx0;->c:Ljava/util/concurrent/ConcurrentLinkedQueue;
 
-    const/4 v1, 0x0
+    invoke-virtual {v3, v2}, Ljava/util/concurrent/ConcurrentLinkedQueue;->offer(Ljava/lang/Object;)Z
 
-    invoke-direct {v0, v1, p0}, Lcx0;-><init>(ILjava/lang/Object;)V
+    :goto_0
+    iget-object v2, p0, Ldx0;->c:Ljava/util/concurrent/ConcurrentLinkedQueue;
 
-    iget-object v1, p0, Ldx0;->e:Ljava/util/concurrent/Executor;
+    invoke-virtual {v2}, Ljava/util/concurrent/ConcurrentLinkedQueue;->size()I
 
-    invoke-static {v0, v1}, Lbolts/Task;->call(Ljava/util/concurrent/Callable;Ljava/util/concurrent/Executor;)Lbolts/Task;
+    move-result v2
+
+    if-le v2, v0, :cond_1
+
+    iget-object v2, p0, Ldx0;->c:Ljava/util/concurrent/ConcurrentLinkedQueue;
+
+    invoke-virtual {v2}, Ljava/util/concurrent/ConcurrentLinkedQueue;->poll()Ljava/lang/Object;
+
+    const-string v2, "BufferedAudioStream"
+
+    const-string v3, "Drop audio data due to full of queue."
+
+    invoke-static {v2, v3}, Ljfj;->j(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_2
+
+    :cond_1
+    monitor-exit v1
     :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    iget-object v0, p0, Ldx0;->k:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Ldx0;->d:Lywe;
+
+    new-instance v1, Lbx0;
+
+    const/4 v2, 0x2
+
+    invoke-direct {v1, p0, v2}, Lbx0;-><init>(Ldx0;I)V
+
+    invoke-virtual {v0, v1}, Lywe;->execute(Ljava/lang/Runnable;)V
+
+    :cond_2
+    :goto_1
+    return-void
+
+    :goto_2
+    :try_start_1
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+.end method
+
+.method public final c()V
+    .locals 4
+
+    invoke-virtual {p0}, Ldx0;->a()V
+
+    const/4 v0, 0x1
+
+    iget-object v1, p0, Ldx0;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v1, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->getAndSet(Z)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance v0, Ljava/util/concurrent/FutureTask;
+
+    new-instance v2, Lbx0;
+
+    const/4 v3, 0x1
+
+    invoke-direct {v2, p0, v3}, Lbx0;-><init>(Ldx0;I)V
+
+    const/4 v3, 0x0
+
+    invoke-direct {v0, v2, v3}, Ljava/util/concurrent/FutureTask;-><init>(Ljava/lang/Runnable;Ljava/lang/Object;)V
+
+    iget-object v2, p0, Ldx0;->d:Lywe;
+
+    invoke-virtual {v2, v0}, Lywe;->execute(Ljava/lang/Runnable;)V
+
+    :try_start_0
+    invoke-virtual {v0}, Ljava/util/concurrent/FutureTask;->get()Ljava/lang/Object;
+    :try_end_0
+    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/util/concurrent/ExecutionException; {:try_start_0 .. :try_end_0} :catch_0
 
     return-void
 
     :catch_0
     move-exception v0
 
-    const/4 v1, 0x0
-
-    new-array v1, v1, [Ljava/lang/Object;
-
-    const-string v2, "Failed to schedule disk-cache clear"
-
-    invoke-static {v0, v2, v1}, Lmt5;->l(Ljava/lang/Exception;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    invoke-static {v0}, Lbolts/Task;->forError(Ljava/lang/Exception;)Lbolts/Task;
-
-    return-void
-.end method
-
-.method public final b(Lddf;)Lfj9;
-    .locals 7
-
-    iget-object v0, p1, Lddf;->a:Ljava/lang/String;
-
-    iget-object v1, p0, Ldx0;->f:Llh7;
-
-    const-class v2, Ldx0;
-
-    :try_start_0
-    const-string v3, "Disk cache read for %s"
-
-    invoke-static {v2, v0, v3}, Lmt5;->d(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
-
-    iget-object v3, p0, Ldx0;->a:Lxz5;
-
-    check-cast v3, Lu15;
-
-    invoke-virtual {v3, p1}, Lu15;->b(Lb01;)Lwz5;
-
-    move-result-object p1
-
-    if-nez p1, :cond_0
-
-    const-string p1, "Disk cache miss for %s"
-
-    invoke-static {v2, v0, p1}, Lmt5;->d(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-interface {v1}, Llh7;->l()V
-
-    const/4 p1, 0x0
-
-    return-object p1
-
-    :catch_0
-    move-exception p1
-
     goto :goto_0
 
+    :catch_1
+    move-exception v0
+
+    :goto_0
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+
+    new-instance v1, Landroidx/camera/video/internal/audio/AudioStream$AudioStreamException;
+
+    invoke-direct {v1, v0}, Ljava/lang/Exception;-><init>(Ljava/lang/Throwable;)V
+
+    throw v1
+.end method
+
+.method public final read(Ljava/nio/ByteBuffer;)Lec0;
+    .locals 5
+
+    invoke-virtual {p0}, Ldx0;->a()V
+
+    iget-object v0, p0, Ldx0;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v0
+
+    const-string v1, "AudioStream has not been started."
+
+    invoke-static {v1, v0}, Lmtj;->f(Ljava/lang/String;Z)V
+
+    invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
+
+    move-result v0
+
+    iget-object v1, p0, Ldx0;->d:Lywe;
+
+    new-instance v2, Lp50;
+
+    const/4 v3, 0x2
+
+    invoke-direct {v2, p0, v0, v3}, Lp50;-><init>(Ljava/lang/Object;II)V
+
+    invoke-virtual {v1, v2}, Lywe;->execute(Ljava/lang/Runnable;)V
+
+    new-instance v0, Lec0;
+
+    const/4 v1, 0x0
+
+    const-wide/16 v2, 0x0
+
+    invoke-direct {v0, v1, v2, v3}, Lec0;-><init>(IJ)V
+
     :cond_0
-    const-string v3, "Found entry in disk cache for %s"
+    iget-object v2, p0, Ldx0;->e:Ljava/lang/Object;
 
-    invoke-static {v2, v0, v3}, Lmt5;->d(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
+    monitor-enter v2
 
-    invoke-interface {v1}, Llh7;->b()V
+    :try_start_0
+    iget-object v3, p0, Ldx0;->f:Lcx0;
 
-    new-instance v3, Ljava/io/FileInputStream;
+    const/4 v4, 0x0
 
-    iget-object v4, p1, Lwz5;->a:Ljava/io/File;
+    iput-object v4, p0, Ldx0;->f:Lcx0;
 
-    invoke-direct {v3, v4}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    if-nez v3, :cond_1
 
-    :try_start_1
-    iget-object v4, p0, Ldx0;->b:Lxz0;
+    iget-object v3, p0, Ldx0;->c:Ljava/util/concurrent/ConcurrentLinkedQueue;
 
-    iget-object p1, p1, Lwz5;->a:Ljava/io/File;
+    invoke-virtual {v3}, Ljava/util/concurrent/ConcurrentLinkedQueue;->poll()Ljava/lang/Object;
 
-    invoke-virtual {p1}, Ljava/io/File;->length()J
+    move-result-object v3
 
-    move-result-wide v5
+    check-cast v3, Lcx0;
 
-    long-to-int p1, v5
-
-    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v5, Lgj9;
-
-    iget-object v6, v4, Lxz0;->c:Ljava/lang/Object;
-
-    check-cast v6, Lej9;
-
-    invoke-direct {v5, v6, p1}, Lgj9;-><init>(Lej9;I)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    :try_start_2
-    iget-object p1, v4, Lxz0;->b:Ljava/lang/Object;
-
-    check-cast p1, Lyi;
-
-    invoke-virtual {p1, v3, v5}, Lyi;->d(Ljava/io/InputStream;Ljava/io/OutputStream;)V
-
-    invoke-virtual {v5}, Lgj9;->E()Lfj9;
-
-    move-result-object p1
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    :try_start_3
-    invoke-virtual {v5}, Lgj9;->close()V
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
-    :try_start_4
-    invoke-virtual {v3}, Ljava/io/InputStream;->close()V
-
-    const-string v3, "Successful read from disk cache for %s"
-
-    invoke-static {v2, v0, v3}, Lmt5;->d(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
-    :try_end_4
-    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_0
-
-    return-object p1
+    goto :goto_0
 
     :catchall_0
     move-exception p1
 
-    :try_start_5
-    invoke-virtual {v5}, Lgj9;->close()V
+    goto :goto_3
 
-    throw p1
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_1
-
-    :catchall_1
-    move-exception p1
-
-    :try_start_6
-    invoke-virtual {v3}, Ljava/io/InputStream;->close()V
-
-    throw p1
-    :try_end_6
-    .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_0
-
+    :cond_1
     :goto_0
-    const-string v2, "Exception reading from cache for %s"
+    if-eqz v3, :cond_2
 
-    filled-new-array {v0}, [Ljava/lang/Object;
+    invoke-virtual {v3, p1}, Lcx0;->a(Ljava/nio/ByteBuffer;)Lec0;
 
     move-result-object v0
 
-    invoke-static {p1, v2, v0}, Lmt5;->l(Ljava/lang/Exception;Ljava/lang/String;[Ljava/lang/Object;)V
+    iget-object v4, v3, Lcx0;->c:Ljava/nio/ByteBuffer;
 
-    invoke-interface {v1}, Llh7;->j()V
+    invoke-virtual {v4}, Ljava/nio/Buffer;->remaining()I
 
-    throw p1
-.end method
+    move-result v4
 
-.method public final c(Lddf;Lei5;)V
-    .locals 5
+    if-lez v4, :cond_2
 
-    iget-object v0, p1, Lddf;->a:Ljava/lang/String;
+    iput-object v3, p0, Ldx0;->f:Lcx0;
 
-    const-class v1, Ldx0;
-
-    const-string v2, "About to write to disk-cache for key %s"
-
-    invoke-static {v1, v0, v2}, Lmt5;->d(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
-
-    :try_start_0
-    iget-object v2, p0, Ldx0;->a:Lxz5;
-
-    new-instance v3, Lwq;
-
-    const/4 v4, 0x4
-
-    invoke-direct {v3, p2, v4, p0}, Lwq;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    check-cast v2, Lu15;
-
-    invoke-virtual {v2, p1, v3}, Lu15;->d(Lddf;Lwq;)Lwz5;
-
-    iget-object p1, p0, Ldx0;->f:Llh7;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const-string p1, "Successful disk-cache write for key %s"
-
-    invoke-static {v1, v0, p1}, Lmt5;->d(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
+    :cond_2
+    monitor-exit v2
     :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    return-void
+    iget v2, v0, Lec0;->a:I
+
+    if-gtz v2, :cond_3
+
+    iget-object v2, p0, Ldx0;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    iget-object v2, p0, Ldx0;->b:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v2
+
+    if-nez v2, :cond_3
+
+    const/4 v2, 0x1
+
+    goto :goto_1
+
+    :cond_3
+    move v2, v1
+
+    :goto_1
+    if-eqz v2, :cond_4
+
+    const-wide/16 v3, 0x1
+
+    :try_start_1
+    invoke-static {v3, v4}, Ljava/lang/Thread;->sleep(J)V
+    :try_end_1
+    .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
+
+    goto :goto_2
 
     :catch_0
     move-exception p1
 
-    const-string p2, "Failed to write to disk-cache for key %s"
+    const-string v1, "BufferedAudioStream"
 
-    filled-new-array {v0}, [Ljava/lang/Object;
+    const-string v2, "Interruption while waiting for audio data"
 
-    move-result-object v0
+    invoke-static {v1, v2, p1}, Ljfj;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    invoke-static {p1, p2, v0}, Lmt5;->l(Ljava/lang/Exception;Ljava/lang/String;[Ljava/lang/Object;)V
+    return-object v0
 
-    return-void
+    :cond_4
+    :goto_2
+    if-nez v2, :cond_0
+
+    return-object v0
+
+    :goto_3
+    :try_start_2
+    monitor-exit v2
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    throw p1
 .end method

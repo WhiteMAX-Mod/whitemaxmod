@@ -1,48 +1,122 @@
 .class public final Lks9;
-.super Lo84;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ljava/io/Serializable;
 
 
 # instance fields
-.field public final synthetic X:Lnq7;
+.field public final a:I
 
-.field public synthetic d:Ljava/lang/Object;
-
-.field public o:I
+.field public final b:I
 
 
 # direct methods
-.method public constructor <init>(Lnq7;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(II)V
     .locals 0
 
-    iput-object p1, p0, Lks9;->X:Lnq7;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput p1, p0, Lks9;->a:I
+
+    iput p2, p0, Lks9;->b:I
 
     return-void
 .end method
 
+.method public static a(Lws9;)Lks9;
+    .locals 6
+
+    invoke-static {p0}, Lm1j;->p(Lws9;)I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 p0, 0x0
+
+    return-object p0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    move v2, v1
+
+    move v3, v2
+
+    :goto_0
+    if-ge v1, v0, :cond_3
+
+    invoke-virtual {p0}, Lws9;->P0()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-string v5, "views"
+
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-nez v5, :cond_2
+
+    const-string v5, "forwards"
+
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_1
+
+    invoke-virtual {p0}, Lws9;->B()V
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {p0}, Lws9;->L0()I
+
+    move-result v3
+
+    goto :goto_1
+
+    :cond_2
+    invoke-virtual {p0}, Lws9;->L0()I
+
+    move-result v2
+
+    :goto_1
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_3
+    new-instance p0, Lks9;
+
+    invoke-direct {p0, v2, v3}, Lks9;-><init>(II)V
+
+    return-object p0
+.end method
+
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    iput-object p1, p0, Lks9;->d:Ljava/lang/Object;
+    const-string v0, ", forwards="
 
-    iget p1, p0, Lks9;->o:I
+    const-string v1, "}"
 
-    const/high16 v0, -0x80000000
+    const-string v2, "{views="
 
-    or-int/2addr p1, v0
+    iget v3, p0, Lks9;->a:I
 
-    iput p1, p0, Lks9;->o:I
+    iget v4, p0, Lks9;->b:I
 
-    iget-object p1, p0, Lks9;->X:Lnq7;
+    invoke-static {v2, v3, v0, v4, v1}, Lau1;->h(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
-    const/4 v0, 0x0
+    move-result-object v0
 
-    invoke-virtual {p1, v0, p0}, Lnq7;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-object v0
 .end method

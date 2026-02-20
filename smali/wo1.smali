@@ -1,5 +1,5 @@
 .class public final Lwo1;
-.super Lcp1;
+.super Lpp1;
 .source "SourceFile"
 
 
@@ -11,7 +11,7 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    invoke-direct {p0}, Lcp1;-><init>()V
+    invoke-direct {p0}, Lpp1;-><init>()V
 
     iput-object p1, p0, Lwo1;->D:Ljava/lang/String;
 
@@ -45,7 +45,7 @@
 
     iget-object p1, p1, Lwo1;->D:Ljava/lang/String;
 
-    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -72,13 +72,13 @@
 .method public final toString()Ljava/lang/String;
     .locals 3
 
-    const-string v0, "ShareLinkToChat(link="
+    const-string v0, "CopyCallLink(link="
 
     const-string v1, ")"
 
     iget-object v2, p0, Lwo1;->D:Ljava/lang/String;
 
-    invoke-static {v0, v2, v1}, Lj27;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v2, v1}, Ltx8;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

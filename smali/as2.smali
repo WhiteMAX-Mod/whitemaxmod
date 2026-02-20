@@ -1,131 +1,186 @@
 .class public final Las2;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Lis6;
 
 
 # instance fields
-.field public final synthetic X:Lws2;
+.field public final synthetic a:Lone/me/chatmedia/viewer/ChatMediaViewerScreen;
 
-.field public o:I
+.field public final synthetic b:I
+
+.field public final synthetic c:Ljs2;
 
 
 # direct methods
-.method public constructor <init>(Lws2;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lone/me/chatmedia/viewer/ChatMediaViewerScreen;ILjs2;)V
     .locals 0
 
-    iput-object p1, p0, Las2;->X:Lws2;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Las2;->a:Lone/me/chatmedia/viewer/ChatMediaViewerScreen;
 
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput p2, p0, Las2;->b:I
+
+    iput-object p3, p0, Las2;->c:Ljs2;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke()Ljava/lang/Object;
+    .locals 11
 
-    check-cast p1, Lzb4;
+    iget-object v0, p0, Las2;->a:Lone/me/chatmedia/viewer/ChatMediaViewerScreen;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lab8;
 
-    invoke-virtual {p0, p1, p2}, Las2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    move-result-object v0
 
-    move-result-object p1
+    invoke-interface {v0}, Lab8;->p()Lcb8;
 
-    check-cast p1, Las2;
+    move-result-object v0
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    iget-object v0, v0, Lcb8;->d:Lga8;
 
-    invoke-virtual {p1, p2}, Las2;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    sget-object v1, Lga8;->d:Lga8;
 
-    move-result-object p1
+    invoke-virtual {v0, v1}, Lga8;->a(Lga8;)Z
 
-    return-object p1
-.end method
+    move-result v0
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    if-eqz v0, :cond_2
 
-    new-instance p1, Las2;
+    const-class v0, Lone/me/chatmedia/viewer/ChatMediaViewerScreen;
 
-    iget-object v0, p0, Las2;->X:Lws2;
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    invoke-direct {p1, v0, p2}, Las2;-><init>(Lws2;Lkotlin/coroutines/Continuation;)V
+    move-result-object v0
 
-    return-object p1
-.end method
+    iget-object v1, p0, Las2;->a:Lone/me/chatmedia/viewer/ChatMediaViewerScreen;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    iget-object v2, p0, Las2;->c:Ljs2;
 
-    iget v0, p0, Las2;->o:I
+    iget v3, p0, Las2;->b:I
 
-    const/4 v1, 0x1
+    sget-object v4, Ltej;->a:Lafb;
 
-    if-eqz v0, :cond_1
+    const/4 v5, 0x0
 
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    if-nez v4, :cond_0
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    sget-object v6, Lzm8;->d:Lzm8;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    invoke-virtual {v4, v6}, Lafb;->b(Lzm8;)Z
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    move-result v7
 
-    throw p1
+    if-eqz v7, :cond_1
+
+    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lab8;
+
+    move-result-object v7
+
+    invoke-interface {v7}, Lab8;->p()Lcb8;
+
+    move-result-object v7
+
+    iget-object v7, v7, Lcb8;->d:Lga8;
+
+    iget v8, v2, Ljs2;->b:I
+
+    iget-object v1, v1, Lone/me/chatmedia/viewer/ChatMediaViewerScreen;->I0:Ltp2;
+
+    invoke-virtual {v1}, Ltp2;->j()I
+
+    move-result v1
+
+    iget-object v2, v2, Ljs2;->a:Ljava/util/List;
+
+    invoke-interface {v2}, Ljava/util/List;->size()I
+
+    move-result v2
+
+    new-instance v9, Ljava/lang/StringBuilder;
+
+    const-string v10, "Media viewer. Pager, after submitList lifecycle="
+
+    invoke-direct {v9, v10}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v9, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v7, " initPos:"
+
+    invoke-virtual {v9, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v9, v8}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v7, ", prevItemsA:"
+
+    invoke-virtual {v9, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v7, ", itemsA:"
+
+    const-string v8, ", items:"
+
+    invoke-static {v9, v3, v7, v1, v8}, Lj64;->o(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    invoke-virtual {v9, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v4, v6, v0, v1, v5}, Lafb;->c(Lzm8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    iput v1, p0, Las2;->o:I
-
-    const-wide/16 v0, 0xbb8
-
-    invoke-static {v0, v1, p0}, Lumj;->c(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lac4;->a:Lac4;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
-    :cond_2
     :goto_0
-    iget-object p1, p0, Las2;->X:Lws2;
+    iget v0, p0, Las2;->b:I
 
-    iget-object p1, p1, Lws2;->j1:Lspf;
+    if-nez v0, :cond_2
 
-    :cond_3
-    invoke-virtual {p1}, Lspf;->getValue()Ljava/lang/Object;
+    iget-object v0, p0, Las2;->c:Ljs2;
 
-    move-result-object v0
+    iget-object v0, v0, Ljs2;->a:Ljava/util/List;
 
-    move-object v1, v0
-
-    check-cast v1, Lu94;
-
-    sget-object v1, Lu94;->b:Lu94;
-
-    invoke-virtual {p1, v0, v1}, Lspf;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    if-nez v0, :cond_2
 
-    sget-object p1, Lb3h;->a:Lb3h;
+    iget-object v0, p0, Las2;->c:Ljs2;
 
-    return-object p1
+    iget v0, v0, Ljs2;->b:I
+
+    if-ltz v0, :cond_2
+
+    iget-object v0, p0, Las2;->a:Lone/me/chatmedia/viewer/ChatMediaViewerScreen;
+
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Loa8;
+
+    move-result-object v0
+
+    new-instance v1, Lzr2;
+
+    iget-object v2, p0, Las2;->a:Lone/me/chatmedia/viewer/ChatMediaViewerScreen;
+
+    iget-object v3, p0, Las2;->c:Ljs2;
+
+    invoke-direct {v1, v2, v3, v5}, Lzr2;-><init>(Lone/me/chatmedia/viewer/ChatMediaViewerScreen;Ljs2;Lkotlin/coroutines/Continuation;)V
+
+    const/4 v2, 0x3
+
+    invoke-static {v0, v5, v5, v1, v2}, Lea9;->d(Lnd4;Led4;Lqd4;Lys6;I)Lcuf;
+
+    :cond_2
+    sget-object v0, Lmah;->a:Lmah;
+
+    return-object v0
 .end method

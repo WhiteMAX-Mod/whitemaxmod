@@ -1,51 +1,39 @@
 .class public final Ldx;
-.super Lo84;
+.super Lda4;
 .source "SourceFile"
 
 
 # instance fields
-.field public A0:Latd;
-
-.field public B0:Loj2;
-
-.field public synthetic C0:Ljava/lang/Object;
-
-.field public final synthetic D0:Ljx;
-
-.field public E0:I
-
 .field public X:J
 
 .field public Y:J
 
-.field public Z:J
+.field public Z:Z
 
 .field public d:J
 
 .field public o:J
 
-.field public t0:I
+.field public s0:Lwo3;
 
-.field public u0:I
+.field public t0:Lxo3;
 
-.field public v0:Lnd2;
+.field public u0:Ljava/util/Collection;
 
-.field public w0:Latd;
+.field public synthetic v0:Ljava/lang/Object;
 
-.field public x0:Lzsd;
+.field public final synthetic w0:Lxx;
 
-.field public y0:Lzsd;
-
-.field public z0:Latd;
+.field public x0:I
 
 
 # direct methods
-.method public constructor <init>(Ljx;Lo84;)V
+.method public constructor <init>(Lxx;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Ldx;->D0:Ljx;
+    iput-object p1, p0, Ldx;->w0:Lxx;
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -53,33 +41,25 @@
 
 # virtual methods
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 10
+    .locals 3
 
-    iput-object p1, p0, Ldx;->C0:Ljava/lang/Object;
+    iput-object p1, p0, Ldx;->v0:Ljava/lang/Object;
 
-    iget p1, p0, Ldx;->E0:I
+    iget p1, p0, Ldx;->x0:I
 
     const/high16 v0, -0x80000000
 
     or-int/2addr p1, v0
 
-    iput p1, p0, Ldx;->E0:I
+    iput p1, p0, Ldx;->x0:I
 
-    const-wide/16 v5, 0x0
+    const-wide/16 v0, 0x0
 
-    const-wide/16 v7, 0x0
+    const/4 p1, 0x0
 
-    iget-object v0, p0, Ldx;->D0:Ljx;
+    iget-object v2, p0, Ldx;->w0:Lxx;
 
-    const-wide/16 v1, 0x0
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    move-object v9, p0
-
-    invoke-virtual/range {v0 .. v9}, Ljx;->p(JIIJJLo84;)Ljava/lang/Object;
+    invoke-virtual {v2, v0, v1, p1, p0}, Lxx;->m(JZLkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 

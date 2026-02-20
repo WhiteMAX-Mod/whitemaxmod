@@ -1,60 +1,80 @@
 .class public final Lpzi;
-.super Ljava/lang/Object;
+.super Lfxi;
 .source "SourceFile"
 
 # interfaces
-.implements Lvwa;
+.implements Lx0j;
 
 
 # static fields
-.field public static final a:Lpzi;
+.field public static final synthetic e:I
+
+
+# instance fields
+.field public final synthetic d:Lgsg;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lgsg;)V
+    .locals 1
 
-    new-instance v0, Lpzi;
+    iput-object p1, p0, Lpzi;->d:Lgsg;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const-string p1, "com.google.android.gms.maps.model.internal.ITileProviderDelegate"
 
-    sput-object v0, Lpzi;->a:Lpzi;
+    const/4 v0, 0x5
 
-    new-instance v0, Lbri;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lbri;-><init>(I)V
-
-    const-class v1, Lpri;
-
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
+    invoke-direct {p0, p1, v0}, Lfxi;-><init>(Ljava/lang/String;I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final U(ILandroid/os/Parcel;Landroid/os/Parcel;)Z
+    .locals 4
 
-    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    const/4 v0, 0x0
+
+    const/4 v1, 0x1
+
+    if-ne p1, v1, :cond_1
+
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result p1
+
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v2
+
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v3
+
+    invoke-static {p2}, Lp2j;->b(Landroid/os/Parcel;)V
+
+    iget-object p2, p0, Lpzi;->d:Lgsg;
+
+    invoke-interface {p2, p1, v2, v3}, Lgsg;->a(III)Ldsg;
 
     move-result-object p1
 
-    throw p1
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    if-nez p1, :cond_0
+
+    invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    return v1
+
+    :cond_0
+    invoke-virtual {p3, v1}, Landroid/os/Parcel;->writeInt(I)V
+
+    invoke-virtual {p1, p3, v1}, Ldsg;->writeToParcel(Landroid/os/Parcel;I)V
+
+    return v1
+
+    :cond_1
+    return v0
 .end method

@@ -1,118 +1,90 @@
-.class public final synthetic Leq5;
-.super Ljava/lang/Object;
+.class public final Leq5;
+.super Laq5;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Z
-
-.field public final synthetic c:I
-
-.field public final synthetic d:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcga;ZI)V
+.method public constructor <init>(Ljava/io/InputStream;)V
     .locals 1
 
-    .line 2
-    const/4 v0, 0x1
+    .line 3
+    invoke-direct {p0, p1}, Laq5;-><init>(Ljava/io/InputStream;)V
 
-    iput v0, p0, Leq5;->a:I
+    .line 4
+    invoke-virtual {p1}, Ljava/io/InputStream;->markSupported()Z
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-result p1
 
-    iput-object p1, p0, Leq5;->d:Ljava/lang/Object;
+    if-eqz p1, :cond_0
 
-    iput-boolean p2, p0, Leq5;->b:Z
+    .line 5
+    iget-object p1, p0, Laq5;->a:Ljava/io/DataInputStream;
 
-    iput p3, p0, Leq5;->c:I
+    const v0, 0x7fffffff
+
+    invoke-virtual {p1, v0}, Ljava/io/InputStream;->mark(I)V
 
     return-void
+
+    .line 6
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "Cannot create SeekableByteOrderedDataInputStream with stream that does not support mark/reset"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
-.method public synthetic constructor <init>(Lrq5;IZ)V
+.method public constructor <init>([B)V
     .locals 1
 
     .line 1
-    const/4 v0, 0x0
+    invoke-direct {p0, p1}, Laq5;-><init>([B)V
 
-    iput v0, p0, Leq5;->a:I
+    .line 2
+    iget-object p1, p0, Laq5;->a:Ljava/io/DataInputStream;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const v0, 0x7fffffff
 
-    iput-object p1, p0, Leq5;->d:Ljava/lang/Object;
-
-    iput p2, p0, Leq5;->c:I
-
-    iput-boolean p3, p0, Leq5;->b:Z
+    invoke-virtual {p1, v0}, Ljava/io/InputStream;->mark(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 6
+.method public final k(J)V
+    .locals 3
 
-    iget v0, p0, Leq5;->a:I
+    iget v0, p0, Laq5;->c:I
 
-    packed-switch v0, :pswitch_data_0
+    int-to-long v1, v0
 
-    iget-object v0, p0, Leq5;->d:Ljava/lang/Object;
+    cmp-long v1, v1, p1
 
-    check-cast v0, Lcga;
+    if-lez v1, :cond_0
 
-    iget-boolean v1, p0, Leq5;->b:Z
+    const/4 v0, 0x0
 
-    iget v2, p0, Leq5;->c:I
+    iput v0, p0, Laq5;->c:I
 
-    invoke-virtual {v0, v2, v1}, Lcga;->N0(IZ)V
+    iget-object v0, p0, Laq5;->a:Ljava/io/DataInputStream;
 
-    return-void
+    invoke-virtual {v0}, Ljava/io/InputStream;->reset()V
 
-    :pswitch_0
-    iget-object v0, p0, Leq5;->d:Ljava/lang/Object;
+    goto :goto_0
 
-    check-cast v0, Lrq5;
+    :cond_0
+    int-to-long v0, v0
 
-    iget-object v1, v0, Lrq5;->I0:Lon4;
+    sub-long/2addr p1, v0
 
-    iget-object v0, v0, Lrq5;->a:[Lzvd;
+    :goto_0
+    long-to-int p1, p1
 
-    iget v2, p0, Leq5;->c:I
-
-    aget-object v0, v0, v2
-
-    iget-object v0, v0, Lzvd;->e:Ljava/lang/Object;
-
-    check-cast v0, Lol0;
-
-    iget v0, v0, Lol0;->b:I
-
-    invoke-virtual {v1}, Lon4;->H()Lid;
-
-    move-result-object v3
-
-    new-instance v4, Lym4;
-
-    iget-boolean v5, p0, Leq5;->b:Z
-
-    invoke-direct {v4, v3, v2, v0, v5}, Lym4;-><init>(Lid;IIZ)V
-
-    const/16 v0, 0x409
-
-    invoke-virtual {v1, v3, v0, v4}, Lon4;->I(Lid;ILqe8;)V
+    invoke-virtual {p0, p1}, Laq5;->d(I)V
 
     return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

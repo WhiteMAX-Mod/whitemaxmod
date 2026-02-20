@@ -1,60 +1,73 @@
-.class public final La14;
-.super Lc14;
+.class public final enum La14;
+.super Ljava/lang/Enum;
 .source "SourceFile"
-
-# interfaces
-.implements Lxk8;
 
 
 # static fields
-.field public static final B0:La14;
+.field public static final enum a:La14;
+
+.field public static final enum b:La14;
+
+.field public static final synthetic c:[La14;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 21
+    .locals 4
 
     new-instance v0, La14;
 
-    sget-object v7, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+    const-string v1, "BLOCKED"
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    new-array v1, v1, [I
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    const-string v20, ""
+    sput-object v0, La14;->a:La14;
 
-    move-object/from16 v19, v1
+    new-instance v1, La14;
 
-    const-wide/16 v1, 0x0
+    const-string v2, "REMOVED"
 
-    const-wide/16 v3, 0x0
+    const/4 v3, 0x1
 
-    const-string v5, ""
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    const-string v6, ""
+    sput-object v1, La14;->b:La14;
 
-    const-wide/16 v8, 0x0
+    filled-new-array {v0, v1}, [La14;
 
-    const-wide/16 v10, 0x0
+    move-result-object v0
 
-    const/4 v12, 0x2
-
-    const/4 v13, 0x1
-
-    const-string v15, ""
-
-    const-string v16, ""
-
-    const-string v17, ""
-
-    const/16 v18, 0x0
-
-    move-object v14, v7
-
-    invoke-direct/range {v0 .. v20}, Lc14;-><init>(JJLjava/lang/String;Ljava/lang/String;Ljava/util/List;JJIILjava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lm38;[ILjava/lang/String;)V
-
-    sput-object v0, La14;->B0:La14;
+    sput-object v0, La14;->c:[La14;
 
     return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)La14;
+    .locals 1
+
+    const-class v0, La14;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, La14;
+
+    return-object p0
+.end method
+
+.method public static values()[La14;
+    .locals 1
+
+    sget-object v0, La14;->c:[La14;
+
+    invoke-virtual {v0}, [La14;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [La14;
+
+    return-object v0
 .end method

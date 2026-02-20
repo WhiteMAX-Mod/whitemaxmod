@@ -1,27 +1,23 @@
-.class public final Ltc2;
-.super Luc2;
+.class public interface abstract Ltc2;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljve;
+.implements Lisd;
 
 
 # static fields
-.field public static final c:Ltc2;
+.field public static final m:Lsc2;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 1
 
-    new-instance v0, Ltc2;
+    sget-object v0, Lsc2;->a:Lsc2;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v1, Lns;
-
-    invoke-direct {v1}, Lns;-><init>()V
-
-    iput-object v1, v0, Luc2;->b:Ljava/lang/Object;
-
-    sput-object v0, Ltc2;->c:Ltc2;
+    sput-object v0, Ltc2;->m:Lsc2;
 
     return-void
 .end method

@@ -1,176 +1,129 @@
-.class public final Lpo4;
-.super Lkg3;
+.class public final synthetic Lpo4;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lih8;
+.implements Lqr4;
+.implements Lux1;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:I
+
+.field public final synthetic c:Ljava/lang/Object;
+
+
+# direct methods
+.method public synthetic constructor <init>(Ljava/lang/Object;II)V
+    .locals 0
+
+    iput-object p1, p0, Lpo4;->c:Ljava/lang/Object;
+
+    iput p2, p0, Lpo4;->a:I
+
+    iput p3, p0, Lpo4;->b:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final bridge synthetic clone()Ljava/lang/Object;
-    .locals 1
-
-    invoke-virtual {p0}, Lpo4;->l()Lkg3;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final finalize()V
-    .locals 5
-
-    :try_start_0
-    monitor-enter p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
-
-    :try_start_1
-    iget-boolean v0, p0, Lkg3;->a:Z
-
-    if-eqz v0, :cond_0
-
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    invoke-super {p0}, Ljava/lang/Object;->finalize()V
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_2
-
-    :cond_0
-    :try_start_2
-    monitor-exit p0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    :try_start_3
-    iget-object v0, p0, Lkg3;->b:Lu7f;
-
-    invoke-virtual {v0}, Lu7f;->a()Ljava/lang/Object;
-
-    move-result-object v0
-
-    const-string v1, "DefaultCloseableReference"
-
-    const-string v2, "Finalized without closing: %x %x (type = %s)"
-
-    invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
-
-    move-result v3
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    iget-object v4, p0, Lkg3;->b:Lu7f;
-
-    invoke-static {v4}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
-
-    move-result v4
-
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    if-nez v0, :cond_1
-
-    const/4 v0, 0x0
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    :goto_0
-    filled-new-array {v3, v4, v0}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {v1, v2, v0}, Lmt5;->m(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    iget-object v0, p0, Lkg3;->c:Ljg3;
-
-    if-eqz v0, :cond_2
-
-    iget-object v1, p0, Lkg3;->b:Lu7f;
-
-    iget-object v2, p0, Lkg3;->d:Ljava/lang/Throwable;
-
-    invoke-interface {v0, v1, v2}, Ljg3;->m(Lu7f;Ljava/lang/Throwable;)V
-
-    goto :goto_1
-
-    :catchall_1
-    move-exception v0
-
-    goto :goto_3
-
-    :cond_2
-    :goto_1
-    invoke-virtual {p0}, Lkg3;->close()V
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
-    invoke-super {p0}, Ljava/lang/Object;->finalize()V
-
-    return-void
-
-    :goto_2
-    :try_start_4
-    monitor-exit p0
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
-
-    :try_start_5
-    throw v0
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_1
-
-    :goto_3
-    invoke-super {p0}, Ljava/lang/Object;->finalize()V
-
-    throw v0
-.end method
-
-.method public final l()Lkg3;
+.method public C(Ltx1;)Ljava/lang/String;
     .locals 4
 
-    invoke-virtual {p0}, Lkg3;->z0()Z
+    iget-object v0, p0, Lpo4;->c:Ljava/lang/Object;
+
+    check-cast v0, Lgv4;
+
+    new-instance v1, Lqc0;
+
+    iget v2, p0, Lpo4;->a:I
+
+    iget v3, p0, Lpo4;->b:I
+
+    invoke-direct {v1, v2, v3, p1}, Lqc0;-><init>(IILtx1;)V
+
+    new-instance v2, Lm12;
+
+    const/16 v3, 0x1b
+
+    invoke-direct {v2, v0, v3, v1}, Lm12;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    new-instance v1, Lcv4;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v1, p1, v3}, Lcv4;-><init>(Ltx1;I)V
+
+    invoke-virtual {v0, v2, v1}, Lgv4;->b(Ljava/lang/Runnable;Ljava/lang/Runnable;)V
+
+    const-string p1, "DefaultSurfaceProcessor#snapshot"
+
+    return-object p1
+.end method
+
+.method public a(Landroid/media/MediaCodecInfo;)I
+    .locals 3
+
+    iget-object v0, p0, Lpo4;->c:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/String;
+
+    iget v1, p0, Lpo4;->a:I
+
+    iget v2, p0, Lpo4;->b:I
+
+    invoke-static {p1, v0, v1, v2}, Luk5;->g(Landroid/media/MediaCodecInfo;Ljava/lang/String;II)Landroid/util/Size;
+
+    move-result-object p1
+
+    if-nez p1, :cond_0
+
+    const p1, 0x7fffffff
+
+    return p1
+
+    :cond_0
+    mul-int/2addr v1, v2
+
+    invoke-virtual {p1}, Landroid/util/Size;->getWidth()I
 
     move-result v0
 
-    invoke-static {v0}, Lbkj;->g(Z)V
+    invoke-virtual {p1}, Landroid/util/Size;->getHeight()I
 
-    new-instance v0, Lpo4;
+    move-result p1
 
-    iget-object v1, p0, Lkg3;->d:Ljava/lang/Throwable;
+    mul-int/2addr p1, v0
 
-    if-eqz v1, :cond_0
+    sub-int/2addr v1, p1
 
-    new-instance v1, Ljava/lang/Throwable;
+    invoke-static {v1}, Ljava/lang/Math;->abs(I)I
 
-    invoke-direct {v1}, Ljava/lang/Throwable;-><init>()V
+    move-result p1
 
-    goto :goto_0
+    return p1
+.end method
 
-    :cond_0
-    const/4 v1, 0x0
+.method public invoke(Ljava/lang/Object;)V
+    .locals 3
 
-    :goto_0
-    iget-object v2, p0, Lkg3;->b:Lu7f;
+    iget-object v0, p0, Lpo4;->c:Ljava/lang/Object;
 
-    iget-object v3, p0, Lkg3;->c:Ljg3;
+    check-cast v0, Lye;
 
-    invoke-direct {v0, v2, v3, v1}, Lkg3;-><init>(Lu7f;Ljg3;Ljava/lang/Throwable;)V
+    iget v1, p0, Lpo4;->b:I
 
-    return-object v0
+    check-cast p1, Lze;
+
+    iget v2, p0, Lpo4;->a:I
+
+    invoke-interface {p1, v0, v2, v1}, Lze;->L(Lye;II)V
+
+    return-void
 .end method

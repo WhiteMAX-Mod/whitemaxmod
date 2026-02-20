@@ -1,67 +1,70 @@
-.class public abstract Lwib;
+.class public final synthetic Lwib;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lis6;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:I
+# instance fields
+.field public final synthetic a:I
 
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
+.field public final synthetic b:Lru/ok/tamtam/android/db/room/OneMeRoomDatabase_Impl;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Lru/ok/tamtam/android/db/room/OneMeRoomDatabase_Impl;I)V
+    .locals 0
 
-    sget v0, Lgad;->oneme_picker_bottom_button:I
+    iput p2, p0, Lwib;->a:I
 
-    sput v0, Lwib;->a:I
+    iput-object p1, p0, Lwib;->b:Lru/ok/tamtam/android/db/room/OneMeRoomDatabase_Impl;
 
-    sget v0, Lgad;->oneme_picker_confirm_cancel:I
-
-    sput v0, Lwib;->b:I
-
-    sget v0, Lgad;->oneme_picker_confirm_close:I
-
-    sput v0, Lwib;->c:I
-
-    sget v0, Lgad;->oneme_picker_input_view:I
-
-    sput v0, Lwib;->d:I
-
-    sget v0, Lgad;->oneme_picker_media_keyboard_container:I
-
-    sput v0, Lwib;->e:I
-
-    sget v0, Lgad;->oneme_picker_quote_view:I
-
-    sput v0, Lwib;->f:I
-
-    sget v0, Lgad;->oneme_picker_toolbar:I
-
-    sput v0, Lwib;->g:I
-
-    sget v0, Lgad;->oneme_picker_toolbar_action_cancel_selection:I
-
-    sput v0, Lwib;->h:I
-
-    sget v0, Lgad;->oneme_picker_toolbar_action_select:I
-
-    sput v0, Lwib;->i:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Lwib;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v0, Ltmg;
+
+    iget-object v1, p0, Lwib;->b:Lru/ok/tamtam/android/db/room/OneMeRoomDatabase_Impl;
+
+    invoke-direct {v0, v1}, Ltmg;-><init>(Lm8e;)V
+
+    return-object v0
+
+    :pswitch_0
+    new-instance v0, Landroidx/work/impl/model/WorkersQueueDao_Impl;
+
+    iget-object v1, p0, Lwib;->b:Lru/ok/tamtam/android/db/room/OneMeRoomDatabase_Impl;
+
+    invoke-direct {v0, v1}, Landroidx/work/impl/model/WorkersQueueDao_Impl;-><init>(Lm8e;)V
+
+    return-object v0
+
+    :pswitch_1
+    new-instance v0, Lx7e;
+
+    iget-object v1, p0, Lwib;->b:Lru/ok/tamtam/android/db/room/OneMeRoomDatabase_Impl;
+
+    invoke-direct {v0, v1}, Lx7e;-><init>(Lm8e;)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

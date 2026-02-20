@@ -1,102 +1,327 @@
 .class public final Lm6;
-.super Ljava/lang/Object;
+.super Lpdg;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Landroidx/appcompat/widget/ActionBarOverlayLayout;
-
-
-# direct methods
-.method public synthetic constructor <init>(Landroidx/appcompat/widget/ActionBarOverlayLayout;I)V
-    .locals 0
-
-    iput p2, p0, Lm6;->a:I
-
-    iput-object p1, p0, Lm6;->b:Landroidx/appcompat/widget/ActionBarOverlayLayout;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
+.implements Lys6;
 
 
 # virtual methods
-.method public final run()V
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lm6;->a:I
+    check-cast p1, Llob;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object v0, p0, Lm6;->b:Landroidx/appcompat/widget/ActionBarOverlayLayout;
+    invoke-virtual {p0, p1, p2}, Lm6;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {v0}, Landroidx/appcompat/widget/ActionBarOverlayLayout;->b()V
+    move-result-object p1
 
-    iget-object v1, v0, Landroidx/appcompat/widget/ActionBarOverlayLayout;->d:Landroidx/appcompat/widget/ActionBarContainer;
+    check-cast p1, Lm6;
 
-    invoke-virtual {v1}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
+    sget-object p2, Lmah;->a:Lmah;
+
+    invoke-virtual {p1, p2}, Lm6;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Lm6;
+
+    const/4 v0, 0x2
+
+    invoke-direct {p1, v0, p2}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
+
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    sget-object p1, Lsme;->a:Lsme;
+
+    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object p1
+
+    const/16 v0, 0x1d2
+
+    invoke-virtual {p1, v0}, Lr5;->c(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lky9;
+
+    iget-object v0, p1, Lky9;->i:Lbgg;
+
+    invoke-virtual {v0}, Lbgg;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljy9;
+
+    const/4 v1, -0x1
+
+    invoke-virtual {v0, v1}, Lqr8;->i(I)V
+
+    invoke-virtual {p1}, Lky9;->e()Lqr8;
+
+    move-result-object v0
+
+    iget-object v1, v0, Lqr8;->c:Ltea;
+
+    monitor-enter v1
+
+    :try_start_0
+    new-instance v2, Ljava/util/LinkedHashMap;
+
+    iget-object v3, v0, Lqr8;->b:Lne3;
+
+    iget-object v3, v3, Lne3;->a:Ljava/util/LinkedHashMap;
+
+    invoke-virtual {v3}, Ljava/util/LinkedHashMap;->entrySet()Ljava/util/Set;
+
+    move-result-object v3
+
+    invoke-interface {v3}, Ljava/util/Set;->size()I
+
+    move-result v3
+
+    invoke-direct {v2, v3}, Ljava/util/LinkedHashMap;-><init>(I)V
+
+    iget-object v0, v0, Lqr8;->b:Lne3;
+
+    iget-object v0, v0, Lne3;->a:Ljava/util/LinkedHashMap;
+
+    invoke-virtual {v0}, Ljava/util/LinkedHashMap;->entrySet()Ljava/util/Set;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/util/Map$Entry;
+
+    invoke-interface {v3}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v4
+
+    invoke-interface {v3}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    invoke-interface {v2, v4, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto/16 :goto_2
+
+    :cond_0
+    monitor-exit v1
+
+    invoke-virtual {v2}, Ljava/util/LinkedHashMap;->entrySet()Ljava/util/Set;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :cond_1
+    :goto_1
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
-    iget-object v2, v0, Landroidx/appcompat/widget/ActionBarOverlayLayout;->d:Landroidx/appcompat/widget/ActionBarContainer;
+    check-cast v1, Ljava/util/Map$Entry;
 
-    invoke-virtual {v2}, Landroid/view/View;->getHeight()I
+    invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
-    move-result v2
+    move-result-object v2
 
-    neg-int v2, v2
+    check-cast v2, Ley9;
 
-    int-to-float v2, v2
-
-    invoke-virtual {v1, v2}, Landroid/view/ViewPropertyAnimator;->translationY(F)Landroid/view/ViewPropertyAnimator;
+    invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    iget-object v2, v0, Landroidx/appcompat/widget/ActionBarOverlayLayout;->L0:Ll6;
+    check-cast v1, Li88;
 
-    invoke-virtual {v1, v2}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
+    iget-object v3, v1, Li88;->a:Lrs9;
+
+    iget-object v1, v1, Li88;->b:Lrs9;
+
+    invoke-virtual {v3}, Lrs9;->a()Landroid/text/Layout;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Landroid/text/Layout;->getPaint()Landroid/text/TextPaint;
+
+    move-result-object v4
+
+    invoke-virtual {p1}, Lky9;->d()Lbw0;
+
+    move-result-object v5
+
+    iget-object v6, v3, Lrs9;->b:Lcn9;
+
+    invoke-virtual {v6}, Lcn9;->d()Z
+
+    move-result v6
+
+    check-cast v5, Lm7b;
+
+    sget-object v7, Lfe3;->t0:Ltea;
+
+    iget-object v5, v5, Lm7b;->a:Landroid/content/Context;
+
+    invoke-virtual {v7, v5}, Ltea;->n(Landroid/content/Context;)Lfe3;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Lfe3;->j()Llob;
+
+    move-result-object v5
+
+    invoke-interface {v5}, Llob;->i()Lkyc;
+
+    move-result-object v5
+
+    invoke-static {v5, v6}, Lom9;->a(Lkyc;Z)Lgob;
+
+    move-result-object v5
+
+    iget-object v5, v5, Lgob;->b:Lfob;
+
+    iget v5, v5, Lfob;->c:I
+
+    invoke-virtual {v4, v5}, Landroid/graphics/Paint;->setColor(I)V
+
+    invoke-virtual {p1}, Lky9;->e()Lqr8;
+
+    move-result-object v4
+
+    invoke-virtual {v4, v2}, Lqr8;->c(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Li88;
+
+    if-eqz v4, :cond_2
+
+    iget-object v4, v4, Li88;->a:Lrs9;
+
+    invoke-virtual {v3}, Lrs9;->a()Landroid/text/Layout;
+
+    move-result-object v5
+
+    invoke-virtual {v4, v5}, Lrs9;->b(Landroid/text/Layout;)V
+
+    :cond_2
+    if-eq v3, v1, :cond_1
+
+    invoke-virtual {v1}, Lrs9;->a()Landroid/text/Layout;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/text/Layout;->getPaint()Landroid/text/TextPaint;
+
+    move-result-object v3
+
+    invoke-virtual {p1}, Lky9;->d()Lbw0;
+
+    move-result-object v4
+
+    iget-object v5, v1, Lrs9;->b:Lcn9;
+
+    invoke-virtual {v5}, Lcn9;->d()Z
+
+    move-result v5
+
+    check-cast v4, Lm7b;
+
+    iget-object v4, v4, Lm7b;->a:Landroid/content/Context;
+
+    invoke-virtual {v7, v4}, Ltea;->n(Landroid/content/Context;)Lfe3;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Lfe3;->j()Llob;
+
+    move-result-object v4
+
+    invoke-interface {v4}, Llob;->i()Lkyc;
+
+    move-result-object v4
+
+    invoke-static {v4, v5}, Lom9;->a(Lkyc;Z)Lgob;
+
+    move-result-object v4
+
+    iget-object v4, v4, Lgob;->b:Lfob;
+
+    iget v4, v4, Lfob;->c:I
+
+    invoke-virtual {v3, v4}, Landroid/graphics/Paint;->setColor(I)V
+
+    invoke-virtual {p1}, Lky9;->e()Lqr8;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v2}, Lqr8;->c(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Li88;
+
+    if-eqz v2, :cond_1
+
+    iget-object v2, v2, Li88;->b:Lrs9;
+
+    invoke-virtual {v1}, Lrs9;->a()Landroid/text/Layout;
 
     move-result-object v1
 
-    iput-object v1, v0, Landroidx/appcompat/widget/ActionBarOverlayLayout;->K0:Landroid/view/ViewPropertyAnimator;
+    invoke-virtual {v2, v1}, Lrs9;->b(Landroid/text/Layout;)V
 
-    return-void
+    goto/16 :goto_1
 
-    :pswitch_0
-    iget-object v0, p0, Lm6;->b:Landroidx/appcompat/widget/ActionBarOverlayLayout;
+    :cond_3
+    sget-object p1, Lmah;->a:Lmah;
 
-    invoke-virtual {v0}, Landroidx/appcompat/widget/ActionBarOverlayLayout;->b()V
+    return-object p1
 
-    iget-object v1, v0, Landroidx/appcompat/widget/ActionBarOverlayLayout;->d:Landroidx/appcompat/widget/ActionBarContainer;
+    :goto_2
+    monitor-exit v1
 
-    invoke-virtual {v1}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v2}, Landroid/view/ViewPropertyAnimator;->translationY(F)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v1
-
-    iget-object v2, v0, Landroidx/appcompat/widget/ActionBarOverlayLayout;->L0:Ll6;
-
-    invoke-virtual {v1, v2}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v1
-
-    iput-object v1, v0, Landroidx/appcompat/widget/ActionBarOverlayLayout;->K0:Landroid/view/ViewPropertyAnimator;
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    throw p1
 .end method

@@ -1,14 +1,19 @@
-.class public interface abstract Lf6i;
+.class public final Lf6i;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a()Ljava/lang/Integer;
-.end method
+# instance fields
+.field public final synthetic a:Lr5;
 
-.method public abstract b()Ljava/lang/String;
-.end method
 
-.method public abstract d()Ljava/lang/String;
+# direct methods
+.method public constructor <init>(Lr5;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lf6i;->a:Lr5;
+
+    return-void
 .end method

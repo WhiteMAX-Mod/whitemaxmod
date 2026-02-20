@@ -2,564 +2,527 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lxde;
+
 
 # instance fields
-.field public final a:Loac;
+.field public final synthetic a:I
 
-.field public final b:Laq0;
-
-.field public final c:La4a;
-
-.field public final d:Lxe;
-
-.field public final e:Z
-
-.field public final f:Lbq0;
-
-.field public final g:Lho4;
-
-.field public final h:Landroid/graphics/Bitmap$Config;
-
-.field public final i:Landroid/graphics/Paint;
-
-.field public j:Landroid/graphics/Rect;
-
-.field public k:I
-
-.field public l:I
+.field public final b:Lxde;
 
 
 # direct methods
-.method public constructor <init>(Loac;Laq0;La4a;Lxe;ZLbq0;Lho4;)V
+.method public synthetic constructor <init>(Lxde;I)V
     .locals 0
 
+    iput p2, p0, Lup0;->a:I
+
+    iput-object p1, p0, Lup0;->b:Lxde;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lup0;->a:Loac;
-
-    iput-object p2, p0, Lup0;->b:Laq0;
-
-    iput-object p3, p0, Lup0;->c:La4a;
-
-    iput-object p4, p0, Lup0;->d:Lxe;
-
-    iput-boolean p5, p0, Lup0;->e:Z
-
-    iput-object p6, p0, Lup0;->f:Lbq0;
-
-    iput-object p7, p0, Lup0;->g:Lho4;
-
-    sget-object p1, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
-
-    iput-object p1, p0, Lup0;->h:Landroid/graphics/Bitmap$Config;
-
-    new-instance p1, Landroid/graphics/Paint;
-
-    const/4 p2, 0x6
-
-    invoke-direct {p1, p2}, Landroid/graphics/Paint;-><init>(I)V
-
-    iput-object p1, p0, Lup0;->i:Landroid/graphics/Paint;
-
-    new-instance p1, Landroid/graphics/Path;
-
-    invoke-direct {p1}, Landroid/graphics/Path;-><init>()V
-
-    new-instance p1, Landroid/graphics/Matrix;
-
-    invoke-direct {p1}, Landroid/graphics/Matrix;-><init>()V
-
-    invoke-virtual {p0}, Lup0;->d()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
+.method public final G(ILjava/lang/String;)V
     .locals 1
 
-    iget-boolean v0, p0, Lup0;->e:Z
+    iget v0, p0, Lup0;->a:I
 
-    if-eqz v0, :cond_1
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lup0;->f:Lbq0;
+    iget-object v0, p0, Lup0;->b:Lxde;
 
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0}, Lbq0;->g()V
-
-    :cond_0
-    return-void
-
-    :cond_1
-    iget-object v0, p0, Lup0;->b:Laq0;
-
-    invoke-interface {v0}, Laq0;->clear()V
+    invoke-interface {v0, p1, p2}, Lxde;->G(ILjava/lang/String;)V
 
     return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lup0;->b:Lxde;
+
+    invoke-interface {v0, p1, p2}, Lxde;->G(ILjava/lang/String;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final b(ILkg3;Landroid/graphics/Canvas;I)Z
-    .locals 4
+.method public final L()Z
+    .locals 1
 
-    if-eqz p2, :cond_3
+    iget v0, p0, Lup0;->a:I
 
-    invoke-static {p2}, Lkg3;->A0(Lkg3;)Z
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lup0;->b:Lxde;
+
+    invoke-interface {v0}, Lxde;->L()Z
 
     move-result v0
 
-    if-nez v0, :cond_0
+    return v0
 
-    goto :goto_1
+    :pswitch_0
+    iget-object v0, p0, Lup0;->b:Lxde;
 
-    :cond_0
-    invoke-virtual {p2}, Lkg3;->p0()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/graphics/Bitmap;
-
-    iget-object v1, p0, Lup0;->j:Landroid/graphics/Rect;
-
-    iget-object v2, p0, Lup0;->i:Landroid/graphics/Paint;
-
-    if-nez v1, :cond_1
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p3, v0, v1, v1, v2}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {v1}, Landroid/graphics/Rect;->width()I
-
-    invoke-virtual {v1}, Landroid/graphics/Rect;->height()I
-
-    const/4 v3, 0x0
-
-    invoke-virtual {p3, v0, v3, v1, v2}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V
-
-    :goto_0
-    const/4 p3, 0x3
-
-    if-eq p4, p3, :cond_2
-
-    iget-boolean p3, p0, Lup0;->e:Z
-
-    if-nez p3, :cond_2
-
-    iget-object p3, p0, Lup0;->b:Laq0;
-
-    invoke-interface {p3, p1, p2}, Laq0;->p(ILkg3;)V
-
-    :cond_2
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_3
-    :goto_1
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final c(Landroid/graphics/Canvas;II)Z
-    .locals 10
-
-    const/4 v0, 0x0
-
-    :try_start_0
-    iget-boolean v1, p0, Lup0;->e:Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x1
-
-    if-eqz v1, :cond_4
-
-    iget-object p3, p0, Lup0;->f:Lbq0;
-
-    if-eqz p3, :cond_0
-
-    :try_start_1
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->getWidth()I
-
-    move-result v1
-
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->getHeight()I
-
-    move-result v4
-
-    invoke-interface {p3, p2, v1, v4}, Lbq0;->f(III)Lkg3;
-
-    move-result-object p2
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    goto/16 :goto_a
-
-    :cond_0
-    move-object p2, v0
-
-    :goto_0
-    if-eqz p2, :cond_2
-
-    :try_start_2
-    invoke-virtual {p2}, Lkg3;->z0()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    invoke-virtual {p2}, Lkg3;->p0()Ljava/lang/Object;
-
-    move-result-object p3
-
-    check-cast p3, Landroid/graphics/Bitmap;
-
-    iget-object v1, p0, Lup0;->i:Landroid/graphics/Paint;
-
-    iget-object v2, p0, Lup0;->j:Landroid/graphics/Rect;
-
-    if-nez v2, :cond_1
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, p3, v0, v0, v1}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v2}, Landroid/graphics/Rect;->width()I
-
-    invoke-virtual {v2}, Landroid/graphics/Rect;->height()I
-
-    invoke-virtual {p1, p3, v0, v2, v1}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    :goto_1
-    invoke-virtual {p2}, Lkg3;->close()V
-
-    return v3
-
-    :goto_2
-    move-object v0, p2
-
-    goto/16 :goto_a
-
-    :catchall_1
-    move-exception p1
-
-    goto :goto_2
-
-    :cond_2
-    if-eqz p3, :cond_3
-
-    :try_start_3
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->getWidth()I
+    invoke-interface {v0}, Lxde;->L()Z
 
     move-result v0
 
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->getHeight()I
+    return v0
 
-    move-result p1
+    nop
 
-    invoke-interface {p3, v0, p1}, Lbq0;->i(II)V
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    :cond_3
-    invoke-static {p2}, Lkg3;->f0(Lkg3;)V
+.method public final a(ID)V
+    .locals 1
 
-    return v2
+    iget v0, p0, Lup0;->a:I
 
-    :cond_4
-    iget-object v1, p0, Lup0;->b:Laq0;
+    packed-switch v0, :pswitch_data_0
 
-    const/4 v4, -0x1
+    iget-object v0, p0, Lup0;->b:Lxde;
 
-    if-eqz p3, :cond_10
+    invoke-interface {v0, p1, p2, p3}, Lxde;->a(ID)V
 
-    iget-object v5, p0, Lup0;->d:Lxe;
+    return-void
 
-    const/4 v6, 0x2
+    :pswitch_0
+    iget-object v0, p0, Lup0;->b:Lxde;
 
-    if-eq p3, v3, :cond_b
+    invoke-interface {v0, p1, p2, p3}, Lxde;->a(ID)V
 
-    const/4 v7, 0x3
+    return-void
 
-    if-eq p3, v6, :cond_6
+    nop
 
-    if-eq p3, v7, :cond_5
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    goto :goto_5
+.method public final b(IJ)V
+    .locals 1
 
-    :cond_5
-    :try_start_4
-    invoke-interface {v1}, Laq0;->m()Lkg3;
+    iget v0, p0, Lup0;->a:I
 
-    move-result-object v0
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p2, v0, p1, v7}, Lup0;->b(ILkg3;Landroid/graphics/Canvas;I)Z
+    iget-object v0, p0, Lup0;->b:Lxde;
 
-    move-result p3
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+    invoke-interface {v0, p1, p2, p3}, Lxde;->b(IJ)V
 
-    move v3, v4
+    return-void
 
-    goto/16 :goto_8
+    :pswitch_0
+    iget-object v0, p0, Lup0;->b:Lxde;
 
-    :cond_6
-    :try_start_5
-    iget-object p3, p0, Lup0;->a:Loac;
+    invoke-interface {v0, p1, p2, p3}, Lxde;->b(IJ)V
 
-    iget v1, p0, Lup0;->k:I
+    return-void
 
-    iget v8, p0, Lup0;->l:I
+    nop
 
-    iget-object v9, p0, Lup0;->h:Landroid/graphics/Bitmap$Config;
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    invoke-virtual {p3, v1, v8, v9}, Loac;->c(IILandroid/graphics/Bitmap$Config;)Lkg3;
+.method public final c(I[B)V
+    .locals 1
 
-    move-result-object v0
-    :try_end_5
-    .catch Ljava/lang/RuntimeException; {:try_start_5 .. :try_end_5} :catch_0
-    .catchall {:try_start_5 .. :try_end_5} :catchall_0
+    iget v0, p0, Lup0;->a:I
 
-    if-eqz v0, :cond_8
+    packed-switch v0, :pswitch_data_0
 
-    :try_start_6
-    invoke-virtual {v0}, Lkg3;->z0()Z
+    iget-object v0, p0, Lup0;->b:Lxde;
 
-    move-result p3
+    invoke-interface {v0, p1, p2}, Lxde;->c(I[B)V
 
-    if-nez p3, :cond_7
+    return-void
 
-    goto :goto_3
+    :pswitch_0
+    iget-object v0, p0, Lup0;->b:Lxde;
 
-    :cond_7
-    invoke-virtual {v0}, Lkg3;->p0()Ljava/lang/Object;
+    invoke-interface {v0, p1, p2}, Lxde;->c(I[B)V
 
-    move-result-object p3
+    return-void
 
-    check-cast p3, Landroid/graphics/Bitmap;
+    nop
 
-    invoke-virtual {v5, p3, p2}, Lxe;->n(Landroid/graphics/Bitmap;I)Z
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    move-result p3
+.method public final c0(I)Ljava/lang/String;
+    .locals 1
 
-    if-nez p3, :cond_9
+    iget v0, p0, Lup0;->a:I
 
-    invoke-virtual {v0}, Lkg3;->close()V
+    packed-switch v0, :pswitch_data_0
 
-    goto :goto_4
+    iget-object v0, p0, Lup0;->b:Lxde;
 
-    :cond_8
-    :goto_3
-    move p3, v2
+    invoke-interface {v0, p1}, Lxde;->c0(I)Ljava/lang/String;
 
-    :cond_9
-    :goto_4
-    if-eqz p3, :cond_a
+    move-result-object p1
 
-    invoke-virtual {p0, p2, v0, p1, v6}, Lup0;->b(ILkg3;Landroid/graphics/Canvas;I)Z
+    return-object p1
 
-    move-result p3
+    :pswitch_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    if-eqz p3, :cond_a
+    const-string v0, "Only bind*() calls are allowed on the RoomRawQuery received statement."
 
-    move v2, v3
-
-    :cond_a
-    move p3, v2
-
-    move v3, v7
-
-    goto :goto_8
-
-    :catch_0
-    move-exception p1
-
-    const-class p2, Lup0;
-
-    const-string p3, "Failed to create frame bitmap"
-
-    invoke-static {p2, p3, p1}, Lmt5;->i(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Exception;)V
-
-    :goto_5
-    return v2
-
-    :cond_b
-    invoke-interface {v1}, Laq0;->w()Lkg3;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_d
-
-    invoke-virtual {v0}, Lkg3;->z0()Z
-
-    move-result p3
-
-    if-nez p3, :cond_c
-
-    goto :goto_6
-
-    :cond_c
-    invoke-virtual {v0}, Lkg3;->p0()Ljava/lang/Object;
-
-    move-result-object p3
-
-    check-cast p3, Landroid/graphics/Bitmap;
-
-    invoke-virtual {v5, p3, p2}, Lxe;->n(Landroid/graphics/Bitmap;I)Z
-
-    move-result p3
-
-    if-nez p3, :cond_e
-
-    invoke-virtual {v0}, Lkg3;->close()V
-
-    goto :goto_7
-
-    :cond_d
-    :goto_6
-    move p3, v2
-
-    :cond_e
-    :goto_7
-    if-eqz p3, :cond_f
-
-    invoke-virtual {p0, p2, v0, p1, v3}, Lup0;->b(ILkg3;Landroid/graphics/Canvas;I)Z
-
-    move-result p3
-
-    if-eqz p3, :cond_f
-
-    move v2, v3
-
-    :cond_f
-    move p3, v2
-
-    move v3, v6
-
-    goto :goto_8
-
-    :cond_10
-    invoke-interface {v1, p2}, Laq0;->y(I)Lkg3;
-
-    move-result-object v0
-
-    invoke-virtual {p0, p2, v0, p1, v2}, Lup0;->b(ILkg3;Landroid/graphics/Canvas;I)Z
-
-    move-result p3
-    :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_0
-
-    :goto_8
-    invoke-static {v0}, Lkg3;->f0(Lkg3;)V
-
-    if-nez p3, :cond_12
-
-    if-ne v3, v4, :cond_11
-
-    goto :goto_9
-
-    :cond_11
-    invoke-virtual {p0, p1, p2, v3}, Lup0;->c(Landroid/graphics/Canvas;II)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_12
-    :goto_9
-    return p3
-
-    :goto_a
-    invoke-static {v0}, Lkg3;->f0(Lkg3;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final d()V
-    .locals 3
+.method public final close()V
+    .locals 2
 
-    iget-object v0, p0, Lup0;->d:Lxe;
+    iget v0, p0, Lup0;->a:I
 
-    iget-object v1, v0, Lxe;->c:Ljava/lang/Object;
+    packed-switch v0, :pswitch_data_0
 
-    check-cast v1, Lzv3;
+    iget-object v0, p0, Lup0;->b:Lxde;
 
-    iget-object v1, v1, Lzv3;->e:Ljava/lang/Object;
+    invoke-interface {v0}, Lxde;->reset()V
 
-    check-cast v1, Lcom/facebook/animated/gif/GifImage;
+    invoke-interface {v0}, Lxde;->s()V
 
-    invoke-virtual {v1}, Lcom/facebook/animated/gif/GifImage;->k()I
+    return-void
 
-    move-result v1
+    :pswitch_0
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    iput v1, p0, Lup0;->k:I
+    const-string v1, "Only bind*() calls are allowed on the RoomRawQuery received statement."
 
-    const/4 v2, -0x1
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    if-ne v1, v2, :cond_1
+    throw v0
 
-    iget-object v1, p0, Lup0;->j:Landroid/graphics/Rect;
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    if-eqz v1, :cond_0
+.method public final e(I)V
+    .locals 1
 
-    invoke-virtual {v1}, Landroid/graphics/Rect;->width()I
+    iget v0, p0, Lup0;->a:I
 
-    move-result v1
+    packed-switch v0, :pswitch_data_0
 
-    goto :goto_0
+    iget-object v0, p0, Lup0;->b:Lxde;
 
-    :cond_0
-    move v1, v2
+    invoke-interface {v0, p1}, Lxde;->e(I)V
 
-    :goto_0
-    iput v1, p0, Lup0;->k:I
+    return-void
 
-    :cond_1
-    iget-object v0, v0, Lxe;->c:Ljava/lang/Object;
+    :pswitch_0
+    iget-object v0, p0, Lup0;->b:Lxde;
 
-    check-cast v0, Lzv3;
+    invoke-interface {v0, p1}, Lxde;->e(I)V
 
-    iget-object v0, v0, Lzv3;->e:Ljava/lang/Object;
+    return-void
 
-    check-cast v0, Lcom/facebook/animated/gif/GifImage;
+    nop
 
-    invoke-virtual {v0}, Lcom/facebook/animated/gif/GifImage;->h()I
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final getBlob(I)[B
+    .locals 1
+
+    iget v0, p0, Lup0;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lup0;->b:Lxde;
+
+    invoke-interface {v0, p1}, Lxde;->getBlob(I)[B
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "Only bind*() calls are allowed on the RoomRawQuery received statement."
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final getColumnCount()I
+    .locals 2
+
+    iget v0, p0, Lup0;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lup0;->b:Lxde;
+
+    invoke-interface {v0}, Lxde;->getColumnCount()I
 
     move-result v0
 
-    iput v0, p0, Lup0;->l:I
+    return v0
 
-    if-ne v0, v2, :cond_3
+    :pswitch_0
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    iget-object v0, p0, Lup0;->j:Landroid/graphics/Rect;
+    const-string v1, "Only bind*() calls are allowed on the RoomRawQuery received statement."
 
-    if-eqz v0, :cond_2
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Landroid/graphics/Rect;->height()I
+    throw v0
 
-    move-result v2
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    :cond_2
-    iput v2, p0, Lup0;->l:I
+.method public final getColumnName(I)Ljava/lang/String;
+    .locals 1
 
-    :cond_3
+    iget v0, p0, Lup0;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lup0;->b:Lxde;
+
+    invoke-interface {v0, p1}, Lxde;->getColumnName(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "Only bind*() calls are allowed on the RoomRawQuery received statement."
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final getDouble(I)D
+    .locals 2
+
+    iget v0, p0, Lup0;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lup0;->b:Lxde;
+
+    invoke-interface {v0, p1}, Lxde;->getDouble(I)D
+
+    move-result-wide v0
+
+    return-wide v0
+
+    :pswitch_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "Only bind*() calls are allowed on the RoomRawQuery received statement."
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final getLong(I)J
+    .locals 2
+
+    iget v0, p0, Lup0;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lup0;->b:Lxde;
+
+    invoke-interface {v0, p1}, Lxde;->getLong(I)J
+
+    move-result-wide v0
+
+    return-wide v0
+
+    :pswitch_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "Only bind*() calls are allowed on the RoomRawQuery received statement."
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final isNull(I)Z
+    .locals 1
+
+    iget v0, p0, Lup0;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lup0;->b:Lxde;
+
+    invoke-interface {v0, p1}, Lxde;->isNull(I)Z
+
+    move-result p1
+
+    return p1
+
+    :pswitch_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "Only bind*() calls are allowed on the RoomRawQuery received statement."
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final reset()V
+    .locals 2
+
+    iget v0, p0, Lup0;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lup0;->b:Lxde;
+
+    invoke-interface {v0}, Lxde;->reset()V
+
     return-void
+
+    :pswitch_0
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "Only bind*() calls are allowed on the RoomRawQuery received statement."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final s()V
+    .locals 1
+
+    iget v0, p0, Lup0;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lup0;->b:Lxde;
+
+    invoke-interface {v0}, Lxde;->s()V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lup0;->b:Lxde;
+
+    invoke-interface {v0}, Lxde;->s()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final u0()Z
+    .locals 2
+
+    iget v0, p0, Lup0;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lup0;->b:Lxde;
+
+    invoke-interface {v0}, Lxde;->u0()Z
+
+    move-result v0
+
+    return v0
+
+    :pswitch_0
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "Only bind*() calls are allowed on the RoomRawQuery received statement."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

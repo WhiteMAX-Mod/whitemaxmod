@@ -4,101 +4,100 @@
 
 
 # instance fields
-.field public final a:Landroid/net/Uri;
+.field public a:I
 
+.field public b:I
 
-# direct methods
-.method public constructor <init>(Landroid/net/Uri;)V
-    .locals 1
+.field public c:F
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public d:F
 
-    if-eqz p1, :cond_0
+.field public e:J
 
-    iput-object p1, p0, Lwb0;->a:Landroid/net/Uri;
+.field public f:J
 
-    return-void
+.field public g:J
 
-    :cond_0
-    new-instance p1, Ljava/lang/NullPointerException;
+.field public h:F
 
-    const-string v0, "Null outputUri"
-
-    invoke-direct {p1, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
+.field public i:I
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final a(J)F
+    .locals 8
 
-    if-ne p1, p0, :cond_0
+    iget-wide v0, p0, Lwb0;->e:J
 
-    const/4 p1, 0x1
+    cmp-long v2, p1, v0
 
-    return p1
+    const/4 v3, 0x0
+
+    if-gez v2, :cond_0
+
+    return v3
 
     :cond_0
-    instance-of v0, p1, Lwb0;
+    iget-wide v4, p0, Lwb0;->g:J
 
-    if-eqz v0, :cond_1
+    const-wide/16 v6, 0x0
 
-    check-cast p1, Lwb0;
+    cmp-long v2, v4, v6
 
-    iget-object v0, p0, Lwb0;->a:Landroid/net/Uri;
+    const/high16 v6, 0x3f800000    # 1.0f
 
-    iget-object p1, p1, Lwb0;->a:Landroid/net/Uri;
+    if-ltz v2, :cond_2
 
-    invoke-virtual {v0, p1}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
+    cmp-long v2, p1, v4
+
+    if-gez v2, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    sub-long/2addr p1, v4
+
+    iget v0, p0, Lwb0;->h:F
+
+    sub-float v1, v6, v0
+
+    long-to-float p1, p1
+
+    iget p2, p0, Lwb0;->i:I
+
+    int-to-float p2, p2
+
+    div-float/2addr p1, p2
+
+    invoke-static {p1, v3, v6}, Lxg8;->b(FFF)F
 
     move-result p1
 
+    mul-float/2addr p1, v0
+
+    add-float/2addr p1, v1
+
     return p1
 
-    :cond_1
-    const/4 p1, 0x0
+    :cond_2
+    :goto_0
+    sub-long/2addr p1, v0
+
+    long-to-float p1, p1
+
+    iget p2, p0, Lwb0;->a:I
+
+    int-to-float p2, p2
+
+    div-float/2addr p1, p2
+
+    invoke-static {p1, v3, v6}, Lxg8;->b(FFF)F
+
+    move-result p1
+
+    const/high16 p2, 0x3f000000    # 0.5f
+
+    mul-float/2addr p1, p2
 
     return p1
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Lwb0;->a:Landroid/net/Uri;
-
-    invoke-virtual {v0}, Landroid/net/Uri;->hashCode()I
-
-    move-result v0
-
-    const v1, 0xf4243
-
-    xor-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "OutputResults{outputUri="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lwb0;->a:Landroid/net/Uri;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, "}"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

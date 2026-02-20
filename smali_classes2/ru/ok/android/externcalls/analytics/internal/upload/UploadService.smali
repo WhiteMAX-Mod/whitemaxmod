@@ -1,5 +1,5 @@
 .class public Lru/ok/android/externcalls/analytics/internal/upload/UploadService;
-.super Lw7e;
+.super Liee;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Ldy7;-><init>()V
+    invoke-direct {p0}, Lgz7;-><init>()V
 
     return-void
 .end method
@@ -102,7 +102,7 @@
 
     sget-object v0, Lru/ok/android/commons/app/ApplicationProvider;->a:Landroid/app/Application;
 
-    invoke-static {}, Lm5j;->d()Landroid/app/Application;
+    invoke-static {}, Lhej;->d()Landroid/app/Application;
 
     move-result-object v0
 
@@ -158,7 +158,7 @@
 
     sget-object v0, Lru/ok/android/commons/app/ApplicationProvider;->a:Landroid/app/Application;
 
-    invoke-static {}, Lm5j;->d()Landroid/app/Application;
+    invoke-static {}, Lhej;->d()Landroid/app/Application;
 
     move-result-object v0
 
@@ -197,7 +197,7 @@
 
     sget-object v0, Lru/ok/android/commons/app/ApplicationProvider;->a:Landroid/app/Application;
 
-    invoke-static {}, Lm5j;->d()Landroid/app/Application;
+    invoke-static {}, Lhej;->d()Landroid/app/Application;
 
     move-result-object v0
 
@@ -214,7 +214,7 @@
 
     move-result v2
 
-    invoke-static {v0, v1, v2, p0}, Ldy7;->enqueueWork(Landroid/content/Context;Ljava/lang/Class;ILandroid/content/Intent;)V
+    invoke-static {v0, v1, v2, p0}, Lgz7;->enqueueWork(Landroid/content/Context;Ljava/lang/Class;ILandroid/content/Intent;)V
     :try_end_0
     .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -229,9 +229,9 @@
 
     move-result-object v0
 
-    new-instance v1, Lru/ok/android/externcalls/analytics/internal/upload/UploadException;
+    new-instance v1, Lru/ok/android/externcalls/analytics/internal/upload/StatDeliveryException;
 
-    invoke-direct {v1, p0}, Lru/ok/android/externcalls/analytics/internal/upload/UploadException;-><init>(Ljava/lang/Throwable;)V
+    invoke-direct {v1, p0}, Lru/ok/android/externcalls/analytics/internal/upload/StatDeliveryException;-><init>(Ljava/lang/Throwable;)V
 
     const-string p0, "UploadService"
 
@@ -274,7 +274,7 @@
 
     if-lt v4, v5, :cond_2
 
-    invoke-static {p1}, Lksb;->c(Landroid/content/Intent;)Ljava/lang/Object;
+    invoke-static {p1}, Lxub;->c(Landroid/content/Intent;)Ljava/lang/Object;
 
     move-result-object p1
 

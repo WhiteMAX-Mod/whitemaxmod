@@ -1,51 +1,54 @@
-.class public abstract synthetic Lmg8;
+.class public interface abstract Lmg8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+# virtual methods
+.method public abstract getItemId()J
+.end method
 
+.method public h(Lmg8;)Z
+    .locals 4
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 3
+    invoke-interface {p0}, Lmg8;->getItemId()J
 
-    invoke-static {}, Lsh2;->values()[Lsh2;
+    move-result-wide v0
 
-    move-result-object v0
+    invoke-interface {p1}, Lmg8;->getItemId()J
 
-    array-length v0, v0
+    move-result-wide v2
 
-    new-array v0, v0, [I
+    cmp-long p1, v0, v2
 
-    const/4 v1, 0x1
+    if-nez p1, :cond_0
 
-    const/4 v2, 0x0
+    const/4 p1, 0x1
 
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    return p1
 
-    :catch_0
-    const/4 v1, 0x2
+    :cond_0
+    const/4 p1, 0x0
 
-    :try_start_1
-    aput v1, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    return p1
+.end method
 
-    :catch_1
-    const/4 v1, 0x3
+.method public k(Lmg8;)Ljava/lang/Object;
+    .locals 0
 
-    :try_start_2
-    aput v1, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    const/4 p1, 0x0
 
-    :catch_2
-    sput-object v0, Lmg8;->$EnumSwitchMapping$0:[I
+    return-object p1
+.end method
 
-    return-void
+.method public abstract m()I
+.end method
+
+.method public q(Lmg8;)Z
+    .locals 0
+
+    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
 .end method

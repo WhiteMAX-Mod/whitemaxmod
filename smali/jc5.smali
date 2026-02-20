@@ -3,157 +3,286 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ldy3;
+.implements Lw58;
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static final a:Ljc5;
 
-.field public b:Ljava/lang/Object;
+.field public static final b:Lanc;
 
 
 # direct methods
-.method public synthetic constructor <init>()V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 3
 
-    .line 1
-    const/4 v0, 0x0
+    new-instance v0, Ljc5;
 
-    iput v0, p0, Ljc5;->a:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Ljc5;->a:Ljc5;
 
-    return-void
-.end method
+    new-instance v0, Lanc;
 
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
+    const-string v1, "kotlin.time.Duration"
 
-    .line 2
-    iput p1, p0, Ljc5;->a:I
+    sget-object v2, Lymc;->j:Lymc;
 
-    iput-object p2, p0, Ljc5;->b:Ljava/lang/Object;
+    invoke-direct {v0, v1, v2}, Lanc;-><init>(Ljava/lang/String;Lzmc;)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Ljc5;->b:Lanc;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 4
+.method public final a(Lj6g;Ljava/lang/Object;)V
+    .locals 16
 
-    iget v0, p0, Ljc5;->a:I
+    move-object/from16 v0, p2
 
-    packed-switch v0, :pswitch_data_0
+    check-cast v0, Lgc5;
 
-    check-cast p1, Lni6;
+    iget-wide v0, v0, Lgc5;->a:J
 
-    sget-object v0, Loi6;->c:Ljava/lang/Object;
+    sget v2, Lgc5;->d:I
 
-    monitor-enter v0
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    :try_start_0
-    sget-object v1, Loi6;->d:Ladf;
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v2, p0, Ljc5;->b:Ljava/lang/Object;
+    const-wide/16 v4, 0x0
 
-    check-cast v2, Ljava/lang/String;
+    cmp-long v2, v0, v4
 
-    invoke-virtual {v1, v2}, Ladf;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    if-gez v2, :cond_0
 
-    move-result-object v2
+    const/16 v6, 0x2d
 
-    check-cast v2, Ljava/util/ArrayList;
-
-    if-nez v2, :cond_0
-
-    monitor-exit v0
-
-    goto :goto_1
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_2
+    invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     :cond_0
-    iget-object v3, p0, Ljc5;->b:Ljava/lang/Object;
+    const-string v6, "PT"
 
-    check-cast v3, Ljava/lang/String;
+    invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v3}, Ladf;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    if-gez v2, :cond_1
 
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-static {v0, v1}, Lgc5;->s(J)J
 
-    const/4 v0, 0x0
-
-    :goto_0
-    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
-
-    move-result v1
-
-    if-ge v0, v1, :cond_1
-
-    invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ldy3;
-
-    invoke-interface {v1, p1}, Ldy3;->accept(Ljava/lang/Object;)V
-
-    add-int/lit8 v0, v0, 0x1
+    move-result-wide v6
 
     goto :goto_0
 
     :cond_1
-    :goto_1
-    return-void
+    move-wide v6, v0
 
-    :goto_2
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    :goto_0
+    sget-object v2, Lmc5;->X:Lmc5;
 
-    throw p1
+    invoke-static {v6, v7, v2}, Lgc5;->p(JLmc5;)J
 
-    :pswitch_0
-    check-cast p1, Lni6;
+    move-result-wide v8
 
-    if-nez p1, :cond_2
+    invoke-static {v6, v7}, Lgc5;->l(J)Z
 
-    new-instance p1, Lni6;
+    move-result v2
 
-    const/4 v0, -0x3
+    const/16 v10, 0x3c
 
-    invoke-direct {p1, v0}, Lni6;-><init>(I)V
+    const/4 v11, 0x0
+
+    if-eqz v2, :cond_2
+
+    move v2, v11
+
+    goto :goto_1
 
     :cond_2
-    iget-object v0, p0, Ljc5;->b:Ljava/lang/Object;
+    sget-object v2, Lmc5;->o:Lmc5;
 
-    check-cast v0, Ltx4;
+    invoke-static {v6, v7, v2}, Lgc5;->p(JLmc5;)J
 
-    invoke-virtual {v0, p1}, Ltx4;->o(Lni6;)V
+    move-result-wide v12
+
+    int-to-long v14, v10
+
+    rem-long/2addr v12, v14
+
+    long-to-int v2, v12
+
+    :goto_1
+    invoke-static {v6, v7}, Lgc5;->l(J)Z
+
+    move-result v12
+
+    if-eqz v12, :cond_3
+
+    move v10, v11
+
+    goto :goto_2
+
+    :cond_3
+    sget-object v12, Lmc5;->d:Lmc5;
+
+    invoke-static {v6, v7, v12}, Lgc5;->p(JLmc5;)J
+
+    move-result-wide v12
+
+    int-to-long v14, v10
+
+    rem-long/2addr v12, v14
+
+    long-to-int v10, v12
+
+    :goto_2
+    invoke-static {v6, v7}, Lgc5;->k(J)I
+
+    move-result v6
+
+    invoke-static {v0, v1}, Lgc5;->l(J)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    const-wide v8, 0x9184e729fffL
+
+    :cond_4
+    cmp-long v0, v8, v4
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_5
+
+    move v0, v1
+
+    goto :goto_3
+
+    :cond_5
+    move v0, v11
+
+    :goto_3
+    if-nez v10, :cond_7
+
+    if-eqz v6, :cond_6
+
+    goto :goto_4
+
+    :cond_6
+    move v4, v11
+
+    goto :goto_5
+
+    :cond_7
+    :goto_4
+    move v4, v1
+
+    :goto_5
+    if-nez v2, :cond_8
+
+    if-eqz v4, :cond_9
+
+    if-eqz v0, :cond_9
+
+    :cond_8
+    move v11, v1
+
+    :cond_9
+    if-eqz v0, :cond_a
+
+    invoke-virtual {v3, v8, v9}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x48
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    :cond_a
+    if-eqz v11, :cond_b
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x4d
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    :cond_b
+    if-nez v4, :cond_c
+
+    if-nez v0, :cond_d
+
+    if-nez v11, :cond_d
+
+    :cond_c
+    const-string v7, "S"
+
+    const/4 v8, 0x1
+
+    move v5, v6
+
+    const/16 v6, 0x9
+
+    move v4, v10
+
+    invoke-static/range {v3 .. v8}, Lgc5;->b(Ljava/lang/StringBuilder;IIILjava/lang/String;Z)V
+
+    :cond_d
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    move-object/from16 v1, p1
+
+    invoke-virtual {v1, v0}, Lj6g;->s(Ljava/lang/String;)V
 
     return-void
+.end method
 
-    :pswitch_1
-    iget-object v0, p0, Ljc5;->b:Ljava/lang/Object;
+.method public final b(Lzm4;)Ljava/lang/Object;
+    .locals 4
 
-    check-cast v0, Ldy3;
+    sget v0, Lgc5;->d:I
 
-    invoke-interface {v0, p1}, Ldy3;->accept(Ljava/lang/Object;)V
+    invoke-interface {p1}, Lzm4;->q()Ljava/lang/String;
 
-    return-void
+    move-result-object p1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    :try_start_0
+    invoke-static {p1}, Lkwj;->a(Ljava/lang/String;)J
+
+    move-result-wide v0
+    :try_end_0
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
+
+    new-instance p1, Lgc5;
+
+    invoke-direct {p1, v0, v1}, Lgc5;-><init>(J)V
+
+    return-object p1
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Ljava/lang/IllegalArgumentException;
+
+    const-string v2, "Invalid ISO duration string format: \'"
+
+    const-string v3, "\'."
+
+    invoke-static {v2, p1, v3}, Ltx8;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v1, p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw v1
+.end method
+
+.method public final d()Lzwe;
+    .locals 1
+
+    sget-object v0, Ljc5;->b:Lanc;
+
+    return-object v0
 .end method

@@ -1,48 +1,75 @@
 .class public final Luu6;
-.super Lo84;
+.super Lvu6;
+.source "SourceFile"
 
 
-# instance fields
-.field public final synthetic X:Ld83;
+# static fields
+.field public static final a:Luu6;
 
-.field public synthetic d:Ljava/lang/Object;
+.field public static final b:Llu6;
 
-.field public o:I
+.field public static final c:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Ld83;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Luu6;->X:Ld83;
+    new-instance v0, Luu6;
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Luu6;->a:Luu6;
+
+    new-instance v0, Llu6;
+
+    sget v1, Lqjb;->b:I
+
+    invoke-direct {v0, v1}, Llu6;-><init>(I)V
+
+    sput-object v0, Luu6;->b:Llu6;
+
+    sget-object v0, Lpu6;->e:Lpu6;
+
+    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    sput-object v0, Luu6;->c:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final b()Ljava/lang/String;
     .locals 1
 
-    iput-object p1, p0, Luu6;->d:Ljava/lang/Object;
+    const-string v0, "ru.ok.tamtam.ALL_VIDEO"
 
-    iget p1, p0, Luu6;->o:I
+    return-object v0
+.end method
 
-    const/high16 v0, -0x80000000
+.method public final c()Lg4;
+    .locals 1
 
-    or-int/2addr p1, v0
+    sget-object v0, Luu6;->b:Llu6;
 
-    iput p1, p0, Luu6;->o:I
+    return-object v0
+.end method
 
-    iget-object p1, p0, Luu6;->X:Ld83;
+.method public final d()Ljava/util/List;
+    .locals 1
 
-    const/4 v0, 0x0
+    sget-object v0, Luu6;->c:Ljava/util/List;
 
-    invoke-virtual {p1, v0, p0}, Ld83;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    return-object v0
+.end method
 
-    move-result-object p1
+.method public final f()Llu6;
+    .locals 1
 
-    return-object p1
+    sget-object v0, Luu6;->b:Llu6;
+
+    return-object v0
 .end method

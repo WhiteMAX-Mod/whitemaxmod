@@ -1,95 +1,104 @@
-.class public final Lmlb;
-.super Ld3;
+.class public final synthetic Lmlb;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic c:I
+.field public final synthetic a:I
 
-.field public final synthetic d:Lnlb;
+.field public final synthetic b:Lolb;
 
 
 # direct methods
-.method public constructor <init>(Lnlb;)V
-    .locals 1
+.method public synthetic constructor <init>(Lolb;I)V
+    .locals 0
 
-    const/4 v0, 0x1
+    iput p2, p0, Lmlb;->a:I
 
-    iput v0, p0, Lmlb;->c:I
+    iput-object p1, p0, Lmlb;->b:Lolb;
 
-    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
-
-    iput-object p1, p0, Lmlb;->d:Lnlb;
-
-    const/16 p1, 0xd
-
-    .line 2
-    invoke-direct {p0, p1, v0}, Ld3;-><init>(ILjava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Lp4b;Lnlb;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lmlb;->c:I
-
-    iput-object p2, p0, Lmlb;->d:Lnlb;
-
-    const/16 p2, 0xd
-
-    .line 1
-    invoke-direct {p0, p2, p1}, Ld3;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a0(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 1
+.method public final run()V
+    .locals 5
 
-    iget v0, p0, Lmlb;->c:I
+    iget v0, p0, Lmlb;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    invoke-static {p1, p2}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iget-object v0, p0, Lmlb;->b:Lolb;
 
-    move-result v0
+    iget-object v1, v0, Lolb;->B0:Ljava/util/ArrayList;
 
-    if-nez v0, :cond_0
+    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    check-cast p2, Ljava/lang/Boolean;
+    move-result-object v1
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    check-cast p1, Ljava/lang/Boolean;
+    move-result v2
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-eqz v2, :cond_0
 
-    iget-object p1, p0, Lmlb;->d:Lnlb;
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    invoke-static {p1}, Lnlb;->a(Lnlb;)V
+    move-result-object v2
+
+    check-cast v2, Lnlb;
+
+    iget-object v3, v0, Lolb;->c:Lsof;
+
+    iget v3, v3, Lsof;->d:F
+
+    const/4 v4, 0x0
+
+    invoke-interface {v2, v0, v3, v4}, Lnlb;->a(Lolb;FZ)V
+
+    goto :goto_0
 
     :cond_0
     return-void
 
     :pswitch_0
-    check-cast p2, Lp4b;
+    iget-object v0, p0, Lmlb;->b:Lolb;
 
-    check-cast p1, Lp4b;
+    iget-object v1, v0, Lolb;->B0:Ljava/util/ArrayList;
 
-    invoke-static {p1, p2}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    move-result p1
+    move-result-object v1
 
-    if-nez p1, :cond_1
+    :goto_1
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    iget-object p1, p0, Lmlb;->d:Lnlb;
+    move-result v2
 
-    invoke-static {p1}, Lnlb;->a(Lnlb;)V
+    if-eqz v2, :cond_1
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lnlb;
+
+    iget-object v3, v0, Lolb;->c:Lsof;
+
+    iget v3, v3, Lsof;->d:F
+
+    const/4 v4, 0x1
+
+    invoke-interface {v2, v0, v3, v4}, Lnlb;->a(Lolb;FZ)V
+
+    goto :goto_1
 
     :cond_1
     return-void

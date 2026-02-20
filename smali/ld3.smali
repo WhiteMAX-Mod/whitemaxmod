@@ -1,282 +1,192 @@
 .class public final Lld3;
-.super Ljava/lang/Object;
+.super Landroid/view/ViewOutlineProvider;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:I
+.field public final synthetic a:I
 
-.field public b:I
-
-.field public c:[I
-
-.field public d:I
+.field public final synthetic b:Landroid/view/View;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 3
+.method public synthetic constructor <init>(Landroid/view/View;I)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lld3;->a:I
 
-    const/16 v0, 0x8
+    iput-object p1, p0, Lld3;->b:Landroid/view/View;
 
-    invoke-static {v0}, Ljava/lang/Integer;->bitCount(I)I
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    if-eq v1, v2, :cond_0
-
-    const/4 v0, 0x7
-
-    invoke-static {v0}, Ljava/lang/Integer;->highestOneBit(I)I
-
-    move-result v0
-
-    shl-int/2addr v0, v2
-
-    :cond_0
-    add-int/lit8 v1, v0, -0x1
-
-    iput v1, p0, Lld3;->d:I
-
-    new-array v0, v0, [I
-
-    iput-object v0, p0, Lld3;->c:[I
+    invoke-direct {p0}, Landroid/view/ViewOutlineProvider;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(I)V
+.method public final getOutline(Landroid/view/View;Landroid/graphics/Outline;)V
     .locals 6
 
-    iget-object v0, p0, Lld3;->c:[I
+    iget v0, p0, Lld3;->a:I
 
-    iget v1, p0, Lld3;->b:I
+    packed-switch v0, :pswitch_data_0
 
-    aput p1, v0, v1
+    iget-object v0, p0, Lld3;->b:Landroid/view/View;
 
-    add-int/lit8 v1, v1, 0x1
+    check-cast v0, Lhqh;
 
-    iget p1, p0, Lld3;->d:I
+    if-eqz p2, :cond_2
 
-    and-int/2addr p1, v1
+    if-eqz p1, :cond_0
 
-    iput p1, p0, Lld3;->b:I
+    invoke-virtual {p1}, Landroid/view/View;->getMeasuredWidth()I
 
-    iget v1, p0, Lld3;->a:I
-
-    if-ne p1, v1, :cond_1
-
-    array-length p1, v0
-
-    sub-int v2, p1, v1
-
-    shl-int/lit8 v3, p1, 0x1
-
-    if-ltz v3, :cond_0
-
-    new-array v4, v3, [I
-
-    const/4 v5, 0x0
-
-    invoke-static {v5, v1, p1, v0, v4}, Lct;->k(III[I[I)V
-
-    iget-object v0, p0, Lld3;->c:[I
-
-    iget v1, p0, Lld3;->a:I
-
-    invoke-static {v2, v5, v1, v0, v4}, Lct;->k(III[I[I)V
-
-    iput-object v4, p0, Lld3;->c:[I
-
-    iput v5, p0, Lld3;->a:I
-
-    iput p1, p0, Lld3;->b:I
-
-    add-int/lit8 v3, v3, -0x1
-
-    iput v3, p0, Lld3;->d:I
-
-    return-void
-
-    :cond_0
-    new-instance p1, Ljava/lang/RuntimeException;
-
-    const-string v0, "Max array capacity exceeded"
-
-    invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    return-void
-.end method
-
-.method public b(II)V
-    .locals 5
-
-    if-ltz p1, :cond_3
-
-    if-ltz p2, :cond_2
-
-    iget v0, p0, Lld3;->d:I
-
-    mul-int/lit8 v1, v0, 0x2
-
-    iget-object v2, p0, Lld3;->c:[I
-
-    const/4 v3, 0x4
-
-    if-nez v2, :cond_0
-
-    new-array v0, v3, [I
-
-    iput-object v0, p0, Lld3;->c:[I
-
-    const/4 v2, -0x1
-
-    invoke-static {v0, v2}, Ljava/util/Arrays;->fill([II)V
+    move-result v1
 
     goto :goto_0
 
     :cond_0
-    array-length v4, v2
+    invoke-virtual {v0}, Landroid/view/View;->getMeasuredWidth()I
 
-    if-lt v1, v4, :cond_1
+    move-result v1
 
-    mul-int/2addr v0, v3
+    :goto_0
+    if-eqz p1, :cond_1
 
-    new-array v0, v0, [I
+    invoke-virtual {p1}, Landroid/view/View;->getMeasuredHeight()I
 
-    iput-object v0, p0, Lld3;->c:[I
+    move-result p1
 
-    array-length v3, v2
-
-    const/4 v4, 0x0
-
-    invoke-static {v2, v4, v0, v4, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    goto :goto_1
 
     :cond_1
-    :goto_0
-    iget-object v0, p0, Lld3;->c:[I
+    invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
 
-    aput p1, v0, v1
+    move-result p1
 
-    add-int/lit8 v1, v1, 0x1
-
-    aput p2, v0, v1
-
-    iget p1, p0, Lld3;->d:I
-
-    add-int/lit8 p1, p1, 0x1
-
-    iput p1, p0, Lld3;->d:I
-
-    return-void
-
-    :cond_2
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string p2, "Pixel distance must be non-negative"
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_3
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string p2, "Layout positions must be non-negative"
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public c(Landroidx/recyclerview/widget/RecyclerView;Z)V
-    .locals 4
-
+    :goto_1
     const/4 v0, 0x0
 
-    iput v0, p0, Lld3;->d:I
-
-    iget-object v0, p0, Lld3;->c:[I
-
-    if-eqz v0, :cond_0
-
-    const/4 v1, -0x1
-
-    invoke-static {v0, v1}, Ljava/util/Arrays;->fill([II)V
-
-    :cond_0
-    iget-object v0, p1, Landroidx/recyclerview/widget/RecyclerView;->B0:Landroidx/recyclerview/widget/a;
-
-    iget-object v1, p1, Landroidx/recyclerview/widget/RecyclerView;->A0:Lwrd;
-
-    if-eqz v1, :cond_3
-
-    if-eqz v0, :cond_3
-
-    iget-boolean v1, v0, Landroidx/recyclerview/widget/a;->i:Z
-
-    if-eqz v1, :cond_3
-
-    if-eqz p2, :cond_1
-
-    iget-object v1, p1, Landroidx/recyclerview/widget/RecyclerView;->o:Lv8;
-
-    invoke-virtual {v1}, Lv8;->u()Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    iget-object v1, p1, Landroidx/recyclerview/widget/RecyclerView;->A0:Lwrd;
-
-    invoke-virtual {v1}, Lwrd;->j()I
-
-    move-result v1
-
-    invoke-virtual {v0, v1, p0}, Landroidx/recyclerview/widget/a;->k(ILld3;)V
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->X()Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    iget v1, p0, Lld3;->a:I
-
-    iget v2, p0, Lld3;->b:I
-
-    iget-object v3, p1, Landroidx/recyclerview/widget/RecyclerView;->s1:Lpsd;
-
-    invoke-virtual {v0, v1, v2, v3, p0}, Landroidx/recyclerview/widget/a;->j(IILpsd;Lld3;)V
+    invoke-virtual {p2, v0, v0, v1, p1}, Landroid/graphics/Outline;->setOval(IIII)V
 
     :cond_2
-    :goto_0
-    iget v1, p0, Lld3;->d:I
+    return-void
 
-    iget v2, v0, Landroidx/recyclerview/widget/a;->j:I
+    :pswitch_0
+    iget-object p1, p0, Lld3;->b:Landroid/view/View;
 
-    if-le v1, v2, :cond_3
+    check-cast p1, Lxqg;
 
-    iput v1, v0, Landroidx/recyclerview/widget/a;->j:I
+    if-eqz p2, :cond_3
 
-    iput-boolean p2, v0, Landroidx/recyclerview/widget/a;->k:Z
+    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
 
-    iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView;->c:Lksd;
+    move-result v3
 
-    invoke-virtual {p1}, Lksd;->m()V
+    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
+
+    move-result v4
+
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object p1
+
+    iget p1, p1, Landroid/util/DisplayMetrics;->density:F
+
+    const/high16 v0, 0x41200000    # 10.0f
+
+    mul-float v5, p1, v0
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    move-object v0, p2
+
+    invoke-virtual/range {v0 .. v5}, Landroid/graphics/Outline;->setRoundRect(IIIIF)V
 
     :cond_3
     return-void
+
+    :pswitch_1
+    move-object v0, p2
+
+    iget-object p1, p0, Lld3;->b:Landroid/view/View;
+
+    check-cast p1, Landroid/widget/ImageView;
+
+    if-eqz v0, :cond_4
+
+    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
+
+    move-result p2
+
+    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
+
+    move-result p1
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1, v1, p2, p1}, Landroid/graphics/Outline;->setOval(IIII)V
+
+    :cond_4
+    return-void
+
+    :pswitch_2
+    move-object v0, p2
+
+    iget-object p1, p0, Lld3;->b:Landroid/view/View;
+
+    check-cast p1, Lwk3;
+
+    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
+
+    move-result p2
+
+    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
+
+    move-result p1
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1, v1, p2, p1}, Landroid/graphics/Outline;->setOval(IIII)V
+
+    return-void
+
+    :pswitch_3
+    move-object v0, p2
+
+    iget-object p1, p0, Lld3;->b:Landroid/view/View;
+
+    check-cast p1, Lcom/google/android/material/chip/Chip;
+
+    iget-object p1, p1, Lcom/google/android/material/chip/Chip;->o:Lod3;
+
+    if-eqz p1, :cond_5
+
+    invoke-virtual {p1, v0}, Lod3;->getOutline(Landroid/graphics/Outline;)V
+
+    goto :goto_2
+
+    :cond_5
+    const/4 p1, 0x0
+
+    invoke-virtual {v0, p1}, Landroid/graphics/Outline;->setAlpha(F)V
+
+    :goto_2
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

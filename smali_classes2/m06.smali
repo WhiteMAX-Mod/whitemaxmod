@@ -1,19 +1,19 @@
-.class public final Lm06;
-.super Lkk0;
+.class public interface abstract Lm06;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final b:J
+# static fields
+.field public static final a:Liyj;
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0, p1, p2}, Lkk0;-><init>(J)V
+    sget-object v0, Liyj;->Y:Liyj;
 
-    iput-wide p1, p0, Lm06;->b:J
+    sput-object v0, Lm06;->a:Liyj;
 
     return-void
 .end method

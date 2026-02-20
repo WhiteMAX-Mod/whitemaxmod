@@ -1,61 +1,81 @@
-.class public final Lvo1;
-.super Lcp1;
+.class public final enum Lvo1;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
 # static fields
-.field public static final D:Lvo1;
+.field public static final enum a:Lvo1;
+
+.field public static final enum b:Lvo1;
+
+.field public static final synthetic c:[Lvo1;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 5
 
     new-instance v0, Lvo1;
 
-    invoke-direct {v0}, Lcp1;-><init>()V
+    const-string v1, "LOW"
 
-    sput-object v0, Lvo1;->D:Lvo1;
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lvo1;->a:Lvo1;
+
+    new-instance v1, Lvo1;
+
+    const-string v2, "MIDDLE"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lvo1;->b:Lvo1;
+
+    new-instance v2, Lvo1;
+
+    const-string v3, "HIGH"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    filled-new-array {v0, v1, v2}, [Lvo1;
+
+    move-result-object v0
+
+    sput-object v0, Lvo1;->c:[Lvo1;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public static valueOf(Ljava/lang/String;)Lvo1;
     .locals 1
 
-    const/4 v0, 0x1
+    const-class v0, Lvo1;
 
-    if-ne p0, p1, :cond_0
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    return v0
+    move-result-object p0
 
-    :cond_0
-    instance-of p1, p1, Lvo1;
+    check-cast p0, Lvo1;
 
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
+    return-object p0
 .end method
 
-.method public final hashCode()I
+.method public static values()[Lvo1;
     .locals 1
 
-    const v0, 0x7f1049e7
+    sget-object v0, Lvo1;->c:[Lvo1;
 
-    return v0
-.end method
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    move-result-object v0
 
-    const-string v0, "RecordStopDialog"
+    check-cast v0, [Lvo1;
 
     return-object v0
 .end method

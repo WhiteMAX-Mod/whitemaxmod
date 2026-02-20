@@ -1,57 +1,55 @@
-.class public abstract Lcy7;
-.super Ljava/lang/Object;
+.class public final Lcy7;
+.super Lz1;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:Z
+# static fields
+.field public static final o:Lcy7;
 
-.field public b:I
+
+# instance fields
+.field public final d:[Ljava/lang/Object;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lcy7;
+
+    const/4 v1, 0x0
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    invoke-direct {v0, v1}, Lcy7;-><init>([Ljava/lang/Object;)V
+
+    sput-object v0, Lcy7;->o:Lcy7;
+
+    return-void
+.end method
+
+.method public constructor <init>([Ljava/lang/Object;)V
+    .locals 2
+
+    const/4 v0, 0x0
+
+    array-length v1, p1
+
+    invoke-direct {p0, v1, v0}, Lz1;-><init>(II)V
+
+    iput-object p1, p0, Lcy7;->d:[Ljava/lang/Object;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a(I)V
-    .locals 3
+.method public final a(I)Ljava/lang/Object;
+    .locals 1
 
-    iget-boolean v0, p0, Lcy7;->a:Z
+    iget-object v0, p0, Lcy7;->d:[Ljava/lang/Object;
 
-    if-nez v0, :cond_0
+    aget-object p1, v0, p1
 
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcy7;->a:Z
-
-    iput p1, p0, Lcy7;->b:I
-
-    return-void
-
-    :cond_0
-    iget v0, p0, Lcy7;->b:I
-
-    if-ne v0, p1, :cond_1
-
-    return-void
-
-    :cond_1
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "Given job ID "
-
-    const-string v2, " is different than previous "
-
-    invoke-static {p1, v1, v2}, Lj27;->m(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object p1
-
-    iget v1, p0, Lcy7;->b:I
-
-    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    return-object p1
 .end method

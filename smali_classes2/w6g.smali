@@ -1,59 +1,48 @@
 .class public final Lw6g;
-.super Lo84;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Ljava/lang/Object;
+.field public final a:Ljava/lang/String;
 
-.field public Y:I
-
-.field public Z:I
-
-.field public d:Lufh;
-
-.field public o:Lufh;
-
-.field public synthetic t0:Ljava/lang/Object;
-
-.field public final synthetic u0:Lb7g;
-
-.field public v0:I
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lb7g;Lo84;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lw6g;->u0:Lb7g;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lw6g;->a:Ljava/lang/String;
+
+    iput-object p2, p0, Lw6g;->b:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final a(Lhe7;)V
+    .locals 2
 
-    iput-object p1, p0, Lw6g;->t0:Ljava/lang/Object;
+    iget-object v0, p0, Lw6g;->b:Ljava/lang/String;
 
-    iget p1, p0, Lw6g;->v0:I
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
 
-    const/high16 v0, -0x80000000
+    move-result v1
 
-    or-int/2addr p1, v0
+    if-nez v1, :cond_0
 
-    iput p1, p0, Lw6g;->v0:I
+    return-void
 
-    iget-object p1, p0, Lw6g;->u0:Lb7g;
+    :cond_0
+    iget-object v1, p0, Lw6g;->a:Ljava/lang/String;
 
-    const/4 v0, 0x0
+    invoke-virtual {p1, v1}, Lhe7;->s0(Ljava/lang/String;)Lf58;
 
-    invoke-static {p1, v0, p0}, Lb7g;->b(Lb7g;Lufh;Lo84;)Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Lhe7;->i(Ljava/lang/String;)V
 
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

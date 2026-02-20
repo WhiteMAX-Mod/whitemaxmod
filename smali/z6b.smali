@@ -1,175 +1,182 @@
-.class public abstract Lz6b;
+.class public final Lz6b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:J
+# instance fields
+.field public final a:Lkotlinx/coroutines/internal/ContextScope;
 
-.field public static final b:J
+.field public final b:Lug3;
 
-.field public static final c:J
+.field public final c:Loye;
 
-.field public static final d:J
+.field public final d:Ln7b;
 
-.field public static final e:J
+.field public final e:Lvy1;
 
-.field public static final f:J
-
-.field public static final g:J
-
-.field public static final h:J
-
-.field public static final i:J
-
-.field public static final j:J
-
-.field public static final k:J
-
-.field public static final l:J
-
-.field public static final m:J
-
-.field public static final n:J
-
-.field public static final o:J
-
-.field public static final p:J
-
-.field public static final q:J
-
-.field public static final r:J
-
-.field public static final s:J
-
-.field public static final t:J
-
-.field public static final synthetic u:I
+.field public final f:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lr5;)V
+    .locals 1
 
-    sget v0, Ld8d;->call_admin_settings_media_bottom_header:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    int-to-long v0, v0
+    const/16 v0, 0xe
 
-    sput-wide v0, Lz6b;->a:J
+    invoke-virtual {p1, v0}, Lr5;->c(I)Ljava/lang/Object;
 
-    sget v0, Ld8d;->call_admin_settings_media_header:I
+    move-result-object v0
 
-    int-to-long v0, v0
+    check-cast v0, Lbjg;
 
-    sput-wide v0, Lz6b;->b:J
+    check-cast v0, Lcbb;
 
-    sget v0, Ld8d;->call_context_action_chat:I
+    invoke-virtual {v0}, Lcbb;->c()Los8;
 
-    int-to-long v0, v0
+    move-result-object v0
 
-    sput-wide v0, Lz6b;->c:J
+    invoke-static {v0}, Lztj;->a(Led4;)Lkotlinx/coroutines/internal/ContextScope;
 
-    sget v0, Ld8d;->call_context_action_debug_menu:I
+    move-result-object v0
 
-    int-to-long v0, v0
+    iput-object v0, p0, Lz6b;->a:Lkotlinx/coroutines/internal/ContextScope;
 
-    sput-wide v0, Lz6b;->d:J
+    const/16 v0, 0x3e
 
-    sget v0, Ld8d;->call_context_action_open_profile:I
+    invoke-virtual {p1, v0}, Lr5;->c(I)Ljava/lang/Object;
 
-    int-to-long v0, v0
+    move-result-object v0
 
-    sput-wide v0, Lz6b;->e:J
+    check-cast v0, Lug3;
 
-    sget v0, Ld8d;->call_context_action_record_screen:I
+    iput-object v0, p0, Lz6b;->b:Lug3;
 
-    int-to-long v0, v0
+    const/16 v0, 0x2b
 
-    sput-wide v0, Lz6b;->f:J
+    invoke-virtual {p1, v0}, Lr5;->c(I)Ljava/lang/Object;
 
-    sget v0, Ld8d;->call_context_action_record_screen_disable:I
+    move-result-object v0
 
-    int-to-long v0, v0
+    check-cast v0, Loye;
 
-    sput-wide v0, Lz6b;->g:J
+    iput-object v0, p0, Lz6b;->c:Loye;
 
-    sget v0, Ld8d;->call_context_action_record_screen_unavailable:I
+    const/16 v0, 0x49
 
-    int-to-long v0, v0
+    invoke-virtual {p1, v0}, Lr5;->c(I)Ljava/lang/Object;
 
-    sput-wide v0, Lz6b;->h:J
+    move-result-object v0
 
-    sget v0, Ld8d;->call_context_action_record_screenin_progress:I
+    check-cast v0, Ln7b;
 
-    int-to-long v0, v0
+    iput-object v0, p0, Lz6b;->d:Ln7b;
 
-    sput-wide v0, Lz6b;->i:J
+    const/16 v0, 0x16
 
-    sget v0, Ld8d;->call_context_action_settings:I
+    invoke-virtual {p1, v0}, Lr5;->c(I)Ljava/lang/Object;
 
-    int-to-long v0, v0
+    move-result-object p1
 
-    sput-wide v0, Lz6b;->j:J
+    check-cast p1, Lvy1;
 
-    sget v0, Ld8d;->call_context_action_share_screen:I
+    iput-object p1, p0, Lz6b;->e:Lvy1;
 
-    int-to-long v0, v0
+    sget-object p1, Lxa4;->s0:Lxa4;
 
-    sput-wide v0, Lz6b;->k:J
+    const/4 v0, 0x3
 
-    sget v0, Ld8d;->call_context_action_share_screen_disable:I
+    invoke-static {v0, p1}, Lbdj;->d(ILis6;)Lj88;
 
-    int-to-long v0, v0
+    move-result-object p1
 
-    sput-wide v0, Lz6b;->l:J
+    iput-object p1, p0, Lz6b;->f:Ljava/lang/Object;
 
-    sget v0, Ld8d;->call_context_action_share_screen_unavailable:I
+    return-void
+.end method
 
-    int-to-long v0, v0
 
-    sput-wide v0, Lz6b;->m:J
+# virtual methods
+.method public final a()Z
+    .locals 6
 
-    sget v0, Ld8d;->call_context_action_write_chat:I
+    iget-object v0, p0, Lz6b;->c:Loye;
 
-    int-to-long v0, v0
+    check-cast v0, Lzgc;
 
-    sput-wide v0, Lz6b;->n:J
+    const/4 v1, 0x0
 
-    sget v0, Ld8d;->call_context_dialog_invite_user_to_p2p:I
+    int-to-long v2, v1
 
-    int-to-long v0, v0
+    sget-object v4, Lxme;->a:Lxme;
 
-    sput-wide v0, Lz6b;->o:J
+    invoke-virtual {v0, v4, v2, v3}, Lzgc;->m(Ljava/lang/Enum;J)J
 
-    sget v0, Ld8d;->call_debug_menu_settings_actions_header:I
+    move-result-wide v2
 
-    int-to-long v0, v0
+    long-to-int v0, v2
 
-    sput-wide v0, Lz6b;->p:J
+    const/4 v2, 0x1
 
-    sget v0, Ld8d;->call_debug_menu_settings_crash:I
+    if-ne v0, v2, :cond_0
 
-    int-to-long v0, v0
+    iget-object v0, p0, Lz6b;->b:Lug3;
 
-    sput-wide v0, Lz6b;->q:J
+    check-cast v0, Lhl8;
 
-    sget v0, Ld8d;->call_debug_menu_settings_nonfatal:I
+    iget-object v3, v0, Lhl8;->C0:Lvye;
 
-    int-to-long v0, v0
+    sget-object v4, Lhl8;->U0:[Lv58;
 
-    sput-wide v0, Lz6b;->r:J
+    const/16 v5, 0x14
 
-    sget v0, Ld8d;->call_screen_menu_grid_mode:I
+    aget-object v4, v4, v5
 
-    int-to-long v0, v0
+    invoke-virtual {v3, v0, v4}, Lvye;->D(Ljava/lang/Object;Lv58;)Ljava/lang/Object;
 
-    sput-wide v0, Lz6b;->s:J
+    move-result-object v0
 
-    sget v0, Ld8d;->call_screen_menu_speaker_mode:I
+    check-cast v0, Ljava/lang/String;
 
-    int-to-long v0, v0
+    iget-object v3, p0, Lz6b;->d:Ln7b;
 
-    sput-wide v0, Lz6b;->t:J
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-string v3, "26.4.4"
+
+    invoke-static {v0, v3}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    return v2
+
+    :cond_0
+    return v1
+.end method
+
+.method public final b()V
+    .locals 4
+
+    iget-object v0, p0, Lz6b;->e:Lvy1;
+
+    check-cast v0, Lkz1;
+
+    invoke-virtual {v0}, Lkz1;->A()V
+
+    new-instance v0, Ly6b;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, v1}, Ly6b;-><init>(Lz6b;Lkotlin/coroutines/Continuation;)V
+
+    const/4 v2, 0x3
+
+    iget-object v3, p0, Lz6b;->a:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {v3, v1, v1, v0, v2}, Lea9;->d(Lnd4;Led4;Lqd4;Lys6;I)Lcuf;
 
     return-void
 .end method

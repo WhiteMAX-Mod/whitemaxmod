@@ -1,440 +1,266 @@
 .class public final Lzng;
-.super Lk3j;
+.super Lt4;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Leog;
-
-.field public final b:Landroid/view/Window$Callback;
-
-.field public final c:Lnpd;
-
-.field public d:Z
-
-.field public e:Z
-
-.field public f:Z
-
-.field public final g:Ljava/util/ArrayList;
-
-.field public final h:Lag8;
+.field public final d:Lcom/google/android/material/textfield/TextInputLayout;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/appcompat/widget/Toolbar;Ljava/lang/CharSequence;Lfo;)V
-    .locals 3
+.method public constructor <init>(Lcom/google/android/material/textfield/TextInputLayout;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lt4;-><init>()V
 
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lzng;->g:Ljava/util/ArrayList;
-
-    new-instance v0, Lag8;
-
-    const/16 v1, 0x1a
-
-    invoke-direct {v0, v1, p0}, Lag8;-><init>(ILjava/lang/Object;)V
-
-    iput-object v0, p0, Lzng;->h:Lag8;
-
-    new-instance v0, Ly2e;
-
-    invoke-direct {v0, p0}, Ly2e;-><init>(Ljava/lang/Object;)V
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v1, Leog;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, p1, v2}, Leog;-><init>(Landroidx/appcompat/widget/Toolbar;Z)V
-
-    iput-object v1, p0, Lzng;->a:Leog;
-
-    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iput-object p3, p0, Lzng;->b:Landroid/view/Window$Callback;
-
-    iput-object p3, v1, Leog;->k:Landroid/view/Window$Callback;
-
-    invoke-virtual {p1, v0}, Landroidx/appcompat/widget/Toolbar;->setOnMenuItemClickListener(Lyng;)V
-
-    iget-boolean p1, v1, Leog;->g:Z
-
-    if-nez p1, :cond_0
-
-    iput-object p2, v1, Leog;->h:Ljava/lang/CharSequence;
-
-    iget p1, v1, Leog;->b:I
-
-    and-int/lit8 p1, p1, 0x8
-
-    if-eqz p1, :cond_0
-
-    iget-object p1, v1, Leog;->a:Landroidx/appcompat/widget/Toolbar;
-
-    invoke-virtual {p1, p2}, Landroidx/appcompat/widget/Toolbar;->setTitle(Ljava/lang/CharSequence;)V
-
-    iget-boolean p3, v1, Leog;->g:Z
-
-    if-eqz p3, :cond_0
-
-    invoke-virtual {p1}, Landroid/view/View;->getRootView()Landroid/view/View;
-
-    move-result-object p1
-
-    invoke-static {p1, p2}, Lxsh;->o(Landroid/view/View;Ljava/lang/CharSequence;)V
-
-    :cond_0
-    new-instance p1, Lnpd;
-
-    const/16 p2, 0x8
-
-    invoke-direct {p1, p2, p0}, Lnpd;-><init>(ILjava/lang/Object;)V
-
-    iput-object p1, p0, Lzng;->c:Lnpd;
+    iput-object p1, p0, Lzng;->d:Lcom/google/android/material/textfield/TextInputLayout;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
-    .locals 1
+.method public final d(Landroid/view/View;Lg5;)V
+    .locals 17
 
-    iget-object v0, p0, Lzng;->a:Leog;
+    move-object/from16 v0, p0
 
-    iget-object v0, v0, Leog;->a:Landroidx/appcompat/widget/Toolbar;
+    move-object/from16 v1, p2
 
-    iget-object v0, v0, Landroidx/appcompat/widget/Toolbar;->a:Landroidx/appcompat/widget/ActionMenuView;
+    iget-object v2, v1, Lg5;->a:Landroid/view/accessibility/AccessibilityNodeInfo;
 
-    if-eqz v0, :cond_0
+    iget-object v3, v0, Lt4;->a:Landroid/view/View$AccessibilityDelegate;
 
-    iget-object v0, v0, Landroidx/appcompat/widget/ActionMenuView;->o:Lz6;
+    move-object/from16 v4, p1
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v3, v4, v2}, Landroid/view/View$AccessibilityDelegate;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroid/view/accessibility/AccessibilityNodeInfo;)V
 
-    invoke-virtual {v0}, Lz6;->h()Z
+    iget-object v3, v0, Lzng;->d:Lcom/google/android/material/textfield/TextInputLayout;
 
-    move-result v0
+    invoke-virtual {v3}, Lcom/google/android/material/textfield/TextInputLayout;->getEditText()Landroid/widget/EditText;
 
-    if-eqz v0, :cond_0
+    move-result-object v4
 
-    const/4 v0, 0x1
+    if-eqz v4, :cond_0
 
-    return v0
+    invoke-virtual {v4}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final b()Z
-    .locals 2
-
-    iget-object v0, p0, Lzng;->a:Leog;
-
-    iget-object v0, v0, Leog;->a:Landroidx/appcompat/widget/Toolbar;
-
-    iget-object v0, v0, Landroidx/appcompat/widget/Toolbar;->a1:Lwng;
-
-    if-eqz v0, :cond_2
-
-    iget-object v1, v0, Lwng;->b:Lrj9;
-
-    if-eqz v1, :cond_2
-
-    if-nez v0, :cond_0
-
-    const/4 v1, 0x0
-
-    :cond_0
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v1}, Lrj9;->collapseActionView()Z
-
-    :cond_1
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_2
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final c(Z)V
-    .locals 1
-
-    iget-boolean v0, p0, Lzng;->f:Z
-
-    if-ne p1, v0, :cond_0
+    move-result-object v4
 
     goto :goto_0
 
     :cond_0
-    iput-boolean p1, p0, Lzng;->f:Z
-
-    iget-object p1, p0, Lzng;->g:Ljava/util/ArrayList;
-
-    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    if-gtz v0, :cond_1
+    const/4 v4, 0x0
 
     :goto_0
-    return-void
+    invoke-virtual {v3}, Lcom/google/android/material/textfield/TextInputLayout;->getHint()Ljava/lang/CharSequence;
+
+    move-result-object v5
+
+    invoke-virtual {v3}, Lcom/google/android/material/textfield/TextInputLayout;->getError()Ljava/lang/CharSequence;
+
+    move-result-object v6
+
+    invoke-virtual {v3}, Lcom/google/android/material/textfield/TextInputLayout;->getPlaceholderText()Ljava/lang/CharSequence;
+
+    move-result-object v7
+
+    invoke-virtual {v3}, Lcom/google/android/material/textfield/TextInputLayout;->getCounterMaxLength()I
+
+    move-result v8
+
+    invoke-virtual {v3}, Lcom/google/android/material/textfield/TextInputLayout;->getCounterOverflowDescription()Ljava/lang/CharSequence;
+
+    move-result-object v9
+
+    invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v10
+
+    invoke-static {v5}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v11
+
+    iget-boolean v12, v3, Lcom/google/android/material/textfield/TextInputLayout;->E1:Z
+
+    invoke-static {v6}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v13
+
+    if-eqz v13, :cond_2
+
+    invoke-static {v9}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v14
+
+    if-nez v14, :cond_1
+
+    goto :goto_1
 
     :cond_1
-    const/4 v0, 0x0
+    const/4 v14, 0x0
 
-    invoke-static {p1, v0}, Lmrf;->g(Ljava/util/ArrayList;I)Ljava/lang/ClassCastException;
+    goto :goto_2
 
-    move-result-object p1
+    :cond_2
+    :goto_1
+    const/4 v14, 0x1
 
-    throw p1
-.end method
+    :goto_2
+    if-nez v11, :cond_3
 
-.method public final d()I
-    .locals 1
+    invoke-interface {v5}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
-    iget-object v0, p0, Lzng;->a:Leog;
+    move-result-object v5
 
-    iget v0, v0, Leog;->b:I
+    goto :goto_3
 
-    return v0
-.end method
+    :cond_3
+    const-string v5, ""
 
-.method public final g()Landroid/content/Context;
-    .locals 1
+    :goto_3
+    iget-object v11, v3, Lcom/google/android/material/textfield/TextInputLayout;->b:Ltuf;
 
-    iget-object v0, p0, Lzng;->a:Leog;
+    iget-object v15, v11, Ltuf;->b:Landroidx/appcompat/widget/AppCompatTextView;
 
-    iget-object v0, v0, Leog;->a:Landroidx/appcompat/widget/Toolbar;
+    invoke-virtual {v15}, Landroid/view/View;->getVisibility()I
 
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    move-result v16
 
-    move-result-object v0
+    if-nez v16, :cond_4
 
-    return-object v0
-.end method
+    invoke-virtual {v2, v15}, Landroid/view/accessibility/AccessibilityNodeInfo;->setLabelFor(Landroid/view/View;)V
 
-.method public final h()Z
-    .locals 3
+    invoke-virtual {v2, v15}, Landroid/view/accessibility/AccessibilityNodeInfo;->setTraversalAfter(Landroid/view/View;)V
 
-    iget-object v0, p0, Lzng;->a:Leog;
+    goto :goto_4
 
-    iget-object v1, v0, Leog;->a:Landroidx/appcompat/widget/Toolbar;
+    :cond_4
+    iget-object v11, v11, Ltuf;->d:Lcom/google/android/material/internal/CheckableImageButton;
 
-    iget-object v2, p0, Lzng;->h:Lag8;
+    invoke-virtual {v2, v11}, Landroid/view/accessibility/AccessibilityNodeInfo;->setTraversalAfter(Landroid/view/View;)V
 
-    invoke-virtual {v1, v2}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
+    :goto_4
+    if-nez v10, :cond_5
 
-    iget-object v0, v0, Leog;->a:Landroidx/appcompat/widget/Toolbar;
+    invoke-virtual {v2, v4}, Landroid/view/accessibility/AccessibilityNodeInfo;->setText(Ljava/lang/CharSequence;)V
 
-    sget-object v1, Lxsh;->a:Ljava/util/WeakHashMap;
+    goto :goto_5
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->postOnAnimation(Ljava/lang/Runnable;)V
+    :cond_5
+    invoke-static {v5}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    const/4 v0, 0x1
+    move-result v11
 
-    return v0
-.end method
+    if-nez v11, :cond_6
 
-.method public final i()V
-    .locals 0
+    invoke-virtual {v2, v5}, Landroid/view/accessibility/AccessibilityNodeInfo;->setText(Ljava/lang/CharSequence;)V
 
-    return-void
-.end method
+    if-nez v12, :cond_7
 
-.method public final j()V
-    .locals 2
+    if-eqz v7, :cond_7
 
-    iget-object v0, p0, Lzng;->a:Leog;
+    new-instance v11, Ljava/lang/StringBuilder;
 
-    iget-object v0, v0, Leog;->a:Landroidx/appcompat/widget/Toolbar;
+    invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v1, p0, Lzng;->h:Lag8;
+    invoke-virtual {v11, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
+    const-string v12, ", "
 
-    return-void
-.end method
+    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public final k(ILandroid/view/KeyEvent;)Z
-    .locals 4
+    invoke-virtual {v11, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0}, Lzng;->s()Landroid/view/Menu;
+    invoke-virtual {v11}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v7
 
-    const/4 v1, 0x0
+    invoke-virtual {v2, v7}, Landroid/view/accessibility/AccessibilityNodeInfo;->setText(Ljava/lang/CharSequence;)V
 
-    if-eqz v0, :cond_1
+    goto :goto_5
 
-    invoke-virtual {p2}, Landroid/view/KeyEvent;->getDeviceId()I
+    :cond_6
+    if-eqz v7, :cond_7
 
-    move-result v2
+    invoke-virtual {v2, v7}, Landroid/view/accessibility/AccessibilityNodeInfo;->setText(Ljava/lang/CharSequence;)V
 
-    invoke-static {v2}, Landroid/view/KeyCharacterMap;->load(I)Landroid/view/KeyCharacterMap;
+    :cond_7
+    :goto_5
+    invoke-static {v5}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v7
+
+    if-nez v7, :cond_8
+
+    invoke-virtual {v2, v5}, Landroid/view/accessibility/AccessibilityNodeInfo;->setHintText(Ljava/lang/CharSequence;)V
+
+    invoke-virtual {v2, v10}, Landroid/view/accessibility/AccessibilityNodeInfo;->setShowingHintText(Z)V
+
+    :cond_8
+    if-eqz v4, :cond_9
+
+    invoke-interface {v4}, Ljava/lang/CharSequence;->length()I
+
+    move-result v4
+
+    if-ne v4, v8, :cond_9
+
+    goto :goto_6
+
+    :cond_9
+    const/4 v8, -0x1
+
+    :goto_6
+    invoke-virtual {v2, v8}, Landroid/view/accessibility/AccessibilityNodeInfo;->setMaxTextLength(I)V
+
+    if-eqz v14, :cond_b
+
+    if-nez v13, :cond_a
+
+    goto :goto_7
+
+    :cond_a
+    move-object v6, v9
+
+    :goto_7
+    invoke-virtual {v2, v6}, Landroid/view/accessibility/AccessibilityNodeInfo;->setError(Ljava/lang/CharSequence;)V
+
+    :cond_b
+    iget-object v4, v3, Lcom/google/android/material/textfield/TextInputLayout;->w0:Lbo7;
+
+    iget-object v4, v4, Lbo7;->y:Landroidx/appcompat/widget/AppCompatTextView;
+
+    if-eqz v4, :cond_c
+
+    invoke-virtual {v2, v4}, Landroid/view/accessibility/AccessibilityNodeInfo;->setLabelFor(Landroid/view/View;)V
+
+    :cond_c
+    iget-object v2, v3, Lcom/google/android/material/textfield/TextInputLayout;->c:Lal5;
+
+    invoke-virtual {v2}, Lal5;->b()Lbl5;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Landroid/view/KeyCharacterMap;->getKeyboardType()I
+    invoke-virtual {v2, v1}, Lbl5;->n(Lg5;)V
 
-    move-result v2
-
-    const/4 v3, 0x1
-
-    if-eq v2, v3, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    move v3, v1
-
-    :goto_0
-    invoke-interface {v0, v3}, Landroid/view/Menu;->setQwertyMode(Z)V
-
-    invoke-interface {v0, p1, p2, v1}, Landroid/view/Menu;->performShortcut(ILandroid/view/KeyEvent;I)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_1
-    return v1
+    return-void
 .end method
 
-.method public final l(Landroid/view/KeyEvent;)Z
-    .locals 1
-
-    invoke-virtual {p1}, Landroid/view/KeyEvent;->getAction()I
-
-    move-result p1
-
-    const/4 v0, 0x1
-
-    if-ne p1, v0, :cond_0
-
-    invoke-virtual {p0}, Lzng;->m()Z
-
-    :cond_0
-    return v0
-.end method
-
-.method public final m()Z
-    .locals 1
-
-    iget-object v0, p0, Lzng;->a:Leog;
-
-    iget-object v0, v0, Leog;->a:Landroidx/appcompat/widget/Toolbar;
-
-    invoke-virtual {v0}, Landroidx/appcompat/widget/Toolbar;->w()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final n(Z)V
+.method public final e(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
     .locals 0
 
+    invoke-super {p0, p1, p2}, Lt4;->e(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
+
+    iget-object p1, p0, Lzng;->d:Lcom/google/android/material/textfield/TextInputLayout;
+
+    iget-object p1, p1, Lcom/google/android/material/textfield/TextInputLayout;->c:Lal5;
+
+    invoke-virtual {p1}, Lal5;->b()Lbl5;
+
+    move-result-object p1
+
+    invoke-virtual {p1, p2}, Lbl5;->o(Landroid/view/accessibility/AccessibilityEvent;)V
+
     return-void
-.end method
-
-.method public final o(Z)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final p(Ljava/lang/CharSequence;)V
-    .locals 3
-
-    iget-object v0, p0, Lzng;->a:Leog;
-
-    iget-boolean v1, v0, Leog;->g:Z
-
-    if-nez v1, :cond_0
-
-    iget-object v1, v0, Leog;->a:Landroidx/appcompat/widget/Toolbar;
-
-    iput-object p1, v0, Leog;->h:Ljava/lang/CharSequence;
-
-    iget v2, v0, Leog;->b:I
-
-    and-int/lit8 v2, v2, 0x8
-
-    if-eqz v2, :cond_0
-
-    invoke-virtual {v1, p1}, Landroidx/appcompat/widget/Toolbar;->setTitle(Ljava/lang/CharSequence;)V
-
-    iget-boolean v0, v0, Leog;->g:Z
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v1}, Landroid/view/View;->getRootView()Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-static {v0, p1}, Lxsh;->o(Landroid/view/View;Ljava/lang/CharSequence;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final s()Landroid/view/Menu;
-    .locals 4
-
-    iget-boolean v0, p0, Lzng;->e:Z
-
-    iget-object v1, p0, Lzng;->a:Leog;
-
-    if-nez v0, :cond_1
-
-    new-instance v0, Lbu0;
-
-    invoke-direct {v0, p0}, Lbu0;-><init>(Ljava/lang/Object;)V
-
-    new-instance v2, Lu4e;
-
-    const/4 v3, 0x6
-
-    invoke-direct {v2, v3, p0}, Lu4e;-><init>(ILjava/lang/Object;)V
-
-    iget-object v3, v1, Leog;->a:Landroidx/appcompat/widget/Toolbar;
-
-    iput-object v0, v3, Landroidx/appcompat/widget/Toolbar;->b1:Lbu0;
-
-    iput-object v2, v3, Landroidx/appcompat/widget/Toolbar;->c1:Lu4e;
-
-    iget-object v3, v3, Landroidx/appcompat/widget/Toolbar;->a:Landroidx/appcompat/widget/ActionMenuView;
-
-    if-eqz v3, :cond_0
-
-    iput-object v0, v3, Landroidx/appcompat/widget/ActionMenuView;->t0:Lbu0;
-
-    iput-object v2, v3, Landroidx/appcompat/widget/ActionMenuView;->u0:Llj9;
-
-    :cond_0
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lzng;->e:Z
-
-    :cond_1
-    iget-object v0, v1, Leog;->a:Landroidx/appcompat/widget/Toolbar;
-
-    invoke-virtual {v0}, Landroidx/appcompat/widget/Toolbar;->getMenu()Landroid/view/Menu;
-
-    move-result-object v0
-
-    return-object v0
 .end method

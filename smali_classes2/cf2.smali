@@ -1,177 +1,152 @@
-.class public final Lcf2;
-.super Lp6g;
+.class public final synthetic Lcf2;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Lis6;
 
 
 # instance fields
-.field public final synthetic X:Lrf2;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Z
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic b:Lone/me/profile/screens/members/ChatAdminsScreen;
 
 
 # direct methods
-.method public constructor <init>(Lrf2;ZLkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lone/me/profile/screens/members/ChatAdminsScreen;I)V
     .locals 0
 
-    iput-object p1, p0, Lcf2;->X:Lrf2;
+    iput p2, p0, Lcf2;->a:I
 
-    iput-boolean p2, p0, Lcf2;->Y:Z
+    iput-object p1, p0, Lcf2;->b:Lone/me/profile/screens/members/ChatAdminsScreen;
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lzb4;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lcf2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lcf2;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lcf2;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
-
-    new-instance v0, Lcf2;
-
-    iget-object v1, p0, Lcf2;->X:Lrf2;
-
-    iget-boolean v2, p0, Lcf2;->Y:Z
-
-    invoke-direct {v0, v1, v2, p2}, Lcf2;-><init>(Lrf2;ZLkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lcf2;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final invoke()Ljava/lang/Object;
     .locals 13
 
-    iget-object v0, p0, Lcf2;->o:Ljava/lang/Object;
+    iget v0, p0, Lcf2;->a:I
 
-    check-cast v0, Lzb4;
+    iget-object v1, p0, Lcf2;->b:Lone/me/profile/screens/members/ChatAdminsScreen;
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    packed-switch v0, :pswitch_data_0
 
-    iget-object p1, p0, Lcf2;->X:Lrf2;
+    sget-object v0, Lone/me/profile/screens/members/ChatAdminsScreen;->u0:[Lv58;
 
-    invoke-virtual {p1}, Lrf2;->p()Lnd2;
+    new-instance v2, Lp6;
 
-    move-result-object v1
+    invoke-virtual {v1}, Lone/me/profile/screens/members/ChatAdminsScreen;->H0()Llf2;
 
-    sget-object v2, Lb3h;->a:Lb3h;
+    move-result-object v4
 
-    if-nez v1, :cond_0
+    const/4 v8, 0x0
 
-    return-object v2
+    const/4 v9, 0x4
 
-    :cond_0
-    iget-object v3, v1, Lnd2;->b:Luh2;
+    const/4 v3, 0x1
 
-    iget-wide v4, v3, Luh2;->a:J
+    const-class v5, Llf2;
 
-    const-wide/16 v6, 0x0
+    const-string v6, "getContextMenuActions"
 
-    cmp-long v4, v4, v6
+    const-string v7, "getContextMenuActions(J)Ljava/util/List;"
 
-    if-nez v4, :cond_1
+    invoke-direct/range {v2 .. v9}, Lp6;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    new-instance v3, Lxb1;
 
-    move-result-object v0
+    invoke-virtual {v1}, Lone/me/profile/screens/members/ChatAdminsScreen;->H0()Llf2;
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "Try update revokePrivateLink with charServerId == 0"
-
-    invoke-static {v0, v1}, Lc5j;->t(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object p1, p1, Lrf2;->r:Lo58;
-
-    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lwc4;
-
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "Try update revokePrivateLink with charServerId == 0. ChatChangeLink"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    const-string v1, "ONEME-18920"
-
-    invoke-virtual {p1, v1, v0}, Lwc4;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-object v2
-
-    :cond_1
-    iget-object v0, p1, Lrf2;->q:Lo58;
-
-    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v4, v0
-
-    check-cast v4, Lt2b;
-
-    iget-wide v5, v1, Lnd2;->a:J
-
-    iget-wide v7, v3, Luh2;->a:J
+    move-result-object v5
 
     const/4 v9, 0x0
 
-    const/4 v10, 0x0
+    const/16 v10, 0x8
 
-    const/4 v11, 0x1
+    const/4 v4, 0x0
 
-    const/4 v12, 0x0
+    const-class v6, Llf2;
 
-    invoke-virtual/range {v4 .. v12}, Lt2b;->f(JJILjava/lang/String;ZLjava/util/HashMap;)J
+    const-string v7, "getButtonActions"
 
-    move-result-wide v0
+    const-string v8, "getButtonActions()Lkotlinx/coroutines/flow/Flow;"
 
-    iget-boolean v3, p0, Lcf2;->Y:Z
+    invoke-direct/range {v3 .. v10}, Lxb1;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
 
-    if-eqz v3, :cond_2
+    new-instance v4, Lbf2;
 
-    iget-object p1, p1, Lrf2;->y:Ljava/util/concurrent/atomic/AtomicLong;
+    invoke-virtual {v1}, Lone/me/profile/screens/members/ChatAdminsScreen;->I0()J
 
-    invoke-virtual {p1, v0, v1}, Ljava/util/concurrent/atomic/AtomicLong;->set(J)V
+    move-result-wide v5
 
-    return-object v2
+    sget-object v0, Lwqc;->a:Lwqc;
 
-    :cond_2
-    iget-object p1, p1, Lrf2;->z:Ljava/util/concurrent/atomic/AtomicLong;
+    invoke-virtual {v0}, Lwqc;->b()Lj88;
 
-    invoke-virtual {p1, v0, v1}, Ljava/util/concurrent/atomic/AtomicLong;->set(J)V
+    move-result-object v7
 
-    return-object v2
+    invoke-virtual {v0}, Lwqc;->d()Lj88;
+
+    move-result-object v8
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v1
+
+    const/16 v9, 0xdf
+
+    invoke-virtual {v1, v9}, Lr5;->d(I)Lbgg;
+
+    move-result-object v9
+
+    invoke-virtual {v0}, Lwqc;->c()Lj88;
+
+    move-result-object v10
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v1
+
+    const/16 v11, 0xe0
+
+    invoke-virtual {v1, v11}, Lr5;->d(I)Lbgg;
+
+    move-result-object v11
+
+    invoke-virtual {v0}, Lwqc;->g()Lj88;
+
+    move-result-object v12
+
+    invoke-direct/range {v4 .. v12}, Lbf2;-><init>(JLj88;Lj88;Lj88;Lj88;Lj88;Lj88;)V
+
+    new-instance v0, Lcj9;
+
+    invoke-direct {v0, v2, v4, v3}, Lcj9;-><init>(Lks6;Lqt4;Lis6;)V
+
+    return-object v0
+
+    :pswitch_0
+    sget-object v0, Lone/me/profile/screens/members/ChatAdminsScreen;->u0:[Lv58;
+
+    new-instance v0, Llf2;
+
+    invoke-virtual {v1}, Lone/me/profile/screens/members/ChatAdminsScreen;->I0()J
+
+    move-result-wide v1
+
+    invoke-direct {v0, v1, v2}, Llf2;-><init>(J)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

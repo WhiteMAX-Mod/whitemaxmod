@@ -1,61 +1,117 @@
-.class public abstract Low3;
-.super Ljava/lang/Object;
+.class public final Low3;
+.super Lpdg;
 .source "SourceFile"
+
+# interfaces
+.implements Lys6;
+
+
+# instance fields
+.field public final synthetic X:Lys6;
+
+.field public final synthetic Y:Lyyd;
+
+.field public o:I
 
 
 # direct methods
-.method public static a()Z
-    .locals 4
+.method public constructor <init>(Lys6;Lyyd;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-static {}, Lorg/conscrypt/Conscrypt;->version()Lorg/conscrypt/Conscrypt$Version;
+    iput-object p1, p0, Low3;->X:Lys6;
 
-    move-result-object v0
+    iput-object p2, p0, Low3;->Y:Lyyd;
 
-    invoke-virtual {v0}, Lorg/conscrypt/Conscrypt$Version;->major()I
+    const/4 p1, 0x2
 
-    move-result v1
+    invoke-direct {p0, p1, p3}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    const/4 v2, 0x2
+    return-void
+.end method
 
-    const/4 v3, 0x1
 
-    if-eq v1, v2, :cond_0
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-virtual {v0}, Lorg/conscrypt/Conscrypt$Version;->major()I
+    check-cast p1, Lnd4;
 
-    move-result v0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    if-le v0, v2, :cond_2
+    invoke-virtual {p0, p1, p2}, Low3;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    goto :goto_0
+    move-result-object p1
+
+    check-cast p1, Low3;
+
+    sget-object p2, Lmah;->a:Lmah;
+
+    invoke-virtual {p1, p2}, Low3;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance p1, Low3;
+
+    iget-object v0, p0, Low3;->X:Lys6;
+
+    iget-object v1, p0, Low3;->Y:Lyyd;
+
+    invoke-direct {p1, v0, v1, p2}, Low3;-><init>(Lys6;Lyyd;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Low3;->o:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    return-object p1
 
     :cond_0
-    invoke-virtual {v0}, Lorg/conscrypt/Conscrypt$Version;->minor()I
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    move-result v1
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    if-eq v1, v3, :cond_1
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lorg/conscrypt/Conscrypt$Version;->minor()I
-
-    move-result v0
-
-    if-le v0, v3, :cond_2
-
-    goto :goto_0
+    throw p1
 
     :cond_1
-    invoke-virtual {v0}, Lorg/conscrypt/Conscrypt$Version;->patch()I
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    move-result v0
+    iget-object p1, p0, Low3;->Y:Lyyd;
 
-    if-ltz v0, :cond_2
+    iget-object p1, p1, Lyyd;->a:Ljava/lang/Object;
 
-    :goto_0
-    return v3
+    iput v1, p0, Low3;->o:I
+
+    iget-object v0, p0, Low3;->X:Lys6;
+
+    invoke-interface {v0, p1, p0}, Lys6;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lod4;->a:Lod4;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
 
     :cond_2
-    const/4 v0, 0x0
-
-    return v0
+    return-object p1
 .end method

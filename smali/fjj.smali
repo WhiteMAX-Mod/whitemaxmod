@@ -1,136 +1,60 @@
-.class public abstract Lfjj;
+.class public final Lfjj;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Loza;
+
+
+# static fields
+.field public static final a:Lfjj;
+
 
 # direct methods
-.method public static a(I)I
-    .locals 2
-
-    if-eqz p0, :cond_3
-
-    const/16 v0, 0x5a
-
-    if-eq p0, v0, :cond_2
-
-    const/16 v0, 0xb4
-
-    if-eq p0, v0, :cond_1
-
-    const/16 v0, 0x10e
-
-    if-ne p0, v0, :cond_0
-
-    const/4 p0, 0x3
-
-    return p0
-
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "Invalid rotation: "
-
-    invoke-static {p0, v1}, Lj27;->g(ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_1
-    const/4 p0, 0x2
-
-    return p0
-
-    :cond_2
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_3
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public static final b(I)I
-    .locals 2
-
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x1f
-
-    if-lt v0, v1, :cond_0
-
-    const/high16 v0, 0x4000000
-
-    and-int/2addr v0, p0
-
-    if-nez v0, :cond_0
-
-    const/high16 v0, 0x2000000
-
-    or-int/2addr p0, v0
-
-    :cond_0
-    return p0
-.end method
-
-.method public static c(Landroid/content/Intent;I)I
+.method static constructor <clinit>()V
     .locals 3
 
-    const/high16 v0, 0x2000000
+    new-instance v0, Lfjj;
 
-    and-int/2addr v0, p1
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz v0, :cond_0
+    sput-object v0, Lfjj;->a:Lfjj;
 
-    const/4 v0, 0x1
+    new-instance v0, Lp7j;
 
-    goto :goto_0
+    const/4 v1, 0x1
 
-    :cond_0
-    const/4 v0, 0x0
+    invoke-direct {v0, v1}, Lp7j;-><init>(I)V
 
-    :goto_0
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+    const-class v1, Lh8j;
 
-    const/16 v2, 0x22
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
 
-    if-lt v1, v2, :cond_3
+    move-result-object v0
 
-    invoke-virtual {p0}, Landroid/content/Intent;->getPackage()Ljava/lang/String;
+    const/4 v2, 0x2
 
-    move-result-object v1
+    invoke-static {v0, v2}, Leni;->i(Ljava/util/HashMap;I)Lp7j;
 
-    if-eqz v1, :cond_2
+    move-result-object v0
 
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
 
-    move-result v1
+    move-result-object v0
 
-    if-nez v1, :cond_1
+    invoke-static {v0}, Leni;->m(Ljava/util/HashMap;)V
 
-    goto :goto_1
+    return-void
+.end method
 
-    :cond_1
-    invoke-virtual {p0}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
-    move-result-object p0
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    if-nez p0, :cond_3
+    invoke-static {p1}, Lkb0;->d(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    :cond_2
-    :goto_1
-    if-eqz v0, :cond_3
+    move-result-object p1
 
-    const/high16 p0, 0x1000000
-
-    or-int/2addr p0, p1
-
-    return p0
-
-    :cond_3
-    return p1
+    throw p1
 .end method

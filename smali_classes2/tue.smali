@@ -2,147 +2,113 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lfr1;
-
 
 # instance fields
-.field public final a:Ljava/util/concurrent/CopyOnWriteArraySet;
+.field public final a:Ljava/util/LinkedHashMap;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Lrue;Lhx7;Lwq4;)V
+    .locals 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
+    iget-object p2, p2, Lhx7;->a:Lgd4;
 
-    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
+    sget-object v0, Lyqa;->a:Lyqa;
 
-    iput-object v0, p0, Ltue;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    invoke-virtual {p2, v0}, Lo0;->plus(Led4;)Led4;
+
+    new-instance v0, Ljava/util/LinkedHashMap;
+
+    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
+
+    iput-object v0, p0, Ltue;->a:Ljava/util/LinkedHashMap;
+
+    iget-object p1, p1, Lrue;->a:Lm8e;
+
+    const-string v0, "selected_mentions"
+
+    filled-new-array {v0}, [Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v1, Lvzd;
+
+    const/16 v2, 0xe
+
+    invoke-direct {v1, v2}, Lvzd;-><init>(I)V
+
+    invoke-static {p1, v0, v1}, Lomd;->a(Lm8e;[Ljava/lang/String;Lks6;)Lh71;
+
+    move-result-object p1
+
+    invoke-static {p1, p2}, Lzka;->v(Lb96;Led4;)Lb96;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lzka;->m(Lb96;)Lb96;
+
+    move-result-object p1
+
+    iget-object p2, p3, Lwq4;->a:Lgd4;
+
+    invoke-static {p1, p2}, Lzka;->v(Lb96;Led4;)Lb96;
+
+    move-result-object p1
+
+    new-instance p3, Lsue;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p3, p0, v0}, Lsue;-><init>(Ltue;Lkotlin/coroutines/Continuation;)V
+
+    new-instance v0, Llb6;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, p1, p3, v1}, Llb6;-><init>(Lb96;Lys6;I)V
+
+    invoke-static {p2}, Lztj;->a(Led4;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object p1
+
+    invoke-static {v0, p1}, Lzka;->w(Lb96;Lnd4;)Lcuf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onCurrentParticipantActiveRoomChanged(Lbr1;)V
-    .locals 2
+.method public final a(J)I
+    .locals 1
 
-    iget-object v0, p0, Ltue;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    iget-object v0, p0, Ltue;->a:Ljava/util/LinkedHashMap;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object v0
+    move-result-object p1
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-virtual {v0, p1}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result v1
+    move-result-object p1
 
-    if-eqz v1, :cond_0
+    check-cast p1, Lque;
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    if-eqz p1, :cond_1
 
-    move-result-object v1
+    iget p1, p1, Lque;->b:I
 
-    check-cast v1, Lfr1;
-
-    invoke-interface {v1, p1}, Lfr1;->onCurrentParticipantActiveRoomChanged(Lbr1;)V
+    if-nez p1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    return-void
-.end method
+    return p1
 
-.method public final onCurrentParticipantInvitedToRoom(Lcr1;)V
-    .locals 2
-
-    iget-object v0, p0, Ltue;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
+    :cond_1
     :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    const/4 p1, 0x1
 
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lfr1;
-
-    invoke-interface {v1, p1}, Lfr1;->onCurrentParticipantInvitedToRoom(Lcr1;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final onRoomRemoved(Ldr1;)V
-    .locals 2
-
-    iget-object v0, p0, Ltue;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lfr1;
-
-    invoke-interface {v1, p1}, Lfr1;->onRoomRemoved(Ldr1;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final onRoomUpdated(Ler1;)V
-    .locals 2
-
-    iget-object v0, p0, Ltue;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lfr1;
-
-    invoke-interface {v1, p1}, Lfr1;->onRoomUpdated(Ler1;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
+    return p1
 .end method

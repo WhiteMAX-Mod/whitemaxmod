@@ -2,26 +2,25 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ll6h;
+
 
 # instance fields
-.field public final a:Lmue;
+.field public final a:Ljava/lang/String;
 
-.field public final b:Ljava/util/Collection;
-
-.field public final c:Ljava/util/Collection;
+.field public final b:Lmu7;
 
 
 # direct methods
-.method public constructor <init>(Lmue;Ljava/util/Collection;Ljava/util/Collection;)V
+.method public constructor <init>(Ljava/lang/String;Lmu7;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lh6h;->a:Lmue;
+    iput-object p1, p0, Lh6h;->a:Ljava/lang/String;
 
-    iput-object p2, p0, Lh6h;->b:Ljava/util/Collection;
-
-    iput-object p3, p0, Lh6h;->c:Ljava/util/Collection;
+    iput-object p2, p0, Lh6h;->b:Lmu7;
 
     return-void
 .end method

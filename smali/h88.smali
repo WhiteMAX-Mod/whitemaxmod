@@ -2,72 +2,84 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lj88;
-.implements Landroid/view/View$OnAttachStateChangeListener;
-
 
 # instance fields
-.field public a:Ll88;
+.field public a:Z
+
+.field public b:I
+
+.field public c:I
+
+.field public d:I
+
+.field public e:I
+
+.field public f:I
+
+.field public g:I
+
+.field public h:Z
+
+.field public i:Z
 
 
 # virtual methods
-.method public final onViewAttachedToWindow(Landroid/view/View;)V
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    iget-object p1, p0, Lh88;->a:Ll88;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object p1, p1, Ll88;->d:Lo78;
+    const-string v1, "LayoutState{mAvailable="
 
-    sget-object v0, Lo78;->a:Lo78;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    if-ne p1, v0, :cond_0
+    iget v1, p0, Lh88;->b:I
 
-    new-instance p1, Ll88;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-direct {p1, p0}, Ll88;-><init>(Lj88;)V
+    const-string v1, ", mCurrentPosition="
 
-    iput-object p1, p0, Lh88;->a:Ll88;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_0
-    iget-object p1, p0, Lh88;->a:Ll88;
+    iget v1, p0, Lh88;->c:I
 
-    sget-object v0, Ln78;->ON_START:Ln78;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, v0}, Ll88;->d(Ln78;)V
+    const-string v1, ", mItemDirection="
 
-    return-void
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public final onViewDetachedFromWindow(Landroid/view/View;)V
-    .locals 1
+    iget v1, p0, Lh88;->d:I
 
-    iget-object p1, p0, Lh88;->a:Ll88;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    iget-object p1, p1, Ll88;->d:Lo78;
+    const-string v1, ", mLayoutDirection="
 
-    sget-object v0, Lo78;->c:Lo78;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, v0}, Lo78;->a(Lo78;)Z
+    iget v1, p0, Lh88;->e:I
 
-    move-result p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    if-eqz p1, :cond_0
+    const-string v1, ", mStartLine="
 
-    iget-object p1, p0, Lh88;->a:Ll88;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object v0, Ln78;->ON_DESTROY:Ln78;
+    iget v1, p0, Lh88;->f:I
 
-    invoke-virtual {p1, v0}, Ll88;->d(Ln78;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    :cond_0
-    return-void
-.end method
+    const-string v1, ", mEndLine="
 
-.method public final p()Ll88;
-    .locals 1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lh88;->a:Ll88;
+    iget v1, p0, Lh88;->g:I
+
+    const/16 v2, 0x7d
+
+    invoke-static {v0, v1, v2}, Lkb0;->k(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

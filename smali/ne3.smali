@@ -1,50 +1,46 @@
 .class public final Lne3;
-.super Landroid/animation/AnimatorListenerAdapter;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Loe3;
+.field public final a:Ljava/util/LinkedHashMap;
 
 
 # direct methods
-.method public synthetic constructor <init>(Loe3;I)V
-    .locals 0
+.method public constructor <init>(I)V
+    .locals 3
 
-    iput p2, p0, Lne3;->a:I
+    packed-switch p1, :pswitch_data_0
 
-    iput-object p1, p0, Lne3;->b:Loe3;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+    new-instance p1, Ljava/util/LinkedHashMap;
 
-    return-void
-.end method
+    invoke-direct {p1}, Ljava/util/LinkedHashMap;-><init>()V
 
-
-# virtual methods
-.method public onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 1
-
-    iget v0, p0, Lne3;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationEnd(Landroid/animation/Animator;)V
+    iput-object p1, p0, Lne3;->a:Ljava/util/LinkedHashMap;
 
     return-void
 
     :pswitch_0
-    iget-object p1, p0, Lne3;->b:Loe3;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object p1, p1, Lnj5;->b:Lmj5;
+    new-instance p1, Ljava/util/LinkedHashMap;
 
-    const/4 v0, 0x0
+    const/4 v0, 0x1
 
-    invoke-virtual {p1, v0}, Lmj5;->h(Z)V
+    const/4 v1, 0x0
+
+    const/high16 v2, 0x3f400000    # 0.75f
+
+    invoke-direct {p1, v1, v2, v0}, Ljava/util/LinkedHashMap;-><init>(IFZ)V
+
+    iput-object p1, p0, Lne3;->a:Ljava/util/LinkedHashMap;
 
     return-void
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x1
@@ -52,30 +48,43 @@
     .end packed-switch
 .end method
 
-.method public onAnimationStart(Landroid/animation/Animator;)V
-    .locals 1
 
-    iget v0, p0, Lne3;->a:I
+# virtual methods
+.method public a(Lme3;)V
+    .locals 5
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v0, p1, Lme3;->o:[J
 
-    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationStart(Landroid/animation/Animator;)V
+    array-length v1, v0
 
+    if-lez v1, :cond_0
+
+    const/4 v1, 0x0
+
+    aget-wide v2, v0, v1
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    iget-object v2, p0, Lne3;->a:Ljava/util/LinkedHashMap;
+
+    invoke-interface {v2, v0}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p1, Lme3;->o:[J
+
+    aget-wide v3, v0, v1
+
+    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    invoke-interface {v2, v0, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_0
     return-void
-
-    :pswitch_0
-    iget-object p1, p0, Lne3;->b:Loe3;
-
-    iget-object p1, p1, Lnj5;->b:Lmj5;
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p1, v0}, Lmj5;->h(Z)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

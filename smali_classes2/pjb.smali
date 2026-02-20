@@ -2,21 +2,18 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/os/Parcelable;
 
-
-# instance fields
-.field public final a:J
+# static fields
+.field public static final a:I
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lgfd;->retained_adapter_state:I
 
-    iput-wide p1, p0, Lpjb;->a:J
+    sput v0, Lpjb;->a:I
 
     return-void
 .end method

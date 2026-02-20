@@ -1,43 +1,56 @@
-.class public abstract synthetic Lya3;
+.class public final Lya3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lmg8;
+
 
 # static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+.field public static final a:Lya3;
+
+.field public static final b:I
+
+.field public static final c:J
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 2
 
-    const/4 v0, 0x2
+    new-instance v0, Lya3;
 
-    invoke-static {v0}, Lt02;->w(I)[I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v1
+    sput-object v0, Lya3;->a:Lya3;
 
-    array-length v1, v1
+    sget v0, Lsdd;->oneme_chat_list_loading_view_type:I
 
-    new-array v1, v1, [I
+    sput v0, Lya3;->b:I
 
-    const/4 v2, 0x1
+    sget v0, Lsdd;->oneme_chat_list_loading_id:I
 
-    const/4 v3, 0x0
+    int-to-long v0, v0
 
-    :try_start_0
-    aput v2, v1, v3
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    :try_start_1
-    aput v0, v1, v2
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
-    sput-object v1, Lya3;->$EnumSwitchMapping$0:[I
+    sput-wide v0, Lya3;->c:J
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final getItemId()J
+    .locals 2
+
+    sget-wide v0, Lya3;->c:J
+
+    return-wide v0
+.end method
+
+.method public final m()I
+    .locals 1
+
+    sget v0, Lya3;->b:I
+
+    return v0
 .end method

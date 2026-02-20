@@ -1,234 +1,76 @@
-.class public abstract Lyj0;
-.super Ljava/lang/Object;
+.class public final Lyj0;
+.super Lpdg;
 .source "SourceFile"
 
 # interfaces
-.implements Lhg3;
-
-
-# static fields
-.field public static final c:Ljava/util/HashSet;
+.implements Lys6;
 
 
 # instance fields
-.field public final a:Ljava/util/HashMap;
-
-.field public b:Lcom/facebook/imagepipeline/image/ImageInfoImpl;
+.field public final synthetic o:Lzj0;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 12
+.method public constructor <init>(Lzj0;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Ljava/util/HashSet;
+    iput-object p1, p0, Lyj0;->o:Lzj0;
 
-    const-string v10, "modified_url"
+    const/4 p1, 0x2
 
-    const-string v11, "image_color_space"
-
-    const-string v1, "encoded_size"
-
-    const-string v2, "encoded_width"
-
-    const-string v3, "encoded_height"
-
-    const-string v4, "uri_source"
-
-    const-string v5, "image_format"
-
-    const-string v6, "bitmap_config"
-
-    const-string v7, "is_rounded"
-
-    const-string v8, "non_fatal_decode_error"
-
-    const-string v9, "original_url"
-
-    filled-new-array/range {v1 .. v11}, [Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
-
-    sput-object v0, Lyj0;->c:Ljava/util/HashSet;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v0, p0, Lyj0;->a:Ljava/util/HashMap;
+    invoke-direct {p0, p1, p2}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getExtra(Ljava/lang/String;)Ljava/lang/Object;
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x0
+    check-cast p1, Ld96;
 
-    .line 1
-    invoke-virtual {p0, p1, v0}, Lyj0;->getExtra(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final getExtra(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    .line 2
-    iget-object v0, p0, Lyj0;->a:Ljava/util/HashMap;
-
-    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p0, p1, p2}, Lyj0;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    if-nez p1, :cond_0
+    check-cast p1, Lyj0;
+
+    sget-object p2, Lmah;->a:Lmah;
+
+    invoke-virtual {p1, p2}, Lyj0;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-object p2
+.end method
 
-    :cond_0
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Lyj0;
+
+    iget-object v0, p0, Lyj0;->o:Lzj0;
+
+    invoke-direct {p1, v0, p2}, Lyj0;-><init>(Lzj0;Lkotlin/coroutines/Continuation;)V
+
     return-object p1
 .end method
 
-.method public final getExtras()Ljava/util/Map;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Lyj0;->a:Ljava/util/HashMap;
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    return-object v0
-.end method
+    iget-object p1, p0, Lyj0;->o:Lzj0;
 
-.method public final getImageInfo()Lai7;
-    .locals 7
+    iget-object v0, p1, Lzj0;->a:Landroid/app/Application;
 
-    iget-object v0, p0, Lyj0;->b:Lcom/facebook/imagepipeline/image/ImageInfoImpl;
+    iget-object p1, p1, Lzj0;->f:Lrj0;
 
-    if-nez v0, :cond_0
+    invoke-virtual {v0, p1}, Landroid/app/Application;->registerActivityLifecycleCallbacks(Landroid/app/Application$ActivityLifecycleCallbacks;)V
 
-    new-instance v1, Lcom/facebook/imagepipeline/image/ImageInfoImpl;
+    sget-object p1, Lmah;->a:Lmah;
 
-    invoke-interface {p0}, Lhg3;->getWidth()I
-
-    move-result v2
-
-    invoke-interface {p0}, Lhg3;->getHeight()I
-
-    move-result v3
-
-    invoke-interface {p0}, Lhg3;->getSizeInBytes()I
-
-    move-result v4
-
-    invoke-virtual {p0}, Lyj0;->getQualityInfo()Ll2d;
-
-    move-result-object v5
-
-    iget-object v6, p0, Lyj0;->a:Ljava/util/HashMap;
-
-    invoke-direct/range {v1 .. v6}, Lcom/facebook/imagepipeline/image/ImageInfoImpl;-><init>(IIILl2d;Ljava/util/Map;)V
-
-    iput-object v1, p0, Lyj0;->b:Lcom/facebook/imagepipeline/image/ImageInfoImpl;
-
-    :cond_0
-    iget-object v0, p0, Lyj0;->b:Lcom/facebook/imagepipeline/image/ImageInfoImpl;
-
-    return-object v0
-.end method
-
-.method public getQualityInfo()Ll2d;
-    .locals 1
-
-    sget-object v0, Lqk7;->d:Lqk7;
-
-    return-object v0
-.end method
-
-.method public isStateful()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final putExtra(Ljava/lang/String;Ljava/lang/Object;)V
-    .locals 1
-
-    sget-object v0, Lyj0;->c:Ljava/util/HashSet;
-
-    invoke-virtual {v0, p1}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lyj0;->a:Ljava/util/HashMap;
-
-    invoke-virtual {v0, p1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_0
-    return-void
-.end method
-
-.method public final putExtras(Ljava/util/Map;)V
-    .locals 4
-
-    if-nez p1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    sget-object v0, Lyj0;->c:Ljava/util/HashSet;
-
-    invoke-virtual {v0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/String;
-
-    invoke-interface {p1, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    if-nez v2, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    iget-object v3, p0, Lyj0;->a:Ljava/util/HashMap;
-
-    invoke-virtual {v3, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    goto :goto_0
-
-    :cond_2
-    :goto_1
-    return-void
+    return-object p1
 .end method

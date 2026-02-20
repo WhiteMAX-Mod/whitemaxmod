@@ -1,5 +1,5 @@
 .class public final Lm2;
-.super Love;
+.super Lw2f;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
     const/4 p1, 0x0
 
-    invoke-direct {p0, p1}, Love;-><init>(I)V
+    invoke-direct {p0, p1}, Lw2f;-><init>(I)V
 
     return-void
 .end method
@@ -109,13 +109,13 @@
 
     iget-object v0, v0, Lo2;->o:Ljava/io/Serializable;
 
-    check-cast v0, Lg2;
+    check-cast v0, Li2;
 
     invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object p1
 
-    iget-object v1, v0, Lg2;->d:Ljava/util/Map;
+    iget-object v1, v0, Li2;->d:Ljava/util/Map;
 
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -143,11 +143,11 @@
 
     invoke-interface {p1}, Ljava/util/Collection;->clear()V
 
-    iget p1, v0, Lg2;->o:I
+    iget p1, v0, Li2;->o:I
 
     sub-int/2addr p1, v1
 
-    iput p1, v0, Lg2;->o:I
+    iput p1, v0, Li2;->o:I
 
     :cond_1
     const/4 p1, 0x1
@@ -161,7 +161,7 @@
     :try_start_0
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-super {p0, p1}, Love;->removeAll(Ljava/util/Collection;)Z
+    invoke-super {p0, p1}, Lw2f;->removeAll(Ljava/util/Collection;)Z
 
     move-result p1
     :try_end_0
@@ -205,7 +205,7 @@
     :try_start_0
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-super {p0, p1}, Love;->retainAll(Ljava/util/Collection;)Z
+    invoke-super {p0, p1}, Lw2f;->retainAll(Ljava/util/Collection;)Z
 
     move-result p1
     :try_end_0
@@ -220,7 +220,7 @@
 
     new-instance v1, Ljava/util/HashSet;
 
-    invoke-static {v0}, Lt6j;->a(I)I
+    invoke-static {v0}, Lwgj;->a(I)I
 
     move-result v0
 

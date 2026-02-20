@@ -1,53 +1,43 @@
 .class public final Llne;
-.super Ltsd;
+.super Landroid/widget/FrameLayout;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic L0:I
-
-
-# instance fields
-.field public final F0:Lfy8;
-
-.field public final G0:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
-
-.field public final H0:Landroidx/appcompat/widget/AppCompatImageView;
-
-.field public I0:Line;
-
-.field public J0:Landroid/net/Uri;
-
-.field public K0:Landroid/net/Uri;
+# interfaces
+.implements Ljqg;
 
 
-# direct methods
-.method public constructor <init>(Lfy8;Lone/me/sdk/uikit/common/views/OneMeDraweeView;Landroidx/appcompat/widget/AppCompatImageView;Landroidx/appcompat/widget/AppCompatImageView;Landroid/widget/FrameLayout;)V
-    .locals 0
+# virtual methods
+.method public final onThemeChanged(Llob;)V
+    .locals 2
 
-    invoke-direct {p0, p5}, Ltsd;-><init>(Landroid/view/View;)V
+    const/4 v0, 0x0
 
-    iput-object p1, p0, Llne;->F0:Lfy8;
+    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
-    iput-object p2, p0, Llne;->G0:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+    move-result-object v0
 
-    iput-object p4, p0, Llne;->H0:Landroidx/appcompat/widget/AppCompatImageView;
+    instance-of v1, v0, Landroid/widget/ProgressBar;
 
-    new-instance p1, Lkne;
+    if-eqz v1, :cond_0
 
-    const/4 p4, 0x0
+    check-cast v0, Landroid/widget/ProgressBar;
 
-    invoke-direct {p1, p0, p4}, Lkne;-><init>(Llne;I)V
+    goto :goto_0
 
-    invoke-static {p2, p1}, Ljmj;->d(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+    :cond_0
+    const/4 v0, 0x0
 
-    new-instance p1, Lkne;
+    :goto_0
+    if-eqz v0, :cond_1
 
-    const/4 p2, 0x1
+    invoke-interface {p1}, Llob;->getIcon()Lhob;
 
-    invoke-direct {p1, p0, p2}, Lkne;-><init>(Llne;I)V
+    move-result-object p1
 
-    invoke-static {p3, p1}, Ljmj;->d(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+    iget p1, p1, Lhob;->c:I
 
+    invoke-static {v0, p1}, Lu1j;->e(Landroid/widget/ProgressBar;I)V
+
+    :cond_1
     return-void
 .end method

@@ -1,102 +1,53 @@
 .class public final Llyh;
-.super Luc2;
+.super Landroid/view/TextureView;
 .source "SourceFile"
 
 
 # instance fields
-.field public final c:J
+.field public final synthetic a:Lnyh;
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 2
+.method public constructor <init>(Lnyh;Landroid/content/Context;)V
+    .locals 0
 
-    const/4 v0, 0x3
+    iput-object p1, p0, Llyh;->a:Lnyh;
 
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    invoke-direct {p0, v1, v0}, Luc2;-><init>(Ljava/lang/Long;I)V
-
-    iput-wide p1, p0, Llyh;->c:J
+    invoke-direct {p0, p2}, Landroid/view/TextureView;-><init>(Landroid/content/Context;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Long;
-    .locals 2
+.method public final onDetachedFromWindow()V
+    .locals 3
 
-    iget-wide v0, p0, Llyh;->c:J
+    invoke-super {p0}, Landroid/view/View;->onDetachedFromWindow()V
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    iget-object v0, p0, Llyh;->a:Lnyh;
 
-    move-result-object v0
+    iget-object v1, v0, Lnyh;->t0:Lrnh;
 
-    return-object v0
-.end method
+    if-eqz v1, :cond_0
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Llyh;
+    iget-object v1, v1, Lrnh;->a:Lqnh;
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    invoke-virtual {v1, v2}, Lqnh;->setPlayer(Lvqb;)V
 
-    return v2
+    :cond_0
+    iget-object v0, v0, Lnyh;->u0:Lgyh;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p0}, Landroid/view/TextureView;->getSurfaceTexture()Landroid/graphics/SurfaceTexture;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Lgyh;->onSurfaceTextureDestroyed(Landroid/graphics/SurfaceTexture;)V
 
     :cond_1
-    check-cast p1, Llyh;
-
-    iget-wide v3, p0, Llyh;->c:J
-
-    iget-wide v5, p1, Llyh;->c:J
-
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Llyh;->c:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    const-string v0, "ChatId(sourceId="
-
-    const-string v1, ")"
-
-    iget-wide v2, p0, Llyh;->c:J
-
-    invoke-static {v2, v3, v0, v1}, Lcbh;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

@@ -1,128 +1,93 @@
-.class public abstract Ld5d;
+.class public final Ld5d;
 .super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lru/ok/android/externcalls/sdk/audio/ProximityTracker;
 
 
-# static fields
-.field public static adjustable:I = 0x7f040030
+# instance fields
+.field public final a:Lj88;
 
-.field public static allowDividerAbove:I = 0x7f040038
 
-.field public static allowDividerAfterLastItem:I = 0x7f040039
+# direct methods
+.method public constructor <init>(Lj88;)V
+    .locals 0
 
-.field public static allowDividerBelow:I = 0x7f04003a
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static checkBoxPreferenceStyle:I = 0x7f040269
+    iput-object p1, p0, Ld5d;->a:Lj88;
 
-.field public static defaultValue:I = 0x7f04033d
+    return-void
+.end method
 
-.field public static dependency:I = 0x7f040341
 
-.field public static dialogIcon:I = 0x7f040344
+# virtual methods
+.method public final getCanUseSpeaker()Z
+    .locals 1
 
-.field public static dialogLayout:I = 0x7f040345
+    iget-object v0, p0, Ld5d;->a:Lj88;
 
-.field public static dialogMessage:I = 0x7f040346
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
 
-.field public static dialogPreferenceStyle:I = 0x7f040347
+    move-result-object v0
 
-.field public static dialogTitle:I = 0x7f04034a
+    check-cast v0, Lc5d;
 
-.field public static disableDependentsState:I = 0x7f04034b
+    iget-object v0, v0, Lc5d;->f:Landroid/os/PowerManager$WakeLock;
 
-.field public static dropdownPreferenceStyle:I = 0x7f04036b
+    if-eqz v0, :cond_0
 
-.field public static editTextPreferenceStyle:I = 0x7f040370
+    iget-object v0, p0, Ld5d;->a:Lj88;
 
-.field public static enableCopying:I = 0x7f040378
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
 
-.field public static enabled:I = 0x7f04037a
+    move-result-object v0
 
-.field public static entries:I = 0x7f040386
+    check-cast v0, Lc5d;
 
-.field public static entryValues:I = 0x7f040387
+    iget-boolean v0, v0, Lc5d;->e:Z
 
-.field public static fragment:I = 0x7f0403f3
+    if-nez v0, :cond_0
 
-.field public static icon:I = 0x7f040542
+    const/4 v0, 0x1
 
-.field public static iconSpaceReserved:I = 0x7f040547
+    return v0
 
-.field public static initialExpandedChildrenCount:I = 0x7f04055f
+    :cond_0
+    const/4 v0, 0x0
 
-.field public static isPreferenceVisible:I = 0x7f040565
+    return v0
+.end method
 
-.field public static key:I = 0x7f040587
+.method public final startTrackingProximity()V
+    .locals 1
 
-.field public static layout:I = 0x7f040596
+    iget-object v0, p0, Ld5d;->a:Lj88;
 
-.field public static maxHeight:I = 0x7f04064a
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
 
-.field public static maxWidth:I = 0x7f040650
+    move-result-object v0
 
-.field public static min:I = 0x7f040666
+    check-cast v0, Lc5d;
 
-.field public static negativeButtonText:I = 0x7f0406ae
+    invoke-virtual {v0}, Lc5d;->a()V
 
-.field public static order:I = 0x7f0406bd
+    return-void
+.end method
 
-.field public static orderingFromXml:I = 0x7f0406be
+.method public final stopTrackingProximity()V
+    .locals 1
 
-.field public static persistent:I = 0x7f0406dd
+    iget-object v0, p0, Ld5d;->a:Lj88;
 
-.field public static positiveButtonText:I = 0x7f0406ef
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
 
-.field public static preferenceCategoryStyle:I = 0x7f0406f1
+    move-result-object v0
 
-.field public static preferenceCategoryTitleTextAppearance:I = 0x7f0406f2
+    check-cast v0, Lc5d;
 
-.field public static preferenceCategoryTitleTextColor:I = 0x7f0406f3
+    invoke-virtual {v0}, Lc5d;->b()V
 
-.field public static preferenceFragmentCompatStyle:I = 0x7f0406f4
-
-.field public static preferenceFragmentListStyle:I = 0x7f0406f5
-
-.field public static preferenceFragmentStyle:I = 0x7f0406f6
-
-.field public static preferenceInformationStyle:I = 0x7f0406f7
-
-.field public static preferenceScreenStyle:I = 0x7f0406f8
-
-.field public static preferenceStyle:I = 0x7f0406f9
-
-.field public static preferenceTheme:I = 0x7f0406fa
-
-.field public static seekBarIncrement:I = 0x7f040749
-
-.field public static seekBarPreferenceStyle:I = 0x7f04074a
-
-.field public static selectable:I = 0x7f04074c
-
-.field public static selectableItemBackground:I = 0x7f04074d
-
-.field public static shouldDisableView:I = 0x7f04075f
-
-.field public static showSeekBarValue:I = 0x7f04076b
-
-.field public static singleLineTitle:I = 0x7f040781
-
-.field public static summary:I = 0x7f0407fe
-
-.field public static summaryOff:I = 0x7f0407ff
-
-.field public static summaryOn:I = 0x7f040800
-
-.field public static switchPreferenceCompatStyle:I = 0x7f040804
-
-.field public static switchPreferenceStyle:I = 0x7f040805
-
-.field public static switchTextOff:I = 0x7f040808
-
-.field public static switchTextOn:I = 0x7f040809
-
-.field public static title:I = 0x7f04088b
-
-.field public static updatesContinuously:I = 0x7f0408ce
-
-.field public static useSimpleSummaryProvider:I = 0x7f0408d3
-
-.field public static widgetLayout:I = 0x7f0408ea
+    return-void
+.end method

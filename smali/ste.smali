@@ -1,29 +1,49 @@
-.class public interface abstract Lste;
-.super Ljava/lang/Object;
+.class public final Lste;
+.super Lda4;
 .source "SourceFile"
 
 
+# instance fields
+.field public final synthetic X:Ltte;
+
+.field public Y:I
+
+.field public d:Ltte;
+
+.field public synthetic o:Ljava/lang/Object;
+
+
+# direct methods
+.method public constructor <init>(Ltte;Lda4;)V
+    .locals 0
+
+    iput-object p1, p0, Lste;->X:Ltte;
+
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public abstract a()Ljava/lang/Object;
-.end method
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-.method public abstract b()Lbq7;
-.end method
+    iput-object p1, p0, Lste;->o:Ljava/lang/Object;
 
-.method public abstract c()Ljava/util/concurrent/Executor;
-.end method
+    iget p1, p0, Lste;->Y:I
 
-.method public abstract d()I
-.end method
+    const/high16 v0, -0x80000000
 
-.method public abstract e()Landroid/hardware/camera2/CameraCaptureSession$StateCallback;
-.end method
+    or-int/2addr p1, v0
 
-.method public abstract f()Ljava/util/List;
-.end method
+    iput p1, p0, Lste;->Y:I
 
-.method public abstract g(Landroid/hardware/camera2/CaptureRequest;)V
-.end method
+    iget-object p1, p0, Lste;->X:Ltte;
 
-.method public abstract h(Lbq7;)V
+    invoke-virtual {p1, p0}, Ltte;->d(Lda4;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

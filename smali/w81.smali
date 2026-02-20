@@ -1,23 +1,98 @@
-.class public interface abstract Lw81;
+.class public final Lw81;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lco4;
+
+
+# instance fields
+.field public final synthetic a:J
+
+.field public final synthetic b:Ljava/lang/String;
+
+.field public final synthetic c:Ljava/lang/String;
+
+.field public final synthetic d:Z
+
+
+# direct methods
+.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;Z)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Lw81;->a:J
+
+    iput-object p3, p0, Lw81;->b:Ljava/lang/String;
+
+    iput-object p4, p0, Lw81;->c:Ljava/lang/String;
+
+    iput-boolean p5, p0, Lw81;->d:Z
+
+    return-void
+.end method
+
 
 # virtual methods
-.method public abstract a()I
-.end method
+.method public final a()Ljava/lang/Object;
+    .locals 7
 
-.method public abstract b()Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
-.end method
+    sget-object v0, Lone/me/calls/ui/ui/incoming/CallIncomingScreen;->s0:Lmqa;
 
-.method public abstract getContentDescription()Lqhg;
-.end method
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-.method public abstract getIcon()I
-.end method
+    new-instance v0, Lone/me/calls/ui/ui/incoming/CallIncomingScreen;
 
-.method public abstract getId()I
-.end method
+    new-instance v1, Lyvb;
 
-.method public abstract getTitle()Lqhg;
+    const-string v2, "call_incoming_avatar"
+
+    iget-object v3, p0, Lw81;->c:Ljava/lang/String;
+
+    invoke-direct {v1, v2, v3}, Lyvb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    new-instance v2, Lyvb;
+
+    const-string v3, "call_incoming_name"
+
+    iget-object v4, p0, Lw81;->b:Ljava/lang/String;
+
+    invoke-direct {v2, v3, v4}, Lyvb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    iget-wide v3, p0, Lw81;->a:J
+
+    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v3
+
+    new-instance v4, Lyvb;
+
+    const-string v5, "call_incoming_chat_id"
+
+    invoke-direct {v4, v5, v3}, Lyvb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    iget-boolean v3, p0, Lw81;->d:Z
+
+    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v3
+
+    new-instance v5, Lyvb;
+
+    const-string v6, "call_incoming_video"
+
+    invoke-direct {v5, v6, v3}, Lyvb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    filled-new-array {v1, v2, v4, v5}, [Lyvb;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lejj;->c([Lyvb;)Landroid/os/Bundle;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lone/me/calls/ui/ui/incoming/CallIncomingScreen;-><init>(Landroid/os/Bundle;)V
+
+    return-object v0
 .end method

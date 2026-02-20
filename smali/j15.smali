@@ -1,86 +1,92 @@
 .class public final Lj15;
-.super Ljava/lang/Object;
+.super Lr8h;
 .source "SourceFile"
-
-# interfaces
-.implements Li4g;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic a:Lgo6;
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final synthetic b:Landroidx/fragment/app/DialogFragment;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method public constructor <init>(Landroidx/fragment/app/DialogFragment;Lgo6;)V
     .locals 0
 
-    iput p1, p0, Lj15;->a:I
-
-    iput-object p2, p0, Lj15;->b:Ljava/lang/Object;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lj15;->b:Landroidx/fragment/app/DialogFragment;
+
+    iput-object p2, p0, Lj15;->a:Lgo6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final get()Ljava/lang/Object;
+.method public final o(I)Landroid/view/View;
     .locals 2
 
-    iget v0, p0, Lj15;->a:I
+    iget-object v0, p0, Lj15;->a:Lgo6;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {v0}, Lgo6;->q()Z
 
-    iget-object v0, p0, Lj15;->b:Ljava/lang/Object;
+    move-result v1
 
-    return-object v0
+    if-eqz v1, :cond_0
 
-    :pswitch_0
-    iget-object v0, p0, Lj15;->b:Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Lgo6;->o(I)Landroid/view/View;
 
-    check-cast v0, Lo58;
+    move-result-object p1
 
-    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+    return-object p1
 
-    move-result-object v0
+    :cond_0
+    iget-object v0, p0, Lj15;->b:Landroidx/fragment/app/DialogFragment;
 
-    check-cast v0, Lm36;
+    iget-object v0, v0, Landroidx/fragment/app/DialogFragment;->s1:Landroid/app/Dialog;
 
-    invoke-virtual {v0}, Lm36;->k()Ljava/io/File;
+    if-eqz v0, :cond_1
 
-    move-result-object v0
+    invoke-virtual {v0, p1}, Landroid/app/Dialog;->findViewById(I)Landroid/view/View;
 
-    return-object v0
+    move-result-object p1
 
-    :pswitch_1
-    iget-object v0, p0, Lj15;->b:Ljava/lang/Object;
+    return-object p1
 
-    check-cast v0, Ll15;
+    :cond_1
+    const/4 p1, 0x0
 
-    iget-object v1, v0, Ll15;->j:Landroid/content/Context;
+    return-object p1
+.end method
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+.method public final q()Z
+    .locals 1
 
-    iget-object v0, v0, Ll15;->j:Landroid/content/Context;
+    iget-object v0, p0, Lj15;->a:Lgo6;
 
-    invoke-virtual {v0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {v0}, Lgo6;->q()Z
 
-    move-result-object v0
+    move-result v0
 
-    invoke-virtual {v0}, Landroid/content/Context;->getCacheDir()Ljava/io/File;
+    if-nez v0, :cond_1
 
-    move-result-object v0
+    iget-object v0, p0, Lj15;->b:Landroidx/fragment/app/DialogFragment;
 
-    return-object v0
+    iget-boolean v0, v0, Landroidx/fragment/app/DialogFragment;->w1:Z
 
-    nop
+    if-eqz v0, :cond_0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+
+    :cond_1
+    :goto_0
+    const/4 v0, 0x1
+
+    return v0
 .end method

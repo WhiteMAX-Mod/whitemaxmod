@@ -1,325 +1,259 @@
-.class public final synthetic Ls26;
+.class public final Ls26;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Llq6;
+
+# static fields
+.field public static final synthetic f:[Lv58;
+
+.field public static final g:Ljava/lang/String;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Landroid/content/Context;
 
-.field public final synthetic b:Ld36;
+.field public final b:Lt45;
+
+.field public final c:Lt45;
+
+.field public final d:Lt45;
+
+.field public final e:Lbgg;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ld36;I)V
+.method static constructor <clinit>()V
+    .locals 8
+
+    new-instance v0, Lv3d;
+
+    const-class v1, Ls26;
+
+    const-string v2, "fileSystem"
+
+    const-string v3, "getFileSystem()Lru/ok/tamtam/FileSystem;"
+
+    const/4 v4, 0x0
+
+    invoke-direct {v0, v1, v2, v3, v4}, Lv3d;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    sget-object v2, Lazd;->a:Lbzd;
+
+    const-string v3, "exceptionHandler"
+
+    const-string v5, "getExceptionHandler()Lru/ok/tamtam/ExceptionHandler;"
+
+    invoke-static {v2, v1, v3, v5, v4}, Lo16;->g(Lbzd;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lv3d;
+
+    move-result-object v2
+
+    new-instance v3, Lv3d;
+
+    const-string v5, "dispatcher"
+
+    const-string v6, "getDispatcher()Lru/ok/tamtam/coroutines/IoDispatcher;"
+
+    invoke-direct {v3, v1, v5, v6, v4}, Lv3d;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    new-instance v5, Lv3d;
+
+    const-string v6, "serverPrefs"
+
+    const-string v7, "getServerPrefs()Lru/ok/tamtam/prefs/ServerPrefs;"
+
+    invoke-direct {v5, v1, v6, v7, v4}, Lv3d;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    const/4 v6, 0x4
+
+    new-array v6, v6, [Lv58;
+
+    aput-object v0, v6, v4
+
+    const/4 v0, 0x1
+
+    aput-object v2, v6, v0
+
+    const/4 v0, 0x2
+
+    aput-object v3, v6, v0
+
+    const/4 v0, 0x3
+
+    aput-object v5, v6, v0
+
+    sput-object v6, Ls26;->f:[Lv58;
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Ls26;->g:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;Lt45;Lt45;Lt45;)V
     .locals 0
 
-    iput p2, p0, Ls26;->a:I
-
-    iput-object p1, p0, Ls26;->b:Ld36;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ls26;->a:Landroid/content/Context;
+
+    iput-object p2, p0, Ls26;->b:Lt45;
+
+    iput-object p3, p0, Ls26;->c:Lt45;
+
+    iput-object p4, p0, Ls26;->d:Lt45;
+
+    new-instance p1, Lyv5;
+
+    const/4 p2, 0x4
+
+    invoke-direct {p1, p2}, Lyv5;-><init>(I)V
+
+    new-instance p2, Lbgg;
+
+    invoke-direct {p2, p1}, Lbgg;-><init>(Lis6;)V
+
+    iput-object p2, p0, Ls26;->e:Lbgg;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 7
+.method public final a(Ljava/io/File;Z)V
+    .locals 5
 
-    iget v0, p0, Ls26;->a:I
+    if-nez p1, :cond_0
 
-    packed-switch v0, :pswitch_data_0
+    sget-object p1, Ls26;->g:Ljava/lang/String;
 
-    iget-object v0, p0, Ls26;->b:Ld36;
+    const-string p2, "file is null!"
 
-    iget-object v1, v0, Ld36;->j:Ljava/io/File;
+    invoke-static {p1, p2}, Ltej;->t(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v1}, Ljava/io/File;->getPath()Ljava/lang/String;
+    return-void
+
+    :cond_0
+    iget-object v0, p0, Ls26;->e:Lbgg;
+
+    invoke-virtual {v0}, Lbgg;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lnd4;
+
+    sget-object v1, Ls26;->f:[Lv58;
+
+    const/4 v2, 0x2
+
+    aget-object v1, v1, v2
+
+    iget-object v1, p0, Ls26;->c:Lt45;
+
+    invoke-virtual {v1}, Lt45;->get()Ljava/lang/Object;
 
     move-result-object v1
 
-    const/4 v2, 0x0
+    check-cast v1, Lix7;
 
-    new-array v3, v2, [Ljava/lang/String;
+    iget-object v1, v1, Lix7;->a:Lgd4;
 
-    invoke-static {v1, v3}, Ljava/nio/file/Paths;->get(Ljava/lang/String;[Ljava/lang/String;)Ljava/nio/file/Path;
+    sget-object v3, Lyqa;->a:Lyqa;
+
+    invoke-virtual {v1, v3}, Lo0;->plus(Led4;)Led4;
 
     move-result-object v1
 
-    sget-object v3, Ljava/nio/file/StandardOpenOption;->READ:Ljava/nio/file/StandardOpenOption;
+    new-instance v3, Lr26;
 
-    invoke-static {v3}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
+    const/4 v4, 0x0
 
-    move-result-object v3
+    invoke-direct {v3, p1, p0, p2, v4}, Lr26;-><init>(Ljava/io/File;Ls26;ZLkotlin/coroutines/Continuation;)V
 
-    iget-object v0, v0, Ld36;->f:Ln8g;
+    invoke-static {v0, v1, v4, v3, v2}, Lea9;->d(Lnd4;Led4;Lqd4;Lys6;I)Lcuf;
 
-    invoke-virtual {v0}, Ln8g;->getValue()Ljava/lang/Object;
+    return-void
+.end method
 
-    move-result-object v0
+.method public final b(Ljava/io/File;)V
+    .locals 9
 
-    check-cast v0, Ljava/util/concurrent/ExecutorService;
+    :try_start_0
+    iget-object v0, p0, Ls26;->d:Lt45;
 
-    new-array v2, v2, [Ljava/nio/file/attribute/FileAttribute;
+    sget-object v1, Ls26;->f:[Lv58;
 
-    invoke-static {v1, v3, v0, v2}, Ljava/nio/channels/AsynchronousFileChannel;->open(Ljava/nio/file/Path;Ljava/util/Set;Ljava/util/concurrent/ExecutorService;[Ljava/nio/file/attribute/FileAttribute;)Ljava/nio/channels/AsynchronousFileChannel;
+    const/4 v2, 0x3
 
-    move-result-object v0
+    aget-object v1, v1, v2
 
-    return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Ls26;->b:Ld36;
-
-    iget-object v0, v0, Ld36;->e:Lo58;
-
-    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Lt45;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lmbg;
+    check-cast v0, Loye;
 
-    check-cast v0, Lj9b;
+    check-cast v0, Lzgc;
 
-    invoke-virtual {v0}, Lj9b;->d()Lsb4;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v0
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->max-downloaded-size-for-notify-kb:Lru/ok/tamtam/android/prefs/PmsKey;
 
-    invoke-static {v0}, Lilj;->a(Lqb4;)Lkotlinx/coroutines/internal/ContextScope;
+    const/16 v2, 0x400
 
-    move-result-object v0
+    int-to-long v2, v2
 
-    return-object v0
+    invoke-virtual {v0, v1, v2, v3}, Lzgc;->m(Ljava/lang/Enum;J)J
 
-    :pswitch_1
-    iget-object v0, p0, Ls26;->b:Ld36;
+    move-result-wide v0
 
-    iget-object v1, v0, Ld36;->i:Ljava/net/URI;
+    long-to-int v0, v0
 
-    iget v2, v0, Ld36;->a:I
+    int-to-long v0, v0
 
-    const/4 v3, 0x1
+    invoke-virtual {p1}, Ljava/io/File;->length()J
 
-    if-ne v2, v3, :cond_0
+    move-result-wide v4
 
-    const-string v2, "application/octet-stream"
+    const-wide/16 v6, 0x0
+
+    cmp-long v8, v4, v6
+
+    if-gez v8, :cond_0
+
+    move-wide v4, v6
+
+    :cond_0
+    div-long/2addr v4, v2
+
+    cmp-long v0, v0, v4
+
+    if-gez v0, :cond_1
+
+    const/4 v0, 0x1
 
     goto :goto_0
 
-    :cond_0
-    const-string v2, "application/x-binary; charset=x-user-defined"
+    :cond_1
+    const/4 v0, 0x0
 
     :goto_0
-    new-instance v3, Ljava/lang/StringBuilder;
+    invoke-virtual {p0, p1, v0}, Ls26;->a(Ljava/io/File;Z)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    const-string v4, "POST "
+    return-void
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    :catchall_0
+    move-exception p1
 
-    invoke-virtual {v1}, Ljava/net/URI;->getRawPath()Ljava/lang/String;
+    sget-object v0, Ls26;->g:Ljava/lang/String;
 
-    move-result-object v4
+    const-string v1, "notifyWithForegroundCheckAndSize fail!"
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0, v1, p1}, Ltej;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    const/16 v4, 0x3f
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/net/URI;->getRawQuery()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v4, " HTTP/1.1\nHost: "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/net/URI;->getHost()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\nContent-Type: "
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0xa
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    iget-object v2, v0, Ld36;->j:Ljava/io/File;
-
-    iget-object v4, v0, Ld36;->b:Ljava/lang/String;
-
-    iget v5, v0, Ld36;->a:I
-
-    const/4 v6, 0x5
-
-    if-ne v5, v6, :cond_3
-
-    if-eqz v4, :cond_2
-
-    invoke-virtual {v4}, Ljava/lang/String;->length()I
-
-    move-result v5
-
-    if-nez v5, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    invoke-static {v4}, Landroid/net/Uri;->encode(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    goto :goto_3
-
-    :cond_2
-    :goto_1
-    invoke-virtual {v2}, Ljava/io/File;->getName()Ljava/lang/String;
-
-    move-result-object v2
-
-    goto :goto_3
-
-    :cond_3
-    if-eqz v4, :cond_5
-
-    invoke-virtual {v4}, Ljava/lang/String;->length()I
-
-    move-result v5
-
-    if-nez v5, :cond_4
-
-    goto :goto_2
-
-    :cond_4
-    invoke-static {v4}, Landroid/net/Uri;->encode(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    goto :goto_3
-
-    :cond_5
-    :goto_2
-    invoke-virtual {v2}, Ljava/io/File;->getName()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
-
-    move-result v2
-
-    invoke-static {v2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    :goto_3
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    const-string v5, "Content-Disposition: attachment; filename="
-
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, "\n"
-
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, "X-Uploading-Mode: parallel\nConnection: keep-alive\nUser-Agent: "
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, v0, Ld36;->c:Lvsg;
-
-    iget-object v2, v2, Lvsg;->d:Ln8g;
-
-    invoke-virtual {v2}, Ln8g;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/String;
-
-    invoke-static {v3, v2, v1}, Lxi4;->k(Ljava/lang/StringBuilder;Ljava/lang/String;C)Ljava/lang/String;
-
-    move-result-object v1
-
-    iget-boolean v2, v0, Ld36;->v:Z
-
-    if-eqz v2, :cond_7
-
-    iget-object v2, v0, Ld36;->d:Ljava/lang/String;
-
-    sget-object v3, Lc5j;->a:Ledb;
-
-    if-nez v3, :cond_6
-
-    goto :goto_4
-
-    :cond_6
-    sget-object v4, Lkk8;->d:Lkk8;
-
-    invoke-virtual {v3, v4}, Ledb;->b(Lkk8;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_7
-
-    const-string v5, "Prepared sharedHeaders: "
-
-    invoke-static {v5, v1}, Lkz1;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v5
-
-    const/4 v6, 0x0
-
-    invoke-virtual {v3, v4, v2, v5, v6}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_7
-    :goto_4
-    sget-object v2, Ljd2;->a:Ljava/nio/charset/Charset;
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
-
-    move-result-object v1
-
-    invoke-virtual {v0}, Ld36;->c()Lzv0;
-
-    move-result-object v0
-
-    array-length v2, v1
-
-    invoke-interface {v0, v2}, Lzv0;->a(I)Ljava/nio/ByteBuffer;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

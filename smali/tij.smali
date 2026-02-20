@@ -1,336 +1,231 @@
-.class public final Ltij;
+.class public abstract Ltij;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/content/ServiceConnection;
-
-
-# instance fields
-.field public X:Landroid/content/ComponentName;
-
-.field public final synthetic Y:Lxlj;
-
-.field public final a:Ljava/util/HashMap;
-
-.field public b:I
-
-.field public c:Z
-
-.field public d:Landroid/os/IBinder;
-
-.field public final o:Lqhj;
-
 
 # direct methods
-.method public constructor <init>(Lxlj;Lqhj;)V
-    .locals 0
+.method public static a(Landroid/content/Context;IFZ)Landroid/graphics/drawable/Drawable;
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    if-eqz p3, :cond_0
 
-    iput-object p1, p0, Ltij;->Y:Lxlj;
-
-    iput-object p2, p0, Ltij;->o:Lqhj;
-
-    new-instance p1, Ljava/util/HashMap;
-
-    invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
-
-    iput-object p1, p0, Ltij;->a:Ljava/util/HashMap;
-
-    const/4 p1, 0x2
-
-    iput p1, p0, Ltij;->b:I
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a(Ljava/lang/String;Ljava/util/concurrent/Executor;)V
-    .locals 9
-
-    const/4 v0, 0x3
-
-    iput v0, p0, Ltij;->b:I
-
-    invoke-static {}, Landroid/os/StrictMode;->getVmPolicy()Landroid/os/StrictMode$VmPolicy;
-
-    move-result-object v1
-
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v2, 0x1f
-
-    if-lt v0, v2, :cond_0
-
-    new-instance v0, Landroid/os/StrictMode$VmPolicy$Builder;
-
-    invoke-direct {v0, v1}, Landroid/os/StrictMode$VmPolicy$Builder;-><init>(Landroid/os/StrictMode$VmPolicy;)V
-
-    invoke-static {v0}, Lf7i;->a(Landroid/os/StrictMode$VmPolicy$Builder;)Landroid/os/StrictMode$VmPolicy$Builder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/os/StrictMode$VmPolicy$Builder;->build()Landroid/os/StrictMode$VmPolicy;
-
-    move-result-object v0
-
-    invoke-static {v0}, Landroid/os/StrictMode;->setVmPolicy(Landroid/os/StrictMode$VmPolicy;)V
-
-    :cond_0
-    :try_start_0
-    iget-object v0, p0, Ltij;->Y:Lxlj;
-
-    iget-object v2, v0, Lxlj;->d:Lgw3;
-
-    iget-object v3, v0, Lxlj;->b:Landroid/content/Context;
-
-    iget-object v0, p0, Ltij;->o:Lqhj;
-
-    invoke-virtual {v0, v3}, Lqhj;->a(Landroid/content/Context;)Landroid/content/Intent;
-
-    move-result-object v5
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
-
-    const/16 v7, 0x1081
-
-    move-object v6, p0
-
-    move-object v4, p1
-
-    move-object v8, p2
-
-    :try_start_1
-    invoke-virtual/range {v2 .. v8}, Lgw3;->c(Landroid/content/Context;Ljava/lang/String;Landroid/content/Intent;Landroid/content/ServiceConnection;ILjava/util/concurrent/Executor;)Z
-
-    move-result p1
-
-    iput-boolean p1, v6, Ltij;->c:Z
-
-    if-eqz p1, :cond_1
-
-    iget-object p1, v6, Ltij;->Y:Lxlj;
-
-    iget-object p1, p1, Lxlj;->c:Lz7a;
-
-    iget-object p2, v6, Ltij;->o:Lqhj;
+    new-instance p3, Lmt0;
 
     const/4 v0, 0x1
 
-    invoke-virtual {p1, v0, p2}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+    invoke-direct {p3, p0, p1, p2, v0}, Lmt0;-><init>(Landroid/content/Context;IFZ)V
 
-    move-result-object p1
-
-    iget-object p2, v6, Ltij;->Y:Lxlj;
-
-    iget-object p2, p2, Lxlj;->c:Lz7a;
-
-    iget-object v0, v6, Ltij;->Y:Lxlj;
-
-    iget-wide v2, v0, Lxlj;->f:J
-
-    invoke-virtual {p2, p1, v2, v3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
-
-    goto :goto_1
-
-    :catchall_0
-    move-exception v0
-
-    :goto_0
-    move-object p1, v0
-
-    goto :goto_2
-
-    :cond_1
-    const/4 p1, 0x2
-
-    iput p1, v6, Ltij;->b:I
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    :try_start_2
-    iget-object p1, v6, Ltij;->Y:Lxlj;
-
-    iget-object p2, p1, Lxlj;->d:Lgw3;
-
-    iget-object p1, p1, Lxlj;->b:Landroid/content/Context;
-
-    invoke-virtual {p2, p1, p0}, Lgw3;->b(Landroid/content/Context;Landroid/content/ServiceConnection;)V
-    :try_end_2
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_2 .. :try_end_2} :catch_0
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    :catch_0
-    :goto_1
-    invoke-static {v1}, Landroid/os/StrictMode;->setVmPolicy(Landroid/os/StrictMode$VmPolicy;)V
-
-    return-void
-
-    :catchall_1
-    move-exception v0
-
-    move-object v6, p0
-
-    goto :goto_0
-
-    :goto_2
-    invoke-static {v1}, Landroid/os/StrictMode;->setVmPolicy(Landroid/os/StrictMode$VmPolicy;)V
-
-    throw p1
-.end method
-
-.method public final onBindingDied(Landroid/content/ComponentName;)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Ltij;->onServiceDisconnected(Landroid/content/ComponentName;)V
-
-    return-void
-.end method
-
-.method public final onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
-    .locals 4
-
-    iget-object v0, p0, Ltij;->Y:Lxlj;
-
-    iget-object v0, v0, Lxlj;->a:Ljava/util/HashMap;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-object v1, p0, Ltij;->Y:Lxlj;
-
-    iget-object v1, v1, Lxlj;->c:Lz7a;
-
-    iget-object v2, p0, Ltij;->o:Lqhj;
-
-    const/4 v3, 0x1
-
-    invoke-virtual {v1, v3, v2}, Landroid/os/Handler;->removeMessages(ILjava/lang/Object;)V
-
-    iput-object p2, p0, Ltij;->d:Landroid/os/IBinder;
-
-    iput-object p1, p0, Ltij;->X:Landroid/content/ComponentName;
-
-    iget-object v1, p0, Ltij;->a:Ljava/util/HashMap;
-
-    invoke-virtual {v1}, Ljava/util/HashMap;->values()Ljava/util/Collection;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/content/ServiceConnection;
-
-    invoke-interface {v2, p1, p2}, Landroid/content/ServiceConnection;->onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
+    return-object p3
 
     :cond_0
-    iput v3, p0, Ltij;->b:I
+    new-instance p0, Landroid/graphics/drawable/ColorDrawable;
 
-    monitor-exit v0
+    invoke-direct {p0, p1}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
 
-    return-void
-
-    :goto_1
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p1
+    return-object p0
 .end method
 
-.method public final onServiceDisconnected(Landroid/content/ComponentName;)V
-    .locals 4
-
-    iget-object v0, p0, Ltij;->Y:Lxlj;
-
-    iget-object v0, v0, Lxlj;->a:Ljava/util/HashMap;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-object v1, p0, Ltij;->Y:Lxlj;
-
-    iget-object v1, v1, Lxlj;->c:Lz7a;
-
-    iget-object v2, p0, Ltij;->o:Lqhj;
-
-    const/4 v3, 0x1
-
-    invoke-virtual {v1, v3, v2}, Landroid/os/Handler;->removeMessages(ILjava/lang/Object;)V
+.method public static varargs b(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    .locals 10
 
     const/4 v1, 0x0
 
-    iput-object v1, p0, Ltij;->d:Landroid/os/IBinder;
-
-    iput-object p1, p0, Ltij;->X:Landroid/content/ComponentName;
-
-    iget-object v1, p0, Ltij;->a:Ljava/util/HashMap;
-
-    invoke-virtual {v1}, Ljava/util/HashMap;->values()Ljava/util/Collection;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
+    move v2, v1
 
     :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    array-length v0, p1
 
-    move-result v2
+    if-ge v2, v0, :cond_1
 
-    if-eqz v2, :cond_0
+    aget-object v3, p1, v2
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    if-nez v3, :cond_0
 
-    move-result-object v2
-
-    check-cast v2, Landroid/content/ServiceConnection;
-
-    invoke-interface {v2, p1}, Landroid/content/ServiceConnection;->onServiceDisconnected(Landroid/content/ComponentName;)V
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
+    const-string v0, "null"
 
     goto :goto_1
 
     :cond_0
-    const/4 p1, 0x2
+    :try_start_0
+    invoke-virtual {v3}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    iput p1, p0, Ltij;->b:I
+    move-result-object v0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    monitor-exit v0
+    goto :goto_1
 
-    return-void
+    :catch_0
+    move-exception v0
+
+    move-object v8, v0
+
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v3}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
+
+    move-result v3
+
+    invoke-static {v3}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    const-string v4, "@"
+
+    invoke-static {v0, v4, v3}, Lj64;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v3, "com.google.common.base.Strings"
+
+    invoke-static {v3}, Ljava/util/logging/Logger;->getLogger(Ljava/lang/String;)Ljava/util/logging/Logger;
+
+    move-result-object v3
+
+    sget-object v4, Ljava/util/logging/Level;->WARNING:Ljava/util/logging/Level;
+
+    const-string v6, "lenientToString"
+
+    const-string v5, "Exception during lenientFormat for "
+
+    invoke-virtual {v5, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v7
+
+    const-string v5, "com.google.common.base.Strings"
+
+    invoke-virtual/range {v3 .. v8}, Ljava/util/logging/Logger;->logp(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    invoke-virtual {v8}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v3
+
+    const-string v4, " threw "
+
+    const-string v5, ">"
+
+    const-string v6, "<"
+
+    invoke-static {v6, v0, v4, v3, v5}, Lau1;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
 
     :goto_1
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    aput-object v0, p1, v2
 
-    throw p1
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    mul-int/lit8 v0, v0, 0x10
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    add-int/2addr v2, v0
+
+    invoke-direct {v3, v2}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    move v0, v1
+
+    :goto_2
+    array-length v2, p1
+
+    if-ge v1, v2, :cond_3
+
+    const-string v4, "%s"
+
+    invoke-virtual {p0, v4, v0}, Ljava/lang/String;->indexOf(Ljava/lang/String;I)I
+
+    move-result v4
+
+    const/4 v5, -0x1
+
+    if-ne v4, v5, :cond_2
+
+    goto :goto_3
+
+    :cond_2
+    invoke-virtual {v3, p0, v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;II)Ljava/lang/StringBuilder;
+
+    add-int/lit8 v0, v1, 0x1
+
+    aget-object v1, p1, v1
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    add-int/lit8 v1, v4, 0x2
+
+    move v9, v1
+
+    move v1, v0
+
+    move v0, v9
+
+    goto :goto_2
+
+    :cond_3
+    :goto_3
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result v4
+
+    invoke-virtual {v3, p0, v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;II)Ljava/lang/StringBuilder;
+
+    if-ge v1, v2, :cond_5
+
+    const-string p0, " ["
+
+    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    add-int/lit8 p0, v1, 0x1
+
+    aget-object v0, p1, v1
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    :goto_4
+    array-length v0, p1
+
+    if-ge p0, v0, :cond_4
+
+    const-string v0, ", "
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    add-int/lit8 v0, p0, 0x1
+
+    aget-object p0, p1, p0
+
+    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move p0, v0
+
+    goto :goto_4
+
+    :cond_4
+    const/16 p0, 0x5d
+
+    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    :cond_5
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method

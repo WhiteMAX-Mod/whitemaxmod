@@ -1,44 +1,135 @@
-.class public final Ls10;
+.class public abstract synthetic Ls10;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:Lcj8;
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
-.field public b:J
+.field public static final synthetic $EnumSwitchMapping$1:[I
 
-.field public c:J
-
-.field public d:J
-
-.field public e:Ljava/util/List;
-
-.field public f:Ljava/lang/String;
-
-.field public g:F
-
-.field public h:Z
-
-.field public i:Lu10;
+.field public static final synthetic $EnumSwitchMapping$2:[I
 
 
-# virtual methods
-.method public final a()Lt10;
-    .locals 1
+# direct methods
+.method static constructor <clinit>()V
+    .locals 7
 
-    iget-object v0, p0, Ls10;->a:Lcj8;
+    invoke-static {}, Ls30;->values()[Ls30;
 
-    if-nez v0, :cond_0
+    move-result-object v0
 
-    sget-object v0, Lcj8;->Y:Lcj8;
+    array-length v0, v0
 
-    iput-object v0, p0, Ls10;->a:Lcj8;
+    new-array v0, v0, [I
 
-    :cond_0
-    new-instance v0, Lt10;
+    const/4 v1, 0x1
 
-    invoke-direct {v0, p0}, Lt10;-><init>(Ls10;)V
+    const/4 v2, 0x4
 
-    return-object v0
+    :try_start_0
+    aput v1, v0, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    const/4 v3, 0x2
+
+    :try_start_1
+    aput v3, v0, v3
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    const/4 v4, 0x0
+
+    const/4 v5, 0x3
+
+    :try_start_2
+    aput v5, v0, v4
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
+    :try_start_3
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+
+    :catch_3
+    const/4 v6, 0x5
+
+    :try_start_4
+    aput v6, v0, v5
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+
+    :catch_4
+    sput-object v0, Ls10;->$EnumSwitchMapping$0:[I
+
+    invoke-static {v2}, Ly12;->x(I)[I
+
+    move-result-object v0
+
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    :try_start_5
+    aput v1, v0, v4
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
+
+    :catch_5
+    :try_start_6
+    aput v3, v0, v3
+    :try_end_6
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
+
+    :catch_6
+    :try_start_7
+    aput v5, v0, v1
+    :try_end_7
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
+
+    :catch_7
+    :try_start_8
+    aput v2, v0, v5
+    :try_end_8
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_8
+
+    :catch_8
+    sput-object v0, Ls10;->$EnumSwitchMapping$1:[I
+
+    invoke-static {}, Lv30;->values()[Lv30;
+
+    move-result-object v0
+
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    :try_start_9
+    aput v1, v0, v5
+    :try_end_9
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_9 .. :try_end_9} :catch_9
+
+    :catch_9
+    :try_start_a
+    aput v3, v0, v3
+    :try_end_a
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_a .. :try_end_a} :catch_a
+
+    :catch_a
+    const/16 v1, 0x9
+
+    :try_start_b
+    aput v5, v0, v1
+    :try_end_b
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_b .. :try_end_b} :catch_b
+
+    :catch_b
+    sput-object v0, Ls10;->$EnumSwitchMapping$2:[I
+
+    return-void
 .end method

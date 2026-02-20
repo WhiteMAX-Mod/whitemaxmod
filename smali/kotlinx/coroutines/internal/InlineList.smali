@@ -29,10 +29,10 @@
         "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;",
         "plus",
         "Lkotlin/Function1;",
-        "Lb3h;",
+        "Lmah;",
         "action",
         "forEachReversed-impl",
-        "(Ljava/lang/Object;Lnq6;)V",
+        "(Ljava/lang/Object;Lks6;)V",
         "forEachReversed",
         "",
         "toString",
@@ -98,7 +98,7 @@
     return-object p0
 .end method
 
-.method public static synthetic constructor-impl$default(Ljava/lang/Object;ILso4;)Ljava/lang/Object;
+.method public static synthetic constructor-impl$default(Ljava/lang/Object;ILfq4;)Ljava/lang/Object;
     .locals 0
 
     and-int/lit8 p1, p1, 0x1
@@ -133,7 +133,7 @@
 
     move-result-object p1
 
-    invoke-static {p0, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p0, p1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
 
@@ -150,20 +150,20 @@
 .method public static final equals-impl0(Ljava/lang/Object;Ljava/lang/Object;)Z
     .locals 0
 
-    invoke-static {p0, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p0, p1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
 
     return p0
 .end method
 
-.method public static final forEachReversed-impl(Ljava/lang/Object;Lnq6;)V
+.method public static final forEachReversed-impl(Ljava/lang/Object;Lks6;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/Object;",
-            "Lnq6;",
+            "Lks6;",
             ")V"
         }
     .end annotation
@@ -177,7 +177,7 @@
 
     if-nez v0, :cond_1
 
-    invoke-interface {p1, p0}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, p0}, Lks6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 
@@ -199,7 +199,7 @@
 
     move-result-object v1
 
-    invoke-interface {p1, v1}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v1}, Lks6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     add-int/lit8 v0, v0, -0x1
 

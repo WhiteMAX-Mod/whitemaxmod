@@ -1,64 +1,207 @@
-.class public final Lpk6;
+.class public abstract Lpk6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lqk6;
-
 
 # static fields
-.field public static final a:Lpk6;
+.field public static final a:Lqr8;
+
+.field public static final b:Ljava/util/concurrent/ThreadPoolExecutor;
+
+.field public static final c:Ljava/lang/Object;
+
+.field public static final d:Lblf;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 10
 
-    new-instance v0, Lpk6;
+    new-instance v0, Lqr8;
+
+    const/16 v1, 0x10
+
+    invoke-direct {v0, v1}, Lqr8;-><init>(I)V
+
+    sput-object v0, Lpk6;->a:Lqr8;
+
+    new-instance v9, Lg77;
+
+    const/4 v0, 0x1
+
+    invoke-direct {v9, v0}, Lg77;-><init>(I)V
+
+    new-instance v2, Ljava/util/concurrent/ThreadPoolExecutor;
+
+    const/16 v0, 0x2710
+
+    int-to-long v5, v0
+
+    sget-object v7, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+
+    new-instance v8, Ljava/util/concurrent/LinkedBlockingDeque;
+
+    invoke-direct {v8}, Ljava/util/concurrent/LinkedBlockingDeque;-><init>()V
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x1
+
+    invoke-direct/range {v2 .. v9}, Ljava/util/concurrent/ThreadPoolExecutor;-><init>(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;Ljava/util/concurrent/ThreadFactory;)V
+
+    const/4 v0, 0x1
+
+    invoke-virtual {v2, v0}, Ljava/util/concurrent/ThreadPoolExecutor;->allowCoreThreadTimeOut(Z)V
+
+    sput-object v2, Lpk6;->b:Ljava/util/concurrent/ThreadPoolExecutor;
+
+    new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lpk6;->a:Lpk6;
+    sput-object v0, Lpk6;->c:Ljava/lang/Object;
+
+    new-instance v0, Lblf;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lblf;-><init>(I)V
+
+    sput-object v0, Lpk6;->d:Lblf;
 
     return-void
 .end method
 
+.method public static a(Ljava/lang/String;Landroid/content/Context;Lxe6;I)Lok6;
+    .locals 6
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    sget-object v0, Lpk6;->a:Lqr8;
 
-    const/4 v0, 0x1
+    invoke-virtual {v0, p0}, Lqr8;->c(Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-ne p0, p1, :cond_0
+    move-result-object v1
 
-    return v0
+    check-cast v1, Landroid/graphics/Typeface;
+
+    if-eqz v1, :cond_0
+
+    new-instance p0, Lok6;
+
+    invoke-direct {p0, v1}, Lok6;-><init>(Landroid/graphics/Typeface;)V
+
+    return-object p0
 
     :cond_0
-    instance-of p1, p1, Lpk6;
+    :try_start_0
+    invoke-static {p1, p2}, Ldeg;->b(Landroid/content/Context;Lxe6;)Lmk;
 
-    if-nez p1, :cond_1
+    move-result-object p2
+    :try_end_0
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    const/4 p1, 0x0
+    iget-object v1, p2, Lmk;->c:Ljava/lang/Object;
 
-    return p1
+    check-cast v1, [Lvk6;
+
+    iget p2, p2, Lmk;->b:I
+
+    const/4 v2, -0x3
+
+    const/4 v3, 0x1
+
+    if-eqz p2, :cond_2
+
+    if-eq p2, v3, :cond_1
+
+    :goto_0
+    move v3, v2
+
+    goto :goto_2
 
     :cond_1
-    return v0
-.end method
+    const/4 v3, -0x2
 
-.method public final hashCode()I
-    .locals 1
+    goto :goto_2
 
-    const v0, -0x64e35cdf
+    :cond_2
+    if-eqz v1, :cond_6
 
-    return v0
-.end method
+    array-length p2, v1
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    if-nez p2, :cond_3
 
-    const-string v0, "ShowAuthorVisibilityOnboarding"
+    goto :goto_2
 
-    return-object v0
+    :cond_3
+    array-length p2, v1
+
+    const/4 v3, 0x0
+
+    move v4, v3
+
+    :goto_1
+    if-ge v4, p2, :cond_6
+
+    aget-object v5, v1, v4
+
+    iget v5, v5, Lvk6;->e:I
+
+    if-eqz v5, :cond_5
+
+    if-gez v5, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    move v3, v5
+
+    goto :goto_2
+
+    :cond_5
+    add-int/lit8 v4, v4, 0x1
+
+    goto :goto_1
+
+    :cond_6
+    :goto_2
+    if-eqz v3, :cond_7
+
+    new-instance p0, Lok6;
+
+    invoke-direct {p0, v3}, Lok6;-><init>(I)V
+
+    return-object p0
+
+    :cond_7
+    sget-object p2, Lu8h;->a:Ld3;
+
+    invoke-virtual {p2, p1, v1, p3}, Ld3;->d0(Landroid/content/Context;[Lvk6;I)Landroid/graphics/Typeface;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_8
+
+    invoke-virtual {v0, p0, p1}, Lqr8;->d(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    new-instance p0, Lok6;
+
+    invoke-direct {p0, p1}, Lok6;-><init>(Landroid/graphics/Typeface;)V
+
+    return-object p0
+
+    :cond_8
+    new-instance p0, Lok6;
+
+    invoke-direct {p0, v2}, Lok6;-><init>(I)V
+
+    return-object p0
+
+    :catch_0
+    new-instance p0, Lok6;
+
+    const/4 p1, -0x1
+
+    invoke-direct {p0, p1}, Lok6;-><init>(I)V
+
+    return-object p0
 .end method

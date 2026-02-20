@@ -37,30 +37,30 @@
 
 
 # static fields
-.field public static final synthetic Z:[Lz28;
+.field public static final synthetic Z:[Lv58;
 
 
 # instance fields
-.field public final X:Ljld;
+.field public final X:Lgrd;
 
-.field public final Y:Lro0;
+.field public final Y:Lwp0;
 
-.field public final a:Les7;
+.field public final a:Lus7;
 
-.field public final b:Lls;
+.field public final b:Lwt;
 
-.field public final c:Lo58;
+.field public final c:Lj88;
 
-.field public final d:Lnf6;
+.field public final d:Lmh6;
 
-.field public final o:Ljld;
+.field public final o:Lgrd;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 8
 
-    new-instance v0, Liyc;
+    new-instance v0, Lv3d;
 
     const-class v1, Lone/me/folders/pickerfolders/FoldersPickerScreen;
 
@@ -70,37 +70,37 @@
 
     const/4 v4, 0x0
 
-    invoke-direct {v0, v1, v2, v3, v4}, Liyc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v2, v3, v4}, Lv3d;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    sget-object v2, Lctd;->a:Ldtd;
+    sget-object v2, Lazd;->a:Lbzd;
 
     const-string v3, "foldersRecycler"
 
     const-string v5, "getFoldersRecycler()Landroidx/recyclerview/widget/RecyclerView;"
 
-    invoke-static {v2, v1, v3, v5, v4}, Lj27;->e(Ldtd;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Liyc;
+    invoke-static {v2, v1, v3, v5, v4}, Lo16;->g(Lbzd;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lv3d;
 
     move-result-object v2
 
-    new-instance v3, Liyc;
+    new-instance v3, Lv3d;
 
     const-string v5, "toolbar"
 
     const-string v6, "getToolbar()Lone/me/sdk/uikit/common/toolbar/OneMeToolbar;"
 
-    invoke-direct {v3, v1, v5, v6, v4}, Liyc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v3, v1, v5, v6, v4}, Lv3d;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v5, Liyc;
+    new-instance v5, Lv3d;
 
     const-string v6, "createButton"
 
     const-string v7, "getCreateButton()Lone/me/sdk/uikit/common/button/OneMeButton;"
 
-    invoke-direct {v5, v1, v6, v7, v4}, Liyc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v5, v1, v6, v7, v4}, Lv3d;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
     const/4 v1, 0x4
 
-    new-array v1, v1, [Lz28;
+    new-array v1, v1, [Lv58;
 
     aput-object v0, v1, v4
 
@@ -116,7 +116,7 @@
 
     aput-object v5, v1, v0
 
-    sput-object v1, Lone/me/folders/pickerfolders/FoldersPickerScreen;->Z:[Lz28;
+    sput-object v1, Lone/me/folders/pickerfolders/FoldersPickerScreen;->Z:[Lv58;
 
     return-void
 .end method
@@ -130,19 +130,19 @@
     move-result-object p1
 
     .line 22
-    new-instance p2, Lktb;
+    new-instance p2, Lyvb;
 
     const-string v0, "arg_chat_id"
 
-    invoke-direct {p2, v0, p1}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p2, v0, p1}, Lyvb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 23
-    filled-new-array {p2}, [Lktb;
+    filled-new-array {p2}, [Lyvb;
 
     move-result-object p1
 
     .line 24
-    invoke-static {p1}, Laaj;->c([Lktb;)Landroid/os/Bundle;
+    invoke-static {p1}, Lejj;->c([Lyvb;)Landroid/os/Bundle;
 
     move-result-object p1
 
@@ -162,12 +162,12 @@
     const/4 v2, 0x0
 
     .line 1
-    invoke-direct {p0, p1, v2, v0, v1}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILso4;)V
+    invoke-direct {p0, p1, v2, v0, v1}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILfq4;)V
 
     .line 2
-    sget-object p1, Les7;->f:Les7;
+    sget-object p1, Lus7;->f:Lus7;
 
-    iput-object p1, p0, Lone/me/folders/pickerfolders/FoldersPickerScreen;->a:Les7;
+    iput-object p1, p0, Lone/me/folders/pickerfolders/FoldersPickerScreen;->a:Lus7;
 
     const-wide/16 v0, 0x0
 
@@ -177,71 +177,71 @@
     move-result-object p1
 
     .line 4
-    new-instance v0, Lls;
+    new-instance v0, Lwt;
 
     const-class v1, Ljava/lang/Long;
 
     const-string v2, "arg_chat_id"
 
-    invoke-direct {v0, v1, p1, v2}, Lls;-><init>(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-direct {v0, v1, p1, v2}, Lwt;-><init>(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 5
-    iput-object v0, p0, Lone/me/folders/pickerfolders/FoldersPickerScreen;->b:Lls;
+    iput-object v0, p0, Lone/me/folders/pickerfolders/FoldersPickerScreen;->b:Lwt;
 
     .line 6
-    new-instance p1, Lzg6;
+    new-instance p1, Laj6;
 
     const/4 v0, 0x0
 
-    invoke-direct {p1, p0, v0}, Lzg6;-><init>(Lone/me/folders/pickerfolders/FoldersPickerScreen;I)V
+    invoke-direct {p1, p0, v0}, Laj6;-><init>(Lone/me/folders/pickerfolders/FoldersPickerScreen;I)V
 
     .line 7
-    new-instance v0, Lzs3;
+    new-instance v0, Leo3;
 
-    const/16 v1, 0xd
+    const/16 v1, 0x12
 
-    invoke-direct {v0, v1, p1}, Lzs3;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p1}, Leo3;-><init>(ILjava/lang/Object;)V
 
-    const-class p1, Loh6;
+    const-class p1, Loj6;
 
-    invoke-virtual {p0, p1, v0}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Llq6;)Lo58;
+    invoke-virtual {p0, p1, v0}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Lis6;)Lj88;
 
     move-result-object p1
 
     .line 8
-    iput-object p1, p0, Lone/me/folders/pickerfolders/FoldersPickerScreen;->c:Lo58;
+    iput-object p1, p0, Lone/me/folders/pickerfolders/FoldersPickerScreen;->c:Lj88;
 
     .line 9
-    new-instance p1, Lnf6;
+    new-instance p1, Lmh6;
 
     .line 10
-    sget-object v0, Ldg6;->a:Ldg6;
+    sget-object v0, Ldi6;->a:Ldi6;
 
     .line 11
     invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
 
     move-result-object v0
 
-    const/16 v1, 0x4e
+    const/16 v1, 0x58
 
     .line 12
     invoke-virtual {v0, v1}, Lr5;->c(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lyab;
+    check-cast v0, Lncb;
 
     .line 13
-    invoke-virtual {v0}, Lyab;->a()Ljava/util/concurrent/ExecutorService;
+    invoke-virtual {v0}, Lncb;->a()Ljava/util/concurrent/ExecutorService;
 
     move-result-object v0
 
     .line 14
-    new-instance v1, Lsy0;
+    new-instance v1, Lp6;
 
     const/4 v7, 0x0
 
-    const/16 v8, 0x12
+    const/16 v8, 0x16
 
     const/4 v2, 0x1
 
@@ -254,208 +254,206 @@
 
     move-object v3, p0
 
-    invoke-direct/range {v1 .. v8}, Lsy0;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+    invoke-direct/range {v1 .. v8}, Lp6;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
 
-    const/4 v2, 0x4
+    const/4 v2, 0x5
 
     .line 16
-    invoke-direct {p1, v0, v1, v2}, Lnf6;-><init>(Ljava/util/concurrent/ExecutorService;Ljava/lang/Object;I)V
+    invoke-direct {p1, v0, v1, v2}, Lmh6;-><init>(Ljava/util/concurrent/ExecutorService;Ljava/lang/Object;I)V
 
-    iput-object p1, v3, Lone/me/folders/pickerfolders/FoldersPickerScreen;->d:Lnf6;
+    iput-object p1, v3, Lone/me/folders/pickerfolders/FoldersPickerScreen;->d:Lmh6;
 
     .line 17
-    sget p1, Lvbb;->m:I
+    sget p1, Lkdb;->m:I
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Ljld;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lgrd;
 
     move-result-object p1
 
-    iput-object p1, v3, Lone/me/folders/pickerfolders/FoldersPickerScreen;->o:Ljld;
+    iput-object p1, v3, Lone/me/folders/pickerfolders/FoldersPickerScreen;->o:Lgrd;
 
     .line 18
-    sget p1, Lvbb;->o:I
+    sget p1, Lkdb;->o:I
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Ljld;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lgrd;
 
     .line 19
-    sget p1, Lvbb;->d:I
+    sget p1, Lkdb;->d:I
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Ljld;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lgrd;
 
     move-result-object p1
 
-    iput-object p1, v3, Lone/me/folders/pickerfolders/FoldersPickerScreen;->X:Ljld;
+    iput-object p1, v3, Lone/me/folders/pickerfolders/FoldersPickerScreen;->X:Lgrd;
 
     .line 20
-    new-instance p1, Lzg6;
+    new-instance p1, Laj6;
 
     const/4 v0, 0x1
 
-    invoke-direct {p1, p0, v0}, Lzg6;-><init>(Lone/me/folders/pickerfolders/FoldersPickerScreen;I)V
+    invoke-direct {p1, p0, v0}, Laj6;-><init>(Lone/me/folders/pickerfolders/FoldersPickerScreen;I)V
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->binding(Llq6;)Lro0;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->binding(Lis6;)Lwp0;
 
     move-result-object p1
 
-    iput-object p1, v3, Lone/me/folders/pickerfolders/FoldersPickerScreen;->Y:Lro0;
+    iput-object p1, v3, Lone/me/folders/pickerfolders/FoldersPickerScreen;->Y:Lwp0;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getInsetsConfig()Les7;
+.method public final H0()Loj6;
     .locals 1
 
-    iget-object v0, p0, Lone/me/folders/pickerfolders/FoldersPickerScreen;->a:Les7;
+    iget-object v0, p0, Lone/me/folders/pickerfolders/FoldersPickerScreen;->c:Lj88;
+
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Loj6;
+
+    return-object v0
+.end method
+
+.method public final getInsetsConfig()Lus7;
+    .locals 1
+
+    iget-object v0, p0, Lone/me/folders/pickerfolders/FoldersPickerScreen;->a:Lus7;
 
     return-object v0
 .end method
 
 .method public final onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
-    .locals 8
+    .locals 9
 
-    new-instance p1, Lymb;
+    new-instance p1, Lmpb;
 
     invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
     move-result-object p2
 
-    const/4 p3, 0x6
+    invoke-direct {p1, p2}, Lmpb;-><init>(Landroid/content/Context;)V
 
-    invoke-direct {p1, p2, p3}, Lymb;-><init>(Landroid/content/Context;I)V
-
-    sget p2, Lvbb;->o:I
+    sget p2, Lkdb;->o:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setId(I)V
 
-    sget-object p2, Lqmb;->b:Lqmb;
+    sget-object p2, Lepb;->b:Lepb;
 
-    invoke-virtual {p1, p2}, Lymb;->setForm(Lqmb;)V
+    invoke-virtual {p1, p2}, Lmpb;->setForm(Lepb;)V
 
-    sget p2, Lxbb;->q:I
+    sget p2, Lmdb;->z:I
 
-    invoke-virtual {p1, p2}, Lymb;->setTitle(I)V
+    invoke-virtual {p1, p2}, Lmpb;->setTitle(I)V
 
-    new-instance p2, Lgmb;
+    new-instance p2, Luob;
 
-    new-instance v0, Lah6;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p0, v1}, Lah6;-><init>(Lone/me/folders/pickerfolders/FoldersPickerScreen;I)V
-
-    invoke-direct {p2, v0}, Lgmb;-><init>(Lnq6;)V
-
-    invoke-virtual {p1, p2}, Lymb;->setLeftActions(Lmmb;)V
-
-    new-instance p2, Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-direct {p2, v0, v1}, Lone/me/sdk/uikit/common/button/OneMeButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-
-    sget v0, Lvbb;->d:I
-
-    invoke-virtual {p2, v0}, Landroid/view/View;->setId(I)V
-
-    new-instance v0, Landroid/widget/FrameLayout$LayoutParams;
-
-    const/16 v2, 0x50
-
-    const/4 v3, -0x1
-
-    const/4 v4, -0x2
-
-    invoke-direct {v0, v3, v4, v2}, Landroid/widget/FrameLayout$LayoutParams;-><init>(III)V
-
-    invoke-virtual {p2, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    new-instance p3, Lbj6;
 
     const/4 v0, 0x0
 
-    invoke-virtual {p2, v0}, Lone/me/sdk/uikit/common/button/OneMeButton;->setEnabled(Z)V
+    invoke-direct {p3, p0, v0}, Lbj6;-><init>(Lone/me/folders/pickerfolders/FoldersPickerScreen;I)V
 
-    sget-object v2, Lv5b;->d:Lv5b;
+    invoke-direct {p2, p3}, Luob;-><init>(Lks6;)V
 
-    invoke-virtual {p2, v2}, Lone/me/sdk/uikit/common/button/OneMeButton;->setAppearance(Lv5b;)V
+    invoke-virtual {p1, p2}, Lmpb;->setLeftActions(Lapb;)V
 
-    sget-object v2, Ly5b;->c:Ly5b;
-
-    invoke-virtual {p2, v2}, Lone/me/sdk/uikit/common/button/OneMeButton;->setSize(Ly5b;)V
-
-    sget-object v2, Lx5b;->a:Lx5b;
-
-    invoke-virtual {p2, v2}, Lone/me/sdk/uikit/common/button/OneMeButton;->setMode(Lx5b;)V
-
-    sget v2, Lxbb;->g:I
-
-    invoke-virtual {p2, v2}, Lone/me/sdk/uikit/common/button/OneMeButton;->setText(I)V
-
-    new-instance v2, Lbh6;
-
-    const/4 v5, 0x0
-
-    invoke-direct {v2, p0, v5}, Lbh6;-><init>(Lone/me/folders/pickerfolders/FoldersPickerScreen;I)V
-
-    invoke-static {p2, v2}, Ljmj;->d(Landroid/view/View;Landroid/view/View$OnClickListener;)V
-
-    new-instance v2, Landroidx/recyclerview/widget/RecyclerView;
+    new-instance p2, Lu7b;
 
     invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    move-result-object v5
+    move-result-object p3
 
-    invoke-direct {v2, v5, v1}, Landroidx/recyclerview/widget/RecyclerView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {p2, p3}, Lu7b;-><init>(Landroid/content/Context;)V
 
-    sget v5, Lvbb;->m:I
+    sget p3, Lkdb;->d:I
 
-    invoke-virtual {v2, v5}, Landroid/view/View;->setId(I)V
+    invoke-virtual {p2, p3}, Landroid/view/View;->setId(I)V
 
-    new-instance v5, Landroid/widget/LinearLayout$LayoutParams;
+    new-instance p3, Landroid/widget/FrameLayout$LayoutParams;
 
-    invoke-direct {v5, v3, v3}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
+    const/16 v0, 0x50
 
-    invoke-virtual {v2, v5}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    const/4 v1, -0x1
 
-    invoke-virtual {v2, v1}, Landroidx/recyclerview/widget/RecyclerView;->setItemAnimator(Lbsd;)V
+    const/4 v2, -0x2
 
-    invoke-virtual {v2, v0}, Landroid/view/ViewGroup;->setClipChildren(Z)V
+    invoke-direct {p3, v1, v2, v0}, Landroid/widget/FrameLayout$LayoutParams;-><init>(III)V
+
+    invoke-virtual {p2, p3}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    const/4 p3, 0x0
+
+    invoke-virtual {p2, p3}, Lu7b;->setEnabled(Z)V
+
+    sget-object v0, Lp7b;->d:Lp7b;
+
+    invoke-virtual {p2, v0}, Lu7b;->setAppearance(Lp7b;)V
+
+    sget-object v0, Ls7b;->c:Ls7b;
+
+    invoke-virtual {p2, v0}, Lu7b;->setSize(Ls7b;)V
+
+    sget-object v0, Lr7b;->a:Lr7b;
+
+    invoke-virtual {p2, v0}, Lu7b;->setMode(Lr7b;)V
+
+    sget v0, Lmdb;->h:I
+
+    invoke-virtual {p2, v0}, Lu7b;->setText(I)V
+
+    new-instance v0, Lcj6;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v0, p0, v3}, Lcj6;-><init>(Lone/me/folders/pickerfolders/FoldersPickerScreen;I)V
+
+    invoke-static {p2, v0}, Lwuj;->c(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+
+    new-instance v0, Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+
+    move-result-object v3
+
+    const/4 v4, 0x0
+
+    invoke-direct {v0, v3, v4}, Landroidx/recyclerview/widget/RecyclerView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+
+    sget v3, Lkdb;->m:I
+
+    invoke-virtual {v0, v3}, Landroid/view/View;->setId(I)V
+
+    new-instance v3, Landroid/widget/LinearLayout$LayoutParams;
+
+    invoke-direct {v3, v1, v1}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
+
+    invoke-virtual {v0, v3}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    invoke-virtual {v0, v4}, Landroidx/recyclerview/widget/RecyclerView;->setItemAnimator(Lxxd;)V
+
+    invoke-virtual {v0, p3}, Landroid/view/ViewGroup;->setClipChildren(Z)V
 
     new-instance v3, Landroidx/recyclerview/widget/LinearLayoutManager;
 
-    invoke-virtual {v2}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     invoke-direct {v3}, Landroidx/recyclerview/widget/LinearLayoutManager;-><init>()V
 
-    invoke-virtual {v2, v3}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/a;)V
+    invoke-virtual {v0, v3}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/a;)V
 
-    iget-object v3, p0, Lone/me/folders/pickerfolders/FoldersPickerScreen;->d:Lnf6;
+    iget-object v3, p0, Lone/me/folders/pickerfolders/FoldersPickerScreen;->d:Lmh6;
 
-    invoke-virtual {v2, v3}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Lwrd;)V
+    invoke-virtual {v0, v3}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Lsxd;)V
 
-    int-to-float p3, p3
+    const/4 v3, 0x6
 
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+    int-to-float v3, v3
 
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v3, p3
-
-    invoke-static {v3}, Lq7j;->c(F)I
-
-    move-result v3
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
 
     move-result-object v5
 
@@ -465,123 +463,155 @@
 
     iget v5, v5, Landroid/util/DisplayMetrics;->density:F
 
-    mul-float/2addr p3, v5
+    mul-float/2addr v5, v3
 
-    invoke-static {p3}, Lq7j;->c(F)I
-
-    move-result p3
-
-    invoke-virtual {v2}, Landroid/view/View;->getPaddingTop()I
+    invoke-static {v5}, Lmhj;->f(F)I
 
     move-result v5
 
-    invoke-virtual {v2}, Landroid/view/View;->getPaddingBottom()I
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v6
+
+    iget v6, v6, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v3, v6
+
+    invoke-static {v3}, Lmhj;->f(F)I
+
+    move-result v3
+
+    invoke-virtual {v0}, Landroid/view/View;->getPaddingTop()I
 
     move-result v6
 
-    invoke-virtual {v2, v3, v5, p3, v6}, Landroid/view/View;->setPadding(IIII)V
+    invoke-virtual {v0}, Landroid/view/View;->getPaddingBottom()I
 
-    new-instance p3, Lah6;
+    move-result v7
 
-    const/4 v3, 0x1
+    invoke-virtual {v0, v5, v6, v3, v7}, Landroid/view/View;->setPadding(IIII)V
 
-    invoke-direct {p3, p0, v3}, Lah6;-><init>(Lone/me/folders/pickerfolders/FoldersPickerScreen;I)V
+    new-instance v3, Lbj6;
 
-    new-instance v3, Lkb3;
+    const/4 v5, 0x1
 
-    new-instance v5, Lch6;
+    invoke-direct {v3, p0, v5}, Lbj6;-><init>(Lone/me/folders/pickerfolders/FoldersPickerScreen;I)V
 
-    const/4 v6, 0x0
+    new-instance v5, Lcd3;
 
-    invoke-direct {v5, v2, v6}, Lch6;-><init>(Landroidx/recyclerview/widget/RecyclerView;I)V
+    new-instance v6, Ldj6;
 
-    new-instance v6, Lah6;
+    const/4 v7, 0x0
 
-    const/4 v7, 0x2
+    invoke-direct {v6, v0, v7}, Ldj6;-><init>(Landroidx/recyclerview/widget/RecyclerView;I)V
 
-    invoke-direct {v6, p0, v7}, Lah6;-><init>(Lone/me/folders/pickerfolders/FoldersPickerScreen;I)V
+    new-instance v7, Lbj6;
 
-    invoke-direct {v3, v5, v6, p3, p3}, Lkb3;-><init>(Llq6;Lnq6;Lnq6;Lnq6;)V
+    const/4 v8, 0x2
 
-    invoke-virtual {v2, v3}, Landroidx/recyclerview/widget/RecyclerView;->j(Lcsd;)V
+    invoke-direct {v7, p0, v8}, Lbj6;-><init>(Lone/me/folders/pickerfolders/FoldersPickerScreen;I)V
 
-    new-instance p3, Lxl4;
+    invoke-direct {v5, v6, v7, v3, v3}, Lcd3;-><init>(Lis6;Lks6;Lks6;Lks6;)V
 
-    invoke-direct {p3, v2}, Lxl4;-><init>(Landroidx/recyclerview/widget/RecyclerView;)V
+    invoke-virtual {v0, v5, v1}, Landroidx/recyclerview/widget/RecyclerView;->j(Lyxd;I)V
 
-    invoke-virtual {v2, p3}, Landroidx/recyclerview/widget/RecyclerView;->l(Lhsd;)V
+    new-instance v3, Lmn4;
 
-    new-instance p3, Lu91;
+    invoke-direct {v3, v0}, Lmn4;-><init>(Landroidx/recyclerview/widget/RecyclerView;)V
 
-    const/4 v3, 0x7
+    invoke-virtual {v0, v3}, Landroidx/recyclerview/widget/RecyclerView;->l(Ldyd;)V
 
-    invoke-direct {p3, v3}, Lu91;-><init>(I)V
+    new-instance v3, Lha1;
 
-    invoke-virtual {v2, p3}, Landroidx/recyclerview/widget/RecyclerView;->j(Lcsd;)V
+    const/4 v5, 0x7
 
-    new-instance p3, Landroidx/constraintlayout/widget/ConstraintLayout;
+    invoke-direct {v3, v5}, Lha1;-><init>(I)V
+
+    invoke-virtual {v0, v3, v1}, Landroidx/recyclerview/widget/RecyclerView;->j(Lyxd;I)V
+
+    new-instance v1, Landroidx/constraintlayout/widget/ConstraintLayout;
 
     invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
-    invoke-direct {p3, v3}, Landroidx/constraintlayout/widget/ConstraintLayout;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, v3}, Landroidx/constraintlayout/widget/ConstraintLayout;-><init>(Landroid/content/Context;)V
 
-    sget v3, Lvbb;->n:I
+    sget v3, Lkdb;->n:I
 
-    invoke-virtual {p3, v3}, Landroidx/constraintlayout/widget/ConstraintLayout;->setId(I)V
+    invoke-virtual {v1, v3}, Landroidx/constraintlayout/widget/ConstraintLayout;->setId(I)V
 
-    invoke-virtual {p3, v0}, Landroid/view/ViewGroup;->setClipChildren(Z)V
+    invoke-virtual {v1, p3}, Landroid/view/ViewGroup;->setClipChildren(Z)V
 
-    new-instance v3, Lfx3;
+    new-instance v3, Lxx3;
 
-    invoke-direct {v3, v0, v4}, Lfx3;-><init>(II)V
+    invoke-direct {v3, p3, v2}, Lxx3;-><init>(II)V
 
-    iput v0, v3, Lfx3;->i:I
+    iput p3, v3, Lxx3;->i:I
 
-    iput v0, v3, Lfx3;->e:I
+    iput p3, v3, Lxx3;->e:I
 
-    iput v0, v3, Lfx3;->h:I
+    iput p3, v3, Lxx3;->h:I
 
-    invoke-virtual {p3, p1, v3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v1, p1, v3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    new-instance v3, Lfx3;
+    new-instance v3, Lxx3;
 
-    invoke-direct {v3, v0, v0}, Lfx3;-><init>(II)V
+    invoke-direct {v3, p3, p3}, Lxx3;-><init>(II)V
 
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
     move-result p1
 
-    iput p1, v3, Lfx3;->j:I
+    iput p1, v3, Lxx3;->j:I
 
-    iput v0, v3, Lfx3;->e:I
+    iput p3, v3, Lxx3;->e:I
 
-    iput v0, v3, Lfx3;->h:I
+    iput p3, v3, Lxx3;->h:I
 
     invoke-virtual {p2}, Landroid/view/View;->getId()I
 
     move-result p1
 
-    iput p1, v3, Lfx3;->k:I
+    iput p1, v3, Lxx3;->k:I
 
-    invoke-virtual {p3, v2, v3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v1, v0, v3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    new-instance p1, Lfx3;
+    new-instance p1, Lxx3;
 
-    invoke-direct {p1, v0, v4}, Lfx3;-><init>(II)V
+    invoke-direct {p1, p3, v2}, Lxx3;-><init>(II)V
 
-    iput v0, p1, Lfx3;->e:I
+    iput p3, p1, Lxx3;->e:I
 
-    iput v0, p1, Lfx3;->h:I
+    iput p3, p1, Lxx3;->h:I
 
-    iput v0, p1, Lfx3;->l:I
+    iput p3, p1, Lxx3;->l:I
 
-    const/16 v2, 0xc
+    const/16 v0, 0xc
 
-    int-to-float v2, v2
+    int-to-float v0, v0
 
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v2
+
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v2, v0
+
+    invoke-static {v2}, Lmhj;->f(F)I
+
+    move-result v2
+
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -591,29 +621,13 @@
 
     iget v3, v3, Landroid/util/DisplayMetrics;->density:F
 
-    mul-float/2addr v3, v2
+    mul-float/2addr v3, v0
 
-    invoke-static {v3}, Lq7j;->c(F)I
+    invoke-static {v3}, Lmhj;->f(F)I
 
     move-result v3
 
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v4
-
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v4, v2
-
-    invoke-static {v4}, Lq7j;->c(F)I
-
-    move-result v4
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
 
     move-result-object v5
 
@@ -623,147 +637,133 @@
 
     iget v5, v5, Landroid/util/DisplayMetrics;->density:F
 
-    mul-float/2addr v2, v5
+    mul-float/2addr v0, v5
 
-    invoke-static {v2}, Lq7j;->c(F)I
+    invoke-static {v0}, Lmhj;->f(F)I
 
-    move-result v2
+    move-result v0
 
-    invoke-virtual {p1, v3, v0, v4, v2}, Landroid/view/ViewGroup$MarginLayoutParams;->setMargins(IIII)V
+    invoke-virtual {p1, v2, p3, v3, v0}, Landroid/view/ViewGroup$MarginLayoutParams;->setMargins(IIII)V
 
-    invoke-virtual {p3, p2, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v1, p2, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    new-instance p1, Lfh6;
+    new-instance p1, Lfj6;
 
     const/4 p2, 0x3
 
-    invoke-direct {p1, p2, v1, v0}, Lfh6;-><init>(ILkotlin/coroutines/Continuation;I)V
+    invoke-direct {p1, p2, v4, p3}, Lfj6;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    invoke-static {p1, p3}, Lp6j;->b(Ldr6;Landroid/view/View;)V
+    invoke-static {p1, v1}, Lxej;->l(Lat6;Landroid/view/View;)V
 
-    return-object p3
+    return-object v1
 .end method
 
 .method public final onViewCreated(Landroid/view/View;)V
     .locals 5
 
-    invoke-virtual {p0}, Lone/me/folders/pickerfolders/FoldersPickerScreen;->z0()Loh6;
+    invoke-virtual {p0}, Lone/me/folders/pickerfolders/FoldersPickerScreen;->H0()Loj6;
 
     move-result-object p1
 
-    iget-object p1, p1, Loh6;->t0:Lpld;
+    iget-object p1, p1, Loj6;->s0:Lmrd;
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lj88;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lj88;->p()Ll88;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lab8;
 
     move-result-object v0
 
-    sget-object v1, Lo78;->d:Lo78;
+    invoke-interface {v0}, Lab8;->p()Lcb8;
 
-    invoke-static {p1, v0, v1}, Lmt0;->b(Ld76;Ll88;Lo78;)Lpw1;
+    move-result-object v0
+
+    sget-object v1, Lga8;->d:Lga8;
+
+    invoke-static {p1, v0, v1}, Lsea;->b(Lb96;Lcb8;Lga8;)Lsx1;
 
     move-result-object p1
 
-    new-instance v0, Lgh6;
+    new-instance v0, Lgj6;
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v2, p0}, Lgh6;-><init>(Lkotlin/coroutines/Continuation;Lone/me/folders/pickerfolders/FoldersPickerScreen;)V
+    invoke-direct {v0, v2, p0}, Lgj6;-><init>(Lkotlin/coroutines/Continuation;Lone/me/folders/pickerfolders/FoldersPickerScreen;)V
 
-    new-instance v3, Lm96;
+    new-instance v3, Llb6;
 
     const/4 v4, 0x1
 
-    invoke-direct {v3, p1, v0, v4}, Lm96;-><init>(Ld76;Lbr6;I)V
+    invoke-direct {v3, p1, v0, v4}, Llb6;-><init>(Lb96;Lys6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lw78;
-
-    move-result-object p1
-
-    invoke-static {v3, p1}, Lgu0;->x(Ld76;Lzb4;)Lmmf;
-
-    invoke-virtual {p0}, Lone/me/folders/pickerfolders/FoldersPickerScreen;->z0()Loh6;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Loa8;
 
     move-result-object p1
 
-    iget-object p1, p1, Loh6;->y0:Lpld;
+    invoke-static {v3, p1}, Lzka;->w(Lb96;Lnd4;)Lcuf;
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lj88;
+    invoke-virtual {p0}, Lone/me/folders/pickerfolders/FoldersPickerScreen;->H0()Loj6;
+
+    move-result-object p1
+
+    iget-object p1, p1, Loj6;->x0:Lmrd;
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lab8;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lj88;->p()Ll88;
+    invoke-interface {v0}, Lab8;->p()Lcb8;
 
     move-result-object v0
 
-    invoke-static {p1, v0, v1}, Lmt0;->b(Ld76;Ll88;Lo78;)Lpw1;
+    invoke-static {p1, v0, v1}, Lsea;->b(Lb96;Lcb8;Lga8;)Lsx1;
 
     move-result-object p1
 
-    new-instance v0, Lhh6;
+    new-instance v0, Lhj6;
 
-    invoke-direct {v0, v2, p0}, Lhh6;-><init>(Lkotlin/coroutines/Continuation;Lone/me/folders/pickerfolders/FoldersPickerScreen;)V
+    invoke-direct {v0, v2, p0}, Lhj6;-><init>(Lkotlin/coroutines/Continuation;Lone/me/folders/pickerfolders/FoldersPickerScreen;)V
 
-    new-instance v3, Lm96;
+    new-instance v3, Llb6;
 
-    invoke-direct {v3, p1, v0, v4}, Lm96;-><init>(Ld76;Lbr6;I)V
+    invoke-direct {v3, p1, v0, v4}, Llb6;-><init>(Lb96;Lys6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lw78;
-
-    move-result-object p1
-
-    invoke-static {v3, p1}, Lgu0;->x(Ld76;Lzb4;)Lmmf;
-
-    invoke-virtual {p0}, Lone/me/folders/pickerfolders/FoldersPickerScreen;->z0()Loh6;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Loa8;
 
     move-result-object p1
 
-    iget-object p1, p1, Loh6;->v0:Lpld;
+    invoke-static {v3, p1}, Lzka;->w(Lb96;Lnd4;)Lcuf;
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lj88;
+    invoke-virtual {p0}, Lone/me/folders/pickerfolders/FoldersPickerScreen;->H0()Loj6;
+
+    move-result-object p1
+
+    iget-object p1, p1, Loj6;->u0:Lmrd;
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lab8;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lj88;->p()Ll88;
+    invoke-interface {v0}, Lab8;->p()Lcb8;
 
     move-result-object v0
 
-    invoke-static {p1, v0, v1}, Lmt0;->b(Ld76;Ll88;Lo78;)Lpw1;
+    invoke-static {p1, v0, v1}, Lsea;->b(Lb96;Lcb8;Lga8;)Lsx1;
 
     move-result-object p1
 
-    new-instance v0, Lih6;
+    new-instance v0, Lij6;
 
-    invoke-direct {v0, v2, p0}, Lih6;-><init>(Lkotlin/coroutines/Continuation;Lone/me/folders/pickerfolders/FoldersPickerScreen;)V
+    invoke-direct {v0, v2, p0}, Lij6;-><init>(Lkotlin/coroutines/Continuation;Lone/me/folders/pickerfolders/FoldersPickerScreen;)V
 
-    new-instance v1, Lm96;
+    new-instance v1, Llb6;
 
     const/4 v2, 0x1
 
-    invoke-direct {v1, p1, v0, v2}, Lm96;-><init>(Ld76;Lbr6;I)V
+    invoke-direct {v1, p1, v0, v2}, Llb6;-><init>(Lb96;Lys6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lw78;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Loa8;
 
     move-result-object p1
 
-    invoke-static {v1, p1}, Lgu0;->x(Ld76;Lzb4;)Lmmf;
+    invoke-static {v1, p1}, Lzka;->w(Lb96;Lnd4;)Lcuf;
 
     return-void
-.end method
-
-.method public final z0()Loh6;
-    .locals 1
-
-    iget-object v0, p0, Lone/me/folders/pickerfolders/FoldersPickerScreen;->c:Lo58;
-
-    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Loh6;
-
-    return-object v0
 .end method

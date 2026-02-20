@@ -1,251 +1,1079 @@
 .class public final Lwk6;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final X:J
+
+.field public static final o:Ljava/lang/String;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/chats/forward/ForwardPickerScreen;
+.field public final a:Landroid/content/Context;
 
-.field public final synthetic Y:Landroid/view/ViewGroup;
+.field public final b:Lzqi;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final c:Lgae;
+
+.field public d:I
 
 
 # direct methods
-.method public constructor <init>(Lone/me/chats/forward/ForwardPickerScreen;Landroid/view/ViewGroup;Lkotlin/coroutines/Continuation;)V
+.method static constructor <clinit>()V
+    .locals 3
+
+    const-string v0, "ForceStopRunnable"
+
+    invoke-static {v0}, Lm0j;->n(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lwk6;->o:Ljava/lang/String;
+
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->DAYS:Ljava/util/concurrent/TimeUnit;
+
+    const-wide/16 v1, 0xe42
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+
+    move-result-wide v0
+
+    sput-wide v0, Lwk6;->X:J
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;Lzqi;)V
     .locals 0
 
-    iput-object p1, p0, Lwk6;->X:Lone/me/chats/forward/ForwardPickerScreen;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lwk6;->Y:Landroid/view/ViewGroup;
+    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
-    const/4 p1, 0x2
+    move-result-object p1
 
-    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lwk6;->a:Landroid/content/Context;
 
+    iput-object p2, p0, Lwk6;->b:Lzqi;
+
+    iget-object p1, p2, Lzqi;->g:Lgae;
+
+    iput-object p1, p0, Lwk6;->c:Lgae;
+
+    const/4 p1, 0x0
+
+    iput p1, p0, Lwk6;->d:I
+
+    return-void
+.end method
+
+.method public static c(Landroid/content/Context;)V
+    .locals 5
+
+    const-string v0, "alarm"
+
+    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/app/AlarmManager;
+
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v2, 0x1f
+
+    if-lt v1, v2, :cond_0
+
+    const/high16 v1, 0xa000000
+
+    goto :goto_0
+
+    :cond_0
+    const/high16 v1, 0x8000000
+
+    :goto_0
+    new-instance v2, Landroid/content/Intent;
+
+    invoke-direct {v2}, Landroid/content/Intent;-><init>()V
+
+    new-instance v3, Landroid/content/ComponentName;
+
+    const-class v4, Landroidx/work/impl/utils/ForceStopRunnable$BroadcastReceiver;
+
+    invoke-direct {v3, p0, v4}, Landroid/content/ComponentName;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    invoke-virtual {v2, v3}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
+
+    const-string v3, "ACTION_FORCE_STOP_RESCHEDULE"
+
+    invoke-virtual {v2, v3}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+
+    const/4 v3, -0x1
+
+    invoke-static {p0, v3, v2, v1}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
+
+    move-result-object p0
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v1
+
+    sget-wide v3, Lwk6;->X:J
+
+    add-long/2addr v1, v3
+
+    if-eqz v0, :cond_1
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v0, v3, v1, v2, p0}, Landroid/app/AlarmManager;->setExact(IJLandroid/app/PendingIntent;)V
+
+    :cond_1
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a()V
+    .locals 16
 
-    check-cast p1, Ldr9;
+    move-object/from16 v1, p0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const-string v2, "last_force_stop_ms"
 
-    invoke-virtual {p0, p1, p2}, Lwk6;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v3, v1, Lwk6;->c:Lgae;
 
-    move-result-object p1
+    sget-object v0, Lugg;->o:Ljava/lang/String;
 
-    check-cast p1, Lwk6;
+    const-string v0, "jobscheduler"
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    iget-object v4, v1, Lwk6;->a:Landroid/content/Context;
 
-    invoke-virtual {p1, p2}, Lwk6;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
-
-    new-instance v0, Lwk6;
-
-    iget-object v1, p0, Lwk6;->X:Lone/me/chats/forward/ForwardPickerScreen;
-
-    iget-object v2, p0, Lwk6;->Y:Landroid/view/ViewGroup;
-
-    invoke-direct {v0, v1, v2, p2}, Lwk6;-><init>(Lone/me/chats/forward/ForwardPickerScreen;Landroid/view/ViewGroup;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lwk6;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 14
-
-    iget-object v0, p0, Lwk6;->o:Ljava/lang/Object;
-
-    check-cast v0, Ldr9;
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lwk6;->X:Lone/me/chats/forward/ForwardPickerScreen;
-
-    iget-object v1, p1, Lone/me/chats/forward/ForwardPickerScreen;->F0:Lw4e;
-
-    if-nez v1, :cond_0
-
-    goto/16 :goto_0
-
-    :cond_0
-    iget v0, v0, Ldr9;->a:I
-
-    invoke-static {v0}, Lt02;->t(I)I
-
-    move-result v0
-
-    iget-object v2, p0, Lwk6;->Y:Landroid/view/ViewGroup;
-
-    const/4 v3, 0x1
-
-    const/4 v4, 0x0
-
-    if-eqz v0, :cond_6
-
-    if-eq v0, v3, :cond_3
-
-    const/4 v1, 0x2
-
-    if-eq v0, v1, :cond_1
-
-    goto/16 :goto_0
-
-    :cond_1
-    iget-object v0, p1, Lone/me/chats/forward/ForwardPickerScreen;->G0:Lxk6;
-
-    iget-object v0, v0, Lxk6;->b:Lone/me/sdk/arch/Widget;
-
-    check-cast v0, Lone/me/chats/forward/ForwardPickerScreen;
-
-    iget-object v0, v0, Lone/me/chats/forward/ForwardPickerScreen;->B0:Lro0;
-
-    invoke-virtual {v0}, Lro0;->e()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    invoke-virtual {v0}, Lro0;->getValue()Ljava/lang/Object;
+    invoke-virtual {v4, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Leo9;
+    check-cast v0, Landroid/app/job/JobScheduler;
 
-    invoke-virtual {v0, v3}, Leo9;->e(Z)V
+    invoke-static {v4, v0}, Lugg;->d(Landroid/content/Context;Landroid/app/job/JobScheduler;)Ljava/util/ArrayList;
 
-    :cond_2
-    invoke-virtual {p1}, Lone/me/chats/forward/ForwardPickerScreen;->M0()Leo9;
+    move-result-object v5
 
-    move-result-object v0
+    iget-object v6, v1, Lwk6;->b:Lzqi;
 
-    sget v1, Lv5e;->c1:I
+    iget-object v7, v6, Lzqi;->c:Landroidx/work/impl/WorkDatabase;
 
-    invoke-virtual {v0, v1}, Leo9;->setLeftIcon(I)V
+    invoke-virtual {v7}, Landroidx/work/impl/WorkDatabase;->A()Lsgg;
 
-    sget-object v0, La48;->f:Lspf;
+    move-result-object v7
 
-    new-instance v1, Lr83;
+    invoke-virtual {v7}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/16 v5, 0xf
+    sget-object v8, Li9e;->s0:Ljava/util/TreeMap;
 
-    invoke-direct {v1, v0, v5}, Lr83;-><init>(Ld76;I)V
+    const/4 v8, 0x0
 
-    new-instance v0, Lr83;
+    const-string v9, "SELECT DISTINCT work_spec_id FROM SystemIdInfo"
 
-    const/16 v5, 0x9
+    invoke-static {v8, v9}, Lgvj;->a(ILjava/lang/String;)Li9e;
 
-    invoke-direct {v0, v1, v5}, Lr83;-><init>(Ld76;I)V
+    move-result-object v9
 
-    new-instance v1, Lzk6;
+    iget-object v7, v7, Lsgg;->b:Ljava/lang/Object;
 
-    invoke-direct {v1, v2, v4}, Lzk6;-><init>(Landroid/view/ViewGroup;Lkotlin/coroutines/Continuation;)V
+    check-cast v7, Landroidx/work/impl/WorkDatabase_Impl;
 
-    new-instance v2, Lm96;
+    invoke-virtual {v7}, Lm8e;->b()V
 
-    invoke-direct {v2, v0, v1, v3}, Lm96;-><init>(Ld76;Lbr6;I)V
+    invoke-static {v7, v9, v8}, Lfuj;->i(Lm8e;Lecg;Z)Landroid/database/Cursor;
 
-    invoke-virtual {p1}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lw78;
+    move-result-object v7
 
-    move-result-object p1
+    :try_start_0
+    new-instance v10, Ljava/util/ArrayList;
 
-    invoke-static {v2, p1}, Lgu0;->x(Ld76;Lzb4;)Lmmf;
+    invoke-interface {v7}, Landroid/database/Cursor;->getCount()I
 
-    goto :goto_0
+    move-result v11
 
-    :cond_3
-    invoke-virtual {v1}, Lw4e;->n()Z
+    invoke-direct {v10, v11}, Ljava/util/ArrayList;-><init>(I)V
 
-    move-result v0
+    :goto_0
+    invoke-interface {v7}, Landroid/database/Cursor;->moveToNext()Z
 
-    if-nez v0, :cond_4
+    move-result v11
 
-    new-instance v5, Lone/me/keyboardmedia/MediaKeyboardWidget;
+    if-eqz v11, :cond_1
 
-    iget-object v6, p1, Lone/me/chats/picker/AbstractPickerScreen;->b:Ljava/lang/String;
+    invoke-interface {v7, v8}, Landroid/database/Cursor;->isNull(I)Z
 
-    const/16 v12, 0x1a
+    move-result v11
 
-    const/4 v13, 0x0
-
-    const-wide/16 v7, 0x0
-
-    const/4 v9, 0x1
-
-    const/4 v10, 0x0
+    if-eqz v11, :cond_0
 
     const/4 v11, 0x0
 
-    invoke-direct/range {v5 .. v13}, Lone/me/keyboardmedia/MediaKeyboardWidget;-><init>(Ljava/lang/String;JZZLjava/util/List;ILso4;)V
+    goto :goto_1
 
-    invoke-static {v5, v4, v4}, Lwmj;->a(La94;Lih;Lih;)Lz4e;
+    :cond_0
+    invoke-interface {v7, v8}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v11
 
-    invoke-virtual {v1, v0}, Lw4e;->S(Lz4e;)V
-
-    :cond_4
-    sget-object v0, Lxsh;->a:Ljava/util/WeakHashMap;
-
-    invoke-static {v2, v4}, Llsh;->u(Landroid/view/View;Ll1b;)V
-
-    iget-object v0, p1, Lone/me/chats/forward/ForwardPickerScreen;->H0:Lu49;
-
-    if-eqz v0, :cond_5
-
-    invoke-virtual {v0}, Lu49;->f()V
-
-    :cond_5
-    invoke-virtual {p1}, Lone/me/chats/forward/ForwardPickerScreen;->M0()Leo9;
-
-    move-result-object p1
-
-    sget v0, Lv5e;->g1:I
-
-    invoke-virtual {p1, v0}, Leo9;->setLeftIcon(I)V
+    :goto_1
+    invoke-virtual {v10, v11}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
+    :catchall_0
+    move-exception v0
+
+    goto/16 :goto_11
+
+    :cond_1
+    invoke-interface {v7}, Landroid/database/Cursor;->close()V
+
+    invoke-virtual {v9}, Li9e;->H()V
+
+    if-eqz v5, :cond_2
+
+    invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
+
+    move-result v7
+
+    goto :goto_2
+
+    :cond_2
+    move v7, v8
+
+    :goto_2
+    new-instance v9, Ljava/util/HashSet;
+
+    invoke-direct {v9, v7}, Ljava/util/HashSet;-><init>(I)V
+
+    if-eqz v5, :cond_4
+
+    invoke-virtual {v5}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v7
+
+    if-nez v7, :cond_4
+
+    invoke-virtual {v5}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v5
+
+    :goto_3
+    invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v7
+
+    if-eqz v7, :cond_4
+
+    invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v7
+
+    check-cast v7, Landroid/app/job/JobInfo;
+
+    invoke-static {v7}, Lugg;->f(Landroid/app/job/JobInfo;)Lsqi;
+
+    move-result-object v11
+
+    if-eqz v11, :cond_3
+
+    iget-object v7, v11, Lsqi;->a:Ljava/lang/String;
+
+    invoke-virtual {v9, v7}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    goto :goto_3
+
+    :cond_3
+    invoke-virtual {v7}, Landroid/app/job/JobInfo;->getId()I
+
+    move-result v7
+
+    invoke-static {v0, v7}, Lugg;->a(Landroid/app/job/JobScheduler;I)V
+
+    goto :goto_3
+
+    :cond_4
+    invoke-virtual {v10}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :cond_5
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_6
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Ljava/lang/String;
+
+    invoke-virtual {v9, v5}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-nez v5, :cond_5
+
+    invoke-static {}, Lm0j;->g()Lm0j;
+
+    move-result-object v0
+
+    sget-object v5, Lugg;->o:Ljava/lang/String;
+
+    const-string v9, "Reconciling jobs"
+
+    invoke-virtual {v0, v5, v9}, Lm0j;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 v0, 0x1
+
+    goto :goto_4
+
     :cond_6
-    iget-object v0, p1, Lone/me/chats/forward/ForwardPickerScreen;->H0:Lu49;
+    move v0, v8
 
-    if-eqz v0, :cond_7
+    :goto_4
+    const-wide/16 v11, -0x1
 
-    sget-object v1, Lu49;->m:[Lz28;
+    if-eqz v0, :cond_8
 
-    invoke-virtual {v0, v3}, Lu49;->e(Z)V
+    iget-object v5, v6, Lzqi;->c:Landroidx/work/impl/WorkDatabase;
+
+    invoke-virtual {v5}, Lm8e;->c()V
+
+    :try_start_1
+    invoke-virtual {v5}, Landroidx/work/impl/WorkDatabase;->D()Lqri;
+
+    move-result-object v9
+
+    invoke-virtual {v10}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v10
+
+    :goto_5
+    invoke-interface {v10}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v13
+
+    if-eqz v13, :cond_7
+
+    invoke-interface {v10}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v13
+
+    check-cast v13, Ljava/lang/String;
+
+    invoke-virtual {v9, v11, v12, v13}, Lqri;->r(JLjava/lang/String;)V
+
+    goto :goto_5
+
+    :catchall_1
+    move-exception v0
+
+    goto :goto_6
 
     :cond_7
-    invoke-virtual {p1}, Lone/me/chats/forward/ForwardPickerScreen;->M0()Leo9;
+    invoke-virtual {v5}, Lm8e;->w()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    move-result-object p1
+    invoke-virtual {v5}, Lm8e;->h()V
 
-    sget v0, Lv5e;->c1:I
+    goto :goto_7
 
-    invoke-virtual {p1, v0}, Leo9;->setLeftIcon(I)V
+    :goto_6
+    invoke-virtual {v5}, Lm8e;->h()V
 
-    sget-object p1, Lone/me/chats/forward/ForwardPickerScreen;->K0:Les7;
+    throw v0
 
-    invoke-static {v2, p1, v4}, Lfui;->b(Landroid/view/View;Les7;Lnq6;)V
+    :cond_8
+    :goto_7
+    iget-object v5, v6, Lzqi;->c:Landroidx/work/impl/WorkDatabase;
 
+    invoke-virtual {v5}, Landroidx/work/impl/WorkDatabase;->D()Lqri;
+
+    move-result-object v9
+
+    invoke-virtual {v5}, Landroidx/work/impl/WorkDatabase;->C()Lhri;
+
+    move-result-object v10
+
+    invoke-virtual {v5}, Lm8e;->c()V
+
+    :try_start_2
+    invoke-virtual {v9}, Lqri;->l()Ljava/util/ArrayList;
+
+    move-result-object v13
+
+    invoke-virtual {v13}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v14
+
+    if-nez v14, :cond_9
+
+    invoke-virtual {v13}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v13
+
+    :goto_8
+    invoke-interface {v13}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v15
+
+    if-eqz v15, :cond_9
+
+    invoke-interface {v13}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v15
+
+    check-cast v15, Lori;
+
+    sget-object v7, Ltqi;->a:Ltqi;
+
+    iget-object v8, v15, Lori;->a:Ljava/lang/String;
+
+    invoke-virtual {v9, v7, v8}, Lqri;->w(Ltqi;Ljava/lang/String;)V
+
+    iget-object v7, v15, Lori;->a:Ljava/lang/String;
+
+    invoke-virtual {v9, v11, v12, v7}, Lqri;->r(JLjava/lang/String;)V
+
+    const/4 v8, 0x0
+
+    goto :goto_8
+
+    :catchall_2
+    move-exception v0
+
+    goto/16 :goto_10
+
+    :cond_9
+    iget-object v7, v10, Lhri;->a:Ljava/lang/Object;
+
+    check-cast v7, Landroidx/work/impl/WorkDatabase_Impl;
+
+    invoke-virtual {v7}, Lm8e;->b()V
+
+    iget-object v8, v10, Lhri;->c:Ljava/lang/Object;
+
+    check-cast v8, Lrgg;
+
+    invoke-virtual {v8}, Le3;->a()Lbr6;
+
+    move-result-object v9
+
+    invoke-virtual {v7}, Lm8e;->c()V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_2
+
+    :try_start_3
+    invoke-virtual {v9}, Lbr6;->l()I
+
+    invoke-virtual {v7}, Lm8e;->w()V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_3
+
+    :try_start_4
+    invoke-virtual {v7}, Lm8e;->h()V
+
+    invoke-virtual {v8, v9}, Le3;->q(Lbr6;)V
+
+    invoke-virtual {v5}, Lm8e;->w()V
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_2
+
+    invoke-virtual {v5}, Lm8e;->h()V
+
+    if-eqz v14, :cond_b
+
+    if-eqz v0, :cond_a
+
+    goto :goto_9
+
+    :cond_a
+    const/4 v7, 0x0
+
+    goto :goto_a
+
+    :cond_b
+    :goto_9
+    const/4 v7, 0x1
+
+    :goto_a
+    iget-object v0, v6, Lzqi;->g:Lgae;
+
+    iget-object v0, v0, Lgae;->b:Ljava/lang/Object;
+
+    check-cast v0, Landroidx/work/impl/WorkDatabase;
+
+    invoke-virtual {v0}, Landroidx/work/impl/WorkDatabase;->z()Lilc;
+
+    move-result-object v0
+
+    const-string v5, "reschedule_needed"
+
+    invoke-virtual {v0, v5}, Lilc;->o(Ljava/lang/String;)Ljava/lang/Long;
+
+    move-result-object v0
+
+    const-wide/16 v8, 0x0
+
+    sget-object v10, Lwk6;->o:Ljava/lang/String;
+
+    if-eqz v0, :cond_c
+
+    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v11
+
+    const-wide/16 v13, 0x1
+
+    cmp-long v0, v11, v13
+
+    if-nez v0, :cond_c
+
+    invoke-static {}, Lm0j;->g()Lm0j;
+
+    move-result-object v0
+
+    const-string v2, "Rescheduling Workers."
+
+    invoke-virtual {v0, v10, v2}, Lm0j;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v6}, Lzqi;->g()V
+
+    iget-object v0, v6, Lzqi;->g:Lgae;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v2, Lhlc;
+
+    invoke-static {v8, v9}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v3
+
+    invoke-direct {v2, v5, v3}, Lhlc;-><init>(Ljava/lang/String;Ljava/lang/Long;)V
+
+    iget-object v0, v0, Lgae;->b:Ljava/lang/Object;
+
+    check-cast v0, Landroidx/work/impl/WorkDatabase;
+
+    invoke-virtual {v0}, Landroidx/work/impl/WorkDatabase;->z()Lilc;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2}, Lilc;->t(Lhlc;)V
+
+    return-void
+
+    :cond_c
+    :try_start_5
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v5, 0x1f
+
+    if-lt v0, v5, :cond_d
+
+    const/high16 v5, 0x22000000
+
+    goto :goto_b
+
+    :cond_d
+    const/high16 v5, 0x20000000
+
+    :goto_b
+    new-instance v11, Landroid/content/Intent;
+
+    invoke-direct {v11}, Landroid/content/Intent;-><init>()V
+
+    new-instance v12, Landroid/content/ComponentName;
+
+    const-class v13, Landroidx/work/impl/utils/ForceStopRunnable$BroadcastReceiver;
+
+    invoke-direct {v12, v4, v13}, Landroid/content/ComponentName;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    invoke-virtual {v11, v12}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
+
+    const-string v12, "ACTION_FORCE_STOP_RESCHEDULE"
+
+    invoke-virtual {v11, v12}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+
+    const/4 v12, -0x1
+
+    invoke-static {v4, v12, v11, v5}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
+
+    move-result-object v5
+
+    const/16 v11, 0x1e
+
+    if-lt v0, v11, :cond_11
+
+    if-eqz v5, :cond_e
+
+    invoke-virtual {v5}, Landroid/app/PendingIntent;->cancel()V
+
+    goto :goto_c
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_e
+
+    :catch_1
+    move-exception v0
+
+    goto :goto_e
+
+    :cond_e
+    :goto_c
+    const-string v0, "activity"
+
+    invoke-virtual {v4, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/app/ActivityManager;
+
+    invoke-static {v0}, Lz4;->u(Landroid/app/ActivityManager;)Ljava/util/List;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_12
+
+    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
+
+    move-result v4
+
+    if-nez v4, :cond_12
+
+    iget-object v4, v3, Lgae;->b:Ljava/lang/Object;
+
+    check-cast v4, Landroidx/work/impl/WorkDatabase;
+
+    invoke-virtual {v4}, Landroidx/work/impl/WorkDatabase;->z()Lilc;
+
+    move-result-object v4
+
+    invoke-virtual {v4, v2}, Lilc;->o(Ljava/lang/String;)Ljava/lang/Long;
+
+    move-result-object v4
+
+    if-eqz v4, :cond_f
+
+    invoke-virtual {v4}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v8
+
+    :cond_f
+    const/4 v4, 0x0
+
+    :goto_d
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v5
+
+    if-ge v4, v5, :cond_12
+
+    invoke-interface {v0, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v5
+
+    invoke-static {v5}, Lz4;->d(Ljava/lang/Object;)Landroid/app/ApplicationExitInfo;
+
+    move-result-object v5
+
+    invoke-static {v5}, Lz4;->b(Landroid/app/ApplicationExitInfo;)I
+
+    move-result v11
+
+    const/16 v12, 0xa
+
+    if-ne v11, v12, :cond_10
+
+    invoke-static {v5}, Lz4;->c(Landroid/app/ApplicationExitInfo;)J
+
+    move-result-wide v11
+
+    cmp-long v5, v11, v8
+
+    if-ltz v5, :cond_10
+
+    goto :goto_f
+
+    :cond_10
+    add-int/lit8 v4, v4, 0x1
+
+    goto :goto_d
+
+    :cond_11
+    if-nez v5, :cond_12
+
+    invoke-static {v4}, Lwk6;->c(Landroid/content/Context;)V
+    :try_end_5
+    .catch Ljava/lang/SecurityException; {:try_start_5 .. :try_end_5} :catch_1
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_5 .. :try_end_5} :catch_0
+
+    goto :goto_f
+
+    :cond_12
+    if-eqz v7, :cond_13
+
+    invoke-static {}, Lm0j;->g()Lm0j;
+
+    move-result-object v0
+
+    const-string v2, "Found unfinished work, scheduling it."
+
+    invoke-virtual {v0, v10, v2}, Lm0j;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, v6, Lzqi;->b:Lus3;
+
+    iget-object v2, v6, Lzqi;->c:Landroidx/work/impl/WorkDatabase;
+
+    iget-object v3, v6, Lzqi;->e:Ljava/util/List;
+
+    invoke-static {v0, v2, v3}, Lqie;->a(Lus3;Landroidx/work/impl/WorkDatabase;Ljava/util/List;)V
+
+    :cond_13
+    return-void
+
+    :goto_e
+    invoke-static {}, Lm0j;->g()Lm0j;
+
+    move-result-object v4
+
+    const-string v5, "Ignoring exception"
+
+    invoke-virtual {v4, v10, v5, v0}, Lm0j;->q(Ljava/lang/String;Ljava/lang/String;Ljava/lang/RuntimeException;)V
+
+    :goto_f
+    invoke-static {}, Lm0j;->g()Lm0j;
+
+    move-result-object v0
+
+    const-string v4, "Application was force-stopped, rescheduling."
+
+    invoke-virtual {v0, v10, v4}, Lm0j;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v6}, Lzqi;->g()V
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v4
+
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v0, Lhlc;
+
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v4
+
+    invoke-direct {v0, v2, v4}, Lhlc;-><init>(Ljava/lang/String;Ljava/lang/Long;)V
+
+    iget-object v2, v3, Lgae;->b:Ljava/lang/Object;
+
+    check-cast v2, Landroidx/work/impl/WorkDatabase;
+
+    invoke-virtual {v2}, Landroidx/work/impl/WorkDatabase;->z()Lilc;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0}, Lilc;->t(Lhlc;)V
+
+    return-void
+
+    :catchall_3
+    move-exception v0
+
+    :try_start_6
+    invoke-virtual {v7}, Lm8e;->h()V
+
+    invoke-virtual {v8, v9}, Le3;->q(Lbr6;)V
+
+    throw v0
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_2
+
+    :goto_10
+    invoke-virtual {v5}, Lm8e;->h()V
+
+    throw v0
+
+    :goto_11
+    invoke-interface {v7}, Landroid/database/Cursor;->close()V
+
+    invoke-virtual {v9}, Li9e;->H()V
+
+    throw v0
+.end method
+
+.method public final b()Z
+    .locals 5
+
+    iget-object v0, p0, Lwk6;->b:Lzqi;
+
+    iget-object v0, v0, Lzqi;->b:Lus3;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 v0, 0x0
+
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    sget-object v1, Lwk6;->o:Ljava/lang/String;
+
+    if-eqz v0, :cond_0
+
+    invoke-static {}, Lm0j;->g()Lm0j;
+
+    move-result-object v0
+
+    const-string v2, "The default process name was not specified."
+
+    invoke-virtual {v0, v1, v2}, Lm0j;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    iget-object v0, p0, Lwk6;->a:Landroid/content/Context;
+
+    invoke-static {v0}, Lwnc;->a(Landroid/content/Context;)Z
+
+    move-result v0
+
+    invoke-static {}, Lm0j;->g()Lm0j;
+
+    move-result-object v2
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "Is default app process = "
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v1, v3}, Lm0j;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    return v0
+.end method
+
+.method public final run()V
+    .locals 10
+
+    sget-object v0, Lwk6;->o:Ljava/lang/String;
+
+    iget-object v1, p0, Lwk6;->b:Lzqi;
+
+    :try_start_0
+    invoke-virtual {p0}, Lwk6;->b()Z
+
+    move-result v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-nez v2, :cond_0
+
+    invoke-virtual {v1}, Lzqi;->f()V
+
+    return-void
+
+    :catch_0
+    :cond_0
     :goto_0
-    sget-object p1, Lb3h;->a:Lb3h;
+    :try_start_1
+    iget-object v2, p0, Lwk6;->a:Landroid/content/Context;
 
-    return-object p1
+    invoke-static {v2}, Lahj;->f(Landroid/content/Context;)V
+    :try_end_1
+    .catch Landroid/database/sqlite/SQLiteException; {:try_start_1 .. :try_end_1} :catch_8
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :try_start_2
+    invoke-static {}, Lm0j;->g()Lm0j;
+
+    move-result-object v2
+
+    const-string v3, "Performing cleanup operations."
+
+    invoke-virtual {v2, v0, v3}, Lm0j;->c(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    :try_start_3
+    invoke-virtual {p0}, Lwk6;->a()V
+    :try_end_3
+    .catch Landroid/database/sqlite/SQLiteCantOpenDatabaseException; {:try_start_3 .. :try_end_3} :catch_7
+    .catch Landroid/database/sqlite/SQLiteDiskIOException; {:try_start_3 .. :try_end_3} :catch_6
+    .catch Landroid/database/sqlite/SQLiteDatabaseCorruptException; {:try_start_3 .. :try_end_3} :catch_5
+    .catch Landroid/database/sqlite/SQLiteDatabaseLockedException; {:try_start_3 .. :try_end_3} :catch_4
+    .catch Landroid/database/sqlite/SQLiteTableLockedException; {:try_start_3 .. :try_end_3} :catch_3
+    .catch Landroid/database/sqlite/SQLiteConstraintException; {:try_start_3 .. :try_end_3} :catch_2
+    .catch Landroid/database/sqlite/SQLiteAccessPermException; {:try_start_3 .. :try_end_3} :catch_1
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    invoke-virtual {v1}, Lzqi;->f()V
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_2
+
+    :catch_1
+    move-exception v2
+
+    goto :goto_1
+
+    :catch_2
+    move-exception v2
+
+    goto :goto_1
+
+    :catch_3
+    move-exception v2
+
+    goto :goto_1
+
+    :catch_4
+    move-exception v2
+
+    goto :goto_1
+
+    :catch_5
+    move-exception v2
+
+    goto :goto_1
+
+    :catch_6
+    move-exception v2
+
+    goto :goto_1
+
+    :catch_7
+    move-exception v2
+
+    :goto_1
+    :try_start_4
+    iget v3, p0, Lwk6;->d:I
+
+    add-int/lit8 v3, v3, 0x1
+
+    iput v3, p0, Lwk6;->d:I
+
+    const/4 v4, 0x3
+
+    if-ge v3, v4, :cond_1
+
+    int-to-long v3, v3
+
+    const-wide/16 v5, 0x12c
+
+    mul-long/2addr v3, v5
+
+    invoke-static {}, Lm0j;->g()Lm0j;
+
+    move-result-object v7
+
+    new-instance v8, Ljava/lang/StringBuilder;
+
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v9, "Retrying after "
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v7, v0, v3, v2}, Lm0j;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    iget v2, p0, Lwk6;->d:I
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+
+    int-to-long v2, v2
+
+    mul-long/2addr v2, v5
+
+    :try_start_5
+    invoke-static {v2, v3}, Ljava/lang/Thread;->sleep(J)V
+    :try_end_5
+    .catch Ljava/lang/InterruptedException; {:try_start_5 .. :try_end_5} :catch_0
+    .catchall {:try_start_5 .. :try_end_5} :catchall_0
+
+    goto :goto_0
+
+    :cond_1
+    :try_start_6
+    const-string v3, "The file system on the device is in a bad state. WorkManager cannot access the app\'s internal data store."
+
+    invoke-static {}, Lm0j;->g()Lm0j;
+
+    move-result-object v4
+
+    invoke-virtual {v4, v0, v3, v2}, Lm0j;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    invoke-direct {v0, v3, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    iget-object v2, v1, Lzqi;->b:Lus3;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    throw v0
+
+    :catch_8
+    move-exception v2
+
+    const-string v3, "Unexpected SQLite exception during migrations"
+
+    invoke-static {}, Lm0j;->g()Lm0j;
+
+    move-result-object v4
+
+    invoke-virtual {v4, v0, v3}, Lm0j;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    invoke-direct {v0, v3, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    iget-object v2, v1, Lzqi;->b:Lus3;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    throw v0
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_0
+
+    :goto_2
+    invoke-virtual {v1}, Lzqi;->f()V
+
+    throw v0
 .end method

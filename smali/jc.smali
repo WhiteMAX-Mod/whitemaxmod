@@ -1,194 +1,233 @@
 .class public final Ljc;
-.super Ljava/lang/Object;
+.super Lx0i;
 .source "SourceFile"
-
-# interfaces
-.implements Lsi4;
 
 
 # instance fields
-.field public final a:Lsi4;
+.field public final b:Lpqa;
 
-.field public final b:[B
+.field public final c:Lj88;
 
-.field public final c:[B
+.field public final d:Lhxf;
 
-.field public d:Ljavax/crypto/CipherInputStream;
+.field public final o:Lmrd;
 
 
 # direct methods
-.method public constructor <init>(Lsi4;[B[B)V
-    .locals 0
+.method public constructor <init>(Lj88;Lj88;Lpqa;)V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {}, Lqo1;->e()Lj88;
 
-    iput-object p1, p0, Ljc;->a:Lsi4;
+    move-result-object v0
 
-    iput-object p2, p0, Ljc;->b:[B
+    invoke-direct {p0}, Lx0i;-><init>()V
 
-    iput-object p3, p0, Ljc;->c:[B
+    iput-object p3, p0, Ljc;->b:Lpqa;
+
+    iput-object p1, p0, Ljc;->c:Lj88;
+
+    sget-object p3, Lgc;->c:Lgc;
+
+    invoke-static {p3}, Lixf;->a(Ljava/lang/Object;)Lhxf;
+
+    move-result-object p3
+
+    iput-object p3, p0, Ljc;->d:Lhxf;
+
+    new-instance v1, Lmrd;
+
+    invoke-direct {v1, p3}, Lmrd;-><init>(Lgia;)V
+
+    iput-object v1, p0, Ljc;->o:Lmrd;
+
+    invoke-interface {p1}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lu21;
+
+    check-cast p1, Lq31;
+
+    iget-object p1, p1, Lq31;->t0:Lhxf;
+
+    new-instance p3, Lic;
+
+    const/4 v1, 0x0
+
+    invoke-direct {p3, p2, p0, v1}, Lic;-><init>(Lj88;Ljc;Lkotlin/coroutines/Continuation;)V
+
+    new-instance p2, Llb6;
+
+    const/4 v1, 0x1
+
+    invoke-direct {p2, p1, p3, v1}, Llb6;-><init>(Lb96;Lys6;I)V
+
+    check-cast v0, Lbgg;
+
+    invoke-virtual {v0}, Lbgg;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lbjg;
+
+    check-cast p1, Lcbb;
+
+    invoke-virtual {p1}, Lcbb;->a()Lgd4;
+
+    move-result-object p1
+
+    invoke-static {p2, p1}, Lzka;->v(Lb96;Led4;)Lb96;
+
+    move-result-object p1
+
+    iget-object p2, p0, Lx0i;->a:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {p1, p2}, Lzka;->w(Lb96;Lnd4;)Lcuf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final G(Laj4;)J
-    .locals 4
+.method public final p(Z)V
+    .locals 11
 
-    :try_start_0
-    const-string v0, "AES/CBC/PKCS7Padding"
+    iget-object v0, p0, Ljc;->c:Lj88;
 
-    invoke-static {v0}, Ljavax/crypto/Cipher;->getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
 
     move-result-object v0
-    :try_end_0
-    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_0 .. :try_end_0} :catch_3
-    .catch Ljavax/crypto/NoSuchPaddingException; {:try_start_0 .. :try_end_0} :catch_2
 
-    new-instance v1, Ljavax/crypto/spec/SecretKeySpec;
+    check-cast v0, Lu21;
 
-    iget-object v2, p0, Ljc;->b:[B
+    check-cast v0, Lq31;
 
-    const-string v3, "AES"
+    sget-object v1, Ltej;->a:Lafb;
 
-    invoke-direct {v1, v2, v3}, Ljavax/crypto/spec/SecretKeySpec;-><init>([BLjava/lang/String;)V
-
-    new-instance v2, Ljavax/crypto/spec/IvParameterSpec;
-
-    iget-object v3, p0, Ljc;->c:[B
-
-    invoke-direct {v2, v3}, Ljavax/crypto/spec/IvParameterSpec;-><init>([B)V
-
-    const/4 v3, 0x2
-
-    :try_start_1
-    invoke-virtual {v0, v3, v1, v2}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;Ljava/security/spec/AlgorithmParameterSpec;)V
-    :try_end_1
-    .catch Ljava/security/InvalidKeyException; {:try_start_1 .. :try_end_1} :catch_1
-    .catch Ljava/security/InvalidAlgorithmParameterException; {:try_start_1 .. :try_end_1} :catch_0
-
-    new-instance v1, Lvi4;
-
-    iget-object v2, p0, Ljc;->a:Lsi4;
-
-    invoke-direct {v1, v2, p1}, Lvi4;-><init>(Lsi4;Laj4;)V
-
-    new-instance p1, Ljavax/crypto/CipherInputStream;
-
-    invoke-direct {p1, v1, v0}, Ljavax/crypto/CipherInputStream;-><init>(Ljava/io/InputStream;Ljavax/crypto/Cipher;)V
-
-    iput-object p1, p0, Ljc;->d:Ljavax/crypto/CipherInputStream;
-
-    invoke-virtual {v1}, Lvi4;->l()V
-
-    const-wide/16 v0, -0x1
-
-    return-wide v0
-
-    :catch_0
-    move-exception p1
+    if-nez v1, :cond_0
 
     goto :goto_0
 
-    :catch_1
-    move-exception p1
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
+    sget-object v2, Lzm8;->d:Lzm8;
+
+    invoke-virtual {v1, v2}, Lafb;->b(Lzm8;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    const-string v3, "Update users from waiting room for all with apply state="
+
+    invoke-static {v3, p1}, Ldna;->f(Ljava/lang/String;Z)Ljava/lang/String;
+
+    move-result-object v3
+
+    const/4 v4, 0x0
+
+    const-string v5, "CallAdminSettingsController"
+
+    invoke-virtual {v1, v2, v5, v3, v4}, Lafb;->c(Lzm8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
     :goto_0
-    new-instance v0, Ljava/lang/RuntimeException;
+    invoke-virtual {v0}, Lq31;->d()Lac4;
 
-    invoke-direct {v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+    move-result-object v1
 
-    throw v0
+    invoke-virtual {v1}, Lac4;->a()Lru/ok/android/externcalls/sdk/Conversation;
 
-    :catch_2
-    move-exception p1
+    move-result-object v1
+
+    const/4 v6, 0x0
+
+    if-eqz v1, :cond_2
+
+    invoke-interface {v1}, Lru/ok/android/externcalls/sdk/Conversation;->getConversationId()Ljava/lang/String;
+
+    move-result-object v1
+
+    move-object v4, v1
 
     goto :goto_1
 
-    :catch_3
-    move-exception p1
+    :cond_2
+    move-object v4, v6
 
     :goto_1
-    new-instance v0, Ljava/lang/RuntimeException;
+    if-eqz p1, :cond_3
 
-    invoke-direct {v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+    iget-object v1, v0, Lq31;->o:Lj88;
 
-    throw v0
-.end method
+    invoke-interface {v1}, Lj88;->getValue()Ljava/lang/Object;
 
-.method public final H(Lysg;)V
-    .locals 1
+    move-result-object v1
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-object v2, v1
 
-    iget-object v0, p0, Ljc;->a:Lsi4;
+    check-cast v2, Ly02;
 
-    invoke-interface {v0, p1}, Lsi4;->H(Lysg;)V
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
+    const/4 v9, 0x1
+
+    const/16 v10, 0x74
+
+    const-string v3, "PROMOTE_JOIN_WAITING_ROOM"
+
+    const/4 v5, 0x0
+
+    const/4 v7, 0x0
+
+    const/4 v8, 0x0
+
+    invoke-static/range {v2 .. v10}, Ly02;->c(Ly02;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/String;Ljava/lang/String;ZI)V
+
+    goto :goto_2
+
+    :cond_3
+    iget-object v1, v0, Lq31;->o:Lj88;
+
+    invoke-interface {v1}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    move-object v2, v1
+
+    check-cast v2, Ly02;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 v9, 0x1
+
+    const/16 v10, 0x74
+
+    const-string v3, "REJECT_JOIN_WAITING_ROOM"
+
+    const/4 v5, 0x0
+
+    const/4 v7, 0x0
+
+    const/4 v8, 0x0
+
+    invoke-static/range {v2 .. v10}, Ly02;->c(Ly02;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/String;Ljava/lang/String;ZI)V
+
+    :goto_2
+    iget-object v1, v0, Lq31;->Z:Ljava/util/concurrent/atomic/AtomicReference;
+
+    new-instance v2, Lx21;
+
+    invoke-direct {v2, p1, v0}, Lx21;-><init>(ZLq31;)V
+
+    invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicReference;->updateAndGet(Ljava/util/function/UnaryOperator;)Ljava/lang/Object;
+
+    if-nez p1, :cond_4
+
+    invoke-virtual {v0}, Lq31;->p()V
+
+    :cond_4
     return-void
-.end method
-
-.method public final close()V
-    .locals 1
-
-    iget-object v0, p0, Ljc;->d:Ljavax/crypto/CipherInputStream;
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Ljc;->d:Ljavax/crypto/CipherInputStream;
-
-    iget-object v0, p0, Ljc;->a:Lsi4;
-
-    invoke-interface {v0}, Lsi4;->close()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final getUri()Landroid/net/Uri;
-    .locals 1
-
-    iget-object v0, p0, Ljc;->a:Lsi4;
-
-    invoke-interface {v0}, Lsi4;->getUri()Landroid/net/Uri;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final read([BII)I
-    .locals 1
-
-    iget-object v0, p0, Ljc;->d:Ljavax/crypto/CipherInputStream;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object v0, p0, Ljc;->d:Ljavax/crypto/CipherInputStream;
-
-    invoke-virtual {v0, p1, p2, p3}, Ljavax/crypto/CipherInputStream;->read([BII)I
-
-    move-result p1
-
-    if-gez p1, :cond_0
-
-    const/4 p1, -0x1
-
-    :cond_0
-    return p1
-.end method
-
-.method public final w()Ljava/util/Map;
-    .locals 1
-
-    iget-object v0, p0, Ljc;->a:Lsi4;
-
-    invoke-interface {v0}, Lsi4;->w()Ljava/util/Map;
-
-    move-result-object v0
-
-    return-object v0
 .end method

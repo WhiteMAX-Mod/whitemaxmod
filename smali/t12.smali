@@ -1,247 +1,224 @@
-.class public final Lt12;
+.class public final synthetic Lt12;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lm12;
-
-
-# static fields
-.field public static final g:J
-
-.field public static final synthetic h:I
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:Ll02;
+.field public final synthetic X:Lke0;
 
-.field public final b:I
+.field public final synthetic Y:Ljava/util/List;
 
-.field public c:Z
+.field public final synthetic a:I
 
-.field public final d:Ljava/util/concurrent/Executor;
+.field public final synthetic b:Lc22;
 
-.field public final e:Ljava/util/concurrent/ScheduledExecutorService;
+.field public final synthetic c:Ljava/lang/String;
 
-.field public final f:Z
+.field public final synthetic d:Ly0f;
+
+.field public final synthetic o:Lphh;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(Lc22;Ljava/lang/String;Ly0f;Lphh;Lke0;Ljava/util/List;I)V
+    .locals 0
 
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+    iput p7, p0, Lt12;->a:I
 
-    const-wide/16 v1, 0x2
+    iput-object p1, p0, Lt12;->b:Lc22;
 
-    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
+    iput-object p2, p0, Lt12;->c:Ljava/lang/String;
 
-    move-result-wide v0
+    iput-object p3, p0, Lt12;->d:Ly0f;
 
-    sput-wide v0, Lt12;->g:J
+    iput-object p4, p0, Lt12;->o:Lphh;
 
-    return-void
-.end method
+    iput-object p5, p0, Lt12;->X:Lke0;
 
-.method public constructor <init>(Ll02;ILwpe;Lw37;Z)V
-    .locals 1
+    iput-object p6, p0, Lt12;->Y:Ljava/util/List;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lt12;->c:Z
-
-    iput-object p1, p0, Lt12;->a:Ll02;
-
-    iput p2, p0, Lt12;->b:I
-
-    iput-object p3, p0, Lt12;->d:Ljava/util/concurrent/Executor;
-
-    iput-object p4, p0, Lt12;->e:Ljava/util/concurrent/ScheduledExecutorService;
-
-    iput-boolean p5, p0, Lt12;->f:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/hardware/camera2/TotalCaptureResult;)Lie8;
-    .locals 3
+.method public final run()V
+    .locals 8
 
-    iget v0, p0, Lt12;->b:I
+    iget v0, p0, Lt12;->a:I
 
-    invoke-static {v0, p1}, Lj40;->h(ILandroid/hardware/camera2/TotalCaptureResult;)Z
+    packed-switch v0, :pswitch_data_0
 
-    move-result v0
+    iget-object v0, p0, Lt12;->b:Lc22;
+
+    iget-object v2, p0, Lt12;->c:Ljava/lang/String;
+
+    iget-object v3, p0, Lt12;->d:Ly0f;
+
+    iget-object v4, p0, Lt12;->o:Lphh;
+
+    iget-object v5, p0, Lt12;->X:Lke0;
+
+    iget-object v6, p0, Lt12;->Y:Ljava/util/List;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    const-string v2, "TorchTask#preCapture: isFlashRequired = "
+    const-string v7, "Use case "
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v7, " ACTIVE"
+
+    invoke-virtual {v1, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
-    const-string v1, "Camera2CapturePipeline"
+    const/4 v7, 0x0
 
-    invoke-static {v1, v0}, Lm5j;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v7}, Lc22;->t(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    iget v0, p0, Lt12;->b:I
+    iget-object v1, v0, Lc22;->a:Lcmf;
 
-    invoke-static {v0, p1}, Lj40;->h(ILandroid/hardware/camera2/TotalCaptureResult;)Z
+    iget-object v1, v1, Lcmf;->b:Ljava/lang/Object;
 
-    move-result p1
+    check-cast v1, Ljava/util/LinkedHashMap;
 
-    if-eqz p1, :cond_1
+    invoke-virtual {v1, v2}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object p1, p0, Lt12;->a:Ll02;
+    move-result-object v7
 
-    iget-boolean p1, p1, Ll02;->r:Z
+    check-cast v7, Lnhh;
 
-    if-eqz p1, :cond_0
+    if-nez v7, :cond_0
 
-    const-string p1, "Torch already on, not turn on"
+    new-instance v7, Lnhh;
 
-    invoke-static {v1, p1}, Lm5j;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v7, v3, v4, v5, v6}, Lnhh;-><init>(Ly0f;Lphh;Lke0;Ljava/util/List;)V
 
-    goto :goto_0
+    invoke-interface {v1, v2, v7}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
-    const-string p1, "Turn on torch"
-
-    invoke-static {v1, p1}, Lm5j;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Lt12;->c:Z
-
-    new-instance p1, Ls12;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p1, p0, v0}, Ls12;-><init>(Lt12;I)V
-
-    invoke-static {p1}, Libj;->b(Lrw1;)Ltw1;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lbs6;->a(Lie8;)Lbs6;
-
-    move-result-object p1
-
-    new-instance v0, Ls12;
-
     const/4 v1, 0x1
 
-    invoke-direct {v0, p0, v1}, Ls12;-><init>(Lt12;I)V
+    iput-boolean v1, v7, Lnhh;->f:Z
 
-    iget-object v1, p0, Lt12;->d:Ljava/util/concurrent/Executor;
+    iget-object v1, v0, Lc22;->a:Lcmf;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual/range {v1 .. v6}, Lcmf;->j(Ljava/lang/String;Ly0f;Lphh;Lke0;Ljava/util/List;)V
 
-    invoke-static {p1, v0, v1}, Lnge;->l(Lie8;Lcv;Ljava/util/concurrent/Executor;)Ln92;
+    invoke-virtual {v0}, Lc22;->K()V
 
-    move-result-object p1
+    return-void
 
-    new-instance v0, Ls12;
+    :pswitch_0
+    iget-object v0, p0, Lt12;->b:Lc22;
 
-    const/4 v1, 0x2
+    iget-object v2, p0, Lt12;->c:Ljava/lang/String;
 
-    invoke-direct {v0, p0, v1}, Ls12;-><init>(Lt12;I)V
+    iget-object v3, p0, Lt12;->d:Ly0f;
 
-    iget-object v1, p0, Lt12;->d:Ljava/util/concurrent/Executor;
+    iget-object v4, p0, Lt12;->o:Lphh;
 
-    invoke-static {p1, v0, v1}, Lnge;->l(Lie8;Lcv;Ljava/util/concurrent/Executor;)Ln92;
+    iget-object v5, p0, Lt12;->X:Lke0;
 
-    move-result-object p1
+    iget-object v6, p0, Lt12;->Y:Ljava/util/List;
 
-    new-instance v0, Le12;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/4 v1, 0x4
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0, v1}, Le12;-><init>(I)V
+    const-string v7, "Use case "
 
-    invoke-static {}, Lacj;->a()Lc15;
+    invoke-direct {v1, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v7, " UPDATED"
+
+    invoke-virtual {v1, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    new-instance v2, Lkp8;
+    const/4 v7, 0x0
 
-    invoke-direct {v2, v0}, Lkp8;-><init>(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1, v7}, Lc22;->t(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    invoke-static {p1, v2, v1}, Lnge;->l(Lie8;Lcv;Ljava/util/concurrent/Executor;)Ln92;
+    iget-object v1, v0, Lc22;->a:Lcmf;
 
-    move-result-object p1
+    invoke-virtual/range {v1 .. v6}, Lcmf;->j(Ljava/lang/String;Ly0f;Lphh;Lke0;Ljava/util/List;)V
 
-    return-object p1
+    invoke-virtual {v0}, Lc22;->K()V
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lt12;->b:Lc22;
+
+    iget-object v2, p0, Lt12;->c:Ljava/lang/String;
+
+    iget-object v3, p0, Lt12;->d:Ly0f;
+
+    iget-object v4, p0, Lt12;->o:Lphh;
+
+    iget-object v5, p0, Lt12;->X:Lke0;
+
+    iget-object v6, p0, Lt12;->Y:Ljava/util/List;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v7, "Use case "
+
+    invoke-direct {v1, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v7, " RESET"
+
+    invoke-virtual {v1, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v7, 0x0
+
+    invoke-virtual {v0, v1, v7}, Lc22;->t(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    iget-object v1, v0, Lc22;->a:Lcmf;
+
+    invoke-virtual/range {v1 .. v6}, Lcmf;->j(Ljava/lang/String;Ly0f;Lphh;Lke0;Ljava/util/List;)V
+
+    invoke-virtual {v0}, Lc22;->p()V
+
+    invoke-virtual {v0}, Lc22;->D()V
+
+    invoke-virtual {v0}, Lc22;->K()V
+
+    iget v1, v0, Lc22;->R0:I
+
+    const/16 v2, 0x9
+
+    if-ne v1, v2, :cond_1
+
+    invoke-virtual {v0}, Lc22;->B()V
 
     :cond_1
-    :goto_0
-    sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    invoke-static {p1}, Lnge;->g(Ljava/lang/Object;)Llj7;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final b()Z
-    .locals 1
-
-    iget v0, p0, Lt12;->b:I
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final c()V
-    .locals 4
-
-    iget-boolean v0, p0, Lt12;->c:Z
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lt12;->a:Ll02;
-
-    iget-object v1, v0, Ll02;->j:Ltpg;
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v1, v2, v3}, Ltpg;->a(Lqw1;Z)V
-
-    const-string v1, "Camera2CapturePipeline"
-
-    const-string v2, "Turning off torch"
-
-    invoke-static {v1, v2}, Lm5j;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-boolean v1, p0, Lt12;->f:Z
-
-    if-eqz v1, :cond_0
-
-    iget-object v0, v0, Ll02;->h:Ljc6;
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v3, v1}, Ljc6;->a(ZZ)V
-
-    :cond_0
     return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

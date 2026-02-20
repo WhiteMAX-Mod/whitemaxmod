@@ -3,181 +3,157 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lnq6;
+.implements Luy9;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Luod;
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final b:Ljava/lang/String;
 
-.field public final synthetic c:Ljava/lang/Object;
-
-.field public final synthetic d:Ljava/lang/Object;
+.field public final c:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+.method public constructor <init>(JLuod;Ljava/lang/String;)V
     .locals 0
 
-    iput p4, p0, Lnb;->a:I
-
-    iput-object p1, p0, Lnb;->b:Ljava/lang/Object;
-
-    iput-object p2, p0, Lnb;->c:Ljava/lang/Object;
-
-    iput-object p3, p0, Lnb;->d:Ljava/lang/Object;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p3, p0, Lnb;->a:Luod;
+
+    iput-object p4, p0, Lnb;->b:Ljava/lang/String;
+
+    iput-wide p1, p0, Lnb;->c:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    iget v0, p0, Lnb;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    check-cast p1, Landroid/view/View;
-
-    iget-object p1, p0, Lnb;->b:Ljava/lang/Object;
-
-    check-cast p1, Lfoh;
-
-    invoke-virtual {p1}, Lfoh;->dispose()V
-
-    iget-object p1, p0, Lnb;->c:Ljava/lang/Object;
-
-    check-cast p1, Lone/me/chatscreen/videomsg/VideoMessageWidget;
-
-    iget-object p1, p1, Lone/me/chatscreen/videomsg/VideoMessageWidget;->X:Ljava/lang/String;
-
-    sget-object v0, Lc5j;->a:Ledb;
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    sget-object v1, Lkk8;->o:Lkk8;
+    instance-of v1, p1, Lnb;
 
-    invoke-virtual {v0, v1}, Ledb;->b(Lkk8;)Z
+    const/4 v2, 0x0
 
-    move-result v2
+    if-nez v1, :cond_1
 
-    if-eqz v2, :cond_1
-
-    const-string v2, "last updating blur for video message screen after stable position"
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v0, v1, p1, v2, v3}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    return v2
 
     :cond_1
-    :goto_0
-    iget-object p1, p0, Lnb;->d:Ljava/lang/Object;
+    check-cast p1, Lnb;
 
-    check-cast p1, Landroid/view/View;
+    iget-object v1, p0, Lnb;->a:Luod;
 
-    invoke-virtual {p1}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
+    iget-object v3, p1, Lnb;->a:Luod;
 
-    move-result-object p1
+    invoke-static {v1, v3}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+    move-result v1
 
-    sget-object p1, Lb3h;->a:Lb3h;
+    if-nez v1, :cond_2
 
-    return-object p1
+    return v2
 
-    :pswitch_0
-    iget-object v0, p0, Lnb;->b:Ljava/lang/Object;
+    :cond_2
+    iget-object v1, p0, Lnb;->b:Ljava/lang/String;
 
-    check-cast v0, Lkotlinx/coroutines/internal/ContextScope;
+    iget-object v3, p1, Lnb;->b:Ljava/lang/String;
 
-    iget-object v1, p0, Lnb;->c:Ljava/lang/Object;
+    invoke-static {v1, v3}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    check-cast v1, Lqb4;
+    move-result v1
 
-    sget-object v2, Lcc4;->b:Lcc4;
+    if-nez v1, :cond_3
 
-    new-instance v3, Lki9;
+    return v2
 
-    iget-object v4, p0, Lnb;->d:Ljava/lang/Object;
+    :cond_3
+    iget-wide v3, p0, Lnb;->c:J
 
-    check-cast v4, Ljji;
+    iget-wide v5, p1, Lnb;->c:J
 
-    const/4 v5, 0x0
+    cmp-long p1, v3, v5
 
-    invoke-direct {v3, p1, v5, v4}, Lki9;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;Ljji;)V
+    if-eqz p1, :cond_4
 
-    invoke-static {v0, v1, v2, v3}, Ls9j;->c(Lzb4;Lqb4;Lcc4;Lbr6;)Lyv4;
+    return v2
 
-    move-result-object p1
+    :cond_4
+    return v0
+.end method
 
-    return-object p1
+.method public final hashCode()I
+    .locals 3
 
-    :pswitch_1
-    iget-object v0, p0, Lnb;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lnb;->a:Luod;
 
-    check-cast v0, Lkotlinx/coroutines/internal/ContextScope;
+    invoke-virtual {v0}, Luod;->hashCode()I
 
-    iget-object v1, p0, Lnb;->c:Ljava/lang/Object;
+    move-result v0
 
-    check-cast v1, Lqb4;
+    const/16 v1, 0x1f
 
-    sget-object v2, Lcc4;->a:Lcc4;
+    mul-int/2addr v0, v1
 
-    new-instance v3, Lii9;
+    iget-object v2, p0, Lnb;->b:Ljava/lang/String;
 
-    iget-object v4, p0, Lnb;->d:Ljava/lang/Object;
+    invoke-static {v0, v1, v2}, Lj64;->d(IILjava/lang/String;)I
 
-    check-cast v4, Le6c;
+    move-result v0
 
-    const/4 v5, 0x0
+    iget-wide v1, p0, Lnb;->c:J
 
-    invoke-direct {v3, p1, v5, v4}, Lii9;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;Le6c;)V
+    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
 
-    invoke-static {v0, v1, v2, v3}, Ls9j;->c(Lzb4;Lqb4;Lcc4;Lbr6;)Lyv4;
+    move-result v1
 
-    move-result-object p1
+    add-int/2addr v1, v0
 
-    return-object p1
+    return v1
+.end method
 
-    :pswitch_2
-    iget-object v0, p0, Lnb;->b:Ljava/lang/Object;
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    check-cast v0, Lkotlinx/coroutines/internal/ContextScope;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lnb;->c:Ljava/lang/Object;
+    const-string v1, "AddReactionEffect(reaction="
 
-    check-cast v1, Lqb4;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget-object v2, Lcc4;->a:Lcc4;
+    iget-object v1, p0, Lnb;->a:Luod;
 
-    new-instance v3, Lmb;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    iget-object v4, p0, Lnb;->d:Ljava/lang/Object;
+    const-string v1, ", effectUrl="
 
-    check-cast v4, Lqb;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v5, 0x0
+    iget-object v1, p0, Lnb;->b:Ljava/lang/String;
 
-    invoke-direct {v3, p1, v5, v4}, Lmb;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;Lqb;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v0, v1, v2, v3}, Ls9j;->c(Lzb4;Lqb4;Lcc4;Lbr6;)Lyv4;
+    const-string v1, ", msgId="
 
-    move-result-object p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-object p1
+    const-string v1, ")"
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    iget-wide v2, p0, Lnb;->c:J
+
+    invoke-static {v2, v3, v1, v0}, Ltx8;->i(JLjava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

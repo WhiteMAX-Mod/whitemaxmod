@@ -3,14 +3,14 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lmp7;
+.implements Lfq7;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lmp7;"
+        "Lfq7;"
     }
 .end annotation
 
@@ -20,8 +20,8 @@
     }
     d2 = {
         "Lru/ok/tracer/heap/dumps/HeapDumpInitializer;",
-        "Lmp7;",
-        "Lp57;",
+        "Lfq7;",
+        "Lk67;",
         "<init>",
         "()V",
         "tracer-heap-dumps_release"
@@ -62,15 +62,15 @@
 .method public final b(Landroid/content/Context;)Ljava/lang/Object;
     .locals 2
 
-    new-instance v0, Ltn;
+    new-instance v0, Lip;
 
     const/4 v1, 0x3
 
-    invoke-direct {v0, p1, v1}, Ltn;-><init>(Landroid/content/Context;I)V
+    invoke-direct {v0, p1, v1}, Lip;-><init>(Landroid/content/Context;I)V
 
-    invoke-static {v0}, Lzqg;->a(Ljava/lang/Runnable;)V
+    invoke-static {v0}, Leyg;->a(Ljava/lang/Runnable;)V
 
-    sget-object p1, Lp57;->a:Lp57;
+    sget-object p1, Lk67;->a:Lk67;
 
     return-object p1
 .end method

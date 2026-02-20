@@ -1,160 +1,77 @@
-.class public final Luhj;
+.class public abstract Luhj;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lvwa;
-
-
-# static fields
-.field public static final a:Luhj;
-
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public static e([FF)V
+    .locals 9
 
-    new-instance v0, Luhj;
+    const/4 v0, 0x0
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/high16 v1, 0x3f000000    # 0.5f
 
-    sput-object v0, Luhj;->a:Luhj;
+    const/4 v2, 0x0
 
-    new-instance v0, Lvzi;
+    invoke-static {p0, v0, v1, v1, v2}, Landroid/opengl/Matrix;->translateM([FIFFF)V
 
-    const/4 v1, 0x1
+    const/4 v7, 0x0
 
-    invoke-direct {v0, v1}, Lvzi;-><init>(I)V
+    const/high16 v8, 0x3f800000    # 1.0f
 
-    const-class v1, Ln0j;
+    const/4 v4, 0x0
 
-    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
+    const/4 v6, 0x0
 
-    move-result-object v0
+    move-object v3, p0
 
-    const/4 v2, 0x2
+    move v5, p1
 
-    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
+    invoke-static/range {v3 .. v8}, Landroid/opengl/Matrix;->rotateM([FIFFFF)V
 
-    move-result-object v0
+    const/high16 p0, -0x41000000    # -0.5f
 
-    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
+    invoke-static {v3, v0, p0, p0, v2}, Landroid/opengl/Matrix;->translateM([FIFFF)V
 
-    move-result-object v0
+    return-void
+.end method
 
-    const/4 v2, 0x3
+.method public static f([F)V
+    .locals 4
 
-    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
+    const/4 v0, 0x0
 
-    move-result-object v0
+    const/4 v1, 0x0
 
-    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
+    const/high16 v2, 0x3f000000    # 0.5f
 
-    move-result-object v0
+    invoke-static {p0, v0, v1, v2, v1}, Landroid/opengl/Matrix;->translateM([FIFFF)V
 
-    const/4 v2, 0x4
+    const/high16 v2, 0x3f800000    # 1.0f
 
-    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
+    const/high16 v3, -0x40800000    # -1.0f
 
-    move-result-object v0
+    invoke-static {p0, v0, v2, v3, v2}, Landroid/opengl/Matrix;->scaleM([FIFFF)V
 
-    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
+    const/high16 v2, -0x80000000
 
-    move-result-object v0
+    const/high16 v3, -0x41000000    # -0.5f
 
-    const/4 v2, 0x5
-
-    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x6
-
-    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x7
-
-    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/16 v2, 0x8
-
-    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/16 v2, 0x9
-
-    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/16 v2, 0xa
-
-    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/16 v2, 0xb
-
-    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/16 v2, 0xc
-
-    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
+    invoke-static {p0, v0, v2, v3, v1}, Landroid/opengl/Matrix;->translateM([FIFFF)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public abstract a(Lkl0;Lfoc;)Ly06;
+.end method
 
-    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+.method public abstract b(Ly06;Lqu8;)V
+.end method
 
-    move-result-object p1
+.method public abstract c(Ly06;I)Ljava/util/HashMap;
+.end method
 
-    throw p1
+.method public abstract d(Ly06;)V
 .end method

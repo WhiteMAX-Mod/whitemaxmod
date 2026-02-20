@@ -1,33 +1,71 @@
 .class public final La9h;
-.super Laui;
+.super Lkog;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final a()J
-    .locals 2
+# instance fields
+.field public final k:I
 
-    const-wide/16 v0, 0x0
+.field public final l:Z
 
-    return-wide v0
-.end method
+.field public final m:Z
 
-.method public final b()Lle9;
-    .locals 1
 
-    sget-object v0, Lle9;->c:Ljava/util/regex/Pattern;
+# direct methods
+.method public constructor <init>(Landroid/content/Context;Lg88;Lhih;Lvf2;Lws3;Lj88;)V
+    .locals 7
 
-    const-string v0, "application/octet-stream"
+    move-object v0, p0
 
-    invoke-static {v0}, Lq9j;->c(Ljava/lang/String;)Lle9;
+    move-object v1, p1
 
-    move-result-object v0
+    move-object v2, p2
 
-    return-object v0
-.end method
+    move-object v4, p3
 
-.method public final f(Lqld;)V
-    .locals 0
+    move-object v3, p4
+
+    move-object v5, p5
+
+    move-object v6, p6
+
+    invoke-direct/range {v0 .. v6}, Lkog;-><init>(Landroid/content/Context;Lg88;Lvf2;Lnd4;Lws3;Lj88;)V
+
+    const/4 p1, 0x2
+
+    iput p1, v0, La9h;->k:I
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, v0, La9h;->l:Z
+
+    iput-boolean p1, v0, La9h;->m:Z
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final c()Z
+    .locals 1
+
+    iget-boolean v0, p0, La9h;->m:Z
+
+    return v0
+.end method
+
+.method public final d()Z
+    .locals 1
+
+    iget-boolean v0, p0, La9h;->l:Z
+
+    return v0
+.end method
+
+.method public final e()I
+    .locals 1
+
+    iget v0, p0, La9h;->k:I
+
+    return v0
 .end method

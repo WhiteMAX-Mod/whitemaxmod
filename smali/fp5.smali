@@ -1,147 +1,248 @@
 .class public final Lfp5;
-.super Ljava/lang/Object;
+.super Ljava/util/concurrent/atomic/AtomicInteger;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+.implements Ly35;
 
 
 # instance fields
-.field public final a:Landroid/content/Context;
+.field public final a:Ljava/lang/Runnable;
 
-.field public final b:Ls8g;
+.field public final b:Lz35;
 
-.field public final c:Lbs4;
-
-.field public final d:Lx30;
-
-.field public e:Lj4g;
-
-.field public f:Lj4g;
-
-.field public final g:Lx30;
-
-.field public final h:Landroid/os/Looper;
-
-.field public final i:Lw20;
-
-.field public final j:I
-
-.field public final k:Z
-
-.field public final l:Ljke;
-
-.field public final m:Lvr4;
-
-.field public final n:J
-
-.field public o:Z
+.field public volatile c:Ljava/lang/Thread;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lloe;)V
-    .locals 6
+.method public constructor <init>(Ljava/lang/Runnable;Lz35;)V
+    .locals 0
 
-    new-instance v0, Lbs4;
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
 
-    const/4 v1, 0x5
+    iput-object p1, p0, Lfp5;->a:Ljava/lang/Runnable;
 
-    invoke-direct {v0, v1, p2}, Lbs4;-><init>(ILjava/lang/Object;)V
+    iput-object p2, p0, Lfp5;->b:Lz35;
 
-    new-instance p2, Lx30;
+    return-void
+.end method
 
-    const/4 v1, 0x4
 
-    invoke-direct {p2, p1, v1}, Lx30;-><init>(Landroid/content/Context;I)V
+# virtual methods
+.method public final dispose()V
+    .locals 3
 
-    new-instance v1, Lx30;
+    :cond_0
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
 
-    const/4 v2, 0x6
+    move-result v0
 
-    invoke-direct {v1, p1, v2}, Lx30;-><init>(Landroid/content/Context;I)V
+    const/4 v1, 0x2
 
-    new-instance v2, Lti4;
-
-    const/4 v3, 0x3
-
-    invoke-direct {v2, v3}, Lti4;-><init>(I)V
-
-    new-instance v3, Lx30;
-
-    const/16 v4, 0x8
-
-    invoke-direct {v3, p1, v4}, Lx30;-><init>(Landroid/content/Context;I)V
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lfp5;->a:Landroid/content/Context;
-
-    iput-object v0, p0, Lfp5;->c:Lbs4;
-
-    iput-object p2, p0, Lfp5;->d:Lx30;
-
-    iput-object v1, p0, Lfp5;->e:Lj4g;
-
-    iput-object v2, p0, Lfp5;->f:Lj4g;
-
-    iput-object v3, p0, Lfp5;->g:Lx30;
-
-    sget p1, Lkbh;->a:I
-
-    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_0
+    if-lt v0, v1, :cond_1
 
     goto :goto_0
 
-    :cond_0
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+    :cond_1
+    const/4 v1, 0x4
 
-    move-result-object p1
+    if-nez v0, :cond_2
 
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;->compareAndSet(II)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lfp5;->b:Lz35;
+
+    if-eqz v0, :cond_4
+
+    invoke-interface {v0, p0}, Lz35;->c(Ly35;)Z
+
+    return-void
+
+    :cond_2
+    const/4 v0, 0x1
+
+    const/4 v2, 0x3
+
+    invoke-virtual {p0, v0, v2}, Ljava/util/concurrent/atomic/AtomicInteger;->compareAndSet(II)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lfp5;->c:Ljava/lang/Thread;
+
+    if-eqz v0, :cond_3
+
+    invoke-virtual {v0}, Ljava/lang/Thread;->interrupt()V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lfp5;->c:Ljava/lang/Thread;
+
+    :cond_3
+    invoke-virtual {p0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
+
+    iget-object v0, p0, Lfp5;->b:Lz35;
+
+    if-eqz v0, :cond_4
+
+    invoke-interface {v0, p0}, Lz35;->c(Ly35;)Z
+
+    :cond_4
     :goto_0
-    iput-object p1, p0, Lfp5;->h:Landroid/os/Looper;
+    return-void
+.end method
 
-    sget-object p1, Lw20;->Y:Lw20;
+.method public final f()Z
+    .locals 2
 
-    iput-object p1, p0, Lfp5;->i:Lw20;
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
 
-    const/4 p1, 0x1
+    move-result v0
 
-    iput p1, p0, Lfp5;->j:I
+    const/4 v1, 0x2
 
-    iput-boolean p1, p0, Lfp5;->k:Z
+    if-lt v0, v1, :cond_0
 
-    sget-object p1, Ljke;->c:Ljke;
+    const/4 v0, 0x1
 
-    iput-object p1, p0, Lfp5;->l:Ljke;
+    return v0
 
-    const-wide/16 p1, 0x14
+    :cond_0
+    const/4 v0, 0x0
 
-    invoke-static {p1, p2}, Lkbh;->B(J)J
+    return v0
+.end method
 
-    move-result-wide v2
+.method public final run()V
+    .locals 5
 
-    const-wide/16 p1, 0x1f4
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
 
-    invoke-static {p1, p2}, Lkbh;->B(J)J
+    move-result v0
 
-    move-result-wide v4
+    if-nez v0, :cond_6
 
-    new-instance v0, Lvr4;
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
-    const/4 v1, 0x0
+    move-result-object v0
 
-    invoke-direct/range {v0 .. v5}, Lvr4;-><init>(IJJ)V
+    iput-object v0, p0, Lfp5;->c:Ljava/lang/Thread;
 
-    iput-object v0, p0, Lfp5;->m:Lvr4;
+    const/4 v0, 0x0
 
-    sget-object p1, Ls8g;->a:Ls8g;
+    const/4 v1, 0x1
 
-    iput-object p1, p0, Lfp5;->b:Ls8g;
+    invoke-virtual {p0, v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;->compareAndSet(II)Z
 
-    const-wide/16 p1, 0x7d0
+    move-result v0
 
-    iput-wide p1, p0, Lfp5;->n:J
+    const/4 v2, 0x0
 
+    if-eqz v0, :cond_5
+
+    const/4 v0, 0x3
+
+    const/4 v3, 0x2
+
+    :try_start_0
+    iget-object v4, p0, Lfp5;->a:Ljava/lang/Runnable;
+
+    invoke-interface {v4}, Ljava/lang/Runnable;->run()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    iput-object v2, p0, Lfp5;->c:Ljava/lang/Thread;
+
+    invoke-virtual {p0, v1, v3}, Ljava/util/concurrent/atomic/AtomicInteger;->compareAndSet(II)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    iget-object v0, p0, Lfp5;->b:Lz35;
+
+    if-eqz v0, :cond_6
+
+    invoke-interface {v0, p0}, Lz35;->c(Ly35;)Z
+
+    return-void
+
+    :cond_0
+    :goto_0
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result v1
+
+    if-ne v1, v0, :cond_1
+
+    invoke-static {}, Ljava/lang/Thread;->yield()V
+
+    goto :goto_0
+
+    :cond_1
+    invoke-static {}, Ljava/lang/Thread;->interrupted()Z
+
+    return-void
+
+    :catchall_0
+    move-exception v4
+
+    :try_start_1
+    invoke-static {v4}, Lsvj;->a(Ljava/lang/Throwable;)V
+
+    throw v4
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    :catchall_1
+    move-exception v4
+
+    iput-object v2, p0, Lfp5;->c:Ljava/lang/Thread;
+
+    invoke-virtual {p0, v1, v3}, Ljava/util/concurrent/atomic/AtomicInteger;->compareAndSet(II)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    :goto_1
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result v1
+
+    if-ne v1, v0, :cond_2
+
+    invoke-static {}, Ljava/lang/Thread;->yield()V
+
+    goto :goto_1
+
+    :cond_2
+    invoke-static {}, Ljava/lang/Thread;->interrupted()Z
+
+    goto :goto_2
+
+    :cond_3
+    iget-object v0, p0, Lfp5;->b:Lz35;
+
+    if-eqz v0, :cond_4
+
+    invoke-interface {v0, p0}, Lz35;->c(Ly35;)Z
+
+    :cond_4
+    :goto_2
+    throw v4
+
+    :cond_5
+    iput-object v2, p0, Lfp5;->c:Ljava/lang/Thread;
+
+    :cond_6
     return-void
 .end method

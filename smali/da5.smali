@@ -1,46 +1,39 @@
-.class public final synthetic Lda5;
+.class public abstract Lda5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/widget/AutoCompleteTextView$OnDismissListener;
-
 
 # instance fields
-.field public final synthetic a:Lea5;
+.field public final a:Ltm0;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lea5;)V
+.method public constructor <init>(Ltm0;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lda5;->a:Lea5;
+    iput-object p1, p0, Lda5;->a:Ltm0;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onDismiss()V
-    .locals 4
+.method public abstract a(Landroid/graphics/Canvas;Landroid/graphics/Rect;FZZ)V
+.end method
 
-    const/4 v0, 0x1
+.method public abstract b(Landroid/graphics/Canvas;Landroid/graphics/Paint;II)V
+.end method
 
-    iget-object v1, p0, Lda5;->a:Lea5;
+.method public abstract c(Landroid/graphics/Canvas;Landroid/graphics/Paint;Lca5;I)V
+.end method
 
-    iput-boolean v0, v1, Lea5;->m:Z
+.method public abstract d(Landroid/graphics/Canvas;Landroid/graphics/Paint;FFIII)V
+.end method
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+.method public abstract e()I
+.end method
 
-    move-result-wide v2
-
-    iput-wide v2, v1, Lea5;->o:J
-
-    const/4 v0, 0x0
-
-    invoke-virtual {v1, v0}, Lea5;->t(Z)V
-
-    return-void
+.method public abstract f()I
 .end method

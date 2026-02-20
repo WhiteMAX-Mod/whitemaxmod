@@ -19,7 +19,7 @@
 
     new-instance v0, Lvd1;
 
-    const-string v1, "CALLING"
+    const-string v1, "Old"
 
     const/4 v2, 0x0
 
@@ -29,7 +29,7 @@
 
     new-instance v1, Lvd1;
 
-    const-string v2, "ACTIVE"
+    const-string v2, "Strategy1"
 
     const/4 v3, 0x1
 
@@ -39,7 +39,7 @@
 
     new-instance v2, Lvd1;
 
-    const-string v3, "NO_CONNECTION"
+    const-string v3, "Strategy2"
 
     const/4 v4, 0x2
 

@@ -1,124 +1,89 @@
-.class public Lna9;
-.super Ljava/lang/Object;
+.class public final Lna9;
+.super Landroid/view/animation/Animation;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Ljava/lang/Object;
-
-.field public static final c:Ljava/util/HashMap;
-
-
 # instance fields
-.field public final a:Lgb9;
+.field public final synthetic a:I
+
+.field public final synthetic b:I
+
+.field public final synthetic c:I
+
+.field public final synthetic d:Landroid/view/View;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Landroid/view/View;III)V
+    .locals 0
 
-    new-instance v0, Ljava/lang/Object;
+    iput p4, p0, Lna9;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lna9;->b:I
 
-    sput-object v0, Lna9;->b:Ljava/lang/Object;
+    iput p3, p0, Lna9;->c:I
 
-    new-instance v0, Ljava/util/HashMap;
+    iput-object p1, p0, Lna9;->d:Landroid/view/View;
 
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    sput-object v0, Lna9;->c:Ljava/util/HashMap;
+    invoke-direct {p0}, Landroid/view/animation/Animation;-><init>()V
 
     return-void
-.end method
-
-.method public constructor <init>(Lone/me/android/media/service/OneMeMediaSessionService;Ldq5;Lhk7;Lhk7;Lhk7;Lodb;Landroid/os/Bundle;Landroid/os/Bundle;Lzii;)V
-    .locals 11
-
-    const-string v0, ""
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    sget-object v2, Lna9;->b:Ljava/lang/Object;
-
-    monitor-enter v2
-
-    :try_start_0
-    sget-object v3, Lna9;->c:Ljava/util/HashMap;
-
-    invoke-virtual {v3, v0}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-nez v4, :cond_0
-
-    invoke-virtual {v3, v0, p0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    monitor-exit v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    new-instance v0, Lgb9;
-
-    move-object v1, p0
-
-    move-object v2, p1
-
-    move-object v3, p2
-
-    move-object v4, p3
-
-    move-object v5, p4
-
-    move-object/from16 v6, p5
-
-    move-object/from16 v7, p6
-
-    move-object/from16 v8, p7
-
-    move-object/from16 v9, p8
-
-    move-object/from16 v10, p9
-
-    invoke-direct/range {v0 .. v10}, Lgb9;-><init>(Lna9;Lone/me/android/media/service/OneMeMediaSessionService;Ldq5;Lhk7;Lhk7;Lhk7;Lodb;Landroid/os/Bundle;Landroid/os/Bundle;Lzii;)V
-
-    iput-object v0, p0, Lna9;->a:Lgb9;
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_0
-
-    :cond_0
-    :try_start_1
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v3, "Session ID must be unique. ID="
-
-    invoke-direct {v0, v3}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :goto_0
-    monitor-exit v2
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
 .end method
 
 
 # virtual methods
-.method public final a()Lrbc;
-    .locals 1
+.method public final applyTransformation(FLandroid/view/animation/Transformation;)V
+    .locals 3
 
-    iget-object v0, p0, Lna9;->a:Lgb9;
+    iget p2, p0, Lna9;->a:I
 
-    iget-object v0, v0, Lgb9;->t:Lxcc;
+    iget-object v0, p0, Lna9;->d:Landroid/view/View;
 
-    iget-object v0, v0, Lxcc;->a:Ldq5;
+    iget v1, p0, Lna9;->c:I
 
-    return-object v0
+    iget v2, p0, Lna9;->b:I
+
+    packed-switch p2, :pswitch_data_0
+
+    sub-int/2addr v2, v1
+
+    int-to-float p2, v2
+
+    mul-float/2addr p2, p1
+
+    float-to-int p1, p2
+
+    add-int/2addr v1, p1
+
+    sget-boolean p1, Lib9;->d1:Z
+
+    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object p1
+
+    iput v1, p1, Landroid/view/ViewGroup$LayoutParams;->height:I
+
+    invoke-virtual {v0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    return-void
+
+    :pswitch_0
+    sub-int p2, v2, v1
+
+    int-to-float p2, p2
+
+    mul-float/2addr p2, p1
+
+    float-to-int p1, p2
+
+    sub-int/2addr v2, p1
+
+    invoke-static {v0, v2}, Landroidx/mediarouter/app/d;->o(Landroid/view/View;I)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

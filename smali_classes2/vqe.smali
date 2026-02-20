@@ -3,235 +3,205 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lfz4;
+.implements Lxqe;
 
 
 # instance fields
-.field public final a:Lru/ok/tamtam/android/prefs/PmsKey;
+.field public final a:Lcpg;
 
-.field public final b:J
-
-.field public final c:[Ljava/lang/String;
-
-.field public final d:Lqhg;
-
-.field public final e:Lo58;
-
-.field public final f:Lo58;
-
-.field public final g:J
-
-.field public final h:Lspf;
-
-.field public final i:Lpld;
+.field public final b:I
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/android/prefs/PmsKey;J[Ljava/lang/String;Lphg;I)V
+.method public constructor <init>(Lcpg;)V
     .locals 1
 
-    and-int/lit8 v0, p6, 0x8
+    sget v0, Lflb;->g:I
 
-    if-eqz v0, :cond_0
-
-    const/4 p4, 0x0
-
-    new-array p4, p4, [Ljava/lang/String;
-
-    :cond_0
-    and-int/lit8 p6, p6, 0x10
-
-    if-eqz p6, :cond_1
-
-    invoke-virtual {p1}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object p5
-
-    new-instance p6, Lphg;
-
-    invoke-direct {p6, p5}, Lphg;-><init>(Ljava/lang/CharSequence;)V
-
-    move-object p5, p6
-
-    :cond_1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lvqe;->a:Lru/ok/tamtam/android/prefs/PmsKey;
+    iput-object p1, p0, Lvqe;->a:Lcpg;
 
-    iput-wide p2, p0, Lvqe;->b:J
+    sget p1, Lelb;->d:I
 
-    iput-object p4, p0, Lvqe;->c:[Ljava/lang/String;
-
-    iput-object p5, p0, Lvqe;->d:Lqhg;
-
-    sget-object p1, Lpz4;->a:Lpz4;
-
-    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object p2
-
-    const/16 p3, 0x5e
-
-    invoke-virtual {p2, p3}, Lr5;->d(I)Ln8g;
-
-    move-result-object p2
-
-    iput-object p2, p0, Lvqe;->e:Lo58;
-
-    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object p1
-
-    const/16 p2, 0x5c
-
-    invoke-virtual {p1, p2}, Lr5;->d(I)Ln8g;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lvqe;->f:Lo58;
-
-    sget-object p1, Lly4;->b:Ljava/util/concurrent/atomic/AtomicLong;
-
-    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicLong;->incrementAndGet()J
-
-    move-result-wide p1
-
-    iput-wide p1, p0, Lvqe;->g:J
-
-    invoke-virtual {p0}, Lvqe;->e()Ljava/util/List;
-
-    move-result-object p1
-
-    invoke-static {p1}, Ltpf;->a(Ljava/lang/Object;)Lspf;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lvqe;->h:Lspf;
-
-    new-instance p2, Lpld;
-
-    invoke-direct {p2, p1}, Lpld;-><init>(Lmfa;)V
-
-    iput-object p2, p0, Lvqe;->i:Lpld;
+    iput p1, p0, Lvqe;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Llpf;
+.method public final a()I
     .locals 1
 
-    iget-object v0, p0, Lvqe;->i:Lpld;
+    const/4 v0, 0x4
+
+    return v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lvqe;
+
+    if-nez v1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lvqe;
+
+    iget-object v1, p0, Lvqe;->a:Lcpg;
+
+    iget-object p1, p1, Lvqe;->a:Lcpg;
+
+    invoke-virtual {v1, p1}, Lcpg;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    sget-wide v1, Lflb;->d:J
+
+    cmp-long p1, v1, v1
+
+    if-eqz p1, :cond_3
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_3
+    return v0
+.end method
+
+.method public final g()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final getItemId()J
+    .locals 2
+
+    sget-wide v0, Lflb;->d:J
+
+    return-wide v0
+.end method
+
+.method public final getTitle()Lhpg;
+    .locals 1
+
+    iget-object v0, p0, Lvqe;->a:Lcpg;
 
     return-object v0
 .end method
 
-.method public final c(Lxk4;Ljava/lang/Object;)V
+.method public final hashCode()I
     .locals 4
 
-    invoke-virtual {p2}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    iget-object v0, p0, Lvqe;->a:Lcpg;
 
-    move-result-object p2
+    iget v0, v0, Lcpg;->c:I
 
-    invoke-static {p2}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
-    move-result-wide v0
+    move-result v0
 
-    iget-wide p1, p1, Lxk4;->a:J
+    const/16 v1, 0x1f
 
-    iget-wide v2, p0, Lvqe;->g:J
+    mul-int/2addr v0, v1
 
-    invoke-static {p1, p2, v2, v3}, Lly4;->a(JJ)Z
+    const/4 v2, 0x1
 
-    move-result p1
+    invoke-static {v2, v0, v1}, Ljye;->d(III)I
 
-    if-eqz p1, :cond_0
+    move-result v0
 
-    iget-object p1, p0, Lvqe;->e:Lo58;
+    sget-wide v2, Lflb;->d:J
 
-    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
+    invoke-static {v0, v1, v2, v3}, Leni;->a(IIJ)I
 
-    move-result-object p1
+    move-result v0
 
-    check-cast p1, Lege;
+    const/4 v1, 0x4
 
-    iget-object p2, p0, Lvqe;->a:Lru/ok/tamtam/android/prefs/PmsKey;
+    invoke-static {v1}, Ly12;->t(I)I
 
-    invoke-virtual {p2}, Ljava/lang/Enum;->name()Ljava/lang/String;
+    move-result v1
 
-    move-result-object p2
+    add-int/2addr v1, v0
 
-    invoke-virtual {p1, v0, v1, p2}, Lx3;->h(JLjava/lang/String;)V
-
-    invoke-virtual {p0}, Lvqe;->e()Ljava/util/List;
-
-    move-result-object p1
-
-    const/4 p2, 0x0
-
-    iget-object v0, p0, Lvqe;->h:Lspf;
-
-    invoke-virtual {v0, p2, p1}, Lspf;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    :cond_0
-    return-void
+    return v1
 .end method
 
-.method public final e()Ljava/util/List;
-    .locals 8
+.method public final m()I
+    .locals 1
 
-    iget-object v0, p0, Lvqe;->f:Lo58;
+    iget v0, p0, Lvqe;->b:I
 
-    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+    return v0
+.end method
+
+.method public final t()I
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    sget-wide v0, Lflb;->d:J
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "Header(title="
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v3, p0, Lvqe;->a:Lcpg;
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v3, ", sectionId=1, itemId="
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v0, ", sectionItemType="
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/4 v0, 0x4
+
+    invoke-static {v0}, Ln8d;->o(I)Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Lidc;
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lvqe;->a:Lru/ok/tamtam/android/prefs/PmsKey;
+    const-string v0, ")"
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->name()Ljava/lang/String;
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v2
-
-    iget-wide v3, p0, Lvqe;->b:J
-
-    iget-object v0, v0, Lx3;->g:Lr58;
-
-    invoke-virtual {v0, v2, v3, v4}, Lr58;->getLong(Ljava/lang/String;J)J
-
-    move-result-wide v2
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "Server="
-
-    const-string v4, "\nPMS: "
-
-    invoke-static {v1, v2, v3, v4, v0}, Lcbh;->l(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    new-instance v6, Lphg;
-
-    invoke-direct {v6, v0}, Lphg;-><init>(Ljava/lang/CharSequence;)V
-
-    new-instance v1, Lxk4;
-
-    iget-wide v2, p0, Lvqe;->g:J
-
-    iget-object v4, p0, Lvqe;->d:Lqhg;
-
-    const/4 v5, 0x0
-
-    sget-object v7, Lvk4;->a:Lvk4;
-
-    invoke-direct/range {v1 .. v7}, Lxk4;-><init>(JLqhg;ILqhg;Llmj;)V
-
-    invoke-static {v1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

@@ -1,100 +1,56 @@
-.class public final Lyi4;
+.class public final synthetic Lyi4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
 
 # instance fields
-.field public a:Landroid/net/Uri;
+.field public final synthetic a:I
 
-.field public b:J
+.field public final synthetic b:Lfj4;
 
-.field public c:I
 
-.field public d:[B
+# direct methods
+.method public synthetic constructor <init>(Lfj4;I)V
+    .locals 0
 
-.field public e:Ljava/util/Map;
+    iput p2, p0, Lyi4;->a:I
 
-.field public f:J
+    iput-object p1, p0, Lyi4;->b:Lfj4;
 
-.field public g:J
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public h:Ljava/lang/String;
-
-.field public i:I
+    return-void
+.end method
 
 
 # virtual methods
-.method public a()Lzi4;
-    .locals 14
+.method public final run()V
+    .locals 2
 
-    iget-object v0, p0, Lyi4;->a:Landroid/net/Uri;
+    iget v0, p0, Lyi4;->a:I
 
-    if-eqz v0, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    new-instance v1, Lzi4;
+    iget-object v0, p0, Lyi4;->b:Lfj4;
 
-    iget-object v2, p0, Lyi4;->a:Landroid/net/Uri;
+    const/4 v1, 0x0
 
-    iget-wide v3, p0, Lyi4;->b:J
+    invoke-virtual {v0, v1}, Lfj4;->s(Z)V
 
-    iget v5, p0, Lyi4;->c:I
+    return-void
 
-    iget-object v6, p0, Lyi4;->d:[B
+    :pswitch_0
+    iget-object v0, p0, Lyi4;->b:Lfj4;
 
-    iget-object v7, p0, Lyi4;->e:Ljava/util/Map;
+    invoke-virtual {v0}, Lfj4;->t()V
 
-    iget-wide v8, p0, Lyi4;->f:J
+    return-void
 
-    iget-wide v10, p0, Lyi4;->g:J
-
-    iget-object v12, p0, Lyi4;->h:Ljava/lang/String;
-
-    iget v13, p0, Lyi4;->i:I
-
-    invoke-direct/range {v1 .. v13}, Lzi4;-><init>(Landroid/net/Uri;JI[BLjava/util/Map;JJLjava/lang/String;I)V
-
-    return-object v1
-
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "The uri must be set."
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public b()Laj4;
-    .locals 15
-
-    iget-object v0, p0, Lyi4;->a:Landroid/net/Uri;
-
-    const-string v1, "The uri must be set."
-
-    invoke-static {v0, v1}, Lh6j;->i(Ljava/lang/Object;Ljava/lang/String;)V
-
-    new-instance v2, Laj4;
-
-    iget-object v3, p0, Lyi4;->a:Landroid/net/Uri;
-
-    iget-wide v4, p0, Lyi4;->b:J
-
-    iget v6, p0, Lyi4;->c:I
-
-    iget-object v7, p0, Lyi4;->d:[B
-
-    iget-object v8, p0, Lyi4;->e:Ljava/util/Map;
-
-    iget-wide v9, p0, Lyi4;->f:J
-
-    iget-wide v11, p0, Lyi4;->g:J
-
-    iget-object v13, p0, Lyi4;->h:Ljava/lang/String;
-
-    iget v14, p0, Lyi4;->i:I
-
-    invoke-direct/range {v2 .. v14}, Laj4;-><init>(Landroid/net/Uri;JI[BLjava/util/Map;JJLjava/lang/String;I)V
-
-    return-object v2
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

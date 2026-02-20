@@ -1,148 +1,121 @@
 .class public final Llo9;
-.super Ljava/lang/Object;
+.super Lpdg;
 .source "SourceFile"
 
 # interfaces
-.implements Lmo9;
+.implements Lys6;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic X:Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;
 
-.field public final b:Landroid/net/Uri;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Landroid/net/Uri;Ljava/lang/String;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Llo9;->X:Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;
 
-    iput-object p2, p0, Llo9;->a:Ljava/lang/String;
+    const/4 p2, 0x2
 
-    iput-object p1, p0, Llo9;->b:Landroid/net/Uri;
+    invoke-direct {p0, p2, p1}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {p0, p1, p2}, Llo9;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    return v0
+    move-result-object p1
 
-    :cond_0
-    instance-of v1, p1, Llo9;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
     check-cast p1, Llo9;
 
-    iget-object v1, p0, Llo9;->a:Ljava/lang/String;
+    sget-object p2, Lmah;->a:Lmah;
 
-    iget-object v3, p1, Llo9;->a:Ljava/lang/String;
+    invoke-virtual {p1, p2}, Llo9;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Llo9;->b:Landroid/net/Uri;
-
-    iget-object p1, p1, Llo9;->b:Landroid/net/Uri;
-
-    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
+    return-object p2
 .end method
 
-.method public final hashCode()I
-    .locals 3
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    const/4 v0, 0x0
+    new-instance v0, Llo9;
 
-    iget-object v1, p0, Llo9;->a:Ljava/lang/String;
+    iget-object v1, p0, Llo9;->X:Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;
 
-    if-nez v1, :cond_0
+    invoke-direct {v0, p2, v1}, Llo9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;)V
 
-    move v1, v0
+    iput-object p1, v0, Llo9;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    iget-object v0, p0, Llo9;->o:Ljava/lang/Object;
+
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    check-cast v0, Ljava/util/List;
+
+    new-instance p1, Ls94;
+
+    sget-object v1, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->d1:[Lv58;
+
+    iget-object v1, p0, Llo9;->X:Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;
+
+    invoke-virtual {v1}, Lpa4;->getArgs()Landroid/os/Bundle;
+
+    move-result-object v2
+
+    const-string v3, "actions"
+
+    invoke-virtual {v2, v3}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_0
+
+    invoke-static {v2}, Lntj;->b(Landroid/os/Bundle;)Ljava/util/List;
+
+    move-result-object v2
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
+    const/4 v2, 0x0
 
     :goto_0
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v2, p0, Llo9;->b:Landroid/net/Uri;
-
     if-nez v2, :cond_1
 
-    goto :goto_1
+    sget-object v2, Lsi5;->a:Lsi5;
 
     :cond_1
-    invoke-virtual {v2}, Landroid/net/Uri;->hashCode()I
+    invoke-direct {p1, v2}, Ls94;-><init>(Ljava/util/List;)V
 
-    move-result v0
+    invoke-static {p1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
-    :goto_1
-    add-int/2addr v1, v0
+    move-result-object p1
 
-    return v1
-.end method
+    invoke-static {p1, v0}, Lek3;->Q(Ljava/util/Collection;Ljava/lang/Iterable;)Ljava/util/ArrayList;
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    move-result-object p1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object v0, v1, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->a1:Lxh6;
 
-    const-string v1, "Sticker(url="
+    invoke-virtual {v0, p1}, Lfg8;->F(Ljava/util/List;)V
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    sget-object p1, Lmah;->a:Lmah;
 
-    iget-object v1, p0, Llo9;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", lowResPreviewUri="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Llo9;->b:Landroid/net/Uri;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

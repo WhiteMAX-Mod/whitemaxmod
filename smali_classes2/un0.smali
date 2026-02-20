@@ -1,49 +1,19 @@
-.class public final Lun0;
-.super Lo84;
+.class public final synthetic Lun0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:I
-
-.field public synthetic d:Ljava/lang/Object;
-
-.field public final synthetic o:Lyn0;
+.field public final synthetic a:Lkqb;
 
 
 # direct methods
-.method public constructor <init>(Lyn0;Lo84;)V
+.method public synthetic constructor <init>(Lkqb;)V
     .locals 0
 
-    iput-object p1, p0, Lun0;->o:Lyn0;
+    iput-object p1, p0, Lun0;->a:Lkqb;
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Lun0;->d:Ljava/lang/Object;
-
-    iget p1, p0, Lun0;->X:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lun0;->X:I
-
-    iget-object p1, p0, Lun0;->o:Lyn0;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lyn0;->h(Ljava/util/ArrayList;Lo84;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
 .end method

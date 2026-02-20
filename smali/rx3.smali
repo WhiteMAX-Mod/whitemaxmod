@@ -1,23 +1,59 @@
-.class public abstract Lrx3;
+.class public final Lrx3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lgwe;
 
-# static fields
-.field public static final a:Ljava/lang/String;
+
+# instance fields
+.field public final a:Ljava/util/concurrent/atomic/AtomicReference;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Lgwe;)V
     .locals 1
 
-    const-string v0, "ConstraintTrkngWrkr"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0}, Lkgi;->k(Ljava/lang/String;)Ljava/lang/String;
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-direct {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object v0, p0, Lrx3;->a:Ljava/util/concurrent/atomic/AtomicReference;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final iterator()Ljava/util/Iterator;
+    .locals 2
+
+    iget-object v0, p0, Lrx3;->a:Ljava/util/concurrent/atomic/AtomicReference;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    sput-object v0, Lrx3;->a:Ljava/lang/String;
+    check-cast v0, Lgwe;
 
-    return-void
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Lgwe;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "This sequence can be consumed only once."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method

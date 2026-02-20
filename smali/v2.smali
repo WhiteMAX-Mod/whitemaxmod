@@ -63,13 +63,13 @@
 
     iget-object p1, v0, Lw2;->Y:Ljava/io/Serializable;
 
-    check-cast p1, Lg2;
+    check-cast p1, Li2;
 
-    iget v2, p1, Lg2;->o:I
+    iget v2, p1, Li2;->o:I
 
     add-int/lit8 v2, v2, 0x1
 
-    iput v2, p1, Lg2;->o:I
+    iput v2, p1, Li2;->o:I
 
     if-eqz v1, :cond_0
 

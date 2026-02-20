@@ -1,190 +1,62 @@
 .class public final Lwjf;
-.super Landroid/text/SpannableString;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lujf;
 
-# static fields
-.field public static final synthetic a:I
+
+# instance fields
+.field public final a:Lekf;
+
+.field public final b:Z
+
+.field public final c:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Lekf;ZZ)V
     .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lwjf;->a:Lekf;
+
+    iput-boolean p2, p0, Lwjf;->b:Z
+
+    iput-boolean p3, p0, Lwjf;->c:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 10
+.method public final a()Lorg/json/JSONObject;
+    .locals 4
 
-    instance-of v0, p1, Landroid/text/Spanned;
+    new-instance v0, Lorg/json/JSONObject;
 
-    const/4 v1, 0x0
+    invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
 
-    if-eqz v0, :cond_7
+    const-string v1, "command"
 
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    const-string v2, "change-media-settings"
 
-    move-result-object v0
+    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    iget-boolean v1, p0, Lwjf;->b:Z
 
-    move-result-object v2
+    iget-boolean v2, p0, Lwjf;->c:Z
 
-    invoke-static {v0, v2}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iget-object v3, p0, Lwjf;->a:Lekf;
 
-    move-result v0
+    invoke-static {v3, v1, v2}, Ln94;->n(Lekf;ZZ)Lorg/json/JSONObject;
 
-    if-nez v0, :cond_0
+    move-result-object v1
 
-    goto/16 :goto_2
+    const-string v2, "mediaSettings"
 
-    :cond_0
-    move-object v0, p1
+    invoke-virtual {v0, v2, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    check-cast v0, Landroid/text/Spanned;
-
-    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
-
-    move-result v2
-
-    const-class v3, Ljava/lang/Object;
-
-    invoke-interface {v0, v1, v2, v3}, Landroid/text/Spanned;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
-
-    move-result-object v2
-
-    invoke-virtual {p0}, Landroid/text/SpannableString;->length()I
-
-    move-result v4
-
-    invoke-virtual {p0, v1, v4, v3}, Landroid/text/SpannableString;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
-
-    move-result-object v3
-
-    array-length v4, v3
-
-    array-length v5, v2
-
-    if-eq v4, v5, :cond_1
-
-    return v1
-
-    :cond_1
-    array-length v4, v3
-
-    move v5, v1
-
-    :goto_0
-    if-ge v5, v4, :cond_6
-
-    aget-object v6, v3, v5
-
-    aget-object v7, v2, v5
-
-    if-ne v6, p0, :cond_3
-
-    if-ne p1, v7, :cond_2
-
-    invoke-virtual {p0, v6}, Landroid/text/SpannableString;->getSpanStart(Ljava/lang/Object;)I
-
-    move-result v8
-
-    invoke-interface {v0, v7}, Landroid/text/Spanned;->getSpanStart(Ljava/lang/Object;)I
-
-    move-result v9
-
-    if-ne v8, v9, :cond_2
-
-    invoke-virtual {p0, v6}, Landroid/text/SpannableString;->getSpanEnd(Ljava/lang/Object;)I
-
-    move-result v8
-
-    invoke-interface {v0, v7}, Landroid/text/Spanned;->getSpanEnd(Ljava/lang/Object;)I
-
-    move-result v9
-
-    if-ne v8, v9, :cond_2
-
-    invoke-virtual {p0, v6}, Landroid/text/SpannableString;->getSpanFlags(Ljava/lang/Object;)I
-
-    move-result v6
-
-    invoke-interface {v0, v7}, Landroid/text/Spanned;->getSpanFlags(Ljava/lang/Object;)I
-
-    move-result v7
-
-    if-eq v6, v7, :cond_4
-
-    :cond_2
-    return v1
-
-    :cond_3
-    invoke-static {v6, v7}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v8
-
-    if-eqz v8, :cond_5
-
-    invoke-virtual {p0, v6}, Landroid/text/SpannableString;->getSpanStart(Ljava/lang/Object;)I
-
-    move-result v8
-
-    invoke-interface {v0, v7}, Landroid/text/Spanned;->getSpanStart(Ljava/lang/Object;)I
-
-    move-result v9
-
-    if-ne v8, v9, :cond_5
-
-    invoke-virtual {p0, v6}, Landroid/text/SpannableString;->getSpanEnd(Ljava/lang/Object;)I
-
-    move-result v8
-
-    invoke-interface {v0, v7}, Landroid/text/Spanned;->getSpanEnd(Ljava/lang/Object;)I
-
-    move-result v9
-
-    if-ne v8, v9, :cond_5
-
-    invoke-virtual {p0, v6}, Landroid/text/SpannableString;->getSpanFlags(Ljava/lang/Object;)I
-
-    move-result v6
-
-    invoke-interface {v0, v7}, Landroid/text/Spanned;->getSpanFlags(Ljava/lang/Object;)I
-
-    move-result v7
-
-    if-eq v6, v7, :cond_4
-
-    goto :goto_1
-
-    :cond_4
-    add-int/lit8 v5, v5, 0x1
-
-    goto :goto_0
-
-    :cond_5
-    :goto_1
-    return v1
-
-    :cond_6
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_7
-    :goto_2
-    return v1
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    invoke-static {p0}, Lmt0;->a(Landroid/text/Spanned;)I
-
-    move-result v0
-
-    return v0
+    return-object v0
 .end method

@@ -1,23 +1,19 @@
 .class public final Lmqc;
-.super Lnqc;
+.super Luqc;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Llhg;
-
-.field public final b:I
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(ILlhg;)V
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Luqc;-><init>()V
 
-    iput-object p2, p0, Lmqc;->a:Llhg;
-
-    iput p1, p0, Lmqc;->b:I
+    iput-object p1, p0, Lmqc;->b:Ljava/lang/String;
 
     return-void
 .end method
@@ -25,103 +21,64 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    .locals 3
+
+    const/4 v0, 0x1
 
     if-ne p0, p1, :cond_0
 
-    goto :goto_1
+    return v0
 
     :cond_0
-    instance-of v0, p1, Lmqc;
+    instance-of v1, p1, Lmqc;
 
-    if-nez v0, :cond_1
+    const/4 v2, 0x0
 
-    goto :goto_0
+    if-nez v1, :cond_1
+
+    return v2
 
     :cond_1
     check-cast p1, Lmqc;
 
-    iget-object v0, p0, Lmqc;->a:Llhg;
+    iget-object v1, p0, Lmqc;->b:Ljava/lang/String;
 
-    iget-object v1, p1, Lmqc;->a:Llhg;
+    iget-object p1, p1, Lmqc;->b:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Llhg;->equals(Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result v0
+    move-result p1
 
-    if-nez v0, :cond_2
+    if-nez p1, :cond_2
 
-    goto :goto_0
+    return v2
 
     :cond_2
-    iget v0, p0, Lmqc;->b:I
-
-    iget p1, p1, Lmqc;->b:I
-
-    if-eq v0, p1, :cond_3
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_3
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
+    return v0
 .end method
 
 .method public final hashCode()I
-    .locals 2
+    .locals 1
 
-    iget-object v0, p0, Lmqc;->a:Llhg;
+    iget-object v0, p0, Lmqc;->b:Ljava/lang/String;
 
-    iget v0, v0, Llhg;->c:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget v1, p0, Lmqc;->b:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 3
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ShowSuccessSnackbar(title="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lmqc;->a:Llhg;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", icon="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lmqc;->b:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    const-string v0, "CopyToClipboard(link="
 
     const-string v1, ")"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v2, p0, Lmqc;->b:Ljava/lang/String;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, v2, v1}, Ltx8;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

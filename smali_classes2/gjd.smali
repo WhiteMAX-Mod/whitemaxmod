@@ -1,394 +1,58 @@
-.class public final synthetic Lgjd;
+.class public abstract Lgjd;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
-# interfaces
-.implements Llq6;
 
+# static fields
+.field public static oneme_fodlers_delete_folder_bottom_sheet_title:I = 0x7f130866
 
-# instance fields
-.field public final synthetic a:I
+.field public static oneme_folder_list_recommended_folders_section_title:I = 0x7f130867
 
-.field public final synthetic b:Lhjd;
+.field public static oneme_folder_list_toolbar_title:I = 0x7f130868
 
+.field public static oneme_folders_delete_folder_bottom_sheet_cancel_delete_button:I = 0x7f130869
 
-# direct methods
-.method public synthetic constructor <init>(Lhjd;I)V
-    .locals 0
+.field public static oneme_folders_delete_folder_bottom_sheet_delete_button:I = 0x7f13086a
 
-    iput p2, p0, Lgjd;->a:I
+.field public static oneme_folders_delete_folder_bottom_sheet_description:I = 0x7f13086b
 
-    iput-object p1, p0, Lgjd;->b:Lhjd;
+.field public static oneme_folders_edit_add_chats_button:I = 0x7f13086c
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static oneme_folders_edit_collapse:I = 0x7f13086d
 
-    return-void
-.end method
+.field public static oneme_folders_edit_create_button:I = 0x7f13086e
 
+.field public static oneme_folders_edit_delete_button:I = 0x7f13086f
 
-# virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 23
+.field public static oneme_folders_edit_expand:I = 0x7f130870
 
-    move-object/from16 v0, p0
+.field public static oneme_folders_edit_filter_mute:I = 0x7f130871
 
-    iget v1, v0, Lgjd;->a:I
+.field public static oneme_folders_edit_filter_read:I = 0x7f130872
 
-    packed-switch v1, :pswitch_data_0
+.field public static oneme_folders_edit_filter_section:I = 0x7f130873
 
-    iget-object v1, v0, Lgjd;->b:Lhjd;
+.field public static oneme_folders_edit_members_description:I = 0x7f130874
 
-    invoke-virtual {v1}, Lhjd;->d()V
+.field public static oneme_folders_edit_members_section:I = 0x7f130875
 
-    invoke-virtual {v1}, Lhjd;->c()V
+.field public static oneme_folders_edit_name_hint:I = 0x7f130876
 
-    invoke-virtual {v1}, Lhjd;->e()V
+.field public static oneme_folders_edit_name_section:I = 0x7f130877
 
-    sget-object v1, Lb3h;->a:Lb3h;
+.field public static oneme_folders_edit_toolbar_title:I = 0x7f130878
 
-    return-object v1
+.field public static oneme_folders_error_max_count:I = 0x7f130879
 
-    :pswitch_0
-    iget-object v1, v0, Lgjd;->b:Lhjd;
+.field public static oneme_folders_list_create_folder:I = 0x7f13087a
 
-    iget-boolean v1, v1, Lhjd;->c:Z
+.field public static oneme_folders_list_menu_action_change:I = 0x7f13087b
 
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+.field public static oneme_folders_list_menu_action_delete_folder:I = 0x7f13087c
 
-    move-result-object v1
+.field public static oneme_folders_picker_empty_title:I = 0x7f13087d
 
-    return-object v1
+.field public static oneme_folders_picker_entity_search_hint:I = 0x7f13087e
 
-    :pswitch_1
-    iget-object v1, v0, Lgjd;->b:Lhjd;
+.field public static oneme_folders_picker_entity_toolbar_title:I = 0x7f13087f
 
-    iget-object v2, v1, Lhjd;->u0:Landroid/transition/TransitionSet;
-
-    iget-object v3, v1, Lhjd;->w0:Lkfa;
-
-    invoke-static {v1, v2}, Landroid/transition/TransitionManager;->beginDelayedTransition(Landroid/view/ViewGroup;Landroid/transition/Transition;)V
-
-    iget-object v2, v1, Lhjd;->v0:Lkfa;
-
-    iget v4, v2, Lkfa;->d:I
-
-    if-nez v4, :cond_0
-
-    iget v4, v3, Lkfa;->d:I
-
-    if-nez v4, :cond_0
-
-    invoke-virtual {v1}, Landroid/view/View;->requestLayout()V
-
-    goto/16 :goto_6
-
-    :cond_0
-    iget-object v1, v2, Lkfa;->b:[Ljava/lang/Object;
-
-    iget-object v2, v2, Lkfa;->a:[J
-
-    array-length v4, v2
-
-    add-int/lit8 v4, v4, -0x2
-
-    const/4 v9, 0x7
-
-    const-wide v10, -0x7f7f7f7f7f7f7f80L    # -2.937446524422997E-306
-
-    const/4 v12, 0x0
-
-    const/16 v13, 0x8
-
-    if-ltz v4, :cond_4
-
-    move v14, v12
-
-    const-wide/16 v15, 0x80
-
-    :goto_0
-    aget-wide v5, v2, v14
-
-    const-wide/16 v17, 0xff
-
-    not-long v7, v5
-
-    shl-long/2addr v7, v9
-
-    and-long/2addr v7, v5
-
-    and-long/2addr v7, v10
-
-    cmp-long v7, v7, v10
-
-    if-eqz v7, :cond_3
-
-    sub-int v7, v14, v4
-
-    not-int v7, v7
-
-    ushr-int/lit8 v7, v7, 0x1f
-
-    rsub-int/lit8 v7, v7, 0x8
-
-    move v8, v12
-
-    :goto_1
-    if-ge v8, v7, :cond_2
-
-    and-long v19, v5, v17
-
-    cmp-long v19, v19, v15
-
-    if-gez v19, :cond_1
-
-    shl-int/lit8 v19, v14, 0x3
-
-    add-int v19, v19, v8
-
-    aget-object v19, v1, v19
-
-    move/from16 v20, v9
-
-    move-object/from16 v9, v19
-
-    check-cast v9, Landroid/view/View;
-
-    invoke-virtual {v9, v12}, Landroid/view/View;->setVisibility(I)V
-
-    goto :goto_2
-
-    :cond_1
-    move/from16 v20, v9
-
-    :goto_2
-    shr-long/2addr v5, v13
-
-    add-int/lit8 v8, v8, 0x1
-
-    move/from16 v9, v20
-
-    goto :goto_1
-
-    :cond_2
-    move/from16 v20, v9
-
-    if-ne v7, v13, :cond_5
-
-    goto :goto_3
-
-    :cond_3
-    move/from16 v20, v9
-
-    :goto_3
-    if-eq v14, v4, :cond_5
-
-    add-int/lit8 v14, v14, 0x1
-
-    move/from16 v9, v20
-
-    goto :goto_0
-
-    :cond_4
-    move/from16 v20, v9
-
-    const-wide/16 v15, 0x80
-
-    const-wide/16 v17, 0xff
-
-    :cond_5
-    iget-object v1, v3, Lkfa;->b:[Ljava/lang/Object;
-
-    iget-object v2, v3, Lkfa;->a:[J
-
-    array-length v3, v2
-
-    add-int/lit8 v3, v3, -0x2
-
-    if-ltz v3, :cond_9
-
-    move v4, v12
-
-    :goto_4
-    aget-wide v5, v2, v4
-
-    not-long v7, v5
-
-    shl-long v7, v7, v20
-
-    and-long/2addr v7, v5
-
-    and-long/2addr v7, v10
-
-    cmp-long v7, v7, v10
-
-    if-eqz v7, :cond_8
-
-    sub-int v7, v4, v3
-
-    not-int v7, v7
-
-    ushr-int/lit8 v7, v7, 0x1f
-
-    rsub-int/lit8 v7, v7, 0x8
-
-    move v8, v12
-
-    :goto_5
-    if-ge v8, v7, :cond_7
-
-    and-long v21, v5, v17
-
-    cmp-long v9, v21, v15
-
-    if-gez v9, :cond_6
-
-    shl-int/lit8 v9, v4, 0x3
-
-    add-int/2addr v9, v8
-
-    aget-object v9, v1, v9
-
-    check-cast v9, Landroid/view/View;
-
-    invoke-virtual {v9, v13}, Landroid/view/View;->setVisibility(I)V
-
-    :cond_6
-    shr-long/2addr v5, v13
-
-    add-int/lit8 v8, v8, 0x1
-
-    goto :goto_5
-
-    :cond_7
-    if-ne v7, v13, :cond_9
-
-    :cond_8
-    if-eq v4, v3, :cond_9
-
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_4
-
-    :cond_9
-    :goto_6
-    sget-object v1, Lb3h;->a:Lb3h;
-
-    return-object v1
-
-    :pswitch_2
-    iget-object v1, v0, Lgjd;->b:Lhjd;
-
-    invoke-virtual {v1}, Lhjd;->d()V
-
-    iget-object v2, v1, Lhjd;->w0:Lkfa;
-
-    iget-object v3, v2, Lkfa;->b:[Ljava/lang/Object;
-
-    iget-object v2, v2, Lkfa;->a:[J
-
-    array-length v4, v2
-
-    add-int/lit8 v4, v4, -0x2
-
-    const/16 v5, 0x8
-
-    if-ltz v4, :cond_d
-
-    const/4 v6, 0x0
-
-    move v7, v6
-
-    :goto_7
-    aget-wide v8, v2, v7
-
-    not-long v10, v8
-
-    const/4 v12, 0x7
-
-    shl-long/2addr v10, v12
-
-    and-long/2addr v10, v8
-
-    const-wide v12, -0x7f7f7f7f7f7f7f80L    # -2.937446524422997E-306
-
-    and-long/2addr v10, v12
-
-    cmp-long v10, v10, v12
-
-    if-eqz v10, :cond_c
-
-    sub-int v10, v7, v4
-
-    not-int v10, v10
-
-    ushr-int/lit8 v10, v10, 0x1f
-
-    rsub-int/lit8 v10, v10, 0x8
-
-    move v11, v6
-
-    :goto_8
-    if-ge v11, v10, :cond_b
-
-    const-wide/16 v12, 0xff
-
-    and-long/2addr v12, v8
-
-    const-wide/16 v14, 0x80
-
-    cmp-long v12, v12, v14
-
-    if-gez v12, :cond_a
-
-    shl-int/lit8 v12, v7, 0x3
-
-    add-int/2addr v12, v11
-
-    aget-object v12, v3, v12
-
-    check-cast v12, Landroid/view/View;
-
-    invoke-virtual {v1, v12}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
-
-    :cond_a
-    shr-long/2addr v8, v5
-
-    add-int/lit8 v11, v11, 0x1
-
-    goto :goto_8
-
-    :cond_b
-    if-ne v10, v5, :cond_d
-
-    :cond_c
-    if-eq v7, v4, :cond_d
-
-    add-int/lit8 v7, v7, 0x1
-
-    goto :goto_7
-
-    :cond_d
-    invoke-virtual {v1}, Lhjd;->c()V
-
-    invoke-virtual {v1}, Lhjd;->e()V
-
-    invoke-virtual {v1}, Landroid/view/ViewGroup;->getChildCount()I
-
-    move-result v2
-
-    if-nez v2, :cond_e
-
-    invoke-virtual {v1, v5}, Landroid/view/View;->setVisibility(I)V
-
-    :cond_e
-    sget-object v1, Lb3h;->a:Lb3h;
-
-    return-object v1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
+.field public static oneme_folders_picker_toolbar_title:I = 0x7f130880

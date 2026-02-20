@@ -1,80 +1,66 @@
-.class public final Luy8;
-.super Lp6g;
+.class public final synthetic Luy8;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/chatscreen/mediabar/MediaBarWidget;
+.field public final synthetic a:I
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic b:Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/mediabar/MediaBarWidget;)V
+.method public synthetic constructor <init>(Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;I)V
     .locals 0
 
-    iput-object p2, p0, Luy8;->X:Lone/me/chatscreen/mediabar/MediaBarWidget;
+    iput p2, p0, Luy8;->a:I
 
-    const/4 p2, 0x2
+    iput-object p1, p0, Luy8;->b:Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;
 
-    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Luy8;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Luy8;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Luy8;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Luy8;
-
-    iget-object v1, p0, Luy8;->X:Lone/me/chatscreen/mediabar/MediaBarWidget;
-
-    invoke-direct {v0, p2, v1}, Luy8;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/mediabar/MediaBarWidget;)V
-
-    iput-object p1, v0, Luy8;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final onClick(Landroid/view/View;)V
     .locals 1
 
-    iget-object v0, p0, Luy8;->o:Ljava/lang/Object;
+    iget p1, p0, Luy8;->a:I
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    iget-object v0, p0, Luy8;->b:Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;
 
-    check-cast v0, Lgoe;
+    packed-switch p1, :pswitch_data_0
 
-    sget-object p1, Lone/me/chatscreen/mediabar/MediaBarWidget;->e1:[Lz28;
+    sget-object p1, Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;->Y:[Lv58;
 
-    iget-object p1, p0, Luy8;->X:Lone/me/chatscreen/mediabar/MediaBarWidget;
+    invoke-virtual {v0}, Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;->H0()V
 
-    invoke-virtual {p1, v0}, Lone/me/chatscreen/mediabar/MediaBarWidget;->R0(Lgoe;)V
+    return-void
 
-    sget-object p1, Lb3h;->a:Lb3h;
+    :pswitch_0
+    sget-object p1, Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;->Y:[Lv58;
 
-    return-object p1
+    invoke-virtual {v0}, Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;->H0()V
+
+    return-void
+
+    :pswitch_1
+    sget-object p1, Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;->Y:[Lv58;
+
+    invoke-virtual {v0}, Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;->H0()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

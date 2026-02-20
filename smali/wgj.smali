@@ -1,90 +1,117 @@
-.class public final Lwgj;
+.class public abstract Lwgj;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lvwa;
-
-
-# static fields
-.field public static final a:Lwgj;
-
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public static a(I)I
+    .locals 4
 
-    new-instance v0, Lwgj;
+    const/4 v0, 0x3
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    if-ge p0, v0, :cond_0
 
-    sput-object v0, Lwgj;->a:Lwgj;
+    const-string v0, "expectedSize"
 
-    new-instance v0, Lvzi;
+    invoke-static {p0, v0}, Lhrj;->a(ILjava/lang/String;)V
 
-    const/4 v1, 0x1
+    add-int/lit8 p0, p0, 0x1
 
-    invoke-direct {v0, v1}, Lvzi;-><init>(I)V
+    return p0
 
-    const-class v1, Ln0j;
+    :cond_0
+    const/high16 v0, 0x40000000    # 2.0f
 
-    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
+    if-ge p0, v0, :cond_1
 
-    move-result-object v0
+    int-to-double v0, p0
 
-    const/4 v2, 0x2
+    const-wide/high16 v2, 0x3fe8000000000000L    # 0.75
 
-    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
+    div-double/2addr v0, v2
 
-    move-result-object v0
+    invoke-static {v0, v1}, Ljava/lang/Math;->ceil(D)D
 
-    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
+    move-result-wide v0
 
-    move-result-object v0
+    double-to-int p0, v0
 
-    const/4 v2, 0x3
+    return p0
 
-    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
+    :cond_1
+    const p0, 0x7fffffff
 
-    move-result-object v0
+    return p0
+.end method
 
-    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
+.method public static b(Ljava/util/Map;Ljava/lang/Object;)Z
+    .locals 1
 
-    move-result-object v0
+    if-ne p0, p1, :cond_0
 
-    const/4 v2, 0x4
+    const/4 p0, 0x1
 
-    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
+    return p0
 
-    move-result-object v0
+    :cond_0
+    instance-of v0, p1, Ljava/util/Map;
 
-    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
+    if-eqz v0, :cond_1
 
-    move-result-object v0
+    check-cast p1, Ljava/util/Map;
 
-    const/4 v2, 0x5
+    invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
-    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
+    move-result-object p0
 
-    move-result-object v0
+    invoke-interface {p1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
-    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
+    move-result-object p1
 
-    move-result-object v0
+    invoke-interface {p0, p1}, Ljava/util/Set;->equals(Ljava/lang/Object;)Z
 
-    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
+    move-result p0
 
-    return-void
+    return p0
+
+    :cond_1
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public static d(I)Z
+    .locals 1
+
+    const v0, 0x8000
+
+    and-int/2addr p0, v0
+
+    if-eqz p0, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public abstract c(I)V
+.end method
 
-    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+.method public abstract e(Z)V
+.end method
 
-    move-result-object p1
+.method public abstract f(Z)V
+.end method
 
-    throw p1
+.method public abstract g()V
+.end method
+
+.method public abstract h(I)V
 .end method

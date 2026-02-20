@@ -3,586 +3,310 @@
 
 
 # static fields
-.field public static call_add_members_accessibility:I = 0x7f1300cc
+.field public static accessibility_action_clickable_span:I = 0x7f0a0054
 
-.field public static call_admin_settings_disable_all_cameras_once:I = 0x7f1300ce
+.field public static accessibility_custom_action_0:I = 0x7f0a0055
 
-.field public static call_admin_settings_disable_all_hands_once:I = 0x7f1300cf
+.field public static accessibility_custom_action_1:I = 0x7f0a0056
 
-.field public static call_admin_settings_disable_all_mic_once:I = 0x7f1300d0
+.field public static accessibility_custom_action_10:I = 0x7f0a0057
 
-.field public static call_admins_settings_camera_disabled_in_call:I = 0x7f1300d1
+.field public static accessibility_custom_action_11:I = 0x7f0a0058
 
-.field public static call_admins_settings_camera_failed_in_call:I = 0x7f1300d2
+.field public static accessibility_custom_action_12:I = 0x7f0a0059
 
-.field public static call_admins_settings_camera_in_call:I = 0x7f1300d3
+.field public static accessibility_custom_action_13:I = 0x7f0a005a
 
-.field public static call_admins_settings_mic_failed_in_call:I = 0x7f1300d4
+.field public static accessibility_custom_action_14:I = 0x7f0a005b
 
-.field public static call_admins_settings_mic_in_call:I = 0x7f1300d5
+.field public static accessibility_custom_action_15:I = 0x7f0a005c
 
-.field public static call_admins_settings_min_disabled_in_call:I = 0x7f1300d6
+.field public static accessibility_custom_action_16:I = 0x7f0a005d
 
-.field public static call_admins_settings_screen_connection_header:I = 0x7f1300d7
+.field public static accessibility_custom_action_17:I = 0x7f0a005e
 
-.field public static call_admins_settings_screen_disable_camera_for_user:I = 0x7f1300d8
+.field public static accessibility_custom_action_18:I = 0x7f0a005f
 
-.field public static call_admins_settings_screen_disable_camera_once:I = 0x7f1300d9
+.field public static accessibility_custom_action_19:I = 0x7f0a0060
 
-.field public static call_admins_settings_screen_disable_mic_for_user:I = 0x7f1300da
+.field public static accessibility_custom_action_2:I = 0x7f0a0061
 
-.field public static call_admins_settings_screen_disable_mic_once:I = 0x7f1300db
+.field public static accessibility_custom_action_20:I = 0x7f0a0062
 
-.field public static call_admins_settings_screen_disable_race_for_user:I = 0x7f1300dc
+.field public static accessibility_custom_action_21:I = 0x7f0a0063
 
-.field public static call_admins_settings_screen_disable_race_once:I = 0x7f1300dd
+.field public static accessibility_custom_action_22:I = 0x7f0a0064
 
-.field public static call_admins_settings_screen_disable_record:I = 0x7f1300de
+.field public static accessibility_custom_action_23:I = 0x7f0a0065
 
-.field public static call_admins_settings_screen_disable_sharing_for_user:I = 0x7f1300df
+.field public static accessibility_custom_action_24:I = 0x7f0a0066
 
-.field public static call_admins_settings_screen_failed_enabled_in_call:I = 0x7f1300e0
+.field public static accessibility_custom_action_25:I = 0x7f0a0067
 
-.field public static call_admins_settings_screen_media_header:I = 0x7f1300e1
+.field public static accessibility_custom_action_26:I = 0x7f0a0068
 
-.field public static call_admins_settings_screen_media_header_bottom:I = 0x7f1300e2
+.field public static accessibility_custom_action_27:I = 0x7f0a0069
 
-.field public static call_admins_settings_screen_record_disabled_in_call:I = 0x7f1300e3
+.field public static accessibility_custom_action_28:I = 0x7f0a006a
 
-.field public static call_admins_settings_screen_record_failed_in_call:I = 0x7f1300e4
+.field public static accessibility_custom_action_29:I = 0x7f0a006b
 
-.field public static call_admins_settings_screen_record_in_call:I = 0x7f1300e5
+.field public static accessibility_custom_action_3:I = 0x7f0a006c
 
-.field public static call_admins_settings_screen_sharing_disabled_in_call:I = 0x7f1300e6
+.field public static accessibility_custom_action_30:I = 0x7f0a006d
 
-.field public static call_admins_settings_screen_sharing_in_call:I = 0x7f1300e7
+.field public static accessibility_custom_action_31:I = 0x7f0a006e
 
-.field public static call_admins_settings_title:I = 0x7f1300e8
+.field public static accessibility_custom_action_4:I = 0x7f0a006f
 
-.field public static call_admins_settings_waiting_room:I = 0x7f1300e9
+.field public static accessibility_custom_action_5:I = 0x7f0a0070
 
-.field public static call_admins_settings_waiting_room_desc:I = 0x7f1300ea
+.field public static accessibility_custom_action_6:I = 0x7f0a0071
 
-.field public static call_ask_permission_audio_video_denied_description:I = 0x7f1300eb
+.field public static accessibility_custom_action_7:I = 0x7f0a0072
 
-.field public static call_ask_permission_audio_video_denied_title:I = 0x7f1300ec
+.field public static accessibility_custom_action_8:I = 0x7f0a0073
 
-.field public static call_ask_permission_denied_description:I = 0x7f1300ed
+.field public static accessibility_custom_action_9:I = 0x7f0a0074
 
-.field public static call_ask_permission_denied_title:I = 0x7f1300ee
+.field public static action_bar:I = 0x7f0a008f
 
-.field public static call_ask_permission_description:I = 0x7f1300ef
+.field public static action_bar_activity_content:I = 0x7f0a0090
 
-.field public static call_back_accessibility:I = 0x7f1300f2
+.field public static action_bar_container:I = 0x7f0a0091
 
-.field public static call_cancel:I = 0x7f1300f4
+.field public static action_bar_root:I = 0x7f0a0092
 
-.field public static call_cancel_accessibility:I = 0x7f1300f5
+.field public static action_bar_spinner:I = 0x7f0a0093
 
-.field public static call_change_mode_text_hint:I = 0x7f1300f6
+.field public static action_bar_subtitle:I = 0x7f0a0094
 
-.field public static call_close_dialog_accessibility:I = 0x7f1300f7
+.field public static action_bar_title:I = 0x7f0a0095
 
-.field public static call_collapsing_accessibility:I = 0x7f1300f8
+.field public static action_container:I = 0x7f0a0096
 
-.field public static call_connecting:I = 0x7f1300f9
+.field public static action_context_bar:I = 0x7f0a0097
 
-.field public static call_context_action_chat:I = 0x7f1300fb
+.field public static action_divider:I = 0x7f0a0098
 
-.field public static call_context_dialog_bluetooth:I = 0x7f1300fc
+.field public static action_image:I = 0x7f0a0099
 
-.field public static call_context_dialog_debug_menu:I = 0x7f1300fd
+.field public static action_menu_divider:I = 0x7f0a009a
 
-.field public static call_context_dialog_default_mode:I = 0x7f1300fe
+.field public static action_menu_presenter:I = 0x7f0a009b
 
-.field public static call_context_dialog_grid_mode:I = 0x7f1300ff
+.field public static action_mode_bar:I = 0x7f0a009c
 
-.field public static call_context_dialog_invite_user_to_p2p:I = 0x7f130100
+.field public static action_mode_bar_stub:I = 0x7f0a009d
 
-.field public static call_context_dialog_more_title:I = 0x7f130101
+.field public static action_mode_close_button:I = 0x7f0a009e
 
-.field public static call_context_dialog_open_chat:I = 0x7f130102
+.field public static action_text:I = 0x7f0a009f
 
-.field public static call_context_dialog_open_profile:I = 0x7f130103
+.field public static actions:I = 0x7f0a00a0
 
-.field public static call_context_dialog_record_screen:I = 0x7f130104
+.field public static activity_chooser_view_content:I = 0x7f0a00a1
 
-.field public static call_context_dialog_record_screen_in_progress:I = 0x7f130105
+.field public static add:I = 0x7f0a00a2
 
-.field public static call_context_dialog_record_screen_unavailable_desc:I = 0x7f130106
+.field public static alertTitle:I = 0x7f0a00a8
 
-.field public static call_context_dialog_settings:I = 0x7f130107
+.field public static async:I = 0x7f0a00c7
 
-.field public static call_context_dialog_share_screen:I = 0x7f130108
+.field public static blocking:I = 0x7f0a00e9
 
-.field public static call_context_dialog_share_screen_unavailable_desc:I = 0x7f130109
+.field public static buttonPanel:I = 0x7f0a00f7
 
-.field public static call_context_dialog_share_sound:I = 0x7f13010a
+.field public static checkbox:I = 0x7f0a029f
 
-.field public static call_context_dialog_speakerphone:I = 0x7f13010b
+.field public static checked:I = 0x7f0a02a0
 
-.field public static call_context_dialog_stop_record_screen:I = 0x7f13010c
+.field public static chronometer:I = 0x7f0a02a1
 
-.field public static call_context_dialog_stop_share_screen:I = 0x7f13010d
+.field public static content:I = 0x7f0a02d2
 
-.field public static call_context_volume_phone:I = 0x7f13010e
+.field public static contentPanel:I = 0x7f0a02d3
 
-.field public static call_debug_menu_settings_actions_header:I = 0x7f13010f
+.field public static custom:I = 0x7f0a02e0
 
-.field public static call_debug_menu_settings_crash:I = 0x7f130110
+.field public static customPanel:I = 0x7f0a02e1
 
-.field public static call_debug_menu_settings_nonfatal:I = 0x7f130111
+.field public static decor_content_parent:I = 0x7f0a02ea
 
-.field public static call_debug_menu_settings_title:I = 0x7f130112
+.field public static default_activity_button:I = 0x7f0a02ec
 
-.field public static call_dynamic_disabled_accessibility:I = 0x7f130117
+.field public static dialog_button:I = 0x7f0a02f8
 
-.field public static call_dynamic_enabled_accessibility:I = 0x7f130118
+.field public static edit_query:I = 0x7f0a031d
 
-.field public static call_failed:I = 0x7f130119
+.field public static expand_activities_button:I = 0x7f0a0359
 
-.field public static call_group_user_not_in_chat:I = 0x7f13011c
+.field public static expanded_menu:I = 0x7f0a035a
 
-.field public static call_group_wait_admin:I = 0x7f13011d
+.field public static forever:I = 0x7f0a038c
 
-.field public static call_group_was_removed_from_call:I = 0x7f13011e
+.field public static fragment_container_view_tag:I = 0x7f0a038d
 
-.field public static call_group_was_removed_from_waiting_room:I = 0x7f13011f
+.field public static group_divider:I = 0x7f0a03c3
 
-.field public static call_incoming_accept_accessibility:I = 0x7f13016a
+.field public static home:I = 0x7f0a03cb
 
-.field public static call_incoming_accept_with_audio_accessibility:I = 0x7f13016b
+.field public static icon:I = 0x7f0a03d2
 
-.field public static call_incoming_accept_with_video_accessibility:I = 0x7f13016c
+.field public static icon_group:I = 0x7f0a03d4
 
-.field public static call_incoming_app_title:I = 0x7f13016d
+.field public static image:I = 0x7f0a03d9
 
-.field public static call_incoming_apply_audio_call_description:I = 0x7f13016e
+.field public static info:I = 0x7f0a03e1
 
-.field public static call_incoming_apply_video_call_description:I = 0x7f13016f
+.field public static italic:I = 0x7f0a03e8
 
-.field public static call_incoming_audio_call:I = 0x7f130170
+.field public static line1:I = 0x7f0a0400
 
-.field public static call_incoming_call_video_disable:I = 0x7f130171
+.field public static line3:I = 0x7f0a0401
 
-.field public static call_incoming_call_video_enable:I = 0x7f130172
+.field public static listMode:I = 0x7f0a0410
 
-.field public static call_incoming_cancel_call_description:I = 0x7f130173
+.field public static list_item:I = 0x7f0a0411
 
-.field public static call_incoming_decline_accessibility:I = 0x7f130174
+.field public static message:I = 0x7f0a04d1
 
-.field public static call_incoming_description:I = 0x7f130175
+.field public static multiply:I = 0x7f0a058a
 
-.field public static call_incoming_open_chat_accessibility:I = 0x7f130176
+.field public static none:I = 0x7f0a059b
 
-.field public static call_incoming_video_call:I = 0x7f130177
+.field public static normal:I = 0x7f0a059c
 
-.field public static call_indicator_unavailable_call:I = 0x7f130179
+.field public static notification_background:I = 0x7f0a059e
 
-.field public static call_item_invite_opponent_preview_button_share:I = 0x7f13017a
+.field public static notification_main_column:I = 0x7f0a05a1
 
-.field public static call_item_invite_opponent_preview_description:I = 0x7f13017b
+.field public static notification_main_column_container:I = 0x7f0a05a2
 
-.field public static call_item_invite_opponent_preview_title:I = 0x7f13017c
+.field public static off:I = 0x7f0a05a4
 
-.field public static call_item_join_by_link_preview_copy:I = 0x7f13017d
+.field public static on:I = 0x7f0a05a6
 
-.field public static call_item_join_by_link_preview_send:I = 0x7f13017e
+.field public static parentPanel:I = 0x7f0a08bb
 
-.field public static call_item_join_by_link_preview_share:I = 0x7f13017f
+.field public static progress_circular:I = 0x7f0a0a09
 
-.field public static call_item_join_by_link_preview_title:I = 0x7f130180
+.field public static progress_horizontal:I = 0x7f0a0a0a
 
-.field public static call_item_join_waiting_room_no_admin_title:I = 0x7f130181
+.field public static radio:I = 0x7f0a0a16
 
-.field public static call_item_join_waiting_room_title:I = 0x7f130182
+.field public static right_icon:I = 0x7f0a0a23
 
-.field public static call_item_share_screen_mode_button_share_stop:I = 0x7f130183
+.field public static right_side:I = 0x7f0a0a24
 
-.field public static call_item_share_screen_mode_description:I = 0x7f130184
+.field public static screen:I = 0x7f0a0b15
 
-.field public static call_item_share_screen_mode_title:I = 0x7f130185
+.field public static scrollIndicatorDown:I = 0x7f0a0b17
 
-.field public static call_join_by_link_ask_microphone:I = 0x7f130186
+.field public static scrollIndicatorUp:I = 0x7f0a0b18
 
-.field public static call_join_by_link_ask_start_call:I = 0x7f130187
+.field public static scrollView:I = 0x7f0a0b19
 
-.field public static call_join_by_link_ask_start_title:I = 0x7f130188
+.field public static search_badge:I = 0x7f0a0b1c
 
-.field public static call_join_by_link_ask_video:I = 0x7f130189
+.field public static search_bar:I = 0x7f0a0b1d
 
-.field public static call_join_by_link_call_join_call:I = 0x7f13018a
+.field public static search_button:I = 0x7f0a0b1e
 
-.field public static call_join_by_link_call_share:I = 0x7f13018b
+.field public static search_close_btn:I = 0x7f0a0b21
 
-.field public static call_join_by_link_call_subtitle:I = 0x7f13018c
+.field public static search_edit_frame:I = 0x7f0a0b23
 
-.field public static call_join_by_link_call_title:I = 0x7f13018d
+.field public static search_go_btn:I = 0x7f0a0b24
 
-.field public static call_leave_dialog_action_exit:I = 0x7f13018e
+.field public static search_mag_icon:I = 0x7f0a0b25
 
-.field public static call_leave_dialog_subtitle:I = 0x7f13018f
+.field public static search_plate:I = 0x7f0a0b27
 
-.field public static call_leave_dialog_title:I = 0x7f130190
+.field public static search_src_text:I = 0x7f0a0b28
 
-.field public static call_link_share_dialog_description:I = 0x7f130191
+.field public static search_voice_btn:I = 0x7f0a0b29
 
-.field public static call_link_share_dialog_share_buttom:I = 0x7f130192
+.field public static select_dialog_listview:I = 0x7f0a0b32
 
-.field public static call_link_share_dialog_share_link_copy:I = 0x7f130193
+.field public static shortcut:I = 0x7f0a0bb1
 
-.field public static call_link_share_dialog_share_link_copy_failed:I = 0x7f130194
+.field public static spacer:I = 0x7f0a0bc3
 
-.field public static call_link_share_dialog_share_link_description:I = 0x7f130195
+.field public static special_effects_controller_view_tag:I = 0x7f0a0bc4
 
-.field public static call_link_share_dialog_share_link_dialog_intent_title:I = 0x7f130196
+.field public static split_action_bar:I = 0x7f0a0bc9
 
-.field public static call_link_share_dialog_title:I = 0x7f130197
+.field public static src_atop:I = 0x7f0a0bce
 
-.field public static call_main_speaker_phone_disabled:I = 0x7f130198
+.field public static src_in:I = 0x7f0a0bcf
 
-.field public static call_main_speaker_share_screen:I = 0x7f130199
+.field public static src_over:I = 0x7f0a0bd0
 
-.field public static call_me_in_waiting_room:I = 0x7f13019a
+.field public static submenuarrow:I = 0x7f0a0bdc
 
-.field public static call_me_member:I = 0x7f13019b
+.field public static submit_area:I = 0x7f0a0bdd
 
-.field public static call_me_talking_member:I = 0x7f13019c
+.field public static tabMode:I = 0x7f0a0be3
 
-.field public static call_member_add_accessibility:I = 0x7f13019e
+.field public static tag_accessibility_actions:I = 0x7f0a0be4
 
-.field public static call_member_add_more_accessibility:I = 0x7f1301a0
+.field public static tag_accessibility_clickable_spans:I = 0x7f0a0be5
 
-.field public static call_microphone_disabled_accessibility:I = 0x7f1301a7
+.field public static tag_accessibility_heading:I = 0x7f0a0be6
 
-.field public static call_microphone_enabled_accessibility:I = 0x7f1301a8
+.field public static tag_accessibility_pane_title:I = 0x7f0a0be7
 
-.field public static call_more_accessibility:I = 0x7f1301aa
+.field public static tag_on_apply_window_listener:I = 0x7f0a0be8
 
-.field public static call_opponent_failed:I = 0x7f1301be
+.field public static tag_on_receive_content_listener:I = 0x7f0a0be9
 
-.field public static call_opponent_failed_timout:I = 0x7f1301bf
+.field public static tag_on_receive_content_mime_types:I = 0x7f0a0bea
 
-.field public static call_opponent_million_size:I = 0x7f1301c0
+.field public static tag_screen_reader_focusable:I = 0x7f0a0bec
 
-.field public static call_opponent_reject_call:I = 0x7f1301c1
+.field public static tag_state_description:I = 0x7f0a0bed
 
-.field public static call_opponent_thousend_size:I = 0x7f1301c2
+.field public static tag_transition_group:I = 0x7f0a0bef
 
-.field public static call_opponent_unavailable:I = 0x7f1301c3
+.field public static tag_unhandled_key_event_manager:I = 0x7f0a0bf0
 
-.field public static call_opponent_unavailable_busy:I = 0x7f1301c4
+.field public static tag_unhandled_key_listeners:I = 0x7f0a0bf1
 
-.field public static call_opponent_unavailable_missed:I = 0x7f1301c5
+.field public static tag_window_insets_animation_callback:I = 0x7f0a0bf2
 
-.field public static call_opponent_unavailable_privacy:I = 0x7f1301c6
+.field public static text:I = 0x7f0a0bf4
 
-.field public static call_opponents_scroll_to_start:I = 0x7f1301c7
+.field public static text2:I = 0x7f0a0bf5
 
-.field public static call_participants_limit_reached:I = 0x7f1301ca
+.field public static textSpacerNoButtons:I = 0x7f0a0bf7
 
-.field public static call_raise_hand_disabled_accessibility:I = 0x7f1301d0
+.field public static textSpacerNoTitle:I = 0x7f0a0bf8
 
-.field public static call_raise_hand_enabled_accessibility:I = 0x7f1301d1
+.field public static time:I = 0x7f0a0c12
 
-.field public static call_rate_custom_reason_hint_text:I = 0x7f1301d2
+.field public static title:I = 0x7f0a0c13
 
-.field public static call_rate_initial_title_text:I = 0x7f1301d5
+.field public static titleDividerNoCustom:I = 0x7f0a0c14
 
-.field public static call_rate_negative_title_text:I = 0x7f1301e4
+.field public static title_template:I = 0x7f0a0c15
 
-.field public static call_rate_reason_audio_call_interuption_title:I = 0x7f1301e5
+.field public static topPanel:I = 0x7f0a0c29
 
-.field public static call_rate_reason_audio_echo_title:I = 0x7f1301e6
+.field public static unchecked:I = 0x7f0a0c45
 
-.field public static call_rate_reason_audio_freezes_title:I = 0x7f1301e7
+.field public static uniform:I = 0x7f0a0c46
 
-.field public static call_rate_reason_audio_quality_title:I = 0x7f1301e8
+.field public static up:I = 0x7f0a0c50
 
-.field public static call_rate_reason_users_freezes_title:I = 0x7f1301e9
+.field public static view_tree_lifecycle_owner:I = 0x7f0a0ce3
 
-.field public static call_rate_reason_video_call_interuption_title:I = 0x7f1301ea
+.field public static view_tree_on_back_pressed_dispatcher_owner:I = 0x7f0a0ce4
 
-.field public static call_rate_reason_video_freezes_title:I = 0x7f1301eb
+.field public static view_tree_saved_state_registry_owner:I = 0x7f0a0ce5
 
-.field public static call_rate_reason_video_quality_title:I = 0x7f1301ec
+.field public static view_tree_view_model_store_owner:I = 0x7f0a0ce6
 
-.field public static call_rate_reason_video_sync_title:I = 0x7f1301ed
+.field public static visible_removing_fragment_view_tag:I = 0x7f0a0d09
 
-.field public static call_rate_reason_voice_communication_problem_title:I = 0x7f1301ee
-
-.field public static call_rate_send_button_text:I = 0x7f1301f0
-
-.field public static call_rate_success_snackbar_subtitle:I = 0x7f1301f2
-
-.field public static call_rate_success_snackbar_title:I = 0x7f1301f3
-
-.field public static call_recall:I = 0x7f1301f5
-
-.field public static call_reconnecting:I = 0x7f1301f6
-
-.field public static call_record_me_stop_record:I = 0x7f1301f7
-
-.field public static call_record_me_stop_record_and_remove:I = 0x7f1301f8
-
-.field public static call_record_review_name:I = 0x7f1301f9
-
-.field public static call_screen_admin_confirm_add_users_check:I = 0x7f1301fa
-
-.field public static call_screen_admin_confirm_add_users_neutral:I = 0x7f1301fb
-
-.field public static call_screen_admin_confirm_add_users_positive:I = 0x7f1301fc
-
-.field public static call_screen_admin_confirm_add_users_subtitle:I = 0x7f1301fd
-
-.field public static call_screen_admin_confirm_add_users_title:I = 0x7f1301fe
-
-.field public static call_screen_admin_confirm_remove_user_neutral:I = 0x7f1301ff
-
-.field public static call_screen_admin_confirm_remove_user_positive:I = 0x7f130200
-
-.field public static call_screen_admin_confirm_remove_user_subtitle:I = 0x7f130201
-
-.field public static call_screen_admin_confirm_remove_user_title:I = 0x7f130202
-
-.field public static call_screen_admin_remove_user_title:I = 0x7f130203
-
-.field public static call_screen_admin_user_in_wait_room_apply_all:I = 0x7f130204
-
-.field public static call_screen_admin_user_in_wait_room_empty_button:I = 0x7f130205
-
-.field public static call_screen_admin_user_in_wait_room_empty_subtitle:I = 0x7f130206
-
-.field public static call_screen_admin_user_in_wait_room_empty_title:I = 0x7f130207
-
-.field public static call_screen_admin_user_in_wait_room_reject_all:I = 0x7f130208
-
-.field public static call_screen_admin_user_in_wait_room_title:I = 0x7f130209
-
-.field public static call_screen_bad_connection:I = 0x7f13020a
-
-.field public static call_screen_camera_admin_low_hand:I = 0x7f13020b
-
-.field public static call_screen_camera_admin_remove_user:I = 0x7f13020c
-
-.field public static call_screen_camera_admin_stop_camera_user:I = 0x7f13020d
-
-.field public static call_screen_camera_admin_stop_mic_user:I = 0x7f13020e
-
-.field public static call_screen_camera_admin_stop_sharing_user:I = 0x7f13020f
-
-.field public static call_screen_camera_and_mic_unavailable_in_call:I = 0x7f130210
-
-.field public static call_screen_camera_disabled_by_admin:I = 0x7f130211
-
-.field public static call_screen_camera_unavailable_in_call:I = 0x7f130212
-
-.field public static call_screen_connection_restored:I = 0x7f130213
-
-.field public static call_screen_connection_restoring:I = 0x7f130214
-
-.field public static call_screen_invite_to_p2p_title:I = 0x7f130215
-
-.field public static call_screen_menu_grid_mode_title:I = 0x7f130216
-
-.field public static call_screen_menu_speaker_mode_subtitle:I = 0x7f130217
-
-.field public static call_screen_menu_speaker_mode_title:I = 0x7f130218
-
-.field public static call_screen_mic_disabled_by_admin:I = 0x7f130219
-
-.field public static call_screen_mic_unavailable_in_call:I = 0x7f13021a
-
-.field public static call_screen_opponents_list_add_users:I = 0x7f13021b
-
-.field public static call_screen_opponents_list_empty_subtitle:I = 0x7f13021c
-
-.field public static call_screen_opponents_list_empty_title:I = 0x7f13021d
-
-.field public static call_screen_opponents_list_link:I = 0x7f13021e
-
-.field public static call_screen_opponents_list_more:I = 0x7f13021f
-
-.field public static call_screen_opponents_list_users_title:I = 0x7f130220
-
-.field public static call_screen_raise_hand_disabled_by_admin:I = 0x7f130221
-
-.field public static call_screen_raisehand_manage_negative_btn:I = 0x7f130222
-
-.field public static call_screen_raisehand_manage_positive_btn:I = 0x7f130223
-
-.field public static call_screen_raisehand_manage_subtitle_admin:I = 0x7f130224
-
-.field public static call_screen_raisehand_manage_title_admin:I = 0x7f130225
-
-.field public static call_screen_raisehand_manage_title_me:I = 0x7f130226
-
-.field public static call_screen_record_admin_exit_need_remove:I = 0x7f130227
-
-.field public static call_screen_record_admin_exit_negative_btn:I = 0x7f130228
-
-.field public static call_screen_record_admin_exit_positive_btn:I = 0x7f130229
-
-.field public static call_screen_record_admin_exit_title:I = 0x7f13022a
-
-.field public static call_screen_record_me_owner_exit_negative_btn:I = 0x7f13022b
-
-.field public static call_screen_record_me_owner_exit_positive_btn:I = 0x7f13022c
-
-.field public static call_screen_record_me_owner_exit_subtitle:I = 0x7f13022d
-
-.field public static call_screen_record_me_owner_exit_title:I = 0x7f13022e
-
-.field public static call_screen_record_start_chat_subtitle:I = 0x7f13022f
-
-.field public static call_screen_record_start_chat_title:I = 0x7f130230
-
-.field public static call_screen_record_start_failed:I = 0x7f130231
-
-.field public static call_screen_record_start_name_error:I = 0x7f130232
-
-.field public static call_screen_record_start_start_btn:I = 0x7f130233
-
-.field public static call_screen_record_start_title:I = 0x7f130234
-
-.field public static call_screen_record_start_tooltip_admin:I = 0x7f130235
-
-.field public static call_screen_record_start_tooltip_user:I = 0x7f130236
-
-.field public static call_screen_record_unavailable_in_call:I = 0x7f130237
-
-.field public static call_screen_record_user_description:I = 0x7f130238
-
-.field public static call_screen_record_user_description_with_duration:I = 0x7f130239
-
-.field public static call_screen_share_link_title:I = 0x7f13023a
-
-.field public static call_screen_sharing_unavailable_in_call:I = 0x7f13023b
-
-.field public static call_screen_snackbar_button_text:I = 0x7f13023c
-
-.field public static call_screen_snackbar_caption:I = 0x7f13023d
-
-.field public static call_screen_snackbar_title:I = 0x7f13023e
-
-.field public static call_screen_waiting_room_more_users_waitting_title:I = 0x7f13023f
-
-.field public static call_screen_waiting_room_two_users_waitting_title:I = 0x7f130240
-
-.field public static call_screen_waiting_room_user_waitting_approuve:I = 0x7f130241
-
-.field public static call_screen_waiting_room_users_waitting_approuve:I = 0x7f130242
-
-.field public static call_settings_accessibility:I = 0x7f130243
-
-.field public static call_start_screen_sharing_error:I = 0x7f130256
-
-.field public static call_tooltip_mic_disabled:I = 0x7f13026d
-
-.field public static call_tooltip_raise_hand:I = 0x7f13026e
-
-.field public static call_user_bad_network_accessibility:I = 0x7f13026f
-
-.field public static call_user_connection_accessibility:I = 0x7f130270
-
-.field public static call_user_info_disable_microphone:I = 0x7f130271
-
-.field public static call_user_info_disable_video:I = 0x7f130272
-
-.field public static call_user_info_open_chat:I = 0x7f130273
-
-.field public static call_user_info_pin:I = 0x7f130274
-
-.field public static call_user_info_pinned:I = 0x7f130275
-
-.field public static call_user_info_profile:I = 0x7f130276
-
-.field public static call_user_info_remove_from_call:I = 0x7f130277
-
-.field public static call_user_info_reset_admin_call:I = 0x7f130278
-
-.field public static call_user_info_set_admin_call:I = 0x7f130279
-
-.field public static call_user_info_unpin:I = 0x7f13027a
-
-.field public static call_user_item_more:I = 0x7f13027b
-
-.field public static call_user_item_rotate:I = 0x7f13027c
-
-.field public static call_user_microphone_disabled_accessibility:I = 0x7f13027d
-
-.field public static call_user_restricted_info:I = 0x7f13027e
-
-.field public static call_user_talking_accessibility:I = 0x7f13027f
-
-.field public static call_users_in_call_add:I = 0x7f130280
-
-.field public static call_users_in_call_search:I = 0x7f130281
-
-.field public static call_users_in_call_share_link:I = 0x7f130282
-
-.field public static call_users_in_call_share_link_error:I = 0x7f130283
-
-.field public static call_users_in_wait_room_count_no_users:I = 0x7f130284
-
-.field public static call_users_in_wait_room_count_show_all:I = 0x7f130285
-
-.field public static call_users_info_admin:I = 0x7f130286
-
-.field public static call_users_info_count_no_users:I = 0x7f130287
-
-.field public static call_users_info_creator:I = 0x7f130288
-
-.field public static call_users_info_me:I = 0x7f130289
-
-.field public static call_users_info_me_admin:I = 0x7f13028a
-
-.field public static call_users_info_open_chat_error:I = 0x7f13028b
-
-.field public static call_users_info_participant:I = 0x7f13028c
-
-.field public static call_video_disabled_accessibility:I = 0x7f13028f
-
-.field public static call_video_enabled_accessibility:I = 0x7f130290
-
-.field public static call_video_mode_accessibility:I = 0x7f130291
-
-.field public static call_volume_bluetooth:I = 0x7f130293
-
-.field public static call_volume_default:I = 0x7f130294
-
-.field public static call_volume_earpiece:I = 0x7f130295
-
-.field public static call_volume_speakerphone:I = 0x7f130296
-
-.field public static call_volume_wired_headphones:I = 0x7f130297
-
-.field public static call_volume_wired_unknown:I = 0x7f130298
-
-.field public static call_volume_wired_usb_headset:I = 0x7f130299
-
-.field public static call_volume_wired_wired_headset:I = 0x7f13029a
-
-.field public static call_waiting:I = 0x7f13029b
-
-.field public static call_write_message:I = 0x7f13029c
-
-.field public static unknown_call_block_default_block_reason:I = 0x7f130e70
-
-.field public static unknown_call_block_reason_close:I = 0x7f130e71
-
-.field public static unknown_call_botton_sheet_add_contact_button:I = 0x7f130e72
-
-.field public static unknown_call_botton_sheet_block_button:I = 0x7f130e73
-
-.field public static unknown_call_botton_sheet_blocking_subtitle:I = 0x7f130e74
-
-.field public static unknown_call_botton_sheet_blocking_title:I = 0x7f130e75
-
-.field public static unknown_call_botton_sheet_ok_button:I = 0x7f130e76
-
-.field public static unknown_call_botton_sheet_status_title:I = 0x7f130e77
-
-.field public static unknown_call_snackbar_blocked_text:I = 0x7f130e78
-
-.field public static unknown_call_snackbar_contact_added_text:I = 0x7f130e79
+.field public static wrap_content:I = 0x7f0a0d22

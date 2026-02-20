@@ -1,63 +1,64 @@
-.class public abstract Lyse;
+.class public final Lyse;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lzse;
+
+
+# static fields
+.field public static final a:Lyse;
+
 
 # direct methods
-.method public static a([B)Lzse;
-    .locals 7
+.method static constructor <clinit>()V
+    .locals 1
 
-    new-instance v0, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;
+    new-instance v0, Lyse;
 
-    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    :try_start_0
-    invoke-static {v0, p0}, Lbp9;->mergeFrom(Lbp9;[B)Lbp9;
+    sput-object v0, Lyse;->a:Lyse;
 
-    move-result-object p0
+    return-void
+.end method
 
-    check-cast p0, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;
-    :try_end_0
-    .catch Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException; {:try_start_0 .. :try_end_0} :catch_0
 
-    new-instance v0, Lzse;
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget-wide v1, p0, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;->taskId:J
+    const/4 v0, 0x1
 
-    iget-wide v3, p0, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;->chatId:J
+    if-ne p0, p1, :cond_0
 
-    iget v5, p0, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;->count:I
+    return v0
 
-    sget-object v6, Lmw4;->d:Lwna;
+    :cond_0
+    instance-of p1, p1, Lyse;
 
-    iget p0, p0, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;->itemTypeId:I
+    if-nez p1, :cond_1
 
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    const/4 p1, 0x0
 
-    move-result-object p0
+    return p1
 
-    invoke-static {v6, p0}, Lwna;->A(Lwna;Ljava/lang/Number;)Lmw4;
+    :cond_1
+    return v0
+.end method
 
-    move-result-object v6
+.method public final hashCode()I
+    .locals 1
 
-    invoke-direct/range {v0 .. v6}, Lzse;-><init>(JJILmw4;)V
+    const v0, 0x46ade7d4
 
-    iget-object p0, v0, Lzse;->X:Ljava/lang/String;
+    return v0
+.end method
 
-    const-string v1, "parseFrom"
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    invoke-static {p0, v1}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+    const-string v0, "OnClosed"
 
     return-object v0
-
-    :catch_0
-    move-exception v0
-
-    move-object p0, v0
-
-    new-instance v0, Lru/ok/tamtam/nano/ProtoException;
-
-    invoke-direct {v0, p0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v0
 .end method

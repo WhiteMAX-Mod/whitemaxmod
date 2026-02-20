@@ -1,150 +1,82 @@
-.class public final Lk25;
-.super Ljava/lang/Object;
+.class public final enum Lk25;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/util/concurrent/Executor;
 
-# instance fields
-.field public final a:Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;
 
-.field public final b:I
+# static fields
+.field public static final enum a:Lk25;
 
-.field public final c:I
+.field public static final synthetic b:[Lk25;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;II)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lk25;
 
-    iput-object p1, p0, Lk25;->a:Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;
+    const-string v1, "INSTANCE"
 
-    iput p2, p0, Lk25;->b:I
+    const/4 v2, 0x0
 
-    iput p3, p0, Lk25;->c:I
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lk25;->a:Lk25;
+
+    filled-new-array {v0}, [Lk25;
+
+    move-result-object v0
+
+    sput-object v0, Lk25;->b:[Lk25;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lk25;
+    .locals 1
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    const-class v0, Lk25;
 
-    const/4 v0, 0x1
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    if-ne p0, p1, :cond_0
+    move-result-object p0
 
-    return v0
+    check-cast p0, Lk25;
 
-    :cond_0
-    instance-of v1, p1, Lk25;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lk25;
-
-    iget-object v1, p0, Lk25;->a:Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;
-
-    iget-object v3, p1, Lk25;->a:Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;
-
-    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget v1, p0, Lk25;->b:I
-
-    iget v3, p1, Lk25;->b:I
-
-    if-eq v1, v3, :cond_3
-
-    return v2
-
-    :cond_3
-    iget v1, p0, Lk25;->c:I
-
-    iget p1, p1, Lk25;->c:I
-
-    if-eq v1, p1, :cond_4
-
-    return v2
-
-    :cond_4
-    return v0
+    return-object p0
 .end method
 
-.method public final hashCode()I
-    .locals 3
+.method public static values()[Lk25;
+    .locals 1
 
-    iget-object v0, p0, Lk25;->a:Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;
+    sget-object v0, Lk25;->b:[Lk25;
 
-    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;->hashCode()I
+    invoke-virtual {v0}, [Lk25;->clone()Ljava/lang/Object;
 
-    move-result v0
+    move-result-object v0
 
-    const/16 v1, 0x1f
+    check-cast v0, [Lk25;
 
-    mul-int/2addr v0, v1
+    return-object v0
+.end method
 
-    iget v2, p0, Lk25;->b:I
 
-    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
+# virtual methods
+.method public final execute(Ljava/lang/Runnable;)V
+    .locals 0
 
-    move-result v0
+    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
-    iget v1, p0, Lk25;->c:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    return-void
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "DisplayLayout(track="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lk25;->a:Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", w="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lk25;->b:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", h="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    iget v2, p0, Lk25;->c:I
-
-    invoke-static {v0, v2, v1}, Lj27;->k(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    const-string v0, "DirectExecutor"
 
     return-object v0
 .end method

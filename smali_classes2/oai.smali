@@ -1,176 +1,69 @@
 .class public final Loai;
-.super Ljava/lang/Object;
+.super Lao4;
 .source "SourceFile"
 
 
 # static fields
-.field public static final Companion:Lnai;
+.field public static final b:Loai;
 
+.field public static final c:Lwn4;
 
-# instance fields
-.field public final a:Ljava/lang/String;
+.field public static final d:Lwn4;
 
-.field public final b:Z
+.field public static final e:Lwn4;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 6
 
-    new-instance v0, Lnai;
+    new-instance v0, Loai;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Lao4;-><init>()V
 
-    sput-object v0, Loai;->Companion:Lnai;
+    sput-object v0, Loai;->b:Loai;
 
-    return-void
-.end method
+    const-string v1, "bot_id"
 
-.method public synthetic constructor <init>(Ljava/lang/String;IZ)V
-    .locals 2
+    filled-new-array {v1}, [Ljava/lang/String;
 
-    and-int/lit8 v0, p2, 0x3
+    move-result-object v2
 
-    const/4 v1, 0x3
+    const-string v3, ":webapp:root"
 
-    if-ne v1, v0, :cond_0
+    const/4 v4, 0x0
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/16 v5, 0xe
 
-    iput-object p1, p0, Loai;->a:Ljava/lang/String;
+    invoke-static {v0, v3, v2, v4, v5}, Lao4;->c(Lao4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lwn4;
 
-    iput-boolean p3, p0, Loai;->b:Z
+    move-result-object v2
 
-    return-void
-
-    :cond_0
-    sget-object p1, Lmai;->a:Lmai;
-
-    invoke-virtual {p1}, Lmai;->d()Lxpe;
-
-    move-result-object p1
-
-    invoke-static {p2, v1, p1}, Lqjj;->b(IILxpe;)V
-
-    const/4 p1, 0x0
-
-    throw p1
-.end method
-
-.method public constructor <init>(Ljava/lang/String;Z)V
-    .locals 0
-
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 3
-    iput-object p1, p0, Loai;->a:Ljava/lang/String;
-
-    .line 4
-    iput-boolean p2, p0, Loai;->b:Z
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Loai;
+    sput-object v2, Loai;->c:Lwn4;
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    new-array v2, v2, [Ljava/lang/String;
 
-    return v2
+    const-string v3, ":settings/webapps"
 
-    :cond_1
-    check-cast p1, Loai;
+    invoke-static {v0, v3, v2, v4, v5}, Lao4;->c(Lao4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lwn4;
 
-    iget-object v1, p0, Loai;->a:Ljava/lang/String;
+    move-result-object v2
 
-    iget-object v3, p1, Loai;->a:Ljava/lang/String;
+    sput-object v2, Loai;->d:Lwn4;
 
-    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    const-string v2, ":settings/webapp"
 
-    move-result v1
+    filled-new-array {v1}, [Ljava/lang/String;
 
-    if-nez v1, :cond_2
+    move-result-object v1
 
-    return v2
-
-    :cond_2
-    iget-boolean v1, p0, Loai;->b:Z
-
-    iget-boolean p1, p1, Loai;->b:Z
-
-    if-eq v1, p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Loai;->a:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean v1, p0, Loai;->b:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "WebAppSetupScreenCaptureBehaviorResponse(requestId="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Loai;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isScreenCaptureEnabled="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Loai;->b:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, v2, v1, v4, v5}, Lao4;->c(Lao4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lwn4;
 
     move-result-object v0
 
-    return-object v0
+    sput-object v0, Loai;->e:Lwn4;
+
+    return-void
 .end method

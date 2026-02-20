@@ -1,170 +1,400 @@
-.class public abstract Ls5d;
-.super Ljava/lang/Object;
+.class public final Ls5d;
+.super Lu7g;
+.source "SourceFile"
 
 
 # static fields
-.field public static abc_background_cache_hint_selector_material_dark:I = 0x7f060000
+.field public static final c:[Lr5d;
 
-.field public static abc_background_cache_hint_selector_material_light:I = 0x7f060001
+.field public static final d:[Lr5d;
 
-.field public static abc_btn_colored_borderless_text_material:I = 0x7f060002
 
-.field public static abc_btn_colored_text_material:I = 0x7f060003
+# instance fields
+.field public final a:Ljava/util/concurrent/atomic/AtomicReference;
 
-.field public static abc_color_highlight_material:I = 0x7f060004
+.field public b:Ljava/lang/Throwable;
 
-.field public static abc_decor_view_status_guard:I = 0x7f060005
 
-.field public static abc_decor_view_status_guard_light:I = 0x7f060006
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
 
-.field public static abc_hint_foreground_material_dark:I = 0x7f060007
+    const/4 v0, 0x0
 
-.field public static abc_hint_foreground_material_light:I = 0x7f060008
+    new-array v1, v0, [Lr5d;
 
-.field public static abc_primary_text_disable_only_material_dark:I = 0x7f060009
+    sput-object v1, Ls5d;->c:[Lr5d;
 
-.field public static abc_primary_text_disable_only_material_light:I = 0x7f06000a
+    new-array v0, v0, [Lr5d;
 
-.field public static abc_primary_text_material_dark:I = 0x7f06000b
+    sput-object v0, Ls5d;->d:[Lr5d;
 
-.field public static abc_primary_text_material_light:I = 0x7f06000c
+    return-void
+.end method
 
-.field public static abc_search_url_text:I = 0x7f06000d
+.method public constructor <init>()V
+    .locals 2
 
-.field public static abc_search_url_text_normal:I = 0x7f06000e
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static abc_search_url_text_pressed:I = 0x7f06000f
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
 
-.field public static abc_search_url_text_selected:I = 0x7f060010
+    sget-object v1, Ls5d;->d:[Lr5d;
 
-.field public static abc_secondary_text_material_dark:I = 0x7f060011
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
 
-.field public static abc_secondary_text_material_light:I = 0x7f060012
+    iput-object v0, p0, Ls5d;->a:Ljava/util/concurrent/atomic/AtomicReference;
 
-.field public static abc_tint_btn_checkable:I = 0x7f060013
+    return-void
+.end method
 
-.field public static abc_tint_default:I = 0x7f060014
 
-.field public static abc_tint_edittext:I = 0x7f060015
+# virtual methods
+.method public final b(Ljava/lang/Object;)V
+    .locals 5
 
-.field public static abc_tint_seek_thumb:I = 0x7f060016
+    const-string v0, "onNext called with a null value."
 
-.field public static abc_tint_spinner:I = 0x7f060017
+    invoke-static {p1, v0}, Lro5;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-.field public static abc_tint_switch_track:I = 0x7f060018
+    iget-object v0, p0, Ls5d;->a:Ljava/util/concurrent/atomic/AtomicReference;
 
-.field public static accent_material_dark:I = 0x7f06001b
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-.field public static accent_material_light:I = 0x7f06001c
+    move-result-object v0
 
-.field public static background_floating_material_dark:I = 0x7f06002a
+    check-cast v0, [Lr5d;
 
-.field public static background_floating_material_light:I = 0x7f06002b
+    array-length v1, v0
 
-.field public static background_material_dark:I = 0x7f06002c
+    const/4 v2, 0x0
 
-.field public static background_material_light:I = 0x7f06002d
+    :goto_0
+    if-ge v2, v1, :cond_1
 
-.field public static bright_foreground_disabled_material_dark:I = 0x7f06003e
+    aget-object v3, v0, v2
 
-.field public static bright_foreground_disabled_material_light:I = 0x7f06003f
+    invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
-.field public static bright_foreground_inverse_material_dark:I = 0x7f060040
+    move-result v4
 
-.field public static bright_foreground_inverse_material_light:I = 0x7f060041
+    if-nez v4, :cond_0
 
-.field public static bright_foreground_material_dark:I = 0x7f060042
+    iget-object v3, v3, Lr5d;->a:Lv2b;
 
-.field public static bright_foreground_material_light:I = 0x7f060043
+    invoke-interface {v3, p1}, Lv2b;->b(Ljava/lang/Object;)V
 
-.field public static button_material_dark:I = 0x7f060048
+    :cond_0
+    add-int/lit8 v2, v2, 0x1
 
-.field public static button_material_light:I = 0x7f060049
+    goto :goto_0
 
-.field public static dim_foreground_disabled_material_dark:I = 0x7f060093
+    :cond_1
+    return-void
+.end method
 
-.field public static dim_foreground_disabled_material_light:I = 0x7f060094
+.method public final c()V
+    .locals 5
 
-.field public static dim_foreground_material_dark:I = 0x7f060095
+    iget-object v0, p0, Ls5d;->a:Ljava/util/concurrent/atomic/AtomicReference;
 
-.field public static dim_foreground_material_light:I = 0x7f060096
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-.field public static error_color_material_dark:I = 0x7f06009d
+    move-result-object v1
 
-.field public static error_color_material_light:I = 0x7f06009e
+    sget-object v2, Ls5d;->c:[Lr5d;
 
-.field public static foreground_material_dark:I = 0x7f0600a7
+    if-ne v1, v2, :cond_0
 
-.field public static foreground_material_light:I = 0x7f0600a8
+    goto :goto_1
 
-.field public static highlighted_text_material_dark:I = 0x7f0600b2
+    :cond_0
+    invoke-virtual {v0, v2}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
 
-.field public static highlighted_text_material_light:I = 0x7f0600b3
+    move-result-object v0
 
-.field public static material_blue_grey_800:I = 0x7f060272
+    check-cast v0, [Lr5d;
 
-.field public static material_blue_grey_900:I = 0x7f060273
+    array-length v1, v0
 
-.field public static material_blue_grey_950:I = 0x7f060274
+    const/4 v2, 0x0
 
-.field public static material_deep_teal_200:I = 0x7f060276
+    :goto_0
+    if-ge v2, v1, :cond_2
 
-.field public static material_deep_teal_500:I = 0x7f060277
+    aget-object v3, v0, v2
 
-.field public static material_grey_100:I = 0x7f0602c2
+    invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
-.field public static material_grey_300:I = 0x7f0602c3
+    move-result v4
 
-.field public static material_grey_50:I = 0x7f0602c4
+    if-nez v4, :cond_1
 
-.field public static material_grey_600:I = 0x7f0602c5
+    iget-object v3, v3, Lr5d;->a:Lv2b;
 
-.field public static material_grey_800:I = 0x7f0602c6
+    invoke-interface {v3}, Lv2b;->c()V
 
-.field public static material_grey_850:I = 0x7f0602c7
+    :cond_1
+    add-int/lit8 v2, v2, 0x1
 
-.field public static material_grey_900:I = 0x7f0602c8
+    goto :goto_0
 
-.field public static primary_dark_material_dark:I = 0x7f06036b
+    :cond_2
+    :goto_1
+    return-void
+.end method
 
-.field public static primary_dark_material_light:I = 0x7f06036c
+.method public final d(Ly35;)V
+    .locals 2
 
-.field public static primary_material_dark:I = 0x7f06036d
+    iget-object v0, p0, Ls5d;->a:Ljava/util/concurrent/atomic/AtomicReference;
 
-.field public static primary_material_light:I = 0x7f06036e
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-.field public static primary_text_default_material_dark:I = 0x7f06036f
+    move-result-object v0
 
-.field public static primary_text_default_material_light:I = 0x7f060370
+    sget-object v1, Ls5d;->c:[Lr5d;
 
-.field public static primary_text_disabled_material_dark:I = 0x7f060371
+    if-ne v0, v1, :cond_0
 
-.field public static primary_text_disabled_material_light:I = 0x7f060372
+    invoke-interface {p1}, Ly35;->dispose()V
 
-.field public static ripple_material_dark:I = 0x7f06037d
+    :cond_0
+    return-void
+.end method
 
-.field public static ripple_material_light:I = 0x7f06037e
+.method public final l(Lv2b;)V
+    .locals 6
 
-.field public static secondary_text_default_material_dark:I = 0x7f060380
+    new-instance v0, Lr5d;
 
-.field public static secondary_text_default_material_light:I = 0x7f060381
+    invoke-direct {v0, p1, p0}, Lr5d;-><init>(Lv2b;Ls5d;)V
 
-.field public static secondary_text_disabled_material_dark:I = 0x7f060382
+    invoke-interface {p1, v0}, Lv2b;->d(Ly35;)V
 
-.field public static secondary_text_disabled_material_light:I = 0x7f060383
+    :goto_0
+    iget-object v1, p0, Ls5d;->a:Ljava/util/concurrent/atomic/AtomicReference;
 
-.field public static switch_thumb_disabled_material_dark:I = 0x7f060385
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-.field public static switch_thumb_disabled_material_light:I = 0x7f060386
+    move-result-object v2
 
-.field public static switch_thumb_material_dark:I = 0x7f060387
+    check-cast v2, [Lr5d;
 
-.field public static switch_thumb_material_light:I = 0x7f060388
+    sget-object v3, Ls5d;->c:[Lr5d;
 
-.field public static switch_thumb_normal_material_dark:I = 0x7f060389
+    if-ne v2, v3, :cond_1
 
-.field public static switch_thumb_normal_material_light:I = 0x7f06038a
+    iget-object v0, p0, Ls5d;->b:Ljava/lang/Throwable;
 
-.field public static tooltip_background_dark:I = 0x7f060396
+    if-eqz v0, :cond_0
 
-.field public static tooltip_background_light:I = 0x7f060397
+    invoke-interface {p1, v0}, Lv2b;->onError(Ljava/lang/Throwable;)V
+
+    return-void
+
+    :cond_0
+    invoke-interface {p1}, Lv2b;->c()V
+
+    return-void
+
+    :cond_1
+    array-length v3, v2
+
+    add-int/lit8 v4, v3, 0x1
+
+    new-array v4, v4, [Lr5d;
+
+    const/4 v5, 0x0
+
+    invoke-static {v2, v5, v4, v5, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    aput-object v0, v4, v3
+
+    :cond_2
+    invoke-virtual {v1, v2, v4}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_4
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_3
+
+    invoke-virtual {p0, v0}, Ls5d;->p(Lr5d;)V
+
+    :cond_3
+    return-void
+
+    :cond_4
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v3
+
+    if-eq v3, v2, :cond_2
+
+    goto :goto_0
+.end method
+
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 5
+
+    const-string v0, "onError called with a null Throwable."
+
+    invoke-static {p1, v0}, Lro5;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    iget-object v0, p0, Ls5d;->a:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    sget-object v2, Ls5d;->c:[Lr5d;
+
+    if-ne v1, v2, :cond_0
+
+    invoke-static {p1}, Lsvj;->a(Ljava/lang/Throwable;)V
+
+    return-void
+
+    :cond_0
+    iput-object p1, p0, Ls5d;->b:Ljava/lang/Throwable;
+
+    invoke-virtual {v0, v2}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lr5d;
+
+    array-length v1, v0
+
+    const/4 v2, 0x0
+
+    :goto_0
+    if-ge v2, v1, :cond_2
+
+    aget-object v3, v0, v2
+
+    invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    invoke-static {p1}, Lsvj;->a(Ljava/lang/Throwable;)V
+
+    goto :goto_1
+
+    :cond_1
+    iget-object v3, v3, Lr5d;->a:Lv2b;
+
+    invoke-interface {v3, p1}, Lv2b;->onError(Ljava/lang/Throwable;)V
+
+    :goto_1
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    return-void
+.end method
+
+.method public final p(Lr5d;)V
+    .locals 7
+
+    :goto_0
+    iget-object v0, p0, Ls5d;->a:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, [Lr5d;
+
+    sget-object v2, Ls5d;->c:[Lr5d;
+
+    if-eq v1, v2, :cond_7
+
+    sget-object v2, Ls5d;->d:[Lr5d;
+
+    if-ne v1, v2, :cond_0
+
+    goto :goto_4
+
+    :cond_0
+    array-length v3, v1
+
+    const/4 v4, 0x0
+
+    move v5, v4
+
+    :goto_1
+    if-ge v5, v3, :cond_2
+
+    aget-object v6, v1, v5
+
+    if-ne v6, p1, :cond_1
+
+    goto :goto_2
+
+    :cond_1
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_1
+
+    :cond_2
+    const/4 v5, -0x1
+
+    :goto_2
+    if-gez v5, :cond_3
+
+    goto :goto_4
+
+    :cond_3
+    const/4 v6, 0x1
+
+    if-ne v3, v6, :cond_4
+
+    goto :goto_3
+
+    :cond_4
+    add-int/lit8 v2, v3, -0x1
+
+    new-array v2, v2, [Lr5d;
+
+    invoke-static {v1, v4, v2, v4, v5}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    add-int/lit8 v4, v5, 0x1
+
+    sub-int/2addr v3, v5
+
+    sub-int/2addr v3, v6
+
+    invoke-static {v1, v4, v2, v5, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    :cond_5
+    :goto_3
+    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_6
+
+    goto :goto_4
+
+    :cond_6
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v3
+
+    if-eq v3, v1, :cond_5
+
+    goto :goto_0
+
+    :cond_7
+    :goto_4
+    return-void
+.end method

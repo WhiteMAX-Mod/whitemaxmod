@@ -1,102 +1,35 @@
-.class public final synthetic Ljb9;
+.class public final Ljb9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lsa9;
 
-.field public final synthetic b:Lrb9;
+.field public final b:I
 
-.field public final synthetic c:Lxcc;
+.field public final c:Z
+
+.field public final d:Z
+
+.field public final e:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lrb9;Lxcc;I)V
+.method public constructor <init>(Lsa9;IZZZ)V
     .locals 0
-
-    iput p3, p0, Ljb9;->a:I
-
-    iput-object p1, p0, Ljb9;->b:Lrb9;
-
-    iput-object p2, p0, Ljb9;->c:Lxcc;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    iput-object p1, p0, Ljb9;->a:Lsa9;
 
+    iput p2, p0, Ljb9;->b:I
 
-# virtual methods
-.method public final run()V
-    .locals 4
+    iput-boolean p3, p0, Ljb9;->c:Z
 
-    iget v0, p0, Ljb9;->a:I
+    iput-boolean p4, p0, Ljb9;->d:Z
 
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Ljb9;->b:Lrb9;
-
-    iget-object v1, v0, Lrb9;->k:Lza9;
-
-    iget-object v2, p0, Ljb9;->c:Lxcc;
-
-    invoke-virtual {v0, v2}, Lrb9;->F(Lxcc;)Lbbc;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Lza9;->N(Lbbc;)V
+    iput-boolean p5, p0, Ljb9;->e:Z
 
     return-void
-
-    :pswitch_0
-    iget-object v0, p0, Ljb9;->b:Lrb9;
-
-    iget-object v1, v0, Lrb9;->k:Lza9;
-
-    iget-object v2, p0, Ljb9;->c:Lxcc;
-
-    invoke-virtual {v0, v2}, Lrb9;->F(Lxcc;)Lbbc;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v3}, Lza9;->N(Lbbc;)V
-
-    iget-object v0, v0, Lrb9;->i:Lpb9;
-
-    invoke-virtual {v2}, Lxcc;->z()Llbc;
-
-    move-result-object v1
-
-    const/16 v3, 0x11
-
-    invoke-virtual {v1, v3}, Llbc;->a(I)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v2}, Lxcc;->v()Lrlg;
-
-    move-result-object v1
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v1, Lrlg;->a:Lklg;
-
-    :goto_0
-    invoke-virtual {v0, v1}, Lpb9;->s(Lrlg;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

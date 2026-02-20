@@ -1,125 +1,133 @@
 .class public final Lgsb;
-.super Ljava/lang/Object;
+.super Ldg0;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/os/Handler$Callback;
-
-
-# static fields
-.field public static final c:Ljava/util/concurrent/ExecutorService;
-
-.field public static final d:Ljava/lang/ThreadLocal;
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/ExecutorService;
+.field public final b:Lcpg;
 
-.field public final b:Ldhd;
+.field public final c:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lcpg;)V
+    .locals 2
 
-    invoke-static {}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor()Ljava/util/concurrent/ExecutorService;
+    sget v0, Lice;->j1:I
 
-    move-result-object v0
+    const/16 v1, 0xe
 
-    sput-object v0, Lgsb;->c:Ljava/util/concurrent/ExecutorService;
+    invoke-direct {p0, v1}, Ldg0;-><init>(I)V
 
-    new-instance v1, Ljava/lang/ThreadLocal;
+    iput-object p1, p0, Lgsb;->b:Lcpg;
 
-    invoke-direct {v1}, Ljava/lang/ThreadLocal;-><init>()V
-
-    sput-object v1, Lgsb;->d:Ljava/lang/ThreadLocal;
-
-    new-instance v1, Lmc;
-
-    const/16 v2, 0xb
-
-    invoke-direct {v1, v2}, Lmc;-><init>(I)V
-
-    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Ldhd;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lgsb;->b:Ldhd;
-
-    sget-object p1, Lgsb;->c:Ljava/util/concurrent/ExecutorService;
-
-    iput-object p1, p0, Lgsb;->a:Ljava/util/concurrent/ExecutorService;
+    iput v0, p0, Lgsb;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final handleMessage(Landroid/os/Message;)Z
-    .locals 5
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
+    if-ne p0, p1, :cond_0
 
-    check-cast p1, Lzni;
+    goto :goto_1
 
-    iget-boolean v0, p1, Lzni;->c:Z
+    :cond_0
+    instance-of v0, p1, Lgsb;
 
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_1
 
     goto :goto_0
 
-    :cond_0
-    iget v0, p1, Lzni;->d:I
+    :cond_1
+    check-cast p1, Lgsb;
 
-    add-int/2addr v0, v1
+    iget-object v0, p0, Lgsb;->b:Lcpg;
 
-    iput v0, p1, Lzni;->d:I
+    iget-object v1, p1, Lgsb;->b:Lcpg;
 
-    iget-object v0, p0, Lgsb;->b:Ldhd;
+    invoke-static {v0, v1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    sget-object v2, Lfpf;->v0:Lfpf;
+    move-result v0
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    if-nez v0, :cond_2
 
-    const-string v4, "rtc.long.executor.task."
+    goto :goto_0
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    :cond_2
+    iget v0, p0, Lgsb;->c:I
 
-    iget v4, p1, Lzni;->d:I
+    iget p1, p1, Lgsb;->c:I
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    iget-object v4, p1, Lzni;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v2, v3, v4}, Ldhd;->log(Lfpf;Ljava/lang/String;Ljava/lang/String;)V
-
-    iget p1, p1, Lzni;->d:I
-
-    const/4 v0, 0x4
-
-    if-lt p1, v0, :cond_1
+    if-eq v0, p1, :cond_3
 
     :goto_0
-    return v1
+    const/4 p1, 0x0
 
-    :cond_1
-    new-instance p1, Ljava/lang/IllegalStateException;
+    return p1
 
-    const-string v0, "No task duration check thread"
+    :cond_3
+    :goto_1
+    const/4 p1, 0x1
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    return p1
+.end method
 
-    throw p1
+.method public final hashCode()I
+    .locals 3
+
+    iget-object v0, p0, Lgsb;->b:Lcpg;
+
+    iget v0, v0, Lcpg;->c:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lgsb;->c:I
+
+    invoke-static {v2, v0, v1}, Ljye;->d(III)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ShowSnackbar(text="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lgsb;->b:Lcpg;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", icon="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lgsb;->c:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", description=null)"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

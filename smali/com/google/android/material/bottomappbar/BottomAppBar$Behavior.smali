@@ -21,11 +21,11 @@
     invoke-direct {p0}, Lcom/google/android/material/behavior/HideBottomViewOnScrollBehavior;-><init>()V
 
     .line 2
-    new-instance v0, Lrt0;
+    new-instance v0, Ltu0;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1, p0}, Lrt0;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p0}, Ltu0;-><init>(ILjava/lang/Object;)V
 
     .line 3
     new-instance v0, Landroid/graphics/Rect;
@@ -42,11 +42,11 @@
     invoke-direct {p0, p1, p2}, Lcom/google/android/material/behavior/HideBottomViewOnScrollBehavior;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 5
-    new-instance p1, Lrt0;
+    new-instance p1, Ltu0;
 
     const/4 p2, 0x0
 
-    invoke-direct {p1, p2, p0}, Lrt0;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p1, p2, p0}, Ltu0;-><init>(ILjava/lang/Object;)V
 
     .line 6
     new-instance p1, Landroid/graphics/Rect;

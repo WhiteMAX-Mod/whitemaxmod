@@ -1,67 +1,61 @@
-.class public abstract Liz0;
-.super Ljava/lang/Object;
+.class public final Liz0;
+.super Lvmc;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ljava/util/UUID;
+# instance fields
+.field public a:[B
 
-.field public static final b:Ljava/util/UUID;
-
-.field public static final c:Ljava/util/UUID;
-
-.field public static final d:Ljava/util/UUID;
+.field public b:I
 
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 5
+# virtual methods
+.method public final a()Ljava/lang/Object;
+    .locals 2
 
-    new-instance v0, Ljava/util/UUID;
+    iget-object v0, p0, Liz0;->a:[B
 
-    const-wide/16 v1, 0x0
+    iget v1, p0, Liz0;->b:I
 
-    invoke-direct {v0, v1, v2, v1, v2}, Ljava/util/UUID;-><init>(JJ)V
+    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([BI)[B
 
-    sput-object v0, Liz0;->a:Ljava/util/UUID;
+    move-result-object v0
 
-    new-instance v0, Ljava/util/UUID;
+    return-object v0
+.end method
 
-    const-wide v1, 0x1077efecc0b24d02L
+.method public final b(I)V
+    .locals 2
 
-    const-wide v3, -0x531cc3e1ad1d04b5L    # -1.8442503140481377E-92
+    iget-object v0, p0, Liz0;->a:[B
 
-    invoke-direct {v0, v1, v2, v3, v4}, Ljava/util/UUID;-><init>(JJ)V
+    array-length v1, v0
 
-    sput-object v0, Liz0;->b:Ljava/util/UUID;
+    if-ge v1, p1, :cond_1
 
-    new-instance v0, Ljava/util/UUID;
+    array-length v1, v0
 
-    const-wide v1, -0x1d8e62a7567a4c37L    # -1.6229728350858627E166
+    mul-int/lit8 v1, v1, 0x2
 
-    const-wide v3, 0x781ab030af78d30eL    # 3.524813189889319E270
+    if-ge p1, v1, :cond_0
 
-    invoke-direct {v0, v1, v2, v3, v4}, Ljava/util/UUID;-><init>(JJ)V
+    move p1, v1
 
-    new-instance v0, Ljava/util/UUID;
+    :cond_0
+    invoke-static {v0, p1}, Ljava/util/Arrays;->copyOf([BI)[B
 
-    const-wide v1, -0x121074568629b532L    # -3.563403477674908E221
+    move-result-object p1
 
-    const-wide v3, -0x5c37d8232ae2de13L
+    iput-object p1, p0, Liz0;->a:[B
 
-    invoke-direct {v0, v1, v2, v3, v4}, Ljava/util/UUID;-><init>(JJ)V
-
-    sput-object v0, Liz0;->c:Ljava/util/UUID;
-
-    new-instance v0, Ljava/util/UUID;
-
-    const-wide v1, -0x65fb0f8667bfbd7aL
-
-    const-wide v3, -0x546d19a41f77a06bL    # -8.640911267670052E-99
-
-    invoke-direct {v0, v1, v2, v3, v4}, Ljava/util/UUID;-><init>(JJ)V
-
-    sput-object v0, Liz0;->d:Ljava/util/UUID;
-
+    :cond_1
     return-void
+.end method
+
+.method public final d()I
+    .locals 1
+
+    iget v0, p0, Liz0;->b:I
+
+    return v0
 .end method

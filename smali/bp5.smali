@@ -1,23 +1,27 @@
-.class public final Lbp5;
-.super Ljava/lang/Object;
+.class public abstract Lbp5;
+.super Lgd4;
 .source "SourceFile"
 
-
-# instance fields
-.field public final a:[B
-
-.field public final b:Ljava/lang/String;
+# interfaces
+.implements Ljava/io/Closeable;
+.implements Ljava/lang/AutoCloseable;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;[B)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Lgd4;->Key:Lfd4;
 
-    iput-object p2, p0, Lbp5;->a:[B
+    if-eqz v0, :cond_0
 
-    iput-object p1, p0, Lbp5;->b:Ljava/lang/String;
+    iget-object v0, v0, Lfd4;->b:Ldd4;
 
+    :cond_0
     return-void
+.end method
+
+
+# virtual methods
+.method public abstract E()Ljava/util/concurrent/Executor;
 .end method

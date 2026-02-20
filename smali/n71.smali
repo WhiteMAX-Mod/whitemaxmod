@@ -1,80 +1,162 @@
 .class public final Ln71;
-.super Ljava/lang/Object;
+.super Lpdg;
 .source "SourceFile"
 
 # interfaces
-.implements Lr71;
+.implements Lys6;
 
 
-# static fields
-.field public static final a:Ln71;
+# instance fields
+.field public X:I
+
+.field public final synthetic Y:Lsri;
+
+.field public o:Lsri;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lsri;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Ln71;
+    iput-object p1, p0, Ln71;->Y:Lsri;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 p1, 0x2
 
-    sput-object v0, Ln71;->a:Ln71;
+    invoke-direct {p0, p1, p2}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x0
+    check-cast p1, Lnd4;
 
-    return v0
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Ln71;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Ln71;
+
+    sget-object p2, Lmah;->a:Lmah;
+
+    invoke-virtual {p1, p2}, Ln71;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public final b()Z
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 1
 
-    const/4 v0, 0x0
+    new-instance p1, Ln71;
 
-    return v0
+    iget-object v0, p0, Ln71;->Y:Lsri;
+
+    invoke-direct {p1, v0, p2}, Ln71;-><init>(Lsri;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
 .end method
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    const/4 v0, 0x1
+    iget v0, p0, Ln71;->X:I
 
-    if-ne p0, p1, :cond_0
+    const/4 v1, 0x1
 
-    return v0
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    iget-object v0, p0, Ln71;->o:Lsri;
+
+    :try_start_0
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+    :try_end_0
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p1
+
+    goto :goto_2
 
     :cond_0
-    instance-of p1, p1, Ln71;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    if-nez p1, :cond_1
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    const/4 p1, 0x0
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    return p1
+    throw p1
 
     :cond_1
-    return v0
-.end method
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-.method public final hashCode()I
-    .locals 1
+    iget-object v0, p0, Ln71;->Y:Lsri;
 
-    const v0, 0x588300f
+    iget-object p1, v0, Lsri;->d:Ljava/lang/Object;
 
-    return v0
-.end method
+    check-cast p1, Lj88;
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    invoke-interface {p1}, Lj88;->getValue()Ljava/lang/Object;
 
-    const-string v0, "Active"
+    move-result-object p1
+
+    check-cast p1, Lz02;
+
+    :try_start_1
+    iput-object v0, p0, Ln71;->o:Lsri;
+
+    iput v1, p0, Ln71;->X:I
+
+    check-cast p1, Lc12;
+
+    invoke-virtual {p1, p0}, Lc12;->a(Lda4;)Ljava/lang/Object;
+
+    move-result-object p1
+    :try_end_1
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    sget-object v0, Lod4;->a:Lod4;
+
+    if-ne p1, v0, :cond_2
 
     return-object v0
+
+    :goto_0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "getTokenInfo: callsTokenHelper.fetchToken() fail"
+
+    invoke-static {v0, v1, p1}, Ltej;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_2
+    :goto_1
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
+
+    :goto_2
+    throw p1
 .end method

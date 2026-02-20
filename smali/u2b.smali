@@ -1,43 +1,49 @@
-.class public abstract Lu2b;
-.super Ljava/lang/Object;
+.class public final Lu2b;
+.super Lda4;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
+# instance fields
+.field public X:I
 
-.field public static final b:I
+.field public synthetic d:Ljava/lang/Object;
 
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
+.field public final synthetic o:Lorj;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lorj;Lda4;)V
+    .locals 0
 
-    sget v0, Lw7d;->oneme_force_update_app_icon:I
+    iput-object p1, p0, Lu2b;->o:Lorj;
 
-    sput v0, Lu2b;->a:I
-
-    sget v0, Lw7d;->oneme_force_update_subtitle:I
-
-    sput v0, Lu2b;->b:I
-
-    sget v0, Lw7d;->oneme_force_update_title:I
-
-    sput v0, Lu2b;->c:I
-
-    sget v0, Lw7d;->oneme_force_update_update_button:I
-
-    sput v0, Lu2b;->d:I
-
-    sget v0, Lw7d;->oneme_force_update_update_icon:I
-
-    sput v0, Lu2b;->e:I
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lu2b;->d:Ljava/lang/Object;
+
+    iget p1, p0, Lu2b;->X:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lu2b;->X:I
+
+    iget-object p1, p0, Lu2b;->o:Lorj;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lorj;->H(Lsz;Lda4;)V
+
+    sget-object p1, Lod4;->a:Lod4;
+
+    return-object p1
 .end method

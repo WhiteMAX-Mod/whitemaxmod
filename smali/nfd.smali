@@ -3,10 +3,8 @@
 
 
 # static fields
-.field public static Base_CardView:I = 0x7f140014
+.field public static fragment_container_view_tag:I = 0x7f0a038d
 
-.field public static CardView:I = 0x7f14012c
+.field public static special_effects_controller_view_tag:I = 0x7f0a0bc4
 
-.field public static CardView_Dark:I = 0x7f14012d
-
-.field public static CardView_Light:I = 0x7f14012e
+.field public static visible_removing_fragment_view_tag:I = 0x7f0a0d09

@@ -18,7 +18,7 @@
     d2 = {
         "Lru/ok/android/externcalls/analytics/internal/upload/Uploader;",
         "",
-        "Lb3h;",
+        "Lmah;",
         "upload",
         "()V",
         "drop",
@@ -58,8 +58,8 @@
     return-void
 .end method
 
-.method public static create(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljava/util/concurrent/locks/Lock;Lru/ok/android/externcalls/analytics/internal/event/EventChannel;Z)Lru/ok/android/externcalls/analytics/internal/upload/Uploader;
-    .locals 6
+.method public static create(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljava/util/concurrent/locks/Lock;Lru/ok/android/externcalls/analytics/internal/event/EventChannel;ZLru/ok/android/externcalls/analytics/internal/storage/DatabaseHelper;)Lru/ok/android/externcalls/analytics/internal/upload/Uploader;
+    .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -71,7 +71,9 @@
             ">;",
             "Ljava/util/concurrent/locks/Lock;",
             "Lru/ok/android/externcalls/analytics/internal/event/EventChannel;",
-            "Z)",
+            "Z",
+            "Lru/ok/android/externcalls/analytics/internal/storage/DatabaseHelper;",
+            ")",
             "Lru/ok/android/externcalls/analytics/internal/upload/Uploader;"
         }
     .end annotation
@@ -88,7 +90,9 @@
 
     move v5, p4
 
-    invoke-virtual/range {v0 .. v5}, Lru/ok/android/externcalls/analytics/internal/upload/Uploader$Companion;->create(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljava/util/concurrent/locks/Lock;Lru/ok/android/externcalls/analytics/internal/event/EventChannel;Z)Lru/ok/android/externcalls/analytics/internal/upload/Uploader;
+    move-object v6, p5
+
+    invoke-virtual/range {v0 .. v6}, Lru/ok/android/externcalls/analytics/internal/upload/Uploader$Companion;->create(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljava/util/concurrent/locks/Lock;Lru/ok/android/externcalls/analytics/internal/event/EventChannel;ZLru/ok/android/externcalls/analytics/internal/storage/DatabaseHelper;)Lru/ok/android/externcalls/analytics/internal/upload/Uploader;
 
     move-result-object p0
 

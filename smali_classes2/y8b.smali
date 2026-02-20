@@ -1,63 +1,80 @@
-.class public final Ly8b;
-.super Lo84;
+.class public final synthetic Ly8b;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public X:Lone/me/messages/list/loader/MessageModel;
+.field public final synthetic a:I
 
-.field public Y:Lone/me/messages/list/loader/MessageModel;
-
-.field public Z:I
-
-.field public d:Lfs8;
-
-.field public o:Lone/me/messages/list/loader/MessageModel;
-
-.field public t0:I
-
-.field public u0:I
-
-.field public synthetic v0:Ljava/lang/Object;
-
-.field public final synthetic w0:Lz8b;
-
-.field public x0:I
+.field public final synthetic b:Lks6;
 
 
 # direct methods
-.method public constructor <init>(Lz8b;Lo84;)V
+.method public synthetic constructor <init>(ILks6;)V
     .locals 0
 
-    iput-object p1, p0, Ly8b;->w0:Lz8b;
+    iput p1, p0, Ly8b;->a:I
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Ly8b;->b:Lks6;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final onClick(Landroid/view/View;)V
     .locals 1
 
-    iput-object p1, p0, Ly8b;->v0:Ljava/lang/Object;
+    iget p1, p0, Ly8b;->a:I
 
-    iget p1, p0, Ly8b;->x0:I
+    packed-switch p1, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-object p1, p0, Ly8b;->b:Lks6;
 
-    or-int/2addr p1, v0
+    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    iput p1, p0, Ly8b;->x0:I
+    invoke-interface {p1, v0}, Lks6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object p1, p0, Ly8b;->w0:Lz8b;
+    return-void
 
-    const/4 v0, 0x0
+    :pswitch_0
+    iget-object p1, p0, Ly8b;->b:Lks6;
 
-    invoke-virtual {p1, v0, p0}, Lz8b;->r(Lfs8;Lo84;)Ljava/lang/Object;
+    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    move-result-object p1
+    invoke-interface {p1, v0}, Lks6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object p1
+    return-void
+
+    :pswitch_1
+    iget-object p1, p0, Ly8b;->b:Lks6;
+
+    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    invoke-interface {p1, v0}, Lks6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+
+    :pswitch_2
+    iget-object p1, p0, Ly8b;->b:Lks6;
+
+    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    invoke-interface {p1, v0}, Lks6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

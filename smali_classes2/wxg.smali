@@ -1,89 +1,43 @@
-.class public final enum Lwxg;
-.super Ljava/lang/Enum;
+.class public final Lwxg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum a:Lwxg;
+# instance fields
+.field public final a:Lbgg;
 
-.field public static final enum b:Lwxg;
-
-.field public static final synthetic c:[Lwxg;
+.field public final b:Lbgg;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 2
 
-    new-instance v0, Lwxg;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "CREATE_PASSWORD"
+    new-instance v0, Lgxg;
 
-    const/4 v2, 0x0
+    const/4 v1, 0x1
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, p1, v1}, Lgxg;-><init>(Landroid/content/Context;I)V
 
-    sput-object v0, Lwxg;->a:Lwxg;
+    new-instance p1, Lbgg;
 
-    new-instance v1, Lwxg;
+    invoke-direct {p1, v0}, Lbgg;-><init>(Lis6;)V
 
-    const-string v2, "CREATE_HINT"
+    iput-object p1, p0, Lwxg;->a:Lbgg;
 
-    const/4 v3, 0x1
+    new-instance p1, Lyf;
 
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    const/16 v0, 0x9
 
-    new-instance v2, Lwxg;
+    invoke-direct {p1, v0, p0}, Lyf;-><init>(ILjava/lang/Object;)V
 
-    const-string v3, "ADD_EMAIL"
+    new-instance v0, Lbgg;
 
-    const/4 v4, 0x2
+    invoke-direct {v0, p1}, Lbgg;-><init>(Lis6;)V
 
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v3, Lwxg;
-
-    const-string v4, "VERIFY_EMAIL"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lwxg;->b:Lwxg;
-
-    filled-new-array {v0, v1, v2, v3}, [Lwxg;
-
-    move-result-object v0
-
-    sput-object v0, Lwxg;->c:[Lwxg;
+    iput-object v0, p0, Lwxg;->b:Lbgg;
 
     return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lwxg;
-    .locals 1
-
-    const-class v0, Lwxg;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lwxg;
-
-    return-object p0
-.end method
-
-.method public static values()[Lwxg;
-    .locals 1
-
-    sget-object v0, Lwxg;->c:[Lwxg;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lwxg;
-
-    return-object v0
 .end method

@@ -1,67 +1,198 @@
-.class public interface abstract Lnje;
-.super Ljava/lang/Object;
+.class public final Lnje;
+.super Landroid/content/BroadcastReceiver;
 .source "SourceFile"
 
-# interfaces
-.implements Lj0f;
+
+# instance fields
+.field public final a:Ljava/util/HashSet;
+
+
+# direct methods
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 2
+
+    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
+
+    new-instance v0, Ljava/util/HashSet;
+
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
+
+    iput-object v0, p0, Lnje;->a:Ljava/util/HashSet;
+
+    new-instance v0, Landroid/content/IntentFilter;
+
+    invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
+
+    const-string v1, "android.intent.action.SCREEN_ON"
+
+    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    const-string v1, "android.intent.action.SCREEN_OFF"
+
+    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    invoke-virtual {p1, p0, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract a()I
-.end method
+.method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+    .locals 5
 
-.method public b()Lqhg;
-    .locals 1
+    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
-    const/4 v0, 0x0
+    move-result-object p1
 
-    return-object v0
-.end method
+    const-string v0, "android.intent.action.SCREEN_OFF"
 
-.method public c()Lyze;
-    .locals 1
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    const/4 v0, 0x0
+    move-result p1
 
-    return-object v0
-.end method
+    const-string v0, "q3i"
 
-.method public d()Lqhg;
-    .locals 1
+    if-eqz p1, :cond_1
 
-    const/4 v0, 0x0
+    iget-object p1, p0, Lnje;->a:Ljava/util/HashSet;
 
-    return-object v0
-.end method
+    invoke-virtual {p1}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
-.method public e()Lg0f;
-    .locals 1
+    move-result-object p1
 
-    const/4 v0, 0x0
+    :cond_0
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    return-object v0
-.end method
+    move-result p2
 
-.method public f()Ly58;
-    .locals 1
+    if-eqz p2, :cond_5
 
-    const/4 v0, 0x0
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    return-object v0
-.end method
+    move-result-object p2
 
-.method public g()Z
-    .locals 1
+    check-cast p2, Lq3i;
 
-    const/4 v0, 0x1
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    return v0
-.end method
+    const-string v1, "onScreenOff"
 
-.method public getType()Li0f;
-    .locals 1
+    invoke-static {v0, v1}, Ltej;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    sget-object v0, Li0f;->b:Li0f;
+    iget-boolean v1, p2, Lq3i;->k:Z
 
-    return-object v0
+    if-eqz v1, :cond_0
+
+    const/4 v1, 0x0
+
+    iput-boolean v1, p2, Lq3i;->k:Z
+
+    iget-boolean v1, p2, Lq3i;->j:Z
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {p2}, Lq3i;->b()V
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string p2, "android.intent.action.SCREEN_ON"
+
+    invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_5
+
+    iget-object p1, p0, Lnje;->a:Ljava/util/HashSet;
+
+    invoke-virtual {p1}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :cond_2
+    :goto_1
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_5
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lq3i;
+
+    sget-object v1, Ltej;->a:Lafb;
+
+    if-nez v1, :cond_3
+
+    goto :goto_2
+
+    :cond_3
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v2, Lzm8;->d:Lzm8;
+
+    invoke-virtual {v1, v2}, Lafb;->b(Lzm8;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_4
+
+    goto :goto_2
+
+    :cond_4
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "onScreenOn, isAppVisible="
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-boolean v4, p2, Lq3i;->j:Z
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v4, ", isScreenOn="
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v4, p2, Lq3i;->k:Z
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v1, v2, v0, v3, v4}, Lafb;->c(Lzm8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :goto_2
+    iget-boolean v1, p2, Lq3i;->k:Z
+
+    if-nez v1, :cond_2
+
+    const/4 v1, 0x1
+
+    iput-boolean v1, p2, Lq3i;->k:Z
+
+    iget-boolean v1, p2, Lq3i;->j:Z
+
+    if-eqz v1, :cond_2
+
+    invoke-virtual {p2}, Lq3i;->c()V
+
+    goto :goto_1
+
+    :cond_5
+    return-void
 .end method

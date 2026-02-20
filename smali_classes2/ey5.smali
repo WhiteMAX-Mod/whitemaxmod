@@ -1,48 +1,127 @@
 .class public final Ley5;
-.super Lo84;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # instance fields
-.field public final synthetic X:Lhy5;
+.field public final a:Lm8e;
 
-.field public synthetic d:Ljava/lang/Object;
-
-.field public o:I
+.field public final b:Loj;
 
 
 # direct methods
-.method public constructor <init>(Lhy5;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Lm8e;)V
+    .locals 1
 
-    iput-object p1, p0, Ley5;->X:Lhy5;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Ley5;->a:Lm8e;
+
+    new-instance p1, Loj;
+
+    const/4 v0, 0x5
+
+    invoke-direct {p1, v0}, Loj;-><init>(I)V
+
+    iput-object p1, p0, Ley5;->b:Loj;
 
     return-void
 .end method
 
+.method public static b(ILjava/util/List;)Ljava/util/ArrayList;
+    .locals 6
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
+
+    const/4 v1, 0x0
+
+    :goto_0
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result v2
+
+    if-ge v1, v2, :cond_0
+
+    invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Long;
+
+    new-instance v3, Lqw5;
+
+    invoke-direct {v3}, Ljava/lang/Object;-><init>()V
+
+    invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v4
+
+    iput-wide v4, v3, Lqw5;->a:J
+
+    add-int v2, p0, v1
+
+    int-to-long v4, v2
+
+    iput-wide v4, v3, Lqw5;->b:J
+
+    invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    return-object v0
+.end method
+
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final a(Ljava/util/List;)V
+    .locals 3
 
-    iput-object p1, p0, Ley5;->d:Ljava/lang/Object;
+    new-instance v0, Lcy5;
 
-    iget p1, p0, Ley5;->o:I
+    const/4 v1, 0x1
 
-    const/high16 v0, -0x80000000
+    invoke-direct {v0, p0, p1, v1}, Lcy5;-><init>(Ley5;Ljava/util/List;I)V
 
-    or-int/2addr p1, v0
+    iget-object p1, p0, Ley5;->a:Lm8e;
 
-    iput p1, p0, Ley5;->o:I
+    const/4 v1, 0x0
 
-    iget-object p1, p0, Ley5;->X:Lhy5;
+    const/4 v2, 0x1
 
-    const/4 v0, 0x0
+    invoke-static {p1, v1, v2, v0}, Lfuj;->f(Lm8e;ZZLks6;)Ljava/lang/Object;
 
-    invoke-virtual {p1, v0, p0}, Lhy5;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    return-void
+.end method
 
-    sget-object p1, Lac4;->a:Lac4;
+.method public final c()Ljava/util/List;
+    .locals 4
 
-    return-object p1
+    new-instance v0, Li05;
+
+    const/16 v1, 0x12
+
+    invoke-direct {v0, v1}, Li05;-><init>(I)V
+
+    iget-object v1, p0, Ley5;->a:Lm8e;
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x0
+
+    invoke-static {v1, v2, v3, v0}, Lfuj;->f(Lm8e;ZZLks6;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/List;
+
+    return-object v0
 .end method

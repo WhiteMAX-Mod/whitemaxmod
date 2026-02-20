@@ -1,99 +1,63 @@
 .class public final Lgm8;
-.super Ljava/lang/Object;
+.super Lao4;
 .source "SourceFile"
 
 
 # static fields
-.field public static final g:Leh8;
+.field public static final b:Lgm8;
 
+.field public static final c:Lwn4;
 
-# instance fields
-.field public a:Ljava/lang/String;
-
-.field public b:Ljava/lang/String;
-
-.field public c:Ljava/lang/String;
-
-.field public d:Ljava/lang/String;
-
-.field public e:Ljava/lang/String;
-
-.field public f:Ljava/lang/String;
+.field public static final d:Lwn4;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 7
 
-    new-instance v0, Leh8;
+    new-instance v0, Lgm8;
 
-    const/4 v1, 0x3
+    invoke-direct {v0}, Lao4;-><init>()V
 
-    invoke-direct {v0, v1}, Leh8;-><init>(I)V
+    sput-object v0, Lgm8;->b:Lgm8;
 
-    sput-object v0, Lgm8;->g:Leh8;
+    const-string v1, "request_code"
 
-    return-void
-.end method
+    const-string v2, "chat_id"
 
+    filled-new-array {v2, v1}, [Ljava/lang/String;
 
-# virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+    move-result-object v1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v3, ":location/pick"
 
-    const-string v1, "LoginResponse{uid=\'"
+    const/4 v4, 0x0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const/16 v5, 0xe
 
-    iget-object v1, p0, Lgm8;->a:Ljava/lang/String;
+    invoke-static {v0, v3, v1, v4, v5}, Lao4;->c(Lao4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lwn4;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v1
 
-    const-string v1, "\', sessionKey=\'"
+    sput-object v1, Lgm8;->c:Lwn4;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v1, "lon"
 
-    iget-object v1, p0, Lgm8;->b:Ljava/lang/String;
+    const-string v3, "z"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v6, "lat"
 
-    const-string v1, "\', secretSessionKey=\'"
+    filled-new-array {v2, v6, v1, v3}, [Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v1
 
-    iget-object v1, p0, Lgm8;->c:Ljava/lang/String;
+    const-string v2, ":location/show"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\', authenticationToken=\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lgm8;->d:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\', apiServer=\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lgm8;->e:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\', authenticationHash=\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lgm8;->f:Ljava/lang/String;
-
-    const-string v2, "\'}"
-
-    invoke-static {v0, v1, v2}, Lj27;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v2, v1, v4, v5}, Lao4;->c(Lao4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lwn4;
 
     move-result-object v0
 
-    return-object v0
+    sput-object v0, Lgm8;->d:Lwn4;
+
+    return-void
 .end method

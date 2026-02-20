@@ -1,73 +1,133 @@
-.class public final Lrx5;
+.class public final synthetic Lrx5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lks6;
+
 
 # instance fields
-.field public final a:Lb2e;
+.field public final synthetic a:I
 
-.field public final b:Lai;
+.field public final synthetic b:Ltx5;
+
+.field public final synthetic c:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Lb2e;)V
-    .locals 1
+.method public synthetic constructor <init>(Ltx5;Ljava/util/List;I)V
+    .locals 0
+
+    iput p3, p0, Lrx5;->a:I
+
+    iput-object p1, p0, Lrx5;->b:Ltx5;
+
+    iput-object p2, p0, Lrx5;->c:Ljava/util/List;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lrx5;->a:Lb2e;
-
-    new-instance p1, Lai;
-
-    const/4 v0, 0x7
-
-    invoke-direct {p1, v0}, Lai;-><init>(I)V
-
-    iput-object p1, p0, Lrx5;->b:Lai;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/util/List;Lo84;)Ljava/lang/Object;
-    .locals 3
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    const-string v0, "SELECT * FROM fcm_notifications_history WHERE chat_id IN ("
+    iget v0, p0, Lrx5;->a:I
 
-    invoke-static {v0}, Lhc0;->l(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    check-cast p1, Lsde;
 
-    move-result-object v0
+    packed-switch v0, :pswitch_data_0
 
-    invoke-interface {p1}, Ljava/util/List;->size()I
+    iget-object p1, p0, Lrx5;->b:Ltx5;
 
-    move-result v1
+    iget-object v0, p1, Ltx5;->a:Lm8e;
 
-    invoke-static {v0, v1}, Leca;->a(Ljava/lang/StringBuilder;I)V
+    new-instance v1, Li05;
 
-    const-string v1, ")"
+    const/16 v2, 0x9
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    new-instance v1, Lfw5;
-
-    const/4 v2, 0x2
-
-    invoke-direct {v1, v2, v0, p1}, Lfw5;-><init>(ILjava/lang/String;Ljava/util/List;)V
-
-    iget-object p1, p0, Lrx5;->a:Lb2e;
-
-    const/4 v0, 0x1
+    invoke-direct {v1, v2}, Li05;-><init>(I)V
 
     const/4 v2, 0x0
 
-    invoke-static {v1, p1, p2, v0, v2}, Lulj;->f(Lnq6;Lb2e;Lkotlin/coroutines/Continuation;ZZ)Ljava/lang/Object;
+    const/4 v3, 0x1
 
-    move-result-object p1
+    invoke-static {v0, v2, v3, v1}, Lfuj;->f(Lm8e;ZZLks6;)Ljava/lang/Object;
+
+    const-wide/16 v4, 0x0
+
+    iget-object v1, p0, Lrx5;->c:Ljava/util/List;
+
+    invoke-static {v4, v5, v1}, Ltx5;->b(JLjava/util/List;)Ljava/util/ArrayList;
+
+    move-result-object v1
+
+    new-instance v4, Lqx5;
+
+    const/4 v5, 0x0
+
+    invoke-direct {v4, p1, v1, v5}, Lqx5;-><init>(Ltx5;Ljava/util/ArrayList;I)V
+
+    invoke-static {v0, v2, v3, v4}, Lfuj;->f(Lm8e;ZZLks6;)Ljava/lang/Object;
+
+    :goto_0
+    sget-object p1, Lmah;->a:Lmah;
 
     return-object p1
+
+    :pswitch_0
+    iget-object p1, p0, Lrx5;->b:Ltx5;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v0, p1, Ltx5;->a:Lm8e;
+
+    new-instance v1, Li05;
+
+    const/16 v2, 0xb
+
+    invoke-direct {v1, v2}, Li05;-><init>(I)V
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x0
+
+    invoke-static {v0, v2, v3, v1}, Lfuj;->f(Lm8e;ZZLks6;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/Number;
+
+    invoke-virtual {v1}, Ljava/lang/Number;->intValue()I
+
+    move-result v1
+
+    add-int/2addr v1, v2
+
+    int-to-long v1, v1
+
+    iget-object v3, p0, Lrx5;->c:Ljava/util/List;
+
+    invoke-static {v1, v2, v3}, Ltx5;->b(JLjava/util/List;)Ljava/util/ArrayList;
+
+    move-result-object v1
+
+    new-instance v2, Lqx5;
+
+    const/4 v3, 0x1
+
+    invoke-direct {v2, p1, v1, v3}, Lqx5;-><init>(Ltx5;Ljava/util/ArrayList;I)V
+
+    invoke-static {v0, v2}, Ltvj;->a(Lm8e;Lks6;)Lvo3;
+
+    goto :goto_0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

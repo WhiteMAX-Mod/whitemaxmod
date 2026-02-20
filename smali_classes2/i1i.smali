@@ -1,154 +1,271 @@
-.class public final Li1i;
-.super Lp6g;
+.class public abstract Li1i;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lbr6;
 
-
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lp1i;
-
-.field public final synthetic Z:Ly0i;
-
-.field public o:I
-
-.field public final synthetic t0:Ls1i;
+# static fields
+.field public static final a:Ljava/util/ArrayList;
 
 
 # direct methods
-.method public constructor <init>(Ly0i;Lp1i;Ls1i;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput-object p2, p0, Li1i;->Y:Lp1i;
+    const-class v0, Landroid/text/DynamicLayout;
 
-    iput-object p1, p0, Li1i;->Z:Ly0i;
+    invoke-virtual {v0}, Ljava/lang/Class;->getDeclaredClasses()[Ljava/lang/Class;
 
-    iput-object p3, p0, Li1i;->t0:Ls1i;
+    move-result-object v0
 
-    const/4 p1, 0x2
+    invoke-static {v0}, Lnu;->F([Ljava/lang/Object;)Ljava/util/List;
 
-    invoke-direct {p0, p1, p4}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    move-result-object v0
+
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :cond_0
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    move-object v3, v2
+
+    check-cast v3, Ljava/lang/Class;
+
+    const-class v4, Landroid/text/SpanWatcher;
+
+    invoke-virtual {v4, v3}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    :cond_1
+    sput-object v1, Li1i;->a:Ljava/util/ArrayList;
 
     return-void
 .end method
 
+.method public static final a(Landroid/widget/TextView;)Lj1i;
+    .locals 2
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    new-instance v0, Lj1i;
 
-    check-cast p1, Ljava/lang/Throwable;
+    invoke-direct {v0, p0}, Lj1i;-><init>(Landroid/widget/TextView;)V
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-virtual {p0, v0}, Landroid/widget/TextView;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
-    invoke-virtual {p0, p1, p2}, Li1i;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {p0, v0}, Landroid/view/View;->addOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
 
-    move-result-object p1
+    instance-of v1, p0, Ly2b;
 
-    check-cast p1, Li1i;
+    if-eqz v1, :cond_0
 
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Li1i;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 4
-
-    new-instance v0, Li1i;
-
-    iget-object v1, p0, Li1i;->Z:Ly0i;
-
-    iget-object v2, p0, Li1i;->t0:Ls1i;
-
-    iget-object v3, p0, Li1i;->Y:Lp1i;
-
-    invoke-direct {v0, v1, v3, v2, p2}, Li1i;-><init>(Ly0i;Lp1i;Ls1i;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Li1i;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
-
-    iget-object v0, p0, Li1i;->X:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/Throwable;
-
-    iget v1, p0, Li1i;->o:I
-
-    const/4 v2, 0x1
-
-    if-eqz v1, :cond_1
-
-    if-ne v1, v2, :cond_0
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    check-cast p0, Ly2b;
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    const/4 p0, 0x0
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    :goto_0
+    if-eqz p0, :cond_1
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    invoke-virtual {p0, v0}, Ly2b;->setObserverSpanListener(Lj1i;)V
 
     :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    invoke-static {v0}, Lp1i;->f(Ljava/lang/Throwable;)Lb08;
-
-    move-result-object v3
-
-    iget-object p1, p0, Li1i;->Y:Lp1i;
-
-    invoke-virtual {p1}, Lp1i;->g()Lol3;
-
-    move-result-object v1
-
-    iget-object p1, p1, Lp1i;->g:Lyw0;
-
-    iget-object v0, p0, Li1i;->t0:Ls1i;
-
-    iget-object v5, v0, Ls1i;->b:Ljava/lang/String;
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Li1i;->X:Ljava/lang/Object;
-
-    iput v2, p0, Li1i;->o:I
-
-    iget-object v4, p0, Li1i;->Z:Ly0i;
-
-    move-object v6, p0
-
-    move-object v2, p1
-
-    invoke-virtual/range {v1 .. v6}, Lol3;->a(Lmb2;Lb08;Lf6i;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lac4;->a:Lac4;
-
-    if-ne p1, v0, :cond_2
-
     return-object v0
+.end method
+
+.method public static final b(Lx2b;Ljava/lang/Object;)V
+    .locals 10
+
+    invoke-virtual {p0}, Lx2b;->getSpannableText()Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    instance-of v1, v0, Landroid/text/Spannable;
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_0
+
+    check-cast v0, Landroid/text/Spannable;
+
+    move-object v4, v0
+
+    goto :goto_0
+
+    :cond_0
+    move-object v4, v2
+
+    :goto_0
+    if-nez v4, :cond_1
+
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+
+    return-void
+
+    :cond_1
+    invoke-interface {v4, p1}, Landroid/text/Spanned;->getSpanStart(Ljava/lang/Object;)I
+
+    move-result v6
+
+    const/4 v0, -0x1
+
+    if-ne v6, v0, :cond_2
+
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+
+    return-void
 
     :cond_2
-    :goto_0
-    sget-object p1, Lb3h;->a:Lb3h;
+    invoke-interface {v4, p1}, Landroid/text/Spanned;->getSpanEnd(Ljava/lang/Object;)I
 
-    return-object p1
+    move-result v7
+
+    if-lt v7, v6, :cond_b
+
+    invoke-virtual {p0}, Lx2b;->getSpannableText()Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_5
+
+    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
+
+    move-result v3
+
+    :try_start_0
+    instance-of v5, v0, Landroid/text/Spanned;
+
+    if-eqz v5, :cond_3
+
+    check-cast v0, Landroid/text/Spanned;
+
+    goto :goto_1
+
+    :cond_3
+    move-object v0, v2
+
+    :goto_1
+    if-eqz v0, :cond_4
+
+    const-class v5, Landroid/text/SpanWatcher;
+
+    invoke-interface {v0, v1, v3, v5}, Landroid/text/Spanned;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
+
+    move-result-object v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :catchall_0
+    :cond_4
+    if-nez v2, :cond_6
+
+    new-array v2, v1, [Landroid/text/SpanWatcher;
+
+    goto :goto_2
+
+    :cond_5
+    new-array v2, v1, [Landroid/text/SpanWatcher;
+
+    :cond_6
+    :goto_2
+    check-cast v2, [Landroid/text/SpanWatcher;
+
+    array-length v0, v2
+
+    if-nez v0, :cond_7
+
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+
+    return-void
+
+    :cond_7
+    array-length p0, v2
+
+    :goto_3
+    if-ge v1, p0, :cond_b
+
+    aget-object v3, v2, v1
+
+    sget-object v0, Li1i;->a:Ljava/util/ArrayList;
+
+    if-eqz v0, :cond_8
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_8
+
+    goto :goto_4
+
+    :cond_8
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :cond_9
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_a
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Ljava/lang/Class;
+
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v8
+
+    if-ne v5, v8, :cond_9
+
+    move-object v5, p1
+
+    goto :goto_5
+
+    :cond_a
+    :goto_4
+    move v8, v6
+
+    move v9, v7
+
+    move-object v5, p1
+
+    invoke-interface/range {v3 .. v9}, Landroid/text/SpanWatcher;->onSpanChanged(Landroid/text/Spannable;Ljava/lang/Object;IIII)V
+
+    :goto_5
+    add-int/lit8 v1, v1, 0x1
+
+    move-object p1, v5
+
+    goto :goto_3
+
+    :cond_b
+    return-void
 .end method

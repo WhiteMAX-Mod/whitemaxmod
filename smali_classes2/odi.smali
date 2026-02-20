@@ -1,14 +1,19 @@
-.class public interface abstract Lodi;
+.class public final Lodi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # virtual methods
-.method public abstract a(Lndi;)V
-.end method
+.method public final serializer()Lw58;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lw58;"
+        }
+    .end annotation
 
-.method public b(Lldi;Z)V
-    .locals 0
+    sget-object v0, Lndi;->a:Lndi;
 
-    return-void
+    return-object v0
 .end method

@@ -1,212 +1,96 @@
-.class public final Lq39;
+.class public final synthetic Lq39;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lux0;
-
-
-# static fields
-.field public static final X:Lq39;
+.implements Lih8;
 
 
 # instance fields
-.field public final a:J
+.field public final synthetic a:I
 
-.field public final b:J
+.field public final synthetic b:Lcgc;
 
-.field public final c:J
-
-.field public final d:F
-
-.field public final o:F
+.field public final synthetic c:Ljava/lang/Integer;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 9
-
-    new-instance v0, Lq39;
-
-    const-wide v1, -0x7fffffffffffffffL    # -4.9E-324
-
-    const v7, -0x800001
-
-    move-wide v3, v1
-
-    move-wide v5, v1
-
-    move v8, v7
-
-    invoke-direct/range {v0 .. v8}, Lq39;-><init>(JJJFF)V
-
-    sput-object v0, Lq39;->X:Lq39;
-
-    return-void
-.end method
-
-.method public constructor <init>(JJJFF)V
+.method public synthetic constructor <init>(Lcgc;Ljava/lang/Integer;I)V
     .locals 0
 
+    iput p3, p0, Lq39;->a:I
+
+    iput-object p1, p0, Lq39;->b:Lcgc;
+
+    iput-object p2, p0, Lq39;->c:Ljava/lang/Integer;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Lq39;->a:J
-
-    iput-wide p3, p0, Lq39;->b:J
-
-    iput-wide p5, p0, Lq39;->c:J
-
-    iput p7, p0, Lq39;->d:F
-
-    iput p8, p0, Lq39;->o:F
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final invoke(Ljava/lang/Object;)V
+    .locals 3
 
-    const/4 v0, 0x1
+    iget v0, p0, Lq39;->a:I
 
-    if-ne p0, p1, :cond_0
+    check-cast p1, Ldfc;
 
-    return v0
+    packed-switch v0, :pswitch_data_0
 
-    :cond_0
-    instance-of v1, p1, Lq39;
+    iget-object v0, p0, Lq39;->b:Lcgc;
 
-    const/4 v2, 0x0
+    iget-boolean v0, v0, Lcgc;->t:Z
 
-    if-nez v1, :cond_1
+    iget-object v1, p0, Lq39;->c:Ljava/lang/Integer;
 
-    return v2
-
-    :cond_1
-    check-cast p1, Lq39;
-
-    iget-wide v3, p0, Lq39;->a:J
-
-    iget-wide v5, p1, Lq39;->a:J
-
-    cmp-long v1, v3, v5
-
-    if-nez v1, :cond_2
-
-    iget-wide v3, p0, Lq39;->b:J
-
-    iget-wide v5, p1, Lq39;->b:J
-
-    cmp-long v1, v3, v5
-
-    if-nez v1, :cond_2
-
-    iget-wide v3, p0, Lq39;->c:J
-
-    iget-wide v5, p1, Lq39;->c:J
-
-    cmp-long v1, v3, v5
-
-    if-nez v1, :cond_2
-
-    iget v1, p0, Lq39;->d:F
-
-    iget v3, p1, Lq39;->d:F
-
-    cmpl-float v1, v1, v3
-
-    if-nez v1, :cond_2
-
-    iget v1, p0, Lq39;->o:F
-
-    iget p1, p1, Lq39;->o:F
-
-    cmpl-float p1, v1, p1
-
-    if-nez p1, :cond_2
-
-    return v0
-
-    :cond_2
-    return v2
-.end method
-
-.method public final hashCode()I
-    .locals 7
-
-    iget-wide v0, p0, Lq39;->a:J
-
-    const/16 v2, 0x20
-
-    ushr-long v3, v0, v2
-
-    xor-long/2addr v0, v3
-
-    long-to-int v0, v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-wide v3, p0, Lq39;->b:J
-
-    ushr-long v5, v3, v2
-
-    xor-long/2addr v3, v5
-
-    long-to-int v1, v3
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-wide v3, p0, Lq39;->c:J
-
-    ushr-long v1, v3, v2
-
-    xor-long/2addr v1, v3
-
-    long-to-int v1, v1
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget v1, p0, Lq39;->d:F
-
-    const/4 v2, 0x0
-
-    cmpl-float v3, v1, v2
-
-    const/4 v4, 0x0
-
-    if-eqz v3, :cond_0
-
-    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
     move-result v1
 
-    goto :goto_0
+    invoke-interface {p1, v1, v0}, Ldfc;->i(IZ)V
 
-    :cond_0
-    move v1, v4
+    return-void
 
-    :goto_0
-    add-int/2addr v0, v1
+    :pswitch_0
+    iget-object v0, p0, Lq39;->b:Lcgc;
 
-    mul-int/lit8 v0, v0, 0x1f
+    iget-object v1, v0, Lcgc;->d:Lffc;
 
-    iget v1, p0, Lq39;->o:F
+    iget-object v0, v0, Lcgc;->e:Lffc;
 
-    cmpl-float v2, v1, v2
+    iget-object v2, p0, Lq39;->c:Ljava/lang/Integer;
 
-    if-eqz v2, :cond_1
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
 
-    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+    move-result v2
 
-    move-result v4
+    invoke-interface {p1, v1, v0, v2}, Ldfc;->t(Lffc;Lffc;I)V
 
-    :cond_1
-    add-int/2addr v0, v4
+    return-void
 
-    return v0
+    :pswitch_1
+    iget-object v0, p0, Lq39;->b:Lcgc;
+
+    iget-object v0, v0, Lcgc;->j:Litg;
+
+    iget-object v1, p0, Lq39;->c:Ljava/lang/Integer;
+
+    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
+
+    move-result v1
+
+    invoke-interface {p1, v0, v1}, Ldfc;->m0(Litg;I)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

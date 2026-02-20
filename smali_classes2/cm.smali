@@ -1,63 +1,157 @@
 .class public final Lcm;
-.super Lo84;
+.super Lpdg;
 .source "SourceFile"
+
+# interfaces
+.implements Lys6;
 
 
 # instance fields
-.field public X:Ljava/lang/String;
+.field public final synthetic X:Lem;
 
-.field public Y:Lxue;
+.field public o:I
 
-.field public Z:Lnq6;
 
-.field public d:Lt2b;
+# direct methods
+.method public constructor <init>(Lem;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-.field public o:Lj2;
+    iput-object p1, p0, Lcm;->X:Lem;
 
-.field public t0:Licg;
+    const/4 p1, 0x2
 
-.field public u0:J
+    invoke-direct {p0, p1, p2}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
-.field public v0:I
-
-.field public w0:I
-
-.field public synthetic x0:Ljava/lang/Object;
-
-.field public y0:I
+    return-void
+.end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iput-object p1, p0, Lcm;->x0:Ljava/lang/Object;
+    check-cast p1, Lnd4;
 
-    iget p1, p0, Lcm;->y0:I
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    const/high16 v0, -0x80000000
+    invoke-virtual {p0, p1, p2}, Lcm;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    or-int/2addr p1, v0
+    move-result-object p1
 
-    iput p1, p0, Lcm;->y0:I
+    check-cast p1, Lcm;
 
-    const/4 v5, 0x0
+    sget-object p2, Lmah;->a:Lmah;
 
-    const/4 v6, 0x0
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x0
-
-    const-wide/16 v2, 0x0
-
-    const/4 v4, 0x0
-
-    move-object v7, p0
-
-    invoke-static/range {v0 .. v7}, Lc5j;->n(Lt2b;Lj2;JILjava/lang/String;Lxue;Lo84;)Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Lcm;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
     return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Lcm;
+
+    iget-object v0, p0, Lcm;->X:Lem;
+
+    invoke-direct {p1, v0, p2}, Lcm;-><init>(Lem;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
+
+    iget v0, p0, Lcm;->o:I
+
+    const/4 v1, 0x1
+
+    sget-object v2, Lmah;->a:Lmah;
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    return-object v2
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lcm;->X:Lem;
+
+    iget-object v0, p1, Lem;->D0:Lmrd;
+
+    new-instance v3, Lbm;
+
+    const/4 v4, 0x0
+
+    invoke-direct {v3, p1, v4}, Lbm;-><init>(Lem;Lkotlin/coroutines/Continuation;)V
+
+    iput v1, p0, Lcm;->o:I
+
+    new-instance p1, Lkb6;
+
+    const/4 v1, 0x1
+
+    sget-object v4, Lhra;->a:Lhra;
+
+    invoke-direct {p1, v4, v3, v1}, Lkb6;-><init>(Ld96;Lys6;I)V
+
+    new-instance v1, Lp93;
+
+    const/16 v3, 0x13
+
+    invoke-direct {v1, p1, v3}, Lp93;-><init>(Ld96;I)V
+
+    iget-object p1, v0, Lmrd;->a:Laxf;
+
+    invoke-interface {p1, v1, p0}, Lb96;->e(Ld96;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lod4;->a:Lod4;
+
+    if-ne p1, v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    move-object p1, v2
+
+    :goto_0
+    if-ne p1, v0, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    move-object p1, v2
+
+    :goto_1
+    if-ne p1, v0, :cond_4
+
+    goto :goto_2
+
+    :cond_4
+    move-object p1, v2
+
+    :goto_2
+    if-ne p1, v0, :cond_5
+
+    return-object v0
+
+    :cond_5
+    return-object v2
 .end method

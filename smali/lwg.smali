@@ -3,250 +3,127 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static c:Ljava/lang/ref/WeakReference;
+
+
 # instance fields
-.field public a:Ljava/lang/String;
+.field public a:Lk27;
 
-.field public b:I
-
-.field public c:Z
-
-.field public d:I
-
-.field public e:Z
-
-.field public f:I
-
-.field public g:I
-
-.field public h:I
-
-.field public i:I
-
-.field public j:I
-
-.field public k:F
-
-.field public l:Ljava/lang/String;
-
-.field public m:I
-
-.field public n:I
-
-.field public o:Landroid/text/Layout$Alignment;
-
-.field public p:Landroid/text/Layout$Alignment;
-
-.field public q:I
-
-.field public r:Lyfg;
-
-.field public s:F
+.field public final b:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Landroid/content/SharedPreferences;Ljava/util/concurrent/ScheduledThreadPoolExecutor;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, -0x1
-
-    iput v0, p0, Llwg;->f:I
-
-    iput v0, p0, Llwg;->g:I
-
-    iput v0, p0, Llwg;->h:I
-
-    iput v0, p0, Llwg;->i:I
-
-    iput v0, p0, Llwg;->j:I
-
-    iput v0, p0, Llwg;->m:I
-
-    iput v0, p0, Llwg;->n:I
-
-    iput v0, p0, Llwg;->q:I
-
-    const v0, 0x7f7fffff    # Float.MAX_VALUE
-
-    iput v0, p0, Llwg;->s:F
+    iput-object p2, p0, Llwg;->b:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Llwg;)V
+.method public final declared-synchronized a()Lkwg;
     .locals 4
 
-    if-eqz p1, :cond_e
+    monitor-enter p0
 
-    iget-boolean v0, p0, Llwg;->c:Z
+    :try_start_0
+    iget-object v0, p0, Llwg;->a:Lk27;
 
-    const/4 v1, 0x1
+    iget-object v1, v0, Lk27;->d:Ljava/lang/Object;
 
-    if-nez v0, :cond_0
+    check-cast v1, Ljava/util/ArrayDeque;
 
-    iget-boolean v0, p1, Llwg;->c:Z
+    monitor-enter v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    if-eqz v0, :cond_0
+    :try_start_1
+    iget-object v0, v0, Lk27;->d:Ljava/lang/Object;
 
-    iget v0, p1, Llwg;->b:I
+    check-cast v0, Ljava/util/ArrayDeque;
 
-    iput v0, p0, Llwg;->b:I
+    invoke-virtual {v0}, Ljava/util/ArrayDeque;->peek()Ljava/lang/Object;
 
-    iput-boolean v1, p0, Llwg;->c:Z
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :try_start_2
+    sget-object v1, Lkwg;->d:Ljava/util/regex/Pattern;
+
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_0
+
+    goto :goto_0
 
     :cond_0
-    iget v0, p0, Llwg;->h:I
+    const-string v1, "!"
 
-    const/4 v2, -0x1
+    const/4 v3, -0x1
 
-    if-ne v0, v2, :cond_1
+    invoke-virtual {v0, v1, v3}, Ljava/lang/String;->split(Ljava/lang/String;I)[Ljava/lang/String;
 
-    iget v0, p1, Llwg;->h:I
+    move-result-object v0
 
-    iput v0, p0, Llwg;->h:I
+    array-length v1, v0
+
+    const/4 v3, 0x2
+
+    if-eq v1, v3, :cond_1
+
+    goto :goto_0
 
     :cond_1
-    iget v0, p0, Llwg;->i:I
+    new-instance v2, Lkwg;
 
-    if-ne v0, v2, :cond_2
+    const/4 v1, 0x0
 
-    iget v0, p1, Llwg;->i:I
+    aget-object v1, v0, v1
 
-    iput v0, p0, Llwg;->i:I
+    const/4 v3, 0x1
 
-    :cond_2
-    iget-object v0, p0, Llwg;->a:Ljava/lang/String;
+    aget-object v0, v0, v3
 
-    if-nez v0, :cond_3
+    invoke-direct {v2, v1, v0}, Lkwg;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    iget-object v0, p1, Llwg;->a:Ljava/lang/String;
+    :goto_0
+    monitor-exit p0
 
-    if-eqz v0, :cond_3
+    return-object v2
 
-    iput-object v0, p0, Llwg;->a:Ljava/lang/String;
+    :catchall_0
+    move-exception v0
 
-    :cond_3
-    iget v0, p0, Llwg;->f:I
+    :try_start_3
+    monitor-exit v1
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    if-ne v0, v2, :cond_4
+    :try_start_4
+    throw v0
 
-    iget v0, p1, Llwg;->f:I
+    :catchall_1
+    move-exception v0
 
-    iput v0, p0, Llwg;->f:I
+    monitor-exit p0
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    :cond_4
-    iget v0, p0, Llwg;->g:I
-
-    if-ne v0, v2, :cond_5
-
-    iget v0, p1, Llwg;->g:I
-
-    iput v0, p0, Llwg;->g:I
-
-    :cond_5
-    iget v0, p0, Llwg;->n:I
-
-    if-ne v0, v2, :cond_6
-
-    iget v0, p1, Llwg;->n:I
-
-    iput v0, p0, Llwg;->n:I
-
-    :cond_6
-    iget-object v0, p0, Llwg;->o:Landroid/text/Layout$Alignment;
-
-    if-nez v0, :cond_7
-
-    iget-object v0, p1, Llwg;->o:Landroid/text/Layout$Alignment;
-
-    if-eqz v0, :cond_7
-
-    iput-object v0, p0, Llwg;->o:Landroid/text/Layout$Alignment;
-
-    :cond_7
-    iget-object v0, p0, Llwg;->p:Landroid/text/Layout$Alignment;
-
-    if-nez v0, :cond_8
-
-    iget-object v0, p1, Llwg;->p:Landroid/text/Layout$Alignment;
-
-    if-eqz v0, :cond_8
-
-    iput-object v0, p0, Llwg;->p:Landroid/text/Layout$Alignment;
-
-    :cond_8
-    iget v0, p0, Llwg;->q:I
-
-    if-ne v0, v2, :cond_9
-
-    iget v0, p1, Llwg;->q:I
-
-    iput v0, p0, Llwg;->q:I
-
-    :cond_9
-    iget v0, p0, Llwg;->j:I
-
-    if-ne v0, v2, :cond_a
-
-    iget v0, p1, Llwg;->j:I
-
-    iput v0, p0, Llwg;->j:I
-
-    iget v0, p1, Llwg;->k:F
-
-    iput v0, p0, Llwg;->k:F
-
-    :cond_a
-    iget-object v0, p0, Llwg;->r:Lyfg;
-
-    if-nez v0, :cond_b
-
-    iget-object v0, p1, Llwg;->r:Lyfg;
-
-    iput-object v0, p0, Llwg;->r:Lyfg;
-
-    :cond_b
-    iget v0, p0, Llwg;->s:F
-
-    const v3, 0x7f7fffff    # Float.MAX_VALUE
-
-    cmpl-float v0, v0, v3
-
-    if-nez v0, :cond_c
-
-    iget v0, p1, Llwg;->s:F
-
-    iput v0, p0, Llwg;->s:F
-
-    :cond_c
-    iget-boolean v0, p0, Llwg;->e:Z
-
-    if-nez v0, :cond_d
-
-    iget-boolean v0, p1, Llwg;->e:Z
-
-    if-eqz v0, :cond_d
-
-    iget v0, p1, Llwg;->d:I
-
-    iput v0, p0, Llwg;->d:I
-
-    iput-boolean v1, p0, Llwg;->e:Z
-
-    :cond_d
-    iget v0, p0, Llwg;->m:I
-
-    if-ne v0, v2, :cond_e
-
-    iget p1, p1, Llwg;->m:I
-
-    if-eq p1, v2, :cond_e
-
-    iput p1, p0, Llwg;->m:I
-
-    :cond_e
-    return-void
+    throw v0
 .end method

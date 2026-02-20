@@ -1,111 +1,62 @@
 .class public abstract Lgy7;
-.super Lkotlinx/coroutines/internal/LockFreeLinkedListNode;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lr25;
-.implements Lum7;
+
+# static fields
+.field public static final a:Ljava/lang/Integer;
 
 
-# instance fields
-.field public a:Lvy7;
-
-
-# virtual methods
-.method public final b()Lzna;
-    .locals 1
+# direct methods
+.method static constructor <clinit>()V
+    .locals 3
 
     const/4 v0, 0x0
 
-    return-object v0
-.end method
+    :try_start_0
+    const-string v1, "android.os.Build$VERSION"
 
-.method public abstract c()Z
-.end method
+    invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
-.method public abstract d(Ljava/lang/Throwable;)V
-.end method
+    move-result-object v1
 
-.method public final dispose()V
-    .locals 1
+    const-string v2, "SDK_INT"
 
-    iget-object v0, p0, Lgy7;->a:Lvy7;
+    invoke-virtual {v1, v2}, Ljava/lang/Class;->getField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
-    if-eqz v0, :cond_0
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    instance-of v2, v1, Ljava/lang/Integer;
+
+    if-eqz v2, :cond_0
+
+    check-cast v1, Ljava/lang/Integer;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
+    :catchall_0
     :cond_0
-    const/4 v0, 0x0
+    move-object v1, v0
 
     :goto_0
-    invoke-virtual {v0, p0}, Lvy7;->removeNode$kotlinx_coroutines_core(Lgy7;)V
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v1}, Ljava/lang/Number;->intValue()I
+
+    move-result v2
+
+    if-lez v2, :cond_1
+
+    move-object v0, v1
+
+    :cond_1
+    sput-object v0, Lgy7;->a:Ljava/lang/Integer;
 
     return-void
-.end method
-
-.method public final isActive()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x40
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-static {p0}, Lyk4;->a(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "[job@"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lgy7;->a:Lvy7;
-
-    if-eqz v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    :goto_0
-    invoke-static {v1}, Lyk4;->a(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x5d
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

@@ -4,7 +4,7 @@
 
 # interfaces
 .implements Lru/ok/android/externcalls/sdk/video/VideoRenderManager;
-.implements Lqw4;
+.implements Lzx4;
 
 
 # annotations
@@ -21,26 +21,26 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/video/internal/VideoRenderManagerImpl;",
         "Lru/ok/android/externcalls/sdk/video/VideoRenderManager;",
-        "Lqw4;",
+        "Lzx4;",
         "Lkotlin/Function0;",
         "Lru/ok/android/externcalls/sdk/Conversation$State;",
         "state",
-        "Ls11;",
+        "Lf21;",
         "call",
         "Lru/ok/android/externcalls/sdk/renderer/ConversationRenderers;",
         "conversationRenderers",
         "Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;",
         "store",
         "<init>",
-        "(Llq6;Ls11;Lru/ok/android/externcalls/sdk/renderer/ConversationRenderers;Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;)V",
-        "Lkv1;",
+        "(Lis6;Lf21;Lru/ok/android/externcalls/sdk/renderer/ConversationRenderers;Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;)V",
+        "Ldw1;",
         "key",
         "",
         "Lorg/webrtc/VideoSink;",
         "renderers",
-        "Lb3h;",
+        "Lmah;",
         "setRenderersForMe",
-        "(Lkv1;Ljava/util/List;)V",
+        "(Ldw1;Ljava/util/List;)V",
         "setRenderersForOthers",
         "value",
         "setRenderers",
@@ -55,12 +55,12 @@
         "",
         "isEnabled",
         "()Z",
-        "Lsk1;",
+        "Ljl1;",
         "Lru/ok/android/externcalls/sdk/id/InternalId;",
         "getRemoteVideoRenderers",
-        "(Lsk1;)Ljava/util/Map;",
-        "Llq6;",
-        "Ls11;",
+        "(Ljl1;)Ljava/util/Map;",
+        "Lis6;",
+        "Lf21;",
         "Lru/ok/android/externcalls/sdk/renderer/ConversationRenderers;",
         "Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;",
         "Ljava/util/HashMap;",
@@ -68,9 +68,9 @@
         "Lkotlin/collections/HashMap;",
         "cache",
         "Ljava/util/HashMap;",
-        "Lxi1;",
+        "Loj1;",
         "getCallRenderer",
-        "()Lxi1;",
+        "()Loj1;",
         "callRenderer",
         "Lorg/webrtc/EglBase$Context;",
         "getEglBaseContext",
@@ -93,9 +93,9 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/HashMap<",
-            "Lsk1;",
+            "Ljl1;",
             "Ljava/util/Map<",
-            "Lkv1;",
+            "Ldw1;",
             "Ljava/util/List<",
             "Lorg/webrtc/VideoSink;",
             ">;>;>;"
@@ -103,14 +103,14 @@
     .end annotation
 .end field
 
-.field private final call:Ls11;
+.field private final call:Lf21;
 
 .field private final conversationRenderers:Lru/ok/android/externcalls/sdk/renderer/ConversationRenderers;
 
-.field private final state:Llq6;
+.field private final state:Lis6;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Llq6;"
+            "Lis6;"
         }
     .end annotation
 .end field
@@ -119,13 +119,13 @@
 
 
 # direct methods
-.method public constructor <init>(Llq6;Ls11;Lru/ok/android/externcalls/sdk/renderer/ConversationRenderers;Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;)V
+.method public constructor <init>(Lis6;Lf21;Lru/ok/android/externcalls/sdk/renderer/ConversationRenderers;Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Llq6;",
-            "Ls11;",
+            "Lis6;",
+            "Lf21;",
             "Lru/ok/android/externcalls/sdk/renderer/ConversationRenderers;",
             "Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;",
             ")V"
@@ -134,9 +134,9 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/video/internal/VideoRenderManagerImpl;->state:Llq6;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/video/internal/VideoRenderManagerImpl;->state:Lis6;
 
-    iput-object p2, p0, Lru/ok/android/externcalls/sdk/video/internal/VideoRenderManagerImpl;->call:Ls11;
+    iput-object p2, p0, Lru/ok/android/externcalls/sdk/video/internal/VideoRenderManagerImpl;->call:Lf21;
 
     iput-object p3, p0, Lru/ok/android/externcalls/sdk/video/internal/VideoRenderManagerImpl;->conversationRenderers:Lru/ok/android/externcalls/sdk/renderer/ConversationRenderers;
 
@@ -151,12 +151,12 @@
     return-void
 .end method
 
-.method private final setRenderers(Lkv1;Ljava/util/List;)V
+.method private final setRenderers(Ldw1;Ljava/util/List;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkv1;",
+            "Ldw1;",
             "Ljava/util/List<",
             "+",
             "Lorg/webrtc/VideoSink;",
@@ -168,7 +168,7 @@
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/video/internal/VideoRenderManagerImpl;->cache:Ljava/util/HashMap;
 
     .line 17
-    iget-object v1, p1, Lkv1;->b:Lsk1;
+    iget-object v1, p1, Ldw1;->b:Ljl1;
 
     .line 18
     invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -195,12 +195,12 @@
     return-void
 .end method
 
-.method private final setRenderersForMe(Lkv1;Ljava/util/List;)V
-    .locals 3
+.method private final setRenderersForMe(Ldw1;Ljava/util/List;)V
+    .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkv1;",
+            "Ldw1;",
             "Ljava/util/List<",
             "+",
             "Lorg/webrtc/VideoSink;",
@@ -208,116 +208,100 @@
         }
     .end annotation
 
-    iget-object v0, p1, Lkv1;->a:Lsqh;
+    iget-object v0, p1, Ldw1;->a:Layh;
 
     invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
 
     move-result v0
 
-    if-eqz v0, :cond_5
-
-    const/4 v1, 0x1
-
-    if-eq v0, v1, :cond_9
+    if-eqz v0, :cond_4
 
     const/4 v1, 0x2
 
-    if-eq v0, v1, :cond_3
+    if-eq v0, v1, :cond_2
 
     const/4 v1, 0x3
 
-    if-eq v0, v1, :cond_1
+    if-eq v0, v1, :cond_0
 
     const/4 v1, 0x4
 
-    if-ne v0, v1, :cond_0
+    if-eq v0, v1, :cond_0
 
-    goto :goto_0
+    goto :goto_2
 
     :cond_0
-    new-instance p1, Ljava/lang/RuntimeException;
+    invoke-direct {p0, p1, p2}, Lru/ok/android/externcalls/sdk/video/internal/VideoRenderManagerImpl;->setRenderers(Ldw1;Ljava/util/List;)V
 
-    const-string p2, "Unknown track type"
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/video/internal/VideoRenderManagerImpl;->call:Lf21;
 
-    invoke-direct {p1, p2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    :goto_0
-    invoke-direct {p0, p1, p2}, Lru/ok/android/externcalls/sdk/video/internal/VideoRenderManagerImpl;->setRenderers(Lkv1;Ljava/util/List;)V
-
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/video/internal/VideoRenderManagerImpl;->call:Ls11;
-
-    invoke-virtual {v0}, Ls11;->k()Z
+    invoke-virtual {v0}, Lf21;->k()Z
 
     move-result v1
 
-    if-nez v1, :cond_2
+    if-nez v1, :cond_1
 
-    goto :goto_3
+    goto :goto_2
 
-    :cond_2
-    iget-object v1, v0, Ls11;->o0:Lzt1;
+    :cond_1
+    iget-object v1, v0, Lf21;->o0:Lru1;
 
-    invoke-virtual {v1, p1, p2}, Lzt1;->O(Lkv1;Ljava/util/List;)V
+    invoke-virtual {v1, p1, p2}, Lru1;->O(Ldw1;Ljava/util/List;)V
 
-    iget-object v0, v0, Ls11;->y0:Lzh;
+    iget-object v0, v0, Lf21;->y0:Lnj;
 
-    invoke-virtual {v0, p1, p2}, Lzh;->b(Lkv1;Ljava/util/List;)V
+    invoke-virtual {v0, p1, p2}, Lnj;->b(Ldw1;Ljava/util/List;)V
 
     return-void
 
+    :cond_2
+    iget-object p1, p0, Lru/ok/android/externcalls/sdk/video/internal/VideoRenderManagerImpl;->call:Lf21;
+
+    iget-object v0, p1, Lf21;->k0:Ltl1;
+
+    iget-object v0, v0, Ltl1;->a:Lol1;
+
+    iget-object v0, v0, Lol1;->a:Ljl1;
+
+    if-nez v0, :cond_3
+
+    goto :goto_2
+
     :cond_3
-    iget-object p1, p0, Lru/ok/android/externcalls/sdk/video/internal/VideoRenderManagerImpl;->call:Ls11;
+    new-instance v1, Lsi8;
 
-    iget-object v0, p1, Ls11;->k0:Lcl1;
+    invoke-direct {v1}, Lsi8;-><init>()V
 
-    iget-object v0, v0, Lcl1;->a:Lxk1;
+    iput-object v0, v1, Lsi8;->a:Ljava/lang/Object;
 
-    iget-object v0, v0, Lxk1;->a:Lsk1;
+    sget-object v0, Layh;->c:Layh;
 
-    if-nez v0, :cond_4
+    iput-object v0, v1, Lsi8;->b:Ljava/lang/Object;
 
-    goto :goto_3
-
-    :cond_4
-    new-instance v1, Lje9;
-
-    const/4 v2, 0x4
-
-    invoke-direct {v1, v2}, Lje9;-><init>(I)V
-
-    iput-object v0, v1, Lje9;->b:Ljava/lang/Object;
-
-    sget-object v0, Lsqh;->c:Lsqh;
-
-    iput-object v0, v1, Lje9;->c:Ljava/lang/Object;
-
-    invoke-virtual {v1}, Lje9;->e()Lkv1;
+    invoke-virtual {v1}, Lsi8;->a()Ldw1;
 
     move-result-object v0
 
-    iget-object p1, p1, Ls11;->y0:Lzh;
+    iget-object p1, p1, Lf21;->y0:Lnj;
 
-    invoke-virtual {p1, v0, p2}, Lzh;->b(Lkv1;Ljava/util/List;)V
+    invoke-virtual {p1, v0, p2}, Lnj;->b(Ldw1;Ljava/util/List;)V
 
     return-void
 
-    :cond_5
-    iget-object p1, p0, Lru/ok/android/externcalls/sdk/video/internal/VideoRenderManagerImpl;->call:Ls11;
+    :cond_4
+    iget-object p1, p0, Lru/ok/android/externcalls/sdk/video/internal/VideoRenderManagerImpl;->call:Lf21;
 
-    if-eqz p2, :cond_7
+    if-eqz p2, :cond_6
 
     invoke-interface {p2}, Ljava/util/Collection;->isEmpty()Z
 
     move-result v0
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_5
 
-    goto :goto_1
+    goto :goto_0
 
-    :cond_6
+    :cond_5
     const/4 v0, 0x0
 
     invoke-interface {p2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -326,43 +310,43 @@
 
     check-cast p2, Lorg/webrtc/VideoSink;
 
-    goto :goto_2
+    goto :goto_1
 
-    :cond_7
-    :goto_1
+    :cond_6
+    :goto_0
     const/4 p2, 0x0
 
-    :goto_2
-    invoke-virtual {p1}, Ls11;->k()Z
+    :goto_1
+    invoke-virtual {p1}, Lf21;->k()Z
 
     move-result v0
 
-    if-nez v0, :cond_8
+    if-nez v0, :cond_7
 
-    goto :goto_3
+    goto :goto_2
+
+    :cond_7
+    iget-object p1, p1, Lf21;->g0:Ldff;
+
+    iput-object p2, p1, Ldff;->p:Lorg/webrtc/VideoSink;
+
+    iget-object p1, p1, Ldff;->o:Lal8;
+
+    if-eqz p1, :cond_8
+
+    invoke-virtual {p1, p2}, Lal8;->j(Lorg/webrtc/VideoSink;)V
 
     :cond_8
-    iget-object p1, p1, Ls11;->g0:Ln7f;
-
-    iput-object p2, p1, Ln7f;->p:Lorg/webrtc/VideoSink;
-
-    iget-object p1, p1, Ln7f;->o:Lji8;
-
-    if-eqz p1, :cond_9
-
-    invoke-virtual {p1, p2}, Lji8;->j(Lorg/webrtc/VideoSink;)V
-
-    :cond_9
-    :goto_3
+    :goto_2
     return-void
 .end method
 
-.method private final setRenderersForOthers(Lkv1;Ljava/util/List;)V
+.method private final setRenderersForOthers(Ldw1;Ljava/util/List;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkv1;",
+            "Ldw1;",
             "Ljava/util/List<",
             "+",
             "Lorg/webrtc/VideoSink;",
@@ -370,11 +354,11 @@
         }
     .end annotation
 
-    invoke-direct {p0, p1, p2}, Lru/ok/android/externcalls/sdk/video/internal/VideoRenderManagerImpl;->setRenderers(Lkv1;Ljava/util/List;)V
+    invoke-direct {p0, p1, p2}, Lru/ok/android/externcalls/sdk/video/internal/VideoRenderManagerImpl;->setRenderers(Ldw1;Ljava/util/List;)V
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/video/internal/VideoRenderManagerImpl;->call:Ls11;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/video/internal/VideoRenderManagerImpl;->call:Lf21;
 
-    invoke-virtual {v0}, Ls11;->k()Z
+    invoke-virtual {v0}, Lf21;->k()Z
 
     move-result v1
 
@@ -383,25 +367,25 @@
     return-void
 
     :cond_0
-    iget-object v1, v0, Ls11;->o0:Lzt1;
+    iget-object v1, v0, Lf21;->o0:Lru1;
 
-    invoke-virtual {v1, p1, p2}, Lzt1;->O(Lkv1;Ljava/util/List;)V
+    invoke-virtual {v1, p1, p2}, Lru1;->O(Ldw1;Ljava/util/List;)V
 
-    iget-object v0, v0, Ls11;->y0:Lzh;
+    iget-object v0, v0, Lf21;->y0:Lnj;
 
-    invoke-virtual {v0, p1, p2}, Lzh;->b(Lkv1;Ljava/util/List;)V
+    invoke-virtual {v0, p1, p2}, Lnj;->b(Ldw1;Ljava/util/List;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public getCallRenderer()Lxi1;
+.method public getCallRenderer()Loj1;
     .locals 2
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/video/internal/VideoRenderManagerImpl;->state:Llq6;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/video/internal/VideoRenderManagerImpl;->state:Lis6;
 
-    invoke-interface {v0}, Llq6;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lis6;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -409,9 +393,9 @@
 
     if-eq v0, v1, :cond_0
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/video/internal/VideoRenderManagerImpl;->call:Ls11;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/video/internal/VideoRenderManagerImpl;->call:Lf21;
 
-    iget-object v0, v0, Ls11;->s:Lxi1;
+    iget-object v0, v0, Lf21;->s:Loj1;
 
     return-object v0
 
@@ -424,15 +408,15 @@
 .method public getEglBaseContext()Lorg/webrtc/EglBase$Context;
     .locals 2
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/video/internal/VideoRenderManagerImpl;->call:Ls11;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/video/internal/VideoRenderManagerImpl;->call:Lf21;
 
-    iget-object v0, v0, Ls11;->r:Lorg/webrtc/EglBase;
+    iget-object v0, v0, Lf21;->r:Lorg/webrtc/EglBase;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/video/internal/VideoRenderManagerImpl;->state:Llq6;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/video/internal/VideoRenderManagerImpl;->state:Lis6;
 
-    invoke-interface {v0}, Llq6;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lis6;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -443,9 +427,9 @@
     goto :goto_0
 
     :cond_0
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/video/internal/VideoRenderManagerImpl;->call:Ls11;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/video/internal/VideoRenderManagerImpl;->call:Lf21;
 
-    iget-object v0, v0, Ls11;->r:Lorg/webrtc/EglBase;
+    iget-object v0, v0, Lf21;->r:Lorg/webrtc/EglBase;
 
     invoke-interface {v0}, Lorg/webrtc/EglBase;->getEglBaseContext()Lorg/webrtc/EglBase$Context;
 
@@ -460,15 +444,15 @@
     return-object v0
 .end method
 
-.method public getRemoteVideoRenderers(Lsk1;)Ljava/util/Map;
+.method public getRemoteVideoRenderers(Ljl1;)Ljava/util/Map;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lsk1;",
+            "Ljl1;",
             ")",
             "Ljava/util/Map<",
-            "Lkv1;",
+            "Ldw1;",
             "Ljava/util/List<",
             "Lorg/webrtc/VideoSink;",
             ">;>;"
@@ -485,7 +469,7 @@
 
     if-nez p1, :cond_0
 
-    sget-object p1, Leh5;->a:Leh5;
+    sget-object p1, Lti5;->a:Lti5;
 
     :cond_0
     return-object p1
@@ -560,41 +544,39 @@
 
     .line 3
     :cond_0
-    new-instance v1, Lje9;
+    new-instance v1, Lsi8;
 
-    const/4 v2, 0x4
-
-    invoke-direct {v1, v2}, Lje9;-><init>(I)V
+    invoke-direct {v1}, Lsi8;-><init>()V
 
     .line 4
-    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;->getType()Lsqh;
+    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;->getType()Layh;
 
     move-result-object v2
 
     .line 5
-    iput-object v2, v1, Lje9;->c:Ljava/lang/Object;
+    iput-object v2, v1, Lsi8;->b:Ljava/lang/Object;
 
     .line 6
-    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getCallParticipant()Lxk1;
+    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getCallParticipant()Lol1;
 
     move-result-object v2
 
     .line 7
-    iget-object v2, v2, Lxk1;->a:Lsk1;
+    iget-object v2, v2, Lol1;->a:Ljl1;
 
     .line 8
-    iput-object v2, v1, Lje9;->b:Ljava/lang/Object;
+    iput-object v2, v1, Lsi8;->a:Ljava/lang/Object;
 
     .line 9
-    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;->getMovieId()Lz8a;
+    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;->getMovieId()Lmba;
 
     move-result-object v2
 
     .line 10
-    iput-object v2, v1, Lje9;->d:Ljava/lang/Object;
+    iput-object v2, v1, Lsi8;->c:Ljava/lang/Object;
 
     .line 11
-    invoke-virtual {v1}, Lje9;->e()Lkv1;
+    invoke-virtual {v1}, Lsi8;->a()Ldw1;
 
     move-result-object v1
 
@@ -613,13 +595,13 @@
     if-ne v0, p1, :cond_1
 
     .line 14
-    invoke-direct {p0, v1, p2}, Lru/ok/android/externcalls/sdk/video/internal/VideoRenderManagerImpl;->setRenderersForMe(Lkv1;Ljava/util/List;)V
+    invoke-direct {p0, v1, p2}, Lru/ok/android/externcalls/sdk/video/internal/VideoRenderManagerImpl;->setRenderersForMe(Ldw1;Ljava/util/List;)V
 
     return-void
 
     .line 15
     :cond_1
-    invoke-direct {p0, v1, p2}, Lru/ok/android/externcalls/sdk/video/internal/VideoRenderManagerImpl;->setRenderersForOthers(Lkv1;Ljava/util/List;)V
+    invoke-direct {p0, v1, p2}, Lru/ok/android/externcalls/sdk/video/internal/VideoRenderManagerImpl;->setRenderersForOthers(Ldw1;Ljava/util/List;)V
 
     :cond_2
     :goto_0

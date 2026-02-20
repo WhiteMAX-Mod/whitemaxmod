@@ -1,609 +1,177 @@
 .class public final Lq6h;
-.super Ljava/lang/Object;
+.super Lpdg;
 .source "SourceFile"
 
-
-# static fields
-.field public static final j:Lq6h;
+# interfaces
+.implements Lys6;
 
 
 # instance fields
-.field public final a:Lp7h;
+.field public final synthetic X:Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;
 
-.field public final b:Ljava/lang/String;
-
-.field public final c:Ljava/lang/String;
-
-.field public final d:Ljava/lang/String;
-
-.field public final e:F
-
-.field public final f:J
-
-.field public final g:Lh9h;
-
-.field public final h:Lf9h;
-
-.field public final i:J
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;)V
+    .locals 0
 
-    new-instance v0, Lp6h;
+    iput-object p2, p0, Lq6h;->X:Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;
 
-    invoke-direct {v0}, Lp6h;-><init>()V
+    const/4 p2, 0x2
 
-    new-instance v1, Lq6h;
-
-    invoke-direct {v1, v0}, Lq6h;-><init>(Lp6h;)V
-
-    sput-object v1, Lq6h;->j:Lq6h;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lp6h;)V
-    .locals 2
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iget-object v0, p1, Lp6h;->a:Lp7h;
-
-    iput-object v0, p0, Lq6h;->a:Lp7h;
-
-    iget-object v0, p1, Lp6h;->b:Ljava/lang/String;
-
-    iput-object v0, p0, Lq6h;->b:Ljava/lang/String;
-
-    iget-object v0, p1, Lp6h;->c:Ljava/lang/String;
-
-    iput-object v0, p0, Lq6h;->c:Ljava/lang/String;
-
-    iget-object v0, p1, Lp6h;->d:Ljava/lang/String;
-
-    iput-object v0, p0, Lq6h;->d:Ljava/lang/String;
-
-    iget v0, p1, Lp6h;->e:F
-
-    iput v0, p0, Lq6h;->e:F
-
-    iget-wide v0, p1, Lp6h;->f:J
-
-    iput-wide v0, p0, Lq6h;->f:J
-
-    iget-object v0, p1, Lp6h;->g:Lh9h;
-
-    iput-object v0, p0, Lq6h;->g:Lh9h;
-
-    iget-object v0, p1, Lp6h;->h:Lf9h;
-
-    iput-object v0, p0, Lq6h;->h:Lf9h;
-
-    iget-wide v0, p1, Lp6h;->i:J
-
-    iput-wide v0, p0, Lq6h;->i:J
+    invoke-direct {p0, p2, p1}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lq6h;->g:Lh9h;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    sget-object v1, Lh9h;->d:Lh9h;
+    invoke-virtual {p0, p1, p2}, Lq6h;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    if-ne v0, v1, :cond_0
+    move-result-object p1
 
-    iget-object v0, p0, Lq6h;->h:Lf9h;
+    check-cast p1, Lq6h;
 
-    if-eqz v0, :cond_0
+    sget-object p2, Lmah;->a:Lmah;
 
-    const/4 v0, 0x1
+    invoke-virtual {p1, p2}, Lq6h;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
+    return-object p2
 .end method
 
-.method public final b()Lp6h;
-    .locals 3
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    new-instance v0, Lp6h;
+    new-instance v0, Lq6h;
 
-    invoke-direct {v0}, Lp6h;-><init>()V
+    iget-object v1, p0, Lq6h;->X:Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;
 
-    iget-object v1, p0, Lq6h;->a:Lp7h;
+    invoke-direct {v0, p2, v1}, Lq6h;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;)V
 
-    iput-object v1, v0, Lp6h;->a:Lp7h;
-
-    iget-object v1, p0, Lq6h;->b:Ljava/lang/String;
-
-    iput-object v1, v0, Lp6h;->b:Ljava/lang/String;
-
-    iget-object v1, p0, Lq6h;->c:Ljava/lang/String;
-
-    iput-object v1, v0, Lp6h;->c:Ljava/lang/String;
-
-    iget-object v1, p0, Lq6h;->d:Ljava/lang/String;
-
-    iput-object v1, v0, Lp6h;->d:Ljava/lang/String;
-
-    iget-object v1, p0, Lq6h;->h:Lf9h;
-
-    iput-object v1, v0, Lp6h;->h:Lf9h;
-
-    iget-object v1, p0, Lq6h;->g:Lh9h;
-
-    iput-object v1, v0, Lp6h;->g:Lh9h;
-
-    iget-wide v1, p0, Lq6h;->f:J
-
-    iput-wide v1, v0, Lp6h;->f:J
-
-    iget v1, p0, Lq6h;->e:F
-
-    iput v1, v0, Lp6h;->e:F
-
-    iget-wide v1, p0, Lq6h;->i:J
-
-    iput-wide v1, v0, Lp6h;->i:J
+    iput-object p1, v0, Lq6h;->o:Ljava/lang/Object;
 
     return-object v0
 .end method
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 11
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lq6h;->o:Ljava/lang/Object;
 
-    if-ne p0, p1, :cond_0
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    return v0
+    check-cast v0, Lf6h;
 
-    :cond_0
-    const/4 v1, 0x0
+    sget-object p1, Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;->Y:[Lv58;
 
-    if-eqz p1, :cond_f
+    instance-of p1, v0, Ld6h;
 
-    const-class v2, Lq6h;
+    iget-object v1, p0, Lq6h;->X:Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-eqz p1, :cond_2
 
-    move-result-object v3
+    new-instance p1, Lrlb;
 
-    if-eq v2, v3, :cond_1
+    invoke-direct {p1, v1}, Lrlb;-><init>(Lone/me/sdk/arch/Widget;)V
 
-    goto/16 :goto_4
+    new-instance v2, Lfmb;
 
-    :cond_1
-    check-cast p1, Lq6h;
+    check-cast v0, Ld6h;
 
-    iget-object v2, p1, Lq6h;->h:Lf9h;
+    iget v3, v0, Ld6h;->b:I
 
-    iget-object v3, p1, Lq6h;->d:Ljava/lang/String;
+    invoke-direct {v2, v3}, Lfmb;-><init>(I)V
 
-    iget-object v4, p1, Lq6h;->c:Ljava/lang/String;
+    invoke-virtual {p1, v2}, Lrlb;->e(Ljmb;)V
 
-    iget-object v5, p1, Lq6h;->b:Ljava/lang/String;
+    iget-object v0, v0, Ld6h;->a:Lhpg;
 
-    iget-object v6, p1, Lq6h;->a:Lp7h;
+    invoke-virtual {p1, v0}, Lrlb;->h(Lhpg;)V
 
-    iget v7, p1, Lq6h;->e:F
+    new-instance v0, Lzlb;
 
-    iget v8, p0, Lq6h;->e:F
+    invoke-virtual {v1}, Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;->H0()Lu7b;
 
-    invoke-static {v7, v8}, Ljava/lang/Float;->compare(FF)I
+    move-result-object v2
 
-    move-result v7
+    invoke-virtual {v2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
-    if-eqz v7, :cond_2
+    move-result-object v2
 
-    return v1
+    instance-of v3, v2, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    :cond_2
-    iget-wide v7, p0, Lq6h;->f:J
+    if-eqz v3, :cond_0
 
-    iget-wide v9, p1, Lq6h;->f:J
-
-    cmp-long v7, v7, v9
-
-    if-eqz v7, :cond_3
-
-    return v1
-
-    :cond_3
-    iget-wide v7, p0, Lq6h;->i:J
-
-    iget-wide v9, p1, Lq6h;->i:J
-
-    cmp-long v7, v7, v9
-
-    if-eqz v7, :cond_4
-
-    return v1
-
-    :cond_4
-    iget-object v7, p0, Lq6h;->a:Lp7h;
-
-    if-eqz v7, :cond_5
-
-    invoke-virtual {v7, v6}, Lp7h;->equals(Ljava/lang/Object;)Z
-
-    move-result v6
-
-    if-nez v6, :cond_6
-
-    goto :goto_0
-
-    :cond_5
-    if-eqz v6, :cond_6
-
-    :goto_0
-    return v1
-
-    :cond_6
-    iget-object v6, p0, Lq6h;->b:Ljava/lang/String;
-
-    if-eqz v6, :cond_7
-
-    invoke-virtual {v6, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v5
-
-    if-nez v5, :cond_8
-
-    goto :goto_1
-
-    :cond_7
-    if-eqz v5, :cond_8
-
-    :goto_1
-    return v1
-
-    :cond_8
-    iget-object v5, p0, Lq6h;->c:Ljava/lang/String;
-
-    if-eqz v5, :cond_9
-
-    invoke-virtual {v5, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-nez v4, :cond_a
-
-    goto :goto_2
-
-    :cond_9
-    if-eqz v4, :cond_a
-
-    :goto_2
-    return v1
-
-    :cond_a
-    iget-object v4, p0, Lq6h;->d:Ljava/lang/String;
-
-    if-eqz v4, :cond_b
-
-    invoke-virtual {v4, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_c
-
-    goto :goto_3
-
-    :cond_b
-    if-eqz v3, :cond_c
-
-    :goto_3
-    return v1
-
-    :cond_c
-    iget-object v3, p0, Lq6h;->g:Lh9h;
-
-    iget-object p1, p1, Lq6h;->g:Lh9h;
-
-    if-eq v3, p1, :cond_d
-
-    return v1
-
-    :cond_d
-    iget-object p1, p0, Lq6h;->h:Lf9h;
-
-    if-eqz p1, :cond_e
-
-    invoke-virtual {p1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_e
-    if-nez v2, :cond_f
-
-    return v0
-
-    :cond_f
-    :goto_4
-    return v1
-.end method
-
-.method public final hashCode()I
-    .locals 7
-
-    const/4 v0, 0x0
-
-    iget-object v1, p0, Lq6h;->a:Lp7h;
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1}, Lp7h;->hashCode()I
-
-    move-result v1
+    check-cast v2, Landroid/view/ViewGroup$MarginLayoutParams;
 
     goto :goto_0
 
     :cond_0
-    move v1, v0
+    const/4 v2, 0x0
 
     :goto_0
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v2, p0, Lq6h;->b:Ljava/lang/String;
+    const/4 v3, 0x0
 
     if-eqz v2, :cond_1
 
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
-
-    move-result v2
+    iget v2, v2, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
 
     goto :goto_1
 
     :cond_1
-    move v2, v0
+    move v2, v3
 
     :goto_1
-    add-int/2addr v1, v2
+    invoke-virtual {v1}, Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;->H0()Lu7b;
 
-    mul-int/lit8 v1, v1, 0x1f
+    move-result-object v4
 
-    iget-object v2, p0, Lq6h;->c:Ljava/lang/String;
+    invoke-virtual {v4}, Landroid/view/View;->getMeasuredHeight()I
 
-    if-eqz v2, :cond_2
+    move-result v4
 
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+    add-int/2addr v4, v2
 
-    move-result v2
+    const/4 v2, 0x3
+
+    invoke-direct {v0, v3, v3, v4, v2}, Lzlb;-><init>(IIII)V
+
+    invoke-virtual {p1, v0}, Lrlb;->c(Lzlb;)V
+
+    invoke-virtual {p1}, Lrlb;->j()Lqlb;
+
+    invoke-virtual {v1}, Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;->H0()Lu7b;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v3}, Lu7b;->setProgressEnabled(Z)V
 
     goto :goto_2
 
     :cond_2
-    move v2, v0
+    instance-of p1, v0, Le6h;
 
-    :goto_2
-    add-int/2addr v1, v2
+    if-eqz p1, :cond_3
 
-    mul-int/lit8 v1, v1, 0x1f
+    invoke-virtual {v1}, Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;->H0()Lu7b;
 
-    iget-object v2, p0, Lq6h;->d:Ljava/lang/String;
+    move-result-object p1
 
-    if-eqz v2, :cond_3
+    check-cast v0, Le6h;
 
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+    iget-boolean v0, v0, Le6h;->a:Z
 
-    move-result v2
-
-    goto :goto_3
+    invoke-virtual {p1, v0}, Lu7b;->setProgressEnabled(Z)V
 
     :cond_3
-    move v2, v0
+    :goto_2
+    sget-object p1, Lmah;->a:Lmah;
 
-    :goto_3
-    add-int/2addr v1, v2
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    const/4 v2, 0x0
-
-    iget v3, p0, Lq6h;->e:F
-
-    cmpl-float v2, v3, v2
-
-    if-eqz v2, :cond_4
-
-    invoke-static {v3}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v2
-
-    goto :goto_4
-
-    :cond_4
-    move v2, v0
-
-    :goto_4
-    add-int/2addr v1, v2
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-wide v2, p0, Lq6h;->f:J
-
-    const/16 v4, 0x20
-
-    ushr-long v5, v2, v4
-
-    xor-long/2addr v2, v5
-
-    long-to-int v2, v2
-
-    add-int/2addr v1, v2
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v2, p0, Lq6h;->g:Lh9h;
-
-    if-eqz v2, :cond_5
-
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v2
-
-    goto :goto_5
-
-    :cond_5
-    move v2, v0
-
-    :goto_5
-    add-int/2addr v1, v2
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v2, p0, Lq6h;->h:Lf9h;
-
-    if-eqz v2, :cond_6
-
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    :cond_6
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-wide v2, p0, Lq6h;->i:J
-
-    ushr-long v4, v2, v4
-
-    xor-long/2addr v2, v4
-
-    long-to-int v0, v2
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Upload{uploadData="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lq6h;->a:Lp7h;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", preparedPath=\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-static {}, Lc5j;->a()Z
-
-    move-result v1
-
-    const-string v2, "*****"
-
-    if-eqz v1, :cond_0
-
-    iget-object v1, p0, Lq6h;->b:Ljava/lang/String;
-
-    goto :goto_0
-
-    :cond_0
-    move-object v1, v2
-
-    :goto_0
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\', fileName=\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-static {}, Lc5j;->a()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    iget-object v1, p0, Lq6h;->c:Ljava/lang/String;
-
-    goto :goto_1
-
-    :cond_1
-    move-object v1, v2
-
-    :goto_1
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\', uploadUrl=\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-static {}, Lc5j;->a()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    iget-object v2, p0, Lq6h;->d:Ljava/lang/String;
-
-    :cond_2
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\', uploadProgress="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lq6h;->e:F
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v1, ", totalBytes="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lq6h;->f:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", uploadStatus="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lq6h;->g:Lh9h;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", uploadResult="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lq6h;->h:Lf9h;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", createdTime="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lq6h;->i:J
-
-    const/16 v3, 0x7d
-
-    invoke-static {v0, v1, v2, v3}, Lpqb;->k(Ljava/lang/StringBuilder;JC)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

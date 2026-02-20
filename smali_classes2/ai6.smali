@@ -1,43 +1,103 @@
-.class public abstract synthetic Lai6;
-.super Ljava/lang/Object;
+.class public final Lai6;
+.super Landroidx/recyclerview/widget/RecyclerView;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+# instance fields
+.field public final U1:Lmh6;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Landroid/content/Context;Ljava/util/concurrent/Executor;)V
     .locals 3
 
-    invoke-static {}, Lta3;->values()[Lta3;
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, v0}, Landroidx/recyclerview/widget/RecyclerView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+
+    new-instance v1, Lmh6;
+
+    invoke-direct {v1, p2}, Lmh6;-><init>(Ljava/util/concurrent/Executor;)V
+
+    iput-object v1, p0, Lai6;->U1:Lmh6;
+
+    new-instance p2, Lzh6;
+
+    invoke-direct {p2}, Ljava/lang/Object;-><init>()V
+
+    new-instance v2, Lone/me/chats/list/folderwidget/section/FolderWidgetLayoutManager;
+
+    invoke-direct {v2, p1}, Lone/me/chats/list/folderwidget/section/FolderWidgetLayoutManager;-><init>(Landroid/content/Context;)V
+
+    invoke-virtual {p0, v2}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/a;)V
+
+    invoke-virtual {p0, v0}, Landroidx/recyclerview/widget/RecyclerView;->setItemAnimator(Lxxd;)V
+
+    invoke-virtual {p0, p2}, Landroidx/recyclerview/widget/RecyclerView;->l(Ldyd;)V
+
+    invoke-virtual {p0, v1}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Lsxd;)V
+
+    new-instance p1, Lh21;
+
+    const/16 p2, 0x8
+
+    int-to-float p2, p2
+
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    array-length v0, v0
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    new-array v0, v0, [I
+    move-result-object v0
 
-    const/4 v1, 0x1
+    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
 
-    const/4 v2, 0x0
+    mul-float/2addr p2, v0
 
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-static {p2}, Lmhj;->f(F)I
 
-    :catch_0
-    const/4 v2, 0x2
+    move-result p2
 
-    :try_start_1
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    const/4 v0, 0x6
 
-    :catch_1
-    sput-object v0, Lai6;->$EnumSwitchMapping$0:[I
+    int-to-float v0, v0
+
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v0, v1
+
+    invoke-static {v0}, Lmhj;->f(F)I
+
+    move-result v0
+
+    const/4 v1, 0x4
+
+    invoke-direct {p1, p2, v0, v1}, Lh21;-><init>(III)V
+
+    const/4 p2, -0x1
+
+    invoke-virtual {p0, p1, p2}, Landroidx/recyclerview/widget/RecyclerView;->j(Lyxd;I)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final setListener(Lyh6;)V
+    .locals 1
+
+    iget-object v0, p0, Lai6;->U1:Lmh6;
+
+    iput-object p1, v0, Lmh6;->X:Ljava/lang/Object;
 
     return-void
 .end method

@@ -1,93 +1,114 @@
-.class public final Lo66;
+.class public final synthetic Lo66;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lx4b;
+
 
 # instance fields
-.field public a:I
+.field public final synthetic a:I
 
-.field public b:Z
+.field public final synthetic b:Lcom/google/firebase/messaging/FirebaseMessaging;
 
-.field public c:I
 
-.field public d:I
+# direct methods
+.method public synthetic constructor <init>(Lcom/google/firebase/messaging/FirebaseMessaging;I)V
+    .locals 0
 
-.field public e:I
+    iput p2, p0, Lo66;->a:I
 
-.field public f:I
+    iput-object p1, p0, Lo66;->b:Lcom/google/firebase/messaging/FirebaseMessaging;
 
-.field public g:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public h:I
-
-.field public i:Z
+    return-void
+.end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final a(Ljava/lang/Object;)V
+    .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget v0, p0, Lo66;->a:I
 
-    const-string v1, "LayoutState{mAvailable="
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object v0, p0, Lo66;->b:Lcom/google/firebase/messaging/FirebaseMessaging;
 
-    iget v1, p0, Lo66;->a:I
+    check-cast p1, Lci3;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    sget-object v1, Lcom/google/firebase/messaging/FirebaseMessaging;->k:Ltqe;
 
-    const-string v1, ", mFlexLinePosition="
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eqz p1, :cond_0
 
-    iget v1, p0, Lo66;->c:I
+    iget-object p1, p1, Lci3;->a:Landroid/content/Intent;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-static {p1}, Lckj;->b(Landroid/content/Intent;)V
 
-    const-string v1, ", mPosition="
+    invoke-virtual {v0}, Lcom/google/firebase/messaging/FirebaseMessaging;->g()V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_0
+    return-void
 
-    iget v1, p0, Lo66;->d:I
+    :pswitch_0
+    iget-object v0, p0, Lo66;->b:Lcom/google/firebase/messaging/FirebaseMessaging;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    check-cast p1, Lnwg;
 
-    const-string v1, ", mOffset="
+    iget-object v0, v0, Lcom/google/firebase/messaging/FirebaseMessaging;->e:Lir6;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Lir6;->j()Z
 
-    iget v1, p0, Lo66;->e:I
+    move-result v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    if-eqz v0, :cond_1
 
-    const-string v1, ", mScrollingOffset="
+    iget-object v0, p1, Lnwg;->h:Llwg;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lo66;->f:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", mLastScrollDelta="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lo66;->g:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", mItemDirection=1, mLayoutDirection="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lo66;->h:I
-
-    const/16 v2, 0x7d
-
-    invoke-static {v0, v1, v2}, Lhc0;->i(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
+    invoke-virtual {v0}, Llwg;->a()Lkwg;
 
     move-result-object v0
 
-    return-object v0
+    if-eqz v0, :cond_1
+
+    monitor-enter p1
+
+    :try_start_0
+    iget-boolean v0, p1, Lnwg;->g:Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p1
+
+    if-nez v0, :cond_1
+
+    const-wide/16 v0, 0x0
+
+    invoke-virtual {p1, v0, v1}, Lnwg;->f(J)V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    :try_start_1
+    monitor-exit p1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+
+    :cond_1
+    :goto_0
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,52 +1,122 @@
-.class public final synthetic Lzf5;
-.super Lqr6;
+.class public final Lzf5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lnq6;
 
+# instance fields
+.field public final a:D
 
-# static fields
-.field public static final a:Lzf5;
+.field public final b:D
+
+.field public final c:D
+
+.field public d:D
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(DDD)V
+    .locals 0
 
-    new-instance v0, Lzf5;
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v4, "<init>(Ljava/lang/Throwable;)V"
+    .line 2
+    iput-wide p1, p0, Lzf5;->a:D
 
-    const/4 v5, 0x0
+    .line 3
+    iput-wide p3, p0, Lzf5;->b:D
 
-    const/4 v1, 0x1
+    .line 4
+    iput-wide p5, p0, Lzf5;->c:D
 
-    const-class v2, Lxf5;
+    .line 5
+    iput-wide p5, p0, Lzf5;->d:D
 
-    const-string v3, "<init>"
+    return-void
+.end method
 
-    invoke-direct/range {v0 .. v5}, Lqr6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+.method public synthetic constructor <init>(DDI)V
+    .locals 8
 
-    sput-object v0, Lzf5;->a:Lzf5;
+    and-int/lit8 v0, p5, 0x2
+
+    if-eqz v0, :cond_0
+
+    move-wide v4, p1
+
+    goto :goto_0
+
+    :cond_0
+    move-wide v4, p3
+
+    :goto_0
+    and-int/lit8 p3, p5, 0x4
+
+    if-eqz p3, :cond_1
+
+    const-wide/high16 p3, 0x7ff8000000000000L    # Double.NaN
+
+    :goto_1
+    move-object v1, p0
+
+    move-wide v2, p1
+
+    move-wide v6, p3
+
+    goto :goto_2
+
+    :cond_1
+    const-wide/16 p3, 0x0
+
+    goto :goto_1
+
+    .line 6
+    :goto_2
+    invoke-direct/range {v1 .. v7}, Lzf5;-><init>(DDD)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final a(D)V
+    .locals 6
 
-    check-cast p1, Ljava/lang/Throwable;
+    iget-wide v0, p0, Lzf5;->d:D
 
-    new-instance v0, Lxf5;
+    invoke-static {v0, v1}, Ljava/lang/Double;->isNaN(D)Z
 
-    const-string v1, "\u041d\u0435\u043e\u0431\u0440\u0430\u0431\u043e\u0442\u0430\u043d\u043d\u0430\u044f \u043e\u0448\u0438\u0431\u043a\u0430"
+    move-result v2
 
-    const/4 v2, 0x0
+    if-eqz v2, :cond_0
 
-    invoke-direct {v0, v1, p1, v2}, Lxf5;-><init>(Ljava/lang/String;Ljava/lang/Throwable;I)V
+    goto :goto_1
 
-    return-object v0
+    :cond_0
+    cmpl-double v2, p1, v0
+
+    if-lez v2, :cond_1
+
+    iget-wide v2, p0, Lzf5;->a:D
+
+    goto :goto_0
+
+    :cond_1
+    iget-wide v2, p0, Lzf5;->b:D
+
+    :goto_0
+    mul-double/2addr p1, v2
+
+    const-wide/high16 v4, 0x3ff0000000000000L    # 1.0
+
+    sub-double/2addr v4, v2
+
+    mul-double/2addr v4, v0
+
+    add-double/2addr p1, v4
+
+    :goto_1
+    iput-wide p1, p0, Lzf5;->d:D
+
+    return-void
 .end method

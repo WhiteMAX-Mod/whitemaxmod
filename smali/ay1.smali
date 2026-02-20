@@ -1,48 +1,25 @@
 .class public final Lay1;
-.super Lo84;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
-
-# instance fields
-.field public final synthetic X:Lnq1;
-
-.field public synthetic d:Ljava/lang/Object;
-
-.field public o:I
-
-
-# direct methods
-.method public constructor <init>(Lnq1;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lay1;->X:Lnq1;
-
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+# interfaces
+.implements Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$DisabledAudioDeviceUsagePolicy;
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final isAvailableForAutoSelect(Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$AudioDeviceType;)Z
     .locals 1
 
-    iput-object p1, p0, Lay1;->d:Ljava/lang/Object;
+    sget-object v0, Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$AudioDeviceType;->BLUETOOTH:Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$AudioDeviceType;
 
-    iget p1, p0, Lay1;->o:I
+    if-ne p1, v0, :cond_0
 
-    const/high16 v0, -0x80000000
+    const/4 p1, 0x1
 
-    or-int/2addr p1, v0
+    return p1
 
-    iput p1, p0, Lay1;->o:I
+    :cond_0
+    const/4 p1, 0x0
 
-    iget-object p1, p0, Lay1;->X:Lnq1;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lnq1;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return p1
 .end method

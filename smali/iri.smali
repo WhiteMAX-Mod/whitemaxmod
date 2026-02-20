@@ -1,8 +1,15 @@
-.class public interface abstract Liri;
+.class public final Liri;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract b()I
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    const-string v0, "WorkProgressUpdater"
+
+    invoke-static {v0}, Lm0j;->n(Ljava/lang/String;)Ljava/lang/String;
+
+    return-void
 .end method

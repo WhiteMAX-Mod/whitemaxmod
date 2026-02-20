@@ -1,92 +1,82 @@
-.class public final synthetic Ldj;
-.super Ljava/lang/Object;
+.class public final Ldj;
+.super Lgj;
 .source "SourceFile"
-
-# interfaces
-.implements Llq6;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ltj;
+.field public final a:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Ltj;I)V
+.method public constructor <init>(I)V
     .locals 0
 
-    iput p2, p0, Ldj;->a:I
-
-    iput-object p1, p0, Ldj;->b:Ltj;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Ldj;->a:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Ldj;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Ldj;
+
+    iget v1, p0, Ldj;->a:I
+
+    iget p1, p1, Ldj;->a:I
+
+    if-eq v1, p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
     .locals 1
 
     iget v0, p0, Ldj;->a:I
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
-    iget-object v0, p0, Ldj;->b:Ltj;
+    move-result v0
 
-    iget-object v0, v0, Ltj;->b:Llgb;
+    return v0
+.end method
 
-    invoke-virtual {v0}, Llgb;->l()Lb2e;
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    move-result-object v0
+    const-string v0, "IntNumber(value="
 
-    check-cast v0, Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;
+    const-string v1, ")"
 
-    invoke-virtual {v0}, Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;->R()Lqkd;
+    iget v2, p0, Ldj;->a:I
 
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Ldj;->b:Ltj;
-
-    iget-object v0, v0, Ltj;->b:Llgb;
-
-    invoke-virtual {v0}, Llgb;->l()Lb2e;
-
-    move-result-object v0
-
-    check-cast v0, Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;
-
-    invoke-virtual {v0}, Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;->z()Lbk;
+    invoke-static {v2, v0, v1}, Lau1;->g(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
-
-    :pswitch_1
-    iget-object v0, p0, Ldj;->b:Ltj;
-
-    iget-object v0, v0, Ltj;->b:Llgb;
-
-    invoke-virtual {v0}, Llgb;->l()Lb2e;
-
-    move-result-object v0
-
-    check-cast v0, Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;
-
-    invoke-virtual {v0}, Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;->y()Lbi;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

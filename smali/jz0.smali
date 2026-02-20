@@ -1,84 +1,119 @@
 .class public final Ljz0;
-.super Ljava/lang/Object;
+.super Lxmc;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:Z
+# static fields
+.field public static final c:Ljz0;
 
-.field public b:J
 
-.field public c:J
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Ljz0;
+
+    sget-object v1, Loz0;->a:Loz0;
+
+    invoke-direct {v0, v1}, Lxmc;-><init>(Lw58;)V
+
+    sput-object v0, Ljz0;->c:Ljz0;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public declared-synchronized a()J
-    .locals 2
+.method public final h(Ljava/lang/Object;)I
+    .locals 0
 
-    monitor-enter p0
+    check-cast p1, [B
 
-    :try_start_0
-    iget-wide v0, p0, Ljz0;->b:J
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    array-length p1, p1
 
-    monitor-exit p0
-
-    return-wide v0
-
-    :catchall_0
-    move-exception v0
-
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
+    return p1
 .end method
 
-.method public declared-synchronized b(JJ)V
+.method public final j(Liq3;ILjava/lang/Object;)V
     .locals 2
 
-    monitor-enter p0
+    check-cast p3, Liz0;
 
-    :try_start_0
-    iget-boolean v0, p0, Ljz0;->a:Z
+    iget-object v0, p0, Lxmc;->b:Lwmc;
 
-    if-eqz v0, :cond_0
+    invoke-interface {p1, v0, p2}, Liq3;->i(Lwmc;I)B
 
-    iget-wide v0, p0, Ljz0;->b:J
+    move-result p1
 
-    add-long/2addr v0, p1
+    invoke-static {p3}, Lvmc;->c(Lvmc;)V
 
-    iput-wide v0, p0, Ljz0;->b:J
+    iget-object p2, p3, Liz0;->a:[B
 
-    iget-wide p1, p0, Ljz0;->c:J
+    iget v0, p3, Liz0;->b:I
 
-    add-long/2addr p1, p3
+    add-int/lit8 v1, v0, 0x1
 
-    iput-wide p1, p0, Ljz0;->c:J
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    iput v1, p3, Liz0;->b:I
+
+    aput-byte p1, p2, v0
+
+    return-void
+.end method
+
+.method public final k(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    check-cast p1, [B
+
+    new-instance v0, Liz0;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, v0, Liz0;->a:[B
+
+    array-length p1, p1
+
+    iput p1, v0, Liz0;->b:I
+
+    const/16 p1, 0xa
+
+    invoke-virtual {v0, p1}, Liz0;->b(I)V
+
+    return-object v0
+.end method
+
+.method public final n()Ljava/lang/Object;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    new-array v0, v0, [B
+
+    return-object v0
+.end method
+
+.method public final o(Lj6g;Ljava/lang/Object;I)V
+    .locals 3
+
+    check-cast p2, [B
+
+    const/4 v0, 0x0
+
+    :goto_0
+    if-ge v0, p3, :cond_0
+
+    aget-byte v1, p2, v0
+
+    iget-object v2, p0, Lxmc;->b:Lwmc;
+
+    invoke-virtual {p1, v2, v0}, Lj6g;->g(Lzwe;I)V
+
+    invoke-virtual {p1, v1}, Lj6g;->d(B)V
+
+    add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
     :cond_0
-    :goto_0
-    monitor-exit p0
-
     return-void
-
-    :goto_1
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
 .end method

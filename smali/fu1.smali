@@ -1,49 +1,108 @@
-.class public final Lfu1;
-.super Lo84;
+.class public final synthetic Lfu1;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lis6;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public synthetic d:Ljava/lang/Object;
-
-.field public final synthetic o:Lgu1;
+.field public final synthetic b:Liu1;
 
 
 # direct methods
-.method public constructor <init>(Lgu1;Lo84;)V
+.method public synthetic constructor <init>(Liu1;I)V
     .locals 0
 
-    iput-object p1, p0, Lfu1;->o:Lgu1;
+    iput p2, p0, Lfu1;->a:I
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lfu1;->b:Liu1;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final invoke()Ljava/lang/Object;
+    .locals 5
 
-    iput-object p1, p0, Lfu1;->d:Ljava/lang/Object;
+    iget v0, p0, Lfu1;->a:I
 
-    iget p1, p0, Lfu1;->X:I
+    iget-object v1, p0, Lfu1;->b:Liu1;
 
-    const/high16 v0, -0x80000000
+    packed-switch v0, :pswitch_data_0
 
-    or-int/2addr p1, v0
+    iget-object v0, v1, Liu1;->F0:Lhu1;
 
-    iput p1, p0, Lfu1;->X:I
+    if-eqz v0, :cond_1
 
-    iget-object p1, p0, Lfu1;->o:Lgu1;
+    check-cast v0, Li5;
 
-    const-wide/16 v0, 0x0
+    iget-object v0, v0, Li5;->b:Ljava/lang/Object;
 
-    invoke-virtual {p1, v0, v1, p0}, Lgu1;->e(JLo84;)Ljava/lang/Object;
+    check-cast v0, Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;
 
-    move-result-object p1
+    sget-object v1, Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;->d:[Lv58;
 
-    return-object p1
+    invoke-virtual {v0}, Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;->I0()Llu1;
+
+    move-result-object v0
+
+    iget-object v0, v0, Llu1;->c:Lsy1;
+
+    iget-object v0, v0, Lsy1;->i:Lpje;
+
+    check-cast v0, Lzje;
+
+    iget-object v0, v0, Lzje;->t0:Lhxf;
+
+    :cond_0
+    invoke-virtual {v0}, Lhxf;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    move-object v2, v1
+
+    check-cast v2, Lake;
+
+    const/16 v3, 0xb
+
+    const/4 v4, 0x0
+
+    invoke-static {v2, v4, v4, v4, v3}, Lake;->a(Lake;Lbke;Loje;Ljava/lang/String;I)Lake;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Lhxf;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    :cond_1
+    sget-object v0, Lmah;->a:Lmah;
+
+    return-object v0
+
+    :pswitch_0
+    sget-object v0, Lfe3;->t0:Ltea;
+
+    invoke-virtual {v0, v1}, Ltea;->r(Landroid/view/View;)Loob;
+
+    move-result-object v0
+
+    iget-object v0, v0, Loob;->b:Llob;
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

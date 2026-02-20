@@ -1,350 +1,157 @@
-.class public final Lrqb;
-.super Landroid/view/OrientationEventListener;
+.class public final enum Lrqb;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic d:I
+.field public static final enum X:Lrqb;
 
+.field public static final enum Y:Lrqb;
 
-# instance fields
-.field public final a:Landroid/content/Context;
+.field public static final enum Z:Lrqb;
 
-.field public final b:Lkp8;
+.field public static final enum a:Lrqb;
 
-.field public c:I
+.field public static final enum b:Lrqb;
+
+.field public static final enum c:Lrqb;
+
+.field public static final enum d:Lrqb;
+
+.field public static final enum o:Lrqb;
+
+.field public static final enum s0:Lrqb;
+
+.field public static final synthetic t0:[Lrqb;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lkp8;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 11
 
-    const/4 v0, 0x3
+    new-instance v0, Lrqb;
 
-    invoke-direct {p0, p1, v0}, Landroid/view/OrientationEventListener;-><init>(Landroid/content/Context;I)V
-
-    iput-object p1, p0, Lrqb;->a:Landroid/content/Context;
-
-    iput-object p2, p0, Lrqb;->b:Lkp8;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a()Z
-    .locals 3
-
-    iget-object v0, p0, Lrqb;->a:Landroid/content/Context;
-
-    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v0
-
-    const-string v1, "accelerometer_rotation"
+    const-string v1, "UNKNOWN"
 
     const/4 v2, 0x0
 
-    invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    move-result v0
+    sput-object v0, Lrqb;->a:Lrqb;
 
-    const/4 v1, 0x1
+    new-instance v1, Lrqb;
 
-    if-ne v0, v1, :cond_0
+    const-string v2, "MEDIA"
 
-    move v2, v1
+    const/4 v3, 0x1
 
-    :cond_0
-    xor-int/lit8 v0, v2, 0x1
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    return v0
-.end method
+    sput-object v1, Lrqb;->b:Lrqb;
 
-.method public final onOrientationChanged(I)V
-    .locals 10
+    new-instance v2, Lrqb;
 
-    const/4 v0, -0x1
-
-    if-ne p1, v0, :cond_0
-
-    goto/16 :goto_8
-
-    :cond_0
-    iget-object v0, p0, Lrqb;->a:Landroid/content/Context;
-
-    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/content/res/Configuration;->orientation:I
-
-    const-string v2, "window"
-
-    invoke-virtual {v0, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/view/WindowManager;
-
-    invoke-interface {v2}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/view/Display;->getRotation()I
-
-    move-result v2
-
-    const/4 v3, 0x3
+    const-string v3, "MEDIA_INITIALIZATION"
 
     const/4 v4, 0x2
 
-    const/4 v5, 0x1
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    if-eqz v2, :cond_1
+    sput-object v2, Lrqb;->c:Lrqb;
 
-    if-ne v2, v4, :cond_2
+    new-instance v3, Lrqb;
 
-    :cond_1
-    if-eq v1, v4, :cond_5
+    const-string v4, "DRM"
 
-    :cond_2
-    if-eq v2, v5, :cond_3
+    const/4 v5, 0x3
 
-    if-ne v2, v3, :cond_4
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    :cond_3
-    if-ne v1, v5, :cond_4
+    sput-object v3, Lrqb;->d:Lrqb;
 
-    goto :goto_0
+    new-instance v4, Lrqb;
 
-    :cond_4
-    move v1, v5
-
-    goto :goto_1
-
-    :cond_5
-    :goto_0
-    move v1, v4
-
-    :goto_1
-    const/16 v2, 0x12c
+    const-string v5, "MANIFEST"
 
     const/4 v6, 0x4
 
-    const/16 v7, 0x3c
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    const/16 v8, 0xdc
+    sput-object v4, Lrqb;->o:Lrqb;
 
-    const/16 v9, 0x8c
+    new-instance v5, Lrqb;
 
-    if-ne v1, v5, :cond_a
+    const-string v6, "TIME_SYNCHRONIZATION"
 
-    if-lt p1, v7, :cond_6
+    const/4 v7, 0x5
 
-    if-gt p1, v9, :cond_6
+    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    :goto_2
-    move p1, v5
+    sput-object v5, Lrqb;->X:Lrqb;
 
-    goto :goto_5
+    new-instance v6, Lrqb;
 
-    :cond_6
-    if-lt p1, v9, :cond_7
+    const-string v7, "AD"
 
-    if-gt p1, v8, :cond_7
+    const/4 v8, 0x6
 
-    :goto_3
-    move p1, v6
+    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    goto :goto_5
+    sput-object v6, Lrqb;->Y:Lrqb;
 
-    :cond_7
-    if-lt p1, v8, :cond_9
+    new-instance v7, Lrqb;
 
-    if-gt p1, v2, :cond_9
+    const-string v8, "MEDIA_PROGRESSIVE_LIVE"
 
-    :cond_8
-    move p1, v4
+    const/4 v9, 0x7
 
-    goto :goto_5
+    invoke-direct {v7, v8, v9}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    :cond_9
-    :goto_4
-    move p1, v3
+    sput-object v7, Lrqb;->Z:Lrqb;
 
-    goto :goto_5
+    new-instance v8, Lrqb;
 
-    :cond_a
-    if-lt p1, v7, :cond_b
+    const-string v9, "UNRESOLVED"
 
-    if-gt p1, v9, :cond_b
+    const/16 v10, 0x8
 
-    goto :goto_4
+    invoke-direct {v8, v9, v10}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    :cond_b
-    if-lt p1, v9, :cond_c
+    sput-object v8, Lrqb;->s0:Lrqb;
 
-    if-gt p1, v8, :cond_c
-
-    goto :goto_2
-
-    :cond_c
-    if-lt p1, v8, :cond_8
-
-    if-gt p1, v2, :cond_8
-
-    goto :goto_3
-
-    :goto_5
-    invoke-virtual {p0}, Lrqb;->a()Z
-
-    move-result v1
-
-    iget-object v2, p0, Lrqb;->b:Lkp8;
-
-    if-eqz v1, :cond_13
-
-    iget v1, p0, Lrqb;->c:I
-
-    if-eqz v1, :cond_d
-
-    if-eq p1, v1, :cond_d
-
-    goto/16 :goto_8
-
-    :cond_d
-    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    filled-new-array/range {v0 .. v8}, [Lrqb;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/content/res/Configuration;->orientation:I
-
-    if-eqz v0, :cond_11
-
-    if-eq v0, v5, :cond_10
-
-    if-eq v0, v4, :cond_e
-
-    const/4 v3, 0x0
-
-    goto :goto_6
-
-    :cond_e
-    sget-object v0, Lqqb;->$EnumSwitchMapping$0:[I
-
-    invoke-static {p1}, Lt02;->t(I)I
-
-    move-result p1
-
-    aget p1, v0, p1
-
-    if-ne p1, v5, :cond_f
-
-    move v3, v5
-
-    goto :goto_6
-
-    :cond_f
-    move v3, v4
-
-    goto :goto_6
-
-    :cond_10
-    sget-object v0, Lqqb;->$EnumSwitchMapping$0:[I
-
-    invoke-static {p1}, Lt02;->t(I)I
-
-    move-result p1
-
-    aget p1, v0, p1
-
-    if-ne p1, v4, :cond_12
-
-    move v3, v6
-
-    goto :goto_6
-
-    :cond_11
-    move v3, p1
-
-    :cond_12
-    :goto_6
-    iput v3, p0, Lrqb;->c:I
-
-    if-eqz v2, :cond_18
-
-    invoke-virtual {p0}, Lrqb;->a()Z
-
-    move-result p1
-
-    invoke-virtual {v2, v3, p1}, Lkp8;->r(IZ)V
+    sput-object v0, Lrqb;->t0:[Lrqb;
 
     return-void
+.end method
 
-    :cond_13
-    iget v1, p0, Lrqb;->c:I
+.method public static valueOf(Ljava/lang/String;)Lrqb;
+    .locals 1
 
-    if-eqz v1, :cond_17
+    const-class v0, Lrqb;
 
-    if-eq p1, v1, :cond_14
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    goto :goto_7
+    move-result-object p0
 
-    :cond_14
-    if-ne p1, v1, :cond_15
+    check-cast p0, Lrqb;
 
-    goto :goto_8
+    return-object p0
+.end method
 
-    :cond_15
-    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+.method public static values()[Lrqb;
+    .locals 1
+
+    sget-object v0, Lrqb;->t0:[Lrqb;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    check-cast v0, [Lrqb;
 
-    move-result-object v0
-
-    iget v0, v0, Landroid/content/res/Configuration;->orientation:I
-
-    if-ne v0, v4, :cond_16
-
-    if-eq p1, v3, :cond_18
-
-    if-ne p1, v6, :cond_16
-
-    goto :goto_8
-
-    :cond_16
-    if-ne v0, v5, :cond_17
-
-    if-eq p1, v4, :cond_18
-
-    if-ne p1, v5, :cond_17
-
-    goto :goto_8
-
-    :cond_17
-    :goto_7
-    iput p1, p0, Lrqb;->c:I
-
-    if-eqz v2, :cond_18
-
-    invoke-virtual {p0}, Lrqb;->a()Z
-
-    move-result v0
-
-    invoke-virtual {v2, p1, v0}, Lkp8;->r(IZ)V
-
-    :cond_18
-    :goto_8
-    return-void
+    return-object v0
 .end method

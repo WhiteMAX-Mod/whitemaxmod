@@ -2,191 +2,79 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lb4b;
 
-# instance fields
-.field public final a:Z
 
-.field public final b:Z
+# static fields
+.field public static final a:Lkka;
 
-.field public final c:Z
+.field public static final b:Lkotlinx/coroutines/internal/ContextScope;
 
-.field public final d:Z
+.field public static final c:Lzef;
+
+.field public static final d:Llrd;
 
 
 # direct methods
-.method public constructor <init>(ZZZZ)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-boolean p1, p0, Lkka;->a:Z
-
-    iput-boolean p2, p0, Lkka;->b:Z
-
-    iput-boolean p3, p0, Lkka;->c:Z
-
-    iput-boolean p4, p0, Lkka;->d:Z
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lkka;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lkka;
-
-    iget-boolean v1, p0, Lkka;->a:Z
-
-    iget-boolean v3, p1, Lkka;->a:Z
-
-    if-eq v1, v3, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-boolean v1, p0, Lkka;->b:Z
-
-    iget-boolean v3, p1, Lkka;->b:Z
-
-    if-eq v1, v3, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-boolean v1, p0, Lkka;->c:Z
-
-    iget-boolean v3, p1, Lkka;->c:Z
-
-    if-eq v1, v3, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-boolean v1, p0, Lkka;->d:Z
-
-    iget-boolean p1, p1, Lkka;->d:Z
-
-    if-eq v1, p1, :cond_5
-
-    return v2
-
-    :cond_5
-    return v0
-.end method
-
-.method public final hashCode()I
+.method static constructor <clinit>()V
     .locals 3
 
-    const/4 v0, 0x1
+    new-instance v0, Lkka;
 
-    iget-boolean v1, p0, Lkka;->a:Z
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz v1, :cond_0
+    sput-object v0, Lkka;->a:Lkka;
 
-    move v1, v0
+    sget-object v0, Lone/me/android/di/ConcurrentComponent;->INSTANCE:Lone/me/android/di/ConcurrentComponent;
 
-    :cond_0
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-boolean v2, p0, Lkka;->b:Z
-
-    if-eqz v2, :cond_1
-
-    move v2, v0
-
-    :cond_1
-    add-int/2addr v1, v2
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-boolean v2, p0, Lkka;->c:Z
-
-    if-eqz v2, :cond_2
-
-    move v2, v0
-
-    :cond_2
-    add-int/2addr v1, v2
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-boolean v2, p0, Lkka;->d:Z
-
-    if-eqz v2, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    move v0, v2
-
-    :goto_0
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "NetworkState(isConnected="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-boolean v1, p0, Lkka;->a:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isValidated="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lkka;->b:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isMetered="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lkka;->c:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isNotRoaming="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lkka;->d:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x29
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Lone/me/android/di/ConcurrentComponent;->getDispatchers()Lbjg;
 
     move-result-object v0
 
-    return-object v0
+    check-cast v0, Lcbb;
+
+    invoke-virtual {v0}, Lcbb;->a()Lgd4;
+
+    move-result-object v0
+
+    const-string v1, "mytracker"
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v2, v1}, Lgd4;->limitedParallelism(ILjava/lang/String;)Lgd4;
+
+    move-result-object v0
+
+    invoke-static {}, Lv9;->a()Lwy7;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lo0;->plus(Led4;)Led4;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lztj;->a(Led4;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object v0
+
+    sput-object v0, Lkka;->b:Lkotlinx/coroutines/internal/ContextScope;
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x2
+
+    invoke-static {v2, v0, v1}, Laff;->b(III)Lzef;
+
+    move-result-object v0
+
+    sput-object v0, Lkka;->c:Lzef;
+
+    new-instance v1, Llrd;
+
+    invoke-direct {v1, v0}, Llrd;-><init>(Leia;)V
+
+    sput-object v1, Lkka;->d:Llrd;
+
+    return-void
 .end method

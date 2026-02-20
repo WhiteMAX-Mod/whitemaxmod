@@ -4,90 +4,124 @@
 
 
 # static fields
-.field public static final a:J
+.field public static final a:I
 
-.field public static final b:J
+.field public static final b:I
 
-.field public static final c:J
+.field public static final c:I
 
-.field public static final d:J
+.field public static final d:I
 
-.field public static final e:J
+.field public static final e:I
 
-.field public static final f:J
+.field public static final f:I
 
-.field public static final g:J
+.field public static final g:I
 
-.field public static final h:J
+.field public static final h:I
 
-.field public static final i:J
+.field public static final i:I
 
-.field public static final j:J
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
+
+.field public static final q:I
+
+.field public static final r:I
+
+.field public static final s:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 1
 
-    sget v0, Lg9d;->profile_edit_admin_move_rights:I
+    sget v0, Lled;->photo_editor_arrow_tool_id:I
 
-    int-to-long v0, v0
+    sput v0, Lnfb;->a:I
 
-    sput-wide v0, Lnfb;->a:J
+    sget v0, Lled;->photo_editor_brush_width_id:I
 
-    sget v0, Lg9d;->profile_edit_admin_permissions_change_chat_info:I
+    sput v0, Lnfb;->b:I
 
-    int-to-long v0, v0
+    sget v0, Lled;->photo_editor_clear_cancel_id:I
 
-    sput-wide v0, Lnfb;->b:J
+    sput v0, Lnfb;->c:I
 
-    sget v0, Lg9d;->profile_edit_admin_permissions_control_admin:I
+    sget v0, Lled;->photo_editor_clear_confirm_id:I
 
-    int-to-long v0, v0
+    sput v0, Lnfb;->d:I
 
-    sput-wide v0, Lnfb;->c:J
+    sget v0, Lled;->photo_editor_clear_id:I
 
-    sget v0, Lg9d;->profile_edit_admin_permissions_delete_messages:I
+    sput v0, Lnfb;->e:I
 
-    int-to-long v0, v0
+    sget v0, Lled;->photo_editor_close_id:I
 
-    sput-wide v0, Lnfb;->d:J
+    sput v0, Lnfb;->f:I
 
-    sget v0, Lg9d;->profile_edit_admin_permissions_edit_chat_link:I
+    sget v0, Lled;->photo_editor_color_selector_id:I
 
-    int-to-long v0, v0
+    sput v0, Lnfb;->g:I
 
-    sput-wide v0, Lnfb;->e:J
+    sget v0, Lled;->photo_editor_color_tool_id:I
 
-    sget v0, Lg9d;->profile_edit_admin_permissions_edit_chat_members:I
+    sput v0, Lnfb;->h:I
 
-    int-to-long v0, v0
+    sget v0, Lled;->photo_editor_done_id:I
 
-    sput-wide v0, Lnfb;->f:J
+    sput v0, Lnfb;->i:I
 
-    sget v0, Lg9d;->profile_edit_admin_permissions_edit_messages:I
+    sget v0, Lled;->photo_editor_exit_cancel_id:I
 
-    int-to-long v0, v0
+    sput v0, Lnfb;->j:I
 
-    sput-wide v0, Lnfb;->g:J
+    sget v0, Lled;->photo_editor_exit_confirm_id:I
 
-    sget v0, Lg9d;->profile_edit_admin_permissions_pin_messages:I
+    sput v0, Lnfb;->k:I
 
-    int-to-long v0, v0
+    sget v0, Lled;->photo_editor_line_tool_id:I
 
-    sput-wide v0, Lnfb;->h:J
+    sput v0, Lnfb;->l:I
 
-    sget v0, Lg9d;->profile_edit_admin_permissions_send_messages:I
+    sget v0, Lled;->photo_editor_root_id:I
 
-    int-to-long v0, v0
+    sput v0, Lnfb;->m:I
 
-    sput-wide v0, Lnfb;->i:J
+    sget v0, Lled;->photo_editor_surface_id:I
 
-    sget v0, Lg9d;->profile_edit_admin_view_stats:I
+    sput v0, Lnfb;->n:I
 
-    int-to-long v0, v0
+    sget v0, Lled;->photo_editor_toolbar_id:I
 
-    sput-wide v0, Lnfb;->j:J
+    sput v0, Lnfb;->o:I
+
+    sget v0, Lled;->photo_editor_tools_id:I
+
+    sput v0, Lnfb;->p:I
+
+    sget v0, Lled;->photo_editor_undo_id:I
+
+    sput v0, Lnfb;->q:I
+
+    sget v0, Lled;->photo_editor_width_preview_id:I
+
+    sput v0, Lnfb;->r:I
+
+    sget v0, Lled;->photo_editor_width_selector_id:I
+
+    sput v0, Lnfb;->s:I
 
     return-void
 .end method

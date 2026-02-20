@@ -1,55 +1,33 @@
 .class public final Lzd4;
-.super Lo84;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:Lhxf;
 
-.field public final synthetic Y:Lhe4;
-
-.field public Z:I
-
-.field public d:Lgj2;
-
-.field public o:Lg1e;
+.field public final b:Lmrd;
 
 
 # direct methods
-.method public constructor <init>(Lhe4;Lo84;)V
-    .locals 0
-
-    iput-object p1, p0, Lzd4;->Y:Lhe4;
-
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public constructor <init>()V
     .locals 2
 
-    iput-object p1, p0, Lzd4;->X:Ljava/lang/Object;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget p1, p0, Lzd4;->Z:I
+    sget-object v0, Lsi5;->a:Lsi5;
 
-    const/high16 v0, -0x80000000
+    invoke-static {v0}, Lixf;->a(Ljava/lang/Object;)Lhxf;
 
-    or-int/2addr p1, v0
+    move-result-object v0
 
-    iput p1, p0, Lzd4;->Z:I
+    iput-object v0, p0, Lzd4;->a:Lhxf;
 
-    const/4 p1, 0x0
+    new-instance v1, Lmrd;
 
-    const/4 v0, 0x0
+    invoke-direct {v1, v0}, Lmrd;-><init>(Lgia;)V
 
-    iget-object v1, p0, Lzd4;->Y:Lhe4;
+    iput-object v1, p0, Lzd4;->b:Lmrd;
 
-    invoke-static {v1, p1, v0, p0}, Lhe4;->a(Lhe4;ILgj2;Lo84;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

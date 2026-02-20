@@ -1,86 +1,177 @@
 .class public final Lq13;
-.super Lie0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:J
+.field public final A:Lw5a;
+
+.field public final B:Ln7b;
+
+.field public final C:Lj88;
+
+.field public final D:Lji8;
+
+.field public final E:Landroid/content/Context;
+
+.field public final F:Lj88;
+
+.field public final a:Lj88;
+
+.field public final b:Lj88;
+
+.field public final c:Lj88;
+
+.field public final d:Lj88;
+
+.field public final e:Lj88;
+
+.field public final f:Lj88;
+
+.field public final g:Lj88;
+
+.field public final h:Lj88;
+
+.field public final i:Lj88;
+
+.field public final j:Lxw3;
+
+.field public final k:Lo98;
+
+.field public final l:Lj88;
+
+.field public final m:Lj88;
+
+.field public final n:Lj88;
+
+.field public final o:Lj88;
+
+.field public final p:Lj88;
+
+.field public final q:Lj88;
+
+.field public final r:Lj88;
+
+.field public final s:Lj88;
+
+.field public final t:Lqy0;
+
+.field public final u:Lz36;
+
+.field public final v:Lc84;
+
+.field public final w:Loe5;
+
+.field public final x:Ln5e;
+
+.field public final y:Lxf3;
+
+.field public final z:Lx85;
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 1
+.method public constructor <init>(Lj88;Lj88;Lj88;Lj88;Lj88;Lj88;Lj88;Lj88;Lj88;Lxw3;Lo98;Lj88;Lj88;Lj88;Lj88;Lj88;Lj88;Lj88;Lj88;Lqy0;Lz36;Lc84;Loe5;Ln5e;Lxf3;Lx85;Lw5a;Ln7b;Lj88;Lji8;Landroid/content/Context;Lj88;)V
+    .locals 0
 
-    const/4 v0, 0x5
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, v0}, Lie0;-><init>(I)V
+    iput-object p1, p0, Lq13;->a:Lj88;
 
-    iput-wide p1, p0, Lq13;->b:J
+    iput-object p2, p0, Lq13;->b:Lj88;
+
+    iput-object p3, p0, Lq13;->c:Lj88;
+
+    iput-object p4, p0, Lq13;->d:Lj88;
+
+    iput-object p5, p0, Lq13;->e:Lj88;
+
+    iput-object p6, p0, Lq13;->f:Lj88;
+
+    iput-object p7, p0, Lq13;->g:Lj88;
+
+    iput-object p8, p0, Lq13;->h:Lj88;
+
+    iput-object p9, p0, Lq13;->i:Lj88;
+
+    iput-object p10, p0, Lq13;->j:Lxw3;
+
+    iput-object p11, p0, Lq13;->k:Lo98;
+
+    iput-object p12, p0, Lq13;->l:Lj88;
+
+    iput-object p13, p0, Lq13;->m:Lj88;
+
+    iput-object p14, p0, Lq13;->n:Lj88;
+
+    iput-object p15, p0, Lq13;->o:Lj88;
+
+    move-object/from16 p1, p16
+
+    iput-object p1, p0, Lq13;->p:Lj88;
+
+    move-object/from16 p1, p17
+
+    iput-object p1, p0, Lq13;->q:Lj88;
+
+    move-object/from16 p1, p18
+
+    iput-object p1, p0, Lq13;->r:Lj88;
+
+    move-object/from16 p1, p19
+
+    iput-object p1, p0, Lq13;->s:Lj88;
+
+    move-object/from16 p1, p20
+
+    iput-object p1, p0, Lq13;->t:Lqy0;
+
+    move-object/from16 p1, p21
+
+    iput-object p1, p0, Lq13;->u:Lz36;
+
+    move-object/from16 p1, p22
+
+    iput-object p1, p0, Lq13;->v:Lc84;
+
+    move-object/from16 p1, p23
+
+    iput-object p1, p0, Lq13;->w:Loe5;
+
+    move-object/from16 p1, p24
+
+    iput-object p1, p0, Lq13;->x:Ln5e;
+
+    move-object/from16 p1, p25
+
+    iput-object p1, p0, Lq13;->y:Lxf3;
+
+    move-object/from16 p1, p26
+
+    iput-object p1, p0, Lq13;->z:Lx85;
+
+    move-object/from16 p1, p27
+
+    iput-object p1, p0, Lq13;->A:Lw5a;
+
+    move-object/from16 p1, p28
+
+    iput-object p1, p0, Lq13;->B:Ln7b;
+
+    move-object/from16 p1, p29
+
+    iput-object p1, p0, Lq13;->C:Lj88;
+
+    move-object/from16 p1, p30
+
+    iput-object p1, p0, Lq13;->D:Lji8;
+
+    move-object/from16 p1, p31
+
+    iput-object p1, p0, Lq13;->E:Landroid/content/Context;
+
+    move-object/from16 p1, p32
+
+    iput-object p1, p0, Lq13;->F:Lj88;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lq13;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lq13;
-
-    iget-wide v3, p0, Lq13;->b:J
-
-    iget-wide v5, p1, Lq13;->b:J
-
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Lq13;->b:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    const-string v0, "OpenChangeChannelTypeAndUpdateBackstack(chatId="
-
-    const-string v1, ")"
-
-    iget-wide v2, p0, Lq13;->b:J
-
-    invoke-static {v2, v3, v0, v1}, Lcbh;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

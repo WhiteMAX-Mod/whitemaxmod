@@ -1,141 +1,133 @@
-.class public final Lhvg;
-.super Lp6g;
+.class public final enum Lhvg;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Lbr6;
+
+# static fields
+.field public static final enum X:Lhvg;
+
+.field public static final synthetic Y:[Lhvg;
+
+.field public static final enum b:Lhvg;
+
+.field public static final enum c:Lhvg;
+
+.field public static final enum d:Lhvg;
+
+.field public static final enum o:Lhvg;
 
 
 # instance fields
-.field public final synthetic X:Lnvg;
-
-.field public final synthetic Y:Llq6;
-
-.field public o:I
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lnvg;Llq6;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 8
 
-    iput-object p1, p0, Lhvg;->X:Lnvg;
+    new-instance v0, Lhvg;
 
-    iput-object p2, p0, Lhvg;->Y:Llq6;
+    const/4 v1, 0x0
 
-    const/4 p1, 0x2
+    const-string v2, "TLSv1.3"
 
-    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    const-string v3, "TLS_1_3"
+
+    invoke-direct {v0, v3, v1, v2}, Lhvg;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lhvg;->b:Lhvg;
+
+    new-instance v1, Lhvg;
+
+    const/4 v2, 0x1
+
+    const-string v3, "TLSv1.2"
+
+    const-string v4, "TLS_1_2"
+
+    invoke-direct {v1, v4, v2, v3}, Lhvg;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v1, Lhvg;->c:Lhvg;
+
+    new-instance v2, Lhvg;
+
+    const/4 v3, 0x2
+
+    const-string v4, "TLSv1.1"
+
+    const-string v5, "TLS_1_1"
+
+    invoke-direct {v2, v5, v3, v4}, Lhvg;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v2, Lhvg;->d:Lhvg;
+
+    new-instance v3, Lhvg;
+
+    const/4 v4, 0x3
+
+    const-string v5, "TLSv1"
+
+    const-string v6, "TLS_1_0"
+
+    invoke-direct {v3, v6, v4, v5}, Lhvg;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v3, Lhvg;->o:Lhvg;
+
+    new-instance v4, Lhvg;
+
+    const/4 v5, 0x4
+
+    const-string v6, "SSLv3"
+
+    const-string v7, "SSL_3_0"
+
+    invoke-direct {v4, v7, v5, v6}, Lhvg;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v4, Lhvg;->X:Lhvg;
+
+    filled-new-array {v0, v1, v2, v3, v4}, [Lhvg;
+
+    move-result-object v0
+
+    sput-object v0, Lhvg;->Y:[Lhvg;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
     .locals 0
 
-    check-cast p1, Lzb4;
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iput-object p3, p0, Lhvg;->a:Ljava/lang/String;
 
-    invoke-virtual {p0, p1, p2}, Lhvg;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lhvg;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lhvg;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public static valueOf(Ljava/lang/String;)Lhvg;
+    .locals 1
 
-    new-instance p1, Lhvg;
+    const-class v0, Lhvg;
 
-    iget-object v0, p0, Lhvg;->X:Lnvg;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    iget-object v1, p0, Lhvg;->Y:Llq6;
+    move-result-object p0
 
-    invoke-direct {p1, v0, v1, p2}, Lhvg;-><init>(Lnvg;Llq6;Lkotlin/coroutines/Continuation;)V
+    check-cast p0, Lhvg;
 
-    return-object p1
+    return-object p0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public static values()[Lhvg;
+    .locals 1
 
-    iget v0, p0, Lhvg;->o:I
+    sget-object v0, Lhvg;->Y:[Lhvg;
 
-    iget-object v1, p0, Lhvg;->Y:Llq6;
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    const/4 v2, 0x1
+    move-result-object v0
 
-    if-eqz v0, :cond_1
-
-    if-ne v0, v2, :cond_0
-
-    :try_start_0
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    :try_start_1
-    iget-object p1, p0, Lhvg;->X:Lnvg;
-
-    iput v2, p0, Lhvg;->o:I
-
-    invoke-static {p1, p0}, Lnvg;->b(Lnvg;Lo84;)Ljava/lang/Object;
-
-    move-result-object p1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    sget-object v0, Lac4;->a:Lac4;
-
-    if-ne p1, v0, :cond_2
+    check-cast v0, [Lhvg;
 
     return-object v0
-
-    :cond_2
-    :goto_0
-    :try_start_2
-    check-cast p1, Ljava/util/Set;
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    invoke-interface {v1}, Llq6;->invoke()Ljava/lang/Object;
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
-
-    :goto_1
-    invoke-interface {v1}, Llq6;->invoke()Ljava/lang/Object;
-
-    throw p1
 .end method

@@ -1,23 +1,43 @@
 .class public final Lbue;
-.super Lj2;
+.super Landroidx/recyclerview/widget/RecyclerView;
 .source "SourceFile"
 
 
 # virtual methods
-.method public final S()S
-    .locals 1
+.method public final onMeasure(II)V
+    .locals 3
 
-    sget-object v0, Lwob;->c:Lvqj;
+    invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
-    const/4 v0, 0x6
+    move-result v0
 
-    return v0
-.end method
+    const/16 v1, 0x96
 
-.method public final g0()Z
-    .locals 1
+    int-to-float v1, v1
 
-    const/4 v0, 0x0
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
 
-    return v0
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v2
+
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+
+    invoke-static {v1, v2, v0}, Lj64;->p(FFI)I
+
+    move-result v0
+
+    invoke-static {p2}, Landroid/view/View$MeasureSpec;->getMode(I)I
+
+    move-result p2
+
+    invoke-static {v0, p2}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
+
+    move-result p2
+
+    invoke-super {p0, p1, p2}, Landroidx/recyclerview/widget/RecyclerView;->onMeasure(II)V
+
+    return-void
 .end method

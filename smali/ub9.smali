@@ -4,109 +4,113 @@
 
 
 # instance fields
-.field public a:Lzb9;
+.field public final a:Lmb9;
+
+.field public final b:Ljava/util/ArrayList;
+
+.field public final c:La1e;
+
+.field public d:Lnb9;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;II)V
-    .locals 2
+.method public constructor <init>(Lmb9;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz p1, :cond_2
+    new-instance v0, Ljava/util/ArrayList;
 
-    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    move-result v0
+    iput-object v0, p0, Lub9;->b:Ljava/util/ArrayList;
 
-    if-nez v0, :cond_1
+    iput-object p1, p0, Lub9;->a:Lmb9;
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    iget-object p1, p1, Lmb9;->b:La1e;
 
-    const/16 v1, 0x1c
-
-    if-lt v0, v1, :cond_0
-
-    new-instance v0, Lyb9;
-
-    invoke-direct {v0, p1, p2, p3}, Lzb9;-><init>(Ljava/lang/String;II)V
-
-    invoke-static {p2, p3, p1}, Lw4;->r(IILjava/lang/String;)V
-
-    iput-object v0, p0, Lub9;->a:Lzb9;
+    iput-object p1, p0, Lub9;->c:La1e;
 
     return-void
-
-    :cond_0
-    new-instance v0, Lzb9;
-
-    invoke-direct {v0, p1, p2, p3}, Lzb9;-><init>(Ljava/lang/String;II)V
-
-    iput-object v0, p0, Lub9;->a:Lzb9;
-
-    return-void
-
-    :cond_1
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string p2, "packageName should be nonempty"
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_2
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    const-string p2, "package shouldn\'t be null"
-
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final a(Ljava/lang/String;)Lvb9;
+    .locals 4
 
-    if-ne p0, p1, :cond_0
+    iget-object v0, p0, Lub9;->b:Ljava/util/ArrayList;
 
-    const/4 p1, 0x1
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
-    return p1
+    move-result v1
+
+    const/4 v2, 0x0
+
+    :goto_0
+    if-ge v2, v1, :cond_1
+
+    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lvb9;
+
+    iget-object v3, v3, Lvb9;->b:Ljava/lang/String;
+
+    invoke-virtual {v3, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lvb9;
+
+    return-object p1
 
     :cond_0
-    instance-of v0, p1, Lub9;
+    add-int/lit8 v2, v2, 0x1
 
-    if-nez v0, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
+    goto :goto_0
 
     :cond_1
-    iget-object v0, p0, Lub9;->a:Lzb9;
+    const/4 p1, 0x0
 
-    check-cast p1, Lub9;
-
-    iget-object p1, p1, Lub9;->a:Lzb9;
-
-    invoke-virtual {v0, p1}, Lzb9;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
+    return-object p1
 .end method
 
-.method public final hashCode()I
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    iget-object v0, p0, Lub9;->a:Lzb9;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Lzb9;->hashCode()I
+    const-string v1, "MediaRouter.RouteProviderInfo{ packageName="
 
-    move-result v0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    return v0
+    iget-object v1, p0, Lub9;->c:La1e;
+
+    iget-object v1, v1, La1e;->b:Ljava/lang/Object;
+
+    check-cast v1, Landroid/content/ComponentName;
+
+    invoke-virtual {v1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, " }"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

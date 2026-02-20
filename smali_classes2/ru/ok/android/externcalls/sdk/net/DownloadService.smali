@@ -23,10 +23,10 @@
         "dest",
         "Lru/ok/android/externcalls/sdk/net/FileValidationConfig;",
         "fileValidationConfig",
-        "Lkef;",
+        "Limf;",
         "Lru/ok/android/externcalls/sdk/net/internal/DownloadResult;",
         "download",
-        "(Ljava/lang/String;Ljava/io/File;Lru/ok/android/externcalls/sdk/net/FileValidationConfig;)Lkef;",
+        "(Ljava/lang/String;Ljava/io/File;Lru/ok/android/externcalls/sdk/net/FileValidationConfig;)Limf;",
         "Impl",
         "calls-sdk_release"
     }
@@ -41,7 +41,7 @@
 
 
 # direct methods
-.method public static synthetic download$default(Lru/ok/android/externcalls/sdk/net/DownloadService;Ljava/lang/String;Ljava/io/File;Lru/ok/android/externcalls/sdk/net/FileValidationConfig;ILjava/lang/Object;)Lkef;
+.method public static synthetic download$default(Lru/ok/android/externcalls/sdk/net/DownloadService;Ljava/lang/String;Ljava/io/File;Lru/ok/android/externcalls/sdk/net/FileValidationConfig;ILjava/lang/Object;)Limf;
     .locals 0
 
     if-nez p5, :cond_1
@@ -53,7 +53,7 @@
     const/4 p3, 0x0
 
     :cond_0
-    invoke-interface {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/net/DownloadService;->download(Ljava/lang/String;Ljava/io/File;Lru/ok/android/externcalls/sdk/net/FileValidationConfig;)Lkef;
+    invoke-interface {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/net/DownloadService;->download(Ljava/lang/String;Ljava/io/File;Lru/ok/android/externcalls/sdk/net/FileValidationConfig;)Limf;
 
     move-result-object p0
 
@@ -71,7 +71,7 @@
 
 
 # virtual methods
-.method public abstract download(Ljava/lang/String;Ljava/io/File;Lru/ok/android/externcalls/sdk/net/FileValidationConfig;)Lkef;
+.method public abstract download(Ljava/lang/String;Ljava/io/File;Lru/ok/android/externcalls/sdk/net/FileValidationConfig;)Limf;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -79,7 +79,7 @@
             "Ljava/io/File;",
             "Lru/ok/android/externcalls/sdk/net/FileValidationConfig;",
             ")",
-            "Lkef;"
+            "Limf;"
         }
     .end annotation
 .end method

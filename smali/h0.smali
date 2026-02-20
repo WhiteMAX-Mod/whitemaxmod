@@ -1,91 +1,87 @@
-.class public abstract Lh0;
+.class public final Lh0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements La38;
+.implements Lad4;
+
+
+# instance fields
+.field public final a:F
+
+
+# direct methods
+.method public constructor <init>(F)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Lh0;->a:F
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public b(Lkl4;)Ljava/lang/Object;
+.method public final a(Landroid/graphics/RectF;)F
     .locals 0
 
-    invoke-virtual {p0, p1}, Lh0;->i(Lkl4;)Ljava/lang/Object;
+    iget p1, p0, Lh0;->a:F
 
-    move-result-object p1
-
-    return-object p1
+    return p1
 .end method
 
-.method public abstract e()Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lh0;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lh0;
+
+    iget v1, p0, Lh0;->a:F
+
+    iget p1, p1, Lh0;->a:F
+
+    cmpl-float p1, v1, p1
+
+    if-nez p1, :cond_2
+
+    return v0
+
+    :cond_2
+    return v2
 .end method
 
-.method public abstract f(Ljava/lang/Object;)I
-.end method
+.method public final hashCode()I
+    .locals 1
 
-.method public abstract g(Ljava/lang/Object;)Ljava/util/Iterator;
-.end method
+    iget v0, p0, Lh0;->a:F
 
-.method public abstract h(Ljava/lang/Object;)I
-.end method
-
-.method public final i(Lkl4;)Ljava/lang/Object;
-    .locals 4
-
-    invoke-virtual {p0}, Lh0;->e()Ljava/lang/Object;
+    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lh0;->f(Ljava/lang/Object;)I
+    filled-new-array {v0}, [Ljava/lang/Object;
 
-    move-result v1
+    move-result-object v0
 
-    invoke-interface {p0}, La38;->d()Lxpe;
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
 
-    move-result-object v2
+    move-result v0
 
-    invoke-interface {p1, v2}, Lkl4;->r(Lxpe;)Lqp3;
-
-    move-result-object p1
-
-    :goto_0
-    invoke-interface {p0}, La38;->d()Lxpe;
-
-    move-result-object v2
-
-    invoke-interface {p1, v2}, Lqp3;->e(Lxpe;)I
-
-    move-result v2
-
-    const/4 v3, -0x1
-
-    if-eq v2, v3, :cond_0
-
-    add-int/2addr v2, v1
-
-    invoke-virtual {p0, p1, v2, v0}, Lh0;->j(Lqp3;ILjava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_0
-    invoke-interface {p0}, La38;->d()Lxpe;
-
-    move-result-object v1
-
-    invoke-interface {p1, v1}, Lqp3;->m(Lxpe;)V
-
-    invoke-virtual {p0, v0}, Lh0;->l(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public abstract j(Lqp3;ILjava/lang/Object;)V
-.end method
-
-.method public abstract k(Ljava/lang/Object;)Ljava/lang/Object;
-.end method
-
-.method public abstract l(Ljava/lang/Object;)Ljava/lang/Object;
+    return v0
 .end method

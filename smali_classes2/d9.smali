@@ -3,91 +3,60 @@
 .source "SourceFile"
 
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+# instance fields
+.field public final a:Lkyc;
 
-    const/4 v0, 0x1
+.field public final b:Ljava/lang/String;
 
-    if-ne p0, p1, :cond_0
 
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Ld9;
-
-    if-nez v1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    check-cast p1, Ld9;
-
-    sget v1, Lqfb;->a:I
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget p1, Lsfb;->a:I
-
-    return v0
-.end method
-
-.method public final hashCode()I
+# direct methods
+.method public constructor <init>(Lkyc;)V
     .locals 3
 
-    sget v0, Lqfb;->e:I
+    sget-object v0, Le9;->e:Ljava/util/List;
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    if-nez p1, :cond_0
 
-    move-result v0
+    const-string v0, "null"
 
-    const/16 v1, 0x1f
+    goto :goto_0
 
-    mul-int/2addr v0, v1
+    :cond_0
+    iget-object v0, p1, Lkyc;->b:Ljava/lang/Object;
 
-    sget v2, Lsfb;->V:I
+    check-cast v0, Ljava/lang/String;
 
-    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
+    sget-object v1, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
 
-    move-result v0
+    invoke-virtual {v0, v1}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
 
-    const/4 v1, 0x1
+    move-result-object v0
 
-    invoke-static {v1}, Lt02;->t(I)I
+    sget-object v1, Le9;->e:Ljava/util/List;
+
+    invoke-interface {v1, v0}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
     move-result v1
 
-    add-int/2addr v1, v0
+    if-eqz v1, :cond_1
 
-    return v1
-.end method
+    iget-object v1, p1, Lkyc;->a:Ljava/lang/Object;
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+    check-cast v1, Ljava/lang/String;
 
-    sget v0, Lqfb;->e:I
+    const-string v2, ":"
 
-    sget v1, Lsfb;->V:I
-
-    const-string v2, ", title="
-
-    const-string v3, ", type="
-
-    const-string v4, "AddAdminsTabState(id="
-
-    invoke-static {v4, v0, v2, v1, v3}, Lkz1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1, v2, v0}, Lj64;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    const-string v1, "CHAT_MEMBERS"
+    :cond_1
+    :goto_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v2, ")"
+    iput-object p1, p0, Ld9;->a:Lkyc;
 
-    invoke-static {v0, v1, v2}, Lj27;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    iput-object v0, p0, Ld9;->b:Ljava/lang/String;
 
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

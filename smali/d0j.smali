@@ -1,42 +1,122 @@
-.class public abstract Ld0j;
-.super Ljava/lang/Object;
+.class public final Ld0j;
+.super Lszi;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic a:I
+# instance fields
+.field public final transient c:Li0j;
+
+.field public final transient d:[Ljava/lang/Object;
+
+.field public final transient o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Li0j;[Ljava/lang/Object;I)V
+    .locals 0
 
-    const-class v0, Ld0j;
+    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
+    iput-object p1, p0, Ld0j;->c:Li0j;
+
+    iput-object p2, p0, Ld0j;->d:[Ljava/lang/Object;
+
+    iput p3, p0, Ld0j;->o:I
 
     return-void
 .end method
 
-.method public static a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
+
+# virtual methods
+.method public final a([Ljava/lang/Object;)I
     .locals 1
 
-    invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
-
-    move-result v0
+    iget-object v0, p0, Lszi;->b:Lhzi;
 
     if-nez v0, :cond_0
 
-    const/4 p0, 0x0
+    new-instance v0, Lb0j;
 
-    return-object p0
+    invoke-direct {v0, p0}, Lb0j;-><init>(Ld0j;)V
+
+    iput-object v0, p0, Lszi;->b:Lhzi;
 
     :cond_0
-    invoke-interface {p1, p0}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Lhzi;->a([Ljava/lang/Object;)I
 
-    move-result-object p0
+    move-result p1
 
-    check-cast p0, Landroid/os/Parcelable;
+    return p1
+.end method
 
-    return-object p0
+.method public final contains(Ljava/lang/Object;)Z
+    .locals 3
+
+    instance-of v0, p1, Ljava/util/Map$Entry;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    check-cast p1, Ljava/util/Map$Entry;
+
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    iget-object v2, p0, Ld0j;->c:Li0j;
+
+    invoke-virtual {v2, v0}, Li0j;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    return v1
+.end method
+
+.method public final iterator()Ljava/util/Iterator;
+    .locals 2
+
+    iget-object v0, p0, Lszi;->b:Lhzi;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Lb0j;
+
+    invoke-direct {v0, p0}, Lb0j;-><init>(Ld0j;)V
+
+    iput-object v0, p0, Lszi;->b:Lhzi;
+
+    :cond_0
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lhzi;->f(I)Lbzi;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final size()I
+    .locals 1
+
+    iget v0, p0, Ld0j;->o:I
+
+    return v0
 .end method

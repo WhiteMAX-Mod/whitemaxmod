@@ -11,20 +11,20 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/stat/warmup/ConversationPreparedStat;",
         "Lru/ok/android/externcalls/sdk/stat/internal/SingleShotStat;",
-        "Lxkg;",
+        "Losg;",
         "timeProvider",
         "Lkotlin/Function0;",
-        "Lia1;",
+        "Lva1;",
         "getEventualStatSender",
         "<init>",
-        "(Lxkg;Llq6;)V",
+        "(Losg;Lis6;)V",
         "callEventualStatSender",
-        "Lb3h;",
+        "Lmah;",
         "report",
-        "(Lia1;)V",
+        "(Lva1;)V",
         "onConversationPrepared",
         "()V",
-        "Lxkg;",
+        "Losg;",
         "",
         "startTimeMs",
         "J",
@@ -43,26 +43,26 @@
 # instance fields
 .field private final startTimeMs:J
 
-.field private final timeProvider:Lxkg;
+.field private final timeProvider:Losg;
 
 
 # direct methods
-.method public constructor <init>(Lxkg;Llq6;)V
+.method public constructor <init>(Losg;Lis6;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lxkg;",
-            "Llq6;",
+            "Losg;",
+            "Lis6;",
             ")V"
         }
     .end annotation
 
-    invoke-direct {p0, p2}, Lru/ok/android/externcalls/sdk/stat/internal/SingleShotStat;-><init>(Llq6;)V
+    invoke-direct {p0, p2}, Lru/ok/android/externcalls/sdk/stat/internal/SingleShotStat;-><init>(Lis6;)V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/stat/warmup/ConversationPreparedStat;->timeProvider:Lxkg;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/stat/warmup/ConversationPreparedStat;->timeProvider:Losg;
 
-    invoke-interface {p1}, Lxkg;->getMsSinceBoot()J
+    invoke-interface {p1}, Losg;->getMsSinceBoot()J
 
     move-result-wide p1
 
@@ -71,20 +71,20 @@
     return-void
 .end method
 
-.method public static final synthetic access$report(Lru/ok/android/externcalls/sdk/stat/warmup/ConversationPreparedStat;Lia1;)V
+.method public static final synthetic access$report(Lru/ok/android/externcalls/sdk/stat/warmup/ConversationPreparedStat;Lva1;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/stat/warmup/ConversationPreparedStat;->report(Lia1;)V
+    invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/stat/warmup/ConversationPreparedStat;->report(Lva1;)V
 
     return-void
 .end method
 
-.method private final report(Lia1;)V
+.method private final report(Lva1;)V
     .locals 4
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/stat/warmup/ConversationPreparedStat;->timeProvider:Lxkg;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/stat/warmup/ConversationPreparedStat;->timeProvider:Losg;
 
-    invoke-interface {v0}, Lxkg;->getMsSinceBoot()J
+    invoke-interface {v0}, Losg;->getMsSinceBoot()J
 
     move-result-wide v0
 
@@ -102,7 +102,7 @@
 
     const-string v3, "call_warmup"
 
-    invoke-static {p1, v3, v0, v1, v2}, Lia1;->a(Lia1;Ljava/lang/String;Lru/ok/android/externcalls/analytics/events/EventItemValue;Lru/ok/android/externcalls/analytics/events/EventItemsMap;I)V
+    invoke-static {p1, v3, v0, v1, v2}, Lva1;->a(Lva1;Ljava/lang/String;Lru/ok/android/externcalls/analytics/events/EventItemValue;Lru/ok/android/externcalls/analytics/events/EventItemsMap;I)V
 
     return-void
 .end method
@@ -116,7 +116,7 @@
 
     invoke-direct {v0, p0}, Lru/ok/android/externcalls/sdk/stat/warmup/ConversationPreparedStat$onConversationPrepared$1;-><init>(Ljava/lang/Object;)V
 
-    invoke-virtual {p0, v0}, Lru/ok/android/externcalls/sdk/stat/internal/SingleShotStat;->reportOnce(Lnq6;)V
+    invoke-virtual {p0, v0}, Lru/ok/android/externcalls/sdk/stat/internal/SingleShotStat;->reportOnce(Lks6;)V
 
     return-void
 .end method

@@ -1,266 +1,389 @@
-.class public final Llg6;
-.super Lzcf;
+.class public final enum Llg6;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
+# static fields
+.field public static final enum A0:Llg6;
+
+.field public static final enum B0:Llg6;
+
+.field public static final enum C0:Llg6;
+
+.field public static final synthetic D0:[Llg6;
+
+.field public static final synthetic E0:Lpm5;
+
+.field public static final X:Ljava/util/EnumMap;
+
+.field public static final enum Y:Llg6;
+
+.field public static final enum Z:Llg6;
+
+.field public static final b:Ljava/util/LinkedHashSet;
+
+.field public static final c:Ljava/util/LinkedHashSet;
+
+.field public static final d:Ljava/util/LinkedHashSet;
+
+.field public static final o:Ljava/util/LinkedHashSet;
+
+.field public static final enum s0:Llg6;
+
+.field public static final enum t0:Llg6;
+
+.field public static final enum u0:Llg6;
+
+.field public static final enum v0:Llg6;
+
+.field public static final enum w0:Llg6;
+
+.field public static final enum x0:Llg6;
+
+.field public static final enum y0:Llg6;
+
+.field public static final enum z0:Llg6;
+
+
 # instance fields
-.field public final X:Ltw0;
-
-.field public final Y:Ls3e;
-
-.field public final o:Lsy0;
+.field public final a:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/ExecutorService;Lsy0;Ltw0;Ls3e;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 16
 
-    invoke-direct {p0, p1}, Lzcf;-><init>(Ljava/util/concurrent/Executor;)V
+    new-instance v0, Llg6;
 
-    iput-object p2, p0, Llg6;->o:Lsy0;
+    const-string v1, "UNREAD"
 
-    iput-object p3, p0, Llg6;->X:Ltw0;
+    const/4 v14, 0x0
 
-    iput-object p4, p0, Llg6;->Y:Ls3e;
+    invoke-direct {v0, v1, v14, v14}, Llg6;-><init>(Ljava/lang/String;II)V
 
-    return-void
-.end method
+    sput-object v0, Llg6;->Y:Llg6;
 
+    new-instance v1, Llg6;
 
-# virtual methods
-.method public final bridge synthetic I(Ljef;I)V
-    .locals 0
-
-    check-cast p1, Lsah;
-
-    invoke-virtual {p0, p1, p2}, Llg6;->K(Lsah;I)V
-
-    return-void
-.end method
-
-.method public final K(Lsah;I)V
-    .locals 5
-
-    invoke-virtual {p0, p2}, Lnd8;->D(I)Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Lud8;
-
-    check-cast p2, Lpah;
-
-    iget-object v0, p1, Ltsd;->a:Landroid/view/View;
-
-    move-object v1, v0
-
-    check-cast v1, Lrah;
-
-    iget-object v2, p2, Lpah;->b:Loah;
-
-    invoke-virtual {v1, v2}, Lrah;->setType(Loah;)V
-
-    iget-object v2, p2, Lpah;->c:Lqhg;
-
-    invoke-virtual {v2, p1}, Lqhg;->a(Ljef;)Ljava/lang/CharSequence;
-
-    move-result-object v2
-
-    if-nez v2, :cond_0
-
-    const-string v2, ""
-
-    :cond_0
-    invoke-virtual {v1, v2}, Lrah;->setTitle(Ljava/lang/CharSequence;)V
-
-    iget-object v1, p0, Llg6;->Y:Ls3e;
-
-    iput-object v1, p1, Lsah;->F0:Ls3e;
-
-    iget-object v1, p2, Lpah;->b:Loah;
-
-    sget-object v2, Loah;->a:Loah;
-
-    if-ne v1, v2, :cond_1
-
-    move-object v2, v0
-
-    check-cast v2, Lrah;
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v2, v3}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    goto :goto_0
-
-    :cond_1
-    new-instance v2, Lcf6;
+    const-string v2, "READ"
 
     const/4 v3, 0x1
 
-    iget-object v4, p0, Llg6;->o:Lsy0;
+    invoke-direct {v1, v2, v3, v3}, Llg6;-><init>(Ljava/lang/String;II)V
 
-    invoke-direct {v2, v4, p2, v3}, Lcf6;-><init>(Lqr6;Lpah;I)V
+    new-instance v2, Llg6;
 
-    invoke-static {v0, v2}, Ljmj;->d(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+    const-string v3, "CHANNEL"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4, v4}, Llg6;-><init>(Ljava/lang/String;II)V
+
+    sput-object v2, Llg6;->Z:Llg6;
+
+    new-instance v3, Llg6;
+
+    const-string v4, "CHAT"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5, v5}, Llg6;-><init>(Ljava/lang/String;II)V
+
+    sput-object v3, Llg6;->s0:Llg6;
+
+    new-instance v4, Llg6;
+
+    const-string v5, "DIALOG"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v4, v5, v6, v6}, Llg6;-><init>(Ljava/lang/String;II)V
+
+    sput-object v4, Llg6;->t0:Llg6;
+
+    new-instance v5, Llg6;
+
+    const-string v6, "OWNER"
+
+    const/4 v15, 0x5
+
+    invoke-direct {v5, v6, v15, v15}, Llg6;-><init>(Ljava/lang/String;II)V
+
+    sput-object v5, Llg6;->u0:Llg6;
+
+    new-instance v6, Llg6;
+
+    const-string v7, "ADMIN"
+
+    const/4 v8, 0x6
+
+    invoke-direct {v6, v7, v8, v8}, Llg6;-><init>(Ljava/lang/String;II)V
+
+    sput-object v6, Llg6;->v0:Llg6;
+
+    new-instance v7, Llg6;
+
+    const-string v8, "MUTED"
+
+    const/4 v9, 0x7
+
+    invoke-direct {v7, v8, v9, v9}, Llg6;-><init>(Ljava/lang/String;II)V
+
+    sput-object v7, Llg6;->w0:Llg6;
+
+    new-instance v8, Llg6;
+
+    const-string v9, "CONTACT"
+
+    const/16 v10, 0x8
+
+    invoke-direct {v8, v9, v10, v10}, Llg6;-><init>(Ljava/lang/String;II)V
+
+    sput-object v8, Llg6;->x0:Llg6;
+
+    new-instance v9, Llg6;
+
+    const-string v10, "NOT_CONTACT"
+
+    const/16 v11, 0x9
+
+    invoke-direct {v9, v10, v11, v11}, Llg6;-><init>(Ljava/lang/String;II)V
+
+    sput-object v9, Llg6;->y0:Llg6;
+
+    new-instance v10, Llg6;
+
+    const-string v11, "BOT"
+
+    const/16 v12, 0xa
+
+    invoke-direct {v10, v11, v12, v12}, Llg6;-><init>(Ljava/lang/String;II)V
+
+    sput-object v10, Llg6;->z0:Llg6;
+
+    new-instance v11, Llg6;
+
+    const-string v12, "NOT_MUTED"
+
+    const/16 v13, 0xb
+
+    invoke-direct {v11, v12, v13, v13}, Llg6;-><init>(Ljava/lang/String;II)V
+
+    sput-object v11, Llg6;->A0:Llg6;
+
+    new-instance v12, Llg6;
+
+    const-string v13, "MARKED_UNREAD"
+
+    const/16 v14, 0xc
+
+    invoke-direct {v12, v13, v14, v14}, Llg6;-><init>(Ljava/lang/String;II)V
+
+    sput-object v12, Llg6;->B0:Llg6;
+
+    new-instance v13, Llg6;
+
+    const-string v14, "ORG"
+
+    const/16 v15, 0xd
+
+    invoke-direct {v13, v14, v15, v15}, Llg6;-><init>(Ljava/lang/String;II)V
+
+    sput-object v13, Llg6;->C0:Llg6;
+
+    filled-new-array/range {v0 .. v13}, [Llg6;
+
+    move-result-object v1
+
+    move-object v4, v8
+
+    move-object v8, v10
+
+    sput-object v1, Llg6;->D0:[Llg6;
+
+    new-instance v10, Lpm5;
+
+    invoke-direct {v10, v1}, Lpm5;-><init>([Ljava/lang/Enum;)V
+
+    sput-object v10, Llg6;->E0:Lpm5;
+
+    filled-new-array {v0, v7, v11, v12}, [Llg6;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lx2f;->c([Ljava/lang/Object;)Ljava/util/LinkedHashSet;
+
+    move-result-object v0
+
+    sput-object v0, Llg6;->b:Ljava/util/LinkedHashSet;
+
+    filled-new-array {v6, v5}, [Llg6;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lx2f;->c([Ljava/lang/Object;)Ljava/util/LinkedHashSet;
+
+    move-result-object v0
+
+    sput-object v0, Llg6;->c:Ljava/util/LinkedHashSet;
+
+    move-object v7, v2
+
+    move-object v6, v3
+
+    move-object v5, v9
+
+    move-object v9, v13
+
+    filled-new-array/range {v4 .. v9}, [Llg6;
+
+    move-result-object v0
+
+    move-object v9, v5
+
+    invoke-static {v0}, Lx2f;->c([Ljava/lang/Object;)Ljava/util/LinkedHashSet;
+
+    move-result-object v0
+
+    sput-object v0, Llg6;->d:Ljava/util/LinkedHashSet;
+
+    filled-new-array {v4, v9, v3, v2, v8}, [Llg6;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lx2f;->c([Ljava/lang/Object;)Ljava/util/LinkedHashSet;
+
+    move-result-object v0
+
+    sput-object v0, Llg6;->o:Ljava/util/LinkedHashSet;
+
+    const-class v0, Llg6;
+
+    invoke-static {v0}, Ljava/util/EnumSet;->noneOf(Ljava/lang/Class;)Ljava/util/EnumSet;
+
+    move-result-object v1
+
+    invoke-static {v1}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
+
+    const-wide v5, 0x7ffffffffffffc17L
+
+    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    new-instance v5, Lyvb;
+
+    invoke-direct {v5, v2, v1}, Lyvb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    const-wide v1, 0x7ffffffffffffc16L
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    new-instance v2, Lyvb;
+
+    invoke-direct {v2, v3, v1}, Lyvb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    const-wide v6, 0x7ffffffffffffc15L
+
+    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    new-instance v3, Lyvb;
+
+    invoke-direct {v3, v4, v1}, Lyvb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    const-wide v6, 0x7ffffffffffffc14L
+
+    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    new-instance v4, Lyvb;
+
+    invoke-direct {v4, v9, v1}, Lyvb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    const-wide v6, 0x7ffffffffffffc13L
+
+    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    new-instance v6, Lyvb;
+
+    invoke-direct {v6, v8, v1}, Lyvb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    filled-new-array {v5, v2, v3, v4, v6}, [Lyvb;
+
+    move-result-object v1
+
+    new-instance v2, Ljava/util/EnumMap;
+
+    invoke-direct {v2, v0}, Ljava/util/EnumMap;-><init>(Ljava/lang/Class;)V
+
+    const/4 v0, 0x5
+
+    const/4 v14, 0x0
 
     :goto_0
-    sget-object v2, Loah;->b:Loah;
+    if-ge v14, v0, :cond_0
 
-    if-ne v1, v2, :cond_2
+    aget-object v3, v1, v14
 
-    check-cast v0, Lrah;
+    iget-object v4, v3, Lyvb;->a:Ljava/lang/Object;
 
-    new-instance v1, Lsk;
+    check-cast v4, Ljava/lang/Enum;
 
-    const/16 v2, 0x1b
+    iget-object v3, v3, Lyvb;->b:Ljava/lang/Object;
 
-    invoke-direct {v1, v2, p1}, Lsk;-><init>(ILjava/lang/Object;)V
+    invoke-virtual {v2, v4, v3}, Ljava/util/EnumMap;->put(Ljava/lang/Enum;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Lrah;->setOnDragIconTouchListener(Lbr6;)V
+    add-int/lit8 v14, v14, 0x1
 
-    new-instance v1, Lrx1;
+    goto :goto_0
 
-    const/16 v2, 0x10
+    :cond_0
+    sput-object v2, Llg6;->X:Ljava/util/EnumMap;
 
-    iget-object v3, p0, Llg6;->X:Ltw0;
-
-    invoke-direct {v1, v3, p2, p1, v2}, Lrx1;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    invoke-virtual {v0, v1}, Lrah;->setActionMenuIconClickListener(Lnq6;)V
-
-    :cond_2
     return-void
 .end method
 
-.method public final l(I)I
-    .locals 1
-
-    invoke-virtual {p0, p1}, Lnd8;->D(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lud8;
-
-    check-cast p1, Lpah;
-
-    iget-object p1, p1, Lpah;->b:Loah;
-
-    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result p1
-
-    if-eqz p1, :cond_3
-
-    const/4 v0, 0x1
-
-    if-eq p1, v0, :cond_2
-
-    const/4 v0, 0x2
-
-    if-eq p1, v0, :cond_1
-
-    const/4 v0, 0x3
-
-    if-ne p1, v0, :cond_0
-
-    sget p1, Lvbb;->l:I
-
-    return p1
-
-    :cond_0
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
-
-    :cond_1
-    sget p1, Lvbb;->i:I
-
-    return p1
-
-    :cond_2
-    sget p1, Lvbb;->p:I
-
-    return p1
-
-    :cond_3
-    sget p1, Lvbb;->h:I
-
-    return p1
-.end method
-
-.method public final bridge synthetic s(Ltsd;I)V
+.method public constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
-    check-cast p1, Lsah;
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-virtual {p0, p1, p2}, Llg6;->K(Lsah;I)V
+    iput p3, p0, Llg6;->a:I
 
     return-void
 .end method
 
-.method public final u(Landroid/view/ViewGroup;I)Ltsd;
-    .locals 2
+.method public static valueOf(Ljava/lang/String;)Llg6;
+    .locals 1
 
-    sget v0, Lvbb;->h:I
+    const-class v0, Llg6;
 
-    if-ne p2, v0, :cond_0
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    sget-object p2, Loah;->a:Loah;
+    move-result-object p0
 
-    goto :goto_0
+    check-cast p0, Llg6;
 
-    :cond_0
-    sget v0, Lvbb;->p:I
+    return-object p0
+.end method
 
-    if-ne p2, v0, :cond_1
+.method public static values()[Llg6;
+    .locals 1
 
-    sget-object p2, Loah;->b:Loah;
+    sget-object v0, Llg6;->D0:[Llg6;
 
-    goto :goto_0
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    :cond_1
-    sget v0, Lvbb;->i:I
+    move-result-object v0
 
-    if-ne p2, v0, :cond_2
-
-    sget-object p2, Loah;->c:Loah;
-
-    goto :goto_0
-
-    :cond_2
-    sget v0, Lvbb;->l:I
-
-    if-ne p2, v0, :cond_3
-
-    sget-object p2, Loah;->d:Loah;
-
-    :goto_0
-    new-instance v0, Lsah;
-
-    new-instance v1, Lrah;
-
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    invoke-direct {v1, p2, p1}, Lrah;-><init>(Loah;Landroid/content/Context;)V
-
-    invoke-direct {v0, v1}, Ltsd;-><init>(Landroid/view/View;)V
+    check-cast v0, [Llg6;
 
     return-object v0
-
-    :cond_3
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "Unknown viewtype in "
-
-    invoke-static {p2, v0}, Lj27;->g(ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method

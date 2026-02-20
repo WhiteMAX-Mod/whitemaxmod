@@ -1,81 +1,48 @@
 .class public final Lfj1;
-.super Ljef;
-.source "SourceFile"
+.super Lda4;
 
 
 # instance fields
-.field public final F0:Lcv1;
+.field public final synthetic X:Lr3;
 
-.field public final G0:Lfv1;
+.field public synthetic d:Ljava/lang/Object;
+
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/widget/FrameLayout;Lcv1;)V
+.method public constructor <init>(Lr3;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Ltsd;-><init>(Landroid/view/View;)V
+    iput-object p1, p0, Lfj1;->X:Lr3;
 
-    iput-object p2, p0, Lfj1;->F0:Lcv1;
-
-    sget p2, Ld8d;->call_opponent:I
-
-    invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object p1
-
-    check-cast p1, Lfv1;
-
-    iput-object p1, p0, Lfj1;->G0:Lfv1;
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final y(Lud8;)V
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    check-cast p1, Lsf1;
+    iput-object p1, p0, Lfj1;->d:Ljava/lang/Object;
 
-    iget-object v0, p1, Lsf1;->c:Ljava/lang/CharSequence;
+    iget p1, p0, Lfj1;->o:I
 
-    iget-object v1, p1, Lsf1;->d:Ljava/lang/String;
+    const/high16 v0, -0x80000000
 
-    iget-object v2, p0, Lfj1;->G0:Lfv1;
+    or-int/2addr p1, v0
 
-    invoke-virtual {v2, v1, v0}, Lfv1;->F(Ljava/lang/String;Ljava/lang/CharSequence;)V
+    iput p1, p0, Lfj1;->o:I
 
-    iget-boolean v0, p1, Lsf1;->Z:Z
+    iget-object p1, p0, Lfj1;->X:Lr3;
 
-    invoke-virtual {v2, v0}, Lfv1;->C(Z)V
+    const/4 v0, 0x0
 
-    iget-boolean v0, p1, Lsf1;->X:Z
+    invoke-virtual {p1, v0, p0}, Lr3;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    invoke-virtual {v2, v0}, Lfv1;->D(Z)V
+    move-result-object p1
 
-    iget-object v0, p1, Lsf1;->o:Lve0;
-
-    invoke-virtual {v2, v0}, Lfv1;->setAvatar(Lve0;)V
-
-    iget-boolean v0, p1, Lsf1;->v0:Z
-
-    invoke-virtual {v2, v0}, Lfv1;->setRaiseHand(Z)V
-
-    iget-object v0, p1, Lsf1;->z0:Lgbh;
-
-    invoke-virtual {v2, v0}, Lfv1;->setOpponentVideo(Lgbh;)V
-
-    iget-object v0, p1, Lsf1;->A0:Lhbh;
-
-    invoke-virtual {v2, v0}, Lfv1;->setButtonAction(Lhbh;)V
-
-    iget-object p1, p1, Lsf1;->a:Lyk1;
-
-    iput-object p1, v2, Lfv1;->i1:Lyk1;
-
-    iget-object p1, p0, Lfj1;->F0:Lcv1;
-
-    iput-object p1, v2, Lfv1;->c1:Lcv1;
-
-    return-void
+    return-object p1
 .end method

@@ -1,44 +1,26 @@
-.class public final synthetic Lb29;
+.class public interface abstract Lb29;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/os/IBinder$DeathRecipient;
-
-
-# instance fields
-.field public final synthetic a:Le29;
-
-
-# direct methods
-.method public synthetic constructor <init>(Le29;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lb29;->a:Le29;
-
-    return-void
-.end method
-
 
 # virtual methods
-.method public final binderDied()V
-    .locals 3
+.method public abstract a()V
+.end method
 
-    iget-object v0, p0, Lb29;->a:Le29;
+.method public abstract e(JIII)V
+.end method
 
-    iget-object v0, v0, Le29;->a:Li19;
+.method public abstract f(ILag4;JI)V
+.end method
 
-    invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+.method public abstract flush()V
+.end method
 
-    new-instance v1, Ldh6;
+.method public abstract setParameters(Landroid/os/Bundle;)V
+.end method
 
-    const/16 v2, 0xc
+.method public abstract shutdown()V
+.end method
 
-    invoke-direct {v1, v2, v0}, Ldh6;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v0, v1}, Li19;->z(Ljava/lang/Runnable;)V
-
-    return-void
+.method public abstract start()V
 .end method

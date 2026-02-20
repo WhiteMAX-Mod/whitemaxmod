@@ -1,130 +1,193 @@
 .class public final Lo3e;
-.super Lll6;
+.super Ls3e;
 .source "SourceFile"
+
+# interfaces
+.implements Lij4;
 
 
 # instance fields
-.field public X:Lo85;
-
-.field public o:Landroid/graphics/drawable/Drawable;
+.field public final X:Lase;
 
 
-# virtual methods
-.method public final draw(Landroid/graphics/Canvas;)V
-    .locals 4
+# direct methods
+.method public constructor <init>(Lol6;Lal7;Lase;Ljava/util/ArrayList;)V
+    .locals 0
 
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->isVisible()Z
+    invoke-direct {p0, p1, p2, p3, p4}, Ls3e;-><init>(Lol6;Ljava/util/List;Ljse;Ljava/util/List;)V
 
-    move-result v0
+    iput-object p3, p0, Lo3e;->X:Lase;
 
-    if-nez v0, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    iget-object v0, p0, Lo3e;->X:Lo85;
-
-    if-eqz v0, :cond_2
-
-    iget-boolean v1, v0, Lo85;->a:Z
-
-    if-eqz v1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    invoke-static {v0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
-
-    move-result v1
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    iget-object v2, v0, Lo85;->e:Lk85;
-
-    invoke-static {v2}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
-
-    move-result v2
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0}, Lo85;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    filled-new-array {v1, v2, v3}, [Ljava/lang/Object;
-
-    move-result-object v1
-
-    const-class v2, Lm85;
-
-    const-string v3, "%x: Draw requested for a non-attached controller %x. %s"
-
-    invoke-static {v2, v3, v1}, Lmt5;->j(Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    const/4 v1, 0x1
-
-    iput-boolean v1, v0, Lo85;->b:Z
-
-    iput-boolean v1, v0, Lo85;->c:Z
-
-    invoke-virtual {v0}, Lo85;->b()V
-
-    :cond_2
-    :goto_0
-    invoke-super {p0, p1}, Lll6;->draw(Landroid/graphics/Canvas;)V
-
-    iget-object v0, p0, Lo3e;->o:Landroid/graphics/drawable/Drawable;
-
-    if-eqz v0, :cond_3
-
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
-
-    iget-object v0, p0, Lo3e;->o:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
-
-    :cond_3
-    :goto_1
     return-void
 .end method
 
-.method public final getIntrinsicHeight()I
-    .locals 1
 
-    const/4 v0, -0x1
+# virtual methods
+.method public final B()J
+    .locals 2
 
-    return v0
+    iget-object v0, p0, Lo3e;->X:Lase;
+
+    iget-wide v0, v0, Lase;->d:J
+
+    return-wide v0
 .end method
 
-.method public final getIntrinsicWidth()I
+.method public final C(J)J
     .locals 1
 
-    const/4 v0, -0x1
+    iget-object v0, p0, Lo3e;->X:Lase;
 
-    return v0
+    invoke-virtual {v0, p1, p2}, Lase;->e(J)J
+
+    move-result-wide p1
+
+    return-wide p1
 .end method
 
-.method public final setVisible(ZZ)Z
+.method public final D(JJ)J
     .locals 1
 
-    iget-object v0, p0, Lo3e;->X:Lo85;
+    iget-object v0, p0, Lo3e;->X:Lase;
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0, p1, p2, p3, p4}, Lase;->c(JJ)J
 
-    invoke-virtual {v0, p1}, Lo85;->h(Z)V
+    move-result-wide p1
+
+    return-wide p1
+.end method
+
+.method public final a(J)J
+    .locals 1
+
+    iget-object v0, p0, Lo3e;->X:Lase;
+
+    invoke-virtual {v0, p1, p2}, Lase;->h(J)J
+
+    move-result-wide p1
+
+    return-wide p1
+.end method
+
+.method public final b()Ljava/lang/String;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final c()Lij4;
+    .locals 0
+
+    return-object p0
+.end method
+
+.method public final d()Lmnd;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final e(JJ)J
+    .locals 1
+
+    iget-object v0, p0, Lo3e;->X:Lase;
+
+    invoke-virtual {v0, p1, p2, p3, p4}, Lase;->f(JJ)J
+
+    move-result-wide p1
+
+    return-wide p1
+.end method
+
+.method public final g(JJ)J
+    .locals 1
+
+    iget-object v0, p0, Lo3e;->X:Lase;
+
+    invoke-virtual {v0, p1, p2, p3, p4}, Lase;->d(JJ)J
+
+    move-result-wide p1
+
+    return-wide p1
+.end method
+
+.method public final j(JJ)J
+    .locals 3
+
+    iget-object v0, p0, Lo3e;->X:Lase;
+
+    iget-object v1, v0, Lase;->f:Ljava/util/List;
+
+    if-eqz v1, :cond_0
+
+    const-wide p1, -0x7fffffffffffffffL    # -4.9E-324
+
+    return-wide p1
 
     :cond_0
-    invoke-super {p0, p1, p2}, Lll6;->setVisible(ZZ)Z
+    invoke-virtual {v0, p1, p2, p3, p4}, Lase;->d(JJ)J
 
-    move-result p1
+    move-result-wide v1
 
-    return p1
+    invoke-virtual {v0, p1, p2, p3, p4}, Lase;->c(JJ)J
+
+    move-result-wide p3
+
+    add-long/2addr p3, v1
+
+    invoke-virtual {v0, p3, p4}, Lase;->h(J)J
+
+    move-result-wide v1
+
+    invoke-virtual {v0, p3, p4, p1, p2}, Lase;->f(JJ)J
+
+    move-result-wide p1
+
+    add-long/2addr p1, v1
+
+    iget-wide p3, v0, Lase;->i:J
+
+    sub-long/2addr p1, p3
+
+    return-wide p1
+.end method
+
+.method public final k(J)Lmnd;
+    .locals 1
+
+    iget-object v0, p0, Lo3e;->X:Lase;
+
+    invoke-virtual {v0, p0, p1, p2}, Lase;->i(Lo3e;J)Lmnd;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final u(JJ)J
+    .locals 1
+
+    iget-object v0, p0, Lo3e;->X:Lase;
+
+    invoke-virtual {v0, p1, p2, p3, p4}, Lase;->g(JJ)J
+
+    move-result-wide p1
+
+    return-wide p1
+.end method
+
+.method public final z()Z
+    .locals 1
+
+    iget-object v0, p0, Lo3e;->X:Lase;
+
+    invoke-virtual {v0}, Lase;->j()Z
+
+    move-result v0
+
+    return v0
 .end method

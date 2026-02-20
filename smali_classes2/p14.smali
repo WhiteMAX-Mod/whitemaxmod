@@ -1,61 +1,48 @@
 .class public final Lp14;
-.super Lkk0;
-.source "SourceFile"
+.super Lda4;
 
 
 # instance fields
-.field public final b:I
+.field public final synthetic X:Lsg2;
 
-.field public final c:Ljava/lang/Object;
+.field public synthetic d:Ljava/lang/Object;
+
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(IJLjava/util/List;)V
+.method public constructor <init>(Lsg2;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0, p2, p3}, Lkk0;-><init>(J)V
+    iput-object p1, p0, Lp14;->X:Lsg2;
 
-    iput p1, p0, Lp14;->b:I
-
-    iput-object p4, p0, Lp14;->c:Ljava/lang/Object;
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    const-string v0, "BLOCKED"
+    iput-object p1, p0, Lp14;->d:Ljava/lang/Object;
 
-    const-string v1, ", from="
+    iget p1, p0, Lp14;->o:I
 
-    const-string v2, "ContactListEvent{status="
+    const/high16 v0, -0x80000000
 
-    invoke-static {v2, v0, v1}, Lt02;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    or-int/2addr p1, v0
 
-    move-result-object v0
+    iput p1, p0, Lp14;->o:I
 
-    iget v1, p0, Lp14;->b:I
+    iget-object p1, p0, Lp14;->X:Lsg2;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    const/4 v0, 0x0
 
-    const-string v1, ", count=40, contactIds="
+    invoke-virtual {p1, v0, p0}, Lsg2;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object p1
 
-    iget-object v1, p0, Lp14;->c:Ljava/lang/Object;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x7d
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

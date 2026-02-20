@@ -1,113 +1,157 @@
-.class public final enum Le49;
-.super Ljava/lang/Enum;
+.class public final Le49;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic X:Lal5;
+# instance fields
+.field public final a:Lj39;
 
-.field public static final enum a:Le49;
+.field public final b:Lrec;
 
-.field public static final enum b:Le49;
+.field public final c:Lh79;
 
-.field public static final enum c:Le49;
+.field public final d:Ljava/util/List;
 
-.field public static final enum d:Le49;
+.field public final e:Ljava/lang/CharSequence;
 
-.field public static final synthetic o:[Le49;
+.field public final f:I
+
+.field public final g:I
+
+.field public final h:Landroid/os/Bundle;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public constructor <init>()V
+    .locals 2
 
-    new-instance v0, Le49;
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "UNKNOWN"
+    const/4 v0, 0x0
 
-    const/4 v2, 0x0
+    .line 2
+    iput-object v0, p0, Le49;->a:Lj39;
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    .line 3
+    iput-object v0, p0, Le49;->b:Lrec;
 
-    sput-object v0, Le49;->a:Le49;
+    .line 4
+    iput-object v0, p0, Le49;->c:Lh79;
 
-    new-instance v1, Le49;
+    .line 5
+    sget-object v1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
-    const-string v2, "AUDIO_MESSAGE"
+    iput-object v1, p0, Le49;->d:Ljava/util/List;
 
-    const/4 v3, 0x1
+    .line 6
+    iput-object v0, p0, Le49;->e:Ljava/lang/CharSequence;
 
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    const/4 v0, 0x0
 
-    sput-object v1, Le49;->b:Le49;
+    .line 7
+    iput v0, p0, Le49;->f:I
 
-    new-instance v2, Le49;
+    .line 8
+    iput v0, p0, Le49;->g:I
 
-    const-string v3, "AUDIO_DRAFT"
+    .line 9
+    sget-object v0, Landroid/os/Bundle;->EMPTY:Landroid/os/Bundle;
 
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v3, Le49;
-
-    const-string v4, "AUDIO_RECORD"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Le49;->c:Le49;
-
-    new-instance v4, Le49;
-
-    const-string v5, "MUSIC_FILE"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v4, Le49;->d:Le49;
-
-    filled-new-array {v0, v1, v2, v3, v4}, [Le49;
-
-    move-result-object v0
-
-    sput-object v0, Le49;->o:[Le49;
-
-    new-instance v1, Lal5;
-
-    invoke-direct {v1, v0}, Lal5;-><init>([Ljava/lang/Enum;)V
-
-    sput-object v1, Le49;->X:Lal5;
+    iput-object v0, p0, Le49;->h:Landroid/os/Bundle;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Le49;
+.method public constructor <init>(Le49;)V
     .locals 1
 
-    const-class v0, Le49;
+    .line 20
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    .line 21
+    iget-object v0, p1, Le49;->a:Lj39;
 
-    move-result-object p0
+    iput-object v0, p0, Le49;->a:Lj39;
 
-    check-cast p0, Le49;
+    .line 22
+    iget-object v0, p1, Le49;->b:Lrec;
 
-    return-object p0
+    iput-object v0, p0, Le49;->b:Lrec;
+
+    .line 23
+    iget-object v0, p1, Le49;->c:Lh79;
+
+    iput-object v0, p0, Le49;->c:Lh79;
+
+    .line 24
+    iget-object v0, p1, Le49;->d:Ljava/util/List;
+
+    iput-object v0, p0, Le49;->d:Ljava/util/List;
+
+    .line 25
+    iget-object v0, p1, Le49;->e:Ljava/lang/CharSequence;
+
+    iput-object v0, p0, Le49;->e:Ljava/lang/CharSequence;
+
+    .line 26
+    iget v0, p1, Le49;->f:I
+
+    iput v0, p0, Le49;->f:I
+
+    .line 27
+    iget v0, p1, Le49;->g:I
+
+    iput v0, p0, Le49;->g:I
+
+    .line 28
+    iget-object p1, p1, Le49;->h:Landroid/os/Bundle;
+
+    iput-object p1, p0, Le49;->h:Landroid/os/Bundle;
+
+    return-void
 .end method
 
-.method public static values()[Le49;
-    .locals 1
+.method public constructor <init>(Lj39;Lrec;Lh79;Ljava/util/List;Ljava/lang/CharSequence;IILandroid/os/Bundle;)V
+    .locals 0
 
-    sget-object v0, Le49;->o:[Le49;
+    .line 10
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    .line 11
+    iput-object p1, p0, Le49;->a:Lj39;
 
-    move-result-object v0
+    .line 12
+    iput-object p2, p0, Le49;->b:Lrec;
 
-    check-cast v0, [Le49;
+    .line 13
+    iput-object p3, p0, Le49;->c:Lh79;
 
-    return-object v0
+    .line 14
+    invoke-virtual {p4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 15
+    iput-object p4, p0, Le49;->d:Ljava/util/List;
+
+    .line 16
+    iput-object p5, p0, Le49;->e:Ljava/lang/CharSequence;
+
+    .line 17
+    iput p6, p0, Le49;->f:I
+
+    .line 18
+    iput p7, p0, Le49;->g:I
+
+    if-eqz p8, :cond_0
+
+    goto :goto_0
+
+    .line 19
+    :cond_0
+    sget-object p8, Landroid/os/Bundle;->EMPTY:Landroid/os/Bundle;
+
+    :goto_0
+    iput-object p8, p0, Le49;->h:Landroid/os/Bundle;
+
+    return-void
 .end method

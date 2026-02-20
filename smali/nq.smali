@@ -4,43 +4,21 @@
 
 
 # direct methods
-.method public static a(Landroid/app/AppOpsManager;Ljava/lang/String;ILjava/lang/String;)I
-    .locals 0
-
-    if-nez p0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    invoke-virtual {p0, p1, p2, p3}, Landroid/app/AppOpsManager;->checkOpNoThrow(Ljava/lang/String;ILjava/lang/String;)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static b(Landroid/content/Context;)Ljava/lang/String;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/content/Context;->getOpPackageName()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static c(Landroid/content/Context;)Landroid/app/AppOpsManager;
+.method public static a(Landroid/widget/ThemedSpinnerAdapter;Landroid/content/res/Resources$Theme;)V
     .locals 1
 
-    const-class v0, Landroid/app/AppOpsManager;
+    invoke-interface {p0}, Landroid/widget/ThemedSpinnerAdapter;->getDropDownViewTheme()Landroid/content/res/Resources$Theme;
 
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
+    move-result-object v0
 
-    move-result-object p0
+    invoke-static {v0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    check-cast p0, Landroid/app/AppOpsManager;
+    move-result v0
 
-    return-object p0
+    if-nez v0, :cond_0
+
+    invoke-interface {p0, p1}, Landroid/widget/ThemedSpinnerAdapter;->setDropDownViewTheme(Landroid/content/res/Resources$Theme;)V
+
+    :cond_0
+    return-void
 .end method

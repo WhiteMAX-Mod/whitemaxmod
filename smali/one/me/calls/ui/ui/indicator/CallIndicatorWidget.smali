@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lpde;
+.implements Lfke;
 
 
 # annotations
@@ -14,7 +14,7 @@
     d2 = {
         "Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;",
         "Lone/me/sdk/arch/Widget;",
-        "Lpde;",
+        "Lfke;",
         "<init>",
         "()V",
         "calls-ui_release"
@@ -30,28 +30,28 @@
 
 
 # static fields
-.field public static final synthetic Y:[Lz28;
+.field public static final synthetic Y:[Lv58;
 
 
 # instance fields
-.field public final X:Lo58;
+.field public final X:Lj88;
 
 .field public final a:I
 
-.field public final b:Lo58;
+.field public final b:Lj88;
 
-.field public final c:Lrd1;
+.field public final c:Lee1;
 
-.field public final d:Lro0;
+.field public final d:Lwp0;
 
-.field public final o:Lro0;
+.field public final o:Lwp0;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 6
 
-    new-instance v0, Liyc;
+    new-instance v0, Lv3d;
 
     const-class v1, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;
 
@@ -61,21 +61,21 @@
 
     const/4 v4, 0x0
 
-    invoke-direct {v0, v1, v2, v3, v4}, Liyc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v2, v3, v4}, Lv3d;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    sget-object v2, Lctd;->a:Ldtd;
+    sget-object v2, Lazd;->a:Lbzd;
 
     const-string v3, "fakeIndicatorView"
 
     const-string v5, "getFakeIndicatorView()Landroid/view/View;"
 
-    invoke-static {v2, v1, v3, v5, v4}, Lj27;->e(Ldtd;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Liyc;
+    invoke-static {v2, v1, v3, v5, v4}, Lo16;->g(Lbzd;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lv3d;
 
     move-result-object v1
 
     const/4 v2, 0x2
 
-    new-array v2, v2, [Lz28;
+    new-array v2, v2, [Lv58;
 
     aput-object v0, v2, v4
 
@@ -83,7 +83,7 @@
 
     aput-object v1, v2, v0
 
-    sput-object v2, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;->Y:[Lz28;
+    sput-object v2, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;->Y:[Lv58;
 
     return-void
 .end method
@@ -97,109 +97,109 @@
 
     const/4 v2, 0x0
 
-    invoke-direct {p0, v2, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILso4;)V
+    invoke-direct {p0, v2, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILfq4;)V
 
     const/4 v0, 0x2
 
     iput v0, p0, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;->a:I
 
-    sget-object v0, Leo1;->a:Leo1;
+    sget-object v0, Lro1;->a:Lro1;
 
     invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
 
     move-result-object v1
 
-    const/16 v2, 0x234
+    const/16 v2, 0x251
 
-    invoke-virtual {v1, v2}, Lr5;->d(I)Ln8g;
+    invoke-virtual {v1, v2}, Lr5;->d(I)Lbgg;
 
     move-result-object v1
 
-    iput-object v1, p0, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;->b:Lo58;
+    iput-object v1, p0, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;->b:Lj88;
 
     invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
 
     move-result-object v0
 
-    const/16 v1, 0x238
+    const/16 v1, 0x255
 
     invoke-virtual {v0, v1}, Lr5;->c(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lrd1;
+    check-cast v0, Lee1;
 
-    iput-object v0, p0, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;->c:Lrd1;
+    iput-object v0, p0, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;->c:Lee1;
 
-    new-instance v0, Lce1;
+    new-instance v0, Lre1;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Lce1;-><init>(Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;I)V
+    invoke-direct {v0, p0, v1}, Lre1;-><init>(Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;I)V
 
-    invoke-virtual {p0, v0}, Lone/me/sdk/arch/Widget;->binding(Llq6;)Lro0;
+    invoke-virtual {p0, v0}, Lone/me/sdk/arch/Widget;->binding(Lis6;)Lwp0;
 
     move-result-object v0
 
-    iput-object v0, p0, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;->d:Lro0;
+    iput-object v0, p0, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;->d:Lwp0;
 
-    new-instance v0, Lce1;
+    new-instance v0, Lre1;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, p0, v1}, Lce1;-><init>(Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;I)V
+    invoke-direct {v0, p0, v1}, Lre1;-><init>(Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;I)V
 
-    invoke-virtual {p0, v0}, Lone/me/sdk/arch/Widget;->binding(Llq6;)Lro0;
+    invoke-virtual {p0, v0}, Lone/me/sdk/arch/Widget;->binding(Lis6;)Lwp0;
 
     move-result-object v0
 
-    iput-object v0, p0, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;->o:Lro0;
+    iput-object v0, p0, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;->o:Lwp0;
 
-    new-instance v0, Lce1;
+    new-instance v0, Lre1;
 
     const/4 v1, 0x2
 
-    invoke-direct {v0, p0, v1}, Lce1;-><init>(Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;I)V
+    invoke-direct {v0, p0, v1}, Lre1;-><init>(Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;I)V
 
-    new-instance v1, Lo;
+    new-instance v1, Lq;
 
     const/16 v2, 0xf
 
-    invoke-direct {v1, v2, v0}, Lo;-><init>(ILlq6;)V
+    invoke-direct {v1, v2, v0}, Lq;-><init>(ILis6;)V
 
-    const-class v0, Lzd1;
+    const-class v0, Loe1;
 
-    invoke-virtual {p0, v0, v1}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Llq6;)Lo58;
+    invoke-virtual {p0, v0, v1}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Lis6;)Lj88;
 
     move-result-object v0
 
-    iput-object v0, p0, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;->X:Lo58;
+    iput-object v0, p0, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;->X:Lj88;
 
     return-void
 .end method
 
-.method public static final A0(Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;Z)V
+.method public static final H0(Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;Z)V
     .locals 2
 
     if-eqz p1, :cond_0
 
-    sget-object p1, Lpc3;->t0:Lkme;
+    sget-object p1, Lfe3;->t0:Ltea;
 
     invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lkme;->r(Landroid/content/Context;)Lzbb;
+    invoke-virtual {p1, v0}, Ltea;->p(Landroid/content/Context;)Loob;
 
     move-result-object p1
 
-    iget-object p1, p1, Lzbb;->c:Lzlb;
+    iget-object p1, p1, Loob;->b:Llob;
 
-    invoke-interface {p1}, Lzlb;->b()Lxf0;
+    invoke-interface {p1}, Llob;->b()Lqc5;
 
     move-result-object p1
 
-    iget p1, p1, Lxf0;->l:I
+    iget p1, p1, Lqc5;->b:I
 
     goto :goto_0
 
@@ -207,15 +207,15 @@
     const/4 p1, 0x0
 
     :goto_0
-    iget-object p0, p0, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;->o:Lro0;
+    iget-object p0, p0, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;->o:Lwp0;
 
-    sget-object v0, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;->Y:[Lz28;
+    sget-object v0, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;->Y:[Lv58;
 
     const/4 v1, 0x1
 
     aget-object v0, v0, v1
 
-    invoke-virtual {p0}, Lro0;->getValue()Ljava/lang/Object;
+    invoke-virtual {p0}, Lwp0;->getValue()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -258,28 +258,42 @@
     return-void
 .end method
 
-.method public static final z0(Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;)Lwd1;
+
+# virtual methods
+.method public final I0()Lle1;
     .locals 2
 
-    iget-object p0, p0, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;->d:Lro0;
-
-    sget-object v0, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;->Y:[Lz28;
+    sget-object v0, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;->Y:[Lv58;
 
     const/4 v1, 0x0
 
     aget-object v0, v0, v1
 
-    invoke-virtual {p0}, Lro0;->getValue()Ljava/lang/Object;
+    iget-object v0, p0, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;->d:Lwp0;
 
-    move-result-object p0
+    invoke-virtual {v0}, Lwp0;->getValue()Ljava/lang/Object;
 
-    check-cast p0, Lwd1;
+    move-result-object v0
 
-    return-object p0
+    check-cast v0, Lle1;
+
+    return-object v0
 .end method
 
+.method public final J0()Loe1;
+    .locals 1
 
-# virtual methods
+    iget-object v0, p0, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;->X:Lj88;
+
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Loe1;
+
+    return-object v0
+.end method
+
 .method public final onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 0
 
@@ -287,9 +301,9 @@
 
     move-result-object p1
 
-    new-instance p2, Lee1;
+    new-instance p2, Lte1;
 
-    invoke-direct {p2, p0, p1}, Lee1;-><init>(Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;Landroid/content/Context;)V
+    invoke-direct {p2, p0, p1}, Lte1;-><init>(Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;Landroid/content/Context;)V
 
     return-object p2
 .end method
@@ -299,93 +313,153 @@
 
     invoke-super {p0, p1}, Lone/me/sdk/arch/Widget;->onViewCreated(Landroid/view/View;)V
 
-    iget-object p1, p0, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;->X:Lo58;
+    invoke-virtual {p0}, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;->J0()Loe1;
 
-    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
+    move-result-object p1
 
-    move-result-object v0
+    iget-object p1, p1, Loe1;->v0:Ltn5;
 
-    check-cast v0, Lzd1;
-
-    iget-object v0, v0, Lzd1;->t0:Lcm5;
-
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lj88;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Lj88;->p()Ll88;
-
-    move-result-object v1
-
-    sget-object v2, Lo78;->d:Lo78;
-
-    invoke-static {v0, v1, v2}, Lmt0;->b(Ld76;Ll88;Lo78;)Lpw1;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lab8;
 
     move-result-object v0
 
-    new-instance v1, Lfe1;
+    invoke-interface {v0}, Lab8;->p()Lcb8;
+
+    move-result-object v0
+
+    sget-object v1, Lga8;->d:Lga8;
+
+    invoke-static {p1, v0, v1}, Lsea;->b(Lb96;Lcb8;Lga8;)Lsx1;
+
+    move-result-object p1
+
+    new-instance v0, Lue1;
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, v2, p0}, Lfe1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;)V
+    invoke-direct {v0, v2, p0}, Lue1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;)V
 
-    new-instance v3, Lm96;
+    new-instance v3, Llb6;
 
     const/4 v4, 0x1
 
-    invoke-direct {v3, v0, v1, v4}, Lm96;-><init>(Ld76;Lbr6;I)V
+    invoke-direct {v3, p1, v0, v4}, Llb6;-><init>(Lb96;Lys6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lw78;
-
-    move-result-object v0
-
-    invoke-static {v3, v0}, Lgu0;->x(Ld76;Lzb4;)Lmmf;
-
-    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lzd1;
-
-    iget-object v0, v0, Lzd1;->X:Lpld;
-
-    new-instance v1, Lge1;
-
-    invoke-direct {v1, v2, p0}, Lge1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;)V
-
-    new-instance v3, Lm96;
-
-    invoke-direct {v3, v0, v1, v4}, Lm96;-><init>(Ld76;Lbr6;I)V
-
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lw78;
-
-    move-result-object v0
-
-    invoke-static {v3, v0}, Lgu0;->x(Ld76;Lzb4;)Lmmf;
-
-    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Loa8;
 
     move-result-object p1
 
-    check-cast p1, Lzd1;
+    invoke-static {v3, p1}, Lzka;->w(Lb96;Lnd4;)Lcuf;
 
-    iget-object p1, p1, Lzd1;->Z:Lpld;
+    invoke-virtual {p0}, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;->I0()Lle1;
 
-    new-instance v0, Lhe1;
+    move-result-object p1
 
-    invoke-direct {v0, v2, p0}, Lhe1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;)V
+    new-instance v0, Lgae;
 
-    new-instance v1, Lm96;
+    const/4 v3, 0x6
+
+    invoke-direct {v0, v3, p0}, Lgae;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {p1, v0}, Lle1;->setActionsListener(Lje1;)V
+
+    invoke-virtual {p0}, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;->J0()Loe1;
+
+    move-result-object p1
+
+    iget-object p1, p1, Loe1;->Y:Lmrd;
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lab8;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lab8;->p()Lcb8;
+
+    move-result-object v0
+
+    invoke-static {p1, v0, v1}, Lsea;->b(Lb96;Lcb8;Lga8;)Lsx1;
+
+    move-result-object p1
+
+    new-instance v0, Lve1;
+
+    invoke-direct {v0, v2, p0}, Lve1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;)V
+
+    new-instance v3, Llb6;
+
+    invoke-direct {v3, p1, v0, v4}, Llb6;-><init>(Lb96;Lys6;I)V
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Loa8;
+
+    move-result-object p1
+
+    invoke-static {v3, p1}, Lzka;->w(Lb96;Lnd4;)Lcuf;
+
+    invoke-virtual {p0}, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;->J0()Loe1;
+
+    move-result-object p1
+
+    iget-object p1, p1, Loe1;->s0:Lmrd;
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lab8;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lab8;->p()Lcb8;
+
+    move-result-object v0
+
+    invoke-static {p1, v0, v1}, Lsea;->b(Lb96;Lcb8;Lga8;)Lsx1;
+
+    move-result-object p1
+
+    new-instance v0, Lwe1;
+
+    invoke-direct {v0, v2, p0}, Lwe1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;)V
+
+    new-instance v3, Llb6;
+
+    invoke-direct {v3, p1, v0, v4}, Llb6;-><init>(Lb96;Lys6;I)V
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Loa8;
+
+    move-result-object p1
+
+    invoke-static {v3, p1}, Lzka;->w(Lb96;Lnd4;)Lcuf;
+
+    invoke-virtual {p0}, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;->J0()Loe1;
+
+    move-result-object p1
+
+    iget-object p1, p1, Loe1;->u0:Lmrd;
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lab8;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lab8;->p()Lcb8;
+
+    move-result-object v0
+
+    invoke-static {p1, v0, v1}, Lsea;->b(Lb96;Lcb8;Lga8;)Lsx1;
+
+    move-result-object p1
+
+    new-instance v0, Lxe1;
+
+    invoke-direct {v0, v2, p0}, Lxe1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;)V
+
+    new-instance v1, Llb6;
 
     const/4 v2, 0x1
 
-    invoke-direct {v1, p1, v0, v2}, Lm96;-><init>(Ld76;Lbr6;I)V
+    invoke-direct {v1, p1, v0, v2}, Llb6;-><init>(Lb96;Lys6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lw78;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Loa8;
 
     move-result-object p1
 
-    invoke-static {v1, p1}, Lgu0;->x(Ld76;Lzb4;)Lmmf;
+    invoke-static {v1, p1}, Lzka;->w(Lb96;Lnd4;)Lcuf;
 
     return-void
 .end method

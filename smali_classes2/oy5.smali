@@ -1,186 +1,109 @@
-.class public final Loy5;
+.class public abstract synthetic Loy5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Llq6;
 
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lpy5;
-
-.field public final synthetic c:Lru/ok/tamtam/android/prefs/PmsKey;
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lpy5;Lru/ok/tamtam/android/prefs/PmsKey;I)V
-    .locals 0
-
-    iput p3, p0, Loy5;->a:I
-
-    iput-object p1, p0, Loy5;->b:Lpy5;
-
-    iput-object p2, p0, Loy5;->c:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method static constructor <clinit>()V
     .locals 6
 
-    iget v0, p0, Loy5;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    iget-object v1, p0, Loy5;->b:Lpy5;
-
-    iget-object v2, p0, Loy5;->c:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    invoke-virtual {v1, v2}, Lege;->m(Lru/ok/tamtam/android/prefs/PmsKey;)Z
-
-    move-result v3
-
-    const-class v4, Ljava/lang/Boolean;
-
-    if-eqz v3, :cond_0
-
-    iget-object v1, v1, Lx3;->g:Lr58;
-
-    invoke-virtual {v2}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v4}, Lctd;->a(Ljava/lang/Class;)Lrd3;
-
-    move-result-object v3
-
-    invoke-static {v1, v2, v0, v3}, Lppj;->a(Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/lang/Object;Lrd3;)Ljava/lang/Object;
+    invoke-static {}, Lez5;->values()[Lez5;
 
     move-result-object v0
 
-    goto :goto_0
+    array-length v0, v0
 
-    :cond_0
-    iget-object v1, v1, Lege;->h:Lidc;
+    new-array v0, v0, [I
 
-    iget-object v3, v1, Lidc;->h:Lgr5;
+    const/4 v1, 0x1
 
-    iget-object v3, v3, Lx3;->g:Lr58;
+    :try_start_0
+    sget-object v2, Lez5;->b:[Lez5;
 
-    invoke-virtual {v2}, Ljava/lang/Enum;->name()Ljava/lang/String;
+    const/4 v2, 0x0
 
-    move-result-object v5
+    aput v1, v0, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-virtual {v3, v5}, Lr58;->contains(Ljava/lang/String;)Z
+    :catch_0
+    const/4 v2, 0x2
 
-    move-result v3
+    const/16 v3, 0x8
 
-    if-eqz v3, :cond_1
+    :try_start_1
+    sget-object v4, Lez5;->b:[Lez5;
 
-    iget-object v1, v1, Lidc;->h:Lgr5;
+    aput v2, v0, v3
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    :cond_1
-    iget-object v1, v1, Lx3;->g:Lr58;
+    :catch_1
+    const/4 v4, 0x3
 
-    invoke-virtual {v2}, Ljava/lang/Enum;->name()Ljava/lang/String;
+    :try_start_2
+    sget-object v5, Lez5;->b:[Lez5;
 
-    move-result-object v2
+    aput v4, v0, v2
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    invoke-static {v4}, Lctd;->a(Ljava/lang/Class;)Lrd3;
+    :catch_2
+    :try_start_3
+    sget-object v2, Lez5;->b:[Lez5;
 
-    move-result-object v3
+    const/4 v2, 0x4
 
-    invoke-static {v1, v2, v0, v3}, Lppj;->a(Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/lang/Object;Lrd3;)Ljava/lang/Object;
+    aput v2, v0, v4
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
 
-    move-result-object v0
+    :catch_3
+    :try_start_4
+    sget-object v2, Lez5;->b:[Lez5;
 
-    :goto_0
-    return-object v0
+    const/4 v2, 0x5
 
-    :pswitch_0
-    const-wide/16 v0, 0x0
+    aput v2, v0, v1
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    :catch_4
+    const/4 v1, 0x6
 
-    move-result-object v0
+    :try_start_5
+    sget-object v2, Lez5;->b:[Lez5;
 
-    iget-object v1, p0, Loy5;->b:Lpy5;
+    const/16 v2, 0x9
 
-    iget-object v2, p0, Loy5;->c:Lru/ok/tamtam/android/prefs/PmsKey;
+    aput v1, v0, v2
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
 
-    invoke-virtual {v1, v2}, Lege;->m(Lru/ok/tamtam/android/prefs/PmsKey;)Z
+    :catch_5
+    const/4 v2, 0x7
 
-    move-result v3
+    :try_start_6
+    sget-object v4, Lez5;->b:[Lez5;
 
-    const-class v4, Ljava/lang/Long;
+    aput v2, v0, v1
+    :try_end_6
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
 
-    if-eqz v3, :cond_2
+    :catch_6
+    :try_start_7
+    sget-object v1, Lez5;->b:[Lez5;
 
-    iget-object v1, v1, Lx3;->g:Lr58;
+    aput v3, v0, v2
+    :try_end_7
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
 
-    invoke-virtual {v2}, Ljava/lang/Enum;->name()Ljava/lang/String;
+    :catch_7
+    sput-object v0, Loy5;->$EnumSwitchMapping$0:[I
 
-    move-result-object v2
-
-    invoke-static {v4}, Lctd;->a(Ljava/lang/Class;)Lrd3;
-
-    move-result-object v3
-
-    invoke-static {v1, v2, v0, v3}, Lppj;->a(Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/lang/Object;Lrd3;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    goto :goto_1
-
-    :cond_2
-    iget-object v1, v1, Lege;->h:Lidc;
-
-    iget-object v3, v1, Lidc;->h:Lgr5;
-
-    iget-object v3, v3, Lx3;->g:Lr58;
-
-    invoke-virtual {v2}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v3, v5}, Lr58;->contains(Ljava/lang/String;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_3
-
-    iget-object v1, v1, Lidc;->h:Lgr5;
-
-    :cond_3
-    iget-object v1, v1, Lx3;->g:Lr58;
-
-    invoke-virtual {v2}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v4}, Lctd;->a(Ljava/lang/Class;)Lrd3;
-
-    move-result-object v3
-
-    invoke-static {v1, v2, v0, v3}, Lppj;->a(Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/lang/Object;Lrd3;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    :goto_1
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

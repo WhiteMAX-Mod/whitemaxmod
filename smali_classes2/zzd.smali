@@ -1,360 +1,199 @@
 .class public final Lzzd;
-.super Ljava/lang/Object;
+.super Lpdg;
 .source "SourceFile"
+
+# interfaces
+.implements Lys6;
 
 
 # instance fields
-.field public final a:Lwrd;
+.field public final synthetic X:Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;
 
-.field public b:I
-
-.field public c:I
-
-.field public final d:Lnq6;
-
-.field public final e:Ljava/lang/ref/WeakReference;
-
-.field public final f:Ll88;
-
-.field public g:Z
-
-.field public h:Lyw7;
-
-.field public final i:Lxzd;
-
-.field public final j:Ltk;
-
-.field public final k:Ljava/lang/String;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lwrd;Landroidx/recyclerview/widget/RecyclerView;Lnq6;)V
-    .locals 3
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lzzd;->X:Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;
 
-    iput-object p1, p0, Lzzd;->a:Lwrd;
+    const/4 p2, 0x2
 
-    const/4 p1, -0x1
-
-    iput p1, p0, Lzzd;->b:I
-
-    const/4 p1, 0x0
-
-    iput p1, p0, Lzzd;->c:I
-
-    iput-object p3, p0, Lzzd;->d:Lnq6;
-
-    new-instance p1, Ljava/lang/ref/WeakReference;
-
-    invoke-direct {p1, p2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object p1, p0, Lzzd;->e:Ljava/lang/ref/WeakReference;
-
-    new-instance p1, Lxzd;
-
-    const/4 p3, 0x0
-
-    invoke-direct {p1, p3, p0}, Lxzd;-><init>(ILjava/lang/Object;)V
-
-    iput-object p1, p0, Lzzd;->i:Lxzd;
-
-    new-instance p1, Ltk;
-
-    const/4 p3, 0x7
-
-    invoke-direct {p1, p3, p0}, Ltk;-><init>(ILjava/lang/Object;)V
-
-    iput-object p1, p0, Lzzd;->j:Ltk;
-
-    const-class p3, Lzzd;
-
-    invoke-virtual {p3}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p3
-
-    iput-object p3, p0, Lzzd;->k:Ljava/lang/String;
-
-    invoke-virtual {p2, p1}, Landroid/view/View;->addOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
-
-    invoke-virtual {p2}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    :goto_0
-    instance-of p3, p1, Landroid/content/ContextWrapper;
-
-    const/4 v0, 0x0
-
-    if-eqz p3, :cond_1
-
-    instance-of p3, p1, Lj88;
-
-    if-eqz p3, :cond_0
-
-    check-cast p1, Lj88;
-
-    goto :goto_1
-
-    :cond_0
-    check-cast p1, Landroid/content/ContextWrapper;
-
-    invoke-virtual {p1}, Landroid/content/ContextWrapper;->getBaseContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    goto :goto_0
-
-    :cond_1
-    move-object p1, v0
-
-    :goto_1
-    if-nez p1, :cond_3
-
-    iget-object p1, p0, Lzzd;->k:Ljava/lang/String;
-
-    sget-object p3, Lc5j;->a:Ledb;
-
-    if-nez p3, :cond_2
-
-    goto :goto_2
-
-    :cond_2
-    sget-object v1, Lkk8;->d:Lkk8;
-
-    invoke-virtual {p3, v1}, Ledb;->b(Lkk8;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_5
-
-    const-string v2, "registerLifecycleObserver findLifecycleOwner() is null"
-
-    invoke-virtual {p3, v1, p1, v2, v0}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    goto :goto_2
-
-    :cond_3
-    invoke-interface {p1}, Lj88;->p()Ll88;
-
-    move-result-object p3
-
-    iput-object p3, p0, Lzzd;->f:Ll88;
-
-    if-eqz p3, :cond_4
-
-    iget-object v0, p0, Lzzd;->i:Lxzd;
-
-    invoke-virtual {p3, v0}, Ll88;->a(Lg88;)V
-
-    :cond_4
-    invoke-interface {p1}, Lj88;->p()Ll88;
-
-    move-result-object p1
-
-    iget-object p1, p1, Ll88;->d:Lo78;
-
-    sget-object p3, Lo78;->d:Lo78;
-
-    invoke-virtual {p1, p3}, Lo78;->a(Lo78;)Z
-
-    move-result p1
-
-    xor-int/lit8 p1, p1, 0x1
-
-    iput-boolean p1, p0, Lzzd;->g:Z
-
-    :cond_5
-    :goto_2
-    iget-object p1, p0, Lzzd;->j:Ltk;
-
-    invoke-virtual {p1, p2}, Ltk;->onViewAttachedToWindow(Landroid/view/View;)V
+    invoke-direct {p0, p2, p1}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroidx/recyclerview/widget/RecyclerView;)V
-    .locals 5
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lzzd;->k:Ljava/lang/String;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    sget-object v1, Lc5j;->a:Ledb;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v3, Lkk8;->d:Lkk8;
-
-    invoke-virtual {v1, v3}, Ledb;->b(Lkk8;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_1
-
-    const-string v4, "attachAdapter"
-
-    invoke-virtual {v1, v3, v0, v4, v2}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
-    :goto_0
-    iget-object v0, p0, Lzzd;->a:Lwrd;
-
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lwrd;
-
-    move-result-object v1
-
-    if-eq v1, v0, :cond_2
-
-    invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Lwrd;)V
-
-    :cond_2
-    iget v0, p0, Lzzd;->b:I
-
-    const/4 v1, -0x1
-
-    if-eq v0, v1, :cond_4
-
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
-
-    move-result-object v0
-
-    instance-of v1, v0, Landroidx/recyclerview/widget/LinearLayoutManager;
-
-    if-eqz v1, :cond_3
-
-    check-cast v0, Landroidx/recyclerview/widget/LinearLayoutManager;
-
-    goto :goto_1
-
-    :cond_3
-    move-object v0, v2
-
-    :goto_1
-    if-eqz v0, :cond_4
-
-    iget v1, p0, Lzzd;->b:I
-
-    iget v3, p0, Lzzd;->c:I
-
-    invoke-virtual {v0, v1, v3}, Landroidx/recyclerview/widget/LinearLayoutManager;->p1(II)V
-
-    :cond_4
-    iget-object v0, p0, Lzzd;->h:Lyw7;
-
-    if-eqz v0, :cond_5
-
-    invoke-virtual {v0, p1}, Lyw7;->a(Landroidx/recyclerview/widget/RecyclerView;)V
-
-    return-void
-
-    :cond_5
-    iget-object v0, p0, Lzzd;->d:Lnq6;
-
-    if-eqz v0, :cond_6
-
-    invoke-interface {v0, p1}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p0, p1, p2}, Lzzd;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    move-object v2, p1
+    check-cast p1, Lzzd;
 
-    check-cast v2, Lyw7;
+    sget-object p2, Lmah;->a:Lmah;
 
-    :cond_6
-    iput-object v2, p0, Lzzd;->h:Lyw7;
+    invoke-virtual {p1, p2}, Lzzd;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-void
+    return-object p2
 .end method
 
-.method public final b(Landroidx/recyclerview/widget/RecyclerView;)V
-    .locals 5
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iget-object v0, p0, Lzzd;->k:Ljava/lang/String;
+    new-instance v0, Lzzd;
 
-    sget-object v1, Lc5j;->a:Ledb;
+    iget-object v1, p0, Lzzd;->X:Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;
 
-    const/4 v2, 0x0
+    invoke-direct {v0, p2, v1}, Lzzd;-><init>(Lkotlin/coroutines/Continuation;Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;)V
 
-    if-nez v1, :cond_0
+    iput-object p1, v0, Lzzd;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
+
+    iget-object v0, p0, Lzzd;->o:Ljava/lang/Object;
+
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    check-cast v0, Lrf0;
+
+    sget-object p1, Lof0;->a:Lof0;
+
+    invoke-static {v0, p1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    iget-object p1, p0, Lzzd;->X:Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;
+
+    sget-object v0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->E0:[Lv58;
+
+    iget-object p1, p1, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->x0:Lj88;
+
+    invoke-interface {p1}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lu2c;
+
+    iget-object v0, p0, Lzzd;->X:Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;
+
+    new-instance v1, Looi;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v1, v0, v2}, Looi;-><init>(Lone/me/sdk/arch/Widget;I)V
+
+    invoke-virtual {p1, v1}, Lu2c;->k(Looi;)V
 
     goto :goto_0
 
     :cond_0
-    sget-object v3, Lkk8;->d:Lkk8;
+    instance-of p1, v0, Lpf0;
 
-    invoke-virtual {v1, v3}, Ledb;->b(Lkk8;)Z
+    if-eqz p1, :cond_2
 
-    move-result v4
+    :try_start_0
+    iget-object p1, p0, Lzzd;->X:Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;
 
-    if-eqz v4, :cond_1
+    check-cast v0, Lpf0;
 
-    const-string v4, "detachAdapter"
+    iget-object v0, v0, Lpf0;->a:Landroid/content/Intent;
 
-    invoke-virtual {v1, v3, v0, v4, v2}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    const/16 v1, 0x22b
+
+    invoke-virtual {p1, v0, v1}, Lpa4;->startActivityForResult(Landroid/content/Intent;I)V
+
+    iget-object p1, p0, Lzzd;->X:Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;
+
+    iget-object p1, p1, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->y0:Lj88;
+
+    invoke-interface {p1}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lxla;
+
+    sget-object v0, Laje;->E0:Laje;
+
+    invoke-static {p1, v0}, Lxla;->f(Lxla;Laje;)V
+    :try_end_0
+    .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    const-class p1, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;
+
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v2
+
+    sget-object v0, Ltej;->a:Lafb;
+
+    if-eqz v0, :cond_1
+
+    sget-object v1, Lzm8;->Y:Lzm8;
+
+    const/4 v5, 0x0
+
+    const/16 v6, 0x8
+
+    const-string v3, "failed open camera"
+
+    const/4 v4, 0x0
+
+    invoke-static/range {v0 .. v6}, Lafb;->f(Lafb;Lzm8;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/Throwable;I)V
 
     :cond_1
-    :goto_0
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
+    iget-object p1, p0, Lzzd;->X:Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;
 
-    move-result-object v0
+    invoke-virtual {p1}, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->J0()Lfpa;
 
-    instance-of v1, v0, Landroidx/recyclerview/widget/LinearLayoutManager;
+    move-result-object p1
 
-    if-eqz v1, :cond_2
+    iget-object p1, p1, Lfpa;->b:Lnna;
 
-    check-cast v0, Landroidx/recyclerview/widget/LinearLayoutManager;
+    invoke-virtual {p1}, Lnna;->b()V
 
-    goto :goto_1
+    goto :goto_0
 
     :cond_2
-    move-object v0, v2
+    instance-of p1, v0, Lqf0;
 
-    :goto_1
-    if-eqz v0, :cond_4
+    if-eqz p1, :cond_3
 
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/LinearLayoutManager;->Y0()I
+    sget-object p1, Ln89;->c:Ln89;
 
-    move-result v0
+    check-cast v0, Lqf0;
 
-    iput v0, p0, Lzzd;->b:I
+    iget-object v1, v0, Lqf0;->a:Ljava/lang/String;
 
-    const/4 v0, 0x0
+    iget-object v0, v0, Lqf0;->b:Ljava/lang/String;
 
-    invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p1, v1, v0}, Ln89;->J0(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result-object v1
+    :goto_0
+    sget-object p1, Lmah;->a:Lmah;
 
-    if-eqz v1, :cond_3
-
-    invoke-virtual {v1}, Landroid/view/View;->getTop()I
-
-    move-result v0
+    return-object p1
 
     :cond_3
-    iput v0, p0, Lzzd;->c:I
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
 
-    :cond_4
-    iget-object v0, p0, Lzzd;->h:Lyw7;
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-    if-eqz v0, :cond_5
-
-    invoke-virtual {v0, p1}, Lyw7;->b(Landroidx/recyclerview/widget/RecyclerView;)V
-
-    :cond_5
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lwrd;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_6
-
-    invoke-virtual {p1, v2}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Lwrd;)V
-
-    :cond_6
-    return-void
+    throw p1
 .end method

@@ -1,170 +1,523 @@
-.class public final synthetic Lgpd;
-.super Ljava/lang/Object;
+.class public final Lgpd;
+.super Landroid/widget/FrameLayout;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljava/lang/String;
 
-.field public final synthetic b:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+.field public b:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;I)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 2
 
-    iput p2, p0, Lgpd;->a:I
+    const/4 v0, 0x0
 
-    iput-object p1, p0, Lgpd;->b:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+    const/4 v1, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, v0, v1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+
+    const-class p1, Lgpd;
+
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lgpd;->a:Ljava/lang/String;
+
+    const/4 p1, 0x3
+
+    iput p1, p0, Lgpd;->b:I
+
+    invoke-virtual {p0, v1}, Landroid/view/View;->setBackgroundColor(I)V
+
+    invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->setClipChildren(Z)V
 
     return-void
 .end method
 
+.method public static a(Lgpd;JLone/me/rlottie/RLottieDrawable;Landroid/graphics/Rect;I)V
+    .locals 10
 
-# virtual methods
-.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
-    .locals 3
+    and-int/lit8 v0, p5, 0x8
 
-    iget v0, p0, Lgpd;->a:I
+    const/4 v1, 0x1
 
-    const-string v1, "null cannot be cast to non-null type android.widget.FrameLayout.LayoutParams"
+    const/4 v2, 0x0
 
-    iget-object v2, p0, Lgpd;->b:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+    if-eqz v0, :cond_0
 
-    packed-switch v0, :pswitch_data_0
+    move v0, v2
 
-    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->i1:[Lz28;
+    goto :goto_0
 
-    invoke-virtual {v2}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->Q0()Landroid/view/View;
+    :cond_0
+    move v0, v1
+
+    :goto_0
+    and-int/lit8 p5, p5, 0x10
+
+    if-eqz p5, :cond_1
+
+    move v1, v2
+
+    :cond_1
+    iget-object p5, p0, Lgpd;->a:Ljava/lang/String;
+
+    invoke-direct {p0}, Lgpd;->getLotties()Lgwe;
+
+    move-result-object v3
+
+    new-instance v4, Lw43;
+
+    const/16 v5, 0x12
+
+    invoke-direct {v4, p1, p2, v5}, Lw43;-><init>(JI)V
+
+    invoke-static {v3, v4}, Lswe;->e(Lgwe;Lks6;)Ln56;
+
+    move-result-object v3
+
+    new-instance v4, Lm56;
+
+    invoke-direct {v4, v3}, Lm56;-><init>(Ln56;)V
+
+    :goto_1
+    invoke-virtual {v4}, Lm56;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    invoke-virtual {v4}, Lm56;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lone/me/rlottie/RLottieImageView;
+
+    invoke-virtual {v3}, Lone/me/rlottie/RLottieImageView;->stopAnimation()V
+
+    invoke-virtual {p0, v3}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
+
+    goto :goto_1
+
+    :cond_2
+    if-eqz v0, :cond_3
+
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
+
+    move-result v0
+
+    iget v3, p0, Lgpd;->b:I
+
+    if-lt v0, v3, :cond_3
+
+    const-string p0, "Reaction effect. Reached max count of lotties effects"
+
+    invoke-static {p5, p0}, Ltej;->t(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+
+    :cond_3
+    invoke-virtual {p3}, Lone/me/rlottie/RLottieDrawable;->getIntrinsicWidth()I
+
+    move-result v0
+
+    invoke-virtual {p3}, Lone/me/rlottie/RLottieDrawable;->getIntrinsicHeight()I
+
+    move-result v3
+
+    new-instance v5, Lone/me/rlottie/RLottieImageView;
+
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v4
+
+    invoke-direct {v5, v4}, Lone/me/rlottie/RLottieImageView;-><init>(Landroid/content/Context;)V
+
+    invoke-static {v5, p3}, Lone/me/rlottie/RLottieImageViewUtils;->setLottieDrawable(Lone/me/rlottie/RLottieImageView;Lone/me/rlottie/RLottieDrawable;)Z
+
+    invoke-virtual {v5}, Lone/me/rlottie/RLottieImageView;->playAnimation()V
+
+    sget v4, Lhgd;->tag_reaction_effects_view:I
+
+    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    invoke-static {v4, v5, p1}, Lvej;->h(ILandroid/view/View;Ljava/lang/Object;)V
+
+    invoke-virtual {p0, v2}, Landroid/view/View;->setLayoutDirection(I)V
+
+    new-instance p1, Landroid/widget/FrameLayout$LayoutParams;
+
+    invoke-direct {p1, v0, v3}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+
+    invoke-virtual {v5, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    const/high16 p1, 0x40000000    # 2.0f
+
+    if-eqz v1, :cond_4
+
+    invoke-virtual {p4}, Landroid/graphics/Rect;->centerX()I
+
+    move-result p2
+
+    int-to-float p2, p2
+
+    int-to-float v0, v0
+
+    div-float/2addr v0, p1
+
+    sub-float/2addr p2, v0
+
+    goto :goto_2
+
+    :cond_4
+    invoke-static {v0, p4}, Lgpd;->c(ILandroid/graphics/Rect;)F
+
+    move-result p2
+
+    :goto_2
+    invoke-virtual {v5, p2}, Landroid/view/View;->setX(F)V
+
+    invoke-virtual {p4}, Landroid/graphics/Rect;->centerY()I
+
+    move-result p2
+
+    int-to-float p2, p2
+
+    int-to-float p4, v3
+
+    div-float/2addr p4, p1
+
+    sub-float/2addr p2, p4
+
+    invoke-virtual {v5, p2}, Landroid/view/View;->setY(F)V
+
+    invoke-virtual {p0, v5}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    new-instance v8, Lepd;
+
+    invoke-direct {v8, p0, v5}, Lepd;-><init>(Lgpd;Lone/me/rlottie/RLottieImageView;)V
+
+    invoke-virtual {p3, v8}, Lone/me/rlottie/RLottieDrawable;->addDrawableLoadListener(Lone/me/rlottie/RLottieDrawable$DrawableLoadListener;)V
+
+    new-instance v9, Lfpd;
+
+    invoke-direct {v9, p0, v5}, Lfpd;-><init>(Lgpd;Lone/me/rlottie/RLottieImageView;)V
+
+    invoke-virtual {p3, v9}, Lone/me/rlottie/RLottieDrawable;->addOnAllFramesRenderedListener(Lone/me/rlottie/RLottieDrawable$OnAllFramesRenderedListener;)V
+
+    invoke-virtual {v5}, Landroid/view/View;->isAttachedToWindow()Z
+
+    move-result p1
+
+    if-nez p1, :cond_5
+
+    const-string p0, "onDetach"
+
+    invoke-static {p5, p0}, Ltej;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {p3, v8}, Lone/me/rlottie/RLottieDrawable;->removeDrawableLoadListener(Lone/me/rlottie/RLottieDrawable$DrawableLoadListener;)V
+
+    invoke-virtual {p3, v9}, Lone/me/rlottie/RLottieDrawable;->removeOnAllFramesRenderedListener(Lone/me/rlottie/RLottieDrawable$OnAllFramesRenderedListener;)V
+
+    return-void
+
+    :cond_5
+    new-instance v4, Ldpd;
+
+    move-object v6, p0
+
+    move-object v7, p3
+
+    invoke-direct/range {v4 .. v9}, Ldpd;-><init>(Lone/me/rlottie/RLottieImageView;Lgpd;Lone/me/rlottie/RLottieDrawable;Lepd;Lfpd;)V
+
+    invoke-virtual {v5, v4}, Landroid/view/View;->addOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+
+    return-void
+.end method
+
+.method public static c(ILandroid/graphics/Rect;)F
+    .locals 2
+
+    iget p1, p1, Landroid/graphics/Rect;->left:I
+
+    const/16 v0, 0xa
+
+    int-to-float v0, v0
+
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    invoke-static {v0, v1, p1}, Lj64;->b(FFI)I
+
+    move-result p1
+
+    const/16 v0, 0x14
+
+    int-to-float v0, v0
+
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v0, v1
+
+    invoke-static {v0}, Lmhj;->f(F)I
+
+    move-result v0
+
+    div-int/lit8 v0, v0, 0x2
+
+    add-int/2addr v0, p1
+
+    int-to-float p1, v0
+
+    int-to-float p0, p0
+
+    const/high16 v0, 0x40000000    # 2.0f
+
+    div-float/2addr p0, v0
+
+    sub-float/2addr p1, p0
+
+    return p1
+.end method
+
+.method private final getLotties()Lgwe;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lgwe;"
+        }
+    .end annotation
+
+    new-instance v0, Lpu;
+
+    const/16 v1, 0xa
+
+    invoke-direct {v0, v1, p0}, Lpu;-><init>(ILjava/lang/Object;)V
+
+    sget-object v1, Lgr6;->t0:Lgr6;
+
+    invoke-static {v0, v1}, Lswe;->e(Lgwe;Lks6;)Ln56;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final b()V
+    .locals 2
+
+    invoke-direct {p0}, Lgpd;->getLotties()Lgwe;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lgwe;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lone/me/rlottie/RLottieImageView;
+
+    invoke-virtual {v1}, Lone/me/rlottie/RLottieImageView;->stopAnimation()V
+
+    invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final d(JLandroid/graphics/Rect;)V
+    .locals 4
+
+    invoke-direct {p0}, Lgpd;->getLotties()Lgwe;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lgwe;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :cond_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    move-object v2, v1
+
+    check-cast v2, Lone/me/rlottie/RLottieImageView;
+
+    sget v3, Lhgd;->tag_reaction_effects_view:I
+
+    invoke-static {v2, v3}, Lvej;->g(Landroid/view/View;I)Ljava/lang/Object;
 
     move-result-object v2
+
+    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
 
     if-eqz v2, :cond_0
 
-    check-cast v2, Landroid/widget/FrameLayout$LayoutParams;
-
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Integer;
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    iput p1, v2, Landroid/widget/FrameLayout$LayoutParams;->height:I
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    return-void
-
-    :cond_0
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    invoke-direct {p1, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :pswitch_0
-    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->i1:[Lz28;
-
-    invoke-virtual {v2}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->Q0()Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_1
-
-    check-cast v2, Landroid/widget/FrameLayout$LayoutParams;
-
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Integer;
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    iput p1, v2, Landroid/widget/FrameLayout$LayoutParams;->height:I
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    return-void
+    goto :goto_0
 
     :cond_1
-    new-instance p1, Ljava/lang/NullPointerException;
+    const/4 v1, 0x0
 
-    invoke-direct {p1, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    :goto_0
+    check-cast v1, Lone/me/rlottie/RLottieImageView;
 
-    throw p1
-
-    :pswitch_1
-    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->i1:[Lz28;
-
-    invoke-virtual {v2}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->M0()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Integer;
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    invoke-static {v0, p1}, Lpti;->f(Landroid/graphics/drawable/Drawable;I)V
+    if-nez v1, :cond_2
 
     return-void
 
-    :pswitch_2
-    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->i1:[Lz28;
-
-    invoke-virtual {v2}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->C0()Landroid/widget/ImageView;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Integer;
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+    :cond_2
+    invoke-virtual {v1}, Lone/me/rlottie/RLottieImageView;->isPlaying()Z
 
     move-result p1
 
-    invoke-static {v0, p1}, Lpti;->f(Landroid/graphics/drawable/Drawable;I)V
+    if-nez p1, :cond_3
+
+    iget-object p1, p0, Lgpd;->a:Ljava/lang/String;
+
+    const-string p2, "Reaction effect. Skip move"
+
+    invoke-static {p1, p2}, Ltej;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
-    nop
+    :cond_3
+    invoke-virtual {v1}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
+
+    move-result p2
+
+    invoke-static {p2, p3}, Lgpd;->c(ILandroid/graphics/Rect;)F
+
+    move-result p2
+
+    invoke-virtual {v1, p2}, Landroid/view/View;->setX(F)V
+
+    invoke-virtual {p3}, Landroid/graphics/Rect;->centerY()I
+
+    move-result p2
+
+    int-to-float p2, p2
+
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
+
+    move-result p1
+
+    int-to-float p1, p1
+
+    const/high16 p3, 0x40000000    # 2.0f
+
+    div-float/2addr p1, p3
+
+    sub-float/2addr p2, p1
+
+    invoke-virtual {v1, p2}, Landroid/view/View;->setY(F)V
+
+    return-void
+.end method
+
+.method public final getLottieMaxCount()I
+    .locals 1
+
+    iget v0, p0, Lgpd;->b:I
+
+    return v0
+.end method
+
+.method public final setLottieMaxCount(I)V
+    .locals 0
+
+    iput p1, p0, Lgpd;->b:I
+
+    return-void
+.end method
+
+.method public final setScrollOffset(I)V
+    .locals 3
+
+    int-to-float p1, p1
+
+    new-instance v0, Le2;
+
+    const/16 v1, 0x9
+
+    invoke-direct {v0, v1, p0}, Le2;-><init>(ILjava/lang/Object;)V
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/view/View;
+
+    invoke-virtual {v1}, Landroid/view/View;->getTranslationY()F
+
+    move-result v2
+
+    add-float/2addr v2, p1
+
+    invoke-virtual {v1, v2}, Landroid/view/View;->setTranslationY(F)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
 .end method

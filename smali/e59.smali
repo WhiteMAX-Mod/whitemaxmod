@@ -1,43 +1,181 @@
-.class public final Le59;
+.class public abstract Le59;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Liy0;
+
+
+# static fields
+.field public static final X:Lp48;
+
 
 # instance fields
-.field public final a:I
+.field public final a:J
 
-.field public final b:I
+.field public final b:J
 
-.field public final c:I
+.field public final c:Z
 
-.field public final d:Ljava/lang/Object;
+.field public final d:Z
 
-.field public final e:J
-
-.field public final f:J
-
-.field public final g:Ljava/lang/Object;
+.field public final o:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(IILjava/lang/Object;ILjava/lang/Object;JJ)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput p1, p0, Le59;->a:I
+    new-instance v0, Lc59;
 
-    iput p2, p0, Le59;->b:I
+    invoke-direct {v0}, Lc59;-><init>()V
 
-    iput-object p3, p0, Le59;->g:Ljava/lang/Object;
+    invoke-virtual {v0}, Lc59;->a()Lg59;
 
-    iput p4, p0, Le59;->c:I
+    new-instance v0, Lp48;
 
-    iput-object p5, p0, Le59;->d:Ljava/lang/Object;
+    const/16 v1, 0x13
 
-    iput-wide p6, p0, Le59;->e:J
+    invoke-direct {v0, v1}, Lp48;-><init>(I)V
 
-    iput-wide p8, p0, Le59;->f:J
+    sput-object v0, Le59;->X:Lp48;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lc59;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    iget-wide v0, p1, Lc59;->a:J
+
+    iput-wide v0, p0, Le59;->a:J
+
+    iget-wide v0, p1, Lc59;->b:J
+
+    iput-wide v0, p0, Le59;->b:J
+
+    iget-boolean v0, p1, Lc59;->c:Z
+
+    iput-boolean v0, p0, Le59;->c:Z
+
+    iget-boolean v0, p1, Lc59;->d:Z
+
+    iput-boolean v0, p0, Le59;->d:Z
+
+    iget-boolean p1, p1, Lc59;->e:Z
+
+    iput-boolean p1, p0, Le59;->o:Z
+
     return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Le59;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Le59;
+
+    iget-wide v3, p0, Le59;->a:J
+
+    iget-wide v5, p1, Le59;->a:J
+
+    cmp-long v1, v3, v5
+
+    if-nez v1, :cond_2
+
+    iget-wide v3, p0, Le59;->b:J
+
+    iget-wide v5, p1, Le59;->b:J
+
+    cmp-long v1, v3, v5
+
+    if-nez v1, :cond_2
+
+    iget-boolean v1, p0, Le59;->c:Z
+
+    iget-boolean v3, p1, Le59;->c:Z
+
+    if-ne v1, v3, :cond_2
+
+    iget-boolean v1, p0, Le59;->d:Z
+
+    iget-boolean v3, p1, Le59;->d:Z
+
+    if-ne v1, v3, :cond_2
+
+    iget-boolean v1, p0, Le59;->o:Z
+
+    iget-boolean p1, p1, Le59;->o:Z
+
+    if-ne v1, p1, :cond_2
+
+    return v0
+
+    :cond_2
+    return v2
+.end method
+
+.method public final hashCode()I
+    .locals 5
+
+    iget-wide v0, p0, Le59;->a:J
+
+    const/16 v2, 0x20
+
+    ushr-long v3, v0, v2
+
+    xor-long/2addr v0, v3
+
+    long-to-int v0, v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-wide v3, p0, Le59;->b:J
+
+    ushr-long v1, v3, v2
+
+    xor-long/2addr v1, v3
+
+    long-to-int v1, v1
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Le59;->c:Z
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Le59;->d:Z
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Le59;->o:Z
+
+    add-int/2addr v0, v1
+
+    return v0
 .end method

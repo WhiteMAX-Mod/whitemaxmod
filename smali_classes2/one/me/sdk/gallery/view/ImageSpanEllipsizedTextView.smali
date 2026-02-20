@@ -30,11 +30,11 @@
 
 
 # instance fields
-.field public x0:Ljava/lang/CharSequence;
+.field public w0:Ljava/lang/CharSequence;
+
+.field public final x0:Landroid/graphics/Rect;
 
 .field public final y0:Landroid/graphics/Rect;
-
-.field public final z0:Landroid/graphics/Rect;
 
 
 # direct methods
@@ -49,13 +49,13 @@
 
     invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
 
-    iput-object p1, p0, Lone/me/sdk/gallery/view/ImageSpanEllipsizedTextView;->y0:Landroid/graphics/Rect;
+    iput-object p1, p0, Lone/me/sdk/gallery/view/ImageSpanEllipsizedTextView;->x0:Landroid/graphics/Rect;
 
     new-instance p1, Landroid/graphics/Rect;
 
     invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
 
-    iput-object p1, p0, Lone/me/sdk/gallery/view/ImageSpanEllipsizedTextView;->z0:Landroid/graphics/Rect;
+    iput-object p1, p0, Lone/me/sdk/gallery/view/ImageSpanEllipsizedTextView;->y0:Landroid/graphics/Rect;
 
     return-void
 .end method
@@ -73,13 +73,13 @@
 
     move-result-object p2
 
-    iget-object p3, p1, Lone/me/sdk/gallery/view/ImageSpanEllipsizedTextView;->y0:Landroid/graphics/Rect;
+    iget-object p3, p1, Lone/me/sdk/gallery/view/ImageSpanEllipsizedTextView;->x0:Landroid/graphics/Rect;
 
     const/4 p4, 0x0
 
     if-eqz p2, :cond_1
 
-    invoke-static {p2}, Lrzf;->H(Ljava/lang/CharSequence;)Z
+    invoke-static {p2}, Ld7g;->G(Ljava/lang/CharSequence;)Z
 
     move-result p5
 
@@ -135,7 +135,7 @@
 
     if-eqz v0, :cond_4
 
-    iget-object v1, p1, Lone/me/sdk/gallery/view/ImageSpanEllipsizedTextView;->z0:Landroid/graphics/Rect;
+    iget-object v1, p1, Lone/me/sdk/gallery/view/ImageSpanEllipsizedTextView;->y0:Landroid/graphics/Rect;
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->copyBounds(Landroid/graphics/Rect;)V
 
@@ -174,7 +174,7 @@
 
     add-int/2addr p3, p2
 
-    invoke-static {p0}, Lymj;->c(Landroid/view/View;)Z
+    invoke-static {p0}, Llvj;->d(Landroid/view/View;)Z
 
     move-result p2
 
@@ -258,11 +258,11 @@
     sget-object p1, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
 
     :cond_2
-    iget-object v2, p0, Lone/me/sdk/gallery/view/ImageSpanEllipsizedTextView;->x0:Ljava/lang/CharSequence;
+    iget-object v2, p0, Lone/me/sdk/gallery/view/ImageSpanEllipsizedTextView;->w0:Ljava/lang/CharSequence;
 
     if-eqz v2, :cond_4
 
-    invoke-static {v2}, Lrzf;->H(Ljava/lang/CharSequence;)Z
+    invoke-static {v2}, Ld7g;->G(Ljava/lang/CharSequence;)Z
 
     move-result v2
 
@@ -271,7 +271,7 @@
     goto :goto_1
 
     :cond_3
-    iget-object v2, p0, Lone/me/sdk/gallery/view/ImageSpanEllipsizedTextView;->x0:Ljava/lang/CharSequence;
+    iget-object v2, p0, Lone/me/sdk/gallery/view/ImageSpanEllipsizedTextView;->w0:Ljava/lang/CharSequence;
 
     invoke-virtual {p0}, Landroid/widget/TextView;->getPaint()Landroid/text/TextPaint;
 
@@ -321,7 +321,7 @@
 .method public final setText(Ljava/lang/CharSequence;Landroid/widget/TextView$BufferType;)V
     .locals 0
 
-    iput-object p1, p0, Lone/me/sdk/gallery/view/ImageSpanEllipsizedTextView;->x0:Ljava/lang/CharSequence;
+    iput-object p1, p0, Lone/me/sdk/gallery/view/ImageSpanEllipsizedTextView;->w0:Ljava/lang/CharSequence;
 
     invoke-super {p0, p1, p2}, Lru/ok/tamtam/animoji/views/AnimojiTextView;->setText(Ljava/lang/CharSequence;Landroid/widget/TextView$BufferType;)V
 

@@ -1,306 +1,285 @@
 .class public final Lk4e;
-.super Lp4e;
+.super Lb8a;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic N0:I
-
-
 # instance fields
-.field public final I0:Landroid/graphics/Paint;
+.field public final synthetic c:I
 
-.field public final J0:Landroid/graphics/Paint;
-
-.field public final K0:Landroid/graphics/Bitmap;
-
-.field public L0:Ljava/lang/ref/WeakReference;
-
-.field public M0:Landroid/graphics/RectF;
+.field public final d:Landroid/content/Context;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;Landroid/graphics/Paint;)V
-    .locals 3
+.method public constructor <init>(IILandroid/content/Context;)V
+    .locals 1
 
-    new-instance v0, Landroid/graphics/drawable/BitmapDrawable;
+    const/4 v0, 0x0
 
-    invoke-direct {v0, p1, p2}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
+    iput v0, p0, Lk4e;->c:I
 
-    invoke-direct {p0, v0}, Lp4e;-><init>(Landroid/graphics/drawable/Drawable;)V
+    .line 1
+    invoke-direct {p0, p1, p2}, Lb8a;-><init>(II)V
 
-    new-instance p1, Landroid/graphics/Paint;
+    .line 2
+    iput-object p3, p0, Lk4e;->d:Landroid/content/Context;
 
-    invoke-direct {p1}, Landroid/graphics/Paint;-><init>()V
+    return-void
+.end method
 
-    iput-object p1, p0, Lk4e;->I0:Landroid/graphics/Paint;
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 2
 
-    new-instance v0, Landroid/graphics/Paint;
+    const/4 v0, 0x1
 
-    const/4 v1, 0x1
+    iput v0, p0, Lk4e;->c:I
 
-    invoke-direct {v0, v1}, Landroid/graphics/Paint;-><init>(I)V
+    const/16 v0, 0x9
 
-    iput-object v0, p0, Lk4e;->J0:Landroid/graphics/Paint;
+    const/16 v1, 0xa
 
-    const/4 v2, 0x0
+    .line 3
+    invoke-direct {p0, v0, v1}, Lb8a;-><init>(II)V
 
-    iput-object v2, p0, Lk4e;->M0:Landroid/graphics/RectF;
-
-    iput-object p2, p0, Lk4e;->K0:Landroid/graphics/Bitmap;
-
-    if-eqz p3, :cond_0
-
-    invoke-virtual {p1, p3}, Landroid/graphics/Paint;->set(Landroid/graphics/Paint;)V
-
-    :cond_0
-    invoke-virtual {p1, v1}, Landroid/graphics/Paint;->setFlags(I)V
-
-    sget-object p1, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
-
-    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
+    iput-object p1, p0, Lk4e;->d:Landroid/content/Context;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final draw(Landroid/graphics/Canvas;)V
-    .locals 5
+.method public final b(Lacg;)V
+    .locals 11
 
-    invoke-static {}, Lvp6;->e()Lup6;
+    iget v0, p0, Lk4e;->c:I
 
-    iget-boolean v0, p0, Lp4e;->b:Z
+    packed-switch v0, :pswitch_data_0
 
-    if-nez v0, :cond_0
+    const-string v0, "CREATE TABLE IF NOT EXISTS `Preference` (`key` TEXT NOT NULL, `long_value` INTEGER, PRIMARY KEY(`key`))"
 
-    iget-boolean v0, p0, Lp4e;->c:Z
+    invoke-interface {p1, v0}, Lacg;->z(Ljava/lang/String;)V
 
-    if-nez v0, :cond_0
+    iget-object v0, p0, Lk4e;->d:Landroid/content/Context;
 
-    iget v0, p0, Lp4e;->d:F
-
-    const/4 v1, 0x0
-
-    cmpl-float v0, v0, v1
-
-    if-lez v0, :cond_1
-
-    :cond_0
-    iget-object v0, p0, Lk4e;->K0:Landroid/graphics/Bitmap;
-
-    if-eqz v0, :cond_1
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    :goto_0
-    if-nez v0, :cond_2
-
-    invoke-super {p0, p1}, Lp4e;->draw(Landroid/graphics/Canvas;)V
-
-    invoke-static {}, Lvp6;->e()Lup6;
-
-    return-void
-
-    :cond_2
-    invoke-virtual {p0}, Lk4e;->e()V
-
-    invoke-virtual {p0}, Lp4e;->d()V
-
-    iget-object v0, p0, Lk4e;->L0:Ljava/lang/ref/WeakReference;
-
-    iget-object v1, p0, Lk4e;->I0:Landroid/graphics/Paint;
-
-    iget-object v2, p0, Lk4e;->K0:Landroid/graphics/Bitmap;
-
-    if-eqz v0, :cond_3
-
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    if-eq v0, v2, :cond_4
-
-    :cond_3
-    new-instance v0, Ljava/lang/ref/WeakReference;
-
-    invoke-direct {v0, v2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object v0, p0, Lk4e;->L0:Ljava/lang/ref/WeakReference;
-
-    if-eqz v2, :cond_4
-
-    new-instance v0, Landroid/graphics/BitmapShader;
-
-    sget-object v3, Landroid/graphics/Shader$TileMode;->CLAMP:Landroid/graphics/Shader$TileMode;
-
-    invoke-direct {v0, v2, v3, v3}, Landroid/graphics/BitmapShader;-><init>(Landroid/graphics/Bitmap;Landroid/graphics/Shader$TileMode;Landroid/graphics/Shader$TileMode;)V
-
-    invoke-virtual {v1, v0}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lp4e;->X:Z
-
-    :cond_4
-    iget-boolean v0, p0, Lp4e;->X:Z
+    const-string v1, "androidx.work.util.preferences"
 
     const/4 v2, 0x0
 
-    if-eqz v0, :cond_5
+    invoke-virtual {v0, v1, v2}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
-    invoke-virtual {v1}, Landroid/graphics/Paint;->getShader()Landroid/graphics/Shader;
+    move-result-object v1
+
+    const-string v3, "reschedule_needed"
+
+    invoke-interface {v1, v3}, Landroid/content/SharedPreferences;->contains(Ljava/lang/String;)Z
+
+    move-result v4
+
+    const-string v5, "INSERT OR REPLACE INTO `Preference` (`key`, `long_value`) VALUES (@key, @long_value)"
+
+    const-string v6, "last_cancel_all_time_ms"
+
+    if-nez v4, :cond_0
+
+    invoke-interface {v1, v6}, Landroid/content/SharedPreferences;->contains(Ljava/lang/String;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_2
+
+    :cond_0
+    const-wide/16 v7, 0x0
+
+    invoke-interface {v1, v6, v7, v8}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
+
+    move-result-wide v9
+
+    invoke-interface {v1, v3, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    const-wide/16 v7, 0x1
+
+    :cond_1
+    invoke-interface {p1}, Lacg;->u()V
+
+    :try_start_0
+    invoke-static {v9, v10}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v4
+
+    filled-new-array {v6, v4}, [Ljava/lang/Object;
+
+    move-result-object v4
+
+    invoke-interface {p1, v5, v4}, Lacg;->O(Ljava/lang/String;[Ljava/lang/Object;)V
+
+    invoke-static {v7, v8}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v4
+
+    filled-new-array {v3, v4}, [Ljava/lang/Object;
+
+    move-result-object v3
+
+    invoke-interface {p1, v5, v3}, Lacg;->O(Ljava/lang/String;[Ljava/lang/Object;)V
+
+    invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->clear()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->apply()V
+
+    invoke-interface {p1}, Lacg;->N()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+
+    invoke-interface {p1}, Lacg;->a0()V
+
+    :cond_2
+    const-string v1, "androidx.work.util.id"
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    if-eqz v0, :cond_5
+    const-string v1, "next_job_scheduler_id"
 
-    iget-object v3, p0, Lp4e;->E0:Landroid/graphics/Matrix;
+    invoke-interface {v0, v1}, Landroid/content/SharedPreferences;->contains(Ljava/lang/String;)Z
 
-    invoke-virtual {v0, v3}, Landroid/graphics/Shader;->setLocalMatrix(Landroid/graphics/Matrix;)V
+    move-result v3
 
-    iput-boolean v2, p0, Lp4e;->X:Z
+    if-nez v3, :cond_3
 
-    :cond_5
-    invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setFilterBitmap(Z)V
+    invoke-interface {v0, v1}, Landroid/content/SharedPreferences;->contains(Ljava/lang/String;)Z
 
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
+    move-result v3
 
-    move-result v0
+    if-eqz v3, :cond_4
 
-    iget-object v2, p0, Lp4e;->D0:Landroid/graphics/Matrix;
+    :cond_3
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
-    invoke-virtual {p1, v2}, Landroid/graphics/Canvas;->concat(Landroid/graphics/Matrix;)V
+    move-result v3
 
-    iget-object v2, p0, Lk4e;->M0:Landroid/graphics/RectF;
+    const-string v4, "next_alarm_manager_id"
 
-    iget-object v3, p0, Lp4e;->o:Landroid/graphics/Path;
-
-    if-eqz v2, :cond_6
-
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
+    invoke-interface {v0, v4, v2}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
     move-result v2
 
-    iget-object v4, p0, Lk4e;->M0:Landroid/graphics/RectF;
+    invoke-interface {p1}, Lacg;->u()V
 
-    invoke-virtual {p1, v4}, Landroid/graphics/Canvas;->clipRect(Landroid/graphics/RectF;)Z
+    :try_start_1
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-virtual {p1, v3, v1}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
+    move-result-object v3
 
-    invoke-virtual {p1, v2}, Landroid/graphics/Canvas;->restoreToCount(I)V
+    filled-new-array {v1, v3}, [Ljava/lang/Object;
 
-    goto :goto_1
+    move-result-object v1
 
-    :cond_6
-    invoke-virtual {p1, v3, v1}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
+    invoke-interface {p1, v5, v1}, Lacg;->O(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    :goto_1
-    iget v2, p0, Lp4e;->d:F
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    const/4 v3, 0x0
+    move-result-object v1
 
-    cmpl-float v3, v2, v3
+    filled-new-array {v4, v1}, [Ljava/lang/Object;
 
-    if-lez v3, :cond_7
+    move-result-object v1
 
-    iget-object v3, p0, Lk4e;->J0:Landroid/graphics/Paint;
+    invoke-interface {p1, v5, v1}, Lacg;->O(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-virtual {v3, v2}, Landroid/graphics/Paint;->setStrokeWidth(F)V
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
-    iget v2, p0, Lp4e;->Y:I
+    move-result-object v0
 
-    invoke-virtual {v1}, Landroid/graphics/Paint;->getAlpha()I
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->clear()Landroid/content/SharedPreferences$Editor;
 
-    move-result v1
+    move-result-object v0
 
-    invoke-static {v2, v1}, Lvnj;->c(II)I
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    move-result v1
+    invoke-interface {p1}, Lacg;->N()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    invoke-virtual {v3, v1}, Landroid/graphics/Paint;->setColor(I)V
+    invoke-interface {p1}, Lacg;->a0()V
 
-    iget-object v1, p0, Lp4e;->Z:Landroid/graphics/Path;
-
-    invoke-virtual {p1, v1, v3}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
-
-    :cond_7
-    invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->restoreToCount(I)V
-
-    invoke-static {}, Lvp6;->e()Lup6;
-
+    :cond_4
     return-void
-.end method
 
-.method public final e()V
-    .locals 3
+    :catchall_0
+    move-exception v0
 
-    invoke-super {p0}, Lp4e;->e()V
+    invoke-interface {p1}, Lacg;->a0()V
 
-    iget-object v0, p0, Lk4e;->M0:Landroid/graphics/RectF;
+    throw v0
 
-    if-nez v0, :cond_0
+    :catchall_1
+    move-exception v0
 
-    new-instance v0, Landroid/graphics/RectF;
+    invoke-interface {p1}, Lacg;->a0()V
 
-    invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
+    throw v0
 
-    iput-object v0, p0, Lk4e;->M0:Landroid/graphics/RectF;
+    :pswitch_0
+    iget v0, p0, Lb8a;->b:I
 
-    :cond_0
-    iget-object v0, p0, Lk4e;->M0:Landroid/graphics/RectF;
+    const/16 v1, 0xa
 
-    iget-object v1, p0, Lp4e;->x0:Landroid/graphics/RectF;
+    const/4 v2, 0x1
 
-    iget-object v2, p0, Lp4e;->E0:Landroid/graphics/Matrix;
+    const-string v3, "reschedule_needed"
 
-    invoke-virtual {v2, v0, v1}, Landroid/graphics/Matrix;->mapRect(Landroid/graphics/RectF;Landroid/graphics/RectF;)Z
+    if-lt v0, v1, :cond_5
 
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    filled-new-array {v3, v0}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    const-string v1, "INSERT OR REPLACE INTO `Preference` (`key`, `long_value`) VALUES (@key, @long_value)"
+
+    invoke-interface {p1, v1, v0}, Lacg;->O(Ljava/lang/String;[Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_5
+    const-string p1, "androidx.work.util.preferences"
+
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Lk4e;->d:Landroid/content/Context;
+
+    invoke-virtual {v1, p1, v0}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object p1
+
+    invoke-interface {p1, v3, v2}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Landroid/content/SharedPreferences$Editor;->apply()V
+
+    :goto_0
     return-void
-.end method
 
-.method public final f()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final setAlpha(I)V
-    .locals 2
-
-    invoke-super {p0, p1}, Lp4e;->setAlpha(I)V
-
-    iget-object v0, p0, Lk4e;->I0:Landroid/graphics/Paint;
-
-    invoke-virtual {v0}, Landroid/graphics/Paint;->getAlpha()I
-
-    move-result v1
-
-    if-eq p1, v1, :cond_0
-
-    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setAlpha(I)V
-
-    invoke-super {p0, p1}, Lp4e;->setAlpha(I)V
-
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final setColorFilter(Landroid/graphics/ColorFilter;)V
-    .locals 1
-
-    invoke-super {p0, p1}, Lp4e;->setColorFilter(Landroid/graphics/ColorFilter;)V
-
-    iget-object v0, p0, Lk4e;->I0:Landroid/graphics/Paint;
-
-    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColorFilter(Landroid/graphics/ColorFilter;)Landroid/graphics/ColorFilter;
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

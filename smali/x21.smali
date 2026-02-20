@@ -1,74 +1,113 @@
-.class public final Lx21;
-.super Lp6g;
+.class public final synthetic Lx21;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Ljava/util/function/UnaryOperator;
 
 
 # instance fields
-.field public final synthetic o:Ld31;
+.field public final synthetic a:Z
+
+.field public final synthetic b:Lq31;
 
 
 # direct methods
-.method public constructor <init>(Ld31;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(ZLq31;)V
     .locals 0
 
-    iput-object p1, p0, Lx21;->o:Ld31;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput-boolean p1, p0, Lx21;->a:Z
 
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lx21;->b:Lq31;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
 
-    check-cast p1, Ls04;
+    check-cast p1, Lmu;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {p0, p1, p2}, Lx21;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    new-instance v0, Lfu;
 
-    move-result-object p1
+    invoke-direct {v0, p1}, Lfu;-><init>(Lmu;)V
 
-    check-cast p1, Lx21;
+    :cond_0
+    :goto_0
+    invoke-virtual {v0}, Lfu;->hasNext()Z
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    move-result v1
 
-    invoke-virtual {p1, p2}, Lx21;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-boolean v2, p0, Lx21;->a:Z
 
-    return-object p2
-.end method
+    if-eqz v1, :cond_2
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    invoke-virtual {v0}, Lfu;->next()Ljava/lang/Object;
 
-    new-instance p1, Lx21;
+    move-result-object v1
 
-    iget-object v0, p0, Lx21;->o:Ld31;
+    check-cast v1, Ljava/lang/Number;
 
-    invoke-direct {p1, v0, p2}, Lx21;-><init>(Ld31;Lkotlin/coroutines/Continuation;)V
+    invoke-virtual {v1}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v3
+
+    invoke-static {v3, v4}, Lbxb;->b(J)Lru/ok/android/externcalls/sdk/id/ParticipantId;
+
+    move-result-object v1
+
+    iget-object v3, p0, Lx21;->b:Lq31;
+
+    if-eqz v2, :cond_1
+
+    invoke-virtual {v3}, Lq31;->d()Lac4;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lac4;->a()Lru/ok/android/externcalls/sdk/Conversation;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_0
+
+    const/4 v3, 0x1
+
+    invoke-interface {v2, v1, v3}, Lru/ok/android/externcalls/sdk/Conversation;->promoteParticipant(Lru/ok/android/externcalls/sdk/id/ParticipantId;Z)V
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {v3}, Lq31;->d()Lac4;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lac4;->a()Lru/ok/android/externcalls/sdk/Conversation;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_0
+
+    invoke-interface {v2, v1}, Lru/ok/android/externcalls/sdk/Conversation;->removeParticipant(Lru/ok/android/externcalls/sdk/id/ParticipantId;)V
+
+    goto :goto_0
+
+    :cond_2
+    if-eqz v2, :cond_3
 
     return-object p1
-.end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    :cond_3
+    new-instance p1, Lmu;
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    const/4 v0, 0x0
 
-    sget-object p1, Ld31;->H0:[Lz28;
-
-    iget-object p1, p0, Lx21;->o:Ld31;
-
-    invoke-virtual {p1}, Ld31;->p()V
-
-    sget-object p1, Lb3h;->a:Lb3h;
+    invoke-direct {p1, v0}, Lmu;-><init>(I)V
 
     return-object p1
 .end method

@@ -1,54 +1,130 @@
-.class public interface abstract Lud8;
-.super Ljava/lang/Object;
+.class public final Lud8;
+.super Lpdg;
 .source "SourceFile"
+
+# interfaces
+.implements Lys6;
+
+
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lke8;
+
+.field public final synthetic Z:Landroid/net/Uri;
+
+.field public o:I
+
+
+# direct methods
+.method public constructor <init>(Lke8;Landroid/net/Uri;Lkotlin/coroutines/Continuation;)V
+    .locals 0
+
+    iput-object p1, p0, Lud8;->Y:Lke8;
+
+    iput-object p2, p0, Lud8;->Z:Landroid/net/Uri;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract getItemId()J
-.end method
-
-.method public h(Lud8;)Z
-    .locals 4
-
-    invoke-interface {p0}, Lud8;->getItemId()J
-
-    move-result-wide v0
-
-    invoke-interface {p1}, Lud8;->getItemId()J
-
-    move-result-wide v2
-
-    cmp-long p1, v0, v2
-
-    if-nez p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public k(Lud8;)Ljava/lang/Object;
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    const/4 p1, 0x0
+    check-cast p1, Ljoc;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lud8;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lud8;
+
+    sget-object p2, Lmah;->a:Lmah;
+
+    invoke-virtual {p1, p2}, Lud8;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
 
     return-object p1
 .end method
 
-.method public abstract m()I
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
+
+    new-instance v0, Lud8;
+
+    iget-object v1, p0, Lud8;->Y:Lke8;
+
+    iget-object v2, p0, Lud8;->Z:Landroid/net/Uri;
+
+    invoke-direct {v0, v1, v2, p2}, Lud8;-><init>(Lke8;Landroid/net/Uri;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lud8;->X:Ljava/lang/Object;
+
+    return-object v0
 .end method
 
-.method public q(Lud8;)Z
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    iget-object v0, p0, Lud8;->X:Ljava/lang/Object;
 
-    move-result p1
+    check-cast v0, Ljoc;
 
-    return p1
+    iget v1, p0, Lud8;->o:I
+
+    const/4 v2, 0x1
+
+    if-eqz v1, :cond_1
+
+    if-ne v1, v2, :cond_0
+
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    const/4 p1, 0x0
+
+    iput-object p1, p0, Lud8;->X:Ljava/lang/Object;
+
+    iput v2, p0, Lud8;->o:I
+
+    iget-object p1, p0, Lud8;->Y:Lke8;
+
+    iget-object v1, p0, Lud8;->Z:Landroid/net/Uri;
+
+    invoke-static {p1, v0, v1, p0}, Lke8;->a(Lke8;Ljoc;Landroid/net/Uri;Lda4;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lod4;->a:Lod4;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
 .end method

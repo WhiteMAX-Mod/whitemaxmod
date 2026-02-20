@@ -1,38 +1,25 @@
 .class public final Ldp6;
-.super Lcp6;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lz4g;
 
-
-# instance fields
-.field public final c:Landroid/database/sqlite/SQLiteStatement;
+# static fields
+.field public static final a:Ldp6;
 
 
 # direct methods
-.method public constructor <init>(Landroid/database/sqlite/SQLiteStatement;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 2
 
-    const/4 v0, 0x0
+    new-instance v0, Ldp6;
 
-    invoke-direct {p0, p1, v0}, Lcp6;-><init>(Ljava/io/Closeable;I)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ldp6;->c:Landroid/database/sqlite/SQLiteStatement;
+    new-instance v1, Ljava/util/LinkedHashMap;
+
+    invoke-direct {v1}, Ljava/util/LinkedHashMap;-><init>()V
+
+    sput-object v0, Ldp6;->a:Ldp6;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final l()I
-    .locals 1
-
-    iget-object v0, p0, Ldp6;->c:Landroid/database/sqlite/SQLiteStatement;
-
-    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteStatement;->executeUpdateDelete()I
-
-    move-result v0
-
-    return v0
 .end method

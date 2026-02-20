@@ -2,74 +2,113 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lcd;
+
 
 # instance fields
-.field public final a:Landroid/view/ContextThemeWrapper;
+.field public final a:Z
 
-.field public final b:Landroid/view/LayoutInflater;
-
-.field public c:Landroid/graphics/drawable/Drawable;
-
-.field public d:Ljava/lang/CharSequence;
-
-.field public e:Landroid/view/View;
-
-.field public f:Ljava/lang/CharSequence;
-
-.field public g:Ljava/lang/CharSequence;
-
-.field public h:Landroid/content/DialogInterface$OnClickListener;
-
-.field public i:Ljava/lang/CharSequence;
-
-.field public j:Landroid/content/DialogInterface$OnClickListener;
-
-.field public k:Ljava/lang/CharSequence;
-
-.field public l:Landroid/content/DialogInterface$OnClickListener;
-
-.field public m:Z
-
-.field public n:Loj9;
-
-.field public o:[Ljava/lang/CharSequence;
-
-.field public p:Landroid/widget/ListAdapter;
-
-.field public q:Landroid/content/DialogInterface$OnClickListener;
-
-.field public r:Landroid/view/View;
-
-.field public s:Z
-
-.field public t:I
+.field public final b:Z
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/ContextThemeWrapper;)V
-    .locals 1
+.method public constructor <init>(ZZ)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, -0x1
+    iput-boolean p1, p0, Lqc;->a:Z
 
-    iput v0, p0, Lqc;->t:I
-
-    iput-object p1, p0, Lqc;->a:Landroid/view/ContextThemeWrapper;
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lqc;->m:Z
-
-    const-string v0, "layout_inflater"
-
-    invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/view/LayoutInflater;
-
-    iput-object p1, p0, Lqc;->b:Landroid/view/LayoutInflater;
+    iput-boolean p2, p0, Lqc;->b:Z
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
+
+    if-ne p0, p1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    instance-of v0, p1, Lqc;
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lqc;
+
+    iget-boolean v0, p0, Lqc;->a:Z
+
+    iget-boolean v1, p1, Lqc;->a:Z
+
+    if-eq v0, v1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-boolean v0, p0, Lqc;->b:Z
+
+    iget-boolean p1, p1, Lqc;->b:Z
+
+    if-eq v0, p1, :cond_3
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_3
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-boolean v0, p0, Lqc;->a:Z
+
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Lqc;->b:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, ", isEnabled="
+
+    const-string v1, ")"
+
+    const-string v2, "DisableAllCameraInCall(isSuccess="
+
+    iget-boolean v3, p0, Lqc;->a:Z
+
+    iget-boolean v4, p0, Lqc;->b:Z
+
+    invoke-static {v2, v3, v0, v4, v1}, Lkb0;->j(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

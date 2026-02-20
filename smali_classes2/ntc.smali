@@ -1,25 +1,25 @@
 .class public final Lntc;
-.super Lie0;
+.super Ldg0;
 .source "SourceFile"
 
 
 # instance fields
 .field public final b:J
 
-.field public final c:Lbmc;
+.field public final c:Lxsc;
 
 
 # direct methods
-.method public constructor <init>(JLbmc;)V
+.method public constructor <init>(JLxsc;)V
     .locals 1
 
     const/16 v0, 0x10
 
-    invoke-direct {p0, v0}, Lie0;-><init>(I)V
+    invoke-direct {p0, v0}, Ldg0;-><init>(I)V
 
     iput-wide p1, p0, Lntc;->b:J
 
-    iput-object p3, p0, Lntc;->c:Lbmc;
+    iput-object p3, p0, Lntc;->c:Lxsc;
 
     return-void
 .end method
@@ -58,9 +58,9 @@
     return v2
 
     :cond_2
-    iget-object v1, p0, Lntc;->c:Lbmc;
+    iget-object v1, p0, Lntc;->c:Lxsc;
 
-    iget-object p1, p1, Lntc;->c:Lbmc;
+    iget-object p1, p1, Lntc;->c:Lxsc;
 
     if-eq v1, p1, :cond_3
 
@@ -81,7 +81,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v1, p0, Lntc;->c:Lbmc;
+    iget-object v1, p0, Lntc;->c:Lxsc;
 
     invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
@@ -97,7 +97,7 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "OpenChat(chatId="
+    const-string v1, "ChangeLink(id="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -109,7 +109,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lntc;->c:Lbmc;
+    iget-object v1, p0, Lntc;->c:Lxsc;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

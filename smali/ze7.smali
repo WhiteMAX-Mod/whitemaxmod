@@ -4,48 +4,34 @@
 
 
 # direct methods
-.method public static a(Ljava/lang/Object;)I
+.method public static a(Ljava/lang/Object;)Landroid/icu/util/ULocale;
     .locals 0
 
-    check-cast p0, Landroid/graphics/drawable/Icon;
+    check-cast p0, Landroid/icu/util/ULocale;
 
-    invoke-virtual {p0}, Landroid/graphics/drawable/Icon;->getResId()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static b(Ljava/lang/Object;)Ljava/lang/String;
-    .locals 0
-
-    check-cast p0, Landroid/graphics/drawable/Icon;
-
-    invoke-virtual {p0}, Landroid/graphics/drawable/Icon;->getResPackage()Ljava/lang/String;
+    invoke-static {p0}, Landroid/icu/util/ULocale;->addLikelySubtags(Landroid/icu/util/ULocale;)Landroid/icu/util/ULocale;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static c(Ljava/lang/Object;)I
+.method public static b(Ljava/util/Locale;)Landroid/icu/util/ULocale;
     .locals 0
 
-    check-cast p0, Landroid/graphics/drawable/Icon;
+    invoke-static {p0}, Landroid/icu/util/ULocale;->forLocale(Ljava/util/Locale;)Landroid/icu/util/ULocale;
 
-    invoke-virtual {p0}, Landroid/graphics/drawable/Icon;->getType()I
+    move-result-object p0
 
-    move-result p0
-
-    return p0
+    return-object p0
 .end method
 
-.method public static d(Ljava/lang/Object;)Landroid/net/Uri;
+.method public static c(Ljava/lang/Object;)Ljava/lang/String;
     .locals 0
 
-    check-cast p0, Landroid/graphics/drawable/Icon;
+    check-cast p0, Landroid/icu/util/ULocale;
 
-    invoke-virtual {p0}, Landroid/graphics/drawable/Icon;->getUri()Landroid/net/Uri;
+    invoke-virtual {p0}, Landroid/icu/util/ULocale;->getScript()Ljava/lang/String;
 
     move-result-object p0
 

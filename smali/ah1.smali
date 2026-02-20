@@ -1,24 +1,24 @@
-.class public final synthetic Lah1;
+.class public final Lah1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Llq6;
+.implements Lis6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;
+.field public final synthetic b:Lsla;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;I)V
+.method public synthetic constructor <init>(Lsla;I)V
     .locals 0
 
     iput p2, p0, Lah1;->a:I
 
-    iput-object p1, p0, Lah1;->b:Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;
+    iput-object p1, p0, Lah1;->b:Lsla;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -28,124 +28,231 @@
 
 # virtual methods
 .method public final invoke()Ljava/lang/Object;
-    .locals 9
+    .locals 8
 
     iget v0, p0, Lah1;->a:I
 
-    const/4 v1, 0x0
-
-    iget-object v2, p0, Lah1;->b:Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;
-
     packed-switch v0, :pswitch_data_0
 
-    sget-object v0, Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;->B0:Lyna;
+    sget-object v0, Llyc;->c:Llyc;
 
-    new-instance v0, Ljl1;
+    iget-object v1, p0, Lah1;->b:Lsla;
 
-    new-instance v3, Lah1;
+    check-cast v1, Lxyc;
 
-    invoke-direct {v3, v2, v1}, Lah1;-><init>(Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;I)V
+    iget-wide v2, v1, Lxyc;->b:J
 
-    new-instance v4, Ln8g;
+    iget-boolean v1, v1, Lxyc;->d:Z
 
-    invoke-direct {v4, v3}, Ln8g;-><init>(Llq6;)V
+    invoke-virtual {v0}, Ld3;->n0()Lyn4;
 
-    new-instance v3, Ljgi;
+    move-result-object v0
 
-    invoke-direct {v3, v2, v1}, Ljgi;-><init>(Lone/me/sdk/arch/Widget;I)V
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0, v4, v3}, Ljl1;-><init>(Ln8g;Ljgi;)V
+    const-string v5, ":call-chat?chat_id="
+
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v4, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v2, "&video_enabled="
+
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x6
+
+    invoke-static {v0, v1, v2, v3}, Lyn4;->b(Lyn4;Ljava/lang/String;Landroid/os/Bundle;I)Z
+
+    sget-object v0, Lmah;->a:Lmah;
 
     return-object v0
 
     :pswitch_0
-    sget-object v0, Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;->B0:Lyna;
+    sget-object v0, Llyc;->c:Llyc;
 
-    new-instance v3, Lxe0;
+    iget-object v1, p0, Lah1;->b:Lsla;
 
-    sget v0, Lm6b;->a:I
+    check-cast v1, Lxyc;
 
-    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    iget-object v1, v1, Lxyc;->e:Ljava/lang/String;
 
-    move-result-object v4
+    invoke-virtual {v0}, Ld3;->n0()Lyn4;
 
-    invoke-static {v4, v0}, Lq74;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    move-result-object v0
 
-    move-result-object v4
+    const-string v2, ":call-join-link?link="
 
-    sget-object v5, Lz3b;->a:Lz3b;
+    invoke-virtual {v2, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    move-result-object v1
 
-    move-result-object v6
+    const/4 v2, 0x0
 
-    new-instance v7, Lbh1;
+    const/4 v3, 0x6
 
-    invoke-direct {v7, v1}, Lbh1;-><init>(I)V
+    invoke-static {v0, v1, v2, v3}, Lyn4;->b(Lyn4;Ljava/lang/String;Landroid/os/Bundle;I)Z
 
-    new-instance v8, Lbh1;
+    sget-object v0, Lmah;->a:Lmah;
 
-    const/4 v0, 0x1
-
-    invoke-direct {v8, v0}, Lbh1;-><init>(I)V
-
-    invoke-direct/range {v3 .. v8}, Lxe0;-><init>(Landroid/graphics/drawable/Drawable;Lc4b;Landroid/content/Context;Lnq6;Lnq6;)V
-
-    return-object v3
+    return-object v0
 
     :pswitch_1
-    sget-object v0, Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;->B0:Lyna;
+    sget-object v0, Llyc;->c:Llyc;
 
-    new-instance v3, Laf0;
+    iget-object v1, p0, Lah1;->b:Lsla;
 
-    sget v0, Lm6b;->c:I
+    check-cast v1, Lxyc;
 
-    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    iget-wide v2, v1, Lxyc;->b:J
 
-    move-result-object v1
+    iget-boolean v1, v1, Lxyc;->d:Z
 
-    invoke-static {v1, v0}, Lq74;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v4
-
-    sget-object v0, Lpc3;->t0:Lkme;
-
-    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lkme;->n(Landroid/content/Context;)Lpc3;
+    invoke-virtual {v0}, Ld3;->n0()Lyn4;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lpc3;->j()Lzlb;
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    move-result-object v6
+    const-string v5, ":call-user?opponent_id="
 
-    new-instance v7, Li8;
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const/16 v0, 0x1c
+    invoke-virtual {v4, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    invoke-direct {v7, v0}, Li8;-><init>(I)V
+    const-string v2, "&video_enabled="
 
-    new-instance v8, Li8;
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/16 v0, 0x1d
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    invoke-direct {v8, v0}, Li8;-><init>(I)V
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    sget-object v5, Lb4b;->a:Lb4b;
+    move-result-object v1
 
-    invoke-direct/range {v3 .. v8}, Laf0;-><init>(Landroid/graphics/drawable/Drawable;Lc4b;Lzlb;Lnq6;Lnq6;)V
+    const/4 v2, 0x0
 
-    return-object v3
+    const/4 v3, 0x6
+
+    invoke-static {v0, v1, v2, v3}, Lyn4;->b(Lyn4;Ljava/lang/String;Landroid/os/Bundle;I)Z
+
+    sget-object v0, Lmah;->a:Lmah;
+
+    return-object v0
 
     :pswitch_2
-    sget-object v0, Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;->B0:Lyna;
+    sget-object v0, Lm74;->c:Lm74;
 
-    invoke-virtual {v2}, La94;->getRouter()Lw4e;
+    iget-object v1, p0, Lah1;->b:Lsla;
+
+    check-cast v1, Lmuf;
+
+    iget-wide v2, v1, Lmuf;->b:J
+
+    iget-boolean v1, v1, Lmuf;->c:Z
+
+    invoke-virtual {v0, v2, v3, v1}, Lm74;->J0(JZ)V
+
+    sget-object v0, Lmah;->a:Lmah;
+
+    return-object v0
+
+    :pswitch_3
+    sget-object v0, Lhj1;->c:Lhj1;
+
+    iget-object v1, p0, Lah1;->b:Lsla;
+
+    check-cast v1, Lcf1;
+
+    iget-object v2, v1, Lcf1;->b:Ljava/lang/String;
+
+    iget-boolean v3, v1, Lcf1;->c:Z
+
+    iget-boolean v4, v1, Lcf1;->d:Z
+
+    iget-boolean v5, v1, Lcf1;->e:Z
+
+    iget-boolean v1, v1, Lcf1;->f:Z
+
+    invoke-virtual {v0}, Ld3;->n0()Lyn4;
 
     move-result-object v0
+
+    new-instance v6, Lxn4;
+
+    invoke-direct {v6}, Lxn4;-><init>()V
+
+    const-string v7, ":call-join-link"
+
+    iput-object v7, v6, Lxn4;->a:Ljava/lang/String;
+
+    const-string v7, "link"
+
+    invoke-virtual {v6, v2, v7}, Lxn4;->d(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v2, "is_video_call"
+
+    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v3
+
+    invoke-virtual {v6, v3, v2}, Lxn4;->d(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v2, "video_enabled"
+
+    invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v3
+
+    invoke-virtual {v6, v3, v2}, Lxn4;->d(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v2, "microphone_enabled"
+
+    invoke-static {v5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v3
+
+    invoke-virtual {v6, v3, v2}, Lxn4;->d(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v2, "front_camera_enabled"
+
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v1
+
+    invoke-virtual {v6, v1, v2}, Lxn4;->d(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v1, "is_new"
+
+    sget-object v2, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    invoke-virtual {v6, v2, v1}, Lxn4;->d(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v1, "replace_top"
+
+    sget-object v2, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    invoke-virtual {v6, v2, v1}, Lxn4;->d(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {v6}, Lxn4;->a()Landroid/net/Uri;
+
+    move-result-object v1
+
+    const/4 v2, 0x4
+
+    const/4 v3, 0x0
+
+    invoke-static {v0, v1, v3, v2}, Lyn4;->d(Lyn4;Landroid/net/Uri;Landroid/os/Bundle;I)Z
+
+    sget-object v0, Lmah;->a:Lmah;
 
     return-object v0
 
@@ -153,6 +260,7 @@
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_3
         :pswitch_2
         :pswitch_1
         :pswitch_0

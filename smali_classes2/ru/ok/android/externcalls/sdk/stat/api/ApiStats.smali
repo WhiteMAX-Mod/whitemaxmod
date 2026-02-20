@@ -12,18 +12,18 @@
         "Lru/ok/android/externcalls/sdk/stat/api/ApiStats;",
         "",
         "Lkotlin/Function0;",
-        "Lia1;",
+        "Lva1;",
         "getEventualStatSender",
         "<init>",
-        "(Llq6;)V",
+        "(Lis6;)V",
         "",
         "methodName",
         "",
         "executionTime",
-        "Lb3h;",
+        "Lmah;",
         "reportExecutionTime",
         "(Ljava/lang/String;J)V",
-        "Llq6;",
+        "Lis6;",
         "calls-sdk_release"
     }
     k = 0x1
@@ -37,29 +37,29 @@
 
 
 # instance fields
-.field private final getEventualStatSender:Llq6;
+.field private final getEventualStatSender:Lis6;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Llq6;"
+            "Lis6;"
         }
     .end annotation
 .end field
 
 
 # direct methods
-.method public constructor <init>(Llq6;)V
+.method public constructor <init>(Lis6;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Llq6;",
+            "Lis6;",
             ")V"
         }
     .end annotation
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/stat/api/ApiStats;->getEventualStatSender:Llq6;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/stat/api/ApiStats;->getEventualStatSender:Lis6;
 
     return-void
 .end method
@@ -69,13 +69,13 @@
 .method public final reportExecutionTime(Ljava/lang/String;J)V
     .locals 2
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/stat/api/ApiStats;->getEventualStatSender:Llq6;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/stat/api/ApiStats;->getEventualStatSender:Lis6;
 
-    invoke-interface {v0}, Llq6;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lis6;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lia1;
+    check-cast v0, Lva1;
 
     if-eqz v0, :cond_0
 
@@ -97,11 +97,11 @@
 
     invoke-direct {p3, p1}, Lru/ok/android/externcalls/analytics/events/EventItemsMap;-><init>(Ljava/util/Map;)V
 
-    check-cast v0, Lja1;
+    check-cast v0, Lwa1;
 
     const-string p1, "api_call"
 
-    invoke-virtual {v0, p1, p2, p3}, Lja1;->c(Ljava/lang/String;Lru/ok/android/externcalls/analytics/events/EventItemValue;Lru/ok/android/externcalls/analytics/events/EventItemsMap;)V
+    invoke-virtual {v0, p1, p2, p3}, Lwa1;->c(Ljava/lang/String;Lru/ok/android/externcalls/analytics/events/EventItemValue;Lru/ok/android/externcalls/analytics/events/EventItemsMap;)V
 
     :cond_0
     return-void

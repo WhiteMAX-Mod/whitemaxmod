@@ -1,158 +1,81 @@
-.class public final Lyi1;
-.super Ldj1;
+.class public final enum Lyi1;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lyk1;
+# static fields
+.field public static final enum a:Lyi1;
 
-.field public final b:Ljava/lang/String;
+.field public static final enum b:Lyi1;
 
-.field public final c:Ljava/lang/String;
+.field public static final synthetic c:[Lyi1;
 
 
 # direct methods
-.method public constructor <init>(Lyk1;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lyi1;
 
-    iput-object p1, p0, Lyi1;->a:Lyk1;
+    const-string v1, "UNDEFINE"
 
-    iput-object p2, p0, Lyi1;->b:Ljava/lang/String;
+    const/4 v2, 0x0
 
-    iput-object p3, p0, Lyi1;->c:Ljava/lang/String;
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    new-instance v1, Lyi1;
+
+    const-string v2, "MENU"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lyi1;->a:Lyi1;
+
+    new-instance v2, Lyi1;
+
+    const-string v3, "RECORD"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lyi1;->b:Lyi1;
+
+    filled-new-array {v0, v1, v2}, [Lyi1;
+
+    move-result-object v0
+
+    sput-object v0, Lyi1;->c:[Lyi1;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lyi1;
+    .locals 1
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    const-class v0, Lyi1;
 
-    const/4 v0, 0x1
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    if-ne p0, p1, :cond_0
+    move-result-object p0
 
-    return v0
+    check-cast p0, Lyi1;
 
-    :cond_0
-    instance-of v1, p1, Lyi1;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lyi1;
-
-    iget-object v1, p0, Lyi1;->a:Lyk1;
-
-    iget-object v3, p1, Lyi1;->a:Lyk1;
-
-    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lyi1;->b:Ljava/lang/String;
-
-    iget-object v3, p1, Lyi1;->b:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lyi1;->c:Ljava/lang/String;
-
-    iget-object p1, p1, Lyi1;->c:Ljava/lang/String;
-
-    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_4
-
-    return v2
-
-    :cond_4
-    return v0
+    return-object p0
 .end method
 
-.method public final hashCode()I
-    .locals 3
+.method public static values()[Lyi1;
+    .locals 1
 
-    iget-object v0, p0, Lyi1;->a:Lyk1;
+    sget-object v0, Lyi1;->c:[Lyi1;
 
-    invoke-virtual {v0}, Lyk1;->hashCode()I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lyi1;->b:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Lxi4;->e(IILjava/lang/String;)I
-
-    move-result v0
-
-    iget-object v1, p0, Lyi1;->c:Ljava/lang/String;
-
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Avatar(opponentId="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lyi1;->a:Lyk1;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", userName="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lyi1;->b:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", url="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    iget-object v2, p0, Lyi1;->c:Ljava/lang/String;
-
-    invoke-static {v0, v2, v1}, Lj27;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
+
+    check-cast v0, [Lyi1;
 
     return-object v0
 .end method

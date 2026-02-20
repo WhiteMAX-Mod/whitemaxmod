@@ -1,114 +1,228 @@
-.class public abstract Ljmj;
-.super Ljava/lang/Object;
+.class public final Ljmj;
+.super Lboj;
 .source "SourceFile"
 
 
+# instance fields
+.field public final synthetic b:I
+
+.field public final synthetic c:Lvlg;
+
+.field public final synthetic d:Ljava/lang/Object;
+
+.field public final synthetic o:Ljava/lang/Object;
+
+
 # direct methods
-.method public static final a(Landroid/widget/TextView;Ljava/lang/String;)Ljava/lang/Object;
+.method public constructor <init>(Lhyj;Lvlg;Lvlg;Ljmj;)V
     .locals 1
-
-    :try_start_0
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
-
-    move-result-object p1
 
     const/4 v0, 0x1
 
-    invoke-virtual {p1, v0}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+    iput v0, p0, Ljmj;->b:I
 
-    invoke-virtual {p1, p0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 2
+    iput-object p1, p0, Ljmj;->o:Ljava/lang/Object;
 
-    move-result-object p0
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldException; {:try_start_0 .. :try_end_0} :catch_0
+    iput-object p3, p0, Ljmj;->c:Lvlg;
 
-    return-object p0
+    iput-object p4, p0, Ljmj;->d:Ljava/lang/Object;
 
-    :catch_0
-    const/4 p0, 0x0
+    invoke-direct {p0, p2}, Lboj;-><init>(Lvlg;)V
 
-    return-object p0
+    return-void
 .end method
 
-.method public static final b(Lrd3;Lcom/google/android/material/tabs/TabLayout;Ljava/lang/String;Ljava/lang/Integer;)V
-    .locals 0
+.method public constructor <init>(Lksj;Lvlg;Ljava/lang/String;Lvlg;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Ljmj;->b:I
+
+    .line 1
+    iput-object p1, p0, Ljmj;->o:Ljava/lang/Object;
+
+    iput-object p3, p0, Ljmj;->d:Ljava/lang/Object;
+
+    iput-object p4, p0, Ljmj;->c:Lvlg;
+
+    invoke-direct {p0, p2}, Lboj;-><init>(Lvlg;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()V
+    .locals 7
+
+    iget v0, p0, Ljmj;->b:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Ljmj;->o:Ljava/lang/Object;
+
+    check-cast v0, Lhyj;
+
+    iget-object v0, v0, Lhyj;->f:Ljava/lang/Object;
+
+    monitor-enter v0
 
     :try_start_0
-    invoke-interface {p0}, Lpd3;->a()Ljava/lang/Class;
+    iget-object v1, p0, Ljmj;->o:Ljava/lang/Object;
 
-    move-result-object p0
+    check-cast v1, Lhyj;
 
-    invoke-virtual {p0, p2}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+    iget-object v2, p0, Ljmj;->c:Lvlg;
 
-    move-result-object p0
+    iget-object v3, v1, Lhyj;->e:Ljava/util/HashSet;
 
-    const/4 p2, 0x1
+    invoke-virtual {v3, v2}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    invoke-virtual {p0, p2}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+    iget-object v3, v2, Lvlg;->a:Lvxj;
 
-    invoke-virtual {p0, p1, p3}, Ljava/lang/reflect/Field;->set(Ljava/lang/Object;Ljava/lang/Object;)V
+    new-instance v4, Lkde;
+
+    const/16 v5, 0x9
+
+    invoke-direct {v4, v1, v5, v2}, Lkde;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {v3, v4}, Lvxj;->i(Lm4b;)Lvxj;
+
+    iget-object v1, p0, Ljmj;->o:Ljava/lang/Object;
+
+    check-cast v1, Lhyj;
+
+    iget-object v1, v1, Lhyj;->k:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+
+    move-result v1
+
+    if-lez v1, :cond_0
+
+    iget-object v1, p0, Ljmj;->o:Ljava/lang/Object;
+
+    check-cast v1, Lhyj;
+
+    iget-object v1, v1, Lhyj;->b:Lp45;
+
+    const-string v2, "Already connected to the service."
+
+    const/4 v3, 0x0
+
+    new-array v3, v3, [Ljava/lang/Object;
+
+    invoke-virtual {v1, v2, v3}, Lp45;->c(Ljava/lang/String;[Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v1
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    iget-object v1, p0, Ljmj;->o:Ljava/lang/Object;
+
+    check-cast v1, Lhyj;
+
+    iget-object v2, p0, Ljmj;->d:Ljava/lang/Object;
+
+    check-cast v2, Ljmj;
+
+    invoke-static {v1, v2}, Lhyj;->b(Lhyj;Ljmj;)V
+
+    monitor-exit v0
+
+    return-void
+
+    :goto_1
+    monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    :catchall_0
-    return-void
-.end method
+    throw v1
 
-.method public static final c(Landroid/view/View;JLandroid/view/View$OnClickListener;)V
-    .locals 1
+    :pswitch_0
+    iget-object v0, p0, Ljmj;->c:Lvlg;
 
-    if-eqz p3, :cond_0
+    iget-object v1, p0, Ljmj;->o:Ljava/lang/Object;
 
-    new-instance v0, Lhk4;
+    check-cast v1, Lksj;
 
-    invoke-direct {v0, p1, p2, p3}, Lhk4;-><init>(JLandroid/view/View$OnClickListener;)V
+    iget-object v2, p0, Ljmj;->d:Ljava/lang/Object;
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    check-cast v2, Ljava/lang/String;
 
-    return-void
+    :try_start_1
+    iget-object v3, v1, Lksj;->a:Lhyj;
 
-    :cond_0
-    const/4 p1, 0x0
+    iget-object v3, v3, Lhyj;->m:Lr7j;
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    iget-object v4, v1, Lksj;->b:Ljava/lang/String;
 
-    return-void
-.end method
+    invoke-static {v1, v2}, Lksj;->a(Lksj;Ljava/lang/String;)Landroid/os/Bundle;
 
-.method public static synthetic d(Landroid/view/View;Landroid/view/View$OnClickListener;)V
-    .locals 2
+    move-result-object v5
 
-    const-wide/16 v0, 0x12c
+    new-instance v6, Lnrj;
 
-    invoke-static {p0, v0, v1, p1}, Ljmj;->c(Landroid/view/View;JLandroid/view/View$OnClickListener;)V
+    invoke-direct {v6, v1, v0, v2}, Lnrj;-><init>(Lksj;Lvlg;Ljava/lang/String;)V
 
-    return-void
-.end method
+    invoke-interface {v3, v4, v5, v6}, Lr7j;->g(Ljava/lang/String;Landroid/os/Bundle;Lnrj;)V
+    :try_end_1
+    .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
 
-.method public static final e(Ljava/lang/Object;Ljava/lang/String;Landroid/graphics/drawable/Drawable;)V
-    .locals 1
-
-    :try_start_0
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
-
-    move-result-object p1
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p1, v0}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
-
-    invoke-virtual {p1, p0, p2}, Ljava/lang/reflect/Field;->set(Ljava/lang/Object;Ljava/lang/Object;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    goto :goto_2
 
     :catch_0
+    move-exception v1
+
+    sget-object v3, Lksj;->e:Lp45;
+
+    filled-new-array {v2}, [Ljava/lang/Object;
+
+    move-result-object v2
+
+    const-string v4, "requestUpdateInfo(%s)"
+
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-string v5, "PlayCore"
+
+    const/4 v6, 0x6
+
+    invoke-static {v5, v6}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_1
+
+    iget-object v3, v3, Lp45;->a:Ljava/lang/String;
+
+    invoke-static {v3, v4, v2}, Lp45;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v5, v2, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :cond_1
+    new-instance v2, Ljava/lang/RuntimeException;
+
+    invoke-direct {v2, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    invoke-virtual {v0, v2}, Lvlg;->c(Ljava/lang/Exception;)Z
+
+    :goto_2
     return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

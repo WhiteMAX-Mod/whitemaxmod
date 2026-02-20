@@ -1,147 +1,123 @@
 .class public final Lmza;
-.super Ljava/util/ArrayList;
+.super Lcw0;
 .source "SourceFile"
-
-# interfaces
-.implements Liza;
 
 
 # instance fields
-.field public volatile a:I
+.field public e:Ljava/util/LinkedList;
 
 
 # virtual methods
-.method public final a()V
-    .locals 1
+.method public final a(Ljava/lang/Object;)V
+    .locals 2
 
-    sget-object v0, Lzsa;->a:Lzsa;
+    iget-object v0, p0, Lmza;->e:Ljava/util/LinkedList;
 
-    invoke-virtual {p0, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v0}, Ljava/util/LinkedList;->poll()Ljava/lang/Object;
 
-    iget v0, p0, Lmza;->a:I
+    move-result-object v0
 
-    add-int/lit8 v0, v0, 0x1
+    check-cast v0, Llza;
 
-    iput v0, p0, Lmza;->a:I
+    if-nez v0, :cond_0
 
-    return-void
-.end method
+    new-instance v0, Llza;
 
-.method public final b(Ljava/lang/Object;)V
-    .locals 0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p0, p1}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+    const/4 v1, 0x0
 
-    iget p1, p0, Lmza;->a:I
+    iput-object v1, v0, Llza;->a:Ljava/lang/ref/SoftReference;
 
-    add-int/lit8 p1, p1, 0x1
+    iput-object v1, v0, Llza;->b:Ljava/lang/ref/SoftReference;
 
-    iput p1, p0, Lmza;->a:I
-
-    return-void
-.end method
-
-.method public final c(Lgza;)V
-    .locals 5
-
-    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    goto :goto_1
+    iput-object v1, v0, Llza;->c:Ljava/lang/ref/SoftReference;
 
     :cond_0
-    iget-object v0, p1, Lgza;->b:Le0b;
+    new-instance v1, Ljava/lang/ref/SoftReference;
 
-    const/4 v1, 0x1
+    invoke-direct {v1, p1}, Ljava/lang/ref/SoftReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object v1, v0, Llza;->a:Ljava/lang/ref/SoftReference;
+
+    new-instance v1, Ljava/lang/ref/SoftReference;
+
+    invoke-direct {v1, p1}, Ljava/lang/ref/SoftReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object v1, v0, Llza;->b:Ljava/lang/ref/SoftReference;
+
+    new-instance v1, Ljava/lang/ref/SoftReference;
+
+    invoke-direct {v1, p1}, Ljava/lang/ref/SoftReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object v1, v0, Llza;->c:Ljava/lang/ref/SoftReference;
+
+    iget-object p1, p0, Lcw0;->c:Ljava/util/LinkedList;
+
+    invoke-virtual {p1, v0}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
+
+    return-void
+.end method
+
+.method public final b()Ljava/lang/Object;
+    .locals 4
+
+    iget-object v0, p0, Lcw0;->c:Ljava/util/LinkedList;
+
+    invoke-virtual {v0}, Ljava/util/LinkedList;->poll()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Llza;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v1, v0, Llza;->a:Ljava/lang/ref/SoftReference;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_0
+
+    move-object v1, v2
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/ref/SoftReference;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    :goto_0
+    iget-object v3, v0, Llza;->a:Ljava/lang/ref/SoftReference;
+
+    if-eqz v3, :cond_1
+
+    invoke-virtual {v3}, Ljava/lang/ref/Reference;->clear()V
+
+    iput-object v2, v0, Llza;->a:Ljava/lang/ref/SoftReference;
 
     :cond_1
-    iget-boolean v2, p1, Lgza;->d:Z
+    iget-object v3, v0, Llza;->b:Ljava/lang/ref/SoftReference;
 
-    if-eqz v2, :cond_2
+    if-eqz v3, :cond_2
 
-    goto :goto_1
+    invoke-virtual {v3}, Ljava/lang/ref/Reference;->clear()V
+
+    iput-object v2, v0, Llza;->b:Ljava/lang/ref/SoftReference;
 
     :cond_2
-    iget v2, p0, Lmza;->a:I
-
-    iget-object v3, p1, Lgza;->c:Ljava/io/Serializable;
-
-    check-cast v3, Ljava/lang/Integer;
+    iget-object v3, v0, Llza;->c:Ljava/lang/ref/SoftReference;
 
     if-eqz v3, :cond_3
 
-    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
+    invoke-virtual {v3}, Ljava/lang/ref/Reference;->clear()V
 
-    move-result v3
-
-    goto :goto_0
+    iput-object v2, v0, Llza;->c:Ljava/lang/ref/SoftReference;
 
     :cond_3
-    const/4 v3, 0x0
+    iget-object v2, p0, Lmza;->e:Ljava/util/LinkedList;
 
-    :goto_0
-    if-ge v3, v2, :cond_6
+    invoke-virtual {v2, v0}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
 
-    invoke-virtual {p0, v3}, Ljava/util/AbstractList;->get(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    invoke-static {v0, v4}, Lzsa;->a(Le0b;Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_4
-
-    goto :goto_1
-
-    :cond_4
-    iget-boolean v4, p1, Lgza;->d:Z
-
-    if-eqz v4, :cond_5
-
-    goto :goto_1
-
-    :cond_5
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_0
-
-    :cond_6
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    iput-object v2, p1, Lgza;->c:Ljava/io/Serializable;
-
-    neg-int v1, v1
-
-    invoke-virtual {p1, v1}, Ljava/util/concurrent/atomic/AtomicInteger;->addAndGet(I)I
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    :goto_1
-    return-void
-.end method
-
-.method public final d(Ljava/lang/Throwable;)V
-    .locals 1
-
-    new-instance v0, Lxsa;
-
-    invoke-direct {v0, p1}, Lxsa;-><init>(Ljava/lang/Throwable;)V
-
-    invoke-virtual {p0, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
-
-    iget p1, p0, Lmza;->a:I
-
-    add-int/lit8 p1, p1, 0x1
-
-    iput p1, p0, Lmza;->a:I
-
-    return-void
+    return-object v1
 .end method

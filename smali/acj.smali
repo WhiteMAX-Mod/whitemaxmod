@@ -4,292 +4,226 @@
 
 
 # direct methods
-.method public static a()Lc15;
-    .locals 3
+.method public static final d(I)I
+    .locals 1
 
-    sget-object v0, Lc15;->b:Lc15;
+    if-eqz p0, :cond_3
 
-    if-eqz v0, :cond_0
+    const/4 v0, 0x1
 
-    sget-object v0, Lc15;->b:Lc15;
+    if-eq p0, v0, :cond_3
 
-    return-object v0
+    const/4 v0, 0x3
 
-    :cond_0
-    const-class v0, Lc15;
+    if-eq p0, v0, :cond_2
 
-    monitor-enter v0
+    const/4 v0, 0x6
 
-    :try_start_0
-    sget-object v1, Lc15;->b:Lc15;
+    if-eq p0, v0, :cond_1
 
-    if-nez v1, :cond_1
+    const/16 v0, 0x8
 
-    new-instance v1, Lc15;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, v2}, Lc15;-><init>(I)V
-
-    sput-object v1, Lc15;->b:Lc15;
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v1
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    sget-object v0, Lc15;->b:Lc15;
-
-    return-object v0
-
-    :goto_1
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v1
-.end method
-
-.method public static b()Lap0;
-    .locals 3
-
-    sget-object v0, Lap0;->c:Lap0;
-
-    if-eqz v0, :cond_0
-
-    sget-object v0, Lap0;->c:Lap0;
-
-    return-object v0
-
-    :cond_0
-    const-class v0, Lap0;
-
-    monitor-enter v0
-
-    :try_start_0
-    sget-object v1, Lap0;->c:Lap0;
-
-    if-nez v1, :cond_1
-
-    new-instance v1, Lap0;
-
-    const/4 v2, 0x3
-
-    invoke-direct {v1, v2}, Lap0;-><init>(I)V
-
-    sput-object v1, Lap0;->c:Lap0;
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v1
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    sget-object v0, Lap0;->c:Lap0;
-
-    return-object v0
-
-    :goto_1
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v1
-.end method
-
-.method public static c()Lpw7;
-    .locals 3
-
-    sget-object v0, Lpw7;->c:Lpw7;
-
-    if-eqz v0, :cond_0
-
-    sget-object v0, Lpw7;->c:Lpw7;
-
-    return-object v0
-
-    :cond_0
-    const-class v0, Lpw7;
-
-    monitor-enter v0
-
-    :try_start_0
-    sget-object v1, Lpw7;->c:Lpw7;
-
-    if-nez v1, :cond_1
-
-    new-instance v1, Lpw7;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, v2}, Lpw7;-><init>(I)V
-
-    sput-object v1, Lpw7;->c:Lpw7;
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v1
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    sget-object v0, Lpw7;->c:Lpw7;
-
-    return-object v0
-
-    :goto_1
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v1
-.end method
-
-.method public static d(Lr4a;)Z
-    .locals 6
-
-    instance-of v0, p0, Lz9a;
-
-    const/4 v1, 0x1
-
-    if-nez v0, :cond_2
-
-    instance-of v0, p0, Lx9a;
-
-    if-nez v0, :cond_2
-
-    instance-of v0, p0, Laaa;
-
-    if-eqz v0, :cond_0
-
-    move-object v0, p0
-
-    check-cast v0, Laaa;
-
-    iget-wide v2, v0, Laaa;->a:J
-
-    const-wide v4, 0xffffffffL
-
-    cmp-long v2, v2, v4
-
-    if-gtz v2, :cond_0
-
-    iget-wide v2, v0, Laaa;->b:J
-
-    cmp-long v0, v2, v4
-
-    if-gtz v0, :cond_0
+    if-eq p0, v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    instance-of v0, p0, Lxv8;
+    const/16 p0, 0x10e
 
-    if-eqz v0, :cond_1
-
-    check-cast p0, Lxv8;
-
-    iget p0, p0, Lxv8;->d:I
-
-    if-eq p0, v1, :cond_2
-
-    const/16 v0, 0x17
-
-    if-ne p0, v0, :cond_1
-
-    goto :goto_0
+    return p0
 
     :cond_1
-    const/4 p0, 0x0
+    const/16 p0, 0x5a
 
     return p0
 
     :cond_2
+    const/16 p0, 0xb4
+
+    return p0
+
+    :cond_3
     :goto_0
-    return v1
+    const/4 p0, 0x0
+
+    return p0
 .end method
 
-.method public static e()Lw37;
-    .locals 4
+.method public static h(Lgfh;)Lheh;
+    .locals 8
 
-    sget-object v0, Ldr8;->a:Lw37;
+    sget-object v0, Lheh;->j:Lheh;
 
-    if-eqz v0, :cond_0
+    new-instance v0, Lgeh;
 
-    sget-object v0, Ldr8;->a:Lw37;
+    invoke-direct {v0}, Lgeh;-><init>()V
 
-    return-object v0
+    iget-object v6, p0, Lgfh;->b:Ljava/lang/String;
 
-    :cond_0
-    const-class v0, Ldr8;
+    iget-object v1, p0, Lgfh;->a:Ly13;
 
-    monitor-enter v0
+    const/4 v7, 0x0
 
-    :try_start_0
-    sget-object v1, Ldr8;->a:Lw37;
+    if-nez v1, :cond_0
 
-    if-nez v1, :cond_1
-
-    new-instance v1, Lw37;
-
-    new-instance v2, Landroid/os/Handler;
-
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
-
-    move-result-object v3
-
-    invoke-direct {v2, v3}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
-
-    invoke-direct {v1, v2}, Lw37;-><init>(Landroid/os/Handler;)V
-
-    sput-object v1, Ldr8;->a:Lw37;
+    move-object v1, v7
 
     goto :goto_0
 
-    :catchall_0
-    move-exception v1
+    :cond_0
+    iget-wide v3, v1, Ly13;->a:J
+
+    iget-object v2, v1, Ly13;->c:Ljava/lang/Object;
+
+    move-object v5, v2
+
+    check-cast v5, Lpgh;
+
+    iget-object v1, v1, Ly13;->b:Ljava/lang/Object;
+
+    move-object v2, v1
+
+    check-cast v2, Ljava/lang/String;
+
+    new-instance v1, Lffh;
+
+    invoke-direct/range {v1 .. v6}, Lffh;-><init>(Ljava/lang/String;JLpgh;Ljava/lang/String;)V
+
+    :goto_0
+    iput-object v1, v0, Lgeh;->a:Lffh;
+
+    iget-object v1, p0, Lgfh;->i:Lkgh;
+
+    if-nez v1, :cond_1
 
     goto :goto_1
 
     :cond_1
-    :goto_0
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    new-instance v2, Lkgh;
 
-    sget-object v0, Ldr8;->a:Lw37;
+    invoke-direct {v2}, Ljava/lang/Object;-><init>()V
 
-    return-object v0
+    iget-object v3, v1, Lkgh;->a:Ljava/lang/String;
+
+    iput-object v3, v2, Lkgh;->a:Ljava/lang/String;
+
+    iget-wide v3, v1, Lkgh;->b:J
+
+    iput-wide v3, v2, Lkgh;->b:J
+
+    new-instance v7, Llgh;
+
+    invoke-direct {v7, v2}, Llgh;-><init>(Lkgh;)V
 
     :goto_1
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    iput-object v7, v0, Lgeh;->h:Llgh;
 
-    throw v1
+    iget-object v1, p0, Lgfh;->h:Lngh;
+
+    iput-object v1, v0, Lgeh;->g:Lngh;
+
+    iget-object v1, p0, Lgfh;->c:Ljava/lang/String;
+
+    iput-object v1, v0, Lgeh;->b:Ljava/lang/String;
+
+    iget-object v1, p0, Lgfh;->d:Ljava/lang/String;
+
+    iput-object v1, v0, Lgeh;->c:Ljava/lang/String;
+
+    iget-object v1, p0, Lgfh;->e:Ljava/lang/String;
+
+    iput-object v1, v0, Lgeh;->d:Ljava/lang/String;
+
+    iget-wide v1, p0, Lgfh;->g:J
+
+    iput-wide v1, v0, Lgeh;->f:J
+
+    iget v1, p0, Lgfh;->f:F
+
+    iput v1, v0, Lgeh;->e:F
+
+    iget-wide v1, p0, Lgfh;->j:J
+
+    iput-wide v1, v0, Lgeh;->i:J
+
+    new-instance p0, Lheh;
+
+    invoke-direct {p0, v0}, Lheh;-><init>(Lgeh;)V
+
+    return-object p0
+.end method
+
+
+# virtual methods
+.method public a()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public abstract b()Z
+.end method
+
+.method public abstract c(Z)V
+.end method
+
+.method public abstract e()I
+.end method
+
+.method public abstract f()Landroid/content/Context;
+.end method
+
+.method public g()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public abstract i()V
+.end method
+
+.method public j()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public abstract k(ILandroid/view/KeyEvent;)Z
+.end method
+
+.method public l(Landroid/view/KeyEvent;)Z
+    .locals 0
+
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public m()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public abstract n(Z)V
+.end method
+
+.method public abstract o(Z)V
+.end method
+
+.method public abstract p(Ljava/lang/CharSequence;)V
+.end method
+
+.method public q(Lgri;)Lp8;
+    .locals 0
+
+    const/4 p1, 0x0
+
+    return-object p1
 .end method

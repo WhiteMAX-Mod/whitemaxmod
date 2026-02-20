@@ -1,44 +1,179 @@
-.class public final Lbq3;
+.class public interface abstract Lbq3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lv4a;
 
+# virtual methods
+.method public abstract a()Landroid/content/ComponentName;
+.end method
 
-# instance fields
-.field public final a:Lzii;
+.method public h(Landroid/content/Context;)Z
+    .locals 5
 
-.field public final b:Lzii;
+    invoke-interface {p0}, Lbq3;->a()Landroid/content/ComponentName;
 
+    move-result-object v0
 
-# direct methods
-.method public constructor <init>()V
-    .locals 3
+    const/4 v1, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    :try_start_0
+    invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
-    new-instance v0, Lzii;
+    move-result-object p1
 
-    new-instance v1, Lsna;
+    invoke-virtual {p1, v0}, Landroid/content/pm/PackageManager;->getComponentEnabledSetting(Landroid/content/ComponentName;)I
 
-    const/16 v2, 0x18
+    move-result p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-direct {v1, v2}, Lsna;-><init>(I)V
+    const/4 v0, 0x1
 
-    invoke-direct {v0, v1}, Lzii;-><init>(Lhr8;)V
+    if-ne p1, v0, :cond_0
 
-    iput-object v0, p0, Lbq3;->a:Lzii;
+    move v1, v0
 
-    new-instance v0, Lzii;
+    goto :goto_0
 
-    new-instance v1, Lfca;
+    :catchall_0
+    move-exception p1
 
-    invoke-direct {v1, v2}, Lfca;-><init>(I)V
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-direct {v0, v1}, Lzii;-><init>(Lhr8;)V
+    move-result-object v2
 
-    iput-object v0, p0, Lbq3;->b:Lzii;
+    invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v2
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "fail to get component "
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v2, v0, p1}, Ltej;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_0
+    :goto_0
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    sget-object v0, Ltej;->a:Lafb;
+
+    if-nez v0, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    sget-object v2, Lzm8;->o:Lzm8;
+
+    invoke-virtual {v0, v2}, Lafb;->b(Lzm8;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    const-string v3, "isEnabled="
+
+    invoke-static {v3, v1}, Ldna;->f(Ljava/lang/String;Z)Ljava/lang/String;
+
+    move-result-object v3
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v0, v2, p1, v3, v4}, Lafb;->c(Lzm8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_2
+    :goto_1
+    return v1
+.end method
+
+.method public l(Landroid/content/Context;Z)V
+    .locals 4
+
+    invoke-interface {p0}, Lbq3;->a()Landroid/content/ComponentName;
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v1
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "setEnabled "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v3, " for "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    const/4 v3, 0x0
+
+    invoke-static {v1, v2, v3}, Ltej;->k(Ljava/lang/String;Ljava/lang/String;Ljava/util/concurrent/CancellationException;)V
+
+    const/4 v1, 0x1
+
+    if-eqz p2, :cond_0
+
+    move p2, v1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p2, 0x2
+
+    :goto_0
+    :try_start_0
+    invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v0, p2, v1}, Landroid/content/pm/PackageManager;->setComponentEnabledSetting(Landroid/content/ComponentName;II)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p2
+
+    const-string v0, "fail to update component state"
+
+    invoke-static {p2, v0, p1}, Ltej;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method

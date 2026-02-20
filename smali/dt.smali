@@ -1,198 +1,51 @@
-.class public final Ldt;
+.class public abstract synthetic Ldt;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Iterable;
-.implements Lo28;
 
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final b:Ljava/lang/Object;
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput p1, p0, Ldt;->a:I
+    invoke-static {}, Lls;->values()[Lls;
 
-    iput-object p2, p0, Ldt;->b:Ljava/lang/Object;
+    move-result-object v0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    array-length v0, v0
 
-    return-void
-.end method
+    new-array v0, v0, [I
 
-
-# virtual methods
-.method public a(Ljava/lang/String;)Z
-    .locals 5
-
-    iget-object v0, p0, Ldt;->b:Ljava/lang/Object;
-
-    check-cast v0, [Lfd7;
-
-    array-length v1, v0
+    const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    move v3, v2
+    :try_start_0
+    aput v1, v0, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    :goto_0
-    if-ge v3, v1, :cond_1
-
-    aget-object v4, v0, v3
-
-    iget-object v4, v4, Lfd7;->a:Ljava/lang/String;
-
-    invoke-virtual {v4, p1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    return v2
-.end method
-
-.method public final iterator()Ljava/util/Iterator;
-    .locals 3
-
-    iget v0, p0, Ldt;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v0, Lb2;
-
-    iget-object v1, p0, Ldt;->b:Ljava/lang/Object;
-
-    check-cast v1, Lyk5;
-
-    invoke-direct {v0, v1}, Lb2;-><init>(Lyk5;)V
-
-    return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Ldt;->b:Ljava/lang/Object;
-
-    check-cast v0, Lfpe;
-
-    invoke-interface {v0}, Lfpe;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_1
-    new-instance v0, Laa5;
-
-    iget-object v1, p0, Ldt;->b:Ljava/lang/Object;
-
-    check-cast v1, Lh2;
-
-    invoke-virtual {v1}, Lh2;->invoke()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/util/Iterator;
-
-    invoke-direct {v0, v1}, Laa5;-><init>(Ljava/util/Iterator;)V
-
-    return-object v0
-
-    :pswitch_2
-    iget-object v0, p0, Ldt;->b:Ljava/lang/Object;
-
-    check-cast v0, [Lfd7;
-
-    new-instance v1, Lb2;
-
+    :catch_0
     const/4 v2, 0x2
 
-    invoke-direct {v1, v2, v0}, Lb2;-><init>(ILjava/lang/Object;)V
+    :try_start_1
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    return-object v1
+    :catch_1
+    const/4 v1, 0x3
 
-    :pswitch_3
-    iget-object v0, p0, Ldt;->b:Ljava/lang/Object;
+    :try_start_2
+    aput v1, v0, v2
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    check-cast v0, [Ljava/lang/Object;
+    :catch_2
+    sput-object v0, Ldt;->$EnumSwitchMapping$0:[I
 
-    new-instance v1, Lb2;
-
-    const/4 v2, 0x2
-
-    invoke-direct {v1, v2, v0}, Lb2;-><init>(ILjava/lang/Object;)V
-
-    return-object v1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public toString()Ljava/lang/String;
-    .locals 4
-
-    iget v0, p0, Ldt;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_0
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "["
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Ldt;->b:Ljava/lang/Object;
-
-    check-cast v1, [Lfd7;
-
-    const-string v2, ", "
-
-    const/16 v3, 0x3e
-
-    invoke-static {v1, v2, v3}, Lct;->z([Ljava/lang/Object;Ljava/lang/String;I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x5d
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

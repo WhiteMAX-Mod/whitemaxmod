@@ -1,37 +1,34 @@
-.class public final Ls8g;
+.class public interface abstract Ls8g;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:Ls8g;
+.field public static final b0:Lrnj;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 2
 
-    new-instance v0, Ls8g;
+    new-instance v0, Lrnj;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/16 v1, 0x19
 
-    sput-object v0, Ls8g;->a:Ls8g;
+    invoke-direct {v0, v1}, Lrnj;-><init>(I)V
+
+    sput-object v0, Ls8g;->b0:Lrnj;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/os/Looper;Landroid/os/Handler$Callback;)La9g;
-    .locals 2
+.method public abstract c(Lol6;)Z
+.end method
 
-    new-instance v0, La9g;
+.method public abstract n(Lol6;)Lu8g;
+.end method
 
-    new-instance v1, Landroid/os/Handler;
-
-    invoke-direct {v1, p1, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;)V
-
-    invoke-direct {v0, v1}, La9g;-><init>(Landroid/os/Handler;)V
-
-    return-object v0
+.method public abstract r(Lol6;)I
 .end method

@@ -1,60 +1,134 @@
 .class public final Llpa;
-.super Licg;
+.super Lwm0;
 .source "SourceFile"
 
 
-# instance fields
-.field public c:Lbs3;
-
-
 # virtual methods
-.method public final d(Lpq9;Ljava/lang/String;)V
-    .locals 1
+.method public final c(Lwj7;Ljava/lang/String;Ljava/lang/Throwable;Z)V
+    .locals 4
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    instance-of p2, p3, Ljava/io/IOException;
 
-    const-string v0, "config"
+    if-eqz p2, :cond_2
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p3}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object p2
+
+    if-eqz p2, :cond_2
+
+    const-string p4, "code=403"
+
+    const/4 v0, 0x0
+
+    invoke-static {p2, p4, v0}, Ld7g;->t(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
 
     move-result p2
 
-    if-nez p2, :cond_0
+    const/4 p4, 0x1
 
-    invoke-virtual {p1}, Lpq9;->B()V
+    if-ne p2, p4, :cond_2
 
-    return-void
+    iget-object p1, p1, Lwj7;->b:Landroid/net/Uri;
 
-    :cond_0
-    invoke-static {p1}, Lojj;->a(Lpq9;)Lbs3;
+    const-string p2, "apikey"
+
+    invoke-virtual {p1, p2}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    iput-object p1, p0, Llpa;->c:Lbs3;
+    if-eqz p1, :cond_0
 
-    return-void
-.end method
+    invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+    move-result p1
 
-    iget-object v0, p0, Llpa;->c:Lbs3;
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    move-result-object p1
 
-    const-string v2, "{config="
+    goto :goto_0
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    :cond_0
+    const/4 p1, 0x0
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    :goto_0
+    sget-object p2, Lpw9;->a:Lj88;
 
-    const-string v0, "}"
+    sget-object p2, Lqw9;->a:Lqw9;
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p2}, Lscout/Component;->getAccessor()Lr5;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object p2
+
+    const/16 p4, 0xf
+
+    invoke-virtual {p2, p4}, Lr5;->d(I)Lbgg;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Lbgg;->getValue()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lpo5;
+
+    new-instance p4, Ls0c;
+
+    invoke-virtual {p3}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
 
     move-result-object v0
 
-    return-object v0
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "failed to load preview; api key hash = "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v3, "ONEME-26284"
+
+    invoke-direct {p4, v3, v1, v0}, Lru/ok/tamtam/exception/IssueKeyException;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    check-cast p2, Lhcb;
+
+    invoke-virtual {p2, p4}, Lhcb;->a(Ljava/lang/Throwable;)V
+
+    sget-object p2, Lnpa;->G0:Ljava/lang/String;
+
+    sget-object p4, Ltej;->a:Lafb;
+
+    if-nez p4, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    sget-object v0, Lzm8;->Y:Lzm8;
+
+    invoke-virtual {p4, v0}, Lafb;->b(Lzm8;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p4, v0, p2, p1, p3}, Lafb;->c(Lzm8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_2
+    :goto_1
+    return-void
 .end method

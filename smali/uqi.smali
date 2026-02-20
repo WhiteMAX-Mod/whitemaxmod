@@ -1,102 +1,277 @@
-.class public abstract Luqi;
+.class public final Luqi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:Ljava/lang/Boolean;
+.field public final a:Ljava/util/UUID;
 
-.field public b:Z
+.field public final b:Ltqi;
 
-.field public final synthetic c:Lcom/google/android/gms/common/internal/a;
+.field public final c:Lmj4;
 
-.field public final d:I
+.field public final d:Ljava/util/HashSet;
 
-.field public final e:Landroid/os/Bundle;
+.field public final e:Lmj4;
 
-.field public final synthetic f:Lcom/google/android/gms/common/internal/a;
+.field public final f:I
+
+.field public final g:I
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/gms/common/internal/a;ILandroid/os/Bundle;)V
-    .locals 1
+.method public constructor <init>(Ljava/util/UUID;Ltqi;Lmj4;Ljava/util/ArrayList;Lmj4;II)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Luqi;->f:Lcom/google/android/gms/common/internal/a;
+    iput-object p1, p0, Luqi;->a:Ljava/util/UUID;
 
-    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+    iput-object p2, p0, Luqi;->b:Ltqi;
 
-    iput-object p1, p0, Luqi;->c:Lcom/google/android/gms/common/internal/a;
+    iput-object p3, p0, Luqi;->c:Lmj4;
 
-    iput-object v0, p0, Luqi;->a:Ljava/lang/Boolean;
+    new-instance p1, Ljava/util/HashSet;
 
-    const/4 p1, 0x0
+    invoke-direct {p1, p4}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
-    iput-boolean p1, p0, Luqi;->b:Z
+    iput-object p1, p0, Luqi;->d:Ljava/util/HashSet;
 
-    iput p2, p0, Luqi;->d:I
+    iput-object p5, p0, Luqi;->e:Lmj4;
 
-    iput-object p3, p0, Luqi;->e:Landroid/os/Bundle;
+    iput p6, p0, Luqi;->f:I
+
+    iput p7, p0, Luqi;->g:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract a(Lyv3;)V
-.end method
-
-.method public abstract b()Z
-.end method
-
-.method public final c()V
+.method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
-    monitor-enter p0
+    if-ne p0, p1, :cond_0
 
-    const/4 v0, 0x0
+    const/4 p1, 0x1
 
-    :try_start_0
-    iput-object v0, p0, Luqi;->a:Ljava/lang/Boolean;
+    return p1
 
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+    :cond_0
+    if-eqz p1, :cond_8
 
-    iget-object v0, p0, Luqi;->c:Lcom/google/android/gms/common/internal/a;
+    const-class v0, Luqi;
 
-    iget-object v0, v0, Lcom/google/android/gms/common/internal/a;->v0:Ljava/util/ArrayList;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    monitor-enter v0
+    move-result-object v1
 
-    :try_start_1
-    iget-object v1, p0, Luqi;->c:Lcom/google/android/gms/common/internal/a;
+    if-eq v0, v1, :cond_1
 
-    iget-object v1, v1, Lcom/google/android/gms/common/internal/a;->v0:Ljava/util/ArrayList;
+    goto :goto_0
 
-    invoke-virtual {v1, p0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+    :cond_1
+    check-cast p1, Luqi;
 
-    monitor-exit v0
+    iget v0, p0, Luqi;->f:I
 
-    return-void
+    iget v1, p1, Luqi;->f:I
 
-    :catchall_0
-    move-exception v1
+    if-eq v0, v1, :cond_2
 
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    goto :goto_0
 
-    throw v1
+    :cond_2
+    iget v0, p0, Luqi;->g:I
 
-    :catchall_1
-    move-exception v0
+    iget v1, p1, Luqi;->g:I
 
-    :try_start_2
-    monitor-exit p0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+    if-eq v0, v1, :cond_3
 
-    throw v0
+    goto :goto_0
+
+    :cond_3
+    iget-object v0, p0, Luqi;->a:Ljava/util/UUID;
+
+    iget-object v1, p1, Luqi;->a:Ljava/util/UUID;
+
+    invoke-virtual {v0, v1}, Ljava/util/UUID;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    iget-object v0, p0, Luqi;->b:Ltqi;
+
+    iget-object v1, p1, Luqi;->b:Ltqi;
+
+    if-eq v0, v1, :cond_5
+
+    goto :goto_0
+
+    :cond_5
+    iget-object v0, p0, Luqi;->c:Lmj4;
+
+    iget-object v1, p1, Luqi;->c:Lmj4;
+
+    invoke-virtual {v0, v1}, Lmj4;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_6
+
+    goto :goto_0
+
+    :cond_6
+    iget-object v0, p0, Luqi;->d:Ljava/util/HashSet;
+
+    iget-object v1, p1, Luqi;->d:Ljava/util/HashSet;
+
+    invoke-interface {v0, v1}, Ljava/util/Set;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_7
+
+    goto :goto_0
+
+    :cond_7
+    iget-object v0, p0, Luqi;->e:Lmj4;
+
+    iget-object p1, p1, Luqi;->e:Lmj4;
+
+    invoke-virtual {v0, p1}, Lmj4;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_8
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Luqi;->a:Ljava/util/UUID;
+
+    invoke-virtual {v0}, Ljava/util/UUID;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Luqi;->b:Ltqi;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v0, p0, Luqi;->c:Lmj4;
+
+    invoke-virtual {v0}, Lmj4;->hashCode()I
+
+    move-result v0
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Luqi;->d:Ljava/util/HashSet;
+
+    invoke-interface {v1}, Ljava/util/Set;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v0, p0, Luqi;->e:Lmj4;
+
+    invoke-virtual {v0}, Lmj4;->hashCode()I
+
+    move-result v0
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Luqi;->f:I
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Luqi;->g:I
+
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "WorkInfo{mId=\'"
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Luqi;->a:Ljava/util/UUID;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, "\', mState="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Luqi;->b:Ltqi;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", mOutputData="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Luqi;->c:Lmj4;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", mTags="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Luqi;->d:Ljava/util/HashSet;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", mProgress="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Luqi;->e:Lmj4;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x7d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

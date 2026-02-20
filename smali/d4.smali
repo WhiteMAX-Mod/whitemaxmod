@@ -1,5 +1,5 @@
 .class public final Ld4;
-.super Lg3j;
+.super Lsbj;
 .source "SourceFile"
 
 
@@ -118,7 +118,7 @@
     throw p2
 .end method
 
-.method public final g(Le4;Le4;)V
+.method public final e(Le4;Le4;)V
     .locals 0
 
     iput-object p2, p1, Le4;->b:Le4;
@@ -126,7 +126,7 @@
     return-void
 .end method
 
-.method public final h(Le4;Ljava/lang/Thread;)V
+.method public final f(Le4;Ljava/lang/Thread;)V
     .locals 0
 
     iput-object p2, p1, Le4;->a:Ljava/lang/Thread;

@@ -3,92 +3,111 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ll5e;
+.implements Lr05;
 
 
 # instance fields
-.field public a:Ljava/util/ArrayList;
+.field public final a:J
+
+.field public final b:Lmrd;
+
+
+# direct methods
+.method public constructor <init>(Lgpg;)V
+    .locals 9
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    sget-object v0, Ltz4;->b:Ljava/util/concurrent/atomic/AtomicLong;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicLong;->incrementAndGet()J
+
+    move-result-wide v2
+
+    iput-wide v2, p0, Ljmf;->a:J
+
+    new-instance v1, Lmm4;
+
+    sget-object v7, Ljm4;->a:Ljm4;
+
+    const/16 v8, 0x8
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    move-object v4, p1
+
+    invoke-direct/range {v1 .. v8}, Lmm4;-><init>(JLhpg;ILhpg;Lyuj;I)V
+
+    invoke-static {v1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lixf;->a(Ljava/lang/Object;)Lhxf;
+
+    move-result-object p1
+
+    new-instance v0, Lmrd;
+
+    invoke-direct {v0, p1}, Lmrd;-><init>(Lgia;)V
+
+    iput-object v0, p0, Ljmf;->b:Lmrd;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final a()Laxf;
+    .locals 1
 
-    if-ne p0, p1, :cond_0
+    iget-object v0, p0, Ljmf;->b:Lmrd;
 
-    const/4 p1, 0x1
+    return-object v0
+.end method
 
-    return p1
+.method public final c(Lmm4;)V
+    .locals 4
 
-    :cond_0
-    if-eqz p1, :cond_2
+    iget-wide v0, p1, Lmm4;->a:J
 
-    const-class v0, Ljmf;
+    iget-wide v2, p0, Ljmf;->a:J
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v1
-
-    if-eq v0, v1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Ljmf;
-
-    iget-object v0, p0, Ljmf;->a:Ljava/util/ArrayList;
-
-    iget-object p1, p1, Ljmf;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->equals(Ljava/lang/Object;)Z
+    invoke-static {v0, v1, v2, v3}, Ltz4;->a(JJ)Z
 
     move-result p1
 
-    return p1
+    if-eqz p1, :cond_0
 
-    :cond_2
-    :goto_0
-    const/4 p1, 0x0
+    sget-object p1, Lw4c;->c:Lw4c;
 
-    return p1
-.end method
+    invoke-virtual {p1}, Ld3;->n0()Lyn4;
 
-.method public final hashCode()I
-    .locals 1
+    move-result-object p1
 
-    iget-object v0, p0, Ljmf;->a:Ljava/util/ArrayList;
+    new-instance v0, Lyvb;
 
-    filled-new-array {v0}, [Ljava/lang/Object;
+    const-string v1, "image_uri"
 
-    move-result-object v0
+    const-string v2, ""
 
-    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
+    invoke-direct {v0, v1, v2}, Lyvb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "StalledParticipantsNotification{participantIds="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Ljmf;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x7d
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    filled-new-array {v0}, [Lyvb;
 
     move-result-object v0
 
-    return-object v0
+    invoke-static {v0}, Lejj;->c([Lyvb;)Landroid/os/Bundle;
+
+    move-result-object v0
+
+    const/4 v1, 0x4
+
+    const-string v2, ":photo-editor"
+
+    invoke-static {p1, v2, v0, v1}, Lyn4;->b(Lyn4;Ljava/lang/String;Landroid/os/Bundle;I)Z
+
+    :cond_0
+    return-void
 .end method

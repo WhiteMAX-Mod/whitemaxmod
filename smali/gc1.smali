@@ -1,180 +1,191 @@
-.class public final synthetic Lgc1;
+.class public final Lgc1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Llq6;
+.implements Ltn4;
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static final a:Lgc1;
 
-.field public final synthetic b:Lone/me/calllist/ui/page/CallHistoryPageScreen;
+.field public static final b:Lhc1;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/calllist/ui/page/CallHistoryPageScreen;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p2, p0, Lgc1;->a:I
+    new-instance v0, Lgc1;
 
-    iput-object p1, p0, Lgc1;->b:Lone/me/calllist/ui/page/CallHistoryPageScreen;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lgc1;->a:Lgc1;
+
+    sget-object v0, Lhc1;->b:Lhc1;
+
+    sput-object v0, Lgc1;->b:Lhc1;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 5
+.method public final a()Lao4;
+    .locals 1
 
-    iget v0, p0, Lgc1;->a:I
-
-    iget-object v1, p0, Lgc1;->b:Lone/me/calllist/ui/page/CallHistoryPageScreen;
-
-    packed-switch v0, :pswitch_data_0
-
-    sget-object v0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->v0:Lvna;
-
-    invoke-virtual {v1}, La94;->getRouter()Lw4e;
-
-    move-result-object v0
+    sget-object v0, Lgc1;->b:Lhc1;
 
     return-object v0
+.end method
 
-    :pswitch_0
-    sget-object v0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->v0:Lvna;
+.method public final b(Ljava/lang/String;Lwn4;Landroid/os/Bundle;)Ldo4;
+    .locals 12
 
-    new-instance v0, Lec1;
+    sget-object v0, Lgc1;->b:Lhc1;
 
-    new-instance v2, Lig5;
+    iget-object v0, v0, Lao4;->a:Ljava/util/LinkedHashSet;
 
-    const/4 v3, 0x6
+    invoke-interface {v0, p2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
 
-    invoke-direct {v2, v3, v1}, Lig5;-><init>(ILjava/lang/Object;)V
+    move-result v0
 
-    sget-object v1, Lage;->a:Lage;
+    if-nez v0, :cond_0
 
-    invoke-virtual {v1}, Lage;->i()Lyab;
+    const/4 p1, 0x0
 
-    move-result-object v1
-
-    invoke-virtual {v1}, Lyab;->c()Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v1
-
-    invoke-direct {v0, v2, v1}, Lec1;-><init>(Lig5;Ljava/util/concurrent/ExecutorService;)V
-
-    return-object v0
-
-    :pswitch_1
-    sget-object v0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->v0:Lvna;
-
-    invoke-virtual {v1}, Lone/me/calllist/ui/page/CallHistoryPageScreen;->z0()Lyc1;
-
-    move-result-object v0
-
-    sget-object v2, Lyc1;->c:Lyc1;
-
-    if-ne v0, v2, :cond_0
-
-    new-instance v0, Lpab;
-
-    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Lpab;-><init>(Landroid/content/Context;)V
-
-    const/16 v1, 0x8
-
-    invoke-virtual {v0, v1}, Lpab;->setVisibility(I)V
-
-    sget v1, La8d;->call_history_page_empty:I
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
-
-    sget v1, Lv5e;->k0:I
-
-    invoke-virtual {v0, v1}, Lpab;->setIcon(I)V
-
-    sget v1, Lzcd;->call_history_missed_calls_empty_state_title:I
-
-    new-instance v2, Llhg;
-
-    invoke-direct {v2, v1}, Llhg;-><init>(I)V
-
-    invoke-virtual {v0, v2}, Lpab;->setTitle(Lqhg;)V
-
-    goto :goto_0
+    return-object p1
 
     :cond_0
-    const/4 v0, 0x0
+    sget-object v0, Lhc1;->b:Lhc1;
 
-    :goto_0
-    return-object v0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    :pswitch_2
-    sget-object v0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->v0:Lvna;
+    sget-object v0, Lhc1;->c:Lwn4;
 
-    new-instance v0, Ljl1;
+    invoke-virtual {p2, v0}, Lwn4;->equals(Ljava/lang/Object;)Z
 
-    new-instance v2, Lgc1;
+    move-result v0
 
-    const/4 v3, 0x4
+    if-eqz v0, :cond_1
 
-    invoke-direct {v2, v1, v3}, Lgc1;-><init>(Lone/me/calllist/ui/page/CallHistoryPageScreen;I)V
+    new-instance v0, Lg;
 
-    new-instance v3, Ln8g;
+    const/4 v1, 0x4
 
-    invoke-direct {v3, v2}, Ln8g;-><init>(Llq6;)V
+    invoke-direct {v0, v1}, Lg;-><init>(I)V
 
-    new-instance v2, Ljgi;
+    move-object v10, v0
 
-    const/4 v4, 0x0
+    goto :goto_1
 
-    invoke-direct {v2, v1, v4}, Ljgi;-><init>(Lone/me/sdk/arch/Widget;I)V
+    :cond_1
+    sget-object v0, Lhc1;->d:Lwn4;
 
-    invoke-direct {v0, v3, v2}, Ljl1;-><init>(Ln8g;Ljgi;)V
+    invoke-virtual {p2, v0}, Lwn4;->equals(Ljava/lang/Object;)Z
 
-    return-object v0
+    move-result v0
 
-    :pswitch_3
-    sget-object v0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->v0:Lvna;
+    if-eqz v0, :cond_3
 
-    new-instance v0, Lmc1;
+    const-string v0, "call_link"
 
-    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->requireActivity()Lon;
+    invoke-virtual {p3, v0}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "call_title"
+
+    invoke-virtual {p3, v1}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "call_chat_id"
+
+    invoke-static {v2, p3}, Lbvj;->c(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/Long;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+    const-string v3, "is_link_call"
 
-    move-result-object v2
-
-    invoke-virtual {v1}, Lone/me/calllist/ui/page/CallHistoryPageScreen;->z0()Lyc1;
+    invoke-static {v3, p3}, Lbvj;->a(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/Boolean;
 
     move-result-object v3
 
-    iget-object v1, v1, Lone/me/calllist/ui/page/CallHistoryPageScreen;->c:Ljava/lang/Object;
+    if-eqz v3, :cond_2
 
-    invoke-interface {v1}, Lo58;->getValue()Ljava/lang/Object;
+    invoke-virtual {v3}, Ljava/lang/Boolean;->booleanValue()Z
 
-    move-result-object v1
+    move-result v3
 
-    check-cast v1, Ljl1;
+    goto :goto_0
 
-    invoke-direct {v0, v2, v3, v1}, Lmc1;-><init>(Landroid/content/Context;Lyc1;Ljl1;)V
+    :cond_2
+    const/4 v3, 0x0
 
-    return-object v0
+    :goto_0
+    new-instance v4, Lec1;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    invoke-direct {v4, v2, v0, v1, v3}, Lec1;-><init>(Ljava/lang/Long;Ljava/lang/String;Ljava/lang/String;Z)V
+
+    move-object v10, v4
+
+    goto :goto_1
+
+    :cond_3
+    sget-object v0, Lhc1;->e:Lwn4;
+
+    invoke-virtual {p2, v0}, Lwn4;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    const-string v0, "chat_id"
+
+    invoke-static {v0, p3}, Lbvj;->f(Ljava/lang/String;Landroid/os/Bundle;)J
+
+    move-result-wide v0
+
+    new-instance v2, Lfc1;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v2, v0, v1, v3}, Lfc1;-><init>(JI)V
+
+    move-object v10, v2
+
+    :goto_1
+    new-instance v4, Ldo4;
+
+    const/16 v11, 0x18
+
+    const/4 v8, 0x0
+
+    const/4 v9, 0x0
+
+    move-object v5, p1
+
+    move-object v6, p2
+
+    move-object v7, p3
+
+    invoke-direct/range {v4 .. v11}, Ldo4;-><init>(Ljava/lang/String;Lwn4;Landroid/os/Bundle;ILbo4;Lco4;I)V
+
+    return-object v4
+
+    :cond_4
+    move-object v6, p2
+
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p2, "invalid route "
+
+    invoke-static {p2, v6}, Ly12;->j(Ljava/lang/String;Lwn4;)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

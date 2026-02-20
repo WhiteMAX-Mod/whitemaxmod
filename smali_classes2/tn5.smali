@@ -1,64 +1,123 @@
-.class public final synthetic Ltn5;
+.class public final Ltn5;
 .super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lvef;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lyn5;
-
-.field public final synthetic c:Lqxh;
+.field public final b:Lzef;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lyn5;Lqxh;I)V
-    .locals 0
+.method public constructor <init>(I)V
+    .locals 2
 
-    iput p3, p0, Ltn5;->a:I
+    iput p1, p0, Ltn5;->a:I
 
-    iput-object p1, p0, Ltn5;->b:Lyn5;
+    packed-switch p1, :pswitch_data_0
 
-    iput-object p2, p0, Ltn5;->c:Lqxh;
+    const p1, 0x7fffffff
+
+    const/4 v0, 0x4
+
+    const/4 v1, 0x0
+
+    invoke-static {v1, p1, v0}, Laff;->b(III)Lzef;
+
+    move-result-object p1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    iput-object p1, p0, Ltn5;->b:Lzef;
+
     return-void
+
+    :pswitch_0
+    const/4 p1, 0x0
+
+    const/4 v0, 0x6
+
+    const/4 v1, 0x1
+
+    invoke-static {v1, p1, v0}, Laff;->b(III)Lzef;
+
+    move-result-object p1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ltn5;->b:Lzef;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final a()J
-    .locals 4
+.method public final b()Ljava/util/List;
+    .locals 1
 
     iget v0, p0, Ltn5;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Ltn5;->c:Lqxh;
+    iget-object v0, p0, Ltn5;->b:Lzef;
 
-    iget-object v1, p0, Ltn5;->b:Lyn5;
+    invoke-virtual {v0}, Lzef;->b()Ljava/util/List;
 
-    invoke-virtual {v1, v0}, Lyn5;->e(Lqxh;)J
+    move-result-object v0
 
-    move-result-wide v2
-
-    invoke-virtual {v1, v2, v3}, Lyn5;->f(J)V
-
-    return-wide v2
+    return-object v0
 
     :pswitch_0
-    iget-object v0, p0, Ltn5;->c:Lqxh;
+    iget-object v0, p0, Ltn5;->b:Lzef;
 
-    iget-object v1, p0, Ltn5;->b:Lyn5;
+    invoke-virtual {v0}, Lzef;->b()Ljava/util/List;
 
-    invoke-virtual {v1, v0}, Lyn5;->e(Lqxh;)J
+    move-result-object v0
 
-    move-result-wide v2
+    return-object v0
 
-    invoke-virtual {v1, v2, v3}, Lyn5;->f(J)V
+    nop
 
-    return-wide v2
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final e(Ld96;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 1
+
+    iget v0, p0, Ltn5;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Ltn5;->b:Lzef;
+
+    invoke-virtual {v0, p1, p2}, Lzef;->e(Ld96;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    sget-object p1, Lod4;->a:Lod4;
+
+    return-object p1
+
+    :pswitch_0
+    iget-object v0, p0, Ltn5;->b:Lzef;
+
+    invoke-virtual {v0, p1, p2}, Lzef;->e(Ld96;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    sget-object p1, Lod4;->a:Lod4;
+
+    return-object p1
 
     nop
 

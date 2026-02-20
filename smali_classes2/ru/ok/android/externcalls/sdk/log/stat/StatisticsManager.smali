@@ -29,7 +29,7 @@
         "S",
         "",
         "statItem",
-        "Lb3h;",
+        "Lmah;",
         "log",
         "(Lru/ok/android/externcalls/sdk/log/stat/item/StatItem;)V",
         "TimeProvider",

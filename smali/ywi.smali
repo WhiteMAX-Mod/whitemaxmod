@@ -1,109 +1,45 @@
-.class public final Lywi;
-.super Ljava/lang/Object;
+.class public final synthetic Lywi;
+.super Lv3d;
 .source "SourceFile"
 
-# interfaces
-.implements Lyjj;
-.implements Lh2b;
-.implements Lz1b;
-.implements Lw1b;
 
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final b:Ljava/util/concurrent/Executor;
-
-.field public final c:Lm84;
-
-.field public final d:Liqj;
+# static fields
+.field public static final a:Lywi;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/util/concurrent/Executor;Lm84;Liqj;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput p4, p0, Lywi;->a:I
+    new-instance v0, Lywi;
 
-    iput-object p1, p0, Lywi;->b:Ljava/util/concurrent/Executor;
+    const-string v1, "getPliSent()J"
 
-    iput-object p2, p0, Lywi;->c:Lm84;
+    const/4 v2, 0x0
 
-    iput-object p3, p0, Lywi;->d:Liqj;
+    const-class v3, Lotf;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v4, "pliSent"
+
+    invoke-direct {v0, v3, v4, v1, v2}, Lv3d;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    sput-object v0, Lywi;->a:Lywi;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Ljava/lang/Object;)V
-    .locals 1
+.method public final get(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    iget-object v0, p0, Lywi;->d:Liqj;
+    check-cast p1, Lotf;
 
-    invoke-virtual {v0, p1}, Liqj;->o(Ljava/lang/Object;)V
+    iget-wide v0, p1, Lotf;->m:J
 
-    return-void
-.end method
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-.method public final b(Lcom/google/android/gms/tasks/Task;)V
-    .locals 3
+    move-result-object p1
 
-    iget v0, p0, Lywi;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v0, Ldkg;
-
-    const/16 v1, 0x8
-
-    invoke-direct {v0, p0, v1, p1}, Ldkg;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    iget-object p1, p0, Lywi;->b:Ljava/util/concurrent/Executor;
-
-    invoke-interface {p1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
-    return-void
-
-    :pswitch_0
-    new-instance v0, Lkuf;
-
-    const/16 v1, 0x9
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, p0, p1, v2, v1}, Lkuf;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
-
-    iget-object p1, p0, Lywi;->b:Ljava/util/concurrent/Executor;
-
-    invoke-interface {p1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public e()V
-    .locals 1
-
-    iget-object v0, p0, Lywi;->d:Liqj;
-
-    invoke-virtual {v0}, Liqj;->p()V
-
-    return-void
-.end method
-
-.method public onFailure(Ljava/lang/Exception;)V
-    .locals 1
-
-    iget-object v0, p0, Lywi;->d:Liqj;
-
-    invoke-virtual {v0, p1}, Liqj;->n(Ljava/lang/Exception;)V
-
-    return-void
+    return-object p1
 .end method

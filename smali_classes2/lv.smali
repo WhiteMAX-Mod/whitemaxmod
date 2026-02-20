@@ -1,119 +1,135 @@
-.class public final Llv;
-.super Lov;
+.class public final synthetic Llv;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lis6;
 
 
 # instance fields
-.field public final a:J
+.field public final synthetic a:I
 
-.field public final b:Z
+.field public final synthetic b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(JZ)V
+.method public synthetic constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
+    iput p2, p0, Llv;->a:I
+
+    iput-object p1, p0, Llv;->b:Ljava/lang/String;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Llv;->a:J
-
-    iput-boolean p3, p0, Llv;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final invoke()Ljava/lang/Object;
+    .locals 9
 
-    if-ne p0, p1, :cond_0
+    iget v0, p0, Llv;->a:I
+
+    iget-object v1, p0, Llv;->b:Ljava/lang/String;
+
+    packed-switch v0, :pswitch_data_0
+
+    sget-object v0, Lone/me/sharedata/ShareDataPickerScreen;->L0:[Lv58;
+
+    if-eqz v1, :cond_0
+
+    new-instance v0, Lyvb;
+
+    const-string v2, "link_source"
+
+    invoke-direct {v0, v2, v1}, Lyvb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    filled-new-array {v0}, [Lyvb;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljej;->a([Lyvb;)Lju;
+
+    move-result-object v0
+
+    :goto_0
+    move-object v7, v0
 
     goto :goto_1
 
     :cond_0
-    instance-of v0, p1, Llv;
-
-    if-nez v0, :cond_1
+    const/4 v0, 0x0
 
     goto :goto_0
 
-    :cond_1
-    check-cast p1, Llv;
-
-    iget-wide v0, p0, Llv;->a:J
-
-    iget-wide v2, p1, Llv;->a:J
-
-    cmp-long v0, v0, v2
-
-    if-eqz v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-boolean v0, p0, Llv;->b:Z
-
-    iget-boolean p1, p1, Llv;->b:Z
-
-    if-eq v0, p1, :cond_3
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_3
     :goto_1
-    const/4 p1, 0x1
+    new-instance v1, Liwb;
 
-    return p1
-.end method
+    const/4 v2, 0x0
 
-.method public final hashCode()I
-    .locals 2
+    const/4 v3, 0x2
 
-    iget-wide v0, p0, Llv;->a:J
+    const/4 v4, 0x0
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    const/16 v8, 0x1d
+
+    invoke-direct/range {v1 .. v8}, Liwb;-><init>(Lmdc;ILkrf;Ljava/lang/Long;Ljava/lang/Long;Lju;I)V
+
+    :pswitch_0
+    return-object v1
+
+    :pswitch_1
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    invoke-static {v0}, Landroid/net/TrafficStats;->setThreadStatsTag(I)V
 
-    iget-boolean v1, p0, Llv;->b:Z
+    :try_start_0
+    new-instance v0, Ljava/net/URL;
 
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+    invoke-direct {v0, v1}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
 
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, "LoadingAround(time="
-
-    const-string v1, ", isAddEventCaused="
-
-    iget-wide v2, p0, Llv;->a:J
-
-    iget-boolean v4, p0, Llv;->b:Z
-
-    invoke-static {v2, v3, v0, v1, v4}, Lhc0;->k(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Ljava/net/URL;->openStream()Ljava/io/InputStream;
 
     move-result-object v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    const-string v1, ")"
+    invoke-static {}, Landroid/net/TrafficStats;->clearThreadStatsTag()V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return-object v0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :catchall_0
+    move-exception v0
+
+    invoke-static {}, Landroid/net/TrafficStats;->clearThreadStatsTag()V
+
+    throw v0
+
+    :pswitch_2
+    const-string v0, "AssertionTracker(system: ov_sdk, subSystem: "
+
+    const-string v2, ") already registered"
+
+    invoke-static {v0, v1, v2}, Ltx8;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

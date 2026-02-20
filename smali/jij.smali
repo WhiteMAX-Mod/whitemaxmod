@@ -1,50 +1,104 @@
-.class public final Ljij;
+.class public abstract Ljij;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lvwa;
-
-
-# static fields
-.field public static final a:Ljij;
-
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public static a(Landroid/content/Context;)Z
+    .locals 5
 
-    new-instance v0, Ljij;
+    const-string v0, "display"
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
-    sput-object v0, Ljij;->a:Ljij;
+    move-result-object p0
 
-    new-instance v0, Lvzi;
+    check-cast p0, Landroid/hardware/display/DisplayManager;
 
-    const/4 v1, 0x1
+    const/4 v0, 0x0
 
-    invoke-direct {v0, v1}, Lvzi;-><init>(I)V
+    if-eqz p0, :cond_0
 
-    const-class v1, Ln0j;
+    invoke-virtual {p0, v0}, Landroid/hardware/display/DisplayManager;->getDisplay(I)Landroid/view/Display;
 
-    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
+    move-result-object p0
 
-    move-result-object v0
+    goto :goto_0
 
-    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
+    :cond_0
+    const/4 p0, 0x0
 
-    return-void
+    :goto_0
+    if-eqz p0, :cond_2
+
+    invoke-virtual {p0}, Landroid/view/Display;->isHdr()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    invoke-virtual {p0}, Landroid/view/Display;->getHdrCapabilities()Landroid/view/Display$HdrCapabilities;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/view/Display$HdrCapabilities;->getSupportedHdrTypes()[I
+
+    move-result-object p0
+
+    array-length v1, p0
+
+    move v2, v0
+
+    :goto_1
+    if-ge v2, v1, :cond_2
+
+    aget v3, p0, v2
+
+    const/4 v4, 0x1
+
+    if-ne v3, v4, :cond_1
+
+    return v4
+
+    :cond_1
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_1
+
+    :cond_2
+    return v0
 .end method
 
+.method public static final b(II)Z
+    .locals 1
 
-# virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+    if-ltz p1, :cond_1
 
-    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    const/16 v0, 0x20
 
-    move-result-object p1
+    if-ge p1, v0, :cond_1
 
-    throw p1
+    const/4 v0, 0x1
+
+    shl-int p1, v0, p1
+
+    and-int/2addr p0, p1
+
+    if-eqz p0, :cond_0
+
+    return v0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_1
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    const-string p1, "bitIndex must be in 0..31"
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
 .end method

@@ -389,7 +389,7 @@
 
     iget-object v2, v2, Lo2;->o:Ljava/io/Serializable;
 
-    check-cast v2, Lqui;
+    check-cast v2, Lk2j;
 
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -401,21 +401,21 @@
 
     if-eqz v3, :cond_0
 
-    new-instance v3, Lcui;
+    new-instance v3, Lw1j;
 
-    invoke-direct {v3, v2, v1, v0, v4}, Lw2;-><init>(Lqui;Ljava/lang/Object;Ljava/util/List;Lw2;)V
+    invoke-direct {v3, v2, v1, v0, v4}, Lw2;-><init>(Lk2j;Ljava/lang/Object;Ljava/util/List;Lw2;)V
 
     goto :goto_0
 
     :cond_0
     new-instance v3, Lw2;
 
-    invoke-direct {v3, v2, v1, v0, v4}, Lw2;-><init>(Lqui;Ljava/lang/Object;Ljava/util/List;Lw2;)V
+    invoke-direct {v3, v2, v1, v0, v4}, Lw2;-><init>(Lk2j;Ljava/lang/Object;Ljava/util/List;Lw2;)V
 
     :goto_0
-    new-instance v0, Lbwi;
+    new-instance v0, Lv3j;
 
-    invoke-direct {v0, v1, v3}, Lbwi;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v0, v1, v3}, Lv3j;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     return-object v0
 
@@ -468,7 +468,7 @@
 
     check-cast v1, Lo2;
 
-    invoke-virtual {v1, v0}, Lo2;->a(Ljava/util/Map$Entry;)Lak7;
+    invoke-virtual {v1, v0}, Lo2;->a(Ljava/util/Map$Entry;)Luk7;
 
     move-result-object v0
 
@@ -519,7 +519,7 @@
     :goto_0
     const-string v1, "no calls to next() since the last call to remove()"
 
-    invoke-static {v1, v0}, Lqaj;->e(Ljava/lang/String;Z)V
+    invoke-static {v1, v0}, Lrij;->e(Ljava/lang/String;Z)V
 
     iget-object v0, p0, Ln2;->b:Ljava/util/Iterator;
 
@@ -531,7 +531,7 @@
 
     iget-object v0, v0, Lo2;->o:Ljava/io/Serializable;
 
-    check-cast v0, Lqui;
+    check-cast v0, Lk2j;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -564,13 +564,13 @@
 
     iget-object v1, v0, Lw2;->X:Ljava/io/Serializable;
 
-    check-cast v1, Lg2;
+    check-cast v1, Li2;
 
-    iget v2, v1, Lg2;->o:I
+    iget v2, v1, Li2;->o:I
 
     add-int/lit8 v2, v2, -0x1
 
-    iput v2, v1, Lg2;->o:I
+    iput v2, v1, Li2;->o:I
 
     invoke-virtual {v0}, Lw2;->c()V
 
@@ -607,17 +607,17 @@
 
     check-cast v1, Lp2;
 
-    iget-object v1, v1, Lp2;->c:Lg2;
+    iget-object v1, v1, Lp2;->c:Li2;
 
     invoke-interface {v0}, Ljava/util/Collection;->size()I
 
     move-result v2
 
-    iget v3, v1, Lg2;->o:I
+    iget v3, v1, Li2;->o:I
 
     sub-int/2addr v3, v2
 
-    iput v3, v1, Lg2;->o:I
+    iput v3, v1, Li2;->o:I
 
     invoke-interface {v0}, Ljava/util/Collection;->clear()V
 
@@ -663,7 +663,7 @@
 
     iget-object v0, v0, Lo2;->o:Ljava/io/Serializable;
 
-    check-cast v0, Lg2;
+    check-cast v0, Li2;
 
     iget-object v1, p0, Ln2;->c:Ljava/lang/Object;
 
@@ -673,11 +673,11 @@
 
     move-result v1
 
-    iget v2, v0, Lg2;->o:I
+    iget v2, v0, Li2;->o:I
 
     sub-int/2addr v2, v1
 
-    iput v2, v0, Lg2;->o:I
+    iput v2, v0, Li2;->o:I
 
     iget-object v0, p0, Ln2;->c:Ljava/lang/Object;
 

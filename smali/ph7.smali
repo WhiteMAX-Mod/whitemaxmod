@@ -1,186 +1,72 @@
-.class public final Lph7;
+.class public final synthetic Lph7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lhah;
-.implements Lmi7;
-.implements Lmw7;
-
-
-# static fields
-.field public static final X:Lta0;
-
-.field public static final Y:Lta0;
-
-.field public static final Z:Lta0;
-
-.field public static final b:Lta0;
-
-.field public static final c:Lta0;
-
-.field public static final d:Lta0;
-
-.field public static final o:Lta0;
-
-.field public static final t0:Lta0;
-
-.field public static final u0:Lta0;
-
-.field public static final v0:Lta0;
-
-.field public static final w0:Lta0;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:Lhqb;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lqh7;
+
+.field public final synthetic c:Landroid/graphics/Bitmap;
+
+.field public final synthetic d:Lol6;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
-
-    new-instance v0, Lta0;
-
-    const-string v1, "camerax.core.imageCapture.captureMode"
-
-    sget-object v2, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v0, v1, v2, v3}, Lta0;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lph7;->b:Lta0;
-
-    new-instance v0, Lta0;
-
-    const-string v1, "camerax.core.imageCapture.flashMode"
-
-    invoke-direct {v0, v1, v2, v3}, Lta0;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lph7;->c:Lta0;
-
-    new-instance v0, Lta0;
-
-    const-string v1, "camerax.core.imageCapture.captureBundle"
-
-    const-class v4, Lb72;
-
-    invoke-direct {v0, v1, v4, v3}, Lta0;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lph7;->d:Lta0;
-
-    new-instance v0, Lta0;
-
-    const-string v1, "camerax.core.imageCapture.bufferFormat"
-
-    const-class v4, Ljava/lang/Integer;
-
-    invoke-direct {v0, v1, v4, v3}, Lta0;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lph7;->o:Lta0;
-
-    new-instance v0, Lta0;
-
-    const-string v1, "camerax.core.imageCapture.outputFormat"
-
-    invoke-direct {v0, v1, v4, v3}, Lta0;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lph7;->X:Lta0;
-
-    new-instance v0, Lta0;
-
-    const-string v1, "camerax.core.imageCapture.imageReaderProxyProvider"
-
-    const-class v4, Lxi7;
-
-    invoke-direct {v0, v1, v4, v3}, Lta0;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lph7;->Y:Lta0;
-
-    new-instance v0, Lta0;
-
-    const-string v1, "camerax.core.imageCapture.useSoftwareJpegEncoder"
-
-    sget-object v4, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
-
-    invoke-direct {v0, v1, v4, v3}, Lta0;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lph7;->Z:Lta0;
-
-    new-instance v0, Lta0;
-
-    const-string v1, "camerax.core.imageCapture.flashType"
-
-    invoke-direct {v0, v1, v2, v3}, Lta0;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lph7;->t0:Lta0;
-
-    new-instance v0, Lta0;
-
-    const-string v1, "camerax.core.imageCapture.jpegCompressionQuality"
-
-    invoke-direct {v0, v1, v2, v3}, Lta0;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lph7;->u0:Lta0;
-
-    new-instance v0, Lta0;
-
-    const-string v1, "camerax.core.imageCapture.screenFlash"
-
-    const-class v2, Lnh7;
-
-    invoke-direct {v0, v1, v2, v3}, Lta0;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lph7;->v0:Lta0;
-
-    new-instance v0, Lta0;
-
-    const-string v1, "camerax.core.useCase.isPostviewEnabled"
-
-    const-class v2, Ljava/lang/Boolean;
-
-    invoke-direct {v0, v1, v2, v3}, Lta0;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lph7;->w0:Lta0;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lhqb;)V
+.method public synthetic constructor <init>(Lqh7;Landroid/graphics/Bitmap;Lol6;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p4, p0, Lph7;->a:I
 
-    iput-object p1, p0, Lph7;->a:Lhqb;
+    iput-object p1, p0, Lph7;->b:Lqh7;
+
+    iput-object p2, p0, Lph7;->c:Landroid/graphics/Bitmap;
+
+    iput-object p3, p0, Lph7;->d:Lol6;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getConfig()Lmr3;
-    .locals 1
+.method public final run()V
+    .locals 3
 
-    iget-object v0, p0, Lph7;->a:Lhqb;
+    iget v0, p0, Lph7;->a:I
 
-    return-object v0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final getInputFormat()I
-    .locals 1
+    iget-object v0, p0, Lph7;->c:Landroid/graphics/Bitmap;
 
-    sget-object v0, Lci7;->y:Lta0;
+    iget-object v1, p0, Lph7;->d:Lol6;
 
-    invoke-interface {p0, v0}, Lmld;->d(Lta0;)Ljava/lang/Object;
+    iget-object v2, p0, Lph7;->b:Lqh7;
 
-    move-result-object v0
+    invoke-virtual {v2, v0, v1}, Lqh7;->a(Landroid/graphics/Bitmap;Lol6;)V
 
-    check-cast v0, Ljava/lang/Integer;
+    return-void
 
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+    :pswitch_0
+    iget-object v0, p0, Lph7;->c:Landroid/graphics/Bitmap;
 
-    move-result v0
+    iget-object v1, p0, Lph7;->d:Lol6;
 
-    return v0
+    iget-object v2, p0, Lph7;->b:Lqh7;
+
+    invoke-virtual {v2, v0, v1}, Lqh7;->a(Landroid/graphics/Bitmap;Lol6;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,64 +1,29 @@
 .class public final Ldod;
-.super Ljava/lang/Object;
+.super Landroidx/constraintlayout/widget/ConstraintLayout;
 .source "SourceFile"
 
-# interfaces
-.implements Ljod;
 
+# instance fields
+.field public F0:I
 
-# static fields
-.field public static final a:Ldod;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Ldod;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Ldod;->a:Ldod;
-
-    return-void
-.end method
+.field public G0:Lcod;
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final getSelected()I
     .locals 1
 
-    const/4 v0, 0x1
+    iget v0, p0, Ldod;->F0:I
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Ldod;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, -0x5ce2dfa5
+    add-int/lit8 v0, v0, 0x1
 
     return v0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+.method public final setOnSelectListener(Lcod;)V
+    .locals 0
 
-    const-string v0, "CloseTooltip"
+    iput-object p1, p0, Ldod;->G0:Lcod;
 
-    return-object v0
+    return-void
 .end method

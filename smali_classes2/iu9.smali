@@ -1,75 +1,61 @@
-.class public abstract Liu9;
-.super Ljava/lang/Object;
+.class public final Liu9;
+.super Lda4;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lo58;
+# instance fields
+.field public X:Ljava/lang/Long;
 
-.field public static final b:Lo58;
+.field public Y:Z
 
-.field public static final c:Lo58;
+.field public Z:Z
+
+.field public d:Lwt9;
+
+.field public o:Ljava/util/Set;
+
+.field public synthetic s0:Ljava/lang/Object;
+
+.field public final synthetic t0:Lvu9;
+
+.field public u0:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lvu9;Lda4;)V
+    .locals 0
 
-    sget-object v0, Lju9;->a:Lju9;
+    iput-object p1, p0, Liu9;->t0:Lvu9;
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v1
-
-    const/16 v2, 0x69
-
-    invoke-virtual {v1, v2}, Lr5;->d(I)Ln8g;
-
-    move-result-object v1
-
-    sput-object v1, Liu9;->a:Lo58;
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v1
-
-    const/16 v2, 0xde
-
-    invoke-virtual {v1, v2}, Lr5;->d(I)Ln8g;
-
-    move-result-object v1
-
-    sput-object v1, Liu9;->b:Lo58;
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v0
-
-    const/16 v1, 0x215
-
-    invoke-virtual {v0, v1}, Lr5;->d(I)Ln8g;
-
-    move-result-object v0
-
-    sput-object v0, Liu9;->c:Lo58;
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static a()Lo58;
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    sget-object v0, Lju9;->a:Lju9;
+    iput-object p1, p0, Liu9;->s0:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
+    iget p1, p0, Liu9;->u0:I
 
-    move-result-object v0
+    const/high16 v0, -0x80000000
 
-    const/16 v1, 0x35
+    or-int/2addr p1, v0
 
-    invoke-virtual {v0, v1}, Lr5;->d(I)Ln8g;
+    iput p1, p0, Liu9;->u0:I
 
-    move-result-object v0
+    const/4 p1, 0x0
 
-    return-object v0
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Liu9;->t0:Lvu9;
+
+    invoke-static {v1, p1, p1, v0, p0}, Lvu9;->p(Lvu9;Ltt9;Lwt9;ZLda4;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

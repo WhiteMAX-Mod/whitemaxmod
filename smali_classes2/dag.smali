@@ -1,142 +1,169 @@
 .class public final Ldag;
-.super Ljava/lang/Object;
+.super Lpdg;
 .source "SourceFile"
+
+# interfaces
+.implements Lys6;
 
 
 # instance fields
-.field public final a:Ljavax/net/ssl/SSLEngine;
+.field public final synthetic X:Lfe3;
 
-.field public final b:Ljava/nio/ByteBuffer;
+.field public final synthetic Y:Ljava/lang/String;
 
-.field public final c:Ljava/nio/ByteBuffer;
+.field public final synthetic Z:I
 
-.field public final d:Ljava/nio/ByteBuffer;
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Ljavax/net/ssl/SSLEngine;)V
-    .locals 1
+.method public constructor <init>(Lfe3;Ljava/lang/String;ILkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ldag;->X:Lfe3;
 
-    iput-object p1, p0, Ldag;->a:Ljavax/net/ssl/SSLEngine;
+    iput-object p2, p0, Ldag;->Y:Ljava/lang/String;
 
-    invoke-virtual {p1}, Ljavax/net/ssl/SSLEngine;->getSession()Ljavax/net/ssl/SSLSession;
+    iput p3, p0, Ldag;->Z:I
 
-    move-result-object v0
+    const/4 p1, 0x2
 
-    invoke-interface {v0}, Ljavax/net/ssl/SSLSession;->getPacketBufferSize()I
-
-    move-result v0
-
-    invoke-static {v0}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
-
-    move-result-object v0
-
-    iput-object v0, p0, Ldag;->b:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {p1}, Ljavax/net/ssl/SSLEngine;->getSession()Ljavax/net/ssl/SSLSession;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljavax/net/ssl/SSLSession;->getPacketBufferSize()I
-
-    move-result v0
-
-    invoke-static {v0}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
-
-    move-result-object v0
-
-    iput-object v0, p0, Ldag;->c:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {p1}, Ljavax/net/ssl/SSLEngine;->getSession()Ljavax/net/ssl/SSLSession;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Ljavax/net/ssl/SSLSession;->getApplicationBufferSize()I
-
-    move-result p1
-
-    invoke-static {p1}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
-
-    move-result-object p1
-
-    iput-object p1, p0, Ldag;->d:Ljava/nio/ByteBuffer;
+    invoke-direct {p0, p1, p4}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p1, Lnd4;
 
-    if-ne p0, p1, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return v0
+    invoke-virtual {p0, p1, p2}, Ldag;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of v1, p1, Ldag;
+    move-result-object p1
 
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
     check-cast p1, Ldag;
 
-    iget-object v1, p0, Ldag;->a:Ljavax/net/ssl/SSLEngine;
+    sget-object p2, Lmah;->a:Lmah;
 
-    iget-object p1, p1, Ldag;->a:Ljavax/net/ssl/SSLEngine;
+    invoke-virtual {p1, p2}, Ldag;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-result-object p1
 
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
+    return-object p1
 .end method
 
-.method public final hashCode()I
-    .locals 1
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
 
-    iget-object v0, p0, Ldag;->a:Ljavax/net/ssl/SSLEngine;
+    new-instance p1, Ldag;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    iget-object v0, p0, Ldag;->Y:Ljava/lang/String;
+
+    iget v1, p0, Ldag;->Z:I
+
+    iget-object v2, p0, Ldag;->X:Lfe3;
+
+    invoke-direct {p1, v2, v0, v1, p2}, Ldag;-><init>(Lfe3;Ljava/lang/String;ILkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
+
+    iget v0, p0, Ldag;->o:I
+
+    const/4 v1, 0x1
+
+    iget-object v2, p0, Ldag;->X:Lfe3;
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    goto :goto_1
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    iget-object p1, v2, Lfe3;->Y:Ljava/lang/Object;
+
+    check-cast p1, Ljava/util/List;
+
+    iget-object v0, v2, Lfe3;->s0:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/String;
+
+    iget-object v3, p0, Ldag;->Y:Ljava/lang/String;
+
+    invoke-static {v3, v0}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
-    return v0
-.end method
+    iget v4, p0, Ldag;->Z:I
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    if-eqz v0, :cond_3
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object v0, v2, Lfe3;->X:Ljava/lang/Object;
 
-    const-string v1, "TLSSession(sslEngine="
+    check-cast v0, Ljava/lang/Integer;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    if-nez v0, :cond_2
 
-    iget-object v1, p0, Ldag;->a:Ljavax/net/ssl/SSLEngine;
+    goto :goto_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    :cond_2
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
-    const-string v1, ")"
+    move-result v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-ne v0, v4, :cond_3
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    if-eqz p1, :cond_3
 
-    move-result-object v0
+    return-object p1
+
+    :cond_3
+    :goto_0
+    iget-object p1, v2, Lfe3;->d:Ljava/lang/Object;
+
+    check-cast p1, Libg;
+
+    iput v1, p0, Ldag;->o:I
+
+    invoke-virtual {p1, v3, v4, p0}, Libg;->d(Ljava/lang/String;ILkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lod4;->a:Lod4;
+
+    if-ne p1, v0, :cond_4
 
     return-object v0
+
+    :cond_4
+    :goto_1
+    move-object v0, p1
+
+    check-cast v0, Ljava/util/List;
+
+    iput-object v0, v2, Lfe3;->Y:Ljava/lang/Object;
+
+    return-object p1
 .end method

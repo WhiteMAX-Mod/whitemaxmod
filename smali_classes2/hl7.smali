@@ -1,116 +1,100 @@
-.class public final synthetic Lhl7;
-.super Ljava/lang/Object;
+.class public final Lhl7;
+.super Ly1;
 .source "SourceFile"
 
 # interfaces
-.implements Lx1b;
-.implements Lz1b;
-.implements Lw1b;
+.implements Lgjh;
 
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lil7;
+# static fields
+.field public static final a:Lhl7;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lil7;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p2, p0, Lhl7;->a:I
+    new-instance v0, Lhl7;
 
-    iput-object p1, p0, Lhl7;->b:Lil7;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lhl7;->a:Lhl7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public A(Lcom/google/android/gms/tasks/Task;)V
-    .locals 2
+.method public final a()Ljava/lang/String;
+    .locals 1
 
-    iget v0, p0, Lhl7;->a:I
+    const-string v0, "null"
 
-    iget-object v1, p0, Lhl7;->b:Lil7;
+    return-object v0
+.end method
 
-    packed-switch v0, :pswitch_data_0
-
-    iget-object p1, v1, Lil7;->d:Lq57;
-
-    if-eqz p1, :cond_0
-
-    sget-object p1, Lj8b;->a:Lj8b;
-
-    invoke-virtual {p1}, Lj8b;->h()Lfl7;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_0
-
-    sget-object v0, Lfl7;->p:Ljava/util/List;
+.method public final b()I
+    .locals 1
 
     const/4 v0, 0x1
 
-    const/4 v1, 0x0
+    return v0
+.end method
 
-    invoke-virtual {p1, v0, v1}, Lfl7;->c(ILjava/lang/Integer;)V
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    const/4 v0, 0x1
+
+    if-ne p1, p0, :cond_0
+
+    return v0
 
     :cond_0
-    return-void
+    instance-of v1, p1, Lgjh;
 
-    :pswitch_0
-    invoke-virtual {p1}, Lcom/google/android/gms/tasks/Task;->h()Z
+    const/4 v2, 0x0
 
-    move-result v0
+    if-nez v1, :cond_1
 
-    if-eqz v0, :cond_1
-
-    invoke-virtual {p1}, Lcom/google/android/gms/tasks/Task;->f()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lr0e;
-
-    iput-object p1, v1, Lil7;->c:Lr0e;
+    return v2
 
     :cond_1
-    return-void
+    check-cast p1, Lgjh;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    check-cast p1, Ly1;
+
+    invoke-interface {p1}, Lgjh;->b()I
+
+    move-result p1
+
+    if-eqz p1, :cond_3
+
+    if-ne p1, v0, :cond_2
+
+    return v0
+
+    :cond_2
+    return v2
+
+    :cond_3
+    const/4 p1, 0x0
+
+    throw p1
 .end method
 
-.method public e()V
+.method public final hashCode()I
     .locals 1
 
-    iget-object v0, p0, Lhl7;->b:Lil7;
+    const/4 v0, 0x0
 
-    iget-object v0, v0, Lil7;->d:Lq57;
-
-    if-eqz v0, :cond_0
-
-    invoke-static {}, Lq57;->r()V
-
-    :cond_0
-    return-void
+    return v0
 .end method
 
-.method public onFailure(Ljava/lang/Exception;)V
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    iget-object p1, p0, Lhl7;->b:Lil7;
+    const-string v0, "null"
 
-    iget-object p1, p1, Lil7;->d:Lq57;
-
-    if-eqz p1, :cond_0
-
-    invoke-static {}, Lq57;->r()V
-
-    :cond_0
-    return-void
+    return-object v0
 .end method

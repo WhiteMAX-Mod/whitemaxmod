@@ -1,133 +1,110 @@
 .class public final Ljch;
-.super Ljava/lang/Object;
+.super Lpdg;
 .source "SourceFile"
+
+# interfaces
+.implements Lys6;
 
 
 # instance fields
-.field public final a:[I
+.field public final synthetic X:Lmch;
 
-.field public final b:F
+.field public final synthetic Y:J
+
+.field public final synthetic Z:Ljava/util/List;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>([IF)V
+.method public constructor <init>(Lmch;JLjava/util/List;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ljch;->X:Lmch;
 
-    iput-object p1, p0, Ljch;->a:[I
+    iput-wide p2, p0, Ljch;->Y:J
 
-    iput p2, p0, Ljch;->b:F
+    iput-object p4, p0, Ljch;->Z:Ljava/util/List;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p5}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p1, Lnd4;
 
-    if-ne p0, p1, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return v0
+    invoke-virtual {p0, p1, p2}, Ljch;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of v1, p1, Ljch;
+    move-result-object p1
+
+    check-cast p1, Ljch;
+
+    sget-object p2, Lmah;->a:Lmah;
+
+    invoke-virtual {p1, p2}, Ljch;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 6
+
+    new-instance v0, Ljch;
+
+    iget-wide v2, p0, Ljch;->Y:J
+
+    iget-object v4, p0, Ljch;->Z:Ljava/util/List;
+
+    iget-object v1, p0, Ljch;->X:Lmch;
+
+    move-object v5, p2
+
+    invoke-direct/range {v0 .. v5}, Ljch;-><init>(Lmch;JLjava/util/List;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Ljch;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
+
+    iget-object v0, p0, Ljch;->o:Ljava/lang/Object;
+
+    check-cast v0, Lnd4;
+
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    new-instance v1, Lich;
+
+    iget-object v5, p0, Ljch;->Z:Ljava/util/List;
+
+    const/4 v6, 0x0
+
+    iget-object v2, p0, Ljch;->X:Lmch;
+
+    iget-wide v3, p0, Ljch;->Y:J
+
+    invoke-direct/range {v1 .. v6}, Lich;-><init>(Lmch;JLjava/util/List;Lkotlin/coroutines/Continuation;)V
+
+    const/4 p1, 0x3
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    invoke-static {v0, v2, v2, v1, p1}, Lea9;->d(Lnd4;Led4;Lqd4;Lys6;I)Lcuf;
 
-    return v2
+    move-result-object p1
 
-    :cond_1
-    check-cast p1, Ljch;
-
-    iget-object v1, p0, Ljch;->a:[I
-
-    iget-object v3, p1, Ljch;->a:[I
-
-    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget v1, p0, Ljch;->b:F
-
-    iget p1, p1, Ljch;->b:F
-
-    invoke-static {v1, p1}, Ljava/lang/Float;->compare(FF)I
-
-    move-result p1
-
-    if-eqz p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Ljch;->a:[I
-
-    invoke-static {v0}, Ljava/util/Arrays;->hashCode([I)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget v1, p0, Ljch;->b:F
-
-    invoke-static {v1}, Ljava/lang/Float;->hashCode(F)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    iget-object v0, p0, Ljch;->a:[I
-
-    invoke-static {v0}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
-
-    move-result-object v0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "Gradient(colors="
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, ", angle="
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v0, p0, Ljch;->b:F
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v0, ")"
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

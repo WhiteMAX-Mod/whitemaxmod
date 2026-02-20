@@ -4,30 +4,24 @@
 
 
 # instance fields
-.field public a:Z
+.field public final a:Lemc;
 
-.field public b:Z
+.field public final b:Lj88;
 
-.field public c:Z
+.field public final c:Lj88;
 
-.field public d:Z
 
-.field public e:I
+# direct methods
+.method public constructor <init>(Lemc;Lj88;Lj88;)V
+    .locals 0
 
-.field public f:Lorg/webrtc/PeerConnectionFactory$EnhancerKind;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public g:Ljava/lang/String;
+    iput-object p1, p0, Lboa;->a:Lemc;
 
-.field public h:I
+    iput-object p2, p0, Lboa;->b:Lj88;
 
-.field public i:I
+    iput-object p3, p0, Lboa;->c:Lj88;
 
-.field public j:I
-
-.field public k:I
-
-.field public l:I
-
-.field public m:Z
-
-.field public n:Lh4b;
+    return-void
+.end method

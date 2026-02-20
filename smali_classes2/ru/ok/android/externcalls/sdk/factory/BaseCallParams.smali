@@ -38,39 +38,39 @@
         "eventListener",
         "Lkotlin/Function1;",
         "Lru/ok/android/externcalls/sdk/Conversation;",
-        "Lb3h;",
+        "Lmah;",
         "onPrepared",
         "",
         "onError",
         "",
         "shouldStartWithVideo",
-        "Ln72;",
+        "Ls82;",
         "frameInterceptor",
-        "Lowa;",
+        "Lhza;",
         "cameraCapturerFactory",
         "",
         "fieldTrials",
         "<init>",
-        "(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;Lnq6;Lnq6;ZLn72;Lowa;Ljava/lang/String;)V",
+        "(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;Lks6;Lks6;ZLs82;Lhza;Ljava/lang/String;)V",
         "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
         "getMyId",
         "()Lru/ok/android/externcalls/sdk/id/ParticipantId;",
         "Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;",
         "getEventListener",
         "()Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;",
-        "Lnq6;",
+        "Lks6;",
         "getOnPrepared",
-        "()Lnq6;",
+        "()Lks6;",
         "getOnError",
         "Z",
         "getShouldStartWithVideo",
         "()Z",
-        "Ln72;",
+        "Ls82;",
         "getFrameInterceptor",
-        "()Ln72;",
-        "Lowa;",
+        "()Ls82;",
+        "Lhza;",
         "getCameraCapturerFactory",
-        "()Lowa;",
+        "()Lhza;",
         "Ljava/lang/String;",
         "getFieldTrials",
         "()Ljava/lang/String;",
@@ -88,28 +88,28 @@
 
 
 # instance fields
-.field private final cameraCapturerFactory:Lowa;
+.field private final cameraCapturerFactory:Lhza;
 
 .field private final eventListener:Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;
 
 .field private final fieldTrials:Ljava/lang/String;
 
-.field private final frameInterceptor:Ln72;
+.field private final frameInterceptor:Ls82;
 
 .field private final myId:Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
-.field private final onError:Lnq6;
+.field private final onError:Lks6;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lnq6;"
+            "Lks6;"
         }
     .end annotation
 .end field
 
-.field private final onPrepared:Lnq6;
+.field private final onPrepared:Lks6;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lnq6;"
+            "Lks6;"
         }
     .end annotation
 .end field
@@ -118,18 +118,18 @@
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;Lnq6;Lnq6;ZLn72;Lowa;Ljava/lang/String;)V
+.method public constructor <init>(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;Lks6;Lks6;ZLs82;Lhza;Ljava/lang/String;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
             "Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;",
-            "Lnq6;",
-            "Lnq6;",
+            "Lks6;",
+            "Lks6;",
             "Z",
-            "Ln72;",
-            "Lowa;",
+            "Ls82;",
+            "Lhza;",
             "Ljava/lang/String;",
             ")V"
         }
@@ -141,13 +141,13 @@
 
     iput-object p2, p0, Lru/ok/android/externcalls/sdk/factory/BaseCallParams;->eventListener:Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;
 
-    iput-object p3, p0, Lru/ok/android/externcalls/sdk/factory/BaseCallParams;->onPrepared:Lnq6;
+    iput-object p3, p0, Lru/ok/android/externcalls/sdk/factory/BaseCallParams;->onPrepared:Lks6;
 
-    iput-object p4, p0, Lru/ok/android/externcalls/sdk/factory/BaseCallParams;->onError:Lnq6;
+    iput-object p4, p0, Lru/ok/android/externcalls/sdk/factory/BaseCallParams;->onError:Lks6;
 
     iput-boolean p5, p0, Lru/ok/android/externcalls/sdk/factory/BaseCallParams;->shouldStartWithVideo:Z
 
-    iput-object p7, p0, Lru/ok/android/externcalls/sdk/factory/BaseCallParams;->cameraCapturerFactory:Lowa;
+    iput-object p7, p0, Lru/ok/android/externcalls/sdk/factory/BaseCallParams;->cameraCapturerFactory:Lhza;
 
     iput-object p8, p0, Lru/ok/android/externcalls/sdk/factory/BaseCallParams;->fieldTrials:Ljava/lang/String;
 
@@ -156,10 +156,10 @@
 
 
 # virtual methods
-.method public final getCameraCapturerFactory()Lowa;
+.method public final getCameraCapturerFactory()Lhza;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/factory/BaseCallParams;->cameraCapturerFactory:Lowa;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/factory/BaseCallParams;->cameraCapturerFactory:Lhza;
 
     return-object v0
 .end method
@@ -180,7 +180,7 @@
     return-object v0
 .end method
 
-.method public final getFrameInterceptor()Ln72;
+.method public final getFrameInterceptor()Ls82;
     .locals 1
 
     const/4 v0, 0x0
@@ -196,30 +196,30 @@
     return-object v0
 .end method
 
-.method public final getOnError()Lnq6;
+.method public final getOnError()Lks6;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lnq6;"
+            "Lks6;"
         }
     .end annotation
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/factory/BaseCallParams;->onError:Lnq6;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/factory/BaseCallParams;->onError:Lks6;
 
     return-object v0
 .end method
 
-.method public final getOnPrepared()Lnq6;
+.method public final getOnPrepared()Lks6;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lnq6;"
+            "Lks6;"
         }
     .end annotation
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/factory/BaseCallParams;->onPrepared:Lnq6;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/factory/BaseCallParams;->onPrepared:Lks6;
 
     return-object v0
 .end method

@@ -1,783 +1,572 @@
 .class public final Liw8;
-.super Ljh7;
+.super Lwi;
 .source "SourceFile"
 
 
+# static fields
+.field public static final synthetic w0:I
+
+
 # instance fields
-.field public R0:I
+.field public final u0:I
 
-.field public S0:Z
-
-.field public T0:Z
+.field public final v0:I
 
 
-# virtual methods
-.method public final getBlurOffset()I
+# direct methods
+.method public constructor <init>()V
     .locals 1
 
-    iget v0, p0, Liw8;->R0:I
+    const/4 v0, 0x0
 
-    invoke-static {v0}, Ljava/lang/Math;->abs(I)I
+    .line 1
+    invoke-direct {p0, v0}, Liw8;-><init>(I)V
 
-    move-result v0
-
-    return v0
+    return-void
 .end method
 
-.method public final getIgnoreCropCriteria()Z
+.method public synthetic constructor <init>(I)V
     .locals 1
 
-    iget-boolean v0, p0, Liw8;->T0:Z
+    const/4 p1, 0x1
 
-    return v0
+    const/4 v0, 0x0
+
+    .line 2
+    invoke-direct {p0, p1, v0}, Liw8;-><init>(ILy12;)V
+
+    return-void
 .end method
 
-.method public final getUseMaxDimensionsOnMeasure()Z
-    .locals 1
+.method public constructor <init>(ILy12;)V
+    .locals 2
 
-    iget-boolean v0, p0, Liw8;->S0:Z
+    const-wide/16 v0, 0x12c
 
-    return v0
-.end method
+    const/4 p2, 0x2
 
-.method public final onMeasure(II)V
-    .locals 6
+    .line 3
+    invoke-direct {p0, v0, v1, p2}, Lwi;-><init>(JI)V
 
-    invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
+    .line 4
+    iput p1, p0, Liw8;->u0:I
 
-    move-result v0
+    const/16 p1, 0x1e
 
-    invoke-static {p1}, Landroid/view/View$MeasureSpec;->getMode(I)I
+    int-to-float p1, p1
+
+    .line 5
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object p2
+
+    iget p2, p2, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr p1, p2
+
+    invoke-static {p1}, Lmhj;->f(F)I
 
     move-result p1
 
-    invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
+    .line 6
+    iput p1, p0, Liw8;->v0:I
+
+    return-void
+.end method
+
+.method public static p(Landroid/view/View;FF)Landroid/animation/ObjectAnimator;
+    .locals 8
+
+    invoke-virtual {p0}, Landroid/view/View;->getScaleX()F
+
+    move-result v0
+
+    invoke-virtual {p0}, Landroid/view/View;->getScaleY()F
 
     move-result v1
 
-    invoke-static {p2}, Landroid/view/View$MeasureSpec;->getMode(I)I
+    sget-object v2, Landroid/view/View;->SCALE_X:Landroid/util/Property;
 
-    move-result p2
+    mul-float v3, v0, p1
 
-    const/high16 v2, 0x40000000    # 2.0f
+    mul-float v4, v0, p2
 
-    if-ne p1, v2, :cond_0
+    const/4 v5, 0x2
 
-    if-ne p2, v2, :cond_0
+    new-array v6, v5, [F
 
-    invoke-virtual {p0, v0, v1}, Landroid/view/View;->setMeasuredDimension(II)V
+    const/4 v7, 0x0
 
-    goto/16 :goto_6
+    aput v3, v6, v7
 
-    :cond_0
-    invoke-virtual {p0}, Ljh7;->getImageAttach()Lyg7;
+    const/4 v3, 0x1
 
-    move-result-object p1
+    aput v4, v6, v3
 
-    iget p1, p1, Lyg7;->c:I
+    invoke-static {v2, v6}, Landroid/animation/PropertyValuesHolder;->ofFloat(Landroid/util/Property;[F)Landroid/animation/PropertyValuesHolder;
 
-    int-to-float p1, p1
+    move-result-object v2
 
-    invoke-virtual {p0}, Ljh7;->getImageAttach()Lyg7;
+    sget-object v4, Landroid/view/View;->SCALE_Y:Landroid/util/Property;
 
-    move-result-object p2
+    mul-float/2addr p1, v1
 
-    iget p2, p2, Lyg7;->d:I
+    mul-float/2addr p2, v1
 
-    int-to-float p2, p2
+    new-array v5, v5, [F
 
-    div-float/2addr p1, p2
+    aput p1, v5, v7
 
-    const/4 p2, 0x0
+    aput p2, v5, v3
 
-    iput p2, p0, Liw8;->R0:I
-
-    const/high16 p2, 0x3f800000    # 1.0f
-
-    cmpg-float v2, p1, p2
-
-    const/16 v3, 0x100
-
-    const/16 v4, 0x123
-
-    if-nez v2, :cond_4
-
-    iget-boolean p1, p0, Liw8;->S0:Z
-
-    if-nez p1, :cond_3
-
-    invoke-virtual {p0}, Ljh7;->getImageAttach()Lyg7;
+    invoke-static {v4, v5}, Landroid/animation/PropertyValuesHolder;->ofFloat(Landroid/util/Property;[F)Landroid/animation/PropertyValuesHolder;
 
     move-result-object p1
 
-    iget p1, p1, Lyg7;->c:I
+    filled-new-array {v2, p1}, [Landroid/animation/PropertyValuesHolder;
 
-    if-le p1, v4, :cond_1
+    move-result-object p1
+
+    invoke-static {p0, p1}, Landroid/animation/ObjectAnimator;->ofPropertyValuesHolder(Ljava/lang/Object;[Landroid/animation/PropertyValuesHolder;)Landroid/animation/ObjectAnimator;
+
+    move-result-object p1
+
+    new-instance p2, Lhw8;
+
+    invoke-direct {p2, p0, v0, v1}, Lhw8;-><init>(Landroid/view/View;FF)V
+
+    invoke-virtual {p1, p2}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+
+    return-object p1
+.end method
+
+.method public static q(Landroid/view/View;FFF)Landroid/animation/ObjectAnimator;
+    .locals 4
+
+    sget-object v0, Landroid/view/View;->TRANSLATION_X:Landroid/util/Property;
+
+    const/4 v1, 0x2
+
+    new-array v2, v1, [F
+
+    const/4 v3, 0x0
+
+    aput p1, v2, v3
+
+    const/4 p1, 0x1
+
+    aput p2, v2, p1
+
+    invoke-static {v0, v2}, Landroid/animation/PropertyValuesHolder;->ofFloat(Landroid/util/Property;[F)Landroid/animation/PropertyValuesHolder;
+
+    move-result-object p1
+
+    filled-new-array {p1}, [Landroid/animation/PropertyValuesHolder;
+
+    move-result-object p1
+
+    invoke-static {p0, p1}, Landroid/animation/ObjectAnimator;->ofPropertyValuesHolder(Ljava/lang/Object;[Landroid/animation/PropertyValuesHolder;)Landroid/animation/ObjectAnimator;
+
+    move-result-object p1
+
+    new-instance p2, Lgw8;
+
+    invoke-direct {p2, p0, p3, v1}, Lgw8;-><init>(Landroid/view/View;FI)V
+
+    invoke-virtual {p1, p2}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+
+    return-object p1
+.end method
+
+
+# virtual methods
+.method public final b()Lua4;
+    .locals 3
+
+    new-instance v0, Liw8;
+
+    iget v1, p0, Liw8;->u0:I
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Liw8;-><init>(ILy12;)V
+
+    return-object v0
+.end method
+
+.method public final l(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;ZZ)Landroid/animation/Animator;
+    .locals 9
+
+    new-instance p1, Landroid/animation/AnimatorSet;
+
+    invoke-direct {p1}, Landroid/animation/AnimatorSet;-><init>()V
+
+    new-instance p5, Lmw5;
+
+    invoke-direct {p5}, Lmw5;-><init>()V
+
+    invoke-virtual {p1, p5}, Landroid/animation/AnimatorSet;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+
+    const/high16 p5, 0x3f800000    # 1.0f
+
+    const/4 v0, 0x0
+
+    if-eqz p3, :cond_1
+
+    invoke-virtual {p3}, Landroid/view/View;->getAlpha()F
+
+    move-result v1
+
+    cmpg-float v1, v1, v0
+
+    if-nez v1, :cond_0
+
+    move v5, p5
 
     goto :goto_0
 
-    :cond_1
-    invoke-virtual {p0}, Ljh7;->getImageAttach()Lyg7;
+    :cond_0
+    invoke-virtual {p3}, Landroid/view/View;->getAlpha()F
 
-    move-result-object p1
+    move-result v1
 
-    iget p1, p1, Lyg7;->c:I
+    move v5, v1
 
-    const/16 p2, 0x8c
-
-    if-le p1, p2, :cond_2
-
-    int-to-float p1, v3
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object p2
-
-    invoke-virtual {p2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object p2
-
-    iget p2, p2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p2, p1
-
-    invoke-static {p2}, Lq7j;->c(F)I
-
-    move-result p2
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p1, v2
-
-    invoke-static {p1}, Lq7j;->c(F)I
-
-    move-result p1
-
-    invoke-virtual {p0, p2, p1}, Landroid/view/View;->setMeasuredDimension(II)V
-
-    goto/16 :goto_6
-
-    :cond_2
-    int-to-float p1, p2
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object p2
-
-    invoke-virtual {p2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object p2
-
-    iget p2, p2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p2, p1
-
-    invoke-static {p2}, Lq7j;->c(F)I
-
-    move-result p2
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p1, v2
-
-    invoke-static {p1}, Lq7j;->c(F)I
-
-    move-result p1
-
-    invoke-virtual {p0, p2, p1}, Landroid/view/View;->setMeasuredDimension(II)V
-
-    goto/16 :goto_6
-
-    :cond_3
     :goto_0
-    invoke-virtual {p0, v0, v0}, Landroid/view/View;->setMeasuredDimension(II)V
+    const v1, -0x41e66666    # -0.15f
 
-    goto/16 :goto_6
+    invoke-static {v1, v0, p5}, Liuj;->c(FFF)F
 
-    :cond_4
-    const/high16 v5, 0x3e800000    # 0.25f
+    move-result v6
 
-    if-gez v2, :cond_d
+    const/high16 v7, 0x3f800000    # 1.0f
 
-    const v2, 0x3edb6db7
+    const/4 v4, 0x0
 
-    cmpg-float v2, p1, v2
+    move v8, v5
 
-    const/16 v3, 0x180
+    move-object v2, p0
 
-    if-gez v2, :cond_7
+    move-object v3, p3
 
-    const/16 p2, 0xa5
+    invoke-virtual/range {v2 .. v8}, Liw8;->o(Landroid/view/View;FFFFF)Landroid/animation/ValueAnimator;
 
-    int-to-float p2, p2
+    move-result-object p3
 
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+    move-object v1, v2
 
-    move-result-object v2
+    move-object v8, v3
 
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p2, v2
-
-    invoke-static {p2}, Lq7j;->c(F)I
-
-    move-result p2
-
-    int-to-float v2, v3
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v3, v2
-
-    invoke-static {v3}, Lq7j;->c(F)I
-
-    move-result v3
-
-    int-to-float v3, v3
-
-    mul-float/2addr v3, p1
-
-    float-to-int p1, v3
-
-    iget-boolean v3, p0, Liw8;->T0:Z
-
-    if-nez v3, :cond_6
-
-    sub-int v3, p2, p1
-
-    int-to-float v3, v3
-
-    int-to-float v4, p2
-
-    mul-float/2addr v4, v5
-
-    cmpl-float v3, v3, v4
-
-    if-lez v3, :cond_5
+    invoke-virtual {p1, p3}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
 
     goto :goto_1
 
-    :cond_5
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+    :cond_1
+    move-object v1, p0
 
-    move-result-object p1
+    move-object v8, p3
 
-    invoke-virtual {p1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object p1
-
-    iget p1, p1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v2, p1
-
-    invoke-static {v2}, Lq7j;->c(F)I
-
-    move-result p1
-
-    invoke-virtual {p0, p2, p1}, Landroid/view/View;->setMeasuredDimension(II)V
-
-    goto/16 :goto_6
-
-    :cond_6
     :goto_1
-    sub-int/2addr p2, p1
+    if-eqz p2, :cond_2
 
-    div-int/lit8 p2, p2, 0x2
+    if-eqz p4, :cond_3
 
-    iput p2, p0, Liw8;->R0:I
+    iget-boolean p3, v1, Lwi;->t0:Z
 
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object p2
-
-    invoke-virtual {p2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object p2
-
-    iget p2, p2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v2, p2
-
-    invoke-static {v2}, Lq7j;->c(F)I
-
-    move-result p2
-
-    invoke-virtual {p0, p1, p2}, Landroid/view/View;->setMeasuredDimension(II)V
-
-    goto/16 :goto_6
-
-    :cond_7
-    iget-boolean v2, p0, Liw8;->S0:Z
-
-    if-nez v2, :cond_b
-
-    invoke-virtual {p0}, Ljh7;->getImageAttach()Lyg7;
-
-    move-result-object v2
-
-    iget v2, v2, Lyg7;->c:I
-
-    if-le v2, v4, :cond_8
-
-    goto :goto_3
-
-    :cond_8
-    invoke-virtual {p0}, Ljh7;->getImageAttach()Lyg7;
-
-    move-result-object v2
-
-    iget v2, v2, Lyg7;->c:I
-
-    const/16 v3, 0x78
-
-    if-le v2, v3, :cond_a
-
-    const/16 v2, 0x159
-
-    int-to-float v2, v2
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v3, v2
-
-    invoke-static {v3}, Lq7j;->c(F)I
-
-    move-result v3
-
-    int-to-float v3, v3
-
-    mul-float/2addr v3, p1
-
-    float-to-int p1, v3
-
-    if-gt p1, v0, :cond_9
+    if-eqz p3, :cond_2
 
     goto :goto_2
 
-    :cond_9
-    int-to-float p2, v0
-
-    int-to-float v3, p1
-
-    div-float/2addr p2, v3
-
-    :goto_2
-    int-to-float p1, p1
-
-    mul-float/2addr p1, p2
-
-    float-to-int p1, p1
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v2, v3
-
-    invoke-static {v2}, Lq7j;->c(F)I
-
-    move-result v2
-
-    int-to-float v2, v2
-
-    mul-float/2addr p2, v2
-
-    float-to-int p2, p2
-
-    invoke-virtual {p0, p1, p2}, Landroid/view/View;->setMeasuredDimension(II)V
-
-    goto/16 :goto_6
-
-    :cond_a
-    const/16 p2, 0x118
-
-    int-to-float p2, p2
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v2, p2
-
-    invoke-static {v2}, Lq7j;->c(F)I
-
-    move-result v2
-
-    int-to-float v2, v2
-
-    mul-float/2addr v2, p1
-
-    float-to-int p1, v2
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p2, v2
-
-    invoke-static {p2}, Lq7j;->c(F)I
-
-    move-result p2
-
-    invoke-virtual {p0, p1, p2}, Landroid/view/View;->setMeasuredDimension(II)V
-
-    goto/16 :goto_6
-
-    :cond_b
-    :goto_3
-    int-to-float v2, v3
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v3, v2
-
-    invoke-static {v3}, Lq7j;->c(F)I
-
-    move-result v3
-
-    int-to-float v3, v3
-
-    mul-float/2addr v3, p1
-
-    float-to-int p1, v3
-
-    if-gt p1, v0, :cond_c
+    :cond_2
+    move-object v2, p2
 
     goto :goto_4
 
-    :cond_c
-    int-to-float p2, v0
+    :cond_3
+    :goto_2
+    invoke-virtual {p2}, Landroid/view/View;->getAlpha()F
 
-    int-to-float v3, p1
+    move-result p3
 
-    div-float/2addr p2, v3
+    cmpg-float p3, p3, v0
+
+    if-nez p3, :cond_4
+
+    move v3, p5
+
+    goto :goto_3
+
+    :cond_4
+    invoke-virtual {p2}, Landroid/view/View;->getAlpha()F
+
+    move-result p3
+
+    move v3, p3
+
+    :goto_3
+    const p3, 0x3f59999a    # 0.85f
+
+    invoke-static {p3, v0, p5}, Liuj;->c(FFF)F
+
+    move-result v6
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    move v7, v3
+
+    move-object v2, p2
+
+    invoke-virtual/range {v1 .. v7}, Liw8;->o(Landroid/view/View;FFFFF)Landroid/animation/ValueAnimator;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
 
     :goto_4
-    int-to-float p1, p1
+    iget p2, v1, Liw8;->u0:I
 
-    mul-float/2addr p1, p2
+    invoke-static {p2}, Ly12;->t(I)I
 
-    float-to-int p1, p1
+    move-result p2
 
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+    if-eqz p2, :cond_9
 
-    move-result-object v3
+    const/4 p3, 0x1
 
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    if-ne p2, p3, :cond_8
 
-    move-result-object v3
+    const p2, 0x3f8ccccd    # 1.1f
 
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
+    const p3, 0x3f4ccccd    # 0.8f
 
-    mul-float/2addr v2, v3
+    if-eqz p4, :cond_6
 
-    invoke-static {v2}, Lq7j;->c(F)I
+    if-eqz v8, :cond_5
 
-    move-result v2
+    invoke-static {v8, p3, p5}, Liw8;->p(Landroid/view/View;FF)Landroid/animation/ObjectAnimator;
 
-    int-to-float v2, v2
+    move-result-object p3
 
-    mul-float/2addr p2, v2
+    invoke-virtual {p1, p3}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
 
-    float-to-int p2, p2
+    :cond_5
+    if-eqz v2, :cond_d
 
-    invoke-virtual {p0, p1, p2}, Landroid/view/View;->setMeasuredDimension(II)V
+    invoke-static {v2, p5, p2}, Liw8;->p(Landroid/view/View;FF)Landroid/animation/ObjectAnimator;
 
-    goto/16 :goto_6
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
+
+    return-object p1
+
+    :cond_6
+    if-eqz v8, :cond_7
+
+    invoke-static {v8, p2, p5}, Liw8;->p(Landroid/view/View;FF)Landroid/animation/ObjectAnimator;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
+
+    :cond_7
+    if-eqz v2, :cond_d
+
+    invoke-static {v2, p5, p3}, Liw8;->p(Landroid/view/View;FF)Landroid/animation/ObjectAnimator;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
+
+    return-object p1
+
+    :cond_8
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
+
+    :cond_9
+    iget p2, v1, Liw8;->v0:I
+
+    if-eqz p4, :cond_b
+
+    if-eqz v8, :cond_a
+
+    invoke-virtual {v8}, Landroid/view/View;->getTranslationX()F
+
+    move-result p3
+
+    int-to-float p4, p2
+
+    add-float/2addr p3, p4
+
+    invoke-virtual {v8}, Landroid/view/View;->getTranslationX()F
+
+    move-result p4
+
+    invoke-virtual {v8}, Landroid/view/View;->getTranslationX()F
+
+    move-result p5
+
+    invoke-static {v8, p3, p4, p5}, Liw8;->q(Landroid/view/View;FFF)Landroid/animation/ObjectAnimator;
+
+    move-result-object p3
+
+    invoke-virtual {p1, p3}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
+
+    :cond_a
+    if-eqz v2, :cond_d
+
+    invoke-virtual {v2}, Landroid/view/View;->getTranslationX()F
+
+    move-result p3
+
+    invoke-virtual {v2}, Landroid/view/View;->getTranslationX()F
+
+    move-result p4
+
+    int-to-float p2, p2
+
+    sub-float/2addr p4, p2
+
+    invoke-virtual {v2}, Landroid/view/View;->getTranslationX()F
+
+    move-result p2
+
+    invoke-static {v2, p3, p4, p2}, Liw8;->q(Landroid/view/View;FFF)Landroid/animation/ObjectAnimator;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
+
+    return-object p1
+
+    :cond_b
+    if-eqz v8, :cond_c
+
+    invoke-virtual {v8}, Landroid/view/View;->getTranslationX()F
+
+    move-result p3
+
+    int-to-float p4, p2
+
+    sub-float/2addr p3, p4
+
+    invoke-virtual {v8}, Landroid/view/View;->getTranslationX()F
+
+    move-result p4
+
+    invoke-virtual {v8}, Landroid/view/View;->getTranslationX()F
+
+    move-result p5
+
+    invoke-static {v8, p3, p4, p5}, Liw8;->q(Landroid/view/View;FFF)Landroid/animation/ObjectAnimator;
+
+    move-result-object p3
+
+    invoke-virtual {p1, p3}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
+
+    :cond_c
+    if-eqz v2, :cond_d
+
+    invoke-virtual {v2}, Landroid/view/View;->getTranslationX()F
+
+    move-result p3
+
+    invoke-virtual {v2}, Landroid/view/View;->getTranslationX()F
+
+    move-result p4
+
+    int-to-float p2, p2
+
+    add-float/2addr p4, p2
+
+    invoke-virtual {v2}, Landroid/view/View;->getTranslationX()F
+
+    move-result p2
+
+    invoke-static {v2, p3, p4, p2}, Liw8;->q(Landroid/view/View;FFF)Landroid/animation/ObjectAnimator;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
 
     :cond_d
-    cmpl-float p2, p1, p2
-
-    if-lez p2, :cond_13
-
-    const p2, 0x40155555
-
-    cmpl-float p2, p1, p2
-
-    if-lez p2, :cond_f
-
-    const/16 p2, 0x48
-
-    int-to-float p2, p2
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p2, v2
-
-    invoke-static {p2}, Lq7j;->c(F)I
-
-    move-result p2
-
-    int-to-float v2, v0
-
-    div-float/2addr v2, p1
-
-    float-to-int p1, v2
-
-    sub-int v2, p2, p1
-
-    int-to-float v3, v2
-
-    int-to-float v4, p2
-
-    mul-float/2addr v4, v5
-
-    cmpl-float v3, v3, v4
-
-    if-lez v3, :cond_e
-
-    mul-int/lit8 v2, v2, -0x1
-
-    div-int/lit8 v2, v2, 0x2
-
-    iput v2, p0, Liw8;->R0:I
-
-    invoke-virtual {p0, v0, p1}, Landroid/view/View;->setMeasuredDimension(II)V
-
-    goto/16 :goto_6
-
-    :cond_e
-    invoke-virtual {p0, v0, p2}, Landroid/view/View;->setMeasuredDimension(II)V
-
-    goto :goto_6
-
-    :cond_f
-    iget-boolean p2, p0, Liw8;->S0:Z
-
-    if-nez p2, :cond_12
-
-    invoke-virtual {p0}, Ljh7;->getImageAttach()Lyg7;
-
-    move-result-object p2
-
-    iget p2, p2, Lyg7;->c:I
-
-    if-le p2, v4, :cond_10
-
-    goto :goto_5
-
-    :cond_10
-    invoke-virtual {p0}, Ljh7;->getImageAttach()Lyg7;
-
-    move-result-object p2
-
-    iget p2, p2, Lyg7;->c:I
-
-    const/16 v2, 0xd4
-
-    if-le p2, v2, :cond_11
-
-    int-to-float p2, v3
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v2, p2
-
-    invoke-static {v2}, Lq7j;->c(F)I
-
-    move-result v2
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p2, v3
-
-    invoke-static {p2}, Lq7j;->c(F)I
-
-    move-result p2
-
-    int-to-float p2, p2
-
-    div-float/2addr p2, p1
-
-    float-to-int p1, p2
-
-    invoke-virtual {p0, v2, p1}, Landroid/view/View;->setMeasuredDimension(II)V
-
-    goto :goto_6
-
-    :cond_11
-    int-to-float p2, v2
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v2, p2
-
-    invoke-static {v2}, Lq7j;->c(F)I
-
-    move-result v2
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p2, v3
-
-    invoke-static {p2}, Lq7j;->c(F)I
-
-    move-result p2
-
-    int-to-float p2, p2
-
-    div-float/2addr p2, p1
-
-    float-to-int p1, p2
-
-    invoke-virtual {p0, v2, p1}, Landroid/view/View;->setMeasuredDimension(II)V
-
-    goto :goto_6
-
-    :cond_12
-    :goto_5
-    int-to-float p2, v0
-
-    div-float/2addr p2, p1
-
-    float-to-int p1, p2
-
-    invoke-virtual {p0, v0, p1}, Landroid/view/View;->setMeasuredDimension(II)V
-
-    goto :goto_6
-
-    :cond_13
-    invoke-virtual {p0, v0, v1}, Landroid/view/View;->setMeasuredDimension(II)V
-
-    :goto_6
-    invoke-virtual {p0, v0}, Ljh7;->setMeasuredLayoutWidth(I)V
-
-    invoke-virtual {p0, v1}, Ljh7;->setMeasuredLayoutHeight(I)V
-
-    return-void
+    return-object p1
 .end method
 
-.method public final r()Z
+.method public final n(Landroid/view/View;)V
     .locals 1
 
-    iget v0, p0, Liw8;->R0:I
+    const/high16 v0, 0x3f800000    # 1.0f
 
-    if-gez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final setIgnoreCropCriteria(Z)V
-    .locals 0
-
-    iput-boolean p1, p0, Liw8;->T0:Z
+    invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
 
     return-void
 .end method
 
-.method public final setUseMaxDimensionsOnMeasure(Z)V
-    .locals 0
+.method public final o(Landroid/view/View;FFFFF)Landroid/animation/ValueAnimator;
+    .locals 9
 
-    iput-boolean p1, p0, Liw8;->S0:Z
+    const/4 v0, 0x2
 
-    return-void
+    new-array v0, v0, [F
+
+    fill-array-data v0, :array_0
+
+    invoke-static {v0}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
+
+    move-result-object v2
+
+    new-instance v1, Lfw8;
+
+    move-object v4, p0
+
+    move-object v3, p1
+
+    move v5, p2
+
+    move v6, p3
+
+    move v7, p4
+
+    move v8, p5
+
+    invoke-direct/range {v1 .. v8}, Lfw8;-><init>(Landroid/animation/ValueAnimator;Landroid/view/View;Liw8;FFFF)V
+
+    invoke-virtual {v2, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+
+    new-instance p1, Lgw8;
+
+    const/4 p2, 0x1
+
+    invoke-direct {p1, v3, p6, p2}, Lgw8;-><init>(Landroid/view/View;FI)V
+
+    invoke-virtual {v2, p1}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+
+    new-instance p1, Lgw8;
+
+    const/4 p2, 0x0
+
+    invoke-direct {p1, v3, p6, p2}, Lgw8;-><init>(Landroid/view/View;FI)V
+
+    invoke-virtual {v2, p1}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+
+    return-object v2
+
+    nop
+
+    :array_0
+    .array-data 4
+        0x0
+        0x3f800000    # 1.0f
+    .end array-data
 .end method

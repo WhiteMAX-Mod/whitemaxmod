@@ -1,130 +1,127 @@
-.class public final Ln66;
-.super Lesd;
+.class public final synthetic Ln66;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lk66;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Ln66;",
-            ">;"
-        }
-    .end annotation
-.end field
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public X:F
+.field public final synthetic a:I
 
-.field public Y:I
-
-.field public Z:F
-
-.field public o:F
-
-.field public t0:I
-
-.field public u0:I
-
-.field public v0:I
-
-.field public w0:I
-
-.field public x0:Z
+.field public final synthetic b:Lcom/google/firebase/messaging/FirebaseMessaging;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Lcom/google/firebase/messaging/FirebaseMessaging;I)V
+    .locals 0
 
-    new-instance v0, Lxj4;
+    iput p2, p0, Ln66;->a:I
 
-    const/16 v1, 0xc
+    iput-object p1, p0, Ln66;->b:Lcom/google/firebase/messaging/FirebaseMessaging;
 
-    invoke-direct {v0, v1}, Lxj4;-><init>(I)V
-
-    sput-object v0, Ln66;->CREATOR:Landroid/os/Parcelable$Creator;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
+.method public final run()V
+    .locals 4
 
-    const/4 v0, 0x0
+    iget v0, p0, Ln66;->a:I
 
-    return v0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
+    iget-object v0, p0, Ln66;->b:Lcom/google/firebase/messaging/FirebaseMessaging;
 
-    iget p2, p0, Ln66;->o:F
+    iget-object v1, v0, Lcom/google/firebase/messaging/FirebaseMessaging;->b:Landroid/content/Context;
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
+    invoke-static {v1}, Lduj;->c(Landroid/content/Context;)V
 
-    iget p2, p0, Ln66;->X:F
+    iget-object v2, v0, Lcom/google/firebase/messaging/FirebaseMessaging;->c:Li9i;
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
+    invoke-virtual {v0}, Lcom/google/firebase/messaging/FirebaseMessaging;->h()Z
 
-    iget p2, p0, Ln66;->Y:I
+    move-result v3
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-static {v1, v2, v3}, Leuj;->c(Landroid/content/Context;Li9i;Z)V
 
-    iget p2, p0, Ln66;->Z:F
+    invoke-virtual {v0}, Lcom/google/firebase/messaging/FirebaseMessaging;->h()Z
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
+    move-result v1
 
-    iget p2, p0, Ln66;->t0:I
+    if-eqz v1, :cond_0
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {v0}, Lcom/google/firebase/messaging/FirebaseMessaging;->g()V
 
-    iget p2, p0, Ln66;->u0:I
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget p2, p0, Ln66;->v0:I
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget p2, p0, Ln66;->w0:I
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget-boolean p2, p0, Ln66;->x0:Z
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByte(B)V
-
-    iget p2, p0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget p2, p0, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget p2, p0, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget p2, p0, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget p2, p0, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget p2, p0, Landroid/view/ViewGroup$MarginLayoutParams;->width:I
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
+    :cond_0
     return-void
+
+    :pswitch_0
+    iget-object v0, p0, Ln66;->b:Lcom/google/firebase/messaging/FirebaseMessaging;
+
+    iget-object v1, v0, Lcom/google/firebase/messaging/FirebaseMessaging;->e:Lir6;
+
+    invoke-virtual {v1}, Lir6;->j()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    invoke-virtual {v0}, Lcom/google/firebase/messaging/FirebaseMessaging;->f()Lg5g;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/google/firebase/messaging/FirebaseMessaging;->j(Lg5g;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-boolean v1, v0, Lcom/google/firebase/messaging/FirebaseMessaging;->i:Z
+
+    if-nez v1, :cond_1
+
+    const-wide/16 v1, 0x0
+
+    invoke-virtual {v0, v1, v2}, Lcom/google/firebase/messaging/FirebaseMessaging;->i(J)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v1
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    monitor-exit v0
+
+    goto :goto_2
+
+    :goto_1
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v1
+
+    :cond_2
+    :goto_2
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

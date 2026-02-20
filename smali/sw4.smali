@@ -1,51 +1,74 @@
-.class public abstract Lsw4;
-.super Lzj0;
+.class public final synthetic Lsw4;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final b:Lzj0;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lyw4;
+
+.field public final synthetic c:Ljava/lang/InterruptedException;
 
 
 # direct methods
-.method public constructor <init>(Lzj0;)V
+.method public synthetic constructor <init>(Lyw4;Ljava/lang/InterruptedException;I)V
     .locals 0
 
-    invoke-direct {p0}, Lzj0;-><init>()V
+    iput p3, p0, Lsw4;->a:I
 
-    iput-object p1, p0, Lsw4;->b:Lzj0;
+    iput-object p1, p0, Lsw4;->b:Lyw4;
+
+    iput-object p2, p0, Lsw4;->c:Ljava/lang/InterruptedException;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public d()V
-    .locals 1
+.method public final run()V
+    .locals 3
 
-    iget-object v0, p0, Lsw4;->b:Lzj0;
+    iget v0, p0, Lsw4;->a:I
 
-    invoke-virtual {v0}, Lzj0;->c()V
+    packed-switch v0, :pswitch_data_0
 
-    return-void
-.end method
+    iget-object v0, p0, Lsw4;->b:Lyw4;
 
-.method public f(Ljava/lang/Throwable;)V
-    .locals 1
+    iget-object v0, v0, Lyw4;->h:Lyoh;
 
-    iget-object v0, p0, Lsw4;->b:Lzj0;
+    new-instance v1, Landroidx/media3/common/VideoFrameProcessingException;
 
-    invoke-virtual {v0, p1}, Lzj0;->e(Ljava/lang/Throwable;)V
+    iget-object v2, p0, Lsw4;->c:Ljava/lang/InterruptedException;
 
-    return-void
-.end method
+    invoke-direct {v1, v2}, Ljava/lang/Exception;-><init>(Ljava/lang/Throwable;)V
 
-.method public j(F)V
-    .locals 1
-
-    iget-object v0, p0, Lsw4;->b:Lzj0;
-
-    invoke-virtual {v0, p1}, Lzj0;->i(F)V
+    invoke-interface {v0, v1}, Lyoh;->b(Landroidx/media3/common/VideoFrameProcessingException;)V
 
     return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lsw4;->b:Lyw4;
+
+    iget-object v0, v0, Lyw4;->h:Lyoh;
+
+    iget-object v1, p0, Lsw4;->c:Ljava/lang/InterruptedException;
+
+    invoke-static {v1}, Landroidx/media3/common/VideoFrameProcessingException;->a(Ljava/lang/Exception;)Landroidx/media3/common/VideoFrameProcessingException;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Lyoh;->b(Landroidx/media3/common/VideoFrameProcessingException;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

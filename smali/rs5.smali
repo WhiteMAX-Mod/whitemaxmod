@@ -1,86 +1,85 @@
-.class public final Lrs5;
-.super Lnth;
+.class public interface abstract Lrs5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:Lmmf;
+# virtual methods
+.method public abstract a()Loyg;
+.end method
 
-.field public final b:Lo58;
+.method public abstract b()I
+.end method
 
-.field public final c:Lo58;
-
-.field public final d:Ljava/lang/String;
-
-.field public final o:Lcm5;
-
-
-# direct methods
-.method public constructor <init>()V
-    .locals 3
-
-    sget-object v0, Lis5;->a:Lis5;
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v1
-
-    const/16 v2, 0x32
-
-    invoke-virtual {v1, v2}, Lr5;->d(I)Ln8g;
-
-    move-result-object v1
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v0
-
-    const/16 v2, 0xc
-
-    invoke-virtual {v0, v2}, Lr5;->d(I)Ln8g;
-
-    move-result-object v0
-
-    invoke-direct {p0}, Lnth;-><init>()V
-
-    iput-object v1, p0, Lrs5;->b:Lo58;
-
-    iput-object v0, p0, Lrs5;->c:Lo58;
-
-    const-class v0, Lrs5;
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lrs5;->d:Ljava/lang/String;
-
-    new-instance v0, Lcm5;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lcm5;-><init>(I)V
-
-    iput-object v0, p0, Lrs5;->o:Lcm5;
+.method public c(Z)V
+    .locals 0
 
     return-void
 .end method
 
+.method public abstract d(I)Lnl6;
+.end method
 
-# virtual methods
-.method public final r()V
-    .locals 2
+.method public abstract e()V
+.end method
 
-    iget-object v0, p0, Lrs5;->X:Lmmf;
+.method public abstract f(I)I
+.end method
 
-    const/4 v1, 0x0
+.method public abstract g(JLjava/util/List;)I
+.end method
 
-    if-eqz v0, :cond_0
+.method public abstract h()V
+.end method
 
-    invoke-virtual {v0, v1}, Lvy7;->cancel(Ljava/util/concurrent/CancellationException;)V
+.method public abstract i()I
+.end method
 
-    :cond_0
-    iput-object v1, p0, Lrs5;->X:Lmmf;
+.method public abstract j()Lnl6;
+.end method
+
+.method public abstract k()I
+.end method
+
+.method public abstract l(F)V
+.end method
+
+.method public abstract length()I
+.end method
+
+.method public abstract m()Ljava/lang/Object;
+.end method
+
+.method public n()V
+    .locals 0
 
     return-void
+.end method
+
+.method public o()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public abstract p(I)I
+.end method
+
+.method public abstract q(Lnl6;)I
+.end method
+
+.method public abstract r(IJ)Z
+.end method
+
+.method public abstract s(IJ)Z
+.end method
+
+.method public abstract t(JJJLjava/util/List;[Lp19;)V
+.end method
+
+.method public u(JLge3;Ljava/util/List;)Z
+    .locals 0
+
+    const/4 p1, 0x0
+
+    return p1
 .end method

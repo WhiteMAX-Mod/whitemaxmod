@@ -3,26 +3,16 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lvwa;
+.implements Loza;
 
 
 # static fields
 .field public static final a:Ledj;
 
-.field public static final b:Lfz5;
-
-.field public static final c:Lfz5;
-
-.field public static final d:Lfz5;
-
-.field public static final e:Lfz5;
-
-.field public static final f:Lfz5;
-
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 3
 
     new-instance v0, Ledj;
 
@@ -30,159 +20,61 @@
 
     sput-object v0, Ledj;->a:Ledj;
 
-    new-instance v0, Lvzi;
+    new-instance v0, Lp7j;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, v1}, Lvzi;-><init>(I)V
+    invoke-direct {v0, v1}, Lp7j;-><init>(I)V
 
-    const-class v1, Ln0j;
+    const-class v1, Lh8j;
 
-    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    new-instance v2, Lfz5;
-
-    invoke-static {v0}, Lt02;->n(Ljava/util/HashMap;)Ljava/util/Map;
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
 
     move-result-object v0
-
-    const-string v3, "inferenceCommonLogEvent"
-
-    invoke-direct {v2, v3, v0}, Lfz5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v2, Ledj;->b:Lfz5;
-
-    new-instance v0, Lvzi;
 
     const/4 v2, 0x2
 
-    invoke-direct {v0, v2}, Lvzi;-><init>(I)V
-
-    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
+    invoke-static {v0, v2}, Leni;->i(Ljava/util/HashMap;I)Lp7j;
 
     move-result-object v0
 
-    new-instance v2, Lfz5;
-
-    invoke-static {v0}, Lt02;->n(Ljava/util/HashMap;)Ljava/util/Map;
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
 
     move-result-object v0
-
-    const-string v3, "options"
-
-    invoke-direct {v2, v3, v0}, Lfz5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v2, Ledj;->c:Lfz5;
-
-    new-instance v0, Lvzi;
 
     const/4 v2, 0x3
 
-    invoke-direct {v0, v2}, Lvzi;-><init>(I)V
-
-    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
+    invoke-static {v0, v2}, Leni;->i(Ljava/util/HashMap;I)Lp7j;
 
     move-result-object v0
 
-    new-instance v2, Lfz5;
-
-    invoke-static {v0}, Lt02;->n(Ljava/util/HashMap;)Ljava/util/Map;
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
 
     move-result-object v0
-
-    const-string v3, "detectedBarcodeFormats"
-
-    invoke-direct {v2, v3, v0}, Lfz5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v2, Ledj;->d:Lfz5;
-
-    new-instance v0, Lvzi;
 
     const/4 v2, 0x4
 
-    invoke-direct {v0, v2}, Lvzi;-><init>(I)V
-
-    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
+    invoke-static {v0, v2}, Leni;->i(Ljava/util/HashMap;I)Lp7j;
 
     move-result-object v0
 
-    new-instance v2, Lfz5;
-
-    invoke-static {v0}, Lt02;->n(Ljava/util/HashMap;)Ljava/util/Map;
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
 
     move-result-object v0
 
-    const-string v3, "detectedBarcodeValueTypes"
-
-    invoke-direct {v2, v3, v0}, Lfz5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v2, Ledj;->e:Lfz5;
-
-    new-instance v0, Lvzi;
-
-    const/4 v2, 0x5
-
-    invoke-direct {v0, v2}, Lvzi;-><init>(I)V
-
-    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    new-instance v1, Lfz5;
-
-    invoke-static {v0}, Lt02;->n(Ljava/util/HashMap;)Ljava/util/Map;
-
-    move-result-object v0
-
-    const-string v2, "imageInfo"
-
-    invoke-direct {v1, v2, v0}, Lfz5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v1, Ledj;->f:Lfz5;
+    invoke-static {v0}, Leni;->m(Ljava/util/HashMap;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 2
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    check-cast p1, Lplj;
+    invoke-static {p1}, Lkb0;->d(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    check-cast p2, Lwwa;
+    move-result-object p1
 
-    sget-object v0, Ledj;->b:Lfz5;
-
-    iget-object v1, p1, Lplj;->a:Llkj;
-
-    invoke-interface {p2, v0, v1}, Lwwa;->a(Lfz5;Ljava/lang/Object;)Lwwa;
-
-    sget-object v0, Ledj;->c:Lfz5;
-
-    iget-object v1, p1, Lplj;->b:Lcqj;
-
-    invoke-interface {p2, v0, v1}, Lwwa;->a(Lfz5;Ljava/lang/Object;)Lwwa;
-
-    sget-object v0, Ledj;->d:Lfz5;
-
-    iget-object v1, p1, Lplj;->c:Llxi;
-
-    invoke-interface {p2, v0, v1}, Lwwa;->a(Lfz5;Ljava/lang/Object;)Lwwa;
-
-    sget-object v0, Ledj;->e:Lfz5;
-
-    iget-object v1, p1, Lplj;->d:Llxi;
-
-    invoke-interface {p2, v0, v1}, Lwwa;->a(Lfz5;Ljava/lang/Object;)Lwwa;
-
-    sget-object v0, Ledj;->f:Lfz5;
-
-    iget-object p1, p1, Lplj;->e:Lhkj;
-
-    invoke-interface {p2, v0, p1}, Lwwa;->a(Lfz5;Ljava/lang/Object;)Lwwa;
-
-    return-void
+    throw p1
 .end method

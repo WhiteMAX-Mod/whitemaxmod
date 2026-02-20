@@ -1,171 +1,78 @@
-.class public final Lqqj;
+.class public abstract Lqqj;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lmqj;
-
-
-# instance fields
-.field public final a:Lp58;
-
-.field public final b:Lp58;
-
-.field public final c:Llqj;
-
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Llqj;)V
-    .locals 2
+.method public static final a(Lte2;)J
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p0}, Lte2;->r()J
 
-    iput-object p2, p0, Lqqj;->c:Llqj;
+    move-result-wide v0
 
-    sget-object p2, Llz0;->e:Llz0;
+    iget-object p0, p0, Lte2;->c:Lcn9;
 
-    invoke-static {p1}, Llug;->b(Landroid/content/Context;)V
+    if-eqz p0, :cond_0
 
-    invoke-static {}, Llug;->a()Llug;
+    iget-object p0, p0, Lcn9;->a:Lpo9;
 
-    move-result-object p1
+    if-eqz p0, :cond_0
 
-    invoke-virtual {p1, p2}, Llug;->c(Ldi5;)Liug;
-
-    move-result-object p1
-
-    sget-object p2, Llz0;->d:Ljava/util/Set;
-
-    new-instance v0, Lhj5;
-
-    const-string v1, "json"
-
-    invoke-direct {v0, v1}, Lhj5;-><init>(Ljava/lang/String;)V
-
-    invoke-interface {p2, v0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_0
-
-    new-instance p2, Lp58;
-
-    new-instance v0, Lofj;
-
-    const/4 v1, 0x2
-
-    invoke-direct {v0, p1, v1}, Lofj;-><init>(Liug;I)V
-
-    invoke-direct {p2, v0}, Lp58;-><init>(Llzc;)V
-
-    iput-object p2, p0, Lqqj;->a:Lp58;
-
-    :cond_0
-    new-instance p2, Lp58;
-
-    new-instance v0, Lofj;
-
-    const/4 v1, 0x3
-
-    invoke-direct {v0, p1, v1}, Lofj;-><init>(Liug;I)V
-
-    invoke-direct {p2, v0}, Lp58;-><init>(Llzc;)V
-
-    iput-object p2, p0, Lqqj;->b:Lp58;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a(Lto6;)V
-    .locals 6
-
-    iget-object v0, p0, Lqqj;->c:Llqj;
-
-    iget v0, v0, Llqj;->b:I
-
-    sget-object v1, Lzhc;->b:Lzhc;
-
-    sget-object v2, Lzhc;->a:Lzhc;
-
-    const/4 v3, 0x0
-
-    if-nez v0, :cond_2
-
-    iget-object v4, p0, Lqqj;->a:Lp58;
-
-    if-eqz v4, :cond_1
-
-    invoke-virtual {v4}, Lp58;->get()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Ljug;
-
-    iget v5, p1, Lto6;->b:I
-
-    if-eqz v5, :cond_0
-
-    invoke-virtual {p1, v0}, Lto6;->b0(I)[B
-
-    move-result-object p1
-
-    new-instance v0, Lbb0;
-
-    invoke-direct {v0, p1, v2, v3}, Lbb0;-><init>(Ljava/lang/Object;Lzhc;Lec0;)V
+    iget-wide v2, p0, Lpo9;->c:J
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p1, v0}, Lto6;->b0(I)[B
-
-    move-result-object p1
-
-    new-instance v0, Lbb0;
-
-    invoke-direct {v0, p1, v1, v3}, Lbb0;-><init>(Ljava/lang/Object;Lzhc;Lec0;)V
+    const-wide v2, 0x7fffffffffffffffL
 
     :goto_0
-    invoke-virtual {v4, v0}, Ljug;->a(Lbb0;)V
+    cmp-long p0, v0, v2
+
+    if-lez p0, :cond_1
+
+    return-wide v2
 
     :cond_1
-    return-void
+    return-wide v0
+.end method
 
-    :cond_2
-    iget-object v4, p0, Lqqj;->b:Lp58;
+.method public static final b(Ltte;JLks6;)V
+    .locals 8
 
-    invoke-virtual {v4}, Lp58;->get()Ljava/lang/Object;
+    new-instance v2, Lz4b;
 
-    move-result-object v4
+    invoke-direct {v2, p1, p2}, Lz4b;-><init>(J)V
 
-    check-cast v4, Ljug;
+    sget-object v3, Ly4b;->a:Ly4b;
 
-    iget v5, p1, Lto6;->b:I
+    const/4 p1, 0x3
 
-    if-eqz v5, :cond_3
+    invoke-static {p1, v3}, Lr8h;->h(ILjava/lang/Object;)V
 
-    invoke-virtual {p1, v0}, Lto6;->b0(I)[B
+    sget-object p1, Lwte;->a:Lkotlinx/coroutines/internal/Symbol;
 
-    move-result-object p1
+    sget-object v4, Lvte;->b:Lvte;
 
-    new-instance v0, Lbb0;
+    new-instance v0, Lrte;
 
-    invoke-direct {v0, p1, v2, v3}, Lbb0;-><init>(Ljava/lang/Object;Lzhc;Lec0;)V
+    sget-object v5, Lwte;->e:Lkotlinx/coroutines/internal/Symbol;
 
-    goto :goto_1
+    move-object v6, p3
 
-    :cond_3
-    invoke-virtual {p1, v0}, Lto6;->b0(I)[B
+    check-cast v6, Lpdg;
 
-    move-result-object p1
+    const/4 v7, 0x0
 
-    new-instance v0, Lbb0;
+    move-object v1, p0
 
-    invoke-direct {v0, p1, v1, v3}, Lbb0;-><init>(Ljava/lang/Object;Lzhc;Lec0;)V
+    invoke-direct/range {v0 .. v7}, Lrte;-><init>(Ltte;Ljava/lang/Object;Lat6;Lat6;Ljava/lang/Object;Lpdg;Lat6;)V
 
-    :goto_1
-    invoke-virtual {v4, v0}, Ljug;->a(Lbb0;)V
+    sget-object p0, Ltte;->X:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
+    const/4 p0, 0x0
+
+    invoke-virtual {v1, v0, p0}, Ltte;->f(Lrte;Z)V
 
     return-void
 .end method

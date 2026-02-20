@@ -1,189 +1,118 @@
 .class public final Lr81;
-.super Ljava/lang/Object;
+.super Lx0i;
 .source "SourceFile"
-
-# interfaces
-.implements Lw81;
 
 
 # instance fields
-.field public final a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+.field public final b:Lj88;
 
-.field public final b:I
+.field public final c:Lhxf;
 
-.field public final c:I
-
-.field public final d:I
-
-.field public final e:Lnhg;
-
-.field public final f:Lnhg;
+.field public final d:Lmrd;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;)V
-    .locals 2
+.method public constructor <init>(Lj88;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lx0i;-><init>()V
 
-    iput-object p1, p0, Lr81;->a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+    iput-object p1, p0, Lr81;->b:Lj88;
 
-    sget v0, Ly6b;->I:I
+    sget-object p1, Lsi5;->a:Lsi5;
 
-    iput v0, p0, Lr81;->b:I
-
-    sget v0, Lx6b;->x:I
-
-    iput v0, p0, Lr81;->c:I
-
-    sget v0, Lx6b;->v0:I
-
-    iput v0, p0, Lr81;->d:I
-
-    sget v0, Lb7b;->B2:I
-
-    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;->getName()Ljava/lang/String;
+    invoke-static {p1}, Lixf;->a(Ljava/lang/Object;)Lhxf;
 
     move-result-object p1
 
-    filled-new-array {p1}, [Ljava/lang/Object;
+    iput-object p1, p0, Lr81;->c:Lhxf;
 
-    move-result-object p1
+    new-instance v0, Lmrd;
 
-    new-instance v1, Lnhg;
+    invoke-direct {v0, p1}, Lmrd;-><init>(Lgia;)V
 
-    invoke-static {p1}, Lct;->C([Ljava/lang/Object;)Ljava/util/List;
+    iput-object v0, p0, Lr81;->d:Lmrd;
 
-    move-result-object p1
-
-    invoke-direct {v1, v0, p1}, Lnhg;-><init>(ILjava/util/List;)V
-
-    iput-object v1, p0, Lr81;->e:Lnhg;
-
-    iput-object v1, p0, Lr81;->f:Lnhg;
+    invoke-virtual {p0}, Lr81;->p()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()I
-    .locals 1
-
-    iget v0, p0, Lr81;->c:I
-
-    return v0
-.end method
-
-.method public final b()Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
-    .locals 1
-
-    iget-object v0, p0, Lr81;->a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
-
-    return-object v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
+.method public final p()V
+    .locals 8
 
     :cond_0
-    instance-of v1, p1, Lr81;
+    iget-object v0, p0, Lr81;->c:Lhxf;
 
-    const/4 v2, 0x0
+    invoke-virtual {v0}, Lhxf;->getValue()Ljava/lang/Object;
 
-    if-nez v1, :cond_1
+    move-result-object v1
 
-    return v2
+    move-object v2, v1
 
-    :cond_1
-    check-cast p1, Lr81;
+    check-cast v2, Ljava/util/List;
 
-    iget-object v1, p0, Lr81;->a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+    invoke-static {}, Lfk3;->c()Lig8;
 
-    iget-object p1, p1, Lr81;->a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+    move-result-object v2
 
-    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    sget v3, Lu8b;->u:I
 
-    move-result p1
+    sget v3, Lw8b;->X:I
 
-    if-nez p1, :cond_2
+    new-instance v4, Lcpg;
 
-    return v2
+    invoke-direct {v4, v3}, Lcpg;-><init>(I)V
 
-    :cond_2
-    return v0
-.end method
+    new-instance v3, Lp81;
 
-.method public final getContentDescription()Lqhg;
-    .locals 1
+    invoke-direct {v3, v4}, Lp81;-><init>(Lcpg;)V
 
-    iget-object v0, p0, Lr81;->f:Lnhg;
+    invoke-virtual {v2, v3}, Lig8;->add(Ljava/lang/Object;)Z
 
-    return-object v0
-.end method
+    sget-wide v3, Lu8b;->q:J
 
-.method public final getIcon()I
-    .locals 1
+    sget v5, Lw8b;->Y:I
 
-    iget v0, p0, Lr81;->d:I
+    new-instance v6, Lcpg;
 
-    return v0
-.end method
+    invoke-direct {v6, v5}, Lcpg;-><init>(I)V
 
-.method public final getId()I
-    .locals 1
+    new-instance v5, Lo81;
 
-    iget v0, p0, Lr81;->b:I
+    const/4 v7, 0x1
 
-    return v0
-.end method
+    invoke-direct {v5, v7, v3, v4, v6}, Lo81;-><init>(IJLcpg;)V
 
-.method public final getTitle()Lqhg;
-    .locals 1
+    invoke-virtual {v2, v5}, Lig8;->add(Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Lr81;->e:Lnhg;
+    sget-wide v3, Lu8b;->r:J
 
-    return-object v0
-.end method
+    sget v5, Lw8b;->Z:I
 
-.method public final hashCode()I
-    .locals 1
+    new-instance v6, Lcpg;
 
-    iget-object v0, p0, Lr81;->a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+    invoke-direct {v6, v5}, Lcpg;-><init>(I)V
 
-    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;->hashCode()I
+    new-instance v5, Lo81;
+
+    const/4 v7, 0x3
+
+    invoke-direct {v5, v7, v3, v4, v6}, Lo81;-><init>(IJLcpg;)V
+
+    invoke-virtual {v2, v5}, Lig8;->add(Ljava/lang/Object;)Z
+
+    invoke-static {v2}, Lfk3;->b(Ljava/util/List;)Lig8;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Lhxf;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
-    return v0
-.end method
+    if-eqz v0, :cond_0
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Bluetooth(device="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lr81;->a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

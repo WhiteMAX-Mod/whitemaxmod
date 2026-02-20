@@ -1,125 +1,151 @@
-.class public final synthetic Lop1;
-.super Ljava/lang/Object;
+.class public final Lop1;
+.super Lpp1;
 .source "SourceFile"
-
-# interfaces
-.implements Llq6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final D:Lepg;
 
-.field public final synthetic b:Lsq1;
-
-.field public final synthetic c:Lzv8;
-
-.field public final synthetic d:Lzv8;
+.field public final E:Lw5;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lsq1;Lzv8;Lzv8;I)V
+.method public constructor <init>(Lepg;Lw5;)V
     .locals 0
 
-    iput p4, p0, Lop1;->a:I
+    invoke-direct {p0}, Lpp1;-><init>()V
 
-    iput-object p1, p0, Lop1;->b:Lsq1;
+    iput-object p1, p0, Lop1;->D:Lepg;
 
-    iput-object p2, p0, Lop1;->c:Lzv8;
-
-    iput-object p3, p0, Lop1;->d:Lzv8;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lop1;->E:Lw5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 5
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    iget v0, p0, Lop1;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lop1;->c:Lzv8;
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x1
-
-    sget-object v3, Lzv8;->b:Lzv8;
-
-    if-ne v0, v3, :cond_0
-
-    move v0, v2
-
-    goto :goto_0
-
-    :cond_0
-    move v0, v1
-
-    :goto_0
-    iget-object v4, p0, Lop1;->d:Lzv8;
-
-    if-ne v4, v3, :cond_1
-
-    move v1, v2
-
-    :cond_1
-    iget-object v2, p0, Lop1;->b:Lsq1;
-
-    iget-object v2, v2, Lsq1;->c:Lnx1;
-
-    invoke-virtual {v2, v0}, Lnx1;->g(Z)V
-
-    invoke-virtual {v2, v1}, Lnx1;->h(Z)V
-
-    :goto_1
-    sget-object v0, Lb3h;->a:Lb3h;
-
-    return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Lop1;->c:Lzv8;
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x1
-
-    sget-object v3, Lzv8;->b:Lzv8;
-
-    if-ne v0, v3, :cond_2
-
-    move v0, v2
-
-    goto :goto_2
-
-    :cond_2
-    move v0, v1
-
-    :goto_2
-    iget-object v4, p0, Lop1;->d:Lzv8;
-
-    if-ne v4, v3, :cond_3
-
-    move v1, v2
-
-    :cond_3
-    iget-object v2, p0, Lop1;->b:Lsq1;
-
-    iget-object v2, v2, Lsq1;->c:Lnx1;
-
-    invoke-virtual {v2, v0}, Lnx1;->g(Z)V
-
-    invoke-virtual {v2, v1}, Lnx1;->h(Z)V
+    if-ne p0, p1, :cond_0
 
     goto :goto_1
 
-    nop
+    :cond_0
+    instance-of v0, p1, Lop1;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lop1;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v0, p0, Lop1;->D:Lepg;
+
+    iget-object v1, p1, Lop1;->D:Lepg;
+
+    invoke-virtual {v0, v1}, Lepg;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v0, p0, Lop1;->E:Lw5;
+
+    iget-object p1, p1, Lop1;->E:Lw5;
+
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_3
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    sget-object v0, Lvo1;->b:Lvo1;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lop1;->D:Lepg;
+
+    invoke-virtual {v1}, Lepg;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v0, p0, Lop1;->E:Lw5;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ShowTimerSnackbar(priority="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    sget-object v1, Lvo1;->b:Lvo1;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", textSource="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lop1;->D:Lepg;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", action="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lop1;->E:Lw5;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

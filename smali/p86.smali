@@ -1,78 +1,119 @@
 .class public final Lp86;
-.super Lp6g;
+.super Lxmc;
 .source "SourceFile"
 
-# interfaces
-.implements Lnq6;
 
-
-# instance fields
-.field public final synthetic o:J
+# static fields
+.field public static final c:Lp86;
 
 
 # direct methods
-.method public constructor <init>(JLkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-wide p1, p0, Lp86;->o:J
+    new-instance v0, Lp86;
 
-    const/4 p1, 0x1
+    sget-object v1, Lt86;->a:Lt86;
 
-    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, v1}, Lxmc;-><init>(Lw58;)V
+
+    sput-object v0, Lp86;->c:Lp86;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final h(Ljava/lang/Object;)I
+    .locals 0
 
-    check-cast p1, Lkotlin/coroutines/Continuation;
+    check-cast p1, [F
 
-    new-instance v0, Lp86;
+    array-length p1, p1
 
-    iget-wide v1, p0, Lp86;->o:J
-
-    invoke-direct {v0, v1, v2, p1}, Lp86;-><init>(JLkotlin/coroutines/Continuation;)V
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    invoke-virtual {v0, p1}, Lp86;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    const/4 p1, 0x0
-
-    throw p1
+    return p1
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final j(Liq3;ILjava/lang/Object;)V
+    .locals 2
+
+    check-cast p3, Lo86;
+
+    iget-object v0, p0, Lxmc;->b:Lwmc;
+
+    invoke-interface {p1, v0, p2}, Liq3;->h(Lwmc;I)F
+
+    move-result p1
+
+    invoke-static {p3}, Lvmc;->c(Lvmc;)V
+
+    iget-object p2, p3, Lo86;->a:[F
+
+    iget v0, p3, Lo86;->b:I
+
+    add-int/lit8 v1, v0, 0x1
+
+    iput v1, p3, Lo86;->b:I
+
+    aput p1, p2, v0
+
+    return-void
+.end method
+
+.method public final k(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    check-cast p1, [F
+
+    new-instance v0, Lo86;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, v0, Lo86;->a:[F
+
+    array-length p1, p1
+
+    iput p1, v0, Lo86;->b:I
+
+    const/16 p1, 0xa
+
+    invoke-virtual {v0, p1}, Lo86;->b(I)V
+
+    return-object v0
+.end method
+
+.method public final n()Ljava/lang/Object;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    new-array v0, v0, [F
+
+    return-object v0
+.end method
+
+.method public final o(Lj6g;Ljava/lang/Object;I)V
     .locals 3
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    check-cast p2, [F
 
-    new-instance p1, Lkotlinx/coroutines/TimeoutCancellationException;
+    const/4 v0, 0x0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    :goto_0
+    if-ge v0, p3, :cond_0
 
-    const-string v1, "Timed out waiting for "
+    aget v1, p2, v0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object v2, p0, Lxmc;->b:Lwmc;
 
-    iget-wide v1, p0, Lp86;->o:J
+    invoke-virtual {p1, v2, v0}, Lj6g;->g(Lzwe;I)V
 
-    invoke-static {v1, v2}, Lta5;->p(J)Ljava/lang/String;
+    invoke-virtual {p1, v1}, Lj6g;->h(F)V
 
-    move-result-object v1
+    add-int/lit8 v0, v0, 0x1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    goto :goto_0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-direct {p1, v0, v1}, Lkotlinx/coroutines/TimeoutCancellationException;-><init>(Ljava/lang/String;Lsx7;)V
-
-    throw p1
+    :cond_0
+    return-void
 .end method

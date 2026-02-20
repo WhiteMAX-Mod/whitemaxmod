@@ -1,40 +1,87 @@
 .class public final Lef6;
-.super Ljef;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lhf6;
+
+
+# instance fields
+.field public final a:Z
+
+
+# direct methods
+.method public constructor <init>(Z)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-boolean p1, p0, Lef6;->a:Z
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final y(Lud8;)V
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    check-cast p1, Lpah;
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, p1, Lpah;->b:Loah;
-
-    sget-object v1, Loah;->a:Loah;
-
-    iget-object v2, p0, Ltsd;->a:Landroid/view/View;
-
-    if-ne v0, v1, :cond_0
-
-    move-object v0, v2
-
-    check-cast v0, Landroid/widget/TextView;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setEnabled(Z)V
+    goto :goto_1
 
     :cond_0
-    check-cast v2, Landroid/widget/TextView;
+    instance-of v0, p1, Lef6;
 
-    iget-object p1, p1, Lpah;->c:Lqhg;
+    if-nez v0, :cond_1
 
-    invoke-virtual {p1, p0}, Lqhg;->a(Ljef;)Ljava/lang/CharSequence;
+    goto :goto_0
 
-    move-result-object p1
+    :cond_1
+    check-cast p1, Lef6;
 
-    invoke-virtual {v2, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    iget-boolean v0, p0, Lef6;->a:Z
 
-    return-void
+    iget-boolean p1, p1, Lef6;->a:Z
+
+    if-eq v0, p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_2
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-boolean v0, p0, Lef6;->a:Z
+
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "Close(afterCreate="
+
+    const-string v1, ")"
+
+    iget-boolean v2, p0, Lef6;->a:Z
+
+    invoke-static {v0, v1, v2}, Ljye;->k(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

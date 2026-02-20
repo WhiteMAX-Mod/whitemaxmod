@@ -1,53 +1,217 @@
 .class public final Lew;
-.super Lo84;
+.super Lzk0;
 .source "SourceFile"
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final e:J
 
-.field public final synthetic Y:Luw;
+.field public final f:J
 
-.field public Z:I
-
-.field public d:J
-
-.field public o:Ljava/util/Collection;
+.field public final g:I
 
 
 # direct methods
-.method public constructor <init>(Luw;Lo84;)V
+.method public constructor <init>(JIJJI)V
     .locals 0
 
-    iput-object p1, p0, Lew;->Y:Luw;
+    invoke-direct {p0, p1, p2, p3}, Lzk0;-><init>(JI)V
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-wide p4, p0, Lew;->e:J
+
+    iput-wide p6, p0, Lew;->f:J
+
+    iput p8, p0, Lew;->g:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final getType()Lx2c;
+    .locals 1
 
-    iput-object p1, p0, Lew;->X:Ljava/lang/Object;
+    sget-object v0, Lx2c;->Q0:Lx2c;
 
-    iget p1, p0, Lew;->Z:I
+    return-object v0
+.end method
 
-    const/high16 v0, -0x80000000
+.method public final i()[B
+    .locals 3
 
-    or-int/2addr p1, v0
+    new-instance v0, Lru/ok/tamtam/nano/Tasks$AssetsMove;
 
-    iput p1, p0, Lew;->Z:I
+    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$AssetsMove;-><init>()V
 
-    iget-object p1, p0, Lew;->Y:Luw;
+    iget v1, p0, Lzk0;->d:I
 
-    const-wide/16 v0, 0x0
+    invoke-static {v1}, Lru/ok/tamtam/nano/a;->p(I)I
 
-    invoke-virtual {p1, v0, v1, p0}, Luw;->u(JLo84;)Ljava/lang/Object;
+    move-result v1
+
+    iput v1, v0, Lru/ok/tamtam/nano/Tasks$AssetsMove;->assetType:I
+
+    iget-wide v1, p0, Lew;->e:J
+
+    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$AssetsMove;->id:J
+
+    iget-wide v1, p0, Lko;->a:J
+
+    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$AssetsMove;->requestId:J
+
+    iget-wide v1, p0, Lew;->f:J
+
+    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$AssetsMove;->prevId:J
+
+    iget v1, p0, Lew;->g:I
+
+    iput v1, v0, Lru/ok/tamtam/nano/Tasks$AssetsMove;->position:I
+
+    invoke-static {v0}, Lhr9;->toByteArray(Lhr9;)[B
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final k()Lk2;
+    .locals 9
+
+    new-instance v0, Lx3b;
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x5
+
+    invoke-direct {v0, v1, v2}, Lx3b;-><init>(Llrb;I)V
+
+    iget v1, p0, Lzk0;->d:I
+
+    if-eqz v1, :cond_4
+
+    iget-wide v2, p0, Lew;->e:J
+
+    const-wide/16 v4, 0x0
+
+    cmp-long v6, v2, v4
+
+    if-eqz v6, :cond_3
+
+    iget-wide v6, p0, Lew;->f:J
+
+    cmp-long v4, v6, v4
+
+    iget v5, p0, Lew;->g:I
+
+    if-gtz v4, :cond_1
+
+    if-ltz v5, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "prevId or position must be set"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_1
+    :goto_0
+    const-string v8, "type"
+
+    invoke-static {v1}, Ly12;->e(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v8, v1}, Lk2;->A(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v1, "id"
+
+    invoke-virtual {v0, v2, v3, v1}, Lk2;->x(JLjava/lang/String;)V
+
+    if-lez v4, :cond_2
+
+    const-string v1, "prevId"
+
+    invoke-virtual {v0, v6, v7, v1}, Lk2;->x(JLjava/lang/String;)V
+
+    return-object v0
+
+    :cond_2
+    const-string v1, "position"
+
+    invoke-virtual {v0, v5, v1}, Lk2;->o(ILjava/lang/String;)V
+
+    return-object v0
+
+    :cond_3
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "id must not be null or empty"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_4
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "type must not be null"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public final v(Lujg;)V
+    .locals 4
+
+    check-cast p1, Lfw;
+
+    iget-boolean v0, p1, Lfw;->c:Z
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_1
+
+    iget-wide v2, p1, Lfw;->d:J
+
+    invoke-virtual {p0, v2, v3}, Lzk0;->w(J)V
+
+    iget-object p1, p0, Lko;->c:Llo;
+
+    if-eqz p1, :cond_0
+
+    move-object v1, p1
+
+    :cond_0
+    invoke-virtual {v1}, Llo;->b()Lqy0;
 
     move-result-object p1
 
-    return-object p1
+    new-instance v0, Lgw;
+
+    iget-wide v1, p0, Lko;->a:J
+
+    invoke-direct {v0, v1, v2}, Lvl0;-><init>(J)V
+
+    invoke-virtual {p1, v0}, Lqy0;->c(Ljava/lang/Object;)V
+
+    return-void
+
+    :cond_1
+    new-instance p1, Lcjg;
+
+    const-string v0, "asset.task.failed"
+
+    const-string v2, "failed to move asset"
+
+    invoke-direct {p1, v0, v2, v1}, Lcjg;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {p0, p1}, Lzk0;->d(Lcjg;)V
+
+    return-void
 .end method

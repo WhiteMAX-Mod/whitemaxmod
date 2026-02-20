@@ -1,80 +1,74 @@
 .class public final Laia;
-.super Ljava/lang/Object;
+.super Lbia;
 .source "SourceFile"
 
 # interfaces
-.implements Lm1b;
-
-
-# static fields
-.field public static final a:Laia;
-
-.field public static final b:Lkotlinx/coroutines/internal/ContextScope;
-
-.field public static final c:Li7f;
-
-.field public static final d:Lold;
+.implements Lq58;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 6
 
-    new-instance v0, Laia;
+    const/4 v5, 0x0
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    sget-object v1, Lnx1;->NO_RECEIVER:Ljava/lang/Object;
 
-    sput-object v0, Laia;->a:Laia;
+    move-object v0, p0
 
-    sget-object v0, Lone/me/android/di/ConcurrentComponent;->INSTANCE:Lone/me/android/di/ConcurrentComponent;
+    move-object v2, p1
 
-    invoke-virtual {v0}, Lone/me/android/di/ConcurrentComponent;->getDispatchers()Lmbg;
+    move-object v3, p2
 
-    move-result-object v0
+    move-object v4, p3
 
-    check-cast v0, Lj9b;
-
-    invoke-virtual {v0}, Lj9b;->a()Lsb4;
-
-    move-result-object v0
-
-    const-string v1, "mytracker"
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v0, v2, v1}, Lsb4;->limitedParallelism(ILjava/lang/String;)Lsb4;
-
-    move-result-object v0
-
-    invoke-static {}, Lk2j;->a()Ltx7;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lm0;->plus(Lqb4;)Lqb4;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lilj;->a(Lqb4;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object v0
-
-    sput-object v0, Laia;->b:Lkotlinx/coroutines/internal/ContextScope;
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x2
-
-    invoke-static {v2, v0, v1}, Lj7f;->b(III)Li7f;
-
-    move-result-object v0
-
-    sput-object v0, Laia;->c:Li7f;
-
-    new-instance v1, Lold;
-
-    invoke-direct {v1, v0}, Lold;-><init>(Llfa;)V
-
-    sput-object v1, Laia;->d:Lold;
+    invoke-direct/range {v0 .. v5}, Lw3d;-><init>(Ljava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final computeReflected()Lh58;
+    .locals 1
+
+    sget-object v0, Lazd;->a:Lbzd;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return-object p0
+.end method
+
+.method public final get(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    const/4 p0, 0x0
+
+    throw p0
+.end method
+
+.method public final getGetter()V
+    .locals 1
+
+    invoke-virtual {p0}, Lw3d;->getReflected()Lv58;
+
+    move-result-object v0
+
+    check-cast v0, Lq58;
+
+    check-cast v0, Laia;
+
+    invoke-virtual {v0}, Laia;->getGetter()V
+
+    return-void
+.end method
+
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    invoke-virtual {p0}, Laia;->getGetter()V
+
+    const/4 p1, 0x0
+
+    throw p1
 .end method

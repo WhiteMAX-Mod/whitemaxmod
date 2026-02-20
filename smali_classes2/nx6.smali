@@ -1,53 +1,54 @@
 .class public final Lnx6;
-.super Lo84;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lq20;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:J
 
-.field public final synthetic Y:Lqx6;
+.field public final b:Ljava/lang/String;
 
-.field public Z:I
+.field public final c:Ljava/lang/String;
 
-.field public d:Lnd2;
+.field public final d:D
 
-.field public o:J
+.field public final e:D
+
+.field public final f:F
+
+.field public final g:Ljava/lang/String;
+
+.field public final h:Ljava/lang/String;
+
+.field public final i:D
 
 
 # direct methods
-.method public constructor <init>(Lqx6;Lo84;)V
+.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;DDFLjava/lang/String;Ljava/lang/String;D)V
     .locals 0
 
-    iput-object p1, p0, Lnx6;->Y:Lqx6;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-wide p1, p0, Lnx6;->a:J
+
+    iput-object p3, p0, Lnx6;->b:Ljava/lang/String;
+
+    iput-object p4, p0, Lnx6;->c:Ljava/lang/String;
+
+    iput-wide p5, p0, Lnx6;->d:D
+
+    iput-wide p7, p0, Lnx6;->e:D
+
+    iput p9, p0, Lnx6;->f:F
+
+    iput-object p10, p0, Lnx6;->g:Ljava/lang/String;
+
+    iput-object p11, p0, Lnx6;->h:Ljava/lang/String;
+
+    iput-wide p12, p0, Lnx6;->i:D
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Lnx6;->X:Ljava/lang/Object;
-
-    iget p1, p0, Lnx6;->Z:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lnx6;->Z:I
-
-    iget-object p1, p0, Lnx6;->Y:Lqx6;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, v0, p0}, Lqx6;->a(Lnd2;[JLo84;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
 .end method

@@ -1,181 +1,311 @@
 .class public final Le3h;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:Landroid/view/View;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lone/me/calls/ui/bottomsheet/unkowncontact/UnknownContactBottomSheet;
+.field public final b:Ljava/lang/String;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final c:I
+
+.field public final d:I
+
+.field public e:I
+
+.field public f:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Landroid/view/View;Lone/me/calls/ui/bottomsheet/unkowncontact/UnknownContactBottomSheet;)V
+.method public constructor <init>(IIIB)V
     .locals 0
 
-    iput-object p2, p0, Le3h;->X:Landroid/view/View;
+    iput p3, p0, Le3h;->a:I
 
-    iput-object p3, p0, Le3h;->Y:Lone/me/calls/ui/bottomsheet/unkowncontact/UnknownContactBottomSheet;
+    packed-switch p3, :pswitch_data_0
 
-    const/4 p2, 0x2
+    const/high16 p3, -0x80000000
 
-    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/4 p4, 0x0
+
+    .line 1
+    invoke-direct {p0, p3, p1, p2, p4}, Le3h;-><init>(IIII)V
 
     return-void
+
+    :pswitch_0
+    const/high16 p3, -0x80000000
+
+    const/4 p4, 0x1
+
+    .line 2
+    invoke-direct {p0, p3, p1, p2, p4}, Le3h;-><init>(IIII)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Le3h;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Le3h;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Le3h;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public constructor <init>(IIII)V
     .locals 3
 
-    new-instance v0, Le3h;
+    iput p4, p0, Le3h;->a:I
 
-    iget-object v1, p0, Le3h;->X:Landroid/view/View;
+    packed-switch p4, :pswitch_data_0
 
-    iget-object v2, p0, Le3h;->Y:Lone/me/calls/ui/bottomsheet/unkowncontact/UnknownContactBottomSheet;
+    .line 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, p2, v1, v2}, Le3h;-><init>(Lkotlin/coroutines/Continuation;Landroid/view/View;Lone/me/calls/ui/bottomsheet/unkowncontact/UnknownContactBottomSheet;)V
+    .line 4
+    const-string p4, ""
 
-    iput-object p1, v0, Le3h;->o:Ljava/lang/Object;
+    const/high16 v0, -0x80000000
 
-    return-object v0
-.end method
+    if-eq p1, v0, :cond_0
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Le3h;->o:Ljava/lang/Object;
+    const/16 v2, 0xc
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    check-cast v0, Lv3h;
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    iget-object p1, p0, Le3h;->X:Landroid/view/View;
+    const-string p1, "/"
 
-    check-cast p1, Landroid/view/ViewGroup;
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Le3h;->Y:Lone/me/calls/ui/bottomsheet/unkowncontact/UnknownContactBottomSheet;
-
-    iget-object v2, v1, Lone/me/calls/ui/bottomsheet/unkowncontact/UnknownContactBottomSheet;->J0:Landroid/transition/AutoTransition;
-
-    invoke-static {p1, v2}, Landroid/transition/TransitionManager;->beginDelayedTransition(Landroid/view/ViewGroup;Landroid/transition/Transition;)V
-
-    iget-object p1, v1, Lone/me/calls/ui/bottomsheet/unkowncontact/UnknownContactBottomSheet;->F0:Ljld;
-
-    sget-object v2, Lone/me/calls/ui/bottomsheet/unkowncontact/UnknownContactBottomSheet;->K0:[Lz28;
-
-    const/4 v3, 0x2
-
-    aget-object v3, v2, v3
-
-    invoke-interface {p1, v1, v3}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
-
-    check-cast p1, Landroid/widget/TextView;
-
-    iget-object v3, v0, Lv3h;->a:Llhg;
-
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Lqhg;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
-
-    move-result-object v3
-
-    invoke-virtual {p1, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    iget-object p1, v1, Lone/me/calls/ui/bottomsheet/unkowncontact/UnknownContactBottomSheet;->G0:Ljld;
-
-    const/4 v3, 0x3
-
-    aget-object v4, v2, v3
-
-    invoke-interface {p1, v1, v4}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Landroid/widget/TextView;
-
-    iget-object v5, v0, Lv3h;->b:Lqhg;
-
-    if-eqz v5, :cond_0
-
-    const/4 v6, 0x0
 
     goto :goto_0
 
     :cond_0
-    const/16 v6, 0x8
+    move-object p1, p4
 
     :goto_0
-    invoke-virtual {v4, v6}, Landroid/view/View;->setVisibility(I)V
+    iput-object p1, p0, Le3h;->b:Ljava/lang/String;
 
-    if-eqz v5, :cond_1
+    .line 5
+    iput p2, p0, Le3h;->c:I
 
-    aget-object v3, v2, v3
+    .line 6
+    iput p3, p0, Le3h;->d:I
 
-    invoke-interface {p1, v1, v3}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+    .line 7
+    iput v0, p0, Le3h;->e:I
+
+    .line 8
+    iput-object p4, p0, Le3h;->f:Ljava/lang/String;
+
+    return-void
+
+    .line 9
+    :pswitch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 10
+    const-string p4, ""
+
+    const/high16 v0, -0x80000000
+
+    if-eq p1, v0, :cond_1
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p1, "/"
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    check-cast p1, Landroid/widget/TextView;
-
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v3
-
-    invoke-virtual {v5, v3}, Lqhg;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
-
-    move-result-object v3
-
-    invoke-virtual {p1, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    goto :goto_1
 
     :cond_1
-    iget-object p1, v1, Lone/me/calls/ui/bottomsheet/unkowncontact/UnknownContactBottomSheet;->H0:Ljld;
+    move-object p1, p4
 
-    const/4 v3, 0x4
+    :goto_1
+    iput-object p1, p0, Le3h;->b:Ljava/lang/String;
 
-    aget-object v2, v2, v3
+    .line 11
+    iput p2, p0, Le3h;->c:I
 
-    invoke-interface {p1, v1, v2}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+    .line 12
+    iput p3, p0, Le3h;->d:I
 
-    move-result-object p1
+    .line 13
+    iput v0, p0, Le3h;->e:I
 
-    check-cast p1, Lj3h;
+    .line 14
+    iput-object p4, p0, Le3h;->f:Ljava/lang/String;
 
-    iget-object v1, v0, Lv3h;->c:Ljava/util/List;
+    return-void
 
-    iget v0, v0, Lv3h;->d:I
+    nop
 
-    invoke-virtual {p1, v0, v1}, Lj3h;->a(ILjava/util/List;)V
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    sget-object p1, Lb3h;->a:Lb3h;
 
-    return-object p1
+# virtual methods
+.method public final a()V
+    .locals 4
+
+    iget v0, p0, Le3h;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget v0, p0, Le3h;->e:I
+
+    const/high16 v1, -0x80000000
+
+    if-ne v0, v1, :cond_0
+
+    iget v0, p0, Le3h;->c:I
+
+    goto :goto_0
+
+    :cond_0
+    iget v1, p0, Le3h;->d:I
+
+    add-int/2addr v0, v1
+
+    :goto_0
+    iput v0, p0, Le3h;->e:I
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v1, p0, Le3h;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Le3h;->e:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Le3h;->f:Ljava/lang/String;
+
+    return-void
+
+    :pswitch_0
+    iget v0, p0, Le3h;->e:I
+
+    const/high16 v1, -0x80000000
+
+    if-ne v0, v1, :cond_1
+
+    iget v0, p0, Le3h;->c:I
+
+    goto :goto_1
+
+    :cond_1
+    iget v1, p0, Le3h;->d:I
+
+    add-int/2addr v0, v1
+
+    :goto_1
+    iput v0, p0, Le3h;->e:I
+
+    const/16 v1, 0xb
+
+    iget-object v2, p0, Le3h;->b:Ljava/lang/String;
+
+    invoke-static {v1, v2}, Lj64;->e(ILjava/lang/String;)I
+
+    move-result v1
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3, v1}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Le3h;->f:Ljava/lang/String;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final b()V
+    .locals 2
+
+    iget v0, p0, Le3h;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget v0, p0, Le3h;->e:I
+
+    const/high16 v1, -0x80000000
+
+    if-eq v0, v1, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "generateNewId() must be called before retrieving ids."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :pswitch_0
+    iget v0, p0, Le3h;->e:I
+
+    const/high16 v1, -0x80000000
+
+    if-eq v0, v1, :cond_1
+
+    return-void
+
+    :cond_1
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "generateNewId() must be called before retrieving ids."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

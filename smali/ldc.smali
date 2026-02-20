@@ -1,35 +1,95 @@
-.class public abstract Lldc;
-.super Ljava/lang/Object;
+.class public final Lldc;
+.super Lpdg;
 .source "SourceFile"
+
+# interfaces
+.implements Lys6;
+
+
+# instance fields
+.field public final synthetic X:Lone/me/calls/ui/ui/pip/PipScreen;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public static a(Landroid/graphics/Bitmap;FF)Landroid/view/PointerIcon;
+.method public constructor <init>(Lone/me/calls/ui/ui/pip/PipScreen;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-static {p0, p1, p2}, Landroid/view/PointerIcon;->create(Landroid/graphics/Bitmap;FF)Landroid/view/PointerIcon;
+    iput-object p1, p0, Lldc;->X:Lone/me/calls/ui/ui/pip/PipScreen;
 
-    move-result-object p0
+    const/4 p1, 0x2
 
-    return-object p0
+    invoke-direct {p0, p1, p2}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
 .end method
 
-.method public static b(Landroid/content/Context;I)Landroid/view/PointerIcon;
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    invoke-static {p0, p1}, Landroid/view/PointerIcon;->getSystemIcon(Landroid/content/Context;I)Landroid/view/PointerIcon;
+    check-cast p1, Lnsb;
 
-    move-result-object p0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return-object p0
+    invoke-virtual {p0, p1, p2}, Lldc;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lldc;
+
+    sget-object p2, Lmah;->a:Lmah;
+
+    invoke-virtual {p1, p2}, Lldc;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public static c(Landroid/content/res/Resources;I)Landroid/view/PointerIcon;
-    .locals 0
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    invoke-static {p0, p1}, Landroid/view/PointerIcon;->load(Landroid/content/res/Resources;I)Landroid/view/PointerIcon;
+    new-instance v0, Lldc;
 
-    move-result-object p0
+    iget-object v1, p0, Lldc;->X:Lone/me/calls/ui/ui/pip/PipScreen;
 
-    return-object p0
+    invoke-direct {v0, v1, p2}, Lldc;-><init>(Lone/me/calls/ui/ui/pip/PipScreen;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lldc;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Lldc;->o:Ljava/lang/Object;
+
+    check-cast v0, Lnsb;
+
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    sget-object p1, Lone/me/calls/ui/ui/pip/PipScreen;->o:[Lv58;
+
+    iget-object p1, p0, Lldc;->X:Lone/me/calls/ui/ui/pip/PipScreen;
+
+    iget-object p1, p1, Lone/me/calls/ui/ui/pip/PipScreen;->c:Ljava/lang/Object;
+
+    invoke-interface {p1}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lddc;
+
+    iget-object p1, p1, Lddc;->c:Lfm1;
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p1, v0}, Lfm1;->d(Lnsb;)V
+
+    :cond_0
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
 .end method

@@ -3,41 +3,39 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static final c:Lelg;
+
+
 # instance fields
-.field public final a:Lahd;
+.field public final a:Lini;
 
-.field public final b:J
-
-.field public final c:Le5e;
-
-.field public final d:Lf5e;
-
-.field public e:J
-
-.field public f:J
+.field public final b:I
 
 
 # direct methods
-.method public constructor <init>(JLf5e;Lahd;)V
+.method static constructor <clinit>()V
     .locals 2
+
+    new-instance v0, Lelg;
+
+    const/4 v1, 0x2
+
+    invoke-direct {v0, v1}, Lelg;-><init>(I)V
+
+    sput-object v0, Lgni;->c:Lelg;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lini;I)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-wide/16 v0, 0x0
+    iput-object p1, p0, Lgni;->a:Lini;
 
-    iput-wide v0, p0, Lgni;->e:J
-
-    iput-wide v0, p0, Lgni;->f:J
-
-    iput-wide p1, p0, Lgni;->b:J
-
-    iget-object p1, p3, Lf5e;->b:Le5e;
-
-    iput-object p1, p0, Lgni;->c:Le5e;
-
-    iput-object p3, p0, Lgni;->d:Lf5e;
-
-    iput-object p4, p0, Lgni;->a:Lahd;
+    iput p2, p0, Lgni;->b:I
 
     return-void
 .end method

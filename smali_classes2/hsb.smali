@@ -1,202 +1,48 @@
 .class public final Lhsb;
-.super Ljsb;
-.source "SourceFile"
+.super Lda4;
 
 
 # instance fields
-.field public final synthetic d:I
+.field public final synthetic X:Ls6a;
+
+.field public synthetic d:Ljava/lang/Object;
+
+.field public o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(III[B)V
+.method public constructor <init>(Ls6a;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p3, p0, Lhsb;->d:I
+    iput-object p1, p0, Lhsb;->X:Ls6a;
 
-    invoke-direct {p0, p4, p1, p2}, Ljsb;-><init>([BII)V
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(I)S
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget v0, p0, Lhsb;->d:I
+    iput-object p1, p0, Lhsb;->d:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Lhsb;->o:I
 
-    iget v0, p0, Ljsb;->c:I
+    const/high16 v0, -0x80000000
 
-    add-int/2addr p1, v0
+    or-int/2addr p1, v0
 
-    iget-object v0, p0, Ljsb;->b:[B
+    iput p1, p0, Lhsb;->o:I
 
-    aget-byte p1, v0, p1
+    iget-object p1, p0, Lhsb;->X:Ls6a;
 
-    mul-int/lit16 p1, p1, 0x101
+    const/4 v0, 0x0
 
-    add-int/lit16 p1, p1, 0x80
+    invoke-virtual {p1, v0, p0}, Ls6a;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    :goto_0
-    int-to-short p1, p1
+    move-result-object p1
 
-    return p1
-
-    :pswitch_0
-    shl-int/lit8 p1, p1, 0x1
-
-    iget v0, p0, Ljsb;->c:I
-
-    add-int/2addr p1, v0
-
-    iget-object v0, p0, Ljsb;->b:[B
-
-    aget-byte v1, v0, p1
-
-    add-int/lit8 p1, p1, 0x1
-
-    aget-byte p1, v0, p1
-
-    shl-int/lit8 p1, p1, 0x8
-
-    const v0, 0xff00
-
-    and-int/2addr p1, v0
-
-    and-int/lit16 v0, v1, 0xff
-
-    add-int/2addr p1, v0
-
-    goto :goto_0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 6
-
-    iget v0, p0, Lhsb;->d:I
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "PCM 8 bit ("
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v1, p0, Ljsb;->a:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v2, ") {"
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    if-lez v1, :cond_0
-
-    iget-object v2, p0, Ljsb;->b:[B
-
-    iget v3, p0, Ljsb;->c:I
-
-    aget-byte v4, v2, v3
-
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const/4 v4, 0x1
-
-    :goto_0
-    if-ge v4, v1, :cond_0
-
-    const-string v5, ", "
-
-    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    add-int v5, v4, v3
-
-    aget-byte v5, v2, v5
-
-    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/16 v1, 0x7d
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_0
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "PCM 16 bit ("
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v1, p0, Ljsb;->a:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v2, ") {"
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    if-lez v1, :cond_1
-
-    const/4 v2, 0x0
-
-    invoke-virtual {p0, v2}, Lhsb;->a(I)S
-
-    move-result v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const/4 v2, 0x1
-
-    :goto_1
-    if-ge v2, v1, :cond_1
-
-    const-string v3, ", "
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0, v2}, Lhsb;->a(I)S
-
-    move-result v3
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_1
-
-    :cond_1
-    const/16 v1, 0x7d
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

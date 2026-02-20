@@ -1,189 +1,240 @@
-.class public final enum Lrz8;
-.super Ljava/lang/Enum;
+.class public final Lrz8;
+.super Lpdg;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic X:[Lrz8;
-
-.field public static final synthetic Y:Lal5;
-
-.field public static final d:Lyna;
-
-.field public static final o:Ljava/util/ArrayList;
+# interfaces
+.implements Lat6;
 
 
 # instance fields
-.field public final a:I
+.field public synthetic X:Lr2c;
 
-.field public final b:I
+.field public synthetic Y:Lr2c;
 
-.field public final c:I
+.field public final synthetic o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 9
+.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
+    .locals 0
+
+    iput p3, p0, Lrz8;->o:I
+
+    invoke-direct {p0, p1, p2}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    iget v0, p0, Lrz8;->o:I
+
+    check-cast p1, Lr2c;
+
+    check-cast p2, Lr2c;
+
+    check-cast p3, Lkotlin/coroutines/Continuation;
+
+    packed-switch v0, :pswitch_data_0
 
     new-instance v0, Lrz8;
 
-    sget v3, Ltib;->A:I
+    const/4 v1, 0x3
 
-    sget v4, Luib;->d:I
+    const/4 v2, 0x2
 
-    const/4 v1, 0x0
+    invoke-direct {v0, v1, p3, v2}, Lrz8;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    const/4 v2, 0x0
+    iput-object p1, v0, Lrz8;->X:Lr2c;
 
-    const-string v5, "UNLIMITED"
+    iput-object p2, v0, Lrz8;->Y:Lr2c;
 
-    invoke-direct/range {v0 .. v5}, Lrz8;-><init>(IIIILjava/lang/String;)V
+    sget-object p1, Lmah;->a:Lmah;
 
-    new-instance v1, Lrz8;
+    invoke-virtual {v0, p1}, Lrz8;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget v4, Ltib;->y:I
+    move-result-object p1
 
-    sget v5, Luib;->c:I
+    return-object p1
+
+    :pswitch_0
+    new-instance v0, Lrz8;
+
+    const/4 v1, 0x3
 
     const/4 v2, 0x1
 
-    const/4 v3, 0x1
+    invoke-direct {v0, v1, p3, v2}, Lrz8;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    const-string v6, "SIX_MONTH"
+    iput-object p1, v0, Lrz8;->X:Lr2c;
 
-    invoke-direct/range {v1 .. v6}, Lrz8;-><init>(IIIILjava/lang/String;)V
+    iput-object p2, v0, Lrz8;->Y:Lr2c;
 
-    new-instance v2, Lrz8;
+    sget-object p1, Lmah;->a:Lmah;
 
-    sget v5, Ltib;->w:I
+    invoke-virtual {v0, p1}, Lrz8;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget v6, Luib;->a:I
+    move-result-object p1
 
-    const/4 v3, 0x2
+    return-object p1
 
-    const/4 v4, 0x2
+    :pswitch_1
+    new-instance v0, Lrz8;
 
-    const-string v7, "ONE_MONTH"
+    const/4 v1, 0x3
 
-    invoke-direct/range {v2 .. v7}, Lrz8;-><init>(IIIILjava/lang/String;)V
+    const/4 v2, 0x0
 
-    new-instance v3, Lrz8;
+    invoke-direct {v0, v1, p3, v2}, Lrz8;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    sget v6, Ltib;->x:I
+    iput-object p1, v0, Lrz8;->X:Lr2c;
 
-    sget v7, Luib;->b:I
+    iput-object p2, v0, Lrz8;->Y:Lr2c;
 
-    const/4 v4, 0x3
+    sget-object p1, Lmah;->a:Lmah;
 
-    const/4 v5, 0x3
+    invoke-virtual {v0, p1}, Lrz8;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string v8, "ONE_WEEK"
+    move-result-object p1
 
-    invoke-direct/range {v3 .. v8}, Lrz8;-><init>(IIIILjava/lang/String;)V
+    return-object p1
 
-    filled-new-array {v0, v1, v2, v3}, [Lrz8;
+    nop
 
-    move-result-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    sput-object v0, Lrz8;->X:[Lrz8;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    new-instance v1, Lal5;
+    iget v0, p0, Lrz8;->o:I
 
-    invoke-direct {v1, v0}, Lal5;-><init>([Ljava/lang/Enum;)V
+    packed-switch v0, :pswitch_data_0
 
-    sput-object v1, Lrz8;->Y:Lal5;
+    iget-object v0, p0, Lrz8;->X:Lr2c;
 
-    new-instance v0, Lyna;
+    iget-object v1, p0, Lrz8;->Y:Lr2c;
 
-    const/16 v2, 0x18
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    invoke-direct {v0, v2}, Lyna;-><init>(I)V
+    sget-object p1, Lr2c;->a:Lr2c;
 
-    sput-object v0, Lrz8;->d:Lyna;
+    if-eq v0, p1, :cond_1
 
-    new-instance v0, Ljava/util/ArrayList;
-
-    const/16 v2, 0xa
-
-    invoke-static {v1, v2}, Lri3;->n(Ljava/lang/Iterable;I)I
-
-    move-result v2
-
-    invoke-direct {v0, v2}, Ljava/util/ArrayList;-><init>(I)V
-
-    new-instance v2, Lb2;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v2, v3, v1}, Lb2;-><init>(ILjava/lang/Object;)V
-
-    :goto_0
-    invoke-virtual {v2}, Lb2;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v2}, Lb2;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lrz8;
-
-    iget v1, v1, Lrz8;->b:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    if-ne v1, p1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    sput-object v0, Lrz8;->o:Ljava/util/ArrayList;
+    const/4 p1, 0x0
 
-    return-void
-.end method
+    goto :goto_1
 
-.method public constructor <init>(IIIILjava/lang/String;)V
-    .locals 0
+    :cond_1
+    :goto_0
+    const/4 p1, 0x1
 
-    invoke-direct {p0, p5, p1}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    :goto_1
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    iput p2, p0, Lrz8;->a:I
+    move-result-object p1
 
-    iput p3, p0, Lrz8;->b:I
+    return-object p1
 
-    iput p4, p0, Lrz8;->c:I
+    :pswitch_0
+    iget-object v0, p0, Lrz8;->X:Lr2c;
 
-    return-void
-.end method
+    iget-object v1, p0, Lrz8;->Y:Lr2c;
 
-.method public static valueOf(Ljava/lang/String;)Lrz8;
-    .locals 1
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    const-class v0, Lrz8;
+    sget p1, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    const/16 v2, 0x22
 
-    move-result-object p0
+    if-lt p1, v2, :cond_2
 
-    check-cast p0, Lrz8;
+    sget-object p1, Lr2c;->b:Lr2c;
 
-    return-object p0
-.end method
+    if-ne v0, p1, :cond_2
 
-.method public static values()[Lrz8;
-    .locals 1
+    sget-object p1, Lr2c;->a:Lr2c;
 
-    sget-object v0, Lrz8;->X:[Lrz8;
+    if-ne v1, p1, :cond_2
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    const/4 p1, 0x1
 
-    move-result-object v0
+    goto :goto_2
 
-    check-cast v0, [Lrz8;
+    :cond_2
+    const/4 p1, 0x0
 
-    return-object v0
+    :goto_2
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_1
+    iget-object v0, p0, Lrz8;->X:Lr2c;
+
+    iget-object v1, p0, Lrz8;->Y:Lr2c;
+
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
+
+    move-result p1
+
+    if-eqz p1, :cond_5
+
+    const/4 v0, 0x1
+
+    if-ne p1, v0, :cond_4
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result p1
+
+    if-eqz p1, :cond_5
+
+    if-ne p1, v0, :cond_3
+
+    sget-object p1, Lumc;->b:Lumc;
+
+    goto :goto_3
+
+    :cond_3
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
+
+    :cond_4
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
+
+    :cond_5
+    sget-object p1, Lumc;->a:Lumc;
+
+    :goto_3
+    return-object p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,55 +1,70 @@
-.class public abstract Lbnj;
+.class public final Lbnj;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Loza;
+
+
+# static fields
+.field public static final a:Lbnj;
+
 
 # direct methods
-.method public static final a(Landroid/content/Context;)I
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    new-instance v0, Lbnj;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lbnj;->a:Lbnj;
+
+    new-instance v0, Lp7j;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lp7j;-><init>(I)V
+
+    const-class v1, Lh8j;
+
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    const/4 v2, 0x2
+
+    invoke-static {v0, v2}, Leni;->i(Ljava/util/HashMap;I)Lp7j;
 
     move-result-object v0
 
-    iget v0, v0, Landroid/util/DisplayMetrics;->widthPixels:I
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
 
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    move-result-object v0
 
-    move-result-object p0
+    const/4 v2, 0x3
 
-    invoke-virtual {p0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    invoke-static {v0, v2}, Leni;->i(Ljava/util/HashMap;I)Lp7j;
 
-    move-result-object p0
+    move-result-object v0
 
-    iget p0, p0, Landroid/util/DisplayMetrics;->heightPixels:I
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
 
-    invoke-static {v0, p0}, Ljava/lang/Math;->min(II)I
+    move-result-object v0
 
-    move-result p0
+    invoke-static {v0}, Leni;->m(Ljava/util/HashMap;)V
 
-    return p0
+    return-void
 .end method
 
-.method public static final b(Ljava/lang/String;)V
-    .locals 1
 
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-static {p1}, Lkb0;->d(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    throw v0
-.end method
+    move-result-object p1
 
-.method public static final c(Ljava/lang/String;)V
-    .locals 1
-
-    new-instance v0, Ljava/lang/IndexOutOfBoundsException;
-
-    invoke-direct {v0, p0}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    throw p1
 .end method

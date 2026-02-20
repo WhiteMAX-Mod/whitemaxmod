@@ -1,74 +1,80 @@
 .class public final Ljy5;
-.super Lp6g;
+.super Lpdg;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Lks6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic X:Lky5;
+
+.field public final synthetic Y:J
+
+.field public final synthetic Z:J
 
 .field public o:I
 
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+# direct methods
+.method public constructor <init>(Lky5;JJLkotlin/coroutines/Continuation;)V
     .locals 0
 
-    check-cast p1, Lf76;
+    iput-object p1, p0, Ljy5;->X:Lky5;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iput-wide p2, p0, Ljy5;->Y:J
 
-    invoke-virtual {p0, p1, p2}, Ljy5;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iput-wide p4, p0, Ljy5;->Z:J
 
-    move-result-object p1
+    const/4 p1, 0x1
 
-    check-cast p1, Ljy5;
+    invoke-direct {p0, p1, p6}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    return-void
+.end method
 
-    invoke-virtual {p1, p2}, Ljy5;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
+
+    move-object v6, p1
+
+    check-cast v6, Lkotlin/coroutines/Continuation;
+
+    new-instance v0, Ljy5;
+
+    iget-wide v2, p0, Ljy5;->Y:J
+
+    iget-wide v4, p0, Ljy5;->Z:J
+
+    iget-object v1, p0, Ljy5;->X:Lky5;
+
+    invoke-direct/range {v0 .. v6}, Ljy5;-><init>(Lky5;JJLkotlin/coroutines/Continuation;)V
+
+    sget-object p1, Lmah;->a:Lmah;
+
+    invoke-virtual {v0, p1}, Ljy5;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Ljy5;
-
-    const/4 v1, 0x2
-
-    invoke-direct {v0, v1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Ljy5;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+    .locals 10
 
-    iget-object v0, p0, Ljy5;->X:Ljava/lang/Object;
+    iget v0, p0, Ljy5;->o:I
 
-    check-cast v0, Lf76;
+    const/4 v1, 0x1
 
-    iget v1, p0, Ljy5;->o:I
+    if-eqz v0, :cond_1
 
-    sget-object v2, Lb3h;->a:Lb3h;
+    if-ne v0, v1, :cond_0
 
-    const/4 v3, 0x1
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    if-eqz v1, :cond_1
-
-    if-ne v1, v3, :cond_0
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    return-object v2
+    return-object p1
 
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
@@ -80,23 +86,49 @@
     throw p1
 
     :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    const/4 p1, 0x0
+    iput v1, p0, Ljy5;->o:I
 
-    iput-object p1, p0, Ljy5;->X:Ljava/lang/Object;
+    iget-object p1, p0, Ljy5;->X:Lky5;
 
-    iput v3, p0, Ljy5;->o:I
+    iget-object p1, p1, Lky5;->a:Lm8e;
 
-    invoke-interface {v0, v2, p0}, Lf76;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    new-instance v2, Lhy5;
 
-    move-result-object p1
+    const/4 v3, 0x0
 
-    sget-object v0, Lac4;->a:Lac4;
+    iget-wide v4, p0, Ljy5;->Y:J
 
-    if-ne p1, v0, :cond_2
+    iget-wide v6, p0, Ljy5;->Z:J
 
-    return-object v0
+    invoke-direct/range {v2 .. v7}, Lhy5;-><init>(IJJ)V
+
+    const/4 v0, 0x0
+
+    invoke-static {p1, v1, v0, v2}, Lfuj;->f(Lm8e;ZZLks6;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/util/List;
+
+    move-wide v8, v6
+
+    move-wide v6, v4
+
+    new-instance v4, Lhy5;
+
+    const/4 v5, 0x1
+
+    invoke-direct/range {v4 .. v9}, Lhy5;-><init>(IJJ)V
+
+    invoke-static {p1, v0, v1, v4}, Lfuj;->f(Lm8e;ZZLks6;)Ljava/lang/Object;
+
+    sget-object p1, Lod4;->a:Lod4;
+
+    if-ne v2, p1, :cond_2
+
+    return-object p1
 
     :cond_2
     return-object v2

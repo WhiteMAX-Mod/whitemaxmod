@@ -1,9 +1,6 @@
-.class public final Lmui;
-.super Ljava/lang/Object;
+.class public final synthetic Lmui;
+.super Lv3d;
 .source "SourceFile"
-
-# interfaces
-.implements Lvwa;
 
 
 # static fields
@@ -12,59 +9,37 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 5
 
     new-instance v0, Lmui;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const-string v1, "getTotalFreezesDurationMs()J"
+
+    const/4 v2, 0x0
+
+    const-class v3, Lotf;
+
+    const-string v4, "totalFreezesDurationMs"
+
+    invoke-direct {v0, v3, v4, v1, v2}, Lv3d;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
     sput-object v0, Lmui;->a:Lmui;
-
-    new-instance v0, Lbri;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lbri;-><init>(I)V
-
-    const-class v1, Lpri;
-
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final get(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    check-cast p1, Lotf;
+
+    iget-wide v0, p1, Lotf;->w:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p1
 
-    throw p1
+    return-object p1
 .end method

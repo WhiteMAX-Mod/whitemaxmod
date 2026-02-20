@@ -1,130 +1,85 @@
-.class public final Lr35;
+.class public abstract Lr35;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/animation/Animator$AnimatorListener;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Landroid/view/View;
-
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/view/View;I)V
-    .locals 0
-
-    iput p2, p0, Lr35;->a:I
-
-    iput-object p1, p0, Lr35;->b:Landroid/view/View;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method private final a(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final b(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final c(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final d(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final e(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final f(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 0
-
-    iget p1, p0, Lr35;->a:I
-
-    return-void
-.end method
-
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
+.method public static a(Landroid/graphics/Rect;Ljava/util/List;)Landroid/view/DisplayCutout;
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/graphics/Rect;",
+            "Ljava/util/List<",
+            "Landroid/graphics/Rect;",
+            ">;)",
+            "Landroid/view/DisplayCutout;"
+        }
+    .end annotation
 
-    iget p1, p0, Lr35;->a:I
+    new-instance v0, Landroid/view/DisplayCutout;
 
-    packed-switch p1, :pswitch_data_0
+    invoke-direct {v0, p0, p1}, Landroid/view/DisplayCutout;-><init>(Landroid/graphics/Rect;Ljava/util/List;)V
 
-    iget-object p1, p0, Lr35;->b:Landroid/view/View;
-
-    const/16 v0, 0x8
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
-
-    :pswitch_0
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method
 
-.method public final onAnimationRepeat(Landroid/animation/Animator;)V
+.method public static b(Landroid/view/DisplayCutout;)Ljava/util/List;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/view/DisplayCutout;",
+            ")",
+            "Ljava/util/List<",
+            "Landroid/graphics/Rect;",
+            ">;"
+        }
+    .end annotation
+
+    invoke-virtual {p0}, Landroid/view/DisplayCutout;->getBoundingRects()Ljava/util/List;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static c(Landroid/view/DisplayCutout;)I
     .locals 0
 
-    iget p1, p0, Lr35;->a:I
+    invoke-virtual {p0}, Landroid/view/DisplayCutout;->getSafeInsetBottom()I
 
-    return-void
+    move-result p0
+
+    return p0
 .end method
 
-.method public final onAnimationStart(Landroid/animation/Animator;)V
-    .locals 1
+.method public static d(Landroid/view/DisplayCutout;)I
+    .locals 0
 
-    iget p1, p0, Lr35;->a:I
+    invoke-virtual {p0}, Landroid/view/DisplayCutout;->getSafeInsetLeft()I
 
-    packed-switch p1, :pswitch_data_0
+    move-result p0
 
-    return-void
+    return p0
+.end method
 
-    :pswitch_0
-    iget-object p1, p0, Lr35;->b:Landroid/view/View;
+.method public static e(Landroid/view/DisplayCutout;)I
+    .locals 0
 
-    const/4 v0, 0x0
+    invoke-virtual {p0}, Landroid/view/DisplayCutout;->getSafeInsetRight()I
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
+    move-result p0
 
-    return-void
+    return p0
+.end method
 
-    nop
+.method public static f(Landroid/view/DisplayCutout;)I
+    .locals 0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-virtual {p0}, Landroid/view/DisplayCutout;->getSafeInsetTop()I
+
+    move-result p0
+
+    return p0
 .end method

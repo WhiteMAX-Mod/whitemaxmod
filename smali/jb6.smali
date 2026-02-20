@@ -1,19 +1,50 @@
 .class public final Ljb6;
-.super Lx0;
-.source "SourceFile"
+.super Lda4;
+
+
+# instance fields
+.field public X:Ld96;
+
+.field public final synthetic Y:Lkb6;
+
+.field public synthetic d:Ljava/lang/Object;
+
+.field public o:I
+
+
+# direct methods
+.method public constructor <init>(Lkb6;Lkotlin/coroutines/Continuation;)V
+    .locals 0
+
+    iput-object p1, p0, Ljb6;->Y:Lkb6;
+
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final f(Lxb6;)V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    new-instance v0, Lib6;
+    iput-object p1, p0, Ljb6;->d:Ljava/lang/Object;
 
-    invoke-direct {v0, p1}, Lib6;-><init>(Lz0g;)V
+    iget p1, p0, Ljb6;->o:I
 
-    iget-object p1, p0, Lx0;->b:Lpa6;
+    const/high16 v0, -0x80000000
 
-    invoke-virtual {p1, v0}, Lpa6;->c(Lxb6;)V
+    or-int/2addr p1, v0
 
-    return-void
+    iput p1, p0, Ljb6;->o:I
+
+    iget-object p1, p0, Ljb6;->Y:Lkb6;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lkb6;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

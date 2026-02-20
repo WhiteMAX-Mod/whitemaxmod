@@ -1,170 +1,77 @@
-.class public final enum Lei7;
-.super Ljava/lang/Enum;
+.class public final Lei7;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic a:[Lei7;
+.field public static final a:Lhi7;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 9
+    .locals 5
 
-    new-instance v0, Lei7;
+    sget-object v0, Lo76;->c:Lo76;
 
-    const-string v1, "UNKNOWN"
+    const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    move-result-object v1
 
-    new-instance v1, Lei7;
+    sget-object v2, Lu4e;->c:Lu4e;
 
-    const-string v2, "REQUESTED"
+    new-instance v3, Lt4e;
 
-    const/4 v3, 0x1
+    const/4 v4, 0x0
 
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v3, v0, v2, v4}, Lt4e;-><init>(Lo76;Lu4e;Lmk5;)V
 
-    new-instance v2, Lei7;
+    new-instance v0, Ldh7;
 
-    const-string v3, "INTERMEDIATE_AVAILABLE"
+    const/4 v2, 0x1
 
-    const/4 v4, 0x2
+    invoke-direct {v0, v2}, Ldh7;-><init>(I)V
 
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    sget-object v2, Lphh;->l0:Loc0;
 
-    new-instance v3, Lei7;
+    const/4 v4, 0x4
 
-    const-string v4, "SUCCESS"
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    const/4 v5, 0x3
+    move-result-object v4
 
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iget-object v0, v0, Ldh7;->b:Lyha;
 
-    new-instance v4, Lei7;
+    invoke-virtual {v0, v2, v4}, Lyha;->r(Loc0;Ljava/lang/Object;)V
 
-    const-string v5, "ERROR"
+    sget-object v2, Lgj7;->A:Loc0;
 
-    const/4 v6, 0x4
+    invoke-virtual {v0, v2, v1}, Lyha;->r(Loc0;Ljava/lang/Object;)V
 
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    sget-object v2, Lgj7;->I:Loc0;
 
-    new-instance v5, Lei7;
+    invoke-virtual {v0, v2, v3}, Lyha;->r(Loc0;Ljava/lang/Object;)V
 
-    const-string v6, "EMPTY_EVENT"
+    sget-object v2, Lhi7;->X:Loc0;
 
-    const/4 v7, 0x5
+    invoke-virtual {v0, v2, v1}, Lyha;->r(Loc0;Ljava/lang/Object;)V
 
-    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    sget-object v1, Lwi7;->z:Loc0;
 
-    new-instance v6, Lei7;
+    sget-object v2, Ljd5;->d:Ljd5;
 
-    const-string v7, "RELEASED"
+    invoke-virtual {v0, v1, v2}, Lyha;->r(Loc0;Ljava/lang/Object;)V
 
-    const/4 v8, 0x6
+    new-instance v1, Lhi7;
 
-    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    filled-new-array/range {v0 .. v6}, [Lei7;
+    invoke-static {v0}, Lvsb;->c(Les3;)Lvsb;
 
     move-result-object v0
 
-    sput-object v0, Lei7;->a:[Lei7;
+    invoke-direct {v1, v0}, Lhi7;-><init>(Lvsb;)V
 
-    invoke-static {}, Lei7;->values()[Lei7;
+    sput-object v1, Lei7;->a:Lhi7;
 
     return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lei7;
-    .locals 1
-
-    const-class v0, Lei7;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lei7;
-
-    return-object p0
-.end method
-
-.method public static values()[Lei7;
-    .locals 1
-
-    sget-object v0, Lei7;->a:[Lei7;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lei7;
-
-    return-object v0
-.end method
-
-
-# virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    sget-object v0, Ldi7;->$EnumSwitchMapping$0:[I
-
-    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    aget v0, v0, v1
-
-    const/4 v1, 0x1
-
-    if-eq v0, v1, :cond_4
-
-    const/4 v1, 0x2
-
-    if-eq v0, v1, :cond_3
-
-    const/4 v1, 0x3
-
-    if-eq v0, v1, :cond_2
-
-    const/4 v1, 0x4
-
-    if-eq v0, v1, :cond_1
-
-    const/4 v1, 0x5
-
-    if-eq v0, v1, :cond_0
-
-    const-string v0, "unknown"
-
-    return-object v0
-
-    :cond_0
-    const-string v0, "released"
-
-    return-object v0
-
-    :cond_1
-    const-string v0, "error"
-
-    return-object v0
-
-    :cond_2
-    const-string v0, "intermediate_available"
-
-    return-object v0
-
-    :cond_3
-    const-string v0, "success"
-
-    return-object v0
-
-    :cond_4
-    const-string v0, "requested"
-
-    return-object v0
 .end method

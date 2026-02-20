@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Len1;
+.implements Lrn1;
 
 
 # annotations
@@ -13,11 +13,11 @@
     }
     d2 = {
         "Lru/ok/android/externcalls/sdk/net/internal/monitor/StatMonitor;",
-        "Len1;",
-        "Ldxa;",
+        "Lrn1;",
+        "Luza;",
         "Lru/ok/android/externcalls/sdk/net/internal/monitor/NetworkStat;",
         "observeStat",
-        "()Ldxa;",
+        "()Luza;",
         "calls-sdk_release"
     }
     k = 0x1
@@ -31,14 +31,14 @@
 
 
 # virtual methods
-.method public abstract observeStat()Ldxa;
+.method public abstract observeStat()Luza;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Ldxa;"
+            "Luza;"
         }
     .end annotation
 .end method
 
-.method public abstract synthetic onRtcStats(Lchd;)V
+.method public abstract synthetic onRtcStats(Lvmd;)V
 .end method

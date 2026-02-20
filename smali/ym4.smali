@@ -1,54 +1,20 @@
-.class public final synthetic Lym4;
+.class public interface abstract Lym4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lqe8;
-
-
-# instance fields
-.field public final synthetic a:Lid;
-
-.field public final synthetic b:I
-
-.field public final synthetic c:I
-
-.field public final synthetic d:Z
-
-
-# direct methods
-.method public synthetic constructor <init>(Lid;IIZ)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lym4;->a:Lid;
-
-    iput p2, p0, Lym4;->b:I
-
-    iput p3, p0, Lym4;->c:I
-
-    iput-boolean p4, p0, Lym4;->d:Z
-
-    return-void
-.end method
-
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)V
-    .locals 4
+.method public abstract b()Laa2;
+.end method
 
-    iget-boolean v0, p0, Lym4;->d:Z
+.method public abstract c()Ljava/lang/Object;
+.end method
 
-    check-cast p1, Ljd;
+.method public abstract d(Lp8g;)V
+.end method
 
-    iget-object v1, p0, Lym4;->a:Lid;
+.method public abstract flush()V
+.end method
 
-    iget v2, p0, Lym4;->b:I
-
-    iget v3, p0, Lym4;->c:I
-
-    invoke-interface {p1, v1, v2, v3, v0}, Ljd;->q0(Lid;IIZ)V
-
-    return-void
+.method public abstract release()V
 .end method

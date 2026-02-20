@@ -2,111 +2,159 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lc88;
-
 
 # instance fields
-.field public final synthetic X:Ltfa;
+.field public final a:J
 
-.field public final synthetic Y:Lp6g;
+.field public final b:Lcpg;
 
-.field public final synthetic a:Ln78;
-
-.field public final synthetic b:Lbtd;
-
-.field public final synthetic c:Lzb4;
-
-.field public final synthetic d:Ln78;
-
-.field public final synthetic o:Lg62;
+.field public final c:Lr7b;
 
 
 # direct methods
-.method public constructor <init>(Ln78;Lbtd;Lzb4;Ln78;Lg62;Ltfa;Lbr6;)V
+.method public constructor <init>(JLcpg;Lr7b;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Llwd;->a:Ln78;
+    iput-wide p1, p0, Llwd;->a:J
 
-    iput-object p2, p0, Llwd;->b:Lbtd;
+    iput-object p3, p0, Llwd;->b:Lcpg;
 
-    iput-object p3, p0, Llwd;->c:Lzb4;
-
-    iput-object p4, p0, Llwd;->d:Ln78;
-
-    iput-object p5, p0, Llwd;->o:Lg62;
-
-    iput-object p6, p0, Llwd;->X:Ltfa;
-
-    check-cast p7, Lp6g;
-
-    iput-object p7, p0, Llwd;->Y:Lp6g;
+    iput-object p4, p0, Llwd;->c:Lr7b;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(Lj88;Ln78;)V
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget-object p1, p0, Llwd;->a:Ln78;
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, p0, Llwd;->b:Lbtd;
-
-    const/4 v1, 0x0
-
-    if-ne p2, p1, :cond_0
-
-    new-instance p1, Lkwd;
-
-    iget-object p2, p0, Llwd;->X:Ltfa;
-
-    iget-object v2, p0, Llwd;->Y:Lp6g;
-
-    invoke-direct {p1, p2, v2, v1}, Lkwd;-><init>(Ltfa;Lbr6;Lkotlin/coroutines/Continuation;)V
-
-    const/4 p2, 0x3
-
-    iget-object v2, p0, Llwd;->c:Lzb4;
-
-    invoke-static {v2, v1, v1, p1, p2}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
-
-    move-result-object p1
-
-    iput-object p1, v0, Lbtd;->a:Ljava/lang/Object;
-
-    return-void
+    goto :goto_1
 
     :cond_0
-    iget-object p1, p0, Llwd;->d:Ln78;
+    instance-of v0, p1, Llwd;
 
-    if-ne p2, p1, :cond_2
+    if-nez v0, :cond_1
 
-    iget-object p1, v0, Lbtd;->a:Ljava/lang/Object;
-
-    check-cast p1, Lsx7;
-
-    if-eqz p1, :cond_1
-
-    invoke-interface {p1, v1}, Lsx7;->cancel(Ljava/util/concurrent/CancellationException;)V
+    goto :goto_0
 
     :cond_1
-    iput-object v1, v0, Lbtd;->a:Ljava/lang/Object;
+    check-cast p1, Llwd;
+
+    iget-wide v0, p0, Llwd;->a:J
+
+    iget-wide v2, p1, Llwd;->a:J
+
+    cmp-long v0, v0, v2
+
+    if-eqz v0, :cond_2
+
+    goto :goto_0
 
     :cond_2
-    sget-object p1, Ln78;->ON_DESTROY:Ln78;
+    iget-object v0, p0, Llwd;->b:Lcpg;
 
-    if-ne p2, p1, :cond_3
+    iget-object v1, p1, Llwd;->b:Lcpg;
 
-    iget-object p1, p0, Llwd;->o:Lg62;
+    invoke-virtual {v0, v1}, Lcpg;->equals(Ljava/lang/Object;)Z
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    move-result v0
 
-    invoke-virtual {p1, p2}, Lg62;->resumeWith(Ljava/lang/Object;)V
+    if-nez v0, :cond_3
+
+    goto :goto_0
 
     :cond_3
-    return-void
+    iget-object v0, p0, Llwd;->c:Lr7b;
+
+    iget-object p1, p1, Llwd;->c:Lr7b;
+
+    if-eq v0, p1, :cond_4
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_4
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-wide v0, p0, Llwd;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Llwd;->b:Lcpg;
+
+    iget v2, v2, Lcpg;->c:I
+
+    invoke-static {v2, v0, v1}, Ljye;->d(III)I
+
+    move-result v0
+
+    iget-object v1, p0, Llwd;->c:Lr7b;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ButtonState(id="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v1, p0, Llwd;->a:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", textSource="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Llwd;->b:Lcpg;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", mode="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Llwd;->c:Lr7b;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

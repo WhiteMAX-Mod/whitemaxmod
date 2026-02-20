@@ -1,193 +1,185 @@
-.class public final Lzkj;
-.super Ligj;
+.class public abstract Lzkj;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic b:I
-
-.field public final synthetic c:Ljava/lang/Object;
-
-
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
+.method public static final a(I)Ljava/util/ArrayList;
+    .locals 3
 
-    iput p1, p0, Lzkj;->b:I
+    new-instance v0, Lkt7;
 
-    iput-object p2, p0, Lzkj;->c:Ljava/lang/Object;
+    const/16 v1, 0x17
 
-    invoke-direct {p0}, Ligj;-><init>()V
+    const/4 v2, 0x1
 
-    return-void
-.end method
+    invoke-direct {v0, p0, v1, v2}, Lit7;-><init>(III)V
 
+    new-instance p0, Ljava/util/ArrayList;
 
-# virtual methods
-.method public final a()V
-    .locals 5
+    const/16 v1, 0xa
 
-    iget v0, p0, Lzkj;->b:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lzkj;->c:Ljava/lang/Object;
-
-    check-cast v0, Llca;
-
-    iget-object v0, v0, Llca;->b:Ljava/lang/Object;
-
-    check-cast v0, Ltqj;
-
-    iget-object v1, v0, Ltqj;->b:Lqf5;
-
-    const-string v2, "unlinkToDeath"
-
-    const/4 v3, 0x0
-
-    new-array v4, v3, [Ljava/lang/Object;
-
-    invoke-virtual {v1, v2, v4}, Lqf5;->b(Ljava/lang/String;[Ljava/lang/Object;)V
-
-    iget-object v1, v0, Ltqj;->m:Lxzi;
-
-    invoke-interface {v1}, Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;
-
-    move-result-object v1
-
-    iget-object v2, v0, Ltqj;->j:Liaj;
-
-    invoke-interface {v1, v2, v3}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
-
-    const/4 v1, 0x0
-
-    iput-object v1, v0, Ltqj;->m:Lxzi;
-
-    iput-boolean v3, v0, Ltqj;->g:Z
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lzkj;->c:Ljava/lang/Object;
-
-    check-cast v0, Ltqj;
-
-    iget-object v0, v0, Ltqj;->f:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-object v1, p0, Lzkj;->c:Ljava/lang/Object;
-
-    check-cast v1, Ltqj;
-
-    iget-object v1, v1, Ltqj;->k:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+    invoke-static {v0, v1}, Lgk3;->n(Ljava/lang/Iterable;I)I
 
     move-result v1
 
-    const/4 v2, 0x0
+    invoke-direct {p0, v1}, Ljava/util/ArrayList;-><init>(I)V
 
-    if-lez v1, :cond_1
+    invoke-virtual {v0}, Lit7;->iterator()Ljava/util/Iterator;
 
-    iget-object v1, p0, Lzkj;->c:Ljava/lang/Object;
+    move-result-object v0
 
-    check-cast v1, Ltqj;
+    :goto_0
+    move-object v1, v0
 
-    iget-object v1, v1, Ltqj;->k:Ljava/util/concurrent/atomic/AtomicInteger;
+    check-cast v1, Ljt7;
 
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
+    iget-boolean v1, v1, Ljt7;->c:Z
+
+    if-eqz v1, :cond_0
+
+    move-object v1, v0
+
+    check-cast v1, Ljt7;
+
+    invoke-virtual {v1}, Ljt7;->nextInt()I
 
     move-result v1
 
-    if-gtz v1, :cond_0
+    new-instance v2, Ljsg;
+
+    invoke-direct {v2, v1}, Ljsg;-><init>(I)V
+
+    invoke-virtual {p0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
     :cond_0
-    iget-object v1, p0, Lzkj;->c:Ljava/lang/Object;
+    return-object p0
+.end method
 
-    check-cast v1, Ltqj;
+.method public static b(Lr52;Ljava/lang/String;)Z
+    .locals 4
 
-    iget-object v1, v1, Ltqj;->b:Lqf5;
+    const-string v0, "robolectric"
 
-    const-string v3, "Leaving the connection open for other ongoing calls."
+    sget-object v1, Landroid/os/Build;->FINGERPRINT:Ljava/lang/String;
 
-    new-array v2, v2, [Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {v1, v3, v2}, Lqf5;->b(Ljava/lang/String;[Ljava/lang/Object;)V
+    move-result v0
 
-    monitor-exit v0
+    const/4 v1, 0x1
 
-    goto :goto_1
+    if-eqz v0, :cond_0
 
-    :catchall_0
-    move-exception v1
+    return v1
 
-    goto :goto_2
+    :cond_0
+    :try_start_0
+    invoke-virtual {p0, p1}, Lr52;->b(Ljava/lang/String;)Lg42;
+
+    move-result-object p0
+
+    sget-object p1, Landroid/hardware/camera2/CameraCharacteristics;->REQUEST_AVAILABLE_CAPABILITIES:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-virtual {p0, p1}, Lg42;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, [I
+    :try_end_0
+    .catch Landroidx/camera/camera2/internal/compat/CameraAccessExceptionCompat; {:try_start_0 .. :try_end_0} :catch_0
+
+    const/4 p1, 0x0
+
+    if-eqz p0, :cond_2
+
+    array-length v0, p0
+
+    move v2, p1
+
+    :goto_0
+    if-ge v2, v0, :cond_2
+
+    aget v3, p0, v2
+
+    if-nez v3, :cond_1
+
+    return v1
 
     :cond_1
-    :goto_0
-    iget-object v1, p0, Lzkj;->c:Ljava/lang/Object;
+    add-int/lit8 v2, v2, 0x1
 
-    check-cast v1, Ltqj;
-
-    iget-object v3, v1, Ltqj;->m:Lxzi;
-
-    if-eqz v3, :cond_2
-
-    iget-object v1, v1, Ltqj;->b:Lqf5;
-
-    const-string v3, "Unbind from service."
-
-    new-array v4, v2, [Ljava/lang/Object;
-
-    invoke-virtual {v1, v3, v4}, Lqf5;->b(Ljava/lang/String;[Ljava/lang/Object;)V
-
-    iget-object v1, p0, Lzkj;->c:Ljava/lang/Object;
-
-    check-cast v1, Ltqj;
-
-    iget-object v3, v1, Ltqj;->a:Landroid/content/Context;
-
-    iget-object v1, v1, Ltqj;->l:Llca;
-
-    invoke-virtual {v3, v1}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
-
-    iget-object v1, p0, Lzkj;->c:Ljava/lang/Object;
-
-    check-cast v1, Ltqj;
-
-    iput-boolean v2, v1, Ltqj;->g:Z
-
-    const/4 v2, 0x0
-
-    iput-object v2, v1, Ltqj;->m:Lxzi;
-
-    iput-object v2, v1, Ltqj;->l:Llca;
+    goto :goto_0
 
     :cond_2
-    iget-object v1, p0, Lzkj;->c:Ljava/lang/Object;
+    return p1
 
-    check-cast v1, Ltqj;
+    :catch_0
+    move-exception p0
 
-    invoke-virtual {v1}, Ltqj;->d()V
+    new-instance p1, Landroidx/camera/core/InitializationException;
 
-    monitor-exit v0
+    new-instance v0, Landroidx/camera/core/CameraUnavailableException;
 
-    :goto_1
-    return-void
+    invoke-direct {v0, p0}, Ljava/lang/Exception;-><init>(Ljava/lang/Throwable;)V
 
-    :goto_2
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-direct {p1, v0}, Ljava/lang/Exception;-><init>(Ljava/lang/Throwable;)V
 
-    throw v1
+    throw p1
+.end method
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+.method public static final c(I)Ljava/util/ArrayList;
+    .locals 3
+
+    new-instance v0, Lkt7;
+
+    const/16 v1, 0x3b
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, p0, v1, v2}, Lit7;-><init>(III)V
+
+    new-instance p0, Ljava/util/ArrayList;
+
+    const/16 v1, 0xa
+
+    invoke-static {v0, v1}, Lgk3;->n(Ljava/lang/Iterable;I)I
+
+    move-result v1
+
+    invoke-direct {p0, v1}, Ljava/util/ArrayList;-><init>(I)V
+
+    invoke-virtual {v0}, Lit7;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    move-object v1, v0
+
+    check-cast v1, Ljt7;
+
+    iget-boolean v1, v1, Ljt7;->c:Z
+
+    if-eqz v1, :cond_0
+
+    move-object v1, v0
+
+    check-cast v1, Ljt7;
+
+    invoke-virtual {v1}, Ljt7;->nextInt()I
+
+    move-result v1
+
+    new-instance v2, Ljsg;
+
+    invoke-direct {v2, v1}, Ljsg;-><init>(I)V
+
+    invoke-virtual {p0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    :cond_0
+    return-object p0
 .end method

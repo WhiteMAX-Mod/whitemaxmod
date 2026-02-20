@@ -1,19 +1,50 @@
 .class public final Lsxg;
-.super Ltxg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public final b:Ljava/lang/String;
+# interfaces
+.implements Lxxg;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
+.method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Ltxg;-><init>()V
-
-    iput-object p1, p0, Lsxg;->b:Ljava/lang/String;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final a()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "one.video.calls.externcalls"
+
+    return-object v0
+.end method
+
+.method public final b()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "xrRYkU895jUPp2YZo1sxmtFadnlX1oHyouadIxpNzAp"
+
+    return-object v0
+.end method
+
+.method public final c()Ljava/lang/String;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final d()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "0.1.3"
+
+    return-object v0
 .end method

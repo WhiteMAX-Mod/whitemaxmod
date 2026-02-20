@@ -1,144 +1,53 @@
 .class public final Lcd2;
-.super Lad2;
+.super Lda4;
 .source "SourceFile"
 
 
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lsz;
+
+.field public Z:I
+
+.field public d:Lsz;
+
+.field public o:Lb96;
+
+
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lsz;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Lcd2;
+    iput-object p1, p0, Lcd2;->Y:Lsz;
 
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Lad2;-><init>(CC)V
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    instance-of v0, p1, Lcd2;
+    iput-object p1, p0, Lcd2;->X:Ljava/lang/Object;
 
-    if-eqz v0, :cond_2
+    iget p1, p0, Lcd2;->Z:I
 
-    invoke-virtual {p0}, Lcd2;->isEmpty()Z
+    const/high16 v0, -0x80000000
 
-    move-result v0
+    or-int/2addr p1, v0
 
-    if-eqz v0, :cond_0
+    iput p1, p0, Lcd2;->Z:I
 
-    move-object v0, p1
+    iget-object p1, p0, Lcd2;->Y:Lsz;
 
-    check-cast v0, Lcd2;
-
-    invoke-virtual {v0}, Lcd2;->isEmpty()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    :cond_0
-    check-cast p1, Lcd2;
-
-    iget-char v0, p1, Lad2;->a:C
-
-    iget-char v1, p0, Lad2;->a:C
-
-    if-ne v1, v0, :cond_2
-
-    iget-char v0, p0, Lad2;->b:C
-
-    iget-char p1, p1, Lad2;->b:C
-
-    if-ne v0, p1, :cond_2
-
-    :cond_1
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_2
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    invoke-virtual {p0}, Lcd2;->isEmpty()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, -0x1
-
-    return v0
-
-    :cond_0
-    iget-char v0, p0, Lad2;->a:C
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-char v1, p0, Lad2;->b:C
-
-    add-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final isEmpty()Z
-    .locals 2
-
-    iget-char v0, p0, Lad2;->a:C
-
-    iget-char v1, p0, Lad2;->b:C
-
-    invoke-static {v0, v1}, Le1j;->b(II)I
-
-    move-result v0
-
-    if-lez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
     const/4 v0, 0x0
 
-    return v0
-.end method
+    invoke-virtual {p1, v0, p0}, Lsz;->b(Lb96;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    move-result-object p1
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    iget-char v1, p0, Lad2;->a:C
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    const-string v1, ".."
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-char v1, p0, Lad2;->b:C
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

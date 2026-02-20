@@ -3,87 +3,70 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljp3;
-.implements Lhtg;
+.implements Lujf;
+
+
+# instance fields
+.field public final a:Lru0;
 
 
 # direct methods
-.method public static a(FFFF)Landroid/graphics/Path;
-    .locals 1
+.method public constructor <init>(Lru0;)V
+    .locals 0
 
-    new-instance v0, Landroid/graphics/Path;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Landroid/graphics/Path;-><init>()V
+    iput-object p1, p0, Lvjf;->a:Lru0;
 
-    invoke-virtual {v0, p0, p1}, Landroid/graphics/Path;->moveTo(FF)V
-
-    invoke-virtual {v0, p2, p3}, Landroid/graphics/Path;->lineTo(FF)V
-
-    return-object v0
-.end method
-
-.method public static b(Ljava/lang/CharSequence;)Lwjf;
-    .locals 1
-
-    :try_start_0
-    new-instance v0, Landroid/text/SpannableString;
-
-    invoke-direct {v0, p0}, Landroid/text/SpannableString;-><init>(Ljava/lang/CharSequence;)V
-
-    invoke-static {v0}, Ly6j;->a(Landroid/text/Spannable;)V
-    :try_end_0
-    .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    instance-of v0, p0, Landroid/text/Spannable;
-
-    if-eqz v0, :cond_0
-
-    move-object v0, p0
-
-    check-cast v0, Landroid/text/Spannable;
-
-    invoke-static {v0}, Ly6j;->a(Landroid/text/Spannable;)V
-
-    :cond_0
-    new-instance v0, Landroid/text/SpannableString;
-
-    invoke-direct {v0, p0}, Landroid/text/SpannableString;-><init>(Ljava/lang/CharSequence;)V
-
-    :goto_0
-    new-instance p0, Lwjf;
-
-    invoke-direct {p0, v0}, Landroid/text/SpannableString;-><init>(Ljava/lang/CharSequence;)V
-
-    return-object p0
+    return-void
 .end method
 
 
 # virtual methods
-.method public apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a()Lorg/json/JSONObject;
+    .locals 5
 
-    check-cast p1, [B
+    new-instance v0, Lorg/json/JSONObject;
 
-    return-object p1
-.end method
+    invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
 
-.method public j(Law4;)Ljava/lang/Object;
-    .locals 2
+    const-string v1, "command"
 
-    new-instance v0, Lb6j;
+    const-string v2, "update-media-modifiers"
 
-    const-class v1, Lp7a;
+    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    invoke-virtual {p1, v1}, Law4;->a(Ljava/lang/Class;)Ljava/lang/Object;
+    move-result-object v0
 
-    move-result-object p1
+    iget-object v1, p0, Lvjf;->a:Lru0;
 
-    check-cast p1, Lp7a;
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-direct {v0, p1}, Lb6j;-><init>(Lp7a;)V
+    new-instance v2, Lorg/json/JSONObject;
+
+    invoke-direct {v2}, Lorg/json/JSONObject;-><init>()V
+
+    :try_start_0
+    const-string v3, "denoise"
+
+    iget-boolean v4, v1, Lru0;->a:Z
+
+    invoke-virtual {v2, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
+
+    const-string v3, "denoiseAnn"
+
+    iget-boolean v1, v1, Lru0;->b:Z
+
+    invoke-virtual {v2, v3, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    const-string v1, "mediaModifiers"
+
+    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    move-result-object v0
 
     return-object v0
 .end method

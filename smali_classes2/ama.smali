@@ -1,269 +1,251 @@
-.class public final Lama;
-.super Lp6g;
+.class public final enum Lama;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Lbr6;
 
+# static fields
+.field public static final enum X:Lama;
 
-# instance fields
-.field public final synthetic X:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
+.field public static final enum Y:Lama;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public static final enum Z:Lama;
+
+.field public static final enum a:Lama;
+
+.field public static final enum b:Lama;
+
+.field public static final enum c:Lama;
+
+.field public static final enum d:Lama;
+
+.field public static final enum o:Lama;
+
+.field public static final enum s0:Lama;
+
+.field public static final enum t0:Lama;
+
+.field public static final synthetic u0:[Lama;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/login/neuroavatars/NeuroAvatarsScreen;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 12
 
-    iput-object p2, p0, Lama;->X:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
+    new-instance v0, Lama;
 
-    const/4 p2, 0x2
+    const-string v1, "CREATE_OFFER"
 
-    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lama;->a:Lama;
+
+    new-instance v1, Lama;
+
+    const-string v2, "CREATE_ANSWER"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lama;->b:Lama;
+
+    new-instance v2, Lama;
+
+    const-string v3, "SET_LOCAL_OFFER"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lama;->c:Lama;
+
+    new-instance v3, Lama;
+
+    const-string v4, "SET_REMOTE_OFFER"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Lama;->d:Lama;
+
+    new-instance v4, Lama;
+
+    const-string v5, "SET_LOCAL_ANSWER"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v4, Lama;->o:Lama;
+
+    new-instance v5, Lama;
+
+    const-string v6, "SET_REMOTE_ANSWER"
+
+    const/4 v7, 0x5
+
+    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v5, Lama;->X:Lama;
+
+    new-instance v6, Lama;
+
+    const-string v7, "SET_LOCAL_PRANSWER"
+
+    const/4 v8, 0x6
+
+    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v6, Lama;->Y:Lama;
+
+    new-instance v7, Lama;
+
+    const-string v8, "SET_REMOTE_PRANSWER"
+
+    const/4 v9, 0x7
+
+    invoke-direct {v7, v8, v9}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v7, Lama;->Z:Lama;
+
+    new-instance v8, Lama;
+
+    const-string v9, "SET_LOCAL_ROLLBACK"
+
+    const/16 v10, 0x8
+
+    invoke-direct {v8, v9, v10}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v8, Lama;->s0:Lama;
+
+    new-instance v9, Lama;
+
+    const-string v10, "SET_REMOTE_ROLLBACK"
+
+    const/16 v11, 0x9
+
+    invoke-direct {v9, v10, v11}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v9, Lama;->t0:Lama;
+
+    filled-new-array/range {v0 .. v9}, [Lama;
+
+    move-result-object v0
+
+    sput-object v0, Lama;->u0:[Lama;
 
     return-void
 .end method
 
+.method public static final a(Lorg/webrtc/SessionDescription$Type;Z)Lama;
+    .locals 1
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    sget-object v0, Lzla;->$EnumSwitchMapping$0:[I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
 
-    invoke-virtual {p0, p1, p2}, Lama;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    move-result p0
 
-    move-result-object p1
+    aget p0, v0, p0
 
-    check-cast p1, Lama;
+    const/4 v0, 0x1
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    if-eq p0, v0, :cond_6
 
-    invoke-virtual {p1, p2}, Lama;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 v0, 0x2
 
-    return-object p2
-.end method
+    if-eq p0, v0, :cond_4
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    const/4 v0, 0x3
 
-    new-instance v0, Lama;
+    if-eq p0, v0, :cond_2
 
-    iget-object v1, p0, Lama;->X:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
+    const/4 v0, 0x4
 
-    invoke-direct {v0, p2, v1}, Lama;-><init>(Lkotlin/coroutines/Continuation;Lone/me/login/neuroavatars/NeuroAvatarsScreen;)V
+    if-ne p0, v0, :cond_1
 
-    iput-object p1, v0, Lama;->o:Ljava/lang/Object;
+    if-eqz p1, :cond_0
 
-    return-object v0
-.end method
+    sget-object p0, Lama;->s0:Lama;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
-
-    iget-object v0, p0, Lama;->X:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
-
-    iget-object v1, v0, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->a:Lukf;
-
-    iget-object v2, p0, Lama;->o:Ljava/lang/Object;
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    instance-of p1, v2, Lol8;
-
-    const/4 v3, 0x4
-
-    const/4 v4, 0x1
-
-    const/4 v5, 0x0
-
-    if-eqz p1, :cond_2
-
-    check-cast v2, Lol8;
-
-    iget-object p1, v2, Lol8;->c:Lqhg;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v1}, Lqhg;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
-
-    move-result-object p1
-
-    if-nez p1, :cond_0
-
-    goto/16 :goto_3
+    return-object p0
 
     :cond_0
-    new-instance v1, Ldjb;
+    sget-object p0, Lama;->t0:Lama;
 
-    invoke-direct {v1, v0}, Ldjb;-><init>(Lone/me/sdk/arch/Widget;)V
-
-    invoke-virtual {v1, p1}, Ldjb;->h(Ljava/lang/CharSequence;)V
-
-    const/4 p1, 0x0
-
-    invoke-virtual {v1, p1}, Ldjb;->b(Ljava/lang/CharSequence;)V
-
-    new-instance p1, Lljb;
-
-    invoke-virtual {v0}, La94;->getView()Landroid/view/View;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_1
-
-    invoke-static {v2}, Ls5j;->m(Landroid/view/View;)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_1
-
-    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
-
-    move-result v2
-
-    goto :goto_0
+    return-object p0
 
     :cond_1
-    move v2, v5
+    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
 
-    :goto_0
-    invoke-direct {p1, v4, v2, v5, v3}, Lljb;-><init>(IIII)V
+    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-    invoke-virtual {v1, p1}, Ldjb;->c(Lljb;)V
-
-    invoke-virtual {v1}, Ldjb;->i()Lcjb;
-
-    goto :goto_3
+    throw p0
 
     :cond_2
-    instance-of p1, v2, Lpl8;
+    if-eqz p1, :cond_3
 
-    if-eqz p1, :cond_6
+    sget-object p0, Lama;->o:Lama;
 
-    check-cast v2, Lpl8;
-
-    iget p1, v2, Lpl8;->e:I
-
-    sget-object v6, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->L0:[Lz28;
-
-    invoke-virtual {v0}, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->B0()Lutd;
-
-    move-result-object v6
-
-    if-nez v6, :cond_3
-
-    goto :goto_1
+    return-object p0
 
     :cond_3
-    iget-object v6, v0, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->d:Lo58;
+    sget-object p0, Lama;->X:Lama;
 
-    invoke-interface {v6}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object v6
-
-    check-cast v6, Lg80;
-
-    new-instance v7, Lf80;
-
-    invoke-direct {v7, p1}, Lf80;-><init>(I)V
-
-    invoke-virtual {v6, v7}, Lg80;->a(Lj2;)V
-
-    :goto_1
-    iget-object p1, v2, Lpl8;->c:Lqhg;
-
-    iget-object v2, v2, Lpl8;->d:Lqhg;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v1}, Lqhg;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
-
-    move-result-object p1
-
-    if-nez p1, :cond_4
-
-    goto :goto_3
+    return-object p0
 
     :cond_4
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    if-eqz p1, :cond_5
 
-    move-result-object v1
+    sget-object p0, Lama;->Y:Lama;
 
-    invoke-virtual {v2, v1}, Lqhg;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
-
-    move-result-object v1
-
-    new-instance v2, Ldjb;
-
-    invoke-direct {v2, v0}, Ldjb;-><init>(Lone/me/sdk/arch/Widget;)V
-
-    invoke-virtual {v2, p1}, Ldjb;->h(Ljava/lang/CharSequence;)V
-
-    invoke-virtual {v2, v1}, Ldjb;->b(Ljava/lang/CharSequence;)V
-
-    new-instance p1, Lljb;
-
-    invoke-virtual {v0}, La94;->getView()Landroid/view/View;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_5
-
-    invoke-static {v1}, Ls5j;->m(Landroid/view/View;)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_5
-
-    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
-
-    move-result v1
-
-    goto :goto_2
+    return-object p0
 
     :cond_5
-    move v1, v5
+    sget-object p0, Lama;->Z:Lama;
 
-    :goto_2
-    invoke-direct {p1, v4, v1, v5, v3}, Lljb;-><init>(IIII)V
-
-    invoke-virtual {v2, p1}, Ldjb;->c(Lljb;)V
-
-    invoke-virtual {v2}, Ldjb;->i()Lcjb;
+    return-object p0
 
     :cond_6
-    :goto_3
-    sget-object p1, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->L0:[Lz28;
+    if-eqz p1, :cond_7
 
-    iget-object p1, v0, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->v0:Ljld;
+    sget-object p0, Lama;->c:Lama;
 
-    sget-object v1, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->L0:[Lz28;
+    return-object p0
 
-    const/4 v2, 0x6
+    :cond_7
+    sget-object p0, Lama;->d:Lama;
 
-    aget-object v1, v1, v2
+    return-object p0
+.end method
 
-    invoke-interface {p1, v0, v1}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+.method public static valueOf(Ljava/lang/String;)Lama;
+    .locals 1
 
-    move-result-object p1
+    const-class v0, Lama;
 
-    check-cast p1, Lone/me/sdk/uikit/common/button/OneMeButton;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    invoke-virtual {p1, v5}, Lone/me/sdk/uikit/common/button/OneMeButton;->setProgressEnabled(Z)V
+    move-result-object p0
 
-    invoke-virtual {p1, v4}, Landroid/view/View;->setClickable(Z)V
+    check-cast p0, Lama;
 
-    sget-object p1, Lb3h;->a:Lb3h;
+    return-object p0
+.end method
 
-    return-object p1
+.method public static values()[Lama;
+    .locals 1
+
+    sget-object v0, Lama;->u0:[Lama;
+
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lama;
+
+    return-object v0
 .end method

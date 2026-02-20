@@ -1,103 +1,181 @@
 .class public final Lh2h;
-.super Ljava/lang/Object;
+.super Lpdg;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Comparable;
+.implements Lys6;
 
 
 # instance fields
-.field public final a:S
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lo2h;
+
+.field public o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(S)V
+.method public constructor <init>(Lo2h;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lh2h;->Y:Lo2h;
 
-    iput-short p1, p0, Lh2h;->a:S
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic compareTo(Ljava/lang/Object;)I
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lxzg;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lh2h;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
 
     check-cast p1, Lh2h;
 
-    iget-short p1, p1, Lh2h;->a:S
+    sget-object p2, Lmah;->a:Lmah;
 
-    iget-short v0, p0, Lh2h;->a:S
+    invoke-virtual {p1, p2}, Lh2h;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const v1, 0xffff
+    move-result-object p1
 
-    and-int/2addr v0, v1
-
-    and-int/2addr p1, v1
-
-    invoke-static {v0, p1}, Le1j;->b(II)I
-
-    move-result p1
-
-    return p1
+    return-object p1
 .end method
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    instance-of v0, p1, Lh2h;
+    new-instance v0, Lh2h;
 
-    if-nez v0, :cond_0
+    iget-object v1, p0, Lh2h;->Y:Lo2h;
+
+    invoke-direct {v0, v1, p2}, Lh2h;-><init>(Lo2h;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lh2h;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
+
+    iget v0, p0, Lh2h;->o:I
+
+    const/4 v1, 0x2
+
+    const/4 v2, 0x1
+
+    sget-object v3, Lod4;->a:Lod4;
+
+    if-eqz v0, :cond_2
+
+    if-eq v0, v2, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    :try_start_0
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+    :try_end_0
+    .catch Landroid/database/SQLException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_2
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    iget-object v0, p0, Lh2h;->X:Ljava/lang/Object;
+
+    check-cast v0, Lxzg;
+
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
     goto :goto_0
 
-    :cond_0
-    check-cast p1, Lh2h;
+    :cond_2
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    iget-short p1, p1, Lh2h;->a:S
+    iget-object p1, p0, Lh2h;->X:Ljava/lang/Object;
 
-    iget-short v0, p0, Lh2h;->a:S
+    move-object v0, p1
 
-    if-eq v0, p1, :cond_1
+    check-cast v0, Lxzg;
 
+    iput-object v0, p0, Lh2h;->X:Ljava/lang/Object;
+
+    iput v2, p0, Lh2h;->o:I
+
+    invoke-interface {v0, p0}, Lxzg;->b(Lkotlin/coroutines/Continuation;)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    if-ne p1, v3, :cond_3
+
+    goto :goto_1
+
+    :cond_3
     :goto_0
-    const/4 p1, 0x0
+    check-cast p1, Ljava/lang/Boolean;
 
-    return p1
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    :cond_1
-    const/4 p1, 0x1
+    move-result p1
 
-    return p1
-.end method
+    if-eqz p1, :cond_4
 
-.method public final hashCode()I
-    .locals 1
+    goto :goto_3
 
-    iget-short v0, p0, Lh2h;->a:S
+    :cond_4
+    :try_start_1
+    sget-object p1, Lwzg;->b:Lwzg;
 
-    invoke-static {v0}, Ljava/lang/Short;->hashCode(S)I
+    new-instance v2, Lg2h;
 
-    move-result v0
+    iget-object v4, p0, Lh2h;->Y:Lo2h;
 
-    return v0
-.end method
+    const/4 v5, 0x0
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    invoke-direct {v2, v4, v5}, Lg2h;-><init>(Lo2h;Lkotlin/coroutines/Continuation;)V
 
-    iget-short v0, p0, Lh2h;->a:S
+    iput-object v5, p0, Lh2h;->X:Ljava/lang/Object;
 
-    const v1, 0xffff
+    iput v1, p0, Lh2h;->o:I
 
-    and-int/2addr v0, v1
+    invoke-interface {v0, p1, v2, p0}, Lxzg;->d(Lwzg;Lys6;Lpdg;)Ljava/lang/Object;
 
-    invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+    move-result-object p1
 
-    move-result-object v0
+    if-ne p1, v3, :cond_5
 
-    return-object v0
+    :goto_1
+    return-object v3
+
+    :cond_5
+    :goto_2
+    check-cast p1, Ljava/util/Set;
+    :try_end_1
+    .catch Landroid/database/SQLException; {:try_start_1 .. :try_end_1} :catch_0
+
+    return-object p1
+
+    :catch_0
+    :goto_3
+    sget-object p1, Lcj5;->a:Lcj5;
+
+    return-object p1
 .end method

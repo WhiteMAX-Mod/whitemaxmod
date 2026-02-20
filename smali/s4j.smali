@@ -3,68 +3,109 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lvwa;
+.implements Lmrj;
+.implements Lx4b;
+.implements Lo4b;
+.implements Ll4b;
 
 
-# static fields
-.field public static final a:Ls4j;
+# instance fields
+.field public final synthetic a:I
+
+.field public final b:Ljava/util/concurrent/Executor;
+
+.field public final c:Lba4;
+
+.field public final d:Lvxj;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(Ljava/util/concurrent/Executor;Lba4;Lvxj;I)V
+    .locals 0
 
-    new-instance v0, Ls4j;
+    iput p4, p0, Ls4j;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ls4j;->b:Ljava/util/concurrent/Executor;
 
-    sput-object v0, Ls4j;->a:Ls4j;
+    iput-object p2, p0, Ls4j;->c:Lba4;
 
-    new-instance v0, Lvzi;
+    iput-object p3, p0, Ls4j;->d:Lvxj;
 
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lvzi;-><init>(I)V
-
-    const-class v1, Ln0j;
-
-    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public a(Ljava/lang/Object;)V
+    .locals 1
 
-    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    iget-object v0, p0, Ls4j;->d:Lvxj;
 
-    move-result-object p1
+    invoke-virtual {v0, p1}, Lvxj;->o(Ljava/lang/Object;)V
 
-    throw p1
+    return-void
+.end method
+
+.method public final b(Lcom/google/android/gms/tasks/Task;)V
+    .locals 3
+
+    iget v0, p0, Ls4j;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v0, Lb0g;
+
+    const/16 v1, 0xb
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, p0, p1, v2, v1}, Lb0g;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
+
+    iget-object p1, p0, Ls4j;->b:Ljava/util/concurrent/Executor;
+
+    invoke-interface {p1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    return-void
+
+    :pswitch_0
+    new-instance v0, Lnlg;
+
+    const/4 v1, 0x7
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, p0, p1, v2, v1}, Lnlg;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
+
+    iget-object p1, p0, Ls4j;->b:Ljava/util/concurrent/Executor;
+
+    invoke-interface {p1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public c()V
+    .locals 1
+
+    iget-object v0, p0, Ls4j;->d:Lvxj;
+
+    invoke-virtual {v0}, Lvxj;->p()V
+
+    return-void
+.end method
+
+.method public onFailure(Ljava/lang/Exception;)V
+    .locals 1
+
+    iget-object v0, p0, Ls4j;->d:Lvxj;
+
+    invoke-virtual {v0, p1}, Lvxj;->n(Ljava/lang/Exception;)V
+
+    return-void
 .end method

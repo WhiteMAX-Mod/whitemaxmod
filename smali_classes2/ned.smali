@@ -3,10 +3,14 @@
 
 
 # static fields
-.field public static oneme_stickers_set_add_button:I = 0x7f130a6b
+.field public static members_list_action_view_type:I = 0x7f0a048c
 
-.field public static oneme_stickers_set_remove_button:I = 0x7f130a6c
+.field public static members_list_bottom_action_view_type:I = 0x7f0a048d
 
-.field public static oneme_stickers_set_snackbar_favorite_added:I = 0x7f130a6d
+.field public static members_list_empty_search_view_type:I = 0x7f0a048e
 
-.field public static oneme_stickers_set_snackbar_favorite_removed:I = 0x7f130a6e
+.field public static members_list_item_view_type:I = 0x7f0a048f
+
+.field public static members_list_rv:I = 0x7f0a0490
+
+.field public static members_list_shimmer_view_type:I = 0x7f0a0491

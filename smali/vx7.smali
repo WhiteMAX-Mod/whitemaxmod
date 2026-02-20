@@ -1,75 +1,70 @@
 .class public final Lvx7;
-.super Landroid/os/AsyncTask;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/view/animation/Interpolator;
 
 
 # instance fields
-.field public final synthetic a:Ldy7;
+.field public final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(Ldy7;)V
+.method public synthetic constructor <init>(I)V
     .locals 0
 
-    iput-object p1, p0, Lvx7;->a:Ldy7;
+    iput p1, p0, Lvx7;->a:I
 
-    invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
+.method public final getInterpolation(F)F
     .locals 2
 
-    check-cast p1, [Ljava/lang/Void;
+    iget v0, p0, Lvx7;->a:I
 
-    :goto_0
-    iget-object p1, p0, Lvx7;->a:Ldy7;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p1}, Ldy7;->dequeueWork()Lyx7;
+    :pswitch_0
+    const/high16 v0, 0x3f800000    # 1.0f
 
-    move-result-object v0
+    sub-float/2addr p1, v0
 
-    if-eqz v0, :cond_0
+    mul-float v1, p1, p1
 
-    invoke-interface {v0}, Lyx7;->getIntent()Landroid/content/Intent;
+    mul-float/2addr v1, p1
 
-    move-result-object v1
+    mul-float/2addr v1, p1
 
-    invoke-virtual {p1, v1}, Ldy7;->onHandleWork(Landroid/content/Intent;)V
+    mul-float/2addr v1, p1
 
-    invoke-interface {v0}, Lyx7;->a()V
+    add-float/2addr v1, v0
 
-    goto :goto_0
+    return v1
 
-    :cond_0
-    const/4 p1, 0x0
+    :pswitch_1
+    mul-float v0, p1, p1
 
-    return-object p1
-.end method
+    mul-float/2addr v0, p1
 
-.method public final onCancelled(Ljava/lang/Object;)V
-    .locals 0
+    mul-float/2addr v0, p1
 
-    check-cast p1, Ljava/lang/Void;
+    mul-float/2addr v0, p1
 
-    iget-object p1, p0, Lvx7;->a:Ldy7;
+    return v0
 
-    invoke-virtual {p1}, Ldy7;->processorFinished()V
+    nop
 
-    return-void
-.end method
-
-.method public final onPostExecute(Ljava/lang/Object;)V
-    .locals 0
-
-    check-cast p1, Ljava/lang/Void;
-
-    iget-object p1, p0, Lvx7;->a:Ldy7;
-
-    invoke-virtual {p1}, Ldy7;->processorFinished()V
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+    .end packed-switch
 .end method

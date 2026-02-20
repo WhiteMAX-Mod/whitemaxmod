@@ -88,7 +88,7 @@
 
     const-string p3, "Invalid port: "
 
-    invoke-static {p2, p3}, Lj27;->g(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p2, p3}, Ltx8;->g(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
@@ -187,7 +187,7 @@
 
     const/16 v2, 0x5d
 
-    invoke-static {v0, v1, v2}, Lxi4;->k(Ljava/lang/StringBuilder;Ljava/lang/String;C)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lj64;->h(Ljava/lang/StringBuilder;Ljava/lang/String;C)Ljava/lang/String;
 
     move-result-object v0
 

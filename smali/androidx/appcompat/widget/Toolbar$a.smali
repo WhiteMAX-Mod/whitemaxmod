@@ -1,5 +1,5 @@
 .class public Landroidx/appcompat/widget/Toolbar$a;
-.super Ld0;
+.super Lg0;
 .source "SourceFile"
 
 
@@ -60,7 +60,7 @@
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1, p2}, Ld0;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
+    invoke-direct {p0, p1, p2}, Lg0;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
 
     .line 3
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -94,7 +94,7 @@
 .method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
-    invoke-super {p0, p1, p2}, Ld0;->writeToParcel(Landroid/os/Parcel;I)V
+    invoke-super {p0, p1, p2}, Lg0;->writeToParcel(Landroid/os/Parcel;I)V
 
     iget p2, p0, Landroidx/appcompat/widget/Toolbar$a;->c:I
 

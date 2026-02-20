@@ -2,207 +2,141 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/animation/Animator$AnimatorListener;
 
+# static fields
+.field public static final a:Lcom/facebook/animated/gif/GifImage;
 
-# instance fields
-.field public final synthetic a:Landroid/view/View;
-
-.field public final synthetic b:Ljava/lang/String;
-
-.field public final synthetic c:F
-
-.field public final synthetic d:F
-
-.field public final synthetic e:F
-
-.field public final synthetic f:F
-
-.field public final synthetic g:Z
-
-.field public final synthetic h:Lnq6;
+.field public static final b:Lcom/facebook/animated/gif/GifImage;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;Ljava/lang/String;FFFFZLnq6;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 2
 
-    sget v0, Ly6b;->a:I
+    const/4 v0, 0x0
+
+    :try_start_0
+    const-class v1, Lcom/facebook/animated/gif/GifImage;
+
+    invoke-virtual {v1}, Ljava/lang/Class;->newInstance()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/facebook/animated/gif/GifImage;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-object v1, v0
+
+    :goto_0
+    sput-object v1, Lwg;->a:Lcom/facebook/animated/gif/GifImage;
+
+    const-string v1, "com.facebook.animated.webp.WebPImage"
+
+    :try_start_1
+    invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Class;->newInstance()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/facebook/animated/gif/GifImage;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    move-object v0, v1
+
+    :catchall_1
+    sput-object v0, Lwg;->b:Lcom/facebook/animated/gif/GifImage;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lm6a;Leec;Z)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lwg;->a:Landroid/view/View;
-
-    iput-object p2, p0, Lwg;->b:Ljava/lang/String;
-
-    iput p3, p0, Lwg;->c:F
-
-    iput p4, p0, Lwg;->d:F
-
-    iput p5, p0, Lwg;->e:F
-
-    iput p6, p0, Lwg;->f:F
-
-    iput-boolean p7, p0, Lwg;->g:Z
-
-    iput-object p8, p0, Lwg;->h:Lnq6;
-
     return-void
 .end method
 
+.method public static a(Ljava/lang/String;Lni7;Lcom/facebook/animated/gif/GifImage;)Lvh3;
+    .locals 1
 
-# virtual methods
-.method public final onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 3
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object p1, p0, Lwg;->a:Landroid/view/View;
+    new-instance p1, Lmve;
 
-    iget v0, p0, Lwg;->e:F
+    invoke-direct {p1, p2}, Lmve;-><init>(Lcom/facebook/animated/gif/GifImage;)V
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setScaleX(F)V
+    const/4 p2, 0x0
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setScaleY(F)V
+    iput-object p2, p1, Lmve;->d:Ljava/lang/Object;
 
-    iget v0, p0, Lwg;->f:F
+    iput-object p2, p1, Lmve;->o:Ljava/lang/Object;
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
+    iput-object p0, p1, Lmve;->b:Ljava/lang/Object;
 
-    iget-boolean v0, p0, Lwg;->g:Z
+    const/4 p0, 0x0
 
-    const/4 v1, 0x0
+    :try_start_0
+    new-instance p2, Lb5b;
 
-    if-eqz v0, :cond_0
+    invoke-direct {p2, p1}, Lb5b;-><init>(Lmve;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move v0, v1
+    iget-object v0, p1, Lmve;->d:Ljava/lang/Object;
 
-    goto :goto_0
+    check-cast v0, Lzh3;
 
-    :cond_0
-    const/16 v0, 0x8
+    invoke-static {v0}, Lzh3;->d0(Lzh3;)V
 
-    :goto_0
-    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
+    iput-object p0, p1, Lmve;->d:Ljava/lang/Object;
 
-    iget-object v0, p0, Lwg;->h:Lnq6;
+    iget-object v0, p1, Lmve;->o:Ljava/lang/Object;
 
-    if-eqz v0, :cond_2
+    check-cast v0, Ljava/util/ArrayList;
 
-    invoke-virtual {p1}, Landroid/view/View;->getVisibility()I
+    invoke-static {v0}, Lzh3;->e0(Ljava/util/ArrayList;)V
 
-    move-result v2
+    iput-object p0, p1, Lmve;->o:Ljava/lang/Object;
 
-    if-nez v2, :cond_1
+    new-instance p0, Lvh3;
 
-    const/4 v1, 0x1
+    invoke-direct {p0}, Ljl0;-><init>()V
 
-    :cond_1
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    iput-object p2, p0, Lvh3;->d:Lb5b;
 
-    move-result-object v1
+    const/4 p1, 0x1
 
-    invoke-interface {v0, v1}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    iput-boolean p1, p0, Lvh3;->o:Z
 
-    :cond_2
-    sget v0, Ly6b;->m:I
+    return-object p0
 
-    const/4 v1, 0x0
+    :catchall_0
+    move-exception p2
 
-    invoke-virtual {p1, v0, v1}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
+    iget-object v0, p1, Lmve;->d:Ljava/lang/Object;
 
-    return-void
-.end method
+    check-cast v0, Lzh3;
 
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 3
+    invoke-static {v0}, Lzh3;->d0(Lzh3;)V
 
-    iget-object p1, p0, Lwg;->a:Landroid/view/View;
+    iput-object p0, p1, Lmve;->d:Ljava/lang/Object;
 
-    iget v0, p0, Lwg;->e:F
+    iget-object v0, p1, Lmve;->o:Ljava/lang/Object;
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setScaleX(F)V
+    check-cast v0, Ljava/util/ArrayList;
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setScaleY(F)V
+    invoke-static {v0}, Lzh3;->e0(Ljava/util/ArrayList;)V
 
-    iget v0, p0, Lwg;->f:F
+    iput-object p0, p1, Lmve;->o:Ljava/lang/Object;
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
-
-    iget-boolean v0, p0, Lwg;->g:Z
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    move v0, v1
-
-    goto :goto_0
-
-    :cond_0
-    const/16 v0, 0x8
-
-    :goto_0
-    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object v0, p0, Lwg;->h:Lnq6;
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {p1}, Landroid/view/View;->getVisibility()I
-
-    move-result v2
-
-    if-nez v2, :cond_1
-
-    const/4 v1, 0x1
-
-    :cond_1
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_2
-    sget v0, Ly6b;->m:I
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, v0, v1}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final onAnimationRepeat(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onAnimationStart(Landroid/animation/Animator;)V
-    .locals 2
-
-    sget p1, Ly6b;->m:I
-
-    iget-object v0, p0, Lwg;->b:Ljava/lang/String;
-
-    iget-object v1, p0, Lwg;->a:Landroid/view/View;
-
-    invoke-virtual {v1, p1, v0}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
-
-    iget p1, p0, Lwg;->c:F
-
-    invoke-virtual {v1, p1}, Landroid/view/View;->setScaleX(F)V
-
-    invoke-virtual {v1, p1}, Landroid/view/View;->setScaleY(F)V
-
-    iget p1, p0, Lwg;->d:F
-
-    invoke-virtual {v1, p1}, Landroid/view/View;->setAlpha(F)V
-
-    const/4 p1, 0x0
-
-    invoke-virtual {v1, p1}, Landroid/view/View;->setVisibility(I)V
-
-    return-void
+    throw p2
 .end method

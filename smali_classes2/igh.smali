@@ -1,108 +1,49 @@
 .class public final Ligh;
-.super Ljava/lang/Object;
+.super Lda4;
 .source "SourceFile"
-
-# interfaces
-.implements Lfh5;
 
 
 # instance fields
-.field public final synthetic a:Ljgh;
+.field public final synthetic X:Ljgh;
+
+.field public Y:I
+
+.field public d:Loia;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ljgh;)V
+.method public constructor <init>(Ljgh;Lda4;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ligh;->X:Ljgh;
 
-    iput-object p1, p0, Ligh;->a:Ljgh;
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final e(Lone/video/exo/error/OneVideoExoPlaybackException;Lkqh;Lgob;)V
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    new-instance p2, Ljava/lang/StringBuilder;
+    iput-object p1, p0, Ligh;->o:Ljava/lang/Object;
 
-    const-string p3, "ERROR: "
+    iget p1, p0, Ligh;->Y:I
 
-    invoke-direct {p2, p3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const/high16 v0, -0x80000000
 
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    or-int/2addr p1, v0
 
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iput p1, p0, Ligh;->Y:I
+
+    iget-object p1, p0, Ligh;->X:Ljgh;
+
+    invoke-virtual {p1, p0}, Ljgh;->i(Lda4;)Ljava/lang/Object;
 
     move-result-object p1
 
-    iget-object p2, p0, Ligh;->a:Ljgh;
-
-    invoke-static {p2, p1}, Ljgh;->i(Ljgh;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public final i(Lgob;)V
-    .locals 1
-
-    iget-object p1, p0, Ligh;->a:Ljgh;
-
-    const-string v0, "VIDEO FINISH"
-
-    invoke-static {p1, v0}, Ljgh;->i(Ljgh;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public final j(Lgob;)V
-    .locals 1
-
-    iget-object v0, p0, Ligh;->a:Ljgh;
-
-    invoke-virtual {v0, p1}, Ljgh;->k(Lgob;)V
-
-    return-void
-.end method
-
-.method public final k(Lwnb;Lqqh;)V
-    .locals 0
-
-    iget-object p2, p0, Ligh;->a:Ljgh;
-
-    invoke-virtual {p2, p1}, Ljgh;->k(Lgob;)V
-
-    return-void
-.end method
-
-.method public final p(Lgob;)V
-    .locals 1
-
-    iget-object v0, p0, Ligh;->a:Ljgh;
-
-    invoke-virtual {v0, p1}, Ljgh;->k(Lgob;)V
-
-    return-void
-.end method
-
-.method public final r(Lgob;)V
-    .locals 1
-
-    iget-object v0, p0, Ligh;->a:Ljgh;
-
-    invoke-virtual {v0, p1}, Ljgh;->k(Lgob;)V
-
-    return-void
-.end method
-
-.method public final v(Lgob;)V
-    .locals 1
-
-    iget-object v0, p0, Ligh;->a:Ljgh;
-
-    invoke-virtual {v0, p1}, Ljgh;->k(Lgob;)V
-
-    return-void
+    return-object p1
 .end method

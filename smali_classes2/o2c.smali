@@ -1,89 +1,94 @@
 .class public final Lo2c;
-.super Ltz;
+.super Lpdg;
 .source "SourceFile"
+
+# interfaces
+.implements Lys6;
 
 
 # instance fields
-.field public final c:Ln8g;
+.field public final synthetic X:Lq2c;
 
-.field public d:Ley;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Li20;Ln8g;)V
+.method public constructor <init>(Lq2c;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Ltz;-><init>(Li20;)V
+    iput-object p1, p0, Lo2c;->X:Lq2c;
 
-    iput-object p2, p0, Lo2c;->c:Ln8g;
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()Ldxa;
-    .locals 5
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-super {p0}, Ltz;->b()Ldxa;
+    check-cast p1, Lr2c;
 
-    move-result-object v0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    if-eqz v0, :cond_0
+    invoke-virtual {p0, p1, p2}, Lo2c;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lo2c;
+
+    sget-object p2, Lmah;->a:Lmah;
+
+    invoke-virtual {p1, p2}, Lo2c;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lo2c;
+
+    iget-object v1, p0, Lo2c;->X:Lq2c;
+
+    invoke-direct {v0, v1, p2}, Lo2c;-><init>(Lq2c;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lo2c;->o:Ljava/lang/Object;
 
     return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget-object v0, p0, Lo2c;->o:Ljava/lang/Object;
+
+    check-cast v0, Lr2c;
+
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    sget-object p1, Lr2c;->a:Lr2c;
+
+    if-ne v0, p1, :cond_0
+
+    const-string p1, "allowed"
+
+    goto :goto_0
 
     :cond_0
-    new-instance v0, Lbtd;
+    const-string p1, "denied"
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    :goto_0
+    iget-object v0, p0, Lo2c;->X:Lq2c;
 
-    iget-object v1, p0, Lo2c;->d:Ley;
+    const-string v1, "microphone"
 
-    iput-object v1, v0, Lbtd;->a:Ljava/lang/Object;
+    invoke-static {v0, v1, p1}, Lq2c;->a(Lq2c;Ljava/lang/String;Ljava/lang/String;)V
 
-    if-eqz v1, :cond_1
+    sget-object p1, Lmah;->a:Lmah;
 
-    return-object v1
-
-    :cond_1
-    new-instance v1, Ley;
-
-    invoke-direct {v1}, Ley;-><init>()V
-
-    iput-object v1, p0, Lo2c;->d:Ley;
-
-    iput-object v1, v0, Lbtd;->a:Ljava/lang/Object;
-
-    iget-object v1, p0, Lo2c;->c:Ln8g;
-
-    invoke-virtual {v1}, Ln8g;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lji7;
-
-    iget-object v2, p0, Ltz;->a:Li20;
-
-    iget-object v2, v2, Li20;->b:Lw10;
-
-    sget-object v3, Lgm0;->o:Lgm0;
-
-    invoke-virtual {v2, v3}, Lw10;->b(Lgm0;)Ljava/lang/String;
-
-    move-result-object v2
-
-    new-instance v3, Le1b;
-
-    const/4 v4, 0x3
-
-    invoke-direct {v3, p0, v4, v0}, Le1b;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {v1, v2, v3}, Lji7;->a(Ljava/lang/String;Lii7;)V
-
-    iget-object v0, v0, Lbtd;->a:Ljava/lang/Object;
-
-    check-cast v0, Ldxa;
-
-    return-object v0
+    return-object p1
 .end method

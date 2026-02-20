@@ -1,201 +1,394 @@
 .class public final Lf89;
-.super Lr99;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:Lne9;
 
-.field public final b:Le89;
+.field public final b:J
+
+.field public final c:J
+
+.field public final d:J
+
+.field public final e:J
+
+.field public final f:Z
+
+.field public final g:Z
+
+.field public final h:Z
+
+.field public final i:Z
+
+.field public final j:Z
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Le89;)V
-    .locals 0
+.method public constructor <init>(Lne9;JJJJZZZZZ)V
+    .locals 7
+
+    move/from16 v0, p11
+
+    move/from16 v1, p12
+
+    move/from16 v2, p13
+
+    move/from16 v3, p14
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lf89;->a:Ljava/lang/String;
+    const/4 v4, 0x1
 
-    iput-object p2, p0, Lf89;->b:Le89;
+    const/4 v5, 0x0
+
+    if-eqz v3, :cond_1
+
+    if-eqz v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    move v6, v5
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    move v6, v4
+
+    :goto_1
+    invoke-static {v6}, Lxej;->b(Z)V
+
+    if-eqz v2, :cond_3
+
+    if-eqz v1, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    move v6, v5
+
+    goto :goto_3
+
+    :cond_3
+    :goto_2
+    move v6, v4
+
+    :goto_3
+    invoke-static {v6}, Lxej;->b(Z)V
+
+    if-eqz v0, :cond_5
+
+    if-nez v1, :cond_4
+
+    if-nez v2, :cond_4
+
+    if-nez v3, :cond_4
+
+    goto :goto_4
+
+    :cond_4
+    move v4, v5
+
+    :cond_5
+    :goto_4
+    invoke-static {v4}, Lxej;->b(Z)V
+
+    iput-object p1, p0, Lf89;->a:Lne9;
+
+    iput-wide p2, p0, Lf89;->b:J
+
+    iput-wide p4, p0, Lf89;->c:J
+
+    iput-wide p6, p0, Lf89;->d:J
+
+    move-wide p1, p8
+
+    iput-wide p1, p0, Lf89;->e:J
+
+    move/from16 p1, p10
+
+    iput-boolean p1, p0, Lf89;->f:Z
+
+    iput-boolean v0, p0, Lf89;->g:Z
+
+    iput-boolean v1, p0, Lf89;->h:Z
+
+    iput-boolean v2, p0, Lf89;->i:Z
+
+    iput-boolean v3, p0, Lf89;->j:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final f(I)V
-    .locals 6
+.method public final a(J)Lf89;
+    .locals 17
 
-    iget-object v0, p0, Lf89;->a:Ljava/lang/String;
+    move-object/from16 v0, p0
 
-    if-eqz v0, :cond_2
+    iget-wide v1, v0, Lf89;->c:J
 
-    iget-object v1, p0, Lf89;->b:Le89;
+    cmp-long v1, p1, v1
 
     if-nez v1, :cond_0
 
-    goto :goto_0
+    return-object v0
 
     :cond_0
-    iget-object v2, v1, Le89;->h:Landroid/os/Messenger;
+    new-instance v2, Lf89;
 
-    iget-object v3, v1, Le89;->g:Landroid/media/MediaRouter2$RoutingController;
+    iget-boolean v15, v0, Lf89;->i:Z
 
-    if-eqz v3, :cond_2
+    iget-boolean v1, v0, Lf89;->j:Z
 
-    invoke-static {v3}, Lc89;->v(Landroid/media/MediaRouter2$RoutingController;)Z
+    iget-object v3, v0, Lf89;->a:Lne9;
 
-    move-result v3
+    iget-wide v4, v0, Lf89;->b:J
 
-    if-nez v3, :cond_2
+    iget-wide v8, v0, Lf89;->d:J
 
-    if-nez v2, :cond_1
+    iget-wide v10, v0, Lf89;->e:J
 
-    goto :goto_0
+    iget-boolean v12, v0, Lf89;->f:Z
 
-    :cond_1
-    iget-object v3, v1, Le89;->l:Ljava/util/concurrent/atomic/AtomicInteger;
+    iget-boolean v13, v0, Lf89;->g:Z
 
-    invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+    iget-boolean v14, v0, Lf89;->h:Z
 
-    move-result v3
+    move-wide/from16 v6, p1
 
-    invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
+    move/from16 v16, v1
 
-    move-result-object v4
+    invoke-direct/range {v2 .. v16}, Lf89;-><init>(Lne9;JJJJZZZZZ)V
 
-    const/4 v5, 0x7
-
-    iput v5, v4, Landroid/os/Message;->what:I
-
-    iput v3, v4, Landroid/os/Message;->arg1:I
-
-    new-instance v3, Landroid/os/Bundle;
-
-    invoke-direct {v3}, Landroid/os/Bundle;-><init>()V
-
-    const-string v5, "volume"
-
-    invoke-virtual {v3, v5, p1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
-
-    const-string p1, "routeId"
-
-    invoke-virtual {v3, p1, v0}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {v4, v3}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
-
-    iget-object p1, v1, Le89;->i:Landroid/os/Messenger;
-
-    iput-object p1, v4, Landroid/os/Message;->replyTo:Landroid/os/Messenger;
-
-    :try_start_0
-    invoke-virtual {v2, v4}, Landroid/os/Messenger;->send(Landroid/os/Message;)V
-    :try_end_0
-    .catch Landroid/os/DeadObjectException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-void
-
-    :catch_0
-    move-exception p1
-
-    const-string v0, "MR2Provider"
-
-    const-string v1, "Could not send control request to service."
-
-    invoke-static {v0, v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    :catch_1
-    :cond_2
-    :goto_0
-    return-void
+    return-object v2
 .end method
 
-.method public final i(I)V
-    .locals 6
+.method public final b(J)Lf89;
+    .locals 17
 
-    iget-object v0, p0, Lf89;->a:Ljava/lang/String;
+    move-object/from16 v0, p0
 
-    if-eqz v0, :cond_2
+    iget-wide v1, v0, Lf89;->b:J
 
-    iget-object v1, p0, Lf89;->b:Le89;
+    cmp-long v1, p1, v1
 
     if-nez v1, :cond_0
 
-    goto :goto_0
+    return-object v0
 
     :cond_0
-    iget-object v2, v1, Le89;->h:Landroid/os/Messenger;
+    new-instance v2, Lf89;
 
-    iget-object v3, v1, Le89;->g:Landroid/media/MediaRouter2$RoutingController;
+    iget-boolean v15, v0, Lf89;->i:Z
 
-    if-eqz v3, :cond_2
+    iget-boolean v1, v0, Lf89;->j:Z
 
-    invoke-static {v3}, Lc89;->v(Landroid/media/MediaRouter2$RoutingController;)Z
+    iget-object v3, v0, Lf89;->a:Lne9;
 
-    move-result v3
+    iget-wide v6, v0, Lf89;->c:J
 
-    if-nez v3, :cond_2
+    iget-wide v8, v0, Lf89;->d:J
 
-    if-nez v2, :cond_1
+    iget-wide v10, v0, Lf89;->e:J
+
+    iget-boolean v12, v0, Lf89;->f:Z
+
+    iget-boolean v13, v0, Lf89;->g:Z
+
+    iget-boolean v14, v0, Lf89;->h:Z
+
+    move-wide/from16 v4, p1
+
+    move/from16 v16, v1
+
+    invoke-direct/range {v2 .. v16}, Lf89;-><init>(Lne9;JJJJZZZZZ)V
+
+    return-object v2
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 6
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    if-eqz p1, :cond_2
+
+    const-class v2, Lf89;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v3
+
+    if-eq v2, v3, :cond_1
 
     goto :goto_0
 
     :cond_1
-    iget-object v3, v1, Le89;->l:Ljava/util/concurrent/atomic/AtomicInteger;
+    check-cast p1, Lf89;
 
-    invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+    iget-wide v2, p0, Lf89;->b:J
 
-    move-result v3
+    iget-wide v4, p1, Lf89;->b:J
 
-    invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
+    cmp-long v2, v2, v4
 
-    move-result-object v4
+    if-nez v2, :cond_2
 
-    const/16 v5, 0x8
+    iget-wide v2, p0, Lf89;->c:J
 
-    iput v5, v4, Landroid/os/Message;->what:I
+    iget-wide v4, p1, Lf89;->c:J
 
-    iput v3, v4, Landroid/os/Message;->arg1:I
+    cmp-long v2, v2, v4
 
-    new-instance v3, Landroid/os/Bundle;
+    if-nez v2, :cond_2
 
-    invoke-direct {v3}, Landroid/os/Bundle;-><init>()V
+    iget-wide v2, p0, Lf89;->d:J
 
-    const-string v5, "volume"
+    iget-wide v4, p1, Lf89;->d:J
 
-    invoke-virtual {v3, v5, p1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+    cmp-long v2, v2, v4
 
-    const-string p1, "routeId"
+    if-nez v2, :cond_2
 
-    invoke-virtual {v3, p1, v0}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+    iget-wide v2, p0, Lf89;->e:J
 
-    invoke-virtual {v4, v3}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
+    iget-wide v4, p1, Lf89;->e:J
 
-    iget-object p1, v1, Le89;->i:Landroid/os/Messenger;
+    cmp-long v2, v2, v4
 
-    iput-object p1, v4, Landroid/os/Message;->replyTo:Landroid/os/Messenger;
+    if-nez v2, :cond_2
 
-    :try_start_0
-    invoke-virtual {v2, v4}, Landroid/os/Messenger;->send(Landroid/os/Message;)V
-    :try_end_0
-    .catch Landroid/os/DeadObjectException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+    iget-boolean v2, p0, Lf89;->f:Z
 
-    return-void
+    iget-boolean v3, p1, Lf89;->f:Z
 
-    :catch_0
-    move-exception p1
+    if-ne v2, v3, :cond_2
 
-    const-string v0, "MR2Provider"
+    iget-boolean v2, p0, Lf89;->g:Z
 
-    const-string v1, "Could not send control request to service."
+    iget-boolean v3, p1, Lf89;->g:Z
 
-    invoke-static {v0, v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    if-ne v2, v3, :cond_2
 
-    :catch_1
+    iget-boolean v2, p0, Lf89;->h:Z
+
+    iget-boolean v3, p1, Lf89;->h:Z
+
+    if-ne v2, v3, :cond_2
+
+    iget-boolean v2, p0, Lf89;->i:Z
+
+    iget-boolean v3, p1, Lf89;->i:Z
+
+    if-ne v2, v3, :cond_2
+
+    iget-boolean v2, p0, Lf89;->j:Z
+
+    iget-boolean v3, p1, Lf89;->j:Z
+
+    if-ne v2, v3, :cond_2
+
+    iget-object v2, p0, Lf89;->a:Lne9;
+
+    iget-object p1, p1, Lf89;->a:Lne9;
+
+    invoke-static {v2, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    return v0
+
     :cond_2
     :goto_0
-    return-void
+    return v1
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-object v0, p0, Lf89;->a:Lne9;
+
+    invoke-virtual {v0}, Lne9;->hashCode()I
+
+    move-result v0
+
+    add-int/lit16 v0, v0, 0x20f
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-wide v1, p0, Lf89;->b:J
+
+    long-to-int v1, v1
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-wide v1, p0, Lf89;->c:J
+
+    long-to-int v1, v1
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-wide v1, p0, Lf89;->d:J
+
+    long-to-int v1, v1
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-wide v1, p0, Lf89;->e:J
+
+    long-to-int v1, v1
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Lf89;->f:Z
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Lf89;->g:Z
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Lf89;->h:Z
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Lf89;->i:Z
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Lf89;->j:Z
+
+    add-int/2addr v0, v1
+
+    return v0
 .end method

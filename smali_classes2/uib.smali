@@ -1,175 +1,219 @@
-.class public abstract Luib;
+.class public final Luib;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/io/Closeable;
 
-# static fields
-.field public static final A:I
 
-.field public static final a:I
+# instance fields
+.field public final X:[Ljava/lang/Object;
 
-.field public static final b:I
+.field public final Y:Lbgg;
 
-.field public static final c:I
+.field public final Z:Ljp8;
 
-.field public static final d:I
+.field public final a:Landroid/content/Context;
 
-.field public static final e:I
+.field public final b:Ljava/lang/Class;
 
-.field public static final f:I
+.field public final c:Ljava/lang/String;
 
-.field public static final g:I
+.field public final d:Lncb;
 
-.field public static final h:I
+.field public final o:Liz5;
 
-.field public static final i:I
+.field public final s0:Lzbb;
 
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
-
-.field public static final s:I
-
-.field public static final t:I
-
-.field public static final u:I
-
-.field public static final v:I
-
-.field public static final w:I
-
-.field public static final x:I
-
-.field public static final y:I
-
-.field public static final z:I
+.field public final t0:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Landroid/content/Context;Ljp8;Lzbb;Lncb;Lj88;Lhih;Lcj8;Liz5;)V
+    .locals 2
 
-    sget v0, Lted;->oneme_settings_storage_action_one_month:I
+    const-string v0, "cache"
 
-    sput v0, Luib;->a:I
+    const-string v1, "db"
 
-    sget v0, Lted;->oneme_settings_storage_action_one_week:I
+    invoke-virtual {p7, v0, v1}, Lcj8;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    sput v0, Luib;->b:I
+    move-result-object p7
 
-    sget v0, Lted;->oneme_settings_storage_action_six_month:I
+    new-instance v0, Lqc3;
 
-    sput v0, Luib;->c:I
+    invoke-direct {v0, p3}, Lqc3;-><init>(Lzbb;)V
 
-    sget v0, Lted;->oneme_settings_storage_action_unlimited:I
+    new-instance v1, Lw6a;
 
-    sput v0, Luib;->d:I
+    invoke-direct {v1, p5}, Lw6a;-><init>(Lj88;)V
 
-    sget v0, Lted;->oneme_settings_storage_audio_messages:I
+    filled-new-array {v0, v1}, [Ljava/lang/Object;
 
-    sput v0, Luib;->e:I
+    move-result-object p5
 
-    sget v0, Lted;->oneme_settings_storage_clear_cache:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput v0, Luib;->f:I
+    iput-object p1, p0, Luib;->a:Landroid/content/Context;
 
-    sget v0, Lted;->oneme_settings_storage_clear_cache_dialog_action_clear:I
+    const-class p1, Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;
 
-    sput v0, Luib;->g:I
+    iput-object p1, p0, Luib;->b:Ljava/lang/Class;
 
-    sget v0, Lted;->oneme_settings_storage_clear_cache_dialog_all_title:I
+    iput-object p7, p0, Luib;->c:Ljava/lang/String;
 
-    sput v0, Luib;->h:I
+    iput-object p4, p0, Luib;->d:Lncb;
 
-    sget v0, Lted;->oneme_settings_storage_clear_cache_dialog_audio_title:I
+    iput-object p8, p0, Luib;->o:Liz5;
 
-    sput v0, Luib;->i:I
+    iput-object p5, p0, Luib;->X:[Ljava/lang/Object;
 
-    sget v0, Lted;->oneme_settings_storage_clear_cache_dialog_desc:I
+    new-instance p1, Lvj4;
 
-    sput v0, Luib;->j:I
+    const/4 p4, 0x1
 
-    sget v0, Lted;->oneme_settings_storage_clear_cache_dialog_files_title:I
+    invoke-direct {p1, p0, p4}, Lvj4;-><init>(Luib;I)V
 
-    sput v0, Luib;->k:I
+    new-instance p4, Lbgg;
 
-    sget v0, Lted;->oneme_settings_storage_clear_cache_dialog_gif_title:I
+    invoke-direct {p4, p1}, Lbgg;-><init>(Lis6;)V
 
-    sput v0, Luib;->l:I
+    iput-object p4, p0, Luib;->Y:Lbgg;
 
-    sget v0, Lted;->oneme_settings_storage_clear_cache_dialog_images_title:I
+    iput-object p2, p0, Luib;->Z:Ljp8;
 
-    sput v0, Luib;->m:I
+    iput-object p3, p0, Luib;->s0:Lzbb;
 
-    sget v0, Lted;->oneme_settings_storage_clear_cache_dialog_music_title:I
+    const-class p1, Luib;
 
-    sput v0, Luib;->n:I
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    sget v0, Lted;->oneme_settings_storage_clear_cache_dialog_stickers_title:I
+    move-result-object p1
 
-    sput v0, Luib;->o:I
+    iput-object p1, p0, Luib;->t0:Ljava/lang/String;
 
-    sget v0, Lted;->oneme_settings_storage_clear_cache_dialog_video_title:I
+    new-instance p1, Llp8;
 
-    sput v0, Luib;->p:I
+    new-instance p3, Lxwa;
 
-    sget v0, Lted;->oneme_settings_storage_clear_cache_success_snackbar:I
+    const/4 p4, 0x0
 
-    sput v0, Luib;->q:I
+    invoke-direct {p3, p0, p4}, Lxwa;-><init>(Luib;Lkotlin/coroutines/Continuation;)V
 
-    sget v0, Lted;->oneme_settings_storage_files:I
+    invoke-direct {p1, p6, p2, p3}, Llp8;-><init>(Lhih;Ljp8;Lks6;)V
 
-    sput v0, Luib;->r:I
-
-    sget v0, Lted;->oneme_settings_storage_gif:I
-
-    sput v0, Luib;->s:I
-
-    sget v0, Lted;->oneme_settings_storage_images:I
-
-    sput v0, Luib;->t:I
-
-    sget v0, Lted;->oneme_settings_storage_music:I
-
-    sput v0, Luib;->u:I
-
-    sget v0, Lted;->oneme_settings_storage_screen_data_section:I
-
-    sput v0, Luib;->v:I
-
-    sget v0, Lted;->oneme_settings_storage_screen_preserve_media_cache_desc:I
-
-    sput v0, Luib;->w:I
-
-    sget v0, Lted;->oneme_settings_storage_screen_preserve_media_cache_title:I
-
-    sput v0, Luib;->x:I
-
-    sget v0, Lted;->oneme_settings_storage_screen_toolbar_title:I
-
-    sput v0, Luib;->y:I
-
-    sget v0, Lted;->oneme_settings_storage_stickers:I
-
-    sput v0, Luib;->z:I
-
-    sget v0, Lted;->oneme_settings_storage_video:I
-
-    sput v0, Luib;->A:I
+    invoke-virtual {p1}, Llp8;->a()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final E()Lh2b;
+    .locals 3
+
+    new-instance v0, Lqx0;
+
+    const/16 v1, 0xa
+
+    invoke-direct {v0, v1, p0}, Lqx0;-><init>(ILjava/lang/Object;)V
+
+    new-instance v1, Lh2b;
+
+    const/4 v2, 0x4
+
+    invoke-direct {v1, v2, v0}, Lh2b;-><init>(ILjava/lang/Object;)V
+
+    return-object v1
+.end method
+
+.method public final close()V
+    .locals 4
+
+    iget-object v0, p0, Luib;->Y:Lbgg;
+
+    invoke-virtual {v0}, Lbgg;->e()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Luib;->Y:Lbgg;
+
+    invoke-virtual {v0}, Lbgg;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lm8e;
+
+    iget-object v0, v0, Lm8e;->g:Lcg5;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-object v1, v0, Lcg5;->c:Ljava/lang/Object;
+
+    check-cast v1, Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    invoke-virtual {v1, v2, v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+
+    move-result v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-nez v1, :cond_0
+
+    monitor-exit v0
+
+    return-void
+
+    :cond_0
+    monitor-exit v0
+
+    iget-object v1, v0, Lcg5;->b:Ljava/lang/Object;
+
+    check-cast v1, Ljava/util/concurrent/atomic/AtomicInteger;
+
+    :cond_1
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result v2
+
+    if-nez v2, :cond_1
+
+    iget-object v0, v0, Lcg5;->a:Ljava/lang/Object;
+
+    check-cast v0, Lr6b;
+
+    invoke-virtual {v0}, Lr6b;->invoke()Ljava/lang/Object;
+
+    return-void
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+
+    throw v1
+
+    :cond_2
+    return-void
+.end method
+
+.method public final l()Lm8e;
+    .locals 1
+
+    iget-object v0, p0, Luib;->Y:Lbgg;
+
+    invoke-virtual {v0}, Lbgg;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lm8e;
+
+    return-object v0
 .end method

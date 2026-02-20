@@ -1,113 +1,136 @@
 .class public final Lknc;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;
+.field public final a:Lj88;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final b:Lj88;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;)V
+.method public constructor <init>(Lj88;Lj88;)V
     .locals 0
 
-    iput-object p2, p0, Lknc;->X:Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    iput-object p1, p0, Lknc;->a:Lj88;
 
-    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lknc;->b:Lj88;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a(JZ)V
+    .locals 2
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lknc;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-static {p1, p2}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
     move-result-object p1
 
-    check-cast p1, Lknc;
+    new-instance p2, Lyvb;
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    const-string v0, "webappId"
 
-    invoke-virtual {p1, p2}, Lknc;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {p2, v0, p1}, Lyvb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    return-object p2
-.end method
+    filled-new-array {p2}, [Lyvb;
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    move-result-object p1
 
-    new-instance v0, Lknc;
+    invoke-static {p1}, Ljej;->a([Lyvb;)Lju;
 
-    iget-object v1, p0, Lknc;->X:Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;
+    move-result-object p1
 
-    invoke-direct {v0, p2, v1}, Lknc;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;)V
+    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    iput-object p1, v0, Lknc;->o:Ljava/lang/Object;
+    move-result-object p2
 
-    return-object v0
-.end method
+    new-instance p3, Lyvb;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+    const-string v0, "paramValue"
 
-    iget-object v0, p0, Lknc;->o:Ljava/lang/Object;
+    invoke-direct {p3, v0, p2}, Lyvb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    new-instance p2, Lyvb;
 
-    check-cast v0, Lxmc;
+    const-string v0, "paramAdditionally"
 
-    iget-object p1, p0, Lknc;->X:Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;
+    invoke-direct {p2, v0, p1}, Lyvb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    iget-object v1, p1, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->t0:Lfyd;
+    filled-new-array {p3, p2}, [Lyvb;
 
-    invoke-virtual {v1}, Lfyd;->e()Z
+    move-result-object p1
 
-    move-result v2
+    invoke-static {p1}, Ljej;->a([Lyvb;)Lju;
 
-    if-eqz v2, :cond_1
+    move-result-object p1
 
-    invoke-virtual {v1}, Lfyd;->getValue()Ljava/lang/Object;
+    iget-object p2, p0, Lknc;->a:Lj88;
 
-    move-result-object v1
+    invoke-interface {p2}, Lj88;->getValue()Ljava/lang/Object;
 
-    check-cast v1, Lone/me/sdk/uikit/common/button/OneMeButton;
+    move-result-object p2
 
-    iget-boolean v2, v0, Lxmc;->b:Z
+    check-cast p2, Lte;
 
-    if-eqz v2, :cond_0
+    iget-object p3, p0, Lknc;->b:Lj88;
 
-    const/4 v2, 0x0
+    invoke-interface {p3}, Lj88;->getValue()Ljava/lang/Object;
 
-    goto :goto_0
+    move-result-object v0
+
+    check-cast v0, Lug3;
+
+    check-cast v0, Lqme;
+
+    invoke-virtual {v0}, Lqme;->s()J
+
+    invoke-interface {p3}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object p3
+
+    check-cast p3, Lug3;
+
+    check-cast p3, Lhl8;
+
+    invoke-virtual {p3}, Lhl8;->O()J
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    const-string p3, "SETTINGS"
+
+    invoke-static {p3}, Ld7g;->G(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const-string v0, "MINIAPP_BIOMETRY"
+
+    invoke-static {v0}, Ld7g;->G(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/16 v1, 0x8
+
+    invoke-static {p2, p3, v0, p1, v1}, Lte;->d(Lte;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;I)V
+
+    return-void
 
     :cond_0
-    const/16 v2, 0x8
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    :goto_0
-    invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
+    const-string p2, "type or event can\'t be empty"
 
-    invoke-virtual {p1}, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->B0()V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    :cond_1
-    iget-object p1, p1, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->X:Lnf6;
-
-    iget-object v0, v0, Lxmc;->a:Ljava/util/List;
-
-    invoke-virtual {p1, v0}, Lnd8;->F(Ljava/util/List;)V
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
+    throw p1
 .end method

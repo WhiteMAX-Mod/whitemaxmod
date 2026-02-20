@@ -3,18 +3,22 @@
 
 
 # static fields
-.field public static call_notification_answer_action:I = 0x7f1301b0
+.field public static call_share_picker_confirm_p2p_invite_cancel:I = 0x7f0a01e7
 
-.field public static call_notification_answer_video_action:I = 0x7f1301b1
+.field public static call_share_picker_confirm_p2p_invite_retry:I = 0x7f0a01e8
 
-.field public static call_notification_decline_action:I = 0x7f1301b4
+.field public static call_share_picker_quote_view_progress:I = 0x7f0a01e9
 
-.field public static call_notification_hang_up_action:I = 0x7f1301b5
+.field public static call_share_picker_quote_view_title:I = 0x7f0a01ea
 
-.field public static call_notification_incoming_text:I = 0x7f1301b9
+.field public static oneme_message_input_right_outer_icon:I = 0x7f0a06f3
 
-.field public static call_notification_ongoing_text:I = 0x7f1301bc
+.field public static oneme_picker_media_keyboard_container:I = 0x7f0a0743
 
-.field public static call_notification_screening_text:I = 0x7f1301bd
+.field public static oneme_picker_quote_view:I = 0x7f0a0745
 
-.field public static status_bar_notification_info_overflow:I = 0x7f130d52
+.field public static oneme_picker_toolbar:I = 0x7f0a0746
+
+.field public static oneme_picker_toolbar_action_cancel_selection:I = 0x7f0a0747
+
+.field public static oneme_picker_toolbar_action_select:I = 0x7f0a0748

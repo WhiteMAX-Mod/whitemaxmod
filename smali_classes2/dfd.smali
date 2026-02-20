@@ -3,6 +3,4 @@
 
 
 # static fields
-.field public static email_intent_title:I = 0x7f130486
-
-.field public static faq_title:I = 0x7f1304e8
+.field public static dynamic_font_sizes:I = 0x7f0a0315

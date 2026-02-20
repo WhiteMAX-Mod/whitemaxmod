@@ -1,88 +1,141 @@
-.class public final Lvs9;
-.super Lp6g;
+.class public final enum Lvs9;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Lbr6;
+
+# static fields
+.field public static final enum X:Lvs9;
+
+.field public static final synthetic Y:[Lvs9;
+
+.field public static final enum b:Lvs9;
+
+.field public static final enum c:Lvs9;
+
+.field public static final enum d:Lvs9;
+
+.field public static final enum o:Lvs9;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/sdk/messagewrite/MessageWriteWidget;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/MessageWriteWidget;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 7
 
-    iput-object p2, p0, Lvs9;->X:Lone/me/sdk/messagewrite/MessageWriteWidget;
+    new-instance v0, Lvs9;
 
-    const/4 p2, 0x2
+    const-string v1, "UNKNOWN"
 
-    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2, v1}, Lvs9;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lvs9;->b:Lvs9;
+
+    new-instance v1, Lvs9;
+
+    const-string v2, "USER"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3, v2}, Lvs9;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v1, Lvs9;->c:Lvs9;
+
+    new-instance v2, Lvs9;
+
+    const-string v3, "GROUP"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4, v3}, Lvs9;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v2, Lvs9;->d:Lvs9;
+
+    new-instance v3, Lvs9;
+
+    const-string v4, "CHANNEL"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5, v4}, Lvs9;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v3, Lvs9;->o:Lvs9;
+
+    new-instance v4, Lvs9;
+
+    const-string v5, "CHANNEL_ADMIN"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v4, v5, v6, v5}, Lvs9;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v4, Lvs9;->X:Lvs9;
+
+    filled-new-array {v0, v1, v2, v3, v4}, [Lvs9;
+
+    move-result-object v0
+
+    sput-object v0, Lvs9;->Y:[Lvs9;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
     .locals 0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-virtual {p0, p1, p2}, Lvs9;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iput-object p3, p0, Lvs9;->a:Ljava/lang/String;
 
-    move-result-object p1
-
-    check-cast p1, Lvs9;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lvs9;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
+    return-void
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public static valueOf(Ljava/lang/String;)Lvs9;
+    .locals 1
 
-    new-instance v0, Lvs9;
+    const-class v0, Lvs9;
 
-    iget-object v1, p0, Lvs9;->X:Lone/me/sdk/messagewrite/MessageWriteWidget;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    invoke-direct {v0, p2, v1}, Lvs9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/MessageWriteWidget;)V
+    move-result-object p0
 
-    iput-object p1, v0, Lvs9;->o:Ljava/lang/Object;
+    check-cast p0, Lvs9;
+
+    return-object p0
+.end method
+
+.method public static values()[Lvs9;
+    .locals 1
+
+    sget-object v0, Lvs9;->Y:[Lvs9;
+
+    invoke-virtual {v0}, [Lvs9;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lvs9;
 
     return-object v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
 
-    iget-object v0, p0, Lvs9;->o:Ljava/lang/Object;
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    const-string v0, "{value=\'"
 
-    check-cast v0, Ljava/lang/Boolean;
+    const-string v1, "\'}"
 
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+    iget-object v2, p0, Lvs9;->a:Ljava/lang/String;
 
-    move-result p1
-
-    sget-object v0, Lone/me/sdk/messagewrite/MessageWriteWidget;->M0:[Lz28;
-
-    iget-object v0, p0, Lvs9;->X:Lone/me/sdk/messagewrite/MessageWriteWidget;
-
-    invoke-virtual {v0}, Lone/me/sdk/messagewrite/MessageWriteWidget;->E0()Leo9;
+    invoke-static {v0, v2, v1}, Ltx8;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Leo9;->setVideoMessageEnabled(Z)V
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
+    return-object v0
 .end method

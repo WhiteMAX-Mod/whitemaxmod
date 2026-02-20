@@ -1,129 +1,80 @@
-.class public abstract Lmoj;
+.class public final Lmoj;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Loza;
+
+
+# static fields
+.field public static final a:Lmoj;
+
 
 # direct methods
-.method public static final a(Luhe;Lw33;)Z
-    .locals 4
+.method static constructor <clinit>()V
+    .locals 3
 
-    instance-of v0, p1, Lv33;
+    new-instance v0, Lmoj;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lmoj;->a:Lmoj;
+
+    new-instance v0, Lp7j;
 
     const/4 v1, 0x1
 
-    if-eqz v0, :cond_0
+    invoke-direct {v0, v1}, Lp7j;-><init>(I)V
 
-    return v1
+    const-class v1, Lh8j;
 
-    :cond_0
-    instance-of v0, p1, Lu33;
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
 
-    if-eqz v0, :cond_3
+    move-result-object v0
 
-    iget v0, p0, Luhe;->a:I
+    const/4 v2, 0x2
 
-    if-ne v0, v1, :cond_2
+    invoke-static {v0, v2}, Leni;->i(Ljava/util/HashMap;I)Lp7j;
 
-    check-cast p1, Lu33;
+    move-result-object v0
 
-    iget-object p1, p1, Lu33;->a:Ljava/util/Set;
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
 
-    iget-object p0, p0, Luhe;->d:Lnd2;
+    move-result-object v0
 
-    if-eqz p0, :cond_1
+    const/4 v2, 0x3
 
-    iget-wide v2, p0, Lnd2;->a:J
+    invoke-static {v0, v2}, Leni;->i(Ljava/util/HashMap;I)Lp7j;
 
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    move-result-object v0
 
-    move-result-object p0
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
 
-    goto :goto_0
+    move-result-object v0
 
-    :cond_1
-    const/4 p0, 0x0
+    const/4 v2, 0x4
 
-    :goto_0
-    invoke-static {p1, p0}, Lpi3;->x(Ljava/lang/Iterable;Ljava/lang/Object;)Z
+    invoke-static {v0, v2}, Leni;->i(Ljava/util/HashMap;I)Lp7j;
 
-    move-result p0
+    move-result-object v0
 
-    if-eqz p0, :cond_2
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
 
-    return v1
+    move-result-object v0
 
-    :cond_2
-    const/4 p0, 0x0
+    invoke-static {v0}, Leni;->m(Ljava/util/HashMap;)V
 
-    return p0
-
-    :cond_3
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p0
+    return-void
 .end method
 
-.method public static b()Ljava/util/Set;
-    .locals 3
 
-    :try_start_0
-    const-string v0, "android.text.EmojiConsistency"
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+    invoke-static {p1}, Lkb0;->d(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    move-result-object v0
+    move-result-object p1
 
-    const-string v1, "getEmojiConsistencySet"
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2, v2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    sget-object v0, Ljava/util/Collections;->EMPTY_SET:Ljava/util/Set;
-
-    return-object v0
-
-    :cond_0
-    check-cast v0, Ljava/util/Set;
-
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :cond_1
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    instance-of v2, v2, [I
-
-    if-nez v2, :cond_1
-
-    sget-object v0, Ljava/util/Collections;->EMPTY_SET:Ljava/util/Set;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :cond_2
-    return-object v0
-
-    :catchall_0
-    sget-object v0, Ljava/util/Collections;->EMPTY_SET:Ljava/util/Set;
-
-    return-object v0
+    throw p1
 .end method

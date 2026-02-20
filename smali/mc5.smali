@@ -1,167 +1,157 @@
-.class public abstract Lmc5;
-.super Ljava/lang/Object;
+.class public final enum Lmc5;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:I
+.field public static final enum X:Lmc5;
 
-.field public static final b:I
+.field public static final enum Y:Lmc5;
+
+.field public static final synthetic Z:[Lmc5;
+
+.field public static final enum b:Lmc5;
+
+.field public static final enum c:Lmc5;
+
+.field public static final enum d:Lmc5;
+
+.field public static final enum o:Lmc5;
+
+
+# instance fields
+.field public final a:Ljava/util/concurrent/TimeUnit;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 10
 
-    const/16 v0, 0xe6
+    new-instance v0, Lmc5;
 
-    const/16 v1, 0xff
+    const/4 v1, 0x0
 
-    invoke-static {v0, v1, v1, v1}, Landroid/graphics/Color;->argb(IIII)I
+    sget-object v2, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
 
-    move-result v0
+    const-string v3, "NANOSECONDS"
 
-    sput v0, Lmc5;->a:I
+    invoke-direct {v0, v3, v1, v2}, Lmc5;-><init>(Ljava/lang/String;ILjava/util/concurrent/TimeUnit;)V
 
-    const/16 v0, 0x80
+    sput-object v0, Lmc5;->b:Lmc5;
 
-    const/16 v1, 0x1b
+    new-instance v1, Lmc5;
 
-    invoke-static {v0, v1, v1, v1}, Landroid/graphics/Color;->argb(IIII)I
+    const/4 v2, 0x1
 
-    move-result v0
+    sget-object v3, Ljava/util/concurrent/TimeUnit;->MICROSECONDS:Ljava/util/concurrent/TimeUnit;
 
-    sput v0, Lmc5;->b:I
+    const-string v4, "MICROSECONDS"
+
+    invoke-direct {v1, v4, v2, v3}, Lmc5;-><init>(Ljava/lang/String;ILjava/util/concurrent/TimeUnit;)V
+
+    new-instance v2, Lmc5;
+
+    const/4 v3, 0x2
+
+    sget-object v4, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+
+    const-string v5, "MILLISECONDS"
+
+    invoke-direct {v2, v5, v3, v4}, Lmc5;-><init>(Ljava/lang/String;ILjava/util/concurrent/TimeUnit;)V
+
+    sput-object v2, Lmc5;->c:Lmc5;
+
+    new-instance v3, Lmc5;
+
+    const/4 v4, 0x3
+
+    sget-object v5, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+
+    const-string v6, "SECONDS"
+
+    invoke-direct {v3, v6, v4, v5}, Lmc5;-><init>(Ljava/lang/String;ILjava/util/concurrent/TimeUnit;)V
+
+    sput-object v3, Lmc5;->d:Lmc5;
+
+    new-instance v4, Lmc5;
+
+    const/4 v5, 0x4
+
+    sget-object v6, Ljava/util/concurrent/TimeUnit;->MINUTES:Ljava/util/concurrent/TimeUnit;
+
+    const-string v7, "MINUTES"
+
+    invoke-direct {v4, v7, v5, v6}, Lmc5;-><init>(Ljava/lang/String;ILjava/util/concurrent/TimeUnit;)V
+
+    sput-object v4, Lmc5;->o:Lmc5;
+
+    new-instance v5, Lmc5;
+
+    const/4 v6, 0x5
+
+    sget-object v7, Ljava/util/concurrent/TimeUnit;->HOURS:Ljava/util/concurrent/TimeUnit;
+
+    const-string v8, "HOURS"
+
+    invoke-direct {v5, v8, v6, v7}, Lmc5;-><init>(Ljava/lang/String;ILjava/util/concurrent/TimeUnit;)V
+
+    sput-object v5, Lmc5;->X:Lmc5;
+
+    new-instance v6, Lmc5;
+
+    const/4 v7, 0x6
+
+    sget-object v8, Ljava/util/concurrent/TimeUnit;->DAYS:Ljava/util/concurrent/TimeUnit;
+
+    const-string v9, "DAYS"
+
+    invoke-direct {v6, v9, v7, v8}, Lmc5;-><init>(Ljava/lang/String;ILjava/util/concurrent/TimeUnit;)V
+
+    sput-object v6, Lmc5;->Y:Lmc5;
+
+    filled-new-array/range {v0 .. v6}, [Lmc5;
+
+    move-result-object v0
+
+    sput-object v0, Lmc5;->Z:[Lmc5;
 
     return-void
 .end method
 
-.method public static a(Ly5;)V
-    .locals 8
+.method public constructor <init>(Ljava/lang/String;ILjava/util/concurrent/TimeUnit;)V
+    .locals 0
 
-    new-instance v1, Lr8g;
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    const/4 v0, 0x0
+    iput-object p3, p0, Lmc5;->a:Ljava/util/concurrent/TimeUnit;
 
-    invoke-direct {v1, v0, v0}, Lr8g;-><init>(II)V
+    return-void
+.end method
 
-    new-instance v2, Lr8g;
+.method public static valueOf(Ljava/lang/String;)Lmc5;
+    .locals 1
 
-    sget v3, Lmc5;->a:I
+    const-class v0, Lmc5;
 
-    sget v4, Lmc5;->b:I
-
-    invoke-direct {v2, v3, v4}, Lr8g;-><init>(II)V
-
-    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/view/Window;->getDecorView()Landroid/view/View;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/content/res/Configuration;->uiMode:I
-
-    and-int/lit8 v3, v3, 0x30
-
-    const/4 v5, 0x1
-
-    const/16 v6, 0x20
-
-    if-ne v3, v6, :cond_0
-
-    move v3, v5
-
-    goto :goto_0
-
-    :cond_0
-    move v3, v5
-
-    move v5, v0
-
-    :goto_0
-    invoke-virtual {v4}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
-
-    move-result-object v7
-
-    iget v7, v7, Landroid/content/res/Configuration;->uiMode:I
-
-    and-int/lit8 v7, v7, 0x30
-
-    if-ne v7, v6, :cond_1
-
-    move v6, v3
-
-    goto :goto_1
-
-    :cond_1
-    move v6, v0
-
-    :goto_1
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v3, 0x1e
-
-    if-lt v0, v3, :cond_2
-
-    new-instance v0, Lqc5;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    goto :goto_2
-
-    :cond_2
-    const/16 v3, 0x1d
-
-    if-lt v0, v3, :cond_3
-
-    new-instance v0, Lpc5;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    goto :goto_2
-
-    :cond_3
-    const/16 v3, 0x1c
-
-    if-lt v0, v3, :cond_4
-
-    new-instance v0, Loc5;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    goto :goto_2
-
-    :cond_4
-    new-instance v0, Lnc5;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    :goto_2
-    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
-
-    move-result-object v3
-
-    invoke-virtual/range {v0 .. v6}, Lnc5;->b(Lr8g;Lr8g;Landroid/view/Window;Landroid/view/View;ZZ)V
-
-    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object p0
 
-    invoke-virtual {v0, p0}, Lnc5;->a(Landroid/view/Window;)V
+    check-cast p0, Lmc5;
 
-    return-void
+    return-object p0
+.end method
+
+.method public static values()[Lmc5;
+    .locals 1
+
+    sget-object v0, Lmc5;->Z:[Lmc5;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lmc5;
+
+    return-object v0
 .end method

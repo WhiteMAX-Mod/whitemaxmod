@@ -1,74 +1,242 @@
 .class public final Lel4;
-.super Lhl4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final n(Lei5;)I
-    .locals 0
+# static fields
+.field public static final d:Ljava/util/regex/Pattern;
 
-    invoke-virtual {p1}, Lei5;->g0()I
+.field public static final e:Ljava/util/regex/Pattern;
+
+.field public static final f:Ljava/util/ArrayList;
+
+
+# instance fields
+.field public final a:Ljava/lang/String;
+
+.field public b:Ljava/util/ArrayList;
+
+.field public c:Ljava/util/ArrayList;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    const-string v0, "\\|[^\\|]*\\|"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Lel4;->d:Ljava/util/regex/Pattern;
+
+    const-string v0, "f{1,9}"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Lel4;->e:Ljava/util/regex/Pattern;
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    sput-object v0, Lel4;->f:Ljava/util/ArrayList;
+
+    const-string v1, "YYYY"
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    const-string v1, "YY"
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    const-string v1, "MMMM"
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    const-string v1, "MMM"
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    const-string v1, "MM"
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    const-string v1, "M"
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    const-string v1, "DD"
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    const-string v1, "D"
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    const-string v1, "WWWW"
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    const-string v1, "WWW"
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    const-string v1, "hh12"
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    const-string v1, "h12"
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    const-string v1, "hh"
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    const-string v1, "h"
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    const-string v1, "mm"
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    const-string v1, "m"
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    const-string v1, "ss"
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    const-string v1, "s"
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    const-string v1, "a"
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    const-string v1, "fffffffff"
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    const-string v1, "ffffffff"
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    const-string v1, "fffffff"
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    const-string v1, "ffffff"
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    const-string v1, "fffff"
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    const-string v1, "ffff"
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    const-string v1, "fff"
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    const-string v1, "ff"
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    const-string v1, "f"
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Ljava/util/LinkedHashMap;
+
+    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
+
+    new-instance v0, Ljava/util/LinkedHashMap;
+
+    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
+
+    new-instance v0, Ljava/util/LinkedHashMap;
+
+    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
+
+    iput-object p1, p0, Lel4;->a:Ljava/lang/String;
+
+    invoke-static {p1}, Lncj;->h(Ljava/lang/String;)Z
 
     move-result p1
 
-    return p1
+    if-eqz p1, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "DateTime format has no content."
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
-.method public final o()Lqk7;
+.method public static a(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
-    new-instance v0, Lqk7;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v1, 0x0
-
-    iput v1, v0, Lqk7;->a:I
-
-    iput-boolean v1, v0, Lqk7;->b:Z
-
-    iput-boolean v1, v0, Lqk7;->c:Z
-
-    return-object v0
-.end method
-
-.method public final declared-synchronized s(Lei5;I)Z
-    .locals 1
-
-    monitor-enter p0
-
-    :try_start_0
-    invoke-static {p2}, Lzj0;->b(I)Z
+    invoke-static {p0}, Lncj;->h(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    const/4 p1, 0x0
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
 
-    goto :goto_0
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-ne v0, v1, :cond_0
+
+    const-string v0, "0"
+
+    invoke-virtual {v0, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
 
     :cond_0
-    iget-object v0, p0, Lhl4;->g:Ljy7;
+    return-object p0
+.end method
 
-    invoke-virtual {v0, p1, p2}, Ljy7;->e(Lei5;I)Z
+.method public static b(Ljava/lang/Object;)Ljava/lang/String;
+    .locals 0
 
-    move-result p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    if-eqz p0, :cond_0
 
-    :goto_0
-    monitor-exit p0
+    invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    return p1
+    move-result-object p0
 
-    :catchall_0
-    move-exception p1
+    return-object p0
 
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    :cond_0
+    const-string p0, ""
 
-    throw p1
+    return-object p0
 .end method

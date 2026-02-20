@@ -1,66 +1,156 @@
-.class public final synthetic Ldh1;
+.class public final Ldh1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnLongClickListener;
+.implements Lfh1;
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static final a:Ldh1;
+
+.field public static final b:J
+
+.field public static final c:Lcpg;
+
+.field public static final d:Lr88;
+
+.field public static final o:Lv7f;
 
 
 # direct methods
-.method public synthetic constructor <init>()V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 4
 
-    .line 1
-    const/4 v0, 0x0
+    new-instance v0, Ldh1;
 
-    iput v0, p0, Ldh1;->a:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Ldh1;->a:Ldh1;
 
-    return-void
-.end method
+    sget-wide v0, Lj8b;->d:J
 
-.method public synthetic constructor <init>(Ll7e;Liz6;Lte2;)V
-    .locals 0
+    sput-wide v0, Ldh1;->b:J
 
-    .line 2
-    const/4 p1, 0x1
+    sget v0, Lwce;->B2:I
 
-    iput p1, p0, Ldh1;->a:I
+    new-instance v1, Lcpg;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v1, v0}, Lcpg;-><init>(I)V
+
+    sput-object v1, Ldh1;->c:Lcpg;
+
+    new-instance v0, Lr88;
+
+    sget v1, Lh8b;->i:I
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x6
+
+    invoke-direct {v0, v1, v2, v3}, Lr88;-><init>(III)V
+
+    sput-object v0, Ldh1;->d:Lr88;
+
+    sget-object v0, Lv7f;->a:Lv7f;
+
+    sput-object v0, Ldh1;->o:Lv7f;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onLongClick(Landroid/view/View;)Z
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget p1, p0, Ldh1;->a:I
+    const/4 v0, 0x1
 
-    packed-switch p1, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    const/4 p1, 0x1
+    return v0
 
-    return p1
+    :cond_0
+    instance-of p1, p1, Ldh1;
 
-    :pswitch_0
-    sget-object p1, Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;->B0:Lyna;
+    if-nez p1, :cond_1
 
     const/4 p1, 0x0
 
     return p1
 
-    nop
+    :cond_1
+    return v0
+.end method
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+.method public final f()Lt88;
+    .locals 1
+
+    sget-object v0, Ldh1;->d:Lr88;
+
+    return-object v0
+.end method
+
+.method public final getItemId()J
+    .locals 2
+
+    sget-wide v0, Ldh1;->b:J
+
+    return-wide v0
+.end method
+
+.method public final getTitle()Lhpg;
+    .locals 1
+
+    sget-object v0, Ldh1;->c:Lcpg;
+
+    return-object v0
+.end method
+
+.method public final getType()Lv7f;
+    .locals 1
+
+    sget-object v0, Ldh1;->o:Lv7f;
+
+    return-object v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, 0x1f0af277
+
+    return v0
+.end method
+
+.method public final m()I
+    .locals 1
+
+    sget v0, Li8b;->m:I
+
+    return v0
+.end method
+
+.method public final t()I
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "SendToChat"
+
+    return-object v0
+.end method
+
+.method public final u()I
+    .locals 1
+
+    const/4 v0, 0x2
+
+    return v0
 .end method

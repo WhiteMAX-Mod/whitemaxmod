@@ -1,73 +1,137 @@
-.class public final enum Lf9a;
-.super Ljava/lang/Enum;
+.class public final synthetic Lf9a;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lis6;
 
-# static fields
-.field public static final enum a:Lf9a;
 
-.field public static final enum b:Lf9a;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final synthetic c:[Lf9a;
+.field public final synthetic b:Lyl0;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public synthetic constructor <init>(Lnd4;Lyl0;)V
+    .locals 0
 
-    new-instance v0, Lf9a;
+    .line 2
+    const/4 p1, 0x1
 
-    const-string v1, "MOVIE"
+    iput p1, p0, Lf9a;->a:I
 
-    const/4 v2, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lf9a;->a:Lf9a;
-
-    new-instance v1, Lf9a;
-
-    const-string v2, "STREAM"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lf9a;->b:Lf9a;
-
-    filled-new-array {v0, v1}, [Lf9a;
-
-    move-result-object v0
-
-    sput-object v0, Lf9a;->c:[Lf9a;
+    iput-object p2, p0, Lf9a;->b:Lyl0;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lf9a;
+.method public synthetic constructor <init>(Lyl0;)V
     .locals 1
 
-    const-class v0, Lf9a;
+    .line 1
+    const/4 v0, 0x0
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iput v0, p0, Lf9a;->a:I
 
-    move-result-object p0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    check-cast p0, Lf9a;
+    iput-object p1, p0, Lf9a;->b:Lyl0;
 
-    return-object p0
+    return-void
 .end method
 
-.method public static values()[Lf9a;
-    .locals 1
 
-    sget-object v0, Lf9a;->c:[Lf9a;
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 2
 
-    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+    iget v0, p0, Lf9a;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lf9a;->b:Lyl0;
+
+    :try_start_0
+    invoke-virtual {v0}, Lyl0;->m()Lz00;
 
     move-result-object v0
 
-    check-cast v0, [Lf9a;
+    iget-object v1, v0, Lz00;->c:Ljava/io/File;
+
+    invoke-virtual {v1}, Ljava/io/File;->delete()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, v0, Lz00;->d:Ljava/io/File;
+
+    invoke-virtual {v1}, Ljava/io/File;->delete()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    iget-object v0, v0, Lz00;->e:Ljava/io/File;
+
+    invoke-virtual {v0}, Ljava/io/File;->delete()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception v0
+
+    new-instance v1, Lc6e;
+
+    invoke-direct {v1, v0}, Lc6e;-><init>(Ljava/lang/Throwable;)V
+
+    move-object v0, v1
+
+    :goto_1
+    new-instance v1, Le6e;
+
+    invoke-direct {v1, v0}, Le6e;-><init>(Ljava/lang/Object;)V
+
+    return-object v1
+
+    :pswitch_0
+    iget-object v0, p0, Lf9a;->b:Lyl0;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

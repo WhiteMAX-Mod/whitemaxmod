@@ -18,7 +18,7 @@
         "Lru/ok/android/externcalls/sdk/sessionroom/admin/AssignParticipantsToRoomsParams;",
         "",
         "",
-        "Lmue;",
+        "Lv1f;",
         "",
         "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
         "Lru/ok/android/externcalls/sdk/id/ExternalId;",
@@ -48,7 +48,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
-            "Lmue;",
+            "Lv1f;",
             "Ljava/util/List<",
             "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
             ">;>;"
@@ -60,7 +60,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
-            "Lmue;",
+            "Lv1f;",
             "Ljava/util/List<",
             "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
             ">;>;"
@@ -76,13 +76,13 @@
         value = {
             "(",
             "Ljava/util/Map<",
-            "Lmue;",
+            "Lv1f;",
             "+",
             "Ljava/util/List<",
             "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
             ">;>;",
             "Ljava/util/Map<",
-            "Lmue;",
+            "Lv1f;",
             "+",
             "Ljava/util/List<",
             "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
@@ -102,7 +102,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/util/Map;Ljava/util/Map;Lso4;)V
+.method public synthetic constructor <init>(Ljava/util/Map;Ljava/util/Map;Lfq4;)V
     .locals 0
 
     .line 1
@@ -119,7 +119,7 @@
         value = {
             "()",
             "Ljava/util/Map<",
-            "Lmue;",
+            "Lv1f;",
             "Ljava/util/List<",
             "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
             ">;>;"
@@ -137,7 +137,7 @@
         value = {
             "()",
             "Ljava/util/Map<",
-            "Lmue;",
+            "Lv1f;",
             "Ljava/util/List<",
             "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
             ">;>;"

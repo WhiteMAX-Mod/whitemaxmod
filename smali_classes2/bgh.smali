@@ -1,101 +1,130 @@
-.class public final synthetic Lbgh;
-.super Ljava/lang/Object;
+.class public final Lbgh;
+.super Lc1c;
 .source "SourceFile"
-
-# interfaces
-.implements Lay3;
-.implements Lcr6;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lufh;
+.field public final h:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lufh;I)V
+.method public constructor <init>(Lu0c;)V
     .locals 0
 
-    iput p2, p0, Lbgh;->a:I
+    invoke-direct {p0, p1}, Lc1c;-><init>(Lu0c;)V
 
-    iput-object p1, p0, Lbgh;->b:Lufh;
+    const-string p1, "upload"
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lbgh;->h:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public accept(Ljava/lang/Object;)V
-    .locals 3
+.method public final i()Ljava/lang/String;
+    .locals 1
 
-    iget v0, p0, Lbgh;->a:I
+    iget-object v0, p0, Lbgh;->h:Ljava/lang/String;
 
-    iget-object v1, p0, Lbgh;->b:Lufh;
-
-    check-cast p1, Ljava/lang/Throwable;
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object p1, v1, Lufh;->d:Ljava/lang/String;
-
-    invoke-static {p1}, Lyna;->v(Ljava/lang/String;)V
-
-    return-void
-
-    :pswitch_0
-    sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v2, "putConversionInRepository: failed, videoConversion="
-
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "dgh"
-
-    invoke-static {v1, v0, p1}, Lc5j;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method
 
-.method public apply(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final n()Lcia;
     .locals 4
 
-    check-cast p1, Lyfh;
-
-    iget-object v0, p0, Lbgh;->b:Lufh;
-
-    invoke-static {v0}, Lc5j;->m(Lufh;)Lxfh;
+    invoke-virtual {p0}, Lc1c;->j()Lh1c;
 
     move-result-object v0
 
-    iget-object v1, p1, Lyfh;->a:Lb2e;
+    invoke-virtual {v0}, Lh1c;->a()B
 
-    new-instance v2, Lk1e;
+    move-result v0
 
-    const/16 v3, 0x13
+    invoke-static {v0}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
-    invoke-direct {v2, p1, v3, v0}, Lk1e;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    move-result-object v0
 
-    invoke-static {v1, v2}, Lmnj;->a(Lb2e;Lnq6;)Leo3;
+    invoke-virtual {p0}, Lc1c;->j()Lh1c;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lh1c;->b()I
+
+    move-result v1
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    new-instance v2, Lcia;
+
+    const/4 v3, 0x2
+
+    invoke-direct {v2, v3}, Lcia;-><init>(I)V
+
+    const-string v3, "class"
+
+    invoke-virtual {v2, v3, v0}, Lcia;->j(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    const-string v0, "connection_type"
+
+    invoke-virtual {v2, v0, v1}, Lcia;->j(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    return-object v2
+.end method
+
+.method public final r(IJLjava/lang/String;Z)V
+    .locals 8
+
+    sget-object v0, Ltge;->a:[J
+
+    new-instance v6, Lcia;
+
+    invoke-direct {v6}, Lcia;-><init>()V
+
+    const-string v0, "upload_size"
+
+    invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p2
+
+    invoke-virtual {v6, v0, p2}, Lcia;->j(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    const-string p2, "quality"
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
-    return-object p1
+    invoke-virtual {v6, p2, p1}, Lcia;->j(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    if-eqz p5, :cond_0
+
+    const/4 p1, 0x1
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    const-string p2, "warm_convert"
+
+    invoke-virtual {v6, p2, p1}, Lcia;->j(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    :cond_0
+    const/16 v7, 0x58
+
+    const-string v2, "converted"
+
+    const/4 v3, 0x0
+
+    const/4 v5, 0x0
+
+    move-object v1, p0
+
+    move-object v4, p4
+
+    invoke-static/range {v1 .. v7}, Lc1c;->c(Lc1c;Ljava/lang/String;ILjava/lang/String;Ljava/lang/Long;Lcia;I)V
+
+    return-void
 .end method

@@ -1,62 +1,107 @@
-.class public final synthetic Lzw0;
-.super Lqr6;
+.class public final Lzw0;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lbr6;
 
 
 # static fields
-.field public static final a:Lzw0;
+.field public static final c:[I
+
+.field public static final d:[I
+
+
+# instance fields
+.field public final a:Ljava/util/concurrent/atomic/AtomicReferenceArray;
+
+.field public final b:Ljava/util/concurrent/atomic/AtomicReferenceArray;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 6
+    .locals 2
 
-    new-instance v0, Lzw0;
+    const/16 v0, 0x1f40
 
-    const-string v4, "createSegment(JLkotlinx/coroutines/channels/ChannelSegment;)Lkotlinx/coroutines/channels/ChannelSegment;"
+    const/16 v1, 0x7d0
 
-    const/4 v5, 0x1
+    filled-new-array {v0, v0, v1, v1}, [I
 
-    const/4 v1, 0x2
+    move-result-object v0
 
-    const-class v2, Lax0;
+    sput-object v0, Lzw0;->c:[I
 
-    const-string v3, "createSegment"
+    const/16 v0, 0xfa0
 
-    invoke-direct/range {v0 .. v5}, Lqr6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    const/16 v1, 0xc8
 
-    sput-object v0, Lzw0;->a:Lzw0;
+    filled-new-array {v0, v0, v1, v1}, [I
+
+    move-result-object v0
+
+    sput-object v0, Lzw0;->d:[I
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicReferenceArray;
+
+    const/4 v1, 0x4
+
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicReferenceArray;-><init>(I)V
+
+    iput-object v0, p0, Lzw0;->a:Ljava/util/concurrent/atomic/AtomicReferenceArray;
+
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicReferenceArray;
+
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicReferenceArray;-><init>(I)V
+
+    iput-object v0, p0, Lzw0;->b:Ljava/util/concurrent/atomic/AtomicReferenceArray;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+.method public final a(II)[C
+    .locals 2
 
-    check-cast p1, Ljava/lang/Number;
+    sget-object v0, Lzw0;->d:[I
 
-    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
+    aget v0, v0, p1
 
-    move-result-wide v1
+    if-ge p2, v0, :cond_0
 
-    move-object v3, p2
+    move p2, v0
 
-    check-cast v3, Lmc2;
+    :cond_0
+    iget-object v0, p0, Lzw0;->b:Ljava/util/concurrent/atomic/AtomicReferenceArray;
 
-    sget-object p1, Lax0;->a:Lmc2;
+    const/4 v1, 0x0
 
-    new-instance v0, Lmc2;
+    invoke-virtual {v0, p1, v1}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->getAndSet(ILjava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v4, v3, Lmc2;->a:Lyw0;
+    move-result-object p1
 
-    const/4 v5, 0x0
+    check-cast p1, [C
 
-    invoke-direct/range {v0 .. v5}, Lmc2;-><init>(JLmc2;Lyw0;I)V
+    if-eqz p1, :cond_2
 
-    return-object v0
+    array-length v0, p1
+
+    if-ge v0, p2, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    return-object p1
+
+    :cond_2
+    :goto_0
+    new-array p1, p2, [C
+
+    return-object p1
 .end method

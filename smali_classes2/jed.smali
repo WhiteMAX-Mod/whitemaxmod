@@ -3,132 +3,110 @@
 
 
 # static fields
-.field public static permission_fsi_request:I = 0x7f130aae
+.field public static oneme_login_conductor:I = 0x7f0a0694
 
-.field public static permission_fsi_request_rationale:I = 0x7f130aaf
+.field public static oneme_login_confirm_description:I = 0x7f0a0695
 
-.field public static permissions_allow_access:I = 0x7f130ab0
+.field public static oneme_login_confirm_resend_code:I = 0x7f0a0696
 
-.field public static permissions_audio_denied_title:I = 0x7f130ab1
+.field public static oneme_login_confirm_sms_input:I = 0x7f0a0697
 
-.field public static permissions_audio_for_video_not_granted:I = 0x7f130ab2
+.field public static oneme_login_confirm_timer:I = 0x7f0a0698
 
-.field public static permissions_audio_for_video_request:I = 0x7f130ab3
+.field public static oneme_login_confirm_title:I = 0x7f0a0699
 
-.field public static permissions_audio_for_video_request_denied:I = 0x7f130ab4
+.field public static oneme_login_input_constraint_layout:I = 0x7f0a069b
 
-.field public static permissions_audio_not_granted:I = 0x7f130ab5
+.field public static oneme_login_input_continue_button:I = 0x7f0a069c
 
-.field public static permissions_audio_request:I = 0x7f130ab6
+.field public static oneme_login_input_description:I = 0x7f0a069d
 
-.field public static permissions_audio_request_denied:I = 0x7f130ab7
+.field public static oneme_login_input_gradient_bg:I = 0x7f0a06a0
 
-.field public static permissions_audio_title:I = 0x7f130ab8
+.field public static oneme_login_input_help_button:I = 0x7f0a06a1
 
-.field public static permissions_background_location_denied:I = 0x7f130ab9
+.field public static oneme_login_input_input_description:I = 0x7f0a06a2
 
-.field public static permissions_calls_audio:I = 0x7f130aba
+.field public static oneme_login_input_logo:I = 0x7f0a06a3
 
-.field public static permissions_calls_audio_denied:I = 0x7f130abb
+.field public static oneme_login_input_name:I = 0x7f0a06a4
 
-.field public static permissions_calls_audio_not_granted:I = 0x7f130abc
+.field public static oneme_login_input_name_btn_container:I = 0x7f0a06a5
 
-.field public static permissions_calls_audio_video_request:I = 0x7f130abd
+.field public static oneme_login_input_name_confirmation_cancel:I = 0x7f0a06a6
 
-.field public static permissions_calls_audio_video_request_title:I = 0x7f130abe
+.field public static oneme_login_input_name_confirmation_return:I = 0x7f0a06a7
 
-.field public static permissions_calls_only_audio:I = 0x7f130abf
+.field public static oneme_login_input_name_continue_btn:I = 0x7f0a06a8
 
-.field public static permissions_calls_only_calls:I = 0x7f130ac0
+.field public static oneme_login_input_name_description:I = 0x7f0a06a9
 
-.field public static permissions_calls_only_video:I = 0x7f130ac1
+.field public static oneme_login_input_name_title:I = 0x7f0a06aa
 
-.field public static permissions_calls_only_video_bluetooth_connect:I = 0x7f130ac2
+.field public static oneme_login_input_name_toolbar:I = 0x7f0a06ab
 
-.field public static permissions_calls_video:I = 0x7f130ac3
+.field public static oneme_login_input_phone_number_input:I = 0x7f0a06ac
 
-.field public static permissions_calls_video_bluetooth_connect:I = 0x7f130ac4
+.field public static oneme_login_input_surname:I = 0x7f0a06ad
 
-.field public static permissions_calls_video_denied:I = 0x7f130ac5
+.field public static oneme_login_input_title:I = 0x7f0a06ae
 
-.field public static permissions_calls_video_not_granted:I = 0x7f130ac6
+.field public static oneme_login_input_toolbar:I = 0x7f0a06af
 
-.field public static permissions_calls_video_preview_request:I = 0x7f130ac7
+.field public static oneme_login_neuro_avatars_appbar:I = 0x7f0a06b0
 
-.field public static permissions_calls_video_request:I = 0x7f130ac8
+.field public static oneme_login_neuro_avatars_avatar:I = 0x7f0a06b1
 
-.field public static permissions_calls_video_request_denied:I = 0x7f130ac9
+.field public static oneme_login_neuro_avatars_button_background:I = 0x7f0a06b2
 
-.field public static permissions_calls_video_request_not_granted:I = 0x7f130aca
+.field public static oneme_login_neuro_avatars_cancel_action:I = 0x7f0a06b3
 
-.field public static permissions_camera_and_storage_not_granted:I = 0x7f130acb
+.field public static oneme_login_neuro_avatars_collapsible:I = 0x7f0a06b4
 
-.field public static permissions_camera_not_granted:I = 0x7f130acc
+.field public static oneme_login_neuro_avatars_continue_btn:I = 0x7f0a06b5
 
-.field public static permissions_camera_request_denied_permanently:I = 0x7f130acd
+.field public static oneme_login_neuro_avatars_continue_disabled_btn:I = 0x7f0a06b6
 
-.field public static permissions_camera_request_photo:I = 0x7f130ace
+.field public static oneme_login_neuro_avatars_continue_enabled_btn:I = 0x7f0a06b7
 
-.field public static permissions_camera_request_photo_denied:I = 0x7f130acf
+.field public static oneme_login_neuro_avatars_description:I = 0x7f0a06b8
 
-.field public static permissions_camera_request_photo_with_storage:I = 0x7f130ad0
+.field public static oneme_login_neuro_avatars_load_from_gallery_action:I = 0x7f0a06b9
 
-.field public static permissions_camera_request_photo_with_storage_denied:I = 0x7f130ad1
+.field public static oneme_login_neuro_avatars_pick_image_text:I = 0x7f0a06ba
 
-.field public static permissions_camera_request_video:I = 0x7f130ad2
+.field public static oneme_login_neuro_avatars_pick_neuroavatar_button:I = 0x7f0a06bb
 
-.field public static permissions_camera_request_video_with_storage:I = 0x7f130ad3
+.field public static oneme_login_neuro_avatars_pick_neuroavatar_icon:I = 0x7f0a06bc
 
-.field public static permissions_camera_request_video_with_storage_denied:I = 0x7f130ad4
+.field public static oneme_login_neuro_avatars_recycler_view:I = 0x7f0a06bd
 
-.field public static permissions_contacts_not_granted:I = 0x7f130ad5
+.field public static oneme_login_neuro_avatars_remove_photo_action:I = 0x7f0a06be
 
-.field public static permissions_contacts_request:I = 0x7f130ad6
+.field public static oneme_login_neuro_avatars_root_container:I = 0x7f0a06bf
 
-.field public static permissions_contacts_request_denied:I = 0x7f130ad7
+.field public static oneme_login_neuro_avatars_tabs:I = 0x7f0a06c0
 
-.field public static permissions_contacts_request_rationale:I = 0x7f130ad8
+.field public static oneme_login_neuro_avatars_tabs_shimmer:I = 0x7f0a06c1
 
-.field public static permissions_dialog_enable_access:I = 0x7f130ad9
+.field public static oneme_login_neuro_avatars_take_photo_action:I = 0x7f0a06c2
 
-.field public static permissions_dialog_no:I = 0x7f130ada
+.field public static oneme_login_neuro_avatars_title:I = 0x7f0a06c3
 
-.field public static permissions_dialog_open_setting:I = 0x7f130adb
+.field public static oneme_login_neuro_avatars_toolbar:I = 0x7f0a06c4
 
-.field public static permissions_dialog_yes:I = 0x7f130adc
+.field public static oneme_login_sms_code_exceeded_ok_btn:I = 0x7f0a06c6
 
-.field public static permissions_files_request_denied:I = 0x7f130add
+.field public static oneme_login_welcome_continue_btn:I = 0x7f0a06c7
 
-.field public static permissions_fsi_request_positive_button:I = 0x7f130ade
+.field public static oneme_login_welcome_description:I = 0x7f0a06c8
 
-.field public static permissions_location_denied:I = 0x7f130adf
+.field public static oneme_login_welcome_placeholder:I = 0x7f0a06c9
 
-.field public static permissions_location_not_granted:I = 0x7f130ae0
+.field public static oneme_login_welcome_switch_language_btn:I = 0x7f0a06ca
 
-.field public static permissions_location_rationale_live:I = 0x7f130ae2
+.field public static oneme_login_welcome_terms:I = 0x7f0a06cb
 
-.field public static permissions_location_rationale_nearby:I = 0x7f130ae3
+.field public static oneme_login_welcome_title:I = 0x7f0a06cc
 
-.field public static permissions_location_rationale_send:I = 0x7f130ae5
-
-.field public static permissions_post_notification_request_positive_button:I = 0x7f130ae7
-
-.field public static permissions_post_notification_request_rationale:I = 0x7f130ae8
-
-.field public static permissions_post_notification_request_title:I = 0x7f130ae9
-
-.field public static permissions_storage_not_granted:I = 0x7f130aea
-
-.field public static permissions_storage_request:I = 0x7f130aeb
-
-.field public static permissions_storage_request_denied:I = 0x7f130aec
-
-.field public static permissions_storage_video_save_request_denied:I = 0x7f130aed
-
-.field public static permissions_storage_video_share_request_denied:I = 0x7f130aee
-
-.field public static permissions_video_message_request:I = 0x7f130aef
-
-.field public static permissions_video_message_request_only_camera_title:I = 0x7f130af0
-
-.field public static permissions_video_message_request_title:I = 0x7f130af1
+.field public static oneme_login_welcome_toolbar:I = 0x7f0a06cd

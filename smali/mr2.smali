@@ -1,48 +1,68 @@
 .class public final Lmr2;
-.super Lo84;
+.super Ld3;
+.source "SourceFile"
 
 
-# instance fields
-.field public final synthetic X:Lnq1;
-
-.field public synthetic d:Ljava/lang/Object;
-
-.field public o:I
+# static fields
+.field public static final c:Lmr2;
 
 
 # direct methods
-.method public constructor <init>(Lnq1;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lmr2;->X:Lnq1;
+    new-instance v0, Lmr2;
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    const/16 v1, 0xc
+
+    invoke-direct {v0, v1}, Ld3;-><init>(I)V
+
+    sput-object v0, Lmr2;->c:Lmr2;
 
     return-void
 .end method
 
+.method public static J0(JLjava/lang/Long;)Lun4;
+    .locals 2
 
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    const-string v0, ":chats/forward?messages_ids="
 
-    iput-object p1, p0, Lmr2;->d:Ljava/lang/Object;
+    if-eqz p2, :cond_0
 
-    iget p1, p0, Lmr2;->o:I
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    const/high16 v0, -0x80000000
+    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    or-int/2addr p1, v0
+    invoke-virtual {v1, p0, p1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    iput p1, p0, Lmr2;->o:I
+    const-string p0, "&attach_id="
 
-    iget-object p1, p0, Lmr2;->X:Lnq1;
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v0, 0x0
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, v0, p0}, Lnq1;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    const-string p0, "&is_forward_attach=true"
 
-    move-result-object p1
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    new-instance p1, Lun4;
+
+    invoke-direct {p1, p0}, Lun4;-><init>(Ljava/lang/String;)V
+
+    return-object p1
+
+    :cond_0
+    invoke-static {p0, p1, v0}, Ltx8;->h(JLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    new-instance p1, Lun4;
+
+    invoke-direct {p1, p0}, Lun4;-><init>(Ljava/lang/String;)V
 
     return-object p1
 .end method

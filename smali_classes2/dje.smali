@@ -1,234 +1,231 @@
 .class public final Ldje;
-.super Ljava/lang/Object;
+.super Landroid/media/projection/MediaProjection$Callback;
 .source "SourceFile"
-
-# interfaces
-.implements Ljje;
 
 
 # instance fields
-.field public final a:Llhg;
+.field public final a:Lorg/webrtc/ScreenCapturerAndroid;
 
-.field public final b:I
+.field public final b:Ltmd;
 
-.field public final c:J
+.field public volatile c:Z
 
-.field public final d:I
+.field public volatile d:Z
+
+.field public e:I
+
+.field public f:I
+
+.field public g:I
+
+.field public final h:Ljava/util/concurrent/Executor;
 
 
 # direct methods
-.method public constructor <init>(IJLlhg;)V
+.method public constructor <init>(Landroid/content/Intent;Ljava/util/concurrent/Executor;Ltmd;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/media/projection/MediaProjection$Callback;-><init>()V
 
-    iput-object p4, p0, Ldje;->a:Llhg;
+    iput-object p3, p0, Ldje;->b:Ltmd;
 
-    iput p1, p0, Ldje;->b:I
+    iput-object p2, p0, Ldje;->h:Ljava/util/concurrent/Executor;
 
-    iput-wide p2, p0, Ldje;->c:J
+    new-instance p2, Lorg/webrtc/ScreenCapturerAndroid;
 
-    sget p1, Lkib;->u:I
+    invoke-direct {p2, p1, p0}, Lorg/webrtc/ScreenCapturerAndroid;-><init>(Landroid/content/Intent;Landroid/media/projection/MediaProjection$Callback;)V
 
-    iput p1, p0, Ldje;->d:I
+    iput-object p2, p0, Ldje;->a:Lorg/webrtc/ScreenCapturerAndroid;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()I
-    .locals 1
-
-    const/4 v0, 0x4
-
-    return v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 5
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Ldje;
-
-    if-nez v1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Ldje;
-
-    iget-object v1, p0, Ldje;->a:Llhg;
-
-    iget-object v2, p1, Ldje;->a:Llhg;
-
-    invoke-virtual {v1, v2}, Llhg;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget v1, p0, Ldje;->b:I
-
-    iget v2, p1, Ldje;->b:I
-
-    if-eq v1, v2, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget-wide v1, p0, Ldje;->c:J
-
-    iget-wide v3, p1, Ldje;->c:J
-
-    cmp-long p1, v1, v3
-
-    if-eqz p1, :cond_4
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_4
-    return v0
-.end method
-
-.method public final g()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final getItemId()J
-    .locals 2
-
-    iget-wide v0, p0, Ldje;->c:J
-
-    return-wide v0
-.end method
-
-.method public final getTitle()Lqhg;
-    .locals 1
-
-    iget-object v0, p0, Ldje;->a:Llhg;
-
-    return-object v0
-.end method
-
-.method public final hashCode()I
+.method public final a(II)V
     .locals 4
 
-    iget-object v0, p0, Ldje;->a:Llhg;
+    iget-object v0, p0, Ldje;->b:Ltmd;
 
-    iget v0, v0, Llhg;->c:I
+    const-string v1, "x"
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    const-string v2, "@30"
 
-    move-result v0
+    const-string v3, "changeFormat, "
 
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Ldje;->b:I
-
-    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
-
-    move-result v0
-
-    iget-wide v2, p0, Ldje;->c:J
-
-    invoke-static {v0, v1, v2, v3}, Lcbh;->i(IIJ)I
-
-    move-result v0
-
-    const/4 v1, 0x4
-
-    invoke-static {v1}, Lt02;->t(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final m()I
-    .locals 1
-
-    iget v0, p0, Ldje;->d:I
-
-    return v0
-.end method
-
-.method public final t()I
-    .locals 1
-
-    iget v0, p0, Ldje;->b:I
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Header(title="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Ldje;->a:Llhg;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", sectionId="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Ldje;->b:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", itemId="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Ldje;->c:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", sectionItemType="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/4 v1, 0x4
-
-    invoke-static {v1}, Liwd;->j(I)Ljava/lang/String;
+    invoke-static {v3, p1, v1, p2, v2}, Lau1;->h(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v2, "ScreenCapturerAdapter"
 
-    const-string v1, ")"
+    invoke-interface {v0, v2, v1}, Ltmd;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget v0, p0, Ldje;->g:I
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const/16 v1, 0x1e
 
-    move-result-object v0
+    if-ne v0, p1, :cond_1
 
-    return-object v0
+    iget v0, p0, Ldje;->f:I
+
+    if-ne v0, p2, :cond_1
+
+    iget v0, p0, Ldje;->e:I
+
+    if-eq v0, v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+
+    :cond_1
+    :goto_0
+    iput v1, p0, Ldje;->e:I
+
+    iput p2, p0, Ldje;->f:I
+
+    iput p1, p0, Ldje;->g:I
+
+    iget-boolean v0, p0, Ldje;->d:Z
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Ldje;->b:Ltmd;
+
+    const-string v3, "Screen capture is already started, just change capture format"
+
+    invoke-interface {v0, v2, v3}, Ltmd;->log(Ljava/lang/String;Ljava/lang/String;)V
+
+    :try_start_0
+    iget-object v0, p0, Ldje;->a:Lorg/webrtc/ScreenCapturerAndroid;
+
+    invoke-virtual {v0, p1, p2, v1}, Lorg/webrtc/ScreenCapturerAndroid;->changeCaptureFormat(III)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_1
+
+    :catch_0
+    move-exception p1
+
+    iget-object p2, p0, Ldje;->b:Ltmd;
+
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    const-string v1, "Cant change screen capture format"
+
+    invoke-direct {v0, v1, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    const-string p1, "screen.capture.change.format"
+
+    invoke-interface {p2, v2, p1, v0}, Ltmd;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_2
+    :goto_1
+    return-void
+.end method
+
+.method public final b()V
+    .locals 3
+
+    const-string v0, "ScreenCapturerAdapter"
+
+    const-string v1, "release"
+
+    iget-object v2, p0, Ldje;->b:Ltmd;
+
+    invoke-interface {v2, v0, v1}, Ltmd;->log(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Ldje;->c()V
+
+    iget-object v0, p0, Ldje;->a:Lorg/webrtc/ScreenCapturerAndroid;
+
+    invoke-virtual {v0}, Lorg/webrtc/ScreenCapturerAndroid;->dispose()V
+
+    return-void
+.end method
+
+.method public final c()V
+    .locals 5
+
+    iget-object v0, p0, Ldje;->b:Ltmd;
+
+    const-string v1, "stop"
+
+    const-string v2, "ScreenCapturerAdapter"
+
+    invoke-interface {v0, v2, v1}, Ltmd;->log(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-boolean v0, p0, Ldje;->d:Z
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Ldje;->b:Ltmd;
+
+    const-string v1, "Screen capturer is not yet started"
+
+    invoke-interface {v0, v2, v1}, Ltmd;->log(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+
+    :cond_0
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Ldje;->d:Z
+
+    :try_start_0
+    iget-object v0, p0, Ldje;->a:Lorg/webrtc/ScreenCapturerAndroid;
+
+    invoke-virtual {v0}, Lorg/webrtc/ScreenCapturerAndroid;->stopCapture()V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    iget-object v1, p0, Ldje;->b:Ltmd;
+
+    new-instance v3, Ljava/lang/RuntimeException;
+
+    const-string v4, "Stop screen capture failed"
+
+    invoke-direct {v3, v4, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    const-string v0, "screen.capture.stop"
+
+    invoke-interface {v1, v2, v0, v3}, Ltmd;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-void
+.end method
+
+.method public final onStop()V
+    .locals 3
+
+    iget-object v0, p0, Ldje;->b:Ltmd;
+
+    const-string v1, "ScreenCapturerAdapter"
+
+    const-string v2, "onStop, screen capture session stopped"
+
+    invoke-interface {v0, v1, v2}, Ltmd;->log(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Ldje;->c:Z
+
+    iget-object v0, p0, Ldje;->h:Ljava/util/concurrent/Executor;
+
+    new-instance v1, Ls4b;
+
+    const/16 v2, 0x19
+
+    invoke-direct {v1, v2, p0}, Ls4b;-><init>(ILjava/lang/Object;)V
+
+    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    return-void
 .end method

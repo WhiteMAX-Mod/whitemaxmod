@@ -1,297 +1,307 @@
 .class public final Lft4;
-.super Ljava/util/concurrent/AbstractExecutorService;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbqe;
-
-
-# static fields
-.field public static final synthetic Z:I
+.implements Lta8;
 
 
 # instance fields
-.field public final X:Ljava/util/concurrent/atomic/AtomicInteger;
+.field public final synthetic a:I
 
-.field public final Y:Ljava/util/concurrent/atomic/AtomicInteger;
+.field public final b:Ljava/lang/Object;
 
-.field public final a:Ljava/lang/String;
-
-.field public final b:Ljava/util/concurrent/Executor;
-
-.field public volatile c:I
-
-.field public final d:Ljava/util/concurrent/LinkedBlockingQueue;
-
-.field public final o:Lve;
+.field public final c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/Executor;)V
+.method public synthetic constructor <init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    .locals 0
+
+    .line 1
+    iput p2, p0, Lft4;->a:I
+
+    iput-object p1, p0, Lft4;->b:Ljava/lang/Object;
+
+    iput-object p3, p0, Lft4;->c:Ljava/lang/Object;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public constructor <init>(Lw79;Lgp6;)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Lft4;->a:I
+
+    .line 8
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lft4;->c:Ljava/lang/Object;
+
+    iput-object p2, p0, Lft4;->b:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lxa8;)V
     .locals 2
 
-    new-instance v0, Ljava/util/concurrent/LinkedBlockingQueue;
+    const/4 v0, 0x4
 
-    invoke-direct {v0}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V
+    iput v0, p0, Lft4;->a:I
 
-    invoke-direct {p0}, Ljava/util/concurrent/AbstractExecutorService;-><init>()V
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "SerialExecutor"
+    .line 3
+    iput-object p1, p0, Lft4;->b:Ljava/lang/Object;
 
-    iput-object v1, p0, Lft4;->a:Ljava/lang/String;
+    .line 4
+    sget-object v0, Lmf3;->c:Lmf3;
 
-    iput-object p1, p0, Lft4;->b:Ljava/util/concurrent/Executor;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/4 p1, 0x1
+    move-result-object p1
 
-    iput p1, p0, Lft4;->c:I
+    .line 5
+    iget-object v1, v0, Lmf3;->a:Ljava/util/HashMap;
 
-    iput-object v0, p0, Lft4;->d:Ljava/util/concurrent/LinkedBlockingQueue;
+    invoke-virtual {v1, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance p1, Lve;
+    move-result-object v1
 
-    const/16 v0, 0x8
+    check-cast v1, Lkf3;
 
-    invoke-direct {p1, v0, p0}, Lve;-><init>(ILjava/lang/Object;)V
+    if-eqz v1, :cond_0
 
-    iput-object p1, p0, Lft4;->o:Lve;
+    goto :goto_0
 
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicInteger;
+    :cond_0
+    const/4 v1, 0x0
 
-    const/4 v0, 0x0
+    .line 6
+    invoke-virtual {v0, p1, v1}, Lmf3;->a(Ljava/lang/Class;[Ljava/lang/reflect/Method;)Lkf3;
 
-    invoke-direct {p1, v0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+    move-result-object v1
 
-    iput-object p1, p0, Lft4;->X:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-direct {p1, v0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
-
-    iput-object p1, p0, Lft4;->Y:Ljava/util/concurrent/atomic/AtomicInteger;
+    .line 7
+    :goto_0
+    iput-object v1, p0, Lft4;->c:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Runnable;)V
+.method public final d(Lab8;Lfa8;)V
     .locals 3
 
-    if-eqz p1, :cond_2
+    iget v0, p0, Lft4;->a:I
 
-    iget-object v0, p0, Lft4;->d:Ljava/util/concurrent/LinkedBlockingQueue;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/LinkedBlockingQueue;->offer(Ljava/lang/Object;)Z
+    iget-object v0, p0, Lft4;->c:Ljava/lang/Object;
 
-    move-result p1
+    check-cast v0, Lkf3;
 
-    iget-object v1, p0, Lft4;->a:Ljava/lang/String;
+    iget-object v0, v0, Lkf3;->a:Ljava/util/HashMap;
 
-    if-eqz p1, :cond_1
-
-    invoke-virtual {v0}, Ljava/util/concurrent/LinkedBlockingQueue;->size()I
-
-    move-result p1
-
-    iget-object v0, p0, Lft4;->Y:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
-
-    move-result v2
-
-    if-le p1, v2, :cond_0
-
-    invoke-virtual {v0, v2, p1}, Ljava/util/concurrent/atomic/AtomicInteger;->compareAndSet(II)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const-string v0, "%s: max pending work in queue = %d"
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    const-class v2, Lft4;
-
-    invoke-static {v2, v0, v1, p1}, Lmt5;->e(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
-
-    :cond_0
-    invoke-virtual {p0}, Lft4;->b()V
-
-    return-void
-
-    :cond_1
-    new-instance p1, Ljava/util/concurrent/RejectedExecutionException;
-
-    const-string v2, " queue is full, size="
-
-    invoke-static {v1, v2}, Lj27;->o(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
-    invoke-virtual {v0}, Ljava/util/concurrent/LinkedBlockingQueue;->size()I
+    check-cast v1, Ljava/util/List;
 
-    move-result v0
+    iget-object v2, p0, Lft4;->b:Ljava/lang/Object;
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-static {v1, p1, p2, v2}, Lkf3;->a(Ljava/util/List;Lab8;Lfa8;Ljava/lang/Object;)V
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    sget-object v1, Lfa8;->ON_ANY:Lfa8;
+
+    invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-direct {p1, v0}, Ljava/util/concurrent/RejectedExecutionException;-><init>(Ljava/lang/String;)V
+    check-cast v0, Ljava/util/List;
 
-    throw p1
-
-    :cond_2
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    const-string v0, "runnable parameter is null"
-
-    invoke-direct {p1, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final awaitTermination(JLjava/util/concurrent/TimeUnit;)Z
-    .locals 0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
-.end method
-
-.method public final b()V
-    .locals 5
-
-    iget-object v0, p0, Lft4;->X:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
-
-    move-result v0
-
-    :goto_0
-    iget v1, p0, Lft4;->c:I
-
-    if-ge v0, v1, :cond_1
-
-    add-int/lit8 v1, v0, 0x1
-
-    iget-object v2, p0, Lft4;->X:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;->compareAndSet(II)Z
-
-    move-result v0
-
-    const-class v2, Lft4;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lft4;->a:Ljava/lang/String;
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    iget v3, p0, Lft4;->c:I
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    const-string v4, "%s: starting worker %d of %d"
-
-    invoke-static {v2, v4, v0, v1, v3}, Lmt5;->f(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
-
-    iget-object v0, p0, Lft4;->b:Ljava/util/concurrent/Executor;
-
-    iget-object v1, p0, Lft4;->o:Lve;
-
-    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    invoke-static {v0, p1, p2, v2}, Lkf3;->a(Ljava/util/List;Lab8;Lfa8;Ljava/lang/Object;)V
 
     return-void
 
+    :pswitch_0
+    sget-object p1, Lfa8;->ON_START:Lfa8;
+
+    if-ne p2, p1, :cond_0
+
+    iget-object p1, p0, Lft4;->b:Ljava/lang/Object;
+
+    check-cast p1, Lcb8;
+
+    invoke-virtual {p1, p0}, Lcb8;->f(Lxa8;)V
+
+    iget-object p1, p0, Lft4;->c:Ljava/lang/Object;
+
+    check-cast p1, Lhp;
+
+    invoke-virtual {p1}, Lhp;->g()V
+
     :cond_0
-    const-string v0, "%s: race in startWorkerIfNeeded; retrying"
+    return-void
 
-    iget-object v1, p0, Lft4;->a:Ljava/lang/String;
+    :pswitch_1
+    sget-object v0, Lfa8;->ON_DESTROY:Lfa8;
 
-    invoke-static {v2, v1, v0}, Lmt5;->d(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
+    if-ne p2, v0, :cond_1
 
-    iget-object v0, p0, Lft4;->X:Ljava/util/concurrent/atomic/AtomicInteger;
+    iget-object p2, p0, Lft4;->b:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+    check-cast p2, Landroid/os/Handler;
 
-    move-result v0
+    iget-object v0, p0, Lft4;->c:Ljava/lang/Object;
 
-    goto :goto_0
+    check-cast v0, Lkg;
+
+    invoke-virtual {p2, v0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+
+    invoke-interface {p1}, Lab8;->p()Lcb8;
+
+    move-result-object p1
+
+    invoke-virtual {p1, p0}, Lcb8;->f(Lxa8;)V
 
     :cond_1
     return-void
-.end method
 
-.method public final declared-synchronized execute(Ljava/lang/Runnable;)V
-    .locals 0
+    :pswitch_2
+    iget-object p2, p0, Lft4;->b:Ljava/lang/Object;
 
-    monitor-enter p0
+    check-cast p2, Lgp6;
 
-    :try_start_0
-    invoke-virtual {p0, p1}, Lft4;->a(Ljava/lang/Runnable;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    iget-object v0, p0, Lft4;->c:Ljava/lang/Object;
 
-    monitor-exit p0
+    check-cast v0, Lw79;
 
+    iget-object v1, v0, Lw79;->o:Lzo6;
+
+    invoke-virtual {v1}, Landroidx/fragment/app/c;->Q()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    invoke-interface {p1}, Lab8;->p()Lcb8;
+
+    move-result-object p1
+
+    invoke-virtual {p1, p0}, Lcb8;->f(Lxa8;)V
+
+    iget-object p1, p2, Lpyd;->a:Landroid/view/View;
+
+    check-cast p1, Landroid/widget/FrameLayout;
+
+    invoke-virtual {p1}, Landroid/view/View;->isAttachedToWindow()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_3
+
+    invoke-virtual {v0, p2}, Lw79;->I(Lgp6;)V
+
+    :cond_3
+    :goto_0
     return-void
 
-    :catchall_0
-    move-exception p1
+    :pswitch_3
+    iget-object v0, p0, Lft4;->b:Ljava/lang/Object;
 
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    check-cast v0, Ldt4;
+
+    sget-object v1, Let4;->$EnumSwitchMapping$0:[I
+
+    invoke-virtual {p2}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v2
+
+    aget v1, v1, v2
+
+    packed-switch v1, :pswitch_data_1
+
+    goto :goto_1
+
+    :pswitch_4
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "ON_ANY must not been send by anybody"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw p1
-.end method
 
-.method public final isShutdown()Z
-    .locals 1
+    :pswitch_5
+    invoke-interface {v0, p1}, Ldt4;->onDestroy(Lab8;)V
 
-    const/4 v0, 0x0
+    goto :goto_1
 
-    return v0
-.end method
+    :pswitch_6
+    invoke-interface {v0, p1}, Ldt4;->onStop(Lab8;)V
 
-.method public final isTerminated()Z
-    .locals 1
+    goto :goto_1
 
-    const/4 v0, 0x0
+    :pswitch_7
+    invoke-interface {v0, p1}, Ldt4;->onPause(Lab8;)V
 
-    return v0
-.end method
+    goto :goto_1
 
-.method public final shutdown()V
-    .locals 1
+    :pswitch_8
+    invoke-interface {v0, p1}, Ldt4;->onResume(Lab8;)V
 
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
+    goto :goto_1
 
-    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
+    :pswitch_9
+    invoke-interface {v0, p1}, Ldt4;->onStart(Lab8;)V
 
-    throw v0
-.end method
+    goto :goto_1
 
-.method public final shutdownNow()Ljava/util/List;
-    .locals 1
+    :pswitch_a
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
+    :goto_1
+    iget-object v0, p0, Lft4;->c:Ljava/lang/Object;
 
-    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
+    check-cast v0, Lta8;
 
-    throw v0
+    if-eqz v0, :cond_4
+
+    invoke-interface {v0, p1, p2}, Lta8;->d(Lab8;Lfa8;)V
+
+    :cond_4
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+
+    :pswitch_data_1
+    .packed-switch 0x1
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+    .end packed-switch
 .end method

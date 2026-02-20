@@ -1,55 +1,231 @@
 .class public final Lkob;
-.super Lq57;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lrd5;
 
 
 # instance fields
-.field public final E0:Lsnb;
+.field public final synthetic a:I
 
-.field public final F0:Lsnb;
+.field public b:I
 
 
 # direct methods
-.method public constructor <init>(Lsnb;Lsnb;)V
-    .locals 1
+.method public synthetic constructor <init>(I)V
+    .locals 0
 
-    const/16 v0, 0xd
+    .line 1
+    iput p1, p0, Lkob;->a:I
 
-    invoke-direct {p0, v0}, Lq57;-><init>(I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lkob;->E0:Lsnb;
+    return-void
+.end method
 
-    iput-object p2, p0, Lkob;->F0:Lsnb;
+.method public synthetic constructor <init>(II)V
+    .locals 0
+
+    .line 2
+    iput p2, p0, Lkob;->a:I
+
+    iput p1, p0, Lkob;->b:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public constructor <init>(IIIII)V
+    .locals 5
+
+    const/16 v0, 0x10
+
+    iput v0, p0, Lkob;->a:I
+
+    .line 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 4
+    invoke-static {p5}, Ly12;->t(I)I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x2
+
+    const/4 v3, 0x1
+
+    if-eqz v0, :cond_2
+
+    if-eq v0, v3, :cond_1
+
+    if-ne v0, v2, :cond_0
+
+    move v0, v1
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
+
+    :cond_1
+    move v0, v2
+
+    goto :goto_0
+
+    :cond_2
+    move v0, v3
+
+    :goto_0
+    const/4 v4, 0x3
+
+    if-ne p1, v4, :cond_4
+
+    if-ne p2, v2, :cond_4
+
+    if-ne p4, v3, :cond_4
+
+    if-eq p5, v3, :cond_3
+
+    if-ne p5, v2, :cond_4
+
+    :cond_3
+    if-ne p3, v3, :cond_4
+
+    move v1, v0
+
+    .line 5
+    :cond_4
+    iput v1, p0, Lkob;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final l(Lkrg;[ILxh0;Lhk7;)Lz8;
-    .locals 7
+.method public a()I
+    .locals 1
 
-    new-instance v0, Llob;
+    iget v0, p0, Lkob;->a:I
 
-    sget v1, Lesg;->a:I
+    packed-switch v0, :pswitch_data_0
 
-    sget v1, Lesg;->a:I
+    iget v0, p0, Lkob;->b:I
 
-    iget-object v1, p1, Lkrg;->d:[Lpj6;
+    return v0
 
-    iget-object v5, p0, Lkob;->E0:Lsnb;
+    :pswitch_0
+    iget v0, p0, Lkob;->b:I
 
-    iget-object v6, p0, Lkob;->F0:Lsnb;
+    return v0
 
-    move-object v1, p1
+    :pswitch_1
+    iget v0, p0, Lkob;->b:I
 
-    move-object v2, p2
+    return v0
 
-    move-object v3, p3
+    :pswitch_2
+    iget v0, p0, Lkob;->b:I
 
-    move-object v4, p4
+    return v0
 
-    invoke-direct/range {v0 .. v6}, Llob;-><init>(Lkrg;[ILxh0;Lhk7;Lsnb;Lsnb;)V
+    :pswitch_3
+    iget v0, p0, Lkob;->b:I
 
-    return-object v0
+    return v0
+
+    :pswitch_4
+    iget v0, p0, Lkob;->b:I
+
+    return v0
+
+    :pswitch_5
+    iget v0, p0, Lkob;->b:I
+
+    return v0
+
+    :pswitch_6
+    iget v0, p0, Lkob;->b:I
+
+    return v0
+
+    :pswitch_7
+    iget v0, p0, Lkob;->b:I
+
+    return v0
+
+    :pswitch_8
+    iget v0, p0, Lkob;->b:I
+
+    return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x2
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public b()I
+    .locals 1
+
+    iget v0, p0, Lkob;->b:I
+
+    return v0
+.end method
+
+.method public c()I
+    .locals 1
+
+    iget v0, p0, Lkob;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget v0, p0, Lkob;->b:I
+
+    return v0
+
+    :pswitch_0
+    iget v0, p0, Lkob;->b:I
+
+    return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public f(Landroid/content/Context;Ljava/lang/String;Z)I
+    .locals 0
+
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public g(Landroid/content/Context;Ljava/lang/String;)I
+    .locals 0
+
+    iget p1, p0, Lkob;->b:I
+
+    return p1
 .end method

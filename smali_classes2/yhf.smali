@@ -1,166 +1,355 @@
 .class public final Lyhf;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public final synthetic Y:Ljava/util/ArrayList;
-
-.field public final synthetic Z:Llq6;
-
-.field public o:Llq6;
-
-.field public final synthetic t0:Lnq6;
-
-.field public final synthetic u0:J
+.field public final synthetic b:Lone/me/location/map/show/ShowLocationScreen;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/ArrayList;Llq6;Lnq6;JLkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lone/me/location/map/show/ShowLocationScreen;I)V
     .locals 0
 
-    iput-object p1, p0, Lyhf;->Y:Ljava/util/ArrayList;
+    iput p2, p0, Lyhf;->a:I
 
-    iput-object p2, p0, Lyhf;->Z:Llq6;
+    iput-object p1, p0, Lyhf;->b:Lone/me/location/map/show/ShowLocationScreen;
 
-    iput-object p3, p0, Lyhf;->t0:Lnq6;
-
-    iput-wide p4, p0, Lyhf;->u0:J
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p6}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final onClick(Landroid/view/View;)V
+    .locals 16
 
-    check-cast p1, Lzb4;
+    move-object/from16 v0, p0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget v1, v0, Lyhf;->a:I
 
-    invoke-virtual {p0, p1, p2}, Lyhf;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v2, v0, Lyhf;->b:Lone/me/location/map/show/ShowLocationScreen;
 
-    move-result-object p1
+    packed-switch v1, :pswitch_data_0
 
-    check-cast p1, Lyhf;
+    sget-object v1, Lone/me/location/map/show/ShowLocationScreen;->B0:[Lv58;
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    invoke-virtual {v2}, Lone/me/location/map/show/ShowLocationScreen;->I0()Lfif;
 
-    invoke-virtual {p1, p2}, Lyhf;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object v1
 
-    move-result-object p1
+    iget-object v2, v1, Lfif;->u0:Lj88;
 
-    return-object p1
-.end method
+    invoke-interface {v2}, Lj88;->getValue()Ljava/lang/Object;
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 7
+    move-result-object v2
 
-    new-instance v0, Lyhf;
+    check-cast v2, Lte;
 
-    iget-object v3, p0, Lyhf;->t0:Lnq6;
+    const-string v3, "LOCATION_MAP_DIRECTION_CLICK"
 
-    iget-wide v4, p0, Lyhf;->u0:J
+    invoke-interface {v2, v3}, Lte;->c(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lyhf;->Y:Ljava/util/ArrayList;
+    iget-object v2, v1, Lfif;->d:Lj88;
 
-    iget-object v2, p0, Lyhf;->Z:Llq6;
+    invoke-interface {v2}, Lj88;->getValue()Ljava/lang/Object;
 
-    move-object v6, p2
+    move-result-object v2
 
-    invoke-direct/range {v0 .. v6}, Lyhf;-><init>(Ljava/util/ArrayList;Llq6;Lnq6;JLkotlin/coroutines/Continuation;)V
+    check-cast v2, Landroid/content/Context;
 
-    return-object v0
-.end method
+    iget-object v3, v1, Lfif;->b:Lcom/google/android/gms/maps/model/LatLng;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+    iget-wide v4, v3, Lcom/google/android/gms/maps/model/LatLng;->a:D
 
-    iget v0, p0, Lyhf;->X:I
+    iget-wide v6, v3, Lcom/google/android/gms/maps/model/LatLng;->b:D
 
-    const/4 v1, 0x1
+    new-instance v3, Lo25;
 
-    if-eqz v0, :cond_1
+    sget-object v8, Lrt7;->a:Ljava/lang/String;
 
-    if-ne v0, v1, :cond_0
+    new-instance v8, Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lyhf;->o:Llq6;
+    const-string v9, "yandexmaps://maps.yandex.ru/?rtext=~"
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    invoke-direct {v8, v9}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v8, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    const-string v9, ","
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8, v6, v7}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-static {v8}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v8
+
+    invoke-static {v2, v8}, Lrt7;->j(Landroid/content/Context;Landroid/net/Uri;)Landroid/net/Uri;
+
+    move-result-object v8
+
+    const-string v10, "yandex_maps"
+
+    const-string v11, "ru.yandex.yandexmaps"
+
+    const/16 v12, 0x8
+
+    invoke-direct {v3, v8, v10, v11, v12}, Lo25;-><init>(Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;I)V
+
+    new-instance v8, Lo25;
+
+    new-instance v10, Ljava/lang/StringBuilder;
+
+    const-string v11, "yandexnavi://build_route_on_map/?lat_to="
+
+    invoke-direct {v10, v11}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v10, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    const-string v11, "&lon_to="
+
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v10, v6, v7}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v10
+
+    invoke-static {v10}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v10
+
+    invoke-static {v2, v10}, Lrt7;->j(Landroid/content/Context;Landroid/net/Uri;)Landroid/net/Uri;
+
+    move-result-object v10
+
+    const-string v11, "yandex_navigator"
+
+    const-string v13, "ru.yandex.yandexnavi"
+
+    invoke-direct {v8, v10, v11, v13, v12}, Lo25;-><init>(Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;I)V
+
+    new-instance v10, Lo25;
+
+    new-instance v11, Ljava/lang/StringBuilder;
+
+    const-string v12, "dgis://2gis.ru/routeSearch/rsType/ctx/to/"
+
+    invoke-direct {v11, v12}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v11, v6, v7}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v11, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v11, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v11}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v11
+
+    invoke-static {v11}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v11
+
+    const-string v12, "2gis"
+
+    const/4 v13, 0x0
+
+    const/16 v14, 0xc
+
+    invoke-direct {v10, v11, v12, v13, v14}, Lo25;-><init>(Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;I)V
+
+    new-instance v11, Lo25;
+
+    new-instance v12, Ljava/lang/StringBuilder;
+
+    const-string v15, "https://www.google.com/maps/dir/?api=1&destination="
+
+    invoke-direct {v12, v15}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v12, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v12, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v12, v6, v7}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v12}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v12
+
+    invoke-static {v12}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v12
+
+    const-string v15, "google_maps"
+
+    invoke-direct {v11, v12, v15, v13, v14}, Lo25;-><init>(Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;I)V
+
+    new-instance v12, Lo25;
+
+    new-instance v15, Ljava/lang/StringBuilder;
+
+    const-string v13, "petalmaps://route?daddr="
+
+    invoke-direct {v15, v13}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v15, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v15, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v15, v6, v7}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    const-string v4, "&type=walk"
+
+    invoke-virtual {v15, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v15}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v4}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v4
+
+    const-string v5, "huawei_maps"
+
+    const/4 v6, 0x0
+
+    invoke-direct {v12, v4, v5, v6, v14}, Lo25;-><init>(Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;I)V
+
+    filled-new-array {v3, v8, v10, v11, v12}, [Lo25;
+
+    move-result-object v3
+
+    invoke-static {v3}, Lfk3;->g([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v3
+
+    new-instance v4, Ljava/util/ArrayList;
+
+    invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-interface {v3}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v3
+
+    :cond_0
+    :goto_0
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_2
+
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Lo25;
+
+    new-instance v7, Landroid/content/Intent;
+
+    const-string v8, "android.intent.action.VIEW"
+
+    iget-object v9, v5, Lo25;->a:Landroid/net/Uri;
+
+    invoke-direct {v7, v8, v9}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
+
+    iget-object v8, v5, Lo25;->c:Ljava/lang/String;
+
+    invoke-virtual {v7, v8}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
+
+    invoke-virtual {v2}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v8
+
+    invoke-virtual {v7, v8}, Landroid/content/Intent;->resolveActivity(Landroid/content/pm/PackageManager;)Landroid/content/ComponentName;
+
+    move-result-object v8
+
+    if-eqz v8, :cond_1
+
+    new-instance v8, Ln25;
+
+    iget-object v5, v5, Lo25;->b:Ljava/lang/String;
+
+    invoke-direct {v8, v7, v5}, Ln25;-><init>(Landroid/content/Intent;Ljava/lang/String;)V
 
     goto :goto_1
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
     :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    move-object v8, v6
 
-    iget-object p1, p0, Lyhf;->Y:Ljava/util/ArrayList;
+    :goto_1
+    if-eqz v8, :cond_0
 
-    invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Leq7;
-
-    iget-object v2, p0, Lyhf;->t0:Lnq6;
-
-    invoke-interface {v2, v0}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v4, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
     :cond_2
-    iget-object v0, p0, Lyhf;->Z:Llq6;
+    iget-object v1, v1, Lfif;->A0:Ltn5;
 
-    iput-object v0, p0, Lyhf;->o:Llq6;
+    new-instance v2, Lshf;
 
-    iput v1, p0, Lyhf;->X:I
+    invoke-direct {v2, v4}, Lshf;-><init>(Ljava/util/ArrayList;)V
 
-    iget-wide v1, p0, Lyhf;->u0:J
+    invoke-static {v1, v2}, Lx0i;->n(Ltn5;Ljava/lang/Object;)V
 
-    invoke-static {v1, v2, p0}, Lumj;->c(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    return-void
 
-    move-result-object p1
+    :pswitch_0
+    sget-object v1, Lone/me/location/map/show/ShowLocationScreen;->B0:[Lv58;
 
-    sget-object v1, Lac4;->a:Lac4;
+    invoke-virtual {v2}, Lone/me/location/map/show/ShowLocationScreen;->I0()Lfif;
 
-    if-ne p1, v1, :cond_3
+    move-result-object v1
 
-    return-object v1
+    iget-object v2, v1, Lfif;->B0:Ltn5;
 
-    :cond_3
-    :goto_1
-    invoke-interface {v0}, Llq6;->invoke()Ljava/lang/Object;
+    new-instance v3, Lphf;
 
-    sget-object p1, Lb3h;->a:Lb3h;
+    iget-object v4, v1, Lfif;->b:Lcom/google/android/gms/maps/model/LatLng;
 
-    return-object p1
+    iget-wide v5, v4, Lcom/google/android/gms/maps/model/LatLng;->a:D
+
+    iget-wide v7, v4, Lcom/google/android/gms/maps/model/LatLng;->b:D
+
+    iget v1, v1, Lfif;->c:F
+
+    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v1
+
+    move-wide v4, v5
+
+    move-wide v6, v7
+
+    move-object v8, v1
+
+    invoke-direct/range {v3 .. v8}, Lphf;-><init>(DDLjava/lang/Float;)V
+
+    invoke-static {v2, v3}, Lx0i;->n(Ltn5;Ljava/lang/Object;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

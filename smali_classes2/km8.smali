@@ -1,55 +1,70 @@
 .class public final Lkm8;
-.super Lnth;
+.super Lujg;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:Lspf;
-
-.field public final c:Lpld;
+.field public c:Ldn9;
 
 
 # direct methods
-.method public constructor <init>(Lo58;)V
-    .locals 2
+.method public constructor <init>(Lws9;)V
+    .locals 0
 
-    invoke-direct {p0}, Lnth;-><init>()V
+    invoke-direct {p0, p1}, Lujg;-><init>(Lws9;)V
 
-    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+    return-void
+.end method
 
-    invoke-static {v0}, Ltpf;->a(Ljava/lang/Object;)Lspf;
+
+# virtual methods
+.method public final d(Lws9;Ljava/lang/String;)V
+    .locals 1
+
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-string v0, "message"
+
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_0
+
+    invoke-virtual {p1}, Lws9;->B()V
+
+    return-void
+
+    :cond_0
+    invoke-static {p1}, Lgjj;->b(Lws9;)Ldn9;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lkm8;->c:Ldn9;
+
+    return-void
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    iget-object v0, p0, Lkm8;->c:Ldn9;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "{message="
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, "}"
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lkm8;->b:Lspf;
-
-    new-instance v1, Lpld;
-
-    invoke-direct {v1, v0}, Lpld;-><init>(Lmfa;)V
-
-    iput-object v1, p0, Lkm8;->c:Lpld;
-
-    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lyzb;
-
-    sget-object v1, Lyzb;->f:[Ljava/lang/String;
-
-    invoke-virtual {p1, v1}, Lyzb;->c([Ljava/lang/String;)Z
-
-    move-result p1
-
-    xor-int/lit8 p1, p1, 0x1
-
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p1
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1, p1}, Lspf;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    return-void
+    return-object v0
 .end method

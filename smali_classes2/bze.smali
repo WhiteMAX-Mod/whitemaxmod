@@ -1,105 +1,66 @@
-.class public final synthetic Lbze;
-.super Ljava/lang/Object;
+.class public final Lbze;
+.super Lvze;
 .source "SourceFile"
-
-# interfaces
-.implements Llq6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic h:I
 
-.field public final synthetic b:Lone/me/settings/devices/SettingsDevicesScreen;
+.field public final i:Lpo9;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/settings/devices/SettingsDevicesScreen;I)V
-    .locals 0
+.method public constructor <init>(Lpo9;I)V
+    .locals 2
 
-    iput p2, p0, Lbze;->a:I
+    iput p2, p0, Lbze;->h:I
 
-    iput-object p1, p0, Lbze;->b:Lone/me/settings/devices/SettingsDevicesScreen;
+    packed-switch p2, :pswitch_data_0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-wide/16 v0, 0x0
+
+    invoke-direct {p0, v0, v1}, Lvze;-><init>(J)V
+
+    iput-object p1, p0, Lbze;->i:Lpo9;
 
     return-void
+
+    :pswitch_0
+    iget-wide v0, p1, Lpo9;->Z:J
+
+    invoke-direct {p0, v0, v1}, Lvze;-><init>(J)V
+
+    iput-object p1, p0, Lbze;->i:Lpo9;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 7
+.method public final a()Lwze;
+    .locals 1
 
-    iget v0, p0, Lbze;->a:I
+    iget v0, p0, Lbze;->h:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lbze;->b:Lone/me/settings/devices/SettingsDevicesScreen;
+    new-instance v0, Lnze;
 
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v0
+    invoke-direct {v0, p0}, Lnze;-><init>(Lbze;)V
 
     return-object v0
 
     :pswitch_0
-    new-instance v0, Lmze;
+    new-instance v0, Lcze;
 
-    new-instance v1, Lhxe;
-
-    sget-object v2, Lwye;->a:Lwye;
-
-    invoke-virtual {v2}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v3
-
-    const/16 v4, 0x38
-
-    invoke-virtual {v3, v4}, Lr5;->d(I)Ln8g;
-
-    move-result-object v3
-
-    invoke-virtual {v2}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v4
-
-    const/16 v5, 0xc
-
-    invoke-virtual {v4, v5}, Lr5;->c(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lmbg;
-
-    invoke-direct {v1, v3, v4}, Lhxe;-><init>(Lo58;Lmbg;)V
-
-    new-instance v3, Lo2b;
-
-    invoke-virtual {v2}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v2
-
-    const/16 v4, 0x33
-
-    invoke-virtual {v2, v4}, Lr5;->d(I)Ln8g;
-
-    move-result-object v2
-
-    new-instance v4, Lbze;
-
-    const/4 v5, 0x1
-
-    iget-object v6, p0, Lbze;->b:Lone/me/settings/devices/SettingsDevicesScreen;
-
-    invoke-direct {v4, v6, v5}, Lbze;-><init>(Lone/me/settings/devices/SettingsDevicesScreen;I)V
-
-    const/16 v5, 0xe
-
-    const/4 v6, 0x0
-
-    invoke-direct {v3, v2, v4, v6, v5}, Lo2b;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
-
-    invoke-direct {v0, v1, v3}, Lmze;-><init>(Lhxe;Lo2b;)V
+    invoke-direct {v0, p0}, Lcze;-><init>(Lbze;)V
 
     return-object v0
 
@@ -107,6 +68,36 @@
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public b(Lwx4;)Lvze;
+    .locals 1
+
+    iget v0, p0, Lbze;->h:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0, p1}, Lvze;->b(Lwx4;)Lvze;
+
+    return-object p0
+
+    :pswitch_0
+    const-string p1, "nze"
+
+    const-string v0, "try to set delayed attrs in builder"
+
+    invoke-static {p1, v0}, Ltej;->t(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 p1, 0x0
+
+    iput-object p1, p0, Lvze;->f:Lwx4;
+
+    return-object p0
+
+    :pswitch_data_0
+    .packed-switch 0x1
         :pswitch_0
     .end packed-switch
 .end method

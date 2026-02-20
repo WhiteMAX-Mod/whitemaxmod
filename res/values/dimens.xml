@@ -84,7 +84,6 @@
     <dimen name="appcompat_dialog_background_inset">16.0dip</dimen>
     <dimen name="attach_bar_thumbnail_size">120.0dip</dimen>
     <dimen name="attach_drawable">56.0dip</dimen>
-    <dimen name="bottom_sheet_corner_radius">20.0dip</dimen>
     <dimen name="browser_actions_context_menu_max_width">500.0dip</dimen>
     <dimen name="browser_actions_context_menu_min_padding">20.0dip</dimen>
     <dimen name="cardview_compat_inset_shadow">1.0dip</dimen>
@@ -168,15 +167,10 @@
     <dimen name="fingerprint_icon_size">64.0dip</dimen>
     <dimen name="font_large">18.0dip</dimen>
     <dimen name="font_normal">16.0dip</dimen>
-    <dimen name="font_normal_subtitle">15.0dip</dimen>
     <dimen name="font_only_emoji">48.0dip</dimen>
     <dimen name="font_small">12.0dip</dimen>
-    <dimen name="font_subtitle">14.0dip</dimen>
     <dimen name="font_toolbar_subtitle">14.0dip</dimen>
     <dimen name="font_toolbar_title">18.0dip</dimen>
-    <dimen name="frg_location_map_contact_markers_panel_height">53.0dip</dimen>
-    <dimen name="frg_location_map_current_contact_panel_height">72.0dip</dimen>
-    <dimen name="frg_location_map_panel_height">66.0dip</dimen>
     <dimen name="gallery_album_cover_size">28.0dip</dimen>
     <item type="dimen" name="highlight_alpha_material_colored">0.26</item>
     <item type="dimen" name="highlight_alpha_material_dark">0.2</item>

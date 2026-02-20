@@ -1,74 +1,60 @@
-.class public abstract Lskj;
+.class public final Lskj;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Loza;
+
+
+# static fields
+.field public static final a:Lskj;
+
 
 # direct methods
-.method public static final b(Lr4h;)V
+.method static constructor <clinit>()V
     .locals 3
 
-    new-instance v0, Lq4b;
+    new-instance v0, Lskj;
 
-    const/16 v1, 0x1d
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, v1}, Lq4b;-><init>(I)V
+    sput-object v0, Lskj;->a:Lskj;
+
+    new-instance v0, Lp7j;
 
     const/4 v1, 0x1
 
-    invoke-virtual {p0, v1, v0}, Lr4h;->c(ILhs7;)V
+    invoke-direct {v0, v1}, Lp7j;-><init>(I)V
 
-    new-instance v0, Lr4b;
+    const-class v1, Lh8j;
 
-    const/16 v1, 0x17
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
 
-    invoke-direct {v0, v1}, Lr4b;-><init>(I)V
+    move-result-object v0
 
-    const/16 v1, 0x20b
+    const/4 v2, 0x2
 
-    invoke-virtual {p0, v1, v0}, Lr4h;->e(ILhs7;)V
+    invoke-static {v0, v2}, Leni;->i(Ljava/util/HashMap;I)Lp7j;
 
-    new-instance v0, Lmnc;
+    move-result-object v0
 
-    const/4 v1, 0x2
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
 
-    invoke-direct {v0, v1}, Lmnc;-><init>(I)V
+    move-result-object v0
 
-    const/16 v1, 0x20c
-
-    invoke-virtual {p0, v1, v0}, Lr4h;->e(ILhs7;)V
-
-    new-instance v0, Lmnc;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lmnc;-><init>(I)V
-
-    const/4 v1, 0x2
-
-    invoke-virtual {p0, v1, v0}, Lr4h;->c(ILhs7;)V
-
-    new-instance v0, Lmnc;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v0, v2}, Lmnc;-><init>(I)V
-
-    invoke-virtual {p0, v1, v0}, Lr4h;->c(ILhs7;)V
-
-    new-instance v0, Lr4b;
-
-    const/16 v1, 0x18
-
-    invoke-direct {v0, v1}, Lr4b;-><init>(I)V
-
-    const/16 v1, 0x20d
-
-    invoke-virtual {p0, v1, v0}, Lr4h;->e(ILhs7;)V
+    invoke-static {v0}, Leni;->m(Ljava/util/HashMap;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract a(Lf5f;FF)V
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
+
+    invoke-static {p1}, Lkb0;->d(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+
+    move-result-object p1
+
+    throw p1
 .end method

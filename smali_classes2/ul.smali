@@ -1,3 +1,3 @@
-.class public interface abstract Lul;
-.super Ljava/lang/Object;
+.class public abstract Lul;
+.super Landroid/text/style/ReplacementSpan;
 .source "SourceFile"

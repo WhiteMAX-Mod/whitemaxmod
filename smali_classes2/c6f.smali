@@ -1,134 +1,119 @@
-.class public final synthetic Lc6f;
-.super Ljava/lang/Object;
+.class public final Lc6f;
+.super Lpdg;
 .source "SourceFile"
 
 # interfaces
-.implements Llq6;
+.implements Lys6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:J
 
-.field public final synthetic b:Lone/me/sharedata/ShareDataPickerScreen;
+.field public final synthetic o:Le6f;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/sharedata/ShareDataPickerScreen;I)V
+.method public constructor <init>(Le6f;JLkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lc6f;->a:I
+    iput-object p1, p0, Lc6f;->o:Le6f;
 
-    iput-object p1, p0, Lc6f;->b:Lone/me/sharedata/ShareDataPickerScreen;
+    iput-wide p2, p0, Lc6f;->X:J
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p4}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 6
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lc6f;->a:I
+    check-cast p1, Lnd4;
 
-    const/4 v1, 0x0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    sget-object v2, Lb3h;->a:Lb3h;
+    invoke-virtual {p0, p1, p2}, Lc6f;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-object v3, p0, Lc6f;->b:Lone/me/sharedata/ShareDataPickerScreen;
+    move-result-object p1
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p1, Lc6f;
 
-    iget-object v0, v3, Lone/me/sharedata/ShareDataPickerScreen;->F0:Lxk6;
+    sget-object p2, Lmah;->a:Lmah;
 
-    return-object v0
+    invoke-virtual {p1, p2}, Lc6f;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :pswitch_0
-    iget-object v0, v3, Lone/me/sharedata/ShareDataPickerScreen;->F0:Lxk6;
+    return-object p2
+.end method
 
-    invoke-virtual {v0}, Lxk6;->l()V
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
 
-    return-object v2
+    new-instance p1, Lc6f;
 
-    :pswitch_1
-    sget-object v0, Lone/me/sharedata/ShareDataPickerScreen;->J0:[Lz28;
+    iget-object v0, p0, Lc6f;->o:Le6f;
 
-    new-instance v0, Leo9;
+    iget-wide v1, p0, Lc6f;->X:J
 
-    invoke-virtual {v3}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    invoke-direct {p1, v0, v1, v2, p2}, Lc6f;-><init>(Le6f;JLkotlin/coroutines/Continuation;)V
 
-    move-result-object v2
+    return-object p1
+.end method
 
-    invoke-direct {v0, v2}, Leo9;-><init>(Landroid/content/Context;)V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    sget v2, Lwib;->d:I
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->setId(I)V
+    iget-object p1, p0, Lc6f;->o:Le6f;
 
-    sget v2, Lxib;->e:I
+    iget-object v0, p1, Le6f;->o:Lj88;
 
-    invoke-virtual {v0, v2}, Leo9;->setInputHint(I)V
-
-    sget-object v2, Ltn9;->a:Ltn9;
-
-    invoke-virtual {v0, v2}, Leo9;->setRightOuterIconActionState(Lxn9;)V
-
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    new-instance v4, Lade;
-
-    const/4 v5, 0x5
-
-    invoke-direct {v4, v3, v5, v0}, Lade;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-static {v2, v4}, Llpb;->b(Landroid/content/Context;Llq6;)Lwv6;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Leo9;->setRightOuterIconTouchListener(Landroid/view/View$OnTouchListener;)V
-
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    new-instance v4, Lc6f;
-
-    invoke-direct {v4, v3, v1}, Lc6f;-><init>(Lone/me/sharedata/ShareDataPickerScreen;I)V
-
-    invoke-static {v2, v4}, Llpb;->b(Landroid/content/Context;Llq6;)Lwv6;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Leo9;->setLeftInnerIconTouchListener(Landroid/view/View$OnTouchListener;)V
-
-    return-object v0
-
-    :pswitch_2
-    sget-object v0, Lone/me/sharedata/ShareDataPickerScreen;->J0:[Lz28;
-
-    invoke-virtual {v3}, Lone/me/chats/picker/AbstractPickerScreen;->J0()Lb5c;
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    iget-object v0, v0, Lb5c;->c:La7c;
+    check-cast v0, Lcc3;
 
-    check-cast v0, Lt5f;
+    iget-wide v1, p0, Lc6f;->X:J
 
-    iget-object v0, v0, Lt5f;->p:Ltx4;
+    invoke-virtual {v0, v1, v2}, Lcc3;->p(J)Lte2;
 
-    invoke-virtual {v0, v1}, Ltx4;->x(I)V
+    move-result-object v0
 
-    return-object v2
+    if-eqz v0, :cond_0
 
-    nop
+    iget-object p1, p1, Le6f;->x0:Ltn5;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    sget-object v1, Lw9f;->c:Lw9f;
+
+    iget-wide v2, v0, Lte2;->a:J
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, ":profile?id="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, "&type=local_chat&is_opened_from_dialog=false"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0, p1}, Lkb0;->q(Ljava/lang/String;Ltn5;)V
+
+    :cond_0
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
 .end method

@@ -1,53 +1,111 @@
-.class public final Lpmg;
-.super Lo84;
+.class public final enum Lpmg;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
+# static fields
+.field public static final synthetic X:Lpm5;
+
+.field public static final enum b:Lpmg;
+
+.field public static final enum c:Lpmg;
+
+.field public static final enum d:Lpmg;
+
+.field public static final synthetic o:[Lpmg;
+
+
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lxmg;
-
-.field public Z:I
-
-.field public d:Lp0b;
-
-.field public o:I
+.field public final a:I
 
 
 # direct methods
-.method public constructor <init>(Lxmg;Lo84;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
-    iput-object p1, p0, Lpmg;->Y:Lxmg;
+    new-instance v0, Lpmg;
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    const-string v1, "WAITING"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2, v2}, Lpmg;-><init>(Ljava/lang/String;II)V
+
+    sput-object v0, Lpmg;->b:Lpmg;
+
+    new-instance v1, Lpmg;
+
+    const/4 v2, 0x1
+
+    const/16 v3, 0xa
+
+    const-string v4, "PROCESSING"
+
+    invoke-direct {v1, v4, v2, v3}, Lpmg;-><init>(Ljava/lang/String;II)V
+
+    sput-object v1, Lpmg;->c:Lpmg;
+
+    new-instance v2, Lpmg;
+
+    const/4 v3, 0x2
+
+    const/16 v4, 0x14
+
+    const-string v5, "FAILED"
+
+    invoke-direct {v2, v5, v3, v4}, Lpmg;-><init>(Ljava/lang/String;II)V
+
+    sput-object v2, Lpmg;->d:Lpmg;
+
+    filled-new-array {v0, v1, v2}, [Lpmg;
+
+    move-result-object v0
+
+    sput-object v0, Lpmg;->o:[Lpmg;
+
+    new-instance v1, Lpm5;
+
+    invoke-direct {v1, v0}, Lpm5;-><init>([Ljava/lang/Enum;)V
+
+    sput-object v1, Lpmg;->X:Lpm5;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;II)V
+    .locals 0
 
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    iput p3, p0, Lpmg;->a:I
+
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lpmg;
     .locals 1
 
-    iput-object p1, p0, Lpmg;->X:Ljava/lang/Object;
+    const-class v0, Lpmg;
 
-    iget p1, p0, Lpmg;->Z:I
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    const/high16 v0, -0x80000000
+    move-result-object p0
 
-    or-int/2addr p1, v0
+    check-cast p0, Lpmg;
 
-    iput p1, p0, Lpmg;->Z:I
+    return-object p0
+.end method
 
-    iget-object p1, p0, Lpmg;->Y:Lxmg;
+.method public static values()[Lpmg;
+    .locals 1
 
-    const/4 v0, 0x0
+    sget-object v0, Lpmg;->o:[Lpmg;
 
-    invoke-virtual {p1, v0, p0}, Lxmg;->h(Lp0b;Lo84;)Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object v0
 
-    return-object p1
+    check-cast v0, [Lpmg;
+
+    return-object v0
 .end method

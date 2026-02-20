@@ -1,80 +1,122 @@
-.class public final Lzha;
-.super Lp6g;
+.class public Lzha;
+.super Lbia;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Lp58;
 
 
-# instance fields
-.field public synthetic o:J
+# direct methods
+.method public constructor <init>(Ljava/lang/Class;Ljava/lang/String;)V
+    .locals 6
+
+    const/4 v5, 0x0
+
+    sget-object v1, Lnx1;->NO_RECEIVER:Ljava/lang/Object;
+
+    const-string v4, "<v#0>"
+
+    move-object v0, p0
+
+    move-object v2, p1
+
+    move-object v3, p2
+
+    invoke-direct/range {v0 .. v5}, Lw3d;-><init>(Ljava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final computeReflected()Lh58;
+    .locals 1
 
-    check-cast p1, Ljava/lang/Number;
+    sget-object v0, Lazd;->a:Lbzd;
 
-    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-wide v0
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1, p2}, Lzha;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lzha;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lzha;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
+    return-object p0
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public final e()V
+    .locals 1
 
-    new-instance v0, Lzha;
+    invoke-virtual {p0}, Lw3d;->getReflected()Lv58;
 
-    const/4 v1, 0x2
+    move-result-object v0
 
-    invoke-direct {v0, v1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    check-cast v0, Lp58;
 
-    check-cast p1, Ljava/lang/Number;
+    check-cast v0, Lzha;
 
-    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
+    invoke-virtual {v0}, Lzha;->e()V
 
-    move-result-wide p1
+    return-void
+.end method
 
-    iput-wide p1, v0, Lzha;->o:J
+.method public get()Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p0}, Lzha;->getGetter()Ls58;
+
+    const/4 v0, 0x0
+
+    throw v0
+.end method
+
+.method public final getDelegate()Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p0}, Lw3d;->getReflected()Lv58;
+
+    move-result-object v0
+
+    check-cast v0, Lp58;
+
+    check-cast v0, Lzha;
+
+    invoke-virtual {v0}, Lzha;->getDelegate()Ljava/lang/Object;
+
+    move-result-object v0
 
     return-object v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final getGetter()Ls58;
+    .locals 1
 
-    iget-wide v0, p0, Lzha;->o:J
+    invoke-virtual {p0}, Lw3d;->getReflected()Lv58;
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    move-result-object v0
 
-    invoke-static {v0, v1}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+    check-cast v0, Lp58;
 
-    move-result-object p1
+    check-cast v0, Lzha;
+
+    invoke-virtual {v0}, Lzha;->getGetter()Ls58;
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lcom/my/tracker/userlifecycle/MyTrackerUserLifecycle;->trackLoginEvent(Ljava/lang/String;Ljava/lang/String;)V
+    return-object v0
+.end method
 
-    sget-object p1, Lb3h;->a:Lb3h;
+.method public final invoke()Ljava/lang/Object;
+    .locals 1
 
-    return-object p1
+    invoke-interface {p0}, Lt58;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public set(Ljava/lang/Object;)V
+    .locals 0
+
+    invoke-virtual {p0}, Lzha;->e()V
+
+    const/4 p1, 0x0
+
+    throw p1
 .end method

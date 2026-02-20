@@ -1,25 +1,32 @@
 .class public final Ll39;
-.super Lj39;
+.super Lk39;
 .source "SourceFile"
 
 
-# static fields
-.field public static final r:Ll39;
+# virtual methods
+.method public final H0(F)V
+    .locals 1
 
+    const/4 v0, 0x0
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
+    cmpl-float v0, p1, v0
 
-    new-instance v0, Lh39;
+    if-eqz v0, :cond_0
 
-    invoke-direct {v0}, Lh39;-><init>()V
+    iget-object v0, p0, Ld3;->b:Ljava/lang/Object;
 
-    new-instance v1, Ll39;
+    check-cast v0, Landroid/media/session/MediaController$TransportControls;
 
-    invoke-direct {v1, v0}, Lj39;-><init>(Lh39;)V
-
-    sput-object v1, Ll39;->r:Ll39;
+    invoke-static {v0, p1}, Ll95;->r(Landroid/media/session/MediaController$TransportControls;F)V
 
     return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "speed must not be zero"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

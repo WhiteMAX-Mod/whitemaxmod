@@ -1,53 +1,50 @@
-.class public final Lwu5;
-.super Lv7e;
+.class public interface abstract Lwu5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public final o:Ljava/util/HashMap;
-
-
-# direct methods
-.method public constructor <init>()V
-    .locals 1
-
-    invoke-direct {p0}, Lv7e;-><init>()V
-
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v0, p0, Lwu5;->o:Ljava/util/HashMap;
-
-    return-void
-.end method
+# interfaces
+.implements Lyj4;
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;)Ls7e;
-    .locals 1
-
-    iget-object v0, p0, Lwu5;->o:Ljava/util/HashMap;
-
-    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ls7e;
-
-    return-object p1
+.method public abstract J(IZ)Z
 .end method
 
-.method public final b(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public abstract K(I)I
+.end method
 
-    invoke-super {p0, p1}, Lv7e;->b(Ljava/lang/Object;)Ljava/lang/Object;
+.method public abstract P(IZ)Z
+.end method
 
-    move-result-object v0
+.method public abstract d([BIIZ)Z
+.end method
 
-    iget-object v1, p0, Lwu5;->o:Ljava/util/HashMap;
+.method public abstract getLength()J
+.end method
 
-    invoke-virtual {v1, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+.method public abstract getPosition()J
+.end method
 
-    return-object v0
+.method public abstract i(I[BI)V
+.end method
+
+.method public abstract m([BIIZ)Z
+.end method
+
+.method public abstract o()J
+.end method
+
+.method public abstract q(I)V
+.end method
+
+.method public abstract readFully([BII)V
+.end method
+
+.method public abstract t(I[BI)I
+.end method
+
+.method public abstract x()V
+.end method
+
+.method public abstract y(I)V
 .end method

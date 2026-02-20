@@ -1,58 +1,84 @@
-.class public final synthetic Lbn5;
+.class public final Lbn5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lnq6;
+.implements Lna5;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lnq6;
+.field public final a:Landroidx/media3/exoplayer/drm/DrmSession$DrmSessionException;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILnq6;)V
+.method public constructor <init>(Landroidx/media3/exoplayer/drm/DrmSession$DrmSessionException;)V
     .locals 0
 
-    iput p1, p0, Lbn5;->a:I
-
-    iput-object p2, p0, Lbn5;->b:Lnq6;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lbn5;->a:Landroidx/media3/exoplayer/drm/DrmSession$DrmSessionException;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final a()Ljava/util/UUID;
     .locals 1
 
-    iget v0, p0, Lbn5;->a:I
+    sget-object v0, Lxz0;->a:Ljava/util/UUID;
 
-    packed-switch v0, :pswitch_data_0
+    return-object v0
+.end method
 
-    iget-object v0, p0, Lbn5;->b:Lnq6;
+.method public final b()Z
+    .locals 1
 
-    invoke-interface {v0, p1}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 v0, 0x0
 
-    return-object p1
+    return v0
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, Lbn5;->b:Lnq6;
+.method public final c(Lra5;)V
+    .locals 0
 
-    check-cast p1, Ljava/lang/Throwable;
+    return-void
+.end method
 
-    invoke-static {v0, p1}, Lkotlinx/coroutines/internal/ExceptionsConstructorKt;->b(Lnq6;Ljava/lang/Throwable;)Ljava/lang/Throwable;
+.method public final d(Lra5;)V
+    .locals 0
 
-    move-result-object p1
+    return-void
+.end method
 
-    return-object p1
+.method public final e(Ljava/lang/String;)Z
+    .locals 0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final f()Landroidx/media3/exoplayer/drm/DrmSession$DrmSessionException;
+    .locals 1
+
+    iget-object v0, p0, Lbn5;->a:Landroidx/media3/exoplayer/drm/DrmSession$DrmSessionException;
+
+    return-object v0
+.end method
+
+.method public final g()Lyf4;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final getState()I
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
 .end method

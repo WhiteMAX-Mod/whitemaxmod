@@ -6,9 +6,9 @@
 # instance fields
 .field public a:Ljava/util/concurrent/ExecutorService;
 
-.field public b:Luy6;
+.field public b:Lo07;
 
-.field public c:Lcz6;
+.field public c:Lw07;
 
 .field public d:I
 
@@ -22,20 +22,20 @@
 
 
 # virtual methods
-.method public build()Lnv4;
+.method public build()Lww4;
     .locals 9
 
-    new-instance v0, Lnv4;
+    new-instance v0, Lww4;
 
     iget-boolean v1, p0, Landroidx/media3/effect/DefaultVideoFrameProcessor$Factory$Builder;->f:Z
 
     xor-int/lit8 v1, v1, 0x1
 
-    iget-object v2, p0, Landroidx/media3/effect/DefaultVideoFrameProcessor$Factory$Builder;->b:Luy6;
+    iget-object v2, p0, Landroidx/media3/effect/DefaultVideoFrameProcessor$Factory$Builder;->b:Lo07;
 
     iget-object v3, p0, Landroidx/media3/effect/DefaultVideoFrameProcessor$Factory$Builder;->a:Ljava/util/concurrent/ExecutorService;
 
-    iget-object v4, p0, Landroidx/media3/effect/DefaultVideoFrameProcessor$Factory$Builder;->c:Lcz6;
+    iget-object v4, p0, Landroidx/media3/effect/DefaultVideoFrameProcessor$Factory$Builder;->c:Lw07;
 
     iget v5, p0, Landroidx/media3/effect/DefaultVideoFrameProcessor$Factory$Builder;->d:I
 
@@ -45,7 +45,7 @@
 
     iget-boolean v8, p0, Landroidx/media3/effect/DefaultVideoFrameProcessor$Factory$Builder;->h:Z
 
-    invoke-direct/range {v0 .. v8}, Lnv4;-><init>(ZLuy6;Ljava/util/concurrent/ExecutorService;Lcz6;IZZZ)V
+    invoke-direct/range {v0 .. v8}, Lww4;-><init>(ZLo07;Ljava/util/concurrent/ExecutorService;Lw07;IZZZ)V
 
     return-object v0
 .end method

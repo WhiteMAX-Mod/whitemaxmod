@@ -1,98 +1,50 @@
-.class public abstract Ltnj;
+.class public final Ltnj;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Loza;
+
+
+# static fields
+.field public static final a:Ltnj;
+
 
 # direct methods
-.method public static a(Ljava/io/File;Ljava/io/File;)V
+.method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Ljava/io/FileInputStream;
+    new-instance v0, Ltnj;
 
-    invoke-direct {v0, p0}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    :try_start_0
-    new-instance p0, Ljava/io/FileOutputStream;
+    sput-object v0, Ltnj;->a:Ltnj;
 
-    invoke-direct {p0, p1}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
+    new-instance v0, Lp7j;
 
-    new-instance p1, Ljava/util/zip/GZIPOutputStream;
+    const/4 v1, 0x1
 
-    invoke-direct {p1, p0}, Ljava/util/zip/GZIPOutputStream;-><init>(Ljava/io/OutputStream;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-direct {v0, v1}, Lp7j;-><init>(I)V
 
-    :try_start_1
-    invoke-static {v0, p1}, Lsaj;->a(Ljava/io/InputStream;Ljava/io/OutputStream;)J
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+    const-class v1, Lh8j;
 
-    :try_start_2
-    invoke-interface {p1}, Ljava/io/Closeable;->close()V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
 
-    invoke-virtual {v0}, Ljava/io/FileInputStream;->close()V
+    move-result-object v0
+
+    invoke-static {v0}, Leni;->m(Ljava/util/HashMap;)V
 
     return-void
+.end method
 
-    :catchall_0
-    move-exception p0
 
-    goto :goto_0
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    :catchall_1
-    move-exception p0
+    invoke-static {p1}, Lkb0;->d(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    :try_start_3
-    throw p0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_2
-
-    :catchall_2
-    move-exception v1
-
-    :try_start_4
-    invoke-static {p1, p0}, Lyij;->b(Ljava/io/Closeable;Ljava/lang/Throwable;)V
-
-    throw v1
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
-
-    :goto_0
-    :try_start_5
-    throw p0
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_3
-
-    :catchall_3
-    move-exception p1
-
-    invoke-static {v0, p0}, Lyij;->b(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+    move-result-object p1
 
     throw p1
-.end method
-
-.method public static b(Landroid/graphics/drawable/Drawable;I)V
-    .locals 0
-
-    invoke-static {p0, p1}, Lv75;->g(Landroid/graphics/drawable/Drawable;I)V
-
-    return-void
-.end method
-
-.method public static c(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
-    .locals 0
-
-    invoke-static {p0, p1}, Lv75;->h(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
-
-    return-void
-.end method
-
-.method public static d(Landroid/graphics/drawable/Drawable;Landroid/graphics/PorterDuff$Mode;)V
-    .locals 0
-
-    invoke-static {p0, p1}, Lv75;->i(Landroid/graphics/drawable/Drawable;Landroid/graphics/PorterDuff$Mode;)V
-
-    return-void
 .end method

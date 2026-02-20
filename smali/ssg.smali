@@ -1,81 +1,47 @@
-.class public final enum Lssg;
-.super Ljava/lang/Enum;
+.class public abstract Lssg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final enum a:Lssg;
-
-.field public static final enum b:Lssg;
-
-.field public static final synthetic c:[Lssg;
+# interfaces
+.implements Len3;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public static a(J)J
+    .locals 7
 
-    new-instance v0, Lssg;
+    invoke-static {}, Ltaa;->a()J
 
-    const-string v1, "DEFERRED"
+    move-result-wide v0
 
-    const/4 v2, 0x0
+    sget-object v2, Lmc5;->b:Lmc5;
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    const-wide/16 v3, 0x1
 
-    sput-object v0, Lssg;->a:Lssg;
+    sub-long v5, p0, v3
 
-    new-instance v1, Lssg;
+    or-long/2addr v3, v5
 
-    const-string v2, "IMMEDIATE"
+    const-wide v5, 0x7fffffffffffffffL
 
-    const/4 v3, 0x1
+    cmp-long v3, v3, v5
 
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    if-nez v3, :cond_0
 
-    sput-object v1, Lssg;->b:Lssg;
+    invoke-static {p0, p1}, Lkgj;->a(J)J
 
-    new-instance v2, Lssg;
+    move-result-wide p0
 
-    const-string v3, "EXCLUSIVE"
+    invoke-static {p0, p1}, Lgc5;->s(J)J
 
-    const/4 v4, 0x2
+    move-result-wide p0
 
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    return-wide p0
 
-    filled-new-array {v0, v1, v2}, [Lssg;
+    :cond_0
+    invoke-static {v0, v1, p0, p1, v2}, Lkgj;->e(JJLmc5;)J
 
-    move-result-object v0
+    move-result-wide p0
 
-    sput-object v0, Lssg;->c:[Lssg;
-
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lssg;
-    .locals 1
-
-    const-class v0, Lssg;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lssg;
-
-    return-object p0
-.end method
-
-.method public static values()[Lssg;
-    .locals 1
-
-    sget-object v0, Lssg;->c:[Lssg;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lssg;
-
-    return-object v0
+    return-wide p0
 .end method

@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract a(Lga0;Ljava/util/concurrent/Executor;)Lq60;
+.method public abstract D(Ljava/lang/Object;Lv58;)Ljava/lang/Object;
 .end method

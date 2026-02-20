@@ -2,167 +2,200 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lfjf;
-
 
 # instance fields
-.field public final a:Landroid/net/Uri;
+.field public final a:Ljava/util/Random;
+
+.field public final b:[I
+
+.field public final c:[I
 
 
 # direct methods
-.method public constructor <init>(Landroid/net/Uri;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
+    .line 1
+    new-instance v0, Ljava/util/Random;
+
+    invoke-direct {v0}, Ljava/util/Random;-><init>()V
+
+    invoke-direct {p0, v0}, Lejf;-><init>(Ljava/util/Random;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/util/Random;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    .line 8
+    new-array v0, v0, [I
+
+    .line 9
+    invoke-direct {p0, v0, p1}, Lejf;-><init>([ILjava/util/Random;)V
+
+    return-void
+.end method
+
+.method public constructor <init>([ILjava/util/Random;)V
+    .locals 2
+
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lejf;->a:Landroid/net/Uri;
+    .line 3
+    iput-object p1, p0, Lejf;->b:[I
 
+    .line 4
+    iput-object p2, p0, Lejf;->a:Ljava/util/Random;
+
+    .line 5
+    array-length p2, p1
+
+    new-array p2, p2, [I
+
+    iput-object p2, p0, Lejf;->c:[I
+
+    const/4 p2, 0x0
+
+    .line 6
+    :goto_0
+    array-length v0, p1
+
+    if-ge p2, v0, :cond_0
+
+    .line 7
+    iget-object v0, p0, Lejf;->c:[I
+
+    aget v1, p1, p2
+
+    aput p2, v0, v1
+
+    add-int/lit8 p2, p2, 0x1
+
+    goto :goto_0
+
+    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/media/MediaPlayer;Landroid/content/Context;)Z
-    .locals 3
+.method public final a(I)Lejf;
+    .locals 9
 
-    const/4 v0, 0x0
+    new-array v0, p1, [I
 
-    iget-object v1, p0, Lejf;->a:Landroid/net/Uri;
+    new-array v1, p1, [I
 
-    if-nez v1, :cond_0
+    const/4 v2, 0x0
 
-    return v0
+    move v3, v2
+
+    :goto_0
+    iget-object v4, p0, Lejf;->b:[I
+
+    iget-object v5, p0, Lejf;->a:Ljava/util/Random;
+
+    if-ge v3, p1, :cond_0
+
+    array-length v4, v4
+
+    add-int/lit8 v4, v4, 0x1
+
+    invoke-virtual {v5, v4}, Ljava/util/Random;->nextInt(I)I
+
+    move-result v4
+
+    aput v4, v0, v3
+
+    add-int/lit8 v4, v3, 0x1
+
+    invoke-virtual {v5, v4}, Ljava/util/Random;->nextInt(I)I
+
+    move-result v5
+
+    aget v6, v1, v5
+
+    aput v6, v1, v3
+
+    aput v3, v1, v5
+
+    move v3, v4
+
+    goto :goto_0
 
     :cond_0
-    :try_start_0
-    invoke-virtual {p1, p2, v1}, Landroid/media/MediaPlayer;->setDataSource(Landroid/content/Context;Landroid/net/Uri;)V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-static {v0}, Ljava/util/Arrays;->sort([I)V
 
-    const/4 p1, 0x1
+    array-length v3, v4
 
-    return p1
+    add-int/2addr v3, p1
 
-    :catch_0
-    move-exception p1
+    new-array v3, v3, [I
 
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    move v6, v2
 
-    move-result-object p2
+    move v7, v6
 
-    new-array v1, v0, [Ljava/lang/Object;
+    :goto_1
+    array-length v8, v4
 
-    const-string v2, "SoundConfigTag"
+    add-int/2addr v8, p1
 
-    invoke-static {v2, p1, p2, v1}, Lc5j;->h(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    if-ge v2, v8, :cond_3
 
-    return v0
-.end method
+    if-ge v6, p1, :cond_1
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    aget v8, v0, v6
 
-    if-ne p0, p1, :cond_0
+    if-ne v7, v8, :cond_1
+
+    add-int/lit8 v8, v6, 0x1
+
+    aget v6, v1, v6
+
+    aput v6, v3, v2
+
+    move v6, v8
+
+    goto :goto_2
+
+    :cond_1
+    add-int/lit8 v8, v7, 0x1
+
+    aget v7, v4, v7
+
+    aput v7, v3, v2
+
+    if-ltz v7, :cond_2
+
+    add-int/2addr v7, p1
+
+    aput v7, v3, v2
+
+    :cond_2
+    move v7, v8
+
+    :goto_2
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    :cond_0
-    instance-of v0, p1, Lejf;
+    :cond_3
+    new-instance p1, Lejf;
 
-    if-nez v0, :cond_1
+    new-instance v0, Ljava/util/Random;
 
-    goto :goto_0
+    invoke-virtual {v5}, Ljava/util/Random;->nextLong()J
 
-    :cond_1
-    check-cast p1, Lejf;
+    move-result-wide v1
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-direct {v0, v1, v2}, Ljava/util/Random;-><init>(J)V
 
-    iget-object v0, p0, Lejf;->a:Landroid/net/Uri;
+    invoke-direct {p1, v3, v0}, Lejf;-><init>([ILjava/util/Random;)V
 
-    iget-object p1, p1, Lejf;->a:Landroid/net/Uri;
-
-    invoke-static {v0, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_2
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    const/4 v0, 0x2
-
-    invoke-static {v0}, Lt02;->t(I)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lejf;->a:Landroid/net/Uri;
-
-    if-nez v1, :cond_0
-
-    const/4 v1, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v1}, Landroid/net/Uri;->hashCode()I
-
-    move-result v1
-
-    :goto_0
-    add-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "SystemRingtone(type="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const/4 v1, 0x2
-
-    invoke-static {v1}, Liwd;->l(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", uri="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lejf;->a:Landroid/net/Uri;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

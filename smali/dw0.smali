@@ -4,18 +4,32 @@
 
 
 # instance fields
-.field public final a:Lpo4;
+.field public a:Ldw0;
 
-.field public b:Z
+.field public b:I
+
+.field public c:Ljava/util/LinkedList;
+
+.field public d:Ldw0;
 
 
-# direct methods
-.method public constructor <init>(Lpo4;)V
-    .locals 0
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iput-object p1, p0, Ldw0;->a:Lpo4;
+    const-string v1, "LinkedEntry(key: "
 
-    return-void
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v1, p0, Ldw0;->b:I
+
+    const-string v2, ")"
+
+    invoke-static {v0, v1, v2}, Ltx8;->m(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

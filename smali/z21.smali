@@ -1,85 +1,92 @@
-.class public final Lz21;
+.class public final synthetic Lz21;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager$FeatureListener;
+.implements Lis6;
 
 
 # instance fields
-.field public final synthetic a:Ld31;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lq31;
+
+.field public final synthetic c:Z
 
 
 # direct methods
-.method public constructor <init>(Ld31;)V
+.method public synthetic constructor <init>(Lq31;ZI)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p3, p0, Lz21;->a:I
 
-    iput-object p1, p0, Lz21;->a:Ld31;
+    iput-object p1, p0, Lz21;->b:Lq31;
+
+    iput-boolean p2, p0, Lz21;->c:Z
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onFeatureEnabledChanged(Lra1;Z)V
-    .locals 9
+.method public final invoke()Ljava/lang/Object;
+    .locals 11
 
-    invoke-super {p0, p1, p2}, Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager$FeatureListener;->onFeatureEnabledChanged(Lra1;Z)V
+    iget v0, p0, Lz21;->a:I
 
-    sget-object v0, Lra1;->b:Lra1;
+    packed-switch v0, :pswitch_data_0
 
-    if-eq p1, v0, :cond_0
+    iget-object v0, p0, Lz21;->b:Lq31;
 
-    goto :goto_2
+    iget-boolean v5, p0, Lz21;->c:Z
 
-    :cond_0
-    sget-object p1, Lc5j;->a:Ledb;
+    sget-object v1, Ltej;->a:Lafb;
 
-    if-nez p1, :cond_1
+    if-nez v1, :cond_0
 
     goto :goto_0
 
+    :cond_0
+    sget-object v2, Lzm8;->d:Lzm8;
+
+    invoke-virtual {v1, v2}, Lafb;->b(Lzm8;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    const-string v3, "Screen sharing in call was changed on "
+
+    const-string v4, " success"
+
+    invoke-static {v3, v4, v5}, Ljye;->k(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+
+    move-result-object v3
+
+    const/4 v4, 0x0
+
+    const-string v6, "CallAdminSettingsController"
+
+    invoke-virtual {v1, v2, v6, v3, v4}, Lafb;->c(Lzm8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
     :cond_1
-    sget-object v0, Lkk8;->d:Lkk8;
-
-    invoke-virtual {p1, v0}, Ledb;->b(Lkk8;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    const-string v1, "Record in call was changed for me to "
-
-    invoke-static {v1, p2}, Lva9;->e(Ljava/lang/String;Z)Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    const-string v3, "CallAdminSettingsController"
-
-    invoke-virtual {p1, v0, v3, v1, v2}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    :goto_0
+    iget-object v9, v0, Lq31;->E0:Lhxf;
 
     :cond_2
-    :goto_0
-    iget-object p1, p0, Lz21;->a:Ld31;
+    invoke-virtual {v9}, Lhxf;->getValue()Ljava/lang/Object;
 
-    iget-object p1, p1, Ld31;->F0:Lspf;
+    move-result-object v10
 
-    :goto_1
-    invoke-virtual {p1}, Lspf;->getValue()Ljava/lang/Object;
+    move-object v1, v10
 
-    move-result-object v0
-
-    move-object v1, v0
-
-    check-cast v1, Lca;
+    check-cast v1, Ltb;
 
     const/4 v7, 0x0
 
-    const/16 v8, 0x6f
+    const/16 v8, 0x77
 
     const/4 v2, 0x0
 
@@ -87,132 +94,200 @@
 
     const/4 v4, 0x0
 
-    const/4 v5, 0x0
+    const/4 v6, 0x0
 
-    move v6, p2
+    invoke-static/range {v1 .. v8}, Ltb;->a(Ltb;ZZZZZZI)Ltb;
 
-    invoke-static/range {v1 .. v8}, Lca;->a(Lca;ZZZZZZI)Lca;
+    move-result-object v1
 
-    move-result-object p2
-
-    invoke-virtual {p1, v0, p2}, Lspf;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_3
-
-    :goto_2
-    return-void
-
-    :cond_3
-    move p2, v6
-
-    goto :goto_1
-.end method
-
-.method public final onFeatureRolesChanged(Lra1;Lru/ok/android/externcalls/sdk/feature/roles/FeatureRoles;)V
-    .locals 12
-
-    invoke-super {p0, p1, p2}, Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager$FeatureListener;->onFeatureRolesChanged(Lra1;Lru/ok/android/externcalls/sdk/feature/roles/FeatureRoles;)V
-
-    sget-object v0, Lra1;->b:Lra1;
-
-    if-eq p1, v0, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    sget-object p1, Lc5j;->a:Ledb;
-
-    if-nez p1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    sget-object v0, Lkk8;->d:Lkk8;
-
-    invoke-virtual {p1, v0}, Ledb;->b(Lkk8;)Z
+    invoke-virtual {v9, v10, v1}, Lhxf;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    iget-object v0, v0, Lq31;->C0:Lzef;
 
-    const-string v2, "Record in call was changed for role="
+    new-instance v1, Lwc;
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const/4 v2, 0x1
 
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-direct {v1, v2, v5}, Lwc;-><init>(ZZ)V
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lzef;->h(Ljava/lang/Object;)Z
 
-    move-result-object v1
+    :goto_1
+    sget-object v0, Lmah;->a:Lmah;
+
+    return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Lz21;->b:Lq31;
+
+    iget-boolean v3, p0, Lz21;->c:Z
+
+    sget-object v1, Ltej;->a:Lafb;
+
+    if-nez v1, :cond_3
+
+    goto :goto_2
+
+    :cond_3
+    sget-object v2, Lzm8;->d:Lzm8;
+
+    invoke-virtual {v1, v2}, Lafb;->b(Lzm8;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_4
+
+    const-string v4, "Cameras in call was changed on "
+
+    const-string v5, " success"
+
+    invoke-static {v4, v5, v3}, Ljye;->k(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+
+    move-result-object v4
+
+    const/4 v5, 0x0
+
+    const-string v6, "CallAdminSettingsController"
+
+    invoke-virtual {v1, v2, v6, v4, v5}, Lafb;->c(Lzm8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_4
+    :goto_2
+    iget-object v9, v0, Lq31;->E0:Lhxf;
+
+    :cond_5
+    invoke-virtual {v9}, Lhxf;->getValue()Ljava/lang/Object;
+
+    move-result-object v10
+
+    move-object v1, v10
+
+    check-cast v1, Ltb;
+
+    const/4 v7, 0x0
+
+    const/16 v8, 0x7d
 
     const/4 v2, 0x0
 
-    const-string v3, "CallAdminSettingsController"
-
-    invoke-virtual {p1, v0, v3, v1, v2}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_2
-    :goto_0
-    instance-of v9, p2, Lru/ok/android/externcalls/sdk/feature/roles/FeatureRoles$EnabledForAll;
-
-    iget-object p1, p0, Lz21;->a:Ld31;
-
-    iget-object p1, p1, Ld31;->F0:Lspf;
-
-    :cond_3
-    invoke-virtual {p1}, Lspf;->getValue()Ljava/lang/Object;
-
-    move-result-object p2
-
-    move-object v4, p2
-
-    check-cast v4, Lca;
-
-    const/4 v10, 0x0
-
-    const/16 v11, 0x6f
+    const/4 v4, 0x0
 
     const/4 v5, 0x0
 
     const/4 v6, 0x0
 
+    invoke-static/range {v1 .. v8}, Ltb;->a(Ltb;ZZZZZZI)Ltb;
+
+    move-result-object v1
+
+    invoke-virtual {v9, v10, v1}, Lhxf;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_5
+
+    iget-object v0, v0, Lq31;->C0:Lzef;
+
+    new-instance v1, Lqc;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v1, v2, v3}, Lqc;-><init>(ZZ)V
+
+    invoke-virtual {v0, v1}, Lzef;->h(Ljava/lang/Object;)Z
+
+    goto :goto_1
+
+    :pswitch_1
+    iget-object v0, p0, Lz21;->b:Lq31;
+
+    iget-boolean v4, p0, Lz21;->c:Z
+
+    sget-object v1, Ltej;->a:Lafb;
+
+    if-nez v1, :cond_6
+
+    goto :goto_3
+
+    :cond_6
+    sget-object v2, Lzm8;->d:Lzm8;
+
+    invoke-virtual {v1, v2}, Lafb;->b(Lzm8;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_7
+
+    const-string v3, "Microphone in call was changed on "
+
+    const-string v5, " success"
+
+    invoke-static {v3, v5, v4}, Ljye;->k(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+
+    move-result-object v3
+
+    const/4 v5, 0x0
+
+    const-string v6, "CallAdminSettingsController"
+
+    invoke-virtual {v1, v2, v6, v3, v5}, Lafb;->c(Lzm8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_7
+    :goto_3
+    iget-object v9, v0, Lq31;->E0:Lhxf;
+
+    :cond_8
+    invoke-virtual {v9}, Lhxf;->getValue()Ljava/lang/Object;
+
+    move-result-object v10
+
+    move-object v1, v10
+
+    check-cast v1, Ltb;
+
     const/4 v7, 0x0
 
-    const/4 v8, 0x0
+    const/16 v8, 0x7b
 
-    invoke-static/range {v4 .. v11}, Lca;->a(Lca;ZZZZZZI)Lca;
+    const/4 v2, 0x0
 
-    move-result-object v0
+    const/4 v3, 0x0
 
-    invoke-virtual {p1, p2, v0}, Lspf;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    const/4 v5, 0x0
 
-    move-result p2
+    const/4 v6, 0x0
 
-    if-eqz p2, :cond_3
+    invoke-static/range {v1 .. v8}, Ltb;->a(Ltb;ZZZZZZI)Ltb;
 
-    iget-object p1, p0, Lz21;->a:Ld31;
+    move-result-object v1
 
-    invoke-virtual {p1}, Ld31;->j()Z
+    invoke-virtual {v9, v10, v1}, Lhxf;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result p1
+    move-result v1
 
-    if-eqz p1, :cond_4
+    if-eqz v1, :cond_8
 
-    iget-object p1, p0, Lz21;->a:Ld31;
+    iget-object v0, v0, Lq31;->C0:Lzef;
 
-    iget-object p1, p1, Ld31;->D0:Li7f;
+    new-instance v1, Lsc;
 
-    new-instance p2, Leb;
+    const/4 v2, 0x1
 
-    invoke-direct {p2, v9}, Leb;-><init>(Z)V
+    invoke-direct {v1, v2, v4}, Lsc;-><init>(ZZ)V
 
-    invoke-virtual {p1, p2}, Li7f;->h(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v1}, Lzef;->h(Ljava/lang/Object;)Z
 
-    :cond_4
-    :goto_1
-    return-void
+    goto/16 :goto_1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

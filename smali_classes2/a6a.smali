@@ -1,115 +1,36 @@
 .class public final La6a;
-.super Ljava/lang/Object;
+.super Lhmf;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:J
+# virtual methods
+.method public final y(Lmg8;)V
+    .locals 2
 
-.field public final b:Ljava/lang/CharSequence;
+    instance-of v0, p1, Lx5a;
 
-.field public final c:Ljava/lang/CharSequence;
+    if-nez v0, :cond_0
 
-.field public final d:Ljava/lang/String;
+    return-void
 
-.field public final e:[Ljava/lang/Object;
+    :cond_0
+    iget-object v0, p0, Lpyd;->a:Landroid/view/View;
 
-.field public final f:Ljava/lang/CharSequence;
+    check-cast v0, Lrl;
 
-.field public final g:Ljava/lang/String;
+    check-cast p1, Lx5a;
 
-.field public final h:J
+    iget-object v1, p1, Lx5a;->c:Landroid/graphics/drawable/Drawable;
 
-.field public final i:I
+    invoke-virtual {v0, v1}, Lrl;->setReaction(Landroid/graphics/drawable/Drawable;)V
 
-.field public final j:I
+    iget-object p1, p1, Lx5a;->a:Lcpg;
 
-.field public final k:Z
+    invoke-virtual {p1, p0}, Lhpg;->a(Lpyd;)Ljava/lang/CharSequence;
 
-.field public final l:Z
+    move-result-object p1
 
-.field public final m:Z
-
-.field public final n:J
-
-.field public final o:Ljava/lang/Long;
-
-.field public final p:J
-
-.field public final q:Ljava/lang/CharSequence;
-
-.field public final r:Ljava/lang/String;
-
-.field public final s:[B
-
-.field public final t:Ljava/lang/CharSequence;
-
-.field public final u:Z
-
-
-# direct methods
-.method public constructor <init>(JLjava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/CharSequence;Ljava/lang/String;JIIZZZJLjava/lang/Long;JLjava/lang/CharSequence;Ljava/lang/String;[BLjava/lang/CharSequence;Z)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, La6a;->a:J
-
-    iput-object p3, p0, La6a;->b:Ljava/lang/CharSequence;
-
-    iput-object p4, p0, La6a;->c:Ljava/lang/CharSequence;
-
-    iput-object p5, p0, La6a;->d:Ljava/lang/String;
-
-    iput-object p6, p0, La6a;->e:[Ljava/lang/Object;
-
-    iput-object p7, p0, La6a;->f:Ljava/lang/CharSequence;
-
-    iput-object p8, p0, La6a;->g:Ljava/lang/String;
-
-    iput-wide p9, p0, La6a;->h:J
-
-    iput p11, p0, La6a;->i:I
-
-    iput p12, p0, La6a;->j:I
-
-    iput-boolean p13, p0, La6a;->k:Z
-
-    iput-boolean p14, p0, La6a;->l:Z
-
-    iput-boolean p15, p0, La6a;->m:Z
-
-    move-wide/from16 p1, p16
-
-    iput-wide p1, p0, La6a;->n:J
-
-    move-object/from16 p1, p18
-
-    iput-object p1, p0, La6a;->o:Ljava/lang/Long;
-
-    move-wide/from16 p1, p19
-
-    iput-wide p1, p0, La6a;->p:J
-
-    move-object/from16 p1, p21
-
-    iput-object p1, p0, La6a;->q:Ljava/lang/CharSequence;
-
-    move-object/from16 p1, p22
-
-    iput-object p1, p0, La6a;->r:Ljava/lang/String;
-
-    move-object/from16 p1, p23
-
-    iput-object p1, p0, La6a;->s:[B
-
-    move-object/from16 p1, p24
-
-    iput-object p1, p0, La6a;->t:Ljava/lang/CharSequence;
-
-    move/from16 p1, p25
-
-    iput-boolean p1, p0, La6a;->u:Z
+    invoke-virtual {v0, p1}, Lrl;->setText(Ljava/lang/CharSequence;)V
 
     return-void
 .end method

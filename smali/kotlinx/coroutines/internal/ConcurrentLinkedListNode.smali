@@ -28,12 +28,12 @@
         "",
         "onClosedAction",
         "nextOrIfClosed",
-        "(Llq6;)Lkotlinx/coroutines/internal/ConcurrentLinkedListNode;",
+        "(Lis6;)Lkotlinx/coroutines/internal/ConcurrentLinkedListNode;",
         "value",
         "",
         "trySetNext",
         "(Lkotlinx/coroutines/internal/ConcurrentLinkedListNode;)Z",
-        "Lb3h;",
+        "Lmah;",
         "cleanPrev",
         "()V",
         "markAsClosed",
@@ -267,14 +267,14 @@
     return-void
 .end method
 
-.method private final synthetic update$atomicfu$ATOMIC_FIELD_UPDATER$Any(Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Ljava/lang/Object;Lnq6;)V
+.method private final synthetic update$atomicfu$ATOMIC_FIELD_UPDATER$Any(Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Ljava/lang/Object;Lks6;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;",
             "Ljava/lang/Object;",
-            "Lnq6;",
+            "Lks6;",
             ")V"
         }
     .end annotation
@@ -284,7 +284,7 @@
 
     move-result-object v0
 
-    invoke-interface {p3, v0}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p3, v0}, Lks6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -430,12 +430,12 @@
     return v0
 .end method
 
-.method public final nextOrIfClosed(Llq6;)Lkotlinx/coroutines/internal/ConcurrentLinkedListNode;
+.method public final nextOrIfClosed(Lis6;)Lkotlinx/coroutines/internal/ConcurrentLinkedListNode;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Llq6;",
+            "Lis6;",
             ")TN;"
         }
     .end annotation
@@ -455,7 +455,7 @@
     return-object v0
 
     :cond_0
-    invoke-interface {p1}, Llq6;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lis6;->invoke()Ljava/lang/Object;
 
     new-instance p1, Lkotlin/KotlinNothingValueException;
 

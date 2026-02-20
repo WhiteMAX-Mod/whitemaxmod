@@ -1,60 +1,23 @@
-.class public final Ljpa;
-.super Licg;
+.class public final synthetic Ljpa;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public c:Lod2;
+.field public final synthetic a:Lkpa;
+
+.field public final synthetic b:Landroid/content/Context;
 
 
-# virtual methods
-.method public final d(Lpq9;Ljava/lang/String;)V
-    .locals 1
+# direct methods
+.method public synthetic constructor <init>(Lkpa;Landroid/content/Context;)V
+    .locals 0
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v0, "chat"
+    iput-object p1, p0, Ljpa;->a:Lkpa;
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_0
-
-    invoke-virtual {p1}, Lpq9;->B()V
+    iput-object p2, p0, Ljpa;->b:Landroid/content/Context;
 
     return-void
-
-    :cond_0
-    invoke-static {p1}, Lod2;->a(Lpq9;)Lod2;
-
-    move-result-object p1
-
-    iput-object p1, p0, Ljpa;->c:Lod2;
-
-    return-void
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    iget-object v0, p0, Ljpa;->c:Lod2;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "{chat="
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, "}"
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

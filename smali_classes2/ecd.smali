@@ -3,6 +3,4 @@
 
 
 # static fields
-.field public static oneme_folders_picker_snackbar_add_channel_title:I = 0x7f110023
-
-.field public static oneme_folders_picker_snackbar_add_chat_title:I = 0x7f110024
+.field public static icon_wrapper_20:I = 0x7f08082d

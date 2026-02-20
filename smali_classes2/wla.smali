@@ -1,31 +1,49 @@
 .class public final Lwla;
-.super Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+.super Lda4;
 .source "SourceFile"
 
 
+# instance fields
+.field public final synthetic X:Lxla;
+
+.field public Y:I
+
+.field public d:Loia;
+
+.field public synthetic o:Ljava/lang/Object;
+
+
+# direct methods
+.method public constructor <init>(Lxla;Lda4;)V
+    .locals 0
+
+    iput-object p1, p0, Lwla;->X:Lxla;
+
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public final dispatchApplyWindowInsets(Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
+    iput-object p1, p0, Lwla;->o:Ljava/lang/Object;
 
-    move-result v0
+    iget p1, p0, Lwla;->Y:I
 
-    const/4 v1, 0x0
+    const/high16 v0, -0x80000000
 
-    :goto_0
-    if-ge v1, v0, :cond_0
+    or-int/2addr p1, v0
 
-    invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+    iput p1, p0, Lwla;->Y:I
 
-    move-result-object v2
+    iget-object p1, p0, Lwla;->X:Lxla;
 
-    invoke-virtual {v2, p1}, Landroid/view/View;->dispatchApplyWindowInsets(Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
+    invoke-static {p1, p0}, Lxla;->a(Lxla;Lda4;)Ljava/lang/Object;
 
-    add-int/lit8 v1, v1, 0x1
+    move-result-object p1
 
-    goto :goto_0
-
-    :cond_0
     return-object p1
 .end method

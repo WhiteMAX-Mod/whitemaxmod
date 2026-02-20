@@ -1,95 +1,136 @@
 .class public final Lo3f;
-.super Lie0;
+.super Lpdg;
 .source "SourceFile"
+
+# interfaces
+.implements Lys6;
 
 
 # instance fields
-.field public final b:Ljava/lang/String;
+.field public final synthetic X:Lv3f;
+
+.field public final synthetic Y:Ljava/lang/String;
+
+.field public final synthetic o:Landroid/graphics/RectF;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 1
+.method public constructor <init>(Landroid/graphics/RectF;Lv3f;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    const/16 v0, 0x15
+    iput-object p1, p0, Lo3f;->o:Landroid/graphics/RectF;
 
-    invoke-direct {p0, v0}, Lie0;-><init>(I)V
+    iput-object p2, p0, Lo3f;->X:Lv3f;
 
-    iput-object p1, p0, Lo3f;->b:Ljava/lang/String;
+    iput-object p3, p0, Lo3f;->Y:Ljava/lang/String;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p4}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p1, Lnd4;
 
-    if-ne p0, p1, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return v0
+    invoke-virtual {p0, p1, p2}, Lo3f;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of v1, p1, Lo3f;
+    move-result-object p1
 
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
     check-cast p1, Lo3f;
 
-    iget-object v1, p0, Lo3f;->b:Ljava/lang/String;
+    sget-object p2, Lmah;->a:Lmah;
 
-    iget-object p1, p1, Lo3f;->b:Ljava/lang/String;
+    invoke-virtual {p1, p2}, Lo3f;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
+    return-object p2
 .end method
 
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lo3f;->b:Ljava/lang/String;
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    return v0
-
-    :cond_0
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 3
 
-    const-string v0, "OpenSystemRingtones(selected="
+    new-instance p1, Lo3f;
 
-    const-string v1, ")"
+    iget-object v0, p0, Lo3f;->X:Lv3f;
 
-    iget-object v2, p0, Lo3f;->b:Ljava/lang/String;
+    iget-object v1, p0, Lo3f;->Y:Ljava/lang/String;
 
-    invoke-static {v0, v2, v1}, Lj27;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    iget-object v2, p0, Lo3f;->o:Landroid/graphics/RectF;
 
-    move-result-object v0
+    invoke-direct {p1, v2, v0, v1, p2}, Lo3f;-><init>(Landroid/graphics/RectF;Lv3f;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
 
-    return-object v0
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
+
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    new-instance v0, Lq30;
+
+    iget-object p1, p0, Lo3f;->o:Landroid/graphics/RectF;
+
+    iget v1, p1, Landroid/graphics/RectF;->left:F
+
+    iget v2, p1, Landroid/graphics/RectF;->top:F
+
+    iget v3, p1, Landroid/graphics/RectF;->right:F
+
+    iget v4, p1, Landroid/graphics/RectF;->bottom:F
+
+    const/4 v5, 0x2
+
+    invoke-direct/range {v0 .. v5}, Lq30;-><init>(FFFFI)V
+
+    iget-object p1, p0, Lo3f;->X:Lv3f;
+
+    iget-object v1, p1, Lv3f;->I0:Ljava/util/concurrent/atomic/AtomicLong;
+
+    iget-object v2, p1, Lv3f;->t0:Lj88;
+
+    invoke-interface {v2}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Li5b;
+
+    iget-object v3, p0, Lo3f;->Y:Ljava/lang/String;
+
+    invoke-virtual {v2, v3, v0}, Li5b;->z(Ljava/lang/String;Lq30;)J
+
+    move-result-wide v2
+
+    invoke-virtual {v1, v2, v3}, Ljava/util/concurrent/atomic/AtomicLong;->set(J)V
+
+    iget-object p1, p1, Lv3f;->B0:Ltn5;
+
+    new-instance v0, Lo9f;
+
+    sget v1, Ldlb;->n:I
+
+    new-instance v2, Lcpg;
+
+    invoke-direct {v2, v1}, Lcpg;-><init>(I)V
+
+    sget v1, Lice;->q:I
+
+    new-instance v3, Ljava/lang/Integer;
+
+    invoke-direct {v3, v1}, Ljava/lang/Integer;-><init>(I)V
+
+    invoke-direct {v0, v2, v3}, Lo9f;-><init>(Lhpg;Ljava/lang/Integer;)V
+
+    invoke-static {p1, v0}, Lx0i;->n(Ltn5;Ljava/lang/Object;)V
+
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
 .end method

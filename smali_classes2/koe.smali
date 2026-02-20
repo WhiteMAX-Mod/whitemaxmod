@@ -1,67 +1,48 @@
-.class public final Lkoe;
-.super Lo84;
+.class public final synthetic Lkoe;
+.super Lja;
 .source "SourceFile"
 
+# interfaces
+.implements Lat6;
 
-# instance fields
-.field public X:Lmy0;
 
-.field public Y:Lhy0;
-
-.field public Z:Ljm9;
-
-.field public d:J
-
-.field public o:Ljava/lang/String;
-
-.field public synthetic t0:Ljava/lang/Object;
-
-.field public final synthetic u0:Lloe;
-
-.field public v0:I
+# static fields
+.field public static final Z:Lkoe;
 
 
 # direct methods
-.method public constructor <init>(Lloe;Lo84;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput-object p1, p0, Lkoe;->u0:Lloe;
+    new-instance v0, Lkoe;
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    const-string v1, "<init>(Ljava/lang/Object;Ljava/lang/Object;)V"
+
+    const/4 v2, 0x4
+
+    const/4 v3, 0x3
+
+    const-class v4, Lyvb;
+
+    invoke-direct {v0, v3, v4, v1, v2}, Lja;-><init>(ILjava/lang/Class;Ljava/lang/String;I)V
+
+    sput-object v0, Lkoe;->Z:Lkoe;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iput-object p1, p0, Lkoe;->t0:Ljava/lang/Object;
+    check-cast p1, Ljava/lang/String;
 
-    iget p1, p0, Lkoe;->v0:I
+    check-cast p3, Lkotlin/coroutines/Continuation;
 
-    const/high16 v0, -0x80000000
+    new-instance p3, Lyvb;
 
-    or-int/2addr p1, v0
+    invoke-direct {p3, p1, p2}, Lyvb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    iput p1, p0, Lkoe;->v0:I
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
-
-    iget-object v0, p0, Lkoe;->u0:Lloe;
-
-    const-wide/16 v1, 0x0
-
-    const/4 v3, 0x0
-
-    move-object v6, p0
-
-    invoke-virtual/range {v0 .. v6}, Lloe;->k(JLjava/lang/String;Lmy0;Lhy0;Lo84;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-object p3
 .end method

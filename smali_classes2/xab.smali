@@ -1,63 +1,51 @@
 .class public final Lxab;
-.super Ljava/lang/Object;
+.super Lda4;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Labb;
 
-.field public final b:J
+.field public Y:I
 
-.field public final c:J
+.field public d:Lpo9;
 
-.field public final synthetic d:Lyab;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lyab;I)V
-    .locals 2
+.method public constructor <init>(Labb;Lda4;)V
+    .locals 0
 
-    iput p2, p0, Lxab;->a:I
+    iput-object p1, p0, Lxab;->X:Labb;
 
-    packed-switch p2, :pswitch_data_0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lxab;->d:Lyab;
-
-    iget-object p1, p1, Lyab;->a:Lwab;
-
-    iget-wide v0, p1, Lwab;->c:J
-
-    iput-wide v0, p0, Lxab;->b:J
-
-    iget-wide p1, p1, Lwab;->b:J
-
-    iput-wide p1, p0, Lxab;->c:J
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
 
-    :pswitch_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lxab;->d:Lyab;
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-object p1, p1, Lyab;->a:Lwab;
+    iput-object p1, p0, Lxab;->o:Ljava/lang/Object;
 
-    iget-wide v0, p1, Lwab;->c:J
+    iget p1, p0, Lxab;->Y:I
 
-    iput-wide v0, p0, Lxab;->b:J
+    const/high16 v0, -0x80000000
 
-    iget-wide p1, p1, Lwab;->b:J
+    or-int/2addr p1, v0
 
-    iput-wide p1, p0, Lxab;->c:J
+    iput p1, p0, Lxab;->Y:I
 
-    return-void
+    iget-object p1, p0, Lxab;->X:Labb;
 
-    nop
+    const/4 v0, 0x0
 
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
+    invoke-virtual {p1, v0, p0}, Labb;->e(Lpo9;Lda4;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

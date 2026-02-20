@@ -1,26 +1,26 @@
 .class public final Lic3;
-.super Lp6g;
+.super Lpdg;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Lys6;
 
 
 # instance fields
-.field public final synthetic X:Lpc3;
+.field public final synthetic X:Lone/me/chats/tab/ChatsTabWidget;
 
 .field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lpc3;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chats/tab/ChatsTabWidget;)V
     .locals 0
 
-    iput-object p1, p0, Lic3;->X:Lpc3;
+    iput-object p2, p0, Lic3;->X:Lone/me/chats/tab/ChatsTabWidget;
 
-    const/4 p1, 0x2
+    const/4 p2, 0x2
 
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2, p1}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -30,7 +30,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lzlb;
+    check-cast p1, Ljava/util/List;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -40,7 +40,7 @@
 
     check-cast p1, Lic3;
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    sget-object p2, Lmah;->a:Lmah;
 
     invoke-virtual {p1, p2}, Lic3;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -52,9 +52,9 @@
 
     new-instance v0, Lic3;
 
-    iget-object v1, p0, Lic3;->X:Lpc3;
+    iget-object v1, p0, Lic3;->X:Lone/me/chats/tab/ChatsTabWidget;
 
-    invoke-direct {v0, v1, p2}, Lic3;-><init>(Lpc3;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, p2, v1}, Lic3;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chats/tab/ChatsTabWidget;)V
 
     iput-object p1, v0, Lic3;->o:Ljava/lang/Object;
 
@@ -62,66 +62,38 @@
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+    .locals 2
 
     iget-object v0, p0, Lic3;->o:Ljava/lang/Object;
 
-    check-cast v0, Lzlb;
+    check-cast v0, Ljava/util/List;
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    iget-object p1, p0, Lic3;->X:Lpc3;
+    iget-object p1, p0, Lic3;->X:Lone/me/chats/tab/ChatsTabWidget;
 
-    iget-object p1, p1, Lpc3;->o:Ljava/lang/Object;
+    iget-object v1, p1, Lone/me/chats/tab/ChatsTabWidget;->D0:Lwj6;
 
-    check-cast p1, Lspf;
+    invoke-virtual {v1, v0}, Lwj6;->B(Ljava/util/List;)V
 
-    invoke-virtual {p1, v0}, Lspf;->setValue(Ljava/lang/Object;)V
+    invoke-virtual {p1}, Lone/me/chats/tab/ChatsTabWidget;->J0()Lyi6;
 
-    iget-object p1, p0, Lic3;->X:Lpc3;
+    move-result-object v1
 
-    iget-object p1, p1, Lpc3;->Z:Ljava/lang/Object;
+    invoke-virtual {v1, v0}, Lyi6;->N(Ljava/util/List;)V
 
-    check-cast p1, Ljava/lang/String;
+    iget-object v0, p1, Lone/me/chats/tab/ChatsTabWidget;->d:Lq94;
 
-    sget-object v1, Lc5j;->a:Ledb;
+    if-eqz v0, :cond_0
 
-    if-nez v1, :cond_0
-
-    goto :goto_0
+    invoke-interface {v0}, Lq94;->dismiss()V
 
     :cond_0
-    sget-object v2, Lkk8;->d:Lkk8;
+    const/4 v0, 0x0
 
-    invoke-virtual {v1, v2}, Ledb;->b(Lkk8;)Z
+    iput-object v0, p1, Lone/me/chats/tab/ChatsTabWidget;->d:Lq94;
 
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "big_flow: onEach "
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, ", isEmitted=true"
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v1, v2, p1, v0, v3}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
-    :goto_0
-    sget-object p1, Lb3h;->a:Lb3h;
+    sget-object p1, Lmah;->a:Lmah;
 
     return-object p1
 .end method

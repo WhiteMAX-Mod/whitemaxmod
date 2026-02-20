@@ -1,209 +1,265 @@
 .class public final Lk86;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lbr6;
 
 
 # instance fields
-.field public X:I
+.field public a:I
 
-.field public synthetic Y:Ljava/lang/Object;
+.field public b:I
 
-.field public final synthetic Z:Lbtd;
+.field public c:I
 
-.field public o:Lbtd;
+.field public d:I
 
-.field public final synthetic t0:Lf76;
+.field public e:Z
+
+.field public f:Z
+
+.field public g:Z
+
+.field public final synthetic h:Lcom/google/android/flexbox/FlexboxLayoutManager;
 
 
 # direct methods
-.method public constructor <init>(Lbtd;Lf76;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lcom/google/android/flexbox/FlexboxLayoutManager;)V
     .locals 0
 
-    iput-object p1, p0, Lk86;->Z:Lbtd;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lk86;->t0:Lf76;
+    iput-object p1, p0, Lk86;->h:Lcom/google/android/flexbox/FlexboxLayoutManager;
 
-    const/4 p1, 0x2
+    const/4 p1, 0x0
 
-    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput p1, p0, Lk86;->d:I
+
+    return-void
+.end method
+
+.method public static a(Lk86;)V
+    .locals 2
+
+    iget-object v0, p0, Lk86;->h:Lcom/google/android/flexbox/FlexboxLayoutManager;
+
+    invoke-virtual {v0}, Lcom/google/android/flexbox/FlexboxLayoutManager;->f1()Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    iget-boolean v1, v0, Lcom/google/android/flexbox/FlexboxLayoutManager;->t:Z
+
+    if-eqz v1, :cond_1
+
+    iget-boolean v1, p0, Lk86;->e:Z
+
+    if-eqz v1, :cond_0
+
+    iget-object v0, v0, Lcom/google/android/flexbox/FlexboxLayoutManager;->B:Lig5;
+
+    invoke-virtual {v0}, Lig5;->i()I
+
+    move-result v0
+
+    goto :goto_0
+
+    :cond_0
+    iget v1, v0, Landroidx/recyclerview/widget/a;->n:I
+
+    iget-object v0, v0, Lcom/google/android/flexbox/FlexboxLayoutManager;->B:Lig5;
+
+    invoke-virtual {v0}, Lig5;->m()I
+
+    move-result v0
+
+    sub-int v0, v1, v0
+
+    :goto_0
+    iput v0, p0, Lk86;->c:I
+
+    return-void
+
+    :cond_1
+    iget-boolean v1, p0, Lk86;->e:Z
+
+    if-eqz v1, :cond_2
+
+    iget-object v0, v0, Lcom/google/android/flexbox/FlexboxLayoutManager;->B:Lig5;
+
+    invoke-virtual {v0}, Lig5;->i()I
+
+    move-result v0
+
+    goto :goto_1
+
+    :cond_2
+    iget-object v0, v0, Lcom/google/android/flexbox/FlexboxLayoutManager;->B:Lig5;
+
+    invoke-virtual {v0}, Lig5;->m()I
+
+    move-result v0
+
+    :goto_1
+    iput v0, p0, Lk86;->c:I
+
+    return-void
+.end method
+
+.method public static b(Lk86;)V
+    .locals 5
+
+    const/4 v0, -0x1
+
+    iput v0, p0, Lk86;->a:I
+
+    iput v0, p0, Lk86;->b:I
+
+    const/high16 v0, -0x80000000
+
+    iput v0, p0, Lk86;->c:I
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lk86;->f:Z
+
+    iput-boolean v0, p0, Lk86;->g:Z
+
+    iget-object v1, p0, Lk86;->h:Lcom/google/android/flexbox/FlexboxLayoutManager;
+
+    invoke-virtual {v1}, Lcom/google/android/flexbox/FlexboxLayoutManager;->f1()Z
+
+    move-result v2
+
+    const/4 v3, 0x2
+
+    const/4 v4, 0x1
+
+    if-eqz v2, :cond_3
+
+    iget v2, v1, Lcom/google/android/flexbox/FlexboxLayoutManager;->q:I
+
+    if-nez v2, :cond_1
+
+    iget v1, v1, Lcom/google/android/flexbox/FlexboxLayoutManager;->p:I
+
+    if-ne v1, v4, :cond_0
+
+    move v0, v4
+
+    :cond_0
+    iput-boolean v0, p0, Lk86;->e:Z
+
+    return-void
+
+    :cond_1
+    if-ne v2, v3, :cond_2
+
+    move v0, v4
+
+    :cond_2
+    iput-boolean v0, p0, Lk86;->e:Z
+
+    return-void
+
+    :cond_3
+    iget v2, v1, Lcom/google/android/flexbox/FlexboxLayoutManager;->q:I
+
+    if-nez v2, :cond_5
+
+    iget v1, v1, Lcom/google/android/flexbox/FlexboxLayoutManager;->p:I
+
+    const/4 v2, 0x3
+
+    if-ne v1, v2, :cond_4
+
+    move v0, v4
+
+    :cond_4
+    iput-boolean v0, p0, Lk86;->e:Z
+
+    return-void
+
+    :cond_5
+    if-ne v2, v3, :cond_6
+
+    move v0, v4
+
+    :cond_6
+    iput-boolean v0, p0, Lk86;->e:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    check-cast p1, Llc2;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object p1, p1, Llc2;->a:Ljava/lang/Object;
+    const-string v1, "AnchorInfo{mPosition="
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    new-instance v0, Llc2;
+    iget v1, p0, Lk86;->a:I
 
-    invoke-direct {v0, p1}, Llc2;-><init>(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0, v0, p2}, Lk86;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    const-string v1, ", mFlexLinePosition="
 
-    move-result-object p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    check-cast p1, Lk86;
+    iget v1, p0, Lk86;->b:I
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, p2}, Lk86;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    const-string v1, ", mCoordinate="
 
-    move-result-object p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-object p1
-.end method
+    iget v1, p0, Lk86;->c:I
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    new-instance v0, Lk86;
+    const-string v1, ", mPerpendicularCoordinate="
 
-    iget-object v1, p0, Lk86;->Z:Lbtd;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Lk86;->t0:Lf76;
+    iget v1, p0, Lk86;->d:I
 
-    invoke-direct {v0, v1, v2, p2}, Lk86;-><init>(Lbtd;Lf76;Lkotlin/coroutines/Continuation;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    iput-object p1, v0, Lk86;->Y:Ljava/lang/Object;
+    const-string v1, ", mLayoutFromEnd="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lk86;->e:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", mValid="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lk86;->f:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", mAssignedFromSavedState="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lk86;->g:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x7d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
-
-    iget v0, p0, Lk86;->X:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    iget-object v0, p0, Lk86;->o:Lbtd;
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    goto :goto_3
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lk86;->Y:Ljava/lang/Object;
-
-    check-cast p1, Llc2;
-
-    iget-object p1, p1, Llc2;->a:Ljava/lang/Object;
-
-    instance-of v0, p1, Lkc2;
-
-    iget-object v2, p0, Lk86;->Z:Lbtd;
-
-    if-nez v0, :cond_2
-
-    iput-object p1, v2, Lbtd;->a:Ljava/lang/Object;
-
-    :cond_2
-    if-eqz v0, :cond_9
-
-    instance-of v0, p1, Ljc2;
-
-    const/4 v3, 0x0
-
-    if-eqz v0, :cond_3
-
-    move-object v0, p1
-
-    check-cast v0, Ljc2;
-
-    goto :goto_0
-
-    :cond_3
-    move-object v0, v3
-
-    :goto_0
-    if-eqz v0, :cond_4
-
-    iget-object v0, v0, Ljc2;->a:Ljava/lang/Throwable;
-
-    goto :goto_1
-
-    :cond_4
-    move-object v0, v3
-
-    :goto_1
-    if-nez v0, :cond_8
-
-    iget-object v0, v2, Lbtd;->a:Ljava/lang/Object;
-
-    if-eqz v0, :cond_7
-
-    sget-object v4, Ljwa;->a:Lkotlinx/coroutines/internal/Symbol;
-
-    if-ne v0, v4, :cond_5
-
-    goto :goto_2
-
-    :cond_5
-    move-object v3, v0
-
-    :goto_2
-    iput-object p1, p0, Lk86;->Y:Ljava/lang/Object;
-
-    iput-object v2, p0, Lk86;->o:Lbtd;
-
-    iput v1, p0, Lk86;->X:I
-
-    iget-object p1, p0, Lk86;->t0:Lf76;
-
-    invoke-interface {p1, v3, p0}, Lf76;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lac4;->a:Lac4;
-
-    if-ne p1, v0, :cond_6
-
-    return-object v0
-
-    :cond_6
-    move-object v0, v2
-
-    :goto_3
-    move-object v2, v0
-
-    :cond_7
-    sget-object p1, Ljwa;->c:Lkotlinx/coroutines/internal/Symbol;
-
-    iput-object p1, v2, Lbtd;->a:Ljava/lang/Object;
-
-    goto :goto_4
-
-    :cond_8
-    throw v0
-
-    :cond_9
-    :goto_4
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
 .end method

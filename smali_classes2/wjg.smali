@@ -1,78 +1,126 @@
 .class public final Lwjg;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Lvjg;
+
+
+# instance fields
+.field public final a:Lj88;
+
+.field public final b:Lbgg;
+
+.field public final c:Lbgg;
+
+.field public final d:Lbgg;
+
+.field public final e:Lbgg;
+
+.field public final f:Lbgg;
+
+.field public final g:Lbgg;
+
+
+# direct methods
+.method public constructor <init>(Lj88;Lbgg;)V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lwjg;->a:Lj88;
+
+    iput-object p2, p0, Lwjg;->f:Lbgg;
+
+    new-instance p2, Ln2e;
+
+    const/4 v0, 0x3
+
+    invoke-direct {p2, p1, v0}, Ln2e;-><init>(Lj88;I)V
+
+    new-instance v0, Lbgg;
+
+    invoke-direct {v0, p2}, Lbgg;-><init>(Lis6;)V
+
+    iput-object v0, p0, Lwjg;->c:Lbgg;
+
+    new-instance p2, Ln2e;
+
+    const/4 v0, 0x4
+
+    invoke-direct {p2, p1, v0}, Ln2e;-><init>(Lj88;I)V
+
+    new-instance v0, Lbgg;
+
+    invoke-direct {v0, p2}, Lbgg;-><init>(Lis6;)V
+
+    iput-object v0, p0, Lwjg;->d:Lbgg;
+
+    new-instance p2, Ln2e;
+
+    const/4 v0, 0x5
+
+    invoke-direct {p2, p1, v0}, Ln2e;-><init>(Lj88;I)V
+
+    new-instance v0, Lbgg;
+
+    invoke-direct {v0, p2}, Lbgg;-><init>(Lis6;)V
+
+    iput-object v0, p0, Lwjg;->b:Lbgg;
+
+    new-instance p2, Ln2e;
+
+    const/4 v0, 0x6
+
+    invoke-direct {p2, p1, v0}, Ln2e;-><init>(Lj88;I)V
+
+    new-instance v0, Lbgg;
+
+    invoke-direct {v0, p2}, Lbgg;-><init>(Lis6;)V
+
+    iput-object v0, p0, Lwjg;->e:Lbgg;
+
+    new-instance p2, Ln2e;
+
+    const/4 v0, 0x7
+
+    invoke-direct {p2, p1, v0}, Ln2e;-><init>(Lj88;I)V
+
+    new-instance p1, Lbgg;
+
+    invoke-direct {p1, p2}, Lbgg;-><init>(Lis6;)V
+
+    iput-object p1, p0, Lwjg;->g:Lbgg;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lzb4;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lwjg;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lwjg;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lwjg;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final a()Leie;
     .locals 1
 
-    new-instance p1, Lwjg;
+    iget-object v0, p0, Lwjg;->b:Lbgg;
 
-    const/4 v0, 0x2
-
-    invoke-direct {p1, v0, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    invoke-static {}, Lqti;->b()La0c;
-
-    move-result-object p1
-
-    iget-object v0, p1, La0c;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/Map;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "Threads count: "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Lbgg;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    iget-object p1, p1, La0c;->c:Ljava/lang/Object;
+    check-cast v0, Leie;
 
-    check-cast p1, Ljava/lang/Throwable;
+    return-object v0
+.end method
 
-    const-string v1, "ThreadsDeveloperTools"
+.method public final b()Leie;
+    .locals 1
 
-    invoke-static {v1, v0, p1}, Lc5j;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    iget-object v0, p0, Lwjg;->f:Lbgg;
 
-    sget-object p1, Lb3h;->a:Lb3h;
+    invoke-virtual {v0}, Lbgg;->getValue()Ljava/lang/Object;
 
-    return-object p1
+    move-result-object v0
+
+    check-cast v0, Leie;
+
+    return-object v0
 .end method

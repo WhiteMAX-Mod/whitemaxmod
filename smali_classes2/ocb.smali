@@ -1,127 +1,96 @@
-.class public abstract Locb;
+.class public final synthetic Locb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Thread$UncaughtExceptionHandler;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:I
+# instance fields
+.field public final synthetic a:I
 
-.field public static final c:I
+.field public final synthetic b:Ljava/lang/Thread$UncaughtExceptionHandler;
 
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
-
-.field public static final s:I
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Ljava/lang/Object;Ljava/lang/Thread$UncaughtExceptionHandler;I)V
+    .locals 0
 
-    sget v0, Lt8d;->oneme_media_keyboard_bottom_panel:I
+    iput p3, p0, Locb;->a:I
 
-    sput v0, Locb;->a:I
+    iput-object p1, p0, Locb;->c:Ljava/lang/Object;
 
-    sget v0, Lt8d;->oneme_media_keyboard_close_action:I
+    iput-object p2, p0, Locb;->b:Ljava/lang/Thread$UncaughtExceptionHandler;
 
-    sput v0, Locb;->b:I
-
-    sget v0, Lt8d;->oneme_media_keyboard_emoji_container:I
-
-    sput v0, Locb;->c:I
-
-    sget v0, Lt8d;->oneme_media_keyboard_emoji_list:I
-
-    sput v0, Locb;->d:I
-
-    sget v0, Lt8d;->oneme_media_keyboard_emoji_tabs:I
-
-    sput v0, Locb;->e:I
-
-    sget v0, Lt8d;->oneme_media_keyboard_fake_search_view:I
-
-    sput v0, Locb;->f:I
-
-    sget v0, Lt8d;->oneme_media_keyboard_pager:I
-
-    sput v0, Locb;->g:I
-
-    sget v0, Lt8d;->oneme_media_keyboard_recent_clear_confirmation_action:I
-
-    sput v0, Locb;->h:I
-
-    sget v0, Lt8d;->oneme_media_keyboard_recent_clear_confirmation_cancel:I
-
-    sput v0, Locb;->i:I
-
-    sget v0, Lt8d;->oneme_media_keyboard_remove_action:I
-
-    sput v0, Locb;->j:I
-
-    sget v0, Lt8d;->oneme_media_keyboard_settings_action:I
-
-    sput v0, Locb;->k:I
-
-    sget v0, Lt8d;->oneme_media_keyboard_showcase_action:I
-
-    sput v0, Locb;->l:I
-
-    sget v0, Lt8d;->oneme_media_keyboard_stickers_container:I
-
-    sput v0, Locb;->m:I
-
-    sget v0, Lt8d;->oneme_media_keyboard_stickers_header_title:I
-
-    sput v0, Locb;->n:I
-
-    sget v0, Lt8d;->oneme_media_keyboard_stickers_list:I
-
-    sput v0, Locb;->o:I
-
-    sget v0, Lt8d;->oneme_media_keyboard_stickers_tabs:I
-
-    sput v0, Locb;->p:I
-
-    sget v0, Lt8d;->oneme_media_keyboard_tabs:I
-
-    sput v0, Locb;->q:I
-
-    sget v0, Lt8d;->oneme_media_keyboard_view_type_category_emoji:I
-
-    sput v0, Locb;->r:I
-
-    sget v0, Lt8d;->oneme_media_keyboard_view_type_fake_search:I
-
-    sput v0, Locb;->s:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final uncaughtException(Ljava/lang/Thread;Ljava/lang/Throwable;)V
+    .locals 8
+
+    iget v0, p0, Locb;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Locb;->c:Ljava/lang/Object;
+
+    move-object v3, v0
+
+    check-cast v3, Lrm4;
+
+    new-instance v1, Loeb;
+
+    const/4 v6, 0x0
+
+    iget-object v4, p0, Locb;->b:Ljava/lang/Thread$UncaughtExceptionHandler;
+
+    move-object v5, p1
+
+    move-object v2, p2
+
+    invoke-direct/range {v1 .. v6}, Loeb;-><init>(Ljava/lang/Throwable;Lrm4;Ljava/lang/Thread$UncaughtExceptionHandler;Ljava/lang/Thread;Lkotlin/coroutines/Continuation;)V
+
+    invoke-static {v1}, Lea9;->q(Lys6;)Ljava/lang/Object;
+
+    return-void
+
+    :pswitch_0
+    move-object v5, p1
+
+    move-object v2, p2
+
+    iget-object p1, p0, Locb;->c:Ljava/lang/Object;
+
+    move-object v4, p1
+
+    check-cast v4, Ledb;
+
+    move-object v3, v2
+
+    new-instance v2, Lvcb;
+
+    const/4 v7, 0x0
+
+    move-object v6, v5
+
+    iget-object v5, p0, Locb;->b:Ljava/lang/Thread$UncaughtExceptionHandler;
+
+    invoke-direct/range {v2 .. v7}, Lvcb;-><init>(Ljava/lang/Throwable;Ledb;Ljava/lang/Thread$UncaughtExceptionHandler;Ljava/lang/Thread;Lkotlin/coroutines/Continuation;)V
+
+    invoke-static {v2}, Lea9;->q(Lys6;)Ljava/lang/Object;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,278 +1,118 @@
-.class public abstract Laj8;
+.class public final Laj8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:[I
+# instance fields
+.field public final a:J
 
-.field public static final b:[I
+.field public final b:F
 
-.field public static final c:[I
+.field public final c:J
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Lzi8;)V
     .locals 2
 
-    const/16 v0, 0x10
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-array v1, v0, [I
+    iget-wide v0, p1, Lzi8;->a:J
 
-    fill-array-data v1, :array_0
+    iput-wide v0, p0, Laj8;->a:J
 
-    sput-object v1, Laj8;->a:[I
+    iget v0, p1, Lzi8;->b:F
 
-    new-array v0, v0, [I
+    iput v0, p0, Laj8;->b:F
 
-    fill-array-data v0, :array_1
+    iget-wide v0, p1, Lzi8;->c:J
 
-    sput-object v0, Laj8;->b:[I
-
-    const/16 v0, 0x1d
-
-    new-array v0, v0, [I
-
-    fill-array-data v0, :array_2
-
-    sput-object v0, Laj8;->c:[I
+    iput-wide v0, p0, Laj8;->c:J
 
     return-void
-
-    :array_0
-    .array-data 4
-        0x1
-        0x2
-        0x2
-        0x2
-        0x2
-        0x3
-        0x3
-        0x4
-        0x4
-        0x5
-        0x6
-        0x6
-        0x6
-        0x7
-        0x8
-        0x8
-    .end array-data
-
-    :array_1
-    .array-data 4
-        -0x1
-        0x1f40
-        0x3e80
-        0x7d00
-        -0x1
-        -0x1
-        0x2b11
-        0x5622
-        0xac44
-        -0x1
-        -0x1
-        0x2ee0
-        0x5dc0
-        0xbb80
-        -0x1
-        -0x1
-    .end array-data
-
-    :array_2
-    .array-data 4
-        0x40
-        0x70
-        0x80
-        0xc0
-        0xe0
-        0x100
-        0x180
-        0x1c0
-        0x200
-        0x280
-        0x300
-        0x380
-        0x400
-        0x480
-        0x500
-        0x600
-        0x780
-        0x800
-        0x900
-        0xa00
-        0xa80
-        0xb00
-        0xb07
-        0xb80
-        0xc00
-        0xf00
-        0x1000
-        0x1800
-        0x1e00
-    .end array-data
 .end method
 
-.method public static final a(Ljava/io/InputStream;IZ)I
-    .locals 4
 
-    const/4 v0, 0x0
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    move v1, v0
+    const/4 v0, 0x1
 
-    :goto_0
-    if-ge v0, p1, :cond_2
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0}, Ljava/io/InputStream;->read()I
-
-    move-result v2
-
-    const/4 v3, -0x1
-
-    if-eq v2, v3, :cond_1
-
-    if-eqz p2, :cond_0
-
-    and-int/lit16 v2, v2, 0xff
-
-    mul-int/lit8 v3, v0, 0x8
-
-    shl-int/2addr v2, v3
-
-    :goto_1
-    or-int/2addr v1, v2
-
-    goto :goto_2
+    return v0
 
     :cond_0
-    shl-int/lit8 v1, v1, 0x8
-
-    and-int/lit16 v2, v2, 0xff
-
-    goto :goto_1
-
-    :goto_2
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    new-instance p0, Ljava/io/IOException;
-
-    const-string p1, "no more bytes"
-
-    invoke-direct {p0, p1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_2
-    return v1
-.end method
-
-.method public static final b(Lr4h;)V
-    .locals 3
-
-    new-instance v0, Lg43;
-
-    const/16 v1, 0x16
-
-    invoke-direct {v0, v1}, Lg43;-><init>(I)V
-
-    const/16 v1, 0x243
-
-    invoke-virtual {p0, v1, v0}, Lr4h;->e(ILhs7;)V
-
-    new-instance v0, Lg43;
-
-    const/16 v1, 0x17
-
-    invoke-direct {v0, v1}, Lg43;-><init>(I)V
-
-    const/16 v1, 0x22a
-
-    invoke-virtual {p0, v1, v0}, Lr4h;->e(ILhs7;)V
-
-    new-instance v0, Lg43;
-
-    const/16 v1, 0x18
-
-    invoke-direct {v0, v1}, Lg43;-><init>(I)V
-
-    const/16 v1, 0x242
-
-    invoke-virtual {p0, v1, v0}, Lr4h;->e(ILhs7;)V
-
-    new-instance v0, Lg43;
-
-    const/16 v1, 0x19
-
-    invoke-direct {v0, v1}, Lg43;-><init>(I)V
-
-    const/16 v1, 0x284
-
-    invoke-virtual {p0, v1, v0}, Lr4h;->e(ILhs7;)V
-
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>()V
-
-    new-instance v1, Ljp6;
+    instance-of v1, p1, Laj8;
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, v2, v0}, Ljp6;-><init>(ILjava/lang/Object;)V
+    if-nez v1, :cond_1
 
-    const/16 v2, 0x285
+    return v2
 
-    invoke-virtual {p0, v2, v1}, Lr4h;->e(ILhs7;)V
+    :cond_1
+    check-cast p1, Laj8;
 
-    new-instance v1, Lip6;
+    iget-wide v3, p0, Laj8;->a:J
 
-    invoke-direct {v1, v0}, Lip6;-><init>(Ljava/util/concurrent/atomic/AtomicBoolean;)V
+    iget-wide v5, p1, Laj8;->a:J
 
-    const/4 v0, 0x2
+    cmp-long v1, v3, v5
 
-    invoke-virtual {p0, v0, v1}, Lr4h;->c(ILhs7;)V
+    if-nez v1, :cond_2
 
-    new-instance v0, Lg43;
+    iget v1, p0, Laj8;->b:F
 
-    const/16 v1, 0x1a
+    iget v3, p1, Laj8;->b:F
 
-    invoke-direct {v0, v1}, Lg43;-><init>(I)V
+    cmpl-float v1, v1, v3
 
-    const/16 v1, 0x262
+    if-nez v1, :cond_2
 
-    invoke-virtual {p0, v1, v0}, Lr4h;->e(ILhs7;)V
+    iget-wide v3, p0, Laj8;->c:J
 
-    new-instance v0, Lg43;
+    iget-wide v5, p1, Laj8;->c:J
 
-    const/16 v1, 0x1b
+    cmp-long p1, v3, v5
 
-    invoke-direct {v0, v1}, Lg43;-><init>(I)V
+    if-nez p1, :cond_2
 
-    const/16 v1, 0x261
+    return v0
 
-    invoke-virtual {p0, v1, v0}, Lr4h;->e(ILhs7;)V
+    :cond_2
+    return v2
+.end method
 
-    new-instance v0, Lg43;
+.method public final hashCode()I
+    .locals 4
 
-    const/16 v1, 0x1c
+    iget-wide v0, p0, Laj8;->a:J
 
-    invoke-direct {v0, v1}, Lg43;-><init>(I)V
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    const/16 v1, 0x286
+    move-result-object v0
 
-    invoke-virtual {p0, v1, v0}, Lr4h;->e(ILhs7;)V
+    iget v1, p0, Laj8;->b:F
 
-    new-instance v0, Lg43;
+    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    const/16 v1, 0x1d
+    move-result-object v1
 
-    invoke-direct {v0, v1}, Lg43;-><init>(I)V
+    iget-wide v2, p0, Laj8;->c:J
 
-    const/16 v1, 0x287
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    invoke-virtual {p0, v1, v0}, Lr4h;->e(ILhs7;)V
+    move-result-object v2
 
-    return-void
+    filled-new-array {v0, v1, v2}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
+
+    move-result v0
+
+    return v0
 .end method

@@ -1,63 +1,142 @@
 .class public final Loi9;
-.super Lo84;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Lbtd;
+.field public final a:Lzef;
 
-.field public Y:Lqd8;
+.field public final b:Lkotlinx/coroutines/internal/ContextScope;
 
-.field public Z:Lqd8;
-
-.field public d:Lnd2;
-
-.field public o:Ljm9;
-
-.field public t0:Lqd8;
-
-.field public u0:I
-
-.field public synthetic v0:Ljava/lang/Object;
-
-.field public final synthetic w0:Lzi9;
-
-.field public x0:I
+.field public final c:Lxd3;
 
 
 # direct methods
-.method public constructor <init>(Lzi9;Lo84;)V
-    .locals 0
+.method public constructor <init>(Lqy0;Lbjg;)V
+    .locals 4
 
-    iput-object p1, p0, Loi9;->w0:Lzi9;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    const/4 v0, 0x0
+
+    const/4 v1, 0x7
+
+    invoke-static {v0, v0, v1}, Laff;->b(III)Lzef;
+
+    move-result-object v0
+
+    iput-object v0, p0, Loi9;->a:Lzef;
+
+    check-cast p2, Lcbb;
+
+    invoke-virtual {p2}, Lcbb;->c()Los8;
+
+    move-result-object p2
+
+    invoke-static {p2}, Lztj;->a(Led4;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object p2
+
+    iput-object p2, p0, Loi9;->b:Lkotlinx/coroutines/internal/ContextScope;
+
+    sget p2, Lgc5;->d:I
+
+    const/16 p2, 0x3e8
+
+    sget-object v1, Lmc5;->c:Lmc5;
+
+    invoke-static {p2, v1}, Lkwj;->g(ILmc5;)J
+
+    move-result-wide v1
+
+    new-instance p2, Lgl0;
+
+    const/16 v3, 0x12
+
+    invoke-direct {p2, v3}, Lgl0;-><init>(I)V
+
+    invoke-static {v0, v1, v2, p2}, Llu8;->a(Lb96;JLys6;)Lxd3;
+
+    move-result-object p2
+
+    iput-object p2, p0, Loi9;->c:Lxd3;
+
+    invoke-virtual {p1, p0}, Lqy0;->d(Ljava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final a()V
+    .locals 4
 
-    iput-object p1, p0, Loi9;->v0:Ljava/lang/Object;
+    new-instance v0, Lji9;
 
-    iget p1, p0, Loi9;->x0:I
+    const/4 v1, 0x0
 
-    const/high16 v0, -0x80000000
+    invoke-direct {v0, p0, v1}, Lji9;-><init>(Loi9;Lkotlin/coroutines/Continuation;)V
 
-    or-int/2addr p1, v0
+    const/4 v2, 0x3
 
-    iput p1, p0, Loi9;->x0:I
+    iget-object v3, p0, Loi9;->b:Lkotlinx/coroutines/internal/ContextScope;
 
-    iget-object p1, p0, Loi9;->w0:Lzi9;
+    invoke-static {v3, v1, v1, v0, v2}, Lea9;->d(Lnd4;Led4;Lqd4;Lys6;I)Lcuf;
 
-    const/4 v0, 0x0
+    return-void
+.end method
 
-    invoke-virtual {p1, v0, v0, p0}, Lzi9;->w(Lnd2;Ljm9;Lo84;)Ljava/io/Serializable;
+.method public final onEvent(Lddh;)V
+    .locals 0
+    .annotation runtime Lx7g;
+    .end annotation
 
-    move-result-object p1
+    .line 4
+    invoke-virtual {p0}, Loi9;->a()V
 
-    return-object p1
+    return-void
+.end method
+
+.method public final onEvent(Lgo8;)V
+    .locals 0
+    .annotation runtime Lx7g;
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0}, Loi9;->a()V
+
+    return-void
+.end method
+
+.method public final onEvent(Lk84;)V
+    .locals 0
+    .annotation runtime Lx7g;
+    .end annotation
+
+    .line 3
+    invoke-virtual {p0}, Loi9;->a()V
+
+    return-void
+.end method
+
+.method public final onEvent(Lq4c;)V
+    .locals 0
+    .annotation runtime Lx7g;
+    .end annotation
+
+    .line 2
+    invoke-virtual {p0}, Loi9;->a()V
+
+    return-void
+.end method
+
+.method public final onEvent(Lrc3;)V
+    .locals 0
+    .annotation runtime Lx7g;
+    .end annotation
+
+    .line 5
+    invoke-virtual {p0}, Loi9;->a()V
+
+    return-void
 .end method

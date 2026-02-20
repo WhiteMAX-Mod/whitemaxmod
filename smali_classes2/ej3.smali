@@ -1,91 +1,259 @@
 .class public final Lej3;
-.super Landroid/view/View;
+.super Lwm0;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:Landroid/graphics/Paint;
+.field public final synthetic a:Lfj3;
 
-.field public b:Landroid/graphics/Paint;
+.field public final synthetic b:Lsh7;
 
-.field public c:I
+.field public final synthetic c:Lqi3;
+
+.field public final synthetic d:Loi3;
 
 
-# virtual methods
-.method public getColor()I
-    .locals 1
+# direct methods
+.method public constructor <init>(Lfj3;Lsh7;Lqi3;Loi3;)V
+    .locals 0
 
-    iget-object v0, p0, Lej3;->a:Landroid/graphics/Paint;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {v0}, Landroid/graphics/Paint;->getColor()I
+    iput-object p1, p0, Lej3;->a:Lfj3;
 
-    move-result v0
+    iput-object p2, p0, Lej3;->b:Lsh7;
 
-    return v0
-.end method
+    iput-object p3, p0, Lej3;->c:Lqi3;
 
-.method public final onDraw(Landroid/graphics/Canvas;)V
-    .locals 4
-
-    invoke-super {p0, p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
-
-    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
-
-    move-result v0
-
-    div-int/lit8 v0, v0, 0x2
-
-    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
-
-    move-result v1
-
-    div-int/lit8 v1, v1, 0x2
-
-    int-to-float v0, v0
-
-    int-to-float v1, v1
-
-    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
-
-    move-result v2
-
-    div-int/lit8 v2, v2, 0x2
-
-    int-to-float v2, v2
-
-    iget-object v3, p0, Lej3;->b:Landroid/graphics/Paint;
-
-    invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
-
-    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
-
-    move-result v2
-
-    iget v3, p0, Lej3;->c:I
-
-    mul-int/lit8 v3, v3, 0x2
-
-    sub-int/2addr v2, v3
-
-    div-int/lit8 v2, v2, 0x2
-
-    int-to-float v2, v2
-
-    iget-object v3, p0, Lej3;->a:Landroid/graphics/Paint;
-
-    invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
+    iput-object p4, p0, Lej3;->d:Loi3;
 
     return-void
 .end method
 
-.method public setColor(I)V
-    .locals 1
 
-    iget-object v0, p0, Lej3;->a:Landroid/graphics/Paint;
+# virtual methods
+.method public final a(Lwj7;Ljava/lang/String;Z)V
+    .locals 3
 
-    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
+    iget-object p1, p0, Lej3;->a:Lfj3;
 
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+    iget-object p2, p1, Lfj3;->b:Landroid/view/ViewGroup;
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object p3
+
+    invoke-virtual {p3}, Landroid/os/Looper;->isCurrentThread()Z
+
+    move-result p3
+
+    iget-object v0, p0, Lej3;->b:Lsh7;
+
+    iget-object v1, p0, Lej3;->c:Lqi3;
+
+    if-eqz p3, :cond_0
+
+    sget-object p1, Lri3;->a:Lri3;
+
+    invoke-static {v0, v1, p1}, Lfj3;->n(Lsh7;Lqi3;Lui3;)V
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p2}, Landroid/view/View;->getHandler()Landroid/os/Handler;
+
+    move-result-object p3
+
+    if-eqz p3, :cond_1
+
+    new-instance p2, Lbj3;
+
+    const/4 v2, 0x2
+
+    invoke-direct {p2, p1, v0, v1, v2}, Lbj3;-><init>(Lfj3;Lsh7;Lqi3;I)V
+
+    invoke-virtual {p3, p2}, Landroid/os/Handler;->postAtFrontOfQueue(Ljava/lang/Runnable;)Z
+
+    return-void
+
+    :cond_1
+    new-instance p3, Lcj3;
+
+    const/4 v2, 0x2
+
+    invoke-direct {p3, p1, v0, v1, v2}, Lcj3;-><init>(Lfj3;Lsh7;Lqi3;I)V
+
+    invoke-virtual {p2, p3}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+.end method
+
+.method public final b(Lwj7;Ljava/lang/Object;Ljava/lang/String;Z)V
+    .locals 6
+
+    iget-object v1, p0, Lej3;->a:Lfj3;
+
+    iget-object p1, v1, Lfj3;->b:Landroid/view/ViewGroup;
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Landroid/os/Looper;->isCurrentThread()Z
+
+    move-result p2
+
+    iget-object v2, p0, Lej3;->b:Lsh7;
+
+    iget-object v3, p0, Lej3;->c:Lqi3;
+
+    iget-object v4, p0, Lej3;->d:Loi3;
+
+    if-eqz p2, :cond_0
+
+    invoke-virtual {v1, v4}, Lfj3;->l(Loi3;)Lui3;
+
+    move-result-object p1
+
+    invoke-static {v2, v3, p1}, Lfj3;->n(Lsh7;Lqi3;Lui3;)V
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p1}, Landroid/view/View;->getHandler()Landroid/os/Handler;
+
+    move-result-object p2
+
+    new-instance v0, Ldj3;
+
+    if-eqz p2, :cond_1
+
+    const/4 v5, 0x0
+
+    invoke-direct/range {v0 .. v5}, Ldj3;-><init>(Lfj3;Lsh7;Lqi3;Loi3;I)V
+
+    invoke-virtual {p2, v0}, Landroid/os/Handler;->postAtFrontOfQueue(Ljava/lang/Runnable;)Z
+
+    return-void
+
+    :cond_1
+    const/4 v5, 0x1
+
+    invoke-direct/range {v0 .. v5}, Ldj3;-><init>(Lfj3;Lsh7;Lqi3;Loi3;I)V
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+.end method
+
+.method public final c(Lwj7;Ljava/lang/String;Ljava/lang/Throwable;Z)V
+    .locals 2
+
+    iget-object p1, p0, Lej3;->a:Lfj3;
+
+    iget-object p2, p1, Lfj3;->b:Landroid/view/ViewGroup;
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object p3
+
+    invoke-virtual {p3}, Landroid/os/Looper;->isCurrentThread()Z
+
+    move-result p3
+
+    iget-object p4, p0, Lej3;->b:Lsh7;
+
+    iget-object v0, p0, Lej3;->c:Lqi3;
+
+    if-eqz p3, :cond_0
+
+    sget-object p1, Lti3;->a:Lti3;
+
+    invoke-static {p4, v0, p1}, Lfj3;->n(Lsh7;Lqi3;Lui3;)V
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p2}, Landroid/view/View;->getHandler()Landroid/os/Handler;
+
+    move-result-object p3
+
+    if-eqz p3, :cond_1
+
+    new-instance p2, Lbj3;
+
+    const/4 v1, 0x1
+
+    invoke-direct {p2, p1, p4, v0, v1}, Lbj3;-><init>(Lfj3;Lsh7;Lqi3;I)V
+
+    invoke-virtual {p3, p2}, Landroid/os/Handler;->postAtFrontOfQueue(Ljava/lang/Runnable;)Z
+
+    return-void
+
+    :cond_1
+    new-instance p3, Lcj3;
+
+    const/4 v1, 0x1
+
+    invoke-direct {p3, p1, p4, v0, v1}, Lcj3;-><init>(Lfj3;Lsh7;Lqi3;I)V
+
+    invoke-virtual {p2, p3}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+.end method
+
+.method public final k(Ljava/lang/String;)V
+    .locals 5
+
+    iget-object p1, p0, Lej3;->a:Lfj3;
+
+    iget-object v0, p1, Lfj3;->b:Landroid/view/ViewGroup;
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/os/Looper;->isCurrentThread()Z
+
+    move-result v1
+
+    iget-object v2, p0, Lej3;->b:Lsh7;
+
+    iget-object v3, p0, Lej3;->c:Lqi3;
+
+    if-eqz v1, :cond_0
+
+    sget-object p1, Lti3;->a:Lti3;
+
+    invoke-static {v2, v3, p1}, Lfj3;->n(Lsh7;Lqi3;Lui3;)V
+
+    return-void
+
+    :cond_0
+    invoke-virtual {v0}, Landroid/view/View;->getHandler()Landroid/os/Handler;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_1
+
+    new-instance v0, Lbj3;
+
+    const/4 v4, 0x0
+
+    invoke-direct {v0, p1, v2, v3, v4}, Lbj3;-><init>(Lfj3;Lsh7;Lqi3;I)V
+
+    invoke-virtual {v1, v0}, Landroid/os/Handler;->postAtFrontOfQueue(Ljava/lang/Runnable;)Z
+
+    return-void
+
+    :cond_1
+    new-instance v1, Lcj3;
+
+    const/4 v4, 0x0
+
+    invoke-direct {v1, p1, v2, v3, v4}, Lcj3;-><init>(Lfj3;Lsh7;Lqi3;I)V
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method

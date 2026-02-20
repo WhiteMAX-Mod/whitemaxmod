@@ -2,69 +2,42 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lvwa;
 
+# instance fields
+.field public final a:Ltmd;
 
-# static fields
-.field public static final a:Ljvi;
+.field public final b:J
+
+.field public final c:Lrbe;
+
+.field public final d:Lsbe;
+
+.field public e:J
+
+.field public f:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(JLsbe;Ltmd;)V
+    .locals 2
 
-    new-instance v0, Ljvi;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const-wide/16 v0, 0x0
 
-    sput-object v0, Ljvi;->a:Ljvi;
+    iput-wide v0, p0, Ljvi;->e:J
 
-    new-instance v0, Lbri;
+    iput-wide v0, p0, Ljvi;->f:J
 
-    const/4 v1, 0x1
+    iput-wide p1, p0, Ljvi;->b:J
 
-    invoke-direct {v0, v1}, Lbri;-><init>(I)V
+    iget-object p1, p3, Lsbe;->b:Lrbe;
 
-    const-class v1, Lpri;
+    iput-object p1, p0, Ljvi;->c:Lrbe;
 
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
+    iput-object p3, p0, Ljvi;->d:Lsbe;
 
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
+    iput-object p4, p0, Ljvi;->a:Ltmd;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
-
-    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
-
-    move-result-object p1
-
-    throw p1
 .end method

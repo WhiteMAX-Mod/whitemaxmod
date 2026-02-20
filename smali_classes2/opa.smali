@@ -1,284 +1,162 @@
 .class public final Lopa;
-.super Licg;
+.super Lao9;
 .source "SourceFile"
 
 
 # instance fields
-.field public c:Ljava/util/ArrayList;
+.field public U0:Lnx6;
 
-.field public d:Ljava/util/ArrayList;
-
-.field public o:Ljava/util/ArrayList;
-
-
-# direct methods
-.method public constructor <init>(Lpq9;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Licg;-><init>(Lpq9;)V
-
-    return-void
-.end method
+.field public V0:Llbb;
 
 
 # virtual methods
-.method public final d(Lpq9;Ljava/lang/String;)V
-    .locals 4
+.method public final L(Lone/me/messages/list/loader/MessageModel;)V
+    .locals 3
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object p1, p1, Lone/me/messages/list/loader/MessageModel;->t0:Lp10;
 
-    invoke-virtual {p2}, Ljava/lang/String;->hashCode()I
+    iget-object p1, p1, Lp10;->b:Lq20;
 
-    move-result v0
+    instance-of v0, p1, Lnx6;
 
     const/4 v1, 0x0
 
-    const/4 v2, -0x1
+    if-eqz v0, :cond_0
 
-    sparse-switch v0, :sswitch_data_0
-
-    goto :goto_0
-
-    :sswitch_0
-    const-string v0, "ids"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_0
+    check-cast p1, Lnx6;
 
     goto :goto_0
 
     :cond_0
-    const/4 v2, 0x2
-
-    goto :goto_0
-
-    :sswitch_1
-    const-string v0, "rindex"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v2, 0x1
-
-    goto :goto_0
-
-    :sswitch_2
-    const-string v0, "phones"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    move v2, v1
+    move-object p1, v1
 
     :goto_0
-    const/4 p2, 0x0
-
-    const/4 v0, 0x7
-
-    packed-switch v2, :pswitch_data_0
-
-    invoke-virtual {p1}, Lpq9;->B()V
+    if-nez p1, :cond_1
 
     return-void
 
-    :pswitch_0
-    invoke-virtual {p1}, Lpq9;->E()Lhn9;
+    :cond_1
+    iput-object p1, p0, Lopa;->U0:Lnx6;
 
-    move-result-object v2
+    iget-object v0, p0, Lao9;->I0:Landroid/view/ViewGroup;
 
-    invoke-virtual {v2}, Lhn9;->a()I
+    check-cast v0, Lnpa;
 
-    move-result v2
+    invoke-virtual {v0, p1}, Lnpa;->a(Lnx6;)V
 
-    if-ne v2, v0, :cond_3
+    iget-object v2, p0, Lopa;->V0:Llbb;
 
-    new-instance p2, Ljava/util/ArrayList;
+    if-eqz v2, :cond_2
 
-    invoke-direct {p2}, Ljava/util/ArrayList;-><init>()V
+    new-instance v1, Lbz5;
 
-    invoke-virtual {p1}, Lpq9;->F0()I
+    const/16 v2, 0x13
 
-    move-result v0
+    invoke-direct {v1, p0, v2, p1}, Lbz5;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    :goto_1
-    if-ge v1, v0, :cond_4
+    new-instance p1, Lxk6;
 
-    const-wide/16 v2, 0x0
+    const/16 v2, 0x14
 
-    invoke-static {p1, v2, v3}, Lcti;->n(Lpq9;J)J
+    invoke-direct {p1, v2, v1}, Lxk6;-><init>(ILjava/lang/Object;)V
 
-    move-result-wide v2
+    move-object v1, p1
 
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    :cond_2
+    invoke-virtual {v0, v1}, Lnpa;->setExternalMapButtonClickListener(Landroid/view/View$OnClickListener;)V
 
-    move-result-object v2
+    invoke-virtual {v0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
-    invoke-virtual {p2, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    move-result-object p1
 
-    add-int/lit8 v1, v1, 0x1
+    sget v1, Lbgb;->X0:I
 
-    goto :goto_1
+    invoke-virtual {p1, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    :cond_3
-    invoke-virtual {p1}, Lpq9;->B()V
+    move-result-object p1
 
-    :cond_4
-    iput-object p2, p0, Lopa;->o:Ljava/util/ArrayList;
+    invoke-virtual {v0, p1}, Lnpa;->setExternalMapButtonText(Ljava/lang/CharSequence;)V
 
     return-void
+.end method
 
-    :pswitch_1
-    invoke-virtual {p1}, Lpq9;->E()Lhn9;
+.method public final M(Lgob;)V
+    .locals 4
 
-    move-result-object v2
+    iget-object v0, p0, Lopa;->U0:Lnx6;
 
-    invoke-virtual {v2}, Lhn9;->a()I
+    iget-object v1, p0, Lao9;->I0:Landroid/view/ViewGroup;
 
-    move-result v2
+    if-eqz v0, :cond_0
 
-    if-ne v2, v0, :cond_5
+    move-object v2, v1
 
-    new-instance p2, Ljava/util/ArrayList;
+    check-cast v2, Lnpa;
 
-    invoke-direct {p2}, Ljava/util/ArrayList;-><init>()V
+    invoke-virtual {v2, v0}, Lnpa;->a(Lnx6;)V
 
-    invoke-virtual {p1}, Lpq9;->F0()I
+    :cond_0
+    check-cast v1, Lnpa;
 
-    move-result v0
+    iget-object v0, v1, Lnpa;->E0:Lxk4;
 
-    move v2, v1
+    iget-object v2, p1, Lgob;->b:Lfob;
 
-    :goto_2
-    if-ge v2, v0, :cond_6
+    iget v3, v2, Lfob;->f:I
 
-    invoke-static {p1, v1}, Lcti;->m(Lpq9;I)I
+    invoke-virtual {v0, v3}, Lxk4;->setTextColor$message_list_release(I)V
 
-    move-result v3
+    invoke-virtual {v0, v3}, Lxk4;->setDateViewStatusColor(I)V
 
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iget-object v0, v1, Lnpa;->C0:Lk7b;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget v1, v2, Lfob;->k:I
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
+
+    iget-object v1, v0, Lk7b;->b:Ljava/lang/Object;
+
+    check-cast v1, Landroid/graphics/drawable/GradientDrawable;
+
+    iget-object v2, p1, Lgob;->a:Ldob;
+
+    iget v2, v2, Ldob;->e:I
+
+    invoke-virtual {v1, v2}, Landroid/graphics/drawable/GradientDrawable;->setColor(I)V
+
+    const/4 v2, 0x1
+
+    int-to-float v2, v2
+
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
 
     move-result-object v3
 
-    invoke-virtual {p2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    add-int/lit8 v2, v2, 0x1
+    move-result-object v3
 
-    goto :goto_2
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
 
-    :cond_5
-    invoke-virtual {p1}, Lpq9;->B()V
+    mul-float/2addr v2, v3
 
-    :cond_6
-    iput-object p2, p0, Lopa;->d:Ljava/util/ArrayList;
-
-    return-void
-
-    :pswitch_2
-    invoke-virtual {p1}, Lpq9;->E()Lhn9;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lhn9;->a()I
+    invoke-static {v2}, Lmhj;->f(F)I
 
     move-result v2
 
-    if-ne v2, v0, :cond_7
+    iget-object p1, p1, Lgob;->d:Log;
 
-    new-instance p2, Ljava/util/ArrayList;
+    iget p1, p1, Log;->f:I
 
-    invoke-direct {p2}, Ljava/util/ArrayList;-><init>()V
+    invoke-virtual {v1, v2, p1}, Landroid/graphics/drawable/GradientDrawable;->setStroke(II)V
 
-    invoke-virtual {p1}, Lpq9;->F0()I
+    invoke-virtual {v0}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
 
-    move-result v0
+    move-result-object p1
 
-    :goto_3
-    if-ge v1, v0, :cond_8
-
-    invoke-static {p1}, Lcti;->q(Lpq9;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {p2, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_3
-
-    :cond_7
-    invoke-virtual {p1}, Lpq9;->B()V
-
-    :cond_8
-    iput-object p2, p0, Lopa;->c:Ljava/util/ArrayList;
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     return-void
-
-    :sswitch_data_0
-    .sparse-switch
-        -0x3af38f3b -> :sswitch_2
-        -0x377c6060 -> :sswitch_1
-        0x196b8 -> :sswitch_0
-    .end sparse-switch
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 6
-
-    iget-object v0, p0, Lopa;->c:Ljava/util/ArrayList;
-
-    invoke-static {v0}, Lcth;->d(Ljava/util/Collection;)I
-
-    move-result v0
-
-    iget-object v1, p0, Lopa;->d:Ljava/util/ArrayList;
-
-    invoke-static {v1}, Lcth;->d(Ljava/util/Collection;)I
-
-    move-result v1
-
-    iget-object v2, p0, Lopa;->o:Ljava/util/ArrayList;
-
-    invoke-static {v2}, Lcth;->d(Ljava/util/Collection;)I
-
-    move-result v2
-
-    const-string v3, ", rindex="
-
-    const-string v4, ", ids="
-
-    const-string v5, "{phones="
-
-    invoke-static {v5, v0, v3, v1, v4}, Lkz1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "}"
-
-    invoke-static {v0, v2, v1}, Lj27;->k(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

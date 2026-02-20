@@ -1,189 +1,173 @@
-.class public final Ll7;
-.super Lp6g;
+.class public final synthetic Ll7;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements La4b;
 
 
 # instance fields
-.field public final synthetic o:Lm7;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lru/ok/messages/media/mediabar/ActLocalMedias;
 
 
 # direct methods
-.method public constructor <init>(Lm7;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lru/ok/messages/media/mediabar/ActLocalMedias;I)V
     .locals 0
 
-    iput-object p1, p0, Ll7;->o:Lm7;
+    iput p2, p0, Ll7;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Ll7;->b:Lru/ok/messages/media/mediabar/ActLocalMedias;
 
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final F(Landroid/view/View;Ldqi;)Ldqi;
+    .locals 7
 
-    check-cast p1, Lzb4;
+    iget p1, p0, Ll7;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch p1, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Ll7;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object p1, p0, Ll7;->b:Lru/ok/messages/media/mediabar/ActLocalMedias;
 
-    move-result-object p1
+    iget-object p1, p1, Lru/ok/messages/media/mediabar/ActLocalMedias;->a1:Landroid/view/View;
 
-    check-cast p1, Ll7;
+    invoke-virtual {p2}, Ldqi;->a()I
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    move-result v0
 
-    invoke-virtual {p1, p2}, Ll7;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Ll7;
-
-    iget-object v0, p0, Ll7;->o:Lm7;
-
-    invoke-direct {p1, v0, p2}, Ll7;-><init>(Lm7;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 11
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Ll7;->o:Lm7;
-
-    iget-object p1, p1, Lm7;->a:Lo58;
-
-    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lseb;
-
-    const-string v0, "MESS_GROUP_NOTIF"
-
-    invoke-virtual {p1, v0}, Lseb;->f(Ljava/lang/String;)Ljava/util/List;
+    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v1
 
-    iget-object p1, p0, Ll7;->o:Lm7;
+    check-cast v1, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    iget-object p1, p1, Lm7;->a:Lo58;
+    iget v2, v1, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
 
-    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
+    if-eq v2, v0, :cond_0
 
-    move-result-object p1
+    iput v0, v1, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
 
-    check-cast p1, Lseb;
-
-    const-string v0, "CHAT_NOTIF"
-
-    invoke-virtual {p1, v0}, Lseb;->f(Ljava/lang/String;)Ljava/util/List;
-
-    move-result-object p1
-
-    sget-object v0, Lc5j;->a:Ledb;
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
+    invoke-virtual {p1, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     :cond_0
-    sget-object v8, Lkk8;->d:Lkk8;
+    return-object p2
 
-    invoke-virtual {v0, v8}, Ledb;->b(Lkk8;)Z
+    :pswitch_0
+    iget-object p1, p0, Ll7;->b:Lru/ok/messages/media/mediabar/ActLocalMedias;
+
+    iget-object p1, p1, Lru/ok/messages/media/mediabar/ActLocalMedias;->b1:Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;
+
+    invoke-virtual {p2}, Ldqi;->b()I
+
+    move-result v0
+
+    invoke-virtual {p2}, Ldqi;->c()I
+
+    move-result v1
+
+    invoke-virtual {p2}, Ldqi;->a()I
 
     move-result v2
 
-    if-eqz v2, :cond_1
+    iget-object v3, p1, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->H0:Landroid/view/View;
 
-    invoke-interface {v1}, Ljava/util/List;->size()I
+    invoke-virtual {v3}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
-    move-result v9
+    move-result-object v4
 
-    invoke-interface {p1}, Ljava/util/List;->size()I
+    check-cast v4, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    move-result v10
+    invoke-virtual {v4}, Landroid/view/ViewGroup$MarginLayoutParams;->getMarginStart()I
 
-    sget-object v5, Lk7;->b:Lk7;
+    move-result v5
 
-    const/16 v6, 0x1f
+    if-eq v5, v0, :cond_1
 
-    const/4 v2, 0x0
+    invoke-virtual {v4, v0}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginStart(I)V
 
-    const/4 v3, 0x0
+    invoke-virtual {v3, v4}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    :cond_1
+    iget-object v4, p1, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->G0:Landroid/view/View;
+
+    invoke-virtual {v4}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v5
+
+    check-cast v5, Landroid/view/ViewGroup$MarginLayoutParams;
+
+    invoke-virtual {v5}, Landroid/view/ViewGroup$MarginLayoutParams;->getMarginStart()I
+
+    move-result v6
+
+    if-eq v6, v0, :cond_2
+
+    invoke-virtual {v5, v0}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginStart(I)V
+
+    invoke-virtual {v4, v5}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    :cond_2
+    invoke-static {v3, v1}, Llaj;->g(Landroid/view/View;I)V
+
+    invoke-static {v4, v1}, Llaj;->g(Landroid/view/View;I)V
+
+    invoke-virtual {p1}, Landroid/view/View;->getPaddingTop()I
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    invoke-virtual {p1}, Landroid/view/View;->getPaddingLeft()I
+
+    move-result v0
+
+    invoke-virtual {p1}, Landroid/view/View;->getPaddingRight()I
+
+    move-result v1
+
+    invoke-virtual {p1}, Landroid/view/View;->getPaddingBottom()I
+
+    move-result v3
 
     const/4 v4, 0x0
 
-    invoke-static/range {v1 .. v6}, Lpi3;->K(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lnq6;I)Ljava/lang/String;
+    invoke-virtual {p1, v0, v4, v1, v3}, Landroid/view/View;->setPadding(IIII)V
 
-    move-result-object v1
+    :cond_3
+    invoke-virtual {p1}, Landroid/view/View;->getPaddingBottom()I
 
-    const/4 v6, 0x0
+    move-result v0
 
-    const/16 v7, 0x3e
+    if-eq v0, v2, :cond_4
 
-    const-string v3, "\n"
+    invoke-virtual {p1}, Landroid/view/View;->getPaddingLeft()I
 
-    const/4 v5, 0x0
+    move-result v0
 
-    move-object v2, p1
+    invoke-virtual {p1}, Landroid/view/View;->getPaddingTop()I
 
-    invoke-static/range {v2 .. v7}, Lpi3;->K(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lnq6;I)Ljava/lang/String;
+    move-result v1
 
-    move-result-object p1
+    invoke-virtual {p1}, Landroid/view/View;->getPaddingRight()I
 
-    const-string v2, ", \n                        |chats count: "
+    move-result v3
 
-    const-string v3, ",\n                        |groups notifs ids: "
+    invoke-virtual {p1, v0, v1, v3, v2}, Landroid/view/View;->setPadding(IIII)V
 
-    const-string v4, "ActiveNotifications group count: "
+    :cond_4
+    return-object p2
 
-    invoke-static {v4, v9, v2, v10, v3}, Lkz1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    nop
 
-    move-result-object v2
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ",\n                        |chats notifs: "
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p1, ",\n                        |"
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lszf;->g(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    const/4 v1, 0x0
-
-    const-string v2, "ActiveNotificationsDeveloperTools"
-
-    invoke-virtual {v0, v8, v2, p1, v1}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
-    :goto_0
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

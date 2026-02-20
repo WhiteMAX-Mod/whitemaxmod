@@ -1,232 +1,86 @@
 .class public final Lna;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/calls/ui/ui/waitingroom/AdminWaitingRoomScreen;
+.field public final a:J
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final b:J
 
 
 # direct methods
-.method public constructor <init>(Lone/me/calls/ui/ui/waitingroom/AdminWaitingRoomScreen;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(JJ)V
     .locals 0
 
-    iput-object p1, p0, Lna;->X:Lone/me/calls/ui/ui/waitingroom/AdminWaitingRoomScreen;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput-wide p1, p0, Lna;->a:J
 
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-wide p3, p0, Lna;->b:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    check-cast p1, Lpa;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lna;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    return v0
 
-    move-result-object p1
-
-    check-cast p1, Lna;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lna;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lna;
-
-    iget-object v1, p0, Lna;->X:Lone/me/calls/ui/ui/waitingroom/AdminWaitingRoomScreen;
-
-    invoke-direct {v0, v1, p2}, Lna;-><init>(Lone/me/calls/ui/ui/waitingroom/AdminWaitingRoomScreen;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lna;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 11
-
-    iget-object v0, p0, Lna;->o:Ljava/lang/Object;
-
-    check-cast v0, Lpa;
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    iget-object p1, v0, Lpa;->b:Ljava/util/List;
-
-    sget-object v1, Lone/me/calls/ui/ui/waitingroom/AdminWaitingRoomScreen;->Z:[Lz28;
-
-    iget-object v1, p0, Lna;->X:Lone/me/calls/ui/ui/waitingroom/AdminWaitingRoomScreen;
-
-    iget-object v2, v1, Lone/me/calls/ui/ui/waitingroom/AdminWaitingRoomScreen;->Y:Ljava/lang/Object;
-
-    invoke-interface {v2}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lla;
-
-    invoke-virtual {v2, p1}, Lnd8;->F(Ljava/util/List;)V
-
-    iget-object v2, v1, Lone/me/calls/ui/ui/waitingroom/AdminWaitingRoomScreen;->d:Ljld;
-
-    sget-object v3, Lone/me/calls/ui/ui/waitingroom/AdminWaitingRoomScreen;->Z:[Lz28;
-
-    const/4 v4, 0x2
-
-    aget-object v4, v3, v4
-
-    invoke-interface {v2, v1, v4}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    move-object v4, v2
-
-    check-cast v4, Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result v2
-
-    const/4 v10, 0x1
-
-    xor-int/lit8 v5, v2, 0x1
-
-    const/4 v8, 0x0
-
-    const/4 v9, 0x6
-
-    const-wide/16 v6, 0x0
-
-    invoke-static/range {v4 .. v9}, Lj4j;->f(Landroid/view/View;ZJLnq6;I)V
-
-    iget-object v2, v1, Lone/me/calls/ui/ui/waitingroom/AdminWaitingRoomScreen;->o:Ljld;
-
-    const/4 v4, 0x3
-
-    aget-object v4, v3, v4
-
-    invoke-interface {v2, v1, v4}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    move-object v4, v2
-
-    check-cast v4, Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result v2
-
-    xor-int/lit8 v5, v2, 0x1
-
-    invoke-static/range {v4 .. v9}, Lj4j;->f(Landroid/view/View;ZJLnq6;I)V
-
-    iget-object v2, v1, Lone/me/calls/ui/ui/waitingroom/AdminWaitingRoomScreen;->c:Ljld;
-
-    aget-object v4, v3, v10
-
-    invoke-interface {v2, v1, v4}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    move-object v4, v2
-
-    check-cast v4, Landroidx/recyclerview/widget/RecyclerView;
-
-    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result p1
-
-    xor-int/lit8 v5, p1, 0x1
-
-    invoke-static/range {v4 .. v9}, Lj4j;->f(Landroid/view/View;ZJLnq6;I)V
-
-    iget-object p1, v0, Lpa;->b:Ljava/util/List;
-
-    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
-
-    move-result p1
+    :cond_0
+    instance-of v1, p1, Lna;
 
     const/4 v2, 0x0
 
-    if-eqz p1, :cond_0
+    if-nez v1, :cond_1
 
-    sget-object p1, Lpa;->c:Lpa;
+    return v2
 
-    if-eq v0, p1, :cond_0
+    :cond_1
+    check-cast p1, Lna;
 
-    move v5, v10
+    iget-wide v3, p0, Lna;->a:J
 
-    goto :goto_0
+    iget-wide v5, p1, Lna;->a:J
 
-    :cond_0
-    move v5, v2
+    cmp-long v1, v3, v5
 
-    :goto_0
-    iget-object p1, v1, Lone/me/calls/ui/ui/waitingroom/AdminWaitingRoomScreen;->X:Ljld;
+    if-nez v1, :cond_2
 
-    const/4 v4, 0x4
+    iget-wide v3, p0, Lna;->b:J
 
-    aget-object v4, v3, v4
+    iget-wide v5, p1, Lna;->b:J
 
-    invoke-interface {p1, v1, v4}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+    cmp-long p1, v3, v5
 
-    move-result-object p1
+    if-nez p1, :cond_2
 
-    move-object v4, p1
+    return v0
 
-    check-cast v4, Lpab;
+    :cond_2
+    return v2
+.end method
 
-    const/4 v8, 0x0
+.method public final hashCode()I
+    .locals 3
 
-    const/4 v9, 0x6
+    iget-wide v0, p0, Lna;->a:J
 
-    const-wide/16 v6, 0x0
+    long-to-int v0, v0
 
-    invoke-static/range {v4 .. v9}, Lj4j;->f(Landroid/view/View;ZJLnq6;I)V
+    mul-int/lit8 v0, v0, 0x1f
 
-    iget-object p1, v0, Lpa;->a:Lqhg;
+    iget-wide v1, p0, Lna;->b:J
 
-    iget-object v0, v1, Lone/me/calls/ui/ui/waitingroom/AdminWaitingRoomScreen;->b:Ljld;
+    long-to-int v1, v1
 
-    aget-object v2, v3, v2
+    add-int/2addr v0, v1
 
-    invoke-interface {v0, v1, v2}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lymb;
-
-    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v1}, Lqhg;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Lymb;->setSubtitle(Ljava/lang/CharSequence;)V
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
+    return v0
 .end method

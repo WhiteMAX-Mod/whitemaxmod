@@ -1,137 +1,80 @@
 .class public final Lvjj;
-.super Lwoi;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Loza;
+
+
+# static fields
+.field public static final a:Lvjj;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 3
+
+    new-instance v0, Lvjj;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lvjj;->a:Lvjj;
+
+    new-instance v0, Lp7j;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lp7j;-><init>(I)V
+
+    const-class v1, Lh8j;
+
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x2
+
+    invoke-static {v0, v2}, Leni;->i(Ljava/util/HashMap;I)Lp7j;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x3
+
+    invoke-static {v0, v2}, Leni;->i(Ljava/util/HashMap;I)Lp7j;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x4
+
+    invoke-static {v0, v2}, Leni;->i(Ljava/util/HashMap;I)Lp7j;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, Leni;->m(Ljava/util/HashMap;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final Y(Laxa;Ljava/lang/String;I)Lte7;
-    .locals 1
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    invoke-virtual {p0}, Lwoi;->V()Landroid/os/Parcel;
-
-    move-result-object v0
-
-    invoke-static {v0, p1}, Lfvi;->c(Landroid/os/Parcel;Landroid/os/IInterface;)V
-
-    invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p3}, Landroid/os/Parcel;->writeInt(I)V
-
-    const/4 p1, 0x2
-
-    invoke-virtual {p0, v0, p1}, Lwoi;->B(Landroid/os/Parcel;I)Landroid/os/Parcel;
+    invoke-static {p1}, Lkb0;->d(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
-
-    move-result-object p2
-
-    invoke-static {p2}, Laxa;->Y(Landroid/os/IBinder;)Lte7;
-
-    move-result-object p2
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
-
-    return-object p2
-.end method
-
-.method public final Z(Laxa;Ljava/lang/String;ILaxa;)Lte7;
-    .locals 1
-
-    invoke-virtual {p0}, Lwoi;->V()Landroid/os/Parcel;
-
-    move-result-object v0
-
-    invoke-static {v0, p1}, Lfvi;->c(Landroid/os/Parcel;Landroid/os/IInterface;)V
-
-    invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p3}, Landroid/os/Parcel;->writeInt(I)V
-
-    invoke-static {v0, p4}, Lfvi;->c(Landroid/os/Parcel;Landroid/os/IInterface;)V
-
-    const/16 p1, 0x8
-
-    invoke-virtual {p0, v0, p1}, Lwoi;->B(Landroid/os/Parcel;I)Landroid/os/Parcel;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
-
-    move-result-object p2
-
-    invoke-static {p2}, Laxa;->Y(Landroid/os/IBinder;)Lte7;
-
-    move-result-object p2
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
-
-    return-object p2
-.end method
-
-.method public final a0(Laxa;Ljava/lang/String;I)Lte7;
-    .locals 1
-
-    invoke-virtual {p0}, Lwoi;->V()Landroid/os/Parcel;
-
-    move-result-object v0
-
-    invoke-static {v0, p1}, Lfvi;->c(Landroid/os/Parcel;Landroid/os/IInterface;)V
-
-    invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p3}, Landroid/os/Parcel;->writeInt(I)V
-
-    const/4 p1, 0x4
-
-    invoke-virtual {p0, v0, p1}, Lwoi;->B(Landroid/os/Parcel;I)Landroid/os/Parcel;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
-
-    move-result-object p2
-
-    invoke-static {p2}, Laxa;->Y(Landroid/os/IBinder;)Lte7;
-
-    move-result-object p2
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
-
-    return-object p2
-.end method
-
-.method public final b0(Laxa;Ljava/lang/String;ZJ)Lte7;
-    .locals 1
-
-    invoke-virtual {p0}, Lwoi;->V()Landroid/os/Parcel;
-
-    move-result-object v0
-
-    invoke-static {v0, p1}, Lfvi;->c(Landroid/os/Parcel;Landroid/os/IInterface;)V
-
-    invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p3}, Landroid/os/Parcel;->writeInt(I)V
-
-    invoke-virtual {v0, p4, p5}, Landroid/os/Parcel;->writeLong(J)V
-
-    const/4 p1, 0x7
-
-    invoke-virtual {p0, v0, p1}, Lwoi;->B(Landroid/os/Parcel;I)Landroid/os/Parcel;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
-
-    move-result-object p2
-
-    invoke-static {p2}, Laxa;->Y(Landroid/os/IBinder;)Lte7;
-
-    move-result-object p2
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
-
-    return-object p2
+    throw p1
 .end method

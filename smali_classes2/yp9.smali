@@ -1,57 +1,62 @@
 .class public final Lyp9;
-.super Lo84;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public X:Ljm9;
-
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Laq9;
-
-.field public d:J
-
-.field public o:Lijd;
-
-.field public t0:I
-
-
-# direct methods
-.method public constructor <init>(Laq9;Lo84;)V
-    .locals 0
-
-    iput-object p1, p0, Lyp9;->Z:Laq9;
-
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+# interfaces
+.implements Ldq9;
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    iput-object p1, p0, Lyp9;->Y:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    iget p1, p0, Lyp9;->t0:I
+    if-ne p0, p1, :cond_0
 
-    const/high16 v0, -0x80000000
+    return v0
 
-    or-int/2addr p1, v0
+    :cond_0
+    instance-of v1, p1, Lyp9;
 
-    iput p1, p0, Lyp9;->t0:I
-
-    const-wide/16 v0, 0x0
+    if-nez v1, :cond_1
 
     const/4 p1, 0x0
 
-    iget-object v2, p0, Lyp9;->Z:Laq9;
+    return p1
 
-    invoke-virtual {v2, v0, v1, p1, p0}, Laq9;->d(JLijd;Lo84;)Ljava/lang/Object;
+    :cond_1
+    check-cast p1, Lyp9;
 
-    move-result-object p1
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    return-object p1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const/4 v0, 0x1
+
+    invoke-static {v0}, Ly12;->t(I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "MICROPHONE"
+
+    const-string v1, ")"
+
+    const-string v2, "Alternate(iconType="
+
+    invoke-static {v2, v0, v1}, Ltx8;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

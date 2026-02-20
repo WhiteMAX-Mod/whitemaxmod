@@ -1,63 +1,31 @@
-.class public Lpc5;
-.super Loc5;
+.class public final Lpc5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public b(Lr8g;Lr8g;Landroid/view/Window;Landroid/view/View;ZZ)V
-    .locals 1
+# instance fields
+.field public final a:I
 
-    const/4 v0, 0x0
+.field public final b:[I
 
-    invoke-static {p3, v0}, Ln8j;->d(Landroid/view/Window;Z)V
+.field public final c:[I
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+.field public final d:[I
 
-    invoke-virtual {p3, v0}, Landroid/view/Window;->setStatusBarColor(I)V
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+# direct methods
+.method public constructor <init>(I[I[I[I)V
+    .locals 0
 
-    invoke-virtual {p3, v0}, Landroid/view/Window;->setNavigationBarColor(I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {p3}, La85;->s(Landroid/view/Window;)V
+    iput p1, p0, Lpc5;->a:I
 
-    invoke-static {p3}, La85;->z(Landroid/view/Window;)V
+    iput-object p2, p0, Lpc5;->b:[I
 
-    new-instance p1, Lcrd;
+    iput-object p3, p0, Lpc5;->c:[I
 
-    invoke-direct {p1, p4}, Lcrd;-><init>(Landroid/view/View;)V
-
-    sget p2, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 p4, 0x1e
-
-    if-lt p2, p4, :cond_0
-
-    new-instance p2, Lzhi;
-
-    invoke-static {p3}, Lnhi;->d(Landroid/view/Window;)Landroid/view/WindowInsetsController;
-
-    move-result-object p4
-
-    invoke-direct {p2, p4, p1}, Lzhi;-><init>(Landroid/view/WindowInsetsController;Lcrd;)V
-
-    iput-object p3, p2, Lzhi;->c:Landroid/view/Window;
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p2, Lyhi;
-
-    invoke-direct {p2, p3, p1}, Lyhi;-><init>(Landroid/view/Window;Lcrd;)V
-
-    :goto_0
-    xor-int/lit8 p1, p5, 0x1
-
-    invoke-virtual {p2, p1}, Lr8j;->d(Z)V
-
-    xor-int/lit8 p1, p6, 0x1
-
-    invoke-virtual {p2, p1}, Lr8j;->c(Z)V
+    iput-object p4, p0, Lpc5;->d:[I
 
     return-void
 .end method

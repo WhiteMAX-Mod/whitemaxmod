@@ -1,51 +1,52 @@
 .class public final Law2;
-.super Lo84;
+.super Lpdg;
 .source "SourceFile"
 
-
-# instance fields
-.field public final synthetic X:Lhw2;
-
-.field public Y:I
-
-.field public d:Ljava/util/concurrent/atomic/AtomicLong;
-
-.field public synthetic o:Ljava/lang/Object;
-
-
-# direct methods
-.method public constructor <init>(Lhw2;Lo84;)V
-    .locals 0
-
-    iput-object p1, p0, Law2;->X:Lhw2;
-
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+# interfaces
+.implements Lys6;
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iput-object p1, p0, Law2;->o:Ljava/lang/Object;
+    check-cast p1, Lnd4;
 
-    iget p1, p0, Law2;->Y:I
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Law2;->Y:I
-
-    iget-object p1, p0, Law2;->X:Lhw2;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, v0, p0}, Lhw2;->c(Ljava/lang/String;Landroid/graphics/RectF;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {p0, p1, p2}, Law2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
+
+    check-cast p1, Law2;
+
+    sget-object p2, Lmah;->a:Lmah;
+
+    invoke-virtual {p1, p2}, Law2;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object p1, Lsi5;->a:Lsi5;
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Law2;
+
+    const/4 v0, 0x2
+
+    invoke-direct {p1, v0, p2}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    sget-object p1, Lsi5;->a:Lsi5;
 
     return-object p1
 .end method

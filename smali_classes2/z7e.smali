@@ -1,166 +1,92 @@
-.class public final Lz7e;
-.super Lp6g;
+.class public final synthetic Lz7e;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Lis6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public final synthetic Y:La8e;
-
-.field public o:I
+.field public final synthetic b:Lc8e;
 
 
 # direct methods
-.method public constructor <init>(La8e;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lc8e;I)V
     .locals 0
 
-    iput-object p1, p0, Lz7e;->Y:La8e;
+    iput p2, p0, Lz7e;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lz7e;->b:Lc8e;
 
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke()Ljava/lang/Object;
+    .locals 1
 
-    check-cast p1, Lzb4;
+    iget v0, p0, Lz7e;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Lz7e;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Lz7e;->b:Lc8e;
 
-    move-result-object p1
+    iget-object v0, v0, Lc8e;->a:Luib;
 
-    check-cast p1, Lz7e;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lz7e;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lz7e;
-
-    iget-object v1, p0, Lz7e;->Y:La8e;
-
-    invoke-direct {v0, v1, p2}, Lz7e;-><init>(La8e;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lz7e;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    iget-object v0, p0, Lz7e;->X:Ljava/lang/Object;
-
-    check-cast v0, Lzb4;
-
-    iget v1, p0, Lz7e;->o:I
-
-    iget-object v2, p0, Lz7e;->Y:La8e;
-
-    const/4 v3, 0x1
-
-    if-eqz v1, :cond_1
-
-    if-ne v1, v3, :cond_0
-
-    :try_start_0
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-    :try_end_0
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_1
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_0
-
-    :catch_0
-    move-exception p1
-
-    goto :goto_2
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    :try_start_1
-    iget-object p1, v2, La8e;->c:Lo58;
-
-    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lk6h;
-
-    iput-object v0, p0, Lz7e;->X:Ljava/lang/Object;
-
-    iput v3, p0, Lz7e;->o:I
-
-    invoke-virtual {p1, v3, v3, p0}, Lk6h;->a(ZZLp6g;)Ljava/lang/Object;
-
-    move-result-object p1
-    :try_end_1
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    sget-object v0, Lac4;->a:Lac4;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
-    :goto_0
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v0}, Luib;->l()Lm8e;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    check-cast v0, Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;
+
+    invoke-virtual {v0}, Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;->L()Lrw9;
 
     move-result-object v0
 
-    const-string v1, "enableSafeMode fail"
+    return-object v0
 
-    invoke-static {v0, v1, p1}, Lc5j;->r(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    :pswitch_0
+    iget-object v0, p0, Lz7e;->b:Lc8e;
 
-    :cond_2
-    :goto_1
-    iget-object p1, v2, La8e;->o:Lcm5;
+    iget-object v0, v0, Lc8e;->a:Luib;
 
-    sget-object v0, Lb3h;->a:Lb3h;
+    invoke-virtual {v0}, Luib;->l()Lm8e;
 
-    invoke-static {p1, v0}, Lnth;->q(Lcm5;Ljava/lang/Object;)V
+    move-result-object v0
+
+    check-cast v0, Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;
+
+    invoke-virtual {v0}, Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;->U()Lsfe;
+
+    move-result-object v0
 
     return-object v0
 
-    :goto_2
-    throw p1
+    :pswitch_1
+    iget-object v0, p0, Lz7e;->b:Lc8e;
+
+    iget-object v0, v0, Lc8e;->a:Luib;
+
+    invoke-virtual {v0}, Luib;->l()Lm8e;
+
+    move-result-object v0
+
+    check-cast v0, Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;
+
+    invoke-virtual {v0}, Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;->A()Lp43;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

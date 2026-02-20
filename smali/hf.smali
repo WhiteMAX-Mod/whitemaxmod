@@ -1,144 +1,79 @@
-.class public final Lhf;
+.class public final synthetic Lhf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/media/ImageReader$OnImageAvailableListener;
 
-# static fields
-.field public static final a:Lcom/facebook/animated/gif/GifImage;
 
-.field public static final b:Lcom/facebook/animated/gif/GifImage;
+# instance fields
+.field public final synthetic a:Lkf;
+
+.field public final synthetic b:Ljava/util/concurrent/Executor;
+
+.field public final synthetic c:Lpj7;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    const/4 v0, 0x0
-
-    :try_start_0
-    const-class v1, Lcom/facebook/animated/gif/GifImage;
-
-    invoke-virtual {v1}, Ljava/lang/Class;->newInstance()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/facebook/animated/gif/GifImage;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-object v1, v0
-
-    :goto_0
-    sput-object v1, Lhf;->a:Lcom/facebook/animated/gif/GifImage;
-
-    const-string v1, "com.facebook.animated.webp.WebPImage"
-
-    :try_start_1
-    invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Class;->newInstance()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/facebook/animated/gif/GifImage;
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    move-object v0, v1
-
-    :catchall_1
-    sput-object v0, Lhf;->b:Lcom/facebook/animated/gif/GifImage;
-
-    return-void
-.end method
-
-.method public constructor <init>(Limf;Loac;Z)V
+.method public synthetic constructor <init>(Lkf;Ljava/util/concurrent/Executor;Lpj7;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    iput-object p1, p0, Lhf;->a:Lkf;
+
+    iput-object p2, p0, Lhf;->b:Ljava/util/concurrent/Executor;
+
+    iput-object p3, p0, Lhf;->c:Lpj7;
+
     return-void
 .end method
 
-.method public static a(Ljava/lang/String;Lth7;Lcom/facebook/animated/gif/GifImage;)Lgg3;
-    .locals 1
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+# virtual methods
+.method public final onImageAvailable(Landroid/media/ImageReader;)V
+    .locals 5
 
-    new-instance p1, Lloe;
+    iget-object p1, p0, Lhf;->a:Lkf;
 
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+    iget-object v0, p0, Lhf;->b:Ljava/util/concurrent/Executor;
 
-    iput-object p2, p1, Lloe;->b:Ljava/lang/Object;
+    iget-object v1, p0, Lhf;->c:Lpj7;
 
-    const/4 p2, 0x0
+    iget-object v2, p1, Lkf;->d:Ljava/lang/Object;
 
-    iput-object p2, p1, Lloe;->c:Ljava/lang/Object;
-
-    iput-object p2, p1, Lloe;->d:Ljava/lang/Object;
-
-    iput-object p0, p1, Lloe;->a:Ljava/lang/Object;
-
-    const/4 p0, 0x0
+    monitor-enter v2
 
     :try_start_0
-    new-instance p2, Ll2b;
+    iget-boolean v3, p1, Lkf;->b:Z
 
-    invoke-direct {p2, p1}, Ll2b;-><init>(Lloe;)V
+    if-nez v3, :cond_0
+
+    new-instance v3, Ljf;
+
+    const/4 v4, 0x0
+
+    invoke-direct {v3, p1, v4, v1}, Ljf;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-interface {v0, v3}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    monitor-exit v2
+
+    return-void
+
+    :goto_1
+    monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    iget-object v0, p1, Lloe;->c:Ljava/lang/Object;
-
-    check-cast v0, Lkg3;
-
-    invoke-static {v0}, Lkg3;->f0(Lkg3;)V
-
-    iput-object p0, p1, Lloe;->c:Ljava/lang/Object;
-
-    iget-object v0, p1, Lloe;->d:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/ArrayList;
-
-    invoke-static {v0}, Lkg3;->g0(Ljava/util/ArrayList;)V
-
-    iput-object p0, p1, Lloe;->d:Ljava/lang/Object;
-
-    new-instance p0, Lgg3;
-
-    invoke-direct {p0}, Lyj0;-><init>()V
-
-    iput-object p2, p0, Lgg3;->d:Ll2b;
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Lgg3;->o:Z
-
-    return-object p0
-
-    :catchall_0
-    move-exception p2
-
-    iget-object v0, p1, Lloe;->c:Ljava/lang/Object;
-
-    check-cast v0, Lkg3;
-
-    invoke-static {v0}, Lkg3;->f0(Lkg3;)V
-
-    iput-object p0, p1, Lloe;->c:Ljava/lang/Object;
-
-    iget-object v0, p1, Lloe;->d:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/ArrayList;
-
-    invoke-static {v0}, Lkg3;->g0(Ljava/util/ArrayList;)V
-
-    iput-object p0, p1, Lloe;->d:Ljava/lang/Object;
-
-    throw p2
+    throw p1
 .end method

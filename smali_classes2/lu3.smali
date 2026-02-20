@@ -1,100 +1,62 @@
-.class public final Llu3;
+.class public final synthetic Llu3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/text/InputFilter;
+
 
 # instance fields
-.field public volatile a:J
-
-.field public volatile b:J
-
-.field public volatile c:I
-
-.field public volatile d:J
-
-.field public volatile e:J
-
-.field public volatile f:J
-
-.field public volatile g:Ljava/lang/String;
-
-.field public volatile h:I
+.field public final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(Z)V
-    .locals 2
+.method public synthetic constructor <init>(I)V
+    .locals 0
+
+    iput p1, p0, Llu3;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v0, ""
-
-    iput-object v0, p0, Llu3;->g:Ljava/lang/String;
-
-    const/4 v0, -0x1
-
-    iput v0, p0, Llu3;->h:I
-
-    if-eqz p1, :cond_0
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Llu3;->a:J
-
-    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lmu3;
-    .locals 14
+.method public final filter(Ljava/lang/CharSequence;IILandroid/text/Spanned;II)Ljava/lang/CharSequence;
+    .locals 0
 
-    new-instance v0, Lmu3;
+    iget p2, p0, Llu3;->a:I
 
-    iget-wide v1, p0, Llu3;->a:J
+    const-string p3, ""
 
-    iget-wide v3, p0, Llu3;->b:J
+    packed-switch p2, :pswitch_data_0
 
-    iget-wide v5, p0, Llu3;->a:J
+    sget-object p1, Lkq9;->T0:[Lv58;
 
-    const-wide/16 v7, 0x1
+    return-object p3
 
-    cmp-long v7, v7, v5
+    :pswitch_0
+    sget-object p2, Lmu3;->b:Ldzd;
 
-    if-gtz v7, :cond_0
+    invoke-virtual {p2, p1}, Ldzd;->a(Ljava/lang/CharSequence;)Z
 
-    cmp-long v3, v5, v3
+    move-result p2
 
-    if-gtz v3, :cond_0
-
-    iget-wide v3, p0, Llu3;->b:J
-
-    iget-wide v5, p0, Llu3;->a:J
-
-    sub-long/2addr v3, v5
+    if-eqz p2, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const-wide/16 v3, -0x1
+    move-object p1, p3
 
     :goto_0
-    iget-wide v5, p0, Llu3;->d:J
+    return-object p1
 
-    iget-wide v7, p0, Llu3;->e:J
+    nop
 
-    iget-wide v9, p0, Llu3;->f:J
-
-    iget-object v11, p0, Llu3;->g:Ljava/lang/String;
-
-    iget v12, p0, Llu3;->h:I
-
-    iget v13, p0, Llu3;->c:I
-
-    invoke-direct/range {v0 .. v13}, Lmu3;-><init>(JJJJJLjava/lang/String;II)V
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,69 +1,72 @@
-.class public final enum La6b;
-.super Ljava/lang/Enum;
+.class public final La6b;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
 
-# static fields
-.field public static final enum a:La6b;
 
-.field public static final synthetic b:[La6b;
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lb6b;
+
+.field public final synthetic c:Landroid/graphics/drawable/Drawable;
+
+.field public final synthetic d:Ljava/lang/Runnable;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public synthetic constructor <init>(Lb6b;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;I)V
+    .locals 0
 
-    new-instance v0, La6b;
+    iput p4, p0, La6b;->a:I
 
-    const-string v1, "IDLE"
+    iput-object p1, p0, La6b;->b:Lb6b;
 
-    const/4 v2, 0x0
+    iput-object p2, p0, La6b;->c:Landroid/graphics/drawable/Drawable;
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-object p3, p0, La6b;->d:Ljava/lang/Runnable;
 
-    sput-object v0, La6b;->a:La6b;
-
-    new-instance v1, La6b;
-
-    const-string v2, "LOADING"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    filled-new-array {v0, v1}, [La6b;
-
-    move-result-object v0
-
-    sput-object v0, La6b;->b:[La6b;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)La6b;
-    .locals 1
 
-    const-class v0, La6b;
+# virtual methods
+.method public final run()V
+    .locals 3
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget v0, p0, La6b;->a:I
 
-    move-result-object p0
+    packed-switch v0, :pswitch_data_0
 
-    check-cast p0, La6b;
+    iget-object v0, p0, La6b;->c:Landroid/graphics/drawable/Drawable;
 
-    return-object p0
-.end method
+    iget-object v1, p0, La6b;->d:Ljava/lang/Runnable;
 
-.method public static values()[La6b;
-    .locals 1
+    iget-object v2, p0, La6b;->b:Lb6b;
 
-    sget-object v0, La6b;->b:[La6b;
+    invoke-static {v2, v0, v1}, Lb6b;->e(Lb6b;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    return-void
 
-    move-result-object v0
+    :pswitch_0
+    iget-object v0, p0, La6b;->c:Landroid/graphics/drawable/Drawable;
 
-    check-cast v0, [La6b;
+    iget-object v1, p0, La6b;->d:Ljava/lang/Runnable;
 
-    return-object v0
+    iget-object v2, p0, La6b;->b:Lb6b;
+
+    invoke-static {v2, v0, v1}, Lb6b;->e(Lb6b;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

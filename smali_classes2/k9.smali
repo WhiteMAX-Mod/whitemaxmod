@@ -1,87 +1,181 @@
 .class public final Lk9;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Landroid/app/Application$ActivityLifecycleCallbacks;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/profile/screens/addmembers/AddChatMembersScreen;
+.field public final a:Ljava/util/ArrayList;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final b:Ls5d;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/profile/screens/addmembers/AddChatMembersScreen;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    iput-object p2, p0, Lk9;->X:Lone/me/profile/screens/addmembers/AddChatMembersScreen;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    new-instance v0, Ljava/util/ArrayList;
 
-    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lk9;->a:Ljava/util/ArrayList;
+
+    new-instance v0, Ls5d;
+
+    invoke-direct {v0}, Ls5d;-><init>()V
+
+    iput-object v0, p0, Lk9;->b:Ls5d;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final onActivityCreated(Landroid/app/Activity;Landroid/os/Bundle;)V
     .locals 0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    new-instance p2, Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {p0, p1, p2}, Lk9;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-direct {p2, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lk9;->a:Ljava/util/ArrayList;
+
+    invoke-virtual {p1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    return-void
+.end method
+
+.method public final onActivityDestroyed(Landroid/app/Activity;)V
+    .locals 4
+
+    iget-object v0, p0, Lk9;->a:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :cond_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v2}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v3
+
+    if-ne v3, p1, :cond_0
+
+    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+
+    :cond_1
+    return-void
+.end method
+
+.method public final onActivityPaused(Landroid/app/Activity;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final onActivityPostResumed(Landroid/app/Activity;)V
+    .locals 1
+
+    iget-object v0, p0, Lk9;->b:Ls5d;
+
+    invoke-virtual {v0, p1}, Ls5d;->b(Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public final onActivityResumed(Landroid/app/Activity;)V
+    .locals 4
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "CSPDialogActivity"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p1}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/ViewGroup;
+
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    const-string v2, "id"
+
+    invoke-virtual {p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object p1
 
-    check-cast p1, Lk9;
+    const-string v3, "tvTitle"
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    invoke-virtual {v1, v3, v2, p1}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-virtual {p1, p2}, Lk9;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lk9;
-
-    iget-object v1, p0, Lk9;->X:Lone/me/profile/screens/addmembers/AddChatMembersScreen;
-
-    invoke-direct {v0, p2, v1}, Lk9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profile/screens/addmembers/AddChatMembersScreen;)V
-
-    iput-object p1, v0, Lk9;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iget-object v0, p0, Lk9;->o:Ljava/lang/Object;
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    check-cast v0, Lhja;
-
-    instance-of p1, v0, Lag3;
+    move-result p1
 
     if-eqz p1, :cond_0
 
-    iget-object p1, p0, Lk9;->X:Lone/me/profile/screens/addmembers/AddChatMembersScreen;
-
-    invoke-virtual {p1}, La94;->getRouter()Lw4e;
+    invoke-virtual {v0, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lw4e;->C()Z
+    check-cast p1, Landroid/widget/TextView;
+
+    if-eqz p1, :cond_0
+
+    sget v0, Lwce;->M2:I
+
+    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(I)V
 
     :cond_0
-    sget-object p1, Lb3h;->a:Lb3h;
+    return-void
+.end method
 
-    return-object p1
+.method public final onActivitySaveInstanceState(Landroid/app/Activity;Landroid/os/Bundle;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final onActivityStarted(Landroid/app/Activity;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final onActivityStopped(Landroid/app/Activity;)V
+    .locals 0
+
+    return-void
 .end method

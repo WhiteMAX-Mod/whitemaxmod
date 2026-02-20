@@ -1,55 +1,125 @@
 .class public final Lqyc;
-.super Lo84;
+.super Ldg0;
 .source "SourceFile"
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final b:J
 
-.field public final synthetic Y:Ltyc;
-
-.field public Z:I
-
-.field public d:Landroid/graphics/drawable/Drawable;
-
-.field public o:Lpo4;
+.field public final c:Lcu2;
 
 
 # direct methods
-.method public constructor <init>(Ltyc;Lo84;)V
-    .locals 0
+.method public constructor <init>(JLcu2;)V
+    .locals 1
 
-    iput-object p1, p0, Lqyc;->Y:Ltyc;
+    const/16 v0, 0x12
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, v0}, Ldg0;-><init>(I)V
+
+    iput-wide p1, p0, Lqyc;->b:J
+
+    iput-object p3, p0, Lqyc;->c:Lcu2;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lqyc;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lqyc;
+
+    iget-wide v3, p0, Lqyc;->b:J
+
+    iget-wide v5, p1, Lqyc;->b:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lqyc;->c:Lcu2;
+
+    iget-object p1, p1, Lqyc;->c:Lcu2;
+
+    if-eq v1, p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
     .locals 2
 
-    iput-object p1, p0, Lqyc;->X:Ljava/lang/Object;
+    iget-wide v0, p0, Lqyc;->b:J
 
-    iget p1, p0, Lqyc;->Z:I
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
-    const/high16 v0, -0x80000000
+    move-result v0
 
-    or-int/2addr p1, v0
+    mul-int/lit8 v0, v0, 0x1f
 
-    iput p1, p0, Lqyc;->Z:I
+    iget-object v1, p0, Lqyc;->c:Lcu2;
 
-    const/4 p1, 0x0
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
-    const/4 v0, 0x0
+    move-result v1
 
-    iget-object v1, p0, Lqyc;->Y:Ltyc;
+    add-int/2addr v1, v0
 
-    invoke-virtual {v1, p1, v0, p0}, Ltyc;->c(Landroid/graphics/drawable/Drawable;ZLo84;)Ljava/lang/Object;
+    return v1
+.end method
 
-    move-result-object p1
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    return-object p1
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ChatMembers(chatId="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v1, p0, Lqyc;->b:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", type="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lqyc;->c:Lcu2;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

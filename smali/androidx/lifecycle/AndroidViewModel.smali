@@ -1,5 +1,5 @@
 .class public abstract Landroidx/lifecycle/AndroidViewModel;
-.super Loth;
+.super Ly0i;
 .source "SourceFile"
 
 
@@ -10,7 +10,7 @@
     }
     d2 = {
         "Landroidx/lifecycle/AndroidViewModel;",
-        "Loth;",
+        "Ly0i;",
         "lifecycle-viewmodel_release"
     }
     k = 0x1

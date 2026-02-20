@@ -1,49 +1,88 @@
 .class public final Lhw7;
-.super Landroidx/constraintlayout/widget/ConstraintLayout;
+.super Lpdg;
 .source "SourceFile"
+
+# interfaces
+.implements Lys6;
 
 
 # instance fields
-.field public final synthetic G0:Lone/me/inviteactions/invitefriendsbottomsheet/InviteFriendsToMaxBottomSheet;
+.field public final synthetic X:Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/inviteactions/invitefriendsbottomsheet/InviteFriendsToMaxBottomSheet;Landroid/content/Context;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;)V
     .locals 0
 
-    iput-object p1, p0, Lhw7;->G0:Lone/me/inviteactions/invitefriendsbottomsheet/InviteFriendsToMaxBottomSheet;
+    iput-object p2, p0, Lhw7;->X:Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;
 
-    invoke-direct {p0, p2}, Landroidx/constraintlayout/widget/ConstraintLayout;-><init>(Landroid/content/Context;)V
+    const/4 p2, 0x2
+
+    invoke-direct {p0, p2, p1}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onConfigurationChanged(Landroid/content/res/Configuration;)V
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    sget-object p1, Lone/me/inviteactions/invitefriendsbottomsheet/InviteFriendsToMaxBottomSheet;->M0:[Lz28;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object p1, p0, Lhw7;->G0:Lone/me/inviteactions/invitefriendsbottomsheet/InviteFriendsToMaxBottomSheet;
+    invoke-virtual {p0, p1, p2}, Lhw7;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-object v0, p1, Lone/me/inviteactions/invitefriendsbottomsheet/InviteFriendsToMaxBottomSheet;->J0:Lo58;
+    move-result-object p1
 
-    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+    check-cast p1, Lhw7;
+
+    sget-object p2, Lmah;->a:Lmah;
+
+    invoke-virtual {p1, p2}, Lhw7;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lhw7;
+
+    iget-object v1, p0, Lhw7;->X:Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;
+
+    invoke-direct {v0, p2, v1}, Lhw7;-><init>(Lkotlin/coroutines/Continuation;Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;)V
+
+    iput-object p1, v0, Lhw7;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Lhw7;->o:Ljava/lang/Object;
+
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    sget-object v0, Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;->z0:[Lv58;
+
+    iget-object v0, p0, Lhw7;->X:Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;
+
+    invoke-virtual {v0}, Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;->I0()Lu7b;
 
     move-result-object v0
 
-    check-cast v0, Lfw7;
+    invoke-virtual {v0, p1}, Lu7b;->setEnabled(Z)V
 
-    invoke-virtual {p1}, Lone/me/inviteactions/invitefriendsbottomsheet/InviteFriendsToMaxBottomSheet;->P0()La1d;
+    sget-object p1, Lmah;->a:Lmah;
 
-    move-result-object v1
-
-    const/4 v2, 0x1
-
-    iget p1, p1, Lone/me/inviteactions/invitefriendsbottomsheet/InviteFriendsToMaxBottomSheet;->I0:I
-
-    invoke-virtual {v0, v1, v2, p1}, Lfw7;->s(Lb1d;ZI)V
-
-    return-void
+    return-object p1
 .end method

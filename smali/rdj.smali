@@ -1,76 +1,70 @@
-.class public abstract Lrdj;
+.class public final Lrdj;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Loza;
+
+
+# static fields
+.field public static final a:Lrdj;
+
 
 # direct methods
-.method public static a(Luld;Lo84;)Ljava/lang/Object;
+.method static constructor <clinit>()V
     .locals 3
 
-    new-instance v0, Lg62;
+    new-instance v0, Lrdj;
 
-    invoke-static {p1}, Lo1j;->d(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p1
+    sput-object v0, Lrdj;->a:Lrdj;
+
+    new-instance v0, Lp7j;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, v1, p1}, Lg62;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, v1}, Lp7j;-><init>(I)V
 
-    invoke-virtual {v0}, Lg62;->o()V
+    const-class v1, Lh8j;
 
-    new-instance p1, Le1b;
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
 
-    const/4 v1, 0x0
+    move-result-object v0
 
-    const/4 v2, 0x0
+    const/4 v2, 0x2
 
-    invoke-direct {p1, v0, v1, v2}, Le1b;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-static {v0, v2}, Leni;->i(Ljava/util/HashMap;I)Lp7j;
 
-    invoke-virtual {p0, p1}, Luld;->e(Llw1;)V
+    move-result-object v0
 
-    new-instance p1, Lf1b;
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
 
-    invoke-direct {p1, p0, v1}, Lf1b;-><init>(Luld;I)V
+    move-result-object v0
 
-    invoke-virtual {v0, p1}, Lg62;->f(Lnq6;)V
+    const/4 v2, 0x3
 
-    invoke-virtual {v0}, Lg62;->n()Ljava/lang/Object;
+    invoke-static {v0, v2}, Leni;->i(Ljava/util/HashMap;I)Lp7j;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, Leni;->m(Ljava/util/HashMap;)V
+
+    return-void
 .end method
 
-.method public static final b(Lnd2;)J
-    .locals 4
 
-    invoke-virtual {p0}, Lnd2;->r()J
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    move-result-wide v0
+    invoke-static {p1}, Lkb0;->d(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    iget-object p0, p0, Lnd2;->c:Lwk9;
+    move-result-object p1
 
-    if-eqz p0, :cond_0
-
-    iget-object p0, p0, Lwk9;->a:Ljm9;
-
-    if-eqz p0, :cond_0
-
-    iget-wide v2, p0, Ljm9;->c:J
-
-    goto :goto_0
-
-    :cond_0
-    const-wide v2, 0x7fffffffffffffffL
-
-    :goto_0
-    cmp-long p0, v0, v2
-
-    if-lez p0, :cond_1
-
-    return-wide v2
-
-    :cond_1
-    return-wide v0
+    throw p1
 .end method

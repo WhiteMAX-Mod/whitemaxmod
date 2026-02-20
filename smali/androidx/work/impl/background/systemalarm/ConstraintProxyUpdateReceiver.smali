@@ -13,7 +13,7 @@
 
     const-string v0, "ConstrntProxyUpdtRecvr"
 
-    invoke-static {v0}, Lkgi;->k(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lm0j;->n(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -55,7 +55,7 @@
 
     if-nez v1, :cond_1
 
-    invoke-static {}, Lkgi;->g()Lkgi;
+    invoke-static {}, Lm0j;->g()Lm0j;
 
     move-result-object p1
 
@@ -73,7 +73,7 @@
 
     sget-object v0, Landroidx/work/impl/background/systemalarm/ConstraintProxyUpdateReceiver;->a:Ljava/lang/String;
 
-    invoke-virtual {p1, v0, p2}, Lkgi;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, v0, p2}, Lm0j;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
@@ -82,19 +82,19 @@
 
     move-result-object v0
 
-    invoke-static {p1}, Ltii;->d(Landroid/content/Context;)Ltii;
+    invoke-static {p1}, Lzqi;->d(Landroid/content/Context;)Lzqi;
 
     move-result-object v1
 
-    iget-object v1, v1, Ltii;->d:Lbg8;
+    iget-object v1, v1, Lzqi;->d:Limi;
 
-    new-instance v2, Ly9;
+    new-instance v2, Lpb;
 
     const/4 v3, 0x1
 
-    invoke-direct {v2, p2, p1, v0, v3}, Ly9;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    invoke-direct {v2, p2, p1, v0, v3}, Lpb;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
-    invoke-virtual {v1, v2}, Lbg8;->m(Ljava/lang/Runnable;)V
+    invoke-virtual {v1, v2}, Limi;->n(Ljava/lang/Runnable;)V
 
     return-void
 .end method

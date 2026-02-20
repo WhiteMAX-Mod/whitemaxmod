@@ -1,117 +1,288 @@
-.class public final enum Ld5i;
-.super Ljava/lang/Enum;
+.class public final Ld5i;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Enum<",
-        "Ld5i;",
-        ">;"
-    }
-.end annotation
+# instance fields
+.field public final a:Ljava/lang/String;
 
+.field public final b:J
 
-# static fields
-.field public static final Companion:Lc5i;
+.field public final c:J
 
-.field public static final a:Ljava/lang/Object;
+.field public final d:Ljava/lang/Thread;
 
-.field public static final enum b:Ld5i;
+.field public final e:Ljava/util/List;
 
-.field public static final enum c:Ld5i;
-
-.field public static final enum d:Ld5i;
-
-.field public static final synthetic o:[Ld5i;
+.field public final f:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(Ljava/lang/String;JJLjava/lang/Thread;Ljava/util/List;Z)V
+    .locals 0
 
-    new-instance v0, Ld5i;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "IMPACT_OCCURED"
+    iput-object p1, p0, Ld5i;->a:Ljava/lang/String;
 
-    const/4 v2, 0x0
+    iput-wide p2, p0, Ld5i;->b:J
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-wide p4, p0, Ld5i;->c:J
 
-    sput-object v0, Ld5i;->b:Ld5i;
+    iput-object p6, p0, Ld5i;->d:Ljava/lang/Thread;
 
-    new-instance v1, Ld5i;
+    iput-object p7, p0, Ld5i;->e:Ljava/util/List;
 
-    const-string v2, "NOTIFICATION_OCCURED"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Ld5i;->c:Ld5i;
-
-    new-instance v2, Ld5i;
-
-    const-string v3, "SELECTION_CHANGED"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Ld5i;->d:Ld5i;
-
-    filled-new-array {v0, v1, v2}, [Ld5i;
-
-    move-result-object v0
-
-    sput-object v0, Ld5i;->o:[Ld5i;
-
-    new-instance v0, Lc5i;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Ld5i;->Companion:Lc5i;
-
-    new-instance v0, Lgch;
-
-    const/16 v1, 0x18
-
-    invoke-direct {v0, v1}, Lgch;-><init>(I)V
-
-    invoke-static {v4, v0}, Le8;->b(ILlq6;)Lo58;
-
-    move-result-object v0
-
-    sput-object v0, Ld5i;->a:Ljava/lang/Object;
+    iput-boolean p8, p0, Ld5i;->f:Z
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Ld5i;
-    .locals 1
 
-    const-class v0, Ld5i;
+# virtual methods
+.method public final a(J)J
+    .locals 2
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget-object v0, p0, Ld5i;->d:Ljava/lang/Thread;
 
-    move-result-object p0
+    if-nez v0, :cond_0
 
-    check-cast p0, Ld5i;
+    sget p1, Lgc5;->d:I
 
-    return-object p0
+    const-wide/16 p1, 0x0
+
+    return-wide p1
+
+    :cond_0
+    iget-wide v0, p0, Ld5i;->c:J
+
+    invoke-static {p1, p2, v0, v1}, Lgc5;->m(JJ)J
+
+    move-result-wide p1
+
+    return-wide p1
 .end method
 
-.method public static values()[Ld5i;
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    sget-object v0, Ld5i;->o:[Ld5i;
+    const/4 v0, 0x1
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Ld5i;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Ld5i;
+
+    iget-object v1, p0, Ld5i;->a:Ljava/lang/String;
+
+    iget-object v3, p1, Ld5i;->a:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-wide v3, p0, Ld5i;->b:J
+
+    iget-wide v5, p1, Ld5i;->b:J
+
+    invoke-static {v3, v4, v5, v6}, Lgc5;->f(JJ)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-wide v3, p0, Ld5i;->c:J
+
+    iget-wide v5, p1, Ld5i;->c:J
+
+    invoke-static {v3, v4, v5, v6}, Lgc5;->f(JJ)Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-object v1, p0, Ld5i;->d:Ljava/lang/Thread;
+
+    iget-object v3, p1, Ld5i;->d:Ljava/lang/Thread;
+
+    invoke-static {v1, v3}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_5
+
+    return v2
+
+    :cond_5
+    iget-object v1, p0, Ld5i;->e:Ljava/util/List;
+
+    iget-object v3, p1, Ld5i;->e:Ljava/util/List;
+
+    invoke-static {v1, v3}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_6
+
+    return v2
+
+    :cond_6
+    iget-boolean v1, p0, Ld5i;->f:Z
+
+    iget-boolean p1, p1, Ld5i;->f:Z
+
+    if-eq v1, p1, :cond_7
+
+    return v2
+
+    :cond_7
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    iget-object v0, p0, Ld5i;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    sget v2, Lgc5;->d:I
+
+    iget-wide v2, p0, Ld5i;->b:J
+
+    invoke-static {v0, v1, v2, v3}, Leni;->a(IIJ)I
+
+    move-result v0
+
+    iget-wide v2, p0, Ld5i;->c:J
+
+    invoke-static {v0, v1, v2, v3}, Leni;->a(IIJ)I
+
+    move-result v0
+
+    iget-object v2, p0, Ld5i;->d:Ljava/lang/Thread;
+
+    if-nez v2, :cond_0
+
+    const/4 v2, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v2
+
+    :goto_0
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Ld5i;->e:Ljava/util/List;
+
+    invoke-static {v2, v0, v1}, Ljye;->e(Ljava/util/List;II)I
+
+    move-result v0
+
+    iget-boolean v1, p0, Ld5i;->f:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 6
+
+    iget-wide v0, p0, Ld5i;->b:J
+
+    invoke-static {v0, v1}, Lgc5;->q(J)Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, [Ld5i;
+    iget-wide v1, p0, Ld5i;->c:J
+
+    invoke-static {v1, v2}, Lgc5;->q(J)Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, ", submitTime="
+
+    const-string v3, ", startTime="
+
+    const-string v4, "WatchdogTask(submitThread="
+
+    iget-object v5, p0, Ld5i;->a:Ljava/lang/String;
+
+    invoke-static {v4, v5, v2, v0, v3}, Lau1;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", runningThread="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ld5i;->d:Ljava/lang/Thread;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", stacktrace="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ld5i;->e:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", useShortMeta="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Ld5i;->f:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

@@ -1,58 +1,59 @@
 .class public final Lpl2;
-.super Ljava/lang/Object;
+.super Lda4;
 .source "SourceFile"
-
-# interfaces
-.implements Lg61;
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/CopyOnWriteArraySet;
+.field public X:J
+
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lwl2;
+
+.field public d:Lwl2;
+
+.field public o:J
+
+.field public s0:I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Lwl2;Lda4;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lpl2;->Z:Lwl2;
 
-    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
-
-    iput-object v0, p0, Lpl2;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onNewMessage(Lqm7;)V
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    iget-object v0, p0, Lpl2;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    iput-object p1, p0, Lpl2;->Y:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+    iget p1, p0, Lpl2;->s0:I
 
-    move-result-object v0
+    const/high16 v0, -0x80000000
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    or-int/2addr p1, v0
 
-    move-result v1
+    iput p1, p0, Lpl2;->s0:I
 
-    if-eqz v1, :cond_0
+    const-wide/16 v1, 0x0
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    const-wide/16 v3, 0x0
 
-    move-result-object v1
+    iget-object v0, p0, Lpl2;->Z:Lwl2;
 
-    check-cast v1, Lg61;
+    move-object v5, p0
 
-    invoke-interface {v1, p1}, Lg61;->onNewMessage(Lqm7;)V
+    invoke-static/range {v0 .. v5}, Lwl2;->g(Lwl2;JJLda4;)Ljava/lang/Object;
 
-    goto :goto_0
+    move-result-object p1
 
-    :cond_0
-    return-void
+    return-object p1
 .end method

@@ -1,217 +1,117 @@
 .class public final Ld84;
-.super Ljava/lang/Object;
+.super Lpdg;
 .source "SourceFile"
 
 # interfaces
-.implements Lx74;
+.implements Lys6;
 
 
 # instance fields
-.field public final a:Landroid/os/Bundle;
+.field public final synthetic X:Lh84;
+
+.field public final synthetic Y:Ljava/lang/String;
+
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Lh84;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ld84;->X:Lh84;
 
-    new-instance v0, Landroid/os/Bundle;
+    iput-object p2, p0, Ld84;->Y:Ljava/lang/String;
 
-    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+    const/4 p1, 0x2
 
-    iput-object v0, p0, Ld84;->a:Landroid/os/Bundle;
+    invoke-direct {p0, p1, p3}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()Lx74;
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const-string v0, "highlight_padding"
+    check-cast p1, Lnd4;
 
-    sget-object v1, Lo67;->b:Landroid/graphics/Rect;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object v2, p0, Ld84;->a:Landroid/os/Bundle;
-
-    invoke-virtual {v2, v0, v1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
-
-    const-string v0, "highlight_radius"
-
-    invoke-virtual {v2, v0}, Landroid/os/Bundle;->remove(Ljava/lang/String;)V
-
-    return-object p0
-.end method
-
-.method public final build()Ly74;
-    .locals 3
-
-    new-instance v0, Lone/me/sdk/contextmenu/bottomsheet/ContextMenuBottomSheet;
-
-    new-instance v1, Landroid/os/Bundle;
-
-    iget-object v2, p0, Ld84;->a:Landroid/os/Bundle;
-
-    invoke-direct {v1, v2}, Landroid/os/Bundle;-><init>(Landroid/os/Bundle;)V
-
-    invoke-direct {v0, v1}, Lone/me/sdk/contextmenu/bottomsheet/ContextMenuBottomSheet;-><init>(Landroid/os/Bundle;)V
-
-    return-object v0
-.end method
-
-.method public final c()Lx74;
-    .locals 2
-
-    const-string v0, "highlight_padding"
-
-    iget-object v1, p0, Ld84;->a:Landroid/os/Bundle;
-
-    invoke-virtual {v1, v0}, Landroid/os/Bundle;->remove(Ljava/lang/String;)V
-
-    const-string v0, "highlight_radius"
-
-    invoke-virtual {v1, v0}, Landroid/os/Bundle;->remove(Ljava/lang/String;)V
-
-    return-object p0
-.end method
-
-.method public final k(Landroid/graphics/Rect;F)Lx74;
-    .locals 2
-
-    const-string v0, "highlight_padding"
-
-    iget-object v1, p0, Ld84;->a:Landroid/os/Bundle;
-
-    invoke-virtual {v1, v0, p1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
-
-    const-string p1, "highlight_radius"
-
-    invoke-virtual {v1, p1, p2}, Landroid/os/Bundle;->putFloat(Ljava/lang/String;F)V
-
-    return-object p0
-.end method
-
-.method public final o(Ljava/util/Collection;)Lx74;
-    .locals 2
-
-    const-string v0, "actions"
-
-    invoke-static {p1}, Lnkj;->a(Ljava/util/Collection;)Landroid/os/Bundle;
+    invoke-virtual {p0, p1, p2}, Ld84;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    iget-object v1, p0, Ld84;->a:Landroid/os/Bundle;
+    check-cast p1, Ld84;
 
-    invoke-virtual {v1, v0, p1}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
+    sget-object p2, Lmah;->a:Lmah;
 
-    return-object p0
-.end method
-
-.method public final s(F)Lx74;
-    .locals 3
-
-    sget-object v0, Lo67;->b:Landroid/graphics/Rect;
-
-    sget-object v0, Lo67;->b:Landroid/graphics/Rect;
-
-    iget-object v1, p0, Ld84;->a:Landroid/os/Bundle;
-
-    const-string v2, "highlight_padding"
-
-    invoke-virtual {v1, v2, v0}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
-
-    const-string v0, "highlight_radius"
-
-    invoke-virtual {v1, v0, p1}, Landroid/os/Bundle;->putFloat(Ljava/lang/String;F)V
-
-    return-object p0
-.end method
-
-.method public final t(Landroid/os/Bundle;)Lx74;
-    .locals 2
-
-    iget-object v0, p0, Ld84;->a:Landroid/os/Bundle;
-
-    const-string v1, "payload"
-
-    invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
-
-    return-object p0
-.end method
-
-.method public final w(Landroid/view/View;)Lx74;
-    .locals 3
-
-    invoke-virtual {p1}, Landroid/view/View;->getId()I
-
-    move-result v0
-
-    const/4 v1, -0x1
-
-    if-eq v0, v1, :cond_0
-
-    const-string v0, "anchor_id"
-
-    invoke-virtual {p1}, Landroid/view/View;->getId()I
-
-    move-result v1
-
-    iget-object v2, p0, Ld84;->a:Landroid/os/Bundle;
-
-    invoke-virtual {v2, v0, v1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
-
-    const-string v0, "anchor_class"
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {p1, p2}, Ld84;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-virtual {v2, v0, p1}, Landroid/os/Bundle;->putSerializable(Ljava/lang/String;Ljava/io/Serializable;)V
+    return-object p1
+.end method
 
-    return-object p0
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance p1, Ld84;
+
+    iget-object v0, p0, Ld84;->X:Lh84;
+
+    iget-object v1, p0, Ld84;->Y:Ljava/lang/String;
+
+    invoke-direct {p1, v0, v1, p2}, Ld84;-><init>(Lh84;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Ld84;->o:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    return-object p1
 
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
-    const-string v0, "Check failed."
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
     invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw p1
-.end method
 
-.method public final x()Lx74;
-    .locals 3
+    :cond_1
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    sget-object v0, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->t0:Ltna;
+    iget-object p1, p0, Ld84;->X:Lh84;
 
-    sget-object v0, Lone/me/sdk/contextmenu/bottomsheet/ContextMenuBottomSheet;->L0:[Lz28;
+    iget-object p1, p1, Lh84;->c:Lmve;
 
-    sget-object v0, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->t0:Ltna;
+    iput v1, p0, Ld84;->o:I
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object v0, p0, Ld84;->Y:Ljava/lang/String;
 
-    sget-object v0, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->v0:Ljava/lang/String;
+    invoke-virtual {p1, v0, p0}, Lmve;->k(Ljava/lang/String;Lda4;)Ljava/io/Serializable;
 
-    const/4 v1, 0x1
+    move-result-object p1
 
-    iget-object v2, p0, Ld84;->a:Landroid/os/Bundle;
+    sget-object v0, Lod4;->a:Lod4;
 
-    invoke-virtual {v2, v0, v1}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
+    if-ne p1, v0, :cond_2
 
-    return-object p0
-.end method
+    return-object v0
 
-.method public final y(Lqhg;)Lx74;
-    .locals 2
-
-    iget-object v0, p0, Ld84;->a:Landroid/os/Bundle;
-
-    const-string v1, "header"
-
-    invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
-
-    return-object p0
+    :cond_2
+    return-object p1
 .end method

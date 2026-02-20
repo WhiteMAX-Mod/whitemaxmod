@@ -1,42 +1,77 @@
-.class public final synthetic Lw84;
+.class public final Lw84;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lx4e;
-
 
 # instance fields
-.field public final synthetic a:La94;
-
-.field public final synthetic b:Landroid/content/Intent;
+.field public final a:Lv84;
 
 
 # direct methods
-.method public synthetic constructor <init>(La94;Landroid/content/Intent;)V
+.method public constructor <init>(Lv84;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lw84;->a:La94;
-
-    iput-object p2, p0, Lw84;->b:Landroid/content/Intent;
+    iput-object p1, p0, Lw84;->a:Lv84;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final a()V
+.method public static a(Landroid/content/ClipDescription;Ljava/util/ArrayList;)Landroid/content/ClipData;
     .locals 2
 
-    iget-object v0, p0, Lw84;->b:Landroid/content/Intent;
+    new-instance v0, Landroid/content/ClipData;
 
-    iget-object v1, p0, Lw84;->a:La94;
+    new-instance v1, Landroid/content/ClipDescription;
 
-    iget-object v1, v1, La94;->router:Lw4e;
+    invoke-direct {v1, p0}, Landroid/content/ClipDescription;-><init>(Landroid/content/ClipDescription;)V
 
-    invoke-virtual {v1, v0}, Lw4e;->U(Landroid/content/Intent;)V
+    const/4 p0, 0x0
 
-    return-void
+    invoke-interface {p1, p0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Landroid/content/ClipData$Item;
+
+    invoke-direct {v0, v1, p0}, Landroid/content/ClipData;-><init>(Landroid/content/ClipDescription;Landroid/content/ClipData$Item;)V
+
+    const/4 p0, 0x1
+
+    :goto_0
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    if-ge p0, v1, :cond_0
+
+    invoke-interface {p1, p0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/content/ClipData$Item;
+
+    invoke-virtual {v0, v1}, Landroid/content/ClipData;->addItem(Landroid/content/ClipData$Item;)V
+
+    add-int/lit8 p0, p0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lw84;->a:Lv84;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

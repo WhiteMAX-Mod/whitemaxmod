@@ -1,55 +1,123 @@
 .class public final Lyp0;
-.super Lpl4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic X:Lzp0;
+.field public final a:I
 
-.field public o:Landroid/graphics/Bitmap;
+.field public final b:Ljava/lang/CharSequence;
 
 
 # direct methods
-.method public constructor <init>(Lzp0;)V
-    .locals 1
+.method public constructor <init>(ILjava/lang/CharSequence;)V
+    .locals 0
 
-    const/4 v0, 0x2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, v0}, Laz;-><init>(I)V
+    iput p1, p0, Lyp0;->a:I
 
-    iput-object p1, p0, Lyp0;->X:Lzp0;
+    iput-object p2, p0, Lyp0;->b:Ljava/lang/CharSequence;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final x()V
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
+
+    instance-of v0, p1, Lyp0;
+
+    if-eqz v0, :cond_4
+
+    check-cast p1, Lyp0;
+
+    iget v0, p0, Lyp0;->a:I
+
+    iget v1, p1, Lyp0;->a:I
+
+    if-ne v0, v1, :cond_4
+
+    iget-object p1, p1, Lyp0;->b:Ljava/lang/CharSequence;
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lyp0;->o:Landroid/graphics/Bitmap;
+    iget-object v1, p0, Lyp0;->b:Ljava/lang/CharSequence;
 
-    const/4 v0, 0x0
+    if-eqz v1, :cond_0
 
-    iput v0, p0, Laz;->b:I
+    invoke-interface {v1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
-    const-wide/16 v1, 0x0
+    move-result-object v1
 
-    iput-wide v1, p0, Lpl4;->c:J
+    goto :goto_0
 
-    iput-boolean v0, p0, Lpl4;->d:Z
+    :cond_0
+    move-object v1, v0
 
-    return-void
+    :goto_0
+    if-eqz p1, :cond_1
+
+    invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    :cond_1
+    if-nez v1, :cond_2
+
+    if-eqz v0, :cond_3
+
+    :cond_2
+    if-eqz v1, :cond_4
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_4
+
+    :cond_3
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_4
+    const/4 p1, 0x0
+
+    return p1
 .end method
 
-.method public final y()V
-    .locals 1
+.method public final hashCode()I
+    .locals 2
 
-    iget-object v0, p0, Lyp0;->X:Lzp0;
+    iget v0, p0, Lyp0;->a:I
 
-    invoke-virtual {v0, p0}, Ljdf;->m(Lpl4;)V
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    return-void
+    move-result-object v0
+
+    iget-object v1, p0, Lyp0;->b:Ljava/lang/CharSequence;
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    :goto_0
+    filled-new-array {v0, v1}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
+
+    move-result v0
+
+    return v0
 .end method

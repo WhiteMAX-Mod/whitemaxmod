@@ -120,6 +120,11 @@
         <item quantity="few">%1$d звезды</item>
         <item quantity="many">%1$d звёзд</item>
     </plurals>
+    <plurals name="oneme_poll_create__answer_limit_hint">
+        <item quantity="other">Можно добавить ещё %d ответов</item>
+        <item quantity="one">Можно добавить ещё %d ответ</item>
+        <item quantity="few">Можно добавить ещё %d ответа</item>
+    </plurals>
     <plurals name="oneme_settings_privacy_twofa_delete_user_days_left_notif">
         <item quantity="other">Удаляем ваш профиль, осталось %1$d дней</item>
         <item quantity="one">Удаляем ваш профиль, остался %1$d день</item>
@@ -152,6 +157,18 @@
         <item quantity="two">%d стикера</item>
         <item quantity="few">%d стикера</item>
         <item quantity="many">%d стикеров</item>
+    </plurals>
+    <plurals name="picker_chats_channel_limit_add_subscribers_error">
+        <item quantity="other">За один раз можно добавить не больше %s подписчиков</item>
+        <item quantity="one">За один раз можно добавить не больше %s подписчика</item>
+    </plurals>
+    <plurals name="picker_chats_chat_limit_add_participant_error">
+        <item quantity="other">За один раз можно добавить не больше %s участников</item>
+        <item quantity="one">За один раз можно добавить не больше %s участника</item>
+    </plurals>
+    <plurals name="picker_chats_chat_participant_count_limit_error">
+        <item quantity="other">В чате может быть не больше %s участников</item>
+        <item quantity="one">В чате может быть не больше %s участника</item>
     </plurals>
     <plurals name="picker_chats_list_forward_messages">
         <item quantity="other">%d пересылаемых сообщений из $s</item>

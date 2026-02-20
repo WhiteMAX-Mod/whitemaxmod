@@ -1,80 +1,152 @@
 .class public final La2j;
-.super Ljava/lang/Object;
+.super Ln2;
 .source "SourceFile"
 
 # interfaces
-.implements Lvwa;
+.implements Ljava/util/ListIterator;
 
 
-# static fields
-.field public static final a:La2j;
+# instance fields
+.field public final synthetic o:Lw2;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lw2;)V
+    .locals 1
 
-    new-instance v0, La2j;
+    .line 1
+    iput-object p1, p0, La2j;->o:Lw2;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
 
-    sput-object v0, La2j;->a:La2j;
+    invoke-direct {p0, p1, v0}, Ln2;-><init>(Lw2;B)V
 
-    new-instance v0, Lbri;
+    return-void
+.end method
 
-    const/4 v1, 0x1
+.method public constructor <init>(Lw2;I)V
+    .locals 1
 
-    invoke-direct {v0, v1}, Lbri;-><init>(I)V
+    .line 2
+    iput-object p1, p0, La2j;->o:Lw2;
 
-    const-class v1, Lpri;
+    iget-object v0, p1, Lw2;->c:Ljava/util/Collection;
 
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
+    check-cast v0, Ljava/util/List;
 
-    move-result-object v0
+    .line 3
+    invoke-interface {v0, p2}, Ljava/util/List;->listIterator(I)Ljava/util/ListIterator;
 
-    const/4 v2, 0x2
+    move-result-object p2
 
-    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
+    const/4 v0, 0x0
 
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x4
-
-    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
+    invoke-direct {p0, p1, p2, v0}, Ln2;-><init>(Lw2;Ljava/util/ListIterator;B)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final add(Ljava/lang/Object;)V
+    .locals 3
 
-    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    iget-object v0, p0, La2j;->o:Lw2;
 
-    move-result-object p1
+    invoke-virtual {v0}, Ljava/util/AbstractCollection;->isEmpty()Z
 
-    throw p1
+    move-result v1
+
+    invoke-virtual {p0}, Ln2;->b()V
+
+    iget-object v2, p0, Ln2;->b:Ljava/util/Iterator;
+
+    check-cast v2, Ljava/util/ListIterator;
+
+    invoke-interface {v2, p1}, Ljava/util/ListIterator;->add(Ljava/lang/Object;)V
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v0}, Lw2;->d()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final hasPrevious()Z
+    .locals 1
+
+    invoke-virtual {p0}, Ln2;->b()V
+
+    iget-object v0, p0, Ln2;->b:Ljava/util/Iterator;
+
+    check-cast v0, Ljava/util/ListIterator;
+
+    invoke-interface {v0}, Ljava/util/ListIterator;->hasPrevious()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final nextIndex()I
+    .locals 1
+
+    invoke-virtual {p0}, Ln2;->b()V
+
+    iget-object v0, p0, Ln2;->b:Ljava/util/Iterator;
+
+    check-cast v0, Ljava/util/ListIterator;
+
+    invoke-interface {v0}, Ljava/util/ListIterator;->nextIndex()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final previous()Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p0}, Ln2;->b()V
+
+    iget-object v0, p0, Ln2;->b:Ljava/util/Iterator;
+
+    check-cast v0, Ljava/util/ListIterator;
+
+    invoke-interface {v0}, Ljava/util/ListIterator;->previous()Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final previousIndex()I
+    .locals 1
+
+    invoke-virtual {p0}, Ln2;->b()V
+
+    iget-object v0, p0, Ln2;->b:Ljava/util/Iterator;
+
+    check-cast v0, Ljava/util/ListIterator;
+
+    invoke-interface {v0}, Ljava/util/ListIterator;->previousIndex()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final set(Ljava/lang/Object;)V
+    .locals 1
+
+    invoke-virtual {p0}, Ln2;->b()V
+
+    iget-object v0, p0, Ln2;->b:Ljava/util/Iterator;
+
+    check-cast v0, Ljava/util/ListIterator;
+
+    invoke-interface {v0, p1}, Ljava/util/ListIterator;->set(Ljava/lang/Object;)V
+
+    return-void
 .end method

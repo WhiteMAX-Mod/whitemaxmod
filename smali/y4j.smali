@@ -1,119 +1,70 @@
-.class public abstract Ly4j;
+.class public final Ly4j;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Loza;
+
+
+# static fields
+.field public static final a:Ly4j;
+
 
 # direct methods
-.method public static a(II)J
-    .locals 4
+.method static constructor <clinit>()V
+    .locals 3
 
-    int-to-long v0, p0
+    new-instance v0, Ly4j;
 
-    const/16 p0, 0x20
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    shl-long/2addr v0, p0
+    sput-object v0, Ly4j;->a:Ly4j;
 
-    int-to-long p0, p1
-
-    const-wide v2, 0xffffffffL
-
-    and-long/2addr p0, v2
-
-    or-long/2addr p0, v0
-
-    return-wide p0
-.end method
-
-.method public static final b(Lru/ok/android/api/core/ApiInvocationException;)Z
-    .locals 4
-
-    invoke-virtual {p0}, Lru/ok/android/api/core/ApiInvocationException;->getErrorCode()I
-
-    move-result v0
-
-    const/16 v1, 0x66
-
-    const/4 v2, 0x1
-
-    if-eq v0, v1, :cond_2
-
-    invoke-virtual {p0}, Lru/ok/android/api/core/ApiInvocationException;->getErrorCode()I
-
-    move-result v0
-
-    const/16 v1, 0x67
-
-    if-eq v0, v1, :cond_2
-
-    invoke-virtual {p0}, Lru/ok/android/api/core/ApiInvocationException;->getErrorCode()I
-
-    move-result v0
-
-    const/16 v1, 0x64
-
-    const/4 v3, 0x0
-
-    if-ne v0, v1, :cond_1
-
-    invoke-virtual {p0}, Lru/ok/android/api/core/ApiInvocationException;->getErrorMessage()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "session_key"
-
-    if-eqz v0, :cond_0
-
-    invoke-static {v0, v1, v3}, Lrzf;->u(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
-
-    move-result v0
-
-    if-ne v0, v2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p0}, Lru/ok/android/api/core/ApiInvocationException;->getErrorField()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {p0, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    return v3
-
-    :cond_2
-    :goto_0
-    return v2
-.end method
-
-.method public static final c(Lr4h;)V
-    .locals 2
-
-    new-instance v0, Lmy4;
-
-    const/16 v1, 0x12
-
-    invoke-direct {v0, v1}, Lmy4;-><init>(I)V
+    new-instance v0, Lczi;
 
     const/4 v1, 0x1
 
-    invoke-virtual {p0, v1, v0}, Lr4h;->c(ILhs7;)V
+    invoke-direct {v0, v1}, Lczi;-><init>(I)V
 
-    new-instance v0, Lf68;
+    const-class v1, Lozi;
 
-    const/4 v1, 0x2
+    invoke-static {v1, v0}, Leni;->f(Ljava/lang/Class;Lczi;)Ljava/util/HashMap;
 
-    invoke-direct {v0, v1}, Lf68;-><init>(I)V
+    move-result-object v0
 
-    const/16 v1, 0x1e3
+    const/4 v2, 0x2
 
-    invoke-virtual {p0, v1, v0}, Lr4h;->e(ILhs7;)V
+    invoke-static {v0, v2}, Leni;->h(Ljava/util/HashMap;I)Lczi;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Leni;->f(Ljava/lang/Class;Lczi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x3
+
+    invoke-static {v0, v2}, Leni;->h(Ljava/util/HashMap;I)Lczi;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Leni;->f(Ljava/lang/Class;Lczi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, Leni;->m(Ljava/util/HashMap;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
+
+    invoke-static {p1}, Lkb0;->d(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+
+    move-result-object p1
+
+    throw p1
 .end method

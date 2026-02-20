@@ -1,56 +1,48 @@
 .class public final Ll93;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lud8;
+.super Lda4;
 
 
-# static fields
-.field public static final a:Ll93;
+# instance fields
+.field public final synthetic X:Lm93;
 
-.field public static final b:I
+.field public synthetic d:Ljava/lang/Object;
 
-.field public static final c:J
+.field public o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lm93;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Ll93;
+    iput-object p1, p0, Ll93;->X:Lm93;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Ll93;->a:Ll93;
-
-    sget v0, Lg8d;->oneme_chat_list_loading_view_type:I
-
-    sput v0, Ll93;->b:I
-
-    sget v0, Lg8d;->oneme_chat_list_loading_id:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Ll93;->c:J
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getItemId()J
-    .locals 2
-
-    sget-wide v0, Ll93;->c:J
-
-    return-wide v0
-.end method
-
-.method public final m()I
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    sget v0, Ll93;->b:I
+    iput-object p1, p0, Ll93;->d:Ljava/lang/Object;
 
-    return v0
+    iget p1, p0, Ll93;->o:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Ll93;->o:I
+
+    iget-object p1, p0, Ll93;->X:Lm93;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lm93;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

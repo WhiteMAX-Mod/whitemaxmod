@@ -1,136 +1,213 @@
-.class public final Lf64;
+.class public abstract Lf64;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements La7c;
-
-
-# static fields
-.field public static final synthetic h:[Lz28;
-
-
-# instance fields
-.field public final a:Le9g;
-
-.field public final b:Lo58;
-
-.field public final c:Lo58;
-
-.field public d:Lzb4;
-
-.field public final e:Lx07;
-
-.field public final f:Li7f;
-
-.field public final g:Lold;
-
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public static a([B)Lg64;
+    .locals 12
 
-    new-instance v0, Lhfa;
+    new-instance v0, Lru/ok/tamtam/nano/Tasks$ContactUpdate;
 
-    const-string v1, "collectJob"
+    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$ContactUpdate;-><init>()V
 
-    const-string v2, "getCollectJob()Lkotlinx/coroutines/Job;"
+    :try_start_0
+    invoke-static {v0, p0}, Lhr9;->mergeFrom(Lhr9;[B)Lhr9;
 
-    const-class v3, Lf64;
+    move-result-object p0
 
-    invoke-direct {v0, v3, v1, v2}, Lhfa;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+    check-cast p0, Lru/ok/tamtam/nano/Tasks$ContactUpdate;
+    :try_end_0
+    .catch Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException; {:try_start_0 .. :try_end_0} :catch_0
 
-    sget-object v1, Lctd;->a:Ldtd;
+    new-instance v0, Lg64;
+
+    iget-wide v2, p0, Lru/ok/tamtam/nano/Tasks$ContactUpdate;->requestId:J
+
+    iget-wide v4, p0, Lru/ok/tamtam/nano/Tasks$ContactUpdate;->contactId:J
+
+    iget-object v1, p0, Lru/ok/tamtam/nano/Tasks$ContactUpdate;->action:Ljava/lang/String;
 
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/4 v1, 0x1
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
-    new-array v1, v1, [Lz28;
+    move-result v6
 
-    const/4 v2, 0x0
+    const/4 v7, 0x4
 
-    aput-object v0, v1, v2
+    const/4 v8, 0x3
 
-    sput-object v1, Lf64;->h:[Lz28;
+    const/4 v9, 0x2
 
-    return-void
-.end method
+    const/4 v10, 0x1
 
-.method public constructor <init>(Lo58;Lo58;Le9g;)V
-    .locals 0
+    const/4 v11, -0x1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sparse-switch v6, :sswitch_data_0
 
-    iput-object p3, p0, Lf64;->a:Le9g;
+    goto :goto_0
 
-    iput-object p1, p0, Lf64;->b:Lo58;
+    :sswitch_0
+    const-string v6, "UNBLOCK"
 
-    iput-object p2, p0, Lf64;->c:Lo58;
+    invoke-virtual {v1, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-static {}, Lhlj;->b()Lx07;
+    move-result v6
 
-    move-result-object p1
+    if-nez v6, :cond_0
 
-    iput-object p1, p0, Lf64;->e:Lx07;
+    goto :goto_0
 
-    const p1, 0x7fffffff
+    :cond_0
+    move v11, v7
 
-    const/4 p2, 0x5
+    goto :goto_0
 
-    const/4 p3, 0x0
+    :sswitch_1
+    const-string v6, "BLOCK"
 
-    invoke-static {p3, p1, p2}, Lj7f;->b(III)Li7f;
+    invoke-virtual {v1, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result-object p1
+    move-result v6
 
-    iput-object p1, p0, Lf64;->f:Li7f;
+    if-nez v6, :cond_1
 
-    new-instance p2, Lold;
+    goto :goto_0
 
-    invoke-direct {p2, p1}, Lold;-><init>(Llfa;)V
+    :cond_1
+    move v11, v8
 
-    iput-object p2, p0, Lf64;->g:Lold;
+    goto :goto_0
 
-    return-void
-.end method
+    :sswitch_2
+    const-string v6, "ADD"
 
+    invoke-virtual {v1, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-# virtual methods
-.method public final a()V
-    .locals 1
+    move-result v6
 
-    const/4 v0, 0x0
+    if-nez v6, :cond_2
 
-    iput-object v0, p0, Lf64;->d:Lzb4;
+    goto :goto_0
 
-    return-void
-.end method
+    :cond_2
+    move v11, v9
 
-.method public final b(Lq6c;)V
-    .locals 1
+    goto :goto_0
 
-    iget-object v0, p0, Lf64;->a:Le9g;
+    :sswitch_3
+    const-string v6, "UPDATE"
 
-    invoke-virtual {v0, p1}, Le9g;->O(Lq6c;)V
+    invoke-virtual {v1, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    return-void
-.end method
+    move-result v6
 
-.method public final d(J)V
-    .locals 1
+    if-nez v6, :cond_3
 
-    iget-object v0, p0, Lf64;->a:Le9g;
+    goto :goto_0
 
-    invoke-virtual {v0, p1, p2}, Le9g;->N(J)V
+    :cond_3
+    move v11, v10
 
-    return-void
-.end method
+    goto :goto_0
 
-.method public final e(Lkotlinx/coroutines/internal/ContextScope;)V
-    .locals 0
+    :sswitch_4
+    const-string v6, "REMOVE"
 
-    iput-object p1, p0, Lf64;->d:Lzb4;
+    invoke-virtual {v1, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    return-void
+    move-result v6
+
+    if-nez v6, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    const/4 v11, 0x0
+
+    :goto_0
+    packed-switch v11, :pswitch_data_0
+
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "No such value "
+
+    const-string v2, " for ContactUpdateAction"
+
+    invoke-static {v0, v1, v2}, Ltx8;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :pswitch_0
+    move v1, v9
+
+    goto :goto_2
+
+    :pswitch_1
+    move v1, v10
+
+    goto :goto_2
+
+    :goto_1
+    :pswitch_2
+    move v1, v7
+
+    goto :goto_2
+
+    :pswitch_3
+    const/4 v7, 0x5
+
+    goto :goto_1
+
+    :pswitch_4
+    move v1, v8
+
+    :goto_2
+    iget-object v6, p0, Lru/ok/tamtam/nano/Tasks$ContactUpdate;->oldName:Ljava/lang/String;
+
+    iget-object v7, p0, Lru/ok/tamtam/nano/Tasks$ContactUpdate;->oldLastName:Ljava/lang/String;
+
+    iget-object v8, p0, Lru/ok/tamtam/nano/Tasks$ContactUpdate;->newName:Ljava/lang/String;
+
+    iget-object v9, p0, Lru/ok/tamtam/nano/Tasks$ContactUpdate;->lastName:Ljava/lang/String;
+
+    invoke-direct/range {v0 .. v9}, Lg64;-><init>(IJJLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object v0
+
+    :catch_0
+    move-exception v0
+
+    move-object p0, v0
+
+    new-instance v0, Lru/ok/tamtam/nano/ProtoException;
+
+    invoke-direct {v0, p0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v0
+
+    nop
+
+    :sswitch_data_0
+    .sparse-switch
+        -0x7022137c -> :sswitch_4
+        -0x6a6cd337 -> :sswitch_3
+        0xfc81 -> :sswitch_2
+        0x3c5cc6d -> :sswitch_1
+        0x19517974 -> :sswitch_0
+    .end sparse-switch
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

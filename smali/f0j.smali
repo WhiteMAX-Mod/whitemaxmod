@@ -1,336 +1,266 @@
-.class public final Lf0j;
-.super Lcom/google/android/gms/common/internal/a;
+.class public abstract Lf0j;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final J0:Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions;
+# static fields
+.field public static final a:Liyj;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Landroid/os/Looper;Lj5a;Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions;Lepi;Lepi;)V
-    .locals 15
+.method static constructor <clinit>()V
+    .locals 2
 
-    move-object/from16 v0, p4
+    new-instance v0, Liyj;
 
-    const/16 v4, 0x5b
+    const/16 v1, 0xf
 
-    const/4 v8, 0x0
+    invoke-direct {v0, v1}, Liyj;-><init>(I)V
 
-    move-object v1, p0
-
-    move-object/from16 v2, p1
-
-    move-object/from16 v3, p2
-
-    move-object/from16 v5, p3
-
-    move-object/from16 v6, p5
-
-    move-object/from16 v7, p6
-
-    invoke-direct/range {v1 .. v8}, Lcom/google/android/gms/common/internal/a;-><init>(Landroid/content/Context;Landroid/os/Looper;ILj5a;Le07;Lf07;I)V
-
-    iget-object v1, v5, Lj5a;->b:Ljava/lang/Object;
-
-    check-cast v1, Ljava/util/Set;
-
-    if-eqz v0, :cond_0
-
-    new-instance v2, Lv07;
-
-    invoke-direct {v2}, Ljava/lang/Object;-><init>()V
-
-    new-instance v3, Ljava/util/HashSet;
-
-    invoke-direct {v3}, Ljava/util/HashSet;-><init>()V
-
-    iput-object v3, v2, Lv07;->d:Ljava/lang/Object;
-
-    new-instance v3, Ljava/util/HashMap;
-
-    invoke-direct {v3}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v3, v2, Lv07;->i:Ljava/lang/Object;
-
-    new-instance v3, Ljava/util/HashSet;
-
-    iget-object v4, v0, Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions;->b:Ljava/util/ArrayList;
-
-    invoke-direct {v3, v4}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
-
-    iput-object v3, v2, Lv07;->d:Ljava/lang/Object;
-
-    iget-boolean v3, v0, Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions;->o:Z
-
-    iput-boolean v3, v2, Lv07;->a:Z
-
-    iget-boolean v3, v0, Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions;->X:Z
-
-    iput-boolean v3, v2, Lv07;->b:Z
-
-    iget-boolean v3, v0, Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions;->d:Z
-
-    iput-boolean v3, v2, Lv07;->c:Z
-
-    iget-object v3, v0, Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions;->Y:Ljava/lang/String;
-
-    iput-object v3, v2, Lv07;->e:Ljava/lang/Object;
-
-    iget-object v3, v0, Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions;->c:Landroid/accounts/Account;
-
-    iput-object v3, v2, Lv07;->h:Ljava/lang/Object;
-
-    iget-object v3, v0, Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions;->Z:Ljava/lang/String;
-
-    iput-object v3, v2, Lv07;->f:Ljava/lang/Object;
-
-    iget-object v3, v0, Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions;->t0:Ljava/util/ArrayList;
-
-    invoke-static {v3}, Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions;->c(Ljava/util/ArrayList;)Ljava/util/HashMap;
-
-    move-result-object v3
-
-    iput-object v3, v2, Lv07;->i:Ljava/lang/Object;
-
-    iget-object v0, v0, Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions;->u0:Ljava/lang/String;
-
-    iput-object v0, v2, Lv07;->g:Ljava/lang/Object;
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v2, Lv07;
-
-    invoke-direct {v2}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Ljava/util/HashSet;
-
-    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
-
-    iput-object v0, v2, Lv07;->d:Ljava/lang/Object;
-
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v0, v2, Lv07;->i:Ljava/lang/Object;
-
-    :goto_0
-    const/16 v0, 0x10
-
-    new-array v0, v0, [B
-
-    sget-object v3, Lnti;->a:Ljava/util/Random;
-
-    invoke-virtual {v3, v0}, Ljava/util/Random;->nextBytes([B)V
-
-    const/16 v3, 0xb
-
-    invoke-static {v0, v3}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, v2, Lv07;->g:Ljava/lang/Object;
-
-    invoke-interface {v1}, Ljava/util/Set;->isEmpty()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_1
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/google/android/gms/common/api/Scope;
-
-    const/4 v3, 0x0
-
-    new-array v3, v3, [Lcom/google/android/gms/common/api/Scope;
-
-    iget-object v4, v2, Lv07;->d:Ljava/lang/Object;
-
-    check-cast v4, Ljava/util/HashSet;
-
-    invoke-virtual {v4, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    invoke-static {v3}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v1
-
-    invoke-interface {v4, v1}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
-
-    goto :goto_1
-
-    :cond_1
-    iget-object v0, v2, Lv07;->d:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/HashSet;
-
-    sget-object v1, Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions;->y0:Lcom/google/android/gms/common/api/Scope;
-
-    invoke-virtual {v0, v1}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    sget-object v1, Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions;->x0:Lcom/google/android/gms/common/api/Scope;
-
-    invoke-virtual {v0, v1}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_2
-
-    invoke-virtual {v0, v1}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
-
-    :cond_2
-    iget-boolean v1, v2, Lv07;->c:Z
-
-    if-eqz v1, :cond_4
-
-    iget-object v1, v2, Lv07;->h:Ljava/lang/Object;
-
-    check-cast v1, Landroid/accounts/Account;
-
-    if-eqz v1, :cond_3
-
-    invoke-virtual {v0}, Ljava/util/HashSet;->isEmpty()Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    :cond_3
-    iget-object v1, v2, Lv07;->d:Ljava/lang/Object;
-
-    check-cast v1, Ljava/util/HashSet;
-
-    sget-object v3, Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions;->w0:Lcom/google/android/gms/common/api/Scope;
-
-    invoke-virtual {v1, v3}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    :cond_4
-    new-instance v4, Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions;
-
-    new-instance v6, Ljava/util/ArrayList;
-
-    invoke-direct {v6, v0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    iget-object v0, v2, Lv07;->h:Ljava/lang/Object;
-
-    move-object v7, v0
-
-    check-cast v7, Landroid/accounts/Account;
-
-    iget-boolean v8, v2, Lv07;->c:Z
-
-    iget-boolean v9, v2, Lv07;->a:Z
-
-    iget-boolean v10, v2, Lv07;->b:Z
-
-    iget-object v0, v2, Lv07;->e:Ljava/lang/Object;
-
-    move-object v11, v0
-
-    check-cast v11, Ljava/lang/String;
-
-    iget-object v0, v2, Lv07;->f:Ljava/lang/Object;
-
-    move-object v12, v0
-
-    check-cast v12, Ljava/lang/String;
-
-    iget-object v0, v2, Lv07;->i:Ljava/lang/Object;
-
-    move-object v13, v0
-
-    check-cast v13, Ljava/util/HashMap;
-
-    iget-object v0, v2, Lv07;->g:Ljava/lang/Object;
-
-    move-object v14, v0
-
-    check-cast v14, Ljava/lang/String;
-
-    const/4 v5, 0x3
-
-    invoke-direct/range {v4 .. v14}, Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions;-><init>(ILjava/util/ArrayList;Landroid/accounts/Account;ZZZLjava/lang/String;Ljava/lang/String;Ljava/util/HashMap;Ljava/lang/String;)V
-
-    iput-object v4, p0, Lf0j;->J0:Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions;
+    sput-object v0, Lf0j;->a:Liyj;
 
     return-void
 .end method
 
+.method public static a(Ljava/util/concurrent/Future;)Ljava/lang/Object;
+    .locals 2
 
-# virtual methods
-.method public final g()I
-    .locals 1
+    invoke-interface {p0}, Ljava/util/concurrent/Future;->isDone()Z
 
-    const v0, 0xbdfcb8
+    move-result v0
 
-    return v0
-.end method
+    if-eqz v0, :cond_2
 
-.method public final l(Landroid/os/IBinder;)Landroid/os/IInterface;
-    .locals 3
+    const/4 v0, 0x0
 
-    if-nez p1, :cond_0
+    :goto_0
+    :try_start_0
+    invoke-interface {p0}, Ljava/util/concurrent/Future;->get()Ljava/lang/Object;
 
-    const/4 p1, 0x0
+    move-result-object p0
+    :try_end_0
+    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    return-object p1
+    if-eqz v0, :cond_0
+
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Thread;->interrupt()V
 
     :cond_0
-    const-string v0, "com.google.android.gms.auth.api.signin.internal.ISignInService"
+    return-object p0
 
-    invoke-interface {p1, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
+    :catchall_0
+    move-exception p0
 
-    move-result-object v1
+    if-eqz v0, :cond_1
 
-    instance-of v2, v1, Ljqj;
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
-    if-eqz v2, :cond_1
+    move-result-object v0
 
-    check-cast v1, Ljqj;
-
-    return-object v1
+    invoke-virtual {v0}, Ljava/lang/Thread;->interrupt()V
 
     :cond_1
-    new-instance v1, Ljqj;
+    throw p0
 
-    const/4 v2, 0x4
+    :catch_0
+    const/4 v0, 0x1
 
-    invoke-direct {v1, p1, v0, v2}, Lwoi;-><init>(Landroid/os/IBinder;Ljava/lang/String;I)V
+    goto :goto_0
 
-    return-object v1
+    :cond_2
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    filled-new-array {p0}, [Ljava/lang/Object;
+
+    move-result-object p0
+
+    const-string v1, "Future was expected to be done: %s"
+
+    invoke-static {v1, p0}, Lp8e;->a(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method
 
-.method public final p()Ljava/lang/String;
+.method public static final b(Lzwe;Lc38;Ljava/lang/String;)I
+    .locals 5
+
+    iget-object v0, p1, Lc38;->a:Lj38;
+
+    invoke-static {p1, p0}, Lf0j;->d(Lc38;Lzwe;)V
+
+    invoke-interface {p0, p2}, Lzwe;->d(Ljava/lang/String;)I
+
+    move-result v0
+
+    const/4 v1, -0x3
+
+    if-eq v0, v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v2, p1, Lc38;->a:Lj38;
+
+    iget-boolean v2, v2, Lj38;->f:Z
+
+    if-nez v2, :cond_1
+
+    :goto_0
+    return v0
+
+    :cond_1
+    iget-object v0, p1, Lc38;->c:Lorj;
+
+    new-instance v2, Ltq2;
+
+    const/16 v3, 0x1a
+
+    invoke-direct {v2, p0, v3, p1}, Ltq2;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    iget-object p1, v0, Lorj;->b:Ljava/lang/Object;
+
+    check-cast p1, Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-virtual {p1, p0}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/Map;
+
+    sget-object v3, Lf0j;->a:Liyj;
+
+    const/4 v4, 0x0
+
+    if-eqz v0, :cond_2
+
+    invoke-interface {v0, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    goto :goto_1
+
+    :cond_2
+    move-object v0, v4
+
+    :goto_1
+    if-nez v0, :cond_3
+
+    goto :goto_2
+
+    :cond_3
+    move-object v4, v0
+
+    :goto_2
+    if-eqz v4, :cond_4
+
+    goto :goto_3
+
+    :cond_4
+    invoke-virtual {v2}, Ltq2;->invoke()Ljava/lang/Object;
+
+    move-result-object v4
+
+    invoke-virtual {p1, p0}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-nez v0, :cond_5
+
+    new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
+
+    const/4 v2, 0x2
+
+    invoke-direct {v0, v2}, Ljava/util/concurrent/ConcurrentHashMap;-><init>(I)V
+
+    invoke-virtual {p1, p0, v0}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_5
+    check-cast v0, Ljava/util/Map;
+
+    invoke-interface {v0, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :goto_3
+    check-cast v4, Ljava/util/Map;
+
+    invoke-interface {v4, p2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Ljava/lang/Integer;
+
+    if-eqz p0, :cond_6
+
+    invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
+
+    move-result p0
+
+    return p0
+
+    :cond_6
+    return v1
+.end method
+
+.method public static c(Ljava/lang/Object;)Lgk7;
     .locals 1
 
-    const-string v0, "com.google.android.gms.auth.api.signin.internal.ISignInService"
+    if-nez p0, :cond_0
+
+    sget-object p0, Lgk7;->b:Lgk7;
+
+    return-object p0
+
+    :cond_0
+    new-instance v0, Lgk7;
+
+    invoke-direct {v0, p0}, Lgk7;-><init>(Ljava/lang/Object;)V
 
     return-object v0
 .end method
 
-.method public final q()Ljava/lang/String;
+.method public static final d(Lc38;Lzwe;)V
     .locals 1
 
-    const-string v0, "com.google.android.gms.auth.api.signin.service.START"
+    invoke-interface {p1}, Lzwe;->e()Ldxj;
 
-    return-object v0
+    move-result-object p1
+
+    sget-object v0, Lo7g;->b:Lo7g;
+
+    invoke-static {p1, v0}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    iget-object p0, p0, Lc38;->a:Lj38;
+
+    :cond_0
+    return-void
+.end method
+
+.method public static final e(Landroid/content/Context;)Lsme;
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object p0
+
+    check-cast p0, Lvig;
+
+    check-cast p0, Lone/me/android/OneMeApplication;
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object p0, Lsme;->a:Lsme;
+
+    return-object p0
 .end method

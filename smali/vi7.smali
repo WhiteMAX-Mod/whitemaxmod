@@ -4,5 +4,17 @@
 
 
 # virtual methods
-.method public abstract j(Lwi7;)V
+.method public abstract a()I
+.end method
+
+.method public abstract b()Landroid/graphics/Matrix;
+.end method
+
+.method public abstract c(Lwp5;)V
+.end method
+
+.method public abstract e()Ljig;
+.end method
+
+.method public abstract getTimestamp()J
 .end method

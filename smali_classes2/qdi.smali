@@ -1,38 +1,57 @@
 .class public final Lqdi;
-.super Ljef;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public F0:Lndi;
+.field public final a:Lbgg;
+
+.field public final b:Lbgg;
+
+.field public final c:Lbgg;
 
 
-# virtual methods
-.method public final y(Lud8;)V
-    .locals 1
+# direct methods
+.method public constructor <init>()V
+    .locals 2
 
-    instance-of v0, p1, Lmdi;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-nez v0, :cond_0
+    new-instance v0, Lm6i;
 
-    return-void
+    const/16 v1, 0xb
 
-    :cond_0
-    move-object v0, p1
+    invoke-direct {v0, v1}, Lm6i;-><init>(I)V
 
-    check-cast v0, Lndi;
+    new-instance v1, Lbgg;
 
-    iput-object v0, p0, Lqdi;->F0:Lndi;
+    invoke-direct {v1, v0}, Lbgg;-><init>(Lis6;)V
 
-    iget-object v0, p0, Ltsd;->a:Landroid/view/View;
+    iput-object v1, p0, Lqdi;->a:Lbgg;
 
-    check-cast v0, Lt0f;
+    new-instance v0, Lm6i;
 
-    check-cast p1, Lmdi;
+    const/16 v1, 0xc
 
-    iget-object p1, p1, Lmdi;->a:Lv0f;
+    invoke-direct {v0, v1}, Lm6i;-><init>(I)V
 
-    invoke-virtual {v0, p1}, Lt0f;->setModelItem(Lj0f;)V
+    new-instance v1, Lbgg;
+
+    invoke-direct {v1, v0}, Lbgg;-><init>(Lis6;)V
+
+    iput-object v1, p0, Lqdi;->b:Lbgg;
+
+    new-instance v0, Lm6i;
+
+    const/16 v1, 0xd
+
+    invoke-direct {v0, v1}, Lm6i;-><init>(I)V
+
+    new-instance v1, Lbgg;
+
+    invoke-direct {v1, v0}, Lbgg;-><init>(Lis6;)V
+
+    iput-object v1, p0, Lqdi;->c:Lbgg;
 
     return-void
 .end method

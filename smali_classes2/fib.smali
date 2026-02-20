@@ -1,109 +1,61 @@
-.class public abstract Lfib;
-.super Ljava/lang/Object;
+.class public final Lfib;
+.super Ljib;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:I
-
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
+.field public static final a:Lfib;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    sget v0, Lped;->settings_devices_auth_hint_accept_button_title:I
+    new-instance v0, Lfib;
 
-    sput v0, Lfib;->a:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sget v0, Lped;->settings_devices_auth_hint_deny_button_title:I
-
-    sput v0, Lfib;->b:I
-
-    sget v0, Lped;->settings_devices_auth_hint_description_full:I
-
-    sput v0, Lfib;->c:I
-
-    sget v0, Lped;->settings_devices_auth_hint_description_navigation_arrow:I
-
-    sput v0, Lfib;->d:I
-
-    sget v0, Lped;->settings_devices_auth_hint_description_navigation_part:I
-
-    sput v0, Lfib;->e:I
-
-    sget v0, Lped;->settings_devices_auth_hint_title:I
-
-    sput v0, Lfib;->f:I
-
-    sget v0, Lped;->settings_devices_base_login_qr_error:I
-
-    sput v0, Lfib;->g:I
-
-    sget v0, Lped;->settings_devices_camera_permission_denied_title:I
-
-    sput v0, Lfib;->h:I
-
-    sget v0, Lped;->settings_devices_camera_request_description:I
-
-    sput v0, Lfib;->i:I
-
-    sget v0, Lped;->settings_devices_expired_login_qr_error:I
-
-    sput v0, Lfib;->j:I
-
-    sget v0, Lped;->settings_devices_header_description:I
-
-    sput v0, Lfib;->k:I
-
-    sget v0, Lped;->settings_devices_header_title:I
-
-    sput v0, Lfib;->l:I
-
-    sget v0, Lped;->settings_devices_login_success:I
-
-    sput v0, Lfib;->m:I
-
-    sget v0, Lped;->settings_devices_not_login_qr_error:I
-
-    sput v0, Lfib;->n:I
-
-    sget v0, Lped;->settings_devices_qr_scan_btn:I
-
-    sput v0, Lfib;->o:I
-
-    sget v0, Lped;->settings_devices_toolbar_title:I
-
-    sput v0, Lfib;->p:I
+    sput-object v0, Lfib;->a:Lfib;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of p1, p1, Lfib;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, -0x3b483d5f
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "Primary"
+
+    return-object v0
 .end method

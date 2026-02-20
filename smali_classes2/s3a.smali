@@ -2,121 +2,104 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lem4;
 
+# instance fields
+.field public final a:Lzef;
 
-# static fields
-.field public static final a:Ls3a;
-
-.field public static final b:Lt3a;
+.field public final b:Lkotlinx/coroutines/internal/ContextScope;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lqy0;Lbjg;)V
+    .locals 2
 
-    new-instance v0, Ls3a;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
 
-    sput-object v0, Ls3a;->a:Ls3a;
+    const/4 v1, 0x7
 
-    sget-object v0, Lt3a;->b:Lt3a;
+    invoke-static {v0, v0, v1}, Laff;->b(III)Lzef;
 
-    sput-object v0, Ls3a;->b:Lt3a;
+    move-result-object v0
+
+    iput-object v0, p0, Ls3a;->a:Lzef;
+
+    check-cast p2, Lcbb;
+
+    invoke-virtual {p2}, Lcbb;->c()Los8;
+
+    move-result-object p2
+
+    invoke-static {p2}, Lztj;->a(Led4;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object p2
+
+    iput-object p2, p0, Ls3a;->b:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-virtual {p1, p0}, Lqy0;->d(Ljava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Llm4;
-    .locals 1
+.method public final onEvent(Lb65;)V
+    .locals 3
+    .annotation runtime Lx7g;
+    .end annotation
 
-    sget-object v0, Ls3a;->b:Lt3a;
+    .line 3
+    new-instance v0, Lp3a;
 
-    return-object v0
-.end method
+    iget-wide v1, p1, Lb65;->d:J
 
-.method public final b(Ljava/lang/String;Lhm4;Landroid/os/Bundle;)Lom4;
-    .locals 10
+    iget-object p1, p1, Lb65;->c:Ljava/lang/String;
 
-    sget-object v0, Ls3a;->b:Lt3a;
+    invoke-direct {v0, v1, v2, p1}, Lp3a;-><init>(JLjava/lang/String;)V
 
-    iget-object v0, v0, Llm4;->a:Ljava/util/LinkedHashSet;
-
-    invoke-interface {v0, p2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
-
-    move-result v0
+    .line 4
+    new-instance p1, Lr3a;
 
     const/4 v1, 0x0
 
-    if-nez v0, :cond_0
+    invoke-direct {p1, p0, v0, v1}, Lr3a;-><init>(Ls3a;Lq3a;Lkotlin/coroutines/Continuation;)V
 
-    return-object v1
+    const/4 v0, 0x3
 
-    :cond_0
-    sget-object v0, Lt3a;->b:Lt3a;
+    iget-object v2, p0, Ls3a;->b:Lkotlinx/coroutines/internal/ContextScope;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-static {v2, v1, v1, p1, v0}, Lea9;->d(Lnd4;Led4;Lqd4;Lys6;I)Lcuf;
 
-    sget-object v0, Lt3a;->c:Lhm4;
+    return-void
+.end method
 
-    invoke-virtual {p2, v0}, Lhm4;->equals(Ljava/lang/Object;)Z
+.method public final onEvent(Lz55;)V
+    .locals 3
+    .annotation runtime Lx7g;
+    .end annotation
 
-    move-result v0
+    .line 1
+    new-instance v0, Lo3a;
 
-    if-eqz v0, :cond_1
+    iget-wide v1, p1, Lz55;->o:J
 
-    new-instance v8, Le;
+    iget-object p1, p1, Lz55;->d:Ljava/lang/String;
 
-    const/16 v0, 0x14
+    invoke-direct {v0, v1, v2, p1}, Lo3a;-><init>(JLjava/lang/String;)V
 
-    invoke-direct {v8, v0}, Le;-><init>(I)V
+    .line 2
+    new-instance p1, Lr3a;
 
-    new-instance v2, Lom4;
+    const/4 v1, 0x0
 
-    const/16 v9, 0x18
+    invoke-direct {p1, p0, v0, v1}, Lr3a;-><init>(Ls3a;Lq3a;Lkotlin/coroutines/Continuation;)V
 
-    const/4 v6, 0x0
+    const/4 v0, 0x3
 
-    const/4 v7, 0x0
+    iget-object v2, p0, Ls3a;->b:Lkotlinx/coroutines/internal/ContextScope;
 
-    move-object v3, p1
+    invoke-static {v2, v1, v1, p1, v0}, Lea9;->d(Lnd4;Led4;Lqd4;Lys6;I)Lcuf;
 
-    move-object v4, p2
-
-    move-object v5, p3
-
-    invoke-direct/range {v2 .. v9}, Lom4;-><init>(Ljava/lang/String;Lhm4;Landroid/os/Bundle;ILmm4;Lnm4;I)V
-
-    return-object v2
-
-    :cond_1
-    move-object v4, p2
-
-    const-class p1, Ls3a;
-
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string p2, "invalid route "
-
-    invoke-static {p2, v4}, Lj27;->i(Ljava/lang/String;Lhm4;)Ljava/lang/String;
-
-    move-result-object p3
-
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    invoke-static {p2, v4}, Lj27;->i(Ljava/lang/String;Lhm4;)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {v0, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    invoke-static {p1, p3, v0}, Lc5j;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-object v1
+    return-void
 .end method

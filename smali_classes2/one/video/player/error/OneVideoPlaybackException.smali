@@ -12,8 +12,8 @@
         "Lone/video/player/error/OneVideoPlaybackException;",
         "Ljava/lang/Exception;",
         "Lkotlin/Exception;",
-        "aob",
-        "bob",
+        "oqb",
+        "pqb",
         "one-video-player_release"
     }
     k = 0x1
@@ -27,12 +27,14 @@
 
 
 # instance fields
-.field public a:Ljava/lang/String;
+.field public X:Ljava/lang/RuntimeException;
 
-.field public b:Lbob;
+.field public a:Loqb;
 
-.field public c:Lone/video/exo/error/OneVideoExoSourceException;
+.field public b:Ljava/lang/String;
 
-.field public d:Lone/video/exo/error/OneVideoExoRendererException;
+.field public c:Lpqb;
 
-.field public o:Ljava/lang/RuntimeException;
+.field public d:Lone/video/exo/error/OneVideoExoSourceException;
+
+.field public o:Lone/video/exo/error/OneVideoExoRendererException;

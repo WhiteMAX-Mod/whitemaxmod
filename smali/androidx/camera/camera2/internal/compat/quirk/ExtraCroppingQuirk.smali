@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ld4d;
+.implements Lq9d;
 
 
 # static fields
@@ -86,7 +86,7 @@
 
     if-eqz v0, :cond_3
 
-    invoke-static {p0}, Lt02;->t(I)I
+    invoke-static {p0}, Ly12;->t(I)I
 
     move-result p0
 

@@ -2,115 +2,315 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lq4a;
-
 
 # static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lbq;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public static final b:Landroid/graphics/PorterDuff$Mode;
+
+.field public static c:Lbq;
 
 
 # instance fields
-.field public final a:I
-
-.field public final b:Ljava/lang/String;
+.field public a:Lx4e;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 1
 
-    new-instance v0, Lz7;
+    sget-object v0, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
 
-    const/4 v1, 0x4
-
-    invoke-direct {v0, v1}, Lz7;-><init>(I)V
-
-    sput-object v0, Lbq;->CREATOR:Landroid/os/Parcelable$Creator;
+    sput-object v0, Lbq;->b:Landroid/graphics/PorterDuff$Mode;
 
     return-void
 .end method
 
-.method public constructor <init>(ILjava/lang/String;)V
-    .locals 0
+.method public static declared-synchronized a()Lbq;
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-class v0, Lbq;
 
-    iput p1, p0, Lbq;->a:I
+    monitor-enter v0
 
-    iput-object p2, p0, Lbq;->b:Ljava/lang/String;
+    :try_start_0
+    sget-object v1, Lbq;->c:Lbq;
+
+    if-nez v1, :cond_0
+
+    invoke-static {}, Lbq;->d()V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v1
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    sget-object v1, Lbq;->c:Lbq;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v0
+
+    return-object v1
+
+    :goto_1
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v1
+.end method
+
+.method public static declared-synchronized c(ILandroid/graphics/PorterDuff$Mode;)Landroid/graphics/PorterDuffColorFilter;
+    .locals 1
+
+    const-class v0, Lbq;
+
+    monitor-enter v0
+
+    :try_start_0
+    invoke-static {p0, p1}, Lx4e;->e(ILandroid/graphics/PorterDuff$Mode;)Landroid/graphics/PorterDuffColorFilter;
+
+    move-result-object p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v0
+
+    return-object p0
+
+    :catchall_0
+    move-exception p0
+
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p0
+.end method
+
+.method public static declared-synchronized d()V
+    .locals 3
+
+    const-class v0, Lbq;
+
+    monitor-enter v0
+
+    :try_start_0
+    sget-object v1, Lbq;->c:Lbq;
+
+    if-nez v1, :cond_0
+
+    new-instance v1, Lbq;
+
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+
+    sput-object v1, Lbq;->c:Lbq;
+
+    invoke-static {}, Lx4e;->b()Lx4e;
+
+    move-result-object v2
+
+    iput-object v2, v1, Lbq;->a:Lx4e;
+
+    sget-object v1, Lbq;->c:Lbq;
+
+    iget-object v1, v1, Lbq;->a:Lx4e;
+
+    new-instance v2, Lrz6;
+
+    invoke-direct {v2}, Lrz6;-><init>()V
+
+    monitor-enter v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+
+    :try_start_1
+    iput-object v2, v1, Lx4e;->e:Lrz6;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :try_start_2
+    monitor-exit v1
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v2
+
+    :try_start_3
+    monitor-exit v1
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    :try_start_4
+    throw v2
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
+
+    :catchall_1
+    move-exception v1
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    monitor-exit v0
+
+    return-void
+
+    :goto_1
+    :try_start_5
+    monitor-exit v0
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_1
+
+    throw v1
+.end method
+
+.method public static e(Landroid/graphics/drawable/Drawable;Ld41;[I)V
+    .locals 4
+
+    sget-object v0, Lx4e;->f:Landroid/graphics/PorterDuff$Mode;
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getState()[I
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
+    if-ne v1, p0, :cond_7
+
+    instance-of v1, p0, Landroid/graphics/drawable/LayerDrawable;
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->isStateful()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    new-array v1, v2, [I
+
+    invoke-virtual {p0, v1}, Landroid/graphics/drawable/Drawable;->setState([I)Z
+
+    invoke-virtual {p0, v0}, Landroid/graphics/drawable/Drawable;->setState([I)Z
+
+    :cond_0
+    iget-boolean v0, p1, Ld41;->c:Z
+
+    if-nez v0, :cond_2
+
+    iget-boolean v1, p1, Ld41;->b:Z
+
+    if-eqz v1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->clearColorFilter()V
+
+    return-void
+
+    :cond_2
+    :goto_0
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_3
+
+    iget-object v0, p1, Ld41;->d:Ljava/lang/Object;
+
+    check-cast v0, Landroid/content/res/ColorStateList;
+
+    goto :goto_1
+
+    :cond_3
+    move-object v0, v1
+
+    :goto_1
+    iget-boolean v3, p1, Ld41;->b:Z
+
+    if-eqz v3, :cond_4
+
+    iget-object p1, p1, Ld41;->e:Ljava/lang/Object;
+
+    check-cast p1, Landroid/graphics/PorterDuff$Mode;
+
+    goto :goto_2
+
+    :cond_4
+    sget-object p1, Lx4e;->f:Landroid/graphics/PorterDuff$Mode;
+
+    :goto_2
+    if-eqz v0, :cond_6
+
+    if-nez p1, :cond_5
+
+    goto :goto_3
+
+    :cond_5
+    invoke-virtual {v0, p2, v2}, Landroid/content/res/ColorStateList;->getColorForState([II)I
+
+    move-result p2
+
+    invoke-static {p2, p1}, Lx4e;->e(ILandroid/graphics/PorterDuff$Mode;)Landroid/graphics/PorterDuffColorFilter;
+
+    move-result-object v1
+
+    :cond_6
+    :goto_3
+    invoke-virtual {p0, v1}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
+
+    return-void
+
+    :cond_7
+    const-string p0, "ResourceManagerInternal"
+
+    const-string p1, "Mutated drawable is not the same instance as the input."
+
+    invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
+.method public final declared-synchronized b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
     .locals 1
 
-    const/4 v0, 0x0
+    monitor-enter p0
 
-    return v0
-.end method
+    :try_start_0
+    iget-object v0, p0, Lbq;->a:Lx4e;
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+    invoke-virtual {v0, p1, p2}, Lx4e;->d(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
-    const/16 v0, 0x21
+    move-result-object p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    iget-object v1, p0, Lbq;->b:Ljava/lang/String;
+    monitor-exit p0
 
-    invoke-static {v0, v1}, Lxi4;->f(ILjava/lang/String;)I
+    return-object p1
 
-    move-result v0
+    :catchall_0
+    move-exception p1
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    invoke-direct {v2, v0}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    const-string v0, "Ait(controlCode="
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v0, p0, Lbq;->a:I
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v0, ",url="
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, ")"
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
-
-    iget-object p2, p0, Lbq;->b:Ljava/lang/String;
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
-    iget p2, p0, Lbq;->a:I
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    return-void
+    throw p1
 .end method

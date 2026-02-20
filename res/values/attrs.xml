@@ -154,6 +154,16 @@
         <enum name="animateToEnd" value="4" />
     </attr>
     <attr name="auto_show" format="boolean" />
+    <attr name="avatar_call_aqua_step" format="reference|color" />
+    <attr name="avatar_call_grey_step" format="reference|color" />
+    <attr name="avatar_call_purple_step" format="reference|color" />
+    <attr name="avatar_call_sky_step" format="reference|color" />
+    <attr name="avatar_call_violet_step" format="reference|color" />
+    <attr name="avatar_chat_coral_step" format="reference|color" />
+    <attr name="avatar_chat_green_step" format="reference|color" />
+    <attr name="avatar_chat_orange_step" format="reference|color" />
+    <attr name="avatar_chat_sky_step" format="reference|color" />
+    <attr name="avatar_chat_violet_step" format="reference|color" />
     <attr name="backHandlingEnabled" format="boolean" />
     <attr name="background" format="reference" />
     <attr name="backgroundColor" format="color" />
@@ -174,6 +184,15 @@
         <enum name="screen" value="15" />
         <enum name="add" value="16" />
     </attr>
+    <attr name="background_card" format="reference|color" />
+    <attr name="background_overlay" format="reference|color" />
+    <attr name="background_overlay_hard" format="reference|color" />
+    <attr name="background_overlay_media_preview" format="reference|color" />
+    <attr name="background_overlay_secondary" format="reference|color" />
+    <attr name="background_primary" format="reference|color" />
+    <attr name="background_secondary" format="reference|color" />
+    <attr name="background_surface" format="reference|color" />
+    <attr name="background_tertiary" format="reference|color" />
     <attr name="badgeGravity">
         <enum name="TOP_END" value="8388661" />
         <enum name="TOP_START" value="8388659" />
@@ -262,6 +281,151 @@
     <attr name="boxStrokeWidth" format="dimension" />
     <attr name="boxStrokeWidthFocused" format="dimension" />
     <attr name="brightness" format="float" />
+    <attr name="bubbles_incoming_background_action" format="reference|color" />
+    <attr name="bubbles_incoming_background_action_fade" format="reference|color" />
+    <attr name="bubbles_incoming_background_action_secondary" format="reference|color" />
+    <attr name="bubbles_incoming_background_bot_button_default" format="reference|color" />
+    <attr name="bubbles_incoming_background_bot_button_hovered" format="reference|color" />
+    <attr name="bubbles_incoming_background_bot_button_loading" format="reference|color" />
+    <attr name="bubbles_incoming_background_bot_button_pressed" format="reference|color" />
+    <attr name="bubbles_incoming_background_bubble" format="reference|color" />
+    <attr name="bubbles_incoming_background_bubble_gradient_old_step" format="reference|color" />
+    <attr name="bubbles_incoming_background_bubble_gradient_step" format="reference|color" />
+    <attr name="bubbles_incoming_background_focus_regular_max" format="reference|color" />
+    <attr name="bubbles_incoming_background_focus_regular_min" format="reference|color" />
+    <attr name="bubbles_incoming_background_focus_single_media_max" format="reference|color" />
+    <attr name="bubbles_incoming_background_focus_single_media_min" format="reference|color" />
+    <attr name="bubbles_incoming_background_focus_transparent_max" format="reference|color" />
+    <attr name="bubbles_incoming_background_focus_transparent_min" format="reference|color" />
+    <attr name="bubbles_incoming_background_icon_item" format="reference|color" />
+    <attr name="bubbles_incoming_background_icon_item_negative" format="reference|color" />
+    <attr name="bubbles_incoming_background_mention" format="reference|color" />
+    <attr name="bubbles_incoming_background_mention_pressed" format="reference|color" />
+    <attr name="bubbles_incoming_background_reaction_inside_my" format="reference|color" />
+    <attr name="bubbles_incoming_background_reaction_inside_others" format="reference|color" />
+    <attr name="bubbles_incoming_background_reaction_outside_my" format="reference|color" />
+    <attr name="bubbles_incoming_background_reaction_outside_others" format="reference|color" />
+    <attr name="bubbles_incoming_background_surface_secondary" format="reference|color" />
+    <attr name="bubbles_incoming_background_system_asset_step" format="reference|color" />
+    <attr name="bubbles_incoming_background_system_asset_stroke_step" format="reference|color" />
+    <attr name="bubbles_incoming_background_text_focus" format="reference|color" />
+    <attr name="bubbles_incoming_icon_action" format="reference|color" />
+    <attr name="bubbles_incoming_icon_action_secondary" format="reference|color" />
+    <attr name="bubbles_incoming_icon_alert" format="reference|color" />
+    <attr name="bubbles_incoming_icon_call_negative" format="reference|color" />
+    <attr name="bubbles_incoming_icon_call_neutral" format="reference|color" />
+    <attr name="bubbles_incoming_icon_icon_item" format="reference|color" />
+    <attr name="bubbles_incoming_icon_read_status" format="reference|color" />
+    <attr name="bubbles_incoming_icon_read_status_capsule" format="reference|color" />
+    <attr name="bubbles_incoming_icon_reply" format="reference|color" />
+    <attr name="bubbles_incoming_icon_reply_forwarded" format="reference|color" />
+    <attr name="bubbles_incoming_icon_verification_author" format="reference|color" />
+    <attr name="bubbles_incoming_icon_verification_body" format="reference|color" />
+    <attr name="bubbles_incoming_icon_verification_forward_name" format="reference|color" />
+    <attr name="bubbles_incoming_icon_verification_reply_body" format="reference|color" />
+    <attr name="bubbles_incoming_icon_verification_reply_name" format="reference|color" />
+    <attr name="bubbles_incoming_states_background_hovered_surface_secondary" format="reference|color" />
+    <attr name="bubbles_incoming_states_background_pressed_surface_secondary" format="reference|color" />
+    <attr name="bubbles_incoming_stroke_action" format="reference|color" />
+    <attr name="bubbles_incoming_stroke_neutral_secondary" format="reference|color" />
+    <attr name="bubbles_incoming_stroke_primary_inverse_static" format="reference|color" />
+    <attr name="bubbles_incoming_stroke_reply" format="reference|color" />
+    <attr name="bubbles_incoming_stroke_reply_outside" format="reference|color" />
+    <attr name="bubbles_incoming_text_action" format="reference|color" />
+    <attr name="bubbles_incoming_text_action_fade" format="reference|color" />
+    <attr name="bubbles_incoming_text_author" format="reference|color" />
+    <attr name="bubbles_incoming_text_body" format="reference|color" />
+    <attr name="bubbles_incoming_text_body_secondary" format="reference|color" />
+    <attr name="bubbles_incoming_text_forward_label" format="reference|color" />
+    <attr name="bubbles_incoming_text_forward_name" format="reference|color" />
+    <attr name="bubbles_incoming_text_link" format="reference|color" />
+    <attr name="bubbles_incoming_text_link_underline" format="reference|color" />
+    <attr name="bubbles_incoming_text_md_link" format="reference|color" />
+    <attr name="bubbles_incoming_text_numberreactionother" format="reference|color" />
+    <attr name="bubbles_incoming_text_numberreactionyou" format="reference|color" />
+    <attr name="bubbles_incoming_text_reaction_inside_my" format="reference|color" />
+    <attr name="bubbles_incoming_text_reaction_inside_others" format="reference|color" />
+    <attr name="bubbles_incoming_text_reaction_outside_my" format="reference|color" />
+    <attr name="bubbles_incoming_text_reaction_outside_others" format="reference|color" />
+    <attr name="bubbles_incoming_text_reply_body" format="reference|color" />
+    <attr name="bubbles_incoming_text_reply_name" format="reference|color" />
+    <attr name="bubbles_incoming_text_time" format="reference|color" />
+    <attr name="bubbles_outgoing_background_action" format="reference|color" />
+    <attr name="bubbles_outgoing_background_action_fade" format="reference|color" />
+    <attr name="bubbles_outgoing_background_action_secondary" format="reference|color" />
+    <attr name="bubbles_outgoing_background_bot_button_default" format="reference|color" />
+    <attr name="bubbles_outgoing_background_bot_button_hovered" format="reference|color" />
+    <attr name="bubbles_outgoing_background_bot_button_loading" format="reference|color" />
+    <attr name="bubbles_outgoing_background_bot_button_pressed" format="reference|color" />
+    <attr name="bubbles_outgoing_background_bubble" format="reference|color" />
+    <attr name="bubbles_outgoing_background_bubble_gradient_old_step" format="reference|color" />
+    <attr name="bubbles_outgoing_background_bubble_gradient_step" format="reference|color" />
+    <attr name="bubbles_outgoing_background_focus_regular_max" format="reference|color" />
+    <attr name="bubbles_outgoing_background_focus_regular_min" format="reference|color" />
+    <attr name="bubbles_outgoing_background_focus_single_media_max" format="reference|color" />
+    <attr name="bubbles_outgoing_background_focus_single_media_min" format="reference|color" />
+    <attr name="bubbles_outgoing_background_focus_transparent_max" format="reference|color" />
+    <attr name="bubbles_outgoing_background_focus_transparent_min" format="reference|color" />
+    <attr name="bubbles_outgoing_background_icon_item" format="reference|color" />
+    <attr name="bubbles_outgoing_background_icon_item_negative" format="reference|color" />
+    <attr name="bubbles_outgoing_background_mention" format="reference|color" />
+    <attr name="bubbles_outgoing_background_mention_pressed" format="reference|color" />
+    <attr name="bubbles_outgoing_background_reaction_inside_my" format="reference|color" />
+    <attr name="bubbles_outgoing_background_reaction_inside_others" format="reference|color" />
+    <attr name="bubbles_outgoing_background_reaction_outside_my" format="reference|color" />
+    <attr name="bubbles_outgoing_background_reaction_outside_others" format="reference|color" />
+    <attr name="bubbles_outgoing_background_surface_secondary" format="reference|color" />
+    <attr name="bubbles_outgoing_background_system_asset_step" format="reference|color" />
+    <attr name="bubbles_outgoing_background_system_asset_stroke_step" format="reference|color" />
+    <attr name="bubbles_outgoing_background_text_focus" format="reference|color" />
+    <attr name="bubbles_outgoing_icon_action" format="reference|color" />
+    <attr name="bubbles_outgoing_icon_action_secondary" format="reference|color" />
+    <attr name="bubbles_outgoing_icon_alert" format="reference|color" />
+    <attr name="bubbles_outgoing_icon_call_negative" format="reference|color" />
+    <attr name="bubbles_outgoing_icon_call_neutral" format="reference|color" />
+    <attr name="bubbles_outgoing_icon_icon_item" format="reference|color" />
+    <attr name="bubbles_outgoing_icon_read_status" format="reference|color" />
+    <attr name="bubbles_outgoing_icon_read_status_capsule" format="reference|color" />
+    <attr name="bubbles_outgoing_icon_reply" format="reference|color" />
+    <attr name="bubbles_outgoing_icon_reply_forwarded" format="reference|color" />
+    <attr name="bubbles_outgoing_icon_verification_author" format="reference|color" />
+    <attr name="bubbles_outgoing_icon_verification_body" format="reference|color" />
+    <attr name="bubbles_outgoing_icon_verification_forward_name" format="reference|color" />
+    <attr name="bubbles_outgoing_icon_verification_reply_body" format="reference|color" />
+    <attr name="bubbles_outgoing_icon_verification_reply_name" format="reference|color" />
+    <attr name="bubbles_outgoing_states_background_hovered_surface_secondary" format="reference|color" />
+    <attr name="bubbles_outgoing_states_background_pressed_surface_secondary" format="reference|color" />
+    <attr name="bubbles_outgoing_stroke_action" format="reference|color" />
+    <attr name="bubbles_outgoing_stroke_neutral_secondary" format="reference|color" />
+    <attr name="bubbles_outgoing_stroke_primary_inverse_static" format="reference|color" />
+    <attr name="bubbles_outgoing_stroke_reply" format="reference|color" />
+    <attr name="bubbles_outgoing_stroke_reply_outside" format="reference|color" />
+    <attr name="bubbles_outgoing_text_action" format="reference|color" />
+    <attr name="bubbles_outgoing_text_action_fade" format="reference|color" />
+    <attr name="bubbles_outgoing_text_author" format="reference|color" />
+    <attr name="bubbles_outgoing_text_body" format="reference|color" />
+    <attr name="bubbles_outgoing_text_body_secondary" format="reference|color" />
+    <attr name="bubbles_outgoing_text_forward_label" format="reference|color" />
+    <attr name="bubbles_outgoing_text_forward_name" format="reference|color" />
+    <attr name="bubbles_outgoing_text_link" format="reference|color" />
+    <attr name="bubbles_outgoing_text_link_underline" format="reference|color" />
+    <attr name="bubbles_outgoing_text_md_link" format="reference|color" />
+    <attr name="bubbles_outgoing_text_numberreactionother" format="reference|color" />
+    <attr name="bubbles_outgoing_text_numberreactionyou" format="reference|color" />
+    <attr name="bubbles_outgoing_text_reaction_inside_my" format="reference|color" />
+    <attr name="bubbles_outgoing_text_reaction_inside_others" format="reference|color" />
+    <attr name="bubbles_outgoing_text_reaction_outside_my" format="reference|color" />
+    <attr name="bubbles_outgoing_text_reaction_outside_others" format="reference|color" />
+    <attr name="bubbles_outgoing_text_reply_body" format="reference|color" />
+    <attr name="bubbles_outgoing_text_reply_name" format="reference|color" />
+    <attr name="bubbles_outgoing_text_time" format="reference|color" />
+    <attr name="bubbles_system_button_themed" format="reference|color" />
+    <attr name="bubbles_system_icon_themed_contrast" format="reference|color" />
+    <attr name="bubbles_system_qr_background" format="reference|color" />
+    <attr name="bubbles_system_qr_step" format="reference|color" />
+    <attr name="bubbles_system_step" format="reference|color" />
+    <attr name="bubbles_system_stroke_fade_step" format="reference|color" />
+    <attr name="bubbles_system_stroke_step" format="reference|color" />
     <attr name="buffered_color" format="color" />
     <attr name="buttonBarButtonStyle" format="reference" />
     <attr name="buttonBarNegativeButtonStyle" format="reference" />
@@ -302,6 +466,17 @@
         <enum name="screen" value="15" />
         <enum name="add" value="16" />
     </attr>
+    <attr name="button_bot" format="reference|color" />
+    <attr name="button_ghost" format="reference|color" />
+    <attr name="button_negative" format="reference|color" />
+    <attr name="button_negative_fade" format="reference|color" />
+    <attr name="button_overlay" format="reference|color" />
+    <attr name="button_positive" format="reference|color" />
+    <attr name="button_positive_fade" format="reference|color" />
+    <attr name="button_primary" format="reference|color" />
+    <attr name="button_primary_contrast" format="reference|color" />
+    <attr name="button_secondary" format="reference|color" />
+    <attr name="button_secondary_contrast" format="reference|color" />
     <attr name="cameraBearing" format="float" />
     <attr name="cameraMaxZoomPreference" format="float" />
     <attr name="cameraMinZoomPreference" format="float" />
@@ -309,6 +484,11 @@
     <attr name="cameraTargetLng" format="float" />
     <attr name="cameraTilt" format="float" />
     <attr name="cameraZoom" format="float" />
+    <attr name="capsule_background" format="reference|color" />
+    <attr name="capsule_gradient_primary_step" format="reference|color" />
+    <attr name="capsule_gradient_secondary_step" format="reference|color" />
+    <attr name="capsule_outside" format="reference|color" />
+    <attr name="capsule_secondary" format="reference|color" />
     <attr name="cardBackgroundColor" format="color" />
     <attr name="cardCornerRadius" format="dimension" />
     <attr name="cardElevation" format="dimension" />
@@ -458,366 +638,18 @@
     <attr name="ccp_useFlagEmoji" format="boolean" />
     <attr name="centerIfNoTextEnabled" format="boolean" />
     <attr name="chainUseRtl" format="boolean" />
-    <attr name="chat" format="reference" />
-    <attr name="chat_bubble" format="reference" />
-    <attr name="chat_bubble_background" format="reference" />
-    <attr name="chat_bubble_background_action" format="reference|color" />
-    <attr name="chat_bubble_background_actionFade" format="reference|color" />
-    <attr name="chat_bubble_background_actionSecondary" format="reference|color" />
-    <attr name="chat_bubble_background_botButton" format="reference" />
-    <attr name="chat_bubble_background_botButton_default" format="reference|color" />
-    <attr name="chat_bubble_background_botButton_loading" format="reference|color" />
-    <attr name="chat_bubble_background_botButton_pressed" format="reference|color" />
-    <attr name="chat_bubble_background_bubbleGradient" format="reference" />
-    <attr name="chat_bubble_background_bubbleGradient_step1" format="reference|color" />
-    <attr name="chat_bubble_background_bubbleGradient_step2" format="reference|color" />
-    <attr name="chat_bubble_background_bubbleGradient_step3" format="reference|color" />
-    <attr name="chat_bubble_background_bubbleOldGradient" format="reference" />
-    <attr name="chat_bubble_background_bubbleOldGradient_step1" format="reference|color" />
-    <attr name="chat_bubble_background_bubbleOldGradient_step2" format="reference|color" />
-    <attr name="chat_bubble_background_bubbleSimple" format="reference|color" />
-    <attr name="chat_bubble_background_focus" format="reference" />
-    <attr name="chat_bubble_background_focus_regular" format="reference" />
-    <attr name="chat_bubble_background_focus_regular_max" format="reference|color" />
-    <attr name="chat_bubble_background_focus_regular_min" format="reference|color" />
-    <attr name="chat_bubble_background_focus_singleMedia" format="reference" />
-    <attr name="chat_bubble_background_focus_singleMedia_max" format="reference|color" />
-    <attr name="chat_bubble_background_focus_singleMedia_min" format="reference|color" />
-    <attr name="chat_bubble_background_focus_transparent" format="reference" />
-    <attr name="chat_bubble_background_focus_transparent_max" format="reference|color" />
-    <attr name="chat_bubble_background_focus_transparent_min" format="reference|color" />
-    <attr name="chat_bubble_background_iconItem" format="reference|color" />
-    <attr name="chat_bubble_background_iconItemNegative" format="reference|color" />
-    <attr name="chat_bubble_background_mention" format="reference|color" />
-    <attr name="chat_bubble_background_mentionPressed" format="reference|color" />
-    <attr name="chat_bubble_background_reaction" format="reference" />
-    <attr name="chat_bubble_background_reaction_insideMy" format="reference|color" />
-    <attr name="chat_bubble_background_reaction_insideOthers" format="reference|color" />
-    <attr name="chat_bubble_background_reaction_outsideMy" format="reference|color" />
-    <attr name="chat_bubble_background_reaction_outsideOthers" format="reference|color" />
-    <attr name="chat_bubble_background_surfaceSecondary" format="reference|color" />
-    <attr name="chat_bubble_background_systemAssetGradient" format="reference" />
-    <attr name="chat_bubble_background_systemAssetGradient_step1" format="reference|color" />
-    <attr name="chat_bubble_background_systemAssetGradient_step2" format="reference|color" />
-    <attr name="chat_bubble_background_systemAssetGradient_strokeStep1" format="reference|color" />
-    <attr name="chat_bubble_background_systemAssetGradient_strokeStep2" format="reference|color" />
-    <attr name="chat_bubble_background_systemAssetGradient_strokeStep3" format="reference|color" />
-    <attr name="chat_bubble_background_textFocus" format="reference|color" />
-    <attr name="chat_bubble_icon" format="reference" />
-    <attr name="chat_bubble_icon_action" format="reference|color" />
-    <attr name="chat_bubble_icon_actionSecondary" format="reference|color" />
-    <attr name="chat_bubble_icon_alert" format="reference|color" />
-    <attr name="chat_bubble_icon_callNegative" format="reference|color" />
-    <attr name="chat_bubble_icon_callNeutral" format="reference|color" />
-    <attr name="chat_bubble_icon_iconItem" format="reference|color" />
-    <attr name="chat_bubble_icon_readStatus" format="reference|color" />
-    <attr name="chat_bubble_icon_readStatusCapsule" format="reference|color" />
-    <attr name="chat_bubble_icon_reply" format="reference|color" />
-    <attr name="chat_bubble_icon_replyForwarded" format="reference|color" />
-    <attr name="chat_bubble_icon_verificationAuthor" format="reference|color" />
-    <attr name="chat_bubble_icon_verificationBody" format="reference|color" />
-    <attr name="chat_bubble_icon_verificationForwardName" format="reference|color" />
-    <attr name="chat_bubble_icon_verificationReplyBody" format="reference|color" />
-    <attr name="chat_bubble_icon_verificationReplyName" format="reference|color" />
-    <attr name="chat_bubble_stroke" format="reference" />
-    <attr name="chat_bubble_stroke_action" format="reference|color" />
-    <attr name="chat_bubble_stroke_neutralSecondary" format="reference|color" />
-    <attr name="chat_bubble_stroke_reply" format="reference|color" />
-    <attr name="chat_bubble_stroke_replyOutside" format="reference|color" />
-    <attr name="chat_bubble_text" format="reference" />
-    <attr name="chat_bubble_text_action" format="reference|color" />
-    <attr name="chat_bubble_text_actionFade" format="reference|color" />
-    <attr name="chat_bubble_text_author" format="reference|color" />
-    <attr name="chat_bubble_text_body" format="reference|color" />
-    <attr name="chat_bubble_text_bodySecondary" format="reference|color" />
-    <attr name="chat_bubble_text_forwardLabel" format="reference|color" />
-    <attr name="chat_bubble_text_forwardName" format="reference|color" />
-    <attr name="chat_bubble_text_link" format="reference|color" />
-    <attr name="chat_bubble_text_linkUnderline" format="reference|color" />
-    <attr name="chat_bubble_text_reaction" format="reference" />
-    <attr name="chat_bubble_text_reaction_insideMy" format="reference|color" />
-    <attr name="chat_bubble_text_reaction_insideOthers" format="reference|color" />
-    <attr name="chat_bubble_text_reaction_outsideMy" format="reference|color" />
-    <attr name="chat_bubble_text_reaction_outsideOthers" format="reference|color" />
-    <attr name="chat_bubble_text_replyBody" format="reference|color" />
-    <attr name="chat_bubble_text_replyName" format="reference|color" />
-    <attr name="chat_bubble_text_time" format="reference|color" />
-    <attr name="chat_common" format="reference" />
-    <attr name="chat_common_action" format="reference" />
-    <attr name="chat_common_action_background" format="reference" />
-    <attr name="chat_common_action_background_error" format="reference|color" />
-    <attr name="chat_common_action_background_neutral" format="reference|color" />
-    <attr name="chat_common_action_background_themed" format="reference|color" />
-    <attr name="chat_common_action_background_themedFade" format="reference|color" />
-    <attr name="chat_common_action_icon" format="reference" />
-    <attr name="chat_common_action_icon_contrastStatic" format="reference|color" />
-    <attr name="chat_common_action_icon_neutral" format="reference|color" />
-    <attr name="chat_common_action_icon_neutralSecondary" format="reference|color" />
-    <attr name="chat_common_action_icon_themedFade" format="reference|color" />
-    <attr name="chat_common_background" format="reference" />
-    <attr name="chat_common_background_accent" format="reference|color" />
-    <attr name="chat_common_background_capsule" format="reference|color" />
-    <attr name="chat_common_background_capsuleGradient" format="reference" />
-    <attr name="chat_common_background_capsuleGradient_step1" format="reference|color" />
-    <attr name="chat_common_background_capsuleGradient_step2" format="reference|color" />
-    <attr name="chat_common_background_capsuleOutside" format="reference|color" />
-    <attr name="chat_common_background_capsuleSecondary" format="reference|color" />
-    <attr name="chat_common_background_capsuleSecondaryGradient" format="reference" />
-    <attr name="chat_common_background_capsuleSecondaryGradient_step1" format="reference|color" />
-    <attr name="chat_common_background_capsuleSecondaryGradient_step2" format="reference|color" />
-    <attr name="chat_common_background_chatBackground" format="reference" />
-    <attr name="chat_common_background_chatBackground_additionalStep1" format="reference|color" />
-    <attr name="chat_common_background_chatBackground_additionalStep2" format="reference|color" />
-    <attr name="chat_common_background_chatBackground_additionalStep3" format="reference|color" />
-    <attr name="chat_common_background_chatBackground_additionalStep4" format="reference|color" />
-    <attr name="chat_common_background_chatBackground_additionalStep5" format="reference|color" />
-    <attr name="chat_common_background_chatBackground_additionalStep6" format="reference|color" />
-    <attr name="chat_common_background_chatBackground_backgroundStep1" format="reference|color" />
-    <attr name="chat_common_background_chatBackground_backgroundStep2" format="reference|color" />
-    <attr name="chat_common_background_chatBackground_patternColor" format="reference|color" />
-    <attr name="chat_common_background_chatBackground_patternGradientStep1" format="reference|color" />
-    <attr name="chat_common_background_chatBackground_patternGradientStep2" format="reference|color" />
-    <attr name="chat_common_background_chatBackground_patternStep1" format="reference|color" />
-    <attr name="chat_common_background_chatBackground_patternStep2" format="reference|color" />
-    <attr name="chat_common_background_chatBackground_patternStep3" format="reference|color" />
-    <attr name="chat_common_background_chatBackground_patternStep4" format="reference|color" />
-    <attr name="chat_common_background_chatBackground_patternStep5" format="reference|color" />
-    <attr name="chat_common_background_chatBackground_patternStep6" format="reference|color" />
-    <attr name="chat_common_background_chatFAB" format="reference|color" />
-    <attr name="chat_common_background_contrastFloatingSecondary" format="reference|color" />
-    <attr name="chat_common_background_contrastStatic" format="reference|color" />
-    <attr name="chat_common_background_fileType" format="reference" />
-    <attr name="chat_common_background_fileType_archiveBadge" format="reference|color" />
-    <attr name="chat_common_background_fileType_archiveBkg" format="reference|color" />
-    <attr name="chat_common_background_fileType_archiveElement" format="reference|color" />
-    <attr name="chat_common_background_fileType_archiveIcon" format="reference|color" />
-    <attr name="chat_common_background_fileType_background" format="reference|color" />
-    <attr name="chat_common_background_fileType_dataBadge" format="reference|color" />
-    <attr name="chat_common_background_fileType_dataBkg" format="reference|color" />
-    <attr name="chat_common_background_fileType_dataElement" format="reference|color" />
-    <attr name="chat_common_background_fileType_dataIcon" format="reference|color" />
-    <attr name="chat_common_background_fileType_imageBadge" format="reference|color" />
-    <attr name="chat_common_background_fileType_imageBkg" format="reference|color" />
-    <attr name="chat_common_background_fileType_imageElement" format="reference|color" />
-    <attr name="chat_common_background_fileType_imageIcon" format="reference|color" />
-    <attr name="chat_common_background_fileType_musicBadge" format="reference|color" />
-    <attr name="chat_common_background_fileType_musicBkg" format="reference|color" />
-    <attr name="chat_common_background_fileType_musicElement" format="reference|color" />
-    <attr name="chat_common_background_fileType_musicIcon" format="reference|color" />
-    <attr name="chat_common_background_fileType_presentationBadge" format="reference|color" />
-    <attr name="chat_common_background_fileType_presentationBkg" format="reference|color" />
-    <attr name="chat_common_background_fileType_presentationElement" format="reference|color" />
-    <attr name="chat_common_background_fileType_presentationIcon" format="reference|color" />
-    <attr name="chat_common_background_fileType_programBadge" format="reference|color" />
-    <attr name="chat_common_background_fileType_programBkg" format="reference|color" />
-    <attr name="chat_common_background_fileType_programElement" format="reference|color" />
-    <attr name="chat_common_background_fileType_programIcon" format="reference|color" />
-    <attr name="chat_common_background_fileType_textBadge" format="reference|color" />
-    <attr name="chat_common_background_fileType_textBkg" format="reference|color" />
-    <attr name="chat_common_background_fileType_textElement" format="reference|color" />
-    <attr name="chat_common_background_fileType_textIcon" format="reference|color" />
-    <attr name="chat_common_background_fileType_unknownBadge" format="reference|color" />
-    <attr name="chat_common_background_fileType_unknownBkg" format="reference|color" />
-    <attr name="chat_common_background_fileType_unknownElement" format="reference|color" />
-    <attr name="chat_common_background_fileType_unknownIcon" format="reference|color" />
-    <attr name="chat_common_background_fileType_videoBadge" format="reference|color" />
-    <attr name="chat_common_background_fileType_videoBkg" format="reference|color" />
-    <attr name="chat_common_background_fileType_videoElement" format="reference|color" />
-    <attr name="chat_common_background_fileType_videoIcon" format="reference|color" />
-    <attr name="chat_common_background_glassLightGradient" format="reference" />
-    <attr name="chat_common_background_glassLightGradient_step1" format="reference|color" />
-    <attr name="chat_common_background_glassLightGradient_step2" format="reference|color" />
-    <attr name="chat_common_background_glassLightGradient_step3" format="reference|color" />
-    <attr name="chat_common_background_neutral" format="reference|color" />
-    <attr name="chat_common_background_neutralFade" format="reference|color" />
-    <attr name="chat_common_background_neutralFadeSecondary" format="reference|color" />
-    <attr name="chat_common_background_neutralFadeTertiary" format="reference|color" />
-    <attr name="chat_common_background_neutralThemed" format="reference|color" />
-    <attr name="chat_common_background_overlay" format="reference|color" />
-    <attr name="chat_common_background_overlayHard" format="reference|color" />
-    <attr name="chat_common_background_overlaySecondary" format="reference|color" />
-    <attr name="chat_common_background_pattern" format="reference|color" />
-    <attr name="chat_common_background_searchHighlight" format="reference|color" />
-    <attr name="chat_common_background_skeleton" format="reference" />
-    <attr name="chat_common_background_skeleton_bubbleGradientPrimary" format="reference" />
-    <attr name="chat_common_background_skeleton_bubbleGradientPrimary_staticBackground" format="reference|color" />
-    <attr name="chat_common_background_skeleton_bubbleGradientPrimary_step1" format="reference|color" />
-    <attr name="chat_common_background_skeleton_bubbleGradientPrimary_step2" format="reference|color" />
-    <attr name="chat_common_background_skeleton_bubbleGradientPrimary_step3" format="reference|color" />
-    <attr name="chat_common_background_skeleton_bubbleGradientSecondary" format="reference" />
-    <attr name="chat_common_background_skeleton_bubbleGradientSecondary_staticBackground" format="reference|color" />
-    <attr name="chat_common_background_skeleton_bubbleGradientSecondary_step1" format="reference|color" />
-    <attr name="chat_common_background_skeleton_bubbleGradientSecondary_step2" format="reference|color" />
-    <attr name="chat_common_background_skeleton_bubbleGradientSecondary_step3" format="reference|color" />
-    <attr name="chat_common_background_skeleton_stickerPrimary" format="reference" />
-    <attr name="chat_common_background_skeleton_stickerPrimary_baseGradient" format="reference" />
-    <attr name="chat_common_background_skeleton_stickerPrimary_baseGradient_staticBackground" format="reference|color" />
-    <attr name="chat_common_background_skeleton_stickerPrimary_baseGradient_step1" format="reference|color" />
-    <attr name="chat_common_background_skeleton_stickerPrimary_baseGradient_step2" format="reference|color" />
-    <attr name="chat_common_background_skeleton_stickerPrimary_tongueGradient" format="reference" />
-    <attr name="chat_common_background_skeleton_stickerPrimary_tongueGradient_step1" format="reference|color" />
-    <attr name="chat_common_background_skeleton_stickerPrimary_tongueGradient_step2" format="reference|color" />
-    <attr name="chat_common_background_skeleton_stickerSecondary" format="reference" />
-    <attr name="chat_common_background_skeleton_stickerSecondary_baseGradient" format="reference" />
-    <attr name="chat_common_background_skeleton_stickerSecondary_baseGradient_staticBackground" format="reference|color" />
-    <attr name="chat_common_background_skeleton_stickerSecondary_baseGradient_step1" format="reference|color" />
-    <attr name="chat_common_background_skeleton_stickerSecondary_baseGradient_step2" format="reference|color" />
-    <attr name="chat_common_background_skeleton_stickerSecondary_tongueGradient" format="reference" />
-    <attr name="chat_common_background_skeleton_stickerSecondary_tongueGradient_step1" format="reference|color" />
-    <attr name="chat_common_background_skeleton_stickerSecondary_tongueGradient_step2" format="reference|color" />
-    <attr name="chat_common_background_spaceThemeGradient" format="reference" />
-    <attr name="chat_common_background_spaceThemeGradient_step1" format="reference|color" />
-    <attr name="chat_common_background_spaceThemeGradient_step2" format="reference|color" />
-    <attr name="chat_common_background_stickerBlank" format="reference|color" />
-    <attr name="chat_common_background_surfaceGround" format="reference|color" />
-    <attr name="chat_common_background_systemBubbleGradient" format="reference" />
-    <attr name="chat_common_background_systemBubbleGradient_qRBackground" format="reference|color" />
-    <attr name="chat_common_background_systemBubbleGradient_qRStep1" format="reference|color" />
-    <attr name="chat_common_background_systemBubbleGradient_qRStep2" format="reference|color" />
-    <attr name="chat_common_background_systemBubbleGradient_qRStep3" format="reference|color" />
-    <attr name="chat_common_background_systemBubbleGradient_qRStep4" format="reference|color" />
-    <attr name="chat_common_background_systemBubbleGradient_step1" format="reference|color" />
-    <attr name="chat_common_background_systemBubbleGradient_step2" format="reference|color" />
-    <attr name="chat_common_background_systemBubbleGradient_step3" format="reference|color" />
-    <attr name="chat_common_background_systemBubbleGradient_strokeFadeStep1" format="reference|color" />
-    <attr name="chat_common_background_systemBubbleGradient_strokeFadeStep2" format="reference|color" />
-    <attr name="chat_common_background_systemBubbleGradient_strokeStep1" format="reference|color" />
-    <attr name="chat_common_background_systemBubbleGradient_strokeStep2" format="reference|color" />
-    <attr name="chat_common_background_timelineActive" format="reference|color" />
-    <attr name="chat_common_background_timelinePassive" format="reference|color" />
-    <attr name="chat_common_icon" format="reference" />
-    <attr name="chat_common_icon_accent" format="reference|color" />
-    <attr name="chat_common_icon_accentContrast" format="reference|color" />
-    <attr name="chat_common_icon_capsule" format="reference|color" />
-    <attr name="chat_common_icon_contrastStatic" format="reference|color" />
-    <attr name="chat_common_icon_negative" format="reference|color" />
-    <attr name="chat_common_icon_secondary" format="reference|color" />
-    <attr name="chat_common_icon_themed" format="reference|color" />
-    <attr name="chat_common_icon_verificationCapsule" format="reference|color" />
-    <attr name="chat_common_shadows" format="reference" />
-    <attr name="chat_common_shadows_elevation2" format="reference" />
-    <attr name="chat_common_shadows_elevation2_primary" format="reference|color" />
-    <attr name="chat_common_shadows_elevation2_secondary" format="reference|color" />
-    <attr name="chat_common_shadows_topBar" format="reference" />
-    <attr name="chat_common_shadows_topBar_color" format="reference|color" />
-    <attr name="chat_common_shadows_writeBar" format="reference" />
-    <attr name="chat_common_shadows_writeBar_color" format="reference|color" />
-    <attr name="chat_common_states" format="reference" />
-    <attr name="chat_common_states_background" format="reference" />
-    <attr name="chat_common_states_background_active" format="reference" />
-    <attr name="chat_common_states_background_active_action" format="reference" />
-    <attr name="chat_common_states_background_active_action_themed" format="reference|color" />
-    <attr name="chat_common_states_background_active_neutralFadeTertiary" format="reference|color" />
-    <attr name="chat_common_states_background_disabled" format="reference" />
-    <attr name="chat_common_states_background_disabled_accent" format="reference|color" />
-    <attr name="chat_common_states_background_disabled_neutralFadeSecondary" format="reference|color" />
-    <attr name="chat_common_states_background_disabled_neutralThemed" format="reference|color" />
-    <attr name="chat_common_states_icon" format="reference" />
-    <attr name="chat_common_states_icon_disabled" format="reference" />
-    <attr name="chat_common_states_icon_disabled_negative" format="reference|color" />
-    <attr name="chat_common_states_icon_disabled_themed" format="reference|color" />
-    <attr name="chat_common_states_text" format="reference" />
-    <attr name="chat_common_states_text_disabled" format="reference" />
-    <attr name="chat_common_states_text_disabled_contrast" format="reference|color" />
-    <attr name="chat_common_states_text_disabled_contrastStatic" format="reference|color" />
-    <attr name="chat_common_states_text_disabled_negative" format="reference|color" />
-    <attr name="chat_common_states_text_disabled_primary" format="reference|color" />
-    <attr name="chat_common_states_text_disabled_themed" format="reference|color" />
-    <attr name="chat_common_stroke" format="reference" />
-    <attr name="chat_common_stroke_contrast" format="reference|color" />
-    <attr name="chat_common_stroke_contrastStatic" format="reference|color" />
-    <attr name="chat_common_stroke_glass" format="reference|color" />
-    <attr name="chat_common_stroke_separator" format="reference" />
-    <attr name="chat_common_stroke_separator_primary" format="reference|color" />
-    <attr name="chat_common_stroke_separator_secondary" format="reference|color" />
-    <attr name="chat_common_text" format="reference" />
-    <attr name="chat_common_text_capsule" format="reference|color" />
-    <attr name="chat_common_text_capsuleSecondary" format="reference|color" />
-    <attr name="chat_common_text_contrast" format="reference|color" />
-    <attr name="chat_common_text_contrastStatic" format="reference|color" />
-    <attr name="chat_common_text_fileType" format="reference|color" />
-    <attr name="chat_common_text_negative" format="reference|color" />
-    <attr name="chat_common_text_primary" format="reference|color" />
-    <attr name="chat_common_text_secondary" format="reference|color" />
-    <attr name="chat_common_text_tertiary" format="reference|color" />
-    <attr name="chat_common_text_themed" format="reference|color" />
-    <attr name="chat_incoming" format="reference" />
-    <attr name="chat_outgoing" format="reference" />
-    <attr name="chat_topbar" format="reference" />
-    <attr name="chat_topbar_background" format="reference" />
-    <attr name="chat_topbar_background_default" format="reference" />
-    <attr name="chat_topbar_background_default_neutral" format="reference|color" />
-    <attr name="chat_topbar_background_default_neutralFade" format="reference|color" />
-    <attr name="chat_topbar_background_default_primary" format="reference|color" />
-    <attr name="chat_topbar_background_default_themed" format="reference|color" />
-    <attr name="chat_topbar_background_default_topbar" format="reference|color" />
-    <attr name="chat_topbar_background_disabled" format="reference" />
-    <attr name="chat_topbar_background_disabled_neutral" format="reference|color" />
-    <attr name="chat_topbar_background_disabled_neutralFade" format="reference|color" />
-    <attr name="chat_topbar_background_disabled_themed" format="reference|color" />
-    <attr name="chat_topbar_icon" format="reference" />
-    <attr name="chat_topbar_icon_default" format="reference" />
-    <attr name="chat_topbar_icon_default_contrast" format="reference|color" />
-    <attr name="chat_topbar_icon_default_contrastStatic" format="reference|color" />
-    <attr name="chat_topbar_icon_default_neutralFade" format="reference|color" />
-    <attr name="chat_topbar_icon_default_primary" format="reference|color" />
-    <attr name="chat_topbar_icon_default_quaternary" format="reference|color" />
-    <attr name="chat_topbar_icon_default_secondary" format="reference|color" />
-    <attr name="chat_topbar_icon_default_tertiary" format="reference|color" />
-    <attr name="chat_topbar_icon_default_themed" format="reference|color" />
-    <attr name="chat_topbar_icon_disabled" format="reference" />
-    <attr name="chat_topbar_icon_disabled_contrast" format="reference|color" />
-    <attr name="chat_topbar_icon_disabled_contrastStatic" format="reference|color" />
-    <attr name="chat_topbar_icon_disabled_negative" format="reference|color" />
-    <attr name="chat_topbar_icon_disabled_neutralFade" format="reference|color" />
-    <attr name="chat_topbar_icon_disabled_primary" format="reference|color" />
-    <attr name="chat_topbar_icon_disabled_quaternary" format="reference|color" />
-    <attr name="chat_topbar_icon_disabled_secondary" format="reference|color" />
-    <attr name="chat_topbar_icon_disabled_tertiary" format="reference|color" />
-    <attr name="chat_topbar_icon_disabled_themed" format="reference|color" />
-    <attr name="chat_topbar_stroke" format="reference" />
-    <attr name="chat_topbar_stroke_separator" format="reference" />
-    <attr name="chat_topbar_stroke_separator_default" format="reference" />
-    <attr name="chat_topbar_stroke_separator_default_primary" format="reference|color" />
-    <attr name="chat_topbar_stroke_separator_default_secondary" format="reference|color" />
-    <attr name="chat_topbar_text" format="reference" />
-    <attr name="chat_topbar_text_default" format="reference" />
-    <attr name="chat_topbar_text_default_contrast" format="reference|color" />
-    <attr name="chat_topbar_text_default_contrastStatic" format="reference|color" />
-    <attr name="chat_topbar_text_default_primary" format="reference|color" />
-    <attr name="chat_topbar_text_default_secondary" format="reference|color" />
-    <attr name="chat_topbar_text_default_themed" format="reference|color" />
-    <attr name="chat_topbar_text_disabled" format="reference" />
-    <attr name="chat_topbar_text_disabled_contrast" format="reference|color" />
-    <attr name="chat_topbar_text_disabled_contrastStatic" format="reference|color" />
-    <attr name="chat_topbar_text_disabled_primary" format="reference|color" />
-    <attr name="chat_topbar_text_disabled_secondary" format="reference|color" />
-    <attr name="chat_topbar_text_disabled_themed" format="reference|color" />
-    <attr name="chat_writebar" format="reference" />
-    <attr name="chat_writebar_background" format="reference" />
-    <attr name="chat_writebar_background_emojiArea" format="reference|color" />
-    <attr name="chat_writebar_background_input" format="reference|color" />
-    <attr name="chat_writebar_background_neutralFade" format="reference|color" />
-    <attr name="chat_writebar_background_surface" format="reference|color" />
-    <attr name="chat_writebar_icon" format="reference" />
-    <attr name="chat_writebar_icon_neutral" format="reference|color" />
-    <attr name="chat_writebar_icon_neutralSecondary" format="reference|color" />
-    <attr name="chat_writebar_icon_neutralTertiary" format="reference|color" />
-    <attr name="chat_writebar_icon_themed" format="reference|color" />
-    <attr name="chat_writebar_icon_verificationReplyTo" format="reference|color" />
-    <attr name="chat_writebar_stroke" format="reference" />
-    <attr name="chat_writebar_stroke_areaSeparator" format="reference|color" />
-    <attr name="chat_writebar_stroke_input" format="reference|color" />
-    <attr name="chat_writebar_stroke_themed" format="reference|color" />
-    <attr name="chat_writebar_text" format="reference" />
-    <attr name="chat_writebar_text_input" format="reference|color" />
-    <attr name="chat_writebar_text_inputMDLink" format="reference|color" />
-    <attr name="chat_writebar_text_inputPlaceholder" format="reference|color" />
-    <attr name="chat_writebar_text_primary" format="reference|color" />
-    <attr name="chat_writebar_text_replyMessage" format="reference|color" />
-    <attr name="chat_writebar_text_replyTo" format="reference|color" />
-    <attr name="chat_writebar_text_secondary" format="reference|color" />
-    <attr name="chat_writebar_text_themed" format="reference|color" />
+    <attr name="chat_action_outside" format="reference|color" />
+    <attr name="chat_background_additional_step" format="reference|color" />
+    <attr name="chat_background_background_step" format="reference|color" />
+    <attr name="chat_background_pattern_color" format="reference|color" />
+    <attr name="chat_background_pattern_gradient_step" format="reference|color" />
+    <attr name="chat_background_pattern_step" format="reference|color" />
+    <attr name="chat_ground" format="reference|color" />
+    <attr name="chat_pattern_icon" format="reference|color" />
+    <attr name="chat_search_highlight" format="reference|color" />
+    <attr name="chat_sticker_blank" format="reference|color" />
+    <attr name="chat_timeline_active" format="reference|color" />
+    <attr name="chat_timeline_passive" format="reference|color" />
     <attr name="checkBoxPreferenceStyle" format="reference" />
     <attr name="checkMarkCompat" format="reference" />
     <attr name="checkMarkTint" format="color" />
@@ -870,6 +702,11 @@
     <attr name="chipStrokeWidth" format="dimension" />
     <attr name="chipStyle" format="reference" />
     <attr name="chipSurfaceColor" format="color" />
+    <attr name="chips_active" format="reference|color" />
+    <attr name="chips_default" format="reference|color" />
+    <attr name="chips_primary" format="reference|color" />
+    <attr name="chips_select_off" format="reference|color" />
+    <attr name="chips_select_on" format="reference|color" />
     <attr name="chistyakov_orientation">
         <enum name="vertical" value="0" />
         <enum name="horizontal" value="1" />
@@ -1034,6 +871,8 @@
     <attr name="contrast" format="float" />
     <attr name="controlBackground" format="reference" />
     <attr name="controller_layout_id" format="reference" />
+    <attr name="controls_active" format="reference|color" />
+    <attr name="controls_inactive" format="reference|color" />
     <attr name="coordinatorLayoutStyle" format="reference" />
     <attr name="coplanarSiblingViewId" format="reference" />
     <attr name="cornerFamily">
@@ -1070,6 +909,13 @@
     <attr name="counterOverflowTextColor" format="reference" />
     <attr name="counterTextAppearance" format="reference" />
     <attr name="counterTextColor" format="reference" />
+    <attr name="counter_attention" format="reference|color" />
+    <attr name="counter_contrast" format="reference|color" />
+    <attr name="counter_default" format="reference|color" />
+    <attr name="counter_menu" format="reference|color" />
+    <attr name="counter_mirage" format="reference|color" />
+    <attr name="counter_mute" format="reference|color" />
+    <attr name="counter_themed" format="reference|color" />
     <attr name="crossfade" format="float" />
     <attr name="currentState" format="reference" />
     <attr name="cursorColor" format="color" />
@@ -1132,6 +978,10 @@
     <attr name="dividerPadding" format="dimension" />
     <attr name="dividerThickness" format="dimension" />
     <attr name="dividerVertical" format="reference" />
+    <attr name="divider_contrast" format="reference|color" />
+    <attr name="divider_primary" format="reference|color" />
+    <attr name="divider_primary_ghost" format="reference|color" />
+    <attr name="divider_secondary" format="reference|color" />
     <attr name="dragDirection">
         <enum name="dragUp" value="0" />
         <enum name="dragDown" value="1" />
@@ -1191,6 +1041,12 @@
         <enum name="all" value="1" />
         <enum name="nonExistent" value="2" />
     </attr>
+    <attr name="empty_block_halo_bubble_1" format="reference|color" />
+    <attr name="empty_block_halo_bubble_2" format="reference|color" />
+    <attr name="empty_block_halo_bubble_3" format="reference|color" />
+    <attr name="empty_block_halo_bubble_4" format="reference|color" />
+    <attr name="empty_block_icon_wrapper_shape_step" format="reference|color" />
+    <attr name="empty_block_icon_wrapper_stroke_step" format="reference|color" />
     <attr name="enableCopying" format="boolean" />
     <attr name="enableEdgeToEdge" format="boolean" />
     <attr name="enabled" format="boolean" />
@@ -1302,6 +1158,9 @@
         <enum name="mini" value="1" />
     </attr>
     <attr name="fadeDuration" format="integer" />
+    <attr name="fading_background_primary_step" format="reference|color" />
+    <attr name="fading_background_surface_step" format="reference|color" />
+    <attr name="fading_float_primary_step" format="reference|color" />
     <attr name="failureImage" format="reference" />
     <attr name="failureImageScaleType">
         <enum name="none" value="-1" />
@@ -1324,6 +1183,44 @@
     <attr name="fastscroll__bubbleTextAppearance" format="reference" />
     <attr name="fastscroll__handleColor" format="color" />
     <attr name="fastscroll__style" format="reference" />
+    <attr name="file_type_archive_badge" format="reference|color" />
+    <attr name="file_type_archive_bkg" format="reference|color" />
+    <attr name="file_type_archive_element" format="reference|color" />
+    <attr name="file_type_archive_icon" format="reference|color" />
+    <attr name="file_type_background" format="reference|color" />
+    <attr name="file_type_data_badge" format="reference|color" />
+    <attr name="file_type_data_bkg" format="reference|color" />
+    <attr name="file_type_data_element" format="reference|color" />
+    <attr name="file_type_data_icon" format="reference|color" />
+    <attr name="file_type_image_badge" format="reference|color" />
+    <attr name="file_type_image_bkg" format="reference|color" />
+    <attr name="file_type_image_element" format="reference|color" />
+    <attr name="file_type_image_icon" format="reference|color" />
+    <attr name="file_type_music_badge" format="reference|color" />
+    <attr name="file_type_music_bkg" format="reference|color" />
+    <attr name="file_type_music_element" format="reference|color" />
+    <attr name="file_type_music_icon" format="reference|color" />
+    <attr name="file_type_presentation_badge" format="reference|color" />
+    <attr name="file_type_presentation_bkg" format="reference|color" />
+    <attr name="file_type_presentation_element" format="reference|color" />
+    <attr name="file_type_presentation_icon" format="reference|color" />
+    <attr name="file_type_program_badge" format="reference|color" />
+    <attr name="file_type_program_bkg" format="reference|color" />
+    <attr name="file_type_program_element" format="reference|color" />
+    <attr name="file_type_program_icon" format="reference|color" />
+    <attr name="file_type_text" format="reference|color" />
+    <attr name="file_type_text_badge" format="reference|color" />
+    <attr name="file_type_text_bkg" format="reference|color" />
+    <attr name="file_type_text_element" format="reference|color" />
+    <attr name="file_type_text_icon" format="reference|color" />
+    <attr name="file_type_unknown_badge" format="reference|color" />
+    <attr name="file_type_unknown_bkg" format="reference|color" />
+    <attr name="file_type_unknown_element" format="reference|color" />
+    <attr name="file_type_unknown_icon" format="reference|color" />
+    <attr name="file_type_video_badge" format="reference|color" />
+    <attr name="file_type_video_bkg" format="reference|color" />
+    <attr name="file_type_video_element" format="reference|color" />
+    <attr name="file_type_video_icon" format="reference|color" />
     <attr name="finishPrimaryWithSecondary" format="boolean" />
     <attr name="finishSecondaryWithPrimary" format="boolean" />
     <attr name="firstBaselineToTopHeight" format="dimension" />
@@ -1338,6 +1235,20 @@
         <enum name="wrap" value="1" />
         <enum name="wrap_reverse" value="2" />
     </attr>
+    <attr name="float_fab_blur" format="reference|color" />
+    <attr name="float_fab_flat" format="reference|color" />
+    <attr name="float_modal" format="reference|color" />
+    <attr name="float_overlay_step" format="reference|color" />
+    <attr name="float_popup_blur" format="reference|color" />
+    <attr name="float_popup_flat" format="reference|color" />
+    <attr name="float_primary_blur" format="reference|color" />
+    <attr name="float_primary_carver" format="reference|color" />
+    <attr name="float_primary_flat" format="reference|color" />
+    <attr name="float_scroll_bar" format="reference|color" />
+    <attr name="float_stroke" format="reference|color" />
+    <attr name="float_surface_blur" format="reference|color" />
+    <attr name="float_surface_carver" format="reference|color" />
+    <attr name="float_surface_flat" format="reference|color" />
     <attr name="floatingActionButtonLargePrimaryStyle" format="reference" />
     <attr name="floatingActionButtonLargeSecondaryStyle" format="reference" />
     <attr name="floatingActionButtonLargeStyle" format="reference" />
@@ -1438,314 +1349,31 @@
     <attr name="framePosition" format="integer" />
     <attr name="gapBetweenBars" format="dimension" />
     <attr name="gestureInsetBottomIgnored" format="boolean" />
-    <attr name="global" format="reference" />
-    <attr name="global_accent" format="reference" />
-    <attr name="global_accent_red" format="reference|color" />
-    <attr name="global_accent_secondary" format="reference|color" />
-    <attr name="global_accent_themed" format="reference|color" />
-    <attr name="global_background" format="reference" />
-    <attr name="global_background_accent" format="reference" />
-    <attr name="global_background_accent_attentionPrimary" format="reference|color" />
-    <attr name="global_background_accent_attentionSecondary" format="reference|color" />
-    <attr name="global_background_accent_contrast" format="reference|color" />
-    <attr name="global_background_accent_contrastSecondary" format="reference|color" />
-    <attr name="global_background_accent_contrastStatic" format="reference|color" />
-    <attr name="global_background_accent_contrastTertiary" format="reference|color" />
-    <attr name="global_background_accent_negative" format="reference|color" />
-    <attr name="global_background_accent_neutral" format="reference|color" />
-    <attr name="global_background_accent_neutralFade" format="reference|color" />
-    <attr name="global_background_accent_neutralFadeSecondary" format="reference|color" />
-    <attr name="global_background_accent_neutralSecondary" format="reference|color" />
-    <attr name="global_background_accent_neutralStatic" format="reference|color" />
-    <attr name="global_background_accent_neutralThemed" format="reference|color" />
-    <attr name="global_background_accent_positive" format="reference|color" />
-    <attr name="global_background_accent_themed" format="reference|color" />
-    <attr name="global_background_contrastFloating" format="reference|color" />
-    <attr name="global_background_contrastFloatingSecondary" format="reference|color" />
-    <attr name="global_background_local" format="reference" />
-    <attr name="global_background_local_chips" format="reference" />
-    <attr name="global_background_local_chips_active" format="reference|color" />
-    <attr name="global_background_local_chips_default" format="reference|color" />
-    <attr name="global_background_local_fileType" format="reference" />
-    <attr name="global_background_local_fileType_archiveBadge" format="reference|color" />
-    <attr name="global_background_local_fileType_archiveBkg" format="reference|color" />
-    <attr name="global_background_local_fileType_archiveElement" format="reference|color" />
-    <attr name="global_background_local_fileType_archiveIcon" format="reference|color" />
-    <attr name="global_background_local_fileType_background" format="reference|color" />
-    <attr name="global_background_local_fileType_dataBadge" format="reference|color" />
-    <attr name="global_background_local_fileType_dataBkg" format="reference|color" />
-    <attr name="global_background_local_fileType_dataElement" format="reference|color" />
-    <attr name="global_background_local_fileType_dataIcon" format="reference|color" />
-    <attr name="global_background_local_fileType_imageBadge" format="reference|color" />
-    <attr name="global_background_local_fileType_imageBkg" format="reference|color" />
-    <attr name="global_background_local_fileType_imageElement" format="reference|color" />
-    <attr name="global_background_local_fileType_imageIcon" format="reference|color" />
-    <attr name="global_background_local_fileType_musicBadge" format="reference|color" />
-    <attr name="global_background_local_fileType_musicBkg" format="reference|color" />
-    <attr name="global_background_local_fileType_musicElement" format="reference|color" />
-    <attr name="global_background_local_fileType_musicIcon" format="reference|color" />
-    <attr name="global_background_local_fileType_presentationBadge" format="reference|color" />
-    <attr name="global_background_local_fileType_presentationBkg" format="reference|color" />
-    <attr name="global_background_local_fileType_presentationElement" format="reference|color" />
-    <attr name="global_background_local_fileType_presentationIcon" format="reference|color" />
-    <attr name="global_background_local_fileType_programBadge" format="reference|color" />
-    <attr name="global_background_local_fileType_programBkg" format="reference|color" />
-    <attr name="global_background_local_fileType_programElement" format="reference|color" />
-    <attr name="global_background_local_fileType_programIcon" format="reference|color" />
-    <attr name="global_background_local_fileType_textBadge" format="reference|color" />
-    <attr name="global_background_local_fileType_textBkg" format="reference|color" />
-    <attr name="global_background_local_fileType_textElement" format="reference|color" />
-    <attr name="global_background_local_fileType_textIcon" format="reference|color" />
-    <attr name="global_background_local_fileType_unknownBadge" format="reference|color" />
-    <attr name="global_background_local_fileType_unknownBkg" format="reference|color" />
-    <attr name="global_background_local_fileType_unknownElement" format="reference|color" />
-    <attr name="global_background_local_fileType_unknownIcon" format="reference|color" />
-    <attr name="global_background_local_fileType_videoBadge" format="reference|color" />
-    <attr name="global_background_local_fileType_videoBkg" format="reference|color" />
-    <attr name="global_background_local_fileType_videoElement" format="reference|color" />
-    <attr name="global_background_local_fileType_videoIcon" format="reference|color" />
-    <attr name="global_background_local_tabBar" format="reference" />
-    <attr name="global_background_local_tabBar_primary" format="reference|color" />
-    <attr name="global_background_local_topBar" format="reference" />
-    <attr name="global_background_local_topBar_primary" format="reference|color" />
-    <attr name="global_background_local_topBar_secondary" format="reference|color" />
-    <attr name="global_background_neutralFloating" format="reference|color" />
-    <attr name="global_background_overlay" format="reference|color" />
-    <attr name="global_background_overlaySecondary" format="reference|color" />
-    <attr name="global_background_overlayStatic" format="reference|color" />
-    <attr name="global_background_surfaceCard" format="reference|color" />
-    <attr name="global_background_surfaceCardSecondary" format="reference|color" />
-    <attr name="global_background_surfaceFloating" format="reference|color" />
-    <attr name="global_background_surfaceGround" format="reference|color" />
-    <attr name="global_background_surfacePrimary" format="reference|color" />
-    <attr name="global_background_surfaceSecondary" format="reference|color" />
-    <attr name="global_background_surfaceTertiary" format="reference|color" />
-    <attr name="global_background_transparent" format="reference|color" />
-    <attr name="global_gradients" format="reference" />
-    <attr name="global_gradients_bannerDK" format="reference" />
-    <attr name="global_gradients_bannerDK_background" format="reference" />
-    <attr name="global_gradients_bannerDK_background_fantasyGradient" format="reference" />
-    <attr name="global_gradients_bannerDK_background_fantasyGradient_step1" format="reference|color" />
-    <attr name="global_gradients_bannerDK_background_fantasyGradient_step2" format="reference|color" />
-    <attr name="global_gradients_bannerDK_background_iconContainerGradient" format="reference" />
-    <attr name="global_gradients_bannerDK_background_iconContainerGradient_step1" format="reference|color" />
-    <attr name="global_gradients_bannerDK_background_iconContainerGradient_step2" format="reference|color" />
-    <attr name="global_gradients_bannerDK_background_paleBlueGradient" format="reference" />
-    <attr name="global_gradients_bannerDK_background_paleBlueGradient_step1" format="reference|color" />
-    <attr name="global_gradients_bannerDK_background_paleBlueGradient_step2" format="reference|color" />
-    <attr name="global_gradients_bannerDK_background_vibrantGradient" format="reference" />
-    <attr name="global_gradients_bannerDK_background_vibrantGradient_step1" format="reference|color" />
-    <attr name="global_gradients_bannerDK_background_vibrantGradient_step2" format="reference|color" />
-    <attr name="global_gradients_bannerDK_stroke" format="reference" />
-    <attr name="global_gradients_bannerDK_stroke_iconContainerGradient" format="reference" />
-    <attr name="global_gradients_bannerDK_stroke_iconContainerGradient_step1" format="reference|color" />
-    <attr name="global_gradients_bannerDK_stroke_iconContainerGradient_step2" format="reference|color" />
-    <attr name="global_gradients_bannerDK_stroke_iconContainerGradient_step3" format="reference|color" />
-    <attr name="global_gradients_buttonTextPromo" format="reference" />
-    <attr name="global_gradients_buttonTextPromo_defaultGradient" format="reference" />
-    <attr name="global_gradients_buttonTextPromo_defaultGradient_step1" format="reference|color" />
-    <attr name="global_gradients_buttonTextPromo_defaultGradient_step2" format="reference|color" />
-    <attr name="global_gradients_buttonTextPromo_defaultGradient_step3" format="reference|color" />
-    <attr name="global_gradients_buttonTextPromo_disabledGradient" format="reference" />
-    <attr name="global_gradients_buttonTextPromo_disabledGradient_step1" format="reference|color" />
-    <attr name="global_gradients_buttonTextPromo_disabledGradient_step2" format="reference|color" />
-    <attr name="global_gradients_buttonTextPromo_disabledGradient_step3" format="reference|color" />
-    <attr name="global_gradients_buttonTextPromo_pressedGradient" format="reference" />
-    <attr name="global_gradients_buttonTextPromo_pressedGradient_step1" format="reference|color" />
-    <attr name="global_gradients_buttonTextPromo_pressedGradient_step2" format="reference|color" />
-    <attr name="global_gradients_buttonTextPromo_pressedGradient_step3" format="reference|color" />
-    <attr name="global_gradients_complex" format="reference" />
-    <attr name="global_gradients_complex_overlayFloatingGradient" format="reference" />
-    <attr name="global_gradients_complex_overlayFloatingGradient_step1" format="reference|color" />
-    <attr name="global_gradients_complex_overlayFloatingGradient_step2" format="reference|color" />
-    <attr name="global_gradients_complex_overlayFloatingGradient_step3" format="reference|color" />
-    <attr name="global_gradients_emptyBlockIconWrapper" format="reference" />
-    <attr name="global_gradients_emptyBlockIconWrapper_shapeGradient" format="reference" />
-    <attr name="global_gradients_emptyBlockIconWrapper_shapeGradient_step1" format="reference|color" />
-    <attr name="global_gradients_emptyBlockIconWrapper_shapeGradient_step2" format="reference|color" />
-    <attr name="global_gradients_emptyBlockIconWrapper_strokeGradient" format="reference" />
-    <attr name="global_gradients_emptyBlockIconWrapper_strokeGradient_step1" format="reference|color" />
-    <attr name="global_gradients_emptyBlockIconWrapper_strokeGradient_step2" format="reference|color" />
-    <attr name="global_gradients_emptyBlockIconWrapper_strokeGradient_step3" format="reference|color" />
-    <attr name="global_gradients_loadingIcon" format="reference" />
-    <attr name="global_gradients_loadingIcon_contrast" format="reference" />
-    <attr name="global_gradients_loadingIcon_contrastStatic" format="reference" />
-    <attr name="global_gradients_loadingIcon_contrastStatic_filled" format="reference|color" />
-    <attr name="global_gradients_loadingIcon_contrastStatic_transparent" format="reference|color" />
-    <attr name="global_gradients_loadingIcon_contrast_filled" format="reference|color" />
-    <attr name="global_gradients_loadingIcon_contrast_transparent" format="reference|color" />
-    <attr name="global_gradients_loadingIcon_negative" format="reference" />
-    <attr name="global_gradients_loadingIcon_negative_filled" format="reference|color" />
-    <attr name="global_gradients_loadingIcon_negative_transparent" format="reference|color" />
-    <attr name="global_gradients_loadingIcon_neutralThemed" format="reference" />
-    <attr name="global_gradients_loadingIcon_neutralThemed_filled" format="reference|color" />
-    <attr name="global_gradients_loadingIcon_neutralThemed_transparent" format="reference|color" />
-    <attr name="global_gradients_loadingIcon_primary" format="reference" />
-    <attr name="global_gradients_loadingIcon_primaryStatic" format="reference" />
-    <attr name="global_gradients_loadingIcon_primaryStatic_filled" format="reference|color" />
-    <attr name="global_gradients_loadingIcon_primaryStatic_transparent" format="reference|color" />
-    <attr name="global_gradients_loadingIcon_primary_filled" format="reference|color" />
-    <attr name="global_gradients_loadingIcon_primary_transparent" format="reference|color" />
-    <attr name="global_gradients_loadingIcon_themed" format="reference" />
-    <attr name="global_gradients_loadingIcon_themed_filled" format="reference|color" />
-    <attr name="global_gradients_loadingIcon_themed_transparent" format="reference|color" />
-    <attr name="global_gradients_local" format="reference" />
-    <attr name="global_gradients_local_promoTextGradient" format="reference" />
-    <attr name="global_gradients_local_promoTextGradient_step1" format="reference|color" />
-    <attr name="global_gradients_local_promoTextGradient_step2" format="reference|color" />
-    <attr name="global_gradients_overlay" format="reference" />
-    <attr name="global_gradients_overlay_surfaceGroundGradient" format="reference" />
-    <attr name="global_gradients_overlay_surfaceGroundGradient_step1" format="reference|color" />
-    <attr name="global_gradients_overlay_surfaceGroundGradient_step2" format="reference|color" />
-    <attr name="global_gradients_overlay_surfacePrimaryGradient" format="reference" />
-    <attr name="global_gradients_overlay_surfacePrimaryGradient_step1" format="reference|color" />
-    <attr name="global_gradients_overlay_surfacePrimaryGradient_step2" format="reference|color" />
-    <attr name="global_gradients_skeletonGradient" format="reference" />
-    <attr name="global_gradients_skeletonGradient_cell" format="reference" />
-    <attr name="global_gradients_skeletonGradient_cellGradient" format="reference" />
-    <attr name="global_gradients_skeletonGradient_cellGradient_step1" format="reference|color" />
-    <attr name="global_gradients_skeletonGradient_cellGradient_step2" format="reference|color" />
-    <attr name="global_gradients_skeletonGradient_cellGradient_step3" format="reference|color" />
-    <attr name="global_gradients_skeletonGradient_cell_staticBackground" format="reference|color" />
-    <attr name="global_gradients_skeletonGradient_grid" format="reference" />
-    <attr name="global_gradients_skeletonGradient_gridGradient" format="reference" />
-    <attr name="global_gradients_skeletonGradient_gridGradient_step1" format="reference|color" />
-    <attr name="global_gradients_skeletonGradient_gridGradient_step2" format="reference|color" />
-    <attr name="global_gradients_skeletonGradient_gridGradient_step3" format="reference|color" />
-    <attr name="global_gradients_skeletonGradient_grid_staticBackground" format="reference|color" />
-    <attr name="global_icon" format="reference" />
-    <attr name="global_icon_contrast" format="reference|color" />
-    <attr name="global_icon_contrastStatic" format="reference|color" />
-    <attr name="global_icon_local" format="reference" />
-    <attr name="global_icon_local_category" format="reference" />
-    <attr name="global_icon_local_category_earthStep1" format="reference|color" />
-    <attr name="global_icon_local_category_earthStep2" format="reference|color" />
-    <attr name="global_icon_local_category_earthStrokeStep1" format="reference|color" />
-    <attr name="global_icon_local_category_earthStrokeStep2" format="reference|color" />
-    <attr name="global_icon_local_category_mercuryStep1" format="reference|color" />
-    <attr name="global_icon_local_category_mercuryStep2" format="reference|color" />
-    <attr name="global_icon_local_category_mercuryStrokeStep1" format="reference|color" />
-    <attr name="global_icon_local_category_mercuryStrokeStep2" format="reference|color" />
-    <attr name="global_icon_local_category_venusStep1" format="reference|color" />
-    <attr name="global_icon_local_category_venusStep2" format="reference|color" />
-    <attr name="global_icon_local_category_venusStrokeStep1" format="reference|color" />
-    <attr name="global_icon_local_category_venusStrokeStep2" format="reference|color" />
-    <attr name="global_icon_local_promo" format="reference" />
-    <attr name="global_icon_local_promo_accent" format="reference|color" />
-    <attr name="global_icon_local_tabbar" format="reference" />
-    <attr name="global_icon_local_tabbar_active" format="reference|color" />
-    <attr name="global_icon_local_tabbar_inactive" format="reference|color" />
-    <attr name="global_icon_local_verificationSecondary" format="reference|color" />
-    <attr name="global_icon_local_verificationSubhead" format="reference|color" />
-    <attr name="global_icon_negative" format="reference|color" />
-    <attr name="global_icon_neutralThemed" format="reference|color" />
-    <attr name="global_icon_positive" format="reference|color" />
-    <attr name="global_icon_primary" format="reference|color" />
-    <attr name="global_icon_primaryStatic" format="reference|color" />
-    <attr name="global_icon_quaternary" format="reference|color" />
-    <attr name="global_icon_secondary" format="reference|color" />
-    <attr name="global_icon_tertiary" format="reference|color" />
-    <attr name="global_icon_themed" format="reference|color" />
-    <attr name="global_states" format="reference" />
-    <attr name="global_states_background" format="reference" />
-    <attr name="global_states_background_active" format="reference" />
-    <attr name="global_states_background_active_card" format="reference|color" />
-    <attr name="global_states_background_active_contrastStatic" format="reference|color" />
-    <attr name="global_states_background_active_negative" format="reference|color" />
-    <attr name="global_states_background_active_neutral" format="reference|color" />
-    <attr name="global_states_background_active_neutralFade" format="reference|color" />
-    <attr name="global_states_background_active_neutralThemed" format="reference|color" />
-    <attr name="global_states_background_active_overlayStatic" format="reference|color" />
-    <attr name="global_states_background_active_themed" format="reference|color" />
-    <attr name="global_states_background_active_transparent" format="reference|color" />
-    <attr name="global_states_background_active_transparentSecondaryStatic" format="reference|color" />
-    <attr name="global_states_background_disabled" format="reference" />
-    <attr name="global_states_background_disabled_card" format="reference|color" />
-    <attr name="global_states_background_disabled_contrast" format="reference|color" />
-    <attr name="global_states_background_disabled_contrastStatic" format="reference|color" />
-    <attr name="global_states_background_disabled_negative" format="reference|color" />
-    <attr name="global_states_background_disabled_neutral" format="reference|color" />
-    <attr name="global_states_background_disabled_neutralFade" format="reference|color" />
-    <attr name="global_states_background_disabled_neutralStatic" format="reference|color" />
-    <attr name="global_states_background_disabled_neutralThemed" format="reference|color" />
-    <attr name="global_states_background_disabled_overlayStatic" format="reference|color" />
-    <attr name="global_states_background_disabled_positive" format="reference|color" />
-    <attr name="global_states_background_disabled_secondary" format="reference|color" />
-    <attr name="global_states_background_disabled_themed" format="reference|color" />
-    <attr name="global_states_icon" format="reference" />
-    <attr name="global_states_icon_disabled" format="reference" />
-    <attr name="global_states_icon_disabled_contrast" format="reference|color" />
-    <attr name="global_states_icon_disabled_contrastStatic" format="reference|color" />
-    <attr name="global_states_icon_disabled_negative" format="reference|color" />
-    <attr name="global_states_icon_disabled_neutralThemed" format="reference|color" />
-    <attr name="global_states_icon_disabled_positive" format="reference|color" />
-    <attr name="global_states_icon_disabled_primary" format="reference|color" />
-    <attr name="global_states_icon_disabled_primaryStatic" format="reference|color" />
-    <attr name="global_states_icon_disabled_themed" format="reference|color" />
-    <attr name="global_states_text" format="reference" />
-    <attr name="global_states_text_active" format="reference" />
-    <attr name="global_states_text_active_contrastStatic" format="reference|color" />
-    <attr name="global_states_text_active_negative" format="reference|color" />
-    <attr name="global_states_text_active_neutralThemed" format="reference|color" />
-    <attr name="global_states_text_active_primary" format="reference|color" />
-    <attr name="global_states_text_active_themed" format="reference|color" />
-    <attr name="global_states_text_disabled" format="reference" />
-    <attr name="global_states_text_disabled_contrast" format="reference|color" />
-    <attr name="global_states_text_disabled_contrastStatic" format="reference|color" />
-    <attr name="global_states_text_disabled_negative" format="reference|color" />
-    <attr name="global_states_text_disabled_neutralThemed" format="reference|color" />
-    <attr name="global_states_text_disabled_primary" format="reference|color" />
-    <attr name="global_states_text_disabled_primaryStatic" format="reference|color" />
-    <attr name="global_states_text_disabled_themed" format="reference|color" />
-    <attr name="global_stroke" format="reference" />
-    <attr name="global_stroke_contrastSecondaryStatic" format="reference|color" />
-    <attr name="global_stroke_contrastStatic" format="reference|color" />
-    <attr name="global_stroke_local" format="reference" />
-    <attr name="global_stroke_local_carver" format="reference" />
-    <attr name="global_stroke_local_carver_tabBar" format="reference|color" />
-    <attr name="global_stroke_local_tabBar" format="reference" />
-    <attr name="global_stroke_local_tabBar_primary" format="reference|color" />
-    <attr name="global_stroke_local_topBar" format="reference" />
-    <attr name="global_stroke_local_topBar_primary" format="reference|color" />
-    <attr name="global_stroke_negative" format="reference|color" />
-    <attr name="global_stroke_positive" format="reference|color" />
-    <attr name="global_stroke_secondary" format="reference|color" />
-    <attr name="global_stroke_separator" format="reference" />
-    <attr name="global_stroke_separator_contrast" format="reference|color" />
-    <attr name="global_stroke_separator_primary" format="reference|color" />
-    <attr name="global_stroke_separator_secondary" format="reference|color" />
-    <attr name="global_stroke_tertiary" format="reference|color" />
-    <attr name="global_stroke_themed" format="reference|color" />
-    <attr name="global_stroke_transparent" format="reference|color" />
-    <attr name="global_text" format="reference" />
-    <attr name="global_text_contrast" format="reference|color" />
-    <attr name="global_text_contrastStatic" format="reference|color" />
-    <attr name="global_text_fileType" format="reference|color" />
-    <attr name="global_text_negative" format="reference|color" />
-    <attr name="global_text_neutralThemed" format="reference|color" />
-    <attr name="global_text_positive" format="reference|color" />
-    <attr name="global_text_primary" format="reference|color" />
-    <attr name="global_text_primaryStatic" format="reference|color" />
-    <attr name="global_text_secondary" format="reference|color" />
-    <attr name="global_text_subhead" format="reference|color" />
-    <attr name="global_text_tertiary" format="reference|color" />
-    <attr name="global_text_themed" format="reference|color" />
-    <attr name="global_vfx" format="reference" />
-    <attr name="global_vfx_buttonIconOverlayPlain" format="reference" />
-    <attr name="global_vfx_buttonIconOverlayPlain_elevation1" format="reference" />
-    <attr name="global_vfx_buttonIconOverlayPlain_elevation1_color" format="reference|color" />
-    <attr name="global_vfx_buttonIconOverlayPlain_elevation2" format="reference" />
-    <attr name="global_vfx_buttonIconOverlayPlain_elevation2_color" format="reference|color" />
-    <attr name="global_vfx_emptyBlock" format="reference" />
-    <attr name="global_vfx_emptyBlock_halo" format="reference" />
-    <attr name="global_vfx_emptyBlock_halo_bubble1" format="reference|color" />
-    <attr name="global_vfx_emptyBlock_halo_bubble2" format="reference|color" />
-    <attr name="global_vfx_emptyBlock_halo_bubble3" format="reference|color" />
-    <attr name="global_vfx_emptyBlock_halo_bubble4" format="reference|color" />
     <attr name="goIcon" format="reference" />
     <attr name="guidelineUseRtl" format="boolean" />
     <attr name="haloColor" format="color" />
     <attr name="haloRadius" format="dimension" />
+    <attr name="halo_call_offline_bubble_1" format="reference|color" />
+    <attr name="halo_call_offline_bubble_2" format="reference|color" />
+    <attr name="halo_call_offline_bubble_3" format="reference|color" />
+    <attr name="halo_call_offline_bubble_4" format="reference|color" />
+    <attr name="halo_call_offline_bubble_big" format="reference|color" />
+    <attr name="halo_call_offline_bubble_small_1" format="reference|color" />
+    <attr name="halo_call_offline_bubble_small_2" format="reference|color" />
+    <attr name="halo_call_online_bubble_1" format="reference|color" />
+    <attr name="halo_call_online_bubble_2" format="reference|color" />
+    <attr name="halo_call_online_bubble_3" format="reference|color" />
+    <attr name="halo_call_online_bubble_4" format="reference|color" />
+    <attr name="halo_call_online_bubble_big" format="reference|color" />
+    <attr name="halo_call_online_bubble_small_1" format="reference|color" />
+    <attr name="halo_call_online_bubble_small_2" format="reference|color" />
+    <attr name="halo_call_pending_bubble_1" format="reference|color" />
+    <attr name="halo_call_pending_bubble_2" format="reference|color" />
+    <attr name="halo_call_pending_bubble_3" format="reference|color" />
+    <attr name="halo_call_pending_bubble_4" format="reference|color" />
+    <attr name="halo_call_pending_bubble_big" format="reference|color" />
+    <attr name="halo_call_pending_bubble_small_1" format="reference|color" />
+    <attr name="halo_call_pending_bubble_small_2" format="reference|color" />
     <attr name="headerLayout" format="reference" />
     <attr name="height" format="dimension" />
     <attr name="helperText" format="string" />
@@ -1797,6 +1425,17 @@
         <enum name="screen" value="15" />
         <enum name="add" value="16" />
     </attr>
+    <attr name="icon_attention" format="reference|color" />
+    <attr name="icon_mute" format="reference|color" />
+    <attr name="icon_negative" format="reference|color" />
+    <attr name="icon_positive" format="reference|color" />
+    <attr name="icon_primary" format="reference|color" />
+    <attr name="icon_primary_inverse" format="reference|color" />
+    <attr name="icon_primary_inverse_static" format="reference|color" />
+    <attr name="icon_primary_static" format="reference|color" />
+    <attr name="icon_secondary" format="reference|color" />
+    <attr name="icon_tertiary" format="reference|color" />
+    <attr name="icon_themed" format="reference|color" />
     <attr name="iconifiedByDefault" format="boolean" />
     <attr name="ifTagNotSet" format="reference" />
     <attr name="ifTagSet" format="reference" />
@@ -1836,6 +1475,7 @@
     <attr name="indicatorTrackGapSize" format="dimension" />
     <attr name="initialActivityCount" format="string" />
     <attr name="initialExpandedChildrenCount" format="integer" />
+    <attr name="input_background" format="reference|color" />
     <attr name="insetForeground" format="reference|color" />
     <attr name="isLightTheme" format="boolean" />
     <attr name="isMaterial3DynamicColorApplied" format="boolean" />
@@ -2561,6 +2201,22 @@
     </attr>
     <attr name="progressBarPadding" format="dimension" />
     <attr name="progressBarStyle" format="reference" />
+    <attr name="promo_banner_dk_background_fantasy_step" format="reference|color" />
+    <attr name="promo_banner_dk_background_icon_container_step" format="reference|color" />
+    <attr name="promo_banner_dk_background_pale_blue_step" format="reference|color" />
+    <attr name="promo_banner_dk_background_vibrant_step" format="reference|color" />
+    <attr name="promo_banner_dk_stroke_icon_container_step" format="reference|color" />
+    <attr name="promo_button_shadow_1_blur" format="reference|integer" />
+    <attr name="promo_button_shadow_1_color" format="reference|color" />
+    <attr name="promo_button_shadow_1_offset_x" format="reference|integer" />
+    <attr name="promo_button_shadow_1_offset_y" format="reference|integer" />
+    <attr name="promo_button_shadow_2_blur" format="reference|integer" />
+    <attr name="promo_button_shadow_2_color" format="reference|color" />
+    <attr name="promo_button_shadow_2_offset_x" format="reference|integer" />
+    <attr name="promo_button_shadow_2_offset_y" format="reference|integer" />
+    <attr name="promo_button_step" format="reference|color" />
+    <attr name="promo_icon" format="reference|color" />
+    <attr name="promo_text_step" format="reference|color" />
     <attr name="quantizeMotionInterpolator" format="reference|string">
         <enum name="easeInOut" value="0" />
         <enum name="easeIn" value="1" />
@@ -2672,6 +2328,65 @@
     <attr name="selectorSize" format="dimension" />
     <attr name="sensitivity" format="float" />
     <attr name="setsTag" format="reference" />
+    <attr name="sferum_card" format="reference|color" />
+    <attr name="sferum_earth_step" format="reference|color" />
+    <attr name="sferum_earth_stroke_step" format="reference|color" />
+    <attr name="sferum_mercury_step" format="reference|color" />
+    <attr name="sferum_mercury_stroke_step" format="reference|color" />
+    <attr name="sferum_venus_step" format="reference|color" />
+    <attr name="sferum_venus_stroke_step" format="reference|color" />
+    <attr name="shadow_android_tab_bar_default_blur" format="reference|integer" />
+    <attr name="shadow_android_tab_bar_default_color" format="reference|color" />
+    <attr name="shadow_android_tab_bar_default_offset_x" format="reference|integer" />
+    <attr name="shadow_android_tab_bar_default_offset_y" format="reference|integer" />
+    <attr name="shadow_android_tab_bar_scroll_blur" format="reference|integer" />
+    <attr name="shadow_android_tab_bar_scroll_color" format="reference|color" />
+    <attr name="shadow_android_tab_bar_scroll_offset_x" format="reference|integer" />
+    <attr name="shadow_android_tab_bar_scroll_offset_y" format="reference|integer" />
+    <attr name="shadow_android_top_bar_default_blur" format="reference|integer" />
+    <attr name="shadow_android_top_bar_default_color" format="reference|color" />
+    <attr name="shadow_android_top_bar_default_offset_x" format="reference|integer" />
+    <attr name="shadow_android_top_bar_default_offset_y" format="reference|integer" />
+    <attr name="shadow_android_top_bar_scroll_blur" format="reference|integer" />
+    <attr name="shadow_android_top_bar_scroll_color" format="reference|color" />
+    <attr name="shadow_android_top_bar_scroll_offset_x" format="reference|integer" />
+    <attr name="shadow_android_top_bar_scroll_offset_y" format="reference|integer" />
+    <attr name="shadow_android_write_bar_blur" format="reference|integer" />
+    <attr name="shadow_android_write_bar_color" format="reference|color" />
+    <attr name="shadow_android_write_bar_offset_x" format="reference|integer" />
+    <attr name="shadow_android_write_bar_offset_y" format="reference|integer" />
+    <attr name="shadow_big_card_blur" format="reference|integer" />
+    <attr name="shadow_big_card_color" format="reference|color" />
+    <attr name="shadow_big_card_offset_x" format="reference|integer" />
+    <attr name="shadow_big_card_offset_y" format="reference|integer" />
+    <attr name="shadow_big_card_spread" format="reference|integer" />
+    <attr name="shadow_button_icon_overlay_plain_elevation_1_blur" format="reference|integer" />
+    <attr name="shadow_button_icon_overlay_plain_elevation_1_color" format="reference|color" />
+    <attr name="shadow_button_icon_overlay_plain_elevation_1_offset_x" format="reference|integer" />
+    <attr name="shadow_button_icon_overlay_plain_elevation_1_offset_y" format="reference|integer" />
+    <attr name="shadow_button_icon_overlay_plain_elevation_2_blur" format="reference|integer" />
+    <attr name="shadow_button_icon_overlay_plain_elevation_2_color" format="reference|color" />
+    <attr name="shadow_button_icon_overlay_plain_elevation_2_offset_x" format="reference|integer" />
+    <attr name="shadow_button_icon_overlay_plain_elevation_2_offset_y" format="reference|integer" />
+    <attr name="shadow_elevation_1_primary" format="reference|color" />
+    <attr name="shadow_elevation_1_secondary" format="reference|color" />
+    <attr name="shadow_elevation_2_primary" format="reference|color" />
+    <attr name="shadow_elevation_2_secondary" format="reference|color" />
+    <attr name="shadow_elevation_3_primary" format="reference|color" />
+    <attr name="shadow_elevation_3_secondary" format="reference|color" />
+    <attr name="shadow_elevation_4_primary" format="reference|color" />
+    <attr name="shadow_elevation_4_secondary" format="reference|color" />
+    <attr name="shadow_focused_default" format="reference|color" />
+    <attr name="shadow_focused_negative" format="reference|color" />
+    <attr name="shadow_modal_blur" format="reference|integer" />
+    <attr name="shadow_modal_color" format="reference|color" />
+    <attr name="shadow_modal_offset_x" format="reference|integer" />
+    <attr name="shadow_modal_offset_y" format="reference|integer" />
+    <attr name="shadow_modal_spread" format="reference|integer" />
+    <attr name="shadow_tabbar_blur" format="reference|integer" />
+    <attr name="shadow_tabbar_color" format="reference|color" />
+    <attr name="shadow_tabbar_offset_x" format="reference|integer" />
+    <attr name="shadow_tabbar_offset_y" format="reference|integer" />
     <attr name="shapeAppearance" format="reference" />
     <attr name="shapeAppearanceCornerExtraLarge" format="reference" />
     <attr name="shapeAppearanceCornerExtraSmall" format="reference" />
@@ -2758,6 +2473,20 @@
     <attr name="singleLineTitle" format="boolean" />
     <attr name="singleSelection" format="boolean" />
     <attr name="sizePercent" format="float" />
+    <attr name="skeleton_bubble_primary_static_background" format="reference|color" />
+    <attr name="skeleton_bubble_primary_step" format="reference|color" />
+    <attr name="skeleton_bubble_secondary_static_background" format="reference|color" />
+    <attr name="skeleton_bubble_secondary_step" format="reference|color" />
+    <attr name="skeleton_cell_static_background" format="reference|color" />
+    <attr name="skeleton_cell_step" format="reference|color" />
+    <attr name="skeleton_grid_static_background" format="reference|color" />
+    <attr name="skeleton_grid_step" format="reference|color" />
+    <attr name="skeleton_sticker_primary_base_static_background" format="reference|color" />
+    <attr name="skeleton_sticker_primary_base_step" format="reference|color" />
+    <attr name="skeleton_sticker_primary_tongue_step" format="reference|color" />
+    <attr name="skeleton_sticker_secondary_base_static_background" format="reference|color" />
+    <attr name="skeleton_sticker_secondary_base_step" format="reference|color" />
+    <attr name="skeleton_sticker_secondary_tongue_step" format="reference|color" />
     <attr name="sliderStyle" format="reference" />
     <attr name="snackbarButtonStyle" format="reference" />
     <attr name="snackbarStyle" format="reference" />
@@ -2887,11 +2616,122 @@
     <attr name="state_liftable" format="boolean" />
     <attr name="state_lifted" format="boolean" />
     <attr name="state_with_icon" format="boolean" />
+    <attr name="states_background_card_disabled" format="reference|color" />
+    <attr name="states_background_card_hover" format="reference|color" />
+    <attr name="states_background_card_pressed" format="reference|color" />
+    <attr name="states_background_card_selected" format="reference|color" />
+    <attr name="states_background_card_selected_hover" format="reference|color" />
+    <attr name="states_background_card_selected_pressed" format="reference|color" />
+    <attr name="states_background_highlighted" format="reference|color" />
+    <attr name="states_bubbles_system_button_themed_disabled" format="reference|color" />
+    <attr name="states_bubbles_system_button_themed_hover" format="reference|color" />
+    <attr name="states_bubbles_system_button_themed_pressed" format="reference|color" />
+    <attr name="states_button_bot_disabled" format="reference|color" />
+    <attr name="states_button_bot_pressed" format="reference|color" />
+    <attr name="states_button_ghost_disabled" format="reference|color" />
+    <attr name="states_button_ghost_hover" format="reference|color" />
+    <attr name="states_button_ghost_pressed" format="reference|color" />
+    <attr name="states_button_negative_disabled" format="reference|color" />
+    <attr name="states_button_negative_hover" format="reference|color" />
+    <attr name="states_button_negative_pressed" format="reference|color" />
+    <attr name="states_button_overlay_disabled" format="reference|color" />
+    <attr name="states_button_overlay_hover" format="reference|color" />
+    <attr name="states_button_overlay_pressed" format="reference|color" />
+    <attr name="states_button_positive_disabled" format="reference|color" />
+    <attr name="states_button_positive_hover" format="reference|color" />
+    <attr name="states_button_positive_pressed" format="reference|color" />
+    <attr name="states_button_primary_contrast_disabled" format="reference|color" />
+    <attr name="states_button_primary_contrast_hover" format="reference|color" />
+    <attr name="states_button_primary_contrast_pressed" format="reference|color" />
+    <attr name="states_button_primary_disabled" format="reference|color" />
+    <attr name="states_button_primary_hover" format="reference|color" />
+    <attr name="states_button_primary_pressed" format="reference|color" />
+    <attr name="states_button_secondary_contrast_disabled" format="reference|color" />
+    <attr name="states_button_secondary_contrast_hover" format="reference|color" />
+    <attr name="states_button_secondary_contrast_pressed" format="reference|color" />
+    <attr name="states_button_secondary_disabled" format="reference|color" />
+    <attr name="states_button_secondary_hover" format="reference|color" />
+    <attr name="states_button_secondary_pressed" format="reference|color" />
+    <attr name="states_chat_action_outside_hover" format="reference|color" />
+    <attr name="states_chat_action_outside_pressed" format="reference|color" />
+    <attr name="states_chips_select_off_hover" format="reference|color" />
+    <attr name="states_chips_select_off_pressed" format="reference|color" />
+    <attr name="states_chips_select_on_hover" format="reference|color" />
+    <attr name="states_chips_select_on_pressed" format="reference|color" />
+    <attr name="states_controls_active_disabled" format="reference|color" />
+    <attr name="states_controls_inactive_disabled" format="reference|color" />
+    <attr name="states_counter_attentrion_disabled" format="reference|color" />
+    <attr name="states_counter_contrast_disabled" format="reference|color" />
+    <attr name="states_counter_default_disabled" format="reference|color" />
+    <attr name="states_counter_themed_disabled" format="reference|color" />
+    <attr name="states_divider_primary_disabled" format="reference|color" />
+    <attr name="states_divider_primary_hover" format="reference|color" />
+    <attr name="states_divider_primary_pressed" format="reference|color" />
+    <attr name="states_float_scroll_bar_hover" format="reference|color" />
+    <attr name="states_float_scroll_bar_pressed" format="reference|color" />
+    <attr name="states_icon_negative_disabled" format="reference|color" />
+    <attr name="states_icon_negative_hover" format="reference|color" />
+    <attr name="states_icon_negative_pressed" format="reference|color" />
+    <attr name="states_icon_positive_disabled" format="reference|color" />
+    <attr name="states_icon_primary_disabled" format="reference|color" />
+    <attr name="states_icon_primary_hover" format="reference|color" />
+    <attr name="states_icon_primary_inverse_disabled" format="reference|color" />
+    <attr name="states_icon_primary_inverse_static_disabled" format="reference|color" />
+    <attr name="states_icon_primary_inverse_static_hover" format="reference|color" />
+    <attr name="states_icon_primary_inverse_static_pressed" format="reference|color" />
+    <attr name="states_icon_primary_pressed" format="reference|color" />
+    <attr name="states_icon_primary_static_disabled" format="reference|color" />
+    <attr name="states_icon_secondary_disabled" format="reference|color" />
+    <attr name="states_icon_secondary_hover" format="reference|color" />
+    <attr name="states_icon_secondary_pressed" format="reference|color" />
+    <attr name="states_icon_tertiary_disabled" format="reference|color" />
+    <attr name="states_icon_tertiary_hover" format="reference|color" />
+    <attr name="states_icon_tertiary_pressed" format="reference|color" />
+    <attr name="states_icon_themed_disabled" format="reference|color" />
+    <attr name="states_icon_themed_hover" format="reference|color" />
+    <attr name="states_icon_themed_pressed" format="reference|color" />
+    <attr name="states_promo_button_disabled_step" format="reference|color" />
+    <attr name="states_promo_button_hover_step" format="reference|color" />
+    <attr name="states_promo_button_pressed_step" format="reference|color" />
+    <attr name="states_sferum_card_hover" format="reference|color" />
+    <attr name="states_sferum_card_pressed" format="reference|color" />
+    <attr name="states_stroke_negative_fade_disabled" format="reference|color" />
+    <attr name="states_stroke_negative_fade_hover" format="reference|color" />
+    <attr name="states_stroke_negative_fade_pressed" format="reference|color" />
+    <attr name="states_text_negative_disabled" format="reference|color" />
+    <attr name="states_text_negative_hover" format="reference|color" />
+    <attr name="states_text_negative_pressed" format="reference|color" />
+    <attr name="states_text_primary_disabled" format="reference|color" />
+    <attr name="states_text_primary_hover" format="reference|color" />
+    <attr name="states_text_primary_inverse_disabled" format="reference|color" />
+    <attr name="states_text_primary_inverse_static_disabled" format="reference|color" />
+    <attr name="states_text_primary_inverse_static_hover" format="reference|color" />
+    <attr name="states_text_primary_inverse_static_pressed" format="reference|color" />
+    <attr name="states_text_primary_pressed" format="reference|color" />
+    <attr name="states_text_primary_static_disabled" format="reference|color" />
+    <attr name="states_text_secondary_disabled" format="reference|color" />
+    <attr name="states_text_secondary_hover" format="reference|color" />
+    <attr name="states_text_secondary_pressed" format="reference|color" />
+    <attr name="states_text_themed_disabled" format="reference|color" />
+    <attr name="states_text_themed_hover" format="reference|color" />
+    <attr name="states_text_themed_pressed" format="reference|color" />
     <attr name="statusBarBackground" format="reference|color" />
     <attr name="statusBarForeground" format="color" />
     <attr name="statusBarScrim" format="color" />
     <attr name="strokeColor" format="color" />
     <attr name="strokeWidth" format="dimension" />
+    <attr name="stroke_card_carver" format="reference|color" />
+    <attr name="stroke_glass" format="reference|color" />
+    <attr name="stroke_negative" format="reference|color" />
+    <attr name="stroke_negative_fade" format="reference|color" />
+    <attr name="stroke_positive" format="reference|color" />
+    <attr name="stroke_primary_carver" format="reference|color" />
+    <attr name="stroke_primary_inverse_static" format="reference|color" />
+    <attr name="stroke_secondary" format="reference|color" />
+    <attr name="stroke_secondary_inverse_static" format="reference|color" />
+    <attr name="stroke_tertiary" format="reference|color" />
+    <attr name="stroke_themed" format="reference|color" />
+    <attr name="stroke_transparent" format="reference|color" />
     <attr name="subMenuArrow" format="reference" />
     <attr name="subheaderColor" format="reference|color" />
     <attr name="subheaderInsetEnd" format="dimension" />
@@ -2917,6 +2757,10 @@
         <enum name="spherical_gl_surface_view" value="3" />
         <enum name="video_decoder_gl_surface_view" value="4" />
     </attr>
+    <attr name="swipe_actions_delete" format="reference|color" />
+    <attr name="swipe_actions_mute" format="reference|color" />
+    <attr name="swipe_actions_pin" format="reference|color" />
+    <attr name="swipe_actions_unread" format="reference|color" />
     <attr name="switchMinWidth" format="dimension" />
     <attr name="switchPadding" format="dimension" />
     <attr name="switchPreferenceCompatStyle" format="reference" />
@@ -2978,7 +2822,12 @@
     <attr name="tabTextAppearance" format="reference" />
     <attr name="tabTextColor" format="color" />
     <attr name="tabUnboundedRipple" format="boolean" />
+    <attr name="tabbar_active" format="reference|color" />
+    <attr name="tabbar_inactive" format="reference|color" />
     <attr name="targetId" format="reference" />
+    <attr name="technical_lottie_icon_tertiary" format="reference|color" />
+    <attr name="technical_theme_mode" format="reference|string" />
+    <attr name="technical_theme_name" format="reference|string" />
     <attr name="telltales_tailColor" format="color" />
     <attr name="telltales_tailScale" format="float" />
     <attr name="telltales_velocityMode">
@@ -3048,6 +2897,17 @@
     <attr name="textPanX" format="float" />
     <attr name="textPanY" format="float" />
     <attr name="textStartPadding" format="dimension" />
+    <attr name="text_attention" format="reference|color" />
+    <attr name="text_mute" format="reference|color" />
+    <attr name="text_negative" format="reference|color" />
+    <attr name="text_positive" format="reference|color" />
+    <attr name="text_primary" format="reference|color" />
+    <attr name="text_primary_inverse" format="reference|color" />
+    <attr name="text_primary_inverse_static" format="reference|color" />
+    <attr name="text_primary_static" format="reference|color" />
+    <attr name="text_secondary" format="reference|color" />
+    <attr name="text_tertiary" format="reference|color" />
+    <attr name="text_themed" format="reference|color" />
     <attr name="textureBlurFactor" format="integer" />
     <attr name="textureEffect">
         <enum name="none" value="0" />
@@ -3237,6 +3097,11 @@
     <attr name="use_artwork" format="boolean" />
     <attr name="use_controller" format="boolean" />
     <attr name="values" format="reference" />
+    <attr name="verification_primary" format="reference|color" />
+    <attr name="verification_primary_inverse_static" format="reference|color" />
+    <attr name="verification_secondary" format="reference|color" />
+    <attr name="verification_tertiary" format="reference|color" />
+    <attr name="verification_themed" format="reference|color" />
     <attr name="verticalOffset" format="dimension" />
     <attr name="verticalOffsetWithText" format="dimension" />
     <attr name="videoRewindEnable" format="boolean" />
@@ -3288,6 +3153,12 @@
     <attr name="windowSplashScreenAnimationDuration" format="integer" />
     <attr name="windowSplashScreenBackground" format="color" />
     <attr name="windowSplashScreenIconBackgroundColor" format="color" />
+    <attr name="writebar_divider" format="reference|color" />
+    <attr name="writebar_emoji_area" format="reference|color" />
+    <attr name="writebar_input_blur" format="reference|color" />
+    <attr name="writebar_input_flat" format="reference|color" />
+    <attr name="writebar_input_stroke" format="reference|color" />
+    <attr name="writebar_input_text" format="reference|color" />
     <attr name="yearSelectedStyle" format="reference" />
     <attr name="yearStyle" format="reference" />
     <attr name="yearTodayStyle" format="reference" />

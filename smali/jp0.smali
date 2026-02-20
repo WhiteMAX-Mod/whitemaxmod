@@ -1,156 +1,163 @@
 .class public final Ljp0;
-.super Lg90;
+.super Log7;
 .source "SourceFile"
 
 
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Ljp0;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
 # instance fields
-.field public final a:Ljava/lang/ref/WeakReference;
+.field public final b:[B
 
 
 # direct methods
-.method public constructor <init>(Landroidx/biometric/BiometricViewModel;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lr9;
 
-    new-instance v0, Ljava/lang/ref/WeakReference;
+    const/16 v1, 0x9
 
-    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+    invoke-direct {v0, v1}, Lr9;-><init>(I)V
 
-    iput-object v0, p0, Ljp0;->a:Ljava/lang/ref/WeakReference;
+    sput-object v0, Ljp0;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/os/Parcel;)V
+    .locals 2
+
+    .line 3
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v0
+
+    sget v1, Ltih;->a:I
+
+    invoke-direct {p0, v0}, Log7;-><init>(Ljava/lang/String;)V
+
+    .line 4
+    invoke-virtual {p1}, Landroid/os/Parcel;->createByteArray()[B
+
+    move-result-object p1
+
+    iput-object p1, p0, Ljp0;->b:[B
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;[B)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0, p1}, Log7;-><init>(Ljava/lang/String;)V
+
+    .line 2
+    iput-object p2, p0, Ljp0;->b:[B
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(ILjava/lang/CharSequence;)V
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget-object v0, p0, Ljp0;->a:Ljava/lang/ref/WeakReference;
+    const/4 v0, 0x1
 
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    if-ne p0, p1, :cond_0
 
-    move-result-object v1
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroidx/biometric/BiometricViewModel;
-
-    iget-boolean v1, v1, Landroidx/biometric/BiometricViewModel;->l:Z
-
-    if-nez v1, :cond_0
-
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroidx/biometric/BiometricViewModel;
-
-    iget-boolean v1, v1, Landroidx/biometric/BiometricViewModel;->k:Z
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroidx/biometric/BiometricViewModel;
-
-    new-instance v1, Lto0;
-
-    invoke-direct {v1, p1, p2}, Lto0;-><init>(ILjava/lang/CharSequence;)V
-
-    invoke-virtual {v0, v1}, Landroidx/biometric/BiometricViewModel;->d(Lto0;)V
+    return v0
 
     :cond_0
-    return-void
-.end method
+    const/4 v1, 0x0
 
-.method public final b(Lfp0;)V
-    .locals 5
+    if-eqz p1, :cond_2
 
-    iget-object v0, p0, Ljp0;->a:Ljava/lang/ref/WeakReference;
+    const-class v2, Ljp0;
 
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_3
-
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroidx/biometric/BiometricViewModel;
-
-    iget-boolean v1, v1, Landroidx/biometric/BiometricViewModel;->k:Z
-
-    if-eqz v1, :cond_3
-
-    iget v1, p1, Lfp0;->b:I
-
-    const/4 v2, -0x1
-
-    if-ne v1, v2, :cond_1
-
-    new-instance v1, Lfp0;
-
-    iget-object p1, p1, Lfp0;->a:Lgp0;
-
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v3
 
-    check-cast v3, Landroidx/biometric/BiometricViewModel;
+    if-eq v2, v3, :cond_1
 
-    invoke-virtual {v3}, Landroidx/biometric/BiometricViewModel;->c()I
-
-    move-result v3
-
-    and-int/lit16 v4, v3, 0x7fff
-
-    if-eqz v4, :cond_0
-
-    invoke-static {v3}, Lm7j;->e(I)Z
-
-    move-result v3
-
-    if-nez v3, :cond_0
-
-    const/4 v2, 0x2
-
-    :cond_0
-    invoke-direct {v1, p1, v2}, Lfp0;-><init>(Lgp0;I)V
-
-    move-object p1, v1
+    goto :goto_0
 
     :cond_1
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    check-cast p1, Ljp0;
 
-    move-result-object v0
+    iget-object v2, p0, Log7;->a:Ljava/lang/String;
 
-    check-cast v0, Landroidx/biometric/BiometricViewModel;
+    iget-object v3, p1, Log7;->a:Ljava/lang/String;
 
-    iget-object v1, v0, Landroidx/biometric/BiometricViewModel;->o:Lrea;
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    if-nez v1, :cond_2
+    move-result v2
 
-    new-instance v1, Lrea;
+    if-eqz v2, :cond_2
 
-    invoke-direct {v1}, Ldf8;-><init>()V
+    iget-object v2, p0, Ljp0;->b:[B
 
-    iput-object v1, v0, Landroidx/biometric/BiometricViewModel;->o:Lrea;
+    iget-object p1, p1, Ljp0;->b:[B
+
+    invoke-static {v2, p1}, Ljava/util/Arrays;->equals([B[B)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    return v0
 
     :cond_2
-    iget-object v0, v0, Landroidx/biometric/BiometricViewModel;->o:Lrea;
+    :goto_0
+    return v1
+.end method
 
-    invoke-static {v0, p1}, Landroidx/biometric/BiometricViewModel;->h(Lrea;Ljava/lang/Object;)V
+.method public final hashCode()I
+    .locals 3
 
-    :cond_3
+    iget-object v0, p0, Log7;->a:Ljava/lang/String;
+
+    const/16 v1, 0x1f
+
+    const/16 v2, 0x20f
+
+    invoke-static {v2, v1, v0}, Lj64;->d(IILjava/lang/String;)I
+
+    move-result v0
+
+    iget-object v1, p0, Ljp0;->b:[B
+
+    invoke-static {v1}, Ljava/util/Arrays;->hashCode([B)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
+
+    iget-object p2, p0, Log7;->a:Ljava/lang/String;
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    iget-object p2, p0, Ljp0;->b:[B
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByteArray([B)V
+
     return-void
 .end method

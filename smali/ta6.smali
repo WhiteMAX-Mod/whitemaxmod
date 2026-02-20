@@ -1,86 +1,35 @@
 .class public final Lta6;
-.super Lkef;
+.super Lda4;
 .source "SourceFile"
-
-# interfaces
-.implements Lwr6;
 
 
 # instance fields
-.field public final a:Lpa6;
+.field public X:I
 
-.field public final b:Ltr6;
+.field public d:Lyyd;
 
-.field public final c:Lnn0;
-
-
-# direct methods
-.method public constructor <init>(Lpa6;Ltr6;Lnn0;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lta6;->a:Lpa6;
-
-    iput-object p2, p0, Lta6;->b:Ltr6;
-
-    iput-object p3, p0, Lta6;->c:Lnn0;
-
-    return-void
-.end method
+.field public synthetic o:Ljava/lang/Object;
 
 
 # virtual methods
-.method public final d()Lpa6;
-    .locals 5
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    new-instance v0, Lra6;
+    iput-object p1, p0, Lta6;->o:Ljava/lang/Object;
 
-    iget-object v1, p0, Lta6;->c:Lnn0;
+    iget p1, p0, Lta6;->X:I
 
-    const/4 v2, 0x0
+    const/high16 v0, -0x80000000
 
-    iget-object v3, p0, Lta6;->a:Lpa6;
+    or-int/2addr p1, v0
 
-    iget-object v4, p0, Lta6;->b:Ltr6;
+    iput p1, p0, Lta6;->X:I
 
-    invoke-direct {v0, v3, v4, v1, v2}, Lra6;-><init>(Lpa6;Ltr6;Ljava/lang/Object;I)V
+    const/4 p1, 0x0
 
-    return-object v0
-.end method
+    invoke-static {p1, p1, p0}, Lzka;->e(Lb96;Ld96;Lda4;)Ljava/io/Serializable;
 
-.method public final m(Ldff;)V
-    .locals 3
+    move-result-object p1
 
-    :try_start_0
-    iget-object v0, p0, Lta6;->b:Ltr6;
-
-    iget-object v0, v0, Ltr6;->a:Ljava/lang/Object;
-
-    const-string v1, "The initialSupplier returned a null value"
-
-    invoke-static {v0, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    new-instance v1, Lsa6;
-
-    iget-object v2, p0, Lta6;->c:Lnn0;
-
-    invoke-direct {v1, p1, v0, v2}, Lsa6;-><init>(Ldff;Ljava/lang/Object;Lnn0;)V
-
-    iget-object p1, p0, Lta6;->a:Lpa6;
-
-    invoke-virtual {p1, v1}, Lpa6;->c(Lxb6;)V
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    invoke-static {v0}, Lzoj;->a(Ljava/lang/Throwable;)V
-
-    invoke-static {v0, p1}, Lyg5;->d(Ljava/lang/Throwable;Ldff;)V
-
-    return-void
+    return-object p1
 .end method

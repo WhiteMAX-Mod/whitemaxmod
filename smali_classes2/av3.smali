@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract i()Lold;
+.method public abstract q(Landroid/os/Bundle;)V
 .end method

@@ -1,58 +1,53 @@
 .class public final Lsy5;
-.super Ljava/lang/Object;
+.super Lda4;
 .source "SourceFile"
-
-# interfaces
-.implements Lya1;
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/CopyOnWriteArraySet;
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lxy5;
+
+.field public Z:I
+
+.field public d:Lpha;
+
+.field public o:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Lxy5;Lda4;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lsy5;->Y:Lxy5;
 
-    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
-
-    iput-object v0, p0, Lsy5;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onFeedback(Lxa1;)V
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-object v0, p0, Lsy5;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    iput-object p1, p0, Lsy5;->X:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+    iget p1, p0, Lsy5;->Z:I
 
-    move-result-object v0
+    const/high16 v0, -0x80000000
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    or-int/2addr p1, v0
 
-    move-result v1
+    iput p1, p0, Lsy5;->Z:I
 
-    if-eqz v1, :cond_0
+    iget-object p1, p0, Lsy5;->Y:Lxy5;
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    const/4 v0, 0x0
 
-    move-result-object v1
+    invoke-virtual {p1, v0, p0}, Lxy5;->M0(Lpha;Lda4;)Ljava/lang/Object;
 
-    check-cast v1, Lya1;
+    move-result-object p1
 
-    invoke-interface {v1, p1}, Lya1;->onFeedback(Lxa1;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
+    return-object p1
 .end method

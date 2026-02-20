@@ -1,166 +1,89 @@
 .class public final Lejh;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Ld7a;
 
 
 # instance fields
-.field public final synthetic X:Lhjh;
-
-.field public final synthetic o:Ljava/lang/Float;
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Float;Lhjh;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lejh;->o:Ljava/lang/Float;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lejh;->X:Lhjh;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lejh;->a:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lzb4;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lejh;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lejh;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lejh;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance p1, Lejh;
-
-    iget-object v0, p0, Lejh;->o:Ljava/lang/Float;
-
-    iget-object v1, p0, Lejh;->X:Lhjh;
-
-    invoke-direct {p1, v0, v1, p2}, Lejh;-><init>(Ljava/lang/Float;Lhjh;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 3
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    const/4 v0, 0x1
 
-    iget-object p1, p0, Lejh;->X:Lhjh;
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, p0, Lejh;->o:Ljava/lang/Float;
-
-    if-nez v0, :cond_0
-
-    iget-object p1, p1, Lhjh;->b:Lo58;
-
-    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljlh;
-
-    iget-object p1, p1, Ljlh;->f:Lqoh;
-
-    if-eqz p1, :cond_3
-
-    invoke-interface {p1}, Lqoh;->play()V
-
-    goto :goto_1
+    return v0
 
     :cond_0
-    iget-object p1, p1, Lhjh;->b:Lo58;
+    instance-of v1, p1, Lejh;
 
-    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
+    const/4 v2, 0x0
 
-    move-result-object p1
+    if-nez v1, :cond_1
 
-    check-cast p1, Ljlh;
+    return v2
 
-    invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
+    :cond_1
+    check-cast p1, Lejh;
+
+    iget-object v1, p0, Lejh;->a:Ljava/lang/String;
+
+    iget-object p1, p1, Lejh;->a:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lejh;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
-    iget-object v1, p1, Ljlh;->h:Lold;
+    return v0
+.end method
 
-    iget-object v1, v1, Lold;->a:Le7f;
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    invoke-interface {v1}, Le7f;->b()Ljava/util/List;
+    const-string v0, "VKServerQuality(value="
 
-    move-result-object v1
+    const-string v1, ")"
 
-    invoke-static {v1}, Lpi3;->F(Ljava/util/List;)Ljava/lang/Object;
+    iget-object v2, p0, Lejh;->a:Ljava/lang/String;
 
-    move-result-object v1
+    invoke-static {v0, v2, v1}, Ltx8;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    check-cast v1, Llmh;
+    move-result-object v0
 
-    if-eqz v1, :cond_1
-
-    iget-object v1, v1, Llmh;->o:Lqfh;
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v1, 0x0
-
-    :goto_0
-    if-nez v1, :cond_2
-
-    iget-object p1, p1, Ljlh;->a:Ljava/lang/String;
-
-    const-string v0, "We cannot seek a videoContent because is null"
-
-    invoke-static {p1, v0}, Lc5j;->t(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_1
-
-    :cond_2
-    const/high16 v2, 0x42c80000    # 100.0f
-
-    div-float/2addr v0, v2
-
-    invoke-interface {v1}, Lqfh;->getDuration()J
-
-    move-result-wide v1
-
-    long-to-float v1, v1
-
-    mul-float/2addr v0, v1
-
-    float-to-long v0, v0
-
-    iget-object p1, p1, Ljlh;->f:Lqoh;
-
-    if-eqz p1, :cond_3
-
-    invoke-interface {p1, v0, v1}, Lqoh;->seekTo(J)V
-
-    :cond_3
-    :goto_1
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
+    return-object v0
 .end method

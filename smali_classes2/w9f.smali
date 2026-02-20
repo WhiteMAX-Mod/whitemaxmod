@@ -1,64 +1,70 @@
 .class public final Lw9f;
-.super Ljava/lang/Object;
+.super Ld3;
 .source "SourceFile"
-
-# interfaces
-.implements Lx9f;
 
 
 # static fields
-.field public static final a:Lw9f;
+.field public static final c:Lw9f;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 2
 
     new-instance v0, Lw9f;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/16 v1, 0xc
 
-    sput-object v0, Lw9f;->a:Lw9f;
+    invoke-direct {v0, v1}, Ld3;-><init>(I)V
+
+    sput-object v0, Lw9f;->c:Lw9f;
 
     return-void
 .end method
 
+.method public static J0(JLjava/lang/String;)Lun4;
+    .locals 3
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const/4 v0, 0x1
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    if-ne p0, p1, :cond_0
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    return v0
+    const-string v2, ":webapp:root?bot_id="
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p0, p1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string p0, "&entry_point=support_from_privacy"
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    if-eqz p2, :cond_0
+
+    const-string p0, "&start_param="
+
+    invoke-virtual {p0, p2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :cond_0
-    instance-of p1, p1, Lw9f;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    if-nez p1, :cond_1
+    move-result-object p0
 
-    const/4 p1, 0x0
+    new-instance p1, Lun4;
 
-    return p1
+    invoke-direct {p1, p0}, Lun4;-><init>(Ljava/lang/String;)V
 
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, -0x6b151edc
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "RequestShowLocationPermissionEvent"
-
-    return-object v0
+    return-object p1
 .end method

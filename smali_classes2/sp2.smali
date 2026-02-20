@@ -1,102 +1,156 @@
 .class public final Lsp2;
-.super Lp6g;
+.super Lxg4;
 .source "SourceFile"
 
-# interfaces
-.implements Lbr6;
+
+# static fields
+.field public static final A0:Lqh3;
 
 
 # instance fields
-.field public final synthetic X:Lz98;
+.field public final v0:Lone/me/profile/screens/media/ChatMediaTabWidget;
 
-.field public final synthetic o:Ljq2;
+.field public final w0:J
+
+.field public final x0:Lvx4;
+
+.field public final y0:Lqh3;
+
+.field public final z0:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Ljq2;Lz98;Lkotlin/coroutines/Continuation;)V
+.method static constructor <clinit>()V
+    .locals 3
+
+    new-instance v0, Lqh3;
+
+    const/16 v1, 0xd
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Lqh3;-><init>(IZ)V
+
+    sput-object v0, Lsp2;->A0:Lqh3;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lone/me/profile/screens/media/ChatMediaTabWidget;JLvx4;)V
     .locals 0
 
-    iput-object p1, p0, Lsp2;->o:Ljq2;
+    invoke-direct {p0, p1}, Lxg4;-><init>(Lone/me/sdk/arch/Widget;)V
 
-    iput-object p2, p0, Lsp2;->X:Lz98;
+    iput-object p1, p0, Lsp2;->v0:Lone/me/profile/screens/media/ChatMediaTabWidget;
 
-    const/4 p1, 0x2
+    iput-wide p2, p0, Lsp2;->w0:J
 
-    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p4, p0, Lsp2;->x0:Lvx4;
+
+    sget-object p1, Lsp2;->A0:Lqh3;
+
+    iput-object p1, p0, Lsp2;->y0:Lqh3;
+
+    sget-object p1, Lhq2;->d:Lpm5;
+
+    invoke-static {p1}, Lek3;->Z(Ljava/lang/Iterable;)Ljava/util/List;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lsp2;->z0:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final F(Ljbe;I)V
+    .locals 8
 
-    check-cast p1, Lzb4;
+    invoke-virtual {p1}, Ljbe;->n()Z
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    move-result v0
 
-    invoke-virtual {p0, p1, p2}, Lsp2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    if-eqz v0, :cond_0
 
-    move-result-object p1
+    return-void
 
-    check-cast p1, Lsp2;
+    :cond_0
+    iget-object v0, p0, Lsp2;->z0:Ljava/util/List;
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    invoke-interface {v0, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    invoke-virtual {p1, p2}, Lsp2;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object p2
 
-    return-object p2
-.end method
+    check-cast p2, Lhq2;
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    iget-object v0, p0, Lsp2;->y0:Lqh3;
 
-    new-instance p1, Lsp2;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object v0, p0, Lsp2;->o:Ljq2;
+    new-instance v2, Lone/me/profile/screens/media/ChatMediaListWidget;
 
-    iget-object v1, p0, Lsp2;->X:Lz98;
+    iget-wide v0, p0, Lsp2;->w0:J
 
-    invoke-direct {p1, v0, v1, p2}, Lsp2;-><init>(Ljq2;Lz98;Lkotlin/coroutines/Continuation;)V
+    iget-object v3, p0, Lsp2;->x0:Lvx4;
 
-    return-object p1
-.end method
+    invoke-direct {v2, v0, v1, v3, p2}, Lone/me/profile/screens/media/ChatMediaListWidget;-><init>(JLvx4;Lhq2;)V
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+    iget-object p2, p0, Lsp2;->v0:Lone/me/profile/screens/media/ChatMediaTabWidget;
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    invoke-virtual {v2, p2}, Lone/me/sdk/arch/Widget;->setTargetController(Lpa4;)V
 
-    iget-object p1, p0, Lsp2;->o:Ljq2;
+    sget-object p2, Loa4;->b:Loa4;
 
-    iget-object v0, p1, Ljq2;->o:Ljl1;
+    invoke-virtual {v2, p2}, Lpa4;->setRetainViewMode(Loa4;)V
 
-    iget-object v1, p0, Lsp2;->X:Lz98;
+    new-instance v1, Lmbe;
 
-    move-object v2, v1
+    const/4 v6, 0x0
 
-    check-cast v2, Lx98;
-
-    iget-object v2, v2, Lx98;->a:Ljava/lang/String;
-
-    new-instance v5, Lip2;
-
-    const/4 v3, 0x1
-
-    invoke-direct {v5, p1, v3, v1}, Lip2;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    move-object v1, v2
-
-    const/4 v2, 0x1
+    const/4 v7, -0x1
 
     const/4 v3, 0x0
 
     const/4 v4, 0x0
 
-    invoke-virtual/range {v0 .. v5}, Ljl1;->j(Ljava/lang/String;ZZZLlq6;)V
+    const/4 v5, 0x0
 
-    sget-object p1, Lb3h;->a:Lb3h;
+    invoke-direct/range {v1 .. v7}, Lmbe;-><init>(Lpa4;Ljava/lang/String;Lua4;Lua4;ZI)V
 
-    return-object p1
+    invoke-virtual {p1, v1}, Ljbe;->S(Lmbe;)V
+
+    return-void
+.end method
+
+.method public final j()I
+    .locals 1
+
+    iget-object v0, p0, Lsp2;->z0:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final k(I)J
+    .locals 2
+
+    iget-object v0, p0, Lsp2;->z0:Ljava/util/List;
+
+    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lhq2;
+
+    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result p1
+
+    int-to-long v0, p1
+
+    return-wide v0
 .end method

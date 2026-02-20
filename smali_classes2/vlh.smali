@@ -1,29 +1,22 @@
 .class public final Lvlh;
-.super Lo84;
-.source "SourceFile"
+.super Lda4;
 
 
 # instance fields
-.field public X:Ljava/lang/Object;
+.field public final synthetic X:Ludf;
 
-.field public synthetic Y:Ljava/lang/Object;
+.field public synthetic d:Ljava/lang/Object;
 
-.field public final synthetic Z:Lfmh;
-
-.field public d:Landroid/util/Size;
-
-.field public o:Ldhc;
-
-.field public t0:I
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Lfmh;Lo84;)V
+.method public constructor <init>(Ludf;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lvlh;->Z:Lfmh;
+    iput-object p1, p0, Lvlh;->X:Ludf;
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -33,21 +26,21 @@
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iput-object p1, p0, Lvlh;->Y:Ljava/lang/Object;
+    iput-object p1, p0, Lvlh;->d:Ljava/lang/Object;
 
-    iget p1, p0, Lvlh;->t0:I
+    iget p1, p0, Lvlh;->o:I
 
     const/high16 v0, -0x80000000
 
     or-int/2addr p1, v0
 
-    iput p1, p0, Lvlh;->t0:I
+    iput p1, p0, Lvlh;->o:I
 
-    iget-object p1, p0, Lvlh;->Z:Lfmh;
+    iget-object p1, p0, Lvlh;->X:Ludf;
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0, v0, p0}, Lfmh;->l(Landroid/util/Size;Ldhc;Lo84;)Ljava/lang/Object;
+    invoke-virtual {p1, v0, p0}, Ludf;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 

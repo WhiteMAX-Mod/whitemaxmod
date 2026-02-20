@@ -2,219 +2,337 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ln8e;
-
 
 # instance fields
-.field public final a:Ldd3;
+.field public a:Z
 
-.field public final b:Ll8e;
+.field public b:Z
 
-.field public final c:I
+.field public c:Ljava/lang/Object;
 
-.field public d:Z
+.field public d:Ljava/io/Serializable;
 
-.field public final synthetic o:Ldd3;
+.field public e:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ldd3;Ldd3;Ll8e;I)V
+.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Ls00;ZZ)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lzc3;->o:Ldd3;
+    iput-object p1, p0, Lzc3;->c:Ljava/lang/Object;
 
-    iput-object p2, p0, Lzc3;->a:Ldd3;
+    iput-object p2, p0, Lzc3;->d:Ljava/io/Serializable;
 
-    iput-object p3, p0, Lzc3;->b:Ll8e;
+    iput-object p3, p0, Lzc3;->e:Ljava/lang/Object;
 
-    iput p4, p0, Lzc3;->c:I
+    iput-boolean p4, p0, Lzc3;->a:Z
+
+    iput-boolean p5, p0, Lzc3;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 8
+.method public a(Lbw8;)Z
+    .locals 5
 
-    iget-boolean v0, p0, Lzc3;->d:Z
+    invoke-interface {p1}, Lbw8;->getId()I
 
-    if-nez v0, :cond_0
+    move-result v0
 
-    iget-object v0, p0, Lzc3;->o:Ldd3;
+    iget-object v1, p0, Lzc3;->d:Ljava/io/Serializable;
 
-    iget-object v1, v0, Ldd3;->Y:Lto6;
+    check-cast v1, Ljava/util/HashSet;
 
-    iget-object v2, v0, Ldd3;->b:[I
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    iget v3, p0, Lzc3;->c:I
+    move-result-object v2
 
-    aget v2, v2, v3
+    invoke-virtual {v1, v2}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
 
-    iget-object v4, v0, Ldd3;->c:[Lpj6;
+    move-result v2
 
-    aget-object v3, v4, v3
+    const/4 v3, 0x0
 
-    const/4 v5, 0x0
+    if-eqz v2, :cond_0
 
-    iget-wide v6, v0, Ldd3;->E0:J
-
-    const/4 v4, 0x0
-
-    invoke-virtual/range {v1 .. v7}, Lto6;->A(ILpj6;ILjava/lang/Object;J)V
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lzc3;->d:Z
+    return v3
 
     :cond_0
-    return-void
+    iget-object v2, p0, Lzc3;->c:Ljava/lang/Object;
+
+    check-cast v2, Ljava/util/HashMap;
+
+    invoke-virtual {p0}, Lzc3;->c()I
+
+    move-result v4
+
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    invoke-virtual {v2, v4}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lbw8;
+
+    if-eqz v2, :cond_1
+
+    invoke-virtual {p0, v2, v3}, Lzc3;->e(Lbw8;Z)Z
+
+    :cond_1
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    invoke-interface {p1}, Landroid/widget/Checkable;->isChecked()Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    const/4 v1, 0x1
+
+    invoke-interface {p1, v1}, Landroid/widget/Checkable;->setChecked(Z)V
+
+    :cond_2
+    return v0
 .end method
 
-.method public final b()V
-    .locals 0
+.method public b(Ltd3;)Ljava/util/ArrayList;
+    .locals 5
 
-    return-void
+    new-instance v0, Ljava/util/HashSet;
+
+    iget-object v1, p0, Lzc3;->d:Ljava/io/Serializable;
+
+    check-cast v1, Ljava/util/HashSet;
+
+    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
+
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+
+    const/4 v2, 0x0
+
+    :goto_0
+    invoke-virtual {p1}, Landroid/view/ViewGroup;->getChildCount()I
+
+    move-result v3
+
+    if-ge v2, v3, :cond_1
+
+    invoke-virtual {p1, v2}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v3
+
+    instance-of v4, v3, Lbw8;
+
+    if-eqz v4, :cond_0
+
+    invoke-virtual {v3}, Landroid/view/View;->getId()I
+
+    move-result v4
+
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    invoke-virtual {v0, v4}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_0
+
+    invoke-virtual {v3}, Landroid/view/View;->getId()I
+
+    move-result v3
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_0
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    return-object v1
 .end method
 
-.method public final e()Z
+.method public c()I
     .locals 2
 
-    iget-object v0, p0, Lzc3;->o:Ldd3;
+    iget-object v0, p0, Lzc3;->d:Ljava/io/Serializable;
 
-    invoke-virtual {v0}, Ldd3;->x()Z
+    check-cast v0, Ljava/util/HashSet;
+
+    iget-boolean v1, p0, Lzc3;->a:Z
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v0}, Ljava/util/HashSet;->isEmpty()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    iget-object v1, p0, Lzc3;->b:Ll8e;
+    invoke-virtual {v0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
-    iget-boolean v0, v0, Ldd3;->J0:Z
+    move-result-object v0
 
-    invoke-virtual {v1, v0}, Ll8e;->u(Z)Z
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
 
     return v0
 
     :cond_0
-    const/4 v0, 0x0
+    const/4 v0, -0x1
 
     return v0
 .end method
 
-.method public final g(J)I
+.method public d()V
     .locals 3
 
-    iget-object v0, p0, Lzc3;->o:Ldd3;
+    iget-object v0, p0, Lzc3;->e:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ldd3;->x()Z
+    check-cast v0, Le05;
 
-    move-result v1
+    if-eqz v0, :cond_1
 
-    if-eqz v1, :cond_0
+    new-instance v1, Ljava/util/HashSet;
 
-    const/4 p1, 0x0
+    iget-object v2, p0, Lzc3;->d:Ljava/io/Serializable;
 
-    return p1
+    check-cast v2, Ljava/util/HashSet;
 
-    :cond_0
-    iget-boolean v1, v0, Ldd3;->J0:Z
+    invoke-direct {v1, v2}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
-    iget-object v2, p0, Lzc3;->b:Ll8e;
+    iget-object v0, v0, Le05;->b:Ljava/lang/Object;
 
-    invoke-virtual {v2, p1, p2, v1}, Ll8e;->s(JZ)I
+    check-cast v0, Llab;
 
-    move-result p1
+    iget-object v1, v0, Ltd3;->t0:Lrd3;
 
-    iget-object p2, v0, Ldd3;->G0:Ltk0;
+    if-eqz v1, :cond_1
 
-    if-eqz p2, :cond_1
+    iget-object v2, v0, Ltd3;->u0:Lzc3;
 
-    iget v0, p0, Lzc3;->c:I
+    invoke-virtual {v2, v0}, Lzc3;->b(Ltd3;)Ljava/util/ArrayList;
 
-    add-int/lit8 v0, v0, 0x1
+    check-cast v1, Lxh5;
 
-    invoke-virtual {p2, v0}, Ltk0;->d(I)I
+    iget-object v0, v1, Lxh5;->a:Ljava/lang/Object;
 
-    move-result p2
+    check-cast v0, Ltd3;
 
-    invoke-virtual {v2}, Ll8e;->q()I
+    iget-object v1, v0, Ltd3;->u0:Lzc3;
 
-    move-result v0
+    iget-boolean v1, v1, Lzc3;->a:Z
 
-    sub-int/2addr p2, v0
-
-    invoke-static {p1, p2}, Ljava/lang/Math;->min(II)I
-
-    move-result p1
-
-    :cond_1
-    invoke-virtual {v2, p1}, Ll8e;->D(I)V
-
-    if-lez p1, :cond_2
-
-    invoke-virtual {p0}, Lzc3;->a()V
-
-    :cond_2
-    return p1
-.end method
-
-.method public final p(Ltx4;Lol4;I)I
-    .locals 4
-
-    iget-object v0, p0, Lzc3;->o:Ldd3;
-
-    invoke-virtual {v0}, Ldd3;->x()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
+    if-nez v1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    iget-object v1, v0, Ldd3;->G0:Ltk0;
+    invoke-virtual {v0}, Ltd3;->getCheckedChipId()I
 
-    iget-object v2, p0, Lzc3;->b:Ll8e;
+    const/4 v0, 0x0
 
-    if-eqz v1, :cond_1
-
-    iget v3, p0, Lzc3;->c:I
-
-    add-int/lit8 v3, v3, 0x1
-
-    invoke-virtual {v1, v3}, Ltk0;->d(I)I
-
-    move-result v1
-
-    invoke-virtual {v2}, Ll8e;->q()I
-
-    move-result v3
-
-    if-gt v1, v3, :cond_1
-
-    :goto_0
-    const/4 p1, -0x3
-
-    return p1
+    throw v0
 
     :cond_1
-    invoke-virtual {p0}, Lzc3;->a()V
+    :goto_0
+    return-void
+.end method
 
-    iget-boolean v0, v0, Ldd3;->J0:Z
+.method public e(Lbw8;Z)Z
+    .locals 4
 
-    invoke-virtual {v2, p1, p2, p3, v0}, Ll8e;->z(Ltx4;Lol4;IZ)I
+    invoke-interface {p1}, Lbw8;->getId()I
 
-    move-result p1
+    move-result v0
 
-    return p1
+    iget-object v1, p0, Lzc3;->d:Ljava/io/Serializable;
+
+    check-cast v1, Ljava/util/HashSet;
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    const/4 v3, 0x0
+
+    if-nez v2, :cond_0
+
+    return v3
+
+    :cond_0
+    if-eqz p2, :cond_1
+
+    invoke-virtual {v1}, Ljava/util/HashSet;->size()I
+
+    move-result p2
+
+    const/4 v2, 0x1
+
+    if-ne p2, v2, :cond_1
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p2
+
+    invoke-virtual {v1, p2}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_1
+
+    invoke-interface {p1, v2}, Landroid/widget/Checkable;->setChecked(Z)V
+
+    return v3
+
+    :cond_1
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p2
+
+    invoke-virtual {v1, p2}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    invoke-interface {p1}, Landroid/widget/Checkable;->isChecked()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    invoke-interface {p1, v3}, Landroid/widget/Checkable;->setChecked(Z)V
+
+    :cond_2
+    return p2
 .end method

@@ -1,87 +1,240 @@
 .class public final Li67;
-.super Ljava/lang/Object;
+.super Lpdg;
 .source "SourceFile"
 
 # interfaces
-.implements Llw9;
+.implements Lys6;
 
 
 # instance fields
-.field public final a:J
+.field public X:I
+
+.field public final synthetic Y:Lj67;
+
+.field public o:Ljava/io/File;
 
 
 # direct methods
-.method public constructor <init>(J)V
+.method public constructor <init>(Lj67;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Li67;->Y:Lj67;
 
-    iput-wide p1, p0, Li67;->a:J
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p1, Lnd4;
 
-    if-ne p0, p1, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return v0
+    invoke-virtual {p0, p1, p2}, Li67;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of v1, p1, Li67;
+    move-result-object p1
 
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
     check-cast p1, Li67;
 
-    iget-wide v3, p0, Li67;->a:J
+    sget-object p2, Lmah;->a:Lmah;
 
-    iget-wide v5, p1, Li67;->a:J
+    invoke-virtual {p1, p2}, Li67;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    cmp-long p1, v3, v5
+    move-result-object p1
 
-    if-eqz p1, :cond_2
+    return-object p1
+.end method
 
-    return v2
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Li67;
+
+    iget-object v0, p0, Li67;->Y:Lj67;
+
+    invoke-direct {p1, v0, p2}, Li67;-><init>(Lj67;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
+
+    iget-object v0, p0, Li67;->Y:Lj67;
+
+    iget-object v1, v0, Lj67;->c:Lj88;
+
+    iget v2, p0, Li67;->X:I
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x1
+
+    if-eqz v2, :cond_1
+
+    if-ne v2, v4, :cond_0
+
+    iget-object v2, p0, Li67;->o:Ljava/io/File;
+
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    invoke-interface {v1}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lh56;
+
+    const-string v2, "oneme_heap_dump.hprof"
+
+    invoke-virtual {p1, v2}, Lh56;->h(Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1}, Landroid/os/Debug;->dumpHprofData(Ljava/lang/String;)V
+
+    iget-object p1, v0, Lj67;->b:Lj88;
+
+    invoke-interface {p1}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lbjg;
+
+    check-cast p1, Lcbb;
+
+    invoke-virtual {p1}, Lcbb;->c()Los8;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Los8;->getImmediate()Los8;
+
+    move-result-object p1
+
+    new-instance v5, Lh67;
+
+    invoke-direct {v5, v0, v2, v3}, Lh67;-><init>(Lj67;Ljava/io/File;Lkotlin/coroutines/Continuation;)V
+
+    iput-object v2, p0, Li67;->o:Ljava/io/File;
+
+    iput v4, p0, Li67;->X:I
+
+    invoke-static {p1, v5, p0}, Lea9;->r(Led4;Lys6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v4, Lod4;->a:Lod4;
+
+    if-ne p1, v4, :cond_2
+
+    return-object v4
 
     :cond_2
-    return v0
-.end method
+    :goto_0
+    iget-object p1, v0, Lj67;->a:Lj88;
 
-.method public final hashCode()I
-    .locals 2
+    invoke-interface {p1}, Lj88;->getValue()Ljava/lang/Object;
 
-    iget-wide v0, p0, Li67;->a:J
+    move-result-object p1
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    check-cast p1, Landroid/content/Context;
 
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    const-string v0, "HideMessageContextMenu(messageId="
-
-    const-string v1, ")"
-
-    iget-wide v2, p0, Li67;->a:J
-
-    invoke-static {v2, v3, v0, v1}, Lcbh;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v1}, Lj88;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
+    check-cast v0, Lh56;
+
+    invoke-virtual {v0, p1, v2}, Lh56;->f(Landroid/content/Context;Ljava/io/File;)Landroid/net/Uri;
+
+    move-result-object v0
+
+    new-instance v1, Landroid/content/Intent;
+
+    const-string v2, "android.intent.action.SEND"
+
+    invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    const-string v2, "*/*"
+
+    invoke-virtual {v1, v2}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
+
+    const-string v2, "android.intent.extra.STREAM"
+
+    invoke-virtual {v1, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
+
+    invoke-static {v1, v3}, Landroid/content/Intent;->createChooser(Landroid/content/Intent;Ljava/lang/CharSequence;)Landroid/content/Intent;
+
+    move-result-object v1
+
+    const/high16 v2, 0x10000000
+
+    invoke-virtual {v1, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
+    invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v2
+
+    const/high16 v3, 0x10000
+
+    invoke-virtual {v2, v1, v3}, Landroid/content/pm/PackageManager;->queryIntentActivities(Landroid/content/Intent;I)Ljava/util/List;
+
+    move-result-object v2
+
+    invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :goto_1
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_3
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Landroid/content/pm/ResolveInfo;
+
+    iget-object v3, v3, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
+
+    iget-object v3, v3, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
+
+    const/4 v4, 0x3
+
+    invoke-virtual {p1, v3, v0, v4}, Landroid/content/Context;->grantUriPermission(Ljava/lang/String;Landroid/net/Uri;I)V
+
+    goto :goto_1
+
+    :cond_3
+    invoke-virtual {p1, v1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
 .end method

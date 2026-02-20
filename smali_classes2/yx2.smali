@@ -1,146 +1,119 @@
 .class public final Lyx2;
-.super Lp6g;
+.super Lpdg;
 .source "SourceFile"
 
 # interfaces
-.implements Ldr6;
+.implements Lys6;
 
 
 # instance fields
-.field public synthetic X:Lda2;
+.field public final synthetic X:Lone/me/chatscreen/ChatScreen;
 
-.field public synthetic Y:Lzlb;
-
-.field public final synthetic o:I
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/ChatScreen;)V
     .locals 0
 
-    iput p3, p0, Lyx2;->o:I
+    iput-object p2, p0, Lyx2;->X:Lone/me/chatscreen/ChatScreen;
 
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/4 p2, 0x2
+
+    invoke-direct {p0, p2, p1}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lyx2;->o:I
+    check-cast p1, Lhv0;
 
-    check-cast p1, Lda2;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    check-cast p2, Lzlb;
+    invoke-virtual {p0, p1, p2}, Lyx2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    check-cast p3, Lkotlin/coroutines/Continuation;
+    move-result-object p1
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p1, Lyx2;
+
+    sget-object p2, Lmah;->a:Lmah;
+
+    invoke-virtual {p1, p2}, Lyx2;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
     new-instance v0, Lyx2;
 
-    const/4 v1, 0x3
+    iget-object v1, p0, Lyx2;->X:Lone/me/chatscreen/ChatScreen;
 
-    const/4 v2, 0x1
+    invoke-direct {v0, p2, v1}, Lyx2;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/ChatScreen;)V
 
-    invoke-direct {v0, v1, p3, v2}, Lyx2;-><init>(ILkotlin/coroutines/Continuation;I)V
+    iput-object p1, v0, Lyx2;->o:Ljava/lang/Object;
 
-    iput-object p1, v0, Lyx2;->X:Lda2;
-
-    iput-object p2, v0, Lyx2;->Y:Lzlb;
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    invoke-virtual {v0, p1}, Lyx2;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_0
-    new-instance v0, Lyx2;
-
-    const/4 v1, 0x3
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, p3, v2}, Lyx2;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, v0, Lyx2;->X:Lda2;
-
-    iput-object p2, v0, Lyx2;->Y:Lzlb;
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    invoke-virtual {v0, p1}, Lyx2;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    .locals 5
 
-    iget v0, p0, Lyx2;->o:I
+    iget-object v0, p0, Lyx2;->o:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast v0, Lhv0;
 
-    iget-object v0, p0, Lyx2;->X:Lda2;
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    iget-object v1, p0, Lyx2;->Y:Lzlb;
+    sget-object p1, Lone/me/chatscreen/ChatScreen;->m1:[Lv58;
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    iget-object p1, p0, Lyx2;->X:Lone/me/chatscreen/ChatScreen;
 
-    invoke-interface {v1}, Lzlb;->b()Lxf0;
+    invoke-virtual {p1}, Lone/me/chatscreen/ChatScreen;->i1()Liz9;
 
-    move-result-object p1
+    move-result-object v1
 
-    iget p1, p1, Lxf0;->h:I
+    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
-    invoke-virtual {v0, p1}, Landroid/view/View;->setBackgroundColor(I)V
+    move-result-object v2
 
-    sget-object p1, Lb3h;->a:Lb3h;
+    const-string v3, "SEARCH"
+
+    invoke-static {v2, v3}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    iget-object v1, v1, Liz9;->b:Lhxf;
+
+    :cond_0
+    invoke-virtual {v1}, Lhxf;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    move-object v4, v3
+
+    check-cast v4, Ljava/lang/Boolean;
+
+    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v4
+
+    invoke-virtual {v1, v3, v4}, Lhxf;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    invoke-static {p1, v0}, Lone/me/chatscreen/ChatScreen;->V0(Lone/me/chatscreen/ChatScreen;Lhv0;)V
+
+    sget-object p1, Lmah;->a:Lmah;
 
     return-object p1
-
-    :pswitch_0
-    iget-object v0, p0, Lyx2;->X:Lda2;
-
-    iget-object v1, p0, Lyx2;->Y:Lzlb;
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    invoke-interface {v1}, Lzlb;->a()Ln13;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Ln13;->t()Luog;
-
-    move-result-object p1
-
-    iget-object p1, p1, Luog;->a:Lrog;
-
-    iget-object p1, p1, Lrog;->a:Lsog;
-
-    iget p1, p1, Lsog;->d:I
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->setBackgroundColor(I)V
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

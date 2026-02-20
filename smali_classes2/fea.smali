@@ -1,159 +1,125 @@
 .class public final Lfea;
-.super Lp6g;
+.super Lko;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Lokg;
 
 
 # instance fields
-.field public final synthetic X:Ljea;
-
-.field public final synthetic o:J
+.field public final d:J
 
 
 # direct methods
-.method public constructor <init>(JLjea;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(JJ)V
     .locals 0
 
-    iput-wide p1, p0, Lfea;->o:J
+    invoke-direct {p0, p1, p2}, Lko;-><init>(J)V
 
-    iput-object p3, p0, Lfea;->X:Ljea;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p4}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-wide p3, p0, Lfea;->d:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final c(Lujg;)V
     .locals 0
 
-    check-cast p1, Lzb4;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lfea;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lfea;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lfea;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
+    return-void
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
+.method public final d(Lcjg;)V
+    .locals 0
 
-    new-instance p1, Lfea;
-
-    iget-wide v0, p0, Lfea;->o:J
-
-    iget-object v2, p0, Lfea;->X:Ljea;
-
-    invoke-direct {p1, v0, v1, v2, p2}, Lfea;-><init>(JLjea;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
+    return-void
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+.method public final k()Lk2;
+    .locals 12
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    iget-wide v0, p0, Lfea;->d:J
 
-    sget p1, Ljea;->W0:I
+    const-wide/16 v2, 0x0
 
-    new-instance p1, Ljava/lang/Long;
+    cmp-long v0, v0, v2
 
-    iget-wide v0, p0, Lfea;->o:J
+    const/16 v1, 0x10
 
-    invoke-direct {p1, v0, v1}, Ljava/lang/Long;-><init>(J)V
+    if-nez v0, :cond_0
 
-    filled-new-array {p1}, [Ljava/lang/Object;
+    new-instance v0, Lp85;
 
-    move-result-object p1
+    invoke-direct {v0, v2, v3, v1}, Lp85;-><init>(JI)V
 
-    const-string v2, "jea"
+    return-object v0
 
-    const-string v3, "seekToPosition, posMs %d"
+    :cond_0
+    invoke-virtual {p0}, Lko;->o()Lci2;
 
-    invoke-static {v2, v3, p1}, Lc5j;->c(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    move-result-object v0
 
-    iget-object p1, p0, Lfea;->X:Ljea;
+    iget-wide v4, p0, Lfea;->d:J
 
-    invoke-virtual {p1}, Ljea;->d()V
+    invoke-virtual {v0, v4, v5}, Lci2;->M(J)Lte2;
 
-    iget-object v2, p1, Ljea;->y0:Li19;
+    move-result-object v0
 
-    if-eqz v2, :cond_1
+    if-eqz v0, :cond_2
 
-    invoke-virtual {v2}, Li19;->C()V
+    iget-object v4, v0, Lte2;->b:Lzi2;
 
-    iget-object v2, v2, Li19;->c:Lh19;
+    iget-wide v4, v4, Lzi2;->a:J
 
-    invoke-interface {v2}, Lh19;->isConnected()Z
+    cmp-long v2, v4, v2
 
-    move-result v3
+    if-nez v2, :cond_1
 
-    if-nez v3, :cond_0
+    invoke-virtual {p0}, Lko;->o()Lci2;
 
-    const-string v2, "MediaController"
+    move-result-object v2
 
-    const-string v3, "The controller is not connected. Ignoring seekTo()."
+    invoke-virtual {v2, v0}, Lci2;->V(Lte2;)Z
 
-    invoke-static {v2, v3}, Li1h;->t(Ljava/lang/String;Ljava/lang/String;)V
+    move-result v2
+
+    if-nez v2, :cond_1
 
     goto :goto_0
 
-    :cond_0
-    invoke-interface {v2, v0, v1}, Lh19;->seekTo(J)V
-
     :cond_1
+    new-instance v2, Lp85;
+
+    iget-object v0, v0, Lte2;->b:Lzi2;
+
+    iget-wide v3, v0, Lzi2;->a:J
+
+    invoke-direct {v2, v3, v4, v1}, Lp85;-><init>(JI)V
+
+    return-object v2
+
+    :cond_2
     :goto_0
-    iget-object v2, p1, Ljea;->E0:Lspf;
+    sget-object v5, Ltej;->a:Lafb;
 
-    new-instance v3, Ljava/lang/Long;
+    if-eqz v5, :cond_3
 
-    invoke-direct {v3, v0, v1}, Ljava/lang/Long;-><init>(J)V
+    sget-object v6, Lzm8;->Y:Lzm8;
 
-    const/4 v4, 0x0
+    const/4 v10, 0x0
 
-    invoke-virtual {v2, v4, v3}, Lspf;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+    const/16 v11, 0x8
 
-    iget-object v2, p1, Ljea;->S0:Lspf;
+    const-string v7, "fea"
 
-    long-to-double v0, v0
+    const-string v8, "createRequest: No chat or serverId == 0. return null"
 
-    iget-wide v5, p1, Ljea;->Q0:J
+    const/4 v9, 0x0
 
-    long-to-double v5, v5
+    invoke-static/range {v5 .. v11}, Lafb;->f(Lafb;Lzm8;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/Throwable;I)V
 
-    div-double/2addr v0, v5
-
-    double-to-float p1, v0
-
+    :cond_3
     const/4 v0, 0x0
 
-    const/high16 v1, 0x3f800000    # 1.0f
-
-    invoke-static {p1, v0, v1}, Lamj;->c(FFF)F
-
-    move-result p1
-
-    new-instance v0, Ljava/lang/Float;
-
-    invoke-direct {v0, p1}, Ljava/lang/Float;-><init>(F)V
-
-    invoke-virtual {v2, v4, v0}, Lspf;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
+    return-object v0
 .end method

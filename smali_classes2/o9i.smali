@@ -3,39 +3,90 @@
 .source "SourceFile"
 
 
+# annotations
+.annotation runtime Lgxe;
+.end annotation
+
+
+# static fields
+.field public static final Companion:Ln9i;
+
+
 # instance fields
 .field public final a:Ljava/lang/String;
 
-.field public final b:Z
+.field public final b:Ljava/lang/String;
 
-.field public final c:Lk9i;
+.field public final c:Ljava/lang/String;
 
 .field public final d:Ljava/lang/String;
 
-.field public final e:Z
-
-.field public final f:Z
-
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;ZLk9i;Ljava/lang/String;ZZ)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Ln9i;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lo9i;->Companion:Ln9i;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 3
+
+    and-int/lit8 v0, p1, 0x3
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x3
+
+    if-ne v2, v0, :cond_2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lo9i;->a:Ljava/lang/String;
+    iput-object p2, p0, Lo9i;->a:Ljava/lang/String;
 
-    iput-boolean p2, p0, Lo9i;->b:Z
+    iput-object p3, p0, Lo9i;->b:Ljava/lang/String;
 
-    iput-object p3, p0, Lo9i;->c:Lk9i;
+    and-int/lit8 p2, p1, 0x4
 
-    iput-object p4, p0, Lo9i;->d:Ljava/lang/String;
+    if-nez p2, :cond_0
 
-    iput-boolean p5, p0, Lo9i;->e:Z
+    iput-object v1, p0, Lo9i;->c:Ljava/lang/String;
 
-    iput-boolean p6, p0, Lo9i;->f:Z
+    goto :goto_0
+
+    :cond_0
+    iput-object p4, p0, Lo9i;->c:Ljava/lang/String;
+
+    :goto_0
+    and-int/lit8 p1, p1, 0x8
+
+    if-nez p1, :cond_1
+
+    iput-object v1, p0, Lo9i;->d:Ljava/lang/String;
 
     return-void
+
+    :cond_1
+    iput-object p5, p0, Lo9i;->d:Ljava/lang/String;
+
+    return-void
+
+    :cond_2
+    sget-object p2, Lm9i;->a:Lm9i;
+
+    invoke-virtual {p2}, Lm9i;->d()Lzwe;
+
+    move-result-object p2
+
+    invoke-static {p1, v2, p2}, Lesj;->c(IILzwe;)V
+
+    throw v1
 .end method
 
 
@@ -65,7 +116,7 @@
 
     iget-object v3, p1, Lo9i;->a:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -74,20 +125,24 @@
     return v2
 
     :cond_2
-    iget-boolean v1, p0, Lo9i;->b:Z
+    iget-object v1, p0, Lo9i;->b:Ljava/lang/String;
 
-    iget-boolean v3, p1, Lo9i;->b:Z
+    iget-object v3, p1, Lo9i;->b:Ljava/lang/String;
 
-    if-eq v1, v3, :cond_3
+    invoke-static {v1, v3}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
 
     return v2
 
     :cond_3
-    iget-object v1, p0, Lo9i;->c:Lk9i;
+    iget-object v1, p0, Lo9i;->c:Ljava/lang/String;
 
-    iget-object v3, p1, Lo9i;->c:Lk9i;
+    iget-object v3, p1, Lo9i;->c:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -98,97 +153,79 @@
     :cond_4
     iget-object v1, p0, Lo9i;->d:Ljava/lang/String;
 
-    iget-object v3, p1, Lo9i;->d:Ljava/lang/String;
+    iget-object p1, p1, Lo9i;->d:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result v1
+    move-result p1
 
-    if-nez v1, :cond_5
+    if-nez p1, :cond_5
 
     return v2
 
     :cond_5
-    iget-boolean v1, p0, Lo9i;->e:Z
-
-    iget-boolean v3, p1, Lo9i;->e:Z
-
-    if-eq v1, v3, :cond_6
-
-    return v2
-
-    :cond_6
-    iget-boolean v1, p0, Lo9i;->f:Z
-
-    iget-boolean p1, p1, Lo9i;->f:Z
-
-    if-eq v1, p1, :cond_7
-
-    return v2
-
-    :cond_7
     return v0
 .end method
 
 .method public final hashCode()I
-    .locals 3
-
-    iget-object v0, p0, Lo9i;->a:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-boolean v2, p0, Lo9i;->b:Z
-
-    invoke-static {v0, v1, v2}, Lcbh;->j(IIZ)I
-
-    move-result v0
-
-    iget-object v2, p0, Lo9i;->c:Lk9i;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v2
-
-    add-int/2addr v2, v0
-
-    mul-int/2addr v2, v1
-
-    iget-object v0, p0, Lo9i;->d:Ljava/lang/String;
-
-    if-nez v0, :cond_0
+    .locals 4
 
     const/4 v0, 0x0
+
+    iget-object v1, p0, Lo9i;->a:Ljava/lang/String;
+
+    if-nez v1, :cond_0
+
+    move v1, v0
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    :goto_0
-    add-int/2addr v2, v0
-
-    mul-int/2addr v2, v1
-
-    iget-boolean v0, p0, Lo9i;->e:Z
-
-    invoke-static {v2, v1, v0}, Lcbh;->j(IIZ)I
-
-    move-result v0
-
-    iget-boolean v1, p0, Lo9i;->f:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
     move-result v1
 
+    :goto_0
+    const/16 v2, 0x1f
+
+    mul-int/2addr v1, v2
+
+    iget-object v3, p0, Lo9i;->b:Ljava/lang/String;
+
+    invoke-static {v1, v2, v3}, Lj64;->d(IILjava/lang/String;)I
+
+    move-result v1
+
+    iget-object v3, p0, Lo9i;->c:Ljava/lang/String;
+
+    if-nez v3, :cond_1
+
+    move v3, v0
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
+
+    move-result v3
+
+    :goto_1
+    add-int/2addr v1, v3
+
+    mul-int/2addr v1, v2
+
+    iget-object v2, p0, Lo9i;->d:Ljava/lang/String;
+
+    if-nez v2, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    :goto_2
     add-int/2addr v1, v0
 
     return v1
@@ -197,33 +234,25 @@
 .method public final toString()Ljava/lang/String;
     .locals 5
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v0, ", requestId="
 
-    const-string v1, "WebAppRootViewState(title="
+    const-string v1, ", reason="
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v2, "WebAppBiometryUpdateTokenRequest(queryId="
 
-    iget-object v1, p0, Lo9i;->a:Ljava/lang/String;
+    iget-object v3, p0, Lo9i;->a:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v4, p0, Lo9i;->b:Ljava/lang/String;
 
-    const-string v1, ", isVerified="
+    invoke-static {v2, v3, v0, v4, v1}, Lau1;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    iget-boolean v1, p0, Lo9i;->b:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", loadingState="
+    iget-object v1, p0, Lo9i;->c:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lo9i;->c:Lk9i;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", url="
+    const-string v1, ", token="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -231,19 +260,11 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", needShowCloseConfirmationDialog="
+    const-string v1, ")"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", isBrightnessMaximized="
-
-    const-string v2, ")"
-
-    iget-boolean v3, p0, Lo9i;->e:Z
-
-    iget-boolean v4, p0, Lo9i;->f:Z
-
-    invoke-static {v1, v2, v0, v3, v4}, Lhc0;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

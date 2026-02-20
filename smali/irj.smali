@@ -1,91 +1,92 @@
-.class public final Lirj;
-.super Lg4;
+.class public abstract Lirj;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lirj;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
-# instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:Ljava/lang/String;
-
-.field public final c:I
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public static final a(Ljava/lang/String;)Ljava/lang/Long;
+    .locals 3
 
-    new-instance v0, Lwij;
+    const/4 v0, 0x0
 
-    const/16 v1, 0x15
+    if-eqz p0, :cond_0
 
-    invoke-direct {v0, v1}, Lwij;-><init>(I)V
+    :try_start_0
+    new-instance v1, Ljava/math/BigInteger;
 
-    sput-object v0, Lirj;->CREATOR:Landroid/os/Parcelable$Creator;
+    invoke-direct {v1, p0}, Ljava/math/BigInteger;-><init>(Ljava/lang/String;)V
 
-    return-void
+    invoke-virtual {v1}, Ljava/math/BigInteger;->longValue()J
+
+    move-result-wide v1
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p0
+
+    new-instance v1, Lc6e;
+
+    invoke-direct {v1, p0}, Lc6e;-><init>(Ljava/lang/Throwable;)V
+
+    goto :goto_1
+
+    :cond_0
+    move-object p0, v0
+
+    :goto_0
+    move-object v1, p0
+
+    :goto_1
+    nop
+
+    instance-of p0, v1, Lc6e;
+
+    if-eqz p0, :cond_1
+
+    goto :goto_2
+
+    :cond_1
+    move-object v0, v1
+
+    :goto_2
+    check-cast v0, Ljava/lang/Long;
+
+    return-object v0
 .end method
 
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;I)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lirj;->a:Ljava/lang/String;
-
-    iput-object p2, p0, Lirj;->b:Ljava/lang/String;
-
-    iput p3, p0, Lirj;->c:I
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final writeToParcel(Landroid/os/Parcel;I)V
+.method public static final b(IF)I
     .locals 2
 
-    const/16 p2, 0x4f45
+    const/high16 v0, 0x437f0000    # 255.0f
 
-    invoke-static {p1, p2}, Lsnj;->k(Landroid/os/Parcel;I)I
+    mul-float/2addr p1, v0
 
-    move-result p2
+    invoke-static {p1}, Lmhj;->f(F)I
 
-    const/4 v0, 0x1
+    move-result p1
 
-    iget-object v1, p0, Lirj;->a:Ljava/lang/String;
+    invoke-static {p0}, Landroid/graphics/Color;->red(I)I
 
-    invoke-static {p1, v0, v1}, Lsnj;->g(Landroid/os/Parcel;ILjava/lang/String;)V
+    move-result v0
 
-    const/4 v0, 0x2
+    invoke-static {p0}, Landroid/graphics/Color;->green(I)I
 
-    iget-object v1, p0, Lirj;->b:Ljava/lang/String;
+    move-result v1
 
-    invoke-static {p1, v0, v1}, Lsnj;->g(Landroid/os/Parcel;ILjava/lang/String;)V
+    invoke-static {p0}, Landroid/graphics/Color;->blue(I)I
 
-    const/4 v0, 0x4
+    move-result p0
 
-    const/4 v1, 0x3
+    invoke-static {p1, v0, v1, p0}, Landroid/graphics/Color;->argb(IIII)I
 
-    invoke-static {p1, v1, v0}, Lsnj;->m(Landroid/os/Parcel;II)V
+    move-result p0
 
-    iget v0, p0, Lirj;->c:I
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    invoke-static {p1, p2}, Lsnj;->l(Landroid/os/Parcel;I)V
-
-    return-void
+    return p0
 .end method

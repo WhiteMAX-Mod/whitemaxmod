@@ -3,70 +3,271 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lwbh;
+.implements Landroid/os/Parcelable;
+.implements Lmg8;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lrna;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
+# instance fields
+.field public final a:J
+
+.field public final b:Ljava/lang/String;
+
+.field public final c:I
+
+.field public final d:Z
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lz09;
+
+    const/16 v1, 0xe
+
+    invoke-direct {v0, v1}, Lz09;-><init>(I)V
+
+    sput-object v0, Lrna;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(IJLjava/lang/String;Z)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p2, p0, Lrna;->a:J
+
+    iput-object p4, p0, Lrna;->b:Ljava/lang/String;
+
+    iput p1, p0, Lrna;->c:I
+
+    iput-boolean p5, p0, Lrna;->d:Z
+
+    return-void
+.end method
+
+.method public static x(Lrna;Z)Lrna;
+    .locals 6
+
+    iget-wide v2, p0, Lrna;->a:J
+
+    iget-object v4, p0, Lrna;->b:Ljava/lang/String;
+
+    iget v1, p0, Lrna;->c:I
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v0, Lrna;
+
+    move v5, p1
+
+    invoke-direct/range {v0 .. v5}, Lrna;-><init>(IJLjava/lang/String;Z)V
+
+    return-object v0
+.end method
 
 
 # virtual methods
-.method public final a(ILjava/lang/String;)Llhg;
-    .locals 3
-
-    invoke-virtual {p2}, Ljava/lang/String;->length()I
-
-    move-result v0
-
-    if-lez v0, :cond_2
+.method public final describeContents()I
+    .locals 1
 
     const/4 v0, 0x0
 
-    :goto_0
-    invoke-virtual {p2}, Ljava/lang/String;->length()I
+    return v0
+.end method
 
-    move-result v1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    if-ge v0, v1, :cond_1
+    const/4 v0, 0x1
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->charAt(I)C
+    if-ne p0, p1, :cond_0
 
-    move-result v1
-
-    const/16 v2, 0x2d
-
-    if-eq v1, v2, :cond_0
-
-    const/16 v2, 0x20
-
-    if-ne v1, v2, :cond_2
+    return v0
 
     :cond_0
-    add-int/lit8 v0, v0, 0x1
+    instance-of v1, p1, Lrna;
 
-    goto :goto_0
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
 
     :cond_1
-    const-class p2, Lrna;
+    check-cast p1, Lrna;
 
-    invoke-static {p2}, Lctd;->a(Ljava/lang/Class;)Lrd3;
+    iget-wide v3, p0, Lrna;->a:J
 
-    move-result-object p2
+    iget-wide v5, p1, Lrna;->a:J
 
-    invoke-static {p1, p2}, Lr4j;->a(ILrd3;)Ljava/lang/Integer;
+    cmp-long v1, v3, v5
 
-    move-result-object p1
+    if-eqz v1, :cond_2
 
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    new-instance p2, Llhg;
-
-    invoke-direct {p2, p1}, Llhg;-><init>(I)V
-
-    return-object p2
+    return v2
 
     :cond_2
-    const/4 p1, 0x0
+    iget-object v1, p0, Lrna;->b:Ljava/lang/String;
 
-    return-object p1
+    iget-object v3, p1, Lrna;->b:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget v1, p0, Lrna;->c:I
+
+    iget v3, p1, Lrna;->c:I
+
+    if-eq v1, v3, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-boolean v1, p0, Lrna;->d:Z
+
+    iget-boolean p1, p1, Lrna;->d:Z
+
+    if-eq v1, p1, :cond_5
+
+    return v2
+
+    :cond_5
+    return v0
+.end method
+
+.method public final getItemId()J
+    .locals 2
+
+    iget-wide v0, p0, Lrna;->a:J
+
+    return-wide v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-wide v0, p0, Lrna;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lrna;->b:Ljava/lang/String;
+
+    invoke-static {v0, v1, v2}, Lj64;->d(IILjava/lang/String;)I
+
+    move-result v0
+
+    iget v2, p0, Lrna;->c:I
+
+    invoke-static {v2, v0, v1}, Ljye;->d(III)I
+
+    move-result v0
+
+    iget-boolean v1, p0, Lrna;->d:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final m()I
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, "NeuroAvatarModel(id="
+
+    const-string v1, ", url="
+
+    iget-wide v2, p0, Lrna;->a:J
+
+    iget-object v4, p0, Lrna;->b:Ljava/lang/String;
+
+    invoke-static {v0, v2, v3, v1, v4}, Lo16;->i(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ", categoryId="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lrna;->c:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isSelected="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lrna;->d:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 2
+
+    iget-wide v0, p0, Lrna;->a:J
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+
+    iget-object p2, p0, Lrna;->b:Ljava/lang/String;
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    iget p2, p0, Lrna;->c:I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget-boolean p2, p0, Lrna;->d:Z
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    return-void
 .end method

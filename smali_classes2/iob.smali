@@ -1,83 +1,463 @@
 .class public final Liob;
-.super Lzs4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final e:Ljava/util/ArrayList;
+.field public final A:I
+
+.field public final B:I
+
+.field public final C:I
+
+.field public final D:I
+
+.field public final E:I
+
+.field public final F:I
+
+.field public final G:I
+
+.field public final H:I
+
+.field public final a:I
+
+.field public final b:I
+
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:I
+
+.field public final f:I
+
+.field public final g:I
+
+.field public final h:I
+
+.field public final i:I
+
+.field public final j:I
+
+.field public final k:I
+
+.field public final l:I
+
+.field public final m:I
+
+.field public final n:I
+
+.field public final o:I
+
+.field public final p:I
+
+.field public final q:I
+
+.field public final r:I
+
+.field public final s:I
+
+.field public final t:I
+
+.field public final u:I
+
+.field public final v:I
+
+.field public final w:I
+
+.field public final x:I
+
+.field public final y:I
+
+.field public final z:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ljava/util/ArrayList;)V
+.method public constructor <init>(IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lzs4;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Liob;->e:Ljava/util/ArrayList;
+    iput p1, p0, Liob;->a:I
+
+    iput p2, p0, Liob;->b:I
+
+    iput p3, p0, Liob;->c:I
+
+    iput p4, p0, Liob;->d:I
+
+    iput p5, p0, Liob;->e:I
+
+    iput p6, p0, Liob;->f:I
+
+    iput p7, p0, Liob;->g:I
+
+    iput p8, p0, Liob;->h:I
+
+    iput p9, p0, Liob;->i:I
+
+    iput p10, p0, Liob;->j:I
+
+    iput p11, p0, Liob;->k:I
+
+    iput p12, p0, Liob;->l:I
+
+    iput p13, p0, Liob;->m:I
+
+    iput p14, p0, Liob;->n:I
+
+    iput p15, p0, Liob;->o:I
+
+    move/from16 p1, p16
+
+    iput p1, p0, Liob;->p:I
+
+    move/from16 p1, p17
+
+    iput p1, p0, Liob;->q:I
+
+    move/from16 p1, p18
+
+    iput p1, p0, Liob;->r:I
+
+    move/from16 p1, p19
+
+    iput p1, p0, Liob;->s:I
+
+    move/from16 p1, p20
+
+    iput p1, p0, Liob;->t:I
+
+    move/from16 p1, p21
+
+    iput p1, p0, Liob;->u:I
+
+    move/from16 p1, p22
+
+    iput p1, p0, Liob;->v:I
+
+    move/from16 p1, p23
+
+    iput p1, p0, Liob;->w:I
+
+    move/from16 p1, p24
+
+    iput p1, p0, Liob;->x:I
+
+    move/from16 p1, p25
+
+    iput p1, p0, Liob;->y:I
+
+    move/from16 p1, p26
+
+    iput p1, p0, Liob;->z:I
+
+    move/from16 p1, p27
+
+    iput p1, p0, Liob;->A:I
+
+    move/from16 p1, p28
+
+    iput p1, p0, Liob;->B:I
+
+    move/from16 p1, p29
+
+    iput p1, p0, Liob;->C:I
+
+    move/from16 p1, p30
+
+    iput p1, p0, Liob;->D:I
+
+    move/from16 p1, p31
+
+    iput p1, p0, Liob;->E:I
+
+    move/from16 p1, p32
+
+    iput p1, p0, Liob;->F:I
+
+    move/from16 p1, p33
+
+    iput p1, p0, Liob;->G:I
+
+    move/from16 p1, p34
+
+    iput p1, p0, Liob;->H:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c(Landroid/content/Context;)Lao4;
-    .locals 3
+.method public final A()I
+    .locals 1
 
-    new-instance v0, Lv40;
+    iget v0, p0, Liob;->F:I
 
-    invoke-direct {v0, p1}, Lv40;-><init>(Landroid/content/Context;)V
-
-    new-instance p1, Latc;
-
-    const/4 v1, 0x0
-
-    new-array v1, v1, [Lb60;
-
-    iget-object v2, p0, Liob;->e:Ljava/util/ArrayList;
-
-    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, [Lb60;
-
-    array-length v2, v1
-
-    invoke-static {v1, v2}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, [Lb60;
-
-    invoke-direct {p1, v1}, Latc;-><init>([Lb60;)V
-
-    iput-object p1, v0, Lv40;->e:Ljava/lang/Object;
-
-    invoke-virtual {v0}, Lv40;->b()Lao4;
-
-    move-result-object p1
-
-    return-object p1
+    return v0
 .end method
 
-.method public final d(Lxp5;Landroid/os/Looper;Ljava/util/ArrayList;)V
-    .locals 3
+.method public final B()I
+    .locals 1
 
-    new-instance v0, Lfhg;
+    iget v0, p0, Liob;->E:I
 
-    new-instance v1, Limf;
+    return v0
+.end method
 
-    const/16 v2, 0x1b
+.method public final C()I
+    .locals 1
 
-    invoke-direct {v1, v2}, Limf;-><init>(I)V
+    iget v0, p0, Liob;->H:I
 
-    invoke-direct {v0, p1, p2, v1}, Lfhg;-><init>(Lxp5;Landroid/os/Looper;Lj1g;)V
+    return v0
+.end method
 
-    const/4 p1, 0x1
+.method public final D()I
+    .locals 1
 
-    iput-boolean p1, v0, Lfhg;->W0:Z
+    iget v0, p0, Liob;->G:I
 
-    invoke-virtual {p3, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    return v0
+.end method
 
-    return-void
+.method public final E()I
+    .locals 1
+
+    iget v0, p0, Liob;->q:I
+
+    return v0
+.end method
+
+.method public final F()I
+    .locals 1
+
+    iget v0, p0, Liob;->p:I
+
+    return v0
+.end method
+
+.method public final G()I
+    .locals 1
+
+    iget v0, p0, Liob;->s:I
+
+    return v0
+.end method
+
+.method public final H()I
+    .locals 1
+
+    iget v0, p0, Liob;->r:I
+
+    return v0
+.end method
+
+.method public final a()I
+    .locals 1
+
+    iget v0, p0, Liob;->t:I
+
+    return v0
+.end method
+
+.method public final b()I
+    .locals 1
+
+    iget v0, p0, Liob;->v:I
+
+    return v0
+.end method
+
+.method public final c()I
+    .locals 1
+
+    iget v0, p0, Liob;->u:I
+
+    return v0
+.end method
+
+.method public final d()I
+    .locals 1
+
+    iget v0, p0, Liob;->a:I
+
+    return v0
+.end method
+
+.method public final e()I
+    .locals 1
+
+    iget v0, p0, Liob;->f:I
+
+    return v0
+.end method
+
+.method public final f()I
+    .locals 1
+
+    iget v0, p0, Liob;->h:I
+
+    return v0
+.end method
+
+.method public final g()I
+    .locals 1
+
+    iget v0, p0, Liob;->g:I
+
+    return v0
+.end method
+
+.method public final h()I
+    .locals 1
+
+    iget v0, p0, Liob;->m:I
+
+    return v0
+.end method
+
+.method public final i()I
+    .locals 1
+
+    iget v0, p0, Liob;->l:I
+
+    return v0
+.end method
+
+.method public final j()I
+    .locals 1
+
+    iget v0, p0, Liob;->o:I
+
+    return v0
+.end method
+
+.method public final k()I
+    .locals 1
+
+    iget v0, p0, Liob;->n:I
+
+    return v0
+.end method
+
+.method public final l()I
+    .locals 1
+
+    iget v0, p0, Liob;->B:I
+
+    return v0
+.end method
+
+.method public final m()I
+    .locals 1
+
+    iget v0, p0, Liob;->A:I
+
+    return v0
+.end method
+
+.method public final n()I
+    .locals 1
+
+    iget v0, p0, Liob;->D:I
+
+    return v0
+.end method
+
+.method public final o()I
+    .locals 1
+
+    iget v0, p0, Liob;->C:I
+
+    return v0
+.end method
+
+.method public final p()I
+    .locals 1
+
+    iget v0, p0, Liob;->c:I
+
+    return v0
+.end method
+
+.method public final q()I
+    .locals 1
+
+    iget v0, p0, Liob;->b:I
+
+    return v0
+.end method
+
+.method public final r()I
+    .locals 1
+
+    iget v0, p0, Liob;->e:I
+
+    return v0
+.end method
+
+.method public final s()I
+    .locals 1
+
+    iget v0, p0, Liob;->d:I
+
+    return v0
+.end method
+
+.method public final t()I
+    .locals 1
+
+    iget v0, p0, Liob;->x:I
+
+    return v0
+.end method
+
+.method public final u()I
+    .locals 1
+
+    iget v0, p0, Liob;->w:I
+
+    return v0
+.end method
+
+.method public final v()I
+    .locals 1
+
+    iget v0, p0, Liob;->z:I
+
+    return v0
+.end method
+
+.method public final w()I
+    .locals 1
+
+    iget v0, p0, Liob;->y:I
+
+    return v0
+.end method
+
+.method public final x()I
+    .locals 1
+
+    iget v0, p0, Liob;->i:I
+
+    return v0
+.end method
+
+.method public final y()I
+    .locals 1
+
+    iget v0, p0, Liob;->k:I
+
+    return v0
+.end method
+
+.method public final z()I
+    .locals 1
+
+    iget v0, p0, Liob;->j:I
+
+    return v0
 .end method

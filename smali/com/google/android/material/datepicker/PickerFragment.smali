@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field public final i1:Ljava/util/LinkedHashSet;
+.field public final h1:Ljava/util/LinkedHashSet;
 
 
 # direct methods
@@ -28,7 +28,7 @@
 
     invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
 
-    iput-object v0, p0, Lcom/google/android/material/datepicker/PickerFragment;->i1:Ljava/util/LinkedHashSet;
+    iput-object v0, p0, Lcom/google/android/material/datepicker/PickerFragment;->h1:Ljava/util/LinkedHashSet;
 
     return-void
 .end method

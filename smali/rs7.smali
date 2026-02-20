@@ -3,19 +3,13 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic a:I
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public static a(IIII)Landroid/graphics/Insets;
+    .locals 0
 
-    new-instance v0, Lpea;
+    invoke-static {p0, p1, p2, p3}, Landroid/graphics/Insets;->of(IIII)Landroid/graphics/Insets;
 
-    const/4 v1, 0x0
+    move-result-object p0
 
-    invoke-direct {v0, v1}, Lpea;-><init>(I)V
-
-    return-void
+    return-object p0
 .end method

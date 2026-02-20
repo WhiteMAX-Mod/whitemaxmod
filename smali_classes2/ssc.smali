@@ -1,48 +1,71 @@
 .class public final Lssc;
-.super Lo84;
+.super Lt5;
+.source "SourceFile"
 
 
-# instance fields
-.field public final synthetic X:Ltsc;
-
-.field public synthetic d:Ljava/lang/Object;
-
-.field public o:I
+# static fields
+.field public static final a:Lssc;
 
 
 # direct methods
-.method public constructor <init>(Ltsc;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lssc;->X:Ltsc;
+    new-instance v0, Lssc;
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0}, Lt5;-><init>()V
+
+    sput-object v0, Lssc;->a:Lssc;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final a()Lj88;
+    .locals 2
 
-    iput-object p1, p0, Lssc;->d:Ljava/lang/Object;
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lr5;
 
-    iget p1, p0, Lssc;->o:I
+    move-result-object v0
 
-    const/high16 v0, -0x80000000
+    const/16 v1, 0x47
 
-    or-int/2addr p1, v0
+    invoke-virtual {v0, v1}, Lr5;->d(I)Lbgg;
 
-    iput p1, p0, Lssc;->o:I
+    move-result-object v0
 
-    iget-object p1, p0, Lssc;->X:Ltsc;
+    return-object v0
+.end method
 
-    const/4 v0, 0x0
+.method public final b()Lj88;
+    .locals 2
 
-    invoke-virtual {p1, v0, p0}, Ltsc;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lr5;
 
-    move-result-object p1
+    move-result-object v0
 
-    return-object p1
+    const/16 v1, 0x7f
+
+    invoke-virtual {v0, v1}, Lr5;->d(I)Lbgg;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final c()Lj88;
+    .locals 2
+
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v0
+
+    const/16 v1, 0xe
+
+    invoke-virtual {v0, v1}, Lr5;->d(I)Lbgg;
+
+    move-result-object v0
+
+    return-object v0
 .end method

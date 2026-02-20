@@ -2,618 +2,659 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/content/SharedPreferences$Editor;
-
 
 # instance fields
-.field public final a:Ljava/util/HashMap;
+.field public final a:Ljava/lang/String;
 
-.field public final b:Ljava/lang/Object;
+.field public final b:Lj88;
 
-.field public c:Z
+.field public final c:Lj88;
 
-.field public final synthetic d:Lk16;
+.field public final d:Lj88;
+
+.field public final e:Lj88;
+
+.field public final f:Lj88;
+
+.field public final g:Lj88;
+
+.field public final h:Lj88;
+
+.field public final i:Lj88;
+
+.field public final j:Lj88;
+
+.field public final k:Lj88;
+
+.field public final l:Lj88;
+
+.field public final m:Lj88;
 
 
 # direct methods
-.method public constructor <init>(Lk16;)V
-    .locals 0
+.method public constructor <init>(Lj88;Lj88;Lj88;Lj88;Lj88;Lj88;Lj88;Lj88;Lj88;Lj88;Lj88;Lj88;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lj16;->d:Lk16;
+    const-class v0, Lj16;
 
-    new-instance p1, Ljava/util/HashMap;
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
+    move-result-object v0
 
-    iput-object p1, p0, Lj16;->a:Ljava/util/HashMap;
+    iput-object v0, p0, Lj16;->a:Ljava/lang/String;
 
-    new-instance p1, Ljava/lang/Object;
+    iput-object p1, p0, Lj16;->b:Lj88;
 
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lj16;->c:Lj88;
 
-    iput-object p1, p0, Lj16;->b:Ljava/lang/Object;
+    iput-object p3, p0, Lj16;->d:Lj88;
+
+    iput-object p4, p0, Lj16;->e:Lj88;
+
+    iput-object p5, p0, Lj16;->f:Lj88;
+
+    iput-object p6, p0, Lj16;->g:Lj88;
+
+    iput-object p7, p0, Lj16;->h:Lj88;
+
+    iput-object p8, p0, Lj16;->i:Lj88;
+
+    iput-object p9, p0, Lj16;->j:Lj88;
+
+    iput-object p10, p0, Lj16;->k:Lj88;
+
+    iput-object p11, p0, Lj16;->l:Lj88;
+
+    iput-object p12, p0, Lj16;->m:Lj88;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final apply()V
-    .locals 2
+.method public final a(JJLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Lq16;Lda4;)Ljava/lang/Object;
+    .locals 19
 
-    iget-object v0, p0, Lj16;->d:Lk16;
+    move-object/from16 v1, p0
 
-    iget-object v0, v0, Lk16;->a:Ln16;
+    move-object/from16 v0, p7
 
-    if-eqz v0, :cond_0
+    move-object/from16 v2, p9
 
-    const-string v1, "apply"
+    sget-object v10, Lvrb;->a:Lvrb;
 
-    invoke-interface {v0, v1}, Ln16;->log(Ljava/lang/String;)V
+    instance-of v3, v2, Lg16;
 
-    :cond_0
-    invoke-virtual {p0}, Lj16;->commit()Z
+    if-eqz v3, :cond_0
 
-    return-void
-.end method
+    move-object v3, v2
 
-.method public final clear()Landroid/content/SharedPreferences$Editor;
-    .locals 2
+    check-cast v3, Lg16;
 
-    iget-object v0, p0, Lj16;->b:Ljava/lang/Object;
+    iget v4, v3, Lg16;->X:I
 
-    monitor-enter v0
+    const/high16 v5, -0x80000000
 
-    const/4 v1, 0x1
+    and-int v6, v4, v5
 
-    :try_start_0
-    iput-boolean v1, p0, Lj16;->c:Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    if-eqz v6, :cond_0
 
-    monitor-exit v0
+    sub-int/2addr v4, v5
 
-    return-object p0
-
-    :catchall_0
-    move-exception v1
-
-    monitor-exit v0
-
-    throw v1
-.end method
-
-.method public final commit()Z
-    .locals 14
-
-    iget-object v0, p0, Lj16;->d:Lk16;
-
-    iget-object v0, v0, Lk16;->a:Ln16;
-
-    if-eqz v0, :cond_0
-
-    const-string v1, "commit"
-
-    invoke-interface {v0, v1}, Ln16;->log(Ljava/lang/String;)V
-
-    :cond_0
-    iget-object v0, p0, Lj16;->d:Lk16;
-
-    iget-object v1, v0, Lk16;->f:Ljava/lang/Object;
-
-    monitor-enter v1
-
-    :try_start_0
-    new-instance v2, Ljfa;
-
-    iget-object v3, v0, Lk16;->c:Ljfa;
-
-    iget v3, v3, Ljfa;->e:I
-
-    invoke-direct {v2, v3}, Ljfa;-><init>(I)V
-
-    iget-object v3, v0, Lk16;->c:Ljfa;
-
-    invoke-virtual {v2, v3}, Ljfa;->j(Ljfa;)V
-
-    new-instance v3, Lkfa;
-
-    iget-object v4, v0, Lk16;->e:Ljava/lang/Object;
-
-    invoke-interface {v4}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Ljava/util/WeakHashMap;
-
-    invoke-virtual {v4}, Ljava/util/WeakHashMap;->keySet()Ljava/util/Set;
-
-    move-result-object v4
-
-    invoke-interface {v4}, Ljava/util/Set;->size()I
-
-    move-result v4
-
-    invoke-direct {v3, v4}, Lkfa;-><init>(I)V
-
-    iget-object v4, v0, Lk16;->e:Ljava/lang/Object;
-
-    invoke-interface {v4}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Ljava/util/WeakHashMap;
-
-    invoke-virtual {v4}, Ljava/util/WeakHashMap;->keySet()Ljava/util/Set;
-
-    move-result-object v4
-
-    invoke-interface {v4}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v4
+    iput v4, v3, Lg16;->X:I
 
     :goto_0
-    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
+    move-object v9, v3
 
-    move-result v5
+    goto :goto_1
 
-    if-eqz v5, :cond_1
+    :cond_0
+    new-instance v3, Lg16;
 
-    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v5
-
-    invoke-virtual {v3, v5}, Lkfa;->d(Ljava/lang/Object;)I
-
-    move-result v6
-
-    iget-object v7, v3, Lkfa;->b:[Ljava/lang/Object;
-
-    aput-object v5, v7, v6
+    invoke-direct {v3, v1, v2}, Lg16;-><init>(Lj16;Lda4;)V
 
     goto :goto_0
 
-    :cond_1
-    iget-object v4, p0, Lj16;->b:Ljava/lang/Object;
+    :goto_1
+    iget-object v2, v9, Lg16;->d:Ljava/lang/Object;
 
-    monitor-enter v4
+    sget-object v11, Lod4;->a:Lod4;
+
+    iget v3, v9, Lg16;->X:I
+
+    const/4 v4, 0x1
+
+    if-eqz v3, :cond_2
+
+    if-ne v3, v4, :cond_1
+
+    :try_start_0
+    invoke-static {v2}, Lbvj;->i(Ljava/lang/Object;)V
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    :try_start_1
-    invoke-virtual {v3}, Lkfa;->g()Z
-
-    move-result v5
-
-    new-instance v6, Lefa;
-
-    invoke-direct {v6}, Lefa;-><init>()V
-
-    iget-boolean v7, p0, Lj16;->c:Z
-
-    const/4 v8, 0x0
-
-    const/4 v9, 0x1
-
-    if-eqz v7, :cond_5
-
-    iget-object v7, v0, Lk16;->a:Ln16;
-
-    if-eqz v7, :cond_2
-
-    const-string v10, "commit: is cleared"
-
-    invoke-interface {v7, v10}, Ln16;->log(Ljava/lang/String;)V
-
-    goto :goto_1
+    return-object v10
 
     :catchall_0
     move-exception v0
 
-    goto/16 :goto_a
+    goto/16 :goto_6
+
+    :cond_1
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v2, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {v0, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 
     :cond_2
-    :goto_1
-    iget v7, v2, Ljfa;->e:I
+    invoke-static {v2}, Lbvj;->i(Ljava/lang/Object;)V
 
-    if-eqz v7, :cond_3
+    iget-object v2, v1, Lj16;->a:Ljava/lang/String;
 
-    move v7, v9
+    const-string v3, "File attach click. Start process open file"
+
+    invoke-static {v2, v3}, Ltej;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    if-eqz v0, :cond_4
+
+    :try_start_1
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    if-nez v2, :cond_3
 
     goto :goto_2
 
     :cond_3
-    move v7, v8
+    new-instance v2, Ljava/io/File;
 
-    :goto_2
-    if-eqz v7, :cond_4
+    invoke-direct {v2, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v2}, Ljfa;->a()V
+    move-object v3, v2
 
-    move v7, v9
-
-    :goto_3
-    move v10, v7
-
-    goto :goto_4
-
-    :cond_4
-    move v7, v8
+    move-object/from16 v2, p6
 
     goto :goto_3
 
-    :goto_4
-    iput-boolean v8, p0, Lj16;->c:Z
+    :cond_4
+    :goto_2
+    iget-object v0, v1, Lj16;->c:Lj88;
 
-    move v8, v7
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
 
-    goto :goto_5
+    move-result-object v0
+
+    check-cast v0, Lh56;
+
+    move-object/from16 v2, p6
+
+    invoke-virtual {v0, v2}, Lh56;->h(Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object v0
+
+    move-object v3, v0
+
+    :goto_3
+    invoke-virtual {v3}, Ljava/io/File;->exists()Z
+
+    move-result v0
+
+    if-nez v0, :cond_6
+
+    iget-object v14, v1, Lj16;->a:Ljava/lang/String;
+
+    const-string v15, "file attach not found"
+
+    sget-object v12, Ltej;->a:Lafb;
+
+    if-eqz v12, :cond_5
+
+    sget-object v13, Lzm8;->Y:Lzm8;
+
+    const/16 v17, 0x0
+
+    const/16 v18, 0x8
+
+    const/16 v16, 0x0
+
+    invoke-static/range {v12 .. v18}, Lafb;->f(Lafb;Lzm8;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/Throwable;I)V
 
     :cond_5
-    move v10, v8
+    iget-object v0, v1, Lj16;->e:Lj88;
 
-    :goto_5
-    iget-object v7, p0, Lj16;->a:Ljava/util/HashMap;
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {v7}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
+    move-result-object v0
 
-    move-result-object v7
+    move-object v2, v0
 
-    invoke-interface {v7}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    check-cast v2, Ltdh;
 
-    move-result-object v7
+    sget-object v8, Ls30;->a:Ls30;
 
-    :cond_6
-    :goto_6
-    invoke-interface {v7}, Ljava/util/Iterator;->hasNext()Z
+    iput v4, v9, Lg16;->X:I
 
-    move-result v11
+    move-wide/from16 v3, p1
 
-    if-eqz v11, :cond_c
+    move-wide/from16 v5, p3
 
-    invoke-interface {v7}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    move-object/from16 v7, p5
 
-    move-result-object v11
+    invoke-virtual/range {v2 .. v9}, Ltdh;->a(JJLjava/lang/String;Ls30;Lda4;)Ljava/lang/Object;
 
-    check-cast v11, Ljava/util/Map$Entry;
-
-    invoke-interface {v11}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v12
-
-    check-cast v12, Ljava/lang/String;
-
-    invoke-interface {v11}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object v11
-
-    if-eqz v12, :cond_6
-
-    if-eq v11, p0, :cond_9
-
-    if-nez v11, :cond_7
-
-    goto :goto_7
-
-    :cond_7
-    invoke-virtual {v2, v12}, Ljfa;->b(Ljava/lang/Object;)Z
-
-    move-result v13
-
-    if-eqz v13, :cond_8
-
-    invoke-virtual {v2, v12}, Ljfa;->f(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v13
-
-    if-eqz v13, :cond_8
-
-    invoke-virtual {v13, v11}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v13
-
-    if-eqz v13, :cond_8
-
-    goto :goto_6
-
-    :cond_8
-    invoke-virtual {v2, v12, v11}, Ljfa;->l(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    goto :goto_8
-
-    :cond_9
-    :goto_7
-    invoke-virtual {v2, v12}, Ljfa;->b(Ljava/lang/Object;)Z
-
-    move-result v11
-
-    if-nez v11, :cond_a
-
-    goto :goto_6
-
-    :cond_a
-    invoke-virtual {v2, v12}, Ljfa;->k(Ljava/lang/Object;)Ljava/lang/Object;
-
-    :goto_8
-    if-eqz v5, :cond_b
-
-    invoke-virtual {v6, v12}, Lefa;->b(Ljava/lang/Object;)V
-
-    :cond_b
-    move v10, v9
-
-    goto :goto_6
-
-    :cond_c
-    iget-object v5, p0, Lj16;->a:Ljava/util/HashMap;
-
-    invoke-virtual {v5}, Ljava/util/HashMap;->clear()V
-
-    if-eqz v10, :cond_e
-
-    iget-object v5, v0, Lk16;->a:Ln16;
-
-    if-eqz v5, :cond_d
-
-    const-string v7, "commit: has changes"
-
-    invoke-interface {v5, v7}, Ln16;->log(Ljava/lang/String;)V
-
-    :cond_d
-    iput-object v2, v0, Lk16;->c:Ljfa;
-
-    iget-object v5, v0, Lk16;->d:Ln8g;
-
-    invoke-virtual {v5}, Ln8g;->getValue()Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Lp16;
-
-    invoke-virtual {v5, v2}, Lp16;->a(Ljfa;)V
-
-    invoke-virtual {v0, v3, v8, v6}, Lk16;->a(Lkfa;ZLefa;)V
-
-    goto :goto_9
-
-    :cond_e
-    iget-object v0, v0, Lk16;->a:Ln16;
-
-    if-eqz v0, :cond_f
-
-    const-string v2, "commit: no changes"
-
-    invoke-interface {v0, v2}, Ln16;->log(Ljava/lang/String;)V
+    move-result-object v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    :cond_f
-    :goto_9
+    if-ne v0, v11, :cond_d
+
+    return-object v11
+
+    :cond_6
+    move-wide/from16 v5, p3
+
+    move-object/from16 v7, p5
+
     :try_start_2
-    monitor-exit v4
+    invoke-static {v3}, Li56;->g(Ljava/io/File;)Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-static {v8}, Ld7g;->G(Ljava/lang/CharSequence;)Z
+
+    move-result v0
     :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+    .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    monitor-exit v1
+    if-nez v0, :cond_8
 
-    return v9
+    const/4 v9, 0x0
+
+    :try_start_3
+    new-instance v0, Lorg/json/JSONObject;
+
+    iget-object v11, v1, Lj16;->m:Lj88;
+
+    invoke-interface {v11}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object v11
+
+    check-cast v11, Lzwf;
+
+    check-cast v11, Lenb;
+
+    iget-object v12, v11, Lenb;->h:Lvye;
+
+    sget-object v13, Lenb;->p:[Lv58;
+
+    aget-object v13, v13, v9
+
+    invoke-virtual {v12, v11, v13}, Lvye;->D(Ljava/lang/Object;Lv58;)Ljava/lang/Object;
+
+    move-result-object v11
+
+    check-cast v11, Ljava/lang/String;
+
+    invoke-direct {v0, v11}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    goto :goto_4
 
     :catchall_1
     move-exception v0
 
-    goto :goto_b
+    :try_start_4
+    new-instance v11, Lc6e;
 
-    :goto_a
-    :try_start_3
-    monitor-exit v4
+    invoke-direct {v11, v0}, Lc6e;-><init>(Ljava/lang/Throwable;)V
+
+    move-object v0, v11
+
+    :goto_4
+    new-instance v11, Lorg/json/JSONObject;
+
+    invoke-direct {v11}, Lorg/json/JSONObject;-><init>()V
+
+    instance-of v12, v0, Lc6e;
+
+    if-eqz v12, :cond_7
+
+    move-object v0, v11
+
+    :cond_7
+    check-cast v0, Lorg/json/JSONObject;
+
+    sget-object v11, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
+
+    invoke-virtual {v8, v11}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
+
+    move-result-object v12
+
+    invoke-virtual {v8, v11}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-virtual {v0, v8}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;)I
+
+    move-result v8
+
+    add-int/2addr v8, v4
+
+    invoke-virtual {v0, v12, v8}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
+
+    iget-object v8, v1, Lj16;->m:Lj88;
+
+    invoke-interface {v8}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object v8
+
+    check-cast v8, Lzwf;
+
+    invoke-virtual {v0}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    check-cast v8, Lenb;
+
+    iget-object v11, v8, Lenb;->h:Lvye;
+
+    sget-object v12, Lenb;->p:[Lv58;
+
+    aget-object v9, v12, v9
+
+    invoke-virtual {v11, v8, v9, v0}, Lvye;->N(Ljava/lang/Object;Lv58;Ljava/lang/Object;)V
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_2
+
+    :catchall_2
+    :cond_8
+    :try_start_5
+    invoke-virtual/range {p8 .. p8}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v0
+
+    if-eqz v0, :cond_c
+
+    if-eq v0, v4, :cond_b
+
+    const/4 v5, 0x2
+
+    if-ne v0, v5, :cond_a
+
+    iget-object v0, v1, Lj16;->c:Lj88;
+
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lh56;
+
+    iget-object v5, v1, Lj16;->d:Lj88;
+
+    invoke-interface {v5}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Landroid/content/Context;
+
+    invoke-virtual {v0, v5, v3}, Lh56;->f(Landroid/content/Context;Ljava/io/File;)Landroid/net/Uri;
+
+    move-result-object v0
+
+    new-instance v3, Landroid/content/Intent;
+
+    const-string v5, "android.intent.action.VIEW"
+
+    invoke-direct {v3, v5}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v4}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
+
+    invoke-static {v2}, Lhcj;->g(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    if-nez v2, :cond_9
+
+    const-string v2, "*/*"
+
+    :cond_9
+    invoke-virtual {v3, v0, v2}, Landroid/content/Intent;->setDataAndType(Landroid/net/Uri;Ljava/lang/String;)Landroid/content/Intent;
+
+    new-instance v2, Lwrb;
+
+    invoke-direct {v2, v3, v0}, Lwrb;-><init>(Landroid/content/Intent;Landroid/net/Uri;)V
+
+    goto :goto_5
+
+    :cond_a
+    new-instance v0, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {v0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
     throw v0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    :goto_b
-    monitor-exit v1
+    :cond_b
+    new-instance v2, Lxrb;
 
-    throw v0
+    invoke-direct {v2, v5, v6, v7}, Lxrb;-><init>(JLjava/lang/String;)V
+
+    goto :goto_5
+
+    :cond_c
+    new-instance v2, Lxrb;
+
+    invoke-direct {v2, v5, v6, v7}, Lxrb;-><init>(JLjava/lang/String;)V
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_0
+
+    :goto_5
+    return-object v2
+
+    :goto_6
+    new-instance v2, Lc6e;
+
+    invoke-direct {v2, v0}, Lc6e;-><init>(Ljava/lang/Throwable;)V
+
+    invoke-static {v2}, Le6e;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_d
+
+    iget-object v2, v1, Lj16;->a:Ljava/lang/String;
+
+    const-string v3, "cant open file attach"
+
+    invoke-static {v2, v3, v0}, Ltej;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_d
+    return-object v10
 .end method
 
-.method public final putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
-    .locals 2
+.method public final b(JJJLjava/lang/String;JLda4;)Ljava/lang/Object;
+    .locals 10
 
-    iget-object v0, p0, Lj16;->b:Ljava/lang/Object;
+    const-wide/16 v0, 0x0
 
-    monitor-enter v0
+    cmp-long v0, p5, v0
 
-    :try_start_0
-    iget-object v1, p0, Lj16;->a:Ljava/util/HashMap;
+    sget-object v1, Lod4;->a:Lod4;
 
-    invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    iget-object v2, p0, Lj16;->a:Ljava/lang/String;
 
-    move-result-object p2
+    if-nez v0, :cond_0
 
-    invoke-interface {v1, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    const-string p1, "File attach click. Start process delete message"
 
-    monitor-exit v0
+    invoke-static {v2, p1}, Ltej;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    return-object p0
+    iget-object p1, p0, Lj16;->f:Lj88;
 
-    :catchall_0
-    move-exception p1
+    invoke-interface {p1}, Lj88;->getValue()Ljava/lang/Object;
 
-    monitor-exit v0
+    move-result-object p1
 
-    throw p1
+    check-cast p1, Lto9;
+
+    const/4 p2, 0x1
+
+    move-object/from16 v9, p10
+
+    invoke-static {p1, p2, p3, p4, v9}, Lto9;->b(Lto9;ZJLda4;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v1, :cond_1
+
+    return-object p1
+
+    :cond_0
+    move-object/from16 v9, p10
+
+    const-string v0, "File attach click. Start process cancel download"
+
+    invoke-static {v2, v0}, Ltej;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lj16;->l:Lj88;
+
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Le20;
+
+    new-instance v2, Lnod;
+
+    const/4 v8, 0x0
+
+    move-wide v3, p3
+
+    move-object/from16 v7, p7
+
+    move-wide/from16 v5, p8
+
+    invoke-direct/range {v2 .. v8}, Lnod;-><init>(JJLjava/lang/String;Lpgh;)V
+
+    invoke-virtual {v0, v2}, Le20;->a(Lrod;)V
+
+    iget-object v0, p0, Lj16;->e:Lj88;
+
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v2, v0
+
+    check-cast v2, Ltdh;
+
+    sget-object v8, Ls30;->b:Ls30;
+
+    move-wide v3, p1
+
+    move-wide v5, p3
+
+    invoke-virtual/range {v2 .. v9}, Ltdh;->a(JJLjava/lang/String;Ls30;Lda4;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v1, :cond_1
+
+    return-object p1
+
+    :cond_1
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
 .end method
 
-.method public final putFloat(Ljava/lang/String;F)Landroid/content/SharedPreferences$Editor;
-    .locals 2
+.method public final c(JJJJLjava/lang/String;Ljava/lang/String;JLda4;)Ljava/lang/Object;
+    .locals 16
 
-    iget-object v0, p0, Lj16;->b:Ljava/lang/Object;
+    move-object/from16 v1, p0
 
-    monitor-enter v0
+    iget-object v0, v1, Lj16;->c:Lj88;
 
-    :try_start_0
-    iget-object v1, p0, Lj16;->a:Ljava/util/HashMap;
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
 
-    invoke-static {p2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    move-result-object v0
 
-    move-result-object p2
+    check-cast v0, Lh56;
 
-    invoke-interface {v1, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    monitor-exit v0
+    const/16 v3, 0x1d
 
-    return-object p0
+    if-ge v2, v3, :cond_1
 
-    :catchall_0
-    move-exception p1
+    iget-object v0, v0, Lh56;->c:Landroid/content/Context;
 
-    monitor-exit v0
+    const-string v2, "android.permission.WRITE_EXTERNAL_STORAGE"
 
-    throw p1
-.end method
+    invoke-static {v0, v2}, Ln94;->e(Landroid/content/Context;Ljava/lang/String;)I
 
-.method public final putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
-    .locals 2
+    move-result v0
 
-    iget-object v0, p0, Lj16;->b:Ljava/lang/Object;
+    if-nez v0, :cond_0
 
-    monitor-enter v0
+    goto :goto_0
 
-    :try_start_0
-    iget-object v1, p0, Lj16;->a:Ljava/util/HashMap;
+    :cond_0
+    sget-object v0, Ltvf;->a:Ltvf;
 
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    return-object v0
 
-    move-result-object p2
+    :cond_1
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-interface {v1, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    :goto_0
+    iget-object v0, v1, Lj16;->g:Lj88;
 
-    monitor-exit v0
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
 
-    return-object p0
+    move-result-object v0
 
-    :catchall_0
-    move-exception p1
+    check-cast v0, Lbjg;
 
-    monitor-exit v0
+    check-cast v0, Lcbb;
 
-    throw p1
-.end method
+    invoke-virtual {v0}, Lcbb;->b()Lgd4;
 
-.method public final putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
-    .locals 2
+    move-result-object v15
 
-    iget-object v0, p0, Lj16;->b:Ljava/lang/Object;
+    new-instance v0, Li16;
 
-    monitor-enter v0
+    const/4 v14, 0x0
 
-    :try_start_0
-    iget-object v1, p0, Lj16;->a:Ljava/util/HashMap;
+    move-wide/from16 v9, p1
 
-    invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    move-wide/from16 v11, p3
 
-    move-result-object p2
+    move-wide/from16 v2, p5
 
-    invoke-interface {v1, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    move-wide/from16 v4, p7
 
-    monitor-exit v0
+    move-object/from16 v6, p9
 
-    return-object p0
+    move-object/from16 v13, p10
 
-    :catchall_0
-    move-exception p1
+    move-wide/from16 v7, p11
 
-    monitor-exit v0
+    invoke-direct/range {v0 .. v14}, Li16;-><init>(Lj16;JJLjava/lang/String;JJJLjava/lang/String;Lkotlin/coroutines/Continuation;)V
 
-    throw p1
-.end method
+    move-object v1, v0
 
-.method public final putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
-    .locals 2
+    move-object/from16 v0, p13
 
-    iget-object v0, p0, Lj16;->b:Ljava/lang/Object;
+    invoke-static {v15, v1, v0}, Lea9;->r(Led4;Lys6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    monitor-enter v0
+    move-result-object v0
 
-    :try_start_0
-    iget-object v1, p0, Lj16;->a:Ljava/util/HashMap;
-
-    invoke-interface {v1, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit v0
-
-    return-object p0
-
-    :catchall_0
-    move-exception p1
-
-    monitor-exit v0
-
-    throw p1
-.end method
-
-.method public final putStringSet(Ljava/lang/String;Ljava/util/Set;)Landroid/content/SharedPreferences$Editor;
-    .locals 2
-
-    iget-object v0, p0, Lj16;->b:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-object v1, p0, Lj16;->a:Ljava/util/HashMap;
-
-    invoke-interface {v1, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit v0
-
-    return-object p0
-
-    :catchall_0
-    move-exception p1
-
-    monitor-exit v0
-
-    throw p1
-.end method
-
-.method public final remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
-    .locals 2
-
-    iget-object v0, p0, Lj16;->b:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-object v1, p0, Lj16;->a:Ljava/util/HashMap;
-
-    invoke-interface {v1, p1, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit v0
-
-    return-object p0
-
-    :catchall_0
-    move-exception p1
-
-    monitor-exit v0
-
-    throw p1
+    return-object v0
 .end method

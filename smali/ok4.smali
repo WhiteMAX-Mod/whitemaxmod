@@ -1,390 +1,420 @@
-.class public Lok4;
+.class public final Lok4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Landroid/net/Uri;
 
 .field public final b:J
 
-.field public c:Z
+.field public final c:I
 
-.field public final d:Ljava/lang/Object;
+.field public final d:[B
+
+.field public final e:Ljava/util/Map;
+
+.field public final f:J
+
+.field public final g:J
+
+.field public final h:Ljava/lang/String;
+
+.field public final i:I
+
+.field public final j:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(J)V
+.method static constructor <clinit>()V
     .locals 1
 
-    const/4 v0, 0x0
+    const-string v0, "media3.datasource"
 
-    iput v0, p0, Lok4;->a:I
-
-    .line 19
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Lok4;->b:J
-
-    const/4 p1, 0x1
-
-    .line 20
-    iput-boolean p1, p0, Lok4;->c:Z
-
-    .line 21
-    new-instance p1, Ljw3;
-
-    const/16 p2, 0xd
-
-    invoke-direct {p1, p2, p0}, Ljw3;-><init>(ILjava/lang/Object;)V
-
-    iput-object p1, p0, Lok4;->d:Ljava/lang/Object;
+    invoke-static {v0}, Lw69;->a(Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method public constructor <init>(JLto6;)V
-    .locals 8
+.method public constructor <init>(Landroid/net/Uri;JI[BLjava/util/Map;JJLjava/lang/String;ILjava/lang/Object;)V
+    .locals 9
 
-    const/4 v0, 0x1
+    move-wide/from16 v0, p7
 
-    iput v0, p0, Lok4;->a:I
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    iput-wide p1, p0, Lok4;->b:J
+    move-wide/from16 v2, p9
 
     .line 3
-    new-instance p1, Ljava/util/ArrayList;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+    add-long v4, p2, v0
 
-    iput-object p1, p0, Lok4;->d:Ljava/lang/Object;
+    const-wide/16 v6, 0x0
+
+    cmp-long v4, v4, v6
+
+    const/4 v5, 0x0
+
+    const/4 v8, 0x1
+
+    if-ltz v4, :cond_0
+
+    move v4, v8
+
+    goto :goto_0
+
+    :cond_0
+    move v4, v5
 
     .line 4
-    iget p1, p3, Lto6;->b:I
+    :goto_0
+    invoke-static {v4}, Lxej;->b(Z)V
 
-    const/16 p2, 0x194
+    cmp-long v4, v0, v6
 
-    if-ne p1, p2, :cond_0
+    if-ltz v4, :cond_1
 
-    goto/16 :goto_1
+    move v4, v8
+
+    goto :goto_1
+
+    :cond_1
+    move v4, v5
 
     .line 5
-    :cond_0
-    iget-object p1, p3, Lto6;->c:Ljava/lang/Object;
+    :goto_1
+    invoke-static {v4}, Lxej;->b(Z)V
 
-    check-cast p1, Ljava/util/HashMap;
+    cmp-long v4, v2, v6
 
-    .line 6
-    const-string p2, "Range"
+    if-gtz v4, :cond_2
 
-    invoke-virtual {p1, p2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    const-wide/16 v6, -0x1
 
-    move-result-object p1
+    cmp-long v4, v2, v6
 
-    check-cast p1, Ljava/lang/String;
-
-    .line 7
-    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_1
-
-    goto/16 :goto_1
-
-    .line 8
-    :cond_1
-    const-string p2, ","
-
-    filled-new-array {p2}, [Ljava/lang/String;
-
-    move-result-object p2
-
-    const/4 p3, 0x6
-
-    invoke-static {p1, p2, p3}, Lrzf;->U(Ljava/lang/CharSequence;[Ljava/lang/String;I)Ljava/util/List;
-
-    move-result-object p1
-
-    .line 9
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
+    if-nez v4, :cond_3
 
     :cond_2
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    move v5, v8
 
-    move-result p2
+    .line 6
+    :cond_3
+    invoke-static {v5}, Lxej;->b(Z)V
 
-    if-eqz p2, :cond_5
+    .line 7
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    .line 8
+    iput-object p1, p0, Lok4;->a:Landroid/net/Uri;
 
-    move-result-object p2
-
-    check-cast p2, Ljava/lang/String;
+    .line 9
+    iput-wide p2, p0, Lok4;->b:J
 
     .line 10
-    invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    iput p4, p0, Lok4;->c:I
 
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    goto :goto_0
+    if-eqz p5, :cond_4
 
     .line 11
-    :cond_3
-    const-string v0, "/"
+    array-length p1, p5
 
-    filled-new-array {v0}, [Ljava/lang/String;
+    if-eqz p1, :cond_4
 
-    move-result-object v0
+    move-object p1, p5
 
-    invoke-static {p2, v0, p3}, Lrzf;->U(Ljava/lang/CharSequence;[Ljava/lang/String;I)Ljava/util/List;
+    goto :goto_2
 
-    move-result-object p2
+    :cond_4
+    const/4 p1, 0x0
+
+    :goto_2
+    iput-object p1, p0, Lok4;->d:[B
 
     .line 12
-    invoke-interface {p2}, Ljava/util/List;->size()I
+    new-instance p1, Ljava/util/HashMap;
 
-    move-result v0
+    move-object p2, p6
 
-    const/4 v1, 0x2
+    invoke-direct {p1, p6}, Ljava/util/HashMap;-><init>(Ljava/util/Map;)V
 
-    if-ne v0, v1, :cond_2
+    invoke-static {p1}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
 
-    const/4 v0, 0x0
+    move-result-object p1
 
-    invoke-interface {p2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/CharSequence;
-
-    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_4
-
-    goto :goto_0
+    iput-object p1, p0, Lok4;->e:Ljava/util/Map;
 
     .line 13
-    :cond_4
-    invoke-interface {p2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Ljava/lang/CharSequence;
-
-    const-string v2, "-"
-
-    filled-new-array {v2}, [Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {p2, v2, p3}, Lrzf;->U(Ljava/lang/CharSequence;[Ljava/lang/String;I)Ljava/util/List;
-
-    move-result-object p2
+    iput-wide v0, p0, Lok4;->f:J
 
     .line 14
-    invoke-interface {p2}, Ljava/util/List;->size()I
+    iput-wide v2, p0, Lok4;->g:J
 
-    move-result v2
-
-    if-ne v2, v1, :cond_2
+    move-object/from16 p1, p11
 
     .line 15
-    invoke-interface {p2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    iput-object p1, p0, Lok4;->h:Ljava/lang/String;
 
-    move-result-object v0
+    move/from16 p1, p12
 
-    check-cast v0, Ljava/lang/String;
+    .line 16
+    iput p1, p0, Lok4;->i:I
 
-    invoke-static {v0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
+    move-object/from16 p1, p13
 
-    move-result-wide v2
+    .line 17
+    iput-object p1, p0, Lok4;->j:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/net/Uri;JJ)V
+    .locals 14
+
+    .line 1
+    sget-object v6, Ljava/util/Collections;->EMPTY_MAP:Ljava/util/Map;
+
+    const/4 v12, 0x0
+
+    const/4 v13, 0x0
+
+    const-wide/16 v2, 0x0
+
+    const/4 v4, 0x1
+
+    const/4 v5, 0x0
+
+    const/4 v11, 0x0
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    move-wide/from16 v7, p2
+
+    move-wide/from16 v9, p4
+
+    .line 2
+    invoke-direct/range {v0 .. v13}, Lok4;-><init>(Landroid/net/Uri;JI[BLjava/util/Map;JJLjava/lang/String;ILjava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public static b(I)Ljava/lang/String;
+    .locals 1
 
     const/4 v0, 0x1
 
-    .line 16
-    invoke-interface {p2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    if-eq p0, v0, :cond_2
 
-    move-result-object p2
+    const/4 v0, 0x2
 
-    check-cast p2, Ljava/lang/String;
+    if-eq p0, v0, :cond_1
 
-    invoke-static {p2}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
+    const/4 v0, 0x3
 
-    move-result-wide v0
+    if-ne p0, v0, :cond_0
 
-    sub-long/2addr v0, v2
+    const-string p0, "HEAD"
 
-    const-wide/16 v4, 0x1
+    return-object p0
 
-    add-long/2addr v4, v0
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalStateException;
 
-    .line 17
-    new-instance v1, Lrc3;
+    invoke-direct {p0}, Ljava/lang/IllegalStateException;-><init>()V
 
-    move-wide v6, v4
+    throw p0
 
-    invoke-direct/range {v1 .. v7}, Lrc3;-><init>(JJJ)V
+    :cond_1
+    const-string p0, "POST"
 
-    .line 18
-    iget-object p2, p0, Lok4;->d:Ljava/lang/Object;
+    return-object p0
 
-    check-cast p2, Ljava/util/ArrayList;
+    :cond_2
+    const-string p0, "GET"
 
-    invoke-virtual {p2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :cond_5
-    :goto_1
-    return-void
+    return-object p0
 .end method
 
 
 # virtual methods
-.method public a()J
+.method public final a()Lmk4;
+    .locals 3
+
+    new-instance v0, Lmk4;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iget-object v1, p0, Lok4;->a:Landroid/net/Uri;
+
+    iput-object v1, v0, Lmk4;->a:Landroid/net/Uri;
+
+    iget-wide v1, p0, Lok4;->b:J
+
+    iput-wide v1, v0, Lmk4;->b:J
+
+    iget v1, p0, Lok4;->c:I
+
+    iput v1, v0, Lmk4;->c:I
+
+    iget-object v1, p0, Lok4;->d:[B
+
+    iput-object v1, v0, Lmk4;->d:[B
+
+    iget-object v1, p0, Lok4;->e:Ljava/util/Map;
+
+    iput-object v1, v0, Lmk4;->e:Ljava/util/Map;
+
+    iget-wide v1, p0, Lok4;->f:J
+
+    iput-wide v1, v0, Lmk4;->f:J
+
+    iget-wide v1, p0, Lok4;->g:J
+
+    iput-wide v1, v0, Lmk4;->g:J
+
+    iget-object v1, p0, Lok4;->h:Ljava/lang/String;
+
+    iput-object v1, v0, Lmk4;->h:Ljava/lang/String;
+
+    iget v1, p0, Lok4;->i:I
+
+    iput v1, v0, Lmk4;->i:I
+
+    iget-object v1, p0, Lok4;->j:Ljava/lang/Object;
+
+    iput-object v1, v0, Lmk4;->j:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final c(J)Lok4;
     .locals 5
 
-    iget-object v0, p0, Lok4;->d:Ljava/lang/Object;
+    iget-wide v0, p0, Lok4;->g:J
 
-    check-cast v0, Ljava/util/ArrayList;
+    const-wide/16 v2, -0x1
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    cmp-long v4, v0, v2
 
-    move-result-object v0
+    if-nez v4, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sub-long v2, v0, p1
+
+    :goto_0
+    invoke-virtual {p0, p1, p2, v2, v3}, Lok4;->d(JJ)Lok4;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final d(JJ)Lok4;
+    .locals 16
+
+    move-object/from16 v0, p0
 
     const-wide/16 v1, 0x0
 
-    :cond_0
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    cmp-long v1, p1, v1
 
-    move-result v3
+    if-nez v1, :cond_0
 
-    if-eqz v3, :cond_1
+    iget-wide v1, v0, Lok4;->g:J
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    cmp-long v1, v1, p3
 
-    move-result-object v3
-
-    check-cast v3, Lrc3;
-
-    invoke-virtual {v3}, Lrc3;->a()Z
-
-    move-result v4
-
-    if-eqz v4, :cond_0
-
-    iget-wide v3, v3, Lrc3;->b:J
-
-    add-long/2addr v1, v3
-
-    goto :goto_0
-
-    :cond_1
-    return-wide v1
-.end method
-
-.method public toString()Ljava/lang/String;
-    .locals 7
-
-    iget v0, p0, Lok4;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    if-nez v1, :cond_0
 
     return-object v0
 
-    :pswitch_0
-    const-string v0, "("
+    :cond_0
+    new-instance v2, Lok4;
 
-    invoke-static {v0}, Lhc0;->l(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-wide v3, v0, Lok4;->f:J
 
-    move-result-object v0
+    add-long v9, v3, p1
 
-    iget-object v1, p0, Lok4;->d:Ljava/lang/Object;
+    iget v14, v0, Lok4;->i:I
 
-    check-cast v1, Ljava/util/ArrayList;
+    iget-object v15, v0, Lok4;->j:Ljava/lang/Object;
 
-    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    iget-object v3, v0, Lok4;->a:Landroid/net/Uri;
+
+    iget-wide v4, v0, Lok4;->b:J
+
+    iget v6, v0, Lok4;->c:I
+
+    iget-object v7, v0, Lok4;->d:[B
+
+    iget-object v8, v0, Lok4;->e:Ljava/util/Map;
+
+    iget-object v13, v0, Lok4;->h:Ljava/lang/String;
+
+    move-wide/from16 v11, p3
+
+    invoke-direct/range {v2 .. v15}, Lok4;-><init>(Landroid/net/Uri;JI[BLjava/util/Map;JJLjava/lang/String;ILjava/lang/Object;)V
+
+    return-object v2
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "DataSpec["
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v1, p0, Lok4;->c:I
+
+    invoke-static {v1}, Lok4;->b(I)Ljava/lang/String;
 
     move-result-object v1
 
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lrc3;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
-
-    move-result v3
-
-    const/4 v4, 0x1
-
-    if-le v3, v4, :cond_0
-
-    const-string v3, ","
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    :cond_0
-    iget-wide v3, v2, Lrc3;->a:J
-
-    invoke-virtual {v0, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v3, "-"
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v3, v2, Lrc3;->a:J
-
-    iget-wide v5, v2, Lrc3;->b:J
-
-    add-long/2addr v3, v5
-
-    const-wide/16 v5, 0x1
-
-    sub-long/2addr v3, v5
-
-    invoke-virtual {v0, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    goto :goto_0
-
-    :cond_1
-    const-string v1, ")"
+    const-string v1, " "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-object v1, p0, Lok4;->a:Landroid/net/Uri;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v2, p0, Lok4;->f:J
+
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v2, p0, Lok4;->g:J
+
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v2, p0, Lok4;->h:Ljava/lang/String;
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lok4;->i:I
+
+    const-string v2, "]"
+
+    invoke-static {v0, v1, v2}, Ltx8;->m(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
 .end method

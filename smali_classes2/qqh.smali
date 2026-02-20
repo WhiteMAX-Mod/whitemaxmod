@@ -1,33 +1,32 @@
-.class public Lqqh;
-.super Lj2;
+.class public final Lqqh;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ltqh;
 
-# virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
 
-    iget-object v0, p0, Lj2;->c:Ljava/lang/Object;
+# static fields
+.field public static final a:Lqqh;
 
-    check-cast v0, Lq29;
+.field public static final b:Lqqh;
 
-    check-cast v0, Lihh;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+# direct methods
+.method static synthetic constructor <clinit>()V
+    .locals 1
 
-    const-string v2, "VideoTrack(format: "
+    new-instance v0, Lqqh;
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    sput-object v0, Lqqh;->a:Lqqh;
 
-    const-string v0, ")"
+    new-instance v0, Lqqh;
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    sput-object v0, Lqqh;->b:Lqqh;
 
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

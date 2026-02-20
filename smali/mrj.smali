@@ -1,10 +1,8 @@
-.class public abstract Lmrj;
-.super Lcpi;
+.class public interface abstract Lmrj;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lnrj;
 
-
-# static fields
-.field public static final synthetic d:I
+# virtual methods
+.method public abstract b(Lcom/google/android/gms/tasks/Task;)V
+.end method

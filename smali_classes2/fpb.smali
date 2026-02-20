@@ -1,21 +1,26 @@
 .class public final Lfpb;
-.super Lhja;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lipb;
 
 
 # instance fields
-.field public final b:Lrv6;
+.field public final a:I
+
+.field public final b:Lks6;
 
 
 # direct methods
-.method public constructor <init>(Lrv6;)V
-    .locals 1
+.method public constructor <init>(ILks6;)V
+    .locals 0
 
-    sget-object v0, Lb3h;->a:Lb3h;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, v0}, Lhja;-><init>(Ljava/lang/Object;)V
+    iput p1, p0, Lfpb;->a:I
 
-    iput-object p1, p0, Lfpb;->b:Lrv6;
+    iput-object p2, p0, Lfpb;->b:Lks6;
 
     return-void
 .end method
@@ -43,54 +48,26 @@
     :cond_1
     check-cast p1, Lfpb;
 
-    iget-object v1, p0, Lfpb;->b:Lrv6;
+    iget p1, p1, Lfpb;->a:I
 
-    iget-object p1, p1, Lfpb;->b:Lrv6;
+    iget v1, p0, Lfpb;->a:I
 
-    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    if-ne v1, p1, :cond_2
 
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
+    return v0
 
     :cond_2
-    return v0
+    return v2
 .end method
 
 .method public final hashCode()I
     .locals 1
 
-    iget-object v0, p0, Lfpb;->b:Lrv6;
+    iget v0, p0, Lfpb;->a:I
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
     move-result v0
 
     return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "OpenExternalMap(geoAttach="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lfpb;->b:Lrv6;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

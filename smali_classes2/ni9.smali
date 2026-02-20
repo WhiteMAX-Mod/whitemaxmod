@@ -1,106 +1,122 @@
-.class public final synthetic Lni9;
+.class public final Lni9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lnq6;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lzef;
 
-.field public final synthetic b:Lbtd;
+.field public final b:Lkotlinx/coroutines/internal/ContextScope;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lbtd;I)V
-    .locals 0
-
-    iput p2, p0, Lni9;->a:I
-
-    iput-object p1, p0, Lni9;->b:Lbtd;
+.method public constructor <init>(Lqy0;Lbjg;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x7
+
+    invoke-static {v0, v0, v1}, Laff;->b(III)Lzef;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lni9;->a:Lzef;
+
+    check-cast p2, Lcbb;
+
+    invoke-virtual {p2}, Lcbb;->a()Lgd4;
+
+    move-result-object p2
+
+    invoke-static {p2}, Lztj;->a(Led4;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object p2
+
+    iput-object p2, p0, Lni9;->b:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-virtual {p1, p0}, Lqy0;->d(Ljava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+.method public final onChatMembersUpdateEvent(Lsu2;)V
+    .locals 5
+    .annotation runtime Lx7g;
+    .end annotation
 
-    iget v0, p0, Lni9;->a:I
+    iget-object v0, p1, Lsu2;->b:Ljava/util/List;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v1, p1, Lsu2;->c:Lcu2;
 
-    iget-object v0, p0, Lni9;->b:Lbtd;
+    iget-wide v2, p1, Lsu2;->d:J
 
-    check-cast p1, Landroid/view/Surface;
+    iget-object p1, p1, Lsu2;->o:Lqu2;
 
-    iput-object p1, v0, Lbtd;->a:Ljava/lang/Object;
+    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
 
-    sget-object p1, Lb3h;->a:Lb3h;
+    move-result p1
 
-    return-object p1
+    if-eqz p1, :cond_1
 
-    :pswitch_0
-    check-cast p1, Ley3;
+    const/4 v4, 0x1
 
-    iget-object v0, p0, Lni9;->b:Lbtd;
+    if-ne p1, v4, :cond_0
 
-    iget-object v1, v0, Lbtd;->a:Ljava/lang/Object;
+    new-instance p1, Lhi9;
 
-    check-cast v1, Lzi9;
+    invoke-direct {p1, v2, v3, v1, v0}, Lhi9;-><init>(JLcu2;Ljava/util/Collection;)V
 
-    new-instance v2, Lys2;
+    goto :goto_0
 
-    invoke-static {p1}, Los8;->p(Ley3;)Lc14;
+    :cond_0
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
 
-    move-result-object v3
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-    iget-object v0, v0, Lbtd;->a:Ljava/lang/Object;
+    throw p1
 
-    check-cast v0, Lzi9;
+    :cond_1
+    new-instance p1, Lfi9;
 
-    iget-object v0, v0, Lzi9;->y0:Lo58;
+    invoke-direct {p1, v2, v3, v1, v0}, Lfi9;-><init>(JLcu2;Ljava/util/Collection;)V
 
-    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+    :goto_0
+    new-instance v0, Lki9;
 
-    move-result-object v0
+    const/4 v1, 0x0
 
-    check-cast v0, Lqgc;
+    invoke-direct {v0, p0, p1, v1}, Lki9;-><init>(Lni9;Lii9;Lkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {p1}, Ley3;->r()J
+    const/4 p1, 0x3
 
-    move-result-wide v4
+    iget-object v2, p0, Lni9;->b:Lkotlinx/coroutines/internal/ContextScope;
 
-    invoke-virtual {v0, v4, v5}, Lqgc;->a(J)Lmgc;
+    invoke-static {v2, v1, v1, v0, p1}, Lea9;->d(Lnd4;Led4;Lqd4;Lys6;I)Lcuf;
 
-    move-result-object p1
+    return-void
+.end method
 
-    new-instance v0, Lngc;
+.method public final onEvent(Lk84;)V
+    .locals 3
+    .annotation runtime Lx7g;
+    .end annotation
 
-    iget v4, p1, Lmgc;->a:I
+    new-instance v0, Lli9;
 
-    iget-object p1, p1, Lmgc;->b:Lvgc;
+    const/4 v1, 0x0
 
-    invoke-direct {v0, v4, p1}, Lngc;-><init>(ILvgc;)V
+    invoke-direct {v0, p0, p1, v1}, Lli9;-><init>(Lni9;Lk84;Lkotlin/coroutines/Continuation;)V
 
-    const-wide/16 v4, 0x0
+    const/4 p1, 0x3
 
-    invoke-direct {v2, v3, v0, v4, v5}, Lys2;-><init>(Lc14;Lngc;J)V
+    iget-object v2, p0, Lni9;->b:Lkotlinx/coroutines/internal/ContextScope;
 
-    invoke-virtual {v1, v2}, Lzi9;->A(Lys2;)Lag9;
+    invoke-static {v2, v1, v1, v0, p1}, Lea9;->d(Lnd4;Led4;Lqd4;Lys6;I)Lcuf;
 
-    move-result-object p1
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

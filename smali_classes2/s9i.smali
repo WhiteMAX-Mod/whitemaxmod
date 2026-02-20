@@ -1,100 +1,98 @@
-.class public final Ls9i;
-.super Lp6g;
+.class public final enum Ls9i;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Lrdi;
 
 
-# instance fields
-.field public final synthetic X:Lone/me/webapp/settings/WebAppSettingsScreen;
+# static fields
+.field public static final enum a:Ls9i;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public static final synthetic b:[Ls9i;
+
+.field public static final synthetic c:Lpm5;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/webapp/settings/WebAppSettingsScreen;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput-object p2, p0, Ls9i;->X:Lone/me/webapp/settings/WebAppSettingsScreen;
+    new-instance v0, Ls9i;
 
-    const/4 p2, 0x2
+    const-string v1, "CHANGE_SCREEN_BRIGHTNESS"
 
-    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Ls9i;->a:Ls9i;
+
+    filled-new-array {v0}, [Ls9i;
+
+    move-result-object v0
+
+    sput-object v0, Ls9i;->b:[Ls9i;
+
+    new-instance v1, Lpm5;
+
+    invoke-direct {v1, v0}, Lpm5;-><init>([Ljava/lang/Enum;)V
+
+    sput-object v1, Ls9i;->c:Lpm5;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Ls9i;
+    .locals 1
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    const-class v0, Ls9i;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    invoke-virtual {p0, p1, p2}, Ls9i;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    move-result-object p0
 
-    move-result-object p1
+    check-cast p0, Ls9i;
 
-    check-cast p1, Ls9i;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Ls9i;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
+    return-object p0
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public static values()[Ls9i;
+    .locals 1
 
-    new-instance v0, Ls9i;
+    sget-object v0, Ls9i;->b:[Ls9i;
 
-    iget-object v1, p0, Ls9i;->X:Lone/me/webapp/settings/WebAppSettingsScreen;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    invoke-direct {v0, p2, v1}, Ls9i;-><init>(Lkotlin/coroutines/Continuation;Lone/me/webapp/settings/WebAppSettingsScreen;)V
+    move-result-object v0
 
-    iput-object p1, v0, Ls9i;->o:Ljava/lang/Object;
+    check-cast v0, [Ls9i;
 
     return-object v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
 
-    iget-object v0, p0, Ls9i;->o:Ljava/lang/Object;
+# virtual methods
+.method public final a()Ljava/lang/Integer;
+    .locals 1
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    const/4 v0, 0x0
 
-    check-cast v0, Ly9i;
+    return-object v0
+.end method
 
-    iget-object p1, p0, Ls9i;->X:Lone/me/webapp/settings/WebAppSettingsScreen;
+.method public final b()Ljava/lang/String;
+    .locals 1
 
-    iget-object v1, p1, Lone/me/webapp/settings/WebAppSettingsScreen;->Y:Lrdi;
+    const-string v0, "WebAppChangeScreenBrightness"
 
-    iget-object v2, v0, Ly9i;->b:Ljava/util/List;
+    return-object v0
+.end method
 
-    invoke-virtual {v1, v2}, Lnd8;->F(Ljava/util/List;)V
+.method public final d()Ljava/lang/String;
+    .locals 1
 
-    iget-object v1, p1, Lone/me/webapp/settings/WebAppSettingsScreen;->o:Ljld;
+    const-string v0, "change_screen_brightness"
 
-    sget-object v2, Lone/me/webapp/settings/WebAppSettingsScreen;->Z:[Lz28;
-
-    const/4 v3, 0x2
-
-    aget-object v2, v2, v3
-
-    invoke-interface {v1, p1, v2}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lymb;
-
-    iget-object v0, v0, Ly9i;->a:Ljava/lang/String;
-
-    invoke-virtual {p1, v0}, Lymb;->setTitle(Ljava/lang/CharSequence;)V
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
+    return-object v0
 .end method

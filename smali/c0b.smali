@@ -1,213 +1,87 @@
 .class public final Lc0b;
-.super Ljava/lang/Object;
+.super Ljava/util/concurrent/atomic/AtomicReference;
 .source "SourceFile"
+
+# interfaces
+.implements Lv2b;
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/locks/ReentrantLock;
+.field public final a:Lv2b;
 
-.field public final b:[J
-
-.field public final c:[Z
-
-.field public volatile d:Z
-
-.field public final e:Ljava/util/concurrent/locks/ReentrantLock;
-
-.field public volatile f:Z
+.field public final b:Ld0b;
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 1
+.method public constructor <init>(Lv2b;Ld0b;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
-    new-instance v0, Ljava/util/concurrent/locks/ReentrantLock;
+    iput-object p1, p0, Lc0b;->a:Lv2b;
 
-    invoke-direct {v0}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
-
-    iput-object v0, p0, Lc0b;->a:Ljava/util/concurrent/locks/ReentrantLock;
-
-    new-array v0, p1, [J
-
-    iput-object v0, p0, Lc0b;->b:[J
-
-    new-array p1, p1, [Z
-
-    iput-object p1, p0, Lc0b;->c:[Z
-
-    new-instance p1, Ljava/util/concurrent/locks/ReentrantLock;
-
-    invoke-direct {p1}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
-
-    iput-object p1, p0, Lc0b;->e:Ljava/util/concurrent/locks/ReentrantLock;
+    iput-object p2, p0, Lc0b;->b:Ld0b;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a([I)Z
-    .locals 12
+.method public final b(Ljava/lang/Object;)V
+    .locals 1
 
-    iget-object v0, p0, Lc0b;->a:Ljava/util/concurrent/locks/ReentrantLock;
+    iget-object v0, p0, Lc0b;->a:Lv2b;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
+    invoke-interface {v0, p1}, Lv2b;->b(Ljava/lang/Object;)V
 
-    :try_start_0
-    array-length v1, p1
-
-    const/4 v2, 0x0
-
-    move v3, v2
-
-    move v4, v3
-
-    :goto_0
-    const/4 v5, 0x1
-
-    if-ge v3, v1, :cond_1
-
-    aget v6, p1, v3
-
-    iget-object v7, p0, Lc0b;->b:[J
-
-    aget-wide v8, v7, v6
-
-    const-wide/16 v10, 0x1
-
-    add-long/2addr v10, v8
-
-    aput-wide v10, v7, v6
-
-    const-wide/16 v6, 0x0
-
-    cmp-long v6, v8, v6
-
-    if-nez v6, :cond_0
-
-    iput-boolean v5, p0, Lc0b;->d:Z
-
-    move v4, v5
-
-    goto :goto_1
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_2
-
-    :cond_0
-    :goto_1
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    if-nez v4, :cond_2
-
-    iget-boolean p1, p0, Lc0b;->d:Z
-
-    if-nez p1, :cond_2
-
-    iget-boolean p1, p0, Lc0b;->f:Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-eqz p1, :cond_3
-
-    :cond_2
-    move v2, v5
-
-    :cond_3
-    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
-
-    return v2
-
-    :goto_2
-    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
-
-    throw p1
+    return-void
 .end method
 
-.method public final b([I)Z
-    .locals 14
+.method public final c()V
+    .locals 2
 
-    iget-object v0, p0, Lc0b;->a:Ljava/util/concurrent/locks/ReentrantLock;
+    iget-object v0, p0, Lc0b;->b:Ld0b;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
+    const/4 v1, 0x0
 
-    :try_start_0
-    array-length v1, p1
+    iput-boolean v1, v0, Ld0b;->Z:Z
 
-    const/4 v2, 0x0
+    invoke-virtual {v0}, Ld0b;->a()V
 
-    move v3, v2
+    return-void
+.end method
 
-    move v4, v3
+.method public final d(Ly35;)V
+    .locals 0
 
-    :goto_0
-    const/4 v5, 0x1
+    invoke-static {p0, p1}, Lc45;->d(Ljava/util/concurrent/atomic/AtomicReference;Ly35;)Z
 
-    if-ge v3, v1, :cond_1
+    return-void
+.end method
 
-    aget v6, p1, v3
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 2
 
-    iget-object v7, p0, Lc0b;->b:[J
+    iget-object v0, p0, Lc0b;->b:Ld0b;
 
-    aget-wide v8, v7, v6
+    iget-object v1, v0, Ld0b;->d:La10;
 
-    const-wide/16 v10, 0x1
+    invoke-virtual {v1, p1}, La10;->b(Ljava/lang/Throwable;)Z
 
-    sub-long v12, v8, v10
+    move-result p1
 
-    aput-wide v12, v7, v6
+    if-eqz p1, :cond_0
 
-    cmp-long v6, v8, v10
+    iget-object p1, v0, Ld0b;->Y:Ly35;
 
-    if-nez v6, :cond_0
+    invoke-interface {p1}, Ly35;->dispose()V
 
-    iput-boolean v5, p0, Lc0b;->d:Z
+    const/4 p1, 0x0
 
-    move v4, v5
+    iput-boolean p1, v0, Ld0b;->Z:Z
 
-    goto :goto_1
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_2
+    invoke-virtual {v0}, Ld0b;->a()V
 
     :cond_0
-    :goto_1
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    if-nez v4, :cond_2
-
-    iget-boolean p1, p0, Lc0b;->d:Z
-
-    if-nez p1, :cond_2
-
-    iget-boolean p1, p0, Lc0b;->f:Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-eqz p1, :cond_3
-
-    :cond_2
-    move v2, v5
-
-    :cond_3
-    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
-
-    return v2
-
-    :goto_2
-    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
-
-    throw p1
+    return-void
 .end method

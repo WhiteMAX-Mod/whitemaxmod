@@ -2,57 +2,141 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lar1;
-
 
 # instance fields
-.field public final a:Ljava/util/concurrent/CopyOnWriteArraySet;
+.field public final a:J
+
+.field public final b:I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(JI)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
+    iput-wide p1, p0, Lque;->a:J
 
-    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
-
-    iput-object v0, p0, Lque;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    iput p3, p0, Lque;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lxz0;)V
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget-object v0, p0, Lque;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+    goto :goto_1
 
-    move-result-object v0
+    :cond_0
+    instance-of v0, p1, Lque;
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lque;
+
+    iget-wide v0, p0, Lque;->a:J
+
+    iget-wide v2, p1, Lque;->a:J
+
+    cmp-long v0, v0, v2
+
+    if-eqz v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget v0, p0, Lque;->b:I
+
+    iget p1, p1, Lque;->b:I
+
+    if-eq v0, p1, :cond_3
 
     :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_3
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Lque;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Lque;->b:I
+
+    invoke-static {v1}, Ly12;->t(I)I
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    add-int/2addr v1, v0
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    return v1
+.end method
 
-    move-result-object v1
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    check-cast v1, Lar1;
+    const-string v0, "SelectedMention(id="
 
-    invoke-interface {v1, p1}, Lar1;->a(Lxz0;)V
+    const-string v1, ", selectedMentionType="
+
+    iget-wide v2, p0, Lque;->a:J
+
+    invoke-static {v2, v3, v0, v1}, Ly12;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    iget v2, p0, Lque;->b:I
+
+    if-eq v2, v1, :cond_1
+
+    const/4 v1, 0x2
+
+    if-eq v2, v1, :cond_0
+
+    const-string v1, "null"
 
     goto :goto_0
 
     :cond_0
-    return-void
+    const-string v1, "NAME"
+
+    goto :goto_0
+
+    :cond_1
+    const-string v1, "SHORTLINK"
+
+    :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

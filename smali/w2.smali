@@ -23,7 +23,7 @@
 
 
 # direct methods
-.method public constructor <init>(Lg2;Ljava/lang/Object;Ljava/util/List;Lw2;)V
+.method public constructor <init>(Li2;Ljava/lang/Object;Ljava/util/List;Lw2;)V
     .locals 1
 
     const/4 v0, 0x0
@@ -64,7 +64,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Lqui;Ljava/lang/Object;Ljava/util/List;Lw2;)V
+.method public constructor <init>(Lk2j;Ljava/lang/Object;Ljava/util/List;Lw2;)V
     .locals 1
 
     const/4 v0, 0x1
@@ -118,9 +118,9 @@
     :cond_0
     iget-object v0, p0, Lw2;->X:Ljava/io/Serializable;
 
-    check-cast v0, Lg2;
+    check-cast v0, Li2;
 
-    iget-object v0, v0, Lg2;->d:Ljava/util/Map;
+    iget-object v0, v0, Li2;->d:Ljava/util/Map;
 
     iget-object v1, p0, Lw2;->b:Ljava/lang/Object;
 
@@ -188,14 +188,14 @@
     .line 12
     iget-object p1, p0, Lw2;->Y:Ljava/io/Serializable;
 
-    check-cast p1, Lg2;
+    check-cast p1, Li2;
 
     .line 13
-    iget p2, p1, Lg2;->o:I
+    iget p2, p1, Li2;->o:I
 
     add-int/lit8 p2, p2, 0x1
 
-    iput p2, p1, Lg2;->o:I
+    iput p2, p1, Li2;->o:I
 
     if-eqz v0, :cond_1
 
@@ -272,14 +272,14 @@
     .line 22
     iget-object v1, p0, Lw2;->X:Ljava/io/Serializable;
 
-    check-cast v1, Lg2;
+    check-cast v1, Li2;
 
     .line 23
-    iget v2, v1, Lg2;->o:I
+    iget v2, v1, Li2;->o:I
 
     add-int/lit8 v2, v2, 0x1
 
-    iput v2, v1, Lg2;->o:I
+    iput v2, v1, Li2;->o:I
 
     if-eqz v0, :cond_1
 
@@ -389,16 +389,16 @@
     .line 14
     iget-object v1, p0, Lw2;->Y:Ljava/io/Serializable;
 
-    check-cast v1, Lg2;
+    check-cast v1, Li2;
 
     sub-int/2addr p2, v0
 
     .line 15
-    iget v2, v1, Lg2;->o:I
+    iget v2, v1, Li2;->o:I
 
     add-int/2addr v2, p2
 
-    iput v2, v1, Lg2;->o:I
+    iput v2, v1, Li2;->o:I
 
     if-nez v0, :cond_3
 
@@ -503,16 +503,16 @@
     .line 26
     iget-object v2, p0, Lw2;->X:Ljava/io/Serializable;
 
-    check-cast v2, Lg2;
+    check-cast v2, Li2;
 
     sub-int/2addr v1, v0
 
     .line 27
-    iget v3, v2, Lg2;->o:I
+    iget v3, v2, Li2;->o:I
 
     add-int/2addr v3, v1
 
-    iput v3, v2, Lg2;->o:I
+    iput v3, v2, Li2;->o:I
 
     if-nez v0, :cond_3
 
@@ -568,9 +568,9 @@
 
     iget-object v0, p0, Lw2;->X:Ljava/io/Serializable;
 
-    check-cast v0, Lg2;
+    check-cast v0, Li2;
 
-    iget-object v0, v0, Lg2;->d:Ljava/util/Map;
+    iget-object v0, v0, Li2;->d:Ljava/util/Map;
 
     iget-object v1, p0, Lw2;->b:Ljava/lang/Object;
 
@@ -613,9 +613,9 @@
 
     iget-object v0, p0, Lw2;->X:Ljava/io/Serializable;
 
-    check-cast v0, Lg2;
+    check-cast v0, Li2;
 
-    iget-object v0, v0, Lg2;->d:Ljava/util/Map;
+    iget-object v0, v0, Li2;->d:Ljava/util/Map;
 
     iget-object v1, p0, Lw2;->b:Ljava/lang/Object;
 
@@ -666,13 +666,13 @@
 
     iget-object v1, p0, Lw2;->X:Ljava/io/Serializable;
 
-    check-cast v1, Lg2;
+    check-cast v1, Li2;
 
-    iget v2, v1, Lg2;->o:I
+    iget v2, v1, Li2;->o:I
 
     sub-int/2addr v2, v0
 
-    iput v2, v1, Lg2;->o:I
+    iput v2, v1, Li2;->o:I
 
     invoke-virtual {p0}, Lw2;->c()V
 
@@ -773,15 +773,15 @@
     :cond_0
     iget-object v0, p0, Lw2;->X:Ljava/io/Serializable;
 
-    check-cast v0, Lqui;
+    check-cast v0, Lk2j;
 
-    iget-object v0, v0, Lqui;->c:Lnm3;
+    iget-object v0, v0, Lk2j;->c:Ldn3;
 
     iget-object v1, p0, Lw2;->c:Ljava/util/Collection;
 
     iget-object v2, p0, Lw2;->b:Ljava/lang/Object;
 
-    invoke-virtual {v0, v2, v1}, Lnm3;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v2, v1}, Ldn3;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
@@ -823,13 +823,13 @@
 
     iget-object v0, p0, Lw2;->X:Ljava/io/Serializable;
 
-    check-cast v0, Lqui;
+    check-cast v0, Lk2j;
 
     iget-object v1, p0, Lw2;->b:Ljava/lang/Object;
 
-    iget-object v0, v0, Lqui;->c:Lnm3;
+    iget-object v0, v0, Lk2j;->c:Ldn3;
 
-    invoke-virtual {v0, v1}, Lnm3;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ldn3;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -920,13 +920,13 @@
 
     iget-object v0, p0, Lw2;->X:Ljava/io/Serializable;
 
-    check-cast v0, Lqui;
+    check-cast v0, Lk2j;
 
     iget-object v1, p0, Lw2;->b:Ljava/lang/Object;
 
-    iget-object v0, v0, Lqui;->c:Lnm3;
+    iget-object v0, v0, Lk2j;->c:Ldn3;
 
-    invoke-virtual {v0, v1}, Lnm3;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ldn3;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_1
     return-void
@@ -1130,10 +1130,10 @@
     .line 1
     invoke-virtual {p0}, Lw2;->e()V
 
-    new-instance v0, Lgui;
+    new-instance v0, La2j;
 
     .line 2
-    invoke-direct {v0, p0}, Lgui;-><init>(Lw2;)V
+    invoke-direct {v0, p0}, La2j;-><init>(Lw2;)V
 
     return-object v0
 
@@ -1166,10 +1166,10 @@
     .line 5
     invoke-virtual {p0}, Lw2;->e()V
 
-    new-instance v0, Lgui;
+    new-instance v0, La2j;
 
     .line 6
-    invoke-direct {v0, p0, p1}, Lgui;-><init>(Lw2;I)V
+    invoke-direct {v0, p0, p1}, La2j;-><init>(Lw2;I)V
 
     return-object v0
 
@@ -1235,14 +1235,14 @@
     .line 9
     iget-object v0, p0, Lw2;->Y:Ljava/io/Serializable;
 
-    check-cast v0, Lg2;
+    check-cast v0, Li2;
 
     .line 10
-    iget v1, v0, Lg2;->o:I
+    iget v1, v0, Li2;->o:I
 
     add-int/lit8 v1, v1, -0x1
 
-    iput v1, v0, Lg2;->o:I
+    iput v1, v0, Li2;->o:I
 
     .line 11
     invoke-virtual {p0}, Lw2;->c()V
@@ -1298,14 +1298,14 @@
     .line 17
     iget-object v0, p0, Lw2;->X:Ljava/io/Serializable;
 
-    check-cast v0, Lg2;
+    check-cast v0, Li2;
 
     .line 18
-    iget v1, v0, Lg2;->o:I
+    iget v1, v0, Li2;->o:I
 
     add-int/lit8 v1, v1, -0x1
 
-    iput v1, v0, Lg2;->o:I
+    iput v1, v0, Li2;->o:I
 
     .line 19
     invoke-virtual {p0}, Lw2;->c()V
@@ -1391,15 +1391,15 @@
 
     iget-object v2, p0, Lw2;->X:Ljava/io/Serializable;
 
-    check-cast v2, Lg2;
+    check-cast v2, Li2;
 
     sub-int/2addr v1, v0
 
-    iget v0, v2, Lg2;->o:I
+    iget v0, v2, Li2;->o:I
 
     add-int/2addr v0, v1
 
-    iput v0, v2, Lg2;->o:I
+    iput v0, v2, Li2;->o:I
 
     invoke-virtual {p0}, Lw2;->c()V
 
@@ -1466,15 +1466,15 @@
 
     iget-object v2, p0, Lw2;->X:Ljava/io/Serializable;
 
-    check-cast v2, Lg2;
+    check-cast v2, Li2;
 
     sub-int/2addr v1, v0
 
-    iget v0, v2, Lg2;->o:I
+    iget v0, v2, Li2;->o:I
 
     add-int/2addr v0, v1
 
-    iput v0, v2, Lg2;->o:I
+    iput v0, v2, Li2;->o:I
 
     invoke-virtual {p0}, Lw2;->c()V
 
@@ -1593,7 +1593,7 @@
     :cond_0
     iget-object v0, p0, Lw2;->Y:Ljava/io/Serializable;
 
-    check-cast v0, Lqui;
+    check-cast v0, Lk2j;
 
     instance-of v1, p1, Ljava/util/RandomAccess;
 
@@ -1601,16 +1601,16 @@
 
     if-eqz v1, :cond_1
 
-    new-instance v1, Lcui;
+    new-instance v1, Lw1j;
 
-    invoke-direct {v1, v0, v2, p1, p2}, Lw2;-><init>(Lqui;Ljava/lang/Object;Ljava/util/List;Lw2;)V
+    invoke-direct {v1, v0, v2, p1, p2}, Lw2;-><init>(Lk2j;Ljava/lang/Object;Ljava/util/List;Lw2;)V
 
     goto :goto_0
 
     :cond_1
     new-instance v1, Lw2;
 
-    invoke-direct {v1, v0, v2, p1, p2}, Lw2;-><init>(Lqui;Ljava/lang/Object;Ljava/util/List;Lw2;)V
+    invoke-direct {v1, v0, v2, p1, p2}, Lw2;-><init>(Lk2j;Ljava/lang/Object;Ljava/util/List;Lw2;)V
 
     :goto_0
     return-object v1
@@ -1620,7 +1620,7 @@
 
     iget-object v0, p0, Lw2;->Y:Ljava/io/Serializable;
 
-    check-cast v0, Lg2;
+    check-cast v0, Li2;
 
     iget-object v1, p0, Lw2;->c:Ljava/util/Collection;
 
@@ -1647,14 +1647,14 @@
 
     new-instance v1, Ls2;
 
-    invoke-direct {v1, v0, v2, p1, p2}, Lw2;-><init>(Lg2;Ljava/lang/Object;Ljava/util/List;Lw2;)V
+    invoke-direct {v1, v0, v2, p1, p2}, Lw2;-><init>(Li2;Ljava/lang/Object;Ljava/util/List;Lw2;)V
 
     goto :goto_1
 
     :cond_3
     new-instance v1, Lw2;
 
-    invoke-direct {v1, v0, v2, p1, p2}, Lw2;-><init>(Lg2;Ljava/lang/Object;Ljava/util/List;Lw2;)V
+    invoke-direct {v1, v0, v2, p1, p2}, Lw2;-><init>(Li2;Ljava/lang/Object;Ljava/util/List;Lw2;)V
 
     :goto_1
     return-object v1

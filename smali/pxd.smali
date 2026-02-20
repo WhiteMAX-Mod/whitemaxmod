@@ -2,19 +2,7 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lejc;
-
 
 # virtual methods
-.method public abstract b(Ltve;)V
-.end method
-
-.method public abstract f(Lbjc;Ljava/lang/Throwable;)V
-.end method
-
-.method public abstract g(Lbjc;)V
-.end method
-
-.method public abstract h(Lbjc;)V
+.method public abstract m(Ljava/lang/UnsatisfiedLinkError;[Llqf;)Z
 .end method

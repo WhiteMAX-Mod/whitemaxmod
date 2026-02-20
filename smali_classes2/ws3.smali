@@ -1,117 +1,134 @@
 .class public final Lws3;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lbr6;
+
+# static fields
+.field public static final d:I
+
+.field public static final e:I
 
 
 # instance fields
-.field public final synthetic X:Lone/me/login/confirm/ConfirmPhoneScreen;
+.field public final a:Ljava/util/concurrent/ConcurrentHashMap;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final b:Ljava/util/concurrent/ConcurrentHashMap;
+
+.field public c:Landroid/content/res/Configuration;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/login/confirm/ConfirmPhoneScreen;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput-object p2, p0, Lws3;->X:Lone/me/login/confirm/ConfirmPhoneScreen;
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    const/4 p2, 0x2
+    const/16 v1, 0x1f
 
-    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    if-lt v0, v1, :cond_0
+
+    const v2, 0x10003d84
+
+    goto :goto_0
+
+    :cond_0
+    const/16 v2, 0x3d84
+
+    :goto_0
+    sput v2, Lws3;->d:I
+
+    if-lt v0, v1, :cond_1
+
+    const/high16 v0, 0x50000000
+
+    goto :goto_1
+
+    :cond_1
+    const/high16 v0, 0x40000000    # 2.0f
+
+    :goto_1
+    sput v0, Lws3;->e:I
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+
+    iput-object v0, p0, Lws3;->a:Ljava/util/concurrent/ConcurrentHashMap;
+
+    new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+
+    iput-object v0, p0, Lws3;->b:Ljava/util/concurrent/ConcurrentHashMap;
+
+    new-instance v0, Landroid/content/res/Configuration;
+
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Landroid/content/res/Configuration;-><init>(Landroid/content/res/Configuration;)V
+
+    iput-object v0, p0, Lws3;->c:Landroid/content/res/Configuration;
+
+    new-instance v0, Ljm2;
+
+    invoke-direct {v0, p0, p1}, Ljm2;-><init>(Lws3;Landroid/content/Context;)V
+
+    invoke-virtual {p1, v0}, Landroid/content/Context;->registerComponentCallbacks(Landroid/content/ComponentCallbacks;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a(ILvs3;)V
+    .locals 2
 
-    check-cast p1, Ljava/lang/String;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lws3;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
-    check-cast p1, Lws3;
+    iget-object v0, p0, Lws3;->b:Ljava/util/concurrent/ConcurrentHashMap;
 
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lws3;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lws3;
-
-    iget-object v1, p0, Lws3;->X:Lone/me/login/confirm/ConfirmPhoneScreen;
-
-    invoke-direct {v0, p2, v1}, Lws3;-><init>(Lkotlin/coroutines/Continuation;Lone/me/login/confirm/ConfirmPhoneScreen;)V
-
-    iput-object p1, v0, Lws3;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    iget-object v0, p0, Lws3;->o:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/String;
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    sget-object p1, Lone/me/login/confirm/ConfirmPhoneScreen;->C0:[Lz28;
-
-    iget-object p1, p0, Lws3;->X:Lone/me/login/confirm/ConfirmPhoneScreen;
-
-    iget-object v1, p1, Lone/me/login/confirm/ConfirmPhoneScreen;->B0:Lx07;
-
-    sget-object v2, Lone/me/login/confirm/ConfirmPhoneScreen;->C0:[Lz28;
-
-    const/4 v3, 0x7
-
-    aget-object v2, v2, v3
-
-    invoke-virtual {v1, p1, v2}, Lx07;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lsx7;
+    if-nez v1, :cond_1
 
-    sget-object v2, Lb3h;->a:Lb3h;
+    new-instance v1, Ljava/util/HashSet;
 
-    if-eqz v1, :cond_0
+    invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
 
-    invoke-interface {v1}, Lsx7;->isActive()Z
+    invoke-virtual {v0, p1, v1}, Ljava/util/concurrent/ConcurrentHashMap;->putIfAbsent(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result v1
+    move-result-object p1
 
-    const/4 v3, 0x1
-
-    if-ne v1, v3, :cond_0
+    if-nez p1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    iget-object v1, p1, Lone/me/login/confirm/ConfirmPhoneScreen;->A0:Landroidx/appcompat/widget/AppCompatTextView;
-
-    if-eqz v1, :cond_1
-
-    :goto_0
-    return-object v2
+    move-object v1, p1
 
     :cond_1
-    invoke-virtual {p1, v0}, Lone/me/login/confirm/ConfirmPhoneScreen;->F0(Ljava/lang/String;)V
+    :goto_0
+    check-cast v1, Ljava/util/Set;
 
-    return-object v2
+    invoke-interface {v1, p2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    return-void
 .end method

@@ -1,43 +1,47 @@
 .class public final Ls6h;
-.super Ljava/lang/Exception;
+.super Lx0i;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/lang/Throwable;
+.field public final X:Ltn5;
 
-.field public final b:Ljava/lang/String;
+.field public volatile Y:Lcuf;
+
+.field public final b:Lo6h;
+
+.field public final c:Lj88;
+
+.field public final d:Lj88;
+
+.field public final o:Ltn5;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Throwable;)V
-    .locals 1
+.method public constructor <init>(Lo6h;Lj88;Lj88;)V
+    .locals 0
 
-    const-string v0, "Upload. Reached max retry attempt count"
+    invoke-direct {p0}, Lx0i;-><init>()V
 
-    invoke-direct {p0, v0, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    iput-object p1, p0, Ls6h;->b:Lo6h;
 
-    iput-object p1, p0, Ls6h;->a:Ljava/lang/Throwable;
+    iput-object p2, p0, Ls6h;->c:Lj88;
 
-    iput-object v0, p0, Ls6h;->b:Ljava/lang/String;
+    iput-object p3, p0, Ls6h;->d:Lj88;
+
+    new-instance p1, Ltn5;
+
+    const/4 p2, 0x0
+
+    invoke-direct {p1, p2}, Ltn5;-><init>(I)V
+
+    iput-object p1, p0, Ls6h;->o:Ltn5;
+
+    new-instance p1, Ltn5;
+
+    invoke-direct {p1, p2}, Ltn5;-><init>(I)V
+
+    iput-object p1, p0, Ls6h;->X:Ltn5;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final getCause()Ljava/lang/Throwable;
-    .locals 1
-
-    iget-object v0, p0, Ls6h;->a:Ljava/lang/Throwable;
-
-    return-object v0
-.end method
-
-.method public final getMessage()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Ls6h;->b:Ljava/lang/String;
-
-    return-object v0
 .end method

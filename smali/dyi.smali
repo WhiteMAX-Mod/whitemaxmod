@@ -1,50 +1,109 @@
 .class public final Ldyi;
-.super Ljava/lang/Object;
+.super Lg4;
 .source "SourceFile"
 
 # interfaces
-.implements Lvwa;
+.implements Lg6e;
 
 
 # static fields
-.field public static final a:Ldyi;
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Ldyi;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
+# instance fields
+.field public final a:Ljava/util/List;
+
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Ldyi;
+    new-instance v0, Lc4i;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/16 v1, 0xb
 
-    sput-object v0, Ldyi;->a:Ldyi;
+    invoke-direct {v0, v1}, Lc4i;-><init>(I)V
 
-    new-instance v0, Lbri;
+    sput-object v0, Ldyi;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    const/4 v1, 0x1
+    return-void
+.end method
 
-    invoke-direct {v0, v1}, Lbri;-><init>(I)V
+.method public constructor <init>(Ljava/lang/String;Ljava/util/ArrayList;)V
+    .locals 0
 
-    const-class v1, Lpri;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
+    iput-object p2, p0, Ldyi;->a:Ljava/util/List;
 
-    move-result-object v0
-
-    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
+    iput-object p1, p0, Ldyi;->b:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final a()Lcom/google/android/gms/common/api/Status;
+    .locals 1
 
-    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    iget-object v0, p0, Ldyi;->b:Ljava/lang/String;
 
-    move-result-object p1
+    if-eqz v0, :cond_0
 
-    throw p1
+    sget-object v0, Lcom/google/android/gms/common/api/Status;->o:Lcom/google/android/gms/common/api/Status;
+
+    return-object v0
+
+    :cond_0
+    sget-object v0, Lcom/google/android/gms/common/api/Status;->s0:Lcom/google/android/gms/common/api/Status;
+
+    return-object v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 2
+
+    const/16 p2, 0x4f45
+
+    invoke-static {p1, p2}, Lcwj;->j(Landroid/os/Parcel;I)I
+
+    move-result p2
+
+    iget-object v0, p0, Ldyi;->a:Ljava/util/List;
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x1
+
+    invoke-static {p1, v1}, Lcwj;->j(Landroid/os/Parcel;I)I
+
+    move-result v1
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeStringList(Ljava/util/List;)V
+
+    invoke-static {p1, v1}, Lcwj;->k(Landroid/os/Parcel;I)V
+
+    :goto_0
+    const/4 v0, 0x2
+
+    iget-object v1, p0, Ldyi;->b:Ljava/lang/String;
+
+    invoke-static {p1, v0, v1}, Lcwj;->f(Landroid/os/Parcel;ILjava/lang/String;)V
+
+    invoke-static {p1, p2}, Lcwj;->k(Landroid/os/Parcel;I)V
+
+    return-void
 .end method

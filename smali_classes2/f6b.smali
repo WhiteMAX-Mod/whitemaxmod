@@ -1,178 +1,61 @@
 .class public final Lf6b;
-.super Ld3;
+.super Lsqj;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic c:I
-
-.field public final synthetic d:Lg6b;
+# static fields
+.field public static final a:Lf6b;
 
 
 # direct methods
-.method public constructor <init>(Lg6b;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p2, p0, Lf6b;->c:I
+    new-instance v0, Lf6b;
 
-    iput-object p1, p0, Lf6b;->d:Lg6b;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const/16 p1, 0xd
-
-    packed-switch p2, :pswitch_data_0
-
-    const/4 p2, 0x0
-
-    invoke-direct {p0, p1, p2}, Ld3;-><init>(ILjava/lang/Object;)V
+    sput-object v0, Lf6b;->a:Lf6b;
 
     return-void
-
-    :pswitch_0
-    sget-object p2, Lc6b;->a:Lc6b;
-
-    invoke-direct {p0, p1, p2}, Ld3;-><init>(ILjava/lang/Object;)V
-
-    return-void
-
-    :pswitch_1
-    sget-object p2, Ld6b;->a:Ld6b;
-
-    invoke-direct {p0, p1, p2}, Ld3;-><init>(ILjava/lang/Object;)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final a0(Ljava/lang/Object;Ljava/lang/Object;)V
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    iget v0, p0, Lf6b;->c:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    check-cast p2, Lc6b;
-
-    check-cast p1, Lc6b;
-
-    if-eq p1, p2, :cond_0
-
-    iget-object p1, p0, Lf6b;->d:Lg6b;
-
-    invoke-virtual {p1, p1, p2}, Lg6b;->c(Landroid/view/View;Lc6b;)V
+    return v0
 
     :cond_0
-    return-void
+    instance-of p1, p1, Lf6b;
 
-    :pswitch_0
-    check-cast p2, Ld6b;
+    if-nez p1, :cond_1
 
-    check-cast p1, Ld6b;
+    const/4 p1, 0x0
 
-    if-eq p1, p2, :cond_3
-
-    sget-object p1, Le6b;->$EnumSwitchMapping$0:[I
-
-    invoke-virtual {p2}, Ljava/lang/Enum;->ordinal()I
-
-    move-result p2
-
-    aget p1, p1, p2
-
-    const/4 p2, 0x1
-
-    iget-object v0, p0, Lf6b;->d:Lg6b;
-
-    if-eq p1, p2, :cond_2
-
-    const/4 p2, 0x2
-
-    if-ne p1, p2, :cond_1
-
-    invoke-static {v0}, Lg6b;->a(Lg6b;)Landroidx/appcompat/widget/AppCompatTextView;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
-
-    move-result-object p1
-
-    if-nez p1, :cond_3
-
-    invoke-static {v0}, Lg6b;->a(Lg6b;)Landroidx/appcompat/widget/AppCompatTextView;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
-    goto :goto_0
+    return p1
 
     :cond_1
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+    return v0
+.end method
 
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+.method public final hashCode()I
+    .locals 1
 
-    throw p1
+    const v0, -0x2654655d
 
-    :cond_2
-    invoke-static {v0}, Lg6b;->a(Lg6b;)Landroidx/appcompat/widget/AppCompatTextView;
+    return v0
+.end method
 
-    move-result-object p1
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+    const-string v0, "Dot"
 
-    move-result-object p1
-
-    if-eqz p1, :cond_3
-
-    invoke-static {v0}, Lg6b;->a(Lg6b;)Landroidx/appcompat/widget/AppCompatTextView;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
-
-    :cond_3
-    :goto_0
-    return-void
-
-    :pswitch_1
-    check-cast p2, Lzlb;
-
-    check-cast p1, Lzlb;
-
-    invoke-static {p1, p2}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_5
-
-    iget-object p1, p0, Lf6b;->d:Lg6b;
-
-    if-nez p2, :cond_4
-
-    sget-object p2, Lpc3;->t0:Lkme;
-
-    invoke-virtual {p2, p1}, Lkme;->p(Landroid/view/View;)Lzlb;
-
-    move-result-object p2
-
-    :cond_4
-    invoke-virtual {p1, p2}, Lg6b;->onThemeChanged(Lzlb;)V
-
-    :cond_5
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

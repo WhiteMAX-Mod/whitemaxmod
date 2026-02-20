@@ -3,128 +3,208 @@
 .source "SourceFile"
 
 # interfaces
-.implements Llb;
+.implements Leoc;
 
 
 # instance fields
-.field public final a:Lyk1;
+.field public final synthetic a:I
 
-.field public final b:Z
+.field public final b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lyk1;Z)V
+.method public synthetic constructor <init>(Leoc;I)V
     .locals 0
+
+    .line 1
+    iput p2, p0, Lhb;->a:I
+
+    iput-object p1, p0, Lhb;->b:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lhb;->a:Lyk1;
+    return-void
+.end method
 
-    iput-boolean p2, p0, Lhb;->b:Z
+.method public constructor <init>([Lbsg;)V
+    .locals 1
+
+    const/4 v0, 0x3
+
+    iput v0, p0, Lhb;->a:I
+
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 3
+    check-cast p1, [Lbsg;
+
+    iput-object p1, p0, Lhb;->b:Ljava/lang/Object;
+
+    const/4 v0, 0x0
+
+    .line 4
+    array-length p1, p1
+
+    invoke-static {v0, p1}, Letj;->d(II)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final a(Lkl0;Lfoc;)V
+    .locals 3
 
-    if-ne p0, p1, :cond_0
+    iget v0, p0, Lhb;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    move-object v0, p2
+
+    check-cast v0, Lom0;
+
+    iget-object v0, v0, Lom0;->a:Lwj7;
+
+    iget-object v0, v0, Lwj7;->h:Lr4e;
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    if-nez v0, :cond_0
+
+    invoke-virtual {p1, v1, v2}, Lkl0;->g(ILjava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0, p1, p2}, Lhb;->c(ILkl0;Lfoc;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_1
+
+    invoke-virtual {p1, v1, v2}, Lkl0;->g(ILjava/lang/Object;)V
+
+    :cond_1
+    :goto_0
+    return-void
+
+    :pswitch_0
+    new-instance v0, Lgb;
+
+    const/4 v1, 0x3
+
+    invoke-direct {v0, p1, v1}, Lgb;-><init>(Lkl0;I)V
+
+    iget-object p1, p0, Lhb;->b:Ljava/lang/Object;
+
+    check-cast p1, Leoc;
+
+    invoke-interface {p1, v0, p2}, Leoc;->a(Lkl0;Lfoc;)V
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lhb;->b:Ljava/lang/Object;
+
+    check-cast v0, Leoc;
+
+    new-instance v1, Lgb;
+
+    const/4 v2, 0x2
+
+    invoke-direct {v1, p1, v2}, Lgb;-><init>(Lkl0;I)V
+
+    invoke-interface {v0, v1, p2}, Leoc;->a(Lkl0;Lfoc;)V
+
+    return-void
+
+    :pswitch_2
+    iget-object v0, p0, Lhb;->b:Ljava/lang/Object;
+
+    check-cast v0, Leoc;
+
+    new-instance v1, Lgb;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, p1, v2}, Lgb;-><init>(Lkl0;I)V
+
+    invoke-interface {v0, v1, p2}, Leoc;->a(Lkl0;Lfoc;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public c(ILkl0;Lfoc;)Z
+    .locals 4
+
+    iget-object v0, p0, Lhb;->b:Ljava/lang/Object;
+
+    check-cast v0, [Lbsg;
+
+    move-object v1, p3
+
+    check-cast v1, Lom0;
+
+    iget-object v1, v1, Lom0;->a:Lwj7;
+
+    iget-object v1, v1, Lwj7;->h:Lr4e;
+
+    :goto_0
+    array-length v2, v0
+
+    const/4 v3, -0x1
+
+    if-ge p1, v2, :cond_1
+
+    aget-object v2, v0, p1
+
+    invoke-interface {v2, v1}, Lbsg;->b(Lr4e;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
 
     goto :goto_1
 
     :cond_0
-    instance-of v0, p1, Lhb;
-
-    if-nez v0, :cond_1
+    add-int/lit8 p1, p1, 0x1
 
     goto :goto_0
 
     :cond_1
-    check-cast p1, Lhb;
+    move p1, v3
 
-    iget-object v0, p0, Lhb;->a:Lyk1;
+    :goto_1
+    if-ne p1, v3, :cond_2
 
-    iget-object v1, p1, Lhb;->a:Lyk1;
-
-    invoke-virtual {v0, v1}, Lyk1;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-boolean v0, p0, Lhb;->b:Z
-
-    iget-boolean p1, p1, Lhb;->b:Z
-
-    if-eq v0, p1, :cond_3
-
-    :goto_0
     const/4 p1, 0x0
 
     return p1
 
-    :cond_3
-    :goto_1
+    :cond_2
+    aget-object v0, v0, p1
+
+    new-instance v1, Lasg;
+
+    invoke-direct {v1, p0, p2, p3, p1}, Lasg;-><init>(Lhb;Lkl0;Lfoc;I)V
+
+    invoke-interface {v0, v1, p3}, Leoc;->a(Lkl0;Lfoc;)V
+
     const/4 p1, 0x1
 
     return p1
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Lhb;->a:Lyk1;
-
-    invoke-virtual {v0}, Lyk1;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean v1, p0, Lhb;->b:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "DisableMicForParticipant(id="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lhb;->a:Lyk1;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isSuccess="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lhb;->b:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

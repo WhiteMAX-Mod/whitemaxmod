@@ -4,86 +4,67 @@
 
 
 # instance fields
-.field public final a:Lwv4;
+.field public a:Li32;
 
-.field public final b:Ljava/util/List;
+.field public b:Lhk7;
 
-.field public final c:I
+.field public final c:Lhk7;
 
-.field public final d:I
+.field public final d:Landroid/util/Size;
 
-.field public final e:Lwb5;
+.field public final e:I
+
+.field public final f:I
+
+.field public final g:Z
+
+.field public final h:Lxd5;
+
+.field public final i:Lxd5;
 
 
 # direct methods
-.method public constructor <init>(Lwv4;Ljava/util/List;IILwb5;)V
-    .locals 0
+.method public constructor <init>(Landroid/util/Size;IIZLxd5;Lxd5;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lmc0;->a:Lwv4;
+    new-instance v0, Lm82;
 
-    iput-object p2, p0, Lmc0;->b:Ljava/util/List;
+    const/4 v1, 0x0
 
-    iput p3, p0, Lmc0;->c:I
+    invoke-direct {v0, v1}, Lm82;-><init>(I)V
 
-    iput p4, p0, Lmc0;->d:I
+    iput-object v0, p0, Lmc0;->a:Li32;
 
-    iput-object p5, p0, Lmc0;->e:Lwb5;
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lmc0;->c:Lhk7;
+
+    if-eqz p1, :cond_0
+
+    iput-object p1, p0, Lmc0;->d:Landroid/util/Size;
+
+    iput p2, p0, Lmc0;->e:I
+
+    iput p3, p0, Lmc0;->f:I
+
+    iput-boolean p4, p0, Lmc0;->g:Z
+
+    iput-object p5, p0, Lmc0;->h:Lxd5;
+
+    iput-object p6, p0, Lmc0;->i:Lxd5;
 
     return-void
-.end method
-
-.method public static a(Lwv4;)Led6;
-    .locals 2
-
-    const/4 v0, -0x1
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    new-instance v1, Led6;
-
-    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
-
-    if-eqz p0, :cond_1
-
-    iput-object p0, v1, Led6;->a:Ljava/lang/Object;
-
-    sget-object p0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
-
-    if-eqz p0, :cond_0
-
-    iput-object p0, v1, Led6;->b:Ljava/lang/Object;
-
-    iput-object v0, v1, Led6;->c:Ljava/lang/Object;
-
-    iput-object v0, v1, Led6;->d:Ljava/lang/Object;
-
-    sget-object p0, Lwb5;->d:Lwb5;
-
-    iput-object p0, v1, Led6;->e:Ljava/lang/Object;
-
-    return-object v1
 
     :cond_0
-    new-instance p0, Ljava/lang/NullPointerException;
+    new-instance p1, Ljava/lang/NullPointerException;
 
-    const-string v0, "Null sharedSurfaces"
+    const-string p2, "Null size"
 
-    invoke-direct {p0, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    throw p0
-
-    :cond_1
-    new-instance p0, Ljava/lang/NullPointerException;
-
-    const-string v0, "Null surface"
-
-    invoke-direct {p0, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p0
+    throw p1
 .end method
 
 
@@ -102,9 +83,37 @@
 
     check-cast p1, Lmc0;
 
-    iget-object v0, p0, Lmc0;->a:Lwv4;
+    iget-object v0, p0, Lmc0;->d:Landroid/util/Size;
 
-    iget-object v1, p1, Lmc0;->a:Lwv4;
+    iget-object v1, p1, Lmc0;->d:Landroid/util/Size;
+
+    invoke-virtual {v0, v1}, Landroid/util/Size;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget v0, p0, Lmc0;->e:I
+
+    iget v1, p1, Lmc0;->e:I
+
+    if-ne v0, v1, :cond_1
+
+    iget v0, p0, Lmc0;->f:I
+
+    iget v1, p1, Lmc0;->f:I
+
+    if-ne v0, v1, :cond_1
+
+    iget-boolean v0, p0, Lmc0;->g:Z
+
+    iget-boolean v1, p1, Lmc0;->g:Z
+
+    if-ne v0, v1, :cond_1
+
+    iget-object v0, p0, Lmc0;->h:Lxd5;
+
+    iget-object v1, p1, Lmc0;->h:Lxd5;
 
     invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -112,33 +121,11 @@
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lmc0;->b:Ljava/util/List;
+    iget-object v0, p0, Lmc0;->i:Lxd5;
 
-    iget-object v1, p1, Lmc0;->b:Ljava/util/List;
+    iget-object p1, p1, Lmc0;->i:Lxd5;
 
-    invoke-interface {v0, v1}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget v0, p0, Lmc0;->c:I
-
-    iget v1, p1, Lmc0;->c:I
-
-    if-ne v0, v1, :cond_1
-
-    iget v0, p0, Lmc0;->d:I
-
-    iget v1, p1, Lmc0;->d:I
-
-    if-ne v0, v1, :cond_1
-
-    iget-object v0, p0, Lmc0;->e:Lwb5;
-
-    iget-object p1, p1, Lmc0;->e:Lwb5;
-
-    invoke-virtual {v0, p1}, Lwb5;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -158,9 +145,9 @@
 .method public final hashCode()I
     .locals 3
 
-    iget-object v0, p0, Lmc0;->a:Lwv4;
+    iget-object v0, p0, Lmc0;->d:Landroid/util/Size;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v0}, Landroid/util/Size;->hashCode()I
 
     move-result v0
 
@@ -170,33 +157,53 @@
 
     mul-int/2addr v0, v1
 
-    iget-object v2, p0, Lmc0;->b:Ljava/util/List;
+    iget v2, p0, Lmc0;->e:I
 
-    invoke-interface {v2}, Ljava/util/List;->hashCode()I
+    xor-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lmc0;->f:I
+
+    xor-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget-boolean v2, p0, Lmc0;->g:Z
+
+    if-eqz v2, :cond_0
+
+    const/16 v2, 0x4cf
+
+    goto :goto_0
+
+    :cond_0
+    const/16 v2, 0x4d5
+
+    :goto_0
+    xor-int/2addr v0, v2
+
+    const v2, 0x22cd8cdb
+
+    mul-int/2addr v0, v2
+
+    xor-int/lit8 v0, v0, 0x23
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lmc0;->h:Lxd5;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
 
     move-result v2
 
     xor-int/2addr v0, v2
 
-    const v2, -0x2aff6277
-
-    mul-int/2addr v0, v2
-
-    iget v2, p0, Lmc0;->c:I
-
-    xor-int/2addr v0, v2
-
     mul-int/2addr v0, v1
 
-    iget v2, p0, Lmc0;->d:I
+    iget-object v1, p0, Lmc0;->i:Lxd5;
 
-    xor-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-object v1, p0, Lmc0;->e:Lwb5;
-
-    invoke-virtual {v1}, Lwb5;->hashCode()I
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
     move-result v1
 
@@ -210,43 +217,51 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "OutputConfig{surface="
+    const-string v1, "In{size="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lmc0;->a:Lwv4;
+    iget-object v1, p0, Lmc0;->d:Landroid/util/Size;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", sharedSurfaces="
+    const-string v1, ", inputFormat="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lmc0;->b:Ljava/util/List;
+    iget v1, p0, Lmc0;->e:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", outputFormat="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lmc0;->f:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", virtualCamera="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lmc0;->g:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", imageReaderProxyProvider=null, postviewSize=null, postviewImageFormat=35, requestEdge="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lmc0;->h:Lxd5;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", physicalCameraId=null, mirrorMode="
+    const-string v1, ", errorEdge="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v1, p0, Lmc0;->c:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", surfaceGroupId="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lmc0;->d:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", dynamicRange="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lmc0;->e:Lwb5;
+    iget-object v1, p0, Lmc0;->i:Lxd5;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

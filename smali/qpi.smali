@@ -1,153 +1,91 @@
-.class public final Lqpi;
-.super Lxj7;
+.class public abstract Lqpi;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic d:I
+# static fields
+.field public static final a:Ljava/lang/reflect/Field;
 
-.field public e:Ljava/lang/Object;
+.field public static final b:Ljava/lang/reflect/Field;
+
+.field public static final c:Ljava/lang/reflect/Field;
+
+.field public static final d:Z
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lqpi;->d:I
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lxj7;->c:[Ljava/lang/Object;
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lxj7;->a:Z
-
-    iput v0, p0, Lxj7;->b:I
-
-    return-void
-.end method
-
-.method public constructor <init>(Ldu0;[Lvx5;ZI)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lqpi;->d:I
-
-    .line 2
-    iput-object p1, p0, Lqpi;->e:Ljava/lang/Object;
-
-    .line 3
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p2, p0, Lxj7;->c:[Ljava/lang/Object;
-
-    const/4 p1, 0x0
-
-    if-eqz p2, :cond_0
-
-    if-eqz p3, :cond_0
-
-    const/4 p1, 0x1
-
-    :cond_0
-    iput-boolean p1, p0, Lxj7;->a:Z
-
-    iput p4, p0, Lxj7;->b:I
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final f(Lhl;Lieg;)V
+.method static constructor <clinit>()V
     .locals 3
 
-    iget v0, p0, Lqpi;->d:I
+    :try_start_0
+    const-class v0, Landroid/view/View;
 
-    packed-switch v0, :pswitch_data_0
+    const-string v1, "mAttachInfo"
 
-    check-cast p1, Lc6j;
-
-    iput-object p2, p0, Lqpi;->e:Ljava/lang/Object;
-
-    invoke-virtual {p1}, Lcom/google/android/gms/common/internal/a;->o()Landroid/os/IInterface;
-
-    move-result-object p1
-
-    check-cast p1, Le0j;
-
-    new-instance p2, Lpcj;
-
-    invoke-direct {p2, p0}, Lpcj;-><init>(Lqpi;)V
-
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+    invoke-virtual {v0, v1}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v0
 
-    const-string v1, "com.google.android.gms.auth.api.phone.internal.ISmsRetrieverApiService"
-
-    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
-
-    sget v1, Levi;->a:I
-
-    invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
-
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
-
-    move-result-object p2
-
-    :try_start_0
-    iget-object p1, p1, Le0j;->c:Landroid/os/IBinder;
+    sput-object v0, Lqpi;->a:Ljava/lang/reflect/Field;
 
     const/4 v1, 0x1
 
-    const/4 v2, 0x0
+    invoke-virtual {v0, v1}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
 
-    invoke-interface {p1, v1, v0, p2, v2}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    const-string v0, "android.view.View$AttachInfo"
 
-    invoke-virtual {p2}, Landroid/os/Parcel;->readException()V
+    invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+
+    move-result-object v0
+
+    const-string v2, "mStableInsets"
+
+    invoke-virtual {v0, v2}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+
+    move-result-object v2
+
+    sput-object v2, Lqpi;->b:Ljava/lang/reflect/Field;
+
+    invoke-virtual {v2, v1}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+
+    const-string v2, "mContentInsets"
+
+    invoke-virtual {v0, v2}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+
+    move-result-object v0
+
+    sput-object v0, Lqpi;->c:Ljava/lang/reflect/Field;
+
+    invoke-virtual {v0, v1}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+
+    sput-boolean v1, Lqpi;->d:Z
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
-
-    invoke-virtual {p2}, Landroid/os/Parcel;->recycle()V
+    .catch Ljava/lang/ReflectiveOperationException; {:try_start_0 .. :try_end_0} :catch_0
 
     return-void
 
-    :catchall_0
-    move-exception p1
+    :catch_0
+    move-exception v0
 
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-virtual {p2}, Landroid/os/Parcel;->recycle()V
+    const-string v2, "Failed to get visible insets from AttachInfo "
 
-    throw p1
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    :pswitch_0
-    iget-object v0, p0, Lqpi;->e:Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
-    check-cast v0, Ldu0;
+    move-result-object v2
 
-    iget-object v0, v0, Ldu0;->d:Ljava/lang/Object;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    check-cast v0, Lqud;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-interface {v0, p1, p2}, Lqud;->accept(Ljava/lang/Object;Ljava/lang/Object;)V
+    move-result-object v1
+
+    const-string v2, "WindowInsetsCompat"
+
+    invoke-static {v2, v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

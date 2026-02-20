@@ -15,5 +15,8 @@
 
 
 # virtual methods
+.method public abstract isCallActive()Z
+.end method
+
 .method public abstract isIdle()Z
 .end method

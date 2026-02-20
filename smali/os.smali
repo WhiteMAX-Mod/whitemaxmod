@@ -1,56 +1,39 @@
 .class public final Los;
-.super Ljava/lang/Object;
+.super Lao4;
 .source "SourceFile"
 
-# interfaces
-.implements Ly75;
 
+# static fields
+.field public static final b:Los;
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lst5;
+.field public static final c:Lwn4;
 
 
 # direct methods
-.method public constructor <init>(Lst5;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Los;
 
-    iput-object p1, p0, Los;->b:Lst5;
+    invoke-direct {v0}, Lao4;-><init>()V
 
-    iput p2, p0, Los;->a:I
+    sput-object v0, Los;->b:Los;
 
-    return-void
-.end method
+    const/4 v1, 0x0
 
+    new-array v1, v1, [Ljava/lang/String;
 
-# virtual methods
-.method public final e(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
-    .locals 2
+    const/4 v2, 0x0
 
-    iget-object v0, p0, Los;->b:Lst5;
+    const/16 v3, 0xe
 
-    iget v1, p0, Los;->a:I
+    const-string v4, ":settings/appearance"
 
-    invoke-virtual {v0, p1, v1}, Lst5;->e(Landroid/graphics/drawable/Drawable;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final j()Landroid/graphics/drawable/Drawable;
-    .locals 2
-
-    iget-object v0, p0, Los;->b:Lst5;
-
-    iget v1, p0, Los;->a:I
-
-    invoke-virtual {v0, v1}, Lst5;->c(I)Landroid/graphics/drawable/Drawable;
+    invoke-static {v0, v4, v1, v2, v3}, Lao4;->c(Lao4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lwn4;
 
     move-result-object v0
 
-    return-object v0
+    sput-object v0, Los;->c:Lwn4;
+
+    return-void
 .end method

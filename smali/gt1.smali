@@ -1,125 +1,106 @@
-.class public final Lgt1;
-.super Lgbj;
+.class public final synthetic Lgt1;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lis6;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic a:I
 
-.field public final b:Z
+.field public final synthetic b:Landroid/content/Context;
+
+.field public final synthetic c:Ljt1;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Z)V
+.method public synthetic constructor <init>(Landroid/content/Context;Ljt1;I)V
     .locals 0
 
+    iput p3, p0, Lgt1;->a:I
+
+    iput-object p1, p0, Lgt1;->b:Landroid/content/Context;
+
+    iput-object p2, p0, Lgt1;->c:Ljt1;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lgt1;->a:Ljava/lang/String;
-
-    iput-boolean p2, p0, Lgt1;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final invoke()Ljava/lang/Object;
     .locals 4
 
-    const/4 v0, 0x1
+    iget v0, p0, Lgt1;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    new-instance v0, Lfm1;
 
-    :cond_0
-    instance-of v1, p1, Lgt1;
+    iget-object v1, p0, Lgt1;->b:Landroid/content/Context;
 
-    const/4 v2, 0x0
+    invoke-direct {v0, v1}, Lfm1;-><init>(Landroid/content/Context;)V
 
-    if-nez v1, :cond_1
+    sget-object v1, Lfe3;->t0:Ltea;
 
-    return v2
+    invoke-virtual {v1, v0}, Ltea;->r(Landroid/view/View;)Loob;
 
-    :cond_1
-    check-cast p1, Lgt1;
+    move-result-object v1
 
-    iget-object v1, p0, Lgt1;->a:Ljava/lang/String;
+    iget-object v1, v1, Loob;->b:Llob;
 
-    iget-object v3, p1, Lgt1;->a:Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lfm1;->setPipTheme(Llob;)V
 
-    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    sget-object v1, Lcm1;->b:Lcm1;
 
-    move-result v1
+    invoke-virtual {v0, v1}, Lfm1;->setPipMode(Lcm1;)V
 
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-boolean v1, p0, Lgt1;->b:Z
-
-    iget-boolean p1, p1, Lgt1;->b:Z
-
-    if-eq v1, p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Lgt1;->a:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean v1, p0, Lgt1;->b:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+    invoke-static {}, Landroid/view/View;->generateViewId()I
 
     move-result v1
 
-    add-int/2addr v1, v0
+    invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
 
-    return v1
-.end method
+    new-instance v1, Le5;
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    const/4 v2, 0x5
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object v3, p0, Lgt1;->c:Ljt1;
 
-    const-string v1, "Link(link="
+    invoke-direct {v1, v2, v3}, Le5;-><init>(ILjava/lang/Object;)V
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lfm1;->setListener(Lvv1;)V
 
-    iget-object v1, p0, Lgt1;->a:Ljava/lang/String;
+    const/16 v1, 0x8
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    const-string v1, ", isJoinByExistLink="
+    new-instance v1, Lft1;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v2, 0x1
 
-    iget-boolean v1, p0, Lgt1;->b:Z
+    invoke-direct {v1, v3, v2}, Lft1;-><init>(Ljt1;I)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Lfm1;->setVideoLayoutUpdatesControllerProvider(Lis6;)V
 
-    const-string v1, ")"
+    return-object v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :pswitch_0
+    iget-object v0, p0, Lgt1;->b:Landroid/content/Context;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-object v1, p0, Lgt1;->c:Ljt1;
+
+    invoke-static {v0, v1}, Ljt1;->x(Landroid/content/Context;Ljt1;)Landroidx/recyclerview/widget/RecyclerView;
 
     move-result-object v0
 
     return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

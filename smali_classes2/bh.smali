@@ -1,231 +1,107 @@
-.class public final enum Lbh;
-.super Ljava/lang/Enum;
+.class public final Lbh;
+.super Lzg;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum X:Lbh;
+# virtual methods
+.method public final h(Ldqi;)Ldqi;
+    .locals 6
 
-.field public static final enum Y:Lbh;
+    iget-object v0, p1, Ldqi;->a:Lbqi;
 
-.field public static final enum Z:Lbh;
+    iget v1, p0, Lzg;->j:I
 
-.field public static final enum b:Lbh;
+    invoke-virtual {v0, v1}, Lbqi;->f(I)Lss7;
 
-.field public static final enum c:Lbh;
+    move-result-object v1
 
-.field public static final enum d:Lbh;
+    iget v2, p0, Lrxf;->d:I
 
-.field public static final enum o:Lbh;
+    invoke-virtual {v0, v2}, Lbqi;->f(I)Lss7;
 
-.field public static final enum t0:Lbh;
+    move-result-object v0
 
-.field public static final enum u0:Lbh;
+    iget v2, v1, Lss7;->a:I
 
-.field public static final enum v0:Lbh;
+    iget v3, v0, Lss7;->a:I
 
-.field public static final enum w0:Lbh;
+    sub-int/2addr v2, v3
 
-.field public static final enum x0:Lbh;
+    iget v3, v1, Lss7;->b:I
 
-.field public static final synthetic y0:[Lbh;
+    iget v4, v0, Lss7;->b:I
 
+    sub-int/2addr v3, v4
 
-# instance fields
-.field public final a:Ljava/lang/String;
+    iget v4, v1, Lss7;->c:I
 
+    iget v5, v0, Lss7;->c:I
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 15
+    sub-int/2addr v4, v5
 
-    new-instance v0, Lbh;
+    iget v1, v1, Lss7;->d:I
+
+    iget v0, v0, Lss7;->d:I
+
+    sub-int/2addr v1, v0
+
+    invoke-static {v2, v3, v4, v1}, Lss7;->b(IIII)Lss7;
+
+    move-result-object v0
+
+    iget v1, v0, Lss7;->a:I
+
+    const/4 v2, 0x0
+
+    invoke-static {v1, v2}, Ljava/lang/Math;->max(II)I
+
+    move-result v1
+
+    iget v3, v0, Lss7;->b:I
+
+    invoke-static {v3, v2}, Ljava/lang/Math;->max(II)I
+
+    move-result v3
+
+    iget v4, v0, Lss7;->c:I
+
+    invoke-static {v4, v2}, Ljava/lang/Math;->max(II)I
+
+    move-result v4
+
+    iget v0, v0, Lss7;->d:I
+
+    invoke-static {v0, v2}, Ljava/lang/Math;->max(II)I
+
+    move-result v0
+
+    invoke-static {v1, v3, v4, v0}, Lss7;->b(IIII)Lss7;
+
+    move-result-object v0
+
+    iget v1, v0, Lss7;->b:I
+
+    iget v0, v0, Lss7;->d:I
+
+    sub-int/2addr v1, v0
+
+    int-to-float v0, v1
+
+    iget-object v1, p0, Lrxf;->a:Landroid/view/View;
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->setTranslationY(F)V
+
+    return-object p1
+.end method
+
+.method public final i()V
+    .locals 2
+
+    iget-object v0, p0, Lrxf;->a:Landroid/view/View;
 
     const/4 v1, 0x0
 
-    const-string v2, "interpolator"
-
-    const-string v3, "INTERPOLATOR"
-
-    invoke-direct {v0, v3, v1, v2}, Lbh;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lbh;->b:Lbh;
-
-    new-instance v1, Lbh;
-
-    const/4 v2, 0x1
-
-    const-string v3, "duration"
-
-    const-string v4, "DURATION"
-
-    invoke-direct {v1, v4, v2, v3}, Lbh;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lbh;->c:Lbh;
-
-    new-instance v2, Lbh;
-
-    const/4 v3, 0x2
-
-    const-string v4, "valueFrom"
-
-    const-string v5, "VALUE_FROM"
-
-    invoke-direct {v2, v5, v3, v4}, Lbh;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v2, Lbh;->d:Lbh;
-
-    new-instance v3, Lbh;
-
-    const/4 v4, 0x3
-
-    const-string v5, "valueTo"
-
-    const-string v6, "VALUE_TO"
-
-    invoke-direct {v3, v6, v4, v5}, Lbh;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v3, Lbh;->o:Lbh;
-
-    new-instance v4, Lbh;
-
-    const/4 v5, 0x4
-
-    const-string v6, "valueType"
-
-    const-string v7, "VALUE_TYPE"
-
-    invoke-direct {v4, v7, v5, v6}, Lbh;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v4, Lbh;->X:Lbh;
-
-    new-instance v5, Lbh;
-
-    const/4 v6, 0x5
-
-    const-string v7, "propertyName"
-
-    const-string v8, "PROPERTY_NAME"
-
-    invoke-direct {v5, v8, v6, v7}, Lbh;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v5, Lbh;->Y:Lbh;
-
-    new-instance v6, Lbh;
-
-    const/4 v7, 0x6
-
-    const-string v8, "propertyXName"
-
-    const-string v9, "PROPERTY_X_NAME"
-
-    invoke-direct {v6, v9, v7, v8}, Lbh;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v6, Lbh;->Z:Lbh;
-
-    new-instance v7, Lbh;
-
-    const/4 v8, 0x7
-
-    const-string v9, "propertyYName"
-
-    const-string v10, "PROPERTY_Y_NAME"
-
-    invoke-direct {v7, v10, v8, v9}, Lbh;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v7, Lbh;->t0:Lbh;
-
-    new-instance v8, Lbh;
-
-    const/16 v9, 0x8
-
-    const-string v10, "pathData"
-
-    const-string v11, "PATH_DATA"
-
-    invoke-direct {v8, v11, v9, v10}, Lbh;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v8, Lbh;->u0:Lbh;
-
-    new-instance v9, Lbh;
-
-    const/16 v10, 0x9
-
-    const-string v11, "startOffset"
-
-    const-string v12, "START_OFFSET"
-
-    invoke-direct {v9, v12, v10, v11}, Lbh;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v9, Lbh;->v0:Lbh;
-
-    new-instance v10, Lbh;
-
-    const/16 v11, 0xa
-
-    const-string v12, "repeatCount"
-
-    const-string v13, "REPEAT_COUNT"
-
-    invoke-direct {v10, v13, v11, v12}, Lbh;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v10, Lbh;->w0:Lbh;
-
-    new-instance v11, Lbh;
-
-    const/16 v12, 0xb
-
-    const-string v13, "repeatMode"
-
-    const-string v14, "REPEAT_MODE"
-
-    invoke-direct {v11, v14, v12, v13}, Lbh;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v11, Lbh;->x0:Lbh;
-
-    filled-new-array/range {v0 .. v11}, [Lbh;
-
-    move-result-object v0
-
-    sput-object v0, Lbh;->y0:[Lbh;
+    invoke-virtual {v0, v1}, Landroid/view/View;->setTranslationY(F)V
 
     return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    iput-object p3, p0, Lbh;->a:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lbh;
-    .locals 1
-
-    const-class v0, Lbh;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lbh;
-
-    return-object p0
-.end method
-
-.method public static values()[Lbh;
-    .locals 1
-
-    sget-object v0, Lbh;->y0:[Lbh;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lbh;
-
-    return-object v0
 .end method

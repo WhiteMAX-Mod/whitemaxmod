@@ -3,11 +3,11 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lsth;
+.implements Lc1i;
 
 
 # virtual methods
-.method public final a(Ljava/lang/Class;)Loth;
+.method public final a(Ljava/lang/Class;)Ly0i;
     .locals 1
 
     new-instance p1, Landroidx/fragment/app/FragmentManagerViewModel;

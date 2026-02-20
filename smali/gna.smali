@@ -1,166 +1,125 @@
-.class public Lgna;
-.super Lnbe;
+.class public final Lgna;
+.super Landroid/telephony/PhoneStateListener;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
-
-.field public volatile b:Z
+.field public final synthetic a:Lhna;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/ThreadFactory;)V
-    .locals 2
+.method public constructor <init>(Lhna;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lgna;->a:Lhna;
 
-    sget-boolean v0, Lvbe;->a:Z
-
-    new-instance v0, Ljava/util/concurrent/ScheduledThreadPoolExecutor;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1, p1}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;-><init>(ILjava/util/concurrent/ThreadFactory;)V
-
-    sget-boolean p1, Lvbe;->a:Z
-
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->setRemoveOnCancelPolicy(Z)V
-
-    iput-object v0, p0, Lgna;->a:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
+    invoke-direct {p0}, Landroid/telephony/PhoneStateListener;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b(Ljava/lang/Runnable;)Lo25;
-    .locals 3
-
-    const-wide/16 v0, 0x0
-
-    const/4 v2, 0x0
-
-    invoke-virtual {p0, p1, v0, v1, v2}, Lgna;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lo25;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lo25;
-    .locals 6
-
-    iget-boolean v0, p0, Lgna;->b:Z
-
-    if-eqz v0, :cond_0
-
-    sget-object p1, Lyg5;->a:Lyg5;
-
-    return-object p1
-
-    :cond_0
-    const/4 v5, 0x0
-
-    move-object v0, p0
-
-    move-object v1, p1
-
-    move-wide v2, p2
-
-    move-object v4, p4
-
-    invoke-virtual/range {v0 .. v5}, Lgna;->f(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;Lp25;)Loae;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final dispose()V
+.method public final onDisplayInfoChanged(Landroid/telephony/TelephonyDisplayInfo;)V
     .locals 1
 
-    iget-boolean v0, p0, Lgna;->b:Z
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lgna;->b:Z
-
-    iget-object v0, p0, Lgna;->a:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->shutdownNow()Ljava/util/List;
-
-    :cond_0
-    return-void
-.end method
-
-.method public final e()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lgna;->b:Z
-
-    return v0
-.end method
-
-.method public final f(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;Lp25;)Loae;
-    .locals 3
-
-    new-instance v0, Loae;
-
-    invoke-direct {v0, p1, p5}, Loae;-><init>(Ljava/lang/Runnable;Lp25;)V
-
-    if-eqz p5, :cond_0
-
-    invoke-interface {p5, v0}, Lp25;->a(Lo25;)Z
+    invoke-static {p1}, Lw99;->c(Landroid/telephony/TelephonyDisplayInfo;)I
 
     move-result p1
 
-    if-nez p1, :cond_0
+    const/4 v0, 0x3
 
-    return-object v0
+    if-eq p1, v0, :cond_1
 
-    :cond_0
-    const-wide/16 v1, 0x0
+    const/4 v0, 0x4
 
-    cmp-long p1, p2, v1
-
-    iget-object v1, p0, Lgna;->a:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
-
-    if-gtz p1, :cond_1
-
-    :try_start_0
-    invoke-virtual {v1, v0}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
-
-    move-result-object p1
+    if-ne p1, v0, :cond_0
 
     goto :goto_0
 
-    :catch_0
-    move-exception p1
+    :cond_0
+    const/4 p1, 0x0
 
     goto :goto_1
 
     :cond_1
-    invoke-virtual {v1, v0, p2, p3, p4}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->schedule(Ljava/util/concurrent/Callable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+    :goto_0
+    const/4 p1, 0x1
+
+    :goto_1
+    if-eqz p1, :cond_2
+
+    const/16 p1, 0xa
+
+    goto :goto_2
+
+    :cond_2
+    const/4 p1, 0x5
+
+    :goto_2
+    iget-object v0, p0, Lgna;->a:Lhna;
+
+    invoke-static {v0, p1}, Lhna;->a(Lhna;I)V
+
+    return-void
+.end method
+
+.method public final onServiceStateChanged(Landroid/telephony/ServiceState;)V
+    .locals 1
+
+    if-nez p1, :cond_0
+
+    const-string p1, ""
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p1}, Landroid/telephony/ServiceState;->toString()Ljava/lang/String;
 
     move-result-object p1
 
     :goto_0
-    invoke-virtual {v0, p1}, Loae;->a(Ljava/util/concurrent/Future;)V
-    :try_end_0
-    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_0 .. :try_end_0} :catch_0
+    const-string v0, "nrState=CONNECTED"
 
-    return-object v0
+    invoke-virtual {p1, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
-    :goto_1
-    if-eqz p5, :cond_2
+    move-result v0
 
-    invoke-interface {p5, v0}, Lp25;->b(Lo25;)Z
+    if-nez v0, :cond_2
+
+    const-string v0, "nrState=NOT_RESTRICTED"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    const/4 p1, 0x0
+
+    goto :goto_2
 
     :cond_2
-    invoke-static {p1}, Lknj;->b(Ljava/lang/Throwable;)V
+    :goto_1
+    const/4 p1, 0x1
 
-    return-object v0
+    :goto_2
+    if-eqz p1, :cond_3
+
+    const/16 p1, 0xa
+
+    goto :goto_3
+
+    :cond_3
+    const/4 p1, 0x5
+
+    :goto_3
+    iget-object v0, p0, Lgna;->a:Lhna;
+
+    invoke-static {v0, p1}, Lhna;->a(Lhna;I)V
+
+    return-void
 .end method

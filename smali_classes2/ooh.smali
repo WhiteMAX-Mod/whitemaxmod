@@ -1,83 +1,115 @@
-.class public interface abstract Looh;
+.class public final synthetic Looh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lis6;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lpoh;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lpoh;I)V
+    .locals 0
+
+    iput p2, p0, Looh;->a:I
+
+    iput-object p1, p0, Looh;->b:Lpoh;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
 
 # virtual methods
-.method public a(Lqfh;)V
-    .locals 0
+.method public final invoke()Ljava/lang/Object;
+    .locals 6
 
-    return-void
-.end method
+    iget v0, p0, Looh;->a:I
 
-.method public b()V
-    .locals 0
+    iget-object v1, p0, Looh;->b:Lpoh;
 
-    return-void
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public c()V
-    .locals 0
+    new-instance v0, Landroid/util/Size;
 
-    return-void
-.end method
+    iget v2, v1, Lpoh;->e:I
 
-.method public d()V
-    .locals 0
+    iget v1, v1, Lpoh;->f:I
 
-    return-void
-.end method
+    invoke-direct {v0, v2, v1}, Landroid/util/Size;-><init>(II)V
 
-.method public e()V
-    .locals 0
+    return-object v0
 
-    return-void
-.end method
+    :pswitch_0
+    iget-object v0, v1, Lpoh;->h:Llq6;
 
-.method public f(F)V
-    .locals 0
+    if-nez v0, :cond_1
 
-    return-void
-.end method
+    sget-object v0, Lyih;->a:Ljava/util/concurrent/atomic/AtomicInteger;
 
-.method public g()V
-    .locals 0
+    iget v0, v1, Lpoh;->e:I
 
-    return-void
-.end method
+    iget v1, v1, Lpoh;->f:I
 
-.method public h(Z)V
-    .locals 0
+    invoke-static {v0, v1}, Ljava/lang/Math;->min(II)I
 
-    return-void
-.end method
+    move-result v0
 
-.method public i()V
-    .locals 0
+    new-instance v1, Le2;
 
-    return-void
-.end method
+    const/4 v2, 0x0
 
-.method public o()V
-    .locals 0
+    sget-object v3, Llq6;->w0:Lpm5;
 
-    return-void
-.end method
+    invoke-direct {v1, v2, v3}, Le2;-><init>(ILjava/lang/Object;)V
 
-.method public r()V
-    .locals 0
+    const v2, 0x7fffffff
 
-    return-void
-.end method
+    sget-object v3, Llq6;->c:Llq6;
 
-.method public w()V
-    .locals 0
+    :goto_0
+    invoke-virtual {v1}, Le2;->hasNext()Z
 
-    return-void
-.end method
+    move-result v4
 
-.method public z(Ljava/lang/Throwable;)V
-    .locals 0
+    if-eqz v4, :cond_0
 
-    return-void
+    invoke-virtual {v1}, Le2;->next()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Llq6;
+
+    iget v5, v4, Llq6;->b:I
+
+    sub-int/2addr v5, v0
+
+    invoke-static {v5}, Ljava/lang/Math;->abs(I)I
+
+    move-result v5
+
+    if-ge v5, v2, :cond_0
+
+    move-object v3, v4
+
+    move v2, v5
+
+    goto :goto_0
+
+    :cond_0
+    move-object v0, v3
+
+    :cond_1
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

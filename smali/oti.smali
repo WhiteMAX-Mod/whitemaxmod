@@ -1,221 +1,270 @@
-.class public abstract Loti;
+.class public final Loti;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lnti;
 
-# static fields
-.field public static final a:[[I
+
+# instance fields
+.field public a:F
+
+.field public final b:F
+
+.field public final c:F
+
+.field public d:F
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(FF)V
+    .locals 0
 
-    const v0, -0xb74a
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v1, -0x75cb
+    iput p1, p0, Loti;->b:F
 
-    filled-new-array {v0, v1}, [I
-
-    move-result-object v0
-
-    const/16 v1, -0x36c3
-
-    const/16 v2, -0x7cd6
-
-    filled-new-array {v1, v2}, [I
-
-    move-result-object v1
-
-    const v2, -0xeb1e2b
-
-    const v3, -0xfc38de
-
-    filled-new-array {v2, v3}, [I
-
-    move-result-object v2
-
-    const v3, -0xf7280d
-
-    const v4, -0xac6701
-
-    filled-new-array {v3, v4}, [I
-
-    move-result-object v3
-
-    const v4, -0x406801
-
-    const v5, -0xad9101
-
-    filled-new-array {v4, v5}, [I
-
-    move-result-object v4
-
-    filled-new-array {v0, v1, v2, v3, v4}, [[I
-
-    move-result-object v0
-
-    sput-object v0, Loti;->a:[[I
+    iput p2, p0, Loti;->c:F
 
     return-void
 .end method
 
-.method public static a(Ljava/io/InputStream;)Lxh7;
-    .locals 5
 
-    sget-object v0, Lyh7;->d:Ljava/lang/Object;
+# virtual methods
+.method public final a()F
+    .locals 1
 
-    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+    iget v0, p0, Loti;->b:F
 
-    move-result-object v0
+    return v0
+.end method
 
-    check-cast v0, Lyh7;
+.method public final b()F
+    .locals 1
 
-    iget v1, v0, Lyh7;->a:I
+    iget v0, p0, Loti;->c:F
 
-    new-array v2, v1, [B
+    return v0
+.end method
 
-    invoke-virtual {p0}, Ljava/io/InputStream;->markSupported()Z
+.method public final c()F
+    .locals 1
 
-    move-result v3
+    iget v0, p0, Loti;->a:F
 
-    if-eqz v3, :cond_0
+    return v0
+.end method
 
-    :try_start_0
-    invoke-virtual {p0, v1}, Ljava/io/InputStream;->mark(I)V
+.method public final d()F
+    .locals 1
 
-    invoke-static {p0, v2, v1}, Lqaj;->b(Ljava/io/InputStream;[BI)I
+    iget v0, p0, Loti;->d:F
 
-    move-result v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    return v0
+.end method
 
-    invoke-virtual {p0}, Ljava/io/InputStream;->reset()V
+.method public final e(F)V
+    .locals 8
+
+    const/high16 v0, 0x3f800000    # 1.0f
+
+    cmpl-float v1, p1, v0
+
+    if-gtz v1, :cond_4
+
+    const/4 v1, 0x0
+
+    cmpg-float v2, p1, v1
+
+    if-ltz v2, :cond_4
+
+    iput p1, p0, Loti;->d:F
+
+    cmpl-float v2, p1, v0
+
+    iget v3, p0, Loti;->b:F
+
+    if-nez v2, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    cmpl-float v1, p1, v1
+
+    iget v2, p0, Loti;->c:F
+
+    if-nez v1, :cond_1
+
+    move v3, v2
+
+    goto :goto_1
+
+    :cond_1
+    div-float v1, v0, v3
+
+    float-to-double v4, v1
+
+    div-float/2addr v0, v2
+
+    float-to-double v0, v0
+
+    sub-double/2addr v4, v0
+
+    float-to-double v6, p1
+
+    mul-double/2addr v4, v6
+
+    add-double/2addr v4, v0
+
+    const-wide/high16 v0, 0x3ff0000000000000L    # 1.0
+
+    div-double/2addr v0, v4
+
+    float-to-double v4, v2
+
+    float-to-double v2, v3
+
+    cmpg-double p1, v0, v4
+
+    if-gez p1, :cond_2
+
+    move-wide v0, v4
 
     goto :goto_0
 
-    :catchall_0
-    move-exception v0
-
-    invoke-virtual {p0}, Ljava/io/InputStream;->reset()V
-
-    throw v0
-
-    :cond_0
-    invoke-static {p0, v2, v1}, Lqaj;->b(Ljava/io/InputStream;[BI)I
-
-    move-result v1
-
-    :goto_0
-    iget-object p0, v0, Lyh7;->c:Lir4;
-
-    invoke-virtual {p0, v1, v2}, Lir4;->a(I[B)Lxh7;
-
-    move-result-object p0
-
-    sget-object v3, Ljr4;->m:Lxh7;
-
-    invoke-virtual {p0, v3}, Lxh7;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    sget-object v4, Lxh7;->c:Lxh7;
-
-    if-eqz v3, :cond_1
-
-    move-object p0, v4
-
-    :cond_1
-    if-eq p0, v4, :cond_2
-
-    return-object p0
-
     :cond_2
-    iget-object p0, v0, Lyh7;->b:Ljava/util/ArrayList;
+    cmpl-double p1, v0, v2
 
-    if-eqz p0, :cond_4
+    if-lez p1, :cond_3
 
-    invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
+    move-wide v0, v2
 
     :cond_3
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+    :goto_0
+    double-to-float v3, v0
 
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lwh7;
-
-    invoke-interface {v0, v1, v2}, Lwh7;->a(I[B)Lxh7;
-
-    move-result-object v0
-
-    if-eq v0, v4, :cond_3
-
-    return-object v0
-
-    :cond_4
-    return-object v4
-.end method
-
-.method public static final b(Lr4h;)V
-    .locals 2
-
-    new-instance v0, Lffe;
-
-    const/16 v1, 0x12
-
-    invoke-direct {v0, v1}, Lffe;-><init>(I)V
-
-    const/16 v1, 0x7a
-
-    invoke-virtual {p0, v1, v0}, Lr4h;->e(ILhs7;)V
-
-    new-instance v0, Lenf;
-
-    const/4 v1, 0x3
-
-    invoke-direct {v0, v1}, Lenf;-><init>(I)V
-
-    const/16 v1, 0x26f
-
-    invoke-virtual {p0, v1, v0}, Lr4h;->e(ILhs7;)V
-
-    new-instance v0, Lenf;
-
-    const/4 v1, 0x4
-
-    invoke-direct {v0, v1}, Lenf;-><init>(I)V
-
-    const/16 v1, 0x270
-
-    invoke-virtual {p0, v1, v0}, Lr4h;->e(ILhs7;)V
-
-    new-instance v0, Lenf;
-
-    const/4 v1, 0x5
-
-    invoke-direct {v0, v1}, Lenf;-><init>(I)V
-
-    const/16 v1, 0x271
-
-    invoke-virtual {p0, v1, v0}, Lr4h;->e(ILhs7;)V
-
-    new-instance v0, Llge;
-
-    const/16 v1, 0x16
-
-    invoke-direct {v0, v1}, Llge;-><init>(I)V
-
-    const/16 v1, 0x272
-
-    invoke-virtual {p0, v1, v0}, Lr4h;->e(ILhs7;)V
+    :goto_1
+    iput v3, p0, Loti;->a:F
 
     return-void
+
+    :cond_4
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Requested linearZoom "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string p1, " is not within valid range [0..1]"
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public final f(F)V
+    .locals 5
+
+    iget v0, p0, Loti;->b:F
+
+    cmpl-float v1, p1, v0
+
+    iget v2, p0, Loti;->c:F
+
+    if-gtz v1, :cond_3
+
+    cmpg-float v1, p1, v2
+
+    if-ltz v1, :cond_3
+
+    iput p1, p0, Loti;->a:F
+
+    cmpl-float v1, v0, v2
+
+    const/4 v3, 0x0
+
+    if-nez v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    cmpl-float v1, p1, v0
+
+    const/high16 v4, 0x3f800000    # 1.0f
+
+    if-nez v1, :cond_1
+
+    move v3, v4
+
+    goto :goto_0
+
+    :cond_1
+    cmpl-float v1, p1, v2
+
+    if-nez v1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    div-float p1, v4, p1
+
+    div-float v0, v4, v0
+
+    div-float/2addr v4, v2
+
+    sub-float/2addr p1, v4
+
+    sub-float/2addr v0, v4
+
+    div-float v3, p1, v0
+
+    :goto_0
+    iput v3, p0, Loti;->d:F
+
+    return-void
+
+    :cond_3
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v3, "Requested zoomRatio "
+
+    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string p1, " is not within valid range ["
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string p1, " , "
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string p1, "]"
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method

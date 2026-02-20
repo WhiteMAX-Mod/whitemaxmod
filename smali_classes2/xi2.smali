@@ -1,92 +1,97 @@
-.class public final Lxi2;
-.super Ljava/lang/Object;
+.class public final enum Lxi2;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lcy0;
+# static fields
+.field public static final enum a:Lxi2;
 
-.field public final b:J
+.field public static final enum b:Lxi2;
 
-.field public final c:Li7f;
+.field public static final enum c:Lxi2;
 
-.field public final d:Lkotlinx/coroutines/internal/ContextScope;
+.field public static final enum d:Lxi2;
 
-.field public final e:Lold;
+.field public static final synthetic o:[Lxi2;
 
 
 # direct methods
-.method public constructor <init>(Lmbg;Lcy0;J)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lxi2;
 
-    iput-object p2, p0, Lxi2;->a:Lcy0;
+    const-string v1, "DIALOG"
 
-    iput-wide p3, p0, Lxi2;->b:J
+    const/4 v2, 0x0
 
-    const/4 p3, 0x0
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    const/4 p4, 0x7
+    sput-object v0, Lxi2;->a:Lxi2;
 
-    invoke-static {p3, p3, p4}, Lj7f;->b(III)Li7f;
+    new-instance v1, Lxi2;
 
-    move-result-object p3
+    const-string v2, "CHAT"
 
-    iput-object p3, p0, Lxi2;->c:Li7f;
+    const/4 v3, 0x1
 
-    check-cast p1, Lj9b;
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-virtual {p1}, Lj9b;->a()Lsb4;
+    sput-object v1, Lxi2;->b:Lxi2;
 
-    move-result-object p1
+    new-instance v2, Lxi2;
 
-    invoke-static {p1}, Lilj;->a(Lqb4;)Lkotlinx/coroutines/internal/ContextScope;
+    const-string v3, "CHANNEL"
 
-    move-result-object p1
+    const/4 v4, 0x2
 
-    iput-object p1, p0, Lxi2;->d:Lkotlinx/coroutines/internal/ContextScope;
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    new-instance p1, Lold;
+    sput-object v2, Lxi2;->c:Lxi2;
 
-    invoke-direct {p1, p3}, Lold;-><init>(Llfa;)V
+    new-instance v3, Lxi2;
 
-    iput-object p1, p0, Lxi2;->e:Lold;
+    const-string v4, "GROUP_CHAT"
 
-    invoke-virtual {p2, p0}, Lcy0;->d(Ljava/lang/Object;)V
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Lxi2;->d:Lxi2;
+
+    filled-new-array {v0, v1, v2, v3}, [Lxi2;
+
+    move-result-object v0
+
+    sput-object v0, Lxi2;->o:[Lxi2;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lxi2;
+    .locals 1
 
-# virtual methods
-.method public final onEvent(Lmzd;)V
-    .locals 4
-    .annotation runtime Lu0g;
-    .end annotation
+    const-class v0, Lxi2;
 
-    iget-wide v0, p0, Lxi2;->b:J
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    iget-wide v2, p1, Lmzd;->c:J
+    move-result-object p0
 
-    cmp-long p1, v0, v2
+    check-cast p0, Lxi2;
 
-    if-eqz p1, :cond_0
+    return-object p0
+.end method
 
-    return-void
+.method public static values()[Lxi2;
+    .locals 1
 
-    :cond_0
-    new-instance p1, Lwi2;
+    sget-object v0, Lxi2;->o:[Lxi2;
 
-    const/4 v0, 0x0
+    invoke-virtual {v0}, [Lxi2;->clone()Ljava/lang/Object;
 
-    invoke-direct {p1, p0, v0}, Lwi2;-><init>(Lxi2;Lkotlin/coroutines/Continuation;)V
+    move-result-object v0
 
-    const/4 v1, 0x3
+    check-cast v0, [Lxi2;
 
-    iget-object v2, p0, Lxi2;->d:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-static {v2, v0, v0, p1, v1}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
-
-    return-void
+    return-object v0
 .end method

@@ -1,35 +1,37 @@
-.class public interface abstract Luh4;
-.super Ljava/lang/Object;
+.class public final Luh4;
+.super Lda4;
 .source "SourceFile"
 
 
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
+
+.field public Y:I
+
+.field public d:Lm8e;
+
+.field public o:Lpdg;
+
+
 # virtual methods
-.method public abstract B()J
-.end method
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-.method public abstract C(J)J
-.end method
+    iput-object p1, p0, Luh4;->X:Ljava/lang/Object;
 
-.method public abstract D(JJ)J
-.end method
+    iget p1, p0, Luh4;->Y:I
 
-.method public abstract a(J)J
-.end method
+    const/high16 v0, -0x80000000
 
-.method public abstract d(JJ)J
-.end method
+    or-int/2addr p1, v0
 
-.method public abstract g(JJ)J
-.end method
+    iput p1, p0, Luh4;->Y:I
 
-.method public abstract j(JJ)J
-.end method
+    const/4 p1, 0x0
 
-.method public abstract k(J)Lthd;
-.end method
+    invoke-static {p1, p1, p0}, Lfuj;->g(Lks6;Lm8e;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-.method public abstract u(JJ)J
-.end method
+    move-result-object p1
 
-.method public abstract z()Z
+    return-object p1
 .end method

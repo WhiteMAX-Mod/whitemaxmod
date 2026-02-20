@@ -1,111 +1,142 @@
 .class public final Ls17;
-.super Ljava/lang/Object;
+.super Lpdg;
 .source "SourceFile"
+
+# interfaces
+.implements Lys6;
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic X:Lt17;
 
-.field public final b:I
+.field public final synthetic o:Landroid/text/Layout;
 
 
 # direct methods
-.method public constructor <init>(II)V
+.method public constructor <init>(Landroid/text/Layout;Lt17;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ls17;->o:Landroid/text/Layout;
 
-    iput p1, p0, Ls17;->a:I
+    iput-object p2, p0, Ls17;->X:Lt17;
 
-    iput p2, p0, Ls17;->b:I
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lnd4;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Ls17;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Ls17;
+
+    sget-object p2, Lmah;->a:Lmah;
+
+    invoke-virtual {p1, p2}, Ls17;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    if-ne p0, p1, :cond_0
+    new-instance p1, Ls17;
+
+    iget-object v0, p0, Ls17;->o:Landroid/text/Layout;
+
+    iget-object v1, p0, Ls17;->X:Lt17;
+
+    invoke-direct {p1, v0, v1, p2}, Ls17;-><init>(Landroid/text/Layout;Lt17;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    iget-object v0, p0, Ls17;->o:Landroid/text/Layout;
+
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    sget-object p1, Lt17;->c:Lvjc;
+
+    invoke-virtual {p1}, Lvjc;->a()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/graphics/Picture;
+
+    if-nez v1, :cond_0
+
+    new-instance v1, Landroid/graphics/Picture;
+
+    invoke-direct {v1}, Landroid/graphics/Picture;-><init>()V
+
+    :cond_0
+    :try_start_0
+    invoke-virtual {v0}, Landroid/text/Layout;->getWidth()I
+
+    move-result v2
+
+    invoke-virtual {v0}, Landroid/text/Layout;->getHeight()I
+
+    move-result v3
+
+    invoke-virtual {v1, v2, v3}, Landroid/graphics/Picture;->beginRecording(II)Landroid/graphics/Canvas;
+
+    move-result-object v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :try_start_1
+    invoke-virtual {v0, v2}, Landroid/text/Layout;->draw(Landroid/graphics/Canvas;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    :try_start_2
+    invoke-virtual {v1}, Landroid/graphics/Picture;->endRecording()V
+
+    invoke-virtual {p1, v1}, Lvjc;->e(Ljava/lang/Object;)Z
 
     goto :goto_1
 
-    :cond_0
-    instance-of v0, p1, Ls17;
-
-    if-nez v0, :cond_1
+    :catchall_0
+    move-exception p1
 
     goto :goto_0
 
-    :cond_1
-    check-cast p1, Ls17;
+    :catchall_1
+    move-exception p1
 
-    iget v0, p0, Ls17;->a:I
+    invoke-virtual {v1}, Landroid/graphics/Picture;->endRecording()V
 
-    iget v1, p1, Ls17;->a:I
-
-    if-eq v0, v1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget v0, p0, Ls17;->b:I
-
-    iget p1, p1, Ls17;->b:I
-
-    if-eq v0, p1, :cond_3
+    throw p1
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     :goto_0
-    const/4 p1, 0x0
+    iget-object v0, p0, Ls17;->X:Lt17;
 
-    return p1
+    iget-object v0, v0, Lt17;->b:Ljava/lang/String;
 
-    :cond_3
+    const-string v1, "fail to warm layout"
+
+    invoke-static {v0, v1, p1}, Ltej;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
     :goto_1
-    const/4 p1, 0x1
+    sget-object p1, Lmah;->a:Lmah;
 
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget v0, p0, Ls17;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget v1, p0, Ls17;->b:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, ", transparent="
-
-    const-string v1, ")"
-
-    const-string v2, "GradientsLoadingIconNeutralThemedColors(filled="
-
-    iget v3, p0, Ls17;->a:I
-
-    iget v4, p0, Ls17;->b:I
-
-    invoke-static {v2, v3, v0, v4, v1}, Lkz1;->g(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

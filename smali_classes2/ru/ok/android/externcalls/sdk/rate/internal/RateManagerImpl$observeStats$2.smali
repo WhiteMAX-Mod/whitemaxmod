@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lay3;
+.implements Lsy3;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;->observeStats()Lo25;
+    value = Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;->observeStats()Ly35;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lay3;"
+        "Lsy3;"
     }
 .end annotation
 
@@ -33,7 +33,7 @@
     d2 = {
         "",
         "error",
-        "Lb3h;",
+        "Lmah;",
         "accept",
         "(Ljava/lang/Throwable;)V",
         "<anonymous>"
@@ -81,7 +81,7 @@
     .line 2
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl$observeStats$2;->this$0:Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;
 
-    invoke-static {v0}, Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;->access$getLog$p(Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;)Lahd;
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;->access$getLog$p(Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;)Ltmd;
 
     move-result-object v0
 
@@ -89,7 +89,7 @@
 
     const-string v2, "Can\'t get rate manager config"
 
-    invoke-interface {v0, v1, v2, p1}, Lahd;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v0, v1, v2, p1}, Ltmd;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method

@@ -3,57 +3,95 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lbt1;
+.implements Lda1;
 
 
 # instance fields
-.field public final synthetic a:Lfjc;
+.field public final a:Ldc8;
 
 
 # direct methods
-.method public constructor <init>(Lfjc;)V
+.method public constructor <init>(Ldc8;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lw91;->a:Lfjc;
+    iput-object p1, p0, Lw91;->a:Ldc8;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onMediaConnected(Lru/ok/android/externcalls/sdk/connection/MediaConnectionListener$ConnectedInfo;)V
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/connection/MediaConnectionListener$ConnectedInfo;->isFirstConnection()Z
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lw91;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lw91;
+
+    iget-object v1, p0, Lw91;->a:Ldc8;
+
+    iget-object p1, p1, Lw91;->a:Ldc8;
+
+    invoke-static {v1, p1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-nez p1, :cond_0
+    if-nez p1, :cond_2
 
-    sget-object p1, Lc91;->c:Lc91;
+    return v2
 
-    iget-object v0, p0, Lw91;->a:Lfjc;
-
-    check-cast v0, Lcjc;
-
-    invoke-virtual {v0, p1}, Lcjc;->c(Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_0
-    return-void
+    :cond_2
+    return v0
 .end method
 
-.method public final onMediaDisconnected(Lru/ok/android/externcalls/sdk/connection/MediaConnectionListener$DisconnectedInfo;)V
+.method public final hashCode()I
     .locals 1
 
-    sget-object p1, Ld91;->c:Ld91;
+    iget-object v0, p0, Lw91;->a:Ldc8;
 
-    iget-object v0, p0, Lw91;->a:Lfjc;
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    check-cast v0, Lcjc;
+    move-result v0
 
-    invoke-virtual {v0, p1}, Lcjc;->c(Ljava/lang/Object;)Ljava/lang/Object;
+    return v0
+.end method
 
-    return-void
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "LinkInfo(info="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lw91;->a:Ldc8;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

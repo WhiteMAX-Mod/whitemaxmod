@@ -1,194 +1,111 @@
 .class public final Lfi6;
-.super Lp6g;
+.super Lao4;
 .source "SourceFile"
 
-# interfaces
-.implements Lbr6;
 
+# static fields
+.field public static final b:Lfi6;
 
-# instance fields
-.field public X:I
+.field public static final c:Lwn4;
 
-.field public synthetic Y:Ljava/lang/Object;
+.field public static final d:Lwn4;
 
-.field public final synthetic Z:Lii6;
+.field public static final e:Lwn4;
 
-.field public o:Lei6;
+.field public static final f:Lwn4;
 
-.field public final synthetic t0:Latd;
+.field public static final g:Lwn4;
+
+.field public static final h:Lwn4;
 
 
 # direct methods
-.method public constructor <init>(Lii6;Latd;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lfi6;->Z:Lii6;
-
-    iput-object p2, p0, Lfi6;->t0:Latd;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lfjc;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lfi6;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lfi6;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lfi6;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
+.method static constructor <clinit>()V
+    .locals 7
 
     new-instance v0, Lfi6;
 
-    iget-object v1, p0, Lfi6;->Z:Lii6;
+    invoke-direct {v0}, Lao4;-><init>()V
 
-    iget-object v2, p0, Lfi6;->t0:Latd;
+    sput-object v0, Lfi6;->b:Lfi6;
 
-    invoke-direct {v0, v1, v2, p2}, Lfi6;-><init>(Lii6;Latd;Lkotlin/coroutines/Continuation;)V
+    const/4 v1, 0x0
 
-    iput-object p1, v0, Lfi6;->Y:Ljava/lang/Object;
+    new-array v2, v1, [Ljava/lang/String;
 
-    return-object v0
-.end method
+    const-string v3, ":settings/folder-list"
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
+    const/4 v4, 0x0
 
-    iget-object v0, p0, Lfi6;->Z:Lii6;
+    const/16 v5, 0xe
 
-    iget-object v1, v0, Lii6;->X:Liwh;
+    invoke-static {v0, v3, v2, v4, v5}, Lao4;->c(Lao4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lwn4;
 
-    iget-object v2, p0, Lfi6;->Y:Ljava/lang/Object;
+    move-result-object v2
 
-    check-cast v2, Lfjc;
+    sput-object v2, Lfi6;->c:Lwn4;
 
-    iget v3, p0, Lfi6;->X:I
+    const-string v2, "id"
 
-    const/4 v4, 0x2
+    filled-new-array {v2}, [Ljava/lang/String;
 
-    const/4 v5, 0x1
+    move-result-object v3
 
-    sget-object v6, Lac4;->a:Lac4;
+    const-string v6, ":settings/folder"
 
-    if-eqz v3, :cond_2
+    invoke-static {v0, v6, v3, v4, v5}, Lao4;->c(Lao4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lwn4;
 
-    if-eq v3, v5, :cond_1
+    move-result-object v3
 
-    if-ne v3, v4, :cond_0
+    sput-object v3, Lfi6;->d:Lwn4;
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    const-string v3, ":settings/folder/edit"
 
-    goto :goto_2
+    new-array v6, v1, [Ljava/lang/String;
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    invoke-static {v0, v3, v6, v4, v5}, Lao4;->c(Lao4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lwn4;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    move-result-object v3
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    sput-object v3, Lfi6;->e:Lwn4;
 
-    throw p1
+    const-string v3, ":settings/folder/create"
 
-    :cond_1
-    iget-object v1, p0, Lfi6;->o:Lei6;
+    new-array v6, v1, [Ljava/lang/String;
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    invoke-static {v0, v3, v6, v4, v5}, Lao4;->c(Lao4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lwn4;
 
-    goto :goto_0
+    move-result-object v3
 
-    :cond_2
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    sput-object v3, Lfi6;->f:Lwn4;
 
-    new-instance p1, Lei6;
+    const-string v3, ":settings/folder/by-chat"
 
-    iget-object v3, p0, Lfi6;->t0:Latd;
+    filled-new-array {v2}, [Ljava/lang/String;
 
-    const/4 v7, 0x0
+    move-result-object v2
 
-    invoke-direct {p1, v3, v7, v2}, Lei6;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-static {v0, v3, v2, v4, v5}, Lao4;->c(Lao4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lwn4;
 
-    invoke-virtual {v1, p1}, Liwh;->c(Lar;)V
+    move-result-object v2
 
-    invoke-virtual {v1}, Liwh;->d()Z
+    sput-object v2, Lfi6;->g:Lwn4;
 
-    move-result v1
+    const-string v2, ":settings/folder/settings"
 
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    new-array v3, v1, [Ljava/lang/String;
 
-    move-result-object v1
+    invoke-static {v0, v2, v3, v4, v5}, Lao4;->c(Lao4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lwn4;
 
-    iput-object v2, p0, Lfi6;->Y:Ljava/lang/Object;
+    const-string v2, ":settings/folder/members-picker"
 
-    iput-object p1, p0, Lfi6;->o:Lei6;
+    new-array v1, v1, [Ljava/lang/String;
 
-    iput v5, p0, Lfi6;->X:I
+    invoke-static {v0, v2, v1, v4, v5}, Lao4;->c(Lao4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lwn4;
 
-    move-object v3, v2
+    move-result-object v0
 
-    check-cast v3, Lcjc;
+    sput-object v0, Lfi6;->h:Lwn4;
 
-    iget-object v3, v3, Lcjc;->a:Lyw0;
-
-    invoke-interface {v3, v1, p0}, Lioe;->h(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    if-ne v1, v6, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    move-object v1, p1
-
-    :goto_0
-    new-instance p1, Lip2;
-
-    const/16 v3, 0x12
-
-    invoke-direct {p1, v0, v3, v1}, Lip2;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lfi6;->Y:Ljava/lang/Object;
-
-    iput-object v0, p0, Lfi6;->o:Lei6;
-
-    iput v4, p0, Lfi6;->X:I
-
-    invoke-static {v2, p1, p0}, Lpkj;->a(Lfjc;Llq6;Lo84;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v6, :cond_4
-
-    :goto_1
-    return-object v6
-
-    :cond_4
-    :goto_2
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
+    return-void
 .end method

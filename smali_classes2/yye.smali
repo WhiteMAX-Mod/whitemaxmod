@@ -1,59 +1,43 @@
 .class public final Lyye;
-.super Llm4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Lyye;
+# instance fields
+.field public final a:Lbgg;
 
-.field public static final c:Lhm4;
-
-.field public static final d:Lhm4;
+.field public final b:Lbgg;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(Lj88;Lj88;)V
+    .locals 2
 
-    new-instance v0, Lyye;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Llm4;-><init>()V
+    new-instance v0, Lty1;
 
-    sput-object v0, Lyye;->b:Lyye;
+    const/4 v1, 0x2
 
-    const/4 v1, 0x0
+    invoke-direct {v0, p1, p2, v1}, Lty1;-><init>(Lj88;Lj88;I)V
 
-    new-array v2, v1, [Ljava/lang/String;
+    new-instance p1, Lbgg;
 
-    const/4 v3, 0x0
+    invoke-direct {p1, v0}, Lbgg;-><init>(Lis6;)V
 
-    const/16 v4, 0xe
+    iput-object p1, p0, Lyye;->a:Lbgg;
 
-    const-string v5, ":settings/devices"
+    new-instance p1, Lbxe;
 
-    invoke-static {v0, v5, v2, v3, v4}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
+    const/4 p2, 0x2
 
-    move-result-object v2
+    invoke-direct {p1, p2, p0}, Lbxe;-><init>(ILjava/lang/Object;)V
 
-    sput-object v2, Lyye;->c:Lhm4;
+    new-instance p2, Lbgg;
 
-    new-array v1, v1, [Ljava/lang/String;
+    invoke-direct {p2, p1}, Lbgg;-><init>(Lis6;)V
 
-    new-instance v2, Lbm4;
-
-    const/4 v3, 0x1
-
-    invoke-direct {v2, v3}, Lbm4;-><init>(I)V
-
-    const/16 v3, 0xa
-
-    const-string v4, ":auth"
-
-    invoke-static {v0, v4, v1, v2, v3}, Llm4;->b(Llm4;Ljava/lang/String;[Ljava/lang/String;Lcm4;I)Lhm4;
-
-    move-result-object v0
-
-    sput-object v0, Lyye;->d:Lhm4;
+    iput-object p2, p0, Lyye;->b:Lbgg;
 
     return-void
 .end method

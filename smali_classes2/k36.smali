@@ -1,69 +1,162 @@
 .class public final Lk36;
-.super Lo84;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public A0:I
+.field public final a:Lz00;
 
-.field public X:Ljava/io/Closeable;
+.field public final b:Li36;
 
-.field public Y:Ljava/io/OutputStream;
+.field public final c:Lh36;
 
-.field public Z:[B
+.field public final d:Ljava/util/concurrent/atomic/AtomicReference;
 
-.field public d:Ljava/io/Closeable;
+.field public final e:Ljava/lang/Object;
 
-.field public o:Ljava/io/InputStream;
+.field public final f:Z
 
-.field public t0:I
+.field public g:Lgd4;
 
-.field public u0:I
-
-.field public v0:I
-
-.field public w0:I
-
-.field public x0:J
-
-.field public synthetic y0:Ljava/lang/Object;
-
-.field public final synthetic z0:Lyna;
+.field public final h:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lyna;Lo84;)V
+.method public constructor <init>(Lz00;Li36;Lh36;)V
     .locals 0
 
-    iput-object p1, p0, Lk36;->z0:Lyna;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lk36;->a:Lz00;
+
+    iput-object p2, p0, Lk36;->b:Li36;
+
+    iput-object p3, p0, Lk36;->c:Lh36;
+
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
+
+    const/4 p2, 0x0
+
+    invoke-direct {p1, p2}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object p1, p0, Lk36;->d:Ljava/util/concurrent/atomic/AtomicReference;
+
+    new-instance p1, Ljava/lang/Object;
+
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lk36;->e:Ljava/lang/Object;
+
+    const/4 p1, 0x0
+
+    iput-boolean p1, p0, Lk36;->f:Z
+
+    new-instance p1, Lkv3;
+
+    const/16 p2, 0x15
+
+    invoke-direct {p1, p2, p0}, Lkv3;-><init>(ILjava/lang/Object;)V
+
+    const/4 p2, 0x2
+
+    invoke-static {p2, p1}, Lbdj;->d(ILis6;)Lj88;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lk36;->h:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final a(Lcia;)V
+    .locals 3
 
-    iput-object p1, p0, Lk36;->y0:Ljava/lang/Object;
+    iget-object v0, p0, Lk36;->e:Ljava/lang/Object;
 
-    iget p1, p0, Lk36;->A0:I
+    monitor-enter v0
 
-    const/high16 v0, -0x80000000
+    :try_start_0
+    iget-object v1, p0, Lk36;->b:Li36;
 
-    or-int/2addr p1, v0
+    if-eqz v1, :cond_0
 
-    iput p1, p0, Lk36;->A0:I
+    const-string v2, "schedule update"
 
-    iget-object p1, p0, Lk36;->z0:Lyna;
+    invoke-interface {v1, v2}, Li36;->log(Ljava/lang/String;)V
 
-    const/4 v0, 0x0
+    goto :goto_0
 
-    invoke-virtual {p1, v0, v0, p0}, Lyna;->s(Ljava/io/File;Ljava/io/InputStream;Lo84;)Ljava/lang/Object;
+    :catchall_0
+    move-exception p1
+
+    goto :goto_2
+
+    :cond_0
+    :goto_0
+    iget-object v1, p0, Lk36;->d:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {v1, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lk36;->g:Lgd4;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-nez p1, :cond_1
+
+    :try_start_1
+    iget-object p1, p0, Lk36;->c:Lh36;
+
+    invoke-interface {p1}, Lh36;->a()Lgd4;
 
     move-result-object p1
 
-    return-object p1
+    const-string v1, "file-prefs"
+
+    const/4 v2, 0x1
+
+    invoke-virtual {p1, v2, v1}, Lgd4;->limitedParallelism(ILjava/lang/String;)Lgd4;
+
+    move-result-object p1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    goto :goto_1
+
+    :catchall_1
+    const/4 p1, 0x0
+
+    :goto_1
+    :try_start_2
+    iput-object p1, p0, Lk36;->g:Lgd4;
+
+    :cond_1
+    iget-object p1, p0, Lk36;->g:Lgd4;
+
+    if-eqz p1, :cond_2
+
+    sget-object v1, Lmi5;->a:Lmi5;
+
+    iget-object v2, p0, Lk36;->h:Ljava/lang/Object;
+
+    invoke-interface {v2}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lj36;
+
+    invoke-virtual {p1, v1, v2}, Lgd4;->dispatch(Led4;Ljava/lang/Runnable;)V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    :cond_2
+    monitor-exit v0
+
+    return-void
+
+    :goto_2
+    monitor-exit v0
+
+    throw p1
 .end method

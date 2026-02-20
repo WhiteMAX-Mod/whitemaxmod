@@ -11,9 +11,9 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    new-instance v0, Lgz0;
+    new-instance v0, Ltz0;
 
-    sget-object v1, Ljd2;->a:Ljava/nio/charset/Charset;
+    sget-object v1, Lqe2;->a:Ljava/nio/charset/Charset;
 
     const-string v2, "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
 
@@ -21,17 +21,17 @@
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lgz0;-><init>([B)V
+    invoke-direct {v0, v1}, Ltz0;-><init>([B)V
 
-    iput-object v2, v0, Lgz0;->b:Ljava/lang/String;
+    iput-object v2, v0, Ltz0;->c:Ljava/lang/String;
 
-    iget-object v0, v0, Lgz0;->c:[B
+    iget-object v0, v0, Ltz0;->a:[B
 
     sput-object v0, La;->a:[B
 
     const-string v0, "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_"
 
-    sget-object v1, Ljd2;->a:Ljava/nio/charset/Charset;
+    sget-object v1, Lqe2;->a:Ljava/nio/charset/Charset;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
 

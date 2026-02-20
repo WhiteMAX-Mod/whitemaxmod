@@ -2,31 +2,52 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lr4a;
-
-
-# instance fields
-.field public final a:Ljava/lang/String;
-
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
+.method public static a(Ljava/lang/Object;)I
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    check-cast p0, Landroid/graphics/drawable/Icon;
 
-    iput-object p1, p0, Lwf7;->a:Ljava/lang/String;
+    invoke-virtual {p0}, Landroid/graphics/drawable/Icon;->getResId()I
 
-    return-void
+    move-result p0
+
+    return p0
 .end method
 
+.method public static b(Ljava/lang/Object;)Ljava/lang/String;
+    .locals 0
 
-# virtual methods
-.method public toString()Ljava/lang/String;
-    .locals 1
+    check-cast p0, Landroid/graphics/drawable/Icon;
 
-    iget-object v0, p0, Lwf7;->a:Ljava/lang/String;
+    invoke-virtual {p0}, Landroid/graphics/drawable/Icon;->getResPackage()Ljava/lang/String;
 
-    return-object v0
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static c(Ljava/lang/Object;)I
+    .locals 0
+
+    check-cast p0, Landroid/graphics/drawable/Icon;
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/Icon;->getType()I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static d(Ljava/lang/Object;)Landroid/net/Uri;
+    .locals 0
+
+    check-cast p0, Landroid/graphics/drawable/Icon;
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/Icon;->getUri()Landroid/net/Uri;
+
+    move-result-object p0
+
+    return-object p0
 .end method

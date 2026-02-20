@@ -1,35 +1,71 @@
-.class public final Lmr5;
+.class public final synthetic Lmr5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lhh8;
+.implements Lry3;
+
 
 # instance fields
-.field public final a:J
+.field public final synthetic a:Z
 
-.field public final b:Lpj6;
-
-.field public final c:Lpj6;
-
-.field public final d:Ljava/lang/String;
-
-.field public final e:Ljava/lang/String;
+.field public final synthetic b:I
 
 
 # direct methods
-.method public constructor <init>(JLpj6;Lpj6;Ljava/lang/String;Ljava/lang/String;)V
+.method public synthetic constructor <init>(IZ)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lmr5;->a:J
+    iput p1, p0, Lmr5;->b:I
 
-    iput-object p3, p0, Lmr5;->b:Lpj6;
+    iput-boolean p2, p0, Lmr5;->a:Z
 
-    iput-object p4, p0, Lmr5;->c:Lpj6;
+    return-void
+.end method
 
-    iput-object p5, p0, Lmr5;->d:Ljava/lang/String;
+.method public synthetic constructor <init>(ZI)V
+    .locals 0
 
-    iput-object p6, p0, Lmr5;->e:Ljava/lang/String;
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-boolean p1, p0, Lmr5;->a:Z
+
+    iput p2, p0, Lmr5;->b:I
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public accept(Ljava/lang/Object;)V
+    .locals 2
+
+    iget v0, p0, Lmr5;->b:I
+
+    check-cast p1, Lmgc;
+
+    iget-boolean v1, p0, Lmr5;->a:Z
+
+    invoke-virtual {p1, v0, v1}, Lmgc;->e0(IZ)V
+
+    return-void
+.end method
+
+.method public invoke(Ljava/lang/Object;)V
+    .locals 2
+
+    iget-boolean v0, p0, Lmr5;->a:Z
+
+    check-cast p1, Lcfc;
+
+    iget v1, p0, Lmr5;->b:I
+
+    invoke-interface {p1, v1, v0}, Lcfc;->l(IZ)V
 
     return-void
 .end method

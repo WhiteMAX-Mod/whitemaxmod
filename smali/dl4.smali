@@ -2,49 +2,48 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Llec;
 
+# instance fields
+.field public a:I
 
-# static fields
-.field public static final a:Lay0;
+.field public b:I
 
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lay0;
-
-    const/4 v1, 0x3
-
-    invoke-direct {v0, v1}, Lay0;-><init>(I)V
-
-    sput-object v0, Ldl4;->a:Lay0;
-
-    return-void
-.end method
+.field public c:Ljava/lang/String;
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    sget-object v0, Ldl4;->a:Lay0;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
+    const-string v1, "Start:"
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v1, p0, Ldl4;->a:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, " End:"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Ldl4;->b:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, " \'"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ldl4;->c:Ljava/lang/String;
+
+    const-string v2, "\'"
+
+    invoke-static {v0, v1, v2}, Ltx8;->n(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Ljava/nio/ByteBuffer;
-
     return-object v0
-.end method
-
-.method public final bridge synthetic d(Ljava/lang/Object;)Z
-    .locals 0
-
-    const/4 p1, 0x1
-
-    return p1
 .end method

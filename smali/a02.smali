@@ -1,80 +1,112 @@
-.class public final synthetic La02;
-.super Ljava/lang/Object;
+.class public final La02;
+.super Lpdg;
 .source "SourceFile"
 
 # interfaces
-.implements Lrw1;
+.implements Lys6;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lc02;
+.field public final synthetic o:Lcg5;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lc02;I)V
+.method public constructor <init>(Lcg5;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, La02;->a:I
+    iput-object p1, p0, La02;->o:Lcg5;
 
-    iput-object p1, p0, La02;->b:Lc02;
+    const/4 p1, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final l(Lqw1;)Ljava/lang/String;
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, La02;->a:I
+    check-cast p1, Lnd4;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object v0, p0, La02;->b:Lc02;
+    invoke-virtual {p0, p1, p2}, La02;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-object v1, v0, Lc02;->d:Ljava/lang/Object;
+    move-result-object p1
 
-    check-cast v1, Lwpe;
+    check-cast p1, La02;
 
-    new-instance v2, Lb02;
+    sget-object p2, Lmah;->a:Lmah;
 
-    const/4 v3, 0x0
+    invoke-virtual {p1, p2}, La02;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-direct {v2, v0, p1, v3}, Lb02;-><init>(Lc02;Lqw1;I)V
-
-    invoke-virtual {v1, v2}, Lwpe;->execute(Ljava/lang/Runnable;)V
-
-    const-string p1, "clearCaptureRequestOptions"
+    move-result-object p1
 
     return-object p1
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, La02;->b:Lc02;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    iget-object v1, v0, Lc02;->d:Ljava/lang/Object;
+    new-instance p1, La02;
 
-    check-cast v1, Lwpe;
+    iget-object v0, p0, La02;->o:Lcg5;
 
-    new-instance v2, Lb02;
-
-    const/4 v3, 0x1
-
-    invoke-direct {v2, v0, p1, v3}, Lb02;-><init>(Lc02;Lqw1;I)V
-
-    invoke-virtual {v1, v2}, Lwpe;->execute(Ljava/lang/Runnable;)V
-
-    const-string p1, "addCaptureRequestOptions"
+    invoke-direct {p1, v0, p2}, La02;-><init>(Lcg5;Lkotlin/coroutines/Continuation;)V
 
     return-object p1
+.end method
 
-    nop
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/util/UUID;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    iget-object v0, p0, La02;->o:Lcg5;
+
+    iget-object v0, v0, Lcg5;->c:Ljava/lang/Object;
+
+    check-cast v0, Lj88;
+
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Li5b;
+
+    new-instance v1, Lmt1;
+
+    invoke-virtual {v0}, Li5b;->s()Lplc;
+
+    move-result-object v2
+
+    iget-object v2, v2, Lplc;->a:Lhl8;
+
+    invoke-virtual {v2}, Lqme;->k()J
+
+    move-result-wide v2
+
+    const/4 v4, 0x0
+
+    invoke-direct {v1, v2, v3, p1, v4}, Lmt1;-><init>(JLjava/io/Serializable;I)V
+
+    invoke-static {v0, v1}, Li5b;->q(Li5b;Lko;)J
+
+    move-result-wide v0
+
+    new-instance p1, Ljava/lang/Long;
+
+    invoke-direct {p1, v0, v1}, Ljava/lang/Long;-><init>(J)V
+
+    return-object p1
 .end method

@@ -41,7 +41,7 @@
 
 
 # instance fields
-.field public final J0:Z
+.field public final I0:Z
 
 
 # direct methods
@@ -54,11 +54,11 @@
     move-result-object p1
 
     .line 5
-    new-instance p2, Lktb;
+    new-instance p2, Lyvb;
 
     const-string v0, "arg:value"
 
-    invoke-direct {p2, v0, p1}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p2, v0, p1}, Lyvb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 6
     invoke-static {p3, p4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -66,26 +66,26 @@
     move-result-object p1
 
     .line 7
-    new-instance p3, Lktb;
+    new-instance p3, Lyvb;
 
     const-string p4, "arg:button_id"
 
-    invoke-direct {p3, p4, p1}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p3, p4, p1}, Lyvb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 8
-    new-instance p1, Lktb;
+    new-instance p1, Lyvb;
 
     const-string p4, "arg:descriptions"
 
-    invoke-direct {p1, p4, p5}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p1, p4, p5}, Lyvb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 9
-    filled-new-array {p2, p3, p1}, [Lktb;
+    filled-new-array {p2, p3, p1}, [Lyvb;
 
     move-result-object p1
 
     .line 10
-    invoke-static {p1}, Laaj;->c([Lktb;)Landroid/os/Bundle;
+    invoke-static {p1}, Lejj;->c([Lyvb;)Landroid/os/Bundle;
 
     move-result-object p1
 
@@ -95,7 +95,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(JJ[Ljava/lang/String;ILso4;)V
+.method public synthetic constructor <init>(JJ[Ljava/lang/String;ILfq4;)V
     .locals 6
 
     and-int/lit8 p6, p6, 0x4
@@ -130,17 +130,17 @@
     const/4 p1, 0x1
 
     .line 2
-    iput-boolean p1, p0, Lone/me/devmenu/utils/LongValueBottomSheet;->J0:Z
+    iput-boolean p1, p0, Lone/me/devmenu/utils/LongValueBottomSheet;->I0:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final O0()Ljava/lang/String;
+.method public final W0()Ljava/lang/String;
     .locals 2
 
-    invoke-virtual {p0}, La94;->getArgs()Landroid/os/Bundle;
+    invoke-virtual {p0}, Lpa4;->getArgs()Landroid/os/Bundle;
 
     move-result-object v0
 
@@ -157,10 +157,10 @@
     return-object v0
 .end method
 
-.method public final P0()Z
+.method public final X0()Z
     .locals 1
 
-    iget-boolean v0, p0, Lone/me/devmenu/utils/LongValueBottomSheet;->J0:Z
+    iget-boolean v0, p0, Lone/me/devmenu/utils/LongValueBottomSheet;->I0:Z
 
     return v0
 .end method

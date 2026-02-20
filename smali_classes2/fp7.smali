@@ -1,100 +1,64 @@
 .class public final Lfp7;
-.super Lbp9;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lhp7;
 
-# instance fields
-.field public a:I
+
+# static fields
+.field public static final a:Lfp7;
 
 
 # direct methods
-.method public constructor <init>()V
+.method static constructor <clinit>()V
     .locals 1
 
-    invoke-direct {p0}, Lbp9;-><init>()V
+    new-instance v0, Lfp7;
 
-    const/4 v0, 0x0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput v0, p0, Lfp7;->a:I
-
-    const/4 v0, -0x1
-
-    iput v0, p0, Lbp9;->cachedSize:I
+    sput-object v0, Lfp7;->a:Lfp7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final computeSerializedSize()I
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget v0, p0, Lfp7;->a:I
+    const/4 v0, 0x1
 
-    if-eqz v0, :cond_0
-
-    const/4 v1, 0x1
-
-    invoke-static {v1, v0}, Lwg3;->n(II)I
-
-    move-result v0
+    if-ne p0, p1, :cond_0
 
     return v0
 
     :cond_0
-    const/4 v0, 0x0
+    instance-of p1, p1, Lfp7;
 
-    return v0
-.end method
+    if-nez p1, :cond_1
 
-.method public final mergeFrom(Lvg3;)Lbp9;
-    .locals 2
+    const/4 p1, 0x0
 
-    :cond_0
-    :goto_0
-    invoke-virtual {p1}, Lvg3;->s()I
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    const/16 v1, 0x8
-
-    if-eq v0, v1, :cond_1
-
-    invoke-virtual {p1, v0}, Lvg3;->u(I)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    goto :goto_1
+    return p1
 
     :cond_1
-    invoke-virtual {p1}, Lvg3;->p()I
-
-    move-result v0
-
-    iput v0, p0, Lfp7;->a:I
-
-    goto :goto_0
-
-    :cond_2
-    :goto_1
-    return-object p0
+    return v0
 .end method
 
-.method public final writeTo(Lwg3;)V
-    .locals 2
+.method public final hashCode()I
+    .locals 1
 
-    iget v0, p0, Lfp7;->a:I
+    const v0, 0x3ef2ccf
 
-    if-eqz v0, :cond_0
+    return v0
+.end method
 
-    const/4 v1, 0x1
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    invoke-virtual {p1, v1, v0}, Lwg3;->G(II)V
+    const-string v0, "AppUpdate"
 
-    :cond_0
-    return-void
+    return-object v0
 .end method

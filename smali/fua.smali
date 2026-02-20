@@ -1,53 +1,55 @@
-.class public final Lfua;
-.super Lo84;
+.class public abstract Lfua;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lone/me/android/notifications/NotificationsImagesProvider;
-
-.field public Z:I
-
-.field public d:Lzb4;
-
-.field public o:Lb01;
-
-
 # direct methods
-.method public constructor <init>(Lone/me/android/notifications/NotificationsImagesProvider;Lo84;)V
+.method public static a(Landroid/app/Notification;)Z
     .locals 0
 
-    iput-object p1, p0, Lfua;->Y:Lone/me/android/notifications/NotificationsImagesProvider;
+    invoke-virtual {p0}, Landroid/app/Notification;->getAllowSystemGeneratedContextualActions()Z
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    move-result p0
 
-    return-void
+    return p0
 .end method
 
+.method public static b(Landroid/app/Notification;)Landroid/app/Notification$BubbleMetadata;
+    .locals 0
 
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    invoke-virtual {p0}, Landroid/app/Notification;->getBubbleMetadata()Landroid/app/Notification$BubbleMetadata;
 
-    iput-object p1, p0, Lfua;->X:Ljava/lang/Object;
+    move-result-object p0
 
-    iget p1, p0, Lfua;->Z:I
+    return-object p0
+.end method
 
-    const/high16 v0, -0x80000000
+.method public static c(Landroid/app/RemoteInput;)I
+    .locals 0
 
-    or-int/2addr p1, v0
+    invoke-virtual {p0}, Landroid/app/RemoteInput;->getEditChoicesBeforeSending()I
 
-    iput p1, p0, Lfua;->Z:I
+    move-result p0
 
-    iget-object p1, p0, Lfua;->Y:Lone/me/android/notifications/NotificationsImagesProvider;
+    return p0
+.end method
 
-    const/4 v0, 0x0
+.method public static d(Landroid/app/Notification;)Landroid/content/LocusId;
+    .locals 0
 
-    invoke-static {p1, v0, v0, p0}, Lone/me/android/notifications/NotificationsImagesProvider;->a(Lone/me/android/notifications/NotificationsImagesProvider;Lzb4;Lddf;Lo84;)Ljava/lang/Object;
+    invoke-virtual {p0}, Landroid/app/Notification;->getLocusId()Landroid/content/LocusId;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    return-object p0
+.end method
+
+.method public static e(Landroid/app/Notification$Action;)Z
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/app/Notification$Action;->isContextual()Z
+
+    move-result p0
+
+    return p0
 .end method

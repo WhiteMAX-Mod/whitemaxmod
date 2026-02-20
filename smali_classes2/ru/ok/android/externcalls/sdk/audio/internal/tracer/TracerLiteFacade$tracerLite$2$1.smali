@@ -1,14 +1,14 @@
 .class final Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade$tracerLite$2$1;
-.super Ly48;
+.super Lv78;
 .source "SourceFile"
 
 # interfaces
-.implements Lnq6;
+.implements Lks6;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade$tracerLite$2;->invoke()Lqqg;
+    value = Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade$tracerLite$2;->invoke()Lvxg;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,8 +18,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Ly48;",
-        "Lnq6;"
+        "Lv78;",
+        "Lks6;"
     }
 .end annotation
 
@@ -28,10 +28,10 @@
         "\u0000\u000c\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0010\u0004\u001a\u00020\u0001*\u00020\u0000H\n\u00a2\u0006\u0004\u0008\u0002\u0010\u0003"
     }
     d2 = {
-        "Loqg;",
-        "Lb3h;",
+        "Ltxg;",
+        "Lmah;",
         "invoke",
-        "(Loqg;)V",
+        "(Ltxg;)V",
         "<anonymous>"
     }
     k = 0x3
@@ -65,7 +65,7 @@
 
     const/4 v0, 0x1
 
-    invoke-direct {p0, v0}, Ly48;-><init>(I)V
+    invoke-direct {p0, v0}, Lv78;-><init>(I)V
 
     return-void
 .end method
@@ -76,30 +76,30 @@
     .locals 0
 
     .line 1
-    check-cast p1, Loqg;
+    check-cast p1, Ltxg;
 
-    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade$tracerLite$2$1;->invoke(Loqg;)V
+    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade$tracerLite$2$1;->invoke(Ltxg;)V
 
-    sget-object p1, Lb3h;->a:Lb3h;
+    sget-object p1, Lmah;->a:Lmah;
 
     return-object p1
 .end method
 
-.method public final invoke(Loqg;)V
+.method public final invoke(Ltxg;)V
     .locals 2
 
     .line 2
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 3
-    new-instance v0, Lrdf;
+    new-instance v0, Lplf;
 
     const-string v1, "xrRYkU895jUPp2YZo1sxmtFadnlX1oHyouadIxpNzAp"
 
-    invoke-direct {v0, v1}, Lrdf;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lplf;-><init>(Ljava/lang/String;)V
 
     .line 4
-    iput-object v0, p1, Loqg;->b:Lrdf;
+    iput-object v0, p1, Ltxg;->b:Lplf;
 
     return-void
 .end method

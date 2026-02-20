@@ -1,92 +1,66 @@
-.class public final Lem8;
-.super Llk0;
+.class public final synthetic Lem8;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lco4;
 
 
 # instance fields
-.field public final a:Ljava/util/List;
+.field public final synthetic X:Ljava/lang/Float;
 
-.field public final b:I
+.field public final synthetic a:Ljava/lang/Long;
+
+.field public final synthetic b:Ljava/lang/Long;
+
+.field public final synthetic c:Ljava/lang/Long;
+
+.field public final synthetic d:D
+
+.field public final synthetic o:D
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 3
+.method public synthetic constructor <init>(Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;DDLjava/lang/Float;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v0, "connection_type"
+    iput-object p1, p0, Lem8;->a:Ljava/lang/Long;
 
-    const-string v1, "url"
+    iput-object p2, p0, Lem8;->b:Ljava/lang/Long;
 
-    const-string v2, "class"
+    iput-object p3, p0, Lem8;->c:Ljava/lang/Long;
 
-    filled-new-array {v2, v0, v1}, [Ljava/lang/String;
+    iput-wide p4, p0, Lem8;->d:D
 
-    move-result-object v0
+    iput-wide p6, p0, Lem8;->o:D
 
-    invoke-static {v0}, Lqi3;->h([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lem8;->a:Ljava/util/List;
-
-    const/4 v0, 0x7
-
-    iput v0, p0, Lem8;->b:I
+    iput-object p8, p0, Lem8;->X:Ljava/lang/Float;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()Ljava/util/List;
-    .locals 1
+.method public final a()Ljava/lang/Object;
+    .locals 9
 
-    iget-object v0, p0, Lem8;->a:Ljava/util/List;
+    new-instance v0, Lone/me/location/map/show/ShowLocationScreen;
+
+    iget-object v1, p0, Lem8;->a:Ljava/lang/Long;
+
+    iget-object v2, p0, Lem8;->b:Ljava/lang/Long;
+
+    iget-object v3, p0, Lem8;->c:Ljava/lang/Long;
+
+    iget-wide v4, p0, Lem8;->d:D
+
+    iget-wide v6, p0, Lem8;->o:D
+
+    iget-object v8, p0, Lem8;->X:Ljava/lang/Float;
+
+    invoke-direct/range {v0 .. v8}, Lone/me/location/map/show/ShowLocationScreen;-><init>(Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;DDLjava/lang/Float;)V
 
     return-object v0
-.end method
-
-.method public final c(Ljfa;Ljava/util/List;)Z
-    .locals 2
-
-    const-string v0, "warm_start"
-
-    invoke-virtual {p1, v0}, Ljfa;->b(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    iget v1, p0, Lem8;->b:I
-
-    if-eqz v0, :cond_0
-
-    add-int/lit8 v1, v1, -0x1
-
-    :cond_0
-    const-string v0, "cached_dns"
-
-    invoke-virtual {p1, v0}, Ljfa;->b(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    add-int/lit8 v1, v1, -0x1
-
-    :cond_1
-    invoke-interface {p2}, Ljava/util/List;->size()I
-
-    move-result p1
-
-    if-ne v1, p1, :cond_2
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_2
-    const/4 p1, 0x0
-
-    return p1
 .end method

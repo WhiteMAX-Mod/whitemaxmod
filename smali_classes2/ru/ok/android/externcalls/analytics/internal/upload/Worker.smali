@@ -28,7 +28,7 @@
 # instance fields
 .field private final channel:Lru/ok/android/externcalls/analytics/internal/event/EventChannel;
 
-.field private final fileCacheWriter:Lru/ok/android/externcalls/analytics/internal/storage/FileCacheWriter;
+.field private final fileCacheWriter:Lru/ok/android/externcalls/analytics/internal/storage/CacheWriter;
 
 .field private final handler:Landroid/os/Handler;
 
@@ -49,11 +49,12 @@
 
 
 # direct methods
-.method public constructor <init>(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljava/util/concurrent/locks/Lock;Lru/ok/android/externcalls/analytics/internal/event/EventChannel;Z)V
+.method public constructor <init>(Landroid/content/Context;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljava/util/concurrent/locks/Lock;Lru/ok/android/externcalls/analytics/internal/event/EventChannel;Lru/ok/android/externcalls/analytics/internal/storage/DatabaseHelper;Z)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
+            "Landroid/content/Context;",
             "Ljavax/inject/Provider<",
             "Landroid/os/Looper;",
             ">;",
@@ -62,6 +63,7 @@
             ">;",
             "Ljava/util/concurrent/locks/Lock;",
             "Lru/ok/android/externcalls/analytics/internal/event/EventChannel;",
+            "Lru/ok/android/externcalls/analytics/internal/storage/DatabaseHelper;",
             "Z)V"
         }
     .end annotation
@@ -72,27 +74,37 @@
 
     iput-wide v0, p0, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->millisToUploadAny:J
 
-    new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
+    new-instance p1, Ljava/util/concurrent/ConcurrentHashMap;
 
-    invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+    invoke-direct {p1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
-    iput-object v0, p0, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->millisToUpload:Ljava/util/concurrent/ConcurrentHashMap;
+    iput-object p1, p0, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->millisToUpload:Ljava/util/concurrent/ConcurrentHashMap;
 
-    iput-object p4, p0, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->channel:Lru/ok/android/externcalls/analytics/internal/event/EventChannel;
+    iput-object p5, p0, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->channel:Lru/ok/android/externcalls/analytics/internal/event/EventChannel;
 
-    new-instance p4, Lru/ok/android/externcalls/analytics/internal/storage/FileCacheWriter;
+    if-eqz p6, :cond_0
 
-    invoke-direct {p4, p2, p5, p3}, Lru/ok/android/externcalls/analytics/internal/storage/FileCacheWriter;-><init>(Ljavax/inject/Provider;ZLjava/util/concurrent/locks/Lock;)V
+    new-instance p1, Lru/ok/android/externcalls/analytics/internal/storage/DbCacheWriter;
 
-    iput-object p4, p0, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->fileCacheWriter:Lru/ok/android/externcalls/analytics/internal/storage/FileCacheWriter;
+    invoke-direct {p1, p6, p4}, Lru/ok/android/externcalls/analytics/internal/storage/DbCacheWriter;-><init>(Lru/ok/android/externcalls/analytics/internal/storage/DatabaseHelper;Ljava/util/concurrent/locks/Lock;)V
 
-    new-instance p2, Landroid/os/Handler;
+    goto :goto_0
 
-    invoke-interface {p1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    :cond_0
+    new-instance p1, Lru/ok/android/externcalls/analytics/internal/storage/FileCacheWriter;
 
-    move-result-object p1
+    invoke-direct {p1, p3, p7, p4}, Lru/ok/android/externcalls/analytics/internal/storage/FileCacheWriter;-><init>(Ljavax/inject/Provider;ZLjava/util/concurrent/locks/Lock;)V
 
-    check-cast p1, Landroid/os/Looper;
+    :goto_0
+    iput-object p1, p0, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->fileCacheWriter:Lru/ok/android/externcalls/analytics/internal/storage/CacheWriter;
+
+    new-instance p1, Landroid/os/Handler;
+
+    invoke-interface {p2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Landroid/os/Looper;
 
     new-instance p3, Lru/ok/android/externcalls/analytics/internal/upload/Worker$Callback;
 
@@ -100,9 +112,9 @@
 
     invoke-direct {p3, p0, p4}, Lru/ok/android/externcalls/analytics/internal/upload/Worker$Callback;-><init>(Lru/ok/android/externcalls/analytics/internal/upload/Worker;I)V
 
-    invoke-direct {p2, p1, p3}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;)V
+    invoke-direct {p1, p2, p3}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;)V
 
-    iput-object p2, p0, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->handler:Landroid/os/Handler;
+    iput-object p1, p0, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->handler:Landroid/os/Handler;
 
     sget-object p1, Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;->INSTANCE:Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;
 
@@ -222,11 +234,11 @@
 .end method
 
 .method private handleAppend(Lru/ok/android/externcalls/analytics/events/CallAnalyticsEvent;)V
-    .locals 4
+    .locals 7
 
-    iget-object v0, p0, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->fileCacheWriter:Lru/ok/android/externcalls/analytics/internal/storage/FileCacheWriter;
+    iget-object v0, p0, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->fileCacheWriter:Lru/ok/android/externcalls/analytics/internal/storage/CacheWriter;
 
-    invoke-virtual {v0, p1}, Lru/ok/android/externcalls/analytics/internal/storage/FileCacheWriter;->writeToCache(Lru/ok/android/externcalls/analytics/events/CallAnalyticsEvent;)V
+    invoke-interface {v0, p1}, Lru/ok/android/externcalls/analytics/internal/storage/CacheWriter;->writeToCache(Lru/ok/android/externcalls/analytics/events/CallAnalyticsEvent;)V
 
     sget-object p1, Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;->INSTANCE:Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;
 
@@ -236,49 +248,90 @@
 
     invoke-virtual {p1}, Lru/ok/android/externcalls/analytics/config/UploadConfig;->getFileLengthTriggerToUploadBytes()I
 
-    move-result p1
+    move-result v0
 
-    iget-object v0, p0, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->fileCacheWriter:Lru/ok/android/externcalls/analytics/internal/storage/FileCacheWriter;
+    iget-object v1, p0, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->fileCacheWriter:Lru/ok/android/externcalls/analytics/internal/storage/CacheWriter;
 
-    invoke-virtual {v0}, Lru/ok/android/externcalls/analytics/internal/storage/FileCacheWriter;->length()J
+    invoke-interface {v1}, Lru/ok/android/externcalls/analytics/internal/storage/CacheWriter;->length()J
 
-    move-result-wide v0
+    move-result-wide v1
 
-    int-to-long v2, p1
+    int-to-long v3, v0
 
-    cmp-long v0, v0, v2
+    cmp-long v3, v1, v3
 
-    if-ltz v0, :cond_0
+    const-string v4, "CallAnalyticsWorker"
 
-    iget-object v0, p0, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->logger:Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;
+    if-ltz v3, :cond_0
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    iget-object p1, p0, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->logger:Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;
 
-    const-string v2, "trigger | log file size exceeded "
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v5, "trigger | log file size ("
 
-    div-int/lit16 p1, p1, 0x3e8
+    invoke-direct {v3, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    const-wide/16 v5, 0x3e8
 
-    const-string p1, "Kb"
+    div-long/2addr v1, v5
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const-string v1, "Kb) exceeded "
 
-    move-result-object p1
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, "CallAnalyticsWorker"
+    div-int/lit16 v0, v0, 0x3e8
 
-    invoke-interface {v0, v1, p1}, Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v0, "Kb"
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-interface {p1, v4, v0}, Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p1, "file size"
 
     invoke-direct {p0, p1}, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->startUpload(Ljava/lang/String;)V
 
+    return-void
+
     :cond_0
+    invoke-virtual {p1}, Lru/ok/android/externcalls/analytics/config/UploadConfig;->getEventCountToUploadNumber()I
+
+    move-result p1
+
+    iget-object v0, p0, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->fileCacheWriter:Lru/ok/android/externcalls/analytics/internal/storage/CacheWriter;
+
+    invoke-interface {v0}, Lru/ok/android/externcalls/analytics/internal/storage/CacheWriter;->count()I
+
+    move-result v0
+
+    if-lt v0, p1, :cond_1
+
+    iget-object v1, p0, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->logger:Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;
+
+    const-string v2, "trigger | record count ("
+
+    const-string v3, ") exceeded "
+
+    invoke-static {v2, v0, p1, v3}, Ltx8;->j(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-interface {v1, v4, p1}, Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string p1, "record count"
+
+    invoke-direct {p0, p1}, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->startUpload(Ljava/lang/String;)V
+
+    :cond_1
     return-void
 .end method
 
@@ -339,7 +392,7 @@
 
     const-string v4, "ms"
 
-    invoke-static {v0, v1, v3, v4}, Lcbh;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v3, v4}, Lfvg;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -363,7 +416,7 @@
 
     const-string v2, ", channel="
 
-    invoke-static {v1, p1, v2}, Lt02;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1, p1, v2}, Ly12;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object p1
 
@@ -412,9 +465,9 @@
     .locals 4
 
     :try_start_0
-    iget-object v0, p0, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->fileCacheWriter:Lru/ok/android/externcalls/analytics/internal/storage/FileCacheWriter;
+    iget-object v0, p0, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->fileCacheWriter:Lru/ok/android/externcalls/analytics/internal/storage/CacheWriter;
 
-    invoke-virtual {v0}, Lru/ok/android/externcalls/analytics/internal/storage/FileCacheWriter;->drop()V
+    invoke-interface {v0}, Lru/ok/android/externcalls/analytics/internal/storage/CacheWriter;->drop()V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -469,9 +522,9 @@
     return-void
 
     :cond_0
-    iget-object v0, p0, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->fileCacheWriter:Lru/ok/android/externcalls/analytics/internal/storage/FileCacheWriter;
+    iget-object v0, p0, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->fileCacheWriter:Lru/ok/android/externcalls/analytics/internal/storage/CacheWriter;
 
-    invoke-virtual {v0, p1}, Lru/ok/android/externcalls/analytics/internal/storage/FileCacheWriter;->grab(Ljavax/inject/Provider;)V
+    invoke-interface {v0, p1}, Lru/ok/android/externcalls/analytics/internal/storage/CacheWriter;->grab(Ljavax/inject/Provider;)V
 
     return-void
 .end method

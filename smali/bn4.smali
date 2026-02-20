@@ -1,30 +1,41 @@
-.class public final synthetic Lbn4;
+.class public final Lbn4;
 .super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lqe8;
-.implements Lfq4;
-.implements Lrw1;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:I
+.field public b:I
 
-.field public final synthetic c:Ljava/lang/Object;
+.field public c:I
+
+.field public d:I
+
+.field public e:I
+
+.field public f:I
+
+.field public g:I
+
+.field public h:I
+
+.field public i:I
+
+.field public j:I
+
+.field public k:I
+
+.field public l:J
+
+.field public m:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;II)V
+.method public synthetic constructor <init>(I)V
     .locals 0
 
-    iput-object p1, p0, Lbn4;->c:Ljava/lang/Object;
-
-    iput p2, p0, Lbn4;->a:I
-
-    iput p3, p0, Lbn4;->b:I
+    iput p1, p0, Lbn4;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -33,97 +44,242 @@
 
 
 # virtual methods
-.method public a(Landroid/media/MediaCodecInfo;)I
-    .locals 3
+.method public final toString()Ljava/lang/String;
+    .locals 28
 
-    iget-object v0, p0, Lbn4;->c:Ljava/lang/Object;
+    move-object/from16 v0, p0
 
-    check-cast v0, Ljava/lang/String;
+    iget v1, v0, Lbn4;->a:I
 
-    iget v1, p0, Lbn4;->a:I
+    const-string v2, "\n}"
 
-    iget v2, p0, Lbn4;->b:I
+    const-string v3, "\n videoFrameProcessingOffsetCount="
 
-    invoke-static {p1, v0, v1, v2}, Lgj5;->g(Landroid/media/MediaCodecInfo;Ljava/lang/String;II)Landroid/util/Size;
+    const-string v4, "\n totalVideoFrameProcessingOffsetUs="
 
-    move-result-object p1
+    const-string v5, "\n droppedToKeyframeEvents="
 
-    if-nez p1, :cond_0
+    const-string v6, "\n maxConsecutiveDroppedBuffers="
 
-    const p1, 0x7fffffff
+    const-string v7, "\n droppedInputBuffers="
 
-    return p1
+    const-string v8, "\n droppedBuffers="
 
-    :cond_0
-    mul-int/2addr v1, v2
+    const-string v9, "\n skippedOutputBuffers="
 
-    invoke-virtual {p1}, Landroid/util/Size;->getWidth()I
+    const-string v10, "\n renderedOutputBuffers="
 
-    move-result v0
+    const-string v11, "\n skippedInputBuffers="
 
-    invoke-virtual {p1}, Landroid/util/Size;->getHeight()I
+    const-string v12, "\n queuedInputBuffers="
 
-    move-result p1
+    const-string v13, ",\n decoderReleases="
 
-    mul-int/2addr p1, v0
+    const-string v14, "DecoderCounters {\n decoderInits="
 
-    sub-int/2addr v1, p1
+    packed-switch v1, :pswitch_data_0
 
-    invoke-static {v1}, Ljava/lang/Math;->abs(I)I
+    iget v1, v0, Lbn4;->b:I
 
-    move-result p1
+    iget v15, v0, Lbn4;->c:I
 
-    return p1
-.end method
+    move-object/from16 v16, v2
 
-.method public invoke(Ljava/lang/Object;)V
-    .locals 3
+    iget v2, v0, Lbn4;->d:I
 
-    iget-object v0, p0, Lbn4;->c:Ljava/lang/Object;
+    move-object/from16 v17, v3
 
-    check-cast v0, Lid;
+    iget v3, v0, Lbn4;->e:I
 
-    iget v1, p0, Lbn4;->b:I
+    move-object/from16 v18, v4
 
-    check-cast p1, Ljd;
+    iget v4, v0, Lbn4;->f:I
 
-    iget v2, p0, Lbn4;->a:I
+    move-object/from16 v19, v5
 
-    invoke-interface {p1, v0, v2, v1}, Ljd;->M(Lid;II)V
+    iget v5, v0, Lbn4;->g:I
 
-    return-void
-.end method
+    move-object/from16 v20, v6
 
-.method public l(Lqw1;)Ljava/lang/String;
-    .locals 4
+    iget v6, v0, Lbn4;->h:I
 
-    iget-object v0, p0, Lbn4;->c:Ljava/lang/Object;
+    move/from16 v21, v6
 
-    check-cast v0, Lxt4;
+    iget v6, v0, Lbn4;->i:I
 
-    new-instance v1, Lva0;
+    move/from16 v22, v6
 
-    iget v2, p0, Lbn4;->a:I
+    iget v6, v0, Lbn4;->j:I
 
-    iget v3, p0, Lbn4;->b:I
+    move/from16 v23, v6
 
-    invoke-direct {v1, v2, v3, p1}, Lva0;-><init>(IILqw1;)V
+    iget v6, v0, Lbn4;->k:I
 
-    new-instance v2, Li02;
+    move/from16 v25, v6
 
-    const/16 v3, 0x1b
+    move-object/from16 v24, v7
 
-    invoke-direct {v2, v0, v3, v1}, Li02;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    iget-wide v6, v0, Lbn4;->l:J
 
-    new-instance v1, Ltt4;
+    move-wide/from16 v26, v6
 
-    const/4 v3, 0x0
+    iget v6, v0, Lbn4;->m:I
 
-    invoke-direct {v1, p1, v3}, Ltt4;-><init>(Lqw1;I)V
+    sget-object v7, Lvih;->a:Ljava/lang/String;
 
-    invoke-virtual {v0, v2, v1}, Lxt4;->b(Ljava/lang/Runnable;Ljava/lang/Runnable;)V
+    sget-object v7, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    const-string p1, "DefaultSurfaceProcessor#snapshot"
+    invoke-static {v14, v1, v13, v15, v12}, Lau1;->l(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-object p1
+    move-result-object v1
+
+    invoke-static {v1, v2, v11, v3, v10}, Lj64;->o(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    invoke-static {v1, v4, v9, v5, v8}, Lj64;->o(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    move-object/from16 v4, v20
+
+    move/from16 v2, v21
+
+    move/from16 v3, v22
+
+    move-object/from16 v5, v24
+
+    invoke-static {v1, v2, v5, v3, v4}, Lj64;->o(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    move-object/from16 v7, v18
+
+    move-object/from16 v15, v19
+
+    move/from16 v2, v23
+
+    move/from16 v3, v25
+
+    invoke-static {v1, v2, v15, v3, v7}, Lj64;->o(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    move-object/from16 v4, v17
+
+    move-wide/from16 v2, v26
+
+    invoke-static {v6, v2, v3, v4, v1}, Ldna;->i(IJLjava/lang/String;Ljava/lang/StringBuilder;)V
+
+    move-object/from16 v2, v16
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    return-object v1
+
+    :pswitch_0
+    move-object v1, v3
+
+    move-object v15, v5
+
+    move-object v5, v7
+
+    move-object v7, v4
+
+    move-object v4, v6
+
+    iget v3, v0, Lbn4;->b:I
+
+    iget v6, v0, Lbn4;->c:I
+
+    move-object/from16 v16, v2
+
+    iget v2, v0, Lbn4;->d:I
+
+    move-object/from16 v17, v1
+
+    iget v1, v0, Lbn4;->e:I
+
+    move-object/from16 v18, v7
+
+    iget v7, v0, Lbn4;->f:I
+
+    move-object/from16 v19, v15
+
+    iget v15, v0, Lbn4;->g:I
+
+    move-object/from16 v20, v4
+
+    iget v4, v0, Lbn4;->h:I
+
+    move/from16 v21, v4
+
+    iget v4, v0, Lbn4;->i:I
+
+    move/from16 v22, v4
+
+    iget v4, v0, Lbn4;->j:I
+
+    move/from16 v23, v4
+
+    iget v4, v0, Lbn4;->k:I
+
+    move/from16 v25, v4
+
+    move-object/from16 v24, v5
+
+    iget-wide v4, v0, Lbn4;->l:J
+
+    move-wide/from16 v26, v4
+
+    iget v4, v0, Lbn4;->m:I
+
+    sget v5, Ltih;->a:I
+
+    sget-object v5, Ljava/util/Locale;->US:Ljava/util/Locale;
+
+    invoke-static {v14, v3, v13, v6, v12}, Lau1;->l(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-static {v3, v2, v11, v1, v10}, Lj64;->o(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    invoke-static {v3, v7, v9, v15, v8}, Lj64;->o(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    move-object/from16 v5, v20
+
+    move/from16 v1, v21
+
+    move/from16 v2, v22
+
+    move-object/from16 v6, v24
+
+    invoke-static {v3, v1, v6, v2, v5}, Lj64;->o(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    move-object/from16 v7, v18
+
+    move-object/from16 v15, v19
+
+    move/from16 v1, v23
+
+    move/from16 v2, v25
+
+    invoke-static {v3, v1, v15, v2, v7}, Lj64;->o(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    move-object/from16 v5, v17
+
+    move-wide/from16 v1, v26
+
+    invoke-static {v4, v1, v2, v5, v3}, Ldna;->i(IJLjava/lang/String;Ljava/lang/StringBuilder;)V
+
+    move-object/from16 v2, v16
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    return-object v1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

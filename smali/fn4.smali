@@ -1,269 +1,194 @@
-.class public final synthetic Lfn4;
+.class public final Lfn4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lqe8;
-.implements Lpe8;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljava/lang/String;
+
+.field public final b:Lnl6;
+
+.field public final c:Lnl6;
+
+.field public final d:I
+
+.field public final e:I
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
-    .locals 0
-
-    iput p1, p0, Lfn4;->a:I
+.method public constructor <init>(Ljava/lang/String;Lnl6;Lnl6;II)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    if-eqz p4, :cond_1
+
+    if-nez p5, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    const/4 v0, 0x1
+
+    :goto_1
+    invoke-static {v0}, Lvej;->c(Z)V
+
+    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    iput-object p1, p0, Lfn4;->a:Ljava/lang/String;
+
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iput-object p2, p0, Lfn4;->b:Lnl6;
+
+    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iput-object p3, p0, Lfn4;->c:Lnl6;
+
+    iput p4, p0, Lfn4;->d:I
+
+    iput p5, p0, Lfn4;->e:I
+
     return-void
+
+    :cond_2
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {p1}, Ljava/lang/IllegalArgumentException;-><init>()V
+
+    throw p1
 .end method
 
 
 # virtual methods
-.method public invoke(Ljava/lang/Object;)V
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget v0, p0, Lfn4;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    check-cast p1, Ljd;
+    return v0
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :cond_0
+    const/4 v1, 0x0
 
-    return-void
+    if-eqz p1, :cond_2
 
-    :pswitch_0
-    check-cast p1, Lep5;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    return-void
-
-    :pswitch_1
-    check-cast p1, Lep5;
+    const-class v2, Lfn4;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    return-void
+    move-result-object v3
 
-    :pswitch_2
-    check-cast p1, Lep5;
+    if-eq v2, v3, :cond_1
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    goto :goto_0
 
-    return-void
+    :cond_1
+    check-cast p1, Lfn4;
 
-    :pswitch_3
-    check-cast p1, Ljd;
+    iget v2, p0, Lfn4;->d:I
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget v3, p1, Lfn4;->d:I
 
-    return-void
+    if-ne v2, v3, :cond_2
 
-    :pswitch_4
-    check-cast p1, Ljd;
+    iget v2, p0, Lfn4;->e:I
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget v3, p1, Lfn4;->e:I
 
-    return-void
+    if-ne v2, v3, :cond_2
 
-    :pswitch_5
-    check-cast p1, Lep5;
+    iget-object v2, p0, Lfn4;->a:Ljava/lang/String;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object v3, p1, Lfn4;->a:Ljava/lang/String;
 
-    return-void
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    :pswitch_6
-    check-cast p1, Ljd;
+    move-result v2
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-eqz v2, :cond_2
 
-    return-void
+    iget-object v2, p0, Lfn4;->b:Lnl6;
 
-    :pswitch_7
-    check-cast p1, Ljd;
+    iget-object v3, p1, Lfn4;->b:Lnl6;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v2, v3}, Lnl6;->equals(Ljava/lang/Object;)Z
 
-    return-void
+    move-result v2
 
-    :pswitch_8
-    check-cast p1, Ljd;
+    if-eqz v2, :cond_2
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object v2, p0, Lfn4;->c:Lnl6;
 
-    return-void
+    iget-object p1, p1, Lfn4;->c:Lnl6;
 
-    :pswitch_9
-    check-cast p1, Lep5;
+    invoke-virtual {v2, p1}, Lnl6;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result p1
 
-    return-void
+    if-eqz p1, :cond_2
 
-    :pswitch_a
-    check-cast p1, Lep5;
+    return v0
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :cond_2
+    :goto_0
+    return v1
+.end method
 
-    return-void
+.method public final hashCode()I
+    .locals 3
 
-    :pswitch_b
-    check-cast p1, Lep5;
+    const/16 v0, 0x20f
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget v1, p0, Lfn4;->d:I
 
-    return-void
+    add-int/2addr v0, v1
 
-    :pswitch_c
-    check-cast p1, Ljd;
+    const/16 v1, 0x1f
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    mul-int/2addr v0, v1
 
-    return-void
+    iget v2, p0, Lfn4;->e:I
 
-    :pswitch_d
-    check-cast p1, Lep5;
+    add-int/2addr v0, v2
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    mul-int/2addr v0, v1
 
-    return-void
+    iget-object v2, p0, Lfn4;->a:Ljava/lang/String;
 
-    :pswitch_e
-    check-cast p1, Lep5;
+    invoke-static {v0, v1, v2}, Lj64;->d(IILjava/lang/String;)I
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result v0
 
-    return-void
+    iget-object v2, p0, Lfn4;->b:Lnl6;
 
-    :pswitch_f
-    check-cast p1, Lep5;
+    invoke-virtual {v2}, Lnl6;->hashCode()I
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result v2
 
-    return-void
+    add-int/2addr v2, v0
 
-    :pswitch_10
-    check-cast p1, Ljd;
+    mul-int/2addr v2, v1
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object v0, p0, Lfn4;->c:Lnl6;
 
-    return-void
+    invoke-virtual {v0}, Lnl6;->hashCode()I
 
-    :pswitch_11
-    check-cast p1, Lep5;
+    move-result v0
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    add-int/2addr v0, v2
 
-    return-void
-
-    :pswitch_12
-    check-cast p1, Ljd;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    return-void
-
-    :pswitch_13
-    check-cast p1, Lep5;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    return-void
-
-    :pswitch_14
-    check-cast p1, Lep5;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    return-void
-
-    :pswitch_15
-    check-cast p1, Lep5;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    return-void
-
-    :pswitch_16
-    check-cast p1, Lep5;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    return-void
-
-    :pswitch_17
-    check-cast p1, Ljd;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    return-void
-
-    :pswitch_18
-    check-cast p1, Lep5;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    return-void
-
-    :pswitch_19
-    check-cast p1, Lep5;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    return-void
-
-    :pswitch_1a
-    check-cast p1, Lep5;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    return-void
-
-    :pswitch_1b
-    check-cast p1, Ljd;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1b
-        :pswitch_1a
-        :pswitch_19
-        :pswitch_18
-        :pswitch_17
-        :pswitch_16
-        :pswitch_15
-        :pswitch_14
-        :pswitch_13
-        :pswitch_12
-        :pswitch_11
-        :pswitch_10
-        :pswitch_f
-        :pswitch_e
-        :pswitch_d
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return v0
 .end method

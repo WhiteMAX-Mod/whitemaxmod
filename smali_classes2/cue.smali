@@ -1,284 +1,150 @@
 .class public final Lcue;
-.super Licg;
+.super Leue;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Le00;
+.field public final b:Ljava/lang/String;
 
-.field public Y:Le00;
+.field public final c:J
 
-.field public Z:Ljava/lang/Long;
-
-.field public c:Ljava/lang/String;
-
-.field public d:Ljava/lang/String;
-
-.field public o:I
+.field public final d:I
 
 
 # direct methods
-.method public constructor <init>(Lpq9;)V
+.method public constructor <init>(Ljava/lang/String;JI)V
     .locals 0
 
-    invoke-direct {p0, p1}, Licg;-><init>(Lpq9;)V
+    invoke-direct {p0, p1}, Leue;-><init>(Ljava/lang/String;)V
+
+    iput-object p1, p0, Lcue;->b:Ljava/lang/String;
+
+    iput-wide p2, p0, Lcue;->c:J
+
+    iput p4, p0, Lcue;->d:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(Lpq9;Ljava/lang/String;)V
-    .locals 3
+.method public final a()Ljava/lang/String;
+    .locals 1
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object v0, p0, Lcue;->b:Ljava/lang/String;
 
-    invoke-virtual {p2}, Ljava/lang/String;->hashCode()I
+    return-object v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lcue;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lcue;
+
+    iget-object v1, p0, Lcue;->b:Ljava/lang/String;
+
+    iget-object v3, p1, Lcue;->b:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-wide v3, p0, Lcue;->c:J
+
+    iget-wide v5, p1, Lcue;->c:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget v1, p0, Lcue;->d:I
+
+    iget p1, p1, Lcue;->d:I
+
+    if-eq v1, p1, :cond_4
+
+    return v2
+
+    :cond_4
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    iget-object v0, p0, Lcue;->b:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
-    const/4 v1, 0x0
+    const/16 v1, 0x1f
 
-    const/4 v2, -0x1
+    mul-int/2addr v0, v1
 
-    sparse-switch v0, :sswitch_data_0
+    iget-wide v2, p0, Lcue;->c:J
 
-    goto :goto_0
+    invoke-static {v0, v1, v2, v3}, Leni;->a(IIJ)I
 
-    :sswitch_0
-    const-string v0, "location"
+    move-result v0
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    iget v1, p0, Lcue;->d:I
 
-    move-result p2
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
 
-    if-nez p2, :cond_0
+    move-result v1
 
-    goto :goto_0
+    add-int/2addr v1, v0
 
-    :cond_0
-    const/4 v2, 0x5
-
-    goto :goto_0
-
-    :sswitch_1
-    const-string v0, "app-update-type"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v2, 0x4
-
-    goto :goto_0
-
-    :sswitch_2
-    const-string v0, "reg-country-code"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    const/4 v2, 0x3
-
-    goto :goto_0
-
-    :sswitch_3
-    const-string v0, "proxy"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    const/4 v2, 0x2
-
-    goto :goto_0
-
-    :sswitch_4
-    const-string v0, "callsSeed"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    const/4 v2, 0x1
-
-    goto :goto_0
-
-    :sswitch_5
-    const-string v0, "proxy-domains"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_5
-
-    goto :goto_0
-
-    :cond_5
-    move v2, v1
-
-    :goto_0
-    packed-switch v2, :pswitch_data_0
-
-    invoke-virtual {p1}, Lpq9;->B()V
-
-    return-void
-
-    :pswitch_0
-    invoke-static {p1}, Lcti;->q(Lpq9;)Ljava/lang/String;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lcue;->d:Ljava/lang/String;
-
-    return-void
-
-    :pswitch_1
-    invoke-static {p1, v1}, Lcti;->m(Lpq9;I)I
-
-    move-result p1
-
-    iput p1, p0, Lcue;->o:I
-
-    return-void
-
-    :pswitch_2
-    invoke-static {p1}, Le00;->g(Lpq9;)Le00;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lcue;->Y:Le00;
-
-    return-void
-
-    :pswitch_3
-    invoke-static {p1}, Lcti;->q(Lpq9;)Ljava/lang/String;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lcue;->c:Ljava/lang/String;
-
-    return-void
-
-    :pswitch_4
-    const-wide/16 v0, 0x0
-
-    invoke-static {p1, v0, v1}, Lcti;->n(Lpq9;J)J
-
-    move-result-wide p1
-
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lcue;->Z:Ljava/lang/Long;
-
-    return-void
-
-    :pswitch_5
-    invoke-static {p1}, Le00;->g(Lpq9;)Le00;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lcue;->X:Le00;
-
-    return-void
-
-    nop
-
-    :sswitch_data_0
-    .sparse-switch
-        -0x6386dc30 -> :sswitch_5
-        -0x3d4ede1a -> :sswitch_4
-        0x65fca6e -> :sswitch_3
-        0x950c25d -> :sswitch_2
-        0x6bc9f012 -> :sswitch_1
-        0x714f9fb5 -> :sswitch_0
-    .end sparse-switch
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return v1
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 9
+    .locals 5
 
-    iget-object v0, p0, Lcue;->c:Ljava/lang/String;
+    const-string v0, "Neuro(uri="
 
-    iget-object v1, p0, Lcue;->d:Ljava/lang/String;
+    const-string v1, ", photoId="
 
-    iget v2, p0, Lcue;->o:I
+    iget-wide v2, p0, Lcue;->c:J
 
-    iget-object v3, p0, Lcue;->X:Le00;
+    iget-object v4, p0, Lcue;->b:Ljava/lang/String;
 
-    iget-object v4, p0, Lcue;->Y:Le00;
-
-    iget-object v5, p0, Lcue;->Z:Ljava/lang/Long;
-
-    const-string v6, "\', locationCountryCode=\'"
-
-    const-string v7, "\', appUpdateType="
-
-    const-string v8, "{proxy=\'"
-
-    invoke-static {v8, v0, v6, v1, v7}, Lkz1;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0, v2, v3, v4, v1}, Ljye;->m(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    const-string v1, ", categoryId="
 
-    const-string v1, ", proxyDomains="
+    const-string v2, ")"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget v3, p0, Lcue;->d:I
 
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", regCountryCode="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", callsSeed="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, "}"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, v1, v3, v2}, Lj64;->i(Ljava/lang/StringBuilder;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

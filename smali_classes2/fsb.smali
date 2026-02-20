@@ -1,91 +1,96 @@
 .class public final Lfsb;
-.super Ljava/lang/Object;
+.super Ldg0;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Laxd;
-
-.field public final b:Lesb;
-
-.field public final c:Lahd;
-
-.field public final d:Ll52;
-
-.field public final e:Lia;
-
-.field public final f:Lsmi;
-
-.field public volatile g:Lz48;
-
-.field public volatile h:Lpbe;
-
-.field public i:D
-
-.field public j:J
-
-.field public final k:Legc;
-
-.field public l:D
-
-.field public m:D
-
-.field public final n:Lio8;
-
-.field public final o:Lcr0;
-
-.field public final p:Lcr0;
+.field public final b:Landroid/net/Uri;
 
 
 # direct methods
-.method public constructor <init>(Laxd;Lesb;Lahd;Ll52;Lia;Lsmi;)V
-    .locals 0
+.method public constructor <init>(Landroid/net/Uri;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/16 v0, 0xe
 
-    iput-object p1, p0, Lfsb;->a:Laxd;
+    invoke-direct {p0, v0}, Ldg0;-><init>(I)V
 
-    iput-object p2, p0, Lfsb;->b:Lesb;
-
-    iput-object p3, p0, Lfsb;->c:Lahd;
-
-    iput-object p4, p0, Lfsb;->d:Ll52;
-
-    iput-object p5, p0, Lfsb;->e:Lia;
-
-    iput-object p6, p0, Lfsb;->f:Lsmi;
-
-    const-wide/high16 p1, 0x3ff0000000000000L    # 1.0
-
-    iput-wide p1, p0, Lfsb;->i:D
-
-    new-instance p1, Legc;
-
-    const/4 p2, 0x7
-
-    invoke-direct {p1, p2}, Legc;-><init>(I)V
-
-    iput-object p1, p0, Lfsb;->k:Legc;
-
-    new-instance p1, Lio8;
-
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lfsb;->n:Lio8;
-
-    new-instance p1, Lcr0;
-
-    const/4 p2, 0x0
-
-    invoke-direct {p1, p2}, Lcr0;-><init>(I)V
-
-    iput-object p1, p0, Lfsb;->o:Lcr0;
-
-    new-instance p1, Lcr0;
-
-    invoke-direct {p1, p2}, Lcr0;-><init>(I)V
-
-    iput-object p1, p0, Lfsb;->p:Lcr0;
+    iput-object p1, p0, Lfsb;->b:Landroid/net/Uri;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lfsb;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lfsb;
+
+    iget-object v1, p0, Lfsb;->b:Landroid/net/Uri;
+
+    iget-object p1, p1, Lfsb;->b:Landroid/net/Uri;
+
+    invoke-static {v1, p1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lfsb;->b:Landroid/net/Uri;
+
+    invoke-virtual {v0}, Landroid/net/Uri;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "OpenExternalLink(url="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lfsb;->b:Landroid/net/Uri;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -10,7 +10,7 @@
 
 .field public c:I
 
-.field public d:Ld1g;
+.field public d:Lg8g;
 
 
 # virtual methods
@@ -101,7 +101,7 @@
 
     iput v0, p0, Li4;->b:I
 
-    iget-object v0, p0, Li4;->d:Ld1g;
+    iget-object v0, p0, Li4;->d:Lg8g;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -109,7 +109,7 @@
 
     if-eqz v0, :cond_5
 
-    invoke-virtual {v0, v1}, Ld1g;->z(I)V
+    invoke-virtual {v0, v1}, Lg8g;->z(I)V
 
     :cond_5
     return-object v2
@@ -120,17 +120,17 @@
     throw v0
 .end method
 
-.method public final i()Llpf;
+.method public final i()Laxf;
     .locals 5
 
     monitor-enter p0
 
     :try_start_0
-    iget-object v0, p0, Li4;->d:Ld1g;
+    iget-object v0, p0, Li4;->d:Lg8g;
 
     if-nez v0, :cond_0
 
-    new-instance v0, Ld1g;
+    new-instance v0, Lg8g;
 
     iget v1, p0, Li4;->b:I
 
@@ -140,15 +140,15 @@
 
     const/4 v4, 0x1
 
-    invoke-direct {v0, v4, v2, v3}, Li7f;-><init>(III)V
+    invoke-direct {v0, v4, v2, v3}, Lzef;-><init>(III)V
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Li7f;->h(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v1}, Lzef;->h(Ljava/lang/Object;)Z
 
-    iput-object v0, p0, Li4;->d:Ld1g;
+    iput-object v0, p0, Li4;->d:Lg8g;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -191,7 +191,7 @@
 
     iput v0, p0, Li4;->b:I
 
-    iget-object v2, p0, Li4;->d:Ld1g;
+    iget-object v2, p0, Li4;->d:Lg8g;
 
     const/4 v3, 0x0
 
@@ -225,7 +225,7 @@
 
     if-eqz v4, :cond_1
 
-    sget-object v5, Lb3h;->a:Lb3h;
+    sget-object v5, Lmah;->a:Lmah;
 
     invoke-interface {v4, v5}, Lkotlin/coroutines/Continuation;->resumeWith(Ljava/lang/Object;)V
 
@@ -237,7 +237,7 @@
     :cond_2
     if-eqz v2, :cond_3
 
-    invoke-virtual {v2, v1}, Ld1g;->z(I)V
+    invoke-virtual {v2, v1}, Lg8g;->z(I)V
 
     :cond_3
     return-void

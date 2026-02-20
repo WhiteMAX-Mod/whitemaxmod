@@ -1,73 +1,61 @@
-.class public final La57;
-.super Lc57;
+.class public final enum La57;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
 # static fields
-.field public static final c:La57;
+.field public static final enum a:La57;
+
+.field public static final synthetic b:[La57;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 3
 
     new-instance v0, La57;
 
-    sget v1, La8b;->t:I
+    const-string v1, "ONE_VIDEO_TIMEOUT"
 
-    new-instance v2, Llhg;
+    const/4 v2, 0x0
 
-    invoke-direct {v2, v1}, Llhg;-><init>(I)V
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    sget v1, Lj6e;->M:I
+    sput-object v0, La57;->a:La57;
 
-    new-instance v3, Llhg;
+    filled-new-array {v0}, [La57;
 
-    invoke-direct {v3, v1}, Llhg;-><init>(I)V
+    move-result-object v0
 
-    invoke-direct {v0, v2, v3}, Lc57;-><init>(Llhg;Llhg;)V
-
-    sput-object v0, La57;->c:La57;
+    sput-object v0, La57;->b:[La57;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public static valueOf(Ljava/lang/String;)La57;
     .locals 1
 
-    const/4 v0, 0x1
+    const-class v0, La57;
 
-    if-ne p0, p1, :cond_0
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    return v0
+    move-result-object p0
 
-    :cond_0
-    instance-of p1, p1, La57;
+    check-cast p0, La57;
 
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
+    return-object p0
 .end method
 
-.method public final hashCode()I
+.method public static values()[La57;
     .locals 1
 
-    const v0, 0x709adf5c
+    sget-object v0, La57;->b:[La57;
 
-    return v0
-.end method
+    invoke-virtual {v0}, [La57;->clone()Ljava/lang/Object;
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    move-result-object v0
 
-    const-string v0, "Connecting"
+    check-cast v0, [La57;
 
     return-object v0
 .end method

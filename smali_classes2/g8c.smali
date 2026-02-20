@@ -1,193 +1,123 @@
-.class public final synthetic Lg8c;
+.class public abstract synthetic Lg8c;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
-# instance fields
-.field public final synthetic a:I
+.field public static final synthetic $EnumSwitchMapping$1:[I
 
-.field public final synthetic b:Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;
+.field public static final synthetic $EnumSwitchMapping$2:[I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 7
 
-    iput p2, p0, Lg8c;->a:I
+    const/4 v0, 0x7
 
-    iput-object p1, p0, Lg8c;->b:Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;
+    invoke-static {v0}, Ly12;->x(I)[I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-result-object v0
 
-    return-void
-.end method
+    array-length v0, v0
 
+    new-array v0, v0, [I
 
-# virtual methods
-.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
-    .locals 6
+    const/4 v1, 0x1
 
-    iget v0, p0, Lg8c;->a:I
+    :try_start_0
+    aput v1, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    iget-object v1, p0, Lg8c;->b:Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;
+    :catch_0
+    const/4 v2, 0x0
 
-    packed-switch v0, :pswitch_data_0
+    const/4 v3, 0x2
 
-    sget v0, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->K0:I
+    :try_start_1
+    aput v3, v0, v2
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :catch_1
+    const/4 v4, 0x3
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    const/4 v5, 0x4
 
-    move-result-object p1
+    :try_start_2
+    aput v4, v0, v5
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    check-cast p1, Ljava/lang/Float;
+    :catch_2
+    const/4 v6, 0x5
 
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+    :try_start_3
+    aput v5, v0, v6
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
 
-    move-result p1
+    :catch_3
+    sput-object v0, Lg8c;->$EnumSwitchMapping$0:[I
 
-    iput p1, v1, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->D0:F
+    invoke-static {v3}, Ly12;->x(I)[I
 
-    invoke-virtual {v1}, Landroid/view/View;->invalidate()V
+    move-result-object v0
 
-    return-void
+    array-length v0, v0
 
-    :pswitch_0
-    sget v0, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->K0:I
+    new-array v0, v0, [I
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :try_start_4
+    aput v1, v0, v2
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    :catch_4
+    :try_start_5
+    aput v3, v0, v1
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
 
-    move-result-object p1
+    :catch_5
+    sput-object v0, Lg8c;->$EnumSwitchMapping$1:[I
 
-    check-cast p1, Ljava/lang/Float;
+    invoke-static {}, Lhk2;->values()[Lhk2;
 
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+    move-result-object v0
 
-    move-result p1
+    array-length v0, v0
 
-    iput p1, v1, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->C0:F
+    new-array v0, v0, [I
 
-    invoke-virtual {v1}, Landroid/view/View;->invalidate()V
+    :try_start_6
+    aput v1, v0, v2
+    :try_end_6
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
 
-    return-void
+    :catch_6
+    :try_start_7
+    aput v3, v0, v1
+    :try_end_7
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
 
-    :pswitch_1
-    sget v0, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->K0:I
+    :catch_7
+    :try_start_8
+    aput v4, v0, v3
+    :try_end_8
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_8
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :catch_8
+    :try_start_9
+    aput v5, v0, v4
+    :try_end_9
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_9 .. :try_end_9} :catch_9
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Float;
-
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
-
-    move-result p1
-
-    iput p1, v1, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->z0:F
-
-    invoke-virtual {v1}, Landroid/view/View;->invalidate()V
-
-    return-void
-
-    :pswitch_2
-    sget v0, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->K0:I
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Float;
-
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
-
-    move-result p1
-
-    iput p1, v1, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->y0:F
-
-    invoke-virtual {v1}, Landroid/view/View;->invalidate()V
-
-    return-void
-
-    :pswitch_3
-    sget v0, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->K0:I
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Float;
-
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
-
-    move-result p1
-
-    iput p1, v1, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->o:F
-
-    invoke-virtual {v1}, Landroid/view/View;->invalidate()V
+    :catch_9
+    sput-object v0, Lg8c;->$EnumSwitchMapping$2:[I
 
     return-void
-
-    :pswitch_4
-    sget v0, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->K0:I
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Float;
-
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
-
-    move-result p1
-
-    iget-object v0, v1, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->w0:Landroid/graphics/Paint;
-
-    const/high16 v2, 0x437f0000    # 255.0f
-
-    mul-float/2addr v2, p1
-
-    float-to-int v2, v2
-
-    invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setAlpha(I)V
-
-    float-to-double v2, p1
-
-    const-wide/16 v4, 0x0
-
-    cmpl-double p1, v2, v4
-
-    if-nez p1, :cond_0
-
-    const/4 p1, 0x0
-
-    iput-boolean p1, v1, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->v0:Z
-
-    :cond_0
-    invoke-virtual {v1}, Landroid/view/View;->invalidate()V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

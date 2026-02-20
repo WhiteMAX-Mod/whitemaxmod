@@ -1,147 +1,118 @@
 .class public final Lhhg;
-.super Lqhg;
+.super Lpdg;
 .source "SourceFile"
 
-
-# static fields
-.field public static final CREATOR:Lghg;
+# interfaces
+.implements Lys6;
 
 
 # instance fields
-.field public final c:I
+.field public final synthetic X:Lphg;
 
-.field public final d:I
+.field public final synthetic Y:Lone/me/sdk/vendor/SystemServicesManager$PushTokenGeneratedListener;
+
+.field public o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lghg;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lhhg;->CREATOR:Lghg;
-
-    return-void
-.end method
-
-.method public constructor <init>(II)V
+.method public constructor <init>(Lphg;Lone/me/sdk/vendor/SystemServicesManager$PushTokenGeneratedListener;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lhhg;->X:Lphg;
 
-    iput p1, p0, Lhhg;->c:I
+    iput-object p2, p0, Lhhg;->Y:Lone/me/sdk/vendor/SystemServicesManager$PushTokenGeneratedListener;
 
-    iput p2, p0, Lhhg;->d:I
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lhhg;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lhhg;
-
-    iget v1, p0, Lhhg;->c:I
-
-    iget v3, p1, Lhhg;->c:I
-
-    if-eq v1, v3, :cond_2
-
-    return v2
-
-    :cond_2
-    iget v1, p0, Lhhg;->d:I
-
-    iget p1, p1, Lhhg;->d:I
-
-    if-eq v1, p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget v0, p0, Lhhg;->c:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget v1, p0, Lhhg;->d:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, ", quantity="
-
-    const-string v1, ")"
-
-    const-string v2, "Plurals(resId="
-
-    iget v3, p0, Lhhg;->c:I
-
-    iget v4, p0, Lhhg;->d:I
-
-    invoke-static {v2, v3, v0, v4, v1}, Lkz1;->g(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    iget p2, p0, Lhhg;->c:I
+    check-cast p1, Lnd4;
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget p2, p0, Lhhg;->d:I
+    invoke-virtual {p0, p1, p2}, Lhhg;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    move-result-object p1
 
-    return-void
+    check-cast p1, Lhhg;
+
+    sget-object p2, Lmah;->a:Lmah;
+
+    invoke-virtual {p1, p2}, Lhhg;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance p1, Lhhg;
+
+    iget-object v0, p0, Lhhg;->X:Lphg;
+
+    iget-object v1, p0, Lhhg;->Y:Lone/me/sdk/vendor/SystemServicesManager$PushTokenGeneratedListener;
+
+    invoke-direct {p1, v0, v1, p2}, Lhhg;-><init>(Lphg;Lone/me/sdk/vendor/SystemServicesManager$PushTokenGeneratedListener;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Lhhg;->o:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    iput v1, p0, Lhhg;->o:I
+
+    iget-object p1, p0, Lhhg;->X:Lphg;
+
+    iget-object v0, p0, Lhhg;->Y:Lone/me/sdk/vendor/SystemServicesManager$PushTokenGeneratedListener;
+
+    invoke-virtual {p1, v0, p0}, Lphg;->f(Lone/me/sdk/vendor/SystemServicesManager$PushTokenGeneratedListener;Lda4;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lod4;->a:Lod4;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
 .end method

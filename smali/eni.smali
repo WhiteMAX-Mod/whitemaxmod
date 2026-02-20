@@ -1,96 +1,316 @@
-.class public final synthetic Leni;
+.class public abstract synthetic Leni;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lcom/my/tracker/core/EngineCore$EventPacker;
-
-
-# instance fields
-.field public final synthetic X:J
-
-.field public final synthetic a:I
-
-.field public final synthetic b:Lcom/my/tracker/applifecycle/o/d;
-
-.field public final synthetic c:Ljava/lang/String;
-
-.field public final synthetic d:Ljava/lang/String;
-
-.field public final synthetic o:J
-
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/my/tracker/applifecycle/o/d;Ljava/lang/String;Ljava/lang/String;JJI)V
+.method public static a(IIJ)I
     .locals 0
 
-    iput p8, p0, Leni;->a:I
+    invoke-static {p2, p3}, Ljava/lang/Long;->hashCode(J)I
 
-    iput-object p1, p0, Leni;->b:Lcom/my/tracker/applifecycle/o/d;
+    move-result p2
 
-    iput-object p2, p0, Leni;->c:Ljava/lang/String;
+    add-int/2addr p2, p0
 
-    iput-object p3, p0, Leni;->d:Ljava/lang/String;
+    mul-int/2addr p2, p1
 
-    iput-wide p4, p0, Leni;->o:J
+    return p2
+.end method
 
-    iput-wide p6, p0, Leni;->X:J
+.method public static b(IIZ)I
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {p2}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result p2
+
+    add-int/2addr p2, p0
+
+    mul-int/2addr p2, p1
+
+    return p2
+.end method
+
+.method public static c(ILilc;)Ld16;
+    .locals 2
+
+    new-instance v0, Lp7j;
+
+    invoke-direct {v0, p0}, Lp7j;-><init>(I)V
+
+    iget-object p0, p1, Lilc;->c:Ljava/lang/Object;
+
+    check-cast p0, Ljava/util/HashMap;
+
+    if-nez p0, :cond_0
+
+    new-instance p0, Ljava/util/HashMap;
+
+    invoke-direct {p0}, Ljava/util/HashMap;-><init>()V
+
+    iput-object p0, p1, Lilc;->c:Ljava/lang/Object;
+
+    :cond_0
+    iget-object p0, p1, Lilc;->c:Ljava/lang/Object;
+
+    check-cast p0, Ljava/util/HashMap;
+
+    const-class v1, Lh8j;
+
+    invoke-virtual {p0, v1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    new-instance p0, Ld16;
+
+    iget-object v0, p1, Lilc;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/String;
+
+    iget-object v1, p1, Lilc;->c:Ljava/lang/Object;
+
+    check-cast v1, Ljava/util/HashMap;
+
+    if-nez v1, :cond_1
+
+    sget-object p1, Ljava/util/Collections;->EMPTY_MAP:Ljava/util/Map;
+
+    goto :goto_0
+
+    :cond_1
+    new-instance v1, Ljava/util/HashMap;
+
+    iget-object p1, p1, Lilc;->c:Ljava/lang/Object;
+
+    check-cast p1, Ljava/util/HashMap;
+
+    invoke-direct {v1, p1}, Ljava/util/HashMap;-><init>(Ljava/util/Map;)V
+
+    invoke-static {v1}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
+
+    move-result-object p1
+
+    :goto_0
+    invoke-direct {p0, v0, p1}, Ld16;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    return-object p0
+.end method
+
+.method public static d(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .locals 1
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0, p0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static e(Ljava/lang/String;Lhig;Ljava/lang/String;Lhig;)Ljava/lang/String;
+    .locals 1
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0, p0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static f(Ljava/lang/Class;Lczi;)Ljava/util/HashMap;
+    .locals 1
+
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    invoke-virtual {v0, p0, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public static g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
+    .locals 1
+
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    invoke-virtual {v0, p0, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public static h(Ljava/util/HashMap;I)Lczi;
+    .locals 1
+
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0, p0}, Ljava/util/HashMap;-><init>(Ljava/util/Map;)V
+
+    invoke-static {v0}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
+
+    new-instance p0, Lczi;
+
+    invoke-direct {p0, p1}, Lczi;-><init>(I)V
+
+    return-object p0
+.end method
+
+.method public static i(Ljava/util/HashMap;I)Lp7j;
+    .locals 1
+
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0, p0}, Ljava/util/HashMap;-><init>(Ljava/util/Map;)V
+
+    invoke-static {v0}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
+
+    new-instance p0, Lp7j;
+
+    invoke-direct {p0, p1}, Lp7j;-><init>(I)V
+
+    return-object p0
+.end method
+
+.method public static j(IIILjava/util/HashMap;Ljava/lang/String;)V
+    .locals 0
+
+    invoke-static {p0, p1, p2}, Landroid/graphics/Color;->rgb(III)I
+
+    move-result p0
+
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p0
+
+    invoke-virtual {p3, p4, p0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
 
+.method public static k(Lml6;Lwyg;)V
+    .locals 1
 
-# virtual methods
-.method public final invoke(Lcom/my/tracker/core/EngineCore$InsertEventTools;)[B
-    .locals 9
+    new-instance v0, Lol6;
 
-    iget v0, p0, Leni;->a:I
+    invoke-direct {v0, p0}, Lol6;-><init>(Lml6;)V
 
-    packed-switch v0, :pswitch_data_0
+    invoke-interface {p1, v0}, Lwyg;->d(Lol6;)V
 
-    iget-wide v4, p0, Leni;->o:J
+    return-void
+.end method
 
-    iget-wide v6, p0, Leni;->X:J
+.method public static l(Ljava/lang/String;Ljava/lang/String;Ltmd;Ljava/lang/String;)V
+    .locals 1
 
-    iget-object v1, p0, Leni;->b:Lcom/my/tracker/applifecycle/o/d;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Leni;->c:Ljava/lang/String;
+    invoke-direct {v0, p0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v3, p0, Leni;->d:Ljava/lang/String;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-object v8, p1
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-static/range {v1 .. v8}, Lcom/my/tracker/applifecycle/o/d;->g(Lcom/my/tracker/applifecycle/o/d;Ljava/lang/String;Ljava/lang/String;JJLcom/my/tracker/core/EngineCore$InsertEventTools;)[B
+    move-result-object p0
 
-    move-result-object p1
+    invoke-interface {p2, p3, p0}, Ltmd;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    return-object p1
+    return-void
+.end method
 
-    :pswitch_0
-    move-object v7, p1
+.method public static m(Ljava/util/HashMap;)V
+    .locals 1
 
-    iget-wide v3, p0, Leni;->o:J
+    new-instance v0, Ljava/util/HashMap;
 
-    iget-wide v5, p0, Leni;->X:J
+    invoke-direct {v0, p0}, Ljava/util/HashMap;-><init>(Ljava/util/Map;)V
 
-    iget-object v0, p0, Leni;->b:Lcom/my/tracker/applifecycle/o/d;
+    invoke-static {v0}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
 
-    iget-object v1, p0, Leni;->c:Ljava/lang/String;
+    return-void
+.end method
 
-    iget-object v2, p0, Leni;->d:Ljava/lang/String;
+.method public static synthetic n(Ljava/lang/String;)I
+    .locals 2
 
-    invoke-static/range {v0 .. v7}, Lcom/my/tracker/applifecycle/o/d;->d(Lcom/my/tracker/applifecycle/o/d;Ljava/lang/String;Ljava/lang/String;JJLcom/my/tracker/core/EngineCore$InsertEventTools;)[B
+    if-eqz p0, :cond_3
 
-    move-result-object p1
+    const-string v0, "ATTENDEE"
 
-    return-object p1
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    nop
+    move-result v0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    if-eqz v0, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const-string v0, "HAND_UP"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const/4 p0, 0x2
+
+    return p0
+
+    :cond_1
+    const-string v0, "FEEDBACK"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    const/4 p0, 0x3
+
+    return p0
+
+    :cond_2
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "No enum constant okcalls.u3."
+
+    invoke-virtual {v1, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_3
+    new-instance p0, Ljava/lang/NullPointerException;
+
+    const-string v0, "Name is null"
+
+    invoke-direct {p0, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p0
 .end method

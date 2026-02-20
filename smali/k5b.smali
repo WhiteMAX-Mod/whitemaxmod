@@ -1,46 +1,31 @@
-.class public final Lk5b;
-.super Lm0;
+.class public abstract Lk5b;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ltb4;
 
+# static fields
+.field public static final a:I
 
-# instance fields
-.field public final synthetic a:Lym5;
+.field public static final b:I
+
+.field public static final c:I
 
 
 # direct methods
-.method public constructor <init>(Lym5;)V
+.method static constructor <clinit>()V
     .locals 1
 
-    sget-object v0, Lw7a;->v0:Lw7a;
+    sget v0, Lnid;->force_update_subtitle:I
 
-    iput-object p1, p0, Lk5b;->a:Lym5;
+    sput v0, Lk5b;->a:I
 
-    invoke-direct {p0, v0}, Lm0;-><init>(Lpb4;)V
+    sget v0, Lnid;->force_update_title:I
 
-    return-void
-.end method
+    sput v0, Lk5b;->b:I
 
+    sget v0, Lnid;->update_button:I
 
-# virtual methods
-.method public final E(Lqb4;Ljava/lang/Throwable;)V
-    .locals 1
-
-    const-string v0, "SingletonCoroutineExceptionHandler"
-
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {v0, p1, p2}, Lc5j;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    iget-object p1, p0, Lk5b;->a:Lym5;
-
-    check-cast p1, Lqab;
-
-    invoke-virtual {p1, p2}, Lqab;->a(Ljava/lang/Throwable;)V
+    sput v0, Lk5b;->c:I
 
     return-void
 .end method

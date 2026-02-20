@@ -1,113 +1,86 @@
 .class public final Ljrf;
-.super Ljz;
+.super Llrf;
 .source "SourceFile"
 
 
 # instance fields
-.field public final A0:Z
-
-.field public final B0:I
-
-.field public final C0:Ljava/lang/String;
-
-.field public final X:I
-
-.field public final Y:Ljava/lang/String;
-
-.field public final Z:J
-
-.field public final d:J
-
-.field public final o:I
-
-.field public final t0:Ljava/lang/String;
-
-.field public final u0:Ljava/lang/String;
-
-.field public final v0:Ljava/util/List;
-
-.field public final w0:Ljava/lang/String;
-
-.field public final x0:I
-
-.field public final y0:J
-
-.field public final z0:Ljava/lang/String;
+.field public final c:J
 
 
 # direct methods
-.method public constructor <init>(JIILjava/lang/String;JLjava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;IJLjava/lang/String;ZIZZLjava/lang/String;)V
-    .locals 3
+.method public constructor <init>(J)V
+    .locals 1
 
-    sget-object v0, Le10;->Y:Le10;
+    const/4 v0, 0x1
 
-    move/from16 v1, p18
+    invoke-direct {p0, p1, p2, v0}, Llrf;-><init>(JI)V
 
-    move/from16 v2, p19
-
-    invoke-direct {p0, v0, v1, v2}, Ljz;-><init>(Le10;ZZ)V
-
-    iput-wide p1, p0, Ljrf;->d:J
-
-    iput p3, p0, Ljrf;->o:I
-
-    iput p4, p0, Ljrf;->X:I
-
-    iput-object p5, p0, Ljrf;->Y:Ljava/lang/String;
-
-    iput-wide p6, p0, Ljrf;->Z:J
-
-    iput-object p8, p0, Ljrf;->t0:Ljava/lang/String;
-
-    iput-object p9, p0, Ljrf;->u0:Ljava/lang/String;
-
-    iput-object p10, p0, Ljrf;->v0:Ljava/util/List;
-
-    iput-object p11, p0, Ljrf;->w0:Ljava/lang/String;
-
-    iput p12, p0, Ljrf;->x0:I
-
-    move-wide/from16 p1, p13
-
-    iput-wide p1, p0, Ljrf;->y0:J
-
-    move-object/from16 p1, p15
-
-    iput-object p1, p0, Ljrf;->z0:Ljava/lang/String;
-
-    move/from16 p1, p16
-
-    iput-boolean p1, p0, Ljrf;->A0:Z
-
-    move/from16 p1, p17
-
-    iput p1, p0, Ljrf;->B0:I
-
-    move-object/from16 p1, p20
-
-    iput-object p1, p0, Ljrf;->C0:Ljava/lang/String;
+    iput-wide p1, p0, Ljrf;->c:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/util/HashMap;
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    invoke-super {p0}, Ljz;->a()Ljava/util/HashMap;
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Ljrf;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Ljrf;
+
+    iget-wide v3, p0, Ljrf;->c:J
+
+    iget-wide v5, p1, Ljrf;->c:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Ljrf;->c:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    const-string v0, "DialogUserId(contactId="
+
+    const-string v1, ")"
+
+    iget-wide v2, p0, Ljrf;->c:J
+
+    invoke-static {v2, v3, v0, v1}, Lfvg;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
-
-    iget-wide v1, p0, Ljrf;->d:J
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    const-string v2, "stickerId"
-
-    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-object v0
 .end method

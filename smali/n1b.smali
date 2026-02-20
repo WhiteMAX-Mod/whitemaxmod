@@ -1,97 +1,48 @@
-.class public abstract Ln1b;
-.super Ljava/lang/Object;
+.class public final Ln1b;
+.super Luza;
 .source "SourceFile"
+
+# interfaces
+.implements Lhge;
 
 
 # instance fields
-.field public a:Z
-
-.field public final b:Ljava/util/concurrent/CopyOnWriteArrayList;
-
-.field public c:Lqr6;
+.field public final a:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Z)V
+.method public constructor <init>(Ljava/lang/Object;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean p1, p0, Ln1b;->a:Z
-
-    new-instance p1, Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-direct {p1}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
-
-    iput-object p1, p0, Ln1b;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+    iput-object p1, p0, Ln1b;->a:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()V
-    .locals 0
+.method public final get()Ljava/lang/Object;
+    .locals 1
 
-    return-void
+    iget-object v0, p0, Ln1b;->a:Ljava/lang/Object;
+
+    return-object v0
 .end method
 
-.method public abstract b()V
-.end method
-
-.method public c(Lpf0;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public d()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final e()V
+.method public final l(Lv2b;)V
     .locals 2
 
-    iget-object v0, p0, Ln1b;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+    new-instance v0, Lg2b;
 
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    iget-object v1, p0, Ln1b;->a:Ljava/lang/Object;
 
-    move-result-object v0
+    invoke-direct {v0, p1, v1}, Lg2b;-><init>(Lv2b;Ljava/lang/Object;)V
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {p1, v0}, Lv2b;->d(Ly35;)V
 
-    move-result v1
+    invoke-virtual {v0}, Lg2b;->run()V
 
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Le62;
-
-    invoke-interface {v1}, Le62;->cancel()V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final f(Z)V
-    .locals 0
-
-    iput-boolean p1, p0, Ln1b;->a:Z
-
-    iget-object p1, p0, Ln1b;->c:Lqr6;
-
-    if-eqz p1, :cond_0
-
-    invoke-interface {p1}, Llq6;->invoke()Ljava/lang/Object;
-
-    :cond_0
     return-void
 .end method

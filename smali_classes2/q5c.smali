@@ -1,102 +1,153 @@
 .class public final Lq5c;
-.super Ljava/lang/Object;
+.super Lx0i;
 .source "SourceFile"
 
-# interfaces
-.implements Lu4c;
+
+# static fields
+.field public static final synthetic v0:[Lv58;
 
 
 # instance fields
-.field public final synthetic a:Lone/me/chats/picker/chats/PickerChatsListWidget;
+.field public final X:Lmrd;
+
+.field public final Y:Lhxf;
+
+.field public final Z:Lmrd;
+
+.field public final b:Lj88;
+
+.field public final c:Lj88;
+
+.field public final d:Lhxf;
+
+.field public final o:Ljava/lang/String;
+
+.field public final s0:Ltn5;
+
+.field public final t0:Ln8;
+
+.field public final u0:Ldr2;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/chats/picker/chats/PickerChatsListWidget;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Laia;
 
-    iput-object p1, p0, Lq5c;->a:Lone/me/chats/picker/chats/PickerChatsListWidget;
+    const-string v1, "saveJob"
+
+    const-string v2, "getSaveJob()Lkotlinx/coroutines/Job;"
+
+    const-class v3, Lq5c;
+
+    invoke-direct {v0, v3, v1, v2}, Laia;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+
+    sget-object v1, Lazd;->a:Lbzd;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 v1, 0x1
+
+    new-array v1, v1, [Lv58;
+
+    const/4 v2, 0x0
+
+    aput-object v0, v1, v2
+
+    sput-object v1, Lq5c;->v0:[Lv58;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final X(Lq6c;Z)Z
+.method public constructor <init>()V
     .locals 3
 
-    sget-object v0, Lone/me/chats/picker/chats/PickerChatsListWidget;->C0:[Lz28;
+    sget-object v0, Ll49;->a:Ll49;
 
-    iget-object v0, p0, Lq5c;->a:Lone/me/chats/picker/chats/PickerChatsListWidget;
-
-    invoke-virtual {v0}, Lone/me/chats/picker/chats/PickerChatsListWidget;->G0()Ln5c;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
 
     move-result-object v1
 
-    iget-object v1, v1, Ln5c;->G0:Lpld;
+    const/16 v2, 0xe
 
-    iget-object v1, v1, Lpld;->a:Llpf;
-
-    invoke-interface {v1}, Llpf;->getValue()Ljava/lang/Object;
+    invoke-virtual {v1, v2}, Lr5;->d(I)Lbgg;
 
     move-result-object v1
 
-    check-cast v1, Ljava/lang/Boolean;
-
-    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_0
-    iget-object v1, v0, Lone/me/chats/picker/chats/PickerChatsListWidget;->X:Lnq6;
-
-    if-eqz v1, :cond_1
-
-    sget-object v2, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
-
-    invoke-interface {v1, v2}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_1
-    invoke-virtual {v0}, Lone/me/chats/picker/chats/PickerChatsListWidget;->E0()Lb5c;
-
-    move-result-object v1
-
-    invoke-virtual {v0}, Lone/me/chats/picker/chats/PickerChatsListWidget;->D0()Lbj2;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
 
     move-result-object v0
 
-    const/4 v2, 0x1
+    const/16 v2, 0x83
 
-    invoke-virtual {v1, p1, p2, v0, v2}, Lb5c;->s(Lq6c;ZLbj2;Z)V
-
-    return v2
-.end method
-
-.method public final f0(Lq6c;Z)V
-    .locals 3
-
-    sget-object v0, Lone/me/chats/picker/chats/PickerChatsListWidget;->C0:[Lz28;
-
-    iget-object v0, p0, Lq5c;->a:Lone/me/chats/picker/chats/PickerChatsListWidget;
-
-    invoke-virtual {v0}, Lone/me/chats/picker/chats/PickerChatsListWidget;->E0()Lb5c;
-
-    move-result-object v1
-
-    invoke-virtual {v0}, Lone/me/chats/picker/chats/PickerChatsListWidget;->D0()Lbj2;
+    invoke-virtual {v0, v2}, Lr5;->d(I)Lbgg;
 
     move-result-object v0
 
-    const/4 v2, 0x1
+    invoke-direct {p0}, Lx0i;-><init>()V
 
-    invoke-virtual {v1, p1, p2, v0, v2}, Lb5c;->s(Lq6c;ZLbj2;Z)V
+    iput-object v1, p0, Lq5c;->b:Lj88;
+
+    iput-object v0, p0, Lq5c;->c:Lj88;
+
+    const/4 v0, 0x0
+
+    invoke-static {v0}, Lixf;->a(Ljava/lang/Object;)Lhxf;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lq5c;->d:Lhxf;
+
+    const-class v1, Lq5c;
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lq5c;->o:Ljava/lang/String;
+
+    new-instance v1, Lmrd;
+
+    invoke-direct {v1, v0}, Lmrd;-><init>(Lgia;)V
+
+    iput-object v1, p0, Lq5c;->X:Lmrd;
+
+    sget-object v0, Lga5;->a:Lga5;
+
+    invoke-static {v0}, Lixf;->a(Ljava/lang/Object;)Lhxf;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lq5c;->Y:Lhxf;
+
+    new-instance v1, Lmrd;
+
+    invoke-direct {v1, v0}, Lmrd;-><init>(Lgia;)V
+
+    iput-object v1, p0, Lq5c;->Z:Lmrd;
+
+    new-instance v0, Ltn5;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Ltn5;-><init>(I)V
+
+    iput-object v0, p0, Lq5c;->s0:Ltn5;
+
+    invoke-static {}, Lytj;->a()Ln8;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lq5c;->t0:Ln8;
+
+    new-instance v0, Ldr2;
+
+    const/16 v1, 0x9
+
+    invoke-direct {v0, v1, p0}, Ldr2;-><init>(ILjava/lang/Object;)V
+
+    iput-object v0, p0, Lq5c;->u0:Ldr2;
 
     return-void
 .end method

@@ -1,160 +1,43 @@
 .class public final Lam1;
-.super Lp6g;
+.super Ld3;
 .source "SourceFile"
 
-# interfaces
-.implements Lbr6;
 
-
-# instance fields
-.field public final synthetic X:Lcm1;
-
-.field public o:I
+# static fields
+.field public static final c:Lam1;
 
 
 # direct methods
-.method public constructor <init>(Lcm1;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lam1;->X:Lcm1;
+    new-instance v0, Lam1;
 
-    const/4 p1, 0x2
+    const/16 v1, 0xc
 
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, v1}, Ld3;-><init>(I)V
+
+    sput-object v0, Lam1;->c:Lam1;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final J0()V
+    .locals 4
 
-    check-cast p1, Lzb4;
+    invoke-virtual {p0}, Ld3;->n0()Lyn4;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    move-result-object v0
 
-    invoke-virtual {p0, p1, p2}, Lam1;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    const/4 v1, 0x0
 
-    move-result-object p1
+    const/4 v2, 0x6
 
-    check-cast p1, Lam1;
+    const-string v3, ":call-active"
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    invoke-static {v0, v3, v1, v2}, Lyn4;->b(Lyn4;Ljava/lang/String;Landroid/os/Bundle;I)Z
 
-    invoke-virtual {p1, p2}, Lam1;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Lam1;
-
-    iget-object v0, p0, Lam1;->X:Lcm1;
-
-    invoke-direct {p1, v0, p2}, Lam1;-><init>(Lcm1;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
-
-    iget v0, p0, Lam1;->o:I
-
-    const/4 v1, 0x1
-
-    iget-object v2, p0, Lam1;->X:Lcm1;
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    iget-object p1, v2, Lcm1;->o:Lpld;
-
-    iput v1, p0, Lam1;->o:I
-
-    invoke-static {p1, p0}, Lgu0;->r(Ld76;Lo84;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lac4;->a:Lac4;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
-    :cond_2
-    :goto_0
-    check-cast p1, Lnd2;
-
-    iget-object v0, v2, Lcm1;->d:Lspf;
-
-    :cond_3
-    invoke-virtual {v0}, Lspf;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    move-object v3, v1
-
-    check-cast v3, Lsl1;
-
-    const/4 v4, 0x0
-
-    if-eqz p1, :cond_4
-
-    invoke-virtual {p1}, Lnd2;->v()Ljava/lang/String;
-
-    move-result-object v5
-
-    goto :goto_1
-
-    :cond_4
-    move-object v5, v4
-
-    :goto_1
-    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v3, Lsl1;
-
-    invoke-direct {v3, v5}, Lsl1;-><init>(Ljava/lang/CharSequence;)V
-
-    invoke-virtual {v0, v1, v3}, Lspf;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    if-eqz p1, :cond_5
-
-    invoke-virtual {p1}, Lnd2;->v()Ljava/lang/String;
-
-    move-result-object v4
-
-    :cond_5
-    invoke-virtual {v2, v4}, Lcm1;->t(Ljava/lang/CharSequence;)V
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
+    return-void
 .end method

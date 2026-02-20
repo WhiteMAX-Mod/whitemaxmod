@@ -1,85 +1,150 @@
-.class public abstract Li4e;
-.super Landroid/graphics/drawable/Drawable;
+.class public final Li4e;
+.super Landroid/net/ConnectivityManager$NetworkCallback;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:D
+# instance fields
+.field public a:Z
+
+.field public b:Z
+
+.field public final synthetic c:Lvd0;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lvd0;)V
+    .locals 0
 
-    const-wide v0, 0x4046800000000000L    # 45.0
+    iput-object p1, p0, Li4e;->c:Lvd0;
 
-    invoke-static {v0, v1}, Ljava/lang/Math;->toRadians(D)D
-
-    move-result-wide v0
-
-    invoke-static {v0, v1}, Ljava/lang/Math;->cos(D)D
-
-    move-result-wide v0
-
-    sput-wide v0, Li4e;->a:D
+    invoke-direct {p0}, Landroid/net/ConnectivityManager$NetworkCallback;-><init>()V
 
     return-void
 .end method
 
-.method public static a(FFZ)F
-    .locals 6
 
-    if-eqz p2, :cond_0
+# virtual methods
+.method public final onAvailable(Landroid/net/Network;)V
+    .locals 2
 
-    float-to-double v0, p0
+    iget-object p1, p0, Li4e;->c:Lvd0;
 
-    const-wide/high16 v2, 0x3ff0000000000000L    # 1.0
+    iget-object p1, p1, Lvd0;->e:Ljava/lang/Object;
 
-    sget-wide v4, Li4e;->a:D
+    check-cast p1, Landroid/os/Handler;
 
-    sub-double/2addr v2, v4
+    new-instance v0, Lh4e;
 
-    float-to-double p0, p1
+    const/4 v1, 0x0
 
-    mul-double/2addr v2, p0
+    invoke-direct {v0, p0, v1}, Lh4e;-><init>(Li4e;I)V
 
-    add-double/2addr v2, v0
+    invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    double-to-float p0, v2
-
-    :cond_0
-    return p0
+    return-void
 .end method
 
-.method public static b(FFZ)F
-    .locals 6
+.method public final onBlockedStatusChanged(Landroid/net/Network;Z)V
+    .locals 1
 
-    const/high16 v0, 0x3fc00000    # 1.5f
+    if-nez p2, :cond_0
 
-    if-eqz p2, :cond_0
+    iget-object p1, p0, Li4e;->c:Lvd0;
 
-    mul-float/2addr p0, v0
+    iget-object p1, p1, Lvd0;->e:Ljava/lang/Object;
 
-    float-to-double v0, p0
+    check-cast p1, Landroid/os/Handler;
 
-    const-wide/high16 v2, 0x3ff0000000000000L    # 1.0
+    new-instance p2, Lh4e;
 
-    sget-wide v4, Li4e;->a:D
+    const/4 v0, 0x1
 
-    sub-double/2addr v2, v4
+    invoke-direct {p2, p0, v0}, Lh4e;-><init>(Li4e;I)V
 
-    float-to-double p0, p1
-
-    mul-double/2addr v2, p0
-
-    add-double/2addr v2, v0
-
-    double-to-float p0, v2
-
-    return p0
+    invoke-virtual {p1, p2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     :cond_0
-    mul-float/2addr p0, v0
+    return-void
+.end method
 
-    return p0
+.method public final onCapabilitiesChanged(Landroid/net/Network;Landroid/net/NetworkCapabilities;)V
+    .locals 1
+
+    const/16 p1, 0x10
+
+    invoke-virtual {p2, p1}, Landroid/net/NetworkCapabilities;->hasCapability(I)Z
+
+    move-result p1
+
+    iget-boolean p2, p0, Li4e;->a:Z
+
+    iget-object v0, p0, Li4e;->c:Lvd0;
+
+    if-eqz p2, :cond_2
+
+    iget-boolean p2, p0, Li4e;->b:Z
+
+    if-eq p2, p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    if-eqz p1, :cond_1
+
+    iget-object p1, v0, Lvd0;->e:Ljava/lang/Object;
+
+    check-cast p1, Landroid/os/Handler;
+
+    new-instance p2, Lh4e;
+
+    const/4 v0, 0x1
+
+    invoke-direct {p2, p0, v0}, Lh4e;-><init>(Li4e;I)V
+
+    invoke-virtual {p1, p2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    :cond_1
+    return-void
+
+    :cond_2
+    :goto_0
+    const/4 p2, 0x1
+
+    iput-boolean p2, p0, Li4e;->a:Z
+
+    iput-boolean p1, p0, Li4e;->b:Z
+
+    iget-object p1, v0, Lvd0;->e:Ljava/lang/Object;
+
+    check-cast p1, Landroid/os/Handler;
+
+    new-instance p2, Lh4e;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p2, p0, v0}, Lh4e;-><init>(Li4e;I)V
+
+    invoke-virtual {p1, p2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+.end method
+
+.method public final onLost(Landroid/net/Network;)V
+    .locals 2
+
+    iget-object p1, p0, Li4e;->c:Lvd0;
+
+    iget-object p1, p1, Lvd0;->e:Ljava/lang/Object;
+
+    check-cast p1, Landroid/os/Handler;
+
+    new-instance v0, Lh4e;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, v1}, Lh4e;-><init>(Li4e;I)V
+
+    invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
 .end method

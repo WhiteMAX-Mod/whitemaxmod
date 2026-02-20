@@ -1,35 +1,16 @@
-.class public interface abstract Lqhh;
+.class public final Lqhh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lshh;
+
 
 # virtual methods
-.method public E(F)V
+.method public final a(Lrhh;I)Les3;
     .locals 0
 
-    return-void
-.end method
+    const/4 p1, 0x0
 
-.method public L()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public abstract O()V
-.end method
-
-.method public abstract b(Landroidx/media3/common/VideoFrameProcessingException;)V
-.end method
-
-.method public l(II)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public p(JZ)V
-    .locals 0
-
-    return-void
+    return-object p1
 .end method

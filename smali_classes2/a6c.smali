@@ -1,48 +1,174 @@
-.class public final La6c;
-.super Lo84;
+.class public final synthetic La6c;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lis6;
 
 
 # instance fields
-.field public final synthetic X:Lg4a;
+.field public final synthetic a:I
 
-.field public synthetic d:Ljava/lang/Object;
+.field public final synthetic b:Lj88;
 
-.field public o:I
+.field public final synthetic c:Landroid/content/Context;
 
 
 # direct methods
-.method public constructor <init>(Lg4a;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lj88;Landroid/content/Context;I)V
     .locals 0
 
-    iput-object p1, p0, La6c;->X:Lg4a;
+    iput p3, p0, La6c;->a:I
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, La6c;->b:Lj88;
+
+    iput-object p2, p0, La6c;->c:Landroid/content/Context;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 5
 
-    iput-object p1, p0, La6c;->d:Ljava/lang/Object;
+    iget v0, p0, La6c;->a:I
 
-    iget p1, p0, La6c;->o:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-object v0, p0, La6c;->b:Lj88;
 
-    or-int/2addr p1, v0
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
 
-    iput p1, p0, La6c;->o:I
+    move-result-object v0
 
-    iget-object p1, p0, La6c;->X:Lg4a;
+    check-cast v0, Lu05;
 
-    const/4 v0, 0x0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {p1, v0, p0}, Lg4a;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    iget-object v0, p0, La6c;->c:Landroid/content/Context;
 
-    move-result-object p1
+    invoke-static {v0}, Lu05;->h(Landroid/content/Context;)Landroid/util/Size;
 
-    return-object p1
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/util/Size;->getWidth()I
+
+    move-result v1
+
+    invoke-virtual {v0}, Landroid/util/Size;->getHeight()I
+
+    move-result v0
+
+    invoke-static {v1, v0}, Ljava/lang/Math;->max(II)I
+
+    move-result v0
+
+    :goto_0
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, La6c;->b:Lj88;
+
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lu05;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v0, p0, La6c;->c:Landroid/content/Context;
+
+    invoke-static {v0}, Lu05;->h(Landroid/content/Context;)Landroid/util/Size;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/util/Size;->getWidth()I
+
+    move-result v1
+
+    int-to-double v1, v1
+
+    invoke-virtual {v0}, Landroid/util/Size;->getHeight()I
+
+    move-result v0
+
+    int-to-double v3, v0
+
+    invoke-static {v1, v2, v3, v4}, Ljava/lang/Math;->min(DD)D
+
+    move-result-wide v0
+
+    const/high16 v2, 0x40400000    # 3.0f
+
+    float-to-double v2, v2
+
+    div-double/2addr v0, v2
+
+    const/high16 v2, 0x40000000    # 2.0f
+
+    float-to-double v2, v2
+
+    mul-double/2addr v0, v2
+
+    double-to-int v0, v0
+
+    const/16 v1, 0x190
+
+    if-ge v0, v1, :cond_0
+
+    move v0, v1
+
+    :cond_0
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_1
+    iget-object v0, p0, La6c;->b:Lj88;
+
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lu05;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v0, p0, La6c;->c:Landroid/content/Context;
+
+    invoke-static {v0}, Lu05;->h(Landroid/content/Context;)Landroid/util/Size;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/util/Size;->getWidth()I
+
+    move-result v1
+
+    invoke-virtual {v0}, Landroid/util/Size;->getHeight()I
+
+    move-result v0
+
+    invoke-static {v1, v0}, Ljava/lang/Math;->max(II)I
+
+    move-result v0
+
+    goto :goto_0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

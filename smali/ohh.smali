@@ -1,6 +1,11 @@
-.class public final Lohh;
+.class public interface abstract Lohh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ltd5;
+.implements Lit5;
+
+
+# virtual methods
+.method public abstract w()Lphh;
+.end method

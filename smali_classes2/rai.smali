@@ -1,21 +1,19 @@
 .class public final Lrai;
-.super Luai;
+.super Ln28;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lrai;
+# instance fields
+.field public final c:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 0
 
-    new-instance v0, Lrai;
+    invoke-direct {p0}, Ln28;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Throwable;-><init>()V
-
-    sput-object v0, Lrai;->a:Lrai;
+    iput-object p1, p0, Lrai;->c:Ljava/lang/String;
 
     return-void
 .end method
@@ -23,7 +21,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    .locals 3
 
     const/4 v0, 0x1
 
@@ -32,30 +30,57 @@
     return v0
 
     :cond_0
-    instance-of p1, p1, Lrai;
+    instance-of v1, p1, Lrai;
 
-    if-nez p1, :cond_1
+    const/4 v2, 0x0
 
-    const/4 p1, 0x0
+    if-nez v1, :cond_1
 
-    return p1
+    return v2
 
     :cond_1
+    check-cast p1, Lrai;
+
+    iget-object v1, p0, Lrai;->c:Ljava/lang/String;
+
+    iget-object p1, p1, Lrai;->c:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
     return v0
 .end method
 
 .method public final hashCode()I
     .locals 1
 
-    const v0, -0x59599464
+    iget-object v0, p0, Lrai;->c:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
 
     return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 1
+    .locals 3
 
-    const-string v0, "InvalidRequest"
+    const-string v0, "RequestDownloadFile(fileName="
+
+    const-string v1, ")"
+
+    iget-object v2, p0, Lrai;->c:Ljava/lang/String;
+
+    invoke-static {v0, v2, v1}, Ltx8;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

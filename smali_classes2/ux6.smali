@@ -1,57 +1,64 @@
 .class public final Lux6;
-.super Ljava/lang/Object;
+.super Landroid/view/ScaleGestureDetector$SimpleOnScaleGestureListener;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lo58;
+.field public final synthetic a:Lvx6;
 
 
 # direct methods
-.method public constructor <init>(Lo58;)V
+.method public constructor <init>(Lvx6;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lux6;->a:Lvx6;
 
-    iput-object p1, p0, Lux6;->a:Lo58;
+    invoke-direct {p0}, Landroid/view/ScaleGestureDetector$SimpleOnScaleGestureListener;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lp6g;)Ljava/lang/Object;
-    .locals 2
+.method public final onScale(Landroid/view/ScaleGestureDetector;)Z
+    .locals 6
 
-    new-instance v0, Lg62;
+    invoke-virtual {p1}, Landroid/view/ScaleGestureDetector;->getScaleFactor()F
 
-    invoke-static {p1}, Lo1j;->d(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    move-result v0
 
-    move-result-object p1
+    iget-object v1, p0, Lux6;->a:Lvx6;
 
-    const/4 v1, 0x1
+    iget v2, v1, Lvx6;->P0:F
 
-    invoke-direct {v0, v1, p1}, Lg62;-><init>(ILkotlin/coroutines/Continuation;)V
+    iget v3, v1, Lvx6;->Q0:F
 
-    invoke-virtual {v0}, Lg62;->o()V
+    iget-object v4, v1, Lh0h;->t0:Landroid/graphics/Matrix;
 
-    iget-object p1, p0, Lux6;->a:Lo58;
+    const/4 v5, 0x0
 
-    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
+    cmpl-float v5, v0, v5
 
-    move-result-object p1
+    if-eqz v5, :cond_0
 
-    check-cast p1, Loj8;
+    invoke-virtual {v4, v0, v0, v2, v3}, Landroid/graphics/Matrix;->postScale(FFFF)Z
 
-    new-instance v1, Ltx6;
+    invoke-virtual {v1, v4}, Lh0h;->setImageMatrix(Landroid/graphics/Matrix;)V
 
-    invoke-direct {v1, v0}, Ltx6;-><init>(Lg62;)V
+    :cond_0
+    invoke-virtual {p1}, Landroid/view/ScaleGestureDetector;->getFocusX()F
 
-    invoke-virtual {p1, v1}, Loj8;->a(Lmj8;)V
+    move-result v0
 
-    invoke-virtual {v0}, Lg62;->n()Ljava/lang/Object;
+    iput v0, v1, Lvx6;->R0:F
 
-    move-result-object p1
+    invoke-virtual {p1}, Landroid/view/ScaleGestureDetector;->getFocusY()F
 
-    return-object p1
+    move-result p1
+
+    iput p1, v1, Lvx6;->S0:F
+
+    const/4 p1, 0x1
+
+    return p1
 .end method

@@ -1,130 +1,269 @@
-.class public final Lhc3;
-.super Lp6g;
+.class public final synthetic Lhc3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Lis6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lpc3;
-
-.field public o:I
+.field public final synthetic b:Lone/me/chats/tab/ChatsTabWidget;
 
 
 # direct methods
-.method public constructor <init>(Lpc3;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lone/me/chats/tab/ChatsTabWidget;I)V
     .locals 0
 
-    iput-object p1, p0, Lhc3;->Y:Lpc3;
+    iput p2, p0, Lhc3;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lhc3;->b:Lone/me/chats/tab/ChatsTabWidget;
 
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke()Ljava/lang/Object;
+    .locals 11
 
-    check-cast p1, Lf76;
+    iget v0, p0, Lhc3;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lhc3;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lhc3;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lhc3;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lhc3;
-
-    iget-object v1, p0, Lhc3;->Y:Lpc3;
-
-    invoke-direct {v0, v1, p2}, Lhc3;-><init>(Lpc3;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lhc3;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    iget-object v0, p0, Lhc3;->X:Ljava/lang/Object;
-
-    check-cast v0, Lf76;
-
-    iget v1, p0, Lhc3;->o:I
+    const/4 v1, 0x3
 
     const/4 v2, 0x1
 
-    if-eqz v1, :cond_1
+    iget-object v3, p0, Lhc3;->b:Lone/me/chats/tab/ChatsTabWidget;
 
-    if-ne v1, v2, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    sget-object v0, Lone/me/chats/tab/ChatsTabWidget;->I0:[Lv58;
+
+    :goto_0
+    invoke-virtual {v3}, Lpa4;->getParentController()Lpa4;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v3}, Lpa4;->getParentController()Lpa4;
+
+    move-result-object v3
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lhc3;->Y:Lpc3;
-
-    iget-object p1, p1, Lpc3;->d:Ljava/lang/Object;
-
-    check-cast p1, Lcl4;
-
-    invoke-virtual {p1}, Lcl4;->b()Lnna;
-
-    move-result-object p1
+    instance-of v0, v3, Lpbe;
 
     const/4 v1, 0x0
 
-    iput-object v1, p0, Lhc3;->X:Ljava/lang/Object;
+    if-eqz v0, :cond_1
 
-    iput v2, p0, Lhc3;->o:I
+    check-cast v3, Lpbe;
 
-    invoke-interface {v0, p1, p0}, Lf76;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    goto :goto_1
 
-    move-result-object p1
+    :cond_1
+    move-object v3, v1
 
-    sget-object v0, Lac4;->a:Lac4;
+    :goto_1
+    if-eqz v3, :cond_2
 
-    if-ne p1, v0, :cond_2
+    check-cast v3, Lone/me/android/root/RootController;
+
+    invoke-virtual {v3}, Lone/me/android/root/RootController;->N0()Ljbe;
+
+    move-result-object v1
+
+    :cond_2
+    if-eqz v1, :cond_3
+
+    invoke-virtual {v1}, Ljbe;->n()Z
+
+    move-result v0
+
+    if-ne v0, v2, :cond_3
+
+    goto :goto_2
+
+    :cond_3
+    const/4 v2, 0x0
+
+    :goto_2
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
 
     return-object v0
 
-    :cond_2
-    :goto_0
-    sget-object p1, Lb3h;->a:Lb3h;
+    :pswitch_0
+    sget-object v0, Lone/me/chats/tab/ChatsTabWidget;->I0:[Lv58;
 
-    return-object p1
+    iget-object v4, p0, Lhc3;->b:Lone/me/chats/tab/ChatsTabWidget;
+
+    invoke-virtual {v4}, Lone/me/sdk/arch/Widget;->getScopeId()Lwie;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lwie;->c:Lbgg;
+
+    invoke-virtual {v0}, Lbgg;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v3, v0
+
+    check-cast v3, Lcj8;
+
+    new-instance v5, Lbjc;
+
+    iget v0, v4, Lone/me/chats/tab/ChatsTabWidget;->E0:I
+
+    iget v2, v4, Lone/me/chats/tab/ChatsTabWidget;->F0:I
+
+    invoke-direct {v5}, Landroidx/recyclerview/widget/b;-><init>()V
+
+    sget v6, Lh43;->a:I
+
+    mul-int v7, v0, v2
+
+    invoke-virtual {v5, v6, v7}, Landroidx/recyclerview/widget/b;->setMaxRecycledViews(II)V
+
+    sget v6, Lh43;->b:I
+
+    mul-int/lit8 v2, v2, 0x5
+
+    invoke-virtual {v5, v6, v2}, Landroidx/recyclerview/widget/b;->setMaxRecycledViews(II)V
+
+    sget v2, Ls9b;->w:I
+
+    int-to-double v6, v0
+
+    const-wide/high16 v8, 0x3ff8000000000000L    # 1.5
+
+    mul-double/2addr v6, v8
+
+    invoke-static {v6, v7}, Lmhj;->e(D)I
+
+    move-result v0
+
+    invoke-virtual {v5, v2, v0}, Landroidx/recyclerview/widget/b;->setMaxRecycledViews(II)V
+
+    sget v0, Ls9b;->x:I
+
+    invoke-static {v6, v7}, Lmhj;->e(D)I
+
+    move-result v2
+
+    invoke-virtual {v5, v0, v2}, Landroidx/recyclerview/widget/b;->setMaxRecycledViews(II)V
+
+    sget v0, Lgeb;->a:I
+
+    invoke-virtual {v5, v0, v1}, Landroidx/recyclerview/widget/b;->setMaxRecycledViews(II)V
+
+    new-instance v0, Lhha;
+
+    invoke-direct {v0}, Lhha;-><init>()V
+
+    new-instance v2, Lyi6;
+
+    const/4 v6, 0x0
+
+    const/16 v7, 0x10
+
+    invoke-direct/range {v2 .. v7}, Lyi6;-><init>(Lcj8;Lpa4;Landroidx/recyclerview/widget/b;Lr5c;I)V
+
+    return-object v2
+
+    :pswitch_1
+    iget-object v0, v3, Lone/me/chats/tab/ChatsTabWidget;->a:Lf;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v0
+
+    const/16 v1, 0x267
+
+    invoke-virtual {v0, v1}, Lr5;->c(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljk6;
+
+    new-instance v1, Lik6;
+
+    iget-object v2, v0, Ljk6;->a:Lj88;
+
+    iget-object v3, v0, Ljk6;->b:Ljdb;
+
+    iget-object v4, v0, Ljk6;->c:Lj88;
+
+    iget-object v5, v0, Ljk6;->d:Lbjg;
+
+    iget-object v6, v0, Ljk6;->e:Lndb;
+
+    iget-object v7, v0, Ljk6;->f:Lxw3;
+
+    iget-object v8, v0, Ljk6;->g:Leeb;
+
+    iget-object v9, v0, Ljk6;->h:Lq3i;
+
+    iget-object v10, v0, Ljk6;->i:Lze6;
+
+    invoke-direct/range {v1 .. v10}, Lik6;-><init>(Lj88;Ljdb;Lj88;Lbjg;Lndb;Lxw3;Leeb;Lq3i;Lze6;)V
+
+    return-object v1
+
+    :pswitch_2
+    iget-object v0, v3, Lone/me/chats/tab/ChatsTabWidget;->t0:Lj88;
+
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lbm1;
+
+    iget-object v9, v3, Lpa4;->lifecycleOwner:Lab8;
+
+    new-instance v7, Looi;
+
+    invoke-direct {v7, v3, v2}, Looi;-><init>(Lone/me/sdk/arch/Widget;I)V
+
+    new-instance v8, Lhc3;
+
+    invoke-direct {v8, v3, v1}, Lhc3;-><init>(Lone/me/chats/tab/ChatsTabWidget;I)V
+
+    new-instance v4, Lo02;
+
+    iget-object v5, v0, Lbm1;->a:Lu2c;
+
+    sget-object v0, Ll02;->a:Ll02;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v0
+
+    const/16 v1, 0x89
+
+    invoke-virtual {v0, v1}, Lr5;->c(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v6, v0
+
+    check-cast v6, Li2c;
+
+    invoke-direct/range {v4 .. v9}, Lo02;-><init>(Lu2c;Li2c;Looi;Lis6;Lab8;)V
+
+    return-object v4
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

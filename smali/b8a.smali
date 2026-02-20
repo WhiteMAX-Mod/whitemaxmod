@@ -1,67 +1,62 @@
-.class public final Lb8a;
-.super Lg4;
+.class public abstract Lb8a;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lb8a;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
 # instance fields
-.field public final a:Landroid/app/PendingIntent;
+.field public final a:I
+
+.field public final b:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lfph;
-
-    const/4 v1, 0x7
-
-    invoke-direct {v0, v1}, Lfph;-><init>(I)V
-
-    sput-object v0, Lb8a;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/app/PendingIntent;)V
+.method public constructor <init>(II)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lb8a;->a:Landroid/app/PendingIntent;
+    iput p1, p0, Lb8a;->a:I
+
+    iput p2, p0, Lb8a;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 3
+.method public a(Lsde;)V
+    .locals 1
 
-    const/16 v0, 0x4f45
+    instance-of v0, p1, Lzbg;
 
-    invoke-static {p1, v0}, Lsnj;->k(Landroid/os/Parcel;I)I
+    if-eqz v0, :cond_0
 
-    move-result v0
+    check-cast p1, Lzbg;
 
-    const/4 v1, 0x1
+    iget-object p1, p1, Lzbg;->a:Lacg;
 
-    iget-object v2, p0, Lb8a;->a:Landroid/app/PendingIntent;
-
-    invoke-static {p1, v1, v2, p2}, Lsnj;->f(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
-
-    invoke-static {p1, v0}, Lsnj;->l(Landroid/os/Parcel;I)V
+    invoke-virtual {p0, p1}, Lb8a;->b(Lacg;)V
 
     return-void
+
+    :cond_0
+    new-instance p1, Llra;
+
+    const-string v0, "Migration functionality with a provided SQLiteDriver requires overriding the migrate(SQLiteConnection) function."
+
+    invoke-direct {p1, v0}, Ljava/lang/Error;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public b(Lacg;)V
+    .locals 1
+
+    new-instance p1, Llra;
+
+    const-string v0, "Migration functionality with a SupportSQLiteDatabase (without a provided SQLiteDriver) requires overriding the migrate(SupportSQLiteDatabase) function."
+
+    invoke-direct {p1, v0}, Ljava/lang/Error;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

@@ -1,148 +1,98 @@
-.class public final Lk12;
-.super Ld22;
+.class public final synthetic Lk12;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lqw;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic a:Lr12;
 
-.field public final synthetic b:Lqw1;
+.field public final synthetic b:Ljava/util/ArrayList;
+
+.field public final synthetic c:I
+
+.field public final synthetic d:I
+
+.field public final synthetic o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lqw1;I)V
+.method public synthetic constructor <init>(Lr12;Ljava/util/ArrayList;III)V
     .locals 0
 
-    iput p2, p0, Lk12;->a:I
-
-    iput-object p1, p0, Lk12;->b:Lqw1;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lk12;->a:Lr12;
+
+    iput-object p2, p0, Lk12;->b:Ljava/util/ArrayList;
+
+    iput p3, p0, Lk12;->c:I
+
+    iput p4, p0, Lk12;->d:I
+
+    iput p5, p0, Lk12;->o:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(I)V
-    .locals 2
+.method public final apply(Ljava/lang/Object;)Lah8;
+    .locals 5
 
-    iget p1, p0, Lk12;->a:I
+    check-cast p1, Ljava/lang/Void;
 
-    packed-switch p1, :pswitch_data_0
+    iget-object p1, p0, Lk12;->a:Lr12;
 
-    iget-object p1, p0, Lk12;->b:Lqw1;
+    iget-object p1, p1, Lr12;->n:La60;
 
-    if-eqz p1, :cond_0
+    iget v0, p0, Lk12;->c:I
 
-    new-instance v0, Landroidx/camera/core/CameraControl$OperationCanceledException;
+    iget v1, p0, Lk12;->d:I
 
-    const-string v1, "Camera is closed"
+    iget v2, p0, Lk12;->o:I
 
-    invoke-direct {v0, v1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p1, v0}, Lqw1;->d(Ljava/lang/Throwable;)Z
-
-    :cond_0
-    return-void
-
-    :pswitch_0
-    new-instance p1, Landroidx/camera/core/ImageCaptureException;
-
-    const/4 v0, 0x0
-
-    const-string v1, "Capture request is cancelled because camera is closed"
-
-    invoke-direct {p1, v1, v0}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    iget-object v0, p0, Lk12;->b:Lqw1;
-
-    invoke-virtual {v0, p1}, Lqw1;->d(Ljava/lang/Throwable;)Z
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final b(ILk22;)V
-    .locals 0
-
-    iget p1, p0, Lk12;->a:I
-
-    packed-switch p1, :pswitch_data_0
-
-    const-string p1, "FocusMeteringControl"
-
-    const-string p2, "triggerAePrecapture: triggering capture request completed"
-
-    invoke-static {p1, p2}, Lm5j;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/4 p1, 0x0
-
-    iget-object p2, p0, Lk12;->b:Lqw1;
-
-    invoke-virtual {p2, p1}, Lqw1;->b(Ljava/lang/Object;)Z
-
-    return-void
-
-    :pswitch_0
-    iget-object p1, p0, Lk12;->b:Lqw1;
-
-    const/4 p2, 0x0
-
-    invoke-virtual {p1, p2}, Lqw1;->b(Ljava/lang/Object;)Z
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final c(ILbg3;)V
-    .locals 1
-
-    iget p1, p0, Lk12;->a:I
-
-    packed-switch p1, :pswitch_data_0
-
-    new-instance p1, Landroidx/camera/core/impl/CameraControlInternal$CameraControlException;
-
-    invoke-direct {p1}, Ljava/lang/Exception;-><init>()V
-
-    iget-object p2, p0, Lk12;->b:Lqw1;
-
-    invoke-virtual {p2, p1}, Lqw1;->d(Ljava/lang/Throwable;)Z
-
-    return-void
-
-    :pswitch_0
-    const-string p1, "ERROR"
-
-    const-string p2, "Capture request failed with reason "
-
-    invoke-virtual {p2, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p1, v0, v1, v2}, La60;->f(III)Lq22;
 
     move-result-object p1
 
-    new-instance p2, Landroidx/camera/core/ImageCaptureException;
+    invoke-virtual {p1, v1}, Lq22;->a(I)Lah8;
 
-    const/4 v0, 0x0
+    move-result-object v0
 
-    invoke-direct {p2, p1, v0}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lwt6;->b(Lah8;)Lwt6;
 
-    iget-object p1, p0, Lk12;->b:Lqw1;
+    move-result-object v0
 
-    invoke-virtual {p1, p2}, Lqw1;->d(Ljava/lang/Throwable;)Z
+    new-instance v2, Ln22;
 
-    return-void
+    const/4 v3, 0x0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    iget-object v4, p0, Lk12;->b:Ljava/util/ArrayList;
+
+    invoke-direct {v2, p1, v4, v1, v3}, Ln22;-><init>(Ljava/lang/Object;Ljava/lang/Object;II)V
+
+    iget-object v1, p1, Lq22;->b:Ljava/util/concurrent/Executor;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v0, v2, v1}, Lr8h;->w(Lah8;Lqw;Ljava/util/concurrent/Executor;)Lra2;
+
+    move-result-object v0
+
+    new-instance v2, Ljy1;
+
+    const/4 v3, 0x5
+
+    invoke-direct {v2, v3, p1}, Ljy1;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v0, v2, v1}, Lwt6;->a(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+
+    invoke-static {v0}, Lr8h;->n(Lah8;)Lah8;
+
+    move-result-object p1
+
+    return-object p1
 .end method

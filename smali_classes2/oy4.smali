@@ -1,21 +1,19 @@
 .class public final Loy4;
-.super Laq;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Loy4;
+# instance fields
+.field public final a:Lj88;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lj88;)V
+    .locals 0
 
-    new-instance v0, Loy4;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Laq;-><init>()V
-
-    sput-object v0, Loy4;->a:Loy4;
+    iput-object p1, p0, Loy4;->a:Lj88;
 
     return-void
 .end method

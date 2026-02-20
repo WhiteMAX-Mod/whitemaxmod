@@ -1,60 +1,100 @@
-.class public final synthetic Lwc8;
+.class public final Lwc8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/function/Predicate;
+.implements Lod8;
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lwc8;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public final synthetic b:Ljava/util/Collection;
+.field public static final a:Lwc8;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/util/Collection;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput p1, p0, Lwc8;->a:I
+    new-instance v0, Lwc8;
 
-    iput-object p2, p0, Lwc8;->b:Ljava/util/Collection;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lwc8;->a:Lwc8;
+
+    new-instance v0, Le88;
+
+    const/4 v1, 0x7
+
+    invoke-direct {v0, v1}, Le88;-><init>(I)V
+
+    sput-object v0, Lwc8;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final test(Ljava/lang/Object;)Z
+.method public final describeContents()I
     .locals 1
 
-    iget v0, p0, Lwc8;->a:I
+    const/4 v0, 0x0
 
-    packed-switch v0, :pswitch_data_0
+    return v0
+.end method
 
-    iget-object v0, p0, Lwc8;->b:Ljava/util/Collection;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    invoke-static {v0, p1}, Lone/me/sdk/concurrent/LinkedTransferQueue34;->c(Ljava/util/Collection;Ljava/lang/Object;)Z
+    const/4 v0, 0x1
 
-    move-result p1
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of p1, p1, Lwc8;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
 
     return p1
 
-    :pswitch_0
-    iget-object v0, p0, Lwc8;->b:Ljava/util/Collection;
+    :cond_1
+    return v0
+.end method
 
-    invoke-static {v0, p1}, Lone/me/sdk/concurrent/LinkedTransferQueue34;->a(Ljava/util/Collection;Ljava/lang/Object;)Z
+.method public final hashCode()I
+    .locals 1
 
-    move-result p1
+    const v0, 0x4dc7cdd3    # 4.1901936E8f
 
-    return p1
+    return v0
+.end method
 
-    nop
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    const-string v0, "ErrorPrivateChannel"
+
+    return-object v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
+
+    const/4 p2, 0x1
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    return-void
 .end method

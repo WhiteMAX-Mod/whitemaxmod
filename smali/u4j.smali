@@ -3,88 +3,64 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lvwa;
+.implements Ljava/util/Iterator;
 
 
-# static fields
-.field public static final a:Lu4j;
+# instance fields
+.field public final a:Ljava/util/Iterator;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Ljava/util/Iterator;)V
+    .locals 0
 
-    new-instance v0, Lu4j;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sput-object v0, Lu4j;->a:Lu4j;
-
-    new-instance v0, Lvzi;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lvzi;-><init>(I)V
-
-    const-class v1, Ln0j;
-
-    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x4
-
-    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x5
-
-    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
+    iput-object p1, p0, Lu4j;->a:Ljava/util/Iterator;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final hasNext()Z
+    .locals 1
 
-    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    iget-object v0, p0, Lu4j;->a:Ljava/util/Iterator;
 
-    move-result-object p1
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    throw p1
+    move-result v0
+
+    return v0
+.end method
+
+.method public final next()Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Lu4j;->a:Ljava/util/Iterator;
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/Map$Entry;
+
+    invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final remove()V
+    .locals 1
+
+    iget-object v0, p0, Lu4j;->a:Ljava/util/Iterator;
+
+    invoke-interface {v0}, Ljava/util/Iterator;->remove()V
+
+    return-void
 .end method

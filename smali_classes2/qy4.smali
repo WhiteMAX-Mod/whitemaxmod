@@ -1,48 +1,67 @@
 .class public final Lqy4;
-.super Lo84;
-
-
-# instance fields
-.field public final synthetic X:Lr3;
-
-.field public synthetic d:Ljava/lang/Object;
-
-.field public o:I
+.super Lruc;
+.source "SourceFile"
 
 
 # direct methods
-.method public constructor <init>(Lr3;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 3
 
-    iput-object p1, p0, Lqy4;->X:Lr3;
+    new-instance v0, Lu7b;
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, p1}, Lu7b;-><init>(Landroid/content/Context;)V
+
+    invoke-direct {p0, v0}, Lpyd;-><init>(Landroid/view/View;)V
+
+    new-instance p1, Landroid/view/ViewGroup$LayoutParams;
+
+    const/4 v1, -0x1
+
+    const/4 v2, -0x2
+
+    invoke-direct {p1, v1, v2}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+
+    invoke-virtual {v0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    sget-object p1, Ls7b;->c:Ls7b;
+
+    invoke-virtual {v0, p1}, Lu7b;->setSize(Ls7b;)V
+
+    sget-object p1, Lr7b;->c:Lr7b;
+
+    invoke-virtual {v0, p1}, Lu7b;->setMode(Lr7b;)V
+
+    sget-object p1, Lp7b;->b:Lp7b;
+
+    invoke-virtual {v0, p1}, Lu7b;->setAppearance(Lp7b;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final y(Lmg8;)V
+    .locals 2
 
-    iput-object p1, p0, Lqy4;->d:Ljava/lang/Object;
+    check-cast p1, Lry4;
 
-    iget p1, p0, Lqy4;->o:I
+    iget-object v0, p0, Lpyd;->a:Landroid/view/View;
 
-    const/high16 v0, -0x80000000
+    move-object v1, v0
 
-    or-int/2addr p1, v0
+    check-cast v1, Lu7b;
 
-    iput p1, p0, Lqy4;->o:I
+    iget-object p1, p1, Lry4;->a:Lcpg;
 
-    iget-object p1, p0, Lqy4;->X:Lr3;
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    const/4 v0, 0x0
+    move-result-object v0
 
-    invoke-virtual {p1, v0, p0}, Lr3;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Lhpg;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
 
     move-result-object p1
 
-    return-object p1
+    invoke-virtual {v1, p1}, Lu7b;->setText(Ljava/lang/CharSequence;)V
+
+    return-void
 .end method

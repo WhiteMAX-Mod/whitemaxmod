@@ -1,154 +1,55 @@
-.class public abstract Lzcf;
-.super Lnd8;
+.class public final Lzcf;
+.super Lao4;
 .source "SourceFile"
 
 
+# static fields
+.field public static final b:Lzcf;
+
+.field public static final c:Lwn4;
+
+.field public static final d:Lwn4;
+
+
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/Executor;)V
-    .locals 3
+.method static constructor <clinit>()V
+    .locals 5
 
-    new-instance v0, Lzj4;
+    new-instance v0, Lzcf;
 
-    const/16 v1, 0x9
+    invoke-direct {v0}, Lao4;-><init>()V
 
-    invoke-direct {v0, v1}, Lzj4;-><init>(I)V
+    sput-object v0, Lzcf;->b:Lzcf;
 
-    new-instance v1, Lws8;
+    const/4 v1, 0x0
 
-    const/4 v2, 0x4
+    new-array v1, v1, [Ljava/lang/String;
 
-    invoke-direct {v1, p1, v2, v0}, Lws8;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    const-string v2, ":chats/share"
 
-    invoke-direct {p0, v1}, Lnd8;-><init>(Lws8;)V
+    const/4 v3, 0x0
 
-    const/4 p1, 0x1
+    const/16 v4, 0xe
 
-    invoke-super {p0, p1}, Lwrd;->B(Z)V
+    invoke-static {v0, v2, v1, v3, v4}, Lao4;->c(Lao4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lwn4;
 
-    return-void
-.end method
+    move-result-object v1
 
+    sput-object v1, Lzcf;->c:Lwn4;
 
-# virtual methods
-.method public final H(I)Lud8;
-    .locals 1
+    const-string v1, "text"
 
-    if-ltz p1, :cond_0
+    filled-new-array {v1}, [Ljava/lang/String;
 
-    iget-object v0, p0, Lnd8;->d:Lgv;
+    move-result-object v1
 
-    iget-object v0, v0, Lgv;->f:Ljava/util/List;
+    const-string v2, ":share"
 
-    invoke-interface {v0}, Ljava/util/Collection;->size()I
+    invoke-static {v0, v2, v1, v3, v4}, Lao4;->c(Lao4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lwn4;
 
-    move-result v0
+    move-result-object v0
 
-    if-ge p1, v0, :cond_0
-
-    invoke-virtual {p0, p1}, Lnd8;->D(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lud8;
-
-    return-object p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return-object p1
-.end method
-
-.method public I(Ljef;I)V
-    .locals 0
-
-    invoke-virtual {p0, p2}, Lnd8;->D(I)Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Lud8;
-
-    invoke-virtual {p1, p2}, Ljef;->y(Lud8;)V
-
-    return-void
-.end method
-
-.method public J(Ljef;)V
-    .locals 0
-
-    invoke-virtual {p1}, Ljef;->C()V
-
-    return-void
-.end method
-
-.method public k(I)J
-    .locals 2
-
-    invoke-virtual {p0, p1}, Lnd8;->D(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lud8;
-
-    invoke-interface {p1}, Lud8;->getItemId()J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public l(I)I
-    .locals 0
-
-    invoke-virtual {p0, p1}, Lnd8;->D(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lud8;
-
-    invoke-interface {p1}, Lud8;->m()I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public bridge synthetic s(Ltsd;I)V
-    .locals 0
-
-    check-cast p1, Ljef;
-
-    invoke-virtual {p0, p1, p2}, Lzcf;->I(Ljef;I)V
-
-    return-void
-.end method
-
-.method public final x(Ltsd;)V
-    .locals 0
-
-    check-cast p1, Ljef;
-
-    invoke-virtual {p1}, Ljef;->A()V
-
-    return-void
-.end method
-
-.method public final y(Ltsd;)V
-    .locals 0
-
-    check-cast p1, Ljef;
-
-    invoke-virtual {p1}, Ljef;->B()V
-
-    return-void
-.end method
-
-.method public bridge synthetic z(Ltsd;)V
-    .locals 0
-
-    check-cast p1, Ljef;
-
-    invoke-virtual {p0, p1}, Lzcf;->J(Ljef;)V
+    sput-object v0, Lzcf;->d:Lwn4;
 
     return-void
 .end method

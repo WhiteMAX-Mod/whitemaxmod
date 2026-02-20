@@ -1,239 +1,208 @@
 .class public final Lkv8;
-.super Ljava/util/concurrent/atomic/AtomicReference;
+.super Lh2;
 .source "SourceFile"
-
-# interfaces
-.implements Le0b;
-.implements Lrv8;
-.implements Lo25;
-.implements Ldff;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final b:Le0b;
-
-.field public final c:Lcr6;
+.field public final b:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Le0b;Lcr6;I)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
-    iput p3, p0, Lkv8;->a:I
+    iput p1, p0, Lkv8;->a:I
 
-    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+    iput-object p2, p0, Lkv8;->b:Ljava/lang/Object;
 
-    iput-object p1, p0, Lkv8;->b:Le0b;
-
-    iput-object p2, p0, Lkv8;->c:Lcr6;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;)V
+.method public bridge contains(Ljava/lang/Object;)Z
     .locals 1
 
     iget v0, p0, Lkv8;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    :try_start_0
-    iget-object v0, p0, Lkv8;->c:Lcr6;
+    invoke-super {p0, p1}, Lh2;->contains(Ljava/lang/Object;)Z
 
-    invoke-interface {v0, p1}, Lcr6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result p1
 
-    move-result-object p1
+    return p1
 
-    const-string v0, "The mapper returned a null Publisher"
-
-    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    check-cast p1, Lsza;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-virtual {p0}, Lkv8;->e()Z
-
-    move-result v0
+    :pswitch_0
+    instance-of v0, p1, Ljava/lang/String;
 
     if-nez v0, :cond_0
 
-    invoke-interface {p1, p0}, Lsza;->a(Le0b;)V
+    const/4 p1, 0x0
 
     goto :goto_0
 
-    :catchall_0
-    move-exception p1
-
-    invoke-static {p1}, Lzoj;->a(Ljava/lang/Throwable;)V
-
-    iget-object v0, p0, Lkv8;->b:Le0b;
-
-    invoke-interface {v0, p1}, Le0b;->onError(Ljava/lang/Throwable;)V
-
     :cond_0
+    check-cast p1, Ljava/lang/String;
+
+    invoke-super {p0, p1}, Lh2;->contains(Ljava/lang/Object;)Z
+
+    move-result p1
+
     :goto_0
-    return-void
+    return p1
 
-    :pswitch_0
-    :try_start_1
-    iget-object v0, p0, Lkv8;->c:Lcr6;
+    nop
 
-    invoke-interface {v0, p1}, Lcr6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final get(I)Ljava/lang/Object;
+    .locals 1
+
+    iget v0, p0, Lkv8;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lkv8;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/List;
+
+    invoke-static {p1, p0}, Lek3;->v(ILjava/util/List;)I
+
+    move-result p1
+
+    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p1
 
-    const-string v0, "The mapper returned a null Publisher"
-
-    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    check-cast p1, Lsza;
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    invoke-virtual {p0}, Lkv8;->e()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    invoke-interface {p1, p0}, Lsza;->a(Le0b;)V
-
-    goto :goto_1
-
-    :catchall_1
-    move-exception p1
-
-    invoke-static {p1}, Lzoj;->a(Ljava/lang/Throwable;)V
-
-    iget-object v0, p0, Lkv8;->b:Le0b;
-
-    invoke-interface {v0, p1}, Le0b;->onError(Ljava/lang/Throwable;)V
-
-    :cond_1
-    :goto_1
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final b()V
-    .locals 1
-
-    iget v0, p0, Lkv8;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lkv8;->b:Le0b;
-
-    invoke-interface {v0}, Le0b;->b()V
-
-    return-void
+    return-object p1
 
     :pswitch_0
-    iget-object v0, p0, Lkv8;->b:Le0b;
+    iget-object v0, p0, Lkv8;->b:Ljava/lang/Object;
 
-    invoke-interface {v0}, Le0b;->b()V
+    check-cast v0, Lzt;
 
-    return-void
+    invoke-virtual {v0, p1}, Lzt;->get(I)Ljava/lang/Object;
 
-    nop
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_1
+    iget-object v0, p0, Lkv8;->b:Ljava/lang/Object;
+
+    check-cast v0, Llv8;
+
+    iget-object v0, v0, Llv8;->a:Ljava/util/regex/Matcher;
+
+    invoke-virtual {v0, p1}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    if-nez p1, :cond_0
+
+    const-string p1, ""
+
+    :cond_0
+    return-object p1
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method
 
-.method public final c(Lo25;)V
+.method public final getSize()I
     .locals 1
 
     iget v0, p0, Lkv8;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    invoke-static {p0, p1}, Ls25;->d(Ljava/util/concurrent/atomic/AtomicReference;Lo25;)Z
+    iget-object v0, p0, Lkv8;->b:Ljava/lang/Object;
 
-    return-void
+    check-cast v0, Ljava/util/List;
 
-    :pswitch_0
-    invoke-static {p0, p1}, Ls25;->d(Ljava/util/concurrent/atomic/AtomicReference;Lo25;)Z
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final dispose()V
-    .locals 1
-
-    iget v0, p0, Lkv8;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-static {p0}, Ls25;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
-
-    return-void
-
-    :pswitch_0
-    invoke-static {p0}, Ls25;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final e()Z
-    .locals 1
-
-    iget v0, p0, Lkv8;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lo25;
-
-    invoke-static {v0}, Ls25;->b(Lo25;)Z
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v0
 
     return v0
 
     :pswitch_0
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    iget-object v0, p0, Lkv8;->b:Ljava/lang/Object;
 
-    move-result-object v0
+    check-cast v0, Lzt;
 
-    check-cast v0, Lo25;
-
-    invoke-static {v0}, Ls25;->b(Lo25;)Z
+    invoke-virtual {v0}, Lzt;->getSize()I
 
     move-result v0
 
     return v0
 
+    :pswitch_1
+    iget-object v0, p0, Lkv8;->b:Ljava/lang/Object;
+
+    check-cast v0, Llv8;
+
+    iget-object v0, v0, Llv8;->a:Ljava/util/regex/Matcher;
+
+    invoke-virtual {v0}, Ljava/util/regex/Matcher;->groupCount()I
+
+    move-result v0
+
+    add-int/lit8 v0, v0, 0x1
+
+    return v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public bridge indexOf(Ljava/lang/Object;)I
+    .locals 1
+
+    iget v0, p0, Lkv8;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0, p1}, Lh2;->indexOf(Ljava/lang/Object;)I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_0
+    instance-of v0, p1, Ljava/lang/String;
+
+    if-nez v0, :cond_0
+
+    const/4 p1, -0x1
+
+    goto :goto_0
+
+    :cond_0
+    check-cast p1, Ljava/lang/String;
+
+    invoke-super {p0, p1}, Lh2;->indexOf(Ljava/lang/Object;)I
+
+    move-result p1
+
+    :goto_0
+    return p1
+
     nop
 
     :pswitch_data_0
@@ -242,25 +211,67 @@
     .end packed-switch
 .end method
 
-.method public final onError(Ljava/lang/Throwable;)V
+.method public iterator()Ljava/util/Iterator;
+    .locals 2
+
+    iget v0, p0, Lkv8;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0}, Lh2;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_0
+    new-instance v0, Lz6e;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, v1}, Lz6e;-><init>(Lkv8;I)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x2
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public bridge lastIndexOf(Ljava/lang/Object;)I
     .locals 1
 
     iget v0, p0, Lkv8;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lkv8;->b:Le0b;
+    invoke-super {p0, p1}, Lh2;->lastIndexOf(Ljava/lang/Object;)I
 
-    invoke-interface {v0, p1}, Le0b;->onError(Ljava/lang/Throwable;)V
+    move-result p1
 
-    return-void
+    return p1
 
     :pswitch_0
-    iget-object v0, p0, Lkv8;->b:Le0b;
+    instance-of v0, p1, Ljava/lang/String;
 
-    invoke-interface {v0, p1}, Le0b;->onError(Ljava/lang/Throwable;)V
+    if-nez v0, :cond_0
 
-    return-void
+    const/4 p1, -0x1
+
+    goto :goto_0
+
+    :cond_0
+    check-cast p1, Ljava/lang/String;
+
+    invoke-super {p0, p1}, Lh2;->lastIndexOf(Ljava/lang/Object;)I
+
+    move-result p1
+
+    :goto_0
+    return p1
 
     nop
 
@@ -270,30 +281,60 @@
     .end packed-switch
 .end method
 
-.method public final r(Ljava/lang/Object;)V
+.method public listIterator()Ljava/util/ListIterator;
+    .locals 2
+
+    iget v0, p0, Lkv8;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0}, Lh2;->listIterator()Ljava/util/ListIterator;
+
+    move-result-object v0
+
+    return-object v0
+
+    .line 1
+    :pswitch_0
+    new-instance v0, Lz6e;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, v1}, Lz6e;-><init>(Lkv8;I)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x2
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public listIterator(I)Ljava/util/ListIterator;
     .locals 1
 
     iget v0, p0, Lkv8;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lkv8;->b:Le0b;
+    invoke-super {p0, p1}, Lh2;->listIterator(I)Ljava/util/ListIterator;
 
-    invoke-interface {v0, p1}, Le0b;->r(Ljava/lang/Object;)V
+    move-result-object p1
 
-    return-void
+    return-object p1
 
+    .line 2
     :pswitch_0
-    iget-object v0, p0, Lkv8;->b:Le0b;
+    new-instance v0, Lz6e;
 
-    invoke-interface {v0, p1}, Le0b;->r(Ljava/lang/Object;)V
+    invoke-direct {v0, p0, p1}, Lz6e;-><init>(Lkv8;I)V
 
-    return-void
-
-    nop
+    return-object v0
 
     :pswitch_data_0
-    .packed-switch 0x0
+    .packed-switch 0x2
         :pswitch_0
     .end packed-switch
 .end method

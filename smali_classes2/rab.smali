@@ -1,75 +1,61 @@
 .class public final Lrab;
-.super Lone/me/sdk/concurrent/LinkedTransferQueue34;
+.super Lda4;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final bridge contains(Ljava/lang/Object;)Z
-    .locals 1
+# instance fields
+.field public X:Lone/me/messages/list/loader/MessageModel;
 
-    if-nez p1, :cond_0
+.field public Y:Lyyd;
 
-    const/4 v0, 0x1
+.field public Z:I
 
-    goto :goto_0
+.field public d:Lte2;
 
-    :cond_0
-    instance-of v0, p1, Ljava/lang/Runnable;
+.field public o:Ljava/util/ArrayList;
 
-    :goto_0
-    if-nez v0, :cond_1
+.field public synthetic s0:Ljava/lang/Object;
 
-    const/4 p1, 0x0
+.field public final synthetic t0:Ltab;
 
-    return p1
+.field public u0:I
 
-    :cond_1
-    check-cast p1, Ljava/lang/Runnable;
 
-    invoke-super {p0, p1}, Lone/me/sdk/concurrent/LinkedTransferQueue34;->contains(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final offer(Ljava/lang/Object;)Z
+# direct methods
+.method public constructor <init>(Ltab;Lda4;)V
     .locals 0
 
-    check-cast p1, Ljava/lang/Runnable;
+    iput-object p1, p0, Lrab;->t0:Ltab;
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/concurrent/LinkedTransferQueue34;->tryTransfer(Ljava/lang/Object;)Z
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
-    move-result p1
-
-    return p1
+    return-void
 .end method
 
-.method public final bridge remove(Ljava/lang/Object;)Z
-    .locals 1
 
-    if-nez p1, :cond_0
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Lrab;->s0:Ljava/lang/Object;
 
-    goto :goto_0
+    iget p1, p0, Lrab;->u0:I
 
-    :cond_0
-    instance-of v0, p1, Ljava/lang/Runnable;
+    const/high16 v0, -0x80000000
 
-    :goto_0
-    if-nez v0, :cond_1
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lrab;->u0:I
 
     const/4 p1, 0x0
 
-    return p1
+    const/4 v0, 0x0
 
-    :cond_1
-    check-cast p1, Ljava/lang/Runnable;
+    iget-object v1, p0, Lrab;->t0:Ltab;
 
-    invoke-super {p0, p1}, Lone/me/sdk/concurrent/LinkedTransferQueue34;->remove(Ljava/lang/Object;)Z
+    invoke-virtual {v1, p1, v0, p1, p0}, Ltab;->w(Lte2;ILjava/util/ArrayList;Lda4;)Ljava/lang/Object;
 
-    move-result p1
+    move-result-object p1
 
-    return p1
+    return-object p1
 .end method

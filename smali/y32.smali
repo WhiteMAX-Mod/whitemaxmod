@@ -1,30 +1,19 @@
-.class public interface abstract Ly32;
+.class public final Ly32;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lib0;
+# instance fields
+.field public final a:Landroid/os/Handler;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Landroid/os/Handler;)V
+    .locals 0
 
-    new-instance v0, Ljava/lang/Object;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v1, Lib0;
-
-    invoke-direct {v1, v0}, Lib0;-><init>(Ljava/lang/Object;)V
-
-    sput-object v1, Ly32;->a:Lib0;
+    iput-object p1, p0, Ly32;->a:Landroid/os/Handler;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public abstract a(Ljava/util/List;)Ljava/util/List;
 .end method

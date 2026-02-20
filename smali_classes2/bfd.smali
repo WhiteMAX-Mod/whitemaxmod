@@ -3,4 +3,4 @@
 
 
 # static fields
-.field public static oneme_stickers_showcase_toolbar_title:I = 0x7f130a90
+.field public static context_menu_card_id:I = 0x7f0a02d4

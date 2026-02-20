@@ -4,7 +4,7 @@
 
 # interfaces
 .implements Ljava/util/List;
-.implements Lq28;
+.implements Ln58;
 
 
 # direct methods

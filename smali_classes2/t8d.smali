@@ -1,46 +1,64 @@
-.class public abstract Lt8d;
+.class public final Lt8d;
 .super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lv8d;
 
 
 # static fields
-.field public static oneme_media_keyboard:I = 0x7f0a06e9
+.field public static final a:Lt8d;
 
-.field public static oneme_media_keyboard_bottom_panel:I = 0x7f0a06ea
 
-.field public static oneme_media_keyboard_close_action:I = 0x7f0a06eb
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-.field public static oneme_media_keyboard_emoji_container:I = 0x7f0a06ec
+    new-instance v0, Lt8d;
 
-.field public static oneme_media_keyboard_emoji_list:I = 0x7f0a06ed
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-.field public static oneme_media_keyboard_emoji_tabs:I = 0x7f0a06ee
+    sput-object v0, Lt8d;->a:Lt8d;
 
-.field public static oneme_media_keyboard_fake_search_view:I = 0x7f0a06ef
+    return-void
+.end method
 
-.field public static oneme_media_keyboard_pager:I = 0x7f0a06f0
 
-.field public static oneme_media_keyboard_recent_clear_confirmation_action:I = 0x7f0a06f1
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-.field public static oneme_media_keyboard_recent_clear_confirmation_cancel:I = 0x7f0a06f2
+    const/4 v0, 0x1
 
-.field public static oneme_media_keyboard_remove_action:I = 0x7f0a06f3
+    if-ne p0, p1, :cond_0
 
-.field public static oneme_media_keyboard_settings_action:I = 0x7f0a06f4
+    return v0
 
-.field public static oneme_media_keyboard_showcase_action:I = 0x7f0a06f5
+    :cond_0
+    instance-of p1, p1, Lt8d;
 
-.field public static oneme_media_keyboard_stickers_container:I = 0x7f0a06f6
+    if-nez p1, :cond_1
 
-.field public static oneme_media_keyboard_stickers_header_title:I = 0x7f0a06f7
+    const/4 p1, 0x0
 
-.field public static oneme_media_keyboard_stickers_list:I = 0x7f0a06f8
+    return p1
 
-.field public static oneme_media_keyboard_stickers_tabs:I = 0x7f0a06f9
+    :cond_1
+    return v0
+.end method
 
-.field public static oneme_media_keyboard_tabs:I = 0x7f0a06fa
+.method public final hashCode()I
+    .locals 1
 
-.field public static oneme_media_keyboard_top_panel:I = 0x7f0a06fb
+    const v0, 0x42c479c9
 
-.field public static oneme_media_keyboard_view_type_category_emoji:I = 0x7f0a06fc
+    return v0
+.end method
 
-.field public static oneme_media_keyboard_view_type_fake_search:I = 0x7f0a06fd
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "StopRecordVideo"
+
+    return-object v0
+.end method

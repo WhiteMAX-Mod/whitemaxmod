@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lbhd;
+.implements Lumd;
 
 
 # annotations
@@ -22,7 +22,7 @@
     }
     d2 = {
         "ru/ok/android/externcalls/sdk/CallUtil$LOG_CONFIGURATION$1",
-        "Lbhd;",
+        "Lumd;",
         "calls-sdk_release"
     }
     k = 0x1

@@ -1,139 +1,130 @@
-.class public final synthetic Lhc6;
+.class public final Lhc6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lb96;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Ljc6;
+.field public final synthetic b:[Lb96;
 
-.field public final synthetic c:J
+.field public final synthetic c:Lpdg;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljc6;JI)V
-    .locals 0
+.method public constructor <init>([Lb96;Let6;)V
+    .locals 1
 
-    iput p4, p0, Lhc6;->a:I
+    const/4 v0, 0x0
 
-    iput-object p1, p0, Lhc6;->b:Ljc6;
+    iput v0, p0, Lhc6;->a:I
 
-    iput-wide p2, p0, Lhc6;->c:J
-
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    iput-object p1, p0, Lhc6;->b:[Lb96;
+
+    check-cast p2, Lpdg;
+
+    iput-object p2, p0, Lhc6;->c:Lpdg;
+
+    return-void
+.end method
+
+.method public constructor <init>([Lb96;Lft6;)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Lhc6;->a:I
+
+    .line 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 4
+    iput-object p1, p0, Lhc6;->b:[Lb96;
+
+    check-cast p2, Lpdg;
+
+    iput-object p2, p0, Lhc6;->c:Lpdg;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 6
+.method public final e(Ld96;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 4
 
     iget v0, p0, Lhc6;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-wide v0, p0, Lhc6;->c:J
+    sget-object v0, Lxa4;->o:Lxa4;
 
-    iget-object v2, p0, Lhc6;->b:Ljc6;
+    new-instance v1, Lgc6;
 
-    iget-wide v3, v2, Ljc6;->k:J
+    const/4 v2, 0x0
 
-    cmp-long v0, v0, v3
+    iget-object v3, p0, Lhc6;->c:Lpdg;
 
-    if-nez v0, :cond_1
+    invoke-direct {v1, v2, v3}, Lgc6;-><init>(Lkotlin/coroutines/Continuation;Lft6;)V
 
-    const/4 v0, 0x0
+    iget-object v2, p0, Lhc6;->b:[Lb96;
 
-    iput-boolean v0, v2, Ljc6;->m:Z
+    invoke-static {p1, v0, v1, p2, v2}, Lrrj;->a(Ld96;Lis6;Lat6;Lkotlin/coroutines/Continuation;[Lb96;)Ljava/lang/Object;
 
-    iget-object v1, v2, Ljc6;->j:Ljava/util/concurrent/ScheduledFuture;
+    move-result-object p1
 
-    const/4 v3, 0x0
+    sget-object p2, Lod4;->a:Lod4;
 
-    if-eqz v1, :cond_0
+    if-ne p1, p2, :cond_0
 
-    const/4 v4, 0x1
-
-    invoke-interface {v1, v4}, Ljava/util/concurrent/Future;->cancel(Z)Z
-
-    iput-object v3, v2, Ljc6;->j:Ljava/util/concurrent/ScheduledFuture;
+    goto :goto_0
 
     :cond_0
-    iget-object v1, v2, Ljc6;->s:Lqw1;
+    sget-object p1, Lmah;->a:Lmah;
 
-    if-eqz v1, :cond_1
-
-    new-instance v4, Lkc6;
-
-    invoke-direct {v4, v0}, Lkc6;-><init>(Z)V
-
-    invoke-virtual {v1, v4}, Lqw1;->b(Ljava/lang/Object;)Z
-
-    iput-object v3, v2, Ljc6;->s:Lqw1;
-
-    :cond_1
-    return-void
+    :goto_0
+    return-object p1
 
     :pswitch_0
-    iget-wide v0, p0, Lhc6;->c:J
+    sget-object v0, Lxa4;->o:Lxa4;
 
-    iget-object v2, p0, Lhc6;->b:Ljc6;
+    new-instance v1, Lgc6;
 
-    iget-wide v3, v2, Ljc6;->k:J
+    const/4 v2, 0x0
 
-    cmp-long v0, v0, v3
+    iget-object v3, p0, Lhc6;->c:Lpdg;
 
-    if-nez v0, :cond_2
+    invoke-direct {v1, v2, v3}, Lgc6;-><init>(Lkotlin/coroutines/Continuation;Let6;)V
 
-    invoke-virtual {v2}, Ljc6;->b()V
+    iget-object v2, p0, Lhc6;->b:[Lb96;
 
-    :cond_2
-    return-void
+    invoke-static {p1, v0, v1, p2, v2}, Lrrj;->a(Ld96;Lis6;Lat6;Lkotlin/coroutines/Continuation;[Lb96;)Ljava/lang/Object;
 
-    :pswitch_1
-    iget-object v0, p0, Lhc6;->b:Ljc6;
+    move-result-object p1
 
-    iget-object v1, v0, Ljc6;->b:Lwpe;
+    sget-object p2, Lod4;->a:Lod4;
 
-    new-instance v2, Lhc6;
+    if-ne p1, p2, :cond_1
 
-    const/4 v3, 0x2
+    goto :goto_1
 
-    iget-wide v4, p0, Lhc6;->c:J
+    :cond_1
+    sget-object p1, Lmah;->a:Lmah;
 
-    invoke-direct {v2, v0, v4, v5, v3}, Lhc6;-><init>(Ljc6;JI)V
+    :goto_1
+    return-object p1
 
-    invoke-virtual {v1, v2}, Lwpe;->execute(Ljava/lang/Runnable;)V
-
-    return-void
-
-    :pswitch_2
-    iget-object v0, p0, Lhc6;->b:Ljc6;
-
-    iget-object v1, v0, Ljc6;->b:Lwpe;
-
-    new-instance v2, Lhc6;
-
-    const/4 v3, 0x3
-
-    iget-wide v4, p0, Lhc6;->c:J
-
-    invoke-direct {v2, v0, v4, v5, v3}, Lhc6;-><init>(Ljc6;JI)V
-
-    invoke-virtual {v1, v2}, Lwpe;->execute(Ljava/lang/Runnable;)V
-
-    return-void
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

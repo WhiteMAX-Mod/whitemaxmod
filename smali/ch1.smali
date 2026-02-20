@@ -1,280 +1,234 @@
-.class public final synthetic Lch1;
+.class public final Lch1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lkn;
+.implements Lfh1;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lhpg;
 
-.field public final synthetic b:Lvu5;
+.field public final b:Lk7f;
 
-.field public final synthetic c:Lone/me/sdk/arch/Widget;
+.field public final c:Lr88;
+
+.field public final d:J
+
+.field public final o:Lcpg;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lvu5;Lone/me/sdk/arch/Widget;I)V
-    .locals 0
-
-    iput p3, p0, Lch1;->a:I
-
-    iput-object p1, p0, Lch1;->b:Lvu5;
-
-    iput-object p2, p0, Lch1;->c:Lone/me/sdk/arch/Widget;
+.method public constructor <init>(Lhpg;Lj7f;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lch1;->a:Lhpg;
+
+    iput-object p2, p0, Lch1;->b:Lk7f;
+
+    new-instance p1, Lr88;
+
+    sget p2, Lh8b;->h:I
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x6
+
+    invoke-direct {p1, p2, v0, v1}, Lr88;-><init>(III)V
+
+    iput-object p1, p0, Lch1;->c:Lr88;
+
+    sget-wide p1, Lj8b;->b:J
+
+    iput-wide p1, p0, Lch1;->d:J
+
+    sget p1, Ll8b;->i:I
+
+    new-instance p2, Lcpg;
+
+    invoke-direct {p2, p1}, Lcpg;-><init>(I)V
+
+    iput-object p2, p0, Lch1;->o:Lcpg;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final e0(Lln;I)V
-    .locals 7
+.method public final b()Lhpg;
+    .locals 1
 
-    iget v0, p0, Lch1;->a:I
+    iget-object v0, p0, Lch1;->a:Lhpg;
 
-    const/4 v1, 0x0
+    return-object v0
+.end method
 
-    const v2, 0x3dcccccd    # 0.1f
+.method public final c()Lk7f;
+    .locals 1
 
-    const/4 v3, 0x3
+    iget-object v0, p0, Lch1;->b:Lk7f;
 
-    const/high16 v4, 0x3f800000    # 1.0f
+    return-object v0
+.end method
 
-    iget-object v5, p0, Lch1;->c:Lone/me/sdk/arch/Widget;
+.method public final e()Lt7f;
+    .locals 1
 
-    iget-object v6, p0, Lch1;->b:Lvu5;
+    sget-object v0, Lm7f;->a:Lm7f;
 
-    packed-switch v0, :pswitch_data_0
+    return-object v0
+.end method
 
-    check-cast v5, Lone/me/profile/ProfileScreen;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    sget-object v0, Lone/me/profile/ProfileScreen;->D0:Lbg3;
+    const/4 v0, 0x1
 
-    invoke-virtual {p1}, Lln;->getTotalScrollRange()I
+    if-ne p0, p1, :cond_0
 
-    move-result p1
-
-    invoke-static {p2}, Ljava/lang/Math;->abs(I)I
-
-    move-result p2
-
-    int-to-float p2, p2
-
-    int-to-float p1, p1
-
-    div-float/2addr p2, p1
-
-    invoke-virtual {v6, p2}, Lho8;->getInterpolation(F)F
-
-    move-result p1
-
-    iget-object p2, v5, Lone/me/profile/ProfileScreen;->Z:Ljld;
-
-    sget-object v0, Lone/me/profile/ProfileScreen;->E0:[Lz28;
-
-    aget-object v0, v0, v3
-
-    invoke-interface {p2, v5, v0}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Landroid/widget/LinearLayout;
-
-    sub-float/2addr v4, p1
-
-    invoke-virtual {p2, v4}, Landroid/view/View;->setAlpha(F)V
-
-    invoke-virtual {v5}, Lone/me/profile/ProfileScreen;->E0()Lymb;
-
-    move-result-object p2
-
-    invoke-virtual {p2, p1}, Lymb;->setTitleAlpha(F)V
-
-    return-void
-
-    :pswitch_0
-    check-cast v5, Lone/me/profileedit/ProfileEditScreen;
-
-    sget-object v0, Lone/me/profileedit/ProfileEditScreen;->y0:[Lz28;
-
-    invoke-virtual {p1}, Lln;->getTotalScrollRange()I
-
-    move-result p1
-
-    invoke-static {p2}, Ljava/lang/Math;->abs(I)I
-
-    move-result p2
-
-    int-to-float p2, p2
-
-    int-to-float p1, p1
-
-    div-float/2addr p2, p1
-
-    invoke-virtual {v6, p2}, Lho8;->getInterpolation(F)F
-
-    move-result p1
-
-    iget-object p2, v5, Lone/me/profileedit/ProfileEditScreen;->t0:Ljld;
-
-    sget-object v0, Lone/me/profileedit/ProfileEditScreen;->y0:[Lz28;
-
-    aget-object v0, v0, v3
-
-    invoke-interface {p2, v5, v0}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Landroid/widget/LinearLayout;
-
-    sub-float/2addr v4, p1
-
-    invoke-virtual {p2, v4}, Landroid/view/View;->setAlpha(F)V
-
-    invoke-virtual {v5}, Lone/me/profileedit/ProfileEditScreen;->A0()Lymb;
-
-    move-result-object p2
-
-    invoke-virtual {p2, p1}, Lymb;->setTitleAlpha(F)V
-
-    return-void
-
-    :pswitch_1
-    check-cast v5, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;
-
-    sget-object v0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->I0:[Lz28;
-
-    invoke-virtual {p1}, Lln;->getTotalScrollRange()I
-
-    move-result p1
-
-    invoke-static {p2}, Ljava/lang/Math;->abs(I)I
-
-    move-result p2
-
-    int-to-float p2, p2
-
-    int-to-float p1, p1
-
-    div-float/2addr p2, p1
-
-    invoke-virtual {v6, p2}, Lho8;->getInterpolation(F)F
-
-    move-result p1
-
-    sub-float/2addr v4, p1
-
-    invoke-virtual {v5}, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->A0()Landroid/widget/LinearLayout;
-
-    move-result-object p2
-
-    invoke-virtual {p2, v4}, Landroid/view/View;->setAlpha(F)V
-
-    invoke-virtual {v5}, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->A0()Landroid/widget/LinearLayout;
-
-    move-result-object p2
-
-    cmpl-float v0, v4, v2
-
-    if-lez v0, :cond_0
-
-    const/4 v1, 0x1
+    return v0
 
     :cond_0
-    invoke-static {p2, v1}, Lcth;->o(Landroid/view/ViewGroup;Z)V
+    instance-of v1, p1, Lch1;
 
-    invoke-virtual {v5}, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->D0()Lymb;
+    const/4 v2, 0x0
 
-    move-result-object p2
+    if-nez v1, :cond_1
 
-    invoke-virtual {p2, p1}, Lymb;->setTitleAlpha(F)V
-
-    return-void
-
-    :pswitch_2
-    check-cast v5, Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;
-
-    sget-object v0, Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;->B0:Lyna;
-
-    invoke-virtual {p1}, Lln;->getTotalScrollRange()I
-
-    move-result p1
-
-    invoke-static {p2}, Ljava/lang/Math;->abs(I)I
-
-    move-result p2
-
-    int-to-float p2, p2
-
-    int-to-float p1, p1
-
-    div-float/2addr p2, p1
-
-    invoke-virtual {v6, p2}, Lho8;->getInterpolation(F)F
-
-    move-result p1
-
-    sub-float/2addr v4, p1
-
-    iget-object p2, v5, Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;->Y:Ljld;
-
-    sget-object v0, Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;->C0:[Lz28;
-
-    aget-object v3, v0, v1
-
-    invoke-interface {p2, v5, v3}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Landroid/widget/LinearLayout;
-
-    invoke-virtual {v3, v4}, Landroid/view/View;->setAlpha(F)V
-
-    aget-object v0, v0, v1
-
-    invoke-interface {p2, v5, v0}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Landroid/widget/LinearLayout;
-
-    cmpl-float v0, v4, v2
-
-    if-lez v0, :cond_1
-
-    goto :goto_0
+    return v2
 
     :cond_1
-    const/4 v1, 0x4
+    check-cast p1, Lch1;
 
-    :goto_0
-    invoke-virtual {p2}, Landroid/view/View;->getVisibility()I
+    iget-object v1, p0, Lch1;->a:Lhpg;
+
+    iget-object v3, p1, Lch1;->a:Lhpg;
+
+    invoke-static {v1, v3}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lch1;->b:Lk7f;
+
+    iget-object p1, p1, Lch1;->b:Lk7f;
+
+    invoke-static {v1, p1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final f()Lt88;
+    .locals 1
+
+    iget-object v0, p0, Lch1;->c:Lr88;
+
+    return-object v0
+.end method
+
+.method public final getItemId()J
+    .locals 2
+
+    iget-wide v0, p0, Lch1;->d:J
+
+    return-wide v0
+.end method
+
+.method public final getTitle()Lhpg;
+    .locals 1
+
+    iget-object v0, p0, Lch1;->o:Lcpg;
+
+    return-object v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lch1;->a:Lhpg;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
 
-    if-eq v0, v1, :cond_2
+    mul-int/lit8 v0, v0, 0x1f
 
-    invoke-virtual {p2, v1}, Landroid/view/View;->setVisibility(I)V
+    iget-object v1, p0, Lch1;->b:Lk7f;
 
-    :cond_2
-    invoke-virtual {v5}, Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;->B0()Lymb;
+    if-nez v1, :cond_0
 
-    move-result-object p2
+    const/4 v1, 0x0
 
-    invoke-virtual {p2, p1}, Lymb;->setTitleAlpha(F)V
+    goto :goto_0
 
-    return-void
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
-    nop
+    move-result v1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    :goto_0
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final m()I
+    .locals 1
+
+    sget v0, Li8b;->m:I
+
+    return v0
+.end method
+
+.method public final t()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "OpenCallChat(descriptionRes="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lch1;->a:Lhpg;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", counterType="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lch1;->b:Lk7f;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

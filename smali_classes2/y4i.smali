@@ -2,101 +2,21 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final Companion:Lx4i;
-
-.field public static final c:[Lo58;
+# interfaces
+.implements Lybe;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:Ld5i;
+.field public final a:Lvba;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
-
-    new-instance v0, Lx4i;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Ly4i;->Companion:Lx4i;
-
-    new-instance v0, Lgch;
-
-    const/16 v1, 0x17
-
-    invoke-direct {v0, v1}, Lgch;-><init>(I)V
-
-    const/4 v1, 0x2
-
-    invoke-static {v1, v0}, Le8;->b(ILlq6;)Lo58;
-
-    move-result-object v0
-
-    new-array v1, v1, [Lo58;
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    aput-object v2, v1, v3
-
-    const/4 v2, 0x1
-
-    aput-object v0, v1, v2
-
-    sput-object v1, Ly4i;->c:[Lo58;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(ILjava/lang/String;Ld5i;)V
-    .locals 2
-
-    and-int/lit8 v0, p1, 0x3
-
-    const/4 v1, 0x3
-
-    if-ne v1, v0, :cond_0
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p2, p0, Ly4i;->a:Ljava/lang/String;
-
-    iput-object p3, p0, Ly4i;->b:Ld5i;
-
-    return-void
-
-    :cond_0
-    sget-object p2, Lw4i;->a:Lw4i;
-
-    invoke-virtual {p2}, Lw4i;->d()Lxpe;
-
-    move-result-object p2
-
-    invoke-static {p1, v1, p2}, Lqjj;->b(IILxpe;)V
-
-    const/4 p1, 0x0
-
-    throw p1
-.end method
-
-.method public constructor <init>(Ljava/lang/String;Ld5i;)V
+.method public constructor <init>(Lvba;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
-    iput-object p1, p0, Ly4i;->a:Ljava/lang/String;
-
-    .line 4
-    iput-object p2, p0, Ly4i;->b:Ld5i;
+    iput-object p1, p0, Ly4i;->a:Lvba;
 
     return-void
 .end method
@@ -104,7 +24,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    .locals 3
 
     const/4 v0, 0x1
 
@@ -124,51 +44,34 @@
     :cond_1
     check-cast p1, Ly4i;
 
-    iget-object v1, p0, Ly4i;->a:Ljava/lang/String;
+    iget-object v1, p0, Ly4i;->a:Lvba;
 
-    iget-object v3, p1, Ly4i;->a:Ljava/lang/String;
+    iget-object p1, p1, Ly4i;->a:Lvba;
 
-    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result v1
+    move-result p1
 
-    if-nez v1, :cond_2
+    if-nez p1, :cond_2
 
     return v2
 
     :cond_2
-    iget-object v1, p0, Ly4i;->b:Ld5i;
-
-    iget-object p1, p1, Ly4i;->b:Ld5i;
-
-    if-eq v1, p1, :cond_3
-
-    return v2
-
-    :cond_3
     return v0
 .end method
 
 .method public final hashCode()I
-    .locals 2
+    .locals 1
 
-    iget-object v0, p0, Ly4i;->a:Ljava/lang/String;
+    iget-object v0, p0, Ly4i;->a:Lvba;
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    iget-object v0, v0, Lvba;->a:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
 
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Ly4i;->b:Ld5i;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
@@ -176,19 +79,11 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "WebAppHapticFeedbackResponse(requestId="
+    const-string v1, "WatchTogetherUpdateNotification(updates="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Ly4i;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", status="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ly4i;->b:Ld5i;
+    iget-object v1, p0, Ly4i;->a:Lvba;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

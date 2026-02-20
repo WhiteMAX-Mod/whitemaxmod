@@ -1,205 +1,367 @@
-.class public abstract Lc8b;
+.class public final Lc8b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final A:I
+# instance fields
+.field public final a:I
 
-.field public static final B:I
+.field public final b:Ljava/lang/Integer;
 
-.field public static final C:I
+.field public final c:Ljava/lang/Integer;
 
-.field public static final D:I
+.field public final d:Ljava/lang/Integer;
 
-.field public static final E:I
+.field public final e:Ljava/lang/Integer;
 
-.field public static final F:I
-
-.field public static final a:I
-
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
-
-.field public static final s:I
-
-.field public static final t:I
-
-.field public static final u:I
-
-.field public static final v:I
-
-.field public static final w:I
-
-.field public static final x:I
-
-.field public static final y:I
-
-.field public static final z:I
+.field public final f:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(ILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;I)V
+    .locals 9
 
-    sget v0, Lh8d;->chat__background:I
+    and-int/lit8 v0, p6, 0x4
 
-    sput v0, Lc8b;->a:I
+    const/4 v1, 0x0
 
-    sget v0, Lh8d;->chat__bottom_container:I
+    if-eqz v0, :cond_0
 
-    sput v0, Lc8b;->b:I
+    move-object v5, v1
 
-    sget v0, Lh8d;->chat__bottom_container_chat_status_button:I
+    goto :goto_0
 
-    sput v0, Lc8b;->c:I
+    :cond_0
+    move-object v5, p3
 
-    sget v0, Lh8d;->chat__bottom_container_search:I
+    :goto_0
+    and-int/lit8 p3, p6, 0x10
 
-    sput v0, Lc8b;->d:I
+    if-eqz p3, :cond_1
 
-    sget v0, Lh8d;->chat__bottom_container_search_down_button:I
+    move-object v7, v1
 
-    sput v0, Lc8b;->e:I
+    goto :goto_1
 
-    sget v0, Lh8d;->chat__bottom_container_search_separator:I
+    :cond_1
+    move-object v7, p5
 
-    sput v0, Lc8b;->f:I
+    :goto_1
+    const/4 v8, 0x1
 
-    sget v0, Lh8d;->chat__bottom_container_search_up_button:I
+    move-object v2, p0
 
-    sput v0, Lc8b;->g:I
+    move v3, p1
 
-    sget v0, Lh8d;->chat__main_container:I
+    move-object v4, p2
 
-    sput v0, Lc8b;->h:I
+    move-object v6, p4
 
-    sget v0, Lh8d;->chat__media_bar_container:I
-
-    sput v0, Lc8b;->i:I
-
-    sget v0, Lh8d;->chat__media_keyboard:I
-
-    sput v0, Lc8b;->j:I
-
-    sget v0, Lh8d;->chat__messages_container:I
-
-    sput v0, Lc8b;->k:I
-
-    sget v0, Lh8d;->chat__pinbars_container:I
-
-    sput v0, Lc8b;->l:I
-
-    sget v0, Lh8d;->chat__search_view:I
-
-    sput v0, Lc8b;->m:I
-
-    sget v0, Lh8d;->chat__suggestion_container:I
-
-    sput v0, Lc8b;->n:I
-
-    sget v0, Lh8d;->chat__toolbar:I
-
-    sput v0, Lc8b;->o:I
-
-    sget v0, Lh8d;->chat__video_msg_container:I
-
-    sput v0, Lc8b;->p:I
-
-    sget v0, Lh8d;->chat_screen__action_cancel:I
-
-    sput v0, Lc8b;->q:I
-
-    sget v0, Lh8d;->chat_screen__error_restricted_send_message_action:I
-
-    sput v0, Lc8b;->r:I
-
-    sget v0, Lh8d;->chat_screen__error_restricted_send_message_cancel:I
-
-    sput v0, Lc8b;->s:I
-
-    sget v0, Lh8d;->chat_screen__leave_chat_confirm:I
-
-    sput v0, Lc8b;->t:I
-
-    sget v0, Lh8d;->chat_screen__remove_chat_confirm:I
-
-    sput v0, Lc8b;->u:I
-
-    sget v0, Lh8d;->chat_screen__video_msg_placeholder:I
-
-    sput v0, Lc8b;->v:I
-
-    sget v0, Lh8d;->chat_screen__video_msg_preview:I
-
-    sput v0, Lc8b;->w:I
-
-    sget v0, Lh8d;->chat_screen__video_msg_progress:I
-
-    sput v0, Lc8b;->x:I
-
-    sget v0, Lh8d;->chat_screen__video_msg_root_container:I
-
-    sput v0, Lc8b;->y:I
-
-    sget v0, Lh8d;->chat_screen__video_msg_switch_camera_btn:I
-
-    sput v0, Lc8b;->z:I
-
-    sget v0, Lh8d;->chat_screen__video_msg_timer:I
-
-    sput v0, Lc8b;->A:I
-
-    sget v0, Lh8d;->chat_screen__video_msg_torch_btn:I
-
-    sput v0, Lc8b;->B:I
-
-    sget v0, Lh8d;->chat_screen__video_msg_video_view:I
-
-    sput v0, Lc8b;->C:I
-
-    sget v0, Lh8d;->media_bar__emoji_keyboard_container:I
-
-    sput v0, Lc8b;->D:I
-
-    sget v0, Lh8d;->media_bar__media_type_picker_button:I
-
-    sput v0, Lc8b;->E:I
-
-    sget v0, Lh8d;->media_bar__select_album_container:I
-
-    sput v0, Lc8b;->F:I
+    .line 1
+    invoke-direct/range {v2 .. v8}, Lc8b;-><init>(ILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Z)V
 
     return-void
+.end method
+
+.method public constructor <init>(ILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Z)V
+    .locals 0
+
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 3
+    iput p1, p0, Lc8b;->a:I
+
+    .line 4
+    iput-object p2, p0, Lc8b;->b:Ljava/lang/Integer;
+
+    .line 5
+    iput-object p3, p0, Lc8b;->c:Ljava/lang/Integer;
+
+    .line 6
+    iput-object p4, p0, Lc8b;->d:Ljava/lang/Integer;
+
+    .line 7
+    iput-object p5, p0, Lc8b;->e:Ljava/lang/Integer;
+
+    .line 8
+    iput-boolean p6, p0, Lc8b;->f:Z
+
+    return-void
+.end method
+
+.method public static a(Lc8b;Z)Lc8b;
+    .locals 7
+
+    iget v1, p0, Lc8b;->a:I
+
+    iget-object v2, p0, Lc8b;->b:Ljava/lang/Integer;
+
+    iget-object v3, p0, Lc8b;->c:Ljava/lang/Integer;
+
+    iget-object v4, p0, Lc8b;->d:Ljava/lang/Integer;
+
+    iget-object v5, p0, Lc8b;->e:Ljava/lang/Integer;
+
+    new-instance v0, Lc8b;
+
+    move v6, p1
+
+    invoke-direct/range {v0 .. v6}, Lc8b;-><init>(ILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Z)V
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lc8b;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lc8b;
+
+    iget v1, p0, Lc8b;->a:I
+
+    iget v3, p1, Lc8b;->a:I
+
+    if-eq v1, v3, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lc8b;->b:Ljava/lang/Integer;
+
+    iget-object v3, p1, Lc8b;->b:Ljava/lang/Integer;
+
+    invoke-static {v1, v3}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Lc8b;->c:Ljava/lang/Integer;
+
+    iget-object v3, p1, Lc8b;->c:Ljava/lang/Integer;
+
+    invoke-static {v1, v3}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-object v1, p0, Lc8b;->d:Ljava/lang/Integer;
+
+    iget-object v3, p1, Lc8b;->d:Ljava/lang/Integer;
+
+    invoke-static {v1, v3}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_5
+
+    return v2
+
+    :cond_5
+    iget-object v1, p0, Lc8b;->e:Ljava/lang/Integer;
+
+    iget-object v3, p1, Lc8b;->e:Ljava/lang/Integer;
+
+    invoke-static {v1, v3}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_6
+
+    return v2
+
+    :cond_6
+    iget-boolean v1, p0, Lc8b;->f:Z
+
+    iget-boolean p1, p1, Lc8b;->f:Z
+
+    if-eq v1, p1, :cond_7
+
+    return v2
+
+    :cond_7
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget v0, p0, Lc8b;->a:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    const/4 v1, 0x0
+
+    iget-object v2, p0, Lc8b;->b:Ljava/lang/Integer;
+
+    if-nez v2, :cond_0
+
+    move v2, v1
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v2
+
+    :goto_0
+    add-int/2addr v0, v2
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v2, p0, Lc8b;->c:Ljava/lang/Integer;
+
+    if-nez v2, :cond_1
+
+    move v2, v1
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v2
+
+    :goto_1
+    add-int/2addr v0, v2
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v2, p0, Lc8b;->d:Ljava/lang/Integer;
+
+    if-nez v2, :cond_2
+
+    move v2, v1
+
+    goto :goto_2
+
+    :cond_2
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v2
+
+    :goto_2
+    add-int/2addr v0, v2
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v2, p0, Lc8b;->e:Ljava/lang/Integer;
+
+    if-nez v2, :cond_3
+
+    goto :goto_3
+
+    :cond_3
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    :goto_3
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Lc8b;->f:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ButtonData(id="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v1, p0, Lc8b;->a:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", textRes="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lc8b;->b:Ljava/lang/Integer;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", textColor="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lc8b;->c:Ljava/lang/Integer;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", iconRes="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lc8b;->d:Ljava/lang/Integer;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", iconColor="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lc8b;->e:Ljava/lang/Integer;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isEnabled="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lc8b;->f:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

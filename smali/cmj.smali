@@ -1,238 +1,212 @@
-.class public abstract Lcmj;
+.class public Lcmj;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/io/Closeable;
+
+
+# static fields
+.field public static final X:Ljava/util/HashMap;
+
+
+# instance fields
+.field public a:I
+
+.field public b:J
+
+.field public c:J
+
+.field public d:J
+
+.field public o:J
+
 
 # direct methods
-.method public static a(Lqi4;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    if-eqz p0, :cond_0
+    new-instance v0, Ljava/util/HashMap;
 
-    :try_start_0
-    invoke-interface {p0}, Lqi4;->close()V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    :catch_0
-    :cond_0
+    sput-object v0, Lcmj;->X:Ljava/util/HashMap;
+
     return-void
 .end method
 
-.method public static final b(Lhz;Lsk;)V
-    .locals 5
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 2
 
-    invoke-virtual {p0}, Lhz;->c()Ljava/io/FileInputStream;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p0
+    const-wide/32 v0, 0x7fffffff
 
-    if-eqz p0, :cond_1
+    iput-wide v0, p0, Lcmj;->d:J
 
-    new-instance v0, Ljava/io/BufferedInputStream;
+    const-wide/32 v0, -0x80000000
 
-    const/16 v1, 0x2000
+    iput-wide v0, p0, Lcmj;->o:J
 
-    invoke-direct {v0, p0, v1}, Ljava/io/BufferedInputStream;-><init>(Ljava/io/InputStream;I)V
+    return-void
+.end method
 
-    :try_start_0
-    new-instance p0, Ljava/io/DataInputStream;
 
-    invoke-direct {p0, v0}, Ljava/io/DataInputStream;-><init>(Ljava/io/InputStream;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+# virtual methods
+.method public E(J)V
+    .locals 17
 
-    :try_start_1
-    new-instance v1, La0c;
+    move-object/from16 v0, p0
 
-    const/4 v2, 0x0
+    move-wide/from16 v1, p1
 
-    invoke-direct {v1, v2}, La0c;-><init>(I)V
-
-    :goto_0
-    invoke-virtual {p0}, Ljava/io/InputStream;->available()I
-
-    move-result v2
-
-    if-lez v2, :cond_0
-
-    invoke-virtual {p0}, Ljava/io/DataInputStream;->readUTF()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {p0}, Ljava/io/DataInputStream;->readUnsignedByte()I
-
-    move-result v3
-
-    sget-object v4, Lh1h;->b:Ljava/util/LinkedHashMap;
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    invoke-static {v4, v3}, Lss8;->e(Ljava/util/Map;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lh1h;
-
-    invoke-virtual {v3}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v3
-
-    packed-switch v3, :pswitch_data_0
-
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_2
-
-    :pswitch_0
-    invoke-static {p0, v1}, Lkjj;->a(Ljava/io/DataInputStream;La0c;)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v3}, Lt4j;->f(Ljava/lang/String;)Ljava/util/Set;
-
-    move-result-object v3
-
-    goto :goto_1
-
-    :pswitch_1
-    invoke-static {p0, v1}, Lkjj;->a(Ljava/io/DataInputStream;La0c;)Ljava/lang/String;
-
-    move-result-object v3
-
-    goto :goto_1
-
-    :pswitch_2
-    invoke-virtual {p0}, Ljava/io/DataInputStream;->readBoolean()Z
-
-    move-result v3
-
-    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v3
-
-    goto :goto_1
-
-    :pswitch_3
-    invoke-virtual {p0}, Ljava/io/DataInputStream;->readUTF()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v3}, Lt4j;->f(Ljava/lang/String;)Ljava/util/Set;
-
-    move-result-object v3
-
-    goto :goto_1
-
-    :pswitch_4
-    invoke-virtual {p0}, Ljava/io/DataInputStream;->readUTF()Ljava/lang/String;
-
-    move-result-object v3
-
-    goto :goto_1
-
-    :pswitch_5
-    invoke-virtual {p0}, Ljava/io/DataInputStream;->readLong()J
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtimeNanos()J
 
     move-result-wide v3
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    const-wide/16 v5, 0x3e8
 
-    move-result-object v3
+    div-long/2addr v3, v5
 
-    goto :goto_1
+    iget-wide v5, v0, Lcmj;->c:J
 
-    :pswitch_6
-    invoke-virtual {p0}, Ljava/io/DataInputStream;->readFloat()F
+    const-wide/16 v7, 0x0
 
-    move-result v3
+    cmp-long v9, v5, v7
 
-    invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    const-wide/32 v10, -0x80000000
 
-    move-result-object v3
+    const-wide/32 v12, 0x7fffffff
 
-    goto :goto_1
+    const/4 v14, 0x0
 
-    :pswitch_7
-    invoke-virtual {p0}, Ljava/io/DataInputStream;->readInt()I
+    if-eqz v9, :cond_0
 
-    move-result v3
+    sub-long v5, v3, v5
 
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    const-wide/32 v15, 0xf4240
 
-    move-result-object v3
+    cmp-long v5, v5, v15
 
-    :goto_1
-    invoke-virtual {p1, v2, v3}, Lsk;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    if-ltz v5, :cond_0
 
-    goto :goto_0
+    iput v14, v0, Lcmj;->a:I
+
+    iput-wide v7, v0, Lcmj;->b:J
+
+    iput-wide v12, v0, Lcmj;->d:J
+
+    iput-wide v10, v0, Lcmj;->o:J
 
     :cond_0
-    :try_start_2
-    invoke-interface {p0}, Ljava/io/Closeable;->close()V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+    iput-wide v3, v0, Lcmj;->c:J
 
-    invoke-interface {v0}, Ljava/io/Closeable;->close()V
+    iget v3, v0, Lcmj;->a:I
 
-    return-void
+    add-int/lit8 v3, v3, 0x1
 
-    :catchall_1
-    move-exception p0
+    iput v3, v0, Lcmj;->a:I
 
-    goto :goto_3
+    iget-wide v3, v0, Lcmj;->d:J
 
-    :goto_2
-    :try_start_3
-    throw p1
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_2
+    invoke-static {v3, v4, v1, v2}, Ljava/lang/Math;->min(JJ)J
 
-    :catchall_2
-    move-exception v1
+    move-result-wide v3
 
-    :try_start_4
-    invoke-static {p0, p1}, Lyij;->b(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+    iput-wide v3, v0, Lcmj;->d:J
 
-    throw v1
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_1
+    iget-wide v3, v0, Lcmj;->o:J
 
-    :goto_3
-    :try_start_5
-    throw p0
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_3
+    invoke-static {v3, v4, v1, v2}, Ljava/lang/Math;->max(JJ)J
 
-    :catchall_3
-    move-exception p1
+    move-result-wide v1
 
-    invoke-static {v0, p0}, Lyij;->b(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+    iput-wide v1, v0, Lcmj;->o:J
 
-    throw p1
+    iget v1, v0, Lcmj;->a:I
+
+    rem-int/lit8 v1, v1, 0x32
+
+    if-nez v1, :cond_1
+
+    sget-object v1, Ljava/util/Locale;->US:Ljava/util/Locale;
+
+    invoke-static {}, Lrnj;->s()V
 
     :cond_1
+    iget v1, v0, Lcmj;->a:I
+
+    rem-int/lit16 v1, v1, 0x1f4
+
+    if-nez v1, :cond_2
+
+    iput v14, v0, Lcmj;->a:I
+
+    iput-wide v7, v0, Lcmj;->b:J
+
+    iput-wide v12, v0, Lcmj;->d:J
+
+    iput-wide v10, v0, Lcmj;->o:J
+
+    :cond_2
+    return-void
+.end method
+
+.method public H(J)V
+    .locals 4
+
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtimeNanos()J
+
+    move-result-wide v0
+
+    const-wide/16 v2, 0x3e8
+
+    div-long/2addr v0, v2
+
+    sub-long/2addr v0, p1
+
+    invoke-virtual {p0, v0, v1}, Lcmj;->E(J)V
+
+    return-void
+.end method
+
+.method public close()V
+    .locals 4
+
+    iget-wide v0, p0, Lcmj;->b:J
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v2, v0, v2
+
+    if-eqz v2, :cond_0
+
+    invoke-virtual {p0, v0, v1}, Lcmj;->H(J)V
+
     return-void
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "Did you forget to call start()?"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public l()V
+    .locals 4
+
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtimeNanos()J
+
+    move-result-wide v0
+
+    const-wide/16 v2, 0x3e8
+
+    div-long/2addr v0, v2
+
+    iput-wide v0, p0, Lcmj;->b:J
+
+    return-void
 .end method

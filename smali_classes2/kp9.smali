@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Llw9;
+.implements Lmp9;
 
 
 # static fields
@@ -50,7 +50,7 @@
 .method public final hashCode()I
     .locals 1
 
-    const v0, 0x43f6b71e
+    const v0, 0x570bc2d0
 
     return v0
 .end method
@@ -58,7 +58,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "MessagePinned"
+    const-string v0, "EditMessageError"
 
     return-object v0
 .end method

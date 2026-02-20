@@ -1,59 +1,70 @@
-.class public abstract Lloj;
+.class public final Lloj;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Loza;
+
+
+# static fields
+.field public static final a:Lloj;
+
 
 # direct methods
-.method public static final c(Lr4h;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 3
 
-    new-instance v0, Lnfe;
+    new-instance v0, Lloj;
 
-    const/16 v1, 0x1d
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, v1}, Lnfe;-><init>(I)V
+    sput-object v0, Lloj;->a:Lloj;
 
-    const/16 v1, 0x6e
-
-    invoke-virtual {p0, v1, v0}, Lr4h;->e(ILhs7;)V
-
-    new-instance v0, Llge;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Llge;-><init>(I)V
-
-    const/16 v1, 0x6f
-
-    invoke-virtual {p0, v1, v0}, Lr4h;->e(ILhs7;)V
-
-    new-instance v0, Llge;
+    new-instance v0, Lp7j;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, v1}, Llge;-><init>(I)V
+    invoke-direct {v0, v1}, Lp7j;-><init>(I)V
 
-    const/16 v1, 0x70
+    const-class v1, Lh8j;
 
-    invoke-virtual {p0, v1, v0}, Lr4h;->e(ILhs7;)V
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
 
-    new-instance v0, Llge;
+    move-result-object v0
 
-    const/4 v1, 0x2
+    const/4 v2, 0x2
 
-    invoke-direct {v0, v1}, Llge;-><init>(I)V
+    invoke-static {v0, v2}, Leni;->i(Ljava/util/HashMap;I)Lp7j;
 
-    const/16 v1, 0x71
+    move-result-object v0
 
-    invoke-virtual {p0, v1, v0}, Lr4h;->e(ILhs7;)V
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x3
+
+    invoke-static {v0, v2}, Leni;->i(Ljava/util/HashMap;I)Lp7j;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, Leni;->m(Ljava/util/HashMap;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract a(Ljava/lang/Throwable;)V
-.end method
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-.method public abstract b(Lloe;)V
+    invoke-static {p1}, Lkb0;->d(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+
+    move-result-object p1
+
+    throw p1
 .end method

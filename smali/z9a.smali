@@ -1,121 +1,117 @@
-.class public final Lz9a;
+.class public final synthetic Lz9a;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lr4a;
+.implements Lm4b;
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic X:I
+
+.field public final synthetic Y:Landroid/graphics/Matrix;
+
+.field public final synthetic a:Lbaa;
+
+.field public final synthetic b:Ljava/util/HashMap;
+
+.field public final synthetic c:Lrk0;
+
+.field public final synthetic d:Ljava/util/HashMap;
+
+.field public final synthetic o:La3f;
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 2
+.method public synthetic constructor <init>(Lbaa;Ljava/util/HashMap;Lrk0;Ljava/util/HashMap;La3f;ILandroid/graphics/Matrix;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz p1, :cond_1
+    iput-object p1, p0, Lz9a;->a:Lbaa;
 
-    const/16 v0, 0x5a
+    iput-object p2, p0, Lz9a;->b:Ljava/util/HashMap;
 
-    if-eq p1, v0, :cond_1
+    iput-object p3, p0, Lz9a;->c:Lrk0;
 
-    const/16 v0, 0xb4
+    iput-object p4, p0, Lz9a;->d:Ljava/util/HashMap;
 
-    if-eq p1, v0, :cond_1
+    iput-object p5, p0, Lz9a;->o:La3f;
 
-    const/16 v0, 0x10e
+    iput p6, p0, Lz9a;->X:I
 
-    if-ne p1, v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    const/4 v0, 0x1
-
-    :goto_1
-    const-string v1, "Unsupported orientation"
-
-    invoke-static {v1, v0}, Lh6j;->a(Ljava/lang/Object;Z)V
-
-    iput p1, p0, Lz9a;->a:I
+    iput-object p7, p0, Lz9a;->Y:Landroid/graphics/Matrix;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final m(Lcom/google/android/gms/tasks/Task;)V
+    .locals 8
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lz9a;->a:Lbaa;
 
-    if-ne p0, p1, :cond_0
+    iget-object v5, p0, Lz9a;->b:Ljava/util/HashMap;
 
-    return v0
+    iget-object v1, p0, Lz9a;->c:Lrk0;
+
+    iget-object v4, p0, Lz9a;->d:Ljava/util/HashMap;
+
+    move-object v2, v1
+
+    iget-object v1, p0, Lz9a;->o:La3f;
+
+    iget v3, p0, Lz9a;->X:I
+
+    move v6, v3
+
+    iget-object v3, p0, Lz9a;->Y:Landroid/graphics/Matrix;
+
+    move-object v7, p1
+
+    check-cast v7, Lvxj;
+
+    iget-boolean v7, v7, Lvxj;->d:Z
+
+    if-eqz v7, :cond_0
+
+    new-instance p1, Ljava/util/concurrent/CancellationException;
+
+    const-string v7, "The task is canceled."
+
+    invoke-direct {p1, v7}, Ljava/util/concurrent/CancellationException;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v5, v2, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_0
 
     :cond_0
-    instance-of v1, p1, Lz9a;
+    invoke-virtual {p1}, Lcom/google/android/gms/tasks/Task;->h()Z
 
-    const/4 v2, 0x0
+    move-result v7
 
-    if-nez v1, :cond_1
+    if-eqz v7, :cond_1
 
-    return v2
+    invoke-virtual {p1}, Lcom/google/android/gms/tasks/Task;->f()Ljava/lang/Object;
+
+    move-result-object p1
+
+    invoke-virtual {v4, v2, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_0
 
     :cond_1
-    check-cast p1, Lz9a;
+    invoke-virtual {p1}, Lcom/google/android/gms/tasks/Task;->e()Ljava/lang/Exception;
 
-    iget v1, p0, Lz9a;->a:I
+    move-result-object p1
 
-    iget p1, p1, Lz9a;->a:I
+    invoke-virtual {v5, v2, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-ne v1, p1, :cond_2
+    :goto_0
+    add-int/lit8 v2, v6, 0x1
 
-    return v0
+    invoke-virtual/range {v0 .. v5}, Lbaa;->a(La3f;ILandroid/graphics/Matrix;Ljava/util/HashMap;Ljava/util/HashMap;)V
 
-    :cond_2
-    return v2
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget v0, p0, Lz9a;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    add-int/lit16 v0, v0, 0x20f
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Orientation= "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v1, p0, Lz9a;->a:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

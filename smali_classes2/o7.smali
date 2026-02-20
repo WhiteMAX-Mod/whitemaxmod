@@ -1,66 +1,92 @@
 .class public final Lo7;
-.super Ljava/lang/Object;
+.super Landroid/app/SharedElementCallback;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:J
+.field public final synthetic a:Landroid/graphics/Rect;
 
-.field public b:Z
+.field public final synthetic b:Lru/ok/messages/media/mediabar/ActLocalMedias;
 
-.field public c:Ljava/lang/Object;
 
-.field public d:Ljava/io/Serializable;
+# direct methods
+.method public constructor <init>(Lru/ok/messages/media/mediabar/ActLocalMedias;Landroid/graphics/Rect;)V
+    .locals 0
 
-.field public e:Ljava/lang/Object;
+    iput-object p1, p0, Lo7;->b:Lru/ok/messages/media/mediabar/ActLocalMedias;
+
+    iput-object p2, p0, Lo7;->a:Landroid/graphics/Rect;
+
+    invoke-direct {p0}, Landroid/app/SharedElementCallback;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public a()V
-    .locals 5
+.method public final onMapSharedElements(Ljava/util/List;Ljava/util/Map;)V
+    .locals 1
 
-    iget-boolean v0, p0, Lo7;->b:Z
+    if-eqz p2, :cond_0
 
-    if-nez v0, :cond_0
+    iget-object p1, p0, Lo7;->a:Landroid/graphics/Rect;
+
+    if-eqz p1, :cond_0
+
+    invoke-interface {p2}, Ljava/util/Map;->values()Ljava/util/Collection;
+
+    move-result-object p2
+
+    invoke-interface {p2}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+
+    move-result-object p2
+
+    :goto_0
+    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/View;
+
+    invoke-static {p1, v0}, Llaj;->b(Landroid/graphics/Rect;Landroid/view/View;)V
 
     goto :goto_0
 
     :cond_0
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lo7;->b:Z
-
-    iget-object v0, p0, Lo7;->e:Ljava/lang/Object;
-
-    check-cast v0, Li7;
-
-    if-nez v0, :cond_1
-
-    :goto_0
     return-void
+.end method
 
-    :cond_1
-    iget-wide v1, p0, Lo7;->a:J
+.method public final onRejectSharedElements(Ljava/util/List;)V
+    .locals 3
 
-    iget-object v3, p0, Lo7;->c:Ljava/lang/Object;
+    if-eqz p1, :cond_0
 
-    check-cast v3, Lxkg;
+    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
 
-    invoke-interface {v3}, Lxkg;->getMsSinceBoot()J
+    move-result p1
 
-    move-result-wide v3
+    if-nez p1, :cond_0
 
-    sub-long/2addr v3, v1
+    iget-object p1, p0, Lo7;->b:Lru/ok/messages/media/mediabar/ActLocalMedias;
 
-    iget-object v1, p0, Lo7;->d:Ljava/io/Serializable;
+    iget-object p1, p1, Lru/ok/messages/media/mediabar/ActLocalMedias;->Y0:Landroidx/viewpager2/widget/ViewPager2;
 
-    check-cast v1, Ldw9;
+    new-instance v0, Lj3;
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    const/4 v1, 0x3
 
-    move-result-object v2
+    invoke-direct {v0, v1, p0}, Lj3;-><init>(ILjava/lang/Object;)V
 
-    invoke-virtual {v1, v0, v2}, Ldw9;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    const-wide/16 v1, 0x64
 
+    invoke-virtual {p1, v0, v1, v2}, Landroid/view/View;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    :cond_0
     return-void
 .end method

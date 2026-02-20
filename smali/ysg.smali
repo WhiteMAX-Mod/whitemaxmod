@@ -1,17 +1,23 @@
-.class public interface abstract Lysg;
+.class public final Lysg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract c(Lsi4;Laj4;Z)V
-.end method
+# instance fields
+.field public final a:Lv07;
 
-.method public abstract d(Lsi4;Laj4;ZI)V
-.end method
+.field public final b:J
 
-.method public abstract h(Lsi4;Laj4;Z)V
-.end method
 
-.method public abstract i(Lsi4;Laj4;Z)V
+# direct methods
+.method public constructor <init>(Lv07;J)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lysg;->a:Lv07;
+
+    iput-wide p2, p0, Lysg;->b:J
+
+    return-void
 .end method

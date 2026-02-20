@@ -1,120 +1,101 @@
 .class public final Lag1;
-.super Ljava/lang/Object;
+.super Lhg1;
 .source "SourceFile"
-
-# interfaces
-.implements Llq6;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:[Ld76;
+.field public final a:Lrg0;
 
 
 # direct methods
-.method public synthetic constructor <init>([Ld76;I)V
+.method public constructor <init>(Lrg0;)V
     .locals 0
 
-    iput p2, p0, Lag1;->a:I
-
-    iput-object p1, p0, Lag1;->b:[Ld76;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lag1;->a:Lrg0;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lag1;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lag1;
+
+    iget-object v1, p0, Lag1;->a:Lrg0;
+
+    iget-object p1, p1, Lag1;->a:Lrg0;
+
+    invoke-static {v1, p1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
     .locals 1
 
-    iget v0, p0, Lag1;->a:I
+    iget-object v0, p0, Lag1;->a:Lrg0;
 
-    packed-switch v0, :pswitch_data_0
+    if-nez v0, :cond_0
 
-    iget-object v0, p0, Lag1;->b:[Ld76;
+    const/4 v0, 0x0
 
-    array-length v0, v0
+    return v0
 
-    new-array v0, v0, [Ljava/lang/Object;
+    :cond_0
+    invoke-virtual {v0}, Lrg0;->hashCode()I
 
-    return-object v0
+    move-result v0
 
-    :pswitch_0
-    iget-object v0, p0, Lag1;->b:[Ld76;
+    return v0
+.end method
 
-    array-length v0, v0
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    new-array v0, v0, [Lc6c;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    return-object v0
+    const-string v1, "Avatar(avatarInfo="
 
-    :pswitch_1
-    iget-object v0, p0, Lag1;->b:[Ld76;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    array-length v0, v0
+    iget-object v1, p0, Lag1;->a:Lrg0;
 
-    new-array v0, v0, [Lrbb;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    return-object v0
+    const-string v1, ")"
 
-    :pswitch_2
-    iget-object v0, p0, Lag1;->b:[Ld76;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    array-length v0, v0
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    new-array v0, v0, [Ley3;
-
-    return-object v0
-
-    :pswitch_3
-    iget-object v0, p0, Lag1;->b:[Ld76;
-
-    array-length v0, v0
-
-    new-array v0, v0, [Ljava/lang/Object;
+    move-result-object v0
 
     return-object v0
-
-    :pswitch_4
-    iget-object v0, p0, Lag1;->b:[Ld76;
-
-    array-length v0, v0
-
-    new-array v0, v0, [Ljava/util/List;
-
-    return-object v0
-
-    :pswitch_5
-    iget-object v0, p0, Lag1;->b:[Ld76;
-
-    array-length v0, v0
-
-    new-array v0, v0, [Lmc6;
-
-    return-object v0
-
-    :pswitch_6
-    iget-object v0, p0, Lag1;->b:[Ld76;
-
-    array-length v0, v0
-
-    new-array v0, v0, [Ley3;
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

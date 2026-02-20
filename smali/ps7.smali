@@ -1,21 +1,25 @@
-.class public abstract Lps7;
+.class public final Lps7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic a:I
+# instance fields
+.field public final a:Le3;
+
+.field public b:Lqu4;
+
+.field public c:Ldv0;
+
+.field public d:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Le3;)V
+    .locals 0
 
-    new-instance v0, Loea;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Loea;-><init>(I)V
+    iput-object p1, p0, Lps7;->a:Le3;
 
     return-void
 .end method

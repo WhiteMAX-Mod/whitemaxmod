@@ -1,64 +1,51 @@
 .class public final Lv55;
-.super Ljava/lang/Object;
+.super Lda4;
 .source "SourceFile"
 
-# interfaces
-.implements La65;
 
+# instance fields
+.field public final synthetic X:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
 
-# static fields
-.field public static final a:Lv55;
+.field public Y:I
+
+.field public d:Lz30;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;Lda4;)V
+    .locals 0
 
-    new-instance v0, Lv55;
+    iput-object p1, p0, Lv55;->X:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lv55;->a:Lv55;
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Lv55;->o:Ljava/lang/Object;
 
-    if-ne p0, p1, :cond_0
+    iget p1, p0, Lv55;->Y:I
 
-    return v0
+    const/high16 v0, -0x80000000
 
-    :cond_0
-    instance-of p1, p1, Lv55;
+    or-int/2addr p1, v0
 
-    if-nez p1, :cond_1
+    iput p1, p0, Lv55;->Y:I
 
-    const/4 p1, 0x0
+    iget-object p1, p0, Lv55;->X:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
 
-    return p1
+    const/4 v0, 0x0
 
-    :cond_1
-    return v0
-.end method
+    invoke-virtual {p1, v0, v0, p0}, Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;->v(Lz30;Lpo9;Lda4;)Ljava/lang/Object;
 
-.method public final hashCode()I
-    .locals 1
+    move-result-object p1
 
-    const v0, -0x45aaf562
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "Cancelled"
-
-    return-object v0
+    return-object p1
 .end method

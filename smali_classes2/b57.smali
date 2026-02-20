@@ -1,73 +1,28 @@
 .class public final Lb57;
-.super Lc57;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:Lb57;
+# instance fields
+.field public final a:Ljava/util/Set;
+
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Ljava/util/HashSet;Ljava/lang/String;)V
+    .locals 0
 
-    new-instance v0, Lb57;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget v1, La8b;->t:I
+    if-nez p1, :cond_0
 
-    new-instance v2, Llhg;
-
-    invoke-direct {v2, v1}, Llhg;-><init>(I)V
-
-    sget v1, Lj6e;->L:I
-
-    new-instance v3, Llhg;
-
-    invoke-direct {v3, v1}, Llhg;-><init>(I)V
-
-    invoke-direct {v0, v2, v3}, Lc57;-><init>(Llhg;Llhg;)V
-
-    sput-object v0, Lb57;->c:Lb57;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
+    sget-object p1, Ljava/util/Collections;->EMPTY_SET:Ljava/util/Set;
 
     :cond_0
-    instance-of p1, p1, Lb57;
+    iput-object p1, p0, Lb57;->a:Ljava/util/Set;
 
-    if-nez p1, :cond_1
+    iput-object p2, p0, Lb57;->b:Ljava/lang/String;
 
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, 0x545380ea
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "Updating"
-
-    return-object v0
+    return-void
 .end method

@@ -1,218 +1,331 @@
-.class public final synthetic Ljq6;
+.class public final Ljq6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Llq6;
+.implements Ler0;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public a:I
 
-.field public final synthetic b:Lac0;
+.field public b:Lzh3;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lac0;I)V
+.method public constructor <init>(ILzh3;)V
     .locals 0
 
-    iput p2, p0, Ljq6;->a:I
-
-    iput-object p1, p0, Ljq6;->b:Lac0;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p2, p0, Ljq6;->b:Lzh3;
+
+    iput p1, p0, Ljq6;->a:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 6
+.method public declared-synchronized a(I)Z
+    .locals 1
 
+    monitor-enter p0
+
+    :try_start_0
     iget v0, p0, Ljq6;->a:I
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p1, v0, :cond_0
 
-    new-instance v0, Landroid/widget/ImageView;
+    iget-object p1, p0, Ljq6;->b:Lzh3;
 
-    iget-object v1, p0, Ljq6;->b:Lac0;
+    invoke-static {p1}, Lzh3;->B0(Lzh3;)Z
 
-    iget-object v2, v1, Lac0;->b:Ljava/lang/Object;
+    move-result p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    check-cast v2, Ln7g;
+    if-eqz p1, :cond_0
 
-    invoke-virtual {v2}, Landroid/view/View;->getContext()Landroid/content/Context;
+    const/4 p1, 0x1
 
-    move-result-object v2
+    goto :goto_0
 
-    invoke-direct {v0, v2}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
+    :catchall_0
+    move-exception p1
 
-    new-instance v2, Landroid/widget/FrameLayout$LayoutParams;
+    goto :goto_1
 
-    const/16 v3, 0x34
+    :cond_0
+    const/4 p1, 0x0
 
-    int-to-float v3, v3
+    :goto_0
+    monitor-exit p0
 
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+    return p1
 
-    move-result-object v4
+    :goto_1
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    throw p1
+.end method
 
-    move-result-object v4
+.method public declared-synchronized b()V
+    .locals 1
 
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
+    monitor-enter p0
 
-    mul-float/2addr v4, v3
+    :try_start_0
+    iget-object v0, p0, Ljq6;->b:Lzh3;
 
-    invoke-static {v4}, Lq7j;->c(F)I
+    invoke-static {v0}, Lzh3;->d0(Lzh3;)V
 
-    move-result v4
+    const/4 v0, 0x0
 
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v5
-
-    iget v5, v5, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v3, v5
-
-    invoke-static {v3}, Lq7j;->c(F)I
-
-    move-result v3
-
-    const v5, 0x800055
-
-    invoke-direct {v2, v4, v3, v5}, Landroid/widget/FrameLayout$LayoutParams;-><init>(III)V
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    sget-object v2, Lpc3;->t0:Lkme;
-
-    invoke-virtual {v2, v0}, Lkme;->s(Landroid/view/View;)Lzbb;
-
-    move-result-object v3
-
-    iget-object v3, v3, Lzbb;->c:Lzlb;
-
-    invoke-interface {v3}, Lzlb;->c()Leqf;
-
-    move-result-object v3
-
-    iget-object v3, v3, Leqf;->a:Lcqf;
-
-    iget-object v3, v3, Lcqf;->a:Lbqf;
-
-    iget v3, v3, Lbqf;->i:I
-
-    new-instance v4, Landroid/graphics/drawable/ShapeDrawable;
-
-    new-instance v5, Landroid/graphics/drawable/shapes/OvalShape;
-
-    invoke-direct {v5}, Landroid/graphics/drawable/shapes/OvalShape;-><init>()V
-
-    invoke-direct {v4, v5}, Landroid/graphics/drawable/ShapeDrawable;-><init>(Landroid/graphics/drawable/shapes/Shape;)V
-
-    invoke-virtual {v2, v0}, Lkme;->s(Landroid/view/View;)Lzbb;
-
-    move-result-object v2
-
-    iget-object v2, v2, Lzbb;->c:Lzlb;
-
-    const/high16 v2, -0x67000000
-
-    invoke-static {v4, v2}, Lpti;->f(Landroid/graphics/drawable/Drawable;I)V
-
-    new-instance v2, Landroid/graphics/drawable/RippleDrawable;
-
-    invoke-static {v3}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
-
-    move-result-object v3
-
-    const/4 v5, 0x0
-
-    invoke-direct {v2, v3, v4, v5}, Landroid/graphics/drawable/RippleDrawable;-><init>(Landroid/content/res/ColorStateList;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
-
-    const/16 v2, 0xe
-
-    int-to-float v2, v2
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    invoke-static {v2, v3, v0}, Lxi4;->m(FFLandroid/widget/ImageView;)V
-
-    iget-object v2, v1, Lac0;->f:Ljava/lang/Object;
-
-    invoke-interface {v2}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    new-instance v2, Lgj6;
-
-    const/4 v3, 0x2
-
-    invoke-direct {v2, v3, v1}, Lgj6;-><init>(ILjava/lang/Object;)V
-
-    invoke-static {v0, v2}, Ljmj;->d(Landroid/view/View;Landroid/view/View$OnClickListener;)V
-
-    return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Ljq6;->b:Lac0;
-
-    iget-object v0, v0, Lac0;->b:Ljava/lang/Object;
-
-    check-cast v0, Ln7g;
-
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    sget v2, Lf6e;->H1:I
-
-    sget-object v3, Lpc3;->t0:Lkme;
-
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-virtual {v3, v0}, Lkme;->r(Landroid/content/Context;)Lzbb;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lzbb;->c:Lzlb;
+    iput-object v0, p0, Ljq6;->b:Lzh3;
 
     const/4 v0, -0x1
 
-    invoke-static {v2, v0, v1}, Lpti;->d(IILandroid/content/Context;)Landroid/graphics/drawable/Drawable;
+    iput v0, p0, Ljq6;->a:I
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+.end method
+
+.method public declared-synchronized clear()V
+    .locals 1
+
+    monitor-enter p0
+
+    :try_start_0
+    invoke-virtual {p0}, Ljq6;->b()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+.end method
+
+.method public declared-synchronized h()Lzh3;
+    .locals 1
+
+    monitor-enter p0
+
+    :try_start_0
+    iget-object v0, p0, Ljq6;->b:Lzh3;
+
+    invoke-static {v0}, Lzh3;->H(Lzh3;)Lzh3;
 
     move-result-object v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
 
     return-object v0
 
-    nop
+    :catchall_0
+    move-exception v0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+.end method
+
+.method public declared-synchronized i(ILzh3;)V
+    .locals 2
+
+    monitor-enter p0
+
+    :try_start_0
+    iget-object v0, p0, Ljq6;->b:Lzh3;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p2}, Lzh3;->q0()Ljava/lang/Object;
+
+    move-result-object v0
+
+    iget-object v1, p0, Ljq6;->b:Lzh3;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1}, Lzh3;->q0()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/graphics/Bitmap;
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
+    :cond_0
+    const/4 v1, 0x0
+
+    :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-eqz v0, :cond_1
+
+    monitor-exit p0
+
+    return-void
+
+    :cond_1
+    :try_start_1
+    iget-object v0, p0, Ljq6;->b:Lzh3;
+
+    invoke-static {v0}, Lzh3;->d0(Lzh3;)V
+
+    invoke-virtual {p2}, Lzh3;->E()Lzh3;
+
+    move-result-object p2
+
+    iput-object p2, p0, Ljq6;->b:Lzh3;
+
+    iput p1, p0, Ljq6;->a:I
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    monitor-exit p0
+
+    return-void
+
+    :goto_1
+    :try_start_2
+    monitor-exit p0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    throw p1
+.end method
+
+.method public l(ILzh3;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public declared-synchronized n()Lzh3;
+    .locals 1
+
+    monitor-enter p0
+
+    :try_start_0
+    iget-object v0, p0, Ljq6;->b:Lzh3;
+
+    invoke-static {v0}, Lzh3;->H(Lzh3;)Lzh3;
+
+    move-result-object v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+
+    :try_start_1
+    invoke-virtual {p0}, Ljq6;->b()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    monitor-exit p0
+
+    return-object v0
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_0
+
+    :catchall_1
+    move-exception v0
+
+    :try_start_2
+    invoke-virtual {p0}, Ljq6;->b()V
+
+    throw v0
+
+    :goto_0
+    monitor-exit p0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    throw v0
+.end method
+
+.method public declared-synchronized o(I)Lzh3;
+    .locals 1
+
+    monitor-enter p0
+
+    :try_start_0
+    iget v0, p0, Ljq6;->a:I
+
+    if-ne v0, p1, :cond_0
+
+    iget-object p1, p0, Ljq6;->b:Lzh3;
+
+    invoke-static {p1}, Lzh3;->H(Lzh3;)Lzh3;
+
+    move-result-object p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    monitor-exit p0
+
+    return-object p1
+
+    :goto_1
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
 .end method

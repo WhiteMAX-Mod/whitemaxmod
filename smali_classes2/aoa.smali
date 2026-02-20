@@ -1,99 +1,225 @@
-.class public abstract synthetic Laoa;
-.super Ljava/lang/Object;
+.class public final Laoa;
+.super Lpdg;
 .source "SourceFile"
 
+# interfaces
+.implements Lys6;
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
 
-.field public static final synthetic $EnumSwitchMapping$1:[I
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lboa;
+
+.field public o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(Lboa;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    const/4 v0, 0x3
+    iput-object p1, p0, Laoa;->Y:Lboa;
 
-    invoke-static {v0}, Lt02;->w(I)[I
+    const/4 p1, 0x2
 
-    move-result-object v1
-
-    array-length v1, v1
-
-    new-array v1, v1, [I
-
-    const/4 v2, 0x1
-
-    const/4 v3, 0x0
-
-    :try_start_0
-    aput v2, v1, v3
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    const/4 v3, 0x2
-
-    :try_start_1
-    aput v3, v1, v3
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
-    :try_start_2
-    aput v0, v1, v2
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    :catch_2
-    sput-object v1, Laoa;->$EnumSwitchMapping$0:[I
-
-    invoke-static {}, Lorg/webrtc/PeerConnectionFactory$EnhancerKind;->values()[Lorg/webrtc/PeerConnectionFactory$EnhancerKind;
-
-    move-result-object v1
-
-    array-length v1, v1
-
-    new-array v1, v1, [I
-
-    :try_start_3
-    sget-object v4, Lorg/webrtc/PeerConnectionFactory$EnhancerKind;->NONE:Lorg/webrtc/PeerConnectionFactory$EnhancerKind;
-
-    invoke-virtual {v4}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v4
-
-    aput v2, v1, v4
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
-
-    :catch_3
-    :try_start_4
-    sget-object v2, Lorg/webrtc/PeerConnectionFactory$EnhancerKind;->PIPELINE:Lorg/webrtc/PeerConnectionFactory$EnhancerKind;
-
-    invoke-virtual {v2}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v2
-
-    aput v3, v1, v2
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
-
-    :catch_4
-    :try_start_5
-    sget-object v2, Lorg/webrtc/PeerConnectionFactory$EnhancerKind;->BASELINE:Lorg/webrtc/PeerConnectionFactory$EnhancerKind;
-
-    invoke-virtual {v2}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v2
-
-    aput v0, v1, v2
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
-
-    :catch_5
-    sput-object v1, Laoa;->$EnumSwitchMapping$1:[I
+    invoke-direct {p0, p1, p2}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Ld96;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Laoa;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Laoa;
+
+    sget-object p2, Lmah;->a:Lmah;
+
+    invoke-virtual {p1, p2}, Laoa;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Laoa;
+
+    iget-object v1, p0, Laoa;->Y:Lboa;
+
+    invoke-direct {v0, v1, p2}, Laoa;-><init>(Lboa;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Laoa;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
+
+    iget-object v0, p0, Laoa;->X:Ljava/lang/Object;
+
+    check-cast v0, Ld96;
+
+    iget v1, p0, Laoa;->o:I
+
+    const/4 v2, 0x3
+
+    const/4 v3, 0x2
+
+    const/4 v4, 0x1
+
+    const/4 v5, 0x0
+
+    sget-object v6, Lod4;->a:Lod4;
+
+    if-eqz v1, :cond_3
+
+    if-eq v1, v4, :cond_2
+
+    if-eq v1, v3, :cond_1
+
+    if-ne v1, v2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    :goto_0
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    goto :goto_5
+
+    :cond_2
+    :try_start_0
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_2
+
+    :cond_3
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Laoa;->Y:Lboa;
+
+    iget-object v1, p1, Lboa;->a:Lemc;
+
+    if-nez v1, :cond_6
+
+    :try_start_1
+    iget-object p1, p1, Lboa;->b:Lj88;
+
+    invoke-interface {p1}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ln5b;
+
+    iput-object v0, p0, Laoa;->X:Ljava/lang/Object;
+
+    iput v4, p0, Laoa;->o:I
+
+    invoke-virtual {p1}, Ln5b;->a()Lvkg;
+
+    move-result-object p1
+
+    sget-object v1, Lcmc;->d:Lcmc;
+
+    invoke-virtual {p1, v1, p0}, Lvkg;->e(Lk2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v6, :cond_4
+
+    goto :goto_4
+
+    :cond_4
+    :goto_1
+    check-cast p1, Ldmc;
+
+    iget-object p1, p1, Ldmc;->c:Ljava/lang/Object;
+
+    invoke-static {p1}, Lrlj;->b(Ljava/util/List;)Lemc;
+
+    move-result-object p1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    goto :goto_3
+
+    :goto_2
+    new-instance v1, Lc6e;
+
+    invoke-direct {v1, p1}, Lc6e;-><init>(Ljava/lang/Throwable;)V
+
+    move-object p1, v1
+
+    :goto_3
+    nop
+
+    instance-of v1, p1, Lc6e;
+
+    if-eqz v1, :cond_5
+
+    move-object p1, v5
+
+    :cond_5
+    check-cast p1, Lemc;
+
+    iput-object v5, p0, Laoa;->X:Ljava/lang/Object;
+
+    iput v3, p0, Laoa;->o:I
+
+    invoke-interface {v0, p1, p0}, Ld96;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v6, :cond_7
+
+    goto :goto_4
+
+    :cond_6
+    iput-object v5, p0, Laoa;->X:Ljava/lang/Object;
+
+    iput v2, p0, Laoa;->o:I
+
+    invoke-interface {v0, v1, p0}, Ld96;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v6, :cond_7
+
+    :goto_4
+    return-object v6
+
+    :cond_7
+    :goto_5
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
 .end method

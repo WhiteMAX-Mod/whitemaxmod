@@ -18,10 +18,10 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/api/extern/ExternErrorParser;",
         "",
-        "Lahd;",
+        "Ltmd;",
         "log",
         "<init>",
-        "(Lahd;)V",
+        "(Ltmd;)V",
         "Lru/ok/android/api/core/ApiInvocationException;",
         "exception",
         "",
@@ -33,7 +33,7 @@
         "Lru/ok/android/externcalls/sdk/api/extern/ExternErrorParser$ErrorDescription;",
         "parse",
         "(Lru/ok/android/api/core/ApiInvocationException;)Lru/ok/android/externcalls/sdk/api/extern/ExternErrorParser$ErrorDescription;",
-        "Lahd;",
+        "Ltmd;",
         "Companion",
         "ErrorDescription",
         "calls-sdk_release"
@@ -55,7 +55,7 @@
 
 
 # instance fields
-.field private final log:Lahd;
+.field private final log:Ltmd;
 
 
 # direct methods
@@ -66,19 +66,19 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/api/extern/ExternErrorParser$Companion;-><init>(Lso4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/api/extern/ExternErrorParser$Companion;-><init>(Lfq4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/api/extern/ExternErrorParser;->Companion:Lru/ok/android/externcalls/sdk/api/extern/ExternErrorParser$Companion;
 
     return-void
 .end method
 
-.method public constructor <init>(Lahd;)V
+.method public constructor <init>(Ltmd;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/api/extern/ExternErrorParser;->log:Lahd;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/api/extern/ExternErrorParser;->log:Ltmd;
 
     return-void
 .end method
@@ -101,7 +101,7 @@
 
     move-result-object v1
 
-    invoke-static {v0}, Lrzf;->R(I)V
+    invoke-static {v0}, Ld7g;->Q(I)V
 
     invoke-virtual {v1, p1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
@@ -218,7 +218,7 @@
 
     add-int/2addr v1, v2
 
-    invoke-static {p1, v1}, Lpi3;->V(Ljava/lang/Iterable;I)Ljava/util/List;
+    invoke-static {p1, v1}, Lek3;->V(Ljava/lang/Iterable;I)Ljava/util/List;
 
     move-result-object p1
 
@@ -230,7 +230,7 @@
     goto :goto_3
 
     :cond_3
-    sget-object p1, Ldh5;->a:Ldh5;
+    sget-object p1, Lsi5;->a:Lsi5;
 
     :goto_2
     new-array v1, v0, [Ljava/lang/String;
@@ -269,13 +269,13 @@
     return v0
 
     :goto_3
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/api/extern/ExternErrorParser;->log:Lahd;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/api/extern/ExternErrorParser;->log:Ltmd;
 
     const-string v2, "ExternErrorParser"
 
     const-string v3, "errorcode.parse.failed"
 
-    invoke-interface {v1, v2, v3, p1}, Lahd;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v1, v2, v3, p1}, Ltmd;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return v0
 .end method

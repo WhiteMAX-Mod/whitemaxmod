@@ -1,181 +1,119 @@
-.class public final Ljpf;
+.class public final synthetic Ljpf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/view/View$OnKeyListener;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic a:Llpf;
 
-.field public b:J
-
-.field public final c:Ljava/lang/Object;
-
-.field public final d:Ljava/lang/Object;
+.field public final synthetic b:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Runnable;Lpsg;J)V
-    .locals 1
+.method public synthetic constructor <init>(Llpf;I)V
+    .locals 0
 
-    const/4 v0, 0x1
-
-    iput v0, p0, Ljpf;->a:I
-
-    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5
-    iput-object p1, p0, Ljpf;->c:Ljava/lang/Object;
+    iput-object p1, p0, Ljpf;->a:Llpf;
 
-    .line 6
-    iput-object p2, p0, Ljpf;->d:Ljava/lang/Object;
-
-    .line 7
-    iput-wide p3, p0, Ljpf;->b:J
-
-    return-void
-.end method
-
-.method public constructor <init>(Lwh6;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Ljpf;->a:I
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    iput-object p1, p0, Ljpf;->d:Ljava/lang/Object;
-
-    .line 3
-    new-instance v0, Lipf;
-
-    invoke-direct {v0, p1, p0}, Lipf;-><init>(Lwh6;Ljpf;)V
-
-    iput-object v0, p0, Ljpf;->c:Ljava/lang/Object;
+    iput p2, p0, Ljpf;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 5
+.method public final onKey(Landroid/view/View;ILandroid/view/KeyEvent;)Z
+    .locals 3
 
-    iget v0, p0, Ljpf;->a:I
+    const/16 p1, 0x43
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p2, p1, :cond_4
 
-    iget-object v0, p0, Ljpf;->d:Ljava/lang/Object;
+    invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
 
-    check-cast v0, Lpsg;
+    move-result p1
 
-    iget-boolean v0, v0, Lpsg;->d:Z
+    if-nez p1, :cond_4
 
-    if-nez v0, :cond_1
+    iget-object p1, p0, Ljpf;->a:Llpf;
 
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+    iget-object p1, p1, Llpf;->F0:Lrq7;
 
-    invoke-static {v0}, Lnbe;->a(Ljava/util/concurrent/TimeUnit;)J
+    check-cast p1, Lru3;
 
-    move-result-wide v0
+    iget p2, p0, Ljpf;->b:I
 
-    iget-wide v2, p0, Ljpf;->b:J
+    add-int/lit8 p3, p2, -0x1
 
-    cmp-long v4, v2, v0
+    invoke-virtual {p1, p2}, Lru3;->I0(I)Lxq7;
 
-    if-lez v4, :cond_0
+    move-result-object p2
 
-    sub-long/2addr v2, v0
+    if-eqz p2, :cond_0
 
-    :try_start_0
-    invoke-static {v2, v3}, Ljava/lang/Thread;->sleep(J)V
-    :try_end_0
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
+    move-object v0, p2
+
+    check-cast v0, Llpf;
+
+    invoke-virtual {v0}, Llpf;->y()Ljava/lang/String;
+
+    move-result-object v0
 
     goto :goto_0
 
-    :catch_0
-    move-exception v0
-
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Thread;->interrupt()V
-
-    invoke-static {v0}, Lknj;->b(Ljava/lang/Throwable;)V
-
-    goto :goto_1
-
     :cond_0
+    const/4 v0, 0x0
+
     :goto_0
-    iget-object v0, p0, Ljpf;->d:Ljava/lang/Object;
+    const/4 v1, 0x1
 
-    check-cast v0, Lpsg;
+    const-string v2, ""
 
-    iget-boolean v0, v0, Lpsg;->d:Z
+    if-eqz v0, :cond_2
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v0
 
     if-nez v0, :cond_1
 
-    iget-object v0, p0, Ljpf;->c:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/Runnable;
-
-    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+    goto :goto_1
 
     :cond_1
+    if-eqz p2, :cond_3
+
+    check-cast p2, Llpf;
+
+    invoke-virtual {p2, v2}, Llpf;->z(Ljava/lang/String;)V
+
+    return v1
+
+    :cond_2
     :goto_1
-    return-void
+    invoke-virtual {p1, p3}, Lru3;->I0(I)Lxq7;
 
-    :pswitch_0
-    iget-object v0, p0, Ljpf;->d:Ljava/lang/Object;
+    move-result-object p1
 
-    check-cast v0, Lwh6;
+    if-eqz p1, :cond_3
 
-    iget-object v1, v0, Lwh6;->t0:Ljava/lang/Object;
+    check-cast p1, Llpf;
 
-    check-cast v1, Lnq6;
+    invoke-virtual {p1, v2}, Llpf;->z(Ljava/lang/String;)V
 
-    iget-object v2, p0, Ljpf;->c:Ljava/lang/Object;
+    iget-object p1, p1, Llpf;->G0:Lmu3;
 
-    check-cast v2, Lipf;
+    invoke-virtual {p1}, Landroid/view/View;->requestFocus()Z
 
-    invoke-interface {v1, v2}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    :cond_3
+    return v1
 
-    iget-object v1, v0, Lwh6;->u0:Ljava/lang/Object;
+    :cond_4
+    const/4 p1, 0x0
 
-    check-cast v1, Landroid/os/Handler;
-
-    invoke-virtual {v1, p0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
-
-    iget-object v0, v0, Lwh6;->u0:Ljava/lang/Object;
-
-    check-cast v0, Landroid/os/Handler;
-
-    const-wide/16 v1, 0x3e8
-
-    invoke-virtual {v0, p0, v1, v2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
-
-    iget-wide v0, p0, Ljpf;->b:J
-
-    const-wide/16 v2, 0x1
-
-    add-long/2addr v0, v2
-
-    iput-wide v0, p0, Ljpf;->b:J
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return p1
 .end method

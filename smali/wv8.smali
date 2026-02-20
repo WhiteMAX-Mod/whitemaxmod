@@ -1,269 +1,98 @@
 .class public final Lwv8;
-.super Ljava/lang/Object;
+.super Landroidx/recyclerview/widget/LinearLayoutManager;
 .source "SourceFile"
-
-# interfaces
-.implements Lq4a;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lwv8;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic E:I
 
-.field public final b:[B
-
-.field public final c:I
-
-.field public final d:I
+.field public final synthetic F:Lcom/google/android/material/datepicker/MaterialCalendar;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lhu8;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lhu8;-><init>(I)V
-
-    sput-object v0, Lwv8;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/os/Parcel;)V
-    .locals 2
-
-    .line 6
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 7
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
-
-    move-result-object v0
-
-    sget v1, Lkbh;->a:I
-
-    iput-object v0, p0, Lwv8;->a:Ljava/lang/String;
-
-    .line 8
-    invoke-virtual {p1}, Landroid/os/Parcel;->createByteArray()[B
-
-    move-result-object v0
-
-    iput-object v0, p0, Lwv8;->b:[B
-
-    .line 9
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result v0
-
-    iput v0, p0, Lwv8;->c:I
-
-    .line 10
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result p1
-
-    iput p1, p0, Lwv8;->d:I
-
-    return-void
-.end method
-
-.method public constructor <init>([BIILjava/lang/String;)V
+.method public constructor <init>(Lcom/google/android/material/datepicker/MaterialCalendar;II)V
     .locals 0
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lwv8;->F:Lcom/google/android/material/datepicker/MaterialCalendar;
 
-    .line 2
-    iput-object p4, p0, Lwv8;->a:Ljava/lang/String;
+    iput p3, p0, Lwv8;->E:I
 
-    .line 3
-    iput-object p1, p0, Lwv8;->b:[B
+    const/4 p1, 0x0
 
-    .line 4
-    iput p2, p0, Lwv8;->c:I
-
-    .line 5
-    iput p3, p0, Lwv8;->d:I
+    invoke-direct {p0, p2, p1}, Landroidx/recyclerview/widget/LinearLayoutManager;-><init>(IZ)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
+.method public final K0(Landroidx/recyclerview/widget/RecyclerView;I)V
+    .locals 2
 
-    const/4 v0, 0x0
+    new-instance v0, Lt82;
 
-    return v0
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    const/4 v1, 0x3
+
+    invoke-direct {v0, p1, v1}, Lt82;-><init>(Landroid/content/Context;I)V
+
+    iput p2, v0, Ltb8;->a:I
+
+    invoke-virtual {p0, v0}, Landroidx/recyclerview/widget/a;->L0(Ltb8;)V
+
+    return-void
 .end method
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final N0(Llyd;[I)V
+    .locals 3
+
+    iget p1, p0, Lwv8;->E:I
 
     const/4 v0, 0x1
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
     const/4 v1, 0x0
 
-    if-eqz p1, :cond_2
+    iget-object v2, p0, Lwv8;->F:Lcom/google/android/material/datepicker/MaterialCalendar;
 
-    const-class v2, Lwv8;
+    if-nez p1, :cond_0
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object p1, v2, Lcom/google/android/material/datepicker/MaterialCalendar;->o1:Landroidx/recyclerview/widget/RecyclerView;
 
-    move-result-object v3
+    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
 
-    if-eq v2, v3, :cond_1
+    move-result p1
 
-    goto :goto_0
+    aput p1, p2, v1
 
-    :cond_1
-    check-cast p1, Lwv8;
+    iget-object p1, v2, Lcom/google/android/material/datepicker/MaterialCalendar;->o1:Landroidx/recyclerview/widget/RecyclerView;
 
-    iget-object v2, p0, Lwv8;->a:Ljava/lang/String;
+    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
 
-    iget-object v3, p1, Lwv8;->a:Ljava/lang/String;
+    move-result p1
 
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    aput p1, p2, v0
 
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget-object v2, p0, Lwv8;->b:[B
-
-    iget-object v3, p1, Lwv8;->b:[B
-
-    invoke-static {v2, v3}, Ljava/util/Arrays;->equals([B[B)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget v2, p0, Lwv8;->c:I
-
-    iget v3, p1, Lwv8;->c:I
-
-    if-ne v2, v3, :cond_2
-
-    iget v2, p0, Lwv8;->d:I
-
-    iget p1, p1, Lwv8;->d:I
-
-    if-ne v2, p1, :cond_2
-
-    return v0
-
-    :cond_2
-    :goto_0
-    return v1
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    const/16 v0, 0x20f
-
-    const/16 v1, 0x1f
-
-    iget-object v2, p0, Lwv8;->a:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Lxi4;->e(IILjava/lang/String;)I
-
-    move-result v0
-
-    iget-object v2, p0, Lwv8;->b:[B
-
-    invoke-static {v2}, Ljava/util/Arrays;->hashCode([B)I
-
-    move-result v2
-
-    add-int/2addr v2, v0
-
-    mul-int/2addr v2, v1
-
-    iget v0, p0, Lwv8;->c:I
-
-    add-int/2addr v2, v0
-
-    mul-int/2addr v2, v1
-
-    iget v0, p0, Lwv8;->d:I
-
-    add-int/2addr v2, v0
-
-    return v2
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    iget-object v0, p0, Lwv8;->a:Ljava/lang/String;
-
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result v1
-
-    const-string v2, "mdta: key="
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v2, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 
     :cond_0
-    new-instance v0, Ljava/lang/String;
+    iget-object p1, v2, Lcom/google/android/material/datepicker/MaterialCalendar;->o1:Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-direct {v0, v2}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
 
-    return-object v0
-.end method
+    move-result p1
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
+    aput p1, p2, v1
 
-    iget-object p2, p0, Lwv8;->a:Ljava/lang/String;
+    iget-object p1, v2, Lcom/google/android/material/datepicker/MaterialCalendar;->o1:Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
 
-    iget-object p2, p0, Lwv8;->b:[B
+    move-result p1
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByteArray([B)V
-
-    iget p2, p0, Lwv8;->c:I
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget p2, p0, Lwv8;->d:I
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    aput p1, p2, v0
 
     return-void
 .end method

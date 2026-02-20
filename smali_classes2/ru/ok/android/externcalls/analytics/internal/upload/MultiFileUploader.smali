@@ -7,7 +7,6 @@
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader$Companion;,
-        Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader$LooperCallback;,
         Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader$StorageInfo;,
         Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader$WhenMappings;
     }
@@ -15,7 +14,7 @@
 
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000j\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\u0008\u0002\n\u0002\u0010\u0008\n\u0000\n\u0002\u0010\t\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u000c\n\u0002\u0010 \n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0010\u000e\n\u0002\u0008\u0007\n\u0002\u0018\u0002\n\u0002\u0008\u0008\n\u0002\u0018\u0002\n\u0002\u0008\t\u0008\u0001\u0018\u0000 B2\u00020\u0001:\u0003BCDBW\u0012\u000c\u0010\u0004\u001a\u0008\u0012\u0004\u0012\u00020\u00030\u0002\u0012\u000c\u0010\u0006\u001a\u0008\u0012\u0004\u0012\u00020\u00050\u0002\u0012\u0006\u0010\u0008\u001a\u00020\u0007\u0012\u0006\u0010\n\u001a\u00020\t\u0012\u0006\u0010\u000c\u001a\u00020\u000b\u0012\u0006\u0010\r\u001a\u00020\u000b\u0012\u0008\u0008\u0002\u0010\u000f\u001a\u00020\u000e\u0012\u0008\u0010\u0011\u001a\u0004\u0018\u00010\u0010\u00a2\u0006\u0004\u0008\u0012\u0010\u0013J\u0019\u0010\u0016\u001a\u00020\u00152\u0008\u0008\u0002\u0010\u0014\u001a\u00020\u000bH\u0002\u00a2\u0006\u0004\u0008\u0016\u0010\u0017J\u0019\u0010\u0018\u001a\u00020\u00152\u0008\u0008\u0002\u0010\u0014\u001a\u00020\u000bH\u0002\u00a2\u0006\u0004\u0008\u0018\u0010\u0017J\u000f\u0010\u0019\u001a\u00020\u0015H\u0002\u00a2\u0006\u0004\u0008\u0019\u0010\u001aJ\u000f\u0010\u001b\u001a\u00020\u000bH\u0002\u00a2\u0006\u0004\u0008\u001b\u0010\u001cJ\u0017\u0010\u001e\u001a\u00020\u000b2\u0006\u0010\u001d\u001a\u00020\u0005H\u0002\u00a2\u0006\u0004\u0008\u001e\u0010\u001fJ\u000f\u0010 \u001a\u00020\u0005H\u0002\u00a2\u0006\u0004\u0008 \u0010!J\u0015\u0010#\u001a\u0008\u0012\u0004\u0012\u00020\u00050\"H\u0002\u00a2\u0006\u0004\u0008#\u0010$J\u000f\u0010&\u001a\u00020%H\u0002\u00a2\u0006\u0004\u0008&\u0010\'J\u0017\u0010(\u001a\u00020\u00152\u0006\u0010\u001d\u001a\u00020\u0005H\u0002\u00a2\u0006\u0004\u0008(\u0010)J\u001d\u0010,\u001a\u00020+2\u000c\u0010*\u001a\u0008\u0012\u0004\u0012\u00020\u00050\"H\u0002\u00a2\u0006\u0004\u0008,\u0010-J\u0017\u0010/\u001a\u00020+2\u0006\u0010.\u001a\u00020\u000eH\u0002\u00a2\u0006\u0004\u0008/\u00100J\u000f\u00101\u001a\u00020\u0005H\u0016\u00a2\u0006\u0004\u00081\u0010!J\u000f\u00102\u001a\u00020\u0015H\u0016\u00a2\u0006\u0004\u00082\u0010\u001aJ\u0019\u00105\u001a\u00020\u00152\u0008\u00104\u001a\u0004\u0018\u000103H\u0016\u00a2\u0006\u0004\u00085\u00106R\u001a\u0010\u0004\u001a\u0008\u0012\u0004\u0012\u00020\u00030\u00028\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u0004\u00107R\u0014\u0010\u000f\u001a\u00020\u000e8\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u000f\u00108R\u0016\u0010\u0011\u001a\u0004\u0018\u00010\u00108\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u0011\u00109R\u0014\u0010:\u001a\u00020\u000e8\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008:\u00108R\u0016\u0010;\u001a\u00020\u000e8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008;\u00108R\u001b\u0010A\u001a\u00020<8BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008=\u0010>\u001a\u0004\u0008?\u0010@\u00a8\u0006E"
+        "\u0000j\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\u0008\u0002\n\u0002\u0010\u0008\n\u0000\n\u0002\u0010\t\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\t\n\u0002\u0010 \n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0010\u000e\n\u0002\u0008\u0008\n\u0002\u0018\u0002\n\u0002\u0008\u0008\n\u0002\u0018\u0002\n\u0002\u0008\u0008\u0008\u0001\u0018\u0000 @2\u00020\u0001:\u0002@ABW\u0012\u000c\u0010\u0004\u001a\u0008\u0012\u0004\u0012\u00020\u00030\u0002\u0012\u000c\u0010\u0006\u001a\u0008\u0012\u0004\u0012\u00020\u00050\u0002\u0012\u0006\u0010\u0008\u001a\u00020\u0007\u0012\u0006\u0010\n\u001a\u00020\t\u0012\u0006\u0010\u000c\u001a\u00020\u000b\u0012\u0006\u0010\r\u001a\u00020\u000b\u0012\u0008\u0008\u0002\u0010\u000f\u001a\u00020\u000e\u0012\u0008\u0010\u0011\u001a\u0004\u0018\u00010\u0010\u00a2\u0006\u0004\u0008\u0012\u0010\u0013J\u0019\u0010\u0016\u001a\u00020\u00152\u0008\u0008\u0002\u0010\u0014\u001a\u00020\u000bH\u0002\u00a2\u0006\u0004\u0008\u0016\u0010\u0017J\u000f\u0010\u0018\u001a\u00020\u000bH\u0002\u00a2\u0006\u0004\u0008\u0018\u0010\u0019J\u0017\u0010\u001b\u001a\u00020\u000b2\u0006\u0010\u001a\u001a\u00020\u0005H\u0002\u00a2\u0006\u0004\u0008\u001b\u0010\u001cJ\u000f\u0010\u001d\u001a\u00020\u0005H\u0002\u00a2\u0006\u0004\u0008\u001d\u0010\u001eJ\u0015\u0010 \u001a\u0008\u0012\u0004\u0012\u00020\u00050\u001fH\u0002\u00a2\u0006\u0004\u0008 \u0010!J\u000f\u0010#\u001a\u00020\"H\u0002\u00a2\u0006\u0004\u0008#\u0010$J\u0017\u0010%\u001a\u00020\u00152\u0006\u0010\u001a\u001a\u00020\u0005H\u0002\u00a2\u0006\u0004\u0008%\u0010&J\u001d\u0010)\u001a\u00020(2\u000c\u0010\'\u001a\u0008\u0012\u0004\u0012\u00020\u00050\u001fH\u0002\u00a2\u0006\u0004\u0008)\u0010*J\u0017\u0010,\u001a\u00020(2\u0006\u0010+\u001a\u00020\u000eH\u0002\u00a2\u0006\u0004\u0008,\u0010-J\u000f\u0010.\u001a\u00020\u0005H\u0016\u00a2\u0006\u0004\u0008.\u0010\u001eJ\u000f\u0010/\u001a\u00020\u0015H\u0016\u00a2\u0006\u0004\u0008/\u00100J\u0019\u00103\u001a\u00020\u00152\u0008\u00102\u001a\u0004\u0018\u000101H\u0016\u00a2\u0006\u0004\u00083\u00104R\u001a\u0010\u0004\u001a\u0008\u0012\u0004\u0012\u00020\u00030\u00028\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u0004\u00105R\u0014\u0010\u000f\u001a\u00020\u000e8\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u000f\u00106R\u0016\u0010\u0011\u001a\u0004\u0018\u00010\u00108\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u0011\u00107R\u0014\u00108\u001a\u00020\u000e8\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u00088\u00106R\u0016\u00109\u001a\u00020\u000e8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u00089\u00106R\u001b\u0010?\u001a\u00020:8BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008;\u0010<\u001a\u0004\u0008=\u0010>\u00a8\u0006B"
     }
     d2 = {
         "Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;",
@@ -39,12 +38,9 @@
         "<init>",
         "(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljava/util/concurrent/locks/Lock;Lru/ok/android/externcalls/analytics/internal/event/EventChannel;ZZILjava/lang/Long;)V",
         "now",
-        "Lb3h;",
+        "Lmah;",
         "scheduleNextUpload",
         "(Z)V",
-        "scheduleNextUploadUnsafe",
-        "requestContinueUpload",
-        "()V",
         "uploadImpl",
         "()Z",
         "file",
@@ -69,6 +65,7 @@
         "(I)Ljava/lang/String;",
         "getSink",
         "upload",
+        "()V",
         "Lru/ok/android/externcalls/analytics/internal/upload/Uploader$IdleStateProvider;",
         "idleStateProvider",
         "setIdleStateProvider",
@@ -78,14 +75,13 @@
         "Ljava/lang/Long;",
         "fileIndexStringLength",
         "scaleUpNextUploadTimeout",
-        "Landroid/os/Handler;",
-        "handler$delegate",
-        "Lo58;",
-        "getHandler",
-        "()Landroid/os/Handler;",
-        "handler",
+        "Lru/ok/android/externcalls/analytics/internal/upload/MultiUploadHelper;",
+        "multiUploadHelper$delegate",
+        "Lj88;",
+        "getMultiUploadHelper",
+        "()Lru/ok/android/externcalls/analytics/internal/upload/MultiUploadHelper;",
+        "multiUploadHelper",
         "Companion",
-        "LooperCallback",
         "StorageInfo",
         "calls-sdk-analytics_release"
     }
@@ -112,23 +108,11 @@
     .end annotation
 .end field
 
-.field public static final MSG_TRY_UPLOAD_NEXT:I = 0x3e9
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-.end field
-
-.field public static final UPLOAD_NEXT_INTERVAL:J = 0x1388L
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-.end field
-
 
 # instance fields
 .field private final fileCountLimit:I
 
 .field private final fileIndexStringLength:I
-
-.field private final handler$delegate:Lo58;
 
 .field private final looperProvider:Ljavax/inject/Provider;
     .annotation system Ldalvik/annotation/Signature;
@@ -139,6 +123,8 @@
         }
     .end annotation
 .end field
+
+.field private final multiUploadHelper$delegate:Lj88;
 
 .field private volatile scaleUpNextUploadTimeout:I
 
@@ -153,7 +139,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader$Companion;-><init>(Lso4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader$Companion;-><init>(Lfq4;)V
 
     sput-object v0, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;->Companion:Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader$Companion;
 
@@ -240,22 +226,22 @@
     iput p1, v0, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;->scaleUpNextUploadTimeout:I
 
     .line 8
-    new-instance p1, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader$handler$2;
+    new-instance p1, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader$multiUploadHelper$2;
 
-    invoke-direct {p1, p0}, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader$handler$2;-><init>(Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;)V
+    invoke-direct {p1, p0, v3}, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader$multiUploadHelper$2;-><init>(Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;Lru/ok/android/externcalls/analytics/internal/event/EventChannel;)V
 
     .line 9
-    new-instance p2, Ln8g;
+    new-instance p2, Lbgg;
 
-    invoke-direct {p2, p1}, Ln8g;-><init>(Llq6;)V
+    invoke-direct {p2, p1}, Lbgg;-><init>(Lis6;)V
 
     .line 10
-    iput-object p2, v0, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;->handler$delegate:Lo58;
+    iput-object p2, v0, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;->multiUploadHelper$delegate:Lj88;
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljava/util/concurrent/locks/Lock;Lru/ok/android/externcalls/analytics/internal/event/EventChannel;ZZILjava/lang/Long;ILso4;)V
+.method public synthetic constructor <init>(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljava/util/concurrent/locks/Lock;Lru/ok/android/externcalls/analytics/internal/event/EventChannel;ZZILjava/lang/Long;ILfq4;)V
     .locals 10
 
     and-int/lit8 v0, p9, 0x40
@@ -297,60 +283,6 @@
     return-void
 .end method
 
-.method public static synthetic a(Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;)V
-    .locals 0
-
-    invoke-static {p0}, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;->setIdleStateProvider$lambda$0(Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;)V
-
-    return-void
-.end method
-
-.method public static final synthetic access$calcBestNameForNewFile(Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;Ljava/util/List;)Ljava/lang/String;
-    .locals 0
-
-    invoke-direct {p0, p1}, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;->calcBestNameForNewFile(Ljava/util/List;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static final synthetic access$createNewFile(Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;)Ljava/io/File;
-    .locals 0
-
-    invoke-direct {p0}, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;->createNewFile()Ljava/io/File;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static final synthetic access$dropOldestFile(Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;Ljava/io/File;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;->dropOldestFile(Ljava/io/File;)V
-
-    return-void
-.end method
-
-.method public static final synthetic access$getAllFiles(Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;)Ljava/util/List;
-    .locals 0
-
-    invoke-direct {p0}, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;->getAllFiles()Ljava/util/List;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static final synthetic access$getFileCountLimit$p(Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;)I
-    .locals 0
-
-    iget p0, p0, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;->fileCountLimit:I
-
-    return p0
-.end method
-
 .method public static final synthetic access$getLooperProvider$p(Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;)Ljavax/inject/Provider;
     .locals 0
 
@@ -369,22 +301,12 @@
     return-object p0
 .end method
 
-.method public static final synthetic access$requestContinueUpload(Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;)V
+.method public static final synthetic access$getTimeBeforeNextUploadMs$p(Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;)Ljava/lang/Long;
     .locals 0
 
-    invoke-direct {p0}, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;->requestContinueUpload()V
+    iget-object p0, p0, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;->timeBeforeNextUploadMs:Ljava/lang/Long;
 
-    return-void
-.end method
-
-.method public static final synthetic access$uploadImpl(Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;)Z
-    .locals 0
-
-    invoke-direct {p0}, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;->uploadImpl()Z
-
-    move-result p0
-
-    return p0
+    return-object p0
 .end method
 
 .method private final calcBestNameForNewFile(Ljava/util/List;)Ljava/lang/String;
@@ -438,7 +360,7 @@
 
     move-result-object v7
 
-    invoke-static {v4, v7}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v4, v7}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v7
 
@@ -549,19 +471,159 @@
 .end method
 
 .method private final createNewFile()Ljava/io/File;
-    .locals 1
+    .locals 10
 
-    new-instance v0, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader$createNewFile$1;
-
-    invoke-direct {v0, p0}, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader$createNewFile$1;-><init>(Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;)V
-
-    invoke-virtual {p0, v0}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->withLock(Llq6;)Ljava/lang/Object;
+    invoke-virtual {p0}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->getLock()Ljava/util/concurrent/locks/Lock;
 
     move-result-object v0
 
-    check-cast v0, Ljava/io/File;
+    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->lock()V
 
-    return-object v0
+    :try_start_0
+    invoke-virtual {p0}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->getStorage()Ljavax/inject/Provider;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/io/File;
+
+    invoke-direct {p0}, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;->getStorageInfo()Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader$StorageInfo;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader$StorageInfo;->getAllFiles()Ljava/util/List;
+
+    move-result-object v3
+
+    invoke-interface {v3}, Ljava/util/List;->size()I
+
+    move-result v3
+
+    iget v4, p0, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;->fileCountLimit:I
+
+    if-lt v3, v4, :cond_1
+
+    invoke-virtual {v2}, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader$StorageInfo;->getOldestFile()Ljava/io/File;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_0
+
+    invoke-direct {p0, v3}, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;->dropOldestFile(Ljava/io/File;)V
+
+    invoke-direct {p0}, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;->getAllFiles()Ljava/util/List;
+
+    move-result-object v3
+
+    if-nez v3, :cond_2
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v1
+
+    goto :goto_4
+
+    :cond_0
+    :goto_0
+    invoke-virtual {v2}, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader$StorageInfo;->getAllFiles()Ljava/util/List;
+
+    move-result-object v3
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {v2}, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader$StorageInfo;->getAllFiles()Ljava/util/List;
+
+    move-result-object v3
+
+    :cond_2
+    :goto_1
+    invoke-direct {p0, v3}, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;->calcBestNameForNewFile(Ljava/util/List;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {p0}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->getLogger()Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;
+
+    move-result-object v4
+
+    const-string v5, "CallAnalyticsUploaderV2"
+
+    sget-object v6, Lg56;->a:[B
+
+    const-wide/16 v6, 0x0
+
+    if-nez v3, :cond_3
+
+    goto :goto_3
+
+    :cond_3
+    invoke-interface {v3}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+
+    move-result-object v3
+
+    :goto_2
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v8
+
+    if-eqz v8, :cond_4
+
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v8
+
+    check-cast v8, Ljava/io/File;
+
+    invoke-static {v8}, Lg56;->e(Ljava/io/File;)J
+
+    move-result-wide v8
+
+    add-long/2addr v6, v8
+
+    goto :goto_2
+
+    :cond_4
+    :goto_3
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v8, "Propose new file for upload cache: "
+
+    invoke-virtual {v3, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v8, ", total files size: "
+
+    invoke-virtual {v3, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v6, v7}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-interface {v4, v5, v3}, Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    new-instance v3, Ljava/io/File;
+
+    invoke-direct {v3, v1, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->unlock()V
+
+    return-object v3
+
+    :goto_4
+    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->unlock()V
+
+    throw v1
 .end method
 
 .method private final dropOldestFile(Ljava/io/File;)V
@@ -572,7 +634,7 @@
     const-string v1, "Oldest file "
 
     :try_start_0
-    invoke-static {p1}, Ll36;->b(Ljava/io/File;)V
+    invoke-static {p1}, Lg56;->b(Ljava/io/File;)V
 
     invoke-virtual {p0}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->getLogger()Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;
 
@@ -615,7 +677,7 @@
 
     const-string v4, " drop request failed"
 
-    invoke-static {v1, p1, v4}, Lj27;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, p1, v4}, Ltx8;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -651,14 +713,14 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {v0}, Lct;->t([Ljava/lang/Object;)Ljava/util/ArrayList;
+    invoke-static {v0}, Lnu;->t([Ljava/lang/Object;)Ljava/util/ArrayList;
 
     move-result-object v0
 
     return-object v0
 
     :cond_0
-    sget-object v0, Ldh5;->a:Ldh5;
+    sget-object v0, Lsi5;->a:Lsi5;
 
     return-object v0
 .end method
@@ -682,34 +744,34 @@
 
     const/16 v1, 0x5f
 
-    invoke-static {p1, v0, v1}, Lrzf;->L(Ljava/lang/String;IC)Ljava/lang/String;
+    invoke-static {p1, v0, v1}, Ld7g;->K(Ljava/lang/String;IC)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-static {v2, p1}, Lkz1;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, p1}, Lau1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
     return-object p1
 
     :cond_0
-    invoke-static {p1, v2}, Lj27;->g(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v2}, Ltx8;->g(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method private final getHandler()Landroid/os/Handler;
+.method private final getMultiUploadHelper()Lru/ok/android/externcalls/analytics/internal/upload/MultiUploadHelper;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;->handler$delegate:Lo58;
+    iget-object v0, p0, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;->multiUploadHelper$delegate:Lj88;
 
-    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Landroid/os/Handler;
+    check-cast v0, Lru/ok/android/externcalls/analytics/internal/upload/MultiUploadHelper;
 
     return-object v0
 .end method
@@ -778,60 +840,16 @@
     return-object v1
 .end method
 
-.method private final requestContinueUpload()V
-    .locals 4
-
-    :try_start_0
-    sget-object v0, Lru/ok/android/externcalls/analytics/internal/upload/UploadStarter;->INSTANCE:Lru/ok/android/externcalls/analytics/internal/upload/UploadStarter;
-
-    invoke-virtual {p0}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->getChannel()Lru/ok/android/externcalls/analytics/internal/event/EventChannel;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lru/ok/android/externcalls/analytics/internal/upload/UploadStarter;->resumeUpload(Lru/ok/android/externcalls/analytics/internal/event/EventChannel;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    invoke-virtual {p0}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->getLogger()Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;
-
-    move-result-object v1
-
-    const-string v2, "CallAnalyticsUploaderV2"
-
-    const-string v3, "Resume upload failed"
-
-    invoke-interface {v1, v2, v3, v0}, Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-void
-.end method
-
 .method private final scheduleNextUpload(Z)V
-    .locals 3
+    .locals 2
 
-    :try_start_0
-    invoke-direct {p0, p1}, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;->scheduleNextUploadUnsafe(Z)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    invoke-virtual {p0}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->getLogger()Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;
+    invoke-direct {p0}, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;->getMultiUploadHelper()Lru/ok/android/externcalls/analytics/internal/upload/MultiUploadHelper;
 
     move-result-object v0
 
-    const-string v1, "CallAnalyticsUploaderV2"
+    iget v1, p0, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;->scaleUpNextUploadTimeout:I
 
-    const-string v2, "Error during upload schedule update"
-
-    invoke-interface {v0, v1, v2, p1}, Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {v0, p1, v1}, Lru/ok/android/externcalls/analytics/internal/upload/MultiUploadHelper;->scheduleNextUpload(ZI)V
 
     return-void
 .end method
@@ -847,138 +865,6 @@
 
     :cond_0
     invoke-direct {p0, p1}, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;->scheduleNextUpload(Z)V
-
-    return-void
-.end method
-
-.method private final scheduleNextUploadUnsafe(Z)V
-    .locals 7
-
-    invoke-direct {p0}, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;->getStorageInfo()Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader$StorageInfo;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader$StorageInfo;->getAllFiles()Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result v0
-
-    const-string v1, "CallAnalyticsUploaderV2"
-
-    if-nez v0, :cond_3
-
-    invoke-direct {p0}, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;->getHandler()Landroid/os/Handler;
-
-    move-result-object v0
-
-    const/16 v2, 0x3e9
-
-    invoke-virtual {v0, v2}, Landroid/os/Handler;->hasMessages(I)Z
-
-    move-result v3
-
-    if-nez v3, :cond_2
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p0}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->getLogger()Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;
-
-    move-result-object p1
-
-    const-string v3, "schedule next upload pass now"
-
-    invoke-interface {p1, v1, v3}, Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {v0, v2}, Landroid/os/Handler;->removeMessages(I)V
-
-    invoke-virtual {v0, v2}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
-
-    return-void
-
-    :cond_0
-    iget-object p1, p0, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;->timeBeforeNextUploadMs:Ljava/lang/Long;
-
-    if-eqz p1, :cond_1
-
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v3
-
-    goto :goto_0
-
-    :cond_1
-    const-wide/16 v3, 0x1388
-
-    :goto_0
-    iget p1, p0, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;->scaleUpNextUploadTimeout:I
-
-    int-to-long v5, p1
-
-    mul-long/2addr v3, v5
-
-    invoke-virtual {p0}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->getLogger()Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;
-
-    move-result-object p1
-
-    const-string v5, "schedule next upload pass in "
-
-    const-string v6, " ms"
-
-    invoke-static {v3, v4, v5, v6}, Lcbh;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-interface {p1, v1, v5}, Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {v0, v2}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1, v3, v4}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
-
-    :cond_2
-    return-void
-
-    :cond_3
-    invoke-virtual {p0}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->getLogger()Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;
-
-    move-result-object p1
-
-    const-string v0, "empty storage, won\'t schedule new upload"
-
-    invoke-interface {p1, v1, v0}, Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public static synthetic scheduleNextUploadUnsafe$default(Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;ZILjava/lang/Object;)V
-    .locals 0
-
-    and-int/lit8 p2, p2, 0x1
-
-    if-eqz p2, :cond_0
-
-    const/4 p1, 0x0
-
-    :cond_0
-    invoke-direct {p0, p1}, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;->scheduleNextUploadUnsafe(Z)V
-
-    return-void
-.end method
-
-.method private static final setIdleStateProvider$lambda$0(Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    invoke-direct {p0, v0}, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;->scheduleNextUpload(Z)V
 
     return-void
 .end method
@@ -1183,23 +1069,39 @@
 
 # virtual methods
 .method public getSink()Ljava/io/File;
-    .locals 1
+    .locals 2
 
-    new-instance v0, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader$getSink$1;
-
-    invoke-direct {v0, p0}, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader$getSink$1;-><init>(Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;)V
-
-    invoke-virtual {p0, v0}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->withLock(Llq6;)Ljava/lang/Object;
+    invoke-virtual {p0}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->getLock()Ljava/util/concurrent/locks/Lock;
 
     move-result-object v0
 
-    check-cast v0, Ljava/io/File;
+    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->lock()V
 
-    return-object v0
+    const/4 v1, 0x1
+
+    :try_start_0
+    invoke-virtual {p0, v1}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->ensureStorageIsOfCorrectType(Z)Ljava/io/File;
+
+    invoke-direct {p0}, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;->createNewFile()Ljava/io/File;
+
+    move-result-object v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->unlock()V
+
+    return-object v1
+
+    :catchall_0
+    move-exception v1
+
+    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->unlock()V
+
+    throw v1
 .end method
 
 .method public setIdleStateProvider(Lru/ok/android/externcalls/analytics/internal/upload/Uploader$IdleStateProvider;)V
-    .locals 3
+    .locals 2
 
     invoke-virtual {p0}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->getIdleState()Lru/ok/android/externcalls/analytics/internal/upload/Uploader$IdleStateProvider;
 
@@ -1223,69 +1125,23 @@
     :goto_0
     invoke-super {p0, p1}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->setIdleStateProvider(Lru/ok/android/externcalls/analytics/internal/upload/Uploader$IdleStateProvider;)V
 
-    :try_start_0
-    sget-object v1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+    invoke-direct {p0}, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;->getMultiUploadHelper()Lru/ok/android/externcalls/analytics/internal/upload/MultiUploadHelper;
 
-    invoke-static {v0, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-result-object v1
 
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    if-eqz p1, :cond_1
-
-    invoke-interface {p1}, Lru/ok/android/externcalls/analytics/internal/upload/Uploader$IdleStateProvider;->isIdle()Z
-
-    move-result p1
-
-    const/4 v0, 0x1
-
-    if-ne p1, v0, :cond_1
-
-    invoke-direct {p0}, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;->getHandler()Landroid/os/Handler;
-
-    move-result-object p1
-
-    new-instance v0, Ldh6;
-
-    const/16 v1, 0x13
-
-    invoke-direct {v0, v1, p0}, Ldh6;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
-    :cond_1
-    return-void
-
-    :goto_1
-    invoke-virtual {p0}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->getLogger()Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;
-
-    move-result-object v0
-
-    const-string v1, "CallAnalyticsUploaderV2"
-
-    const-string v2, "Can\'t schedule next upload"
-
-    invoke-interface {v0, v1, v2, p1}, Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {v1, v0, p1}, Lru/ok/android/externcalls/analytics/internal/upload/MultiUploadHelper;->setIdleStateProvider(Ljava/lang/Boolean;Lru/ok/android/externcalls/analytics/internal/upload/Uploader$IdleStateProvider;)V
 
     return-void
 .end method
 
 .method public upload()V
-    .locals 3
+    .locals 7
 
     invoke-virtual {p0}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->getIdleState()Lru/ok/android/externcalls/analytics/internal/upload/Uploader$IdleStateProvider;
 
     move-result-object v0
+
+    const-string v1, "CallAnalyticsUploaderV2"
 
     if-eqz v0, :cond_0
 
@@ -1299,8 +1155,6 @@
 
     move-result-object v0
 
-    const-string v1, "CallAnalyticsUploaderV2"
-
     const-string v2, "call is not idle, postpone upload"
 
     invoke-interface {v0, v1, v2}, Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;->d(Ljava/lang/String;Ljava/lang/String;)V
@@ -1308,11 +1162,62 @@
     return-void
 
     :cond_0
-    new-instance v0, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader$upload$1;
+    invoke-virtual {p0}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->getLock()Ljava/util/concurrent/locks/Lock;
 
-    invoke-direct {v0, p0}, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader$upload$1;-><init>(Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;)V
+    move-result-object v0
 
-    invoke-virtual {p0, v0}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->withLock(Llq6;)Ljava/lang/Object;
+    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->lock()V
+
+    :try_start_0
+    invoke-direct {p0}, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;->uploadImpl()Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v2
+
+    :try_start_1
+    invoke-virtual {p0}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->getLogger()Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;
+
+    move-result-object v3
+
+    const-string v4, "Upload failed"
+
+    new-instance v5, Lru/ok/android/externcalls/analytics/internal/upload/StatDeliveryException;
+
+    invoke-virtual {p0}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->getChannel()Lru/ok/android/externcalls/analytics/internal/event/EventChannel;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Lru/ok/android/externcalls/analytics/internal/event/EventChannel;->getApiMethod()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-direct {v5, v6, v2}, Lru/ok/android/externcalls/analytics/internal/upload/StatDeliveryException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    invoke-interface {v3, v1, v4, v5}, Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;->report(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :goto_0
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    invoke-static {p0, v3, v1, v2}, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;->scheduleNextUpload$default(Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;ZILjava/lang/Object;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     return-void
+
+    :catchall_1
+    move-exception v1
+
+    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->unlock()V
+
+    throw v1
 .end method

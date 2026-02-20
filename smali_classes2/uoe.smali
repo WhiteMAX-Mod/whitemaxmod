@@ -1,136 +1,119 @@
-.class public final Luoe;
-.super Lj2;
+.class public abstract synthetic Luoe;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lwoe;
+
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
+
+.field public static final synthetic $EnumSwitchMapping$1:[I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 8
 
-    new-instance v0, Ldud;
-
-    const/16 v1, 0xa
-
-    invoke-direct {v0, v1}, Ldud;-><init>(I)V
-
-    invoke-direct {p0, v0}, Lj2;-><init>(Lnq6;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final q0()I
-    .locals 3
-
-    iget-object v0, p0, Lj2;->c:Ljava/lang/Object;
-
-    invoke-static {v0}, Ls5j;->q(Lo58;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0}, Lj2;->Q()I
-
-    move-result v0
-
-    const/4 v1, 0x4
-
-    int-to-float v1, v1
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    invoke-static {v1, v2, v0}, Lxi4;->c(FFI)I
-
-    move-result v0
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final setAlias(Landroid/text/Layout;)V
-    .locals 1
-
-    if-nez p1, :cond_1
-
-    iget-object p1, p0, Lj2;->c:Ljava/lang/Object;
-
-    invoke-interface {p1}, Lo58;->e()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lvoe;
-
-    const/16 v0, 0x8
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
-
-    :cond_0
-    return-void
-
-    :cond_1
-    invoke-virtual {p0}, Lj2;->Z()Landroid/view/View;
+    invoke-static {}, Llv2;->values()[Llv2;
 
     move-result-object v0
 
-    check-cast v0, Lvoe;
+    array-length v0, v0
 
-    invoke-virtual {v0, p1}, Lvoe;->setLayout(Landroid/text/Layout;)V
+    new-array v0, v0, [I
 
-    invoke-virtual {p0}, Lj2;->Z()Landroid/view/View;
+    const/4 v1, 0x1
 
-    move-result-object p1
+    const/4 v2, 0x0
 
-    const/4 v0, 0x0
+    :try_start_0
+    aput v1, v0, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
+    :catch_0
+    const/4 v3, 0x2
 
-    invoke-virtual {p0}, Lj2;->B()V
+    :try_start_1
+    aput v3, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    return-void
-.end method
+    :catch_1
+    const/4 v4, 0x3
 
-.method public final setAliasColor(I)V
-    .locals 2
+    :try_start_2
+    aput v4, v0, v4
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    iget-object v0, p0, Lj2;->c:Ljava/lang/Object;
+    :catch_2
+    const/4 v5, 0x4
 
-    invoke-interface {v0}, Lo58;->e()Z
+    :try_start_3
+    aput v5, v0, v3
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
 
-    move-result v1
+    :catch_3
+    const/4 v6, 0x5
 
-    if-eqz v1, :cond_0
+    :try_start_4
+    aput v6, v0, v5
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
 
-    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+    :catch_4
+    sput-object v0, Luoe;->$EnumSwitchMapping$0:[I
+
+    invoke-static {}, Luo9;->values()[Luo9;
 
     move-result-object v0
 
-    check-cast v0, Lvoe;
+    array-length v0, v0
 
-    invoke-virtual {v0, p1}, Lvoe;->setTextColor(I)V
+    new-array v0, v0, [I
 
-    :cond_0
+    :try_start_5
+    sget-object v7, Luo9;->b:Ljava/util/List;
+
+    aput v1, v0, v2
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
+
+    :catch_5
+    :try_start_6
+    sget-object v2, Luo9;->b:Ljava/util/List;
+
+    aput v3, v0, v1
+    :try_end_6
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
+
+    :catch_6
+    :try_start_7
+    sget-object v1, Luo9;->b:Ljava/util/List;
+
+    aput v4, v0, v3
+    :try_end_7
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
+
+    :catch_7
+    :try_start_8
+    sget-object v1, Luo9;->b:Ljava/util/List;
+
+    aput v5, v0, v4
+    :try_end_8
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_8
+
+    :catch_8
+    :try_start_9
+    sget-object v1, Luo9;->b:Ljava/util/List;
+
+    aput v6, v0, v5
+    :try_end_9
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_9 .. :try_end_9} :catch_9
+
+    :catch_9
+    sput-object v0, Luoe;->$EnumSwitchMapping$1:[I
+
     return-void
 .end method

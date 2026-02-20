@@ -1,103 +1,96 @@
-.class public abstract Lkcb;
+.class public final synthetic Lkcb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lis6;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:I
+# instance fields
+.field public final synthetic a:I
 
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
+.field public final synthetic b:Lncb;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Lncb;I)V
+    .locals 0
 
-    sget v0, Ls8d;->oneme_contact_not_found_bottom_sheet_negative_button:I
+    iput p2, p0, Lkcb;->a:I
 
-    sput v0, Lkcb;->a:I
+    iput-object p1, p0, Lkcb;->b:Lncb;
 
-    sget v0, Ls8d;->oneme_contact_not_found_bottom_sheet_positive_button:I
-
-    sput v0, Lkcb;->b:I
-
-    sget v0, Ls8d;->oneme_invite_action_view_type:I
-
-    sput v0, Lkcb;->c:I
-
-    sget v0, Ls8d;->oneme_invite_by_link_action_menu_item:I
-
-    sput v0, Lkcb;->d:I
-
-    sget v0, Ls8d;->oneme_invite_by_phone_action_menu_item:I
-
-    sput v0, Lkcb;->e:I
-
-    sget v0, Ls8d;->oneme_invite_by_phone_continue_button:I
-
-    sput v0, Lkcb;->f:I
-
-    sget v0, Ls8d;->oneme_invite_by_phone_description:I
-
-    sput v0, Lkcb;->g:I
-
-    sget v0, Ls8d;->oneme_invite_by_phone_input:I
-
-    sput v0, Lkcb;->h:I
-
-    sget v0, Ls8d;->oneme_invite_by_phone_title:I
-
-    sput v0, Lkcb;->i:I
-
-    sget v0, Ls8d;->oneme_invite_by_phone_toolbar:I
-
-    sput v0, Lkcb;->j:I
-
-    sget v0, Ls8d;->oneme_invite_by_qr_bottom_sheet_qr_code:I
-
-    sput v0, Lkcb;->k:I
-
-    sget v0, Ls8d;->oneme_invite_by_qr_bottom_sheet_qr_code_share:I
-
-    sput v0, Lkcb;->l:I
-
-    sget v0, Ls8d;->oneme_invite_friends_to_max_bottom_sheet_image_stack:I
-
-    sput v0, Lkcb;->m:I
-
-    sget v0, Ls8d;->oneme_invite_friends_to_max_bottom_sheet_invite_button:I
-
-    sput v0, Lkcb;->n:I
-
-    sget v0, Ls8d;->oneme_invite_friends_to_max_bottom_sheet_title:I
-
-    sput v0, Lkcb;->o:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 6
+
+    iget v0, p0, Lkcb;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lkcb;->b:Lncb;
+
+    invoke-virtual {v0}, Lncb;->c()Ljava/util/concurrent/ExecutorService;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Lkcb;->b:Lncb;
+
+    new-instance v1, Lvye;
+
+    iget-object v2, v0, Lncb;->c:Lzr3;
+
+    iget-object v3, v0, Lncb;->d:Lo6g;
+
+    new-instance v4, Lkcb;
+
+    const/4 v5, 0x0
+
+    invoke-direct {v4, v0, v5}, Lkcb;-><init>(Lncb;I)V
+
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+
+    iput-object v2, v1, Lvye;->a:Ljava/lang/Object;
+
+    iput-object v3, v1, Lvye;->b:Ljava/lang/Object;
+
+    iput-object v4, v1, Lvye;->c:Ljava/lang/Object;
+
+    new-instance v2, Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-direct {v2}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+
+    iput-object v2, v1, Lvye;->d:Ljava/lang/Object;
+
+    new-instance v2, Licb;
+
+    iget-object v0, v0, Lncb;->e:Lpff;
+
+    invoke-direct {v2, v1, v0}, Licb;-><init>(Lvye;Lpff;)V
+
+    return-object v2
+
+    :pswitch_1
+    iget-object v0, p0, Lkcb;->b:Lncb;
+
+    iget-object v0, v0, Lncb;->b:Lvf;
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -3,22 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Llq6;
+.implements Ljava/util/function/UnaryOperator;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;
+.field public final synthetic b:Ljava/util/List;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;I)V
+.method public synthetic constructor <init>(ILjava/util/List;)V
     .locals 0
 
-    iput p2, p0, Lf31;->a:I
+    iput p1, p0, Lf31;->a:I
 
-    iput-object p1, p0, Lf31;->b:Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;
+    iput-object p2, p0, Lf31;->b:Ljava/util/List;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,62 +27,145 @@
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 8
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
 
     iget v0, p0, Lf31;->a:I
 
-    iget-object v1, p0, Lf31;->b:Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;
-
     packed-switch v0, :pswitch_data_0
 
-    sget-object v0, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->t0:[Lz28;
+    check-cast p1, Ljava/util/List;
 
-    new-instance v0, Lh31;
+    iget-object p1, p0, Lf31;->b:Ljava/util/List;
 
-    invoke-direct {v0, v1}, Lh31;-><init>(Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;)V
-
-    return-object v0
+    return-object p1
 
     :pswitch_0
-    sget-object v0, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->t0:[Lz28;
+    check-cast p1, Ljava/util/List;
 
-    new-instance v4, Lv4e;
+    iget-object p1, p0, Lf31;->b:Ljava/util/List;
 
-    const/16 v0, 0x9
+    invoke-static {p1}, Lek3;->Z(Ljava/lang/Iterable;)Ljava/util/List;
 
-    invoke-direct {v4, v0, v1}, Lv4e;-><init>(ILjava/lang/Object;)V
+    move-result-object p1
 
-    new-instance v2, Ldke;
+    return-object p1
 
-    sget-object v0, Lpc3;->t0:Lkme;
+    :pswitch_1
+    check-cast p1, Lmu;
 
-    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    invoke-virtual {p1}, Lmu;->isEmpty()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    goto :goto_2
+
+    :cond_0
+    new-instance v0, Ljava/util/ArrayList;
+
+    const/16 v1, 0xa
+
+    iget-object v2, p0, Lf31;->b:Ljava/util/List;
+
+    invoke-static {v2, v1}, Lgk3;->n(Ljava/lang/Iterable;I)I
+
+    move-result v1
+
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
+
+    invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lru/ok/android/externcalls/sdk/ConversationParticipant;
+
+    invoke-virtual {v2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getExternalId()Lru/ok/android/externcalls/sdk/id/ParticipantId;
+
+    move-result-object v2
+
+    invoke-static {v2}, Lbxb;->a(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lpl1;
+
+    move-result-object v2
+
+    iget-wide v2, v2, Lpl1;->a:J
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    :cond_1
+    new-instance v1, Lmu;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, v2}, Lmu;-><init>(I)V
+
+    new-instance v2, Lfu;
+
+    invoke-direct {v2, p1}, Lfu;-><init>(Lmu;)V
+
+    :cond_2
+    :goto_1
+    invoke-virtual {v2}, Lfu;->hasNext()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_3
+
+    invoke-virtual {v2}, Lfu;->next()Ljava/lang/Object;
+
+    move-result-object p1
+
+    move-object v3, p1
+
+    check-cast v3, Ljava/lang/Number;
+
+    invoke-virtual {v3}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v3
+
+    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v3
 
-    invoke-virtual {v0, v3}, Lkme;->r(Landroid/content/Context;)Lzbb;
+    invoke-virtual {v0, v3}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
-    move-result-object v0
+    move-result v3
 
-    iget-object v3, v0, Lzbb;->c:Lzlb;
+    if-nez v3, :cond_2
 
-    new-instance v5, Li;
+    invoke-virtual {v1, p1}, Lmu;->add(Ljava/lang/Object;)Z
 
-    const/16 v0, 0x13
+    goto :goto_1
 
-    invoke-direct {v5, v0, v1}, Li;-><init>(ILjava/lang/Object;)V
+    :cond_3
+    move-object p1, v1
 
-    const/4 v6, 0x0
+    :goto_2
+    return-object p1
 
-    const/16 v7, 0x14
-
-    invoke-direct/range {v2 .. v7}, Ldke;-><init>(Lzlb;Lbke;Lnq6;Lk1e;I)V
-
-    return-object v2
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

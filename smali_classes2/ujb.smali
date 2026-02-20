@@ -1,100 +1,31 @@
-.class public final Lujb;
+.class public abstract Lujb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lvjb;
-
 
 # static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lujb;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public static final a:I
 
-.field public static final a:Lujb;
+.field public static final b:I
+
+.field public static final c:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lujb;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lujb;->a:Lujb;
-
-    new-instance v0, Lhu8;
-
-    const/16 v1, 0x1c
-
-    invoke-direct {v0, v1}, Lhu8;-><init>(I)V
-
-    sput-object v0, Lujb;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final describeContents()I
     .locals 1
 
-    const/4 v0, 0x0
+    sget v0, Lifd;->oneme_permissions_positive:I
 
-    return v0
-.end method
+    sput v0, Lujb;->a:I
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    sget v0, Lifd;->oneme_permissions_rationale:I
 
-    const/4 v0, 0x1
+    sput v0, Lujb;->b:I
 
-    if-ne p0, p1, :cond_0
+    sget v0, Lifd;->oneme_permissions_title:I
 
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Lujb;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, -0x77b9f821
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "Timer"
-
-    return-object v0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
-
-    const/4 p2, 0x1
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    sput v0, Lujb;->c:I
 
     return-void
 .end method

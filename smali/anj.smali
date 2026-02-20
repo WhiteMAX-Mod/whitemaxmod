@@ -1,49 +1,60 @@
-.class public abstract Lanj;
+.class public final Lanj;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Loza;
+
+
+# static fields
+.field public static final a:Lanj;
+
 
 # direct methods
-.method public static final a(Lbr6;)Ljava/lang/Object;
-    .locals 2
-
-    invoke-static {}, Ljava/lang/Thread;->interrupted()Z
-
-    new-instance v0, Lq6e;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p0, v1}, Lq6e;-><init>(Lbr6;Lkotlin/coroutines/Continuation;)V
-
-    sget-object p0, Lxg5;->a:Lxg5;
-
-    invoke-static {p0, v0}, Ls9j;->h(Lqb4;Lbr6;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static final b(Lr4h;)V
+.method static constructor <clinit>()V
     .locals 3
 
-    new-instance v0, Lmy4;
+    new-instance v0, Lanj;
 
-    const/4 v1, 0x3
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, v1}, Lmy4;-><init>(I)V
+    sput-object v0, Lanj;->a:Lanj;
 
-    const/4 v1, 0x2
+    new-instance v0, Lp7j;
 
-    invoke-virtual {p0, v1, v0}, Lr4h;->c(ILhs7;)V
+    const/4 v1, 0x1
 
-    new-instance v0, Lmy4;
+    invoke-direct {v0, v1}, Lp7j;-><init>(I)V
 
-    const/4 v2, 0x4
+    const-class v1, Lh8j;
 
-    invoke-direct {v0, v2}, Lmy4;-><init>(I)V
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
 
-    invoke-virtual {p0, v1, v0}, Lr4h;->c(ILhs7;)V
+    move-result-object v0
+
+    const/4 v2, 0x2
+
+    invoke-static {v0, v2}, Leni;->i(Ljava/util/HashMap;I)Lp7j;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, Leni;->m(Ljava/util/HashMap;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
+
+    invoke-static {p1}, Lkb0;->d(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+
+    move-result-object p1
+
+    throw p1
 .end method

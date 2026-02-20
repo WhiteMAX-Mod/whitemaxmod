@@ -49,7 +49,7 @@
 
     if-nez p1, :cond_0
 
-    instance-of p1, p3, Lln;
+    instance-of p1, p3, Lap;
 
     if-eqz p1, :cond_0
 
@@ -57,13 +57,13 @@
 
     iput-boolean p1, p0, Lcom/google/android/material/search/SearchBar$ScrollingViewBehavior;->g:Z
 
-    check-cast p3, Lln;
+    check-cast p3, Lap;
 
     invoke-virtual {p3, p2}, Landroid/view/View;->setBackgroundColor(I)V
 
     const/4 p1, 0x0
 
-    invoke-virtual {p3, p1}, Lln;->setTargetElevation(F)V
+    invoke-virtual {p3, p1}, Lap;->setTargetElevation(F)V
 
     :cond_0
     return p2

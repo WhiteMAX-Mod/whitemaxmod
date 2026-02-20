@@ -1,177 +1,112 @@
-.class public final Ls81;
+.class public final synthetic Ls81;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lw81;
+.implements Lco4;
 
 
 # instance fields
-.field public final a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+.field public final synthetic a:I
 
-.field public final b:I
+.field public final synthetic b:Ljava/lang/Object;
 
-.field public final c:I
-
-.field public final d:I
-
-.field public final e:Llhg;
-
-.field public final f:Llhg;
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;)V
-    .locals 1
+.method public synthetic constructor <init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    .locals 0
+
+    iput p2, p0, Ls81;->a:I
+
+    iput-object p1, p0, Ls81;->b:Ljava/lang/Object;
+
+    iput-object p3, p0, Ls81;->c:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ls81;->a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
-
-    sget p1, Ly6b;->J:I
-
-    iput p1, p0, Ls81;->b:I
-
-    sget p1, Lx6b;->l0:I
-
-    iput p1, p0, Ls81;->c:I
-
-    sget p1, Lx6b;->w0:I
-
-    iput p1, p0, Ls81;->d:I
-
-    sget p1, Lb7b;->C2:I
-
-    new-instance v0, Llhg;
-
-    invoke-direct {v0, p1}, Llhg;-><init>(I)V
-
-    iput-object v0, p0, Ls81;->e:Llhg;
-
-    iput-object v0, p0, Ls81;->f:Llhg;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()I
-    .locals 1
+.method public final a()Ljava/lang/Object;
+    .locals 9
 
-    iget v0, p0, Ls81;->c:I
+    iget v0, p0, Ls81;->a:I
 
-    return v0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final b()Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
-    .locals 1
+    iget-object v0, p0, Ls81;->b:Ljava/lang/Object;
 
-    iget-object v0, p0, Ls81;->a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+    move-object v4, v0
 
-    return-object v0
-.end method
+    check-cast v4, Ljava/lang/String;
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    iget-object v0, p0, Ls81;->c:Ljava/lang/Object;
 
-    const/4 v0, 0x1
+    move-object v5, v0
 
-    if-ne p0, p1, :cond_0
+    check-cast v5, Ljava/lang/String;
 
-    return v0
+    new-instance v1, Lone/me/settings/twofa/creation/TwoFACreationScreen;
 
-    :cond_0
-    instance-of v1, p1, Ls81;
+    const/16 v7, 0x10
 
-    const/4 v2, 0x0
+    const/4 v8, 0x0
 
-    if-nez v1, :cond_1
+    const-string v2, "CREATE"
 
-    return v2
+    const-string v3, "CREATE_PASSWORD"
 
-    :cond_1
-    check-cast p1, Ls81;
+    const/4 v6, 0x0
 
-    iget-object v1, p0, Ls81;->a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+    invoke-direct/range {v1 .. v8}, Lone/me/settings/twofa/creation/TwoFACreationScreen;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmu7;ILfq4;)V
 
-    iget-object p1, p1, Ls81;->a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+    return-object v1
 
-    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    :pswitch_0
+    iget-object v0, p0, Ls81;->b:Ljava/lang/Object;
 
-    move-result p1
+    check-cast v0, Lwn4;
 
-    if-nez p1, :cond_2
+    iget-object v1, p0, Ls81;->c:Ljava/lang/Object;
 
-    return v2
+    check-cast v1, Landroid/os/Bundle;
 
-    :cond_2
-    return v0
-.end method
+    new-instance v2, Lone/me/main/MainScreen;
 
-.method public final getContentDescription()Lqhg;
-    .locals 1
+    iget-object v0, v0, Lwn4;->a:Landroid/net/Uri;
 
-    iget-object v0, p0, Ls81;->f:Llhg;
-
-    return-object v0
-.end method
-
-.method public final getIcon()I
-    .locals 1
-
-    iget v0, p0, Ls81;->d:I
-
-    return v0
-.end method
-
-.method public final getId()I
-    .locals 1
-
-    iget v0, p0, Ls81;->b:I
-
-    return v0
-.end method
-
-.method public final getTitle()Lqhg;
-    .locals 1
-
-    iget-object v0, p0, Ls81;->e:Llhg;
-
-    return-object v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Ls81;->a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
-
-    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Earpiece(device="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Ls81;->a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0}, Leo4;->a(Landroid/net/Uri;)Ljava/lang/String;
 
     move-result-object v0
 
-    return-object v0
+    invoke-direct {v2, v0, v1}, Lone/me/main/MainScreen;-><init>(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    return-object v2
+
+    :pswitch_1
+    iget-object v0, p0, Ls81;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/String;
+
+    iget-object v1, p0, Ls81;->c:Ljava/lang/Object;
+
+    check-cast v1, Ljava/lang/Boolean;
+
+    new-instance v2, Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;
+
+    invoke-direct {v2, v0, v1}, Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;-><init>(Ljava/lang/String;Ljava/lang/Boolean;)V
+
+    return-object v2
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

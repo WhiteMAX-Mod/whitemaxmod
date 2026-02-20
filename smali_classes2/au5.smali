@@ -1,128 +1,145 @@
-.class public final synthetic Lau5;
-.super Ljava/lang/Object;
+.class public final Lau5;
+.super Lujg;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final c:Ljava/lang/Long;
 
-.field public final synthetic b:Lbu5;
-
-.field public final synthetic c:Lzt5;
+.field public final d:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lbu5;Lzt5;I)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/Long;)V
     .locals 0
 
-    iput p3, p0, Lau5;->a:I
-
-    iput-object p1, p0, Lau5;->b:Lbu5;
-
-    iput-object p2, p0, Lau5;->c:Lzt5;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p2, p0, Lau5;->c:Ljava/lang/Long;
+
+    iput-object p1, p0, Lau5;->d:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget p1, p0, Lau5;->a:I
+    const/4 v0, 0x1
 
-    packed-switch p1, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    iget-object p1, p0, Lau5;->b:Lbu5;
-
-    iget-object p1, p1, Lbu5;->G0:Lsy0;
-
-    if-eqz p1, :cond_0
-
-    iget-object v0, p0, Lau5;->c:Lzt5;
-
-    iget-wide v0, v0, Lzt5;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Lsy0;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    return v0
 
     :cond_0
-    return-void
+    instance-of v1, p1, Lau5;
 
-    :pswitch_0
-    iget-object p1, p0, Lau5;->b:Lbu5;
+    const/4 v2, 0x0
 
-    iget-object p1, p1, Lbu5;->F0:Lsy0;
+    if-nez v1, :cond_1
 
-    if-eqz p1, :cond_1
-
-    iget-object v0, p0, Lau5;->c:Lzt5;
-
-    iget-wide v0, v0, Lzt5;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Lsy0;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    return v2
 
     :cond_1
-    return-void
+    check-cast p1, Lau5;
 
-    :pswitch_1
-    iget-object p1, p0, Lau5;->b:Lbu5;
+    iget-object v1, p0, Lau5;->c:Ljava/lang/Long;
 
-    iget-object p1, p1, Lbu5;->G0:Lsy0;
+    iget-object v3, p1, Lau5;->c:Ljava/lang/Long;
 
-    if-eqz p1, :cond_2
+    invoke-static {v1, v3}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Lau5;->c:Lzt5;
+    move-result v1
 
-    iget-wide v0, v0, Lzt5;->a:J
+    if-nez v1, :cond_2
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Lsy0;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    return v2
 
     :cond_2
-    return-void
+    iget-object v1, p0, Lau5;->d:Ljava/lang/String;
 
-    :pswitch_2
-    iget-object p1, p0, Lau5;->b:Lbu5;
+    iget-object p1, p1, Lau5;->d:Ljava/lang/String;
 
-    iget-object p1, p1, Lbu5;->F0:Lsy0;
+    invoke-static {v1, p1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    if-eqz p1, :cond_3
+    move-result p1
 
-    iget-object v0, p0, Lau5;->c:Lzt5;
+    if-nez p1, :cond_3
 
-    iget-wide v0, v0, Lzt5;->a:J
+    return v2
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Lau5;->c:Ljava/lang/Long;
+
+    if-nez v1, :cond_0
+
+    move v1, v0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    :goto_0
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v2, p0, Lau5;->d:Ljava/lang/String;
+
+    if-nez v2, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    :goto_1
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Response(botId="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lau5;->c:Ljava/lang/Long;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", startParam="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lau5;->d:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lsy0;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_3
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

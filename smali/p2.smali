@@ -1,23 +1,23 @@
 .class public Lp2;
-.super Love;
+.super Lw2f;
 .source "SourceFile"
 
 
 # instance fields
 .field public final b:Ljava/util/Map;
 
-.field public final synthetic c:Lg2;
+.field public final synthetic c:Li2;
 
 
 # direct methods
-.method public constructor <init>(Lg2;Ljava/util/Map;)V
+.method public constructor <init>(Li2;Ljava/util/Map;)V
     .locals 0
 
-    iput-object p1, p0, Lp2;->c:Lg2;
+    iput-object p1, p0, Lp2;->c:Li2;
 
     const/4 p1, 0x0
 
-    invoke-direct {p0, p1}, Love;-><init>(I)V
+    invoke-direct {p0, p1}, Lw2f;-><init>(I)V
 
     invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -184,13 +184,13 @@
 
     invoke-interface {p1}, Ljava/util/Collection;->clear()V
 
-    iget-object p1, p0, Lp2;->c:Lg2;
+    iget-object p1, p0, Lp2;->c:Li2;
 
-    iget v2, p1, Lg2;->o:I
+    iget v2, p1, Li2;->o:I
 
     sub-int/2addr v2, v1
 
-    iput v2, p1, Lg2;->o:I
+    iput v2, p1, Li2;->o:I
 
     goto :goto_0
 

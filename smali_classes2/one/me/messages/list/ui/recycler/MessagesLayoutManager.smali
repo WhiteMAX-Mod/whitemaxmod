@@ -12,8 +12,8 @@
         "Lone/me/messages/list/ui/recycler/MessagesLayoutManager;",
         "Landroidx/recyclerview/widget/LinearLayoutManager;",
         "",
-        "sv9",
-        "tv9",
+        "ay9",
+        "by9",
         "message-list_release"
     }
     k = 0x1
@@ -35,11 +35,11 @@
 
 .field public final H:Landroid/graphics/Rect;
 
-.field public I:Lsv9;
+.field public I:Lay9;
 
-.field public final J:Lkfa;
+.field public final J:Ldia;
 
-.field public final K:Ldh6;
+.field public final K:Lws5;
 
 
 # direct methods
@@ -66,21 +66,21 @@
 
     iput-object v1, p0, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->H:Landroid/graphics/Rect;
 
-    sget-object v1, Lfae;->a:Lkfa;
+    sget-object v1, Luge;->a:Ldia;
 
-    new-instance v1, Lkfa;
+    new-instance v1, Ldia;
 
-    invoke-direct {v1}, Lkfa;-><init>()V
+    invoke-direct {v1}, Ldia;-><init>()V
 
-    iput-object v1, p0, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->J:Lkfa;
+    iput-object v1, p0, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->J:Ldia;
 
-    new-instance v1, Ldh6;
+    new-instance v1, Lws5;
 
-    const/16 v2, 0x12
+    const/16 v2, 0x15
 
-    invoke-direct {v1, v2, p0}, Ldh6;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v2, p0}, Lws5;-><init>(ILjava/lang/Object;)V
 
-    iput-object v1, p0, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->K:Ldh6;
+    iput-object v1, p0, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->K:Lws5;
 
     invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/LinearLayoutManager;->r1(Z)V
 
@@ -102,16 +102,16 @@
 
     iget-object v1, p0, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->E:Ljava/lang/String;
 
-    sget-object v2, Lc5j;->a:Ledb;
+    sget-object v2, Ltej;->a:Lafb;
 
     if-nez v2, :cond_0
 
     goto :goto_1
 
     :cond_0
-    sget-object v3, Lkk8;->d:Lkk8;
+    sget-object v3, Lzm8;->d:Lzm8;
 
-    invoke-virtual {v2, v3}, Ledb;->b(Lkk8;)Z
+    invoke-virtual {v2, v3}, Lafb;->b(Lzm8;)Z
 
     move-result v4
 
@@ -123,13 +123,13 @@
 
     if-eqz v4, :cond_1
 
-    invoke-virtual {v4}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lwrd;
+    invoke-virtual {v4}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lsxd;
 
     move-result-object v4
 
     if-eqz v4, :cond_1
 
-    invoke-virtual {v4}, Lwrd;->j()I
+    invoke-virtual {v4}, Lsxd;->j()I
 
     move-result v4
 
@@ -161,7 +161,7 @@
 
     move-result-object v4
 
-    invoke-virtual {v2, v3, v1, v4, v5}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {v2, v3, v1, v4, v5}, Lafb;->c(Lzm8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_2
     :goto_1
@@ -176,13 +176,13 @@
 
     if-eqz v0, :cond_4
 
-    new-instance v1, Lgg8;
+    new-instance v1, Lxi8;
 
     const/4 v2, 0x1
 
-    invoke-direct {v1, p0, p1, v2}, Lgg8;-><init>(Ljava/lang/Object;II)V
+    invoke-direct {v1, p0, p1, v2}, Lxi8;-><init>(Ljava/lang/Object;II)V
 
-    invoke-static {v0, v1}, Ls5j;->e(Landroid/view/View;Llq6;)V
+    invoke-static {v0, v1}, Lfej;->f(Landroid/view/View;Lis6;)V
 
     :cond_4
     return-void
@@ -191,7 +191,7 @@
 .method public final K0(Landroidx/recyclerview/widget/RecyclerView;I)V
     .locals 11
 
-    sget-object v0, Lkk8;->d:Lkk8;
+    sget-object v0, Lzm8;->d:Lzm8;
 
     invoke-virtual {p0}, Landroidx/recyclerview/widget/LinearLayoutManager;->Y0()I
 
@@ -274,26 +274,26 @@
     :goto_2
     iget-object v1, p0, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->E:Ljava/lang/String;
 
-    sget-object v7, Lc5j;->a:Ledb;
+    sget-object v7, Ltej;->a:Lafb;
 
     if-nez v7, :cond_6
 
     goto :goto_4
 
     :cond_6
-    invoke-virtual {v7, v0}, Ledb;->b(Lkk8;)Z
+    invoke-virtual {v7, v0}, Lafb;->b(Lzm8;)Z
 
     move-result v8
 
     if-eqz v8, :cond_8
 
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lwrd;
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lsxd;
 
     move-result-object v8
 
     if-eqz v8, :cond_7
 
-    invoke-virtual {v8}, Lwrd;->j()I
+    invoke-virtual {v8}, Lsxd;->j()I
 
     move-result v8
 
@@ -329,7 +329,7 @@
 
     move-result-object v8
 
-    invoke-virtual {v7, v0, v1, v8, v4}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {v7, v0, v1, v8, v4}, Lafb;->c(Lzm8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_8
     :goto_4
@@ -402,40 +402,40 @@
     move v5, v6
 
     :cond_e
-    new-instance v2, Lsv9;
+    new-instance v2, Lay9;
 
-    new-instance v6, Lxw5;
+    new-instance v6, Liy5;
 
     const/4 v7, 0x1
 
-    invoke-direct {v6, p0, p2, p1, v7}, Lxw5;-><init>(Ljava/lang/Object;ILjava/lang/Object;I)V
+    invoke-direct {v6, p0, p2, p1, v7}, Liy5;-><init>(Ljava/lang/Object;ILjava/lang/Object;I)V
 
-    invoke-direct {v2, v1, p2, v5, v6}, Lsv9;-><init>(Landroid/content/Context;IZLxw5;)V
+    invoke-direct {v2, v1, p2, v5, v6}, Lay9;-><init>(Landroid/content/Context;IZLiy5;)V
 
-    iput-object v2, p0, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->I:Lsv9;
+    iput-object v2, p0, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->I:Lay9;
 
     iget-object v1, p0, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->E:Ljava/lang/String;
 
-    sget-object v5, Lc5j;->a:Ledb;
+    sget-object v5, Ltej;->a:Lafb;
 
     if-nez v5, :cond_f
 
     goto :goto_b
 
     :cond_f
-    invoke-virtual {v5, v0}, Ledb;->b(Lkk8;)Z
+    invoke-virtual {v5, v0}, Lafb;->b(Lzm8;)Z
 
     move-result v6
 
     if-eqz v6, :cond_11
 
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lwrd;
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lsxd;
 
     move-result-object p1
 
     if-eqz p1, :cond_10
 
-    invoke-virtual {p1}, Lwrd;->j()I
+    invoke-virtual {p1}, Lsxd;->j()I
 
     move-result p1
 
@@ -465,11 +465,11 @@
 
     move-result-object p1
 
-    invoke-virtual {v5, v0, v1, p1, v4}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {v5, v0, v1, p1, v4}, Lafb;->c(Lzm8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_11
     :goto_b
-    invoke-virtual {p0, v2}, Landroidx/recyclerview/widget/a;->L0(Lc98;)V
+    invoke-virtual {p0, v2}, Landroidx/recyclerview/widget/a;->L0(Ltb8;)V
 
     return-void
 
@@ -490,7 +490,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/RecyclerView;->T(Landroid/view/View;)Ltsd;
+    invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/RecyclerView;->U(Landroid/view/View;)Lpyd;
 
     move-result-object v1
 
@@ -500,9 +500,9 @@
     return-void
 
     :cond_1
-    instance-of v2, v1, Ldi2;
+    instance-of v2, v1, Ljj2;
 
-    iget v1, v1, Ltsd;->X:I
+    iget v1, v1, Lpyd;->X:I
 
     if-nez v1, :cond_2
 
@@ -511,7 +511,7 @@
     :cond_2
     if-nez v2, :cond_4
 
-    invoke-static {v1}, Lar9;->e(I)Z
+    invoke-static {v1}, Lit9;->e(I)Z
 
     move-result v1
 
@@ -578,7 +578,7 @@
 
     if-eqz p1, :cond_0
 
-    iget-object v0, p0, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->K:Ldh6;
+    iget-object v0, p0, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->K:Lws5;
 
     invoke-virtual {p1, v0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
@@ -591,7 +591,7 @@
 
     invoke-virtual {v0}, Landroid/graphics/Rect;->setEmpty()V
 
-    iput-object p1, p0, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->I:Lsv9;
+    iput-object p1, p0, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->I:Lay9;
 
     return-void
 .end method
@@ -599,14 +599,14 @@
 .method public final f0(II)V
     .locals 3
 
-    iget-object v0, p0, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->I:Lsv9;
+    iget-object v0, p0, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->I:Lay9;
 
     if-nez v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    iget v1, v0, Lc98;->a:I
+    iget v1, v0, Ltb8;->a:I
 
     const/4 v2, -0x1
 
@@ -634,11 +634,11 @@
 
     const/4 p2, 0x0
 
-    invoke-static {v1, p2, p1}, Lamj;->d(III)I
+    invoke-static {v1, p2, p1}, Liuj;->d(III)I
 
     move-result p1
 
-    invoke-virtual {v0, p1}, Lsv9;->o(I)V
+    invoke-virtual {v0, p1}, Lay9;->o(I)V
 
     :cond_3
     :goto_0
@@ -650,9 +650,19 @@
 .method public final g0()V
     .locals 4
 
-    iget-object v0, p0, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->I:Lsv9;
+    iget-object v0, p0, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->I:Lay9;
 
     if-nez v0, :cond_0
+
+    const-class v0, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "Early return in replanOnDataSetChanged cuz of activeSmoothScroller is null"
+
+    invoke-static {v0, v1}, Ltej;->t(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -663,30 +673,30 @@
 
     if-gtz v1, :cond_1
 
-    invoke-virtual {v0}, Lc98;->m()V
+    invoke-virtual {v0}, Ltb8;->m()V
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->I:Lsv9;
+    iput-object v0, p0, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->I:Lay9;
 
     goto :goto_0
 
     :cond_1
-    iget v2, v0, Lc98;->a:I
+    iget v2, v0, Ltb8;->a:I
 
     add-int/lit8 v1, v1, -0x1
 
     const/4 v3, 0x0
 
-    invoke-static {v2, v3, v1}, Lamj;->d(III)I
+    invoke-static {v2, v3, v1}, Liuj;->d(III)I
 
     move-result v1
 
-    iget v2, v0, Lc98;->a:I
+    iget v2, v0, Ltb8;->a:I
 
     if-eq v1, v2, :cond_2
 
-    invoke-virtual {v0, v1}, Lsv9;->o(I)V
+    invoke-virtual {v0, v1}, Lay9;->o(I)V
 
     :cond_2
     :goto_0
@@ -698,14 +708,14 @@
 .method public final h0(II)V
     .locals 3
 
-    iget-object v0, p0, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->I:Lsv9;
+    iget-object v0, p0, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->I:Lay9;
 
     if-nez v0, :cond_0
 
     goto :goto_1
 
     :cond_0
-    iget v1, v0, Lc98;->a:I
+    iget v1, v0, Ltb8;->a:I
 
     const/4 v2, -0x1
 
@@ -763,13 +773,13 @@
 
     const/4 v2, 0x0
 
-    invoke-static {p2, v2, p1}, Lamj;->d(III)I
+    invoke-static {p2, v2, p1}, Liuj;->d(III)I
 
     move-result p1
 
     if-eq p1, v1, :cond_6
 
-    invoke-virtual {v0, p1}, Lsv9;->o(I)V
+    invoke-virtual {v0, p1}, Lay9;->o(I)V
 
     :cond_6
     :goto_1
@@ -781,14 +791,14 @@
 .method public final i0(II)V
     .locals 4
 
-    iget-object v0, p0, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->I:Lsv9;
+    iget-object v0, p0, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->I:Lay9;
 
     if-nez v0, :cond_0
 
     goto :goto_1
 
     :cond_0
-    iget v1, v0, Lc98;->a:I
+    iget v1, v0, Ltb8;->a:I
 
     const/4 v2, -0x1
 
@@ -807,11 +817,11 @@
 
     if-gtz v3, :cond_2
 
-    invoke-virtual {v0}, Lc98;->m()V
+    invoke-virtual {v0}, Ltb8;->m()V
 
     const/4 p1, 0x0
 
-    iput-object p1, p0, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->I:Lsv9;
+    iput-object p1, p0, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->I:Lay9;
 
     goto :goto_1
 
@@ -846,7 +856,7 @@
     :goto_0
     if-eq p1, v1, :cond_6
 
-    invoke-virtual {v0, p1}, Lsv9;->o(I)V
+    invoke-virtual {v0, p1}, Lay9;->o(I)V
 
     :cond_6
     :goto_1
@@ -873,10 +883,10 @@
     return-void
 .end method
 
-.method public final m0(Lpsd;)V
+.method public final m0(Llyd;)V
     .locals 13
 
-    invoke-super {p0, p1}, Landroidx/recyclerview/widget/LinearLayoutManager;->m0(Lpsd;)V
+    invoke-super {p0, p1}, Landroidx/recyclerview/widget/LinearLayoutManager;->m0(Llyd;)V
 
     invoke-virtual {p0}, Landroidx/recyclerview/widget/LinearLayoutManager;->Y0()I
 
@@ -892,11 +902,11 @@
 
     if-eq p1, v0, :cond_3
 
-    iget-object p1, p0, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->J:Lkfa;
+    iget-object p1, p0, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->J:Ldia;
 
-    iget-object v0, p1, Lkfa;->b:[Ljava/lang/Object;
+    iget-object v0, p1, Ldia;->b:[Ljava/lang/Object;
 
-    iget-object p1, p1, Lkfa;->a:[J
+    iget-object p1, p1, Ldia;->a:[J
 
     array-length v1, p1
 
@@ -958,9 +968,9 @@
 
     aget-object v9, v0, v9
 
-    check-cast v9, Ltv9;
+    check-cast v9, Lby9;
 
-    invoke-interface {v9}, Ltv9;->b()V
+    invoke-interface {v9}, Lby9;->b()V
 
     :cond_0
     shr-long/2addr v4, v7
@@ -983,16 +993,16 @@
     return-void
 .end method
 
-.method public final v1(Ltv9;)V
+.method public final v1(Lby9;)V
     .locals 16
 
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->J:Lkfa;
+    iget-object v1, v0, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->J:Ldia;
 
-    iget-object v2, v1, Lkfa;->b:[Ljava/lang/Object;
+    iget-object v2, v1, Ldia;->b:[Ljava/lang/Object;
 
-    iget-object v3, v1, Lkfa;->a:[J
+    iget-object v3, v1, Ldia;->a:[J
 
     array-length v4, v3
 
@@ -1054,13 +1064,13 @@
 
     aget-object v13, v2, v12
 
-    check-cast v13, Ltv9;
+    check-cast v13, Lby9;
 
-    invoke-interface {v13}, Ltv9;->getTag()Ljava/lang/String;
+    invoke-interface {v13}, Lby9;->getTag()Ljava/lang/String;
 
     move-result-object v13
 
-    invoke-interface/range {p1 .. p1}, Ltv9;->getTag()Ljava/lang/String;
+    invoke-interface/range {p1 .. p1}, Lby9;->getTag()Ljava/lang/String;
 
     move-result-object v14
 
@@ -1070,7 +1080,7 @@
 
     if-eqz v13, :cond_0
 
-    invoke-virtual {v1, v12}, Lkfa;->i(I)V
+    invoke-virtual {v1, v12}, Ldia;->i(I)V
 
     :cond_0
     shr-long/2addr v7, v10
@@ -1098,7 +1108,7 @@
     goto :goto_0
 
     :goto_3
-    invoke-virtual {v1, v2}, Lkfa;->a(Ljava/lang/Object;)V
+    invoke-virtual {v1, v2}, Ldia;->a(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -1108,7 +1118,7 @@
 
     iget-object v0, p0, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->G:Landroidx/recyclerview/widget/RecyclerView;
 
-    iget-object v1, p0, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->K:Ldh6;
+    iget-object v1, p0, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->K:Lws5;
 
     if-eqz v0, :cond_0
 
@@ -1142,11 +1152,11 @@
 
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->J:Lkfa;
+    iget-object v1, v0, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->J:Ldia;
 
-    iget-object v2, v1, Lkfa;->b:[Ljava/lang/Object;
+    iget-object v2, v1, Ldia;->b:[Ljava/lang/Object;
 
-    iget-object v3, v1, Lkfa;->a:[J
+    iget-object v3, v1, Ldia;->a:[J
 
     array-length v4, v3
 
@@ -1208,9 +1218,9 @@
 
     aget-object v13, v2, v12
 
-    check-cast v13, Ltv9;
+    check-cast v13, Lby9;
 
-    invoke-interface {v13}, Ltv9;->getTag()Ljava/lang/String;
+    invoke-interface {v13}, Lby9;->getTag()Ljava/lang/String;
 
     move-result-object v13
 
@@ -1222,7 +1232,7 @@
 
     if-eqz v13, :cond_1
 
-    invoke-virtual {v1, v12}, Lkfa;->i(I)V
+    invoke-virtual {v1, v12}, Ldia;->i(I)V
 
     goto :goto_2
 
@@ -1267,7 +1277,7 @@
 
     iget-object v0, p0, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->H:Landroid/graphics/Rect;
 
-    invoke-static {v0, p1}, Landroidx/recyclerview/widget/RecyclerView;->V(Landroid/graphics/Rect;Landroid/view/View;)V
+    invoke-static {v0, p1}, Landroidx/recyclerview/widget/RecyclerView;->W(Landroid/graphics/Rect;Landroid/view/View;)V
 
     iget-object p1, p0, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->G:Landroidx/recyclerview/widget/RecyclerView;
 
@@ -1308,7 +1318,7 @@
 
     int-to-float p1, p1
 
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -1320,7 +1330,7 @@
 
     mul-float/2addr p1, v0
 
-    invoke-static {p1}, Lq7j;->c(F)I
+    invoke-static {p1}, Lmhj;->f(F)I
 
     move-result p1
 

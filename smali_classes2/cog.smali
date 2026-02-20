@@ -3,22 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lis6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lomb;
+.field public final synthetic b:Lkog;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lomb;I)V
+.method public synthetic constructor <init>(Lkog;I)V
     .locals 0
 
     iput p2, p0, Lcog;->a:I
 
-    iput-object p1, p0, Lcog;->b:Lomb;
+    iput-object p1, p0, Lcog;->b:Lkog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,46 +27,79 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 6
 
     iget v0, p0, Lcog;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lcog;->b:Lomb;
+    iget-object v0, p0, Lcog;->b:Lkog;
 
-    check-cast v0, Lhmb;
+    new-instance v1, Ljog;
 
-    iget-object v0, v0, Lhmb;->a:Lnq6;
+    invoke-direct {v1, v0}, Ljog;-><init>(Lkog;)V
 
-    invoke-interface {v0, p1}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
+    return-object v1
 
     :pswitch_0
-    iget-object v0, p0, Lcog;->b:Lomb;
+    iget-object v0, p0, Lcog;->b:Lkog;
 
-    check-cast v0, Limb;
+    new-instance v1, Landroid/util/LruCache;
 
-    iget-object v0, v0, Limb;->a:Lnq6;
+    const/16 v2, 0x64
 
-    invoke-interface {v0, p1}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v1, v2}, Landroid/util/LruCache;-><init>(I)V
 
-    return-void
+    iget-object v0, v0, Lkog;->h:Ljava/lang/String;
+
+    sget-object v2, Ltej;->a:Lafb;
+
+    if-nez v2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sget-object v3, Lzm8;->d:Lzm8;
+
+    invoke-virtual {v2, v3}, Lafb;->b(Lzm8;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    const-string v4, "TextLayoutManager cache initialized with size=100"
+
+    const/4 v5, 0x0
+
+    invoke-virtual {v2, v3, v0, v4, v5}, Lafb;->c(Lzm8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
+    :goto_0
+    return-object v1
 
     :pswitch_1
-    iget-object v0, p0, Lcog;->b:Lomb;
+    iget-object v0, p0, Lcog;->b:Lkog;
 
-    check-cast v0, Lnmb;
+    iget-object v0, v0, Lkog;->a:Landroid/content/Context;
 
-    iget-object v0, v0, Lnmb;->a:Lnq6;
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    invoke-interface {v0, p1}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object v0
 
-    return-void
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    nop
+    move-result-object v0
+
+    new-instance v1, Landroid/util/Size;
+
+    iget v2, v0, Landroid/util/DisplayMetrics;->widthPixels:I
+
+    iget v0, v0, Landroid/util/DisplayMetrics;->heightPixels:I
+
+    invoke-direct {v1, v2, v0}, Landroid/util/Size;-><init>(II)V
+
+    return-object v1
 
     :pswitch_data_0
     .packed-switch 0x0

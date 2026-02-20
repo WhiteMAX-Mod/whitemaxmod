@@ -17,13 +17,13 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTracker;",
         "",
-        "Lxkg;",
+        "Losg;",
         "timeProvider",
         "<init>",
-        "(Lxkg;)V",
+        "(Losg;)V",
         "",
         "name",
-        "Lb3h;",
+        "Lmah;",
         "onRequest",
         "(Ljava/lang/String;)V",
         "onAnswer",
@@ -31,7 +31,7 @@
         "Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTracker$StatisticsInfo;",
         "extractStatistics",
         "()Ljava/util/Collection;",
-        "Lxkg;",
+        "Losg;",
         "lock",
         "Ljava/lang/Object;",
         "Ljava/util/concurrent/ConcurrentHashMap;",
@@ -79,16 +79,16 @@
     .end annotation
 .end field
 
-.field private final timeProvider:Lxkg;
+.field private final timeProvider:Losg;
 
 
 # direct methods
-.method public constructor <init>(Lxkg;)V
+.method public constructor <init>(Losg;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTracker;->timeProvider:Lxkg;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTracker;->timeProvider:Losg;
 
     new-instance p1, Ljava/lang/Object;
 
@@ -135,7 +135,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lpi3;->Z(Ljava/lang/Iterable;)Ljava/util/List;
+    invoke-static {v1}, Lek3;->Z(Ljava/lang/Iterable;)Ljava/util/List;
 
     move-result-object v1
 
@@ -181,9 +181,9 @@
 
     move-result-wide v0
 
-    iget-object v2, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTracker;->timeProvider:Lxkg;
+    iget-object v2, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTracker;->timeProvider:Losg;
 
-    invoke-interface {v2}, Lxkg;->getMsSinceBoot()J
+    invoke-interface {v2}, Losg;->getMsSinceBoot()J
 
     move-result-wide v2
 
@@ -240,9 +240,9 @@
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTracker;->requestTimestampMs:Ljava/util/concurrent/ConcurrentHashMap;
 
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTracker;->timeProvider:Lxkg;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTracker;->timeProvider:Losg;
 
-    invoke-interface {v1}, Lxkg;->getMsSinceBoot()J
+    invoke-interface {v1}, Losg;->getMsSinceBoot()J
 
     move-result-wide v1
 

@@ -1,23 +1,51 @@
 .class public final Lz;
-.super Ld3;
+.super Lda4;
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:Lz;
+# instance fields
+.field public final synthetic X:La0;
+
+.field public Y:I
+
+.field public d:Lte2;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(La0;Lda4;)V
+    .locals 0
 
-    new-instance v0, Lz;
+    iput-object p1, p0, Lz;->X:La0;
 
-    const/16 v1, 0xc
-
-    invoke-direct {v0, v1}, Ld3;-><init>(I)V
-
-    sput-object v0, Lz;->c:Lz;
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lz;->o:Ljava/lang/Object;
+
+    iget p1, p0, Lz;->Y:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lz;->Y:I
+
+    iget-object p1, p0, Lz;->X:La0;
+
+    const/4 v0, 0x0
+
+    invoke-static {p1, v0, p0}, La0;->p(La0;Lte2;Lda4;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

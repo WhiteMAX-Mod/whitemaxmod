@@ -1,97 +1,64 @@
-.class public final synthetic Lgy8;
+.class public final Lgy8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnLayoutChangeListener;
+.implements Lqy8;
 
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ljava/lang/Object;
-
-.field public final synthetic c:Ljava/lang/Object;
+# static fields
+.field public static final a:Lgy8;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;ILjava/lang/Object;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p2, p0, Lgy8;->a:I
+    new-instance v0, Lgy8;
 
-    iput-object p1, p0, Lgy8;->b:Ljava/lang/Object;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Lgy8;->c:Ljava/lang/Object;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lgy8;->a:Lgy8;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onLayoutChange(Landroid/view/View;IIIIIIII)V
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget p1, p0, Lgy8;->a:I
+    const/4 v0, 0x1
 
-    iget-object p2, p0, Lgy8;->c:Ljava/lang/Object;
+    if-ne p0, p1, :cond_0
 
-    iget-object p3, p0, Lgy8;->b:Ljava/lang/Object;
+    return v0
 
-    packed-switch p1, :pswitch_data_0
+    :cond_0
+    instance-of p1, p1, Lgy8;
 
-    check-cast p3, Landroid/os/Handler;
-
-    check-cast p2, Lbtd;
+    if-nez p1, :cond_1
 
     const/4 p1, 0x0
 
-    invoke-virtual {p3, p1}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
+    return p1
 
-    iget-object p1, p2, Lbtd;->a:Ljava/lang/Object;
+    :cond_1
+    return v0
+.end method
 
-    check-cast p1, Ljava/lang/Runnable;
+.method public final hashCode()I
+    .locals 1
 
-    const-wide/16 p4, 0x12c
+    const v0, -0x7501247
 
-    invoke-virtual {p3, p1, p4, p5}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+    return v0
+.end method
 
-    return-void
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    :pswitch_0
-    check-cast p3, Lxec;
+    const-string v0, "CloseKeyboard"
 
-    check-cast p2, Lone/me/chatscreen/mediabar/MediaBarWidget;
-
-    sget-object p1, Lone/me/chatscreen/mediabar/MediaBarWidget;->e1:[Lz28;
-
-    if-eq p5, p9, :cond_0
-
-    invoke-virtual {p3}, Lxec;->getCallback()Lrec;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p2}, Lone/me/chatscreen/mediabar/MediaBarWidget;->G0()Landroid/widget/LinearLayout;
-
-    move-result-object p2
-
-    invoke-virtual {p2}, Landroid/view/View;->getTop()I
-
-    move-result p2
-
-    invoke-virtual {p1, p2}, Lrec;->l(I)V
-
-    :cond_0
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

@@ -1,23 +1,27 @@
 .class public final Ljpb;
-.super Lkpb;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:J
+.field public final a:I
 
-.field public final b:Ljava/lang/String;
+.field public final b:I
+
+.field public final c:I
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;)V
+.method public constructor <init>(III)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Ljpb;->a:J
+    iput p1, p0, Ljpb;->a:I
 
-    iput-object p3, p0, Ljpb;->b:Ljava/lang/String;
+    iput p2, p0, Ljpb;->b:I
+
+    iput p3, p0, Ljpb;->c:I
 
     return-void
 .end method
@@ -25,7 +29,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+    .locals 3
 
     const/4 v0, 0x1
 
@@ -36,56 +40,74 @@
     :cond_0
     instance-of v1, p1, Ljpb;
 
-    const/4 v2, 0x0
-
     if-nez v1, :cond_1
 
-    return v2
+    goto :goto_0
 
     :cond_1
     check-cast p1, Ljpb;
 
-    iget-wide v3, p0, Ljpb;->a:J
+    iget v1, p0, Ljpb;->a:I
 
-    iget-wide v5, p1, Ljpb;->a:J
+    iget v2, p1, Ljpb;->a:I
 
-    cmp-long v1, v3, v5
+    if-eq v1, v2, :cond_2
 
-    if-eqz v1, :cond_2
-
-    return v2
+    goto :goto_0
 
     :cond_2
-    iget-object v1, p0, Ljpb;->b:Ljava/lang/String;
+    iget v1, p0, Ljpb;->b:I
 
-    iget-object p1, p1, Ljpb;->b:Ljava/lang/String;
+    iget v2, p1, Ljpb;->b:I
 
-    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    if-eq v1, v2, :cond_3
 
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    return v2
+    goto :goto_0
 
     :cond_3
+    iget v1, p0, Ljpb;->c:I
+
+    iget p1, p1, Ljpb;->c:I
+
+    if-eq v1, p1, :cond_4
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_4
     return v0
 .end method
 
 .method public final hashCode()I
-    .locals 2
+    .locals 3
 
-    iget-wide v0, p0, Ljpb;->a:J
+    iget v0, p0, Ljpb;->a:I
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
     move-result v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    const/16 v1, 0x1f
 
-    iget-object v1, p0, Ljpb;->b:Ljava/lang/String;
+    mul-int/2addr v0, v1
 
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+    iget v2, p0, Ljpb;->b:I
+
+    invoke-static {v2, v0, v1}, Ljye;->d(III)I
+
+    move-result v0
+
+    iget v2, p0, Ljpb;->c:I
+
+    invoke-static {v2, v0, v1}, Ljye;->d(III)I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
 
     move-result v1
 
@@ -97,23 +119,25 @@
 .method public final toString()Ljava/lang/String;
     .locals 5
 
-    const-string v0, "OpenImage(messageId="
+    const-string v0, ", titleRes="
 
-    const-string v1, ", attachLocalId="
+    const-string v1, ", iconRes="
 
-    iget-wide v2, p0, Ljpb;->a:J
+    const-string v2, "MenuItem(id="
 
-    iget-object v4, p0, Ljpb;->b:Ljava/lang/String;
+    iget v3, p0, Ljpb;->a:I
 
-    invoke-static {v0, v2, v3, v1, v4}, Lj27;->n(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget v4, p0, Ljpb;->b:I
+
+    invoke-static {v2, v3, v0, v4, v1}, Lau1;->l(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    const-string v1, ")"
+    const-string v1, ", isDisabled=false)"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget v2, p0, Ljpb;->c:I
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, v2, v1}, Ltx8;->m(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

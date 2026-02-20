@@ -1,67 +1,71 @@
 .class public final Lqka;
-.super Landroid/telephony/TelephonyCallback;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/telephony/TelephonyCallback$DisplayInfoListener;
 
 
 # instance fields
-.field public final a:Luka;
+.field public final a:I
+
+.field public final b:Lnka;
+
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:I
+
+.field public final f:I
+
+.field public final g:I
+
+.field public final h:I
+
+.field public final i:I
+
+.field public final j:F
+
+.field public final k:I
+
+.field public final l:I
+
+.field public final m:I
+
+.field public final n:I
 
 
 # direct methods
-.method public constructor <init>(Luka;)V
+.method public constructor <init>(ILnka;IIIIIIIFIIII)V
     .locals 0
 
-    invoke-direct {p0}, Landroid/telephony/TelephonyCallback;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lqka;->a:Luka;
+    iput p1, p0, Lqka;->a:I
 
-    return-void
-.end method
+    iput-object p2, p0, Lqka;->b:Lnka;
 
+    iput p3, p0, Lqka;->c:I
 
-# virtual methods
-.method public final onDisplayInfoChanged(Landroid/telephony/TelephonyDisplayInfo;)V
-    .locals 2
+    iput p4, p0, Lqka;->d:I
 
-    invoke-static {p1}, Lc89;->c(Landroid/telephony/TelephonyDisplayInfo;)I
+    iput p5, p0, Lqka;->e:I
 
-    move-result p1
+    iput p6, p0, Lqka;->f:I
 
-    const/4 v0, 0x3
+    iput p7, p0, Lqka;->g:I
 
-    const/4 v1, 0x5
+    iput p10, p0, Lqka;->j:F
 
-    if-eq p1, v0, :cond_1
+    iput p11, p0, Lqka;->k:I
 
-    const/4 v0, 0x4
+    iput p12, p0, Lqka;->l:I
 
-    if-eq p1, v0, :cond_1
+    iput p13, p0, Lqka;->m:I
 
-    if-ne p1, v1, :cond_0
+    iput p14, p0, Lqka;->n:I
 
-    goto :goto_0
+    iput p8, p0, Lqka;->h:I
 
-    :cond_0
-    const/4 p1, 0x0
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    const/4 p1, 0x1
-
-    :goto_1
-    if-eqz p1, :cond_2
-
-    const/16 v1, 0xa
-
-    :cond_2
-    iget-object p1, p0, Lqka;->a:Luka;
-
-    invoke-virtual {p1, v1}, Luka;->d(I)V
+    iput p9, p0, Lqka;->i:I
 
     return-void
 .end method

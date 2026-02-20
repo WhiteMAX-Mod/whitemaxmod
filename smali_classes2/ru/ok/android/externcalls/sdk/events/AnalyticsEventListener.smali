@@ -19,7 +19,7 @@
         "",
         "Lru/ok/android/externcalls/sdk/events/AnalyticsEventListener$AnalyticsEvent;",
         "event",
-        "Lb3h;",
+        "Lmah;",
         "onAnalyticsEvent",
         "(Lru/ok/android/externcalls/sdk/events/AnalyticsEventListener$AnalyticsEvent;)V",
         "AnalyticsEvent",

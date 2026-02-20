@@ -1,10 +1,10 @@
-.class public Lss7;
+.class public final Lss7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Iterable;
-.implements Lo28;
+
+# static fields
+.field public static final e:Lss7;
 
 
 # instance fields
@@ -14,121 +14,224 @@
 
 .field public final c:I
 
+.field public final d:I
+
 
 # direct methods
-.method public constructor <init>(III)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lss7;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1, v1, v1, v1}, Lss7;-><init>(IIII)V
+
+    sput-object v0, Lss7;->e:Lss7;
+
+    return-void
+.end method
+
+.method public constructor <init>(IIII)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz p3, :cond_1
-
-    const/high16 v0, -0x80000000
-
-    if-eq p3, v0, :cond_0
-
     iput p1, p0, Lss7;->a:I
 
-    invoke-static {p1, p2, p3}, Lhlj;->a(III)I
-
-    move-result p1
-
-    iput p1, p0, Lss7;->b:I
+    iput p2, p0, Lss7;->b:I
 
     iput p3, p0, Lss7;->c:I
 
+    iput p4, p0, Lss7;->d:I
+
     return-void
+.end method
+
+.method public static a(Lss7;Lss7;)Lss7;
+    .locals 4
+
+    iget v0, p0, Lss7;->a:I
+
+    iget v1, p1, Lss7;->a:I
+
+    invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
+
+    move-result v0
+
+    iget v1, p0, Lss7;->b:I
+
+    iget v2, p1, Lss7;->b:I
+
+    invoke-static {v1, v2}, Ljava/lang/Math;->max(II)I
+
+    move-result v1
+
+    iget v2, p0, Lss7;->c:I
+
+    iget v3, p1, Lss7;->c:I
+
+    invoke-static {v2, v3}, Ljava/lang/Math;->max(II)I
+
+    move-result v2
+
+    iget p0, p0, Lss7;->d:I
+
+    iget p1, p1, Lss7;->d:I
+
+    invoke-static {p0, p1}, Ljava/lang/Math;->max(II)I
+
+    move-result p0
+
+    invoke-static {v0, v1, v2, p0}, Lss7;->b(IIII)Lss7;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static b(IIII)Lss7;
+    .locals 1
+
+    if-nez p0, :cond_0
+
+    if-nez p1, :cond_0
+
+    if-nez p2, :cond_0
+
+    if-nez p3, :cond_0
+
+    sget-object p0, Lss7;->e:Lss7;
+
+    return-object p0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    new-instance v0, Lss7;
 
-    const-string p2, "Step must be greater than Int.MIN_VALUE to avoid overflow on negation."
+    invoke-direct {v0, p0, p1, p2, p3}, Lss7;-><init>(IIII)V
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    return-object v0
+.end method
 
-    throw p1
+.method public static c(Landroid/graphics/Insets;)Lss7;
+    .locals 3
 
-    :cond_1
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    invoke-static {p0}, Lw4;->c(Landroid/graphics/Insets;)I
 
-    const-string p2, "Step must be non-zero."
+    move-result v0
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-static {p0}, Ll95;->a(Landroid/graphics/Insets;)I
 
-    throw p1
+    move-result v1
+
+    invoke-static {p0}, Ll95;->w(Landroid/graphics/Insets;)I
+
+    move-result v2
+
+    invoke-static {p0}, Ll95;->B(Landroid/graphics/Insets;)I
+
+    move-result p0
+
+    invoke-static {v0, v1, v2, p0}, Lss7;->b(IIII)Lss7;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
 
 # virtual methods
-.method public equals(Ljava/lang/Object;)Z
-    .locals 2
-
-    instance-of v0, p1, Lss7;
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {p0}, Lss7;->isEmpty()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    move-object v0, p1
-
-    check-cast v0, Lss7;
-
-    invoke-virtual {v0}, Lss7;->isEmpty()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    :cond_0
-    check-cast p1, Lss7;
-
-    iget v0, p1, Lss7;->a:I
-
-    iget v1, p0, Lss7;->a:I
-
-    if-ne v1, v0, :cond_2
-
-    iget v0, p0, Lss7;->b:I
-
-    iget v1, p1, Lss7;->b:I
-
-    if-ne v0, v1, :cond_2
+.method public final d()Landroid/graphics/Insets;
+    .locals 4
 
     iget v0, p0, Lss7;->c:I
 
-    iget p1, p1, Lss7;->c:I
+    iget v1, p0, Lss7;->d:I
 
-    if-ne v0, p1, :cond_2
+    iget v2, p0, Lss7;->a:I
 
-    :cond_1
-    const/4 p1, 0x1
+    iget v3, p0, Lss7;->b:I
 
-    return p1
+    invoke-static {v2, v3, v0, v1}, Lrs7;->a(IIII)Landroid/graphics/Insets;
 
-    :cond_2
-    const/4 p1, 0x0
+    move-result-object v0
 
-    return p1
+    return-object v0
 .end method
 
-.method public hashCode()I
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    invoke-virtual {p0}, Lss7;->isEmpty()Z
+    const/4 v0, 0x1
 
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, -0x1
+    if-ne p0, p1, :cond_0
 
     return v0
 
     :cond_0
+    const/4 v1, 0x0
+
+    if-eqz p1, :cond_6
+
+    const-class v2, Lss7;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v3
+
+    if-eq v2, v3, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lss7;
+
+    iget v2, p0, Lss7;->d:I
+
+    iget v3, p1, Lss7;->d:I
+
+    if-eq v2, v3, :cond_2
+
+    return v1
+
+    :cond_2
+    iget v2, p0, Lss7;->a:I
+
+    iget v3, p1, Lss7;->a:I
+
+    if-eq v2, v3, :cond_3
+
+    return v1
+
+    :cond_3
+    iget v2, p0, Lss7;->c:I
+
+    iget v3, p1, Lss7;->c:I
+
+    if-eq v2, v3, :cond_4
+
+    return v1
+
+    :cond_4
+    iget v2, p0, Lss7;->b:I
+
+    iget p1, p1, Lss7;->b:I
+
+    if-eq v2, p1, :cond_5
+
+    return v1
+
+    :cond_5
+    return v0
+
+    :cond_6
+    :goto_0
+    return v1
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
     iget v0, p0, Lss7;->a:I
 
     mul-int/lit8 v0, v0, 0x1f
@@ -143,108 +246,55 @@
 
     add-int/2addr v0, v1
 
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Lss7;->d:I
+
+    add-int/2addr v0, v1
+
     return v0
 .end method
 
-.method public isEmpty()Z
-    .locals 5
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    iget v0, p0, Lss7;->c:I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const/4 v1, 0x0
+    const-string v1, "Insets{left="
 
-    const/4 v2, 0x1
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v3, p0, Lss7;->b:I
+    iget v1, p0, Lss7;->a:I
 
-    iget v4, p0, Lss7;->a:I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    if-lez v0, :cond_1
+    const-string v1, ", top="
 
-    if-le v4, v3, :cond_0
-
-    return v2
-
-    :cond_0
-    return v1
-
-    :cond_1
-    if-ge v4, v3, :cond_2
-
-    return v2
-
-    :cond_2
-    return v1
-.end method
-
-.method public final iterator()Ljava/util/Iterator;
-    .locals 4
-
-    new-instance v0, Lts7;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget v1, p0, Lss7;->b:I
 
-    iget v2, p0, Lss7;->c:I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    iget v3, p0, Lss7;->a:I
+    const-string v1, ", right="
 
-    invoke-direct {v0, v3, v1, v2}, Lts7;-><init>(III)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-object v0
-.end method
+    iget v1, p0, Lss7;->c:I
 
-.method public toString()Ljava/lang/String;
-    .locals 5
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v0, " step "
+    const-string v1, ", bottom="
 
-    iget v1, p0, Lss7;->b:I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v2, p0, Lss7;->a:I
+    iget v1, p0, Lss7;->d:I
 
-    iget v3, p0, Lss7;->c:I
+    const/16 v2, 0x7d
 
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    if-lez v3, :cond_0
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v2, ".."
-
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    :goto_0
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lkb0;->k(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
-
-    :cond_0
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v2, " downTo "
-
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    neg-int v0, v3
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    goto :goto_0
 .end method

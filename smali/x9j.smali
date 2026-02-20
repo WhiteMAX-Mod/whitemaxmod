@@ -1,50 +1,65 @@
-.class public final Lx9j;
+.class public abstract Lx9j;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lvwa;
-
 
 # static fields
-.field public static final a:Lx9j;
+.field public static final a:Ljava/lang/Object;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 1
 
-    new-instance v0, Lx9j;
+    new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lx9j;->a:Lx9j;
-
-    new-instance v0, Lvzi;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lvzi;-><init>(I)V
-
-    const-class v1, Ln0j;
-
-    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
+    sput-object v0, Lx9j;->a:Ljava/lang/Object;
 
     return-void
 .end method
 
+.method public static a(Ljava/lang/String;)V
+    .locals 2
 
-# virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    sget v0, Ltih;->a:I
+
+    const/16 v1, 0x12
+
+    if-lt v0, v1, :cond_0
+
+    invoke-static {p0}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public static b(IIII)Lkf;
     .locals 0
 
-    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    invoke-static {p0, p1, p2, p3}, Landroid/media/ImageReader;->newInstance(IIII)Landroid/media/ImageReader;
 
-    move-result-object p1
+    move-result-object p0
 
-    throw p1
+    new-instance p1, Lkf;
+
+    invoke-direct {p1, p0}, Lkf;-><init>(Landroid/media/ImageReader;)V
+
+    return-object p1
+.end method
+
+.method public static c()V
+    .locals 2
+
+    sget v0, Ltih;->a:I
+
+    const/16 v1, 0x12
+
+    if-lt v0, v1, :cond_0
+
+    invoke-static {}, Landroid/os/Trace;->endSection()V
+
+    :cond_0
+    return-void
 .end method

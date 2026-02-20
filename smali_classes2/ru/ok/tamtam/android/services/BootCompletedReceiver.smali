@@ -58,21 +58,21 @@
     return-void
 
     :cond_0
-    invoke-static {p1}, Lnef;->c(Landroid/content/Context;)Lage;
+    invoke-static {p1}, Lf0j;->e(Landroid/content/Context;)Lsme;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lage;->i()Lyab;
+    invoke-virtual {p1}, Lsme;->d()Lncb;
 
     move-result-object p2
 
-    invoke-virtual {p2}, Lyab;->a()Ljava/util/concurrent/ExecutorService;
+    invoke-virtual {p2}, Lncb;->a()Ljava/util/concurrent/ExecutorService;
 
     move-result-object p2
 
     new-instance v0, Lj3;
 
-    const/16 v1, 0x14
+    const/16 v1, 0x16
 
     invoke-direct {v0, v1, p1}, Lj3;-><init>(ILjava/lang/Object;)V
 

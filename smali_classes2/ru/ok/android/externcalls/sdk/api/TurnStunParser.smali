@@ -13,12 +13,12 @@
         "",
         "<init>",
         "()V",
-        "Lz18;",
+        "Lx48;",
         "reader",
         "",
         "Lorg/webrtc/PeerConnection$IceServer;",
         "parseTurn",
-        "(Lz18;)Ljava/util/List;",
+        "(Lx48;)Ljava/util/List;",
         "parseStun",
         "calls-sdk_release"
     }
@@ -57,12 +57,12 @@
     return-void
 .end method
 
-.method public static final parseStun(Lz18;)Ljava/util/List;
+.method public static final parseStun(Lx48;)Ljava/util/List;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lz18;",
+            "Lx48;",
             ")",
             "Ljava/util/List<",
             "Lorg/webrtc/PeerConnection$IceServer;",
@@ -81,16 +81,16 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-interface {p0}, Lz18;->q()V
+    invoke-interface {p0}, Lx48;->q()V
 
     :goto_0
-    invoke-interface {p0}, Lz18;->hasNext()Z
+    invoke-interface {p0}, Lx48;->hasNext()Z
 
     move-result v1
 
     if-eqz v1, :cond_3
 
-    invoke-interface {p0}, Lz18;->name()Ljava/lang/String;
+    invoke-interface {p0}, Lx48;->name()Ljava/lang/String;
 
     move-result-object v1
 
@@ -113,16 +113,16 @@
 
     if-eqz v1, :cond_2
 
-    invoke-interface {p0}, Lz18;->t()V
+    invoke-interface {p0}, Lx48;->t()V
 
     :goto_1
-    invoke-interface {p0}, Lz18;->hasNext()Z
+    invoke-interface {p0}, Lx48;->hasNext()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    invoke-interface {p0}, Lz18;->P()Ljava/lang/String;
+    invoke-interface {p0}, Lx48;->Q()Ljava/lang/String;
 
     move-result-object v1
 
@@ -131,18 +131,18 @@
     goto :goto_1
 
     :cond_1
-    invoke-interface {p0}, Lz18;->r()V
+    invoke-interface {p0}, Lx48;->r()V
 
     goto :goto_0
 
     :cond_2
     :goto_2
-    invoke-interface {p0}, Lz18;->B()V
+    invoke-interface {p0}, Lx48;->B()V
 
     goto :goto_0
 
     :cond_3
-    invoke-interface {p0}, Lz18;->n()V
+    invoke-interface {p0}, Lx48;->n()V
 
     new-instance p0, Ljava/util/ArrayList;
 
@@ -190,12 +190,12 @@
     return-object p0
 .end method
 
-.method public static final parseTurn(Lz18;)Ljava/util/List;
+.method public static final parseTurn(Lx48;)Ljava/util/List;
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lz18;",
+            "Lx48;",
             ")",
             "Ljava/util/List<",
             "Lorg/webrtc/PeerConnection$IceServer;",
@@ -214,20 +214,20 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-interface {p0}, Lz18;->q()V
+    invoke-interface {p0}, Lx48;->q()V
 
     const/4 v1, 0x0
 
     move-object v2, v1
 
     :goto_0
-    invoke-interface {p0}, Lz18;->hasNext()Z
+    invoke-interface {p0}, Lx48;->hasNext()Z
 
     move-result v3
 
     if-eqz v3, :cond_7
 
-    invoke-interface {p0}, Lz18;->name()Ljava/lang/String;
+    invoke-interface {p0}, Lx48;->name()Ljava/lang/String;
 
     move-result-object v3
 
@@ -261,16 +261,16 @@
     goto :goto_2
 
     :cond_1
-    invoke-interface {p0}, Lz18;->t()V
+    invoke-interface {p0}, Lx48;->t()V
 
     :goto_1
-    invoke-interface {p0}, Lz18;->hasNext()Z
+    invoke-interface {p0}, Lx48;->hasNext()Z
 
     move-result v3
 
     if-eqz v3, :cond_2
 
-    invoke-interface {p0}, Lz18;->P()Ljava/lang/String;
+    invoke-interface {p0}, Lx48;->Q()Ljava/lang/String;
 
     move-result-object v3
 
@@ -279,7 +279,7 @@
     goto :goto_1
 
     :cond_2
-    invoke-interface {p0}, Lz18;->r()V
+    invoke-interface {p0}, Lx48;->r()V
 
     goto :goto_0
 
@@ -295,7 +295,7 @@
     goto :goto_2
 
     :cond_4
-    invoke-interface {p0}, Lz18;->q0()Ljava/lang/String;
+    invoke-interface {p0}, Lx48;->r0()Ljava/lang/String;
 
     move-result-object v2
 
@@ -311,19 +311,19 @@
     if-nez v3, :cond_6
 
     :goto_2
-    invoke-interface {p0}, Lz18;->B()V
+    invoke-interface {p0}, Lx48;->B()V
 
     goto :goto_0
 
     :cond_6
-    invoke-interface {p0}, Lz18;->q0()Ljava/lang/String;
+    invoke-interface {p0}, Lx48;->r0()Ljava/lang/String;
 
     move-result-object v1
 
     goto :goto_0
 
     :cond_7
-    invoke-interface {p0}, Lz18;->n()V
+    invoke-interface {p0}, Lx48;->n()V
 
     new-instance p0, Ljava/util/ArrayList;
 

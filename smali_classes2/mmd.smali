@@ -1,93 +1,103 @@
-.class public final Lmmd;
-.super Ldmj;
+.class public final synthetic Lmmd;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lone/me/rlottie/RLottieDrawable;
+
+.field public final synthetic c:Ljava/lang/Runnable;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
+.method public synthetic constructor <init>(Lone/me/rlottie/RLottieDrawable;Ljava/lang/Runnable;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p3, p0, Lmmd;->a:I
 
-    iput-object p1, p0, Lmmd;->a:Ljava/lang/String;
+    iput-object p1, p0, Lmmd;->b:Lone/me/rlottie/RLottieDrawable;
+
+    iput-object p2, p0, Lmmd;->c:Ljava/lang/Runnable;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final run()V
+    .locals 4
 
-    const/4 v0, 0x1
+    iget v0, p0, Lmmd;->a:I
 
-    if-ne p0, p1, :cond_0
+    iget-object v1, p0, Lmmd;->c:Ljava/lang/Runnable;
 
-    return v0
+    iget-object v2, p0, Lmmd;->b:Lone/me/rlottie/RLottieDrawable;
 
-    :cond_0
-    instance-of v1, p1, Lmmd;
+    packed-switch v0, :pswitch_data_0
 
-    const/4 v2, 0x0
+    sget-object v0, Lone/me/rlottie/RLottieDrawable;->gson:Lcom/google/gson/Gson;
 
-    if-nez v1, :cond_1
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    return v2
+    invoke-interface {v1}, Ljava/lang/Runnable;->run()V
 
-    :cond_1
-    check-cast p1, Lmmd;
+    iget-object v0, v2, Lone/me/rlottie/RLottieDrawable;->F0:Ljava/lang/Runnable;
 
-    iget-object v1, p0, Lmmd;->a:Ljava/lang/String;
-
-    iget-object p1, p1, Lmmd;->a:Ljava/lang/String;
-
-    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lmmd;->a:Ljava/lang/String;
-
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_0
 
     const/4 v0, 0x0
 
-    return v0
+    iput-object v0, v2, Lone/me/rlottie/RLottieDrawable;->F0:Ljava/lang/Runnable;
+
+    invoke-static {}, Lfs0;->c()V
 
     :cond_0
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    return-void
 
-    move-result v0
+    :pswitch_0
+    sget-object v0, Lone/me/rlottie/RLottieDrawable;->gson:Lcom/google/gson/Gson;
 
-    return v0
-.end method
+    :try_start_0
+    iget-object v0, v2, Lone/me/rlottie/RLottieDrawable;->r1:Lfs0;
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+    if-eqz v0, :cond_1
 
-    const-string v0, "Avatar(avatarUrl="
+    invoke-virtual {v0}, Lfs0;->b()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    const-string v1, ")"
+    goto :goto_0
 
-    iget-object v2, p0, Lmmd;->a:Ljava/lang/String;
+    :catchall_0
+    move-exception v0
 
-    invoke-static {v0, v2, v1}, Lj27;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {}, Lone/me/rlottie/RLottie;->getLogger()Lhla;
 
-    move-result-object v0
+    move-result-object v3
 
-    return-object v0
+    invoke-interface {v3, v0}, Lhla;->m(Ljava/lang/Throwable;)V
+
+    :cond_1
+    :goto_0
+    new-instance v0, Lmmd;
+
+    const/4 v3, 0x1
+
+    invoke-direct {v0, v2, v1, v3}, Lmmd;-><init>(Lone/me/rlottie/RLottieDrawable;Ljava/lang/Runnable;I)V
+
+    invoke-static {v0}, Lxf;->d(Ljava/lang/Runnable;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,129 +1,133 @@
-.class public final Ltjb;
+.class public abstract Ltjb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lvjb;
-
 
 # static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Ltjb;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public static final a:I
 
+.field public static final b:I
 
-# instance fields
-.field public final a:I
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
+
+.field public static final q:I
+
+.field public static final r:I
+
+.field public static final s:I
+
+.field public static final t:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lhu8;
-
-    const/16 v1, 0x1b
-
-    invoke-direct {v0, v1}, Lhu8;-><init>(I)V
-
-    sput-object v0, Ltjb;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(I)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, Ltjb;->a:I
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final describeContents()I
     .locals 1
 
-    const/4 v0, 0x0
+    sget v0, Lakd;->audio_record_active_call_error_snackbar_title:I
 
-    return v0
-.end method
+    sput v0, Ltjb;->a:I
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    sget v0, Lakd;->audio_record_confirm_exit_accept:I
 
-    const/4 v0, 0x1
+    sput v0, Ltjb;->b:I
 
-    if-ne p0, p1, :cond_0
+    sget v0, Lakd;->audio_record_confirm_exit_description:I
 
-    return v0
+    sput v0, Ltjb;->c:I
 
-    :cond_0
-    instance-of v1, p1, Ltjb;
+    sget v0, Lakd;->audio_record_confirm_exit_title:I
 
-    const/4 v2, 0x0
+    sput v0, Ltjb;->d:I
 
-    if-nez v1, :cond_1
+    sget v0, Lakd;->audio_record_error_common:I
 
-    return v2
+    sput v0, Ltjb;->e:I
 
-    :cond_1
-    check-cast p1, Ltjb;
+    sget v0, Lakd;->audio_record_error_limit:I
 
-    iget v1, p0, Ltjb;->a:I
+    sput v0, Ltjb;->f:I
 
-    iget p1, p1, Ltjb;->a:I
+    sget v0, Lakd;->audio_record_hold_to_start:I
 
-    if-eq v1, p1, :cond_2
+    sput v0, Ltjb;->g:I
 
-    return v2
+    sget v0, Lakd;->channel_input_hint:I
 
-    :cond_2
-    return v0
-.end method
+    sput v0, Ltjb;->h:I
 
-.method public final hashCode()I
-    .locals 1
+    sget v0, Lakd;->chat_input_hint:I
 
-    iget v0, p0, Ltjb;->a:I
+    sput v0, Ltjb;->i:I
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    sget v0, Lakd;->messagewrite_edit_quote_title:I
 
-    move-result v0
+    sput v0, Ltjb;->j:I
 
-    return v0
-.end method
+    sget v0, Lakd;->reply_quote_self:I
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+    sput v0, Ltjb;->k:I
 
-    const-string v0, "NegativeIcon(iconRes="
+    sget v0, Lakd;->reply_quote_to_somebody:I
 
-    const-string v1, ")"
+    sput v0, Ltjb;->l:I
 
-    iget v2, p0, Ltjb;->a:I
+    sget v0, Lakd;->video_message_record_error_common:I
 
-    invoke-static {v2, v0, v1}, Lkz1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    sput v0, Ltjb;->m:I
 
-    move-result-object v0
+    sget v0, Lakd;->video_message_record_error_no_camera:I
 
-    return-object v0
-.end method
+    sput v0, Ltjb;->n:I
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
+    sget v0, Lakd;->video_record_active_call_error_snackbar_title:I
 
-    iget p2, p0, Ltjb;->a:I
+    sput v0, Ltjb;->o:I
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    sget v0, Lakd;->writebar__add_link_button:I
+
+    sput v0, Ltjb;->p:I
+
+    sget v0, Lakd;->writebar__add_link_title:I
+
+    sput v0, Ltjb;->q:I
+
+    sget v0, Lakd;->writebar_commands_not_found:I
+
+    sput v0, Ltjb;->r:I
+
+    sget v0, Lakd;->writebar_mentions_not_found:I
+
+    sput v0, Ltjb;->s:I
+
+    sget v0, Lakd;->writebar_mentions_title:I
+
+    sput v0, Ltjb;->t:I
 
     return-void
 .end method

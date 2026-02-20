@@ -1,23 +1,22 @@
 .class public final Lkhe;
-.super Ld3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Llhe;
 
-# static fields
-.field public static final c:Lkhe;
+
+# instance fields
+.field public final a:Lvrh;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lvrh;)V
+    .locals 0
 
-    new-instance v0, Lkhe;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v1, 0xc
-
-    invoke-direct {v0, v1}, Ld3;-><init>(I)V
-
-    sput-object v0, Lkhe;->c:Lkhe;
+    iput-object p1, p0, Lkhe;->a:Lvrh;
 
     return-void
 .end method

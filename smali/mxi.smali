@@ -3,68 +3,124 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lvwa;
+.implements Lfyi;
 
 
-# static fields
-.field public static final a:Lmxi;
+# instance fields
+.field public final synthetic a:Landroid/os/Bundle;
+
+.field public final synthetic b:Lfe3;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lfe3;Landroid/os/Bundle;)V
+    .locals 0
 
-    new-instance v0, Lmxi;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lmxi;->b:Lfe3;
 
-    sput-object v0, Lmxi;->a:Lmxi;
-
-    new-instance v0, Lbri;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lbri;-><init>(I)V
-
-    const-class v1, Lpri;
-
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
+    iput-object p2, p0, Lmxi;->a:Landroid/os/Bundle;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final a()I
+    .locals 1
 
-    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    const/4 v0, 0x1
 
-    move-result-object p1
+    return v0
+.end method
 
-    throw p1
+.method public final b()V
+    .locals 6
+
+    iget-object v0, p0, Lmxi;->b:Lfe3;
+
+    iget-object v0, v0, Lfe3;->b:Ljava/lang/Object;
+
+    check-cast v0, Lcg5;
+
+    iget-object v1, p0, Lmxi;->a:Landroid/os/Bundle;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    :try_start_0
+    new-instance v2, Landroid/os/Bundle;
+
+    invoke-direct {v2}, Landroid/os/Bundle;-><init>()V
+
+    invoke-static {v1, v2}, Le3j;->g(Landroid/os/Bundle;Landroid/os/Bundle;)V
+
+    iget-object v3, v0, Lcg5;->b:Ljava/lang/Object;
+
+    check-cast v3, Lkkj;
+
+    invoke-virtual {v3}, Laxi;->U()Landroid/os/Parcel;
+
+    move-result-object v4
+
+    invoke-static {v4, v2}, Lp2j;->c(Landroid/os/Parcel;Landroid/os/Parcelable;)V
+
+    const/4 v5, 0x2
+
+    invoke-virtual {v3, v4, v5}, Laxi;->W(Landroid/os/Parcel;I)V
+
+    invoke-static {v2, v1}, Le3j;->g(Landroid/os/Bundle;Landroid/os/Bundle;)V
+
+    invoke-virtual {v3}, Laxi;->U()Landroid/os/Parcel;
+
+    move-result-object v1
+
+    const/16 v2, 0x8
+
+    invoke-virtual {v3, v1, v2}, Laxi;->T(Landroid/os/Parcel;I)Landroid/os/Parcel;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
+
+    move-result-object v2
+
+    invoke-static {v2}, Lsza;->W(Landroid/os/IBinder;)Lrf7;
+
+    move-result-object v2
+
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    invoke-static {v2}, Lsza;->X(Lrf7;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/view/View;
+
+    iput-object v1, v0, Lcg5;->c:Ljava/lang/Object;
+
+    iget-object v1, v0, Lcg5;->a:Ljava/lang/Object;
+
+    check-cast v1, Landroid/view/ViewGroup;
+
+    invoke-virtual {v1}, Landroid/view/ViewGroup;->removeAllViews()V
+
+    iget-object v0, v0, Lcg5;->c:Ljava/lang/Object;
+
+    check-cast v0, Landroid/view/View;
+
+    invoke-virtual {v1, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+
+    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v1
 .end method

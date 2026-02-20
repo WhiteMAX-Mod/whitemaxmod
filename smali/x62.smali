@@ -1,85 +1,172 @@
-.class public final enum Lx62;
-.super Ljava/lang/Enum;
+.class public final Lx62;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ly62;
 
-# static fields
-.field public static final enum a:Lx62;
 
-.field public static final enum b:Lx62;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final enum c:Lx62;
-
-.field public static final synthetic d:[Lx62;
+.field public final b:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
+    .locals 0
 
-    new-instance v0, Lx62;
+    iput p1, p0, Lx62;->a:I
 
-    const-string v1, "COLLAPSED"
+    iput-object p2, p0, Lx62;->b:Ljava/lang/Object;
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lx62;->a:Lx62;
-
-    new-instance v1, Lx62;
-
-    const-string v2, "EXPANDED"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lx62;->b:Lx62;
-
-    new-instance v2, Lx62;
-
-    const-string v3, "MAX_EXPANDED"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lx62;->c:Lx62;
-
-    filled-new-array {v0, v1, v2}, [Lx62;
-
-    move-result-object v0
-
-    sput-object v0, Lx62;->d:[Lx62;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lx62;
+
+# virtual methods
+.method public final b(Ljava/lang/Throwable;)V
     .locals 1
 
-    const-class v0, Lx62;
+    iget v0, p0, Lx62;->a:I
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object p0
+    iget-object p1, p0, Lx62;->b:Ljava/lang/Object;
 
-    check-cast p0, Lx62;
+    check-cast p1, Lb45;
 
-    return-object p0
+    invoke-interface {p1}, Lb45;->dispose()V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lx62;->b:Ljava/lang/Object;
+
+    check-cast v0, Lks6;
+
+    invoke-interface {v0, p1}, Lks6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+
+    :pswitch_1
+    iget-object p1, p0, Lx62;->b:Ljava/lang/Object;
+
+    check-cast p1, Ljava/util/concurrent/ScheduledFuture;
+
+    const/4 v0, 0x0
+
+    invoke-interface {p1, v0}, Ljava/util/concurrent/Future;->cancel(Z)Z
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public static values()[Lx62;
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    sget-object v0, Lx62;->d:[Lx62;
+    iget v0, p0, Lx62;->a:I
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "DisposeOnCancel["
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lx62;->b:Ljava/lang/Object;
+
+    check-cast v1, Lb45;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x5d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, [Lx62;
+    return-object v0
+
+    :pswitch_0
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "CancelHandler.UserSupplied["
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lx62;->b:Ljava/lang/Object;
+
+    check-cast v1, Lks6;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x40
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-static {p0}, Lnm4;->c(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x5d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
+
+    :pswitch_1
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "CancelFutureOnCancel["
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lx62;->b:Ljava/lang/Object;
+
+    check-cast v1, Ljava/util/concurrent/ScheduledFuture;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x5d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

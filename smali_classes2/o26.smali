@@ -1,76 +1,23 @@
-.class public final synthetic Lo26;
-.super Ljava/lang/Object;
+.class public final Lo26;
+.super Ld3;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lone/me/sdk/richvector/VectorPath;
+# static fields
+.field public static final c:Lo26;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/sdk/richvector/VectorPath;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput p2, p0, Lo26;->a:I
+    new-instance v0, Lo26;
 
-    iput-object p1, p0, Lo26;->b:Lone/me/sdk/richvector/VectorPath;
+    const/16 v1, 0xc
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0, v1}, Ld3;-><init>(I)V
 
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
-    .locals 1
-
-    iget v0, p0, Lo26;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Integer;
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    iget-object v0, p0, Lo26;->b:Lone/me/sdk/richvector/VectorPath;
-
-    invoke-interface {v0, p1}, Lone/me/sdk/richvector/VectorPath;->setStrokeAlpha(I)V
+    sput-object v0, Lo26;->c:Lo26;
 
     return-void
-
-    :pswitch_0
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Integer;
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    iget-object v0, p0, Lo26;->b:Lone/me/sdk/richvector/VectorPath;
-
-    invoke-interface {v0, p1}, Lone/me/sdk/richvector/VectorPath;->setStrokeAlpha(I)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

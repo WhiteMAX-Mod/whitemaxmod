@@ -1,24 +1,24 @@
-.class public final Ll81;
+.class public final synthetic Ll81;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Llq6;
+.implements Lis6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:I
+.field public final synthetic b:Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;
 
 
 # direct methods
-.method public synthetic constructor <init>(II)V
+.method public synthetic constructor <init>(Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;I)V
     .locals 0
 
     iput p2, p0, Ll81;->a:I
 
-    iput p1, p0, Ll81;->b:I
+    iput-object p1, p0, Ll81;->b:Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -28,38 +28,58 @@
 
 # virtual methods
 .method public final invoke()Ljava/lang/Object;
-    .locals 4
+    .locals 8
 
     iget v0, p0, Ll81;->a:I
 
+    iget-object v1, p0, Ll81;->b:Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;
+
     packed-switch v0, :pswitch_data_0
 
-    new-instance v0, Ld61;
+    sget-object v0, Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;->Z:[Lv58;
 
-    const/4 v1, 0x1
+    new-instance v0, Ln81;
 
-    const/4 v2, 0x4
-
-    iget v3, p0, Ll81;->b:I
-
-    invoke-direct {v0, v3, v2, v1}, Ld61;-><init>(IIZ)V
+    invoke-direct {v0, v1}, Ln81;-><init>(Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;)V
 
     return-object v0
 
     :pswitch_0
-    new-instance v0, Ld61;
+    sget-object v0, Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;->Z:[Lv58;
 
-    const/4 v1, 0x0
+    new-instance v4, Libe;
 
-    const/4 v2, 0x4
+    const/16 v0, 0x9
 
-    iget v3, p0, Ll81;->b:I
+    invoke-direct {v4, v0, v1}, Libe;-><init>(ILjava/lang/Object;)V
 
-    invoke-direct {v0, v3, v2, v1}, Ld61;-><init>(IIZ)V
+    new-instance v2, Lfre;
 
-    return-object v0
+    sget-object v0, Lfe3;->t0:Ltea;
 
-    nop
+    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v3}, Ltea;->p(Landroid/content/Context;)Loob;
+
+    move-result-object v0
+
+    iget-object v3, v0, Loob;->b:Llob;
+
+    new-instance v5, Lk;
+
+    const/16 v0, 0x14
+
+    invoke-direct {v5, v0, v1}, Lk;-><init>(ILjava/lang/Object;)V
+
+    const/4 v6, 0x0
+
+    const/16 v7, 0x14
+
+    invoke-direct/range {v2 .. v7}, Lfre;-><init>(Llob;Ldre;Lks6;Lmic;I)V
+
+    return-object v2
 
     :pswitch_data_0
     .packed-switch 0x0

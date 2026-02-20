@@ -1,56 +1,105 @@
-.class public final synthetic Lkh4;
-.super Ljava/lang/Object;
+.class public final Lkh4;
+.super Lew8;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
+
+# static fields
+.field public static final synthetic J0:I
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lrh4;
+.field public I0:Ljh4;
 
 
-# direct methods
-.method public synthetic constructor <init>(Lrh4;I)V
-    .locals 0
+# virtual methods
+.method public final f(Landroid/graphics/Canvas;)V
+    .locals 1
 
-    iput p2, p0, Lkh4;->a:I
+    iget-object v0, p0, Lkh4;->I0:Ljh4;
 
-    iput-object p1, p0, Lkh4;->b:Lrh4;
+    iget-object v0, v0, Ljh4;->r:Landroid/graphics/RectF;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {v0}, Landroid/graphics/RectF;->isEmpty()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-super {p0, p1}, Lew8;->f(Landroid/graphics/Canvas;)V
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
+
+    iget-object v0, p0, Lkh4;->I0:Ljh4;
+
+    iget-object v0, v0, Ljh4;->r:Landroid/graphics/RectF;
+
+    invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->clipOutRect(Landroid/graphics/RectF;)Z
+
+    invoke-super {p0, p1}, Lew8;->f(Landroid/graphics/Canvas;)V
+
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final run()V
+.method public final mutate()Landroid/graphics/drawable/Drawable;
     .locals 2
 
-    iget v0, p0, Lkh4;->a:I
+    new-instance v0, Ljh4;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v1, p0, Lkh4;->I0:Ljh4;
 
-    iget-object v0, p0, Lkh4;->b:Lrh4;
+    invoke-direct {v0, v1}, Ljh4;-><init>(Ljh4;)V
 
-    const/4 v1, 0x0
+    iput-object v0, p0, Lkh4;->I0:Ljh4;
 
-    invoke-virtual {v0, v1}, Lrh4;->s(Z)V
+    return-object p0
+.end method
 
+.method public final q(FFFF)V
+    .locals 2
+
+    iget-object v0, p0, Lkh4;->I0:Ljh4;
+
+    iget-object v0, v0, Ljh4;->r:Landroid/graphics/RectF;
+
+    iget v1, v0, Landroid/graphics/RectF;->left:F
+
+    cmpl-float v1, p1, v1
+
+    if-nez v1, :cond_1
+
+    iget v1, v0, Landroid/graphics/RectF;->top:F
+
+    cmpl-float v1, p2, v1
+
+    if-nez v1, :cond_1
+
+    iget v1, v0, Landroid/graphics/RectF;->right:F
+
+    cmpl-float v1, p3, v1
+
+    if-nez v1, :cond_1
+
+    iget v1, v0, Landroid/graphics/RectF;->bottom:F
+
+    cmpl-float v1, p4, v1
+
+    if-eqz v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
     return-void
 
-    :pswitch_0
-    iget-object v0, p0, Lkh4;->b:Lrh4;
+    :cond_1
+    :goto_0
+    invoke-virtual {v0, p1, p2, p3, p4}, Landroid/graphics/RectF;->set(FFFF)V
 
-    invoke-virtual {v0}, Lrh4;->t()V
+    invoke-virtual {p0}, Lew8;->invalidateSelf()V
 
     return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

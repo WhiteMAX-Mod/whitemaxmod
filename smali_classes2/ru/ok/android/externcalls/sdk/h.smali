@@ -3,98 +3,50 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lnjf;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic a:Lru/ok/android/externcalls/sdk/ConversationImpl;
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final synthetic b:Z
+
+.field public final synthetic c:Ld21;
+
+.field public final synthetic d:Lty3;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/ConversationImpl;ZLd21;Lty3;)V
     .locals 0
 
-    iput p1, p0, Lru/ok/android/externcalls/sdk/h;->a:I
-
-    iput-object p2, p0, Lru/ok/android/externcalls/sdk/h;->b:Ljava/lang/Object;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/h;->a:Lru/ok/android/externcalls/sdk/ConversationImpl;
+
+    iput-boolean p2, p0, Lru/ok/android/externcalls/sdk/h;->b:Z
+
+    iput-object p3, p0, Lru/ok/android/externcalls/sdk/h;->c:Ld21;
+
+    iput-object p4, p0, Lru/ok/android/externcalls/sdk/h;->d:Lty3;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 1
+.method public final onResponse(Lorg/json/JSONObject;)V
+    .locals 4
 
-    iget v0, p0, Lru/ok/android/externcalls/sdk/h;->a:I
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/h;->c:Ld21;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/h;->d:Lty3;
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/h;->b:Ljava/lang/Object;
+    iget-object v2, p0, Lru/ok/android/externcalls/sdk/h;->a:Lru/ok/android/externcalls/sdk/ConversationImpl;
 
-    check-cast v0, Lru/ok/android/externcalls/sdk/ConversationImpl$1;
+    iget-boolean v3, p0, Lru/ok/android/externcalls/sdk/h;->b:Z
 
-    invoke-static {v0}, Lru/ok/android/externcalls/sdk/ConversationImpl$1;->b(Lru/ok/android/externcalls/sdk/ConversationImpl$1;)V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/h;->b:Ljava/lang/Object;
-
-    check-cast v0, Lru/ok/android/externcalls/sdk/ConversationImpl;
-
-    invoke-static {v0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->F(Lru/ok/android/externcalls/sdk/ConversationImpl;)V
+    invoke-static {v2, v3, v0, v1, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->w(Lru/ok/android/externcalls/sdk/ConversationImpl;ZLd21;Lty3;Lorg/json/JSONObject;)V
 
     return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/h;->b:Ljava/lang/Object;
-
-    check-cast v0, Lru/ok/android/externcalls/sdk/ConversationImpl;
-
-    invoke-static {v0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->A(Lru/ok/android/externcalls/sdk/ConversationImpl;)V
-
-    return-void
-
-    :pswitch_2
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/h;->b:Ljava/lang/Object;
-
-    check-cast v0, Lru/ok/android/externcalls/sdk/ConversationImpl;
-
-    invoke-static {v0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->N(Lru/ok/android/externcalls/sdk/ConversationImpl;)V
-
-    return-void
-
-    :pswitch_3
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/h;->b:Ljava/lang/Object;
-
-    check-cast v0, Lru/ok/android/externcalls/sdk/ConversationImpl;
-
-    invoke-static {v0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->J(Lru/ok/android/externcalls/sdk/ConversationImpl;)V
-
-    return-void
-
-    :pswitch_4
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/h;->b:Ljava/lang/Object;
-
-    check-cast v0, Lru/ok/android/externcalls/sdk/ConversationImpl;
-
-    invoke-static {v0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->d(Lru/ok/android/externcalls/sdk/ConversationImpl;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

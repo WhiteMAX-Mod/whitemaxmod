@@ -1,53 +1,68 @@
-.class public final Lsv0;
-.super Lo84;
+.class public abstract Lsv0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lyv0;
-
-.field public Z:I
-
-.field public d:Ljava/util/List;
-
-.field public o:J
-
-
-# direct methods
-.method public constructor <init>(Lyv0;Lo84;)V
-    .locals 0
-
-    iput-object p1, p0, Lsv0;->Y:Lyv0;
-
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public canRepeat()Z
     .locals 1
 
-    iput-object p1, p0, Lsv0;->X:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    iget p1, p0, Lsv0;->Z:I
+    return v0
+.end method
 
-    const/high16 v0, -0x80000000
+.method public intoParam(Ljava/lang/String;)Lwn;
+    .locals 1
 
-    or-int/2addr p1, v0
+    .line 1
+    new-instance v0, Lu6g;
 
-    iput p1, p0, Lsv0;->Z:I
+    .line 2
+    invoke-direct {v0, p1}, Lqv0;-><init>(Ljava/lang/String;)V
 
-    iget-object p1, p0, Lsv0;->Y:Lyv0;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lyv0;->a(Ljava/util/List;Lo84;)Ljava/lang/Object;
+    .line 3
+    invoke-virtual {p0, v0}, Lsv0;->intoParam(Lqv0;)Lwn;
 
     move-result-object p1
 
     return-object p1
+.end method
+
+.method public final intoParam(Lqv0;)Lwn;
+    .locals 1
+
+    .line 4
+    new-instance v0, Lrv0;
+
+    invoke-direct {v0, p1, p0}, Lrv0;-><init>(Lqv0;Lsv0;)V
+
+    return-object v0
+.end method
+
+.method public isSupplied()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public shouldPost()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public shouldSkipParam()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public abstract write(Lf58;)V
 .end method

@@ -1,77 +1,75 @@
-.class public interface abstract Leob;
+.class public final Leob;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a(Lgob;)V
-.end method
+# instance fields
+.field public final a:I
 
-.method public abstract b(Lgob;)V
-.end method
+.field public final b:I
 
-.method public abstract c(Lgob;)V
-.end method
+.field public final c:I
 
-.method public abstract d(Lwnb;Lshg;Z)V
-.end method
+.field public final d:I
 
-.method public abstract e(Lone/video/exo/error/OneVideoExoPlaybackException;Lkqh;Lgob;)V
-.end method
+.field public final e:I
 
-.method public abstract f(Lgob;)V
-.end method
+.field public final f:I
 
-.method public abstract g(Lgob;F)V
-.end method
+.field public final g:I
 
-.method public abstract h(Lwnb;Lqqh;)V
-.end method
+.field public final h:I
 
-.method public abstract i(Lgob;)V
-.end method
+.field public final i:I
 
-.method public abstract j(Lgob;)V
-.end method
+.field public final j:I
 
-.method public abstract k(Lwnb;Lqqh;)V
-.end method
+.field public final k:I
 
-.method public abstract l(Lgob;)V
-.end method
+.field public final l:I
 
-.method public abstract m(Lgob;I)V
-.end method
+.field public final m:I
 
-.method public abstract n(Lgob;Z)V
-.end method
+.field public final n:I
 
-.method public abstract o(Lwnb;Lz60;)V
-.end method
+.field public final o:I
 
-.method public abstract p(Lgob;)V
-.end method
 
-.method public abstract q(Lgob;Ldob;Lv42;Lv42;)V
-.end method
+# direct methods
+.method public constructor <init>(IIIIIIIIIIIIIII)V
+    .locals 0
 
-.method public abstract r(Lgob;)V
-.end method
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public abstract s(Lpm0;II)V
-.end method
+    iput p1, p0, Leob;->a:I
 
-.method public abstract t(Lgob;J)V
-.end method
+    iput p2, p0, Leob;->b:I
 
-.method public abstract u(Lgob;)V
-.end method
+    iput p3, p0, Leob;->c:I
 
-.method public abstract v(Lgob;)V
-.end method
+    iput p4, p0, Leob;->d:I
 
-.method public abstract w(Lgob;Z)V
-.end method
+    iput p5, p0, Leob;->e:I
 
-.method public abstract x(Lgob;I)V
+    iput p6, p0, Leob;->f:I
+
+    iput p7, p0, Leob;->g:I
+
+    iput p8, p0, Leob;->h:I
+
+    iput p9, p0, Leob;->i:I
+
+    iput p10, p0, Leob;->j:I
+
+    iput p11, p0, Leob;->k:I
+
+    iput p12, p0, Leob;->l:I
+
+    iput p13, p0, Leob;->m:I
+
+    iput p14, p0, Leob;->n:I
+
+    iput p15, p0, Leob;->o:I
+
+    return-void
 .end method

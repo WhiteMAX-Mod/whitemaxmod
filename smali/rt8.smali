@@ -1,151 +1,182 @@
 .class public final Lrt8;
-.super Lrlg;
+.super Ljava/util/AbstractCollection;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/util/Collection;
+.implements Lm58;
 
 
 # instance fields
-.field public final e:Ld49;
+.field public final a:Lpt8;
 
 
 # direct methods
-.method public constructor <init>(Ld49;)V
+.method public constructor <init>(Lpt8;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
 
-    iput-object p1, p0, Lrt8;->e:Ld49;
+    iput-object p1, p0, Lrt8;->a:Lpt8;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b(Ljava/lang/Object;)I
+.method public final add(Ljava/lang/Object;)Z
+    .locals 0
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+.end method
+
+.method public final addAll(Ljava/util/Collection;)Z
+    .locals 0
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+.end method
+
+.method public final clear()V
     .locals 1
 
-    sget-object v0, Lpt8;->h:Ljava/lang/Object;
+    iget-object v0, p0, Lrt8;->a:Lpt8;
 
-    if-ne p1, v0, :cond_0
+    invoke-virtual {v0}, Lpt8;->clear()V
 
-    const/4 p1, 0x0
+    return-void
+.end method
 
-    return p1
+.method public final contains(Ljava/lang/Object;)Z
+    .locals 1
 
-    :cond_0
-    const/4 p1, -0x1
+    iget-object v0, p0, Lrt8;->a:Lpt8;
+
+    invoke-virtual {v0, p1}, Lpt8;->containsValue(Ljava/lang/Object;)Z
+
+    move-result p1
 
     return p1
 .end method
 
-.method public final f(ILmlg;Z)Lmlg;
-    .locals 11
-
-    const/4 p1, 0x0
-
-    if-eqz p3, :cond_0
-
-    const/4 v0, 0x0
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    move-object v2, v0
-
-    goto :goto_0
-
-    :cond_0
-    move-object v2, p1
-
-    :goto_0
-    if-eqz p3, :cond_1
-
-    sget-object p1, Lpt8;->h:Ljava/lang/Object;
-
-    :cond_1
-    move-object v3, p1
-
-    sget-object v9, Lq8;->f:Lq8;
-
-    const/4 v10, 0x1
-
-    const/4 v4, 0x0
-
-    const-wide v5, -0x7fffffffffffffffL    # -4.9E-324
-
-    const-wide/16 v7, 0x0
-
-    move-object v1, p2
-
-    invoke-virtual/range {v1 .. v10}, Lmlg;->i(Ljava/lang/Object;Ljava/lang/Object;IJJLq8;Z)V
-
-    return-object v1
-.end method
-
-.method public final h()I
+.method public final isEmpty()Z
     .locals 1
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lrt8;->a:Lpt8;
+
+    invoke-virtual {v0}, Lpt8;->isEmpty()Z
+
+    move-result v0
 
     return v0
 .end method
 
-.method public final l(I)Ljava/lang/Object;
-    .locals 0
+.method public final iterator()Ljava/util/Iterator;
+    .locals 3
 
-    sget-object p1, Lpt8;->h:Ljava/lang/Object;
+    iget-object v0, p0, Lrt8;->a:Lpt8;
 
-    return-object p1
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v1, Lmt8;
+
+    const/4 v2, 0x2
+
+    invoke-direct {v1, v2, v0}, Lmt8;-><init>(ILpt8;)V
+
+    return-object v1
 .end method
 
-.method public final m(ILplg;J)Lplg;
-    .locals 21
+.method public final remove(Ljava/lang/Object;)Z
+    .locals 3
 
-    sget-object v1, Lplg;->q:Ljava/lang/Object;
+    iget-object v0, p0, Lrt8;->a:Lpt8;
 
-    const/16 v18, 0x0
+    invoke-virtual {v0}, Lpt8;->c()V
 
-    const-wide/16 v19, 0x0
+    iget v1, v0, Lpt8;->X:I
 
-    move-object/from16 v0, p0
+    :cond_0
+    const/4 v2, -0x1
 
-    iget-object v2, v0, Lrt8;->e:Ld49;
+    add-int/2addr v1, v2
 
-    const/4 v3, 0x0
+    if-ltz v1, :cond_1
 
-    const-wide v4, -0x7fffffffffffffffL    # -4.9E-324
+    iget-object v2, v0, Lpt8;->c:[I
 
-    const-wide v6, -0x7fffffffffffffffL    # -4.9E-324
+    aget v2, v2, v1
 
-    const-wide v8, -0x7fffffffffffffffL    # -4.9E-324
+    if-ltz v2, :cond_0
 
-    const/4 v10, 0x0
+    iget-object v2, v0, Lpt8;->b:[Ljava/lang/Object;
 
-    const/4 v11, 0x1
+    aget-object v2, v2, v1
 
-    const/4 v12, 0x0
+    invoke-static {v2, p1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    const-wide/16 v13, 0x0
+    move-result v2
 
-    const-wide v15, -0x7fffffffffffffffL    # -4.9E-324
+    if-eqz v2, :cond_0
 
-    const/16 v17, 0x0
+    move v2, v1
 
-    move-object/from16 v0, p2
+    :cond_1
+    if-gez v2, :cond_2
 
-    invoke-virtual/range {v0 .. v20}, Lplg;->b(Ljava/lang/Object;Ld49;Ljava/lang/Object;JJJZZLr39;JJIIJ)V
+    const/4 p1, 0x0
 
-    const/4 v1, 0x1
+    return p1
 
-    iput-boolean v1, v0, Lplg;->k:Z
+    :cond_2
+    invoke-virtual {v0, v2}, Lpt8;->i(I)V
 
-    return-object v0
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
-.method public final o()I
+.method public final removeAll(Ljava/util/Collection;)Z
     .locals 1
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lrt8;->a:Lpt8;
+
+    invoke-virtual {v0}, Lpt8;->c()V
+
+    invoke-super {p0, p1}, Ljava/util/AbstractCollection;->removeAll(Ljava/util/Collection;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final retainAll(Ljava/util/Collection;)Z
+    .locals 1
+
+    iget-object v0, p0, Lrt8;->a:Lpt8;
+
+    invoke-virtual {v0}, Lpt8;->c()V
+
+    invoke-super {p0, p1}, Ljava/util/AbstractCollection;->retainAll(Ljava/util/Collection;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final size()I
+    .locals 1
+
+    iget-object v0, p0, Lrt8;->a:Lpt8;
+
+    iget v0, v0, Lpt8;->s0:I
 
     return v0
 .end method

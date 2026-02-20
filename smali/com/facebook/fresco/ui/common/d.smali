@@ -1,8 +1,8 @@
 .class public abstract Lcom/facebook/fresco/ui/common/d;
-.super Lqti;
+.super Lo9j;
 .source "SourceFile"
 
 
 # virtual methods
-.method public abstract e()V
+.method public abstract h()V
 .end method

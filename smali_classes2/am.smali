@@ -1,35 +1,40 @@
-.class public interface abstract Lam;
+.class public final Lam;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lkm;
+.implements Lone/me/rlottie/RLottieDrawable$OnNextFrameRenderedListener;
+
+
+# instance fields
+.field public final synthetic a:Lem;
+
+
+# direct methods
+.method public constructor <init>(Lem;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lam;->a:Lem;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public getConfigExtractor()Lwl;
+.method public final onNextFrameRendered(Lone/me/rlottie/RLottieDrawable;I)V
     .locals 1
 
-    sget-object v0, Lwl;->f:Lv1j;
+    sget-object p2, Lxl;->o:Lxl;
 
-    return-object v0
-.end method
+    iget-object v0, p0, Lam;->a:Lem;
 
-.method public getFailParser()Lq18;
-    .locals 1
+    invoke-virtual {v0, p2}, Lem;->k(Lxl;)V
 
-    sget-object v0, Lvna;->c:Lvna;
+    invoke-virtual {p1, p0}, Lone/me/rlottie/RLottieDrawable;->removeOnNextFrameRenderedListener(Lone/me/rlottie/RLottieDrawable$OnNextFrameRenderedListener;)V
 
-    return-object v0
-.end method
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
-.method public abstract getOkParser()Lq18;
-.end method
-
-.method public getScopeAfter()Lrm;
-    .locals 1
-
-    sget-object v0, Lrm;->a:Lrm;
-
-    return-object v0
+    return-void
 .end method

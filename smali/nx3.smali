@@ -1,316 +1,114 @@
 .class public final Lnx3;
-.super Ljava/lang/Object;
+.super Llx3;
 .source "SourceFile"
 
-
-# static fields
-.field public static final n:Landroid/util/SparseIntArray;
+# interfaces
+.implements Lsre;
 
 
 # instance fields
-.field public a:F
+.field public final Z:J
 
-.field public b:F
+.field public final s0:I
 
-.field public c:F
+.field public final t0:I
 
-.field public d:F
+.field public final u0:Z
 
-.field public e:F
-
-.field public f:F
-
-.field public g:F
-
-.field public h:I
-
-.field public i:F
-
-.field public j:F
-
-.field public k:F
-
-.field public l:Z
-
-.field public m:F
+.field public final v0:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(JJIIZ)V
+    .locals 1
 
-    new-instance v0, Landroid/util/SparseIntArray;
+    invoke-direct/range {p0 .. p7}, Llx3;-><init>(JJIIZ)V
 
-    invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
+    move v0, p7
 
-    sput-object v0, Lnx3;->n:Landroid/util/SparseIntArray;
+    move p7, p6
 
-    sget v1, Lkgd;->Transform_android_rotation:I
+    move p6, p5
 
-    const/4 v2, 0x1
+    move-wide p4, p3
 
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+    move-wide p2, p1
 
-    sget v1, Lkgd;->Transform_android_rotationX:I
+    move-object p1, p0
 
-    const/4 v2, 0x2
+    iput-wide p4, p1, Lnx3;->Z:J
 
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+    iput p6, p1, Lnx3;->s0:I
 
-    sget v1, Lkgd;->Transform_android_rotationY:I
+    iput p7, p1, Lnx3;->t0:I
 
-    const/4 v2, 0x3
+    iput-boolean v0, p1, Lnx3;->u0:Z
 
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+    const-wide/16 p4, -0x1
 
-    sget v1, Lkgd;->Transform_android_scaleX:I
+    cmp-long p6, p2, p4
 
-    const/4 v2, 0x4
+    if-eqz p6, :cond_0
 
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+    goto :goto_0
 
-    sget v1, Lkgd;->Transform_android_scaleY:I
+    :cond_0
+    move-wide p2, p4
 
-    const/4 v2, 0x5
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lkgd;->Transform_android_transformPivotX:I
-
-    const/4 v2, 0x6
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lkgd;->Transform_android_transformPivotY:I
-
-    const/4 v2, 0x7
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lkgd;->Transform_android_translationX:I
-
-    const/16 v2, 0x8
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lkgd;->Transform_android_translationY:I
-
-    const/16 v2, 0x9
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lkgd;->Transform_android_translationZ:I
-
-    const/16 v2, 0xa
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lkgd;->Transform_android_elevation:I
-
-    const/16 v2, 0xb
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lkgd;->Transform_transformPivotTarget:I
-
-    const/16 v2, 0xc
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+    :goto_0
+    iput-wide p2, p1, Lnx3;->v0:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/content/Context;Landroid/util/AttributeSet;)V
-    .locals 3
+.method public final a(J)J
+    .locals 4
 
-    sget-object v0, Lkgd;->Transform:[I
+    const-wide/16 v0, 0x0
 
-    invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
+    iget-wide v2, p0, Llx3;->b:J
 
-    move-result-object p1
+    sub-long/2addr p1, v2
 
-    invoke-virtual {p1}, Landroid/content/res/TypedArray;->getIndexCount()I
+    invoke-static {v0, v1, p1, p2}, Ljava/lang/Math;->max(JJ)J
 
-    move-result p2
+    move-result-wide p1
 
-    const/4 v0, 0x0
+    const-wide/32 v0, 0x7a1200
 
-    :goto_0
-    if-ge v0, p2, :cond_0
+    mul-long/2addr p1, v0
 
-    invoke-virtual {p1, v0}, Landroid/content/res/TypedArray;->getIndex(I)I
+    iget v0, p0, Llx3;->o:I
 
-    move-result v1
+    int-to-long v0, v0
 
-    sget-object v2, Lnx3;->n:Landroid/util/SparseIntArray;
+    div-long/2addr p1, v0
 
-    invoke-virtual {v2, v1}, Landroid/util/SparseIntArray;->get(I)I
+    return-wide p1
+.end method
 
-    move-result v2
+.method public final b()J
+    .locals 2
 
-    packed-switch v2, :pswitch_data_0
+    iget-wide v0, p0, Lnx3;->v0:J
 
-    goto/16 :goto_1
+    return-wide v0
+.end method
 
-    :pswitch_0
-    iget v2, p0, Lnx3;->h:I
+.method public final g()J
+    .locals 2
 
-    invoke-static {p1, v1, v2}, Lox3;->i(Landroid/content/res/TypedArray;II)I
+    iget-wide v0, p0, Lnx3;->Z:J
 
-    move-result v1
+    return-wide v0
+.end method
 
-    iput v1, p0, Lnx3;->h:I
+.method public final h()I
+    .locals 1
 
-    goto :goto_1
+    iget v0, p0, Lnx3;->s0:I
 
-    :pswitch_1
-    const/4 v2, 0x1
-
-    iput-boolean v2, p0, Lnx3;->l:Z
-
-    iget v2, p0, Lnx3;->m:F
-
-    invoke-virtual {p1, v1, v2}, Landroid/content/res/TypedArray;->getDimension(IF)F
-
-    move-result v1
-
-    iput v1, p0, Lnx3;->m:F
-
-    goto :goto_1
-
-    :pswitch_2
-    iget v2, p0, Lnx3;->k:F
-
-    invoke-virtual {p1, v1, v2}, Landroid/content/res/TypedArray;->getDimension(IF)F
-
-    move-result v1
-
-    iput v1, p0, Lnx3;->k:F
-
-    goto :goto_1
-
-    :pswitch_3
-    iget v2, p0, Lnx3;->j:F
-
-    invoke-virtual {p1, v1, v2}, Landroid/content/res/TypedArray;->getDimension(IF)F
-
-    move-result v1
-
-    iput v1, p0, Lnx3;->j:F
-
-    goto :goto_1
-
-    :pswitch_4
-    iget v2, p0, Lnx3;->i:F
-
-    invoke-virtual {p1, v1, v2}, Landroid/content/res/TypedArray;->getDimension(IF)F
-
-    move-result v1
-
-    iput v1, p0, Lnx3;->i:F
-
-    goto :goto_1
-
-    :pswitch_5
-    iget v2, p0, Lnx3;->g:F
-
-    invoke-virtual {p1, v1, v2}, Landroid/content/res/TypedArray;->getDimension(IF)F
-
-    move-result v1
-
-    iput v1, p0, Lnx3;->g:F
-
-    goto :goto_1
-
-    :pswitch_6
-    iget v2, p0, Lnx3;->f:F
-
-    invoke-virtual {p1, v1, v2}, Landroid/content/res/TypedArray;->getDimension(IF)F
-
-    move-result v1
-
-    iput v1, p0, Lnx3;->f:F
-
-    goto :goto_1
-
-    :pswitch_7
-    iget v2, p0, Lnx3;->e:F
-
-    invoke-virtual {p1, v1, v2}, Landroid/content/res/TypedArray;->getFloat(IF)F
-
-    move-result v1
-
-    iput v1, p0, Lnx3;->e:F
-
-    goto :goto_1
-
-    :pswitch_8
-    iget v2, p0, Lnx3;->d:F
-
-    invoke-virtual {p1, v1, v2}, Landroid/content/res/TypedArray;->getFloat(IF)F
-
-    move-result v1
-
-    iput v1, p0, Lnx3;->d:F
-
-    goto :goto_1
-
-    :pswitch_9
-    iget v2, p0, Lnx3;->c:F
-
-    invoke-virtual {p1, v1, v2}, Landroid/content/res/TypedArray;->getFloat(IF)F
-
-    move-result v1
-
-    iput v1, p0, Lnx3;->c:F
-
-    goto :goto_1
-
-    :pswitch_a
-    iget v2, p0, Lnx3;->b:F
-
-    invoke-virtual {p1, v1, v2}, Landroid/content/res/TypedArray;->getFloat(IF)F
-
-    move-result v1
-
-    iput v1, p0, Lnx3;->b:F
-
-    goto :goto_1
-
-    :pswitch_b
-    iget v2, p0, Lnx3;->a:F
-
-    invoke-virtual {p1, v1, v2}, Landroid/content/res/TypedArray;->getFloat(IF)F
-
-    move-result v1
-
-    iput v1, p0, Lnx3;->a:F
-
-    :goto_1
-    add-int/lit8 v0, v0, 0x1
-
-    goto/16 :goto_0
-
-    :cond_0
-    invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return v0
 .end method

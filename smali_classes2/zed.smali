@@ -3,4 +3,4 @@
 
 
 # static fields
-.field public static oneme_stickers_search_hint:I = 0x7f130a6a
+.field public static one_me_codeinput_edit_text_view:I = 0x7f0a05ac

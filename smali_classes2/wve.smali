@@ -1,47 +1,98 @@
 .class public final Lwve;
-.super Lo84;
+.super Landroid/view/View;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:I
+.field public a:Landroid/text/Layout;
 
-.field public synthetic d:Ljava/lang/Object;
-
-.field public final synthetic o:Lm40;
+.field public b:I
 
 
-# direct methods
-.method public constructor <init>(Lm40;Lkotlin/coroutines/Continuation;)V
+# virtual methods
+.method public final onDraw(Landroid/graphics/Canvas;)V
+    .locals 1
+
+    iget-object v0, p0, Lwve;->a:Landroid/text/Layout;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, p1}, Landroid/text/Layout;->draw(Landroid/graphics/Canvas;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onMeasure(II)V
     .locals 0
 
-    iput-object p1, p0, Lwve;->o:Lm40;
+    iget-object p1, p0, Lwve;->a:Landroid/text/Layout;
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p1}, Landroid/text/Layout;->getWidth()I
+
+    move-result p2
+
+    invoke-virtual {p1}, Landroid/text/Layout;->getHeight()I
+
+    move-result p1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p2, 0x0
+
+    move p1, p2
+
+    :goto_0
+    invoke-virtual {p0, p2, p1}, Landroid/view/View;->setMeasuredDimension(II)V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final setLayout(Landroid/text/Layout;)V
     .locals 1
 
-    iput-object p1, p0, Lwve;->d:Ljava/lang/Object;
+    iput-object p1, p0, Lwve;->a:Landroid/text/Layout;
 
-    iget p1, p0, Lwve;->X:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lwve;->X:I
-
-    iget-object p1, p0, Lwve;->o:Lm40;
-
-    invoke-virtual {p1, p0}, Lm40;->b(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {p1}, Landroid/text/Layout;->getPaint()Landroid/text/TextPaint;
 
     move-result-object p1
 
-    return-object p1
+    if-eqz p1, :cond_0
+
+    iget v0, p0, Lwve;->b:I
+
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setColor(I)V
+
+    :cond_0
+    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
+
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+
+    return-void
+.end method
+
+.method public final setTextColor(I)V
+    .locals 1
+
+    iput p1, p0, Lwve;->b:I
+
+    iget-object v0, p0, Lwve;->a:Landroid/text/Layout;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Landroid/text/Layout;->getPaint()Landroid/text/TextPaint;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
+
+    :cond_0
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+
+    return-void
 .end method

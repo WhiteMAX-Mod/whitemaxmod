@@ -1,88 +1,303 @@
 .class public final Lor7;
-.super Lp6g;
+.super Lpdg;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Lat6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/login/inputphone/InputPhoneScreen;
+.field public synthetic X:I
 
-.field public synthetic o:Ljava/lang/Object;
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic o:I
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/login/inputphone/InputPhoneScreen;)V
+.method public constructor <init>(ILkotlin/coroutines/Continuation;I)V
     .locals 0
 
-    iput-object p2, p0, Lor7;->X:Lone/me/login/inputphone/InputPhoneScreen;
+    iput p3, p0, Lor7;->o:I
 
-    const/4 p2, 0x2
+    packed-switch p3, :pswitch_data_0
 
-    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
+
+    :pswitch_0
+    iput p1, p0, Lor7;->X:I
+
+    const/4 p1, 0x3
+
+    invoke-direct {p0, p1, p2}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget v0, p0, Lor7;->o:I
 
-    invoke-virtual {p0, p1, p2}, Lor7;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object p1
+    check-cast p1, Landroid/widget/ImageView;
 
-    check-cast p1, Lor7;
+    check-cast p2, Llob;
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    check-cast p3, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {p1, p2}, Lor7;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    new-instance p2, Lor7;
 
-    return-object p2
-.end method
+    iget v0, p0, Lor7;->X:I
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    const/4 v1, 0x1
+
+    invoke-direct {p2, v0, p3, v1}, Lor7;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    iput-object p1, p2, Lor7;->Y:Ljava/lang/Object;
+
+    sget-object p1, Lmah;->a:Lmah;
+
+    invoke-virtual {p2, p1}, Lor7;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    :pswitch_0
+    check-cast p1, Ljava/lang/String;
+
+    check-cast p2, Ljava/lang/Number;
+
+    invoke-virtual {p2}, Ljava/lang/Number;->intValue()I
+
+    move-result p2
+
+    check-cast p3, Lkotlin/coroutines/Continuation;
 
     new-instance v0, Lor7;
 
-    iget-object v1, p0, Lor7;->X:Lone/me/login/inputphone/InputPhoneScreen;
+    const/4 v1, 0x3
 
-    invoke-direct {v0, p2, v1}, Lor7;-><init>(Lkotlin/coroutines/Continuation;Lone/me/login/inputphone/InputPhoneScreen;)V
+    const/4 v2, 0x0
 
-    iput-object p1, v0, Lor7;->o:Ljava/lang/Object;
+    invoke-direct {v0, v1, p3, v2}, Lor7;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    return-object v0
+    iput-object p1, v0, Lor7;->Y:Ljava/lang/Object;
+
+    iput p2, v0, Lor7;->X:I
+
+    sget-object p1, Lmah;->a:Lmah;
+
+    invoke-virtual {v0, p1}, Lor7;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    .locals 13
 
-    iget-object v0, p0, Lor7;->o:Ljava/lang/Object;
+    iget v0, p0, Lor7;->o:I
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    const/4 v1, 0x1
 
-    check-cast v0, Ljava/lang/Boolean;
+    const/4 v2, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lor7;->Y:Ljava/lang/Object;
+
+    check-cast v0, Landroid/widget/ImageView;
+
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    sget p1, Lice;->J:I
+
+    sget-object v3, Lfe3;->t0:Ltea;
+
+    invoke-virtual {v3, v0}, Ltea;->o(Landroid/view/View;)Llob;
+
+    move-result-object v4
+
+    invoke-interface {v4}, Llob;->getIcon()Lhob;
+
+    move-result-object v4
+
+    iget v4, v4, Lhob;->c:I
+
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v5
+
+    invoke-static {v5, p1}, Lh94;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    invoke-static {p1, v4}, Lu1j;->d(Landroid/graphics/drawable/Drawable;I)V
+
+    new-instance v4, Landroid/graphics/drawable/ShapeDrawable;
+
+    new-instance v5, Landroid/graphics/drawable/shapes/OvalShape;
+
+    invoke-direct {v5}, Landroid/graphics/drawable/shapes/OvalShape;-><init>()V
+
+    invoke-direct {v4, v5}, Landroid/graphics/drawable/ShapeDrawable;-><init>(Landroid/graphics/drawable/shapes/Shape;)V
+
+    iget v5, p0, Lor7;->X:I
+
+    invoke-virtual {v4, v5}, Landroid/graphics/drawable/ShapeDrawable;->setIntrinsicWidth(I)V
+
+    invoke-virtual {v4, v5}, Landroid/graphics/drawable/ShapeDrawable;->setIntrinsicHeight(I)V
+
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v6
+
+    invoke-virtual {v3, v6}, Ltea;->n(Landroid/content/Context;)Lfe3;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Lfe3;->j()Llob;
+
+    move-result-object v3
+
+    invoke-interface {v3}, Llob;->l()Lhob;
+
+    move-result-object v3
+
+    iget v3, v3, Lhob;->c:I
+
+    invoke-virtual {v4, v3}, Landroid/graphics/drawable/Drawable;->setTint(I)V
+
+    const/16 v3, 0x10
+
+    int-to-float v3, v3
+
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v6
+
+    iget v6, v6, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v3, v6
+
+    invoke-static {v3}, Lmhj;->f(F)I
+
+    move-result v3
+
+    sub-int v3, v5, v3
+
+    const/4 v6, 0x2
+
+    div-int/lit8 v9, v3, 0x2
+
+    const/16 v3, 0xc
+
+    int-to-float v3, v3
+
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v7
+
+    iget v7, v7, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v3, v7
+
+    invoke-static {v3}, Lmhj;->f(F)I
+
+    move-result v3
+
+    sub-int/2addr v5, v3
+
+    div-int/lit8 v10, v5, 0x2
+
+    new-instance v7, Landroid/graphics/drawable/LayerDrawable;
+
+    new-array v3, v6, [Landroid/graphics/drawable/Drawable;
+
+    aput-object v4, v3, v2
+
+    aput-object p1, v3, v1
+
+    invoke-direct {v7, v3}, Landroid/graphics/drawable/LayerDrawable;-><init>([Landroid/graphics/drawable/Drawable;)V
+
+    const/4 v8, 0x1
+
+    move v11, v9
+
+    move v12, v10
+
+    invoke-virtual/range {v7 .. v12}, Landroid/graphics/drawable/LayerDrawable;->setLayerInset(IIIII)V
+
+    invoke-virtual {v0, v7}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
+
+    :pswitch_0
+    iget-object v0, p0, Lor7;->Y:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/String;
+
+    iget v3, p0, Lor7;->X:I
+
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result p1
 
-    sget-object v0, Lone/me/login/inputphone/InputPhoneScreen;->D0:[Lz28;
+    if-eq p1, v3, :cond_1
 
-    iget-object v0, p0, Lor7;->X:Lone/me/login/inputphone/InputPhoneScreen;
+    const/4 p1, -0x1
 
-    invoke-virtual {v0}, Lone/me/login/inputphone/InputPhoneScreen;->B0()Lone/me/sdk/uikit/common/button/OneMeButton;
+    if-ne v3, p1, :cond_0
 
-    move-result-object v0
+    goto :goto_0
 
-    invoke-virtual {v0, p1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setEnabled(Z)V
+    :cond_0
+    move v1, v2
 
-    sget-object p1, Lb3h;->a:Lb3h;
+    :cond_1
+    :goto_0
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
 
     return-object p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

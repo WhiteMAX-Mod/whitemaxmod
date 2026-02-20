@@ -1,293 +1,177 @@
-.class public abstract Lf0c;
-.super Ljava/lang/Object;
+.class public final Lf0c;
+.super Lbod;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/Iterator;
-.implements Lo28;
+
+# static fields
+.field public static final c:Ljava/lang/String;
 
 
 # instance fields
-.field public final a:[Lxug;
-
-.field public b:I
-
-.field public c:Z
+.field public final b:F
 
 
 # direct methods
-.method public constructor <init>(Lwug;[Lxug;)V
+.method static constructor <clinit>()V
     .locals 2
 
+    sget-object v0, Lvih;->a:Ljava/lang/String;
+
+    const/16 v0, 0x24
+
+    const/4 v1, 0x1
+
+    invoke-static {v1, v0}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lf0c;->c:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 1
+
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lf0c;->a:[Lxug;
+    const/high16 v0, -0x40800000    # -1.0f
 
-    const/4 v0, 0x1
+    .line 2
+    iput v0, p0, Lf0c;->b:F
 
-    iput-boolean v0, p0, Lf0c;->c:Z
+    return-void
+.end method
+
+.method public constructor <init>(F)V
+    .locals 2
+
+    .line 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    aget-object p2, p2, v0
+    cmpl-float v0, p1, v0
 
-    iget-object v1, p1, Lwug;->d:[Ljava/lang/Object;
+    if-ltz v0, :cond_0
 
-    iget p1, p1, Lwug;->a:I
+    const/high16 v0, 0x42c80000    # 100.0f
 
-    invoke-static {p1}, Ljava/lang/Integer;->bitCount(I)I
+    cmpg-float v0, p1, v0
 
-    move-result p1
+    if-gtz v0, :cond_0
 
-    mul-int/lit8 p1, p1, 0x2
+    const/4 v0, 0x1
 
-    invoke-virtual {p2, p1, v0, v1}, Lxug;->a(II[Ljava/lang/Object;)V
+    goto :goto_0
 
-    iput v0, p0, Lf0c;->b:I
+    :cond_0
+    const/4 v0, 0x0
 
-    invoke-virtual {p0}, Lf0c;->a()V
+    .line 4
+    :goto_0
+    const-string v1, "percent must be in the range of [0, 100]"
+
+    invoke-static {v1, v0}, Lxej;->a(Ljava/lang/Object;Z)V
+
+    .line 5
+    iput p1, p0, Lf0c;->b:F
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 10
+.method public final b()Z
+    .locals 2
 
-    iget v0, p0, Lf0c;->b:I
+    iget v0, p0, Lf0c;->b:F
 
-    iget-object v1, p0, Lf0c;->a:[Lxug;
+    const/high16 v1, -0x40800000    # -1.0f
 
-    aget-object v2, v1, v0
+    cmpl-float v0, v0, v1
 
-    iget v3, v2, Lxug;->c:I
+    if-eqz v0, :cond_0
 
-    iget v2, v2, Lxug;->b:I
+    const/4 v0, 0x1
 
-    if-ge v3, v2, :cond_0
-
-    return-void
+    return v0
 
     :cond_0
-    const/4 v2, 0x0
-
-    if-ltz v0, :cond_5
-
-    :goto_0
-    add-int/lit8 v3, v0, -0x1
-
-    invoke-virtual {p0, v0}, Lf0c;->b(I)I
-
-    move-result v4
-
-    const/4 v5, -0x1
-
-    if-ne v4, v5, :cond_1
-
-    aget-object v6, v1, v0
-
-    iget v7, v6, Lxug;->c:I
-
-    iget-object v8, v6, Lxug;->a:[Ljava/lang/Object;
-
-    array-length v9, v8
-
-    if-ge v7, v9, :cond_1
-
-    array-length v4, v8
-
-    add-int/lit8 v7, v7, 0x1
-
-    iput v7, v6, Lxug;->c:I
-
-    invoke-virtual {p0, v0}, Lf0c;->b(I)I
-
-    move-result v4
-
-    :cond_1
-    if-eq v4, v5, :cond_2
-
-    iput v4, p0, Lf0c;->b:I
-
-    return-void
-
-    :cond_2
-    if-lez v0, :cond_3
-
-    add-int/lit8 v4, v0, -0x1
-
-    aget-object v4, v1, v4
-
-    iget v5, v4, Lxug;->c:I
-
-    iget-object v6, v4, Lxug;->a:[Ljava/lang/Object;
-
-    array-length v6, v6
-
-    add-int/lit8 v5, v5, 0x1
-
-    iput v5, v4, Lxug;->c:I
-
-    :cond_3
-    aget-object v0, v1, v0
-
-    sget-object v4, Lwug;->e:Lwug;
-
-    iget-object v4, v4, Lwug;->d:[Ljava/lang/Object;
-
-    invoke-virtual {v0, v2, v2, v4}, Lxug;->a(II[Ljava/lang/Object;)V
-
-    if-gez v3, :cond_4
-
-    goto :goto_1
-
-    :cond_4
-    move v0, v3
-
-    goto :goto_0
-
-    :cond_5
-    :goto_1
-    iput-boolean v2, p0, Lf0c;->c:Z
-
-    return-void
-.end method
-
-.method public final b(I)I
-    .locals 4
-
-    iget-object v0, p0, Lf0c;->a:[Lxug;
-
-    aget-object v1, v0, p1
-
-    iget v2, v1, Lxug;->c:I
-
-    iget v3, v1, Lxug;->b:I
-
-    if-ge v2, v3, :cond_0
-
-    return p1
-
-    :cond_0
-    iget-object v1, v1, Lxug;->a:[Ljava/lang/Object;
-
-    array-length v3, v1
-
-    if-ge v2, v3, :cond_3
-
-    array-length v3, v1
-
-    aget-object v1, v1, v2
-
-    if-eqz v1, :cond_2
-
-    check-cast v1, Lwug;
-
-    const/4 v2, 0x6
-
-    const/4 v3, 0x0
-
-    if-ne p1, v2, :cond_1
-
-    add-int/lit8 v2, p1, 0x1
-
-    aget-object v0, v0, v2
-
-    iget-object v1, v1, Lwug;->d:[Ljava/lang/Object;
-
-    array-length v2, v1
-
-    invoke-virtual {v0, v2, v3, v1}, Lxug;->a(II[Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_1
-    add-int/lit8 v2, p1, 0x1
-
-    aget-object v0, v0, v2
-
-    iget-object v2, v1, Lwug;->d:[Ljava/lang/Object;
-
-    iget v1, v1, Lwug;->a:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->bitCount(I)I
-
-    move-result v1
-
-    mul-int/lit8 v1, v1, 0x2
-
-    invoke-virtual {v0, v1, v3, v2}, Lxug;->a(II[Ljava/lang/Object;)V
-
-    :goto_0
-    add-int/lit8 p1, p1, 0x1
-
-    invoke-virtual {p0, p1}, Lf0c;->b(I)I
-
-    move-result p1
-
-    return p1
-
-    :cond_2
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    const-string v0, "null cannot be cast to non-null type kotlinx.collections.immutable.implementations.immutableMap.TrieNode<K of kotlinx.collections.immutable.implementations.immutableMap.TrieNodeBaseIterator, V of kotlinx.collections.immutable.implementations.immutableMap.TrieNodeBaseIterator>"
-
-    invoke-direct {p1, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_3
-    const/4 p1, -0x1
-
-    return p1
-.end method
-
-.method public final hasNext()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lf0c;->c:Z
+    const/4 v0, 0x0
 
     return v0
 .end method
 
-.method public next()Ljava/lang/Object;
+.method public final c()Landroid/os/Bundle;
+    .locals 3
+
+    new-instance v0, Landroid/os/Bundle;
+
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+
+    sget-object v1, Lbod;->a:Ljava/lang/String;
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+
+    sget-object v1, Lf0c;->c:Ljava/lang/String;
+
+    iget v2, p0, Lf0c;->b:F
+
+    invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putFloat(Ljava/lang/String;F)V
+
+    return-object v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
-    iget-boolean v0, p0, Lf0c;->c:Z
+    instance-of v0, p1, Lf0c;
 
-    if-eqz v0, :cond_0
+    const/4 v1, 0x0
 
-    iget-object v0, p0, Lf0c;->a:[Lxug;
+    if-nez v0, :cond_0
 
-    iget v1, p0, Lf0c;->b:I
+    return v1
 
-    aget-object v0, v0, v1
+    :cond_0
+    check-cast p1, Lf0c;
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    iget p1, p1, Lf0c;->b:F
+
+    iget v0, p0, Lf0c;->b:F
+
+    cmpl-float p1, v0, p1
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_1
+    return v1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget v0, p0, Lf0c;->b:F
+
+    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lf0c;->a()V
+    filled-new-array {v0}, [Ljava/lang/Object;
 
-    return-object v0
+    move-result-object v0
 
-    :cond_0
-    new-instance v0, Ljava/util/NoSuchElementException;
+    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
 
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+    move-result v0
 
-    throw v0
-.end method
-
-.method public remove()V
-    .locals 2
-
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    const-string v1, "Operation is not supported for read-only collection"
-
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    return v0
 .end method

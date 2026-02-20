@@ -1,156 +1,84 @@
 .class public final Lgr9;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:Los9;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final a:J
 
 
 # direct methods
-.method public constructor <init>(Los9;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(J)V
     .locals 0
 
-    iput-object p1, p0, Lgr9;->X:Los9;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-wide p1, p0, Lgr9;->a:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    check-cast p1, Lvea;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lgr9;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lgr9;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lgr9;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lgr9;
-
-    iget-object v1, p0, Lgr9;->X:Los9;
-
-    invoke-direct {v0, v1, p2}, Lgr9;-><init>(Los9;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lgr9;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
-
-    iget-object v0, p0, Lgr9;->o:Ljava/lang/Object;
-
-    check-cast v0, Lvea;
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lgr9;->X:Los9;
-
-    iget-object p1, p1, Los9;->U0:Lspf;
+    return v0
 
     :cond_0
-    invoke-virtual {p1}, Lspf;->getValue()Ljava/lang/Object;
+    instance-of v1, p1, Lgr9;
 
-    move-result-object v1
+    const/4 v2, 0x0
 
-    move-object v2, v1
+    if-nez v1, :cond_1
 
-    check-cast v2, Llr9;
-
-    if-eqz v2, :cond_3
-
-    iget-object v3, v2, Llr9;->a:Ljava/util/Set;
-
-    new-instance v4, Ljava/util/ArrayList;
-
-    invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-interface {v3}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v3
+    return v2
 
     :cond_1
-    :goto_0
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+    check-cast p1, Lgr9;
 
-    move-result v5
+    iget-wide v3, p0, Lgr9;->a:J
 
-    if-eqz v5, :cond_2
+    iget-wide v5, p1, Lgr9;->a:J
 
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    cmp-long p1, v3, v5
 
-    move-result-object v5
+    if-eqz p1, :cond_2
 
-    move-object v6, v5
-
-    check-cast v6, Ljava/lang/Number;
-
-    invoke-virtual {v6}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v6
-
-    invoke-virtual {v0, v6, v7}, Lvea;->d(J)Z
-
-    move-result v6
-
-    if-nez v6, :cond_1
-
-    invoke-virtual {v4, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
+    return v2
 
     :cond_2
-    new-instance v3, Lbt;
+    return v0
+.end method
 
-    invoke-direct {v3, v4}, Lbt;-><init>(Ljava/util/Collection;)V
+.method public final hashCode()I
+    .locals 2
 
-    iget-object v4, v2, Llr9;->b:Ljava/lang/Long;
+    iget-wide v0, p0, Lgr9;->a:J
 
-    iget-boolean v2, v2, Llr9;->c:Z
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
-    new-instance v5, Llr9;
+    move-result v0
 
-    invoke-direct {v5, v3, v4, v2}, Llr9;-><init>(Ljava/util/Set;Ljava/lang/Long;Z)V
+    return v0
+.end method
 
-    goto :goto_1
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    :cond_3
-    const/4 v5, 0x0
+    const-string v0, "ControlInfo(pinnedMessageId="
 
-    :goto_1
-    invoke-virtual {p1, v1, v5}, Lspf;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    const-string v1, ")"
 
-    move-result v1
+    iget-wide v2, p0, Lgr9;->a:J
 
-    if-eqz v1, :cond_0
+    invoke-static {v2, v3, v0, v1}, Lfvg;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    sget-object p1, Lb3h;->a:Lb3h;
+    move-result-object v0
 
-    return-object p1
+    return-object v0
 .end method

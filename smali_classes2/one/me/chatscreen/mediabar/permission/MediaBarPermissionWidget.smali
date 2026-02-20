@@ -35,28 +35,28 @@
 
 
 # static fields
-.field public static final synthetic Y:[Lz28;
+.field public static final synthetic Y:[Lv58;
 
 
 # instance fields
-.field public final X:Lro0;
+.field public final X:Lwp0;
 
-.field public final a:Lo58;
+.field public final a:Lj88;
 
-.field public final b:Lo58;
+.field public final b:Lj88;
 
-.field public final c:Lro0;
+.field public final c:Lwp0;
 
-.field public final d:Lro0;
+.field public final d:Lwp0;
 
-.field public final o:Lro0;
+.field public final o:Lwp0;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 7
 
-    new-instance v0, Liyc;
+    new-instance v0, Lv3d;
 
     const-class v1, Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;
 
@@ -66,29 +66,29 @@
 
     const/4 v4, 0x0
 
-    invoke-direct {v0, v1, v2, v3, v4}, Liyc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v2, v3, v4}, Lv3d;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    sget-object v2, Lctd;->a:Ldtd;
+    sget-object v2, Lazd;->a:Lbzd;
 
     const-string v3, "cameraContent"
 
     const-string v5, "getCameraContent()Landroid/widget/FrameLayout;"
 
-    invoke-static {v2, v1, v3, v5, v4}, Lj27;->e(Ldtd;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Liyc;
+    invoke-static {v2, v1, v3, v5, v4}, Lo16;->g(Lbzd;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lv3d;
 
     move-result-object v2
 
-    new-instance v3, Liyc;
+    new-instance v3, Lv3d;
 
     const-string v5, "permissionContent"
 
     const-string v6, "getPermissionContent()Landroid/widget/LinearLayout;"
 
-    invoke-direct {v3, v1, v5, v6, v4}, Liyc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v3, v1, v5, v6, v4}, Lv3d;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
     const/4 v1, 0x3
 
-    new-array v1, v1, [Lz28;
+    new-array v1, v1, [Lv58;
 
     aput-object v0, v1, v4
 
@@ -100,7 +100,7 @@
 
     aput-object v3, v1, v0
 
-    sput-object v1, Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;->Y:[Lz28;
+    sput-object v1, Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;->Y:[Lv58;
 
     return-void
 .end method
@@ -109,7 +109,7 @@
     .locals 1
 
     .line 10
-    invoke-static {}, Laaj;->b()Landroid/os/Bundle;
+    invoke-static {}, Lejj;->b()Landroid/os/Bundle;
 
     move-result-object v0
 
@@ -128,111 +128,168 @@
     const/4 v2, 0x0
 
     .line 1
-    invoke-direct {p0, p1, v2, v0, v1}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILso4;)V
+    invoke-direct {p0, p1, v2, v0, v1}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILfq4;)V
 
     .line 2
-    sget-object p1, Lzzb;->a:Lzzb;
+    sget-object p1, Lv2c;->a:Lv2c;
 
-    invoke-virtual {p1}, Lzzb;->a()Lo58;
+    invoke-virtual {p1}, Lv2c;->a()Lj88;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;->a:Lo58;
+    iput-object p1, p0, Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;->a:Lj88;
 
     .line 3
-    new-instance p1, Lw08;
+    new-instance p1, Lt38;
 
-    const/16 v0, 0x13
+    const/16 v0, 0xf
 
-    invoke-direct {p1, v0}, Lw08;-><init>(I)V
+    invoke-direct {p1, v0}, Lt38;-><init>(I)V
 
     .line 4
-    new-instance v0, Lzs3;
+    new-instance v0, Lqe8;
 
-    const/16 v1, 0x1c
+    const/4 v1, 0x5
 
-    invoke-direct {v0, v1, p1}, Lzs3;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p1}, Lqe8;-><init>(ILjava/lang/Object;)V
 
-    const-class p1, Lzw8;
+    const-class p1, Lsy8;
 
-    invoke-virtual {p0, p1, v0}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Llq6;)Lo58;
+    invoke-virtual {p0, p1, v0}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Lis6;)Lj88;
 
     move-result-object p1
 
     .line 5
-    iput-object p1, p0, Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;->b:Lo58;
+    iput-object p1, p0, Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;->b:Lj88;
 
     .line 6
-    new-instance p1, Lax8;
+    new-instance p1, Lty8;
 
     const/4 v0, 0x0
 
-    invoke-direct {p1, p0, v0}, Lax8;-><init>(Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;I)V
+    invoke-direct {p1, p0, v0}, Lty8;-><init>(Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;I)V
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->binding(Llq6;)Lro0;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->binding(Lis6;)Lwp0;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;->c:Lro0;
+    iput-object p1, p0, Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;->c:Lwp0;
 
     .line 7
-    new-instance p1, Lax8;
+    new-instance p1, Lty8;
 
     const/4 v0, 0x1
 
-    invoke-direct {p1, p0, v0}, Lax8;-><init>(Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;I)V
+    invoke-direct {p1, p0, v0}, Lty8;-><init>(Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;I)V
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->binding(Llq6;)Lro0;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->binding(Lis6;)Lwp0;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;->d:Lro0;
+    iput-object p1, p0, Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;->d:Lwp0;
 
     .line 8
-    new-instance p1, Lax8;
+    new-instance p1, Lty8;
 
     const/4 v0, 0x2
 
-    invoke-direct {p1, p0, v0}, Lax8;-><init>(Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;I)V
+    invoke-direct {p1, p0, v0}, Lty8;-><init>(Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;I)V
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->binding(Llq6;)Lro0;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->binding(Lis6;)Lwp0;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;->o:Lro0;
+    iput-object p1, p0, Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;->o:Lwp0;
 
     .line 9
-    new-instance p1, Lax8;
+    new-instance p1, Lty8;
 
     const/4 v0, 0x3
 
-    invoke-direct {p1, p0, v0}, Lax8;-><init>(Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;I)V
+    invoke-direct {p1, p0, v0}, Lty8;-><init>(Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;I)V
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->binding(Llq6;)Lro0;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->binding(Lis6;)Lwp0;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;->X:Lro0;
+    iput-object p1, p0, Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;->X:Lwp0;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onActivityResumed(Landroid/app/Activity;)V
-    .locals 1
+.method public final H0()V
+    .locals 4
 
-    iget-object v0, p0, Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;->b:Lo58;
+    iget-object v0, p0, Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;->a:Lj88;
 
-    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lu2c;
+
+    sget-object v2, Lu2c;->m:[Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Lu2c;->c([Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lzw8;
+    check-cast v0, Lu2c;
 
-    iget-object v0, v0, Lzw8;->b:Lxzb;
+    new-instance v1, Looi;
 
-    invoke-virtual {v0}, Lxzb;->g()V
+    const/4 v2, 0x1
+
+    invoke-direct {v1, p0, v2}, Looi;-><init>(Lone/me/sdk/arch/Widget;I)V
+
+    invoke-virtual {v0, v1}, Lu2c;->l(Looi;)V
+
+    return-void
+
+    :cond_0
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lu2c;
+
+    new-instance v1, Looi;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v1, p0, v2}, Looi;-><init>(Lone/me/sdk/arch/Widget;I)V
+
+    sget-object v2, Lu2c;->o:[Ljava/lang/String;
+
+    const/16 v3, 0xa2
+
+    invoke-virtual {v0, v1, v2, v3}, Lu2c;->j(Looi;[Ljava/lang/String;I)V
+
+    return-void
+.end method
+
+.method public final onActivityResumed(Landroid/app/Activity;)V
+    .locals 1
+
+    iget-object v0, p0, Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;->b:Lj88;
+
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lsy8;
+
+    iget-object v0, v0, Lsy8;->b:Lt2c;
+
+    invoke-virtual {v0}, Lt2c;->g()V
 
     invoke-super {p0, p1}, Lone/me/sdk/arch/Widget;->onActivityResumed(Landroid/app/Activity;)V
 
@@ -264,13 +321,13 @@
 
     invoke-virtual {p1, p3}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    sget-object p3, Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;->Y:[Lz28;
+    sget-object p3, Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;->Y:[Lv58;
 
     aget-object p2, p3, p2
 
-    iget-object p2, p0, Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;->o:Lro0;
+    iget-object p2, p0, Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;->o:Lwp0;
 
-    invoke-virtual {p2}, Lro0;->getValue()Ljava/lang/Object;
+    invoke-virtual {p2}, Lwp0;->getValue()Ljava/lang/Object;
 
     move-result-object p2
 
@@ -282,9 +339,9 @@
 
     aget-object p2, p3, p2
 
-    iget-object p2, p0, Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;->X:Lro0;
+    iget-object p2, p0, Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;->X:Lwp0;
 
-    invoke-virtual {p2}, Lro0;->getValue()Ljava/lang/Object;
+    invoke-virtual {p2}, Lwp0;->getValue()Ljava/lang/Object;
 
     move-result-object p2
 
@@ -298,19 +355,19 @@
 .method public final onDestroyView(Landroid/view/View;)V
     .locals 3
 
-    iget-object v0, p0, Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;->d:Lro0;
+    iget-object v0, p0, Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;->d:Lwp0;
 
-    invoke-virtual {v0}, Lro0;->e()Z
+    invoke-virtual {v0}, Lwp0;->e()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v0}, Lro0;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Lwp0;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lc22;
+    check-cast v0, Lh32;
 
     check-cast v0, Lru/ok/tamtam/android/widgets/quickcamera/CameraxCameraApiView;
 
@@ -324,26 +381,18 @@
 
     const-string v2, "destroyCamera"
 
-    invoke-static {v1, v2}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Ltej;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v1, v0, Lru/ok/tamtam/android/widgets/quickcamera/CameraxCameraApiView;->c:Lr78;
+    iget-object v1, v0, Lru/ok/tamtam/android/widgets/quickcamera/CameraxCameraApiView;->c:Lja8;
 
-    invoke-virtual {v1}, Lr78;->w()V
+    invoke-virtual {v1}, Lja8;->w()V
 
-    iget-object v0, v0, Lru/ok/tamtam/android/widgets/quickcamera/CameraxCameraApiView;->d:Li42;
+    iget-object v0, v0, Lru/ok/tamtam/android/widgets/quickcamera/CameraxCameraApiView;->d:Ln52;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v1, Lh42;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v1, v0, v2}, Lh42;-><init>(Li42;I)V
-
-    invoke-virtual {v0, v1}, Li42;->a(Ljava/lang/Runnable;)V
+    invoke-virtual {v0}, Ln52;->a()V
 
     :cond_0
-    invoke-super {p0, p1}, La94;->onDestroyView(Landroid/view/View;)V
+    invoke-super {p0, p1}, Lpa4;->onDestroyView(Landroid/view/View;)V
 
     return-void
 .end method
@@ -353,7 +402,7 @@
 
     const/16 v0, 0x9d
 
-    iget-object v1, p0, Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;->a:Lo58;
+    iget-object v1, p0, Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;->a:Lj88;
 
     const/4 v2, -0x1
 
@@ -382,25 +431,25 @@
     goto :goto_0
 
     :cond_1
-    invoke-interface {v1}, Lo58;->getValue()Ljava/lang/Object;
+    invoke-interface {v1}, Lj88;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
     move-object v0, p1
 
-    check-cast v0, Lyzb;
+    check-cast v0, Lu2c;
 
-    new-instance v1, Ljgi;
+    new-instance v1, Looi;
 
     const/4 p1, 0x1
 
-    invoke-direct {v1, p0, p1}, Ljgi;-><init>(Lone/me/sdk/arch/Widget;I)V
+    invoke-direct {v1, p0, p1}, Looi;-><init>(Lone/me/sdk/arch/Widget;I)V
 
-    sget-object v4, Lyzb;->o:[Ljava/lang/String;
+    sget-object v4, Lu2c;->o:[Ljava/lang/String;
 
-    sget v5, Ld8b;->N:I
+    sget v5, Lx9b;->N:I
 
-    sget v6, Ld8b;->M:I
+    sget v6, Lx9b;->M:I
 
     const/16 v7, 0xc0
 
@@ -408,7 +457,7 @@
 
     move-object v3, p3
 
-    invoke-static/range {v0 .. v7}, Lyzb;->s(Lyzb;Ljgi;[Ljava/lang/String;[I[Ljava/lang/String;III)Z
+    invoke-static/range {v0 .. v7}, Lu2c;->s(Lu2c;Looi;[Ljava/lang/String;[I[Ljava/lang/String;III)Z
 
     return-void
 
@@ -435,82 +484,25 @@
     return-void
 
     :cond_4
-    invoke-interface {v1}, Lo58;->getValue()Ljava/lang/Object;
+    invoke-interface {v1}, Lj88;->getValue()Ljava/lang/Object;
 
     move-result-object p3
 
-    check-cast p3, Lyzb;
+    check-cast p3, Lu2c;
 
-    new-instance v0, Ljgi;
+    new-instance v0, Looi;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, p0, v1}, Ljgi;-><init>(Lone/me/sdk/arch/Widget;I)V
+    invoke-direct {v0, p0, v1}, Looi;-><init>(Lone/me/sdk/arch/Widget;I)V
 
-    sget v1, Ld8b;->P:I
+    sget v1, Lx9b;->P:I
 
-    sget v2, Ld8b;->O:I
+    sget v2, Lx9b;->O:I
 
     invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {v0, p1, p2, v1, v2}, Lyzb;->q(Ljgi;[Ljava/lang/String;[III)V
-
-    return-void
-.end method
-
-.method public final z0()V
-    .locals 4
-
-    iget-object v0, p0, Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;->a:Lo58;
-
-    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lyzb;
-
-    sget-object v2, Lyzb;->m:[Ljava/lang/String;
-
-    invoke-virtual {v1, v2}, Lyzb;->c([Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lyzb;
-
-    new-instance v1, Ljgi;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v1, p0, v2}, Ljgi;-><init>(Lone/me/sdk/arch/Widget;I)V
-
-    invoke-virtual {v0, v1}, Lyzb;->l(Ljgi;)V
-
-    return-void
-
-    :cond_0
-    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lyzb;
-
-    new-instance v1, Ljgi;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v1, p0, v2}, Ljgi;-><init>(Lone/me/sdk/arch/Widget;I)V
-
-    sget-object v2, Lyzb;->o:[Ljava/lang/String;
-
-    const/16 v3, 0xa2
-
-    invoke-virtual {v0, v1, v2, v3}, Lyzb;->j(Ljgi;[Ljava/lang/String;I)V
+    invoke-static {v0, p1, p2, v1, v2}, Lu2c;->q(Looi;[Ljava/lang/String;[III)V
 
     return-void
 .end method

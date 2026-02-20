@@ -95,7 +95,7 @@
 
 
 # virtual methods
-.method public final a(Le42;Lgc0;)Z
+.method public final a(Lj52;Lbe0;)Z
     .locals 3
 
     sget-object p1, Landroid/os/Build;->BRAND:Ljava/lang/String;
@@ -118,11 +118,11 @@
 
     if-eqz v1, :cond_0
 
-    sget-object p1, Lgc0;->f:Lgc0;
+    sget-object p1, Lbe0;->f:Lbe0;
 
     if-eq p2, p1, :cond_6
 
-    sget-object p1, Lgc0;->g:Lgc0;
+    sget-object p1, Lbe0;->g:Lbe0;
 
     if-ne p2, p1, :cond_7
 
@@ -219,7 +219,7 @@
 
     :cond_5
     :goto_0
-    sget-object p1, Lgc0;->f:Lgc0;
+    sget-object p1, Lbe0;->f:Lbe0;
 
     if-ne p2, p1, :cond_7
 

@@ -16,7 +16,7 @@
         "",
         "",
         "token",
-        "Lb3h;",
+        "Lmah;",
         "onPushTokenGenerated",
         "(Ljava/lang/String;)V",
         "vendor_release"

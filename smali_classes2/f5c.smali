@@ -1,103 +1,98 @@
-.class public final Lf5c;
-.super Lp6g;
+.class public final synthetic Lf5c;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public o:I
+.field public final synthetic b:Lone/me/mediaeditor/PhotoEditScreen;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lone/me/mediaeditor/PhotoEditScreen;I)V
+    .locals 0
+
+    iput p2, p0, Lf5c;->a:I
+
+    iput-object p1, p0, Lf5c;->b:Lone/me/mediaeditor/PhotoEditScreen;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lf76;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lf5c;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lf5c;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lf5c;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final onClick(Landroid/view/View;)V
     .locals 2
 
-    new-instance v0, Lf5c;
+    iget p1, p0, Lf5c;->a:I
 
-    const/4 v1, 0x2
+    iget-object v0, p0, Lf5c;->b:Lone/me/mediaeditor/PhotoEditScreen;
 
-    invoke-direct {v0, v1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    packed-switch p1, :pswitch_data_0
 
-    iput-object p1, v0, Lf5c;->X:Ljava/lang/Object;
+    sget-object p1, Lone/me/mediaeditor/PhotoEditScreen;->I0:[Lv58;
 
-    return-object v0
-.end method
+    new-instance p1, Lx05;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+    const/16 v1, 0x1d
 
-    iget-object v0, p0, Lf5c;->X:Ljava/lang/Object;
+    invoke-direct {p1, v1}, Lx05;-><init>(I)V
 
-    check-cast v0, Lf76;
+    invoke-virtual {v0, p1}, Lone/me/mediaeditor/PhotoEditScreen;->P0(Lvy3;)V
 
-    iget v1, p0, Lf5c;->o:I
+    return-void
 
-    sget-object v2, Lb3h;->a:Lb3h;
+    :pswitch_0
+    sget-object p1, Lone/me/mediaeditor/PhotoEditScreen;->I0:[Lv58;
 
-    const/4 v3, 0x1
+    new-instance p1, Lx05;
 
-    if-eqz v1, :cond_1
+    const/16 v1, 0x1b
 
-    if-ne v1, v3, :cond_0
+    invoke-direct {p1, v1}, Lx05;-><init>(I)V
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    invoke-virtual {v0, p1}, Lone/me/mediaeditor/PhotoEditScreen;->P0(Lvy3;)V
 
-    return-object v2
+    return-void
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    :pswitch_1
+    sget-object p1, Lone/me/mediaeditor/PhotoEditScreen;->I0:[Lv58;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    new-instance p1, Lx05;
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    const/16 v1, 0x1a
 
-    throw p1
+    invoke-direct {p1, v1}, Lx05;-><init>(I)V
 
-    :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    invoke-virtual {v0, p1}, Lone/me/mediaeditor/PhotoEditScreen;->P0(Lvy3;)V
 
-    const/4 p1, 0x0
+    return-void
 
-    iput-object p1, p0, Lf5c;->X:Ljava/lang/Object;
+    :pswitch_2
+    sget-object p1, Lone/me/mediaeditor/PhotoEditScreen;->I0:[Lv58;
 
-    iput v3, p0, Lf5c;->o:I
+    new-instance p1, Lx05;
 
-    invoke-interface {v0, v2, p0}, Lf76;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    const/16 v1, 0x1c
 
-    move-result-object p1
+    invoke-direct {p1, v1}, Lx05;-><init>(I)V
 
-    sget-object v0, Lac4;->a:Lac4;
+    invoke-virtual {v0, p1}, Lone/me/mediaeditor/PhotoEditScreen;->P0(Lvy3;)V
 
-    if-ne p1, v0, :cond_2
+    return-void
 
-    return-object v0
+    nop
 
-    :cond_2
-    return-object v2
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

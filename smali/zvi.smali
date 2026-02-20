@@ -1,217 +1,145 @@
-.class public abstract Lzvi;
-.super Ljava/util/AbstractCollection;
+.class public final Lzvi;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/io/Serializable;
 
+# instance fields
+.field public final a:Ljava/lang/Long;
 
-# static fields
-.field public static final a:[Ljava/lang/Object;
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/Long;)V
+    .locals 0
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-array v0, v0, [Ljava/lang/Object;
+    iput-object p2, p0, Lzvi;->a:Ljava/lang/Long;
 
-    sput-object v0, Lzvi;->a:[Ljava/lang/Object;
+    iput-object p1, p0, Lzvi;->b:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract a(I[Ljava/lang/Object;)I
-.end method
-
-.method public final add(Ljava/lang/Object;)Z
-    .locals 0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
-.end method
-
-.method public final addAll(Ljava/util/Collection;)Z
-    .locals 0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
-.end method
-
-.method public b()I
-    .locals 1
-
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw v0
-.end method
-
-.method public c()I
-    .locals 1
-
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw v0
-.end method
-
-.method public final clear()V
-    .locals 1
-
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw v0
-.end method
-
-.method public d()[Ljava/lang/Object;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public final remove(Ljava/lang/Object;)Z
-    .locals 0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
-.end method
-
-.method public final removeAll(Ljava/util/Collection;)Z
-    .locals 0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
-.end method
-
-.method public final retainAll(Ljava/util/Collection;)Z
-    .locals 0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
-.end method
-
-.method public final spliterator()Ljava/util/Spliterator;
-    .locals 1
-
-    const/16 v0, 0x510
-
-    invoke-static {p0, v0}, Ljava/util/Spliterators;->spliterator(Ljava/util/Collection;I)Ljava/util/Spliterator;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final toArray()[Ljava/lang/Object;
-    .locals 1
-
-    .line 1
-    sget-object v0, Lzvi;->a:[Ljava/lang/Object;
-
-    invoke-virtual {p0, v0}, Lzvi;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
-    .line 2
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const/4 v0, 0x1
 
-    .line 3
-    invoke-virtual {p0}, Ljava/util/AbstractCollection;->size()I
+    if-ne p0, p1, :cond_0
 
-    move-result v0
+    return v0
 
-    array-length v1, p1
+    :cond_0
+    instance-of v1, p1, Lzvi;
 
     const/4 v2, 0x0
 
-    if-ge v1, v0, :cond_2
+    if-nez v1, :cond_1
 
-    .line 4
-    invoke-virtual {p0}, Lzvi;->d()[Ljava/lang/Object;
+    return v2
 
-    move-result-object v3
-
-    if-nez v3, :cond_1
-
-    if-eqz v1, :cond_0
-
-    invoke-static {p1, v2}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object p1
-
-    .line 5
-    :cond_0
-    invoke-static {p1, v0}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object p1
-
-    goto :goto_0
-
-    .line 6
     :cond_1
-    invoke-virtual {p0}, Lzvi;->c()I
+    check-cast p1, Lzvi;
 
-    move-result v0
+    iget-object v1, p0, Lzvi;->a:Ljava/lang/Long;
 
-    invoke-virtual {p0}, Lzvi;->b()I
+    iget-object v3, p1, Lzvi;->a:Ljava/lang/Long;
+
+    invoke-static {v1, v3}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-nez v1, :cond_2
 
-    move-result-object p1
-
-    .line 7
-    invoke-static {v3, v0, v1, p1}, Ljava/util/Arrays;->copyOfRange([Ljava/lang/Object;IILjava/lang/Class;)[Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return v2
 
     :cond_2
-    if-le v1, v0, :cond_3
+    iget-object v1, p0, Lzvi;->b:Ljava/lang/String;
 
-    const/4 v1, 0x0
+    iget-object p1, p1, Lzvi;->b:Ljava/lang/String;
 
-    .line 8
-    aput-object v1, p1, v0
+    invoke-static {v1, p1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    .line 9
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
     :cond_3
-    :goto_0
-    invoke-virtual {p0, v2, p1}, Lzvi;->a(I[Ljava/lang/Object;)I
+    return v0
+.end method
 
-    return-object p1
+.method public final hashCode()I
+    .locals 3
+
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Lzvi;->a:Ljava/lang/Long;
+
+    if-nez v1, :cond_0
+
+    move v1, v0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    :goto_0
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v2, p0, Lzvi;->b:Ljava/lang/String;
+
+    if-nez v2, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    :goto_1
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "PeerInfo(peerId="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lzvi;->a:Ljava/lang/Long;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", conversationId="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lzvi;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

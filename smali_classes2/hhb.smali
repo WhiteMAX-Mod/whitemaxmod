@@ -11,7 +11,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    sget v0, Lr9d;->retained_adapter_state:I
+    sget v0, Lyhd;->pinbars_group_call_participants_count:I
 
     sput v0, Lhhb;->a:I
 

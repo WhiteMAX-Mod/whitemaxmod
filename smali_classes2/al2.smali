@@ -1,131 +1,233 @@
-.class public final synthetic Lal2;
-.super Ljava/lang/Object;
+.class public final Lal2;
+.super Lko;
 .source "SourceFile"
 
 # interfaces
-.implements Llq6;
+.implements Lokg;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic d:I
 
-.field public final synthetic b:Landroid/content/Context;
-
-.field public final synthetic c:Lbl2;
+.field public final e:Ljava/util/List;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/content/Context;Lbl2;I)V
+.method public synthetic constructor <init>(IJLjava/util/List;)V
     .locals 0
 
-    iput p3, p0, Lal2;->a:I
+    iput p1, p0, Lal2;->d:I
 
-    iput-object p1, p0, Lal2;->b:Landroid/content/Context;
+    invoke-direct {p0, p2, p3}, Lko;-><init>(J)V
 
-    iput-object p2, p0, Lal2;->c:Lbl2;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p4, p0, Lal2;->e:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method public final c(Lujg;)V
     .locals 5
 
-    iget v0, p0, Lal2;->a:I
-
-    const/4 v1, 0x0
-
-    iget-object v2, p0, Lal2;->c:Lbl2;
-
-    iget-object v3, p0, Lal2;->b:Landroid/content/Context;
+    iget v0, p0, Lal2;->d:I
 
     packed-switch v0, :pswitch_data_0
 
-    new-instance v0, Lhgb;
+    check-cast p1, Lo2f;
 
-    invoke-direct {v0, v3}, Lhgb;-><init>(Landroid/content/Context;)V
+    invoke-virtual {p0}, Lko;->m()Lo5b;
 
-    sget v3, Lw5e;->h:I
+    move-result-object v0
 
-    invoke-virtual {v0, v3}, Landroid/view/View;->setId(I)V
+    iget-object p1, p1, Lo2f;->c:Ljava/lang/String;
 
-    new-instance v3, Lve;
+    invoke-virtual {v0}, Lo5b;->a()Lplc;
 
-    const/4 v4, 0x7
+    move-result-object v0
 
-    invoke-direct {v3, v0, v0, v4}, Lve;-><init>(Landroid/view/View;Landroid/view/View;I)V
+    iget-object v0, v0, Lplc;->d:Lha0;
 
-    invoke-static {v0, v3}, Lmnb;->a(Landroid/view/View;Ljava/lang/Runnable;)Lmnb;
+    const-string v1, "auth.token"
 
-    sget-object v3, Ldgb;->a:Ldgb;
+    invoke-virtual {v0, v1, p1}, Lx3;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v3}, Lhgb;->setSize(Lfgb;)V
+    invoke-virtual {p0}, Lko;->n()Lqy0;
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+    move-result-object p1
 
-    invoke-virtual {v2, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+    new-instance v0, Lp2f;
 
-    return-object v0
+    iget-wide v1, p0, Lko;->a:J
+
+    invoke-direct {v0, v1, v2}, Lvl0;-><init>(J)V
+
+    invoke-virtual {p1, v0}, Lqy0;->c(Ljava/lang/Object;)V
+
+    return-void
 
     :pswitch_0
-    new-instance v0, Landroidx/appcompat/widget/AppCompatTextView;
+    check-cast p1, Lbl2;
+
+    :try_start_0
+    invoke-virtual {p0}, Lko;->r()Ly9a;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Ly9a;->m(Lbl2;)V
+    :try_end_0
+    .catch Lru/ok/tamtam/errors/TamErrorException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    const-class v0, Lal2;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    sget-object v1, Ltej;->a:Lafb;
+
+    if-nez v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sget-object v2, Lzm8;->Y:Lzm8;
+
+    invoke-virtual {v1, v2}, Lafb;->b(Lzm8;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    const-string v3, "fail to get missed contacts for CHAT_INFO"
 
     const/4 v4, 0x0
 
-    invoke-direct {v0, v3, v4}, Landroidx/appcompat/widget/AppCompatTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-virtual {v1, v2, v0, v3, v4}, Lafb;->c(Lzm8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    sget v3, Lqfb;->M:I
+    :cond_1
+    :goto_0
+    invoke-virtual {p0}, Lko;->o()Lci2;
 
-    invoke-virtual {v0, v3}, Landroid/view/View;->setId(I)V
+    move-result-object v0
 
-    new-instance v3, Landroid/view/ViewGroup$LayoutParams;
+    iget-object p1, p1, Lbl2;->c:Ljava/util/List;
 
-    const/4 v4, -0x2
+    invoke-virtual {v0, p1}, Lci2;->g0(Ljava/util/List;)V
 
-    invoke-direct {v3, v1, v4}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+    invoke-virtual {p0}, Lko;->n()Lqy0;
 
-    invoke-virtual {v0, v3}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    move-result-object p1
 
-    const/4 v1, 0x2
+    new-instance v0, Lmw;
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setTextAlignment(I)V
+    iget-wide v1, p0, Lko;->a:J
 
-    const/4 v1, 0x1
+    iget-object v3, p0, Lal2;->e:Ljava/util/List;
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setMaxLines(I)V
+    const/4 v4, 0x2
 
-    sget-object v1, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
+    invoke-direct {v0, v1, v2, v4}, Lmw;-><init>(JI)V
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
+    new-instance v1, Ljava/util/HashSet;
 
-    const/16 v1, 0x8
+    invoke-direct {v1, v3}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {p1, v0}, Lqy0;->c(Ljava/lang/Object;)V
 
-    sget-object v1, Lq23;->a:Lrhg;
+    return-void
 
-    sget-object v1, Lr1h;->f:Lrhg;
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    invoke-static {v1, v0}, Lrhg;->d(Lrhg;Landroid/widget/TextView;)V
+.method public final d(Lcjg;)V
+    .locals 4
 
-    sget-object v1, Lpc3;->t0:Lkme;
+    iget v0, p0, Lal2;->d:I
 
-    invoke-virtual {v1, v0}, Lkme;->p(Landroid/view/View;)Lzlb;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object v1
+    invoke-virtual {p0}, Lko;->n()Lqy0;
 
-    invoke-interface {v1}, Lzlb;->getText()Lrfg;
+    move-result-object v0
 
-    move-result-object v1
+    new-instance v1, Lul0;
 
-    iget v1, v1, Lrfg;->e:I
+    iget-wide v2, p0, Lko;->a:J
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
+    invoke-direct {v1, v2, v3, p1}, Lul0;-><init>(JLcjg;)V
 
-    invoke-static {v0, v2}, Lu5j;->c(Landroid/view/View;Landroid/view/ViewGroup;)V
+    invoke-virtual {v0, v1}, Lqy0;->c(Ljava/lang/Object;)V
+
+    return-void
+
+    :pswitch_0
+    invoke-virtual {p0}, Lko;->n()Lqy0;
+
+    move-result-object v0
+
+    new-instance v1, Lul0;
+
+    iget-wide v2, p0, Lko;->a:J
+
+    invoke-direct {v1, v2, v3, p1}, Lul0;-><init>(JLcjg;)V
+
+    invoke-virtual {v0, v1}, Lqy0;->c(Ljava/lang/Object;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final k()Lk2;
+    .locals 3
+
+    iget v0, p0, Lal2;->d:I
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v0, Lp85;
+
+    const/4 v1, 0x0
+
+    const/16 v2, 0x1c
+
+    invoke-direct {v0, v1, v2}, Lp85;-><init>(Llrb;I)V
+
+    iget-object v1, p0, Lal2;->e:Ljava/util/List;
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    const-string v2, "pushTokens"
+
+    invoke-virtual {v0, v2, v1}, Lk2;->q(Ljava/lang/String;Ljava/util/List;)V
+
+    :cond_0
+    return-object v0
+
+    :pswitch_0
+    new-instance v0, Lfj2;
+
+    iget-object v1, p0, Lal2;->e:Ljava/util/List;
+
+    invoke-direct {v0, v1}, Lfj2;-><init>(Ljava/util/List;)V
 
     return-object v0
 

@@ -1,17 +1,110 @@
-.class public interface abstract Lsif;
+.class public final synthetic Lsif;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lis6;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lyyd;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lyyd;I)V
+    .locals 0
+
+    iput p2, p0, Lsif;->a:I
+
+    iput-object p1, p0, Lsif;->b:Lyyd;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
 
 # virtual methods
-.method public abstract a(Ljavax/net/ssl/SSLSocket;)Z
-.end method
+.method public final invoke()Ljava/lang/Object;
+    .locals 3
 
-.method public abstract b()Z
-.end method
+    iget v0, p0, Lsif;->a:I
 
-.method public abstract c(Ljavax/net/ssl/SSLSocket;)Ljava/lang/String;
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public abstract d(Ljavax/net/ssl/SSLSocket;Ljava/lang/String;Ljava/util/List;)V
+    iget-object v0, p0, Lsif;->b:Lyyd;
+
+    iget-object v0, v0, Lyyd;->a:Ljava/lang/Object;
+
+    sget-object v1, Ltif;->b:Lyvb;
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, v1, Lyvb;->b:Ljava/lang/Object;
+
+    check-cast v1, Lqlb;
+
+    goto :goto_0
+
+    :cond_0
+    move-object v1, v2
+
+    :goto_0
+    invoke-static {v0, v1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    sput-object v2, Ltif;->b:Lyvb;
+
+    :cond_1
+    sget-object v0, Lmah;->a:Lmah;
+
+    return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Lsif;->b:Lyyd;
+
+    iget-object v0, v0, Lyyd;->a:Ljava/lang/Object;
+
+    sget-object v1, Ltif;->b:Lyvb;
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_2
+
+    iget-object v1, v1, Lyvb;->b:Ljava/lang/Object;
+
+    check-cast v1, Lqlb;
+
+    goto :goto_1
+
+    :cond_2
+    move-object v1, v2
+
+    :goto_1
+    invoke-static {v0, v1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    sput-object v2, Ltif;->b:Lyvb;
+
+    :cond_3
+    sget-object v0, Lmah;->a:Lmah;
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

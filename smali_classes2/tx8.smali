@@ -1,176 +1,521 @@
-.class public final Ltx8;
-.super Lp6g;
+.class public abstract synthetic Ltx8;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lbr6;
-
-
-# instance fields
-.field public X:J
-
-.field public Y:I
-
-.field public final synthetic Z:Lfy8;
-
-.field public o:Lyw0;
 
 
 # direct methods
-.method public constructor <init>(Lfy8;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Ltx8;->Z:Lfy8;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lzb4;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Ltx8;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Ltx8;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Ltx8;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public static synthetic a(I)I
     .locals 1
 
-    new-instance p1, Ltx8;
+    const/4 v0, 0x1
 
-    iget-object v0, p0, Ltx8;->Z:Lfy8;
+    if-eq p0, v0, :cond_1
 
-    invoke-direct {p1, v0, p2}, Ltx8;-><init>(Lfy8;Lkotlin/coroutines/Continuation;)V
+    const/4 v0, 0x2
 
-    return-object p1
-.end method
+    if-eq p0, v0, :cond_1
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 9
+    const/4 v0, 0x3
 
-    iget v0, p0, Ltx8;->Y:I
+    if-eq p0, v0, :cond_1
 
-    iget-object v1, p0, Ltx8;->Z:Lfy8;
+    const/4 v0, 0x4
 
-    const/4 v2, 0x2
+    if-ne p0, v0, :cond_0
 
-    const/4 v3, 0x1
-
-    sget-object v4, Lac4;->a:Lac4;
-
-    if-eqz v0, :cond_2
-
-    if-eq v0, v3, :cond_1
-
-    if-ne v0, v2, :cond_0
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    goto :goto_2
+    return v0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    const/4 p0, 0x0
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    throw p0
 
     :cond_1
-    iget-wide v5, p0, Ltx8;->X:J
+    return v0
+.end method
 
-    iget-object v0, p0, Ltx8;->o:Lyw0;
+.method public static synthetic b(I)J
+    .locals 2
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    const/4 v0, 0x1
 
-    goto :goto_0
+    if-eq p0, v0, :cond_2
+
+    const/4 v0, 0x2
+
+    if-eq p0, v0, :cond_1
+
+    const/4 v0, 0x3
+
+    if-ne p0, v0, :cond_0
+
+    const-wide/16 v0, 0x2
+
+    return-wide v0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    throw p0
+
+    :cond_1
+    const-wide/16 v0, 0x1
+
+    return-wide v0
 
     :cond_2
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    const-wide/16 v0, 0x0
 
-    iget-object v0, v1, Lfy8;->A0:Lyw0;
+    return-wide v0
+.end method
 
-    iput-object v0, p0, Ltx8;->o:Lyw0;
+.method public static synthetic c(I)Ljava/lang/String;
+    .locals 2
 
-    const-wide/16 v5, 0x1
+    const/4 v0, 0x1
 
-    iput-wide v5, p0, Ltx8;->X:J
+    const-string v1, "so"
 
-    iput v3, p0, Ltx8;->Y:I
+    if-eq p0, v0, :cond_2
 
-    invoke-static {v1, p0}, Lfy8;->s(Lfy8;Lp6g;)Ljava/lang/Object;
+    const/4 v0, 0x2
 
-    move-result-object p1
+    if-eq p0, v0, :cond_2
 
-    if-ne p1, v4, :cond_3
+    const/4 v0, 0x3
 
-    goto :goto_1
+    if-eq p0, v0, :cond_1
+
+    const/4 v0, 0x4
+
+    if-ne p0, v0, :cond_0
+
+    return-object v1
+
+    :cond_0
+    const/4 p0, 0x0
+
+    throw p0
+
+    :cond_1
+    const-string p0, "dylib"
+
+    return-object p0
+
+    :cond_2
+    return-object v1
+.end method
+
+.method public static synthetic d(I)I
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-eq p0, v0, :cond_4
+
+    const/4 v0, 0x2
+
+    if-eq p0, v0, :cond_3
+
+    const/4 v0, 0x3
+
+    if-eq p0, v0, :cond_2
+
+    const/4 v0, 0x4
+
+    if-eq p0, v0, :cond_1
+
+    const/4 v0, 0x5
+
+    if-ne p0, v0, :cond_0
+
+    const/16 p0, 0x28
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    throw p0
+
+    :cond_1
+    const/16 p0, 0x1e
+
+    return p0
+
+    :cond_2
+    const/16 p0, 0x14
+
+    return p0
 
     :cond_3
-    :goto_0
-    check-cast p1, Lnd2;
+    const/16 p0, 0xa
 
-    iget-object v1, v1, Lfy8;->w0:Lo58;
-
-    invoke-interface {v1}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lef3;
-
-    check-cast v1, Lyfe;
-
-    invoke-virtual {v1}, Lyfe;->s()J
-
-    move-result-wide v7
-
-    invoke-static {p1, v7, v8}, Lznj;->a(Lnd2;J)Lebe;
-
-    move-result-object p1
-
-    new-instance v1, Lvw8;
-
-    invoke-direct {v1, v5, v6, p1}, Lvw8;-><init>(JLebe;)V
-
-    const/4 p1, 0x0
-
-    iput-object p1, p0, Ltx8;->o:Lyw0;
-
-    iput v2, p0, Ltx8;->Y:I
-
-    invoke-interface {v0, v1, p0}, Lioe;->h(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v4, :cond_4
-
-    :goto_1
-    return-object v4
+    return p0
 
     :cond_4
-    :goto_2
-    sget-object p1, Lb3h;->a:Lb3h;
+    const/4 p0, 0x0
 
-    return-object p1
+    return p0
+.end method
+
+.method public static synthetic e(I)Ljava/lang/String;
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-eq p0, v0, :cond_2
+
+    const/4 v0, 0x2
+
+    if-eq p0, v0, :cond_1
+
+    const/4 v0, 0x3
+
+    if-ne p0, v0, :cond_0
+
+    const-string p0, "GO"
+
+    return-object p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    throw p0
+
+    :cond_1
+    const-string p0, "WARM_START"
+
+    return-object p0
+
+    :cond_2
+    const-string p0, "COLD_START"
+
+    return-object p0
+.end method
+
+.method public static f(ILjava/lang/String;)Landroid/os/Bundle;
+    .locals 1
+
+    new-instance v0, Landroid/os/Bundle;
+
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+
+    invoke-virtual {v0, p1, p0}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+
+    return-object v0
+.end method
+
+.method public static g(ILjava/lang/String;)Ljava/lang/String;
+    .locals 1
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0, p1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static h(JLjava/lang/String;)Ljava/lang/String;
+    .locals 1
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0, p2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p0, p1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static i(JLjava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    .locals 0
+
+    invoke-virtual {p3, p0, p1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static j(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
+    .locals 1
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0, p0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static k(Ljava/lang/String;Lwn4;)Ljava/lang/String;
+    .locals 1
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0, p0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .locals 1
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0, p0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static m(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+    .locals 0
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static n(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .locals 0
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static o(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .locals 1
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0, p1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    return-object v0
+.end method
+
+.method public static p(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .locals 1
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    return-object v0
+.end method
+
+.method public static synthetic q(I)Ljava/lang/String;
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-eq p0, v0, :cond_2
+
+    const/4 v0, 0x2
+
+    if-eq p0, v0, :cond_1
+
+    const/4 v0, 0x3
+
+    if-ne p0, v0, :cond_0
+
+    const-string p0, "BAD_LEVEL_2"
+
+    return-object p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    throw p0
+
+    :cond_1
+    const-string p0, "BAD_LEVEL_1"
+
+    return-object p0
+
+    :cond_2
+    const-string p0, "GOOD"
+
+    return-object p0
+.end method
+
+.method public static synthetic r(I)Ljava/lang/String;
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-eq p0, v0, :cond_2
+
+    const/4 v0, 0x2
+
+    if-eq p0, v0, :cond_1
+
+    const/4 v0, 0x3
+
+    if-eq p0, v0, :cond_0
+
+    const-string p0, "null"
+
+    return-object p0
+
+    :cond_0
+    const-string p0, "BAD_LEVEL_2"
+
+    return-object p0
+
+    :cond_1
+    const-string p0, "BAD_LEVEL_1"
+
+    return-object p0
+
+    :cond_2
+    const-string p0, "GOOD"
+
+    return-object p0
+.end method
+
+.method public static synthetic s(I)Ljava/lang/String;
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-eq p0, v0, :cond_2
+
+    const/4 v0, 0x2
+
+    if-eq p0, v0, :cond_1
+
+    const/4 v0, 0x3
+
+    if-eq p0, v0, :cond_0
+
+    const-string p0, "null"
+
+    return-object p0
+
+    :cond_0
+    const-string p0, "FORWARD"
+
+    return-object p0
+
+    :cond_1
+    const-string p0, "REPLY"
+
+    return-object p0
+
+    :cond_2
+    const-string p0, "UNKNOWN"
+
+    return-object p0
+.end method
+
+.method public static synthetic t(I)Ljava/lang/String;
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-eq p0, v0, :cond_4
+
+    const/4 v0, 0x2
+
+    if-eq p0, v0, :cond_3
+
+    const/4 v0, 0x3
+
+    if-eq p0, v0, :cond_2
+
+    const/4 v0, 0x4
+
+    if-eq p0, v0, :cond_1
+
+    const/4 v0, 0x5
+
+    if-eq p0, v0, :cond_0
+
+    const-string p0, "null"
+
+    return-object p0
+
+    :cond_0
+    const-string p0, "CHANNEL_ADMIN"
+
+    return-object p0
+
+    :cond_1
+    const-string p0, "CHANNEL"
+
+    return-object p0
+
+    :cond_2
+    const-string p0, "GROUP"
+
+    return-object p0
+
+    :cond_3
+    const-string p0, "USER"
+
+    return-object p0
+
+    :cond_4
+    const-string p0, "UNKNOWN"
+
+    return-object p0
 .end method

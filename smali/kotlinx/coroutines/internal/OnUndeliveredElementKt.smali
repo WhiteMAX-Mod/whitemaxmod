@@ -11,17 +11,17 @@
     d2 = {
         "E",
         "Lkotlin/Function1;",
-        "Lb3h;",
+        "Lmah;",
         "Lkotlinx/coroutines/internal/OnUndeliveredElement;",
         "element",
         "Lkotlinx/coroutines/internal/UndeliveredElementException;",
         "undeliveredElementException",
         "callUndeliveredElementCatchingException",
-        "(Lnq6;Ljava/lang/Object;Lkotlinx/coroutines/internal/UndeliveredElementException;)Lkotlinx/coroutines/internal/UndeliveredElementException;",
-        "Lqb4;",
+        "(Lks6;Ljava/lang/Object;Lkotlinx/coroutines/internal/UndeliveredElementException;)Lkotlinx/coroutines/internal/UndeliveredElementException;",
+        "Led4;",
         "context",
         "callUndeliveredElement",
-        "(Lnq6;Ljava/lang/Object;Lqb4;)V",
+        "(Lks6;Ljava/lang/Object;Led4;)V",
         "OnUndeliveredElement",
         "kotlinx-coroutines-core"
     }
@@ -36,42 +36,42 @@
 
 
 # direct methods
-.method public static final callUndeliveredElement(Lnq6;Ljava/lang/Object;Lqb4;)V
+.method public static final callUndeliveredElement(Lks6;Ljava/lang/Object;Led4;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<E:",
             "Ljava/lang/Object;",
             ">(",
-            "Lnq6;",
+            "Lks6;",
             "TE;",
-            "Lqb4;",
+            "Led4;",
             ")V"
         }
     .end annotation
 
     const/4 v0, 0x0
 
-    invoke-static {p0, p1, v0}, Lkotlinx/coroutines/internal/OnUndeliveredElementKt;->callUndeliveredElementCatchingException(Lnq6;Ljava/lang/Object;Lkotlinx/coroutines/internal/UndeliveredElementException;)Lkotlinx/coroutines/internal/UndeliveredElementException;
+    invoke-static {p0, p1, v0}, Lkotlinx/coroutines/internal/OnUndeliveredElementKt;->callUndeliveredElementCatchingException(Lks6;Ljava/lang/Object;Lkotlinx/coroutines/internal/UndeliveredElementException;)Lkotlinx/coroutines/internal/UndeliveredElementException;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    invoke-static {p2, p0}, Lglj;->a(Lqb4;Ljava/lang/Throwable;)V
+    invoke-static {p2, p0}, Lxtj;->a(Led4;Ljava/lang/Throwable;)V
 
     :cond_0
     return-void
 .end method
 
-.method public static final callUndeliveredElementCatchingException(Lnq6;Ljava/lang/Object;Lkotlinx/coroutines/internal/UndeliveredElementException;)Lkotlinx/coroutines/internal/UndeliveredElementException;
+.method public static final callUndeliveredElementCatchingException(Lks6;Ljava/lang/Object;Lkotlinx/coroutines/internal/UndeliveredElementException;)Lkotlinx/coroutines/internal/UndeliveredElementException;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<E:",
             "Ljava/lang/Object;",
             ">(",
-            "Lnq6;",
+            "Lks6;",
             "TE;",
             "Lkotlinx/coroutines/internal/UndeliveredElementException;",
             ")",
@@ -80,7 +80,7 @@
     .end annotation
 
     :try_start_0
-    invoke-interface {p0, p1}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p0, p1}, Lks6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -97,7 +97,7 @@
 
     if-eq v0, p0, :cond_0
 
-    invoke-static {p2, p0}, Lapj;->a(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+    invoke-static {p2, p0}, Lnxj;->a(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
 
     return-object p2
 
@@ -121,7 +121,7 @@
     return-object p2
 .end method
 
-.method public static synthetic callUndeliveredElementCatchingException$default(Lnq6;Ljava/lang/Object;Lkotlinx/coroutines/internal/UndeliveredElementException;ILjava/lang/Object;)Lkotlinx/coroutines/internal/UndeliveredElementException;
+.method public static synthetic callUndeliveredElementCatchingException$default(Lks6;Ljava/lang/Object;Lkotlinx/coroutines/internal/UndeliveredElementException;ILjava/lang/Object;)Lkotlinx/coroutines/internal/UndeliveredElementException;
     .locals 0
 
     and-int/lit8 p3, p3, 0x2
@@ -131,7 +131,7 @@
     const/4 p2, 0x0
 
     :cond_0
-    invoke-static {p0, p1, p2}, Lkotlinx/coroutines/internal/OnUndeliveredElementKt;->callUndeliveredElementCatchingException(Lnq6;Ljava/lang/Object;Lkotlinx/coroutines/internal/UndeliveredElementException;)Lkotlinx/coroutines/internal/UndeliveredElementException;
+    invoke-static {p0, p1, p2}, Lkotlinx/coroutines/internal/OnUndeliveredElementKt;->callUndeliveredElementCatchingException(Lks6;Ljava/lang/Object;Lkotlinx/coroutines/internal/UndeliveredElementException;)Lkotlinx/coroutines/internal/UndeliveredElementException;
 
     move-result-object p0
 

@@ -1,73 +1,64 @@
 .class public final Lya2;
-.super Lg4;
+.super Lpdg;
 .source "SourceFile"
 
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lya2;",
-            ">;"
-        }
-    .end annotation
-.end field
+# interfaces
+.implements Lys6;
 
 
 # instance fields
-.field public final a:Lqh8;
-
-.field public final b:Landroid/net/Uri;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lz7;
-
-    const/16 v1, 0xc
-
-    invoke-direct {v0, v1}, Lz7;-><init>(I)V
-
-    sput-object v0, Lya2;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lqh8;Landroid/net/Uri;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lya2;->a:Lqh8;
-
-    iput-object p2, p0, Lya2;->b:Landroid/net/Uri;
-
-    return-void
-.end method
+.field public synthetic o:Ljava/lang/Object;
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x0
+    check-cast p1, Lhi2;
 
-    return v0
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lya2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lya2;
+
+    sget-object p2, Lmah;->a:Lmah;
+
+    invoke-virtual {p1, p2}, Lya2;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lya2;
+
+    const/4 v1, 0x2
+
+    invoke-direct {v0, v1, p2}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lya2;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Lya2;->a:Lqh8;
+    iget-object v0, p0, Lya2;->o:Ljava/lang/Object;
 
-    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
+    check-cast v0, Lhi2;
 
-    iget-object v0, p0, Lya2;->b:Landroid/net/Uri;
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
+    const/4 p1, 0x0
 
-    return-void
+    iput-object p1, v0, Lhi2;->h:Ljava/lang/String;
+
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
 .end method

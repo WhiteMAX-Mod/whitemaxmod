@@ -1,38 +1,26 @@
 .class public final Li2i;
-.super Lp6g;
+.super Lpdg;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Lys6;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic X:Landroid/widget/TextView;
 
-.field public synthetic Y:Z
-
-.field public final synthetic Z:Lm2i;
-
-.field public o:Ljava/lang/String;
-
-.field public final synthetic t0:Lf2i;
-
-.field public final synthetic u0:Lj2i;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lm2i;Lf2i;Lj2i;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Landroid/widget/TextView;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Li2i;->Z:Lm2i;
-
-    iput-object p2, p0, Li2i;->t0:Lf2i;
-
-    iput-object p3, p0, Li2i;->u0:Lj2i;
+    iput-object p1, p0, Li2i;->X:Landroid/widget/TextView;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p4}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -42,9 +30,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    check-cast p1, Llob;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -54,164 +40,48 @@
 
     check-cast p1, Li2i;
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    sget-object p2, Lmah;->a:Lmah;
 
     invoke-virtual {p1, p2}, Li2i;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
-
-    return-object p1
+    return-object p2
 .end method
 
 .method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 4
+    .locals 2
 
     new-instance v0, Li2i;
 
-    iget-object v1, p0, Li2i;->t0:Lf2i;
+    iget-object v1, p0, Li2i;->X:Landroid/widget/TextView;
 
-    iget-object v2, p0, Li2i;->u0:Lj2i;
+    invoke-direct {v0, v1, p2}, Li2i;-><init>(Landroid/widget/TextView;Lkotlin/coroutines/Continuation;)V
 
-    iget-object v3, p0, Li2i;->Z:Lm2i;
-
-    invoke-direct {v0, v3, v1, v2, p2}, Li2i;-><init>(Lm2i;Lf2i;Lj2i;Lkotlin/coroutines/Continuation;)V
-
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p1
-
-    iput-boolean p1, v0, Li2i;->Y:Z
+    iput-object p1, v0, Li2i;->o:Ljava/lang/Object;
 
     return-object v0
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 18
+    .locals 1
 
-    move-object/from16 v0, p0
+    iget-object v0, p0, Li2i;->o:Ljava/lang/Object;
 
-    iget-boolean v1, v0, Li2i;->Y:Z
+    check-cast v0, Llob;
 
-    iget v2, v0, Li2i;->X:I
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    iget-object v3, v0, Li2i;->u0:Lj2i;
+    iget-object p1, p0, Li2i;->X:Landroid/widget/TextView;
 
-    const/4 v4, 0x1
+    invoke-virtual {p1}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
-    if-eqz v2, :cond_1
+    move-result-object p1
 
-    if-ne v2, v4, :cond_0
+    if-eqz p1, :cond_0
 
-    iget-object v1, v0, Li2i;->o:Ljava/lang/String;
-
-    invoke-static/range {p1 .. p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    move-object v9, v1
-
-    goto :goto_0
+    invoke-static {p1, v0}, Lr1j;->a(Ljava/lang/CharSequence;Llob;)V
 
     :cond_0
-    new-instance v1, Ljava/lang/IllegalStateException;
+    sget-object p1, Lmah;->a:Lmah;
 
-    const-string v2, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v1
-
-    :cond_1
-    invoke-static/range {p1 .. p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    new-instance v2, Lm2i;
-
-    iget-object v5, v0, Li2i;->Z:Lm2i;
-
-    iget-object v5, v5, Lm2i;->a:Ljava/lang/String;
-
-    invoke-direct {v2, v5, v1}, Lm2i;-><init>(Ljava/lang/String;Z)V
-
-    iget-object v5, v0, Li2i;->t0:Lf2i;
-
-    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object v5, v3, Lj2i;->e:Lyw0;
-
-    new-instance v6, Lsz7;
-
-    iget-object v7, v3, Lj2i;->a:Lf08;
-
-    invoke-virtual {v7}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v8, Lm2i;->Companion:Ll2i;
-
-    invoke-virtual {v8}, Ll2i;->serializer()La38;
-
-    move-result-object v8
-
-    check-cast v8, La38;
-
-    invoke-virtual {v7, v8, v2}, Lf08;->b(La38;Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v7, "WebAppChangeScreenBrightness"
-
-    invoke-direct {v6, v7, v2}, Lsz7;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    iput-object v7, v0, Li2i;->o:Ljava/lang/String;
-
-    iput-boolean v1, v0, Li2i;->Y:Z
-
-    iput v4, v0, Li2i;->X:I
-
-    invoke-interface {v5, v6, v0}, Lioe;->h(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    sget-object v2, Lac4;->a:Lac4;
-
-    if-ne v1, v2, :cond_2
-
-    return-object v2
-
-    :cond_2
-    move-object v9, v7
-
-    :goto_0
-    iget-object v1, v3, Lj2i;->f:Lryh;
-
-    if-eqz v1, :cond_3
-
-    iget-object v2, v3, Lj2i;->b:Lo58;
-
-    invoke-interface {v2}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    move-object v8, v2
-
-    check-cast v8, Lc2i;
-
-    iget-wide v10, v1, Lryh;->a:J
-
-    iget-object v12, v1, Lryh;->b:Ljava/lang/String;
-
-    const/16 v16, 0x0
-
-    const/16 v17, 0xf0
-
-    const/4 v13, 0x1
-
-    const/4 v14, 0x0
-
-    const/4 v15, 0x0
-
-    invoke-static/range {v8 .. v17}, Lc2i;->a(Lc2i;Ljava/lang/String;JLjava/lang/String;ZILjava/lang/Integer;Ljava/lang/Integer;I)V
-
-    :cond_3
-    sget-object v1, Lb3h;->a:Lb3h;
-
-    return-object v1
+    return-object p1
 .end method

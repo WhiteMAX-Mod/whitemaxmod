@@ -1,649 +1,480 @@
-.class public final Liqj;
-.super Lcom/google/android/gms/tasks/Task;
+.class public abstract Liqj;
+.super Ljkj;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/util/List;
+.implements Ljava/util/RandomAccess;
 
-# instance fields
-.field public final a:Ljava/lang/Object;
 
-.field public final b:Lvd;
-
-.field public c:Z
-
-.field public volatile d:Z
-
-.field public e:Ljava/lang/Object;
-
-.field public f:Ljava/lang/Exception;
+# static fields
+.field public static final b:Laoj;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Laoj;
 
-    new-instance v0, Ljava/lang/Object;
+    sget-object v1, Lwvj;->o:Lwvj;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 v2, 0x0
 
-    iput-object v0, p0, Liqj;->a:Ljava/lang/Object;
+    invoke-direct {v0, v1, v2}, Laoj;-><init>(Liqj;I)V
 
-    new-instance v0, Lvd;
-
-    invoke-direct {v0}, Lvd;-><init>()V
-
-    iput-object v0, p0, Liqj;->b:Lvd;
+    sput-object v0, Liqj;->b:Laoj;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/util/concurrent/Executor;Lw1b;)Liqj;
-    .locals 1
-
-    new-instance v0, Ly3j;
-
-    invoke-direct {v0, p1, p2}, Ly3j;-><init>(Ljava/util/concurrent/Executor;Lw1b;)V
-
-    iget-object p1, p0, Liqj;->b:Lvd;
-
-    invoke-virtual {p1, v0}, Lvd;->u(Lyjj;)V
-
-    invoke-virtual {p0}, Liqj;->s()V
-
-    return-object p0
-.end method
-
-.method public final b(Ljava/util/concurrent/Executor;Lx1b;)Liqj;
-    .locals 1
-
-    new-instance v0, Ly3j;
-
-    invoke-direct {v0, p1, p2}, Ly3j;-><init>(Ljava/util/concurrent/Executor;Lx1b;)V
-
-    iget-object p1, p0, Liqj;->b:Lvd;
-
-    invoke-virtual {p1, v0}, Lvd;->u(Lyjj;)V
-
-    invoke-virtual {p0}, Liqj;->s()V
-
-    return-object p0
-.end method
-
-.method public final c(Ljava/util/concurrent/Executor;Lz1b;)Liqj;
-    .locals 1
-
-    new-instance v0, Ly3j;
-
-    invoke-direct {v0, p1, p2}, Ly3j;-><init>(Ljava/util/concurrent/Executor;Lz1b;)V
-
-    iget-object p1, p0, Liqj;->b:Lvd;
-
-    invoke-virtual {p1, v0}, Lvd;->u(Lyjj;)V
-
-    invoke-virtual {p0}, Liqj;->s()V
-
-    return-object p0
-.end method
-
-.method public final d(Ljava/util/concurrent/Executor;Lh2b;)Liqj;
-    .locals 1
-
-    new-instance v0, Ly3j;
-
-    invoke-direct {v0, p1, p2}, Ly3j;-><init>(Ljava/util/concurrent/Executor;Lh2b;)V
-
-    iget-object p1, p0, Liqj;->b:Lvd;
-
-    invoke-virtual {p1, v0}, Lvd;->u(Lyjj;)V
-
-    invoke-virtual {p0}, Liqj;->s()V
-
-    return-object p0
-.end method
-
-.method public final e()Ljava/lang/Exception;
-    .locals 2
-
-    iget-object v0, p0, Liqj;->a:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-object v1, p0, Liqj;->f:Ljava/lang/Exception;
-
-    monitor-exit v0
-
-    return-object v1
-
-    :catchall_0
-    move-exception v1
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v1
-.end method
-
-.method public final f()Ljava/lang/Object;
+.method public a([Ljava/lang/Object;)I
     .locals 3
 
-    iget-object v0, p0, Liqj;->a:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-boolean v1, p0, Liqj;->c:Z
-
-    const-string v2, "Task is not yet complete"
-
-    invoke-static {v2, v1}, Ldkj;->i(Ljava/lang/String;Z)V
-
-    iget-boolean v1, p0, Liqj;->d:Z
-
-    if-nez v1, :cond_1
-
-    iget-object v1, p0, Liqj;->f:Ljava/lang/Exception;
-
-    if-nez v1, :cond_0
-
-    iget-object v1, p0, Liqj;->e:Ljava/lang/Object;
-
-    monitor-exit v0
-
-    return-object v1
-
-    :catchall_0
-    move-exception v1
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v2, Lcom/google/android/gms/tasks/RuntimeExecutionException;
-
-    invoke-direct {v2, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v2
-
-    :cond_1
-    new-instance v1, Ljava/util/concurrent/CancellationException;
-
-    const-string v2, "Task is already canceled."
-
-    invoke-direct {v1, v2}, Ljava/util/concurrent/CancellationException;-><init>(Ljava/lang/String;)V
-
-    throw v1
-
-    :goto_0
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v1
-.end method
-
-.method public final g()Z
-    .locals 2
-
-    iget-object v0, p0, Liqj;->a:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-boolean v1, p0, Liqj;->c:Z
-
-    monitor-exit v0
-
-    return v1
-
-    :catchall_0
-    move-exception v1
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v1
-.end method
-
-.method public final h()Z
-    .locals 3
-
-    iget-object v0, p0, Liqj;->a:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-boolean v1, p0, Liqj;->c:Z
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_0
-
-    iget-boolean v1, p0, Liqj;->d:Z
-
-    if-nez v1, :cond_0
-
-    iget-object v1, p0, Liqj;->f:Ljava/lang/Exception;
-
-    if-nez v1, :cond_0
-
-    const/4 v2, 0x1
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v1
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    monitor-exit v0
-
-    return v2
-
-    :goto_1
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v1
-.end method
-
-.method public final i(Lx1b;)Liqj;
-    .locals 2
-
-    sget-object v0, Lneg;->a:Lpw7;
-
-    new-instance v1, Ly3j;
-
-    invoke-direct {v1, v0, p1}, Ly3j;-><init>(Ljava/util/concurrent/Executor;Lx1b;)V
-
-    iget-object p1, p0, Liqj;->b:Lvd;
-
-    invoke-virtual {p1, v1}, Lvd;->u(Lyjj;)V
-
-    invoke-virtual {p0}, Liqj;->s()V
-
-    return-object p0
-.end method
-
-.method public final j(Lz1b;)Liqj;
-    .locals 1
-
-    sget-object v0, Lneg;->a:Lpw7;
-
-    invoke-virtual {p0, v0, p1}, Liqj;->c(Ljava/util/concurrent/Executor;Lz1b;)Liqj;
-
-    return-object p0
-.end method
-
-.method public final k(Ljava/util/concurrent/Executor;Lm84;)Liqj;
-    .locals 3
-
-    new-instance v0, Liqj;
-
-    invoke-direct {v0}, Liqj;-><init>()V
-
-    new-instance v1, Lywi;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, p1, p2, v0, v2}, Lywi;-><init>(Ljava/util/concurrent/Executor;Lm84;Liqj;I)V
-
-    iget-object p1, p0, Liqj;->b:Lvd;
-
-    invoke-virtual {p1, v1}, Lvd;->u(Lyjj;)V
-
-    invoke-virtual {p0}, Liqj;->s()V
-
-    return-object v0
-.end method
-
-.method public final l(Ljava/util/concurrent/Executor;Lm84;)Liqj;
-    .locals 3
-
-    new-instance v0, Liqj;
-
-    invoke-direct {v0}, Liqj;-><init>()V
-
-    new-instance v1, Lywi;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v1, p1, p2, v0, v2}, Lywi;-><init>(Ljava/util/concurrent/Executor;Lm84;Liqj;I)V
-
-    iget-object p1, p0, Liqj;->b:Lvd;
-
-    invoke-virtual {p1, v1}, Lvd;->u(Lyjj;)V
-
-    invoke-virtual {p0}, Liqj;->s()V
-
-    return-object v0
-.end method
-
-.method public final m(Ljava/util/concurrent/Executor;Lz1g;)Liqj;
-    .locals 2
-
-    new-instance v0, Liqj;
-
-    invoke-direct {v0}, Liqj;-><init>()V
-
-    new-instance v1, Ly3j;
-
-    invoke-direct {v1, p1, p2, v0}, Ly3j;-><init>(Ljava/util/concurrent/Executor;Lz1g;Liqj;)V
-
-    iget-object p1, p0, Liqj;->b:Lvd;
-
-    invoke-virtual {p1, v1}, Lvd;->u(Lyjj;)V
-
-    invoke-virtual {p0}, Liqj;->s()V
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Exception;)V
-    .locals 2
-
-    const-string v0, "Exception must not be null"
-
-    invoke-static {p1, v0}, Ldkj;->h(Ljava/lang/Object;Ljava/lang/String;)V
-
-    iget-object v0, p0, Liqj;->a:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    invoke-virtual {p0}, Liqj;->r()V
-
-    const/4 v1, 0x1
-
-    iput-boolean v1, p0, Liqj;->c:Z
-
-    iput-object p1, p0, Liqj;->f:Ljava/lang/Exception;
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    iget-object p1, p0, Liqj;->b:Lvd;
-
-    invoke-virtual {p1, p0}, Lvd;->v(Lcom/google/android/gms/tasks/Task;)V
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
-.end method
-
-.method public final o(Ljava/lang/Object;)V
-    .locals 2
-
-    iget-object v0, p0, Liqj;->a:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    invoke-virtual {p0}, Liqj;->r()V
-
-    const/4 v1, 0x1
-
-    iput-boolean v1, p0, Liqj;->c:Z
-
-    iput-object p1, p0, Liqj;->e:Ljava/lang/Object;
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    iget-object p1, p0, Liqj;->b:Lvd;
-
-    invoke-virtual {p1, p0}, Lvd;->v(Lcom/google/android/gms/tasks/Task;)V
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
-.end method
-
-.method public final p()V
-    .locals 2
-
-    iget-object v0, p0, Liqj;->a:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-boolean v1, p0, Liqj;->c:Z
-
-    if-eqz v1, :cond_0
-
-    monitor-exit v0
-
-    return-void
-
-    :catchall_0
-    move-exception v1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v1, 0x1
-
-    iput-boolean v1, p0, Liqj;->c:Z
-
-    iput-boolean v1, p0, Liqj;->d:Z
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    iget-object v0, p0, Liqj;->b:Lvd;
-
-    invoke-virtual {v0, p0}, Lvd;->v(Lcom/google/android/gms/tasks/Task;)V
-
-    return-void
-
-    :goto_0
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v1
-.end method
-
-.method public final q(Ljava/lang/Object;)Z
-    .locals 2
-
-    iget-object v0, p0, Liqj;->a:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-boolean v1, p0, Liqj;->c:Z
-
-    if-eqz v1, :cond_0
-
-    monitor-exit v0
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v1, 0x1
-
-    iput-boolean v1, p0, Liqj;->c:Z
-
-    iput-object p1, p0, Liqj;->e:Ljava/lang/Object;
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    iget-object p1, p0, Liqj;->b:Lvd;
-
-    invoke-virtual {p1, p0}, Lvd;->v(Lcom/google/android/gms/tasks/Task;)V
-
-    return v1
-
-    :goto_0
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
-.end method
-
-.method public final r()V
-    .locals 4
-
-    iget-boolean v0, p0, Liqj;->c:Z
-
-    if-eqz v0, :cond_4
-
-    sget v0, Lcom/google/android/gms/tasks/DuplicateTaskCompletionException;->a:I
-
-    invoke-virtual {p0}, Liqj;->g()Z
+    invoke-virtual {p0}, Ljava/util/AbstractCollection;->size()I
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    const/4 v1, 0x0
 
-    invoke-virtual {p0}, Liqj;->e()Ljava/lang/Exception;
+    :goto_0
+    if-ge v1, v0, :cond_0
 
-    move-result-object v0
+    invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    if-nez v0, :cond_2
+    move-result-object v2
 
-    invoke-virtual {p0}, Liqj;->h()Z
+    aput-object v2, p1, v1
 
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    iget-boolean v1, p0, Liqj;->d:Z
-
-    if-eqz v1, :cond_0
-
-    const-string v1, "cancellation"
+    add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
     :cond_0
-    const-string v1, "unknown issue"
+    return v0
+.end method
+
+.method public final add(ILjava/lang/Object;)V
+    .locals 0
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+.end method
+
+.method public final addAll(ILjava/util/Collection;)Z
+    .locals 0
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+.end method
+
+.method public final contains(Ljava/lang/Object;)Z
+    .locals 0
+
+    invoke-virtual {p0, p1}, Liqj;->indexOf(Ljava/lang/Object;)I
+
+    move-result p1
+
+    if-ltz p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public e(II)Liqj;
+    .locals 1
+
+    invoke-virtual {p0}, Ljava/util/AbstractCollection;->size()I
+
+    move-result v0
+
+    invoke-static {p1, p2, v0}, Lgjj;->d(III)V
+
+    sub-int/2addr p2, p1
+
+    invoke-virtual {p0}, Ljava/util/AbstractCollection;->size()I
+
+    move-result v0
+
+    if-ne p2, v0, :cond_0
+
+    return-object p0
+
+    :cond_0
+    if-nez p2, :cond_1
+
+    sget-object p1, Lwvj;->o:Lwvj;
+
+    return-object p1
+
+    :cond_1
+    new-instance v0, Lfpj;
+
+    invoke-direct {v0, p0, p1, p2}, Lfpj;-><init>(Liqj;II)V
+
+    return-object v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 5
+
+    if-ne p1, p0, :cond_0
+
+    goto :goto_2
+
+    :cond_0
+    instance-of v0, p1, Ljava/util/List;
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_1
+
+    goto :goto_3
+
+    :cond_1
+    check-cast p1, Ljava/util/List;
+
+    invoke-interface {p0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result v2
+
+    if-eq v0, v2, :cond_2
+
+    goto :goto_3
+
+    :cond_2
+    instance-of v2, p1, Ljava/util/RandomAccess;
+
+    if-eqz v2, :cond_4
+
+    move v2, v1
+
+    :goto_0
+    if-ge v2, v0, :cond_8
+
+    invoke-interface {p0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    invoke-interface {p1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    if-eq v3, v4, :cond_3
+
+    if-eqz v3, :cond_9
+
+    invoke-virtual {v3, v4}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_9
+
+    :cond_3
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
+    :cond_4
+    invoke-virtual {p0, v1}, Liqj;->f(I)Laoj;
+
+    move-result-object v0
+
+    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :cond_5
+    :goto_1
+    invoke-virtual {v0}, Laoj;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_7
+
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-nez v2, :cond_6
+
+    goto :goto_3
+
+    :cond_6
+    invoke-virtual {v0}, Laoj;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    if-eq v2, v3, :cond_5
+
+    if-eqz v2, :cond_9
+
+    invoke-virtual {v2, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_9
+
+    goto :goto_1
+
+    :cond_7
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result p1
+
+    if-nez p1, :cond_9
+
+    :cond_8
+    :goto_2
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_9
+    :goto_3
+    return v1
+.end method
+
+.method public final f(I)Laoj;
+    .locals 3
+
+    invoke-virtual {p0}, Ljava/util/AbstractCollection;->size()I
+
+    move-result v0
+
+    if-ltz p1, :cond_1
+
+    if-gt p1, v0, :cond_1
+
+    invoke-virtual {p0}, Ljava/util/AbstractCollection;->isEmpty()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    sget-object p1, Liqj;->b:Laoj;
+
+    return-object p1
+
+    :cond_0
+    new-instance v0, Laoj;
+
+    invoke-direct {v0, p0, p1}, Laoj;-><init>(Liqj;I)V
+
+    return-object v0
+
     :cond_1
-    invoke-virtual {p0}, Liqj;->f()Ljava/lang/Object;
+    new-instance v1, Ljava/lang/IndexOutOfBoundsException;
 
-    move-result-object v1
+    const-string v2, "index"
 
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p1, v0, v2}, Lgjj;->e(IILjava/lang/String;)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object p1
 
-    const-string v2, "result "
+    invoke-direct {v1, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v2, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    throw v1
+.end method
 
-    move-result-object v1
+.method public final hashCode()I
+    .locals 4
+
+    invoke-virtual {p0}, Ljava/util/AbstractCollection;->size()I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    :goto_0
+    if-ge v1, v0, :cond_0
+
+    mul-int/lit8 v2, v2, 0x1f
+
+    invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
+
+    move-result v3
+
+    add-int/2addr v2, v3
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    return v2
+.end method
+
+.method public final indexOf(Ljava/lang/Object;)I
+    .locals 4
+
+    const/4 v0, -0x1
+
+    if-nez p1, :cond_0
+
+    return v0
+
+    :cond_0
+    invoke-interface {p0}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    const/4 v2, 0x0
+
+    :goto_0
+    if-ge v2, v1, :cond_2
+
+    invoke-interface {p0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    invoke-virtual {p1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    return v2
+
+    :cond_1
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
     :cond_2
-    const-string v1, "failure"
-
-    :goto_0
-    new-instance v2, Lcom/google/android/gms/tasks/DuplicateTaskCompletionException;
-
-    const-string v3, "Complete with: "
-
-    invoke-virtual {v3, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v2, v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    goto :goto_1
-
-    :cond_3
-    new-instance v2, Ljava/lang/IllegalStateException;
-
-    const-string v0, "DuplicateTaskCompletionException can only be created from completed Task."
-
-    invoke-direct {v2, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    :goto_1
-    throw v2
-
-    :cond_4
-    return-void
+    return v0
 .end method
 
-.method public final s()V
-    .locals 2
+.method public final synthetic iterator()Ljava/util/Iterator;
+    .locals 1
 
-    iget-object v0, p0, Liqj;->a:Ljava/lang/Object;
+    const/4 v0, 0x0
 
-    monitor-enter v0
+    invoke-virtual {p0, v0}, Liqj;->f(I)Laoj;
 
-    :try_start_0
-    iget-boolean v1, p0, Liqj;->c:Z
+    move-result-object v0
 
-    if-nez v1, :cond_0
+    return-object v0
+.end method
 
-    monitor-exit v0
+.method public final lastIndexOf(Ljava/lang/Object;)I
+    .locals 3
 
-    return-void
+    const/4 v0, -0x1
 
-    :catchall_0
-    move-exception v1
+    if-nez p1, :cond_0
+
+    return v0
+
+    :cond_0
+    invoke-interface {p0}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    :goto_0
+    if-ltz v1, :cond_2
+
+    invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    invoke-virtual {p1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    return v1
+
+    :cond_1
+    add-int/lit8 v1, v1, -0x1
 
     goto :goto_0
 
-    :cond_0
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    :cond_2
+    return v0
+.end method
 
-    iget-object v0, p0, Liqj;->b:Lvd;
+.method public final synthetic listIterator()Ljava/util/ListIterator;
+    .locals 1
 
-    invoke-virtual {v0, p0}, Lvd;->v(Lcom/google/android/gms/tasks/Task;)V
+    const/4 v0, 0x0
 
-    return-void
+    .line 1
+    invoke-virtual {p0, v0}, Liqj;->f(I)Laoj;
 
-    :goto_0
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    move-result-object v0
 
-    throw v1
+    return-object v0
+.end method
+
+.method public final bridge synthetic listIterator(I)Ljava/util/ListIterator;
+    .locals 0
+
+    .line 2
+    invoke-virtual {p0, p1}, Liqj;->f(I)Laoj;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final remove(I)Ljava/lang/Object;
+    .locals 0
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+.end method
+
+.method public final set(ILjava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+.end method
+
+.method public bridge synthetic subList(II)Ljava/util/List;
+    .locals 0
+
+    invoke-virtual {p0, p1, p2}, Liqj;->e(II)Liqj;
+
+    move-result-object p1
+
+    return-object p1
 .end method

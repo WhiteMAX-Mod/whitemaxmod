@@ -1,44 +1,112 @@
-.class public final synthetic Lql6;
+.class public abstract Lql6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Llq6;
 
-
-# instance fields
-.field public final synthetic a:Lxl6;
-
-.field public final synthetic b:Lgob;
-
-.field public final synthetic c:F
+# static fields
+.field public static final a:Ljava/util/HashMap;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lxl6;Lgob;F)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 7
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lyvb;
 
-    iput-object p1, p0, Lql6;->a:Lxl6;
+    const/4 v1, 0x4
 
-    iput-object p2, p0, Lql6;->b:Lgob;
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    iput p3, p0, Lql6;->c:F
+    move-result-object v1
 
-    return-void
-.end method
+    sget-object v2, Lpl6;->a:Lpl6;
 
+    invoke-direct {v0, v1, v2}, Lyvb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-# virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 4
+    new-instance v1, Lyvb;
 
-    iget-object v0, p0, Lql6;->a:Lxl6;
+    const/4 v2, 0x3
 
-    iget-object v0, v0, Lxl6;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+    move-result-object v2
+
+    sget-object v3, Lpl6;->b:Lpl6;
+
+    invoke-direct {v1, v2, v3}, Lyvb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    new-instance v2, Lyvb;
+
+    const/4 v3, 0x2
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    sget-object v4, Lpl6;->c:Lpl6;
+
+    invoke-direct {v2, v3, v4}, Lyvb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    new-instance v3, Lyvb;
+
+    const/4 v4, 0x1
+
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    sget-object v5, Lpl6;->d:Lpl6;
+
+    invoke-direct {v3, v4, v5}, Lyvb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    new-instance v4, Lyvb;
+
+    const/4 v5, 0x0
+
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    sget-object v6, Lpl6;->o:Lpl6;
+
+    invoke-direct {v4, v5, v6}, Lyvb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    filled-new-array {v0, v1, v2, v3, v4}, [Lyvb;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lmu8;->c([Lyvb;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    sput-object v0, Lql6;->a:Ljava/util/HashMap;
+
+    invoke-virtual {v0}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
+
+    move-result-object v0
+
+    const/16 v1, 0xa
+
+    invoke-static {v0, v1}, Lgk3;->n(Ljava/lang/Iterable;I)I
+
+    move-result v1
+
+    invoke-static {v1}, Lmu8;->d(I)I
+
+    move-result v1
+
+    const/16 v2, 0x10
+
+    if-ge v1, v2, :cond_0
+
+    move v1, v2
+
+    :cond_0
+    new-instance v2, Ljava/util/LinkedHashMap;
+
+    invoke-direct {v2, v1}, Ljava/util/LinkedHashMap;-><init>(I)V
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
@@ -47,24 +115,38 @@
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    if-eqz v1, :cond_1
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Leob;
+    check-cast v1, Ljava/util/Map$Entry;
 
-    iget-object v2, p0, Lql6;->b:Lgob;
+    invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
-    iget v3, p0, Lql6;->c:F
+    move-result-object v3
 
-    invoke-interface {v1, v2, v3}, Leob;->g(Lgob;F)V
+    check-cast v3, Lpl6;
+
+    invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/Number;
+
+    invoke-virtual {v1}, Ljava/lang/Number;->intValue()I
+
+    move-result v1
+
+    invoke-static {v1}, Lvih;->C(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-interface {v2, v3, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
-    :cond_0
-    sget-object v0, Lb3h;->a:Lb3h;
-
-    return-object v0
+    :cond_1
+    return-void
 .end method

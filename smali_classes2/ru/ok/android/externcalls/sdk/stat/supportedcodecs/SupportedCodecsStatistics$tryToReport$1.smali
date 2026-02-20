@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lay3;
+.implements Lsy3;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lru/ok/android/externcalls/sdk/stat/supportedcodecs/SupportedCodecsStatistics;->tryToReport(Lru/ok/android/externcalls/sdk/api/OkApiServiceInternal;Lfgc;Lahd;)V
+    value = Lru/ok/android/externcalls/sdk/stat/supportedcodecs/SupportedCodecsStatistics;->tryToReport(Lru/ok/android/externcalls/sdk/api/OkApiServiceInternal;Ljlc;Ltmd;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lay3;"
+        "Lsy3;"
     }
 .end annotation
 
@@ -33,7 +33,7 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/api/request/ClientSupportedCodecs$Response;",
         "it",
-        "Lb3h;",
+        "Lmah;",
         "accept",
         "(Lru/ok/android/externcalls/sdk/api/request/ClientSupportedCodecs$Response;)V",
         "<anonymous>"
@@ -50,18 +50,18 @@
 # instance fields
 .field final synthetic $currentTime:J
 
-.field final synthetic $preferencesHelper:Lfgc;
+.field final synthetic $preferencesHelper:Ljlc;
 
-.field final synthetic $rtcLog:Lahd;
+.field final synthetic $rtcLog:Ltmd;
 
 
 # direct methods
-.method public constructor <init>(Lahd;Lfgc;J)V
+.method public constructor <init>(Ltmd;Ljlc;J)V
     .locals 0
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/stat/supportedcodecs/SupportedCodecsStatistics$tryToReport$1;->$rtcLog:Lahd;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/stat/supportedcodecs/SupportedCodecsStatistics$tryToReport$1;->$rtcLog:Ltmd;
 
-    iput-object p2, p0, Lru/ok/android/externcalls/sdk/stat/supportedcodecs/SupportedCodecsStatistics$tryToReport$1;->$preferencesHelper:Lfgc;
+    iput-object p2, p0, Lru/ok/android/externcalls/sdk/stat/supportedcodecs/SupportedCodecsStatistics$tryToReport$1;->$preferencesHelper:Ljlc;
 
     iput-wide p3, p0, Lru/ok/android/externcalls/sdk/stat/supportedcodecs/SupportedCodecsStatistics$tryToReport$1;->$currentTime:J
 
@@ -87,7 +87,7 @@
     .locals 4
 
     .line 2
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/stat/supportedcodecs/SupportedCodecsStatistics$tryToReport$1;->$rtcLog:Lahd;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/stat/supportedcodecs/SupportedCodecsStatistics$tryToReport$1;->$rtcLog:Ltmd;
 
     invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/api/request/ClientSupportedCodecs$Response;->getSuccess()Z
 
@@ -107,7 +107,7 @@
 
     const-string v2, "SupportedCodecsStatistics"
 
-    invoke-interface {v0, v2, v1}, Lahd;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v2, v1}, Ltmd;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 3
     invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/api/request/ClientSupportedCodecs$Response;->getSuccess()Z
@@ -117,12 +117,12 @@
     if-eqz p1, :cond_0
 
     .line 4
-    iget-object p1, p0, Lru/ok/android/externcalls/sdk/stat/supportedcodecs/SupportedCodecsStatistics$tryToReport$1;->$preferencesHelper:Lfgc;
+    iget-object p1, p0, Lru/ok/android/externcalls/sdk/stat/supportedcodecs/SupportedCodecsStatistics$tryToReport$1;->$preferencesHelper:Ljlc;
 
     iget-wide v0, p0, Lru/ok/android/externcalls/sdk/stat/supportedcodecs/SupportedCodecsStatistics$tryToReport$1;->$currentTime:J
 
     .line 5
-    iget-object p1, p1, Lfgc;->a:Landroid/content/SharedPreferences;
+    iget-object p1, p1, Ljlc;->a:Landroid/content/SharedPreferences;
 
     .line 6
     invoke-interface {p1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;

@@ -1,55 +1,61 @@
-.class public abstract Leib;
-.super Ljava/lang/Object;
+.class public final Leib;
+.super Ljib;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:I
-
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
+.field public static final a:Leib;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    sget v0, Lz9d;->settings_devices_allow_camera_permission_btn:I
+    new-instance v0, Leib;
 
-    sput v0, Leib;->a:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sget v0, Lz9d;->settings_devices_auth_hint_accept_button:I
-
-    sput v0, Leib;->b:I
-
-    sget v0, Lz9d;->settings_devices_auth_hint_deny_button:I
-
-    sput v0, Leib;->c:I
-
-    sget v0, Lz9d;->settings_devices_deny_camera_permission_btn:I
-
-    sput v0, Leib;->d:I
-
-    sget v0, Lz9d;->settings_devices_recycler_header_viewtype:I
-
-    sput v0, Leib;->e:I
-
-    sget v0, Lz9d;->settings_devices_recycler_session_item_viewtype:I
-
-    sput v0, Leib;->f:I
-
-    sget v0, Lz9d;->settings_devices_recycler_view:I
-
-    sput v0, Leib;->g:I
+    sput-object v0, Leib;->a:Leib;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of p1, p1, Leib;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, 0x4ec2eb76
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "Negative"
+
+    return-object v0
 .end method

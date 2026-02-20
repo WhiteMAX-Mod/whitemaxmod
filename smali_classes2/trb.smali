@@ -1,158 +1,96 @@
 .class public final Ltrb;
-.super Lgl0;
+.super Lsla;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic c:I
-
-.field public d:Ljava/lang/Object;
+.field public final b:Lnx6;
 
 
 # direct methods
-.method public synthetic constructor <init>()V
+.method public constructor <init>(Lnx6;)V
     .locals 1
 
-    .line 1
-    const/4 v0, 0x1
+    sget-object v0, Lmah;->a:Lmah;
 
-    iput v0, p0, Ltrb;->c:I
+    invoke-direct {p0, v0}, Lsla;-><init>(Ljava/lang/Object;)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/net/Uri;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Ltrb;->c:I
-
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 3
-    iput-object p1, p0, Ltrb;->d:Ljava/lang/Object;
+    iput-object p1, p0, Ltrb;->b:Lnx6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()Lb01;
-    .locals 2
-
-    iget v0, p0, Ltrb;->c:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Ltrb;->d:Ljava/lang/Object;
-
-    check-cast v0, Lddf;
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Lddf;
-
-    const-string v1, "RoundAsCirclePostprocessor#AntiAliased"
-
-    invoke-direct {v0, v1}, Lddf;-><init>(Ljava/lang/String;)V
-
-    iput-object v0, p0, Ltrb;->d:Ljava/lang/Object;
-
-    :cond_0
-    iget-object v0, p0, Ltrb;->d:Ljava/lang/Object;
-
-    check-cast v0, Lddf;
-
-    return-object v0
-
-    :pswitch_0
-    new-instance v0, Lddf;
-
-    iget-object v1, p0, Ltrb;->d:Ljava/lang/Object;
-
-    check-cast v1, Landroid/net/Uri;
-
-    invoke-virtual {v1}, Landroid/net/Uri;->hashCode()I
-
-    move-result v1
-
-    invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Lddf;-><init>(Ljava/lang/String;)V
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final c(Landroid/graphics/Bitmap;)V
+.method public final equals(Ljava/lang/Object;)Z
     .locals 3
-
-    iget v0, p0, Ltrb;->c:I
-
-    packed-switch v0, :pswitch_data_0
 
     const/4 v0, 0x1
 
-    invoke-static {p1, v0}, Lcom/facebook/imagepipeline/nativecode/NativeRoundingFilter;->toCircleFast(Landroid/graphics/Bitmap;Z)V
+    if-ne p0, p1, :cond_0
 
-    return-void
+    return v0
 
-    :pswitch_0
-    iget-object v0, p0, Ltrb;->d:Ljava/lang/Object;
-
-    check-cast v0, Landroid/net/Uri;
-
-    invoke-static {v0}, Lwti;->c(Landroid/net/Uri;)Landroid/graphics/Bitmap;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    new-instance v1, Landroid/graphics/Canvas;
-
-    invoke-direct {v1, p1}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
-
-    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
-
-    move-result p1
-
-    int-to-float p1, p1
-
-    invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
-
-    move-result v2
-
-    int-to-float v2, v2
-
-    div-float/2addr p1, v2
-
-    invoke-virtual {v1, p1, p1}, Landroid/graphics/Canvas;->scale(FF)V
-
-    const/4 p1, 0x0
+    :cond_0
+    instance-of v1, p1, Ltrb;
 
     const/4 v2, 0x0
 
-    invoke-virtual {v1, v0, v2, v2, p1}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
+    if-nez v1, :cond_1
 
-    :cond_0
-    return-void
+    return v2
 
-    nop
+    :cond_1
+    check-cast p1, Ltrb;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    iget-object v1, p0, Ltrb;->b:Lnx6;
+
+    iget-object p1, p1, Ltrb;->b:Lnx6;
+
+    invoke-static {v1, p1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Ltrb;->b:Lnx6;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "OpenExternalMap(geoAttach="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Ltrb;->b:Lnx6;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -18,95 +18,97 @@
 
 # virtual methods
 .method public final getComponents()Ljava/util/List;
-    .locals 4
+    .locals 5
 
-    const-class v0, Lb6j;
+    const-class v0, Lvdj;
 
-    invoke-static {v0}, Luo3;->b(Ljava/lang/Class;)Lto3;
-
-    move-result-object v1
-
-    const-class v2, Lp7a;
-
-    invoke-static {v2}, Lqx4;->a(Ljava/lang/Class;)Lqx4;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v3}, Lto3;->a(Lqx4;)V
-
-    new-instance v3, Lvjf;
-
-    invoke-direct {v3}, Ljava/lang/Object;-><init>()V
-
-    iput-object v3, v1, Lto3;->g:Ljava/lang/Object;
-
-    invoke-virtual {v1}, Lto3;->b()Luo3;
+    invoke-static {v0}, Llp3;->b(Ljava/lang/Class;)Lkp3;
 
     move-result-object v1
 
-    const-class v3, Lw1j;
+    const-class v2, Lcaa;
 
-    invoke-static {v3}, Luo3;->b(Ljava/lang/Class;)Lto3;
+    invoke-static {v2}, Lyy4;->a(Ljava/lang/Class;)Lyy4;
 
     move-result-object v3
 
-    invoke-static {v0}, Lqx4;->a(Ljava/lang/Class;)Lqx4;
+    invoke-virtual {v1, v3}, Lkp3;->a(Lyy4;)V
+
+    new-instance v3, Lnqa;
+
+    const/16 v4, 0x1c
+
+    invoke-direct {v3, v4}, Lnqa;-><init>(I)V
+
+    iput-object v3, v1, Lkp3;->g:Ljava/lang/Object;
+
+    invoke-virtual {v1}, Lkp3;->b()Llp3;
+
+    move-result-object v1
+
+    const-class v3, Lq9j;
+
+    invoke-static {v3}, Llp3;->b(Ljava/lang/Class;)Lkp3;
+
+    move-result-object v3
+
+    invoke-static {v0}, Lyy4;->a(Ljava/lang/Class;)Lyy4;
 
     move-result-object v0
 
-    invoke-virtual {v3, v0}, Lto3;->a(Lqx4;)V
+    invoke-virtual {v3, v0}, Lkp3;->a(Lyy4;)V
 
-    const-class v0, Lsn5;
+    const-class v0, Ljp5;
 
-    invoke-static {v0}, Lqx4;->a(Ljava/lang/Class;)Lqx4;
-
-    move-result-object v0
-
-    invoke-virtual {v3, v0}, Lto3;->a(Lqx4;)V
-
-    invoke-static {v2}, Lqx4;->a(Ljava/lang/Class;)Lqx4;
+    invoke-static {v0}, Lyy4;->a(Ljava/lang/Class;)Lyy4;
 
     move-result-object v0
 
-    invoke-virtual {v3, v0}, Lto3;->a(Lqx4;)V
+    invoke-virtual {v3, v0}, Lkp3;->a(Lyy4;)V
 
-    new-instance v0, Lskf;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    iput-object v0, v3, Lto3;->g:Ljava/lang/Object;
-
-    invoke-virtual {v3}, Lto3;->b()Luo3;
+    invoke-static {v2}, Lyy4;->a(Ljava/lang/Class;)Lyy4;
 
     move-result-object v0
 
-    sget-object v2, Liwi;->b:Lewi;
+    invoke-virtual {v3, v0}, Lkp3;->a(Lyy4;)V
+
+    new-instance v0, Lote;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v4, v2}, Lote;-><init>(IB)V
+
+    iput-object v0, v3, Lkp3;->g:Ljava/lang/Object;
+
+    invoke-virtual {v3}, Lkp3;->b()Llp3;
+
+    move-result-object v0
+
+    sget-object v3, Lc4j;->b:Ly3j;
 
     filled-new-array {v1, v0}, [Ljava/lang/Object;
 
     move-result-object v0
 
-    const/4 v1, 0x0
-
     :goto_0
-    const/4 v2, 0x2
+    const/4 v1, 0x2
 
-    if-ge v1, v2, :cond_1
+    if-ge v2, v1, :cond_1
 
-    aget-object v2, v0, v1
+    aget-object v1, v0, v2
 
-    if-eqz v2, :cond_0
+    if-eqz v1, :cond_0
 
-    add-int/lit8 v1, v1, 0x1
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
     :cond_0
     new-instance v0, Ljava/lang/NullPointerException;
 
-    const-string v2, "at index "
+    const-string v1, "at index "
 
-    invoke-static {v1, v2}, Lj27;->g(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v1}, Ltx8;->g(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -115,9 +117,9 @@
     throw v0
 
     :cond_1
-    new-instance v1, Llxi;
+    new-instance v2, Le5j;
 
-    invoke-direct {v1, v2, v0}, Llxi;-><init>(I[Ljava/lang/Object;)V
+    invoke-direct {v2, v1, v0}, Le5j;-><init>(I[Ljava/lang/Object;)V
 
-    return-object v1
+    return-object v2
 .end method

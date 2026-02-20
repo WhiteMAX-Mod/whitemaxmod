@@ -1,112 +1,115 @@
 .class public final Ldmc;
-.super Ljava/lang/Object;
+.super Lujg;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lnn8;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;
+.field public final c:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;I)V
+.method public constructor <init>(Ljava/util/List;)V
     .locals 0
 
-    iput p2, p0, Ldmc;->a:I
-
-    iput-object p1, p0, Ldmc;->b:Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ldmc;->c:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 3
+.method public final a(ZZ)Ljava/lang/String;
+    .locals 2
 
-    iget p1, p0, Ldmc;->a:I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    packed-switch p1, :pswitch_data_0
+    const-string v1, "PRESET_AVATARS.Response(presets="
 
-    iget-object p1, p0, Ldmc;->b:Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p1}, La94;->getRouter()Lw4e;
+    iget-object v1, p0, Ldmc;->c:Ljava/lang/Object;
 
-    move-result-object p1
-
-    invoke-virtual {p1}, Lw4e;->C()Z
-
-    return-void
-
-    :pswitch_0
-    iget-object p1, p0, Ldmc;->b:Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;
-
-    sget-object v0, Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;->X:[Lz28;
-
-    iget-object p1, p1, Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;->c:Lo58;
-
-    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
+    invoke-static {v1, p1, p2}, Lhfj;->b(Ljava/util/List;ZZ)Ljava/lang/String;
 
     move-result-object p1
 
-    check-cast p1, Lmmc;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, p1, Lmmc;->u0:Lmmf;
+    const/16 p1, 0x29
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ll0;->isActive()Z
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result v0
+    move-result-object p1
 
-    const/4 v1, 0x1
+    return-object p1
+.end method
 
-    if-ne v0, v1, :cond_0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    if-ne p0, p1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    instance-of v0, p1, Ldmc;
+
+    if-nez v0, :cond_1
 
     goto :goto_0
 
-    :cond_0
-    iget-object v0, p1, Lmmc;->o:Lo58;
+    :cond_1
+    check-cast p1, Ldmc;
 
-    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+    iget-object v0, p0, Ldmc;->c:Ljava/lang/Object;
 
-    move-result-object v0
+    iget-object p1, p1, Ldmc;->c:Ljava/lang/Object;
 
-    check-cast v0, Lmbg;
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    check-cast v0, Lj9b;
+    move-result p1
 
-    invoke-virtual {v0}, Lj9b;->b()Lsb4;
-
-    move-result-object v0
-
-    new-instance v1, Llmc;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, p1, v2}, Llmc;-><init>(Lmmc;Lkotlin/coroutines/Continuation;)V
-
-    const/4 v2, 0x2
-
-    invoke-static {p1, v0, v1, v2}, Lnth;->n(Lnth;Lqb4;Lbr6;I)Lmmf;
-
-    move-result-object v0
-
-    iput-object v0, p1, Lmmc;->u0:Lmmf;
+    if-nez p1, :cond_2
 
     :goto_0
-    return-void
+    const/4 p1, 0x0
 
-    nop
+    return p1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    :cond_2
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Ldmc;->c:Ljava/lang/Object;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0, v0}, Ldmc;->a(ZZ)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

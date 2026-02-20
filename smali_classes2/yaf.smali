@@ -1,87 +1,39 @@
 .class public final Lyaf;
-.super Ljava/lang/Object;
+.super Lao4;
 .source "SourceFile"
 
-# interfaces
-.implements Llw9;
 
+# static fields
+.field public static final b:Lyaf;
 
-# instance fields
-.field public final a:J
+.field public static final c:Lwn4;
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lyaf;
 
-    iput-wide p1, p0, Lyaf;->a:J
+    invoke-direct {v0}, Lao4;-><init>()V
 
-    return-void
-.end method
+    sput-object v0, Lyaf;->b:Lyaf;
 
+    const/4 v1, 0x0
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lyaf;
+    new-array v1, v1, [Ljava/lang/String;
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    const/16 v3, 0xe
 
-    return v2
+    const-string v4, ":settings/ringtone"
 
-    :cond_1
-    check-cast p1, Lyaf;
-
-    iget-wide v3, p0, Lyaf;->a:J
-
-    iget-wide v5, p1, Lyaf;->a:J
-
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Lyaf;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    const-string v0, "ShowUnpinCancelableSnackbar(messageId="
-
-    const-string v1, ")"
-
-    iget-wide v2, p0, Lyaf;->a:J
-
-    invoke-static {v2, v3, v0, v1}, Lcbh;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v4, v1, v2, v3}, Lao4;->c(Lao4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lwn4;
 
     move-result-object v0
 
-    return-object v0
+    sput-object v0, Lyaf;->c:Lwn4;
+
+    return-void
 .end method

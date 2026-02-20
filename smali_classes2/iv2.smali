@@ -2,82 +2,111 @@
 .super Ljava/lang/Enum;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/os/Parcelable;
+
 
 # static fields
-.field public static final synthetic X:[Liv2;
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Liv2;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public static final enum b:Liv2;
+.field public static final b:Lfe5;
 
 .field public static final enum c:Liv2;
 
 .field public static final enum d:Liv2;
 
-.field public static final o:I
+.field public static final synthetic o:[Liv2;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:Lbgg;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 5
+    .locals 4
 
     new-instance v0, Liv2;
 
-    const-string v1, "SOUND"
+    sget-object v1, Lvx4;->d:Lrnj;
+
+    const-string v1, "DEFAULT"
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v1, v2, v1}, Liv2;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Liv2;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Liv2;->b:Liv2;
+    sput-object v0, Liv2;->c:Liv2;
 
     new-instance v1, Liv2;
 
-    const/4 v2, 0x1
+    const-string v2, "SCHEDULED_SEND"
 
-    const-string v3, "VIBR"
+    const/4 v3, 0x1
 
-    const-string v4, "VIBRATION"
+    invoke-direct {v1, v2, v3}, Liv2;-><init>(Ljava/lang/String;I)V
 
-    invoke-direct {v1, v4, v2, v3}, Liv2;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    sput-object v1, Liv2;->d:Liv2;
 
-    sput-object v1, Liv2;->c:Liv2;
-
-    new-instance v2, Liv2;
-
-    const-string v3, "LED"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4, v3}, Liv2;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v2, Liv2;->d:Liv2;
-
-    filled-new-array {v0, v1, v2}, [Liv2;
+    filled-new-array {v0, v1}, [Liv2;
 
     move-result-object v0
 
-    sput-object v0, Liv2;->X:[Liv2;
+    sput-object v0, Liv2;->o:[Liv2;
 
-    invoke-static {}, Liv2;->values()[Liv2;
+    new-instance v0, Lfe5;
 
-    move-result-object v0
+    const/16 v1, 0xd
 
-    array-length v0, v0
+    invoke-direct {v0, v1}, Lfe5;-><init>(I)V
 
-    sput v0, Liv2;->o:I
+    sput-object v0, Liv2;->b:Lfe5;
+
+    new-instance v0, Lr9;
+
+    const/16 v1, 0x13
+
+    invoke-direct {v0, v1}, Lr9;-><init>(I)V
+
+    sput-object v0, Liv2;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;I)V
+    .locals 1
 
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iput-object p3, p0, Liv2;->a:Ljava/lang/String;
+    new-instance p1, Lnd1;
+
+    const/16 p2, 0x15
+
+    invoke-direct {p1, p2, p0}, Lnd1;-><init>(ILjava/lang/Object;)V
+
+    new-instance p2, Lbgg;
+
+    invoke-direct {p2, p1}, Lbgg;-><init>(Lis6;)V
+
+    iput-object p2, p0, Liv2;->a:Lbgg;
+
+    invoke-virtual {p0}, Ljava/lang/Enum;->name()Ljava/lang/String;
+
+    move-result-object p1
+
+    const/4 p2, 0x0
+
+    const/4 v0, 0x3
+
+    invoke-virtual {p1, p2, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     return-void
 .end method
@@ -99,9 +128,9 @@
 .method public static values()[Liv2;
     .locals 1
 
-    sget-object v0, Liv2;->X:[Liv2;
+    sget-object v0, Liv2;->o:[Liv2;
 
-    invoke-virtual {v0}, [Liv2;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -112,18 +141,22 @@
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final describeContents()I
+    .locals 1
 
-    const-string v0, "{value=\'"
+    const/4 v0, 0x0
 
-    const-string v1, "\'}"
+    return v0
+.end method
 
-    iget-object v2, p0, Liv2;->a:Ljava/lang/String;
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    invoke-static {v0, v2, v1}, Lj27;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p2
 
-    return-object v0
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    return-void
 .end method

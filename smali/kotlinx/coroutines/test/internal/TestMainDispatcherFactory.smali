@@ -39,7 +39,7 @@
 
 
 # virtual methods
-.method public final createDispatcher(Ljava/util/List;)Lzp8;
+.method public final createDispatcher(Ljava/util/List;)Los8;
     .locals 5
 
     new-instance v0, Ljava/util/ArrayList;
@@ -148,13 +148,13 @@
     sget-object p1, Lkotlinx/coroutines/internal/MissingMainCoroutineDispatcherFactory;->INSTANCE:Lkotlinx/coroutines/internal/MissingMainCoroutineDispatcherFactory;
 
     :cond_6
-    new-instance v1, Lkfg;
+    new-instance v1, Lfng;
 
-    new-instance v2, Lade;
+    new-instance v2, Lc2e;
 
-    invoke-direct {v2, p1, v0, p0}, Lade;-><init>(Lkotlinx/coroutines/internal/MainDispatcherFactory;Ljava/util/ArrayList;Lkotlinx/coroutines/test/internal/TestMainDispatcherFactory;)V
+    invoke-direct {v2, p1, v0, p0}, Lc2e;-><init>(Lkotlinx/coroutines/internal/MainDispatcherFactory;Ljava/util/ArrayList;Lkotlinx/coroutines/test/internal/TestMainDispatcherFactory;)V
 
-    invoke-direct {v1, v2}, Lkfg;-><init>(Lade;)V
+    invoke-direct {v1, v2}, Lfng;-><init>(Lc2e;)V
 
     return-object v1
 .end method

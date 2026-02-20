@@ -19,17 +19,17 @@
         "",
         "Lru/ok/android/externcalls/sdk/net/internal/monitor/StatMonitor;",
         "statMonitor",
-        "Lahd;",
+        "Ltmd;",
         "logger",
         "Lkotlin/Function0;",
-        "Lb3h;",
+        "Lmah;",
         "onSwitchTrigger",
         "Lru/ok/android/externcalls/sdk/stat/ConversationStats;",
         "conversationStats",
         "Lru/ok/android/externcalls/sdk/p2prelay/P2PRelaySwitchConfigProvider;",
         "p2PRelaySwitchConfigProvider",
         "<init>",
-        "(Lru/ok/android/externcalls/sdk/net/internal/monitor/StatMonitor;Lahd;Llq6;Lru/ok/android/externcalls/sdk/stat/ConversationStats;Lru/ok/android/externcalls/sdk/p2prelay/P2PRelaySwitchConfigProvider;)V",
+        "(Lru/ok/android/externcalls/sdk/net/internal/monitor/StatMonitor;Ltmd;Lis6;Lru/ok/android/externcalls/sdk/stat/ConversationStats;Lru/ok/android/externcalls/sdk/p2prelay/P2PRelaySwitchConfigProvider;)V",
         "Lru/ok/android/externcalls/sdk/p2prelay/P2PRelaySwitchConfig;",
         "config",
         "maybeStartObserveStat",
@@ -41,12 +41,12 @@
         "release",
         "()V",
         "Lru/ok/android/externcalls/sdk/net/internal/monitor/StatMonitor;",
-        "Lahd;",
-        "Llq6;",
+        "Ltmd;",
+        "Lis6;",
         "Lru/ok/android/externcalls/sdk/stat/ConversationStats;",
-        "Lo25;",
+        "Ly35;",
         "statObserveDisposable",
-        "Lo25;",
+        "Ly35;",
         "",
         "rttViolationCount",
         "I",
@@ -76,16 +76,16 @@
 # instance fields
 .field private final conversationStats:Lru/ok/android/externcalls/sdk/stat/ConversationStats;
 
-.field private final getConfigDisposable:Lo25;
+.field private final getConfigDisposable:Ly35;
 
 .field private isActive:Z
 
-.field private final logger:Lahd;
+.field private final logger:Ltmd;
 
-.field private final onSwitchTrigger:Llq6;
+.field private final onSwitchTrigger:Lis6;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Llq6;"
+            "Lis6;"
         }
     .end annotation
 .end field
@@ -94,7 +94,7 @@
 
 .field private final statMonitor:Lru/ok/android/externcalls/sdk/net/internal/monitor/StatMonitor;
 
-.field private statObserveDisposable:Lo25;
+.field private statObserveDisposable:Ly35;
 
 
 # direct methods
@@ -105,21 +105,21 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/p2prelay/P2pRelaySwitchTrigger$Companion;-><init>(Lso4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/p2prelay/P2pRelaySwitchTrigger$Companion;-><init>(Lfq4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/p2prelay/P2pRelaySwitchTrigger;->Companion:Lru/ok/android/externcalls/sdk/p2prelay/P2pRelaySwitchTrigger$Companion;
 
     return-void
 .end method
 
-.method public constructor <init>(Lru/ok/android/externcalls/sdk/net/internal/monitor/StatMonitor;Lahd;Llq6;Lru/ok/android/externcalls/sdk/stat/ConversationStats;Lru/ok/android/externcalls/sdk/p2prelay/P2PRelaySwitchConfigProvider;)V
+.method public constructor <init>(Lru/ok/android/externcalls/sdk/net/internal/monitor/StatMonitor;Ltmd;Lis6;Lru/ok/android/externcalls/sdk/stat/ConversationStats;Lru/ok/android/externcalls/sdk/p2prelay/P2PRelaySwitchConfigProvider;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lru/ok/android/externcalls/sdk/net/internal/monitor/StatMonitor;",
-            "Lahd;",
-            "Llq6;",
+            "Ltmd;",
+            "Lis6;",
             "Lru/ok/android/externcalls/sdk/stat/ConversationStats;",
             "Lru/ok/android/externcalls/sdk/p2prelay/P2PRelaySwitchConfigProvider;",
             ")V"
@@ -130,9 +130,9 @@
 
     iput-object p1, p0, Lru/ok/android/externcalls/sdk/p2prelay/P2pRelaySwitchTrigger;->statMonitor:Lru/ok/android/externcalls/sdk/net/internal/monitor/StatMonitor;
 
-    iput-object p2, p0, Lru/ok/android/externcalls/sdk/p2prelay/P2pRelaySwitchTrigger;->logger:Lahd;
+    iput-object p2, p0, Lru/ok/android/externcalls/sdk/p2prelay/P2pRelaySwitchTrigger;->logger:Ltmd;
 
-    iput-object p3, p0, Lru/ok/android/externcalls/sdk/p2prelay/P2pRelaySwitchTrigger;->onSwitchTrigger:Llq6;
+    iput-object p3, p0, Lru/ok/android/externcalls/sdk/p2prelay/P2pRelaySwitchTrigger;->onSwitchTrigger:Lis6;
 
     iput-object p4, p0, Lru/ok/android/externcalls/sdk/p2prelay/P2pRelaySwitchTrigger;->conversationStats:Lru/ok/android/externcalls/sdk/stat/ConversationStats;
 
@@ -140,15 +140,15 @@
 
     iput-boolean p1, p0, Lru/ok/android/externcalls/sdk/p2prelay/P2pRelaySwitchTrigger;->isActive:Z
 
-    invoke-interface {p5}, Lru/ok/android/externcalls/sdk/config/ConfigProvider;->getConfig()Lkef;
+    invoke-interface {p5}, Lru/ok/android/externcalls/sdk/config/ConfigProvider;->getConfig()Luw8;
 
     move-result-object p1
 
-    invoke-static {}, Lde;->a()Lpbe;
+    invoke-static {}, Lsf;->a()Leie;
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lkef;->i(Lpbe;)Lcff;
+    invoke-virtual {p1, p2}, Luw8;->e(Leie;)Lix8;
 
     move-result-object p1
 
@@ -160,19 +160,35 @@
 
     invoke-direct {p3, p0}, Lru/ok/android/externcalls/sdk/p2prelay/P2pRelaySwitchTrigger$getConfigDisposable$2;-><init>(Lru/ok/android/externcalls/sdk/p2prelay/P2pRelaySwitchTrigger;)V
 
-    invoke-virtual {p1, p2, p3}, Lkef;->k(Lay3;Lay3;)Lnw1;
+    new-instance p4, Lsk8;
 
-    move-result-object p1
+    const/16 p5, 0x1c
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/p2prelay/P2pRelaySwitchTrigger;->getConfigDisposable:Lo25;
+    invoke-direct {p4, p5, p0}, Lsk8;-><init>(ILjava/lang/Object;)V
+
+    new-instance p5, Lvw8;
+
+    invoke-direct {p5, p2, p3, p4}, Lvw8;-><init>(Lsy3;Lsy3;Ls7;)V
+
+    invoke-virtual {p1, p5}, Luw8;->f(Ljx8;)V
+
+    iput-object p5, p0, Lru/ok/android/externcalls/sdk/p2prelay/P2pRelaySwitchTrigger;->getConfigDisposable:Ly35;
 
     return-void
 .end method
 
-.method public static final synthetic access$getLogger$p(Lru/ok/android/externcalls/sdk/p2prelay/P2pRelaySwitchTrigger;)Lahd;
+.method public static synthetic a(Lru/ok/android/externcalls/sdk/p2prelay/P2pRelaySwitchTrigger;)V
     .locals 0
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/p2prelay/P2pRelaySwitchTrigger;->logger:Lahd;
+    invoke-static {p0}, Lru/ok/android/externcalls/sdk/p2prelay/P2pRelaySwitchTrigger;->getConfigDisposable$lambda$0(Lru/ok/android/externcalls/sdk/p2prelay/P2pRelaySwitchTrigger;)V
+
+    return-void
+.end method
+
+.method public static final synthetic access$getLogger$p(Lru/ok/android/externcalls/sdk/p2prelay/P2pRelaySwitchTrigger;)Ltmd;
+    .locals 0
+
+    iget-object p0, p0, Lru/ok/android/externcalls/sdk/p2prelay/P2pRelaySwitchTrigger;->logger:Ltmd;
 
     return-object p0
 .end method
@@ -189,6 +205,20 @@
     .locals 0
 
     invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/p2prelay/P2pRelaySwitchTrigger;->maybeStartObserveStat(Lru/ok/android/externcalls/sdk/p2prelay/P2PRelaySwitchConfig;)V
+
+    return-void
+.end method
+
+.method private static final getConfigDisposable$lambda$0(Lru/ok/android/externcalls/sdk/p2prelay/P2pRelaySwitchTrigger;)V
+    .locals 2
+
+    iget-object p0, p0, Lru/ok/android/externcalls/sdk/p2prelay/P2pRelaySwitchTrigger;->logger:Ltmd;
+
+    const-string v0, "P2pRelaySwitchTrigger"
+
+    const-string v1, "Remote config has not been provided"
+
+    invoke-interface {p0, v0, v1}, Ltmd;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -244,7 +274,7 @@
 
     if-lt v2, v3, :cond_1
 
-    iget-object v2, p0, Lru/ok/android/externcalls/sdk/p2prelay/P2pRelaySwitchTrigger;->logger:Lahd;
+    iget-object v2, p0, Lru/ok/android/externcalls/sdk/p2prelay/P2pRelaySwitchTrigger;->logger:Ltmd;
 
     iget v3, p0, Lru/ok/android/externcalls/sdk/p2prelay/P2pRelaySwitchTrigger;->rttViolationCount:I
 
@@ -252,7 +282,7 @@
 
     const-string v5, ", threshold "
 
-    invoke-static {p1, v0, v1, v4, v5}, Lxi4;->l(IJLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {p1, v0, v1, v4, v5}, Lj64;->j(IJLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object p1
 
@@ -268,11 +298,11 @@
 
     const-string v3, "P2pRelaySwitchTrigger"
 
-    invoke-interface {v2, v3, p1}, Lahd;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v2, v3, p1}, Ltmd;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object p1, p0, Lru/ok/android/externcalls/sdk/p2prelay/P2pRelaySwitchTrigger;->onSwitchTrigger:Llq6;
+    iget-object p1, p0, Lru/ok/android/externcalls/sdk/p2prelay/P2pRelaySwitchTrigger;->onSwitchTrigger:Lis6;
 
-    invoke-interface {p1}, Llq6;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lis6;->invoke()Ljava/lang/Object;
 
     iget-object p1, p0, Lru/ok/android/externcalls/sdk/p2prelay/P2pRelaySwitchTrigger;->conversationStats:Lru/ok/android/externcalls/sdk/stat/ConversationStats;
 
@@ -299,7 +329,7 @@
 .method private final maybeStartObserveStat(Lru/ok/android/externcalls/sdk/p2prelay/P2PRelaySwitchConfig;)V
     .locals 4
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/p2prelay/P2pRelaySwitchTrigger;->logger:Lahd;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/p2prelay/P2pRelaySwitchTrigger;->logger:Ltmd;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -315,7 +345,7 @@
 
     const-string v2, "P2pRelaySwitchTrigger"
 
-    invoke-interface {v0, v2, v1}, Lahd;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v2, v1}, Ltmd;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/p2prelay/P2PRelaySwitchConfig;->getRttMs()Ljava/lang/Long;
 
@@ -328,24 +358,24 @@
     return-void
 
     :cond_0
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/p2prelay/P2pRelaySwitchTrigger;->statObserveDisposable:Lo25;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/p2prelay/P2pRelaySwitchTrigger;->statObserveDisposable:Ly35;
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v0}, Lo25;->dispose()V
+    invoke-interface {v0}, Ly35;->dispose()V
 
     :cond_1
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/p2prelay/P2pRelaySwitchTrigger;->statMonitor:Lru/ok/android/externcalls/sdk/net/internal/monitor/StatMonitor;
 
-    invoke-interface {v0}, Lru/ok/android/externcalls/sdk/net/internal/monitor/StatMonitor;->observeStat()Ldxa;
+    invoke-interface {v0}, Lru/ok/android/externcalls/sdk/net/internal/monitor/StatMonitor;->observeStat()Luza;
 
     move-result-object v0
 
-    invoke-static {}, Lde;->a()Lpbe;
+    invoke-static {}, Lsf;->a()Leie;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Ldxa;->i(Lpbe;)Laza;
+    invoke-virtual {v0, v1}, Luza;->j(Leie;)Lp1b;
 
     move-result-object v0
 
@@ -357,15 +387,15 @@
 
     invoke-direct {p1, p0}, Lru/ok/android/externcalls/sdk/p2prelay/P2pRelaySwitchTrigger$maybeStartObserveStat$2;-><init>(Lru/ok/android/externcalls/sdk/p2prelay/P2pRelaySwitchTrigger;)V
 
-    new-instance v2, Lz48;
+    new-instance v2, Lw78;
 
-    sget-object v3, Lhbe;->c:Lsr6;
+    sget-object v3, Lq4h;->c:Lmqa;
 
-    invoke-direct {v2, v1, p1, v3}, Lz48;-><init>(Lay3;Lay3;Li6;)V
+    invoke-direct {v2, v1, p1, v3}, Lw78;-><init>(Lsy3;Lsy3;Ls7;)V
 
-    invoke-virtual {v0, v2}, Ldxa;->a(Le0b;)V
+    invoke-virtual {v0, v2}, Luza;->a(Lv2b;)V
 
-    iput-object v2, p0, Lru/ok/android/externcalls/sdk/p2prelay/P2pRelaySwitchTrigger;->statObserveDisposable:Lo25;
+    iput-object v2, p0, Lru/ok/android/externcalls/sdk/p2prelay/P2pRelaySwitchTrigger;->statObserveDisposable:Ly35;
 
     return-void
 .end method
@@ -386,23 +416,23 @@
 
     iput-boolean v0, p0, Lru/ok/android/externcalls/sdk/p2prelay/P2pRelaySwitchTrigger;->isActive:Z
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/p2prelay/P2pRelaySwitchTrigger;->logger:Lahd;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/p2prelay/P2pRelaySwitchTrigger;->logger:Ltmd;
 
     const-string v1, "P2pRelaySwitchTrigger"
 
     const-string v2, "Releasing"
 
-    invoke-interface {v0, v1, v2}, Lahd;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v1, v2}, Ltmd;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/p2prelay/P2pRelaySwitchTrigger;->getConfigDisposable:Lo25;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/p2prelay/P2pRelaySwitchTrigger;->getConfigDisposable:Ly35;
 
-    invoke-interface {v0}, Lo25;->dispose()V
+    invoke-interface {v0}, Ly35;->dispose()V
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/p2prelay/P2pRelaySwitchTrigger;->statObserveDisposable:Lo25;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/p2prelay/P2pRelaySwitchTrigger;->statObserveDisposable:Ly35;
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v0}, Lo25;->dispose()V
+    invoke-interface {v0}, Ly35;->dispose()V
 
     :cond_1
     :goto_0

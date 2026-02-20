@@ -1,32 +1,22 @@
-.class public interface abstract Lfn5;
+.class public final Lfn5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lqn5;
 
-# virtual methods
-.method public abstract a(Lyyd;)Lhjf;
-.end method
 
-.method public abstract b()V
-.end method
+# instance fields
+.field public final a:Ljava/lang/String;
 
-.method public abstract c(Lz8b;J)Lkgf;
-.end method
 
-.method public abstract cancel()V
-.end method
+# direct methods
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 0
 
-.method public abstract d(Lyyd;)J
-.end method
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public abstract e(Z)Lxyd;
-.end method
+    iput-object p1, p0, Lfn5;->a:Ljava/lang/String;
 
-.method public abstract f()Lyld;
-.end method
-
-.method public abstract g(Lz8b;)V
-.end method
-
-.method public abstract h()V
+    return-void
 .end method

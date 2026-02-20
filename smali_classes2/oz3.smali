@@ -1,97 +1,87 @@
-.class public final enum Loz3;
-.super Ljava/lang/Enum;
+.class public final Loz3;
+.super Lb10;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum a:Loz3;
+# instance fields
+.field public final X:Ljava/lang/String;
 
-.field public static final enum b:Loz3;
+.field public final Y:Ljava/lang/String;
 
-.field public static final enum c:Loz3;
+.field public final Z:Ljava/lang/String;
 
-.field public static final enum d:Loz3;
+.field public final d:Ljava/lang/String;
 
-.field public static final synthetic o:[Loz3;
+.field public final o:J
+
+.field public final s0:Ljava/lang/String;
+
+.field public final t0:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZ)V
+    .locals 1
 
-    new-instance v0, Loz3;
+    sget-object v0, Lw20;->v0:Lw20;
 
-    const-string v1, "CUSTOM"
+    invoke-direct {p0, v0, p9, p10}, Lb10;-><init>(Lw20;ZZ)V
 
-    const/4 v2, 0x0
+    iput-object p1, p0, Loz3;->d:Ljava/lang/String;
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-wide p2, p0, Loz3;->o:J
 
-    sput-object v0, Loz3;->a:Loz3;
+    iput-object p4, p0, Loz3;->X:Ljava/lang/String;
 
-    new-instance v1, Loz3;
+    iput-object p7, p0, Loz3;->s0:Ljava/lang/String;
 
-    const-string v2, "DEVICE"
+    iput-object p8, p0, Loz3;->t0:Ljava/lang/String;
 
-    const/4 v3, 0x1
+    iput-object p5, p0, Loz3;->Y:Ljava/lang/String;
 
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Loz3;->b:Loz3;
-
-    new-instance v2, Loz3;
-
-    const-string v3, "ONEME"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Loz3;->c:Loz3;
-
-    new-instance v3, Loz3;
-
-    const-string v4, "UNKNOWN"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Loz3;->d:Loz3;
-
-    filled-new-array {v0, v1, v2, v3}, [Loz3;
-
-    move-result-object v0
-
-    sput-object v0, Loz3;->o:[Loz3;
+    iput-object p6, p0, Loz3;->Z:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Loz3;
-    .locals 1
 
-    const-class v0, Loz3;
+# virtual methods
+.method public final a()Ljava/util/HashMap;
+    .locals 5
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Loz3;
-
-    return-object p0
-.end method
-
-.method public static values()[Loz3;
-    .locals 1
-
-    sget-object v0, Loz3;->o:[Loz3;
-
-    invoke-virtual {v0}, [Loz3;->clone()Ljava/lang/Object;
+    invoke-super {p0}, Lb10;->a()Ljava/util/HashMap;
 
     move-result-object v0
 
-    check-cast v0, [Loz3;
+    iget-object v1, p0, Loz3;->d:Ljava/lang/String;
 
+    invoke-static {v1}, Ll1j;->c(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    const-string v2, "vcfBody"
+
+    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_0
+    const-wide/16 v1, 0x0
+
+    iget-wide v3, p0, Loz3;->o:J
+
+    cmp-long v1, v3, v1
+
+    if-eqz v1, :cond_1
+
+    const-string v1, "contactId"
+
+    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_1
     return-object v0
 .end method

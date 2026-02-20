@@ -1,280 +1,225 @@
 .class public final Lri0;
-.super Ljava/lang/Object;
+.super Lrbh;
 .source "SourceFile"
-
-# interfaces
-.implements Ld76;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final e:Ljava/io/File;
 
-.field public final synthetic b:Lspf;
+.field public final f:Ljava/lang/String;
+
+.field public final g:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lspf;I)V
+.method public constructor <init>(Landroid/content/Context;Ljava/io/File;Ljava/lang/String;)V
     .locals 0
 
-    iput p2, p0, Lri0;->a:I
+    invoke-direct {p0, p1, p3}, Lrbh;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
-    iput-object p1, p0, Lri0;->b:Lspf;
+    iput-object p2, p0, Lri0;->e:Ljava/io/File;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string p1, "^lib/([^/]+)/([^/]+\\.so)$"
+
+    iput-object p1, p0, Lri0;->f:Ljava/lang/String;
+
+    const/4 p1, 0x1
+
+    iput p1, p0, Lri0;->g:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 2
+.method public final b()Ljava/lang/String;
+    .locals 1
 
-    iget v0, p0, Lri0;->a:I
+    const-string v0, "BackupSoSource"
 
-    packed-switch v0, :pswitch_data_0
+    return-object v0
+.end method
 
-    new-instance v0, Lyve;
+.method public final e()[B
+    .locals 6
 
-    const/4 v1, 0x6
+    iget-object v0, p0, Lrbh;->d:Landroid/content/Context;
 
-    invoke-direct {v0, p1, v1}, Lyve;-><init>(Lf76;I)V
+    iget-object v1, p0, Lri0;->e:Ljava/io/File;
 
-    iget-object p1, p0, Lri0;->b:Lspf;
+    invoke-virtual {v1}, Ljava/io/File;->getCanonicalFile()Ljava/io/File;
 
-    invoke-virtual {p1, v0, p2}, Lspf;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    move-result-object v1
 
-    sget-object p1, Lac4;->a:Lac4;
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
-    return-object p1
+    move-result-object v2
 
-    :pswitch_0
-    new-instance v0, Lyve;
+    const/4 v3, 0x2
 
-    const/4 v1, 0x5
+    :try_start_0
+    invoke-virtual {v2, v3}, Landroid/os/Parcel;->writeByte(B)V
 
-    invoke-direct {v0, p1, v1}, Lyve;-><init>(Lf76;I)V
+    invoke-virtual {v1}, Ljava/io/File;->getPath()Ljava/lang/String;
 
-    iget-object p1, p0, Lri0;->b:Lspf;
+    move-result-object v4
 
-    invoke-virtual {p1, v0, p2}, Lspf;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {v2, v4}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    sget-object p1, Lac4;->a:Lac4;
+    invoke-virtual {v1}, Ljava/io/File;->lastModified()J
 
-    return-object p1
+    move-result-wide v4
 
-    :pswitch_1
-    new-instance v0, Lg4a;
+    invoke-virtual {v2, v4, v5}, Landroid/os/Parcel;->writeLong(J)V
 
-    const/16 v1, 0xf
+    invoke-virtual {v0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
-    invoke-direct {v0, p1, v1}, Lg4a;-><init>(Lf76;I)V
+    move-result-object v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    iget-object p1, p0, Lri0;->b:Lspf;
+    const/4 v4, 0x0
 
-    invoke-virtual {p1, v0, p2}, Lspf;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    if-eqz v1, :cond_0
 
-    sget-object p1, Lac4;->a:Lac4;
+    :try_start_1
+    invoke-virtual {v0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
-    return-object p1
+    move-result-object v5
 
-    :pswitch_2
-    new-instance v0, Lg4a;
+    invoke-virtual {v1, v5, v4}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
 
-    const/4 v1, 0x6
+    move-result-object v1
 
-    invoke-direct {v0, p1, v1}, Lg4a;-><init>(Lf76;I)V
+    iget v1, v1, Landroid/content/pm/PackageInfo;->versionCode:I
+    :try_end_1
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_1 .. :try_end_1} :catch_0
+    .catch Ljava/lang/RuntimeException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    iget-object p1, p0, Lri0;->b:Lspf;
+    goto :goto_0
 
-    invoke-virtual {p1, v0, p2}, Lspf;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    :catch_0
+    :cond_0
+    move v1, v4
 
-    sget-object p1, Lac4;->a:Lac4;
+    :goto_0
+    :try_start_2
+    invoke-virtual {v2, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    return-object p1
+    iget v1, p0, Lri0;->g:I
 
-    :pswitch_3
-    new-instance v0, Lnq7;
+    const/4 v5, 0x1
 
-    const/16 v1, 0x1a
+    and-int/2addr v1, v5
 
-    invoke-direct {v0, p1, v1}, Lnq7;-><init>(Lf76;I)V
+    if-nez v1, :cond_1
 
-    iget-object p1, p0, Lri0;->b:Lspf;
+    invoke-virtual {v2, v4}, Landroid/os/Parcel;->writeByte(B)V
 
-    invoke-virtual {p1, v0, p2}, Lspf;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {v2}, Landroid/os/Parcel;->marshall()[B
 
-    sget-object p1, Lac4;->a:Lac4;
+    move-result-object v0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    return-object p1
+    invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    :pswitch_4
-    new-instance v0, Lnq7;
+    return-object v0
 
-    const/16 v1, 0x19
+    :catchall_0
+    move-exception v0
 
-    invoke-direct {v0, p1, v1}, Lnq7;-><init>(Lf76;I)V
+    goto :goto_1
 
-    iget-object p1, p0, Lri0;->b:Lspf;
+    :cond_1
+    :try_start_3
+    invoke-virtual {v0}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
-    invoke-virtual {p1, v0, p2}, Lspf;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    move-result-object v0
 
-    sget-object p1, Lac4;->a:Lac4;
+    iget-object v0, v0, Landroid/content/pm/ApplicationInfo;->nativeLibraryDir:Ljava/lang/String;
 
-    return-object p1
+    if-nez v0, :cond_2
 
-    :pswitch_5
-    new-instance v0, Lnq7;
+    invoke-virtual {v2, v5}, Landroid/os/Parcel;->writeByte(B)V
 
-    const/16 v1, 0x10
+    invoke-virtual {v2}, Landroid/os/Parcel;->marshall()[B
 
-    invoke-direct {v0, p1, v1}, Lnq7;-><init>(Lf76;I)V
+    move-result-object v0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    iget-object p1, p0, Lri0;->b:Lspf;
+    invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    invoke-virtual {p1, v0, p2}, Lspf;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    return-object v0
 
-    sget-object p1, Lac4;->a:Lac4;
+    :cond_2
+    :try_start_4
+    new-instance v1, Ljava/io/File;
 
-    return-object p1
+    invoke-direct {v1, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    :pswitch_6
-    new-instance v0, Lnq7;
+    invoke-virtual {v1}, Ljava/io/File;->getCanonicalFile()Ljava/io/File;
 
-    const/16 v1, 0xd
+    move-result-object v0
 
-    invoke-direct {v0, p1, v1}, Lnq7;-><init>(Lf76;I)V
+    invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
-    iget-object p1, p0, Lri0;->b:Lspf;
+    move-result v1
 
-    invoke-virtual {p1, v0, p2}, Lspf;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    if-nez v1, :cond_3
 
-    sget-object p1, Lac4;->a:Lac4;
+    invoke-virtual {v2, v5}, Landroid/os/Parcel;->writeByte(B)V
 
-    return-object p1
+    invoke-virtual {v2}, Landroid/os/Parcel;->marshall()[B
 
-    :pswitch_7
-    new-instance v0, Lnq7;
+    move-result-object v0
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    const/16 v1, 0xc
+    invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    invoke-direct {v0, p1, v1}, Lnq7;-><init>(Lf76;I)V
+    return-object v0
 
-    iget-object p1, p0, Lri0;->b:Lspf;
+    :cond_3
+    :try_start_5
+    invoke-virtual {v2, v3}, Landroid/os/Parcel;->writeByte(B)V
 
-    invoke-virtual {p1, v0, p2}, Lspf;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/io/File;->getPath()Ljava/lang/String;
 
-    sget-object p1, Lac4;->a:Lac4;
+    move-result-object v1
 
-    return-object p1
+    invoke-virtual {v2, v1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    :pswitch_8
-    new-instance v0, Ld83;
+    invoke-virtual {v0}, Ljava/io/File;->lastModified()J
 
-    const/16 v1, 0x9
+    move-result-wide v0
 
-    invoke-direct {v0, p1, v1}, Ld83;-><init>(Lf76;I)V
+    invoke-virtual {v2, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    iget-object p1, p0, Lri0;->b:Lspf;
+    invoke-virtual {v2}, Landroid/os/Parcel;->marshall()[B
 
-    invoke-virtual {p1, v0, p2}, Lspf;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    move-result-object v0
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    sget-object p1, Lac4;->a:Lac4;
+    invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    return-object p1
+    return-object v0
 
-    :pswitch_9
-    new-instance v0, Ld83;
+    :goto_1
+    invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    const/4 v1, 0x1
+    throw v0
+.end method
 
-    invoke-direct {v0, p1, v1}, Ld83;-><init>(Lf76;I)V
+.method public final g(Z)Lcom/facebook/soloader/e;
+    .locals 1
 
-    iget-object p1, p0, Lri0;->b:Lspf;
+    new-instance v0, Lcom/facebook/soloader/a;
 
-    invoke-virtual {p1, v0, p2}, Lspf;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-direct {v0, p0, p0, p1}, Lcom/facebook/soloader/a;-><init>(Lri0;Lri0;Z)V
 
-    sget-object p1, Lac4;->a:Lac4;
-
-    return-object p1
-
-    :pswitch_a
-    new-instance v0, Ld83;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p1, v1}, Ld83;-><init>(Lf76;I)V
-
-    iget-object p1, p0, Lri0;->b:Lspf;
-
-    invoke-virtual {p1, v0, p2}, Lspf;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    sget-object p1, Lac4;->a:Lac4;
-
-    return-object p1
-
-    :pswitch_b
-    new-instance v0, Lnq1;
-
-    const/4 v1, 0x4
-
-    invoke-direct {v0, p1, v1}, Lnq1;-><init>(Lf76;I)V
-
-    iget-object p1, p0, Lri0;->b:Lspf;
-
-    invoke-virtual {p1, v0, p2}, Lspf;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    sget-object p1, Lac4;->a:Lac4;
-
-    return-object p1
-
-    :pswitch_c
-    new-instance v0, Lpx;
-
-    const/16 v1, 0x12
-
-    invoke-direct {v0, p1, v1}, Lpx;-><init>(Lf76;I)V
-
-    iget-object p1, p0, Lri0;->b:Lspf;
-
-    invoke-virtual {p1, v0, p2}, Lspf;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    sget-object p1, Lac4;->a:Lac4;
-
-    return-object p1
-
-    :pswitch_d
-    new-instance v0, Lpx;
-
-    const/4 v1, 0x4
-
-    invoke-direct {v0, p1, v1}, Lpx;-><init>(Lf76;I)V
-
-    iget-object p1, p0, Lri0;->b:Lspf;
-
-    invoke-virtual {p1, v0, p2}, Lspf;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    sget-object p1, Lac4;->a:Lac4;
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_d
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

@@ -1,114 +1,394 @@
 .class public final Lzl8;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Ljava/io/Serializable;
+
+
+# static fields
+.field public static final Y:Lzl8;
 
 
 # instance fields
-.field public final synthetic X:Lbtd;
+.field public final X:F
 
-.field public final synthetic Y:Lxk9;
+.field public final a:D
 
-.field public final synthetic o:Lam8;
+.field public final b:D
+
+.field public final c:D
+
+.field public final d:F
+
+.field public final o:F
 
 
 # direct methods
-.method public constructor <init>(Lam8;Lbtd;Lxk9;Lkotlin/coroutines/Continuation;)V
+.method static constructor <clinit>()V
+    .locals 10
+
+    new-instance v0, Lzl8;
+
+    const/4 v8, 0x0
+
+    const/4 v9, 0x0
+
+    const-wide/high16 v1, 0x36a0000000000000L    # 1.401298464324817E-45
+
+    const-wide/high16 v3, 0x36a0000000000000L    # 1.401298464324817E-45
+
+    const-wide/16 v5, 0x0
+
+    const/4 v7, 0x0
+
+    invoke-direct/range {v0 .. v9}, Lzl8;-><init>(DDDFFF)V
+
+    sput-object v0, Lzl8;->Y:Lzl8;
+
+    return-void
+.end method
+
+.method public constructor <init>(DD)V
     .locals 0
 
-    iput-object p1, p0, Lzl8;->o:Lam8;
+    .line 8
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lzl8;->X:Lbtd;
+    .line 9
+    iput-wide p1, p0, Lzl8;->a:D
 
-    iput-object p3, p0, Lzl8;->Y:Lxk9;
+    .line 10
+    iput-wide p3, p0, Lzl8;->b:D
 
-    const/4 p1, 0x2
+    const-wide/16 p1, 0x0
 
-    invoke-direct {p0, p1, p4}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    .line 11
+    iput-wide p1, p0, Lzl8;->c:D
+
+    const/4 p1, 0x0
+
+    .line 12
+    iput p1, p0, Lzl8;->d:F
+
+    .line 13
+    iput p1, p0, Lzl8;->o:F
+
+    .line 14
+    iput p1, p0, Lzl8;->X:F
+
+    return-void
+.end method
+
+.method public constructor <init>(DDDFFF)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    iput-wide p1, p0, Lzl8;->a:D
+
+    .line 3
+    iput-wide p3, p0, Lzl8;->b:D
+
+    .line 4
+    iput-wide p5, p0, Lzl8;->c:D
+
+    .line 5
+    iput p7, p0, Lzl8;->d:F
+
+    .line 6
+    iput p8, p0, Lzl8;->o:F
+
+    .line 7
+    iput p9, p0, Lzl8;->X:F
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 6
 
-    check-cast p1, Lzb4;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lzl8;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    return v0
 
-    move-result-object p1
+    :cond_0
+    const/4 v1, 0x0
 
+    if-eqz p1, :cond_7
+
+    const-class v2, Lzl8;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v3
+
+    if-eq v2, v3, :cond_1
+
+    goto :goto_0
+
+    :cond_1
     check-cast p1, Lzl8;
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    iget-wide v2, p1, Lzl8;->a:D
 
-    invoke-virtual {p1, p2}, Lzl8;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-wide v4, p0, Lzl8;->a:D
 
-    return-object p2
+    invoke-static {v2, v3, v4, v5}, Ljava/lang/Double;->compare(DD)I
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    return v1
+
+    :cond_2
+    iget-wide v2, p1, Lzl8;->b:D
+
+    iget-wide v4, p0, Lzl8;->b:D
+
+    invoke-static {v2, v3, v4, v5}, Ljava/lang/Double;->compare(DD)I
+
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    return v1
+
+    :cond_3
+    iget-wide v2, p1, Lzl8;->c:D
+
+    iget-wide v4, p0, Lzl8;->c:D
+
+    invoke-static {v2, v3, v4, v5}, Ljava/lang/Double;->compare(DD)I
+
+    move-result v2
+
+    if-eqz v2, :cond_4
+
+    return v1
+
+    :cond_4
+    iget v2, p1, Lzl8;->d:F
+
+    iget v3, p0, Lzl8;->d:F
+
+    invoke-static {v2, v3}, Ljava/lang/Float;->compare(FF)I
+
+    move-result v2
+
+    if-eqz v2, :cond_5
+
+    return v1
+
+    :cond_5
+    iget v2, p1, Lzl8;->o:F
+
+    iget v3, p0, Lzl8;->o:F
+
+    invoke-static {v2, v3}, Ljava/lang/Float;->compare(FF)I
+
+    move-result v2
+
+    if-eqz v2, :cond_6
+
+    return v1
+
+    :cond_6
+    iget p1, p1, Lzl8;->X:F
+
+    iget v2, p0, Lzl8;->X:F
+
+    invoke-static {p1, v2}, Ljava/lang/Float;->compare(FF)I
+
+    move-result p1
+
+    if-nez p1, :cond_7
+
+    return v0
+
+    :cond_7
+    :goto_0
+    return v1
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
+.method public final hashCode()I
+    .locals 7
 
-    new-instance p1, Lzl8;
+    iget-wide v0, p0, Lzl8;->a:D
 
-    iget-object v0, p0, Lzl8;->X:Lbtd;
+    invoke-static {v0, v1}, Ljava/lang/Double;->doubleToLongBits(D)J
 
-    iget-object v1, p0, Lzl8;->Y:Lxk9;
+    move-result-wide v0
 
-    iget-object v2, p0, Lzl8;->o:Lam8;
+    const/16 v2, 0x20
 
-    invoke-direct {p1, v2, v0, v1, p2}, Lzl8;-><init>(Lam8;Lbtd;Lxk9;Lkotlin/coroutines/Continuation;)V
+    ushr-long v3, v0, v2
 
-    return-object p1
+    xor-long/2addr v0, v3
+
+    long-to-int v0, v0
+
+    iget-wide v3, p0, Lzl8;->b:D
+
+    invoke-static {v3, v4}, Ljava/lang/Double;->doubleToLongBits(D)J
+
+    move-result-wide v3
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    ushr-long v5, v3, v2
+
+    xor-long/2addr v3, v5
+
+    long-to-int v1, v3
+
+    add-int/2addr v0, v1
+
+    iget-wide v3, p0, Lzl8;->c:D
+
+    invoke-static {v3, v4}, Ljava/lang/Double;->doubleToLongBits(D)J
+
+    move-result-wide v3
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    ushr-long v1, v3, v2
+
+    xor-long/2addr v1, v3
+
+    long-to-int v1, v1
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Lzl8;->d:F
+
+    const/4 v2, 0x0
+
+    cmpl-float v3, v1, v2
+
+    const/4 v4, 0x0
+
+    if-eqz v3, :cond_0
+
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v1
+
+    goto :goto_0
+
+    :cond_0
+    move v1, v4
+
+    :goto_0
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Lzl8;->o:F
+
+    cmpl-float v3, v1, v2
+
+    if-eqz v3, :cond_1
+
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v1
+
+    goto :goto_1
+
+    :cond_1
+    move v1, v4
+
+    :goto_1
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Lzl8;->X:F
+
+    cmpl-float v2, v1, v2
+
+    if-eqz v2, :cond_2
+
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v4
+
+    :cond_2
+    add-int/2addr v0, v4
+
+    return v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final toString()Ljava/lang/String;
     .locals 3
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object p1, p0, Lzl8;->o:Lam8;
+    const-string v1, "LocationData{latitude="
 
-    iget-object v0, p1, Lam8;->l:Lo58;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+    iget-wide v1, p0, Lzl8;->a:D
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    const-string v1, ", longitude="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lzl8;->b:D
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    const-string v1, ", altitude="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lzl8;->c:D
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    const-string v1, ", accuracy="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lzl8;->d:F
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v1, ", bearing="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lzl8;->o:F
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v1, ", speed="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lzl8;->X:F
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v1, "}"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Lhm9;
-
-    iget-object v1, p0, Lzl8;->X:Lbtd;
-
-    iget-object v1, v1, Lbtd;->a:Ljava/lang/Object;
-
-    check-cast v1, Ljm9;
-
-    iget-object v2, p0, Lzl8;->Y:Lxk9;
-
-    iget-object v2, v2, Lxk9;->Z:Le00;
-
-    iget-object p1, p1, Lam8;->s:Lo58;
-
-    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lrfe;
-
-    invoke-static {v2, p1}, Los8;->e(Le00;Lrfe;)Lk20;
-
-    move-result-object p1
-
-    invoke-virtual {v0, v1, p1}, Lhm9;->r(Ljm9;Lk20;)V
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
+    return-object v0
 .end method

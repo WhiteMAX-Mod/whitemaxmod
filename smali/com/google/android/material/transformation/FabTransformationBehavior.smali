@@ -84,16 +84,16 @@
     throw p1
 .end method
 
-.method public final c(Lab4;)V
+.method public final c(Loc4;)V
     .locals 1
 
-    iget v0, p1, Lab4;->h:I
+    iget v0, p1, Loc4;->h:I
 
     if-nez v0, :cond_0
 
     const/16 v0, 0x50
 
-    iput v0, p1, Lab4;->h:I
+    iput v0, p1, Loc4;->h:I
 
     :cond_0
     return-void

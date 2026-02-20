@@ -1,120 +1,70 @@
-.class public abstract Li3j;
+.class public final Li3j;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Loza;
+
+
+# static fields
+.field public static final a:Li3j;
+
 
 # direct methods
-.method public static a(J)B
-    .locals 4
+.method static constructor <clinit>()V
+    .locals 3
 
-    const/16 v0, 0x8
+    new-instance v0, Li3j;
 
-    shr-long v0, p0, v0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const-wide/16 v2, 0x0
+    sput-object v0, Li3j;->a:Li3j;
 
-    cmp-long v0, v0, v2
+    new-instance v0, Lczi;
 
-    if-nez v0, :cond_0
+    const/4 v1, 0x1
 
-    const/4 v0, 0x1
+    invoke-direct {v0, v1}, Lczi;-><init>(I)V
 
-    goto :goto_0
+    const-class v1, Lozi;
 
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    const-string v1, "out of range: %s"
-
-    invoke-static {p0, p1, v1, v0}, Lekj;->b(JLjava/lang/String;Z)V
-
-    long-to-int p0, p0
-
-    int-to-byte p0, p0
-
-    return p0
-.end method
-
-.method public static final b(Landroid/app/Activity;)V
-    .locals 2
-
-    if-nez p0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
+    invoke-static {v1, v0}, Leni;->f(Ljava/lang/Class;Lczi;)Ljava/util/HashMap;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/view/Window;->getCurrentFocus()Landroid/view/View;
+    const/4 v2, 0x2
+
+    invoke-static {v0, v2}, Leni;->h(Ljava/util/HashMap;I)Lczi;
 
     move-result-object v0
 
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Landroid/view/View;->clearFocus()V
-
-    :try_start_0
-    const-string v1, "input_method"
-
-    invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Landroid/view/inputmethod/InputMethodManager;
-
-    invoke-virtual {v0}, Landroid/view/View;->getWindowToken()Landroid/os/IBinder;
+    invoke-static {v1, v0}, Leni;->f(Ljava/lang/Class;Lczi;)Ljava/util/HashMap;
 
     move-result-object v0
 
-    const/4 v1, 0x0
+    const/4 v2, 0x3
 
-    invoke-virtual {p0, v0, v1}, Landroid/view/inputmethod/InputMethodManager;->hideSoftInputFromWindow(Landroid/os/IBinder;I)Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-static {v0, v2}, Leni;->h(Ljava/util/HashMap;I)Lczi;
 
-    :catchall_0
-    :cond_1
-    :goto_0
+    move-result-object v0
+
+    invoke-static {v1, v0}, Leni;->f(Ljava/lang/Class;Lczi;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, Leni;->m(Ljava/util/HashMap;)V
+
     return-void
 .end method
 
-.method public static final c(Landroid/view/View;)V
-    .locals 2
 
-    if-nez p0, :cond_0
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    goto :goto_0
+    invoke-static {p1}, Lkb0;->d(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    :cond_0
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    move-result-object p1
 
-    move-result-object v0
-
-    invoke-virtual {p0}, Landroid/view/View;->clearFocus()V
-
-    :try_start_0
-    const-string v1, "input_method"
-
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/view/inputmethod/InputMethodManager;
-
-    invoke-virtual {p0}, Landroid/view/View;->getWindowToken()Landroid/os/IBinder;
-
-    move-result-object p0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, p0, v1}, Landroid/view/inputmethod/InputMethodManager;->hideSoftInputFromWindow(Landroid/os/IBinder;I)Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :catchall_0
-    :goto_0
-    return-void
+    throw p1
 .end method

@@ -1,88 +1,86 @@
 .class public final Lsj8;
-.super Lg4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lwzd;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lsj8;",
-            ">;"
-        }
-    .end annotation
-.end field
+.implements Lbsg;
 
 
 # instance fields
-.field public final a:Lcom/google/android/gms/common/api/Status;
+.field public final a:Ljava/util/concurrent/Executor;
 
-.field public final b:Ltj8;
+.field public final b:Lsc9;
+
+.field public final c:Landroid/content/ContentResolver;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Leri;
-
-    const/4 v1, 0x7
-
-    invoke-direct {v0, v1}, Leri;-><init>(I)V
-
-    sput-object v0, Lsj8;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lcom/google/android/gms/common/api/Status;Ltj8;)V
+.method public constructor <init>(Ljava/util/concurrent/Executor;Lsc9;Landroid/content/ContentResolver;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lsj8;->a:Lcom/google/android/gms/common/api/Status;
+    iput-object p1, p0, Lsj8;->a:Ljava/util/concurrent/Executor;
 
-    iput-object p2, p0, Lsj8;->b:Ltj8;
+    iput-object p2, p0, Lsj8;->b:Lsc9;
+
+    iput-object p3, p0, Lsj8;->c:Landroid/content/ContentResolver;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lcom/google/android/gms/common/api/Status;
-    .locals 1
+.method public final a(Lkl0;Lfoc;)V
+    .locals 7
 
-    iget-object v0, p0, Lsj8;->a:Lcom/google/android/gms/common/api/Status;
+    move-object v0, p2
 
-    return-object v0
-.end method
+    check-cast v0, Lom0;
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 3
+    iget-object v4, v0, Lom0;->c:Lioc;
 
-    const/16 v0, 0x4f45
+    iget-object v6, v0, Lom0;->a:Lwj7;
 
-    invoke-static {p1, v0}, Lsnj;->k(Landroid/os/Parcel;I)I
+    const-string v1, "local"
 
-    move-result v0
+    const-string v2, "exif"
 
-    const/4 v1, 0x1
+    invoke-virtual {v0, v1, v2}, Lom0;->h(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v2, p0, Lsj8;->a:Lcom/google/android/gms/common/api/Status;
+    new-instance v1, Lrj8;
 
-    invoke-static {p1, v1, v2, p2}, Lsnj;->f(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
+    move-object v2, p0
 
-    const/4 v1, 0x2
+    move-object v3, p1
 
-    iget-object v2, p0, Lsj8;->b:Ltj8;
+    move-object v5, p2
 
-    invoke-static {p1, v1, v2, p2}, Lsnj;->f(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
+    invoke-direct/range {v1 .. v6}, Lrj8;-><init>(Lsj8;Lkl0;Lioc;Lfoc;Lwj7;)V
 
-    invoke-static {p1, v0}, Lsnj;->l(Landroid/os/Parcel;I)V
+    new-instance p1, Lvm4;
+
+    const/4 p2, 0x2
+
+    invoke-direct {p1, p2, v1}, Lvm4;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v0, p1}, Lom0;->a(Lpm0;)V
+
+    iget-object p1, v2, Lsj8;->a:Ljava/util/concurrent/Executor;
+
+    invoke-interface {p1, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
     return-void
+.end method
+
+.method public final b(Lr4e;)Z
+    .locals 1
+
+    const/16 v0, 0x200
+
+    invoke-static {v0, v0, p1}, Lq8j;->c(IILr4e;)Z
+
+    move-result p1
+
+    return p1
 .end method

@@ -1,100 +1,89 @@
-.class public final synthetic Lgr;
+.class public abstract Lgr;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lnq6;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
-
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;I)V
-    .locals 0
-
-    iput p2, p0, Lgr;->a:I
-
-    iput-object p1, p0, Lgr;->b:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+.method public static a(Ljava/lang/CharSequence;Landroid/text/Layout$Alignment;IILandroid/widget/TextView;Landroid/text/TextPaint;Ljr;)Landroid/text/StaticLayout;
     .locals 2
 
-    iget v0, p0, Lgr;->a:I
+    const/4 v0, 0x0
 
-    iget-object v1, p0, Lgr;->b:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
+    invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
 
-    packed-switch v0, :pswitch_data_0
+    move-result v1
 
-    check-cast p1, Ljava/lang/Integer;
+    invoke-static {p0, v0, v1, p5, p2}, Landroid/text/StaticLayout$Builder;->obtain(Ljava/lang/CharSequence;IILandroid/text/TextPaint;I)Landroid/text/StaticLayout$Builder;
 
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+    move-result-object p0
 
-    move-result p1
+    invoke-virtual {p0, p1}, Landroid/text/StaticLayout$Builder;->setAlignment(Landroid/text/Layout$Alignment;)Landroid/text/StaticLayout$Builder;
 
-    iget-object v0, v1, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->Y:Lrdi;
+    move-result-object p1
 
-    invoke-virtual {v0}, Lrdi;->j()I
+    invoke-virtual {p4}, Landroid/widget/TextView;->getLineSpacingExtra()F
 
-    move-result v0
+    move-result p2
 
-    if-gtz v0, :cond_0
+    invoke-virtual {p4}, Landroid/widget/TextView;->getLineSpacingMultiplier()F
 
-    const/4 p1, 0x0
+    move-result p5
+
+    invoke-virtual {p1, p2, p5}, Landroid/text/StaticLayout$Builder;->setLineSpacing(FF)Landroid/text/StaticLayout$Builder;
+
+    move-result-object p1
+
+    invoke-virtual {p4}, Landroid/widget/TextView;->getIncludeFontPadding()Z
+
+    move-result p2
+
+    invoke-virtual {p1, p2}, Landroid/text/StaticLayout$Builder;->setIncludePad(Z)Landroid/text/StaticLayout$Builder;
+
+    move-result-object p1
+
+    invoke-virtual {p4}, Landroid/widget/TextView;->getBreakStrategy()I
+
+    move-result p2
+
+    invoke-virtual {p1, p2}, Landroid/text/StaticLayout$Builder;->setBreakStrategy(I)Landroid/text/StaticLayout$Builder;
+
+    move-result-object p1
+
+    invoke-virtual {p4}, Landroid/widget/TextView;->getHyphenationFrequency()I
+
+    move-result p2
+
+    invoke-virtual {p1, p2}, Landroid/text/StaticLayout$Builder;->setHyphenationFrequency(I)Landroid/text/StaticLayout$Builder;
+
+    move-result-object p1
+
+    const/4 p2, -0x1
+
+    if-ne p3, p2, :cond_0
+
+    const p3, 0x7fffffff
+
+    :cond_0
+    invoke-virtual {p1, p3}, Landroid/text/StaticLayout$Builder;->setMaxLines(I)Landroid/text/StaticLayout$Builder;
+
+    :try_start_0
+    invoke-virtual {p6, p0, p4}, Ljr;->a(Landroid/text/StaticLayout$Builder;Landroid/widget/TextView;)V
+    :try_end_0
+    .catch Ljava/lang/ClassCastException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    :cond_0
-    iget-object v0, v1, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->Y:Lrdi;
+    :catch_0
+    const-string p1, "ACTVAutoSizeHelper"
 
-    invoke-virtual {v0, p1}, Lnd8;->D(I)Ljava/lang/Object;
+    const-string p2, "Failed to obtain TextDirectionHeuristic, auto size may be incorrect"
 
-    move-result-object p1
-
-    check-cast p1, Lud8;
-
-    check-cast p1, Lfjg;
-
-    iget-boolean p1, p1, Lfjg;->a:Z
+    invoke-static {p1, p2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-virtual {p0}, Landroid/text/StaticLayout$Builder;->build()Landroid/text/StaticLayout;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
-
-    :pswitch_0
-    check-cast p1, Landroid/view/View;
-
-    sget-object p1, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->Z:[Lz28;
-
-    invoke-virtual {v1}, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->z0()Lbs;
-
-    move-result-object p1
-
-    iget-object p1, p1, Lbs;->F0:Lcm5;
-
-    sget-object v0, Lag3;->b:Lag3;
-
-    invoke-static {p1, v0}, Lnth;->q(Lcm5;Ljava/lang/Object;)V
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p0
 .end method

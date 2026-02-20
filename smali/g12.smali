@@ -1,148 +1,80 @@
-.class public final Lg12;
+.class public final synthetic Lg12;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lm12;
+.implements Lux1;
 
 
 # instance fields
-.field public final a:Ll02;
+.field public final synthetic a:I
 
-.field public b:Z
+.field public final synthetic b:Li12;
 
 
 # direct methods
-.method public constructor <init>(Ll02;)V
-    .locals 1
+.method public synthetic constructor <init>(Li12;I)V
+    .locals 0
+
+    iput p2, p0, Lg12;->a:I
+
+    iput-object p1, p0, Lg12;->b:Li12;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lg12;->b:Z
-
-    iput-object p1, p0, Lg12;->a:Ll02;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/hardware/camera2/TotalCaptureResult;)Lie8;
+.method public final C(Ltx1;)Ljava/lang/String;
     .locals 4
 
-    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+    iget v0, p0, Lg12;->a:I
 
-    invoke-static {v0}, Lnge;->g(Ljava/lang/Object;)Llj7;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object v0
+    iget-object v0, p0, Lg12;->b:Li12;
 
-    if-nez p1, :cond_0
+    iget-object v1, v0, Li12;->d:Ljava/lang/Object;
 
-    goto :goto_0
+    check-cast v1, Lywe;
 
-    :cond_0
-    sget-object v1, Landroid/hardware/camera2/CaptureResult;->CONTROL_AF_MODE:Landroid/hardware/camera2/CaptureResult$Key;
+    new-instance v2, Lh12;
 
-    invoke-virtual {p1, v1}, Landroid/hardware/camera2/CaptureResult;->get(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
+    const/4 v3, 0x0
 
-    move-result-object v1
+    invoke-direct {v2, v0, p1, v3}, Lh12;-><init>(Li12;Ltx1;I)V
 
-    check-cast v1, Ljava/lang/Integer;
+    invoke-virtual {v1, v2}, Lywe;->execute(Ljava/lang/Runnable;)V
 
-    if-nez v1, :cond_1
+    const-string p1, "clearCaptureRequestOptions"
 
-    goto :goto_0
+    return-object p1
 
-    :cond_1
-    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
+    :pswitch_0
+    iget-object v0, p0, Lg12;->b:Li12;
 
-    move-result v1
+    iget-object v1, v0, Li12;->d:Ljava/lang/Object;
 
-    const/4 v2, 0x1
+    check-cast v1, Lywe;
 
-    if-eq v1, v2, :cond_2
+    new-instance v2, Lh12;
 
-    const/4 v3, 0x2
+    const/4 v3, 0x1
 
-    if-eq v1, v3, :cond_2
+    invoke-direct {v2, v0, p1, v3}, Lh12;-><init>(Li12;Ltx1;I)V
 
-    goto :goto_0
+    invoke-virtual {v1, v2}, Lywe;->execute(Ljava/lang/Runnable;)V
 
-    :cond_2
-    const-string v1, "TriggerAf? AF mode auto"
+    const-string p1, "addCaptureRequestOptions"
 
-    const-string v3, "Camera2CapturePipeline"
+    return-object p1
 
-    invoke-static {v3, v1}, Lm5j;->a(Ljava/lang/String;Ljava/lang/String;)V
+    nop
 
-    sget-object v1, Landroid/hardware/camera2/CaptureResult;->CONTROL_AF_STATE:Landroid/hardware/camera2/CaptureResult$Key;
-
-    invoke-virtual {p1, v1}, Landroid/hardware/camera2/CaptureResult;->get(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Integer;
-
-    if-eqz p1, :cond_3
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    const-string p1, "Trigger AF"
-
-    invoke-static {v3, p1}, Lm5j;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    iput-boolean v2, p0, Lg12;->b:Z
-
-    iget-object p1, p0, Lg12;->a:Ll02;
-
-    iget-object p1, p1, Ll02;->h:Ljc6;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, v1}, Ljc6;->f(Z)V
-
-    :cond_3
-    :goto_0
-    return-object v0
-.end method
-
-.method public final b()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final c()V
-    .locals 3
-
-    iget-boolean v0, p0, Lg12;->b:Z
-
-    if-eqz v0, :cond_0
-
-    const-string v0, "Camera2CapturePipeline"
-
-    const-string v1, "cancel TriggerAF"
-
-    invoke-static {v0, v1}, Lm5j;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Lg12;->a:Ll02;
-
-    iget-object v0, v0, Ll02;->h:Ljc6;
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Ljc6;->a(ZZ)V
-
-    :cond_0
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

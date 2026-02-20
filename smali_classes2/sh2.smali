@@ -1,97 +1,132 @@
-.class public final enum Lsh2;
-.super Ljava/lang/Enum;
+.class public final synthetic Lsh2;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Luy3;
 
-# static fields
-.field public static final enum a:Lsh2;
 
-.field public static final enum b:Lsh2;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final enum c:Lsh2;
+.field public final synthetic b:Lci2;
 
-.field public static final enum d:Lsh2;
+.field public final synthetic c:J
 
-.field public static final synthetic o:[Lsh2;
+.field public final synthetic d:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public synthetic constructor <init>(Lci2;Ljava/lang/Object;JI)V
+    .locals 0
 
-    new-instance v0, Lsh2;
+    iput p5, p0, Lsh2;->a:I
 
-    const-string v1, "DIALOG"
+    iput-object p1, p0, Lsh2;->b:Lci2;
 
-    const/4 v2, 0x0
+    iput-object p2, p0, Lsh2;->d:Ljava/lang/Object;
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-wide p3, p0, Lsh2;->c:J
 
-    sput-object v0, Lsh2;->a:Lsh2;
-
-    new-instance v1, Lsh2;
-
-    const-string v2, "CHAT"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lsh2;->b:Lsh2;
-
-    new-instance v2, Lsh2;
-
-    const-string v3, "CHANNEL"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lsh2;->c:Lsh2;
-
-    new-instance v3, Lsh2;
-
-    const-string v4, "GROUP_CHAT"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lsh2;->d:Lsh2;
-
-    filled-new-array {v0, v1, v2, v3}, [Lsh2;
-
-    move-result-object v0
-
-    sput-object v0, Lsh2;->o:[Lsh2;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lsh2;
-    .locals 1
 
-    const-class v0, Lsh2;
+# virtual methods
+.method public final accept(Ljava/lang/Object;)V
+    .locals 6
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget v0, p0, Lsh2;->a:I
 
-    move-result-object p0
+    packed-switch v0, :pswitch_data_0
 
-    check-cast p0, Lsh2;
+    iget-object v0, p0, Lsh2;->d:Ljava/lang/Object;
 
-    return-object p0
-.end method
+    check-cast v0, Lpo9;
 
-.method public static values()[Lsh2;
-    .locals 1
+    check-cast p1, Lhi2;
 
-    sget-object v0, Lsh2;->o:[Lsh2;
+    iget-object v1, p0, Lsh2;->b:Lci2;
 
-    invoke-virtual {v0}, [Lsh2;->clone()Ljava/lang/Object;
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v0
+    if-nez v0, :cond_0
 
-    check-cast v0, [Lsh2;
+    const-wide/16 v0, 0x0
 
-    return-object v0
+    iput-wide v0, p1, Lhi2;->j0:J
+
+    goto :goto_0
+
+    :cond_0
+    iget-wide v2, p1, Lhi2;->j0:J
+
+    iget-object v1, v1, Lci2;->t:Lt45;
+
+    invoke-virtual {v1}, Lt45;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lno9;
+
+    iget-wide v4, p0, Lsh2;->c:J
+
+    invoke-virtual {v1, v4, v5, v2, v3}, Lno9;->h(JJ)Lpo9;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_1
+
+    iget-wide v2, v0, Lpo9;->c:J
+
+    iget-wide v4, v1, Lpo9;->c:J
+
+    cmp-long v1, v2, v4
+
+    if-lez v1, :cond_2
+
+    :cond_1
+    iget-wide v0, v0, Lpo9;->b:J
+
+    iput-wide v0, p1, Lhi2;->j0:J
+
+    :cond_2
+    :goto_0
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lsh2;->d:Ljava/lang/Object;
+
+    check-cast v0, Lybb;
+
+    check-cast p1, Lhi2;
+
+    iget-object v1, p0, Lsh2;->b:Lci2;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iput-object v0, p1, Lhi2;->e0:Lybb;
+
+    iget-wide v2, p0, Lsh2;->c:J
+
+    iput-wide v2, p1, Lhi2;->f0:J
+
+    iget-object v0, v1, Lci2;->o:Lplc;
+
+    iget-object v0, v0, Lplc;->a:Lhl8;
+
+    invoke-virtual {v0}, Lqme;->j()J
+
+    move-result-wide v0
+
+    iput-wide v0, p1, Lhi2;->g0:J
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

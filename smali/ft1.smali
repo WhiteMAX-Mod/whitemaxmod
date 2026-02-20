@@ -1,125 +1,116 @@
-.class public final Lft1;
-.super Lgbj;
+.class public final synthetic Lft1;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lis6;
 
 
 # instance fields
-.field public final a:J
+.field public final synthetic a:I
 
-.field public final b:Z
+.field public final synthetic b:Ljt1;
 
 
 # direct methods
-.method public constructor <init>(JZ)V
+.method public synthetic constructor <init>(Ljt1;I)V
     .locals 0
 
+    iput p2, p0, Lft1;->a:I
+
+    iput-object p1, p0, Lft1;->b:Ljt1;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Lft1;->a:J
-
-    iput-boolean p3, p0, Lft1;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c()Z
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 10
 
-    iget-boolean v0, p0, Lft1;->b:Z
+    iget v0, p0, Lft1;->a:I
 
-    return v0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+    new-instance v0, Lj3;
 
-    const/4 v0, 0x1
+    const/16 v1, 0x1b
 
-    if-ne p0, p1, :cond_0
+    iget-object v2, p0, Lft1;->b:Ljt1;
 
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lft1;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lft1;
-
-    iget-wide v3, p0, Lft1;->a:J
-
-    iget-wide v5, p1, Lft1;->a:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-boolean v1, p0, Lft1;->b:Z
-
-    iget-boolean p1, p1, Lft1;->b:Z
-
-    if-eq v1, p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Lft1;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean v1, p0, Lft1;->b:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, "Chat(chatId="
-
-    const-string v1, ", isVideo="
-
-    iget-wide v2, p0, Lft1;->a:J
-
-    iget-boolean v4, p0, Lft1;->b:Z
-
-    invoke-static {v2, v3, v0, v1, v4}, Lhc0;->k(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    invoke-direct {v0, v1, v2}, Lj3;-><init>(ILjava/lang/Object;)V
 
     return-object v0
+
+    :pswitch_0
+    new-instance v5, Lit1;
+
+    iget-object v0, p0, Lft1;->b:Ljt1;
+
+    invoke-direct {v5, v0}, Lit1;-><init>(Ljt1;)V
+
+    new-instance v3, Lzj1;
+
+    new-instance v6, Lft1;
+
+    const/4 v1, 0x2
+
+    invoke-direct {v6, v0, v1}, Lft1;-><init>(Ljt1;I)V
+
+    new-instance v7, Lft1;
+
+    const/4 v1, 0x3
+
+    invoke-direct {v7, v0, v1}, Lft1;-><init>(Ljt1;I)V
+
+    const/4 v8, 0x0
+
+    const/16 v9, 0x22
+
+    sget-object v4, Lv0i;->a:Lv0i;
+
+    invoke-direct/range {v3 .. v9}, Lzj1;-><init>(Lv0i;Lxj1;Lis6;Lft1;Lsb1;I)V
+
+    return-object v3
+
+    :pswitch_1
+    iget-object v0, p0, Lft1;->b:Ljt1;
+
+    iget-object v0, v0, Ljt1;->X0:Lct1;
+
+    return-object v0
+
+    :pswitch_2
+    iget-object v0, p0, Lft1;->b:Ljt1;
+
+    iget-object v0, v0, Ljt1;->U0:Lsph;
+
+    return-object v0
+
+    :pswitch_3
+    iget-object v0, p0, Lft1;->b:Ljt1;
+
+    iget-object v0, v0, Ljt1;->U0:Lsph;
+
+    return-object v0
+
+    :pswitch_4
+    iget-object v0, p0, Lft1;->b:Ljt1;
+
+    iget-object v0, v0, Ljt1;->U0:Lsph;
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

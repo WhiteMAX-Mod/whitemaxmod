@@ -3,46 +3,120 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lud8;
+.implements Lml9;
 
 
-# static fields
-.field public static final a:Lkh5;
+# instance fields
+.field public final a:[Landroid/graphics/Bitmap;
 
-.field public static final b:I
+.field public final b:Lkr0;
+
+.field public final c:Lqr8;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lw05;)V
+    .locals 6
 
-    new-instance v0, Lkh5;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/16 v0, 0x19
 
-    sput-object v0, Lkh5;->a:Lkh5;
+    new-array v1, v0, [Landroid/graphics/Bitmap;
 
-    sget v0, Lsdb;->b:I
+    const/4 v2, 0x0
 
-    sput v0, Lkh5;->b:I
+    :goto_0
+    if-ge v2, v0, :cond_0
+
+    const/4 v3, 0x0
+
+    aput-object v3, v1, v2
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    iput-object v1, p0, Lkh5;->a:[Landroid/graphics/Bitmap;
+
+    new-instance v1, Lkr0;
+
+    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result p1
+
+    if-eqz p1, :cond_3
+
+    const/4 v0, 0x1
+
+    if-eq p1, v0, :cond_2
+
+    const/4 v0, 0x2
+
+    if-ne p1, v0, :cond_1
+
+    const/16 v0, 0x32
+
+    goto :goto_1
+
+    :cond_1
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
+
+    :cond_2
+    const/16 v0, 0x28
+
+    :cond_3
+    :goto_1
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/Number;->doubleValue()D
+
+    move-result-wide v2
+
+    const/high16 p1, 0x100000
+
+    int-to-double v4, p1
+
+    mul-double/2addr v2, v4
+
+    invoke-static {v2, v3}, Lmhj;->e(D)I
+
+    move-result p1
+
+    const/4 v0, 0x0
+
+    invoke-direct {v1, p1, v0}, Lkr0;-><init>(II)V
+
+    iput-object v1, p0, Lkh5;->b:Lkr0;
+
+    new-instance p1, Lqr8;
+
+    const/16 v0, 0x64
+
+    invoke-direct {p1, v0}, Lqr8;-><init>(I)V
+
+    iput-object p1, p0, Lkh5;->c:Lqr8;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getItemId()J
-    .locals 2
-
-    const-wide/16 v0, 0x0
-
-    return-wide v0
-.end method
-
-.method public final m()I
+.method public final a(I)V
     .locals 1
 
-    sget v0, Lkh5;->b:I
+    iget-object p1, p0, Lkh5;->b:Lkr0;
 
-    return v0
+    const/4 v0, -0x1
+
+    invoke-virtual {p1, v0}, Lqr8;->i(I)V
+
+    return-void
 .end method

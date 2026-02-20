@@ -1,105 +1,121 @@
-.class public final La8f;
+.class public final synthetic La8f;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
+
 
 # instance fields
-.field public final a:[F
+.field public final synthetic a:Lf8f;
 
-.field public final b:[I
-
-.field public final c:I
-
-.field public d:I
-
-.field public e:I
-
-.field public f:I
-
-.field public final g:F
-
-.field public final h:F
-
-.field public final i:Z
-
-.field public j:Z
-
-.field public k:Landroid/graphics/PorterDuff$Mode;
-
-.field public l:I
-
-.field public m:I
-
-.field public n:J
-
-.field public o:J
-
-.field public p:Landroid/view/animation/Interpolator;
-
-.field public q:Landroid/animation/ValueAnimator;
+.field public final synthetic b:Lc8f;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 3
+.method public synthetic constructor <init>(Lf8f;Lc8f;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x5
+    iput-object p1, p0, La8f;->a:Lf8f;
 
-    new-array v1, v0, [F
+    iput-object p2, p0, La8f;->b:Lc8f;
 
-    iput-object v1, p0, La8f;->a:[F
+    return-void
+.end method
 
-    new-array v0, v0, [I
 
-    iput-object v0, p0, La8f;->b:[I
+# virtual methods
+.method public final onCheckedChanged(Landroid/widget/CompoundButton;Z)V
+    .locals 3
 
-    new-instance v0, Landroid/graphics/RectF;
+    invoke-virtual {p1}, Landroid/view/View;->isPressed()Z
 
-    invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
+    move-result p1
 
-    const/4 v0, 0x1
+    if-eqz p1, :cond_4
 
-    iput v0, p0, La8f;->c:I
+    iget-object p1, p0, La8f;->a:Lf8f;
 
-    const/4 v1, -0x1
+    invoke-virtual {p1}, Lf8f;->getModelItem()Lw7f;
 
-    iput v1, p0, La8f;->d:I
+    move-result-object v0
 
-    const v2, -0x777778
+    invoke-interface {v0}, Lw7f;->e()Lt7f;
 
-    iput v2, p0, La8f;->e:I
+    move-result-object v0
 
-    const/high16 v2, 0x3f800000    # 1.0f
+    instance-of v0, v0, Lr7f;
 
-    iput v2, p0, La8f;->g:F
+    if-eqz v0, :cond_3
 
-    iput v2, p0, La8f;->h:F
+    invoke-virtual {p1}, Lf8f;->getModelItem()Lw7f;
 
-    iput-boolean v0, p0, La8f;->i:Z
+    move-result-object v0
 
-    iput-boolean v0, p0, La8f;->j:Z
+    invoke-interface {v0}, Lw7f;->e()Lt7f;
 
-    sget-object v2, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
+    move-result-object v0
 
-    iput-object v2, p0, La8f;->k:Landroid/graphics/PorterDuff$Mode;
+    instance-of v1, v0, Lr7f;
 
-    iput v1, p0, La8f;->l:I
+    const/4 v2, 0x0
 
-    iput v0, p0, La8f;->m:I
+    if-eqz v1, :cond_0
 
-    const-wide/16 v0, 0x4b0
+    check-cast v0, Lr7f;
 
-    iput-wide v0, p0, La8f;->n:J
+    goto :goto_0
 
-    iput-wide v0, p0, La8f;->o:J
+    :cond_0
+    move-object v0, v2
 
-    new-instance v0, Lvu5;
+    :goto_0
+    if-eqz v0, :cond_1
 
-    invoke-direct {v0}, Lvu5;-><init>()V
+    iget-boolean v0, v0, Lr7f;->a:Z
 
-    iput-object v0, p0, La8f;->p:Landroid/view/animation/Interpolator;
+    if-ne v0, p2, :cond_1
 
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {p1}, Lf8f;->getModelItem()Lw7f;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lw7f;->e()Lt7f;
+
+    move-result-object v0
+
+    instance-of v1, v0, Lr7f;
+
+    if-eqz v1, :cond_2
+
+    move-object v2, v0
+
+    check-cast v2, Lr7f;
+
+    :cond_2
+    if-eqz v2, :cond_3
+
+    iput-boolean p2, v2, Lr7f;->a:Z
+
+    :cond_3
+    :goto_1
+    invoke-virtual {p1}, Lf8f;->getModelItem()Lw7f;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Lmg8;->getItemId()J
+
+    move-result-wide v0
+
+    iget-object p1, p0, La8f;->b:Lc8f;
+
+    invoke-interface {p1, v0, v1, p2}, Lc8f;->r(JZ)V
+
+    :cond_4
     return-void
 .end method

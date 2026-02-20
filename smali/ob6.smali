@@ -1,111 +1,87 @@
 .class public final Lob6;
-.super Lc1g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lxb6;
+.implements Ld96;
 
 
 # instance fields
-.field public final Z:Liqe;
+.field public final synthetic a:I
 
-.field public final t0:Lfqe;
-
-.field public final u0:Llb6;
-
-.field public v0:J
+.field public final synthetic b:Lyyd;
 
 
 # direct methods
-.method public constructor <init>(Liqe;Lfqe;Llb6;)V
+.method public synthetic constructor <init>(Lyyd;I)V
     .locals 0
 
-    invoke-direct {p0}, Lc1g;-><init>()V
+    iput p2, p0, Lob6;->a:I
 
-    iput-object p1, p0, Lob6;->Z:Liqe;
+    iput-object p1, p0, Lob6;->b:Lyyd;
 
-    iput-object p2, p0, Lob6;->t0:Lfqe;
-
-    iput-object p3, p0, Lob6;->u0:Llb6;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()V
-    .locals 1
+.method public final a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 2
 
-    iget-object v0, p0, Lob6;->u0:Llb6;
+    iget p2, p0, Lob6;->a:I
 
-    invoke-virtual {v0}, Llb6;->cancel()V
+    packed-switch p2, :pswitch_data_0
 
-    iget-object v0, p0, Lob6;->Z:Liqe;
+    iget-object p2, p0, Lob6;->b:Lyyd;
 
-    invoke-virtual {v0}, Liqe;->b()V
+    iget-object v0, p2, Lyyd;->a:Ljava/lang/Object;
 
-    return-void
-.end method
+    sget-object v1, Lcza;->a:Lkotlinx/coroutines/internal/Symbol;
 
-.method public final cancel()V
-    .locals 1
+    if-ne v0, v1, :cond_0
 
-    invoke-super {p0}, Lc1g;->cancel()V
+    iput-object p1, p2, Lyyd;->a:Ljava/lang/Object;
 
-    iget-object v0, p0, Lob6;->u0:Llb6;
+    sget-object p1, Lmah;->a:Lmah;
 
-    invoke-virtual {v0}, Llb6;->cancel()V
-
-    return-void
-.end method
-
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 5
-
-    sget-object v0, Lzh5;->a:Lzh5;
-
-    invoke-virtual {p0, v0}, Lc1g;->g(Lb1g;)V
-
-    iget-wide v0, p0, Lob6;->v0:J
-
-    const-wide/16 v2, 0x0
-
-    cmp-long v4, v0, v2
-
-    if-eqz v4, :cond_0
-
-    iput-wide v2, p0, Lob6;->v0:J
-
-    invoke-virtual {p0, v0, v1}, Lc1g;->e(J)V
+    return-object p1
 
     :cond_0
-    iget-object v0, p0, Lob6;->u0:Llb6;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-wide/16 v1, 0x1
+    const-string p2, "Flow has more than one element"
 
-    invoke-virtual {v0, v1, v2}, Llb6;->f(J)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    iget-object v0, p0, Lob6;->t0:Lfqe;
+    throw p1
 
-    invoke-virtual {v0, p1}, Lfqe;->r(Ljava/lang/Object;)V
+    :pswitch_0
+    iget-object p2, p0, Lob6;->b:Lyyd;
 
-    return-void
-.end method
+    iput-object p1, p2, Lyyd;->a:Ljava/lang/Object;
 
-.method public final r(Ljava/lang/Object;)V
-    .locals 4
+    new-instance p1, Lkotlinx/coroutines/flow/internal/AbortFlowException;
 
-    iget-wide v0, p0, Lob6;->v0:J
+    invoke-direct {p1, p0}, Lkotlinx/coroutines/flow/internal/AbortFlowException;-><init>(Ljava/lang/Object;)V
 
-    const-wide/16 v2, 0x1
+    throw p1
 
-    add-long/2addr v0, v2
+    :pswitch_1
+    iget-object p2, p0, Lob6;->b:Lyyd;
 
-    iput-wide v0, p0, Lob6;->v0:J
+    iput-object p1, p2, Lyyd;->a:Ljava/lang/Object;
 
-    iget-object v0, p0, Lob6;->Z:Liqe;
+    new-instance p1, Lkotlinx/coroutines/flow/internal/AbortFlowException;
 
-    invoke-virtual {v0, p1}, Liqe;->r(Ljava/lang/Object;)V
+    invoke-direct {p1, p0}, Lkotlinx/coroutines/flow/internal/AbortFlowException;-><init>(Ljava/lang/Object;)V
 
-    return-void
+    throw p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,133 +1,80 @@
-.class public final Lp5i;
-.super Licg;
+.class public final synthetic Lp5i;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lis6;
 
 
 # instance fields
-.field public final c:Ljava/lang/String;
+.field public final synthetic a:I
 
-.field public final d:Ljava/lang/String;
+.field public final synthetic b:Ls5i;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
+.method public synthetic constructor <init>(Ls5i;I)V
     .locals 0
 
+    iput p2, p0, Lp5i;->a:I
+
+    iput-object p1, p0, Lp5i;->b:Ls5i;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lp5i;->c:Ljava/lang/String;
-
-    iput-object p2, p0, Lp5i;->d:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final invoke()Ljava/lang/Object;
+    .locals 2
 
-    const/4 v0, 0x1
+    iget v0, p0, Lp5i;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    sget v0, Lice;->K0:I
 
-    :cond_0
-    instance-of v1, p1, Lp5i;
+    iget-object v1, p0, Lp5i;->b:Ls5i;
 
-    const/4 v2, 0x0
+    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    if-nez v1, :cond_1
+    move-result-object v1
 
-    return v2
+    invoke-static {v1, v0}, Lh94;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
-    :cond_1
-    check-cast p1, Lp5i;
+    move-result-object v0
 
-    iget-object v1, p0, Lp5i;->c:Ljava/lang/String;
-
-    iget-object v3, p1, Lp5i;->c:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lp5i;->d:Ljava/lang/String;
-
-    iget-object p1, p1, Lp5i;->d:Ljava/lang/String;
-
-    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    const/4 v0, 0x0
-
-    iget-object v1, p0, Lp5i;->c:Ljava/lang/String;
-
-    if-nez v1, :cond_0
-
-    move v1, v0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    :goto_0
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v2, p0, Lp5i;->d:Ljava/lang/String;
-
-    if-nez v2, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    :goto_1
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, ", queryId="
-
-    const-string v1, ")"
-
-    const-string v2, "Response(url="
-
-    iget-object v3, p0, Lp5i;->c:Ljava/lang/String;
-
-    iget-object v4, p0, Lp5i;->d:Ljava/lang/String;
-
-    invoke-static {v2, v3, v0, v4, v1}, Lkz1;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
     return-object v0
+
+    :pswitch_0
+    sget v0, Lice;->M0:I
+
+    iget-object v1, p0, Lp5i;->b:Ls5i;
+
+    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-static {v1, v0}, Lh94;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

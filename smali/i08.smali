@@ -1,186 +1,104 @@
 .class public final Li08;
-.super Ljava/lang/Object;
+.super Lpdg;
 .source "SourceFile"
 
 # interfaces
-.implements Lxpe;
-
-
-# static fields
-.field public static final b:Li08;
-
-.field public static final c:Ljava/lang/String;
+.implements Lys6;
 
 
 # instance fields
-.field public final synthetic a:Lqs;
+.field public final synthetic X:Lone/me/android/join/JoinChatWidget;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lone/me/android/join/JoinChatWidget;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Li08;
+    iput-object p1, p0, Li08;->X:Lone/me/android/join/JoinChatWidget;
 
-    invoke-direct {v0}, Li08;-><init>()V
+    const/4 p1, 0x2
 
-    sput-object v0, Li08;->b:Li08;
-
-    const-string v0, "kotlinx.serialization.json.JsonArray"
-
-    sput-object v0, Li08;->c:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 2
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    sget-object v0, Lx08;->a:Lx08;
-
-    new-instance v1, Lqs;
-
-    invoke-virtual {v0}, Lx08;->d()Lxpe;
-
-    move-result-object v0
-
-    invoke-direct {v1, v0}, Lvd8;-><init>(Lxpe;)V
-
-    iput-object v1, p0, Li08;->a:Lqs;
+    invoke-direct {p0, p1, p2}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/String;
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    sget-object v0, Li08;->c:Ljava/lang/String;
+    check-cast p1, La08;
 
-    return-object v0
-.end method
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-.method public final c()Z
-    .locals 1
-
-    iget-object v0, p0, Li08;->a:Lqs;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final d(Ljava/lang/String;)I
-    .locals 1
-
-    iget-object v0, p0, Li08;->a:Lqs;
-
-    invoke-virtual {v0, p1}, Lvd8;->d(Ljava/lang/String;)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final e()Lqoj;
-    .locals 1
-
-    iget-object v0, p0, Li08;->a:Lqs;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v0, Lj0g;->c:Lj0g;
-
-    return-object v0
-.end method
-
-.method public final f()I
-    .locals 1
-
-    iget-object v0, p0, Li08;->a:Lqs;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final g(I)Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Li08;->a:Lqs;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+    invoke-virtual {p0, p1, p2}, Li08;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    return-object p1
+    check-cast p1, Li08;
+
+    sget-object p2, Lmah;->a:Lmah;
+
+    invoke-virtual {p1, p2}, Li08;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public final getAnnotations()Ljava/util/List;
-    .locals 1
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iget-object v0, p0, Li08;->a:Lqs;
+    new-instance v0, Li08;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object v1, p0, Li08;->X:Lone/me/android/join/JoinChatWidget;
 
-    sget-object v0, Ldh5;->a:Ldh5;
+    invoke-direct {v0, v1, p2}, Li08;-><init>(Lone/me/android/join/JoinChatWidget;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Li08;->o:Ljava/lang/Object;
 
     return-object v0
 .end method
 
-.method public final h(I)Ljava/util/List;
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    iget-object v0, p0, Li08;->a:Lqs;
+    iget-object v0, p0, Li08;->o:Ljava/lang/Object;
 
-    invoke-virtual {v0, p1}, Lvd8;->h(I)Ljava/util/List;
+    check-cast v0, La08;
 
-    sget-object p1, Ldh5;->a:Ldh5;
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    instance-of p1, v0, La08;
+
+    if-eqz p1, :cond_0
+
+    iget-object p1, p0, Li08;->X:Lone/me/android/join/JoinChatWidget;
+
+    iput-object v0, p1, Lone/me/android/join/JoinChatWidget;->B0:La08;
+
+    iget-object v1, p1, Lone/me/android/join/JoinChatWidget;->C0:Landroid/widget/LinearLayout;
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {p1, v1, v0}, Lone/me/android/join/JoinChatWidget;->V0(Landroid/widget/LinearLayout;La08;)V
+
+    goto :goto_0
+
+    :cond_0
+    if-nez v0, :cond_2
+
+    :cond_1
+    :goto_0
+    sget-object p1, Lmah;->a:Lmah;
 
     return-object p1
-.end method
 
-.method public final i(I)Lxpe;
-    .locals 1
+    :cond_2
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
 
-    iget-object v0, p0, Li08;->a:Lqs;
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-    invoke-virtual {v0, p1}, Lvd8;->i(I)Lxpe;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final isInline()Z
-    .locals 1
-
-    iget-object v0, p0, Li08;->a:Lqs;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final j(I)Z
-    .locals 1
-
-    iget-object v0, p0, Li08;->a:Lqs;
-
-    invoke-virtual {v0, p1}, Lvd8;->j(I)Z
-
-    const/4 p1, 0x0
-
-    return p1
+    throw p1
 .end method

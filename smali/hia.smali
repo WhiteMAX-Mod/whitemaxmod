@@ -1,27 +1,19 @@
 .class public final Lhia;
-.super Ljava/lang/Object;
+.super Ljig;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:I
-
-.field public final b:I
-
-.field public final c:I
-
-
 # direct methods
-.method public constructor <init>(III)V
-    .locals 0
+.method public static a()Lhia;
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lhia;
 
-    iput p1, p0, Lhia;->a:I
+    new-instance v1, Landroid/util/ArrayMap;
 
-    iput p2, p0, Lhia;->b:I
+    invoke-direct {v1}, Landroid/util/ArrayMap;-><init>()V
 
-    iput p3, p0, Lhia;->c:I
+    invoke-direct {v0, v1}, Ljig;-><init>(Landroid/util/ArrayMap;)V
 
-    return-void
+    return-object v0
 .end method

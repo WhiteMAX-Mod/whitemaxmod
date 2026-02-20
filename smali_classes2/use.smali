@@ -1,51 +1,51 @@
 .class public final Luse;
-.super Llse;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public l:Ltx4;
-
-
-# direct methods
-.method public constructor <init>(JLz2;)V
-    .locals 0
-
-    invoke-static {p3}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p3
-
-    invoke-direct {p0, p1, p2, p3}, Llse;-><init>(JLjava/util/List;)V
-
-    return-void
-.end method
-
-
 # virtual methods
-.method public final a()Lose;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
-    new-instance v0, Lvse;
+    const/4 v0, 0x1
 
-    invoke-direct {v0, p0}, Lmse;-><init>(Llse;)V
+    if-ne p0, p1, :cond_0
 
-    iget-object v1, p0, Luse;->l:Ltx4;
+    return v0
 
-    iput-object v1, v0, Lvse;->A0:Ltx4;
+    :cond_0
+    instance-of v1, p1, Luse;
 
-    return-object v0
+    if-nez v1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    check-cast p1, Luse;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return v0
 .end method
 
-.method public final c()Lmse;
-    .locals 2
+.method public final hashCode()I
+    .locals 1
 
-    new-instance v0, Lvse;
+    const/4 v0, 0x1
 
-    invoke-direct {v0, p0}, Lmse;-><init>(Llse;)V
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    iget-object v1, p0, Luse;->l:Ltx4;
+    move-result v0
 
-    iput-object v1, v0, Lvse;->A0:Ltx4;
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "Close(isAnimated=true)"
 
     return-object v0
 .end method

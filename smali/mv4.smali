@@ -3,295 +3,355 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/concurrent/Callable;
+.implements Lblc;
 
 
 # instance fields
-.field public final synthetic X:Lc02;
+.field public final synthetic a:Lhw4;
 
-.field public final synthetic Y:Ljava/util/concurrent/Executor;
-
-.field public final synthetic Z:Lqhh;
-
-.field public final synthetic a:Lnv4;
-
-.field public final synthetic b:Landroid/content/Context;
-
-.field public final synthetic c:Lc01;
-
-.field public final synthetic d:Lzi3;
-
-.field public final synthetic o:Z
-
-.field public final synthetic t0:Luy6;
-
-.field public final synthetic u0:Z
+.field public final synthetic b:Luv4;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lnv4;Landroid/content/Context;Lc01;Lzi3;ZLc02;Ljava/util/concurrent/Executor;Lqhh;Luy6;Z)V
+.method public synthetic constructor <init>(Lhw4;Luv4;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lmv4;->a:Lnv4;
+    iput-object p1, p0, Lmv4;->a:Lhw4;
 
-    iput-object p2, p0, Lmv4;->b:Landroid/content/Context;
-
-    iput-object p3, p0, Lmv4;->c:Lc01;
-
-    iput-object p4, p0, Lmv4;->d:Lzi3;
-
-    iput-boolean p5, p0, Lmv4;->o:Z
-
-    iput-object p6, p0, Lmv4;->X:Lc02;
-
-    iput-object p7, p0, Lmv4;->Y:Ljava/util/concurrent/Executor;
-
-    iput-object p8, p0, Lmv4;->Z:Lqhh;
-
-    iput-object p9, p0, Lmv4;->t0:Luy6;
-
-    iput-boolean p10, p0, Lmv4;->u0:Z
+    iput-object p2, p0, Lmv4;->b:Luv4;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final call()Ljava/lang/Object;
-    .locals 26
+.method public final apply(Ljava/lang/Object;)Z
+    .locals 10
 
-    move-object/from16 v0, p0
+    check-cast p1, Lol6;
 
-    iget-object v3, v0, Lmv4;->t0:Luy6;
+    iget-object v0, p0, Lmv4;->a:Lhw4;
 
-    iget-object v1, v0, Lmv4;->a:Lnv4;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-boolean v11, v1, Lnv4;->f:Z
+    iget-object v1, p0, Lmv4;->b:Luv4;
 
-    iget-object v12, v1, Lnv4;->d:Lcz6;
+    iget-boolean v1, v1, Luv4;->s0:Z
 
-    iget v13, v1, Lnv4;->e:I
+    const/4 v2, 0x1
 
-    iget-boolean v8, v1, Lnv4;->a:Z
+    if-eqz v1, :cond_d
 
-    iget-boolean v9, v1, Lnv4;->g:Z
-
-    iget-boolean v10, v1, Lnv4;->h:Z
-
-    sget v1, Lpv4;->y:I
-
-    invoke-static {}, La9f;->p()Landroid/opengl/EGLDisplay;
-
-    move-result-object v14
-
-    iget-object v15, v0, Lmv4;->d:Lzi3;
-
-    invoke-static {v15}, Lzi3;->h(Lzi3;)Z
-
-    move-result v1
+    iget-object v1, v0, Lhw4;->j:Ljava/lang/Boolean;
 
     if-eqz v1, :cond_0
 
-    sget-object v2, La9f;->d:[I
+    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    goto :goto_0
+    move-result v1
+
+    if-nez v1, :cond_d
 
     :cond_0
-    sget-object v2, La9f;->c:[I
+    iget v1, p1, Lol6;->F:I
 
-    :goto_0
-    const/4 v4, 0x3
+    iget-object v3, p1, Lol6;->n:Ljava/lang/String;
 
-    :try_start_0
-    invoke-interface {v3, v14, v4, v2}, Luy6;->h(Landroid/opengl/EGLDisplay;I[I)Landroid/opengl/EGLContext;
+    const/4 v4, -0x1
 
-    move-result-object v4
+    if-eq v1, v4, :cond_d
 
-    invoke-interface {v3, v4, v14}, Luy6;->l(Landroid/opengl/EGLContext;Landroid/opengl/EGLDisplay;)Landroid/opengl/EGLSurface;
+    const/4 v5, 0x2
 
-    move-result-object v5
+    if-le v1, v5, :cond_d
 
-    invoke-static {v4, v5}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
+    const-string v1, "audio/ac4"
 
-    move-result-object v2
-    :try_end_0
-    .catch Landroidx/media3/common/util/GlUtil$GlException; {:try_start_0 .. :try_end_0} :catch_0
+    const-string v6, "audio/eac3-joc"
 
-    goto :goto_1
+    const/4 v7, 0x0
 
-    :catch_0
-    const/4 v4, 0x2
+    const/16 v8, 0x20
 
-    invoke-interface {v3, v14, v4, v2}, Luy6;->h(Landroid/opengl/EGLDisplay;I[I)Landroid/opengl/EGLContext;
-
-    move-result-object v2
-
-    invoke-interface {v3, v2, v14}, Luy6;->l(Landroid/opengl/EGLContext;Landroid/opengl/EGLDisplay;)Landroid/opengl/EGLSurface;
-
-    move-result-object v4
-
-    invoke-static {v2, v4}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
-
-    move-result-object v2
-
-    :goto_1
-    invoke-virtual {v15}, Lzi3;->a()Lxi3;
-
-    move-result-object v4
-
-    const/4 v5, 0x1
-
-    iput v5, v4, Lxi3;->c:I
-
-    const/4 v5, 0x0
-
-    iput-object v5, v4, Lxi3;->d:[B
-
-    new-instance v16, Lzi3;
-
-    iget v6, v4, Lxi3;->a:I
-
-    iget v7, v4, Lxi3;->b:I
-
-    iget v5, v4, Lxi3;->c:I
-
-    move/from16 v24, v1
-
-    iget-object v1, v4, Lxi3;->d:[B
-
-    move-object/from16 v22, v1
-
-    iget v1, v4, Lxi3;->e:I
-
-    iget v4, v4, Lxi3;->f:I
-
-    move/from16 v20, v1
-
-    move/from16 v21, v4
-
-    move/from16 v19, v5
-
-    move/from16 v17, v6
-
-    move/from16 v18, v7
-
-    invoke-direct/range {v16 .. v22}, Lzi3;-><init>(IIIII[B)V
-
-    if-eqz v24, :cond_1
+    if-nez v3, :cond_1
 
     goto :goto_2
 
     :cond_1
-    move-object/from16 v16, v15
+    invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
+
+    move-result v9
+
+    sparse-switch v9, :sswitch_data_0
+
+    :goto_0
+    move v9, v4
+
+    goto :goto_1
+
+    :sswitch_0
+    const-string v9, "audio/eac3"
+
+    invoke-virtual {v3, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v9
+
+    if-nez v9, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    const/4 v9, 0x3
+
+    goto :goto_1
+
+    :sswitch_1
+    invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v9
+
+    if-nez v9, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    move v9, v5
+
+    goto :goto_1
+
+    :sswitch_2
+    const-string v9, "audio/ac3"
+
+    invoke-virtual {v3, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v9
+
+    if-nez v9, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    move v9, v2
+
+    goto :goto_1
+
+    :sswitch_3
+    invoke-virtual {v3, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v9
+
+    if-nez v9, :cond_5
+
+    goto :goto_0
+
+    :cond_5
+    move v9, v7
+
+    :goto_1
+    packed-switch v9, :pswitch_data_0
+
+    goto :goto_2
+
+    :pswitch_0
+    sget v9, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    if-lt v9, v8, :cond_d
+
+    iget-object v9, v0, Lhw4;->h:Lir6;
+
+    if-eqz v9, :cond_d
+
+    iget-boolean v9, v9, Lir6;->a:Z
+
+    if-eqz v9, :cond_d
 
     :goto_2
-    new-instance v1, Lk30;
+    sget v9, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    new-instance v7, Lhv4;
+    if-lt v9, v8, :cond_c
 
-    const/4 v4, 0x0
+    iget-object v8, v0, Lhw4;->h:Lir6;
 
-    iget-object v5, v0, Lmv4;->Z:Lqhh;
+    if-eqz v8, :cond_c
 
-    invoke-direct {v7, v5, v4}, Lhv4;-><init>(Lqhh;I)V
+    iget-boolean v9, v8, Lir6;->a:Z
 
-    move-object v4, v2
+    if-eqz v9, :cond_c
 
-    iget-object v2, v0, Lmv4;->b:Landroid/content/Context;
+    iget-object v8, v8, Lir6;->b:Ljava/lang/Object;
 
-    move-object/from16 v20, v5
+    check-cast v8, Landroid/media/Spatializer;
 
-    iget-object v5, v0, Lmv4;->X:Lc02;
+    invoke-virtual {v8}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object v6, v0, Lmv4;->Y:Ljava/util/concurrent/Executor;
+    invoke-static {v8}, Lx4;->c(Ljava/lang/Object;)Landroid/media/Spatializer;
 
-    move/from16 v25, v11
+    move-result-object v8
 
-    move-object/from16 v21, v12
+    invoke-static {v8}, Lx4;->i(Landroid/media/Spatializer;)Z
 
-    move/from16 v11, v24
+    move-result v8
 
-    const/16 v24, 0x0
+    if-eqz v8, :cond_c
 
-    move-object v12, v4
+    iget-object v8, v0, Lhw4;->h:Lir6;
 
-    move-object v4, v3
+    iget-object v8, v8, Lir6;->b:Ljava/lang/Object;
 
-    move-object/from16 v3, v16
+    check-cast v8, Landroid/media/Spatializer;
 
-    invoke-direct/range {v1 .. v10}, Lk30;-><init>(Landroid/content/Context;Lzi3;Luy6;Lc02;Ljava/util/concurrent/Executor;Lhv4;ZZZ)V
+    invoke-virtual {v8}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-object v3, v4
+    invoke-static {v8}, Lx4;->c(Ljava/lang/Object;)Landroid/media/Spatializer;
 
-    move-object/from16 v18, v5
+    move-result-object v8
 
-    move-object/from16 v19, v6
+    invoke-static {v8}, Lx4;->l(Landroid/media/Spatializer;)Z
 
-    new-instance v10, Lv36;
+    move-result v8
 
-    iget-object v4, v12, Landroid/util/Pair;->first:Ljava/lang/Object;
+    if-eqz v8, :cond_c
 
-    check-cast v4, Landroid/opengl/EGLContext;
+    iget-object v8, v0, Lhw4;->h:Lir6;
 
-    iget-object v5, v12, Landroid/util/Pair;->second:Ljava/lang/Object;
+    iget-object v0, v0, Lhw4;->i:Lo40;
 
-    move-object/from16 v16, v5
+    invoke-virtual {v8}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    check-cast v16, Landroid/opengl/EGLSurface;
+    iget v9, p1, Lol6;->F:I
 
-    iget-boolean v5, v0, Lmv4;->o:Z
+    invoke-static {v3, v6}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move/from16 v23, v5
+    move-result v6
 
-    move-object v12, v10
+    if-eqz v6, :cond_6
 
-    move/from16 v22, v13
+    const/16 v1, 0x10
 
-    move-object/from16 v17, v15
+    if-ne v9, v1, :cond_9
 
-    move-object v13, v2
-
-    move-object v15, v4
-
-    invoke-direct/range {v12 .. v23}, Lv36;-><init>(Landroid/content/Context;Landroid/opengl/EGLDisplay;Landroid/opengl/EGLContext;Landroid/opengl/EGLSurface;Lzi3;Lc02;Ljava/util/concurrent/Executor;Lqhh;Lcz6;IZ)V
-
-    move-object v6, v1
-
-    move-object v5, v14
-
-    new-instance v1, Lpv4;
-
-    if-eqz v25, :cond_2
-
-    new-instance v4, Lpwd;
-
-    invoke-direct {v4, v2, v11}, Lpwd;-><init>(Landroid/content/Context;Z)V
-
-    move-object v14, v4
+    const/16 v9, 0xc
 
     goto :goto_3
 
-    :cond_2
-    move-object/from16 v14, v24
+    :cond_6
+    const-string v6, "audio/iamf"
 
+    invoke-static {v3, v6}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_7
+
+    if-ne v9, v4, :cond_9
+
+    const/4 v9, 0x6
+
+    goto :goto_3
+
+    :cond_7
+    invoke-static {v3, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_9
+
+    const/16 v1, 0x12
+
+    if-eq v9, v1, :cond_8
+
+    const/16 v1, 0x15
+
+    if-ne v9, v1, :cond_9
+
+    :cond_8
+    const/16 v9, 0x18
+
+    :cond_9
     :goto_3
-    iget-boolean v4, v0, Lmv4;->u0:Z
+    invoke-static {v9}, Lvih;->s(I)I
 
-    iget-object v13, v0, Lmv4;->c:Lc01;
+    move-result v1
 
-    move-object/from16 v12, v17
+    if-nez v1, :cond_a
 
-    move-object/from16 v7, v18
+    move p1, v7
 
-    move-object/from16 v9, v19
+    goto :goto_4
 
-    move-object/from16 v8, v20
+    :cond_a
+    new-instance v3, Landroid/media/AudioFormat$Builder;
 
-    move/from16 v11, v23
+    invoke-direct {v3}, Landroid/media/AudioFormat$Builder;-><init>()V
 
-    invoke-direct/range {v1 .. v14}, Lpv4;-><init>(Landroid/content/Context;Luy6;ZLandroid/opengl/EGLDisplay;Lk30;Lc02;Lqhh;Ljava/util/concurrent/Executor;Lv36;ZLzi3;Lc01;Lpwd;)V
+    invoke-virtual {v3, v5}, Landroid/media/AudioFormat$Builder;->setEncoding(I)Landroid/media/AudioFormat$Builder;
 
-    return-object v1
+    move-result-object v3
+
+    invoke-virtual {v3, v1}, Landroid/media/AudioFormat$Builder;->setChannelMask(I)Landroid/media/AudioFormat$Builder;
+
+    move-result-object v1
+
+    iget p1, p1, Lol6;->G:I
+
+    if-eq p1, v4, :cond_b
+
+    invoke-virtual {v1, p1}, Landroid/media/AudioFormat$Builder;->setSampleRate(I)Landroid/media/AudioFormat$Builder;
+
+    :cond_b
+    iget-object p1, v8, Lir6;->b:Ljava/lang/Object;
+
+    check-cast p1, Landroid/media/Spatializer;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {p1}, Lx4;->c(Ljava/lang/Object;)Landroid/media/Spatializer;
+
+    move-result-object p1
+
+    invoke-virtual {v0}, Lo40;->b()Li5;
+
+    move-result-object v0
+
+    iget-object v0, v0, Li5;->b:Ljava/lang/Object;
+
+    check-cast v0, Landroid/media/AudioAttributes;
+
+    invoke-virtual {v1}, Landroid/media/AudioFormat$Builder;->build()Landroid/media/AudioFormat;
+
+    move-result-object v1
+
+    invoke-static {p1, v0, v1}, Lx4;->j(Landroid/media/Spatializer;Landroid/media/AudioAttributes;Landroid/media/AudioFormat;)Z
+
+    move-result p1
+
+    :goto_4
+    if-eqz p1, :cond_c
+
+    goto :goto_5
+
+    :cond_c
+    return v7
+
+    :cond_d
+    :goto_5
+    return v2
+
+    :sswitch_data_0
+    .sparse-switch
+        -0x7e929daa -> :sswitch_3
+        0xb269698 -> :sswitch_2
+        0xb269699 -> :sswitch_1
+        0x59ae0c65 -> :sswitch_0
+    .end sparse-switch
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+    .end packed-switch
 .end method

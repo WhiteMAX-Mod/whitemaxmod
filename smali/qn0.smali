@@ -3,136 +3,120 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final e:[B
-
-
 # instance fields
-.field public final a:Ljava/lang/CharSequence;
+.field public final a:Ljava/lang/String;
 
-.field public final b:I
+.field public final b:Ljava/lang/String;
 
-.field public c:I
+.field public final c:I
 
-.field public d:C
+.field public final d:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
-
-    const/16 v0, 0x700
-
-    new-array v1, v0, [B
-
-    sput-object v1, Lqn0;->e:[B
-
-    const/4 v1, 0x0
-
-    :goto_0
-    if-ge v1, v0, :cond_0
-
-    sget-object v2, Lqn0;->e:[B
-
-    invoke-static {v1}, Ljava/lang/Character;->getDirectionality(I)B
-
-    move-result v3
-
-    aput-byte v3, v2, v1
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/CharSequence;)V
+.method public constructor <init>(Ljava/lang/String;IILjava/lang/String;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lqn0;->a:Ljava/lang/CharSequence;
+    iput-object p1, p0, Lqn0;->a:Ljava/lang/String;
 
-    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
+    iput-object p4, p0, Lqn0;->b:Ljava/lang/String;
 
-    move-result p1
+    iput p2, p0, Lqn0;->c:I
 
-    iput p1, p0, Lqn0;->b:I
+    iput p3, p0, Lqn0;->d:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()B
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget v0, p0, Lqn0;->c:I
+    const/4 v0, 0x1
 
-    add-int/lit8 v0, v0, -0x1
-
-    iget-object v1, p0, Lqn0;->a:Ljava/lang/CharSequence;
-
-    invoke-interface {v1, v0}, Ljava/lang/CharSequence;->charAt(I)C
-
-    move-result v0
-
-    iput-char v0, p0, Lqn0;->d:C
-
-    invoke-static {v0}, Ljava/lang/Character;->isLowSurrogate(C)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget v0, p0, Lqn0;->c:I
-
-    invoke-static {v1, v0}, Ljava/lang/Character;->codePointBefore(Ljava/lang/CharSequence;I)I
-
-    move-result v0
-
-    iget v1, p0, Lqn0;->c:I
-
-    invoke-static {v0}, Ljava/lang/Character;->charCount(I)I
-
-    move-result v2
-
-    sub-int/2addr v1, v2
-
-    iput v1, p0, Lqn0;->c:I
-
-    invoke-static {v0}, Ljava/lang/Character;->getDirectionality(I)B
-
-    move-result v0
+    if-ne p0, p1, :cond_0
 
     return v0
 
     :cond_0
-    iget v0, p0, Lqn0;->c:I
+    instance-of v1, p1, Lqn0;
 
-    add-int/lit8 v0, v0, -0x1
+    const/4 v2, 0x0
 
-    iput v0, p0, Lqn0;->c:I
+    if-nez v1, :cond_1
 
-    iget-char v0, p0, Lqn0;->d:C
-
-    const/16 v1, 0x700
-
-    if-ge v0, v1, :cond_1
-
-    sget-object v1, Lqn0;->e:[B
-
-    aget-byte v0, v1, v0
-
-    goto :goto_0
+    return v2
 
     :cond_1
-    invoke-static {v0}, Ljava/lang/Character;->getDirectionality(C)B
+    check-cast p1, Lqn0;
+
+    iget v1, p0, Lqn0;->c:I
+
+    iget v3, p1, Lqn0;->c:I
+
+    if-ne v1, v3, :cond_2
+
+    iget v1, p0, Lqn0;->d:I
+
+    iget v3, p1, Lqn0;->d:I
+
+    if-ne v1, v3, :cond_2
+
+    iget-object v1, p0, Lqn0;->a:Ljava/lang/String;
+
+    iget-object v3, p1, Lqn0;->a:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    iget-object v1, p0, Lqn0;->b:Ljava/lang/String;
+
+    iget-object p1, p1, Lqn0;->b:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    return v0
+
+    :cond_2
+    return v2
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    iget v0, p0, Lqn0;->c:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    iget v1, p0, Lqn0;->d:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lqn0;->a:Ljava/lang/String;
+
+    iget-object v3, p0, Lqn0;->b:Ljava/lang/String;
+
+    filled-new-array {v2, v3, v0, v1}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
 
     move-result v0
 
-    :goto_0
     return v0
 .end method

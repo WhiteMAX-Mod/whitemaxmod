@@ -1,111 +1,60 @@
-.class public final synthetic Lc43;
-.super Ljava/lang/Object;
+.class public final Lc43;
+.super Lujg;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/util/function/ObjLongConsumer;
 
 
 # instance fields
-.field public final synthetic a:Limf;
+.field public c:Lue2;
 
 
-# direct methods
-.method public synthetic constructor <init>(Limf;)V
-    .locals 0
+# virtual methods
+.method public final d(Lws9;Ljava/lang/String;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iput-object p1, p0, Lc43;->a:Limf;
+    const-string v0, "chat"
+
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_0
+
+    invoke-virtual {p1}, Lws9;->B()V
+
+    return-void
+
+    :cond_0
+    invoke-static {p1}, Lue2;->a(Lws9;)Lue2;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lc43;->c:Lue2;
 
     return-void
 .end method
 
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-# virtual methods
-.method public final accept(Ljava/lang/Object;J)V
-    .locals 10
+    iget-object v0, p0, Lc43;->c:Lue2;
 
-    move-object v4, p1
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    check-cast v4, Landroid/view/View;
+    const-string v2, "{chat="
 
-    iget-object p1, p0, Lc43;->a:Limf;
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object p1, p1, Limf;->b:Ljava/lang/Object;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-object v1, p1
+    const-string v0, "}"
 
-    check-cast v1, Lone/me/chats/list/ChatsListWidget;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p1, v1, Lone/me/chats/list/ChatsListWidget;->I0:Lx07;
-
-    sget-object v0, Lone/me/chats/list/ChatsListWidget;->M0:[Lz28;
-
-    iget-object v0, v1, Lone/me/chats/list/ChatsListWidget;->c:Lls;
-
-    sget-object v6, Lone/me/chats/list/ChatsListWidget;->M0:[Lz28;
-
-    const/4 v2, 0x0
-
-    aget-object v2, v6, v2
-
-    invoke-virtual {v0, v1}, Lls;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/Long;
-
-    if-nez v0, :cond_1
-
-    const/4 v7, 0x4
-
-    aget-object v0, v6, v7
-
-    invoke-virtual {p1, v1, v0}, Lx07;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lsx7;
-
-    const/4 v8, 0x1
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0}, Lsx7;->isActive()Z
-
-    move-result v0
-
-    if-ne v0, v8, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lw78;
-
-    move-result-object v9
-
-    new-instance v0, Lk93;
-
-    const/4 v5, 0x0
-
-    move-wide v2, p2
-
-    invoke-direct/range {v0 .. v5}, Lk93;-><init>(Lone/me/chats/list/ChatsListWidget;JLandroid/view/View;Lkotlin/coroutines/Continuation;)V
-
-    const/4 p2, 0x0
-
-    sget-object p3, Lcc4;->b:Lcc4;
-
-    invoke-static {v9, p2, p3, v0, v8}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
-
-    move-result-object p2
-
-    aget-object p3, v6, v7
-
-    invoke-virtual {p1, v1, p3, p2}, Lx07;->O(Ljava/lang/Object;Lz28;Ljava/lang/Object;)V
-
-    :cond_1
-    :goto_0
-    return-void
+    return-object v0
 .end method

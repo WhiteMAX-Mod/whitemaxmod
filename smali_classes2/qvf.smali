@@ -1,59 +1,102 @@
 .class public final Lqvf;
-.super Ld3;
+.super Lpdg;
 .source "SourceFile"
 
+# interfaces
+.implements Lys6;
 
-# static fields
-.field public static final c:Lqvf;
 
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lqvf;
-
-    const/16 v1, 0xc
-
-    invoke-direct {v0, v1}, Ld3;-><init>(I)V
-
-    sput-object v0, Lqvf;->c:Lqvf;
-
-    return-void
-.end method
+# instance fields
+.field public o:I
 
 
 # virtual methods
-.method public final L0(Landroid/content/Intent;Ljava/lang/String;)V
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-virtual {p0}, Ld3;->p0()Ljm4;
+    check-cast p1, Lnd4;
 
-    move-result-object v0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    new-instance v1, Lktb;
-
-    const-string v2, "oneme:share:data"
-
-    invoke-direct {v1, v2, p1}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance p1, Lktb;
-
-    const-string v2, "tag"
-
-    invoke-direct {p1, v2, p2}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    filled-new-array {v1, p1}, [Lktb;
+    invoke-virtual {p0, p1, p2}, Lqvf;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    invoke-static {p1}, Laaj;->c([Lktb;)Landroid/os/Bundle;
+    check-cast p1, Lqvf;
+
+    sget-object p2, Lmah;->a:Lmah;
+
+    invoke-virtual {p1, p2}, Lqvf;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    const-string p2, ":chats/share"
+    return-object p1
+.end method
 
-    invoke-virtual {v0, p2, p1}, Ljm4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    return-void
+    new-instance p1, Lqvf;
+
+    const/4 v0, 0x2
+
+    invoke-direct {p1, v0, p2}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    iget v0, p0, Lqvf;->o:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    sget p1, Lgc5;->d:I
+
+    const/4 p1, 0x2
+
+    sget-object v0, Lmc5;->d:Lmc5;
+
+    invoke-static {p1, v0}, Lkwj;->g(ILmc5;)J
+
+    move-result-wide v2
+
+    iput v1, p0, Lqvf;->o:I
+
+    invoke-static {v2, v3, p0}, Lhvj;->d(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lod4;->a:Lod4;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
 .end method

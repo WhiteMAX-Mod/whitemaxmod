@@ -1,84 +1,49 @@
 .class public final Ll2h;
-.super Ljava/lang/Object;
+.super Lda4;
 .source "SourceFile"
 
-# interfaces
-.implements La38;
 
+# instance fields
+.field public final synthetic X:Lo2h;
 
-# static fields
-.field public static final a:Ll2h;
+.field public Y:I
 
-.field public static final b:Lop7;
+.field public d:Lcg5;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lo2h;Lda4;)V
+    .locals 0
 
-    new-instance v0, Ll2h;
+    iput-object p1, p0, Ll2h;->X:Lo2h;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Ll2h;->a:Ll2h;
-
-    const-string v0, "kotlin.UShort"
-
-    sget-object v1, Lx8f;->a:Lx8f;
-
-    invoke-static {v1, v0}, Leui;->a(La38;Ljava/lang/String;)Lop7;
-
-    move-result-object v0
-
-    sput-object v0, Ll2h;->b:Lop7;
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lkotlinx/serialization/json/internal/b;Ljava/lang/Object;)V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    check-cast p2, Lh2h;
+    iput-object p1, p0, Ll2h;->o:Ljava/lang/Object;
 
-    iget-short p2, p2, Lh2h;->a:S
+    iget p1, p0, Ll2h;->Y:I
 
-    sget-object v0, Ll2h;->b:Lop7;
+    const/high16 v0, -0x80000000
 
-    invoke-virtual {p1, v0}, Lkotlinx/serialization/json/internal/b;->i(Lxpe;)Lkotlinx/serialization/json/internal/b;
+    or-int/2addr p1, v0
+
+    iput p1, p0, Ll2h;->Y:I
+
+    iget-object p1, p0, Ll2h;->X:Lo2h;
+
+    invoke-virtual {p1, p0}, Lo2h;->g(Lda4;)Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-virtual {p1, p2}, Lkotlinx/serialization/json/internal/b;->q(S)V
-
-    return-void
-.end method
-
-.method public final b(Lkl4;)Ljava/lang/Object;
-    .locals 1
-
-    sget-object v0, Ll2h;->b:Lop7;
-
-    invoke-interface {p1, v0}, Lkl4;->o(Lxpe;)Lkl4;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Lkl4;->A()S
-
-    move-result p1
-
-    new-instance v0, Lh2h;
-
-    invoke-direct {v0, p1}, Lh2h;-><init>(S)V
-
-    return-object v0
-.end method
-
-.method public final d()Lxpe;
-    .locals 1
-
-    sget-object v0, Ll2h;->b:Lop7;
-
-    return-object v0
+    return-object p1
 .end method

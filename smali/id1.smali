@@ -1,85 +1,160 @@
-.class public final enum Lid1;
-.super Ljava/lang/Enum;
+.class public final Lid1;
+.super Lx0i;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum a:Lid1;
+# instance fields
+.field public final X:Lhxf;
 
-.field public static final enum b:Lid1;
+.field public final Y:Lhxf;
 
-.field public static final enum c:Lid1;
+.field public final Z:Lhxf;
 
-.field public static final synthetic d:[Lid1;
+.field public final b:Lcg5;
+
+.field public final c:Lzl1;
+
+.field public final d:Lj88;
+
+.field public final o:Lhxf;
+
+.field public final s0:Lhxf;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(Lj88;Lcg5;Lzl1;)V
+    .locals 1
 
-    new-instance v0, Lid1;
+    invoke-direct {p0}, Lx0i;-><init>()V
 
-    const-string v1, "Old"
+    iput-object p2, p0, Lid1;->b:Lcg5;
 
-    const/4 v2, 0x0
+    iput-object p3, p0, Lid1;->c:Lzl1;
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-object p1, p0, Lid1;->d:Lj88;
 
-    sput-object v0, Lid1;->a:Lid1;
+    new-instance p1, Lgd1;
 
-    new-instance v1, Lid1;
+    invoke-direct {p1}, Lgd1;-><init>()V
 
-    const-string v2, "Strategy1"
+    invoke-static {p1}, Lixf;->a(Ljava/lang/Object;)Lhxf;
 
-    const/4 v3, 0x1
+    move-result-object p1
 
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-object p1, p0, Lid1;->o:Lhxf;
 
-    sput-object v1, Lid1;->b:Lid1;
+    iput-object p1, p0, Lid1;->X:Lhxf;
 
-    new-instance v2, Lid1;
+    new-instance p1, Lzz1;
 
-    const-string v3, "Strategy2"
+    sget-object p2, Lsi5;->a:Lsi5;
 
-    const/4 v4, 0x2
+    const/4 p3, 0x0
 
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-direct {p1, p2, p3}, Lzz1;-><init>(Ljava/util/List;Z)V
 
-    sput-object v2, Lid1;->c:Lid1;
+    invoke-static {p1}, Lixf;->a(Ljava/lang/Object;)Lhxf;
 
-    filled-new-array {v0, v1, v2}, [Lid1;
+    move-result-object p1
 
-    move-result-object v0
+    iput-object p1, p0, Lid1;->Y:Lhxf;
 
-    sput-object v0, Lid1;->d:[Lid1;
+    iput-object p1, p0, Lid1;->Z:Lhxf;
+
+    sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    invoke-static {p1}, Lixf;->a(Ljava/lang/Object;)Lhxf;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lid1;->s0:Lhxf;
+
+    new-instance p2, Lfd1;
+
+    const/4 p3, 0x0
+
+    invoke-direct {p2, p0, p3}, Lfd1;-><init>(Lid1;Lkotlin/coroutines/Continuation;)V
+
+    new-instance p3, Llb6;
+
+    const/4 v0, 0x1
+
+    invoke-direct {p3, p1, p2, v0}, Llb6;-><init>(Lb96;Lys6;I)V
+
+    iget-object p1, p0, Lx0i;->a:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {p3, p1}, Lzka;->w(Lb96;Lnd4;)Lcuf;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lid1;
-    .locals 1
 
-    const-class v0, Lid1;
+# virtual methods
+.method public final p(JLg87;)V
+    .locals 5
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    :cond_0
+    iget-object v0, p0, Lid1;->o:Lhxf;
 
-    move-result-object p0
+    invoke-virtual {v0}, Lhxf;->getValue()Ljava/lang/Object;
 
-    check-cast p0, Lid1;
+    move-result-object v1
 
-    return-object p0
-.end method
+    move-object v2, v1
 
-.method public static values()[Lid1;
-    .locals 1
+    check-cast v2, Lgd1;
 
-    sget-object v0, Lid1;->d:[Lid1;
+    iget-object v3, v2, Lgd1;->b:Ljava/util/Map;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    new-instance v4, Ljava/util/LinkedHashMap;
 
-    move-result-object v0
+    invoke-direct {v4, v3}, Ljava/util/LinkedHashMap;-><init>(Ljava/util/Map;)V
 
-    check-cast v0, [Lid1;
+    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    return-object v0
+    move-result-object v3
+
+    invoke-interface {v4, v3}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v3
+
+    invoke-interface {v4, v3}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lg87;
+
+    goto :goto_0
+
+    :cond_1
+    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v3
+
+    invoke-interface {v4, v3, p3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lg87;
+
+    :goto_0
+    iget-boolean v2, v2, Lgd1;->a:Z
+
+    new-instance v3, Lgd1;
+
+    invoke-direct {v3, v2, v4}, Lgd1;-><init>(ZLjava/util/Map;)V
+
+    invoke-virtual {v0, v1, v3}, Lhxf;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    return-void
 .end method

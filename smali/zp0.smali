@@ -1,210 +1,114 @@
 .class public final Lzp0;
-.super Ljdf;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final n:Landroid/content/Context;
+.field public final synthetic a:I
 
-.field public final o:I
+.field public final synthetic b:Landroidx/biometric/BiometricFragment;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 2
+.method public synthetic constructor <init>(Landroidx/biometric/BiometricFragment;I)V
+    .locals 0
 
-    const/4 v0, 0x1
+    .line 1
+    iput p2, p0, Lzp0;->a:I
 
-    new-array v1, v0, [Lol4;
+    iput-object p1, p0, Lzp0;->b:Landroidx/biometric/BiometricFragment;
 
-    new-array v0, v0, [Lyp0;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, v1, v0}, Ljdf;-><init>([Lol4;[Lpl4;)V
+    return-void
+.end method
 
-    iput-object p1, p0, Lzp0;->n:Landroid/content/Context;
+.method public constructor <init>(Landroidx/biometric/BiometricFragment;ILjava/lang/CharSequence;)V
+    .locals 0
 
-    const/4 p1, -0x1
+    const/4 p2, 0x0
 
-    iput p1, p0, Lzp0;->o:I
+    iput p2, p0, Lzp0;->a:I
+
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lzp0;->b:Landroidx/biometric/BiometricFragment;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final f()Lol4;
+.method public final run()V
     .locals 2
 
-    new-instance v0, Lol4;
+    iget v0, p0, Lzp0;->a:I
 
-    const/4 v1, 0x1
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {v0, v1}, Lol4;-><init>(I)V
+    iget-object v0, p0, Lzp0;->b:Landroidx/biometric/BiometricFragment;
 
-    return-object v0
-.end method
+    iget-object v0, v0, Landroidx/biometric/BiometricFragment;->i1:Landroidx/biometric/BiometricViewModel;
 
-.method public final g()Lpl4;
-    .locals 1
+    const/4 v1, 0x0
 
-    new-instance v0, Lyp0;
+    iput-boolean v1, v0, Landroidx/biometric/BiometricViewModel;->t:Z
 
-    invoke-direct {v0, p0}, Lyp0;-><init>(Lzp0;)V
+    return-void
 
-    return-object v0
-.end method
+    :pswitch_0
+    iget-object v0, p0, Lzp0;->b:Landroidx/biometric/BiometricFragment;
 
-.method public final h(Ljava/lang/Throwable;)Landroidx/media3/decoder/DecoderException;
-    .locals 2
+    iget-object v0, v0, Landroidx/biometric/BiometricFragment;->i1:Landroidx/biometric/BiometricViewModel;
 
-    new-instance v0, Landroidx/media3/exoplayer/image/ImageDecoderException;
+    iget-object v1, v0, Landroidx/biometric/BiometricViewModel;->b:Lcij;
 
-    const-string v1, "Unexpected decode error"
+    if-nez v1, :cond_0
 
-    invoke-direct {v0, v1, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    new-instance v1, Lnq0;
 
-    return-object v0
-.end method
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
-.method public final i(Lol4;Lpl4;Z)Landroidx/media3/decoder/DecoderException;
-    .locals 6
-
-    check-cast p2, Lyp0;
-
-    iget-object p3, p1, Lol4;->o:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {p3}, Ljava/nio/ByteBuffer;->hasArray()Z
-
-    move-result v0
-
-    invoke-static {v0}, Lh6j;->g(Z)V
-
-    invoke-virtual {p3}, Ljava/nio/ByteBuffer;->arrayOffset()I
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    if-nez v0, :cond_0
-
-    move v0, v1
-
-    goto :goto_0
+    iput-object v1, v0, Landroidx/biometric/BiometricViewModel;->b:Lcij;
 
     :cond_0
-    const/4 v0, 0x0
+    iget-object v0, v0, Landroidx/biometric/BiometricViewModel;->b:Lcij;
 
-    :goto_0
-    invoke-static {v0}, Lh6j;->b(Z)V
+    invoke-virtual {v0}, Lcij;->c()V
 
-    :try_start_0
-    iget v0, p0, Lzp0;->o:I
+    return-void
 
-    const/4 v2, -0x1
+    :pswitch_1
+    iget-object v0, p0, Lzp0;->b:Landroidx/biometric/BiometricFragment;
 
-    if-eq v0, v2, :cond_1
+    iget-object v0, v0, Landroidx/biometric/BiometricFragment;->i1:Landroidx/biometric/BiometricViewModel;
 
-    goto :goto_2
+    iget-object v1, v0, Landroidx/biometric/BiometricViewModel;->b:Lcij;
+
+    if-nez v1, :cond_1
+
+    new-instance v1, Lnq0;
+
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+
+    iput-object v1, v0, Landroidx/biometric/BiometricViewModel;->b:Lcij;
 
     :cond_1
-    iget-object v0, p0, Lzp0;->n:Landroid/content/Context;
+    iget-object v0, v0, Landroidx/biometric/BiometricViewModel;->b:Lcij;
 
-    if-eqz v0, :cond_4
+    invoke-virtual {v0}, Lcij;->b()V
 
-    invoke-static {v0}, Lmbh;->y(Landroid/content/Context;)Landroid/graphics/Point;
+    return-void
 
-    move-result-object v0
+    nop
 
-    iget v3, v0, Landroid/graphics/Point;->x:I
-
-    iget v0, v0, Landroid/graphics/Point;->y:I
-
-    iget-object v4, p1, Lol4;->c:Lpj6;
-
-    if-eqz v4, :cond_3
-
-    iget v5, v4, Lpj6;->M:I
-
-    if-eq v5, v2, :cond_2
-
-    mul-int/2addr v3, v5
-
-    :cond_2
-    iget v4, v4, Lpj6;->N:I
-
-    if-eq v4, v2, :cond_3
-
-    mul-int/2addr v0, v4
-
-    goto :goto_1
-
-    :catch_0
-    move-exception p1
-
-    goto :goto_3
-
-    :catch_1
-    move-exception p1
-
-    goto :goto_4
-
-    :cond_3
-    :goto_1
-    invoke-static {v3, v0}, Ljava/lang/Math;->max(II)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x2
-
-    sub-int/2addr v0, v1
-
-    goto :goto_2
-
-    :cond_4
-    const/16 v0, 0x1000
-
-    :goto_2
-    invoke-virtual {p3}, Ljava/nio/ByteBuffer;->array()[B
-
-    move-result-object v1
-
-    invoke-virtual {p3}, Ljava/nio/Buffer;->remaining()I
-
-    move-result p3
-
-    const/4 v2, 0x0
-
-    invoke-static {v1, p3, v0, v2}, Lj9j;->a([BIILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
-
-    move-result-object p3
-
-    iput-object p3, p2, Lyp0;->o:Landroid/graphics/Bitmap;
-    :try_end_0
-    .catch Landroidx/media3/common/ParserException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-
-    iget-wide v0, p1, Lol4;->Y:J
-
-    iput-wide v0, p2, Lpl4;->c:J
-
-    return-object v2
-
-    :goto_3
-    new-instance p2, Landroidx/media3/exoplayer/image/ImageDecoderException;
-
-    invoke-direct {p2, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/Throwable;)V
-
-    goto :goto_5
-
-    :goto_4
-    new-instance p2, Landroidx/media3/exoplayer/image/ImageDecoderException;
-
-    const-string p3, "Could not decode image data with BitmapFactory."
-
-    invoke-direct {p2, p3, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :goto_5
-    return-object p2
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

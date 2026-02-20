@@ -29,27 +29,27 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/net/DownloadService$Impl;",
         "Lru/ok/android/externcalls/sdk/net/DownloadService;",
-        "Lahd;",
+        "Ltmd;",
         "logger",
         "<init>",
-        "(Lahd;)V",
+        "(Ltmd;)V",
         "",
         "url",
         "Ljava/io/File;",
         "destination",
         "Ljava/security/MessageDigest;",
         "md",
-        "Lb3h;",
+        "Lmah;",
         "downloadInner",
         "(Ljava/lang/String;Ljava/io/File;Ljava/security/MessageDigest;)V",
         "dest",
         "Lru/ok/android/externcalls/sdk/net/FileValidationConfig;",
         "fileValidationConfig",
-        "Lkef;",
+        "Limf;",
         "Lru/ok/android/externcalls/sdk/net/internal/DownloadResult;",
         "download",
-        "(Ljava/lang/String;Ljava/io/File;Lru/ok/android/externcalls/sdk/net/FileValidationConfig;)Lkef;",
-        "Lahd;",
+        "(Ljava/lang/String;Ljava/io/File;Lru/ok/android/externcalls/sdk/net/FileValidationConfig;)Limf;",
+        "Ltmd;",
         "Companion",
         "calls-sdk_release"
     }
@@ -73,7 +73,7 @@
 
 
 # instance fields
-.field private final logger:Lahd;
+.field private final logger:Ltmd;
 
 
 # direct methods
@@ -84,40 +84,40 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/net/DownloadService$Impl$Companion;-><init>(Lso4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/net/DownloadService$Impl$Companion;-><init>(Lfq4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/net/DownloadService$Impl;->Companion:Lru/ok/android/externcalls/sdk/net/DownloadService$Impl$Companion;
 
     return-void
 .end method
 
-.method public constructor <init>(Lahd;)V
+.method public constructor <init>(Ltmd;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/net/DownloadService$Impl;->logger:Lahd;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/net/DownloadService$Impl;->logger:Ltmd;
 
     return-void
 .end method
 
-.method public static synthetic a(Ljava/lang/String;Ljava/io/File;Lru/ok/android/externcalls/sdk/net/FileValidationConfig;Lru/ok/android/externcalls/sdk/net/DownloadService$Impl;Loef;)V
+.method public static synthetic a(Ljava/lang/String;Ljava/io/File;Lru/ok/android/externcalls/sdk/net/FileValidationConfig;Lru/ok/android/externcalls/sdk/net/DownloadService$Impl;Lomf;)V
     .locals 0
 
-    invoke-static {p0, p1, p2, p3, p4}, Lru/ok/android/externcalls/sdk/net/DownloadService$Impl;->download$lambda$3(Ljava/lang/String;Ljava/io/File;Lru/ok/android/externcalls/sdk/net/FileValidationConfig;Lru/ok/android/externcalls/sdk/net/DownloadService$Impl;Lref;)V
+    invoke-static {p0, p1, p2, p3, p4}, Lru/ok/android/externcalls/sdk/net/DownloadService$Impl;->download$lambda$3(Ljava/lang/String;Ljava/io/File;Lru/ok/android/externcalls/sdk/net/FileValidationConfig;Lru/ok/android/externcalls/sdk/net/DownloadService$Impl;Lqmf;)V
 
     return-void
 .end method
 
-.method public static final synthetic access$getLogger$p(Lru/ok/android/externcalls/sdk/net/DownloadService$Impl;)Lahd;
+.method public static final synthetic access$getLogger$p(Lru/ok/android/externcalls/sdk/net/DownloadService$Impl;)Ltmd;
     .locals 0
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/net/DownloadService$Impl;->logger:Lahd;
+    iget-object p0, p0, Lru/ok/android/externcalls/sdk/net/DownloadService$Impl;->logger:Ltmd;
 
     return-object p0
 .end method
 
-.method private static final download$lambda$3(Ljava/lang/String;Ljava/io/File;Lru/ok/android/externcalls/sdk/net/FileValidationConfig;Lru/ok/android/externcalls/sdk/net/DownloadService$Impl;Lref;)V
+.method private static final download$lambda$3(Ljava/lang/String;Ljava/io/File;Lru/ok/android/externcalls/sdk/net/FileValidationConfig;Lru/ok/android/externcalls/sdk/net/DownloadService$Impl;Lqmf;)V
     .locals 8
 
     const-string v0, "Url is invalid "
@@ -152,9 +152,9 @@
 
     move-object v0, p4
 
-    check-cast v0, Loef;
+    check-cast v0, Lomf;
 
-    invoke-virtual {v0, p2}, Loef;->onError(Ljava/lang/Throwable;)V
+    invoke-virtual {v0, p2}, Lomf;->onError(Ljava/lang/Throwable;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
@@ -178,7 +178,7 @@
 
     :cond_0
     :try_start_2
-    invoke-static {p1}, Lupj;->d(Ljava/io/File;)V
+    invoke-static {p1}, Llh4;->c(Ljava/io/File;)V
 
     if-nez p2, :cond_1
 
@@ -237,11 +237,11 @@
 
     move-object v2, p3
 
-    invoke-virtual {p2}, Lru/ok/android/externcalls/sdk/net/FileValidationConfig;->getHashAlgorithm()Lu47;
+    invoke-virtual {p2}, Lru/ok/android/externcalls/sdk/net/FileValidationConfig;->getHashAlgorithm()Lp57;
 
     move-result-object p0
 
-    iget-object p0, p0, Lu47;->a:Ljava/lang/String;
+    iget-object p0, p0, Lp57;->a:Ljava/lang/String;
 
     invoke-static {p0}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
 
@@ -335,9 +335,9 @@
     :try_start_6
     move-object p0, p4
 
-    check-cast p0, Loef;
+    check-cast p0, Lomf;
 
-    invoke-virtual {p0, p2}, Loef;->a(Ljava/lang/Object;)V
+    invoke-virtual {p0, p2}, Lomf;->a(Ljava/lang/Object;)V
     :try_end_6
     .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_3
 
@@ -382,7 +382,7 @@
     .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_1
 
     :goto_4
-    iget-object p0, v2, Lru/ok/android/externcalls/sdk/net/DownloadService$Impl;->logger:Lahd;
+    iget-object p0, v2, Lru/ok/android/externcalls/sdk/net/DownloadService$Impl;->logger:Ltmd;
 
     invoke-virtual {v4}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
@@ -394,7 +394,7 @@
 
     const-string v1, "Exception during file downloading. url "
 
-    invoke-static {v1, v3, p3, p1, v0}, Lkz1;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1, v3, p3, p1, v0}, Lau1;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object p1
 
@@ -406,17 +406,17 @@
 
     const-string p3, "DownloadService.Impl"
 
-    invoke-interface {p0, p3, p1}, Lahd;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p0, p3, p1}, Ltmd;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance p0, Lru/ok/android/externcalls/sdk/net/DownloadService$Impl$download$1$1;
 
     invoke-direct {p0, v2}, Lru/ok/android/externcalls/sdk/net/DownloadService$Impl$download$1$1;-><init>(Lru/ok/android/externcalls/sdk/net/DownloadService$Impl;)V
 
-    invoke-static {v4, p0}, Lupj;->c(Ljava/io/File;Lnq6;)V
+    invoke-static {v4, p0}, Llh4;->b(Ljava/io/File;Lks6;)V
 
-    check-cast p4, Loef;
+    check-cast p4, Lomf;
 
-    invoke-virtual {p4, p2}, Loef;->onError(Ljava/lang/Throwable;)V
+    invoke-virtual {p4, p2}, Lomf;->onError(Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -430,9 +430,9 @@
 
     if-eqz p3, :cond_0
 
-    new-instance v2, Ly9h;
+    new-instance v2, Lghh;
 
-    invoke-direct {v2, v0, p3}, Ly9h;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v2, v0, p3}, Lghh;-><init>(ILjava/lang/Object;)V
 
     goto :goto_0
 
@@ -478,7 +478,7 @@
 
     aput-object v2, p2, v0
 
-    invoke-static {v5, p2}, Ll36;->h(Ljava/io/InputStream;[Ljava/io/OutputStream;)V
+    invoke-static {v5, p2}, Lg56;->h(Ljava/io/InputStream;[Ljava/io/OutputStream;)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
@@ -618,7 +618,7 @@
 
 
 # virtual methods
-.method public download(Ljava/lang/String;Ljava/io/File;Lru/ok/android/externcalls/sdk/net/FileValidationConfig;)Lkef;
+.method public download(Ljava/lang/String;Ljava/io/File;Lru/ok/android/externcalls/sdk/net/FileValidationConfig;)Limf;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -627,25 +627,25 @@
             "Ljava/io/File;",
             "Lru/ok/android/externcalls/sdk/net/FileValidationConfig;",
             ")",
-            "Lkef;"
+            "Limf;"
         }
     .end annotation
 
-    new-instance v0, Lql;
+    new-instance v0, Len;
 
-    invoke-direct {v0, p1, p2, p3, p0}, Lql;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v0, p1, p2, p3, p0}, Len;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
-    new-instance p1, Lrza;
+    new-instance p1, Lh2b;
 
     const/4 p2, 0x1
 
-    invoke-direct {p1, p2, v0}, Lrza;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p1, p2, v0}, Lh2b;-><init>(ILjava/lang/Object;)V
 
-    invoke-static {}, Lace;->b()Lpbe;
+    invoke-static {}, Lpie;->b()Leie;
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lkef;->n(Lpbe;)Lcff;
+    invoke-virtual {p1, p2}, Limf;->o(Leie;)Lbnf;
 
     move-result-object p1
 

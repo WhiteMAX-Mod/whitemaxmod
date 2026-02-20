@@ -1,53 +1,47 @@
-.class public interface abstract Lx74;
-.super Ljava/lang/Object;
+.class public final Lx74;
+.super Lda4;
 .source "SourceFile"
 
 
+# instance fields
+.field public X:I
+
+.field public synthetic d:Ljava/lang/Object;
+
+.field public final synthetic o:Lc84;
+
+
+# direct methods
+.method public constructor <init>(Lc84;Lda4;)V
+    .locals 0
+
+    iput-object p1, p0, Lx74;->o:Lc84;
+
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public abstract b()Lx74;
-.end method
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-.method public abstract build()Ly74;
-.end method
+    iput-object p1, p0, Lx74;->d:Ljava/lang/Object;
 
-.method public abstract c()Lx74;
-.end method
+    iget p1, p0, Lx74;->X:I
 
-.method public abstract k(Landroid/graphics/Rect;F)Lx74;
-.end method
+    const/high16 v0, -0x80000000
 
-.method public n()Lx74;
-    .locals 0
+    or-int/2addr p1, v0
 
-    return-object p0
-.end method
+    iput p1, p0, Lx74;->X:I
 
-.method public abstract o(Ljava/util/Collection;)Lx74;
-.end method
+    iget-object p1, p0, Lx74;->o:Lc84;
 
-.method public p(FF)Lx74;
-    .locals 0
+    invoke-virtual {p1, p0}, Lc84;->c(Lda4;)Ljava/lang/Object;
 
-    return-object p0
-.end method
+    move-result-object p1
 
-.method public abstract s(F)Lx74;
-.end method
-
-.method public abstract t(Landroid/os/Bundle;)Lx74;
-.end method
-
-.method public v()Lx74;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public abstract w(Landroid/view/View;)Lx74;
-.end method
-
-.method public abstract x()Lx74;
-.end method
-
-.method public abstract y(Lqhg;)Lx74;
+    return-object p1
 .end method

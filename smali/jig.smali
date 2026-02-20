@@ -1,27 +1,49 @@
-.class public final Ljig;
+.class public Ljig;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final b:Ljig;
+
+
 # instance fields
-.field public final a:I
-
-.field public final b:I
-
-.field public final c:Ljava/lang/String;
+.field public final a:Landroid/util/ArrayMap;
 
 
 # direct methods
-.method public constructor <init>(IILjava/lang/String;)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Ljig;
+
+    new-instance v1, Landroid/util/ArrayMap;
+
+    invoke-direct {v1}, Landroid/util/ArrayMap;-><init>()V
+
+    invoke-direct {v0, v1}, Ljig;-><init>(Landroid/util/ArrayMap;)V
+
+    sput-object v0, Ljig;->b:Ljig;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/util/ArrayMap;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Ljig;->a:I
-
-    iput p2, p0, Ljig;->b:I
-
-    iput-object p3, p0, Ljig;->c:Ljava/lang/String;
+    iput-object p1, p0, Ljig;->a:Landroid/util/ArrayMap;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "android.hardware.camera2.CaptureRequest.setTag.CX"
+
+    return-object v0
 .end method

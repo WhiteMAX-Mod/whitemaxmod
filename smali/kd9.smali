@@ -1,128 +1,70 @@
-.class public final synthetic Lkd9;
+.class public final Lkd9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
+
+# static fields
+.field public static final c:Z
 
 
 # instance fields
-.field public final synthetic a:I
+.field public a:Landroid/content/Context;
 
-.field public final synthetic b:Lmd9;
-
-.field public final synthetic c:Landroid/util/Pair;
+.field public b:Landroid/content/ContentResolver;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lmd9;Landroid/util/Pair;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p3, p0, Lkd9;->a:I
+    sget-boolean v0, Lpd9;->b:Z
 
-    iput-object p1, p0, Lkd9;->b:Lmd9;
-
-    iput-object p2, p0, Lkd9;->c:Landroid/util/Pair;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-boolean v0, Lkd9;->c:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 3
+.method public final a(Lod9;Ljava/lang/String;)Z
+    .locals 2
 
-    iget v0, p0, Lkd9;->a:I
+    iget-object v0, p0, Lkd9;->a:Landroid/content/Context;
 
-    packed-switch v0, :pswitch_data_0
+    iget v1, p1, Lod9;->b:I
 
-    iget-object v0, p0, Lkd9;->b:Lmd9;
+    if-gez v1, :cond_0
 
-    iget-object v0, v0, Lmd9;->b:Lwh6;
+    invoke-virtual {v0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
-    iget-object v0, v0, Lwh6;->u0:Ljava/lang/Object;
+    move-result-object v0
 
-    check-cast v0, Lon4;
+    iget-object p1, p1, Lod9;->a:Ljava/lang/String;
 
-    iget-object v1, p0, Lkd9;->c:Landroid/util/Pair;
+    invoke-virtual {v0, p2, p1}, Landroid/content/pm/PackageManager;->checkPermission(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-object v2, v1, Landroid/util/Pair;->first:Ljava/lang/Object;
+    move-result p1
 
-    check-cast v2, Ljava/lang/Integer;
+    if-nez p1, :cond_1
 
-    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+    goto :goto_0
 
-    move-result v2
+    :cond_0
+    iget p1, p1, Lod9;->c:I
 
-    iget-object v1, v1, Landroid/util/Pair;->second:Ljava/lang/Object;
+    invoke-virtual {v0, p2, v1, p1}, Landroid/content/Context;->checkPermission(Ljava/lang/String;II)I
 
-    check-cast v1, Lvc9;
+    move-result p1
 
-    invoke-virtual {v0, v2, v1}, Lon4;->w(ILvc9;)V
+    if-nez p1, :cond_1
 
-    return-void
+    :goto_0
+    const/4 p1, 0x1
 
-    :pswitch_0
-    iget-object v0, p0, Lkd9;->b:Lmd9;
+    return p1
 
-    iget-object v0, v0, Lmd9;->b:Lwh6;
+    :cond_1
+    const/4 p1, 0x0
 
-    iget-object v0, v0, Lwh6;->u0:Ljava/lang/Object;
-
-    check-cast v0, Lon4;
-
-    iget-object v1, p0, Lkd9;->c:Landroid/util/Pair;
-
-    iget-object v2, v1, Landroid/util/Pair;->first:Ljava/lang/Object;
-
-    check-cast v2, Ljava/lang/Integer;
-
-    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
-
-    move-result v2
-
-    iget-object v1, v1, Landroid/util/Pair;->second:Ljava/lang/Object;
-
-    check-cast v1, Lvc9;
-
-    invoke-virtual {v0, v2, v1}, Lon4;->B(ILvc9;)V
-
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lkd9;->b:Lmd9;
-
-    iget-object v0, v0, Lmd9;->b:Lwh6;
-
-    iget-object v0, v0, Lwh6;->u0:Ljava/lang/Object;
-
-    check-cast v0, Lon4;
-
-    iget-object v1, p0, Lkd9;->c:Landroid/util/Pair;
-
-    iget-object v2, v1, Landroid/util/Pair;->first:Ljava/lang/Object;
-
-    check-cast v2, Ljava/lang/Integer;
-
-    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
-
-    move-result v2
-
-    iget-object v1, v1, Landroid/util/Pair;->second:Ljava/lang/Object;
-
-    check-cast v1, Lvc9;
-
-    invoke-virtual {v0, v2, v1}, Lon4;->z(ILvc9;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return p1
 .end method

@@ -1,10 +1,47 @@
-.class public abstract Lk5d;
+.class public final Lk5d;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
-# static fields
-.field public static abc_action_bar_embed_tabs:I = 0x7f050000
+# instance fields
+.field public final a:Lrf5;
 
-.field public static abc_config_actionMenuItemAllCaps:I = 0x7f050001
+.field public final b:Lotg;
 
-.field public static mtrl_btn_textappearance_all_caps:I = 0x7f05000c
+.field public final c:Lv92;
+
+.field public d:Z
+
+.field public e:Z
+
+.field public f:Z
+
+.field public g:J
+
+
+# direct methods
+.method public constructor <init>(Lrf5;Lotg;)V
+    .locals 3
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lk5d;->a:Lrf5;
+
+    iput-object p2, p0, Lk5d;->b:Lotg;
+
+    new-instance p1, Lv92;
+
+    const/16 p2, 0x40
+
+    new-array v0, p2, [B
+
+    const/4 v1, 0x2
+
+    const/4 v2, 0x0
+
+    invoke-direct {p1, v0, p2, v1, v2}, Lv92;-><init>([BIIB)V
+
+    iput-object p1, p0, Lk5d;->c:Lv92;
+
+    return-void
+.end method

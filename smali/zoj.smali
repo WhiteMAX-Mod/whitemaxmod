@@ -1,64 +1,60 @@
-.class public abstract Lzoj;
+.class public final Lzoj;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Loza;
+
+
+# static fields
+.field public static final a:Lzoj;
+
 
 # direct methods
-.method public static a(Ljava/lang/Throwable;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 3
 
-    instance-of v0, p0, Ljava/lang/VirtualMachineError;
+    new-instance v0, Lzoj;
 
-    if-nez v0, :cond_2
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    instance-of v0, p0, Ljava/lang/ThreadDeath;
+    sput-object v0, Lzoj;->a:Lzoj;
 
-    if-nez v0, :cond_1
-
-    instance-of v0, p0, Ljava/lang/LinkageError;
-
-    if-nez v0, :cond_0
-
-    return-void
-
-    :cond_0
-    check-cast p0, Ljava/lang/LinkageError;
-
-    throw p0
-
-    :cond_1
-    check-cast p0, Ljava/lang/ThreadDeath;
-
-    throw p0
-
-    :cond_2
-    check-cast p0, Ljava/lang/VirtualMachineError;
-
-    throw p0
-.end method
-
-.method public static final b(Lr4h;)V
-    .locals 2
-
-    new-instance v0, Lffe;
-
-    const/4 v1, 0x4
-
-    invoke-direct {v0, v1}, Lffe;-><init>(I)V
+    new-instance v0, Lp7j;
 
     const/4 v1, 0x1
 
-    invoke-virtual {p0, v1, v0}, Lr4h;->c(ILhs7;)V
+    invoke-direct {v0, v1}, Lp7j;-><init>(I)V
 
-    new-instance v0, Lgfe;
+    const-class v1, Lh8j;
 
-    const/16 v1, 0x1b
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
 
-    invoke-direct {v0, v1}, Lgfe;-><init>(I)V
+    move-result-object v0
 
-    const/16 v1, 0x201
+    const/4 v2, 0x2
 
-    invoke-virtual {p0, v1, v0}, Lr4h;->e(ILhs7;)V
+    invoke-static {v0, v2}, Leni;->i(Ljava/util/HashMap;I)Lp7j;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, Leni;->m(Ljava/util/HashMap;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
+
+    invoke-static {p1}, Lkb0;->d(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+
+    move-result-object p1
+
+    throw p1
 .end method

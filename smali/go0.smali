@@ -3,92 +3,166 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lhke;
+.implements Lw2h;
 
 
 # instance fields
-.field public final a:Ljo0;
-
-.field public final b:J
-
-.field public final c:J
-
-.field public final d:J
-
-.field public final e:J
-
-.field public final f:J
+.field public final a:Ljava/util/LinkedHashMap;
 
 
 # direct methods
-.method public constructor <init>(Ljo0;JJJJJ)V
-    .locals 0
+.method public varargs constructor <init>([Ljava/security/cert/X509Certificate;)V
+    .locals 6
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lgo0;->a:Ljo0;
+    new-instance v0, Ljava/util/LinkedHashMap;
 
-    iput-wide p2, p0, Lgo0;->b:J
+    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
 
-    iput-wide p4, p0, Lgo0;->c:J
+    array-length v1, p1
 
-    iput-wide p6, p0, Lgo0;->d:J
+    const/4 v2, 0x0
 
-    iput-wide p8, p0, Lgo0;->e:J
+    :goto_0
+    if-ge v2, v1, :cond_1
 
-    iput-wide p10, p0, Lgo0;->f:J
+    aget-object v3, p1, v2
+
+    invoke-virtual {v3}, Ljava/security/cert/X509Certificate;->getSubjectX500Principal()Ljavax/security/auth/x500/X500Principal;
+
+    move-result-object v4
+
+    invoke-virtual {v0, v4}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v5
+
+    if-nez v5, :cond_0
+
+    new-instance v5, Ljava/util/LinkedHashSet;
+
+    invoke-direct {v5}, Ljava/util/LinkedHashSet;-><init>()V
+
+    invoke-interface {v0, v4, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_0
+    check-cast v5, Ljava/util/Set;
+
+    invoke-interface {v5, v3}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    iput-object v0, p0, Lgo0;->a:Ljava/util/LinkedHashMap;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c()Z
+.method public final a(Ljava/security/cert/X509Certificate;)Ljava/security/cert/X509Certificate;
+    .locals 4
+
+    invoke-virtual {p1}, Ljava/security/cert/X509Certificate;->getIssuerX500Principal()Ljavax/security/auth/x500/X500Principal;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lgo0;->a:Ljava/util/LinkedHashMap;
+
+    invoke-virtual {v1, v0}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/Set;
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_0
+
+    return-object v1
+
+    :cond_0
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :catch_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    move-object v3, v2
+
+    check-cast v3, Ljava/security/cert/X509Certificate;
+
+    :try_start_0
+    invoke-virtual {v3}, Ljava/security/cert/Certificate;->getPublicKey()Ljava/security/PublicKey;
+
+    move-result-object v3
+
+    invoke-virtual {p1, v3}, Ljava/security/cert/Certificate;->verify(Ljava/security/PublicKey;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-object v1, v2
+
+    :cond_1
+    check-cast v1, Ljava/security/cert/X509Certificate;
+
+    return-object v1
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    const/4 v0, 0x1
+    if-eq p1, p0, :cond_1
+
+    instance-of v0, p1, Lgo0;
+
+    if-eqz v0, :cond_0
+
+    check-cast p1, Lgo0;
+
+    iget-object p1, p1, Lgo0;->a:Ljava/util/LinkedHashMap;
+
+    iget-object v0, p0, Lgo0;->a:Ljava/util/LinkedHashMap;
+
+    invoke-static {p1, v0}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    :goto_0
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lgo0;->a:Ljava/util/LinkedHashMap;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
 
     return v0
-.end method
-
-.method public final e(J)Lfke;
-    .locals 13
-
-    iget-object v0, p0, Lgo0;->a:Ljo0;
-
-    invoke-interface {v0, p1, p2}, Ljo0;->c(J)J
-
-    move-result-wide v1
-
-    iget-wide v9, p0, Lgo0;->e:J
-
-    iget-wide v11, p0, Lgo0;->f:J
-
-    const-wide/16 v3, 0x0
-
-    iget-wide v5, p0, Lgo0;->c:J
-
-    iget-wide v7, p0, Lgo0;->d:J
-
-    invoke-static/range {v1 .. v12}, Lio0;->a(JJJJJJ)J
-
-    move-result-wide v0
-
-    new-instance v2, Lfke;
-
-    new-instance v3, Llke;
-
-    invoke-direct {v3, p1, p2, v0, v1}, Llke;-><init>(JJ)V
-
-    invoke-direct {v2, v3, v3}, Lfke;-><init>(Llke;Llke;)V
-
-    return-object v2
-.end method
-
-.method public final f()J
-    .locals 2
-
-    iget-wide v0, p0, Lgo0;->b:J
-
-    return-wide v0
 .end method

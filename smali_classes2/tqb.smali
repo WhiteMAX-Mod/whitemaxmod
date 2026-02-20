@@ -1,160 +1,77 @@
-.class public final synthetic Ltqb;
+.class public interface abstract Ltqb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Llq6;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lone/me/notifications/settings/screens/other/OtherNotificationsSettingsScreen;
-
-
-# direct methods
-.method public synthetic constructor <init>(Lone/me/notifications/settings/screens/other/OtherNotificationsSettingsScreen;I)V
-    .locals 0
-
-    iput p2, p0, Ltqb;->a:I
-
-    iput-object p1, p0, Ltqb;->b:Lone/me/notifications/settings/screens/other/OtherNotificationsSettingsScreen;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 8
+.method public abstract a(Lvqb;)V
+.end method
 
-    iget v0, p0, Ltqb;->a:I
+.method public abstract b(Lkqb;)V
+.end method
 
-    const/4 v1, -0x1
+.method public abstract c(Lvqb;)V
+.end method
 
-    const/4 v2, 0x6
+.method public abstract d(Lkqb;Ljpg;Z)V
+.end method
 
-    iget-object v3, p0, Ltqb;->b:Lone/me/notifications/settings/screens/other/OtherNotificationsSettingsScreen;
+.method public abstract e(Lone/video/exo/error/OneVideoExoPlaybackException;Lsxh;Lvqb;)V
+.end method
 
-    packed-switch v0, :pswitch_data_0
+.method public abstract f(Lvqb;)V
+.end method
 
-    sget-object v0, Lone/me/notifications/settings/screens/other/OtherNotificationsSettingsScreen;->X:[Lz28;
+.method public abstract g(Lvqb;F)V
+.end method
 
-    new-instance v0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+.method public abstract h(Lone/video/player/BaseVideoPlayer;II)V
+.end method
 
-    invoke-virtual {v3}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+.method public abstract i(Lkqb;Lyxh;)V
+.end method
 
-    move-result-object v4
+.method public abstract j(Lvqb;)V
+.end method
 
-    const/4 v5, 0x0
+.method public abstract k(Lvqb;)V
+.end method
 
-    invoke-direct {v0, v4, v5, v2}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+.method public abstract l(Lkqb;Lyxh;)V
+.end method
 
-    sget v2, Lueb;->v:I
+.method public abstract m(Lvqb;)V
+.end method
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->setId(I)V
+.method public abstract n(Lvqb;I)V
+.end method
 
-    new-instance v2, Landroid/view/ViewGroup$LayoutParams;
+.method public abstract o(Lvqb;Z)V
+.end method
 
-    invoke-direct {v2, v1, v1}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+.method public abstract p(Lkqb;Lt80;)V
+.end method
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+.method public abstract q(Lvqb;)V
+.end method
 
-    new-instance v1, Landroidx/recyclerview/widget/LinearLayoutManager;
+.method public abstract r(Lvqb;Lsqb;La62;La62;)V
+.end method
 
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+.method public abstract s(Lvqb;)V
+.end method
 
-    invoke-direct {v1}, Landroidx/recyclerview/widget/LinearLayoutManager;-><init>()V
+.method public abstract t(Lvqb;J)V
+.end method
 
-    invoke-virtual {v0, v1}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->setLayoutManager(Landroidx/recyclerview/widget/a;)V
+.method public abstract u(Lvqb;)V
+.end method
 
-    const/4 v1, 0x2
+.method public abstract v(Lvqb;)V
+.end method
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setOverScrollMode(I)V
+.method public abstract w(Lvqb;Z)V
+.end method
 
-    iget-object v1, v3, Lone/me/notifications/settings/screens/other/OtherNotificationsSettingsScreen;->c:Ll0f;
-
-    invoke-virtual {v0, v1}, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->setAdapter(Lwrd;)V
-
-    new-instance v4, Lu0b;
-
-    const/4 v1, 0x3
-
-    invoke-direct {v4, v1}, Lu0b;-><init>(I)V
-
-    new-instance v2, Ldke;
-
-    sget-object v3, Lpc3;->t0:Lkme;
-
-    invoke-virtual {v3, v0}, Lkme;->p(Landroid/view/View;)Lzlb;
-
-    move-result-object v3
-
-    const/4 v6, 0x0
-
-    const/16 v7, 0x1c
-
-    invoke-direct/range {v2 .. v7}, Ldke;-><init>(Lzlb;Lbke;Lnq6;Lk1e;I)V
-
-    invoke-virtual {v0, v2}, Landroidx/recyclerview/widget/RecyclerView;->j(Lcsd;)V
-
-    new-instance v2, Lu11;
-
-    invoke-direct {v2, v1}, Lu11;-><init>(I)V
-
-    invoke-virtual {v0, v2}, Landroidx/recyclerview/widget/RecyclerView;->j(Lcsd;)V
-
-    return-object v0
-
-    :pswitch_0
-    sget-object v0, Lone/me/notifications/settings/screens/other/OtherNotificationsSettingsScreen;->X:[Lz28;
-
-    new-instance v0, Lymb;
-
-    invoke-virtual {v3}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v3
-
-    invoke-direct {v0, v3, v2}, Lymb;-><init>(Landroid/content/Context;I)V
-
-    sget v2, Lueb;->x:I
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setId(I)V
-
-    new-instance v2, Landroid/view/ViewGroup$LayoutParams;
-
-    const/4 v3, -0x2
-
-    invoke-direct {v2, v1, v3}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    sget-object v1, Lqmb;->b:Lqmb;
-
-    invoke-virtual {v0, v1}, Lymb;->setForm(Lqmb;)V
-
-    sget v1, Lweb;->t:I
-
-    invoke-virtual {v0, v1}, Lymb;->setTitle(I)V
-
-    new-instance v1, Lgmb;
-
-    new-instance v2, Lxob;
-
-    const/4 v3, 0x1
-
-    invoke-direct {v2, v3}, Lxob;-><init>(I)V
-
-    invoke-direct {v1, v2}, Lgmb;-><init>(Lnq6;)V
-
-    invoke-virtual {v0, v1}, Lymb;->setLeftActions(Lmmb;)V
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+.method public abstract x(Lvqb;I)V
 .end method

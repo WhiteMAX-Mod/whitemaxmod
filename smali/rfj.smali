@@ -3,11 +3,13 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lvwa;
+.implements Loza;
 
 
 # static fields
 .field public static final a:Lrfj;
+
+.field public static final b:Ld16;
 
 
 # direct methods
@@ -20,71 +22,47 @@
 
     sput-object v0, Lrfj;->a:Lrfj;
 
-    new-instance v0, Lvzi;
+    new-instance v0, Lp7j;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, v1}, Lvzi;-><init>(I)V
+    invoke-direct {v0, v1}, Lp7j;-><init>(I)V
 
-    const-class v1, Ln0j;
+    const-class v1, Lh8j;
 
-    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
+    new-instance v1, Ld16;
+
+    invoke-static {v0}, Lkb0;->o(Ljava/util/HashMap;)Ljava/util/Map;
 
     move-result-object v0
 
-    const/4 v2, 0x4
+    const-string v2, "format"
 
-    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
+    invoke-direct {v1, v2, v0}, Ld16;-><init>(Ljava/lang/String;Ljava/util/Map;)V
 
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x5
-
-    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x6
-
-    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
+    sput-object v1, Lrfj;->b:Ld16;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 1
 
-    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    check-cast p1, Lqxj;
 
-    move-result-object p1
+    check-cast p2, Lpza;
 
-    throw p1
+    sget-object v0, Lrfj;->b:Ld16;
+
+    iget-object p1, p1, Lqxj;->a:Le5j;
+
+    invoke-interface {p2, v0, p1}, Lpza;->a(Ld16;Ljava/lang/Object;)Lpza;
+
+    return-void
 .end method

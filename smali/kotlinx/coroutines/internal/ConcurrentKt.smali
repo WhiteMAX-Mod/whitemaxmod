@@ -15,7 +15,7 @@
         "Lkotlin/Function0;",
         "action",
         "withLock",
-        "(Ljava/util/concurrent/locks/ReentrantLock;Llq6;)Ljava/lang/Object;",
+        "(Ljava/util/concurrent/locks/ReentrantLock;Lis6;)Ljava/lang/Object;",
         "E",
         "",
         "expectedSize",
@@ -152,7 +152,7 @@
     return v0
 .end method
 
-.method public static final withLock(Ljava/util/concurrent/locks/ReentrantLock;Llq6;)Ljava/lang/Object;
+.method public static final withLock(Ljava/util/concurrent/locks/ReentrantLock;Lis6;)Ljava/lang/Object;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -160,7 +160,7 @@
             "Ljava/lang/Object;",
             ">(",
             "Ljava/util/concurrent/locks/ReentrantLock;",
-            "Llq6;",
+            "Lis6;",
             ")TT;"
         }
     .end annotation
@@ -168,7 +168,7 @@
     invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->lock()V
 
     :try_start_0
-    invoke-interface {p1}, Llq6;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lis6;->invoke()Ljava/lang/Object;
 
     move-result-object p1
     :try_end_0

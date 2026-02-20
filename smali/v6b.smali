@@ -1,55 +1,146 @@
-.class public abstract Lv6b;
-.super Ljava/lang/Object;
+.class public final Lv6b;
+.super Lpdg;
 .source "SourceFile"
 
+# interfaces
+.implements Lys6;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:I
+# instance fields
+.field public final synthetic X:Lw6b;
 
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
+.field public o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lw6b;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    sget v0, Lc8d;->call_share_picker_confirm_p2p_invite_cancel:I
+    iput-object p1, p0, Lv6b;->X:Lw6b;
 
-    sput v0, Lv6b;->a:I
+    const/4 p1, 0x2
 
-    sget v0, Lc8d;->call_share_picker_confirm_p2p_invite_retry:I
-
-    sput v0, Lv6b;->b:I
-
-    sget v0, Lc8d;->call_share_picker_quote_view_progress:I
-
-    sput v0, Lv6b;->c:I
-
-    sget v0, Lc8d;->call_share_picker_quote_view_title:I
-
-    sput v0, Lv6b;->d:I
-
-    sget v0, Lc8d;->oneme_message_input_right_outer_icon:I
-
-    sput v0, Lv6b;->e:I
-
-    sget v0, Lc8d;->oneme_picker_quote_view:I
-
-    sput v0, Lv6b;->f:I
-
-    sget v0, Lc8d;->oneme_picker_toolbar:I
-
-    sput v0, Lv6b;->g:I
+    invoke-direct {p0, p1, p2}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lnd4;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lv6b;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lv6b;
+
+    sget-object p2, Lmah;->a:Lmah;
+
+    invoke-virtual {p1, p2}, Lv6b;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Lv6b;
+
+    iget-object v0, p0, Lv6b;->X:Lw6b;
+
+    invoke-direct {p1, v0, p2}, Lv6b;-><init>(Lw6b;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    iget-object v0, p0, Lv6b;->X:Lw6b;
+
+    iget-object v1, v0, Lw6b;->b:Lj88;
+
+    iget v2, p0, Lv6b;->o:I
+
+    const/4 v3, 0x1
+
+    if-eqz v2, :cond_1
+
+    if-ne v2, v3, :cond_0
+
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    invoke-interface {v1}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lphg;
+
+    iput v3, p0, Lv6b;->o:I
+
+    invoke-virtual {p1, p0}, Lphg;->a(Lda4;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v2, Lod4;->a:Lod4;
+
+    if-ne p1, v2, :cond_2
+
+    return-object v2
+
+    :cond_2
+    :goto_0
+    const-string p1, "PushToken"
+
+    const-string v2, "Refresh current token succeed."
+
+    invoke-static {p1, v2}, Ltej;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-interface {v1}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lphg;
+
+    new-instance v1, Lu6b;
+
+    invoke-direct {v1, v0}, Lu6b;-><init>(Lw6b;)V
+
+    iget-object v0, p1, Lphg;->u0:Lkotlinx/coroutines/internal/ContextScope;
+
+    new-instance v2, Lhhg;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v2, p1, v1, v3}, Lhhg;-><init>(Lphg;Lone/me/sdk/vendor/SystemServicesManager$PushTokenGeneratedListener;Lkotlin/coroutines/Continuation;)V
+
+    const/4 p1, 0x3
+
+    invoke-static {v0, v3, v3, v2, p1}, Lea9;->d(Lnd4;Led4;Lqd4;Lys6;I)Lcuf;
+
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
 .end method

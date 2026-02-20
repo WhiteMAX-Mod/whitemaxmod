@@ -1,117 +1,84 @@
-.class public final Lbd1;
+.class public final synthetic Lbd1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lqu1;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final synthetic a:Lone/me/calls/ui/ui/incoming/CallIncomingScreen;
+.field public final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(Lone/me/calls/ui/ui/incoming/CallIncomingScreen;)V
+.method public synthetic constructor <init>(I)V
     .locals 0
+
+    iput p1, p0, Lbd1;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lbd1;->a:Lone/me/calls/ui/ui/incoming/CallIncomingScreen;
+    return-void
+.end method
+
+.method private final a(Landroid/view/View;)V
+    .locals 0
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final j()V
-    .locals 11
+.method public final onClick(Landroid/view/View;)V
+    .locals 3
 
-    iget-object v0, p0, Lbd1;->a:Lone/me/calls/ui/ui/incoming/CallIncomingScreen;
+    iget p1, p0, Lbd1;->a:I
 
-    iget-object v1, v0, Lone/me/calls/ui/ui/incoming/CallIncomingScreen;->b:Ljzb;
+    const/4 v0, 0x6
 
-    iget-object v2, v0, Lone/me/calls/ui/ui/incoming/CallIncomingScreen;->Y:Ljava/lang/Object;
+    const/4 v1, 0x0
 
-    invoke-interface {v2}, Lo58;->getValue()Ljava/lang/Object;
+    packed-switch p1, :pswitch_data_0
 
-    move-result-object v2
+    sget-object p1, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->z0:[Lv58;
 
-    move-object v4, v2
+    :pswitch_0
+    return-void
 
-    check-cast v4, Ljgi;
+    :pswitch_1
+    sget-object p1, Lone/me/keyboardmedia/MediaKeyboardWidget;->C0:[Lv58;
 
-    invoke-virtual {v1}, Ljzb;->b()Lyzb;
+    sget-object p1, Lt68;->c:Lt68;
 
-    move-result-object v2
+    invoke-virtual {p1}, Ld3;->n0()Lyn4;
 
-    sget-object v5, Lyzb;->m:[Ljava/lang/String;
+    move-result-object p1
 
-    invoke-virtual {v2, v5}, Lyzb;->c([Ljava/lang/String;)Z
+    const-string v2, ":stickers/settings"
 
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    invoke-virtual {v1}, Ljzb;->b()Lyzb;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget v8, Ljed;->permissions_video_message_request_only_camera_title:I
-
-    sget v7, Ljed;->permissions_calls_video_preview_request:I
-
-    const/4 v9, 0x0
-
-    const/16 v10, 0x20
-
-    const/16 v6, 0xb7
-
-    invoke-static/range {v3 .. v10}, Lyzb;->n(Lyzb;Ljgi;[Ljava/lang/String;IIILezb;I)V
+    invoke-static {p1, v2, v1, v0}, Lyn4;->b(Lyn4;Ljava/lang/String;Landroid/os/Bundle;I)Z
 
     return-void
 
-    :cond_0
-    invoke-virtual {v0}, Lone/me/calls/ui/ui/incoming/CallIncomingScreen;->B0()Ljd1;
+    :pswitch_2
+    sget-object p1, Lone/me/calllist/ui/CallHistoryScreen;->J0:[Lv58;
 
-    move-result-object v1
+    sget-object p1, Llc1;->c:Llc1;
 
-    invoke-virtual {v0}, Lone/me/calls/ui/ui/incoming/CallIncomingScreen;->B0()Ljd1;
+    invoke-virtual {p1}, Ld3;->n0()Lyn4;
 
-    move-result-object v0
+    move-result-object p1
 
-    iget-object v0, v0, Ljd1;->v0:Lspf;
+    const-string v2, ":call-contact"
 
-    invoke-virtual {v0}, Lspf;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    instance-of v2, v0, Led1;
-
-    if-eqz v2, :cond_1
-
-    check-cast v0, Led1;
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    :goto_0
-    if-nez v0, :cond_2
-
-    const/4 v0, 0x0
-
-    goto :goto_1
-
-    :cond_2
-    iget-boolean v0, v0, Led1;->b:Z
-
-    :goto_1
-    xor-int/lit8 v0, v0, 0x1
-
-    invoke-virtual {v1, v0}, Ljd1;->t(Z)V
+    invoke-static {p1, v2, v1, v0}, Lyn4;->b(Lyn4;Ljava/lang/String;Landroid/os/Bundle;I)Z
 
     return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

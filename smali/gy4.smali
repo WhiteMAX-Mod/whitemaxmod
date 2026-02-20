@@ -1,138 +1,120 @@
-.class public final Lgy4;
+.class public final synthetic Lgy4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic a:I
 
-.field public final b:Ljava/lang/String;
+.field public final synthetic b:Ljava/lang/Runnable;
 
-.field public final c:Ljava/lang/String;
+.field public final synthetic c:Ln8;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+.method public synthetic constructor <init>(Ljava/lang/Runnable;Ln8;I)V
     .locals 0
 
+    iput p3, p0, Lgy4;->a:I
+
+    iput-object p1, p0, Lgy4;->b:Ljava/lang/Runnable;
+
+    iput-object p2, p0, Lgy4;->c:Ln8;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lgy4;->a:Ljava/lang/String;
-
-    iput-object p2, p0, Lgy4;->b:Ljava/lang/String;
-
-    iput-object p3, p0, Lgy4;->c:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final run()V
+    .locals 2
 
-    const/4 v0, 0x1
+    iget v0, p0, Lgy4;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    iget-object v0, p0, Lgy4;->b:Ljava/lang/Runnable;
 
-    :cond_0
-    const/4 v1, 0x0
+    iget-object v1, p0, Lgy4;->c:Ln8;
 
-    if-eqz p1, :cond_2
+    iget-object v1, v1, Ln8;->b:Ljava/lang/Object;
 
-    const-class v2, Lgy4;
+    check-cast v1, Lmy4;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :try_start_0
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    move-result-object v3
+    const/4 v0, 0x0
 
-    if-eq v2, v3, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lgy4;
-
-    iget-object v2, p0, Lgy4;->a:Ljava/lang/String;
-
-    iget-object v3, p1, Lgy4;->a:Ljava/lang/String;
-
-    invoke-static {v2, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget-object v2, p0, Lgy4;->b:Ljava/lang/String;
-
-    iget-object v3, p1, Lgy4;->b:Ljava/lang/String;
-
-    invoke-static {v2, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget-object v2, p0, Lgy4;->c:Ljava/lang/String;
-
-    iget-object p1, p1, Lgy4;->c:Ljava/lang/String;
-
-    invoke-static {v2, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    return v0
-
-    :cond_2
-    :goto_0
-    return v1
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-object v0, p0, Lgy4;->a:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    const/4 v1, 0x0
-
-    iget-object v2, p0, Lgy4;->b:Ljava/lang/String;
-
-    if-eqz v2, :cond_0
-
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
-
-    move-result v2
+    invoke-virtual {v1, v0}, Lf4;->n(Ljava/lang/Object;)Z
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    :cond_0
-    move v2, v1
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v1, v0}, Lf4;->o(Ljava/lang/Throwable;)Z
 
     :goto_0
-    add-int/2addr v0, v2
+    return-void
 
-    mul-int/lit8 v0, v0, 0x1f
+    :pswitch_0
+    iget-object v0, p0, Lgy4;->b:Ljava/lang/Runnable;
 
-    iget-object v2, p0, Lgy4;->c:Ljava/lang/String;
+    :try_start_1
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    if-eqz v2, :cond_1
+    goto :goto_1
 
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+    :catch_1
+    move-exception v0
 
-    move-result v1
+    iget-object v1, p0, Lgy4;->c:Ln8;
 
-    :cond_1
-    add-int/2addr v0, v1
+    iget-object v1, v1, Ln8;->b:Ljava/lang/Object;
 
-    return v0
+    check-cast v1, Lmy4;
+
+    invoke-virtual {v1, v0}, Lf4;->o(Ljava/lang/Throwable;)Z
+
+    :goto_1
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lgy4;->b:Ljava/lang/Runnable;
+
+    :try_start_2
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
+
+    return-void
+
+    :catch_2
+    move-exception v0
+
+    iget-object v1, p0, Lgy4;->c:Ln8;
+
+    iget-object v1, v1, Ln8;->b:Ljava/lang/Object;
+
+    check-cast v1, Lmy4;
+
+    invoke-virtual {v1, v0}, Lf4;->o(Ljava/lang/Throwable;)Z
+
+    throw v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

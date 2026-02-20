@@ -1,1157 +1,416 @@
 .class public final Lerh;
-.super Landroid/widget/FrameLayout;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/view/TextureView$SurfaceTextureListener;
-
-
-# static fields
-.field public static final synthetic D0:[Lz28;
-
-.field public static final E0:Lmea;
 
 
 # instance fields
-.field public final A0:Ldrh;
+.field public final a:Lj88;
 
-.field public final B0:Ldrh;
+.field public final b:Lj88;
 
-.field public final C0:Landroid/graphics/Path;
+.field public final c:Lj88;
 
-.field public final a:Ljava/lang/String;
+.field public final d:Lj88;
 
-.field public final b:Lo58;
+.field public final e:Lj88;
 
-.field public final c:Lo58;
+.field public final f:Lj88;
 
-.field public d:Lcrh;
+.field public final g:Lj88;
 
-.field public o:Landroid/view/Surface;
+.field public final h:Lj88;
 
-.field public t0:Landroid/graphics/SurfaceTexture;
+.field public final i:Ljava/lang/String;
 
-.field public final u0:Lkgh;
+.field public final j:Lkotlinx/coroutines/internal/ContextScope;
 
-.field public v0:Lxqh;
+.field public final k:Ljava/util/concurrent/ConcurrentHashMap$KeySetView;
 
-.field public w0:I
+.field public final l:Lzef;
 
-.field public x0:I
-
-.field public y0:I
-
-.field public final z0:[I
+.field public final m:Llrd;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(Lj88;Lj88;Lj88;Lj88;Lj88;Lj88;Lj88;Lj88;)V
+    .locals 0
 
-    new-instance v0, Lhfa;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "videoShape"
+    iput-object p1, p0, Lerh;->a:Lj88;
 
-    const-string v2, "getVideoShape()Lone/me/sdk/media/player/view/VideoView$VideoShape;"
+    iput-object p2, p0, Lerh;->b:Lj88;
 
-    const-class v3, Lerh;
+    iput-object p3, p0, Lerh;->c:Lj88;
 
-    invoke-direct {v0, v3, v1, v2}, Lhfa;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+    iput-object p4, p0, Lerh;->d:Lj88;
 
-    sget-object v1, Lctd;->a:Ldtd;
+    iput-object p5, p0, Lerh;->e:Lj88;
 
-    const-string v2, "videoContentMode"
+    iput-object p6, p0, Lerh;->f:Lj88;
 
-    const-string v4, "getVideoContentMode()Lone/me/sdk/media/player/view/VideoView$VideoContentMode;"
+    iput-object p7, p0, Lerh;->g:Lj88;
 
-    invoke-static {v1, v3, v2, v4}, Lxi4;->g(Ldtd;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)Lhfa;
+    iput-object p8, p0, Lerh;->h:Lj88;
 
-    move-result-object v1
+    const-class p1, Lerh;
 
-    const/4 v2, 0x2
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    new-array v3, v2, [Lz28;
+    move-result-object p1
 
-    const/4 v4, 0x0
+    iput-object p1, p0, Lerh;->i:Ljava/lang/String;
 
-    aput-object v0, v3, v4
+    invoke-interface {p5}, Lj88;->getValue()Ljava/lang/Object;
 
-    const/4 v0, 0x1
+    move-result-object p1
 
-    aput-object v1, v3, v0
+    check-cast p1, Lbjg;
 
-    sput-object v3, Lerh;->D0:[Lz28;
+    check-cast p1, Lcbb;
 
-    sget v0, Lt66;->a:I
+    invoke-virtual {p1}, Lcbb;->b()Lgd4;
 
-    new-instance v0, Lmea;
+    move-result-object p1
 
-    invoke-direct {v0, v2}, Lmea;-><init>(I)V
+    invoke-static {}, Luxf;->a()Llbg;
 
-    const/high16 v1, 0x42b40000    # 90.0f
+    move-result-object p2
 
-    invoke-virtual {v0, v1}, Lmea;->a(F)V
+    invoke-virtual {p1, p2}, Lo0;->plus(Led4;)Led4;
 
-    const/high16 v1, -0x3d4c0000    # -90.0f
+    move-result-object p1
 
-    invoke-virtual {v0, v1}, Lmea;->a(F)V
+    invoke-static {p1}, Lztj;->a(Led4;)Lkotlinx/coroutines/internal/ContextScope;
 
-    sput-object v0, Lerh;->E0:Lmea;
+    move-result-object p1
+
+    iput-object p1, p0, Lerh;->j:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {}, Ljava/util/concurrent/ConcurrentHashMap;->newKeySet()Ljava/util/concurrent/ConcurrentHashMap$KeySetView;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lerh;->k:Ljava/util/concurrent/ConcurrentHashMap$KeySetView;
+
+    const/4 p1, 0x0
+
+    const/4 p2, 0x7
+
+    invoke-static {p1, p1, p2}, Laff;->b(III)Lzef;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lerh;->l:Lzef;
+
+    new-instance p2, Llrd;
+
+    invoke-direct {p2, p1}, Llrd;-><init>(Leia;)V
+
+    iput-object p2, p0, Lerh;->m:Llrd;
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 4
+.method public static final a(Lerh;JLz30;Lwmh;Lz75;Lda4;)Ljava/lang/Object;
+    .locals 27
 
-    invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
+    move-object/from16 v0, p0
 
-    const-class v0, Lerh;
+    move-object/from16 v1, p6
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v0
+    instance-of v2, v1, Lyqh;
 
-    iput-object v0, p0, Lerh;->a:Ljava/lang/String;
+    if-eqz v2, :cond_0
 
-    sget-object v0, Lsbc;->a:Lsbc;
+    move-object v2, v1
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
+    check-cast v2, Lyqh;
 
-    move-result-object v1
+    iget v3, v2, Lyqh;->X:I
 
-    const/16 v2, 0x33
+    const/high16 v4, -0x80000000
 
-    invoke-virtual {v1, v2}, Lr5;->d(I)Ln8g;
+    and-int v5, v3, v4
 
-    move-result-object v1
+    if-eqz v5, :cond_0
 
-    iput-object v1, p0, Lerh;->b:Lo58;
+    sub-int/2addr v3, v4
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
+    iput v3, v2, Lyqh;->X:I
 
-    move-result-object v0
-
-    const/16 v1, 0x35
-
-    invoke-virtual {v0, v1}, Lr5;->d(I)Ln8g;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lerh;->c:Lo58;
-
-    invoke-direct {p0}, Lerh;->getClientPrefs()Lef3;
-
-    move-result-object v0
-
-    check-cast v0, Lqi8;
-
-    iget-object v1, v0, Lqi8;->M0:Lnre;
-
-    sget-object v2, Lqi8;->Q0:[Lz28;
-
-    const/16 v3, 0x21
-
-    aget-object v2, v2, v3
-
-    invoke-virtual {v1, v0, v2}, Lnre;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Boolean;
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    invoke-direct {p0}, Lerh;->getFeaturePrefs()Lwx5;
-
-    move-result-object v0
-
-    check-cast v0, Lpy5;
-
-    invoke-virtual {v0}, Lpy5;->t()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    new-instance v0, Lkgh;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, p1, v1, v2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-
-    new-instance v1, Ljgh;
-
-    invoke-direct {v1, p1}, Ljgh;-><init>(Landroid/content/Context;)V
-
-    iput-object v1, v0, Lkgh;->a:Ljgh;
-
-    const/4 p1, -0x2
-
-    invoke-virtual {v0, v1, p1, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;II)V
-
-    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
-    const/high16 p1, 0x3f800000    # 1.0f
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->setTranslationZ(F)V
-
-    move-object v1, v0
+    goto :goto_0
 
     :cond_0
-    iput-object v1, p0, Lerh;->u0:Lkgh;
+    new-instance v2, Lyqh;
 
-    const/4 p1, 0x2
+    invoke-direct {v2, v0, v1}, Lyqh;-><init>(Lerh;Lda4;)V
 
-    new-array p1, p1, [I
+    :goto_0
+    iget-object v1, v2, Lyqh;->d:Ljava/lang/Object;
 
-    iput-object p1, p0, Lerh;->z0:[I
+    iget v3, v2, Lyqh;->X:I
 
-    new-instance p1, Ldrh;
+    const/4 v4, 0x1
 
-    const/4 v0, 0x0
+    if-eqz v3, :cond_2
 
-    invoke-direct {p1, p0, v0}, Ldrh;-><init>(Lerh;I)V
+    if-ne v3, v4, :cond_1
 
-    iput-object p1, p0, Lerh;->A0:Ldrh;
+    invoke-static {v1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    new-instance p1, Ldrh;
+    goto :goto_1
 
-    const/4 v0, 0x1
+    :cond_1
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    invoke-direct {p1, p0, v0}, Ldrh;-><init>(Lerh;I)V
+    const-string v1, "call to \'resume\' before \'invoke\' with coroutine"
 
-    iput-object p1, p0, Lerh;->B0:Ldrh;
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    new-instance p1, Landroid/graphics/Path;
+    throw v0
 
-    invoke-direct {p1}, Landroid/graphics/Path;-><init>()V
+    :cond_2
+    invoke-static {v1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    iput-object p1, p0, Lerh;->C0:Landroid/graphics/Path;
+    invoke-interface/range {p4 .. p4}, Lwmh;->j()J
 
-    return-void
-.end method
+    move-result-wide v9
 
-.method private final getClientPrefs()Lef3;
-    .locals 1
+    move-object/from16 v1, p3
 
-    iget-object v0, p0, Lerh;->b:Lo58;
+    iget-object v8, v1, Lz30;->s:Ljava/lang/String;
 
-    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+    invoke-interface/range {p4 .. p4}, Lwmh;->a()Landroid/net/Uri;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/net/Uri;->toString()Ljava/lang/String;
+
+    move-result-object v17
+
+    new-instance v5, Lulg;
+
+    const-wide/16 v11, 0x0
+
+    const-wide/16 v13, 0x0
+
+    const-wide/16 v15, 0x0
+
+    const/16 v18, 0x1
+
+    const/16 v19, 0x0
+
+    const-wide/16 v20, 0x0
+
+    const-string v22, ""
+
+    const/16 v23, 0x0
+
+    const/16 v24, 0x0
+
+    const/16 v25, 0x1
+
+    move-wide/from16 v6, p1
+
+    move-object/from16 v26, p5
+
+    invoke-direct/range {v5 .. v26}, Lulg;-><init>(JLjava/lang/String;JJJJLjava/lang/String;ZZJLjava/lang/String;IZZLz75;)V
+
+    iget-object v1, v0, Lerh;->d:Lj88;
+
+    invoke-interface {v1}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lk16;
+
+    invoke-virtual {v1, v5}, Lk16;->a(Lulg;)Lba3;
+
+    move-result-object v1
+
+    iput v4, v2, Lyqh;->X:I
+
+    invoke-virtual {v0, v1, v2}, Lerh;->d(Lba3;Lda4;)Ljava/lang/Enum;
+
+    move-result-object v1
+
+    sget-object v0, Lod4;->a:Lod4;
+
+    if-ne v1, v0, :cond_3
+
+    return-object v0
+
+    :cond_3
+    :goto_1
+    sget-object v0, Ltqi;->c:Ltqi;
+
+    if-ne v1, v0, :cond_4
+
+    goto :goto_2
+
+    :cond_4
+    const/4 v4, 0x0
+
+    :goto_2
+    invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
-
-    check-cast v0, Lef3;
 
     return-object v0
 .end method
 
-.method private final getFeaturePrefs()Lwx5;
+.method public static c(JJ)Ljava/lang/String;
     .locals 1
 
-    iget-object v0, p0, Lerh;->c:Lo58;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-result-object v0
+    invoke-virtual {v0, p0, p1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    check-cast v0, Lwx5;
+    const-string p0, ":"
 
-    return-object v0
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p2, p3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
 
 # virtual methods
-.method public final a(Lxqh;)V
-    .locals 8
+.method public final b(JJLz75;Lda4;)Ljava/lang/Object;
+    .locals 9
 
-    sget-object v0, Lkk8;->d:Lkk8;
+    iget-object v0, p0, Lerh;->e:Lj88;
 
-    iget-object v1, p0, Lerh;->a:Ljava/lang/String;
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
 
-    sget-object v2, Lc5j;->a:Ledb;
+    move-result-object v0
 
-    const/4 v3, 0x0
+    check-cast v0, Lbjg;
 
-    const/4 v4, 0x0
+    check-cast v0, Lcbb;
 
-    const/4 v5, 0x1
+    invoke-virtual {v0}, Lcbb;->b()Lgd4;
 
-    if-nez v2, :cond_0
+    move-result-object v0
 
-    goto :goto_1
+    new-instance v1, Lbrh;
 
-    :cond_0
-    invoke-virtual {v2, v0}, Ledb;->b(Lkk8;)Z
+    const/4 v8, 0x0
 
-    move-result v6
+    move-object v2, p0
 
-    if-eqz v6, :cond_2
+    move-wide v3, p1
 
-    if-eqz p1, :cond_1
+    move-wide v5, p3
 
-    move v6, v5
+    move-object v7, p5
 
-    goto :goto_0
+    invoke-direct/range {v1 .. v8}, Lbrh;-><init>(Lerh;JJLz75;Lkotlin/coroutines/Continuation;)V
 
-    :cond_1
-    move v6, v4
-
-    :goto_0
-    const-string v7, "Video view. Bind listener and create surface, has listener:"
-
-    invoke-static {v7, v6}, Lva9;->e(Ljava/lang/String;Z)Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-virtual {v2, v0, v1, v6, v3}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_2
-    :goto_1
-    iput-object p1, p0, Lerh;->v0:Lxqh;
-
-    if-eqz p1, :cond_3
-
-    invoke-interface {p1}, Lxqh;->A()I
-
-    move-result v1
-
-    goto :goto_2
-
-    :cond_3
-    move v1, v4
-
-    :goto_2
-    iput v1, p0, Lerh;->y0:I
-
-    invoke-virtual {p0}, Lerh;->d()V
-
-    iget-object v1, p0, Lerh;->d:Lcrh;
-
-    if-eqz v1, :cond_8
-
-    iget-object v1, p0, Lerh;->a:Ljava/lang/String;
-
-    sget-object v2, Lc5j;->a:Ledb;
-
-    if-nez v2, :cond_4
-
-    goto :goto_3
-
-    :cond_4
-    invoke-virtual {v2, v0}, Ledb;->b(Lkk8;)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_6
-
-    iget-object v6, p0, Lerh;->o:Landroid/view/Surface;
-
-    if-eqz v6, :cond_5
-
-    move v4, v5
-
-    :cond_5
-    const-string v5, "Video view. Already has texture, has surface:"
-
-    invoke-static {v5, v4}, Lva9;->e(Ljava/lang/String;Z)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v2, v0, v1, v4, v3}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_6
-    :goto_3
-    iget-object v0, p0, Lerh;->o:Landroid/view/Surface;
-
-    if-eqz v0, :cond_7
-
-    if-eqz p1, :cond_7
-
-    iget-object v1, p0, Lerh;->u0:Lkgh;
-
-    invoke-interface {p1, v0, v1}, Lxqh;->z(Landroid/view/Surface;Lkgh;)V
-
-    :cond_7
-    return-void
-
-    :cond_8
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-static {v0, v1, p6}, Lea9;->r(Led4;Lys6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 
-    new-instance v0, Lcrh;
-
-    invoke-direct {v0, p0, p1}, Lcrh;-><init>(Lerh;Landroid/content/Context;)V
-
-    invoke-virtual {v0, p0}, Landroid/view/TextureView;->setSurfaceTextureListener(Landroid/view/TextureView$SurfaceTextureListener;)V
-
-    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
-    iput-object v0, p0, Lerh;->d:Lcrh;
-
-    return-void
+    return-object p1
 .end method
 
-.method public final b()V
-    .locals 2
+.method public final d(Lba3;Lda4;)Ljava/lang/Enum;
+    .locals 4
 
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lerh;->v0:Lxqh;
-
-    const/4 v1, 0x0
-
-    iput v1, p0, Lerh;->y0:I
-
-    iput v1, p0, Lerh;->w0:I
-
-    iput v1, p0, Lerh;->x0:I
-
-    iget-object v1, p0, Lerh;->u0:Lkgh;
-
-    if-eqz v1, :cond_0
-
-    iget-object v1, v1, Lkgh;->a:Ljgh;
-
-    invoke-virtual {v1, v0}, Ljgh;->setPlayer(Lgob;)V
-
-    :cond_0
-    iget-object v1, p0, Lerh;->d:Lcrh;
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v1, v0}, Landroid/view/TextureView;->setSurfaceTextureListener(Landroid/view/TextureView$SurfaceTextureListener;)V
-
-    invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
-
-    iput-object v0, p0, Lerh;->d:Lcrh;
-
-    :cond_1
-    iget-object v1, p0, Lerh;->o:Landroid/view/Surface;
-
-    if-eqz v1, :cond_2
-
-    invoke-virtual {v1}, Landroid/view/Surface;->release()V
-
-    :cond_2
-    iput-object v0, p0, Lerh;->o:Landroid/view/Surface;
-
-    iget-object v1, p0, Lerh;->t0:Landroid/graphics/SurfaceTexture;
-
-    if-eqz v1, :cond_3
-
-    invoke-virtual {v1}, Landroid/graphics/SurfaceTexture;->release()V
-
-    :cond_3
-    iput-object v0, p0, Lerh;->t0:Landroid/graphics/SurfaceTexture;
-
-    return-void
-.end method
-
-.method public final c(IIZ)V
-    .locals 5
-
-    const/4 v0, 0x0
-
-    if-eqz p3, :cond_3
-
-    iget p3, p0, Lerh;->y0:I
-
-    const/4 v1, 0x1
-
-    if-lez p1, :cond_0
-
-    if-lez p2, :cond_0
-
-    move v2, v1
-
-    goto :goto_0
-
-    :cond_0
-    move v2, v0
-
-    :goto_0
-    invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
-
-    move-result v3
-
-    if-lez v3, :cond_1
-
-    invoke-virtual {p0}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result v3
-
-    if-lez v3, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    move v1, v0
-
-    :goto_1
-    if-eqz v2, :cond_4
-
-    if-eqz v1, :cond_4
-
-    if-eqz p3, :cond_4
-
-    new-instance v1, Lot;
-
-    invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
-
-    move-result v2
-
-    invoke-virtual {p0}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result v3
-
-    const/16 v4, 0x8
-
-    invoke-direct {v1, v2, v3, v4}, Lot;-><init>(III)V
-
-    new-instance v2, Lot;
-
-    const/16 v3, 0x8
-
-    invoke-direct {v2, p1, p2, v3}, Lot;-><init>(III)V
-
-    new-instance v3, Landroid/graphics/Matrix;
-
-    invoke-direct {v3}, Landroid/graphics/Matrix;-><init>()V
-
-    invoke-static {v2, v1, p3}, Lvnj;->b(Lot;Lot;I)Landroid/graphics/Matrix;
-
-    move-result-object p3
-
-    invoke-virtual {v3, p3}, Landroid/graphics/Matrix;->postConcat(Landroid/graphics/Matrix;)Z
-
-    iget-object p3, p0, Lerh;->d:Lcrh;
-
-    if-eqz p3, :cond_2
-
-    invoke-virtual {p3, v3}, Landroid/view/TextureView;->setTransform(Landroid/graphics/Matrix;)V
-
-    :cond_2
-    iput p1, p0, Lerh;->w0:I
-
-    iput p2, p0, Lerh;->x0:I
-
-    goto :goto_2
-
-    :cond_3
-    iput p1, p0, Lerh;->w0:I
-
-    iput p2, p0, Lerh;->x0:I
-
-    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
-
-    :cond_4
-    :goto_2
-    iget-object p1, p0, Lerh;->d:Lcrh;
-
-    if-eqz p1, :cond_6
-
-    iget p2, p0, Lerh;->w0:I
-
-    if-lez p2, :cond_5
-
-    iget p2, p0, Lerh;->x0:I
-
-    if-lez p2, :cond_5
-
-    goto :goto_3
-
-    :cond_5
-    const/4 v0, 0x4
-
-    :goto_3
-    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
-
-    :cond_6
-    return-void
-.end method
-
-.method public final d()V
-    .locals 3
-
-    iget-object v0, p0, Lerh;->v0:Lxqh;
-
-    const/4 v1, 0x0
+    instance-of v0, p2, Lcrh;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lxqh;->m()I
+    move-object v0, p2
 
-    move-result v0
+    check-cast v0, Lcrh;
 
-    goto :goto_0
+    iget v1, v0, Lcrh;->X:I
 
-    :cond_0
-    move v0, v1
+    const/high16 v2, -0x80000000
 
-    :goto_0
-    iget-object v2, p0, Lerh;->v0:Lxqh;
+    and-int v3, v1, v2
 
-    if-eqz v2, :cond_1
+    if-eqz v3, :cond_0
 
-    invoke-interface {v2}, Lxqh;->C()I
+    sub-int/2addr v1, v2
 
-    move-result v2
-
-    goto :goto_1
-
-    :cond_1
-    move v2, v1
-
-    :goto_1
-    invoke-virtual {p0, v0, v2, v1}, Lerh;->c(IIZ)V
-
-    return-void
-.end method
-
-.method public final dispatchDraw(Landroid/graphics/Canvas;)V
-    .locals 2
-
-    iget-object v0, p0, Lerh;->C0:Landroid/graphics/Path;
-
-    invoke-virtual {v0}, Landroid/graphics/Path;->isEmpty()Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
-
-    move-result v1
-
-    invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->clipPath(Landroid/graphics/Path;)Z
-
-    :try_start_0
-    invoke-super {p0, p1}, Landroid/view/View;->dispatchDraw(Landroid/graphics/Canvas;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-virtual {p1, v1}, Landroid/graphics/Canvas;->restoreToCount(I)V
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    invoke-virtual {p1, v1}, Landroid/graphics/Canvas;->restoreToCount(I)V
-
-    throw v0
-
-    :cond_0
-    invoke-super {p0, p1}, Landroid/view/View;->dispatchDraw(Landroid/graphics/Canvas;)V
-
-    return-void
-.end method
-
-.method public final drawChild(Landroid/graphics/Canvas;Landroid/view/View;J)Z
-    .locals 3
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v0
-
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v2, 0x1d
-
-    if-lt v1, v2, :cond_0
-
-    sget-object v1, Lq62;->a:Ljava/lang/Object;
-
-    invoke-static {p1}, Lx4;->s(Landroid/graphics/Canvas;)Z
-
-    move-result v1
+    iput v1, v0, Lcrh;->X:I
 
     goto :goto_0
 
     :cond_0
-    sget-object v1, Lq62;->a:Ljava/lang/Object;
+    new-instance v0, Lcrh;
 
-    invoke-interface {v1}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/Class;
-
-    invoke-virtual {v1, p1}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
-
-    move-result v1
+    invoke-direct {v0, p0, p2}, Lcrh;-><init>(Lerh;Lda4;)V
 
     :goto_0
-    if-nez v1, :cond_1
+    iget-object p2, v0, Lcrh;->d:Ljava/lang/Object;
 
-    const-class v1, Landroid/graphics/Canvas;
-
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    :cond_1
-    invoke-super {p0, p1, p2, p3, p4}, Landroid/view/ViewGroup;->drawChild(Landroid/graphics/Canvas;Landroid/view/View;J)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_2
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final getVideoContentMode()Lyqh;
-    .locals 2
-
-    sget-object v0, Lerh;->D0:[Lz28;
-
-    const/4 v1, 0x1
-
-    aget-object v0, v0, v1
-
-    iget-object v0, p0, Lerh;->B0:Ldrh;
-
-    iget-object v0, v0, Ld3;->b:Ljava/lang/Object;
-
-    check-cast v0, Lyqh;
-
-    return-object v0
-.end method
-
-.method public final getVideoShape()Lbrh;
-    .locals 2
-
-    sget-object v0, Lerh;->D0:[Lz28;
-
-    const/4 v1, 0x0
-
-    aget-object v0, v0, v1
-
-    iget-object v0, p0, Lerh;->A0:Ldrh;
-
-    iget-object v0, v0, Ld3;->b:Ljava/lang/Object;
-
-    check-cast v0, Lbrh;
-
-    return-object v0
-.end method
-
-.method public final onMeasure(II)V
-    .locals 9
-
-    iget v0, p0, Lerh;->w0:I
-
-    if-lez v0, :cond_4
-
-    iget v0, p0, Lerh;->x0:I
-
-    if-lez v0, :cond_4
-
-    invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
-
-    move-result p1
-
-    invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
-
-    move-result p2
-
-    invoke-virtual {p0}, Lerh;->getVideoContentMode()Lyqh;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v0
-
-    const/4 v1, 0x0
+    iget v1, v0, Lcrh;->X:I
 
     const/4 v2, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v2, :cond_0
-
-    iget-object v0, p0, Lerh;->z0:[I
-
-    aput p1, v0, v1
-
-    aput p2, v0, v2
-
-    goto :goto_2
-
-    :cond_0
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
-
-    :cond_1
-    sget-object v0, Lerh;->E0:Lmea;
-
-    invoke-virtual {p0}, Landroid/view/View;->getRotation()F
-
-    move-result v3
-
-    iget-object v4, v0, Lmea;->a:[F
-
-    iget v0, v0, Lmea;->b:I
-
-    move v5, v1
-
-    :goto_0
-    if-ge v5, v0, :cond_3
-
-    aget v6, v4, v5
-
-    cmpg-float v6, v6, v3
-
-    if-nez v6, :cond_2
-
-    iget v0, p0, Lerh;->w0:I
-
-    iget v3, p0, Lerh;->x0:I
-
-    iget-object v4, p0, Lerh;->z0:[I
-
-    invoke-static {p2, p1, v0, v3, v4}, Lj6j;->d(IIII[I)V
-
-    :goto_1
-    move-object v0, v4
-
-    goto :goto_2
-
-    :cond_2
-    add-int/lit8 v5, v5, 0x1
-
-    goto :goto_0
-
-    :cond_3
-    iget v0, p0, Lerh;->w0:I
-
-    iget v3, p0, Lerh;->x0:I
-
-    iget-object v4, p0, Lerh;->z0:[I
-
-    invoke-static {p1, p2, v0, v3, v4}, Lj6j;->d(IIII[I)V
-
-    goto :goto_1
-
-    :goto_2
-    aget p1, v0, v1
-
-    const/high16 p2, 0x40000000    # 2.0f
-
-    invoke-static {p1, p2}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
-
-    move-result p1
-
-    aget v0, v0, v2
-
-    invoke-static {v0, p2}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
-
-    move-result p2
-
-    invoke-super {p0, p1, p2}, Landroid/widget/FrameLayout;->onMeasure(II)V
-
-    iget p1, p0, Lerh;->w0:I
-
-    iget p2, p0, Lerh;->x0:I
-
-    invoke-virtual {p0, p1, p2, v2}, Lerh;->c(IIZ)V
-
-    goto :goto_3
-
-    :cond_4
-    invoke-super {p0, p1, p2}, Landroid/widget/FrameLayout;->onMeasure(II)V
-
-    :goto_3
-    invoke-virtual {p0}, Lerh;->getVideoShape()Lbrh;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_9
-
-    invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
-
-    move-result p2
-
-    if-lez p2, :cond_9
-
-    invoke-virtual {p0}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result p2
-
-    if-lez p2, :cond_9
-
-    invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
-
-    move-result p2
-
-    invoke-virtual {p0}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result v0
-
-    iget-object v1, p0, Lerh;->C0:Landroid/graphics/Path;
-
-    invoke-virtual {v1}, Landroid/graphics/Path;->reset()V
-
-    instance-of v1, p1, Lzqh;
-
-    if-eqz v1, :cond_7
-
-    if-ne p2, v0, :cond_5
-
-    iget-object p1, p0, Lerh;->C0:Landroid/graphics/Path;
-
-    int-to-float p2, p2
-
-    const/high16 v1, 0x40000000    # 2.0f
-
-    div-float/2addr p2, v1
-
-    int-to-float v0, v0
-
-    div-float/2addr v0, v1
-
-    sget-object v1, Landroid/graphics/Path$Direction;->CW:Landroid/graphics/Path$Direction;
-
-    invoke-virtual {p1, p2, v0, p2, v1}, Landroid/graphics/Path;->addCircle(FFFLandroid/graphics/Path$Direction;)V
-
-    return-void
-
-    :cond_5
-    iget-object p1, p0, Lerh;->a:Ljava/lang/String;
-
-    sget-object v1, Lc5j;->a:Ledb;
-
-    if-nez v1, :cond_6
-
-    goto :goto_4
-
-    :cond_6
-    sget-object v2, Lkk8;->X:Lkk8;
-
-    invoke-virtual {v1, v2}, Ledb;->b(Lkk8;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_9
-
-    const-string v3, "VideoShape.AsCircle requires square dimensions but got width="
-
-    const-string v4, ", height="
-
-    invoke-static {v3, p2, v0, v4}, Lj27;->h(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p2
-
-    const/4 v0, 0x0
-
-    invoke-virtual {v1, v2, p1, p2, v0}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-void
-
-    :cond_7
-    instance-of v1, p1, Larh;
-
-    if-eqz v1, :cond_8
-
-    iget-object v2, p0, Lerh;->C0:Landroid/graphics/Path;
-
-    int-to-float v5, p2
-
-    int-to-float v6, v0
-
-    check-cast p1, Larh;
-
-    iget-object v7, p1, Larh;->a:[F
-
-    sget-object v8, Landroid/graphics/Path$Direction;->CW:Landroid/graphics/Path$Direction;
 
     const/4 v3, 0x0
 
-    const/4 v4, 0x0
+    if-eqz v1, :cond_2
 
-    invoke-virtual/range {v2 .. v8}, Landroid/graphics/Path;->addRoundRect(FFFF[FLandroid/graphics/Path$Direction;)V
+    if-ne v1, v2, :cond_1
 
-    return-void
-
-    :cond_8
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
-
-    :cond_9
-    :goto_4
-    return-void
-.end method
-
-.method public final onSurfaceTextureAvailable(Landroid/graphics/SurfaceTexture;II)V
-    .locals 5
-
-    iget-object p2, p0, Lerh;->a:Ljava/lang/String;
-
-    sget-object p3, Lc5j;->a:Ledb;
-
-    const/4 v0, 0x0
-
-    if-nez p3, :cond_0
+    invoke-static {p2}, Lbvj;->i(Ljava/lang/Object;)V
 
     goto :goto_1
 
-    :cond_0
-    sget-object v1, Lkk8;->d:Lkk8;
-
-    invoke-virtual {p3, v1}, Ledb;->b(Lkk8;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget-object v2, p0, Lerh;->v0:Lxqh;
-
-    if-eqz v2, :cond_1
-
-    const/4 v2, 0x1
-
-    goto :goto_0
-
     :cond_1
-    const/4 v2, 0x0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    :goto_0
-    new-instance v3, Ljava/lang/StringBuilder;
+    const-string p2, "call to \'resume\' before \'invoke\' with coroutine"
 
-    const-string v4, "Video view. Surface available "
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v4, ", has listener:"
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {p3, v1, p2, v2, v0}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    throw p1
 
     :cond_2
-    :goto_1
-    iget-object p2, p0, Lerh;->o:Landroid/view/Surface;
+    invoke-static {p2}, Lbvj;->i(Ljava/lang/Object;)V
 
-    if-eqz p2, :cond_3
+    new-instance p2, Ldrh;
 
-    invoke-virtual {p2}, Landroid/view/Surface;->release()V
+    const/4 v1, 0x2
+
+    invoke-direct {p2, v1, v3}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    iput v2, v0, Lcrh;->X:I
+
+    invoke-static {p1, p2, v0}, Lzka;->p(Lb96;Lys6;Lda4;)Ljava/lang/Object;
+
+    move-result-object p2
+
+    sget-object p1, Lod4;->a:Lod4;
+
+    if-ne p2, p1, :cond_3
+
+    return-object p1
 
     :cond_3
-    iput-object v0, p0, Lerh;->o:Landroid/view/Surface;
-
-    iget-object p2, p0, Lerh;->t0:Landroid/graphics/SurfaceTexture;
+    :goto_1
+    check-cast p2, Luqi;
 
     if-eqz p2, :cond_4
 
-    invoke-virtual {p2}, Landroid/graphics/SurfaceTexture;->release()V
+    iget-object p1, p2, Luqi;->b:Ltqi;
+
+    return-object p1
 
     :cond_4
-    iput-object p1, p0, Lerh;->t0:Landroid/graphics/SurfaceTexture;
-
-    new-instance p2, Landroid/view/Surface;
-
-    invoke-direct {p2, p1}, Landroid/view/Surface;-><init>(Landroid/graphics/SurfaceTexture;)V
-
-    iput-object p2, p0, Lerh;->o:Landroid/view/Surface;
-
-    invoke-virtual {p0}, Lerh;->d()V
-
-    iget-object p1, p0, Lerh;->v0:Lxqh;
-
-    if-eqz p1, :cond_5
-
-    iget-object p2, p0, Lerh;->o:Landroid/view/Surface;
-
-    iget-object p3, p0, Lerh;->u0:Lkgh;
-
-    invoke-interface {p1, p2, p3}, Lxqh;->z(Landroid/view/Surface;Lkgh;)V
-
-    :cond_5
-    return-void
-.end method
-
-.method public final onSurfaceTextureDestroyed(Landroid/graphics/SurfaceTexture;)Z
-    .locals 0
-
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final onSurfaceTextureSizeChanged(Landroid/graphics/SurfaceTexture;II)V
-    .locals 0
-
-    invoke-virtual {p0}, Lerh;->d()V
-
-    return-void
-.end method
-
-.method public final onSurfaceTextureUpdated(Landroid/graphics/SurfaceTexture;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final setVideoContentMode(Lyqh;)V
-    .locals 2
-
-    sget-object v0, Lerh;->D0:[Lz28;
-
-    const/4 v1, 0x1
-
-    aget-object v0, v0, v1
-
-    iget-object v1, p0, Lerh;->B0:Ldrh;
-
-    invoke-virtual {v1, p0, v0, p1}, Ld3;->O(Ljava/lang/Object;Lz28;Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final setVideoShape(Lbrh;)V
-    .locals 2
-
-    sget-object v0, Lerh;->D0:[Lz28;
-
-    const/4 v1, 0x0
-
-    aget-object v0, v0, v1
-
-    iget-object v1, p0, Lerh;->A0:Ldrh;
-
-    invoke-virtual {v1, p0, v0, p1}, Ld3;->O(Ljava/lang/Object;Lz28;Ljava/lang/Object;)V
-
-    return-void
+    return-object v3
 .end method

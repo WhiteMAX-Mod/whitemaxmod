@@ -1,64 +1,67 @@
-.class public final Loqe;
+.class public interface abstract Loqe;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public a:Z
-
-.field public b:I
-
-.field public c:I
-
-.field public d:I
+# interfaces
+.implements Lw7f;
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public abstract a()I
+.end method
 
-    iget-boolean v0, p0, Loqe;->a:Z
+.method public b()Lhpg;
+    .locals 1
 
-    if-eqz v0, :cond_0
-
-    const-string v0, "ss"
+    const/4 v0, 0x0
 
     return-object v0
+.end method
 
-    :cond_0
-    new-instance v0, Ljava/lang/StringBuilder;
+.method public c()Lk7f;
+    .locals 1
 
-    const-string v1, "sz="
+    const/4 v0, 0x0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    return-object v0
+.end method
 
-    iget v1, p0, Loqe;->b:I
+.method public d()Lhpg;
+    .locals 1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    const/4 v0, 0x0
 
-    const-string v1, "x"
+    return-object v0
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public e()Lt7f;
+    .locals 1
 
-    iget v1, p0, Loqe;->c:I
+    const/4 v0, 0x0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    return-object v0
+.end method
 
-    const-string v1, ":fit="
+.method public f()Lt88;
+    .locals 1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v0, 0x0
 
-    iget v1, p0, Loqe;->d:I
+    return-object v0
+.end method
 
-    invoke-static {v1}, Liwd;->b(I)Ljava/lang/String;
+.method public g()Z
+    .locals 1
 
-    move-result-object v1
+    const/4 v0, 0x1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return v0
+.end method
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+.method public getType()Lv7f;
+    .locals 1
 
-    move-result-object v0
+    sget-object v0, Lv7f;->b:Lv7f;
 
     return-object v0
 .end method

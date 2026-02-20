@@ -1,100 +1,126 @@
 .class public final Llu6;
-.super Ljava/lang/Object;
+.super Lg4;
 .source "SourceFile"
 
-# interfaces
-.implements Ld76;
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Llu6;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ld76;
-
-.field public final synthetic c:Lbv6;
+.field public final a:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Ld76;Lbv6;I)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lll4;
+
+    const/16 v1, 0x11
+
+    invoke-direct {v0, v1}, Lll4;-><init>(I)V
+
+    sput-object v0, Llu6;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(I)V
     .locals 0
 
-    iput p3, p0, Llu6;->a:I
-
-    iput-object p1, p0, Llu6;->b:Ld76;
-
-    iput-object p2, p0, Llu6;->c:Lbv6;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Llu6;->a:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+.method public final describeContents()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
     .locals 3
 
-    iget v0, p0, Llu6;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    new-instance v0, Lku6;
-
-    iget-object v1, p0, Llu6;->c:Lbv6;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v0, p1, v1, v2}, Lku6;-><init>(Lf76;Lbv6;I)V
-
-    iget-object p1, p0, Llu6;->b:Ld76;
-
-    invoke-interface {p1, v0, p2}, Ld76;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p2, Lac4;->a:Lac4;
-
-    if-ne p1, p2, :cond_0
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    :goto_0
-    return-object p1
-
-    :pswitch_0
-    new-instance v0, Lku6;
-
-    iget-object v1, p0, Llu6;->c:Lbv6;
+    instance-of v1, p1, Llu6;
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, p1, v1, v2}, Lku6;-><init>(Lf76;Lbv6;I)V
+    if-nez v1, :cond_1
 
-    iget-object p1, p0, Llu6;->b:Ld76;
-
-    invoke-interface {p1, v0, p2}, Ld76;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p2, Lac4;->a:Lac4;
-
-    if-ne p1, p2, :cond_1
-
-    goto :goto_1
+    return v2
 
     :cond_1
-    sget-object p1, Lb3h;->a:Lb3h;
+    check-cast p1, Llu6;
 
-    :goto_1
-    return-object p1
+    iget v1, p0, Llu6;->a:I
 
-    nop
+    iget p1, p1, Llu6;->a:I
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    if-eq v1, p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget v0, p0, Llu6;->a:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "AsRes(res="
+
+    const-string v1, ")"
+
+    iget v2, p0, Llu6;->a:I
+
+    invoke-static {v2, v0, v1}, Lau1;->g(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
+
+    iget p2, p0, Llu6;->a:I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    return-void
 .end method

@@ -1,31 +1,26 @@
 .class public final Lek7;
-.super Lxj7;
+.super Lfk7;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/util/concurrent/ScheduledFuture;
 
 
 # virtual methods
-.method public final c(Ljava/lang/Object;)Lxj7;
+.method public final bridge synthetic compareTo(Ljava/lang/Object;)I
     .locals 0
 
-    invoke-virtual {p0, p1}, Lxj7;->a(Ljava/lang/Object;)V
+    check-cast p1, Ljava/util/concurrent/Delayed;
 
-    return-object p0
+    const/4 p1, -0x1
+
+    return p1
 .end method
 
-.method public final i()Lhud;
+.method public final getDelay(Ljava/util/concurrent/TimeUnit;)J
     .locals 2
 
-    const/4 v0, 0x1
+    const-wide/16 v0, 0x0
 
-    iput-boolean v0, p0, Lxj7;->a:Z
-
-    iget-object v0, p0, Lxj7;->c:[Ljava/lang/Object;
-
-    iget v1, p0, Lxj7;->b:I
-
-    invoke-static {v1, v0}, Lhk7;->h(I[Ljava/lang/Object;)Lhud;
-
-    move-result-object v0
-
-    return-object v0
+    return-wide v0
 .end method

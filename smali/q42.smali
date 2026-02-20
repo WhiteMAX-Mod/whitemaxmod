@@ -1,27 +1,88 @@
-.class public final Lq42;
+.class public interface abstract Lq42;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/util/HashMap;
-
-.field public final b:Landroid/os/Handler;
+# static fields
+.field public static final a:Lp42;
 
 
 # direct methods
-.method public constructor <init>(Landroid/os/Handler;)V
+.method static constructor <clinit>()V
     .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lp42;
 
-    new-instance v0, Ljava/util/HashMap;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+    sput-object v0, Lq42;->a:Lp42;
 
-    iput-object v0, p0, Lq42;->a:Ljava/util/HashMap;
+    return-void
+.end method
 
-    iput-object p1, p0, Lq42;->b:Landroid/os/Handler;
+
+# virtual methods
+.method public a()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public abstract b(F)Lah8;
+.end method
+
+.method public abstract c(Les3;)V
+.end method
+
+.method public abstract d(F)Lah8;
+.end method
+
+.method public abstract e()Landroid/graphics/Rect;
+.end method
+
+.method public abstract f(I)V
+.end method
+
+.method public abstract g(Lr9g;)Lah8;
+.end method
+
+.method public h(Lfi7;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public abstract i(Ljava/util/ArrayList;II)Lah8;
+.end method
+
+.method public abstract j(Lu0f;)V
+.end method
+
+.method public abstract k(Z)Lah8;
+.end method
+
+.method public l(II)Lah8;
+    .locals 0
+
+    new-instance p1, Lo42;
+
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+
+    invoke-static {p1}, Lr8h;->l(Ljava/lang/Object;)Lfk7;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public abstract m()Les3;
+.end method
+
+.method public abstract n()V
+.end method
+
+.method public o()V
+    .locals 0
 
     return-void
 .end method

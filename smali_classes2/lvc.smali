@@ -1,325 +1,204 @@
-.class public final synthetic Llvc;
+.class public final Llvc;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/view/View$OnClickListener;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lqy0;
 
-.field public final synthetic b:Lovc;
+.field public final b:Lzef;
+
+.field public final c:Lkotlinx/coroutines/internal/ContextScope;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lovc;I)V
-    .locals 0
-
-    iput p2, p0, Llvc;->a:I
-
-    iput-object p1, p0, Llvc;->b:Lovc;
+.method public constructor <init>(Lqy0;Lbjg;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Llvc;->a:Lqy0;
+
+    const/4 p1, 0x0
+
+    const/4 v0, 0x7
+
+    invoke-static {p1, p1, v0}, Laff;->b(III)Lzef;
+
+    move-result-object p1
+
+    iput-object p1, p0, Llvc;->b:Lzef;
+
+    check-cast p2, Lcbb;
+
+    invoke-virtual {p2}, Lcbb;->c()Los8;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lztj;->a(Led4;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object p1
+
+    iput-object p1, p0, Llvc;->c:Lkotlinx/coroutines/internal/ContextScope;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 6
+.method public final onEvent(Ld43;)V
+    .locals 3
+    .annotation runtime Lx7g;
+    .end annotation
 
-    iget p1, p0, Llvc;->a:I
+    .line 15
+    new-instance v0, Lhvc;
 
-    packed-switch p1, :pswitch_data_0
+    iget-wide v1, p1, Lvl0;->a:J
 
-    iget-object p1, p0, Llvc;->b:Lovc;
-
-    iget-object p1, p1, Lovc;->o:Lnvc;
-
-    check-cast p1, Lone/me/profile/ProfileScreen;
-
-    invoke-virtual {p1}, Lone/me/profile/ProfileScreen;->G0()Lexc;
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p1
 
-    iget-object v0, p1, Lnth;->a:Lkotlinx/coroutines/internal/ContextScope;
+    invoke-direct {v0, p1}, Lhvc;-><init>(Ljava/lang/Long;)V
 
-    invoke-virtual {p1}, Lexc;->w()Lmbg;
+    .line 16
+    new-instance p1, Lkvc;
 
-    move-result-object v1
+    const/4 v1, 0x0
 
-    check-cast v1, Lj9b;
+    invoke-direct {p1, p0, v0, v1}, Lkvc;-><init>(Llvc;Ljvc;Lkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {v1}, Lj9b;->b()Lsb4;
+    const/4 v0, 0x3
 
-    move-result-object v1
+    iget-object v2, p0, Llvc;->c:Lkotlinx/coroutines/internal/ContextScope;
 
-    new-instance v2, Ljwc;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v2, p1, v3}, Ljwc;-><init>(Lexc;Lkotlin/coroutines/Continuation;)V
-
-    const/4 v4, 0x2
-
-    invoke-static {v0, v1, v3, v2, v4}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
-
-    move-result-object v0
-
-    iget-object v1, p1, Lexc;->J0:Lx07;
-
-    sget-object v2, Lexc;->Z0:[Lz28;
-
-    const/4 v3, 0x1
-
-    aget-object v2, v2, v3
-
-    invoke-virtual {v1, p1, v2, v0}, Lx07;->O(Ljava/lang/Object;Lz28;Ljava/lang/Object;)V
+    invoke-static {v2, v1, v1, p1, v0}, Lea9;->d(Lnd4;Led4;Lqd4;Lys6;I)Lcuf;
 
     return-void
+.end method
 
-    :pswitch_0
-    iget-object p1, p0, Llvc;->b:Lovc;
+.method public final onEvent(Lul0;)V
+    .locals 4
+    .annotation runtime Lx7g;
+    .end annotation
 
-    iget-object p1, p1, Lovc;->o:Lnvc;
+    .line 1
+    new-instance v0, Lgvc;
 
-    check-cast p1, Lone/me/profile/ProfileScreen;
+    iget-wide v1, p1, Lvl0;->a:J
 
-    invoke-virtual {p1}, Lone/me/profile/ProfileScreen;->G0()Lexc;
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object p1
+    move-result-object v1
 
-    iget-object v0, p1, Lexc;->V0:Lljc;
+    iget-object p1, p1, Lul0;->b:Lcjg;
 
-    invoke-virtual {v0}, Lljc;->i()Ljava/lang/Long;
+    .line 2
+    iget-object v2, p1, Lcjg;->d:Ljava/lang/String;
 
-    move-result-object v0
+    iget-object p1, p1, Lcjg;->b:Ljava/lang/String;
 
-    if-eqz v0, :cond_0
+    if-eqz v2, :cond_1
 
-    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
+    .line 3
+    invoke-virtual {v2}, Ljava/lang/String;->length()I
 
-    move-result-wide v0
+    move-result v3
 
-    iget-object p1, p1, Lexc;->H0:Lcm5;
+    if-nez v3, :cond_0
 
-    new-instance v2, Lgtc;
+    goto :goto_0
 
-    sget-object v3, Lzs2;->c:Lzs2;
-
-    invoke-direct {v2, v0, v1, v3}, Lgtc;-><init>(JLzs2;)V
-
-    invoke-static {p1, v2}, Lnth;->q(Lcm5;Ljava/lang/Object;)V
-
+    .line 4
     :cond_0
-    return-void
+    new-instance p1, Lgpg;
 
-    :pswitch_1
-    iget-object p1, p0, Llvc;->b:Lovc;
+    invoke-direct {p1, v2}, Lgpg;-><init>(Ljava/lang/CharSequence;)V
 
-    iget-object p1, p1, Lovc;->o:Lnvc;
+    goto :goto_2
 
-    check-cast p1, Lone/me/profile/ProfileScreen;
-
-    invoke-virtual {p1}, Lone/me/profile/ProfileScreen;->G0()Lexc;
-
-    move-result-object p1
-
-    iget-object v0, p1, Lexc;->V0:Lljc;
-
-    invoke-virtual {v0}, Lljc;->i()Ljava/lang/Long;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v0
-
-    iget-object p1, p1, Lexc;->H0:Lcm5;
-
-    new-instance v2, Lltc;
-
-    invoke-direct {v2, v0, v1}, Lltc;-><init>(J)V
-
-    invoke-static {p1, v2}, Lnth;->q(Lcm5;Ljava/lang/Object;)V
-
+    .line 5
     :cond_1
-    return-void
+    :goto_0
+    invoke-static {p1}, Llxj;->a(Ljava/lang/String;)Z
 
-    :pswitch_2
-    iget-object p1, p0, Llvc;->b:Lovc;
+    move-result v2
 
-    iget-object p1, p1, Lovc;->o:Lnvc;
-
-    check-cast p1, Lone/me/profile/ProfileScreen;
-
-    invoke-virtual {p1}, Lone/me/profile/ProfileScreen;->G0()Lexc;
-
-    move-result-object p1
-
-    iget-object v0, p1, Lexc;->x0:Lo58;
-
-    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lgre;
-
-    check-cast v0, Lidc;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->channel-statistics-botid:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    const-wide/16 v2, 0x0
-
-    invoke-virtual {v0, v1, v2, v3}, Lidc;->m(Ljava/lang/Enum;J)J
-
-    move-result-wide v0
-
-    iget-object v2, p1, Lexc;->V0:Lljc;
-
-    invoke-virtual {v2}, Lljc;->i()Ljava/lang/Long;
-
-    move-result-object v2
+    const-string v3, "io.exception"
 
     if-eqz v2, :cond_2
 
-    invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
+    invoke-static {p1, v3}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result-wide v2
+    move-result v2
 
-    iget-object p1, p1, Lexc;->H0:Lcm5;
+    if-eqz v2, :cond_2
 
-    sget-object v4, Lbtc;->c:Lbtc;
+    .line 6
+    sget p1, Lwce;->L:I
 
-    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    .line 7
+    new-instance v2, Lcpg;
 
-    new-instance v4, Ljava/lang/StringBuilder;
+    invoke-direct {v2, p1}, Lcpg;-><init>(I)V
 
-    const-string v5, ":webapp:root?bot_id="
+    :goto_1
+    move-object p1, v2
 
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    goto :goto_2
 
-    invoke-virtual {v4, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v0, "&entry_point=chat_profile&chat_id="
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0, p1}, Lhc0;->n(Ljava/lang/String;Lcm5;)V
-
+    .line 8
     :cond_2
-    return-void
+    invoke-static {p1}, Llxj;->a(Ljava/lang/String;)Z
 
-    :pswitch_3
-    iget-object p1, p0, Llvc;->b:Lovc;
+    move-result v2
 
-    iget-object p1, p1, Lovc;->o:Lnvc;
+    if-eqz v2, :cond_3
 
-    check-cast p1, Lone/me/profile/ProfileScreen;
+    invoke-static {p1, v3}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-virtual {p1}, Lone/me/profile/ProfileScreen;->G0()Lexc;
+    move-result p1
 
-    move-result-object p1
+    if-nez p1, :cond_3
 
-    iget-object p1, p1, Lexc;->G0:Lcm5;
+    .line 9
+    sget p1, Lwce;->M:I
 
-    sget-object v0, Lxvc;->a:Lxvc;
+    .line 10
+    new-instance v2, Lcpg;
 
-    invoke-static {p1, v0}, Lnth;->q(Lcm5;Ljava/lang/Object;)V
+    invoke-direct {v2, p1}, Lcpg;-><init>(I)V
 
-    return-void
+    goto :goto_1
 
-    :pswitch_4
-    iget-object p1, p0, Llvc;->b:Lovc;
-
-    iget-object p1, p1, Lovc;->o:Lnvc;
-
-    check-cast p1, Lone/me/profile/ProfileScreen;
-
-    invoke-virtual {p1}, Lone/me/profile/ProfileScreen;->G0()Lexc;
-
-    move-result-object p1
-
-    iget-object v0, p1, Lexc;->V0:Lljc;
-
-    invoke-virtual {v0}, Lljc;->i()Ljava/lang/Long;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_3
-
-    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v0
-
-    iget-object p1, p1, Lexc;->H0:Lcm5;
-
-    new-instance v2, Lgtc;
-
-    sget-object v3, Lzs2;->b:Lzs2;
-
-    invoke-direct {v2, v0, v1, v3}, Lgtc;-><init>(JLzs2;)V
-
-    invoke-static {p1, v2}, Lnth;->q(Lcm5;Ljava/lang/Object;)V
-
+    .line 11
     :cond_3
+    sget p1, Lwce;->K:I
+
+    .line 12
+    new-instance v2, Lcpg;
+
+    invoke-direct {v2, p1}, Lcpg;-><init>(I)V
+
+    goto :goto_1
+
+    .line 13
+    :goto_2
+    invoke-direct {v0, v1, p1}, Lgvc;-><init>(Ljava/lang/Long;Lhpg;)V
+
+    .line 14
+    new-instance p1, Lkvc;
+
+    const/4 v1, 0x0
+
+    invoke-direct {p1, p0, v0, v1}, Lkvc;-><init>(Llvc;Ljvc;Lkotlin/coroutines/Continuation;)V
+
+    const/4 v0, 0x3
+
+    iget-object v2, p0, Llvc;->c:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {v2, v1, v1, p1, v0}, Lea9;->d(Lnd4;Led4;Lqd4;Lys6;I)Lcuf;
+
     return-void
-
-    :pswitch_5
-    iget-object p1, p0, Llvc;->b:Lovc;
-
-    iget-object p1, p1, Lovc;->o:Lnvc;
-
-    check-cast p1, Lone/me/profile/ProfileScreen;
-
-    invoke-virtual {p1}, Lone/me/profile/ProfileScreen;->G0()Lexc;
-
-    move-result-object p1
-
-    iget-object v0, p1, Lexc;->V0:Lljc;
-
-    invoke-virtual {v0}, Lljc;->i()Ljava/lang/Long;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_4
-
-    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v0
-
-    iget-object p1, p1, Lexc;->H0:Lcm5;
-
-    new-instance v2, Lhtc;
-
-    invoke-direct {v2, v0, v1}, Lhtc;-><init>(J)V
-
-    invoke-static {p1, v2}, Lnth;->q(Lcm5;Ljava/lang/Object;)V
-
-    :cond_4
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

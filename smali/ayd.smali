@@ -1,295 +1,145 @@
-.class public final Layd;
-.super Loj0;
+.class public Layd;
+.super Landroid/view/ViewGroup$MarginLayoutParams;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final c(Ljava/nio/ByteBuffer;)V
-    .locals 9
+# instance fields
+.field public a:Lpyd;
 
-    invoke-virtual {p1}, Ljava/nio/Buffer;->position()I
+.field public final b:Landroid/graphics/Rect;
 
-    move-result v0
+.field public c:Z
 
-    invoke-virtual {p1}, Ljava/nio/Buffer;->limit()I
+.field public d:Z
 
-    move-result v1
 
-    sub-int v2, v1, v0
+# direct methods
+.method public constructor <init>(II)V
+    .locals 0
 
-    iget-object v3, p0, Loj0;->b:Lx50;
+    .line 5
+    invoke-direct {p0, p1, p2}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(II)V
 
-    iget v3, v3, Lx50;->c:I
+    .line 6
+    new-instance p1, Landroid/graphics/Rect;
 
-    const/high16 v4, 0x30000000
+    invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
 
-    const/high16 v5, 0x20000000
+    iput-object p1, p0, Layd;->b:Landroid/graphics/Rect;
 
-    const/high16 v6, 0x10000000
+    const/4 p1, 0x1
 
-    const/4 v7, 0x4
+    .line 7
+    iput-boolean p1, p0, Layd;->c:Z
 
-    const/4 v8, 0x3
+    const/4 p1, 0x0
 
-    if-eq v3, v8, :cond_2
-
-    if-eq v3, v7, :cond_3
-
-    if-eq v3, v6, :cond_4
-
-    if-eq v3, v5, :cond_1
-
-    if-ne v3, v4, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    invoke-direct {p1}, Ljava/lang/IllegalStateException;-><init>()V
-
-    throw p1
-
-    :cond_1
-    div-int/lit8 v2, v2, 0x3
-
-    :cond_2
-    mul-int/lit8 v2, v2, 0x2
-
-    goto :goto_1
-
-    :cond_3
-    :goto_0
-    div-int/lit8 v2, v2, 0x2
-
-    :cond_4
-    :goto_1
-    invoke-virtual {p0, v2}, Loj0;->j(I)Ljava/nio/ByteBuffer;
-
-    move-result-object v2
-
-    iget-object v3, p0, Loj0;->b:Lx50;
-
-    iget v3, v3, Lx50;->c:I
-
-    if-eq v3, v8, :cond_9
-
-    if-eq v3, v7, :cond_8
-
-    if-eq v3, v6, :cond_7
-
-    if-eq v3, v5, :cond_6
-
-    if-ne v3, v4, :cond_5
-
-    :goto_2
-    if-ge v0, v1, :cond_a
-
-    add-int/lit8 v3, v0, 0x2
-
-    invoke-virtual {p1, v3}, Ljava/nio/ByteBuffer;->get(I)B
-
-    move-result v3
-
-    invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
-
-    add-int/lit8 v3, v0, 0x3
-
-    invoke-virtual {p1, v3}, Ljava/nio/ByteBuffer;->get(I)B
-
-    move-result v3
-
-    invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
-
-    add-int/lit8 v0, v0, 0x4
-
-    goto :goto_2
-
-    :cond_5
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    invoke-direct {p1}, Ljava/lang/IllegalStateException;-><init>()V
-
-    throw p1
-
-    :cond_6
-    :goto_3
-    if-ge v0, v1, :cond_a
-
-    add-int/lit8 v3, v0, 0x1
-
-    invoke-virtual {p1, v3}, Ljava/nio/ByteBuffer;->get(I)B
-
-    move-result v3
-
-    invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
-
-    add-int/lit8 v3, v0, 0x2
-
-    invoke-virtual {p1, v3}, Ljava/nio/ByteBuffer;->get(I)B
-
-    move-result v3
-
-    invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
-
-    add-int/lit8 v0, v0, 0x3
-
-    goto :goto_3
-
-    :cond_7
-    :goto_4
-    if-ge v0, v1, :cond_a
-
-    add-int/lit8 v3, v0, 0x1
-
-    invoke-virtual {p1, v3}, Ljava/nio/ByteBuffer;->get(I)B
-
-    move-result v3
-
-    invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
-
-    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->get(I)B
-
-    move-result v3
-
-    invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
-
-    add-int/lit8 v0, v0, 0x2
-
-    goto :goto_4
-
-    :cond_8
-    :goto_5
-    if-ge v0, v1, :cond_a
-
-    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->getFloat(I)F
-
-    move-result v3
-
-    const/high16 v4, -0x40800000    # -1.0f
-
-    const/high16 v5, 0x3f800000    # 1.0f
-
-    invoke-static {v3, v4, v5}, Lkbh;->h(FFF)F
-
-    move-result v3
-
-    const v4, 0x46fffe00    # 32767.0f
-
-    mul-float/2addr v3, v4
-
-    float-to-int v3, v3
-
-    int-to-short v3, v3
-
-    and-int/lit16 v4, v3, 0xff
-
-    int-to-byte v4, v4
-
-    invoke-virtual {v2, v4}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
-
-    shr-int/lit8 v3, v3, 0x8
-
-    and-int/lit16 v3, v3, 0xff
-
-    int-to-byte v3, v3
-
-    invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
-
-    add-int/lit8 v0, v0, 0x4
-
-    goto :goto_5
-
-    :cond_9
-    :goto_6
-    if-ge v0, v1, :cond_a
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
-
-    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->get(I)B
-
-    move-result v3
-
-    and-int/lit16 v3, v3, 0xff
-
-    add-int/lit8 v3, v3, -0x80
-
-    int-to-byte v3, v3
-
-    invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_6
-
-    :cond_a
-    invoke-virtual {p1}, Ljava/nio/Buffer;->limit()I
-
-    move-result v0
-
-    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
-
-    invoke-virtual {v2}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
+    .line 8
+    iput-boolean p1, p0, Layd;->d:Z
 
     return-void
 .end method
 
-.method public final f(Lx50;)Lx50;
-    .locals 3
+.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    .locals 0
 
-    iget v0, p1, Lx50;->c:I
+    .line 1
+    invoke-direct {p0, p1, p2}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    const/4 v1, 0x3
+    .line 2
+    new-instance p1, Landroid/graphics/Rect;
 
-    const/4 v2, 0x2
+    invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
 
-    if-eq v0, v1, :cond_1
+    iput-object p1, p0, Layd;->b:Landroid/graphics/Rect;
 
-    if-eq v0, v2, :cond_1
+    const/4 p1, 0x1
 
-    const/high16 v1, 0x10000000
+    .line 3
+    iput-boolean p1, p0, Layd;->c:Z
 
-    if-eq v0, v1, :cond_1
+    const/4 p1, 0x0
 
-    const/high16 v1, 0x20000000
+    .line 4
+    iput-boolean p1, p0, Layd;->d:Z
 
-    if-eq v0, v1, :cond_1
+    return-void
+.end method
 
-    const/high16 v1, 0x30000000
+.method public constructor <init>(Landroid/view/ViewGroup$LayoutParams;)V
+    .locals 0
 
-    if-eq v0, v1, :cond_1
+    .line 13
+    invoke-direct {p0, p1}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
 
-    const/4 v1, 0x4
+    .line 14
+    new-instance p1, Landroid/graphics/Rect;
 
-    if-ne v0, v1, :cond_0
+    invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
 
-    goto :goto_0
+    iput-object p1, p0, Layd;->b:Landroid/graphics/Rect;
 
-    :cond_0
-    new-instance v0, Lcom/google/android/exoplayer2/audio/AudioProcessor$UnhandledAudioFormatException;
+    const/4 p1, 0x1
 
-    invoke-direct {v0, p1}, Lcom/google/android/exoplayer2/audio/AudioProcessor$UnhandledAudioFormatException;-><init>(Lx50;)V
+    .line 15
+    iput-boolean p1, p0, Layd;->c:Z
 
-    throw v0
+    const/4 p1, 0x0
 
-    :cond_1
-    :goto_0
-    if-eq v0, v2, :cond_2
+    .line 16
+    iput-boolean p1, p0, Layd;->d:Z
 
-    new-instance v0, Lx50;
+    return-void
+.end method
 
-    iget v1, p1, Lx50;->a:I
+.method public constructor <init>(Landroid/view/ViewGroup$MarginLayoutParams;)V
+    .locals 0
 
-    iget p1, p1, Lx50;->b:I
+    .line 9
+    invoke-direct {p0, p1}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/view/ViewGroup$MarginLayoutParams;)V
 
-    invoke-direct {v0, v1, p1, v2}, Lx50;-><init>(III)V
+    .line 10
+    new-instance p1, Landroid/graphics/Rect;
 
-    return-object v0
+    invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
 
-    :cond_2
-    sget-object p1, Lx50;->e:Lx50;
+    iput-object p1, p0, Layd;->b:Landroid/graphics/Rect;
 
-    return-object p1
+    const/4 p1, 0x1
+
+    .line 11
+    iput-boolean p1, p0, Layd;->c:Z
+
+    const/4 p1, 0x0
+
+    .line 12
+    iput-boolean p1, p0, Layd;->d:Z
+
+    return-void
+.end method
+
+.method public constructor <init>(Layd;)V
+    .locals 0
+
+    .line 17
+    invoke-direct {p0, p1}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 18
+    new-instance p1, Landroid/graphics/Rect;
+
+    invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
+
+    iput-object p1, p0, Layd;->b:Landroid/graphics/Rect;
+
+    const/4 p1, 0x1
+
+    .line 19
+    iput-boolean p1, p0, Layd;->c:Z
+
+    const/4 p1, 0x0
+
+    .line 20
+    iput-boolean p1, p0, Layd;->d:Z
+
+    return-void
 .end method

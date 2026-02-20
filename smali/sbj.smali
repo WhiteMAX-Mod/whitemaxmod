@@ -4,109 +4,102 @@
 
 
 # direct methods
-.method public static a(IIZ)I
-    .locals 5
+.method public static final d(Lorg/json/JSONObject;Ljava/lang/String;)Ljava/lang/String;
+    .locals 1
 
-    if-eqz p2, :cond_0
+    invoke-virtual {p0, p1}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
 
-    sub-int v0, p1, p0
+    move-result v0
 
-    add-int/lit16 v0, v0, 0x168
+    if-eqz v0, :cond_0
 
-    rem-int/lit16 v0, v0, 0x168
+    invoke-virtual {p0, p1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
-    goto :goto_0
+    move-result-object p0
+
+    return-object p0
 
     :cond_0
-    add-int v0, p1, p0
-
-    rem-int/lit16 v0, v0, 0x168
-
-    :goto_0
-    const/4 v1, 0x2
-
-    const-string v2, "CameraOrientationUtil"
-
-    invoke-static {v1, v2}, Lm5j;->l(ILjava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    const-string v1, ", sourceRotationDegrees="
-
-    const-string v3, ", isOppositeFacing="
-
-    const-string v4, "getRelativeImageRotation: destRotationDegrees="
-
-    invoke-static {v4, p0, v1, p1, v3}, Lkz1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object p0
-
-    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string p1, ", result="
-
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {v2, p0}, Lm5j;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_1
-    return v0
-.end method
-
-.method public static b(I)I
-    .locals 2
-
-    if-eqz p0, :cond_3
-
-    const/4 v0, 0x1
-
-    if-eq p0, v0, :cond_2
-
-    const/4 v0, 0x2
-
-    if-eq p0, v0, :cond_1
-
-    const/4 v0, 0x3
-
-    if-ne p0, v0, :cond_0
-
-    const/16 p0, 0x10e
-
-    return p0
-
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "Unsupported surface rotation: "
-
-    invoke-static {p0, v1}, Lj27;->g(ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_1
-    const/16 p0, 0xb4
-
-    return p0
-
-    :cond_2
-    const/16 p0, 0x5a
-
-    return p0
-
-    :cond_3
     const/4 p0, 0x0
 
-    return p0
+    return-object p0
+.end method
+
+.method public static final g(IJ)Ljava/lang/String;
+    .locals 7
+
+    const-wide/16 v0, 0x0
+
+    cmp-long v0, p1, v0
+
+    if-ltz v0, :cond_0
+
+    invoke-static {p0}, Lnqj;->a(I)V
+
+    invoke-static {p1, p2, p0}, Ljava/lang/Long;->toString(JI)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_0
+    const/4 v0, 0x1
+
+    ushr-long v1, p1, v0
+
+    int-to-long v3, p0
+
+    div-long/2addr v1, v3
+
+    shl-long v0, v1, v0
+
+    mul-long v5, v0, v3
+
+    sub-long/2addr p1, v5
+
+    cmp-long v2, p1, v3
+
+    if-ltz v2, :cond_1
+
+    sub-long/2addr p1, v3
+
+    const-wide/16 v2, 0x1
+
+    add-long/2addr v0, v2
+
+    :cond_1
+    invoke-static {p0}, Lnqj;->a(I)V
+
+    invoke-static {v0, v1, p0}, Ljava/lang/Long;->toString(JI)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {p0}, Lnqj;->a(I)V
+
+    invoke-static {p1, p2, p0}, Ljava/lang/Long;->toString(JI)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {v0, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+
+# virtual methods
+.method public abstract a(Lf4;Lb4;Lb4;)Z
+.end method
+
+.method public abstract b(Lf4;Ljava/lang/Object;Ljava/lang/Object;)Z
+.end method
+
+.method public abstract c(Lf4;Le4;Le4;)Z
+.end method
+
+.method public abstract e(Le4;Le4;)V
+.end method
+
+.method public abstract f(Le4;Ljava/lang/Thread;)V
 .end method

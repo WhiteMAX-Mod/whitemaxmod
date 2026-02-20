@@ -1,74 +1,59 @@
 .class public final Ljg6;
-.super Lj2;
+.super Lda4;
 .source "SourceFile"
 
 
 # instance fields
-.field public final d:J
+.field public X:Ljava/lang/Object;
+
+.field public Y:Lfe6;
+
+.field public Z:I
+
+.field public d:Z
+
+.field public o:Lgia;
+
+.field public synthetic s0:Ljava/lang/Object;
+
+.field public final synthetic t0:Lkg6;
+
+.field public u0:I
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 1
+.method public constructor <init>(Lkg6;Lda4;)V
+    .locals 0
 
-    sget-object v0, Lwob;->M2:Lwob;
+    iput-object p1, p0, Ljg6;->t0:Lkg6;
 
-    invoke-direct {p0, v0}, Lj2;-><init>(Lwob;)V
-
-    iput-wide p1, p0, Ljg6;->d:J
-
-    const-string v0, "folderSync"
-
-    invoke-virtual {p0, p1, p2, v0}, Lj2;->y(JLjava/lang/String;)V
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Ljg6;->s0:Ljava/lang/Object;
 
-    if-ne p0, p1, :cond_0
+    iget p1, p0, Ljg6;->u0:I
 
-    return v0
+    const/high16 v0, -0x80000000
 
-    :cond_0
-    instance-of v1, p1, Ljg6;
+    or-int/2addr p1, v0
 
-    const/4 v2, 0x0
+    iput p1, p0, Ljg6;->u0:I
 
-    if-nez v1, :cond_1
+    iget-object p1, p0, Ljg6;->t0:Lkg6;
 
-    return v2
+    const/4 v0, 0x0
 
-    :cond_1
-    check-cast p1, Ljg6;
+    invoke-static {p1, v0, p0}, Lkg6;->t(Lkg6;ZLda4;)Ljava/lang/Object;
 
-    iget-wide v3, p0, Ljg6;->d:J
+    move-result-object p1
 
-    iget-wide v5, p1, Ljg6;->d:J
-
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Ljg6;->d:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    return v0
+    return-object p1
 .end method

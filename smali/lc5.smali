@@ -1,63 +1,53 @@
-.class public abstract Llc5;
+.class public final Llc5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:Luy1;
+
+.field public final b:Lj88;
+
+.field public c:Lcuf;
+
+.field public final d:Lbgg;
+
+.field public final e:Lhxf;
+
+.field public final f:Lhxf;
+
+
 # direct methods
-.method public static a(Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/widget/EdgeEffect;
-    .locals 1
-
-    :try_start_0
-    new-instance v0, Landroid/widget/EdgeEffect;
-
-    invoke-direct {v0, p0, p1}, Landroid/widget/EdgeEffect;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    return-object v0
-
-    :catchall_0
-    new-instance p1, Landroid/widget/EdgeEffect;
-
-    invoke-direct {p1, p0}, Landroid/widget/EdgeEffect;-><init>(Landroid/content/Context;)V
-
-    return-object p1
-.end method
-
-.method public static b(Landroid/widget/EdgeEffect;)F
+.method public constructor <init>(Luy1;Lj88;)V
     .locals 0
 
-    :try_start_0
-    invoke-virtual {p0}, Landroid/widget/EdgeEffect;->getDistance()F
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    iput-object p1, p0, Llc5;->a:Luy1;
 
-    return p0
+    iput-object p2, p0, Llc5;->b:Lj88;
 
-    :catchall_0
-    const/4 p0, 0x0
+    new-instance p1, Lbx3;
 
-    return p0
-.end method
+    const/16 p2, 0x17
 
-.method public static c(Landroid/widget/EdgeEffect;FF)F
-    .locals 0
+    invoke-direct {p1, p2}, Lbx3;-><init>(I)V
 
-    :try_start_0
-    invoke-virtual {p0, p1, p2}, Landroid/widget/EdgeEffect;->onPullDistance(FF)F
+    new-instance p2, Lbgg;
 
-    move-result p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-direct {p2, p1}, Lbgg;-><init>(Lis6;)V
 
-    return p0
+    iput-object p2, p0, Llc5;->d:Lbgg;
 
-    :catchall_0
-    invoke-virtual {p0, p1, p2}, Landroid/widget/EdgeEffect;->onPull(FF)V
+    const/4 p1, 0x0
 
-    const/4 p0, 0x0
+    invoke-static {p1}, Lixf;->a(Ljava/lang/Object;)Lhxf;
 
-    return p0
+    move-result-object p1
+
+    iput-object p1, p0, Llc5;->e:Lhxf;
+
+    iput-object p1, p0, Llc5;->f:Lhxf;
+
+    return-void
 .end method

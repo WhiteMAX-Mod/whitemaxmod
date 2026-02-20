@@ -2,95 +2,30 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lnm4;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lj88;
+
+.field public final b:Landroid/os/Handler;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
-    .locals 0
-
-    iput p1, p0, Li81;->a:I
+.method public constructor <init>(Lj88;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    iput-object p1, p0, Li81;->a:Lj88;
+
+    new-instance p1, Landroid/os/Handler;
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v0
+
+    invoke-direct {p1, v0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    iput-object p1, p0, Li81;->b:Landroid/os/Handler;
+
     return-void
-.end method
-
-
-# virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 4
-
-    iget v0, p0, Li81;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v0, Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;
-
-    invoke-direct {v0}, Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;-><init>()V
-
-    return-object v0
-
-    :pswitch_0
-    new-instance v0, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;
-
-    invoke-direct {v0}, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;-><init>()V
-
-    return-object v0
-
-    :pswitch_1
-    new-instance v0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;
-
-    invoke-direct {v0}, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;-><init>()V
-
-    return-object v0
-
-    :pswitch_2
-    new-instance v0, Lone/me/calls/ui/ui/pip/PipScreen;
-
-    invoke-direct {v0}, Lone/me/calls/ui/ui/pip/PipScreen;-><init>()V
-
-    return-object v0
-
-    :pswitch_3
-    sget-object v0, Lone/me/calls/ui/ui/call/CallScreen;->P0:Lv1j;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v0, Lone/me/calls/ui/ui/call/CallScreen;
-
-    new-instance v1, Lktb;
-
-    const-string v2, "type"
-
-    const-string v3, "ACTIVE"
-
-    invoke-direct {v1, v2, v3}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    filled-new-array {v1}, [Lktb;
-
-    move-result-object v1
-
-    invoke-static {v1}, Laaj;->c([Lktb;)Landroid/os/Bundle;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Lone/me/calls/ui/ui/call/CallScreen;-><init>(Landroid/os/Bundle;)V
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

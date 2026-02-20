@@ -21,20 +21,20 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/rate/internal/LossHintTrigger;",
         "Lru/ok/android/externcalls/sdk/rate/internal/HintTrigger;",
-        "Lahd;",
+        "Ltmd;",
         "log",
         "Lru/ok/android/externcalls/sdk/rate/loss/LossHintConfig;",
         "config",
         "Lru/ok/android/externcalls/sdk/rate/internal/RateHintCollection;",
         "collection",
         "<init>",
-        "(Lahd;Lru/ok/android/externcalls/sdk/rate/loss/LossHintConfig;Lru/ok/android/externcalls/sdk/rate/internal/RateHintCollection;)V",
+        "(Ltmd;Lru/ok/android/externcalls/sdk/rate/loss/LossHintConfig;Lru/ok/android/externcalls/sdk/rate/internal/RateHintCollection;)V",
         "Lru/ok/android/externcalls/sdk/net/internal/monitor/NetworkStat;",
         "stat",
-        "Lb3h;",
+        "Lmah;",
         "onNetworkStat",
         "(Lru/ok/android/externcalls/sdk/net/internal/monitor/NetworkStat;)V",
-        "Lahd;",
+        "Ltmd;",
         "Lru/ok/android/externcalls/sdk/rate/loss/LossHintConfig;",
         "Lru/ok/android/externcalls/sdk/rate/internal/RateHintCollection;",
         "Lru/ok/android/externcalls/sdk/rate/internal/LossHintTrigger$LossReporter;",
@@ -72,7 +72,7 @@
 
 .field private final config:Lru/ok/android/externcalls/sdk/rate/loss/LossHintConfig;
 
-.field private final log:Lahd;
+.field private final log:Ltmd;
 
 .field private final videoReporter:Lru/ok/android/externcalls/sdk/rate/internal/LossHintTrigger$LossReporter;
 
@@ -85,19 +85,19 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/rate/internal/LossHintTrigger$Companion;-><init>(Lso4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/rate/internal/LossHintTrigger$Companion;-><init>(Lfq4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/rate/internal/LossHintTrigger;->Companion:Lru/ok/android/externcalls/sdk/rate/internal/LossHintTrigger$Companion;
 
     return-void
 .end method
 
-.method public constructor <init>(Lahd;Lru/ok/android/externcalls/sdk/rate/loss/LossHintConfig;Lru/ok/android/externcalls/sdk/rate/internal/RateHintCollection;)V
+.method public constructor <init>(Ltmd;Lru/ok/android/externcalls/sdk/rate/loss/LossHintConfig;Lru/ok/android/externcalls/sdk/rate/internal/RateHintCollection;)V
     .locals 7
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/rate/internal/LossHintTrigger;->log:Lahd;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/rate/internal/LossHintTrigger;->log:Ltmd;
 
     iput-object p2, p0, Lru/ok/android/externcalls/sdk/rate/internal/LossHintTrigger;->config:Lru/ok/android/externcalls/sdk/rate/loss/LossHintConfig;
 
@@ -180,10 +180,10 @@
     return-object p0
 .end method
 
-.method public static final synthetic access$getLog$p(Lru/ok/android/externcalls/sdk/rate/internal/LossHintTrigger;)Lahd;
+.method public static final synthetic access$getLog$p(Lru/ok/android/externcalls/sdk/rate/internal/LossHintTrigger;)Ltmd;
     .locals 0
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/rate/internal/LossHintTrigger;->log:Lahd;
+    iget-object p0, p0, Lru/ok/android/externcalls/sdk/rate/internal/LossHintTrigger;->log:Ltmd;
 
     return-object p0
 .end method

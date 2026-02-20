@@ -2,140 +2,214 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
 
 # instance fields
-.field public X:J
+.field public final a:Lpa4;
 
-.field public final synthetic Y:Lnbe;
+.field public b:Ljava/lang/String;
 
-.field public final a:Ljava/lang/Object;
+.field public c:Lua4;
 
-.field public final b:Li62;
+.field public d:Lua4;
 
-.field public final c:J
+.field public e:Z
 
-.field public d:J
-
-.field public o:J
+.field public f:I
 
 
 # direct methods
-.method public constructor <init>(Lnbe;JLjava/lang/Runnable;JLi62;J)V
+.method public constructor <init>(Lpa4;Ljava/lang/String;Lua4;Lua4;ZI)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lmbe;->Y:Lnbe;
+    iput-object p1, p0, Lmbe;->a:Lpa4;
 
-    iput-object p4, p0, Lmbe;->a:Ljava/lang/Object;
+    iput-object p2, p0, Lmbe;->b:Ljava/lang/String;
 
-    iput-object p7, p0, Lmbe;->b:Li62;
+    iput-object p3, p0, Lmbe;->c:Lua4;
 
-    iput-wide p8, p0, Lmbe;->c:J
+    iput-object p4, p0, Lmbe;->d:Lua4;
 
-    iput-wide p5, p0, Lmbe;->o:J
+    iput-boolean p5, p0, Lmbe;->e:Z
 
-    iput-wide p2, p0, Lmbe;->X:J
+    iput p6, p0, Lmbe;->f:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 15
+.method public final a(Lua4;)V
+    .locals 2
 
-    iget-object v0, p0, Lmbe;->a:Ljava/lang/Object;
+    iget-boolean v0, p0, Lmbe;->e:Z
 
-    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+    if-nez v0, :cond_0
 
-    iget-object v0, p0, Lmbe;->b:Li62;
+    iput-object p1, p0, Lmbe;->d:Lua4;
 
-    invoke-virtual {v0}, Li62;->e()Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    sget-object v1, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
-
-    iget-object v2, p0, Lmbe;->Y:Lnbe;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {v1}, Lnbe;->a(Ljava/util/concurrent/TimeUnit;)J
-
-    move-result-wide v3
-
-    sget-wide v5, Lpbe;->b:J
-
-    add-long v7, v3, v5
-
-    iget-wide v9, p0, Lmbe;->o:J
-
-    cmp-long v7, v7, v9
-
-    const-wide/16 v11, 0x1
-
-    iget-wide v13, p0, Lmbe;->c:J
-
-    if-ltz v7, :cond_1
-
-    add-long/2addr v9, v13
-
-    add-long/2addr v9, v5
-
-    cmp-long v5, v3, v9
-
-    if-ltz v5, :cond_0
-
-    goto :goto_0
+    return-void
 
     :cond_0
-    iget-wide v5, p0, Lmbe;->X:J
+    new-instance p1, Ljava/lang/RuntimeException;
 
-    iget-wide v7, p0, Lmbe;->d:J
+    const-class v0, Lmbe;
 
-    add-long/2addr v7, v11
+    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
-    iput-wide v7, p0, Lmbe;->d:J
+    move-result-object v0
 
-    mul-long/2addr v7, v13
+    const-string v1, "s can not be modified after being added to a Router."
 
-    add-long/2addr v7, v5
+    invoke-virtual {v0, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    goto :goto_1
+    move-result-object v0
 
-    :cond_1
-    :goto_0
-    add-long v7, v3, v13
+    invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    iget-wide v5, p0, Lmbe;->d:J
+    throw p1
+.end method
 
-    add-long/2addr v5, v11
+.method public final b()Lua4;
+    .locals 1
 
-    iput-wide v5, p0, Lmbe;->d:J
+    iget-object v0, p0, Lmbe;->a:Lpa4;
 
-    mul-long/2addr v13, v5
+    invoke-virtual {v0}, Lpa4;->getOverriddenPushHandler()Lua4;
 
-    sub-long v5, v7, v13
+    move-result-object v0
 
-    iput-wide v5, p0, Lmbe;->X:J
+    if-nez v0, :cond_0
 
-    :goto_1
-    iput-wide v3, p0, Lmbe;->o:J
+    iget-object v0, p0, Lmbe;->c:Lua4;
 
-    sub-long/2addr v7, v3
+    :cond_0
+    return-object v0
+.end method
 
-    invoke-virtual {v2, p0, v7, v8, v1}, Lnbe;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lo25;
+.method public final c(Lua4;)V
+    .locals 2
+
+    iget-boolean v0, p0, Lmbe;->e:Z
+
+    if-nez v0, :cond_0
+
+    iput-object p1, p0, Lmbe;->c:Lua4;
+
+    return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/RuntimeException;
+
+    const-class v0, Lmbe;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "s can not be modified after being added to a Router."
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final d()Landroid/os/Bundle;
+    .locals 3
+
+    new-instance v0, Landroid/os/Bundle;
+
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+
+    iget-object v1, p0, Lmbe;->a:Lpa4;
+
+    invoke-virtual {v1}, Lpa4;->saveInstanceState()Landroid/os/Bundle;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Ls25;->d(Ljava/util/concurrent/atomic/AtomicReference;Lo25;)Z
+    const-string v2, "RouterTransaction.controller.bundle"
 
-    :cond_2
+    invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    iget-object v1, p0, Lmbe;->c:Lua4;
+
+    if-eqz v1, :cond_0
+
+    const-string v2, "RouterTransaction.pushControllerChangeHandler"
+
+    invoke-virtual {v1}, Lua4;->j()Landroid/os/Bundle;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    :cond_0
+    iget-object v1, p0, Lmbe;->d:Lua4;
+
+    if-eqz v1, :cond_1
+
+    const-string v2, "RouterTransaction.popControllerChangeHandler"
+
+    invoke-virtual {v1}, Lua4;->j()Landroid/os/Bundle;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    :cond_1
+    const-string v1, "RouterTransaction.tag"
+
+    iget-object v2, p0, Lmbe;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v1, "RouterTransaction.transactionIndex"
+
+    iget v2, p0, Lmbe;->f:I
+
+    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+
+    const-string v1, "RouterTransaction.attachedToRouter"
+
+    iget-boolean v2, p0, Lmbe;->e:Z
+
+    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
+
+    return-object v0
+.end method
+
+.method public final e(Ljava/lang/String;)V
+    .locals 2
+
+    iget-boolean v0, p0, Lmbe;->e:Z
+
+    if-nez v0, :cond_0
+
+    iput-object p1, p0, Lmbe;->b:Ljava/lang/String;
+
     return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/RuntimeException;
+
+    const-class v0, Lmbe;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "s can not be modified after being added to a Router."
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

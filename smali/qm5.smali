@@ -3,284 +3,216 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ln8e;
+.implements Lw58;
 
 
 # instance fields
-.field public X:Z
+.field public final a:[Ljava/lang/Enum;
 
-.field public Y:I
+.field public b:Lnm5;
 
-.field public Z:J
-
-.field public final a:Lpj6;
-
-.field public final b:Lza9;
-
-.field public c:[J
-
-.field public d:Z
-
-.field public o:Ltm5;
+.field public final c:Lbgg;
 
 
 # direct methods
-.method public constructor <init>(Ltm5;Lpj6;Z)V
-    .locals 2
+.method public constructor <init>(Ljava/lang/String;[Ljava/lang/Enum;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lqm5;->a:Lpj6;
+    iput-object p2, p0, Lqm5;->a:[Ljava/lang/Enum;
 
-    iput-object p1, p0, Lqm5;->o:Ltm5;
+    new-instance p2, Ltq2;
 
-    new-instance p2, Lza9;
+    const/16 v0, 0xc
 
-    const/16 v0, 0x12
+    invoke-direct {p2, p0, v0, p1}, Ltq2;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-direct {p2, v0}, Lza9;-><init>(I)V
+    new-instance p1, Lbgg;
 
-    iput-object p2, p0, Lqm5;->b:Lza9;
+    invoke-direct {p1, p2}, Lbgg;-><init>(Lis6;)V
 
-    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
-
-    iput-wide v0, p0, Lqm5;->Z:J
-
-    iget-object p2, p1, Ltm5;->b:[J
-
-    iput-object p2, p0, Lqm5;->c:[J
-
-    invoke-virtual {p0, p1, p3}, Lqm5;->a(Ltm5;Z)V
+    iput-object p1, p0, Lqm5;->c:Lbgg;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ltm5;Z)V
-    .locals 9
-
-    iget v0, p0, Lqm5;->Y:I
-
-    const/4 v1, 0x1
-
-    const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
-
-    if-nez v0, :cond_0
-
-    move-wide v5, v2
-
-    goto :goto_0
-
-    :cond_0
-    iget-object v4, p0, Lqm5;->c:[J
-
-    sub-int/2addr v0, v1
-
-    aget-wide v5, v4, v0
-
-    :goto_0
-    iput-boolean p2, p0, Lqm5;->d:Z
-
-    iput-object p1, p0, Lqm5;->o:Ltm5;
-
-    iget-object p1, p1, Ltm5;->b:[J
-
-    iput-object p1, p0, Lqm5;->c:[J
-
-    iget-wide v7, p0, Lqm5;->Z:J
-
-    cmp-long p2, v7, v2
-
-    if-eqz p2, :cond_2
-
-    invoke-static {p1, v7, v8, v1}, Lmbh;->a([JJZ)I
-
-    move-result p1
-
-    iput p1, p0, Lqm5;->Y:I
-
-    iget-boolean p2, p0, Lqm5;->d:Z
-
-    if-eqz p2, :cond_1
-
-    iget-object p2, p0, Lqm5;->c:[J
-
-    array-length p2, p2
-
-    if-ne p1, p2, :cond_1
-
-    move-wide v2, v7
-
-    :cond_1
-    iput-wide v2, p0, Lqm5;->Z:J
-
-    return-void
-
-    :cond_2
-    cmp-long p2, v5, v2
-
-    if-eqz p2, :cond_3
-
-    const/4 p2, 0x0
-
-    invoke-static {p1, v5, v6, p2}, Lmbh;->a([JJZ)I
-
-    move-result p1
-
-    iput p1, p0, Lqm5;->Y:I
-
-    :cond_3
-    return-void
-.end method
-
-.method public final b()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final e()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final g(J)I
+.method public final a(Lj6g;Ljava/lang/Object;)V
     .locals 3
 
-    iget v0, p0, Lqm5;->Y:I
+    check-cast p2, Ljava/lang/Enum;
 
-    iget-object v1, p0, Lqm5;->c:[J
+    iget-object v0, p0, Lqm5;->a:[Ljava/lang/Enum;
 
-    const/4 v2, 0x1
+    invoke-static {v0, p2}, Lnu;->z([Ljava/lang/Object;Ljava/lang/Object;)I
 
-    invoke-static {v1, p1, p2, v2}, Lmbh;->a([JJZ)I
+    move-result v1
 
-    move-result p1
+    const/4 v2, -0x1
 
-    invoke-static {v0, p1}, Ljava/lang/Math;->max(II)I
+    if-eq v1, v2, :cond_0
 
-    move-result p1
+    invoke-virtual {p0}, Lqm5;->d()Lzwe;
 
-    iget p2, p0, Lqm5;->Y:I
+    move-result-object p2
 
-    sub-int p2, p1, p2
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iput p1, p0, Lqm5;->Y:I
+    invoke-interface {p2, v1}, Lzwe;->g(I)Ljava/lang/String;
 
-    return p2
-.end method
+    move-result-object p2
 
-.method public final p(Ltx4;Lol4;I)I
-    .locals 6
+    invoke-virtual {p1, p2}, Lj6g;->s(Ljava/lang/String;)V
 
-    iget v0, p0, Lqm5;->Y:I
-
-    iget-object v1, p0, Lqm5;->c:[J
-
-    array-length v1, v1
-
-    const/4 v2, 0x1
-
-    if-ne v0, v1, :cond_0
-
-    move v1, v2
-
-    goto :goto_0
+    return-void
 
     :cond_0
-    const/4 v1, 0x0
+    new-instance p1, Lkotlinx/serialization/SerializationException;
 
-    :goto_0
-    const/4 v3, -0x4
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    const/4 v4, 0x4
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    if-eqz v1, :cond_1
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    iget-boolean v5, p0, Lqm5;->d:Z
+    const-string p2, " is not a valid enum "
 
-    if-nez v5, :cond_1
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iput v4, p2, Laz;->b:I
+    invoke-virtual {p0}, Lqm5;->d()Lzwe;
 
-    return v3
+    move-result-object p2
 
-    :cond_1
-    and-int/lit8 v5, p3, 0x2
+    invoke-interface {p2}, Lzwe;->a()Ljava/lang/String;
 
-    if-nez v5, :cond_6
+    move-result-object p2
 
-    iget-boolean v5, p0, Lqm5;->X:Z
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-nez v5, :cond_2
+    const-string p2, ", must be one of "
 
-    goto :goto_1
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_2
-    if-eqz v1, :cond_3
+    invoke-static {v0}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
 
-    const/4 p1, -0x3
+    move-result-object p2
 
-    return p1
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_3
-    and-int/lit8 p1, p3, 0x1
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    if-nez p1, :cond_4
+    move-result-object p2
 
-    add-int/lit8 p1, v0, 0x1
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    iput p1, p0, Lqm5;->Y:I
+    throw p1
+.end method
 
-    :cond_4
-    and-int/lit8 p1, p3, 0x4
+.method public final b(Lzm4;)Ljava/lang/Object;
+    .locals 3
 
-    if-nez p1, :cond_5
+    invoke-virtual {p0}, Lqm5;->d()Lzwe;
 
-    iget-object p1, p0, Lqm5;->o:Ltm5;
+    move-result-object v0
 
-    iget-object p1, p1, Ltm5;->a:[Lnm5;
+    invoke-interface {p1, v0}, Lzm4;->s(Lzwe;)I
 
-    aget-object p1, p1, v0
+    move-result p1
 
-    iget-object p3, p0, Lqm5;->b:Lza9;
+    iget-object v0, p0, Lqm5;->a:[Ljava/lang/Enum;
 
-    invoke-virtual {p3, p1}, Lza9;->w(Lnm5;)[B
+    if-ltz p1, :cond_0
+
+    array-length v1, v0
+
+    if-ge p1, v1, :cond_0
+
+    aget-object p1, v0, p1
+
+    return-object p1
+
+    :cond_0
+    new-instance v1, Lkotlinx/serialization/SerializationException;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p1, " is not among valid "
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Lqm5;->d()Lzwe;
 
     move-result-object p1
 
-    array-length p3, p1
+    invoke-interface {p1}, Lzwe;->a()Ljava/lang/String;
 
-    invoke-virtual {p2, p3}, Lol4;->z(I)V
+    move-result-object p1
 
-    iget-object p3, p2, Lol4;->o:Ljava/nio/ByteBuffer;
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p3, p1}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
+    const-string p1, " enum values, values size is "
 
-    :cond_5
-    iget-object p1, p0, Lqm5;->c:[J
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    aget-wide v0, p1, v0
+    array-length p1, v0
 
-    iput-wide v0, p2, Lol4;->Y:J
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    iput v2, p2, Laz;->b:I
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    return v3
+    move-result-object p1
 
-    :cond_6
-    :goto_1
-    iget-object p2, p0, Lqm5;->a:Lpj6;
+    invoke-direct {v1, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    iput-object p2, p1, Ltx4;->c:Ljava/lang/Object;
+    throw v1
+.end method
 
-    iput-boolean v2, p0, Lqm5;->X:Z
+.method public final d()Lzwe;
+    .locals 1
 
-    const/4 p1, -0x5
+    iget-object v0, p0, Lqm5;->c:Lbgg;
 
-    return p1
+    invoke-virtual {v0}, Lbgg;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lzwe;
+
+    return-object v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "kotlinx.serialization.internal.EnumSerializer<"
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Lqm5;->d()Lzwe;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Lzwe;->a()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x3e
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

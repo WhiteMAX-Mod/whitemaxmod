@@ -1,120 +1,263 @@
-.class public abstract Ljba;
+.class public final Ljba;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:Lmba;
+
+.field public final b:Ljava/lang/String;
+
+.field public final c:Ljava/lang/String;
+
+.field public final d:Lrba;
+
+.field public final e:Ldlj;
+
+.field public final f:Lyba;
+
+
 # direct methods
-.method public static a([B)Llba;
-    .locals 17
+.method public constructor <init>(Lmba;Ljava/lang/String;Ljava/lang/String;Lrba;Ldlj;Lyba;)V
+    .locals 0
 
-    new-instance v0, Lru/ok/tamtam/nano/Tasks$MsgReact;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$MsgReact;-><init>()V
+    iput-object p1, p0, Ljba;->a:Lmba;
 
-    move-object/from16 v1, p0
+    iput-object p2, p0, Ljba;->b:Ljava/lang/String;
 
-    :try_start_0
-    invoke-static {v0, v1}, Lbp9;->mergeFrom(Lbp9;[B)Lbp9;
+    iput-object p3, p0, Ljba;->c:Ljava/lang/String;
+
+    iput-object p4, p0, Ljba;->d:Lrba;
+
+    iput-object p5, p0, Ljba;->e:Ldlj;
+
+    iput-object p6, p0, Ljba;->f:Lyba;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Ljba;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Ljba;
+
+    iget-object v1, p0, Ljba;->a:Lmba;
+
+    iget-object v3, p1, Ljba;->a:Lmba;
+
+    invoke-static {v1, v3}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Ljba;->b:Ljava/lang/String;
+
+    iget-object v3, p1, Ljba;->b:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Ljba;->c:Ljava/lang/String;
+
+    iget-object v3, p1, Ljba;->c:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-object v1, p0, Ljba;->d:Lrba;
+
+    iget-object v3, p1, Ljba;->d:Lrba;
+
+    if-eq v1, v3, :cond_5
+
+    return v2
+
+    :cond_5
+    iget-object v1, p0, Ljba;->e:Ldlj;
+
+    iget-object v3, p1, Ljba;->e:Ldlj;
+
+    invoke-static {v1, v3}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_6
+
+    return v2
+
+    :cond_6
+    iget-object v1, p0, Ljba;->f:Lyba;
+
+    iget-object p1, p1, Ljba;->f:Lyba;
+
+    invoke-static {v1, p1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_7
+
+    return v2
+
+    :cond_7
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-object v0, p0, Ljba;->a:Lmba;
+
+    iget-wide v0, v0, Lmba;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Ljba;->b:Ljava/lang/String;
+
+    invoke-static {v0, v1, v2}, Lj64;->d(IILjava/lang/String;)I
+
+    move-result v0
+
+    iget-object v2, p0, Ljba;->c:Ljava/lang/String;
+
+    invoke-static {v0, v1, v2}, Lj64;->d(IILjava/lang/String;)I
+
+    move-result v0
+
+    iget-object v2, p0, Ljba;->d:Lrba;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v2
+
+    add-int/2addr v2, v0
+
+    mul-int/2addr v2, v1
+
+    iget-object v0, p0, Ljba;->e:Ldlj;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget-object v1, p0, Ljba;->f:Lyba;
+
+    iget-object v1, v1, Lyba;->a:Ljava/util/ArrayList;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Movie(movieId="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Ljba;->a:Lmba;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", externalMovieId="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ljba;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", title="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ljba;->c:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", sourceType="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ljba;->d:Lrba;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", duration="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ljba;->e:Ldlj;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", thumbnail="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ljba;->f:Lyba;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Lru/ok/tamtam/nano/Tasks$MsgReact;
-    :try_end_0
-    .catch Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException; {:try_start_0 .. :try_end_0} :catch_0
-
-    new-instance v1, Llba;
-
-    iget-wide v2, v0, Lru/ok/tamtam/nano/Tasks$MsgReact;->requestId:J
-
-    iget-wide v4, v0, Lru/ok/tamtam/nano/Tasks$MsgReact;->chatId:J
-
-    iget-wide v6, v0, Lru/ok/tamtam/nano/Tasks$MsgReact;->messageId:J
-
-    iget-wide v8, v0, Lru/ok/tamtam/nano/Tasks$MsgReact;->chatServerId:J
-
-    iget-wide v10, v0, Lru/ok/tamtam/nano/Tasks$MsgReact;->messageServerId:J
-
-    new-instance v12, Lmp9;
-
-    iget v13, v0, Lru/ok/tamtam/nano/Tasks$MsgReact;->reactionType:I
-
-    sget-object v14, Lrp9;->d:Lal5;
-
-    invoke-virtual {v14}, Le2;->iterator()Ljava/util/Iterator;
-
-    move-result-object v14
-
-    :goto_0
-    move-object v15, v14
-
-    check-cast v15, Lb2;
-
-    invoke-virtual {v15}, Lb2;->hasNext()Z
-
-    move-result v16
-
-    if-eqz v16, :cond_1
-
-    invoke-virtual {v15}, Lb2;->next()Ljava/lang/Object;
-
-    move-result-object v15
-
-    move-object/from16 p0, v1
-
-    move-object v1, v15
-
-    check-cast v1, Lrp9;
-
-    iget v1, v1, Lrp9;->a:I
-
-    if-ne v1, v13, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    move-object/from16 v1, p0
-
-    goto :goto_0
-
-    :cond_1
-    move-object/from16 p0, v1
-
-    const/4 v15, 0x0
-
-    :goto_1
-    check-cast v15, Lrp9;
-
-    if-eqz v15, :cond_2
-
-    iget-object v0, v0, Lru/ok/tamtam/nano/Tasks$MsgReact;->reaction:Ljava/lang/String;
-
-    invoke-direct {v12, v15, v0}, Lmp9;-><init>(Lrp9;Ljava/lang/String;)V
-
-    move-object/from16 v1, p0
-
-    invoke-direct/range {v1 .. v12}, Llba;-><init>(JJJJJLmp9;)V
-
-    return-object v1
-
-    :cond_2
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "Unknown reactionType = "
-
-    invoke-static {v13, v1}, Lj27;->g(ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :catch_0
-    move-exception v0
-
-    new-instance v1, Lru/ok/tamtam/nano/ProtoException;
-
-    invoke-direct {v1, v0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v1
+    return-object v0
 .end method

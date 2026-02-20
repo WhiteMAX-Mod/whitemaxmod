@@ -1,112 +1,97 @@
-.class public final synthetic Lf81;
+.class public final Lf81;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lnm4;
+.implements Lh81;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ljava/lang/Object;
-
-.field public final synthetic c:Ljava/lang/Object;
+.field public final a:Liw1;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;ILjava/lang/Object;)V
+.method public constructor <init>(Liw1;)V
     .locals 0
 
-    iput p2, p0, Lf81;->a:I
-
-    iput-object p1, p0, Lf81;->b:Ljava/lang/Object;
-
-    iput-object p3, p0, Lf81;->c:Ljava/lang/Object;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lf81;->a:Liw1;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 9
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    iget v0, p0, Lf81;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, p0, Lf81;->b:Ljava/lang/Object;
+    return v0
 
-    move-object v4, v0
+    :cond_0
+    instance-of v1, p1, Lf81;
 
-    check-cast v4, Ljava/lang/String;
+    const/4 v2, 0x0
 
-    iget-object v0, p0, Lf81;->c:Ljava/lang/Object;
+    if-nez v1, :cond_1
 
-    move-object v5, v0
+    return v2
 
-    check-cast v5, Ljava/lang/String;
+    :cond_1
+    check-cast p1, Lf81;
 
-    new-instance v1, Lone/me/settings/twofa/creation/TwoFACreationScreen;
+    iget-object v1, p0, Lf81;->a:Liw1;
 
-    const/16 v7, 0x10
+    iget-object p1, p1, Lf81;->a:Liw1;
 
-    const/4 v8, 0x0
+    invoke-static {v1, p1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    const-string v2, "CREATE"
+    move-result p1
 
-    const-string v3, "CREATE_PASSWORD"
+    if-nez p1, :cond_2
 
-    const/4 v6, 0x0
+    return v2
 
-    invoke-direct/range {v1 .. v8}, Lone/me/settings/twofa/creation/TwoFACreationScreen;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lvt7;ILso4;)V
+    :cond_2
+    return v0
+.end method
 
-    return-object v1
+.method public final hashCode()I
+    .locals 1
 
-    :pswitch_0
-    iget-object v0, p0, Lf81;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lf81;->a:Liw1;
 
-    check-cast v0, Lhm4;
+    invoke-virtual {v0}, Liw1;->hashCode()I
 
-    iget-object v1, p0, Lf81;->c:Ljava/lang/Object;
+    move-result v0
 
-    check-cast v1, Landroid/os/Bundle;
+    return v0
+.end method
 
-    new-instance v2, Lone/me/main/MainScreen;
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    iget-object v0, v0, Lhm4;->a:Landroid/net/Uri;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-static {v0}, Lpm4;->a(Landroid/net/Uri;)Ljava/lang/String;
+    const-string v1, "Active(state="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lf81;->a:Liw1;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-direct {v2, v0, v1}, Lone/me/main/MainScreen;-><init>(Ljava/lang/String;Landroid/os/Bundle;)V
-
-    return-object v2
-
-    :pswitch_1
-    iget-object v0, p0, Lf81;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/String;
-
-    iget-object v1, p0, Lf81;->c:Ljava/lang/Object;
-
-    check-cast v1, Ljava/lang/Boolean;
-
-    new-instance v2, Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;
-
-    invoke-direct {v2, v0, v1}, Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;-><init>(Ljava/lang/String;Ljava/lang/Boolean;)V
-
-    return-object v2
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

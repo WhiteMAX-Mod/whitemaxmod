@@ -4,5 +4,23 @@
 
 
 # virtual methods
-.method public abstract a(Landroid/graphics/RectF;)F
+.method public A(Llb4;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public H(Llb4;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public abstract L(Lkb4;Lkb4;)Ljava/util/List;
+.end method
+
+.method public S()V
+    .locals 0
+
+    return-void
 .end method

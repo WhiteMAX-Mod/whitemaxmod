@@ -1,93 +1,342 @@
 .class public final Lcj1;
-.super Ldj1;
+.super Lpdg;
 .source "SourceFile"
+
+# interfaces
+.implements Lat6;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public synthetic X:Landroid/widget/LinearLayout;
+
+.field public final synthetic o:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
+.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p3, p0, Lcj1;->o:I
 
-    iput-object p1, p0, Lcj1;->a:Ljava/lang/String;
+    invoke-direct {p0, p1, p2}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    const/4 v0, 0x1
+    iget v0, p0, Lcj1;->o:I
 
-    if-ne p0, p1, :cond_0
+    check-cast p1, Landroid/widget/LinearLayout;
 
-    return v0
+    check-cast p2, Llob;
 
-    :cond_0
-    instance-of v1, p1, Lcj1;
+    check-cast p3, Lkotlin/coroutines/Continuation;
 
-    const/4 v2, 0x0
+    packed-switch v0, :pswitch_data_0
 
-    if-nez v1, :cond_1
+    new-instance p2, Lcj1;
 
-    return v2
+    const/4 v0, 0x3
 
-    :cond_1
-    check-cast p1, Lcj1;
+    const/4 v1, 0x6
 
-    iget-object v1, p0, Lcj1;->a:Ljava/lang/String;
+    invoke-direct {p2, v0, p3, v1}, Lcj1;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    iget-object p1, p1, Lcj1;->a:Ljava/lang/String;
+    iput-object p1, p2, Lcj1;->X:Landroid/widget/LinearLayout;
 
-    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    sget-object p1, Lmah;->a:Lmah;
 
-    move-result p1
+    invoke-virtual {p2, p1}, Lcj1;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-nez p1, :cond_2
+    return-object p1
 
-    return v2
+    :pswitch_0
+    new-instance p2, Lcj1;
 
-    :cond_2
-    return v0
+    const/4 v0, 0x3
+
+    const/4 v1, 0x5
+
+    invoke-direct {p2, v0, p3, v1}, Lcj1;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    iput-object p1, p2, Lcj1;->X:Landroid/widget/LinearLayout;
+
+    sget-object p1, Lmah;->a:Lmah;
+
+    invoke-virtual {p2, p1}, Lcj1;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    :pswitch_1
+    new-instance p2, Lcj1;
+
+    const/4 v0, 0x3
+
+    const/4 v1, 0x4
+
+    invoke-direct {p2, v0, p3, v1}, Lcj1;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    iput-object p1, p2, Lcj1;->X:Landroid/widget/LinearLayout;
+
+    sget-object p1, Lmah;->a:Lmah;
+
+    invoke-virtual {p2, p1}, Lcj1;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    :pswitch_2
+    new-instance p2, Lcj1;
+
+    const/4 v0, 0x3
+
+    const/4 v1, 0x3
+
+    invoke-direct {p2, v0, p3, v1}, Lcj1;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    iput-object p1, p2, Lcj1;->X:Landroid/widget/LinearLayout;
+
+    sget-object p1, Lmah;->a:Lmah;
+
+    invoke-virtual {p2, p1}, Lcj1;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    :pswitch_3
+    new-instance p2, Lcj1;
+
+    const/4 v0, 0x3
+
+    const/4 v1, 0x2
+
+    invoke-direct {p2, v0, p3, v1}, Lcj1;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    iput-object p1, p2, Lcj1;->X:Landroid/widget/LinearLayout;
+
+    sget-object p1, Lmah;->a:Lmah;
+
+    invoke-virtual {p2, p1}, Lcj1;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    :pswitch_4
+    new-instance p2, Lcj1;
+
+    const/4 v0, 0x3
+
+    const/4 v1, 0x1
+
+    invoke-direct {p2, v0, p3, v1}, Lcj1;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    iput-object p1, p2, Lcj1;->X:Landroid/widget/LinearLayout;
+
+    sget-object p1, Lmah;->a:Lmah;
+
+    invoke-virtual {p2, p1}, Lcj1;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    :pswitch_5
+    new-instance p2, Lcj1;
+
+    const/4 v0, 0x3
+
+    const/4 v1, 0x0
+
+    invoke-direct {p2, v0, p3, v1}, Lcj1;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    iput-object p1, p2, Lcj1;->X:Landroid/widget/LinearLayout;
+
+    sget-object p1, Lmah;->a:Lmah;
+
+    invoke-virtual {p2, p1}, Lcj1;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final hashCode()I
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Lcj1;->a:Ljava/lang/String;
+    iget v0, p0, Lcj1;->o:I
 
-    if-nez v0, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lcj1;->X:Landroid/widget/LinearLayout;
 
-    return v0
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    :cond_0
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    sget-object p1, Lfe3;->t0:Ltea;
 
-    move-result v0
+    invoke-virtual {p1, v0}, Ltea;->o(Landroid/view/View;)Llob;
 
-    return v0
-.end method
+    move-result-object p1
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+    invoke-static {v0, p1}, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->H0(Landroid/view/View;Llob;)V
 
-    const-string v0, "Name(name="
+    sget-object p1, Lmah;->a:Lmah;
 
-    const-string v1, ")"
+    return-object p1
 
-    iget-object v2, p0, Lcj1;->a:Ljava/lang/String;
+    :pswitch_0
+    iget-object v0, p0, Lcj1;->X:Landroid/widget/LinearLayout;
 
-    invoke-static {v0, v2, v1}, Lj27;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    move-result-object v0
+    sget-object p1, Lfe3;->t0:Ltea;
 
-    return-object v0
+    invoke-virtual {p1, v0}, Ltea;->o(Landroid/view/View;)Llob;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Llob;->b()Lqc5;
+
+    move-result-object p1
+
+    iget p1, p1, Lqc5;->a:I
+
+    invoke-virtual {v0, p1}, Landroid/view/View;->setBackgroundColor(I)V
+
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
+
+    :pswitch_1
+    iget-object v0, p0, Lcj1;->X:Landroid/widget/LinearLayout;
+
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    sget-object p1, Lfe3;->t0:Ltea;
+
+    invoke-virtual {p1, v0}, Ltea;->o(Landroid/view/View;)Llob;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Llob;->b()Lqc5;
+
+    move-result-object p1
+
+    iget p1, p1, Lqc5;->c:I
+
+    invoke-virtual {v0, p1}, Landroid/view/View;->setBackgroundColor(I)V
+
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
+
+    :pswitch_2
+    iget-object v0, p0, Lcj1;->X:Landroid/widget/LinearLayout;
+
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    sget-object p1, Lfe3;->t0:Ltea;
+
+    invoke-virtual {p1, v0}, Ltea;->o(Landroid/view/View;)Llob;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Llob;->b()Lqc5;
+
+    move-result-object p1
+
+    iget p1, p1, Lqc5;->a:I
+
+    invoke-virtual {v0, p1}, Landroid/view/View;->setBackgroundColor(I)V
+
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
+
+    :pswitch_3
+    iget-object v0, p0, Lcj1;->X:Landroid/widget/LinearLayout;
+
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    sget-object p1, Lfe3;->t0:Ltea;
+
+    invoke-virtual {p1, v0}, Ltea;->o(Landroid/view/View;)Llob;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Llob;->b()Lqc5;
+
+    move-result-object p1
+
+    iget p1, p1, Lqc5;->a:I
+
+    invoke-virtual {v0, p1}, Landroid/view/View;->setBackgroundColor(I)V
+
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
+
+    :pswitch_4
+    iget-object v0, p0, Lcj1;->X:Landroid/widget/LinearLayout;
+
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    sget-object p1, Lfe3;->t0:Ltea;
+
+    invoke-virtual {p1, v0}, Ltea;->o(Landroid/view/View;)Llob;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Llob;->b()Lqc5;
+
+    move-result-object p1
+
+    iget p1, p1, Lqc5;->a:I
+
+    invoke-virtual {v0, p1}, Landroid/view/View;->setBackgroundColor(I)V
+
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
+
+    :pswitch_5
+    iget-object v0, p0, Lcj1;->X:Landroid/widget/LinearLayout;
+
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    sget-object p1, Lfe3;->t0:Ltea;
+
+    invoke-virtual {p1, v0}, Ltea;->r(Landroid/view/View;)Loob;
+
+    move-result-object p1
+
+    iget-object p1, p1, Loob;->b:Llob;
+
+    invoke-interface {p1}, Llob;->b()Lqc5;
+
+    move-result-object p1
+
+    iget p1, p1, Lqc5;->e:I
+
+    invoke-virtual {v0, p1}, Landroid/view/View;->setBackgroundColor(I)V
+
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

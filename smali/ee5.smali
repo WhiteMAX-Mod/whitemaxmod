@@ -1,74 +1,17 @@
 .class public final Lee5;
-.super Ljava/lang/Object;
+.super Lde5;
 .source "SourceFile"
-
-# interfaces
-.implements Lde5;
-
-
-# instance fields
-.field public a:Ljava/io/File;
-
-.field public b:Ljava/io/FileInputStream;
-
-.field public c:Ljava/nio/channels/FileChannel;
 
 
 # virtual methods
-.method public final close()V
-    .locals 1
+.method public a(Landroid/view/Window;)V
+    .locals 0
 
-    iget-object v0, p0, Lee5;->b:Ljava/io/FileInputStream;
+    invoke-virtual {p1}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
 
-    invoke-virtual {v0}, Ljava/io/FileInputStream;->close()V
+    move-result-object p1
+
+    invoke-static {p1}, Lv4;->C(Landroid/view/WindowManager$LayoutParams;)V
 
     return-void
-.end method
-
-.method public final f(JLjava/nio/ByteBuffer;)I
-    .locals 1
-
-    iget-object v0, p0, Lee5;->c:Ljava/nio/channels/FileChannel;
-
-    invoke-virtual {v0, p3, p1, p2}, Ljava/nio/channels/FileChannel;->read(Ljava/nio/ByteBuffer;J)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final isOpen()Z
-    .locals 1
-
-    iget-object v0, p0, Lee5;->c:Ljava/nio/channels/FileChannel;
-
-    invoke-virtual {v0}, Ljava/nio/channels/spi/AbstractInterruptibleChannel;->isOpen()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final read(Ljava/nio/ByteBuffer;)I
-    .locals 1
-
-    iget-object v0, p0, Lee5;->c:Ljava/nio/channels/FileChannel;
-
-    invoke-virtual {v0, p1}, Ljava/nio/channels/FileChannel;->read(Ljava/nio/ByteBuffer;)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final write(Ljava/nio/ByteBuffer;)I
-    .locals 1
-
-    iget-object v0, p0, Lee5;->c:Ljava/nio/channels/FileChannel;
-
-    invoke-virtual {v0, p1}, Ljava/nio/channels/FileChannel;->write(Ljava/nio/ByteBuffer;)I
-
-    move-result p1
-
-    return p1
 .end method

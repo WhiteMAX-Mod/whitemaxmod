@@ -1,428 +1,135 @@
 .class public final Ldzc;
-.super Lbp9;
+.super Ldg0;
 .source "SourceFile"
 
 
-# static fields
-.field public static volatile f:[Ldzc;
-
-
 # instance fields
-.field public a:I
+.field public final b:Lru/ok/tamtam/android/util/share/ShareData;
 
-.field public b:I
-
-.field public c:I
-
-.field public d:F
-
-.field public e:[Lbzc;
+.field public final c:Lcpg;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 3
+.method public constructor <init>(Lru/ok/tamtam/android/util/share/ShareData;Lcpg;)V
+    .locals 1
 
-    invoke-direct {p0}, Lbp9;-><init>()V
+    const/16 v0, 0x12
 
-    const/4 v0, 0x0
+    invoke-direct {p0, v0}, Ldg0;-><init>(I)V
 
-    iput v0, p0, Ldzc;->a:I
+    iput-object p1, p0, Ldzc;->b:Lru/ok/tamtam/android/util/share/ShareData;
 
-    iput v0, p0, Ldzc;->b:I
-
-    iput v0, p0, Ldzc;->c:I
-
-    const/4 v1, 0x0
-
-    iput v1, p0, Ldzc;->d:F
-
-    sget-object v1, Lbzc;->c:[Lbzc;
-
-    if-nez v1, :cond_1
-
-    sget-object v1, Llt7;->b:Ljava/lang/Object;
-
-    monitor-enter v1
-
-    :try_start_0
-    sget-object v2, Lbzc;->c:[Lbzc;
-
-    if-nez v2, :cond_0
-
-    new-array v0, v0, [Lbzc;
-
-    sput-object v0, Lbzc;->c:[Lbzc;
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    monitor-exit v1
-
-    goto :goto_2
-
-    :goto_1
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v0
-
-    :cond_1
-    :goto_2
-    sget-object v0, Lbzc;->c:[Lbzc;
-
-    iput-object v0, p0, Ldzc;->e:[Lbzc;
-
-    const/4 v0, -0x1
-
-    iput v0, p0, Lbp9;->cachedSize:I
+    iput-object p2, p0, Ldzc;->c:Lcpg;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final computeSerializedSize()I
-    .locals 4
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    iget v0, p0, Ldzc;->a:I
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    const/4 v2, 0x1
-
-    invoke-static {v2, v0}, Lwg3;->f(II)I
-
-    move-result v0
-
-    goto :goto_0
-
-    :cond_0
-    move v0, v1
-
-    :goto_0
-    iget v2, p0, Ldzc;->b:I
-
-    if-eqz v2, :cond_1
-
-    const/4 v3, 0x2
-
-    invoke-static {v3, v2}, Lwg3;->f(II)I
-
-    move-result v2
-
-    add-int/2addr v0, v2
-
-    :cond_1
-    iget v2, p0, Ldzc;->c:I
-
-    if-eqz v2, :cond_2
-
-    const/4 v3, 0x3
-
-    invoke-static {v3, v2}, Lwg3;->f(II)I
-
-    move-result v2
-
-    add-int/2addr v0, v2
-
-    :cond_2
-    iget v2, p0, Ldzc;->d:F
-
-    invoke-static {v2}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v2
-
-    const/4 v3, 0x0
-
-    invoke-static {v3}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v3
-
-    if-eq v2, v3, :cond_3
-
-    const/4 v2, 0x4
-
-    invoke-static {v2}, Lwg3;->e(I)I
-
-    move-result v2
-
-    add-int/2addr v0, v2
-
-    :cond_3
-    iget-object v2, p0, Ldzc;->e:[Lbzc;
-
-    if-eqz v2, :cond_5
-
-    array-length v2, v2
-
-    if-lez v2, :cond_5
-
-    :goto_1
-    iget-object v2, p0, Ldzc;->e:[Lbzc;
-
-    array-length v3, v2
-
-    if-ge v1, v3, :cond_5
-
-    aget-object v2, v2, v1
-
-    if-eqz v2, :cond_4
-
-    const/4 v3, 0x5
-
-    invoke-static {v3, v2}, Lwg3;->i(ILbp9;)I
-
-    move-result v2
-
-    add-int/2addr v2, v0
-
-    move v0, v2
-
-    :cond_4
-    add-int/lit8 v1, v1, 0x1
+    if-ne p0, p1, :cond_0
 
     goto :goto_1
 
-    :cond_5
-    return v0
-.end method
-
-.method public final mergeFrom(Lvg3;)Lbp9;
-    .locals 5
-
     :cond_0
-    :goto_0
-    invoke-virtual {p1}, Lvg3;->s()I
+    instance-of v0, p1, Ldzc;
 
-    move-result v0
+    if-nez v0, :cond_1
 
-    if-eqz v0, :cond_a
-
-    const/16 v1, 0x8
-
-    if-eq v0, v1, :cond_9
-
-    const/16 v1, 0x10
-
-    if-eq v0, v1, :cond_7
-
-    const/16 v1, 0x18
-
-    if-eq v0, v1, :cond_6
-
-    const/16 v1, 0x25
-
-    if-eq v0, v1, :cond_5
-
-    const/16 v1, 0x2a
-
-    if-eq v0, v1, :cond_1
-
-    invoke-virtual {p1, v0}, Lvg3;->u(I)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    goto :goto_3
+    goto :goto_0
 
     :cond_1
-    invoke-static {p1, v1}, Lc2j;->e(Lvg3;I)I
+    check-cast p1, Ldzc;
+
+    iget-object v0, p0, Ldzc;->b:Lru/ok/tamtam/android/util/share/ShareData;
+
+    iget-object v1, p1, Ldzc;->b:Lru/ok/tamtam/android/util/share/ShareData;
+
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    iget-object v1, p0, Ldzc;->e:[Lbzc;
+    if-nez v0, :cond_2
 
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_2
-
-    move v3, v2
-
-    goto :goto_1
+    goto :goto_0
 
     :cond_2
-    array-length v3, v1
+    iget-object v0, p0, Ldzc;->c:Lcpg;
 
-    :goto_1
-    add-int/2addr v0, v3
+    iget-object p1, p1, Ldzc;->c:Lcpg;
 
-    new-array v4, v0, [Lbzc;
+    invoke-virtual {v0, p1}, Lcpg;->equals(Ljava/lang/Object;)Z
 
-    if-eqz v3, :cond_3
+    move-result p1
 
-    invoke-static {v1, v2, v4, v2, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    if-nez p1, :cond_3
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
 
     :cond_3
-    :goto_2
-    add-int/lit8 v1, v0, -0x1
+    :goto_1
+    const/4 p1, 0x1
 
-    if-ge v3, v1, :cond_4
-
-    new-instance v1, Lbzc;
-
-    invoke-direct {v1}, Lbzc;-><init>()V
-
-    aput-object v1, v4, v3
-
-    invoke-virtual {p1, v1}, Lvg3;->j(Lbp9;)V
-
-    invoke-virtual {p1}, Lvg3;->s()I
-
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_2
-
-    :cond_4
-    new-instance v0, Lbzc;
-
-    invoke-direct {v0}, Lbzc;-><init>()V
-
-    aput-object v0, v4, v3
-
-    invoke-virtual {p1, v0}, Lvg3;->j(Lbp9;)V
-
-    iput-object v4, p0, Ldzc;->e:[Lbzc;
-
-    goto :goto_0
-
-    :cond_5
-    invoke-virtual {p1}, Lvg3;->i()F
-
-    move-result v0
-
-    iput v0, p0, Ldzc;->d:F
-
-    goto :goto_0
-
-    :cond_6
-    invoke-virtual {p1}, Lvg3;->p()I
-
-    move-result v0
-
-    iput v0, p0, Ldzc;->c:I
-
-    goto :goto_0
-
-    :cond_7
-    invoke-virtual {p1}, Lvg3;->p()I
-
-    move-result v0
-
-    if-eqz v0, :cond_8
-
-    goto :goto_0
-
-    :cond_8
-    iput v0, p0, Ldzc;->b:I
-
-    goto :goto_0
-
-    :cond_9
-    invoke-virtual {p1}, Lvg3;->p()I
-
-    move-result v0
-
-    iput v0, p0, Ldzc;->a:I
-
-    goto :goto_0
-
-    :cond_a
-    :goto_3
-    return-object p0
+    return p1
 .end method
 
-.method public final writeTo(Lwg3;)V
-    .locals 3
+.method public final hashCode()I
+    .locals 2
 
-    iget v0, p0, Ldzc;->a:I
+    iget-object v0, p0, Ldzc;->b:Lru/ok/tamtam/android/util/share/ShareData;
 
-    if-eqz v0, :cond_0
-
-    const/4 v1, 0x1
-
-    invoke-virtual {p1, v1, v0}, Lwg3;->w(II)V
-
-    :cond_0
-    iget v0, p0, Ldzc;->b:I
-
-    if-eqz v0, :cond_1
-
-    const/4 v1, 0x2
-
-    invoke-virtual {p1, v1, v0}, Lwg3;->w(II)V
-
-    :cond_1
-    iget v0, p0, Ldzc;->c:I
-
-    if-eqz v0, :cond_2
-
-    const/4 v1, 0x3
-
-    invoke-virtual {p1, v1, v0}, Lwg3;->w(II)V
-
-    :cond_2
-    iget v0, p0, Ldzc;->d:F
-
-    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
 
-    const/4 v1, 0x0
+    mul-int/lit8 v0, v0, 0x1f
 
-    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+    iget-object v1, p0, Ldzc;->c:Lcpg;
+
+    iget v1, v1, Lcpg;->c:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
 
     move-result v1
 
-    if-eq v0, v1, :cond_3
+    add-int/2addr v1, v0
 
-    const/4 v0, 0x4
+    return v1
+.end method
 
-    iget v1, p0, Ldzc;->d:F
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    invoke-virtual {p1, v0, v1}, Lwg3;->v(IF)V
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    :cond_3
-    iget-object v0, p0, Ldzc;->e:[Lbzc;
+    const-string v1, "ShareContact(shareData="
 
-    if-eqz v0, :cond_5
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    array-length v0, v0
+    iget-object v1, p0, Ldzc;->b:Lru/ok/tamtam/android/util/share/ShareData;
 
-    if-lez v0, :cond_5
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const/4 v0, 0x0
+    const-string v1, ", title="
 
-    :goto_0
-    iget-object v1, p0, Ldzc;->e:[Lbzc;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    array-length v2, v1
+    iget-object v1, p0, Ldzc;->c:Lcpg;
 
-    if-ge v0, v2, :cond_5
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    aget-object v1, v1, v0
+    const-string v1, ")"
 
-    if-eqz v1, :cond_4
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v2, 0x5
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {p1, v2, v1}, Lwg3;->y(ILbp9;)V
+    move-result-object v0
 
-    :cond_4
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_5
-    return-void
+    return-object v0
 .end method

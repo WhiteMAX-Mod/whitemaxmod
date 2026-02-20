@@ -1,29 +1,31 @@
-.class public abstract Lzi8;
+.class public final Lzi8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public a:J
+
+.field public b:F
+
+.field public c:J
+
+
 # direct methods
-.method public static a(Ljava/lang/Object;)Landroid/os/LocaleList;
-    .locals 0
+.method public constructor <init>()V
+    .locals 3
 
-    check-cast p0, Landroid/app/LocaleManager;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p0}, Landroid/app/LocaleManager;->getApplicationLocales()Landroid/os/LocaleList;
+    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
 
-    move-result-object p0
+    iput-wide v0, p0, Lzi8;->a:J
 
-    return-object p0
-.end method
+    const v2, -0x800001
 
-.method public static b(Ljava/lang/Object;)Landroid/os/LocaleList;
-    .locals 0
+    iput v2, p0, Lzi8;->b:F
 
-    check-cast p0, Landroid/app/LocaleManager;
+    iput-wide v0, p0, Lzi8;->c:J
 
-    invoke-virtual {p0}, Landroid/app/LocaleManager;->getSystemLocales()Landroid/os/LocaleList;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

@@ -3,140 +3,99 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lat7;",
-            ">;"
-        }
-    .end annotation
-.end field
+.implements Luk9;
 
 
 # instance fields
-.field public final a:Landroid/content/IntentSender;
+.field public final a:Luk9;
 
-.field public final b:Landroid/content/Intent;
-
-.field public final c:I
-
-.field public final d:I
+.field public final b:Lwk9;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lxj4;
-
-    const/16 v1, 0x1a
-
-    invoke-direct {v0, v1}, Lxj4;-><init>(I)V
-
-    sput-object v0, Lat7;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/IntentSender;Landroid/content/Intent;II)V
+.method public constructor <init>(Lxd4;Lwk9;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    iput-object p1, p0, Lat7;->a:Landroid/content/IntentSender;
+    iput-object p1, p0, Lat7;->a:Luk9;
 
-    .line 3
-    iput-object p2, p0, Lat7;->b:Landroid/content/Intent;
-
-    .line 4
-    iput p3, p0, Lat7;->c:I
-
-    .line 5
-    iput p4, p0, Lat7;->d:I
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/os/Parcel;)V
-    .locals 3
-
-    .line 6
-    const-class v0, Landroid/content/IntentSender;
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/content/IntentSender;
-
-    .line 7
-    const-class v1, Landroid/content/Intent;
-
-    invoke-virtual {v1}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v1}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/content/Intent;
-
-    .line 8
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result v2
-
-    .line 9
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result p1
-
-    .line 10
-    invoke-direct {p0, v0, v1, v2, p1}, Lat7;-><init>(Landroid/content/IntentSender;Landroid/content/Intent;II)V
+    iput-object p2, p0, Lat7;->b:Lwk9;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
+.method public final a(Lll9;)V
     .locals 1
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lat7;->a:Luk9;
 
-    return v0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 1
-
-    iget-object v0, p0, Lat7;->a:Landroid/content/IntentSender;
-
-    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
-
-    iget-object v0, p0, Lat7;->b:Landroid/content/Intent;
-
-    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
-
-    iget p2, p0, Lat7;->c:I
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget p2, p0, Lat7;->d:I
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-interface {v0, p1}, Lnl9;->a(Lll9;)V
 
     return-void
+.end method
+
+.method public final b(Lo01;Lzh3;)Lzh3;
+    .locals 1
+
+    iget-object v0, p0, Lat7;->b:Lwk9;
+
+    invoke-interface {v0, p1}, Lwk9;->r(Lo01;)V
+
+    iget-object v0, p0, Lat7;->a:Luk9;
+
+    invoke-interface {v0, p1, p2}, Luk9;->b(Lo01;Lzh3;)Lzh3;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final c(Lelc;)I
+    .locals 1
+
+    iget-object v0, p0, Lat7;->a:Luk9;
+
+    invoke-interface {v0, p1}, Luk9;->c(Lelc;)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final get(Ljava/lang/Object;)Lzh3;
+    .locals 2
+
+    iget-object v0, p0, Lat7;->a:Luk9;
+
+    invoke-interface {v0, p1}, Luk9;->get(Ljava/lang/Object;)Lzh3;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lat7;->b:Lwk9;
+
+    if-nez v0, :cond_0
+
+    invoke-interface {v1, p1}, Lwk9;->n(Ljava/lang/Object;)V
+
+    return-object v0
+
+    :cond_0
+    invoke-interface {v1, p1}, Lwk9;->k(Ljava/lang/Object;)V
+
+    return-object v0
+.end method
+
+.method public final getSizeInBytes()I
+    .locals 1
+
+    iget-object v0, p0, Lat7;->a:Luk9;
+
+    invoke-interface {v0}, Luk9;->getSizeInBytes()I
+
+    move-result v0
+
+    return v0
 .end method

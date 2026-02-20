@@ -1,130 +1,157 @@
 .class public final Lq7f;
-.super Ljava/lang/Object;
+.super Lt7f;
 .source "SourceFile"
 
 
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lq7f;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
 # instance fields
-.field public final a:Ljava/util/concurrent/ExecutorService;
+.field public final a:Z
 
-.field public final b:Lahd;
-
-.field public volatile c:Ljava/lang/String;
-
-.field public volatile d:Lorg/webrtc/PeerConnectionFactory;
-
-.field public final e:Lrwa;
-
-.field public f:Ls3e;
-
-.field public g:Lorg/webrtc/audio/JavaAudioDeviceModule;
-
-.field public h:Lorg/webrtc/EglBase;
-
-.field public final i:Luw4;
-
-.field public final j:Lvvb;
-
-.field public k:I
-
-.field public volatile l:Lz48;
+.field public final b:Z
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/ExecutorService;Lorg/webrtc/EglBase;Lahd;Lrk1;Luw4;Lja1;)V
-    .locals 12
+.method static constructor <clinit>()V
+    .locals 2
 
-    move-object/from16 v0, p5
+    new-instance v0, Ll7f;
+
+    const/4 v1, 0x4
+
+    invoke-direct {v0, v1}, Ll7f;-><init>(I)V
+
+    sput-object v0, Lq7f;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(ZZ)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x0
+    iput-boolean p1, p0, Lq7f;->a:Z
 
-    iput v1, p0, Lq7f;->k:I
+    iput-boolean p2, p0, Lq7f;->b:Z
 
-    iput-object p1, p0, Lq7f;->a:Ljava/util/concurrent/ExecutorService;
+    return-void
+.end method
 
-    iput-object p3, p0, Lq7f;->b:Lahd;
 
-    iput-object v0, p0, Lq7f;->i:Luw4;
+# virtual methods
+.method public final describeContents()I
+    .locals 1
 
-    new-instance v2, Lrwa;
+    const/4 v0, 0x0
 
-    invoke-interface {p2}, Lorg/webrtc/EglBase;->getEglBaseContext()Lorg/webrtc/EglBase$Context;
+    return v0
+.end method
 
-    move-result-object v3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    invoke-direct {v2, v3, p3}, Lrwa;-><init>(Lorg/webrtc/EglBase$Context;Lahd;)V
+    const/4 v0, 0x1
 
-    iput-object v2, p0, Lq7f;->e:Lrwa;
+    if-ne p0, p1, :cond_0
 
-    new-instance v4, Lvvb;
-
-    invoke-interface {p2}, Lorg/webrtc/EglBase;->getEglBaseContext()Lorg/webrtc/EglBase$Context;
-
-    move-result-object v5
-
-    move-object/from16 v10, p4
-
-    iget-object v2, v10, Lrk1;->s:Lzii;
-
-    iget-object v3, v2, Lzii;->a:Ljava/lang/Object;
-
-    check-cast v3, Lbu0;
-
-    iget-boolean v3, v3, Lbu0;->a:Z
-
-    if-nez v3, :cond_1
-
-    iget-object v2, v2, Lzii;->b:Ljava/lang/Object;
-
-    check-cast v2, Lbu0;
-
-    iget-boolean v2, v2, Lbu0;->a:Z
-
-    if-eqz v2, :cond_0
-
-    goto :goto_1
+    return v0
 
     :cond_0
-    :goto_0
-    move-object v9, p3
+    instance-of v1, p1, Lq7f;
 
-    move-object/from16 v7, p6
+    const/4 v2, 0x0
 
-    move v6, v1
+    if-nez v1, :cond_1
 
-    move-object v8, v10
-
-    goto :goto_2
+    return v2
 
     :cond_1
-    :goto_1
-    const/4 v1, 0x1
+    check-cast p1, Lq7f;
 
-    goto :goto_0
+    iget-boolean v1, p0, Lq7f;->a:Z
 
-    :goto_2
-    invoke-direct/range {v4 .. v9}, Lvvb;-><init>(Lorg/webrtc/EglBase$Context;ZLia1;Lrk1;Lahd;)V
+    iget-boolean v3, p1, Lq7f;->a:Z
 
-    iput-object v4, p0, Lq7f;->j:Lvvb;
+    if-eq v1, v3, :cond_2
 
-    invoke-virtual {v0, v4}, Luw4;->a(Law8;)V
+    return v2
 
-    new-instance v6, Ln22;
+    :cond_2
+    iget-boolean v1, p0, Lq7f;->b:Z
 
-    const/16 v11, 0x10
+    iget-boolean p1, p1, Lq7f;->b:Z
 
-    move-object v7, p0
+    if-eq v1, p1, :cond_3
 
-    move-object v8, p2
+    return v2
 
-    move-object v9, p3
+    :cond_3
+    return v0
+.end method
 
-    move-object/from16 v10, p4
+.method public final hashCode()I
+    .locals 2
 
-    invoke-direct/range {v6 .. v11}, Ln22;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    iget-boolean v0, p0, Lq7f;->a:Z
 
-    invoke-interface {p1, v6}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Lq7f;->b:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, ", isEnabled="
+
+    const-string v1, ")"
+
+    const-string v2, "Radio(isChecked="
+
+    iget-boolean v3, p0, Lq7f;->a:Z
+
+    iget-boolean v4, p0, Lq7f;->b:Z
+
+    invoke-static {v2, v3, v0, v4, v1}, Lkb0;->j(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
+
+    iget-boolean p2, p0, Lq7f;->a:Z
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget-boolean p2, p0, Lq7f;->b:Z
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
     return-void
 .end method

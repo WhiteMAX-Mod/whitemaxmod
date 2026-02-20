@@ -1,38 +1,58 @@
-.class public interface abstract Lbve;
-.super Ljava/lang/Object;
+.class public final synthetic Lbve;
+.super Lnt6;
 .source "SourceFile"
+
+# interfaces
+.implements Lys6;
+
+
+# static fields
+.field public static final a:Lbve;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 6
+
+    new-instance v0, Lbve;
+
+    const-string v4, "createSegment(JLkotlinx/coroutines/sync/SemaphoreSegment;)Lkotlinx/coroutines/sync/SemaphoreSegment;"
+
+    const/4 v5, 0x1
+
+    const/4 v1, 0x2
+
+    const-class v2, Leve;
+
+    const-string v3, "createSegment"
+
+    invoke-direct/range {v0 .. v5}, Lnt6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    sput-object v0, Lbve;->a:Lbve;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract a()Landroid/content/ComponentName;
-.end method
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-.method public abstract b()Ljava/lang/Object;
-.end method
+    check-cast p1, Ljava/lang/Number;
 
-.method public abstract c()Ljava/lang/String;
-.end method
+    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
 
-.method public abstract d()Z
-.end method
+    move-result-wide v0
 
-.method public abstract e()I
-.end method
+    check-cast p2, Lfve;
 
-.method public abstract f()Landroid/os/Bundle;
-.end method
+    sget p1, Leve;->a:I
 
-.method public abstract g()Landroid/media/session/MediaSession$Token;
-.end method
+    new-instance p1, Lfve;
 
-.method public abstract getExtras()Landroid/os/Bundle;
-.end method
+    const/4 v2, 0x0
 
-.method public abstract getPackageName()Ljava/lang/String;
-.end method
+    invoke-direct {p1, v0, v1, p2, v2}, Lfve;-><init>(JLfve;I)V
 
-.method public abstract getType()I
-.end method
-
-.method public abstract getUid()I
+    return-object p1
 .end method

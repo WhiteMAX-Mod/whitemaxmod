@@ -1,33 +1,68 @@
-.class public abstract Lwi8;
+.class public final Lwi8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lw2b;
+
+
+# instance fields
+.field public final a:Le5;
+
+.field public b:Z
+
 
 # direct methods
-.method public static varargs a([Ljava/util/Locale;)Landroid/os/LocaleList;
-    .locals 1
+.method public constructor <init>(Lo4j;Le5;)V
+    .locals 0
 
-    new-instance v0, Landroid/os/LocaleList;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, p0}, Landroid/os/LocaleList;-><init>([Ljava/util/Locale;)V
+    const/4 p1, 0x0
 
-    return-object v0
+    iput-boolean p1, p0, Lwi8;->b:Z
+
+    iput-object p2, p0, Lwi8;->a:Le5;
+
+    return-void
 .end method
 
-.method public static b()Landroid/os/LocaleList;
-    .locals 1
 
-    invoke-static {}, Landroid/os/LocaleList;->getAdjustedDefault()Landroid/os/LocaleList;
+# virtual methods
+.method public final a(Ljava/lang/Object;)V
+    .locals 2
 
-    move-result-object v0
+    iget-object v0, p0, Lwi8;->a:Le5;
 
-    return-object v0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    check-cast p1, Ljava/lang/Void;
+
+    iget-object p1, v0, Le5;->b:Ljava/lang/Object;
+
+    check-cast p1, Lcom/google/android/gms/auth/api/signin/internal/SignInHubActivity;
+
+    iget v0, p1, Lcom/google/android/gms/auth/api/signin/internal/SignInHubActivity;->L0:I
+
+    iget-object v1, p1, Lcom/google/android/gms/auth/api/signin/internal/SignInHubActivity;->M0:Landroid/content/Intent;
+
+    invoke-virtual {p1, v0, v1}, Landroid/app/Activity;->setResult(ILandroid/content/Intent;)V
+
+    invoke-virtual {p1}, Landroid/app/Activity;->finish()V
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lwi8;->b:Z
+
+    return-void
 .end method
 
-.method public static c()Landroid/os/LocaleList;
+.method public final toString()Ljava/lang/String;
     .locals 1
 
-    invoke-static {}, Landroid/os/LocaleList;->getDefault()Landroid/os/LocaleList;
+    iget-object v0, p0, Lwi8;->a:Le5;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v0
 

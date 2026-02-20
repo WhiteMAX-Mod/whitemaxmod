@@ -1,214 +1,258 @@
 .class public final Lo5g;
-.super Lwv4;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Comparable;
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lo5g;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final o:Ltw1;
+.field public final a:I
 
-.field public p:Lqw1;
+.field public final b:I
 
-.field public q:Lwv4;
-
-.field public r:Lr5g;
+.field public final c:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/util/Size;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0, p1, p2}, Lwv4;-><init>(Landroid/util/Size;I)V
+    new-instance v0, Ll7f;
 
-    new-instance p1, Lqwe;
+    const/16 v1, 0x11
 
-    const/16 p2, 0x10
+    invoke-direct {v0, v1}, Ll7f;-><init>(I)V
 
-    invoke-direct {p1, p2, p0}, Lqwe;-><init>(ILjava/lang/Object;)V
+    sput-object v0, Lo5g;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    invoke-static {p1}, Libj;->b(Lrw1;)Ltw1;
+    return-void
+.end method
 
-    move-result-object p1
+.method public constructor <init>()V
+    .locals 1
 
-    iput-object p1, p0, Lo5g;->o:Ltw1;
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, -0x1
+
+    .line 2
+    iput v0, p0, Lo5g;->a:I
+
+    .line 3
+    iput v0, p0, Lo5g;->b:I
+
+    .line 4
+    iput v0, p0, Lo5g;->c:I
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/os/Parcel;)V
+    .locals 1
+
+    .line 5
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 6
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    iput v0, p0, Lo5g;->a:I
+
+    .line 7
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    iput v0, p0, Lo5g;->b:I
+
+    .line 8
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result p1
+
+    iput p1, p0, Lo5g;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
+.method public final compareTo(Ljava/lang/Object;)I
     .locals 2
 
-    invoke-super {p0}, Lwv4;->a()V
+    check-cast p1, Lo5g;
 
-    new-instance v0, Ll5g;
+    iget v0, p0, Lo5g;->a:I
 
-    const/4 v1, 0x2
+    iget v1, p1, Lo5g;->a:I
 
-    invoke-direct {v0, p0, v1}, Ll5g;-><init>(Lo5g;I)V
+    sub-int/2addr v0, v1
 
-    invoke-static {v0}, Lvti;->e(Ljava/lang/Runnable;)V
+    if-nez v0, :cond_0
 
-    return-void
+    iget v0, p0, Lo5g;->b:I
+
+    iget v1, p1, Lo5g;->b:I
+
+    sub-int/2addr v0, v1
+
+    if-nez v0, :cond_0
+
+    iget v0, p0, Lo5g;->c:I
+
+    iget p1, p1, Lo5g;->c:I
+
+    sub-int/2addr v0, p1
+
+    :cond_0
+    return v0
 .end method
 
-.method public final f()Lie8;
+.method public final describeContents()I
     .locals 1
 
-    iget-object v0, p0, Lo5g;->o:Ltw1;
+    const/4 v0, 0x0
 
-    return-object v0
+    return v0
 .end method
 
-.method public final g(Lwv4;Ljava/lang/Runnable;)Z
-    .locals 10
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    const-string v0, ")"
+    const/4 v0, 0x1
 
-    const-string v1, ") must match the parent("
+    if-ne p0, p1, :cond_0
 
-    iget-object v2, p0, Lwv4;->h:Landroid/util/Size;
+    return v0
 
-    invoke-static {}, Lvti;->a()V
+    :cond_0
+    const/4 v1, 0x0
+
+    if-eqz p1, :cond_2
+
+    const-class v2, Lo5g;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget v3, p1, Lwv4;->i:I
+    move-result-object v3
 
-    iget-object v4, p1, Lwv4;->h:Landroid/util/Size;
-
-    iget-object v5, p0, Lo5g;->q:Lwv4;
-
-    const/4 v6, 0x0
-
-    if-ne v5, p1, :cond_0
-
-    return v6
-
-    :cond_0
-    const/4 v7, 0x1
-
-    if-nez v5, :cond_1
-
-    move v5, v7
+    if-eq v2, v3, :cond_1
 
     goto :goto_0
 
     :cond_1
-    move v5, v6
+    check-cast p1, Lo5g;
 
-    :goto_0
-    const-string v8, "A different provider has been set. To change the provider, call SurfaceEdge#invalidate before calling SurfaceEdge#setProvider"
+    iget v2, p0, Lo5g;->a:I
 
-    invoke-static {v8, v5}, Ljkj;->f(Ljava/lang/String;Z)V
-
-    invoke-virtual {v2, v4}, Landroid/util/Size;->equals(Ljava/lang/Object;)Z
-
-    move-result v5
-
-    new-instance v8, Ljava/lang/StringBuilder;
-
-    const-string v9, "The provider\'s size("
-
-    invoke-direct {v8, v9}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v8, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v8, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v8, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v8, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v2, v5}, Ljkj;->a(Ljava/lang/String;Z)V
-
-    iget v2, p0, Lwv4;->i:I
+    iget v3, p1, Lo5g;->a:I
 
     if-ne v2, v3, :cond_2
 
-    move v6, v7
+    iget v2, p0, Lo5g;->b:I
+
+    iget v3, p1, Lo5g;->b:I
+
+    if-ne v2, v3, :cond_2
+
+    iget v2, p0, Lo5g;->c:I
+
+    iget p1, p1, Lo5g;->c:I
+
+    if-ne v2, p1, :cond_2
+
+    return v0
 
     :cond_2
-    const-string v4, "The provider\'s format("
+    :goto_0
+    return v1
+.end method
 
-    invoke-static {v4, v2, v1, v3, v0}, Lkz1;->g(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+.method public final hashCode()I
+    .locals 2
 
-    move-result-object v0
+    iget v0, p0, Lo5g;->a:I
 
-    invoke-static {v0, v6}, Ljkj;->a(Ljava/lang/String;Z)V
+    mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v0, p0, Lwv4;->a:Ljava/lang/Object;
+    iget v1, p0, Lo5g;->b:I
 
-    monitor-enter v0
+    add-int/2addr v0, v1
 
-    :try_start_0
-    iget-boolean v1, p0, Lwv4;->c:Z
+    mul-int/lit8 v0, v0, 0x1f
 
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    iget v1, p0, Lo5g;->c:I
 
-    xor-int/lit8 v0, v1, 0x1
+    add-int/2addr v0, v1
 
-    const-string v1, "The parent is closed. Call SurfaceEdge#invalidate() before setting a new provider."
+    return v0
+.end method
 
-    invoke-static {v1, v0}, Ljkj;->f(Ljava/lang/String;Z)V
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    iput-object p1, p0, Lo5g;->q:Lwv4;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Lwv4;->c()Lie8;
+    const/16 v1, 0x23
 
-    move-result-object v0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    iget-object v1, p0, Lo5g;->p:Lqw1;
+    iget v1, p0, Lo5g;->a:I
 
-    invoke-static {v0, v1}, Lnge;->i(Lie8;Lqw1;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Lwv4;->d()V
+    const-string v1, "."
 
-    iget-object v0, p0, Lwv4;->e:Ltw1;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v0}, Lnge;->h(Lie8;)Lie8;
+    iget v2, p0, Lo5g;->b:I
 
-    move-result-object v0
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    new-instance v1, Lm5g;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v2, 0x1
+    iget v1, p0, Lo5g;->c:I
 
-    invoke-direct {v1, p1, v2}, Lm5g;-><init>(Lwv4;I)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-static {}, Lacj;->a()Lc15;
-
-    move-result-object v2
-
-    invoke-interface {v0, v1, v2}, Lie8;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
-
-    iget-object p1, p1, Lwv4;->g:Ltw1;
-
-    invoke-static {p1}, Lnge;->h(Lie8;)Lie8;
-
-    move-result-object p1
-
-    invoke-static {}, Lacj;->e()Lw37;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-interface {p1, p2, v0}, Lie8;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+    return-object v0
+.end method
 
-    return v7
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    :catchall_0
-    move-exception p1
+    iget p2, p0, Lo5g;->a:I
 
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    throw p1
+    iget p2, p0, Lo5g;->b:I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget p2, p0, Lo5g;->c:I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    return-void
 .end method

@@ -1,355 +1,140 @@
-.class public abstract Lg5f;
-.super Ljava/lang/Object;
+.class public final Lg5f;
+.super Lpdg;
 .source "SourceFile"
 
+# interfaces
+.implements Lys6;
 
-# static fields
-.field public static final a:Lgq0;
 
-.field public static final b:Landroid/graphics/Matrix;
+# instance fields
+.field public final synthetic X:Lm5f;
 
-.field public static final c:Landroid/graphics/Paint;
+.field public o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lm5f;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Lgq0;
+    iput-object p1, p0, Lg5f;->X:Lm5f;
 
-    const/16 v1, 0xa
+    const/4 p1, 0x2
 
-    const/4 v2, 0x3
-
-    invoke-direct {v0, v1, v2}, Lgq0;-><init>(II)V
-
-    sput-object v0, Lg5f;->a:Lgq0;
-
-    new-instance v0, Landroid/graphics/Matrix;
-
-    invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
-
-    sput-object v0, Lg5f;->b:Landroid/graphics/Matrix;
-
-    new-instance v0, Landroid/graphics/Paint;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Landroid/graphics/Paint;-><init>(I)V
-
-    new-instance v1, Landroid/graphics/PorterDuffXfermode;
-
-    sget-object v2, Landroid/graphics/PorterDuff$Mode;->CLEAR:Landroid/graphics/PorterDuff$Mode;
-
-    invoke-direct {v1, v2}, Landroid/graphics/PorterDuffXfermode;-><init>(Landroid/graphics/PorterDuff$Mode;)V
-
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setXfermode(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;
-
-    sput-object v0, Lg5f;->c:Landroid/graphics/Paint;
+    invoke-direct {p0, p1, p2}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static final a(Landroid/graphics/Path;Landroid/graphics/Rect;)V
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lnd4;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lg5f;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lg5f;
+
+    sget-object p2, Lmah;->a:Lmah;
+
+    invoke-virtual {p1, p2}, Lg5f;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Lg5f;
+
+    iget-object v0, p0, Lg5f;->X:Lm5f;
+
+    invoke-direct {p1, v0, p2}, Lg5f;-><init>(Lm5f;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 5
 
-    if-eqz p1, :cond_2
+    iget v0, p0, Lg5f;->o:I
 
-    invoke-virtual {p1}, Landroid/graphics/Rect;->isEmpty()Z
+    iget-object v1, p0, Lg5f;->X:Lm5f;
 
-    move-result v0
+    const/4 v2, 0x2
 
-    if-eqz v0, :cond_0
+    const/4 v3, 0x1
+
+    sget-object v4, Lod4;->a:Lod4;
+
+    if-eqz v0, :cond_2
+
+    if-eq v0, v3, :cond_1
+
+    if-ne v0, v2, :cond_0
+
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    goto :goto_2
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
     goto :goto_0
 
-    :cond_0
-    new-instance v0, Landroid/graphics/Matrix;
-
-    invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
-
-    invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
-
-    move-result v1
-
-    invoke-virtual {p1}, Landroid/graphics/Rect;->height()I
-
-    move-result v2
-
-    invoke-static {v1, v2}, Ljava/lang/Math;->min(II)I
-
-    move-result v1
-
-    div-int/lit8 v1, v1, 0x2
-
-    new-instance v2, Lflf;
-
-    invoke-direct {v2, v1}, Lflf;-><init>(I)V
-
-    sget-object v3, Lg5f;->a:Lgq0;
-
-    invoke-virtual {v3, v2}, Lzo8;->c(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/graphics/Path;
-
-    if-nez v2, :cond_1
-
-    invoke-static {v1}, Lg5f;->b(I)Landroid/graphics/Path;
-
-    move-result-object v2
-
-    :cond_1
-    invoke-virtual {p0, v2}, Landroid/graphics/Path;->set(Landroid/graphics/Path;)V
-
-    invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
-
-    move-result v2
-
-    int-to-float v2, v2
-
-    const/high16 v3, 0x40000000    # 2.0f
-
-    div-float/2addr v2, v3
-
-    int-to-float v1, v1
-
-    sub-float/2addr v2, v1
-
-    invoke-virtual {p1}, Landroid/graphics/Rect;->height()I
-
-    move-result v4
-
-    int-to-float v4, v4
-
-    div-float/2addr v4, v3
-
-    sub-float/2addr v4, v1
-
-    iget v1, p1, Landroid/graphics/Rect;->left:I
-
-    int-to-float v1, v1
-
-    add-float/2addr v1, v2
-
-    iget p1, p1, Landroid/graphics/Rect;->top:I
-
-    int-to-float p1, p1
-
-    add-float/2addr p1, v4
-
-    invoke-virtual {v0, v1, p1}, Landroid/graphics/Matrix;->setTranslate(FF)V
-
-    invoke-virtual {p0, v0}, Landroid/graphics/Path;->transform(Landroid/graphics/Matrix;)V
-
-    return-void
-
     :cond_2
-    :goto_0
-    invoke-virtual {p0}, Landroid/graphics/Path;->reset()V
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    return-void
-.end method
+    new-instance p1, Lf5f;
 
-.method public static final b(I)Landroid/graphics/Path;
-    .locals 22
+    const/4 v0, 0x1
 
-    move/from16 v0, p0
+    invoke-direct {p1, v1, v0}, Lf5f;-><init>(Lm5f;I)V
 
-    new-instance v1, Landroid/graphics/Path;
+    iput v3, p0, Lg5f;->o:I
 
-    invoke-direct {v1}, Landroid/graphics/Path;-><init>()V
+    sget-object v0, Lmi5;->a:Lmi5;
 
-    if-gtz v0, :cond_0
+    invoke-static {v0, p1, p0}, Lebj;->f(Led4;Lis6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    return-object v1
+    move-result-object p1
 
-    :cond_0
-    int-to-double v2, v0
-
-    const-wide v4, 0x4006666666666666L    # 2.8
-
-    invoke-static {v2, v3, v4, v5}, Ljava/lang/Math;->pow(DD)D
-
-    move-result-wide v6
-
-    int-to-float v8, v0
-
-    neg-float v9, v8
-
-    const/4 v10, 0x0
-
-    invoke-virtual {v1, v9, v10}, Landroid/graphics/Path;->moveTo(FF)V
-
-    neg-double v9, v2
-
-    move-wide/from16 v16, v9
-
-    const/4 v14, 0x0
-
-    :goto_0
-    invoke-static/range {v16 .. v17}, Ljava/lang/Math;->abs(D)D
-
-    move-result-wide v11
-
-    invoke-static {v11, v12, v4, v5}, Ljava/lang/Math;->pow(DD)D
-
-    move-result-wide v11
-
-    sub-double v11, v6, v11
-
-    invoke-static {v11, v12}, Ljava/lang/Math;->signum(D)D
-
-    move-result-wide v18
-
-    invoke-static {v11, v12}, Ljava/lang/Math;->abs(D)D
-
-    move-result-wide v11
-
-    const-wide v4, 0x3fd6db6db6db6db7L    # 0.35714285714285715
-
-    invoke-static {v11, v12, v4, v5}, Ljava/lang/Math;->pow(DD)D
-
-    move-result-wide v11
-
-    mul-double v11, v11, v18
-
-    move-wide/from16 v4, v16
-
-    double-to-float v13, v4
-
-    double-to-float v11, v11
-
-    invoke-virtual {v1, v13, v11}, Landroid/graphics/Path;->lineTo(FF)V
-
-    const/16 v16, 0x1
-
-    if-eqz v14, :cond_3
-
-    move-wide v4, v2
-
-    const/4 v15, 0x0
-
-    :goto_1
-    invoke-static {v4, v5}, Ljava/lang/Math;->abs(D)D
-
-    move-result-wide v11
-
-    const-wide v13, 0x4006666666666666L    # 2.8
-
-    invoke-static {v11, v12, v13, v14}, Ljava/lang/Math;->pow(DD)D
-
-    move-result-wide v11
-
-    sub-double v11, v6, v11
-
-    invoke-static {v11, v12}, Ljava/lang/Math;->signum(D)D
-
-    move-result-wide v13
-
-    neg-double v13, v13
-
-    invoke-static {v11, v12}, Ljava/lang/Math;->abs(D)D
-
-    move-result-wide v11
-
-    move-wide/from16 v20, v2
-
-    const-wide v2, 0x3fd6db6db6db6db7L    # 0.35714285714285715
-
-    invoke-static {v11, v12, v2, v3}, Ljava/lang/Math;->pow(DD)D
-
-    move-result-wide v11
-
-    mul-double/2addr v11, v13
-
-    double-to-float v13, v4
-
-    double-to-float v11, v11
-
-    invoke-virtual {v1, v13, v11}, Landroid/graphics/Path;->lineTo(FF)V
-
-    if-eqz v15, :cond_1
-
-    invoke-virtual {v1}, Landroid/graphics/Path;->close()V
-
-    invoke-virtual {v1, v8, v8}, Landroid/graphics/Path;->offset(FF)V
-
-    return-object v1
-
-    :cond_1
-    const/16 v11, 0x50
-
-    int-to-double v12, v11
-
-    div-double v12, v20, v12
-
-    const-wide v2, 0x3fc999999999999aL    # 0.2
-
-    invoke-static {v12, v13, v2, v3}, Lamj;->b(DD)D
-
-    move-result-wide v12
-
-    sub-double/2addr v4, v12
-
-    neg-int v12, v0
-
-    int-to-double v12, v12
-
-    cmpg-double v12, v4, v12
-
-    if-gtz v12, :cond_2
-
-    move-wide v4, v9
-
-    move/from16 v15, v16
-
-    :cond_2
-    move-wide/from16 v2, v20
+    if-ne p1, v4, :cond_3
 
     goto :goto_1
 
     :cond_3
-    move-wide/from16 v20, v2
+    :goto_0
+    iput v2, p0, Lg5f;->o:I
 
-    move v12, v14
+    invoke-static {v1, p0}, Lm5f;->p(Lm5f;Lpdg;)Ljava/lang/Object;
 
-    const-wide v2, 0x3fc999999999999aL    # 0.2
+    move-result-object p1
 
-    const/16 v11, 0x50
+    if-ne p1, v4, :cond_4
 
-    int-to-double v13, v11
-
-    div-double v13, v20, v13
-
-    invoke-static {v13, v14, v2, v3}, Lamj;->b(DD)D
-
-    move-result-wide v2
-
-    add-double/2addr v2, v4
-
-    cmpl-double v4, v2, v20
-
-    if-ltz v4, :cond_4
-
-    move/from16 v14, v16
-
-    move-wide/from16 v2, v20
-
-    move-wide/from16 v16, v2
-
-    :goto_2
-    const-wide v4, 0x4006666666666666L    # 2.8
-
-    goto/16 :goto_0
+    :goto_1
+    return-object v4
 
     :cond_4
-    move-wide/from16 v16, v2
+    :goto_2
+    sget-object p1, Lmah;->a:Lmah;
 
-    move v14, v12
-
-    move-wide/from16 v2, v20
-
-    goto :goto_2
+    return-object p1
 .end method

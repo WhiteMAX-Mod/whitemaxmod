@@ -1,22 +1,37 @@
 .class public final Lti;
-.super Ljava/lang/Object;
+.super Lsi;
 .source "SourceFile"
 
-# interfaces
-.implements Lvi;
 
+# static fields
+.field public static final d:Lti;
 
-# instance fields
-.field public final a:Landroid/graphics/drawable/Drawable;
+.field public static final o:Lti;
 
 
 # direct methods
-.method public constructor <init>(Landroid/graphics/drawable/Drawable;)V
-    .locals 0
+.method static synthetic constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lti;
 
-    iput-object p1, p0, Lti;->a:Landroid/graphics/drawable/Drawable;
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    sget-object v3, Lpi;->d:Lpi;
+
+    invoke-direct {v0, v3, v2, v1}, Lk2;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    sput-object v0, Lti;->d:Lti;
+
+    new-instance v0, Lti;
+
+    sget-object v3, Lpi;->o:Lpi;
+
+    invoke-direct {v0, v3, v2, v1}, Lk2;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    sput-object v0, Lti;->o:Lti;
 
     return-void
 .end method

@@ -1,52 +1,121 @@
-.class public final synthetic Lmf2;
-.super Lt8;
+.class public final Lmf2;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ldr6;
 
+# instance fields
+.field public final a:J
 
-# static fields
-.field public static final Z:Lmf2;
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(JLjava/lang/String;)V
+    .locals 0
 
-    new-instance v0, Lmf2;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "<init>(Lone/me/profileedit/screens/changelink/ChangeLinkScreenState;Ljava/util/List;)V"
+    iput-wide p1, p0, Lmf2;->a:J
 
-    const/4 v2, 0x4
-
-    const/4 v3, 0x3
-
-    const-class v4, Lfa2;
-
-    invoke-direct {v0, v3, v4, v1, v2}, Lt8;-><init>(ILjava/lang/Class;Ljava/lang/String;I)V
-
-    sput-object v0, Lmf2;->Z:Lmf2;
+    iput-object p3, p0, Lmf2;->b:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    check-cast p1, Lta2;
+    const/4 v0, 0x1
 
-    check-cast p2, Ljava/util/List;
+    if-ne p0, p1, :cond_0
 
-    check-cast p3, Lkotlin/coroutines/Continuation;
+    return v0
 
-    sget-object p3, Lrf2;->B:[Lz28;
+    :cond_0
+    instance-of v1, p1, Lmf2;
 
-    new-instance p3, Lfa2;
+    const/4 v2, 0x0
 
-    invoke-direct {p3, p1, p2}, Lfa2;-><init>(Lta2;Ljava/util/List;)V
+    if-nez v1, :cond_1
 
-    return-object p3
+    return v2
+
+    :cond_1
+    check-cast p1, Lmf2;
+
+    iget-wide v3, p0, Lmf2;->a:J
+
+    iget-wide v5, p1, Lmf2;->a:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lmf2;->b:Ljava/lang/String;
+
+    iget-object p1, p1, Lmf2;->b:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Lmf2;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lmf2;->b:Ljava/lang/String;
+
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, "ChatAndFolderCrossRef(chatId="
+
+    const-string v1, ", folderId="
+
+    iget-wide v2, p0, Lmf2;->a:J
+
+    iget-object v4, p0, Lmf2;->b:Ljava/lang/String;
+
+    invoke-static {v0, v2, v3, v1, v4}, Lo16;->i(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

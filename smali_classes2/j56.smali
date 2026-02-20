@@ -1,64 +1,37 @@
-.class public final Lj56;
+.class public abstract synthetic Lj56;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
 
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Landroid/view/View;
-
-.field public final synthetic c:Ljava/lang/Runnable;
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/view/View;Ljava/lang/Runnable;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput p3, p0, Lj56;->a:I
+    invoke-static {}, Llg6;->values()[Llg6;
 
-    iput-object p1, p0, Lj56;->b:Landroid/view/View;
+    move-result-object v0
 
-    iput-object p2, p0, Lj56;->c:Ljava/lang/Runnable;
+    array-length v0, v0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-array v0, v0, [I
 
-    return-void
-.end method
+    :try_start_0
+    sget-object v1, Llg6;->b:Ljava/util/LinkedHashSet;
 
+    const/16 v1, 0xd
 
-# virtual methods
-.method public final run()V
-    .locals 2
+    const/4 v2, 0x1
 
-    iget v0, p0, Lj56;->a:I
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lj56;->b:Landroid/view/View;
-
-    iget-object v1, p0, Lj56;->c:Ljava/lang/Runnable;
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
+    :catch_0
+    sput-object v0, Lj56;->$EnumSwitchMapping$0:[I
 
     return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lj56;->b:Landroid/view/View;
-
-    iget-object v1, p0, Lj56;->c:Ljava/lang/Runnable;
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

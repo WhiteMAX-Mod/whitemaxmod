@@ -1,101 +1,96 @@
 .class public final Lag6;
-.super Landroidx/recyclerview/widget/RecyclerView;
+.super Lpdg;
 .source "SourceFile"
+
+# interfaces
+.implements Lys6;
 
 
 # instance fields
-.field public final V1:Lnf6;
+.field public final synthetic o:Lkg6;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ljava/util/concurrent/Executor;)V
-    .locals 3
+.method public constructor <init>(Lkg6;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    const/4 v0, 0x0
+    iput-object p1, p0, Lag6;->o:Lkg6;
 
-    invoke-direct {p0, p1, v0}, Landroidx/recyclerview/widget/RecyclerView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    const/4 p1, 0x2
 
-    new-instance v1, Lnf6;
-
-    invoke-direct {v1, p2}, Lnf6;-><init>(Ljava/util/concurrent/Executor;)V
-
-    iput-object v1, p0, Lag6;->V1:Lnf6;
-
-    new-instance p2, Lzf6;
-
-    invoke-direct {p2}, Ljava/lang/Object;-><init>()V
-
-    new-instance v2, Lone/me/chats/list/folderwidget/section/FolderWidgetLayoutManager;
-
-    invoke-direct {v2, p1}, Lone/me/chats/list/folderwidget/section/FolderWidgetLayoutManager;-><init>(Landroid/content/Context;)V
-
-    invoke-virtual {p0, v2}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/a;)V
-
-    invoke-virtual {p0, v0}, Landroidx/recyclerview/widget/RecyclerView;->setItemAnimator(Lbsd;)V
-
-    invoke-virtual {p0, p2}, Landroidx/recyclerview/widget/RecyclerView;->l(Lhsd;)V
-
-    invoke-virtual {p0, v1}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Lwrd;)V
-
-    new-instance p1, Lu11;
-
-    const/16 p2, 0x8
-
-    int-to-float p2, p2
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p2, v0
-
-    invoke-static {p2}, Lq7j;->c(F)I
-
-    move-result p2
-
-    const/4 v0, 0x6
-
-    int-to-float v0, v0
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v0, v1
-
-    invoke-static {v0}, Lq7j;->c(F)I
-
-    move-result v0
-
-    const/4 v1, 0x4
-
-    invoke-direct {p1, p2, v0, v1}, Lu11;-><init>(III)V
-
-    invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/RecyclerView;->j(Lcsd;)V
+    invoke-direct {p0, p1, p2}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final setListener(Lyf6;)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lnd4;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lag6;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lag6;
+
+    sget-object p2, Lmah;->a:Lmah;
+
+    invoke-virtual {p1, p2}, Lag6;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 1
 
-    iget-object v0, p0, Lag6;->V1:Lnf6;
+    new-instance p1, Lag6;
 
-    iput-object p1, v0, Lnf6;->X:Ljava/lang/Object;
+    iget-object v0, p0, Lag6;->o:Lkg6;
 
-    return-void
+    invoke-direct {p1, v0, p2}, Lag6;-><init>(Lkg6;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lag6;->o:Lkg6;
+
+    iget-object p1, p1, Lkg6;->t0:Lj88;
+
+    invoke-interface {p1}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lrlb;
+
+    sget v0, Lwce;->E2:I
+
+    new-instance v1, Lcpg;
+
+    invoke-direct {v1, v0}, Lcpg;-><init>(I)V
+
+    invoke-virtual {p1, v1}, Lrlb;->h(Lhpg;)V
+
+    sget v0, Lwce;->D2:I
+
+    new-instance v1, Lcpg;
+
+    invoke-direct {v1, v0}, Lcpg;-><init>(I)V
+
+    invoke-virtual {p1, v1}, Lrlb;->a(Lhpg;)V
+
+    invoke-virtual {p1}, Lrlb;->j()Lqlb;
+
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
 .end method

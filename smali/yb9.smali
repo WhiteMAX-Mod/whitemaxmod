@@ -1,3 +1,11 @@
-.class public final Lyb9;
-.super Lzb9;
+.class public interface abstract Lyb9;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+
+# virtual methods
+.method public abstract a(Landroid/media/MediaRouter$RouteInfo;I)V
+.end method
+
+.method public abstract b(Landroid/media/MediaRouter$RouteInfo;I)V
+.end method

@@ -1,77 +1,386 @@
-.class public final synthetic Lr2a;
-.super Ljava/lang/Object;
+.class public final Lr2a;
+.super Leyd;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/util/function/UnaryOperator;
 
 
 # instance fields
-.field public final synthetic a:Lh3a;
+.field public final synthetic a:I
 
-.field public final synthetic b:J
+.field public b:I
+
+.field public c:I
+
+.field public final synthetic d:Lone/me/messages/list/ui/MessagesListWidget;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lh3a;J)V
+.method public synthetic constructor <init>(Lone/me/messages/list/ui/MessagesListWidget;I)V
     .locals 0
 
+    iput p2, p0, Lr2a;->a:I
+
+    iput-object p1, p0, Lr2a;->d:Lone/me/messages/list/ui/MessagesListWidget;
+
+    const/4 p1, -0x1
+
+    iput p1, p0, Lr2a;->b:I
+
+    iput p1, p0, Lr2a;->c:I
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lr2a;->a:Lh3a;
-
-    iput-wide p2, p0, Lr2a;->b:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 11
+.method public final b(Landroidx/recyclerview/widget/RecyclerView;II)V
+    .locals 12
 
-    check-cast p1, Lt2a;
+    iget p2, p0, Lr2a;->a:I
 
-    iget-object p1, p0, Lr2a;->a:Lh3a;
+    const-string p3, "Only linear layout manger supported"
 
-    iget-object p1, p1, Lh3a;->a:La1a;
+    const/4 v0, 0x1
 
-    iget-object p1, p1, La1a;->b:Ljava/lang/String;
+    const/4 v1, -0x1
 
-    const-string v0, "ScheduledChatScreen"
+    packed-switch p2, :pswitch_data_0
 
-    invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-static {p1}, Lpuj;->d(Landroidx/recyclerview/widget/RecyclerView;)Landroidx/recyclerview/widget/LinearLayoutManager;
 
-    move-result v4
+    move-result-object p1
 
-    if-eqz v4, :cond_0
+    if-eqz p1, :cond_a
 
-    const/4 p1, 0x4
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/LinearLayoutManager;->Y0()I
 
-    :goto_0
-    move v2, p1
+    move-result p2
 
-    goto :goto_1
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/LinearLayoutManager;->a1()I
+
+    move-result p1
+
+    if-eq p2, v1, :cond_9
+
+    if-ne p1, v1, :cond_0
+
+    goto/16 :goto_3
 
     :cond_0
-    const/4 p1, 0x3
+    iget p3, p0, Lr2a;->b:I
+
+    if-ne p2, p3, :cond_1
+
+    iget p3, p0, Lr2a;->c:I
+
+    if-eq p1, p3, :cond_9
+
+    :cond_1
+    iput p2, p0, Lr2a;->b:I
+
+    iput p1, p0, Lr2a;->c:I
+
+    iget-object p3, p0, Lr2a;->d:Lone/me/messages/list/ui/MessagesListWidget;
+
+    sget-object v1, Lone/me/messages/list/ui/MessagesListWidget;->g1:[Lv58;
+
+    invoke-virtual {p3}, Lone/me/messages/list/ui/MessagesListWidget;->U0()Lh2a;
+
+    move-result-object v1
+
+    iget-object p3, p3, Lone/me/messages/list/ui/MessagesListWidget;->G0:Lny9;
+
+    iget-object v2, p3, Lfg8;->d:Lcy;
+
+    iget-object v2, v2, Lcy;->f:Ljava/util/List;
+
+    invoke-static {p2, v2}, Lek3;->G(ILjava/util/List;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lmg8;
+
+    instance-of v3, v2, Lone/me/messages/list/loader/MessageModel;
+
+    const/4 v4, 0x0
+
+    if-eqz v3, :cond_2
+
+    check-cast v2, Lone/me/messages/list/loader/MessageModel;
 
     goto :goto_0
 
+    :cond_2
+    instance-of v2, v2, Lkj2;
+
+    if-eqz v2, :cond_3
+
+    add-int/2addr p2, v0
+
+    invoke-virtual {p3, p2}, Lny9;->N(I)Lone/me/messages/list/loader/MessageModel;
+
+    move-result-object v2
+
+    goto :goto_0
+
+    :cond_3
+    move-object v2, v4
+
+    :goto_0
+    invoke-virtual {p3, p1}, Lny9;->N(I)Lone/me/messages/list/loader/MessageModel;
+
+    move-result-object p1
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    if-eqz v2, :cond_9
+
+    if-nez p1, :cond_4
+
+    goto :goto_3
+
+    :cond_4
+    invoke-virtual {v1}, Lh2a;->B()Lt5a;
+
+    move-result-object p2
+
+    iget-wide v2, v2, Lone/me/messages/list/loader/MessageModel;->c:J
+
+    iget-wide v5, p1, Lone/me/messages/list/loader/MessageModel;->c:J
+
+    iget-object p1, p2, Lt5a;->p:Lhxf;
+
+    invoke-virtual {p1}, Lhxf;->getValue()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lmle;
+
+    iget-object p2, p2, Lmle;->d:Llle;
+
+    if-nez p2, :cond_5
+
+    goto :goto_1
+
+    :cond_5
+    iget-wide p2, p2, Llle;->b:J
+
+    cmp-long v0, v2, p2
+
+    if-gtz v0, :cond_6
+
+    cmp-long p2, p2, v5
+
+    if-gtz p2, :cond_6
+
+    invoke-virtual {p1}, Lhxf;->getValue()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lmle;
+
+    iget-object p2, p2, Lmle;->d:Llle;
+
+    if-eqz p2, :cond_7
+
+    invoke-virtual {p1}, Lhxf;->getValue()Ljava/lang/Object;
+
+    move-result-object p3
+
+    move-object v5, p3
+
+    check-cast v5, Lmle;
+
+    const/4 v10, 0x0
+
+    const/16 v11, 0x17
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    const/4 v8, 0x0
+
+    const/4 v9, 0x0
+
+    invoke-static/range {v5 .. v11}, Lmle;->a(Lmle;IZZLlle;ZI)Lmle;
+
+    move-result-object p3
+
+    invoke-virtual {p1, v4, p3}, Lhxf;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    goto :goto_2
+
+    :cond_6
     :goto_1
-    xor-int/lit8 v5, v4, 0x1
+    move-object p2, v4
 
-    new-instance v1, Lt2a;
+    :cond_7
+    :goto_2
+    if-nez p2, :cond_8
 
-    const-wide/16 v8, 0x0
+    goto :goto_3
 
-    const/16 v10, 0x22
+    :cond_8
+    iget-object p1, v1, Lx0i;->a:Lkotlinx/coroutines/internal/ContextScope;
 
-    const/4 v3, 0x0
+    iget-object p3, v1, Lh2a;->Y:Lbjg;
 
-    iget-wide v6, p0, Lr2a;->b:J
+    check-cast p3, Lcbb;
 
-    invoke-direct/range {v1 .. v10}, Lt2a;-><init>(IZZZJJI)V
+    invoke-virtual {p3}, Lcbb;->b()Lgd4;
 
-    return-object v1
+    move-result-object p3
+
+    new-instance v0, Lu0a;
+
+    invoke-direct {v0, v1, p2, v4}, Lu0a;-><init>(Lh2a;Llle;Lkotlin/coroutines/Continuation;)V
+
+    const/4 p2, 0x2
+
+    invoke-static {p1, p3, v4, v0, p2}, Lea9;->d(Lnd4;Led4;Lqd4;Lys6;I)Lcuf;
+
+    :cond_9
+    :goto_3
+    return-void
+
+    :cond_a
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    invoke-direct {p1, p3}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :pswitch_0
+    invoke-static {p1}, Lpuj;->d(Landroidx/recyclerview/widget/RecyclerView;)Landroidx/recyclerview/widget/LinearLayoutManager;
+
+    move-result-object p1
+
+    if-nez p1, :cond_b
+
+    const-class p1, Lr2a;
+
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1, p3}, Ltej;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_6
+
+    :cond_b
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/LinearLayoutManager;->V0()I
+
+    move-result p2
+
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/LinearLayoutManager;->Z0()I
+
+    move-result p1
+
+    if-eq p2, v1, :cond_11
+
+    if-ne p1, v1, :cond_c
+
+    goto :goto_6
+
+    :cond_c
+    iget p3, p0, Lr2a;->b:I
+
+    if-ne p2, p3, :cond_d
+
+    iget p3, p0, Lr2a;->c:I
+
+    if-eq p1, p3, :cond_11
+
+    :cond_d
+    iput p2, p0, Lr2a;->b:I
+
+    iput p1, p0, Lr2a;->c:I
+
+    iget-object p3, p0, Lr2a;->d:Lone/me/messages/list/ui/MessagesListWidget;
+
+    sget-object v1, Lone/me/messages/list/ui/MessagesListWidget;->g1:[Lv58;
+
+    invoke-virtual {p3}, Lone/me/messages/list/ui/MessagesListWidget;->U0()Lh2a;
+
+    move-result-object p3
+
+    invoke-virtual {p3}, Lh2a;->y()Llrf;
+
+    move-result-object v5
+
+    if-nez v5, :cond_e
+
+    goto :goto_6
+
+    :cond_e
+    if-gt p2, p1, :cond_11
+
+    :goto_4
+    iget-object p3, p0, Lr2a;->d:Lone/me/messages/list/ui/MessagesListWidget;
+
+    iget-object p3, p3, Lone/me/messages/list/ui/MessagesListWidget;->G0:Lny9;
+
+    invoke-virtual {p3, p2}, Lalf;->l(I)I
+
+    move-result p3
+
+    const v1, -0x7f000001
+
+    and-int/2addr p3, v1
+
+    const v1, -0x7ffffff2
+
+    if-ne p3, v1, :cond_10
+
+    iget-object p3, p0, Lr2a;->d:Lone/me/messages/list/ui/MessagesListWidget;
+
+    iget-object p3, p3, Lone/me/messages/list/ui/MessagesListWidget;->G0:Lny9;
+
+    invoke-virtual {p3, p2}, Lny9;->N(I)Lone/me/messages/list/loader/MessageModel;
+
+    move-result-object p3
+
+    if-eqz p3, :cond_10
+
+    iget-wide v2, p3, Lone/me/messages/list/loader/MessageModel;->a:J
+
+    iget-object p3, p0, Lr2a;->d:Lone/me/messages/list/ui/MessagesListWidget;
+
+    invoke-virtual {p3}, Lone/me/messages/list/ui/MessagesListWidget;->L0()Lbo9;
+
+    move-result-object v1
+
+    iget-boolean p3, v1, Lbo9;->c:Z
+
+    if-eqz p3, :cond_f
+
+    goto :goto_5
+
+    :cond_f
+    iput-boolean v0, v1, Lbo9;->c:Z
+
+    const/4 v4, 0x5
+
+    const/4 v6, 0x6
+
+    invoke-virtual/range {v1 .. v6}, Lbo9;->a(JILlrf;I)V
+
+    :cond_10
+    :goto_5
+    if-eq p2, p1, :cond_11
+
+    add-int/lit8 p2, p2, 0x1
+
+    goto :goto_4
+
+    :cond_11
+    :goto_6
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

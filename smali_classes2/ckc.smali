@@ -1,61 +1,93 @@
 .class public final Lckc;
-.super Lo84;
+.super Landroid/view/View$BaseSavedState;
 .source "SourceFile"
 
 
+# static fields
+.field public static final CREATOR:Lbkc;
+
+
 # instance fields
-.field public final synthetic X:Lvs8;
+.field public final a:I
 
-.field public Y:I
-
-.field public d:Le0a;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final b:Z
 
 
 # direct methods
-.method public constructor <init>(Lvs8;Lo84;)V
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lbkc;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lckc;->CREATOR:Lbkc;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/os/Parcel;)V
+    .locals 1
+
+    .line 4
+    invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcel;)V
+
+    .line 5
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    iput v0, p0, Lckc;->a:I
+
+    .line 6
+    invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
+
+    move-result p1
+
+    if-lez p1, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    iput-boolean p1, p0, Lckc;->b:Z
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/os/Parcelable;IZ)V
     .locals 0
 
-    iput-object p1, p0, Lckc;->X:Lvs8;
+    .line 1
+    invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcelable;)V
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    .line 2
+    iput p2, p0, Lckc;->a:I
+
+    .line 3
+    iput-boolean p3, p0, Lckc;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    iput-object p1, p0, Lckc;->o:Ljava/lang/Object;
+    invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    iget p1, p0, Lckc;->Y:I
+    iget p2, p0, Lckc;->a:I
 
-    const/high16 v0, -0x80000000
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    or-int/2addr p1, v0
+    iget-boolean p2, p0, Lckc;->b:Z
 
-    iput p1, p0, Lckc;->Y:I
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByte(B)V
 
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
-
-    iget-object v0, p0, Lckc;->X:Lvs8;
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    move-object v6, p0
-
-    invoke-virtual/range {v0 .. v6}, Lvs8;->d(Lsjc;Lpjc;Ljava/lang/String;ZLe0a;Lo84;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

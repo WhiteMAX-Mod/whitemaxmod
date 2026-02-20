@@ -1,106 +1,45 @@
 .class public final Lk43;
-.super Licg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public c:Ljava/util/List;
+# static fields
+.field public static final c:Ljava/lang/String;
 
-.field public d:J
+
+# instance fields
+.field public final a:Lj88;
+
+.field public final b:Landroid/util/DisplayMetrics;
 
 
 # direct methods
-.method public constructor <init>(Lpq9;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Licg;-><init>(Lpq9;)V
-
-    iget-object p1, p0, Lk43;->c:Ljava/util/List;
-
-    if-nez p1, :cond_0
-
-    sget-object p1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
-
-    iput-object p1, p0, Lk43;->c:Ljava/util/List;
-
-    :cond_0
-    return-void
-.end method
-
-
-# virtual methods
-.method public final d(Lpq9;Ljava/lang/String;)V
+.method static constructor <clinit>()V
     .locals 1
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const-class v0, Lj43;
 
-    const-string v0, "marker"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    const-string v0, "chats"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_0
-
-    invoke-virtual {p1}, Lpq9;->B()V
-
-    return-void
-
-    :cond_0
-    invoke-static {p1}, Le00;->b(Lpq9;)Le00;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lk43;->c:Ljava/util/List;
-
-    return-void
-
-    :cond_1
-    invoke-virtual {p1}, Lpq9;->L0()J
-
-    move-result-wide p1
-
-    iput-wide p1, p0, Lk43;->d:J
-
-    return-void
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    iget-wide v0, p0, Lk43;->d:J
-
-    iget-object v2, p0, Lk43;->c:Ljava/util/List;
-
-    invoke-static {v2}, Lcth;->d(Ljava/util/Collection;)I
-
-    move-result v2
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "marker="
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v0, ", chats="
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v0
 
-    return-object v0
+    sput-object v0, Lk43;->c:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/res/Resources;Lj88;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p2, p0, Lk43;->a:Lj88;
+
+    invoke-virtual {p1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lk43;->b:Landroid/util/DisplayMetrics;
+
+    return-void
 .end method

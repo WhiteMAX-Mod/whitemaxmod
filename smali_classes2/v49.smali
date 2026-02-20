@@ -1,140 +1,122 @@
-.class public final synthetic Lv49;
+.class public final Lv49;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Luu5;
+.implements Ljava/io/Closeable;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Luu5;
 
-.field public final synthetic b:Lone/me/keyboardmedia/MediaKeyboardWidget;
+.field public final b:Lu49;
+
+.field public final c:Landroid/net/Uri;
+
+.field public final d:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/keyboardmedia/MediaKeyboardWidget;I)V
+.method public constructor <init>(Luu5;Lu49;)V
     .locals 0
-
-    iput p2, p0, Lv49;->a:I
-
-    iput-object p1, p0, Lv49;->b:Lone/me/keyboardmedia/MediaKeyboardWidget;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    iput-object p1, p0, Lv49;->a:Luu5;
 
+    iput-object p2, p0, Lv49;->b:Lu49;
 
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 5
+    iget-object p1, p2, Lu49;->a:Loq4;
 
-    iget p1, p0, Lv49;->a:I
-
-    const/4 v0, 0x0
-
-    sget-object v1, Ll47;->c:Ll47;
-
-    iget-object v2, p0, Lv49;->b:Lone/me/keyboardmedia/MediaKeyboardWidget;
-
-    packed-switch p1, :pswitch_data_0
-
-    sget-object p1, Lone/me/keyboardmedia/MediaKeyboardWidget;->D0:[Lz28;
-
-    invoke-virtual {v2}, La94;->getView()Landroid/view/View;
+    invoke-virtual {p1}, Loq4;->getUri()Landroid/net/Uri;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-static {p1, v1}, Loqf;->d(Landroid/view/View;Ln47;)Z
+    iput-object p1, p0, Lv49;->c:Landroid/net/Uri;
+
+    iget-wide p1, p2, Lu49;->b:J
+
+    iput-wide p1, p0, Lv49;->d:J
+
+    return-void
 
     :cond_0
-    invoke-virtual {v2}, Lone/me/keyboardmedia/MediaKeyboardWidget;->B0()Lo49;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    move-result-object p1
+    const-string p2, "Required value was null."
 
-    iget-object p1, p1, Lo49;->o:Lcm5;
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    sget-object v0, Lf49;->a:Lf49;
+    throw p1
+.end method
 
-    invoke-static {p1, v0}, Lnth;->q(Lcm5;Ljava/lang/Object;)V
 
-    return-void
+# virtual methods
+.method public final E(Lyu5;)V
+    .locals 1
 
-    :pswitch_0
-    sget-object p1, Lone/me/keyboardmedia/MediaKeyboardWidget;->D0:[Lz28;
+    iget-object v0, p0, Lv49;->a:Luu5;
 
-    invoke-virtual {v2}, La94;->getView()Landroid/view/View;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_1
-
-    invoke-static {p1, v1}, Loqf;->d(Landroid/view/View;Ln47;)Z
-
-    :cond_1
-    invoke-virtual {v2}, Lone/me/keyboardmedia/MediaKeyboardWidget;->B0()Lo49;
-
-    move-result-object p1
-
-    iget-object p1, p1, Lo49;->X:Lspf;
-
-    new-instance v1, Leja;
-
-    invoke-direct {v1}, Leja;-><init>()V
-
-    invoke-virtual {p1, v0, v1}, Lspf;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-interface {v0, p1}, Luu5;->E(Lyu5;)V
 
     return-void
+.end method
 
-    :pswitch_1
-    sget-object p1, Lone/me/keyboardmedia/MediaKeyboardWidget;->D0:[Lz28;
+.method public final H(Lwu5;Ls8;)I
+    .locals 1
 
-    sget-object p1, Lw38;->c:Lw38;
+    iget-object v0, p0, Lv49;->a:Luu5;
 
-    iget-object v1, v2, Lone/me/keyboardmedia/MediaKeyboardWidget;->a:Lls;
+    invoke-interface {v0, p1, p2}, Luu5;->H(Lwu5;Ls8;)I
 
-    sget-object v3, Lone/me/keyboardmedia/MediaKeyboardWidget;->D0:[Lz28;
+    move-result p1
 
-    const/4 v4, 0x0
+    return p1
+.end method
 
-    aget-object v3, v3, v4
+.method public final close()V
+    .locals 0
 
-    invoke-virtual {v1, v2}, Lls;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/Number;
-
-    invoke-virtual {v1}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v1
-
-    invoke-virtual {p1}, Ld3;->p0()Ljm4;
-
-    move-result-object p1
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, ":stickers/showcase?chat_id="
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v1, v0}, Ljm4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+    invoke-virtual {p0}, Lv49;->release()V
 
     return-void
+.end method
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+.method public final d(JJ)V
+    .locals 1
+
+    iget-object v0, p0, Lv49;->a:Luu5;
+
+    invoke-interface {v0, p1, p2, p3, p4}, Luu5;->d(JJ)V
+
+    return-void
+.end method
+
+.method public final k(Lwu5;)Z
+    .locals 1
+
+    iget-object v0, p0, Lv49;->a:Luu5;
+
+    invoke-interface {v0, p1}, Luu5;->k(Lwu5;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final release()V
+    .locals 1
+
+    iget-object v0, p0, Lv49;->a:Luu5;
+
+    invoke-interface {v0}, Luu5;->release()V
+
+    iget-object v0, p0, Lv49;->b:Lu49;
+
+    invoke-virtual {v0}, Lu49;->close()V
+
+    return-void
 .end method

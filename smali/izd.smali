@@ -1,93 +1,73 @@
 .class public final Lizd;
-.super Ljl6;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:Le42;
-
-.field public final c:Le32;
+.field public final synthetic a:Ljzd;
 
 
 # direct methods
-.method public constructor <init>(Le42;Le32;)V
-    .locals 1
+.method public constructor <init>(Ljzd;)V
+    .locals 0
 
-    invoke-direct {p0, p1}, Ljl6;-><init>(Le42;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lizd;->b:Le42;
+    iput-object p1, p0, Lizd;->a:Ljzd;
 
-    iput-object p2, p0, Lizd;->c:Le32;
+    return-void
+.end method
 
-    invoke-interface {p2}, Lc32;->E()V
+.method public static a(Ljava/lang/String;Landroid/os/Bundle;)V
+    .locals 2
 
-    sget-object p1, Lc32;->k:Lta0;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+    const-string v1, "Error: "
 
-    invoke-interface {p2, p1, v0}, Lmld;->a(Lta0;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result-object p1
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    check-cast p1, Ljava/lang/Boolean;
+    const-string p0, ", data: "
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object p1, Lc32;->l:Lta0;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-interface {p2, p1, v0}, Lmld;->a(Lta0;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Ljava/lang/Boolean;
+    const-string p1, "MediaRouteProviderProxy"
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-static {p1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final e()Ldf8;
-    .locals 1
+.method public final b(Landroid/os/Bundle;)V
+    .locals 2
 
-    iget-object v0, p0, Lizd;->b:Le42;
+    const-string v0, "groupableTitle"
 
-    invoke-interface {v0}, Le42;->e()Ldf8;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final g()Le42;
-    .locals 1
-
-    iget-object v0, p0, Lizd;->b:Le42;
-
-    return-object v0
-.end method
-
-.method public final m()Z
-    .locals 1
-
-    iget-object v0, p0, Lizd;->b:Le42;
-
-    invoke-interface {v0}, Le42;->m()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final q()Ldf8;
-    .locals 1
-
-    iget-object v0, p0, Lizd;->b:Le42;
-
-    invoke-interface {v0}, Le42;->q()Ldf8;
+    invoke-virtual {p1, v0}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    return-object v0
+    iget-object v1, p0, Lizd;->a:Ljzd;
+
+    iput-object v0, v1, Ljzd;->g:Ljava/lang/String;
+
+    const-string v0, "transferableTitle"
+
+    invoke-virtual {p1, v0}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    iput-object p1, v1, Ljzd;->h:Ljava/lang/String;
+
+    return-void
 .end method

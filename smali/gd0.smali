@@ -2,100 +2,267 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lnti;
+
 
 # instance fields
-.field public a:Lo2b;
+.field public final a:F
 
-.field public b:Landroid/util/Range;
+.field public final b:F
 
-.field public c:Landroid/util/Range;
+.field public final c:F
 
-.field public d:Ljava/lang/Integer;
+.field public final d:F
 
 
-# virtual methods
-.method public final a()Lhd0;
-    .locals 5
+# direct methods
+.method public constructor <init>(FFFF)V
+    .locals 0
 
-    iget-object v0, p0, Lgd0;->a:Lo2b;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-nez v0, :cond_0
+    iput p1, p0, Lgd0;->a:F
 
-    const-string v0, " qualitySelector"
+    iput p2, p0, Lgd0;->b:F
 
-    goto :goto_0
+    iput p3, p0, Lgd0;->c:F
 
-    :cond_0
-    const-string v0, ""
+    iput p4, p0, Lgd0;->d:F
 
-    :goto_0
-    iget-object v1, p0, Lgd0;->b:Landroid/util/Range;
+    return-void
+.end method
 
-    if-nez v1, :cond_1
+.method public static e(Lnti;)Lgd0;
+    .locals 4
 
-    const-string v1, " frameRate"
+    new-instance v0, Lgd0;
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    :cond_1
-    iget-object v1, p0, Lgd0;->c:Landroid/util/Range;
-
-    if-nez v1, :cond_2
-
-    const-string v1, " bitrate"
-
-    invoke-static {v0, v1}, Lhc0;->f(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    :cond_2
-    iget-object v1, p0, Lgd0;->d:Ljava/lang/Integer;
-
-    if-nez v1, :cond_3
-
-    const-string v1, " aspectRatio"
-
-    invoke-static {v0, v1}, Lhc0;->f(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    :cond_3
-    invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
+    invoke-interface {p0}, Lnti;->c()F
 
     move-result v1
 
-    if-eqz v1, :cond_4
+    invoke-interface {p0}, Lnti;->a()F
 
-    new-instance v0, Lhd0;
+    move-result v2
 
-    iget-object v1, p0, Lgd0;->a:Lo2b;
+    invoke-interface {p0}, Lnti;->b()F
 
-    iget-object v2, p0, Lgd0;->b:Landroid/util/Range;
+    move-result v3
 
-    iget-object v3, p0, Lgd0;->c:Landroid/util/Range;
+    invoke-interface {p0}, Lnti;->d()F
 
-    iget-object v4, p0, Lgd0;->d:Ljava/lang/Integer;
+    move-result p0
 
-    invoke-virtual {v4}, Ljava/lang/Integer;->intValue()I
-
-    move-result v4
-
-    invoke-direct {v0, v1, v2, v3, v4}, Lhd0;-><init>(Lo2b;Landroid/util/Range;Landroid/util/Range;I)V
+    invoke-direct {v0, v1, v2, v3, p0}, Lgd0;-><init>(FFFF)V
 
     return-object v0
+.end method
 
-    :cond_4
-    new-instance v1, Ljava/lang/IllegalStateException;
 
-    const-string v2, "Missing required properties:"
+# virtual methods
+.method public final a()F
+    .locals 1
 
-    invoke-virtual {v2, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    iget v0, p0, Lgd0;->b:F
+
+    return v0
+.end method
+
+.method public final b()F
+    .locals 1
+
+    iget v0, p0, Lgd0;->c:F
+
+    return v0
+.end method
+
+.method public final c()F
+    .locals 1
+
+    iget v0, p0, Lgd0;->a:F
+
+    return v0
+.end method
+
+.method public final d()F
+    .locals 1
+
+    iget v0, p0, Lgd0;->d:F
+
+    return v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p1, p0, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lgd0;
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_1
+
+    check-cast p1, Lgd0;
+
+    iget v1, p0, Lgd0;->a:F
+
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v1
+
+    iget v3, p1, Lgd0;->a:F
+
+    invoke-static {v3}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v3
+
+    if-ne v1, v3, :cond_1
+
+    iget v1, p0, Lgd0;->b:F
+
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v1
+
+    iget v3, p1, Lgd0;->b:F
+
+    invoke-static {v3}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v3
+
+    if-ne v1, v3, :cond_1
+
+    iget v1, p0, Lgd0;->c:F
+
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v1
+
+    iget v3, p1, Lgd0;->c:F
+
+    invoke-static {v3}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v3
+
+    if-ne v1, v3, :cond_1
+
+    iget v1, p0, Lgd0;->d:F
+
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v1
+
+    iget p1, p1, Lgd0;->d:F
+
+    invoke-static {p1}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result p1
+
+    if-ne v1, p1, :cond_1
+
+    return v0
+
+    :cond_1
+    return v2
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget v0, p0, Lgd0;->a:F
+
+    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v0
+
+    const v1, 0xf4243
+
+    xor-int/2addr v0, v1
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lgd0;->b:F
+
+    invoke-static {v2}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v2
+
+    xor-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lgd0;->c:F
+
+    invoke-static {v2}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v2
+
+    xor-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget v1, p0, Lgd0;->d:F
+
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v1
+
+    xor-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ImmutableZoomState{zoomRatio="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v1, p0, Lgd0;->a:F
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v1, ", maxZoomRatio="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lgd0;->b:F
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v1, ", minZoomRatio="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lgd0;->c:F
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v1, ", linearZoom="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lgd0;->d:F
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v1, "}"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-direct {v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v1
+    return-object v0
 .end method

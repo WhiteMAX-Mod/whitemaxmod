@@ -1,106 +1,123 @@
-.class public final Lluc;
+.class public final synthetic Lluc;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lzib;
+.implements Lks6;
 
 
 # instance fields
-.field public final synthetic a:Lone/me/profileedit/screens/reactions/ProfileReactionsSettingsScreen;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lmh6;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/profileedit/screens/reactions/ProfileReactionsSettingsScreen;)V
+.method public synthetic constructor <init>(Lmh6;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lluc;->a:I
 
-    iput-object p1, p0, Lluc;->a:Lone/me/profileedit/screens/reactions/ProfileReactionsSettingsScreen;
+    iput-object p1, p0, Lluc;->b:Lmh6;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(FZ)V
-    .locals 13
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    if-eqz p2, :cond_3
+    iget v0, p0, Lluc;->a:I
 
-    sget-object p2, Lone/me/profileedit/screens/reactions/ProfileReactionsSettingsScreen;->z0:[Lz28;
+    check-cast p1, Ljava/lang/String;
 
-    iget-object p2, p0, Lluc;->a:Lone/me/profileedit/screens/reactions/ProfileReactionsSettingsScreen;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p2}, Lone/me/profileedit/screens/reactions/ProfileReactionsSettingsScreen;->A0()Lvuc;
+    iget-object v0, p0, Lluc;->b:Lmh6;
 
-    move-result-object p2
+    iget-object v0, v0, Lmh6;->X:Ljava/lang/Object;
 
-    float-to-int v2, p1
+    check-cast v0, Lone/me/profileedit/ProfileEditScreen;
 
-    iget-object p1, p2, Lvuc;->x0:Lspf;
-
-    invoke-virtual {p1}, Lspf;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Lone/me/profileedit/ProfileEditScreen;->J0()Lcvc;
 
     move-result-object v0
 
-    instance-of v1, v0, Llw2;
+    iget-object v0, v0, Lcvc;->b:Lre5;
 
-    const/4 v6, 0x0
+    const/4 v1, 0x4
 
-    if-eqz v1, :cond_0
+    invoke-virtual {v0, v1, p1}, Lre5;->m(ILjava/lang/String;)V
 
-    check-cast v0, Llw2;
+    :goto_0
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
+
+    :pswitch_0
+    iget-object v0, p0, Lluc;->b:Lmh6;
+
+    iget-object v0, v0, Lmh6;->X:Ljava/lang/Object;
+
+    check-cast v0, Lone/me/profileedit/ProfileEditScreen;
+
+    invoke-virtual {v0}, Lone/me/profileedit/ProfileEditScreen;->J0()Lcvc;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lcvc;->b:Lre5;
+
+    const/high16 v1, 0x20000
+
+    invoke-virtual {v0, v1, p1}, Lre5;->m(ILjava/lang/String;)V
 
     goto :goto_0
 
-    :cond_0
-    move-object v0, v6
+    :pswitch_1
+    iget-object v0, p0, Lluc;->b:Lmh6;
 
-    :goto_0
-    if-eqz v0, :cond_1
+    iget-object v0, v0, Lmh6;->X:Ljava/lang/Object;
 
-    const/4 v4, 0x0
+    check-cast v0, Lone/me/profileedit/ProfileEditScreen;
 
-    const/16 v5, 0xfd
-
-    const/4 v1, 0x0
-
-    const/4 v3, 0x0
-
-    invoke-static/range {v0 .. v5}, Llw2;->a(Llw2;ZILjava/util/List;ZI)Llw2;
+    invoke-virtual {v0}, Lone/me/profileedit/ProfileEditScreen;->J0()Lcvc;
 
     move-result-object v0
 
-    move-object v7, v0
+    iget-object v0, v0, Lcvc;->b:Lre5;
 
-    goto :goto_1
+    const/4 v1, 0x2
 
-    :cond_1
-    move-object v7, v6
+    invoke-virtual {v0, v1, p1}, Lre5;->m(ILjava/lang/String;)V
 
-    :goto_1
-    if-eqz v7, :cond_2
+    goto :goto_0
 
-    invoke-virtual {p2, v7}, Lvuc;->u(Llw2;)Z
+    :pswitch_2
+    iget-object v0, p0, Lluc;->b:Lmh6;
 
-    move-result v11
+    iget-object v0, v0, Lmh6;->X:Ljava/lang/Object;
 
-    const/16 v12, 0xdf
+    check-cast v0, Lone/me/profileedit/ProfileEditScreen;
 
-    const/4 v8, 0x0
+    invoke-virtual {v0}, Lone/me/profileedit/ProfileEditScreen;->J0()Lcvc;
 
-    const/4 v9, 0x0
+    move-result-object v0
 
-    const/4 v10, 0x0
+    iget-object v0, v0, Lcvc;->b:Lre5;
 
-    invoke-static/range {v7 .. v12}, Llw2;->a(Llw2;ZILjava/util/List;ZI)Llw2;
+    const/4 v1, 0x1
 
-    move-result-object v6
+    invoke-virtual {v0, v1, p1}, Lre5;->m(ILjava/lang/String;)V
 
-    :cond_2
-    invoke-virtual {p1, v6}, Lspf;->setValue(Ljava/lang/Object;)V
+    goto :goto_0
 
-    :cond_3
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

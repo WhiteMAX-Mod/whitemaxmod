@@ -1,51 +1,139 @@
 .class public final Lu2a;
-.super Lo84;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lby9;
 
 
 # instance fields
-.field public final synthetic X:Lh3a;
+.field public final synthetic a:I
 
-.field public Y:I
-
-.field public d:Lnd2;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic b:Lone/me/messages/list/ui/MessagesListWidget;
 
 
 # direct methods
-.method public constructor <init>(Lh3a;Lo84;)V
+.method public synthetic constructor <init>(Lone/me/messages/list/ui/MessagesListWidget;I)V
     .locals 0
 
-    iput-object p1, p0, Lu2a;->X:Lh3a;
+    iput p2, p0, Lu2a;->a:I
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lu2a;->b:Lone/me/messages/list/ui/MessagesListWidget;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final a()V
+    .locals 3
+
+    iget v0, p0, Lu2a;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lu2a;->b:Lone/me/messages/list/ui/MessagesListWidget;
+
+    iget-object v1, v0, Lone/me/messages/list/ui/MessagesListWidget;->S0:Lr69;
+
+    const/4 v2, -0x1
+
+    iput v2, v1, Lr69;->e:I
+
+    iget-object v1, v0, Lone/me/messages/list/ui/MessagesListWidget;->U0:Lq2a;
+
+    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->R0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Lq2a;->c(Landroidx/recyclerview/widget/RecyclerView;)V
+
+    iget-object v1, v0, Lone/me/messages/list/ui/MessagesListWidget;->S0:Lr69;
+
+    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->R0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+
+    move-result-object v0
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v0, v2, v2}, Lr69;->b(Landroidx/recyclerview/widget/RecyclerView;II)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lu2a;->b:Lone/me/messages/list/ui/MessagesListWidget;
+
+    invoke-virtual {v0}, Lpa4;->getView()Landroid/view/View;
+
+    move-result-object v1
+
+    const-string v2, "ScrollEvent"
+
+    if-nez v1, :cond_0
+
+    const-string v0, "Can\'t process itemsChangedCallback for scroll because root view is null"
+
+    invoke-static {v2, v0}, Ltej;->t(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->N0()Lu5a;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lu5a;->b()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->M0()Lone/me/messages/list/ui/recycler/MessagesLayoutManager;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->J:Ldia;
+
+    invoke-virtual {v0, p0}, Ldia;->h(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_1
+    const-string v0, "Can\'t process itemsChangedCallback because scroll is not meet requirements"
+
+    invoke-static {v2, v0}, Ltej;->t(Ljava/lang/String;Ljava/lang/String;)V
+
+    :goto_0
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final getTag()Ljava/lang/String;
     .locals 1
 
-    iput-object p1, p0, Lu2a;->o:Ljava/lang/Object;
+    iget v0, p0, Lu2a;->a:I
 
-    iget p1, p0, Lu2a;->Y:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    const-string v0, "ReadMarkUpdater"
 
-    or-int/2addr p1, v0
+    return-object v0
 
-    iput p1, p0, Lu2a;->Y:I
+    :pswitch_0
+    const-string v0, "ScrollEvent"
 
-    iget-object p1, p0, Lu2a;->X:Lh3a;
+    return-object v0
 
-    const/4 v0, 0x0
+    nop
 
-    invoke-virtual {p1, v0, p0}, Lh3a;->c(Lnd2;Lo84;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

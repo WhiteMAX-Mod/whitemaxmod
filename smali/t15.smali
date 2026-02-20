@@ -1,26 +1,27 @@
-.class public interface abstract Lt15;
+.class public final Lt15;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a(Ljava/lang/Object;Ljava/lang/String;)Lwz5;
-.end method
+# instance fields
+.field public final a:I
 
-.method public abstract b()V
-.end method
+.field public final b:I
 
-.method public abstract c(Lfp4;)J
-.end method
+.field public final c:I
 
-.method public abstract d()Ljava/util/Collection;
-.end method
 
-.method public abstract e(Ljava/lang/String;Lddf;)Lle5;
-.end method
+# direct methods
+.method public constructor <init>(III)V
+    .locals 0
 
-.method public abstract f()V
-.end method
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public abstract isExternal()Z
+    iput p1, p0, Lt15;->a:I
+
+    iput p2, p0, Lt15;->b:I
+
+    iput p3, p0, Lt15;->c:I
+
+    return-void
 .end method

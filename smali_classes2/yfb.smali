@@ -1,61 +1,103 @@
-.class public final Lyfb;
-.super Lagb;
+.class public abstract Lyfb;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:Lyfb;
+.field public static final a:I
+
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lyfb;
+    sget v0, Lccd;->contact_icon_corner:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    sput v0, Lyfb;->a:I
 
-    sput-object v0, Lyfb;->a:Lyfb;
+    sget v0, Lccd;->geo_icon_corner:I
+
+    sput v0, Lyfb;->b:I
+
+    sget v0, Lccd;->ic_call_incoming_audio_24:I
+
+    sput v0, Lyfb;->c:I
+
+    sget v0, Lccd;->ic_call_incoming_audio_missed_24:I
+
+    sput v0, Lyfb;->d:I
+
+    sget v0, Lccd;->ic_call_incoming_video_missed_24:I
+
+    sput v0, Lyfb;->e:I
+
+    sget v0, Lccd;->ic_call_incomnig_video_24:I
+
+    sput v0, Lyfb;->f:I
+
+    sget v0, Lccd;->ic_call_outgoing_audio_24:I
+
+    sput v0, Lyfb;->g:I
+
+    sget v0, Lccd;->ic_call_outgoing_video_24:I
+
+    sput v0, Lyfb;->h:I
+
+    sget v0, Lccd;->ic_chat_16:I
+
+    sput v0, Lyfb;->i:I
+
+    sget v0, Lccd;->ic_contact_16:I
+
+    sput v0, Lyfb;->j:I
+
+    sget v0, Lccd;->ic_geolocation_filled_28:I
+
+    sput v0, Lyfb;->k:I
+
+    sget v0, Lccd;->ic_scheduled_empty_72:I
+
+    sput v0, Lyfb;->l:I
+
+    sget v0, Lccd;->ic_scheduled_empty_dark_72:I
+
+    sput v0, Lyfb;->m:I
+
+    sget v0, Lccd;->link_icon_corner:I
+
+    sput v0, Lyfb;->n:I
+
+    sget v0, Lccd;->miniapp_icon_corner:I
+
+    sput v0, Lyfb;->o:I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Lyfb;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, -0x18624f91
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "Stub"
-
-    return-object v0
 .end method

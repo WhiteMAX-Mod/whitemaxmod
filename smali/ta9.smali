@@ -1,27 +1,21 @@
-.class public Lta9;
-.super Lsa9;
+.class public final Lta9;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final b()Ltb9;
-    .locals 2
+# static fields
+.field public static final a:Lta9;
 
-    iget-object v0, p0, Lsa9;->a:Landroid/media/session/MediaSession;
 
-    invoke-static {v0}, Lw4;->i(Landroid/media/session/MediaSession;)Landroid/media/session/MediaSessionManager$RemoteUserInfo;
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-    move-result-object v0
+    new-instance v0, Lta9;
 
-    new-instance v1, Ltb9;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v1, v0}, Ltb9;-><init>(Landroid/media/session/MediaSessionManager$RemoteUserInfo;)V
-
-    return-object v1
-.end method
-
-.method public final c(Ltb9;)V
-    .locals 0
+    sput-object v0, Lta9;->a:Lta9;
 
     return-void
 .end method

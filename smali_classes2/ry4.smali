@@ -1,113 +1,154 @@
-.class public final synthetic Lry4;
+.class public final Lry4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lktc;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ljava/util/List;
-
-.field public final synthetic c:Lone/me/devmenu/DevMenuFeatureTogglesPageScreen;
+.field public final a:Lcpg;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/util/List;Lone/me/devmenu/DevMenuFeatureTogglesPageScreen;)V
-    .locals 1
-
-    .line 1
-    const/4 v0, 0x1
-
-    iput v0, p0, Lry4;->a:I
+.method public constructor <init>(Lcpg;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lry4;->b:Ljava/util/List;
-
-    iput-object p2, p0, Lry4;->c:Lone/me/devmenu/DevMenuFeatureTogglesPageScreen;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Lone/me/devmenu/DevMenuFeatureTogglesPageScreen;Ljava/util/List;)V
-    .locals 1
-
-    .line 2
-    const/4 v0, 0x0
-
-    iput v0, p0, Lry4;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lry4;->c:Lone/me/devmenu/DevMenuFeatureTogglesPageScreen;
-
-    iput-object p2, p0, Lry4;->b:Ljava/util/List;
+    iput-object p1, p0, Lry4;->a:Lcpg;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    if-ne p0, p1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    instance-of v0, p1, Lry4;
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lry4;
+
+    iget-object v0, p0, Lry4;->a:Lcpg;
+
+    iget-object p1, p1, Lry4;->a:Lcpg;
+
+    invoke-virtual {v0, p1}, Lcpg;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_2
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final getItemId()J
+    .locals 2
+
+    const/16 v0, 0x80
+
+    int-to-long v0, v0
+
+    return-wide v0
+.end method
+
+.method public final h(Lmg8;)Z
     .locals 4
 
-    iget v0, p0, Lry4;->a:I
+    const/16 v0, 0x80
 
-    packed-switch v0, :pswitch_data_0
+    int-to-long v0, v0
 
-    iget-object v0, p0, Lry4;->b:Ljava/util/List;
+    invoke-interface {p1}, Lmg8;->getItemId()J
 
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    move-result-wide v2
+
+    cmp-long p1, v0, v2
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lry4;->a:Lcpg;
+
+    iget v0, v0, Lcpg;->c:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
     move-result v0
 
-    const/4 v1, 0x1
+    return v0
+.end method
 
-    iget-object v2, p0, Lry4;->c:Lone/me/devmenu/DevMenuFeatureTogglesPageScreen;
+.method public final m()I
+    .locals 1
 
-    if-ne v0, v1, :cond_0
+    const/16 v0, 0x80
 
-    invoke-virtual {v2}, Lone/me/sdk/sections/SectionRecyclerWidget;->A0()Landroidx/recyclerview/widget/RecyclerView;
+    return v0
+.end method
+
+.method public final q(Lmg8;)Z
+    .locals 0
+
+    invoke-virtual {p0, p1}, Lry4;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "DeleteProfileItem(text="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lry4;->a:Lcpg;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->Y()V
-
-    :cond_0
-    invoke-virtual {v2}, Lone/me/sdk/sections/SectionRecyclerWidget;->A0()Landroidx/recyclerview/widget/RecyclerView;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->x0(I)V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lry4;->c:Lone/me/devmenu/DevMenuFeatureTogglesPageScreen;
-
-    invoke-virtual {v0}, Lone/me/sdk/sections/SectionRecyclerWidget;->A0()Landroidx/recyclerview/widget/RecyclerView;
-
-    move-result-object v1
-
-    new-instance v2, Lry4;
-
-    iget-object v3, p0, Lry4;->b:Ljava/util/List;
-
-    invoke-direct {v2, v3, v0}, Lry4;-><init>(Ljava/util/List;Lone/me/devmenu/DevMenuFeatureTogglesPageScreen;)V
-
-    invoke-virtual {v1, v2}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

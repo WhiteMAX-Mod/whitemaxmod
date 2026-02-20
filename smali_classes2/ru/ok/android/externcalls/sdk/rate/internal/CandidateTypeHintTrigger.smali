@@ -20,7 +20,7 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/rate/internal/CandidateTypeHintTrigger;",
         "Lru/ok/android/externcalls/sdk/rate/internal/HintTrigger;",
-        "Lahd;",
+        "Ltmd;",
         "log",
         "Lru/ok/android/externcalls/sdk/rate/connection/CandidateTypeHintConfig;",
         "config",
@@ -29,13 +29,13 @@
         "",
         "topology",
         "<init>",
-        "(Lahd;Lru/ok/android/externcalls/sdk/rate/connection/CandidateTypeHintConfig;Lru/ok/android/externcalls/sdk/rate/internal/RateHintCollection;Ljava/lang/String;)V",
+        "(Ltmd;Lru/ok/android/externcalls/sdk/rate/connection/CandidateTypeHintConfig;Lru/ok/android/externcalls/sdk/rate/internal/RateHintCollection;Ljava/lang/String;)V",
         "Lru/ok/android/externcalls/sdk/net/internal/monitor/NetworkStat;",
         "stat",
-        "Lb3h;",
+        "Lmah;",
         "onNetworkStat",
         "(Lru/ok/android/externcalls/sdk/net/internal/monitor/NetworkStat;)V",
-        "Lahd;",
+        "Ltmd;",
         "Lru/ok/android/externcalls/sdk/rate/connection/CandidateTypeHintConfig;",
         "Lru/ok/android/externcalls/sdk/rate/internal/RateHintCollection;",
         "Ljava/lang/String;",
@@ -76,7 +76,7 @@
 
 .field private firstMetCurrentCandidateType:J
 
-.field private final log:Lahd;
+.field private final log:Ltmd;
 
 .field private final topology:Ljava/lang/String;
 
@@ -99,19 +99,19 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/rate/internal/CandidateTypeHintTrigger$Companion;-><init>(Lso4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/rate/internal/CandidateTypeHintTrigger$Companion;-><init>(Lfq4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/rate/internal/CandidateTypeHintTrigger;->Companion:Lru/ok/android/externcalls/sdk/rate/internal/CandidateTypeHintTrigger$Companion;
 
     return-void
 .end method
 
-.method public constructor <init>(Lahd;Lru/ok/android/externcalls/sdk/rate/connection/CandidateTypeHintConfig;Lru/ok/android/externcalls/sdk/rate/internal/RateHintCollection;Ljava/lang/String;)V
+.method public constructor <init>(Ltmd;Lru/ok/android/externcalls/sdk/rate/connection/CandidateTypeHintConfig;Lru/ok/android/externcalls/sdk/rate/internal/RateHintCollection;Ljava/lang/String;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/rate/internal/CandidateTypeHintTrigger;->log:Lahd;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/rate/internal/CandidateTypeHintTrigger;->log:Ltmd;
 
     iput-object p2, p0, Lru/ok/android/externcalls/sdk/rate/internal/CandidateTypeHintTrigger;->config:Lru/ok/android/externcalls/sdk/rate/connection/CandidateTypeHintConfig;
 
@@ -186,7 +186,7 @@
 
     if-eqz v2, :cond_3
 
-    invoke-static {v2, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, p1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -200,13 +200,13 @@
 
     sub-long/2addr v2, v4
 
-    iget-object v4, p0, Lru/ok/android/externcalls/sdk/rate/internal/CandidateTypeHintTrigger;->log:Lahd;
+    iget-object v4, p0, Lru/ok/android/externcalls/sdk/rate/internal/CandidateTypeHintTrigger;->log:Ltmd;
 
     const-string v5, "measured candidate: "
 
     const-string v6, ", time: "
 
-    invoke-static {v5, v2, v3, p1, v6}, Lmrf;->m(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v5, v2, v3, p1, v6}, Ljye;->m(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v5
 
@@ -220,7 +220,7 @@
 
     const-string v6, "RateManager"
 
-    invoke-interface {v4, v6, v5}, Lahd;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v4, v6, v5}, Ltmd;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     sget-object v4, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
@@ -242,7 +242,7 @@
 
     const-string v6, "_"
 
-    invoke-static {v5, v4, v6, p1, v6}, Lkz1;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v5, v4, v6, p1, v6}, Lau1;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v4
 

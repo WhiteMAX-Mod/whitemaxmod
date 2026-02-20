@@ -1,174 +1,80 @@
-.class public abstract Lu9j;
+.class public final Lu9j;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Loza;
+
 
 # static fields
-.field public static a:Lt5b;
+.field public static final a:Lu9j;
 
 
 # direct methods
-.method public static a(IZ)I
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 3
 
-    const/16 v0, 0x1f
+    new-instance v0, Lu9j;
 
-    invoke-static {p0, v0, p1}, Lcbh;->j(IIZ)I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    move-result p0
+    sput-object v0, Lu9j;->a:Lu9j;
 
-    return p0
-.end method
-
-.method public static final b(III)I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    sub-int/2addr p2, p0
-
-    invoke-static {v0, p2}, Ljava/lang/Math;->max(II)I
-
-    move-result p0
-
-    invoke-static {p0, p1}, Ljava/lang/Math;->min(II)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static final c(IIIII)V
-    .locals 5
-
-    const/4 v0, 0x0
+    new-instance v0, Lczi;
 
     const/4 v1, 0x1
 
-    if-ltz p3, :cond_0
+    invoke-direct {v0, v1}, Lczi;-><init>(I)V
 
-    move v2, v1
+    const-class v1, Lozi;
 
-    goto :goto_0
+    invoke-static {v1, v0}, Leni;->f(Ljava/lang/Class;Lczi;)Ljava/util/HashMap;
 
-    :cond_0
-    move v2, v0
+    move-result-object v0
 
-    :goto_0
-    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    const/4 v2, 0x2
 
-    move-result-object v3
+    invoke-static {v0, v2}, Leni;->h(Ljava/util/HashMap;I)Lczi;
 
-    filled-new-array {v3}, [Ljava/lang/Object;
+    move-result-object v0
 
-    move-result-object v3
+    invoke-static {v1, v0}, Leni;->f(Ljava/lang/Class;Lczi;)Ljava/util/HashMap;
 
-    const-string v4, "count (%d) ! >= 0"
+    move-result-object v0
 
-    invoke-static {v2, v4, v3}, Lbkj;->d(ZLjava/lang/String;[Ljava/lang/Object;)V
+    const/4 v2, 0x3
 
-    if-ltz p0, :cond_1
+    invoke-static {v0, v2}, Leni;->h(Ljava/util/HashMap;I)Lczi;
 
-    move v2, v1
+    move-result-object v0
 
-    goto :goto_1
+    invoke-static {v1, v0}, Leni;->f(Ljava/lang/Class;Lczi;)Ljava/util/HashMap;
 
-    :cond_1
-    move v2, v0
+    move-result-object v0
 
-    :goto_1
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    const/4 v2, 0x4
 
-    move-result-object v3
+    invoke-static {v0, v2}, Leni;->h(Ljava/util/HashMap;I)Lczi;
 
-    filled-new-array {v3}, [Ljava/lang/Object;
+    move-result-object v0
 
-    move-result-object v3
+    invoke-static {v1, v0}, Leni;->f(Ljava/lang/Class;Lczi;)Ljava/util/HashMap;
 
-    const-string v4, "offset (%d) ! >= 0"
+    move-result-object v0
 
-    invoke-static {v2, v4, v3}, Lbkj;->d(ZLjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0}, Leni;->m(Ljava/util/HashMap;)V
 
-    if-ltz p2, :cond_2
+    return-void
+.end method
 
-    move v2, v1
 
-    goto :goto_2
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    :cond_2
-    move v2, v0
-
-    :goto_2
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    filled-new-array {v3}, [Ljava/lang/Object;
-
-    move-result-object v3
-
-    const-string v4, "otherOffset (%d) ! >= 0"
-
-    invoke-static {v2, v4, v3}, Lbkj;->d(ZLjava/lang/String;[Ljava/lang/Object;)V
-
-    add-int v2, p0, p3
-
-    if-gt v2, p4, :cond_3
-
-    move v2, v1
-
-    goto :goto_3
-
-    :cond_3
-    move v2, v0
-
-    :goto_3
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p0
-
-    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    invoke-static {p4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p4
-
-    filled-new-array {p0, v3, p4}, [Ljava/lang/Object;
-
-    move-result-object p0
-
-    const-string p4, "offset (%d) + count (%d) ! <= %d"
-
-    invoke-static {v2, p4, p0}, Lbkj;->d(ZLjava/lang/String;[Ljava/lang/Object;)V
-
-    add-int p0, p2, p3
-
-    if-gt p0, p1, :cond_4
-
-    move v0, v1
-
-    :cond_4
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p0
-
-    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p2
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {p1}, Lkb0;->d(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
     move-result-object p1
 
-    filled-new-array {p0, p2, p1}, [Ljava/lang/Object;
-
-    move-result-object p0
-
-    const-string p1, "otherOffset (%d) + count (%d) ! <= %d"
-
-    invoke-static {v0, p1, p0}, Lbkj;->d(ZLjava/lang/String;[Ljava/lang/Object;)V
-
-    return-void
+    throw p1
 .end method

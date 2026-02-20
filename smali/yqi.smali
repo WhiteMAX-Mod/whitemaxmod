@@ -3,21 +3,13 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lqf5;
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public static a(Landroid/content/Context;)Z
+    .locals 0
 
-    new-instance v0, Lqf5;
+    invoke-virtual {p0}, Landroid/content/Context;->isDeviceProtectedStorage()Z
 
-    const-string v1, "PhoneskyVerificationUtils"
+    move-result p0
 
-    invoke-direct {v0, v1}, Lqf5;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Lyqi;->a:Lqf5;
-
-    return-void
+    return p0
 .end method

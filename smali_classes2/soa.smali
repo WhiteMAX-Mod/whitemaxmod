@@ -1,87 +1,116 @@
 .class public final Lsoa;
-.super Ljava/lang/IllegalStateException;
+.super Leyd;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:Loli;
 
-.field public final b:Ljava/lang/String;
+.field public final b:Lks6;
 
-.field public final c:Ljava/lang/String;
-
-.field public final d:Ljava/lang/String;
-
-.field public final o:Ljava/lang/String;
+.field public c:Z
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+.method public constructor <init>(Loli;Lks6;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/IllegalStateException;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lsoa;->a:Ljava/lang/String;
+    iput-object p1, p0, Lsoa;->a:Loli;
 
-    iput-object p2, p0, Lsoa;->b:Ljava/lang/String;
-
-    iput-object p3, p0, Lsoa;->c:Ljava/lang/String;
-
-    iput-object p4, p0, Lsoa;->d:Ljava/lang/String;
-
-    iput-object p5, p0, Lsoa;->o:Ljava/lang/String;
+    iput-object p2, p0, Lsoa;->b:Lks6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getMessage()Ljava/lang/String;
-    .locals 5
+.method public final a(Landroidx/recyclerview/widget/RecyclerView;I)V
+    .locals 0
 
-    iget-object v0, p0, Lsoa;->a:Ljava/lang/String;
+    if-nez p2, :cond_0
 
-    invoke-static {v0}, Lhce;->a(Ljava/lang/String;)Ljava/lang/String;
+    const/4 p1, 0x0
 
-    move-result-object v0
+    iput-boolean p1, p0, Lsoa;->c:Z
 
-    const-string v1, ", \n                |parent:"
+    :cond_0
+    return-void
+.end method
 
-    const-string v2, ", \n                |internalTargetInstanceId:"
+.method public final b(Landroidx/recyclerview/widget/RecyclerView;II)V
+    .locals 2
 
-    const-string v3, "Current state. \n                |scopeId:"
+    iget-boolean p2, p0, Lsoa;->c:Z
 
-    iget-object v4, p0, Lsoa;->b:Ljava/lang/String;
+    if-eqz p2, :cond_0
 
-    invoke-static {v3, v0, v1, v4, v2}, Lkz1;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    goto :goto_1
 
-    move-result-object v0
+    :cond_0
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
 
-    const-string v1, ", \n                |target:"
+    move-result-object p1
 
-    const-string v2, ", \n                |fullSnapshot:"
+    instance-of p2, p1, Landroidx/recyclerview/widget/GridLayoutManager;
 
-    iget-object v3, p0, Lsoa;->c:Ljava/lang/String;
+    if-eqz p2, :cond_1
 
-    iget-object v4, p0, Lsoa;->d:Ljava/lang/String;
+    check-cast p1, Landroidx/recyclerview/widget/GridLayoutManager;
 
-    invoke-static {v0, v3, v1, v4, v2}, Lmrf;->s(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    goto :goto_0
 
-    iget-object v1, p0, Lsoa;->o:Ljava/lang/String;
+    :cond_1
+    const/4 p1, 0x0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :goto_0
+    if-nez p1, :cond_2
 
-    const-string v1, ", \n                |"
+    goto :goto_1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_2
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/LinearLayoutManager;->V0()I
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result p2
 
-    move-result-object v0
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/LinearLayoutManager;->Z0()I
 
-    invoke-static {v0}, Lszf;->g(Ljava/lang/String;)Ljava/lang/String;
+    move-result p1
 
-    move-result-object v0
+    iget-object p3, p0, Lsoa;->a:Loli;
 
-    return-object v0
+    invoke-virtual {p3}, Lfg8;->j()I
+
+    move-result v0
+
+    const/4 v1, -0x1
+
+    if-ne p2, v1, :cond_3
+
+    :goto_1
+    return-void
+
+    :cond_3
+    add-int/lit8 v0, v0, -0x1
+
+    if-ne p1, v0, :cond_4
+
+    invoke-virtual {p3, p1}, Loli;->K(I)Lrna;
+
+    move-result-object p1
+
+    goto :goto_2
+
+    :cond_4
+    invoke-virtual {p3, p2}, Loli;->K(I)Lrna;
+
+    move-result-object p1
+
+    :goto_2
+    iget-object p2, p0, Lsoa;->b:Lks6;
+
+    invoke-interface {p2, p1}, Lks6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
 .end method

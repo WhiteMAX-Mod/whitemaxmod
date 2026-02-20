@@ -1,84 +1,64 @@
 .class public final Lmy8;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Lqy8;
 
 
-# instance fields
-.field public final synthetic o:Lone/me/chatscreen/mediabar/MediaBarWidget;
+# static fields
+.field public static final a:Lmy8;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/mediabar/MediaBarWidget;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p2, p0, Lmy8;->o:Lone/me/chatscreen/mediabar/MediaBarWidget;
+    new-instance v0, Lmy8;
 
-    const/4 p2, 0x2
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    sput-object v0, Lmy8;->a:Lmy8;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lmy8;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lmy8;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lmy8;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    new-instance p1, Lmy8;
+    const/4 v0, 0x1
 
-    iget-object v0, p0, Lmy8;->o:Lone/me/chatscreen/mediabar/MediaBarWidget;
+    if-ne p0, p1, :cond_0
 
-    invoke-direct {p1, p2, v0}, Lmy8;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/mediabar/MediaBarWidget;)V
+    return v0
 
-    return-object p1
+    :cond_0
+    instance-of p1, p1, Lmy8;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final hashCode()I
+    .locals 1
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    const v0, 0x142af9ca
 
-    sget-object p1, Lone/me/chatscreen/mediabar/MediaBarWidget;->e1:[Lz28;
+    return v0
+.end method
 
-    iget-object p1, p0, Lmy8;->o:Lone/me/chatscreen/mediabar/MediaBarWidget;
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    invoke-virtual {p1}, Lone/me/chatscreen/mediabar/MediaBarWidget;->E0()Landroid/widget/LinearLayout;
+    const-string v0, "ShowMediaModeSnack"
 
-    move-result-object p1
-
-    sget-object v0, Lone/me/chatscreen/mediabar/MediaBarWidget;->f1:Les7;
-
-    const/4 v1, 0x0
-
-    invoke-static {p1, v0, v1}, Lfui;->b(Landroid/view/View;Les7;Lnq6;)V
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
+    return-object v0
 .end method

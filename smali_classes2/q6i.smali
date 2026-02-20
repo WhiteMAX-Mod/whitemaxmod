@@ -3,150 +3,234 @@
 .source "SourceFile"
 
 # interfaces
-.implements Liv6;
+.implements Lks6;
 
 
-# static fields
-.field public static final a:Lq6i;
+# instance fields
+.field public final synthetic a:I
 
-.field private static final descriptor:Lxpe;
+.field public final synthetic b:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public synthetic constructor <init>(JI)V
+    .locals 0
 
-    new-instance v0, Lq6i;
+    iput p3, p0, Lq6i;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-wide p1, p0, Lq6i;->b:J
 
-    sput-object v0, Lq6i;->a:Lq6i;
-
-    new-instance v1, Lgdc;
-
-    const-string v2, "one.me.webapp.domain.jsbridge.delegates.link.WebAppOpenMaxLinkRequest"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v0, v3}, Lgdc;-><init>(Ljava/lang/String;Liv6;I)V
-
-    const-string v0, "url"
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v0, v2}, Lgdc;->k(Ljava/lang/String;Z)V
-
-    sput-object v1, Lq6i;->descriptor:Lxpe;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lkotlinx/serialization/json/internal/b;Ljava/lang/Object;)V
-    .locals 2
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 21
 
-    check-cast p2, Ls6i;
+    move-object/from16 v1, p0
 
-    sget-object v0, Lq6i;->descriptor:Lxpe;
+    iget v0, v1, Lq6i;->a:I
 
-    invoke-virtual {p1, v0}, Lkotlinx/serialization/json/internal/b;->a(Lxpe;)Lkotlinx/serialization/json/internal/b;
+    iget-wide v2, v1, Lq6i;->b:J
 
-    move-result-object p1
+    packed-switch v0, :pswitch_data_0
 
-    iget-object p2, p2, Ls6i;->a:Ljava/lang/String;
+    move-object/from16 v0, p1
 
-    const/4 v1, 0x0
+    check-cast v0, Lsde;
 
-    invoke-virtual {p1, v0, v1, p2}, Lkotlinx/serialization/json/internal/b;->s(Lxpe;ILjava/lang/String;)V
+    const-string v4, "DELETE FROM uploads WHERE attach_id=?"
 
-    invoke-virtual {p1}, Lkotlinx/serialization/json/internal/b;->t()V
+    invoke-interface {v0, v4}, Lsde;->y0(Ljava/lang/String;)Lxde;
 
-    return-void
-.end method
-
-.method public final b(Lkl4;)Ljava/lang/Object;
-    .locals 8
-
-    sget-object v0, Lq6i;->descriptor:Lxpe;
-
-    invoke-interface {p1, v0}, Lkl4;->r(Lxpe;)Lqp3;
-
-    move-result-object p1
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    move v4, v1
-
-    move v5, v2
-
-    :goto_0
-    if-eqz v4, :cond_2
-
-    invoke-interface {p1, v0}, Lqp3;->e(Lxpe;)I
-
-    move-result v6
-
-    const/4 v7, -0x1
-
-    if-eq v6, v7, :cond_1
-
-    if-nez v6, :cond_0
-
-    invoke-interface {p1, v0, v2}, Lqp3;->j(Lxpe;I)Ljava/lang/String;
-
-    move-result-object v3
-
-    move v5, v1
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Lkotlinx/serialization/UnknownFieldException;
-
-    invoke-direct {p1, v6}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
-
-    throw p1
-
-    :cond_1
-    move v4, v2
-
-    goto :goto_0
-
-    :cond_2
-    invoke-interface {p1, v0}, Lqp3;->m(Lxpe;)V
-
-    new-instance p1, Ls6i;
-
-    invoke-direct {p1, v5, v3}, Ls6i;-><init>(ILjava/lang/String;)V
-
-    return-object p1
-.end method
-
-.method public final c()[La38;
-    .locals 3
+    move-result-object v4
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [La38;
+    :try_start_0
+    invoke-interface {v4, v0, v2, v3}, Lxde;->b(IJ)V
 
-    sget-object v1, Lnzf;->a:Lnzf;
+    invoke-interface {v4}, Lxde;->u0()Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    const/4 v2, 0x0
+    invoke-interface {v4}, Ljava/lang/AutoCloseable;->close()V
 
-    aput-object v1, v0, v2
-
-    return-object v0
-.end method
-
-.method public final d()Lxpe;
-    .locals 1
-
-    sget-object v0, Lq6i;->descriptor:Lxpe;
+    sget-object v0, Lmah;->a:Lmah;
 
     return-object v0
+
+    :catchall_0
+    move-exception v0
+
+    invoke-interface {v4}, Ljava/lang/AutoCloseable;->close()V
+
+    throw v0
+
+    :pswitch_0
+    move-object/from16 v0, p1
+
+    check-cast v0, Lsde;
+
+    const-string v4, "SELECT * FROM webapp_biometry WHERE user_id = ?"
+
+    invoke-interface {v0, v4}, Lsde;->y0(Ljava/lang/String;)Lxde;
+
+    move-result-object v4
+
+    const/4 v0, 0x1
+
+    :try_start_1
+    invoke-interface {v4, v0, v2, v3}, Lxde;->b(IJ)V
+
+    const-string v2, "id"
+
+    invoke-static {v4, v2}, Lawj;->b(Lxde;Ljava/lang/String;)I
+
+    move-result v2
+
+    const-string v3, "user_id"
+
+    invoke-static {v4, v3}, Lawj;->b(Lxde;Ljava/lang/String;)I
+
+    move-result v3
+
+    const-string v5, "bot_id"
+
+    invoke-static {v4, v5}, Lawj;->b(Lxde;Ljava/lang/String;)I
+
+    move-result v5
+
+    const-string v6, "token"
+
+    invoke-static {v4, v6}, Lawj;->b(Lxde;Ljava/lang/String;)I
+
+    move-result v6
+
+    const-string v7, "access_requested"
+
+    invoke-static {v4, v7}, Lawj;->b(Lxde;Ljava/lang/String;)I
+
+    move-result v7
+
+    const-string v8, "access_granted"
+
+    invoke-static {v4, v8}, Lawj;->b(Lxde;Ljava/lang/String;)I
+
+    move-result v8
+
+    new-instance v9, Ljava/util/ArrayList;
+
+    invoke-direct {v9}, Ljava/util/ArrayList;-><init>()V
+
+    :goto_0
+    invoke-interface {v4}, Lxde;->u0()Z
+
+    move-result v10
+
+    if-eqz v10, :cond_3
+
+    invoke-interface {v4, v2}, Lxde;->getLong(I)J
+
+    move-result-wide v12
+
+    invoke-interface {v4, v3}, Lxde;->getLong(I)J
+
+    move-result-wide v14
+
+    invoke-interface {v4, v5}, Lxde;->getLong(I)J
+
+    move-result-wide v16
+
+    invoke-interface {v4, v6}, Lxde;->isNull(I)Z
+
+    move-result v10
+
+    if-eqz v10, :cond_0
+
+    const/4 v10, 0x0
+
+    :goto_1
+    move-object/from16 v18, v10
+
+    goto :goto_2
+
+    :cond_0
+    invoke-interface {v4, v6}, Lxde;->c0(I)Ljava/lang/String;
+
+    move-result-object v10
+
+    goto :goto_1
+
+    :goto_2
+    invoke-interface {v4, v7}, Lxde;->getLong(I)J
+
+    move-result-wide v10
+
+    long-to-int v10, v10
+
+    const/4 v11, 0x0
+
+    if-eqz v10, :cond_1
+
+    move/from16 v19, v0
+
+    goto :goto_3
+
+    :cond_1
+    move/from16 v19, v11
+
+    :goto_3
+    invoke-interface {v4, v8}, Lxde;->getLong(I)J
+
+    move-result-wide v0
+
+    long-to-int v0, v0
+
+    if-eqz v0, :cond_2
+
+    const/16 v20, 0x1
+
+    goto :goto_4
+
+    :cond_2
+    move/from16 v20, v11
+
+    :goto_4
+    new-instance v11, Lw7i;
+
+    invoke-direct/range {v11 .. v20}, Lw7i;-><init>(JJJLjava/lang/String;ZZ)V
+
+    invoke-virtual {v9, v11}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    move-object/from16 v1, p0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :catchall_1
+    move-exception v0
+
+    goto :goto_5
+
+    :cond_3
+    invoke-interface {v4}, Ljava/lang/AutoCloseable;->close()V
+
+    return-object v9
+
+    :goto_5
+    invoke-interface {v4}, Ljava/lang/AutoCloseable;->close()V
+
+    throw v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

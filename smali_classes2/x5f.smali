@@ -1,64 +1,122 @@
 .class public final Lx5f;
-.super Ljava/lang/Object;
+.super Lpdg;
 .source "SourceFile"
 
 # interfaces
-.implements La6f;
+.implements Lys6;
 
 
-# static fields
-.field public static final a:Lx5f;
+# instance fields
+.field public final synthetic X:Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;)V
+    .locals 0
 
-    new-instance v0, Lx5f;
+    iput-object p2, p0, Lx5f;->X:Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 p2, 0x2
 
-    sput-object v0, Lx5f;->a:Lx5f;
+    invoke-direct {p0, p2, p1}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {p0, p1, p2}, Lx5f;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    return v0
+    move-result-object p1
 
-    :cond_0
-    instance-of p1, p1, Lx5f;
+    check-cast p1, Lx5f;
 
-    if-nez p1, :cond_1
+    sget-object p2, Lmah;->a:Lmah;
 
-    const/4 p1, 0x0
+    invoke-virtual {p1, p2}, Lx5f;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return p1
-
-    :cond_1
-    return v0
+    return-object p2
 .end method
 
-.method public final hashCode()I
-    .locals 1
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    const v0, -0x12fae880
+    new-instance v0, Lx5f;
 
-    return v0
-.end method
+    iget-object v1, p0, Lx5f;->X:Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    invoke-direct {v0, p2, v1}, Lx5f;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;)V
 
-    const-string v0, "MultiselectDisabled"
+    iput-object p1, v0, Lx5f;->o:Ljava/lang/Object;
 
     return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    iget-object v0, p0, Lx5f;->o:Ljava/lang/Object;
+
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    check-cast v0, Ljava/util/Map;
+
+    iget-object p1, p0, Lx5f;->X:Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;
+
+    iget-object v1, p1, Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;->o:Lgrd;
+
+    sget-object v2, Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;->Y:[Lv58;
+
+    const/4 v3, 0x1
+
+    aget-object v2, v2, v3
+
+    invoke-interface {v1, p1, v2}, Lgrd;->D(Ljava/lang/Object;Lv58;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lgcb;
+
+    invoke-interface {v0}, Ljava/util/Map;->values()Ljava/util/Collection;
+
+    move-result-object v2
+
+    invoke-interface {v2}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    const/4 v2, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    const/16 v2, 0x8
+
+    :goto_0
+    invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
+
+    iget-object p1, p1, Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;->X:Loli;
+
+    invoke-interface {v0}, Ljava/util/Map;->values()Ljava/util/Collection;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lek3;->Z(Ljava/lang/Iterable;)Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Lfg8;->F(Ljava/util/List;)V
+
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
 .end method

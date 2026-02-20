@@ -1,84 +1,413 @@
-.class public final Lap9;
+.class public abstract Lap9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:J
+# static fields
+.field public static final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 0
+.method public static a([Lru/ok/tamtam/nano/Protos$MessageElement;)Ljava/util/ArrayList;
+    .locals 13
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ljava/util/ArrayList;
 
-    iput-wide p1, p0, Lap9;->a:J
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    return-void
-.end method
+    const/4 v1, 0x0
 
+    :goto_0
+    array-length v2, p0
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+    if-ge v1, v2, :cond_2
 
-    const/4 v0, 0x1
+    aget-object v2, p0, v1
 
-    if-ne p0, p1, :cond_0
+    iget v3, v2, Lru/ok/tamtam/nano/Protos$MessageElement;->type:I
 
-    return v0
+    const/4 v4, 0x0
+
+    packed-switch v3, :pswitch_data_0
+
+    sget-object v5, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    const-string v6, "Unknown protoElement type = "
+
+    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    const-string v5, "ap9"
+
+    invoke-static {v5, v3}, Ltej;->f(Ljava/lang/String;Ljava/lang/String;)V
+
+    move-object v9, v4
+
+    goto :goto_2
+
+    :pswitch_0
+    sget-object v3, Lyo9;->v0:Lyo9;
+
+    :goto_1
+    move-object v9, v3
+
+    goto :goto_2
+
+    :pswitch_1
+    sget-object v3, Lyo9;->u0:Lyo9;
+
+    goto :goto_1
+
+    :pswitch_2
+    sget-object v3, Lyo9;->Z:Lyo9;
+
+    goto :goto_1
+
+    :pswitch_3
+    sget-object v3, Lyo9;->t0:Lyo9;
+
+    goto :goto_1
+
+    :pswitch_4
+    sget-object v3, Lyo9;->s0:Lyo9;
+
+    goto :goto_1
+
+    :pswitch_5
+    sget-object v3, Lyo9;->Y:Lyo9;
+
+    goto :goto_1
+
+    :pswitch_6
+    sget-object v3, Lyo9;->X:Lyo9;
+
+    goto :goto_1
+
+    :pswitch_7
+    sget-object v3, Lyo9;->o:Lyo9;
+
+    goto :goto_1
+
+    :pswitch_8
+    sget-object v3, Lyo9;->c:Lyo9;
+
+    goto :goto_1
+
+    :pswitch_9
+    sget-object v3, Lyo9;->d:Lyo9;
+
+    goto :goto_1
+
+    :pswitch_a
+    sget-object v3, Lyo9;->b:Lyo9;
+
+    goto :goto_1
+
+    :pswitch_b
+    sget-object v3, Lyo9;->a:Lyo9;
+
+    goto :goto_1
+
+    :goto_2
+    iget-wide v6, v2, Lru/ok/tamtam/nano/Protos$MessageElement;->entityId:J
+
+    iget-object v3, v2, Lru/ok/tamtam/nano/Protos$MessageElement;->entityName:Ljava/lang/String;
+
+    invoke-static {v3}, Ll1j;->c(Ljava/lang/CharSequence;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    move-object v8, v4
+
+    goto :goto_3
 
     :cond_0
-    instance-of v1, p1, Lap9;
+    iget-object v3, v2, Lru/ok/tamtam/nano/Protos$MessageElement;->entityName:Ljava/lang/String;
 
-    const/4 v2, 0x0
+    move-object v8, v3
 
-    if-nez v1, :cond_1
+    :goto_3
+    iget v10, v2, Lru/ok/tamtam/nano/Protos$MessageElement;->from:I
 
-    return v2
+    iget v11, v2, Lru/ok/tamtam/nano/Protos$MessageElement;->length:I
+
+    iget-object v2, v2, Lru/ok/tamtam/nano/Protos$MessageElement;->linkAttributes:Lru/ok/tamtam/nano/Protos$MessageElement$LinkAttributes;
+
+    if-eqz v2, :cond_1
+
+    const-string v3, "url"
+
+    iget-object v2, v2, Lru/ok/tamtam/nano/Protos$MessageElement$LinkAttributes;->url:Ljava/lang/String;
+
+    invoke-static {v3, v2}, Ljava/util/Collections;->singletonMap(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map;
+
+    move-result-object v4
 
     :cond_1
-    check-cast p1, Lap9;
+    move-object v12, v4
 
-    iget-wide v3, p0, Lap9;->a:J
+    new-instance v5, Lzo9;
 
-    iget-wide v5, p1, Lap9;->a:J
+    invoke-direct/range {v5 .. v12}, Lzo9;-><init>(JLjava/lang/String;Lyo9;IILjava/util/Map;)V
 
-    cmp-long p1, v3, v5
+    invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    if-eqz p1, :cond_2
+    add-int/lit8 v1, v1, 0x1
 
-    return v2
+    goto :goto_0
 
     :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Lap9;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    const-string v0, "ControlInfo(pinnedMessageId="
-
-    const-string v1, ")"
-
-    iget-wide v2, p0, Lap9;->a:J
-
-    invoke-static {v2, v3, v0, v1}, Lcbh;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
     return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public static b(Ljava/util/List;)[B
+    .locals 0
+
+    invoke-static {p0}, Lap9;->c(Ljava/util/List;)Lru/ok/tamtam/nano/Protos$MessageElements;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lhr9;->toByteArray(Lhr9;)[B
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static c(Ljava/util/List;)Lru/ok/tamtam/nano/Protos$MessageElements;
+    .locals 8
+
+    new-instance v0, Lru/ok/tamtam/nano/Protos$MessageElements;
+
+    invoke-direct {v0}, Lru/ok/tamtam/nano/Protos$MessageElements;-><init>()V
+
+    invoke-interface {p0}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    new-array v1, v1, [Lru/ok/tamtam/nano/Protos$MessageElement;
+
+    iput-object v1, v0, Lru/ok/tamtam/nano/Protos$MessageElements;->elements:[Lru/ok/tamtam/nano/Protos$MessageElement;
+
+    const/4 v1, 0x0
+
+    move v2, v1
+
+    :goto_0
+    invoke-interface {p0}, Ljava/util/List;->size()I
+
+    move-result v3
+
+    if-ge v2, v3, :cond_2
+
+    invoke-interface {p0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lzo9;
+
+    new-instance v4, Lru/ok/tamtam/nano/Protos$MessageElement;
+
+    invoke-direct {v4}, Lru/ok/tamtam/nano/Protos$MessageElement;-><init>()V
+
+    iget-wide v5, v3, Lzo9;->a:J
+
+    iget-object v7, v3, Lzo9;->f:Ljava/util/Map;
+
+    iput-wide v5, v4, Lru/ok/tamtam/nano/Protos$MessageElement;->entityId:J
+
+    iget-object v5, v3, Lzo9;->b:Ljava/lang/String;
+
+    sget-object v6, Lru/ok/tamtam/nano/a;->a:[B
+
+    if-nez v5, :cond_0
+
+    const-string v5, ""
+
+    :cond_0
+    iput-object v5, v4, Lru/ok/tamtam/nano/Protos$MessageElement;->entityName:Ljava/lang/String;
+
+    iget v5, v3, Lzo9;->d:I
+
+    iput v5, v4, Lru/ok/tamtam/nano/Protos$MessageElement;->from:I
+
+    iget v5, v3, Lzo9;->e:I
+
+    iput v5, v4, Lru/ok/tamtam/nano/Protos$MessageElement;->length:I
+
+    iget-object v3, v3, Lzo9;->c:Lyo9;
+
+    invoke-virtual {v3}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v3
+
+    packed-switch v3, :pswitch_data_0
+
+    goto :goto_1
+
+    :pswitch_0
+    const/16 v3, 0xb
+
+    iput v3, v4, Lru/ok/tamtam/nano/Protos$MessageElement;->type:I
+
+    goto :goto_1
+
+    :pswitch_1
+    const/16 v3, 0xa
+
+    iput v3, v4, Lru/ok/tamtam/nano/Protos$MessageElement;->type:I
+
+    goto :goto_1
+
+    :pswitch_2
+    const/16 v3, 0x8
+
+    iput v3, v4, Lru/ok/tamtam/nano/Protos$MessageElement;->type:I
+
+    goto :goto_1
+
+    :pswitch_3
+    const/4 v3, 0x7
+
+    iput v3, v4, Lru/ok/tamtam/nano/Protos$MessageElement;->type:I
+
+    goto :goto_1
+
+    :pswitch_4
+    const/16 v3, 0x9
+
+    iput v3, v4, Lru/ok/tamtam/nano/Protos$MessageElement;->type:I
+
+    goto :goto_1
+
+    :pswitch_5
+    const/4 v3, 0x6
+
+    iput v3, v4, Lru/ok/tamtam/nano/Protos$MessageElement;->type:I
+
+    goto :goto_1
+
+    :pswitch_6
+    const/4 v3, 0x5
+
+    iput v3, v4, Lru/ok/tamtam/nano/Protos$MessageElement;->type:I
+
+    const-string v3, "url"
+
+    invoke-interface {v7, v3}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_1
+
+    new-instance v5, Lru/ok/tamtam/nano/Protos$MessageElement$LinkAttributes;
+
+    invoke-direct {v5}, Lru/ok/tamtam/nano/Protos$MessageElement$LinkAttributes;-><init>()V
+
+    iput-object v5, v4, Lru/ok/tamtam/nano/Protos$MessageElement;->linkAttributes:Lru/ok/tamtam/nano/Protos$MessageElement$LinkAttributes;
+
+    invoke-interface {v7, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/lang/String;
+
+    iput-object v3, v5, Lru/ok/tamtam/nano/Protos$MessageElement$LinkAttributes;->url:Ljava/lang/String;
+
+    goto :goto_1
+
+    :cond_1
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    const-string v0, "There are not enough attributes for the type = LINK"
+
+    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :pswitch_7
+    const/4 v3, 0x4
+
+    iput v3, v4, Lru/ok/tamtam/nano/Protos$MessageElement;->type:I
+
+    goto :goto_1
+
+    :pswitch_8
+    const/4 v3, 0x2
+
+    iput v3, v4, Lru/ok/tamtam/nano/Protos$MessageElement;->type:I
+
+    goto :goto_1
+
+    :pswitch_9
+    const/4 v3, 0x3
+
+    iput v3, v4, Lru/ok/tamtam/nano/Protos$MessageElement;->type:I
+
+    goto :goto_1
+
+    :pswitch_a
+    const/4 v3, 0x1
+
+    iput v3, v4, Lru/ok/tamtam/nano/Protos$MessageElement;->type:I
+
+    goto :goto_1
+
+    :pswitch_b
+    iput v1, v4, Lru/ok/tamtam/nano/Protos$MessageElement;->type:I
+
+    :goto_1
+    iget-object v3, v0, Lru/ok/tamtam/nano/Protos$MessageElements;->elements:[Lru/ok/tamtam/nano/Protos$MessageElement;
+
+    aput-object v4, v3, v2
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto/16 :goto_0
+
+    :cond_2
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

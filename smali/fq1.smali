@@ -1,34 +1,26 @@
 .class public final Lfq1;
-.super Lp6g;
+.super Lpdg;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Lys6;
 
 
 # instance fields
-.field public final synthetic X:Lsq1;
+.field public final synthetic X:Lgr1;
 
-.field public final synthetic Y:I
-
-.field public final synthetic Z:Landroid/os/Bundle;
-
-.field public o:I
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lsq1;ILandroid/os/Bundle;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lgr1;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lfq1;->X:Lsq1;
-
-    iput p2, p0, Lfq1;->Y:I
-
-    iput-object p3, p0, Lfq1;->Z:Landroid/os/Bundle;
+    iput-object p1, p0, Lfq1;->X:Lgr1;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p4}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -38,7 +30,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lzb4;
+    check-cast p1, Lbke;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -48,78 +40,75 @@
 
     check-cast p1, Lfq1;
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    sget-object p2, Lmah;->a:Lmah;
 
     invoke-virtual {p1, p2}, Lfq1;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
-
-    return-object p1
+    return-object p2
 .end method
 
 .method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
+    .locals 2
 
-    new-instance p1, Lfq1;
+    new-instance v0, Lfq1;
 
-    iget v0, p0, Lfq1;->Y:I
+    iget-object v1, p0, Lfq1;->X:Lgr1;
 
-    iget-object v1, p0, Lfq1;->Z:Landroid/os/Bundle;
+    invoke-direct {v0, v1, p2}, Lfq1;-><init>(Lgr1;Lkotlin/coroutines/Continuation;)V
 
-    iget-object v2, p0, Lfq1;->X:Lsq1;
+    iput-object p1, v0, Lfq1;->o:Ljava/lang/Object;
 
-    invoke-direct {p1, v2, v0, v1, p2}, Lfq1;-><init>(Lsq1;ILandroid/os/Bundle;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
+    return-object v0
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    .locals 1
 
-    iget v0, p0, Lfq1;->o:I
+    iget-object v0, p0, Lfq1;->o:Ljava/lang/Object;
 
-    const/4 v1, 0x1
+    check-cast v0, Lbke;
 
-    if-eqz v0, :cond_1
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    if-ne v0, v1, :cond_0
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    move-result p1
 
-    return-object p1
+    if-eqz p1, :cond_2
+
+    const/4 v0, 0x1
+
+    if-eq p1, v0, :cond_1
+
+    const/4 v0, 0x2
+
+    if-eq p1, v0, :cond_2
+
+    const/4 v0, 0x3
+
+    if-ne p1, v0, :cond_0
+
+    goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
     throw p1
 
     :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    iget-object p1, p0, Lfq1;->X:Lgr1;
 
-    iget-object p1, p0, Lfq1;->X:Lsq1;
+    iget-object p1, p1, Lgr1;->I0:Ltn5;
 
-    iget-object p1, p1, Lsq1;->Z:Lgu1;
+    sget-object v0, Lpp1;->r:Lnp1;
 
-    iput v1, p0, Lfq1;->o:I
-
-    iget v0, p0, Lfq1;->Y:I
-
-    iget-object v1, p0, Lfq1;->Z:Landroid/os/Bundle;
-
-    invoke-virtual {p1, v0, v1, p0}, Lgu1;->c(ILandroid/os/Bundle;Lo84;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lac4;->a:Lac4;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
+    invoke-static {p1, v0}, Lx0i;->n(Ltn5;Ljava/lang/Object;)V
 
     :cond_2
+    :goto_0
+    sget-object p1, Lmah;->a:Lmah;
+
     return-object p1
 .end method

@@ -1,21 +1,19 @@
-.class public abstract Lrie;
+.class public final synthetic Lrie;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final synthetic a:I
+
+
 # direct methods
-.method public static a(Landroid/widget/AutoCompleteTextView;)V
+.method public synthetic constructor <init>(I)V
     .locals 0
 
-    invoke-virtual {p0}, Landroid/widget/AutoCompleteTextView;->refreshAutoCompleteResults()V
+    iput p1, p0, Lrie;->a:I
 
-    return-void
-.end method
-
-.method public static b(Landroidx/appcompat/widget/SearchView$SearchAutoComplete;I)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/widget/AutoCompleteTextView;->setInputMethodMode(I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method

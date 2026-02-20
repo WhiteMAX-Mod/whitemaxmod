@@ -3,40 +3,69 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static final a:Lu7j;
+
+.field public static final b:Lu7j;
+
+.field public static c:Landroid/content/Context;
+
+
 # direct methods
-.method public static a(Landroid/widget/TextView;Landroid/graphics/drawable/Drawable;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 3
 
-    instance-of v0, p1, Landroid/graphics/drawable/AnimationDrawable;
+    new-instance v0, Lu7j;
 
-    if-eqz v0, :cond_0
+    const-string v1, "0\u0082\u0005\u00c80\u0082\u0003\u00b0\u00a0\u0003\u0002\u0001\u0002\u0002\u0014\u0010\u008ae\u0008s\u00f9/\u008eQ\u00ed"
 
-    check-cast p1, Landroid/graphics/drawable/AnimationDrawable;
+    invoke-static {v1}, Lzfj;->W(Ljava/lang/String;)[B
 
-    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object v1
 
-    new-instance v0, Lpp4;
+    const/4 v2, 0x0
 
-    const/16 v1, 0xa
+    invoke-direct {v0, v2, v1}, Lu7j;-><init>(I[B)V
 
-    invoke-direct {v0, v1, p1}, Lpp4;-><init>(ILjava/lang/Object;)V
+    new-instance v0, Lu7j;
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+    const-string v1, "0\u0082\u0006\u00040\u0082\u0003\u00ec\u00a0\u0003\u0002\u0001\u0002\u0002\u0014\u0003\u00a3\u00b2\u00ad\u00d7\u00e1r\u00cak\u00ec"
 
-    :cond_0
+    invoke-static {v1}, Lzfj;->W(Ljava/lang/String;)[B
+
+    move-result-object v1
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, v2, v1}, Lu7j;-><init>(I[B)V
+
+    new-instance v0, Lu7j;
+
+    const-string v1, "0\u0082\u0004C0\u0082\u0003+\u00a0\u0003\u0002\u0001\u0002\u0002\t\u0000\u00c2\u00e0\u0087FdJ0\u008d0"
+
+    invoke-static {v1}, Lzfj;->W(Ljava/lang/String;)[B
+
+    move-result-object v1
+
+    const/4 v2, 0x2
+
+    invoke-direct {v0, v2, v1}, Lu7j;-><init>(I[B)V
+
+    sput-object v0, Lxnj;->a:Lu7j;
+
+    new-instance v0, Lu7j;
+
+    const-string v1, "0\u0082\u0004\u00a80\u0082\u0003\u0090\u00a0\u0003\u0002\u0001\u0002\u0002\t\u0000\u00d5\u0085\u00b8l}\u00d3N\u00f50"
+
+    invoke-static {v1}, Lzfj;->W(Ljava/lang/String;)[B
+
+    move-result-object v1
+
+    const/4 v2, 0x3
+
+    invoke-direct {v0, v2, v1}, Lu7j;-><init>(I[B)V
+
+    sput-object v0, Lxnj;->b:Lu7j;
+
     return-void
-.end method
-
-.method public static final b(Ljava/lang/Object;Ljava/lang/String;)Ljfa;
-    .locals 1
-
-    sget-object v0, Leae;->a:[J
-
-    new-instance v0, Ljfa;
-
-    invoke-direct {v0}, Ljfa;-><init>()V
-
-    invoke-virtual {v0, p1, p0}, Ljfa;->i(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    return-object v0
 .end method

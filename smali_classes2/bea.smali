@@ -1,97 +1,208 @@
 .class public final Lbea;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lbr6;
+
+# static fields
+.field public static final c:Lbea;
 
 
 # instance fields
-.field public final synthetic o:Ljea;
+.field public final a:I
+
+.field public final b:J
 
 
 # direct methods
-.method public constructor <init>(Ljea;Lkotlin/coroutines/Continuation;)V
+.method static constructor <clinit>()V
+    .locals 4
+
+    new-instance v0, Lbea;
+
+    const/4 v1, 0x1
+
+    const-wide/16 v2, 0x0
+
+    invoke-direct {v0, v1, v2, v3}, Lbea;-><init>(IJ)V
+
+    sput-object v0, Lbea;->c:Lbea;
+
+    return-void
+.end method
+
+.method public constructor <init>(IJ)V
     .locals 0
 
-    iput-object p1, p0, Lbea;->o:Ljea;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput p1, p0, Lbea;->a:I
 
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-wide p2, p0, Lbea;->b:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    check-cast p1, Lzb4;
+    if-ne p0, p1, :cond_0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    goto :goto_1
 
-    invoke-virtual {p0, p1, p2}, Lbea;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    :cond_0
+    instance-of v0, p1, Lbea;
 
-    move-result-object p1
-
-    check-cast p1, Lbea;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lbea;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Lbea;
-
-    iget-object v0, p0, Lbea;->o:Ljea;
-
-    invoke-direct {p1, v0, p2}, Lbea;-><init>(Ljea;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lbea;->o:Ljea;
-
-    iget-object p1, p1, Ljea;->y0:Li19;
-
-    if-eqz p1, :cond_1
-
-    invoke-virtual {p1}, Li19;->C()V
-
-    iget-object p1, p1, Li19;->c:Lh19;
-
-    invoke-interface {p1}, Lh19;->isConnected()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const-string p1, "MediaController"
-
-    const-string v0, "The controller is not connected. Ignoring pause()."
-
-    invoke-static {p1, v0}, Li1h;->t(Ljava/lang/String;Ljava/lang/String;)V
+    if-nez v0, :cond_1
 
     goto :goto_0
 
-    :cond_0
-    invoke-interface {p1}, Lh19;->pause()V
-
     :cond_1
-    :goto_0
-    sget-object p1, Lb3h;->a:Lb3h;
+    check-cast p1, Lbea;
 
-    return-object p1
+    iget v0, p0, Lbea;->a:I
+
+    iget v1, p1, Lbea;->a:I
+
+    if-eq v0, v1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-wide v0, p0, Lbea;->b:J
+
+    iget-wide v2, p1, Lbea;->b:J
+
+    cmp-long p1, v0, v2
+
+    if-eqz p1, :cond_3
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_3
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget v0, p0, Lbea;->a:I
+
+    invoke-static {v0}, Ly12;->t(I)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-wide v1, p0, Lbea;->b:J
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "SliceData(flow="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v1, p0, Lbea;->a:I
+
+    packed-switch v1, :pswitch_data_0
+
+    const-string v1, "null"
+
+    goto :goto_0
+
+    :pswitch_0
+    const-string v1, "MEDIA_BAR"
+
+    goto :goto_0
+
+    :pswitch_1
+    const-string v1, "PROFILE"
+
+    goto :goto_0
+
+    :pswitch_2
+    const-string v1, "DELAYED_MESSAGES"
+
+    goto :goto_0
+
+    :pswitch_3
+    const-string v1, "PUSH"
+
+    goto :goto_0
+
+    :pswitch_4
+    const-string v1, "LOGS"
+
+    goto :goto_0
+
+    :pswitch_5
+    const-string v1, "SHARE"
+
+    goto :goto_0
+
+    :pswitch_6
+    const-string v1, "FORWARD"
+
+    goto :goto_0
+
+    :pswitch_7
+    const-string v1, "CHAT_SCREEN"
+
+    goto :goto_0
+
+    :pswitch_8
+    const-string v1, "UNKNOWN"
+
+    :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", sliceTime="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lbea;->b:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

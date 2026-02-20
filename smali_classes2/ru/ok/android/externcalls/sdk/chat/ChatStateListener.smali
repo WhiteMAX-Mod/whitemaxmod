@@ -19,7 +19,7 @@
         "",
         "",
         "chatId",
-        "Lb3h;",
+        "Lmah;",
         "onChatCreated",
         "(J)V",
         "onChatUpdated",

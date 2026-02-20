@@ -1,82 +1,94 @@
 .class public final Lp2c;
-.super Ljava/lang/Object;
+.super Lpdg;
 .source "SourceFile"
+
+# interfaces
+.implements Lys6;
 
 
 # instance fields
-.field public final a:Lt2c;
+.field public final synthetic X:Lq2c;
 
-.field public final b:Lod5;
-
-.field public final c:Lru/ok/messages/photoeditor/ActPhotoEditor;
-
-.field public final d:Lxgd;
-
-.field public e:Ls2c;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lt2c;Lod5;Lru/ok/messages/photoeditor/ActPhotoEditor;Lxgd;Lmd5;ZZZ)V
-    .locals 8
+.method public constructor <init>(Lq2c;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lp2c;->X:Lq2c;
 
-    iput-object p1, p0, Lp2c;->a:Lt2c;
+    const/4 p1, 0x2
 
-    iput-object p2, p0, Lp2c;->b:Lod5;
+    invoke-direct {p0, p1, p2}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    iput-object p0, p2, Lod5;->b:Lp2c;
+    return-void
+.end method
 
-    iput-object p3, p0, Lp2c;->c:Lru/ok/messages/photoeditor/ActPhotoEditor;
 
-    iget-object p3, p1, Lt2c;->a:Ljava/util/HashSet;
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-virtual {p3, p0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+    check-cast p1, Lr2c;
 
-    iput-object p4, p0, Lp2c;->d:Lxgd;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    new-instance v0, Ls2c;
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    const/4 v6, 0x0
-
-    move v4, p6
-
-    move v5, p7
-
-    move/from16 v7, p8
-
-    invoke-direct/range {v0 .. v7}, Ls2c;-><init>(ZZZZZZZ)V
-
-    iput-object v0, p0, Lp2c;->e:Ls2c;
-
-    invoke-virtual {p1, v0}, Lt2c;->a(Ls2c;)V
-
-    const/4 p1, 0x1
-
-    invoke-virtual {p4, p2, p5, p1}, Lxgd;->c(Lod5;Lmd5;Z)V
-
-    if-eqz p6, :cond_0
-
-    if-eqz p7, :cond_0
-
-    iget-object p3, p2, Lod5;->a:Lsd5;
-
-    invoke-virtual {p3, p1}, Lsd5;->setDrawStickerEnabled(Z)V
-
-    invoke-virtual {p2}, Lod5;->a()Lmd5;
+    invoke-virtual {p0, p1, p2}, Lp2c;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    const/4 p3, 0x0
+    check-cast p1, Lp2c;
 
-    invoke-virtual {p4, p2, p1, p3}, Lxgd;->c(Lod5;Lmd5;Z)V
+    sget-object p2, Lmah;->a:Lmah;
+
+    invoke-virtual {p1, p2}, Lp2c;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lp2c;
+
+    iget-object v1, p0, Lp2c;->X:Lq2c;
+
+    invoke-direct {v0, v1, p2}, Lp2c;-><init>(Lq2c;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lp2c;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget-object v0, p0, Lp2c;->o:Ljava/lang/Object;
+
+    check-cast v0, Lr2c;
+
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    sget-object p1, Lr2c;->a:Lr2c;
+
+    if-ne v0, p1, :cond_0
+
+    const-string p1, "allowed"
+
+    goto :goto_0
 
     :cond_0
-    return-void
+    const-string p1, "denied"
+
+    :goto_0
+    iget-object v0, p0, Lp2c;->X:Lq2c;
+
+    const-string v1, "geo"
+
+    invoke-static {v0, v1, p1}, Lq2c;->a(Lq2c;Ljava/lang/String;Ljava/lang/String;)V
+
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
 .end method

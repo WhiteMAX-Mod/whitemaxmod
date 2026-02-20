@@ -1,48 +1,19 @@
 .class public final Le9i;
-.super Lo84;
-
-
-# instance fields
-.field public final synthetic X:Lyve;
-
-.field public synthetic d:Ljava/lang/Object;
-
-.field public o:I
-
-
-# direct methods
-.method public constructor <init>(Lyve;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Le9i;->X:Lyve;
-
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final serializer()Lw58;
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lw58;"
+        }
+    .end annotation
 
-    iput-object p1, p0, Le9i;->d:Ljava/lang/Object;
+    sget-object v0, Ld9i;->a:Ld9i;
 
-    iget p1, p0, Le9i;->o:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Le9i;->o:I
-
-    iget-object p1, p0, Le9i;->X:Lyve;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lyve;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-object v0
 .end method

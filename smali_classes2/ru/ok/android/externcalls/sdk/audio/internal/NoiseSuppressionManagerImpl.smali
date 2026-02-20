@@ -14,10 +14,10 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/audio/internal/NoiseSuppressionManagerImpl;",
         "Lru/ok/android/externcalls/sdk/audio/NoiseSuppressionManager;",
-        "Ls11;",
+        "Lf21;",
         "call",
         "<init>",
-        "(Ls11;)V",
+        "(Lf21;)V",
         "",
         "serversideBasic",
         "serversideAnn",
@@ -36,18 +36,18 @@
         "logTimings",
         "Ljava/lang/Runnable;",
         "onNoiseSuppressorDisabledDueToStutter",
-        "Lb3h;",
+        "Lmah;",
         "setNoiseSuppressorParams",
         "(ZZZZLorg/webrtc/PeerConnectionFactory$EnhancerKind;Ljava/lang/String;IIIIIZLjava/lang/Runnable;)V",
         "Lkotlin/Function1;",
-        "Lboa;",
-        "Lcoa;",
+        "Lsqa;",
+        "Ltqa;",
         "paramFun",
         "setNoiseSuppressionParams",
-        "(Lnq6;)V",
-        "Ls11;",
+        "(Lks6;)V",
+        "Lf21;",
         "getNsActiveState",
-        "()Lcoa;",
+        "()Ltqa;",
         "nsActiveState",
         "calls-sdk_release"
     }
@@ -62,55 +62,55 @@
 
 
 # instance fields
-.field private final call:Ls11;
+.field private final call:Lf21;
 
 
 # direct methods
-.method public constructor <init>(Ls11;)V
+.method public constructor <init>(Lf21;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/audio/internal/NoiseSuppressionManagerImpl;->call:Ls11;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/audio/internal/NoiseSuppressionManagerImpl;->call:Lf21;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public getNsActiveState()Lcoa;
+.method public getNsActiveState()Ltqa;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/NoiseSuppressionManagerImpl;->call:Ls11;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/NoiseSuppressionManagerImpl;->call:Lf21;
 
-    iget-object v0, v0, Ls11;->b:Lcoa;
+    iget-object v0, v0, Lf21;->b:Ltqa;
 
     return-object v0
 .end method
 
-.method public setNoiseSuppressionParams(Lnq6;)V
+.method public setNoiseSuppressionParams(Lks6;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lnq6;",
+            "Lks6;",
             ")V"
         }
     .end annotation
 
-    new-instance v0, Lboa;
+    new-instance v0, Lsqa;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-interface {p1, v0}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v0}, Lks6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/NoiseSuppressionManagerImpl;->call:Ls11;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/NoiseSuppressionManagerImpl;->call:Lf21;
 
-    check-cast p1, Lcoa;
+    check-cast p1, Ltqa;
 
-    invoke-virtual {v0, p1}, Ls11;->H(Lcoa;)V
+    invoke-virtual {v0, p1}, Lf21;->H(Ltqa;)V
 
     return-void
 .end method
@@ -148,7 +148,7 @@
 
     invoke-direct/range {v0 .. v13}, Lru/ok/android/externcalls/sdk/audio/internal/NoiseSuppressionManagerImpl$setNoiseSuppressorParams$1;-><init>(ZZZZLorg/webrtc/PeerConnectionFactory$EnhancerKind;Ljava/lang/String;IIIIIZLjava/lang/Runnable;)V
 
-    invoke-virtual {p0, v0}, Lru/ok/android/externcalls/sdk/audio/internal/NoiseSuppressionManagerImpl;->setNoiseSuppressionParams(Lnq6;)V
+    invoke-virtual {p0, v0}, Lru/ok/android/externcalls/sdk/audio/internal/NoiseSuppressionManagerImpl;->setNoiseSuppressionParams(Lks6;)V
 
     return-void
 .end method

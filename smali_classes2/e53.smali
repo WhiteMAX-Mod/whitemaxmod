@@ -1,49 +1,34 @@
 .class public final Le53;
-.super Lo84;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lg53;
 
 
 # instance fields
-.field public X:I
+.field public final a:Ljava/util/Set;
 
-.field public synthetic d:Ljava/lang/Object;
+.field public final b:Z
 
-.field public final synthetic o:Lg53;
+.field public final c:Ljava/util/Set;
+
+.field public final d:Z
 
 
 # direct methods
-.method public constructor <init>(Lg53;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Ljava/util/Set;ZLjava/util/Set;Z)V
     .locals 0
 
-    iput-object p1, p0, Le53;->o:Lg53;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Le53;->a:Ljava/util/Set;
+
+    iput-boolean p2, p0, Le53;->b:Z
+
+    iput-object p3, p0, Le53;->c:Ljava/util/Set;
+
+    iput-boolean p4, p0, Le53;->d:Z
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Le53;->d:Ljava/lang/Object;
-
-    iget p1, p0, Le53;->X:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Le53;->X:I
-
-    iget-object p1, p0, Le53;->o:Lg53;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lg53;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    sget-object p1, Lac4;->a:Lac4;
-
-    return-object p1
 .end method

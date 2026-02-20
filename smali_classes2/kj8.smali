@@ -1,171 +1,148 @@
 .class public final Lkj8;
-.super Ljava/lang/Object;
+.super Lpdg;
 .source "SourceFile"
+
+# interfaces
+.implements Lys6;
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic X:Lte2;
 
-.field public final b:I
+.field public final synthetic Y:J
 
-.field public final c:Z
+.field public final synthetic Z:J
 
-.field public final d:Z
-
-.field public final e:J
-
-.field public final f:Z
-
-.field public final g:Z
-
-.field public final h:Z
-
-.field public final i:Z
-
-.field public final j:Z
-
-.field public final k:Z
-
-.field public final l:J
-
-.field public final m:J
-
-.field public final n:J
-
-.field public final o:Z
+.field public final synthetic o:Llj8;
 
 
 # direct methods
-.method public constructor <init>(Ljj8;)V
-    .locals 2
+.method public constructor <init>(Llj8;Lte2;JJLkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lkj8;->o:Llj8;
 
-    iget v0, p1, Ljj8;->a:I
+    iput-object p2, p0, Lkj8;->X:Lte2;
 
-    iput v0, p0, Lkj8;->a:I
+    iput-wide p3, p0, Lkj8;->Y:J
 
-    iget v0, p1, Ljj8;->b:I
+    iput-wide p5, p0, Lkj8;->Z:J
 
-    iput v0, p0, Lkj8;->b:I
+    const/4 p1, 0x2
 
-    iget-boolean v0, p1, Ljj8;->c:Z
-
-    iput-boolean v0, p0, Lkj8;->c:Z
-
-    iget-boolean v0, p1, Ljj8;->d:Z
-
-    iput-boolean v0, p0, Lkj8;->d:Z
-
-    iget-wide v0, p1, Ljj8;->e:J
-
-    iput-wide v0, p0, Lkj8;->e:J
-
-    iget-boolean v0, p1, Ljj8;->f:Z
-
-    iput-boolean v0, p0, Lkj8;->f:Z
-
-    iget-boolean v0, p1, Ljj8;->g:Z
-
-    iput-boolean v0, p0, Lkj8;->g:Z
-
-    iget-boolean v0, p1, Ljj8;->h:Z
-
-    iput-boolean v0, p0, Lkj8;->h:Z
-
-    iget-boolean v0, p1, Ljj8;->i:Z
-
-    iput-boolean v0, p0, Lkj8;->i:Z
-
-    iget-boolean v0, p1, Ljj8;->j:Z
-
-    iput-boolean v0, p0, Lkj8;->j:Z
-
-    iget-boolean v0, p1, Ljj8;->k:Z
-
-    iput-boolean v0, p0, Lkj8;->k:Z
-
-    iget-wide v0, p1, Ljj8;->l:J
-
-    iput-wide v0, p0, Lkj8;->l:J
-
-    iget-wide v0, p1, Ljj8;->m:J
-
-    iput-wide v0, p0, Lkj8;->m:J
-
-    iget-wide v0, p1, Ljj8;->n:J
-
-    iput-wide v0, p0, Lkj8;->n:J
-
-    iget-boolean p1, p1, Ljj8;->o:Z
-
-    iput-boolean p1, p0, Lkj8;->o:Z
+    invoke-direct {p0, p1, p7}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/util/ArrayList;)Lit8;
-    .locals 6
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const-wide/16 v0, -0x1
+    check-cast p1, Lnd4;
 
-    iget-wide v2, p0, Lkj8;->e:J
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    cmp-long v0, v2, v0
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :cond_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lit8;
-
-    iget-wide v4, v1, Lit8;->c:J
-
-    cmp-long v4, v4, v2
-
-    if-nez v4, :cond_0
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v1, 0x0
-
-    :goto_0
-    if-nez v1, :cond_2
-
-    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    const/4 v2, 0x1
-
-    if-ne v0, v2, :cond_2
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-virtual {p0, p1, p2}, Lkj8;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    check-cast p1, Lit8;
+    check-cast p1, Lkj8;
+
+    sget-object p2, Lmah;->a:Lmah;
+
+    invoke-virtual {p1, p2}, Lkj8;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
 
     return-object p1
+.end method
 
-    :cond_2
-    return-object v1
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 8
+
+    new-instance v0, Lkj8;
+
+    iget-wide v3, p0, Lkj8;->Y:J
+
+    iget-wide v5, p0, Lkj8;->Z:J
+
+    iget-object v1, p0, Lkj8;->o:Llj8;
+
+    iget-object v2, p0, Lkj8;->X:Lte2;
+
+    move-object v7, p2
+
+    invoke-direct/range {v0 .. v7}, Lkj8;-><init>(Llj8;Lte2;JJLkotlin/coroutines/Continuation;)V
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 11
+
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lkj8;->o:Llj8;
+
+    iget-object p1, p1, Llj8;->Z:Lj88;
+
+    invoke-interface {p1}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lno9;
+
+    iget-object v0, p0, Lkj8;->X:Lte2;
+
+    iget-wide v2, v0, Lte2;->a:J
+
+    iget-object p1, p1, Lno9;->a:Lwj4;
+
+    iget-object p1, p1, Lwj4;->c:Le9e;
+
+    invoke-virtual {p1}, Le9e;->d()Lrw9;
+
+    move-result-object p1
+
+    move-object v8, p1
+
+    check-cast v8, Lqx9;
+
+    iget-object p1, v8, Lqx9;->a:Lm8e;
+
+    new-instance v1, Lbx9;
+
+    const/4 v10, 0x3
+
+    iget-wide v4, p0, Lkj8;->Y:J
+
+    iget-wide v6, p0, Lkj8;->Z:J
+
+    sget-object v9, Lls9;->c:Lls9;
+
+    invoke-direct/range {v1 .. v10}, Lbx9;-><init>(JJJLqx9;Lls9;I)V
+
+    const/4 v0, 0x1
+
+    const/4 v2, 0x0
+
+    invoke-static {p1, v0, v2, v1}, Lfuj;->f(Lm8e;ZZLks6;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Number;
+
+    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v0
+
+    long-to-int p1, v0
+
+    new-instance v0, Ljava/lang/Integer;
+
+    invoke-direct {v0, p1}, Ljava/lang/Integer;-><init>(I)V
+
+    return-object v0
 .end method

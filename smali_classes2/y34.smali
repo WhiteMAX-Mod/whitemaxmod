@@ -1,251 +1,126 @@
 .class public final Ly34;
-.super Licg;
+.super Lpdg;
 .source "SourceFile"
+
+# interfaces
+.implements Lys6;
 
 
 # instance fields
-.field public c:Ljava/util/List;
+.field public final synthetic X:Lg44;
 
-.field public d:Ljava/util/List;
+.field public final synthetic Y:J
 
 .field public o:I
 
 
+# direct methods
+.method public constructor <init>(Lg44;JLkotlin/coroutines/Continuation;)V
+    .locals 0
+
+    iput-object p1, p0, Ly34;->X:Lg44;
+
+    iput-wide p2, p0, Ly34;->Y:J
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p4}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public final d(Lpq9;Ljava/lang/String;)V
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    check-cast p1, Lnd4;
 
-    invoke-virtual {p2}, Ljava/lang/String;->hashCode()I
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-result v0
+    invoke-virtual {p0, p1, p2}, Ly34;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    const/4 v1, 0x0
+    move-result-object p1
 
-    const/4 v2, -0x1
+    check-cast p1, Ly34;
 
-    sparse-switch v0, :sswitch_data_0
+    sget-object p2, Lmah;->a:Lmah;
 
-    goto :goto_0
+    invoke-virtual {p1, p2}, Ly34;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :sswitch_0
-    const-string v0, "total"
+    move-result-object p1
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    return-object p1
+.end method
 
-    move-result p2
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
 
-    if-nez p2, :cond_0
+    new-instance p1, Ly34;
+
+    iget-object v0, p0, Ly34;->X:Lg44;
+
+    iget-wide v1, p0, Ly34;->Y:J
+
+    invoke-direct {p1, v0, v1, v2, p2}, Ly34;-><init>(Lg44;JLkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Ly34;->o:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
     goto :goto_0
 
     :cond_0
-    const/4 v2, 0x2
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    goto :goto_0
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    :sswitch_1
-    const-string v0, "urls"
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_1
-
-    goto :goto_0
+    throw p1
 
     :cond_1
-    const/4 v2, 0x1
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    goto :goto_0
+    iget-object p1, p0, Ly34;->X:Lg44;
 
-    :sswitch_2
-    const-string v0, "ids"
+    iget-object p1, p1, Lg44;->t0:Lj88;
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-interface {p1}, Lj88;->getValue()Ljava/lang/Object;
 
-    move-result p2
+    move-result-object p1
 
-    if-nez p2, :cond_2
+    check-cast p1, Lu54;
 
-    goto :goto_0
+    iput v1, p0, Ly34;->o:I
 
-    :cond_2
-    move v2, v1
+    iget-wide v0, p0, Ly34;->Y:J
 
-    :goto_0
-    const/4 p2, 0x0
+    invoke-virtual {p1, v0, v1, p0}, Lu54;->a(JLda4;)Ljava/lang/Object;
 
-    const/4 v0, 0x7
+    move-result-object p1
 
-    packed-switch v2, :pswitch_data_0
+    sget-object v0, Lod4;->a:Lod4;
 
-    invoke-virtual {p1}, Lpq9;->B()V
-
-    return-void
-
-    :pswitch_0
-    invoke-virtual {p1}, Lpq9;->K0()I
-
-    move-result p1
-
-    iput p1, p0, Ly34;->o:I
-
-    return-void
-
-    :pswitch_1
-    invoke-virtual {p1}, Lpq9;->E()Lhn9;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lhn9;->a()I
-
-    move-result v2
-
-    if-ne v2, v0, :cond_3
-
-    new-instance p2, Ljava/util/ArrayList;
-
-    invoke-direct {p2}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-virtual {p1}, Lpq9;->F0()I
-
-    move-result v0
-
-    :goto_1
-    if-ge v1, v0, :cond_4
-
-    invoke-static {p1}, Lcti;->q(Lpq9;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {p2, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_1
-
-    :cond_3
-    invoke-virtual {p1}, Lpq9;->B()V
-
-    :cond_4
-    if-eqz p2, :cond_5
-
-    goto :goto_2
-
-    :cond_5
-    sget-object p2, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
-
-    :goto_2
-    iput-object p2, p0, Ly34;->c:Ljava/util/List;
-
-    return-void
-
-    :pswitch_2
-    invoke-virtual {p1}, Lpq9;->E()Lhn9;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lhn9;->a()I
-
-    move-result v2
-
-    if-ne v2, v0, :cond_6
-
-    new-instance p2, Ljava/util/ArrayList;
-
-    invoke-direct {p2}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-virtual {p1}, Lpq9;->F0()I
-
-    move-result v0
-
-    :goto_3
-    if-ge v1, v0, :cond_7
-
-    const-wide/16 v2, 0x0
-
-    invoke-static {p1, v2, v3}, Lcti;->n(Lpq9;J)J
-
-    move-result-wide v2
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v2
-
-    invoke-virtual {p2, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_3
-
-    :cond_6
-    invoke-virtual {p1}, Lpq9;->B()V
-
-    :cond_7
-    if-eqz p2, :cond_8
-
-    goto :goto_4
-
-    :cond_8
-    sget-object p2, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
-
-    :goto_4
-    iput-object p2, p0, Ly34;->d:Ljava/util/List;
-
-    return-void
-
-    nop
-
-    :sswitch_data_0
-    .sparse-switch
-        0x196b8 -> :sswitch_2
-        0x36e8e4 -> :sswitch_1
-        0x696db44 -> :sswitch_0
-    .end sparse-switch
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 6
-
-    iget-object v0, p0, Ly34;->c:Ljava/util/List;
-
-    invoke-static {v0}, Lcth;->d(Ljava/util/Collection;)I
-
-    move-result v0
-
-    iget-object v1, p0, Ly34;->d:Ljava/util/List;
-
-    invoke-static {v1}, Lcth;->d(Ljava/util/Collection;)I
-
-    move-result v1
-
-    iget v2, p0, Ly34;->o:I
-
-    const-string v3, ", ids="
-
-    const-string v4, ", total="
-
-    const-string v5, "{urls="
-
-    invoke-static {v5, v0, v3, v1, v4}, Lkz1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "}"
-
-    invoke-static {v0, v2, v1}, Lj27;->k(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    if-ne p1, v0, :cond_2
 
     return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
 .end method

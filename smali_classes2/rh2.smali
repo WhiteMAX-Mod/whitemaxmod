@@ -1,133 +1,110 @@
-.class public final enum Lrh2;
-.super Ljava/lang/Enum;
+.class public final synthetic Lrh2;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Luy3;
 
-# static fields
-.field public static final enum X:Lrh2;
 
-.field public static final enum Y:Lrh2;
+# instance fields
+.field public final synthetic a:Lci2;
 
-.field public static final synthetic Z:[Lrh2;
+.field public final synthetic b:Lpo9;
 
-.field public static final enum a:Lrh2;
+.field public final synthetic c:Z
 
-.field public static final enum b:Lrh2;
-
-.field public static final enum c:Lrh2;
-
-.field public static final enum d:Lrh2;
-
-.field public static final enum o:Lrh2;
+.field public final synthetic d:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 9
+.method public synthetic constructor <init>(Lci2;Lpo9;ZJ)V
+    .locals 0
 
-    new-instance v0, Lrh2;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "ACTIVE"
+    iput-object p1, p0, Lrh2;->a:Lci2;
 
-    const/4 v2, 0x0
+    iput-object p2, p0, Lrh2;->b:Lpo9;
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-boolean p3, p0, Lrh2;->c:Z
 
-    sput-object v0, Lrh2;->a:Lrh2;
-
-    new-instance v1, Lrh2;
-
-    const-string v2, "LEFT"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lrh2;->b:Lrh2;
-
-    new-instance v2, Lrh2;
-
-    const-string v3, "LEAVING"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lrh2;->c:Lrh2;
-
-    new-instance v3, Lrh2;
-
-    const-string v4, "REMOVED"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lrh2;->d:Lrh2;
-
-    new-instance v4, Lrh2;
-
-    const-string v5, "REMOVING"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v4, Lrh2;->o:Lrh2;
-
-    new-instance v5, Lrh2;
-
-    const-string v6, "CLOSED"
-
-    const/4 v7, 0x5
-
-    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v5, Lrh2;->X:Lrh2;
-
-    new-instance v6, Lrh2;
-
-    const-string v7, "HIDDEN"
-
-    const/4 v8, 0x6
-
-    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v6, Lrh2;->Y:Lrh2;
-
-    filled-new-array/range {v0 .. v6}, [Lrh2;
-
-    move-result-object v0
-
-    sput-object v0, Lrh2;->Z:[Lrh2;
+    iput-wide p4, p0, Lrh2;->d:J
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lrh2;
-    .locals 1
 
-    const-class v0, Lrh2;
+# virtual methods
+.method public final accept(Ljava/lang/Object;)V
+    .locals 7
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    check-cast p1, Lhi2;
 
-    move-result-object p0
+    iget-object v0, p0, Lrh2;->a:Lci2;
 
-    check-cast p0, Lrh2;
+    iget-object v1, p0, Lrh2;->b:Lpo9;
 
-    return-object p0
-.end method
+    if-nez v1, :cond_0
 
-.method public static values()[Lrh2;
-    .locals 1
+    const-wide/16 v1, 0x0
 
-    sget-object v0, Lrh2;->Z:[Lrh2;
+    iput-wide v1, p1, Lhi2;->j:J
 
-    invoke-virtual {v0}, [Lrh2;->clone()Ljava/lang/Object;
+    goto :goto_0
 
-    move-result-object v0
+    :cond_0
+    iget-wide v2, p1, Lhi2;->j:J
 
-    check-cast v0, [Lrh2;
+    iget-object v4, v0, Lci2;->t:Lt45;
 
-    return-object v0
+    invoke-virtual {v4}, Lt45;->get()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lno9;
+
+    invoke-virtual {v4, v2, v3}, Lno9;->m(J)Lpo9;
+
+    move-result-object v2
+
+    iget-boolean v3, p0, Lrh2;->c:Z
+
+    if-nez v3, :cond_1
+
+    if-eqz v2, :cond_1
+
+    iget-wide v3, v1, Lpo9;->c:J
+
+    iget-wide v5, v2, Lpo9;->c:J
+
+    cmp-long v2, v3, v5
+
+    if-lez v2, :cond_2
+
+    :cond_1
+    invoke-virtual {p1, v1}, Lhi2;->e(Lpo9;)V
+
+    :cond_2
+    :goto_0
+    iget-object p1, v0, Lci2;->n:Lqy0;
+
+    new-instance v0, Lrc3;
+
+    iget-wide v1, p0, Lrh2;->d:J
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    invoke-static {v1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v1
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, v1, v2}, Lrc3;-><init>(Ljava/util/List;Z)V
+
+    invoke-virtual {p1, v0}, Lqy0;->c(Ljava/lang/Object;)V
+
+    return-void
 .end method

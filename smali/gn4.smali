@@ -1,63 +1,194 @@
-.class public final synthetic Lgn4;
+.class public final Lgn4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lqe8;
-.implements Lqb9;
-
 
 # instance fields
-.field public final synthetic a:F
+.field public final a:Ljava/lang/String;
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final b:Lol6;
+
+.field public final c:Lol6;
+
+.field public final d:I
+
+.field public final e:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;F)V
-    .locals 0
-
-    iput-object p1, p0, Lgn4;->b:Ljava/lang/Object;
-
-    iput p2, p0, Lgn4;->a:F
+.method public constructor <init>(Ljava/lang/String;Lol6;Lol6;II)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    if-eqz p4, :cond_1
+
+    if-nez p5, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    const/4 v0, 0x1
+
+    :goto_1
+    invoke-static {v0}, Lxej;->b(Z)V
+
+    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    iput-object p1, p0, Lgn4;->a:Ljava/lang/String;
+
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iput-object p2, p0, Lgn4;->b:Lol6;
+
+    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iput-object p3, p0, Lgn4;->c:Lol6;
+
+    iput p4, p0, Lgn4;->d:I
+
+    iput p5, p0, Lgn4;->e:I
+
     return-void
+
+    :cond_2
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {p1}, Ljava/lang/IllegalArgumentException;-><init>()V
+
+    throw p1
 .end method
 
 
 # virtual methods
-.method public b(Lla9;)V
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget-object p1, p0, Lgn4;->b:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    check-cast p1, Lrb9;
+    if-ne p0, p1, :cond_0
 
-    iget-object p1, p1, Lrb9;->g:Lgb9;
+    return v0
 
-    iget-object p1, p1, Lgb9;->t:Lxcc;
+    :cond_0
+    const/4 v1, 0x0
 
-    iget v0, p0, Lgn4;->a:F
+    if-eqz p1, :cond_2
 
-    invoke-virtual {p1, v0}, Lxcc;->i0(F)V
+    const-class v2, Lgn4;
 
-    return-void
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v3
+
+    if-eq v2, v3, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lgn4;
+
+    iget v2, p0, Lgn4;->d:I
+
+    iget v3, p1, Lgn4;->d:I
+
+    if-ne v2, v3, :cond_2
+
+    iget v2, p0, Lgn4;->e:I
+
+    iget v3, p1, Lgn4;->e:I
+
+    if-ne v2, v3, :cond_2
+
+    iget-object v2, p0, Lgn4;->a:Ljava/lang/String;
+
+    iget-object v3, p1, Lgn4;->a:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, p0, Lgn4;->b:Lol6;
+
+    iget-object v3, p1, Lgn4;->b:Lol6;
+
+    invoke-virtual {v2, v3}, Lol6;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, p0, Lgn4;->c:Lol6;
+
+    iget-object p1, p1, Lgn4;->c:Lol6;
+
+    invoke-virtual {v2, p1}, Lol6;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    return v0
+
+    :cond_2
+    :goto_0
+    return v1
 .end method
 
-.method public invoke(Ljava/lang/Object;)V
-    .locals 2
+.method public final hashCode()I
+    .locals 3
 
-    iget-object v0, p0, Lgn4;->b:Ljava/lang/Object;
+    const/16 v0, 0x20f
 
-    check-cast v0, Lid;
+    iget v1, p0, Lgn4;->d:I
 
-    iget v1, p0, Lgn4;->a:F
+    add-int/2addr v0, v1
 
-    check-cast p1, Ljd;
+    const/16 v1, 0x1f
 
-    invoke-interface {p1, v0, v1}, Ljd;->w0(Lid;F)V
+    mul-int/2addr v0, v1
 
-    return-void
+    iget v2, p0, Lgn4;->e:I
+
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lgn4;->a:Ljava/lang/String;
+
+    invoke-static {v0, v1, v2}, Lj64;->d(IILjava/lang/String;)I
+
+    move-result v0
+
+    iget-object v2, p0, Lgn4;->b:Lol6;
+
+    invoke-virtual {v2}, Lol6;->hashCode()I
+
+    move-result v2
+
+    add-int/2addr v2, v0
+
+    mul-int/2addr v2, v1
+
+    iget-object v0, p0, Lgn4;->c:Lol6;
+
+    invoke-virtual {v0}, Lol6;->hashCode()I
+
+    move-result v0
+
+    add-int/2addr v0, v2
+
+    return v0
 .end method

@@ -20,7 +20,7 @@
         "",
         "Lru/ok/android/externcalls/sdk/connection/MediaConnectionListener$ConnectedInfo;",
         "info",
-        "Lb3h;",
+        "Lmah;",
         "onMediaConnected",
         "(Lru/ok/android/externcalls/sdk/connection/MediaConnectionListener$ConnectedInfo;)V",
         "Lru/ok/android/externcalls/sdk/connection/MediaConnectionListener$DisconnectedInfo;",

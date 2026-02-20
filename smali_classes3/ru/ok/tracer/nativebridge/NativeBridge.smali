@@ -14,7 +14,7 @@
         "",
         "key",
         "value",
-        "Lb3h;",
+        "Lmah;",
         "setKey",
         "(Ljava/lang/String;Ljava/lang/String;)V",
         "msg",

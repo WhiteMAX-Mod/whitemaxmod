@@ -1,21 +1,15 @@
 .class public final Lzrg;
-.super Ljava/lang/Object;
+.super Lbod;
 .source "SourceFile"
 
 
 # static fields
-.field public static final d:Lzrg;
+.field public static final d:Ljava/lang/String;
 
 .field public static final e:Ljava/lang/String;
 
-.field public static final f:Ljava/lang/String;
-
-.field public static final g:Ljava/lang/String;
-
 
 # instance fields
-.field public final a:I
-
 .field public final b:Z
 
 .field public final c:Z
@@ -25,17 +19,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Lxga;
-
-    invoke-direct {v0}, Lxga;-><init>()V
-
-    new-instance v1, Lzrg;
-
-    invoke-direct {v1, v0}, Lzrg;-><init>(Lxga;)V
-
-    sput-object v1, Lzrg;->d:Lzrg;
-
-    sget-object v0, Lmbh;->a:Ljava/lang/String;
+    sget-object v0, Lvih;->a:Ljava/lang/String;
 
     const/4 v0, 0x1
 
@@ -45,7 +29,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lzrg;->e:Ljava/lang/String;
+    sput-object v0, Lzrg;->d:Ljava/lang/String;
 
     const/4 v0, 0x2
 
@@ -53,34 +37,40 @@
 
     move-result-object v0
 
-    sput-object v0, Lzrg;->f:Ljava/lang/String;
-
-    const/4 v0, 0x3
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lzrg;->g:Ljava/lang/String;
+    sput-object v0, Lzrg;->e:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public constructor <init>(Lxga;)V
+.method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget v0, p1, Lxga;->a:I
+    const/4 v0, 0x0
 
-    iput v0, p0, Lzrg;->a:I
-
-    iget-boolean v0, p1, Lxga;->b:Z
-
+    .line 2
     iput-boolean v0, p0, Lzrg;->b:Z
 
-    iget-boolean p1, p1, Lxga;->c:Z
+    .line 3
+    iput-boolean v0, p0, Lzrg;->c:Z
 
+    return-void
+.end method
+
+.method public constructor <init>(Z)V
+    .locals 1
+
+    .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, 0x1
+
+    .line 5
+    iput-boolean v0, p0, Lzrg;->b:Z
+
+    .line 6
     iput-boolean p1, p0, Lzrg;->c:Z
 
     return-void
@@ -88,78 +78,99 @@
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final b()Z
+    .locals 1
 
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
+    iget-boolean v0, p0, Lzrg;->b:Z
 
     return v0
+.end method
 
-    :cond_0
-    const/4 v1, 0x0
+.method public final c()Landroid/os/Bundle;
+    .locals 3
 
-    if-eqz p1, :cond_2
+    new-instance v0, Landroid/os/Bundle;
 
-    const-class v2, Lzrg;
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    sget-object v1, Lbod;->a:Ljava/lang/String;
 
-    move-result-object v3
+    const/4 v2, 0x3
 
-    if-eq v2, v3, :cond_1
+    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
 
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lzrg;
-
-    iget v2, p0, Lzrg;->a:I
-
-    iget v3, p1, Lzrg;->a:I
-
-    if-ne v2, v3, :cond_2
+    sget-object v1, Lzrg;->d:Ljava/lang/String;
 
     iget-boolean v2, p0, Lzrg;->b:Z
 
-    iget-boolean v3, p1, Lzrg;->b:Z
+    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
 
-    if-ne v2, v3, :cond_2
+    sget-object v1, Lzrg;->e:Ljava/lang/String;
 
     iget-boolean v2, p0, Lzrg;->c:Z
 
-    iget-boolean p1, p1, Lzrg;->c:Z
+    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
 
-    if-ne v2, p1, :cond_2
+    return-object v0
+.end method
 
-    return v0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    :cond_2
+    instance-of v0, p1, Lzrg;
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    check-cast p1, Lzrg;
+
+    iget-boolean v0, p0, Lzrg;->c:Z
+
+    iget-boolean v1, p1, Lzrg;->c:Z
+
+    if-ne v0, v1, :cond_1
+
+    iget-boolean v0, p0, Lzrg;->b:Z
+
+    iget-boolean p1, p1, Lzrg;->b:Z
+
+    if-ne v0, p1, :cond_1
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_1
     :goto_0
-    return v1
+    const/4 p1, 0x0
+
+    return p1
 .end method
 
 .method public final hashCode()I
-    .locals 3
+    .locals 2
 
-    iget v0, p0, Lzrg;->a:I
+    iget-boolean v0, p0, Lzrg;->b:Z
 
-    const/16 v1, 0x1f
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    add-int/2addr v0, v1
-
-    mul-int/2addr v0, v1
-
-    iget-boolean v2, p0, Lzrg;->b:Z
-
-    add-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
+    move-result-object v0
 
     iget-boolean v1, p0, Lzrg;->c:Z
 
-    add-int/2addr v0, v1
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v1
+
+    filled-new-array {v0, v1}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
+
+    move-result v0
 
     return v0
 .end method

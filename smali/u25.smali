@@ -2,69 +2,54 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/concurrent/Future;
-
 
 # instance fields
-.field public final a:Lo25;
+.field public a:Ljava/lang/String;
+
+.field public b:Lmbg;
+
+.field public c:J
+
+.field public d:J
+
+.field public e:J
+
+.field public final f:Lyr1;
+
+.field public final g:Landroid/content/Context;
 
 
 # direct methods
-.method public constructor <init>(Lo25;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lu25;->a:Lo25;
+    const-string v0, "image_cache"
+
+    iput-object v0, p0, Lu25;->a:Ljava/lang/String;
+
+    const-wide/32 v0, 0x2800000
+
+    iput-wide v0, p0, Lu25;->c:J
+
+    const-wide/32 v0, 0xa00000
+
+    iput-wide v0, p0, Lu25;->d:J
+
+    const-wide/32 v0, 0x200000
+
+    iput-wide v0, p0, Lu25;->e:J
+
+    new-instance v0, Lyr1;
+
+    const/16 v1, 0xf
+
+    invoke-direct {v0, v1}, Lyr1;-><init>(I)V
+
+    iput-object v0, p0, Lu25;->f:Lyr1;
+
+    iput-object p1, p0, Lu25;->g:Landroid/content/Context;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final cancel(Z)Z
-    .locals 0
-
-    iget-object p1, p0, Lu25;->a:Lo25;
-
-    invoke-interface {p1}, Lo25;->dispose()V
-
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final get()Ljava/lang/Object;
-    .locals 1
-
-    .line 1
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public final get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
-    .locals 0
-
-    .line 2
-    const/4 p1, 0x0
-
-    return-object p1
-.end method
-
-.method public final isCancelled()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final isDone()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
 .end method

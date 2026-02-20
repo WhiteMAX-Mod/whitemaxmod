@@ -13,11 +13,11 @@
 
     new-instance v0, La4;
 
-    new-instance v1, Lgh8;
+    new-instance v1, Lyj8;
 
     const-string v2, "Failure occurred while trying to finish a future."
 
-    invoke-direct {v1, v2}, Lgh8;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v2}, Lyj8;-><init>(Ljava/lang/String;)V
 
     invoke-direct {v0, v1}, La4;-><init>(Ljava/lang/Throwable;)V
 

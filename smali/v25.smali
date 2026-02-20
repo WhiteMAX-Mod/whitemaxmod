@@ -1,131 +1,231 @@
 .class public final Lv25;
-.super Lgy7;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic b:I
+.field public final a:I
 
-.field public final c:Ljava/lang/Object;
+.field public final b:Ljava/lang/String;
+
+.field public final c:Lmbg;
+
+.field public final d:J
+
+.field public final e:J
+
+.field public final f:J
+
+.field public final g:Lyr1;
+
+.field public final h:Ljqa;
+
+.field public final i:Lkqa;
+
+.field public final j:Landroid/content/Context;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
+.method public constructor <init>(Lu25;)V
+    .locals 5
 
-    iput p1, p0, Lv25;->b:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Lkotlinx/coroutines/internal/LockFreeLinkedListNode;-><init>()V
+    iget-object v0, p1, Lu25;->g:Landroid/content/Context;
 
-    iput-object p2, p0, Lv25;->c:Ljava/lang/Object;
+    iput-object v0, p0, Lv25;->j:Landroid/content/Context;
 
-    return-void
-.end method
+    iget-object v1, p1, Lu25;->b:Lmbg;
 
+    const/4 v2, 0x1
 
-# virtual methods
-.method public final c()Z
-    .locals 1
-
-    iget v0, p0, Lv25;->b:I
-
-    packed-switch v0, :pswitch_data_0
-
-    const/4 v0, 0x0
-
-    return v0
-
-    :pswitch_0
-    const/4 v0, 0x0
-
-    return v0
-
-    :pswitch_1
-    const/4 v0, 0x0
-
-    return v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final d(Ljava/lang/Throwable;)V
-    .locals 2
-
-    iget v0, p0, Lv25;->b:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object p1, p0, Lv25;->c:Ljava/lang/Object;
-
-    check-cast p1, Lny7;
-
-    iget-object v0, p0, Lgy7;->a:Lvy7;
+    if-nez v1, :cond_1
 
     if-eqz v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    invoke-virtual {v0}, Lvy7;->getState$kotlinx_coroutines_core()Ljava/lang/Object;
-
-    move-result-object v0
-
-    instance-of v1, v0, Lso3;
-
-    if-eqz v1, :cond_1
-
-    check-cast v0, Lso3;
-
-    iget-object v0, v0, Lso3;->a:Ljava/lang/Throwable;
-
-    new-instance v1, Lszd;
-
-    invoke-direct {v1, v0}, Lszd;-><init>(Ljava/lang/Throwable;)V
-
-    invoke-virtual {p1, v1}, Lg62;->resumeWith(Ljava/lang/Object;)V
+    const/4 v3, 0x0
 
     goto :goto_1
 
     :cond_1
-    invoke-static {v0}, Lwy7;->a(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Lg62;->resumeWith(Ljava/lang/Object;)V
+    :goto_0
+    move v3, v2
 
     :goto_1
+    const-string v4, "Either a non-null context or a base directory path or supplier must be provided."
+
+    if-eqz v3, :cond_6
+
+    if-nez v1, :cond_2
+
+    if-eqz v0, :cond_2
+
+    new-instance v0, Lt25;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1, p0}, Lt25;-><init>(ILjava/lang/Object;)V
+
+    iput-object v0, p1, Lu25;->b:Lmbg;
+
+    :cond_2
+    iput v2, p0, Lv25;->a:I
+
+    iget-object v0, p1, Lu25;->a:Ljava/lang/String;
+
+    iput-object v0, p0, Lv25;->b:Ljava/lang/String;
+
+    iget-object v0, p1, Lu25;->b:Lmbg;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iput-object v0, p0, Lv25;->c:Lmbg;
+
+    iget-wide v0, p1, Lu25;->c:J
+
+    iput-wide v0, p0, Lv25;->d:J
+
+    iget-wide v0, p1, Lu25;->d:J
+
+    iput-wide v0, p0, Lv25;->e:J
+
+    iget-wide v0, p1, Lu25;->e:J
+
+    iput-wide v0, p0, Lv25;->f:J
+
+    iget-object p1, p1, Lu25;->f:Lyr1;
+
+    iput-object p1, p0, Lv25;->g:Lyr1;
+
+    const-class p1, Ljqa;
+
+    monitor-enter p1
+
+    :try_start_0
+    sget-object v0, Ljqa;->b:Ljqa;
+
+    if-nez v0, :cond_3
+
+    new-instance v0, Ljqa;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Ljqa;-><init>(I)V
+
+    sput-object v0, Ljqa;->b:Ljqa;
+
+    goto :goto_2
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_7
+
+    :cond_3
+    :goto_2
+    sget-object v0, Ljqa;->b:Ljqa;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p1
+
+    iput-object v0, p0, Lv25;->h:Ljqa;
+
+    const-class v0, Lkqa;
+
+    monitor-enter v0
+
+    :try_start_1
+    sget-object p1, Lkqa;->a:Lkqa;
+
+    if-nez p1, :cond_4
+
+    new-instance p1, Lkqa;
+
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+
+    sput-object p1, Lkqa;->a:Lkqa;
+
+    goto :goto_3
+
+    :catchall_1
+    move-exception p1
+
+    goto :goto_6
+
+    :cond_4
+    :goto_3
+    sget-object p1, Lkqa;->a:Lkqa;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    monitor-exit v0
+
+    iput-object p1, p0, Lv25;->i:Lkqa;
+
+    const-class p1, Lmqa;
+
+    monitor-enter p1
+
+    :try_start_2
+    sget-object v0, Lmqa;->b:Lmqa;
+
+    if-nez v0, :cond_5
+
+    new-instance v0, Lmqa;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lmqa;-><init>(I)V
+
+    sput-object v0, Lmqa;->b:Lmqa;
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_2
+
+    goto :goto_4
+
+    :catchall_2
+    move-exception v0
+
+    goto :goto_5
+
+    :cond_5
+    :goto_4
+    monitor-exit p1
+
     return-void
 
-    :pswitch_0
-    iget-object v0, p0, Lv25;->c:Ljava/lang/Object;
+    :goto_5
+    :try_start_3
+    monitor-exit p1
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
-    check-cast v0, Lnq6;
+    throw v0
 
-    invoke-interface {v0, p1}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    :goto_6
+    :try_start_4
+    monitor-exit v0
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    return-void
+    throw p1
 
-    :pswitch_1
-    iget-object p1, p0, Lv25;->c:Ljava/lang/Object;
+    :goto_7
+    :try_start_5
+    monitor-exit p1
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    check-cast p1, Lr25;
+    throw v0
 
-    invoke-interface {p1}, Lr25;->dispose()V
+    :cond_6
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    return-void
+    invoke-direct {p1, v4}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    throw p1
 .end method

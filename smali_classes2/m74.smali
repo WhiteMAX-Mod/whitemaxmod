@@ -1,64 +1,57 @@
 .class public final Lm74;
-.super Ljava/lang/Object;
+.super Ld3;
 .source "SourceFile"
-
-# interfaces
-.implements Lo74;
 
 
 # static fields
-.field public static final a:Lm74;
+.field public static final c:Lm74;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 2
 
     new-instance v0, Lm74;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/16 v1, 0xc
 
-    sput-object v0, Lm74;->a:Lm74;
+    invoke-direct {v0, v1}, Ld3;-><init>(I)V
+
+    sput-object v0, Lm74;->c:Lm74;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final J0(JZ)V
+    .locals 3
 
-    const/4 v0, 0x1
+    invoke-virtual {p0}, Ld3;->n0()Lyn4;
 
-    if-ne p0, p1, :cond_0
+    move-result-object v0
 
-    return v0
+    const-string v1, ":call-user?opponent_id="
 
-    :cond_0
-    instance-of p1, p1, Lm74;
+    const-string v2, "&video_enabled="
 
-    if-nez p1, :cond_1
+    invoke-static {p1, p2, v1, v2, p3}, Lkb0;->m(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
 
-    const/4 p1, 0x0
+    move-result-object p1
 
-    return p1
+    const-string p2, "&microphone_enabled=true"
 
-    :cond_1
-    return v0
-.end method
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public final hashCode()I
-    .locals 1
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    const v0, 0xd8b2a9e
+    move-result-object p1
 
-    return v0
-.end method
+    const/4 p2, 0x0
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    const/4 p3, 0x6
 
-    const-string v0, "PermissionsAccess"
+    invoke-static {v0, p1, p2, p3}, Lyn4;->b(Lyn4;Ljava/lang/String;Landroid/os/Bundle;I)Z
 
-    return-object v0
+    return-void
 .end method

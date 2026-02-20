@@ -1,60 +1,194 @@
 .class public final Ll3j;
-.super Ljava/lang/Object;
+.super Lx2;
 .source "SourceFile"
 
-# interfaces
-.implements Lvwa;
 
+# instance fields
+.field public final b:Ljava/lang/Object;
 
-# static fields
-.field public static final a:Ll3j;
+.field public c:I
+
+.field public final synthetic d:Ldn3;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Ldn3;I)V
+    .locals 2
 
-    new-instance v0, Ll3j;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Ll3j;->a:Ll3j;
-
-    new-instance v0, Lbri;
+    const/4 v0, 0x0
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, v1}, Lbri;-><init>(I)V
+    invoke-direct {p0, v0, v1}, Lx2;-><init>(ZI)V
 
-    const-class v1, Lpri;
+    iput-object p1, p0, Ll3j;->d:Ldn3;
 
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
+    sget-object v0, Ldn3;->v0:Ljava/lang/Object;
 
-    move-result-object v0
+    invoke-virtual {p1}, Ldn3;->m()[Ljava/lang/Object;
 
-    const/4 v2, 0x2
+    move-result-object p1
 
-    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
+    aget-object p1, p1, p2
 
-    move-result-object v0
+    iput-object p1, p0, Ll3j;->b:Ljava/lang/Object;
 
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
+    iput p2, p0, Ll3j;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final a()V
+    .locals 4
 
-    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    iget v0, p0, Ll3j;->c:I
+
+    const/4 v1, -0x1
+
+    iget-object v2, p0, Ll3j;->b:Ljava/lang/Object;
+
+    iget-object v3, p0, Ll3j;->d:Ldn3;
+
+    if-eq v0, v1, :cond_1
+
+    invoke-virtual {v3}, Ldn3;->size()I
+
+    move-result v1
+
+    if-ge v0, v1, :cond_1
+
+    iget v0, p0, Ll3j;->c:I
+
+    invoke-virtual {v3}, Ldn3;->m()[Ljava/lang/Object;
+
+    move-result-object v1
+
+    aget-object v0, v1, v0
+
+    invoke-static {v2, v0}, Lpij;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+
+    :cond_1
+    :goto_0
+    sget-object v0, Ldn3;->v0:Ljava/lang/Object;
+
+    invoke-virtual {v3, v2}, Ldn3;->s(Ljava/lang/Object;)I
+
+    move-result v0
+
+    iput v0, p0, Ll3j;->c:I
+
+    return-void
+.end method
+
+.method public final getKey()Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Ll3j;->b:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final getValue()Ljava/lang/Object;
+    .locals 3
+
+    iget-object v0, p0, Ll3j;->d:Ldn3;
+
+    invoke-virtual {v0}, Ldn3;->o()Ljava/util/Map;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    iget-object v0, p0, Ll3j;->b:Ljava/lang/Object;
+
+    invoke-interface {v1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_0
+    invoke-virtual {p0}, Ll3j;->a()V
+
+    iget v1, p0, Ll3j;->c:I
+
+    const/4 v2, -0x1
+
+    if-ne v1, v2, :cond_1
+
+    const/4 v0, 0x0
+
+    return-object v0
+
+    :cond_1
+    invoke-virtual {v0}, Ldn3;->n()[Ljava/lang/Object;
+
+    move-result-object v0
+
+    aget-object v0, v0, v1
+
+    return-object v0
+.end method
+
+.method public final setValue(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    iget-object v0, p0, Ll3j;->d:Ldn3;
+
+    invoke-virtual {v0}, Ldn3;->o()Ljava/util/Map;
+
+    move-result-object v1
+
+    iget-object v2, p0, Ll3j;->b:Ljava/lang/Object;
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v1, v2, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    throw p1
+    return-object p1
+
+    :cond_0
+    invoke-virtual {p0}, Ll3j;->a()V
+
+    iget v1, p0, Ll3j;->c:I
+
+    const/4 v3, -0x1
+
+    if-ne v1, v3, :cond_1
+
+    invoke-virtual {v0, v2, p1}, Ldn3;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/4 p1, 0x0
+
+    return-object p1
+
+    :cond_1
+    invoke-virtual {v0}, Ldn3;->n()[Ljava/lang/Object;
+
+    move-result-object v2
+
+    aget-object v1, v2, v1
+
+    iget v2, p0, Ll3j;->c:I
+
+    invoke-virtual {v0}, Ldn3;->n()[Ljava/lang/Object;
+
+    move-result-object v0
+
+    aput-object p1, v0, v2
+
+    return-object v1
 .end method

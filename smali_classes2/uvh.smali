@@ -1,130 +1,113 @@
-.class public final Luvh;
+.class public abstract Luvh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/view/View$OnAttachStateChangeListener;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Landroid/view/View;
-
-.field public final synthetic c:Landroid/view/ViewTreeObserver;
-
-.field public final synthetic d:Lwvh;
-
-.field public final synthetic o:Landroid/view/View;
-
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/view/View;Landroid/view/ViewTreeObserver;Lwvh;Landroid/view/View;I)V
-    .locals 0
+.method public static a([B)Lvvh;
+    .locals 18
 
-    iput p5, p0, Luvh;->a:I
+    new-instance v0, Lru/ok/tamtam/nano/Tasks$VideoPlay;
 
-    iput-object p1, p0, Luvh;->b:Landroid/view/View;
+    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$VideoPlay;-><init>()V
 
-    iput-object p2, p0, Luvh;->c:Landroid/view/ViewTreeObserver;
+    move-object/from16 v1, p0
 
-    iput-object p3, p0, Luvh;->d:Lwvh;
+    :try_start_0
+    invoke-static {v0, v1}, Lhr9;->mergeFrom(Lhr9;[B)Lhr9;
 
-    iput-object p4, p0, Luvh;->o:Landroid/view/View;
+    move-result-object v0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    check-cast v0, Lru/ok/tamtam/nano/Tasks$VideoPlay;
+    :try_end_0
+    .catch Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException; {:try_start_0 .. :try_end_0} :catch_0
 
-    return-void
-.end method
+    new-instance v1, Lvvh;
 
-.method private final a(Landroid/view/View;)V
-    .locals 0
+    iget-wide v2, v0, Lru/ok/tamtam/nano/Tasks$VideoPlay;->requestId:J
 
-    return-void
-.end method
+    iget-wide v4, v0, Lru/ok/tamtam/nano/Tasks$VideoPlay;->videoId:J
 
-.method private final b(Landroid/view/View;)V
-    .locals 0
+    iget-wide v6, v0, Lru/ok/tamtam/nano/Tasks$VideoPlay;->chatServerId:J
 
-    return-void
-.end method
+    iget-wide v8, v0, Lru/ok/tamtam/nano/Tasks$VideoPlay;->messageServerId:J
 
+    iget-wide v10, v0, Lru/ok/tamtam/nano/Tasks$VideoPlay;->messageId:J
 
-# virtual methods
-.method public final onViewAttachedToWindow(Landroid/view/View;)V
-    .locals 7
+    iget-object v12, v0, Lru/ok/tamtam/nano/Tasks$VideoPlay;->attachLocalId:Ljava/lang/String;
 
-    iget v0, p0, Luvh;->a:I
+    iget-boolean v13, v0, Lru/ok/tamtam/nano/Tasks$VideoPlay;->startDownload:Z
 
-    packed-switch v0, :pswitch_data_0
+    iget-boolean v14, v0, Lru/ok/tamtam/nano/Tasks$VideoPlay;->saveToGallery:Z
 
-    return-void
+    iget-object v15, v0, Lru/ok/tamtam/nano/Tasks$VideoPlay;->token:Ljava/lang/String;
 
-    :pswitch_0
-    iget-object v0, p0, Luvh;->b:Landroid/view/View;
+    iget v0, v0, Lru/ok/tamtam/nano/Tasks$VideoPlay;->place:I
 
-    invoke-virtual {v0, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+    move-object/from16 p0, v1
 
-    invoke-virtual {p1}, Landroid/view/View;->isAttachedToWindow()Z
+    new-instance v1, Le2;
 
-    move-result v0
+    move-wide/from16 v16, v2
 
-    iget-object v5, p0, Luvh;->o:Landroid/view/View;
+    const/4 v2, 0x0
 
-    iget-object v4, p0, Luvh;->d:Lwvh;
+    sget-object v3, Lz75;->t0:Lpm5;
 
-    iget-object v3, p0, Luvh;->c:Landroid/view/ViewTreeObserver;
+    invoke-direct {v1, v2, v3}, Le2;-><init>(ILjava/lang/Object;)V
 
-    if-nez v0, :cond_0
+    :cond_0
+    invoke-virtual {v1}, Le2;->hasNext()Z
 
-    invoke-static {v4, v5, v3}, Lpy;->f(Lwvh;Landroid/view/View;Landroid/view/ViewTreeObserver;)V
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    invoke-virtual {v1}, Le2;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    move-object v3, v2
+
+    check-cast v3, Lz75;
+
+    iget v3, v3, Lz75;->a:I
+
+    if-ne v3, v0, :cond_0
 
     goto :goto_0
 
-    :cond_0
-    new-instance v1, Luvh;
-
-    const/4 v6, 0x1
-
-    move-object v2, p1
-
-    invoke-direct/range {v1 .. v6}, Luvh;-><init>(Landroid/view/View;Landroid/view/ViewTreeObserver;Lwvh;Landroid/view/View;I)V
-
-    invoke-virtual {v2, v1}, Landroid/view/View;->addOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+    :cond_1
+    const/4 v2, 0x0
 
     :goto_0
-    return-void
+    check-cast v2, Lz75;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+    if-nez v2, :cond_2
 
-.method public final onViewDetachedFromWindow(Landroid/view/View;)V
-    .locals 2
+    sget-object v2, Lz75;->b:Lz75;
 
-    iget p1, p0, Luvh;->a:I
+    :cond_2
+    move-wide/from16 v0, v16
 
-    packed-switch p1, :pswitch_data_0
+    const/16 v16, 0x0
 
-    iget-object p1, p0, Luvh;->b:Landroid/view/View;
+    move-object/from16 v17, v2
 
-    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+    move-wide v2, v0
 
-    iget-object p1, p0, Luvh;->d:Lwvh;
+    move-object/from16 v1, p0
 
-    iget-object v0, p0, Luvh;->o:Landroid/view/View;
+    invoke-direct/range {v1 .. v17}, Lvvh;-><init>(JJJJJLjava/lang/String;ZZLjava/lang/String;ZLz75;)V
 
-    iget-object v1, p0, Luvh;->c:Landroid/view/ViewTreeObserver;
+    return-object v1
 
-    invoke-static {p1, v0, v1}, Lpy;->f(Lwvh;Landroid/view/View;Landroid/view/ViewTreeObserver;)V
+    :catch_0
+    move-exception v0
 
-    :pswitch_0
-    return-void
+    new-instance v1, Lru/ok/tamtam/nano/ProtoException;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-direct {v1, v0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v1
 .end method

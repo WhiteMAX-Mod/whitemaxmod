@@ -1,91 +1,118 @@
-.class public final synthetic Lwt4;
+.class public final Lwt4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ldy3;
+.implements Ljre;
 
 
 # instance fields
-.field public final synthetic a:Lxt4;
-
-.field public final synthetic b:Ly5g;
-
-.field public final synthetic c:Landroid/graphics/SurfaceTexture;
-
-.field public final synthetic d:Landroid/view/Surface;
+.field public final synthetic a:Lyt4;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lxt4;Ly5g;Landroid/graphics/SurfaceTexture;Landroid/view/Surface;)V
+.method public constructor <init>(Lyt4;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lwt4;->a:Lxt4;
-
-    iput-object p2, p0, Lwt4;->b:Ly5g;
-
-    iput-object p3, p0, Lwt4;->c:Landroid/graphics/SurfaceTexture;
-
-    iput-object p4, p0, Lwt4;->d:Landroid/view/Surface;
+    iput-object p1, p0, Lwt4;->a:Lyt4;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 5
+.method public final c()Z
+    .locals 1
 
-    iget-object v0, p0, Lwt4;->a:Lxt4;
+    const/4 v0, 0x1
 
-    iget-object v1, p0, Lwt4;->b:Ly5g;
+    return v0
+.end method
 
-    iget-object v2, p0, Lwt4;->c:Landroid/graphics/SurfaceTexture;
+.method public final e(J)Lhre;
+    .locals 11
 
-    iget-object v3, p0, Lwt4;->d:Landroid/view/Surface;
+    iget-object v0, p0, Lwt4;->a:Lyt4;
 
-    check-cast p1, Lwc0;
+    iget-object v1, v0, Lyt4;->w0:Ljava/lang/Object;
 
-    iget-object p1, v1, Ly5g;->a:Ljava/lang/Object;
+    check-cast v1, La6g;
 
-    monitor-enter p1
+    iget v1, v1, La6g;->f:I
 
-    const/4 v4, 0x0
+    int-to-long v1, v1
 
-    :try_start_0
-    iput-object v4, v1, Ly5g;->n:Lx5g;
+    mul-long/2addr v1, p1
 
-    iput-object v4, v1, Ly5g;->o:Ljava/util/concurrent/Executor;
+    const-wide/32 v3, 0xf4240
 
-    monitor-exit p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    div-long/2addr v1, v3
 
-    invoke-virtual {v2, v4}, Landroid/graphics/SurfaceTexture;->setOnFrameAvailableListener(Landroid/graphics/SurfaceTexture$OnFrameAvailableListener;)V
+    iget-wide v5, v0, Lyt4;->b:J
 
-    invoke-virtual {v2}, Landroid/graphics/SurfaceTexture;->release()V
+    iget-wide v3, v0, Lyt4;->c:J
 
-    invoke-virtual {v3}, Landroid/view/Surface;->release()V
+    sub-long v7, v3, v5
 
-    iget p1, v0, Lxt4;->t0:I
+    mul-long/2addr v7, v1
 
-    add-int/lit8 p1, p1, -0x1
+    iget-wide v0, v0, Lyt4;->o:J
 
-    iput p1, v0, Lxt4;->t0:I
+    div-long/2addr v7, v0
 
-    invoke-virtual {v0}, Lxt4;->a()V
+    add-long/2addr v7, v5
 
-    return-void
+    const-wide/16 v0, 0x7530
 
-    :catchall_0
-    move-exception v0
+    sub-long/2addr v7, v0
 
-    :try_start_1
-    monitor-exit p1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    const-wide/16 v0, 0x1
 
-    throw v0
+    sub-long/2addr v3, v0
+
+    move-wide v9, v7
+
+    move-wide v7, v3
+
+    move-wide v3, v9
+
+    invoke-static/range {v3 .. v8}, Ltih;->j(JJJ)J
+
+    move-result-wide v0
+
+    new-instance v2, Lhre;
+
+    new-instance v3, Lnre;
+
+    invoke-direct {v3, p1, p2, v0, v1}, Lnre;-><init>(JJ)V
+
+    invoke-direct {v2, v3, v3}, Lhre;-><init>(Lnre;Lnre;)V
+
+    return-object v2
+.end method
+
+.method public final f()J
+    .locals 6
+
+    iget-object v0, p0, Lwt4;->a:Lyt4;
+
+    iget-object v1, v0, Lyt4;->w0:Ljava/lang/Object;
+
+    check-cast v1, La6g;
+
+    iget-wide v2, v0, Lyt4;->o:J
+
+    const-wide/32 v4, 0xf4240
+
+    mul-long/2addr v2, v4
+
+    iget v0, v1, La6g;->f:I
+
+    int-to-long v0, v0
+
+    div-long/2addr v2, v0
+
+    return-wide v2
 .end method

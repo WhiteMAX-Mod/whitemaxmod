@@ -2,146 +2,144 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lg88;
+
+# static fields
+.field public static final c:Ljava/lang/String;
+
+.field public static final d:Ljava/lang/String;
 
 
 # instance fields
-.field public final a:Lbd6;
+.field public final a:Ljava/lang/String;
 
-.field public final b:Lj88;
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lj88;Lbd6;)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    sget-object v0, Lvih;->a:Ljava/lang/String;
+
+    const/4 v0, 0x0
+
+    const/16 v1, 0x24
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Ls78;->c:Ljava/lang/String;
+
+    const/4 v0, 0x1
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Ls78;->d:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ls78;->b:Lj88;
+    invoke-static {p1}, Lvih;->V(Ljava/lang/String;)Ljava/lang/String;
 
-    iput-object p2, p0, Ls78;->a:Lbd6;
+    move-result-object p1
+
+    iput-object p1, p0, Ls78;->a:Ljava/lang/String;
+
+    iput-object p2, p0, Ls78;->b:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onDestroy(Lj88;)V
-    .locals 5
-    .annotation runtime La2b;
-        value = .enum Ln78;->ON_DESTROY:Ln78;
-    .end annotation
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget-object v0, p0, Ls78;->a:Lbd6;
+    const/4 v0, 0x1
 
-    iget-object v1, v0, Lbd6;->a:Ljava/lang/Object;
+    if-ne p0, p1, :cond_0
 
-    monitor-enter v1
-
-    :try_start_0
-    invoke-virtual {v0, p1}, Lbd6;->e(Lj88;)Ls78;
-
-    move-result-object v2
-
-    if-nez v2, :cond_0
-
-    monitor-exit v1
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
+    return v0
 
     :cond_0
-    invoke-virtual {v0, p1}, Lbd6;->j(Lj88;)V
+    const/4 v1, 0x0
 
-    iget-object p1, v0, Lbd6;->c:Ljava/lang/Object;
+    if-eqz p1, :cond_2
 
-    check-cast p1, Ljava/util/HashMap;
+    const-class v2, Ls78;
 
-    invoke-virtual {p1, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/util/Set;
-
-    invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v3
 
-    check-cast v3, Lpb0;
-
-    iget-object v4, v0, Lbd6;->b:Ljava/lang/Object;
-
-    check-cast v4, Ljava/util/HashMap;
-
-    invoke-virtual {v4, v3}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    if-eq v2, v3, :cond_1
 
     goto :goto_0
 
     :cond_1
-    iget-object p1, v0, Lbd6;->c:Ljava/lang/Object;
+    check-cast p1, Ls78;
 
-    check-cast p1, Ljava/util/HashMap;
+    iget-object v2, p0, Ls78;->a:Ljava/lang/String;
 
-    invoke-virtual {p1, v2}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v3, p1, Ls78;->a:Ljava/lang/String;
 
-    iget-object p1, v2, Ls78;->b:Lj88;
+    invoke-static {v2, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-interface {p1}, Lj88;->p()Ll88;
+    move-result v2
 
-    move-result-object p1
+    if-eqz v2, :cond_2
 
-    invoke-virtual {p1, v2}, Ll88;->f(Lg88;)V
+    iget-object v2, p0, Ls78;->b:Ljava/lang/String;
 
-    monitor-exit v1
+    iget-object p1, p1, Ls78;->b:Ljava/lang/String;
 
-    return-void
+    invoke-static {v2, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    :goto_1
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    move-result p1
 
-    throw p1
+    if-eqz p1, :cond_2
+
+    return v0
+
+    :cond_2
+    :goto_0
+    return v1
 .end method
 
-.method public onStart(Lj88;)V
-    .locals 1
-    .annotation runtime La2b;
-        value = .enum Ln78;->ON_START:Ln78;
-    .end annotation
+.method public final hashCode()I
+    .locals 2
 
-    iget-object v0, p0, Ls78;->a:Lbd6;
+    iget-object v0, p0, Ls78;->b:Ljava/lang/String;
 
-    invoke-virtual {v0, p1}, Lbd6;->i(Lj88;)V
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
-    return-void
-.end method
+    move-result v0
 
-.method public onStop(Lj88;)V
-    .locals 1
-    .annotation runtime La2b;
-        value = .enum Ln78;->ON_STOP:Ln78;
-    .end annotation
+    mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v0, p0, Ls78;->a:Lbd6;
+    iget-object v1, p0, Ls78;->a:Ljava/lang/String;
 
-    invoke-virtual {v0, p1}, Lbd6;->j(Lj88;)V
+    if-eqz v1, :cond_0
 
-    return-void
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    :goto_0
+    add-int/2addr v0, v1
+
+    return v0
 .end method

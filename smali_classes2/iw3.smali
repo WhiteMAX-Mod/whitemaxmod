@@ -1,136 +1,1605 @@
-.class public final enum Liw3;
-.super Ljava/lang/Enum;
+.class public final Liw3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Comparable;
-
-
-# static fields
-.field public static final enum X:Liw3;
-
-.field public static final synthetic Y:[Liw3;
-
-.field public static final synthetic Z:Lal5;
-
-.field public static final enum b:Liw3;
-
-.field public static final enum c:Liw3;
-
-.field public static final enum d:Liw3;
-
-.field public static final enum o:Liw3;
+.implements Lcw3;
 
 
 # instance fields
-.field public final a:I
+.field public final a:Landroid/content/Context;
+
+.field public final b:Ljava/util/concurrent/ExecutorService;
+
+.field public final c:Le5;
+
+.field public final d:Lbgg;
+
+.field public final e:Lj88;
+
+.field public final f:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+.field public final g:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+.field public final h:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+.field public final i:Lbgg;
+
+.field public final j:Lbgg;
+
+.field public volatile k:Lax3;
+
+.field public final l:Ljava/util/concurrent/CopyOnWriteArraySet;
+
+.field public final m:Lhw3;
+
+.field public final n:Ljava/util/concurrent/atomic/AtomicReference;
+
+.field public final o:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 8
-
-    new-instance v0, Liw3;
-
-    const-string v1, "TYPE_UNKNOWN"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2, v2}, Liw3;-><init>(Ljava/lang/String;II)V
-
-    sput-object v0, Liw3;->b:Liw3;
-
-    new-instance v1, Liw3;
-
-    const-string v2, "TYPE_WIFI"
-
-    const/4 v3, 0x1
-
-    const/4 v4, 0x2
-
-    invoke-direct {v1, v2, v3, v4}, Liw3;-><init>(Ljava/lang/String;II)V
-
-    sput-object v1, Liw3;->c:Liw3;
-
-    new-instance v2, Liw3;
-
-    const-string v3, "TYPE_MOBILE_SLOW"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v2, v3, v4, v5}, Liw3;-><init>(Ljava/lang/String;II)V
-
-    sput-object v2, Liw3;->d:Liw3;
-
-    new-instance v3, Liw3;
-
-    const-string v4, "TYPE_MOBILE_NORMAL"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v3, v4, v5, v6}, Liw3;-><init>(Ljava/lang/String;II)V
-
-    sput-object v3, Liw3;->o:Liw3;
-
-    new-instance v4, Liw3;
-
-    const-string v5, "TYPE_MOBILE_FAST"
-
-    const/4 v7, 0x5
-
-    invoke-direct {v4, v5, v6, v7}, Liw3;-><init>(Ljava/lang/String;II)V
-
-    sput-object v4, Liw3;->X:Liw3;
-
-    filled-new-array {v0, v1, v2, v3, v4}, [Liw3;
-
-    move-result-object v0
-
-    sput-object v0, Liw3;->Y:[Liw3;
-
-    new-instance v1, Lal5;
-
-    invoke-direct {v1, v0}, Lal5;-><init>([Ljava/lang/Enum;)V
-
-    sput-object v1, Liw3;->Z:Lal5;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;II)V
+.method public constructor <init>(Landroid/content/Context;Ljava/util/concurrent/ExecutorService;Le5;Lbgg;Lj88;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p3, p0, Liw3;->a:I
+    iput-object p1, p0, Liw3;->a:Landroid/content/Context;
+
+    iput-object p2, p0, Liw3;->b:Ljava/util/concurrent/ExecutorService;
+
+    iput-object p3, p0, Liw3;->c:Le5;
+
+    iput-object p4, p0, Liw3;->d:Lbgg;
+
+    iput-object p5, p0, Liw3;->e:Lj88;
+
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    const/4 p2, 0x0
+
+    invoke-direct {p1, p2}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
+
+    iput-object p1, p0, Liw3;->f:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    new-instance p3, Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-direct {p3, p2}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
+
+    iput-object p3, p0, Liw3;->g:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    new-instance p3, Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-direct {p3, p2}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
+
+    iput-object p3, p0, Liw3;->h:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    new-instance p3, Lfw3;
+
+    const/4 p4, 0x0
+
+    invoke-direct {p3, p0, p4}, Lfw3;-><init>(Liw3;I)V
+
+    new-instance p4, Lbgg;
+
+    invoke-direct {p4, p3}, Lbgg;-><init>(Lis6;)V
+
+    iput-object p4, p0, Liw3;->i:Lbgg;
+
+    new-instance p3, Lfw3;
+
+    const/4 p4, 0x1
+
+    invoke-direct {p3, p0, p4}, Lfw3;-><init>(Liw3;I)V
+
+    new-instance p4, Lbgg;
+
+    invoke-direct {p4, p3}, Lbgg;-><init>(Lis6;)V
+
+    iput-object p4, p0, Liw3;->j:Lbgg;
+
+    sget-object p3, Lax3;->b:Lax3;
+
+    iput-object p3, p0, Liw3;->k:Lax3;
+
+    new-instance p3, Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-direct {p3}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
+
+    iput-object p3, p0, Liw3;->l:Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    new-instance p3, Lhw3;
+
+    const/4 p4, 0x0
+
+    invoke-direct {p3, p4, p0}, Lhw3;-><init>(ILjava/lang/Object;)V
+
+    iput-object p3, p0, Liw3;->m:Lhw3;
+
+    new-instance p3, Ljava/util/concurrent/atomic/AtomicReference;
+
+    sget-object p4, Lgw3;->g:Lgw3;
+
+    invoke-direct {p3, p4}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object p3, p0, Liw3;->n:Ljava/util/concurrent/atomic/AtomicReference;
+
+    const-class p3, Liw3;
+
+    invoke-virtual {p3}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p3
+
+    iput-object p3, p0, Liw3;->o:Ljava/lang/String;
+
+    invoke-virtual {p0, p2}, Liw3;->o(Z)Z
+
+    move-result p2
+
+    invoke-virtual {p1, p2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+
+    invoke-virtual {p0}, Liw3;->m()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Liw3;
-    .locals 1
+.method public static j(Landroid/net/NetworkCapabilities;Landroid/net/NetworkInfo;)Lax3;
+    .locals 3
 
-    const-class v0, Liw3;
+    if-nez p0, :cond_0
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    goto :goto_0
 
-    move-result-object p0
+    :cond_0
+    const/4 v0, 0x1
 
-    check-cast p0, Liw3;
+    invoke-virtual {p0, v0}, Landroid/net/NetworkCapabilities;->hasTransport(I)Z
+
+    move-result v1
+
+    if-nez v1, :cond_7
+
+    const/4 v1, 0x3
+
+    invoke-virtual {p0, v1}, Landroid/net/NetworkCapabilities;->hasTransport(I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v1}, Landroid/net/NetworkCapabilities;->hasTransport(I)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    if-eqz p1, :cond_2
+
+    invoke-virtual {p1}, Landroid/net/NetworkInfo;->getSubtype()I
+
+    move-result p1
+
+    if-eq p1, v0, :cond_3
+
+    const/4 v0, 0x2
+
+    if-eq p1, v0, :cond_3
+
+    const/4 v0, 0x4
+
+    if-eq p1, v0, :cond_3
+
+    const/4 v0, 0x7
+
+    if-eq p1, v0, :cond_3
+
+    const/16 v0, 0xb
+
+    if-eq p1, v0, :cond_3
+
+    const/16 v0, 0x10
+
+    if-eq p1, v0, :cond_3
+
+    :cond_2
+    invoke-virtual {p0, v1}, Landroid/net/NetworkCapabilities;->hasTransport(I)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_6
+
+    invoke-virtual {p0}, Landroid/net/NetworkCapabilities;->getLinkDownstreamBandwidthKbps()I
+
+    move-result p0
+
+    const/16 p1, 0x3e8
+
+    if-gt p0, p1, :cond_4
+
+    :cond_3
+    sget-object p0, Lax3;->d:Lax3;
+
+    return-object p0
+
+    :cond_4
+    const/16 p1, 0x59d8
+
+    if-gt p0, p1, :cond_5
+
+    sget-object p0, Lax3;->o:Lax3;
+
+    return-object p0
+
+    :cond_5
+    sget-object p0, Lax3;->X:Lax3;
+
+    return-object p0
+
+    :cond_6
+    :goto_0
+    sget-object p0, Lax3;->b:Lax3;
+
+    return-object p0
+
+    :cond_7
+    :goto_1
+    sget-object p0, Lax3;->c:Lax3;
 
     return-object p0
 .end method
 
-.method public static values()[Liw3;
-    .locals 1
 
-    sget-object v0, Liw3;->Y:[Liw3;
+# virtual methods
+.method public final a()Z
+    .locals 2
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    invoke-virtual {p0}, Liw3;->k()Landroid/net/ConnectivityManager;
 
     move-result-object v0
 
-    check-cast v0, [Liw3;
+    invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getRestrictBackgroundStatus()I
+
+    move-result v0
+
+    const/4 v1, 0x3
+
+    if-eq v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final b()Lax3;
+    .locals 3
+
+    iget-object v0, p0, Liw3;->k:Lax3;
+
+    sget-object v1, Lax3;->b:Lax3;
+
+    if-eq v0, v1, :cond_0
+
+    iget-object v0, p0, Liw3;->k:Lax3;
 
     return-object v0
+
+    :cond_0
+    invoke-virtual {p0}, Liw3;->k()Landroid/net/ConnectivityManager;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getActiveNetwork()Landroid/net/Network;
+
+    move-result-object v0
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    :try_start_0
+    invoke-virtual {p0}, Liw3;->k()Landroid/net/ConnectivityManager;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0}, Landroid/net/ConnectivityManager;->getNetworkCapabilities(Landroid/net/Network;)Landroid/net/NetworkCapabilities;
+
+    move-result-object v0
+    :try_end_0
+    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v1}, Liw3;->l(Landroid/net/Network;)Landroid/net/NetworkInfo;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Liw3;->j(Landroid/net/NetworkCapabilities;Landroid/net/NetworkInfo;)Lax3;
+
+    move-result-object v1
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    const-string v2, "failed getNetworkCapabilities"
+
+    invoke-virtual {p0, v2, v0}, Liw3;->n(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :goto_0
+    iput-object v1, p0, Liw3;->k:Lax3;
+
+    return-object v1
+.end method
+
+.method public final c(Lbw3;)V
+    .locals 1
+
+    if-eqz p1, :cond_0
+
+    iget-object v0, p0, Liw3;->l:Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArraySet;->add(Ljava/lang/Object;)Z
+
+    :cond_0
+    return-void
+.end method
+
+.method public final d()Z
+    .locals 2
+
+    iget-object v0, p0, Liw3;->n:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lgw3;
+
+    if-eqz v0, :cond_0
+
+    iget-object v1, p0, Liw3;->f:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    iget-boolean v0, v0, Lgw3;->f:Z
+
+    return v0
+
+    :cond_0
+    invoke-virtual {p0}, Liw3;->h()Landroid/net/Network;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Liw3;->i(Landroid/net/Network;)Landroid/net/NetworkCapabilities;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    const/4 v1, 0x4
+
+    invoke-virtual {v0, v1}, Landroid/net/NetworkCapabilities;->hasTransport(I)Z
+
+    move-result v0
+
+    return v0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final e(Lbw3;)V
+    .locals 1
+
+    if-eqz p1, :cond_0
+
+    iget-object v0, p0, Liw3;->l:Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArraySet;->remove(Ljava/lang/Object;)Z
+
+    :cond_0
+    return-void
+.end method
+
+.method public final f()Z
+    .locals 6
+
+    iget-object v0, p0, Liw3;->f:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Liw3;->n:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lgw3;
+
+    iget-boolean v0, v0, Lgw3;->a:Z
+
+    return v0
+
+    :cond_0
+    new-instance v0, Lone/me/net/connection/impl/internal/ConnectionInfoNougatImpl$RegisterDefaultNetworkCallbackException;
+
+    invoke-direct {v0}, Lone/me/net/connection/impl/internal/ConnectionInfoNougatImpl$RegisterDefaultNetworkCallbackException;-><init>()V
+
+    iget-object v1, p0, Liw3;->o:Ljava/lang/String;
+
+    const-string v2, "default network callback is not registered yet"
+
+    invoke-static {v1, v2, v0}, Ltej;->r(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    iget-object v1, p0, Liw3;->d:Lbgg;
+
+    invoke-virtual {v1}, Lbgg;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lc98;
+
+    iget-object v1, v1, Lc98;->a:Lr5;
+
+    const/16 v2, 0xf
+
+    invoke-virtual {v1, v2}, Lr5;->c(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lpo5;
+
+    check-cast v1, Lhcb;
+
+    invoke-virtual {v1, v0}, Lhcb;->a(Ljava/lang/Throwable;)V
+
+    invoke-virtual {p0}, Liw3;->k()Landroid/net/ConnectivityManager;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Landroid/net/NetworkInfo;->isConnectedOrConnecting()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    :goto_0
+    iget-object v1, p0, Liw3;->o:Ljava/lang/String;
+
+    sget-object v2, Ltej;->a:Lafb;
+
+    if-nez v2, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    sget-object v3, Lzm8;->d:Lzm8;
+
+    invoke-virtual {v2, v3}, Lafb;->b(Lzm8;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_3
+
+    const-string v4, "fallbackOnDeprecatedCheckOfConnection: isConnected = "
+
+    invoke-static {v4, v0}, Ldna;->f(Ljava/lang/String;Z)Ljava/lang/String;
+
+    move-result-object v4
+
+    const/4 v5, 0x0
+
+    invoke-virtual {v2, v3, v1, v4, v5}, Lafb;->c(Lzm8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_3
+    :goto_1
+    return v0
+.end method
+
+.method public final g()Z
+    .locals 1
+
+    iget-object v0, p0, Liw3;->j:Lbgg;
+
+    invoke-virtual {v0}, Lbgg;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/telephony/TelephonyManager;
+
+    invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->isNetworkRoaming()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final h()Landroid/net/Network;
+    .locals 4
+
+    iget-object v0, p0, Liw3;->o:Ljava/lang/String;
+
+    const/4 v1, 0x0
+
+    :try_start_0
+    invoke-virtual {p0}, Liw3;->k()Landroid/net/ConnectivityManager;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/net/ConnectivityManager;->getActiveNetwork()Landroid/net/Network;
+
+    move-result-object v2
+
+    if-nez v2, :cond_0
+
+    const-string v2, "Unable to get active network (background/blocked?)"
+
+    invoke-static {v0, v2}, Ltej;->t(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    return-object v1
+
+    :catchall_0
+    move-exception v2
+
+    goto :goto_0
+
+    :cond_0
+    return-object v2
+
+    :goto_0
+    const-string v3, "Failed to get active network"
+
+    invoke-static {v0, v3, v2}, Ltej;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-object v1
+.end method
+
+.method public final i(Landroid/net/Network;)Landroid/net/NetworkCapabilities;
+    .locals 3
+
+    iget-object v0, p0, Liw3;->o:Ljava/lang/String;
+
+    const/4 v1, 0x0
+
+    :try_start_0
+    invoke-virtual {p0}, Liw3;->k()Landroid/net/ConnectivityManager;
+
+    move-result-object v2
+
+    invoke-virtual {v2, p1}, Landroid/net/ConnectivityManager;->getNetworkCapabilities(Landroid/net/Network;)Landroid/net/NetworkCapabilities;
+
+    move-result-object p1
+
+    if-nez p1, :cond_0
+
+    const-string p1, "Unable to get network capabilities (background/blocked?)"
+
+    invoke-static {v0, p1}, Ltej;->t(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    return-object v1
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_0
+
+    :cond_0
+    return-object p1
+
+    :goto_0
+    const-string v2, "Failed to get active network capabilities"
+
+    invoke-static {v0, v2, p1}, Ltej;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-object v1
+.end method
+
+.method public final invalidate()V
+    .locals 5
+
+    iget-object v0, p0, Liw3;->o:Ljava/lang/String;
+
+    sget-object v1, Ltej;->a:Lafb;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sget-object v3, Lzm8;->d:Lzm8;
+
+    invoke-virtual {v1, v3}, Lafb;->b(Lzm8;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    const-string v4, "invalidate"
+
+    invoke-virtual {v1, v3, v0, v4, v2}, Lafb;->c(Lzm8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
+    :goto_0
+    invoke-virtual {p0}, Liw3;->m()V
+
+    iget-object v0, p0, Liw3;->f:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {p0, v1}, Liw3;->o(Z)Z
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+
+    iget-object v0, p0, Liw3;->f:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    invoke-virtual {p0, v2, v2}, Liw3;->p(Landroid/net/Network;Landroid/net/NetworkCapabilities;)Lgw3;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {p0, v0}, Liw3;->q(Lgw3;)V
+
+    :cond_2
+    return-void
+.end method
+
+.method public final k()Landroid/net/ConnectivityManager;
+    .locals 1
+
+    iget-object v0, p0, Liw3;->i:Lbgg;
+
+    invoke-virtual {v0}, Lbgg;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/net/ConnectivityManager;
+
+    return-object v0
+.end method
+
+.method public final l(Landroid/net/Network;)Landroid/net/NetworkInfo;
+    .locals 11
+
+    const-string v0, "unable to get "
+
+    const/4 v1, 0x0
+
+    const-string v2, "network info"
+
+    const-string v3, "active "
+
+    const-string v4, ""
+
+    if-eqz p1, :cond_0
+
+    :try_start_0
+    invoke-virtual {p0}, Liw3;->k()Landroid/net/ConnectivityManager;
+
+    move-result-object v5
+
+    invoke-virtual {v5, p1}, Landroid/net/ConnectivityManager;->getNetworkInfo(Landroid/net/Network;)Landroid/net/NetworkInfo;
+
+    move-result-object v5
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_3
+
+    :cond_0
+    invoke-virtual {p0}, Liw3;->k()Landroid/net/ConnectivityManager;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
+
+    move-result-object v5
+
+    :goto_0
+    if-nez v5, :cond_3
+
+    iget-object v6, p0, Liw3;->o:Ljava/lang/String;
+
+    sget-object v7, Ltej;->a:Lafb;
+
+    if-nez v7, :cond_1
+
+    goto :goto_2
+
+    :cond_1
+    sget-object v8, Lzm8;->X:Lzm8;
+
+    invoke-virtual {v7, v8}, Lafb;->b(Lzm8;)Z
+
+    move-result v9
+
+    if-eqz v9, :cond_3
+
+    if-eqz p1, :cond_2
+
+    move-object v9, v4
+
+    goto :goto_1
+
+    :cond_2
+    move-object v9, v3
+
+    :goto_1
+    new-instance v10, Ljava/lang/StringBuilder;
+
+    invoke-direct {v10, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v10, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v10, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v7, v8, v6, v0, v1}, Lafb;->c(Lzm8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    :cond_3
+    :goto_2
+    return-object v5
+
+    :goto_3
+    iget-object v5, p0, Liw3;->o:Ljava/lang/String;
+
+    if-eqz p1, :cond_4
+
+    move-object v3, v4
+
+    :cond_4
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    const-string v4, "failed to get "
+
+    invoke-direct {p1, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v5, p1, v0}, Ltej;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-object v1
+.end method
+
+.method public final m()V
+    .locals 8
+
+    iget-object v0, p0, Liw3;->g:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    iget-object v0, p0, Liw3;->o:Ljava/lang/String;
+
+    sget-object v3, Ltej;->a:Lafb;
+
+    const/4 v4, 0x0
+
+    if-nez v3, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sget-object v5, Lzm8;->d:Lzm8;
+
+    invoke-virtual {v3, v5}, Lafb;->b(Lzm8;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_1
+
+    const-string v6, "maybeRegisterBackRestrictionsChangesReceiver"
+
+    invoke-virtual {v3, v5, v0, v6, v4}, Lafb;->c(Lzm8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
+    :goto_0
+    iget-object v0, p0, Liw3;->g:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    :try_start_0
+    iget-object v3, p0, Liw3;->a:Landroid/content/Context;
+
+    new-instance v5, Lvp;
+
+    const/4 v6, 0x5
+
+    invoke-direct {v5, v6, p0}, Lvp;-><init>(ILjava/lang/Object;)V
+
+    new-instance v6, Landroid/content/IntentFilter;
+
+    invoke-direct {v6}, Landroid/content/IntentFilter;-><init>()V
+
+    const-string v7, "android.net.conn.RESTRICT_BACKGROUND_CHANGED"
+
+    invoke-virtual {v6, v7}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    const/4 v7, 0x4
+
+    invoke-static {v3, v5, v6, v4, v7}, Ln94;->P(Landroid/content/Context;Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;I)Landroid/content/Intent;
+
+    iget-object v3, p0, Liw3;->o:Ljava/lang/String;
+
+    sget-object v5, Ltej;->a:Lafb;
+
+    if-nez v5, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    sget-object v6, Lzm8;->o:Lzm8;
+
+    invoke-virtual {v5, v6}, Lafb;->b(Lzm8;)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_3
+
+    const-string v7, "maybeRegisterBackRestrictionsChangesReceiver, receiver successfully registered"
+
+    invoke-virtual {v5, v6, v3, v7, v4}, Lafb;->c(Lzm8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception v3
+
+    goto :goto_2
+
+    :cond_3
+    :goto_1
+    move v1, v2
+
+    goto :goto_3
+
+    :goto_2
+    iget-object v4, p0, Liw3;->o:Ljava/lang/String;
+
+    const-string v5, "maybeRegisterBackRestrictionsChangesReceiver, failed to register receiver for background restrictions changes"
+
+    invoke-static {v4, v5, v3}, Ltej;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    iget-object v4, p0, Liw3;->h:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v4, v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_4
+
+    iget-object v2, p0, Liw3;->d:Lbgg;
+
+    invoke-virtual {v2}, Lbgg;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lc98;
+
+    new-instance v4, Lone/me/net/connection/impl/internal/ConnectionInfoNougatImpl$RegisterBackRestrictionsChangesReceiverException;
+
+    invoke-direct {v4, v3}, Lone/me/net/connection/impl/internal/ConnectionInfoNougatImpl$RegisterBackRestrictionsChangesReceiverException;-><init>(Ljava/lang/Throwable;)V
+
+    iget-object v2, v2, Lc98;->a:Lr5;
+
+    const/16 v3, 0xf
+
+    invoke-virtual {v2, v3}, Lr5;->c(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lpo5;
+
+    check-cast v2, Lhcb;
+
+    invoke-virtual {v2, v4}, Lhcb;->a(Ljava/lang/Throwable;)V
+
+    :cond_4
+    :goto_3
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+
+    :cond_5
+    return-void
+.end method
+
+.method public final n(Ljava/lang/String;Ljava/lang/Throwable;)V
+    .locals 1
+
+    iget-object v0, p0, Liw3;->o:Ljava/lang/String;
+
+    invoke-static {v0, p1, p2}, Ltej;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    const-string v0, "ConnectionInfo"
+
+    invoke-static {v0, p1, p2}, Ltej;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    iget-object p1, p0, Liw3;->c:Le5;
+
+    iget-object p1, p1, Le5;->b:Ljava/lang/Object;
+
+    check-cast p1, Lr5;
+
+    const/16 v0, 0x42
+
+    invoke-virtual {p1, v0}, Lr5;->c(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lphg;
+
+    invoke-virtual {p1}, Lphg;->d()Lje4;
+
+    move-result-object p1
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p2}, Lje4;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-void
+.end method
+
+.method public final o(Z)Z
+    .locals 5
+
+    iget-object v0, p0, Liw3;->o:Ljava/lang/String;
+
+    sget-object v1, Ltej;->a:Lafb;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sget-object v3, Lzm8;->d:Lzm8;
+
+    invoke-virtual {v1, v3}, Lafb;->b(Lzm8;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    const-string v4, "registerNetworkCallback"
+
+    invoke-virtual {v1, v3, v0, v4, v2}, Lafb;->c(Lzm8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
+    :goto_0
+    if-eqz p1, :cond_2
+
+    :try_start_0
+    invoke-virtual {p0}, Liw3;->k()Landroid/net/ConnectivityManager;
+
+    move-result-object p1
+
+    iget-object v0, p0, Liw3;->m:Lhw3;
+
+    invoke-virtual {p1, v0}, Landroid/net/ConnectivityManager;->unregisterNetworkCallback(Landroid/net/ConnectivityManager$NetworkCallback;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception p1
+
+    iget-object v0, p0, Liw3;->o:Ljava/lang/String;
+
+    const-string v1, "registerNetworkCallback, unable to unregister default network callback"
+
+    invoke-static {v0, v1, p1}, Ltej;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_2
+    :goto_1
+    :try_start_1
+    invoke-virtual {p0}, Liw3;->k()Landroid/net/ConnectivityManager;
+
+    move-result-object p1
+
+    iget-object v0, p0, Liw3;->m:Lhw3;
+
+    invoke-virtual {p1, v0}, Landroid/net/ConnectivityManager;->registerDefaultNetworkCallback(Landroid/net/ConnectivityManager$NetworkCallback;)V
+
+    iget-object p1, p0, Liw3;->o:Ljava/lang/String;
+
+    sget-object v0, Ltej;->a:Lafb;
+
+    if-nez v0, :cond_3
+
+    goto :goto_2
+
+    :cond_3
+    sget-object v1, Lzm8;->o:Lzm8;
+
+    invoke-virtual {v0, v1}, Lafb;->b(Lzm8;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_4
+
+    const-string v3, "registerNetworkCallback, default network callback successfully registered"
+
+    invoke-virtual {v0, v1, p1, v3, v2}, Lafb;->c(Lzm8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    goto :goto_2
+
+    :catchall_1
+    move-exception p1
+
+    goto :goto_3
+
+    :cond_4
+    :goto_2
+    const/4 p1, 0x1
+
+    goto :goto_4
+
+    :goto_3
+    const-string v0, "Unable to register default network callback"
+
+    invoke-virtual {p0, v0, p1}, Liw3;->n(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    const/4 p1, 0x0
+
+    :goto_4
+    return p1
+.end method
+
+.method public final p(Landroid/net/Network;Landroid/net/NetworkCapabilities;)Lgw3;
+    .locals 18
+
+    move-object/from16 v0, p0
+
+    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+
+    move-result-wide v1
+
+    invoke-virtual {v0}, Liw3;->h()Landroid/net/Network;
+
+    move-result-object v3
+
+    const-class v4, Liw3;
+
+    const/4 v5, 0x0
+
+    if-nez v3, :cond_1
+
+    if-nez p1, :cond_0
+
+    invoke-virtual {v4}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "Early return in retrieveActiveInet cuz of activeNetwork is null"
+
+    invoke-static {v1, v2}, Ltej;->t(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object v5
+
+    :cond_0
+    move-object/from16 v6, p1
+
+    goto :goto_0
+
+    :cond_1
+    move-object v6, v3
+
+    :goto_0
+    invoke-virtual {v0, v3}, Liw3;->i(Landroid/net/Network;)Landroid/net/NetworkCapabilities;
+
+    move-result-object v7
+
+    if-nez v7, :cond_3
+
+    if-nez p2, :cond_2
+
+    invoke-virtual {v4}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "Early return in retrieveActiveInet cuz of getActiveNetworkCaps(activeNetwork) is null"
+
+    invoke-static {v1, v2}, Ltej;->t(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object v5
+
+    :cond_2
+    move-object/from16 v7, p2
+
+    :cond_3
+    if-eqz v3, :cond_4
+
+    move-object v3, v5
+
+    goto :goto_1
+
+    :cond_4
+    move-object v3, v6
+
+    :goto_1
+    invoke-virtual {v0, v3}, Liw3;->l(Landroid/net/Network;)Landroid/net/NetworkInfo;
+
+    move-result-object v3
+
+    invoke-virtual {v0}, Liw3;->k()Landroid/net/ConnectivityManager;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Landroid/net/ConnectivityManager;->isActiveNetworkMetered()Z
+
+    move-result v11
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v7, v4}, Landroid/net/NetworkCapabilities;->hasTransport(I)Z
+
+    move-result v8
+
+    const/4 v9, 0x1
+
+    if-nez v8, :cond_6
+
+    invoke-virtual {v7, v9}, Landroid/net/NetworkCapabilities;->hasTransport(I)Z
+
+    move-result v8
+
+    if-nez v8, :cond_6
+
+    const/4 v8, 0x3
+
+    invoke-virtual {v7, v8}, Landroid/net/NetworkCapabilities;->hasTransport(I)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_5
+
+    goto :goto_2
+
+    :cond_5
+    move v13, v4
+
+    goto :goto_3
+
+    :cond_6
+    :goto_2
+    move v13, v9
+
+    :goto_3
+    const/16 v8, 0x10
+
+    invoke-virtual {v7, v8}, Landroid/net/NetworkCapabilities;->hasCapability(I)Z
+
+    move-result v10
+
+    if-eqz v3, :cond_7
+
+    invoke-virtual {v3}, Landroid/net/NetworkInfo;->isRoaming()Z
+
+    move-result v8
+
+    if-ne v8, v9, :cond_7
+
+    move v12, v9
+
+    goto :goto_4
+
+    :cond_7
+    move v12, v4
+
+    :goto_4
+    const/4 v8, 0x4
+
+    invoke-virtual {v7, v8}, Landroid/net/NetworkCapabilities;->hasTransport(I)Z
+
+    move-result v14
+
+    invoke-virtual {v7, v8}, Landroid/net/NetworkCapabilities;->hasTransport(I)Z
+
+    move-result v8
+
+    if-nez v8, :cond_9
+
+    if-eqz v3, :cond_8
+
+    invoke-virtual {v3}, Landroid/net/NetworkInfo;->isConnected()Z
+
+    move-result v8
+
+    if-ne v8, v9, :cond_8
+
+    goto :goto_6
+
+    :cond_8
+    move v9, v4
+
+    goto :goto_6
+
+    :cond_9
+    iget-object v8, v0, Liw3;->o:Ljava/lang/String;
+
+    sget-object v15, Ltej;->a:Lafb;
+
+    if-nez v15, :cond_a
+
+    goto :goto_5
+
+    :cond_a
+    sget-object v4, Lzm8;->o:Lzm8;
+
+    invoke-virtual {v15, v4}, Lafb;->b(Lzm8;)Z
+
+    move-result v16
+
+    if-eqz v16, :cond_b
+
+    const-string v9, "retrieveInet, VPN detected"
+
+    invoke-virtual {v15, v4, v8, v9, v5}, Lafb;->c(Lzm8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_b
+    :goto_5
+    if-eqz v3, :cond_c
+
+    invoke-virtual {v3}, Landroid/net/NetworkInfo;->isConnected()Z
+
+    move-result v4
+
+    const/4 v8, 0x1
+
+    if-ne v4, v8, :cond_c
+
+    if-eqz v13, :cond_c
+
+    move v9, v8
+
+    goto :goto_6
+
+    :cond_c
+    const/4 v9, 0x0
+
+    :goto_6
+    iget-object v4, v0, Liw3;->o:Ljava/lang/String;
+
+    sget-object v8, Ltej;->a:Lafb;
+
+    if-nez v8, :cond_d
+
+    goto :goto_7
+
+    :cond_d
+    sget-object v15, Lzm8;->d:Lzm8;
+
+    invoke-virtual {v8, v15}, Lafb;->b(Lzm8;)Z
+
+    move-result v16
+
+    if-eqz v16, :cond_e
+
+    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+
+    move-result-wide v16
+
+    sub-long v1, v16, v1
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    const-string v0, "retrieveInet, took="
+
+    invoke-direct {v5, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v5, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v0, "\nnet="
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, "\ncaps="
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, "\ninfo="
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v8, v15, v4, v0, v1}, Lafb;->c(Lzm8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_e
+    :goto_7
+    new-instance v8, Lgw3;
+
+    invoke-direct/range {v8 .. v14}, Lgw3;-><init>(ZZZZZZ)V
+
+    return-object v8
+.end method
+
+.method public final q(Lgw3;)V
+    .locals 7
+
+    iget-object v0, p0, Liw3;->n:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lgw3;
+
+    invoke-static {v0, p1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    iget-object p1, p0, Liw3;->o:Ljava/lang/String;
+
+    const-string v0, "inet equals!"
+
+    invoke-static {p1, v0}, Ltej;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+
+    :cond_0
+    iget-object v1, p0, Liw3;->n:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {v1, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+
+    iget-boolean v0, v0, Lgw3;->f:Z
+
+    iget-boolean v1, p1, Lgw3;->f:Z
+
+    const/4 v2, 0x0
+
+    if-eq v0, v1, :cond_5
+
+    iget-object v0, p0, Liw3;->o:Ljava/lang/String;
+
+    sget-object v1, Ltej;->a:Lafb;
+
+    if-nez v1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    sget-object v3, Lzm8;->c:Lzm8;
+
+    invoke-virtual {v1, v3}, Lafb;->b(Lzm8;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_2
+
+    iget-boolean v4, p1, Lgw3;->f:Z
+
+    const-string v5, "updateInet, vpn changed to "
+
+    const-string v6, ", reset dns ..."
+
+    invoke-static {v5, v6, v4}, Ljye;->k(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v1, v3, v0, v4, v2}, Lafb;->c(Lzm8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_2
+    :goto_0
+    iget-object v0, p0, Liw3;->e:Lj88;
+
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ll45;
+
+    iget-object v1, v0, Ll45;->d:Ljava/lang/String;
+
+    sget-object v3, Ltej;->a:Lafb;
+
+    if-nez v3, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    sget-object v4, Lzm8;->d:Lzm8;
+
+    invoke-virtual {v3, v4}, Lafb;->b(Lzm8;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_4
+
+    const-string v5, "reset"
+
+    invoke-virtual {v3, v4, v1, v5, v2}, Lafb;->c(Lzm8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_4
+    :goto_1
+    iget-object v1, v0, Ll45;->e:Ljava/util/concurrent/locks/ReentrantLock;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
+
+    const/4 v3, 0x1
+
+    :try_start_0
+    invoke-static {v0, v2, v3}, Ll45;->a(Ll45;Len3;I)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    goto :goto_2
+
+    :catchall_0
+    move-exception p1
+
+    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    throw p1
+
+    :cond_5
+    :goto_2
+    iget-object v0, p0, Liw3;->n:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lgw3;
+
+    iget-boolean v0, v0, Lgw3;->a:Z
+
+    const-string v1, "updateInet, "
+
+    if-eqz v0, :cond_7
+
+    iget-object v0, p0, Liw3;->o:Ljava/lang/String;
+
+    sget-object v3, Ltej;->a:Lafb;
+
+    if-nez v3, :cond_6
+
+    goto :goto_3
+
+    :cond_6
+    sget-object v4, Lzm8;->o:Lzm8;
+
+    invoke-virtual {v3, v4}, Lafb;->b(Lzm8;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_8
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v5, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p1, " has working connection"
+
+    invoke-virtual {v5, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v3, v4, v0, p1, v2}, Lafb;->c(Lzm8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto :goto_3
+
+    :cond_7
+    iget-object v0, p0, Liw3;->o:Ljava/lang/String;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p1, " has no working connection"
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v0, p1}, Ltej;->t(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_8
+    :goto_3
+    iget-object p1, p0, Liw3;->b:Ljava/util/concurrent/ExecutorService;
+
+    new-instance v0, Ljy1;
+
+    const/16 v1, 0x18
+
+    invoke-direct {v0, v1, p0}, Ljy1;-><init>(ILjava/lang/Object;)V
+
+    invoke-interface {p1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    return-void
 .end method

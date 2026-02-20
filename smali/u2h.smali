@@ -2,291 +2,266 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lw58;
+
 
 # instance fields
-.field public final a:Ljava/lang/CharSequence;
+.field public final a:Lw58;
 
-.field public final b:Ljava/lang/CharSequence;
+.field public final b:Lw58;
 
-.field public final c:Ly61;
+.field public final c:Lw58;
 
-.field public final d:Z
-
-.field public final e:Z
-
-.field public final f:Z
-
-.field public final g:Z
+.field public final d:Lcxe;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/CharSequence;Ljava/lang/String;Ly61;ZZZZ)V
-    .locals 0
+.method public constructor <init>(Lw58;Lw58;Lw58;)V
+    .locals 6
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lu2h;->a:Ljava/lang/CharSequence;
+    iput-object p1, p0, Lu2h;->a:Lw58;
 
-    iput-object p2, p0, Lu2h;->b:Ljava/lang/CharSequence;
+    iput-object p2, p0, Lu2h;->b:Lw58;
 
-    iput-object p3, p0, Lu2h;->c:Ly61;
+    iput-object p3, p0, Lu2h;->c:Lw58;
 
-    iput-boolean p4, p0, Lu2h;->d:Z
+    const/4 p1, 0x0
 
-    iput-boolean p5, p0, Lu2h;->e:Z
+    new-array p1, p1, [Lzwe;
 
-    iput-boolean p6, p0, Lu2h;->f:Z
+    new-instance p2, Ld8e;
 
-    iput-boolean p7, p0, Lu2h;->g:Z
+    const/16 p3, 0x16
+
+    invoke-direct {p2, p3, p0}, Ld8e;-><init>(ILjava/lang/Object;)V
+
+    const-string v1, "kotlin.Triple"
+
+    invoke-static {v1}, Ld7g;->G(Ljava/lang/CharSequence;)Z
+
+    move-result p3
+
+    if-nez p3, :cond_0
+
+    new-instance v5, Lif3;
+
+    invoke-direct {v5, v1}, Lif3;-><init>(Ljava/lang/String;)V
+
+    invoke-interface {p2, v5}, Lks6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    new-instance v0, Lcxe;
+
+    sget-object v2, Lo7g;->b:Lo7g;
+
+    iget-object p2, v5, Lif3;->b:Ljava/util/ArrayList;
+
+    invoke-virtual {p2}, Ljava/util/ArrayList;->size()I
+
+    move-result v3
+
+    invoke-static {p1}, Lnu;->F([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v4
+
+    invoke-direct/range {v0 .. v5}, Lcxe;-><init>(Ljava/lang/String;Ldxj;ILjava/util/List;Lif3;)V
+
+    iput-object v0, p0, Lu2h;->d:Lcxe;
 
     return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "Blank serial names are prohibited"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final a(Lj6g;Ljava/lang/Object;)V
     .locals 4
 
-    const/4 v0, 0x1
+    check-cast p2, Lt2h;
 
-    if-ne p0, p1, :cond_0
+    iget-object v0, p0, Lu2h;->d:Lcxe;
 
-    return v0
+    invoke-virtual {p1, v0}, Lj6g;->a(Lzwe;)Lj6g;
 
-    :cond_0
-    instance-of v1, p1, Lu2h;
+    move-result-object p1
 
-    const/4 v2, 0x0
+    iget-object v1, p0, Lu2h;->a:Lw58;
 
-    if-nez v1, :cond_1
+    check-cast v1, Lw58;
 
-    return v2
+    iget-object v2, p2, Lt2h;->a:Ljava/lang/Object;
 
-    :cond_1
-    check-cast p1, Lu2h;
+    const/4 v3, 0x0
 
-    iget-object v1, p0, Lu2h;->a:Ljava/lang/CharSequence;
+    invoke-virtual {p1, v0, v3, v1, v2}, Lj6g;->p(Lzwe;ILw58;Ljava/lang/Object;)V
 
-    iget-object v3, p1, Lu2h;->a:Ljava/lang/CharSequence;
+    iget-object v1, p0, Lu2h;->b:Lw58;
 
-    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    check-cast v1, Lw58;
 
-    move-result v1
+    iget-object v2, p2, Lt2h;->b:Ljava/lang/Object;
 
-    if-nez v1, :cond_2
+    const/4 v3, 0x1
 
-    return v2
+    invoke-virtual {p1, v0, v3, v1, v2}, Lj6g;->p(Lzwe;ILw58;Ljava/lang/Object;)V
 
-    :cond_2
-    iget-object v1, p0, Lu2h;->b:Ljava/lang/CharSequence;
+    iget-object v1, p0, Lu2h;->c:Lw58;
 
-    iget-object v3, p1, Lu2h;->b:Ljava/lang/CharSequence;
+    check-cast v1, Lw58;
 
-    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iget-object p2, p2, Lt2h;->c:Ljava/lang/Object;
 
-    move-result v1
+    const/4 v2, 0x2
 
-    if-nez v1, :cond_3
+    invoke-virtual {p1, v0, v2, v1, p2}, Lj6g;->p(Lzwe;ILw58;Ljava/lang/Object;)V
 
-    return v2
+    invoke-virtual {p1}, Lj6g;->u()V
 
-    :cond_3
-    iget-object v1, p0, Lu2h;->c:Ly61;
-
-    iget-object v3, p1, Lu2h;->c:Ly61;
-
-    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-boolean v1, p0, Lu2h;->d:Z
-
-    iget-boolean v3, p1, Lu2h;->d:Z
-
-    if-eq v1, v3, :cond_5
-
-    return v2
-
-    :cond_5
-    iget-boolean v1, p0, Lu2h;->e:Z
-
-    iget-boolean v3, p1, Lu2h;->e:Z
-
-    if-eq v1, v3, :cond_6
-
-    return v2
-
-    :cond_6
-    iget-boolean v1, p0, Lu2h;->f:Z
-
-    iget-boolean v3, p1, Lu2h;->f:Z
-
-    if-eq v1, v3, :cond_7
-
-    return v2
-
-    :cond_7
-    iget-boolean v1, p0, Lu2h;->g:Z
-
-    iget-boolean p1, p1, Lu2h;->g:Z
-
-    if-eq v1, p1, :cond_8
-
-    return v2
-
-    :cond_8
-    return v0
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 4
+.method public final b(Lzm4;)Ljava/lang/Object;
+    .locals 8
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lu2h;->d:Lcxe;
 
-    iget-object v1, p0, Lu2h;->a:Ljava/lang/CharSequence;
+    invoke-interface {p1, v0}, Lzm4;->r(Lzwe;)Liq3;
 
-    if-nez v1, :cond_0
+    move-result-object p1
 
-    move v1, v0
+    sget-object v1, Ldaj;->a:Ljava/lang/Object;
+
+    move-object v2, v1
+
+    move-object v3, v2
+
+    move-object v4, v3
+
+    :goto_0
+    invoke-interface {p1, v0}, Liq3;->e(Lzwe;)I
+
+    move-result v5
+
+    const/4 v6, -0x1
+
+    if-eq v5, v6, :cond_3
+
+    const/4 v6, 0x0
+
+    if-eqz v5, :cond_2
+
+    const/4 v7, 0x1
+
+    if-eq v5, v7, :cond_1
+
+    const/4 v4, 0x2
+
+    if-ne v5, v4, :cond_0
+
+    iget-object v5, p0, Lu2h;->c:Lw58;
+
+    check-cast v5, Lw58;
+
+    invoke-interface {p1, v0, v4, v5, v6}, Liq3;->p(Lzwe;ILw58;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v4
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    new-instance p1, Lkotlinx/serialization/SerializationException;
 
-    move-result v1
+    const-string v0, "Unexpected index "
 
-    :goto_0
-    const/16 v2, 0x1f
-
-    mul-int/2addr v1, v2
-
-    iget-object v3, p0, Lu2h;->b:Ljava/lang/CharSequence;
-
-    if-nez v3, :cond_1
-
-    move v3, v0
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
-
-    move-result v3
-
-    :goto_1
-    add-int/2addr v1, v3
-
-    mul-int/2addr v1, v2
-
-    iget-object v3, p0, Lu2h;->c:Ly61;
-
-    if-nez v3, :cond_2
-
-    goto :goto_2
-
-    :cond_2
-    invoke-virtual {v3}, Ly61;->hashCode()I
-
-    move-result v0
-
-    :goto_2
-    add-int/2addr v1, v0
-
-    mul-int/2addr v1, v2
-
-    iget-boolean v0, p0, Lu2h;->d:Z
-
-    invoke-static {v1, v2, v0}, Lcbh;->j(IIZ)I
-
-    move-result v0
-
-    iget-boolean v1, p0, Lu2h;->e:Z
-
-    invoke-static {v0, v2, v1}, Lcbh;->j(IIZ)I
-
-    move-result v0
-
-    iget-boolean v1, p0, Lu2h;->f:Z
-
-    invoke-static {v0, v2, v1}, Lcbh;->j(IIZ)I
-
-    move-result v0
-
-    iget-boolean v1, p0, Lu2h;->g:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "UnavailableCallState(callDescription="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lu2h;->a:Ljava/lang/CharSequence;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", callStateStatus="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lu2h;->b:Ljava/lang/CharSequence;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", chatInfo="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lu2h;->c:Ly61;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isCallBackAvailable="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lu2h;->d:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isVideoCall="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isBlockedLabelVisible="
-
-    const-string v2, ", isSendMessageAvailable="
-
-    iget-boolean v3, p0, Lu2h;->e:Z
-
-    iget-boolean v4, p0, Lu2h;->f:Z
-
-    invoke-static {v1, v2, v0, v3, v4}, Lt02;->r(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
-
-    const-string v1, ")"
-
-    iget-boolean v2, p0, Lu2h;->g:Z
-
-    invoke-static {v0, v2, v1}, Lt02;->j(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
+    invoke-static {v5, v0}, Ltx8;->g(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    iget-object v3, p0, Lu2h;->b:Lw58;
+
+    check-cast v3, Lw58;
+
+    invoke-interface {p1, v0, v7, v3, v6}, Liq3;->p(Lzwe;ILw58;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    goto :goto_0
+
+    :cond_2
+    const/4 v2, 0x0
+
+    iget-object v5, p0, Lu2h;->a:Lw58;
+
+    check-cast v5, Lw58;
+
+    invoke-interface {p1, v0, v2, v5, v6}, Liq3;->p(Lzwe;ILw58;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    goto :goto_0
+
+    :cond_3
+    invoke-interface {p1, v0}, Liq3;->m(Lzwe;)V
+
+    if-eq v2, v1, :cond_6
+
+    if-eq v3, v1, :cond_5
+
+    if-eq v4, v1, :cond_4
+
+    new-instance p1, Lt2h;
+
+    invoke-direct {p1, v2, v3, v4}, Lt2h;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+
+    return-object p1
+
+    :cond_4
+    new-instance p1, Lkotlinx/serialization/SerializationException;
+
+    const-string v0, "Element \'third\' is missing"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_5
+    new-instance p1, Lkotlinx/serialization/SerializationException;
+
+    const-string v0, "Element \'second\' is missing"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_6
+    new-instance p1, Lkotlinx/serialization/SerializationException;
+
+    const-string v0, "Element \'first\' is missing"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final d()Lzwe;
+    .locals 1
+
+    iget-object v0, p0, Lu2h;->d:Lcxe;
 
     return-object v0
 .end method

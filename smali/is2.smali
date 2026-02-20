@@ -1,61 +1,109 @@
 .class public final Lis2;
-.super Lo84;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Lhm2;
+.field public final a:Z
 
-.field public Y:Lgr2;
-
-.field public Z:Z
-
-.field public d:I
-
-.field public o:I
-
-.field public synthetic t0:Ljava/lang/Object;
-
-.field public final synthetic u0:Lws2;
-
-.field public v0:I
+.field public final b:Z
 
 
 # direct methods
-.method public constructor <init>(Lws2;Lo84;)V
+.method public constructor <init>(ZZ)V
     .locals 0
 
-    iput-object p1, p0, Lis2;->u0:Lws2;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-boolean p1, p0, Lis2;->a:Z
+
+    iput-boolean p2, p0, Lis2;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lis2;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lis2;
+
+    iget-boolean v1, p0, Lis2;->a:Z
+
+    iget-boolean v3, p1, Lis2;->a:Z
+
+    if-eq v1, v3, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-boolean v1, p0, Lis2;->b:Z
+
+    iget-boolean p1, p1, Lis2;->b:Z
+
+    if-eq v1, p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
     .locals 2
 
-    iput-object p1, p0, Lis2;->t0:Ljava/lang/Object;
+    iget-boolean v0, p0, Lis2;->a:Z
 
-    iget p1, p0, Lis2;->v0:I
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    const/high16 v0, -0x80000000
+    move-result v0
 
-    or-int/2addr p1, v0
+    mul-int/lit8 v0, v0, 0x1f
 
-    iput p1, p0, Lis2;->v0:I
+    iget-boolean v1, p0, Lis2;->b:Z
 
-    const/4 p1, 0x0
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    const/4 v0, 0x0
+    move-result v1
 
-    iget-object v1, p0, Lis2;->u0:Lws2;
+    add-int/2addr v1, v0
 
-    invoke-virtual {v1, p1, v0, p1, p0}, Lws2;->M(ILc49;ILo84;)Ljava/lang/Object;
+    return v1
+.end method
 
-    move-result-object p1
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    return-object p1
+    const-string v0, ", hasNext="
+
+    const-string v1, ")"
+
+    const-string v2, "LoadingState(hasPrev="
+
+    iget-boolean v3, p0, Lis2;->a:Z
+
+    iget-boolean v4, p0, Lis2;->b:Z
+
+    invoke-static {v2, v3, v0, v4, v1}, Lkb0;->j(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

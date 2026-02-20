@@ -1,57 +1,88 @@
 .class public final Lz6h;
-.super Lo84;
+.super Lhmf;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:J
-
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lo7h;
-
-.field public d:Lj2;
-
-.field public o:Licg;
-
-.field public t0:I
+.field public final synthetic E0:I
 
 
 # direct methods
-.method public constructor <init>(Lo7h;Lo84;)V
+.method public synthetic constructor <init>(Landroid/view/View;I)V
     .locals 0
 
-    iput-object p1, p0, Lz6h;->Z:Lo7h;
+    iput p2, p0, Lz6h;->E0:I
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1}, Lpyd;-><init>(Landroid/view/View;)V
+
+    return-void
+.end method
+
+.method private final E(Lmg8;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final F(Lmg8;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final G(Lmg8;)V
+    .locals 0
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final y(Lmg8;)V
+    .locals 2
 
-    iput-object p1, p0, Lz6h;->Y:Ljava/lang/Object;
+    iget v0, p0, Lz6h;->E0:I
 
-    iget p1, p0, Lz6h;->t0:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    :pswitch_0
+    return-void
 
-    or-int/2addr p1, v0
+    :pswitch_1
+    instance-of v0, p1, Lw6h;
 
-    iput p1, p0, Lz6h;->t0:I
+    if-nez v0, :cond_0
 
-    const/4 p1, 0x0
+    goto :goto_0
 
-    const-wide/16 v0, 0x0
+    :cond_0
+    iget-object v0, p0, Lpyd;->a:Landroid/view/View;
 
-    iget-object v2, p0, Lz6h;->Z:Lo7h;
+    check-cast v0, Landroid/widget/TextView;
 
-    invoke-virtual {v2, p1, v0, v1, p0}, Lo7h;->k(Lj2;JLo84;)Ljava/lang/Object;
+    check-cast p1, Lw6h;
+
+    iget-object p1, p1, Lw6h;->a:Lcpg;
+
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-virtual {p1, v1}, Lhpg;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
 
     move-result-object p1
 
-    return-object p1
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    :goto_0
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+        :pswitch_0
+    .end packed-switch
 .end method

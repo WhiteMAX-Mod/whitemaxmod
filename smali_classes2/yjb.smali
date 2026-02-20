@@ -1,100 +1,43 @@
-.class public final Lyjb;
+.class public abstract Lyjb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lbkb;
-
 
 # static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lyjb;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public static final a:I
 
-.field public static final a:Lyjb;
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lyjb;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lyjb;->a:Lyjb;
-
-    new-instance v0, Lxjb;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lxjb;-><init>(I)V
-
-    sput-object v0, Lyjb;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final describeContents()I
     .locals 1
 
-    const/4 v0, 0x0
+    sget v0, Lekd;->oneme_contact_not_found_bottom_sheet_negative_button:I
 
-    return v0
-.end method
+    sput v0, Lyjb;->a:I
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    sget v0, Lekd;->oneme_contact_not_found_bottom_sheet_subtitle:I
 
-    const/4 v0, 0x1
+    sput v0, Lyjb;->b:I
 
-    if-ne p0, p1, :cond_0
+    sget v0, Lekd;->oneme_contact_not_found_bottom_sheet_title:I
 
-    return v0
+    sput v0, Lyjb;->c:I
 
-    :cond_0
-    instance-of p1, p1, Lyjb;
+    sget v0, Lekd;->oneme_found_contact_is_self_error:I
 
-    if-nez p1, :cond_1
+    sput v0, Lyjb;->d:I
 
-    const/4 p1, 0x0
+    sget v0, Lekd;->oneme_invite_by_phone_search_action:I
 
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, 0x61724f48
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "Chevron"
-
-    return-object v0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
-
-    const/4 p2, 0x1
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    sput v0, Lyjb;->e:I
 
     return-void
 .end method

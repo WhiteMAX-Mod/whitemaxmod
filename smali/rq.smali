@@ -3,104 +3,47 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lem4;
+.implements Landroid/widget/PopupWindow$OnDismissListener;
 
 
-# static fields
-.field public static final a:Lrq;
+# instance fields
+.field public final synthetic a:Lmq;
 
-.field public static final b:Lsq;
+.field public final synthetic b:Lsq;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lsq;Lmq;)V
+    .locals 0
 
-    new-instance v0, Lrq;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lrq;->b:Lsq;
 
-    sput-object v0, Lrq;->a:Lrq;
-
-    sget-object v0, Lsq;->b:Lsq;
-
-    sput-object v0, Lrq;->b:Lsq;
+    iput-object p2, p0, Lrq;->a:Lmq;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Llm4;
-    .locals 1
+.method public final onDismiss()V
+    .locals 2
 
-    sget-object v0, Lrq;->b:Lsq;
+    iget-object v0, p0, Lrq;->b:Lsq;
 
-    return-object v0
-.end method
+    iget-object v0, v0, Lsq;->Q0:Lvq;
 
-.method public final b(Ljava/lang/String;Lhm4;Landroid/os/Bundle;)Lom4;
-    .locals 9
+    invoke-virtual {v0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
-    sget-object v0, Lrq;->b:Lsq;
+    move-result-object v0
 
-    iget-object v0, v0, Llm4;->a:Ljava/util/LinkedHashSet;
+    if-eqz v0, :cond_0
 
-    invoke-interface {v0, p2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
+    iget-object v1, p0, Lrq;->a:Lmq;
 
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const/4 p1, 0x0
-
-    return-object p1
+    invoke-virtual {v0, v1}, Landroid/view/ViewTreeObserver;->removeGlobalOnLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
     :cond_0
-    sget-object v0, Lsq;->c:Lhm4;
-
-    invoke-virtual {p2, v0}, Lhm4;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    new-instance v7, Le;
-
-    const/4 v0, 0x1
-
-    invoke-direct {v7, v0}, Le;-><init>(I)V
-
-    new-instance v1, Lom4;
-
-    const/4 v6, 0x0
-
-    const/16 v8, 0x10
-
-    const/4 v5, 0x1
-
-    move-object v2, p1
-
-    move-object v3, p2
-
-    move-object v4, p3
-
-    invoke-direct/range {v1 .. v8}, Lom4;-><init>(Ljava/lang/String;Lhm4;Landroid/os/Bundle;ILmm4;Lnm4;I)V
-
-    return-object v1
-
-    :cond_1
-    move-object v3, p2
-
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string p2, "Unknown route="
-
-    invoke-static {p2, v3}, Lt02;->i(Ljava/lang/String;Lhm4;)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    return-void
 .end method

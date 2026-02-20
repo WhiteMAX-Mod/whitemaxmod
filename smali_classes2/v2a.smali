@@ -1,51 +1,37 @@
 .class public final Lv2a;
-.super Lo84;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic X:Lh3a;
-
-.field public Y:I
-
-.field public d:J
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic a:Lone/me/messages/list/ui/MessagesListWidget;
 
 
 # direct methods
-.method public constructor <init>(Lh3a;Lo84;)V
+.method public constructor <init>(Lone/me/messages/list/ui/MessagesListWidget;)V
     .locals 0
 
-    iput-object p1, p0, Lv2a;->X:Lh3a;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lv2a;->a:Lone/me/messages/list/ui/MessagesListWidget;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final a(J)V
+    .locals 1
 
-    iput-object p1, p0, Lv2a;->o:Ljava/lang/Object;
+    sget-object v0, Lone/me/messages/list/ui/MessagesListWidget;->g1:[Lv58;
 
-    iget p1, p0, Lv2a;->Y:I
+    iget-object v0, p0, Lv2a;->a:Lone/me/messages/list/ui/MessagesListWidget;
 
-    const/high16 v0, -0x80000000
+    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->U0()Lh2a;
 
-    or-int/2addr p1, v0
+    move-result-object v0
 
-    iput p1, p0, Lv2a;->Y:I
+    invoke-virtual {v0, p1, p2}, Lh2a;->K(J)V
 
-    iget-object p1, p0, Lv2a;->X:Lh3a;
-
-    const-wide/16 v0, 0x0
-
-    invoke-static {p1, v0, v1, p0}, Lh3a;->a(Lh3a;JLo84;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

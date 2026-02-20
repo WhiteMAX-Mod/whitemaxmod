@@ -1,158 +1,115 @@
 .class public final Loq7;
-.super Lp6g;
+.super Ld3;
 .source "SourceFile"
-
-# interfaces
-.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/login/inputname/InputNameScreen;
+.field public final synthetic c:I
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic d:Lpq7;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/login/inputname/InputNameScreen;)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/Integer;Lpq7;)V
+    .locals 1
 
-    iput-object p2, p0, Loq7;->X:Lone/me/login/inputname/InputNameScreen;
+    const/4 v0, 0x1
 
-    const/4 p2, 0x2
+    iput v0, p0, Loq7;->c:I
 
-    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Loq7;->d:Lpq7;
+
+    const/16 p2, 0xd
+
+    .line 2
+    invoke-direct {p0, p2, p1}, Ld3;-><init>(ILjava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Lpq7;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Loq7;->c:I
+
+    iput-object p1, p0, Loq7;->d:Lpq7;
+
+    const/16 p1, 0xd
+
+    const/4 v0, 0x0
+
+    .line 1
+    invoke-direct {p0, p1, v0}, Ld3;-><init>(ILjava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final Y(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 1
 
-    check-cast p1, Liq7;
+    iget v0, p0, Loq7;->c:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Loq7;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-static {p1, p2}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result-object p1
+    move-result v0
 
-    check-cast p1, Loq7;
+    if-nez v0, :cond_0
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    check-cast p2, Ljava/lang/Number;
 
-    invoke-virtual {p1, p2}, Loq7;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p2}, Ljava/lang/Number;->intValue()I
 
-    return-object p2
-.end method
+    move-result p2
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    check-cast p1, Ljava/lang/Number;
 
-    new-instance v0, Loq7;
+    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
 
-    iget-object v1, p0, Loq7;->X:Lone/me/login/inputname/InputNameScreen;
+    iget-object p1, p0, Loq7;->d:Lpq7;
 
-    invoke-direct {v0, p2, v1}, Loq7;-><init>(Lkotlin/coroutines/Continuation;Lone/me/login/inputname/InputNameScreen;)V
+    iget-object v0, p1, Lpq7;->d:Landroid/graphics/Paint;
 
-    iput-object p1, v0, Loq7;->o:Ljava/lang/Object;
+    invoke-virtual {v0, p2}, Landroid/graphics/Paint;->setColor(I)V
 
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    iget-object v0, p0, Loq7;->o:Ljava/lang/Object;
-
-    check-cast v0, Liq7;
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    if-eqz v0, :cond_1
-
-    iget-object p1, p0, Loq7;->X:Lone/me/login/inputname/InputNameScreen;
-
-    invoke-static {p1}, Lg3j;->d(La94;)V
-
-    sget-object v1, Lone/me/login/inputname/InputNameScreen;->B0:[Lz28;
-
-    iget-object v1, p1, Lone/me/login/inputname/InputNameScreen;->Z:Ljava/lang/Object;
-
-    invoke-interface {v1}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lkt7;
-
-    iget-object v0, v0, Liq7;->b:Lutd;
-
-    invoke-virtual {p1}, La94;->getArgs()Landroid/os/Bundle;
-
-    move-result-object p1
-
-    const-string v2, "screen:input_name:avatars"
-
-    const-class v3, Lahc;
-
-    invoke-static {p1, v2, v3}, Ly9j;->b(Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_0
-
-    check-cast p1, Landroid/os/Parcelable;
-
-    check-cast p1, Lahc;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v2, Lone/me/login/neuroavatars/NeuroAvatarsScreen;
-
-    invoke-direct {v2, v0, p1}, Lone/me/login/neuroavatars/NeuroAvatarsScreen;-><init>(Lutd;Lahc;)V
-
-    const/4 p1, 0x0
-
-    invoke-static {v2, p1, p1}, Lwmj;->a(La94;Lih;Lih;)Lz4e;
-
-    move-result-object p1
-
-    const-string v0, "InputNameScreen"
-
-    invoke-virtual {v1, p1, v0}, Lkt7;->b(Lz4e;Ljava/lang/String;)V
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     :cond_0
-    invoke-virtual {v3}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+    return-void
+
+    :pswitch_0
+    invoke-static {p1, p2}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    check-cast p2, Landroid/graphics/drawable/Drawable;
+
+    check-cast p1, Landroid/graphics/drawable/Drawable;
+
+    if-eqz p2, :cond_1
+
+    iget-object p1, p0, Loq7;->d:Lpq7;
+
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
     move-result-object p1
 
-    const-string v0, "No value passed for key screen:input_name:avatars of type "
-
-    const-string v1, " in bundle"
-
-    invoke-static {v0, p1, v1}, Lj27;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    invoke-virtual {p2, p1}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
 
     :cond_1
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+    return-void
 
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    nop
 
-    throw p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

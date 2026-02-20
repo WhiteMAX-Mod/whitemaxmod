@@ -1,133 +1,77 @@
 .class public final Liyd;
-.super Ljava/lang/Object;
+.super Lg0;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:I
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Liyd;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public final b:I
+
+# instance fields
+.field public c:Landroid/os/Parcelable;
 
 
 # direct methods
-.method public constructor <init>(II)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lf0;
 
-    iput p1, p0, Liyd;->a:I
+    const/4 v1, 0x6
 
-    iput p2, p0, Liyd;->b:I
+    invoke-direct {v0, v1}, Lf0;-><init>(I)V
 
-    const-string v0, "Check failed."
-
-    if-lez p1, :cond_1
-
-    if-lez p2, :cond_0
+    sput-object v0, Liyd;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
+.end method
+
+.method public constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Lg0;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
+
+    if-eqz p2, :cond_0
+
+    goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    const-class p2, Landroidx/recyclerview/widget/a;
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p2}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
-    throw p1
+    move-result-object p2
 
-    :cond_1
-    new-instance p1, Ljava/lang/IllegalStateException;
+    :goto_0
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    move-result-object p1
 
-    throw p1
+    iput-object p1, p0, Liyd;->c:Landroid/os/Parcelable;
+
+    return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 1
 
-    const/4 v0, 0x1
+    invoke-super {p0, p1, p2}, Lg0;->writeToParcel(Landroid/os/Parcel;I)V
 
-    if-ne p1, p0, :cond_0
+    iget-object p2, p0, Liyd;->c:Landroid/os/Parcelable;
 
-    return v0
+    const/4 v0, 0x0
 
-    :cond_0
-    instance-of v1, p1, Liyd;
+    invoke-virtual {p1, p2, v0}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    if-eqz v1, :cond_1
-
-    check-cast p1, Liyd;
-
-    iget v1, p1, Liyd;->a:I
-
-    iget v2, p0, Liyd;->a:I
-
-    if-ne v2, v1, :cond_1
-
-    iget v1, p0, Liyd;->b:I
-
-    iget p1, p1, Liyd;->b:I
-
-    if-ne v1, p1, :cond_1
-
-    return v0
-
-    :cond_1
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget v0, p0, Liyd;->a:I
-
-    add-int/lit8 v0, v0, 0x1f
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget v1, p0, Liyd;->b:I
-
-    add-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    iget v0, p0, Liyd;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    iget v1, p0, Liyd;->b:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    filled-new-array {v0, v1}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    const/4 v1, 0x2
-
-    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    const-string v2, "%dx%d"
-
-    invoke-static {v1, v2, v0}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

@@ -3,855 +3,373 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lqxd;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:Ljava/util/HashMap;
+.field public final synthetic a:I
 
-.field public final b:Ljava/util/HashMap;
+.field public final synthetic b:Landroidx/recyclerview/widget/RecyclerView;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public synthetic constructor <init>(Landroidx/recyclerview/widget/RecyclerView;I)V
     .locals 0
 
-    return-void
-.end method
+    iput p2, p0, Lrxd;->a:I
 
-.method public constructor <init>()V
-    .locals 1
+    iput-object p1, p0, Lrxd;->b:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v0, p0, Lrxd;->a:Ljava/util/HashMap;
-
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v0, p0, Lrxd;->b:Ljava/util/HashMap;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final declared-synchronized a(Lcj7;Ljava/lang/String;Z)V
-    .locals 3
+.method public final run()V
+    .locals 17
 
-    monitor-enter p0
+    move-object/from16 v0, p0
 
-    :try_start_0
-    sget-object p1, Lmt5;->a:Ldl8;
+    iget v1, v0, Lrxd;->a:I
 
-    const/4 p3, 0x2
+    iget-object v3, v0, Lrxd;->b:Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-interface {p1, p3}, Ldl8;->h(I)Z
+    packed-switch v1, :pswitch_data_0
 
-    move-result p1
+    iget-object v1, v3, Landroidx/recyclerview/widget/RecyclerView;->Z0:Lxxd;
 
-    if-eqz p1, :cond_0
+    if-eqz v1, :cond_b
 
-    iget-object p1, p0, Lrxd;->b:Ljava/util/HashMap;
+    check-cast v1, Lct4;
 
-    invoke-virtual {p1, p2}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v5, v1, Lct4;->h:Ljava/util/ArrayList;
 
-    move-result-object p1
+    invoke-virtual {v5}, Ljava/util/ArrayList;->isEmpty()Z
 
-    check-cast p1, Ljava/lang/Long;
+    move-result v6
 
-    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+    iget-object v7, v1, Lct4;->j:Ljava/util/ArrayList;
 
-    move-result-wide v0
+    invoke-virtual {v7}, Ljava/util/ArrayList;->isEmpty()Z
 
-    const-string p3, "time %d: onRequestSuccess: {requestId: %s, elapsedTime: %d ms}"
+    move-result v8
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    iget-object v9, v1, Lct4;->k:Ljava/util/ArrayList;
+
+    invoke-virtual {v9}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v10
+
+    iget-object v11, v1, Lct4;->i:Ljava/util/ArrayList;
+
+    invoke-virtual {v11}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v12
+
+    if-eqz v6, :cond_0
+
+    if-eqz v8, :cond_0
+
+    if-eqz v12, :cond_0
+
+    if-eqz v10, :cond_0
+
+    goto/16 :goto_6
+
+    :cond_0
+    invoke-virtual {v5}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v13
+
+    :goto_0
+    invoke-interface {v13}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v14
+
+    if-eqz v14, :cond_1
+
+    invoke-interface {v13}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v14
+
+    check-cast v14, Lpyd;
+
+    iget-object v15, v14, Lpyd;->a:Landroid/view/View;
+
+    invoke-virtual {v15}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
 
     move-result-object v2
 
-    invoke-static {v0, v1, p1}, Ldgj;->w(JLjava/lang/Long;)J
+    iget-object v4, v1, Lct4;->q:Ljava/util/ArrayList;
 
-    move-result-wide v0
+    invoke-virtual {v4, v14}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    move-object/from16 v16, v5
 
-    move-result-object p1
+    iget-wide v4, v1, Lxxd;->d:J
 
-    invoke-static {p3, v2, p2, p1}, Lmt5;->g(Ljava/lang/String;Ljava/lang/Long;Ljava/lang/String;Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    monitor-exit p0
-
-    return-void
-
-    :goto_1
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
-.end method
-
-.method public final declared-synchronized b(Lcj7;Ljava/lang/Object;Ljava/lang/String;Z)V
-    .locals 4
-
-    monitor-enter p0
-
-    :try_start_0
-    sget-object p1, Lmt5;->a:Ldl8;
-
-    const/4 v0, 0x2
-
-    invoke-interface {p1, v0}, Ldl8;->h(I)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    const-string p1, "RequestLoggingListener"
-
-    const-string v1, "time %d: onRequestSubmit: {requestId: %s, callerContext: %s, isPrefetch: %b}"
-
-    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
-
-    move-result-wide v2
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v2
-
-    invoke-static {p4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p4
-
-    sget-object v3, Lmt5;->a:Ldl8;
-
-    invoke-interface {v3, v0}, Ldl8;->h(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    sget-object v0, Lmt5;->a:Ldl8;
-
-    filled-new-array {v2, p3, p2, p4}, [Ljava/lang/Object;
-
-    move-result-object p2
-
-    const/4 p4, 0x0
-
-    invoke-static {p4, v1, p2}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-interface {v0, p1, p2}, Ldl8;->v(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_0
-    iget-object p1, p0, Lrxd;->b:Ljava/util/HashMap;
-
-    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
-
-    move-result-wide v0
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p2
-
-    invoke-virtual {p1, p3, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    monitor-exit p0
-
-    return-void
-
-    :goto_1
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
-.end method
-
-.method public final declared-synchronized c(Lcj7;Ljava/lang/String;Ljava/lang/Throwable;Z)V
-    .locals 4
-
-    monitor-enter p0
-
-    :try_start_0
-    sget-object p1, Lmt5;->a:Ldl8;
-
-    const/4 p4, 0x5
-
-    invoke-interface {p1, p4}, Ldl8;->h(I)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    iget-object p1, p0, Lrxd;->b:Ljava/util/HashMap;
-
-    invoke-virtual {p1, p2}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Long;
-
-    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
-
-    move-result-wide v0
-
-    const-string p4, "RequestLoggingListener"
-
-    const-string v2, "time %d: onRequestFailure: {requestId: %s, elapsedTime: %d ms, throwable: %s}"
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v3
-
-    invoke-static {v0, v1, p1}, Ldgj;->w(JLjava/lang/Long;)J
-
-    move-result-wide v0
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p1
-
-    invoke-virtual {p3}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
-
-    move-result-object p3
-
-    filled-new-array {v3, p2, p1, p3}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    invoke-static {p4, v2, p1}, Lmt5;->m(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    monitor-exit p0
-
-    return-void
-
-    :goto_1
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
-.end method
-
-.method public final declared-synchronized d(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 5
-
-    monitor-enter p0
-
-    :try_start_0
-    sget-object v0, Lmt5;->a:Ldl8;
-
-    const/4 v1, 0x2
-
-    invoke-interface {v0, v1}, Ldl8;->h(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-static {p1, p2}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
-
-    move-result-object v0
-
-    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
-
-    move-result-wide v1
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v3
-
-    iget-object v4, p0, Lrxd;->a:Ljava/util/HashMap;
-
-    invoke-virtual {v4, v0, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v0, "time %d: onProducerStart: {requestId: %s, producer: %s}"
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    invoke-static {v0, v1, p1, p2}, Lmt5;->g(Ljava/lang/String;Ljava/lang/Long;Ljava/lang/String;Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    monitor-exit p0
-
-    return-void
-
-    :goto_1
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
-.end method
-
-.method public final declared-synchronized e(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 6
-
-    monitor-enter p0
-
-    :try_start_0
-    sget-object v0, Lmt5;->a:Ldl8;
-
-    const/4 v1, 0x2
-
-    invoke-interface {v0, v1}, Ldl8;->h(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-static {p1, p2}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lrxd;->a:Ljava/util/HashMap;
-
-    invoke-virtual {v1, v0}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Long;
-
-    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
-
-    move-result-wide v1
-
-    const-string v3, "RequestLoggingListener"
-
-    const-string v4, "time %d: onProducerFinishWithCancellation: {requestId: %s, stage: %s, elapsedTime: %d ms, extraMap: %s}"
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v5
-
-    invoke-static {v1, v2, v0}, Ldgj;->w(JLjava/lang/Long;)J
-
-    move-result-wide v0
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    filled-new-array {v5, p1, p2, v0, v1}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    invoke-static {v3, v4, p1}, Lmt5;->h(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    monitor-exit p0
-
-    return-void
-
-    :goto_1
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
-.end method
-
-.method public final declared-synchronized f(Ljava/lang/String;Ljava/lang/String;Z)V
-    .locals 6
-
-    monitor-enter p0
-
-    :try_start_0
-    sget-object v0, Lmt5;->a:Ldl8;
-
-    const/4 v1, 0x2
-
-    invoke-interface {v0, v1}, Ldl8;->h(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-static {p1, p2}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lrxd;->a:Ljava/util/HashMap;
-
-    invoke-virtual {v1, v0}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Long;
-
-    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
-
-    move-result-wide v1
-
-    const-string v3, "RequestLoggingListener"
-
-    const-string v4, "time %d: onUltimateProducerReached: {requestId: %s, producer: %s, elapsedTime: %d ms, success: %b}"
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v5
-
-    invoke-static {v1, v2, v0}, Ldgj;->w(JLjava/lang/Long;)J
-
-    move-result-wide v0
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    invoke-static {p3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p3
-
-    filled-new-array {v5, p1, p2, v0, p3}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    invoke-static {v3, v4, p1}, Lmt5;->h(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    monitor-exit p0
-
-    return-void
-
-    :goto_1
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
-.end method
-
-.method public final declared-synchronized g(Ljava/lang/String;)V
-    .locals 9
-
-    const-string v0, "NetworkFetchProducer"
-
-    const-string v1, "intermediate_result"
-
-    monitor-enter p0
-
-    :try_start_0
-    sget-object v2, Lmt5;->a:Ldl8;
-
-    const/4 v3, 0x2
-
-    invoke-interface {v2, v3}, Ldl8;->h(I)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-static {p1, v0}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
-
-    move-result-object v2
-
-    iget-object v3, p0, Lrxd;->a:Ljava/util/HashMap;
-
-    invoke-virtual {v3, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/Long;
-
-    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
-
-    move-result-wide v3
-
-    const-string v5, "RequestLoggingListener"
-
-    const-string v6, "time %d: onProducerEvent: {requestId: %s, stage: %s, eventName: %s; elapsedTime: %d ms}"
-
-    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
-
-    move-result-wide v7
-
-    invoke-static {v7, v8}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v7
-
-    invoke-static {v3, v4, v2}, Ldgj;->w(JLjava/lang/Long;)J
-
-    move-result-wide v2
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v2
-
-    filled-new-array {v7, p1, v0, v1, v2}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    invoke-static {v5, v6, p1}, Lmt5;->h(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    monitor-exit p0
-
-    return-void
-
-    :goto_1
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
-.end method
-
-.method public final h(Ljava/lang/String;)Z
-    .locals 1
-
-    const/4 p1, 0x2
-
-    sget-object v0, Lmt5;->a:Ldl8;
-
-    invoke-interface {v0, p1}, Ldl8;->h(I)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final declared-synchronized i(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
-    .locals 6
-
-    monitor-enter p0
-
-    :try_start_0
-    sget-object v0, Lmt5;->a:Ldl8;
-
-    const/4 v1, 0x2
-
-    invoke-interface {v0, v1}, Ldl8;->h(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-static {p1, p2}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lrxd;->a:Ljava/util/HashMap;
-
-    invoke-virtual {v1, v0}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Long;
-
-    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
-
-    move-result-wide v1
-
-    const-string v3, "RequestLoggingListener"
-
-    const-string v4, "time %d: onProducerFinishWithSuccess: {requestId: %s, producer: %s, elapsedTime: %d ms, extraMap: %s}"
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v5
-
-    invoke-static {v1, v2, v0}, Ldgj;->w(JLjava/lang/Long;)J
-
-    move-result-wide v0
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    filled-new-array {v5, p1, p2, v0, p3}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    invoke-static {v3, v4, p1}, Lmt5;->h(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    monitor-exit p0
-
-    return-void
-
-    :goto_1
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
-.end method
-
-.method public final declared-synchronized j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;Ljava/util/Map;)V
-    .locals 12
-
-    monitor-enter p0
-
-    :try_start_0
-    sget-object v0, Lmt5;->a:Ldl8;
-
-    const/4 v1, 0x5
-
-    invoke-interface {v0, v1}, Ldl8;->h(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-static/range {p1 .. p2}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
-
-    move-result-object v0
-
-    iget-object v2, p0, Lrxd;->a:Ljava/util/HashMap;
-
-    invoke-virtual {v2, v0}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Long;
-
-    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
-
-    move-result-wide v2
-
-    const-string v4, "RequestLoggingListener"
-
-    const-string v5, "time %d: onProducerFinishWithFailure: {requestId: %s, stage: %s, elapsedTime: %d ms, extraMap: %s, throwable: %s}"
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v6
-
-    invoke-static {v2, v3, v0}, Ldgj;->w(JLjava/lang/Long;)J
-
-    move-result-wide v2
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v9
-
-    invoke-virtual {p3}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
-
-    move-result-object v11
-
-    move-object v7, p1
-
-    move-object v8, p2
-
-    move-object/from16 v10, p4
-
-    filled-new-array/range {v6 .. v11}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p2, Lmt5;->a:Ldl8;
-
-    invoke-interface {p2, v1}, Ldl8;->h(I)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_0
-
-    sget-object p2, Lmt5;->a:Ldl8;
-
-    const/4 v0, 0x0
-
-    invoke-static {v0, v5, p1}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-interface {p2, v4, p1, p3}, Ldl8;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    move-object p1, v0
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    monitor-exit p0
-
-    return-void
-
-    :goto_1
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
-.end method
-
-.method public final declared-synchronized k(Ljava/lang/String;)V
-    .locals 5
-
-    monitor-enter p0
-
-    :try_start_0
-    sget-object v0, Lmt5;->a:Ldl8;
-
-    const/4 v1, 0x2
-
-    invoke-interface {v0, v1}, Ldl8;->h(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lrxd;->b:Ljava/util/HashMap;
-
-    invoke-virtual {v0, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Long;
-
-    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
-
-    move-result-wide v1
-
-    const-string v3, "time %d: onRequestCancellation: {requestId: %s, elapsedTime: %d ms}"
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-virtual {v2, v4, v5}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
 
     move-result-object v4
 
-    invoke-static {v1, v2, v0}, Ldgj;->w(JLjava/lang/Long;)J
+    const/4 v5, 0x0
 
-    move-result-wide v0
+    invoke-virtual {v4, v5}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    move-result-object v4
 
-    move-result-object v0
+    new-instance v5, Lxs4;
 
-    invoke-static {v3, v4, p1, v0}, Lmt5;->g(Ljava/lang/String;Ljava/lang/Long;Ljava/lang/String;Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-direct {v5, v1, v14, v2, v15}, Lxs4;-><init>(Lct4;Lpyd;Landroid/view/ViewPropertyAnimator;Landroid/view/View;)V
+
+    invoke-virtual {v4, v5}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/view/ViewPropertyAnimator;->start()V
+
+    move-object/from16 v5, v16
 
     goto :goto_0
 
-    :catchall_0
-    move-exception p1
+    :cond_1
+    move-object/from16 v16, v5
+
+    invoke-virtual/range {v16 .. v16}, Ljava/util/ArrayList;->clear()V
+
+    if-nez v8, :cond_3
+
+    new-instance v2, Ljava/util/ArrayList;
+
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-virtual {v2, v7}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
+
+    iget-object v4, v1, Lct4;->m:Ljava/util/ArrayList;
+
+    invoke-virtual {v4, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    invoke-virtual {v7}, Ljava/util/ArrayList;->clear()V
+
+    new-instance v4, Lws4;
+
+    const/4 v5, 0x0
+
+    invoke-direct {v4, v1, v2, v5}, Lws4;-><init>(Lct4;Ljava/util/ArrayList;I)V
+
+    if-nez v6, :cond_2
+
+    invoke-virtual {v2, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lbt4;
+
+    iget-object v2, v2, Lbt4;->a:Lpyd;
+
+    iget-object v2, v2, Lpyd;->a:Landroid/view/View;
+
+    iget-wide v13, v1, Lxxd;->d:J
+
+    sget-object v5, Lh0i;->a:Ljava/util/WeakHashMap;
+
+    invoke-virtual {v2, v4, v13, v14}, Landroid/view/View;->postOnAnimationDelayed(Ljava/lang/Runnable;J)V
 
     goto :goto_1
 
-    :cond_0
-    :goto_0
-    monitor-exit p0
+    :cond_2
+    invoke-virtual {v4}, Lws4;->run()V
+
+    :cond_3
+    :goto_1
+    if-nez v10, :cond_5
+
+    new-instance v2, Ljava/util/ArrayList;
+
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-virtual {v2, v9}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
+
+    iget-object v4, v1, Lct4;->n:Ljava/util/ArrayList;
+
+    invoke-virtual {v4, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    invoke-virtual {v9}, Ljava/util/ArrayList;->clear()V
+
+    new-instance v4, Lbu6;
+
+    const/16 v5, 0x9
+
+    const/4 v7, 0x0
+
+    invoke-direct {v4, v1, v2, v7, v5}, Lbu6;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
+
+    if-nez v6, :cond_4
+
+    invoke-virtual {v2, v7}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lat4;
+
+    iget-object v2, v2, Lat4;->a:Lpyd;
+
+    iget-object v2, v2, Lpyd;->a:Landroid/view/View;
+
+    iget-wide v13, v1, Lxxd;->d:J
+
+    sget-object v5, Lh0i;->a:Ljava/util/WeakHashMap;
+
+    invoke-virtual {v2, v4, v13, v14}, Landroid/view/View;->postOnAnimationDelayed(Ljava/lang/Runnable;J)V
+
+    goto :goto_2
+
+    :cond_4
+    invoke-virtual {v4}, Lbu6;->run()V
+
+    :cond_5
+    :goto_2
+    if-nez v12, :cond_b
+
+    new-instance v2, Ljava/util/ArrayList;
+
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-virtual {v2, v11}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
+
+    iget-object v4, v1, Lct4;->l:Ljava/util/ArrayList;
+
+    invoke-virtual {v4, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    invoke-virtual {v11}, Ljava/util/ArrayList;->clear()V
+
+    new-instance v4, Lws4;
+
+    const/4 v5, 0x1
+
+    invoke-direct {v4, v1, v2, v5}, Lws4;-><init>(Lct4;Ljava/util/ArrayList;I)V
+
+    if-eqz v6, :cond_7
+
+    if-eqz v8, :cond_7
+
+    if-nez v10, :cond_6
+
+    goto :goto_3
+
+    :cond_6
+    invoke-virtual {v4}, Lws4;->run()V
+
+    goto :goto_6
+
+    :cond_7
+    :goto_3
+    const-wide/16 v11, 0x0
+
+    if-nez v6, :cond_8
+
+    iget-wide v5, v1, Lxxd;->d:J
+
+    goto :goto_4
+
+    :cond_8
+    move-wide v5, v11
+
+    :goto_4
+    if-nez v8, :cond_9
+
+    invoke-virtual {v1}, Lxxd;->e()J
+
+    move-result-wide v7
+
+    goto :goto_5
+
+    :cond_9
+    move-wide v7, v11
+
+    :goto_5
+    if-nez v10, :cond_a
+
+    iget-wide v11, v1, Lxxd;->f:J
+
+    :cond_a
+    invoke-static {v7, v8, v11, v12}, Ljava/lang/Math;->max(JJ)J
+
+    move-result-wide v7
+
+    add-long/2addr v7, v5
+
+    const/4 v5, 0x0
+
+    invoke-virtual {v2, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lpyd;
+
+    iget-object v1, v1, Lpyd;->a:Landroid/view/View;
+
+    sget-object v2, Lh0i;->a:Ljava/util/WeakHashMap;
+
+    invoke-virtual {v1, v4, v7, v8}, Landroid/view/View;->postOnAnimationDelayed(Ljava/lang/Runnable;J)V
+
+    goto :goto_7
+
+    :cond_b
+    :goto_6
+    const/4 v5, 0x0
+
+    :goto_7
+    iput-boolean v5, v3, Landroidx/recyclerview/widget/RecyclerView;->x1:Z
 
     return-void
 
-    :goto_1
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    :pswitch_0
+    iget-boolean v1, v3, Landroidx/recyclerview/widget/RecyclerView;->H0:Z
 
-    throw p1
+    if-eqz v1, :cond_f
+
+    invoke-virtual {v3}, Landroid/view/View;->isLayoutRequested()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_c
+
+    goto :goto_8
+
+    :cond_c
+    iget-boolean v1, v3, Landroidx/recyclerview/widget/RecyclerView;->F0:Z
+
+    if-nez v1, :cond_d
+
+    invoke-virtual {v3}, Landroidx/recyclerview/widget/RecyclerView;->requestLayout()V
+
+    goto :goto_8
+
+    :cond_d
+    iget-boolean v1, v3, Landroidx/recyclerview/widget/RecyclerView;->K0:Z
+
+    if-eqz v1, :cond_e
+
+    const/4 v5, 0x1
+
+    iput-boolean v5, v3, Landroidx/recyclerview/widget/RecyclerView;->J0:Z
+
+    goto :goto_8
+
+    :cond_e
+    invoke-virtual {v3}, Landroidx/recyclerview/widget/RecyclerView;->s()V
+
+    :cond_f
+    :goto_8
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

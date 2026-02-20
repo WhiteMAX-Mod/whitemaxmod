@@ -4,18 +4,18 @@
 
 
 # direct methods
-.method public static a(Lbr6;)Lkpe;
-    .locals 1
+.method public static a(Landroid/widget/AutoCompleteTextView;)V
+    .locals 0
 
-    new-instance v0, Lkpe;
+    invoke-virtual {p0}, Landroid/widget/AutoCompleteTextView;->refreshAutoCompleteResults()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    return-void
+.end method
 
-    invoke-static {p0, v0, v0}, Lo1j;->b(Lbr6;Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public static b(Landroidx/appcompat/widget/SearchView$SearchAutoComplete;I)V
+    .locals 0
 
-    move-result-object p0
+    invoke-virtual {p0, p1}, Landroid/widget/AutoCompleteTextView;->setInputMethodMode(I)V
 
-    iput-object p0, v0, Lkpe;->d:Lkotlin/coroutines/Continuation;
-
-    return-object v0
+    return-void
 .end method

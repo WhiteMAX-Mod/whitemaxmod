@@ -3,46 +3,46 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lxth;
-.implements Luig;
+.implements Lh1i;
+.implements Ljqg;
 
 
 # annotations
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000\u0094\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\r\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0007\n\u0002\u0008\n\n\u0002\u0010\u0000\n\u0002\u0008\t\n\u0002\u0010\u000e\n\u0002\u0008\t\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u000b\u0008\u0016\u0018\u00002\u00020\u00012\u00020\u00022\u00020\u0003:\u0002M\u0006B-\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u0012\u0008\u0008\u0002\u0010\u0007\u001a\u00020\u0006\u0012\u0008\u0008\u0002\u0010\t\u001a\u00020\u0008\u0012\u0008\u0008\u0002\u0010\n\u001a\u00020\u0008\u00a2\u0006\u0004\u0008\u000b\u0010\u000cJ/\u0010\u0013\u001a\u00020\u00122\u0006\u0010\u000e\u001a\u00020\r2\u0006\u0010\u000f\u001a\u00020\r2\u0006\u0010\u0011\u001a\u00020\u00102\u0006\u0010\u0007\u001a\u00020\u0006H\u0002\u00a2\u0006\u0004\u0008\u0013\u0010\u0014J\u0017\u0010\u0017\u001a\u00020\u00122\u0006\u0010\u0016\u001a\u00020\u0015H\u0016\u00a2\u0006\u0004\u0008\u0017\u0010\u0018J\u0017\u0010\u0019\u001a\u00020\u00122\u0006\u0010\u0016\u001a\u00020\u0015H\u0016\u00a2\u0006\u0004\u0008\u0019\u0010\u0018J\u0017\u0010\u001c\u001a\u00020\u00122\u0006\u0010\u001b\u001a\u00020\u001aH\u0016\u00a2\u0006\u0004\u0008\u001c\u0010\u001dJ9\u0010\'\u001a\u00020\"2\u0006\u0010\u001f\u001a\u00020\u001e2\u0006\u0010!\u001a\u00020 2\u0006\u0010#\u001a\u00020\"2\u0006\u0010$\u001a\u00020\"2\u0008\u0010&\u001a\u0004\u0018\u00010%H\u0016\u00a2\u0006\u0004\u0008\'\u0010(JW\u00100\u001a\u00020\u00122\u0006\u0010*\u001a\u00020)2\u0006\u0010!\u001a\u00020 2\u0006\u0010#\u001a\u00020\"2\u0006\u0010$\u001a\u00020\"2\u0006\u0010,\u001a\u00020+2\u0006\u0010-\u001a\u00020\"2\u0006\u0010.\u001a\u00020\"2\u0006\u0010/\u001a\u00020\"2\u0006\u0010\u001f\u001a\u00020\u001eH\u0016\u00a2\u0006\u0004\u00080\u00101J\'\u00104\u001a\u00020\u00122\u0008\u0008\u0001\u00102\u001a\u00020\"2\u0006\u0010\u0007\u001a\u00020\u00062\u0006\u00103\u001a\u00020\u0008\u00a2\u0006\u0004\u00084\u00105J\u001a\u00108\u001a\u00020\u00082\u0008\u00107\u001a\u0004\u0018\u000106H\u0096\u0002\u00a2\u0006\u0004\u00088\u00109J\u000f\u0010:\u001a\u00020\"H\u0016\u00a2\u0006\u0004\u0008:\u0010;R\u0017\u0010\u0007\u001a\u00020\u00068\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0007\u0010<\u001a\u0004\u0008=\u0010>R\u0014\u0010\t\u001a\u00020\u00088\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\t\u0010?R\u0014\u0010\n\u001a\u00020\u00088\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\n\u0010?R\u0014\u0010A\u001a\u00020@8\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008A\u0010BR\u001a\u0010C\u001a\u00020\r8\u0004X\u0084\u0004\u00a2\u0006\u000c\n\u0004\u0008C\u0010D\u001a\u0004\u0008E\u0010FR\u0014\u0010G\u001a\u00020\r8\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008G\u0010DR\u0014\u0010H\u001a\u00020\u00108\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008H\u0010IR\"\u0010K\u001a\u000e\u0012\u0004\u0012\u00020\u0015\u0012\u0004\u0012\u00020\u00120J8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008K\u0010LR\u001c\u0010N\u001a\u0008\u0018\u00010MR\u00020\u00008\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008N\u0010OR\u0016\u0010P\u001a\u00020\"8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008P\u0010QR\u0016\u0010R\u001a\u00020\u00068\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008R\u0010<R\"\u0010S\u001a\u00020\u00088\u0004@\u0004X\u0084\u000e\u00a2\u0006\u0012\n\u0004\u0008S\u0010?\u001a\u0004\u0008T\u0010U\"\u0004\u0008V\u0010W\u00a8\u0006X"
+        "\u0000\u0094\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\r\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0007\n\u0002\u0008\r\n\u0002\u0010\u0000\n\u0002\u0008\t\n\u0002\u0010\u000e\n\u0002\u0008\t\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u000c\u0008\u0016\u0018\u0000 Z2\u00020\u00012\u00020\u00022\u00020\u0003:\u0003P\u0006[B-\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u0012\u0008\u0008\u0002\u0010\u0007\u001a\u00020\u0006\u0012\u0008\u0008\u0002\u0010\t\u001a\u00020\u0008\u0012\u0008\u0008\u0002\u0010\n\u001a\u00020\u0008\u00a2\u0006\u0004\u0008\u000b\u0010\u000cJ/\u0010\u0013\u001a\u00020\u00122\u0006\u0010\u000e\u001a\u00020\r2\u0006\u0010\u000f\u001a\u00020\r2\u0006\u0010\u0011\u001a\u00020\u00102\u0006\u0010\u0007\u001a\u00020\u0006H\u0002\u00a2\u0006\u0004\u0008\u0013\u0010\u0014J\u0017\u0010\u0017\u001a\u00020\u00122\u0006\u0010\u0016\u001a\u00020\u0015H\u0016\u00a2\u0006\u0004\u0008\u0017\u0010\u0018J\u0017\u0010\u0019\u001a\u00020\u00122\u0006\u0010\u0016\u001a\u00020\u0015H\u0016\u00a2\u0006\u0004\u0008\u0019\u0010\u0018J\u0017\u0010\u001c\u001a\u00020\u00122\u0006\u0010\u001b\u001a\u00020\u001aH\u0016\u00a2\u0006\u0004\u0008\u001c\u0010\u001dJ9\u0010\'\u001a\u00020\"2\u0006\u0010\u001f\u001a\u00020\u001e2\u0006\u0010!\u001a\u00020 2\u0006\u0010#\u001a\u00020\"2\u0006\u0010$\u001a\u00020\"2\u0008\u0010&\u001a\u0004\u0018\u00010%H\u0016\u00a2\u0006\u0004\u0008\'\u0010(JW\u00100\u001a\u00020\u00122\u0006\u0010*\u001a\u00020)2\u0006\u0010!\u001a\u00020 2\u0006\u0010#\u001a\u00020\"2\u0006\u0010$\u001a\u00020\"2\u0006\u0010,\u001a\u00020+2\u0006\u0010-\u001a\u00020\"2\u0006\u0010.\u001a\u00020\"2\u0006\u0010/\u001a\u00020\"2\u0006\u0010\u001f\u001a\u00020\u001eH\u0016\u00a2\u0006\u0004\u00080\u00101J\'\u00104\u001a\u00020\u00122\u0008\u0008\u0001\u00102\u001a\u00020\"2\u0006\u0010\u0007\u001a\u00020\u00062\u0006\u00103\u001a\u00020\u0008\u00a2\u0006\u0004\u00084\u00105J\u0015\u00107\u001a\u00020\u00122\u0006\u00106\u001a\u00020\u0008\u00a2\u0006\u0004\u00087\u00108J\u001a\u0010;\u001a\u00020\u00082\u0008\u0010:\u001a\u0004\u0018\u000109H\u0096\u0002\u00a2\u0006\u0004\u0008;\u0010<J\u000f\u0010=\u001a\u00020\"H\u0016\u00a2\u0006\u0004\u0008=\u0010>R\u0017\u0010\u0007\u001a\u00020\u00068\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0007\u0010?\u001a\u0004\u0008@\u0010AR\u0014\u0010\t\u001a\u00020\u00088\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\t\u0010BR\u0014\u0010\n\u001a\u00020\u00088\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\n\u0010BR\u0014\u0010D\u001a\u00020C8\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008D\u0010ER\u001a\u0010F\u001a\u00020\r8\u0004X\u0084\u0004\u00a2\u0006\u000c\n\u0004\u0008F\u0010G\u001a\u0004\u0008H\u0010IR\u0014\u0010J\u001a\u00020\r8\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008J\u0010GR\u0014\u0010K\u001a\u00020\u00108\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008K\u0010LR \u0010N\u001a\u000e\u0012\u0004\u0012\u00020\u0015\u0012\u0004\u0012\u00020\u00120M8\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008N\u0010OR\u0018\u0010Q\u001a\u00060PR\u00020\u00008\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008Q\u0010RR\u0016\u0010S\u001a\u00020\"8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008S\u0010TR\u0016\u0010U\u001a\u00020\u00068\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008U\u0010?R\"\u0010V\u001a\u00020\u00088\u0004@\u0004X\u0084\u000e\u00a2\u0006\u0012\n\u0004\u0008V\u0010B\u001a\u0004\u0008W\u0010X\"\u0004\u0008Y\u00108\u00a8\u0006\\"
     }
     d2 = {
         "Lone/me/sdk/uikit/common/span/FitFontImageSpan;",
         "Landroid/text/style/ImageSpan;",
-        "Lxth;",
-        "Luig;",
+        "Lh1i;",
+        "Ljqg;",
         "Landroid/graphics/drawable/Drawable;",
         "drawable",
-        "Lg56;",
+        "Lc76;",
         "scaleType",
         "",
         "shouldInvalidateSpan",
         "usePaintAlpha",
         "<init>",
-        "(Landroid/graphics/drawable/Drawable;Lg56;ZZ)V",
+        "(Landroid/graphics/drawable/Drawable;Lc76;ZZ)V",
         "Landroid/graphics/RectF;",
         "src",
         "dst",
         "Landroid/graphics/Rect;",
         "out",
-        "Lb3h;",
+        "Lmah;",
         "scaleRect",
-        "(Landroid/graphics/RectF;Landroid/graphics/RectF;Landroid/graphics/Rect;Lg56;)V",
+        "(Landroid/graphics/RectF;Landroid/graphics/RectF;Landroid/graphics/Rect;Lc76;)V",
         "Landroid/view/View;",
         "view",
         "attach",
         "(Landroid/view/View;)V",
         "detach",
-        "Lzlb;",
+        "Llob;",
         "newAttrs",
         "onThemeChanged",
-        "(Lzlb;)V",
+        "(Llob;)V",
         "Landroid/graphics/Paint;",
         "paint",
         "",
@@ -66,16 +66,19 @@
         "newSize",
         "needScale",
         "updateDrawableSize",
-        "(ILg56;Z)V",
+        "(ILc76;Z)V",
+        "overrideAlpha",
+        "setOverrideAlpha",
+        "(Z)V",
         "",
         "other",
         "equals",
         "(Ljava/lang/Object;)Z",
         "hashCode",
         "()I",
-        "Lg56;",
+        "Lc76;",
         "getScaleType",
-        "()Lg56;",
+        "()Lc76;",
         "Z",
         "",
         "tag",
@@ -90,9 +93,9 @@
         "Ljava/util/WeakHashMap;",
         "lastAttachedViews",
         "Ljava/util/WeakHashMap;",
-        "Lk56;",
-        "spanCallback",
-        "Lk56;",
+        "Lg76;",
+        "sharedSpanCallback",
+        "Lg76;",
         "customHeight",
         "I",
         "customScaleType",
@@ -100,7 +103,8 @@
         "getNeedCustomScale",
         "()Z",
         "setNeedCustomScale",
-        "(Z)V",
+        "Companion",
+        "b76",
         "common_release"
     }
     k = 0x1
@@ -113,21 +117,33 @@
 .end annotation
 
 
+# static fields
+.field private static final Companion:Lb76;
+
+.field private static final sharedPaintWithAlpha$delegate:Lj88;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lj88;"
+        }
+    .end annotation
+.end field
+
+
 # instance fields
 .field private customHeight:I
 
-.field private customScaleType:Lg56;
+.field private customScaleType:Lc76;
 
 .field private final drawableRect:Landroid/graphics/Rect;
 
 .field private final fontRect:Landroid/graphics/RectF;
 
-.field private lastAttachedViews:Ljava/util/WeakHashMap;
+.field private final lastAttachedViews:Ljava/util/WeakHashMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/WeakHashMap<",
             "Landroid/view/View;",
-            "Lb3h;",
+            "Lmah;",
             ">;"
         }
     .end annotation
@@ -135,11 +151,11 @@
 
 .field private needCustomScale:Z
 
-.field private final scaleType:Lg56;
+.field private final scaleType:Lc76;
+
+.field private final sharedSpanCallback:Lg76;
 
 .field private final shouldInvalidateSpan:Z
-
-.field private spanCallback:Lk56;
 
 .field private final tag:Ljava/lang/String;
 
@@ -149,14 +165,40 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/graphics/drawable/Drawable;Lg56;ZZ)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lb76;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->Companion:Lb76;
+
+    new-instance v0, Lyv5;
+
+    const/16 v1, 0xa
+
+    invoke-direct {v0, v1}, Lyv5;-><init>(I)V
+
+    const/4 v1, 0x3
+
+    invoke-static {v1, v0}, Lbdj;->d(ILis6;)Lj88;
+
+    move-result-object v0
+
+    sput-object v0, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->sharedPaintWithAlpha$delegate:Lj88;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/graphics/drawable/Drawable;Lc76;ZZ)V
     .locals 0
 
     .line 1
     invoke-direct {p0, p1}, Landroid/text/style/ImageSpan;-><init>(Landroid/graphics/drawable/Drawable;)V
 
     .line 2
-    iput-object p2, p0, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->scaleType:Lg56;
+    iput-object p2, p0, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->scaleType:Lc76;
 
     .line 3
     iput-boolean p3, p0, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->shouldInvalidateSpan:Z
@@ -204,31 +246,38 @@
 
     iput-object p1, p0, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->lastAttachedViews:Ljava/util/WeakHashMap;
 
+    .line 11
+    new-instance p3, Lg76;
+
+    invoke-direct {p3, p0, p1}, Lg76;-><init>(Lone/me/sdk/uikit/common/span/FitFontImageSpan;Ljava/util/WeakHashMap;)V
+
+    iput-object p3, p0, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->sharedSpanCallback:Lg76;
+
     const/4 p1, -0x1
 
-    .line 11
+    .line 12
     iput p1, p0, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->customHeight:I
 
-    .line 12
-    iput-object p2, p0, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->customScaleType:Lg56;
+    .line 13
+    iput-object p2, p0, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->customScaleType:Lc76;
 
     const/4 p1, 0x1
 
-    .line 13
+    .line 14
     iput-boolean p1, p0, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->needCustomScale:Z
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/graphics/drawable/Drawable;Lg56;ZZILso4;)V
+.method public synthetic constructor <init>(Landroid/graphics/drawable/Drawable;Lc76;ZZILfq4;)V
     .locals 0
 
     and-int/lit8 p6, p5, 0x2
 
     if-eqz p6, :cond_0
 
-    .line 14
-    sget-object p2, Lg56;->b:Lg56;
+    .line 15
+    sget-object p2, Lc76;->b:Lc76;
 
     :cond_0
     and-int/lit8 p6, p5, 0x4
@@ -244,11 +293,19 @@
 
     const/4 p4, 0x0
 
-    .line 15
+    .line 16
     :cond_2
-    invoke-direct {p0, p1, p2, p3, p4}, Lone/me/sdk/uikit/common/span/FitFontImageSpan;-><init>(Landroid/graphics/drawable/Drawable;Lg56;ZZ)V
+    invoke-direct {p0, p1, p2, p3, p4}, Lone/me/sdk/uikit/common/span/FitFontImageSpan;-><init>(Landroid/graphics/drawable/Drawable;Lc76;ZZ)V
 
     return-void
+.end method
+
+.method public static final synthetic access$getSharedPaintWithAlpha$delegate$cp()Lj88;
+    .locals 1
+
+    sget-object v0, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->sharedPaintWithAlpha$delegate:Lj88;
+
+    return-object v0
 .end method
 
 .method public static final synthetic access$getShouldInvalidateSpan$p(Lone/me/sdk/uikit/common/span/FitFontImageSpan;)Z
@@ -259,7 +316,17 @@
     return p0
 .end method
 
-.method private final scaleRect(Landroid/graphics/RectF;Landroid/graphics/RectF;Landroid/graphics/Rect;Lg56;)V
+.method public static synthetic b()Landroid/graphics/Paint;
+    .locals 1
+
+    invoke-static {}, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->sharedPaintWithAlpha_delegate$lambda$0()Landroid/graphics/Paint;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method private final scaleRect(Landroid/graphics/RectF;Landroid/graphics/RectF;Landroid/graphics/Rect;Lc76;)V
     .locals 5
 
     invoke-virtual {p1}, Landroid/graphics/RectF;->width()F
@@ -304,7 +371,7 @@
     move-result p1
 
     :goto_1
-    sget-object v1, Ll56;->$EnumSwitchMapping$0:[I
+    sget-object v1, Lh76;->$EnumSwitchMapping$0:[I
 
     invoke-virtual {p4}, Ljava/lang/Enum;->ordinal()I
 
@@ -685,6 +752,16 @@
     return-void
 .end method
 
+.method private static final sharedPaintWithAlpha_delegate$lambda$0()Landroid/graphics/Paint;
+    .locals 1
+
+    new-instance v0, Landroid/graphics/Paint;
+
+    invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
+
+    return-object v0
+.end method
+
 
 # virtual methods
 .method public attach(Landroid/view/View;)V
@@ -694,164 +771,170 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getCallback()Landroid/graphics/drawable/Drawable$Callback;
+    iget-object v1, p0, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->lastAttachedViews:Ljava/util/WeakHashMap;
+
+    sget-object v2, Lmah;->a:Lmah;
+
+    invoke-virtual {v1, p1, v2}, Ljava/util/WeakHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
     const/4 v2, 0x0
 
-    const/4 v3, 0x0
+    if-eqz v1, :cond_0
 
-    if-eqz v1, :cond_2
-
-    iget-object v1, p0, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->lastAttachedViews:Ljava/util/WeakHashMap;
-
-    sget-object v4, Lb3h;->a:Lb3h;
-
-    invoke-virtual {v1, p1, v4}, Ljava/util/WeakHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_2
-
-    iget-object p1, p0, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->tag:Ljava/lang/String;
-
-    sget-object v1, Lc5j;->a:Ledb;
-
-    if-nez v1, :cond_0
-
-    goto/16 :goto_5
-
-    :cond_0
-    sget-object v4, Lkk8;->d:Lkk8;
-
-    invoke-virtual {v1, v4}, Ledb;->b(Lkk8;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_b
-
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getCallback()Landroid/graphics/drawable/Drawable$Callback;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    const/4 v2, 0x1
-
-    :cond_1
-    const-string v0, "attach: callbackExists: "
-
-    invoke-static {v0, v2}, Lva9;->e(Ljava/lang/String;Z)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v4, p1, v0, v3}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-void
-
-    :cond_2
-    new-instance p1, Lk56;
-
-    iget-object v1, p0, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->lastAttachedViews:Ljava/util/WeakHashMap;
-
-    invoke-direct {p1, p0, v1}, Lk56;-><init>(Lone/me/sdk/uikit/common/span/FitFontImageSpan;Ljava/util/WeakHashMap;)V
-
-    iput-object p1, p0, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->spanCallback:Lk56;
-
-    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
-
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
-
-    instance-of p1, v0, Landroid/graphics/drawable/Animatable;
-
-    if-eqz p1, :cond_3
-
-    move-object p1, v0
-
-    check-cast p1, Landroid/graphics/drawable/Animatable;
+    const/4 v1, 0x1
 
     goto :goto_0
 
-    :cond_3
-    move-object p1, v3
+    :cond_0
+    move v1, v2
 
     :goto_0
-    if-eqz p1, :cond_4
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getCallback()Landroid/graphics/drawable/Drawable$Callback;
 
-    invoke-interface {p1}, Landroid/graphics/drawable/Animatable;->start()V
+    move-result-object v3
 
-    :cond_4
-    instance-of p1, v0, Lwth;
+    iget-object v4, p0, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->sharedSpanCallback:Lg76;
 
-    if-eqz p1, :cond_5
+    const/4 v5, 0x0
 
-    move-object p1, v0
+    if-ne v3, v4, :cond_4
 
-    check-cast p1, Lwth;
+    if-eqz v1, :cond_4
+
+    iget-object v1, p0, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->tag:Ljava/lang/String;
+
+    sget-object v2, Ltej;->a:Lafb;
+
+    if-nez v2, :cond_1
 
     goto :goto_1
 
-    :cond_5
-    move-object p1, v3
+    :cond_1
+    sget-object v3, Lzm8;->d:Lzm8;
 
+    invoke-virtual {v2, v3}, Lafb;->b(Lzm8;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_2
+
+    const-string v4, "attach: was attached before and callback not changed"
+
+    invoke-virtual {v2, v3, v1, v4, v5}, Lafb;->c(Lzm8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_2
     :goto_1
-    if-eqz p1, :cond_6
+    instance-of v1, v0, Lg1i;
 
-    invoke-interface {p1}, Lwth;->b()V
+    if-eqz v1, :cond_3
 
-    :cond_6
-    instance-of p1, v0, Landroid/graphics/drawable/LayerDrawable;
+    move-object v5, v0
 
-    if-eqz p1, :cond_7
+    check-cast v5, Lg1i;
 
-    check-cast v0, Landroid/graphics/drawable/LayerDrawable;
+    :cond_3
+    if-eqz v5, :cond_d
+
+    invoke-interface {v5, p1}, Lg1i;->a(Landroid/view/View;)V
+
+    return-void
+
+    :cond_4
+    invoke-virtual {v0, v4}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+
+    instance-of v1, v0, Landroid/graphics/drawable/Animatable;
+
+    if-eqz v1, :cond_5
+
+    move-object v1, v0
+
+    check-cast v1, Landroid/graphics/drawable/Animatable;
 
     goto :goto_2
 
-    :cond_7
-    move-object v0, v3
+    :cond_5
+    move-object v1, v5
 
     :goto_2
-    if-nez v0, :cond_8
+    if-eqz v1, :cond_6
 
-    goto :goto_5
+    invoke-interface {v1}, Landroid/graphics/drawable/Animatable;->start()V
 
-    :cond_8
-    invoke-virtual {v0}, Landroid/graphics/drawable/LayerDrawable;->getNumberOfLayers()I
+    :cond_6
+    instance-of v1, v0, Lg1i;
 
-    move-result p1
+    if-eqz v1, :cond_7
+
+    move-object v1, v0
+
+    check-cast v1, Lg1i;
+
+    goto :goto_3
+
+    :cond_7
+    move-object v1, v5
 
     :goto_3
-    if-ge v2, p1, :cond_b
+    if-eqz v1, :cond_8
 
-    invoke-virtual {v0, v2}, Landroid/graphics/drawable/LayerDrawable;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+    invoke-interface {v1, p1}, Lg1i;->a(Landroid/view/View;)V
 
-    move-result-object v1
+    :cond_8
+    instance-of v1, v0, Landroid/graphics/drawable/LayerDrawable;
 
-    instance-of v4, v1, Lwth;
+    if-eqz v1, :cond_9
 
-    if-eqz v4, :cond_9
-
-    check-cast v1, Lwth;
+    check-cast v0, Landroid/graphics/drawable/LayerDrawable;
 
     goto :goto_4
 
     :cond_9
-    move-object v1, v3
+    move-object v0, v5
 
     :goto_4
-    if-eqz v1, :cond_a
+    if-nez v0, :cond_a
 
-    invoke-interface {v1}, Lwth;->b()V
+    goto :goto_7
 
     :cond_a
-    add-int/lit8 v2, v2, 0x1
+    invoke-virtual {v0}, Landroid/graphics/drawable/LayerDrawable;->getNumberOfLayers()I
 
-    goto :goto_3
+    move-result v1
+
+    :goto_5
+    if-ge v2, v1, :cond_d
+
+    invoke-virtual {v0, v2}, Landroid/graphics/drawable/LayerDrawable;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v3
+
+    instance-of v4, v3, Lg1i;
+
+    if-eqz v4, :cond_b
+
+    check-cast v3, Lg1i;
+
+    goto :goto_6
 
     :cond_b
-    :goto_5
+    move-object v3, v5
+
+    :goto_6
+    if-eqz v3, :cond_c
+
+    invoke-interface {v3, p1}, Lg1i;->a(Landroid/view/View;)V
+
+    :cond_c
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_5
+
+    :cond_d
+    :goto_7
     return-void
 .end method
 
@@ -862,76 +945,74 @@
 
     invoke-virtual {v0, p1}, Ljava/util/WeakHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object p1, p0, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->lastAttachedViews:Ljava/util/WeakHashMap;
+    iget-object v0, p0, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->lastAttachedViews:Ljava/util/WeakHashMap;
 
-    invoke-virtual {p1}, Ljava/util/WeakHashMap;->isEmpty()Z
+    invoke-virtual {v0}, Ljava/util/WeakHashMap;->isEmpty()Z
 
-    move-result p1
+    move-result v0
 
-    if-nez p1, :cond_0
+    if-nez v0, :cond_0
 
-    return-void
+    goto :goto_6
 
     :cond_0
     invoke-virtual {p0}, Landroid/text/style/DynamicDrawableSpan;->getDrawable()Landroid/graphics/drawable/Drawable;
 
-    move-result-object p1
+    move-result-object v0
 
-    instance-of v0, p1, Landroid/graphics/drawable/Animatable;
+    instance-of v1, v0, Landroid/graphics/drawable/Animatable;
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    if-eqz v0, :cond_1
+    if-eqz v1, :cond_1
 
-    move-object v0, p1
+    move-object v1, v0
 
-    check-cast v0, Landroid/graphics/drawable/Animatable;
+    check-cast v1, Landroid/graphics/drawable/Animatable;
 
     goto :goto_0
 
     :cond_1
-    move-object v0, v1
+    move-object v1, v2
 
     :goto_0
-    if-eqz v0, :cond_2
+    if-eqz v1, :cond_2
 
-    invoke-interface {v0}, Landroid/graphics/drawable/Animatable;->stop()V
+    invoke-interface {v1}, Landroid/graphics/drawable/Animatable;->stop()V
 
     :cond_2
-    instance-of v0, p1, Lwth;
+    instance-of v1, v0, Lg1i;
 
-    if-eqz v0, :cond_3
+    if-eqz v1, :cond_3
 
-    move-object v0, p1
+    move-object v1, v0
 
-    check-cast v0, Lwth;
+    check-cast v1, Lg1i;
 
     goto :goto_1
 
     :cond_3
-    move-object v0, v1
+    move-object v1, v2
 
     :goto_1
-    if-eqz v0, :cond_4
+    if-eqz v1, :cond_4
 
-    invoke-interface {v0}, Lwth;->a()V
+    invoke-interface {v1, p1}, Lg1i;->c(Landroid/view/View;)V
 
     :cond_4
-    instance-of v0, p1, Landroid/graphics/drawable/LayerDrawable;
+    instance-of v1, v0, Landroid/graphics/drawable/LayerDrawable;
 
-    if-eqz v0, :cond_5
-
-    move-object v0, p1
+    if-eqz v1, :cond_5
 
     check-cast v0, Landroid/graphics/drawable/LayerDrawable;
 
     goto :goto_2
 
     :cond_5
-    move-object v0, v1
+    move-object v0, v2
 
     :goto_2
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
     if-eqz v0, :cond_6
 
@@ -942,49 +1023,46 @@
     goto :goto_3
 
     :cond_6
-    move v3, v2
+    move v3, v1
 
     :goto_3
-    if-ge v2, v3, :cond_a
+    if-ge v1, v3, :cond_a
 
     if-eqz v0, :cond_7
 
-    invoke-virtual {v0, v2}, Landroid/graphics/drawable/LayerDrawable;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v0, v1}, Landroid/graphics/drawable/LayerDrawable;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v4
 
     goto :goto_4
 
     :cond_7
-    move-object v4, v1
+    move-object v4, v2
 
     :goto_4
-    instance-of v5, v4, Lwth;
+    instance-of v5, v4, Lg1i;
 
     if-eqz v5, :cond_8
 
-    check-cast v4, Lwth;
+    check-cast v4, Lg1i;
 
     goto :goto_5
 
     :cond_8
-    move-object v4, v1
+    move-object v4, v2
 
     :goto_5
     if-eqz v4, :cond_9
 
-    invoke-interface {v4}, Lwth;->a()V
+    invoke-interface {v4, p1}, Lg1i;->c(Landroid/view/View;)V
 
     :cond_9
-    add-int/lit8 v2, v2, 0x1
+    add-int/lit8 v1, v1, 0x1
 
     goto :goto_3
 
     :cond_a
-    invoke-virtual {p1, v1}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
-
-    iput-object v1, p0, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->spanCallback:Lk56;
-
+    :goto_6
     return-void
 .end method
 
@@ -1024,7 +1102,19 @@
 
     move-result-object p4
 
-    new-instance p5, Landroid/graphics/Paint;
+    sget-object p5, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->Companion:Lb76;
+
+    invoke-virtual {p5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {}, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->access$getSharedPaintWithAlpha$delegate$cp()Lj88;
+
+    move-result-object p5
+
+    invoke-interface {p5}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object p5
+
+    check-cast p5, Landroid/graphics/Paint;
 
     move-object p6, p3
 
@@ -1034,7 +1124,17 @@
 
     move-result-object p6
 
-    invoke-direct {p5, p6}, Landroid/graphics/Paint;-><init>(Landroid/graphics/Paint;)V
+    invoke-virtual {p5, p6}, Landroid/graphics/Paint;->set(Landroid/graphics/Paint;)V
+
+    invoke-static {}, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->access$getSharedPaintWithAlpha$delegate$cp()Lj88;
+
+    move-result-object p5
+
+    invoke-interface {p5}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object p5
+
+    check-cast p5, Landroid/graphics/Paint;
 
     invoke-virtual {p9}, Landroid/graphics/Paint;->getAlpha()I
 
@@ -1048,9 +1148,31 @@
 
     move-result-object p3
 
+    invoke-static {}, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->access$getSharedPaintWithAlpha$delegate$cp()Lj88;
+
+    move-result-object p5
+
+    invoke-interface {p5}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object p5
+
+    check-cast p5, Landroid/graphics/Paint;
+
     const/4 p6, 0x0
 
     invoke-virtual {p1, p4, p6, p3, p5}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V
+
+    invoke-static {}, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->access$getSharedPaintWithAlpha$delegate$cp()Lj88;
+
+    move-result-object p3
+
+    invoke-interface {p3}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object p3
+
+    check-cast p3, Landroid/graphics/Paint;
+
+    invoke-virtual {p3}, Landroid/graphics/Paint;->reset()V
 
     goto :goto_0
 
@@ -1107,11 +1229,11 @@
     return v2
 
     :cond_1
-    iget-object v1, p0, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->scaleType:Lg56;
+    iget-object v1, p0, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->scaleType:Lc76;
 
     check-cast p1, Lone/me/sdk/uikit/common/span/FitFontImageSpan;
 
-    iget-object v3, p1, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->scaleType:Lg56;
+    iget-object v3, p1, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->scaleType:Lc76;
 
     if-eq v1, v3, :cond_2
 
@@ -1126,7 +1248,7 @@
 
     move-result-object p1
 
-    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -1154,10 +1276,10 @@
     return v0
 .end method
 
-.method public final getScaleType()Lg56;
+.method public final getScaleType()Lc76;
     .locals 1
 
-    iget-object v0, p0, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->scaleType:Lg56;
+    iget-object v0, p0, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->scaleType:Lc76;
 
     return-object v0
 .end method
@@ -1229,9 +1351,9 @@
 
     iget-object v0, p0, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->drawableRect:Landroid/graphics/Rect;
 
-    iget-object v1, p0, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->customScaleType:Lg56;
+    iget-object v1, p0, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->customScaleType:Lc76;
 
-    invoke-direct {p0, p3, p4, v0, v1}, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->scaleRect(Landroid/graphics/RectF;Landroid/graphics/RectF;Landroid/graphics/Rect;Lg56;)V
+    invoke-direct {p0, p3, p4, v0, v1}, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->scaleRect(Landroid/graphics/RectF;Landroid/graphics/RectF;Landroid/graphics/Rect;Lc76;)V
 
     iget-object p3, p0, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->drawableRect:Landroid/graphics/Rect;
 
@@ -1280,7 +1402,7 @@
 
     move-result v0
 
-    iget-object v1, p0, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->scaleType:Lg56;
+    iget-object v1, p0, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->scaleType:Lc76;
 
     invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
@@ -1293,18 +1415,18 @@
     return v1
 .end method
 
-.method public onThemeChanged(Lzlb;)V
+.method public onThemeChanged(Llob;)V
     .locals 2
 
     invoke-virtual {p0}, Landroid/text/style/DynamicDrawableSpan;->getDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    instance-of v1, v0, Luig;
+    instance-of v1, v0, Ljqg;
 
     if-eqz v1, :cond_0
 
-    check-cast v0, Luig;
+    check-cast v0, Ljqg;
 
     goto :goto_0
 
@@ -1314,7 +1436,7 @@
     :goto_0
     if-eqz v0, :cond_1
 
-    invoke-interface {v0, p1}, Luig;->onThemeChanged(Lzlb;)V
+    invoke-interface {v0, p1}, Ljqg;->onThemeChanged(Llob;)V
 
     :cond_1
     return-void
@@ -1328,7 +1450,34 @@
     return-void
 .end method
 
-.method public final updateDrawableSize(ILg56;Z)V
+.method public final setOverrideAlpha(Z)V
+    .locals 2
+
+    invoke-virtual {p0}, Landroid/text/style/DynamicDrawableSpan;->getDrawable()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    instance-of v1, v0, Lg1i;
+
+    if-eqz v1, :cond_0
+
+    check-cast v0, Lg1i;
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0, p1}, Lg1i;->b(Z)V
+
+    :cond_1
+    return-void
+.end method
+
+.method public final updateDrawableSize(ILc76;Z)V
     .locals 5
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -1339,16 +1488,16 @@
 
     move-result-object v0
 
-    sget-object v1, Lc5j;->a:Ledb;
+    sget-object v1, Ltej;->a:Lafb;
 
     if-nez v1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    sget-object v2, Lkk8;->d:Lkk8;
+    sget-object v2, Lzm8;->d:Lzm8;
 
-    invoke-virtual {v1, v2}, Ledb;->b(Lkk8;)Z
+    invoke-virtual {v1, v2}, Lafb;->b(Lzm8;)Z
 
     move-result v3
 
@@ -1356,13 +1505,13 @@
 
     const-string v3, "updateDrawableSize: "
 
-    invoke-static {p1, v3}, Lj27;->g(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v3}, Ltx8;->g(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
     const/4 v4, 0x0
 
-    invoke-virtual {v1, v2, v0, v3, v4}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {v1, v2, v0, v3, v4}, Lafb;->c(Lzm8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_1
     :goto_0
@@ -1370,7 +1519,7 @@
 
     if-ne v0, p1, :cond_2
 
-    iget-object v0, p0, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->customScaleType:Lg56;
+    iget-object v0, p0, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->customScaleType:Lc76;
 
     if-ne v0, p2, :cond_2
 
@@ -1383,7 +1532,7 @@
     :cond_2
     iput p1, p0, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->customHeight:I
 
-    iput-object p2, p0, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->customScaleType:Lg56;
+    iput-object p2, p0, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->customScaleType:Lc76;
 
     iput-boolean p3, p0, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->needCustomScale:Z
 

@@ -1,11 +1,59 @@
-.class public interface abstract Latg;
-.super Ljava/lang/Object;
+.class public final Latg;
+.super Lhtg;
 .source "SourceFile"
 
 
 # virtual methods
-.method public abstract d(Landroid/graphics/Matrix;)V
+.method public final b(Ljava/lang/Object;)I
+    .locals 0
+
+    const/4 p1, -0x1
+
+    return p1
 .end method
 
-.method public abstract g(Landroid/graphics/RectF;)V
+.method public final f(ILctg;Z)Lctg;
+    .locals 0
+
+    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
+
+    invoke-direct {p1}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
+
+    throw p1
+.end method
+
+.method public final h()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final l(I)Ljava/lang/Object;
+    .locals 0
+
+    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
+
+    invoke-direct {p1}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
+
+    throw p1
+.end method
+
+.method public final m(ILftg;J)Lftg;
+    .locals 0
+
+    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
+
+    invoke-direct {p1}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
+
+    throw p1
+.end method
+
+.method public final o()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
 .end method

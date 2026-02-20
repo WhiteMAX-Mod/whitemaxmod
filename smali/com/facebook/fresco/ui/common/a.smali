@@ -7,7 +7,7 @@
 
 
 # static fields
-.field public static final Companion:Lbk0;
+.field public static final Companion:Lml0;
 
 .field private static final NO_OP_LISTENER:Lcom/facebook/fresco/ui/common/ControllerListener2;
     .annotation system Ldalvik/annotation/Signature;
@@ -23,11 +23,11 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lbk0;
+    new-instance v0, Lml0;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lcom/facebook/fresco/ui/common/a;->Companion:Lbk0;
+    sput-object v0, Lcom/facebook/fresco/ui/common/a;->Companion:Lml0;
 
     new-instance v0, Lcom/facebook/fresco/ui/common/a;
 
@@ -58,7 +58,7 @@
         }
     .end annotation
 
-    sget-object v0, Lcom/facebook/fresco/ui/common/a;->Companion:Lbk0;
+    sget-object v0, Lcom/facebook/fresco/ui/common/a;->Companion:Lml0;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 

@@ -1,76 +1,155 @@
-.class public final Lspi;
-.super Ljava/lang/Object;
+.class public Lspi;
+.super Lvpi;
 .source "SourceFile"
-
-# interfaces
-.implements Ldqi;
 
 
 # instance fields
-.field public final synthetic a:Landroid/widget/FrameLayout;
-
-.field public final synthetic b:Landroid/view/LayoutInflater;
-
-.field public final synthetic c:Landroid/view/ViewGroup;
-
-.field public final synthetic d:Landroid/os/Bundle;
-
-.field public final synthetic e:Lnk0;
+.field public final c:Landroid/view/WindowInsets$Builder;
 
 
 # direct methods
-.method public constructor <init>(Lnk0;Landroid/widget/FrameLayout;Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)V
+.method public constructor <init>()V
+    .locals 1
+
+    .line 1
+    invoke-direct {p0}, Lvpi;-><init>()V
+
+    .line 2
+    invoke-static {}, Lw2i;->f()Landroid/view/WindowInsets$Builder;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lspi;->c:Landroid/view/WindowInsets$Builder;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ldqi;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 3
+    invoke-direct {p0, p1}, Lvpi;-><init>(Ldqi;)V
 
-    iput-object p1, p0, Lspi;->e:Lnk0;
+    .line 4
+    invoke-virtual {p1}, Ldqi;->g()Landroid/view/WindowInsets;
 
-    iput-object p2, p0, Lspi;->a:Landroid/widget/FrameLayout;
+    move-result-object p1
 
-    iput-object p3, p0, Lspi;->b:Landroid/view/LayoutInflater;
+    if-eqz p1, :cond_0
 
-    iput-object p4, p0, Lspi;->c:Landroid/view/ViewGroup;
+    .line 5
+    invoke-static {p1}, Lw2i;->g(Landroid/view/WindowInsets;)Landroid/view/WindowInsets$Builder;
 
-    iput-object p5, p0, Lspi;->d:Landroid/os/Bundle;
+    move-result-object p1
+
+    goto :goto_0
+
+    .line 6
+    :cond_0
+    invoke-static {}, Lw2i;->f()Landroid/view/WindowInsets$Builder;
+
+    move-result-object p1
+
+    :goto_0
+    iput-object p1, p0, Lspi;->c:Landroid/view/WindowInsets$Builder;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()I
-    .locals 1
+.method public b()Ldqi;
+    .locals 3
 
-    const/4 v0, 0x2
+    invoke-virtual {p0}, Lvpi;->a()V
 
-    return v0
+    iget-object v0, p0, Lspi;->c:Landroid/view/WindowInsets$Builder;
+
+    invoke-static {v0}, Lw2i;->h(Landroid/view/WindowInsets$Builder;)Landroid/view/WindowInsets;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-static {v1, v0}, Ldqi;->h(Landroid/view/View;Landroid/view/WindowInsets;)Ldqi;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lvpi;->b:[Lss7;
+
+    iget-object v2, v0, Ldqi;->a:Lbqi;
+
+    invoke-virtual {v2, v1}, Lbqi;->p([Lss7;)V
+
+    return-object v0
 .end method
 
-.method public final b()V
-    .locals 5
+.method public d(Lss7;)V
+    .locals 1
 
-    iget-object v0, p0, Lspi;->a:Landroid/widget/FrameLayout;
+    iget-object v0, p0, Lspi;->c:Landroid/view/WindowInsets$Builder;
 
-    invoke-virtual {v0}, Landroid/view/ViewGroup;->removeAllViews()V
+    invoke-virtual {p1}, Lss7;->d()Landroid/graphics/Insets;
 
-    iget-object v1, p0, Lspi;->e:Lnk0;
+    move-result-object p1
 
-    iget-object v1, v1, Lnk0;->a:Ljava/lang/Object;
+    invoke-static {v0, p1}, Lw2i;->x(Landroid/view/WindowInsets$Builder;Landroid/graphics/Insets;)V
 
-    check-cast v1, Lz78;
+    return-void
+.end method
 
-    iget-object v2, p0, Lspi;->c:Landroid/view/ViewGroup;
+.method public e(Lss7;)V
+    .locals 1
 
-    iget-object v3, p0, Lspi;->d:Landroid/os/Bundle;
+    iget-object v0, p0, Lspi;->c:Landroid/view/WindowInsets$Builder;
 
-    iget-object v4, p0, Lspi;->b:Landroid/view/LayoutInflater;
+    invoke-virtual {p1}, Lss7;->d()Landroid/graphics/Insets;
 
-    invoke-interface {v1, v4, v2, v3}, Lz78;->l(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    move-result-object p1
 
-    move-result-object v1
+    invoke-static {v0, p1}, Lw2i;->t(Landroid/view/WindowInsets$Builder;Landroid/graphics/Insets;)V
 
-    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+    return-void
+.end method
+
+.method public f(Lss7;)V
+    .locals 1
+
+    iget-object v0, p0, Lspi;->c:Landroid/view/WindowInsets$Builder;
+
+    invoke-virtual {p1}, Lss7;->d()Landroid/graphics/Insets;
+
+    move-result-object p1
+
+    invoke-static {v0, p1}, Lw2i;->w(Landroid/view/WindowInsets$Builder;Landroid/graphics/Insets;)V
+
+    return-void
+.end method
+
+.method public g(Lss7;)V
+    .locals 1
+
+    iget-object v0, p0, Lspi;->c:Landroid/view/WindowInsets$Builder;
+
+    invoke-virtual {p1}, Lss7;->d()Landroid/graphics/Insets;
+
+    move-result-object p1
+
+    invoke-static {v0, p1}, Lw2i;->p(Landroid/view/WindowInsets$Builder;Landroid/graphics/Insets;)V
+
+    return-void
+.end method
+
+.method public h(Lss7;)V
+    .locals 1
+
+    iget-object v0, p0, Lspi;->c:Landroid/view/WindowInsets$Builder;
+
+    invoke-virtual {p1}, Lss7;->d()Landroid/graphics/Insets;
+
+    move-result-object p1
+
+    invoke-static {v0, p1}, Lw2i;->y(Landroid/view/WindowInsets$Builder;Landroid/graphics/Insets;)V
 
     return-void
 .end method

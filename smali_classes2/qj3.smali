@@ -2,119 +2,71 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
 
 # instance fields
-.field public final a:Ljava/util/List;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lrj3;
+
+.field public final synthetic c:Landroid/graphics/drawable/Drawable;
+
+.field public final synthetic d:Ljava/lang/Runnable;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/List;)V
+.method public synthetic constructor <init>(Lrj3;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p4, p0, Lqj3;->a:I
 
-    iput-object p1, p0, Lqj3;->a:Ljava/util/List;
+    iput-object p1, p0, Lqj3;->b:Lrj3;
+
+    iput-object p2, p0, Lqj3;->c:Landroid/graphics/drawable/Drawable;
+
+    iput-object p3, p0, Lqj3;->d:Ljava/lang/Runnable;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/content/Context;)Ljava/lang/String;
-    .locals 6
-
-    new-instance v4, Lwe0;
-
-    const/4 v0, 0x2
-
-    invoke-direct {v4, p1, v0}, Lwe0;-><init>(Landroid/content/Context;I)V
-
-    const/16 v5, 0x1e
-
-    iget-object v0, p0, Lqj3;->a:Ljava/util/List;
-
-    const-string v1, "\n"
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    invoke-static/range {v0 .. v5}, Lpi3;->K(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lnq6;I)Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
+.method public final run()V
     .locals 3
 
-    const/4 v0, 0x1
+    iget v0, p0, Lqj3;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    iget-object v0, p0, Lqj3;->c:Landroid/graphics/drawable/Drawable;
 
-    :cond_0
-    instance-of v1, p1, Lqj3;
+    iget-object v1, p0, Lqj3;->d:Ljava/lang/Runnable;
 
-    const/4 v2, 0x0
+    iget-object v2, p0, Lqj3;->b:Lrj3;
 
-    if-nez v1, :cond_1
+    invoke-static {v2, v0, v1}, Lrj3;->G(Lrj3;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V
 
-    return v2
+    return-void
 
-    :cond_1
-    check-cast p1, Lqj3;
+    :pswitch_0
+    iget-object v0, p0, Lqj3;->c:Landroid/graphics/drawable/Drawable;
 
-    iget-object v1, p0, Lqj3;->a:Ljava/util/List;
+    iget-object v1, p0, Lqj3;->d:Ljava/lang/Runnable;
 
-    iget-object p1, p1, Lqj3;->a:Ljava/util/List;
+    iget-object v2, p0, Lqj3;->b:Lrj3;
 
-    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v0, v1}, Lrj3;->G(Lrj3;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V
 
-    move-result p1
+    return-void
 
-    if-nez p1, :cond_2
+    nop
 
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lqj3;->a:Ljava/util/List;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "CombinedError(errors="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lqj3;->a:Ljava/util/List;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

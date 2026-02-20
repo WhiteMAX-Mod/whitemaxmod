@@ -1,19 +1,3 @@
 .class public final Lw3i;
-.super Ljava/lang/Object;
+.super Lru/ok/android/externcalls/sdk/AudioLevelListener;
 .source "SourceFile"
-
-
-# virtual methods
-.method public final serializer()La38;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "La38;"
-        }
-    .end annotation
-
-    sget-object v0, Lv3i;->a:Lv3i;
-
-    return-object v0
-.end method

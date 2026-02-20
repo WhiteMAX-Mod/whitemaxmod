@@ -1,84 +1,194 @@
 .class public final Lr13;
-.super Lie0;
+.super Lujg;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:J
+.field public X:Ljava/lang/String;
 
+.field public c:Ljava/util/List;
 
-# direct methods
-.method public constructor <init>(J)V
-    .locals 1
+.field public d:I
 
-    const/4 v0, 0x5
-
-    invoke-direct {p0, v0}, Lie0;-><init>(I)V
-
-    iput-wide p1, p0, Lr13;->b:J
-
-    return-void
-.end method
+.field public o:Ljava/lang/String;
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lr13;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lr13;
-
-    iget-wide v3, p0, Lr13;->b:J
-
-    iget-wide v5, p1, Lr13;->b:J
-
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
+.method public final d(Lws9;Ljava/lang/String;)V
     .locals 2
 
-    iget-wide v0, p0, Lr13;->b:J
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    invoke-virtual {p2}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
-    return v0
+    const/4 v1, -0x1
+
+    sparse-switch v0, :sswitch_data_0
+
+    goto :goto_0
+
+    :sswitch_0
+    const-string v0, "total"
+
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x3
+
+    goto :goto_0
+
+    :sswitch_1
+    const-string v0, "ucpQId"
+
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v1, 0x2
+
+    goto :goto_0
+
+    :sswitch_2
+    const-string v0, "result"
+
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    const/4 v1, 0x1
+
+    goto :goto_0
+
+    :sswitch_3
+    const-string v0, "marker"
+
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    const/4 v1, 0x0
+
+    :goto_0
+    packed-switch v1, :pswitch_data_0
+
+    invoke-virtual {p1}, Lws9;->B()V
+
+    return-void
+
+    :pswitch_0
+    invoke-virtual {p1}, Lws9;->L0()I
+
+    move-result p1
+
+    iput p1, p0, Lr13;->d:I
+
+    return-void
+
+    :pswitch_1
+    invoke-static {p1}, Lm1j;->r(Lws9;)Ljava/lang/String;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lr13;->X:Ljava/lang/String;
+
+    return-void
+
+    :pswitch_2
+    invoke-static {p1}, Lw10;->f(Lws9;)Lw10;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lr13;->c:Ljava/util/List;
+
+    return-void
+
+    :pswitch_3
+    invoke-static {p1}, Lm1j;->r(Lws9;)Ljava/lang/String;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lr13;->o:Ljava/lang/String;
+
+    return-void
+
+    :sswitch_data_0
+    .sparse-switch
+        -0x40736bc6 -> :sswitch_3
+        -0x37b237e3 -> :sswitch_2
+        -0x32b1c596 -> :sswitch_1
+        0x696db44 -> :sswitch_0
+    .end sparse-switch
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 4
+    .locals 7
 
-    const-string v0, "OpenChatAndUpdateBackstack(chatId="
+    iget-object v0, p0, Lr13;->c:Ljava/util/List;
 
-    const-string v1, ")"
+    invoke-static {v0}, Ll0j;->b(Ljava/util/Collection;)I
 
-    iget-wide v2, p0, Lr13;->b:J
+    move-result v0
 
-    invoke-static {v2, v3, v0, v1}, Lcbh;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    iget v1, p0, Lr13;->d:I
+
+    iget-object v2, p0, Lr13;->o:Ljava/lang/String;
+
+    iget-object v3, p0, Lr13;->X:Ljava/lang/String;
+
+    const-string v4, ", total="
+
+    const-string v5, ", marker=\'"
+
+    const-string v6, "{result="
+
+    invoke-static {v6, v0, v4, v1, v5}, Lau1;->l(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "\', queryId=\'"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "\'}"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

@@ -1,98 +1,153 @@
 .class public final Lal6;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/chats/forward/ForwardPickerScreen;
+.field public final a:I
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final b:I
+
+.field public final c:Landroid/app/Notification;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chats/forward/ForwardPickerScreen;)V
+.method public constructor <init>(ILandroid/app/Notification;I)V
     .locals 0
 
-    iput-object p2, p0, Lal6;->X:Lone/me/chats/forward/ForwardPickerScreen;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    iput p1, p0, Lal6;->a:I
 
-    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lal6;->c:Landroid/app/Notification;
+
+    iput p3, p0, Lal6;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lal6;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    const/4 p1, 0x1
 
-    move-result-object p1
+    return p1
 
+    :cond_0
+    const/4 v0, 0x0
+
+    if-eqz p1, :cond_4
+
+    const-class v1, Lal6;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v2
+
+    if-eq v1, v2, :cond_1
+
+    goto :goto_0
+
+    :cond_1
     check-cast p1, Lal6;
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    iget v1, p0, Lal6;->a:I
 
-    invoke-virtual {p1, p2}, Lal6;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget v2, p1, Lal6;->a:I
 
-    return-object p2
+    if-eq v1, v2, :cond_2
+
+    return v0
+
+    :cond_2
+    iget v1, p0, Lal6;->b:I
+
+    iget v2, p1, Lal6;->b:I
+
+    if-eq v1, v2, :cond_3
+
+    return v0
+
+    :cond_3
+    iget-object v0, p0, Lal6;->c:Landroid/app/Notification;
+
+    iget-object p1, p1, Lal6;->c:Landroid/app/Notification;
+
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_4
+    :goto_0
+    return v0
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final hashCode()I
     .locals 2
 
-    new-instance v0, Lal6;
+    iget v0, p0, Lal6;->a:I
 
-    iget-object v1, p0, Lal6;->X:Lone/me/chats/forward/ForwardPickerScreen;
+    mul-int/lit8 v0, v0, 0x1f
 
-    invoke-direct {v0, p2, v1}, Lal6;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chats/forward/ForwardPickerScreen;)V
+    iget v1, p0, Lal6;->b:I
 
-    iput-object p1, v0, Lal6;->o:Ljava/lang/Object;
+    add-int/2addr v0, v1
 
-    return-object v0
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lal6;->c:Landroid/app/Notification;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    iget-object v0, p0, Lal6;->o:Ljava/lang/Object;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    const-string v1, "ForegroundInfo{mNotificationId="
 
-    check-cast v0, Ljava/lang/Boolean;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget v1, p0, Lal6;->a:I
 
-    sget-object p1, Lone/me/chats/forward/ForwardPickerScreen;->J0:[Lz28;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    iget-object p1, p0, Lal6;->X:Lone/me/chats/forward/ForwardPickerScreen;
+    const-string v1, ", mForegroundServiceType="
 
-    invoke-virtual {p1}, Lone/me/chats/forward/ForwardPickerScreen;->N0()Lo4d;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lal6;->b:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", mNotification="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lal6;->c:Landroid/app/Notification;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x7d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lone/me/chats/picker/AbstractPickerScreen;->J0()Lb5c;
-
-    move-result-object p1
-
-    iget-object p1, p1, Lb5c;->c:La7c;
-
-    check-cast p1, Llk6;
-
-    invoke-virtual {p1}, Llk6;->g()Landroid/graphics/drawable/Drawable;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Lo4d;->setStartIconDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
+    return-object v0
 .end method

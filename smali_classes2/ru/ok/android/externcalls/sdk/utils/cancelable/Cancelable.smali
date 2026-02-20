@@ -11,7 +11,7 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/utils/cancelable/Cancelable;",
         "",
-        "Lb3h;",
+        "Lmah;",
         "cancel",
         "()V",
         "calls-sdk_release"

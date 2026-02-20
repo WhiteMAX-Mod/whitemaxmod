@@ -1,48 +1,126 @@
 .class public final Lmc3;
-.super Lo84;
+.super Lpdg;
+.source "SourceFile"
+
+# interfaces
+.implements Lys6;
 
 
 # instance fields
-.field public final synthetic X:Lgc3;
+.field public final synthetic X:Lone/me/chats/tab/ChatsTabWidget;
 
-.field public synthetic d:Ljava/lang/Object;
-
-.field public o:I
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lgc3;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chats/tab/ChatsTabWidget;)V
     .locals 0
 
-    iput-object p1, p0, Lmc3;->X:Lgc3;
+    iput-object p2, p0, Lmc3;->X:Lone/me/chats/tab/ChatsTabWidget;
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    const/4 p2, 0x2
+
+    invoke-direct {p0, p2, p1}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iput-object p1, p0, Lmc3;->d:Ljava/lang/Object;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget p1, p0, Lmc3;->o:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lmc3;->o:I
-
-    iget-object p1, p0, Lmc3;->X:Lgc3;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lgc3;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {p0, p1, p2}, Lmc3;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
+
+    check-cast p1, Lmc3;
+
+    sget-object p2, Lmah;->a:Lmah;
+
+    invoke-virtual {p1, p2}, Lmc3;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lmc3;
+
+    iget-object v1, p0, Lmc3;->X:Lone/me/chats/tab/ChatsTabWidget;
+
+    invoke-direct {v0, p2, v1}, Lmc3;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chats/tab/ChatsTabWidget;)V
+
+    iput-object p1, v0, Lmc3;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
+
+    iget-object v0, p0, Lmc3;->o:Ljava/lang/Object;
+
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    check-cast v0, Ljava/lang/Number;
+
+    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
+
+    move-result v2
+
+    sget-object p1, Lone/me/chats/tab/ChatsTabWidget;->I0:[Lv58;
+
+    iget-object p1, p0, Lmc3;->X:Lone/me/chats/tab/ChatsTabWidget;
+
+    invoke-virtual {p1}, Lone/me/chats/tab/ChatsTabWidget;->L0()Landroidx/viewpager2/widget/ViewPager2;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroidx/viewpager2/widget/ViewPager2;->getCurrentItem()I
+
+    move-result v0
+
+    if-ne v0, v2, :cond_0
+
+    invoke-virtual {p1}, Lone/me/chats/tab/ChatsTabWidget;->K0()Lrnb;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/google/android/material/tabs/TabLayout;->getSelectedTabPosition()I
+
+    move-result v0
+
+    if-eq v0, v2, :cond_1
+
+    :cond_0
+    invoke-virtual {p1}, Lone/me/chats/tab/ChatsTabWidget;->L0()Landroidx/viewpager2/widget/ViewPager2;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v2, v1}, Landroidx/viewpager2/widget/ViewPager2;->i(IZ)V
+
+    invoke-virtual {p1}, Lone/me/chats/tab/ChatsTabWidget;->K0()Lrnb;
+
+    move-result-object v1
+
+    const/4 v5, 0x1
+
+    const/4 v6, 0x1
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x1
+
+    invoke-virtual/range {v1 .. v6}, Lcom/google/android/material/tabs/TabLayout;->o(IFZZZ)V
+
+    :cond_1
+    sget-object p1, Lmah;->a:Lmah;
 
     return-object p1
 .end method

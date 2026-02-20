@@ -1,48 +1,141 @@
 .class public final Lns9;
-.super Lo84;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # instance fields
-.field public final synthetic X:Lhs9;
+.field public final synthetic a:I
 
-.field public synthetic d:Ljava/lang/Object;
+.field public final b:Z
 
-.field public o:I
+.field public final c:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lhs9;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Ljava/lang/String;ZI)V
+    .locals 2
+
+    iput p3, p0, Lns9;->a:I
+
+    packed-switch p3, :pswitch_data_0
+
+    .line 2
+    new-instance p3, Llv;
+
+    const/4 v0, 0x2
+
+    invoke-direct {p3, p1, v0}, Llv;-><init>(Ljava/lang/String;I)V
+
+    .line 3
+    new-instance v0, Llv;
+
+    const/4 v1, 0x2
+
+    invoke-direct {v0, p1, v1}, Llv;-><init>(Ljava/lang/String;I)V
+
+    const/4 v1, 0x0
+
+    .line 4
+    iput v1, p0, Lns9;->a:I
+
+    .line 5
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 6
+    iput-object p1, p0, Lns9;->c:Ljava/lang/String;
+
+    .line 7
+    iput-boolean p2, p0, Lns9;->b:Z
+
+    const/4 p1, 0x3
+
+    .line 8
+    invoke-static {p1, p3}, Lbdj;->d(ILis6;)Lj88;
+
+    .line 9
+    invoke-static {p1, v0}, Lbdj;->d(ILis6;)Lj88;
+
+    return-void
+
+    .line 10
+    :pswitch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lns9;->c:Ljava/lang/String;
+
+    iput-boolean p2, p0, Lns9;->b:Z
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x3
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public synthetic constructor <init>(ZLjava/lang/String;I)V
     .locals 0
 
-    iput-object p1, p0, Lns9;->X:Lhs9;
+    .line 1
+    iput p3, p0, Lns9;->a:I
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-boolean p1, p0, Lns9;->b:Z
+
+    iput-object p2, p0, Lns9;->c:Ljava/lang/String;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public toString()Ljava/lang/String;
+    .locals 2
 
-    iput-object p1, p0, Lns9;->d:Ljava/lang/Object;
+    iget v0, p0, Lns9;->a:I
 
-    iget p1, p0, Lns9;->o:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    or-int/2addr p1, v0
+    move-result-object v0
 
-    iput p1, p0, Lns9;->o:I
+    return-object v0
 
-    iget-object p1, p0, Lns9;->X:Lhs9;
+    :pswitch_0
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const/4 v0, 0x0
+    const-string v1, "MessageText(text=\'"
 
-    invoke-virtual {p1, v0, p0}, Lhs9;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result-object p1
+    const-string v1, "***"
 
-    return-object p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "\', bundled="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lns9;->b:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

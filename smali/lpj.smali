@@ -2,82 +2,211 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Loza;
 
-# instance fields
-.field public final a:Ljava/lang/String;
 
-.field public final b:Ljava/lang/String;
+# static fields
+.field public static final a:Llpj;
 
-.field public final c:Ljava/lang/String;
+.field public static final b:Ld16;
 
-.field public final d:Ljava/lang/String;
+.field public static final c:Ld16;
 
-.field public final e:Llxi;
+.field public static final d:Ld16;
 
-.field public final f:Ljava/lang/String;
+.field public static final e:Ld16;
 
-.field public final g:Ljava/lang/Boolean;
+.field public static final f:Ld16;
 
-.field public final h:Ljava/lang/Boolean;
-
-.field public final i:Ljava/lang/Boolean;
-
-.field public final j:Ljava/lang/Integer;
-
-.field public final k:Ljava/lang/Integer;
+.field public static final g:Ld16;
 
 
 # direct methods
-.method public synthetic constructor <init>(Llcj;)V
+.method static constructor <clinit>()V
+    .locals 4
+
+    new-instance v0, Llpj;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Llpj;->a:Llpj;
+
+    new-instance v0, Lp7j;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lp7j;-><init>(I)V
+
+    const-class v1, Lh8j;
+
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Ld16;
+
+    invoke-static {v0}, Lkb0;->o(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "appName"
+
+    invoke-direct {v2, v3, v0}, Ld16;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Llpj;->b:Ld16;
+
+    new-instance v0, Lp7j;
+
+    const/4 v2, 0x2
+
+    invoke-direct {v0, v2}, Lp7j;-><init>(I)V
+
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Ld16;
+
+    invoke-static {v0}, Lkb0;->o(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "sessionId"
+
+    invoke-direct {v2, v3, v0}, Ld16;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Llpj;->c:Ld16;
+
+    new-instance v0, Lp7j;
+
+    const/4 v2, 0x3
+
+    invoke-direct {v0, v2}, Lp7j;-><init>(I)V
+
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Ld16;
+
+    invoke-static {v0}, Lkb0;->o(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "startZoomLevel"
+
+    invoke-direct {v2, v3, v0}, Ld16;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Llpj;->d:Ld16;
+
+    new-instance v0, Lp7j;
+
+    const/4 v2, 0x4
+
+    invoke-direct {v0, v2}, Lp7j;-><init>(I)V
+
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Ld16;
+
+    invoke-static {v0}, Lkb0;->o(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "endZoomLevel"
+
+    invoke-direct {v2, v3, v0}, Ld16;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Llpj;->e:Ld16;
+
+    new-instance v0, Lp7j;
+
+    const/4 v2, 0x5
+
+    invoke-direct {v0, v2}, Lp7j;-><init>(I)V
+
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Ld16;
+
+    invoke-static {v0}, Lkb0;->o(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "durationMs"
+
+    invoke-direct {v2, v3, v0}, Ld16;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Llpj;->f:Ld16;
+
+    new-instance v0, Lp7j;
+
+    const/4 v2, 0x6
+
+    invoke-direct {v0, v2}, Lp7j;-><init>(I)V
+
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v1, Ld16;
+
+    invoke-static {v0}, Lkb0;->o(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v2, "predictedArea"
+
+    invoke-direct {v1, v2, v0}, Ld16;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v1, Llpj;->g:Ld16;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    check-cast p1, Lmwj;
 
-    iget-object v0, p1, Llcj;->a:Ljava/lang/String;
+    check-cast p2, Lpza;
 
-    iput-object v0, p0, Llpj;->a:Ljava/lang/String;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object v0, p1, Llcj;->b:Ljava/lang/String;
+    const/4 p1, 0x0
 
-    iput-object v0, p0, Llpj;->b:Ljava/lang/String;
+    sget-object v0, Llpj;->b:Ld16;
 
-    iget-object v0, p1, Llcj;->c:Ljava/lang/String;
+    invoke-interface {p2, v0, p1}, Lpza;->a(Ld16;Ljava/lang/Object;)Lpza;
 
-    iput-object v0, p0, Llpj;->c:Ljava/lang/String;
+    sget-object p1, Llpj;->c:Ld16;
 
-    iget-object v0, p1, Llcj;->d:Ljava/lang/String;
+    const/4 v0, 0x0
 
-    iput-object v0, p0, Llpj;->d:Ljava/lang/String;
+    invoke-interface {p2, p1, v0}, Lpza;->a(Ld16;Ljava/lang/Object;)Lpza;
 
-    iget-object v0, p1, Llcj;->k:Ljava/util/AbstractCollection;
+    sget-object p1, Llpj;->d:Ld16;
 
-    check-cast v0, Llxi;
+    invoke-interface {p2, p1, v0}, Lpza;->a(Ld16;Ljava/lang/Object;)Lpza;
 
-    iput-object v0, p0, Llpj;->e:Llxi;
+    sget-object p1, Llpj;->e:Ld16;
 
-    iget-object v0, p1, Llcj;->e:Ljava/lang/String;
+    invoke-interface {p2, p1, v0}, Lpza;->a(Ld16;Ljava/lang/Object;)Lpza;
 
-    iput-object v0, p0, Llpj;->f:Ljava/lang/String;
+    sget-object p1, Llpj;->f:Ld16;
 
-    iget-object v0, p1, Llcj;->f:Ljava/lang/Boolean;
+    invoke-interface {p2, p1, v0}, Lpza;->a(Ld16;Ljava/lang/Object;)Lpza;
 
-    iput-object v0, p0, Llpj;->g:Ljava/lang/Boolean;
+    sget-object p1, Llpj;->g:Ld16;
 
-    iget-object v0, p1, Llcj;->g:Ljava/lang/Boolean;
-
-    iput-object v0, p0, Llpj;->h:Ljava/lang/Boolean;
-
-    iget-object v0, p1, Llcj;->h:Ljava/lang/Boolean;
-
-    iput-object v0, p0, Llpj;->i:Ljava/lang/Boolean;
-
-    iget-object v0, p1, Llcj;->i:Ljava/lang/Integer;
-
-    iput-object v0, p0, Llpj;->j:Ljava/lang/Integer;
-
-    iget-object p1, p1, Llcj;->j:Ljava/lang/Integer;
-
-    iput-object p1, p0, Llpj;->k:Ljava/lang/Integer;
+    invoke-interface {p2, p1, v0}, Lpza;->a(Ld16;Ljava/lang/Object;)Lpza;
 
     return-void
 .end method

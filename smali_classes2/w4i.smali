@@ -1,209 +1,156 @@
-.class public final synthetic Lw4i;
+.class public final Lw4i;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Liv6;
 
+# instance fields
+.field public final a:Lj88;
 
-# static fields
-.field public static final a:Lw4i;
-
-.field private static final descriptor:Lxpe;
+.field public final b:Lj88;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Lj88;Lj88;)V
+    .locals 0
 
-    new-instance v0, Lw4i;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lw4i;->a:Lj88;
 
-    sput-object v0, Lw4i;->a:Lw4i;
-
-    new-instance v1, Lgdc;
-
-    const-string v2, "one.me.webapp.domain.jsbridge.delegates.haptic.WebAppHapticFeedbackResponse"
-
-    const/4 v3, 0x2
-
-    invoke-direct {v1, v2, v0, v3}, Lgdc;-><init>(Ljava/lang/String;Liv6;I)V
-
-    const-string v0, "requestId"
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v0, v2}, Lgdc;->k(Ljava/lang/String;Z)V
-
-    const-string v0, "status"
-
-    invoke-virtual {v1, v0, v2}, Lgdc;->k(Ljava/lang/String;Z)V
-
-    sput-object v1, Lw4i;->descriptor:Lxpe;
+    iput-object p2, p0, Lw4i;->b:Lj88;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lkotlinx/serialization/json/internal/b;Ljava/lang/Object;)V
+.method public final a(II)V
     .locals 4
 
-    check-cast p2, Ly4i;
+    new-instance v0, Lpt8;
 
-    sget-object v0, Lw4i;->descriptor:Lxpe;
+    invoke-direct {v0}, Lpt8;-><init>()V
 
-    invoke-virtual {p1, v0}, Lkotlinx/serialization/json/internal/b;->a(Lxpe;)Lkotlinx/serialization/json/internal/b;
+    const-string v1, "UIElementType"
 
-    move-result-object p1
+    const-string v2, "procced_url_modal_window"
 
-    sget-object v1, Ly4i;->c:[Lo58;
+    invoke-virtual {v0, v1, v2}, Lpt8;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v2, p2, Ly4i;->a:Ljava/lang/String;
+    if-eqz p2, :cond_2
 
-    const/4 v3, 0x0
+    const/4 v1, 0x1
 
-    invoke-virtual {p1, v0, v3, v2}, Lkotlinx/serialization/json/internal/b;->s(Lxpe;ILjava/lang/String;)V
+    if-eq p2, v1, :cond_1
 
-    const/4 v2, 0x1
+    const/4 v1, 0x2
 
-    aget-object v1, v1, v2
+    if-ne p2, v1, :cond_0
 
-    invoke-interface {v1}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, La38;
-
-    iget-object p2, p2, Ly4i;->b:Ld5i;
-
-    invoke-virtual {p1, v0, v2, v1, p2}, Lkotlinx/serialization/json/internal/b;->o(Lxpe;ILa38;Ljava/lang/Object;)V
-
-    invoke-virtual {p1}, Lkotlinx/serialization/json/internal/b;->t()V
-
-    return-void
-.end method
-
-.method public final b(Lkl4;)Ljava/lang/Object;
-    .locals 10
-
-    sget-object v0, Lw4i;->descriptor:Lxpe;
-
-    invoke-interface {p1, v0}, Lkl4;->r(Lxpe;)Lqp3;
-
-    move-result-object p1
-
-    sget-object v1, Ly4i;->c:[Lo58;
-
-    const/4 v2, 0x1
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    move v6, v2
-
-    move v7, v3
-
-    move-object v5, v4
-
-    :goto_0
-    if-eqz v6, :cond_3
-
-    invoke-interface {p1, v0}, Lqp3;->e(Lxpe;)I
-
-    move-result v8
-
-    const/4 v9, -0x1
-
-    if-eq v8, v9, :cond_2
-
-    if-eqz v8, :cond_1
-
-    if-ne v8, v2, :cond_0
-
-    aget-object v8, v1, v2
-
-    invoke-interface {v8}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object v8
-
-    check-cast v8, La38;
-
-    invoke-interface {p1, v0, v2, v8, v5}, Lqp3;->p(Lxpe;ILa38;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Ld5i;
-
-    or-int/lit8 v7, v7, 0x2
+    const-string p2, "close"
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Lkotlinx/serialization/UnknownFieldException;
-
-    invoke-direct {p1, v8}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
+    const/4 p1, 0x0
 
     throw p1
 
     :cond_1
-    invoke-interface {p1, v0, v3}, Lqp3;->j(Lxpe;I)Ljava/lang/String;
+    const-string p2, "go"
 
-    move-result-object v4
+    :goto_0
+    const-string v1, "clickType"
 
-    or-int/lit8 v7, v7, 0x1
-
-    goto :goto_0
+    invoke-virtual {v0, v1, p2}, Lpt8;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_2
-    move v6, v3
+    invoke-virtual {v0}, Lpt8;->b()Lpt8;
 
-    goto :goto_0
+    move-result-object p2
 
-    :cond_3
-    invoke-interface {p1, v0}, Lqp3;->m(Lxpe;)V
+    iget-object v0, p0, Lw4i;->a:Lj88;
 
-    new-instance p1, Ly4i;
-
-    invoke-direct {p1, v7, v4, v5}, Ly4i;-><init>(ILjava/lang/String;Ld5i;)V
-
-    return-object p1
-.end method
-
-.method public final c()[La38;
-    .locals 4
-
-    sget-object v0, Ly4i;->c:[Lo58;
-
-    const/4 v1, 0x2
-
-    new-array v1, v1, [La38;
-
-    const/4 v2, 0x0
-
-    sget-object v3, Lnzf;->a:Lnzf;
-
-    aput-object v3, v1, v2
-
-    const/4 v2, 0x1
-
-    aget-object v0, v0, v2
-
-    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    aput-object v0, v1, v2
+    check-cast v0, Lte;
 
-    return-object v1
-.end method
+    new-instance v1, Lpu7;
 
-.method public final d()Lxpe;
-    .locals 1
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
-    sget-object v0, Lw4i;->descriptor:Lxpe;
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    return-object v0
+    move-result-wide v2
+
+    iput-wide v2, v1, Lpu7;->a:J
+
+    const-string v2, "DANGEROUS_URL_ACTIONS"
+
+    iput-object v2, v1, Lpu7;->o:Ljava/lang/Object;
+
+    const/4 v2, 0x1
+
+    if-eq p1, v2, :cond_4
+
+    const/4 v2, 0x2
+
+    if-ne p1, v2, :cond_3
+
+    const-string p1, "showed"
+
+    goto :goto_1
+
+    :cond_3
+    const/4 p1, 0x0
+
+    throw p1
+
+    :cond_4
+    const-string p1, "clicked"
+
+    :goto_1
+    iput-object p1, v1, Lpu7;->X:Ljava/io/Serializable;
+
+    iget-object p1, p0, Lw4i;->b:Lj88;
+
+    invoke-interface {p1}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lug3;
+
+    check-cast v2, Lqme;
+
+    invoke-virtual {v2}, Lqme;->s()J
+
+    move-result-wide v2
+
+    iput-wide v2, v1, Lpu7;->b:J
+
+    invoke-virtual {v1, p2}, Lpu7;->b(Ljava/util/Map;)V
+
+    invoke-interface {p1}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lug3;
+
+    check-cast p1, Lhl8;
+
+    invoke-virtual {p1}, Lhl8;->O()J
+
+    move-result-wide p1
+
+    iput-wide p1, v1, Lpu7;->c:J
+
+    invoke-virtual {v1}, Lpu7;->d()Lvm8;
+
+    move-result-object p1
+
+    invoke-interface {v0, p1}, Lte;->b(Lvm8;)V
+
+    return-void
 .end method

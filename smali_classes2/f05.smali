@@ -1,64 +1,98 @@
 .class public final Lf05;
-.super Lp6g;
+.super Lpdg;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Lat6;
 
 
 # instance fields
-.field public final synthetic X:Lg05;
+.field public synthetic X:Landroidx/recyclerview/widget/RecyclerView;
 
-.field public o:I
+.field public final synthetic o:I
 
 
 # direct methods
-.method public constructor <init>(Lg05;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
     .locals 0
 
-    iput-object p1, p0, Lf05;->X:Lg05;
+    iput p3, p0, Lf05;->o:I
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    check-cast p1, Lzb4;
+    iget v0, p0, Lf05;->o:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    check-cast p1, Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-virtual {p0, p1, p2}, Lf05;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    check-cast p2, Llob;
 
-    move-result-object p1
+    check-cast p3, Lkotlin/coroutines/Continuation;
 
-    check-cast p1, Lf05;
+    packed-switch v0, :pswitch_data_0
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    new-instance p2, Lf05;
 
-    invoke-virtual {p1, p2}, Lf05;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 v0, 0x3
 
-    move-result-object p1
+    const/4 v1, 0x2
 
-    return-object p1
-.end method
+    invoke-direct {p2, v0, p3, v1}, Lf05;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    iput-object p1, p2, Lf05;->X:Landroidx/recyclerview/widget/RecyclerView;
 
-    new-instance p1, Lf05;
+    sget-object p1, Lmah;->a:Lmah;
 
-    iget-object v0, p0, Lf05;->X:Lg05;
-
-    invoke-direct {p1, v0, p2}, Lf05;-><init>(Lg05;Lkotlin/coroutines/Continuation;)V
+    invoke-virtual {p2, p1}, Lf05;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-object p1
+
+    :pswitch_0
+    new-instance p2, Lf05;
+
+    const/4 v0, 0x3
+
+    const/4 v1, 0x1
+
+    invoke-direct {p2, v0, p3, v1}, Lf05;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    iput-object p1, p2, Lf05;->X:Landroidx/recyclerview/widget/RecyclerView;
+
+    sget-object p1, Lmah;->a:Lmah;
+
+    invoke-virtual {p2, p1}, Lf05;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    :pswitch_1
+    new-instance p2, Lf05;
+
+    const/4 v0, 0x3
+
+    const/4 v1, 0x0
+
+    invoke-direct {p2, v0, p3, v1}, Lf05;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    iput-object p1, p2, Lf05;->X:Landroidx/recyclerview/widget/RecyclerView;
+
+    sget-object p1, Lmah;->a:Lmah;
+
+    invoke-virtual {p2, p1}, Lf05;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
@@ -66,49 +100,91 @@
 
     iget v0, p0, Lf05;->o:I
 
-    const/4 v1, 0x1
+    packed-switch v0, :pswitch_data_0
 
-    if-eqz v0, :cond_1
+    iget-object v0, p0, Lf05;->X:Landroidx/recyclerview/widget/RecyclerView;
 
-    if-ne v0, v1, :cond_0
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    sget-object p1, Lfe3;->t0:Ltea;
 
-    goto :goto_0
+    invoke-virtual {p1, v0}, Ltea;->o(Landroid/view/View;)Llob;
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    move-result-object v1
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    invoke-interface {v1}, Llob;->r()Ljob;
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    move-result-object v1
 
-    throw p1
+    iget v1, v1, Ljob;->c:I
 
-    :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundColor(I)V
 
-    iget-object p1, p0, Lf05;->X:Lg05;
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    iget-object p1, p1, Lg05;->d:Li7f;
+    move-result-object v1
 
-    iput v1, p0, Lf05;->o:I
-
-    sget-object v0, Le05;->a:Le05;
-
-    invoke-virtual {p1, v0, p0}, Li7f;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {p1, v1}, Ltea;->n(Landroid/content/Context;)Lfe3;
 
     move-result-object p1
 
-    sget-object v0, Lac4;->a:Lac4;
+    invoke-static {p1, v0}, Lfe3;->f(Lfe3;Landroid/view/ViewGroup;)V
 
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
-    :cond_2
-    :goto_0
-    sget-object p1, Lb3h;->a:Lb3h;
+    sget-object p1, Lmah;->a:Lmah;
 
     return-object p1
+
+    :pswitch_0
+    iget-object v0, p0, Lf05;->X:Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    sget-object p1, Lfe3;->t0:Ltea;
+
+    invoke-virtual {p1, v0}, Ltea;->o(Landroid/view/View;)Llob;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Llob;->r()Ljob;
+
+    move-result-object p1
+
+    iget p1, p1, Ljob;->c:I
+
+    invoke-virtual {v0, p1}, Landroid/view/View;->setBackgroundColor(I)V
+
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
+
+    :pswitch_1
+    iget-object v0, p0, Lf05;->X:Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    sget-object p1, Lfe3;->t0:Ltea;
+
+    invoke-virtual {p1, v0}, Ltea;->o(Landroid/view/View;)Llob;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Llob;->b()Lqc5;
+
+    move-result-object p1
+
+    iget p1, p1, Lqc5;->a:I
+
+    invoke-virtual {v0, p1}, Landroid/view/View;->setBackgroundColor(I)V
+
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

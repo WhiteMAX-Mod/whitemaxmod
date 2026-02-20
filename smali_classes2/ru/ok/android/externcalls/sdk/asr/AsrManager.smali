@@ -13,18 +13,18 @@
         "",
         "",
         "fileName",
-        "Lnue;",
+        "Lw1f;",
         "sessionRoomId",
         "Lkotlin/Function0;",
-        "Lb3h;",
+        "Lmah;",
         "onSuccess",
         "Lkotlin/Function1;",
         "",
         "onError",
         "startRecord",
-        "(Ljava/lang/String;Lnue;Llq6;Lnq6;)V",
+        "(Ljava/lang/String;Lw1f;Lis6;Lks6;)V",
         "stopRecord",
-        "(Lnue;Llq6;Lnq6;)V",
+        "(Lw1f;Lis6;Lks6;)V",
         "Lru/ok/android/externcalls/sdk/asr/listener/AsrRecordListener;",
         "listener",
         "addAsrRecordListener",
@@ -43,7 +43,7 @@
 
 
 # direct methods
-.method public static synthetic startRecord$default(Lru/ok/android/externcalls/sdk/asr/AsrManager;Ljava/lang/String;Lnue;Llq6;Lnq6;ILjava/lang/Object;)V
+.method public static synthetic startRecord$default(Lru/ok/android/externcalls/sdk/asr/AsrManager;Ljava/lang/String;Lw1f;Lis6;Lks6;ILjava/lang/Object;)V
     .locals 1
 
     if-nez p6, :cond_3
@@ -71,7 +71,7 @@
     move-object p4, v0
 
     :cond_2
-    invoke-interface {p0, p1, p2, p3, p4}, Lru/ok/android/externcalls/sdk/asr/AsrManager;->startRecord(Ljava/lang/String;Lnue;Llq6;Lnq6;)V
+    invoke-interface {p0, p1, p2, p3, p4}, Lru/ok/android/externcalls/sdk/asr/AsrManager;->startRecord(Ljava/lang/String;Lw1f;Lis6;Lks6;)V
 
     return-void
 
@@ -85,7 +85,7 @@
     throw p0
 .end method
 
-.method public static synthetic stopRecord$default(Lru/ok/android/externcalls/sdk/asr/AsrManager;Lnue;Llq6;Lnq6;ILjava/lang/Object;)V
+.method public static synthetic stopRecord$default(Lru/ok/android/externcalls/sdk/asr/AsrManager;Lw1f;Lis6;Lks6;ILjava/lang/Object;)V
     .locals 1
 
     if-nez p5, :cond_3
@@ -113,7 +113,7 @@
     move-object p3, v0
 
     :cond_2
-    invoke-interface {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/asr/AsrManager;->stopRecord(Lnue;Llq6;Lnq6;)V
+    invoke-interface {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/asr/AsrManager;->stopRecord(Lw1f;Lis6;Lks6;)V
 
     return-void
 
@@ -135,26 +135,26 @@
 .method public abstract removeAsrRecordListener(Lru/ok/android/externcalls/sdk/asr/listener/AsrRecordListener;)V
 .end method
 
-.method public abstract startRecord(Ljava/lang/String;Lnue;Llq6;Lnq6;)V
+.method public abstract startRecord(Ljava/lang/String;Lw1f;Lis6;Lks6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
-            "Lnue;",
-            "Llq6;",
-            "Lnq6;",
+            "Lw1f;",
+            "Lis6;",
+            "Lks6;",
             ")V"
         }
     .end annotation
 .end method
 
-.method public abstract stopRecord(Lnue;Llq6;Lnq6;)V
+.method public abstract stopRecord(Lw1f;Lis6;Lks6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lnue;",
-            "Llq6;",
-            "Lnq6;",
+            "Lw1f;",
+            "Lis6;",
+            "Lks6;",
             ")V"
         }
     .end annotation

@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lis6;
 
 
 # instance fields
@@ -11,18 +11,14 @@
 
 .field public final synthetic b:Li50;
 
-.field public final synthetic c:Lc50;
-
 
 # direct methods
-.method public synthetic constructor <init>(Li50;Lc50;I)V
+.method public synthetic constructor <init>(Li50;I)V
     .locals 0
 
-    iput p3, p0, Ld50;->a:I
+    iput p2, p0, Ld50;->a:I
 
     iput-object p1, p0, Ld50;->b:Li50;
-
-    iput-object p2, p0, Ld50;->c:Lc50;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -31,47 +27,57 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 4
+.method public final invoke()Ljava/lang/Object;
+    .locals 3
 
-    iget p1, p0, Ld50;->a:I
+    iget v0, p0, Ld50;->a:I
 
-    packed-switch p1, :pswitch_data_0
+    packed-switch v0, :pswitch_data_0
 
-    iget-object p1, p0, Ld50;->b:Li50;
+    iget-object v0, p0, Ld50;->b:Li50;
 
-    iget-object p1, p1, Li50;->a:Lnq6;
+    iget-object v0, v0, Li50;->a:Landroid/content/Context;
 
-    new-instance v0, Lut9;
+    const-string v1, "power"
 
-    iget-object v1, p0, Ld50;->c:Lc50;
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
-    iget-wide v2, v1, Lc50;->c:J
+    move-result-object v0
 
-    invoke-direct {v0, v2, v3, v1}, Lut9;-><init>(JLc50;)V
+    check-cast v0, Landroid/os/PowerManager;
 
-    invoke-interface {p1, v0}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    const v1, 0x20000006
 
-    return-void
+    const-string v2, "ru.ok.tamtam:tam-tam-screen-dim"
+
+    invoke-virtual {v0, v1, v2}, Landroid/os/PowerManager;->newWakeLock(ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;
+
+    move-result-object v0
+
+    return-object v0
 
     :pswitch_0
-    iget-object p1, p0, Ld50;->b:Li50;
+    iget-object v0, p0, Ld50;->b:Li50;
 
-    iget-object p1, p1, Li50;->a:Lnq6;
+    iget-object v0, v0, Li50;->a:Landroid/content/Context;
 
-    new-instance v0, Lut9;
+    const-string v1, "power"
 
-    iget-object v1, p0, Ld50;->c:Lc50;
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
-    iget-wide v2, v1, Lc50;->c:J
+    move-result-object v0
 
-    invoke-direct {v0, v2, v3, v1}, Lut9;-><init>(JLc50;)V
+    check-cast v0, Landroid/os/PowerManager;
 
-    invoke-interface {p1, v0}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    const/16 v1, 0x20
 
-    return-void
+    const-string v2, "ru.ok.tamtam:tam-tam-prox"
 
-    nop
+    invoke-virtual {v0, v1, v2}, Landroid/os/PowerManager;->newWakeLock(ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;
+
+    move-result-object v0
+
+    return-object v0
 
     :pswitch_data_0
     .packed-switch 0x0

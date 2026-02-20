@@ -3,39 +3,128 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/text/method/TransformationMethod;
+.implements Lcd;
 
 
 # instance fields
-.field public a:Ljava/util/Locale;
+.field public final a:Lpl1;
+
+.field public final b:Z
+
+
+# direct methods
+.method public constructor <init>(Lpl1;Z)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lxc;->a:Lpl1;
+
+    iput-boolean p2, p0, Lxc;->b:Z
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final getTransformation(Ljava/lang/CharSequence;Landroid/view/View;)Ljava/lang/CharSequence;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    if-eqz p1, :cond_0
+    if-ne p0, p1, :cond_0
 
-    invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    iget-object p2, p0, Lxc;->a:Ljava/util/Locale;
-
-    invoke-virtual {p1, p2}, Ljava/lang/String;->toUpperCase(Ljava/util/Locale;)Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
+    goto :goto_1
 
     :cond_0
+    instance-of v0, p1, Lxc;
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lxc;
+
+    iget-object v0, p0, Lxc;->a:Lpl1;
+
+    iget-object v1, p1, Lxc;->a:Lpl1;
+
+    invoke-virtual {v0, v1}, Lpl1;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-boolean v0, p0, Lxc;->b:Z
+
+    iget-boolean p1, p1, Lxc;->b:Z
+
+    if-eq v0, p1, :cond_3
+
+    :goto_0
     const/4 p1, 0x0
 
-    return-object p1
+    return p1
+
+    :cond_3
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
-.method public final onFocusChanged(Landroid/view/View;Ljava/lang/CharSequence;ZILandroid/graphics/Rect;)V
-    .locals 0
+.method public final hashCode()I
+    .locals 2
 
-    return-void
+    iget-object v0, p0, Lxc;->a:Lpl1;
+
+    invoke-virtual {v0}, Lpl1;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Lxc;->b:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "DisableCameraForParticipant(id="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lxc;->a:Lpl1;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isSuccess="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lxc;->b:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

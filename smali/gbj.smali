@@ -2,440 +2,578 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lzm4;
+.implements Liq3;
+
 
 # direct methods
-.method public static final a(Lodb;II)Ljava/util/List;
-    .locals 9
+.method public static D(Ljava/lang/Object;Ljava/lang/Object;)Z
+    .locals 0
 
-    iget-object p0, p0, Lodb;->a:Ljava/lang/Object;
+    if-nez p0, :cond_1
 
-    check-cast p0, Ljava/util/LinkedHashMap;
+    if-nez p1, :cond_0
 
-    if-ne p1, p2, :cond_0
+    const/4 p0, 0x1
 
-    sget-object p0, Ldh5;->a:Ldh5;
-
-    return-object p0
+    return p0
 
     :cond_0
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    const/4 v1, 0x1
-
-    if-le p2, p1, :cond_1
-
-    move v2, v1
-
-    goto :goto_0
+    return p0
 
     :cond_1
-    move v2, v0
-
-    :goto_0
-    new-instance v3, Ljava/util/ArrayList;
-
-    invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
-
-    :cond_2
-    if-eqz v2, :cond_3
-
-    if-ge p1, p2, :cond_b
-
-    goto :goto_1
-
-    :cond_3
-    if-le p1, p2, :cond_b
-
-    :goto_1
-    const/4 v4, 0x0
-
-    if-eqz v2, :cond_5
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    invoke-virtual {p0, v5}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Ljava/util/TreeMap;
-
-    if-nez v5, :cond_4
-
-    :goto_2
-    move-object v7, v4
-
-    goto :goto_3
-
-    :cond_4
-    invoke-virtual {v5}, Ljava/util/TreeMap;->descendingKeySet()Ljava/util/NavigableSet;
-
-    move-result-object v6
-
-    new-instance v7, Lktb;
-
-    invoke-direct {v7, v5, v6}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    goto :goto_3
-
-    :cond_5
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    invoke-virtual {p0, v5}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Ljava/util/TreeMap;
-
-    if-nez v5, :cond_6
-
-    goto :goto_2
-
-    :cond_6
-    invoke-virtual {v5}, Ljava/util/TreeMap;->keySet()Ljava/util/Set;
-
-    move-result-object v6
-
-    new-instance v7, Lktb;
-
-    invoke-direct {v7, v5, v6}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    :goto_3
-    if-nez v7, :cond_7
-
-    goto :goto_6
-
-    :cond_7
-    iget-object v5, v7, Lktb;->a:Ljava/lang/Object;
-
-    check-cast v5, Ljava/util/Map;
-
-    iget-object v6, v7, Lktb;->b:Ljava/lang/Object;
-
-    check-cast v6, Ljava/lang/Iterable;
-
-    invoke-interface {v6}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v6
-
-    :cond_8
-    invoke-interface {v6}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v7
-
-    if-eqz v7, :cond_a
-
-    invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v7
-
-    check-cast v7, Ljava/lang/Number;
-
-    invoke-virtual {v7}, Ljava/lang/Number;->intValue()I
-
-    move-result v7
-
-    if-eqz v2, :cond_9
-
-    add-int/lit8 v8, p1, 0x1
-
-    if-gt v8, v7, :cond_8
-
-    if-gt v7, p2, :cond_8
-
-    goto :goto_4
-
-    :cond_9
-    if-gt p2, v7, :cond_8
-
-    if-ge v7, p1, :cond_8
-
-    :goto_4
-    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    invoke-interface {v5, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    invoke-virtual {v3, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    move v5, v1
-
-    move p1, v7
-
-    goto :goto_5
-
-    :cond_a
-    move v5, v0
-
-    :goto_5
-    if-nez v5, :cond_2
-
-    :goto_6
-    return-object v4
-
-    :cond_b
-    return-object v3
-.end method
-
-.method public static final b(Ldj4;II)Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    if-le p1, p2, :cond_0
-
-    iget-boolean p2, p0, Ldj4;->l:Z
-
-    if-eqz p2, :cond_0
-
-    return v0
-
-    :cond_0
-    iget-object p2, p0, Ldj4;->m:Ljava/util/Set;
-
-    iget-boolean p0, p0, Ldj4;->k:Z
-
-    if-eqz p0, :cond_2
-
-    if-eqz p2, :cond_1
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p0
-
-    invoke-interface {p2, p0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
-    if-nez p0, :cond_2
+    return p0
+.end method
+
+.method public static E(II)I
+    .locals 0
+
+    if-ge p0, p1, :cond_0
+
+    const/4 p0, -0x1
+
+    return p0
+
+    :cond_0
+    if-ne p0, p1, :cond_1
+
+    const/4 p0, 0x0
+
+    return p0
 
     :cond_1
     const/4 p0, 0x1
 
     return p0
-
-    :cond_2
-    return v0
 .end method
 
-.method public static d(II)V
-    .locals 2
-
-    if-ltz p0, :cond_1
-
-    if-lt p0, p1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-
-    :cond_1
-    :goto_0
-    new-instance v0, Ljava/lang/IndexOutOfBoundsException;
-
-    const-string v1, "index"
-
-    if-ltz p0, :cond_3
-
-    if-gez p1, :cond_2
-
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "negative size: "
-
-    invoke-static {p1, v0}, Lj27;->g(ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_2
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p0
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    filled-new-array {v1, p0, p1}, [Ljava/lang/Object;
-
-    move-result-object p0
-
-    const-string p1, "%s (%s) must be less than size (%s)"
-
-    invoke-static {p1, p0}, Libj;->c(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p0
-
-    goto :goto_1
-
-    :cond_3
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p0
-
-    filled-new-array {v1, p0}, [Ljava/lang/Object;
-
-    move-result-object p0
-
-    const-string p1, "%s (%s) must not be negative"
-
-    invoke-static {p1, p0}, Libj;->c(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p0
-
-    :goto_1
-    invoke-direct {v0, p0}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public static e(III)V
-    .locals 1
-
-    if-ltz p0, :cond_1
-
-    if-lt p1, p0, :cond_1
-
-    if-le p1, p2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-
-    :cond_1
-    :goto_0
-    new-instance v0, Ljava/lang/IndexOutOfBoundsException;
-
-    if-ltz p0, :cond_4
-
-    if-gt p0, p2, :cond_4
-
-    if-ltz p1, :cond_3
-
-    if-le p1, p2, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p0
-
-    filled-new-array {p1, p0}, [Ljava/lang/Object;
-
-    move-result-object p0
-
-    const-string p1, "end index (%s) must not be less than start index (%s)"
-
-    invoke-static {p1, p0}, Libj;->c(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p0
-
-    goto :goto_2
-
-    :cond_3
-    :goto_1
-    const-string p0, "end index"
-
-    invoke-static {p1, p2, p0}, Lgbj;->f(IILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    goto :goto_2
-
-    :cond_4
-    const-string p1, "start index"
-
-    invoke-static {p0, p2, p1}, Lgbj;->f(IILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    :goto_2
-    invoke-direct {v0, p0}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public static f(IILjava/lang/String;)Ljava/lang/String;
+.method public static F(JJ)I
     .locals 0
+
+    cmp-long p0, p0, p2
 
     if-gez p0, :cond_0
 
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    const/4 p0, -0x1
+
+    return p0
+
+    :cond_0
+    if-nez p0, :cond_1
+
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_1
+    const/4 p0, 0x1
+
+    return p0
+.end method
+
+.method public static H(IILandroid/content/Context;)I
+    .locals 2
+
+    new-instance v0, Landroid/util/TypedValue;
+
+    invoke-direct {v0}, Landroid/util/TypedValue;-><init>()V
+
+    invoke-virtual {p2}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
+
+    move-result-object p2
+
+    const/4 v1, 0x1
+
+    invoke-virtual {p2, p0, v0, v1}, Landroid/content/res/Resources$Theme;->resolveAttribute(ILandroid/util/TypedValue;Z)Z
+
+    iget p2, v0, Landroid/util/TypedValue;->resourceId:I
+
+    if-eqz p2, :cond_0
+
+    return p0
+
+    :cond_0
+    return p1
+.end method
+
+.method public static I(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Landroid/content/res/Resources$Theme;Ljava/lang/String;I)Lrq6;
+    .locals 3
+
+    const-string v0, "http://schemas.android.com/apk/res/android"
+
+    invoke-interface {p1, v0, p3}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    const/4 p3, 0x0
+
+    const/4 v0, 0x0
+
+    if-eqz p1, :cond_1
+
+    new-instance p1, Landroid/util/TypedValue;
+
+    invoke-direct {p1}, Landroid/util/TypedValue;-><init>()V
+
+    invoke-virtual {p0, p4, p1}, Landroid/content/res/TypedArray;->getValue(ILandroid/util/TypedValue;)Z
+
+    iget v1, p1, Landroid/util/TypedValue;->type:I
+
+    const/16 v2, 0x1c
+
+    if-lt v1, v2, :cond_0
+
+    const/16 v2, 0x1f
+
+    if-gt v1, v2, :cond_0
+
+    iget p0, p1, Landroid/util/TypedValue;->data:I
+
+    new-instance p1, Lrq6;
+
+    invoke-direct {p1, p3, p3, p0}, Lrq6;-><init>(Landroid/graphics/Shader;Landroid/content/res/ColorStateList;I)V
+
+    return-object p1
+
+    :cond_0
+    invoke-virtual {p0}, Landroid/content/res/TypedArray;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p4, v0}, Landroid/content/res/TypedArray;->getResourceId(II)I
+
+    move-result p0
+
+    :try_start_0
+    invoke-static {p1, p0, p2}, Lrq6;->D(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Lrq6;
+
+    move-result-object p0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p0
+
+    const-string p1, "ComplexColorCompat"
+
+    const-string p2, "Failed to inflate ComplexColor."
+
+    invoke-static {p1, p2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    move-object p0, p3
+
+    :goto_0
+    if-eqz p0, :cond_1
+
+    return-object p0
+
+    :cond_1
+    new-instance p0, Lrq6;
+
+    invoke-direct {p0, p3, p3, v0}, Lrq6;-><init>(Landroid/graphics/Shader;Landroid/content/res/ColorStateList;I)V
+
+    return-object p0
+.end method
+
+.method public static J(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
+    .locals 1
+
+    const-string v0, "http://schemas.android.com/apk/res/android"
+
+    invoke-interface {p0, v0, p1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
-    filled-new-array {p2, p0}, [Ljava/lang/Object;
+    if-eqz p0, :cond_0
 
-    move-result-object p0
+    const/4 p0, 0x1
 
-    const-string p1, "%s (%s) must not be negative"
+    return p0
 
-    invoke-static {p1, p0}, Libj;->c(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public static K(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
+    .locals 0
+
+    if-nez p1, :cond_0
+
+    invoke-virtual {p0, p2, p3}, Landroid/content/res/Resources;->obtainAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p0
 
     return-object p0
 
     :cond_0
-    if-ltz p1, :cond_1
+    const/4 p0, 0x0
 
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p0
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    filled-new-array {p2, p0, p1}, [Ljava/lang/Object;
-
-    move-result-object p0
-
-    const-string p1, "%s (%s) must not be greater than size (%s)"
-
-    invoke-static {p1, p0}, Libj;->c(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p1, p2, p3, p0, p0}, Landroid/content/res/Resources$Theme;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object p0
 
     return-object p0
+.end method
+
+.method public static L()V
+    .locals 2
+
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "This function has a reified type parameter and thus can only be inlined at compilation time, not called directly."
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public static M(Ljava/lang/RuntimeException;Ljava/lang/String;)V
+    .locals 5
+
+    invoke-virtual {p0}, Ljava/lang/Throwable;->getStackTrace()[Ljava/lang/StackTraceElement;
+
+    move-result-object v0
+
+    array-length v1, v0
+
+    const/4 v2, -0x1
+
+    const/4 v3, 0x0
+
+    :goto_0
+    if-ge v3, v1, :cond_1
+
+    aget-object v4, v0, v3
+
+    invoke-virtual {v4}, Ljava/lang/StackTraceElement;->getClassName()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {p1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_0
+
+    move v2, v3
+
+    :cond_0
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
 
     :cond_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    add-int/lit8 v2, v2, 0x1
 
-    const-string p2, "negative size: "
-
-    invoke-static {p1, p2}, Lj27;->g(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v2, v1}, Ljava/util/Arrays;->copyOfRange([Ljava/lang/Object;II)[Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    check-cast p1, [Ljava/lang/StackTraceElement;
 
-    throw p0
+    invoke-virtual {p0, p1}, Ljava/lang/Throwable;->setStackTrace([Ljava/lang/StackTraceElement;)V
+
+    return-void
 .end method
 
 
 # virtual methods
-.method public c()Z
+.method public A()F
     .locals 1
+
+    invoke-virtual {p0}, Lgbj;->G()V
 
     const/4 v0, 0x0
 
+    throw v0
+.end method
+
+.method public B(Lzwe;I)J
+    .locals 0
+
+    invoke-virtual {p0}, Lgbj;->t()J
+
+    move-result-wide p1
+
+    return-wide p1
+.end method
+
+.method public C()D
+    .locals 1
+
+    invoke-virtual {p0}, Lgbj;->G()V
+
+    const/4 v0, 0x0
+
+    throw v0
+.end method
+
+.method public G()V
+    .locals 3
+
+    new-instance v0, Lkotlinx/serialization/SerializationException;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v2
+
+    invoke-static {v2}, Lazd;->a(Ljava/lang/Class;)Lhf3;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v2, " can\'t retrieve untyped values"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public a(Lwmc;I)Lzm4;
+    .locals 0
+
+    invoke-virtual {p1, p2}, Lng8;->i(I)Lzwe;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Lgbj;->o(Lzwe;)Lzm4;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public b()Z
+    .locals 1
+
+    invoke-virtual {p0}, Lgbj;->G()V
+
+    const/4 v0, 0x0
+
+    throw v0
+.end method
+
+.method public c()C
+    .locals 1
+
+    invoke-virtual {p0}, Lgbj;->G()V
+
+    const/4 v0, 0x0
+
+    throw v0
+.end method
+
+.method public d(Lw58;)Ljava/lang/Object;
+    .locals 0
+
+    invoke-interface {p1, p0}, Lw58;->b(Lzm4;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public f(Lwmc;I)D
+    .locals 0
+
+    invoke-virtual {p0}, Lgbj;->C()D
+
+    move-result-wide p1
+
+    return-wide p1
+.end method
+
+.method public g(Lwmc;I)C
+    .locals 0
+
+    invoke-virtual {p0}, Lgbj;->c()C
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public h(Lwmc;I)F
+    .locals 0
+
+    invoke-virtual {p0}, Lgbj;->A()F
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public i(Lwmc;I)B
+    .locals 0
+
+    invoke-virtual {p0}, Lgbj;->y()B
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public j(Lzwe;I)Ljava/lang/String;
+    .locals 0
+
+    invoke-virtual {p0}, Lgbj;->q()Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public abstract k()I
+.end method
+
+.method public l(Lwmc;I)S
+    .locals 0
+
+    invoke-virtual {p0}, Lgbj;->z()S
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public m(Lzwe;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public o(Lzwe;)Lzm4;
+    .locals 0
+
+    return-object p0
+.end method
+
+.method public p(Lzwe;ILw58;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    invoke-virtual {p0, p3}, Lgbj;->d(Lw58;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public q()Ljava/lang/String;
+    .locals 1
+
+    invoke-virtual {p0}, Lgbj;->G()V
+
+    const/4 v0, 0x0
+
+    throw v0
+.end method
+
+.method public r(Lzwe;)Liq3;
+    .locals 0
+
+    return-object p0
+.end method
+
+.method public s(Lzwe;)I
+    .locals 0
+
+    invoke-virtual {p0}, Lgbj;->G()V
+
+    const/4 p1, 0x0
+
+    throw p1
+.end method
+
+.method public abstract t()J
+.end method
+
+.method public u(Lwmc;I)I
+    .locals 0
+
+    invoke-virtual {p0}, Lgbj;->k()I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public v()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
     return v0
+.end method
+
+.method public w(Lzwe;ILw58;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    invoke-interface {p3}, Lw58;->d()Lzwe;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Lzwe;->c()Z
+
+    move-result p1
+
+    if-nez p1, :cond_1
+
+    invoke-interface {p0}, Lzm4;->v()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return-object p1
+
+    :cond_1
+    :goto_0
+    invoke-virtual {p0, p3}, Lgbj;->d(Lw58;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public x(Lzwe;I)Z
+    .locals 0
+
+    invoke-virtual {p0}, Lgbj;->b()Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public abstract y()B
+.end method
+
+.method public abstract z()S
 .end method

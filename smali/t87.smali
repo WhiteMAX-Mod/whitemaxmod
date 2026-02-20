@@ -1,27 +1,117 @@
 .class public final Lt87;
-.super Lz87;
+.super Lge3;
 .source "SourceFile"
 
 
 # instance fields
-.field public final w0:Z
+.field public t0:[B
 
-.field public final x0:Z
+.field public volatile u0:Z
+
+.field public v0:[B
 
 
-# direct methods
-.method public constructor <init>(Ljava/lang/String;Lx87;JIJLy85;Ljava/lang/String;Ljava/lang/String;JJZZZ)V
-    .locals 0
+# virtual methods
+.method public final a()V
+    .locals 1
 
-    invoke-direct/range {p0 .. p15}, Lz87;-><init>(Ljava/lang/String;Lx87;JIJLy85;Ljava/lang/String;Ljava/lang/String;JJZ)V
+    const/4 v0, 0x1
 
-    move/from16 p1, p16
-
-    iput-boolean p1, p0, Lt87;->w0:Z
-
-    move/from16 p1, p17
-
-    iput-boolean p1, p0, Lt87;->x0:Z
+    iput-boolean v0, p0, Lt87;->u0:Z
 
     return-void
+.end method
+
+.method public final load()V
+    .locals 6
+
+    :try_start_0
+    iget-object v0, p0, Lge3;->s0:Lcyf;
+
+    iget-object v1, p0, Lge3;->b:Lnk4;
+
+    invoke-virtual {v0, v1}, Lcyf;->R(Lnk4;)J
+
+    const/4 v0, 0x0
+
+    move v1, v0
+
+    :cond_0
+    :goto_0
+    const/4 v2, -0x1
+
+    if-eq v0, v2, :cond_2
+
+    iget-boolean v0, p0, Lt87;->u0:Z
+
+    if-nez v0, :cond_2
+
+    iget-object v0, p0, Lt87;->t0:[B
+
+    array-length v3, v0
+
+    add-int/lit16 v4, v1, 0x4000
+
+    const/16 v5, 0x4000
+
+    if-ge v3, v4, :cond_1
+
+    array-length v3, v0
+
+    add-int/2addr v3, v5
+
+    invoke-static {v0, v3}, Ljava/util/Arrays;->copyOf([BI)[B
+
+    move-result-object v0
+
+    iput-object v0, p0, Lt87;->t0:[B
+
+    :cond_1
+    iget-object v0, p0, Lge3;->s0:Lcyf;
+
+    iget-object v3, p0, Lt87;->t0:[B
+
+    invoke-virtual {v0, v3, v1, v5}, Lcyf;->read([BII)I
+
+    move-result v0
+
+    if-eq v0, v2, :cond_0
+
+    add-int/2addr v1, v0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_1
+
+    :cond_2
+    iget-boolean v0, p0, Lt87;->u0:Z
+
+    if-nez v0, :cond_3
+
+    iget-object v0, p0, Lt87;->t0:[B
+
+    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([BI)[B
+
+    move-result-object v0
+
+    iput-object v0, p0, Lt87;->v0:[B
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :cond_3
+    iget-object v0, p0, Lge3;->s0:Lcyf;
+
+    invoke-static {v0}, Lmuj;->a(Lek4;)V
+
+    return-void
+
+    :goto_1
+    iget-object v1, p0, Lge3;->s0:Lcyf;
+
+    invoke-static {v1}, Lmuj;->a(Lek4;)V
+
+    throw v0
 .end method

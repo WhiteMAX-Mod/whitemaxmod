@@ -1,64 +1,129 @@
-.class public final Lnw2;
-.super Ljava/lang/Object;
+.class public final enum Lnw2;
+.super Ljava/lang/Enum;
 .source "SourceFile"
-
-# interfaces
-.implements Low2;
 
 
 # static fields
-.field public static final a:Lnw2;
+.field public static final synthetic X:[Lnw2;
+
+.field public static final enum b:Lnw2;
+
+.field public static final enum c:Lnw2;
+
+.field public static final enum d:Lnw2;
+
+.field public static final o:I
+
+
+# instance fields
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 5
 
     new-instance v0, Lnw2;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const-string v1, "SOUND"
 
-    sput-object v0, Lnw2;->a:Lnw2;
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2, v1}, Lnw2;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lnw2;->b:Lnw2;
+
+    new-instance v1, Lnw2;
+
+    const/4 v2, 0x1
+
+    const-string v3, "VIBR"
+
+    const-string v4, "VIBRATION"
+
+    invoke-direct {v1, v4, v2, v3}, Lnw2;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v1, Lnw2;->c:Lnw2;
+
+    new-instance v2, Lnw2;
+
+    const-string v3, "LED"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4, v3}, Lnw2;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v2, Lnw2;->d:Lnw2;
+
+    filled-new-array {v0, v1, v2}, [Lnw2;
+
+    move-result-object v0
+
+    sput-object v0, Lnw2;->X:[Lnw2;
+
+    invoke-static {}, Lnw2;->values()[Lnw2;
+
+    move-result-object v0
+
+    array-length v0, v0
+
+    sput v0, Lnw2;->o:I
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    iput-object p3, p0, Lnw2;->a:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lnw2;
+    .locals 1
+
+    const-class v0, Lnw2;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lnw2;
+
+    return-object p0
+.end method
+
+.method public static values()[Lnw2;
+    .locals 1
+
+    sget-object v0, Lnw2;->X:[Lnw2;
+
+    invoke-virtual {v0}, [Lnw2;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lnw2;
+
+    return-object v0
+.end method
+
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Lnw2;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, -0x3874dcf6
-
-    return v0
-.end method
-
 .method public final toString()Ljava/lang/String;
-    .locals 1
+    .locals 3
 
-    const-string v0, "LoadingError"
+    const-string v0, "{value=\'"
+
+    const-string v1, "\'}"
+
+    iget-object v2, p0, Lnw2;->a:Ljava/lang/String;
+
+    invoke-static {v0, v2, v1}, Ltx8;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

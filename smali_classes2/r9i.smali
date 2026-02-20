@@ -1,94 +1,61 @@
-.class public final synthetic Lr9i;
-.super Ljava/lang/Object;
+.class public final Lr9i;
+.super Ln28;
 .source "SourceFile"
 
-# interfaces
-.implements Lnq6;
 
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lone/me/webapp/settings/WebAppSettingsScreen;
+# static fields
+.field public static final c:Lr9i;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/webapp/settings/WebAppSettingsScreen;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p2, p0, Lr9i;->a:I
+    new-instance v0, Lr9i;
 
-    iput-object p1, p0, Lr9i;->b:Lone/me/webapp/settings/WebAppSettingsScreen;
+    invoke-direct {v0}, Ln28;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lr9i;->c:Lr9i;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget v0, p0, Lr9i;->a:I
+    const/4 v0, 0x1
 
-    sget-object v1, Lb3h;->a:Lb3h;
+    if-ne p0, p1, :cond_0
 
-    iget-object v2, p0, Lr9i;->b:Lone/me/webapp/settings/WebAppSettingsScreen;
+    return v0
 
-    packed-switch v0, :pswitch_data_0
+    :cond_0
+    instance-of p1, p1, Lr9i;
 
-    check-cast p1, Landroid/view/View;
+    if-nez p1, :cond_1
 
-    sget-object p1, Lone/me/webapp/settings/WebAppSettingsScreen;->Z:[Lz28;
+    const/4 p1, 0x0
 
-    invoke-virtual {v2}, La94;->getRouter()Lw4e;
+    return p1
 
-    move-result-object p1
+    :cond_1
+    return v0
+.end method
 
-    invoke-virtual {p1}, Lw4e;->C()Z
+.method public final hashCode()I
+    .locals 1
 
-    return-object v1
+    const v0, 0x40eee229
 
-    :pswitch_0
-    check-cast p1, Lgp0;
+    return v0
+.end method
 
-    sget-object p1, Lone/me/webapp/settings/WebAppSettingsScreen;->Z:[Lz28;
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    invoke-virtual {v2}, Lone/me/webapp/settings/WebAppSettingsScreen;->z0()Lcai;
+    const-string v0, "RestoreScreenBrightness"
 
-    move-result-object p1
-
-    iget-object v0, p1, Lnth;->a:Lkotlinx/coroutines/internal/ContextScope;
-
-    iget-object v2, p1, Lcai;->Z:Lo58;
-
-    invoke-interface {v2}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lmbg;
-
-    check-cast v2, Lj9b;
-
-    invoke-virtual {v2}, Lj9b;->b()Lsb4;
-
-    move-result-object v2
-
-    new-instance v3, Laai;
-
-    const/4 v4, 0x0
-
-    invoke-direct {v3, p1, v4}, Laai;-><init>(Lcai;Lkotlin/coroutines/Continuation;)V
-
-    const/4 p1, 0x2
-
-    invoke-static {v0, v2, v4, v3, p1}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
-
-    return-object v1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

@@ -1,76 +1,32 @@
-.class public interface abstract Lajd;
+.class public abstract Lajd;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
-# direct methods
-.method public static a(Lvm;Lnbg;)V
-    .locals 3
+# static fields
+.field public static contact_list_call_contact_title:I = 0x7f130420
 
-    iget-object v0, p0, Lvm;->c:Lwm;
+.field public static contact_list_confirm_contact_delete_action:I = 0x7f130421
 
-    const/4 v1, 0x0
+.field public static contact_list_confirm_contact_delete_title:I = 0x7f130422
 
-    if-eqz v0, :cond_0
+.field public static contact_list_contact_delete_snackbar_title:I = 0x7f130423
 
-    goto :goto_0
+.field public static contact_list_menu_item_add_contact:I = 0x7f130424
 
-    :cond_0
-    move-object v0, v1
+.field public static contact_list_search_hint:I = 0x7f130425
 
-    :goto_0
-    iget-object v0, v0, Lwm;->e:Lo58;
+.field public static contact_list_search_hint_with_nick:I = 0x7f130426
 
-    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+.field public static empty_contact_list_description:I = 0x7f130491
 
-    move-result-object v0
+.field public static empty_contact_list_title:I = 0x7f130492
 
-    check-cast v0, Lgre;
+.field public static empty_search_contact_btn_title:I = 0x7f130495
 
-    check-cast v0, Lidc;
+.field public static empty_search_contact_disabled_description:I = 0x7f130496
 
-    iget-object v0, v0, Lidc;->l:Leyd;
+.field public static empty_search_contact_enabled_description:I = 0x7f130497
 
-    invoke-virtual {v0}, Leyd;->getValue()Ljava/lang/Object;
+.field public static empty_search_contact_title:I = 0x7f130498
 
-    move-result-object v0
-
-    check-cast v0, Ljava/util/Set;
-
-    iget-object v2, p1, Lnbg;->b:Ljava/lang/String;
-
-    invoke-interface {v0, v2}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    filled-new-array {p1}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    const/4 v2, 0x1
-
-    invoke-static {p1, v2}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object p1
-
-    const-string v2, "detect common reaction error, call onMaxFailCount() for task"
-
-    invoke-static {v0, v1, v2, p1}, Lc5j;->q(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    check-cast p0, Lb0c;
-
-    invoke-interface {p0}, Lb0c;->d()V
-
-    :cond_1
-    return-void
-.end method
+.field public static snackbar_self_title:I = 0x7f130da6

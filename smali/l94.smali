@@ -1,23 +1,15 @@
-.class public interface abstract Ll94;
+.class public abstract Ll94;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract b(Ljava/lang/String;Ljava/lang/Object;Landroid/graphics/drawable/Animatable;)V
-.end method
+# direct methods
+.method public static a(Landroid/content/Context;)Ljava/util/concurrent/Executor;
+    .locals 0
 
-.method public abstract d(Ljava/lang/String;Ljava/lang/Throwable;)V
-.end method
+    invoke-virtual {p0}, Landroid/content/Context;->getMainExecutor()Ljava/util/concurrent/Executor;
 
-.method public abstract e(Ljava/lang/String;)V
-.end method
+    move-result-object p0
 
-.method public abstract g(Ljava/lang/String;)V
-.end method
-
-.method public abstract j(Ljava/lang/String;Ljava/lang/Throwable;)V
-.end method
-
-.method public abstract onIntermediateImageSet(Ljava/lang/String;Ljava/lang/Object;)V
+    return-object p0
 .end method

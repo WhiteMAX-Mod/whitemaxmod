@@ -1,5 +1,5 @@
 .class public final Lrtc;
-.super Lie0;
+.super Ldg0;
 .source "SourceFile"
 
 
@@ -13,7 +13,7 @@
 
     const/16 v0, 0x10
 
-    invoke-direct {p0, v0}, Lie0;-><init>(I)V
+    invoke-direct {p0, v0}, Ldg0;-><init>(I)V
 
     iput-wide p1, p0, Lrtc;->b:J
 
@@ -72,13 +72,13 @@
 .method public final toString()Ljava/lang/String;
     .locals 4
 
-    const-string v0, "Search(chatId="
+    const-string v0, "OpenChat(chatId="
 
     const-string v1, ")"
 
     iget-wide v2, p0, Lrtc;->b:J
 
-    invoke-static {v2, v3, v0, v1}, Lcbh;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v3, v0, v1}, Lfvg;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

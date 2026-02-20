@@ -1,13 +1,14 @@
-.class public abstract Ljre;
+.class public interface abstract Ljre;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# direct methods
-.method public static a(Landroid/app/Service;I)V
-    .locals 0
+# virtual methods
+.method public abstract c()Z
+.end method
 
-    invoke-virtual {p0, p1}, Landroid/app/Service;->stopForeground(I)V
+.method public abstract e(J)Lhre;
+.end method
 
-    return-void
+.method public abstract f()J
 .end method

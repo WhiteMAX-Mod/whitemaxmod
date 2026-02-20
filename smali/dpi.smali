@@ -1,46 +1,24 @@
-.class public final Ldpi;
+.class public abstract Ldpi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lbg0;
-
-
-# instance fields
-.field public final synthetic a:Lg07;
-
 
 # direct methods
-.method public constructor <init>(Lg07;)V
+.method public static a(Landroid/view/Window$Callback;Ljava/util/List;Landroid/view/Menu;I)V
     .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/view/Window$Callback;",
+            "Ljava/util/List<",
+            "Landroid/view/KeyboardShortcutGroup;",
+            ">;",
+            "Landroid/view/Menu;",
+            "I)V"
+        }
+    .end annotation
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ldpi;->a:Lg07;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a(Z)V
-    .locals 2
-
-    iget-object v0, p0, Ldpi;->a:Lg07;
-
-    iget-object v0, v0, Lg07;->x0:Lz7a;
-
-    const/4 v1, 0x1
-
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p1
-
-    invoke-virtual {v0, v1, p1}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+    invoke-interface {p0, p1, p2, p3}, Landroid/view/Window$Callback;->onProvideKeyboardShortcuts(Ljava/util/List;Landroid/view/Menu;I)V
 
     return-void
 .end method

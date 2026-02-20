@@ -1,97 +1,80 @@
-.class public final enum Lnah;
-.super Ljava/lang/Enum;
+.class public final Lnah;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lw58;
 
 
 # static fields
-.field public static final enum a:Lnah;
+.field public static final b:Lnah;
 
-.field public static final enum b:Lnah;
 
-.field public static final enum c:Lnah;
-
-.field public static final enum d:Lnah;
-
-.field public static final synthetic o:[Lnah;
+# instance fields
+.field public final synthetic a:Lrza;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 6
+    .locals 1
 
     new-instance v0, Lnah;
 
-    const-string v1, "ENABLED"
+    invoke-direct {v0}, Lnah;-><init>()V
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lnah;->a:Lnah;
-
-    new-instance v1, Lnah;
-
-    const-string v2, "DISABLED"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lnah;->b:Lnah;
-
-    new-instance v2, Lnah;
-
-    const-string v3, "USER_IGNORED"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lnah;->c:Lnah;
-
-    new-instance v3, Lnah;
-
-    const-string v4, "UNKNOWN"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lnah;->d:Lnah;
-
-    filled-new-array {v0, v1, v2, v3}, [Lnah;
-
-    move-result-object v0
-
-    sput-object v0, Lnah;->o:[Lnah;
+    sput-object v0, Lnah;->b:Lnah;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lnah;
+.method public constructor <init>()V
     .locals 1
 
-    const-class v0, Lnah;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    new-instance v0, Lrza;
 
-    move-result-object p0
+    invoke-direct {v0}, Lrza;-><init>()V
 
-    check-cast p0, Lnah;
+    iput-object v0, p0, Lnah;->a:Lrza;
 
-    return-object p0
+    return-void
 .end method
 
-.method public static values()[Lnah;
+
+# virtual methods
+.method public final a(Lj6g;Ljava/lang/Object;)V
     .locals 1
 
-    sget-object v0, Lnah;->o:[Lnah;
+    check-cast p2, Lmah;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    iget-object v0, p0, Lnah;->a:Lrza;
+
+    invoke-virtual {v0, p1, p2}, Lrza;->a(Lj6g;Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public final b(Lzm4;)Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Lnah;->a:Lrza;
+
+    invoke-virtual {v0, p1}, Lrza;->b(Lzm4;)Ljava/lang/Object;
+
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
+.end method
+
+.method public final d()Lzwe;
+    .locals 1
+
+    iget-object v0, p0, Lnah;->a:Lrza;
+
+    invoke-virtual {v0}, Lrza;->d()Lzwe;
 
     move-result-object v0
-
-    check-cast v0, [Lnah;
 
     return-object v0
 .end method

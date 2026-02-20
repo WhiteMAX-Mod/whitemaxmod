@@ -1,282 +1,85 @@
-.class public Lfnb;
-.super Landroid/webkit/WebView;
+.class public abstract Lfnb;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:Landroid/webkit/ValueCallback;
+# static fields
+.field public static final a:I
 
-.field public b:Lenb;
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;I)V
-    .locals 3
-
-    and-int/lit8 p2, p2, 0x4
-
-    const/4 v0, 0x0
-
-    if-eqz p2, :cond_0
-
-    move p2, v0
-
-    goto :goto_0
-
-    :cond_0
-    const p2, 0x1010085
-
-    :goto_0
-    new-instance v1, Lk84;
-
-    invoke-direct {v1, p1, v0}, Lk84;-><init>(Landroid/content/Context;I)V
-
-    const/4 p1, 0x0
-
-    invoke-direct {p0, v1, p1, p2, v0}, Landroid/webkit/WebView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
-
-    invoke-virtual {p0}, Lfnb;->b()V
-
-    const/4 p1, 0x1
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setFocusable(Z)V
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setFocusableInTouchMode(Z)V
-
-    sget p1, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 p2, 0x21
-
-    if-lt p1, p2, :cond_1
-
-    invoke-virtual {p0}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lz4;->y(Landroid/webkit/WebSettings;)V
-
-    :cond_1
-    invoke-static {}, Landroid/webkit/WebView;->getCurrentWebViewPackage()Landroid/content/pm/PackageInfo;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object p2
-
-    invoke-virtual {p2}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p2
-
-    iget-object v0, p1, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
-
-    iget-object p1, p1, Landroid/content/pm/PackageInfo;->versionName:Ljava/lang/String;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "WebView package: "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, ", version: "
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p2, p1}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    :cond_2
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string p2, "WebView package not found."
-
-    invoke-static {p1, p2}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final b()V
-    .locals 2
-
-    sget-object v0, Lpc3;->t0:Lkme;
-
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lkme;->n(Landroid/content/Context;)Lpc3;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lpc3;->j()Lzlb;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lzlb;->h()Lcj3;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    const/4 v1, 0x1
-
-    if-eq v0, v1, :cond_1
-
-    const/4 v1, 0x2
-
-    if-ne v0, v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v0, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {v0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw v0
-
-    :cond_1
-    sget v0, Ly5e;->a:I
-
-    goto :goto_1
-
-    :cond_2
-    :goto_0
-    sget v0, Ly5e;->b:I
-
-    :goto_1
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Landroid/content/Context;->setTheme(I)V
-
-    return-void
-.end method
-
-.method public final getFilePathCallback()Landroid/webkit/ValueCallback;
+.method static constructor <clinit>()V
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Landroid/webkit/ValueCallback<",
-            "[",
-            "Landroid/net/Uri;",
-            ">;"
-        }
-    .end annotation
 
-    iget-object v0, p0, Lfnb;->a:Landroid/webkit/ValueCallback;
+    sget v0, Lagd;->oneme_stickers_preview_action_favorite:I
 
-    return-object v0
-.end method
+    sput v0, Lfnb;->a:I
 
-.method public final onConfigurationChanged(Landroid/content/res/Configuration;)V
-    .locals 0
+    sget v0, Lagd;->oneme_stickers_preview_action_forward:I
 
-    invoke-virtual {p0}, Lfnb;->b()V
+    sput v0, Lfnb;->b:I
 
-    invoke-super {p0, p1}, Landroid/webkit/WebView;->onConfigurationChanged(Landroid/content/res/Configuration;)V
+    sget v0, Lagd;->oneme_stickers_preview_action_send:I
 
-    return-void
-.end method
+    sput v0, Lfnb;->c:I
 
-.method public onTouchEvent(Landroid/view/MotionEvent;)Z
-    .locals 3
+    sget v0, Lagd;->oneme_stickers_preview_content_container:I
 
-    iget-object v0, p0, Lfnb;->b:Lenb;
+    sput v0, Lfnb;->d:I
 
-    if-eqz v0, :cond_1
+    sget v0, Lagd;->oneme_stickers_preview_lottie_cell:I
 
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
+    sput v0, Lfnb;->e:I
 
-    move-result v0
+    sget v0, Lagd;->oneme_stickers_preview_static_cell:I
 
-    const/4 v1, 0x1
+    sput v0, Lfnb;->f:I
 
-    if-eqz v0, :cond_0
+    sget v0, Lagd;->oneme_stickers_preview_sticker_container:I
 
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
+    sput v0, Lfnb;->g:I
 
-    move-result v0
+    sget v0, Lagd;->oneme_stickers_preview_stickers_set_container:I
 
-    const/4 v2, 0x2
+    sput v0, Lfnb;->h:I
 
-    if-eq v0, v2, :cond_0
+    sget v0, Lagd;->oneme_stickers_preview_stickers_set_content:I
 
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
+    sput v0, Lfnb;->i:I
 
-    move-result v0
+    sget v0, Lagd;->oneme_stickers_preview_stickers_set_header:I
 
-    if-ne v0, v1, :cond_1
+    sput v0, Lfnb;->j:I
 
-    :cond_0
-    iget-object v0, p0, Lfnb;->b:Lenb;
+    sget v0, Lagd;->oneme_stickers_preview_toolbar:I
 
-    if-eqz v0, :cond_1
+    sput v0, Lfnb;->k:I
 
-    check-cast v0, Lash;
+    sget v0, Lagd;->oneme_stickers_preview_webm_cell:I
 
-    iget-object v0, v0, Lash;->a:Lone/me/chatmedia/viewer/VideoWebViewScreen;
-
-    sget-object v2, Lone/me/chatmedia/viewer/VideoWebViewScreen;->J0:[Lz28;
-
-    invoke-virtual {v0, v1}, Lone/me/chatmedia/viewer/VideoWebViewScreen;->O0(Z)V
-
-    invoke-virtual {v0}, Lone/me/chatmedia/viewer/VideoWebViewScreen;->V0()V
-
-    :cond_1
-    invoke-super {p0, p1}, Landroid/webkit/WebView;->onTouchEvent(Landroid/view/MotionEvent;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final setFilePathCallback(Landroid/webkit/ValueCallback;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/webkit/ValueCallback<",
-            "[",
-            "Landroid/net/Uri;",
-            ">;)V"
-        }
-    .end annotation
-
-    iput-object p1, p0, Lfnb;->a:Landroid/webkit/ValueCallback;
-
-    return-void
-.end method
-
-.method public final setInteractionListener(Lenb;)V
-    .locals 0
-
-    iput-object p1, p0, Lfnb;->b:Lenb;
+    sput v0, Lfnb;->l:I
 
     return-void
 .end method

@@ -1,84 +1,41 @@
 .class public final Lkdh;
-.super Lone/me/sdk/richvector/EnhancedVectorDrawable;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Luig;
 
 
 # instance fields
-.field public final a:I
+.field public final a:Ljava/lang/String;
 
-.field public final b:Ljdh;
+.field public final b:Lj88;
+
+.field public final c:Lj88;
+
+.field public final d:Lj88;
+
+.field public final e:Lj88;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;ILjdh;)V
+.method public constructor <init>(Lj88;Lj88;Lj88;Lj88;)V
     .locals 1
 
-    const/4 v0, 0x1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-ne p2, v0, :cond_0
+    const-class v0, Lkdh;
 
-    sget v0, Lv5e;->l2:I
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    goto :goto_0
+    move-result-object v0
 
-    :cond_0
-    sget v0, Lv5e;->m2:I
+    iput-object v0, p0, Lkdh;->a:Ljava/lang/String;
 
-    :goto_0
-    invoke-direct {p0, p1, v0}, Lone/me/sdk/richvector/EnhancedVectorDrawable;-><init>(Landroid/content/Context;I)V
+    iput-object p1, p0, Lkdh;->b:Lj88;
 
-    iput p2, p0, Lkdh;->a:I
+    iput-object p2, p0, Lkdh;->c:Lj88;
 
-    iput-object p3, p0, Lkdh;->b:Ljdh;
+    iput-object p3, p0, Lkdh;->d:Lj88;
 
-    sget-object p2, Lpc3;->t0:Lkme;
-
-    invoke-virtual {p2, p1}, Lkme;->n(Landroid/content/Context;)Lpc3;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lpc3;->j()Lzlb;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Lkdh;->onThemeChanged(Lzlb;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onThemeChanged(Lzlb;)V
-    .locals 4
-
-    iget-object v0, p0, Lkdh;->b:Ljdh;
-
-    invoke-interface {v0, p1}, Ljdh;->l(Lzlb;)J
-
-    move-result-wide v0
-
-    const/16 p1, 0x20
-
-    shr-long v2, v0, p1
-
-    long-to-int p1, v2
-
-    const-string v2, "mark_path"
-
-    invoke-static {p0, v2, p1}, Lroj;->b(Ladh;Ljava/lang/String;I)V
-
-    const-wide v2, 0xffffffffL
-
-    and-long/2addr v0, v2
-
-    long-to-int p1, v0
-
-    const-string v0, "background_path"
-
-    invoke-static {p0, v0, p1}, Lroj;->b(Ladh;Ljava/lang/String;I)V
+    iput-object p4, p0, Lkdh;->e:Lj88;
 
     return-void
 .end method

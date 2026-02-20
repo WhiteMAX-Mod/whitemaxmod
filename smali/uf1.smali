@@ -1,124 +1,199 @@
-.class public final Luf1;
+.class public final synthetic Luf1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lvf1;
+.implements Lks6;
 
 
 # instance fields
-.field public final a:Z
+.field public final synthetic a:I
+
+.field public final synthetic b:Z
+
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Z)V
+.method public synthetic constructor <init>(ILjava/lang/Object;Z)V
     .locals 0
+
+    .line 1
+    iput p1, p0, Luf1;->a:I
+
+    iput-object p2, p0, Luf1;->c:Ljava/lang/Object;
+
+    iput-boolean p3, p0, Luf1;->b:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean p1, p0, Luf1;->a:Z
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Lvf1;Ls61;Z)V
+    .locals 0
+
+    .line 2
+    const/4 p1, 0x0
+
+    iput p1, p0, Luf1;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p2, p0, Luf1;->c:Ljava/lang/Object;
+
+    iput-boolean p3, p0, Luf1;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    const/4 v0, 0x1
+    iget v0, p0, Luf1;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    iget-object v0, p0, Luf1;->c:Ljava/lang/Object;
+
+    check-cast v0, Liea;
+
+    check-cast p1, Ljq7;
+
+    iget-object v1, v0, Liea;->d:Ljava/lang/String;
+
+    iget-object v0, v0, Liea;->h:Lzy0;
+
+    iget v2, v0, Lzy0;->a:I
+
+    iget v0, v0, Lzy0;->b:I
+
+    iget-boolean v3, p0, Luf1;->b:Z
+
+    invoke-static {p1, v1, v2, v0, v3}, Lvfj;->c(Ljq7;Ljava/lang/String;IIZ)V
+
+    :goto_0
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
+
+    :pswitch_0
+    iget-object v0, p0, Luf1;->c:Ljava/lang/Object;
+
+    check-cast v0, Llv1;
+
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    iget-object p1, v0, Llv1;->F0:Lb6b;
+
+    iget-boolean v0, p0, Luf1;->b:Z
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x0
+
+    goto :goto_1
 
     :cond_0
-    instance-of v1, p1, Luf1;
+    const/16 v0, 0x8
+
+    :goto_1
+    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
+
+    goto :goto_0
+
+    :pswitch_1
+    iget-object v0, p0, Luf1;->c:Ljava/lang/Object;
+
+    check-cast v0, Ls61;
+
+    check-cast p1, Landroid/content/Intent;
+
+    const-string v1, "action-accept-call"
+
+    invoke-virtual {p1, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+
+    iget-object v1, v0, Ls61;->c:Ljava/lang/CharSequence;
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    if-eqz v1, :cond_1
 
-    return v2
+    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    goto :goto_2
 
     :cond_1
-    check-cast p1, Luf1;
+    move-object v1, v2
 
-    iget-boolean v1, p0, Luf1;->a:Z
+    :goto_2
+    if-nez v1, :cond_2
 
-    iget-boolean p1, p1, Luf1;->a:Z
-
-    if-eq v1, p1, :cond_2
-
-    return v2
+    const-string v1, ""
 
     :cond_2
-    return v0
-.end method
+    const-string v3, "incoming_param_name"
 
-.method public final getItemId()J
-    .locals 2
+    invoke-virtual {p1, v3, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    const-wide v0, 0x7ffffffffffffffeL
+    iget-object v1, v0, Ls61;->e:Ljava/lang/String;
 
-    return-wide v0
-.end method
+    if-eqz v1, :cond_3
 
-.method public final h(Lud8;)Z
-    .locals 4
+    sget-object v2, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
 
-    const-wide v0, 0x7ffffffffffffffeL
+    invoke-virtual {v1, v2}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
 
-    invoke-interface {p1}, Lud8;->getItemId()J
+    move-result-object v1
 
-    move-result-wide v2
+    const/4 v2, 0x0
 
-    cmp-long p1, v0, v2
+    invoke-static {v1, v2}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
 
-    if-nez p1, :cond_0
+    move-result-object v2
 
-    const/4 p1, 0x1
+    :cond_3
+    const-string v1, "incoming_param_avatar"
 
-    return p1
+    invoke-virtual {p1, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    :cond_0
-    const/4 p1, 0x0
+    iget-object v0, v0, Ls61;->a:Ljava/lang/Long;
 
-    return p1
-.end method
+    if-eqz v0, :cond_4
 
-.method public final hashCode()I
-    .locals 1
+    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
-    iget-boolean v0, p0, Luf1;->a:Z
+    move-result-wide v0
 
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+    goto :goto_3
 
-    move-result v0
+    :cond_4
+    const-wide/16 v0, 0x0
 
-    return v0
-.end method
+    :goto_3
+    const-string v2, "incoming_param_chat_id"
 
-.method public final m()I
-    .locals 1
+    invoke-virtual {p1, v2, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
 
-    const/4 v0, 0x4
+    const-string v0, "incoming_param_is_video"
 
-    return v0
-.end method
+    iget-boolean v1, p0, Luf1;->b:Z
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+    invoke-virtual {p1, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    const-string v0, "CallWaitingRoomState(isWaitingForAdmin="
+    goto :goto_0
 
-    const-string v1, ")"
+    nop
 
-    iget-boolean v2, p0, Luf1;->a:Z
-
-    invoke-static {v0, v1, v2}, Lmrf;->k(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

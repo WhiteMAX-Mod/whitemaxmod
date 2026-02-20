@@ -1,66 +1,49 @@
-.class public final synthetic Lo54;
-.super Ljava/lang/Object;
+.class public final Lo54;
+.super Lda4;
 .source "SourceFile"
-
-# interfaces
-.implements Lnm4;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:I
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public synthetic d:Ljava/lang/Object;
+
+.field public final synthetic o:Lp54;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method public constructor <init>(Lp54;Lda4;)V
     .locals 0
 
-    iput p1, p0, Lo54;->a:I
+    iput-object p1, p0, Lo54;->o:Lp54;
 
-    iput-object p2, p0, Lo54;->b:Ljava/lang/Object;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget v0, p0, Lo54;->a:I
+    iput-object p1, p0, Lo54;->d:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Lo54;->X:I
 
-    iget-object v0, p0, Lo54;->b:Ljava/lang/Object;
+    const/high16 v0, -0x80000000
 
-    check-cast v0, [J
+    or-int/2addr p1, v0
 
-    new-instance v1, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;
+    iput p1, p0, Lo54;->X:I
 
-    sget-object v2, Linf;->b:Linf;
+    iget-object p1, p0, Lo54;->o:Lp54;
 
-    invoke-direct {v1, v0, v2}, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;-><init>([JLinf;)V
+    const/4 v0, 0x0
 
-    return-object v1
+    invoke-virtual {p1, v0, p0}, Lp54;->t(ILkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    :pswitch_0
-    iget-object v0, p0, Lo54;->b:Ljava/lang/Object;
+    move-result-object p1
 
-    check-cast v0, Lr69;
-
-    new-instance v1, Lq54;
-
-    invoke-direct {v1, v0}, Lq54;-><init>(Lr69;)V
-
-    return-object v1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

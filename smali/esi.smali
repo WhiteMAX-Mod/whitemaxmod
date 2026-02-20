@@ -1,122 +1,84 @@
-.class public final Lesi;
-.super Luri;
+.class public final synthetic Lesi;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lks6;
 
 
 # instance fields
-.field public final transient c:Ljsi;
+.field public final synthetic a:I
 
-.field public final transient d:[Ljava/lang/Object;
+.field public final synthetic b:Landroidx/work/impl/model/WorkersQueueDao_Impl;
 
-.field public final transient o:I
+.field public final synthetic c:Lyri;
 
 
 # direct methods
-.method public constructor <init>(Ljsi;[Ljava/lang/Object;I)V
+.method public synthetic constructor <init>(Landroidx/work/impl/model/WorkersQueueDao_Impl;Lyri;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
+    iput p3, p0, Lesi;->a:I
 
-    iput-object p1, p0, Lesi;->c:Ljsi;
+    iput-object p1, p0, Lesi;->b:Landroidx/work/impl/model/WorkersQueueDao_Impl;
 
-    iput-object p2, p0, Lesi;->d:[Ljava/lang/Object;
+    iput-object p2, p0, Lesi;->c:Lyri;
 
-    iput p3, p0, Lesi;->o:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a([Ljava/lang/Object;)I
-    .locals 1
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    iget-object v0, p0, Luri;->b:Lhri;
+    iget v0, p0, Lesi;->a:I
 
-    if-nez v0, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    new-instance v0, Lcsi;
+    iget-object v0, p0, Lesi;->c:Lyri;
 
-    invoke-direct {v0, p0}, Lcsi;-><init>(Lesi;)V
+    check-cast p1, Lsde;
 
-    iput-object v0, p0, Luri;->b:Lhri;
+    iget-object v1, p0, Lesi;->b:Landroidx/work/impl/model/WorkersQueueDao_Impl;
 
-    :cond_0
-    invoke-virtual {v0, p1}, Lhri;->a([Ljava/lang/Object;)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final contains(Ljava/lang/Object;)Z
-    .locals 3
-
-    instance-of v0, p1, Ljava/util/Map$Entry;
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    check-cast p1, Ljava/util/Map$Entry;
-
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+    invoke-static {v1, v0, p1}, Landroidx/work/impl/model/WorkersQueueDao_Impl;->d(Landroidx/work/impl/model/WorkersQueueDao_Impl;Lyri;Lsde;)Lmah;
 
     move-result-object p1
 
-    if-eqz p1, :cond_0
+    return-object p1
 
-    iget-object v2, p0, Lesi;->c:Ljsi;
+    :pswitch_0
+    iget-object v0, p0, Lesi;->c:Lyri;
 
-    invoke-virtual {v2, v0}, Ljsi;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    check-cast p1, Lsde;
 
-    move-result-object v0
+    iget-object v1, p0, Lesi;->b:Landroidx/work/impl/model/WorkersQueueDao_Impl;
 
-    invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-static {v1, v0, p1}, Landroidx/work/impl/model/WorkersQueueDao_Impl;->g(Landroidx/work/impl/model/WorkersQueueDao_Impl;Lyri;Lsde;)Lmah;
 
-    move-result p1
+    move-result-object p1
 
-    if-eqz p1, :cond_0
+    return-object p1
 
-    const/4 p1, 0x1
+    :pswitch_1
+    iget-object v0, p0, Lesi;->c:Lyri;
 
-    return p1
+    check-cast p1, Lsde;
 
-    :cond_0
-    return v1
-.end method
+    iget-object v1, p0, Lesi;->b:Landroidx/work/impl/model/WorkersQueueDao_Impl;
 
-.method public final iterator()Ljava/util/Iterator;
-    .locals 2
+    invoke-static {v1, v0, p1}, Landroidx/work/impl/model/WorkersQueueDao_Impl;->i(Landroidx/work/impl/model/WorkersQueueDao_Impl;Lyri;Lsde;)Lmah;
 
-    iget-object v0, p0, Luri;->b:Lhri;
+    move-result-object p1
 
-    if-nez v0, :cond_0
+    return-object p1
 
-    new-instance v0, Lcsi;
-
-    invoke-direct {v0, p0}, Lcsi;-><init>(Lesi;)V
-
-    iput-object v0, p0, Luri;->b:Lhri;
-
-    :cond_0
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lhri;->f(I)Lari;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final size()I
-    .locals 1
-
-    iget v0, p0, Lesi;->o:I
-
-    return v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

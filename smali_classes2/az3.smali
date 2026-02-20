@@ -1,106 +1,238 @@
 .class public final Laz3;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Landroid/text/TextWatcher;
 
 
 # instance fields
-.field public final synthetic X:Ljava/lang/String;
+.field public final synthetic a:I
 
-.field public final synthetic o:Lez3;
+.field public final synthetic b:Lone/me/contactadddialog/ContactAddBottomSheet;
 
 
 # direct methods
-.method public constructor <init>(Lez3;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lone/me/contactadddialog/ContactAddBottomSheet;I)V
     .locals 0
 
-    iput-object p1, p0, Laz3;->o:Lez3;
+    iput p2, p0, Laz3;->a:I
 
-    iput-object p2, p0, Laz3;->X:Ljava/lang/String;
+    iput-object p1, p0, Laz3;->b:Lone/me/contactadddialog/ContactAddBottomSheet;
 
-    const/4 p1, 0x2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    return-void
+.end method
+
+.method private final a(Landroid/text/Editable;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final b(Landroid/text/Editable;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final c(IIILjava/lang/CharSequence;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final d(IIILjava/lang/CharSequence;)V
+    .locals 0
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final afterTextChanged(Landroid/text/Editable;)V
     .locals 0
 
-    check-cast p1, Lzb4;
+    iget p1, p0, Laz3;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    return-void
+.end method
 
-    invoke-virtual {p0, p1, p2}, Laz3;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final beforeTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 0
+
+    iget p1, p0, Laz3;->a:I
+
+    return-void
+.end method
+
+.method public final onTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 6
+
+    iget p2, p0, Laz3;->a:I
+
+    const/4 p3, 0x0
+
+    iget-object p4, p0, Laz3;->b:Lone/me/contactadddialog/ContactAddBottomSheet;
+
+    packed-switch p2, :pswitch_data_0
+
+    sget-object p2, Lone/me/contactadddialog/ContactAddBottomSheet;->H0:[Lv58;
+
+    invoke-virtual {p4}, Lone/me/contactadddialog/ContactAddBottomSheet;->V0()Lmz3;
+
+    move-result-object p2
+
+    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v3
+
+    iget-object p1, p2, Lmz3;->s0:Lmrd;
+
+    iget-object p1, p1, Lmrd;->a:Laxf;
+
+    invoke-interface {p1}, Laxf;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Laz3;
+    check-cast p1, Lhz3;
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    if-nez p1, :cond_0
 
-    invoke-virtual {p1, p2}, Laz3;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    goto :goto_1
 
-    return-object p2
-.end method
+    :cond_0
+    iget-object p1, p1, Lhz3;->e:Ljava/lang/String;
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    invoke-static {p1, v3}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    new-instance p1, Laz3;
+    move-result p1
 
-    iget-object v0, p0, Laz3;->o:Lez3;
+    if-eqz p1, :cond_1
 
-    iget-object v1, p0, Laz3;->X:Ljava/lang/String;
+    goto :goto_1
 
-    invoke-direct {p1, v0, v1, p2}, Laz3;-><init>(Lez3;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
+    :cond_1
+    iget-object p2, p2, Lmz3;->Z:Lhxf;
 
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Laz3;->o:Lez3;
-
-    iget-object v0, p1, Lez3;->p:Ljava/util/concurrent/atomic/AtomicLong;
-
-    iget-object p1, p1, Lez3;->l:Lo58;
-
-    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
+    :cond_2
+    invoke-virtual {p2}, Lhxf;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    move-object v1, p1
+    move-object v0, p1
 
-    check-cast v1, Lt2b;
+    check-cast v0, Lhz3;
 
-    const/4 v6, 0x0
+    if-eqz v0, :cond_3
 
-    iget-object v7, p0, Laz3;->X:Ljava/lang/String;
+    const/4 v4, 0x0
+
+    const/16 v5, 0xf
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    invoke-static/range {v0 .. v5}, Lhz3;->a(Lhz3;Ljava/lang/String;Lhpg;Ljava/lang/String;Lhpg;I)Lhz3;
+
+    move-result-object p4
+
+    goto :goto_0
+
+    :cond_3
+    move-object p4, p3
+
+    :goto_0
+    invoke-virtual {p2, p1, p4}, Lhxf;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    :goto_1
+    return-void
+
+    :pswitch_0
+    sget-object p2, Lone/me/contactadddialog/ContactAddBottomSheet;->H0:[Lv58;
+
+    invoke-virtual {p4}, Lone/me/contactadddialog/ContactAddBottomSheet;->V0()Lmz3;
+
+    move-result-object p2
+
+    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
+
+    iget-object p1, p2, Lmz3;->s0:Lmrd;
+
+    iget-object p1, p1, Lmrd;->a:Laxf;
+
+    invoke-interface {p1}, Laxf;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lhz3;
+
+    if-nez p1, :cond_4
+
+    goto :goto_3
+
+    :cond_4
+    iget-object p1, p1, Lhz3;->c:Ljava/lang/String;
+
+    invoke-static {p1, v1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_5
+
+    goto :goto_3
+
+    :cond_5
+    iget-object p1, p2, Lmz3;->Z:Lhxf;
+
+    :cond_6
+    invoke-virtual {p1}, Lhxf;->getValue()Ljava/lang/Object;
+
+    move-result-object p2
+
+    move-object v0, p2
+
+    check-cast v0, Lhz3;
+
+    if-eqz v0, :cond_7
+
+    const/4 v4, 0x0
+
+    const/16 v5, 0x33
 
     const/4 v2, 0x0
 
     const/4 v3, 0x0
 
-    const/4 v4, 0x0
+    invoke-static/range {v0 .. v5}, Lhz3;->a(Lhz3;Ljava/lang/String;Lhpg;Ljava/lang/String;Lhpg;I)Lhz3;
 
-    const/4 v5, 0x0
+    move-result-object p4
 
-    invoke-static/range {v1 .. v7}, Lt2b;->C(Lt2b;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lz10;Ljava/lang/String;Ljava/lang/String;)J
+    goto :goto_2
 
-    move-result-wide v1
+    :cond_7
+    move-object p4, p3
 
-    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicLong;->set(J)V
+    :goto_2
+    invoke-virtual {p1, p2, p4}, Lhxf;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    sget-object p1, Lb3h;->a:Lb3h;
+    move-result p2
 
-    return-object p1
+    if-eqz p2, :cond_6
+
+    :goto_3
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

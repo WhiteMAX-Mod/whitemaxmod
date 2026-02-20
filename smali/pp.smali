@@ -1,14 +1,25 @@
-.class public interface abstract Lpp;
+.class public abstract Lpp;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract e(I)V
+# direct methods
+.method public static a(Landroid/os/PowerManager;)Z
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/os/PowerManager;->isPowerSaveMode()Z
+
+    move-result p0
+
+    return p0
 .end method
 
-.method public abstract f(I)V
-.end method
+.method public static b(Ljava/util/Locale;)Ljava/lang/String;
+    .locals 0
 
-.method public abstract g(IF)V
+    invoke-virtual {p0}, Ljava/util/Locale;->toLanguageTag()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method

@@ -1,95 +1,99 @@
 .class public final Law9;
-.super Lzo8;
+.super Lpdg;
 .source "SourceFile"
+
+# interfaces
+.implements Lys6;
 
 
 # instance fields
-.field public final synthetic g:Lo58;
+.field public final synthetic X:Lone/me/sdk/messagewrite/MessageWriteWidget;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lo58;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/MessageWriteWidget;)V
     .locals 0
 
-    iput-object p1, p0, Law9;->g:Lo58;
+    iput-object p2, p0, Law9;->X:Lone/me/sdk/messagewrite/MessageWriteWidget;
 
-    const/4 p1, 0x6
+    const/4 p2, 0x2
 
-    invoke-direct {p0, p1}, Lzo8;-><init>(I)V
+    invoke-direct {p0, p2, p1}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    check-cast p1, Lsvg;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object v0, p1, Lsvg;->a:Ljava/lang/Object;
+    invoke-virtual {p0, p1, p2}, Law9;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    check-cast v0, Ljava/lang/Number;
+    move-result-object p1
 
-    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
+    check-cast p1, Law9;
 
-    move-result v0
+    sget-object p2, Lmah;->a:Lmah;
 
-    iget-object p1, p1, Lsvg;->b:Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Law9;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    check-cast p1, Ljava/lang/Number;
+    return-object p2
+.end method
 
-    invoke-virtual {p1}, Ljava/lang/Number;->floatValue()F
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Law9;
+
+    iget-object v1, p0, Law9;->X:Lone/me/sdk/messagewrite/MessageWriteWidget;
+
+    invoke-direct {v0, p2, v1}, Law9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/MessageWriteWidget;)V
+
+    iput-object p1, v0, Law9;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget-object v0, p0, Law9;->o:Ljava/lang/Object;
+
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result p1
 
-    new-instance v1, Landroid/text/TextPaint;
+    sget-object v0, Lone/me/sdk/messagewrite/MessageWriteWidget;->M0:[Lv58;
 
-    const/4 v2, 0x1
+    iget-object v0, p0, Law9;->X:Lone/me/sdk/messagewrite/MessageWriteWidget;
 
-    invoke-direct {v1, v2}, Landroid/text/TextPaint;-><init>(I)V
+    invoke-virtual {v0}, Lone/me/sdk/messagewrite/MessageWriteWidget;->M0()Lkq9;
 
-    invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setAntiAlias(Z)V
+    move-result-object v1
 
-    invoke-virtual {v1, v0}, Landroid/graphics/Paint;->setColor(I)V
+    invoke-virtual {v1, p1}, Lkq9;->setKeyboardVisible(Z)V
 
-    invoke-virtual {v1, p1}, Landroid/graphics/Paint;->setTextSize(F)V
+    iget-object p1, v0, Lone/me/sdk/messagewrite/MessageWriteWidget;->H0:Lfwg;
 
-    iget-object p1, p0, Law9;->g:Lo58;
+    if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
+    invoke-virtual {p1}, Lfwg;->dismiss()V
 
-    move-result-object p1
+    :cond_0
+    const/4 p1, 0x0
 
-    check-cast p1, Llv0;
+    iput-object p1, v0, Lone/me/sdk/messagewrite/MessageWriteWidget;->H0:Lfwg;
 
-    check-cast p1, Ls5b;
+    sget-object p1, Lmah;->a:Lmah;
 
-    sget-object v0, Lpc3;->t0:Lkme;
-
-    iget-object p1, p1, Ls5b;->a:Landroid/content/Context;
-
-    invoke-virtual {v0, p1}, Lkme;->n(Landroid/content/Context;)Lpc3;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lpc3;->j()Lzlb;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Lzlb;->a()Ln13;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Ln13;->i()Lfv0;
-
-    move-result-object p1
-
-    iget-object p1, p1, Lfv0;->d:Liv0;
-
-    iget p1, p1, Liv0;->b:I
-
-    iput p1, v1, Landroid/text/TextPaint;->linkColor:I
-
-    return-object v1
+    return-object p1
 .end method

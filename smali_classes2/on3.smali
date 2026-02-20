@@ -1,21 +1,37 @@
 .class public final Lon3;
-.super Laq;
+.super Lujg;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lon3;
+# instance fields
+.field public final c:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Z)V
+    .locals 0
 
-    new-instance v0, Lon3;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Laq;-><init>()V
-
-    sput-object v0, Lon3;->a:Lon3;
+    iput-boolean p1, p0, Lon3;->c:Z
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "Response(success="
+
+    const-string v1, ")"
+
+    iget-boolean v2, p0, Lon3;->c:Z
+
+    invoke-static {v0, v1, v2}, Ljye;->k(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

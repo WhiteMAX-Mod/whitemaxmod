@@ -1,59 +1,165 @@
 .class public final Lnci;
-.super Lo84;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# annotations
+.annotation runtime Lgxe;
+.end annotation
+
+
+# static fields
+.field public static final Companion:Lmci;
+
+
 # instance fields
-.field public X:Lrz7;
+.field public final a:Ljava/lang/String;
 
-.field public Y:Z
-
-.field public synthetic Z:Ljava/lang/Object;
-
-.field public d:Lgci;
-
-.field public o:Ltci;
-
-.field public final synthetic t0:Lqci;
-
-.field public u0:I
+.field public final b:Z
 
 
 # direct methods
-.method public constructor <init>(Lqci;Lo84;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lnci;->t0:Lqci;
+    new-instance v0, Lmci;
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lnci;->Companion:Lmci;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public synthetic constructor <init>(Ljava/lang/String;IZ)V
     .locals 2
 
-    iput-object p1, p0, Lnci;->Z:Ljava/lang/Object;
+    and-int/lit8 v0, p2, 0x3
 
-    iget p1, p0, Lnci;->u0:I
+    const/4 v1, 0x3
 
-    const/high16 v0, -0x80000000
+    if-ne v1, v0, :cond_0
 
-    or-int/2addr p1, v0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lnci;->u0:I
+    iput-object p1, p0, Lnci;->a:Ljava/lang/String;
 
-    const/4 p1, 0x0
+    iput-boolean p3, p0, Lnci;->b:Z
 
-    const/4 v0, 0x0
+    return-void
 
-    iget-object v1, p0, Lnci;->t0:Lqci;
+    :cond_0
+    sget-object p1, Llci;->a:Llci;
 
-    invoke-virtual {v1, p1, v0, p0}, Lqci;->j(Ljava/lang/String;ZLo84;)Ljava/lang/Object;
+    invoke-virtual {p1}, Llci;->d()Lzwe;
 
     move-result-object p1
 
-    return-object p1
+    invoke-static {p2, v1, p1}, Lesj;->c(IILzwe;)V
+
+    const/4 p1, 0x0
+
+    throw p1
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lnci;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lnci;
+
+    iget-object v1, p0, Lnci;->a:Ljava/lang/String;
+
+    iget-object v3, p1, Lnci;->a:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-boolean v1, p0, Lnci;->b:Z
+
+    iget-boolean p1, p1, Lnci;->b:Z
+
+    if-eq v1, p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lnci;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Lnci;->b:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "WebAppHapticFeedbackSelectionChange(requestId="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lnci;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", disableVibrationFallback="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lnci;->b:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

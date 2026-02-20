@@ -1,20 +1,35 @@
-.class public interface abstract Liei;
+.class public final Liei;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract e()Z
-.end method
+# instance fields
+.field public final a:Lj88;
 
-.method public abstract i()V
-.end method
+.field public final b:Lbgg;
 
-.method public abstract j()V
-.end method
+.field public c:Lcuf;
 
-.method public abstract l(Landroid/net/Uri;)Z
-.end method
 
-.method public abstract m(Ljava/lang/String;)V
+# direct methods
+.method public constructor <init>(Lj88;)V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Liei;->a:Lj88;
+
+    new-instance p1, Lm6i;
+
+    const/16 v0, 0xe
+
+    invoke-direct {p1, v0}, Lm6i;-><init>(I)V
+
+    new-instance v0, Lbgg;
+
+    invoke-direct {v0, p1}, Lbgg;-><init>(Lis6;)V
+
+    iput-object v0, p0, Liei;->b:Lbgg;
+
+    return-void
 .end method

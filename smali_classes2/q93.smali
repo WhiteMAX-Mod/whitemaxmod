@@ -1,82 +1,48 @@
-.class public final synthetic Lq93;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Llq6;
+.class public final Lq93;
+.super Lda4;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lp93;
 
-.field public final synthetic b:Lmbg;
+.field public synthetic d:Ljava/lang/Object;
+
+.field public o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lmbg;I)V
+.method public constructor <init>(Lp93;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lq93;->a:I
+    iput-object p1, p0, Lq93;->X:Lp93;
 
-    iput-object p1, p0, Lq93;->b:Lmbg;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget v0, p0, Lq93;->a:I
+    iput-object p1, p0, Lq93;->d:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Lq93;->o:I
 
-    new-instance v0, Lyz6;
+    const/high16 v0, -0x80000000
 
-    iget-object v1, p0, Lq93;->b:Lmbg;
+    or-int/2addr p1, v0
 
-    check-cast v1, Lj9b;
+    iput p1, p0, Lq93;->o:I
 
-    invoke-virtual {v1}, Lj9b;->a()Lsb4;
+    iget-object p1, p0, Lq93;->X:Lp93;
 
-    move-result-object v1
+    const/4 v0, 0x0
 
-    invoke-static {v1}, Lilj;->a(Lqb4;)Lkotlinx/coroutines/internal/ContextScope;
+    invoke-virtual {p1, v0, p0}, Lp93;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object p1
 
-    invoke-direct {v0, v1}, Lyz6;-><init>(Lkotlinx/coroutines/internal/ContextScope;)V
-
-    return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Lq93;->b:Lmbg;
-
-    return-object v0
-
-    :pswitch_1
-    iget-object v0, p0, Lq93;->b:Lmbg;
-
-    check-cast v0, Lj9b;
-
-    invoke-virtual {v0}, Lj9b;->b()Lsb4;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lilj;->a(Lqb4;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object v0
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

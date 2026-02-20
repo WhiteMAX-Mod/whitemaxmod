@@ -1,73 +1,63 @@
-.class public abstract Lmcb;
+.class public final Lmcb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
+# instance fields
+.field public final synthetic a:I
 
-.field public static final b:I
+.field public final b:J
 
-.field public static final c:I
+.field public final c:J
 
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
+.field public final synthetic d:Lncb;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lncb;I)V
+    .locals 2
 
-    sget v0, Lrdd;->oneme_contact_not_found_bottom_sheet_negative_button:I
+    iput p2, p0, Lmcb;->a:I
 
-    sput v0, Lmcb;->a:I
+    packed-switch p2, :pswitch_data_0
 
-    sget v0, Lrdd;->oneme_contact_not_found_bottom_sheet_subtitle:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput v0, Lmcb;->b:I
+    iput-object p1, p0, Lmcb;->d:Lncb;
 
-    sget v0, Lrdd;->oneme_contact_not_found_bottom_sheet_title:I
+    iget-object p1, p1, Lncb;->a:Llcb;
 
-    sput v0, Lmcb;->c:I
+    iget-wide v0, p1, Llcb;->c:J
 
-    sget v0, Lrdd;->oneme_found_contact_is_self_error:I
+    iput-wide v0, p0, Lmcb;->b:J
 
-    sput v0, Lmcb;->d:I
+    iget-wide p1, p1, Llcb;->b:J
 
-    sget v0, Lrdd;->oneme_invite_by_link_action:I
-
-    sput v0, Lmcb;->e:I
-
-    sget v0, Lrdd;->oneme_invite_by_phone_action:I
-
-    sput v0, Lmcb;->f:I
-
-    sget v0, Lrdd;->oneme_invite_by_phone_continue_button:I
-
-    sput v0, Lmcb;->g:I
-
-    sget v0, Lrdd;->oneme_invite_by_phone_description:I
-
-    sput v0, Lmcb;->h:I
-
-    sget v0, Lrdd;->oneme_invite_by_phone_title:I
-
-    sput v0, Lmcb;->i:I
-
-    sget v0, Lrdd;->oneme_invite_friends_to_max_bottom_sheet_title:I
-
-    sput v0, Lmcb;->j:I
+    iput-wide p1, p0, Lmcb;->c:J
 
     return-void
+
+    :pswitch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lmcb;->d:Lncb;
+
+    iget-object p1, p1, Lncb;->a:Llcb;
+
+    iget-wide v0, p1, Llcb;->c:J
+
+    iput-wide v0, p0, Lmcb;->b:J
+
+    iget-wide p1, p1, Llcb;->b:J
+
+    iput-wide p1, p0, Lmcb;->c:J
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method

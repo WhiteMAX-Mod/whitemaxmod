@@ -1,64 +1,51 @@
 .class public final Ly0;
-.super Ljava/lang/Object;
+.super Lda4;
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:Ly0;
-
-.field public static final d:Ly0;
-
-
 # instance fields
-.field public final a:Z
+.field public final synthetic X:Lcee;
 
-.field public final b:Ljava/lang/Throwable;
+.field public Y:I
+
+.field public d:Lyde;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lcee;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    sget-boolean v0, Lt1;->d:Z
+    iput-object p1, p0, Ly0;->X:Lcee;
 
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    sput-object v1, Ly0;->d:Ly0;
-
-    sput-object v1, Ly0;->c:Ly0;
-
-    return-void
-
-    :cond_0
-    new-instance v0, Ly0;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ly0;-><init>(Ljava/lang/Throwable;Z)V
-
-    sput-object v0, Ly0;->d:Ly0;
-
-    new-instance v0, Ly0;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v0, v1, v2}, Ly0;-><init>(Ljava/lang/Throwable;Z)V
-
-    sput-object v0, Ly0;->c:Ly0;
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/Throwable;Z)V
-    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iput-boolean p2, p0, Ly0;->a:Z
+    iput-object p1, p0, Ly0;->o:Ljava/lang/Object;
 
-    iput-object p1, p0, Ly0;->b:Ljava/lang/Throwable;
+    iget p1, p0, Ly0;->Y:I
 
-    return-void
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Ly0;->Y:I
+
+    iget-object p1, p0, Ly0;->X:Lcee;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lcee;->e(Ld96;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

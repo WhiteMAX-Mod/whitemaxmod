@@ -27,7 +27,7 @@
 
     new-instance v1, Lb8f;
 
-    const-string v2, "SURFACE"
+    const-string v2, "DARK"
 
     const/4 v3, 0x1
 

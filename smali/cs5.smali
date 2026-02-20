@@ -2,84 +2,60 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lds5;
-
 
 # instance fields
-.field public final a:Z
+.field public a:Z
+
+.field public b:Llec;
+
+.field public c:I
+
+.field public d:Z
+
+.field public e:I
+
+.field public f:Z
+
+.field public g:I
 
 
 # direct methods
-.method public constructor <init>(Z)V
+.method public constructor <init>(Llec;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean p1, p0, Lcs5;->a:Z
+    iput-object p1, p0, Lcs5;->b:Llec;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lcs5;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lcs5;
-
-    iget-boolean v1, p0, Lcs5;->a:Z
-
-    iget-boolean p1, p1, Lcs5;->a:Z
-
-    if-eq v1, p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
+.method public final a(I)V
+    .locals 2
 
     iget-boolean v0, p0, Lcs5;->a:Z
 
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+    if-lez p1, :cond_0
 
-    move-result v0
+    const/4 v1, 0x1
 
-    return v0
-.end method
+    goto :goto_0
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+    :cond_0
+    const/4 v1, 0x0
 
-    const-string v0, "WaitingRoom(adminIsHere="
+    :goto_0
+    or-int/2addr v0, v1
 
-    const-string v1, ")"
+    iput-boolean v0, p0, Lcs5;->a:Z
 
-    iget-boolean v2, p0, Lcs5;->a:Z
+    iget v0, p0, Lcs5;->c:I
 
-    invoke-static {v0, v1, v2}, Lmrf;->k(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+    add-int/2addr v0, p1
 
-    move-result-object v0
+    iput v0, p0, Lcs5;->c:I
 
-    return-object v0
+    return-void
 .end method

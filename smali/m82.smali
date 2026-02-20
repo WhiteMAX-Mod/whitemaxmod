@@ -1,95 +1,63 @@
 .class public final Lm82;
-.super Ljava/lang/Object;
+.super Li32;
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:La10;
-
-
 # instance fields
-.field public final a:Lte4;
-
-.field public final b:I
+.field public final synthetic a:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(I)V
+    .locals 0
 
-    new-instance v0, La10;
+    iput p1, p0, Lm82;->a:I
 
-    const/4 v1, 0x7
-
-    invoke-direct {v0, v1}, La10;-><init>(I)V
-
-    sput-object v0, Lm82;->c:La10;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/text/SpannableStringBuilder;Landroid/text/Layout$Alignment;FIFIZII)V
-    .locals 21
+.method private final e(I)V
+    .locals 0
 
-    move-object/from16 v0, p0
+    return-void
+.end method
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+.method private final f(ILp32;)V
+    .locals 0
 
-    if-eqz p7, :cond_0
+    return-void
+.end method
 
-    move/from16 v17, p8
+.method private final g(ILluj;)V
+    .locals 0
 
-    goto :goto_0
+    return-void
+.end method
 
-    :cond_0
-    const/high16 v1, -0x1000000
 
-    move/from16 v17, v1
+# virtual methods
+.method public a(I)V
+    .locals 0
 
-    :goto_0
-    new-instance v2, Lte4;
+    iget p1, p0, Lm82;->a:I
 
-    const/4 v5, 0x0
+    return-void
+.end method
 
-    const/4 v6, 0x0
+.method public b(ILp32;)V
+    .locals 0
 
-    const/4 v8, 0x0
+    iget p1, p0, Lm82;->a:I
 
-    const/high16 v12, -0x80000000
+    return-void
+.end method
 
-    const v13, -0x800001
+.method public c(ILluj;)V
+    .locals 0
 
-    const v14, -0x800001
-
-    const/16 v19, 0x0
-
-    const/16 v20, 0x0
-
-    move v15, v13
-
-    move/from16 v18, v12
-
-    move-object/from16 v3, p1
-
-    move-object/from16 v4, p2
-
-    move/from16 v7, p3
-
-    move/from16 v9, p4
-
-    move/from16 v10, p5
-
-    move/from16 v11, p6
-
-    move/from16 v16, p7
-
-    invoke-direct/range {v2 .. v20}, Lte4;-><init>(Ljava/lang/CharSequence;Landroid/text/Layout$Alignment;Landroid/text/Layout$Alignment;Landroid/graphics/Bitmap;FIIFIIFFFZIIFI)V
-
-    iput-object v2, v0, Lm82;->a:Lte4;
-
-    move/from16 v1, p9
-
-    iput v1, v0, Lm82;->b:I
+    iget p1, p0, Lm82;->a:I
 
     return-void
 .end method

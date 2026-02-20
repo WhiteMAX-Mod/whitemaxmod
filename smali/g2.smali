@@ -1,209 +1,217 @@
-.class public abstract Lg2;
-.super Lcom/google/common/collect/a;
+.class public final Lg2;
+.super Lh2;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/io/Serializable;
+.implements Ljava/util/RandomAccess;
 
 
 # instance fields
-.field public final transient d:Ljava/util/Map;
+.field public final synthetic a:I
 
-.field public transient o:I
+.field public b:I
+
+.field public c:I
+
+.field public final d:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/Map;)V
+.method public constructor <init>(Lh2;II)V
     .locals 1
 
+    const/4 v0, 0x0
+
+    iput v0, p0, Lg2;->a:I
+
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-interface {p1}, Ljava/util/Map;->isEmpty()Z
+    .line 2
+    iput-object p1, p0, Lg2;->d:Ljava/util/List;
 
-    move-result v0
+    iput p2, p0, Lg2;->b:I
 
-    if-eqz v0, :cond_0
+    .line 3
+    invoke-virtual {p1}, Lh2;->getSize()I
 
-    iput-object p1, p0, Lg2;->d:Ljava/util/Map;
+    move-result p1
+
+    .line 4
+    invoke-static {p2, p3, p1}, Lobj;->b(III)V
+
+    sub-int/2addr p3, p2
+
+    .line 5
+    iput p3, p0, Lg2;->c:I
 
     return-void
+.end method
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+.method public constructor <init>(Ljava/util/List;)V
+    .locals 1
 
-    invoke-direct {p1}, Ljava/lang/IllegalArgumentException;-><init>()V
+    const/4 v0, 0x1
 
-    throw p1
+    iput v0, p0, Lg2;->a:I
+
+    .line 6
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 7
+    iput-object p1, p0, Lg2;->d:Ljava/util/List;
+
+    return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/util/Map;
-    .locals 1
+.method public final get(I)Ljava/lang/Object;
+    .locals 4
 
-    iget-object v0, p0, Lcom/google/common/collect/a;->c:Ljava/util/Map;
+    iget v0, p0, Lg2;->a:I
 
-    if-nez v0, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0}, Lg2;->c()Ljava/util/Map;
+    iget v0, p0, Lg2;->c:I
 
-    move-result-object v0
+    if-ltz p1, :cond_0
 
-    iput-object v0, p0, Lcom/google/common/collect/a;->c:Ljava/util/Map;
+    if-ge p1, v0, :cond_0
 
-    :cond_0
-    return-object v0
-.end method
+    iget v0, p0, Lg2;->b:I
 
-.method public final b()V
-    .locals 3
+    add-int/2addr v0, p1
 
-    iget-object v0, p0, Lg2;->d:Ljava/util/Map;
+    iget-object p1, p0, Lg2;->d:Ljava/util/List;
 
-    invoke-interface {v0}, Ljava/util/Map;->values()Ljava/util/Collection;
+    invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object p1
 
-    invoke-interface {v1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/util/Collection;
-
-    invoke-interface {v2}, Ljava/util/Collection;->clear()V
-
-    goto :goto_0
+    return-object p1
 
     :cond_0
-    invoke-interface {v0}, Ljava/util/Map;->clear()V
+    new-instance v1, Ljava/lang/IndexOutOfBoundsException;
 
-    const/4 v0, 0x0
+    const-string v2, "index: "
 
-    iput v0, p0, Lg2;->o:I
+    const-string v3, ", size: "
 
-    return-void
-.end method
+    invoke-static {v2, p1, v0, v3}, Ltx8;->j(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
 
-.method public c()Ljava/util/Map;
-    .locals 3
+    move-result-object p1
 
-    new-instance v0, Lo2;
+    invoke-direct {v1, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lg2;->d:Ljava/util/Map;
+    throw v1
 
-    const/4 v2, 0x0
+    :pswitch_0
+    iget v0, p0, Lg2;->c:I
 
-    invoke-direct {v0, p0, v1, v2}, Lo2;-><init>(Ljava/io/Serializable;Ljava/util/Map;I)V
+    if-ltz p1, :cond_1
 
-    return-object v0
-.end method
+    if-ge p1, v0, :cond_1
 
-.method public abstract d()Ljava/util/Collection;
-.end method
+    iget-object v0, p0, Lg2;->d:Ljava/util/List;
 
-.method public e()Ljava/util/Set;
-    .locals 2
+    check-cast v0, Lh2;
 
-    new-instance v0, Lp2;
+    iget v1, p0, Lg2;->b:I
 
-    iget-object v1, p0, Lg2;->d:Ljava/util/Map;
+    add-int/2addr v1, p1
 
-    invoke-direct {v0, p0, v1}, Lp2;-><init>(Lg2;Ljava/util/Map;)V
+    invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    return-object v0
-.end method
+    move-result-object p1
 
-.method public final f(Ljava/lang/Object;Ljava/lang/Object;)Z
-    .locals 3
-
-    iget-object v0, p0, Lg2;->d:Ljava/util/Map;
-
-    invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/util/Collection;
-
-    const/4 v2, 0x1
-
-    if-nez v1, :cond_1
-
-    invoke-virtual {p0}, Lg2;->d()Ljava/util/Collection;
-
-    move-result-object v1
-
-    invoke-interface {v1, p2}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_0
-
-    iget p2, p0, Lg2;->o:I
-
-    add-int/2addr p2, v2
-
-    iput p2, p0, Lg2;->o:I
-
-    invoke-interface {v0, p1, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    return v2
-
-    :cond_0
-    new-instance p1, Ljava/lang/AssertionError;
-
-    const-string p2, "New Collection violated the Collection spec"
-
-    invoke-direct {p1, p2}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
-
-    throw p1
+    return-object p1
 
     :cond_1
-    invoke-interface {v1, p2}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+    new-instance v1, Ljava/lang/IndexOutOfBoundsException;
 
-    move-result p1
+    const-string v2, "index: "
 
-    if-eqz p1, :cond_2
+    const-string v3, ", size: "
 
-    iget p1, p0, Lg2;->o:I
+    invoke-static {v2, p1, v0, v3}, Ltx8;->j(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v1, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final getSize()I
+    .locals 1
+
+    iget v0, p0, Lg2;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget v0, p0, Lg2;->c:I
+
+    return v0
+
+    :pswitch_0
+    iget v0, p0, Lg2;->c:I
+
+    return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public subList(II)Ljava/util/List;
+    .locals 3
+
+    iget v0, p0, Lg2;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0, p1, p2}, Lh2;->subList(II)Ljava/util/List;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_0
+    iget v0, p0, Lg2;->c:I
+
+    invoke-static {p1, p2, v0}, Lobj;->b(III)V
+
+    new-instance v0, Lg2;
+
+    iget-object v1, p0, Lg2;->d:Ljava/util/List;
+
+    check-cast v1, Lh2;
+
+    iget v2, p0, Lg2;->b:I
 
     add-int/2addr p1, v2
 
-    iput p1, p0, Lg2;->o:I
+    add-int/2addr v2, p2
 
-    return v2
+    invoke-direct {v0, v1, p1, v2}, Lg2;-><init>(Lh2;II)V
 
-    :cond_2
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final g()Ljava/util/Collection;
-    .locals 2
-
-    iget-object v0, p0, Lcom/google/common/collect/a;->b:Ljava/util/Collection;
-
-    if-nez v0, :cond_0
-
-    new-instance v0, La3;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1, p0}, La3;-><init>(ILjava/io/Serializable;)V
-
-    iput-object v0, p0, Lcom/google/common/collect/a;->b:Ljava/util/Collection;
-
-    :cond_0
     return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

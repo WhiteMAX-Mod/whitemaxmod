@@ -1,221 +1,192 @@
-.class public final Lo3i;
-.super Lp6g;
+.class public final synthetic Lo3i;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lx3i;
-
-.field public o:Ljava/lang/String;
-
-.field public final synthetic t0:Lu3i;
+.field public final synthetic b:Lq3i;
 
 
 # direct methods
-.method public constructor <init>(Lu3i;Lx3i;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lq3i;I)V
     .locals 0
 
-    iput-object p2, p0, Lo3i;->Z:Lx3i;
+    iput p2, p0, Lo3i;->a:I
 
-    iput-object p1, p0, Lo3i;->t0:Lu3i;
+    iput-object p1, p0, Lo3i;->b:Lq3i;
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final run()V
+    .locals 7
 
-    check-cast p1, Ld3i;
+    iget v0, p0, Lo3i;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/4 v1, 0x1
 
-    invoke-virtual {p0, p1, p2}, Lo3i;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v2, p0, Lo3i;->b:Lq3i;
 
-    move-result-object p1
+    packed-switch v0, :pswitch_data_0
 
-    check-cast p1, Lo3i;
+    iget-object v0, v2, Lq3i;->a:Lj88;
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {p1, p2}, Lo3i;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object v0
 
-    move-result-object p1
+    check-cast v0, Lr3i;
 
-    return-object p1
-.end method
+    iget-object v2, v2, Lq3i;->e:Lj88;
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
+    invoke-interface {v2}, Lj88;->getValue()Ljava/lang/Object;
 
-    new-instance v0, Lo3i;
+    move-result-object v2
 
-    iget-object v1, p0, Lo3i;->Z:Lx3i;
+    check-cast v2, Lu2c;
 
-    iget-object v2, p0, Lo3i;->t0:Lu3i;
+    sget-object v3, Lu2c;->d:[Ljava/lang/String;
 
-    invoke-direct {v0, v2, v1, p2}, Lo3i;-><init>(Lu3i;Lx3i;Lkotlin/coroutines/Continuation;)V
+    const/4 v4, 0x0
 
-    iput-object p1, v0, Lo3i;->Y:Ljava/lang/Object;
+    aget-object v5, v3, v4
 
-    return-object v0
-.end method
+    iget-object v6, v2, Lu2c;->c:Laoi;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 17
+    iget-object v6, v6, Laoi;->c:Ljava/lang/Object;
 
-    move-object/from16 v0, p0
+    check-cast v6, Lbgg;
 
-    iget-object v1, v0, Lo3i;->Y:Ljava/lang/Object;
+    invoke-virtual {v6}, Lbgg;->getValue()Ljava/lang/Object;
 
-    check-cast v1, Ld3i;
+    move-result-object v6
 
-    iget v2, v0, Lo3i;->X:I
+    check-cast v6, Landroid/content/SharedPreferences;
 
-    iget-object v3, v0, Lo3i;->t0:Lu3i;
+    invoke-interface {v6, v5, v4}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
-    const/4 v4, 0x1
+    move-result v6
 
-    if-eqz v2, :cond_1
+    if-nez v6, :cond_0
 
-    if-ne v2, v4, :cond_0
+    iget-object v6, v2, Lu2c;->a:Landroid/content/Context;
 
-    iget-object v1, v0, Lo3i;->o:Ljava/lang/String;
+    invoke-static {v6, v5}, Ln94;->e(Landroid/content/Context;Ljava/lang/String;)I
 
-    invoke-static/range {p1 .. p1}, Lpmj;->b(Ljava/lang/Object;)V
+    move-result v5
 
-    move-object v8, v1
+    if-nez v5, :cond_0
+
+    const-string v5, "q3i"
+
+    const-string v6, "forceContactsSync"
+
+    invoke-static {v5, v6}, Ltej;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v5, v2, Lu2c;->c:Laoi;
+
+    sget-object v6, Lu2c;->f:[Ljava/lang/String;
+
+    invoke-virtual {v2, v6}, Lu2c;->c([Ljava/lang/String;)Z
+
+    move-result v2
+
+    iget-object v5, v5, Laoi;->c:Ljava/lang/Object;
+
+    check-cast v5, Lbgg;
+
+    invoke-virtual {v5}, Lbgg;->getValue()Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Landroid/content/SharedPreferences;
+
+    invoke-interface {v5}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v5
+
+    aget-object v3, v3, v4
+
+    invoke-interface {v5, v3, v2}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+
+    invoke-interface {v5}, Landroid/content/SharedPreferences$Editor;->apply()V
 
     goto :goto_0
 
     :cond_0
-    new-instance v1, Ljava/lang/IllegalStateException;
-
-    const-string v2, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v1
-
-    :cond_1
-    invoke-static/range {p1 .. p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    sget-object v2, Ln3i;->$EnumSwitchMapping$0:[I
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v5
-
-    aget v2, v2, v5
-
-    if-ne v2, v4, :cond_3
-
-    const-string v2, "DownloadFromWebApp"
-
-    const-string v5, "processDownloadFile complete"
-
-    invoke-static {v2, v5}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    new-instance v2, La4i;
-
-    iget-object v5, v0, Lo3i;->Z:Lx3i;
-
-    iget-object v5, v5, Lx3i;->a:Ljava/lang/String;
-
-    iget-object v1, v1, Ld3i;->a:Ljava/lang/String;
-
-    invoke-direct {v2, v5, v1}, La4i;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v1, v3, Lu3i;->e:Lyw0;
-
-    new-instance v5, Lsz7;
-
-    iget-object v6, v3, Lu3i;->a:Lf08;
-
-    invoke-virtual {v6}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v7, La4i;->Companion:Lz3i;
-
-    invoke-virtual {v7}, Lz3i;->serializer()La38;
-
-    move-result-object v7
-
-    check-cast v7, La38;
-
-    invoke-virtual {v6, v7, v2}, Lf08;->b(La38;Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v6, "WebAppDownloadFile"
-
-    invoke-direct {v5, v6, v2}, Lsz7;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/4 v2, 0x0
-
-    iput-object v2, v0, Lo3i;->Y:Ljava/lang/Object;
-
-    iput-object v6, v0, Lo3i;->o:Ljava/lang/String;
-
-    iput v4, v0, Lo3i;->X:I
-
-    invoke-interface {v1, v5, v0}, Lioe;->h(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    sget-object v2, Lac4;->a:Lac4;
-
-    if-ne v1, v2, :cond_2
-
-    return-object v2
-
-    :cond_2
-    move-object v8, v6
+    move v1, v4
 
     :goto_0
-    iget-object v1, v3, Lu3i;->f:Lryh;
+    invoke-virtual {v0, v1}, Lr3i;->b(Z)V
 
-    if-eqz v1, :cond_3
+    return-void
 
-    iget-object v2, v3, Lu3i;->b:Lo58;
+    :pswitch_0
+    iget-object v0, v2, Lq3i;->a:Lj88;
 
-    invoke-interface {v2}, Lo58;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object v0
 
-    move-object v7, v2
+    check-cast v0, Lr3i;
 
-    check-cast v7, Lc2i;
+    invoke-virtual {v0}, Lr3i;->a()V
 
-    iget-wide v9, v1, Lryh;->a:J
+    iget-object v0, v2, Lq3i;->c:Lj88;
 
-    iget-object v11, v1, Lryh;->b:Ljava/lang/String;
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
 
-    const/4 v15, 0x0
+    move-result-object v0
 
-    const/16 v16, 0xf0
+    check-cast v0, Lzig;
 
-    const/4 v12, 0x1
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/4 v13, 0x0
+    const-string v2, "zig"
 
-    const/4 v14, 0x0
+    const-string v3, "syncAll"
 
-    invoke-static/range {v7 .. v16}, Lc2i;->a(Lc2i;Ljava/lang/String;JLjava/lang/String;ZILjava/lang/Integer;Ljava/lang/Integer;I)V
+    invoke-static {v2, v3}, Ltej;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_3
-    sget-object v1, Lb3h;->a:Lb3h;
+    sget-object v2, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
-    return-object v1
+    iget-object v3, v0, Lzig;->e:Leie;
+
+    new-instance v4, Lok;
+
+    const/4 v5, 0x4
+
+    invoke-direct {v4, v0, v2, v1, v5}, Lok;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
+
+    invoke-virtual {v3, v4}, Leie;->b(Ljava/lang/Runnable;)Ly35;
+
+    return-void
+
+    :pswitch_1
+    sget-object v0, Lsnc;->s0:Lsnc;
+
+    iget-object v0, v0, Lsnc;->X:Lcb8;
+
+    iget-object v1, v2, Lq3i;->m:Lp3i;
+
+    invoke-virtual {v0, v1}, Lcb8;->a(Lxa8;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

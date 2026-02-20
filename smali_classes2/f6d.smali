@@ -1,168 +1,206 @@
-.class public abstract Lf6d;
-.super Ljava/lang/Object;
+.class public final Lf6d;
+.super Lpdg;
+.source "SourceFile"
 
+# interfaces
+.implements Lys6;
 
-# static fields
-.field public static attach_bar_thumbnail_size:I = 0x7f070054
 
-.field public static attach_drawable:I = 0x7f070055
+# instance fields
+.field public final synthetic X:Lone/me/settings/devices/hintdialog/QrAuthHintBottomSheet;
 
-.field public static audio_record_static_circle_size:I = 0x7f070056
+.field public o:I
 
-.field public static big_success_button_corner_radius:I = 0x7f07005a
 
-.field public static bottom_bar_height:I = 0x7f07005b
+# direct methods
+.method public constructor <init>(Lone/me/settings/devices/hintdialog/QrAuthHintBottomSheet;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-.field public static bottom_picker_height:I = 0x7f07005c
+    iput-object p1, p0, Lf6d;->X:Lone/me/settings/devices/hintdialog/QrAuthHintBottomSheet;
 
-.field public static change_profile_big_padding:I = 0x7f070064
+    const/4 p1, 0x2
 
-.field public static change_profile_small_padding:I = 0x7f070065
+    invoke-direct {p0, p1, p2}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
-.field public static chat_bottom_panel_height:I = 0x7f070066
+    return-void
+.end method
 
-.field public static chat_control_message_spacing:I = 0x7f070067
 
-.field public static chat_folder_item_height:I = 0x7f070068
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-.field public static chat_folders_container_height:I = 0x7f070069
+    check-cast p1, Lnd4;
 
-.field public static chat_folders_container_horizontal_padding:I = 0x7f07006a
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-.field public static chat_folders_item_horizontal_offset:I = 0x7f07006b
+    invoke-virtual {p0, p1, p2}, Lf6d;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-.field public static chat_folders_item_vertical_offset:I = 0x7f07006c
+    move-result-object p1
 
-.field public static chat_messages_padding_bottom:I = 0x7f07006d
+    check-cast p1, Lf6d;
 
-.field public static chat_series_spacing:I = 0x7f07006e
+    sget-object p2, Lmah;->a:Lmah;
 
-.field public static chat_top_panel_height:I = 0x7f07006f
+    invoke-virtual {p1, p2}, Lf6d;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-.field public static chat_top_panel_horizontal_padding:I = 0x7f070070
+    move-result-object p1
 
-.field public static compose_view_item_height:I = 0x7f070079
+    return-object p1
+.end method
 
-.field public static contact_picker_selected_height:I = 0x7f07007a
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-.field public static context_dialog_item_height:I = 0x7f07007b
+    new-instance p1, Lf6d;
 
-.field public static control_with_action_big_margin:I = 0x7f07007c
+    iget-object v0, p0, Lf6d;->X:Lone/me/settings/devices/hintdialog/QrAuthHintBottomSheet;
 
-.field public static control_with_action_normal_margin:I = 0x7f07007d
+    invoke-direct {p1, v0, p2}, Lf6d;-><init>(Lone/me/settings/devices/hintdialog/QrAuthHintBottomSheet;Lkotlin/coroutines/Continuation;)V
 
-.field public static design_bottom_navigation_height:I = 0x7f07008c
+    return-object p1
+.end method
 
-.field public static design_fab_size_mini:I = 0x7f07009a
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-.field public static divider_item_collage:I = 0x7f0700b9
+    iget v0, p0, Lf6d;->o:I
 
-.field public static expansion_area__audio_controls:I = 0x7f0700dd
+    const/4 v1, 0x1
 
-.field public static expansion_area__audio_controls_container:I = 0x7f0700de
+    if-eqz v0, :cond_1
 
-.field public static fast_chat_actions_button_size:I = 0x7f0700df
+    if-ne v0, v1, :cond_0
 
-.field public static fast_chat_actions_space:I = 0x7f0700e0
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-.field public static flash_close_button_height:I = 0x7f0700ed
+    goto/16 :goto_1
 
-.field public static flash_close_button_width:I = 0x7f0700ee
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-.field public static flash_close_wrapper_height:I = 0x7f0700ef
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-.field public static flash_close_wrapper_width:I = 0x7f0700f0
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-.field public static folder_context_menu_margin:I = 0x7f0700f1
+    throw p1
 
-.field public static folder_grabberview_height:I = 0x7f0700f3
+    :cond_1
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-.field public static frg_auth_button_spacing:I = 0x7f070124
+    iget-object p1, p0, Lf6d;->X:Lone/me/settings/devices/hintdialog/QrAuthHintBottomSheet;
 
-.field public static frg_auth_button_spacing_2х:I = 0x7f070125
+    invoke-virtual {p1}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lab8;
 
-.field public static frg_auth_ok_content_bottom_margin:I = 0x7f070126
+    move-result-object v0
 
-.field public static frg_location_map_contact_markers_panel_height:I = 0x7f070127
+    invoke-interface {v0}, Lab8;->p()Lcb8;
 
-.field public static frg_location_map_current_contact_panel_height:I = 0x7f070128
+    move-result-object v0
 
-.field public static frg_location_map_panel_height:I = 0x7f070129
+    sget-object v2, Lp35;->a:Llu4;
 
-.field public static full_screen_mode_button_height:I = 0x7f07012a
+    sget-object v2, Lkotlinx/coroutines/internal/MainDispatcherLoader;->dispatcher:Los8;
 
-.field public static full_screen_mode_button_width:I = 0x7f07012b
+    invoke-virtual {v2}, Los8;->getImmediate()Los8;
 
-.field public static gallery_album_cover_size:I = 0x7f07012c
+    move-result-object v2
 
-.field public static message_max_attach_width:I = 0x7f07033c
+    iget-object v3, p0, Lda4;->b:Led4;
 
-.field public static message_min_attach_height:I = 0x7f07033d
+    invoke-virtual {v2, v3}, Lgd4;->isDispatchNeeded(Led4;)Z
 
-.field public static message_min_width:I = 0x7f07033e
+    move-result v3
 
-.field public static message_min_width_contact_content:I = 0x7f07033f
+    if-nez v3, :cond_3
 
-.field public static music_player_cover_size:I = 0x7f070415
+    iget-object v4, v0, Lcb8;->d:Lga8;
 
-.field public static music_player_top_margin:I = 0x7f070416
+    sget-object v5, Lga8;->a:Lga8;
 
-.field public static music_player_waves_height:I = 0x7f070417
+    if-eq v4, v5, :cond_2
 
-.field public static notif_large_icon_width:I = 0x7f070418
+    sget-object v5, Lga8;->o:Lga8;
 
-.field public static phone_permissions_promo_margin_top:I = 0x7f070429
+    invoke-virtual {v4, v5}, Ljava/lang/Enum;->compareTo(Ljava/lang/Enum;)I
 
-.field public static popup_notification__height:I = 0x7f070434
+    move-result v4
 
-.field public static profile_ava_frame_size:I = 0x7f07043d
+    if-ltz v4, :cond_3
 
-.field public static profile_button_elevation:I = 0x7f07043e
+    invoke-static {p1}, Lone/me/settings/devices/hintdialog/QrAuthHintBottomSheet;->H0(Lone/me/settings/devices/hintdialog/QrAuthHintBottomSheet;)V
 
-.field public static profile_top_padding:I = 0x7f07043f
+    goto :goto_1
 
-.field public static quick_camera_button_margin:I = 0x7f070442
+    :cond_2
+    new-instance p1, Landroidx/lifecycle/LifecycleDestroyedException;
 
-.field public static quick_camera_button_margin_bottom:I = 0x7f070443
+    invoke-direct {p1}, Landroidx/lifecycle/LifecycleDestroyedException;-><init>()V
 
-.field public static quick_camera_chronometer_text_size:I = 0x7f070444
+    throw p1
 
-.field public static quick_camera_wrapper_controllers_height:I = 0x7f070445
+    :cond_3
+    new-instance v4, Lyf;
 
-.field public static quick_camera_wrapper_height:I = 0x7f070446
+    const/4 v5, 0x4
 
-.field public static quick_camera_wrapper_width:I = 0x7f070447
+    invoke-direct {v4, v5, p1}, Lyf;-><init>(ILjava/lang/Object;)V
 
-.field public static rounded_button_margin:I = 0x7f070448
+    iput v1, p0, Lf6d;->o:I
 
-.field public static row_chat_height:I = 0x7f070449
+    new-instance p1, Lm72;
 
-.field public static row_profile_icon_size:I = 0x7f07044a
+    invoke-static {p0}, Libj;->k(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-.field public static row_profile_with_icon__space_between_icon_and_text:I = 0x7f07044b
+    move-result-object v5
 
-.field public static row_profile_with_icon__start_padding:I = 0x7f07044c
+    invoke-direct {p1, v1, v5}, Lm72;-><init>(ILkotlin/coroutines/Continuation;)V
 
-.field public static secret_button_layout_height:I = 0x7f07044d
+    invoke-virtual {p1}, Lm72;->o()V
 
-.field public static secret_button_layout_height_no_bottom_shadow:I = 0x7f07044e
+    new-instance v1, Lso6;
 
-.field public static settings_start_padding:I = 0x7f07044f
+    invoke-direct {v1, v0, p1, v4}, Lso6;-><init>(Lcb8;Lm72;Lyf;)V
 
-.field public static stickers_puller_height:I = 0x7f070466
+    if-eqz v3, :cond_4
 
-.field public static stickers_puller_height_chat:I = 0x7f070467
+    new-instance v3, Lb0g;
 
-.field public static stickers_puller_shadow_height_chat:I = 0x7f070468
+    const/4 v4, 0x6
 
-.field public static suggest_name_picker_item_height:I = 0x7f070469
+    invoke-direct {v3, v0, v4, v1}, Lb0g;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-.field public static suggests_header_height:I = 0x7f07046a
+    sget-object v4, Lmi5;->a:Lmi5;
 
-.field public static suggests_max_height_with_header:I = 0x7f07046b
+    invoke-virtual {v2, v4, v3}, Lgd4;->dispatch(Led4;Ljava/lang/Runnable;)V
 
-.field public static suggests_max_height_without_header:I = 0x7f07046c
+    goto :goto_0
 
-.field public static suggests_row_height:I = 0x7f07046d
+    :cond_4
+    invoke-virtual {v0, v1}, Lcb8;->a(Lxa8;)V
 
-.field public static toolbar_main_screen_subtitle_margin_top:I = 0x7f070498
+    :goto_0
+    new-instance v3, Lhqi;
+
+    const/4 v4, 0x0
+
+    invoke-direct {v3, v2, v0, v1, v4}, Lhqi;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+
+    invoke-virtual {p1, v3}, Lm72;->f(Lks6;)V
+
+    invoke-virtual {p1}, Lm72;->n()Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lod4;->a:Lod4;
+
+    if-ne p1, v0, :cond_5
+
+    return-object v0
+
+    :cond_5
+    :goto_1
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
+.end method

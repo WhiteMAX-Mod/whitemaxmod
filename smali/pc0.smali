@@ -1,102 +1,73 @@
 .class public final Lpc0;
-.super Ljava/lang/Object;
+.super Lye4;
 .source "SourceFile"
 
 
-# static fields
-.field public static final d:Lpc0;
-
-.field public static final e:Ljava/util/Set;
-
-.field public static final f:Lww3;
-
-
 # instance fields
-.field public final a:I
+.field public final a:Landroid/content/Context;
 
-.field public final b:I
+.field public final b:Lmh3;
 
-.field public final c:Lxc0;
+.field public final c:Lmh3;
+
+.field public final d:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
-
-    new-instance v0, Lpc0;
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x2
-
-    const/4 v3, 0x0
-
-    invoke-direct {v0, v1, v2, v3}, Lpc0;-><init>(IILxc0;)V
-
-    sput-object v0, Lpc0;->d:Lpc0;
-
-    new-instance v0, Ljava/util/HashSet;
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    const/4 v4, -0x1
-
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    filled-new-array {v2, v4}, [Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-static {v2}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v2
-
-    invoke-direct {v0, v2}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
-
-    invoke-static {v0}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
-
-    move-result-object v0
-
-    sput-object v0, Lpc0;->e:Ljava/util/Set;
-
-    new-instance v0, Lpc0;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v0, v1, v2, v3}, Lpc0;-><init>(IILxc0;)V
-
-    new-instance v1, Lww3;
-
-    invoke-direct {v1, v0}, Lww3;-><init>(Ljava/lang/Object;)V
-
-    sput-object v1, Lpc0;->f:Lww3;
-
-    return-void
-.end method
-
-.method public constructor <init>(IILxc0;)V
+.method public constructor <init>(Landroid/content/Context;Lmh3;Lmh3;Ljava/lang/String;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lpc0;->a:I
+    if-eqz p1, :cond_3
 
-    if-eqz p2, :cond_0
+    iput-object p1, p0, Lpc0;->a:Landroid/content/Context;
 
-    iput p2, p0, Lpc0;->b:I
+    if-eqz p2, :cond_2
 
-    iput-object p3, p0, Lpc0;->c:Lxc0;
+    iput-object p2, p0, Lpc0;->b:Lmh3;
+
+    if-eqz p3, :cond_1
+
+    iput-object p3, p0, Lpc0;->c:Lmh3;
+
+    if-eqz p4, :cond_0
+
+    iput-object p4, p0, Lpc0;->d:Ljava/lang/String;
 
     return-void
 
     :cond_0
     new-instance p1, Ljava/lang/NullPointerException;
 
-    const-string p2, "Null streamState"
+    const-string p2, "Null backendName"
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "Null monotonicClock"
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_2
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "Null wallClock"
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_3
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "Null applicationContext"
 
     invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
@@ -106,67 +77,83 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    .locals 4
+
+    const/4 v0, 0x1
 
     if-ne p1, p0, :cond_0
 
-    goto :goto_0
+    return v0
 
     :cond_0
-    instance-of v0, p1, Lpc0;
+    instance-of v1, p1, Lye4;
 
-    if-eqz v0, :cond_2
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_1
+
+    check-cast p1, Lye4;
+
+    move-object v1, p1
+
+    check-cast v1, Lpc0;
+
+    iget-object v1, v1, Lpc0;->a:Landroid/content/Context;
+
+    iget-object v3, p0, Lpc0;->a:Landroid/content/Context;
+
+    invoke-virtual {v3, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
 
     check-cast p1, Lpc0;
 
-    iget v0, p1, Lpc0;->a:I
+    iget-object v1, p1, Lpc0;->b:Lmh3;
 
-    iget-object v1, p1, Lpc0;->c:Lxc0;
+    iget-object v3, p0, Lpc0;->b:Lmh3;
 
-    iget v2, p0, Lpc0;->a:I
+    invoke-virtual {v3, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    if-ne v2, v0, :cond_2
+    move-result v1
 
-    iget v0, p0, Lpc0;->b:I
+    if-eqz v1, :cond_1
 
-    iget p1, p1, Lpc0;->b:I
+    iget-object v1, p0, Lpc0;->c:Lmh3;
 
-    invoke-static {v0, p1}, Lt02;->d(II)Z
+    iget-object v3, p1, Lpc0;->c:Lmh3;
+
+    invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    iget-object v1, p0, Lpc0;->d:Ljava/lang/String;
+
+    iget-object p1, p1, Lpc0;->d:Ljava/lang/String;
+
+    invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_2
+    if-eqz p1, :cond_1
 
-    iget-object p1, p0, Lpc0;->c:Lxc0;
-
-    if-nez p1, :cond_1
-
-    if-nez v1, :cond_2
-
-    goto :goto_0
+    return v0
 
     :cond_1
-    invoke-virtual {p1, v1}, Lxc0;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_2
-    const/4 p1, 0x0
-
-    return p1
+    return v2
 .end method
 
 .method public final hashCode()I
     .locals 3
 
-    iget v0, p0, Lpc0;->a:I
+    iget-object v0, p0, Lpc0;->a:Landroid/content/Context;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
 
     const v1, 0xf4243
 
@@ -174,9 +161,9 @@
 
     mul-int/2addr v0, v1
 
-    iget v2, p0, Lpc0;->b:I
+    iget-object v2, p0, Lpc0;->b:Lmh3;
 
-    invoke-static {v2}, Lt02;->t(I)I
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
 
     move-result v2
 
@@ -184,20 +171,22 @@
 
     mul-int/2addr v0, v1
 
-    iget-object v1, p0, Lpc0;->c:Lxc0;
+    iget-object v2, p0, Lpc0;->c:Lmh3;
 
-    if-nez v1, :cond_0
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
 
-    const/4 v1, 0x0
+    move-result v2
 
-    goto :goto_0
+    xor-int/2addr v0, v2
 
-    :cond_0
-    invoke-virtual {v1}, Lxc0;->hashCode()I
+    mul-int/2addr v0, v1
+
+    iget-object v1, p0, Lpc0;->d:Ljava/lang/String;
+
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
     move-result v1
 
-    :goto_0
     xor-int/2addr v0, v1
 
     return v0
@@ -208,56 +197,39 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "StreamInfo{id="
+    const-string v1, "CreationContext{applicationContext="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v1, p0, Lpc0;->a:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", streamState="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/4 v1, 0x1
-
-    iget v2, p0, Lpc0;->b:I
-
-    if-eq v2, v1, :cond_1
-
-    const/4 v1, 0x2
-
-    if-eq v2, v1, :cond_0
-
-    const-string v1, "null"
-
-    goto :goto_0
-
-    :cond_0
-    const-string v1, "INACTIVE"
-
-    goto :goto_0
-
-    :cond_1
-    const-string v1, "ACTIVE"
-
-    :goto_0
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", inProgressTransformationInfo="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lpc0;->c:Lxc0;
+    iget-object v1, p0, Lpc0;->a:Landroid/content/Context;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, "}"
+    const-string v1, ", wallClock="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-object v1, p0, Lpc0;->b:Lmh3;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", monotonicClock="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lpc0;->c:Lmh3;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", backendName="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lpc0;->d:Ljava/lang/String;
+
+    const-string v2, "}"
+
+    invoke-static {v0, v1, v2}, Ltx8;->n(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

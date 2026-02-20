@@ -1,30 +1,64 @@
-.class public abstract Ly8d;
+.class public final Ly8d;
 .super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lb9d;
 
 
 # static fields
-.field public static media_editor_bottom_background_id:I = 0x7f0a0498
+.field public static final a:Ly8d;
 
-.field public static media_editor_close_id:I = 0x7f0a0499
 
-.field public static media_editor_content_id:I = 0x7f0a049a
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-.field public static media_editor_crop_id:I = 0x7f0a049b
+    new-instance v0, Ly8d;
 
-.field public static media_editor_done_id:I = 0x7f0a049c
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-.field public static media_editor_flip_horizontally_id:I = 0x7f0a049d
+    sput-object v0, Ly8d;->a:Ly8d;
 
-.field public static media_editor_reset_id:I = 0x7f0a049e
+    return-void
+.end method
 
-.field public static media_editor_rotate_id:I = 0x7f0a049f
 
-.field public static media_picker_album_container_id:I = 0x7f0a04a2
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-.field public static media_picker_container_id:I = 0x7f0a04a3
+    const/4 v0, 0x1
 
-.field public static media_picker_content_id:I = 0x7f0a04a4
+    if-ne p0, p1, :cond_0
 
-.field public static media_picker_divider_id:I = 0x7f0a04a5
+    return v0
 
-.field public static media_picker_toolbar_id:I = 0x7f0a04a6
+    :cond_0
+    instance-of p1, p1, Ly8d;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, -0x55c70cd5
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "ModePhotoTaking"
+
+    return-object v0
+.end method

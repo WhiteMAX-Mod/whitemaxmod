@@ -1,27 +1,61 @@
-.class public abstract Lqlb;
+.class public final Lqlb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ln8g;
+# instance fields
+.field public final synthetic a:Lm60;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Lm60;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lqlb;->a:Lm60;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()V
     .locals 2
 
-    new-instance v0, La3b;
+    iget-object v0, p0, Lqlb;->a:Lm60;
 
-    const/16 v1, 0xf
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-direct {v0, v1}, La3b;-><init>(I)V
+    sget-object v1, Lxlb;->a:Landroid/os/Handler;
 
-    new-instance v1, Ln8g;
+    iget-object v0, v0, Lm60;->h:Ljava/lang/Object;
 
-    invoke-direct {v1, v0}, Ln8g;-><init>(Llq6;)V
+    check-cast v0, Lulb;
 
-    sput-object v1, Lqlb;->a:Ln8g;
+    sget-object v1, Ltlb;->c:Ltlb;
+
+    invoke-static {v0, v1}, Lxlb;->b(Lulb;Ltlb;)V
+
+    return-void
+.end method
+
+.method public final b()V
+    .locals 2
+
+    iget-object v0, p0, Lqlb;->a:Lm60;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v1, Lxlb;->a:Landroid/os/Handler;
+
+    iget-object v0, v0, Lm60;->h:Ljava/lang/Object;
+
+    check-cast v0, Lulb;
+
+    sget-object v1, Ltlb;->d:Ltlb;
+
+    invoke-static {v0, v1}, Lxlb;->b(Lulb;Ltlb;)V
 
     return-void
 .end method

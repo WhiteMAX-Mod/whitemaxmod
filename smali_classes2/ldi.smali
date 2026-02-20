@@ -2,53 +2,18 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lndi;
-
-
-# instance fields
-.field public final a:Lv0f;
-
-.field public final b:I
-
-
-# direct methods
-.method public constructor <init>(Lv0f;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lldi;->a:Lv0f;
-
-    sget p1, Lhnb;->j:I
-
-    iput p1, p0, Lldi;->b:I
-
-    return-void
-.end method
-
 
 # virtual methods
-.method public final a()I
+.method public final serializer()Lw58;
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lw58;"
+        }
+    .end annotation
 
-    const/4 v0, 0x4
+    sget-object v0, Lkdi;->a:Lkdi;
 
-    return v0
-.end method
-
-.method public final getItemId()J
-    .locals 2
-
-    const-wide v0, 0x7ffffffffffffffdL
-
-    return-wide v0
-.end method
-
-.method public final m()I
-    .locals 1
-
-    iget v0, p0, Lldi;->b:I
-
-    return v0
+    return-object v0
 .end method

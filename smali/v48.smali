@@ -1,145 +1,102 @@
 .class public final Lv48;
-.super Ljava/lang/Object;
+.super Lxx7;
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:Ljava/lang/String;
-
-.field public static final d:Ljava/lang/String;
-
-
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final Y:Lv48;
 
-.field public final b:Ljava/lang/String;
+.field public final Z:Lvye;
+
+.field public s0:Lv48;
+
+.field public t0:Ljava/lang/String;
+
+.field public u0:I
+
+.field public v0:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    sget-object v0, Lmbh;->a:Ljava/lang/String;
-
-    const/4 v0, 0x0
-
-    const/16 v1, 0x24
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lv48;->c:Ljava/lang/String;
-
-    const/4 v0, 0x1
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lv48;->d:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
+.method public constructor <init>(Lv48;ILvye;III)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lxx7;-><init>()V
 
-    invoke-static {p1}, Lmbh;->V(Ljava/lang/String;)Ljava/lang/String;
+    iput-object p1, p0, Lv48;->Y:Lv48;
 
-    move-result-object p1
+    iput-object p3, p0, Lv48;->Z:Lvye;
 
-    iput-object p1, p0, Lv48;->a:Ljava/lang/String;
+    iput p4, p0, Lxx7;->b:I
 
-    iput-object p2, p0, Lv48;->b:Ljava/lang/String;
+    iput p5, p0, Lv48;->u0:I
+
+    iput p6, p0, Lv48;->v0:I
+
+    const/4 p1, -0x1
+
+    iput p1, p0, Lxx7;->c:I
+
+    iput p2, p0, Lxx7;->d:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final d()Ljava/lang/String;
+    .locals 1
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lv48;->t0:Ljava/lang/String;
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    if-eqz p1, :cond_2
-
-    const-class v2, Lv48;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v3
-
-    if-eq v2, v3, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lv48;
-
-    iget-object v2, p0, Lv48;->a:Ljava/lang/String;
-
-    iget-object v3, p1, Lv48;->a:Ljava/lang/String;
-
-    invoke-static {v2, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget-object v2, p0, Lv48;->b:Ljava/lang/String;
-
-    iget-object p1, p1, Lv48;->b:Ljava/lang/String;
-
-    invoke-static {v2, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    return v0
-
-    :cond_2
-    :goto_0
-    return v1
+    return-object v0
 .end method
 
-.method public final hashCode()I
-    .locals 2
+.method public final p(Ljava/lang/String;)V
+    .locals 4
 
-    iget-object v0, p0, Lv48;->b:Ljava/lang/String;
+    iput-object p1, p0, Lv48;->t0:Ljava/lang/String;
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    iget-object v0, p0, Lv48;->Z:Lvye;
 
-    move-result v0
+    if-eqz v0, :cond_1
 
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lv48;->a:Ljava/lang/String;
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+    invoke-virtual {v0, p1}, Lvye;->A(Ljava/lang/String;)Z
 
     move-result v1
 
+    if-eqz v1, :cond_1
+
+    iget-object v0, v0, Lvye;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/io/Closeable;
+
+    new-instance v1, Lcom/fasterxml/jackson/core/JsonParseException;
+
+    instance-of v2, v0, Lo48;
+
+    if-eqz v2, :cond_0
+
+    check-cast v0, Lo48;
+
     goto :goto_0
 
     :cond_0
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
     :goto_0
-    add-int/2addr v0, v1
+    const-string v2, "Duplicate field \'"
 
-    return v0
+    const-string v3, "\'"
+
+    invoke-static {v2, p1, v3}, Ltx8;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v1, v0, p1}, Lcom/fasterxml/jackson/core/exc/StreamReadException;-><init>(Lo48;Ljava/lang/String;)V
+
+    throw v1
+
+    :cond_1
+    return-void
 .end method

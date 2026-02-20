@@ -3,95 +3,215 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lvue;
-.implements Lwm8;
+.implements Landroid/os/IBinder$DeathRecipient;
 
 
 # instance fields
-.field public final a:Lo58;
+.field public final a:Landroid/os/Messenger;
 
-.field public final b:Lo58;
+.field public final b:Lhe;
 
-.field public final c:Lkotlinx/coroutines/internal/ContextScope;
+.field public final c:Landroid/os/Messenger;
 
-.field public final d:Lspf;
+.field public d:I
 
-.field public final o:Ljava/lang/String;
+.field public e:I
+
+.field public f:I
+
+.field public g:I
+
+.field public final h:Landroid/util/SparseArray;
+
+.field public final synthetic i:Llzd;
 
 
 # direct methods
-.method public constructor <init>(Lo58;Lo58;Lmbg;Ltb4;)V
+.method public constructor <init>(Llzd;Landroid/os/Messenger;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lgzd;->a:Lo58;
+    iput-object p1, p0, Lgzd;->i:Llzd;
 
-    iput-object p2, p0, Lgzd;->b:Lo58;
+    const/4 p1, 0x1
 
-    check-cast p3, Lj9b;
+    iput p1, p0, Lgzd;->d:I
 
-    invoke-virtual {p3}, Lj9b;->a()Lsb4;
+    iput p1, p0, Lgzd;->e:I
 
-    move-result-object p1
+    new-instance p1, Landroid/util/SparseArray;
 
-    const/4 p2, 0x1
+    invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
 
-    const-string p3, "restore-tasks-on-connect"
+    iput-object p1, p0, Lgzd;->h:Landroid/util/SparseArray;
 
-    invoke-virtual {p1, p2, p3}, Lsb4;->limitedParallelism(ILjava/lang/String;)Lsb4;
+    iput-object p2, p0, Lgzd;->a:Landroid/os/Messenger;
 
-    move-result-object p1
+    new-instance p1, Lhe;
 
-    invoke-virtual {p1, p4}, Lm0;->plus(Lqb4;)Lqb4;
+    invoke-direct {p1, p0}, Lhe;-><init>(Lgzd;)V
 
-    move-result-object p1
+    iput-object p1, p0, Lgzd;->b:Lhe;
 
-    invoke-static {p1}, Lilj;->a(Lqb4;)Lkotlinx/coroutines/internal/ContextScope;
+    new-instance p2, Landroid/os/Messenger;
 
-    move-result-object p1
+    invoke-direct {p2, p1}, Landroid/os/Messenger;-><init>(Landroid/os/Handler;)V
 
-    iput-object p1, p0, Lgzd;->c:Lkotlinx/coroutines/internal/ContextScope;
-
-    const/4 p1, 0x0
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    invoke-static {p1}, Ltpf;->a(Ljava/lang/Object;)Lspf;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lgzd;->d:Lspf;
-
-    const-string p1, "RestoreScheduledTaskExecutor"
-
-    iput-object p1, p0, Lgzd;->o:Ljava/lang/String;
+    iput-object p2, p0, Lgzd;->c:Landroid/os/Messenger;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c()V
-    .locals 0
+.method public final a(I)V
+    .locals 6
+
+    iget v2, p0, Lgzd;->d:I
+
+    add-int/lit8 v0, v2, 0x1
+
+    iput v0, p0, Lgzd;->d:I
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    const/4 v1, 0x5
+
+    move-object v0, p0
+
+    move v3, p1
+
+    invoke-virtual/range {v0 .. v5}, Lgzd;->b(IIILandroid/os/Bundle;Landroid/os/Bundle;)Z
 
     return-void
 .end method
 
-.method public final d(I)V
-    .locals 2
+.method public final b(IIILandroid/os/Bundle;Landroid/os/Bundle;)Z
+    .locals 1
 
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
-    move-result-object p1
+    move-result-object v0
 
-    const/4 v0, 0x0
+    iput p1, v0, Landroid/os/Message;->what:I
 
-    iget-object v1, p0, Lgzd;->d:Lspf;
+    iput p2, v0, Landroid/os/Message;->arg1:I
 
-    invoke-virtual {v1, v0, p1}, Lspf;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iput p3, v0, Landroid/os/Message;->arg2:I
+
+    iput-object p4, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
+
+    invoke-virtual {v0, p5}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
+
+    iget-object p2, p0, Lgzd;->c:Landroid/os/Messenger;
+
+    iput-object p2, v0, Landroid/os/Message;->replyTo:Landroid/os/Messenger;
+
+    :try_start_0
+    iget-object p2, p0, Lgzd;->a:Landroid/os/Messenger;
+
+    invoke-virtual {p2, v0}, Landroid/os/Messenger;->send(Landroid/os/Message;)V
+    :try_end_0
+    .catch Landroid/os/DeadObjectException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :catch_0
+    move-exception p2
+
+    const/4 p3, 0x2
+
+    if-eq p1, p3, :cond_0
+
+    const-string p1, "MediaRouteProviderProxy"
+
+    const-string p3, "Could not send message to service."
+
+    invoke-static {p1, p3, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :catch_1
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final binderDied()V
+    .locals 3
+
+    iget-object v0, p0, Lgzd;->i:Llzd;
+
+    iget-object v0, v0, Llzd;->t0:Lmaa;
+
+    new-instance v1, Lfzd;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v1, p0, v2}, Lfzd;-><init>(Lgzd;I)V
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+.end method
+
+.method public final c(II)V
+    .locals 7
+
+    const-string v0, "volume"
+
+    invoke-static {p2, v0}, Ltx8;->f(ILjava/lang/String;)Landroid/os/Bundle;
+
+    move-result-object v6
+
+    iget v3, p0, Lgzd;->d:I
+
+    add-int/lit8 p2, v3, 0x1
+
+    iput p2, p0, Lgzd;->d:I
+
+    const/4 v5, 0x0
+
+    const/4 v2, 0x7
+
+    move-object v1, p0
+
+    move v4, p1
+
+    invoke-virtual/range {v1 .. v6}, Lgzd;->b(IIILandroid/os/Bundle;Landroid/os/Bundle;)Z
+
+    return-void
+.end method
+
+.method public final d(II)V
+    .locals 7
+
+    const-string v0, "volume"
+
+    invoke-static {p2, v0}, Ltx8;->f(ILjava/lang/String;)Landroid/os/Bundle;
+
+    move-result-object v6
+
+    iget v3, p0, Lgzd;->d:I
+
+    add-int/lit8 p2, v3, 0x1
+
+    iput p2, p0, Lgzd;->d:I
+
+    const/4 v5, 0x0
+
+    const/16 v2, 0x8
+
+    move-object v1, p0
+
+    move v4, p1
+
+    invoke-virtual/range {v1 .. v6}, Lgzd;->b(IIILandroid/os/Bundle;Landroid/os/Bundle;)Z
 
     return-void
 .end method

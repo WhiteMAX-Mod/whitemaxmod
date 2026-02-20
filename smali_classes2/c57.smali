@@ -1,23 +1,19 @@
-.class public abstract Lc57;
+.class public final Lc57;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Llhg;
-
-.field public final b:Lqhg;
+.field public final a:Ld57;
 
 
 # direct methods
-.method public constructor <init>(Llhg;Llhg;)V
+.method public constructor <init>(Ld57;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lc57;->a:Llhg;
-
-    iput-object p2, p0, Lc57;->b:Lqhg;
+    iput-object p1, p0, Lc57;->a:Ld57;
 
     return-void
 .end method

@@ -3,6 +3,6 @@
 
 
 # static fields
-.field public static google_map_night_style:I = 0x7f120031
+.field public static oneme_settings_privacy_cloud_2fa_end_icon:I = 0x7f08091b
 
-.field public static google_universal_map_style:I = 0x7f120032
+.field public static oneme_settings_privacy_cloud_2fa_start_icon:I = 0x7f08091c

@@ -1,121 +1,148 @@
 .class public final Lisb;
-.super Ljsb;
+.super Lsla;
 .source "SourceFile"
 
 
 # instance fields
-.field public final d:Ljava/nio/ByteBuffer;
+.field public final b:J
+
+.field public final c:J
+
+.field public final d:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>([BII)V
+.method public constructor <init>(JJLjava/lang/String;)V
     .locals 1
 
-    shr-int/lit8 v0, p3, 0x2
+    sget-object v0, Lmah;->a:Lmah;
 
-    invoke-direct {p0, p1, v0, p2}, Ljsb;-><init>([BII)V
+    invoke-direct {p0, v0}, Lsla;-><init>(Ljava/lang/Object;)V
 
-    invoke-static {p1, p2, p3}, Ljava/nio/ByteBuffer;->wrap([BII)Ljava/nio/ByteBuffer;
+    iput-wide p1, p0, Lisb;->b:J
 
-    move-result-object p1
+    iput-wide p3, p0, Lisb;->c:J
 
-    sget-object p2, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
-
-    invoke-virtual {p1, p2}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lisb;->d:Ljava/nio/ByteBuffer;
+    iput-object p5, p0, Lisb;->d:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(I)S
-    .locals 4
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    shl-int/lit8 p1, p1, 0x2
+    const/4 v0, 0x1
 
-    iget-object v0, p0, Lisb;->d:Ljava/nio/ByteBuffer;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {v0, p1}, Ljava/nio/ByteBuffer;->getFloat(I)F
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lisb;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lisb;
+
+    iget-wide v3, p0, Lisb;->b:J
+
+    iget-wide v5, p1, Lisb;->b:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-wide v3, p0, Lisb;->c:J
+
+    iget-wide v5, p1, Lisb;->c:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Lisb;->d:Ljava/lang/String;
+
+    iget-object p1, p1, Lisb;->d:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
-    float-to-double v0, p1
+    if-nez p1, :cond_4
 
-    const-wide/high16 v2, 0x3ff0000000000000L    # 1.0
+    return v2
 
-    add-double/2addr v0, v2
+    :cond_4
+    return v0
+.end method
 
-    const-wide v2, 0x40dfffe000000000L    # 32767.5
+.method public final hashCode()I
+    .locals 4
 
-    mul-double/2addr v0, v2
+    iget-wide v0, p0, Lisb;->b:J
 
-    double-to-int p1, v0
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
-    add-int/lit16 p1, p1, -0x8000
+    move-result v0
 
-    int-to-short p1, p1
+    const/16 v1, 0x1f
 
-    return p1
+    mul-int/2addr v0, v1
+
+    iget-wide v2, p0, Lisb;->c:J
+
+    invoke-static {v0, v1, v2, v3}, Leni;->a(IIJ)I
+
+    move-result v0
+
+    iget-object v1, p0, Lisb;->d:Ljava/lang/String;
+
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
 .method public final toString()Ljava/lang/String;
     .locals 5
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v0, "OpenVideoWebView(chatId="
 
-    const-string v1, "PCM float ("
+    const-string v1, ", messageId="
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-wide v2, p0, Lisb;->b:J
 
-    iget v1, p0, Ljsb;->a:I
+    invoke-static {v2, v3, v0, v1}, Ly12;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    const-string v2, ") {"
+    const-string v1, ", videoUrl="
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-wide v2, p0, Lisb;->c:J
 
-    if-lez v1, :cond_0
+    iget-object v4, p0, Lisb;->d:Ljava/lang/String;
 
-    const/4 v2, 0x0
+    invoke-static {v2, v3, v1, v4, v0}, Lj64;->l(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
 
-    iget-object v3, p0, Lisb;->d:Ljava/nio/ByteBuffer;
+    const-string v1, ")"
 
-    invoke-virtual {v3, v2}, Ljava/nio/ByteBuffer;->getFloat(I)F
-
-    move-result v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const/4 v2, 0x1
-
-    :goto_0
-    if-ge v2, v1, :cond_0
-
-    const-string v4, ", "
-
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    shl-int/lit8 v4, v2, 0x2
-
-    invoke-virtual {v3, v4}, Ljava/nio/ByteBuffer;->getFloat(I)F
-
-    move-result v4
-
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/16 v1, 0x7d
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 

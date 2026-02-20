@@ -3,11 +3,11 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lsgf;
+.implements Lnof;
 
 
 # instance fields
-.field public u1:Z
+.field public r1:Z
 
 
 # direct methods
@@ -18,7 +18,7 @@
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lru/ok/messages/views/fragments/FrgSlideOut;->u1:Z
+    iput-boolean v0, p0, Lru/ok/messages/views/fragments/FrgSlideOut;->r1:Z
 
     return-void
 .end method
@@ -33,10 +33,10 @@
     return v0
 .end method
 
-.method public b(I)V
+.method public g(I)V
     .locals 1
 
-    invoke-virtual {p0}, Lru/ok/messages/views/fragments/base/FrgBase;->r0()Ly5;
+    invoke-virtual {p0}, Lru/ok/messages/views/fragments/base/FrgBase;->k0()Li7;
 
     move-result-object p1
 
@@ -45,13 +45,13 @@
     return-void
 
     :cond_0
-    invoke-virtual {p0}, Landroidx/fragment/app/a;->r()Landroidx/fragment/app/b;
+    invoke-virtual {p0}, Landroidx/fragment/app/a;->m()Landroidx/fragment/app/b;
 
     move-result-object p1
 
     invoke-virtual {p1}, Landroid/app/Activity;->finish()V
 
-    invoke-virtual {p0}, Landroidx/fragment/app/a;->r()Landroidx/fragment/app/b;
+    invoke-virtual {p0}, Landroidx/fragment/app/a;->m()Landroidx/fragment/app/b;
 
     move-result-object p1
 
@@ -62,10 +62,10 @@
     return-void
 .end method
 
-.method public m()V
+.method public j()V
     .locals 3
 
-    invoke-virtual {p0}, Lru/ok/messages/views/fragments/FrgSlideOut;->y0()Lzp6;
+    invoke-virtual {p0}, Lru/ok/messages/views/fragments/FrgSlideOut;->p0()Lwr6;
 
     move-result-object v0
 
@@ -76,27 +76,27 @@
     :cond_0
     check-cast v0, Lru/ok/messages/media/mediabar/ActLocalMedias;
 
-    iget-boolean v1, v0, Lru/ok/messages/media/mediabar/ActLocalMedias;->Y0:Z
+    iget-boolean v1, v0, Lru/ok/messages/media/mediabar/ActLocalMedias;->W0:Z
 
-    iput-boolean v1, p0, Lru/ok/messages/views/fragments/FrgSlideOut;->u1:Z
+    iput-boolean v1, p0, Lru/ok/messages/views/fragments/FrgSlideOut;->r1:Z
 
     const/4 v1, 0x0
 
     const/4 v2, 0x1
 
-    invoke-virtual {v0, v1, v2}, Lru/ok/messages/media/mediabar/ActLocalMedias;->V(ZZ)V
+    invoke-virtual {v0, v1, v2}, Lru/ok/messages/media/mediabar/ActLocalMedias;->W(ZZ)V
 
     return-void
 .end method
 
-.method public u0(Ly5;)V
+.method public m0(Li7;)V
     .locals 1
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lru/ok/messages/views/fragments/base/FrgBase;->j1:Z
+    iput-boolean v0, p0, Lru/ok/messages/views/fragments/base/FrgBase;->i1:Z
 
-    instance-of p1, p1, Lzp6;
+    instance-of p1, p1, Lwr6;
 
     if-eqz p1, :cond_0
 
@@ -112,20 +112,20 @@
     throw p1
 .end method
 
-.method public final y0()Lzp6;
+.method public final p0()Lwr6;
     .locals 1
 
-    invoke-virtual {p0}, Lru/ok/messages/views/fragments/base/FrgBase;->r0()Ly5;
+    invoke-virtual {p0}, Lru/ok/messages/views/fragments/base/FrgBase;->k0()Li7;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lru/ok/messages/views/fragments/base/FrgBase;->r0()Ly5;
+    invoke-virtual {p0}, Lru/ok/messages/views/fragments/base/FrgBase;->k0()Li7;
 
     move-result-object v0
 
-    check-cast v0, Lzp6;
+    check-cast v0, Lwr6;
 
     return-object v0
 

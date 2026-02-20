@@ -1,92 +1,74 @@
-.class public final synthetic Ltm4;
-.super Ljava/lang/Object;
+.class public final Ltm4;
+.super Lwm4;
 .source "SourceFile"
-
-# interfaces
-.implements Lqe8;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lid;
-
-.field public final synthetic c:Z
-
-
-# direct methods
-.method public synthetic constructor <init>(Lid;ZI)V
-    .locals 0
-
-    iput p3, p0, Ltm4;->a:I
-
-    iput-object p1, p0, Ltm4;->b:Lid;
-
-    iput-boolean p2, p0, Ltm4;->c:Z
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)V
+.method public final n(Lsj5;)I
+    .locals 0
+
+    invoke-virtual {p1}, Lsj5;->d0()I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final o()Lil7;
     .locals 2
 
-    iget v0, p0, Ltm4;->a:I
+    new-instance v0, Lil7;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iget-boolean v0, p0, Ltm4;->c:Z
+    const/4 v1, 0x0
 
-    check-cast p1, Ljd;
+    iput v1, v0, Lil7;->a:I
 
-    iget-object v1, p0, Ltm4;->b:Lid;
+    iput-boolean v1, v0, Lil7;->b:Z
 
-    invoke-interface {p1, v1, v0}, Ljd;->B(Lid;Z)V
+    iput-boolean v1, v0, Lil7;->c:Z
 
-    return-void
+    return-object v0
+.end method
 
-    :pswitch_0
-    iget-boolean v0, p0, Ltm4;->c:Z
+.method public final declared-synchronized s(Lsj5;I)Z
+    .locals 1
 
-    check-cast p1, Ljd;
+    monitor-enter p0
 
-    iget-object v1, p0, Ltm4;->b:Lid;
+    :try_start_0
+    invoke-static {p2}, Lkl0;->b(I)Z
 
-    invoke-interface {p1, v1, v0}, Ljd;->u(Lid;Z)V
+    move-result v0
 
-    return-void
+    if-eqz v0, :cond_0
 
-    :pswitch_1
-    check-cast p1, Ljd;
+    const/4 p1, 0x0
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    goto :goto_0
 
-    iget-object v0, p0, Ltm4;->b:Lid;
+    :cond_0
+    iget-object v0, p0, Lwm4;->g:Lmz7;
 
-    iget-boolean v1, p0, Ltm4;->c:Z
+    invoke-virtual {v0, p1, p2}, Lmz7;->e(Lsj5;I)Z
 
-    invoke-interface {p1, v0, v1}, Ljd;->M0(Lid;Z)V
+    move-result p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    return-void
+    :goto_0
+    monitor-exit p0
 
-    :pswitch_2
-    iget-boolean v0, p0, Ltm4;->c:Z
+    return p1
 
-    check-cast p1, Ljd;
+    :catchall_0
+    move-exception p1
 
-    iget-object v1, p0, Ltm4;->b:Lid;
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    invoke-interface {p1, v1, v0}, Ljd;->w(Lid;Z)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    throw p1
 .end method

@@ -6,10 +6,10 @@
 # static fields
 .field private static final LOG_TAG:Ljava/lang/String; = "ConversationParams"
 
-.field public static final PARSER:Lq18;
+.field public static final PARSER:Ln48;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lq18;"
+            "Ln48;"
         }
     .end annotation
 .end field
@@ -55,13 +55,13 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Ljf3;
+    new-instance v0, Lnb3;
 
-    const/16 v1, 0xf
+    const/16 v1, 0x10
 
-    invoke-direct {v0, v1}, Ljf3;-><init>(I)V
+    invoke-direct {v0, v1}, Lnb3;-><init>(I)V
 
-    sput-object v0, Lru/ok/android/externcalls/sdk/api/ConversationParams;->PARSER:Lq18;
+    sput-object v0, Lru/ok/android/externcalls/sdk/api/ConversationParams;->PARSER:Ln48;
 
     return-void
 .end method
@@ -80,10 +80,10 @@
     return-void
 .end method
 
-.method public static synthetic a(Lz18;)Lru/ok/android/externcalls/sdk/api/ConversationParams;
+.method public static synthetic a(Lx48;)Lru/ok/android/externcalls/sdk/api/ConversationParams;
     .locals 0
 
-    invoke-static {p0}, Lru/ok/android/externcalls/sdk/api/ConversationParams;->parseCallParams(Lz18;)Lru/ok/android/externcalls/sdk/api/ConversationParams;
+    invoke-static {p0}, Lru/ok/android/externcalls/sdk/api/ConversationParams;->parseCallParams(Lx48;)Lru/ok/android/externcalls/sdk/api/ConversationParams;
 
     move-result-object p0
 
@@ -467,7 +467,7 @@
     return-object v4
 .end method
 
-.method private static parseCallParams(Lz18;)Lru/ok/android/externcalls/sdk/api/ConversationParams;
+.method private static parseCallParams(Lx48;)Lru/ok/android/externcalls/sdk/api/ConversationParams;
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -477,7 +477,7 @@
     .end annotation
 
     .line 37
-    invoke-static {p0}, Lzij;->a(Lz18;)Lorg/json/JSONObject;
+    invoke-static {p0}, Ldrj;->b(Lx48;)Lorg/json/JSONObject;
 
     move-result-object p0
 
@@ -835,7 +835,7 @@
 
     const-string v2, "\'}"
 
-    invoke-static {v0, v1, v2}, Lj27;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Ltx8;->n(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

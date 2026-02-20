@@ -1,91 +1,184 @@
 .class public final Lzf1;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Lwf1;
+
+
+# static fields
+.field public static final synthetic t0:[Lv58;
 
 
 # instance fields
-.field public synthetic o:Ljava/lang/Object;
+.field public final X:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+.field public final Y:Lbgg;
+
+.field public final Z:Lhxf;
+
+.field public final a:Lj88;
+
+.field public final b:Lj88;
+
+.field public final c:Lj88;
+
+.field public final d:Ln8;
+
+.field public final o:Lbgg;
+
+.field public final s0:Lmrd;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 4
+
+    new-instance v0, Laia;
+
+    const-string v1, "checkInviteJob"
+
+    const-string v2, "getCheckInviteJob()Lkotlinx/coroutines/Job;"
+
+    const-class v3, Lzf1;
+
+    invoke-direct {v0, v3, v1, v2}, Laia;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+
+    sget-object v1, Lazd;->a:Lbzd;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 v1, 0x1
+
+    new-array v1, v1, [Lv58;
+
+    const/4 v2, 0x0
+
+    aput-object v0, v1, v2
+
+    sput-object v1, Lzf1;->t0:[Lv58;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lj88;Lj88;Lj88;Lj88;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p2, p0, Lzf1;->a:Lj88;
+
+    iput-object p1, p0, Lzf1;->b:Lj88;
+
+    iput-object p3, p0, Lzf1;->c:Lj88;
+
+    invoke-static {}, Lytj;->a()Ln8;
+
+    move-result-object p2
+
+    iput-object p2, p0, Lzf1;->d:Ln8;
+
+    new-instance p2, Lr10;
+
+    const/4 p3, 0x6
+
+    invoke-direct {p2, p4, p3}, Lr10;-><init>(Lj88;I)V
+
+    new-instance p3, Lbgg;
+
+    invoke-direct {p3, p2}, Lbgg;-><init>(Lis6;)V
+
+    iput-object p3, p0, Lzf1;->o:Lbgg;
+
+    new-instance p2, Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    const/4 p3, 0x0
+
+    invoke-direct {p2, p3}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
+
+    iput-object p2, p0, Lzf1;->X:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    new-instance p2, Lh3;
+
+    const/16 p3, 0xc
+
+    invoke-direct {p2, p0, p3, p1}, Lh3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    new-instance p1, Lbgg;
+
+    invoke-direct {p1, p2}, Lbgg;-><init>(Lis6;)V
+
+    iput-object p1, p0, Lzf1;->Y:Lbgg;
+
+    sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    invoke-static {p1}, Lixf;->a(Ljava/lang/Object;)Lhxf;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lzf1;->Z:Lhxf;
+
+    new-instance p2, Lmrd;
+
+    invoke-direct {p2, p1}, Lmrd;-><init>(Lgia;)V
+
+    iput-object p2, p0, Lzf1;->s0:Lmrd;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final a()V
+    .locals 5
+
+    iget-object v0, p0, Lzf1;->c:Lj88;
+
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Luy1;
+
+    iget-object v1, p0, Lzf1;->o:Lbgg;
+
+    invoke-virtual {v1}, Lbgg;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lgd4;
+
+    new-instance v2, Lyf1;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v2, p0, v3}, Lyf1;-><init>(Lzf1;Lkotlin/coroutines/Continuation;)V
+
+    const/4 v4, 0x2
+
+    invoke-static {v0, v1, v3, v2, v4}, Lea9;->d(Lnd4;Led4;Lqd4;Lys6;I)Lcuf;
+
+    move-result-object v0
+
+    sget-object v1, Lzf1;->t0:[Lv58;
+
+    const/4 v2, 0x0
+
+    aget-object v1, v1, v2
+
+    iget-object v2, p0, Lzf1;->d:Ln8;
+
+    invoke-virtual {v2, p0, v1, v0}, Ln8;->N(Ljava/lang/Object;Lv58;Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public final onCallAccepted()V
     .locals 0
 
-    check-cast p1, [Ley3;
+    invoke-super {p0}, Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;->onCallAccepted()V
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-virtual {p0}, Lzf1;->a()V
 
-    invoke-virtual {p0, p1, p2}, Lzf1;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lzf1;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lzf1;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lzf1;
-
-    const/4 v1, 0x2
-
-    invoke-direct {v0, v1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lzf1;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    iget-object v0, p0, Lzf1;->o:Ljava/lang/Object;
-
-    check-cast v0, [Ley3;
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    array-length p1, v0
-
-    const/4 v1, 0x0
-
-    move v2, v1
-
-    :goto_0
-    if-ge v2, p1, :cond_0
-
-    aget-object v3, v0, v2
-
-    if-eqz v3, :cond_1
-
-    invoke-virtual {v3}, Ley3;->E()Z
-
-    move-result v3
-
-    if-nez v3, :cond_1
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v1, 0x1
-
-    :cond_1
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

@@ -1,144 +1,294 @@
-.class public abstract Llpi;
-.super Lcpi;
+.class public final Llpi;
+.super Lopi;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final U(ILandroid/os/Parcel;Landroid/os/Parcel;)Z
-    .locals 3
+# static fields
+.field public static final e:Landroid/view/animation/PathInterpolator;
 
-    packed-switch p1, :pswitch_data_0
+.field public static final f:Llw5;
 
-    :pswitch_0
-    const/4 p1, 0x0
+.field public static final g:Landroid/view/animation/DecelerateInterpolator;
 
-    return p1
 
-    :pswitch_1
-    sget-object p1, Lbqi;->CREATOR:Landroid/os/Parcelable$Creator;
+# direct methods
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-static {p2, p1}, Lkpi;->a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
+    new-instance v0, Landroid/view/animation/PathInterpolator;
 
-    move-result-object p1
+    const v1, 0x3f8ccccd    # 1.1f
 
-    check-cast p1, Lbqi;
+    const/high16 v2, 0x3f800000    # 1.0f
 
-    invoke-static {p2}, Lkpi;->b(Landroid/os/Parcel;)V
+    const/4 v3, 0x0
 
-    goto :goto_0
+    invoke-direct {v0, v3, v1, v3, v2}, Landroid/view/animation/PathInterpolator;-><init>(FFFF)V
 
-    :pswitch_2
-    sget-object p1, Liqi;->CREATOR:Landroid/os/Parcelable$Creator;
+    sput-object v0, Llpi;->e:Landroid/view/animation/PathInterpolator;
 
-    invoke-static {p2, p1}, Lkpi;->a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
+    new-instance v0, Llw5;
 
-    move-result-object p1
+    const/4 v1, 0x0
 
-    check-cast p1, Liqi;
+    invoke-direct {v0, v1}, Llw5;-><init>(I)V
 
-    invoke-static {p2}, Lkpi;->b(Landroid/os/Parcel;)V
+    sput-object v0, Llpi;->f:Llw5;
 
-    move-object p2, p0
+    new-instance v0, Landroid/view/animation/DecelerateInterpolator;
 
-    check-cast p2, Lppi;
+    invoke-direct {v0}, Landroid/view/animation/DecelerateInterpolator;-><init>()V
 
-    new-instance v0, Lkuf;
+    sput-object v0, Llpi;->g:Landroid/view/animation/DecelerateInterpolator;
 
-    const/16 v1, 0x8
+    return-void
+.end method
 
-    const/4 v2, 0x0
+.method public static e(Landroid/view/View;Lppi;)V
+    .locals 2
 
-    invoke-direct {v0, p2, p1, v2, v1}, Lkuf;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
+    invoke-static {p0}, Llpi;->j(Landroid/view/View;)Lbe2;
 
-    iget-object p1, p2, Lppi;->e:Landroid/os/Handler;
+    move-result-object v0
 
-    invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    if-eqz v0, :cond_0
 
-    goto :goto_0
+    invoke-virtual {v0, p1}, Lbe2;->b(Lppi;)V
 
-    :pswitch_3
-    sget-object p1, Lcom/google/android/gms/common/api/Status;->CREATOR:Landroid/os/Parcelable$Creator;
+    iget v0, v0, Lbe2;->a:I
 
-    invoke-static {p2, p1}, Lkpi;->a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
+    if-nez v0, :cond_0
 
-    move-result-object p1
+    goto :goto_1
 
-    check-cast p1, Lcom/google/android/gms/common/api/Status;
+    :cond_0
+    instance-of v0, p0, Landroid/view/ViewGroup;
 
-    sget-object p1, Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;->CREATOR:Landroid/os/Parcelable$Creator;
+    if-eqz v0, :cond_1
 
-    invoke-static {p2, p1}, Lkpi;->a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
+    check-cast p0, Landroid/view/ViewGroup;
 
-    move-result-object p1
-
-    check-cast p1, Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;
-
-    invoke-static {p2}, Lkpi;->b(Landroid/os/Parcel;)V
-
-    goto :goto_0
-
-    :pswitch_4
-    sget-object p1, Lcom/google/android/gms/common/api/Status;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    invoke-static {p2, p1}, Lkpi;->a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
-
-    move-result-object p1
-
-    check-cast p1, Lcom/google/android/gms/common/api/Status;
-
-    invoke-static {p2}, Lkpi;->b(Landroid/os/Parcel;)V
-
-    goto :goto_0
-
-    :pswitch_5
-    sget-object p1, Lcom/google/android/gms/common/api/Status;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    invoke-static {p2, p1}, Lkpi;->a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
-
-    move-result-object p1
-
-    check-cast p1, Lcom/google/android/gms/common/api/Status;
-
-    invoke-static {p2}, Lkpi;->b(Landroid/os/Parcel;)V
-
-    goto :goto_0
-
-    :pswitch_6
-    sget-object p1, Lyv3;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    invoke-static {p2, p1}, Lkpi;->a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
-
-    move-result-object p1
-
-    check-cast p1, Lyv3;
-
-    sget-object p1, Lyoi;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    invoke-static {p2, p1}, Lkpi;->a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
-
-    move-result-object p1
-
-    check-cast p1, Lyoi;
-
-    invoke-static {p2}, Lkpi;->b(Landroid/os/Parcel;)V
+    const/4 v0, 0x0
 
     :goto_0
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
-    const/4 p1, 0x1
+    move-result v1
 
-    return p1
+    if-ge v0, v1, :cond_1
 
-    nop
+    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
-    :pswitch_data_0
-    .packed-switch 0x3
-        :pswitch_6
-        :pswitch_5
-        :pswitch_0
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-    .end packed-switch
+    move-result-object v1
+
+    invoke-static {v1, p1}, Llpi;->e(Landroid/view/View;Lppi;)V
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    :goto_1
+    return-void
+.end method
+
+.method public static f(Landroid/view/View;Lppi;Landroid/view/WindowInsets;Z)V
+    .locals 2
+
+    invoke-static {p0}, Llpi;->j(Landroid/view/View;)Lbe2;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_1
+
+    iput-object p2, v0, Lbe2;->b:Ljava/lang/Object;
+
+    if-nez p3, :cond_1
+
+    invoke-virtual {v0, p1}, Lbe2;->c(Lppi;)V
+
+    iget p3, v0, Lbe2;->a:I
+
+    if-nez p3, :cond_0
+
+    const/4 p3, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    move p3, v1
+
+    :cond_1
+    :goto_0
+    instance-of v0, p0, Landroid/view/ViewGroup;
+
+    if-eqz v0, :cond_2
+
+    check-cast p0, Landroid/view/ViewGroup;
+
+    :goto_1
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
+
+    move-result v0
+
+    if-ge v1, v0, :cond_2
+
+    invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-static {v0, p1, p2, p3}, Llpi;->f(Landroid/view/View;Lppi;Landroid/view/WindowInsets;Z)V
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_1
+
+    :cond_2
+    return-void
+.end method
+
+.method public static g(Landroid/view/View;Ldqi;Ljava/util/List;)V
+    .locals 2
+
+    invoke-static {p0}, Llpi;->j(Landroid/view/View;)Lbe2;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, p1, p2}, Lbe2;->d(Ldqi;Ljava/util/List;)Ldqi;
+
+    move-result-object p1
+
+    iget v0, v0, Lbe2;->a:I
+
+    if-nez v0, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    instance-of v0, p0, Landroid/view/ViewGroup;
+
+    if-eqz v0, :cond_1
+
+    check-cast p0, Landroid/view/ViewGroup;
+
+    const/4 v0, 0x0
+
+    :goto_0
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
+
+    move-result v1
+
+    if-ge v0, v1, :cond_1
+
+    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v1
+
+    invoke-static {v1, p1, p2}, Llpi;->g(Landroid/view/View;Ldqi;Ljava/util/List;)V
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    :goto_1
+    return-void
+.end method
+
+.method public static h(Landroid/view/View;Lppi;Ltse;)V
+    .locals 2
+
+    invoke-static {p0}, Llpi;->j(Landroid/view/View;)Lbe2;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, p1, p2}, Lbe2;->e(Lppi;Ltse;)Ltse;
+
+    iget v0, v0, Lbe2;->a:I
+
+    if-nez v0, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    instance-of v0, p0, Landroid/view/ViewGroup;
+
+    if-eqz v0, :cond_1
+
+    check-cast p0, Landroid/view/ViewGroup;
+
+    const/4 v0, 0x0
+
+    :goto_0
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
+
+    move-result v1
+
+    if-ge v0, v1, :cond_1
+
+    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v1
+
+    invoke-static {v1, p1, p2}, Llpi;->h(Landroid/view/View;Lppi;Ltse;)V
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    :goto_1
+    return-void
+.end method
+
+.method public static i(Landroid/view/View;Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
+    .locals 1
+
+    sget v0, Lred;->tag_on_apply_window_listener:I
+
+    invoke-virtual {p0, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    return-object p1
+
+    :cond_0
+    invoke-virtual {p0, p1}, Landroid/view/View;->onApplyWindowInsets(Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static j(Landroid/view/View;)Lbe2;
+    .locals 1
+
+    sget v0, Lred;->tag_window_insets_animation_callback:I
+
+    invoke-virtual {p0, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
+
+    move-result-object p0
+
+    instance-of v0, p0, Lkpi;
+
+    if-eqz v0, :cond_0
+
+    check-cast p0, Lkpi;
+
+    iget-object p0, p0, Lkpi;->a:Lbe2;
+
+    return-object p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return-object p0
 .end method

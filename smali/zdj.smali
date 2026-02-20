@@ -3,125 +3,73 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static final a:Ljava/util/HashMap;
+
+
 # direct methods
-.method public static a(ZZZZZZZZZZZZ)J
-    .locals 4
+.method static constructor <clinit>()V
+    .locals 5
 
-    if-eqz p11, :cond_0
+    new-instance v0, Ljava/util/HashSet;
 
-    const-wide/16 v0, 0x1
+    const-string v1, "review"
 
-    goto :goto_0
+    const-string v2, "app_update"
 
-    :cond_0
-    const-wide/16 v0, 0x0
+    filled-new-array {v2, v1}, [Ljava/lang/String;
 
-    :goto_0
-    if-eqz p0, :cond_1
+    move-result-object v1
 
-    const-wide/16 v2, 0x2
+    invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
-    or-long/2addr v0, v2
+    move-result-object v1
 
-    :cond_1
-    if-eqz p1, :cond_2
+    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
-    const-wide/16 p0, 0x4
+    new-instance v0, Ljava/util/HashSet;
 
-    or-long/2addr v0, p0
+    const-string v1, "unity"
 
-    :cond_2
-    if-eqz p2, :cond_3
+    const-string v2, "native"
 
-    const-wide/16 p0, 0x8
+    filled-new-array {v2, v1}, [Ljava/lang/String;
 
-    or-long/2addr v0, p0
+    move-result-object v1
 
-    :cond_3
-    if-eqz p3, :cond_4
+    invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
-    const-wide/16 p0, 0x10
+    move-result-object v1
 
-    or-long/2addr v0, p0
+    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
-    :cond_4
-    if-eqz p4, :cond_5
+    new-instance v0, Ljava/util/HashMap;
 
-    const-wide/16 p0, 0x20
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    or-long/2addr v0, p0
+    sput-object v0, Lzdj;->a:Ljava/util/HashMap;
 
-    :cond_5
-    if-eqz p5, :cond_6
+    invoke-static {}, Landroid/os/Process;->myUid()I
 
-    const-wide/16 p0, 0x40
+    move-result v0
 
-    or-long/2addr v0, p0
+    invoke-static {}, Landroid/os/Process;->myPid()I
 
-    :cond_6
-    if-eqz p6, :cond_7
+    move-result v1
 
-    const-wide/16 p0, 0x80
+    const-string v2, "]  PID: ["
 
-    or-long/2addr v0, p0
+    const-string v3, "] "
 
-    :cond_7
-    if-eqz p7, :cond_8
+    const-string v4, "UID: ["
 
-    const-wide/16 p0, 0x100
+    invoke-static {v4, v0, v2, v1, v3}, Lau1;->h(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
-    or-long/2addr v0, p0
+    move-result-object v0
 
-    :cond_8
-    if-eqz p8, :cond_9
+    const-string v1, "PlayCoreVersion"
 
-    const-wide/16 p0, 0x200
+    invoke-virtual {v0, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    or-long/2addr v0, p0
-
-    :cond_9
-    if-eqz p9, :cond_a
-
-    const-wide/16 p0, 0x400
-
-    or-long/2addr v0, p0
-
-    :cond_a
-    if-eqz p10, :cond_b
-
-    const-wide/16 p0, 0x800
-
-    or-long/2addr p0, v0
-
-    return-wide p0
-
-    :cond_b
-    return-wide v0
-.end method
-
-.method public static final b(Lc58;)Z
-    .locals 0
-
-    if-eqz p0, :cond_1
-
-    iget-object p0, p0, Lc58;->a:Ljava/lang/String;
-
-    invoke-static {p0}, Lrzf;->H(Ljava/lang/CharSequence;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_1
-    :goto_0
-    const/4 p0, 0x1
-
-    return p0
+    return-void
 .end method

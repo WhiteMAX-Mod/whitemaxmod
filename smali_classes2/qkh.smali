@@ -1,49 +1,27 @@
-.class public final Lqkh;
-.super Lo84;
+.class public abstract Lqkh;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic X:Lykh;
-
-.field public Y:I
-
-.field public d:Ltfa;
-
-.field public synthetic o:Ljava/lang/Object;
+# static fields
+.field public static final a:Lbgg;
 
 
 # direct methods
-.method public constructor <init>(Lykh;Lo84;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lqkh;->X:Lykh;
+    new-instance v0, Lq6g;
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    const/16 v1, 0x13
+
+    invoke-direct {v0, v1}, Lq6g;-><init>(I)V
+
+    new-instance v1, Lbgg;
+
+    invoke-direct {v1, v0}, Lbgg;-><init>(Lis6;)V
+
+    sput-object v1, Lqkh;->a:Lbgg;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Lqkh;->o:Ljava/lang/Object;
-
-    iget p1, p0, Lqkh;->Y:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lqkh;->Y:I
-
-    iget-object p1, p0, Lqkh;->X:Lykh;
-
-    invoke-virtual {p1, p0}, Lykh;->c(Lo84;)Ljava/io/Serializable;
-
-    move-result-object p1
-
-    return-object p1
 .end method

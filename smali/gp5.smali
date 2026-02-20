@@ -1,319 +1,337 @@
 .class public final Lgp5;
-.super Ljava/lang/Object;
+.super Lcie;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:Landroid/content/Context;
+.field public final X:Ljq3;
 
-.field public b:Lt8g;
+.field public final a:Z
 
-.field public final c:Lj4g;
+.field public final b:Ljava/util/concurrent/Executor;
 
-.field public d:Lj4g;
+.field public final c:Lilc;
 
-.field public e:Lj4g;
+.field public volatile d:Z
 
-.field public f:Lj4g;
-
-.field public g:Lj4g;
-
-.field public final h:Lxp4;
-
-.field public i:Landroid/os/Looper;
-
-.field public final j:I
-
-.field public final k:Lx20;
-
-.field public final l:I
-
-.field public final m:Z
-
-.field public final n:Lkke;
-
-.field public final o:Lcfe;
-
-.field public final p:J
-
-.field public final q:J
-
-.field public final r:J
-
-.field public s:Lvr4;
-
-.field public final t:J
-
-.field public u:J
-
-.field public v:Z
-
-.field public w:Lfpj;
-
-.field public x:Z
-
-.field public final y:Ljava/lang/String;
+.field public final o:Ljava/util/concurrent/atomic/AtomicInteger;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 3
-
-    .line 1
-    new-instance v0, Lx30;
-
-    const/4 v1, 0x2
-
-    invoke-direct {v0, p1, v1}, Lx30;-><init>(Landroid/content/Context;I)V
-
-    new-instance v1, Lx30;
-
-    const/4 v2, 0x3
-
-    invoke-direct {v1, p1, v2}, Lx30;-><init>(Landroid/content/Context;I)V
-
-    invoke-direct {p0, p1, v0, v1}, Lgp5;-><init>(Landroid/content/Context;Lj4g;Lj4g;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;Lfwd;)V
+.method public constructor <init>(Ljava/util/concurrent/Executor;Z)V
     .locals 2
 
-    .line 2
-    new-instance v0, Lbs4;
-
-    const/4 v1, 0x3
-
-    invoke-direct {v0, v1, p2}, Lbs4;-><init>(ILjava/lang/Object;)V
-
-    new-instance p2, Lx30;
-
-    const/4 v1, 0x1
-
-    invoke-direct {p2, p1, v1}, Lx30;-><init>(Landroid/content/Context;I)V
-
-    invoke-direct {p0, p1, v0, p2}, Lgp5;-><init>(Landroid/content/Context;Lj4g;Lj4g;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;Lj4g;Lj4g;)V
-    .locals 6
-
-    .line 3
-    new-instance v0, Lx30;
-
-    const/4 v1, 0x5
-
-    invoke-direct {v0, p1, v1}, Lx30;-><init>(Landroid/content/Context;I)V
-
-    new-instance v1, Lti4;
-
-    const/4 v2, 0x2
-
-    invoke-direct {v1, v2}, Lti4;-><init>(I)V
-
-    new-instance v2, Lx30;
-
-    const/4 v3, 0x7
-
-    invoke-direct {v2, p1, v3}, Lx30;-><init>(Landroid/content/Context;I)V
-
-    new-instance v3, Lxp4;
-
-    const/16 v4, 0x14
-
-    invoke-direct {v3, v4}, Lxp4;-><init>(I)V
-
-    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
-    .line 6
-    iput-object p1, p0, Lgp5;->a:Landroid/content/Context;
+    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
 
-    .line 7
-    iput-object p2, p0, Lgp5;->c:Lj4g;
+    iput-object v0, p0, Lgp5;->o:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    .line 8
-    iput-object p3, p0, Lgp5;->d:Lj4g;
+    new-instance v0, Ljq3;
 
-    .line 9
-    iput-object v0, p0, Lgp5;->e:Lj4g;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    .line 10
-    iput-object v1, p0, Lgp5;->f:Lj4g;
+    iput-object v0, p0, Lgp5;->X:Ljq3;
 
-    .line 11
-    iput-object v2, p0, Lgp5;->g:Lj4g;
+    iput-object p1, p0, Lgp5;->b:Ljava/util/concurrent/Executor;
 
-    .line 12
-    iput-object v3, p0, Lgp5;->h:Lxp4;
+    new-instance p1, Lilc;
 
-    .line 13
-    invoke-static {}, Lmbh;->z()Landroid/os/Looper;
+    const/16 v0, 0x13
 
-    move-result-object p1
+    const/4 v1, 0x0
 
-    iput-object p1, p0, Lgp5;->i:Landroid/os/Looper;
+    invoke-direct {p1, v0, v1}, Lilc;-><init>(IB)V
 
-    .line 14
-    sget-object p1, Lx20;->h:Lx20;
+    iput-object p1, p0, Lgp5;->c:Lilc;
 
-    iput-object p1, p0, Lgp5;->k:Lx20;
-
-    const/4 p1, 0x1
-
-    .line 15
-    iput p1, p0, Lgp5;->l:I
-
-    .line 16
-    iput-boolean p1, p0, Lgp5;->m:Z
-
-    .line 17
-    sget-object p2, Lkke;->c:Lkke;
-
-    iput-object p2, p0, Lgp5;->n:Lkke;
-
-    const-wide/16 p2, 0x1388
-
-    .line 18
-    iput-wide p2, p0, Lgp5;->p:J
-
-    const-wide/16 p2, 0x3a98
-
-    .line 19
-    iput-wide p2, p0, Lgp5;->q:J
-
-    const-wide/16 p2, 0xbb8
-
-    .line 20
-    iput-wide p2, p0, Lgp5;->r:J
-
-    .line 21
-    sget-object p2, Lcfe;->b:Lcfe;
-
-    iput-object p2, p0, Lgp5;->o:Lcfe;
-
-    const-wide/16 p2, 0x14
-
-    .line 22
-    invoke-static {p2, p3}, Lmbh;->U(J)J
-
-    move-result-wide v2
-
-    const-wide/16 p2, 0x1f4
-
-    .line 23
-    invoke-static {p2, p3}, Lmbh;->U(J)J
-
-    move-result-wide v4
-
-    .line 24
-    new-instance v0, Lvr4;
-
-    const/4 v1, 0x1
-
-    invoke-direct/range {v0 .. v5}, Lvr4;-><init>(IJJ)V
-
-    .line 25
-    iput-object v0, p0, Lgp5;->s:Lvr4;
-
-    .line 26
-    sget-object v0, Lt8g;->a:Lt8g;
-
-    iput-object v0, p0, Lgp5;->b:Lt8g;
-
-    .line 27
-    iput-wide p2, p0, Lgp5;->t:J
-
-    const-wide/16 p2, 0x7d0
-
-    .line 28
-    iput-wide p2, p0, Lgp5;->u:J
-
-    .line 29
-    iput-boolean p1, p0, Lgp5;->v:Z
-
-    .line 30
-    const-string p1, ""
-
-    iput-object p1, p0, Lgp5;->y:Ljava/lang/String;
-
-    const/16 p1, -0x3e8
-
-    .line 31
-    iput p1, p0, Lgp5;->j:I
-
-    .line 32
-    new-instance p1, Lvna;
-
-    invoke-direct {p1}, Lvna;-><init>()V
+    iput-boolean p2, p0, Lgp5;->a:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ldq5;
-    .locals 2
+.method public final b(Ljava/lang/Runnable;)Ly35;
+    .locals 3
 
-    iget-boolean v0, p0, Lgp5;->x:Z
+    sget-object v0, Lni5;->a:Lni5;
+
+    iget-boolean v1, p0, Lgp5;->d:Z
+
+    if-eqz v1, :cond_0
+
+    return-object v0
+
+    :cond_0
+    iget-boolean v1, p0, Lgp5;->a:Z
+
+    if-eqz v1, :cond_1
+
+    new-instance v1, Lfp5;
+
+    iget-object v2, p0, Lgp5;->X:Ljq3;
+
+    invoke-direct {v1, p1, v2}, Lfp5;-><init>(Ljava/lang/Runnable;Lz35;)V
+
+    iget-object p1, p0, Lgp5;->X:Ljq3;
+
+    invoke-virtual {p1, v1}, Ljq3;->a(Ly35;)Z
+
+    goto :goto_0
+
+    :cond_1
+    new-instance v1, Lep5;
+
+    invoke-direct {v1, p1}, Lep5;-><init>(Ljava/lang/Runnable;)V
+
+    :goto_0
+    iget-object p1, p0, Lgp5;->c:Lilc;
+
+    invoke-virtual {p1, v1}, Lilc;->offer(Ljava/lang/Object;)Z
+
+    iget-object p1, p0, Lgp5;->o:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    :try_start_0
+    iget-object p1, p0, Lgp5;->b:Ljava/util/concurrent/Executor;
+
+    invoke-interface {p1, p0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    :try_end_0
+    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object v1
+
+    :catch_0
+    move-exception p1
 
     const/4 v1, 0x1
 
-    xor-int/2addr v0, v1
+    iput-boolean v1, p0, Lgp5;->d:Z
 
-    invoke-static {v0}, Lh6j;->g(Z)V
+    iget-object v1, p0, Lgp5;->c:Lilc;
 
-    iput-boolean v1, p0, Lgp5;->x:Z
+    invoke-virtual {v1}, Lilc;->clear()V
 
-    new-instance v0, Ldq5;
-
-    invoke-direct {v0, p0}, Ldq5;-><init>(Lgp5;)V
+    invoke-static {p1}, Lsvj;->a(Ljava/lang/Throwable;)V
 
     return-object v0
+
+    :cond_2
+    return-object v1
 .end method
 
-.method public final b(Ljf8;)V
-    .locals 2
+.method public final c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ly35;
+    .locals 9
 
-    iget-boolean v0, p0, Lgp5;->x:Z
+    sget-object v1, Lni5;->a:Lni5;
 
-    xor-int/lit8 v0, v0, 0x1
+    const-wide/16 v2, 0x0
 
-    invoke-static {v0}, Lh6j;->g(Z)V
+    cmp-long v0, p2, v2
 
-    new-instance v0, Lbs4;
+    if-gtz v0, :cond_0
 
-    const/4 v1, 0x6
+    invoke-virtual {p0, p1}, Lgp5;->b(Ljava/lang/Runnable;)Ly35;
 
-    invoke-direct {v0, v1, p1}, Lbs4;-><init>(ILjava/lang/Object;)V
+    move-result-object p1
 
-    iput-object v0, p0, Lgp5;->f:Lj4g;
+    return-object p1
 
+    :cond_0
+    iget-boolean v0, p0, Lgp5;->d:Z
+
+    if-eqz v0, :cond_1
+
+    return-object v1
+
+    :cond_1
+    new-instance v0, Lo72;
+
+    const/4 v2, 0x3
+
+    invoke-direct {v0, v2}, Lo72;-><init>(I)V
+
+    new-instance v5, Lo72;
+
+    invoke-direct {v5, v0}, Lo72;-><init>(Lo72;)V
+
+    new-instance v2, Lehe;
+
+    new-instance v3, Lpb;
+
+    const/4 v8, 0x2
+
+    const/4 v6, 0x0
+
+    move-object v4, p0
+
+    move-object v7, p1
+
+    invoke-direct/range {v3 .. v8}, Lpb;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZLjava/lang/Object;I)V
+
+    iget-object p1, v4, Lgp5;->X:Ljq3;
+
+    invoke-direct {v2, v3, p1}, Lehe;-><init>(Ljava/lang/Runnable;Lz35;)V
+
+    iget-object p1, v4, Lgp5;->X:Ljq3;
+
+    invoke-virtual {p1, v2}, Ljq3;->a(Ly35;)Z
+
+    iget-object p1, v4, Lgp5;->b:Ljava/util/concurrent/Executor;
+
+    instance-of v3, p1, Ljava/util/concurrent/ScheduledExecutorService;
+
+    if-eqz v3, :cond_2
+
+    :try_start_0
+    check-cast p1, Ljava/util/concurrent/ScheduledExecutorService;
+
+    invoke-interface {p1, v2, p2, p3, p4}, Ljava/util/concurrent/ScheduledExecutorService;->schedule(Ljava/util/concurrent/Callable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+
+    move-result-object p1
+
+    invoke-virtual {v2, p1}, Lehe;->a(Ljava/util/concurrent/Future;)V
+    :try_end_0
+    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    move-object p1, v0
+
+    const/4 p2, 0x1
+
+    iput-boolean p2, v4, Lgp5;->d:Z
+
+    invoke-static {p1}, Lsvj;->a(Ljava/lang/Throwable;)V
+
+    return-object v1
+
+    :cond_2
+    sget-object p1, Lhp5;->a:Leie;
+
+    invoke-virtual {p1, v2, p2, p3, p4}, Leie;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ly35;
+
+    move-result-object p1
+
+    new-instance p2, Le45;
+
+    invoke-direct {p2, p1}, Le45;-><init>(Ly35;)V
+
+    invoke-virtual {v2, p2}, Lehe;->a(Ljava/util/concurrent/Future;)V
+
+    :goto_0
+    invoke-static {v0, v2}, Lc45;->d(Ljava/util/concurrent/atomic/AtomicReference;Ly35;)Z
+
+    return-object v5
+.end method
+
+.method public final dispose()V
+    .locals 1
+
+    iget-boolean v0, p0, Lgp5;->d:Z
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lgp5;->d:Z
+
+    iget-object v0, p0, Lgp5;->X:Ljq3;
+
+    invoke-virtual {v0}, Ljq3;->dispose()V
+
+    iget-object v0, p0, Lgp5;->o:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lgp5;->c:Lilc;
+
+    invoke-virtual {v0}, Lilc;->clear()V
+
+    :cond_0
     return-void
 .end method
 
-.method public final c(Lyu4;)V
-    .locals 2
+.method public final f()Z
+    .locals 1
 
-    iget-boolean v0, p0, Lgp5;->x:Z
+    iget-boolean v0, p0, Lgp5;->d:Z
 
-    xor-int/lit8 v0, v0, 0x1
+    return v0
+.end method
 
-    invoke-static {v0}, Lh6j;->g(Z)V
+.method public final run()V
+    .locals 3
 
-    new-instance v0, Lbs4;
+    iget-object v0, p0, Lgp5;->c:Lilc;
 
-    const/4 v1, 0x7
+    const/4 v1, 0x1
 
-    invoke-direct {v0, v1, p1}, Lbs4;-><init>(ILjava/lang/Object;)V
+    :cond_0
+    iget-boolean v2, p0, Lgp5;->d:Z
 
-    iput-object v0, p0, Lgp5;->e:Lj4g;
+    if-eqz v2, :cond_1
+
+    invoke-virtual {v0}, Lilc;->clear()V
+
+    return-void
+
+    :cond_1
+    invoke-virtual {v0}, Lilc;->poll()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Runnable;
+
+    if-nez v2, :cond_3
+
+    iget-boolean v2, p0, Lgp5;->d:Z
+
+    if-eqz v2, :cond_2
+
+    invoke-virtual {v0}, Lilc;->clear()V
+
+    return-void
+
+    :cond_2
+    iget-object v2, p0, Lgp5;->o:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    neg-int v1, v1
+
+    invoke-virtual {v2, v1}, Ljava/util/concurrent/atomic/AtomicInteger;->addAndGet(I)I
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    return-void
+
+    :cond_3
+    invoke-interface {v2}, Ljava/lang/Runnable;->run()V
+
+    iget-boolean v2, p0, Lgp5;->d:Z
+
+    if-eqz v2, :cond_1
+
+    invoke-virtual {v0}, Lilc;->clear()V
 
     return-void
 .end method

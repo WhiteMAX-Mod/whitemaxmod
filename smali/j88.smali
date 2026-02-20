@@ -4,5 +4,8 @@
 
 
 # virtual methods
-.method public abstract p()Ll88;
+.method public abstract e()Z
+.end method
+
+.method public abstract getValue()Ljava/lang/Object;
 .end method

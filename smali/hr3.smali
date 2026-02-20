@@ -1,327 +1,373 @@
-.class public final synthetic Lhr3;
-.super Ljava/lang/Object;
+.class public final Lhr3;
+.super Leie;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Thread$UncaughtExceptionHandler;
+
+# static fields
+.field public static final d:Lfr3;
+
+.field public static final e:Lpde;
+
+.field public static final f:I
+
+.field public static final g:Lgr3;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final c:Ljava/util/concurrent/atomic/AtomicReference;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput p1, p0, Lhr3;->a:I
+    invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Runtime;->availableProcessors()I
+
+    move-result v0
+
+    const-string v1, "rx3.computation-threads"
+
+    const/4 v2, 0x0
+
+    invoke-static {v1, v2}, Ljava/lang/Integer;->getInteger(Ljava/lang/String;I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
+
+    move-result v1
+
+    if-lez v1, :cond_1
+
+    if-le v1, v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    move v0, v1
+
+    :cond_1
+    :goto_0
+    sput v0, Lhr3;->f:I
+
+    new-instance v0, Lgr3;
+
+    new-instance v1, Lpde;
+
+    const-string v3, "RxComputationShutdown"
+
+    invoke-direct {v1, v3}, Lpde;-><init>(Ljava/lang/String;)V
+
+    invoke-direct {v0, v1}, Lupa;-><init>(Ljava/util/concurrent/ThreadFactory;)V
+
+    sput-object v0, Lhr3;->g:Lgr3;
+
+    invoke-virtual {v0}, Lupa;->dispose()V
+
+    const-string v0, "rx3.computation-priority"
+
+    const/4 v1, 0x5
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->getInteger(Ljava/lang/String;I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    const/16 v1, 0xa
+
+    invoke-static {v1, v0}, Ljava/lang/Math;->min(II)I
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    invoke-static {v1, v0}, Ljava/lang/Math;->max(II)I
+
+    move-result v0
+
+    new-instance v3, Lpde;
+
+    const-string v4, "RxComputationThreadPool"
+
+    invoke-direct {v3, v4, v0, v1}, Lpde;-><init>(Ljava/lang/String;IZ)V
+
+    sput-object v3, Lhr3;->e:Lpde;
+
+    new-instance v0, Lfr3;
+
+    invoke-direct {v0, v2, v3}, Lfr3;-><init>(ILjava/util/concurrent/ThreadFactory;)V
+
+    sput-object v0, Lhr3;->d:Lfr3;
+
+    iget-object v0, v0, Lfr3;->b:[Lgr3;
+
+    array-length v1, v0
+
+    :goto_1
+    if-ge v2, v1, :cond_2
+
+    aget-object v3, v0, v2
+
+    invoke-virtual {v3}, Lupa;->dispose()V
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_1
+
+    :cond_2
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 5
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
+
+    sget-object v1, Lhr3;->d:Lfr3;
+
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object v0, p0, Lhr3;->c:Ljava/util/concurrent/atomic/AtomicReference;
+
+    new-instance v2, Lfr3;
+
+    sget v3, Lhr3;->f:I
+
+    sget-object v4, Lhr3;->e:Lpde;
+
+    invoke-direct {v2, v3, v4}, Lfr3;-><init>(ILjava/util/concurrent/ThreadFactory;)V
+
+    :cond_0
+    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v3
+
+    if-eq v3, v1, :cond_0
+
+    iget-object v0, v2, Lfr3;->b:[Lgr3;
+
+    array-length v1, v0
+
+    const/4 v2, 0x0
+
+    :goto_0
+    if-ge v2, v1, :cond_2
+
+    aget-object v3, v0, v2
+
+    invoke-virtual {v3}, Lupa;->dispose()V
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    :goto_1
     return-void
 .end method
 
 
 # virtual methods
-.method public final uncaughtException(Ljava/lang/Thread;Ljava/lang/Throwable;)V
-    .locals 6
+.method public final a()Lcie;
+    .locals 2
 
-    iget p1, p0, Lhr3;->a:I
+    new-instance v0, Ler3;
 
-    packed-switch p1, :pswitch_data_0
+    iget-object v1, p0, Lhr3;->c:Ljava/util/concurrent/atomic/AtomicReference;
 
-    :goto_0
-    instance-of p1, p2, Ljava/lang/OutOfMemoryError;
-
-    if-eqz p1, :cond_7
-
-    sget-object p1, Lp57;->a:Lp57;
-
-    sget-boolean p1, Ldqg;->b:Z
-
-    if-eqz p1, :cond_0
-
-    goto/16 :goto_4
-
-    :cond_0
-    sget-object p1, Lp57;->c:Landroid/content/Context;
-
-    if-nez p1, :cond_1
-
-    goto/16 :goto_4
-
-    :cond_1
-    sget-object p2, Lp57;->b:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p2, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->getAndSet(Z)Z
-
-    move-result p2
-
-    if-nez p2, :cond_2
-
-    goto/16 :goto_4
-
-    :cond_2
-    sget-object p2, Ldqg;->c:Lpb9;
-
-    const/4 v1, 0x0
-
-    if-eqz p2, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    move-object p2, v1
-
-    :goto_1
-    iget-object p2, p2, Lpb9;->c:Ljava/lang/Object;
-
-    check-cast p2, Ljava/lang/String;
-
-    invoke-static {}, Lokj;->b()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_4
-
-    const-string v0, "tracer"
-
-    goto :goto_2
-
-    :cond_4
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "tracer-"
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const/16 v4, 0x3a
-
-    const/16 v5, 0x2d
-
-    invoke-static {v2, v4, v5, v0}, Lzzf;->r(Ljava/lang/String;CCZ)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Landroid/net/Uri;->encode(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    :goto_2
-    new-instance v2, Ljava/io/File;
-
-    invoke-virtual {p1}, Landroid/content/Context;->getCacheDir()Ljava/io/File;
-
-    move-result-object p1
-
-    invoke-direct {v2, p1, v0}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
-
-    const-string p1, "dump-tmp.hprof"
-
-    invoke-static {v2, p1}, Ln36;->h(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
-
-    move-result-object p1
-
-    const-string v0, "dump-tmp-meta.json"
-
-    invoke-static {v2, v0}, Ln36;->h(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
-
-    move-result-object v0
-
-    :try_start_0
-    invoke-static {v2}, Lwpj;->c(Ljava/io/File;)V
-
-    invoke-virtual {p1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v3}, Landroid/os/Debug;->dumpHprofData(Ljava/lang/String;)V
-
-    new-instance v3, Lorg/json/JSONObject;
-
-    invoke-direct {v3}, Lorg/json/JSONObject;-><init>()V
-
-    const-string v4, "buildUuid"
-
-    invoke-virtual {v3, v4, p2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    const-string p2, "tag"
-
-    invoke-virtual {v3, p2, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    invoke-virtual {v3}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-static {v0, p2}, Ln36;->i(Ljava/io/File;Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_3
-
-    :catch_0
-    invoke-static {p1}, Lp57;->a(Ljava/io/File;)V
-
-    invoke-static {v0}, Lp57;->a(Ljava/io/File;)V
-
-    :goto_3
-    const-string p2, "dump.hprof"
-
-    invoke-static {v2, p2}, Ln36;->h(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
-
-    move-result-object p2
-
-    const-string v1, "dump-meta.json"
-
-    invoke-static {v2, v1}, Ln36;->h(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
     move-result-object v1
 
-    :try_start_1
-    invoke-virtual {p2}, Ljava/io/File;->exists()Z
+    check-cast v1, Lfr3;
 
-    move-result v2
+    invoke-virtual {v1}, Lfr3;->a()Lgr3;
 
-    if-eqz v2, :cond_5
+    move-result-object v1
 
-    invoke-static {p2}, Lwpj;->b(Ljava/io/File;)V
+    invoke-direct {v0, v1}, Ler3;-><init>(Lgr3;)V
 
-    :cond_5
-    invoke-virtual {v1}, Ljava/io/File;->exists()Z
+    return-object v0
+.end method
 
-    move-result v2
+.method public final c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ly35;
+    .locals 4
 
-    if-eqz v2, :cond_6
+    iget-object v0, p0, Lhr3;->c:Ljava/util/concurrent/atomic/AtomicReference;
 
-    invoke-static {v1}, Lwpj;->b(Ljava/io/File;)V
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-    :cond_6
-    invoke-static {p1, p2}, Lwpj;->d(Ljava/io/File;Ljava/io/File;)V
+    move-result-object v0
 
-    invoke-static {v0, v1}, Lwpj;->d(Ljava/io/File;Ljava/io/File;)V
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
+    check-cast v0, Lfr3;
 
-    goto :goto_4
+    invoke-virtual {v0}, Lfr3;->a()Lgr3;
 
-    :catch_1
-    invoke-static {p2}, Lp57;->a(Ljava/io/File;)V
+    move-result-object v0
 
-    invoke-static {v1}, Lp57;->a(Ljava/io/File;)V
+    iget-object v0, v0, Lupa;->a:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
 
-    goto :goto_4
+    new-instance v1, Lxge;
 
-    :cond_7
-    invoke-virtual {p2}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+    const-string v2, "run is null"
+
+    invoke-static {p1, v2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v1, p1, v2}, Lr0;-><init>(Ljava/lang/Runnable;Z)V
+
+    const-wide/16 v2, 0x0
+
+    cmp-long p1, p2, v2
+
+    if-gtz p1, :cond_0
+
+    :try_start_0
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
 
     move-result-object p1
 
-    if-eqz p1, :cond_9
+    goto :goto_0
 
-    if-ne p1, p2, :cond_8
+    :catch_0
+    move-exception p1
 
-    goto :goto_4
+    goto :goto_1
 
-    :cond_8
-    move-object p2, p1
+    :cond_0
+    invoke-virtual {v0, v1, p2, p3, p4}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->schedule(Ljava/util/concurrent/Callable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
 
-    goto/16 :goto_0
+    move-result-object p1
 
-    :cond_9
-    :goto_4
-    return-void
+    :goto_0
+    invoke-virtual {v1, p1}, Lr0;->a(Ljava/util/concurrent/Future;)V
+    :try_end_0
+    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_0 .. :try_end_0} :catch_0
 
-    :pswitch_0
-    new-instance p1, Lone/me/android/concurrent/UncaughtException;
+    return-object v1
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
+    :goto_1
+    invoke-static {p1}, Lsvj;->a(Ljava/lang/Throwable;)V
 
-    sget-object p2, Lj8b;->a:Lj8b;
+    sget-object p1, Lni5;->a:Lni5;
 
-    invoke-virtual {p2}, Lscout/Component;->getAccessor()Lr5;
+    return-object p1
+.end method
 
-    move-result-object p2
+.method public final d(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ly35;
+    .locals 8
 
-    const/16 v0, 0x11
+    iget-object v0, p0, Lhr3;->c:Ljava/util/concurrent/atomic/AtomicReference;
 
-    invoke-virtual {p2, v0}, Lr5;->c(I)Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-    move-result-object p2
+    move-result-object v0
 
-    check-cast p2, Landroid/content/Context;
+    check-cast v0, Lfr3;
 
-    const-string v0, "activity"
+    invoke-virtual {v0}, Lfr3;->a()Lgr3;
 
-    invoke-virtual {p2, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    move-result-object v0
 
-    move-result-object p2
+    iget-object v1, v0, Lupa;->a:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
 
-    check-cast p2, Landroid/app/ActivityManager;
+    const-wide/16 v2, 0x0
 
-    new-instance v0, Landroid/app/ActivityManager$MemoryInfo;
+    cmp-long v0, p4, v2
 
-    invoke-direct {v0}, Landroid/app/ActivityManager$MemoryInfo;-><init>()V
+    if-gtz v0, :cond_1
 
-    invoke-virtual {p2, v0}, Landroid/app/ActivityManager;->getMemoryInfo(Landroid/app/ActivityManager$MemoryInfo;)V
+    new-instance p4, Lzs7;
 
-    iget-wide v0, v0, Landroid/app/ActivityManager$MemoryInfo;->availMem:J
+    invoke-direct {p4, p1, v1}, Lzs7;-><init>(Ljava/lang/Runnable;Ljava/util/concurrent/ScheduledExecutorService;)V
 
-    new-instance p2, Ljava/lang/StringBuilder;
+    cmp-long p1, p2, v2
 
-    const-string v2, "availMem = "
+    if-gtz p1, :cond_0
 
-    invoke-direct {p2, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    :try_start_0
+    invoke-virtual {v1, p4}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
 
-    invoke-virtual {p2, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    move-result-object p1
 
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    goto :goto_0
 
-    move-result-object p2
+    :catch_0
+    move-exception v0
 
-    const-string v0, "UncaughtException"
+    move-object p1, v0
 
-    invoke-static {v0, p2, p1}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    goto :goto_1
 
-    sget-object p2, Lage;->a:Lage;
+    :cond_0
+    invoke-virtual {v1, p4, p2, p3, p6}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->schedule(Ljava/util/concurrent/Callable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
 
-    invoke-virtual {p2}, Lscout/Component;->getAccessor()Lr5;
+    move-result-object p1
 
-    move-result-object p2
+    :goto_0
+    invoke-virtual {p4, p1}, Lzs7;->a(Ljava/util/concurrent/Future;)V
+    :try_end_0
+    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_0 .. :try_end_0} :catch_0
 
-    const/16 v0, 0xd
+    return-object p4
 
-    invoke-virtual {p2, v0}, Lr5;->c(I)Ljava/lang/Object;
+    :goto_1
+    invoke-static {p1}, Lsvj;->a(Ljava/lang/Throwable;)V
 
-    move-result-object p2
+    goto :goto_2
 
-    check-cast p2, Lym5;
+    :cond_1
+    new-instance v2, Lwge;
 
-    check-cast p2, Lqab;
+    const/4 v0, 0x1
 
-    invoke-virtual {p2, p1}, Lqab;->a(Ljava/lang/Throwable;)V
+    invoke-direct {v2, p1, v0}, Lr0;-><init>(Ljava/lang/Runnable;Z)V
 
-    return-void
+    move-wide v3, p2
 
-    nop
+    move-wide v5, p4
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    move-object v7, p6
+
+    :try_start_1
+    invoke-virtual/range {v1 .. v7}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->scheduleAtFixedRate(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+
+    move-result-object p1
+
+    invoke-virtual {v2, p1}, Lr0;->a(Ljava/util/concurrent/Future;)V
+    :try_end_1
+    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_1 .. :try_end_1} :catch_1
+
+    return-object v2
+
+    :catch_1
+    move-exception v0
+
+    move-object p1, v0
+
+    invoke-static {p1}, Lsvj;->a(Ljava/lang/Throwable;)V
+
+    :goto_2
+    sget-object p1, Lni5;->a:Lni5;
+
+    return-object p1
 .end method

@@ -1,195 +1,137 @@
-.class public final Lxfg;
+.class public final synthetic Lxfg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
 
 # instance fields
-.field public final a:Landroid/text/TextPaint;
+.field public final synthetic a:I
 
-.field public final b:Ltb3;
+.field public final synthetic b:Lagg;
 
-.field public c:F
-
-.field public d:F
-
-.field public e:Z
-
-.field public final f:Ljava/lang/ref/WeakReference;
-
-.field public g:Lpfg;
+.field public final synthetic c:Lagg;
 
 
 # direct methods
-.method public constructor <init>(Lwfg;)V
-    .locals 3
+.method public synthetic constructor <init>(Lagg;Lagg;I)V
+    .locals 0
+
+    iput p3, p0, Lxfg;->a:I
+
+    iput-object p1, p0, Lxfg;->b:Lagg;
+
+    iput-object p2, p0, Lxfg;->c:Lagg;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Landroid/text/TextPaint;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Landroid/text/TextPaint;-><init>(I)V
-
-    iput-object v0, p0, Lxfg;->a:Landroid/text/TextPaint;
-
-    new-instance v0, Ltb3;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v0, v2, p0}, Ltb3;-><init>(ILjava/lang/Object;)V
-
-    iput-object v0, p0, Lxfg;->b:Ltb3;
-
-    iput-boolean v1, p0, Lxfg;->e:Z
-
-    new-instance v0, Ljava/lang/ref/WeakReference;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object v0, p0, Lxfg;->f:Ljava/lang/ref/WeakReference;
-
-    new-instance v0, Ljava/lang/ref/WeakReference;
-
-    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object v0, p0, Lxfg;->f:Ljava/lang/ref/WeakReference;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;)F
-    .locals 1
+.method public final run()V
+    .locals 5
 
-    iget-boolean v0, p0, Lxfg;->e:Z
+    iget v0, p0, Lxfg;->a:I
 
-    if-nez v0, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    iget p1, p0, Lxfg;->c:F
+    iget-object v0, p0, Lxfg;->b:Lagg;
 
-    return p1
+    iget-object v1, p0, Lxfg;->c:Lagg;
 
-    :cond_0
-    invoke-virtual {p0, p1}, Lxfg;->b(Ljava/lang/String;)V
+    iget-object v2, v0, Lagg;->f:Lp82;
 
-    iget p1, p0, Lxfg;->c:F
+    invoke-static {v2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return p1
-.end method
+    iget-object v0, v0, Lagg;->f:Lp82;
 
-.method public final b(Ljava/lang/String;)V
-    .locals 4
+    invoke-virtual {v0, v1}, Lp82;->g(Lagg;)V
 
-    const/4 v0, 0x0
+    return-void
 
-    iget-object v1, p0, Lxfg;->a:Landroid/text/TextPaint;
+    :pswitch_0
+    iget-object v0, p0, Lxfg;->b:Lagg;
 
-    const/4 v2, 0x0
+    iget-object v1, p0, Lxfg;->c:Lagg;
 
-    if-nez p1, :cond_0
+    iget-object v2, v0, Lagg;->b:Lih6;
 
-    move v3, v2
+    iget-object v3, v2, Lih6;->b:Ljava/lang/Object;
+
+    monitor-enter v3
+
+    :try_start_0
+    iget-object v4, v2, Lih6;->c:Ljava/lang/Object;
+
+    check-cast v4, Ljava/util/LinkedHashSet;
+
+    invoke-interface {v4, v0}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
+
+    iget-object v2, v2, Lih6;->d:Ljava/lang/Object;
+
+    check-cast v2, Ljava/util/LinkedHashSet;
+
+    invoke-interface {v2, v0}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
+
+    monitor-exit v3
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v0, v1}, Lagg;->g(Lagg;)V
+
+    iget-object v2, v0, Lagg;->g:Ll17;
+
+    if-eqz v2, :cond_0
+
+    iget-object v2, v0, Lagg;->f:Lp82;
+
+    invoke-static {v2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget-object v0, v0, Lagg;->f:Lp82;
+
+    invoke-virtual {v0, v1}, Lp82;->c(Lagg;)V
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
+    const-string v1, "SyncCaptureSessionBase"
 
-    move-result v3
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, p1, v0, v3}, Landroid/graphics/Paint;->measureText(Ljava/lang/CharSequence;II)F
+    const-string v3, "["
 
-    move-result v3
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, "] Cannot call onClosed() when the CameraCaptureSession is not correctly configured."
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Ljfj;->j(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
-    iput v3, p0, Lxfg;->c:F
-
-    if-nez p1, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v1}, Landroid/graphics/Paint;->getFontMetrics()Landroid/graphics/Paint$FontMetrics;
-
-    move-result-object p1
-
-    iget p1, p1, Landroid/graphics/Paint$FontMetrics;->ascent:F
-
-    invoke-static {p1}, Ljava/lang/Math;->abs(F)F
-
-    move-result v2
-
-    :goto_1
-    iput v2, p0, Lxfg;->d:F
-
-    iput-boolean v0, p0, Lxfg;->e:Z
-
     return-void
-.end method
 
-.method public final c(Lpfg;Landroid/content/Context;)V
-    .locals 3
+    :catchall_0
+    move-exception v0
 
-    iget-object v0, p0, Lxfg;->g:Lpfg;
+    :try_start_1
+    monitor-exit v3
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    if-eq v0, p1, :cond_2
+    throw v0
 
-    iput-object p1, p0, Lxfg;->g:Lpfg;
-
-    if-eqz p1, :cond_1
-
-    iget-object v0, p0, Lxfg;->a:Landroid/text/TextPaint;
-
-    iget-object v1, p0, Lxfg;->b:Ltb3;
-
-    invoke-virtual {p1, p2, v0, v1}, Lpfg;->f(Landroid/content/Context;Landroid/text/TextPaint;Lqsi;)V
-
-    iget-object v2, p0, Lxfg;->f:Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v2}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lwfg;
-
-    if-eqz v2, :cond_0
-
-    invoke-interface {v2}, Lwfg;->getState()[I
-
-    move-result-object v2
-
-    iput-object v2, v0, Landroid/text/TextPaint;->drawableState:[I
-
-    :cond_0
-    invoke-virtual {p1, p2, v0, v1}, Lpfg;->e(Landroid/content/Context;Landroid/text/TextPaint;Lqsi;)V
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Lxfg;->e:Z
-
-    :cond_1
-    iget-object p1, p0, Lxfg;->f:Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {p1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lwfg;
-
-    if-eqz p1, :cond_2
-
-    invoke-interface {p1}, Lwfg;->a()V
-
-    invoke-interface {p1}, Lwfg;->getState()[I
-
-    move-result-object p2
-
-    invoke-interface {p1, p2}, Lwfg;->onStateChange([I)Z
-
-    :cond_2
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

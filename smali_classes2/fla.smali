@@ -1,80 +1,53 @@
 .class public final Lfla;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/login/neuroavatars/NeuroAvatarPickerBottomSheet;
+.field public final a:Lbgg;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final b:Lqu8;
+
+.field public final c:Lxh5;
+
+.field public final d:I
+
+.field public final e:I
+
+.field public final f:Ll17;
+
+.field public final g:Lw41;
+
+.field public final h:Landroid/content/res/Resources;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/login/neuroavatars/NeuroAvatarPickerBottomSheet;)V
+.method public constructor <init>(Landroid/content/Context;Lbgg;Lqu8;Lxh5;ILl17;Lw41;)V
     .locals 0
 
-    iput-object p2, p0, Lfla;->X:Lone/me/login/neuroavatars/NeuroAvatarPickerBottomSheet;
-
-    const/4 p2, 0x2
-
-    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lfla;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
-    check-cast p1, Lfla;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    iput-object p2, p0, Lfla;->a:Lbgg;
 
-    invoke-virtual {p1, p2}, Lfla;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iput-object p3, p0, Lfla;->b:Lqu8;
 
-    return-object p2
-.end method
+    iput-object p4, p0, Lfla;->c:Lxh5;
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    iput p5, p0, Lfla;->d:I
 
-    new-instance v0, Lfla;
+    const/4 p2, 0x6
 
-    iget-object v1, p0, Lfla;->X:Lone/me/login/neuroavatars/NeuroAvatarPickerBottomSheet;
+    iput p2, p0, Lfla;->e:I
 
-    invoke-direct {v0, p2, v1}, Lfla;-><init>(Lkotlin/coroutines/Continuation;Lone/me/login/neuroavatars/NeuroAvatarPickerBottomSheet;)V
+    iput-object p6, p0, Lfla;->f:Ll17;
 
-    iput-object p1, v0, Lfla;->o:Ljava/lang/Object;
+    iput-object p7, p0, Lfla;->g:Lw41;
 
-    return-object v0
-.end method
+    iput-object p1, p0, Lfla;->h:Landroid/content/res/Resources;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iget-object v0, p0, Lfla;->o:Ljava/lang/Object;
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    check-cast v0, Ljava/util/List;
-
-    iget-object p1, p0, Lfla;->X:Lone/me/login/neuroavatars/NeuroAvatarPickerBottomSheet;
-
-    iget-object p1, p1, Lone/me/login/neuroavatars/NeuroAvatarPickerBottomSheet;->H0:Lnf6;
-
-    invoke-virtual {p1, v0}, Lnd8;->F(Ljava/util/List;)V
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
+    return-void
 .end method

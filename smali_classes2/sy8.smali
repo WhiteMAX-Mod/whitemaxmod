@@ -1,80 +1,45 @@
 .class public final Lsy8;
-.super Lp6g;
+.super Lx0i;
 .source "SourceFile"
-
-# interfaces
-.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/chatscreen/mediabar/MediaBarWidget;
+.field public final b:Lt2c;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final c:Lmrd;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/mediabar/MediaBarWidget;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 4
 
-    iput-object p2, p0, Lsy8;->X:Lone/me/chatscreen/mediabar/MediaBarWidget;
+    invoke-direct {p0}, Lx0i;-><init>()V
 
-    const/4 p2, 0x2
+    new-instance v0, Lt2c;
 
-    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    sget-object v1, Lu2c;->m:[Ljava/lang/String;
+
+    invoke-direct {v0, v1}, Lt2c;-><init>([Ljava/lang/String;)V
+
+    iput-object v0, p0, Lsy8;->b:Lt2c;
+
+    new-instance v1, Lh31;
+
+    const/16 v2, 0xf
+
+    invoke-direct {v1, v2, v0}, Lh31;-><init>(ILjava/lang/Object;)V
+
+    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    sget-object v2, Lnff;->a:Lmqa;
+
+    iget-object v3, p0, Lx0i;->a:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {v1, v3, v2, v0}, Lzka;->D(Lb96;Lnd4;Loff;Ljava/lang/Object;)Lmrd;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lsy8;->c:Lmrd;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lsy8;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lsy8;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lsy8;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lsy8;
-
-    iget-object v1, p0, Lsy8;->X:Lone/me/chatscreen/mediabar/MediaBarWidget;
-
-    invoke-direct {v0, p2, v1}, Lsy8;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/mediabar/MediaBarWidget;)V
-
-    iput-object p1, v0, Lsy8;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iget-object v0, p0, Lsy8;->o:Ljava/lang/Object;
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    check-cast v0, Lx00;
-
-    sget-object p1, Lone/me/chatscreen/mediabar/MediaBarWidget;->e1:[Lz28;
-
-    iget-object p1, p0, Lsy8;->X:Lone/me/chatscreen/mediabar/MediaBarWidget;
-
-    invoke-virtual {p1, v0}, Lone/me/chatscreen/mediabar/MediaBarWidget;->S0(Lx00;)V
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
 .end method

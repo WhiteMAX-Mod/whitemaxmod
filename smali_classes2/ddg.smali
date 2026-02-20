@@ -1,64 +1,72 @@
-.class public Lddg;
+.class public final synthetic Lddg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final b:Lcdg;
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/atomic/AtomicBoolean;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lorg/webrtc/SurfaceTextureHelper;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Lorg/webrtc/SurfaceTextureHelper;I)V
+    .locals 0
 
-    new-instance v0, Lcdg;
+    iput p2, p0, Lddg;->a:I
 
-    invoke-direct {v0}, Lddg;-><init>()V
-
-    sput-object v0, Lddg;->b:Lcdg;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 2
+    iput-object p1, p0, Lddg;->b:Lorg/webrtc/SurfaceTextureHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
-
-    iput-object v0, p0, Lddg;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Ljava/lang/Runnable;)V
-    .locals 3
+.method public final run()V
+    .locals 1
 
-    const/4 v0, 0x0
+    iget v0, p0, Lddg;->a:I
 
-    const/4 v1, 0x1
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v2, p0, Lddg;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
+    iget-object v0, p0, Lddg;->b:Lorg/webrtc/SurfaceTextureHelper;
 
-    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+    invoke-static {v0}, Lorg/webrtc/SurfaceTextureHelper;->g(Lorg/webrtc/SurfaceTextureHelper;)V
 
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
-
-    :cond_0
     return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lddg;->b:Lorg/webrtc/SurfaceTextureHelper;
+
+    invoke-static {v0}, Lorg/webrtc/SurfaceTextureHelper;->a(Lorg/webrtc/SurfaceTextureHelper;)V
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lddg;->b:Lorg/webrtc/SurfaceTextureHelper;
+
+    invoke-static {v0}, Lorg/webrtc/SurfaceTextureHelper;->b(Lorg/webrtc/SurfaceTextureHelper;)V
+
+    return-void
+
+    :pswitch_2
+    iget-object v0, p0, Lddg;->b:Lorg/webrtc/SurfaceTextureHelper;
+
+    invoke-static {v0}, Lorg/webrtc/SurfaceTextureHelper;->c(Lorg/webrtc/SurfaceTextureHelper;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

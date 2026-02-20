@@ -1,185 +1,96 @@
-.class public final synthetic Lt1d;
-.super Ljava/lang/Object;
+.class public final Lt1d;
+.super Lpdg;
 .source "SourceFile"
 
 # interfaces
-.implements Llq6;
+.implements Lys6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lq2d;
 
-.field public final synthetic b:Lone/me/qrscanner/QrScannerWidget;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/qrscanner/QrScannerWidget;I)V
+.method public constructor <init>(Lq2d;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lt1d;->a:I
+    iput-object p1, p0, Lt1d;->X:Lq2d;
 
-    iput-object p1, p0, Lt1d;->b:Lone/me/qrscanner/QrScannerWidget;
+    const/4 p1, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 13
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lt1d;->a:I
+    check-cast p1, Lmoc;
 
-    const/4 v1, 0x1
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object v2, p0, Lt1d;->b:Lone/me/qrscanner/QrScannerWidget;
+    invoke-virtual {p0, p1, p2}, Lt1d;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object p1
 
-    sget-object v0, Lone/me/qrscanner/QrScannerWidget;->G0:[Lz28;
+    check-cast p1, Lt1d;
 
-    sget v0, Lf6e;->v:I
+    sget-object p2, Lmah;->a:Lmah;
 
-    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    invoke-virtual {p1, p2}, Lt1d;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v1
+    return-object p2
+.end method
 
-    invoke-static {v1, v0}, Lq74;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    move-result-object v0
+    new-instance v0, Lt1d;
 
-    return-object v0
+    iget-object v1, p0, Lt1d;->X:Lq2d;
 
-    :pswitch_0
-    sget-object v0, Lone/me/qrscanner/QrScannerWidget;->G0:[Lz28;
+    invoke-direct {v0, v1, p2}, Lt1d;-><init>(Lq2d;Lkotlin/coroutines/Continuation;)V
 
-    sget v0, Lf6e;->w:I
-
-    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-static {v1, v0}, Lq74;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
+    iput-object p1, v0, Lt1d;->o:Ljava/lang/Object;
 
     return-object v0
+.end method
 
-    :pswitch_1
-    iget-object v0, v2, Lone/me/qrscanner/QrScannerWidget;->b:Lls;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    sget-object v3, Lone/me/qrscanner/QrScannerWidget;->G0:[Lz28;
+    iget-object v0, p0, Lt1d;->o:Ljava/lang/Object;
 
-    invoke-virtual {v2}, Lone/me/qrscanner/QrScannerWidget;->z0()Lm1d;
+    check-cast v0, Lmoc;
 
-    move-result-object v3
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    invoke-virtual {v3}, Ljava/lang/Enum;->ordinal()I
+    iget-object p1, p0, Lt1d;->X:Lq2d;
 
-    move-result v3
+    iget-object v1, p1, Lq2d;->T0:Lhxf;
 
-    if-eqz v3, :cond_1
+    iget-object v2, v0, Lmoc;->a:Ltoc;
 
-    if-ne v3, v1, :cond_0
+    invoke-virtual {v1, v2}, Lhxf;->setValue(Ljava/lang/Object;)V
 
-    sget-object v0, Lstb;->g:Lstb;
+    iget-object v1, p1, Lq2d;->P0:Lhxf;
 
-    goto :goto_0
+    iget-object v2, v0, Lmoc;->b:Ljava/util/List;
 
-    :cond_0
-    new-instance v0, Lkotlin/NoWhenBranchMatchedException;
+    invoke-virtual {v1, v2}, Lhxf;->setValue(Ljava/lang/Object;)V
 
-    invoke-direct {v0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    iget-object p1, p1, Lq2d;->R0:Lhxf;
 
-    throw v0
+    iget-object v0, v0, Lmoc;->c:Ljava/util/List;
 
-    :cond_1
-    sget-object v3, Lone/me/qrscanner/QrScannerWidget;->G0:[Lz28;
+    invoke-virtual {p1, v0}, Lhxf;->setValue(Ljava/lang/Object;)V
 
-    aget-object v4, v3, v1
+    sget-object p1, Lmah;->a:Lmah;
 
-    invoke-virtual {v0, v2}, Lls;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Ljava/lang/Long;
-
-    if-eqz v4, :cond_2
-
-    new-instance v5, Lstb;
-
-    aget-object v1, v3, v1
-
-    invoke-virtual {v0, v2}, Lls;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v9, v0
-
-    check-cast v9, Ljava/lang/Long;
-
-    const/16 v12, 0x33
-
-    const/4 v7, 0x0
-
-    const/4 v6, 0x0
-
-    sget-object v8, Lojf;->X:Lojf;
-
-    const/4 v10, 0x0
-
-    const/4 v11, 0x0
-
-    invoke-direct/range {v5 .. v12}, Lstb;-><init>(Lv9c;ILojf;Ljava/lang/Long;Ljava/lang/Long;Lys;I)V
-
-    move-object v0, v5
-
-    goto :goto_0
-
-    :cond_2
-    sget-object v0, Lstb;->g:Lstb;
-
-    :goto_0
-    return-object v0
-
-    :pswitch_2
-    sget-object v0, Lone/me/qrscanner/QrScannerWidget;->G0:[Lz28;
-
-    invoke-virtual {v2}, Lone/me/qrscanner/QrScannerWidget;->z0()Lm1d;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    if-ne v0, v1, :cond_3
-
-    sget-object v0, Llce;->K1:Llce;
-
-    goto :goto_1
-
-    :cond_3
-    new-instance v0, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {v0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw v0
-
-    :cond_4
-    sget-object v0, Llce;->P1:Llce;
-
-    :goto_1
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

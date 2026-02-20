@@ -1,51 +1,35 @@
 .class public final Lwb6;
-.super Lx0;
+.super Lda4;
 .source "SourceFile"
 
 
 # instance fields
-.field public final c:Lpbe;
+.field public X:I
 
-.field public final d:Z
+.field public d:Lyyd;
 
-
-# direct methods
-.method public constructor <init>(Lra6;Lpbe;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lx0;-><init>(Lpa6;)V
-
-    iput-object p2, p0, Lwb6;->c:Lpbe;
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Lwb6;->d:Z
-
-    return-void
-.end method
+.field public synthetic o:Ljava/lang/Object;
 
 
 # virtual methods
-.method public final f(Lxb6;)V
-    .locals 4
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-object v0, p0, Lwb6;->c:Lpbe;
+    iput-object p1, p0, Lwb6;->o:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Lpbe;->a()Lnbe;
+    iget p1, p0, Lwb6;->X:I
 
-    move-result-object v0
+    const/high16 v0, -0x80000000
 
-    new-instance v1, Lvb6;
+    or-int/2addr p1, v0
 
-    iget-object v2, p0, Lx0;->b:Lpa6;
+    iput p1, p0, Lwb6;->X:I
 
-    iget-boolean v3, p0, Lwb6;->d:Z
+    const/4 p1, 0x0
 
-    invoke-direct {v1, p1, v0, v2, v3}, Lvb6;-><init>(Lz0g;Lnbe;Lf0d;Z)V
+    invoke-static {p1, p0}, Lzka;->C(Lb96;Lda4;)Ljava/lang/Object;
 
-    invoke-interface {p1, v1}, Lz0g;->d(Lb1g;)V
+    move-result-object p1
 
-    invoke-virtual {v0, v1}, Lnbe;->b(Ljava/lang/Runnable;)Lo25;
-
-    return-void
+    return-object p1
 .end method

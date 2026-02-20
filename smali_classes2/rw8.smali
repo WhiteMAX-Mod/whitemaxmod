@@ -1,64 +1,66 @@
 .class public final Lrw8;
-.super Ljava/lang/Object;
+.super Landroid/widget/ScrollView;
 .source "SourceFile"
 
-# interfaces
-.implements Lxw8;
+
+# instance fields
+.field public a:I
 
 
-# static fields
-.field public static final a:Lrw8;
+# virtual methods
+.method public final onMeasure(II)V
+    .locals 2
 
+    iget v0, p0, Lrw8;->a:I
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
+    if-lez v0, :cond_1
 
-    new-instance v0, Lrw8;
+    invoke-static {p2}, Landroid/view/View$MeasureSpec;->getMode(I)I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    move-result v0
 
-    sput-object v0, Lrw8;->a:Lrw8;
+    if-nez v0, :cond_0
+
+    iget p2, p0, Lrw8;->a:I
+
+    const/high16 v0, -0x80000000
+
+    invoke-static {p2, v0}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
+
+    move-result p2
+
+    goto :goto_0
+
+    :cond_0
+    iget v1, p0, Lrw8;->a:I
+
+    invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
+
+    move-result p2
+
+    invoke-static {v1, p2}, Ljava/lang/Math;->min(II)I
+
+    move-result p2
+
+    invoke-static {p2, v0}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
+
+    move-result p2
+
+    :goto_0
+    invoke-super {p0, p1, p2}, Landroid/widget/ScrollView;->onMeasure(II)V
+
+    return-void
+
+    :cond_1
+    invoke-super {p0, p1, p2}, Landroid/widget/ScrollView;->onMeasure(II)V
 
     return-void
 .end method
 
+.method public final setMaxHeight(I)V
+    .locals 0
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    iput p1, p0, Lrw8;->a:I
 
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Lrw8;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, -0x47b51b69
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "ShowFilesModeSnack"
-
-    return-object v0
+    return-void
 .end method

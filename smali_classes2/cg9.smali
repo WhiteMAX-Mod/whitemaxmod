@@ -1,109 +1,187 @@
-.class public final Lcg9;
-.super Ljef;
+.class public abstract Lcg9;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final D(Lbg9;)V
-    .locals 6
+# static fields
+.field public static final a:Ljava/util/HashSet;
 
-    iget-object v0, p0, Ltsd;->a:Landroid/view/View;
+.field public static final b:Ljava/util/HashSet;
 
-    check-cast v0, Lk7b;
+.field public static final c:Ljava/util/Set;
 
-    iget-wide v1, p1, Lbg9;->a:J
+.field public static final d:Ljava/util/HashSet;
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
+.field public static final e:Ljava/util/HashSet;
 
-    move-result v3
+.field public static final f:Ljava/util/HashSet;
 
-    invoke-virtual {v0, v3}, Landroid/view/View;->setId(I)V
+.field public static final g:Ljava/util/HashSet;
 
-    iget-boolean v3, p1, Lbg9;->u0:Z
+.field public static final h:Ljava/util/HashSet;
 
-    invoke-virtual {v0, v3}, Lk7b;->setEnabled(Z)V
 
-    iget-object v3, p1, Lbg9;->b:Ljava/lang/String;
+# direct methods
+.method static constructor <clinit>()V
+    .locals 9
 
-    invoke-virtual {v0, v3}, Lk7b;->setTitle(Ljava/lang/CharSequence;)V
+    new-instance v0, Ljava/util/HashSet;
 
-    iget-object v3, p1, Lbg9;->d:Lqhg;
+    const/4 v1, 0x1
 
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    const/4 v1, 0x3
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    const/4 v1, 0x4
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
 
-    invoke-virtual {v3, v4}, Lqhg;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
+    const/4 v1, 0x2
 
-    move-result-object v3
-
-    invoke-virtual {v0, v3}, Lk7b;->setSubtitle(Ljava/lang/CharSequence;)V
-
-    iget-boolean v3, p1, Lbg9;->Y:Z
-
-    invoke-virtual {v0, v3}, Lk7b;->setVerified(Z)V
-
-    iget-object v3, p1, Lbg9;->x0:Lqhg;
-
-    const/4 v4, 0x0
-
-    if-eqz v3, :cond_0
-
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
 
-    invoke-virtual {v3, v5}, Lqhg;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
+    const/4 v1, 0x6
 
-    move-result-object v3
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    goto :goto_0
+    move-result-object v6
 
-    :cond_0
-    move-object v3, v4
+    const/4 v1, 0x5
 
-    :goto_0
-    invoke-virtual {v0, v3}, Lk7b;->setAlias(Ljava/lang/CharSequence;)V
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-virtual {v0}, Lk7b;->f()V
+    move-result-object v7
 
-    invoke-virtual {v0, v4}, Lk7b;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    const/4 v1, 0x7
 
-    iget-object v3, p1, Lbg9;->X:Ljava/lang/CharSequence;
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    iget-object p1, p1, Lbg9;->o:Landroid/net/Uri;
+    move-result-object v8
 
-    if-eqz p1, :cond_1
+    filled-new-array/range {v2 .. v8}, [Ljava/lang/Integer;
 
-    invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
+    move-result-object v1
 
-    move-result-object p1
+    invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
-    if-nez p1, :cond_2
+    move-result-object v1
 
-    :cond_1
-    sget-object p1, Landroid/net/Uri;->EMPTY:Landroid/net/Uri;
+    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
-    invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
+    sput-object v0, Lcg9;->a:Ljava/util/HashSet;
 
-    move-result-object p1
+    new-instance v0, Ljava/util/HashSet;
 
-    :cond_2
-    invoke-virtual {v0, v1, v2, v3, p1}, Lk7b;->g(JLjava/lang/CharSequence;Ljava/lang/String;)V
+    filled-new-array {v6, v8}, [Ljava/lang/Integer;
 
-    const/4 p1, 0x0
+    move-result-object v1
 
-    invoke-virtual {v0, p1}, Lk7b;->setSelectionEnabled(Z)V
+    invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
-    return-void
-.end method
+    move-result-object v1
 
-.method public final bridge synthetic y(Lud8;)V
-    .locals 0
+    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
-    check-cast p1, Lbg9;
+    sput-object v0, Lcg9;->b:Ljava/util/HashSet;
 
-    invoke-virtual {p0, p1}, Lcg9;->D(Lbg9;)V
+    invoke-static {v5}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
+
+    move-result-object v0
+
+    sput-object v0, Lcg9;->c:Ljava/util/Set;
+
+    new-instance v0, Ljava/util/HashSet;
+
+    const/16 v1, 0xb
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    filled-new-array {v5, v1}, [Ljava/lang/Integer;
+
+    move-result-object v5
+
+    invoke-static {v5}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v5
+
+    invoke-direct {v0, v5}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
+
+    sput-object v0, Lcg9;->d:Ljava/util/HashSet;
+
+    new-instance v0, Ljava/util/HashSet;
+
+    filled-new-array {v2, v3, v4}, [Ljava/lang/Integer;
+
+    move-result-object v5
+
+    invoke-static {v5}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v5
+
+    invoke-direct {v0, v5}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
+
+    sput-object v0, Lcg9;->e:Ljava/util/HashSet;
+
+    new-instance v0, Ljava/util/HashSet;
+
+    filled-new-array {v2, v3, v4, v1}, [Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
+
+    new-instance v0, Ljava/util/HashSet;
+
+    invoke-static {v7}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
+
+    sput-object v0, Lcg9;->f:Ljava/util/HashSet;
+
+    new-instance v0, Ljava/util/HashSet;
+
+    invoke-static {v8}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
+
+    sput-object v0, Lcg9;->g:Ljava/util/HashSet;
+
+    new-instance v0, Ljava/util/HashSet;
+
+    const/16 v1, 0x9
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-static {v1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
+
+    sput-object v0, Lcg9;->h:Ljava/util/HashSet;
 
     return-void
 .end method

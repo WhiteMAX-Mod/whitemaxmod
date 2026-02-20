@@ -1,5 +1,5 @@
 .class public final Landroidx/work/ArrayCreatingInputMerger;
-.super Lhq7;
+.super Lar7;
 .source "SourceFile"
 
 
@@ -10,7 +10,7 @@
     }
     d2 = {
         "Landroidx/work/ArrayCreatingInputMerger;",
-        "Lhq7;",
+        "Lar7;",
         "<init>",
         "()V",
         "work-runtime_release"
@@ -36,16 +36,14 @@
 
 
 # virtual methods
-.method public final a(Ljava/util/ArrayList;)Lyh4;
+.method public final a(Ljava/util/ArrayList;)Lmj4;
     .locals 11
 
-    new-instance v0, Lt9b;
+    new-instance v0, Ln8;
 
-    const/16 v1, 0xe
+    const/16 v1, 0x8
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Lt9b;-><init>(IB)V
+    invoke-direct {v0, v1}, Ln8;-><init>(I)V
 
     new-instance v1, Ljava/util/HashMap;
 
@@ -66,9 +64,9 @@
 
     move-result-object v2
 
-    check-cast v2, Lyh4;
+    check-cast v2, Lmj4;
 
-    iget-object v2, v2, Lyh4;->a:Ljava/util/HashMap;
+    iget-object v2, v2, Lmj4;->a:Ljava/util/HashMap;
 
     invoke-static {v2}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
 
@@ -193,7 +191,7 @@
 
     move-result-object v8
 
-    invoke-static {v8, v5}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v8, v5}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v8
 
@@ -228,9 +226,9 @@
     throw p1
 
     :cond_6
-    invoke-virtual {v0, v1}, Lt9b;->I(Ljava/util/Map;)V
+    invoke-virtual {v0, v1}, Ln8;->w(Ljava/util/Map;)V
 
-    invoke-virtual {v0}, Lt9b;->m()Lyh4;
+    invoke-virtual {v0}, Ln8;->b()Lmj4;
 
     move-result-object p1
 

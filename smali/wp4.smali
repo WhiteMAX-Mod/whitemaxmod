@@ -1,19 +1,99 @@
 .class public final Lwp4;
-.super Lkme;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lmbg;
+
+
+# static fields
+.field public static final b:J
+
+
+# instance fields
+.field public final a:Landroid/app/ActivityManager;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 3
+
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->MINUTES:Ljava/util/concurrent/TimeUnit;
+
+    const-wide/16 v1, 0x5
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+
+    move-result-wide v0
+
+    sput-wide v0, Lwp4;->b:J
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/app/ActivityManager;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lwp4;->a:Landroid/app/ActivityManager;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final v(Landroid/content/pm/PackageManager;Ljava/lang/String;)[Landroid/content/pm/Signature;
-    .locals 1
+.method public final get()Ljava/lang/Object;
+    .locals 7
 
-    const/16 v0, 0x40
+    new-instance v0, Lvk9;
 
-    invoke-virtual {p1, p2, v0}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+    iget-object v1, p0, Lwp4;->a:Landroid/app/ActivityManager;
 
-    move-result-object p1
+    invoke-virtual {v1}, Landroid/app/ActivityManager;->getMemoryClass()I
 
-    iget-object p1, p1, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
+    move-result v1
 
-    return-object p1
+    const/high16 v2, 0x100000
+
+    mul-int/2addr v1, v2
+
+    const v2, 0x7fffffff
+
+    invoke-static {v1, v2}, Ljava/lang/Math;->min(II)I
+
+    move-result v1
+
+    const/high16 v2, 0x2000000
+
+    if-ge v1, v2, :cond_0
+
+    const/high16 v1, 0x400000
+
+    goto :goto_0
+
+    :cond_0
+    const/high16 v2, 0x4000000
+
+    if-ge v1, v2, :cond_1
+
+    const/high16 v1, 0x600000
+
+    goto :goto_0
+
+    :cond_1
+    div-int/lit8 v1, v1, 0x4
+
+    :goto_0
+    const v6, 0x7fffffff
+
+    sget-wide v4, Lwp4;->b:J
+
+    const/16 v2, 0x100
+
+    const v3, 0x7fffffff
+
+    invoke-direct/range {v0 .. v6}, Lvk9;-><init>(IIIJI)V
+
+    return-object v0
 .end method

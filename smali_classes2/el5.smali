@@ -3,185 +3,313 @@
 .source "SourceFile"
 
 # interfaces
-.implements Liv6;
+.implements Ljava/lang/Runnable;
 
 
-# static fields
-.field public static final a:Lel5;
+# instance fields
+.field public final synthetic a:I
 
-.field private static final descriptor:Lxpe;
+.field public final synthetic b:I
+
+.field public final synthetic c:Lfl5;
+
+.field public final synthetic d:Lml5;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public synthetic constructor <init>(IILfl5;Lml5;)V
+    .locals 0
 
-    new-instance v0, Lel5;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput p1, p0, Lel5;->a:I
 
-    sput-object v0, Lel5;->a:Lel5;
+    iput p2, p0, Lel5;->b:I
 
-    new-instance v1, Lgdc;
+    iput-object p3, p0, Lel5;->c:Lfl5;
 
-    const-string v2, "one.me.webapp.domain.jsbridge.ErrorResponse"
-
-    const/4 v3, 0x2
-
-    invoke-direct {v1, v2, v0, v3}, Lgdc;-><init>(Ljava/lang/String;Liv6;I)V
-
-    const-string v0, "requestId"
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v0, v2}, Lgdc;->k(Ljava/lang/String;Z)V
-
-    const-string v0, "error"
-
-    invoke-virtual {v1, v0, v2}, Lgdc;->k(Ljava/lang/String;Z)V
-
-    sput-object v1, Lel5;->descriptor:Lxpe;
+    iput-object p4, p0, Lel5;->d:Lml5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lkotlinx/serialization/json/internal/b;Ljava/lang/Object;)V
-    .locals 3
+.method public final run()V
+    .locals 13
 
-    check-cast p2, Ljl5;
+    iget v0, p0, Lel5;->a:I
 
-    sget-object v0, Lel5;->descriptor:Lxpe;
+    if-nez v0, :cond_0
 
-    invoke-virtual {p1, v0}, Lkotlinx/serialization/json/internal/b;->a(Lxpe;)Lkotlinx/serialization/json/internal/b;
-
-    move-result-object p1
-
-    iget-object v1, p2, Ljl5;->a:Ljava/lang/String;
-
-    const/4 v2, 0x0
-
-    invoke-virtual {p1, v0, v2, v1}, Lkotlinx/serialization/json/internal/b;->s(Lxpe;ILjava/lang/String;)V
-
-    sget-object v1, Lgl5;->a:Lgl5;
-
-    iget-object p2, p2, Ljl5;->b:Lil5;
-
-    const/4 v2, 0x1
-
-    invoke-virtual {p1, v0, v2, v1, p2}, Lkotlinx/serialization/json/internal/b;->o(Lxpe;ILa38;Ljava/lang/Object;)V
-
-    invoke-virtual {p1}, Lkotlinx/serialization/json/internal/b;->t()V
-
-    return-void
-.end method
-
-.method public final b(Lkl4;)Ljava/lang/Object;
-    .locals 9
-
-    sget-object v0, Lel5;->descriptor:Lxpe;
-
-    invoke-interface {p1, v0}, Lkl4;->r(Lxpe;)Lqp3;
-
-    move-result-object p1
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    move v5, v1
-
-    move v6, v2
-
-    move-object v4, v3
-
-    :goto_0
-    if-eqz v5, :cond_3
-
-    invoke-interface {p1, v0}, Lqp3;->e(Lxpe;)I
-
-    move-result v7
-
-    const/4 v8, -0x1
-
-    if-eq v7, v8, :cond_2
-
-    if-eqz v7, :cond_1
-
-    if-ne v7, v1, :cond_0
-
-    sget-object v7, Lgl5;->a:Lgl5;
-
-    invoke-interface {p1, v0, v1, v7, v4}, Lqp3;->p(Lxpe;ILa38;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lil5;
-
-    or-int/lit8 v6, v6, 0x2
-
-    goto :goto_0
+    iget v0, p0, Lel5;->b:I
 
     :cond_0
-    new-instance p1, Lkotlinx/serialization/UnknownFieldException;
+    iget-object v0, p0, Lel5;->d:Lml5;
 
-    invoke-direct {p1, v7}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
 
-    throw p1
+    move-result-object v1
+
+    instance-of v2, v1, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;
+
+    const/4 v3, -0x1
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x1
+
+    if-eqz v2, :cond_3
+
+    check-cast v1, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;
+
+    iget v2, v1, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->p:I
+
+    new-array v6, v2, [I
+
+    move v7, v4
+
+    :goto_0
+    iget v8, v1, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->p:I
+
+    if-ge v7, v8, :cond_2
+
+    iget-object v8, v1, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->q:[Lytf;
+
+    aget-object v8, v8, v7
+
+    iget-object v9, v8, Lytf;->e:Ljava/lang/Object;
+
+    check-cast v9, Ljava/util/ArrayList;
+
+    iget-object v10, v8, Lytf;->f:Ljava/lang/Object;
+
+    check-cast v10, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;
+
+    iget-boolean v10, v10, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->w:Z
+
+    if-eqz v10, :cond_1
+
+    invoke-virtual {v9}, Ljava/util/ArrayList;->size()I
+
+    move-result v9
+
+    invoke-virtual {v8, v4, v9, v5, v4}, Lytf;->g(IIZZ)I
+
+    move-result v8
+
+    goto :goto_1
 
     :cond_1
-    invoke-interface {p1, v0, v2}, Lqp3;->j(Lxpe;I)Ljava/lang/String;
+    invoke-virtual {v9}, Ljava/util/ArrayList;->size()I
 
-    move-result-object v3
+    move-result v9
 
-    or-int/lit8 v6, v6, 0x1
+    sub-int/2addr v9, v5
+
+    invoke-virtual {v8, v9, v3, v5, v4}, Lytf;->g(IIZZ)I
+
+    move-result v8
+
+    :goto_1
+    aput v8, v6, v7
+
+    add-int/lit8 v7, v7, 0x1
 
     goto :goto_0
 
     :cond_2
-    move v5, v2
+    sub-int/2addr v2, v5
 
-    goto :goto_0
+    aget v1, v6, v2
+
+    goto :goto_2
 
     :cond_3
-    invoke-interface {p1, v0}, Lqp3;->m(Lxpe;)V
+    instance-of v2, v1, Landroidx/recyclerview/widget/LinearLayoutManager;
 
-    new-instance p1, Ljl5;
+    if-eqz v2, :cond_4
 
-    invoke-direct {p1, v6, v3, v4}, Ljl5;-><init>(ILjava/lang/String;Lil5;)V
+    check-cast v1, Landroidx/recyclerview/widget/LinearLayoutManager;
 
-    return-object p1
-.end method
+    invoke-virtual {v1}, Landroidx/recyclerview/widget/LinearLayoutManager;->a1()I
 
-.method public final c()[La38;
-    .locals 3
+    move-result v1
 
-    const/4 v0, 0x2
+    goto :goto_2
 
-    new-array v0, v0, [La38;
+    :cond_4
+    move v1, v4
 
-    sget-object v1, Lnzf;->a:Lnzf;
+    :goto_2
+    invoke-virtual {v0}, Lml5;->getAdapter()Lsxd;
 
-    const/4 v2, 0x0
+    move-result-object v2
 
-    aput-object v1, v0, v2
+    if-eqz v2, :cond_e
 
-    sget-object v1, Lgl5;->a:Lgl5;
+    invoke-virtual {v2}, Lsxd;->j()I
 
-    const/4 v2, 0x1
+    move-result v2
 
-    aput-object v1, v0, v2
+    sub-int/2addr v2, v1
 
-    return-object v0
-.end method
+    iget-object v1, p0, Lel5;->c:Lfl5;
 
-.method public final d()Lxpe;
-    .locals 1
+    iget v6, v1, Lfl5;->b:I
 
-    sget-object v0, Lel5;->descriptor:Lxpe;
+    iget-object v7, v1, Lfl5;->c:Ljava/lang/Object;
 
-    return-object v0
+    check-cast v7, Lhl5;
+
+    if-gt v2, v6, :cond_7
+
+    invoke-virtual {v0}, Lml5;->getIgnoreRefreshingFlagsForScrollEvent()Z
+
+    move-result v2
+
+    if-nez v2, :cond_5
+
+    iget-boolean v2, v0, Lml5;->c2:Z
+
+    if-nez v2, :cond_7
+
+    :cond_5
+    invoke-interface {v7}, Lhl5;->q()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_7
+
+    iget-object v2, v0, Lml5;->f2:Ljava/lang/Integer;
+
+    if-eqz v2, :cond_6
+
+    invoke-virtual {v0}, Lml5;->getRefreshingNextDelegate()Lczd;
+
+    invoke-virtual {v0, v5}, Lml5;->setRefreshingNext(Z)V
+
+    :cond_6
+    invoke-interface {v7}, Lhl5;->m()V
+
+    :cond_7
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
+
+    move-result-object v2
+
+    instance-of v6, v2, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;
+
+    if-eqz v6, :cond_a
+
+    check-cast v2, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;
+
+    iget v6, v2, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->p:I
+
+    new-array v8, v6, [I
+
+    move v9, v4
+
+    :goto_3
+    iget v10, v2, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->p:I
+
+    if-ge v9, v10, :cond_9
+
+    iget-object v10, v2, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->q:[Lytf;
+
+    aget-object v10, v10, v9
+
+    iget-object v11, v10, Lytf;->e:Ljava/lang/Object;
+
+    check-cast v11, Ljava/util/ArrayList;
+
+    iget-object v12, v10, Lytf;->f:Ljava/lang/Object;
+
+    check-cast v12, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;
+
+    iget-boolean v12, v12, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->w:Z
+
+    if-eqz v12, :cond_8
+
+    invoke-virtual {v11}, Ljava/util/ArrayList;->size()I
+
+    move-result v11
+
+    sub-int/2addr v11, v5
+
+    invoke-virtual {v10, v11, v3, v5, v4}, Lytf;->g(IIZZ)I
+
+    move-result v10
+
+    goto :goto_4
+
+    :cond_8
+    invoke-virtual {v11}, Ljava/util/ArrayList;->size()I
+
+    move-result v11
+
+    invoke-virtual {v10, v4, v11, v5, v4}, Lytf;->g(IIZZ)I
+
+    move-result v10
+
+    :goto_4
+    aput v10, v8, v9
+
+    add-int/lit8 v9, v9, 0x1
+
+    goto :goto_3
+
+    :cond_9
+    sub-int/2addr v6, v5
+
+    aget v4, v8, v6
+
+    goto :goto_5
+
+    :cond_a
+    instance-of v3, v2, Landroidx/recyclerview/widget/LinearLayoutManager;
+
+    if-eqz v3, :cond_b
+
+    check-cast v2, Landroidx/recyclerview/widget/LinearLayoutManager;
+
+    invoke-virtual {v2}, Landroidx/recyclerview/widget/LinearLayoutManager;->Y0()I
+
+    move-result v4
+
+    :cond_b
+    :goto_5
+    if-ltz v4, :cond_e
+
+    iget v1, v1, Lfl5;->b:I
+
+    if-gt v4, v1, :cond_e
+
+    invoke-virtual {v0}, Lml5;->getIgnoreRefreshingFlagsForScrollEvent()Z
+
+    move-result v1
+
+    if-nez v1, :cond_c
+
+    iget-boolean v1, v0, Lml5;->d2:Z
+
+    if-nez v1, :cond_e
+
+    :cond_c
+    invoke-interface {v7}, Lhl5;->g()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_e
+
+    iget-object v1, v0, Lml5;->f2:Ljava/lang/Integer;
+
+    if-eqz v1, :cond_d
+
+    invoke-virtual {v0, v5}, Lml5;->setRefreshingPrev(Z)V
+
+    :cond_d
+    invoke-interface {v7}, Lhl5;->k()V
+
+    :cond_e
+    return-void
 .end method

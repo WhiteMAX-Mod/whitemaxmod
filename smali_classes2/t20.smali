@@ -1,190 +1,155 @@
 .class public final Lt20;
-.super Ltz;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final c:Lmz5;
+.field public final a:Lpo5;
 
-.field public final d:Lcy0;
+.field public final b:Lv36;
 
-.field public e:Ley;
-
-.field public volatile f:J
+.field public final c:Lqw8;
 
 
 # direct methods
-.method public constructor <init>(Li20;Lmz5;Lcy0;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Ltz;-><init>(Li20;)V
-
-    iput-object p2, p0, Lt20;->c:Lmz5;
-
-    iput-object p3, p0, Lt20;->d:Lcy0;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final b()Ldxa;
-    .locals 23
+.method public constructor <init>(Lv36;Lvjg;Lpo5;)V
+    .locals 17
 
     move-object/from16 v0, p0
 
-    invoke-super {v0}, Ltz;->b()Ldxa;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v1
+    move-object/from16 v1, p3
 
-    if-eqz v1, :cond_0
+    iput-object v1, v0, Lt20;->a:Lpo5;
 
-    return-object v1
+    move-object/from16 v1, p1
 
-    :cond_0
-    iget-object v1, v0, Lt20;->e:Ley;
+    iput-object v1, v0, Lt20;->b:Lv36;
 
-    if-eqz v1, :cond_1
+    new-instance v1, Lqw8;
 
-    return-object v1
+    const/16 v2, 0xc8
 
-    :cond_1
-    new-instance v1, Ley;
+    const/4 v3, 0x0
 
-    invoke-direct {v1}, Ley;-><init>()V
+    invoke-direct {v1, v2, v3}, Lqw8;-><init>(II)V
 
-    iput-object v1, v0, Lt20;->e:Ley;
+    iput-object v1, v0, Lt20;->c:Lqw8;
 
-    iget-object v1, v0, Lt20;->d:Lcy0;
+    invoke-virtual/range {p2 .. p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {v1, v0}, Lcy0;->d(Ljava/lang/Object;)V
+    move-object/from16 v2, p2
 
-    iget-object v1, v0, Ltz;->a:Li20;
+    check-cast v2, Lwjg;
 
-    iget-object v5, v1, Li20;->r:Ljava/lang/String;
+    iget-object v4, v2, Lwjg;->a:Lj88;
 
-    iget-object v1, v1, Li20;->e:Li10;
+    invoke-interface {v4}, Lj88;->getValue()Ljava/lang/Object;
 
-    iget-wide v8, v1, Li10;->a:J
+    move-result-object v4
 
-    iget-object v14, v1, Li10;->b:Ljava/lang/String;
+    check-cast v4, Lncb;
 
-    new-instance v2, Lheg;
+    invoke-virtual {v4}, Lncb;->b()Licb;
 
-    const-wide/16 v3, 0x0
+    move-result-object v5
 
-    const-wide/16 v6, 0x0
+    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v6, Lap5;
+
+    const/4 v12, 0x1
+
+    const/4 v13, 0x0
+
+    const-string v7, "preview-disk-cache"
+
+    const/4 v8, 0x1
+
+    const/4 v9, 0x1
 
     const-wide/16 v10, 0x0
 
-    const-wide/16 v12, 0x0
+    const/4 v14, 0x5
 
-    const/4 v15, 0x1
+    const/4 v15, 0x0
 
-    const/16 v16, 0x0
+    const/16 v16, 0x1
 
-    const-wide/16 v17, 0x0
+    invoke-direct/range {v6 .. v16}, Lap5;-><init>(Ljava/lang/String;IIJZZIZZ)V
 
-    const-string v19, ""
+    invoke-virtual {v5, v6}, Licb;->a(Lap5;)Ls56;
 
-    const/16 v20, 0x0
+    move-result-object v5
 
-    const/16 v21, 0x0
+    invoke-virtual {v4, v5, v7}, Lncb;->j(Ls56;Ljava/lang/String;)Ljava/util/concurrent/ExecutorService;
 
-    const/16 v22, 0x0
+    sget-object v4, Lpie;->a:Lqnf;
 
-    invoke-direct/range {v2 .. v22}, Lheg;-><init>(JLjava/lang/String;JJJJLjava/lang/String;ZZJLjava/lang/String;IZZ)V
+    new-instance v4, Lip5;
 
-    iget-wide v3, v2, Lheg;->o:J
+    new-instance v4, Ljq3;
 
-    iput-wide v3, v0, Lt20;->f:J
+    invoke-direct {v4}, Ljava/lang/Object;-><init>()V
 
-    iget-object v1, v0, Lt20;->c:Lmz5;
+    new-instance v5, Lr20;
 
-    invoke-virtual {v1, v2}, Lmz5;->a(Lheg;)Lr83;
+    invoke-direct {v5, v0}, Lr20;-><init>(Lt20;)V
 
-    iget-object v1, v0, Lt20;->e:Ley;
+    new-instance v6, Lyw8;
 
-    return-object v1
-.end method
+    invoke-direct {v6, v3, v5}, Lyw8;-><init>(ILjava/lang/Object;)V
 
-.method public onEvent(Lo45;)V
-    .locals 4
-    .annotation runtime Lu0g;
-    .end annotation
+    new-instance v3, Lr20;
 
-    .line 4
-    iget-wide v0, p0, Lt20;->f:J
+    invoke-direct {v3, v0}, Lr20;-><init>(Lt20;)V
 
-    iget-wide v2, p1, Lkk0;->a:J
+    new-instance v5, Lex8;
 
-    cmp-long v0, v0, v2
+    const/4 v7, 0x1
 
-    if-nez v0, :cond_0
+    invoke-direct {v5, v6, v3, v7}, Lex8;-><init>(Luw8;Ljava/lang/Object;I)V
 
-    .line 5
-    iget-object v0, p0, Lt20;->e:Ley;
+    invoke-virtual {v2}, Lwjg;->a()Leie;
 
-    new-instance v1, Ljava/io/File;
+    move-result-object v3
 
-    iget-object p1, p1, Lo45;->c:Ljava/lang/String;
+    const-string v6, "scheduler is null"
 
-    invoke-direct {v1, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+    invoke-static {v3, v6}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Ley;->r(Ljava/lang/Object;)V
+    new-instance v6, Lix8;
 
-    .line 6
-    iget-object p1, p0, Lt20;->e:Ley;
+    invoke-direct {v6, v5, v3, v7}, Lix8;-><init>(Luw8;Leie;I)V
 
-    invoke-virtual {p1}, Ley;->b()V
+    invoke-virtual {v2}, Lwjg;->b()Leie;
 
-    .line 7
-    :try_start_0
-    iget-object p1, p0, Lt20;->d:Lcy0;
+    move-result-object v2
 
-    invoke-virtual {p1, p0}, Lcy0;->f(Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-virtual {v6, v2}, Luw8;->e(Leie;)Lix8;
 
-    :catchall_0
-    :cond_0
-    return-void
-.end method
+    move-result-object v2
 
-.method public onEvent(Lq45;)V
-    .locals 4
-    .annotation runtime Lu0g;
-    .end annotation
+    new-instance v3, Libe;
 
-    .line 1
-    iget-wide v0, p0, Lt20;->f:J
+    const/4 v5, 0x4
 
-    iget-wide v2, p1, Lkk0;->a:J
+    invoke-direct {v3, v5, v1}, Libe;-><init>(ILjava/lang/Object;)V
 
-    cmp-long p1, v0, v2
+    new-instance v1, Lr20;
 
-    if-nez p1, :cond_0
+    invoke-direct {v1, v0}, Lr20;-><init>(Lt20;)V
 
-    .line 2
-    iget-object p1, p0, Lt20;->e:Ley;
+    new-instance v5, Lvw8;
 
-    new-instance v0, Ljava/lang/Exception;
+    sget-object v6, Lq4h;->c:Lmqa;
 
-    const-string v1, "DownloadErrorEvent"
+    invoke-direct {v5, v3, v1, v6}, Lvw8;-><init>(Lsy3;Lsy3;Ls7;)V
 
-    invoke-direct {v0, v1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, v5}, Luw8;->f(Ljx8;)V
 
-    invoke-virtual {p0, p1, v0}, Ltz;->a(Ley;Ljava/lang/Throwable;)V
+    invoke-virtual {v4, v5}, Ljq3;->a(Ly35;)Z
 
-    .line 3
-    :try_start_0
-    iget-object p1, p0, Lt20;->d:Lcy0;
-
-    invoke-virtual {p1, p0}, Lcy0;->f(Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :catchall_0
-    :cond_0
     return-void
 .end method

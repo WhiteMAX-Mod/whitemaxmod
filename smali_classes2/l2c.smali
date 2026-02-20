@@ -1,82 +1,94 @@
 .class public final Ll2c;
-.super Ljz;
+.super Lpdg;
 .source "SourceFile"
+
+# interfaces
+.implements Lys6;
 
 
 # instance fields
-.field public final X:Ljava/lang/Integer;
+.field public final synthetic X:Lq2c;
 
-.field public final Y:Ljava/lang/Integer;
-
-.field public final Z:Z
-
-.field public final d:Ljava/lang/String;
-
-.field public o:Ljava/lang/String;
-
-.field public final t0:[B
-
-.field public final u0:Ljava/lang/String;
-
-.field public final v0:Ljava/lang/String;
-
-.field public final w0:Ljava/lang/Long;
-
-.field public final x0:Ljava/lang/String;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/Integer;Z[BLjava/lang/Long;Ljava/lang/String;Ljava/lang/String;ZZLjava/lang/String;)V
-    .locals 1
+.method public constructor <init>(Lq2c;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    sget-object v0, Le10;->d:Le10;
+    iput-object p1, p0, Ll2c;->X:Lq2c;
 
-    invoke-direct {p0, v0, p10, p11}, Ljz;-><init>(Le10;ZZ)V
+    const/4 p1, 0x2
 
-    iput-object p1, p0, Ll2c;->d:Ljava/lang/String;
-
-    iput-object p2, p0, Ll2c;->o:Ljava/lang/String;
-
-    iput-object p3, p0, Ll2c;->X:Ljava/lang/Integer;
-
-    iput-object p4, p0, Ll2c;->Y:Ljava/lang/Integer;
-
-    iput-boolean p5, p0, Ll2c;->Z:Z
-
-    iput-object p6, p0, Ll2c;->t0:[B
-
-    iput-object p7, p0, Ll2c;->w0:Ljava/lang/Long;
-
-    iput-object p8, p0, Ll2c;->v0:Ljava/lang/String;
-
-    iput-object p9, p0, Ll2c;->u0:Ljava/lang/String;
-
-    iput-object p12, p0, Ll2c;->x0:Ljava/lang/String;
+    invoke-direct {p0, p1, p2}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/util/HashMap;
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-super {p0}, Ljz;->a()Ljava/util/HashMap;
+    check-cast p1, Lr2c;
 
-    move-result-object v0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object v1, p0, Ll2c;->u0:Ljava/lang/String;
+    invoke-virtual {p0, p1, p2}, Ll2c;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    invoke-static {v1}, Lzsi;->e(Ljava/lang/CharSequence;)Z
+    move-result-object p1
 
-    move-result v2
+    check-cast p1, Ll2c;
 
-    if-nez v2, :cond_0
+    sget-object p2, Lmah;->a:Lmah;
 
-    const-string v2, "photoToken"
+    invoke-virtual {p1, p2}, Ll2c;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Ll2c;
+
+    iget-object v1, p0, Ll2c;->X:Lq2c;
+
+    invoke-direct {v0, v1, p2}, Ll2c;-><init>(Lq2c;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Ll2c;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget-object v0, p0, Ll2c;->o:Ljava/lang/Object;
+
+    check-cast v0, Lr2c;
+
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    sget-object p1, Lr2c;->a:Lr2c;
+
+    if-ne v0, p1, :cond_0
+
+    const-string p1, "allowed"
+
+    goto :goto_0
 
     :cond_0
-    return-object v0
+    const-string p1, "denied"
+
+    :goto_0
+    iget-object v0, p0, Ll2c;->X:Lq2c;
+
+    const-string v1, "fsi"
+
+    invoke-static {v0, v1, p1}, Lq2c;->a(Lq2c;Ljava/lang/String;Ljava/lang/String;)V
+
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
 .end method

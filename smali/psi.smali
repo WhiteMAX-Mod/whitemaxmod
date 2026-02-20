@@ -1,11 +1,27 @@
-.class public interface abstract Lpsi;
+.class public final Lpsi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/os/IInterface;
+
+# instance fields
+.field public final a:I
+
+.field public final b:[B
+
+.field public final c:Z
 
 
-# virtual methods
-.method public abstract O(Ly1j;)V
+# direct methods
+.method public constructor <init>(IZ[B)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Lpsi;->a:I
+
+    iput-object p3, p0, Lpsi;->b:[B
+
+    iput-boolean p2, p0, Lpsi;->c:Z
+
+    return-void
 .end method

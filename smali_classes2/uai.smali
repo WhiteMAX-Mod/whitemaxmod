@@ -1,3 +1,3 @@
-.class public abstract Luai;
-.super Ljava/lang/Throwable;
+.class public final Luai;
+.super Lvai;
 .source "SourceFile"

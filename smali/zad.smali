@@ -3,6 +3,10 @@
 
 
 # static fields
-.field public static report_drawn:I = 0x7f0a09f9
+.field public static cardview_dark_background:I = 0x7f060053
 
-.field public static view_tree_on_back_pressed_dispatcher_owner:I = 0x7f0a0cd1
+.field public static cardview_light_background:I = 0x7f060054
+
+.field public static cardview_shadow_end_color:I = 0x7f060055
+
+.field public static cardview_shadow_start_color:I = 0x7f060056

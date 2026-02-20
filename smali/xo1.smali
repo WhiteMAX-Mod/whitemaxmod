@@ -1,19 +1,21 @@
 .class public final Lxo1;
-.super Lcp1;
+.super Lpp1;
 .source "SourceFile"
 
 
-# instance fields
-.field public final D:Z
+# static fields
+.field public static final D:Lxo1;
 
 
 # direct methods
-.method public constructor <init>(Z)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Lcp1;-><init>()V
+    new-instance v0, Lxo1;
 
-    iput-boolean p1, p0, Lxo1;->D:Z
+    invoke-direct {v0}, Lpp1;-><init>()V
+
+    sput-object v0, Lxo1;->D:Lxo1;
 
     return-void
 .end method
@@ -23,62 +25,37 @@
 .method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
+    const/4 v0, 0x1
+
     if-ne p0, p1, :cond_0
 
-    goto :goto_1
+    return v0
 
     :cond_0
-    instance-of v0, p1, Lxo1;
+    instance-of p1, p1, Lxo1;
 
-    if-nez v0, :cond_1
+    if-nez p1, :cond_1
 
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lxo1;
-
-    iget-boolean v0, p0, Lxo1;->D:Z
-
-    iget-boolean p1, p1, Lxo1;->D:Z
-
-    if-eq v0, p1, :cond_2
-
-    :goto_0
     const/4 p1, 0x0
 
     return p1
 
-    :cond_2
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
+    :cond_1
+    return v0
 .end method
 
 .method public final hashCode()I
     .locals 1
 
-    iget-boolean v0, p0, Lxo1;->D:Z
-
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v0
+    const v0, 0x619f7241
 
     return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 1
 
-    const-string v0, "ShareScreen(isEnabled="
-
-    const-string v1, ")"
-
-    iget-boolean v2, p0, Lxo1;->D:Z
-
-    invoke-static {v0, v1, v2}, Lmrf;->k(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
-
-    move-result-object v0
+    const-string v0, "ExitWithRecord"
 
     return-object v0
 .end method

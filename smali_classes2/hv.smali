@@ -1,91 +1,94 @@
-.class public final synthetic Lhv;
+.class public final Lhv;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lnq6;
-
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lvea;
+.field public final a:Lw1f;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lvea;I)V
+.method public constructor <init>(Lw1f;)V
     .locals 0
 
-    iput p2, p0, Lhv;->a:I
-
-    iput-object p1, p0, Lhv;->b:Lvea;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lhv;->a:Lw1f;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lhv;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lhv;
+
+    iget-object v1, p0, Lhv;->a:Lw1f;
+
+    iget-object p1, p1, Lhv;->a:Lw1f;
+
+    invoke-static {v1, p1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lhv;->a:Lw1f;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
     .locals 2
 
-    iget v0, p0, Lhv;->a:I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    packed-switch v0, :pswitch_data_0
+    const-string v1, "StopAsrRecord(sessionRoomId="
 
-    check-cast p1, Lg77;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {p1}, Lg77;->getId()J
+    iget-object v1, p0, Lhv;->a:Lw1f;
 
-    move-result-wide v0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    iget-object p1, p0, Lhv;->b:Lvea;
+    const-string v1, ")"
 
-    invoke-virtual {p1, v0, v1}, Lvea;->d(J)Z
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result p1
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    :goto_0
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    move-result-object v0
 
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_0
-    check-cast p1, Lx4c;
-
-    iget-wide v0, p1, Lx4c;->a:J
-
-    iget-object p1, p0, Lhv;->b:Lvea;
-
-    invoke-virtual {p1, v0, v1}, Lvea;->a(J)Z
-
-    move-result p1
-
-    xor-int/lit8 p1, p1, 0x1
-
-    goto :goto_0
-
-    :pswitch_1
-    check-cast p1, Lg77;
-
-    invoke-interface {p1}, Lg77;->getId()J
-
-    move-result-wide v0
-
-    iget-object p1, p0, Lhv;->b:Lvea;
-
-    invoke-virtual {p1, v0, v1}, Lvea;->d(J)Z
-
-    move-result p1
-
-    goto :goto_0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

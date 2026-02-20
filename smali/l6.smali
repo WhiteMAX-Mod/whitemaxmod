@@ -1,321 +1,153 @@
 .class public final Ll6;
-.super Landroid/animation/AnimatorListenerAdapter;
+.super Lpdg;
 .source "SourceFile"
+
+# interfaces
+.implements Lys6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lone/me/android/OneMeApplication;
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final synthetic Y:Lo6;
+
+.field public o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method public constructor <init>(Lone/me/android/OneMeApplication;Lo6;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p1, p0, Ll6;->a:I
+    iput-object p1, p0, Ll6;->X:Lone/me/android/OneMeApplication;
 
-    iput-object p2, p0, Ll6;->b:Ljava/lang/Object;
+    iput-object p2, p0, Ll6;->Y:Lo6;
 
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Ll6;->a:I
+    check-cast p1, Lnd4;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationCancel(Landroid/animation/Animator;)V
-
-    return-void
-
-    :pswitch_0
-    iget-object p1, p0, Ll6;->b:Ljava/lang/Object;
-
-    check-cast p1, Landroidx/appcompat/widget/ActionBarOverlayLayout;
-
-    const/4 v0, 0x0
-
-    iput-object v0, p1, Landroidx/appcompat/widget/ActionBarOverlayLayout;->K0:Landroid/view/ViewPropertyAnimator;
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p1, Landroidx/appcompat/widget/ActionBarOverlayLayout;->x0:Z
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 4
-
-    iget v0, p0, Ll6;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    :pswitch_0
-    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationEnd(Landroid/animation/Animator;)V
-
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Ll6;->b:Ljava/lang/Object;
-
-    check-cast v0, Lstg;
-
-    invoke-virtual {v0}, Lstg;->n()V
-
-    invoke-virtual {p1, p0}, Landroid/animation/Animator;->removeListener(Landroid/animation/Animator$AnimatorListener;)V
-
-    return-void
-
-    :pswitch_2
-    iget-object p1, p0, Ll6;->b:Ljava/lang/Object;
-
-    check-cast p1, Lcom/google/android/material/behavior/HideBottomViewOnScrollBehavior;
-
-    const/4 v0, 0x0
-
-    iput-object v0, p1, Lcom/google/android/material/behavior/HideBottomViewOnScrollBehavior;->h:Landroid/view/ViewPropertyAnimator;
-
-    return-void
-
-    :pswitch_3
-    iget-object p1, p0, Ll6;->b:Ljava/lang/Object;
-
-    check-cast p1, Lea5;
-
-    invoke-virtual {p1}, Lnj5;->q()V
-
-    iget-object p1, p1, Lea5;->r:Landroid/animation/ValueAnimator;
-
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->start()V
-
-    return-void
-
-    :pswitch_4
-    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationEnd(Landroid/animation/Animator;)V
-
-    iget-object p1, p0, Ll6;->b:Ljava/lang/Object;
-
-    check-cast p1, Lwl0;
-
-    invoke-static {p1}, Lss8;->c(Landroid/view/View;)Landroid/view/ViewGroup;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v1, Luff;
-
-    invoke-direct {v1, v0}, Luff;-><init>(Landroid/view/ViewGroup;)V
-
-    move-object v0, v1
-
-    :goto_0
-    iget-object p1, p1, Lwl0;->z0:Ljava/util/ArrayList;
-
-    invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    invoke-virtual {p0, p1, p2}, Ll6;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    :goto_1
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    check-cast p1, Ll6;
 
-    move-result v1
+    sget-object p2, Lmah;->a:Lmah;
 
-    if-eqz v1, :cond_1
+    invoke-virtual {p1, p2}, Ll6;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    move-result-object p1
 
-    move-result-object v1
+    return-object p1
+.end method
 
-    check-cast v1, Lhog;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iget-object v2, v0, Luff;->a:Ljava/lang/Object;
+    new-instance p1, Ll6;
 
-    check-cast v2, Landroid/view/ViewOverlay;
+    iget-object v0, p0, Ll6;->X:Lone/me/android/OneMeApplication;
 
-    invoke-virtual {v2, v1}, Landroid/view/ViewOverlay;->remove(Landroid/graphics/drawable/Drawable;)V
+    iget-object v1, p0, Ll6;->Y:Lo6;
 
-    goto :goto_1
+    invoke-direct {p1, v0, v1, p2}, Ll6;-><init>(Lone/me/android/OneMeApplication;Lo6;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 10
+
+    iget v0, p0, Ll6;->o:I
+
+    sget-object v1, Lmah;->a:Lmah;
+
+    const/4 v2, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v2, :cond_0
+
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    return-object v1
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 
     :cond_1
-    return-void
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    :pswitch_5
-    new-instance p1, Ljava/util/ArrayList;
+    sget-object p1, Lfe3;->t0:Ltea;
 
-    iget-object v0, p0, Ll6;->b:Ljava/lang/Object;
+    iget-object v0, p0, Ll6;->X:Lone/me/android/OneMeApplication;
 
-    check-cast v0, Lwf;
+    invoke-virtual {p1, v0}, Ltea;->n(Landroid/content/Context;)Lfe3;
 
-    iget-object v1, v0, Lwf;->o:Ljava/util/ArrayList;
+    move-result-object p1
 
-    invoke-direct {p1, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+    new-instance v3, Lk6;
 
-    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
+    const/4 v4, 0x0
 
-    move-result v1
+    const/4 v5, 0x0
 
-    const/4 v2, 0x0
+    const-class v6, Lo6;
 
-    :goto_2
-    if-ge v2, v1, :cond_2
+    iget-object v7, p0, Ll6;->Y:Lo6;
 
-    invoke-virtual {p1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    const-string v8, "weakActivities"
 
-    move-result-object v3
+    const-string v9, "getWeakActivities()Ljava/util/concurrent/CopyOnWriteArrayList;"
 
-    check-cast v3, Lme;
+    invoke-direct/range {v3 .. v9}, Lk6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v3, v0}, Lme;->a(Landroid/graphics/drawable/Drawable;)V
+    iput v2, p0, Ll6;->o:I
 
-    add-int/lit8 v2, v2, 0x1
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    goto :goto_2
-
-    :cond_2
-    return-void
-
-    :pswitch_6
-    iget-object p1, p0, Ll6;->b:Ljava/lang/Object;
-
-    check-cast p1, Landroidx/appcompat/widget/ActionBarOverlayLayout;
-
-    const/4 v0, 0x0
-
-    iput-object v0, p1, Landroidx/appcompat/widget/ActionBarOverlayLayout;->K0:Landroid/view/ViewPropertyAnimator;
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p1, Landroidx/appcompat/widget/ActionBarOverlayLayout;->x0:Z
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_0
-        :pswitch_1
-    .end packed-switch
-.end method
-
-.method public onAnimationRepeat(Landroid/animation/Animator;)V
-    .locals 3
-
-    iget v0, p0, Ll6;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationRepeat(Landroid/animation/Animator;)V
-
-    return-void
-
-    :pswitch_0
-    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationRepeat(Landroid/animation/Animator;)V
-
-    iget-object p1, p0, Ll6;->b:Ljava/lang/Object;
-
-    check-cast p1, Ls88;
-
-    iget v0, p1, Ls88;->Y:I
-
-    const/4 v1, 0x1
-
-    add-int/2addr v0, v1
-
-    iget-object v2, p1, Ls88;->X:Lb98;
-
-    iget-object v2, v2, Lml0;->c:[I
-
-    array-length v2, v2
-
-    rem-int/2addr v0, v2
-
-    iput v0, p1, Ls88;->Y:I
-
-    iput-boolean v1, p1, Ls88;->Z:Z
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x5
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public onAnimationStart(Landroid/animation/Animator;)V
-    .locals 4
-
-    iget v0, p0, Ll6;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationStart(Landroid/animation/Animator;)V
-
-    return-void
-
-    :pswitch_0
-    new-instance p1, Ljava/util/ArrayList;
-
-    iget-object v0, p0, Ll6;->b:Ljava/lang/Object;
-
-    check-cast v0, Lwf;
-
-    iget-object v1, v0, Lwf;->o:Ljava/util/ArrayList;
-
-    invoke-direct {p1, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
-
-    move-result v1
+    new-instance v0, Lee3;
 
     const/4 v2, 0x0
 
-    :goto_0
-    if-ge v2, v1, :cond_0
+    invoke-direct {v0, p1, v3, v2}, Lee3;-><init>(Lfe3;Lk6;Lkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {p1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-static {v0, p0}, Lztj;->c(Lys6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    move-result-object v3
+    move-result-object p1
 
-    check-cast v3, Lme;
+    sget-object v0, Lod4;->a:Lod4;
 
-    invoke-virtual {v3, v0}, Lme;->b(Landroid/graphics/drawable/Drawable;)V
-
-    add-int/lit8 v2, v2, 0x1
+    if-ne p1, v0, :cond_2
 
     goto :goto_0
 
-    :cond_0
-    return-void
+    :cond_2
+    move-object p1, v1
 
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
+    :goto_0
+    if-ne p1, v0, :cond_3
+
+    return-object v0
+
+    :cond_3
+    return-object v1
 .end method

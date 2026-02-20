@@ -1,113 +1,97 @@
 .class public final Lic1;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Lkc1;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/calllist/ui/page/CallHistoryPageScreen;
-
-.field public synthetic o:Z
+.field public final a:Lz71;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/calllist/ui/page/CallHistoryPageScreen;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lz71;)V
     .locals 0
 
-    iput-object p1, p0, Lic1;->X:Lone/me/calllist/ui/page/CallHistoryPageScreen;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lic1;->a:Lz71;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    check-cast p1, Ljava/lang/Boolean;
+    const/4 v0, 0x1
 
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    if-ne p0, p1, :cond_0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    return v0
 
-    invoke-virtual {p0, p1, p2}, Lic1;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    :cond_0
+    instance-of v1, p1, Lic1;
 
-    move-result-object p1
+    const/4 v2, 0x0
 
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
     check-cast p1, Lic1;
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    iget-object v1, p0, Lic1;->a:Lz71;
 
-    invoke-virtual {p1, p2}, Lic1;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object p1, p1, Lic1;->a:Lz71;
 
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lic1;
-
-    iget-object v1, p0, Lic1;->X:Lone/me/calllist/ui/page/CallHistoryPageScreen;
-
-    invoke-direct {v0, v1, p2}, Lic1;-><init>(Lone/me/calllist/ui/page/CallHistoryPageScreen;Lkotlin/coroutines/Continuation;)V
-
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-static {v1, p1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
-    iput-boolean p1, v0, Lic1;->o:Z
+    if-nez p1, :cond_2
 
-    return-object v0
+    return v2
+
+    :cond_2
+    return v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final hashCode()I
+    .locals 1
 
-    iget-boolean v0, p0, Lic1;->o:Z
+    iget-object v0, p0, Lic1;->a:Lz71;
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    invoke-virtual {v0}, Lz71;->hashCode()I
 
-    sget-object p1, Lone/me/calllist/ui/page/CallHistoryPageScreen;->v0:Lvna;
+    move-result v0
 
-    iget-object p1, p0, Lic1;->X:Lone/me/calllist/ui/page/CallHistoryPageScreen;
+    return v0
+.end method
 
-    invoke-virtual {p1}, Lone/me/calllist/ui/page/CallHistoryPageScreen;->B0()Lwc1;
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    move-result-object p1
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object p1, p1, Lwc1;->t0:Lspf;
+    const-string v1, "CreateJoinLinkEvent(event="
 
-    :cond_0
-    invoke-virtual {p1}, Lspf;->getValue()Ljava/lang/Object;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result-object v1
+    iget-object v1, p0, Lic1;->a:Lz71;
 
-    move-object v2, v1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    check-cast v2, Ljava/lang/Boolean;
+    const-string v1, ")"
 
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v0
 
-    invoke-virtual {p1, v1, v2}, Lspf;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
+    return-object v0
 .end method

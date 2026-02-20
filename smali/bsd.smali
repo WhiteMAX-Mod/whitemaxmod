@@ -1,279 +1,115 @@
-.class public abstract Lbsd;
-.super Ljava/lang/Object;
+.class public final Lbsd;
+.super Lslg;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:Lig5;
+.field public final synthetic e:I
 
-.field public b:Ljava/util/ArrayList;
-
-.field public c:J
-
-.field public d:J
-
-.field public e:J
-
-.field public f:J
+.field public final synthetic f:Ldsd;
 
 
 # direct methods
-.method public static b(Ltsd;)V
+.method public constructor <init>(Ldsd;)V
     .locals 2
 
-    iget v0, p0, Ltsd;->u0:I
+    const/4 v0, 0x0
 
-    invoke-virtual {p0}, Ltsd;->n()Z
+    iput v0, p0, Lbsd;->e:I
 
-    move-result v1
+    .line 2
+    iput-object p1, p0, Lbsd;->f:Ldsd;
 
-    if-eqz v1, :cond_0
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    goto :goto_0
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    :cond_0
-    and-int/lit8 v0, v0, 0x4
+    .line 3
+    iget-object p1, p1, Ldsd;->m:Ljava/lang/String;
 
-    if-nez v0, :cond_1
+    .line 4
+    const-string v1, " writer"
 
-    invoke-virtual {p0}, Ltsd;->f()I
+    .line 5
+    invoke-static {v0, p1, v1}, Ltx8;->n(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    :cond_1
-    :goto_0
+    move-result-object p1
+
+    const/4 v0, 0x1
+
+    .line 6
+    invoke-direct {p0, p1, v0}, Lslg;-><init>(Ljava/lang/String;Z)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;Ldsd;)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Lbsd;->e:I
+
+    iput-object p2, p0, Lbsd;->f:Ldsd;
+
+    const/4 p2, 0x1
+
+    .line 1
+    invoke-direct {p0, p1, p2}, Lslg;-><init>(Ljava/lang/String;Z)V
+
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract a(Ltsd;Ltsd;Lot;Lot;)Z
-.end method
+.method public final a()J
+    .locals 2
 
-.method public final c(Ltsd;)V
-    .locals 9
+    iget v0, p0, Lbsd;->e:I
 
-    iget-object v0, p0, Lbsd;->a:Lig5;
+    packed-switch v0, :pswitch_data_0
 
-    if-eqz v0, :cond_8
+    iget-object v0, p0, Lbsd;->f:Ldsd;
 
-    iget-object v0, v0, Lig5;->b:Ljava/lang/Object;
+    iget-object v0, v0, Ldsd;->h:Lsrd;
 
-    check-cast v0, Landroidx/recyclerview/widget/RecyclerView;
+    invoke-virtual {v0}, Lsrd;->d()V
 
-    const/4 v1, 0x1
+    const-wide/16 v0, -0x1
 
-    invoke-virtual {p1, v1}, Ltsd;->v(Z)V
+    return-wide v0
 
-    iget-object v2, p1, Ltsd;->a:Landroid/view/View;
-
-    iget-object v3, p1, Ltsd;->Z:Ltsd;
-
-    const/4 v4, 0x0
-
-    if-eqz v3, :cond_0
-
-    iget-object v3, p1, Ltsd;->t0:Ltsd;
-
-    if-nez v3, :cond_0
-
-    iput-object v4, p1, Ltsd;->Z:Ltsd;
-
-    :cond_0
-    iput-object v4, p1, Ltsd;->t0:Ltsd;
-
-    iget v3, p1, Ltsd;->u0:I
-
-    and-int/lit8 v3, v3, 0x10
-
-    if-eqz v3, :cond_1
-
-    goto/16 :goto_4
-
-    :cond_1
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->C0()V
-
-    iget-object v3, v0, Landroidx/recyclerview/widget/RecyclerView;->t0:Lfsg;
-
-    iget-object v4, v3, Lfsg;->o:Ljava/lang/Object;
-
-    check-cast v4, Lp52;
-
-    iget-object v5, v3, Lfsg;->d:Ljava/lang/Object;
-
-    check-cast v5, Lakj;
-
-    iget v6, v3, Lfsg;->b:I
-
-    const/4 v7, 0x0
-
-    if-ne v6, v1, :cond_3
-
-    iget-object v1, v3, Lfsg;->c:Ljava/lang/Object;
-
-    check-cast v1, Landroid/view/View;
-
-    if-ne v1, v2, :cond_2
-
-    :goto_0
-    move v1, v7
-
-    goto :goto_2
-
-    :cond_2
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "Cannot call removeViewIfHidden within removeView(At) for a different view"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_3
-    const/4 v8, 0x2
-
-    if-eq v6, v8, :cond_7
+    :pswitch_0
+    iget-object v0, p0, Lbsd;->f:Ldsd;
 
     :try_start_0
-    iput v8, v3, Lfsg;->b:I
+    invoke-virtual {v0}, Ldsd;->g()Z
 
-    iget-object v6, v5, Lakj;->a:Ljava/lang/Object;
-
-    check-cast v6, Landroidx/recyclerview/widget/RecyclerView;
-
-    invoke-virtual {v6, v2}, Landroid/view/ViewGroup;->indexOfChild(Landroid/view/View;)I
-
-    move-result v6
-
-    const/4 v8, -0x1
-
-    if-ne v6, v8, :cond_4
-
-    invoke-virtual {v3, v2}, Lfsg;->c0(Landroid/view/View;)V
+    move-result v0
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    :goto_1
-    iput v7, v3, Lfsg;->b:I
+    if-eqz v0, :cond_0
 
-    goto :goto_2
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_3
-
-    :cond_4
-    :try_start_1
-    invoke-virtual {v4, v6}, Lp52;->W(I)Z
-
-    move-result v8
-
-    if-eqz v8, :cond_5
-
-    invoke-virtual {v4, v6}, Lp52;->d0(I)Z
-
-    invoke-virtual {v3, v2}, Lfsg;->c0(Landroid/view/View;)V
-
-    invoke-virtual {v5, v6}, Lakj;->K(I)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    goto :goto_1
-
-    :cond_5
-    iput v7, v3, Lfsg;->b:I
+    const-wide/16 v0, 0x0
 
     goto :goto_0
 
-    :goto_2
-    if-eqz v1, :cond_6
+    :catch_0
+    move-exception v1
 
-    invoke-static {v2}, Landroidx/recyclerview/widget/RecyclerView;->U(Landroid/view/View;)Ltsd;
+    invoke-virtual {v0, v1}, Ldsd;->c(Ljava/lang/Exception;)V
 
-    move-result-object v3
+    :cond_0
+    const-wide/16 v0, -0x1
 
-    iget-object v4, v0, Landroidx/recyclerview/widget/RecyclerView;->c:Lksd;
-
-    invoke-virtual {v4, v3}, Lksd;->l(Ltsd;)V
-
-    iget-object v4, v0, Landroidx/recyclerview/widget/RecyclerView;->c:Lksd;
-
-    invoke-virtual {v4, v3}, Lksd;->i(Ltsd;)V
-
-    sget-boolean v3, Landroidx/recyclerview/widget/RecyclerView;->M1:Z
-
-    if-eqz v3, :cond_6
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "after removing animated view: "
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v4, ", "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    const-string v4, "RecyclerView"
-
-    invoke-static {v4, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_6
-    xor-int/lit8 v3, v1, 0x1
-
-    invoke-virtual {v0, v3}, Landroidx/recyclerview/widget/RecyclerView;->D0(Z)V
-
-    if-nez v1, :cond_8
-
-    invoke-virtual {p1}, Ltsd;->r()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_8
-
-    invoke-virtual {v0, v2, v7}, Landroidx/recyclerview/widget/RecyclerView;->removeDetachedView(Landroid/view/View;Z)V
-
-    return-void
-
-    :goto_3
-    iput v7, v3, Lfsg;->b:I
-
-    throw p1
-
-    :cond_7
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "Cannot call removeViewIfHidden within removeViewIfHidden"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_8
-    :goto_4
-    return-void
-.end method
-
-.method public abstract d(Ltsd;)V
-.end method
-
-.method public abstract e()V
-.end method
-
-.method public f()J
-    .locals 2
-
-    iget-wide v0, p0, Lbsd;->e:J
-
+    :goto_0
     return-wide v0
-.end method
 
-.method public abstract g()Z
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

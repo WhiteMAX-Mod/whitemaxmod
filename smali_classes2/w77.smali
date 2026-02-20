@@ -1,52 +1,53 @@
-.class public final synthetic Lw77;
-.super Lqr6;
+.class public final Lw77;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lnq6;
 
 
 # static fields
-.field public static final a:Lw77;
+.field public static final synthetic a:Lw77;
+
+.field public static final b:Lkn3;
+
+.field public static final c:Lu16;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 6
+    .locals 4
 
     new-instance v0, Lw77;
 
-    const-string v4, "getId()J"
-
-    const/4 v5, 0x0
-
-    const/4 v1, 0x1
-
-    const-class v2, Lg77;
-
-    const-string v3, "getId"
-
-    invoke-direct/range {v0 .. v5}, Lqr6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     sput-object v0, Lw77;->a:Lw77;
 
+    const/4 v0, 0x2
+
+    new-array v1, v0, [Lks6;
+
+    sget-object v2, Lu77;->a:Lu77;
+
+    const/4 v3, 0x0
+
+    aput-object v2, v1, v3
+
+    sget-object v2, Lv77;->a:Lv77;
+
+    const/4 v3, 0x1
+
+    aput-object v2, v1, v3
+
+    invoke-static {v1}, Lxrj;->b([Lks6;)Lkn3;
+
+    move-result-object v1
+
+    sput-object v1, Lw77;->b:Lkn3;
+
+    new-instance v1, Lu16;
+
+    invoke-direct {v1, v0}, Lu16;-><init>(I)V
+
+    sput-object v1, Lw77;->c:Lu16;
+
     return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    check-cast p1, Lg77;
-
-    invoke-interface {p1}, Lg77;->getId()J
-
-    move-result-wide v0
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p1
-
-    return-object p1
 .end method

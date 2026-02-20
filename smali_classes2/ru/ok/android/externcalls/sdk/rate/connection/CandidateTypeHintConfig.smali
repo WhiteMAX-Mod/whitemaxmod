@@ -81,7 +81,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/rate/connection/CandidateTypeHintConfig$Companion;-><init>(Lso4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/rate/connection/CandidateTypeHintConfig$Companion;-><init>(Lfq4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/rate/connection/CandidateTypeHintConfig;->Companion:Lru/ok/android/externcalls/sdk/rate/connection/CandidateTypeHintConfig$Companion;
 
@@ -96,7 +96,7 @@
 
     const/4 v1, 0x1
 
-    invoke-direct {p0, v0, v1, v0}, Lru/ok/android/externcalls/sdk/rate/connection/CandidateTypeHintConfig;-><init>(Ljava/util/Map;ILso4;)V
+    invoke-direct {p0, v0, v1, v0}, Lru/ok/android/externcalls/sdk/rate/connection/CandidateTypeHintConfig;-><init>(Ljava/util/Map;ILfq4;)V
 
     return-void
 .end method
@@ -122,7 +122,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/util/Map;ILso4;)V
+.method public synthetic constructor <init>(Ljava/util/Map;ILfq4;)V
     .locals 0
 
     and-int/lit8 p2, p2, 0x1
@@ -130,7 +130,7 @@
     if-eqz p2, :cond_0
 
     .line 4
-    sget-object p1, Leh5;->a:Leh5;
+    sget-object p1, Lti5;->a:Lti5;
 
     .line 5
     :cond_0
@@ -220,7 +220,7 @@
 
     iget-object p1, p1, Lru/ok/android/externcalls/sdk/rate/connection/CandidateTypeHintConfig;->limits:Ljava/util/Map;
 
-    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

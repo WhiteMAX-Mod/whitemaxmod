@@ -1,210 +1,216 @@
-.class public final Lq9;
+.class public abstract Lq9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lajc;
 
+# static fields
+.field public static final a:Ljava/lang/Class;
 
-# instance fields
-.field public final synthetic a:I
+.field public static final b:Ljava/lang/reflect/Field;
 
-.field public final b:Ljava/lang/Object;
+.field public static final c:Ljava/lang/reflect/Field;
+
+.field public static final d:Ljava/lang/reflect/Method;
+
+.field public static final e:Ljava/lang/reflect/Method;
+
+.field public static final f:Ljava/lang/reflect/Method;
+
+.field public static final g:Landroid/os/Handler;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lajc;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 13
 
-    .line 1
-    iput p2, p0, Lq9;->a:I
+    const-class v0, Landroid/app/Activity;
 
-    iput-object p1, p0, Lq9;->b:Ljava/lang/Object;
+    new-instance v1, Landroid/os/Handler;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
-    return-void
-.end method
+    move-result-object v2
 
-.method public constructor <init>([Lkkg;)V
-    .locals 1
+    invoke-direct {v1, v2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    const/4 v0, 0x3
+    sput-object v1, Lq9;->g:Landroid/os/Handler;
 
-    iput v0, p0, Lq9;->a:I
+    const/4 v1, 0x0
 
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    :try_start_0
+    const-string v2, "android.app.ActivityThread"
 
-    .line 3
-    check-cast p1, [Lkkg;
+    invoke-static {v2}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
-    iput-object p1, p0, Lq9;->b:Ljava/lang/Object;
-
-    const/4 v0, 0x0
-
-    .line 4
-    array-length p1, p1
-
-    invoke-static {v0, p1}, Lbkj;->e(II)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a(Lzj0;Lbjc;)V
-    .locals 3
-
-    iget v0, p0, Lq9;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    move-object v0, p2
-
-    check-cast v0, Lhl0;
-
-    iget-object v0, v0, Lhl0;->a:Lcj7;
-
-    iget-object v0, v0, Lcj7;->h:Liyd;
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    if-nez v0, :cond_0
-
-    invoke-virtual {p1, v1, v2}, Lzj0;->g(ILjava/lang/Object;)V
+    move-result-object v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
-    :cond_0
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0, p1, p2}, Lq9;->c(ILzj0;Lbjc;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_1
-
-    invoke-virtual {p1, v1, v2}, Lzj0;->g(ILjava/lang/Object;)V
-
-    :cond_1
-    :goto_0
-    return-void
-
-    :pswitch_0
-    new-instance v0, Lp9;
-
-    const/4 v1, 0x3
-
-    invoke-direct {v0, p1, v1}, Lp9;-><init>(Lzj0;I)V
-
-    iget-object p1, p0, Lq9;->b:Ljava/lang/Object;
-
-    check-cast p1, Lajc;
-
-    invoke-interface {p1, v0, p2}, Lajc;->a(Lzj0;Lbjc;)V
-
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lq9;->b:Ljava/lang/Object;
-
-    check-cast v0, Lajc;
-
-    new-instance v1, Lp9;
-
-    const/4 v2, 0x2
-
-    invoke-direct {v1, p1, v2}, Lp9;-><init>(Lzj0;I)V
-
-    invoke-interface {v0, v1, p2}, Lajc;->a(Lzj0;Lbjc;)V
-
-    return-void
-
-    :pswitch_2
-    iget-object v0, p0, Lq9;->b:Ljava/lang/Object;
-
-    check-cast v0, Lajc;
-
-    new-instance v1, Lp9;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, p1, v2}, Lp9;-><init>(Lzj0;I)V
-
-    invoke-interface {v0, v1, p2}, Lajc;->a(Lzj0;Lbjc;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public c(ILzj0;Lbjc;)Z
-    .locals 4
-
-    iget-object v0, p0, Lq9;->b:Ljava/lang/Object;
-
-    check-cast v0, [Lkkg;
-
-    move-object v1, p3
-
-    check-cast v1, Lhl0;
-
-    iget-object v1, v1, Lhl0;->a:Lcj7;
-
-    iget-object v1, v1, Lcj7;->h:Liyd;
+    :catchall_0
+    move-object v2, v1
 
     :goto_0
-    array-length v2, v0
+    sput-object v2, Lq9;->a:Ljava/lang/Class;
 
-    const/4 v3, -0x1
+    const/4 v2, 0x1
 
-    if-ge p1, v2, :cond_1
+    :try_start_1
+    const-string v3, "mMainThread"
 
-    aget-object v2, v0, p1
+    invoke-virtual {v0, v3}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
-    invoke-interface {v2, v1}, Lkkg;->b(Liyd;)Z
+    move-result-object v3
 
-    move-result v2
-
-    if-eqz v2, :cond_0
+    invoke-virtual {v3, v2}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     goto :goto_1
 
-    :cond_0
-    add-int/lit8 p1, p1, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    move p1, v3
+    :catchall_1
+    move-object v3, v1
 
     :goto_1
-    if-ne p1, v3, :cond_2
+    sput-object v3, Lq9;->b:Ljava/lang/reflect/Field;
 
-    const/4 p1, 0x0
+    :try_start_2
+    const-string v3, "mToken"
 
-    return p1
+    invoke-virtual {v0, v3}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_2
+
+    goto :goto_2
+
+    :catchall_2
+    move-object v0, v1
+
+    :goto_2
+    sput-object v0, Lq9;->c:Ljava/lang/reflect/Field;
+
+    sget-object v0, Lq9;->a:Ljava/lang/Class;
+
+    sget-object v3, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
+
+    const-class v4, Landroid/os/IBinder;
+
+    const-string v5, "performStopActivity"
+
+    if-nez v0, :cond_0
+
+    :catchall_3
+    move-object v0, v1
+
+    goto :goto_3
+
+    :cond_0
+    :try_start_3
+    const-class v6, Ljava/lang/String;
+
+    filled-new-array {v4, v3, v6}, [Ljava/lang/Class;
+
+    move-result-object v6
+
+    invoke-virtual {v0, v5, v6}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_3
+
+    :goto_3
+    sput-object v0, Lq9;->d:Ljava/lang/reflect/Method;
+
+    sget-object v0, Lq9;->a:Ljava/lang/Class;
+
+    if-nez v0, :cond_1
+
+    :catchall_4
+    move-object v0, v1
+
+    goto :goto_4
+
+    :cond_1
+    :try_start_4
+    filled-new-array {v4, v3}, [Ljava/lang/Class;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v5, v3}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_4
+
+    :goto_4
+    sput-object v0, Lq9;->e:Ljava/lang/reflect/Method;
+
+    sget-object v0, Lq9;->a:Ljava/lang/Class;
+
+    sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v4, 0x1a
+
+    if-eq v3, v4, :cond_2
+
+    const/16 v4, 0x1b
+
+    if-ne v3, v4, :cond_4
 
     :cond_2
-    aget-object v0, v0, p1
+    if-nez v0, :cond_3
 
-    new-instance v1, Ljkg;
+    goto :goto_5
 
-    invoke-direct {v1, p0, p2, p3, p1}, Ljkg;-><init>(Lq9;Lzj0;Lbjc;I)V
+    :cond_3
+    :try_start_5
+    const-string v3, "requestRelaunchActivity"
 
-    invoke-interface {v0, v1, p3}, Lajc;->a(Lzj0;Lbjc;)V
+    const-class v4, Landroid/os/IBinder;
 
-    const/4 p1, 0x1
+    const-class v5, Ljava/util/List;
 
-    return p1
+    const-class v6, Ljava/util/List;
+
+    sget-object v7, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+
+    sget-object v8, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
+
+    const-class v9, Landroid/content/res/Configuration;
+
+    const-class v10, Landroid/content/res/Configuration;
+
+    move-object v11, v8
+
+    move-object v12, v8
+
+    filled-new-array/range {v4 .. v12}, [Ljava/lang/Class;
+
+    move-result-object v4
+
+    invoke-virtual {v0, v3, v4}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_5
+
+    move-object v1, v0
+
+    :catchall_5
+    :cond_4
+    :goto_5
+    sput-object v1, Lq9;->f:Ljava/lang/reflect/Method;
+
+    return-void
 .end method

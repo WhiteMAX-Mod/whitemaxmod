@@ -1,41 +1,126 @@
 .class public final Lvri;
-.super Lwoi;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final Y(Laxa;Ldsi;)[Ljoj;
-    .locals 2
+# static fields
+.field public static final e:Ljava/lang/String;
 
-    invoke-virtual {p0}, Lwoi;->V()Landroid/os/Parcel;
+
+# instance fields
+.field public final a:Lztf;
+
+.field public final b:Ljava/util/HashMap;
+
+.field public final c:Ljava/util/HashMap;
+
+.field public final d:Ljava/lang/Object;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    const-string v0, "WorkTimer"
+
+    invoke-static {v0}, Lm0j;->n(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    sget v1, Lwui;->a:I
+    sput-object v0, Lvri;->e:Ljava/lang/String;
 
-    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
+    return-void
+.end method
 
-    const/4 p1, 0x1
+.method public constructor <init>(Lztf;)V
+    .locals 1
 
-    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x0
+    new-instance v0, Ljava/util/HashMap;
 
-    invoke-virtual {p2, v0, v1}, Ldsi;->writeToParcel(Landroid/os/Parcel;I)V
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    invoke-virtual {p0, v0, p1}, Lwoi;->W(Landroid/os/Parcel;I)Landroid/os/Parcel;
+    iput-object v0, p0, Lvri;->b:Ljava/util/HashMap;
 
-    move-result-object p1
+    new-instance v0, Ljava/util/HashMap;
 
-    sget-object p2, Ljoj;->CREATOR:Landroid/os/Parcelable$Creator;
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->createTypedArray(Landroid/os/Parcelable$Creator;)[Ljava/lang/Object;
+    iput-object v0, p0, Lvri;->c:Ljava/util/HashMap;
 
-    move-result-object p2
+    new-instance v0, Ljava/lang/Object;
 
-    check-cast p2, [Ljoj;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
+    iput-object v0, p0, Lvri;->d:Ljava/lang/Object;
 
-    return-object p2
+    iput-object p1, p0, Lvri;->a:Lztf;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Lsqi;)V
+    .locals 5
+
+    const-string v0, "Stopping timer for "
+
+    iget-object v1, p0, Lvri;->d:Ljava/lang/Object;
+
+    monitor-enter v1
+
+    :try_start_0
+    iget-object v2, p0, Lvri;->b:Ljava/util/HashMap;
+
+    invoke-virtual {v2, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Luri;
+
+    if-eqz v2, :cond_0
+
+    invoke-static {}, Lm0j;->g()Lm0j;
+
+    move-result-object v2
+
+    sget-object v3, Lvri;->e:Ljava/lang/String;
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v3, v0}, Lm0j;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lvri;->c:Ljava/util/HashMap;
+
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    monitor-exit v1
+
+    return-void
+
+    :goto_1
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p1
 .end method

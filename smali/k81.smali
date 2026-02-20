@@ -1,118 +1,179 @@
 .class public final Lk81;
-.super Ljava/lang/Object;
+.super Lalf;
 .source "SourceFile"
-
-# interfaces
-.implements Lnm4;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Landroid/os/Bundle;
+.field public final o:Lh78;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/os/Bundle;I)V
+.method public constructor <init>(Lh78;Ljava/util/concurrent/ExecutorService;)V
     .locals 0
 
-    iput p2, p0, Lk81;->a:I
+    invoke-direct {p0, p2}, Lalf;-><init>(Ljava/util/concurrent/Executor;)V
 
-    iput-object p1, p0, Lk81;->b:Landroid/os/Bundle;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lk81;->o:Lh78;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 6
+.method public final I(Lhmf;I)V
+    .locals 3
 
-    iget v0, p0, Lk81;->a:I
+    instance-of v0, p1, Lj81;
 
-    packed-switch v0, :pswitch_data_0
+    if-eqz v0, :cond_1
 
-    const-string v0, "call_id"
+    check-cast p1, Lj81;
 
-    iget-object v1, p0, Lk81;->b:Landroid/os/Bundle;
+    iget-object v0, p1, Lpyd;->a:Landroid/view/View;
 
-    invoke-static {v0, v1}, Lomj;->m(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/String;
+    invoke-virtual {p0, p2}, Lfg8;->D(I)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p2
 
-    const-string v2, "caller_id"
+    check-cast p2, Lmg8;
 
-    invoke-static {v2, v1}, Lomj;->k(Ljava/lang/String;Landroid/os/Bundle;)J
+    instance-of v1, p2, Lo81;
 
-    move-result-wide v1
+    if-nez v1, :cond_0
 
-    new-instance v3, Lone/me/calls/ui/bottomsheet/unkowncontact/UnknownContactBottomSheet;
-
-    invoke-direct {v3, v0, v1, v2}, Lone/me/calls/ui/bottomsheet/unkowncontact/UnknownContactBottomSheet;-><init>(Ljava/lang/String;J)V
-
-    return-object v3
-
-    :pswitch_0
-    const-string v0, "call_id"
-
-    iget-object v1, p0, Lk81;->b:Landroid/os/Bundle;
-
-    invoke-static {v0, v1}, Lomj;->m(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v2, "is_video"
-
-    invoke-static {v2, v1}, Lomj;->h(Ljava/lang/String;Landroid/os/Bundle;)Z
-
-    move-result v2
-
-    const-string v3, "is_group"
-
-    invoke-static {v3, v1}, Lomj;->h(Ljava/lang/String;Landroid/os/Bundle;)Z
-
-    move-result v3
-
-    const-string v4, "sdk_reasons"
-
-    invoke-virtual {v1, v4}, Landroid/os/BaseBundle;->containsKey(Ljava/lang/String;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_0
-
-    invoke-static {v4, v1}, Lomj;->m(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v4, ","
-
-    filled-new-array {v4}, [Ljava/lang/String;
-
-    move-result-object v4
-
-    const/4 v5, 0x4
-
-    invoke-static {v1, v4, v5}, Lrzf;->U(Ljava/lang/CharSequence;[Ljava/lang/String;I)Ljava/util/List;
-
-    move-result-object v1
-
-    goto :goto_0
+    return-void
 
     :cond_0
+    move-object v1, v0
+
+    check-cast v1, Lf8f;
+
+    sget-object v2, Lb8f;->b:Lb8f;
+
+    invoke-virtual {v1, v2}, Lf8f;->setThemeDepended(Lb8f;)V
+
+    invoke-virtual {p1, p2}, Lj81;->y(Lmg8;)V
+
+    move-object p1, p2
+
+    check-cast p1, Lo81;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 p1, 0x1
+
+    invoke-virtual {v1, p1}, Landroid/view/View;->setEnabled(Z)V
+
+    new-instance p1, Lld;
+
+    check-cast p2, Lo81;
+
+    const/4 v1, 0x3
+
+    iget-object v2, p0, Lk81;->o:Lh78;
+
+    invoke-direct {p1, v2, v1, p2}, Lld;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-static {v0, p1}, Lwuj;->c(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+
+    return-void
+
+    :cond_1
+    invoke-virtual {p0, p2}, Lfg8;->D(I)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lmg8;
+
+    invoke-virtual {p1, p2}, Lhmf;->y(Lmg8;)V
+
+    return-void
+.end method
+
+.method public final bridge synthetic s(Lpyd;I)V
+    .locals 0
+
+    check-cast p1, Lhmf;
+
+    invoke-virtual {p0, p1, p2}, Lk81;->I(Lhmf;I)V
+
+    return-void
+.end method
+
+.method public final u(Landroid/view/ViewGroup;I)Lpyd;
+    .locals 2
+
+    sget v0, Lt8b;->J:I
+
+    if-ne p2, v0, :cond_0
+
+    new-instance p2, Lj81;
+
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    new-instance v0, Lf8f;
+
     const/4 v1, 0x0
 
-    :goto_0
-    new-instance v4, Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;
+    invoke-direct {v0, p1, v1}, Lf8f;-><init>(Landroid/content/Context;I)V
 
-    invoke-direct {v4, v0, v3, v2, v1}, Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;-><init>(Ljava/lang/String;ZZLjava/util/List;)V
+    invoke-direct {p2, v0}, Lpyd;-><init>(Landroid/view/View;)V
 
-    return-object v4
+    return-object p2
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    :cond_0
+    sget v0, Lt8b;->I:I
+
+    if-ne p2, v0, :cond_1
+
+    new-instance p2, Lq21;
+
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    new-instance v0, Landroid/widget/TextView;
+
+    invoke-direct {v0, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+
+    sget-object p1, Lc9h;->q:Lipg;
+
+    invoke-static {p1, v0}, Lipg;->d(Lipg;Landroid/widget/TextView;)V
+
+    sget-object p1, Lfe3;->t0:Ltea;
+
+    invoke-virtual {p1, v0}, Ltea;->r(Landroid/view/View;)Loob;
+
+    move-result-object p1
+
+    iget-object p1, p1, Loob;->b:Llob;
+
+    invoke-interface {p1}, Llob;->getText()Lhob;
+
+    move-result-object p1
+
+    iget p1, p1, Lhob;->d:I
+
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
+
+    const/4 p1, 0x2
+
+    invoke-direct {p2, v0, p1}, Lq21;-><init>(Landroid/view/View;I)V
+
+    return-object p2
+
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "unknown item viewType "
+
+    invoke-static {p2, v0}, Ljye;->i(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

@@ -1,26 +1,21 @@
 .class public final Lrze;
-.super Ljava/lang/Object;
+.super Lvze;
 .source "SourceFile"
-
-# interfaces
-.implements Lsze;
 
 
 # instance fields
-.field public final a:I
+.field public h:Lzl8;
 
-.field public final b:Lqhg;
+.field public i:F
 
 
-# direct methods
-.method public constructor <init>(ILqhg;)V
-    .locals 0
+# virtual methods
+.method public final a()Lwze;
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lsze;
 
-    iput p1, p0, Lrze;->a:I
+    invoke-direct {v0, p0}, Lsze;-><init>(Lrze;)V
 
-    iput-object p2, p0, Lrze;->b:Lqhg;
-
-    return-void
+    return-object v0
 .end method

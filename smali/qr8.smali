@@ -2,288 +2,616 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/Map$Entry;
-.implements Lo28;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:I
 
-.field public final b:Ljava/lang/Object;
+.field public final b:Lne3;
 
-.field public final c:Ljava/lang/Object;
+.field public final c:Ltea;
+
+.field public d:I
+
+.field public e:I
+
+.field public f:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;ILjava/lang/Object;)V
-    .locals 0
-
-    iput p2, p0, Lqr8;->a:I
-
-    iput-object p1, p0, Lqr8;->b:Ljava/lang/Object;
-
-    iput-object p3, p0, Lqr8;->c:Ljava/lang/Object;
+.method public constructor <init>(I)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    iput p1, p0, Lqr8;->a:I
+
+    if-lez p1, :cond_0
+
+    new-instance p1, Lne3;
+
+    const/4 v0, 0x1
+
+    invoke-direct {p1, v0}, Lne3;-><init>(I)V
+
+    iput-object p1, p0, Lqr8;->b:Lne3;
+
+    new-instance p1, Ltea;
+
+    const/16 v0, 0x13
+
+    invoke-direct {p1, v0}, Ltea;-><init>(I)V
+
+    iput-object p1, p0, Lqr8;->c:Ltea;
+
     return-void
+
+    :cond_0
+    const-string p1, "maxSize <= 0"
+
+    invoke-static {p1}, Lnvj;->b(Ljava/lang/String;)V
+
+    const/4 p1, 0x0
+
+    throw p1
 .end method
 
 
 # virtual methods
-.method public equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public a(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lqr8;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-
-    :pswitch_0
-    instance-of v0, p1, Ljava/util/Map$Entry;
-
-    if-eqz v0, :cond_0
-
-    check-cast p1, Ljava/util/Map$Entry;
-
-    goto :goto_0
-
-    :cond_0
     const/4 p1, 0x0
 
-    :goto_0
-    if-nez p1, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lqr8;->b:Ljava/lang/Object;
-
-    invoke-static {v0, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    invoke-virtual {p0}, Lqr8;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {p1, v0}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    const/4 p1, 0x1
-
-    goto :goto_2
-
-    :cond_2
-    :goto_1
-    const/4 p1, 0x0
-
-    :goto_2
-    return p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method
 
-.method public final getKey()Ljava/lang/Object;
-    .locals 1
+.method public b(ZLjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    iget v0, p0, Lqr8;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lqr8;->b:Ljava/lang/Object;
-
-    return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Lqr8;->b:Ljava/lang/Object;
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method
 
-.method public getValue()Ljava/lang/Object;
-    .locals 1
+.method public final c(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
 
-    iget v0, p0, Lqr8;->a:I
+    iget-object v0, p0, Lqr8;->c:Ltea;
 
-    packed-switch v0, :pswitch_data_0
+    monitor-enter v0
 
-    iget-object v0, p0, Lqr8;->c:Ljava/lang/Object;
+    :try_start_0
+    iget-object v1, p0, Lqr8;->b:Lne3;
 
-    return-object v0
+    iget-object v1, v1, Lne3;->a:Ljava/util/LinkedHashMap;
 
-    :pswitch_0
-    iget-object v0, p0, Lqr8;->c:Ljava/lang/Object;
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public hashCode()I
-    .locals 3
-
-    iget v0, p0, Lqr8;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
-
-    :pswitch_0
-    const/4 v0, 0x0
-
-    iget-object v1, p0, Lqr8;->b:Ljava/lang/Object;
-
-    if-nez v1, :cond_0
-
-    move v1, v0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    :goto_0
-    invoke-virtual {p0}, Lqr8;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    if-nez v2, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    :goto_1
-    xor-int/2addr v0, v1
-
-    return v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public setValue(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iget p1, p0, Lqr8;->a:I
-
-    packed-switch p1, :pswitch_data_0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string v0, "Operation is not supported for read-only collection"
-
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :pswitch_0
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string v0, "Operation is not supported for read-only collection"
-
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public toString()Ljava/lang/String;
-    .locals 2
-
-    iget v0, p0, Lqr8;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_0
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    iget-object v1, p0, Lqr8;->b:Ljava/lang/Object;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x3d
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Lqr8;->getValue()Ljava/lang/Object;
+    invoke-virtual {v1, p1}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    if-eqz v1, :cond_0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget p1, p0, Lqr8;->e:I
+
+    add-int/lit8 p1, p1, 0x1
+
+    iput p1, p0, Lqr8;->e:I
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v0
+
+    return-object v1
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_2
+
+    :cond_0
+    :try_start_1
+    iget v1, p0, Lqr8;->f:I
+
+    add-int/lit8 v1, v1, 0x1
+
+    iput v1, p0, Lqr8;->f:I
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    monitor-exit v0
+
+    invoke-virtual {p0, p1}, Lqr8;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
+    if-nez v0, :cond_1
+
+    const/4 p1, 0x0
+
+    return-object p1
+
+    :cond_1
+    iget-object v1, p0, Lqr8;->c:Ltea;
+
+    monitor-enter v1
+
+    :try_start_2
+    iget-object v2, p0, Lqr8;->b:Lne3;
+
+    iget-object v2, v2, Lne3;->a:Ljava/util/LinkedHashMap;
+
+    invoke-virtual {v2, p1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v3, p0, Lqr8;->b:Lne3;
+
+    iget-object v3, v3, Lne3;->a:Ljava/util/LinkedHashMap;
+
+    invoke-virtual {v3, p1, v2}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_0
+
+    :catchall_1
+    move-exception p1
+
+    goto :goto_1
+
+    :cond_2
+    iget v3, p0, Lqr8;->d:I
+
+    invoke-virtual {p0, p1, v0}, Lqr8;->f(Ljava/lang/Object;Ljava/lang/Object;)I
+
+    move-result v4
+
+    add-int/2addr v3, v4
+
+    iput v3, p0, Lqr8;->d:I
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    :goto_0
+    monitor-exit v1
+
+    if-eqz v2, :cond_3
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v1, p1, v0, v2}, Lqr8;->b(ZLjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+
+    return-object v2
+
+    :cond_3
+    iget p1, p0, Lqr8;->a:I
+
+    invoke-virtual {p0, p1}, Lqr8;->i(I)V
+
     return-object v0
 
-    nop
+    :goto_1
+    monitor-exit v1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    throw p1
+
+    :goto_2
+    monitor-exit v0
+
+    throw p1
+.end method
+
+.method public final d(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    iget-object v0, p0, Lqr8;->c:Ltea;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget v1, p0, Lqr8;->d:I
+
+    invoke-virtual {p0, p1, p2}, Lqr8;->f(Ljava/lang/Object;Ljava/lang/Object;)I
+
+    move-result v2
+
+    add-int/2addr v1, v2
+
+    iput v1, p0, Lqr8;->d:I
+
+    iget-object v1, p0, Lqr8;->b:Lne3;
+
+    iget-object v1, v1, Lne3;->a:Ljava/util/LinkedHashMap;
+
+    invoke-virtual {v1, p1, p2}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    iget v2, p0, Lqr8;->d:I
+
+    invoke-virtual {p0, p1, v1}, Lqr8;->f(Ljava/lang/Object;Ljava/lang/Object;)I
+
+    move-result v3
+
+    sub-int/2addr v2, v3
+
+    iput v2, p0, Lqr8;->d:I
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    monitor-exit v0
+
+    if-eqz v1, :cond_1
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0, p1, v1, p2}, Lqr8;->b(ZLjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+
+    :cond_1
+    iget p1, p0, Lqr8;->a:I
+
+    invoke-virtual {p0, p1}, Lqr8;->i(I)V
+
+    return-object v1
+
+    :goto_1
+    monitor-exit v0
+
+    throw p1
+.end method
+
+.method public final e(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    iget-object v0, p0, Lqr8;->c:Ltea;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-object v1, p0, Lqr8;->b:Lne3;
+
+    iget-object v1, v1, Lne3;->a:Ljava/util/LinkedHashMap;
+
+    invoke-virtual {v1, p1}, Ljava/util/AbstractMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    iget v2, p0, Lqr8;->d:I
+
+    invoke-virtual {p0, p1, v1}, Lqr8;->f(Ljava/lang/Object;Ljava/lang/Object;)I
+
+    move-result v3
+
+    sub-int/2addr v2, v3
+
+    iput v2, p0, Lqr8;->d:I
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    monitor-exit v0
+
+    if-eqz v1, :cond_1
+
+    const/4 v0, 0x0
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p0, v0, p1, v1, v2}, Lqr8;->b(ZLjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+
+    :cond_1
+    return-object v1
+
+    :goto_1
+    monitor-exit v0
+
+    throw p1
+.end method
+
+.method public final f(Ljava/lang/Object;Ljava/lang/Object;)I
+    .locals 2
+
+    invoke-virtual {p0, p2}, Lqr8;->h(Ljava/lang/Object;)I
+
+    move-result v0
+
+    if-ltz v0, :cond_0
+
+    return v0
+
+    :cond_0
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Negative size: "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const/16 p1, 0x3d
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    new-instance p2, Ljava/lang/IllegalStateException;
+
+    invoke-direct {p2, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p2
+.end method
+
+.method public final g()I
+    .locals 2
+
+    iget-object v0, p0, Lqr8;->c:Ltea;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget v1, p0, Lqr8;->d:I
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v0
+
+    return v1
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+
+    throw v1
+.end method
+
+.method public h(Ljava/lang/Object;)I
+    .locals 0
+
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final i(I)V
+    .locals 5
+
+    :goto_0
+    iget-object v0, p0, Lqr8;->c:Ltea;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget v1, p0, Lqr8;->d:I
+
+    if-ltz v1, :cond_4
+
+    iget-object v1, p0, Lqr8;->b:Lne3;
+
+    iget-object v1, v1, Lne3;->a:Ljava/util/LinkedHashMap;
+
+    invoke-virtual {v1}, Ljava/util/AbstractMap;->isEmpty()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    iget v1, p0, Lqr8;->d:I
+
+    if-nez v1, :cond_4
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_3
+
+    :cond_0
+    :goto_1
+    iget v1, p0, Lqr8;->d:I
+
+    if-le v1, p1, :cond_3
+
+    iget-object v1, p0, Lqr8;->b:Lne3;
+
+    iget-object v1, v1, Lne3;->a:Ljava/util/LinkedHashMap;
+
+    invoke-virtual {v1}, Ljava/util/AbstractMap;->isEmpty()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    goto :goto_2
+
+    :cond_1
+    iget-object v1, p0, Lqr8;->b:Lne3;
+
+    iget-object v1, v1, Lne3;->a:Ljava/util/LinkedHashMap;
+
+    invoke-virtual {v1}, Ljava/util/LinkedHashMap;->entrySet()Ljava/util/Set;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lek3;->E(Ljava/lang/Iterable;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/util/Map$Entry;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-nez v1, :cond_2
+
+    monitor-exit v0
+
+    return-void
+
+    :cond_2
+    :try_start_1
+    invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v2
+
+    invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    iget-object v3, p0, Lqr8;->b:Lne3;
+
+    iget-object v3, v3, Lne3;->a:Ljava/util/LinkedHashMap;
+
+    invoke-virtual {v3, v2}, Ljava/util/AbstractMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget v3, p0, Lqr8;->d:I
+
+    invoke-virtual {p0, v2, v1}, Lqr8;->f(Ljava/lang/Object;Ljava/lang/Object;)I
+
+    move-result v4
+
+    sub-int/2addr v3, v4
+
+    iput v3, p0, Lqr8;->d:I
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    monitor-exit v0
+
+    const/4 v0, 0x1
+
+    const/4 v3, 0x0
+
+    invoke-virtual {p0, v0, v2, v1, v3}, Lqr8;->b(ZLjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_3
+    :goto_2
+    monitor-exit v0
+
+    return-void
+
+    :cond_4
+    :try_start_2
+    const-string p1, "LruCache.sizeOf() is reporting inconsistent results!"
+
+    new-instance v1, Ljava/lang/IllegalStateException;
+
+    invoke-direct {v1, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    :goto_3
+    monitor-exit v0
+
+    throw p1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    const-string v0, "LruCache[maxSize="
+
+    iget-object v1, p0, Lqr8;->c:Ltea;
+
+    monitor-enter v1
+
+    :try_start_0
+    iget v2, p0, Lqr8;->e:I
+
+    iget v3, p0, Lqr8;->f:I
+
+    add-int/2addr v3, v2
+
+    if-eqz v3, :cond_0
+
+    mul-int/lit8 v2, v2, 0x64
+
+    div-int/2addr v2, v3
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_1
+
+    :cond_0
+    const/4 v2, 0x0
+
+    :goto_0
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v0, p0, Lqr8;->a:I
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v0, ",hits="
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v0, p0, Lqr8;->e:I
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v0, ",misses="
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v0, p0, Lqr8;->f:I
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v0, ",hitRate="
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v0, "%]"
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v1
+
+    return-object v0
+
+    :goto_1
+    monitor-exit v1
+
+    throw v0
 .end method

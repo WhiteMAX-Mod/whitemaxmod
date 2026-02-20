@@ -2,28 +2,43 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/io/Closeable;
+
+
+# instance fields
+.field public a:I
+
 
 # direct methods
-.method public static a(Landroid/content/Context;)Landroid/app/KeyguardManager;
+.method static constructor <clinit>()V
     .locals 1
 
-    const-class v0, Landroid/app/KeyguardManager;
+    invoke-static {}, Ly5g;->values()[Ly5g;
 
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
+    move-result-object v0
 
-    move-result-object p0
+    invoke-static {v0}, Lote;->t([Liy7;)Lote;
 
-    check-cast p0, Landroid/app/KeyguardManager;
-
-    return-object p0
+    return-void
 .end method
 
-.method public static b(Landroid/app/KeyguardManager;)Z
-    .locals 0
 
-    invoke-virtual {p0}, Landroid/app/KeyguardManager;->isDeviceSecure()Z
+# virtual methods
+.method public abstract E()Ljava/lang/String;
+.end method
 
-    move-result p0
+.method public abstract H()[C
+.end method
 
-    return p0
+.method public abstract d0()I
+.end method
+
+.method public abstract e0()I
+.end method
+
+.method public abstract l()Le48;
+.end method
+
+.method public abstract q0()La58;
 .end method

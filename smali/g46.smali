@@ -1,33 +1,24 @@
-.class public final Lg46;
+.class public abstract Lg46;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Landroid/content/Context;
+.field public final a:Ljava/io/File;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
+.method public constructor <init>(Ljava/io/File;)V
     .locals 0
 
-    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4
-    iput-object p1, p0, Lg46;->a:Landroid/content/Context;
+    iput-object p1, p0, Lg46;->a:Ljava/io/File;
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Lseb;)V
-    .locals 0
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    iput-object p1, p0, Lg46;->a:Landroid/content/Context;
-
-    return-void
+# virtual methods
+.method public abstract a()Ljava/io/File;
 .end method

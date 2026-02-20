@@ -1,137 +1,301 @@
-.class public final synthetic Laf;
-.super Ljava/lang/Object;
+.class public final Laf;
+.super Lcec;
 .source "SourceFile"
 
-# interfaces
-.implements Luh7;
+
+# static fields
+.field public static final d:Z
 
 
 # instance fields
-.field public final synthetic a:Lcom/facebook/fresco/animation/factory/AnimatedFactoryV2Impl;
+.field public final c:Ljava/util/ArrayList;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/facebook/fresco/animation/factory/AnimatedFactoryV2Impl;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
+
+    invoke-static {}, Lmqa;->s()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x1d
+
+    if-lt v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    sput-boolean v0, Laf;->d:Z
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 6
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Laf;->a:Lcom/facebook/fresco/animation/factory/AnimatedFactoryV2Impl;
+    invoke-static {}, Lmqa;->s()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x1d
+
+    if-lt v0, v1, :cond_0
+
+    new-instance v0, Lbf;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    new-instance v1, Lnx4;
+
+    sget-object v2, Ltf;->f:Lote;
+
+    invoke-direct {v1, v2}, Lnx4;-><init>(Lmx4;)V
+
+    new-instance v2, Lnx4;
+
+    sget-object v3, Lkx3;->a:Ljx3;
+
+    invoke-direct {v2, v3}, Lnx4;-><init>(Lmx4;)V
+
+    new-instance v3, Lnx4;
+
+    sget-object v4, Llv0;->a:Lkv0;
+
+    invoke-direct {v3, v4}, Lnx4;-><init>(Lmx4;)V
+
+    const/4 v4, 0x4
+
+    new-array v4, v4, [Lmqf;
+
+    const/4 v5, 0x0
+
+    aput-object v0, v4, v5
+
+    const/4 v0, 0x1
+
+    aput-object v1, v4, v0
+
+    const/4 v0, 0x2
+
+    aput-object v2, v4, v0
+
+    const/4 v0, 0x3
+
+    aput-object v3, v4, v0
+
+    invoke-static {v4}, Lnu;->t([Ljava/lang/Object;)Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :cond_1
+    :goto_1
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    move-object v3, v2
+
+    check-cast v3, Lmqf;
+
+    invoke-interface {v3}, Lmqf;->a()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_1
+
+    :cond_2
+    iput-object v1, p0, Laf;->c:Ljava/util/ArrayList;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lei5;ILl2d;Lth7;)Lhg3;
-    .locals 3
+.method public final b(Ljavax/net/ssl/X509TrustManager;)Lrlj;
+    .locals 2
 
-    iget-object p2, p0, Laf;->a:Lcom/facebook/fresco/animation/factory/AnimatedFactoryV2Impl;
-
-    iget-object p3, p2, Lcom/facebook/fresco/animation/factory/AnimatedFactoryV2Impl;->e:Lhf;
-
-    if-nez p3, :cond_0
-
-    new-instance p3, Limf;
-
-    const/4 v0, 0x2
-
-    invoke-direct {p3, v0, p2}, Limf;-><init>(ILjava/lang/Object;)V
-
-    new-instance v0, Lhf;
-
-    iget-object v1, p2, Lcom/facebook/fresco/animation/factory/AnimatedFactoryV2Impl;->a:Loac;
-
-    iget-boolean v2, p2, Lcom/facebook/fresco/animation/factory/AnimatedFactoryV2Impl;->k:Z
-
-    invoke-direct {v0, p3, v1, v2}, Lhf;-><init>(Limf;Loac;Z)V
-
-    iput-object v0, p2, Lcom/facebook/fresco/animation/factory/AnimatedFactoryV2Impl;->e:Lhf;
-
-    :cond_0
-    iget-object p2, p2, Lcom/facebook/fresco/animation/factory/AnimatedFactoryV2Impl;->e:Lhf;
-
-    iget-object p3, p4, Lth7;->b:Landroid/graphics/Bitmap$Config;
-
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object p2, Lhf;->b:Lcom/facebook/animated/gif/GifImage;
-
-    if-eqz p2, :cond_2
-
-    iget-object p2, p1, Lei5;->a:Lkg3;
-
-    invoke-static {p2}, Lkg3;->H(Lkg3;)Lkg3;
-
-    move-result-object p2
-
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const/4 v0, 0x0
 
     :try_start_0
-    invoke-virtual {p2}, Lkg3;->p0()Ljava/lang/Object;
+    new-instance v1, Landroid/net/http/X509TrustManagerExtensions;
 
-    move-result-object p3
-
-    check-cast p3, Lfj9;
-
-    invoke-virtual {p3}, Lfj9;->o()Ljava/nio/ByteBuffer;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {p3}, Lfj9;->o()Ljava/nio/ByteBuffer;
-
-    move-result-object p3
-
-    invoke-static {p3, p4}, Lcom/facebook/animated/gif/GifImage;->a(Ljava/nio/ByteBuffer;Lth7;)Lcom/facebook/animated/gif/GifImage;
-
-    move-result-object p3
+    invoke-direct {v1, p1}, Landroid/net/http/X509TrustManagerExtensions;-><init>(Ljavax/net/ssl/X509TrustManager;)V
+    :try_end_0
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {p3}, Lfj9;->E()J
-
-    move-result-wide v0
-
-    invoke-virtual {p3}, Lfj9;->g0()I
-
-    move-result p3
-
-    invoke-static {v0, v1, p3, p4}, Lcom/facebook/animated/gif/GifImage;->b(JILth7;)Lcom/facebook/animated/gif/GifImage;
-
-    move-result-object p3
+    :catch_0
+    move-object v1, v0
 
     :goto_0
-    iget-object p1, p1, Lei5;->u0:Ljava/lang/String;
+    if-eqz v1, :cond_0
 
-    invoke-static {p1, p4, p3}, Lhf;->a(Ljava/lang/String;Lth7;Lcom/facebook/animated/gif/GifImage;)Lgg3;
+    new-instance v0, Lcf;
+
+    invoke-direct {v0, p1, v1}, Lcf;-><init>(Ljavax/net/ssl/X509TrustManager;Landroid/net/http/X509TrustManagerExtensions;)V
+
+    :cond_0
+    if-eqz v0, :cond_1
+
+    return-object v0
+
+    :cond_1
+    invoke-super {p0, p1}, Lcec;->b(Ljavax/net/ssl/X509TrustManager;)Lrlj;
 
     move-result-object p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-virtual {p2}, Lkg3;->close()V
+    return-object p1
+.end method
+
+.method public final d(Ljavax/net/ssl/SSLSocket;Ljava/lang/String;Ljava/util/List;)V
+    .locals 3
+
+    iget-object v0, p0, Laf;->c:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :cond_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    move-object v2, v1
+
+    check-cast v2, Lmqf;
+
+    invoke-interface {v2, p1}, Lmqf;->b(Ljavax/net/ssl/SSLSocket;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v1, 0x0
+
+    :goto_0
+    check-cast v1, Lmqf;
+
+    if-eqz v1, :cond_2
+
+    invoke-interface {v1, p1, p2, p3}, Lmqf;->d(Ljavax/net/ssl/SSLSocket;Ljava/lang/String;Ljava/util/List;)V
+
+    :cond_2
+    return-void
+.end method
+
+.method public final f(Ljavax/net/ssl/SSLSocket;)Ljava/lang/String;
+    .locals 4
+
+    iget-object v0, p0, Laf;->c:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :cond_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    move-object v3, v1
+
+    check-cast v3, Lmqf;
+
+    invoke-interface {v3, p1}, Lmqf;->b(Ljavax/net/ssl/SSLSocket;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    goto :goto_0
+
+    :cond_1
+    move-object v1, v2
+
+    :goto_0
+    check-cast v1, Lmqf;
+
+    if-eqz v1, :cond_2
+
+    invoke-interface {v1, p1}, Lmqf;->c(Ljavax/net/ssl/SSLSocket;)Ljava/lang/String;
+
+    move-result-object p1
 
     return-object p1
 
-    :goto_1
-    invoke-virtual {p2}, Lkg3;->close()V
-
-    throw p1
-
     :cond_2
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    return-object v2
+.end method
 
-    const-string p2, "To encode animated webp please add the dependency to the animated-webp module"
+.method public final h(Ljava/lang/String;)Z
+    .locals 1
 
-    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-static {}, Landroid/security/NetworkSecurityPolicy;->getInstance()Landroid/security/NetworkSecurityPolicy;
 
-    throw p1
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Landroid/security/NetworkSecurityPolicy;->isCleartextTrafficPermitted(Ljava/lang/String;)Z
+
+    move-result p1
+
+    return p1
 .end method

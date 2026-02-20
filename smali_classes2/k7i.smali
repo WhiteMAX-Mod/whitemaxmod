@@ -1,26 +1,28 @@
 .class public final Lk7i;
-.super Lp6g;
+.super Lpdg;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Lys6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/webapp/rootscreen/WebAppRootScreen;
+.field public X:I
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic Y:Lv7i;
+
+.field public o:Z
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/webapp/rootscreen/WebAppRootScreen;)V
+.method public constructor <init>(Lv7i;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p2, p0, Lk7i;->X:Lone/me/webapp/rootscreen/WebAppRootScreen;
+    iput-object p1, p0, Lk7i;->Y:Lv7i;
 
-    const/4 p2, 0x2
+    const/4 p1, 0x2
 
-    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -30,6 +32,8 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    check-cast p1, Lnd4;
+
     check-cast p2, Lkotlin/coroutines/Continuation;
 
     invoke-virtual {p0, p1, p2}, Lk7i;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
@@ -38,97 +42,153 @@
 
     check-cast p1, Lk7i;
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    sget-object p2, Lmah;->a:Lmah;
 
     invoke-virtual {p1, p2}, Lk7i;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object p2
+    move-result-object p1
+
+    return-object p1
 .end method
 
 .method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    .locals 1
 
-    new-instance v0, Lk7i;
+    new-instance p1, Lk7i;
 
-    iget-object v1, p0, Lk7i;->X:Lone/me/webapp/rootscreen/WebAppRootScreen;
+    iget-object v0, p0, Lk7i;->Y:Lv7i;
 
-    invoke-direct {v0, p2, v1}, Lk7i;-><init>(Lkotlin/coroutines/Continuation;Lone/me/webapp/rootscreen/WebAppRootScreen;)V
+    invoke-direct {p1, v0, p2}, Lk7i;-><init>(Lv7i;Lkotlin/coroutines/Continuation;)V
 
-    iput-object p1, v0, Lk7i;->o:Ljava/lang/Object;
-
-    return-object v0
+    return-object p1
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+    .locals 9
 
-    iget-object v0, p0, Lk7i;->o:Ljava/lang/Object;
+    iget v0, p0, Lk7i;->X:I
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    const/4 v1, 0x1
 
-    check-cast v0, Lcah;
+    if-eqz v0, :cond_1
 
-    iget-object p1, p0, Lk7i;->X:Lone/me/webapp/rootscreen/WebAppRootScreen;
+    if-ne v0, v1, :cond_0
 
-    iget-object p1, p1, Lone/me/webapp/rootscreen/WebAppRootScreen;->u0:Ljava/lang/String;
+    iget-boolean v0, p0, Lk7i;->o:Z
 
-    sget-object v1, Lc5j;->a:Ledb;
-
-    if-nez v1, :cond_0
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
     goto :goto_0
 
     :cond_0
-    sget-object v2, Lkk8;->d:Lkk8;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    invoke-virtual {v1, v2}, Ledb;->b(Lkk8;)Z
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    move-result v3
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    if-eqz v3, :cond_1
-
-    iget-boolean v3, v0, Lcah;->b:Z
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    const-string v5, "collect url state: "
-
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v5, " "
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v1, v2, p1, v3, v4}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    throw p1
 
     :cond_1
-    :goto_0
-    iget-boolean p1, v0, Lcah;->b:Z
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    if-nez p1, :cond_2
+    iget-object p1, p0, Lk7i;->Y:Lv7i;
 
-    iget-object p1, p0, Lk7i;->X:Lone/me/webapp/rootscreen/WebAppRootScreen;
+    invoke-virtual {p1}, Lv7i;->f()Z
 
-    invoke-virtual {p1}, Lone/me/webapp/rootscreen/WebAppRootScreen;->O0()Lyee;
+    move-result v0
+
+    iget-object v2, p1, Lv7i;->i:Lj88;
+
+    invoke-interface {v2}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    move-object v3, v2
+
+    check-cast v3, Ls6i;
+
+    iget-wide v4, p1, Lv7i;->a:J
+
+    iget-wide v6, p1, Lv7i;->b:J
+
+    iput-boolean v0, p0, Lk7i;->o:Z
+
+    iput v1, p0, Lk7i;->X:I
+
+    move-object v8, p0
+
+    invoke-virtual/range {v3 .. v8}, Ls6i;->a(JJLpdg;)Ljava/lang/Object;
 
     move-result-object p1
 
-    iget-object v0, v0, Lcah;->a:Ljava/lang/String;
+    sget-object v2, Lod4;->a:Lod4;
 
-    invoke-virtual {p1, v0}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
+    if-ne p1, v2, :cond_2
+
+    return-object v2
 
     :cond_2
-    sget-object p1, Lb3h;->a:Lb3h;
+    :goto_0
+    check-cast p1, Lw7i;
 
-    return-object p1
+    new-instance v2, Lwq0;
+
+    const/4 v3, 0x0
+
+    if-eqz p1, :cond_3
+
+    iget-boolean v4, p1, Lw7i;->e:Z
+
+    if-ne v4, v1, :cond_3
+
+    move v4, v1
+
+    goto :goto_1
+
+    :cond_3
+    move v4, v3
+
+    :goto_1
+    if-eqz p1, :cond_4
+
+    iget-boolean v5, p1, Lw7i;->f:Z
+
+    if-ne v5, v1, :cond_4
+
+    move v5, v1
+
+    goto :goto_2
+
+    :cond_4
+    move v5, v3
+
+    :goto_2
+    if-eqz p1, :cond_5
+
+    iget-object p1, p1, Lw7i;->d:Ljava/lang/String;
+
+    goto :goto_3
+
+    :cond_5
+    const/4 p1, 0x0
+
+    :goto_3
+    if-eqz p1, :cond_6
+
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
+
+    move-result p1
+
+    if-nez p1, :cond_7
+
+    :cond_6
+    move v3, v1
+
+    :cond_7
+    xor-int/lit8 p1, v3, 0x1
+
+    invoke-direct {v2, v0, v4, v5, p1}, Lwq0;-><init>(ZZZZ)V
+
+    return-object v2
 .end method

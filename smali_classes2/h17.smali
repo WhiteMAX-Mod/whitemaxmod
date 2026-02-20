@@ -1,199 +1,139 @@
 .class public final Lh17;
-.super Ljava/lang/Object;
+.super Lhmf;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:[I
+# virtual methods
+.method public final E(Lg17;)V
+    .locals 8
 
-.field public final b:[I
+    iget-object v0, p1, Lg17;->Z:Ljava/util/List;
 
-.field public final c:[I
+    iget-object v1, p1, Lg17;->d:Ltkc;
 
-.field public final d:[I
+    iget-object v2, p0, Lpyd;->a:Landroid/view/View;
 
+    check-cast v2, Lf9b;
 
-# direct methods
-.method public constructor <init>([I[I[I[I)V
-    .locals 0
+    iget-wide v3, p1, Lg17;->t0:J
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {v3, v4}, Ljava/lang/Long;->hashCode(J)I
 
-    iput-object p1, p0, Lh17;->a:[I
+    move-result v3
 
-    iput-object p2, p0, Lh17;->b:[I
+    invoke-virtual {v2, v3}, Landroid/view/View;->setId(I)V
 
-    iput-object p3, p0, Lh17;->c:[I
+    iget-object v3, p1, Lg17;->c:Ltkc;
 
-    iput-object p4, p0, Lh17;->d:[I
+    iget-object v4, v3, Ltkc;->a:Ljava/lang/CharSequence;
+
+    iget-object v5, v3, Ltkc;->a:Ljava/lang/CharSequence;
+
+    invoke-virtual {v4}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    iget-object v6, v2, Lf9b;->d:Landroid/widget/TextView;
+
+    if-eqz v4, :cond_1
+
+    invoke-virtual {v4}, Ljava/lang/String;->length()I
+
+    move-result v7
+
+    if-nez v7, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v6}, Landroid/widget/TextView;->getPaint()Landroid/text/TextPaint;
+
+    move-result-object v7
+
+    invoke-virtual {v7, v4}, Landroid/graphics/Paint;->measureText(Ljava/lang/String;)F
+
+    move-result v4
+
+    invoke-virtual {v6}, Landroid/view/View;->getMeasuredWidth()I
+
+    move-result v6
+
+    int-to-float v6, v6
+
+    cmpl-float v4, v4, v6
+
+    if-lez v4, :cond_1
+
+    iget-object v3, v3, Ltkc;->b:[Ljava/lang/String;
+
+    invoke-static {v5, v0, v3}, Lvqj;->f(Ljava/lang/CharSequence;Ljava/util/List;[Ljava/lang/String;)Ljava/lang/CharSequence;
+
+    move-result-object v5
+
+    :cond_1
+    :goto_0
+    invoke-virtual {v2, v5}, Lf9b;->setTitle(Ljava/lang/CharSequence;)V
+
+    iget-object v3, v1, Ltkc;->a:Ljava/lang/CharSequence;
+
+    iget-object v4, v1, Ltkc;->a:Ljava/lang/CharSequence;
+
+    invoke-virtual {v3}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Lf9b;->e(Ljava/lang/String;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    iget-object v1, v1, Ltkc;->b:[Ljava/lang/String;
+
+    invoke-static {v4, v0, v1}, Lvqj;->f(Ljava/lang/CharSequence;Ljava/util/List;[Ljava/lang/String;)Ljava/lang/CharSequence;
+
+    move-result-object v4
+
+    :cond_2
+    invoke-virtual {v2, v4}, Lf9b;->setSubtitle(Ljava/lang/CharSequence;)V
+
+    iget-wide v0, p1, Lg17;->a:J
+
+    iget-object v3, p1, Lg17;->b:Ljava/lang/String;
+
+    iget-object v4, p1, Lg17;->X:Landroid/net/Uri;
+
+    if-eqz v4, :cond_3
+
+    invoke-virtual {v4}, Landroid/net/Uri;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    if-nez v4, :cond_4
+
+    :cond_3
+    sget-object v4, Landroid/net/Uri;->EMPTY:Landroid/net/Uri;
+
+    invoke-virtual {v4}, Landroid/net/Uri;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    :cond_4
+    invoke-virtual {v2, v0, v1, v3, v4}, Lf9b;->g(JLjava/lang/CharSequence;Ljava/lang/String;)V
+
+    iget-boolean p1, p1, Lg17;->o:Z
+
+    invoke-virtual {v2, p1}, Lf9b;->setVerified(Z)V
 
     return-void
 .end method
 
+.method public final bridge synthetic y(Lmg8;)V
+    .locals 0
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    check-cast p1, Lg17;
 
-    const/4 v0, 0x1
+    invoke-virtual {p0, p1}, Lh17;->E(Lg17;)V
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lh17;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lh17;
-
-    iget-object v1, p0, Lh17;->a:[I
-
-    iget-object v3, p1, Lh17;->a:[I
-
-    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lh17;->b:[I
-
-    iget-object v3, p1, Lh17;->b:[I
-
-    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lh17;->c:[I
-
-    iget-object v3, p1, Lh17;->c:[I
-
-    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-object v1, p0, Lh17;->d:[I
-
-    iget-object p1, p1, Lh17;->d:[I
-
-    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_5
-
-    return v2
-
-    :cond_5
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Lh17;->a:[I
-
-    invoke-static {v0}, Ljava/util/Arrays;->hashCode([I)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lh17;->b:[I
-
-    invoke-static {v1}, Ljava/util/Arrays;->hashCode([I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v0, p0, Lh17;->c:[I
-
-    invoke-static {v0}, Ljava/util/Arrays;->hashCode([I)I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lh17;->d:[I
-
-    invoke-static {v1}, Ljava/util/Arrays;->hashCode([I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 7
-
-    iget-object v0, p0, Lh17;->a:[I
-
-    invoke-static {v0}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lh17;->b:[I
-
-    invoke-static {v1}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lh17;->c:[I
-
-    invoke-static {v2}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
-
-    move-result-object v2
-
-    iget-object v3, p0, Lh17;->d:[I
-
-    invoke-static {v3}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
-
-    move-result-object v3
-
-    const-string v4, ", iconContainerGradient="
-
-    const-string v5, ", paleBlueGradient="
-
-    const-string v6, "GradientsBannerDKBackgroundColors(fantasyGradient="
-
-    invoke-static {v6, v0, v4, v1, v5}, Lkz1;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ", vibrantGradient="
-
-    const-string v4, ")"
-
-    invoke-static {v0, v2, v1, v3, v4}, Lpqb;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

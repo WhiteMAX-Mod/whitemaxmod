@@ -1,107 +1,114 @@
-.class public final Lvg1;
+.class public final synthetic Lvg1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lxg1;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final a:Lphg;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;
 
 
 # direct methods
-.method public constructor <init>(Lphg;)V
+.method public synthetic constructor <init>(Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lvg1;->a:I
 
-    iput-object p1, p0, Lvg1;->a:Lphg;
+    iput-object p1, p0, Lvg1;->b:Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final onClick(Landroid/view/View;)V
+    .locals 9
 
-    if-ne p0, p1, :cond_0
+    iget p1, p0, Lvg1;->a:I
 
-    goto :goto_1
+    iget-object v0, p0, Lvg1;->b:Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;
 
-    :cond_0
-    instance-of v0, p1, Lvg1;
+    packed-switch p1, :pswitch_data_0
 
-    if-nez v0, :cond_1
+    sget-object p1, Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;->A0:[Lv58;
 
-    goto :goto_0
+    invoke-virtual {v0}, Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;->L0()Ltg1;
 
-    :cond_1
-    check-cast p1, Lvg1;
+    move-result-object p1
 
-    iget-object v0, p0, Lvg1;->a:Lphg;
+    iget-object v0, p1, Ltg1;->x0:Lhxf;
 
-    iget-object p1, p1, Lvg1;->a:Lphg;
-
-    invoke-virtual {v0, p1}, Lphg;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_2
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final getText()Lqhg;
-    .locals 1
-
-    iget-object v0, p0, Lvg1;->a:Lphg;
-
-    return-object v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lvg1;->a:Lphg;
-
-    invoke-virtual {v0}, Lphg;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Loading(text="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lvg1;->a:Lphg;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Lhxf;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
+    check-cast v0, Lng1;
+
+    iget-object v1, p1, Ltg1;->A0:Ltn5;
+
+    new-instance v2, Lcf1;
+
+    iget-object v3, p1, Ltg1;->b:Ljava/lang/String;
+
+    iget-boolean v4, p1, Ltg1;->X:Z
+
+    iget-object p1, v0, Lng1;->c:Lrx8;
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x1
+
+    sget-object v7, Lrx8;->b:Lrx8;
+
+    if-ne p1, v7, :cond_0
+
+    move p1, v5
+
+    move v5, v6
+
+    goto :goto_0
+
+    :cond_0
+    move p1, v5
+
+    :goto_0
+    iget-object v8, v0, Lng1;->b:Lrx8;
+
+    if-ne v8, v7, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    move v6, p1
+
+    :goto_1
+    iget-boolean v7, v0, Lng1;->d:Z
+
+    invoke-direct/range {v2 .. v7}, Lcf1;-><init>(Ljava/lang/String;ZZZZ)V
+
+    invoke-static {v1, v2}, Lx0i;->n(Ltn5;Ljava/lang/Object;)V
+
+    return-void
+
+    :pswitch_0
+    sget-object p1, Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;->A0:[Lv58;
+
+    invoke-virtual {v0}, Lpa4;->getRouter()Ljbe;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v0}, Ljbe;->B(Lpa4;)Z
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

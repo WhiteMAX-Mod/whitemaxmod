@@ -1,190 +1,104 @@
 .class public final Lapa;
-.super Licg;
+.super Lpdg;
 .source "SourceFile"
+
+# interfaces
+.implements Lys6;
 
 
 # instance fields
-.field public X:Ljava/lang/String;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public c:J
-
-.field public d:J
-
-.field public o:J
+.field public o:I
 
 
 # virtual methods
-.method public final d(Lpq9;Ljava/lang/String;)V
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    check-cast p1, Ld96;
 
-    invoke-virtual {p2}, Ljava/lang/String;->hashCode()I
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-result v0
+    invoke-virtual {p0, p1, p2}, Lapa;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    const/4 v1, -0x1
+    move-result-object p1
 
-    sparse-switch v0, :sswitch_data_0
+    check-cast p1, Lapa;
 
-    goto :goto_0
+    sget-object p2, Lmah;->a:Lmah;
 
-    :sswitch_0
-    const-string v0, "videoId"
+    invoke-virtual {p1, p2}, Lapa;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result-object p1
 
-    move-result p2
+    return-object p1
+.end method
 
-    if-nez p2, :cond_0
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lapa;
+
+    const/4 v1, 0x2
+
+    invoke-direct {v0, v1, p2}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lapa;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    iget-object v0, p0, Lapa;->X:Ljava/lang/Object;
+
+    check-cast v0, Ld96;
+
+    iget v1, p0, Lapa;->o:I
+
+    const/4 v2, 0x1
+
+    if-eqz v1, :cond_1
+
+    if-ne v1, v2, :cond_0
+
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
     goto :goto_0
 
     :cond_0
-    const/4 v1, 0x3
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    goto :goto_0
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    :sswitch_1
-    const-string v0, "error"
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_1
-
-    goto :goto_0
+    throw p1
 
     :cond_1
-    const/4 v1, 0x2
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    goto :goto_0
+    const/4 p1, 0x0
 
-    :sswitch_2
-    const-string v0, "audioId"
+    iput-object p1, p0, Lapa;->X:Ljava/lang/Object;
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    iput v2, p0, Lapa;->o:I
 
-    move-result p2
-
-    if-nez p2, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    const/4 v1, 0x1
-
-    goto :goto_0
-
-    :sswitch_3
-    const-string v0, "fileId"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    const/4 v1, 0x0
-
-    :goto_0
-    const-wide/16 v2, 0x0
-
-    packed-switch v1, :pswitch_data_0
-
-    invoke-virtual {p1}, Lpq9;->B()V
-
-    return-void
-
-    :pswitch_0
-    invoke-static {p1, v2, v3}, Lcti;->n(Lpq9;J)J
-
-    move-result-wide p1
-
-    iput-wide p1, p0, Lapa;->d:J
-
-    return-void
-
-    :pswitch_1
-    invoke-static {p1}, Lcti;->q(Lpq9;)Ljava/lang/String;
+    invoke-interface {v0, p1, p0}, Ld96;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 
-    iput-object p1, p0, Lapa;->X:Ljava/lang/String;
+    sget-object v0, Lod4;->a:Lod4;
 
-    return-void
-
-    :pswitch_2
-    invoke-static {p1, v2, v3}, Lcti;->n(Lpq9;J)J
-
-    move-result-wide p1
-
-    iput-wide p1, p0, Lapa;->c:J
-
-    return-void
-
-    :pswitch_3
-    invoke-static {p1, v2, v3}, Lcti;->n(Lpq9;J)J
-
-    move-result-wide p1
-
-    iput-wide p1, p0, Lapa;->o:J
-
-    return-void
-
-    :sswitch_data_0
-    .sparse-switch
-        -0x4bf77049 -> :sswitch_3
-        -0x2769f86f -> :sswitch_2
-        0x5c4d208 -> :sswitch_1
-        0x1afceaf6 -> :sswitch_0
-    .end sparse-switch
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 9
-
-    iget-wide v0, p0, Lapa;->c:J
-
-    iget-wide v2, p0, Lapa;->d:J
-
-    iget-wide v4, p0, Lapa;->o:J
-
-    iget-object v6, p0, Lapa;->X:Ljava/lang/String;
-
-    const-string v7, "{audioId="
-
-    const-string v8, ", videoId="
-
-    invoke-static {v0, v1, v7, v8}, Lt02;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", fileId="
-
-    const-string v2, ", error=\'"
-
-    invoke-static {v4, v5, v1, v2, v0}, Lt02;->p(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
-
-    const-string v1, "\'}"
-
-    invoke-static {v0, v6, v1}, Lj27;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    if-ne p1, v0, :cond_2
 
     return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
 .end method

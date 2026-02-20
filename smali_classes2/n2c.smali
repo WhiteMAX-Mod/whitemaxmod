@@ -1,27 +1,94 @@
-.class public abstract Ln2c;
-.super Ljava/lang/Object;
+.class public final Ln2c;
+.super Lpdg;
 .source "SourceFile"
 
+# interfaces
+.implements Lys6;
 
-# static fields
-.field public static final a:J
+
+# instance fields
+.field public final synthetic X:Lq2c;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lq2c;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    sget v0, Lta5;->d:I
+    iput-object p1, p0, Ln2c;->X:Lq2c;
 
-    const v0, 0xea60
+    const/4 p1, 0x2
 
-    sget-object v1, Lza5;->c:Lza5;
-
-    invoke-static {v0, v1}, Laoj;->g(ILza5;)J
-
-    move-result-wide v0
-
-    sput-wide v0, Ln2c;->a:J
+    invoke-direct {p0, p1, p2}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lr2c;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Ln2c;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Ln2c;
+
+    sget-object p2, Lmah;->a:Lmah;
+
+    invoke-virtual {p1, p2}, Ln2c;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Ln2c;
+
+    iget-object v1, p0, Ln2c;->X:Lq2c;
+
+    invoke-direct {v0, v1, p2}, Ln2c;-><init>(Lq2c;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Ln2c;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget-object v0, p0, Ln2c;->o:Ljava/lang/Object;
+
+    check-cast v0, Lr2c;
+
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    sget-object p1, Lr2c;->a:Lr2c;
+
+    if-ne v0, p1, :cond_0
+
+    const-string p1, "allowed"
+
+    goto :goto_0
+
+    :cond_0
+    const-string p1, "denied"
+
+    :goto_0
+    iget-object v0, p0, Ln2c;->X:Lq2c;
+
+    const-string v1, "camera"
+
+    invoke-static {v0, v1, p1}, Lq2c;->a(Lq2c;Ljava/lang/String;Ljava/lang/String;)V
+
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
 .end method

@@ -29,7 +29,7 @@
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Throwable;Lsb4;Lqb4;)V
+.method public constructor <init>(Ljava/lang/Throwable;Lgd4;Led4;)V
     .locals 2
 
     new-instance v0, Ljava/lang/StringBuilder;

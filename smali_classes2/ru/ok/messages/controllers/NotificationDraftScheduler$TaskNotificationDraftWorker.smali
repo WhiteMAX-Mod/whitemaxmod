@@ -15,10 +15,10 @@
         "context",
         "Landroidx/work/WorkerParameters;",
         "workerParams",
-        "Lq75;",
+        "Lb95;",
         "draftsNotifications",
         "<init>",
-        "(Landroid/content/Context;Landroidx/work/WorkerParameters;Lq75;)V",
+        "(Landroid/content/Context;Landroidx/work/WorkerParameters;Lb95;)V",
         "tamtam-app_release"
     }
     k = 0x1
@@ -32,28 +32,28 @@
 
 
 # instance fields
-.field public final X:Lq75;
+.field public final X:Lb95;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Landroidx/work/WorkerParameters;Lq75;)V
+.method public constructor <init>(Landroid/content/Context;Landroidx/work/WorkerParameters;Lb95;)V
     .locals 0
 
     invoke-direct {p0, p1, p2}, Landroidx/work/Worker;-><init>(Landroid/content/Context;Landroidx/work/WorkerParameters;)V
 
-    iput-object p3, p0, Lru/ok/messages/controllers/NotificationDraftScheduler$TaskNotificationDraftWorker;->X:Lq75;
+    iput-object p3, p0, Lru/ok/messages/controllers/NotificationDraftScheduler$TaskNotificationDraftWorker;->X:Lb95;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final g()Lme8;
+.method public final g()Leh8;
     .locals 19
 
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lne8;->b:Landroidx/work/WorkerParameters;
+    iget-object v1, v0, Lfh8;->b:Landroidx/work/WorkerParameters;
 
     iget-object v2, v1, Landroidx/work/WorkerParameters;->a:Ljava/util/UUID;
 
@@ -73,41 +73,41 @@
 
     move-result-object v2
 
-    const-string v3, "wcj"
+    const-string v3, "vlj"
 
-    invoke-static {v3, v2}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v2}, Ltej;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v2, v0, Lru/ok/messages/controllers/NotificationDraftScheduler$TaskNotificationDraftWorker;->X:Lq75;
+    iget-object v2, v0, Lru/ok/messages/controllers/NotificationDraftScheduler$TaskNotificationDraftWorker;->X:Lb95;
 
-    check-cast v2, Lr75;
+    check-cast v2, Lc95;
 
-    iget-object v5, v2, Lr75;->b:Llgc;
+    iget-object v5, v2, Lc95;->b:Lplc;
 
-    iget-object v6, v2, Lr75;->c:Lseb;
+    iget-object v6, v2, Lc95;->c:Ltgb;
 
-    iget-object v7, v2, Lr75;->a:Landroid/content/Context;
+    iget-object v7, v2, Lc95;->a:Landroid/content/Context;
 
     const-string v8, "notifyDrafts"
 
-    const-string v9, "r75"
+    const-string v9, "c95"
 
-    invoke-static {v9, v8}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v9, v8}, Ltej;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v8, Ljava/util/ArrayList;
 
     invoke-direct {v8}, Ljava/util/ArrayList;-><init>()V
 
-    iget-object v10, v2, Lr75;->e:Lxg2;
+    iget-object v10, v2, Lc95;->e:Lci2;
 
-    sget-object v11, Lxg2;->J:La10;
+    sget-object v11, Lci2;->G:Ls20;
 
-    sget-object v12, Lxg2;->N:Ljava/util/EnumSet;
+    sget-object v12, Lci2;->K:Ljava/util/EnumSet;
 
     const/4 v13, 0x0
 
     const/4 v14, 0x1
 
-    invoke-virtual {v10, v12, v14, v13}, Lxg2;->O(Ljava/util/Set;ZLyfc;)Ljava/util/ArrayList;
+    invoke-virtual {v10, v12, v14, v13}, Lci2;->N(Ljava/util/Set;ZLdlc;)Ljava/util/ArrayList;
 
     move-result-object v10
 
@@ -132,11 +132,11 @@
 
     move-result-object v11
 
-    check-cast v11, Lnd2;
+    check-cast v11, Lte2;
 
-    iget-object v11, v11, Lnd2;->b:Luh2;
+    iget-object v11, v11, Lte2;->b:Lzi2;
 
-    iget-object v11, v11, Luh2;->d0:Lgab;
+    iget-object v11, v11, Lzi2;->e0:Lybb;
 
     goto :goto_0
 
@@ -149,16 +149,16 @@
 
     const-string v2, "notifyDrafts: no drafts"
 
-    invoke-static {v9, v2}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v9, v2}, Ltej;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_6
 
     :cond_1
-    iget-object v10, v5, Llgc;->a:Lqi8;
+    iget-object v10, v5, Lplc;->a:Lhl8;
 
-    iget-object v11, v10, Lqi8;->n0:Lnre;
+    iget-object v11, v10, Lhl8;->q0:Lvye;
 
-    sget-object v12, Lqi8;->Q0:[Lz28;
+    sget-object v12, Lhl8;->U0:[Lv58;
 
     const/4 v13, 0x7
 
@@ -166,7 +166,7 @@
 
     sget-object v13, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    invoke-virtual {v11, v10, v12, v13}, Lnre;->O(Ljava/lang/Object;Lz28;Ljava/lang/Object;)V
+    invoke-virtual {v11, v10, v12, v13}, Lvye;->N(Ljava/lang/Object;Lv58;Ljava/lang/Object;)V
 
     invoke-virtual {v8}, Ljava/util/ArrayList;->size()I
 
@@ -178,9 +178,9 @@
 
     const-string v10, "notifyDrafts: multiple chats"
 
-    invoke-static {v9, v10}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v9, v10}, Ltej;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    sget v9, Lj6e;->T0:I
+    sget v9, Lwce;->v1:I
 
     invoke-virtual {v7, v9}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -202,7 +202,7 @@
 
     move-result-object v7
 
-    invoke-virtual {v6, v11}, Lseb;->h(Z)Landroid/content/Intent;
+    invoke-virtual {v6, v11}, Ltgb;->h(Z)Landroid/content/Intent;
 
     move-result-object v8
 
@@ -216,15 +216,15 @@
 
     move-result-object v8
 
-    check-cast v8, Lnd2;
+    check-cast v8, Lte2;
 
-    invoke-virtual {v8}, Lnd2;->T()Z
+    invoke-virtual {v8}, Lte2;->U()Z
 
     move-result v10
 
     if-eqz v10, :cond_3
 
-    invoke-virtual {v8}, Lnd2;->o()Ley3;
+    invoke-virtual {v8}, Lte2;->p()Lwy3;
 
     move-result-object v10
 
@@ -232,19 +232,19 @@
 
     const-string v10, "notifyDrafts: dialog"
 
-    invoke-static {v9, v10}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v9, v10}, Ltej;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    sget v9, Lj6e;->S0:I
+    sget v9, Lwce;->u1:I
 
     invoke-virtual {v7, v9}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v7
 
-    invoke-virtual {v8}, Lnd2;->o()Ley3;
+    invoke-virtual {v8}, Lte2;->p()Lwy3;
 
     move-result-object v9
 
-    invoke-virtual {v9}, Ley3;->f()Ljava/lang/String;
+    invoke-virtual {v9}, Lwy3;->g()Ljava/lang/String;
 
     move-result-object v9
 
@@ -261,19 +261,19 @@
     :cond_3
     const-string v10, "notifyDrafts: chat"
 
-    invoke-static {v9, v10}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v9, v10}, Ltej;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    sget v9, Lj6e;->R0:I
+    sget v9, Lwce;->t1:I
 
     invoke-virtual {v7, v9}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v7
 
-    iget-object v9, v8, Lnd2;->b:Luh2;
+    iget-object v9, v8, Lte2;->b:Lzi2;
 
-    iget-object v9, v9, Luh2;->g:Ljava/lang/String;
+    iget-object v9, v9, Lzi2;->g:Ljava/lang/String;
 
-    sget v10, Lkig;->a:I
+    sget v10, Lzpg;->a:I
 
     if-eqz v9, :cond_5
 
@@ -288,7 +288,7 @@
     :cond_4
     const-string v10, "\""
 
-    invoke-static {v10, v9, v10}, Lj27;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v10, v9, v10}, Ltx8;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v9
 
@@ -308,11 +308,11 @@
     move-result-object v7
 
     :goto_4
-    iget-wide v8, v8, Lnd2;->a:J
+    iget-wide v8, v8, Lte2;->a:J
 
     invoke-virtual {v6}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-object v10, Lxp8;->c:Lxp8;
+    sget-object v10, Lns8;->c:Lns8;
 
     invoke-virtual {v10}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -332,46 +332,46 @@
 
     move-result-object v8
 
-    new-instance v9, Lfm4;
+    new-instance v9, Lun4;
 
-    invoke-direct {v9, v8}, Lfm4;-><init>(Ljava/lang/String;)V
+    invoke-direct {v9, v8}, Lun4;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v6, v9}, Lseb;->m(Lfm4;)Landroid/content/Intent;
+    invoke-virtual {v6, v9}, Ltgb;->m(Lun4;)Landroid/content/Intent;
 
     move-result-object v8
 
     goto/16 :goto_1
 
     :goto_5
-    iget-object v8, v2, Lr75;->d:Llo4;
+    iget-object v8, v2, Lc95;->d:Lzp4;
 
     invoke-virtual {v8}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object v5, v5, Llgc;->c:Lfbh;
+    iget-object v5, v5, Lplc;->c:Lnih;
 
     invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     const-string v5, "ru.oneme.app.misc"
 
-    invoke-virtual {v6, v5, v11, v11}, Lseb;->j(Ljava/lang/String;ZZ)Ltra;
+    invoke-virtual {v6, v5, v11, v11}, Ltgb;->j(Ljava/lang/String;ZZ)Lnua;
 
     move-result-object v13
 
-    invoke-virtual {v13, v7}, Ltra;->d(Ljava/lang/CharSequence;)V
+    invoke-virtual {v13, v7}, Lnua;->d(Ljava/lang/CharSequence;)V
 
-    new-instance v5, Lrra;
+    new-instance v5, Llua;
 
-    invoke-direct {v5, v11}, Lrra;-><init>(I)V
+    invoke-direct {v5, v11}, Llua;-><init>(I)V
 
-    invoke-static {v7}, Ltra;->c(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-static {v7}, Lnua;->c(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object v6
 
-    iput-object v6, v5, Lrra;->f:Ljava/lang/Object;
+    iput-object v6, v5, Llua;->f:Ljava/lang/Object;
 
-    invoke-virtual {v13, v5}, Ltra;->i(Lhsa;)V
+    invoke-virtual {v13, v5}, Lnua;->i(Lbva;)V
 
-    iget-object v12, v2, Lr75;->c:Lseb;
+    iget-object v12, v2, Lc95;->c:Ltgb;
 
     const/16 v17, 0x0
 
@@ -381,7 +381,7 @@
 
     const/16 v16, 0x2
 
-    invoke-virtual/range {v12 .. v18}, Lseb;->n(Ltra;Landroid/content/Intent;Landroid/content/Intent;ILandroid/app/PendingIntent;Ljava/lang/String;)V
+    invoke-virtual/range {v12 .. v18}, Ltgb;->n(Lnua;Landroid/content/Intent;Landroid/content/Intent;ILandroid/app/PendingIntent;Ljava/lang/String;)V
 
     :goto_6
     iget-object v1, v1, Landroidx/work/WorkerParameters;->a:Ljava/util/UUID;
@@ -400,11 +400,11 @@
 
     move-result-object v1
 
-    invoke-static {v3, v1}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v1}, Ltej;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance v1, Lle8;
+    new-instance v1, Ldh8;
 
-    invoke-direct {v1}, Lle8;-><init>()V
+    invoke-direct {v1}, Ldh8;-><init>()V
 
     return-object v1
 .end method

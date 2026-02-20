@@ -1,27 +1,14 @@
-.class public final Lol7;
+.class public interface abstract Lol7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public final a:Ljava/util/List;
-
-.field public final b:Ljava/util/List;
-
-.field public final c:Ljava/util/List;
+# interfaces
+.implements Lgjh;
 
 
-# direct methods
-.method public constructor <init>(Ljava/util/List;Ljava/util/List;Ljava/util/List;)V
-    .locals 0
+# virtual methods
+.method public abstract k()Lxk7;
+.end method
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lol7;->a:Ljava/util/List;
-
-    iput-object p2, p0, Lol7;->b:Ljava/util/List;
-
-    iput-object p3, p0, Lol7;->c:Ljava/util/List;
-
-    return-void
+.method public abstract p()Lml7;
 .end method

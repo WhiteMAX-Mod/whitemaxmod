@@ -1,48 +1,112 @@
 .class public final Lg51;
-.super Lo84;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ln51;
 
 
-# instance fields
-.field public final synthetic X:Lpx;
+# static fields
+.field public static final a:Lg51;
 
-.field public synthetic d:Ljava/lang/Object;
+.field public static final b:I
 
-.field public o:I
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
 
 
 # direct methods
-.method public constructor <init>(Lpx;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    iput-object p1, p0, Lg51;->X:Lpx;
+    new-instance v0, Lg51;
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lg51;->a:Lg51;
+
+    const/16 v0, 0x30
+
+    int-to-float v0, v0
+
+    invoke-static {v0}, Ln8d;->f(F)I
+
+    move-result v0
+
+    sput v0, Lg51;->b:I
+
+    const/16 v0, 0x1c
+
+    int-to-float v0, v0
+
+    invoke-static {v0}, Ln8d;->f(F)I
+
+    move-result v0
+
+    sput v0, Lg51;->c:I
+
+    const/4 v0, 0x4
+
+    int-to-float v0, v0
+
+    invoke-static {v0}, Ln8d;->f(F)I
+
+    move-result v0
+
+    sput v0, Lg51;->d:I
+
+    invoke-static {}, Ld25;->c()F
+
+    move-result v0
+
+    float-to-double v0, v0
+
+    const-wide/high16 v2, 0x400c000000000000L    # 3.5
+
+    mul-double/2addr v0, v2
+
+    invoke-static {v0, v1}, Lmhj;->e(D)I
+
+    move-result v0
+
+    sput v0, Lg51;->e:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final a()I
     .locals 1
 
-    iput-object p1, p0, Lg51;->d:Ljava/lang/Object;
+    sget v0, Lg51;->c:I
 
-    iget p1, p0, Lg51;->o:I
+    return v0
+.end method
 
-    const/high16 v0, -0x80000000
+.method public final b()I
+    .locals 1
 
-    or-int/2addr p1, v0
+    sget v0, Lg51;->d:I
 
-    iput p1, p0, Lg51;->o:I
+    return v0
+.end method
 
-    iget-object p1, p0, Lg51;->X:Lpx;
+.method public final c()I
+    .locals 1
 
-    const/4 v0, 0x0
+    sget v0, Lg51;->b:I
 
-    invoke-virtual {p1, v0, p0}, Lpx;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    return v0
+.end method
 
-    move-result-object p1
+.method public final d()I
+    .locals 1
 
-    return-object p1
+    sget v0, Lg51;->e:I
+
+    return v0
 .end method

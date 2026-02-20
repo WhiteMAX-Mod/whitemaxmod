@@ -3,62 +3,78 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lafj;
+.implements Loza;
 
 
-# instance fields
-.field public final a:Ljava/util/ArrayList;
+# static fields
+.field public static final a:Lefj;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lxej;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lefj;
 
-    new-instance v0, Ljava/util/ArrayList;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    sput-object v0, Lefj;->a:Lefj;
 
-    iput-object v0, p0, Lefj;->a:Ljava/util/ArrayList;
+    new-instance v0, Lp7j;
 
-    new-instance v1, Lsfj;
+    const/4 v1, 0x1
 
-    invoke-direct {v1, p1, p2}, Lsfj;-><init>(Landroid/content/Context;Lxej;)V
+    invoke-direct {v0, v1}, Lp7j;-><init>(I)V
 
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    const-class v1, Lh8j;
+
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x2
+
+    invoke-static {v0, v2}, Leni;->i(Ljava/util/HashMap;I)Lp7j;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x3
+
+    invoke-static {v0, v2}, Leni;->i(Ljava/util/HashMap;I)Lp7j;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x4
+
+    invoke-static {v0, v2}, Leni;->i(Ljava/util/HashMap;I)Lp7j;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, Leni;->m(Ljava/util/HashMap;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Liab;)V
-    .locals 2
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    iget-object v0, p0, Lefj;->a:Ljava/util/ArrayList;
+    invoke-static {p1}, Lkb0;->d(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    move-result-object p1
 
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lafj;
-
-    invoke-interface {v1, p1}, Lafj;->a(Liab;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
+    throw p1
 .end method

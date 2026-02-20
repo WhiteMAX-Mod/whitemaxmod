@@ -1,90 +1,58 @@
-.class public final Lts9;
-.super Lp6g;
+.class public final synthetic Lts9;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/sdk/messagewrite/MessageWriteWidget;
+.field public final synthetic a:I
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic b:Landroid/graphics/drawable/Drawable;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/MessageWriteWidget;)V
+.method public synthetic constructor <init>(Landroid/graphics/drawable/Drawable;I)V
     .locals 0
 
-    iput-object p2, p0, Lts9;->X:Lone/me/sdk/messagewrite/MessageWriteWidget;
+    iput p2, p0, Lts9;->a:I
 
-    const/4 p2, 0x2
+    iput-object p1, p0, Lts9;->b:Landroid/graphics/drawable/Drawable;
 
-    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final run()V
+    .locals 1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget v0, p0, Lts9;->a:I
 
-    invoke-virtual {p0, p1, p2}, Lts9;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object p1
+    iget-object v0, p0, Lts9;->b:Landroid/graphics/drawable/Drawable;
 
-    check-cast p1, Lts9;
+    check-cast v0, Landroid/graphics/drawable/AnimationDrawable;
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    invoke-virtual {v0}, Landroid/graphics/drawable/AnimationDrawable;->start()V
 
-    invoke-virtual {p1, p2}, Lts9;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    return-void
 
-    return-object p2
-.end method
+    :pswitch_0
+    iget-object v0, p0, Lts9;->b:Landroid/graphics/drawable/Drawable;
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    invoke-static {v0}, Lus9;->d(Landroid/graphics/drawable/Drawable;)V
 
-    new-instance v0, Lts9;
+    return-void
 
-    iget-object v1, p0, Lts9;->X:Lone/me/sdk/messagewrite/MessageWriteWidget;
+    nop
 
-    invoke-direct {v0, p2, v1}, Lts9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/MessageWriteWidget;)V
-
-    iput-object p1, v0, Lts9;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    iget-object v0, p0, Lts9;->o:Ljava/lang/Object;
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    check-cast v0, Lb3h;
-
-    sget-object p1, Lone/me/sdk/messagewrite/MessageWriteWidget;->M0:[Lz28;
-
-    iget-object p1, p0, Lts9;->X:Lone/me/sdk/messagewrite/MessageWriteWidget;
-
-    invoke-virtual {p1}, Lone/me/sdk/messagewrite/MessageWriteWidget;->E0()Leo9;
-
-    move-result-object v0
-
-    new-instance v1, Li31;
-
-    const/16 v2, 0xc
-
-    invoke-direct {v1, v2, p1}, Li31;-><init>(ILjava/lang/Object;)V
-
-    invoke-static {v0, v1}, Ls5j;->d(Landroid/view/ViewGroup;Lnq6;)V
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

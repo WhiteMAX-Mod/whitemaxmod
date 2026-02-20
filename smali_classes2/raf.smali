@@ -1,262 +1,169 @@
 .class public final Lraf;
-.super Ljava/lang/Object;
+.super Lpdg;
 .source "SourceFile"
 
 # interfaces
-.implements Llw9;
+.implements Lys6;
 
 
 # instance fields
-.field public final a:J
+.field public final synthetic X:Ltaf;
 
-.field public final b:Ljava/lang/String;
+.field public final synthetic Y:I
 
-.field public final c:Lmy0;
-
-.field public final d:Lhy0;
-
-.field public final e:Llhg;
-
-.field public final f:Ljava/util/List;
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;Lmy0;Lhy0;Llhg;Ljava/util/List;)V
+.method public constructor <init>(Ltaf;ILkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lraf;->X:Ltaf;
 
-    iput-wide p1, p0, Lraf;->a:J
+    iput p2, p0, Lraf;->Y:I
 
-    iput-object p3, p0, Lraf;->b:Ljava/lang/String;
+    const/4 p1, 0x2
 
-    iput-object p4, p0, Lraf;->c:Lmy0;
-
-    iput-object p5, p0, Lraf;->d:Lhy0;
-
-    iput-object p6, p0, Lraf;->e:Llhg;
-
-    iput-object p7, p0, Lraf;->f:Ljava/util/List;
+    invoke-direct {p0, p1, p3}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    if-ne p0, p1, :cond_0
+    check-cast p1, Lnd4;
 
-    goto :goto_1
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of v0, p1, Lraf;
+    invoke-virtual {p0, p1, p2}, Lraf;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    if-nez v0, :cond_1
+    move-result-object p1
 
-    goto :goto_0
-
-    :cond_1
     check-cast p1, Lraf;
 
-    iget-wide v0, p0, Lraf;->a:J
+    sget-object p2, Lmah;->a:Lmah;
 
-    iget-wide v2, p1, Lraf;->a:J
+    invoke-virtual {p1, p2}, Lraf;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    cmp-long v0, v0, v2
+    move-result-object p1
 
-    if-eqz v0, :cond_2
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance p1, Lraf;
+
+    iget-object v0, p0, Lraf;->X:Ltaf;
+
+    iget v1, p0, Lraf;->Y:I
+
+    invoke-direct {p1, v0, v1, p2}, Lraf;-><init>(Ltaf;ILkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
+
+    iget v0, p0, Lraf;->o:I
+
+    sget-object v1, Lmah;->a:Lmah;
+
+    const/4 v2, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v2, :cond_0
+
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    return-object v1
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    sget-object p1, Ltaf;->P0:[Lv58;
+
+    iget-object p1, p0, Lraf;->X:Ltaf;
+
+    invoke-virtual {p1}, Ltaf;->u()Lnih;
+
+    move-result-object v0
+
+    const-string v3, "ALL"
+
+    iget-object v0, v0, Lx3;->g:Lm88;
+
+    const-string v4, "app.privacy.incoming.call"
+
+    invoke-virtual {v0, v4, v3}, Lm88;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lfvg;->b(Ljava/lang/String;)I
+
+    move-result v0
+
+    iget v3, p0, Lraf;->Y:I
+
+    if-ne v0, v3, :cond_2
 
     goto :goto_0
 
     :cond_2
-    iget-object v0, p0, Lraf;->b:Ljava/lang/String;
-
-    iget-object v1, p1, Lraf;->b:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget-object v0, p0, Lraf;->c:Lmy0;
-
-    iget-object v1, p1, Lraf;->c:Lmy0;
-
-    invoke-static {v0, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    iget-object v0, p0, Lraf;->d:Lhy0;
-
-    iget-object v1, p1, Lraf;->d:Lhy0;
-
-    invoke-static {v0, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_5
-
-    goto :goto_0
-
-    :cond_5
-    iget-object v0, p0, Lraf;->e:Llhg;
-
-    iget-object v1, p1, Lraf;->e:Llhg;
-
-    invoke-virtual {v0, v1}, Llhg;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_6
-
-    goto :goto_0
-
-    :cond_6
-    iget-object v0, p0, Lraf;->f:Ljava/util/List;
-
-    iget-object p1, p1, Lraf;->f:Ljava/util/List;
-
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_7
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_7
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-wide v0, p0, Lraf;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lraf;->b:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Lxi4;->e(IILjava/lang/String;)I
-
-    move-result v0
-
-    iget-object v2, p0, Lraf;->c:Lmy0;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v2
-
-    add-int/2addr v2, v0
-
-    mul-int/2addr v2, v1
-
-    iget-object v0, p0, Lraf;->d:Lhy0;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    add-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lraf;->e:Llhg;
-
-    iget v2, v2, Llhg;->c:I
-
-    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
-
-    move-result v0
-
-    iget-object v1, p0, Lraf;->f:Ljava/util/List;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, "ShowShareContactForBotConfirmation(messageId="
-
-    const-string v1, ", keyboardId="
-
-    iget-wide v2, p0, Lraf;->a:J
-
-    iget-object v4, p0, Lraf;->b:Ljava/lang/String;
-
-    invoke-static {v0, v2, v3, v1, v4}, Lj27;->n(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1}, Ltaf;->u()Lnih;
 
     move-result-object v0
 
-    const-string v1, ", buttonPosition="
+    invoke-static {v3}, Lfvg;->i(I)Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v5
 
-    iget-object v1, p0, Lraf;->c:Lmy0;
+    invoke-virtual {v0, v4, v5}, Lx3;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", button="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lraf;->d:Lhy0;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", title="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lraf;->e:Llhg;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", buttons="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lraf;->f:Ljava/util/List;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p1}, Ltaf;->t()Li5b;
 
     move-result-object v0
+
+    new-instance v4, Liih;
+
+    invoke-direct {v4}, Ljava/lang/Object;-><init>()V
+
+    iput v3, v4, Liih;->p:I
+
+    new-instance v3, Llih;
+
+    invoke-direct {v3, v4}, Llih;-><init>(Liih;)V
+
+    invoke-virtual {v0, v3}, Li5b;->n(Llih;)J
+
+    iput v2, p0, Lraf;->o:I
+
+    invoke-static {p1, p0}, Ltaf;->s(Ltaf;Lpdg;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lod4;->a:Lod4;
+
+    if-ne p1, v0, :cond_3
 
     return-object v0
+
+    :cond_3
+    :goto_0
+    return-object v1
 .end method

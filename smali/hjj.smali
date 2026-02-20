@@ -1,56 +1,110 @@
-.class public abstract Lhjj;
+.class public final Lhjj;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Loza;
+
 
 # static fields
-.field public static a:Loyb;
+.field public static final a:Lhjj;
 
 
 # direct methods
-.method public static final a(Ljava/lang/Long;Ljava/lang/Long;)Ljava/lang/String;
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-virtual {p1, p0}, Ljava/lang/Long;->compareTo(Ljava/lang/Object;)I
+    new-instance v0, Lhjj;
 
-    move-result p0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    if-lez p0, :cond_0
+    sput-object v0, Lhjj;->a:Lhjj;
 
-    const-string p0, "<"
+    new-instance v0, Lp7j;
 
-    return-object p0
+    const/4 v1, 0x1
 
-    :cond_0
-    if-gez p0, :cond_1
+    invoke-direct {v0, v1}, Lp7j;-><init>(I)V
 
-    const-string p0, ">"
+    const-class v1, Lh8j;
 
-    return-object p0
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
 
-    :cond_1
-    const-string p0, "="
+    move-result-object v0
 
-    return-object p0
+    const/4 v2, 0x2
+
+    invoke-static {v0, v2}, Leni;->i(Ljava/util/HashMap;I)Lp7j;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x3
+
+    invoke-static {v0, v2}, Leni;->i(Ljava/util/HashMap;I)Lp7j;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x4
+
+    invoke-static {v0, v2}, Leni;->i(Ljava/util/HashMap;I)Lp7j;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x5
+
+    invoke-static {v0, v2}, Leni;->i(Ljava/util/HashMap;I)Lp7j;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x6
+
+    invoke-static {v0, v2}, Leni;->i(Ljava/util/HashMap;I)Lp7j;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x7
+
+    invoke-static {v0, v2}, Leni;->i(Ljava/util/HashMap;I)Lp7j;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, Leni;->m(Ljava/util/HashMap;)V
+
+    return-void
 .end method
 
-.method public static final b(Landroid/content/Context;)Loyb;
-    .locals 1
 
-    sget-object v0, Lhjj;->a:Loyb;
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    if-nez v0, :cond_0
+    invoke-static {p1}, Lkb0;->d(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    new-instance v0, Loyb;
+    move-result-object p1
 
-    invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Loyb;-><init>(Landroid/content/Context;)V
-
-    sput-object v0, Lhjj;->a:Loyb;
-
-    :cond_0
-    return-object v0
+    throw p1
 .end method

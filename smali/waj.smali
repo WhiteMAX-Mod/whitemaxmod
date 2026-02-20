@@ -3,233 +3,203 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static final a:Lgz5;
+
+.field public static final b:[Lgz5;
+
+
 # direct methods
-.method public static a(Lmbg;Lcy0;JLmw4;)Lpv9;
-    .locals 8
+.method static constructor <clinit>()V
+    .locals 4
 
-    new-instance v0, Lpv9;
+    new-instance v0, Lgz5;
 
-    const-wide/16 v6, 0x0
+    const-string v1, "moduleinstall"
 
-    move-object v1, p0
+    const-wide/16 v2, 0x7
 
-    move-object v2, p1
+    invoke-direct {v0, v1, v2, v3}, Lgz5;-><init>(Ljava/lang/String;J)V
 
-    move-wide v3, p2
+    sput-object v0, Lwaj;->a:Lgz5;
 
-    move-object v5, p4
+    filled-new-array {v0}, [Lgz5;
 
-    invoke-direct/range {v0 .. v7}, Lpv9;-><init>(Lmbg;Lcy0;JLmw4;J)V
+    move-result-object v0
 
-    return-object v0
+    sput-object v0, Lwaj;->b:[Lgz5;
+
+    return-void
 .end method
 
-.method public static b(Ljava/lang/Object;Ljava/lang/Object;ILjava/lang/Object;[I[Ljava/lang/Object;[Ljava/lang/Object;)I
-    .locals 8
+.method public static a(JJ)I
+    .locals 0
 
-    invoke-static {p0}, Lyaj;->c(Ljava/lang/Object;)I
+    cmp-long p0, p0, p2
 
-    move-result v0
+    if-gez p0, :cond_0
 
-    and-int v1, v0, p2
+    const/4 p0, -0x1
 
-    invoke-static {v1, p3}, Lwaj;->c(ILjava/lang/Object;)I
-
-    move-result v2
-
-    const/4 v3, -0x1
-
-    if-eqz v2, :cond_3
-
-    not-int v4, p2
-
-    and-int/2addr v0, v4
-
-    move v5, v3
-
-    :goto_0
-    add-int/2addr v2, v3
-
-    aget v6, p4, v2
-
-    and-int v7, v6, p2
-
-    and-int/2addr v6, v4
-
-    if-ne v6, v0, :cond_2
-
-    aget-object v6, p5, v2
-
-    invoke-static {p0, v6}, Loaj;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_2
-
-    if-eqz p6, :cond_0
-
-    aget-object v6, p6, v2
-
-    invoke-static {p1, v6}, Loaj;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_2
+    return p0
 
     :cond_0
-    if-ne v5, v3, :cond_1
+    if-nez p0, :cond_1
 
-    invoke-static {v1, v7, p3}, Lwaj;->e(IILjava/lang/Object;)V
+    const/4 p0, 0x0
 
-    return v2
+    return p0
 
     :cond_1
-    aget p0, p4, v5
+    const/4 p0, 0x1
 
-    and-int/2addr p0, v4
+    return p0
+.end method
 
-    and-int p1, v7, p2
+.method public static b(Lmwb;II)J
+    .locals 7
 
-    or-int/2addr p0, p1
+    invoke-virtual {p0, p1}, Lmwb;->J(I)V
 
-    aput p0, p4, v5
+    invoke-virtual {p0}, Lmwb;->a()I
 
-    return v2
+    move-result p1
+
+    const/4 v0, 0x5
+
+    const-wide v1, -0x7fffffffffffffffL    # -4.9E-324
+
+    if-ge p1, v0, :cond_0
+
+    return-wide v1
+
+    :cond_0
+    invoke-virtual {p0}, Lmwb;->j()I
+
+    move-result p1
+
+    const/high16 v0, 0x800000
+
+    and-int/2addr v0, p1
+
+    if-eqz v0, :cond_1
+
+    return-wide v1
+
+    :cond_1
+    const v0, 0x1fff00
+
+    and-int/2addr v0, p1
+
+    shr-int/lit8 v0, v0, 0x8
+
+    if-eq v0, p2, :cond_2
+
+    return-wide v1
 
     :cond_2
-    if-eqz v7, :cond_3
+    and-int/lit8 p1, p1, 0x20
 
-    move v5, v2
+    if-eqz p1, :cond_3
 
-    move v2, v7
+    invoke-virtual {p0}, Lmwb;->x()I
 
-    goto :goto_0
+    move-result p1
+
+    const/4 p2, 0x7
+
+    if-lt p1, p2, :cond_3
+
+    invoke-virtual {p0}, Lmwb;->a()I
+
+    move-result p1
+
+    if-lt p1, p2, :cond_3
+
+    invoke-virtual {p0}, Lmwb;->x()I
+
+    move-result p1
+
+    const/16 v0, 0x10
+
+    and-int/2addr p1, v0
+
+    if-ne p1, v0, :cond_3
+
+    const/4 p1, 0x6
+
+    new-array v0, p1, [B
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v1, v0, p1}, Lmwb;->h(I[BI)V
+
+    aget-byte p0, v0, v1
+
+    int-to-long p0, p0
+
+    const-wide/16 v1, 0xff
+
+    and-long/2addr p0, v1
+
+    const/16 v3, 0x19
+
+    shl-long/2addr p0, v3
+
+    const/4 v3, 0x1
+
+    aget-byte v4, v0, v3
+
+    int-to-long v4, v4
+
+    and-long/2addr v4, v1
+
+    const/16 v6, 0x11
+
+    shl-long/2addr v4, v6
+
+    or-long/2addr p0, v4
+
+    const/4 v4, 0x2
+
+    aget-byte v4, v0, v4
+
+    int-to-long v4, v4
+
+    and-long/2addr v4, v1
+
+    const/16 v6, 0x9
+
+    shl-long/2addr v4, v6
+
+    or-long/2addr p0, v4
+
+    const/4 v4, 0x3
+
+    aget-byte v4, v0, v4
+
+    int-to-long v4, v4
+
+    and-long/2addr v4, v1
+
+    shl-long v3, v4, v3
+
+    or-long/2addr p0, v3
+
+    const/4 v3, 0x4
+
+    aget-byte v0, v0, v3
+
+    int-to-long v3, v0
+
+    and-long v0, v3, v1
+
+    shr-long/2addr v0, p2
+
+    or-long/2addr p0, v0
+
+    return-wide p0
 
     :cond_3
-    return v3
-.end method
-
-.method public static c(ILjava/lang/Object;)I
-    .locals 1
-
-    instance-of v0, p1, [B
-
-    if-eqz v0, :cond_0
-
-    check-cast p1, [B
-
-    aget-byte p0, p1, p0
-
-    and-int/lit16 p0, p0, 0xff
-
-    return p0
-
-    :cond_0
-    instance-of v0, p1, [S
-
-    if-eqz v0, :cond_1
-
-    check-cast p1, [S
-
-    aget-short p0, p1, p0
-
-    int-to-char p0, p0
-
-    return p0
-
-    :cond_1
-    check-cast p1, [I
-
-    aget p0, p1, p0
-
-    return p0
-.end method
-
-.method public static d(I)Ljava/lang/Object;
-    .locals 2
-
-    const/4 v0, 0x2
-
-    if-lt p0, v0, :cond_2
-
-    const/high16 v0, 0x40000000    # 2.0f
-
-    if-gt p0, v0, :cond_2
-
-    invoke-static {p0}, Ljava/lang/Integer;->highestOneBit(I)I
-
-    move-result v0
-
-    if-ne v0, p0, :cond_2
-
-    const/16 v0, 0x100
-
-    if-gt p0, v0, :cond_0
-
-    new-array p0, p0, [B
-
-    return-object p0
-
-    :cond_0
-    const/high16 v0, 0x10000
-
-    if-gt p0, v0, :cond_1
-
-    new-array p0, p0, [S
-
-    return-object p0
-
-    :cond_1
-    new-array p0, p0, [I
-
-    return-object p0
-
-    :cond_2
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "must be power of 2 between 2^1 and 2^30: "
-
-    invoke-static {p0, v1}, Lj27;->g(ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public static e(IILjava/lang/Object;)V
-    .locals 1
-
-    instance-of v0, p2, [B
-
-    if-eqz v0, :cond_0
-
-    check-cast p2, [B
-
-    int-to-byte p1, p1
-
-    aput-byte p1, p2, p0
-
-    return-void
-
-    :cond_0
-    instance-of v0, p2, [S
-
-    if-eqz v0, :cond_1
-
-    check-cast p2, [S
-
-    int-to-short p1, p1
-
-    aput-short p1, p2, p0
-
-    return-void
-
-    :cond_1
-    check-cast p2, [I
-
-    aput p1, p2, p0
-
-    return-void
+    return-wide v1
 .end method

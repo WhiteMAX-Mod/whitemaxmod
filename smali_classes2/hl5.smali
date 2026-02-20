@@ -1,19 +1,25 @@
-.class public final Lhl5;
+.class public interface abstract Lhl5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # virtual methods
-.method public final serializer()La38;
+.method public g()Z
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "La38;"
-        }
-    .end annotation
 
-    sget-object v0, Lgl5;->a:Lgl5;
+    const/4 v0, 0x0
 
-    return-object v0
+    return v0
+.end method
+
+.method public k()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public abstract m()V
+.end method
+
+.method public abstract q()Z
 .end method

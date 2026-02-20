@@ -1,24 +1,26 @@
 .class public final Losc;
-.super Lp6g;
+.super Lpdg;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Lys6;
 
 
 # instance fields
-.field public final synthetic o:Lysc;
+.field public final synthetic X:Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lysc;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;)V
     .locals 0
 
-    iput-object p1, p0, Losc;->o:Lysc;
+    iput-object p2, p0, Losc;->X:Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;
 
-    const/4 p1, 0x2
+    const/4 p2, 0x2
 
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2, p1}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -28,8 +30,6 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lzb4;
-
     check-cast p2, Lkotlin/coroutines/Continuation;
 
     invoke-virtual {p0, p1, p2}, Losc;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
@@ -38,7 +38,7 @@
 
     check-cast p1, Losc;
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    sget-object p2, Lmah;->a:Lmah;
 
     invoke-virtual {p1, p2}, Losc;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -46,51 +46,68 @@
 .end method
 
 .method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    .locals 2
 
-    new-instance p1, Losc;
+    new-instance v0, Losc;
 
-    iget-object v0, p0, Losc;->o:Lysc;
+    iget-object v1, p0, Losc;->X:Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;
 
-    invoke-direct {p1, v0, p2}, Losc;-><init>(Lysc;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, p2, v1}, Losc;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;)V
 
-    return-object p1
+    iput-object p1, v0, Losc;->o:Ljava/lang/Object;
+
+    return-object v0
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    .locals 3
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    iget-object v0, p0, Losc;->o:Ljava/lang/Object;
 
-    iget-object p1, p0, Losc;->o:Lysc;
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    iget-object p1, p1, Lysc;->X:Lo58;
+    check-cast v0, Lbsc;
 
-    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
+    iget-object p1, p0, Losc;->X:Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;
 
-    move-result-object p1
+    iget-object v1, p1, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->s0:Lo4e;
 
-    check-cast p1, Ldjb;
+    invoke-virtual {v1}, Lo4e;->e()Z
 
-    sget v0, Lpfb;->s1:I
+    move-result v2
 
-    new-instance v1, Llhg;
+    if-eqz v2, :cond_1
 
-    invoke-direct {v1, v0}, Llhg;-><init>(I)V
+    invoke-virtual {v1}, Lo4e;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {p1, v1}, Ldjb;->g(Lqhg;)V
+    move-result-object v1
 
-    new-instance v0, Lrjb;
+    check-cast v1, Lu7b;
 
-    sget v1, Lv5e;->M:I
+    iget-boolean v2, v0, Lbsc;->b:Z
 
-    invoke-direct {v0, v1}, Lrjb;-><init>(I)V
+    if-eqz v2, :cond_0
 
-    invoke-virtual {p1, v0}, Ldjb;->e(Lvjb;)V
+    const/4 v2, 0x0
 
-    invoke-virtual {p1}, Ldjb;->i()Lcjb;
+    goto :goto_0
 
-    sget-object p1, Lb3h;->a:Lb3h;
+    :cond_0
+    const/16 v2, 0x8
+
+    :goto_0
+    invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
+
+    invoke-virtual {p1}, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->J0()V
+
+    :cond_1
+    iget-object p1, p1, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->X:Lok0;
+
+    iget-object v0, v0, Lbsc;->a:Ljava/util/List;
+
+    invoke-virtual {p1, v0}, Lfg8;->F(Ljava/util/List;)V
+
+    sget-object p1, Lmah;->a:Lmah;
 
     return-object p1
 .end method

@@ -1,137 +1,87 @@
 .class public final Lgwi;
-.super Liwi;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final c:Lbgg;
+
+
 # instance fields
-.field public final transient c:I
+.field public final a:Ljava/lang/String;
 
-.field public final transient d:I
-
-.field public final synthetic o:Liwi;
+.field public final b:Ljava/lang/Throwable;
 
 
 # direct methods
-.method public constructor <init>(Liwi;II)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lgwi;->o:Liwi;
+    new-instance v0, Lm6i;
 
-    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
+    const/16 v1, 0x17
 
-    iput p2, p0, Lgwi;->c:I
+    invoke-direct {v0, v1}, Lm6i;-><init>(I)V
 
-    iput p3, p0, Lgwi;->d:I
+    new-instance v1, Lbgg;
+
+    invoke-direct {v1, v0}, Lbgg;-><init>(Lis6;)V
+
+    sput-object v1, Lgwi;->c:Lbgg;
 
     return-void
 .end method
 
+.method public constructor <init>()V
+    .locals 3
 
-# virtual methods
-.method public final b()I
-    .locals 2
+    const-string v0, "gleff"
 
-    iget-object v0, p0, Lgwi;->o:Liwi;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {v0}, Lzvi;->c()I
+    const-class v1, Lgwi;
 
-    move-result v0
+    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    iget v1, p0, Lgwi;->c:I
+    move-result-object v1
 
-    add-int/2addr v0, v1
+    iput-object v1, p0, Lgwi;->a:Ljava/lang/String;
 
-    iget v1, p0, Lgwi;->d:I
+    sget-object v1, Ldwi;->a:Ljava/util/concurrent/atomic/AtomicReference;
 
-    add-int/2addr v0, v1
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-    return v0
-.end method
+    move-result-object v1
 
-.method public final c()I
-    .locals 2
+    if-nez v1, :cond_0
 
-    iget-object v0, p0, Lgwi;->o:Liwi;
+    :try_start_0
+    invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-virtual {v0}, Lzvi;->c()I
+    const/4 v0, 0x0
 
-    move-result v0
+    goto :goto_0
 
-    iget v1, p0, Lgwi;->c:I
+    :catchall_0
+    move-exception v0
 
-    add-int/2addr v0, v1
+    iget-object v1, p0, Lgwi;->a:Ljava/lang/String;
 
-    return v0
-.end method
+    const-string v2, "failed to load gl-effects library with system loader"
 
-.method public final d()[Ljava/lang/Object;
-    .locals 1
+    invoke-static {v1, v2, v0}, Ltej;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    iget-object v0, p0, Lgwi;->o:Liwi;
+    :goto_0
+    iput-object v0, p0, Lgwi;->b:Ljava/lang/Throwable;
 
-    invoke-virtual {v0}, Lzvi;->d()[Ljava/lang/Object;
+    return-void
 
-    move-result-object v0
+    :cond_0
+    new-instance v0, Ljava/lang/ClassCastException;
 
-    return-object v0
-.end method
+    invoke-direct {v0}, Ljava/lang/ClassCastException;-><init>()V
 
-.method public final e(II)Liwi;
-    .locals 1
-
-    iget v0, p0, Lgwi;->d:I
-
-    invoke-static {p1, p2, v0}, Lqaj;->d(III)V
-
-    iget v0, p0, Lgwi;->c:I
-
-    add-int/2addr p1, v0
-
-    add-int/2addr p2, v0
-
-    iget-object v0, p0, Lgwi;->o:Liwi;
-
-    invoke-virtual {v0, p1, p2}, Liwi;->e(II)Liwi;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final get(I)Ljava/lang/Object;
-    .locals 1
-
-    iget v0, p0, Lgwi;->d:I
-
-    invoke-static {p1, v0}, Lqaj;->c(II)V
-
-    iget v0, p0, Lgwi;->c:I
-
-    add-int/2addr p1, v0
-
-    iget-object v0, p0, Lgwi;->o:Liwi;
-
-    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final size()I
-    .locals 1
-
-    iget v0, p0, Lgwi;->d:I
-
-    return v0
-.end method
-
-.method public final bridge synthetic subList(II)Ljava/util/List;
-    .locals 0
-
-    invoke-virtual {p0, p1, p2}, Lgwi;->e(II)Liwi;
-
-    move-result-object p1
-
-    return-object p1
+    throw v0
 .end method

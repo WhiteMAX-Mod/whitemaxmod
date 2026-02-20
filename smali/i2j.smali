@@ -3,96 +3,143 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lvx5;
+# instance fields
+.field public transient a:Lo1j;
 
-.field public static final b:[Lvx5;
+.field public transient b:Lo2;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>()V
+    .locals 0
 
-    new-instance v0, Lvx5;
-
-    const-string v1, "CLIENT_TELEMETRY"
-
-    const-wide/16 v2, 0x1
-
-    invoke-direct {v0, v1, v2, v3}, Lvx5;-><init>(Ljava/lang/String;J)V
-
-    sput-object v0, Li2j;->a:Lvx5;
-
-    filled-new-array {v0}, [Lvx5;
-
-    move-result-object v0
-
-    sput-object v0, Li2j;->b:[Lvx5;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static final a(I)I
-    .locals 1
 
-    if-eqz p0, :cond_3
+# virtual methods
+.method public final a()Ljava/util/Map;
+    .locals 4
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Li2j;->b:Lo2;
 
-    if-eq p0, v0, :cond_3
+    if-nez v0, :cond_0
 
-    const/4 v0, 0x3
+    move-object v0, p0
 
-    if-eq p0, v0, :cond_2
+    check-cast v0, Lk2j;
 
-    const/4 v0, 0x6
+    new-instance v1, Lo2;
 
-    if-eq p0, v0, :cond_1
+    iget-object v2, v0, Lk2j;->c:Ldn3;
 
-    const/16 v0, 0x8
+    const/4 v3, 0x1
 
-    if-eq p0, v0, :cond_0
+    invoke-direct {v1, v0, v2, v3}, Lo2;-><init>(Ljava/io/Serializable;Ljava/util/Map;I)V
 
-    goto :goto_0
+    iput-object v1, p0, Li2j;->b:Lo2;
+
+    return-object v1
 
     :cond_0
-    const/16 p0, 0x10e
-
-    return p0
-
-    :cond_1
-    const/16 p0, 0x5a
-
-    return p0
-
-    :cond_2
-    const/16 p0, 0xb4
-
-    return p0
-
-    :cond_3
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
+    return-object v0
 .end method
 
-.method public static final b(Lfpe;Lnq6;Lnq6;)Lh66;
-    .locals 2
+.method public final b()Ljava/util/Set;
+    .locals 3
 
-    new-instance v0, Lk1e;
+    iget-object v0, p0, Li2j;->a:Lo1j;
 
-    const/16 v1, 0x10
+    if-nez v0, :cond_0
 
-    invoke-direct {v0, p1, v1, p2}, Lk1e;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    move-object v0, p0
 
-    new-instance p1, Lh66;
+    check-cast v0, Lk2j;
 
-    sget-object p2, Lupe;->a:Lupe;
+    new-instance v1, Lo1j;
 
-    const/4 v1, 0x0
+    iget-object v2, v0, Lk2j;->c:Ldn3;
 
-    invoke-direct {p1, p0, v0, p2, v1}, Lh66;-><init>(Ljava/lang/Object;Lnq6;Lnq6;I)V
+    invoke-direct {v1, v0, v2}, Lo1j;-><init>(Lk2j;Ljava/util/Map;)V
 
-    return-object p1
+    iput-object v1, p0, Li2j;->a:Lo1j;
+
+    return-object v1
+
+    :cond_0
+    return-object v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    if-ne p1, p0, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    instance-of v0, p1, Li2j;
+
+    if-nez v0, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    check-cast p1, Li2j;
+
+    invoke-virtual {p0}, Li2j;->a()Ljava/util/Map;
+
+    move-result-object v0
+
+    invoke-virtual {p1}, Li2j;->a()Ljava/util/Map;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    invoke-virtual {p0}, Li2j;->a()Ljava/util/Map;
+
+    move-result-object v0
+
+    check-cast v0, Lo2;
+
+    iget-object v0, v0, Lo2;->b:Ljava/util/Map;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    invoke-virtual {p0}, Li2j;->a()Ljava/util/Map;
+
+    move-result-object v0
+
+    check-cast v0, Lo2;
+
+    iget-object v0, v0, Lo2;->b:Ljava/util/Map;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

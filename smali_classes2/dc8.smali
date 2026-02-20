@@ -1,44 +1,113 @@
-.class public final synthetic Ldc8;
-.super Ljava/lang/Object;
+.class public final Ldc8;
+.super Lvl0;
 .source "SourceFile"
-
-# interfaces
-.implements Lbc8;
 
 
 # instance fields
-.field public final synthetic a:Lic8;
+.field public final X:Ltmh;
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final Y:Ljava/lang/Long;
+
+.field public final Z:Ljava/lang/String;
+
+.field public final b:Ljava/lang/Long;
+
+.field public final c:J
+
+.field public final d:Ly54;
+
+.field public final o:Lv37;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lic8;Ljava/lang/Object;)V
+.method public constructor <init>(JLjava/lang/Long;JLy54;Lv37;Ltmh;Ljava/lang/Long;Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Ldc8;->a:Lic8;
+    invoke-direct {p0, p1, p2}, Lvl0;-><init>(J)V
 
-    iput-object p2, p0, Ldc8;->b:Ljava/lang/Object;
+    iput-object p3, p0, Ldc8;->b:Ljava/lang/Long;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-wide p4, p0, Ldc8;->c:J
+
+    iput-object p6, p0, Ldc8;->d:Ly54;
+
+    iput-object p7, p0, Ldc8;->o:Lv37;
+
+    iput-object p8, p0, Ldc8;->X:Ltmh;
+
+    iput-object p9, p0, Ldc8;->Y:Ljava/lang/Long;
+
+    iput-object p10, p0, Ldc8;->Z:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public b(Landroid/view/View;Ljava/lang/String;)V
+.method public final toString()Ljava/lang/String;
     .locals 3
 
-    sget-object v0, Lkc8;->X:Lkc8;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Ldc8;->b:Ljava/lang/Object;
+    const-string v1, "LinkInfoEvent{chatId="
 
-    check-cast v1, Landroid/text/style/ClickableSpan;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v2, p0, Ldc8;->a:Lic8;
+    iget-object v1, p0, Ldc8;->b:Ljava/lang/Long;
 
-    invoke-virtual {v2, p1, p2, v0, v1}, Lic8;->b(Landroid/view/View;Ljava/lang/String;Lkc8;Landroid/text/style/ClickableSpan;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    return-void
+    const-string v1, ", messageId="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Ldc8;->c:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", contactSearchResult="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ldc8;->d:Ly54;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", groupChatInfo="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ldc8;->o:Lv37;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", videoConference="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ldc8;->X:Ltmh;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", stickerSetId="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ldc8;->Y:Ljava/lang/Long;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", startPayload=\'"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ldc8;->Z:Ljava/lang/String;
+
+    const-string v2, "\'}"
+
+    invoke-static {v0, v1, v2}, Ltx8;->n(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

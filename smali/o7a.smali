@@ -2,459 +2,195 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lig7;
-
 
 # static fields
-.field public static final X:Landroid/util/Size;
-
-
-# instance fields
-.field public final a:Ljava/util/ArrayList;
-
-.field public final b:I
-
-.field public final c:Lm52;
-
-.field public final d:Ljava/util/concurrent/ExecutorService;
-
-.field public o:Landroid/graphics/Matrix;
+.field public static final a:Ljava/util/logging/Logger;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 1
 
-    new-instance v0, Landroid/util/Size;
+    const-class v0, Lo7a;
 
-    const/16 v1, 0x1e0
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    const/16 v2, 0x168
+    move-result-object v0
 
-    invoke-direct {v0, v1, v2}, Landroid/util/Size;-><init>(II)V
+    invoke-static {v0}, Ljava/util/logging/Logger;->getLogger(Ljava/lang/String;)Ljava/util/logging/Logger;
 
-    sput-object v0, Lo7a;->X:Landroid/util/Size;
+    move-result-object v0
+
+    sput-object v0, Lo7a;->a:Ljava/util/logging/Logger;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/util/List;Ljava/util/concurrent/ExecutorService;Lm52;)V
-    .locals 2
+.method public static a(Ljava/io/InputStream;)Ljava/util/List;
+    .locals 8
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "Error closing input stream (ignored)"
 
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    sget-object v1, Lo7a;->a:Ljava/util/logging/Logger;
 
-    move-result-object v0
+    if-nez p0, :cond_0
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    sget-object p0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lfj0;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    goto :goto_0
+    return-object p0
 
     :cond_0
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0, p1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    iput-object v0, p0, Lo7a;->a:Ljava/util/ArrayList;
-
-    const/4 p1, 0x1
-
-    iput p1, p0, Lo7a;->b:I
-
-    iput-object p3, p0, Lo7a;->c:Lm52;
-
-    iput-object p2, p0, Lo7a;->d:Ljava/util/concurrent/ExecutorService;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a(Lsve;ILandroid/graphics/Matrix;Ljava/util/HashMap;Ljava/util/HashMap;)V
-    .locals 10
-
-    iget-object v0, p1, Lol6;->b:Lui7;
-
-    invoke-interface {v0}, Lui7;->k0()Landroid/media/Image;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    const-string v0, "MlKitAnalyzer"
-
-    const-string v3, "Image is null."
-
-    invoke-static {v0, v3}, Lm5j;->b(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {p1}, Lol6;->close()V
-
-    return-void
-
-    :cond_0
-    iget-object v3, p0, Lo7a;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
-
-    move-result v4
-
-    add-int/lit8 v4, v4, -0x1
-
-    iget-object v8, p0, Lo7a;->d:Ljava/util/concurrent/ExecutorService;
-
-    if-le p2, v4, :cond_1
-
-    invoke-virtual {p1}, Lol6;->close()V
-
-    new-instance v0, Ln22;
-
-    const/16 v5, 0xe
-
-    move-object v1, p0
-
-    move-object v3, p1
-
-    move-object v2, p4
-
-    move-object v4, p5
-
-    invoke-direct/range {v0 .. v5}, Ln22;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    invoke-interface {v8, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
-    return-void
-
-    :cond_1
-    invoke-virtual {v3, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    move-object v3, v1
-
-    check-cast v3, Lfj0;
-
-    iget-object v1, p1, Lsve;->o:Lbi7;
-
-    invoke-interface {v1}, Lbi7;->a()I
-
-    move-result v1
+    const/4 v2, 0x0
 
     :try_start_0
-    move-object v4, v3
+    new-instance v3, Ljava/io/ObjectInputStream;
 
-    check-cast v4, Lv7a;
-
-    invoke-virtual {v4, v0, v1, p3}, Lv7a;->E(Landroid/media/Image;ILandroid/graphics/Matrix;)Liqj;
-
-    move-result-object v9
+    invoke-direct {v3, p0}, Ljava/io/ObjectInputStream;-><init>(Ljava/io/InputStream;)V
     :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    new-instance v0, Lm7a;
+    :try_start_1
+    new-instance v2, Ljava/util/ArrayList;
 
-    move-object v1, p0
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    move-object v5, p1
-
-    move v6, p2
-
-    move-object v7, p3
-
-    move-object v4, p4
-
-    move-object v2, p5
-
-    invoke-direct/range {v0 .. v7}, Lm7a;-><init>(Lo7a;Ljava/util/HashMap;Lfj0;Ljava/util/HashMap;Lsve;ILandroid/graphics/Matrix;)V
-
-    invoke-virtual {v9, v8, v0}, Liqj;->b(Ljava/util/concurrent/Executor;Lx1b;)Liqj;
-
-    return-void
-
-    :catch_0
-    move-exception v0
-
-    new-instance v1, Ljava/lang/RuntimeException;
-
-    const-string v2, "Failed to process the image."
-
-    invoke-direct {v1, v2, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    invoke-virtual {p5, v3, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    add-int/lit8 v3, p2, 0x1
-
-    move-object v1, p0
-
-    move-object v2, p1
-
-    move-object v4, p3
-
-    move-object v5, p4
-
-    move-object v6, p5
-
-    invoke-virtual/range {v1 .. v6}, Lo7a;->a(Lsve;ILandroid/graphics/Matrix;Ljava/util/HashMap;Ljava/util/HashMap;)V
-
-    return-void
-.end method
-
-.method public final b(Landroid/graphics/Matrix;)V
-    .locals 1
-
-    if-nez p1, :cond_0
-
-    const/4 p1, 0x0
-
-    iput-object p1, p0, Lo7a;->o:Landroid/graphics/Matrix;
-
-    return-void
-
-    :cond_0
-    new-instance v0, Landroid/graphics/Matrix;
-
-    invoke-direct {v0, p1}, Landroid/graphics/Matrix;-><init>(Landroid/graphics/Matrix;)V
-
-    iput-object v0, p0, Lo7a;->o:Landroid/graphics/Matrix;
-
-    return-void
-.end method
-
-.method public final f()Landroid/util/Size;
-    .locals 6
-
-    iget-object v0, p0, Lo7a;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    sget-object v1, Lo7a;->X:Landroid/util/Size;
-
-    :cond_0
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lfj0;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v2, Landroid/util/Size;
-
-    const/16 v3, 0x500
-
-    const/16 v4, 0x2d0
-
-    invoke-direct {v2, v3, v4}, Landroid/util/Size;-><init>(II)V
-
-    invoke-virtual {v2}, Landroid/util/Size;->getHeight()I
-
-    move-result v3
-
-    invoke-virtual {v2}, Landroid/util/Size;->getWidth()I
+    invoke-virtual {v3}, Ljava/io/ObjectInputStream;->readInt()I
 
     move-result v4
 
-    mul-int/2addr v4, v3
-
-    invoke-virtual {v1}, Landroid/util/Size;->getWidth()I
-
-    move-result v3
-
-    invoke-virtual {v1}, Landroid/util/Size;->getHeight()I
-
-    move-result v5
-
-    mul-int/2addr v5, v3
-
-    if-le v4, v5, :cond_0
-
-    move-object v1, v2
-
-    goto :goto_0
-
-    :cond_1
-    return-object v1
-.end method
-
-.method public final i()I
-    .locals 1
-
-    iget v0, p0, Lo7a;->b:I
-
-    return v0
-.end method
-
-.method public final m(Lsve;)V
-    .locals 13
-
-    iget-object v0, p1, Lsve;->o:Lbi7;
-
-    new-instance v4, Landroid/graphics/Matrix;
-
-    invoke-direct {v4}, Landroid/graphics/Matrix;-><init>()V
-
-    iget v1, p0, Lo7a;->b:I
-
-    if-eqz v1, :cond_3
-
-    iget-object v2, p0, Lo7a;->o:Landroid/graphics/Matrix;
-
-    const/4 v3, 0x2
-
-    if-eq v1, v3, :cond_0
-
-    if-nez v2, :cond_0
-
-    const-string v0, "MlKitAnalyzer"
-
-    const-string v1, "Sensor-to-target transformation is null."
-
-    invoke-static {v0, v1}, Lm5j;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {p1}, Lol6;->close()V
-
-    return-void
-
-    :cond_0
-    new-instance v5, Landroid/graphics/Matrix;
-
-    invoke-interface {v0}, Lbi7;->b()Landroid/graphics/Matrix;
-
-    move-result-object v6
-
-    invoke-direct {v5, v6}, Landroid/graphics/Matrix;-><init>(Landroid/graphics/Matrix;)V
-
-    new-instance v6, Landroid/graphics/RectF;
-
-    iget v7, p1, Lsve;->X:I
-
-    int-to-float v7, v7
-
-    iget v8, p1, Lsve;->Y:I
-
-    int-to-float v8, v8
-
-    const/4 v9, 0x0
-
-    invoke-direct {v6, v9, v9, v7, v8}, Landroid/graphics/RectF;-><init>(FFFF)V
-
-    invoke-interface {v0}, Lbi7;->a()I
-
-    move-result v7
-
-    sget-object v8, Ldtg;->a:Landroid/graphics/RectF;
-
-    rem-int/lit8 v8, v7, 0x5a
-
-    const/4 v10, 0x0
-
-    if-nez v8, :cond_1
-
-    const/4 v8, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    move v8, v10
+    const/4 v5, 0x0
 
     :goto_0
-    new-instance v11, Ljava/lang/StringBuilder;
+    if-ge v5, v4, :cond_1
 
-    const-string v12, "Invalid rotation degrees: "
+    new-instance v6, Ll4c;
 
-    invoke-direct {v11, v12}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v6}, Ll4c;-><init>()V
 
-    invoke-virtual {v11, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, v3}, Ll4c;->readExternal(Ljava/io/ObjectInput;)V
 
-    invoke-virtual {v11}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    move-result-object v11
+    add-int/lit8 v5, v5, 0x1
 
-    invoke-static {v11, v8}, Ljkj;->a(Ljava/lang/String;Z)V
+    goto :goto_0
 
-    invoke-static {v7}, Ldtg;->h(I)I
+    :cond_1
+    invoke-virtual {v2}, Ljava/util/ArrayList;->isEmpty()Z
 
-    move-result v7
+    move-result v4
+    :try_end_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    invoke-static {v7}, Ldtg;->b(I)Z
+    if-nez v4, :cond_2
 
-    move-result v7
+    :try_start_2
+    invoke-virtual {v3}, Ljava/io/InputStream;->close()V
+    :try_end_2
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
 
-    if-eqz v7, :cond_2
+    return-object v2
 
-    new-instance v7, Landroid/graphics/RectF;
+    :catch_0
+    move-exception p0
 
-    invoke-virtual {v6}, Landroid/graphics/RectF;->height()F
+    sget-object v3, Ljava/util/logging/Level;->WARNING:Ljava/util/logging/Level;
 
-    move-result v8
+    invoke-virtual {v1, v3, v0, p0}, Ljava/util/logging/Logger;->log(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    invoke-virtual {v6}, Landroid/graphics/RectF;->width()F
+    return-object v2
 
-    move-result v11
+    :cond_2
+    :try_start_3
+    new-instance v2, Ljava/lang/IllegalStateException;
 
-    invoke-direct {v7, v9, v9, v8, v11}, Landroid/graphics/RectF;-><init>(FFFF)V
+    const-string v4, "Empty metadata"
+
+    invoke-direct {v2, v4}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v2
+    :try_end_3
+    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_1
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    :catchall_0
+    move-exception v2
+
+    goto :goto_2
+
+    :catch_1
+    move-exception v2
 
     goto :goto_1
 
-    :cond_2
-    move-object v7, v6
+    :catchall_1
+    move-exception v3
+
+    move-object v7, v3
+
+    move-object v3, v2
+
+    move-object v2, v7
+
+    goto :goto_2
+
+    :catch_2
+    move-exception v3
+
+    move-object v7, v3
+
+    move-object v3, v2
+
+    move-object v2, v7
 
     :goto_1
-    invoke-interface {v0}, Lbi7;->a()I
+    :try_start_4
+    new-instance v4, Ljava/lang/IllegalStateException;
 
-    move-result v0
+    const-string v5, "Unable to parse metadata file"
 
-    invoke-static {v6, v7, v0, v10}, Ldtg;->a(Landroid/graphics/RectF;Landroid/graphics/RectF;IZ)Landroid/graphics/Matrix;
+    invoke-direct {v4, v5, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    move-result-object v0
+    throw v4
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    invoke-virtual {v5, v0}, Landroid/graphics/Matrix;->postConcat(Landroid/graphics/Matrix;)Z
+    :goto_2
+    if-eqz v3, :cond_3
 
-    invoke-virtual {v5, v4}, Landroid/graphics/Matrix;->invert(Landroid/graphics/Matrix;)Z
+    :try_start_5
+    invoke-virtual {v3}, Ljava/io/InputStream;->close()V
+    :try_end_5
+    .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_3
 
-    if-eq v1, v3, :cond_3
+    goto :goto_3
 
-    invoke-virtual {v4, v2}, Landroid/graphics/Matrix;->postConcat(Landroid/graphics/Matrix;)Z
+    :catch_3
+    move-exception p0
+
+    sget-object v3, Ljava/util/logging/Level;->WARNING:Ljava/util/logging/Level;
+
+    invoke-virtual {v1, v3, v0, p0}, Ljava/util/logging/Logger;->log(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto :goto_3
 
     :cond_3
-    new-instance v5, Ljava/util/HashMap;
+    :try_start_6
+    invoke-virtual {p0}, Ljava/io/InputStream;->close()V
+    :try_end_6
+    .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_4
 
-    invoke-direct {v5}, Ljava/util/HashMap;-><init>()V
+    goto :goto_3
 
-    new-instance v6, Ljava/util/HashMap;
+    :catch_4
+    move-exception p0
 
-    invoke-direct {v6}, Ljava/util/HashMap;-><init>()V
+    sget-object v3, Ljava/util/logging/Level;->WARNING:Ljava/util/logging/Level;
 
-    const/4 v3, 0x0
+    invoke-virtual {v1, v3, v0, p0}, Ljava/util/logging/Logger;->log(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    move-object v1, p0
-
-    move-object v2, p1
-
-    invoke-virtual/range {v1 .. v6}, Lo7a;->a(Lsve;ILandroid/graphics/Matrix;Ljava/util/HashMap;Ljava/util/HashMap;)V
-
-    return-void
+    :goto_3
+    throw v2
 .end method

@@ -1,23 +1,59 @@
-.class public interface abstract Lhf8;
+.class public abstract synthetic Lhf8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final M:Lv1j;
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 5
 
-    new-instance v0, Lv1j;
+    const/4 v0, 0x4
 
-    const/16 v1, 0x17
+    invoke-static {v0}, Ly12;->x(I)[I
 
-    invoke-direct {v0, v1}, Lv1j;-><init>(I)V
+    move-result-object v1
 
-    sput-object v0, Lhf8;->M:Lv1j;
+    array-length v1, v1
+
+    new-array v1, v1, [I
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x2
+
+    :try_start_0
+    aput v2, v1, v3
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    const/4 v4, 0x0
+
+    :try_start_1
+    aput v3, v1, v4
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    const/4 v3, 0x3
+
+    :try_start_2
+    aput v3, v1, v2
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
+    :try_start_3
+    aput v0, v1, v3
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+
+    :catch_3
+    sput-object v1, Lhf8;->$EnumSwitchMapping$0:[I
 
     return-void
 .end method

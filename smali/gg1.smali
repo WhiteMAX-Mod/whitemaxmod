@@ -1,114 +1,101 @@
-.class public final synthetic Lgg1;
-.super Ljava/lang/Object;
+.class public final Lgg1;
+.super Lhg1;
 .source "SourceFile"
-
-# interfaces
-.implements Ld4e;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;
+.field public final a:Loih;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;I)V
+.method public constructor <init>(Loih;)V
     .locals 0
 
-    iput p2, p0, Lgg1;->a:I
-
-    iput-object p1, p0, Lgg1;->b:Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lgg1;->a:Loih;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 5
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    iget v0, p0, Lgg1;->a:I
+    const/4 v0, 0x1
 
-    const/4 v1, 0x0
+    if-ne p0, p1, :cond_0
 
-    sget-object v2, Lzv8;->b:Lzv8;
-
-    const/4 v3, 0x1
-
-    iget-object v4, p0, Lgg1;->b:Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;
-
-    packed-switch v0, :pswitch_data_0
-
-    sget-object v0, Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;->B0:[Lz28;
-
-    invoke-virtual {v4}, Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;->D0()Ldg1;
-
-    move-result-object v0
-
-    invoke-virtual {v4}, Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;->D0()Ldg1;
-
-    move-result-object v4
-
-    iget-object v4, v4, Ldg1;->y0:Lspf;
-
-    invoke-virtual {v4}, Lspf;->getValue()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lxf1;
-
-    iget-object v4, v4, Lxf1;->b:Lzv8;
-
-    if-ne v4, v2, :cond_0
-
-    move v1, v3
+    return v0
 
     :cond_0
-    xor-int/2addr v1, v3
+    instance-of v1, p1, Lgg1;
 
-    invoke-virtual {v0, v1}, Ldg1;->t(Z)V
+    const/4 v2, 0x0
 
-    return-void
+    if-nez v1, :cond_1
 
-    :pswitch_0
-    sget-object v0, Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;->B0:[Lz28;
+    return v2
 
-    invoke-virtual {v4}, Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;->D0()Ldg1;
+    :cond_1
+    check-cast p1, Lgg1;
+
+    iget-object v1, p0, Lgg1;->a:Loih;
+
+    iget-object p1, p1, Lgg1;->a:Loih;
+
+    invoke-static {v1, p1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lgg1;->a:Loih;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    return v0
+
+    :cond_0
+    invoke-virtual {v0}, Loih;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "VideoState(participant="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lgg1;->a:Loih;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v4}, Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;->D0()Ldg1;
-
-    move-result-object v4
-
-    iget-object v4, v4, Ldg1;->y0:Lspf;
-
-    invoke-virtual {v4}, Lspf;->getValue()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lxf1;
-
-    iget-object v4, v4, Lxf1;->c:Lzv8;
-
-    if-ne v4, v2, :cond_1
-
-    move v1, v3
-
-    :cond_1
-    xor-int/2addr v1, v3
-
-    invoke-virtual {v0, v1}, Ldg1;->u(Z)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

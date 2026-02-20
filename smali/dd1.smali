@@ -1,201 +1,239 @@
-.class public final enum Ldd1;
-.super Ljava/lang/Enum;
+.class public final Ldd1;
+.super Lpdg;
 .source "SourceFile"
 
-
-# static fields
-.field public static final enum X:Ldd1;
-
-.field public static final enum Y:Ldd1;
-
-.field public static final enum Z:Ldd1;
-
-.field public static final enum d:Ldd1;
-
-.field public static final enum o:Ldd1;
-
-.field public static final enum t0:Ldd1;
-
-.field public static final synthetic u0:[Ldd1;
+# interfaces
+.implements Lys6;
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic X:Lone/me/calllist/ui/CallHistoryScreen;
 
-.field public final b:I
-
-.field public final c:Lqhg;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 20
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calllist/ui/CallHistoryScreen;)V
+    .locals 0
 
-    sget v4, Lf6e;->b1:I
+    iput-object p2, p0, Ldd1;->X:Lone/me/calllist/ui/CallHistoryScreen;
 
-    sget v3, Ledd;->call_incoming_accept_with_video_accessibility:I
+    const/4 p2, 0x2
+
+    invoke-direct {p0, p2, p1}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Ldd1;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Ldd1;
+
+    sget-object p2, Lmah;->a:Lmah;
+
+    invoke-virtual {p1, p2}, Ldd1;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
     new-instance v0, Ldd1;
 
-    const/4 v2, 0x0
+    iget-object v1, p0, Ldd1;->X:Lone/me/calllist/ui/CallHistoryScreen;
 
-    const/4 v5, 0x0
+    invoke-direct {v0, p2, v1}, Ldd1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calllist/ui/CallHistoryScreen;)V
 
-    const-string v1, "VIDEO_ACCEPT"
+    iput-object p1, v0, Ldd1;->o:Ljava/lang/Object;
 
-    invoke-direct/range {v0 .. v5}, Ldd1;-><init>(Ljava/lang/String;IIILlhg;)V
+    return-object v0
+.end method
 
-    move-object v6, v0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 10
 
-    sput-object v6, Ldd1;->d:Ldd1;
+    iget-object v0, p0, Ldd1;->o:Ljava/lang/Object;
 
-    sget v11, Lf6e;->F:I
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    sget v10, Ledd;->call_incoming_accept_with_audio_accessibility:I
+    check-cast v0, Lzz1;
 
-    new-instance v7, Ldd1;
+    iget-object p1, p0, Ldd1;->X:Lone/me/calllist/ui/CallHistoryScreen;
+
+    iget-object v1, p1, Lone/me/calllist/ui/CallHistoryScreen;->C0:Ljd1;
+
+    iget-object v2, v0, Lzz1;->a:Ljava/util/List;
+
+    iput-object v2, v1, Ljd1;->a:Ljava/util/List;
+
+    iget-object v4, p1, Lone/me/calllist/ui/CallHistoryScreen;->D0:Lrc1;
+
+    invoke-virtual {p1}, Lone/me/calllist/ui/CallHistoryScreen;->H0()Landroidx/viewpager2/widget/ViewPager2;
+
+    move-result-object v5
+
+    iget-object v1, v0, Lzz1;->a:Ljava/util/List;
+
+    iget-object v2, v4, Lrc1;->w0:Ljava/util/List;
+
+    invoke-interface {v2}, Ljava/util/List;->isEmpty()Z
+
+    move-result v2
+
+    const/4 v6, 0x0
+
+    if-eqz v2, :cond_0
+
+    invoke-interface {v1}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    iput-object v1, v4, Lrc1;->w0:Ljava/util/List;
+
+    invoke-interface {v1}, Ljava/util/List;->size()I
+
+    move-result v2
+
+    invoke-virtual {v4, v6, v2}, Lsxd;->p(II)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v2, Lmc1;
+
+    iget-object v3, v4, Lrc1;->w0:Ljava/util/List;
+
+    const/4 v7, 0x0
+
+    invoke-direct {v2, v7, v3, v1}, Lmc1;-><init>(ILjava/util/List;Ljava/util/List;)V
+
+    invoke-static {v2}, Let8;->a(Lpvj;)Lu15;
+
+    move-result-object v2
+
+    new-instance v7, Lw5;
+
+    const/4 v3, 0x1
+
+    invoke-direct {v7, v4, v1, v2, v3}, Lw5;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+
+    new-instance v8, Ll;
+
+    const/16 v2, 0x1c
+
+    invoke-direct {v8, v2, v4}, Ll;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v5}, Landroid/view/View;->isInLayout()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    new-instance v3, Lo11;
 
     const/4 v9, 0x1
 
-    const/4 v12, 0x0
+    invoke-direct/range {v3 .. v9}, Lo11;-><init>(Ljava/lang/Object;Ljava/lang/Object;ILjava/lang/Object;Ljava/lang/Object;I)V
 
-    const-string v8, "AUDIO_ACCEPT"
+    invoke-virtual {v5, v3}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
-    invoke-direct/range {v7 .. v12}, Ldd1;-><init>(Ljava/lang/String;IIILlhg;)V
+    goto :goto_0
 
-    move-object v13, v6
+    :cond_1
+    invoke-virtual {v7}, Lw5;->invoke()Ljava/lang/Object;
 
-    move-object v6, v7
+    :goto_0
+    iget-object v2, p1, Lone/me/calllist/ui/CallHistoryScreen;->x0:Lgrd;
 
-    sput-object v6, Ldd1;->o:Ldd1;
+    sget-object v3, Lone/me/calllist/ui/CallHistoryScreen;->J0:[Lv58;
 
-    sget v3, Lb7b;->b0:I
+    const/4 v4, 0x2
 
-    sget v0, Lb7b;->d0:I
+    aget-object v4, v3, v4
 
-    new-instance v5, Llhg;
+    invoke-interface {v2, p1, v4}, Lgrd;->D(Ljava/lang/Object;Lv58;)Ljava/lang/Object;
 
-    invoke-direct {v5, v0}, Llhg;-><init>(I)V
+    move-result-object v2
 
-    new-instance v0, Ldd1;
+    check-cast v2, Lrnb;
 
-    const-string v1, "VIDEO_ACCEPT_WITH_TITLE"
+    invoke-interface {v1}, Ljava/util/Collection;->isEmpty()Z
 
-    const/4 v2, 0x2
+    move-result v4
 
-    invoke-direct/range {v0 .. v5}, Ldd1;-><init>(Ljava/lang/String;IIILlhg;)V
+    const/16 v5, 0x8
 
-    sput-object v0, Ldd1;->X:Ldd1;
+    if-nez v4, :cond_2
 
-    sget v10, Lb7b;->a0:I
+    move v4, v6
 
-    sget v1, Lb7b;->c0:I
+    goto :goto_1
 
-    new-instance v12, Llhg;
+    :cond_2
+    move v4, v5
 
-    invoke-direct {v12, v1}, Llhg;-><init>(I)V
+    :goto_1
+    invoke-virtual {v2, v4}, Landroid/view/View;->setVisibility(I)V
 
-    new-instance v7, Ldd1;
+    invoke-virtual {p1}, Lone/me/calllist/ui/CallHistoryScreen;->H0()Landroidx/viewpager2/widget/ViewPager2;
 
-    const-string v8, "AUDIO_ACCEPT_WITH_TITLE"
+    move-result-object v2
 
-    const/4 v9, 0x3
+    invoke-interface {v1}, Ljava/util/Collection;->isEmpty()Z
 
-    invoke-direct/range {v7 .. v12}, Ldd1;-><init>(Ljava/lang/String;IIILlhg;)V
+    move-result v1
 
-    sput-object v7, Ldd1;->Y:Ldd1;
+    if-nez v1, :cond_3
 
-    sget v18, Lf6e;->w0:I
+    move v1, v6
 
-    sget v17, Lb7b;->h0:I
+    goto :goto_2
 
-    new-instance v9, Ldd1;
+    :cond_3
+    move v1, v5
 
-    const/16 v16, 0x4
+    :goto_2
+    invoke-virtual {v2, v1}, Landroid/view/View;->setVisibility(I)V
 
-    const/16 v19, 0x0
+    invoke-virtual {p1, v0}, Lone/me/calllist/ui/CallHistoryScreen;->M0(Lzz1;)V
 
-    const-string v15, "DECLINE"
+    iget-object v1, p1, Lone/me/calllist/ui/CallHistoryScreen;->z0:Lgrd;
 
-    move-object v14, v9
+    const/4 v2, 0x4
 
-    invoke-direct/range {v14 .. v19}, Ldd1;-><init>(Ljava/lang/String;IIILlhg;)V
+    aget-object v2, v3, v2
 
-    sput-object v9, Ldd1;->Z:Ldd1;
+    invoke-interface {v1, p1, v2}, Lgrd;->D(Ljava/lang/Object;Lv58;)Ljava/lang/Object;
 
-    sget v1, Lb7b;->g0:I
+    move-result-object p1
 
-    new-instance v2, Llhg;
+    check-cast p1, Laab;
 
-    invoke-direct {v2, v1}, Llhg;-><init>(I)V
+    iget-boolean v0, v0, Lzz1;->b:Z
 
-    new-instance v10, Ldd1;
+    if-eqz v0, :cond_4
 
-    const-string v15, "DECLINE_WITH_TITLE"
+    goto :goto_3
 
-    const/16 v16, 0x5
+    :cond_4
+    move v6, v5
 
-    move-object/from16 v19, v2
+    :goto_3
+    invoke-virtual {p1, v6}, Landroid/view/View;->setVisibility(I)V
 
-    move-object v14, v10
+    sget-object p1, Lmah;->a:Lmah;
 
-    invoke-direct/range {v14 .. v19}, Ldd1;-><init>(Ljava/lang/String;IIILlhg;)V
-
-    sput-object v10, Ldd1;->t0:Ldd1;
-
-    move-object v8, v7
-
-    move-object v5, v13
-
-    move-object v7, v0
-
-    filled-new-array/range {v5 .. v10}, [Ldd1;
-
-    move-result-object v0
-
-    sput-object v0, Ldd1;->u0:[Ldd1;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;IIILlhg;)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    iput p3, p0, Ldd1;->a:I
-
-    iput p4, p0, Ldd1;->b:I
-
-    iput-object p5, p0, Ldd1;->c:Lqhg;
-
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Ldd1;
-    .locals 1
-
-    const-class v0, Ldd1;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Ldd1;
-
-    return-object p0
-.end method
-
-.method public static values()[Ldd1;
-    .locals 1
-
-    sget-object v0, Ldd1;->u0:[Ldd1;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Ldd1;
-
-    return-object v0
+    return-object p1
 .end method

@@ -1,131 +1,111 @@
-.class public final synthetic Lh33;
-.super Ljava/lang/Object;
+.class public final Lh33;
+.super Lpdg;
 .source "SourceFile"
 
 # interfaces
-.implements Llq6;
+.implements Lys6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;
 
-.field public final synthetic b:Lb2e;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lb2e;I)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;)V
     .locals 0
 
-    iput p2, p0, Lh33;->a:I
+    iput-object p2, p0, Lh33;->X:Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;
 
-    iput-object p1, p0, Lh33;->b:Lb2e;
+    const/4 p2, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2, p1}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Li33;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lh33;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lh33;
+
+    sget-object p2, Lmah;->a:Lmah;
+
+    invoke-virtual {p1, p2}, Lh33;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    iget v0, p0, Lh33;->a:I
+    new-instance v0, Lh33;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v1, p0, Lh33;->X:Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;
 
-    const-class v0, Lza3;
+    invoke-direct {v0, p2, v1}, Lh33;-><init>(Lkotlin/coroutines/Continuation;Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;)V
 
-    invoke-static {v0}, Lctd;->a(Ljava/lang/Class;)Lrd3;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lh33;->b:Lb2e;
-
-    iget-object v1, v1, Lb2e;->j:Ljava/util/LinkedHashMap;
-
-    invoke-virtual {v1, v0}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    check-cast v0, Lza3;
+    iput-object p1, v0, Lh33;->o:Ljava/lang/Object;
 
     return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget-object v0, p0, Lh33;->o:Ljava/lang/Object;
+
+    check-cast v0, Li33;
+
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    sget-object p1, Li33;->a:Li33;
+
+    invoke-static {v0, p1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    sget-object p1, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->A0:[Lv58;
+
+    iget-object p1, p0, Lh33;->X:Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;
+
+    invoke-virtual {p1}, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->J0()Lu7b;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lu7b;->setProgressEnabled(Z)V
+
+    new-instance v0, Lrlb;
+
+    invoke-direct {v0, p1}, Lrlb;-><init>(Lone/me/sdk/arch/Widget;)V
+
+    sget p1, Ldnb;->b:I
+
+    new-instance v1, Lcpg;
+
+    invoke-direct {v1, p1}, Lcpg;-><init>(I)V
+
+    invoke-virtual {v0, v1}, Lrlb;->h(Lhpg;)V
+
+    invoke-virtual {v0}, Lrlb;->j()Lqlb;
 
     :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
+    sget-object p1, Lmah;->a:Lmah;
 
-    const-string v1, "Required value was null."
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :pswitch_0
-    const-class v0, Lk4a;
-
-    invoke-static {v0}, Lctd;->a(Ljava/lang/Class;)Lrd3;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lh33;->b:Lb2e;
-
-    iget-object v1, v1, Lb2e;->j:Ljava/util/LinkedHashMap;
-
-    invoke-virtual {v1, v0}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    check-cast v0, Lk4a;
-
-    return-object v0
-
-    :cond_1
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "Required value was null."
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :pswitch_1
-    const-class v0, Lza3;
-
-    invoke-static {v0}, Lctd;->a(Ljava/lang/Class;)Lrd3;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lh33;->b:Lb2e;
-
-    iget-object v1, v1, Lb2e;->j:Ljava/util/LinkedHashMap;
-
-    invoke-virtual {v1, v0}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_2
-
-    check-cast v0, Lza3;
-
-    return-object v0
-
-    :cond_2
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "Required value was null."
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

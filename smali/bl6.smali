@@ -1,301 +1,450 @@
-.class public final Lbl6;
-.super Lp6g;
+.class public abstract Lbl6;
+.super Lnb8;
 .source "SourceFile"
-
-# interfaces
-.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/chats/forward/ForwardPickerScreen;
+.field public a:Landroid/graphics/drawable/Drawable;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final b:Landroid/graphics/Rect;
+
+.field public final c:Landroid/graphics/Rect;
+
+.field public d:I
+
+.field public final o:Z
+
+.field public s0:Z
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chats/forward/ForwardPickerScreen;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    .locals 7
 
-    iput-object p2, p0, Lbl6;->X:Lone/me/chats/forward/ForwardPickerScreen;
+    const/4 v3, 0x0
 
-    const/4 p2, 0x2
+    invoke-direct {p0, p1, p2, v3}, Lnb8;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    new-instance v0, Landroid/graphics/Rect;
+
+    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
+
+    iput-object v0, p0, Lbl6;->b:Landroid/graphics/Rect;
+
+    new-instance v0, Landroid/graphics/Rect;
+
+    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
+
+    iput-object v0, p0, Lbl6;->c:Landroid/graphics/Rect;
+
+    const/16 v0, 0x77
+
+    iput v0, p0, Lbl6;->d:I
+
+    const/4 v6, 0x1
+
+    iput-boolean v6, p0, Lbl6;->o:Z
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lbl6;->s0:Z
+
+    sget-object v2, Lvld;->ForegroundLinearLayout:[I
+
+    new-array v5, v0, [I
+
+    const/4 v4, 0x0
+
+    invoke-static {p1, p2, v3, v4}, Lsqg;->a(Landroid/content/Context;Landroid/util/AttributeSet;II)V
+
+    move-object v0, p1
+
+    move-object v1, p2
+
+    invoke-static/range {v0 .. v5}, Lsqg;->b(Landroid/content/Context;Landroid/util/AttributeSet;[III[I)V
+
+    invoke-virtual {v0, v1, v2, v3, v4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
+
+    move-result-object p1
+
+    sget p2, Lvld;->ForegroundLinearLayout_android_foregroundGravity:I
+
+    iget v0, p0, Lbl6;->d:I
+
+    invoke-virtual {p1, p2, v0}, Landroid/content/res/TypedArray;->getInt(II)I
+
+    move-result p2
+
+    iput p2, p0, Lbl6;->d:I
+
+    sget p2, Lvld;->ForegroundLinearLayout_android_foreground:I
+
+    invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p2
+
+    if-eqz p2, :cond_0
+
+    invoke-virtual {p0, p2}, Lbl6;->setForeground(Landroid/graphics/drawable/Drawable;)V
+
+    :cond_0
+    sget p2, Lvld;->ForegroundLinearLayout_foregroundInsidePadding:I
+
+    invoke-virtual {p1, p2, v6}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+
+    move-result p2
+
+    iput-boolean p2, p0, Lbl6;->o:Z
+
+    invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final draw(Landroid/graphics/Canvas;)V
+    .locals 7
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-super {p0, p1}, Landroid/view/View;->draw(Landroid/graphics/Canvas;)V
 
-    invoke-virtual {p0, p1, p2}, Lbl6;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Lbl6;->a:Landroid/graphics/drawable/Drawable;
 
-    move-result-object p1
+    if-eqz v0, :cond_2
 
-    check-cast p1, Lbl6;
+    iget-boolean v1, p0, Lbl6;->s0:Z
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    if-eqz v1, :cond_1
 
-    invoke-virtual {p1, p2}, Lbl6;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 v1, 0x0
 
-    return-object p2
+    iput-boolean v1, p0, Lbl6;->s0:Z
+
+    invoke-virtual {p0}, Landroid/view/View;->getRight()I
+
+    move-result v2
+
+    invoke-virtual {p0}, Landroid/view/View;->getLeft()I
+
+    move-result v3
+
+    sub-int/2addr v2, v3
+
+    invoke-virtual {p0}, Landroid/view/View;->getBottom()I
+
+    move-result v3
+
+    invoke-virtual {p0}, Landroid/view/View;->getTop()I
+
+    move-result v4
+
+    sub-int/2addr v3, v4
+
+    iget-boolean v4, p0, Lbl6;->o:Z
+
+    iget-object v5, p0, Lbl6;->b:Landroid/graphics/Rect;
+
+    if-eqz v4, :cond_0
+
+    invoke-virtual {v5, v1, v1, v2, v3}, Landroid/graphics/Rect;->set(IIII)V
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingLeft()I
+
+    move-result v1
+
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingTop()I
+
+    move-result v4
+
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingRight()I
+
+    move-result v6
+
+    sub-int/2addr v2, v6
+
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingBottom()I
+
+    move-result v6
+
+    sub-int/2addr v3, v6
+
+    invoke-virtual {v5, v1, v4, v2, v3}, Landroid/graphics/Rect;->set(IIII)V
+
+    :goto_0
+    iget v1, p0, Lbl6;->d:I
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
+
+    move-result v2
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
+
+    move-result v3
+
+    iget-object v4, p0, Lbl6;->c:Landroid/graphics/Rect;
+
+    invoke-static {v1, v2, v3, v5, v4}, Landroid/view/Gravity;->apply(IIILandroid/graphics/Rect;Landroid/graphics/Rect;)V
+
+    invoke-virtual {v0, v4}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
+
+    :cond_1
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
+
+    :cond_2
+    return-void
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final drawableHotspotChanged(FF)V
+    .locals 1
+
+    invoke-super {p0, p1, p2}, Landroid/view/View;->drawableHotspotChanged(FF)V
+
+    iget-object v0, p0, Lbl6;->a:Landroid/graphics/drawable/Drawable;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, p1, p2}, Landroid/graphics/drawable/Drawable;->setHotspot(FF)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final drawableStateChanged()V
     .locals 2
 
-    new-instance v0, Lbl6;
+    invoke-super {p0}, Landroid/view/View;->drawableStateChanged()V
 
-    iget-object v1, p0, Lbl6;->X:Lone/me/chats/forward/ForwardPickerScreen;
+    iget-object v0, p0, Lbl6;->a:Landroid/graphics/drawable/Drawable;
 
-    invoke-direct {v0, p2, v1}, Lbl6;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chats/forward/ForwardPickerScreen;)V
+    if-eqz v0, :cond_0
 
-    iput-object p1, v0, Lbl6;->o:Ljava/lang/Object;
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->isStateful()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lbl6;->a:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {p0}, Landroid/view/View;->getDrawableState()[I
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setState([I)Z
+
+    :cond_0
+    return-void
+.end method
+
+.method public getForeground()Landroid/graphics/drawable/Drawable;
+    .locals 1
+
+    iget-object v0, p0, Lbl6;->a:Landroid/graphics/drawable/Drawable;
 
     return-object v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 14
+.method public getForegroundGravity()I
+    .locals 1
 
-    iget-object v0, p0, Lbl6;->o:Ljava/lang/Object;
+    iget v0, p0, Lbl6;->d:I
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    return v0
+.end method
 
-    check-cast v0, Lqk6;
+.method public final jumpDrawablesToCurrentState()V
+    .locals 1
 
-    instance-of p1, v0, Lmk6;
+    invoke-super {p0}, Landroid/view/View;->jumpDrawablesToCurrentState()V
 
-    const/4 v1, 0x0
+    iget-object v0, p0, Lbl6;->a:Landroid/graphics/drawable/Drawable;
 
-    iget-object v2, p0, Lbl6;->X:Lone/me/chats/forward/ForwardPickerScreen;
+    if-eqz v0, :cond_0
 
-    if-eqz p1, :cond_4
-
-    check-cast v0, Lmk6;
-
-    iget-object p1, v0, Lmk6;->a:Ljava/lang/Long;
-
-    if-eqz p1, :cond_3
-
-    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v3
-
-    invoke-static {v2}, Ll8j;->a(La94;)V
-
-    sget-object p1, Lfk6;->c:Lfk6;
-
-    iget-object v2, v0, Lmk6;->b:Ljava/lang/Long;
-
-    iget-object v5, v0, Lmk6;->c:Ljava/util/Set;
-
-    iget-object v11, v0, Lmk6;->d:Ljava/lang/Long;
-
-    iget-boolean v6, v0, Lmk6;->e:Z
-
-    invoke-static {v6}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v12
-
-    invoke-virtual {p1}, Ld3;->p0()Ljm4;
-
-    move-result-object p1
-
-    new-instance v13, Lim4;
-
-    invoke-direct {v13}, Lim4;-><init>()V
-
-    const-string v6, ":chats"
-
-    iput-object v6, v13, Lim4;->a:Ljava/lang/String;
-
-    const-string v6, "id"
-
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v3
-
-    invoke-virtual {v13, v3, v6}, Lim4;->c(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v3, "type"
-
-    const-string v4, "local"
-
-    invoke-virtual {v13, v4, v3}, Lim4;->c(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v3, "from_forward"
-
-    sget-object v4, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
-
-    invoke-virtual {v13, v4, v3}, Lim4;->c(Ljava/lang/Object;Ljava/lang/String;)V
-
-    if-eqz v2, :cond_0
-
-    invoke-virtual {v2}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v2
-
-    const-string v4, "forward_cht_id"
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v2
-
-    invoke-virtual {v13, v2, v4}, Lim4;->c(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->jumpToCurrentState()V
 
     :cond_0
-    if-eqz v5, :cond_1
+    return-void
+.end method
 
-    const/4 v9, 0x0
+.method public final onLayout(ZIIII)V
+    .locals 0
 
-    const/16 v10, 0x3e
+    invoke-super/range {p0 .. p5}, Lnb8;->onLayout(ZIIII)V
 
-    const-string v6, ","
+    move p2, p1
 
-    const/4 v7, 0x0
+    move-object p1, p0
 
-    const/4 v8, 0x0
+    iget-boolean p3, p1, Lbl6;->s0:Z
 
-    invoke-static/range {v5 .. v10}, Lpi3;->K(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lnq6;I)Ljava/lang/String;
+    or-int/2addr p2, p3
 
-    move-result-object v2
+    iput-boolean p2, p1, Lbl6;->s0:Z
 
-    const-string v3, "forward_msg_ids"
+    return-void
+.end method
 
-    invoke-virtual {v13, v2, v3}, Lim4;->c(Ljava/lang/Object;Ljava/lang/String;)V
+.method public final onSizeChanged(IIII)V
+    .locals 0
 
-    :cond_1
-    if-eqz v11, :cond_2
-
-    invoke-virtual {v11}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v2
-
-    const-string v4, "forward_attach_id"
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v2
-
-    invoke-virtual {v13, v2, v4}, Lim4;->c(Ljava/lang/Object;Ljava/lang/String;)V
-
-    :cond_2
-    const-string v2, "is_forward_attach"
-
-    invoke-virtual {v13, v12, v2}, Lim4;->c(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {v13}, Lim4;->a()Landroid/net/Uri;
-
-    move-result-object v2
-
-    invoke-virtual {p1, v2, v1}, Ljm4;->c(Landroid/net/Uri;Landroid/os/Bundle;)Z
-
-    goto :goto_0
-
-    :cond_3
-    sget-object p1, Lfk6;->c:Lfk6;
-
-    invoke-virtual {p1}, Ld3;->p0()Ljm4;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljm4;->d()Z
-
-    :goto_0
-    iget-object p1, v0, Lmk6;->f:Lbk6;
-
-    if-eqz p1, :cond_7
-
-    sget-object v0, Lyj6;->a:Lyj6;
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lr5;->f()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lfl7;
-
-    if-eqz v0, :cond_7
-
-    iget-object v1, p1, Lbk6;->a:Ljava/util/LinkedHashSet;
-
-    iget-object p1, p1, Lbk6;->b:Llce;
-
-    invoke-virtual {v0, v1, p1}, Lfl7;->f(Ljava/util/Set;Llce;)V
-
-    goto :goto_1
-
-    :cond_4
-    instance-of p1, v0, Lpk6;
-
-    if-eqz p1, :cond_5
-
-    new-instance p1, Lzs3;
-
-    const/16 v0, 0xe
-
-    invoke-direct {p1, v0, v2}, Lzs3;-><init>(ILjava/lang/Object;)V
-
-    iput-object p1, v2, Lone/me/chats/forward/ForwardPickerScreen;->z0:Llq6;
-
-    goto :goto_1
-
-    :cond_5
-    instance-of p1, v0, Lok6;
-
-    if-eqz p1, :cond_6
-
-    sget-object p1, Lone/me/chats/forward/ForwardPickerScreen;->J0:[Lz28;
+    invoke-super {p0, p1, p2, p3, p4}, Landroid/view/View;->onSizeChanged(IIII)V
 
     const/4 p1, 0x1
 
-    invoke-virtual {v2, p1}, Lone/me/chats/forward/ForwardPickerScreen;->Q0(Z)V
+    iput-boolean p1, p0, Lbl6;->s0:Z
 
-    goto :goto_1
+    return-void
+.end method
 
-    :cond_6
-    instance-of p1, v0, Lnk6;
+.method public setForeground(Landroid/graphics/drawable/Drawable;)V
+    .locals 2
 
-    if-eqz p1, :cond_8
+    iget-object v0, p0, Lbl6;->a:Landroid/graphics/drawable/Drawable;
 
-    sget-object p1, Lone/me/chats/forward/ForwardPickerScreen;->J0:[Lz28;
+    if-eq v0, p1, :cond_4
 
+    if-eqz v0, :cond_0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
+
+    iget-object v0, p0, Lbl6;->a:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {p0, v0}, Landroid/view/View;->unscheduleDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    :cond_0
+    iput-object p1, p0, Lbl6;->a:Landroid/graphics/drawable/Drawable;
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lbl6;->s0:Z
+
+    if-eqz p1, :cond_2
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Landroid/view/View;->setWillNotDraw(Z)V
+
+    invoke-virtual {p1, p0}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
+
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->isStateful()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p0}, Landroid/view/View;->getDrawableState()[I
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroid/graphics/drawable/Drawable;->setState([I)Z
+
+    :cond_1
+    iget v0, p0, Lbl6;->d:I
+
+    const/16 v1, 0x77
+
+    if-ne v0, v1, :cond_3
+
+    new-instance v0, Landroid/graphics/Rect;
+
+    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
+
+    invoke-virtual {p1, v0}, Landroid/graphics/drawable/Drawable;->getPadding(Landroid/graphics/Rect;)Z
+
+    goto :goto_0
+
+    :cond_2
+    invoke-virtual {p0, v0}, Landroid/view/View;->setWillNotDraw(Z)V
+
+    :cond_3
+    :goto_0
+    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
+
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+
+    :cond_4
+    return-void
+.end method
+
+.method public setForegroundGravity(I)V
+    .locals 1
+
+    iget v0, p0, Lbl6;->d:I
+
+    if-eq v0, p1, :cond_3
+
+    const v0, 0x800007
+
+    and-int/2addr v0, p1
+
+    if-nez v0, :cond_0
+
+    const v0, 0x800003
+
+    or-int/2addr p1, v0
+
+    :cond_0
+    and-int/lit8 v0, p1, 0x70
+
+    if-nez v0, :cond_1
+
+    or-int/lit8 p1, p1, 0x30
+
+    :cond_1
+    iput p1, p0, Lbl6;->d:I
+
+    const/16 v0, 0x77
+
+    if-ne p1, v0, :cond_2
+
+    iget-object p1, p0, Lbl6;->a:Landroid/graphics/drawable/Drawable;
+
+    if-eqz p1, :cond_2
+
+    new-instance p1, Landroid/graphics/Rect;
+
+    invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
+
+    iget-object v0, p0, Lbl6;->a:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->getPadding(Landroid/graphics/Rect;)Z
+
+    :cond_2
+    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
+
+    :cond_3
+    return-void
+.end method
+
+.method public final verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
+    .locals 1
+
+    invoke-super {p0, p1}, Landroid/view/View;->verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    iget-object v0, p0, Lbl6;->a:Landroid/graphics/drawable/Drawable;
+
+    if-ne p1, v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
     const/4 p1, 0x0
 
-    invoke-virtual {v2, p1}, Lone/me/chats/forward/ForwardPickerScreen;->Q0(Z)V
+    return p1
 
-    invoke-virtual {v2}, Lone/me/chats/picker/AbstractPickerScreen;->J0()Lb5c;
+    :cond_1
+    :goto_0
+    const/4 p1, 0x1
 
-    move-result-object p1
-
-    iget-object v0, p1, Lb5c;->c:La7c;
-
-    invoke-interface {v0}, La7c;->c()V
-
-    iget-object p1, p1, Lb5c;->X:Lspf;
-
-    sget-object v0, Lnh5;->a:Lnh5;
-
-    invoke-virtual {p1, v1, v0}, Lspf;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    :cond_7
-    :goto_1
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
-
-    :cond_8
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
+    return p1
 .end method

@@ -1,31 +1,23 @@
 .class public final Ltvc;
-.super Lzvc;
+.super Luvc;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lqhg;
+.field public final a:Lcpg;
 
-.field public final b:Lqhg;
-
-.field public final c:Ljava/util/List;
-
-.field public final d:Landroid/os/Bundle;
+.field public final b:I
 
 
 # direct methods
-.method public constructor <init>(Lqhg;Lqhg;Ljava/util/List;Landroid/os/Bundle;)V
+.method public constructor <init>(ILcpg;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ltvc;->a:Lqhg;
+    iput-object p2, p0, Ltvc;->a:Lcpg;
 
-    iput-object p2, p0, Ltvc;->b:Lqhg;
-
-    iput-object p3, p0, Ltvc;->c:Ljava/util/List;
-
-    iput-object p4, p0, Ltvc;->d:Landroid/os/Bundle;
+    iput p1, p0, Ltvc;->b:I
 
     return-void
 .end method
@@ -33,135 +25,75 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
+    .locals 2
 
     if-ne p0, p1, :cond_0
 
-    return v0
+    goto :goto_1
 
     :cond_0
-    instance-of v1, p1, Ltvc;
+    instance-of v0, p1, Ltvc;
 
-    const/4 v2, 0x0
+    if-nez v0, :cond_1
 
-    if-nez v1, :cond_1
-
-    return v2
+    goto :goto_0
 
     :cond_1
     check-cast p1, Ltvc;
 
-    iget-object v1, p0, Ltvc;->a:Lqhg;
+    iget-object v0, p0, Ltvc;->a:Lcpg;
 
-    iget-object v3, p1, Ltvc;->a:Lqhg;
+    iget-object v1, p1, Ltvc;->a:Lcpg;
 
-    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Ltvc;->b:Lqhg;
-
-    iget-object v3, p1, Ltvc;->b:Lqhg;
-
-    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Ltvc;->c:Ljava/util/List;
-
-    iget-object v3, p1, Ltvc;->c:Ljava/util/List;
-
-    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-object v1, p0, Ltvc;->d:Landroid/os/Bundle;
-
-    iget-object p1, p1, Ltvc;->d:Landroid/os/Bundle;
-
-    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_5
-
-    return v2
-
-    :cond_5
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 4
-
-    iget-object v0, p0, Ltvc;->a:Lqhg;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v0, v1}, Lcpg;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    const/4 v2, 0x0
-
-    iget-object v3, p0, Ltvc;->b:Lqhg;
-
-    if-nez v3, :cond_0
-
-    move v3, v2
+    if-nez v0, :cond_2
 
     goto :goto_0
 
-    :cond_0
-    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
+    :cond_2
+    iget v0, p0, Ltvc;->b:I
 
-    move-result v3
+    iget p1, p1, Ltvc;->b:I
+
+    if-eq v0, p1, :cond_3
 
     :goto_0
-    add-int/2addr v0, v3
+    const/4 p1, 0x0
 
-    mul-int/2addr v0, v1
+    return p1
 
-    iget-object v3, p0, Ltvc;->c:Ljava/util/List;
+    :cond_3
+    :goto_1
+    const/4 p1, 0x1
 
-    invoke-static {v3, v0, v1}, Lmrf;->e(Ljava/util/List;II)I
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Ltvc;->a:Lcpg;
+
+    iget v0, v0, Lcpg;->c:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
     move-result v0
 
-    iget-object v1, p0, Ltvc;->d:Landroid/os/Bundle;
+    mul-int/lit8 v0, v0, 0x1f
 
-    if-nez v1, :cond_1
+    iget v1, p0, Ltvc;->b:I
 
-    goto :goto_1
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
 
-    :cond_1
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    move-result v1
 
-    move-result v2
+    add-int/2addr v1, v0
 
-    :goto_1
-    add-int/2addr v0, v2
-
-    return v0
+    return v1
 .end method
 
 .method public final toString()Ljava/lang/String;
@@ -169,37 +101,21 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "ShowConfirmationBottomSheet(title="
+    const-string v1, "ShowSuccessSnackbar(title="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Ltvc;->a:Lqhg;
+    iget-object v1, p0, Ltvc;->a:Lcpg;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", description="
+    const-string v1, ", icon="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Ltvc;->b:Lqhg;
+    iget v1, p0, Ltvc;->b:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", buttons="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ltvc;->c:Ljava/util/List;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", payload="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ltvc;->d:Landroid/os/Bundle;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string v1, ")"
 

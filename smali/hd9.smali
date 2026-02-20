@@ -1,42 +1,82 @@
-.class public final synthetic Lhd9;
+.class public final Lhd9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lwc9;
+.implements Lec9;
 
 
 # instance fields
-.field public final synthetic a:Lwh6;
+.field public final a:Lld9;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lwh6;)V
+.method public constructor <init>(Lld9;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lhd9;->a:Lwh6;
+    iput-object p1, p0, Lhd9;->a:Lld9;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lwk0;Lqlg;)V
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    iget-object p1, p0, Lhd9;->a:Lwh6;
+    if-ne p0, p1, :cond_0
 
-    iget-object p1, p1, Lwh6;->Y:Ljava/lang/Object;
+    const/4 p1, 0x1
 
-    check-cast p1, Lqq5;
+    return p1
 
-    iget-object p1, p1, Lqq5;->Z:La9g;
+    :cond_0
+    if-eqz p1, :cond_2
 
-    const/16 p2, 0x16
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {p1, p2}, La9g;->c(I)Z
+    move-result-object v0
 
-    return-void
+    const-class v1, Lhd9;
+
+    if-eq v0, v1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lhd9;
+
+    iget-object v0, p0, Lhd9;->a:Lld9;
+
+    iget-object p1, p1, Lhd9;->a:Lld9;
+
+    invoke-static {v0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_2
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lhd9;->a:Lld9;
+
+    filled-new-array {v0}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
+
+    move-result v0
+
+    return v0
 .end method

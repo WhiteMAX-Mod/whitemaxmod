@@ -3,41 +3,25 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final d:Ljava/util/concurrent/ConcurrentHashMap;
-
-
 # instance fields
-.field public final a:Loac;
+.field public a:Z
 
-.field public final b:I
+.field public b:I
 
-.field public final c:I
+.field public c:I
 
+.field public d:I
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.field public e:I
 
-    new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
+.field public f:I
 
-    invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+.field public g:Ljava/lang/Object;
 
-    sput-object v0, Lho6;->d:Ljava/util/concurrent/ConcurrentHashMap;
+.field public h:Ljava/lang/Object;
 
-    return-void
-.end method
+.field public i:Ljava/lang/Object;
 
-.method public constructor <init>(Loac;II)V
-    .locals 0
+.field public j:F
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lho6;->a:Loac;
-
-    iput p2, p0, Lho6;->b:I
-
-    iput p3, p0, Lho6;->c:I
-
-    return-void
-.end method
+.field public k:Landroid/view/View;

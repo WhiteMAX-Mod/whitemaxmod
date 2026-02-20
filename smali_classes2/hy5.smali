@@ -1,28 +1,28 @@
-.class public final Lhy5;
+.class public final synthetic Lhy5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Llpf;
+.implements Lks6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lpy5;
+.field public final synthetic b:J
 
-.field public final synthetic c:Lru/ok/tamtam/android/prefs/PmsKey;
+.field public final synthetic c:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Lpy5;Lru/ok/tamtam/android/prefs/PmsKey;I)V
+.method public synthetic constructor <init>(IJJ)V
     .locals 0
 
-    iput p3, p0, Lhy5;->a:I
+    iput p1, p0, Lhy5;->a:I
 
-    iput-object p1, p0, Lhy5;->b:Lpy5;
+    iput-wide p2, p0, Lhy5;->b:J
 
-    iput-object p2, p0, Lhy5;->c:Lru/ok/tamtam/android/prefs/PmsKey;
+    iput-wide p4, p0, Lhy5;->c:J
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -31,630 +31,856 @@
 
 
 # virtual methods
-.method public final b()Ljava/util/List;
-    .locals 1
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 22
 
-    iget v0, p0, Lhy5;->a:I
+    move-object/from16 v1, p0
 
-    packed-switch v0, :pswitch_data_0
+    iget v0, v1, Lhy5;->a:I
 
-    invoke-virtual {p0}, Lhy5;->k()Ljava/lang/Object;
+    sget-object v2, Lmah;->a:Lmah;
 
-    move-result-object v0
+    const/4 v3, 0x3
 
-    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+    const/4 v4, 0x0
 
-    move-result-object v0
+    const/4 v5, 0x0
 
-    return-object v0
+    const/4 v6, 0x2
 
-    :pswitch_0
-    invoke-virtual {p0}, Lhy5;->j()Ljava/lang/Object;
+    const/4 v7, 0x1
 
-    move-result-object v0
+    iget-wide v8, v1, Lhy5;->c:J
 
-    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_1
-    invoke-virtual {p0}, Lhy5;->g()Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 5
-
-    iget v0, p0, Lhy5;->a:I
+    iget-wide v10, v1, Lhy5;->b:J
 
     packed-switch v0, :pswitch_data_0
 
-    instance-of v0, p2, Lly5;
+    const-string v0, "SELECT * FROM webapp_biometry WHERE user_id = ? AND bot_id = ?"
+
+    move-object/from16 v2, p1
+
+    check-cast v2, Lsde;
+
+    invoke-interface {v2, v0}, Lsde;->y0(Ljava/lang/String;)Lxde;
+
+    move-result-object v2
+
+    :try_start_0
+    invoke-interface {v2, v7, v10, v11}, Lxde;->b(IJ)V
+
+    invoke-interface {v2, v6, v8, v9}, Lxde;->b(IJ)V
+
+    const-string v0, "id"
+
+    invoke-static {v2, v0}, Lawj;->b(Lxde;Ljava/lang/String;)I
+
+    move-result v0
+
+    const-string v3, "user_id"
+
+    invoke-static {v2, v3}, Lawj;->b(Lxde;Ljava/lang/String;)I
+
+    move-result v3
+
+    const-string v6, "bot_id"
+
+    invoke-static {v2, v6}, Lawj;->b(Lxde;Ljava/lang/String;)I
+
+    move-result v6
+
+    const-string v8, "token"
+
+    invoke-static {v2, v8}, Lawj;->b(Lxde;Ljava/lang/String;)I
+
+    move-result v8
+
+    const-string v9, "access_requested"
+
+    invoke-static {v2, v9}, Lawj;->b(Lxde;Ljava/lang/String;)I
+
+    move-result v9
+
+    const-string v10, "access_granted"
+
+    invoke-static {v2, v10}, Lawj;->b(Lxde;Ljava/lang/String;)I
+
+    move-result v10
+
+    invoke-interface {v2}, Lxde;->u0()Z
+
+    move-result v11
+
+    if-eqz v11, :cond_3
+
+    invoke-interface {v2, v0}, Lxde;->getLong(I)J
+
+    move-result-wide v13
+
+    invoke-interface {v2, v3}, Lxde;->getLong(I)J
+
+    move-result-wide v15
+
+    invoke-interface {v2, v6}, Lxde;->getLong(I)J
+
+    move-result-wide v17
+
+    invoke-interface {v2, v8}, Lxde;->isNull(I)Z
+
+    move-result v0
 
     if-eqz v0, :cond_0
 
-    move-object v0, p2
-
-    check-cast v0, Lly5;
-
-    iget v1, v0, Lly5;->o:I
-
-    const/high16 v2, -0x80000000
-
-    and-int v3, v1, v2
-
-    if-eqz v3, :cond_0
-
-    sub-int/2addr v1, v2
-
-    iput v1, v0, Lly5;->o:I
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v0, Lly5;
-
-    invoke-direct {v0, p0, p2}, Lly5;-><init>(Lhy5;Lkotlin/coroutines/Continuation;)V
-
     :goto_0
-    iget-object p2, v0, Lly5;->d:Ljava/lang/Object;
-
-    iget v1, v0, Lly5;->o:I
-
-    const/4 v2, 0x1
-
-    if-eqz v1, :cond_2
-
-    if-eq v1, v2, :cond_1
-
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string p2, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p2}, Lpmj;->b(Ljava/lang/Object;)V
-
-    goto :goto_2
-
-    :cond_2
-    invoke-static {p2}, Lpmj;->b(Ljava/lang/Object;)V
-
-    iget-object p2, p0, Lhy5;->b:Lpy5;
-
-    iget-object p2, p2, Lx3;->e:Li7f;
-
-    new-instance v1, Lmy5;
-
-    const/4 v3, 0x2
-
-    const/4 v4, 0x0
-
-    invoke-direct {v1, v3, v4}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    new-instance v3, Lt76;
-
-    invoke-direct {v3, v1, p2}, Lt76;-><init>(Lbr6;Ld76;)V
-
-    iput v2, v0, Lly5;->o:I
-
-    new-instance p2, Lr3;
-
-    const/16 v1, 0x17
-
-    invoke-direct {p2, p1, v1, p0}, Lr3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {v3, p2, v0}, Lt76;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p2, Lac4;->a:Lac4;
-
-    if-ne p1, p2, :cond_3
+    move-object/from16 v19, v4
 
     goto :goto_1
 
-    :cond_3
-    sget-object p1, Lb3h;->a:Lb3h;
+    :cond_0
+    invoke-interface {v2, v8}, Lxde;->c0(I)Ljava/lang/String;
+
+    move-result-object v4
+
+    goto :goto_0
 
     :goto_1
-    if-ne p1, p2, :cond_4
+    invoke-interface {v2, v9}, Lxde;->getLong(I)J
 
-    return-object p2
+    move-result-wide v3
 
-    :cond_4
+    long-to-int v0, v3
+
+    if-eqz v0, :cond_1
+
+    move/from16 v20, v7
+
+    goto :goto_2
+
+    :cond_1
+    move/from16 v20, v5
+
     :goto_2
-    new-instance p1, Ljava/lang/IllegalStateException;
+    invoke-interface {v2, v10}, Lxde;->getLong(I)J
 
-    const-string p2, "StateFlow collection never ends"
+    move-result-wide v3
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    long-to-int v0, v3
 
-    throw p1
+    if-eqz v0, :cond_2
 
-    :pswitch_0
-    instance-of v0, p2, Liy5;
-
-    if-eqz v0, :cond_5
-
-    move-object v0, p2
-
-    check-cast v0, Liy5;
-
-    iget v1, v0, Liy5;->o:I
-
-    const/high16 v2, -0x80000000
-
-    and-int v3, v1, v2
-
-    if-eqz v3, :cond_5
-
-    sub-int/2addr v1, v2
-
-    iput v1, v0, Liy5;->o:I
+    move/from16 v21, v7
 
     goto :goto_3
 
-    :cond_5
-    new-instance v0, Liy5;
-
-    invoke-direct {v0, p0, p2}, Liy5;-><init>(Lhy5;Lkotlin/coroutines/Continuation;)V
+    :cond_2
+    move/from16 v21, v5
 
     :goto_3
-    iget-object p2, v0, Liy5;->d:Ljava/lang/Object;
+    new-instance v12, Lw7i;
 
-    iget v1, v0, Liy5;->o:I
+    invoke-direct/range {v12 .. v21}, Lw7i;-><init>(JJJLjava/lang/String;ZZ)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    const/4 v2, 0x1
-
-    if-eqz v1, :cond_7
-
-    if-eq v1, v2, :cond_6
-
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string p2, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_6
-    invoke-static {p2}, Lpmj;->b(Ljava/lang/Object;)V
-
-    goto :goto_5
-
-    :cond_7
-    invoke-static {p2}, Lpmj;->b(Ljava/lang/Object;)V
-
-    iget-object p2, p0, Lhy5;->b:Lpy5;
-
-    iget-object p2, p2, Lx3;->e:Li7f;
-
-    new-instance v1, Ljy5;
-
-    const/4 v3, 0x2
-
-    const/4 v4, 0x0
-
-    invoke-direct {v1, v3, v4}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    new-instance v3, Lt76;
-
-    invoke-direct {v3, v1, p2}, Lt76;-><init>(Lbr6;Ld76;)V
-
-    iput v2, v0, Liy5;->o:I
-
-    new-instance p2, Lr3;
-
-    const/16 v1, 0x16
-
-    invoke-direct {p2, p1, v1, p0}, Lr3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {v3, p2, v0}, Lt76;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p2, Lac4;->a:Lac4;
-
-    if-ne p1, p2, :cond_8
+    move-object v4, v12
 
     goto :goto_4
 
-    :cond_8
-    sget-object p1, Lb3h;->a:Lb3h;
+    :catchall_0
+    move-exception v0
 
+    goto :goto_5
+
+    :cond_3
     :goto_4
-    if-ne p1, p2, :cond_9
+    invoke-interface {v2}, Ljava/lang/AutoCloseable;->close()V
 
-    return-object p2
+    return-object v4
 
-    :cond_9
     :goto_5
-    new-instance p1, Ljava/lang/IllegalStateException;
+    invoke-interface {v2}, Ljava/lang/AutoCloseable;->close()V
 
-    const-string p2, "StateFlow collection never ends"
+    throw v0
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    :pswitch_0
+    move-object/from16 v0, p1
 
-    throw p1
+    check-cast v0, Lsde;
 
-    :pswitch_1
-    instance-of v0, p2, Ley5;
+    const-string v2, "UPDATE webapp_biometry SET access_requested = ?, access_granted = ? WHERE user_id = ? AND bot_id = ?"
 
-    if-eqz v0, :cond_a
+    invoke-interface {v0, v2}, Lsde;->y0(Ljava/lang/String;)Lxde;
 
-    move-object v0, p2
+    move-result-object v2
 
-    check-cast v0, Ley5;
+    int-to-long v4, v7
 
-    iget v1, v0, Ley5;->o:I
+    :try_start_1
+    invoke-interface {v2, v7, v4, v5}, Lxde;->b(IJ)V
 
-    const/high16 v2, -0x80000000
+    invoke-interface {v2, v6, v4, v5}, Lxde;->b(IJ)V
 
-    and-int v3, v1, v2
+    invoke-interface {v2, v3, v10, v11}, Lxde;->b(IJ)V
 
-    if-eqz v3, :cond_a
+    const/4 v3, 0x4
 
-    sub-int/2addr v1, v2
+    invoke-interface {v2, v3, v8, v9}, Lxde;->b(IJ)V
 
-    iput v1, v0, Ley5;->o:I
+    invoke-interface {v2}, Lxde;->u0()Z
 
-    goto :goto_6
+    invoke-static {v0}, Lzvj;->a(Lsde;)I
 
-    :cond_a
-    new-instance v0, Ley5;
+    move-result v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    invoke-direct {v0, p0, p2}, Ley5;-><init>(Lhy5;Lkotlin/coroutines/Continuation;)V
+    invoke-interface {v2}, Ljava/lang/AutoCloseable;->close()V
 
     :goto_6
-    iget-object p2, v0, Ley5;->d:Ljava/lang/Object;
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    iget v1, v0, Ley5;->o:I
+    move-result-object v0
 
-    const/4 v2, 0x1
+    return-object v0
 
-    if-eqz v1, :cond_c
+    :catchall_1
+    move-exception v0
 
-    if-eq v1, v2, :cond_b
+    invoke-interface {v2}, Ljava/lang/AutoCloseable;->close()V
 
-    new-instance p1, Ljava/lang/IllegalStateException;
+    throw v0
 
-    const-string p2, "call to \'resume\' before \'invoke\' with coroutine"
+    :pswitch_1
+    const-string v0, "INSERT OR REPLACE INTO saved_msg_chat(user_id, chat_id) VALUES(?, ?)"
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    move-object/from16 v3, p1
 
-    throw p1
+    check-cast v3, Lsde;
 
-    :cond_b
-    invoke-static {p2}, Lpmj;->b(Ljava/lang/Object;)V
+    invoke-interface {v3, v0}, Lsde;->y0(Ljava/lang/String;)Lxde;
 
-    goto :goto_8
+    move-result-object v3
 
-    :cond_c
-    invoke-static {p2}, Lpmj;->b(Ljava/lang/Object;)V
+    :try_start_2
+    invoke-interface {v3, v7, v10, v11}, Lxde;->b(IJ)V
 
-    iget-object p2, p0, Lhy5;->b:Lpy5;
+    invoke-interface {v3, v6, v8, v9}, Lxde;->b(IJ)V
 
-    iget-object p2, p2, Lx3;->e:Li7f;
+    invoke-interface {v3}, Lxde;->u0()Z
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    new-instance v1, Lfy5;
+    invoke-interface {v3}, Ljava/lang/AutoCloseable;->close()V
 
-    const/4 v3, 0x2
+    return-object v2
 
-    const/4 v4, 0x0
+    :catchall_2
+    move-exception v0
 
-    invoke-direct {v1, v3, v4}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-interface {v3}, Ljava/lang/AutoCloseable;->close()V
 
-    new-instance v3, Lt76;
+    throw v0
 
-    invoke-direct {v3, v1, p2}, Lt76;-><init>(Lbr6;Ld76;)V
+    :pswitch_2
+    const-string v0, "SELECT * FROM notifications_tracker_messages WHERE chat_id=? AND message_id=?"
 
-    iput v2, v0, Ley5;->o:I
+    move-object/from16 v2, p1
 
-    new-instance p2, Lr3;
+    check-cast v2, Lsde;
 
-    const/16 v1, 0x15
+    invoke-interface {v2, v0}, Lsde;->y0(Ljava/lang/String;)Lxde;
 
-    invoke-direct {p2, p1, v1, p0}, Lr3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    move-result-object v2
 
-    invoke-virtual {v3, p2, v0}, Lt76;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    :try_start_3
+    invoke-interface {v2, v7, v10, v11}, Lxde;->b(IJ)V
 
-    move-result-object p1
+    invoke-interface {v2, v6, v8, v9}, Lxde;->b(IJ)V
 
-    sget-object p2, Lac4;->a:Lac4;
+    const-string v0, "chat_id"
 
-    if-ne p1, p2, :cond_d
+    invoke-static {v2, v0}, Lawj;->b(Lxde;Ljava/lang/String;)I
+
+    move-result v0
+
+    const-string v3, "message_id"
+
+    invoke-static {v2, v3}, Lawj;->b(Lxde;Ljava/lang/String;)I
+
+    move-result v3
+
+    const-string v6, "time"
+
+    invoke-static {v2, v6}, Lawj;->b(Lxde;Ljava/lang/String;)I
+
+    move-result v6
+
+    const-string v8, "fcm"
+
+    invoke-static {v2, v8}, Lawj;->b(Lxde;Ljava/lang/String;)I
+
+    move-result v8
+
+    const-string v9, "drop_reason"
+
+    invoke-static {v2, v9}, Lawj;->b(Lxde;Ljava/lang/String;)I
+
+    move-result v9
+
+    invoke-interface {v2}, Lxde;->u0()Z
+
+    move-result v10
+
+    if-eqz v10, :cond_b
+
+    invoke-interface {v2, v0}, Lxde;->getLong(I)J
+
+    move-result-wide v12
+
+    invoke-interface {v2, v3}, Lxde;->getLong(I)J
+
+    move-result-wide v14
+
+    invoke-interface {v2, v6}, Lxde;->getLong(I)J
+
+    move-result-wide v16
+
+    invoke-interface {v2, v8}, Lxde;->isNull(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    move-object v0, v4
 
     goto :goto_7
 
-    :cond_d
-    sget-object p1, Lb3h;->a:Lb3h;
+    :cond_4
+    invoke-interface {v2, v8}, Lxde;->getLong(I)J
+
+    move-result-wide v10
+
+    long-to-int v0, v10
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
 
     :goto_7
-    if-ne p1, p2, :cond_e
+    if-eqz v0, :cond_6
 
-    return-object p2
+    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    goto :goto_8
+
+    :cond_5
+    move v7, v5
+
+    :goto_8
+    invoke-static {v7}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    move-object/from16 v18, v0
+
+    goto :goto_9
+
+    :catchall_3
+    move-exception v0
+
+    goto :goto_e
+
+    :cond_6
+    move-object/from16 v18, v4
+
+    :goto_9
+    invoke-interface {v2, v9}, Lxde;->isNull(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_7
+
+    move-object v0, v4
+
+    goto :goto_a
+
+    :cond_7
+    invoke-interface {v2, v9}, Lxde;->c0(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    :goto_a
+    sget-object v3, Llb5;->b:[Llb5;
+
+    if-nez v0, :cond_8
+
+    goto :goto_c
+
+    :cond_8
+    sget-object v3, Llb5;->b:[Llb5;
+
+    array-length v6, v3
+
+    :goto_b
+    if-ge v5, v6, :cond_a
+
+    aget-object v7, v3, v5
+
+    iget-object v8, v7, Llb5;->a:Ljava/lang/String;
+
+    invoke-virtual {v8, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_9
+
+    move-object/from16 v19, v7
+
+    goto :goto_d
+
+    :cond_9
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_b
+
+    :cond_a
+    :goto_c
+    move-object/from16 v19, v4
+
+    :goto_d
+    new-instance v11, Lwya;
+
+    invoke-direct/range {v11 .. v19}, Lwya;-><init>(JJJLjava/lang/Boolean;Llb5;)V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_3
+
+    move-object v4, v11
+
+    :cond_b
+    invoke-interface {v2}, Ljava/lang/AutoCloseable;->close()V
+
+    return-object v4
+
+    :goto_e
+    invoke-interface {v2}, Ljava/lang/AutoCloseable;->close()V
+
+    throw v0
+
+    :pswitch_3
+    move-object/from16 v0, p1
+
+    check-cast v0, Lsde;
+
+    const-string v2, "DELETE FROM fcm_notifications WHERE chat_id = ? AND message_id = ?"
+
+    invoke-interface {v0, v2}, Lsde;->y0(Ljava/lang/String;)Lxde;
+
+    move-result-object v2
+
+    :try_start_4
+    invoke-interface {v2, v7, v10, v11}, Lxde;->b(IJ)V
+
+    invoke-interface {v2, v6, v8, v9}, Lxde;->b(IJ)V
+
+    invoke-interface {v2}, Lxde;->u0()Z
+
+    invoke-static {v0}, Lzvj;->a(Lsde;)I
+
+    move-result v0
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_4
+
+    invoke-interface {v2}, Ljava/lang/AutoCloseable;->close()V
+
+    goto/16 :goto_6
+
+    :catchall_4
+    move-exception v0
+
+    invoke-interface {v2}, Ljava/lang/AutoCloseable;->close()V
+
+    throw v0
+
+    :pswitch_4
+    const-string v0, "SELECT server_id FROM messages WHERE chat_id = ? AND cid = ?"
+
+    move-object/from16 v2, p1
+
+    check-cast v2, Lsde;
+
+    invoke-interface {v2, v0}, Lsde;->y0(Ljava/lang/String;)Lxde;
+
+    move-result-object v2
+
+    :try_start_5
+    invoke-interface {v2, v7, v10, v11}, Lxde;->b(IJ)V
+
+    invoke-interface {v2, v6, v8, v9}, Lxde;->b(IJ)V
+
+    invoke-interface {v2}, Lxde;->u0()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_d
+
+    invoke-interface {v2, v5}, Lxde;->isNull(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_c
+
+    goto :goto_f
+
+    :cond_c
+    invoke-interface {v2, v5}, Lxde;->getLong(I)J
+
+    move-result-wide v3
+
+    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v4
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_5
+
+    goto :goto_f
+
+    :catchall_5
+    move-exception v0
+
+    goto :goto_10
+
+    :cond_d
+    :goto_f
+    invoke-interface {v2}, Ljava/lang/AutoCloseable;->close()V
+
+    return-object v4
+
+    :goto_10
+    invoke-interface {v2}, Ljava/lang/AutoCloseable;->close()V
+
+    throw v0
+
+    :pswitch_5
+    const-string v0, "SELECT id FROM messages WHERE chat_id = ? AND server_id = ?"
+
+    move-object/from16 v2, p1
+
+    check-cast v2, Lsde;
+
+    invoke-interface {v2, v0}, Lsde;->y0(Ljava/lang/String;)Lxde;
+
+    move-result-object v2
+
+    :try_start_6
+    invoke-interface {v2, v7, v10, v11}, Lxde;->b(IJ)V
+
+    invoke-interface {v2, v6, v8, v9}, Lxde;->b(IJ)V
+
+    invoke-interface {v2}, Lxde;->u0()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_f
+
+    invoke-interface {v2, v5}, Lxde;->isNull(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_e
+
+    goto :goto_11
 
     :cond_e
-    :goto_8
-    new-instance p1, Ljava/lang/IllegalStateException;
+    invoke-interface {v2, v5}, Lxde;->getLong(I)J
 
-    const-string p2, "StateFlow collection never ends"
+    move-result-wide v3
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    throw p1
+    move-result-object v4
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_6
+
+    goto :goto_11
+
+    :catchall_6
+    move-exception v0
+
+    goto :goto_12
+
+    :cond_f
+    :goto_11
+    invoke-interface {v2}, Ljava/lang/AutoCloseable;->close()V
+
+    return-object v4
+
+    :goto_12
+    invoke-interface {v2}, Ljava/lang/AutoCloseable;->close()V
+
+    throw v0
+
+    :pswitch_6
+    move-object/from16 v0, p1
+
+    check-cast v0, Lsde;
+
+    const-string v2, "UPDATE messages SET update_time = ? WHERE id = ?"
+
+    invoke-interface {v0, v2}, Lsde;->y0(Ljava/lang/String;)Lxde;
+
+    move-result-object v2
+
+    :try_start_7
+    invoke-interface {v2, v7, v10, v11}, Lxde;->b(IJ)V
+
+    invoke-interface {v2, v6, v8, v9}, Lxde;->b(IJ)V
+
+    invoke-interface {v2}, Lxde;->u0()Z
+
+    invoke-static {v0}, Lzvj;->a(Lsde;)I
+
+    move-result v0
+    :try_end_7
+    .catchall {:try_start_7 .. :try_end_7} :catchall_7
+
+    invoke-interface {v2}, Ljava/lang/AutoCloseable;->close()V
+
+    goto/16 :goto_6
+
+    :catchall_7
+    move-exception v0
+
+    invoke-interface {v2}, Ljava/lang/AutoCloseable;->close()V
+
+    throw v0
+
+    :pswitch_7
+    move-object/from16 v0, p1
+
+    check-cast v0, Lsde;
+
+    const-string v2, "DELETE FROM messages WHERE chat_id = ? AND time <= ? AND inserted_from_msg_link = 0 AND delayed_attrs_time_to_fire IS NULL AND delayed_attrs_notify_sender IS NULL"
+
+    invoke-interface {v0, v2}, Lsde;->y0(Ljava/lang/String;)Lxde;
+
+    move-result-object v2
+
+    :try_start_8
+    invoke-interface {v2, v7, v10, v11}, Lxde;->b(IJ)V
+
+    invoke-interface {v2, v6, v8, v9}, Lxde;->b(IJ)V
+
+    invoke-interface {v2}, Lxde;->u0()Z
+
+    invoke-static {v0}, Lzvj;->a(Lsde;)I
+
+    move-result v0
+    :try_end_8
+    .catchall {:try_start_8 .. :try_end_8} :catchall_8
+
+    invoke-interface {v2}, Ljava/lang/AutoCloseable;->close()V
+
+    goto/16 :goto_6
+
+    :catchall_8
+    move-exception v0
+
+    invoke-interface {v2}, Ljava/lang/AutoCloseable;->close()V
+
+    throw v0
+
+    :pswitch_8
+    move-object/from16 v0, p1
+
+    check-cast v0, Lsde;
+
+    const-string v2, "DELETE FROM messages WHERE chat_id = ? AND delayed_attrs_time_to_fire <= ? AND inserted_from_msg_link = 0 AND delayed_attrs_time_to_fire IS NOT NULL AND delayed_attrs_notify_sender IS NOT NULL"
+
+    invoke-interface {v0, v2}, Lsde;->y0(Ljava/lang/String;)Lxde;
+
+    move-result-object v2
+
+    :try_start_9
+    invoke-interface {v2, v7, v10, v11}, Lxde;->b(IJ)V
+
+    invoke-interface {v2, v6, v8, v9}, Lxde;->b(IJ)V
+
+    invoke-interface {v2}, Lxde;->u0()Z
+
+    invoke-static {v0}, Lzvj;->a(Lsde;)I
+
+    move-result v0
+    :try_end_9
+    .catchall {:try_start_9 .. :try_end_9} :catchall_9
+
+    invoke-interface {v2}, Ljava/lang/AutoCloseable;->close()V
+
+    goto/16 :goto_6
+
+    :catchall_9
+    move-exception v0
+
+    invoke-interface {v2}, Ljava/lang/AutoCloseable;->close()V
+
+    throw v0
+
+    :pswitch_9
+    const-string v0, "UPDATE messages SET chat_id = ? WHERE id = ?"
+
+    move-object/from16 v3, p1
+
+    check-cast v3, Lsde;
+
+    invoke-interface {v3, v0}, Lsde;->y0(Ljava/lang/String;)Lxde;
+
+    move-result-object v3
+
+    :try_start_a
+    invoke-interface {v3, v7, v10, v11}, Lxde;->b(IJ)V
+
+    invoke-interface {v3, v6, v8, v9}, Lxde;->b(IJ)V
+
+    invoke-interface {v3}, Lxde;->u0()Z
+    :try_end_a
+    .catchall {:try_start_a .. :try_end_a} :catchall_a
+
+    invoke-interface {v3}, Ljava/lang/AutoCloseable;->close()V
+
+    return-object v2
+
+    :catchall_a
+    move-exception v0
+
+    invoke-interface {v3}, Ljava/lang/AutoCloseable;->close()V
+
+    throw v0
+
+    :pswitch_a
+    const-string v0, "DELETE FROM fcm_notifications_analytics WHERE analytics_status=? AND chat_id=? AND time<=?"
+
+    move-object/from16 v4, p1
+
+    check-cast v4, Lsde;
+
+    invoke-interface {v4, v0}, Lsde;->y0(Ljava/lang/String;)Lxde;
+
+    move-result-object v4
+
+    :try_start_b
+    invoke-static {v3}, Ly12;->t(I)I
+
+    move-result v0
+
+    int-to-long v12, v0
+
+    invoke-interface {v4, v7, v12, v13}, Lxde;->b(IJ)V
+
+    invoke-interface {v4, v6, v10, v11}, Lxde;->b(IJ)V
+
+    invoke-interface {v4, v3, v8, v9}, Lxde;->b(IJ)V
+
+    invoke-interface {v4}, Lxde;->u0()Z
+    :try_end_b
+    .catchall {:try_start_b .. :try_end_b} :catchall_b
+
+    invoke-interface {v4}, Ljava/lang/AutoCloseable;->close()V
+
+    return-object v2
+
+    :catchall_b
+    move-exception v0
+
+    invoke-interface {v4}, Ljava/lang/AutoCloseable;->close()V
+
+    throw v0
+
+    :pswitch_b
+    const-string v0, "SELECT chat_id, msg_id FROM fcm_notifications_analytics WHERE analytics_status=? AND chat_id=? AND time<=?"
+
+    move-object/from16 v2, p1
+
+    check-cast v2, Lsde;
+
+    invoke-interface {v2, v0}, Lsde;->y0(Ljava/lang/String;)Lxde;
+
+    move-result-object v2
+
+    :try_start_c
+    invoke-static {v3}, Ly12;->t(I)I
+
+    move-result v0
+
+    int-to-long v12, v0
+
+    invoke-interface {v2, v7, v12, v13}, Lxde;->b(IJ)V
+
+    invoke-interface {v2, v6, v10, v11}, Lxde;->b(IJ)V
+
+    invoke-interface {v2, v3, v8, v9}, Lxde;->b(IJ)V
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    :goto_13
+    invoke-interface {v2}, Lxde;->u0()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_10
+
+    invoke-interface {v2, v5}, Lxde;->getLong(I)J
+
+    move-result-wide v3
+
+    invoke-interface {v2, v7}, Lxde;->getLong(I)J
+
+    move-result-wide v8
+
+    new-instance v6, Lmy5;
+
+    invoke-direct {v6, v3, v4, v8, v9}, Lmy5;-><init>(JJ)V
+
+    invoke-virtual {v0, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    :try_end_c
+    .catchall {:try_start_c .. :try_end_c} :catchall_c
+
+    goto :goto_13
+
+    :catchall_c
+    move-exception v0
+
+    goto :goto_14
+
+    :cond_10
+    invoke-interface {v2}, Ljava/lang/AutoCloseable;->close()V
+
+    return-object v0
+
+    :goto_14
+    invoke-interface {v2}, Ljava/lang/AutoCloseable;->close()V
+
+    throw v0
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
         :pswitch_1
         :pswitch_0
     .end packed-switch
-.end method
-
-.method public g()Ljava/lang/Object;
-    .locals 6
-
-    const-wide/16 v0, 0x0
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lhy5;->b:Lpy5;
-
-    iget-object v2, p0, Lhy5;->c:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    invoke-virtual {v1, v2}, Lege;->m(Lru/ok/tamtam/android/prefs/PmsKey;)Z
-
-    move-result v3
-
-    const-class v4, Ljava/lang/Long;
-
-    if-eqz v3, :cond_0
-
-    iget-object v1, v1, Lx3;->g:Lr58;
-
-    invoke-virtual {v2}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v4}, Lctd;->a(Ljava/lang/Class;)Lrd3;
-
-    move-result-object v3
-
-    invoke-static {v1, v2, v0, v3}, Lppj;->a(Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/lang/Object;Lrd3;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_0
-    iget-object v1, v1, Lege;->h:Lidc;
-
-    iget-object v3, v1, Lidc;->h:Lgr5;
-
-    iget-object v3, v3, Lx3;->g:Lr58;
-
-    invoke-virtual {v2}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v3, v5}, Lr58;->contains(Ljava/lang/String;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    iget-object v1, v1, Lidc;->h:Lgr5;
-
-    :cond_1
-    iget-object v1, v1, Lx3;->g:Lr58;
-
-    invoke-virtual {v2}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v4}, Lctd;->a(Ljava/lang/Class;)Lrd3;
-
-    move-result-object v3
-
-    invoke-static {v1, v2, v0, v3}, Lppj;->a(Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/lang/Object;Lrd3;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final getValue()Ljava/lang/Object;
-    .locals 1
-
-    iget v0, p0, Lhy5;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-virtual {p0}, Lhy5;->k()Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_0
-    invoke-virtual {p0}, Lhy5;->j()Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_1
-    invoke-virtual {p0}, Lhy5;->g()Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public j()Ljava/lang/Object;
-    .locals 6
-
-    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    iget-object v1, p0, Lhy5;->b:Lpy5;
-
-    iget-object v2, p0, Lhy5;->c:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    invoke-virtual {v1, v2}, Lege;->m(Lru/ok/tamtam/android/prefs/PmsKey;)Z
-
-    move-result v3
-
-    const-class v4, Ljava/lang/Boolean;
-
-    if-eqz v3, :cond_0
-
-    iget-object v1, v1, Lx3;->g:Lr58;
-
-    invoke-virtual {v2}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v4}, Lctd;->a(Ljava/lang/Class;)Lrd3;
-
-    move-result-object v3
-
-    invoke-static {v1, v2, v0, v3}, Lppj;->a(Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/lang/Object;Lrd3;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_0
-    iget-object v1, v1, Lege;->h:Lidc;
-
-    iget-object v3, v1, Lidc;->h:Lgr5;
-
-    iget-object v3, v3, Lx3;->g:Lr58;
-
-    invoke-virtual {v2}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v3, v5}, Lr58;->contains(Ljava/lang/String;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    iget-object v1, v1, Lidc;->h:Lgr5;
-
-    :cond_1
-    iget-object v1, v1, Lx3;->g:Lr58;
-
-    invoke-virtual {v2}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v4}, Lctd;->a(Ljava/lang/Class;)Lrd3;
-
-    move-result-object v3
-
-    invoke-static {v1, v2, v0, v3}, Lppj;->a(Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/lang/Object;Lrd3;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public k()Ljava/lang/Object;
-    .locals 6
-
-    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    iget-object v1, p0, Lhy5;->b:Lpy5;
-
-    iget-object v2, p0, Lhy5;->c:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    invoke-virtual {v1, v2}, Lege;->m(Lru/ok/tamtam/android/prefs/PmsKey;)Z
-
-    move-result v3
-
-    const-class v4, Ljava/lang/Boolean;
-
-    if-eqz v3, :cond_0
-
-    iget-object v1, v1, Lx3;->g:Lr58;
-
-    invoke-virtual {v2}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v4}, Lctd;->a(Ljava/lang/Class;)Lrd3;
-
-    move-result-object v3
-
-    invoke-static {v1, v2, v0, v3}, Lppj;->a(Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/lang/Object;Lrd3;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_0
-    iget-object v1, v1, Lege;->h:Lidc;
-
-    iget-object v3, v1, Lidc;->h:Lgr5;
-
-    iget-object v3, v3, Lx3;->g:Lr58;
-
-    invoke-virtual {v2}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v3, v5}, Lr58;->contains(Ljava/lang/String;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    iget-object v1, v1, Lidc;->h:Lgr5;
-
-    :cond_1
-    iget-object v1, v1, Lx3;->g:Lr58;
-
-    invoke-virtual {v2}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v4}, Lctd;->a(Ljava/lang/Class;)Lrd3;
-
-    move-result-object v3
-
-    invoke-static {v1, v2, v0, v3}, Lppj;->a(Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/lang/Object;Lrd3;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
 .end method

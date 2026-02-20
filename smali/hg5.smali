@@ -2,97 +2,243 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/text/method/TransformationMethod;
-
 
 # instance fields
-.field public final a:Landroid/text/method/TransformationMethod;
+.field public a:Ljava/lang/Object;
+
+.field public volatile b:Ljava/lang/Object;
+
+.field public volatile c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Landroid/text/method/TransformationMethod;)V
+.method public synthetic constructor <init>(Ljava/lang/Object;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lhg5;->a:Ljava/lang/Object;
 
-    iput-object p1, p0, Lhg5;->a:Landroid/text/method/TransformationMethod;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getTransformation(Ljava/lang/CharSequence;Landroid/view/View;)Ljava/lang/CharSequence;
-    .locals 1
+.method public a()V
+    .locals 9
 
-    invoke-virtual {p2}, Landroid/view/View;->isInEditMode()Z
+    iget-object v0, p0, Lhg5;->a:Ljava/lang/Object;
 
-    move-result v0
+    check-cast v0, Lll;
 
-    if-eqz v0, :cond_0
+    iget-object v1, v0, Lll;->a:Lnj;
 
-    return-object p1
+    iget-object v1, v1, Lnj;->b:Ltmd;
+
+    iget-object v2, v0, Lll;->c:Ljava/lang/Integer;
+
+    iget-object v3, p0, Lhg5;->b:Ljava/lang/Object;
+
+    check-cast v3, Ljava/lang/Integer;
+
+    const/4 v4, 0x0
+
+    if-eqz v3, :cond_1
+
+    invoke-virtual {v3}, Ljava/lang/Number;->intValue()I
+
+    move-result v3
+
+    int-to-long v5, v3
+
+    const-wide v7, 0xffffffffL
+
+    and-long/2addr v5, v7
+
+    const/16 v3, 0x10
+
+    invoke-static {v3}, Lnqj;->a(I)V
+
+    invoke-static {v5, v6, v3}, Ljava/lang/Long;->toString(JI)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/String;->length()I
+
+    move-result v5
+
+    const/4 v6, 0x6
+
+    if-le v5, v6, :cond_0
+
+    const/16 v6, 0x8
 
     :cond_0
-    iget-object v0, p0, Lhg5;->a:Landroid/text/method/TransformationMethod;
+    const/16 v5, 0x30
 
-    if-eqz v0, :cond_1
+    invoke-static {v3, v6, v5}, Ld7g;->K(Ljava/lang/String;IC)Ljava/lang/String;
 
-    invoke-interface {v0, p1, p2}, Landroid/text/method/TransformationMethod;->getTransformation(Ljava/lang/CharSequence;Landroid/view/View;)Ljava/lang/CharSequence;
-
-    move-result-object p1
-
-    :cond_1
-    if-eqz p1, :cond_3
-
-    invoke-static {}, Lve5;->a()Lve5;
-
-    move-result-object p2
-
-    invoke-virtual {p2}, Lve5;->b()I
-
-    move-result p2
-
-    const/4 v0, 0x1
-
-    if-eq p2, v0, :cond_2
+    move-result-object v3
 
     goto :goto_0
 
+    :cond_1
+    move-object v3, v4
+
+    :goto_0
+    iget-object v5, p0, Lhg5;->a:Ljava/lang/Object;
+
+    check-cast v5, Lll;
+
+    iget-object v5, v5, Lll;->d:Loj4;
+
+    if-eqz v5, :cond_2
+
+    invoke-virtual {v5}, Loj4;->b()Z
+
+    move-result v5
+
+    invoke-static {v5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v5
+
+    goto :goto_1
+
     :cond_2
-    invoke-static {}, Lve5;->a()Lve5;
+    move-object v5, v4
 
-    move-result-object p2
+    :goto_1
+    iget-object v6, p0, Lhg5;->a:Ljava/lang/Object;
 
-    invoke-virtual {p2, p1}, Lve5;->f(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    check-cast v6, Lll;
 
-    move-result-object p1
+    iget-object v6, v6, Lll;->e:Lqj4;
+
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, ": isReady: v="
+
+    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, " bgColor="
+
+    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, "} connected="
+
+    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, " senderThread="
+
+    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v2, "AniSend"
+
+    invoke-interface {v1, v2, v0}, Ltmd;->log(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lhg5;->a:Ljava/lang/Object;
+
+    check-cast v0, Lll;
+
+    iget-object v0, v0, Lll;->c:Ljava/lang/Integer;
+
+    if-nez v0, :cond_3
+
+    goto :goto_3
 
     :cond_3
-    :goto_0
-    return-object p1
-.end method
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
-.method public final onFocusChanged(Landroid/view/View;Ljava/lang/CharSequence;ZILandroid/graphics/Rect;)V
-    .locals 6
+    move-result v0
 
-    iget-object v0, p0, Lhg5;->a:Landroid/text/method/TransformationMethod;
+    const/4 v1, 0x1
 
-    if-eqz v0, :cond_0
+    if-ne v0, v1, :cond_4
 
-    move-object v1, p1
+    goto :goto_2
 
-    move-object v2, p2
+    :cond_4
+    iget-object v0, p0, Lhg5;->b:Ljava/lang/Object;
 
-    move v3, p3
+    check-cast v0, Ljava/lang/Integer;
 
-    move v4, p4
+    if-eqz v0, :cond_6
 
-    move-object v5, p5
+    iget-object v0, p0, Lhg5;->a:Ljava/lang/Object;
 
-    invoke-interface/range {v0 .. v5}, Landroid/text/method/TransformationMethod;->onFocusChanged(Landroid/view/View;Ljava/lang/CharSequence;ZILandroid/graphics/Rect;)V
+    check-cast v0, Lll;
 
-    :cond_0
+    iget-object v0, v0, Lll;->e:Lqj4;
+
+    if-eqz v0, :cond_6
+
+    iget-object v0, p0, Lhg5;->a:Ljava/lang/Object;
+
+    check-cast v0, Lll;
+
+    iget-object v0, v0, Lll;->d:Loj4;
+
+    if-eqz v0, :cond_6
+
+    invoke-virtual {v0}, Loj4;->b()Z
+
+    move-result v0
+
+    if-ne v0, v1, :cond_6
+
+    :goto_2
+    iget-object v0, p0, Lhg5;->a:Ljava/lang/Object;
+
+    check-cast v0, Lll;
+
+    iput-object v4, v0, Lll;->g:Lhg5;
+
+    iget-object v0, p0, Lhg5;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/Integer;
+
+    if-eqz v0, :cond_5
+
+    iget-object v1, p0, Lhg5;->a:Ljava/lang/Object;
+
+    check-cast v1, Lll;
+
+    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
+
+    move-result v0
+
+    invoke-virtual {v1, v0}, Lll;->e(I)V
+
+    :cond_5
+    iget-object v0, p0, Lhg5;->c:Ljava/lang/Object;
+
+    check-cast v0, [Ljava/lang/Double;
+
+    if-eqz v0, :cond_6
+
+    iget-object v1, p0, Lhg5;->a:Ljava/lang/Object;
+
+    check-cast v1, Lll;
+
+    invoke-virtual {v1, v0}, Lll;->a([Ljava/lang/Double;)V
+
+    :cond_6
+    :goto_3
     return-void
 .end method

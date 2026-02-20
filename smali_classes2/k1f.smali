@@ -1,32 +1,23 @@
 .class public final Lk1f;
-.super Ljef;
+.super Lk2;
 .source "SourceFile"
 
 
 # virtual methods
-.method public final C()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final y(Lud8;)V
+.method public final S()S
     .locals 1
 
-    instance-of v0, p1, Lmje;
+    sget-object v0, Llrb;->c:Lyr1;
 
-    if-nez v0, :cond_0
+    const/4 v0, 0x6
 
-    return-void
+    return v0
+.end method
 
-    :cond_0
-    iget-object v0, p0, Ltsd;->a:Landroid/view/View;
+.method public final g0()Z
+    .locals 1
 
-    check-cast v0, Lt0f;
+    const/4 v0, 0x0
 
-    check-cast p1, Lj0f;
-
-    invoke-virtual {v0, p1}, Lt0f;->setModelItem(Lj0f;)V
-
-    return-void
+    return v0
 .end method

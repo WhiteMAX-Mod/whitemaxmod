@@ -1,29 +1,23 @@
 .class public final Ljtg;
-.super Ljava/lang/Object;
+.super Lktg;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Landroid/util/SparseArray;
+# virtual methods
+.method public final d(J)Lktg;
+    .locals 0
 
-.field public b:I
+    return-object p0
+.end method
 
-
-# direct methods
-.method public constructor <init>()V
-    .locals 1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Landroid/util/SparseArray;
-
-    invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
-
-    iput-object v0, p0, Ljtg;->a:Landroid/util/SparseArray;
-
-    const/4 v0, -0x1
-
-    iput v0, p0, Ljtg;->b:I
+.method public final f()V
+    .locals 0
 
     return-void
+.end method
+
+.method public final g(JLjava/util/concurrent/TimeUnit;)Lktg;
+    .locals 0
+
+    return-object p0
 .end method

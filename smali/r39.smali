@@ -1,440 +1,256 @@
-.class public final Lr39;
+.class public final synthetic Lr39;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final f:Lr39;
-
-.field public static final g:Ljava/lang/String;
-
-.field public static final h:Ljava/lang/String;
-
-.field public static final i:Ljava/lang/String;
-
-.field public static final j:Ljava/lang/String;
-
-.field public static final k:Ljava/lang/String;
+# interfaces
+.implements Lih8;
 
 
 # instance fields
-.field public final a:J
+.field public final synthetic a:I
 
-.field public final b:J
-
-.field public final c:J
-
-.field public final d:F
-
-.field public final e:F
+.field public final synthetic b:Lcgc;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Lcgc;I)V
+    .locals 0
 
-    new-instance v0, Lp39;
+    iput p2, p0, Lr39;->a:I
 
-    invoke-direct {v0}, Lp39;-><init>()V
-
-    new-instance v1, Lr39;
-
-    invoke-direct {v1, v0}, Lr39;-><init>(Lp39;)V
-
-    sput-object v1, Lr39;->f:Lr39;
-
-    sget-object v0, Lmbh;->a:Ljava/lang/String;
-
-    const/4 v0, 0x0
-
-    const/16 v1, 0x24
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lr39;->g:Ljava/lang/String;
-
-    const/4 v0, 0x1
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lr39;->h:Ljava/lang/String;
-
-    const/4 v0, 0x2
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lr39;->i:Ljava/lang/String;
-
-    const/4 v0, 0x3
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lr39;->j:Ljava/lang/String;
-
-    const/4 v0, 0x4
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lr39;->k:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lp39;)V
-    .locals 7
-
-    iget-wide v0, p1, Lp39;->a:J
-
-    iget-wide v2, p1, Lp39;->b:J
-
-    iget-wide v4, p1, Lp39;->c:J
-
-    iget v6, p1, Lp39;->d:F
-
-    iget p1, p1, Lp39;->e:F
+    iput-object p1, p0, Lr39;->b:Lcgc;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide v0, p0, Lr39;->a:J
-
-    iput-wide v2, p0, Lr39;->b:J
-
-    iput-wide v4, p0, Lr39;->c:J
-
-    iput v6, p0, Lr39;->d:F
-
-    iput p1, p0, Lr39;->e:F
-
     return-void
-.end method
-
-.method public static b(Landroid/os/Bundle;)Lr39;
-    .locals 5
-
-    new-instance v0, Lp39;
-
-    invoke-direct {v0}, Lp39;-><init>()V
-
-    sget-object v1, Lr39;->f:Lr39;
-
-    iget-wide v2, v1, Lr39;->a:J
-
-    sget-object v4, Lr39;->g:Ljava/lang/String;
-
-    invoke-virtual {p0, v4, v2, v3}, Landroid/os/BaseBundle;->getLong(Ljava/lang/String;J)J
-
-    move-result-wide v2
-
-    iput-wide v2, v0, Lp39;->a:J
-
-    sget-object v2, Lr39;->h:Ljava/lang/String;
-
-    iget-wide v3, v1, Lr39;->b:J
-
-    invoke-virtual {p0, v2, v3, v4}, Landroid/os/BaseBundle;->getLong(Ljava/lang/String;J)J
-
-    move-result-wide v2
-
-    iput-wide v2, v0, Lp39;->b:J
-
-    sget-object v2, Lr39;->i:Ljava/lang/String;
-
-    iget-wide v3, v1, Lr39;->c:J
-
-    invoke-virtual {p0, v2, v3, v4}, Landroid/os/BaseBundle;->getLong(Ljava/lang/String;J)J
-
-    move-result-wide v2
-
-    iput-wide v2, v0, Lp39;->c:J
-
-    sget-object v2, Lr39;->j:Ljava/lang/String;
-
-    iget v3, v1, Lr39;->d:F
-
-    invoke-virtual {p0, v2, v3}, Landroid/os/Bundle;->getFloat(Ljava/lang/String;F)F
-
-    move-result v2
-
-    iput v2, v0, Lp39;->d:F
-
-    sget-object v2, Lr39;->k:Ljava/lang/String;
-
-    iget v1, v1, Lr39;->e:F
-
-    invoke-virtual {p0, v2, v1}, Landroid/os/Bundle;->getFloat(Ljava/lang/String;F)F
-
-    move-result p0
-
-    iput p0, v0, Lp39;->e:F
-
-    new-instance p0, Lr39;
-
-    invoke-direct {p0, v0}, Lr39;-><init>(Lp39;)V
-
-    return-object p0
 .end method
 
 
 # virtual methods
-.method public final a()Lp39;
-    .locals 3
+.method public final invoke(Ljava/lang/Object;)V
+    .locals 2
 
-    new-instance v0, Lp39;
+    iget v0, p0, Lr39;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    check-cast p1, Ldfc;
 
-    iget-wide v1, p0, Lr39;->a:J
+    packed-switch v0, :pswitch_data_0
 
-    iput-wide v1, v0, Lp39;->a:J
+    iget-object v0, p0, Lr39;->b:Lcgc;
 
-    iget-wide v1, p0, Lr39;->b:J
+    iget v0, v0, Lcgc;->y:I
 
-    iput-wide v1, v0, Lp39;->b:J
+    invoke-interface {p1, v0}, Ldfc;->k(I)V
 
-    iget-wide v1, p0, Lr39;->c:J
+    return-void
 
-    iput-wide v1, v0, Lp39;->c:J
+    :pswitch_0
+    iget-object v0, p0, Lr39;->b:Lcgc;
 
-    iget v1, p0, Lr39;->d:F
+    iget-boolean v0, v0, Lcgc;->w:Z
 
-    iput v1, v0, Lp39;->d:F
+    invoke-interface {p1, v0}, Ldfc;->h(Z)V
 
-    iget v1, p0, Lr39;->e:F
+    return-void
 
-    iput v1, v0, Lp39;->e:F
+    :pswitch_1
+    iget-object v0, p0, Lr39;->b:Lcgc;
 
-    return-object v0
-.end method
+    iget-object v0, v0, Lcgc;->z:Lg79;
 
-.method public final c()Landroid/os/Bundle;
-    .locals 6
+    invoke-interface {p1, v0}, Ldfc;->h0(Lg79;)V
 
-    new-instance v0, Landroid/os/Bundle;
+    return-void
 
-    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+    :pswitch_2
+    iget-object v0, p0, Lr39;->b:Lcgc;
 
-    sget-object v1, Lr39;->f:Lr39;
+    iget-object v0, v0, Lcgc;->D:Lnzg;
 
-    iget-wide v2, v1, Lr39;->a:J
+    invoke-interface {p1, v0}, Ldfc;->d0(Lnzg;)V
 
-    iget-wide v4, p0, Lr39;->a:J
+    return-void
 
-    cmp-long v2, v4, v2
+    :pswitch_3
+    iget-object v0, p0, Lr39;->b:Lcgc;
 
-    if-eqz v2, :cond_0
+    iget-object v0, v0, Lcgc;->E:Lizg;
 
-    sget-object v2, Lr39;->g:Ljava/lang/String;
+    invoke-interface {p1, v0}, Ldfc;->z(Lizg;)V
 
-    invoke-virtual {v0, v2, v4, v5}, Landroid/os/BaseBundle;->putLong(Ljava/lang/String;J)V
+    return-void
 
-    :cond_0
-    iget-wide v2, v1, Lr39;->b:J
+    :pswitch_4
+    iget-object v0, p0, Lr39;->b:Lcgc;
 
-    iget-wide v4, p0, Lr39;->b:J
+    iget-wide v0, v0, Lcgc;->C:J
 
-    cmp-long v2, v4, v2
+    invoke-interface {p1, v0, v1}, Ldfc;->E0(J)V
 
-    if-eqz v2, :cond_1
+    return-void
 
-    sget-object v2, Lr39;->h:Ljava/lang/String;
+    :pswitch_5
+    iget-object v0, p0, Lr39;->b:Lcgc;
 
-    invoke-virtual {v0, v2, v4, v5}, Landroid/os/BaseBundle;->putLong(Ljava/lang/String;J)V
+    iget-wide v0, v0, Lcgc;->B:J
 
-    :cond_1
-    iget-wide v2, v1, Lr39;->c:J
+    invoke-interface {p1, v0, v1}, Ldfc;->j0(J)V
 
-    iget-wide v4, p0, Lr39;->c:J
+    return-void
 
-    cmp-long v2, v4, v2
+    :pswitch_6
+    iget-object v0, p0, Lr39;->b:Lcgc;
 
-    if-eqz v2, :cond_2
+    iget-wide v0, v0, Lcgc;->A:J
 
-    sget-object v2, Lr39;->i:Ljava/lang/String;
+    invoke-interface {p1, v0, v1}, Ldfc;->g0(J)V
 
-    invoke-virtual {v0, v2, v4, v5}, Landroid/os/BaseBundle;->putLong(Ljava/lang/String;J)V
+    return-void
 
-    :cond_2
-    iget v2, v1, Lr39;->d:F
+    :pswitch_7
+    iget-object v0, p0, Lr39;->b:Lcgc;
 
-    iget v3, p0, Lr39;->d:F
+    iget-object v0, v0, Lcgc;->l:Lqxh;
 
-    cmpl-float v2, v3, v2
+    invoke-interface {p1, v0}, Ldfc;->g(Lqxh;)V
 
-    if-eqz v2, :cond_3
+    return-void
 
-    sget-object v2, Lr39;->j:Ljava/lang/String;
+    :pswitch_8
+    iget-object v0, p0, Lr39;->b:Lcgc;
 
-    invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->putFloat(Ljava/lang/String;F)V
+    iget v1, v0, Lcgc;->r:I
 
-    :cond_3
-    iget v1, v1, Lr39;->e:F
+    iget-boolean v0, v0, Lcgc;->s:Z
 
-    iget v2, p0, Lr39;->e:F
+    invoke-interface {p1, v1, v0}, Ldfc;->l(IZ)V
 
-    cmpl-float v1, v2, v1
+    return-void
 
-    if-eqz v1, :cond_4
+    :pswitch_9
+    iget-object v0, p0, Lr39;->b:Lcgc;
 
-    sget-object v1, Lr39;->k:Ljava/lang/String;
+    iget-object v0, v0, Lcgc;->q:Lv05;
 
-    invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putFloat(Ljava/lang/String;F)V
+    invoke-interface {p1, v0}, Ldfc;->D0(Lv05;)V
 
-    :cond_4
-    return-object v0
-.end method
+    return-void
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+    :pswitch_a
+    iget-object v0, p0, Lr39;->b:Lcgc;
 
-    const/4 v0, 0x1
+    iget-object v0, v0, Lcgc;->p:Ljg4;
 
-    if-ne p0, p1, :cond_0
+    invoke-interface {p1, v0}, Ldfc;->V(Ljg4;)V
 
-    return v0
+    return-void
 
-    :cond_0
-    instance-of v1, p1, Lr39;
+    :pswitch_b
+    iget-object v0, p0, Lr39;->b:Lcgc;
 
-    const/4 v2, 0x0
+    iget-object v0, v0, Lcgc;->p:Ljg4;
 
-    if-nez v1, :cond_1
+    iget-object v0, v0, Ljg4;->a:Lf0e;
 
-    return v2
+    invoke-interface {p1, v0}, Ldfc;->n(Ljava/util/List;)V
 
-    :cond_1
-    check-cast p1, Lr39;
+    return-void
 
-    iget-wide v3, p0, Lr39;->a:J
+    :pswitch_c
+    iget-object v0, p0, Lr39;->b:Lcgc;
 
-    iget-wide v5, p1, Lr39;->a:J
+    iget-object v0, v0, Lcgc;->o:Lo40;
 
-    cmp-long v1, v3, v5
+    invoke-interface {p1, v0}, Ldfc;->x(Lo40;)V
 
-    if-nez v1, :cond_2
+    return-void
 
-    iget-wide v3, p0, Lr39;->b:J
+    :pswitch_d
+    iget-object v0, p0, Lr39;->b:Lcgc;
 
-    iget-wide v5, p1, Lr39;->b:J
+    iget v0, v0, Lcgc;->n:F
 
-    cmp-long v1, v3, v5
+    invoke-interface {p1, v0}, Ldfc;->j(F)V
 
-    if-nez v1, :cond_2
+    return-void
 
-    iget-wide v3, p0, Lr39;->c:J
+    :pswitch_e
+    iget-object v0, p0, Lr39;->b:Lcgc;
 
-    iget-wide v5, p1, Lr39;->c:J
+    iget-object v0, v0, Lcgc;->m:Lg79;
 
-    cmp-long v1, v3, v5
+    invoke-interface {p1, v0}, Ldfc;->i0(Lg79;)V
 
-    if-nez v1, :cond_2
+    return-void
 
-    iget v1, p0, Lr39;->d:F
+    :pswitch_f
+    iget-object v0, p0, Lr39;->b:Lcgc;
 
-    iget v3, p1, Lr39;->d:F
+    iget-boolean v0, v0, Lcgc;->i:Z
 
-    cmpl-float v1, v1, v3
+    invoke-interface {p1, v0}, Ldfc;->S(Z)V
 
-    if-nez v1, :cond_2
+    return-void
 
-    iget v1, p0, Lr39;->e:F
+    :pswitch_10
+    iget-object v0, p0, Lr39;->b:Lcgc;
 
-    iget p1, p1, Lr39;->e:F
+    iget v0, v0, Lcgc;->h:I
 
-    cmpl-float p1, v1, p1
+    invoke-interface {p1, v0}, Ldfc;->onRepeatModeChanged(I)V
 
-    if-nez p1, :cond_2
+    return-void
 
-    return v0
+    :pswitch_11
+    iget-object v0, p0, Lr39;->b:Lcgc;
 
-    :cond_2
-    return v2
-.end method
+    iget-object v0, v0, Lcgc;->g:Loec;
 
-.method public final hashCode()I
-    .locals 7
+    invoke-interface {p1, v0}, Ldfc;->z0(Loec;)V
 
-    iget-wide v0, p0, Lr39;->a:J
+    return-void
 
-    const/16 v2, 0x20
+    :pswitch_12
+    iget-object v0, p0, Lr39;->b:Lcgc;
 
-    ushr-long v3, v0, v2
+    iget-boolean v0, v0, Lcgc;->v:Z
 
-    xor-long/2addr v0, v3
+    invoke-interface {p1, v0}, Ldfc;->q(Z)V
 
-    long-to-int v0, v0
+    return-void
 
-    mul-int/lit8 v0, v0, 0x1f
+    :pswitch_13
+    iget-object v0, p0, Lr39;->b:Lcgc;
 
-    iget-wide v3, p0, Lr39;->b:J
+    iget v0, v0, Lcgc;->x:I
 
-    ushr-long v5, v3, v2
+    invoke-interface {p1, v0}, Ldfc;->f(I)V
 
-    xor-long/2addr v3, v5
+    return-void
 
-    long-to-int v1, v3
+    nop
 
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-wide v3, p0, Lr39;->c:J
-
-    ushr-long v1, v3, v2
-
-    xor-long/2addr v1, v3
-
-    long-to-int v1, v1
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget v1, p0, Lr39;->d:F
-
-    const/4 v2, 0x0
-
-    cmpl-float v3, v1, v2
-
-    const/4 v4, 0x0
-
-    if-eqz v3, :cond_0
-
-    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v1
-
-    goto :goto_0
-
-    :cond_0
-    move v1, v4
-
-    :goto_0
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget v1, p0, Lr39;->e:F
-
-    cmpl-float v2, v1, v2
-
-    if-eqz v2, :cond_1
-
-    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v4
-
-    :cond_1
-    add-int/2addr v0, v4
-
-    return v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_13
+        :pswitch_12
+        :pswitch_11
+        :pswitch_10
+        :pswitch_f
+        :pswitch_e
+        :pswitch_d
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

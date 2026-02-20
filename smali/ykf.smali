@@ -1,649 +1,1173 @@
 .class public final Lykf;
-.super Ljava/lang/Object;
+.super Lbl0;
 .source "SourceFile"
-
-# interfaces
-.implements Lzrf;
-.implements Lq5;
-.implements Lxqh;
-.implements Lay3;
-.implements Lh2b;
-.implements Lz1b;
-.implements Lw1b;
-.implements Lhj0;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final i:F
 
-.field public final b:Ljava/lang/Object;
+.field public final j:S
+
+.field public final k:I
+
+.field public final l:J
+
+.field public final m:J
+
+.field public n:I
+
+.field public o:Z
+
+.field public p:I
+
+.field public q:J
+
+.field public r:I
+
+.field public s:[B
+
+.field public t:I
+
+.field public u:I
+
+.field public v:[B
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 1
+.method public constructor <init>()V
+    .locals 2
 
-    iput p1, p0, Lykf;->a:I
+    invoke-direct {p0}, Lbl0;-><init>()V
 
-    packed-switch p1, :pswitch_data_0
+    const/4 v0, 0x0
 
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput v0, p0, Lykf;->r:I
 
-    .line 3
-    new-instance p1, Landroid/util/SparseArray;
+    iput v0, p0, Lykf;->t:I
 
-    invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
+    iput v0, p0, Lykf;->u:I
 
-    iput-object p1, p0, Lykf;->b:Ljava/lang/Object;
+    const-wide/32 v0, 0x186a0
 
-    return-void
+    iput-wide v0, p0, Lykf;->l:J
 
-    .line 4
-    :pswitch_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const v0, 0x3e4ccccd    # 0.2f
 
-    new-instance p1, Ljava/util/concurrent/CountDownLatch;
+    iput v0, p0, Lykf;->i:F
 
-    const/4 v0, 0x1
+    const-wide/32 v0, 0x1e8480
 
-    invoke-direct {p1, v0}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
+    iput-wide v0, p0, Lykf;->m:J
 
-    iput-object p1, p0, Lykf;->b:Ljava/lang/Object;
+    const/16 v0, 0xa
 
-    return-void
+    iput v0, p0, Lykf;->k:I
 
-    :pswitch_data_0
-    .packed-switch 0x9
-        :pswitch_0
-    .end packed-switch
-.end method
+    const/16 v0, 0x400
 
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
+    iput-short v0, p0, Lykf;->j:S
 
-    .line 1
-    iput p1, p0, Lykf;->a:I
+    sget-object v0, Lvih;->b:[B
 
-    iput-object p2, p0, Lykf;->b:Ljava/lang/Object;
+    iput-object v0, p0, Lykf;->s:[B
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method public constructor <init>(Lrz6;)V
-    .locals 1
-
-    const/4 v0, 0x4
-
-    iput v0, p0, Lykf;->a:I
-
-    .line 5
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 6
-    const-class v0, Landroidx/camera/camera2/internal/compat/quirk/TorchFlashRequiredFor3aUpdateQuirk;
-
-    invoke-virtual {p1, v0}, Lrz6;->M(Ljava/lang/Class;)Ld4d;
-
-    move-result-object p1
-
-    check-cast p1, Landroidx/camera/camera2/internal/compat/quirk/TorchFlashRequiredFor3aUpdateQuirk;
-
-    iput-object p1, p0, Lykf;->b:Ljava/lang/Object;
+    iput-object v0, p0, Lykf;->v:[B
 
     return-void
 .end method
 
 
 # virtual methods
-.method public A()I
-    .locals 1
+.method public final c(Ljava/nio/ByteBuffer;)V
+    .locals 10
 
-    const/4 v0, 0x2
-
-    return v0
-.end method
-
-.method public C()I
-    .locals 1
-
-    iget-object v0, p0, Lykf;->b:Ljava/lang/Object;
-
-    check-cast v0, Lone/me/chatmedia/viewer/video/VideoViewerWidget;
-
-    iget-object v0, v0, Lone/me/chatmedia/viewer/video/VideoViewerWidget;->t0:Lqfh;
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0}, Lqfh;->getHeight()I
+    :goto_0
+    invoke-virtual {p1}, Ljava/nio/Buffer;->hasRemaining()Z
 
     move-result v0
 
-    return v0
+    if-eqz v0, :cond_d
+
+    iget-object v0, p0, Lbl0;->g:Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v0}, Ljava/nio/Buffer;->hasRemaining()Z
+
+    move-result v0
+
+    if-nez v0, :cond_d
+
+    iget v0, p0, Lykf;->p:I
+
+    iget-short v1, p0, Lykf;->j:S
+
+    const/4 v2, 0x1
+
+    if-eqz v0, :cond_9
+
+    if-ne v0, v2, :cond_8
+
+    iget v0, p0, Lykf;->t:I
+
+    iget-object v3, p0, Lykf;->s:[B
+
+    array-length v3, v3
+
+    const/4 v4, 0x0
+
+    if-ge v0, v3, :cond_0
+
+    move v0, v2
+
+    goto :goto_1
 
     :cond_0
-    const/4 v0, 0x0
+    move v0, v4
 
-    return v0
-.end method
+    :goto_1
+    invoke-static {v0}, Lxej;->g(Z)V
 
-.method public a(Ljava/lang/Object;)V
-    .locals 0
+    invoke-virtual {p1}, Ljava/nio/Buffer;->limit()I
 
-    iget-object p1, p0, Lykf;->b:Ljava/lang/Object;
+    move-result v0
 
-    check-cast p1, Ljava/util/concurrent/CountDownLatch;
-
-    invoke-virtual {p1}, Ljava/util/concurrent/CountDownLatch;->countDown()V
-
-    return-void
-.end method
-
-.method public accept(Ljava/lang/Object;)V
-    .locals 3
-
-    iget v0, p0, Lykf;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    check-cast p1, Ljava/lang/Throwable;
-
-    iget-object v0, p0, Lykf;->b:Ljava/lang/Object;
-
-    check-cast v0, Lfsb;
-
-    iget-object v0, v0, Lfsb;->f:Lsmi;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "error occurred: "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Lsmi;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-
-    :pswitch_0
-    check-cast p1, Lb3h;
-
-    iget-object p1, p0, Lykf;->b:Ljava/lang/Object;
-
-    check-cast p1, Lcs4;
-
-    iget-boolean v0, p1, Lcs4;->a:Z
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p1, Lcs4;->b:Ljava/lang/Object;
-
-    check-cast v0, Lahd;
-
-    const-string v1, "OwnTalkingReporter"
-
-    const-string v2, "on voice stop detected and reported"
-
-    invoke-interface {v0, v1, v2}, Lahd;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p1, Lcs4;->X:Ljava/lang/Object;
-
-    check-cast v0, Lz01;
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0, v1}, Lz01;->a(Z)V
-
-    :cond_0
-    iput-boolean v1, p1, Lcs4;->a:Z
-
-    :cond_1
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x7
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public b()I
-    .locals 1
-
-    iget-object v0, p0, Lykf;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljrj;
-
-    iget v0, v0, Ljrj;->X:I
-
-    return v0
-.end method
-
-.method public c()Landroid/graphics/Rect;
-    .locals 8
-
-    iget-object v0, p0, Lykf;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljrj;
-
-    iget-object v0, v0, Ljrj;->o:[Landroid/graphics/Point;
-
-    if-eqz v0, :cond_1
-
-    const/4 v1, 0x0
-
-    const/high16 v2, -0x80000000
-
-    const v3, 0x7fffffff
-
-    move v4, v3
-
-    move v5, v4
-
-    move v3, v2
-
-    :goto_0
-    array-length v6, v0
-
-    if-ge v1, v6, :cond_0
-
-    aget-object v6, v0, v1
-
-    iget v7, v6, Landroid/graphics/Point;->x:I
-
-    invoke-static {v4, v7}, Ljava/lang/Math;->min(II)I
-
-    move-result v4
-
-    iget v7, v6, Landroid/graphics/Point;->x:I
-
-    invoke-static {v2, v7}, Ljava/lang/Math;->max(II)I
-
-    move-result v2
-
-    iget v7, v6, Landroid/graphics/Point;->y:I
-
-    invoke-static {v5, v7}, Ljava/lang/Math;->min(II)I
-
-    move-result v5
-
-    iget v6, v6, Landroid/graphics/Point;->y:I
-
-    invoke-static {v3, v6}, Ljava/lang/Math;->max(II)I
+    invoke-virtual {p1}, Ljava/nio/Buffer;->position()I
 
     move-result v3
 
-    add-int/lit8 v1, v1, 0x1
+    add-int/2addr v3, v2
 
-    goto :goto_0
+    :goto_2
+    invoke-virtual {p1}, Ljava/nio/Buffer;->limit()I
 
-    :cond_0
-    new-instance v0, Landroid/graphics/Rect;
+    move-result v5
 
-    invoke-direct {v0, v4, v5, v2, v3}, Landroid/graphics/Rect;-><init>(IIII)V
+    if-ge v3, v5, :cond_2
 
-    return-object v0
+    invoke-virtual {p1, v3}, Ljava/nio/ByteBuffer;->get(I)B
+
+    move-result v5
+
+    add-int/lit8 v6, v3, -0x1
+
+    invoke-virtual {p1, v6}, Ljava/nio/ByteBuffer;->get(I)B
+
+    move-result v6
+
+    and-int/lit16 v6, v6, 0xff
+
+    shl-int/lit8 v5, v5, 0x8
+
+    or-int/2addr v5, v6
+
+    invoke-static {v5}, Ljava/lang/Math;->abs(I)I
+
+    move-result v5
+
+    if-le v5, v1, :cond_1
+
+    iget v1, p0, Lykf;->n:I
+
+    div-int/2addr v3, v1
+
+    mul-int/2addr v3, v1
+
+    goto :goto_3
 
     :cond_1
+    add-int/lit8 v3, v3, 0x2
+
+    goto :goto_2
+
+    :cond_2
+    invoke-virtual {p1}, Ljava/nio/Buffer;->limit()I
+
+    move-result v3
+
+    :goto_3
+    invoke-virtual {p1}, Ljava/nio/Buffer;->position()I
+
+    move-result v1
+
+    sub-int v1, v3, v1
+
+    iget v5, p0, Lykf;->t:I
+
+    iget v6, p0, Lykf;->u:I
+
+    add-int v7, v5, v6
+
+    iget-object v8, p0, Lykf;->s:[B
+
+    array-length v9, v8
+
+    if-ge v7, v9, :cond_3
+
+    array-length v5, v8
+
+    :goto_4
+    sub-int/2addr v5, v7
+
+    goto :goto_5
+
+    :cond_3
+    array-length v7, v8
+
+    sub-int/2addr v7, v5
+
+    sub-int v7, v6, v7
+
+    goto :goto_4
+
+    :goto_5
+    if-ge v3, v0, :cond_4
+
+    move v3, v2
+
+    goto :goto_6
+
+    :cond_4
+    move v3, v4
+
+    :goto_6
+    invoke-static {v1, v5}, Ljava/lang/Math;->min(II)I
+
+    move-result v6
+
+    invoke-virtual {p1}, Ljava/nio/Buffer;->position()I
+
+    move-result v8
+
+    add-int/2addr v8, v6
+
+    invoke-virtual {p1, v8}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
+
+    iget-object v8, p0, Lykf;->s:[B
+
+    invoke-virtual {p1, v8, v7, v6}, Ljava/nio/ByteBuffer;->get([BII)Ljava/nio/ByteBuffer;
+
+    iget v7, p0, Lykf;->u:I
+
+    add-int/2addr v7, v6
+
+    iput v7, p0, Lykf;->u:I
+
+    iget-object v6, p0, Lykf;->s:[B
+
+    array-length v6, v6
+
+    if-gt v7, v6, :cond_5
+
+    move v6, v2
+
+    goto :goto_7
+
+    :cond_5
+    move v6, v4
+
+    :goto_7
+    invoke-static {v6}, Lxej;->g(Z)V
+
+    if-eqz v3, :cond_6
+
+    if-ge v1, v5, :cond_6
+
+    goto :goto_8
+
+    :cond_6
+    move v2, v4
+
+    :goto_8
+    invoke-virtual {p0, v2}, Lykf;->m(Z)V
+
+    if-eqz v2, :cond_7
+
+    iput v4, p0, Lykf;->p:I
+
+    iput v4, p0, Lykf;->r:I
+
+    :cond_7
+    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
+
+    goto/16 :goto_0
+
+    :cond_8
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    invoke-direct {p1}, Ljava/lang/IllegalStateException;-><init>()V
+
+    throw p1
+
+    :cond_9
+    invoke-virtual {p1}, Ljava/nio/Buffer;->limit()I
+
+    move-result v0
+
+    invoke-virtual {p1}, Ljava/nio/Buffer;->position()I
+
+    move-result v3
+
+    iget-object v4, p0, Lykf;->s:[B
+
+    array-length v4, v4
+
+    add-int/2addr v3, v4
+
+    invoke-static {v0, v3}, Ljava/lang/Math;->min(II)I
+
+    move-result v3
+
+    invoke-virtual {p1, v3}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
+
+    invoke-virtual {p1}, Ljava/nio/Buffer;->limit()I
+
+    move-result v3
+
+    sub-int/2addr v3, v2
+
+    :goto_9
+    invoke-virtual {p1}, Ljava/nio/Buffer;->position()I
+
+    move-result v4
+
+    if-lt v3, v4, :cond_b
+
+    invoke-virtual {p1, v3}, Ljava/nio/ByteBuffer;->get(I)B
+
+    move-result v4
+
+    add-int/lit8 v5, v3, -0x1
+
+    invoke-virtual {p1, v5}, Ljava/nio/ByteBuffer;->get(I)B
+
+    move-result v5
+
+    and-int/lit16 v5, v5, 0xff
+
+    shl-int/lit8 v4, v4, 0x8
+
+    or-int/2addr v4, v5
+
+    invoke-static {v4}, Ljava/lang/Math;->abs(I)I
+
+    move-result v4
+
+    if-le v4, v1, :cond_a
+
+    iget v1, p0, Lykf;->n:I
+
+    div-int/2addr v3, v1
+
+    mul-int/2addr v3, v1
+
+    add-int/2addr v3, v1
+
+    goto :goto_a
+
+    :cond_a
+    add-int/lit8 v3, v3, -0x2
+
+    goto :goto_9
+
+    :cond_b
+    invoke-virtual {p1}, Ljava/nio/Buffer;->position()I
+
+    move-result v3
+
+    :goto_a
+    invoke-virtual {p1}, Ljava/nio/Buffer;->position()I
+
+    move-result v1
+
+    if-ne v3, v1, :cond_c
+
+    iput v2, p0, Lykf;->p:I
+
+    goto :goto_b
+
+    :cond_c
+    invoke-virtual {p1}, Ljava/nio/Buffer;->capacity()I
+
+    move-result v1
+
+    invoke-static {v3, v1}, Ljava/lang/Math;->min(II)I
+
+    move-result v1
+
+    invoke-virtual {p1, v1}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
+
+    invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
+
+    move-result v1
+
+    invoke-virtual {p0, v1}, Lbl0;->k(I)Ljava/nio/ByteBuffer;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Ljava/nio/ByteBuffer;->put(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
+
+    :goto_b
+    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
+
+    goto/16 :goto_0
+
+    :cond_d
+    return-void
+.end method
+
+.method public final g(Lr70;)Lr70;
+    .locals 2
+
+    iget v0, p1, Lr70;->c:I
+
+    const/4 v1, 0x2
+
+    if-ne v0, v1, :cond_1
+
+    iget v0, p1, Lr70;->a:I
+
+    const/4 v1, -0x1
+
+    if-ne v0, v1, :cond_0
+
+    sget-object p1, Lr70;->e:Lr70;
+
+    :cond_0
+    return-object p1
+
+    :cond_1
+    new-instance v0, Landroidx/media3/common/audio/AudioProcessor$UnhandledAudioFormatException;
+
+    invoke-direct {v0, p1}, Landroidx/media3/common/audio/AudioProcessor$UnhandledAudioFormatException;-><init>(Lr70;)V
+
+    throw v0
+.end method
+
+.method public final h()V
+    .locals 6
+
+    invoke-virtual {p0}, Lykf;->isActive()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lbl0;->b:Lr70;
+
+    iget v1, v0, Lr70;->b:I
+
+    mul-int/lit8 v1, v1, 0x2
+
+    iput v1, p0, Lykf;->n:I
+
+    iget v0, v0, Lr70;->a:I
+
+    int-to-long v2, v0
+
+    iget-wide v4, p0, Lykf;->l:J
+
+    mul-long/2addr v4, v2
+
+    const-wide/32 v2, 0xf4240
+
+    div-long/2addr v4, v2
+
+    long-to-int v0, v4
+
+    div-int/lit8 v0, v0, 0x2
+
+    div-int/2addr v0, v1
+
+    mul-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x2
+
+    iget-object v1, p0, Lykf;->s:[B
+
+    array-length v1, v1
+
+    if-eq v1, v0, :cond_0
+
+    new-array v1, v0, [B
+
+    iput-object v1, p0, Lykf;->s:[B
+
+    new-array v0, v0, [B
+
+    iput-object v0, p0, Lykf;->v:[B
+
+    :cond_0
     const/4 v0, 0x0
 
-    return-object v0
-.end method
+    iput v0, p0, Lykf;->p:I
 
-.method public d(Lcsf;)V
-    .locals 1
+    const-wide/16 v1, 0x0
 
-    iget-object v0, p0, Lykf;->b:Ljava/lang/Object;
+    iput-wide v1, p0, Lykf;->q:J
 
-    check-cast v0, Lavf;
+    iput v0, p0, Lykf;->r:I
 
-    invoke-interface {v0, p1}, Lavf;->d(Lcsf;)V
+    iput v0, p0, Lykf;->t:I
 
-    return-void
-.end method
-
-.method public e()V
-    .locals 1
-
-    iget-object v0, p0, Lykf;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/concurrent/CountDownLatch;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
+    iput v0, p0, Lykf;->u:I
 
     return-void
 .end method
 
-.method public f(Lcsf;)V
+.method public final i()V
     .locals 1
 
-    iget-object v0, p0, Lykf;->b:Ljava/lang/Object;
+    iget v0, p0, Lykf;->u:I
 
-    check-cast v0, Lavf;
+    if-lez v0, :cond_0
 
-    invoke-interface {v0, p1}, Lavf;->f(Lcsf;)V
+    const/4 v0, 0x1
 
+    invoke-virtual {p0, v0}, Lykf;->m(Z)V
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lykf;->r:I
+
+    :cond_0
     return-void
 .end method
 
-.method public g()Ljava/lang/String;
+.method public final isActive()Z
     .locals 1
 
-    iget-object v0, p0, Lykf;->b:Ljava/lang/Object;
+    invoke-super {p0}, Lbl0;->isActive()Z
 
-    check-cast v0, Ljrj;
+    move-result v0
 
-    iget-object v0, v0, Ljrj;->c:Ljava/lang/String;
+    if-eqz v0, :cond_0
 
-    return-object v0
-.end method
+    iget-boolean v0, p0, Lykf;->o:Z
 
-.method public getFormat()I
-    .locals 1
+    if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lykf;->b:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    check-cast v0, Ljrj;
+    return v0
 
-    iget v0, v0, Ljrj;->a:I
+    :cond_0
+    const/4 v0, 0x0
 
     return v0
 .end method
 
-.method public h(Landroid/view/View;)Z
-    .locals 4
-
-    iget-object v0, p0, Lykf;->b:Ljava/lang/Object;
-
-    check-cast v0, Lcom/google/android/material/behavior/SwipeDismissBehavior;
-
-    invoke-virtual {v0, p1}, Lcom/google/android/material/behavior/SwipeDismissBehavior;->t(Landroid/view/View;)Z
-
-    move-result v1
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_4
-
-    sget-object v1, Lxsh;->a:Ljava/util/WeakHashMap;
-
-    invoke-virtual {p1}, Landroid/view/View;->getLayoutDirection()I
-
-    move-result v1
-
-    const/4 v3, 0x1
-
-    if-ne v1, v3, :cond_0
-
-    move v2, v3
-
-    :cond_0
-    iget v0, v0, Lcom/google/android/material/behavior/SwipeDismissBehavior;->d:I
-
-    if-nez v0, :cond_1
-
-    if-nez v2, :cond_2
-
-    :cond_1
-    if-ne v0, v3, :cond_3
-
-    if-nez v2, :cond_3
-
-    :cond_2
-    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
-
-    move-result v0
-
-    neg-int v0, v0
-
-    goto :goto_0
-
-    :cond_3
-    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
-
-    move-result v0
-
-    :goto_0
-    invoke-virtual {p1, v0}, Landroid/view/View;->offsetLeftAndRight(I)V
+.method public final j()V
+    .locals 1
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
+    iput-boolean v0, p0, Lykf;->o:Z
 
-    return v3
+    sget-object v0, Lvih;->b:[B
 
-    :cond_4
-    return v2
+    iput-object v0, p0, Lykf;->s:[B
+
+    iput-object v0, p0, Lykf;->v:[B
+
+    return-void
 .end method
 
-.method public i()Z
-    .locals 5
+.method public final l(I)I
+    .locals 4
 
-    iget-object v0, p0, Lykf;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lbl0;->b:Lr70;
 
-    check-cast v0, Landroidx/camera/camera2/internal/compat/quirk/TorchFlashRequiredFor3aUpdateQuirk;
+    iget v0, v0, Lr70;->a:I
 
+    int-to-long v0, v0
+
+    iget-wide v2, p0, Lykf;->m:J
+
+    mul-long/2addr v2, v0
+
+    const-wide/32 v0, 0xf4240
+
+    div-long/2addr v2, v0
+
+    long-to-int v0, v2
+
+    iget v1, p0, Lykf;->r:I
+
+    sub-int/2addr v0, v1
+
+    iget v1, p0, Lykf;->n:I
+
+    mul-int/2addr v0, v1
+
+    iget-object v1, p0, Lykf;->s:[B
+
+    array-length v1, v1
+
+    div-int/lit8 v1, v1, 0x2
+
+    sub-int/2addr v0, v1
+
+    if-ltz v0, :cond_0
+
+    const/4 v1, 0x1
+
+    goto :goto_0
+
+    :cond_0
     const/4 v1, 0x0
 
-    if-eqz v0, :cond_2
+    :goto_0
+    invoke-static {v1}, Lxej;->g(Z)V
 
-    iget-object v0, v0, Landroidx/camera/camera2/internal/compat/quirk/TorchFlashRequiredFor3aUpdateQuirk;->a:Lb32;
+    int-to-float p1, p1
 
-    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
+    iget v1, p0, Lykf;->i:F
 
-    const/16 v3, 0x1c
+    mul-float/2addr p1, v1
+
+    const/high16 v1, 0x3f000000    # 0.5f
+
+    add-float/2addr p1, v1
+
+    int-to-float v0, v0
+
+    invoke-static {p1, v0}, Ljava/lang/Math;->min(FF)F
+
+    move-result p1
+
+    float-to-int p1, p1
+
+    iget v0, p0, Lykf;->n:I
+
+    div-int/2addr p1, v0
+
+    mul-int/2addr p1, v0
+
+    return p1
+.end method
+
+.method public final m(Z)V
+    .locals 8
+
+    iget v0, p0, Lykf;->u:I
+
+    iget-object v1, p0, Lykf;->s:[B
+
+    array-length v2, v1
+
+    if-eq v0, v2, :cond_1
+
+    if-eqz p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+
+    :cond_1
+    :goto_0
+    iget v2, p0, Lykf;->r:I
+
+    const/4 v3, 0x0
 
     const/4 v4, 0x1
 
-    if-ge v2, v3, :cond_1
+    const/4 v5, 0x2
+
+    if-nez v2, :cond_4
+
+    if-eqz p1, :cond_2
+
+    const/4 p1, 0x3
+
+    invoke-virtual {p0, v0, p1}, Lykf;->n(II)V
+
+    move p1, v0
+
+    :goto_1
+    move v1, p1
+
+    goto :goto_3
+
+    :cond_2
+    array-length p1, v1
+
+    div-int/2addr p1, v5
+
+    if-lt v0, p1, :cond_3
+
+    move p1, v4
+
+    goto :goto_2
+
+    :cond_3
+    move p1, v3
+
+    :goto_2
+    invoke-static {p1}, Lxej;->g(Z)V
+
+    iget-object p1, p0, Lykf;->s:[B
+
+    array-length p1, p1
+
+    div-int/2addr p1, v5
+
+    invoke-virtual {p0, p1, v3}, Lykf;->n(II)V
+
+    goto :goto_1
+
+    :cond_4
+    if-eqz p1, :cond_5
+
+    array-length p1, v1
+
+    div-int/2addr p1, v5
+
+    sub-int p1, v0, p1
+
+    array-length v1, v1
+
+    div-int/2addr v1, v5
+
+    add-int/2addr v1, p1
+
+    invoke-virtual {p0, p1}, Lykf;->l(I)I
+
+    move-result p1
+
+    iget-object v2, p0, Lykf;->s:[B
+
+    array-length v2, v2
+
+    div-int/2addr v2, v5
+
+    add-int/2addr p1, v2
+
+    invoke-virtual {p0, p1, v5}, Lykf;->n(II)V
+
+    move v7, v1
+
+    move v1, p1
+
+    move p1, v7
+
+    goto :goto_3
+
+    :cond_5
+    array-length p1, v1
+
+    div-int/2addr p1, v5
+
+    sub-int p1, v0, p1
+
+    invoke-virtual {p0, p1}, Lykf;->l(I)I
+
+    move-result v1
+
+    invoke-virtual {p0, v1, v4}, Lykf;->n(II)V
+
+    :goto_3
+    iget v2, p0, Lykf;->n:I
+
+    rem-int v2, p1, v2
+
+    if-nez v2, :cond_6
+
+    move v2, v4
+
+    goto :goto_4
+
+    :cond_6
+    move v2, v3
+
+    :goto_4
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    const-string v6, "bytesConsumed is not aligned to frame size: %s"
+
+    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v5, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v5, v2}, Lxej;->f(Ljava/lang/Object;Z)V
+
+    if-lt v0, v1, :cond_7
+
+    move v3, v4
+
+    :cond_7
+    invoke-static {v3}, Lxej;->g(Z)V
+
+    iget v0, p0, Lykf;->u:I
+
+    sub-int/2addr v0, p1
+
+    iput v0, p0, Lykf;->u:I
+
+    iget v0, p0, Lykf;->t:I
+
+    add-int/2addr v0, p1
+
+    iput v0, p0, Lykf;->t:I
+
+    iget-object v2, p0, Lykf;->s:[B
+
+    array-length v2, v2
+
+    rem-int/2addr v0, v2
+
+    iput v0, p0, Lykf;->t:I
+
+    iget v0, p0, Lykf;->r:I
+
+    iget v2, p0, Lykf;->n:I
+
+    div-int v3, v1, v2
+
+    add-int/2addr v3, v0
+
+    iput v3, p0, Lykf;->r:I
+
+    iget-wide v3, p0, Lykf;->q:J
+
+    sub-int/2addr p1, v1
+
+    div-int/2addr p1, v2
+
+    int-to-long v0, p1
+
+    add-long/2addr v3, v0
+
+    iput-wide v3, p0, Lykf;->q:J
+
+    return-void
+.end method
+
+.method public final n(II)V
+    .locals 10
+
+    if-nez p1, :cond_0
+
+    return-void
 
     :cond_0
+    iget v0, p0, Lykf;->u:I
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    if-lt v0, p1, :cond_1
+
     move v0, v1
 
     goto :goto_0
 
     :cond_1
-    const/4 v2, 0x5
-
-    invoke-static {v0, v2}, Ll02;->t(Lb32;I)I
-
-    move-result v0
-
-    if-ne v0, v2, :cond_0
-
-    move v0, v4
+    move v0, v2
 
     :goto_0
-    if-nez v0, :cond_2
+    invoke-static {v0}, Lxej;->b(Z)V
 
-    move v1, v4
+    const/4 v0, 0x2
+
+    if-ne p2, v0, :cond_4
+
+    iget v3, p0, Lykf;->t:I
+
+    iget v4, p0, Lykf;->u:I
+
+    add-int v5, v3, v4
+
+    iget-object v6, p0, Lykf;->s:[B
+
+    array-length v7, v6
+
+    if-gt v5, v7, :cond_2
+
+    sub-int/2addr v5, p1
+
+    iget-object v3, p0, Lykf;->v:[B
+
+    invoke-static {v6, v5, v3, v2, p1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    goto :goto_1
 
     :cond_2
-    new-instance v0, Ljava/lang/StringBuilder;
+    array-length v5, v6
 
-    const-string v2, "shouldUseFlashModeTorch: "
+    sub-int/2addr v5, v3
 
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    sub-int/2addr v4, v5
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    if-lt v4, p1, :cond_3
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    sub-int/2addr v4, p1
 
-    move-result-object v0
+    iget-object v3, p0, Lykf;->v:[B
 
-    const-string v2, "UseFlashModeTorchFor3aUpdate"
+    invoke-static {v6, v4, v3, v2, p1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    invoke-static {v2, v0}, Lm5j;->a(Ljava/lang/String;Ljava/lang/String;)V
+    goto :goto_1
 
-    return v1
-.end method
+    :cond_3
+    sub-int v3, p1, v4
 
-.method public k()[Landroid/graphics/Point;
-    .locals 1
+    array-length v5, v6
 
-    iget-object v0, p0, Lykf;->b:Ljava/lang/Object;
+    sub-int/2addr v5, v3
 
-    check-cast v0, Ljrj;
+    iget-object v7, p0, Lykf;->v:[B
 
-    iget-object v0, v0, Ljrj;->o:[Landroid/graphics/Point;
+    invoke-static {v6, v5, v7, v2, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    return-object v0
-.end method
+    iget-object v5, p0, Lykf;->s:[B
 
-.method public m()I
-    .locals 1
+    iget-object v6, p0, Lykf;->v:[B
 
-    iget-object v0, p0, Lykf;->b:Ljava/lang/Object;
+    invoke-static {v5, v2, v6, v3, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    check-cast v0, Lone/me/chatmedia/viewer/video/VideoViewerWidget;
+    goto :goto_1
 
-    iget-object v0, v0, Lone/me/chatmedia/viewer/video/VideoViewerWidget;->t0:Lqfh;
+    :cond_4
+    iget v3, p0, Lykf;->t:I
 
-    if-eqz v0, :cond_0
+    add-int v4, v3, p1
 
-    invoke-interface {v0}, Lqfh;->getWidth()I
+    iget-object v5, p0, Lykf;->s:[B
 
-    move-result v0
+    array-length v6, v5
 
-    return v0
+    if-gt v4, v6, :cond_5
 
-    :cond_0
-    const/4 v0, 0x0
+    iget-object v4, p0, Lykf;->v:[B
 
-    return v0
-.end method
+    invoke-static {v5, v3, v4, v2, p1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-.method public onFailure(Ljava/lang/Exception;)V
-    .locals 0
+    goto :goto_1
 
-    iget-object p1, p0, Lykf;->b:Ljava/lang/Object;
+    :cond_5
+    array-length v4, v5
 
-    check-cast p1, Ljava/util/concurrent/CountDownLatch;
+    sub-int/2addr v4, v3
 
-    invoke-virtual {p1}, Ljava/util/concurrent/CountDownLatch;->countDown()V
+    iget-object v6, p0, Lykf;->v:[B
 
-    return-void
-.end method
+    invoke-static {v5, v3, v6, v2, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-.method public onSurfaceTextureDestroyed(Landroid/graphics/SurfaceTexture;)V
-    .locals 5
+    sub-int v3, p1, v4
 
-    iget-object v0, p0, Lykf;->b:Ljava/lang/Object;
+    iget-object v5, p0, Lykf;->s:[B
 
-    check-cast v0, Lone/me/chatmedia/viewer/video/VideoViewerWidget;
+    iget-object v6, p0, Lykf;->v:[B
 
-    iget-object v0, v0, Lone/me/chatmedia/viewer/video/VideoViewerWidget;->a:Ljava/lang/String;
+    invoke-static {v5, v2, v6, v4, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    sget-object v1, Lc5j;->a:Ledb;
+    :goto_1
+    iget v3, p0, Lykf;->n:I
 
-    if-nez v1, :cond_0
+    rem-int v3, p1, v3
 
-    goto :goto_0
+    if-nez v3, :cond_6
 
-    :cond_0
-    sget-object v2, Lkk8;->d:Lkk8;
+    move v3, v1
 
-    invoke-virtual {v1, v2}, Ledb;->b(Lkk8;)Z
+    goto :goto_2
 
-    move-result v3
+    :cond_6
+    move v3, v2
 
-    if-eqz v3, :cond_1
+    :goto_2
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    const-string v5, "sizeToOutput is not aligned to frame size: "
 
-    const-string v4, "Media viewer. Video viewer, surface destroyed "
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v4
+
+    invoke-static {v4, v3}, Lxej;->a(Ljava/lang/Object;Z)V
+
+    iget v3, p0, Lykf;->t:I
+
+    iget-object v4, p0, Lykf;->s:[B
+
+    array-length v4, v4
+
+    if-ge v3, v4, :cond_7
+
+    move v3, v1
+
+    goto :goto_3
+
+    :cond_7
+    move v3, v2
+
+    :goto_3
+    invoke-static {v3}, Lxej;->g(Z)V
+
+    iget-object v3, p0, Lykf;->v:[B
+
+    iget v4, p0, Lykf;->n:I
+
+    rem-int v4, p1, v4
+
+    if-nez v4, :cond_8
+
+    goto :goto_4
+
+    :cond_8
+    move v1, v2
+
+    :goto_4
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    const-string v5, "byteOutput size is not aligned to frame size "
+
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v4, v1}, Lxej;->a(Ljava/lang/Object;Z)V
+
+    const/4 v1, 0x3
+
+    if-ne p2, v1, :cond_9
+
+    goto :goto_8
+
+    :cond_9
+    move v1, v2
+
+    :goto_5
+    if-ge v1, p1, :cond_e
+
+    add-int/lit8 v4, v1, 0x1
+
+    aget-byte v5, v3, v4
+
+    aget-byte v6, v3, v1
+
+    and-int/lit16 v6, v6, 0xff
+
+    shl-int/lit8 v5, v5, 0x8
+
+    or-int/2addr v5, v6
+
+    iget v6, p0, Lykf;->k:I
+
+    if-nez p2, :cond_a
+
+    add-int/lit8 v7, p1, -0x1
+
+    add-int/lit8 v6, v6, -0x64
+
+    mul-int/lit16 v8, v1, 0x3e8
+
+    div-int/2addr v8, v7
+
+    mul-int/2addr v8, v6
+
+    div-int/lit16 v8, v8, 0x3e8
+
+    add-int/lit8 v6, v8, 0x64
+
+    goto :goto_6
+
+    :cond_a
+    if-ne p2, v0, :cond_b
+
+    add-int/lit8 v7, p1, -0x1
+
+    rsub-int/lit8 v8, v6, 0x64
+
+    mul-int/lit16 v9, v1, 0x3e8
+
+    mul-int/2addr v9, v8
+
+    div-int/2addr v9, v7
+
+    div-int/lit16 v9, v9, 0x3e8
+
+    add-int/2addr v6, v9
+
+    :cond_b
+    :goto_6
+    mul-int/2addr v5, v6
+
+    div-int/lit8 v5, v5, 0x64
+
+    const/16 v6, 0x7fff
+
+    if-lt v5, v6, :cond_c
+
+    const/4 v5, -0x1
+
+    aput-byte v5, v3, v1
+
+    const/16 v5, 0x7f
+
+    aput-byte v5, v3, v4
+
+    goto :goto_7
+
+    :cond_c
+    const/16 v6, -0x8000
+
+    if-gt v5, v6, :cond_d
+
+    aput-byte v2, v3, v1
+
+    const/16 v5, -0x80
+
+    aput-byte v5, v3, v4
+
+    goto :goto_7
+
+    :cond_d
+    and-int/lit16 v6, v5, 0xff
+
+    int-to-byte v6, v6
+
+    aput-byte v6, v3, v1
+
+    shr-int/lit8 v5, v5, 0x8
+
+    int-to-byte v5, v5
+
+    aput-byte v5, v3, v4
+
+    :goto_7
+    add-int/lit8 v1, v1, 0x2
+
+    goto :goto_5
+
+    :cond_e
+    :goto_8
+    invoke-virtual {p0, p1}, Lbl0;->k(I)Ljava/nio/ByteBuffer;
+
+    move-result-object p2
+
+    invoke-virtual {p2, v3, v2, p1}, Ljava/nio/ByteBuffer;->put([BII)Ljava/nio/ByteBuffer;
 
     move-result-object p1
 
-    const/4 v3, 0x0
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
 
-    invoke-virtual {v1, v2, v0, p1, v3}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
-    :goto_0
-    return-void
-.end method
-
-.method public z(Landroid/view/Surface;Lkgh;)V
-    .locals 5
-
-    iget-object v0, p0, Lykf;->b:Ljava/lang/Object;
-
-    check-cast v0, Lone/me/chatmedia/viewer/video/VideoViewerWidget;
-
-    iget-object v0, v0, Lone/me/chatmedia/viewer/video/VideoViewerWidget;->a:Ljava/lang/String;
-
-    sget-object v1, Lc5j;->a:Ledb;
-
-    if-nez v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v2, Lkk8;->d:Lkk8;
-
-    invoke-virtual {v1, v2}, Ledb;->b(Lkk8;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "Media viewer. Video viewer, set surface "
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v1, v2, v0, v3, v4}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
-    :goto_0
-    iget-object v0, p0, Lykf;->b:Ljava/lang/Object;
-
-    check-cast v0, Lone/me/chatmedia/viewer/video/VideoViewerWidget;
-
-    invoke-virtual {v0}, Lone/me/chatmedia/viewer/video/VideoViewerWidget;->B0()Lhrh;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_2
-
-    check-cast v0, Lone/me/chatmedia/viewer/ChatMediaViewerScreen;
-
-    invoke-virtual {v0}, Lone/me/chatmedia/viewer/ChatMediaViewerScreen;->S0()Lqoh;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_2
-
-    invoke-interface {v0, p1}, Lqoh;->a0(Landroid/view/Surface;)V
-
-    invoke-interface {v0, p2}, Lqoh;->O(Lkgh;)V
-
-    :cond_2
     return-void
 .end method

@@ -1,58 +1,65 @@
 .class public final Lxa9;
-.super Ljava/lang/Object;
+.super Lpyd;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lxa9;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 
 # instance fields
-.field public a:Landroid/os/ResultReceiver;
+.field public final E0:Landroid/view/View;
+
+.field public final F0:Landroid/widget/ImageView;
+
+.field public final G0:Landroid/widget/ProgressBar;
+
+.field public final H0:Landroid/widget/TextView;
+
+.field public final synthetic I0:Lya9;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Lya9;Landroid/view/View;)V
     .locals 2
 
-    new-instance v0, Lhu8;
+    iput-object p1, p0, Lxa9;->I0:Lya9;
 
-    const/4 v1, 0x6
+    invoke-direct {p0, p2}, Lpyd;-><init>(Landroid/view/View;)V
 
-    invoke-direct {v0, v1}, Lhu8;-><init>(I)V
+    iput-object p2, p0, Lxa9;->E0:Landroid/view/View;
 
-    sput-object v0, Lxa9;->CREATOR:Landroid/os/Parcelable$Creator;
+    sget v0, Ladd;->mr_picker_route_icon:I
 
-    return-void
-.end method
+    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
+    move-result-object v0
 
-# virtual methods
-.method public final describeContents()I
-    .locals 1
+    check-cast v0, Landroid/widget/ImageView;
 
-    const/4 v0, 0x0
+    iput-object v0, p0, Lxa9;->F0:Landroid/widget/ImageView;
 
-    return v0
-.end method
+    sget v0, Ladd;->mr_picker_route_progress_bar:I
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 1
+    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    iget-object v0, p0, Lxa9;->a:Landroid/os/ResultReceiver;
+    move-result-object v0
 
-    invoke-virtual {v0, p1, p2}, Landroid/os/ResultReceiver;->writeToParcel(Landroid/os/Parcel;I)V
+    check-cast v0, Landroid/widget/ProgressBar;
+
+    iput-object v0, p0, Lxa9;->G0:Landroid/widget/ProgressBar;
+
+    sget v1, Ladd;->mr_picker_route_name:I
+
+    invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object p2
+
+    check-cast p2, Landroid/widget/TextView;
+
+    iput-object p2, p0, Lxa9;->H0:Landroid/widget/TextView;
+
+    iget-object p1, p1, Lya9;->t0:Lza9;
+
+    iget-object p1, p1, Lza9;->Z:Landroid/content/Context;
+
+    invoke-static {p1, v0}, Lcc9;->i(Landroid/content/Context;Landroid/widget/ProgressBar;)V
 
     return-void
 .end method

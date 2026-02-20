@@ -1,81 +1,71 @@
-.class public final synthetic Lqs3;
+.class public final Lqs3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lnq6;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lzef;
 
-.field public final synthetic b:Lone/me/login/confirm/ConfirmPhoneScreen;
+.field public final b:Lkotlinx/coroutines/internal/ContextScope;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/login/confirm/ConfirmPhoneScreen;I)V
-    .locals 0
-
-    iput p2, p0, Lqs3;->a:I
-
-    iput-object p1, p0, Lqs3;->b:Lone/me/login/confirm/ConfirmPhoneScreen;
+.method public constructor <init>(Lj88;Lbjg;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x7
+
+    invoke-static {v0, v0, v1}, Laff;->b(III)Lzef;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lqs3;->a:Lzef;
+
+    check-cast p2, Lcbb;
+
+    invoke-virtual {p2}, Lcbb;->a()Lgd4;
+
+    move-result-object p2
+
+    invoke-static {p2}, Lztj;->a(Led4;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object p2
+
+    iput-object p2, p0, Lqs3;->b:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-interface {p1}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lqy0;
+
+    invoke-virtual {p1, p0}, Lqy0;->d(Ljava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final onEvent(Lls3;)V
     .locals 3
+    .annotation runtime Lx7g;
+    .end annotation
 
-    iget v0, p0, Lqs3;->a:I
+    new-instance p1, Lps3;
 
-    sget-object v1, Lb3h;->a:Lb3h;
+    const/4 v0, 0x0
 
-    iget-object v2, p0, Lqs3;->b:Lone/me/login/confirm/ConfirmPhoneScreen;
+    invoke-direct {p1, p0, v0}, Lps3;-><init>(Lqs3;Lkotlin/coroutines/Continuation;)V
 
-    packed-switch v0, :pswitch_data_0
+    const/4 v1, 0x3
 
-    check-cast p1, Lwt3;
+    iget-object v2, p0, Lqs3;->b:Lkotlinx/coroutines/internal/ContextScope;
 
-    sget-object v0, Lone/me/login/confirm/ConfirmPhoneScreen;->C0:[Lz28;
+    invoke-static {v2, v0, v0, p1, v1}, Lea9;->d(Lnd4;Led4;Lqd4;Lys6;I)Lcuf;
 
-    sget-object v0, Lwt3;->b:Lwt3;
-
-    if-ne p1, v0, :cond_0
-
-    invoke-virtual {v2}, Lone/me/login/confirm/ConfirmPhoneScreen;->E0()Lit3;
-
-    move-result-object p1
-
-    iget-object p1, p1, Lit3;->B0:Lspf;
-
-    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
-
-    const/4 v2, 0x0
-
-    invoke-virtual {p1, v2, v0}, Lspf;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    :cond_0
-    return-object v1
-
-    :pswitch_0
-    check-cast p1, Landroid/view/View;
-
-    sget-object p1, Lone/me/login/confirm/ConfirmPhoneScreen;->C0:[Lz28;
-
-    invoke-virtual {v2}, La94;->getRouter()Lw4e;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lw4e;->C()Z
-
-    return-object v1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

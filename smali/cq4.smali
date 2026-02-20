@@ -1,90 +1,176 @@
 .class public final Lcq4;
-.super Ljava/lang/Object;
+.super Lzh3;
 .source "SourceFile"
-
-# interfaces
-.implements Li4g;
-
-
-# static fields
-.field public static final a:J
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 3
-
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->MINUTES:Ljava/util/concurrent/TimeUnit;
-
-    const-wide/16 v1, 0x5
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
-
-    move-result-wide v0
-
-    sput-wide v0, Lcq4;->a:J
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 8
+.method public final bridge synthetic clone()Ljava/lang/Object;
+    .locals 1
 
-    invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
+    invoke-virtual {p0}, Lcq4;->l()Lzh3;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/lang/Runtime;->maxMemory()J
+    return-object v0
+.end method
 
-    move-result-wide v0
+.method public final finalize()V
+    .locals 5
 
-    const-wide/32 v2, 0x7fffffff
+    :try_start_0
+    monitor-enter p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->min(JJ)J
+    :try_start_1
+    iget-boolean v0, p0, Lzh3;->a:Z
 
-    move-result-wide v0
+    if-eqz v0, :cond_0
 
-    long-to-int v0, v0
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    const/high16 v1, 0x1000000
+    invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
-    if-ge v0, v1, :cond_0
+    return-void
 
-    const/high16 v0, 0x100000
+    :catchall_0
+    move-exception v0
 
-    :goto_0
-    move v2, v0
-
-    goto :goto_1
+    goto :goto_2
 
     :cond_0
-    const/high16 v1, 0x2000000
+    :try_start_2
+    monitor-exit p0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    if-ge v0, v1, :cond_1
+    :try_start_3
+    iget-object v0, p0, Lzh3;->b:Lkff;
 
-    const/high16 v0, 0x200000
+    invoke-virtual {v0}, Lkff;->a()Ljava/lang/Object;
+
+    move-result-object v0
+
+    const-string v1, "DefaultCloseableReference"
+
+    const-string v2, "Finalized without closing: %x %x (type = %s)"
+
+    invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
+
+    move-result v3
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    iget-object v4, p0, Lzh3;->b:Lkff;
+
+    invoke-static {v4}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
+
+    move-result v4
+
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    if-nez v0, :cond_1
+
+    const/4 v0, 0x0
 
     goto :goto_0
 
     :cond_1
-    const/high16 v0, 0x400000
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    :goto_0
+    filled-new-array {v3, v4, v0}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v1, v2, v0}, Lav5;->m(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    iget-object v0, p0, Lzh3;->c:Lyh3;
+
+    if-eqz v0, :cond_2
+
+    iget-object v1, p0, Lzh3;->b:Lkff;
+
+    iget-object v2, p0, Lzh3;->d:Ljava/lang/Throwable;
+
+    invoke-interface {v0, v1, v2}, Lyh3;->j(Lkff;Ljava/lang/Throwable;)V
+
+    goto :goto_1
+
+    :catchall_1
+    move-exception v0
+
+    goto :goto_3
+
+    :cond_2
+    :goto_1
+    invoke-virtual {p0}, Lzh3;->close()V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    invoke-super {p0}, Ljava/lang/Object;->finalize()V
+
+    return-void
+
+    :goto_2
+    :try_start_4
+    monitor-exit p0
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+
+    :try_start_5
+    throw v0
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_1
+
+    :goto_3
+    invoke-super {p0}, Ljava/lang/Object;->finalize()V
+
+    throw v0
+.end method
+
+.method public final l()Lzh3;
+    .locals 4
+
+    invoke-virtual {p0}, Lzh3;->A0()Z
+
+    move-result v0
+
+    invoke-static {v0}, Letj;->f(Z)V
+
+    new-instance v0, Lcq4;
+
+    iget-object v1, p0, Lzh3;->d:Ljava/lang/Throwable;
+
+    if-eqz v1, :cond_0
+
+    new-instance v1, Ljava/lang/Throwable;
+
+    invoke-direct {v1}, Ljava/lang/Throwable;-><init>()V
 
     goto :goto_0
 
-    :goto_1
-    div-int/lit8 v7, v2, 0x8
+    :cond_0
+    const/4 v1, 0x0
 
-    new-instance v1, Lcj9;
+    :goto_0
+    iget-object v2, p0, Lzh3;->b:Lkff;
 
-    const v3, 0x7fffffff
+    iget-object v3, p0, Lzh3;->c:Lyh3;
 
-    sget-wide v5, Lcq4;->a:J
+    invoke-direct {v0, v2, v3, v1}, Lzh3;-><init>(Lkff;Lyh3;Ljava/lang/Throwable;)V
 
-    move v4, v2
-
-    invoke-direct/range {v1 .. v7}, Lcj9;-><init>(IIIJI)V
-
-    return-object v1
+    return-object v0
 .end method

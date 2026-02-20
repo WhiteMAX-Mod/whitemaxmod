@@ -1,85 +1,64 @@
-.class public final enum Ly5b;
-.super Ljava/lang/Enum;
+.class public final Ly5b;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
 
-# static fields
-.field public static final enum a:Ly5b;
 
-.field public static final enum b:Ly5b;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final enum c:Ly5b;
+.field public final synthetic b:Lb6b;
 
-.field public static final synthetic d:[Ly5b;
+.field public final synthetic c:Landroid/graphics/drawable/Drawable;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public synthetic constructor <init>(Lb6b;Landroid/graphics/drawable/Drawable;I)V
+    .locals 0
 
-    new-instance v0, Ly5b;
+    iput p3, p0, Ly5b;->a:I
 
-    const-string v1, "SMALL"
+    iput-object p1, p0, Ly5b;->b:Lb6b;
 
-    const/4 v2, 0x0
+    iput-object p2, p0, Ly5b;->c:Landroid/graphics/drawable/Drawable;
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Ly5b;->a:Ly5b;
-
-    new-instance v1, Ly5b;
-
-    const-string v2, "MEDIUM"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Ly5b;->b:Ly5b;
-
-    new-instance v2, Ly5b;
-
-    const-string v3, "LARGE"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Ly5b;->c:Ly5b;
-
-    filled-new-array {v0, v1, v2}, [Ly5b;
-
-    move-result-object v0
-
-    sput-object v0, Ly5b;->d:[Ly5b;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Ly5b;
-    .locals 1
 
-    const-class v0, Ly5b;
+# virtual methods
+.method public final run()V
+    .locals 2
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget v0, p0, Ly5b;->a:I
 
-    move-result-object p0
+    packed-switch v0, :pswitch_data_0
 
-    check-cast p0, Ly5b;
+    iget-object v0, p0, Ly5b;->b:Lb6b;
 
-    return-object p0
-.end method
+    iget-object v1, p0, Ly5b;->c:Landroid/graphics/drawable/Drawable;
 
-.method public static values()[Ly5b;
-    .locals 1
+    invoke-static {v0, v1}, Lb6b;->d(Lb6b;Landroid/graphics/drawable/Drawable;)V
 
-    sget-object v0, Ly5b;->d:[Ly5b;
+    return-void
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    :pswitch_0
+    iget-object v0, p0, Ly5b;->b:Lb6b;
 
-    move-result-object v0
+    iget-object v1, p0, Ly5b;->c:Landroid/graphics/drawable/Drawable;
 
-    check-cast v0, [Ly5b;
+    invoke-static {v0, v1}, Lb6b;->b(Lb6b;Landroid/graphics/drawable/Drawable;)V
 
-    return-object v0
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

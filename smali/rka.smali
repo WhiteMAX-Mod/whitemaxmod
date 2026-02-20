@@ -4,28 +4,24 @@
 
 
 # instance fields
-.field public final a:Ljava/lang/ref/WeakReference;
+.field public final a:I
 
-.field public final b:Ljava/util/concurrent/Executor;
+.field public final b:I
 
-.field public final synthetic c:Luka;
+.field public final c:I
 
 
 # direct methods
-.method public constructor <init>(Luka;Lco4;Ljava/util/concurrent/Executor;)V
+.method public constructor <init>(III)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lrka;->c:Luka;
+    iput p1, p0, Lrka;->a:I
 
-    new-instance p1, Ljava/lang/ref/WeakReference;
+    iput p2, p0, Lrka;->b:I
 
-    invoke-direct {p1, p2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object p1, p0, Lrka;->a:Ljava/lang/ref/WeakReference;
-
-    iput-object p3, p0, Lrka;->b:Ljava/util/concurrent/Executor;
+    iput p3, p0, Lrka;->c:I
 
     return-void
 .end method

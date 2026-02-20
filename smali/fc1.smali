@@ -1,158 +1,184 @@
-.class public final Lfc1;
-.super Ljf4;
+.class public final synthetic Lfc1;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lco4;
 
 
 # instance fields
-.field public final w0:Ljava/lang/String;
+.field public final synthetic a:I
 
-.field public x0:Ljava/util/List;
+.field public final synthetic b:J
 
 
 # direct methods
-.method public constructor <init>(Lone/me/calllist/ui/CallHistoryScreen;)V
+.method public synthetic constructor <init>(JI)V
     .locals 0
 
-    invoke-direct {p0, p1}, Ljf4;-><init>(Lone/me/sdk/arch/Widget;)V
+    iput p3, p0, Lfc1;->a:I
 
-    const-class p1, Lfc1;
+    iput-wide p1, p0, Lfc1;->b:J
 
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lfc1;->w0:Ljava/lang/String;
-
-    sget-object p1, Ldh5;->a:Ldh5;
-
-    iput-object p1, p0, Lfc1;->x0:Ljava/util/List;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final F(Lw4e;I)V
-    .locals 8
+.method public final a()Ljava/lang/Object;
+    .locals 4
 
-    invoke-virtual {p1}, Lw4e;->n()Z
+    iget v0, p0, Lfc1;->a:I
 
-    move-result v0
+    packed-switch v0, :pswitch_data_0
 
-    if-eqz v0, :cond_0
+    new-instance v0, Lone/me/webapp/settings/WebAppSettingsScreen;
 
-    return-void
+    iget-wide v1, p0, Lfc1;->b:J
 
-    :cond_0
-    iget-object v0, p0, Lfc1;->x0:Ljava/util/List;
+    invoke-direct {v0, v1, v2}, Lone/me/webapp/settings/WebAppSettingsScreen;-><init>(J)V
 
-    invoke-interface {v0, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    return-object v0
 
-    move-result-object p2
+    :pswitch_0
+    new-instance v0, Lone/me/stickerssettings/stickersscreen/StickersScreen;
 
-    check-cast p2, Lzc1;
+    sget-object v1, Ls1g;->d:Ls1g;
 
-    iget-object p2, p2, Lzc1;->c:Lyc1;
+    iget-wide v2, p0, Lfc1;->b:J
 
-    invoke-virtual {p2}, Ljava/lang/Enum;->ordinal()I
+    invoke-direct {v0, v1, v2, v3}, Lone/me/stickerssettings/stickersscreen/StickersScreen;-><init>(Ls1g;J)V
 
-    move-result p2
+    return-object v0
 
-    if-eqz p2, :cond_2
+    :pswitch_1
+    new-instance v0, Lone/me/startconversation/channel/PickSubscribersScreen;
 
-    const/4 v0, 0x1
+    iget-wide v1, p0, Lfc1;->b:J
 
-    if-ne p2, v0, :cond_1
+    invoke-direct {v0, v1, v2}, Lone/me/startconversation/channel/PickSubscribersScreen;-><init>(J)V
 
-    sget-object p2, Lone/me/calllist/ui/page/CallHistoryPageScreen;->v0:Lvna;
+    return-object v0
 
-    sget-object v0, Lyc1;->c:Lyc1;
+    :pswitch_2
+    new-instance v0, Lone/me/profileedit/screens/reactions/ProfileReactionsSettingsScreen;
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-wide v1, p0, Lfc1;->b:J
 
-    new-instance p2, Lone/me/calllist/ui/page/CallHistoryPageScreen;
+    invoke-direct {v0, v1, v2}, Lone/me/profileedit/screens/reactions/ProfileReactionsSettingsScreen;-><init>(J)V
 
-    invoke-direct {p2, v0}, Lone/me/calllist/ui/page/CallHistoryPageScreen;-><init>(Lyc1;)V
+    return-object v0
 
-    :goto_0
-    move-object v2, p2
+    :pswitch_3
+    new-instance v0, Lone/me/profileedit/screens/memberpermissions/ProfileMemberPermissionsScreen;
 
-    goto :goto_1
+    iget-wide v1, p0, Lfc1;->b:J
 
-    :cond_1
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+    invoke-direct {v0, v1, v2}, Lone/me/profileedit/screens/memberpermissions/ProfileMemberPermissionsScreen;-><init>(J)V
 
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    return-object v0
 
-    throw p1
+    :pswitch_4
+    new-instance v0, Lone/me/profile/screens/addadmins/AddChatAdminsScreen;
 
-    :cond_2
-    sget-object p2, Lone/me/calllist/ui/page/CallHistoryPageScreen;->v0:Lvna;
+    iget-wide v1, p0, Lfc1;->b:J
 
-    sget-object v0, Lyc1;->b:Lyc1;
+    invoke-direct {v0, v1, v2}, Lone/me/profile/screens/addadmins/AddChatAdminsScreen;-><init>(J)V
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    return-object v0
 
-    new-instance p2, Lone/me/calllist/ui/page/CallHistoryPageScreen;
+    :pswitch_5
+    new-instance v0, Lone/me/profile/screens/invite/ProfileInviteScreen;
 
-    invoke-direct {p2, v0}, Lone/me/calllist/ui/page/CallHistoryPageScreen;-><init>(Lyc1;)V
+    iget-wide v1, p0, Lfc1;->b:J
 
-    goto :goto_0
+    invoke-direct {v0, v1, v2}, Lone/me/profile/screens/invite/ProfileInviteScreen;-><init>(J)V
 
-    :goto_1
-    sget-object p2, Lz84;->b:Lz84;
+    return-object v0
 
-    invoke-virtual {v2, p2}, La94;->setRetainViewMode(Lz84;)V
+    :pswitch_6
+    new-instance v0, Lone/me/profile/screens/joinrequests/JoinRequestsScreen;
 
-    new-instance v1, Lz4e;
+    iget-wide v1, p0, Lfc1;->b:J
 
-    const/4 v6, 0x0
+    invoke-direct {v0, v1, v2}, Lone/me/profile/screens/joinrequests/JoinRequestsScreen;-><init>(J)V
 
-    const/4 v7, -0x1
+    return-object v0
 
-    const/4 v3, 0x0
+    :pswitch_7
+    new-instance v0, Lone/me/profile/screens/media/ChatMediaTabWidget;
 
-    const/4 v4, 0x0
+    sget-object v1, Lvx4;->o:Lvx4;
 
-    const/4 v5, 0x0
+    iget-wide v2, p0, Lfc1;->b:J
 
-    invoke-direct/range {v1 .. v7}, Lz4e;-><init>(La94;Ljava/lang/String;Lf94;Lf94;ZI)V
+    invoke-direct {v0, v2, v3, v1}, Lone/me/profile/screens/media/ChatMediaTabWidget;-><init>(JLvx4;)V
 
-    invoke-virtual {p1, v1}, Lw4e;->S(Lz4e;)V
+    return-object v0
 
-    return-void
-.end method
+    :pswitch_8
+    new-instance v0, Lone/me/polls/screens/create/PollCreateScreen;
 
-.method public final K(Lb5e;)V
-    .locals 1
+    iget-wide v1, p0, Lfc1;->b:J
 
-    const/4 v0, 0x0
+    invoke-direct {v0, v1, v2}, Lone/me/polls/screens/create/PollCreateScreen;-><init>(J)V
 
-    iput-object v0, p1, Lb5e;->G0:Lw4e;
+    return-object v0
 
-    invoke-super {p0, p1}, Ljf4;->K(Lb5e;)V
+    :pswitch_9
+    new-instance v0, Lone/me/login/neuroavatars/NeuroAvatarsScreen;
 
-    return-void
-.end method
+    iget-wide v1, p0, Lfc1;->b:J
 
-.method public final j()I
-    .locals 1
+    invoke-direct {v0, v1, v2}, Lone/me/login/neuroavatars/NeuroAvatarsScreen;-><init>(J)V
 
-    iget-object v0, p0, Lfc1;->x0:Ljava/util/List;
+    return-object v0
 
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    :pswitch_a
+    new-instance v0, Lone/me/folders/pickerfolders/FoldersPickerScreen;
 
-    move-result v0
+    iget-wide v1, p0, Lfc1;->b:J
 
-    return v0
-.end method
+    invoke-direct {v0, v1, v2}, Lone/me/folders/pickerfolders/FoldersPickerScreen;-><init>(J)V
 
-.method public final bridge synthetic z(Ltsd;)V
-    .locals 0
+    return-object v0
 
-    check-cast p1, Lb5e;
+    :pswitch_b
+    new-instance v0, Lone/me/folders/edit/FolderEditScreen;
 
-    invoke-virtual {p0, p1}, Lfc1;->K(Lb5e;)V
+    iget-wide v1, p0, Lfc1;->b:J
 
-    return-void
+    invoke-direct {v0, v1, v2}, Lone/me/folders/edit/FolderEditScreen;-><init>(J)V
+
+    return-object v0
+
+    :pswitch_c
+    new-instance v0, Lone/me/calllist/ui/callpresettings/CallPresettingsScreen;
+
+    iget-wide v1, p0, Lfc1;->b:J
+
+    invoke-direct {v0, v1, v2}, Lone/me/calllist/ui/callpresettings/CallPresettingsScreen;-><init>(J)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,91 +1,102 @@
 .class public final Lj0a;
-.super Ljava/lang/Object;
+.super Lpdg;
 .source "SourceFile"
 
 # interfaces
-.implements Ltv9;
+.implements Lys6;
 
 
 # instance fields
-.field public final synthetic a:Lone/me/messages/list/ui/MessagesListWidget;
+.field public final synthetic X:Lqc8;
+
+.field public final synthetic o:Lh2a;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/messages/list/ui/MessagesListWidget;)V
+.method public constructor <init>(Lh2a;Lqc8;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lj0a;->o:Lh2a;
 
-    iput-object p1, p0, Lj0a;->a:Lone/me/messages/list/ui/MessagesListWidget;
+    iput-object p2, p0, Lj0a;->X:Lqc8;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()V
-    .locals 5
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    sget-object v0, Lc5j;->a:Ledb;
+    check-cast p1, Lnd4;
 
-    if-nez v0, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    goto :goto_0
+    invoke-virtual {p0, p1, p2}, Lj0a;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    sget-object v1, Lkk8;->d:Lkk8;
+    move-result-object p1
 
-    invoke-virtual {v0, v1}, Ledb;->b(Lkk8;)Z
+    check-cast p1, Lj0a;
 
-    move-result v2
+    sget-object p2, Lmah;->a:Lmah;
 
-    if-eqz v2, :cond_1
+    invoke-virtual {p1, p2}, Lj0a;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string v2, "Player autoplay. Try start autoplay after recycler layout."
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance p1, Lj0a;
+
+    iget-object v0, p0, Lj0a;->o:Lh2a;
+
+    iget-object v1, p0, Lj0a;->X:Lqc8;
+
+    invoke-direct {p1, v0, v1, p2}, Lj0a;-><init>(Lh2a;Lqc8;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
+
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lj0a;->o:Lh2a;
+
+    iget-object v0, p1, Lh2a;->d:Lzl1;
+
+    iget-object v1, p0, Lj0a;->X:Lqc8;
+
+    move-object v2, v1
+
+    check-cast v2, Loc8;
+
+    iget-object v2, v2, Loc8;->a:Ljava/lang/String;
+
+    new-instance v5, Le0a;
+
+    const/4 v3, 0x1
+
+    invoke-direct {v5, p1, v1, v3}, Le0a;-><init>(Lh2a;Lqc8;I)V
+
+    move-object v1, v2
+
+    const/4 v2, 0x1
 
     const/4 v3, 0x0
 
-    const-string v4, "AutoPlayRegulator"
+    const/4 v4, 0x0
 
-    invoke-virtual {v0, v1, v4, v2, v3}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual/range {v0 .. v5}, Lzl1;->j(Ljava/lang/String;ZZZLis6;)V
 
-    :cond_1
-    :goto_0
-    iget-object v0, p0, Lj0a;->a:Lone/me/messages/list/ui/MessagesListWidget;
+    sget-object p1, Lmah;->a:Lmah;
 
-    sget-object v1, Lone/me/messages/list/ui/MessagesListWidget;->g1:[Lz28;
-
-    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->J0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lj0a;->a:Lone/me/messages/list/ui/MessagesListWidget;
-
-    new-instance v2, Lhs6;
-
-    const/16 v3, 0x12
-
-    invoke-direct {v2, v0, v3, v1}, Lhs6;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-static {v0, v2}, Lmnb;->a(Landroid/view/View;Ljava/lang/Runnable;)Lmnb;
-
-    iget-object v0, p0, Lj0a;->a:Lone/me/messages/list/ui/MessagesListWidget;
-
-    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->E0()Lone/me/messages/list/ui/recycler/MessagesLayoutManager;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->J:Lkfa;
-
-    invoke-virtual {v0, p0}, Lkfa;->h(Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final getTag()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "AutoPlayRegulator"
-
-    return-object v0
+    return-object p1
 .end method

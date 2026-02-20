@@ -39,7 +39,7 @@
         "Lkotlin/Function1;",
         "block",
         "use",
-        "(Ljava/util/jar/JarFile;Lnq6;)Ljava/lang/Object;",
+        "(Ljava/util/jar/JarFile;Lks6;)Ljava/lang/Object;",
         "Ljava/io/BufferedReader;",
         "r",
         "parseFile",
@@ -241,7 +241,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lpi3;->Z(Ljava/lang/Iterable;)Ljava/util/List;
+    invoke-static {p1}, Lek3;->Z(Ljava/lang/Iterable;)Ljava/util/List;
 
     move-result-object p1
 
@@ -269,7 +269,7 @@
 
     const/4 v2, 0x0
 
-    invoke-static {v0, v1, v2}, Lzzf;->t(Ljava/lang/String;Ljava/lang/String;Z)Z
+    invoke-static {v0, v1, v2}, Ll7g;->s(Ljava/lang/String;Ljava/lang/String;Z)Z
 
     move-result v1
 
@@ -277,7 +277,7 @@
 
     const-string p1, "jar:file:"
 
-    invoke-static {v0, p1, v0}, Lrzf;->X(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p1, v0}, Ld7g;->W(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -285,7 +285,7 @@
 
     const/4 v3, 0x6
 
-    invoke-static {p1, v1, v2, v3}, Lrzf;->E(Ljava/lang/CharSequence;CII)I
+    invoke-static {p1, v1, v2, v3}, Ld7g;->D(Ljava/lang/CharSequence;CII)I
 
     move-result v1
 
@@ -303,7 +303,7 @@
     :goto_0
     const-string v1, "!/"
 
-    invoke-static {v0, v1, v0}, Lrzf;->X(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v0}, Ld7g;->W(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -367,7 +367,7 @@
     move-exception v2
 
     :try_start_4
-    invoke-static {p1, v0}, Lyij;->b(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+    invoke-static {p1, v0}, Lerj;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
     throw v2
     :try_end_4
@@ -392,7 +392,7 @@
     :catchall_4
     move-exception v0
 
-    invoke-static {p1, v0}, Lapj;->a(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+    invoke-static {p1, v0}, Lnxj;->a(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
 
     throw p1
 
@@ -433,7 +433,7 @@
     :catchall_6
     move-exception v1
 
-    invoke-static {v0, p1}, Lyij;->b(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+    invoke-static {v0, p1}, Lerj;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
     throw v1
 .end method
@@ -463,7 +463,7 @@
 
     if-nez v1, :cond_1
 
-    invoke-static {v0}, Lpi3;->Z(Ljava/lang/Iterable;)Ljava/util/List;
+    invoke-static {v0}, Lek3;->Z(Ljava/lang/Iterable;)Ljava/util/List;
 
     move-result-object p1
 
@@ -472,11 +472,11 @@
     :cond_1
     const-string v2, "#"
 
-    invoke-static {v1, v2}, Lrzf;->Y(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v2}, Ld7g;->Y(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v1}, Lrzf;->d0(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-static {v1}, Ld7g;->d0(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object v1
 
@@ -544,7 +544,7 @@
     goto :goto_0
 .end method
 
-.method private final use(Ljava/util/jar/JarFile;Lnq6;)Ljava/lang/Object;
+.method private final use(Ljava/util/jar/JarFile;Lks6;)Ljava/lang/Object;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -552,13 +552,13 @@
             "Ljava/lang/Object;",
             ">(",
             "Ljava/util/jar/JarFile;",
-            "Lnq6;",
+            "Lks6;",
             ")TR;"
         }
     .end annotation
 
     :try_start_0
-    invoke-interface {p2, p1}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p2, p1}, Lks6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p2
     :try_end_0
@@ -589,7 +589,7 @@
     :catchall_2
     move-exception p1
 
-    invoke-static {p2, p1}, Lapj;->a(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+    invoke-static {p2, p1}, Lnxj;->a(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
 
     throw p2
 .end method
@@ -806,12 +806,12 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lvi3;->s(Ljava/util/Collection;Ljava/lang/Iterable;)V
+    invoke-static {v2, v1}, Lkk3;->q(Ljava/lang/Iterable;Ljava/util/AbstractCollection;)V
 
     goto :goto_0
 
     :cond_0
-    invoke-static {v1}, Lpi3;->d0(Ljava/lang/Iterable;)Ljava/util/Set;
+    invoke-static {v1}, Lek3;->d0(Ljava/lang/Iterable;)Ljava/util/Set;
 
     move-result-object v0
 
@@ -825,7 +825,7 @@
 
     const/16 v2, 0xa
 
-    invoke-static {v0, v2}, Lri3;->n(Ljava/lang/Iterable;I)I
+    invoke-static {v0, v2}, Lgk3;->n(Ljava/lang/Iterable;I)I
 
     move-result v2
 

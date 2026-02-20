@@ -1,232 +1,212 @@
-.class public final synthetic Ldn4;
-.super Ljava/lang/Object;
+.class public Ldn4;
+.super Ls00;
 .source "SourceFile"
-
-# interfaces
-.implements Lpe8;
-.implements Lqe8;
-.implements Lxq6;
-.implements Lxfc;
-.implements Lcr6;
-.implements Lzx3;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:Z
 
-.field public final synthetic b:I
+.field public Y:J
+
+.field public Z:Ljava/nio/ByteBuffer;
+
+.field public c:Lol6;
+
+.field public final d:Lag4;
+
+.field public o:Ljava/nio/ByteBuffer;
+
+.field public final s0:I
 
 
 # direct methods
-.method public synthetic constructor <init>(II)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    .line 1
-    iput p2, p0, Ldn4;->a:I
+    const-string v0, "media3.decoder"
 
-    iput p1, p0, Ldn4;->b:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {v0}, Lw69;->a(Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lhd;IJ)V
-    .locals 0
+.method public constructor <init>(I)V
+    .locals 2
 
-    .line 2
-    const/4 p1, 0x0
+    const/4 v0, 0x2
 
-    iput p1, p0, Ldn4;->a:I
+    invoke-direct {p0, v0}, Ls00;-><init>(I)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lag4;
 
-    iput p2, p0, Ldn4;->b:I
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lag4;-><init>(I)V
+
+    iput-object v0, p0, Ldn4;->d:Lag4;
+
+    iput p1, p0, Ldn4;->s0:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public accept(Ljava/lang/Object;)V
+.method public final A()V
     .locals 1
 
-    iget v0, p0, Ldn4;->a:I
+    iget-object v0, p0, Ldn4;->o:Ljava/nio/ByteBuffer;
 
-    packed-switch v0, :pswitch_data_0
+    if-eqz v0, :cond_0
 
-    iget v0, p0, Ldn4;->b:I
+    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
 
-    check-cast p1, Lxcc;
+    :cond_0
+    iget-object v0, p0, Ldn4;->Z:Ljava/nio/ByteBuffer;
 
-    invoke-virtual {p1, v0}, Lxcc;->g0(I)V
+    if-eqz v0, :cond_1
 
+    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
+
+    :cond_1
     return-void
-
-    :pswitch_0
-    iget v0, p0, Ldn4;->b:I
-
-    check-cast p1, Lxcc;
-
-    invoke-virtual {p1, v0}, Lxcc;->j0(I)V
-
-    return-void
-
-    :pswitch_1
-    iget v0, p0, Ldn4;->b:I
-
-    check-cast p1, Lxcc;
-
-    invoke-virtual {p1, v0}, Lxcc;->N(I)V
-
-    return-void
-
-    :pswitch_2
-    iget v0, p0, Ldn4;->b:I
-
-    check-cast p1, Lxcc;
-
-    invoke-virtual {p1, v0}, Lxcc;->r(I)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x7
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method
 
-.method public apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public x()V
+    .locals 2
 
-    iget v0, p0, Ldn4;->a:I
+    const/4 v0, 0x0
 
-    packed-switch v0, :pswitch_data_0
+    iput v0, p0, Ls00;->b:I
 
-    iget v0, p0, Ldn4;->b:I
+    iget-object v1, p0, Ldn4;->o:Ljava/nio/ByteBuffer;
 
-    check-cast p1, Ljava/util/List;
+    if-eqz v1, :cond_0
 
-    invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-virtual {v1}, Ljava/nio/ByteBuffer;->clear()Ljava/nio/Buffer;
+
+    :cond_0
+    iget-object v1, p0, Ldn4;->Z:Ljava/nio/ByteBuffer;
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v1}, Ljava/nio/ByteBuffer;->clear()Ljava/nio/Buffer;
+
+    :cond_1
+    iput-boolean v0, p0, Ldn4;->X:Z
+
+    return-void
+.end method
+
+.method public final y(I)Ljava/nio/ByteBuffer;
+    .locals 5
+
+    const/4 v0, 0x1
+
+    iget v1, p0, Ldn4;->s0:I
+
+    if-ne v1, v0, :cond_0
+
+    invoke-static {p1}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object p1
 
-    check-cast p1, Landroid/graphics/Bitmap;
+    return-object p1
 
-    if-nez p1, :cond_0
+    :cond_0
+    const/4 v0, 0x2
 
-    sget-object p1, Ljv8;->a:Ljv8;
+    if-ne v1, v0, :cond_1
+
+    invoke-static {p1}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_1
+    iget-object v0, p0, Ldn4;->o:Ljava/nio/ByteBuffer;
+
+    if-nez v0, :cond_2
+
+    const/4 v0, 0x0
 
     goto :goto_0
 
-    :cond_0
-    invoke-static {p1}, Lev8;->d(Ljava/lang/Object;)Lpv8;
+    :cond_2
+    invoke-virtual {v0}, Ljava/nio/Buffer;->capacity()I
 
-    move-result-object p1
+    move-result v0
 
     :goto_0
-    return-object p1
+    new-instance v1, Landroidx/media3/decoder/DecoderInputBuffer$InsufficientCapacityException;
 
-    :pswitch_0
-    check-cast p1, Ljava/lang/Integer;
+    const-string v2, " < "
 
-    iget p1, p0, Ldn4;->b:I
+    const-string v3, ")"
 
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    const-string v4, "Buffer too small ("
 
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_data_0
-    .packed-switch 0x4
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public invoke(Ljava/lang/Object;)V
-    .locals 2
-
-    iget v0, p0, Ldn4;->a:I
-
-    iget v1, p0, Ldn4;->b:I
-
-    packed-switch v0, :pswitch_data_0
-
-    check-cast p1, Lobc;
-
-    invoke-interface {p1, v1}, Lobc;->onRepeatModeChanged(I)V
-
-    return-void
-
-    :pswitch_0
-    check-cast p1, Lobc;
-
-    invoke-interface {p1, v1}, Lobc;->K(I)V
-
-    return-void
-
-    :pswitch_1
-    check-cast p1, Lnbc;
-
-    invoke-interface {p1, v1}, Lnbc;->onRepeatModeChanged(I)V
-
-    return-void
-
-    :pswitch_2
-    check-cast p1, Lep5;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    const-string v0, "onDroppedVideoFrames: "
-
-    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v4, v0, v2, p1, v3}, Lau1;->h(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    const-string v0, "ep5"
+    invoke-direct {v1, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v0, p1}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    throw v1
 .end method
 
-.method public test(Ljava/lang/Object;)Z
-    .locals 1
+.method public final z(I)V
+    .locals 3
 
-    check-cast p1, Ljava/util/List;
+    iget-object v0, p0, Ldn4;->o:Ljava/nio/ByteBuffer;
 
-    invoke-interface {p1}, Ljava/util/List;->size()I
+    if-nez v0, :cond_0
 
-    move-result p1
+    invoke-virtual {p0, p1}, Ldn4;->y(I)Ljava/nio/ByteBuffer;
 
-    iget v0, p0, Ldn4;->b:I
+    move-result-object p1
 
-    if-ge v0, p1, :cond_0
+    iput-object p1, p0, Ldn4;->o:Ljava/nio/ByteBuffer;
 
-    const/4 p1, 0x1
-
-    return p1
+    return-void
 
     :cond_0
-    const/4 p1, 0x0
+    invoke-virtual {v0}, Ljava/nio/Buffer;->capacity()I
 
-    return p1
+    move-result v1
+
+    invoke-virtual {v0}, Ljava/nio/Buffer;->position()I
+
+    move-result v2
+
+    add-int/2addr p1, v2
+
+    if-lt v1, p1, :cond_1
+
+    iput-object v0, p0, Ldn4;->o:Ljava/nio/ByteBuffer;
+
+    return-void
+
+    :cond_1
+    invoke-virtual {p0, p1}, Ldn4;->y(I)Ljava/nio/ByteBuffer;
+
+    move-result-object p1
+
+    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->order()Ljava/nio/ByteOrder;
+
+    move-result-object v1
+
+    invoke-virtual {p1, v1}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
+
+    if-lez v2, :cond_2
+
+    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
+
+    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->put(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
+
+    :cond_2
+    iput-object p1, p0, Ldn4;->o:Ljava/nio/ByteBuffer;
+
+    return-void
 .end method

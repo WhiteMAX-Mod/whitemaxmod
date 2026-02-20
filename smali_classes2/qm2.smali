@@ -1,64 +1,58 @@
-.class public final synthetic Lqm2;
+.class public final Lqm2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/function/UnaryOperator;
+.implements Lu61;
 
 
 # instance fields
-.field public final synthetic a:Ljm9;
-
-.field public final synthetic b:Lr10;
-
-.field public final synthetic c:Li20;
-
-.field public final synthetic d:Ln45;
+.field public final a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljm9;Lr10;Li20;Ln45;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lqm2;->a:Ljm9;
+    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    iput-object p2, p0, Lqm2;->b:Lr10;
+    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
 
-    iput-object p3, p0, Lqm2;->c:Li20;
-
-    iput-object p4, p0, Lqm2;->d:Ln45;
+    iput-object v0, p0, Lqm2;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
+.method public final onNewMessage(Lin7;)V
+    .locals 2
 
-    check-cast p1, Lrm2;
+    iget-object v0, p0, Lqm2;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    new-instance v0, Lrm2;
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
 
-    iget-object p1, p0, Lqm2;->a:Ljm9;
+    move-result-object v0
 
-    iget-wide v1, p1, Lhk0;->a:J
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    iget-object p1, p0, Lqm2;->b:Lr10;
+    move-result v1
 
-    iget-wide v3, p1, Lr10;->a:J
+    if-eqz v1, :cond_0
 
-    iget-object p1, p0, Lqm2;->c:Li20;
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    iget-object v5, p1, Li20;->r:Ljava/lang/String;
+    move-result-object v1
 
-    const/4 v7, 0x0
+    check-cast v1, Lu61;
 
-    iget-object v6, p0, Lqm2;->d:Ln45;
+    invoke-interface {v1, p1}, Lu61;->onNewMessage(Lin7;)V
 
-    invoke-direct/range {v0 .. v7}, Lrm2;-><init>(JJLjava/lang/String;Ln45;Z)V
+    goto :goto_0
 
-    return-object v0
+    :cond_0
+    return-void
 .end method

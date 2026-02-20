@@ -1,50 +1,24 @@
 .class public final Lh96;
-.super Lo84;
-
-
-# instance fields
-.field public X:I
-
-.field public final synthetic Y:Li96;
-
-.field public d:Li96;
-
-.field public synthetic o:Ljava/lang/Object;
-
-
-# direct methods
-.method public constructor <init>(Li96;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lh96;->Y:Li96;
-
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+.super Lkotlinx/coroutines/internal/ScopeCoroutine;
+.source "SourceFile"
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final childCancelled(Ljava/lang/Throwable;)Z
     .locals 1
 
-    iput-object p1, p0, Lh96;->o:Ljava/lang/Object;
+    instance-of v0, p1, Lkotlinx/coroutines/flow/internal/ChildCancelledException;
 
-    iget p1, p0, Lh96;->X:I
+    if-eqz v0, :cond_0
 
-    const/high16 v0, -0x80000000
+    const/4 p1, 0x1
 
-    or-int/2addr p1, v0
+    return p1
 
-    iput p1, p0, Lh96;->X:I
+    :cond_0
+    invoke-virtual {p0, p1}, Lyz7;->cancelImpl$kotlinx_coroutines_core(Ljava/lang/Object;)Z
 
-    iget-object p1, p0, Lh96;->Y:Li96;
+    move-result p1
 
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Li96;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return p1
 .end method

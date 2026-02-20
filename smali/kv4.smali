@@ -3,22 +3,18 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lnhh;
+.implements Lbw4;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ljava/lang/Object;
+.field public final synthetic a:Luv4;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method public synthetic constructor <init>(Luv4;)V
     .locals 0
 
-    iput p1, p0, Lkv4;->a:I
-
-    iput-object p2, p0, Lkv4;->b:Ljava/lang/Object;
+    iput-object p1, p0, Lkv4;->a:Luv4;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,70 +23,44 @@
 
 
 # virtual methods
-.method public final run()V
-    .locals 1
+.method public e(ILpyg;[I)Lf0e;
+    .locals 8
 
-    iget v0, p0, Lkv4;->a:I
+    invoke-static {}, Lal7;->i()Lyk7;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object v0
 
-    iget-object v0, p0, Lkv4;->b:Ljava/lang/Object;
+    const/4 v1, 0x0
 
-    check-cast v0, Le3;
+    move v5, v1
 
-    invoke-virtual {v0}, Le3;->f()V
+    :goto_0
+    iget v1, p2, Lpyg;->a:I
 
-    return-void
+    if-ge v5, v1, :cond_0
 
-    :pswitch_0
-    iget-object v0, p0, Lkv4;->b:Ljava/lang/Object;
+    new-instance v2, Lpv4;
 
-    check-cast v0, Lfsg;
+    aget v7, p3, v5
 
-    invoke-virtual {v0}, Lfsg;->o()V
+    iget-object v6, p0, Lkv4;->a:Luv4;
 
-    return-void
+    move v3, p1
 
-    :pswitch_1
-    iget-object v0, p0, Lkv4;->b:Ljava/lang/Object;
+    move-object v4, p2
 
-    check-cast v0, Lmfg;
+    invoke-direct/range {v2 .. v7}, Lpv4;-><init>(ILpyg;ILuv4;I)V
 
-    iget-object v0, v0, Lmfg;->d:Lfsg;
+    invoke-virtual {v0, v2}, Lrk7;->a(Ljava/lang/Object;)V
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    add-int/lit8 v5, v5, 0x1
 
-    invoke-virtual {v0}, Lfsg;->Y()V
+    goto :goto_0
 
-    invoke-static {}, Lzk4;->a()V
+    :cond_0
+    invoke-virtual {v0}, Lyk7;->h()Lf0e;
 
-    return-void
+    move-result-object p1
 
-    :pswitch_2
-    iget-object v0, p0, Lkv4;->b:Ljava/lang/Object;
-
-    check-cast v0, Lv36;
-
-    invoke-virtual {v0}, Lv36;->flush()V
-
-    return-void
-
-    :pswitch_3
-    iget-object v0, p0, Lkv4;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/concurrent/CountDownLatch;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

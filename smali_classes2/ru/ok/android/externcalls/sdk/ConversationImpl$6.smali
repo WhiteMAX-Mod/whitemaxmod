@@ -22,7 +22,7 @@
 .method static constructor <clinit>()V
     .locals 11
 
-    invoke-static {}, Lt91;->values()[Lt91;
+    invoke-static {}, Lga1;->values()[Lga1;
 
     move-result-object v0
 

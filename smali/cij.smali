@@ -1,60 +1,84 @@
-.class public final Lcij;
+.class public abstract Lcij;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lvwa;
-
 
 # static fields
-.field public static final a:Lcij;
+.field public static a:Ljava/lang/Boolean;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public static final a(III)I
+    .locals 2
 
-    new-instance v0, Lcij;
+    rem-int/lit8 v0, p0, 0x10
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    sub-int/2addr p0, v0
 
-    sput-object v0, Lcij;->a:Lcij;
+    div-int v0, p0, p1
 
-    new-instance v0, Lvzi;
+    const/16 v1, 0x9
 
-    const/4 v1, 0x1
+    if-ne v0, v1, :cond_0
 
-    invoke-direct {v0, v1}, Lvzi;-><init>(I)V
+    return p0
 
-    const-class v1, Ln0j;
+    :cond_0
+    mul-int/2addr p1, v1
 
-    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
+    rem-int/lit8 p0, p1, 0x10
 
-    move-result-object v0
+    if-nez p0, :cond_1
 
-    const/4 v2, 0x2
+    return p1
 
-    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
+    :cond_1
+    sub-int/2addr p1, p0
 
-    move-result-object v0
+    sub-int/2addr v1, v0
 
-    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
+    sub-int/2addr p2, p1
 
-    move-result-object v0
+    if-lez v1, :cond_3
 
-    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
+    if-gtz p2, :cond_2
 
-    return-void
+    goto :goto_0
+
+    :cond_2
+    div-int/lit8 p2, p2, 0x10
+
+    invoke-static {v1, p2}, Ljava/lang/Math;->min(II)I
+
+    move-result p0
+
+    mul-int/lit8 p0, p0, 0x10
+
+    add-int/2addr p0, p1
+
+    return p0
+
+    :cond_3
+    :goto_0
+    return p1
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+.method public b()V
     .locals 0
 
-    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    return-void
+.end method
 
-    move-result-object p1
+.method public c()V
+    .locals 0
 
-    throw p1
+    return-void
+.end method
+
+.method public d(Lkq0;)V
+    .locals 0
+
+    return-void
 .end method

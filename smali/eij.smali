@@ -1,80 +1,37 @@
 .class public final Leij;
-.super Ljava/lang/Object;
+.super Lzfj;
 .source "SourceFile"
 
-# interfaces
-.implements Lvwa;
 
-
-# static fields
-.field public static final a:Leij;
+# instance fields
+.field public final e:[B
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>([B)V
+    .locals 2
 
-    new-instance v0, Leij;
+    const/4 v0, 0x0
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/16 v1, 0x19
 
-    sput-object v0, Leij;->a:Leij;
-
-    new-instance v0, Lvzi;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lvzi;-><init>(I)V
-
-    const-class v1, Ln0j;
-
-    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
+    invoke-static {p1, v0, v1}, Ljava/util/Arrays;->copyOfRange([BII)[B
 
     move-result-object v0
 
-    const/4 v2, 0x2
+    invoke-direct {p0, v0}, Lzfj;-><init>([B)V
 
-    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x4
-
-    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
+    iput-object p1, p0, Leij;->e:[B
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final X()[B
+    .locals 1
 
-    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    iget-object v0, p0, Leij;->e:[B
 
-    move-result-object p1
-
-    throw p1
+    return-object v0
 .end method

@@ -1,102 +1,51 @@
 .class public final Lvpd;
-.super Lp6g;
+.super Lda4;
 .source "SourceFile"
-
-# interfaces
-.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:Lfyh;
+.field public final synthetic X:Lxpd;
 
-.field public final synthetic Y:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+.field public Y:I
+
+.field public d:Lffa;
 
 .field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lfyh;Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;)V
+.method public constructor <init>(Lxpd;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p2, p0, Lvpd;->X:Lfyh;
+    iput-object p1, p0, Lvpd;->X:Lxpd;
 
-    iput-object p3, p0, Lvpd;->Y:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
-
-    const/4 p2, 0x2
-
-    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lvpd;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lvpd;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lvpd;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
-
-    new-instance v0, Lvpd;
-
-    iget-object v1, p0, Lvpd;->X:Lfyh;
-
-    iget-object v2, p0, Lvpd;->Y:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
-
-    invoke-direct {v0, p2, v1, v2}, Lvpd;-><init>(Lkotlin/coroutines/Continuation;Lfyh;Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;)V
-
-    iput-object p1, v0, Lvpd;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    .locals 1
 
-    iget-object v0, p0, Lvpd;->o:Ljava/lang/Object;
+    iput-object p1, p0, Lvpd;->o:Ljava/lang/Object;
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    iget p1, p0, Lvpd;->Y:I
 
-    check-cast v0, Lge8;
+    const/high16 v0, -0x80000000
 
-    sget-object p1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->i1:[Lz28;
+    or-int/2addr p1, v0
 
-    iget-object p1, p0, Lvpd;->Y:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+    iput p1, p0, Lvpd;->Y:I
 
-    invoke-virtual {p1}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->T0()Lfpd;
+    iget-object p1, p0, Lvpd;->X:Lxpd;
 
-    move-result-object p1
+    const/4 v0, 0x0
 
-    iget-object p1, p1, Lfpd;->E0:Lpld;
-
-    iget-object p1, p1, Lpld;->a:Llpf;
-
-    invoke-interface {p1}, Llpf;->getValue()Ljava/lang/Object;
+    invoke-static {p1, v0, p0}, Lxpd;->a(Lxpd;Lffa;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
-
-    check-cast p1, Ljava/lang/Long;
-
-    iget-object v1, p0, Lvpd;->X:Lfyh;
-
-    invoke-virtual {v1, p1, v0}, Lfyh;->d(Ljava/lang/Long;Lge8;)V
-
-    sget-object p1, Lb3h;->a:Lb3h;
 
     return-object p1
 .end method

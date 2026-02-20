@@ -12,10 +12,10 @@
         "Lru/ok/android/externcalls/sdk/stat/finish/CallFinishStat;",
         "Lru/ok/android/externcalls/sdk/stat/internal/SingleShotStat;",
         "Lkotlin/Function0;",
-        "Lia1;",
+        "Lva1;",
         "getEventualStatSender",
         "<init>",
-        "(Llq6;)V",
+        "(Lis6;)V",
         "callEventualStatSender",
         "Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason;",
         "reason",
@@ -26,9 +26,9 @@
         "errorText",
         "",
         "isCaller",
-        "Lb3h;",
+        "Lmah;",
         "report",
-        "(Lia1;Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason;Ljava/util/List;Ljava/lang/String;Z)V",
+        "(Lva1;Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason;Ljava/util/List;Ljava/lang/String;Z)V",
         "onCallFinished",
         "(Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason;Ljava/util/List;Ljava/lang/String;Z)V",
         "calls-sdk_release"
@@ -44,25 +44,25 @@
 
 
 # direct methods
-.method public constructor <init>(Llq6;)V
+.method public constructor <init>(Lis6;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Llq6;",
+            "Lis6;",
             ")V"
         }
     .end annotation
 
-    invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/stat/internal/SingleShotStat;-><init>(Llq6;)V
+    invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/stat/internal/SingleShotStat;-><init>(Lis6;)V
 
     return-void
 .end method
 
-.method public static final synthetic access$report(Lru/ok/android/externcalls/sdk/stat/finish/CallFinishStat;Lia1;Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason;Ljava/util/List;Ljava/lang/String;Z)V
+.method public static final synthetic access$report(Lru/ok/android/externcalls/sdk/stat/finish/CallFinishStat;Lva1;Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason;Ljava/util/List;Ljava/lang/String;Z)V
     .locals 0
 
-    invoke-direct/range {p0 .. p5}, Lru/ok/android/externcalls/sdk/stat/finish/CallFinishStat;->report(Lia1;Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason;Ljava/util/List;Ljava/lang/String;Z)V
+    invoke-direct/range {p0 .. p5}, Lru/ok/android/externcalls/sdk/stat/finish/CallFinishStat;->report(Lva1;Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason;Ljava/util/List;Ljava/lang/String;Z)V
 
     return-void
 .end method
@@ -82,12 +82,12 @@
     return-void
 .end method
 
-.method private final report(Lia1;Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason;Ljava/util/List;Ljava/lang/String;Z)V
+.method private final report(Lva1;Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason;Ljava/util/List;Ljava/lang/String;Z)V
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lia1;",
+            "Lva1;",
             "Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason;",
             "Ljava/util/List<",
             "Lru/ok/android/externcalls/sdk/rate/RateHint;",
@@ -131,7 +131,7 @@
 
     const/16 v0, 0xa
 
-    invoke-static {p3, v0}, Lri3;->n(Ljava/lang/Iterable;I)I
+    invoke-static {p3, v0}, Lgk3;->n(Ljava/lang/Iterable;I)I
 
     move-result v0
 
@@ -163,7 +163,7 @@
     goto :goto_0
 
     :cond_2
-    invoke-static {p2}, Lpi3;->T(Ljava/lang/Iterable;)Ljava/util/List;
+    invoke-static {p2}, Lek3;->T(Ljava/lang/Iterable;)Ljava/util/List;
 
     move-result-object v1
 
@@ -177,7 +177,7 @@
 
     const/4 v4, 0x0
 
-    invoke-static/range {v1 .. v6}, Lpi3;->K(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lnq6;I)Ljava/lang/String;
+    invoke-static/range {v1 .. v6}, Lek3;->K(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lks6;I)Ljava/lang/String;
 
     move-result-object p2
 
@@ -185,16 +185,16 @@
 
     invoke-virtual {p5, p3, p2}, Lru/ok/android/externcalls/analytics/events/EventItemsMap;->set(Ljava/lang/String;Ljava/lang/String;)Lru/ok/android/externcalls/analytics/events/EventItemsMap;
 
-    check-cast p1, Lja1;
+    check-cast p1, Lwa1;
 
     const-string p2, "call_finish"
 
-    invoke-virtual {p1, p2, p4, p5}, Lja1;->c(Ljava/lang/String;Lru/ok/android/externcalls/analytics/events/EventItemValue;Lru/ok/android/externcalls/analytics/events/EventItemsMap;)V
+    invoke-virtual {p1, p2, p4, p5}, Lwa1;->c(Ljava/lang/String;Lru/ok/android/externcalls/analytics/events/EventItemValue;Lru/ok/android/externcalls/analytics/events/EventItemsMap;)V
 
     return-void
 .end method
 
-.method public static synthetic report$default(Lru/ok/android/externcalls/sdk/stat/finish/CallFinishStat;Lia1;Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason;Ljava/util/List;Ljava/lang/String;ZILjava/lang/Object;)V
+.method public static synthetic report$default(Lru/ok/android/externcalls/sdk/stat/finish/CallFinishStat;Lva1;Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason;Ljava/util/List;Ljava/lang/String;ZILjava/lang/Object;)V
     .locals 6
 
     and-int/lit8 p6, p6, 0x8
@@ -216,7 +216,7 @@
 
     move v5, p5
 
-    invoke-direct/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/stat/finish/CallFinishStat;->report(Lia1;Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason;Ljava/util/List;Ljava/lang/String;Z)V
+    invoke-direct/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/stat/finish/CallFinishStat;->report(Lva1;Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason;Ljava/util/List;Ljava/lang/String;Z)V
 
     return-void
 .end method
@@ -251,7 +251,7 @@
 
     invoke-direct/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/stat/finish/CallFinishStat$onCallFinished$1;-><init>(Lru/ok/android/externcalls/sdk/stat/finish/CallFinishStat;Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason;Ljava/util/List;Ljava/lang/String;Z)V
 
-    invoke-virtual {p0, v0}, Lru/ok/android/externcalls/sdk/stat/internal/SingleShotStat;->reportOnce(Lnq6;)V
+    invoke-virtual {p0, v0}, Lru/ok/android/externcalls/sdk/stat/internal/SingleShotStat;->reportOnce(Lks6;)V
 
     return-void
 .end method

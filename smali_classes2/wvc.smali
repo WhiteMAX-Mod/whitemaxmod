@@ -1,19 +1,21 @@
 .class public final Lwvc;
-.super Lzvc;
+.super Ldg0;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/util/List;
+.field public final b:Lepg;
 
 
 # direct methods
-.method public constructor <init>(Lqd8;)V
-    .locals 0
+.method public constructor <init>(Lepg;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/16 v0, 0x11
 
-    iput-object p1, p0, Lwvc;->a:Ljava/util/List;
+    invoke-direct {p0, v0}, Ldg0;-><init>(I)V
+
+    iput-object p1, p0, Lwvc;->b:Lepg;
 
     return-void
 .end method
@@ -21,48 +23,50 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x1
+    .locals 1
 
     if-ne p0, p1, :cond_0
 
-    return v0
+    goto :goto_1
 
     :cond_0
-    instance-of v1, p1, Lwvc;
+    instance-of v0, p1, Lwvc;
 
-    const/4 v2, 0x0
+    if-nez v0, :cond_1
 
-    if-nez v1, :cond_1
-
-    return v2
+    goto :goto_0
 
     :cond_1
     check-cast p1, Lwvc;
 
-    iget-object v1, p0, Lwvc;->a:Ljava/util/List;
+    iget-object v0, p0, Lwvc;->b:Lepg;
 
-    iget-object p1, p1, Lwvc;->a:Ljava/util/List;
+    iget-object p1, p1, Lwvc;->b:Lepg;
 
-    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Lepg;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-nez p1, :cond_2
 
-    return v2
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
 
     :cond_2
-    return v0
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
 .method public final hashCode()I
     .locals 1
 
-    iget-object v0, p0, Lwvc;->a:Ljava/util/List;
+    iget-object v0, p0, Lwvc;->b:Lepg;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v0}, Lepg;->hashCode()I
 
     move-result v0
 
@@ -74,11 +78,11 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "ShowPhoneActionsMenu(actions="
+    const-string v1, "ShareLink(link="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lwvc;->a:Ljava/util/List;
+    iget-object v1, p0, Lwvc;->b:Lepg;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

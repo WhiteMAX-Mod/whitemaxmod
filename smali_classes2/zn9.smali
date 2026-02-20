@@ -1,35 +1,204 @@
-.class public abstract synthetic Lzn9;
+.class public final Lzn9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lxe8;
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljava/lang/Object;
+
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    .locals 0
 
-    const/4 v0, 0x1
+    iput p2, p0, Lzn9;->a:I
 
-    invoke-static {v0}, Lt02;->w(I)[I
+    iput-object p1, p0, Lzn9;->b:Ljava/lang/Object;
 
-    move-result-object v1
+    iput-object p3, p0, Lzn9;->c:Ljava/lang/Object;
 
-    array-length v1, v1
-
-    new-array v1, v1, [I
-
-    const/4 v2, 0x0
-
-    :try_start_0
-    aput v0, v1, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    sput-object v1, Lzn9;->$EnumSwitchMapping$0:[I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final a(Lzo9;)V
+    .locals 4
+
+    iget v0, p0, Lzn9;->a:I
+
+    iget-object v1, p0, Lzn9;->c:Ljava/lang/Object;
+
+    iget-object v2, p0, Lzn9;->b:Ljava/lang/Object;
+
+    packed-switch v0, :pswitch_data_0
+
+    check-cast v2, Lone/me/messages/list/ui/MessagesListWidget;
+
+    sget-object v0, Lone/me/messages/list/ui/MessagesListWidget;->g1:[Lv58;
+
+    invoke-virtual {v2}, Lone/me/messages/list/ui/MessagesListWidget;->U0()Lh2a;
+
+    move-result-object v0
+
+    const-wide/16 v1, 0x0
+
+    invoke-virtual {v0, p1, v1, v2}, Lh2a;->F(Lzo9;J)V
+
+    return-void
+
+    :pswitch_0
+    check-cast v2, Lny9;
+
+    iget-object v0, v2, Lny9;->o:Lv2a;
+
+    check-cast v1, Lone/me/messages/list/loader/MessageModel;
+
+    iget-wide v1, v1, Lone/me/messages/list/loader/MessageModel;->a:J
+
+    iget-object v0, v0, Lv2a;->a:Lone/me/messages/list/ui/MessagesListWidget;
+
+    sget-object v3, Lone/me/messages/list/ui/MessagesListWidget;->g1:[Lv58;
+
+    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->U0()Lh2a;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1, v1, v2}, Lh2a;->F(Lzo9;J)V
+
+    return-void
+
+    :pswitch_1
+    check-cast v2, Lv2a;
+
+    check-cast v1, Lao9;
+
+    iget-wide v0, v1, Lao9;->J0:J
+
+    iget-object v2, v2, Lv2a;->a:Lone/me/messages/list/ui/MessagesListWidget;
+
+    sget-object v3, Lone/me/messages/list/ui/MessagesListWidget;->g1:[Lv58;
+
+    invoke-virtual {v2}, Lone/me/messages/list/ui/MessagesListWidget;->U0()Lh2a;
+
+    move-result-object v2
+
+    invoke-virtual {v2, p1, v0, v1}, Lh2a;->F(Lzo9;J)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final c(Ljava/lang/String;Lcf8;Landroid/text/style/ClickableSpan;)V
+    .locals 12
+
+    iget p3, p0, Lzn9;->a:I
+
+    packed-switch p3, :pswitch_data_0
+
+    iget-object p3, p0, Lzn9;->b:Ljava/lang/Object;
+
+    move-object v0, p3
+
+    check-cast v0, Lone/me/messages/list/ui/MessagesListWidget;
+
+    iget-object p3, p0, Lzn9;->c:Ljava/lang/Object;
+
+    check-cast p3, Ldj5;
+
+    iget-object v4, p3, Ldj5;->h:Lz04;
+
+    const/4 v5, 0x4
+
+    const/4 v3, 0x0
+
+    move-object v1, p1
+
+    move-object v2, p2
+
+    invoke-static/range {v0 .. v5}, Lone/me/messages/list/ui/MessagesListWidget;->V0(Lone/me/messages/list/ui/MessagesListWidget;Ljava/lang/String;Lcf8;Ljava/lang/Long;Lz04;I)V
+
+    return-void
+
+    :pswitch_0
+    move-object v7, p1
+
+    move-object v8, p2
+
+    iget-object p1, p0, Lzn9;->b:Ljava/lang/Object;
+
+    check-cast p1, Lny9;
+
+    iget-object p1, p1, Lny9;->o:Lv2a;
+
+    iget-object p2, p0, Lzn9;->c:Ljava/lang/Object;
+
+    check-cast p2, Lone/me/messages/list/loader/MessageModel;
+
+    iget-wide p2, p2, Lone/me/messages/list/loader/MessageModel;->a:J
+
+    iget-object v6, p1, Lv2a;->a:Lone/me/messages/list/ui/MessagesListWidget;
+
+    invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v9
+
+    const/4 v10, 0x0
+
+    const/16 v11, 0x8
+
+    invoke-static/range {v6 .. v11}, Lone/me/messages/list/ui/MessagesListWidget;->V0(Lone/me/messages/list/ui/MessagesListWidget;Ljava/lang/String;Lcf8;Ljava/lang/Long;Lz04;I)V
+
+    return-void
+
+    :pswitch_1
+    move-object v7, p1
+
+    move-object v8, p2
+
+    iget-object p1, p0, Lzn9;->b:Ljava/lang/Object;
+
+    check-cast p1, Lv2a;
+
+    iget-object p2, p0, Lzn9;->c:Ljava/lang/Object;
+
+    check-cast p2, Lao9;
+
+    iget-wide p2, p2, Lao9;->J0:J
+
+    iget-object v6, p1, Lv2a;->a:Lone/me/messages/list/ui/MessagesListWidget;
+
+    invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v9
+
+    const/4 v10, 0x0
+
+    const/16 v11, 0x8
+
+    invoke-static/range {v6 .. v11}, Lone/me/messages/list/ui/MessagesListWidget;->V0(Lone/me/messages/list/ui/MessagesListWidget;Ljava/lang/String;Lcf8;Ljava/lang/Long;Lz04;I)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

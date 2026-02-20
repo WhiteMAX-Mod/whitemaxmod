@@ -4,164 +4,126 @@
 
 
 # instance fields
-.field public final a:Lo58;
+.field public final a:Lj88;
 
-.field public final b:Ljava/lang/Object;
-
-.field public final c:Ljava/lang/Object;
-
-.field public final d:Ljava/lang/Object;
-
-.field public final e:Ljava/lang/Object;
-
-.field public final f:Ljava/lang/Object;
-
-.field public final g:Ljava/lang/Object;
-
-.field public final h:Ljava/lang/Object;
-
-.field public final i:Ljava/lang/Object;
-
-.field public final j:Ljava/lang/Object;
-
-.field public final k:Ljava/lang/Object;
+.field public final b:Ljava/util/concurrent/ConcurrentHashMap;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 3
+.method public constructor <init>(Lbjg;Lhih;Lj88;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v0, Lslc;->a:Lslc;
+    iput-object p3, p0, Lulc;->a:Lj88;
 
-    invoke-virtual {v0}, Lslc;->f()Lo58;
+    new-instance p3, Ljava/util/concurrent/ConcurrentHashMap;
 
-    move-result-object v0
+    invoke-direct {p3}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
-    iput-object v0, p0, Lulc;->a:Lo58;
+    iput-object p3, p0, Lulc;->b:Ljava/util/concurrent/ConcurrentHashMap;
 
-    new-instance v0, Lr4c;
+    check-cast p1, Lcbb;
 
-    const/16 v1, 0xf
+    invoke-virtual {p1}, Lcbb;->a()Lgd4;
 
-    invoke-direct {v0, v1}, Lr4c;-><init>(I)V
+    move-result-object p1
 
-    const/4 v1, 0x3
+    new-instance p3, Lslc;
 
-    invoke-static {v1, v0}, Le8;->b(ILlq6;)Lo58;
+    const/4 v0, 0x0
 
-    move-result-object v0
+    invoke-direct {p3, p0, v0}, Lslc;-><init>(Lulc;Lkotlin/coroutines/Continuation;)V
 
-    iput-object v0, p0, Lulc;->b:Ljava/lang/Object;
+    const/4 v1, 0x2
 
-    new-instance v0, Lr4c;
-
-    const/16 v2, 0x10
-
-    invoke-direct {v0, v2}, Lr4c;-><init>(I)V
-
-    invoke-static {v1, v0}, Le8;->b(ILlq6;)Lo58;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lulc;->c:Ljava/lang/Object;
-
-    new-instance v0, Lr4c;
-
-    const/16 v2, 0x11
-
-    invoke-direct {v0, v2}, Lr4c;-><init>(I)V
-
-    invoke-static {v1, v0}, Le8;->b(ILlq6;)Lo58;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lulc;->d:Ljava/lang/Object;
-
-    new-instance v0, Lr4c;
-
-    const/16 v2, 0x12
-
-    invoke-direct {v0, v2}, Lr4c;-><init>(I)V
-
-    invoke-static {v1, v0}, Le8;->b(ILlq6;)Lo58;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lulc;->e:Ljava/lang/Object;
-
-    new-instance v0, Lr4c;
-
-    const/16 v2, 0x13
-
-    invoke-direct {v0, v2}, Lr4c;-><init>(I)V
-
-    invoke-static {v1, v0}, Le8;->b(ILlq6;)Lo58;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lulc;->f:Ljava/lang/Object;
-
-    new-instance v0, Lr4c;
-
-    const/16 v2, 0x14
-
-    invoke-direct {v0, v2}, Lr4c;-><init>(I)V
-
-    invoke-static {v1, v0}, Le8;->b(ILlq6;)Lo58;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lulc;->g:Ljava/lang/Object;
-
-    new-instance v0, Lr4c;
-
-    const/16 v2, 0x15
-
-    invoke-direct {v0, v2}, Lr4c;-><init>(I)V
-
-    invoke-static {v1, v0}, Le8;->b(ILlq6;)Lo58;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lulc;->h:Ljava/lang/Object;
-
-    new-instance v0, Lr4c;
-
-    const/16 v2, 0x16
-
-    invoke-direct {v0, v2}, Lr4c;-><init>(I)V
-
-    invoke-static {v1, v0}, Le8;->b(ILlq6;)Lo58;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lulc;->i:Ljava/lang/Object;
-
-    new-instance v0, Lr4c;
-
-    const/16 v2, 0x17
-
-    invoke-direct {v0, v2}, Lr4c;-><init>(I)V
-
-    invoke-static {v1, v0}, Le8;->b(ILlq6;)Lo58;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lulc;->j:Ljava/lang/Object;
-
-    new-instance v0, Lr4c;
-
-    const/16 v2, 0x18
-
-    invoke-direct {v0, v2}, Lr4c;-><init>(I)V
-
-    invoke-static {v1, v0}, Le8;->b(ILlq6;)Lo58;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lulc;->k:Ljava/lang/Object;
+    invoke-static {p2, p1, v0, p3, v1}, Lea9;->d(Lnd4;Led4;Lqd4;Lys6;I)Lcuf;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final a(J)Lqlc;
+    .locals 1
+
+    iget-object v0, p0, Lulc;->b:Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lgia;
+
+    if-eqz p1, :cond_1
+
+    invoke-interface {p1}, Lgia;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lqlc;
+
+    if-nez p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    return-object p1
+
+    :cond_1
+    :goto_0
+    sget-object p1, Lqlc;->c:Lqlc;
+
+    return-object p1
+.end method
+
+.method public final b(J)Z
+    .locals 1
+
+    iget-object v0, p0, Lulc;->b:Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lgia;
+
+    if-eqz p1, :cond_0
+
+    invoke-interface {p1}, Lgia;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lqlc;
+
+    if-eqz p1, :cond_0
+
+    iget-object p1, p1, Lqlc;->b:Lzlc;
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    sget-object p2, Lzlc;->c:Lzlc;
+
+    if-ne p1, p2, :cond_1
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_1
+    const/4 p1, 0x0
+
+    return p1
 .end method

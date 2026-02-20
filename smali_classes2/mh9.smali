@@ -1,49 +1,61 @@
 .class public final Lmh9;
-.super Lo84;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:I
-
-.field public synthetic d:Ljava/lang/Object;
-
-.field public final synthetic o:Lsh9;
+# static fields
+.field public static final a:Lmh9;
 
 
 # direct methods
-.method public constructor <init>(Lsh9;Lo84;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lmh9;->o:Lsh9;
+    new-instance v0, Lmh9;
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lmh9;->a:Lmh9;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    iput-object p1, p0, Lmh9;->d:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    iget p1, p0, Lmh9;->X:I
+    if-ne p0, p1, :cond_0
 
-    const/high16 v0, -0x80000000
+    return v0
 
-    or-int/2addr p1, v0
+    :cond_0
+    instance-of p1, p1, Lmh9;
 
-    iput p1, p0, Lmh9;->X:I
+    if-nez p1, :cond_1
 
-    iget-object p1, p0, Lmh9;->o:Lsh9;
+    const/4 p1, 0x0
 
-    const/4 v0, 0x0
+    return p1
 
-    invoke-virtual {p1, v0, p0}, Lsh9;->t(Ljava/util/Collection;Lo84;)Ljava/lang/Object;
+    :cond_1
+    return v0
+.end method
 
-    move-result-object p1
+.method public final hashCode()I
+    .locals 1
 
-    return-object p1
+    const v0, 0x388508e4
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "InvalidateAll"
+
+    return-object v0
 .end method

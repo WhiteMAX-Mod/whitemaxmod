@@ -1,186 +1,256 @@
 .class public final Lqb6;
-.super Lcw4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lxb6;
+.implements Ld96;
 
 
 # instance fields
-.field public final c:Z
+.field public final synthetic a:I
 
-.field public d:Lb1g;
+.field public final synthetic b:Lys6;
 
-.field public o:Z
+.field public final synthetic c:Lyyd;
 
 
 # direct methods
-.method public constructor <init>(Lz0g;Z)V
+.method public synthetic constructor <init>(Lys6;Lyyd;I)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcw4;-><init>(Lz0g;)V
+    iput p3, p0, Lqb6;->a:I
 
-    iput-boolean p2, p0, Lqb6;->c:Z
+    iput-object p1, p0, Lqb6;->b:Lys6;
+
+    iput-object p2, p0, Lqb6;->c:Lyyd;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()V
-    .locals 2
+.method public final a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 4
 
-    iget-boolean v0, p0, Lqb6;->o:Z
+    iget v0, p0, Lqb6;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    instance-of v0, p2, Ltb6;
 
     if-eqz v0, :cond_0
 
-    return-void
+    move-object v0, p2
+
+    check-cast v0, Ltb6;
+
+    iget v1, v0, Ltb6;->X:I
+
+    const/high16 v2, -0x80000000
+
+    and-int v3, v1, v2
+
+    if-eqz v3, :cond_0
+
+    sub-int/2addr v1, v2
+
+    iput v1, v0, Ltb6;->X:I
+
+    goto :goto_0
 
     :cond_0
-    const/4 v0, 0x1
+    new-instance v0, Ltb6;
 
-    iput-boolean v0, p0, Lqb6;->o:Z
+    invoke-direct {v0, p0, p2}, Ltb6;-><init>(Lqb6;Lkotlin/coroutines/Continuation;)V
 
-    iget-object v0, p0, Lcw4;->b:Ljava/lang/Object;
+    :goto_0
+    iget-object p2, v0, Ltb6;->o:Ljava/lang/Object;
 
-    const/4 v1, 0x0
+    iget v1, v0, Ltb6;->X:I
 
-    iput-object v1, p0, Lcw4;->b:Ljava/lang/Object;
+    const/4 v2, 0x1
 
-    if-nez v0, :cond_1
+    if-eqz v1, :cond_2
 
-    move-object v0, v1
+    if-ne v1, v2, :cond_1
+
+    iget-object p1, v0, Ltb6;->Z:Ljava/lang/Object;
+
+    iget-object v0, v0, Ltb6;->d:Lqb6;
+
+    invoke-static {p2}, Lbvj;->i(Ljava/lang/Object;)V
+
+    goto :goto_1
 
     :cond_1
-    if-nez v0, :cond_3
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    iget-boolean v0, p0, Lqb6;->c:Z
+    const-string p2, "call to \'resume\' before \'invoke\' with coroutine"
 
-    iget-object v1, p0, Lcw4;->a:Lz0g;
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    if-eqz v0, :cond_2
-
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    invoke-interface {v1, v0}, Lz0g;->onError(Ljava/lang/Throwable;)V
-
-    return-void
+    throw p1
 
     :cond_2
-    invoke-interface {v1}, Lz0g;->b()V
+    invoke-static {p2}, Lbvj;->i(Ljava/lang/Object;)V
 
-    return-void
+    iput-object p0, v0, Ltb6;->d:Lqb6;
+
+    iput-object p1, v0, Ltb6;->Z:Ljava/lang/Object;
+
+    iput v2, v0, Ltb6;->X:I
+
+    iget-object p2, p0, Lqb6;->b:Lys6;
+
+    invoke-interface {p2, p1, v0}, Lys6;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p2
+
+    sget-object v0, Lod4;->a:Lod4;
+
+    if-ne p2, v0, :cond_3
+
+    goto :goto_2
 
     :cond_3
-    invoke-virtual {p0, v0}, Lcw4;->e(Ljava/lang/Object;)V
+    move-object v0, p0
 
-    return-void
-.end method
+    :goto_1
+    check-cast p2, Ljava/lang/Boolean;
 
-.method public final cancel()V
-    .locals 1
+    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
 
-    const/4 v0, 0x4
+    move-result p2
 
-    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
+    if-nez p2, :cond_4
 
-    const/4 v0, 0x0
+    sget-object v0, Lmah;->a:Lmah;
 
-    iput-object v0, p0, Lcw4;->b:Ljava/lang/Object;
+    :goto_2
+    return-object v0
 
-    iget-object v0, p0, Lqb6;->d:Lb1g;
+    :cond_4
+    iget-object p2, v0, Lqb6;->c:Lyyd;
 
-    invoke-interface {v0}, Lb1g;->cancel()V
+    iput-object p1, p2, Lyyd;->a:Ljava/lang/Object;
 
-    return-void
-.end method
+    new-instance p1, Lkotlinx/coroutines/flow/internal/AbortFlowException;
 
-.method public final d(Lb1g;)V
-    .locals 2
+    invoke-direct {p1, v0}, Lkotlinx/coroutines/flow/internal/AbortFlowException;-><init>(Ljava/lang/Object;)V
 
-    iget-object v0, p0, Lqb6;->d:Lb1g;
+    throw p1
 
-    invoke-static {v0, p1}, Le1g;->g(Lb1g;Lb1g;)Z
+    :pswitch_0
+    instance-of v0, p2, Lpb6;
 
-    move-result v0
+    if-eqz v0, :cond_5
 
-    if-eqz v0, :cond_0
+    move-object v0, p2
 
-    iput-object p1, p0, Lqb6;->d:Lb1g;
+    check-cast v0, Lpb6;
 
-    iget-object v0, p0, Lcw4;->a:Lz0g;
+    iget v1, v0, Lpb6;->X:I
 
-    invoke-interface {v0, p0}, Lz0g;->d(Lb1g;)V
+    const/high16 v2, -0x80000000
 
-    const-wide v0, 0x7fffffffffffffffL
+    and-int v3, v1, v2
 
-    invoke-interface {p1, v0, v1}, Lb1g;->f(J)V
+    if-eqz v3, :cond_5
 
-    :cond_0
-    return-void
-.end method
+    sub-int/2addr v1, v2
 
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 1
+    iput v1, v0, Lpb6;->X:I
 
-    iget-boolean v0, p0, Lqb6;->o:Z
+    goto :goto_3
 
-    if-eqz v0, :cond_0
+    :cond_5
+    new-instance v0, Lpb6;
 
-    invoke-static {p1}, Lknj;->b(Ljava/lang/Throwable;)V
+    invoke-direct {v0, p0, p2}, Lpb6;-><init>(Lqb6;Lkotlin/coroutines/Continuation;)V
 
-    return-void
+    :goto_3
+    iget-object p2, v0, Lpb6;->o:Ljava/lang/Object;
 
-    :cond_0
-    const/4 v0, 0x1
+    iget v1, v0, Lpb6;->X:I
 
-    iput-boolean v0, p0, Lqb6;->o:Z
+    const/4 v2, 0x1
 
-    iget-object v0, p0, Lcw4;->a:Lz0g;
+    if-eqz v1, :cond_7
 
-    invoke-interface {v0, p1}, Lz0g;->onError(Ljava/lang/Throwable;)V
+    if-ne v1, v2, :cond_6
 
-    return-void
-.end method
+    iget-object p1, v0, Lpb6;->Z:Ljava/lang/Object;
 
-.method public final r(Ljava/lang/Object;)V
-    .locals 1
+    iget-object v0, v0, Lpb6;->d:Lqb6;
 
-    iget-boolean v0, p0, Lqb6;->o:Z
+    invoke-static {p2}, Lbvj;->i(Ljava/lang/Object;)V
 
-    if-eqz v0, :cond_0
+    goto :goto_4
 
-    return-void
+    :cond_6
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    :cond_0
-    iget-object v0, p0, Lcw4;->b:Ljava/lang/Object;
+    const-string p2, "call to \'resume\' before \'invoke\' with coroutine"
 
-    if-eqz v0, :cond_1
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    const/4 p1, 0x1
+    throw p1
 
-    iput-boolean p1, p0, Lqb6;->o:Z
+    :cond_7
+    invoke-static {p2}, Lbvj;->i(Ljava/lang/Object;)V
 
-    iget-object p1, p0, Lqb6;->d:Lb1g;
+    iput-object p0, v0, Lpb6;->d:Lqb6;
 
-    invoke-interface {p1}, Lb1g;->cancel()V
+    iput-object p1, v0, Lpb6;->Z:Ljava/lang/Object;
 
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    iput v2, v0, Lpb6;->X:I
 
-    const-string v0, "Sequence contains more than one element!"
+    iget-object p2, p0, Lqb6;->b:Lys6;
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-interface {p2, p1, v0}, Lys6;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v0, p0, Lcw4;->a:Lz0g;
+    move-result-object p2
 
-    invoke-interface {v0, p1}, Lz0g;->onError(Ljava/lang/Throwable;)V
+    sget-object v0, Lod4;->a:Lod4;
 
-    return-void
+    if-ne p2, v0, :cond_8
 
-    :cond_1
-    iput-object p1, p0, Lcw4;->b:Ljava/lang/Object;
+    goto :goto_5
 
-    return-void
+    :cond_8
+    move-object v0, p0
+
+    :goto_4
+    check-cast p2, Ljava/lang/Boolean;
+
+    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p2
+
+    if-nez p2, :cond_9
+
+    sget-object v0, Lmah;->a:Lmah;
+
+    :goto_5
+    return-object v0
+
+    :cond_9
+    iget-object p2, v0, Lqb6;->c:Lyyd;
+
+    iput-object p1, p2, Lyyd;->a:Ljava/lang/Object;
+
+    new-instance p1, Lkotlinx/coroutines/flow/internal/AbortFlowException;
+
+    invoke-direct {p1, v0}, Lkotlinx/coroutines/flow/internal/AbortFlowException;-><init>(Ljava/lang/Object;)V
+
+    throw p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

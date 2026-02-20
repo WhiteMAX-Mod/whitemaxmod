@@ -1,64 +1,52 @@
 .class public final Ltn9;
-.super Ljava/lang/Object;
+.super Lone/me/sdk/uikit/common/span/FitFontImageSpan;
 .source "SourceFile"
 
 # interfaces
-.implements Lxn9;
+.implements Lt23;
 
 
-# static fields
-.field public static final a:Ltn9;
+# instance fields
+.field public final synthetic a:Landroid/graphics/drawable/Drawable;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Landroid/graphics/drawable/Drawable;)V
+    .locals 7
 
-    new-instance v0, Ltn9;
+    iput-object p1, p0, Ltn9;->a:Landroid/graphics/drawable/Drawable;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/16 v5, 0xe
 
-    sput-object v0, Ltn9;->a:Ltn9;
+    const/4 v6, 0x0
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    invoke-direct/range {v0 .. v6}, Lone/me/sdk/uikit/common/span/FitFontImageSpan;-><init>(Landroid/graphics/drawable/Drawable;Lc76;ZZILfq4;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final d(Lgob;)V
     .locals 1
 
-    const/4 v0, 0x1
+    iget-object p1, p1, Lgob;->c:Leob;
 
-    if-ne p0, p1, :cond_0
+    iget p1, p1, Leob;->i:I
 
-    return v0
+    iget-object v0, p0, Ltn9;->a:Landroid/graphics/drawable/Drawable;
 
-    :cond_0
-    instance-of p1, p1, Ltn9;
+    invoke-static {v0, p1}, Lu1j;->d(Landroid/graphics/drawable/Drawable;I)V
 
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, 0xf30cd61
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "Default"
-
-    return-object v0
+    return-void
 .end method

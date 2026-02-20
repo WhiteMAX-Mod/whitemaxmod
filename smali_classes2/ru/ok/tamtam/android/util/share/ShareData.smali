@@ -28,7 +28,7 @@
         "shares",
         "files",
         "",
-        "messagesIds",
+        "ids",
         "vcard",
         "<init>",
         "(ILjava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;)V",
@@ -39,7 +39,7 @@
         "Landroid/os/Parcel;",
         "dest",
         "flags",
-        "Lb3h;",
+        "Lmah;",
         "writeToParcel",
         "(Landroid/os/Parcel;I)V",
         "I",
@@ -49,7 +49,7 @@
         "isSingleMedia",
         "()Z",
         "Companion",
-        "k5f",
+        "ycf",
         "tamtam-android-sdk_release"
     }
     k = 0x1
@@ -63,6 +63,8 @@
 
 
 # static fields
+.field public static final CONTACT:I = 0x7
+
 .field public static final CREATOR:Landroid/os/Parcelable$Creator;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -73,7 +75,7 @@
     .end annotation
 .end field
 
-.field public static final Companion:Lk5f;
+.field public static final Companion:Lycf;
 
 .field public static final FILES:I = 0x4
 
@@ -101,21 +103,21 @@
     .end annotation
 .end field
 
-.field public images:Ljava/util/List;
+.field public ids:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Landroid/net/Uri;",
+            "Ljava/lang/Long;",
             ">;"
         }
     .end annotation
 .end field
 
-.field public messagesIds:Ljava/util/List;
+.field public images:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Ljava/lang/Long;",
+            "Landroid/net/Uri;",
             ">;"
         }
     .end annotation
@@ -152,17 +154,17 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Lk5f;
+    new-instance v0, Lycf;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lru/ok/tamtam/android/util/share/ShareData;->Companion:Lk5f;
+    sput-object v0, Lru/ok/tamtam/android/util/share/ShareData;->Companion:Lycf;
 
-    new-instance v0, Lhne;
+    new-instance v0, Ll7f;
 
-    const/16 v1, 0x9
+    const/4 v1, 0x7
 
-    invoke-direct {v0, v1}, Lhne;-><init>(I)V
+    invoke-direct {v0, v1}, Ll7f;-><init>(I)V
 
     sput-object v0, Lru/ok/tamtam/android/util/share/ShareData;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -195,7 +197,7 @@
 
     move-object v0, p0
 
-    invoke-direct/range {v0 .. v10}, Lru/ok/tamtam/android/util/share/ShareData;-><init>(ILjava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;ILso4;)V
+    invoke-direct/range {v0 .. v10}, Lru/ok/tamtam/android/util/share/ShareData;-><init>(ILjava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;ILfq4;)V
 
     return-void
 .end method
@@ -248,7 +250,7 @@
     iput-object p6, p0, Lru/ok/tamtam/android/util/share/ShareData;->files:Ljava/util/List;
 
     .line 9
-    iput-object p7, p0, Lru/ok/tamtam/android/util/share/ShareData;->messagesIds:Ljava/util/List;
+    iput-object p7, p0, Lru/ok/tamtam/android/util/share/ShareData;->ids:Ljava/util/List;
 
     .line 10
     iput-object p8, p0, Lru/ok/tamtam/android/util/share/ShareData;->vcard:Ljava/lang/String;
@@ -256,7 +258,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(ILjava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;ILso4;)V
+.method public synthetic constructor <init>(ILjava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;ILfq4;)V
     .locals 1
 
     and-int/lit8 p10, p9, 0x1
@@ -487,7 +489,7 @@
 
     iget-object v6, p0, Lru/ok/tamtam/android/util/share/ShareData;->vcard:Ljava/lang/String;
 
-    iget-object v7, p0, Lru/ok/tamtam/android/util/share/ShareData;->messagesIds:Ljava/util/List;
+    iget-object v7, p0, Lru/ok/tamtam/android/util/share/ShareData;->ids:Ljava/util/List;
 
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -533,7 +535,7 @@
 
     invoke-virtual {v8, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v0, "\', messagesIds=\'"
+    const-string v0, "\', ids=\'"
 
     invoke-virtual {v8, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -725,7 +727,7 @@
 
     :cond_7
     :goto_7
-    iget-object p2, p0, Lru/ok/tamtam/android/util/share/ShareData;->messagesIds:Ljava/util/List;
+    iget-object p2, p0, Lru/ok/tamtam/android/util/share/ShareData;->ids:Ljava/util/List;
 
     if-nez p2, :cond_8
 

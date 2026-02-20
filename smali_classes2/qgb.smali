@@ -1,100 +1,219 @@
-.class public final synthetic Lqgb;
-.super Ljava/lang/Object;
+.class public final Lqgb;
+.super Landroid/widget/LinearLayout;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public a:Lpgb;
 
-.field public final synthetic b:Lrgb;
+.field public b:Lg5b;
+
+.field public c:Landroid/widget/ImageView;
 
 
-# direct methods
-.method public synthetic constructor <init>(Lrgb;I)V
-    .locals 0
+# virtual methods
+.method public final a(Lpgb;)V
+    .locals 3
 
-    iput p2, p0, Lqgb;->a:I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->removeAllViews()V
 
-    iput-object p1, p0, Lqgb;->b:Lrgb;
+    instance-of v0, p1, Lngb;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    if-eqz v0, :cond_1
+
+    check-cast p1, Lngb;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget p1, Lihb;->e:I
+
+    iget-object v0, p0, Lqgb;->b:Lg5b;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Lg5b;
+
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lg5b;-><init>(Landroid/content/Context;)V
+
+    new-instance v1, Landroid/widget/LinearLayout$LayoutParams;
+
+    const/4 v2, -0x2
+
+    invoke-direct {v1, v2, v2}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
+
+    const/high16 v2, 0x3f800000    # 1.0f
+
+    iput v2, v1, Landroid/widget/LinearLayout$LayoutParams;->weight:F
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    sget-object v1, Lf5b;->b:Lf5b;
+
+    invoke-virtual {v0, v1}, Lg5b;->setAppearance(Lf5b;)V
+
+    invoke-virtual {v0, p1}, Lg5b;->setText(I)V
+
+    iput-object v0, p0, Lqgb;->b:Lg5b;
+
+    :cond_0
+    iput-object v0, p0, Lqgb;->b:Lg5b;
+
+    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    goto :goto_0
+
+    :cond_1
+    sget-object v0, Logb;->a:Logb;
+
+    invoke-static {p1, v0}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    const-class p1, Lqgb;
+
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "Undefined appearance"
+
+    invoke-static {p1, v0}, Ltej;->t(Ljava/lang/String;Ljava/lang/String;)V
+
+    :goto_0
+    iget-object p1, p0, Lqgb;->c:Landroid/widget/ImageView;
+
+    invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    const/16 p1, 0x2c
+
+    int-to-float p1, p1
+
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v0
+
+    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr p1, v0
+
+    invoke-static {p1}, Lmhj;->f(F)I
+
+    move-result p1
+
+    const/16 v0, 0x8
+
+    int-to-float v0, v0
+
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v1, v0
+
+    invoke-static {v1}, Lmhj;->f(F)I
+
+    move-result v1
+
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v2
+
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v0, v2
+
+    invoke-static {v0}, Lmhj;->f(F)I
+
+    move-result v0
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p0, p1, v1, v2, v0}, Landroid/view/View;->setPadding(IIII)V
+
+    return-void
+
+    :cond_2
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
+.end method
+
+.method public final getAppearance()Lpgb;
+    .locals 1
+
+    iget-object v0, p0, Lqgb;->a:Lpgb;
+
+    return-object v0
+.end method
+
+.method public final setAppearance(Lpgb;)V
+    .locals 1
+
+    iget-object v0, p0, Lqgb;->a:Lpgb;
+
+    invoke-static {v0, p1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    :cond_0
+    iput-object p1, p0, Lqgb;->a:Lpgb;
+
+    invoke-virtual {p0, p1}, Lqgb;->a(Lpgb;)V
 
     return-void
 .end method
 
+.method public final setOnAcceptButtonClickListener(Landroid/view/View$OnClickListener;)V
+    .locals 0
 
-# virtual methods
-.method public final run()V
-    .locals 5
+    return-void
+.end method
 
-    iget v0, p0, Lqgb;->a:I
+.method public final setOnCloseButtonClickListener(Landroid/view/View$OnClickListener;)V
+    .locals 1
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v0, p0, Lqgb;->c:Landroid/widget/ImageView;
 
-    iget-object v0, p0, Lqgb;->b:Lrgb;
+    invoke-static {v0, p1}, Lwuj;->c(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
-    iget-object v1, v0, Lrgb;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
+    return-void
+.end method
 
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+.method public final setOnDeclineButtonClickListener(Landroid/view/View$OnClickListener;)V
+    .locals 1
 
-    move-result v1
+    iget-object v0, p0, Lqgb;->b:Lg5b;
 
-    if-eqz v1, :cond_0
+    if-eqz v0, :cond_0
 
-    goto :goto_0
+    invoke-static {v0, p1}, Lwuj;->c(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
     :cond_0
-    iget-object v1, v0, Lrgb;->b:Ljava/util/concurrent/ExecutorService;
-
-    new-instance v2, Lri;
-
-    const/16 v3, 0xa
-
-    const/4 v4, 0x0
-
-    invoke-direct {v2, v3, v0, v4}, Lri;-><init>(ILjava/lang/Object;Z)V
-
-    invoke-interface {v1, v2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
-    :goto_0
     return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lqgb;->b:Lrgb;
-
-    iget-object v1, v0, Lrgb;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    iget-object v1, v0, Lrgb;->b:Ljava/util/concurrent/ExecutorService;
-
-    new-instance v2, Lri;
-
-    const/16 v3, 0xa
-
-    const/4 v4, 0x1
-
-    invoke-direct {v2, v3, v0, v4}, Lri;-><init>(ILjava/lang/Object;Z)V
-
-    invoke-interface {v1, v2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
-    :goto_1
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

@@ -1,111 +1,102 @@
 .class public final Lgm3;
-.super Ljava/lang/Object;
+.super Lpdg;
 .source "SourceFile"
+
+# interfaces
+.implements Lys6;
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic X:Lwl3;
 
-.field public final b:I
+.field public final synthetic o:Lkm3;
 
 
 # direct methods
-.method public constructor <init>(II)V
+.method public constructor <init>(Lkm3;Lwl3;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lgm3;->o:Lkm3;
 
-    iput p1, p0, Lgm3;->a:I
+    iput-object p2, p0, Lgm3;->X:Lwl3;
 
-    iput p2, p0, Lgm3;->b:I
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    if-ne p0, p1, :cond_0
+    check-cast p1, Lnd4;
 
-    goto :goto_1
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of v0, p1, Lgm3;
+    invoke-virtual {p0, p1, p2}, Lgm3;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    if-nez v0, :cond_1
+    move-result-object p1
 
-    goto :goto_0
-
-    :cond_1
     check-cast p1, Lgm3;
 
-    iget v0, p0, Lgm3;->a:I
+    sget-object p2, Lmah;->a:Lmah;
 
-    iget v1, p1, Lgm3;->a:I
+    invoke-virtual {p1, p2}, Lgm3;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-eq v0, v1, :cond_2
+    move-result-object p1
 
-    goto :goto_0
-
-    :cond_2
-    iget v0, p0, Lgm3;->b:I
-
-    iget p1, p1, Lgm3;->b:I
-
-    if-eq v0, p1, :cond_3
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_3
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
+    return-object p1
 .end method
 
-.method public final hashCode()I
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    iget v0, p0, Lgm3;->a:I
+    new-instance p1, Lgm3;
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    iget-object v0, p0, Lgm3;->o:Lkm3;
 
-    move-result v0
+    iget-object v1, p0, Lgm3;->X:Lwl3;
 
-    mul-int/lit8 v0, v0, 0x1f
+    invoke-direct {p1, v0, v1, p2}, Lgm3;-><init>(Lkm3;Lwl3;Lkotlin/coroutines/Continuation;)V
 
-    iget v1, p0, Lgm3;->b:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    return-object p1
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    const-string v0, ", secondary="
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    const-string v1, ")"
+    sget-object p1, Lkm3;->m:[Lv58;
 
-    const-string v2, "CommonStrokeSeparatorColors(primary="
+    iget-object p1, p0, Lgm3;->o:Lkm3;
 
-    iget v3, p0, Lgm3;->a:I
+    iget-object p1, p1, Lkm3;->f:Lj88;
 
-    iget v4, p0, Lgm3;->b:I
+    invoke-interface {p1}, Lj88;->getValue()Ljava/lang/Object;
 
-    invoke-static {v2, v3, v0, v4, v1}, Lkz1;->g(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    move-result-object p1
 
-    move-result-object v0
+    check-cast p1, Lcc3;
 
-    return-object v0
+    iget-object v0, p0, Lgm3;->X:Lwl3;
+
+    check-cast v0, Lvl3;
+
+    iget-wide v0, v0, Lvl3;->a:J
+
+    invoke-virtual {p1, v0, v1}, Lcc3;->l(J)Lmrd;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lmrd;->a:Laxf;
+
+    invoke-interface {p1}, Laxf;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

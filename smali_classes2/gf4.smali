@@ -3,410 +3,174 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lsi4;
+.implements Lys6;
 
 
 # instance fields
-.field public final a:Lsi4;
+.field public final synthetic a:Lfe6;
 
-.field public final b:Lt9b;
-
-.field public final c:Lnm0;
-
-.field public d:J
-
-.field public final o:Landroid/os/Handler;
+.field public final synthetic b:Lwf4;
 
 
 # direct methods
-.method public constructor <init>(Lsi4;Lt9b;Lnm0;)V
+.method public constructor <init>(Lfe6;Lwf4;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lgf4;->a:Lsi4;
+    iput-object p1, p0, Lgf4;->a:Lfe6;
 
-    iput-object p2, p0, Lgf4;->b:Lt9b;
-
-    iput-object p3, p0, Lgf4;->c:Lnm0;
-
-    const-wide/16 p1, -0x1
-
-    iput-wide p1, p0, Lgf4;->d:J
-
-    new-instance p1, Landroid/os/Handler;
-
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
-
-    move-result-object p2
-
-    invoke-direct {p1, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
-
-    iput-object p1, p0, Lgf4;->o:Landroid/os/Handler;
+    iput-object p2, p0, Lgf4;->b:Lwf4;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final G(Laj4;)J
-    .locals 12
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
 
-    iget-object v0, p0, Lgf4;->a:Lsi4;
+    check-cast p1, Ljava/lang/String;
 
-    invoke-interface {v0, p1}, Lsi4;->G(Laj4;)J
+    check-cast p2, Lgia;
 
-    move-result-wide v1
+    sget-object p1, Lzm8;->d:Lzm8;
 
-    invoke-interface {v0}, Lsi4;->w()Ljava/util/Map;
+    if-nez p2, :cond_0
+
+    iget-object p1, p0, Lgf4;->a:Lfe6;
+
+    invoke-static {p1}, Lixf;->a(Ljava/lang/Object;)Lhxf;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_0
+    invoke-interface {p2}, Lgia;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    iget-object p1, p1, Laj4;->a:Landroid/net/Uri;
+    check-cast v0, Lfe6;
 
-    invoke-static {p1}, Lmbh;->K(Landroid/net/Uri;)I
+    const/4 v1, 0x0
 
-    move-result p1
+    const-string v2, "Folder("
 
-    const/4 v3, 0x0
+    if-nez v0, :cond_3
 
-    const/4 v4, 0x2
+    iget-object v0, p0, Lgf4;->b:Lwf4;
 
-    if-eqz p1, :cond_1
+    iget-object v0, v0, Lwf4;->b:Ljava/lang/String;
 
-    if-eq p1, v4, :cond_0
+    iget-object v3, p0, Lgf4;->a:Lfe6;
 
-    move p1, v3
+    sget-object v4, Ltej;->a:Lafb;
 
-    goto :goto_0
-
-    :cond_0
-    move p1, v4
+    if-nez v4, :cond_1
 
     goto :goto_0
 
     :cond_1
-    const/4 p1, 0x3
+    invoke-virtual {v4, p1}, Lafb;->b(Lzm8;)Z
 
-    :goto_0
-    iget-object v5, p0, Lgf4;->o:Landroid/os/Handler;
+    move-result v5
 
-    if-eqz p1, :cond_4
+    if-eqz v5, :cond_2
 
-    const-string v6, "X-Playback-Duration"
+    iget-object v3, v3, Lfe6;->a:Ljava/lang/String;
 
-    invoke-interface {v0, v6}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    const-string v5, ") was set to flow"
 
-    move-result-object v6
+    invoke-static {v2, v3, v5}, Ltx8;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    check-cast v6, Ljava/util/List;
+    move-result-object v2
 
-    iget-object v7, p0, Lgf4;->c:Lnm0;
-
-    if-eqz v6, :cond_3
-
-    invoke-interface {v6}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v6
-
-    :goto_1
-    invoke-interface {v6}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v8
-
-    if-eqz v8, :cond_4
-
-    invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v8
-
-    check-cast v8, Ljava/lang/String;
-
-    :try_start_0
-    invoke-static {v8}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
-
-    move-result-wide v8
-
-    if-ne p1, v4, :cond_2
-
-    goto :goto_2
+    invoke-virtual {v4, p1, v0, v2, v1}, Lafb;->c(Lzm8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_2
-    const/16 v10, 0x3e8
+    :goto_0
+    iget-object p1, p0, Lgf4;->a:Lfe6;
 
-    int-to-long v10, v10
+    invoke-interface {p2, p1}, Lgia;->setValue(Ljava/lang/Object;)V
 
-    mul-long/2addr v8, v10
+    return-object p2
 
-    :goto_2
-    iget-wide v10, p0, Lgf4;->d:J
+    :cond_3
+    iget-wide v3, v0, Lfe6;->u0:J
 
-    cmp-long v10, v8, v10
+    iget-object v0, p0, Lgf4;->a:Lfe6;
 
-    if-eqz v10, :cond_4
+    iget-wide v5, v0, Lfe6;->u0:J
 
-    if-eqz v7, :cond_4
+    cmp-long v3, v3, v5
 
-    iput-wide v8, p0, Lgf4;->d:J
+    if-lez v3, :cond_6
 
-    new-instance v10, Lk60;
+    iget-object v3, p0, Lgf4;->b:Lwf4;
 
-    const/4 v11, 0x2
+    iget-object v3, v3, Lwf4;->b:Ljava/lang/String;
 
-    invoke-direct {v10, p0, v8, v9, v11}, Lk60;-><init>(Ljava/lang/Object;JI)V
+    sget-object v4, Ltej;->a:Lafb;
 
-    invoke-virtual {v5, v10}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-    :try_end_0
-    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_3
-
-    :catch_0
-    move-exception v8
-
-    const-string v9, "CustomHttpDataSource"
-
-    const-string v10, "error parse X-Playback-Duration"
-
-    invoke-static {v9, v10, v8}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    if-nez v4, :cond_4
 
     goto :goto_1
 
-    :cond_3
-    iget-wide v8, p0, Lgf4;->d:J
-
-    const-wide/16 v10, 0x0
-
-    cmp-long p1, v10, v8
-
-    if-eqz p1, :cond_4
-
-    if-eqz v7, :cond_4
-
-    iput-wide v10, p0, Lgf4;->d:J
-
-    new-instance p1, Lk60;
-
-    const/4 v4, 0x2
-
-    invoke-direct {p1, p0, v10, v11, v4}, Lk60;-><init>(Ljava/lang/Object;JI)V
-
-    invoke-virtual {v5, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
     :cond_4
-    :goto_3
-    const-string p1, "X-Delivery-Type"
+    invoke-virtual {v4, p1}, Lafb;->b(Lzm8;)Z
 
-    invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result v5
 
-    move-result-object p1
+    if-eqz v5, :cond_5
 
-    check-cast p1, Ljava/util/List;
+    iget-object v0, v0, Lfe6;->a:Ljava/lang/String;
 
-    const-string v4, "X-Reused"
+    const-string v5, ") was ignored due to greater time of present folder"
 
-    invoke-interface {v0, v4}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v2, v0, v5}, Ltx8;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Ljava/util/List;
-
-    if-eqz p1, :cond_5
-
-    invoke-static {v3, p1}, Lpi3;->G(ILjava/util/List;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/String;
-
-    goto :goto_4
+    invoke-virtual {v4, p1, v3, v0, v1}, Lafb;->c(Lzm8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_5
-    const/4 p1, 0x0
-
-    :goto_4
-    if-eqz p1, :cond_b
-
-    invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
-
-    move-result v4
-
-    const/16 v6, 0xcca
-
-    if-eq v4, v6, :cond_9
-
-    const v6, 0x18cd9
-
-    if-eq v4, v6, :cond_8
-
-    const v6, 0x35223e
-
-    if-eq v4, v6, :cond_6
-
-    goto :goto_5
+    :goto_1
+    return-object p2
 
     :cond_6
-    const-string v4, "quic"
+    iget-object v3, p0, Lgf4;->b:Lwf4;
 
-    invoke-virtual {p1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    iget-object v3, v3, Lwf4;->b:Ljava/lang/String;
 
-    move-result p1
+    sget-object v4, Ltej;->a:Lafb;
 
-    if-nez p1, :cond_7
+    if-nez v4, :cond_7
 
-    goto :goto_5
+    goto :goto_2
 
     :cond_7
-    const-string p1, "http3"
+    invoke-virtual {v4, p1}, Lafb;->b(Lzm8;)Z
 
-    goto :goto_6
+    move-result v5
+
+    if-eqz v5, :cond_8
+
+    iget-object v0, v0, Lfe6;->a:Ljava/lang/String;
+
+    const-string v5, ") was updated by folder from cache"
+
+    invoke-static {v2, v0, v5}, Ltx8;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v4, p1, v3, v0, v1}, Lafb;->c(Lzm8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_8
-    const-string v4, "h2c"
+    :goto_2
+    iget-object p1, p0, Lgf4;->a:Lfe6;
 
-    invoke-virtual {p1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-interface {p2, p1}, Lgia;->setValue(Ljava/lang/Object;)V
 
-    move-result p1
-
-    if-nez p1, :cond_a
-
-    goto :goto_5
-
-    :cond_9
-    const-string v4, "h2"
-
-    invoke-virtual {p1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_a
-
-    goto :goto_5
-
-    :cond_a
-    const-string p1, "http2"
-
-    goto :goto_6
-
-    :cond_b
-    :goto_5
-    const-string p1, "http1"
-
-    :goto_6
-    if-eqz v0, :cond_c
-
-    invoke-static {v3, v0}, Lpi3;->G(ILjava/util/List;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    if-nez v0, :cond_d
-
-    :cond_c
-    const-string v0, "0"
-
-    :cond_d
-    new-instance v3, Lzi;
-
-    const/16 v4, 0x11
-
-    invoke-direct {v3, p0, p1, v0, v4}, Lzi;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    invoke-virtual {v5, v3}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    return-wide v1
-.end method
-
-.method public final H(Lysg;)V
-    .locals 1
-
-    new-instance v0, Leki;
-
-    invoke-direct {v0, p0, p1}, Leki;-><init>(Lsi4;Lysg;)V
-
-    iget-object p1, p0, Lgf4;->a:Lsi4;
-
-    invoke-interface {p1, v0}, Lsi4;->H(Lysg;)V
-
-    return-void
-.end method
-
-.method public final close()V
-    .locals 1
-
-    iget-object v0, p0, Lgf4;->a:Lsi4;
-
-    invoke-interface {v0}, Lsi4;->close()V
-
-    return-void
-.end method
-
-.method public final getUri()Landroid/net/Uri;
-    .locals 1
-
-    iget-object v0, p0, Lgf4;->a:Lsi4;
-
-    invoke-interface {v0}, Lsi4;->getUri()Landroid/net/Uri;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final read([BII)I
-    .locals 1
-
-    iget-object v0, p0, Lgf4;->a:Lsi4;
-
-    invoke-interface {v0, p1, p2, p3}, Lki4;->read([BII)I
-
-    move-result p1
-
-    iget-object p2, p0, Lgf4;->b:Lt9b;
-
-    iget-object p2, p2, Lt9b;->b:Ljava/lang/Object;
-
-    check-cast p2, Lff4;
-
-    iget-boolean p3, p2, Lff4;->d:Z
-
-    if-nez p3, :cond_0
-
-    if-lez p1, :cond_0
-
-    const/4 p3, 0x1
-
-    iput-boolean p3, p2, Lff4;->d:Z
-
-    iget-object p2, p2, Lff4;->b:La4a;
-
-    if-eqz p2, :cond_0
-
-    iget-object p2, p2, La4a;->b:Ljava/lang/Object;
-
-    check-cast p2, Lwnb;
-
-    iget-object p3, p2, Lpm0;->i:Lxl6;
-
-    invoke-virtual {p3, p2}, Lxl6;->b(Lgob;)V
-
-    :cond_0
-    return p1
-.end method
-
-.method public final w()Ljava/util/Map;
-    .locals 2
-
-    new-instance v0, Lj57;
-
-    iget-object v1, p0, Lgf4;->a:Lsi4;
-
-    invoke-interface {v1}, Lsi4;->w()Ljava/util/Map;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Lj57;-><init>(Ljava/util/Map;)V
-
-    return-object v0
+    return-object p2
 .end method

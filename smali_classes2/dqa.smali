@@ -1,51 +1,19 @@
-.class public final Ldqa;
-.super Lo84;
+.class public interface abstract Ldqa;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic X:Lhqa;
-
-.field public Y:I
-
-.field public d:J
-
-.field public synthetic o:Ljava/lang/Object;
+# static fields
+.field public static final a:Le7e;
 
 
 # direct methods
-.method public constructor <init>(Lhqa;Lo84;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Ldqa;->X:Lhqa;
+    sget-object v0, Le7e;->Y:Le7e;
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    sput-object v0, Ldqa;->a:Le7e;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    iput-object p1, p0, Ldqa;->o:Ljava/lang/Object;
-
-    iget p1, p0, Ldqa;->Y:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Ldqa;->Y:I
-
-    iget-object p1, p0, Ldqa;->X:Lhqa;
-
-    const-wide/16 v0, 0x0
-
-    invoke-virtual {p1, v0, v1, p0}, Lhqa;->b(JLo84;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
 .end method

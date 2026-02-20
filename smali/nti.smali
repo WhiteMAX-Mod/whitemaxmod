@@ -1,21 +1,17 @@
-.class public abstract Lnti;
+.class public interface abstract Lnti;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ljava/util/Random;
+# virtual methods
+.method public abstract a()F
+.end method
 
+.method public abstract b()F
+.end method
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public abstract c()F
+.end method
 
-    new-instance v0, Ljava/util/Random;
-
-    invoke-direct {v0}, Ljava/util/Random;-><init>()V
-
-    sput-object v0, Lnti;->a:Ljava/util/Random;
-
-    return-void
+.method public abstract d()F
 .end method

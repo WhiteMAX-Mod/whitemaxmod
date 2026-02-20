@@ -1,76 +1,113 @@
-.class public abstract Lp9d;
-.super Ljava/lang/Object;
+.class public final Lp9d;
+.super Lx0i;
+.source "SourceFile"
 
 
-# static fields
-.field public static check_button:I = 0x7f0a0298
+# instance fields
+.field public final X:Lyie;
 
-.field public static check_button_parent:I = 0x7f0a0299
+.field public final Y:Lkfb;
 
-.field public static check_button_view_stub:I = 0x7f0a029a
+.field public final Z:Lbjg;
 
-.field public static media_bar_view__iv_constructor:I = 0x7f0a047a
+.field public final b:Lmfe;
 
-.field public static media_bar_view__iv_contact:I = 0x7f0a047b
+.field public final c:Lofe;
 
-.field public static media_bar_view__iv_drawing:I = 0x7f0a047c
+.field public final d:Llk8;
 
-.field public static media_bar_view__iv_file:I = 0x7f0a047d
+.field public final o:Lv36;
 
-.field public static media_bar_view__iv_gallery:I = 0x7f0a047e
+.field public final s0:Liz5;
 
-.field public static media_bar_view__iv_location:I = 0x7f0a0480
+.field public final t0:Lhxf;
 
-.field public static media_bar_view__iv_photo:I = 0x7f0a0481
+.field public final u0:Lhxf;
 
-.field public static media_bar_view__iv_video:I = 0x7f0a0483
+.field public final v0:Ltn5;
 
-.field public static media_bar_view__ll_constructor:I = 0x7f0a0484
+.field public final w0:Ltn5;
 
-.field public static media_bar_view__ll_contact:I = 0x7f0a0485
+.field public final x0:Lt2c;
 
-.field public static media_bar_view__ll_drawing:I = 0x7f0a0486
+.field public final y0:Lt2c;
 
-.field public static media_bar_view__ll_file:I = 0x7f0a0487
 
-.field public static media_bar_view__ll_gallery:I = 0x7f0a0488
+# direct methods
+.method public constructor <init>(Lmfe;Lofe;Llk8;Lv36;Lyie;Lkfb;Lbjg;Liz5;)V
+    .locals 0
 
-.field public static media_bar_view__ll_layout_create:I = 0x7f0a0489
+    invoke-direct {p0}, Lx0i;-><init>()V
 
-.field public static media_bar_view__ll_location:I = 0x7f0a048a
+    iput-object p1, p0, Lp9d;->b:Lmfe;
 
-.field public static media_bar_view__ll_photo:I = 0x7f0a048b
+    iput-object p2, p0, Lp9d;->c:Lofe;
 
-.field public static media_bar_view__ll_video:I = 0x7f0a048c
+    iput-object p3, p0, Lp9d;->d:Llk8;
 
-.field public static media_bar_view__tv_constructor:I = 0x7f0a048d
+    iput-object p4, p0, Lp9d;->o:Lv36;
 
-.field public static media_bar_view__tv_contact:I = 0x7f0a048e
+    iput-object p5, p0, Lp9d;->X:Lyie;
 
-.field public static media_bar_view__tv_drawing:I = 0x7f0a048f
+    iput-object p6, p0, Lp9d;->Y:Lkfb;
 
-.field public static media_bar_view__tv_file:I = 0x7f0a0490
+    iput-object p7, p0, Lp9d;->Z:Lbjg;
 
-.field public static media_bar_view__tv_gallery:I = 0x7f0a0491
+    iput-object p8, p0, Lp9d;->s0:Liz5;
 
-.field public static media_bar_view__tv_location:I = 0x7f0a0493
+    sget-object p1, Lx8d;->a:Lx8d;
 
-.field public static media_bar_view__tv_photo:I = 0x7f0a0494
+    invoke-static {p1}, Lixf;->a(Ljava/lang/Object;)Lhxf;
 
-.field public static media_bar_view__tv_video:I = 0x7f0a0496
+    move-result-object p1
 
-.field public static media_permissions_view_button:I = 0x7f0a04a0
+    iput-object p1, p0, Lp9d;->t0:Lhxf;
 
-.field public static media_permissions_view_title:I = 0x7f0a04a1
+    sget-object p1, Lg32;->c:Lg32;
 
-.field public static quick_camera_view__cv_camera:I = 0x7f0a09f1
+    invoke-static {p1}, Lixf;->a(Ljava/lang/Object;)Lhxf;
 
-.field public static row_media_bar_actions__icon:I = 0x7f0a0a79
+    move-result-object p1
 
-.field public static row_media_bar_actions__title:I = 0x7f0a0a7a
+    iput-object p1, p0, Lp9d;->u0:Lhxf;
 
-.field public static select_album_content_container:I = 0x7f0a0b18
+    new-instance p1, Ltn5;
 
-.field public static simple_drawee_view:I = 0x7f0a0b9e
+    const/4 p2, 0x0
 
-.field public static video_info:I = 0x7f0a0c43
+    invoke-direct {p1, p2}, Ltn5;-><init>(I)V
+
+    iput-object p1, p0, Lp9d;->v0:Ltn5;
+
+    new-instance p1, Ltn5;
+
+    invoke-direct {p1, p2}, Ltn5;-><init>(I)V
+
+    iput-object p1, p0, Lp9d;->w0:Ltn5;
+
+    new-instance p1, Lt2c;
+
+    const-string p2, "android.permission.RECORD_AUDIO"
+
+    filled-new-array {p2}, [Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Lt2c;-><init>([Ljava/lang/String;)V
+
+    iput-object p1, p0, Lp9d;->x0:Lt2c;
+
+    new-instance p1, Lt2c;
+
+    const-string p2, "android.permission.CAMERA"
+
+    filled-new-array {p2}, [Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Lt2c;-><init>([Ljava/lang/String;)V
+
+    iput-object p1, p0, Lp9d;->y0:Lt2c;
+
+    return-void
+.end method

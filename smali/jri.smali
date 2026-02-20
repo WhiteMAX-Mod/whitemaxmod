@@ -1,126 +1,258 @@
 .class public final Ljri;
-.super Lcpi;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lpsi;
+
+# static fields
+.field public static final synthetic b:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
+.field public static final synthetic c:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+
+.field public static final synthetic d:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+
+.field public static final synthetic e:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
 
 
 # instance fields
-.field public final synthetic d:I
+.field public final a:Ljava/util/concurrent/atomic/AtomicReferenceArray;
 
-.field public final synthetic e:Lb2b;
+.field private volatile synthetic blockingTasksInBuffer$volatile:I
+
+.field private volatile synthetic consumerIndex$volatile:I
+
+.field private volatile synthetic lastScheduledTask$volatile:Ljava/lang/Object;
+
+.field private volatile synthetic producerIndex$volatile:I
 
 
 # direct methods
-.method public constructor <init>(Lb2b;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput p2, p0, Ljri;->d:I
+    const-class v0, Ljava/lang/Object;
 
-    iput-object p1, p0, Ljri;->e:Lb2b;
+    const-string v1, "lastScheduledTask$volatile"
 
-    const-string p1, "com.google.android.gms.maps.internal.IOnMapReadyCallback"
+    const-class v2, Ljri;
 
-    const/4 p2, 0x6
+    invoke-static {v2, v0, v1}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
-    invoke-direct {p0, p1, p2}, Lcpi;-><init>(Ljava/lang/String;I)V
+    move-result-object v0
+
+    sput-object v0, Ljri;->b:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
+    const-string v0, "producerIndex$volatile"
+
+    invoke-static {v2, v0}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+
+    move-result-object v0
+
+    sput-object v0, Ljri;->c:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+
+    const-string v0, "consumerIndex$volatile"
+
+    invoke-static {v2, v0}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+
+    move-result-object v0
+
+    sput-object v0, Ljri;->d:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+
+    const-string v0, "blockingTasksInBuffer$volatile"
+
+    invoke-static {v2, v0}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+
+    move-result-object v0
+
+    sput-object v0, Ljri;->e:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicReferenceArray;
+
+    const/16 v1, 0x80
+
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicReferenceArray;-><init>(I)V
+
+    iput-object v0, p0, Ljri;->a:Ljava/util/concurrent/atomic/AtomicReferenceArray;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final O(Ly1j;)V
-    .locals 1
-
-    iget v0, p0, Ljri;->d:I
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v0, Lq07;
-
-    invoke-direct {v0, p1}, Lq07;-><init>(Ly1j;)V
-
-    iget-object p1, p0, Ljri;->e:Lb2b;
-
-    invoke-interface {p1, v0}, Lb2b;->U(Lq07;)V
-
-    return-void
-
-    :pswitch_0
-    new-instance v0, Lq07;
-
-    invoke-direct {v0, p1}, Lq07;-><init>(Ly1j;)V
-
-    iget-object p1, p0, Ljri;->e:Lb2b;
-
-    invoke-interface {p1, v0}, Lb2b;->U(Lq07;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final V(ILandroid/os/Parcel;Landroid/os/Parcel;)Z
+.method public final a(Ltlg;)Ltlg;
     .locals 4
 
-    const/4 v0, 0x1
+    sget-object v0, Ljri;->c:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
 
-    if-ne p1, v0, :cond_2
+    invoke-virtual {v0, p0}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->get(Ljava/lang/Object;)I
 
-    invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
+    move-result v1
 
-    move-result-object p1
+    sget-object v2, Ljri;->d:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
 
-    if-nez p1, :cond_0
+    invoke-virtual {v2, p0}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->get(Ljava/lang/Object;)I
 
-    const/4 p1, 0x0
+    move-result v2
 
-    goto :goto_0
+    sub-int/2addr v1, v2
+
+    const/16 v2, 0x7f
+
+    if-ne v1, v2, :cond_0
+
+    return-object p1
 
     :cond_0
-    const-string v1, "com.google.android.gms.maps.internal.IGoogleMapDelegate"
+    iget-boolean v1, p1, Ltlg;->taskContext:Z
 
-    invoke-interface {p1, v1}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
+    if-eqz v1, :cond_1
 
-    move-result-object v2
+    sget-object v1, Ljri;->e:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
 
-    instance-of v3, v2, Ly1j;
+    invoke-virtual {v1, p0}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->incrementAndGet(Ljava/lang/Object;)I
 
-    if-eqz v3, :cond_1
+    :cond_1
+    invoke-virtual {v0, p0}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->get(Ljava/lang/Object;)I
 
-    move-object p1, v2
+    move-result v1
 
-    check-cast p1, Ly1j;
+    and-int/2addr v1, v2
+
+    :goto_0
+    iget-object v2, p0, Ljri;->a:Ljava/util/concurrent/atomic/AtomicReferenceArray;
+
+    invoke-virtual {v2, v1}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_2
+
+    invoke-static {}, Ljava/lang/Thread;->yield()V
 
     goto :goto_0
 
-    :cond_1
-    new-instance v2, Ly1j;
-
-    const/4 v3, 0x3
-
-    invoke-direct {v2, p1, v1, v3}, Lwoi;-><init>(Landroid/os/IBinder;Ljava/lang/String;I)V
-
-    move-object p1, v2
-
-    :goto_0
-    invoke-static {p2}, Lvui;->b(Landroid/os/Parcel;)V
-
-    invoke-interface {p0, p1}, Lpsi;->O(Ly1j;)V
-
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
-
-    return v0
-
     :cond_2
+    invoke-virtual {v2, v1, p1}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->lazySet(ILjava/lang/Object;)V
+
+    invoke-virtual {v0, p0}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->incrementAndGet(Ljava/lang/Object;)I
+
     const/4 p1, 0x0
 
-    return p1
+    return-object p1
+.end method
+
+.method public final b()Ltlg;
+    .locals 5
+
+    :cond_0
+    :goto_0
+    sget-object v0, Ljri;->d:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+
+    invoke-virtual {v0, p0}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->get(Ljava/lang/Object;)I
+
+    move-result v1
+
+    sget-object v2, Ljri;->c:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+
+    invoke-virtual {v2, p0}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->get(Ljava/lang/Object;)I
+
+    move-result v2
+
+    sub-int v2, v1, v2
+
+    const/4 v3, 0x0
+
+    if-nez v2, :cond_1
+
+    return-object v3
+
+    :cond_1
+    and-int/lit8 v2, v1, 0x7f
+
+    add-int/lit8 v4, v1, 0x1
+
+    invoke-virtual {v0, p0, v1, v4}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->compareAndSet(Ljava/lang/Object;II)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Ljri;->a:Ljava/util/concurrent/atomic/AtomicReferenceArray;
+
+    invoke-virtual {v0, v2, v3}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->getAndSet(ILjava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ltlg;
+
+    if-nez v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-boolean v1, v0, Ltlg;->taskContext:Z
+
+    if-eqz v1, :cond_3
+
+    sget-object v1, Ljri;->e:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+
+    invoke-virtual {v1, p0}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->decrementAndGet(Ljava/lang/Object;)I
+
+    :cond_3
+    return-object v0
+.end method
+
+.method public final c(IZ)Ltlg;
+    .locals 4
+
+    and-int/lit8 p1, p1, 0x7f
+
+    iget-object v0, p0, Ljri;->a:Ljava/util/concurrent/atomic/AtomicReferenceArray;
+
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ltlg;
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_3
+
+    iget-boolean v3, v1, Ltlg;->taskContext:Z
+
+    if-ne v3, p2, :cond_3
+
+    :cond_0
+    invoke-virtual {v0, p1, v1, v2}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->compareAndSet(ILjava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    if-eqz p2, :cond_1
+
+    sget-object p1, Ljri;->e:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+
+    invoke-virtual {p1, p0}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->decrementAndGet(Ljava/lang/Object;)I
+
+    :cond_1
+    return-object v1
+
+    :cond_2
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    if-eq v3, v1, :cond_0
+
+    :cond_3
+    return-object v2
 .end method

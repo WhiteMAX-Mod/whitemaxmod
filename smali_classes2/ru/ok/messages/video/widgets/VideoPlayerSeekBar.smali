@@ -1,5 +1,5 @@
 .class public final Lru/ok/messages/video/widgets/VideoPlayerSeekBar;
-.super Lvo;
+.super Ljq;
 .source "SourceFile"
 
 
@@ -10,10 +10,10 @@
     }
     d2 = {
         "Lru/ok/messages/video/widgets/VideoPlayerSeekBar;",
-        "Lvo;",
+        "Ljq;",
         "",
         "color",
-        "Lb3h;",
+        "Lmah;",
         "setProgressColor",
         "(I)V",
         "setThumbColor",
@@ -41,19 +41,19 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
-    sget v0, Lh5d;->seekBarStyle:I
+    sget v0, Luad;->seekBarStyle:I
 
-    invoke-direct {p0, p1, p2, v0}, Lvo;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, p2, v0}, Ljq;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     if-eqz p2, :cond_0
 
-    sget-object v0, Legd;->VideoPlayerSeekBar:[I
+    sget-object v0, Lxld;->VideoPlayerSeekBar:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
-    sget p2, Legd;->VideoPlayerSeekBar_seekBarEnable:I
+    sget p2, Lxld;->VideoPlayerSeekBar_seekBarEnable:I
 
     const/4 v0, 0x1
 

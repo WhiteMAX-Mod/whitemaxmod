@@ -1,95 +1,56 @@
-.class public final Lnj7;
-.super Lwv4;
+.class public final synthetic Lnj7;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lkn6;
 
 
 # instance fields
-.field public final synthetic o:I
+.field public final synthetic a:I
 
-.field public final p:Ljava/lang/Object;
+.field public final synthetic b:Loj7;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/Surface;)V
-    .locals 2
+.method public synthetic constructor <init>(Loj7;Loj7;I)V
+    .locals 0
 
-    const/4 v0, 0x0
+    iput p3, p0, Lnj7;->a:I
 
-    iput v0, p0, Lnj7;->o:I
+    iput-object p2, p0, Lnj7;->b:Loj7;
 
-    .line 3
-    sget-object v0, Lwv4;->k:Landroid/util/Size;
-
-    const/4 v1, 0x0
-
-    invoke-direct {p0, v0, v1}, Lwv4;-><init>(Landroid/util/Size;I)V
-
-    .line 4
-    iput-object p1, p0, Lnj7;->p:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/view/Surface;Landroid/util/Size;I)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lnj7;->o:I
-
-    .line 1
-    invoke-direct {p0, p2, p3}, Lwv4;-><init>(Landroid/util/Size;I)V
-
-    .line 2
-    iput-object p1, p0, Lnj7;->p:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ly5g;Landroid/util/Size;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lnj7;->o:I
-
-    .line 5
-    iput-object p1, p0, Lnj7;->p:Ljava/lang/Object;
-
-    const/16 p1, 0x22
-
-    invoke-direct {p0, p2, p1}, Lwv4;-><init>(Landroid/util/Size;I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final f()Lie8;
+.method public final a(Lln6;)V
     .locals 1
 
-    iget v0, p0, Lnj7;->o:I
+    iget p1, p0, Lnj7;->a:I
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v0, p0, Lnj7;->b:Loj7;
 
-    iget-object v0, p0, Lnj7;->p:Ljava/lang/Object;
+    packed-switch p1, :pswitch_data_0
 
-    check-cast v0, Ly5g;
+    sget p1, Landroidx/camera/core/ImageProcessingUtil;->a:I
 
-    iget-object v0, v0, Ly5g;->g:Ltw1;
+    invoke-interface {v0}, Ljava/lang/AutoCloseable;->close()V
 
-    return-object v0
+    return-void
 
     :pswitch_0
-    iget-object v0, p0, Lnj7;->p:Ljava/lang/Object;
+    sget p1, Landroidx/camera/core/ImageProcessingUtil;->a:I
 
-    check-cast v0, Landroid/view/Surface;
+    if-eqz v0, :cond_0
 
-    invoke-static {v0}, Lnge;->g(Ljava/lang/Object;)Llj7;
+    invoke-interface {v0}, Ljava/lang/AutoCloseable;->close()V
 
-    move-result-object v0
-
-    return-object v0
+    :cond_0
+    return-void
 
     nop
 

@@ -2,146 +2,149 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Loza;
+
 
 # static fields
-.field public static final c:Leb0;
+.field public static final a:Leb0;
 
+.field public static final b:Ld16;
 
-# instance fields
-.field public final a:Lgc0;
+.field public static final c:Ld16;
 
-.field public final b:I
+.field public static final d:Ld16;
+
+.field public static final e:Ld16;
+
+.field public static final f:Ld16;
+
+.field public static final g:Ld16;
+
+.field public static final h:Ld16;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 1
 
     new-instance v0, Leb0;
 
-    sget-object v1, Lgc0;->j:Lgc0;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v2, 0x0
+    sput-object v0, Leb0;->a:Leb0;
 
-    invoke-direct {v0, v1, v2}, Leb0;-><init>(Lgc0;I)V
+    const-string v0, "eventTimeMs"
 
-    sput-object v0, Leb0;->c:Leb0;
+    invoke-static {v0}, Ld16;->c(Ljava/lang/String;)Ld16;
+
+    move-result-object v0
+
+    sput-object v0, Leb0;->b:Ld16;
+
+    const-string v0, "eventCode"
+
+    invoke-static {v0}, Ld16;->c(Ljava/lang/String;)Ld16;
+
+    move-result-object v0
+
+    sput-object v0, Leb0;->c:Ld16;
+
+    const-string v0, "eventUptimeMs"
+
+    invoke-static {v0}, Ld16;->c(Ljava/lang/String;)Ld16;
+
+    move-result-object v0
+
+    sput-object v0, Leb0;->d:Ld16;
+
+    const-string v0, "sourceExtension"
+
+    invoke-static {v0}, Ld16;->c(Ljava/lang/String;)Ld16;
+
+    move-result-object v0
+
+    sput-object v0, Leb0;->e:Ld16;
+
+    const-string v0, "sourceExtensionJsonProto3"
+
+    invoke-static {v0}, Ld16;->c(Ljava/lang/String;)Ld16;
+
+    move-result-object v0
+
+    sput-object v0, Leb0;->f:Ld16;
+
+    const-string v0, "timezoneOffsetSeconds"
+
+    invoke-static {v0}, Ld16;->c(Ljava/lang/String;)Ld16;
+
+    move-result-object v0
+
+    sput-object v0, Leb0;->g:Ld16;
+
+    const-string v0, "networkConnectionInfo"
+
+    invoke-static {v0}, Ld16;->c(Ljava/lang/String;)Ld16;
+
+    move-result-object v0
+
+    sput-object v0, Leb0;->h:Ld16;
 
     return-void
-.end method
-
-.method public constructor <init>(Lgc0;I)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    if-eqz p1, :cond_0
-
-    iput-object p1, p0, Leb0;->a:Lgc0;
-
-    iput p2, p0, Leb0;->b:I
-
-    return-void
-
-    :cond_0
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    const-string p2, "Null fallbackQuality"
-
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
-
-    if-ne p1, p0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    instance-of v0, p1, Leb0;
-
-    if-eqz v0, :cond_1
-
-    check-cast p1, Leb0;
-
-    iget-object v0, p0, Leb0;->a:Lgc0;
-
-    iget-object v1, p1, Leb0;->a:Lgc0;
-
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget v0, p0, Leb0;->b:I
-
-    iget p1, p1, Leb0;->b:I
-
-    if-ne v0, p1, :cond_1
-
-    :goto_0
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_1
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Leb0;->a:Lgc0;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    const v1, 0xf4243
-
-    xor-int/2addr v0, v1
-
-    mul-int/2addr v0, v1
-
-    iget v1, p0, Leb0;->b:I
-
-    xor-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 3
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    check-cast p1, Lwm8;
 
-    const-string v1, "RuleStrategy{fallbackQuality="
+    check-cast p2, Lpza;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    check-cast p1, Lld0;
 
-    iget-object v1, p0, Leb0;->a:Lgc0;
+    iget-wide v0, p1, Lld0;->a:J
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    sget-object v2, Leb0;->b:Ld16;
 
-    const-string v1, ", fallbackRule="
+    invoke-interface {p2, v2, v0, v1}, Lpza;->e(Ld16;J)Lpza;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    sget-object v0, Leb0;->c:Ld16;
 
-    iget v1, p0, Leb0;->b:I
+    iget-object v1, p1, Lld0;->b:Ljava/lang/Integer;
 
-    const-string v2, "}"
+    invoke-interface {p2, v0, v1}, Lpza;->a(Ld16;Ljava/lang/Object;)Lpza;
 
-    invoke-static {v0, v1, v2}, Lj27;->k(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+    sget-object v0, Leb0;->d:Ld16;
 
-    move-result-object v0
+    iget-wide v1, p1, Lld0;->c:J
 
-    return-object v0
+    invoke-interface {p2, v0, v1, v2}, Lpza;->e(Ld16;J)Lpza;
+
+    sget-object v0, Leb0;->e:Ld16;
+
+    iget-object v1, p1, Lld0;->d:[B
+
+    invoke-interface {p2, v0, v1}, Lpza;->a(Ld16;Ljava/lang/Object;)Lpza;
+
+    sget-object v0, Leb0;->f:Ld16;
+
+    iget-object v1, p1, Lld0;->e:Ljava/lang/String;
+
+    invoke-interface {p2, v0, v1}, Lpza;->a(Ld16;Ljava/lang/Object;)Lpza;
+
+    sget-object v0, Leb0;->g:Ld16;
+
+    iget-wide v1, p1, Lld0;->f:J
+
+    invoke-interface {p2, v0, v1, v2}, Lpza;->e(Ld16;J)Lpza;
+
+    sget-object v0, Leb0;->h:Ld16;
+
+    iget-object p1, p1, Lld0;->g:Ltma;
+
+    invoke-interface {p2, v0, p1}, Lpza;->a(Ld16;Ljava/lang/Object;)Lpza;
+
+    return-void
 .end method

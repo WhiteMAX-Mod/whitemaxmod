@@ -1,460 +1,134 @@
-.class public final Lckd;
+.class public abstract Lckd;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
-# instance fields
-.field public final a:Landroid/content/Context;
+# static fields
+.field public static permission_fsi_request:I = 0x7f130af7
 
-.field public final b:Lsjd;
+.field public static permission_fsi_request_rationale:I = 0x7f130af8
 
-.field public c:Lbkd;
+.field public static permissions_allow_access:I = 0x7f130af9
 
-.field public final d:Lovf;
+.field public static permissions_audio_denied_title:I = 0x7f130afa
 
-.field public final e:Landroidx/recyclerview/widget/RecyclerView;
+.field public static permissions_audio_for_video_not_granted:I = 0x7f130afb
 
+.field public static permissions_audio_for_video_request:I = 0x7f130afc
 
-# direct methods
-.method public constructor <init>(Landroid/content/Context;Ljava/util/concurrent/ExecutorService;)V
-    .locals 13
+.field public static permissions_audio_for_video_request_denied:I = 0x7f130afd
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static permissions_audio_not_granted:I = 0x7f130afe
 
-    iput-object p1, p0, Lckd;->a:Landroid/content/Context;
+.field public static permissions_audio_request:I = 0x7f130aff
 
-    new-instance v2, Lsjd;
+.field public static permissions_audio_request_denied:I = 0x7f130b00
 
-    invoke-direct {v2, p1}, Lsjd;-><init>(Landroid/content/Context;)V
+.field public static permissions_audio_title:I = 0x7f130b01
 
-    iput-object v2, p0, Lckd;->b:Lsjd;
+.field public static permissions_background_location_denied:I = 0x7f130b02
 
-    new-instance v0, Lovf;
+.field public static permissions_calls_audio:I = 0x7f130b03
 
-    new-instance v3, Lg3b;
+.field public static permissions_calls_audio_denied:I = 0x7f130b04
 
-    const/16 v1, 0x19
+.field public static permissions_calls_audio_not_granted:I = 0x7f130b05
 
-    invoke-direct {v3, v1, p0}, Lg3b;-><init>(ILjava/lang/Object;)V
+.field public static permissions_calls_audio_video_request:I = 0x7f130b06
 
-    new-instance v4, Ln0d;
+.field public static permissions_calls_audio_video_request_title:I = 0x7f130b07
 
-    const/4 v1, 0x2
+.field public static permissions_calls_only_audio:I = 0x7f130b08
 
-    invoke-direct {v4, v1, p0}, Ln0d;-><init>(ILjava/lang/Object;)V
+.field public static permissions_calls_only_calls:I = 0x7f130b09
 
-    const/4 v5, 0x1
+.field public static permissions_calls_only_video:I = 0x7f130b0a
 
-    move-object v1, p2
+.field public static permissions_calls_only_video_bluetooth_connect:I = 0x7f130b0b
 
-    invoke-direct/range {v0 .. v5}, Lovf;-><init>(Ljava/util/concurrent/Executor;Ljava/lang/Object;Lnq6;Lgr6;I)V
+.field public static permissions_calls_video:I = 0x7f130b0c
 
-    iput-object v0, p0, Lckd;->d:Lovf;
+.field public static permissions_calls_video_bluetooth_connect:I = 0x7f130b0d
 
-    new-instance p2, Lnb4;
+.field public static permissions_calls_video_denied:I = 0x7f130b0e
 
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+.field public static permissions_calls_video_not_granted:I = 0x7f130b0f
 
-    move-result-object v1
+.field public static permissions_calls_video_preview_request:I = 0x7f130b10
 
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+.field public static permissions_calls_video_request:I = 0x7f130b11
 
-    move-result-object v1
+.field public static permissions_calls_video_request_denied:I = 0x7f130b12
 
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+.field public static permissions_calls_video_request_not_granted:I = 0x7f130b13
 
-    const/high16 v2, 0x41c00000    # 24.0f
+.field public static permissions_camera_and_storage_not_granted:I = 0x7f130b14
 
-    mul-float/2addr v1, v2
+.field public static permissions_camera_not_granted:I = 0x7f130b15
 
-    invoke-direct {p2, v1}, Lnb4;-><init>(F)V
+.field public static permissions_camera_request_denied_permanently:I = 0x7f130b16
 
-    new-instance v1, Landroidx/recyclerview/widget/RecyclerView;
+.field public static permissions_camera_request_photo:I = 0x7f130b17
 
-    const/4 v2, 0x0
+.field public static permissions_camera_request_photo_denied:I = 0x7f130b18
 
-    invoke-direct {v1, p1, v2}, Landroidx/recyclerview/widget/RecyclerView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+.field public static permissions_camera_request_photo_with_storage:I = 0x7f130b19
 
-    sget v3, Lqad;->one_chat_react_panel_layout:I
+.field public static permissions_camera_request_photo_with_storage_denied:I = 0x7f130b1a
 
-    invoke-virtual {v1, v3}, Landroid/view/View;->setId(I)V
+.field public static permissions_camera_request_video:I = 0x7f130b1b
 
-    new-instance v3, Landroidx/recyclerview/widget/GridLayoutManager;
+.field public static permissions_camera_request_video_with_storage:I = 0x7f130b1c
 
-    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
+.field public static permissions_camera_request_video_with_storage_denied:I = 0x7f130b1d
 
-    const/16 v4, 0x8
+.field public static permissions_contacts_not_granted:I = 0x7f130b1e
 
-    invoke-direct {v3, v4}, Landroidx/recyclerview/widget/GridLayoutManager;-><init>(I)V
+.field public static permissions_contacts_request:I = 0x7f130b1f
 
-    invoke-virtual {v1, v3}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/a;)V
+.field public static permissions_contacts_request_denied:I = 0x7f130b20
 
-    new-instance v3, La35;
+.field public static permissions_contacts_request_rationale:I = 0x7f130b21
 
-    new-instance v5, Lch6;
+.field public static permissions_dialog_enable_access:I = 0x7f130b22
 
-    const/4 v6, 0x2
+.field public static permissions_dialog_no:I = 0x7f130b23
 
-    invoke-direct {v5, v1, v6}, Lch6;-><init>(Landroidx/recyclerview/widget/RecyclerView;I)V
+.field public static permissions_dialog_open_setting:I = 0x7f130b24
 
-    invoke-static {p1}, Lbnj;->a(Landroid/content/Context;)I
+.field public static permissions_dialog_yes:I = 0x7f130b25
 
-    move-result p1
+.field public static permissions_files_request_denied:I = 0x7f130b26
 
-    const/16 v6, 0x168
+.field public static permissions_fsi_request_positive_button:I = 0x7f130b27
 
-    if-lt p1, v6, :cond_0
+.field public static permissions_location_denied:I = 0x7f130b28
 
-    const/16 p1, 0xa
+.field public static permissions_location_not_granted:I = 0x7f130b29
 
-    goto :goto_0
+.field public static permissions_location_rationale_live:I = 0x7f130b2b
 
-    :cond_0
-    move p1, v4
+.field public static permissions_location_rationale_nearby:I = 0x7f130b2c
 
-    :goto_0
-    int-to-float p1, p1
+.field public static permissions_location_rationale_send:I = 0x7f130b2e
 
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+.field public static permissions_post_notification_request_positive_button:I = 0x7f130b30
 
-    move-result-object v6
+.field public static permissions_post_notification_request_rationale:I = 0x7f130b31
 
-    invoke-virtual {v6}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+.field public static permissions_post_notification_request_title:I = 0x7f130b32
 
-    move-result-object v6
+.field public static permissions_storage_not_granted:I = 0x7f130b33
 
-    iget v6, v6, Landroid/util/DisplayMetrics;->density:F
+.field public static permissions_storage_request:I = 0x7f130b34
 
-    mul-float/2addr p1, v6
+.field public static permissions_storage_request_denied:I = 0x7f130b35
 
-    invoke-static {p1}, Lq7j;->c(F)I
+.field public static permissions_storage_video_save_request_denied:I = 0x7f130b36
 
-    move-result p1
+.field public static permissions_storage_video_share_request_denied:I = 0x7f130b37
 
-    new-instance v6, Lmp8;
+.field public static permissions_video_message_request:I = 0x7f130b38
 
-    const/4 v7, 0x0
+.field public static permissions_video_message_request_only_camera_title:I = 0x7f130b39
 
-    const/4 v8, 0x2
-
-    const-class v9, Lckd;
-
-    const-string v11, "isExpanded"
-
-    const-string v12, "isExpanded()Z"
-
-    move-object v10, p0
-
-    invoke-direct/range {v6 .. v12}, Lmp8;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-direct {v3, v5, p1, v6}, La35;-><init>(Lch6;ILmp8;)V
-
-    invoke-virtual {v1, v3}, Landroidx/recyclerview/widget/RecyclerView;->j(Lcsd;)V
-
-    invoke-virtual {v1, p2}, Landroid/view/View;->setOutlineProvider(Landroid/view/ViewOutlineProvider;)V
-
-    const/4 p1, 0x1
-
-    invoke-virtual {v1, p1}, Landroidx/recyclerview/widget/RecyclerView;->setHasFixedSize(Z)V
-
-    const/4 p1, 0x0
-
-    invoke-virtual {v1, p1}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-virtual {v1, v0}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Lwrd;)V
-
-    const/4 p2, 0x2
-
-    invoke-virtual {v1, p2}, Landroid/view/View;->setOverScrollMode(I)V
-
-    invoke-virtual {v1, v2}, Landroidx/recyclerview/widget/RecyclerView;->setItemAnimator(Lbsd;)V
-
-    invoke-virtual {v1, p1}, Landroidx/recyclerview/widget/RecyclerView;->setClipToPadding(Z)V
-
-    invoke-virtual {v1, p1}, Landroid/view/ViewGroup;->setClipChildren(Z)V
-
-    invoke-virtual {v1, p1}, Landroid/view/View;->setClipToOutline(Z)V
-
-    int-to-float p1, v4
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object p2
-
-    invoke-virtual {p2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object p2
-
-    iget p2, p2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p2, p1
-
-    invoke-static {p2}, Lq7j;->c(F)I
-
-    move-result p2
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p1, v0
-
-    invoke-static {p1}, Lq7j;->c(F)I
-
-    move-result p1
-
-    const/16 v0, 0xc
-
-    int-to-float v0, v0
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v3, v0
-
-    invoke-static {v3}, Lq7j;->c(F)I
-
-    move-result v3
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v4
-
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v0, v4
-
-    invoke-static {v0}, Lq7j;->c(F)I
-
-    move-result v0
-
-    invoke-virtual {v1, v3, p2, v0, p1}, Landroid/view/View;->setPadding(IIII)V
-
-    new-instance p1, Lz0a;
-
-    const/16 p2, 0x10
-
-    invoke-direct {p1, p0, v2, p2}, Lz0a;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
-
-    invoke-static {p1, v1}, Lp6j;->b(Ldr6;Landroid/view/View;)V
-
-    iput-object v1, v10, Lckd;->e:Landroidx/recyclerview/widget/RecyclerView;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a(I)I
-    .locals 3
-
-    rem-int/lit8 v0, p1, 0x8
-
-    const/16 v1, 0x8
-
-    if-nez v0, :cond_0
-
-    div-int/2addr p1, v1
-
-    goto :goto_0
-
-    :cond_0
-    div-int/2addr p1, v1
-
-    add-int/lit8 p1, p1, 0x1
-
-    :goto_0
-    int-to-float v0, v1
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v0, v1
-
-    invoke-static {v0}, Lq7j;->c(F)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x2
-
-    iget-object v1, p0, Lckd;->b:Lsjd;
-
-    invoke-virtual {v1}, Lsjd;->a()I
-
-    move-result v1
-
-    int-to-float v1, v1
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    invoke-static {v1, v2, p1, v0}, Lhc0;->c(FFII)I
-
-    move-result v0
-
-    add-int/lit8 p1, p1, -0x1
-
-    const/16 v1, 0xc
-
-    int-to-float v1, v1
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    invoke-static {v1, v2, p1, v0}, Lhc0;->c(FFII)I
-
-    move-result p1
-
-    const/16 v0, 0xf0
-
-    int-to-float v0, v0
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v0, v1
-
-    invoke-static {v0}, Lq7j;->c(F)I
-
-    move-result v0
-
-    invoke-static {p1, v0}, Ljava/lang/Math;->min(II)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final b(Ljava/util/List;Ljava/lang/Integer;)V
-    .locals 3
-
-    invoke-interface {p1}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    iget-object v1, p0, Lckd;->e:Landroidx/recyclerview/widget/RecyclerView;
-
-    const/16 v2, 0x8
-
-    if-le v0, v2, :cond_2
-
-    if-eqz p2, :cond_3
-
-    invoke-virtual {p2}, Ljava/lang/Number;->intValue()I
-
-    move-result p2
-
-    invoke-virtual {v1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {p1}, Ljava/util/List;->size()I
-
-    move-result v2
-
-    invoke-virtual {p0, v2}, Lckd;->a(I)I
-
-    move-result v2
-
-    if-lez p2, :cond_0
-
-    invoke-static {v2, p2}, Ljava/lang/Math;->min(II)I
-
-    move-result v2
-
-    :cond_0
-    iput v2, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    goto :goto_0
-
-    :cond_1
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    const-string p2, "null cannot be cast to non-null type android.view.ViewGroup.LayoutParams"
-
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_2
-    invoke-interface {p1}, Ljava/util/List;->size()I
-
-    move-result p2
-
-    if-ge p2, v2, :cond_3
-
-    invoke-virtual {v1}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
-
-    move-result-object p2
-
-    check-cast p2, Landroidx/recyclerview/widget/GridLayoutManager;
-
-    invoke-interface {p1}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    invoke-virtual {p2, v0}, Landroidx/recyclerview/widget/GridLayoutManager;->C1(I)V
-
-    :cond_3
-    :goto_0
-    new-instance p2, Lk9b;
-
-    const/16 v0, 0xe
-
-    invoke-direct {p2, v0, p0}, Lk9b;-><init>(ILjava/lang/Object;)V
-
-    iget-object v0, p0, Lckd;->d:Lovf;
-
-    invoke-virtual {v0, p1, p2}, Lnd8;->G(Ljava/util/List;Ljava/lang/Runnable;)V
-
-    return-void
-.end method
+.field public static permissions_video_message_request_title:I = 0x7f130b3a

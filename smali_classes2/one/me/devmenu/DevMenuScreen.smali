@@ -32,28 +32,28 @@
 
 
 # static fields
-.field public static final synthetic Y:[Lz28;
+.field public static final synthetic Y:[Lv58;
 
 
 # instance fields
-.field public final X:Ljld;
+.field public final X:Lgrd;
 
-.field public final a:Les7;
+.field public final a:Lus7;
 
-.field public final b:Ljava/util/List;
+.field public final b:Lj88;
 
-.field public c:Ld94;
+.field public c:Lsa4;
 
-.field public final d:Lv1j;
+.field public final d:Le7e;
 
-.field public final o:Ljld;
+.field public final o:Lgrd;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 6
 
-    new-instance v0, Liyc;
+    new-instance v0, Lv3d;
 
     const-class v1, Lone/me/devmenu/DevMenuScreen;
 
@@ -63,21 +63,21 @@
 
     const/4 v4, 0x0
 
-    invoke-direct {v0, v1, v2, v3, v4}, Liyc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v2, v3, v4}, Lv3d;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    sget-object v2, Lctd;->a:Ldtd;
+    sget-object v2, Lazd;->a:Lbzd;
 
     const-string v3, "viewPager"
 
     const-string v5, "getViewPager()Landroidx/viewpager2/widget/ViewPager2;"
 
-    invoke-static {v2, v1, v3, v5, v4}, Lj27;->e(Ldtd;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Liyc;
+    invoke-static {v2, v1, v3, v5, v4}, Lo16;->g(Lbzd;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lv3d;
 
     move-result-object v1
 
     const/4 v2, 0x2
 
-    new-array v2, v2, [Lz28;
+    new-array v2, v2, [Lv58;
 
     aput-object v0, v2, v4
 
@@ -85,7 +85,7 @@
 
     aput-object v1, v2, v0
 
-    sput-object v2, Lone/me/devmenu/DevMenuScreen;->Y:[Lz28;
+    sput-object v2, Lone/me/devmenu/DevMenuScreen;->Y:[Lv58;
 
     return-void
 .end method
@@ -95,65 +95,63 @@
 
     const/4 v0, 0x0
 
-    const/4 v1, 0x3
+    const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    const/4 v2, 0x3
 
-    invoke-direct {p0, v2, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILso4;)V
+    invoke-direct {p0, v0, v1, v2, v0}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILfq4;)V
 
-    sget-object v0, Les7;->f:Les7;
+    sget-object v0, Lus7;->f:Lus7;
 
-    iput-object v0, p0, Lone/me/devmenu/DevMenuScreen;->a:Les7;
+    iput-object v0, p0, Lone/me/devmenu/DevMenuScreen;->a:Lus7;
 
-    sget-object v0, Loy4;->a:Loy4;
+    sget-object v0, Lwz4;->a:Lwz4;
 
     invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
 
     move-result-object v0
 
-    const/4 v1, 0x2
-
-    invoke-virtual {v0, v1}, Lr5;->a(I)Ljava/util/ArrayList;
+    invoke-virtual {v0, v2}, Lr5;->b(I)Lbgg;
 
     move-result-object v0
 
-    iput-object v0, p0, Lone/me/devmenu/DevMenuScreen;->b:Ljava/util/List;
+    iput-object v0, p0, Lone/me/devmenu/DevMenuScreen;->b:Lj88;
 
-    new-instance v0, Lv1j;
+    new-instance v0, Le7e;
 
-    const/16 v1, 0x13
+    const/16 v1, 0x10
 
-    invoke-direct {v0, v1}, Lv1j;-><init>(I)V
+    invoke-direct {v0, v1}, Le7e;-><init>(I)V
 
-    iput-object v0, p0, Lone/me/devmenu/DevMenuScreen;->d:Lv1j;
+    iput-object v0, p0, Lone/me/devmenu/DevMenuScreen;->d:Le7e;
 
-    sget v0, Ll8d;->oneme_devmenu_screen_view_tab_layout:I
+    sget v0, Lydd;->oneme_devmenu_screen_view_tab_layout:I
 
-    invoke-virtual {p0, v0}, Lone/me/sdk/arch/Widget;->viewBinding(I)Ljld;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lone/me/devmenu/DevMenuScreen;->o:Ljld;
-
-    sget v0, Ll8d;->oneme_devmenu_screen_view_view_pager:I
-
-    invoke-virtual {p0, v0}, Lone/me/sdk/arch/Widget;->viewBinding(I)Ljld;
+    invoke-virtual {p0, v0}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lgrd;
 
     move-result-object v0
 
-    iput-object v0, p0, Lone/me/devmenu/DevMenuScreen;->X:Ljld;
+    iput-object v0, p0, Lone/me/devmenu/DevMenuScreen;->o:Lgrd;
+
+    sget v0, Lydd;->oneme_devmenu_screen_view_view_pager:I
+
+    invoke-virtual {p0, v0}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lgrd;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lone/me/devmenu/DevMenuScreen;->X:Lgrd;
 
     return-void
 .end method
 
-.method public static z0(Landroid/view/View;)V
+.method public static H0(Landroid/view/View;)V
     .locals 3
 
     instance-of v0, p0, Landroid/widget/EditText;
 
     if-eqz v0, :cond_0
 
-    invoke-static {p0}, Li3j;->c(Landroid/view/View;)V
+    invoke-static {p0}, Lxcj;->d(Landroid/view/View;)V
 
     :cond_0
     instance-of v0, p0, Landroid/view/ViewGroup;
@@ -175,7 +173,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lone/me/devmenu/DevMenuScreen;->z0(Landroid/view/View;)V
+    invoke-static {v2}, Lone/me/devmenu/DevMenuScreen;->H0(Landroid/view/View;)V
 
     add-int/lit8 v1, v1, 0x1
 
@@ -187,10 +185,10 @@
 
 
 # virtual methods
-.method public final getInsetsConfig()Les7;
+.method public final getInsetsConfig()Lus7;
     .locals 1
 
-    iget-object v0, p0, Lone/me/devmenu/DevMenuScreen;->a:Les7;
+    iget-object v0, p0, Lone/me/devmenu/DevMenuScreen;->a:Lus7;
 
     return-object v0
 .end method
@@ -214,7 +212,7 @@
 
     invoke-virtual {v0, p2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    sget p1, Ll8d;->oneme_devmenu_screen_view:I
+    sget p1, Lydd;->oneme_devmenu_screen_view:I
 
     invoke-virtual {v0, p1}, Landroid/view/View;->setId(I)V
 
@@ -222,43 +220,41 @@
 
     invoke-virtual {v0, p1}, Landroid/widget/LinearLayout;->setOrientation(I)V
 
-    new-instance p2, Lymb;
+    new-instance p2, Lmpb;
 
     invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    const/4 v2, 0x6
+    invoke-direct {p2, v1}, Lmpb;-><init>(Landroid/content/Context;)V
 
-    invoke-direct {p2, v1, v2}, Lymb;-><init>(Landroid/content/Context;I)V
-
-    sget v1, Ll8d;->oneme_devmenu_screen_view_oneme_toolbar:I
+    sget v1, Lydd;->oneme_devmenu_screen_view_oneme_toolbar:I
 
     invoke-virtual {p2, v1}, Landroid/view/View;->setId(I)V
 
-    sget-object v1, Lqmb;->b:Lqmb;
+    sget-object v1, Lepb;->b:Lepb;
 
-    invoke-virtual {p2, v1}, Lymb;->setForm(Lqmb;)V
+    invoke-virtual {p2, v1}, Lmpb;->setForm(Lepb;)V
 
     const-string v1, "Dev menu"
 
-    invoke-virtual {p2, v1}, Lymb;->setTitle(Ljava/lang/CharSequence;)V
+    invoke-virtual {p2, v1}, Lmpb;->setTitle(Ljava/lang/CharSequence;)V
 
-    new-instance v1, Lgmb;
+    new-instance v1, Luob;
 
-    new-instance v2, Lj53;
+    new-instance v2, Li05;
 
-    const/16 v3, 0x1a
+    const/4 v3, 0x0
 
-    invoke-direct {v2, v3}, Lj53;-><init>(I)V
+    invoke-direct {v2, v3}, Li05;-><init>(I)V
 
-    invoke-direct {v1, v2}, Lgmb;-><init>(Lnq6;)V
+    invoke-direct {v1, v2}, Luob;-><init>(Lks6;)V
 
-    invoke-virtual {p2, v1}, Lymb;->setLeftActions(Lmmb;)V
+    invoke-virtual {p2, v1}, Lmpb;->setLeftActions(Lapb;)V
 
     invoke-virtual {v0, p2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    new-instance p2, Lolb;
+    new-instance p2, Lrnb;
 
     invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -266,19 +262,19 @@
 
     const/4 v2, 0x0
 
-    invoke-direct {p2, v1, v2}, Lolb;-><init>(Landroid/content/Context;I)V
+    invoke-direct {p2, v1, v2}, Lrnb;-><init>(Landroid/content/Context;I)V
 
-    sget v1, Ll8d;->oneme_devmenu_screen_view_tab_layout:I
+    sget v1, Lydd;->oneme_devmenu_screen_view_tab_layout:I
 
     invoke-virtual {p2, v1}, Landroid/view/View;->setId(I)V
 
     invoke-virtual {p2, v2}, Lcom/google/android/material/tabs/TabLayout;->setTabMode(I)V
 
-    new-instance v1, Ljn;
+    new-instance v1, Lyo;
 
-    invoke-direct {v1}, Ljn;-><init>()V
+    invoke-direct {v1}, Lyo;-><init>()V
 
-    invoke-virtual {p2, v1}, Lolb;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {p2, v1}, Lrnb;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     invoke-virtual {v0, p2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
@@ -290,7 +286,7 @@
 
     invoke-direct {p2, v1}, Landroidx/viewpager2/widget/ViewPager2;-><init>(Landroid/content/Context;)V
 
-    sget v1, Ll8d;->oneme_devmenu_screen_view_view_pager:I
+    sget v1, Lydd;->oneme_devmenu_screen_view_view_pager:I
 
     invoke-virtual {p2, v1}, Landroid/view/View;->setId(I)V
 
@@ -302,15 +298,15 @@
 
     invoke-virtual {p2, p1}, Landroidx/viewpager2/widget/ViewPager2;->setOffscreenPageLimit(I)V
 
-    new-instance p1, Lyy4;
+    new-instance p1, Lj05;
 
-    invoke-direct {p1, p2, p0}, Lyy4;-><init>(Landroidx/viewpager2/widget/ViewPager2;Lone/me/devmenu/DevMenuScreen;)V
+    invoke-direct {p1, p2, p0}, Lj05;-><init>(Landroidx/viewpager2/widget/ViewPager2;Lone/me/devmenu/DevMenuScreen;)V
 
-    invoke-virtual {p2, p1}, Landroidx/viewpager2/widget/ViewPager2;->b(Lmuh;)V
+    invoke-virtual {p2, p1}, Landroidx/viewpager2/widget/ViewPager2;->f(Lv1i;)V
 
     invoke-virtual {v0, p2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    new-instance p1, Lli1;
+    new-instance p1, Lcj1;
 
     const/4 p2, 0x3
 
@@ -318,9 +314,9 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {p1, p2, v1, p3}, Lli1;-><init>(ILkotlin/coroutines/Continuation;I)V
+    invoke-direct {p1, p2, v1, p3}, Lcj1;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    invoke-static {p1, v0}, Lp6j;->b(Ldr6;Landroid/view/View;)V
+    invoke-static {p1, v0}, Lxej;->l(Lat6;Landroid/view/View;)V
 
     return-object v0
 .end method
@@ -328,9 +324,15 @@
 .method public final onDestroy()V
     .locals 2
 
-    invoke-super {p0}, La94;->onDestroy()V
+    invoke-super {p0}, Lpa4;->onDestroy()V
 
-    iget-object v0, p0, Lone/me/devmenu/DevMenuScreen;->b:Ljava/util/List;
+    iget-object v0, p0, Lone/me/devmenu/DevMenuScreen;->b:Lj88;
+
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/List;
 
     invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
@@ -347,9 +349,9 @@
 
     move-result-object v1
 
-    check-cast v1, Lfz4;
+    check-cast v1, Lr05;
 
-    invoke-interface {v1}, Lfz4;->b()V
+    invoke-interface {v1}, Lr05;->f()V
 
     goto :goto_0
 
@@ -360,16 +362,16 @@
 .method public final onDestroyView(Landroid/view/View;)V
     .locals 0
 
-    iget-object p1, p0, Lone/me/devmenu/DevMenuScreen;->c:Ld94;
+    iget-object p1, p0, Lone/me/devmenu/DevMenuScreen;->c:Lsa4;
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Ld94;->c()V
+    invoke-virtual {p1}, Lsa4;->c()V
 
     :cond_0
     const/4 p1, 0x0
 
-    iput-object p1, p0, Lone/me/devmenu/DevMenuScreen;->c:Ld94;
+    iput-object p1, p0, Lone/me/devmenu/DevMenuScreen;->c:Lsa4;
 
     return-void
 .end method
@@ -377,73 +379,73 @@
 .method public final onViewCreated(Landroid/view/View;)V
     .locals 9
 
-    sget-object p1, Lone/me/devmenu/DevMenuScreen;->Y:[Lz28;
+    sget-object p1, Lone/me/devmenu/DevMenuScreen;->Y:[Lv58;
 
     const/4 v0, 0x1
 
     aget-object v1, p1, v0
 
-    iget-object v2, p0, Lone/me/devmenu/DevMenuScreen;->X:Ljld;
+    iget-object v2, p0, Lone/me/devmenu/DevMenuScreen;->X:Lgrd;
 
-    invoke-interface {v2, p0, v1}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+    invoke-interface {v2, p0, v1}, Lgrd;->D(Ljava/lang/Object;Lv58;)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Landroidx/viewpager2/widget/ViewPager2;
 
-    new-instance v3, Lxy4;
+    new-instance v3, Lh05;
 
-    invoke-direct {v3, p0}, Ljf4;-><init>(Lone/me/sdk/arch/Widget;)V
+    invoke-direct {v3, p0}, Lxg4;-><init>(Lone/me/sdk/arch/Widget;)V
 
-    invoke-virtual {v1, v3}, Landroidx/viewpager2/widget/ViewPager2;->setAdapter(Lwrd;)V
+    invoke-virtual {v1, v3}, Landroidx/viewpager2/widget/ViewPager2;->setAdapter(Lsxd;)V
 
     const/4 v1, 0x0
 
     aget-object v3, p1, v1
 
-    iget-object v4, p0, Lone/me/devmenu/DevMenuScreen;->o:Ljld;
+    iget-object v4, p0, Lone/me/devmenu/DevMenuScreen;->o:Lgrd;
 
-    invoke-interface {v4, p0, v3}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+    invoke-interface {v4, p0, v3}, Lgrd;->D(Ljava/lang/Object;Lv58;)Ljava/lang/Object;
 
     move-result-object v3
 
-    check-cast v3, Lolb;
+    check-cast v3, Lrnb;
 
     aget-object v4, p1, v0
 
-    invoke-interface {v2, p0, v4}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+    invoke-interface {v2, p0, v4}, Lgrd;->D(Ljava/lang/Object;Lv58;)Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Landroidx/viewpager2/widget/ViewPager2;
 
-    iget-object v5, p0, Lone/me/devmenu/DevMenuScreen;->d:Lv1j;
+    iget-object v5, p0, Lone/me/devmenu/DevMenuScreen;->d:Le7e;
 
     invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    new-instance v6, Ld94;
+    new-instance v6, Lsa4;
 
-    new-instance v7, Lvt4;
+    new-instance v7, Lev4;
 
     const/4 v8, 0x3
 
-    invoke-direct {v7, v5, v8, v3}, Lvt4;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v7, v5, v8, v3}, Lev4;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-direct {v6, v3, v4, v7}, Ld94;-><init>(Lcom/google/android/material/tabs/TabLayout;Landroidx/viewpager2/widget/ViewPager2;Lpag;)V
+    invoke-direct {v6, v3, v4, v7}, Lsa4;-><init>(Lcom/google/android/material/tabs/TabLayout;Landroidx/viewpager2/widget/ViewPager2;Ldig;)V
 
-    invoke-virtual {v6}, Ld94;->b()V
+    invoke-virtual {v6}, Lsa4;->b()V
 
-    iput-object v6, p0, Lone/me/devmenu/DevMenuScreen;->c:Ld94;
+    iput-object v6, p0, Lone/me/devmenu/DevMenuScreen;->c:Lsa4;
 
     aget-object p1, p1, v0
 
-    invoke-interface {v2, p0, p1}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+    invoke-interface {v2, p0, p1}, Lgrd;->D(Ljava/lang/Object;Lv58;)Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, Landroidx/viewpager2/widget/ViewPager2;
 
-    invoke-virtual {p1, v1, v1}, Landroidx/viewpager2/widget/ViewPager2;->e(IZ)V
+    invoke-virtual {p1, v1, v1}, Landroidx/viewpager2/widget/ViewPager2;->i(IZ)V
 
     return-void
 .end method

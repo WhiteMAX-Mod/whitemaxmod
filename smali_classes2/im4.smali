@@ -1,148 +1,142 @@
-.class public final Lim4;
-.super Ljava/lang/Object;
+.class public final enum Lim4;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:Ljava/lang/String;
+# static fields
+.field public static final enum b:Lim4;
 
-.field public final b:Ljava/util/ArrayList;
+.field public static final enum c:Lim4;
+
+.field public static final d:[Lim4;
+
+.field public static final synthetic o:[Lim4;
+
+
+# instance fields
+.field public final a:I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 6
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lim4;
 
-    const-string v0, ""
-
-    iput-object v0, p0, Lim4;->a:Ljava/lang/String;
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lim4;->b:Ljava/util/ArrayList;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a()Landroid/net/Uri;
-    .locals 1
-
-    invoke-virtual {p0}, Lim4;->b()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lqmj;->a(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final b()Ljava/lang/String;
-    .locals 3
-
-    iget-object v0, p0, Lim4;->a:Ljava/lang/String;
-
-    const-string v1, ":"
+    const-string v1, "DISABLED"
 
     const/4 v2, 0x0
 
-    invoke-static {v0, v1, v2}, Lzzf;->t(Ljava/lang/String;Ljava/lang/String;Z)Z
+    invoke-direct {v0, v1, v2, v2}, Lim4;-><init>(Ljava/lang/String;II)V
 
-    move-result v0
+    sput-object v0, Lim4;->b:Lim4;
 
-    if-eqz v0, :cond_1
+    new-instance v1, Lim4;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v2, "LOGS"
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    const/4 v3, 0x1
 
-    iget-object v1, p0, Lim4;->a:Ljava/lang/String;
+    invoke-direct {v1, v2, v3, v3}, Lim4;-><init>(Ljava/lang/String;II)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance v2, Lim4;
 
-    const/16 v1, 0x3f
+    const-string v3, "FILE_LOGS"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    const/4 v4, 0x2
 
-    iget-object v1, p0, Lim4;->b:Ljava/util/ArrayList;
+    invoke-direct {v2, v3, v4, v4}, Lim4;-><init>(Ljava/lang/String;II)V
 
-    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    new-instance v3, Lim4;
 
-    move-result-object v1
+    const-string v4, "DEV_OPTIONS_MENU"
 
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    const/4 v5, 0x3
 
-    move-result v2
+    invoke-direct {v3, v4, v5, v5}, Lim4;-><init>(Ljava/lang/String;II)V
 
-    if-eqz v2, :cond_0
+    sput-object v3, Lim4;->c:Lim4;
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/String;
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/16 v2, 0x26
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    goto :goto_0
-
-    :cond_0
-    invoke-static {v0}, Lrzf;->A(Ljava/lang/CharSequence;)I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->deleteCharAt(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    filled-new-array {v0, v1, v2, v3}, [Lim4;
 
     move-result-object v0
 
-    return-object v0
+    sput-object v0, Lim4;->o:[Lim4;
 
-    :cond_1
-    new-instance v0, Lone/me/deeplink/InvalidDeeplinkNamingException;
+    invoke-static {}, Lim4;->values()[Lim4;
 
-    iget-object v1, p0, Lim4;->a:Ljava/lang/String;
+    move-result-object v0
 
-    invoke-direct {v0, v1}, Lone/me/deeplink/InvalidDeeplinkNamingException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public final c(Ljava/lang/Object;Ljava/lang/String;)V
-    .locals 1
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p2, "="
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    iget-object p2, p0, Lim4;->b:Ljava/util/ArrayList;
-
-    invoke-virtual {p2, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    sput-object v0, Lim4;->d:[Lim4;
 
     return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;II)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    iput p3, p0, Lim4;->a:I
+
+    return-void
+.end method
+
+.method public static a(I)Lim4;
+    .locals 5
+
+    sget-object v0, Lim4;->d:[Lim4;
+
+    array-length v1, v0
+
+    const/4 v2, 0x0
+
+    :goto_0
+    if-ge v2, v1, :cond_1
+
+    aget-object v3, v0, v2
+
+    iget v4, v3, Lim4;->a:I
+
+    if-ne v4, p0, :cond_0
+
+    return-object v3
+
+    :cond_0
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    sget-object p0, Lim4;->b:Lim4;
+
+    return-object p0
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lim4;
+    .locals 1
+
+    const-class v0, Lim4;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lim4;
+
+    return-object p0
+.end method
+
+.method public static values()[Lim4;
+    .locals 1
+
+    sget-object v0, Lim4;->o:[Lim4;
+
+    invoke-virtual {v0}, [Lim4;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lim4;
+
+    return-object v0
 .end method

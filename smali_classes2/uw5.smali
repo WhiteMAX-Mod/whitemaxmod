@@ -1,51 +1,80 @@
-.class public final Luw5;
-.super Lo84;
+.class public final synthetic Luw5;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/util/concurrent/Callable;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lvw5;
-
-.field public Z:I
-
-.field public d:Lyna;
-
-.field public o:Lku2;
+.field public final synthetic b:Ley5;
 
 
 # direct methods
-.method public constructor <init>(Lvw5;Lo84;)V
+.method public synthetic constructor <init>(Ley5;I)V
     .locals 0
 
-    iput-object p1, p0, Luw5;->Y:Lvw5;
+    iput p2, p0, Luw5;->a:I
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Luw5;->b:Ley5;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final call()Ljava/lang/Object;
+    .locals 4
 
-    iput-object p1, p0, Luw5;->X:Ljava/lang/Object;
+    iget v0, p0, Luw5;->a:I
 
-    iget p1, p0, Luw5;->Z:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-object v0, p0, Luw5;->b:Ley5;
 
-    or-int/2addr p1, v0
+    invoke-virtual {v0}, Ley5;->c()Ljava/util/List;
 
-    iput p1, p0, Luw5;->Z:I
+    move-result-object v0
 
-    iget-object p1, p0, Luw5;->Y:Lvw5;
+    return-object v0
 
-    invoke-virtual {p1, p0}, Lvw5;->a(Lo84;)Ljava/lang/Object;
+    :pswitch_0
+    iget-object v0, p0, Luw5;->b:Ley5;
 
-    move-result-object p1
+    iget-object v0, v0, Ley5;->a:Lm8e;
 
-    return-object p1
+    new-instance v1, Li05;
+
+    const/16 v2, 0xe
+
+    invoke-direct {v1, v2}, Li05;-><init>(I)V
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x0
+
+    invoke-static {v0, v2, v3, v1}, Lfuj;->f(Lm8e;ZZLks6;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Number;
+
+    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v0
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

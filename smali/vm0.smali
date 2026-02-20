@@ -3,204 +3,492 @@
 .source "SourceFile"
 
 # interfaces
-.implements Le0b;
-.implements Lp2d;
+.implements Lggc;
 
 
 # instance fields
-.field public final a:Le0b;
+.field public A0:Lne9;
 
-.field public b:Lo25;
+.field public B0:Lhw4;
 
-.field public c:Lp2d;
+.field public X:Lzfc;
 
-.field public d:Z
+.field public Y:Lhgg;
+
+.field public Z:I
+
+.field public final a:Ljava/lang/Object;
+
+.field public final b:I
+
+.field public final c:Lilc;
+
+.field public d:Lt1e;
 
 .field public o:I
 
+.field public s0:Lzee;
+
+.field public t0:[Lol6;
+
+.field public u0:J
+
+.field public v0:J
+
+.field public w0:J
+
+.field public x0:Z
+
+.field public y0:Z
+
+.field public z0:Litg;
+
 
 # direct methods
-.method public constructor <init>(Le0b;)V
-    .locals 0
+.method public constructor <init>(I)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lvm0;->a:Le0b;
+    new-instance v0, Ljava/lang/Object;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iput-object v0, p0, Lvm0;->a:Ljava/lang/Object;
+
+    iput p1, p0, Lvm0;->b:I
+
+    new-instance p1, Lilc;
+
+    const/16 v0, 0xe
+
+    const/4 v1, 0x0
+
+    invoke-direct {p1, v1, v0}, Lilc;-><init>(CI)V
+
+    iput-object p1, p0, Lvm0;->c:Lilc;
+
+    const-wide/high16 v0, -0x8000000000000000L
+
+    iput-wide v0, p0, Lvm0;->w0:J
+
+    sget-object p1, Litg;->a:Lbtg;
+
+    iput-object p1, p0, Lvm0;->z0:Litg;
 
     return-void
+.end method
+
+.method public static b(IIII)I
+    .locals 0
+
+    or-int/2addr p0, p1
+
+    or-int/2addr p0, p2
+
+    or-int/lit16 p0, p0, 0x80
+
+    or-int/2addr p0, p3
+
+    return p0
+.end method
+
+.method public static k(IZ)Z
+    .locals 1
+
+    and-int/lit8 p0, p0, 0x7
+
+    const/4 v0, 0x4
+
+    if-eq p0, v0, :cond_1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x3
+
+    if-ne p0, p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_1
+    :goto_0
+    const/4 p0, 0x1
+
+    return p0
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Throwable;)V
+.method public A()I
     .locals 1
 
-    invoke-static {p1}, Lzoj;->a(Ljava/lang/Throwable;)V
-
-    iget-object v0, p0, Lvm0;->b:Lo25;
-
-    invoke-interface {v0}, Lo25;->dispose()V
-
-    invoke-virtual {p0, p1}, Lvm0;->onError(Ljava/lang/Throwable;)V
-
-    return-void
-.end method
-
-.method public b()V
-    .locals 1
-
-    iget-boolean v0, p0, Lvm0;->d:Z
-
-    if-eqz v0, :cond_0
-
-    return-void
-
-    :cond_0
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lvm0;->d:Z
-
-    iget-object v0, p0, Lvm0;->a:Le0b;
-
-    invoke-interface {v0}, Le0b;->b()V
-
-    return-void
-.end method
-
-.method public final c(Lo25;)V
-    .locals 1
-
-    iget-object v0, p0, Lvm0;->b:Lo25;
-
-    invoke-static {v0, p1}, Ls25;->h(Lo25;Lo25;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iput-object p1, p0, Lvm0;->b:Lo25;
-
-    instance-of v0, p1, Lp2d;
-
-    if-eqz v0, :cond_0
-
-    check-cast p1, Lp2d;
-
-    iput-object p1, p0, Lvm0;->c:Lp2d;
-
-    :cond_0
-    iget-object p1, p0, Lvm0;->a:Le0b;
-
-    invoke-interface {p1, p0}, Le0b;->c(Lo25;)V
-
-    :cond_1
-    return-void
-.end method
-
-.method public clear()V
-    .locals 1
-
-    iget-object v0, p0, Lvm0;->c:Lp2d;
-
-    invoke-interface {v0}, Lsdf;->clear()V
-
-    return-void
-.end method
-
-.method public final dispose()V
-    .locals 1
-
-    iget-object v0, p0, Lvm0;->b:Lo25;
-
-    invoke-interface {v0}, Lo25;->dispose()V
-
-    return-void
-.end method
-
-.method public final e()Z
-    .locals 1
-
-    iget-object v0, p0, Lvm0;->b:Lo25;
-
-    invoke-interface {v0}, Lo25;->e()Z
-
-    move-result v0
+    const/4 v0, 0x0
 
     return v0
 .end method
 
-.method public g(I)I
-    .locals 2
+.method public a(ILjava/lang/Object;)V
+    .locals 0
 
-    iget-object v0, p0, Lvm0;->c:Lp2d;
+    return-void
+.end method
 
-    if-eqz v0, :cond_0
+.method public final d(Ljava/lang/Exception;Lol6;ZI)Landroidx/media3/exoplayer/ExoPlaybackException;
+    .locals 11
 
-    and-int/lit8 v1, p1, 0x4
+    const/4 v0, 0x4
+
+    if-eqz p2, :cond_0
+
+    iget-boolean v1, p0, Lvm0;->y0:Z
 
     if-nez v1, :cond_0
 
-    invoke-interface {v0, p1}, Lq2d;->g(I)I
+    const/4 v1, 0x1
+
+    iput-boolean v1, p0, Lvm0;->y0:Z
+
+    const/4 v1, 0x0
+
+    :try_start_0
+    invoke-virtual {p0, p2}, Lvm0;->z(Lol6;)I
+
+    move-result v2
+    :try_end_0
+    .catch Landroidx/media3/exoplayer/ExoPlaybackException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    and-int/lit8 v2, v2, 0x7
+
+    iput-boolean v1, p0, Lvm0;->y0:Z
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    iput-boolean v1, p0, Lvm0;->y0:Z
+
+    throw v0
+
+    :catch_0
+    iput-boolean v1, p0, Lvm0;->y0:Z
+
+    :cond_0
+    move v2, v0
+
+    :goto_0
+    invoke-virtual {p0}, Lvm0;->h()Ljava/lang/String;
+
+    move-result-object v5
+
+    iget v6, p0, Lvm0;->o:I
+
+    iget-object v9, p0, Lvm0;->A0:Lne9;
+
+    new-instance v1, Landroidx/media3/exoplayer/ExoPlaybackException;
+
+    if-nez p2, :cond_1
+
+    move v8, v0
+
+    goto :goto_1
+
+    :cond_1
+    move v8, v2
+
+    :goto_1
+    const/4 v2, 0x1
+
+    move-object v3, p1
+
+    move-object v7, p2
+
+    move v10, p3
+
+    move v4, p4
+
+    invoke-direct/range {v1 .. v10}, Landroidx/media3/exoplayer/ExoPlaybackException;-><init>(ILjava/lang/Exception;ILjava/lang/String;ILol6;ILne9;Z)V
+
+    return-object v1
+.end method
+
+.method public e()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public f(JJ)J
+    .locals 0
+
+    iget p1, p0, Lvm0;->Z:I
+
+    const/4 p2, 0x1
+
+    if-ne p1, p2, :cond_1
+
+    invoke-virtual {p0}, Lvm0;->l()Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    invoke-virtual {p0}, Lvm0;->j()Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    iput p1, p0, Lvm0;->o:I
-
-    goto :goto_0
-
     :cond_0
-    const/4 p1, 0x0
+    const-wide/32 p1, 0xf4240
+
+    return-wide p1
 
     :cond_1
-    :goto_0
-    return p1
+    const-wide/16 p1, 0x2710
+
+    return-wide p1
 .end method
 
-.method public final isEmpty()Z
+.method public g()Lt19;
     .locals 1
 
-    iget-object v0, p0, Lvm0;->c:Lp2d;
+    const/4 v0, 0x0
 
-    invoke-interface {v0}, Lsdf;->isEmpty()Z
+    return-object v0
+.end method
 
-    move-result v0
+.method public abstract h()Ljava/lang/String;
+.end method
+
+.method public final i()Z
+    .locals 4
+
+    iget-wide v0, p0, Lvm0;->w0:J
+
+    const-wide/high16 v2, -0x8000000000000000L
+
+    cmp-long v0, v0, v2
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
 
     return v0
 .end method
 
-.method public final offer(Ljava/lang/Object;)Z
-    .locals 1
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string v0, "Should not be called!"
-
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+.method public abstract j()Z
 .end method
 
-.method public onError(Ljava/lang/Throwable;)V
-    .locals 1
+.method public abstract l()Z
+.end method
 
-    iget-boolean v0, p0, Lvm0;->d:Z
-
-    if-eqz v0, :cond_0
-
-    invoke-static {p1}, Lknj;->b(Ljava/lang/Throwable;)V
+.method public m()V
+    .locals 0
 
     return-void
+.end method
+
+.method public n(ZZ)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public o(JZ)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public p()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public q()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public s()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public t()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public u([Lol6;JJLne9;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final v(Lilc;Ldn4;I)I
+    .locals 4
+
+    iget-object v0, p0, Lvm0;->s0:Lzee;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-interface {v0, p1, p2, p3}, Lzee;->p(Lilc;Ldn4;I)I
+
+    move-result p3
+
+    const/4 v0, -0x4
+
+    if-ne p3, v0, :cond_2
+
+    const/4 p1, 0x4
+
+    invoke-virtual {p2, p1}, Ls00;->k(I)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    const-wide/high16 p1, -0x8000000000000000L
+
+    iput-wide p1, p0, Lvm0;->w0:J
+
+    iget-boolean p1, p0, Lvm0;->x0:Z
+
+    if-eqz p1, :cond_0
+
+    return v0
 
     :cond_0
-    const/4 v0, 0x1
+    const/4 p1, -0x3
 
-    iput-boolean v0, p0, Lvm0;->d:Z
+    return p1
 
-    iget-object v0, p0, Lvm0;->a:Le0b;
+    :cond_1
+    iget-wide v0, p2, Ldn4;->Y:J
 
-    invoke-interface {v0, p1}, Le0b;->onError(Ljava/lang/Throwable;)V
+    iget-wide v2, p0, Lvm0;->u0:J
+
+    add-long/2addr v0, v2
+
+    iput-wide v0, p2, Ldn4;->Y:J
+
+    iget-wide p1, p0, Lvm0;->w0:J
+
+    invoke-static {p1, p2, v0, v1}, Ljava/lang/Math;->max(JJ)J
+
+    move-result-wide p1
+
+    iput-wide p1, p0, Lvm0;->w0:J
+
+    return p3
+
+    :cond_2
+    const/4 p2, -0x5
+
+    if-ne p3, p2, :cond_3
+
+    iget-object p2, p1, Lilc;->c:Ljava/lang/Object;
+
+    check-cast p2, Lol6;
+
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-wide v0, p2, Lol6;->s:J
+
+    const-wide v2, 0x7fffffffffffffffL
+
+    cmp-long v2, v0, v2
+
+    if-eqz v2, :cond_3
+
+    invoke-virtual {p2}, Lol6;->a()Lml6;
+
+    move-result-object p2
+
+    iget-wide v2, p0, Lvm0;->u0:J
+
+    add-long/2addr v0, v2
+
+    iput-wide v0, p2, Lml6;->r:J
+
+    new-instance v0, Lol6;
+
+    invoke-direct {v0, p2}, Lol6;-><init>(Lml6;)V
+
+    iput-object v0, p1, Lilc;->c:Ljava/lang/Object;
+
+    :cond_3
+    return p3
+.end method
+
+.method public abstract w(JJ)V
+.end method
+
+.method public final x([Lol6;Lzee;JJLne9;)V
+    .locals 7
+
+    iget-boolean v0, p0, Lvm0;->x0:Z
+
+    xor-int/lit8 v0, v0, 0x1
+
+    invoke-static {v0}, Lxej;->g(Z)V
+
+    iput-object p2, p0, Lvm0;->s0:Lzee;
+
+    iput-object p7, p0, Lvm0;->A0:Lne9;
+
+    iget-wide v0, p0, Lvm0;->w0:J
+
+    const-wide/high16 v2, -0x8000000000000000L
+
+    cmp-long p2, v0, v2
+
+    if-nez p2, :cond_0
+
+    iput-wide p3, p0, Lvm0;->w0:J
+
+    :cond_0
+    iput-object p1, p0, Lvm0;->t0:[Lol6;
+
+    iput-wide p5, p0, Lvm0;->u0:J
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    move-wide v2, p3
+
+    move-wide v4, p5
+
+    move-object v6, p7
+
+    invoke-virtual/range {v0 .. v6}, Lvm0;->u([Lol6;JJLne9;)V
 
     return-void
+.end method
+
+.method public y(FF)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public abstract z(Lol6;)I
 .end method

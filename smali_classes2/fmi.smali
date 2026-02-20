@@ -1,45 +1,60 @@
-.class public abstract synthetic Lfmi;
+.class public final synthetic Lfmi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/util/function/Consumer;
 
-# static fields
-.field public static final synthetic a:[I
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;I)V
+    .locals 0
 
-    const/4 v0, 0x2
+    iput p2, p0, Lfmi;->a:I
 
-    invoke-static {v0}, Lt02;->w(I)[I
+    iput-object p1, p0, Lfmi;->b:Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;
 
-    move-result-object v1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    array-length v1, v1
-
-    new-array v1, v1, [I
-
-    sput-object v1, Lfmi;->a:[I
-
-    const/4 v2, 0x1
-
-    :try_start_0
-    aput v2, v1, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    :try_start_1
-    sget-object v1, Lfmi;->a:[I
-
-    const/4 v2, 0x0
-
-    aput v0, v1, v2
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
     return-void
+.end method
+
+
+# virtual methods
+.method public final accept(Ljava/lang/Object;)V
+    .locals 1
+
+    iget v0, p0, Lfmi;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lfmi;->b:Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;
+
+    check-cast p1, Lgmi;
+
+    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->a(Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;Lgmi;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lfmi;->b:Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;
+
+    check-cast p1, Lgmi;
+
+    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->d(Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;Lgmi;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

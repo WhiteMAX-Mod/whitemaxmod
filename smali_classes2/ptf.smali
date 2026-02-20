@@ -1,123 +1,239 @@
 .class public final Lptf;
-.super Lfk5;
+.super Lntf;
 .source "SourceFile"
-
-# interfaces
-.implements Luig;
 
 
 # instance fields
-.field public d:Z
+.field public final m:J
+
+.field public final n:J
+
+.field public final o:J
+
+.field public final p:J
+
+.field public final q:J
+
+.field public final r:J
+
+.field public final s:J
+
+.field public final t:J
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 2
+.method public constructor <init>(JLjava/lang/String;Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigInteger;JJJJJJJJLjava/lang/Long;Ljava/lang/String;Lkyc;Ljava/lang/Boolean;)V
+    .locals 12
 
-    new-instance v0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+    const/4 v1, 0x2
 
-    sget v1, Lb7d;->sticker_typing:I
+    move-object v0, p0
 
-    invoke-direct {v0, p1, v1}, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;-><init>(Landroid/content/Context;I)V
+    move-wide v2, p1
 
-    invoke-direct {p0, v0}, Lfk5;-><init>(Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;)V
+    move-object v4, p3
+
+    move-object/from16 v5, p4
+
+    move-object/from16 v6, p5
+
+    move-object/from16 v7, p6
+
+    move-object/from16 v8, p23
+
+    move-object/from16 v9, p24
+
+    move-object/from16 v10, p25
+
+    move-object/from16 v11, p26
+
+    invoke-direct/range {v0 .. v11}, Lntf;-><init>(IJLjava/lang/String;Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/lang/Long;Ljava/lang/String;Lkyc;Ljava/lang/Boolean;)V
+
+    move-wide/from16 p1, p7
+
+    iput-wide p1, p0, Lptf;->m:J
+
+    move-wide/from16 p1, p9
+
+    iput-wide p1, p0, Lptf;->n:J
+
+    move-wide/from16 p1, p11
+
+    iput-wide p1, p0, Lptf;->o:J
+
+    move-wide/from16 p1, p13
+
+    iput-wide p1, p0, Lptf;->p:J
+
+    move-wide/from16 p1, p15
+
+    iput-wide p1, p0, Lptf;->q:J
+
+    move-wide/from16 p1, p17
+
+    iput-wide p1, p0, Lptf;->r:J
+
+    move-wide/from16 p1, p19
+
+    iput-wide p1, p0, Lptf;->s:J
+
+    move-wide/from16 p1, p21
+
+    iput-wide p1, p0, Lptf;->t:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    iget-boolean v0, p0, Lptf;->d:Z
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    if-nez v0, :cond_0
+    const-string v1, "VideoSend{ssrc="
 
-    invoke-virtual {p0}, Lptf;->start()V
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    :cond_0
-    return-void
-.end method
+    iget-wide v1, p0, Lqtf;->c:J
 
-.method public final onThemeChanged(Lzlb;)V
-    .locals 2
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    invoke-interface {p1}, Lzlb;->getIcon()Lwe7;
+    const-string v1, ", transportId=\'"
 
-    move-result-object p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget p1, p1, Lwe7;->j:I
+    iget-object v1, p0, Lqtf;->d:Ljava/lang/String;
 
-    const-string v0, "_R_G_L_4_G_D_0_P_0"
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lfk5;->b:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+    const-string v1, "\', trackId=\'"
 
-    invoke-static {v1, v0, p1}, Lroj;->b(Ladh;Ljava/lang/String;I)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v0, "_R_G_L_4_G_D_1_P_0"
+    iget-object v1, p0, Lqtf;->e:Ljava/lang/String;
 
-    invoke-static {v1, v0, p1}, Lroj;->b(Ladh;Ljava/lang/String;I)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v0, "_R_G_L_4_G_D_2_P_0"
+    const-string v1, "\', packetsSent="
 
-    invoke-static {v1, v0, p1}, Lroj;->b(Ladh;Ljava/lang/String;I)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v0, "_R_G_L_3_G_D_0_P_0"
+    iget-object v1, p0, Lntf;->h:Ljava/math/BigInteger;
 
-    invoke-static {v1, v0, p1}, Lroj;->b(Ladh;Ljava/lang/String;I)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v0, "_R_G_L_2_G_D_0_P_0"
+    const-string v1, ", packetsLost="
 
-    invoke-static {v1, v0, p1}, Lroj;->b(Ladh;Ljava/lang/String;I)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v0, "_R_G_L_2_G_D_1_P_0"
+    iget-object v1, p0, Lntf;->i:Ljava/math/BigInteger;
 
-    invoke-static {v1, v0, p1}, Lroj;->b(Ladh;Ljava/lang/String;I)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v0, "_R_G_L_2_G_D_2_P_0"
+    const-string v1, ", bytesSent="
 
-    invoke-static {v1, v0, p1}, Lroj;->b(Ladh;Ljava/lang/String;I)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v0, "_R_G_L_1_G_D_0_P_0"
+    iget-object v1, p0, Lntf;->j:Ljava/math/BigInteger;
 
-    invoke-static {v1, v0, p1}, Lroj;->b(Ladh;Ljava/lang/String;I)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v0, "_R_G_L_0_G_D_0_P_0"
+    const-string v1, ", nacksReceived="
 
-    invoke-static {v1, v0, p1}, Lroj;->b(Ladh;Ljava/lang/String;I)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v0, "_R_G_L_0_G_D_1_P_0"
+    iget-wide v1, p0, Lptf;->m:J
 
-    invoke-static {v1, v0, p1}, Lroj;->b(Ladh;Ljava/lang/String;I)V
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    const-string v0, "_R_G_L_0_G_D_2_P_0"
+    const-string v1, ", pliReceived="
 
-    invoke-static {v1, v0, p1}, Lroj;->b(Ladh;Ljava/lang/String;I)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-void
-.end method
+    iget-wide v1, p0, Lptf;->n:J
 
-.method public final start()V
-    .locals 1
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    const/4 v0, 0x0
+    const-string v1, ", firReceived="
 
-    iput-boolean v0, p0, Lptf;->d:Z
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-super {p0}, Lfk5;->start()V
+    iget-wide v1, p0, Lptf;->o:J
 
-    return-void
-.end method
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-.method public final stop()V
-    .locals 1
+    const-string v1, ", framesEncoded="
 
-    const/4 v0, 0x1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iput-boolean v0, p0, Lptf;->d:Z
+    iget-wide v1, p0, Lptf;->p:J
 
-    invoke-super {p0}, Lfk5;->stop()V
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    return-void
+    const-string v1, ", adaptationChanges="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lptf;->q:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", avgEncodeMs="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lptf;->r:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", frameWidth="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lptf;->s:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", frameHeight="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lptf;->t:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isMediaShare="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lntf;->l:Ljava/lang/Boolean;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", targetBitrate="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lntf;->k:Ljava/lang/Long;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", unknown="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lqtf;->g:Ljava/util/HashMap;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x7d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -1,99 +1,31 @@
-.class public final Lnjb;
-.super Lpjb;
+.class public abstract Lnjb;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lnjb;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public static final a:I
 
-.field public static final b:Lnjb;
+.field public static final b:I
+
+.field public static final c:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
-
-    new-instance v0, Lnjb;
-
-    const-wide/16 v1, 0xdac
-
-    invoke-direct {v0, v1, v2}, Lpjb;-><init>(J)V
-
-    sput-object v0, Lnjb;->b:Lnjb;
-
-    new-instance v0, Lhu8;
-
-    const/16 v1, 0x16
-
-    invoke-direct {v0, v1}, Lhu8;-><init>(I)V
-
-    sput-object v0, Lnjb;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final describeContents()I
     .locals 1
 
-    const/4 v0, 0x0
+    sget v0, Ldhd;->oneme_ll_chat_media_progress:I
 
-    return v0
-.end method
+    sput v0, Lnjb;->a:I
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    sget v0, Ldhd;->oneme_row_gallery_camera:I
 
-    const/4 v0, 0x1
+    sput v0, Lnjb;->b:I
 
-    if-ne p0, p1, :cond_0
+    sget v0, Ldhd;->oneme_row_gallery_media:I
 
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Lnjb;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, -0x16da368a
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "Standard"
-
-    return-object v0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
-
-    const/4 p2, 0x1
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    sput v0, Lnjb;->c:I
 
     return-void
 .end method

@@ -1,53 +1,49 @@
 .class public final Lcrh;
-.super Landroid/view/TextureView;
+.super Lda4;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:Lerh;
+.field public X:I
+
+.field public synthetic d:Ljava/lang/Object;
+
+.field public final synthetic o:Lerh;
 
 
 # direct methods
-.method public constructor <init>(Lerh;Landroid/content/Context;)V
+.method public constructor <init>(Lerh;Lda4;)V
     .locals 0
 
-    iput-object p1, p0, Lcrh;->a:Lerh;
+    iput-object p1, p0, Lcrh;->o:Lerh;
 
-    invoke-direct {p0, p2}, Landroid/view/TextureView;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onDetachedFromWindow()V
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    invoke-super {p0}, Landroid/view/View;->onDetachedFromWindow()V
+    iput-object p1, p0, Lcrh;->d:Ljava/lang/Object;
 
-    iget-object v0, p0, Lcrh;->a:Lerh;
+    iget p1, p0, Lcrh;->X:I
 
-    iget-object v1, v0, Lerh;->u0:Lkgh;
+    const/high16 v0, -0x80000000
 
-    if-eqz v1, :cond_0
+    or-int/2addr p1, v0
 
-    iget-object v1, v1, Lkgh;->a:Ljgh;
+    iput p1, p0, Lcrh;->X:I
 
-    const/4 v2, 0x0
+    iget-object p1, p0, Lcrh;->o:Lerh;
 
-    invoke-virtual {v1, v2}, Ljgh;->setPlayer(Lgob;)V
+    const/4 v0, 0x0
 
-    :cond_0
-    iget-object v0, v0, Lerh;->v0:Lxqh;
+    invoke-virtual {p1, v0, p0}, Lerh;->d(Lba3;Lda4;)Ljava/lang/Enum;
 
-    if-eqz v0, :cond_1
+    move-result-object p1
 
-    invoke-virtual {p0}, Landroid/view/TextureView;->getSurfaceTexture()Landroid/graphics/SurfaceTexture;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1}, Lxqh;->onSurfaceTextureDestroyed(Landroid/graphics/SurfaceTexture;)V
-
-    :cond_1
-    return-void
+    return-object p1
 .end method

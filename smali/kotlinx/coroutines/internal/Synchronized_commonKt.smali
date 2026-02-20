@@ -16,7 +16,7 @@
         "Lkotlin/Function0;",
         "block",
         "synchronized",
-        "(Ljava/lang/Object;Llq6;)Ljava/lang/Object;",
+        "(Ljava/lang/Object;Lis6;)Ljava/lang/Object;",
         "kotlinx-coroutines-core"
     }
     k = 0x2
@@ -30,7 +30,7 @@
 
 
 # direct methods
-.method public static final synchronized(Ljava/lang/Object;Llq6;)Ljava/lang/Object;
+.method public static final synchronized(Ljava/lang/Object;Lis6;)Ljava/lang/Object;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -38,7 +38,7 @@
             "Ljava/lang/Object;",
             ">(",
             "Ljava/lang/Object;",
-            "Llq6;",
+            "Lis6;",
             ")TT;"
         }
     .end annotation
@@ -46,7 +46,7 @@
     monitor-enter p0
 
     :try_start_0
-    invoke-interface {p1}, Llq6;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lis6;->invoke()Ljava/lang/Object;
 
     move-result-object p1
     :try_end_0

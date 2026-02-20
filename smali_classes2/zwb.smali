@@ -1,397 +1,305 @@
-.class public final synthetic Lzwb;
-.super Ljava/lang/Object;
+.class public final Lzwb;
+.super Lhy3;
 .source "SourceFile"
-
-# interfaces
-.implements Lby3;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final f:Ljava/util/ArrayList;
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final g:Ljava/util/ArrayList;
 
-.field public final synthetic c:Ljava/lang/Object;
+.field public final h:Ljava/util/ArrayList;
+
+.field public final i:Ljava/util/HashMap;
+
+.field public final j:Ljava/util/concurrent/ConcurrentHashMap;
+
+.field public final k:Ljava/util/concurrent/ConcurrentHashMap;
+
+.field public final l:Ljava/util/concurrent/ConcurrentHashMap;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;ILjava/lang/Object;)V
+.method public constructor <init>(Lmsh;Ltmd;Lmzb;Lo27;)V
     .locals 0
 
-    iput p2, p0, Lzwb;->a:I
+    invoke-direct {p0, p1, p2, p3, p4}, Lhy3;-><init>(Lmsh;Ltmd;Lmzb;Lo27;)V
 
-    iput-object p1, p0, Lzwb;->b:Ljava/lang/Object;
+    new-instance p1, Ljava/util/ArrayList;
 
-    iput-object p3, p0, Lzwb;->c:Ljava/lang/Object;
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lzwb;->f:Ljava/util/ArrayList;
+
+    new-instance p1, Ljava/util/ArrayList;
+
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object p1, p0, Lzwb;->g:Ljava/util/ArrayList;
+
+    new-instance p1, Ljava/util/ArrayList;
+
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object p1, p0, Lzwb;->h:Ljava/util/ArrayList;
+
+    new-instance p1, Ljava/util/HashMap;
+
+    invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
+
+    iput-object p1, p0, Lzwb;->i:Ljava/util/HashMap;
+
+    new-instance p1, Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-direct {p1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+
+    iput-object p1, p0, Lzwb;->j:Ljava/util/concurrent/ConcurrentHashMap;
+
+    new-instance p1, Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-direct {p1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+
+    iput-object p1, p0, Lzwb;->k:Ljava/util/concurrent/ConcurrentHashMap;
+
+    new-instance p1, Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-direct {p1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+
+    iput-object p1, p0, Lzwb;->l:Ljava/util/concurrent/ConcurrentHashMap;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 7
+.method public final a(Ljl1;Lorg/webrtc/VideoFrame;)V
+    .locals 1
 
-    iget v0, p0, Lzwb;->a:I
+    new-instance v0, Lsi8;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-direct {v0}, Lsi8;-><init>()V
 
-    iget-object v0, p0, Lzwb;->b:Ljava/lang/Object;
+    iput-object p1, v0, Lsi8;->a:Ljava/lang/Object;
 
-    check-cast v0, Lru/ok/android/externcalls/sdk/waiting_room/WaitingRoomParticipants;
+    sget-object p1, Layh;->b:Layh;
 
-    iget-object v1, p0, Lzwb;->c:Ljava/lang/Object;
+    iput-object p1, v0, Lsi8;->b:Ljava/lang/Object;
 
-    check-cast v1, Lref;
+    invoke-virtual {v0}, Lsi8;->a()Ldw1;
 
-    check-cast p1, Liw1;
+    move-result-object p1
 
-    invoke-static {v0, v1, p1}, Lru/ok/android/externcalls/sdk/waiting_room/WaitingRoomParticipants;->c(Lru/ok/android/externcalls/sdk/waiting_room/WaitingRoomParticipants;Lref;Liw1;)V
+    iget-object v0, p0, Lzwb;->j:Ljava/util/concurrent/ConcurrentHashMap;
 
-    return-void
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :pswitch_0
-    iget-object v0, p0, Lzwb;->b:Ljava/lang/Object;
+    move-result-object p1
 
-    check-cast v0, Lbu0;
+    check-cast p1, Ljava/util/List;
 
-    iget-object v1, p0, Lzwb;->c:Ljava/lang/Object;
+    if-eqz p1, :cond_0
 
-    check-cast v1, Lorg/webrtc/VideoEncoderObserver$EncoderInfo;
+    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    check-cast p1, Lorg/webrtc/PeerConnection;
+    move-result-object p1
 
-    iget-object p1, v0, Lbu0;->b:Ljava/lang/Object;
-
-    check-cast p1, Lfxb;
-
-    invoke-virtual {v1}, Lorg/webrtc/VideoEncoderObserver$EncoderInfo;->isHardwareAccelerated()Z
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object p1, p1, Lfxb;->a0:Lji8;
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    const/4 v0, 0x0
+    move-result-object v0
 
-    invoke-virtual {p1, v0, v0}, Lji8;->l(Ljava/lang/Float;Ljava/lang/Float;)V
+    check-cast v0, Lorg/webrtc/VideoSink;
+
+    invoke-interface {v0, p2}, Lorg/webrtc/VideoSink;->onFrame(Lorg/webrtc/VideoFrame;)V
 
     goto :goto_0
 
     :cond_0
-    iget-object v0, p1, Lfxb;->a0:Lji8;
+    return-void
+.end method
 
-    iget v1, p1, Lfxb;->m0:F
+.method public final d()V
+    .locals 1
 
-    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    invoke-static {}, Lj9a;->f()V
+
+    iget-object v0, p0, Lzwb;->j:Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->clear()V
+
+    iget-object v0, p0, Lzwb;->i:Ljava/util/HashMap;
+
+    invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
+
+    return-void
+.end method
+
+.method public final e(Ljl1;Ljava/lang/String;)V
+    .locals 3
+
+    invoke-static {}, Lj9a;->f()V
+
+    iget-object p2, p0, Lzwb;->i:Ljava/util/HashMap;
+
+    invoke-virtual {p2, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/Set;
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
-    iget p1, p1, Lfxb;->n0:F
+    check-cast v1, Ldw1;
 
-    invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    iget-object v2, p0, Lzwb;->j:Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-virtual {v2, v1}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {p2, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public final f()V
+    .locals 3
+
+    iget-object v0, p0, Lhy3;->c:Ljava/lang/Object;
+
+    check-cast v0, Landroid/os/Handler;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
+
+    iget-object v0, p0, Lhy3;->a:Ljava/lang/Object;
+
+    check-cast v0, Lmsh;
+
+    new-instance v1, Ls4b;
+
+    const/4 v2, 0x6
+
+    invoke-direct {v1, v2, p0}, Ls4b;-><init>(ILjava/lang/Object;)V
+
+    iget-object v0, v0, Lmsh;->a:Ljava/lang/Object;
+
+    check-cast v0, Ltzb;
+
+    const-string v2, "ParticipantsAgnosticRemoteVideoTracks.closeInternal"
+
+    invoke-virtual {v0, v1, v2}, Ltzb;->j(Ljava/lang/Runnable;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public final k(Lorg/webrtc/RtpReceiver;[Lorg/webrtc/MediaStream;)V
+    .locals 3
+
+    iget-object v0, p0, Lhy3;->a:Ljava/lang/Object;
+
+    check-cast v0, Lmsh;
+
+    new-instance v1, Lgu4;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v1, p0, p1, p2, v2}, Lgu4;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/io/Serializable;I)V
+
+    iget-object p1, v0, Lmsh;->a:Ljava/lang/Object;
+
+    check-cast p1, Ltzb;
+
+    new-instance p2, Ltwi;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p2, p1, v1, v0}, Ltwi;-><init>(Ltzb;Lty3;I)V
+
+    const-string v0, "DefaultRemoteVideoTracks.handleVideoTracksOnExecutor"
+
+    invoke-virtual {p1, p2, v0}, Ltzb;->j(Ljava/lang/Runnable;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public final p(Ljava/lang/String;Ldw1;Ljava/util/List;)V
+    .locals 1
+
+    invoke-static {}, Lj9a;->f()V
+
+    iget-object p1, p0, Lzwb;->j:Ljava/util/concurrent/ConcurrentHashMap;
+
+    iget-object v0, p0, Lzwb;->i:Ljava/util/HashMap;
+
+    if-nez p3, :cond_1
+
+    invoke-virtual {p1, p2}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget-object p1, p2, Ldw1;->b:Ljl1;
+
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-virtual {v0, v1, p1}, Lji8;->l(Ljava/lang/Float;Ljava/lang/Float;)V
+    check-cast p1, Ljava/util/Set;
 
-    :goto_0
+    if-eqz p1, :cond_0
+
+    invoke-interface {p1, p2}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
+
+    :cond_0
     return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lzwb;->b:Ljava/lang/Object;
-
-    check-cast v0, Lfxb;
-
-    iget-object v1, p0, Lzwb;->c:Ljava/lang/Object;
-
-    check-cast v1, Ljava/util/List;
-
-    check-cast p1, Lorg/webrtc/PeerConnection;
-
-    invoke-virtual {v0, v1}, Lfxb;->g(Ljava/util/List;)Lorg/webrtc/PeerConnection$RTCConfiguration;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Lorg/webrtc/PeerConnection;->setConfiguration(Lorg/webrtc/PeerConnection$RTCConfiguration;)Z
-
-    return-void
-
-    :pswitch_2
-    iget-object v0, p0, Lzwb;->b:Ljava/lang/Object;
-
-    check-cast v0, Lfxb;
-
-    iget-object v1, p0, Lzwb;->c:Ljava/lang/Object;
-
-    check-cast v1, [Lorg/webrtc/IceCandidate;
-
-    check-cast p1, Lorg/webrtc/PeerConnection;
-
-    iget-object p1, v0, Lfxb;->C:Lahd;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "\u2744 -> removed ice candidates: "
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-static {v1}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, "PCRTCClient"
-
-    invoke-interface {p1, v3, v2}, Lahd;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object p1, v0, Lfxb;->v:Landroid/os/Handler;
-
-    new-instance v2, Lcb9;
-
-    const/16 v3, 0x19
-
-    invoke-direct {v2, v0, v3, v1}, Lcb9;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {p1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    return-void
-
-    :pswitch_3
-    iget-object v0, p0, Lzwb;->b:Ljava/lang/Object;
-
-    check-cast v0, Lfxb;
-
-    iget-object v1, p0, Lzwb;->c:Ljava/lang/Object;
-
-    check-cast v1, Lorg/webrtc/StatsObserver;
-
-    check-cast p1, Lorg/webrtc/PeerConnection;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v2, 0x0
-
-    invoke-virtual {p1, v1, v2}, Lorg/webrtc/PeerConnection;->getStats(Lorg/webrtc/StatsObserver;Lorg/webrtc/MediaStreamTrack;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_1
-
-    iget-object p1, v0, Lfxb;->C:Lahd;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v0}, Lfxb;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, ": failed to get stats"
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "PCRTCClient"
-
-    invoke-interface {p1, v1, v0}, Lahd;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1
-    return-void
+    invoke-virtual {p1, p2, p3}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    :pswitch_4
-    iget-object v0, p0, Lzwb;->b:Ljava/lang/Object;
+    iget-object p1, p2, Ldw1;->b:Ljl1;
 
-    check-cast v0, Lfxb;
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v1, p0, Lzwb;->c:Ljava/lang/Object;
+    move-result-object p1
 
-    check-cast v1, Liph;
+    check-cast p1, Ljava/util/Set;
 
-    check-cast p1, Lorg/webrtc/PeerConnection;
+    if-nez p1, :cond_2
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    new-instance p1, Ljava/util/HashSet;
 
-    iget v1, v1, Liph;->c:I
+    invoke-direct {p1}, Ljava/util/HashSet;-><init>()V
 
-    const/4 v2, 0x0
+    iget-object p3, p2, Ldw1;->b:Ljl1;
 
-    if-nez v1, :cond_2
-
-    invoke-virtual {v0, p1, v2}, Lfxb;->u(Lorg/webrtc/PeerConnection;Z)V
-
-    goto :goto_1
+    invoke-virtual {v0, p3, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_2
-    invoke-virtual {v0, p1, v2}, Lfxb;->l(Lorg/webrtc/PeerConnection;Z)V
+    invoke-interface {p1, p2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    :goto_1
     return-void
-
-    :pswitch_5
-    iget-object v0, p0, Lzwb;->b:Ljava/lang/Object;
-
-    check-cast v0, Lfxb;
-
-    iget-object v1, p0, Lzwb;->c:Ljava/lang/Object;
-
-    check-cast v1, Lorg/webrtc/PeerConnection$IceGatheringState;
-
-    check-cast p1, Lorg/webrtc/PeerConnection;
-
-    iget-object p1, v0, Lfxb;->Z:Ljava/util/ArrayList;
-
-    sget-object v2, Lorg/webrtc/PeerConnection$IceGatheringState;->GATHERING:Lorg/webrtc/PeerConnection$IceGatheringState;
-
-    if-ne v1, v2, :cond_3
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v2
-
-    iput-wide v2, v0, Lfxb;->N:J
-
-    :cond_3
-    sget-object v2, Lorg/webrtc/PeerConnection$IceGatheringState;->COMPLETE:Lorg/webrtc/PeerConnection$IceGatheringState;
-
-    if-ne v1, v2, :cond_7
-
-    iget-object v1, v0, Lfxb;->C:Lahd;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v0}, Lfxb;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v3, ": iceGatheringState="
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
-
-    move-result v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v3, " "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, "PCRTCClient"
-
-    invoke-interface {v1, v3, v2}, Lahd;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-boolean v1, v0, Lfxb;->b0:Z
-
-    if-eqz v1, :cond_7
-
-    const/4 v1, 0x0
-
-    iput-boolean v1, v0, Lfxb;->b0:Z
-
-    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
-
-    move-result v2
-
-    move v3, v1
-
-    :cond_4
-    :goto_2
-    if-ge v1, v2, :cond_6
-
-    invoke-virtual {p1, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    add-int/lit8 v1, v1, 0x1
-
-    check-cast v4, Lorg/webrtc/IceCandidate;
-
-    iget-object v5, v4, Lorg/webrtc/IceCandidate;->sdp:Ljava/lang/String;
-
-    const-string v6, "typ srflx"
-
-    invoke-virtual {v5, v6}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v5
-
-    if-nez v5, :cond_5
-
-    iget-object v5, v4, Lorg/webrtc/IceCandidate;->sdp:Ljava/lang/String;
-
-    const-string v6, "typ prflx"
-
-    invoke-virtual {v5, v6}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v5
-
-    if-nez v5, :cond_5
-
-    iget-object v4, v4, Lorg/webrtc/IceCandidate;->sdp:Ljava/lang/String;
-
-    const-string v5, "typ relay"
-
-    invoke-virtual {v4, v5}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_4
-
-    :cond_5
-    const/4 v3, 0x1
-
-    goto :goto_2
-
-    :cond_6
-    if-nez v3, :cond_7
-
-    iget-object p1, v0, Lfxb;->B:Ldhd;
-
-    const-string v0, "rtc.no.stun.candidates"
-
-    const/4 v1, 0x0
-
-    sget-object v2, Lfpf;->v0:Lfpf;
-
-    invoke-virtual {p1, v2, v0, v1}, Ldhd;->log(Lfpf;Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_7
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

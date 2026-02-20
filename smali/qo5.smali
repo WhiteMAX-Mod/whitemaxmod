@@ -1,13 +1,11 @@
-.class public abstract Lqo5;
-.super Ljava/lang/Object;
+.class public final Lqo5;
+.super Ljava/lang/Throwable;
 .source "SourceFile"
 
 
-# direct methods
-.method public static a(Landroid/media/MediaMetadataRetriever;Landroid/media/MediaDataSource;)V
+# virtual methods
+.method public final fillInStackTrace()Ljava/lang/Throwable;
     .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/media/MediaMetadataRetriever;->setDataSource(Landroid/media/MediaDataSource;)V
-
-    return-void
+    return-object p0
 .end method

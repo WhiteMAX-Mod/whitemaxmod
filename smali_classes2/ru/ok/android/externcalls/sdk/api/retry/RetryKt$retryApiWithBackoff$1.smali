@@ -1,14 +1,14 @@
 .class final synthetic Lru/ok/android/externcalls/sdk/api/retry/RetryKt$retryApiWithBackoff$1;
-.super Lqr6;
+.super Lnt6;
 .source "SourceFile"
 
 # interfaces
-.implements Lnq6;
+.implements Lks6;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lru/ok/android/externcalls/sdk/api/retry/RetryKt;->retryApiWithBackoff(Lkef;Lahd;Lzg0;)Lkef;
+    value = Lru/ok/android/externcalls/sdk/api/retry/RetryKt;->retryApiWithBackoff(Limf;Ltmd;Lni0;)Limf;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,8 +18,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lqr6;",
-        "Lnq6;"
+        "Lnt6;",
+        "Lks6;"
     }
 .end annotation
 
@@ -66,7 +66,7 @@
 
     move-object v0, p0
 
-    invoke-direct/range {v0 .. v5}, Lqr6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct/range {v0 .. v5}, Lnt6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
     return-void
 .end method

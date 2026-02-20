@@ -1,98 +1,41 @@
 .class public final Lfu8;
-.super Landroidx/recyclerview/widget/LinearLayoutManager;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic E:I
+.field public final a:I
 
-.field public final synthetic F:Lcom/google/android/material/datepicker/MaterialCalendar;
+.field public final b:[I
+
+.field public final c:[Lryg;
+
+.field public final d:[I
+
+.field public final e:[[[I
+
+.field public final f:Lryg;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/datepicker/MaterialCalendar;II)V
+.method public constructor <init>([I[Lryg;[I[[[ILryg;)V
     .locals 0
 
-    iput-object p1, p0, Lfu8;->F:Lcom/google/android/material/datepicker/MaterialCalendar;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p3, p0, Lfu8;->E:I
+    iput-object p1, p0, Lfu8;->b:[I
 
-    const/4 p1, 0x0
+    iput-object p2, p0, Lfu8;->c:[Lryg;
 
-    invoke-direct {p0, p2, p1}, Landroidx/recyclerview/widget/LinearLayoutManager;-><init>(IZ)V
+    iput-object p4, p0, Lfu8;->e:[[[I
 
-    return-void
-.end method
+    iput-object p3, p0, Lfu8;->d:[I
 
+    iput-object p5, p0, Lfu8;->f:Lryg;
 
-# virtual methods
-.method public final K0(Landroidx/recyclerview/widget/RecyclerView;I)V
-    .locals 2
+    array-length p1, p1
 
-    new-instance v0, Lo72;
-
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    const/4 v1, 0x3
-
-    invoke-direct {v0, p1, v1}, Lo72;-><init>(Landroid/content/Context;I)V
-
-    iput p2, v0, Lc98;->a:I
-
-    invoke-virtual {p0, v0}, Landroidx/recyclerview/widget/a;->L0(Lc98;)V
-
-    return-void
-.end method
-
-.method public final N0(Lpsd;[I)V
-    .locals 3
-
-    iget p1, p0, Lfu8;->E:I
-
-    const/4 v0, 0x1
-
-    const/4 v1, 0x0
-
-    iget-object v2, p0, Lfu8;->F:Lcom/google/android/material/datepicker/MaterialCalendar;
-
-    if-nez p1, :cond_0
-
-    iget-object p1, v2, Lcom/google/android/material/datepicker/MaterialCalendar;->p1:Landroidx/recyclerview/widget/RecyclerView;
-
-    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
-
-    move-result p1
-
-    aput p1, p2, v1
-
-    iget-object p1, v2, Lcom/google/android/material/datepicker/MaterialCalendar;->p1:Landroidx/recyclerview/widget/RecyclerView;
-
-    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
-
-    move-result p1
-
-    aput p1, p2, v0
-
-    return-void
-
-    :cond_0
-    iget-object p1, v2, Lcom/google/android/material/datepicker/MaterialCalendar;->p1:Landroidx/recyclerview/widget/RecyclerView;
-
-    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
-
-    move-result p1
-
-    aput p1, p2, v1
-
-    iget-object p1, v2, Lcom/google/android/material/datepicker/MaterialCalendar;->p1:Landroidx/recyclerview/widget/RecyclerView;
-
-    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
-
-    move-result p1
-
-    aput p1, p2, v0
+    iput p1, p0, Lfu8;->a:I
 
     return-void
 .end method

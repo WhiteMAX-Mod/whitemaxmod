@@ -1,251 +1,217 @@
 .class public final Lom2;
-.super Ls9;
+.super Lqr8;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic c:I
+.field public final synthetic g:Lj88;
 
-.field public final synthetic d:Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;
+.field public final synthetic h:Lj88;
+
+.field public final synthetic i:Lpm2;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;I)V
+.method public constructor <init>(Lj88;Lj88;Lpm2;)V
     .locals 0
 
-    iput p2, p0, Lom2;->c:I
+    iput-object p1, p0, Lom2;->g:Lj88;
 
-    iput-object p1, p0, Lom2;->d:Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;
+    iput-object p2, p0, Lom2;->h:Lj88;
 
-    const/4 p2, 0x1
+    iput-object p3, p0, Lom2;->i:Lpm2;
 
-    invoke-direct {p0, p1, p2}, Ls9;-><init>(Lone/me/sdk/arch/Widget;I)V
+    const/16 p1, 0x64
+
+    invoke-direct {p0, p1}, Lqr8;-><init>(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public f(Lvec;Lvec;)Lvec;
-    .locals 1
+.method public final a(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
 
-    iget v0, p0, Lom2;->c:I
+    check-cast p1, Llm2;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v0, p0, Lom2;->g:Lj88;
 
-    invoke-super {p0, p1, p2}, Ls9;->f(Lvec;Lvec;)Lvec;
+    iget-object v1, p0, Lom2;->h:Lj88;
 
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_0
-    sget-object v0, Lvec;->c:Lvec;
-
-    if-eq p1, v0, :cond_1
-
-    sget-object v0, Lvec;->b:Lvec;
-
-    if-ne p2, v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    move-object p1, p2
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    iget-object v0, p0, Lom2;->d:Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;
-
-    check-cast v0, Lone/me/sdk/bottomsheet/ConfirmationBottomSheet;
-
-    invoke-virtual {v0}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->H0()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    :goto_1
-    return-object p1
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public i()Z
-    .locals 1
-
-    iget v0, p0, Lom2;->c:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0}, Lrec;->i()Z
-
-    move-result v0
-
-    return v0
-
-    :pswitch_0
-    iget-object v0, p0, Lom2;->d:Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;
-
-    check-cast v0, Lone/me/sdk/bottomsheet/ConfirmationBottomSheet;
-
-    invoke-virtual {v0}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->H0()Z
-
-    move-result v0
-
-    return v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public j()V
-    .locals 5
-
-    iget v0, p0, Lom2;->c:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0}, Lrec;->j()V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lom2;->d:Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;
-
-    check-cast v0, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;
-
-    sget-object v1, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->J0:[Lz28;
-
-    iget-object v1, v0, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->D0:Lo58;
-
-    invoke-interface {v1}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lgn2;
-
-    iget-object v1, v1, Lgn2;->w0:Lold;
-
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lj88;
-
-    move-result-object v2
-
-    invoke-interface {v2}, Lj88;->p()Ll88;
-
-    move-result-object v2
-
-    sget-object v3, Lo78;->o:Lo78;
-
-    invoke-static {v1, v2, v3}, Lmt0;->b(Ld76;Ll88;Lo78;)Lpw1;
-
-    move-result-object v1
-
-    new-instance v2, Lnm2;
+    iget-object v2, p0, Lom2;->i:Lpm2;
 
     const/4 v3, 0x0
 
-    invoke-direct {v2, v3, v0}, Lnm2;-><init>(Lkotlin/coroutines/Continuation;Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;)V
-
-    new-instance v3, Lm96;
-
-    const/4 v4, 0x1
-
-    invoke-direct {v3, v1, v2, v4}, Lm96;-><init>(Ld76;Lbr6;I)V
-
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lw78;
+    :try_start_0
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-static {v3, v0}, Lgu0;->x(Ld76;Lzb4;)Lmmf;
+    check-cast v0, Lln7;
 
-    return-void
+    iget-wide v4, p1, Llm2;->a:J
 
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public m(Lvec;FF)Z
-    .locals 1
-
-    iget v0, p0, Lom2;->c:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0, p1, p2, p3}, Lrec;->m(Lvec;FF)Z
-
-    move-result p1
-
-    return p1
-
-    :pswitch_0
-    iget-object p1, p0, Lom2;->d:Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;
-
-    check-cast p1, Lone/me/sdk/phoneutils/countriesdialog/SelectCountryBottomSheet;
-
-    invoke-virtual {p1}, La94;->getView()Landroid/view/View;
-
-    move-result-object p2
-
-    if-eqz p2, :cond_0
-
-    iget-object p2, p1, Lone/me/sdk/phoneutils/countriesdialog/SelectCountryBottomSheet;->z0:Ljld;
-
-    sget-object p3, Lone/me/sdk/phoneutils/countriesdialog/SelectCountryBottomSheet;->E0:[Lz28;
-
-    const/4 v0, 0x1
-
-    aget-object p3, p3, v0
-
-    invoke-interface {p2, p1, p3}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+    invoke-virtual {v0, v4, v5}, Lln7;->f(J)Ljava/lang/String;
 
     move-result-object p1
 
-    check-cast p1, Landroidx/recyclerview/widget/RecyclerView;
+    if-eqz p1, :cond_0
 
-    const/4 p2, -0x1
+    new-instance v0, Landroid/text/SpannableStringBuilder;
 
-    invoke-virtual {p1, p2}, Landroid/view/View;->canScrollVertically(I)Z
+    invoke-direct {v0}, Landroid/text/SpannableStringBuilder;-><init>()V
 
-    move-result p1
+    new-instance v4, Lmrf;
 
-    if-nez p1, :cond_0
+    const/16 v5, 0x10
+
+    int-to-float v5, v5
+
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v6
+
+    iget v6, v6, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v5, v6
+
+    invoke-static {v5}, Lmhj;->f(F)I
+
+    move-result v5
+
+    const/4 v6, 0x4
+
+    int-to-float v6, v6
+
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v7
+
+    iget v7, v7, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v6, v7
+
+    invoke-static {v6}, Lmhj;->f(F)I
+
+    move-result v6
+
+    add-int/2addr v5, v6
+
+    invoke-direct {v4, v5}, Lmrf;-><init>(I)V
+
+    const/16 v5, 0x21
+
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v6
+
+    filled-new-array {v4, v6}, [Ljava/lang/Object;
+
+    move-result-object v4
+
+    const/16 v6, 0x200b
+
+    invoke-static {v0, v6, v4}, Lvg4;->a(Landroid/text/SpannableStringBuilder;C[Ljava/lang/Object;)V
+
+    invoke-interface {v1}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lvfb;
+
+    invoke-static {p1}, Ll7g;->l(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    iget-object v1, v1, Lvfb;->k:Leh5;
+
+    invoke-virtual {v1, p1}, Leh5;->d(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    new-instance v1, Lbrg;
+
+    sget-object v4, Lfe3;->t0:Ltea;
+
+    iget-object v6, v2, Lpm2;->a:Landroid/content/Context;
+
+    invoke-virtual {v4, v6}, Ltea;->n(Landroid/content/Context;)Lfe3;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Lfe3;->j()Llob;
+
+    move-result-object v4
+
+    new-instance v6, Lnc1;
+
+    const/16 v7, 0x15
+
+    invoke-direct {v6, v7}, Lnc1;-><init>(I)V
+
+    invoke-direct {v1, v4, v6}, Lbrg;-><init>(Llob;Lks6;)V
+
+    invoke-virtual {v0, p1, v1, v5}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;Ljava/lang/Object;I)Landroid/text/SpannableStringBuilder;
+
+    new-instance p1, Landroid/text/SpannedString;
+
+    invoke-direct {p1, v0}, Landroid/text/SpannedString;-><init>(Ljava/lang/CharSequence;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception p1
 
     goto :goto_0
 
     :cond_0
-    const/4 v0, 0x0
+    move-object p1, v3
+
+    goto :goto_1
 
     :goto_0
-    return v0
+    new-instance v0, Lc6e;
 
-    :pswitch_1
-    iget-object p1, p0, Lom2;->d:Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;
+    invoke-direct {v0, p1}, Lc6e;-><init>(Ljava/lang/Throwable;)V
 
-    check-cast p1, Lone/me/sdk/bottomsheet/ConfirmationBottomSheet;
+    move-object p1, v0
 
-    invoke-virtual {p1}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->H0()Z
+    :goto_1
+    invoke-static {p1}, Le6e;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
 
-    move-result p1
+    move-result-object v0
 
-    return p1
+    if-eqz v0, :cond_1
 
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    iget-object v1, v2, Lpm2;->C:Ljava/lang/String;
+
+    const-string v2, "Fail process typing"
+
+    invoke-static {v1, v2, v0}, Ltej;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
+    instance-of v0, p1, Lc6e;
+
+    if-eqz v0, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    move-object v3, p1
+
+    :goto_2
+    check-cast v3, Ljava/lang/CharSequence;
+
+    return-object v3
 .end method

@@ -2,163 +2,173 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Cloneable;
+
 
 # instance fields
-.field public final a:Ljava/util/Set;
+.field public a:Ljava/nio/charset/CodingErrorAction;
 
-.field public final b:Ljava/lang/Long;
+.field public b:Ljava/nio/charset/CodingErrorAction;
 
-.field public final c:Z
+.field public c:I
 
+.field public d:I
 
-# direct methods
-.method public constructor <init>(Ljava/util/Set;Ljava/lang/Long;Z)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Llr9;->a:Ljava/util/Set;
-
-    iput-object p2, p0, Llr9;->b:Ljava/lang/Long;
-
-    iput-boolean p3, p0, Llr9;->c:Z
-
-    return-void
-.end method
+.field public o:I
 
 
 # virtual methods
+.method public final clone()Ljava/lang/Object;
+    .locals 2
+
+    new-instance v0, Llr9;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sget-object v1, Ljava/nio/charset/CodingErrorAction;->REPLACE:Ljava/nio/charset/CodingErrorAction;
+
+    iput-object v1, v0, Llr9;->a:Ljava/nio/charset/CodingErrorAction;
+
+    iput-object v1, v0, Llr9;->b:Ljava/nio/charset/CodingErrorAction;
+
+    const v1, 0x7fffffff
+
+    iput v1, v0, Llr9;->c:I
+
+    const/16 v1, 0x2000
+
+    iput v1, v0, Llr9;->d:I
+
+    iput v1, v0, Llr9;->o:I
+
+    iget-object v1, p0, Llr9;->a:Ljava/nio/charset/CodingErrorAction;
+
+    iput-object v1, v0, Llr9;->a:Ljava/nio/charset/CodingErrorAction;
+
+    iget-object v1, p0, Llr9;->b:Ljava/nio/charset/CodingErrorAction;
+
+    iput-object v1, v0, Llr9;->b:Ljava/nio/charset/CodingErrorAction;
+
+    iget v1, p0, Llr9;->c:I
+
+    iput v1, v0, Llr9;->c:I
+
+    iget v1, p0, Llr9;->d:I
+
+    iput v1, v0, Llr9;->d:I
+
+    return-object v0
+.end method
+
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    .locals 2
 
-    const/4 v0, 0x1
+    instance-of v0, p1, Llr9;
 
-    if-ne p0, p1, :cond_0
+    if-nez v0, :cond_0
 
-    return v0
+    goto :goto_0
 
     :cond_0
-    instance-of v1, p1, Llr9;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
     check-cast p1, Llr9;
 
-    iget-object v1, p0, Llr9;->a:Ljava/util/Set;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object v3, p1, Llr9;->a:Ljava/util/Set;
+    iget-object v0, p0, Llr9;->a:Ljava/nio/charset/CodingErrorAction;
 
-    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iget-object v1, p1, Llr9;->a:Ljava/nio/charset/CodingErrorAction;
 
-    move-result v1
+    if-ne v0, v1, :cond_1
 
-    if-nez v1, :cond_2
+    iget-object v0, p0, Llr9;->b:Ljava/nio/charset/CodingErrorAction;
 
-    return v2
+    iget-object v1, p1, Llr9;->b:Ljava/nio/charset/CodingErrorAction;
 
-    :cond_2
-    iget-object v1, p0, Llr9;->b:Ljava/lang/Long;
+    if-ne v0, v1, :cond_1
 
-    iget-object v3, p1, Llr9;->b:Ljava/lang/Long;
+    iget v0, p0, Llr9;->c:I
 
-    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iget v1, p1, Llr9;->c:I
 
-    move-result v1
+    if-ne v0, v1, :cond_1
 
-    if-nez v1, :cond_3
+    iget v0, p0, Llr9;->o:I
 
-    return v2
+    iget v1, p1, Llr9;->o:I
 
-    :cond_3
-    iget-boolean v1, p0, Llr9;->c:Z
+    if-ne v0, v1, :cond_1
 
-    iget-boolean p1, p1, Llr9;->c:Z
+    iget v0, p0, Llr9;->d:I
 
-    if-eq v1, p1, :cond_4
+    iget p1, p1, Llr9;->d:I
 
-    return v2
+    if-ne v0, p1, :cond_1
 
-    :cond_4
-    return v0
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_1
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
 .end method
 
 .method public final hashCode()I
-    .locals 2
+    .locals 3
 
-    iget-object v0, p0, Llr9;->a:Ljava/util/Set;
+    iget-object v0, p0, Llr9;->a:Ljava/nio/charset/CodingErrorAction;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
 
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Llr9;->b:Ljava/lang/Long;
-
-    if-nez v1, :cond_0
-
-    const/4 v1, 0x0
-
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
+    move v0, v1
 
     :goto_0
-    add-int/2addr v0, v1
+    const/16 v2, 0x3e0
 
-    mul-int/lit8 v0, v0, 0x1f
+    add-int/2addr v2, v0
 
-    iget-boolean v1, p0, Llr9;->c:Z
+    mul-int/lit8 v2, v2, 0x1f
 
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+    iget-object v0, p0, Llr9;->b:Ljava/nio/charset/CodingErrorAction;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     move-result v1
 
-    add-int/2addr v1, v0
+    :cond_1
+    add-int/2addr v2, v1
 
-    return v1
-.end method
+    mul-int/lit8 v2, v2, 0x1f
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+    iget v0, p0, Llr9;->c:I
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    add-int/2addr v2, v0
 
-    const-string v1, "ForwardIds(messageIds="
+    mul-int/lit8 v2, v2, 0x1f
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget v0, p0, Llr9;->d:I
 
-    iget-object v1, p0, Llr9;->a:Ljava/util/Set;
+    add-int/2addr v2, v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    mul-int/lit8 v2, v2, 0x1f
 
-    const-string v1, ", attachId="
+    iget v0, p0, Llr9;->o:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    add-int/2addr v2, v0
 
-    iget-object v1, p0, Llr9;->b:Ljava/lang/Long;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isForwardAttach="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    iget-boolean v2, p0, Llr9;->c:Z
-
-    invoke-static {v0, v2, v1}, Lt02;->j(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return v2
 .end method

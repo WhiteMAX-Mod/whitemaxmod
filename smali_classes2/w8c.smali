@@ -1,198 +1,120 @@
-.class public final Lw8c;
-.super Ljava/lang/Object;
+.class public final synthetic Lw8c;
+.super Lnt6;
 .source "SourceFile"
 
 # interfaces
-.implements Lx8c;
+.implements Lks6;
 
 
 # instance fields
-.field public final a:J
+.field public final synthetic a:I
 
-.field public final b:Llhg;
-
-.field public final c:Lphg;
-
-.field public final d:Z
+.field public final synthetic b:Lone/me/chats/picker/chats/PickerChatsListWidget;
 
 
 # direct methods
-.method public constructor <init>(JLlhg;Lphg;Z)V
-    .locals 0
+.method public constructor <init>(Lone/me/chats/picker/chats/PickerChatsListWidget;I)V
+    .locals 12
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lw8c;->a:I
 
-    iput-wide p1, p0, Lw8c;->a:J
+    packed-switch p2, :pswitch_data_0
 
-    iput-object p3, p0, Lw8c;->b:Llhg;
+    iput-object p1, p0, Lw8c;->b:Lone/me/chats/picker/chats/PickerChatsListWidget;
 
-    iput-object p4, p0, Lw8c;->c:Lphg;
+    const-string v4, "checkBoxItemDecoration_delegate$lambda$0$isChatItem(Lone/me/chats/picker/chats/PickerChatsListWidget;I)Z"
 
-    iput-boolean p5, p0, Lw8c;->d:Z
+    const/4 v5, 0x0
+
+    const/4 v1, 0x1
+
+    const-class v2, Ltu7;
+
+    const-string v3, "isChatItem"
+
+    move-object v0, p0
+
+    invoke-direct/range {v0 .. v5}, Lnt6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
     return-void
+
+    :pswitch_0
+    move-object v0, p0
+
+    iput-object p1, v0, Lw8c;->b:Lone/me/chats/picker/chats/PickerChatsListWidget;
+
+    const-string v10, "checkBoxItemDecoration_delegate$lambda$0$isChatItem(Lone/me/chats/picker/chats/PickerChatsListWidget;I)Z"
+
+    const/4 v11, 0x0
+
+    const/4 v7, 0x1
+
+    const-class v8, Ltu7;
+
+    const-string v9, "isChatItem"
+
+    move-object v6, v0
+
+    invoke-direct/range {v6 .. v11}, Lnt6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    if-ne p0, p1, :cond_0
+    iget v0, p0, Lw8c;->a:I
 
-    goto :goto_1
+    packed-switch v0, :pswitch_data_0
 
-    :cond_0
-    instance-of v0, p1, Lw8c;
+    check-cast p1, Ljava/lang/Number;
 
-    if-nez v0, :cond_1
+    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
 
-    goto :goto_0
+    move-result p1
 
-    :cond_1
-    check-cast p1, Lw8c;
+    iget-object v0, p0, Lw8c;->b:Lone/me/chats/picker/chats/PickerChatsListWidget;
 
-    iget-wide v0, p0, Lw8c;->a:J
+    invoke-static {v0, p1}, Lone/me/chats/picker/chats/PickerChatsListWidget;->H0(Lone/me/chats/picker/chats/PickerChatsListWidget;I)Z
 
-    iget-wide v2, p1, Lw8c;->a:J
+    move-result p1
 
-    cmp-long v0, v0, v2
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    if-eqz v0, :cond_2
+    move-result-object p1
 
-    goto :goto_0
+    return-object p1
 
-    :cond_2
-    iget-object v0, p0, Lw8c;->b:Llhg;
+    :pswitch_0
+    check-cast p1, Ljava/lang/Number;
 
-    iget-object v1, p1, Lw8c;->b:Llhg;
+    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
 
-    invoke-virtual {v0, v1}, Llhg;->equals(Ljava/lang/Object;)Z
+    move-result p1
 
-    move-result v0
+    iget-object v0, p0, Lw8c;->b:Lone/me/chats/picker/chats/PickerChatsListWidget;
 
-    if-nez v0, :cond_3
+    invoke-static {v0, p1}, Lone/me/chats/picker/chats/PickerChatsListWidget;->H0(Lone/me/chats/picker/chats/PickerChatsListWidget;I)Z
 
-    goto :goto_0
+    move-result p1
 
-    :cond_3
-    iget-object v0, p0, Lw8c;->c:Lphg;
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    iget-object v1, p1, Lw8c;->c:Lphg;
+    move-result-object p1
 
-    invoke-virtual {v0, v1}, Lphg;->equals(Ljava/lang/Object;)Z
+    return-object p1
 
-    move-result v0
+    nop
 
-    if-nez v0, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    iget-boolean v0, p0, Lw8c;->d:Z
-
-    iget-boolean p1, p1, Lw8c;->d:Z
-
-    if-eq v0, p1, :cond_5
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_5
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-wide v0, p0, Lw8c;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lw8c;->b:Llhg;
-
-    iget v2, v2, Llhg;->c:I
-
-    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
-
-    move-result v0
-
-    iget-object v2, p0, Lw8c;->c:Lphg;
-
-    invoke-virtual {v2}, Lphg;->hashCode()I
-
-    move-result v2
-
-    add-int/2addr v2, v0
-
-    mul-int/2addr v2, v1
-
-    iget-boolean v0, p0, Lw8c;->d:Z
-
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v0
-
-    add-int/2addr v0, v2
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "State(messageId="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-wide v1, p0, Lw8c;->a:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", title="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lw8c;->b:Llhg;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", subtitle="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lw8c;->c:Lphg;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", canClose="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lw8c;->d:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

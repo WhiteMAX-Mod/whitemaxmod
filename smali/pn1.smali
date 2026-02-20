@@ -1,140 +1,94 @@
-.class public final Lpn1;
+.class public final synthetic Lpn1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Le94;
+.implements Lis6;
 
 
 # instance fields
-.field public final synthetic a:Lone/me/calls/ui/ui/call/CallScreen;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lqn1;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/calls/ui/ui/call/CallScreen;)V
+.method public synthetic constructor <init>(Lqn1;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lpn1;->a:I
 
-    iput-object p1, p0, Lpn1;->a:Lone/me/calls/ui/ui/call/CallScreen;
+    iput-object p1, p0, Lpn1;->b:Lqn1;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(La94;La94;Z)V
-    .locals 0
+.method public final invoke()Ljava/lang/Object;
+    .locals 3
 
-    return-void
-.end method
+    iget v0, p0, Lpn1;->a:I
 
-.method public final b(La94;La94;Z)V
-    .locals 1
+    packed-switch v0, :pswitch_data_0
 
-    sget-object p1, Lone/me/calls/ui/ui/call/CallScreen;->P0:Lv1j;
+    iget-object v0, p0, Lpn1;->b:Lqn1;
 
-    iget-object p1, p0, Lpn1;->a:Lone/me/calls/ui/ui/call/CallScreen;
+    iget-object v0, v0, Lqn1;->b:Loye;
 
-    invoke-virtual {p1}, Lone/me/calls/ui/ui/call/CallScreen;->I0()Lsq1;
-
-    move-result-object p2
-
-    :goto_0
-    invoke-virtual {p1}, La94;->getParentController()La94;
-
-    move-result-object p3
-
-    if-eqz p3, :cond_0
-
-    invoke-virtual {p1}, La94;->getParentController()La94;
-
-    move-result-object p1
-
-    goto :goto_0
-
-    :cond_0
-    instance-of p3, p1, Lc5e;
-
-    const/4 v0, 0x0
-
-    if-eqz p3, :cond_1
-
-    check-cast p1, Lc5e;
-
-    goto :goto_1
-
-    :cond_1
-    move-object p1, v0
-
-    :goto_1
-    if-eqz p1, :cond_2
-
-    check-cast p1, Lone/me/android/root/RootController;
-
-    invoke-virtual {p1}, Lone/me/android/root/RootController;->F0()Lw4e;
-
-    move-result-object p1
-
-    goto :goto_2
-
-    :cond_2
-    move-object p1, v0
-
-    :goto_2
-    if-eqz p1, :cond_3
-
-    invoke-virtual {p1}, Lw4e;->e()Ljava/util/ArrayList;
-
-    move-result-object v0
-
-    :cond_3
-    const/4 p1, 0x1
-
-    if-eqz v0, :cond_5
-
-    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result p3
-
-    if-eqz p3, :cond_4
-
-    goto :goto_3
-
-    :cond_4
-    const/4 p3, 0x0
-
-    goto :goto_4
-
-    :cond_5
-    :goto_3
-    move p3, p1
-
-    :goto_4
-    xor-int/2addr p1, p3
-
-    iget-object p2, p2, Lsq1;->F0:Lspf;
-
-    :cond_6
-    invoke-virtual {p2}, Lspf;->getValue()Ljava/lang/Object;
-
-    move-result-object p3
-
-    move-object v0, p3
-
-    check-cast v0, Ljava/lang/Boolean;
+    check-cast v0, Lzgc;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->reconnect-call-ringtone:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Lzgc;->j(Ljava/lang/Enum;Z)Z
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
 
-    invoke-virtual {p2, p3, v0}, Lspf;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    return-object v0
 
-    move-result p3
+    :pswitch_0
+    iget-object v0, p0, Lpn1;->b:Lqn1;
 
-    if-eqz p3, :cond_6
+    iget-object v0, v0, Lqn1;->a:Landroid/content/Context;
 
-    return-void
+    const-string v1, "vibrator"
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/os/Vibrator;
+
+    return-object v0
+
+    :pswitch_1
+    iget-object v0, p0, Lpn1;->b:Lqn1;
+
+    iget-object v0, v0, Lqn1;->a:Landroid/content/Context;
+
+    const-string v1, "audio"
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/media/AudioManager;
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

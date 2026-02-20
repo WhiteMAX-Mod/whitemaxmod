@@ -1,130 +1,169 @@
-.class public abstract Libh;
-.super Ljava/lang/Object;
+.class public final Libh;
+.super Lpdg;
 .source "SourceFile"
 
+# interfaces
+.implements Lys6;
 
-# static fields
-.field public static final a:Ljava/util/concurrent/atomic/AtomicReference;
+
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lkbh;
+
+.field public o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lkbh;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
+    iput-object p1, p0, Libh;->Y:Lkbh;
 
-    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+    const/4 p1, 0x2
 
-    sput-object v0, Libh;->a:Ljava/util/concurrent/atomic/AtomicReference;
+    invoke-direct {p0, p1, p2}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static a(Ljava/util/Calendar;)Ljava/util/Calendar;
-    .locals 4
 
-    invoke-static {p0}, Libh;->c(Ljava/util/Calendar;)Ljava/util/Calendar;
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    move-result-object p0
+    check-cast p1, Lnd4;
 
-    const/4 v0, 0x0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-static {v0}, Libh;->c(Ljava/util/Calendar;)Ljava/util/Calendar;
+    invoke-virtual {p0, p1, p2}, Libh;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    move-result-object v0
+    move-result-object p1
 
-    const/4 v1, 0x1
+    check-cast p1, Libh;
 
-    invoke-virtual {p0, v1}, Ljava/util/Calendar;->get(I)I
+    sget-object p2, Lmah;->a:Lmah;
 
-    move-result v1
+    invoke-virtual {p1, p2}, Libh;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const/4 v2, 0x2
+    move-result-object p1
 
-    invoke-virtual {p0, v2}, Ljava/util/Calendar;->get(I)I
+    return-object p1
+.end method
 
-    move-result v2
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    const/4 v3, 0x5
+    new-instance v0, Libh;
 
-    invoke-virtual {p0, v3}, Ljava/util/Calendar;->get(I)I
+    iget-object v1, p0, Libh;->Y:Lkbh;
 
-    move-result p0
+    invoke-direct {v0, v1, p2}, Libh;-><init>(Lkbh;Lkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {v0, v1, v2, p0}, Ljava/util/Calendar;->set(III)V
+    iput-object p1, v0, Libh;->X:Ljava/lang/Object;
 
     return-object v0
 .end method
 
-.method public static b()Ljava/util/Calendar;
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    sget-object v0, Libh;->a:Ljava/util/concurrent/atomic/AtomicReference;
+    iget-object v0, p0, Libh;->X:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    check-cast v0, Lnd4;
 
-    move-result-object v0
+    iget v1, p0, Libh;->o:I
 
-    check-cast v0, Ldlg;
+    iget-object v2, p0, Libh;->Y:Lkbh;
 
-    invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
+    const/4 v3, 0x1
 
-    move-result-object v0
+    if-eqz v1, :cond_1
 
-    const/16 v1, 0xb
+    if-ne v1, v3, :cond_0
+
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    iget-object p1, v2, Lkbh;->t0:Lj88;
+
+    invoke-interface {p1}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lun3;
+
+    const/16 v1, 0x8
+
+    int-to-byte v1, v1
+
+    iput-object v0, p0, Libh;->X:Ljava/lang/Object;
+
+    iput v3, p0, Libh;->o:I
+
+    iget-object p1, p1, Lun3;->a:Lm8e;
+
+    new-instance v0, Ltn3;
+
+    invoke-direct {v0, v1}, Ltn3;-><init>(B)V
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, p1, p0, v3, v1}, Lfuj;->h(Lks6;Lm8e;Lkotlin/coroutines/Continuation;ZZ)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lod4;->a:Lod4;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    check-cast p1, Lvn3;
+
+    if-eqz p1, :cond_3
+
+    iget-object p1, p1, Lvn3;->c:Ljava/util/List;
+
+    return-object p1
+
+    :cond_3
+    iget-object p1, v2, Lkbh;->u0:Lj88;
+
+    invoke-interface {p1}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lxn3;
+
+    iget-object v0, p1, Lxn3;->e:Lkotlinx/coroutines/internal/ContextScope;
+
+    new-instance v1, Lwn3;
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0, v1, v2}, Ljava/util/Calendar;->set(II)V
+    invoke-direct {v1, p1, v2}, Lwn3;-><init>(Lxn3;Lkotlin/coroutines/Continuation;)V
 
-    const/16 v1, 0xc
+    const/4 p1, 0x3
 
-    invoke-virtual {v0, v1, v2}, Ljava/util/Calendar;->set(II)V
+    invoke-static {v0, v2, v2, v1, p1}, Lea9;->d(Lnd4;Led4;Lqd4;Lys6;I)Lcuf;
 
-    const/16 v1, 0xd
+    sget-object p1, Lsi5;->a:Lsi5;
 
-    invoke-virtual {v0, v1, v2}, Ljava/util/Calendar;->set(II)V
-
-    const/16 v1, 0xe
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/Calendar;->set(II)V
-
-    const-string v1, "UTC"
-
-    invoke-static {v1}, Ljava/util/TimeZone;->getTimeZone(Ljava/lang/String;)Ljava/util/TimeZone;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/Calendar;->setTimeZone(Ljava/util/TimeZone;)V
-
-    return-object v0
-.end method
-
-.method public static c(Ljava/util/Calendar;)Ljava/util/Calendar;
-    .locals 3
-
-    const-string v0, "UTC"
-
-    invoke-static {v0}, Ljava/util/TimeZone;->getTimeZone(Ljava/lang/String;)Ljava/util/TimeZone;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/Calendar;->getInstance(Ljava/util/TimeZone;)Ljava/util/Calendar;
-
-    move-result-object v0
-
-    if-nez p0, :cond_0
-
-    invoke-virtual {v0}, Ljava/util/Calendar;->clear()V
-
-    return-object v0
-
-    :cond_0
-    invoke-virtual {p0}, Ljava/util/Calendar;->getTimeInMillis()J
-
-    move-result-wide v1
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/Calendar;->setTimeInMillis(J)V
-
-    return-object v0
+    return-object p1
 .end method

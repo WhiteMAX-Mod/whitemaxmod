@@ -1,132 +1,234 @@
-.class public abstract Lyw7;
-.super Ljava/lang/Object;
+.class public final Lyw7;
+.super Lx0i;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:Lyrd;
+# static fields
+.field public static final synthetic s0:[Lv58;
 
-.field public b:Lwrd;
+
+# instance fields
+.field public final X:Lhxf;
+
+.field public final Y:Ln8;
+
+.field public final Z:Lmrd;
+
+.field public final b:Lj88;
+
+.field public final c:Lj88;
+
+.field public final d:Lj88;
+
+.field public final o:Ljava/lang/String;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 4
+
+    new-instance v0, Laia;
+
+    const-string v1, "qrCodeJob"
+
+    const-string v2, "getQrCodeJob()Lkotlinx/coroutines/Job;"
+
+    const-class v3, Lyw7;
+
+    invoke-direct {v0, v3, v1, v2}, Laia;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+
+    sget-object v1, Lazd;->a:Lbzd;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 v1, 0x1
+
+    new-array v1, v1, [Lv58;
+
+    const/4 v2, 0x0
+
+    aput-object v0, v1, v2
+
+    sput-object v1, Lyw7;->s0:[Lv58;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lp6d;II)V
+    .locals 4
+
+    and-int/lit8 p3, p3, 0x2
+
+    const/4 v0, 0x0
+
+    if-eqz p3, :cond_0
+
+    move p2, v0
+
+    :cond_0
+    sget-object p3, Lpv7;->a:Lpv7;
+
+    invoke-virtual {p3}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v1
+
+    const/16 v2, 0x7d
+
+    invoke-virtual {v1, v2}, Lr5;->d(I)Lbgg;
+
+    move-result-object v1
+
+    invoke-virtual {p3}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v2
+
+    const/16 v3, 0xe
+
+    invoke-virtual {v2, v3}, Lr5;->d(I)Lbgg;
+
+    move-result-object v2
+
+    invoke-virtual {p3}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object p3
+
+    const/16 v3, 0x10
+
+    invoke-virtual {p3, v3}, Lr5;->d(I)Lbgg;
+
+    move-result-object p3
+
+    invoke-direct {p0}, Lx0i;-><init>()V
+
+    iput-object v2, p0, Lyw7;->b:Lj88;
+
+    iput-object v1, p0, Lyw7;->c:Lj88;
+
+    iput-object p3, p0, Lyw7;->d:Lj88;
+
+    const-class p3, Lyw7;
+
+    invoke-virtual {p3}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p3
+
+    iput-object p3, p0, Lyw7;->o:Ljava/lang/String;
+
+    const/4 p3, 0x0
+
+    invoke-static {p3}, Lixf;->a(Ljava/lang/Object;)Lhxf;
+
+    move-result-object p3
+
+    iput-object p3, p0, Lyw7;->X:Lhxf;
+
+    invoke-static {}, Lytj;->a()Ln8;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lyw7;->Y:Ln8;
+
+    new-instance v1, Lmrd;
+
+    invoke-direct {v1, p3}, Lmrd;-><init>(Lgia;)V
+
+    iput-object v1, p0, Lyw7;->Z:Lmrd;
+
+    if-eqz p2, :cond_1
+
+    const/4 v0, 0x1
+
+    :cond_1
+    invoke-virtual {p0, p1, v0, p2}, Lyw7;->p(Lp6d;ZI)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a(Landroidx/recyclerview/widget/RecyclerView;)V
-    .locals 1
+.method public final p(Lp6d;ZI)V
+    .locals 10
 
-    invoke-virtual {p0, p1}, Lyw7;->b(Landroidx/recyclerview/widget/RecyclerView;)V
+    sget-object v0, Lyw7;->s0:[Lv58;
 
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lwrd;
+    const/4 v1, 0x0
 
-    move-result-object v0
+    aget-object v2, v0, v1
 
-    if-eqz v0, :cond_0
+    iget-object v3, p0, Lyw7;->Y:Ln8;
 
-    iput-object v0, p0, Lyw7;->b:Lwrd;
+    invoke-virtual {v3, p0, v2}, Ln8;->D(Ljava/lang/Object;Lv58;)Ljava/lang/Object;
 
-    invoke-virtual {p0, p1, v0}, Lyw7;->c(Landroidx/recyclerview/widget/RecyclerView;Lwrd;)Lyrd;
+    move-result-object v2
 
-    move-result-object p1
+    check-cast v2, Lvy7;
 
-    iput-object p1, p0, Lyw7;->a:Lyrd;
+    if-eqz v2, :cond_0
 
-    invoke-virtual {v0, p1}, Lwrd;->A(Lyrd;)V
+    invoke-interface {v2}, Lvy7;->isActive()Z
 
-    return-void
+    move-result v2
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    const/4 v4, 0x1
 
-    const-string v0, "require not null adapter"
+    if-ne v2, v4, :cond_0
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final b(Landroidx/recyclerview/widget/RecyclerView;)V
-    .locals 4
-
-    iget-object v0, p0, Lyw7;->b:Lwrd;
-
-    if-nez v0, :cond_0
-
-    iget-object v1, p0, Lyw7;->a:Lyrd;
-
-    if-nez v1, :cond_0
+    if-nez p2, :cond_0
 
     return-void
 
     :cond_0
-    if-eqz v0, :cond_1
+    iget-object v2, p0, Lyw7;->b:Lj88;
 
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lwrd;
+    invoke-interface {v2}, Lj88;->getValue()Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object v2
 
-    iget-object v1, p0, Lyw7;->b:Lwrd;
+    check-cast v2, Lbjg;
 
-    if-eq v0, v1, :cond_1
+    check-cast v2, Lcbb;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v2}, Lcbb;->b()Lgd4;
 
-    move-result-object v0
+    move-result-object v2
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    iget-object v4, p0, Lyw7;->d:Lj88;
 
-    move-result-object v0
+    invoke-interface {v4}, Lj88;->getValue()Ljava/lang/Object;
 
-    iget-object v1, p0, Lyw7;->b:Lwrd;
+    move-result-object v4
 
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lwrd;
+    check-cast v4, Lhd4;
+
+    invoke-virtual {v2, v4}, Lo0;->plus(Led4;)Led4;
+
+    move-result-object v2
+
+    new-instance v4, Lxw7;
+
+    const/4 v9, 0x0
+
+    move-object v5, p0
+
+    move-object v6, p1
+
+    move v7, p2
+
+    move v8, p3
+
+    invoke-direct/range {v4 .. v9}, Lxw7;-><init>(Lyw7;Lp6d;ZILkotlin/coroutines/Continuation;)V
+
+    iget-object p1, v5, Lx0i;->a:Lkotlinx/coroutines/internal/ContextScope;
+
+    sget-object p2, Lqd4;->b:Lqd4;
+
+    invoke-static {p1, v2, p2, v4}, Lea9;->c(Lnd4;Led4;Lqd4;Lys6;)Lcuf;
 
     move-result-object p1
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    aget-object p2, v0, v1
 
-    const-string v3, "adapter was changed! cached adapter = "
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", recyclerView.adapter = "
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    new-instance v1, Ljava/lang/IllegalStateException;
-
-    const-string v2, "adapter was changed"
-
-    invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    invoke-static {v0, p1, v1}, Lc5j;->r(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
-    iget-object p1, p0, Lyw7;->b:Lwrd;
-
-    iget-object v0, p0, Lyw7;->a:Lyrd;
-
-    if-eqz p1, :cond_2
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {p1, v0}, Lwrd;->C(Lyrd;)V
-
-    :cond_2
-    const/4 p1, 0x0
-
-    iput-object p1, p0, Lyw7;->b:Lwrd;
-
-    iput-object p1, p0, Lyw7;->a:Lyrd;
+    invoke-virtual {v3, p0, p2, p1}, Ln8;->N(Ljava/lang/Object;Lv58;Ljava/lang/Object;)V
 
     return-void
-.end method
-
-.method public abstract c(Landroidx/recyclerview/widget/RecyclerView;Lwrd;)Lyrd;
 .end method

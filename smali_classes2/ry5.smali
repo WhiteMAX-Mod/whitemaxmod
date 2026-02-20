@@ -1,19 +1,51 @@
-.class public interface abstract Lry5;
-.super Ljava/lang/Object;
+.class public final Lry5;
+.super Lda4;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lvna;
+# instance fields
+.field public final synthetic X:Lxy5;
+
+.field public Y:I
+
+.field public d:Laz5;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lxy5;Lda4;)V
+    .locals 0
 
-    sget-object v0, Lvna;->x0:Lvna;
+    iput-object p1, p0, Lry5;->X:Lxy5;
 
-    sput-object v0, Lry5;->a:Lvna;
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lry5;->o:Ljava/lang/Object;
+
+    iget p1, p0, Lry5;->Y:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lry5;->Y:I
+
+    iget-object p1, p0, Lry5;->X:Lxy5;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lxy5;->L0(Laz5;Lda4;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

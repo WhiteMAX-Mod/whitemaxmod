@@ -1,113 +1,105 @@
-.class public abstract Likj;
-.super Ljava/lang/Object;
+.class public final Likj;
+.super Lg4;
 .source "SourceFile"
 
 
-# direct methods
-.method public static a(Ljava/lang/Object;Ljava/lang/String;)V
-    .locals 0
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Likj;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-    if-eqz p0, :cond_0
+
+# instance fields
+.field public X:[Ljava/lang/String;
+
+.field public Y:[Lydj;
+
+.field public a:Lhqj;
+
+.field public b:Ljava/lang/String;
+
+.field public c:Ljava/lang/String;
+
+.field public d:[Llrj;
+
+.field public o:[Lznj;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lvzi;
+
+    const/16 v1, 0x19
+
+    invoke-direct {v0, v1}, Lvzi;-><init>(I)V
+
+    sput-object v0, Likj;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
-
-    :cond_0
-    new-instance p0, Ljava/lang/NullPointerException;
-
-    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p0
 .end method
 
-.method public static final b(Landroid/database/Cursor;I)Landroid/net/Uri;
+
+# virtual methods
+.method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 3
 
-    :try_start_0
-    invoke-interface {p0, p1}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+    const/16 v0, 0x4f45
 
-    move-result-object p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-static {p1, v0}, Lcwj;->j(Landroid/os/Parcel;I)I
 
-    goto :goto_0
+    move-result v0
 
-    :catchall_0
-    move-exception p0
+    const/4 v1, 0x2
 
-    new-instance p1, Lszd;
+    iget-object v2, p0, Likj;->a:Lhqj;
 
-    invoke-direct {p1, p0}, Lszd;-><init>(Ljava/lang/Throwable;)V
+    invoke-static {p1, v1, v2, p2}, Lcwj;->e(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
 
-    move-object p0, p1
+    const/4 v1, 0x3
 
-    :goto_0
-    nop
+    iget-object v2, p0, Likj;->b:Ljava/lang/String;
 
-    instance-of p1, p0, Lszd;
+    invoke-static {p1, v1, v2}, Lcwj;->f(Landroid/os/Parcel;ILjava/lang/String;)V
 
-    const/4 v0, 0x0
+    const/4 v1, 0x4
 
-    if-eqz p1, :cond_0
+    iget-object v2, p0, Likj;->c:Ljava/lang/String;
 
-    move-object p0, v0
+    invoke-static {p1, v1, v2}, Lcwj;->f(Landroid/os/Parcel;ILjava/lang/String;)V
 
-    :cond_0
-    check-cast p0, Ljava/lang/String;
+    const/4 v1, 0x5
 
-    if-eqz p0, :cond_2
+    iget-object v2, p0, Likj;->d:[Llrj;
 
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
+    invoke-static {p1, v1, v2, p2}, Lcwj;->h(Landroid/os/Parcel;I[Landroid/os/Parcelable;I)V
 
-    move-result p1
+    const/4 v1, 0x6
 
-    if-nez p1, :cond_1
+    iget-object v2, p0, Likj;->o:[Lznj;
 
-    goto :goto_1
+    invoke-static {p1, v1, v2, p2}, Lcwj;->h(Landroid/os/Parcel;I[Landroid/os/Parcelable;I)V
 
-    :cond_1
-    :try_start_1
-    invoke-static {p0}, Lngf;->e(Ljava/lang/String;)Z
+    const/4 v1, 0x7
 
-    move-result p1
+    iget-object v2, p0, Likj;->X:[Ljava/lang/String;
 
-    if-eqz p1, :cond_2
+    invoke-static {p1, v1, v2}, Lcwj;->g(Landroid/os/Parcel;I[Ljava/lang/String;)V
 
-    invoke-static {p0}, Lxti;->k(Ljava/lang/String;)Ljava/lang/String;
+    const/16 v1, 0x8
 
-    move-result-object p1
+    iget-object v2, p0, Likj;->Y:[Lydj;
 
-    invoke-static {p1}, Lt3j;->m(Ljava/lang/String;)Landroid/net/Uri;
+    invoke-static {p1, v1, v2, p2}, Lcwj;->h(Landroid/os/Parcel;I[Landroid/os/Parcelable;I)V
 
-    move-result-object v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+    invoke-static {p1, v0}, Lcwj;->k(Landroid/os/Parcel;I)V
 
-    goto :goto_1
-
-    :catchall_1
-    move-exception p1
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "Failure Uri.fromFile(File("
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p0, "))"
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    const-string v1, "LocalMediaRepository:Cursor:getUri"
-
-    invoke-static {v1, p0, p1}, Lc5j;->r(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_2
-    :goto_1
-    return-object v0
+    return-void
 .end method

@@ -1,77 +1,80 @@
 .class public final Lbg5;
-.super Ljava/lang/Object;
+.super Lalf;
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:Landroid/graphics/Rect;
-
-
 # instance fields
-.field public final a:Ln8g;
+.field public final X:Z
 
-.field public final b:Ln8g;
+.field public final o:La1e;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Ljava/util/concurrent/ExecutorService;La1e;Z)V
+    .locals 0
 
-    new-instance v0, Landroid/graphics/Rect;
+    invoke-direct {p0, p1}, Lalf;-><init>(Ljava/util/concurrent/Executor;)V
 
-    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
+    iput-object p2, p0, Lbg5;->o:La1e;
 
-    sput-object v0, Lbg5;->c:Landroid/graphics/Rect;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Ldc3;
-
-    invoke-direct {v0, p0, p1}, Ldc3;-><init>(Lbg5;Landroid/content/Context;)V
-
-    new-instance p1, Ln8g;
-
-    invoke-direct {p1, v0}, Ln8g;-><init>(Llq6;)V
-
-    iput-object p1, p0, Lbg5;->a:Ln8g;
-
-    new-instance p1, Ljw3;
-
-    const/16 v0, 0x11
-
-    invoke-direct {p1, v0, p0}, Ljw3;-><init>(ILjava/lang/Object;)V
-
-    new-instance v0, Ln8g;
-
-    invoke-direct {v0, p1}, Ln8g;-><init>(Llq6;)V
-
-    iput-object v0, p0, Lbg5;->b:Ln8g;
+    iput-boolean p3, p0, Lbg5;->X:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()F
-    .locals 1
+.method public final l(I)I
+    .locals 0
 
-    iget-object v0, p0, Lbg5;->a:Ln8g;
+    invoke-virtual {p0, p1}, Lfg8;->D(I)Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ln8g;->getValue()Ljava/lang/Object;
+    move-result-object p1
 
-    move-result-object v0
+    check-cast p1, Lmg8;
 
-    check-cast v0, Ljava/lang/Number;
+    invoke-interface {p1}, Lmg8;->m()I
 
-    invoke-virtual {v0}, Ljava/lang/Number;->floatValue()F
+    move-result p1
 
-    move-result v0
+    return p1
+.end method
 
-    return v0
+.method public final u(Landroid/view/ViewGroup;I)Lpyd;
+    .locals 2
+
+    sget v0, Lkeb;->r:I
+
+    if-ne p2, v0, :cond_0
+
+    new-instance p2, Le92;
+
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    new-instance v0, Lpic;
+
+    const/4 v1, 0x2
+
+    invoke-direct {v0, v1}, Lpic;-><init>(I)V
+
+    invoke-direct {p2, p1, v0}, Le92;-><init>(Landroid/content/Context;Lis6;)V
+
+    return-object p2
+
+    :cond_0
+    new-instance p2, Lag5;
+
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lbg5;->o:La1e;
+
+    iget-boolean v1, p0, Lbg5;->X:Z
+
+    invoke-direct {p2, p1, v0, v1}, Lag5;-><init>(Landroid/content/Context;La1e;Z)V
+
+    return-object p2
 .end method

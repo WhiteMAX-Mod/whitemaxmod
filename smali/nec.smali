@@ -1,77 +1,193 @@
 .class public final Lnec;
-.super Lmec;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Liy0;
+
+
+# static fields
+.field public static final d:Lnec;
 
 
 # instance fields
-.field public final c:Ljava/lang/Object;
+.field public final a:F
+
+.field public final b:F
+
+.field public final c:I
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0, p1}, Lmec;-><init>(I)V
+    new-instance v0, Lnec;
 
-    new-instance p1, Ljava/lang/Object;
+    const/high16 v1, 0x3f800000    # 1.0f
 
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0, v1, v1}, Lnec;-><init>(FF)V
 
-    iput-object p1, p0, Lnec;->c:Ljava/lang/Object;
+    sput-object v0, Lnec;->d:Lnec;
+
+    return-void
+.end method
+
+.method public constructor <init>(FF)V
+    .locals 4
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, 0x0
+
+    cmpl-float v1, p1, v0
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    if-lez v1, :cond_0
+
+    move v1, v3
+
+    goto :goto_0
+
+    :cond_0
+    move v1, v2
+
+    :goto_0
+    invoke-static {v1}, Lvej;->c(Z)V
+
+    cmpl-float v0, p2, v0
+
+    if-lez v0, :cond_1
+
+    move v2, v3
+
+    :cond_1
+    invoke-static {v2}, Lvej;->c(Z)V
+
+    iput p1, p0, Lnec;->a:F
+
+    iput p2, p0, Lnec;->b:F
+
+    const/high16 p2, 0x447a0000    # 1000.0f
+
+    mul-float/2addr p1, p2
+
+    invoke-static {p1}, Ljava/lang/Math;->round(F)I
+
+    move-result p1
+
+    iput p1, p0, Lnec;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget-object v0, p0, Lnec;->c:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    monitor-enter v0
+    if-ne p0, p1, :cond_0
 
-    :try_start_0
-    invoke-super {p0}, Lmec;->a()Ljava/lang/Object;
+    return v0
 
-    move-result-object v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    :cond_0
+    const/4 v1, 0x0
 
-    monitor-exit v0
+    if-eqz p1, :cond_2
 
-    return-object v1
+    const-class v2, Lnec;
 
-    :catchall_0
-    move-exception v1
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    monitor-exit v0
+    move-result-object v3
 
-    throw v1
+    if-eq v2, v3, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lnec;
+
+    iget v2, p0, Lnec;->a:F
+
+    iget v3, p1, Lnec;->a:F
+
+    cmpl-float v2, v2, v3
+
+    if-nez v2, :cond_2
+
+    iget v2, p0, Lnec;->b:F
+
+    iget p1, p1, Lnec;->b:F
+
+    cmpl-float p1, v2, p1
+
+    if-nez p1, :cond_2
+
+    return v0
+
+    :cond_2
+    :goto_0
+    return v1
 .end method
 
-.method public final d(Ljava/lang/Object;)Z
-    .locals 1
+.method public final hashCode()I
+    .locals 2
 
-    iget-object v0, p0, Lnec;->c:Ljava/lang/Object;
+    iget v0, p0, Lnec;->a:F
 
-    monitor-enter v0
+    invoke-static {v0}, Ljava/lang/Float;->floatToRawIntBits(F)I
 
-    :try_start_0
-    invoke-super {p0, p1}, Lmec;->d(Ljava/lang/Object;)Z
+    move-result v0
 
-    move-result p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    add-int/lit16 v0, v0, 0x20f
 
-    monitor-exit v0
+    mul-int/lit8 v0, v0, 0x1f
 
-    return p1
+    iget v1, p0, Lnec;->b:F
 
-    :catchall_0
-    move-exception p1
+    invoke-static {v1}, Ljava/lang/Float;->floatToRawIntBits(F)I
 
-    monitor-exit v0
+    move-result v1
 
-    throw p1
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    iget v0, p0, Lnec;->a:F
+
+    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v0
+
+    iget v1, p0, Lnec;->b:F
+
+    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v1
+
+    filled-new-array {v0, v1}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    sget v1, Ltih;->a:I
+
+    sget-object v1, Ljava/util/Locale;->US:Ljava/util/Locale;
+
+    const-string v2, "PlaybackParameters(speed=%.2f, pitch=%.2f)"
+
+    invoke-static {v1, v2, v0}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

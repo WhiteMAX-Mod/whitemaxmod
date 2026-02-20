@@ -1,25 +1,51 @@
 .class public final Lgpb;
-.super Lhja;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lipb;
 
 
 # instance fields
-.field public final b:Landroid/content/Intent;
+.field public final a:I
 
-.field public final c:Landroid/net/Uri;
+.field public final b:I
+
+.field public final c:F
+
+.field public final d:I
+
+.field public final e:Lks6;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Intent;Landroid/net/Uri;)V
+.method public constructor <init>(IILks6;)V
     .locals 1
 
-    sget-object v0, Lb3h;->a:Lb3h;
+    sget v0, Lcjb;->S:I
 
-    invoke-direct {p0, v0}, Lhja;-><init>(Ljava/lang/Object;)V
+    and-int/lit8 p2, p2, 0x8
 
-    iput-object p1, p0, Lgpb;->b:Landroid/content/Intent;
+    if-eqz p2, :cond_0
 
-    iput-object p2, p0, Lgpb;->c:Landroid/net/Uri;
+    sget v0, Lcjb;->T:I
+
+    :cond_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Lgpb;->a:I
+
+    const/4 p1, 0x4
+
+    iput p1, p0, Lgpb;->b:I
+
+    const/high16 p1, 0x41400000    # 12.0f
+
+    iput p1, p0, Lgpb;->c:F
+
+    iput v0, p0, Lgpb;->d:I
+
+    iput-object p3, p0, Lgpb;->e:Lks6;
 
     return-void
 .end method
@@ -27,105 +53,92 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
+    .locals 2
 
     if-ne p0, p1, :cond_0
 
-    return v0
+    goto :goto_0
 
     :cond_0
-    instance-of v1, p1, Lgpb;
+    instance-of v0, p1, Lgpb;
 
-    const/4 v2, 0x0
+    if-nez v0, :cond_1
 
-    if-nez v1, :cond_1
-
-    return v2
+    goto :goto_1
 
     :cond_1
     check-cast p1, Lgpb;
 
-    iget-object v1, p0, Lgpb;->b:Landroid/content/Intent;
+    iget v0, p1, Lgpb;->a:I
 
-    iget-object v3, p1, Lgpb;->b:Landroid/content/Intent;
+    iget v1, p0, Lgpb;->a:I
 
-    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    if-ne v1, v0, :cond_2
 
-    move-result v1
+    iget v0, p0, Lgpb;->b:I
 
-    if-nez v1, :cond_2
+    iget v1, p1, Lgpb;->b:I
 
-    return v2
+    if-ne v0, v1, :cond_2
+
+    iget v0, p0, Lgpb;->c:F
+
+    iget v1, p1, Lgpb;->c:F
+
+    cmpg-float v0, v0, v1
+
+    if-nez v0, :cond_2
+
+    iget v0, p0, Lgpb;->d:I
+
+    iget p1, p1, Lgpb;->d:I
+
+    if-ne v0, p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x1
+
+    return p1
 
     :cond_2
-    iget-object v1, p0, Lgpb;->c:Landroid/net/Uri;
+    :goto_1
+    const/4 p1, 0x0
 
-    iget-object p1, p1, Lgpb;->c:Landroid/net/Uri;
-
-    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
+    return p1
 .end method
 
 .method public final hashCode()I
-    .locals 2
+    .locals 3
 
-    iget-object v0, p0, Lgpb;->b:Landroid/content/Intent;
+    iget v0, p0, Lgpb;->a:I
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
     move-result v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    const/16 v1, 0x1f
 
-    iget-object v1, p0, Lgpb;->c:Landroid/net/Uri;
+    mul-int/2addr v0, v1
 
-    invoke-virtual {v1}, Landroid/net/Uri;->hashCode()I
+    iget v2, p0, Lgpb;->b:I
+
+    invoke-static {v2, v0, v1}, Ljye;->d(III)I
+
+    move-result v0
+
+    iget v2, p0, Lgpb;->c:F
+
+    invoke-static {v0, v2, v1}, Lj64;->c(IFI)I
+
+    move-result v0
+
+    iget v1, p0, Lgpb;->d:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
 
     move-result v1
 
     add-int/2addr v1, v0
 
     return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "OpenFile(intent="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lgpb;->b:Landroid/content/Intent;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", uri="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lgpb;->c:Landroid/net/Uri;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

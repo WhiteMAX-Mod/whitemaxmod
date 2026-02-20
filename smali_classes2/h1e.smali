@@ -1,49 +1,21 @@
 .class public final Lh1e;
-.super Lo84;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic X:Ln1e;
-
-.field public Y:I
-
-.field public d:Ln1e;
-
-.field public synthetic o:Ljava/lang/Object;
-
-
 # direct methods
-.method public constructor <init>(Ln1e;Lo84;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lh1e;->X:Ln1e;
+    new-instance v0, Lv3d;
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    sget-object v0, Lazd;->a:Lbzd;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v1, Lv3d;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Lh1e;->o:Ljava/lang/Object;
-
-    iget p1, p0, Lh1e;->Y:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lh1e;->Y:I
-
-    iget-object p1, p0, Lh1e;->X:Ln1e;
-
-    invoke-static {p1, p0}, Ln1e;->b(Ln1e;Lo84;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
 .end method

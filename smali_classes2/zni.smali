@@ -1,60 +1,47 @@
 .class public final Lzni;
-.super Ljava/lang/Object;
+.super Lda4;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public X:I
 
-.field public final b:Ljava/lang/Runnable;
+.field public synthetic d:Ljava/lang/Object;
 
-.field public volatile c:Z
-
-.field public d:I
-
-.field public final synthetic o:Lgsb;
+.field public final synthetic o:Laoi;
 
 
 # direct methods
-.method public constructor <init>(Lgsb;Ljava/lang/String;Ljava/lang/Runnable;)V
+.method public constructor <init>(Laoi;Lda4;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lzni;->o:Laoi;
 
-    iput-object p1, p0, Lzni;->o:Lgsb;
-
-    const/4 p1, 0x0
-
-    iput-boolean p1, p0, Lzni;->c:Z
-
-    iput p1, p0, Lzni;->d:I
-
-    iput-object p2, p0, Lzni;->a:Ljava/lang/String;
-
-    iput-object p3, p0, Lzni;->b:Ljava/lang/Runnable;
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Lzni;->o:Lgsb;
+    iput-object p1, p0, Lzni;->d:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget p1, p0, Lzni;->X:I
 
-    iget-object v0, p0, Lzni;->b:Ljava/lang/Runnable;
+    const/high16 v0, -0x80000000
 
-    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+    or-int/2addr p1, v0
 
-    const/4 v0, 0x1
+    iput p1, p0, Lzni;->X:I
 
-    iput-boolean v0, p0, Lzni;->c:Z
+    iget-object p1, p0, Lzni;->o:Laoi;
 
-    return-void
+    invoke-virtual {p1, p0}, Laoi;->E(Lda4;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

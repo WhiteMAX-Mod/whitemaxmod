@@ -1,147 +1,109 @@
 .class public final Lgic;
-.super Ljk0;
+.super Lx0i;
 .source "SourceFile"
 
 
-# static fields
-.field public static final X:Lnbg;
-
-
 # instance fields
-.field public final synthetic c:I
+.field public final X:Ltn5;
 
-.field public final d:J
+.field public final Y:Ltn5;
 
-.field public final o:Ljava/util/List;
+.field public final b:J
+
+.field public final c:Lhxf;
+
+.field public final d:Lhxf;
+
+.field public final o:Lmrd;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(J)V
+    .locals 7
 
-    new-instance v0, Lnbg;
+    invoke-direct {p0}, Lx0i;-><init>()V
 
-    const-string v1, "privacy.restricted"
+    iput-wide p1, p0, Lgic;->b:J
 
-    const/4 v2, 0x0
+    new-instance p1, Ljic;
 
-    invoke-direct {v0, v1, v2, v2}, Lnbg;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    new-instance v0, Lshc;
 
-    sput-object v0, Lgic;->X:Lnbg;
+    sget p2, Lrhb;->b:I
 
-    return-void
-.end method
+    new-instance v2, Lcpg;
 
-.method public constructor <init>(JLjava/util/List;)V
-    .locals 1
+    invoke-direct {v2, p2}, Lcpg;-><init>(I)V
 
-    const/4 v0, 0x0
+    const/4 v3, 0x6
 
-    iput v0, p0, Lgic;->c:I
+    const/4 v6, 0x4
 
-    .line 4
-    sget-object v0, Lgic;->X:Lnbg;
+    const-string v1, ""
 
-    invoke-direct {p0, v0}, Ljk0;-><init>(Lnbg;)V
+    const-wide/16 v4, 0x0
 
-    .line 5
-    iput-wide p1, p0, Lgic;->d:J
+    invoke-direct/range {v0 .. v6}, Lshc;-><init>(Ljava/lang/String;Lcpg;IJI)V
 
-    .line 6
-    iput-object p3, p0, Lgic;->o:Ljava/util/List;
+    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
-    return-void
-.end method
-
-.method public constructor <init>(Lnbg;JLjava/util/List;)V
-    .locals 1
+    move-result-object p2
 
     const/4 v0, 0x1
 
-    iput v0, p0, Lgic;->c:I
+    const-string v1, ""
 
-    .line 1
-    invoke-direct {p0, p1}, Ljk0;-><init>(Lnbg;)V
+    invoke-direct {p1, v1, p2, v0}, Ljic;-><init>(Ljava/lang/CharSequence;Ljava/util/List;Z)V
 
-    .line 2
-    iput-wide p2, p0, Lgic;->d:J
+    invoke-static {p1}, Lixf;->a(Ljava/lang/Object;)Lhxf;
 
-    .line 3
-    iput-object p4, p0, Lgic;->o:Ljava/util/List;
+    move-result-object p1
+
+    iput-object p1, p0, Lgic;->c:Lhxf;
+
+    sget-object p2, Lsi5;->a:Lsi5;
+
+    invoke-static {p2}, Lixf;->a(Ljava/lang/Object;)Lhxf;
+
+    move-result-object p2
+
+    iput-object p2, p0, Lgic;->d:Lhxf;
+
+    new-instance v0, Lmrd;
+
+    invoke-direct {v0, p2}, Lmrd;-><init>(Lgia;)V
+
+    iput-object v0, p0, Lgic;->o:Lmrd;
+
+    new-instance p2, Ltn5;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p2, v0}, Ltn5;-><init>(I)V
+
+    iput-object p2, p0, Lgic;->X:Ltn5;
+
+    new-instance p2, Ltn5;
+
+    invoke-direct {p2, v0}, Ltn5;-><init>(I)V
+
+    iput-object p2, p0, Lgic;->Y:Ltn5;
+
+    new-instance p2, Lfic;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p2, p0, v0}, Lfic;-><init>(Lgic;Lkotlin/coroutines/Continuation;)V
+
+    new-instance v0, Llb6;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, p1, p2, v1}, Llb6;-><init>(Lb96;Lys6;I)V
+
+    iget-object p1, p0, Lx0i;->a:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {v0, p1}, Lzka;->w(Lb96;Lnd4;)Lcuf;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    iget v0, p0, Lgic;->c:I
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ControlMessageAddError{chatId="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-wide v1, p0, Lgic;->d:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", contactIds="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lgic;->o:Ljava/util/List;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x7d
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_0
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "PrivacyRestrictedError{chatId="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-wide v1, p0, Lgic;->d:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", contactIds="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lgic;->o:Ljava/util/List;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x7d
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

@@ -13,7 +13,7 @@
         "",
         "",
         "millis",
-        "Lb3h;",
+        "Lmah;",
         "setTimeout",
         "(J)V",
         "",

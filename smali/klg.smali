@@ -1,59 +1,134 @@
 .class public final Lklg;
-.super Lrlg;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lwlg;
+
+.field public final synthetic c:Lca4;
+
+.field public final synthetic d:Lbolts/Task;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lwlg;Lca4;Lbolts/Task;I)V
+    .locals 0
+
+    iput p4, p0, Lklg;->a:I
+
+    iput-object p1, p0, Lklg;->b:Lwlg;
+
+    iput-object p2, p0, Lklg;->c:Lca4;
+
+    iput-object p3, p0, Lklg;->d:Lbolts/Task;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final b(Ljava/lang/Object;)I
-    .locals 0
+.method public final run()V
+    .locals 4
 
-    const/4 p1, -0x1
+    iget v0, p0, Lklg;->a:I
 
-    return p1
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final f(ILmlg;Z)Lmlg;
-    .locals 0
+    iget-object v0, p0, Lklg;->b:Lwlg;
 
-    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
+    :try_start_0
+    iget-object v1, p0, Lklg;->c:Lca4;
 
-    invoke-direct {p1}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
+    iget-object v2, p0, Lklg;->d:Lbolts/Task;
 
-    throw p1
-.end method
+    invoke-interface {v1, v2}, Lca4;->a(Lbolts/Task;)Ljava/lang/Object;
 
-.method public final h()I
-    .locals 1
+    move-result-object v1
 
-    const/4 v0, 0x0
+    check-cast v1, Lbolts/Task;
 
-    return v0
-.end method
+    if-nez v1, :cond_0
 
-.method public final l(I)Ljava/lang/Object;
-    .locals 0
+    const/4 v1, 0x0
 
-    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
+    invoke-virtual {v0, v1}, Lwlg;->c(Ljava/lang/Object;)V
 
-    invoke-direct {p1}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
+    goto :goto_1
 
-    throw p1
-.end method
+    :catch_0
+    move-exception v1
 
-.method public final m(ILplg;J)Lplg;
-    .locals 0
+    goto :goto_0
 
-    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
+    :cond_0
+    new-instance v2, Lllg;
 
-    invoke-direct {p1}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
+    const/4 v3, 0x0
 
-    throw p1
-.end method
+    invoke-direct {v2, v3, p0}, Lllg;-><init>(ILjava/lang/Object;)V
 
-.method public final o()I
-    .locals 1
+    invoke-virtual {v1, v2}, Lbolts/Task;->continueWith(Lca4;)Lbolts/Task;
+    :try_end_0
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    const/4 v0, 0x0
+    goto :goto_1
 
-    return v0
+    :goto_0
+    invoke-virtual {v0, v1}, Lwlg;->b(Ljava/lang/Exception;)V
+
+    goto :goto_1
+
+    :catch_1
+    invoke-virtual {v0}, Lwlg;->a()V
+
+    :goto_1
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lklg;->b:Lwlg;
+
+    :try_start_1
+    iget-object v1, p0, Lklg;->c:Lca4;
+
+    iget-object v2, p0, Lklg;->d:Lbolts/Task;
+
+    invoke-interface {v1, v2}, Lca4;->a(Lbolts/Task;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lwlg;->c(Ljava/lang/Object;)V
+    :try_end_1
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_1 .. :try_end_1} :catch_3
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_2
+
+    goto :goto_2
+
+    :catch_2
+    move-exception v1
+
+    invoke-virtual {v0, v1}, Lwlg;->b(Ljava/lang/Exception;)V
+
+    goto :goto_2
+
+    :catch_3
+    invoke-virtual {v0}, Lwlg;->a()V
+
+    :goto_2
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

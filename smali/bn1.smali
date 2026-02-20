@@ -1,16 +1,64 @@
-.class public final synthetic Lbn1;
+.class public final Lbn1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/media/MediaPlayer$OnPreparedListener;
+.implements Ldn1;
+
+
+# static fields
+.field public static final a:Lbn1;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lbn1;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lbn1;->a:Lbn1;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final onPrepared(Landroid/media/MediaPlayer;)V
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    invoke-virtual {p1}, Landroid/media/MediaPlayer;->start()V
+    const/4 v0, 0x1
 
-    return-void
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of p1, p1, Lbn1;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, -0xbfea8a8
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "ClearSelectedReason"
+
+    return-object v0
 .end method

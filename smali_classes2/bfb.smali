@@ -1,45 +1,73 @@
-.class public final synthetic Lbfb;
+.class public abstract Lbfb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/text/InputFilter;
 
+# static fields
+.field public static final a:I
 
-# instance fields
-.field public final synthetic a:Lefb;
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lefb;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lked;->oneme_main_bottom_bar:I
 
-    iput-object p1, p0, Lbfb;->a:Lefb;
+    sput v0, Lbfb;->a:I
+
+    sget v0, Lked;->oneme_main_calls_bottom_item:I
+
+    sput v0, Lbfb;->b:I
+
+    sget v0, Lked;->oneme_main_calls_container:I
+
+    sput v0, Lbfb;->c:I
+
+    sget v0, Lked;->oneme_main_chats_bottom_item:I
+
+    sput v0, Lbfb;->d:I
+
+    sget v0, Lked;->oneme_main_chats_container:I
+
+    sput v0, Lbfb;->e:I
+
+    sget v0, Lked;->oneme_main_contacts_bottom_item:I
+
+    sput v0, Lbfb;->f:I
+
+    sget v0, Lked;->oneme_main_contacts_container:I
+
+    sput v0, Lbfb;->g:I
+
+    sget v0, Lked;->oneme_main_root:I
+
+    sput v0, Lbfb;->h:I
+
+    sget v0, Lked;->oneme_main_settings_bottom_item:I
+
+    sput v0, Lbfb;->i:I
+
+    sget v0, Lked;->oneme_main_settings_container:I
+
+    sput v0, Lbfb;->j:I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final filter(Ljava/lang/CharSequence;IILandroid/text/Spanned;II)Ljava/lang/CharSequence;
-    .locals 0
-
-    iget-object p2, p0, Lbfb;->a:Lefb;
-
-    iget-object p2, p2, Lefb;->d:Lftd;
-
-    invoke-virtual {p2, p1}, Lftd;->a(Ljava/lang/CharSequence;)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_0
-
-    return-object p1
-
-    :cond_0
-    const-string p1, ""
-
-    return-object p1
 .end method

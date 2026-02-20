@@ -1,65 +1,32 @@
-.class public final Lz06;
-.super Landroid/graphics/drawable/DrawableWrapper;
+.class public final synthetic Lz06;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public final a:Ljava/lang/Object;
-
-.field public final b:Ljava/lang/Object;
-
-.field public final c:Ljava/lang/Object;
+# interfaces
+.implements Lone/me/sdk/media/ffmpeg/FfmpegLibraryLoader;
 
 
-# direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 2
+# virtual methods
+.method public final load(Ljava/lang/String;)V
+    .locals 1
 
-    new-instance v0, Lone/me/sdk/richvector/EnhancedVectorDrawable;
+    :try_start_0
+    const-string p1, "ffmpg"
 
-    sget v1, Lb7d;->ic_file_extension:I
+    invoke-static {p1}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-direct {v0, p1, v1}, Lone/me/sdk/richvector/EnhancedVectorDrawable;-><init>(Landroid/content/Context;I)V
+    return-void
 
-    invoke-direct {p0, v0}, Landroid/graphics/drawable/DrawableWrapper;-><init>(Landroid/graphics/drawable/Drawable;)V
+    :catchall_0
+    move-exception p1
 
-    new-instance p1, Ly06;
+    invoke-static {}, Lone/me/sdk/media/ffmpeg/WebmConfig;->getLogger()Lhla;
 
-    const/4 v0, 0x0
+    move-result-object v0
 
-    invoke-direct {p1, p0, v0}, Ly06;-><init>(Lz06;I)V
-
-    const/4 v0, 0x3
-
-    invoke-static {v0, p1}, Le8;->b(ILlq6;)Lo58;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lz06;->a:Ljava/lang/Object;
-
-    new-instance p1, Ly06;
-
-    const/4 v1, 0x1
-
-    invoke-direct {p1, p0, v1}, Ly06;-><init>(Lz06;I)V
-
-    invoke-static {v0, p1}, Le8;->b(ILlq6;)Lo58;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lz06;->b:Ljava/lang/Object;
-
-    new-instance p1, Ly06;
-
-    const/4 v1, 0x2
-
-    invoke-direct {p1, p0, v1}, Ly06;-><init>(Lz06;I)V
-
-    invoke-static {v0, p1}, Le8;->b(ILlq6;)Lo58;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lz06;->c:Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lhla;->m(Ljava/lang/Throwable;)V
 
     return-void
 .end method

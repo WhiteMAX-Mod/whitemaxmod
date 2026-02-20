@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements Lzs6;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lru/ok/android/externcalls/sdk/api/OkApiServiceInternal;->getOkIdsByExternalIds(Ljava/util/Collection;)Lkef;
+    value = Lru/ok/android/externcalls/sdk/api/OkApiServiceInternal;->getOkIdsByExternalIds(Ljava/util/Collection;)Limf;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lcr6;"
+        "Lzs6;"
     }
 .end annotation
 
@@ -33,13 +33,13 @@
         "\u0000\u0014\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0010\u0007\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\u00040\u00032\u000e\u0010\u0002\u001a\n \u0001*\u0004\u0018\u00010\u00000\u0000H\n\u00a2\u0006\u0004\u0008\u0005\u0010\u0006"
     }
     d2 = {
-        "Lcn0;",
+        "Lio0;",
         "kotlin.jvm.PlatformType",
         "it",
         "",
         "Lru/ok/android/externcalls/sdk/api/BatchInternalIdResponse;",
         "apply",
-        "(Lcn0;)Ljava/util/List;",
+        "(Lio0;)Ljava/util/List;",
         "<anonymous>"
     }
     k = 0x3
@@ -88,21 +88,21 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcn0;
+    check-cast p1, Lio0;
 
-    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/api/OkApiServiceInternal$getOkIdsByExternalIds$2;->apply(Lcn0;)Ljava/util/List;
+    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/api/OkApiServiceInternal$getOkIdsByExternalIds$2;->apply(Lio0;)Ljava/util/List;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public final apply(Lcn0;)Ljava/util/List;
+.method public final apply(Lio0;)Ljava/util/List;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcn0;",
+            "Lio0;",
             ")",
             "Ljava/util/List<",
             "Lru/ok/android/externcalls/sdk/api/BatchInternalIdResponse;",
@@ -113,7 +113,7 @@
     .line 2
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/OkApiServiceInternal$getOkIdsByExternalIds$2;->$requests:Ljava/util/List;
 
-    invoke-static {p1, v0}, Lru/ok/android/externcalls/sdk/api/request/BatchRequestKt;->parseBatchResponse(Lcn0;Ljava/util/List;)Ljava/util/List;
+    invoke-static {p1, v0}, Lru/ok/android/externcalls/sdk/api/request/BatchRequestKt;->parseBatchResponse(Lio0;Ljava/util/List;)Ljava/util/List;
 
     move-result-object p1
 

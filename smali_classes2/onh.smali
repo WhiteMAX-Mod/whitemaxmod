@@ -1,43 +1,48 @@
-.class public abstract synthetic Lonh;
+.class public final Lonh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lnd4;
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+
+# instance fields
+.field public final a:Lbgg;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lj88;Lj88;)V
+    .locals 2
 
-    invoke-static {}, Lnhc;->values()[Lnhc;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Lty1;
+
+    const/4 v1, 0x5
+
+    invoke-direct {v0, p1, p2, v1}, Lty1;-><init>(Lj88;Lj88;I)V
+
+    new-instance p1, Lbgg;
+
+    invoke-direct {p1, v0}, Lbgg;-><init>(Lis6;)V
+
+    iput-object p1, p0, Lonh;->a:Lbgg;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final getCoroutineContext()Led4;
+    .locals 1
+
+    iget-object v0, p0, Lonh;->a:Lbgg;
+
+    invoke-virtual {v0}, Lbgg;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    array-length v0, v0
+    check-cast v0, Led4;
 
-    new-array v0, v0, [I
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    const/4 v2, 0x2
-
-    :try_start_1
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
-    sput-object v0, Lonh;->$EnumSwitchMapping$0:[I
-
-    return-void
+    return-object v0
 .end method

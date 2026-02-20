@@ -1,130 +1,276 @@
 .class public final Lxof;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Lmj0;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:I
 
-.field public final synthetic Y:Llpf;
+.field public final b:D
 
-.field public o:I
+.field public final c:Ljava/util/ArrayDeque;
+
+.field public final d:Ljava/util/TreeSet;
+
+.field public e:D
+
+.field public f:J
 
 
 # direct methods
-.method public constructor <init>(Llpf;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(D)V
+    .locals 2
 
-    iput-object p1, p0, Lxof;->Y:Llpf;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    const-wide/16 v0, 0x0
 
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    cmpl-double v0, p1, v0
+
+    if-ltz v0, :cond_0
+
+    const-wide/high16 v0, 0x3ff0000000000000L    # 1.0
+
+    cmpg-double v0, p1, v0
+
+    if-gtz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    invoke-static {v0}, Lxej;->b(Z)V
+
+    const/16 v0, 0xa
+
+    iput v0, p0, Lxof;->a:I
+
+    iput-wide p1, p0, Lxof;->b:D
+
+    new-instance p1, Ljava/util/ArrayDeque;
+
+    invoke-direct {p1}, Ljava/util/ArrayDeque;-><init>()V
+
+    iput-object p1, p0, Lxof;->c:Ljava/util/ArrayDeque;
+
+    new-instance p1, Ljava/util/TreeSet;
+
+    invoke-direct {p1}, Ljava/util/TreeSet;-><init>()V
+
+    iput-object p1, p0, Lxof;->d:Ljava/util/TreeSet;
+
+    const-wide/high16 p1, -0x8000000000000000L
+
+    iput-wide p1, p0, Lxof;->f:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a(JJ)V
+    .locals 17
 
-    check-cast p1, Lf76;
+    move-object/from16 v0, p0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    move-wide/from16 v1, p1
 
-    invoke-virtual {p0, p1, p2}, Lxof;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    :goto_0
+    iget-object v3, v0, Lxof;->c:Ljava/util/ArrayDeque;
 
-    move-result-object p1
+    invoke-virtual {v3}, Ljava/util/ArrayDeque;->size()I
 
-    check-cast p1, Lxof;
+    move-result v4
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    iget v5, v0, Lxof;->a:I
 
-    invoke-virtual {p1, p2}, Lxof;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v6, v0, Lxof;->d:Ljava/util/TreeSet;
 
-    sget-object p1, Lac4;->a:Lac4;
+    if-lt v4, v5, :cond_0
 
-    return-object p1
-.end method
+    invoke-virtual {v3}, Ljava/util/ArrayDeque;->remove()Ljava/lang/Object;
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    move-result-object v3
 
-    new-instance v0, Lxof;
+    check-cast v3, Lwof;
 
-    iget-object v1, p0, Lxof;->Y:Llpf;
+    invoke-virtual {v6, v3}, Ljava/util/TreeSet;->remove(Ljava/lang/Object;)Z
 
-    invoke-direct {v0, v1, p2}, Lxof;-><init>(Llpf;Lkotlin/coroutines/Continuation;)V
+    iget-wide v4, v0, Lxof;->e:D
 
-    iput-object p1, v0, Lxof;->X:Ljava/lang/Object;
+    iget-wide v6, v3, Lwof;->b:D
 
-    return-object v0
-.end method
+    sub-double/2addr v4, v6
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    iget v0, p0, Lxof;->o:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-eq v0, v1, :cond_0
-
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_0
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    iput-wide v4, v0, Lxof;->e:D
 
     goto :goto_0
 
+    :cond_0
+    long-to-double v4, v1
+
+    invoke-static {v4, v5}, Ljava/lang/Math;->sqrt(D)D
+
+    move-result-wide v4
+
+    const-wide/32 v7, 0x7a1200
+
+    mul-long/2addr v1, v7
+
+    div-long v1, v1, p3
+
+    new-instance v7, Lwof;
+
+    invoke-direct {v7, v1, v2, v4, v5}, Lwof;-><init>(JD)V
+
+    invoke-virtual {v3, v7}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
+
+    invoke-virtual {v6, v7}, Ljava/util/TreeSet;->add(Ljava/lang/Object;)Z
+
+    iget-wide v1, v0, Lxof;->e:D
+
+    add-double/2addr v1, v4
+
+    iput-wide v1, v0, Lxof;->e:D
+
+    invoke-virtual {v3}, Ljava/util/ArrayDeque;->isEmpty()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    const-wide/high16 v1, -0x8000000000000000L
+
+    goto :goto_2
+
     :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    iget-wide v1, v0, Lxof;->e:D
 
-    iget-object p1, p0, Lxof;->X:Ljava/lang/Object;
+    iget-wide v3, v0, Lxof;->b:D
 
-    check-cast p1, Lf76;
+    mul-double/2addr v1, v3
 
-    new-instance v0, Lysd;
+    invoke-virtual {v6}, Ljava/util/TreeSet;->iterator()Ljava/util/Iterator;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    move-result-object v3
 
-    new-instance v2, Ldr7;
+    const-wide/16 v6, 0x0
 
-    const/16 v3, 0x1b
+    move-wide v8, v6
 
-    invoke-direct {v2, v0, p1, v3}, Ldr7;-><init>(Ljava/lang/Object;Lf76;I)V
+    move-wide v10, v8
 
-    iput v1, p0, Lxof;->o:I
+    const-wide/16 v6, 0x0
 
-    iget-object p1, p0, Lxof;->Y:Llpf;
+    :goto_1
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-interface {p1, v2, p0}, Ld76;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    move-result v12
 
-    move-result-object p1
+    if-eqz v12, :cond_4
 
-    sget-object v0, Lac4;->a:Lac4;
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    if-ne p1, v0, :cond_2
+    move-result-object v12
 
-    return-object v0
+    check-cast v12, Lwof;
+
+    iget-wide v13, v12, Lwof;->b:D
+
+    const-wide/16 p1, 0x0
+
+    iget-wide v4, v12, Lwof;->a:J
+
+    const-wide/high16 v15, 0x4000000000000000L    # 2.0
+
+    div-double/2addr v13, v15
+
+    add-double/2addr v8, v13
+
+    cmpl-double v12, v8, v1
+
+    if-ltz v12, :cond_3
+
+    cmp-long v3, v6, p1
+
+    if-nez v3, :cond_2
+
+    move-wide v1, v4
+
+    goto :goto_2
 
     :cond_2
-    :goto_0
-    new-instance p1, Lkotlin/KotlinNothingValueException;
+    sub-long/2addr v4, v6
 
-    invoke-direct {p1}, Lkotlin/KotlinNothingValueException;-><init>()V
+    long-to-double v3, v4
 
-    throw p1
+    sub-double/2addr v1, v10
+
+    mul-double/2addr v1, v3
+
+    sub-double/2addr v8, v10
+
+    div-double/2addr v1, v8
+
+    double-to-long v1, v1
+
+    add-long/2addr v1, v6
+
+    goto :goto_2
+
+    :cond_3
+    add-double v6, v13, v8
+
+    move-wide v10, v8
+
+    move-wide v8, v6
+
+    move-wide v6, v4
+
+    goto :goto_1
+
+    :cond_4
+    move-wide v1, v6
+
+    :goto_2
+    iput-wide v1, v0, Lxof;->f:J
+
+    return-void
+.end method
+
+.method public final b()J
+    .locals 2
+
+    iget-wide v0, p0, Lxof;->f:J
+
+    return-wide v0
+.end method
+
+.method public final reset()V
+    .locals 2
+
+    iget-object v0, p0, Lxof;->c:Ljava/util/ArrayDeque;
+
+    invoke-virtual {v0}, Ljava/util/ArrayDeque;->clear()V
+
+    iget-object v0, p0, Lxof;->d:Ljava/util/TreeSet;
+
+    invoke-virtual {v0}, Ljava/util/TreeSet;->clear()V
+
+    const-wide/16 v0, 0x0
+
+    iput-wide v0, p0, Lxof;->e:D
+
+    const-wide/high16 v0, -0x8000000000000000L
+
+    iput-wide v0, p0, Lxof;->f:J
+
+    return-void
 .end method

@@ -42,7 +42,7 @@
 
 .field private final mLock:Ljava/lang/Object;
 
-.field private mSession2Token:Ltdh;
+.field private mSession2Token:Lblh;
 
 
 # direct methods
@@ -64,7 +64,7 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-direct {p0, p1, v0, v0}, Landroid/support/v4/media/session/MediaSessionCompat$Token;-><init>(Ljava/lang/Object;Landroid/support/v4/media/session/IMediaSession;Ltdh;)V
+    invoke-direct {p0, p1, v0, v0}, Landroid/support/v4/media/session/MediaSessionCompat$Token;-><init>(Ljava/lang/Object;Landroid/support/v4/media/session/IMediaSession;Lblh;)V
 
     return-void
 .end method
@@ -75,12 +75,12 @@
     const/4 v0, 0x0
 
     .line 2
-    invoke-direct {p0, p1, p2, v0}, Landroid/support/v4/media/session/MediaSessionCompat$Token;-><init>(Ljava/lang/Object;Landroid/support/v4/media/session/IMediaSession;Ltdh;)V
+    invoke-direct {p0, p1, p2, v0}, Landroid/support/v4/media/session/MediaSessionCompat$Token;-><init>(Ljava/lang/Object;Landroid/support/v4/media/session/IMediaSession;Lblh;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/Object;Landroid/support/v4/media/session/IMediaSession;Ltdh;)V
+.method public constructor <init>(Ljava/lang/Object;Landroid/support/v4/media/session/IMediaSession;Lblh;)V
     .locals 1
 
     .line 3
@@ -100,7 +100,7 @@
     iput-object p2, p0, Landroid/support/v4/media/session/MediaSessionCompat$Token;->mExtraBinder:Landroid/support/v4/media/session/IMediaSession;
 
     .line 7
-    iput-object p3, p0, Landroid/support/v4/media/session/MediaSessionCompat$Token;->mSession2Token:Ltdh;
+    iput-object p3, p0, Landroid/support/v4/media/session/MediaSessionCompat$Token;->mSession2Token:Lblh;
 
     return-void
 .end method
@@ -131,7 +131,7 @@
 
     move-result-object v0
 
-    invoke-static {p0}, Lttb;->c(Landroid/os/Bundle;)Ltdh;
+    invoke-static {p0}, Ljwb;->c(Landroid/os/Bundle;)Lblh;
 
     move-result-object v1
 
@@ -155,7 +155,7 @@
 
     iget-object p0, p0, Landroid/support/v4/media/session/MediaSessionCompat$Token;->mInner:Ljava/lang/Object;
 
-    invoke-direct {v2, p0, v0, v1}, Landroid/support/v4/media/session/MediaSessionCompat$Token;-><init>(Ljava/lang/Object;Landroid/support/v4/media/session/IMediaSession;Ltdh;)V
+    invoke-direct {v2, p0, v0, v1}, Landroid/support/v4/media/session/MediaSessionCompat$Token;-><init>(Ljava/lang/Object;Landroid/support/v4/media/session/IMediaSession;Lblh;)V
 
     return-object v2
 .end method
@@ -289,7 +289,7 @@
     throw v1
 .end method
 
-.method public getSession2Token()Ltdh;
+.method public getSession2Token()Lblh;
     .locals 2
 
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$Token;->mLock:Ljava/lang/Object;
@@ -297,7 +297,7 @@
     monitor-enter v0
 
     :try_start_0
-    iget-object v1, p0, Landroid/support/v4/media/session/MediaSessionCompat$Token;->mSession2Token:Ltdh;
+    iget-object v1, p0, Landroid/support/v4/media/session/MediaSessionCompat$Token;->mSession2Token:Lblh;
 
     monitor-exit v0
 
@@ -364,7 +364,7 @@
     throw p1
 .end method
 
-.method public setSession2Token(Ltdh;)V
+.method public setSession2Token(Lblh;)V
     .locals 1
 
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$Token;->mLock:Ljava/lang/Object;
@@ -372,7 +372,7 @@
     monitor-enter v0
 
     :try_start_0
-    iput-object p1, p0, Landroid/support/v4/media/session/MediaSessionCompat$Token;->mSession2Token:Ltdh;
+    iput-object p1, p0, Landroid/support/v4/media/session/MediaSessionCompat$Token;->mSession2Token:Lblh;
 
     monitor-exit v0
 
@@ -425,11 +425,11 @@
 
     :cond_0
     :goto_0
-    iget-object v2, p0, Landroid/support/v4/media/session/MediaSessionCompat$Token;->mSession2Token:Ltdh;
+    iget-object v2, p0, Landroid/support/v4/media/session/MediaSessionCompat$Token;->mSession2Token:Lblh;
 
     if-eqz v2, :cond_1
 
-    invoke-static {v0, v2}, Lttb;->e(Landroid/os/Bundle;Ltdh;)V
+    invoke-static {v0, v2}, Ljwb;->d(Landroid/os/Bundle;Lblh;)V
 
     :cond_1
     monitor-exit v1

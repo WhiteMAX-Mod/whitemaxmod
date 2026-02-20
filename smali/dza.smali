@@ -1,224 +1,147 @@
 .class public final Ldza;
-.super Ljava/util/concurrent/atomic/AtomicBoolean;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Le0b;
-.implements Lo25;
+.implements Lw58;
 
 
 # instance fields
-.field public final a:Le0b;
+.field public final a:Lw58;
 
-.field public final b:Leza;
-
-.field public final c:Lcza;
-
-.field public d:Lo25;
+.field public final b:Laxe;
 
 
 # direct methods
-.method public constructor <init>(Le0b;Leza;Lcza;)V
-    .locals 0
+.method public constructor <init>(Lw58;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ldza;->a:Le0b;
+    iput-object p1, p0, Ldza;->a:Lw58;
 
-    iput-object p2, p0, Ldza;->b:Leza;
+    new-instance v0, Laxe;
 
-    iput-object p3, p0, Ldza;->c:Lcza;
+    invoke-interface {p1}, Lw58;->d()Lzwe;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Laxe;-><init>(Lzwe;)V
+
+    iput-object v0, p0, Ldza;->b:Laxe;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()V
-    .locals 2
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x1
-
-    invoke-virtual {p0, v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Ldza;->b:Leza;
-
-    iget-object v1, p0, Ldza;->c:Lcza;
-
-    invoke-virtual {v0, v1}, Leza;->p(Lcza;)V
-
-    iget-object v0, p0, Ldza;->a:Le0b;
-
-    invoke-interface {v0}, Le0b;->b()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final c(Lo25;)V
+.method public final a(Lj6g;Ljava/lang/Object;)V
     .locals 1
 
-    iget-object v0, p0, Ldza;->d:Lo25;
+    if-eqz p2, :cond_0
 
-    invoke-static {v0, p1}, Ls25;->h(Lo25;Lo25;)Z
+    iget-object v0, p0, Ldza;->a:Lw58;
+
+    check-cast v0, Lw58;
+
+    invoke-virtual {p1, v0, p2}, Lj6g;->q(Lw58;Ljava/lang/Object;)V
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p1}, Lj6g;->n()V
+
+    return-void
+.end method
+
+.method public final b(Lzm4;)Ljava/lang/Object;
+    .locals 1
+
+    invoke-interface {p1}, Lzm4;->v()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iput-object p1, p0, Ldza;->d:Lo25;
+    iget-object v0, p0, Ldza;->a:Lw58;
 
-    iget-object p1, p0, Ldza;->a:Le0b;
+    check-cast v0, Lw58;
 
-    invoke-interface {p1, p0}, Le0b;->c(Lo25;)V
+    invoke-interface {p1, v0}, Lzm4;->d(Lw58;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 
     :cond_0
-    return-void
+    const/4 p1, 0x0
+
+    return-object p1
 .end method
 
-.method public final dispose()V
-    .locals 6
+.method public final d()Lzwe;
+    .locals 1
 
-    iget-object v0, p0, Ldza;->d:Lo25;
+    iget-object v0, p0, Ldza;->b:Laxe;
 
-    invoke-interface {v0}, Lo25;->dispose()V
+    return-object v0
+.end method
 
-    const/4 v0, 0x0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    const/4 v1, 0x1
+    const/4 v0, 0x1
 
-    invoke-virtual {p0, v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+    if-ne p0, p1, :cond_0
 
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    iget-object v0, p0, Ldza;->b:Leza;
-
-    iget-object v1, p0, Ldza;->c:Lcza;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-object v2, v0, Leza;->c:Lcza;
-
-    if-eqz v2, :cond_3
-
-    if-eq v2, v1, :cond_0
-
-    goto :goto_1
+    return v0
 
     :cond_0
-    iget-wide v2, v1, Lcza;->b:J
+    const/4 v1, 0x0
 
-    const-wide/16 v4, 0x1
+    if-eqz p1, :cond_3
 
-    sub-long/2addr v2, v4
+    const-class v2, Ldza;
 
-    iput-wide v2, v1, Lcza;->b:J
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const-wide/16 v4, 0x0
+    move-result-object v3
 
-    cmp-long v2, v2, v4
-
-    if-nez v2, :cond_2
-
-    iget-boolean v2, v1, Lcza;->c:Z
-
-    if-nez v2, :cond_1
+    if-eq v2, v3, :cond_1
 
     goto :goto_0
 
     :cond_1
-    invoke-virtual {v0, v1}, Leza;->q(Lcza;)V
+    check-cast p1, Ldza;
 
-    monitor-exit v0
+    iget-object v2, p0, Ldza;->a:Lw58;
 
-    return-void
+    iget-object p1, p1, Ldza;->a:Lw58;
 
-    :catchall_0
-    move-exception v1
+    invoke-static {v2, p1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    goto :goto_2
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v1
 
     :cond_2
-    :goto_0
-    monitor-exit v0
-
-    return-void
+    return v0
 
     :cond_3
-    :goto_1
-    monitor-exit v0
-
-    return-void
-
-    :goto_2
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v1
-
-    :cond_4
-    return-void
+    :goto_0
+    return v1
 .end method
 
-.method public final e()Z
+.method public final hashCode()I
     .locals 1
 
-    iget-object v0, p0, Ldza;->d:Lo25;
+    iget-object v0, p0, Ldza;->a:Lw58;
 
-    invoke-interface {v0}, Lo25;->e()Z
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
 
     return v0
-.end method
-
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 2
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x1
-
-    invoke-virtual {p0, v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Ldza;->b:Leza;
-
-    iget-object v1, p0, Ldza;->c:Lcza;
-
-    invoke-virtual {v0, v1}, Leza;->p(Lcza;)V
-
-    iget-object v0, p0, Ldza;->a:Le0b;
-
-    invoke-interface {v0, p1}, Le0b;->onError(Ljava/lang/Throwable;)V
-
-    return-void
-
-    :cond_0
-    invoke-static {p1}, Lknj;->b(Ljava/lang/Throwable;)V
-
-    return-void
-.end method
-
-.method public final r(Ljava/lang/Object;)V
-    .locals 1
-
-    iget-object v0, p0, Ldza;->a:Le0b;
-
-    invoke-interface {v0, p1}, Le0b;->r(Ljava/lang/Object;)V
-
-    return-void
 .end method

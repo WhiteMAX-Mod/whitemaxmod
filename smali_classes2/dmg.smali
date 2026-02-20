@@ -1,100 +1,164 @@
-.class public final synthetic Ldmg;
-.super Ljava/lang/Object;
+.class public final Ldmg;
+.super Lpdg;
 .source "SourceFile"
 
 # interfaces
-.implements Llq6;
+.implements Lys6;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lxmg;
+.field public final synthetic o:Ljmg;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lxmg;I)V
+.method public constructor <init>(Ljmg;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Ldmg;->a:I
+    iput-object p1, p0, Ldmg;->o:Ljmg;
 
-    iput-object p1, p0, Ldmg;->b:Lxmg;
+    const/4 p1, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lnd4;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Ldmg;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Ldmg;
+
+    sget-object p2, Lmah;->a:Lmah;
+
+    invoke-virtual {p1, p2}, Ldmg;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 1
 
-    iget v0, p0, Ldmg;->a:I
+    new-instance p1, Ldmg;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v0, p0, Ldmg;->o:Ljmg;
 
-    iget-object v0, p0, Ldmg;->b:Lxmg;
+    invoke-direct {p1, v0, p2}, Ldmg;-><init>(Ljmg;Lkotlin/coroutines/Continuation;)V
 
-    iget-object v0, v0, Lxmg;->a:Ljavax/net/ssl/SSLEngine;
+    return-object p1
+.end method
 
-    invoke-virtual {v0}, Ljavax/net/ssl/SSLEngine;->getDelegatedTask()Ljava/lang/Runnable;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 11
 
-    move-result-object v0
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    if-eqz v0, :cond_0
+    new-instance p1, Ljava/util/LinkedHashSet;
 
-    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+    invoke-direct {p1}, Ljava/util/LinkedHashSet;-><init>()V
 
-    sget-object v0, Lb3h;->a:Lb3h;
+    invoke-static {p1}, Lek3;->d0(Ljava/lang/Iterable;)Ljava/util/Set;
 
-    goto :goto_0
+    move-result-object v10
 
-    :cond_0
-    const/4 v0, 0x0
+    new-instance v0, Lny3;
 
-    :goto_0
-    return-object v0
+    const/4 v1, 0x1
 
-    :pswitch_0
-    iget-object v0, p0, Ldmg;->b:Lxmg;
+    const/4 v2, 0x0
 
-    iget-object v0, v0, Lxmg;->a:Ljavax/net/ssl/SSLEngine;
+    const/4 v3, 0x1
 
-    invoke-virtual {v0}, Ljavax/net/ssl/SSLEngine;->beginHandshake()V
+    const/4 v4, 0x0
 
-    sget-object v0, Lb3h;->a:Lb3h;
+    const/4 v5, 0x0
 
-    return-object v0
+    const-wide/16 v6, -0x1
 
-    :pswitch_1
-    iget-object v0, p0, Ldmg;->b:Lxmg;
+    const-wide/16 v8, -0x1
 
-    iget-object v0, v0, Lxmg;->a:Ljavax/net/ssl/SSLEngine;
+    invoke-direct/range {v0 .. v10}, Lny3;-><init>(IZZZZJJLjava/util/Set;)V
 
-    invoke-virtual {v0}, Ljavax/net/ssl/SSLEngine;->getDelegatedTask()Ljava/lang/Runnable;
+    new-instance p1, Lq1c;
 
-    move-result-object v0
+    const-wide/16 v1, 0x6
 
-    if-eqz v0, :cond_1
+    sget-object v3, Ljava/util/concurrent/TimeUnit;->HOURS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+    const-class v4, Lone/me/sdk/tasks/TaskMonitor$TaskMonitorWorker;
 
-    sget-object v0, Lb3h;->a:Lb3h;
+    invoke-direct {p1, v4, v1, v2, v3}, Lq1c;-><init>(Ljava/lang/Class;JLjava/util/concurrent/TimeUnit;)V
 
-    goto :goto_1
+    invoke-virtual {p1, v0}, Landroidx/work/WorkRequest$Builder;->setConstraints(Lny3;)Landroidx/work/WorkRequest$Builder;
 
-    :cond_1
-    const/4 v0, 0x0
+    move-result-object p1
 
-    :goto_1
-    return-object v0
+    check-cast p1, Lq1c;
 
-    nop
+    const-string v0, "TASK_MONITOR_PERIODIC_TASK"
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    invoke-virtual {p1, v0}, Landroidx/work/WorkRequest$Builder;->addTag(Ljava/lang/String;)Landroidx/work/WorkRequest$Builder;
+
+    move-result-object p1
+
+    check-cast p1, Lq1c;
+
+    invoke-virtual {p1}, Landroidx/work/WorkRequest$Builder;->build()Landroidx/work/WorkRequest;
+
+    move-result-object p1
+
+    check-cast p1, Lr1c;
+
+    invoke-virtual {p1}, Landroidx/work/WorkRequest;->getId()Ljava/util/UUID;
+
+    move-result-object v1
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "work "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, " try to add TASK_MONITOR_PERIODIC_TASK request"
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "jmg"
+
+    invoke-static {v2, v1}, Ltej;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v1, p0, Ldmg;->o:Ljmg;
+
+    iget-object v1, v1, Ljmg;->a:Lj88;
+
+    invoke-interface {v1}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Leri;
+
+    const/4 v2, 0x2
+
+    const/16 v3, 0x18
+
+    invoke-static {v1, v0, v2, p1, v3}, Leri;->e(Leri;Ljava/lang/String;ILr1c;I)Lbs3;
+
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
 .end method

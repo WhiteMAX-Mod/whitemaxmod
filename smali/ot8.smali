@@ -1,143 +1,294 @@
-.class public final Lot8;
-.super Lem6;
+.class public abstract Lot8;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final o:Ljava/lang/Object;
-
-
 # instance fields
-.field public final c:Ljava/lang/Object;
+.field public a:I
 
-.field public final d:Ljava/lang/Object;
+.field public b:I
+
+.field public c:I
+
+.field public d:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>()V
+    .locals 2
 
-    new-instance v0, Ljava/lang/Object;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Ljaa;->v0:Ljaa;
 
-    sput-object v0, Lot8;->o:Ljava/lang/Object;
+    if-nez v0, :cond_0
 
-    return-void
-.end method
+    new-instance v0, Ljaa;
 
-.method public constructor <init>(Lqlg;Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+    const/16 v1, 0x1b
 
-    invoke-direct {p0, p1}, Lem6;-><init>(Lqlg;)V
+    invoke-direct {v0, v1}, Ljaa;-><init>(I)V
 
-    iput-object p2, p0, Lot8;->c:Ljava/lang/Object;
+    sput-object v0, Ljaa;->v0:Ljaa;
 
-    iput-object p3, p0, Lot8;->d:Ljava/lang/Object;
-
+    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final b(Ljava/lang/Object;)I
-    .locals 1
+.method public a(I)I
+    .locals 2
 
-    sget-object v0, Lot8;->o:Ljava/lang/Object;
+    iget v0, p0, Lot8;->c:I
 
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
+    if-ge p1, v0, :cond_0
 
     iget-object v0, p0, Lot8;->d:Ljava/lang/Object;
 
-    if-eqz v0, :cond_0
+    check-cast v0, Ljava/nio/ByteBuffer;
 
-    move-object p1, v0
+    iget v1, p0, Lot8;->b:I
 
-    :cond_0
-    iget-object v0, p0, Lem6;->b:Lqlg;
+    add-int/2addr v1, p1
 
-    invoke-virtual {v0, p1}, Lqlg;->b(Ljava/lang/Object;)I
+    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->getShort(I)S
 
     move-result p1
 
     return p1
-.end method
-
-.method public final f(ILllg;Z)Lllg;
-    .locals 1
-
-    iget-object v0, p0, Lem6;->b:Lqlg;
-
-    invoke-virtual {v0, p1, p2, p3}, Lqlg;->f(ILllg;Z)Lllg;
-
-    iget-object p1, p2, Lllg;->b:Ljava/lang/Object;
-
-    iget-object v0, p0, Lot8;->d:Ljava/lang/Object;
-
-    invoke-static {p1, v0}, Lkbh;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    if-eqz p3, :cond_0
-
-    sget-object p1, Lot8;->o:Ljava/lang/Object;
-
-    iput-object p1, p2, Lllg;->b:Ljava/lang/Object;
 
     :cond_0
-    return-object p2
+    const/4 p1, 0x0
+
+    return p1
 .end method
 
-.method public final l(I)Ljava/lang/Object;
-    .locals 1
-
-    iget-object v0, p0, Lem6;->b:Lqlg;
-
-    invoke-virtual {v0, p1}, Lqlg;->l(I)Ljava/lang/Object;
-
-    move-result-object p1
+.method public b()V
+    .locals 2
 
     iget-object v0, p0, Lot8;->d:Ljava/lang/Object;
 
-    invoke-static {p1, v0}, Lkbh;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    check-cast v0, Lpt8;
+
+    iget v0, v0, Lpt8;->Z:I
+
+    iget v1, p0, Lot8;->c:I
+
+    if-ne v0, v1, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance v0, Ljava/util/ConcurrentModificationException;
+
+    invoke-direct {v0}, Ljava/util/ConcurrentModificationException;-><init>()V
+
+    throw v0
+.end method
+
+.method public abstract c(Landroid/view/View;)Ljava/lang/Object;
+.end method
+
+.method public abstract d(Landroid/view/View;Ljava/lang/Object;)V
+.end method
+
+.method public e()V
+    .locals 3
+
+    :goto_0
+    iget v0, p0, Lot8;->a:I
+
+    iget-object v1, p0, Lot8;->d:Ljava/lang/Object;
+
+    check-cast v1, Lpt8;
+
+    iget v2, v1, Lpt8;->X:I
+
+    if-ge v0, v2, :cond_0
+
+    iget-object v1, v1, Lpt8;->c:[I
+
+    aget v1, v1, v0
+
+    if-gez v1, :cond_0
+
+    add-int/lit8 v0, v0, 0x1
+
+    iput v0, p0, Lot8;->a:I
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public f(Landroid/view/View;Ljava/lang/Object;)V
+    .locals 2
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    iget v1, p0, Lot8;->b:I
+
+    if-lt v0, v1, :cond_0
+
+    invoke-virtual {p0, p1, p2}, Lot8;->d(Landroid/view/View;Ljava/lang/Object;)V
+
+    return-void
+
+    :cond_0
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    iget v1, p0, Lot8;->b:I
+
+    if-lt v0, v1, :cond_1
+
+    invoke-virtual {p0, p1}, Lot8;->c(Landroid/view/View;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_1
+    iget v0, p0, Lot8;->a:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lot8;->d:Ljava/lang/Object;
+
+    check-cast v1, Ljava/lang/Class;
+
+    invoke-virtual {v1, v0}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    const/4 v0, 0x0
+
+    :goto_0
+    invoke-virtual {p0, v0, p2}, Lot8;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_6
 
-    sget-object p1, Lot8;->o:Ljava/lang/Object;
+    invoke-static {p1}, Lh0i;->d(Landroid/view/View;)Landroid/view/View$AccessibilityDelegate;
 
-    :cond_0
-    return-object p1
+    move-result-object v0
+
+    if-nez v0, :cond_3
+
+    const/4 v0, 0x0
+
+    goto :goto_1
+
+    :cond_3
+    instance-of v1, v0, Ls4;
+
+    if-eqz v1, :cond_4
+
+    check-cast v0, Ls4;
+
+    iget-object v0, v0, Ls4;->a:Lt4;
+
+    goto :goto_1
+
+    :cond_4
+    new-instance v1, Lt4;
+
+    invoke-direct {v1, v0}, Lt4;-><init>(Landroid/view/View$AccessibilityDelegate;)V
+
+    move-object v0, v1
+
+    :goto_1
+    if-nez v0, :cond_5
+
+    new-instance v0, Lt4;
+
+    invoke-direct {v0}, Lt4;-><init>()V
+
+    :cond_5
+    invoke-static {p1, v0}, Lh0i;->n(Landroid/view/View;Lt4;)V
+
+    iget v0, p0, Lot8;->a:I
+
+    invoke-virtual {p1, v0, p2}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
+
+    iget p2, p0, Lot8;->c:I
+
+    invoke-static {p1, p2}, Lh0i;->h(Landroid/view/View;I)V
+
+    :cond_6
+    return-void
 .end method
 
-.method public final m(ILolg;J)Lolg;
-    .locals 1
+.method public abstract g(Ljava/lang/Object;Ljava/lang/Object;)Z
+.end method
 
-    iget-object v0, p0, Lem6;->b:Lqlg;
+.method public hasNext()Z
+    .locals 2
 
-    invoke-virtual {v0, p1, p2, p3, p4}, Lqlg;->m(ILolg;J)Lolg;
+    iget v0, p0, Lot8;->a:I
 
-    iget-object p1, p2, Lolg;->a:Ljava/lang/Object;
+    iget-object v1, p0, Lot8;->d:Ljava/lang/Object;
 
-    iget-object p3, p0, Lot8;->c:Ljava/lang/Object;
+    check-cast v1, Lpt8;
 
-    invoke-static {p1, p3}, Lkbh;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iget v1, v1, Lpt8;->X:I
 
-    move-result p1
+    if-ge v0, v1, :cond_0
 
-    if-eqz p1, :cond_0
+    const/4 v0, 0x1
 
-    sget-object p1, Lolg;->C0:Ljava/lang/Object;
-
-    iput-object p1, p2, Lolg;->a:Ljava/lang/Object;
+    return v0
 
     :cond_0
-    return-object p2
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public remove()V
+    .locals 3
+
+    iget-object v0, p0, Lot8;->d:Ljava/lang/Object;
+
+    check-cast v0, Lpt8;
+
+    invoke-virtual {p0}, Lot8;->b()V
+
+    iget v1, p0, Lot8;->b:I
+
+    const/4 v2, -0x1
+
+    if-eq v1, v2, :cond_0
+
+    invoke-virtual {v0}, Lpt8;->c()V
+
+    iget v1, p0, Lot8;->b:I
+
+    invoke-virtual {v0, v1}, Lpt8;->i(I)V
+
+    iput v2, p0, Lot8;->b:I
+
+    iget v0, v0, Lpt8;->Z:I
+
+    iput v0, p0, Lot8;->c:I
+
+    return-void
+
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "Call next() before removing element from the iterator."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method

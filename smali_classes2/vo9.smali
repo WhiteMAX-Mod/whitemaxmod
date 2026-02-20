@@ -1,20 +1,79 @@
-.class public interface abstract Lvo9;
-.super Ljava/lang/Object;
+.class public final Lvo9;
+.super Ljava/io/OutputStream;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:Lghh;
+
+.field public final b:Ljava/security/MessageDigest;
+
+
+# direct methods
+.method public constructor <init>(Lghh;Ljava/security/MessageDigest;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/io/OutputStream;-><init>()V
+
+    iput-object p1, p0, Lvo9;->a:Lghh;
+
+    iput-object p2, p0, Lvo9;->b:Ljava/security/MessageDigest;
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public abstract d(Lfv0;)V
+.method public final close()V
+    .locals 1
+
+    iget-object v0, p0, Lvo9;->a:Lghh;
+
+    invoke-virtual {v0}, Lghh;->close()V
+
+    return-void
 .end method
 
-.method public abstract m()V
+.method public final flush()V
+    .locals 1
+
+    iget-object v0, p0, Lvo9;->a:Lghh;
+
+    invoke-virtual {v0}, Lghh;->flush()V
+
+    return-void
 .end method
 
-.method public abstract setForwardClickListener(Lbr6;)V
+.method public final write(I)V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lvo9;->a:Lghh;
+
+    invoke-virtual {v0, p1}, Lghh;->write(I)V
+
+    .line 2
+    iget-object v0, p0, Lvo9;->b:Ljava/security/MessageDigest;
+
+    int-to-byte p1, p1
+
+    invoke-virtual {v0, p1}, Ljava/security/MessageDigest;->update(B)V
+
+    return-void
 .end method
 
-.method public abstract setLink(Lpo9;)V
-.end method
+.method public final write([BII)V
+    .locals 1
 
-.method public abstract setReplyClickListener(Lbr6;)V
+    .line 3
+    iget-object v0, p0, Lvo9;->a:Lghh;
+
+    invoke-virtual {v0, p1, p2, p3}, Lghh;->write([BII)V
+
+    .line 4
+    iget-object v0, p0, Lvo9;->b:Ljava/security/MessageDigest;
+
+    invoke-virtual {v0, p1, p2, p3}, Ljava/security/MessageDigest;->update([BII)V
+
+    return-void
 .end method

@@ -1,69 +1,112 @@
-.class public abstract Ljo4;
+.class public final synthetic Ljo4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lih8;
 
-# static fields
-.field public static final a:Landroid/util/SparseIntArray;
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lye;
+
+.field public final synthetic c:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Lye;Ljava/lang/String;I)V
+    .locals 0
 
-    new-instance v0, Landroid/util/SparseIntArray;
+    .line 1
+    iput p3, p0, Ljo4;->a:I
 
-    const/4 v1, 0x0
+    iput-object p1, p0, Ljo4;->b:Lye;
 
-    invoke-direct {v0, v1}, Landroid/util/SparseIntArray;-><init>(I)V
+    iput-object p2, p0, Ljo4;->c:Ljava/lang/String;
 
-    sput-object v0, Ljo4;->a:Landroid/util/SparseIntArray;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static final a()Lxdc;
-    .locals 5
+.method public synthetic constructor <init>(Lye;Ljava/lang/String;JJI)V
+    .locals 0
 
-    new-instance v0, Lxdc;
+    .line 2
+    iput p7, p0, Ljo4;->a:I
 
-    invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
+    iput-object p1, p0, Ljo4;->b:Lye;
 
-    move-result-object v1
+    iput-object p2, p0, Ljo4;->c:Ljava/lang/String;
 
-    invoke-virtual {v1}, Ljava/lang/Runtime;->maxMemory()J
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-wide v1
+    return-void
+.end method
 
-    const-wide/32 v3, 0x7fffffff
 
-    invoke-static {v1, v2, v3, v4}, Ljava/lang/Math;->min(JJ)J
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)V
+    .locals 2
 
-    move-result-wide v1
+    iget v0, p0, Ljo4;->a:I
 
-    long-to-int v1, v1
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v2, 0x1000000
+    iget-object v0, p0, Ljo4;->c:Ljava/lang/String;
 
-    if-le v1, v2, :cond_0
+    check-cast p1, Lze;
 
-    div-int/lit8 v1, v1, 0x4
+    iget-object v1, p0, Ljo4;->b:Lye;
 
-    mul-int/lit8 v1, v1, 0x3
+    invoke-interface {p1, v1, v0}, Lze;->y(Lye;Ljava/lang/String;)V
 
-    goto :goto_0
+    return-void
 
-    :cond_0
-    div-int/lit8 v1, v1, 0x2
+    :pswitch_0
+    check-cast p1, Lze;
 
-    :goto_0
-    sget-object v2, Ljo4;->a:Landroid/util/SparseIntArray;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/4 v3, -0x1
+    iget-object v0, p0, Ljo4;->b:Lye;
 
-    const/4 v4, 0x0
+    iget-object v1, p0, Ljo4;->c:Ljava/lang/String;
 
-    invoke-direct {v0, v4, v1, v2, v3}, Lxdc;-><init>(IILandroid/util/SparseIntArray;I)V
+    invoke-interface {p1, v0, v1}, Lze;->K0(Lye;Ljava/lang/String;)V
 
-    return-object v0
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Ljo4;->c:Ljava/lang/String;
+
+    check-cast p1, Lze;
+
+    iget-object v1, p0, Ljo4;->b:Lye;
+
+    invoke-interface {p1, v1, v0}, Lze;->n0(Lye;Ljava/lang/String;)V
+
+    return-void
+
+    :pswitch_2
+    check-cast p1, Lze;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v0, p0, Ljo4;->b:Lye;
+
+    iget-object v1, p0, Ljo4;->c:Ljava/lang/String;
+
+    invoke-interface {p1, v0, v1}, Lze;->D(Lye;Ljava/lang/String;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

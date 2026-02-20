@@ -1,121 +1,395 @@
-.class public final synthetic Lta7;
+.class public final Lta7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Llq6;
+.implements Lwyg;
+
+
+# static fields
+.field public static final f:Lol6;
+
+.field public static final g:Lol6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lwyg;
 
-.field public final synthetic b:Ljava/lang/String;
+.field public final b:Lol6;
+
+.field public c:Lol6;
+
+.field public d:[B
+
+.field public e:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/String;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput p2, p0, Lta7;->a:I
+    new-instance v0, Lml6;
 
-    iput-object p1, p0, Lta7;->b:Ljava/lang/String;
+    invoke-direct {v0}, Lml6;-><init>()V
+
+    const-string v1, "application/id3"
+
+    invoke-static {v1}, Lj8a;->n(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lml6;->m:Ljava/lang/String;
+
+    new-instance v1, Lol6;
+
+    invoke-direct {v1, v0}, Lol6;-><init>(Lml6;)V
+
+    sput-object v1, Lta7;->f:Lol6;
+
+    new-instance v0, Lml6;
+
+    invoke-direct {v0}, Lml6;-><init>()V
+
+    const-string v1, "application/x-emsg"
+
+    invoke-static {v1}, Lj8a;->n(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lml6;->m:Ljava/lang/String;
+
+    new-instance v1, Lol6;
+
+    invoke-direct {v1, v0}, Lol6;-><init>(Lml6;)V
+
+    sput-object v1, Lta7;->g:Lol6;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lwyg;I)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lta7;->a:Lwyg;
+
+    const/4 p1, 0x1
+
+    if-eq p2, p1, :cond_1
+
+    const/4 p1, 0x3
+
+    if-ne p2, p1, :cond_0
+
+    sget-object p1, Lta7;->g:Lol6;
+
+    iput-object p1, p0, Lta7;->b:Lol6;
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "Unknown metadataType: "
+
+    invoke-static {p2, v0}, Ltx8;->g(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    sget-object p1, Lta7;->f:Lol6;
+
+    iput-object p1, p0, Lta7;->b:Lol6;
+
+    :goto_0
+    const/4 p1, 0x0
+
+    new-array p2, p1, [B
+
+    iput-object p2, p0, Lta7;->d:[B
+
+    iput p1, p0, Lta7;->e:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 9
+.method public final a(JIIILuyg;)V
+    .locals 12
 
-    iget v0, p0, Lta7;->a:I
+    move/from16 v0, p5
 
-    iget-object v1, p0, Lta7;->b:Ljava/lang/String;
+    iget-object v1, p0, Lta7;->c:Lol6;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-object v0, Lone/me/sharedata/ShareDataPickerScreen;->J0:[Lz28;
+    iget v1, p0, Lta7;->e:I
 
-    if-eqz v1, :cond_0
+    sub-int/2addr v1, v0
 
-    new-instance v0, Lktb;
+    sub-int v2, v1, p4
 
-    const-string v2, "link_source"
+    iget-object v3, p0, Lta7;->d:[B
 
-    invoke-direct {v0, v2, v1}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-static {v3, v2, v1}, Ljava/util/Arrays;->copyOfRange([BII)[B
 
-    filled-new-array {v0}, [Lktb;
+    move-result-object v2
 
-    move-result-object v0
+    new-instance v3, Lmwb;
 
-    invoke-static {v0}, Lo5j;->a([Lktb;)Lys;
+    invoke-direct {v3, v2}, Lmwb;-><init>([B)V
 
-    move-result-object v0
-
-    :goto_0
-    move-object v7, v0
-
-    goto :goto_1
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-
-    :goto_1
-    new-instance v1, Lstb;
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x2
+    iget-object v2, p0, Lta7;->d:[B
 
     const/4 v4, 0x0
 
-    const/4 v5, 0x0
+    invoke-static {v2, v1, v2, v4, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    const/4 v6, 0x0
+    iput v0, p0, Lta7;->e:I
 
-    const/16 v8, 0x1d
+    iget-object v0, p0, Lta7;->c:Lol6;
 
-    invoke-direct/range {v1 .. v8}, Lstb;-><init>(Lv9c;ILojf;Ljava/lang/Long;Ljava/lang/Long;Lys;I)V
+    iget-object v0, v0, Lol6;->n:Ljava/lang/String;
 
-    :pswitch_0
-    return-object v1
+    iget-object v1, p0, Lta7;->b:Lol6;
 
-    :pswitch_1
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+    iget-object v2, v1, Lol6;->n:Ljava/lang/String;
+
+    iget-object v1, v1, Lol6;->n:Ljava/lang/String;
+
+    invoke-static {v0, v2}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
-    invoke-static {v0}, Landroid/net/TrafficStats;->setThreadStatsTag(I)V
+    if-eqz v0, :cond_0
 
-    :try_start_0
-    new-instance v0, Ljava/net/URL;
+    goto :goto_0
 
-    invoke-direct {v0, v1}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
+    :cond_0
+    iget-object v0, p0, Lta7;->c:Lol6;
 
-    invoke-virtual {v0}, Ljava/net/URL;->openStream()Ljava/io/InputStream;
+    iget-object v0, v0, Lol6;->n:Ljava/lang/String;
+
+    const-string v2, "application/x-emsg"
+
+    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    const-string v2, "HlsSampleStreamWrapper"
+
+    if-eqz v0, :cond_2
+
+    invoke-static {v3}, Lrr;->j(Lmwb;)Leo5;
 
     move-result-object v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-static {}, Landroid/net/TrafficStats;->clearThreadStatsTag()V
+    invoke-virtual {v0}, Leo5;->l()Lol6;
 
-    return-object v0
+    move-result-object v3
 
-    :catchall_0
-    move-exception v0
+    if-eqz v3, :cond_1
 
-    invoke-static {}, Landroid/net/TrafficStats;->clearThreadStatsTag()V
+    iget-object v3, v3, Lol6;->n:Ljava/lang/String;
 
-    throw v0
+    invoke-static {v1, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    new-instance v3, Lmwb;
+
+    invoke-virtual {v0}, Leo5;->o()[B
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-direct {v3, v0}, Lmwb;-><init>([B)V
+
+    :goto_0
+    invoke-virtual {v3}, Lmwb;->a()I
+
+    move-result v9
+
+    iget-object v5, p0, Lta7;->a:Lwyg;
+
+    invoke-interface {v5, v3, v9, v4}, Lwyg;->b(Lmwb;II)V
+
+    const/4 v10, 0x0
+
+    move-wide v6, p1
+
+    move v8, p3
+
+    move-object/from16 v11, p6
+
+    invoke-interface/range {v5 .. v11}, Lwyg;->a(JIIILuyg;)V
+
+    return-void
+
+    :cond_1
+    invoke-virtual {v0}, Leo5;->l()Lol6;
+
+    move-result-object p1
+
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    const-string p3, "Ignoring EMSG. Expected it to contain wrapped "
+
+    invoke-direct {p2, p3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p3, " but actual wrapped format: "
+
+    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v2, p1}, Lk0j;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+
+    :cond_2
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    const-string p2, "Ignoring sample for unsupported format: "
+
+    invoke-direct {p1, p2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object p2, p0, Lta7;->c:Lol6;
+
+    iget-object p2, p2, Lol6;->n:Ljava/lang/String;
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v2, p1}, Lk0j;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public final b(Lmwb;II)V
+    .locals 2
+
+    iget p3, p0, Lta7;->e:I
+
+    add-int/2addr p3, p2
+
+    iget-object v0, p0, Lta7;->d:[B
+
+    array-length v1, v0
+
+    if-ge v1, p3, :cond_0
+
+    div-int/lit8 v1, p3, 0x2
+
+    add-int/2addr v1, p3
+
+    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([BI)[B
+
+    move-result-object p3
+
+    iput-object p3, p0, Lta7;->d:[B
+
+    :cond_0
+    iget-object p3, p0, Lta7;->d:[B
+
+    iget v0, p0, Lta7;->e:I
+
+    invoke-virtual {p1, v0, p3, p2}, Lmwb;->h(I[BI)V
+
+    iget p1, p0, Lta7;->e:I
+
+    add-int/2addr p1, p2
+
+    iput p1, p0, Lta7;->e:I
+
+    return-void
+.end method
+
+.method public final c(Lyj4;IZ)I
+    .locals 3
+
+    iget v0, p0, Lta7;->e:I
+
+    add-int/2addr v0, p2
+
+    iget-object v1, p0, Lta7;->d:[B
+
+    array-length v2, v1
+
+    if-ge v2, v0, :cond_0
+
+    div-int/lit8 v2, v0, 0x2
+
+    add-int/2addr v2, v0
+
+    invoke-static {v1, v2}, Ljava/util/Arrays;->copyOf([BI)[B
+
+    move-result-object v0
+
+    iput-object v0, p0, Lta7;->d:[B
+
+    :cond_0
+    iget-object v0, p0, Lta7;->d:[B
+
+    iget v1, p0, Lta7;->e:I
+
+    invoke-interface {p1, v0, v1, p2}, Lyj4;->read([BII)I
+
+    move-result p1
+
+    const/4 p2, -0x1
+
+    if-ne p1, p2, :cond_2
+
+    if-eqz p3, :cond_1
+
+    return p2
+
+    :cond_1
+    new-instance p1, Ljava/io/EOFException;
+
+    invoke-direct {p1}, Ljava/io/EOFException;-><init>()V
+
+    throw p1
+
+    :cond_2
+    iget p2, p0, Lta7;->e:I
+
+    add-int/2addr p2, p1
+
+    iput p2, p0, Lta7;->e:I
+
+    return p1
+.end method
+
+.method public final d(Lol6;)V
+    .locals 1
+
+    iput-object p1, p0, Lta7;->c:Lol6;
+
+    iget-object p1, p0, Lta7;->a:Lwyg;
+
+    iget-object v0, p0, Lta7;->b:Lol6;
+
+    invoke-interface {p1, v0}, Lwyg;->d(Lol6;)V
+
+    return-void
 .end method

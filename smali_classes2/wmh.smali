@@ -1,27 +1,96 @@
-.class public final Lwmh;
+.class public interface abstract Lwmh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ln8g;
+# virtual methods
+.method public abstract a()Landroid/net/Uri;
+.end method
 
+.method public abstract b()J
+.end method
 
-# direct methods
-.method public constructor <init>(Landroid/content/Context;)V
+.method public abstract c()J
+.end method
+
+.method public d()Z
+    .locals 2
+
+    invoke-interface {p0}, Lwmh;->a()Landroid/net/Uri;
+
+    move-result-object v0
+
+    sget-object v1, Lvih;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    const-string v1, "file"
+
+    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+
+    :cond_1
+    :goto_0
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public e(J)Lwmh;
+    .locals 0
+
+    return-object p0
+.end method
+
+.method public f()Lv00;
     .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
 
-    new-instance v0, Lvef;
+    return-object v0
+.end method
 
-    invoke-direct {v0, p1, p0}, Lvef;-><init>(Landroid/content/Context;Lwmh;)V
+.method public abstract g()Z
+.end method
 
-    new-instance p1, Ln8g;
+.method public abstract getContentType()Ljava/lang/String;
+.end method
 
-    invoke-direct {p1, v0}, Ln8g;-><init>(Llq6;)V
+.method public abstract getDuration()J
+.end method
 
-    iput-object p1, p0, Lwmh;->a:Ln8g;
+.method public abstract getHeight()I
+.end method
 
-    return-void
+.method public abstract getType()I
+.end method
+
+.method public abstract getWidth()I
+.end method
+
+.method public abstract h()Ljava/lang/String;
+.end method
+
+.method public abstract i()J
+.end method
+
+.method public abstract j()J
 .end method

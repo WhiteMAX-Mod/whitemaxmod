@@ -1,104 +1,112 @@
 .class public final Lfzd;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic o:Lgzd;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lgzd;
 
 
 # direct methods
-.method public constructor <init>(Lgzd;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lgzd;I)V
     .locals 0
 
-    iput-object p1, p0, Lfzd;->o:Lgzd;
+    iput p2, p0, Lfzd;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lfzd;->b:Lgzd;
 
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final run()V
+    .locals 4
 
-    check-cast p1, Ljava/lang/Number;
+    iget v0, p0, Lfzd;->a:I
 
-    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
+    packed-switch v0, :pswitch_data_0
 
-    move-result p1
+    iget-object v0, p0, Lfzd;->b:Lgzd;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v1, v0, Lgzd;->i:Llzd;
 
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iget-object v2, v1, Llzd;->x0:Lgzd;
 
-    move-result-object p1
+    if-ne v2, v0, :cond_1
 
-    invoke-virtual {p0, p1, p2}, Lfzd;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    sget-boolean v0, Llzd;->A0:Z
 
-    move-result-object p1
+    if-eqz v0, :cond_0
 
-    check-cast p1, Lfzd;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p1, p2}, Lfzd;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    return-object p2
-.end method
+    const-string v2, ": Service connection died"
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance p1, Lfzd;
-
-    iget-object v0, p0, Lfzd;->o:Lgzd;
-
-    invoke-direct {p1, v0, p2}, Lfzd;-><init>(Lgzd;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lfzd;->o:Lgzd;
-
-    iget-object v0, p1, Lgzd;->o:Ljava/lang/String;
-
-    const-string v1, "executeTasks"
-
-    invoke-static {v0, v1}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p1, Lgzd;->a:Lo58;
-
-    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Ltji;
+    const-string v2, "MediaRouteProviderProxy"
 
-    invoke-static {v0}, Late;->u(Ltji;)V
+    invoke-static {v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-object p1, p1, Lgzd;->b:Lo58;
+    :cond_0
+    invoke-virtual {v1}, Llzd;->k()V
 
-    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
+    :cond_1
+    return-void
 
-    move-result-object p1
+    :pswitch_0
+    iget-object v0, p0, Lfzd;->b:Lgzd;
 
-    check-cast p1, Lrq9;
+    iget-object v0, v0, Lgzd;->h:Landroid/util/SparseArray;
 
-    invoke-virtual {p1}, Lrq9;->a()V
+    invoke-virtual {v0}, Landroid/util/SparseArray;->size()I
 
-    sget-object p1, Lb3h;->a:Lb3h;
+    move-result v1
 
-    return-object p1
+    const/4 v2, 0x0
+
+    :goto_0
+    if-ge v2, v1, :cond_2
+
+    invoke-virtual {v0, v2}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lizd;
+
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 v3, 0x0
+
+    invoke-static {v3, v3}, Lizd;->a(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    invoke-virtual {v0}, Landroid/util/SparseArray;->clear()V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

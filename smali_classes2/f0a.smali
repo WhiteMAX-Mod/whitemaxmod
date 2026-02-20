@@ -1,26 +1,28 @@
 .class public final Lf0a;
-.super Lp6g;
+.super Lpdg;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Lys6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/messages/list/ui/MessagesListWidget;
+.field public final synthetic X:Lqc8;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic o:Lh2a;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
+.method public constructor <init>(Lh2a;Lqc8;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p2, p0, Lf0a;->X:Lone/me/messages/list/ui/MessagesListWidget;
+    iput-object p1, p0, Lf0a;->o:Lh2a;
 
-    const/4 p2, 0x2
+    iput-object p2, p0, Lf0a;->X:Lqc8;
 
-    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -30,6 +32,8 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    check-cast p1, Lnd4;
+
     check-cast p2, Lkotlin/coroutines/Continuation;
 
     invoke-virtual {p0, p1, p2}, Lf0a;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
@@ -38,7 +42,7 @@
 
     check-cast p1, Lf0a;
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    sget-object p2, Lmah;->a:Lmah;
 
     invoke-virtual {p1, p2}, Lf0a;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -48,65 +52,49 @@
 .method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    new-instance v0, Lf0a;
+    new-instance p1, Lf0a;
 
-    iget-object v1, p0, Lf0a;->X:Lone/me/messages/list/ui/MessagesListWidget;
+    iget-object v0, p0, Lf0a;->o:Lh2a;
 
-    invoke-direct {v0, p2, v1}, Lf0a;-><init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
+    iget-object v1, p0, Lf0a;->X:Lqc8;
 
-    iput-object p1, v0, Lf0a;->o:Ljava/lang/Object;
+    invoke-direct {p1, v0, v1, p2}, Lf0a;-><init>(Lh2a;Lqc8;Lkotlin/coroutines/Continuation;)V
 
-    return-object v0
+    return-object p1
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+    .locals 6
 
-    iget-object v0, p0, Lf0a;->o:Ljava/lang/Object;
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    iget-object p1, p0, Lf0a;->o:Lh2a;
 
-    check-cast v0, Ltee;
+    iget-object v0, p1, Lh2a;->d:Lzl1;
 
-    sget-object p1, Lone/me/messages/list/ui/MessagesListWidget;->g1:[Lz28;
+    iget-object v1, p0, Lf0a;->X:Lqc8;
 
-    iget-object p1, p0, Lf0a;->X:Lone/me/messages/list/ui/MessagesListWidget;
+    move-object v2, v1
 
-    invoke-virtual {p1}, Lone/me/messages/list/ui/MessagesListWidget;->E0()Lone/me/messages/list/ui/recycler/MessagesLayoutManager;
+    check-cast v2, Loc8;
 
-    move-result-object v1
+    iget-object v2, v2, Loc8;->a:Ljava/lang/String;
 
-    invoke-virtual {v1}, Landroidx/recyclerview/widget/a;->x()I
+    new-instance v5, Le0a;
 
-    move-result v1
+    const/4 v3, 0x0
 
-    if-nez v1, :cond_0
+    invoke-direct {v5, p1, v1, v3}, Le0a;-><init>(Lh2a;Lqc8;I)V
 
-    invoke-virtual {p1}, Lone/me/messages/list/ui/MessagesListWidget;->E0()Lone/me/messages/list/ui/recycler/MessagesLayoutManager;
+    move-object v1, v2
 
-    move-result-object v1
+    const/4 v2, 0x1
 
-    new-instance v2, Lg0a;
+    const/4 v4, 0x0
 
-    invoke-direct {v2, p1, v0}, Lg0a;-><init>(Lone/me/messages/list/ui/MessagesListWidget;Ltee;)V
+    invoke-virtual/range {v0 .. v5}, Lzl1;->j(Ljava/lang/String;ZZZLis6;)V
 
-    invoke-virtual {v1, v2}, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->v1(Ltv9;)V
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p1}, Lone/me/messages/list/ui/MessagesListWidget;->E0()Lone/me/messages/list/ui/recycler/MessagesLayoutManager;
-
-    move-result-object v1
-
-    const-string v2, "ScrollButton"
-
-    invoke-virtual {v1, v2}, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->x1(Ljava/lang/String;)V
-
-    invoke-static {p1, v0}, Lone/me/messages/list/ui/MessagesListWidget;->z0(Lone/me/messages/list/ui/MessagesListWidget;Ltee;)V
-
-    :goto_0
-    sget-object p1, Lb3h;->a:Lb3h;
+    sget-object p1, Lmah;->a:Lmah;
 
     return-object p1
 .end method

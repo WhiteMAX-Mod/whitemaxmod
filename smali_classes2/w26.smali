@@ -1,145 +1,297 @@
 .class public final Lw26;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:Ljava/util/concurrent/atomic/AtomicBoolean;
+.field public final a:Landroid/content/Context;
 
-.field public final synthetic Y:Ld36;
+.field public final b:Ltgb;
 
-.field public final synthetic Z:Ljava/nio/channels/AsynchronousFileChannel;
+.field public final c:Lhgb;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final d:Lzp4;
 
-.field public final synthetic t0:Ljava/util/concurrent/atomic/AtomicReference;
+.field public final e:I
 
-.field public final synthetic u0:Lfjc;
+.field public final f:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/atomic/AtomicBoolean;Ld36;Ljava/nio/channels/AsynchronousFileChannel;Ljava/util/concurrent/atomic/AtomicReference;Lfjc;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Landroid/content/Context;Ltgb;Lhgb;Lzp4;)V
     .locals 0
 
-    iput-object p1, p0, Lw26;->X:Ljava/util/concurrent/atomic/AtomicBoolean;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lw26;->Y:Ld36;
+    iput-object p1, p0, Lw26;->a:Landroid/content/Context;
 
-    iput-object p3, p0, Lw26;->Z:Ljava/nio/channels/AsynchronousFileChannel;
+    iput-object p2, p0, Lw26;->b:Ltgb;
 
-    iput-object p4, p0, Lw26;->t0:Ljava/util/concurrent/atomic/AtomicReference;
+    iput-object p3, p0, Lw26;->c:Lhgb;
 
-    iput-object p5, p0, Lw26;->u0:Lfjc;
+    iput-object p4, p0, Lw26;->d:Lzp4;
 
-    const/4 p1, 0x2
+    sget p1, Lald;->tt_notification_file_downloading_title:I
 
-    invoke-direct {p0, p1, p6}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput p1, p0, Lw26;->e:I
+
+    sget p1, Lald;->tt_worker_attach_upload:I
+
+    iput p1, p0, Lw26;->f:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a(Ljava/lang/CharSequence;Ljava/lang/String;Ljava/lang/Long;ZILandroid/app/PendingIntent;Landroid/app/PendingIntent;)Landroid/app/Notification;
+    .locals 3
 
-    check-cast p1, Ldng;
+    iget-object v0, p0, Lw26;->b:Ltgb;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-virtual {v0}, Ltgb;->c()V
 
-    invoke-virtual {p0, p1, p2}, Lw26;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v1, p0, Lw26;->d:Lzp4;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-string v1, "ru.oneme.app.fileUpload"
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v1, v2, v2}, Ltgb;->j(Ljava/lang/String;ZZ)Lnua;
+
+    move-result-object v0
+
+    iget-object v1, v0, Lnua;->F:Landroid/app/Notification;
+
+    invoke-static {p1}, Lnua;->c(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object p1
 
-    check-cast p1, Lw26;
+    iput-object p1, v0, Lnua;->e:Ljava/lang/CharSequence;
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    invoke-static {p2}, Lnua;->c(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
-    invoke-virtual {p1, p2}, Lw26;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object p1
 
-    return-object p2
-.end method
+    iput-object p1, v0, Lnua;->f:Ljava/lang/CharSequence;
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 7
+    if-eqz p3, :cond_0
 
-    new-instance v0, Lw26;
+    invoke-virtual {p3}, Ljava/lang/Long;->longValue()J
 
-    iget-object v4, p0, Lw26;->t0:Ljava/util/concurrent/atomic/AtomicReference;
+    move-result-wide p1
 
-    iget-object v5, p0, Lw26;->u0:Lfjc;
-
-    iget-object v1, p0, Lw26;->X:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    iget-object v2, p0, Lw26;->Y:Ld36;
-
-    iget-object v3, p0, Lw26;->Z:Ljava/nio/channels/AsynchronousFileChannel;
-
-    move-object v6, p2
-
-    invoke-direct/range {v0 .. v6}, Lw26;-><init>(Ljava/util/concurrent/atomic/AtomicBoolean;Ld36;Ljava/nio/channels/AsynchronousFileChannel;Ljava/util/concurrent/atomic/AtomicReference;Lfjc;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lw26;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 10
-
-    iget-object v0, p0, Lw26;->o:Ljava/lang/Object;
-
-    move-object v3, v0
-
-    check-cast v3, Ldng;
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    iget-object v5, p0, Lw26;->X:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v5}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result p1
-
-    sget-object v0, Lb3h;->a:Lb3h;
-
-    if-nez p1, :cond_0
-
-    return-object v0
+    goto :goto_0
 
     :cond_0
-    iget-object v2, p0, Lw26;->Y:Ld36;
+    const-wide/16 p1, 0x0
 
-    iget-object p1, v2, Ld36;->q:Ln8g;
+    :goto_0
+    iput-wide p1, v1, Landroid/app/Notification;->when:J
 
-    invoke-virtual {p1}, Ln8g;->getValue()Ljava/lang/Object;
+    iget-object p1, p0, Lw26;->c:Lhgb;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    if-eqz p4, :cond_1
+
+    sget p1, Lsce;->Y0:I
+
+    goto :goto_1
+
+    :cond_1
+    sget p1, Lsce;->W0:I
+
+    :goto_1
+    iput p1, v1, Landroid/app/Notification;->icon:I
+
+    const/4 p1, -0x1
+
+    const/4 p2, 0x0
+
+    const/16 p3, 0x64
+
+    if-ne p5, p1, :cond_2
+
+    iput p3, v0, Lnua;->o:I
+
+    iput p2, v0, Lnua;->p:I
+
+    iput-boolean v2, v0, Lnua;->q:Z
+
+    goto :goto_2
+
+    :cond_2
+    if-gt v2, p5, :cond_3
+
+    const/16 p1, 0x65
+
+    if-ge p5, p1, :cond_3
+
+    iput p3, v0, Lnua;->o:I
+
+    iput p5, v0, Lnua;->p:I
+
+    iput-boolean p2, v0, Lnua;->q:Z
+
+    goto :goto_2
+
+    :cond_3
+    iput p2, v0, Lnua;->o:I
+
+    iput p2, v0, Lnua;->p:I
+
+    iput-boolean p2, v0, Lnua;->q:Z
+
+    :goto_2
+    iput p2, v0, Lnua;->k:I
+
+    invoke-virtual {v0, p2}, Lnua;->e(I)V
+
+    const/4 p1, 0x0
+
+    invoke-virtual {v0, p1}, Lnua;->h(Landroid/net/Uri;)V
+
+    const/4 p1, 0x2
+
+    invoke-virtual {v0, p1, v2}, Lnua;->f(IZ)V
+
+    const/16 p1, 0x10
+
+    invoke-virtual {v0, p1, p2}, Lnua;->f(IZ)V
+
+    iget-object p1, p0, Lw26;->a:Landroid/content/Context;
+
+    sget p3, Lald;->tt_worker_cancel:I
+
+    invoke-virtual {p1, p3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object p1
 
-    check-cast p1, Lzb4;
+    iget-object p3, v0, Lnua;->b:Ljava/util/ArrayList;
 
-    iget-object v9, v2, Ld36;->p:Ltx7;
+    new-instance p4, Lzta;
 
-    new-instance v1, Lv26;
+    invoke-direct {p4, p2, p1, p7}, Lzta;-><init>(ILjava/lang/CharSequence;Landroid/app/PendingIntent;)V
 
-    iget-object v7, p0, Lw26;->u0:Lfjc;
+    invoke-virtual {p3, p4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    const/4 v8, 0x0
+    const-string p1, "progress"
 
-    iget-object v4, p0, Lw26;->Z:Ljava/nio/channels/AsynchronousFileChannel;
+    iput-object p1, v0, Lnua;->v:Ljava/lang/String;
 
-    iget-object v6, p0, Lw26;->t0:Ljava/util/concurrent/atomic/AtomicReference;
+    iput-object p6, v0, Lnua;->g:Landroid/app/PendingIntent;
 
-    invoke-direct/range {v1 .. v8}, Lv26;-><init>(Ld36;Ldng;Ljava/nio/channels/AsynchronousFileChannel;Ljava/util/concurrent/atomic/AtomicBoolean;Ljava/util/concurrent/atomic/AtomicReference;Lfjc;Lkotlin/coroutines/Continuation;)V
+    invoke-virtual {v0}, Lnua;->a()Landroid/app/Notification;
 
-    const/4 v2, 0x2
+    move-result-object p1
 
-    const/4 v3, 0x0
+    return-object p1
+.end method
 
-    invoke-static {p1, v9, v3, v1, v2}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
+.method public final b(JLjava/lang/Long;Ljava/lang/Long;Ljava/lang/CharSequence;Ljava/lang/String;IZLandroid/app/PendingIntent;)Landroid/app/Notification;
+    .locals 9
 
-    return-object v0
+    invoke-static {p1, p2}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    const-wide/16 v1, 0x0
+
+    cmp-long v3, p1, v1
+
+    iget-object v4, p0, Lw26;->b:Ltgb;
+
+    if-nez v3, :cond_0
+
+    const/4 p1, 0x0
+
+    invoke-virtual {v4, p1}, Ltgb;->h(Z)Landroid/content/Intent;
+
+    move-result-object p1
+
+    goto :goto_1
+
+    :cond_0
+    if-eqz p3, :cond_1
+
+    invoke-virtual {p3}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v5
+
+    goto :goto_0
+
+    :cond_1
+    move-wide v5, v1
+
+    :goto_0
+    if-eqz p4, :cond_2
+
+    invoke-virtual {p4}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v1
+
+    :cond_2
+    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object p4, Lns8;->c:Lns8;
+
+    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v3
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    invoke-virtual {p4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 p4, 0x0
+
+    invoke-static {p1, p2, v3, v1, p4}, Lns8;->J0(JLjava/lang/Long;Ljava/lang/Long;Ljava/lang/String;)Lun4;
+
+    move-result-object p1
+
+    invoke-virtual {v4, p1}, Ltgb;->m(Lun4;)Landroid/content/Intent;
+
+    move-result-object p1
+
+    :goto_1
+    const/high16 p2, 0x8000000
+
+    invoke-static {p2}, Lrrj;->b(I)I
+
+    move-result p2
+
+    invoke-static {p1, p2}, Lrrj;->c(Landroid/content/Intent;I)I
+
+    move-result p2
+
+    iget-object p4, p0, Lw26;->a:Landroid/content/Context;
+
+    invoke-static {p4, v0, p1, p2}, Landroid/app/PendingIntent;->getActivity(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
+
+    move-result-object v7
+
+    move-object v1, p0
+
+    move-object v4, p3
+
+    move-object v2, p5
+
+    move-object v3, p6
+
+    move/from16 v6, p7
+
+    move/from16 v5, p8
+
+    move-object/from16 v8, p9
+
+    invoke-virtual/range {v1 .. v8}, Lw26;->a(Ljava/lang/CharSequence;Ljava/lang/String;Ljava/lang/Long;ZILandroid/app/PendingIntent;Landroid/app/PendingIntent;)Landroid/app/Notification;
+
+    move-result-object p1
+
+    return-object p1
 .end method

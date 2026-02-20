@@ -1,5 +1,5 @@
 .class public final Lwu1;
-.super Lo84;
+.super Lda4;
 .source "SourceFile"
 
 
@@ -8,16 +8,16 @@
 
 .field public synthetic d:Ljava/lang/Object;
 
-.field public final synthetic o:Lxu1;
+.field public final synthetic o:Lyu1;
 
 
 # direct methods
-.method public constructor <init>(Lxu1;Lo84;)V
+.method public constructor <init>(Lyu1;Lda4;)V
     .locals 0
 
-    iput-object p1, p0, Lwu1;->o:Lxu1;
+    iput-object p1, p0, Lwu1;->o:Lyu1;
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -37,11 +37,11 @@
 
     iput p1, p0, Lwu1;->X:I
 
-    iget-object p1, p0, Lwu1;->o:Lxu1;
+    iget-object p1, p0, Lwu1;->o:Lyu1;
 
     const-wide/16 v0, 0x0
 
-    invoke-virtual {p1, v0, v1, p0}, Lxu1;->c(JLo84;)Ljava/lang/Object;
+    invoke-virtual {p1, v0, v1, p0}, Lyu1;->d(JLda4;)Ljava/lang/Object;
 
     move-result-object p1
 

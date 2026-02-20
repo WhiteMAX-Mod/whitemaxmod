@@ -1,59 +1,48 @@
-.class public abstract Lcc6;
-.super Ljava/lang/Object;
-.source "SourceFile"
+.class public final Lcc6;
+.super Lda4;
 
-# interfaces
-.implements Ljava/lang/Iterable;
+
+# instance fields
+.field public final synthetic X:Lp93;
+
+.field public synthetic d:Ljava/lang/Object;
+
+.field public o:I
+
+
+# direct methods
+.method public constructor <init>(Lp93;Lkotlin/coroutines/Continuation;)V
+    .locals 0
+
+    iput-object p1, p0, Lcc6;->X:Lp93;
+
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 4
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    iput-object p1, p0, Lcc6;->d:Ljava/lang/Object;
 
-    move-result-object v0
+    iget p1, p0, Lcc6;->o:I
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    const/high16 v0, -0x80000000
 
-    const-string v2, "["
+    or-int/2addr p1, v0
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iput p1, p0, Lcc6;->o:I
 
-    const/4 v2, 0x1
+    iget-object p1, p0, Lcc6;->X:Lp93;
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    const/4 v0, 0x0
 
-    move-result v3
+    invoke-virtual {p1, v0, p0}, Lp93;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    if-eqz v3, :cond_1
+    move-result-object p1
 
-    if-nez v2, :cond_0
-
-    const-string v2, ", "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    :cond_0
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const/4 v2, 0x0
-
-    goto :goto_0
-
-    :cond_1
-    const/16 v0, 0x5d
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

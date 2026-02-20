@@ -1,94 +1,103 @@
 .class public final Lqzb;
-.super Lp6g;
+.super Lywj;
 .source "SourceFile"
-
-# interfaces
-.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:Luzb;
+.field public final synthetic a:I
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic b:Ltzb;
 
 
 # direct methods
-.method public constructor <init>(Luzb;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Ltzb;I)V
     .locals 0
 
-    iput-object p1, p0, Lqzb;->X:Luzb;
+    iput p2, p0, Lqzb;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lqzb;->b:Ltzb;
 
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final onCreateFailure(Ljava/lang/String;)V
+    .locals 5
 
-    check-cast p1, Lvzb;
+    iget v0, p0, Lqzb;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Lqzb;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Lqzb;->b:Ltzb;
 
-    move-result-object p1
+    new-instance v1, Lbma;
 
-    check-cast p1, Lqzb;
+    sget-object v2, Lama;->b:Lama;
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    iget-object v3, v0, Ltzb;->P:Lorg/webrtc/PeerConnection;
 
-    invoke-virtual {p1, p2}, Lqzb;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v3}, Lorg/webrtc/PeerConnection;->getRemoteDescription()Lorg/webrtc/SessionDescription;
 
-    return-object p2
+    move-result-object v3
+
+    const/4 v4, 0x0
+
+    invoke-direct {v1, v2, p1, v4, v3}, Lbma;-><init>(Lama;Ljava/lang/String;Lorg/webrtc/SessionDescription;Lorg/webrtc/SessionDescription;)V
+
+    invoke-virtual {v0, v1}, Ltzb;->h(Lbma;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lqzb;->b:Ltzb;
+
+    new-instance v1, Lbma;
+
+    sget-object v2, Lama;->a:Lama;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v1, v2, p1, v3, v3}, Lbma;-><init>(Lama;Ljava/lang/String;Lorg/webrtc/SessionDescription;Lorg/webrtc/SessionDescription;)V
+
+    invoke-virtual {v0, v1}, Ltzb;->h(Lbma;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public final onCreateSuccess(Lorg/webrtc/SessionDescription;)V
+    .locals 1
 
-    new-instance v0, Lqzb;
+    iget v0, p0, Lqzb;->a:I
 
-    iget-object v1, p0, Lqzb;->X:Luzb;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {v0, v1, p2}, Lqzb;-><init>(Luzb;Lkotlin/coroutines/Continuation;)V
+    iget-object v0, p0, Lqzb;->b:Ltzb;
 
-    iput-object p1, v0, Lqzb;->o:Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Ltzb;->n(Lorg/webrtc/SessionDescription;)V
 
-    return-object v0
-.end method
+    return-void
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    :pswitch_0
+    iget-object v0, p0, Lqzb;->b:Ltzb;
 
-    iget-object v0, p0, Lqzb;->o:Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Ltzb;->n(Lorg/webrtc/SessionDescription;)V
 
-    check-cast v0, Lvzb;
+    return-void
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    nop
 
-    sget-object p1, Lvzb;->a:Lvzb;
-
-    if-ne v0, p1, :cond_0
-
-    const-string p1, "allowed"
-
-    goto :goto_0
-
-    :cond_0
-    const-string p1, "denied"
-
-    :goto_0
-    iget-object v0, p0, Lqzb;->X:Luzb;
-
-    const-string v1, "gallery"
-
-    invoke-static {v0, v1, p1}, Luzb;->a(Luzb;Ljava/lang/String;Ljava/lang/String;)V
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

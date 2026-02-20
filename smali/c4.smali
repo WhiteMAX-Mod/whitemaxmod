@@ -1,5 +1,5 @@
 .class public final Lc4;
-.super Lg3j;
+.super Lsbj;
 .source "SourceFile"
 
 
@@ -120,7 +120,7 @@
     return p1
 .end method
 
-.method public final g(Le4;Le4;)V
+.method public final e(Le4;Le4;)V
     .locals 1
 
     iget-object v0, p0, Lc4;->b:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
@@ -130,7 +130,7 @@
     return-void
 .end method
 
-.method public final h(Le4;Ljava/lang/Thread;)V
+.method public final f(Le4;Ljava/lang/Thread;)V
     .locals 1
 
     iget-object v0, p0, Lc4;->a:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;

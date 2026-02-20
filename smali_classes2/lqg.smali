@@ -2,49 +2,34 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lsqg;
+
+# instance fields
+.field public final a:Lj88;
+
+.field public final b:Lj88;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method public constructor <init>(Lr5;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    const/16 v0, 0x29f
+
+    invoke-virtual {p1, v0}, Lr5;->d(I)Lbgg;
+
+    move-result-object v0
+
+    iput-object v0, p0, Llqg;->a:Lj88;
+
+    const/16 v0, 0x13
+
+    invoke-virtual {p1, v0}, Lr5;->d(I)Lbgg;
+
+    move-result-object p1
+
+    iput-object p1, p0, Llqg;->b:Lj88;
+
     return-void
-.end method
-
-
-# virtual methods
-.method public final a()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "one.video.calls.externcalls.sdk.audio"
-
-    return-object v0
-.end method
-
-.method public final b()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "xrRYkU895jUPp2YZo1sxmtFadnlX1oHyouadIxpNzAp"
-
-    return-object v0
-.end method
-
-.method public final c()Ljava/lang/String;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public final d()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "0.1.1"
-
-    return-object v0
 .end method

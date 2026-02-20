@@ -1,175 +1,51 @@
 .class public final Lo65;
-.super Llk0;
+.super Lda4;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lz65;
 
-.field public final b:Ljava/util/List;
+.field public Y:I
+
+.field public d:Ljava/io/File;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 3
+.method public constructor <init>(Lz65;Lda4;)V
+    .locals 0
 
-    iput p1, p0, Lo65;->a:I
+    iput-object p1, p0, Lo65;->X:Lz65;
 
-    packed-switch p1, :pswitch_data_0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const-string p1, "connection_type"
-
-    const-string v0, "size"
-
-    const-string v1, "attach_type"
-
-    filled-new-array {v1, p1, v0}, [Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lqi3;->h([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lo65;->b:Ljava/util/List;
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
-
-    :pswitch_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const-string p1, "connection_type"
-
-    const-string v0, "class"
-
-    const-string v1, "size"
-
-    const-string v2, "attach_type"
-
-    filled-new-array {v1, v2, p1, v0}, [Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lqi3;->h([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lo65;->b:Ljava/util/List;
-
-    return-void
-
-    :pswitch_1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const-string p1, "flow"
-
-    const-string v0, "connection_type"
-
-    filled-new-array {p1, v0}, [Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lqi3;->h([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lo65;->b:Ljava/util/List;
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final b()Ljava/util/List;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget v0, p0, Lo65;->a:I
+    iput-object p1, p0, Lo65;->o:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Lo65;->Y:I
 
-    iget-object v0, p0, Lo65;->b:Ljava/util/List;
+    const/high16 v0, -0x80000000
 
-    return-object v0
+    or-int/2addr p1, v0
 
-    :pswitch_0
-    iget-object v0, p0, Lo65;->b:Ljava/util/List;
+    iput p1, p0, Lo65;->Y:I
 
-    return-object v0
+    iget-object p1, p0, Lo65;->X:Lz65;
 
-    :pswitch_1
-    iget-object v0, p0, Lo65;->b:Ljava/util/List;
+    const/4 v0, 0x0
 
-    return-object v0
+    invoke-virtual {p1, v0, p0}, Lz65;->f(Ljava/io/File;Lda4;)Ljava/lang/Object;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
+    move-result-object p1
 
-.method public final c(Ljfa;Ljava/util/List;)Z
-    .locals 1
-
-    iget v0, p0, Lo65;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :pswitch_0
-    const/4 p1, 0x1
-
-    return p1
-
-    :pswitch_1
-    const-string v0, "already_downloaded"
-
-    invoke-virtual {p1, v0}, Ljfa;->b(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x3
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x4
-
-    :goto_0
-    invoke-interface {p2}, Ljava/util/List;->size()I
-
-    move-result p2
-
-    if-ne p1, p2, :cond_1
-
-    const/4 p1, 0x1
-
-    goto :goto_1
-
-    :cond_1
-    const/4 p1, 0x0
-
-    :goto_1
-    return p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

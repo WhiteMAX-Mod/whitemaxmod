@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lpna;
+.implements Lgqa;
 
 
 # annotations
@@ -14,10 +14,10 @@
     d2 = {
         "Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;",
         "Lone/me/sdk/arch/Widget;",
-        "Lpna;",
+        "Lgqa;",
         "<init>",
         "()V",
-        "z71",
+        "m81",
         "calls-ui_release"
     }
     k = 0x1
@@ -31,19 +31,19 @@
 
 
 # static fields
-.field public static final synthetic Z:[Lz28;
+.field public static final synthetic Z:[Lv58;
 
 
 # instance fields
-.field public final X:Ljld;
+.field public final X:Lgrd;
 
 .field public final Y:Ljava/lang/Object;
 
-.field public final a:Les7;
+.field public final a:Lus7;
 
-.field public final b:Lo58;
+.field public final b:Lj88;
 
-.field public final c:Lx71;
+.field public final c:Lk81;
 
 .field public final d:Ljava/lang/Object;
 
@@ -54,7 +54,7 @@
 .method static constructor <clinit>()V
     .locals 6
 
-    new-instance v0, Liyc;
+    new-instance v0, Lv3d;
 
     const-class v1, Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;
 
@@ -64,21 +64,21 @@
 
     const/4 v4, 0x0
 
-    invoke-direct {v0, v1, v2, v3, v4}, Liyc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v2, v3, v4}, Lv3d;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    sget-object v2, Lctd;->a:Ldtd;
+    sget-object v2, Lazd;->a:Lbzd;
 
     const-string v3, "recycler"
 
     const-string v5, "getRecycler()Landroidx/recyclerview/widget/RecyclerView;"
 
-    invoke-static {v2, v1, v3, v5, v4}, Lj27;->e(Ldtd;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Liyc;
+    invoke-static {v2, v1, v3, v5, v4}, Lo16;->g(Lbzd;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lv3d;
 
     move-result-object v1
 
     const/4 v2, 0x2
 
-    new-array v2, v2, [Lz28;
+    new-array v2, v2, [Lv58;
 
     aput-object v0, v2, v4
 
@@ -86,7 +86,7 @@
 
     aput-object v1, v2, v0
 
-    sput-object v2, Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;->Z:[Lz28;
+    sput-object v2, Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;->Z:[Lv58;
 
     return-void
 .end method
@@ -100,133 +100,133 @@
 
     const/4 v2, 0x3
 
-    invoke-direct {p0, v0, v1, v2, v0}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILso4;)V
+    invoke-direct {p0, v0, v1, v2, v0}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILfq4;)V
 
-    sget-object v0, Les7;->f:Les7;
+    sget-object v0, Lus7;->f:Lus7;
 
-    iput-object v0, p0, Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;->a:Les7;
+    iput-object v0, p0, Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;->a:Lus7;
 
-    new-instance v0, Lg31;
+    new-instance v0, Ljg0;
 
-    const/16 v1, 0x8
+    const/16 v1, 0x13
 
-    invoke-direct {v0, v1}, Lg31;-><init>(I)V
+    invoke-direct {v0, v1}, Ljg0;-><init>(I)V
 
-    new-instance v1, Lo;
+    new-instance v1, Lq;
 
     const/16 v3, 0xa
 
-    invoke-direct {v1, v3, v0}, Lo;-><init>(ILlq6;)V
+    invoke-direct {v1, v3, v0}, Lq;-><init>(ILis6;)V
 
-    const-class v0, Le81;
+    const-class v0, Lr81;
 
-    invoke-virtual {p0, v0, v1}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Llq6;)Lo58;
+    invoke-virtual {p0, v0, v1}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Lis6;)Lj88;
 
     move-result-object v0
 
-    iput-object v0, p0, Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;->b:Lo58;
+    iput-object v0, p0, Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;->b:Lj88;
 
-    new-instance v5, Lx71;
+    new-instance v5, Lk81;
 
-    new-instance v1, La4a;
+    new-instance v1, Lh78;
 
     const/4 v3, 0x5
 
-    invoke-direct {v1, v3, p0}, La4a;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v3, p0}, Lh78;-><init>(ILjava/lang/Object;)V
 
-    sget-object v3, Leo1;->a:Leo1;
+    sget-object v3, Lro1;->a:Lro1;
 
-    invoke-virtual {v3}, Leo1;->b()Lyab;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Lyab;->a()Ljava/util/concurrent/ExecutorService;
+    invoke-virtual {v3}, Lro1;->b()Lncb;
 
     move-result-object v3
 
-    invoke-direct {v5, v1, v3}, Lx71;-><init>(La4a;Ljava/util/concurrent/ExecutorService;)V
+    invoke-virtual {v3}, Lncb;->a()Ljava/util/concurrent/ExecutorService;
 
-    iput-object v5, p0, Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;->c:Lx71;
+    move-result-object v3
 
-    new-instance v1, Ly71;
+    invoke-direct {v5, v1, v3}, Lk81;-><init>(Lh78;Ljava/util/concurrent/ExecutorService;)V
+
+    iput-object v5, p0, Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;->c:Lk81;
+
+    new-instance v1, Ll81;
 
     const/4 v3, 0x0
 
-    invoke-direct {v1, p0, v3}, Ly71;-><init>(Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;I)V
+    invoke-direct {v1, p0, v3}, Ll81;-><init>(Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;I)V
 
-    invoke-static {v2, v1}, Le8;->b(ILlq6;)Lo58;
+    invoke-static {v2, v1}, Lbdj;->d(ILis6;)Lj88;
 
     move-result-object v1
 
     iput-object v1, p0, Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;->d:Ljava/lang/Object;
 
-    new-instance v1, Lg31;
+    new-instance v1, Ljg0;
 
-    const/16 v3, 0x9
+    const/16 v3, 0x14
 
-    invoke-direct {v1, v3}, Lg31;-><init>(I)V
+    invoke-direct {v1, v3}, Ljg0;-><init>(I)V
 
-    invoke-static {v2, v1}, Le8;->b(ILlq6;)Lo58;
+    invoke-static {v2, v1}, Lbdj;->d(ILis6;)Lj88;
 
     move-result-object v1
 
     iput-object v1, p0, Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;->o:Ljava/lang/Object;
 
-    sget v1, Ly6b;->H:I
+    sget v1, Lt8b;->K:I
 
-    invoke-virtual {p0, v1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Ljld;
+    invoke-virtual {p0, v1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lgrd;
 
-    sget v1, Ly6b;->E:I
+    sget v1, Lt8b;->H:I
 
-    invoke-virtual {p0, v1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Ljld;
+    invoke-virtual {p0, v1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lgrd;
 
     move-result-object v1
 
-    iput-object v1, p0, Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;->X:Ljld;
+    iput-object v1, p0, Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;->X:Lgrd;
 
-    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Le81;
+    check-cast v0, Lr81;
 
-    iget-object v0, v0, Le81;->d:Lpld;
+    iget-object v0, v0, Lr81;->d:Lmrd;
 
-    new-instance v3, Lrx;
+    new-instance v3, Lw8;
 
     const/4 v9, 0x4
 
-    const/4 v10, 0x5
+    const/4 v10, 0x6
 
     const/4 v4, 0x2
 
-    const-class v6, Lx71;
+    const-class v6, Lk81;
 
     const-string v7, "submitList"
 
     const-string v8, "submitList(Ljava/util/List;)V"
 
-    invoke-direct/range {v3 .. v10}, Lrx;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+    invoke-direct/range {v3 .. v10}, Lw8;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
 
-    new-instance v1, Lm96;
+    new-instance v1, Llb6;
 
     const/4 v4, 0x1
 
-    invoke-direct {v1, v0, v3, v4}, Lm96;-><init>(Ld76;Lbr6;I)V
+    invoke-direct {v1, v0, v3, v4}, Llb6;-><init>(Lb96;Lys6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getLifecycleScope()Lw78;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getLifecycleScope()Loa8;
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lgu0;->x(Ld76;Lzb4;)Lmmf;
+    invoke-static {v1, v0}, Lzka;->w(Lb96;Lnd4;)Lcuf;
 
-    new-instance v0, Ly71;
+    new-instance v0, Ll81;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, p0, v1}, Ly71;-><init>(Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;I)V
+    invoke-direct {v0, p0, v1}, Ll81;-><init>(Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;I)V
 
-    invoke-static {v2, v0}, Le8;->b(ILlq6;)Lo58;
+    invoke-static {v2, v0}, Lbdj;->d(ILis6;)Lj88;
 
     move-result-object v0
 
@@ -237,10 +237,10 @@
 
 
 # virtual methods
-.method public final getInsetsConfig()Les7;
+.method public final getInsetsConfig()Lus7;
     .locals 1
 
-    iget-object v0, p0, Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;->a:Les7;
+    iget-object v0, p0, Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;->a:Lus7;
 
     return-object v0
 .end method
@@ -268,17 +268,15 @@
 
     invoke-virtual {v0, p1}, Landroid/widget/LinearLayout;->setOrientation(I)V
 
-    new-instance p1, Lymb;
+    new-instance p1, Lmpb;
 
     invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object p2
 
-    const/4 v1, 0x6
+    invoke-direct {p1, p2}, Lmpb;-><init>(Landroid/content/Context;)V
 
-    invoke-direct {p1, p2, v1}, Lymb;-><init>(Landroid/content/Context;I)V
-
-    sget p2, Ly6b;->H:I
+    sget p2, Lt8b;->K:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setId(I)V
 
@@ -290,35 +288,35 @@
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    sget p2, Lb7b;->Z:I
+    sget p2, Lw8b;->a0:I
 
-    invoke-virtual {p1, p2}, Lymb;->setTitle(I)V
+    invoke-virtual {p1, p2}, Lmpb;->setTitle(I)V
 
-    sget-object p2, Lqmb;->b:Lqmb;
+    sget-object p2, Lepb;->b:Lepb;
 
-    invoke-virtual {p1, p2}, Lymb;->setForm(Lqmb;)V
+    invoke-virtual {p1, p2}, Lmpb;->setForm(Lepb;)V
 
-    new-instance p2, Lgmb;
+    new-instance p2, Luob;
 
-    new-instance v1, Li31;
+    new-instance v1, Lu31;
 
     const/4 v2, 0x1
 
-    invoke-direct {v1, v2, p0}, Li31;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v2, p0}, Lu31;-><init>(ILjava/lang/Object;)V
 
-    invoke-direct {p2, v1}, Lgmb;-><init>(Lnq6;)V
+    invoke-direct {p2, v1}, Luob;-><init>(Lks6;)V
 
-    invoke-virtual {p1, p2}, Lymb;->setLeftActions(Lmmb;)V
+    invoke-virtual {p1, p2}, Lmpb;->setLeftActions(Lapb;)V
 
-    sget-object p2, Lpc3;->t0:Lkme;
+    sget-object p2, Lfe3;->t0:Ltea;
 
-    invoke-virtual {p2, p1}, Lkme;->s(Landroid/view/View;)Lzbb;
+    invoke-virtual {p2, p1}, Ltea;->r(Landroid/view/View;)Loob;
 
     move-result-object v1
 
-    iget-object v1, v1, Lzbb;->c:Lzlb;
+    iget-object v1, v1, Loob;->b:Llob;
 
-    invoke-virtual {p1, v1}, Lymb;->setCustomTheme(Lzlb;)V
+    invoke-virtual {p1, v1}, Lmpb;->setCustomTheme(Llob;)V
 
     new-instance v1, Landroidx/recyclerview/widget/RecyclerView;
 
@@ -330,7 +328,7 @@
 
     invoke-direct {v1, v2, v3}, Landroidx/recyclerview/widget/RecyclerView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    sget v2, Ly6b;->E:I
+    sget v2, Lt8b;->H:I
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setId(I)V
 
@@ -340,55 +338,55 @@
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    new-instance p3, Landroidx/recyclerview/widget/LinearLayoutManager;
+    new-instance v2, Landroidx/recyclerview/widget/LinearLayoutManager;
 
     invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    invoke-direct {p3}, Landroidx/recyclerview/widget/LinearLayoutManager;-><init>()V
+    invoke-direct {v2}, Landroidx/recyclerview/widget/LinearLayoutManager;-><init>()V
 
-    invoke-virtual {v1, p3}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/a;)V
+    invoke-virtual {v1, v2}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/a;)V
 
-    iget-object p3, p0, Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;->c:Lx71;
+    iget-object v2, p0, Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;->c:Lk81;
 
-    invoke-virtual {v1, p3}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Lwrd;)V
+    invoke-virtual {v1, v2}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Lsxd;)V
 
-    invoke-virtual {v1, v3}, Landroidx/recyclerview/widget/RecyclerView;->setItemAnimator(Lbsd;)V
+    invoke-virtual {v1, v3}, Landroidx/recyclerview/widget/RecyclerView;->setItemAnimator(Lxxd;)V
 
-    iget-object p3, p0, Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;->d:Ljava/lang/Object;
+    iget-object v2, p0, Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;->d:Ljava/lang/Object;
 
-    invoke-interface {p3}, Lo58;->getValue()Ljava/lang/Object;
+    invoke-interface {v2}, Lj88;->getValue()Ljava/lang/Object;
 
-    move-result-object p3
+    move-result-object v2
 
-    check-cast p3, Ldke;
+    check-cast v2, Lfre;
 
-    invoke-virtual {v1, p3}, Landroidx/recyclerview/widget/RecyclerView;->j(Lcsd;)V
+    invoke-virtual {v1, v2, p3}, Landroidx/recyclerview/widget/RecyclerView;->j(Lyxd;I)V
 
-    iget-object p3, p0, Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;->o:Ljava/lang/Object;
+    iget-object v2, p0, Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;->o:Ljava/lang/Object;
 
-    invoke-interface {p3}, Lo58;->getValue()Ljava/lang/Object;
+    invoke-interface {v2}, Lj88;->getValue()Ljava/lang/Object;
 
-    move-result-object p3
+    move-result-object v2
 
-    check-cast p3, Lz71;
+    check-cast v2, Lm81;
 
-    invoke-virtual {v1, p3}, Landroidx/recyclerview/widget/RecyclerView;->j(Lcsd;)V
+    invoke-virtual {v1, v2, p3}, Landroidx/recyclerview/widget/RecyclerView;->j(Lyxd;I)V
 
     invoke-virtual {v0, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    invoke-virtual {p2, v0}, Lkme;->s(Landroid/view/View;)Lzbb;
+    invoke-virtual {p2, v0}, Ltea;->r(Landroid/view/View;)Loob;
 
     move-result-object p1
 
-    iget-object p1, p1, Lzbb;->c:Lzlb;
+    iget-object p1, p1, Loob;->b:Llob;
 
-    invoke-interface {p1}, Lzlb;->b()Lxf0;
+    invoke-interface {p1}, Llob;->b()Lqc5;
 
     move-result-object p1
 
-    iget p1, p1, Lxf0;->m:I
+    iget p1, p1, Lqc5;->c:I
 
     invoke-virtual {v0, p1}, Landroid/view/View;->setBackgroundColor(I)V
 
@@ -401,26 +399,26 @@
     move-object v0, p0
 
     :goto_0
-    invoke-virtual {v0}, La94;->getParentController()La94;
+    invoke-virtual {v0}, Lpa4;->getParentController()Lpa4;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v0}, La94;->getParentController()La94;
+    invoke-virtual {v0}, Lpa4;->getParentController()Lpa4;
 
     move-result-object v0
 
     goto :goto_0
 
     :cond_0
-    instance-of v1, v0, Lc5e;
+    instance-of v1, v0, Lpbe;
 
     const/4 v2, 0x0
 
     if-eqz v1, :cond_1
 
-    check-cast v0, Lc5e;
+    check-cast v0, Lpbe;
 
     goto :goto_1
 
@@ -432,7 +430,7 @@
 
     check-cast v0, Lone/me/android/root/RootController;
 
-    invoke-virtual {v0}, Lone/me/android/root/RootController;->F0()Lw4e;
+    invoke-virtual {v0}, Lone/me/android/root/RootController;->N0()Ljbe;
 
     move-result-object v0
 
@@ -446,34 +444,34 @@
 
     iget-object v1, p0, Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;->Y:Ljava/lang/Object;
 
-    invoke-interface {v1}, Lo58;->getValue()Ljava/lang/Object;
+    invoke-interface {v1}, Lj88;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, La81;
+    check-cast v1, Ln81;
 
-    invoke-virtual {v0, v1}, Lw4e;->L(Le94;)V
+    invoke-virtual {v0, v1}, Ljbe;->L(Lta4;)V
 
     :cond_3
-    sget-object v0, Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;->Z:[Lz28;
+    sget-object v0, Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;->Z:[Lv58;
 
     const/4 v1, 0x1
 
     aget-object v3, v0, v1
 
-    iget-object v4, p0, Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;->X:Ljld;
+    iget-object v4, p0, Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;->X:Lgrd;
 
-    invoke-interface {v4, p0, v3}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+    invoke-interface {v4, p0, v3}, Lgrd;->D(Ljava/lang/Object;Lv58;)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-virtual {v3, v2}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Lwrd;)V
+    invoke-virtual {v3, v2}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Lsxd;)V
 
     aget-object v2, v0, v1
 
-    invoke-interface {v4, p0, v2}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+    invoke-interface {v4, p0, v2}, Lgrd;->D(Ljava/lang/Object;Lv58;)Ljava/lang/Object;
 
     move-result-object v2
 
@@ -481,17 +479,17 @@
 
     iget-object v3, p0, Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;->o:Ljava/lang/Object;
 
-    invoke-interface {v3}, Lo58;->getValue()Ljava/lang/Object;
+    invoke-interface {v3}, Lj88;->getValue()Ljava/lang/Object;
 
     move-result-object v3
 
-    check-cast v3, Lz71;
+    check-cast v3, Lm81;
 
-    invoke-virtual {v2, v3}, Landroidx/recyclerview/widget/RecyclerView;->p0(Lcsd;)V
+    invoke-virtual {v2, v3}, Landroidx/recyclerview/widget/RecyclerView;->q0(Lyxd;)V
 
     aget-object v0, v0, v1
 
-    invoke-interface {v4, p0, v0}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+    invoke-interface {v4, p0, v0}, Lgrd;->D(Ljava/lang/Object;Lv58;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -499,15 +497,15 @@
 
     iget-object v1, p0, Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;->d:Ljava/lang/Object;
 
-    invoke-interface {v1}, Lo58;->getValue()Ljava/lang/Object;
+    invoke-interface {v1}, Lj88;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Ldke;
+    check-cast v1, Lfre;
 
-    invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->p0(Lcsd;)V
+    invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->q0(Lyxd;)V
 
-    invoke-super {p0, p1}, La94;->onDestroyView(Landroid/view/View;)V
+    invoke-super {p0, p1}, Lpa4;->onDestroyView(Landroid/view/View;)V
 
     return-void
 .end method
@@ -520,26 +518,26 @@
     move-object p1, p0
 
     :goto_0
-    invoke-virtual {p1}, La94;->getParentController()La94;
+    invoke-virtual {p1}, Lpa4;->getParentController()Lpa4;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p1}, La94;->getParentController()La94;
+    invoke-virtual {p1}, Lpa4;->getParentController()Lpa4;
 
     move-result-object p1
 
     goto :goto_0
 
     :cond_0
-    instance-of v0, p1, Lc5e;
+    instance-of v0, p1, Lpbe;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_1
 
-    check-cast p1, Lc5e;
+    check-cast p1, Lpbe;
 
     goto :goto_1
 
@@ -551,7 +549,7 @@
 
     check-cast p1, Lone/me/android/root/RootController;
 
-    invoke-virtual {p1}, Lone/me/android/root/RootController;->F0()Lw4e;
+    invoke-virtual {p1}, Lone/me/android/root/RootController;->N0()Ljbe;
 
     move-result-object v1
 
@@ -560,13 +558,13 @@
 
     iget-object p1, p0, Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;->Y:Ljava/lang/Object;
 
-    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
+    invoke-interface {p1}, Lj88;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, La81;
+    check-cast p1, Ln81;
 
-    invoke-virtual {v1, p1}, Lw4e;->a(Le94;)V
+    invoke-virtual {v1, p1}, Ljbe;->a(Lta4;)V
 
     :cond_3
     return-void

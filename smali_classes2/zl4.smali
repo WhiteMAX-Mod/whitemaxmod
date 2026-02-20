@@ -1,60 +1,49 @@
-.class public final synthetic Lzl4;
-.super Lqr6;
+.class public final Lzl4;
+.super Lda4;
 .source "SourceFile"
 
-# interfaces
-.implements Lnq6;
 
+# instance fields
+.field public final synthetic X:Lbm4;
 
-# static fields
-.field public static final a:Lzl4;
+.field public Y:I
+
+.field public d:Lyl4;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(Lbm4;Lda4;)V
+    .locals 0
 
-    new-instance v0, Lzl4;
+    iput-object p1, p0, Lzl4;->X:Lbm4;
 
-    const-string v4, "isNotEmpty(Ljava/lang/CharSequence;)Z"
-
-    const/4 v5, 0x1
-
-    const/4 v1, 0x1
-
-    const-class v2, Lrzf;
-
-    const-string v3, "isNotEmpty"
-
-    invoke-direct/range {v0 .. v5}, Lqr6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    sput-object v0, Lzl4;->a:Lzl4;
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    check-cast p1, Ljava/lang/String;
+    iput-object p1, p0, Lzl4;->o:Ljava/lang/Object;
 
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
+    iget p1, p0, Lzl4;->Y:I
 
-    move-result p1
+    const/high16 v0, -0x80000000
 
-    if-lez p1, :cond_0
+    or-int/2addr p1, v0
 
-    const/4 p1, 0x1
+    iput p1, p0, Lzl4;->Y:I
 
-    goto :goto_0
+    iget-object p1, p0, Lzl4;->X:Lbm4;
 
-    :cond_0
-    const/4 p1, 0x0
+    const/4 v0, 0x0
 
-    :goto_0
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {p1, v0, p0}, Lbm4;->a(Lbm4;Lyl4;Lda4;)Ljava/lang/Object;
 
     move-result-object p1
 

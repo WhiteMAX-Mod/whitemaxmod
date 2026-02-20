@@ -1,27 +1,73 @@
 .class public final Lnpi;
-.super Ljava/lang/Object;
+.super Lopi;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lhqi;
-
-.field public final b:I
-
-.field public final c:Lb07;
+.field public final e:Landroid/view/WindowInsetsAnimation;
 
 
 # direct methods
-.method public constructor <init>(Lhqi;ILb07;)V
-    .locals 0
+.method public constructor <init>(Landroid/view/WindowInsetsAnimation;)V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
 
-    iput-object p1, p0, Lnpi;->a:Lhqi;
+    const-wide/16 v1, 0x0
 
-    iput p2, p0, Lnpi;->b:I
+    const/4 v3, 0x0
 
-    iput-object p3, p0, Lnpi;->c:Lb07;
+    invoke-direct {p0, v3, v0, v1, v2}, Lopi;-><init>(ILandroid/view/animation/Interpolator;J)V
+
+    iput-object p1, p0, Lnpi;->e:Landroid/view/WindowInsetsAnimation;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()J
+    .locals 2
+
+    iget-object v0, p0, Lnpi;->e:Landroid/view/WindowInsetsAnimation;
+
+    invoke-static {v0}, Lyub;->d(Landroid/view/WindowInsetsAnimation;)J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public final b()F
+    .locals 1
+
+    iget-object v0, p0, Lnpi;->e:Landroid/view/WindowInsetsAnimation;
+
+    invoke-static {v0}, Lyub;->a(Landroid/view/WindowInsetsAnimation;)F
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final c()I
+    .locals 1
+
+    iget-object v0, p0, Lnpi;->e:Landroid/view/WindowInsetsAnimation;
+
+    invoke-static {v0}, Lyub;->c(Landroid/view/WindowInsetsAnimation;)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final d(F)V
+    .locals 1
+
+    iget-object v0, p0, Lnpi;->e:Landroid/view/WindowInsetsAnimation;
+
+    invoke-static {v0, p1}, Lyub;->w(Landroid/view/WindowInsetsAnimation;F)V
 
     return-void
 .end method

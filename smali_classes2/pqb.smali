@@ -1,913 +1,109 @@
-.class public abstract synthetic Lpqb;
-.super Ljava/lang/Object;
+.class public final enum Lpqb;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
+# static fields
+.field public static final synthetic X:[Lpqb;
+
+.field public static final enum a:Lpqb;
+
+.field public static final enum b:Lpqb;
+
+.field public static final enum c:Lpqb;
+
+.field public static final enum d:Lpqb;
+
+.field public static final enum o:Lpqb;
+
+
 # direct methods
-.method public static final a(I)Z
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 7
 
-    const/4 v0, 0x4
+    new-instance v0, Lpqb;
 
-    if-eq p0, v0, :cond_1
+    const-string v1, "SOURCE"
 
-    const/4 v0, 0x5
+    const/4 v2, 0x0
 
-    if-eq p0, v0, :cond_1
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    const/4 v0, 0x6
+    sput-object v0, Lpqb;->a:Lpqb;
 
-    if-eq p0, v0, :cond_1
+    new-instance v1, Lpqb;
 
-    const/4 v0, 0x7
+    const-string v2, "RENDERER"
 
-    if-eq p0, v0, :cond_1
+    const/4 v3, 0x1
 
-    const/16 v0, 0x8
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    if-ne p0, v0, :cond_0
+    sput-object v1, Lpqb;->b:Lpqb;
 
-    goto :goto_0
+    new-instance v2, Lpqb;
 
-    :cond_0
-    const/4 p0, 0x0
+    const-string v3, "UNEXPECTED"
 
-    return p0
+    const/4 v4, 0x2
 
-    :cond_1
-    :goto_0
-    const/4 p0, 0x1
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    return p0
-.end method
+    sput-object v2, Lpqb;->c:Lpqb;
 
-.method public static b(I)I
-    .locals 3
+    new-instance v3, Lpqb;
 
-    const/4 v0, 0x1
+    const-string v4, "REMOTE"
 
-    if-eqz p0, :cond_2
+    const/4 v5, 0x3
 
-    const/4 v1, 0x2
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    if-eq p0, v0, :cond_1
+    sput-object v3, Lpqb;->d:Lpqb;
 
-    if-ne p0, v1, :cond_0
+    new-instance v4, Lpqb;
 
-    const/4 p0, 0x3
+    const-string v5, "UNRESOLVED"
 
-    return p0
+    const/4 v6, 0x4
 
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    const-string v1, "unknown value "
+    sput-object v4, Lpqb;->o:Lpqb;
 
-    const-string v2, " for PhoneType"
+    filled-new-array {v0, v1, v2, v3, v4}, [Lpqb;
 
-    invoke-static {p0, v1, v2}, Lkz1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    move-result-object v0
 
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_1
-    return v1
-
-    :cond_2
-    return v0
-.end method
-
-.method public static synthetic c(I)Ljava/lang/String;
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-eq p0, v0, :cond_2
-
-    const/4 v0, 0x2
-
-    if-eq p0, v0, :cond_1
-
-    const/4 v0, 0x3
-
-    if-ne p0, v0, :cond_0
-
-    const-string p0, "incoming_call_processing_init"
-
-    return-object p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    throw p0
-
-    :cond_1
-    const-string p0, "open_call_screen_to_render"
-
-    return-object p0
-
-    :cond_2
-    const-string p0, "call_init"
-
-    return-object p0
-.end method
-
-.method public static synthetic d(I)Ljava/lang/String;
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-eq p0, v0, :cond_2
-
-    const/4 v0, 0x2
-
-    if-eq p0, v0, :cond_1
-
-    const/4 v0, 0x3
-
-    if-ne p0, v0, :cond_0
-
-    const-string p0, "RUSTORE"
-
-    return-object p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    throw p0
-
-    :cond_1
-    const-string p0, "GCM"
-
-    return-object p0
-
-    :cond_2
-    const-string p0, "HUAWEI"
-
-    return-object p0
-.end method
-
-.method public static synthetic e(I)Ljava/lang/String;
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-eq p0, v0, :cond_1
-
-    const/4 v0, 0x2
-
-    if-ne p0, v0, :cond_0
-
-    const-string p0, "reactions_bubble"
-
-    return-object p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    throw p0
-
-    :cond_1
-    const-string p0, "context_menu"
-
-    return-object p0
-.end method
-
-.method public static synthetic f(I)I
-    .locals 0
-
-    packed-switch p0, :pswitch_data_0
-
-    const/4 p0, 0x0
-
-    throw p0
-
-    :pswitch_0
-    const/16 p0, 0x11
-
-    return p0
-
-    :pswitch_1
-    const/16 p0, 0x100
-
-    return p0
-
-    :pswitch_2
-    const/16 p0, 0x10
-
-    return p0
-
-    :pswitch_3
-    const/16 p0, 0xf
-
-    return p0
-
-    :pswitch_4
-    const/16 p0, 0xe
-
-    return p0
-
-    :pswitch_5
-    const/16 p0, 0xd
-
-    return p0
-
-    :pswitch_6
-    const/16 p0, 0xc
-
-    return p0
-
-    :pswitch_7
-    const/16 p0, 0xb
-
-    return p0
-
-    :pswitch_8
-    const/16 p0, 0xa
-
-    return p0
-
-    :pswitch_9
-    const/16 p0, 0x9
-
-    return p0
-
-    :pswitch_a
-    const/16 p0, 0x8
-
-    return p0
-
-    :pswitch_b
-    const/4 p0, 0x7
-
-    return p0
-
-    :pswitch_c
-    const/4 p0, 0x6
-
-    return p0
-
-    :pswitch_d
-    const/4 p0, 0x5
-
-    return p0
-
-    :pswitch_e
-    const/4 p0, 0x4
-
-    return p0
-
-    :pswitch_f
-    const/4 p0, 0x3
-
-    return p0
-
-    :pswitch_10
-    const/4 p0, 0x2
-
-    return p0
-
-    :pswitch_11
-    const/4 p0, 0x1
-
-    return p0
-
-    :pswitch_12
-    const/4 p0, 0x0
-
-    return p0
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_12
-        :pswitch_11
-        :pswitch_10
-        :pswitch_f
-        :pswitch_e
-        :pswitch_d
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public static g(FFFF)F
-    .locals 0
-
-    sub-float/2addr p0, p1
-
-    mul-float/2addr p0, p2
-
-    add-float/2addr p0, p3
-
-    return p0
-.end method
-
-.method public static h(FFII)I
-    .locals 0
-
-    mul-float/2addr p0, p1
-
-    invoke-static {p0}, Lq7j;->c(F)I
-
-    move-result p0
-
-    add-int/2addr p0, p2
-
-    add-int/2addr p0, p3
-
-    return p0
-.end method
-
-.method public static i(III)I
-    .locals 0
-
-    invoke-static {p0}, Lt02;->t(I)I
-
-    move-result p0
-
-    add-int/2addr p0, p1
-
-    mul-int/2addr p0, p2
-
-    return p0
-.end method
-
-.method public static j(JLjava/lang/String;)Ljava/lang/String;
-    .locals 1
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0, p2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p0, p1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static k(Ljava/lang/StringBuilder;JC)Ljava/lang/String;
-    .locals 0
-
-    invoke-virtual {p0, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0, p3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-    .locals 0
-
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static m(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-    .locals 1
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0, p1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    return-object v0
-.end method
-
-.method public static n(Ljava/lang/StringBuilder;JLjava/lang/String;I)V
-    .locals 0
-
-    invoke-virtual {p0, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0, p4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    sput-object v0, Lpqb;->X:[Lpqb;
 
     return-void
 .end method
 
-.method public static synthetic o(I)Ljava/lang/String;
+.method public static valueOf(Ljava/lang/String;)Lpqb;
     .locals 1
 
-    const/4 v0, 0x1
+    const-class v0, Lpqb;
 
-    if-eq p0, v0, :cond_3
-
-    const/4 v0, 0x2
-
-    if-eq p0, v0, :cond_2
-
-    const/4 v0, 0x3
-
-    if-eq p0, v0, :cond_1
-
-    const/4 v0, 0x4
-
-    if-eq p0, v0, :cond_0
-
-    const-string p0, "null"
-
-    return-object p0
-
-    :cond_0
-    const-string p0, "REVERSED_PORTRAIT"
-
-    return-object p0
-
-    :cond_1
-    const-string p0, "PORTRAIT"
-
-    return-object p0
-
-    :cond_2
-    const-string p0, "LANDSCAPE"
-
-    return-object p0
-
-    :cond_3
-    const-string p0, "REVERSED_LANDSCAPE"
-
-    return-object p0
-.end method
-
-.method public static synthetic p(I)Ljava/lang/String;
-    .locals 0
-
-    packed-switch p0, :pswitch_data_0
-
-    const-string p0, "null"
-
-    return-object p0
-
-    :pswitch_0
-    const-string p0, "VERSION_NEGOTIATION_ERROR"
-
-    return-object p0
-
-    :pswitch_1
-    const-string p0, "CRYPTO_ERROR"
-
-    return-object p0
-
-    :pswitch_2
-    const-string p0, "NO_VIABLE_PATH"
-
-    return-object p0
-
-    :pswitch_3
-    const-string p0, "AEAD_LIMIT_REACHED"
-
-    return-object p0
-
-    :pswitch_4
-    const-string p0, "KEY_UPDATE_ERROR"
-
-    return-object p0
-
-    :pswitch_5
-    const-string p0, "CRYPTO_BUFFER_EXCEEDED"
-
-    return-object p0
-
-    :pswitch_6
-    const-string p0, "APPLICATION_ERROR"
-
-    return-object p0
-
-    :pswitch_7
-    const-string p0, "INVALID_TOKEN"
-
-    return-object p0
-
-    :pswitch_8
-    const-string p0, "PROTOCOL_VIOLATION"
-
-    return-object p0
-
-    :pswitch_9
-    const-string p0, "CONNECTION_ID_LIMIT_ERROR"
-
-    return-object p0
-
-    :pswitch_a
-    const-string p0, "TRANSPORT_PARAMETER_ERROR"
-
-    return-object p0
-
-    :pswitch_b
-    const-string p0, "FRAME_ENCODING_ERROR"
-
-    return-object p0
-
-    :pswitch_c
-    const-string p0, "FINAL_SIZE_ERROR"
-
-    return-object p0
-
-    :pswitch_d
-    const-string p0, "STREAM_STATE_ERROR"
-
-    return-object p0
-
-    :pswitch_e
-    const-string p0, "STREAM_LIMIT_ERROR"
-
-    return-object p0
-
-    :pswitch_f
-    const-string p0, "FLOW_CONTROL_ERROR"
-
-    return-object p0
-
-    :pswitch_10
-    const-string p0, "CONNECTION_REFUSED"
-
-    return-object p0
-
-    :pswitch_11
-    const-string p0, "INTERNAL_ERROR"
-
-    return-object p0
-
-    :pswitch_12
-    const-string p0, "NO_ERROR"
-
-    return-object p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_12
-        :pswitch_11
-        :pswitch_10
-        :pswitch_f
-        :pswitch_e
-        :pswitch_d
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public static synthetic q(I)Ljava/lang/String;
-    .locals 0
-
-    packed-switch p0, :pswitch_data_0
-
-    const-string p0, "null"
-
-    return-object p0
-
-    :pswitch_0
-    const-string p0, "ERROR_SOURCE"
-
-    return-object p0
-
-    :pswitch_1
-    const-string p0, "ERROR_ENCODER"
-
-    return-object p0
-
-    :pswitch_2
-    const-string p0, "ENABLED"
-
-    return-object p0
-
-    :pswitch_3
-    const-string p0, "DISABLED"
-
-    return-object p0
-
-    :pswitch_4
-    const-string p0, "IDLING"
-
-    return-object p0
-
-    :pswitch_5
-    const-string p0, "INITIALIZING"
-
-    return-object p0
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public static synthetic r(I)Ljava/lang/String;
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-eq p0, v0, :cond_4
-
-    const/4 v0, 0x2
-
-    if-eq p0, v0, :cond_3
-
-    const/4 v0, 0x3
-
-    if-eq p0, v0, :cond_2
-
-    const/4 v0, 0x4
-
-    if-eq p0, v0, :cond_1
-
-    const/4 v0, 0x5
-
-    if-eq p0, v0, :cond_0
-
-    const-string p0, "null"
-
-    return-object p0
-
-    :cond_0
-    const-string p0, "Margin"
-
-    return-object p0
-
-    :cond_1
-    const-string p0, "ReplaceablePadding"
-
-    return-object p0
-
-    :cond_2
-    const-string p0, "Padding"
-
-    return-object p0
-
-    :cond_3
-    const-string p0, "Translate"
-
-    return-object p0
-
-    :cond_4
-    const-string p0, "None"
-
-    return-object p0
-.end method
-
-.method public static synthetic s(I)Ljava/lang/String;
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-eq p0, v0, :cond_3
-
-    const/4 v0, 0x2
-
-    if-eq p0, v0, :cond_2
-
-    const/4 v0, 0x3
-
-    if-eq p0, v0, :cond_1
-
-    const/4 v0, 0x4
-
-    if-eq p0, v0, :cond_0
-
-    const-string p0, "null"
-
-    return-object p0
-
-    :cond_0
-    const-string p0, "PHONE_CONFIRM"
-
-    return-object p0
-
-    :cond_1
-    const-string p0, "PHONE_REBINDING"
-
-    return-object p0
-
-    :cond_2
-    const-string p0, "PHONE_BINDING"
-
-    return-object p0
-
-    :cond_3
-    const-string p0, "UNKNOWN"
-
-    return-object p0
-.end method
-
-.method public static synthetic t(I)Ljava/lang/String;
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-eq p0, v0, :cond_2
-
-    const/4 v0, 0x2
-
-    if-eq p0, v0, :cond_1
-
-    const/4 v0, 0x3
-
-    if-eq p0, v0, :cond_0
-
-    const-string p0, "null"
-
-    return-object p0
-
-    :cond_0
-    const-string p0, "INVALID"
-
-    return-object p0
-
-    :cond_1
-    const-string p0, "VALID"
-
-    return-object p0
-
-    :cond_2
-    const-string p0, "UNKNOWN"
-
-    return-object p0
-.end method
-
-.method public static synthetic u(I)Ljava/lang/String;
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-eq p0, v0, :cond_4
-
-    const/4 v0, 0x2
-
-    if-eq p0, v0, :cond_3
-
-    const/4 v0, 0x3
-
-    if-eq p0, v0, :cond_2
-
-    const/4 v0, 0x4
-
-    if-eq p0, v0, :cond_1
-
-    const/4 v0, 0x5
-
-    if-eq p0, v0, :cond_0
-
-    const-string p0, "null"
-
-    return-object p0
-
-    :cond_0
-    const-string p0, "UNSPECIFIED"
-
-    return-object p0
-
-    :cond_1
-    const-string p0, "FROM_DEFAULT_COUNTRY"
-
-    return-object p0
-
-    :cond_2
-    const-string p0, "FROM_NUMBER_WITHOUT_PLUS_SIGN"
-
-    return-object p0
-
-    :cond_3
-    const-string p0, "FROM_NUMBER_WITH_IDD"
-
-    return-object p0
-
-    :cond_4
-    const-string p0, "FROM_NUMBER_WITH_PLUS_SIGN"
-
-    return-object p0
-.end method
-
-.method public static synthetic v(Ljava/lang/String;)I
-    .locals 2
-
-    if-eqz p0, :cond_4
-
-    const-string v0, "UNKNOWN"
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const-string v0, "PHONE_BINDING"
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    const/4 p0, 0x2
-
-    return p0
-
-    :cond_1
-    const-string v0, "PHONE_REBINDING"
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    const/4 p0, 0x3
-
-    return p0
-
-    :cond_2
-    const-string v0, "PHONE_CONFIRM"
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    const/4 p0, 0x4
-
-    return p0
-
-    :cond_3
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "No enum constant ru.ok.tamtam.api.commands.base.PhoneBindTokenType."
-
-    invoke-virtual {v1, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object p0
 
-    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    check-cast p0, Lpqb;
 
-    throw v0
+    return-object p0
+.end method
 
-    :cond_4
-    new-instance p0, Ljava/lang/NullPointerException;
+.method public static values()[Lpqb;
+    .locals 1
 
-    const-string v0, "Name is null"
+    sget-object v0, Lpqb;->X:[Lpqb;
 
-    invoke-direct {p0, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    throw p0
+    move-result-object v0
+
+    check-cast v0, [Lpqb;
+
+    return-object v0
 .end method

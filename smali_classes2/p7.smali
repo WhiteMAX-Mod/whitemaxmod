@@ -3,179 +3,186 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/app/Application$ActivityLifecycleCallbacks;
+.implements Landroid/transition/Transition$TransitionListener;
 
 
 # instance fields
-.field public final a:Ljava/util/ArrayList;
+.field public final synthetic a:I
 
-.field public final b:Le0d;
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
+    .locals 0
+
+    iput p1, p0, Lp7;->a:I
+
+    iput-object p2, p0, Lp7;->b:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/ArrayList;
+    return-void
+.end method
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+.method private final a(Landroid/transition/Transition;)V
+    .locals 0
 
-    iput-object v0, p0, Lp7;->a:Ljava/util/ArrayList;
+    return-void
+.end method
 
-    new-instance v0, Le0d;
+.method private final b(Landroid/transition/Transition;)V
+    .locals 0
 
-    invoke-direct {v0}, Le0d;-><init>()V
+    return-void
+.end method
 
-    iput-object v0, p0, Lp7;->b:Le0d;
+.method private final c(Landroid/transition/Transition;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final d(Landroid/transition/Transition;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final e(Landroid/transition/Transition;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final f(Landroid/transition/Transition;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final g(Landroid/transition/Transition;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final h(Landroid/transition/Transition;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final i(Landroid/transition/Transition;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final j(Landroid/transition/Transition;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final k(Landroid/transition/Transition;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final l(Landroid/transition/Transition;)V
+    .locals 0
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onActivityCreated(Landroid/app/Activity;Landroid/os/Bundle;)V
+.method public final onTransitionCancel(Landroid/transition/Transition;)V
     .locals 0
 
-    new-instance p2, Ljava/lang/ref/WeakReference;
-
-    invoke-direct {p2, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lp7;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {p1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    iget p1, p0, Lp7;->a:I
 
     return-void
 .end method
 
-.method public final onActivityDestroyed(Landroid/app/Activity;)V
-    .locals 4
+.method public final onTransitionEnd(Landroid/transition/Transition;)V
+    .locals 3
 
-    iget-object v0, p0, Lp7;->a:Ljava/util/ArrayList;
+    iget v0, p0, Lp7;->a:I
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object v1
+    iget-object p1, p0, Lp7;->b:Ljava/lang/Object;
 
-    :cond_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    check-cast p1, Lapd;
 
-    move-result v2
+    iget-object p1, p1, Lapd;->s0:Lis6;
 
-    if-eqz v2, :cond_1
+    invoke-interface {p1}, Lis6;->invoke()Ljava/lang/Object;
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v2}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v3
-
-    if-ne v3, p1, :cond_0
-
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
-
-    :cond_1
     return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lp7;->b:Ljava/lang/Object;
+
+    check-cast p1, Lone/me/chats/forward/ForwardPickerScreen;
+
+    iget-object p1, p1, Lone/me/chats/forward/ForwardPickerScreen;->z0:Lis6;
+
+    invoke-interface {p1}, Lis6;->invoke()Ljava/lang/Object;
+
+    return-void
+
+    :pswitch_1
+    invoke-virtual {p1, p0}, Landroid/transition/Transition;->removeListener(Landroid/transition/Transition$TransitionListener;)Landroid/transition/Transition;
+
+    iget-object p1, p0, Lp7;->b:Ljava/lang/Object;
+
+    check-cast p1, Lru/ok/messages/media/mediabar/ActLocalMedias;
+
+    iget-object p1, p1, Lru/ok/messages/media/mediabar/ActLocalMedias;->Y0:Landroidx/viewpager2/widget/ViewPager2;
+
+    new-instance v0, Lj3;
+
+    const/4 v1, 0x4
+
+    invoke-direct {v0, v1, p0}, Lj3;-><init>(ILjava/lang/Object;)V
+
+    const-wide/16 v1, 0x64
+
+    invoke-virtual {p1, v0, v1, v2}, Landroid/view/View;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final onActivityPaused(Landroid/app/Activity;)V
+.method public final onTransitionPause(Landroid/transition/Transition;)V
     .locals 0
 
-    return-void
-.end method
-
-.method public final onActivityPostResumed(Landroid/app/Activity;)V
-    .locals 1
-
-    iget-object v0, p0, Lp7;->b:Le0d;
-
-    invoke-virtual {v0, p1}, Le0d;->r(Ljava/lang/Object;)V
+    iget p1, p0, Lp7;->a:I
 
     return-void
 .end method
 
-.method public final onActivityResumed(Landroid/app/Activity;)V
-    .locals 4
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "CSPDialogActivity"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p1}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/view/ViewGroup;
-
-    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    const-string v2, "id"
-
-    invoke-virtual {p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v3, "tvTitle"
-
-    invoke-virtual {v1, v3, v2, p1}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/widget/TextView;
-
-    if-eqz p1, :cond_0
-
-    sget v0, Lj6e;->n2:I
-
-    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(I)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final onActivitySaveInstanceState(Landroid/app/Activity;Landroid/os/Bundle;)V
+.method public final onTransitionResume(Landroid/transition/Transition;)V
     .locals 0
 
-    return-void
-.end method
-
-.method public final onActivityStarted(Landroid/app/Activity;)V
-    .locals 0
+    iget p1, p0, Lp7;->a:I
 
     return-void
 .end method
 
-.method public final onActivityStopped(Landroid/app/Activity;)V
+.method public final onTransitionStart(Landroid/transition/Transition;)V
     .locals 0
+
+    iget p1, p0, Lp7;->a:I
 
     return-void
 .end method

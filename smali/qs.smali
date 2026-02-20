@@ -1,13 +1,61 @@
-.class public final Lqs;
-.super Lvd8;
+.class public final synthetic Lqs;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ltv8;
+
+
+# instance fields
+.field public final synthetic a:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lqs;->a:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/String;
-    .locals 1
+.method public final a(IZ)V
+    .locals 3
 
-    const-string v0, "kotlin.collections.ArrayList"
+    sget-object v0, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->s0:[Lv58;
 
-    return-object v0
+    if-eqz p2, :cond_0
+
+    iget-object p2, p0, Lqs;->a:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
+
+    invoke-virtual {p2}, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->H0()Llt;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Llt;->w()Lbjg;
+
+    move-result-object v0
+
+    check-cast v0, Lcbb;
+
+    invoke-virtual {v0}, Lcbb;->a()Lgd4;
+
+    move-result-object v0
+
+    new-instance v1, Lht;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, p2, p1, v2}, Lht;-><init>(Llt;ILkotlin/coroutines/Continuation;)V
+
+    const/4 p1, 0x2
+
+    invoke-static {p2, v0, v1, p1}, Lx0i;->l(Lx0i;Led4;Lys6;I)Lcuf;
+
+    :cond_0
+    return-void
 .end method

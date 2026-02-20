@@ -1,15 +1,19 @@
-.class public abstract Lwhg;
+.class public final Lwhg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final synthetic a:Lcom/google/android/material/tabs/TabLayout;
+
+
 # direct methods
-.method public static a(Ljava/util/Locale;)Landroid/icu/text/DecimalFormatSymbols;
+.method public constructor <init>(Lcom/google/android/material/tabs/TabLayout;)V
     .locals 0
 
-    invoke-static {p0}, Landroid/icu/text/DecimalFormatSymbols;->getInstance(Ljava/util/Locale;)Landroid/icu/text/DecimalFormatSymbols;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p0
+    iput-object p1, p0, Lwhg;->a:Lcom/google/android/material/tabs/TabLayout;
 
-    return-object p0
+    return-void
 .end method

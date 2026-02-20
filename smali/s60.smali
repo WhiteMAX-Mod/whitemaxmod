@@ -1,65 +1,120 @@
 .class public final Ls60;
-.super Landroid/media/AudioManager$AudioRecordingCallback;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:Lt60;
+.field public final a:Lbjg;
+
+.field public final b:Lfae;
+
+.field public final c:Lj88;
+
+.field public final d:Lj88;
+
+.field public final e:Ljava/lang/String;
+
+.field public f:Ly59;
+
+.field public final g:Ljava/util/LinkedHashMap;
+
+.field public h:Z
+
+.field public i:J
+
+.field public final j:Ljava/util/EnumSet;
 
 
 # direct methods
-.method public constructor <init>(Lt60;)V
+.method public constructor <init>(Lj88;Lj88;Lbjg;Lfae;)V
     .locals 0
 
-    iput-object p1, p0, Ls60;->a:Lt60;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Landroid/media/AudioManager$AudioRecordingCallback;-><init>()V
+    iput-object p3, p0, Ls60;->a:Lbjg;
+
+    iput-object p4, p0, Ls60;->b:Lfae;
+
+    iput-object p1, p0, Ls60;->c:Lj88;
+
+    iput-object p2, p0, Ls60;->d:Lj88;
+
+    const-class p1, Ls60;
+
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    iput-object p1, p0, Ls60;->e:Ljava/lang/String;
+
+    new-instance p1, Ljava/util/LinkedHashMap;
+
+    invoke-direct {p1}, Ljava/util/LinkedHashMap;-><init>()V
+
+    iput-object p1, p0, Ls60;->g:Ljava/util/LinkedHashMap;
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Ls60;->h:Z
+
+    const-wide/16 p1, -0x1
+
+    iput-wide p1, p0, Ls60;->i:J
+
+    const-class p1, Lq60;
+
+    invoke-static {p1}, Ljava/util/EnumSet;->noneOf(Ljava/lang/Class;)Ljava/util/EnumSet;
+
+    move-result-object p1
+
+    iput-object p1, p0, Ls60;->j:Ljava/util/EnumSet;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onRecordingConfigChanged(Ljava/util/List;)V
-    .locals 4
+.method public final a(Ljava/lang/String;Lpt8;)V
+    .locals 3
 
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    iget-object v0, p0, Ls60;->c:Lj88;
 
-    move-result-object p1
-
-    :cond_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Landroid/media/AudioRecordingConfiguration;
+    check-cast v0, Lte;
 
-    invoke-virtual {v0}, Landroid/media/AudioRecordingConfiguration;->getClientAudioSessionId()I
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result v1
+    const-string v1, "AUDIO_STATS"
 
-    iget-object v2, p0, Ls60;->a:Lt60;
+    invoke-static {v1}, Ld7g;->G(Ljava/lang/CharSequence;)Z
 
-    iget-object v3, v2, Lt60;->a:Landroid/media/AudioRecord;
+    move-result v2
 
-    invoke-virtual {v3}, Landroid/media/AudioRecord;->getAudioSessionId()I
+    if-nez v2, :cond_0
 
-    move-result v3
+    invoke-static {p1}, Ld7g;->G(Ljava/lang/CharSequence;)Z
 
-    if-ne v1, v3, :cond_0
+    move-result v2
 
-    invoke-static {v0}, Lkl;->c(Landroid/media/AudioRecordingConfiguration;)Z
+    if-nez v2, :cond_0
 
-    move-result p1
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {v2, p1}, Lt60;->c(Z)V
+    const/16 v2, 0x8
 
-    :cond_1
+    invoke-static {v0, v1, p1, p2, v2}, Lte;->d(Lte;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;I)V
+
     return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "type or event can\'t be empty"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

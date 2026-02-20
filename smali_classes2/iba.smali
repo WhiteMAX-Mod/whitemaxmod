@@ -1,8 +1,17 @@
-.class public interface abstract Liba;
-.super Ljava/lang/Object;
+.class public final Liba;
+.super Ldg0;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract m(Lpq9;)Ljava/lang/Object;
+# direct methods
+.method public constructor <init>(J)V
+    .locals 0
+
+    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Lsla;-><init>(Ljava/lang/Object;)V
+
+    return-void
 .end method

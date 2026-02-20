@@ -1,91 +1,87 @@
-.class public final synthetic Lgc8;
+.class public final Lgc8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lnr6;
-
 
 # instance fields
-.field public final synthetic a:Lic8;
+.field public final a:Lzef;
+
+.field public final b:Lkotlinx/coroutines/internal/ContextScope;
 
 
 # direct methods
-.method public constructor <init>(Lic8;)V
-    .locals 0
+.method public constructor <init>(Lqy0;Lbjg;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lgc8;->a:Lic8;
+    const/4 v0, 0x0
+
+    const/4 v1, 0x7
+
+    invoke-static {v0, v0, v1}, Laff;->b(III)Lzef;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lgc8;->a:Lzef;
+
+    check-cast p2, Lcbb;
+
+    invoke-virtual {p2}, Lcbb;->c()Los8;
+
+    move-result-object p2
+
+    invoke-static {p2}, Lztj;->a(Led4;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object p2
+
+    iput-object p2, p0, Lgc8;->b:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-virtual {p1, p0}, Lqy0;->d(Ljava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final onEvent(Ldc8;)V
+    .locals 3
+    .annotation runtime Lx7g;
+    .end annotation
 
-    instance-of v0, p1, Lgc8;
+    .line 1
+    new-instance v0, Lec8;
 
-    if-eqz v0, :cond_0
+    const/4 v1, 0x0
 
-    if-eqz p1, :cond_0
+    invoke-direct {v0, p0, p1, v1}, Lec8;-><init>(Lgc8;Ldc8;Lkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {p0}, Lgc8;->getFunctionDelegate()Lgr6;
+    const/4 p1, 0x3
 
-    move-result-object v0
+    iget-object v2, p0, Lgc8;->b:Lkotlinx/coroutines/internal/ContextScope;
 
-    check-cast p1, Lnr6;
+    invoke-static {v2, v1, v1, v0, p1}, Lea9;->d(Lnd4;Led4;Lqd4;Lys6;I)Lcuf;
 
-    invoke-interface {p1}, Lnr6;->getFunctionDelegate()Lgr6;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
+    return-void
 .end method
 
-.method public final getFunctionDelegate()Lgr6;
-    .locals 7
+.method public final onEvent(Lul0;)V
+    .locals 3
+    .annotation runtime Lx7g;
+    .end annotation
 
-    new-instance v0, Lqr6;
+    .line 2
+    new-instance v0, Lfc8;
 
-    const-string v6, "onProfileTagClicked(Landroid/view/View;Ljava/lang/String;)V"
+    const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    invoke-direct {v0, p0, p1, v1}, Lfc8;-><init>(Lgc8;Lul0;Lkotlin/coroutines/Continuation;)V
 
-    const/4 v1, 0x2
+    const/4 p1, 0x3
 
-    const-class v3, Lic8;
+    iget-object v2, p0, Lgc8;->b:Lkotlinx/coroutines/internal/ContextScope;
 
-    iget-object v4, p0, Lgc8;->a:Lic8;
+    invoke-static {v2, v1, v1, v0, p1}, Lea9;->d(Lnd4;Led4;Lqd4;Lys6;I)Lcuf;
 
-    const-string v5, "onProfileTagClicked"
-
-    invoke-direct/range {v0 .. v6}, Lpr6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
-
-    return-object v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    invoke-virtual {p0}, Lgc8;->getFunctionDelegate()Lgr6;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
+    return-void
 .end method

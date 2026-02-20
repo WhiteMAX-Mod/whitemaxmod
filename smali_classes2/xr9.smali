@@ -1,87 +1,91 @@
-.class public final Lxr9;
-.super Ljava/lang/Object;
+.class public final enum Lxr9;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Lzr9;
+
+# static fields
+.field public static final enum b:Lxr9;
+
+.field public static final synthetic c:[Lxr9;
+
+.field public static final synthetic d:Lpm5;
 
 
 # instance fields
-.field public final a:J
+.field public final a:I
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lxr9;
 
-    iput-wide p1, p0, Lxr9;->a:J
+    const-string v1, "EMOJI"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2, v2}, Lxr9;-><init>(Ljava/lang/String;II)V
+
+    sput-object v0, Lxr9;->b:Lxr9;
+
+    new-instance v1, Lxr9;
+
+    const-string v2, "STICKER"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3, v3}, Lxr9;-><init>(Ljava/lang/String;II)V
+
+    filled-new-array {v0, v1}, [Lxr9;
+
+    move-result-object v0
+
+    sput-object v0, Lxr9;->c:[Lxr9;
+
+    new-instance v1, Lpm5;
+
+    invoke-direct {v1, v0}, Lpm5;-><init>([Ljava/lang/Enum;)V
+
+    sput-object v1, Lxr9;->d:Lpm5;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;II)V
+    .locals 0
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    const/4 v0, 0x1
+    iput p3, p0, Lxr9;->a:I
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lxr9;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lxr9;
-
-    iget-wide v3, p0, Lxr9;->a:J
-
-    iget-wide v5, p1, Lxr9;->a:J
-
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 2
+.method public static valueOf(Ljava/lang/String;)Lxr9;
+    .locals 1
 
-    iget-wide v0, p0, Lxr9;->a:J
+    const-class v0, Lxr9;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    move-result v0
+    move-result-object p0
 
-    return v0
+    check-cast p0, Lxr9;
+
+    return-object p0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+.method public static values()[Lxr9;
+    .locals 1
 
-    const-string v0, "ShowScheduledMessagesScreen(chatId="
+    sget-object v0, Lxr9;->c:[Lxr9;
 
-    const-string v1, ")"
-
-    iget-wide v2, p0, Lxr9;->a:J
-
-    invoke-static {v2, v3, v0, v1}, Lcbh;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
+
+    check-cast v0, [Lxr9;
 
     return-object v0
 .end method

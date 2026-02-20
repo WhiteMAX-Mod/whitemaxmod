@@ -3,51 +3,87 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static final e:Lv07;
+
+
 # instance fields
-.field public a:Z
+.field public final a:I
 
-.field public b:Z
+.field public final b:I
 
-.field public c:Z
+.field public final c:I
 
-.field public d:Ljava/lang/Object;
-
-.field public e:Ljava/lang/Object;
-
-.field public f:Ljava/lang/Object;
-
-.field public g:Ljava/lang/Object;
-
-.field public h:Ljava/lang/Object;
-
-.field public i:Ljava/lang/Object;
+.field public final d:I
 
 
 # direct methods
-.method public constructor <init>(Lrk1;Lahd;Ldhd;Lxk1;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lv07;
+
+    const/4 v1, -0x1
+
+    invoke-direct {v0, v1, v1, v1, v1}, Lv07;-><init>(IIII)V
+
+    sput-object v0, Lv07;->e:Lv07;
+
+    return-void
+.end method
+
+.method public constructor <init>(IIII)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/Hashtable;
+    iput p1, p0, Lv07;->a:I
 
-    invoke-direct {v0}, Ljava/util/Hashtable;-><init>()V
+    iput p2, p0, Lv07;->b:I
 
-    iput-object v0, p0, Lv07;->d:Ljava/lang/Object;
+    iput p3, p0, Lv07;->c:I
 
-    new-instance v0, Lrd9;
+    iput p4, p0, Lv07;->d:I
 
-    invoke-direct {v0}, Lrd9;-><init>()V
+    return-void
+.end method
 
-    iput-object v0, p0, Lv07;->e:Ljava/lang/Object;
 
-    iput-object p1, p0, Lv07;->f:Ljava/lang/Object;
+# virtual methods
+.method public final a()V
+    .locals 4
 
-    iput-object p3, p0, Lv07;->g:Ljava/lang/Object;
+    const/4 v0, 0x0
 
-    iput-object p2, p0, Lv07;->h:Ljava/lang/Object;
+    const/4 v1, 0x1
 
-    iput-object p4, p0, Lv07;->i:Ljava/lang/Object;
+    iget v2, p0, Lv07;->a:I
 
+    const/4 v3, -0x1
+
+    if-eq v2, v3, :cond_0
+
+    filled-new-array {v2}, [I
+
+    move-result-object v2
+
+    invoke-static {v1, v2, v0}, Landroid/opengl/GLES20;->glDeleteTextures(I[II)V
+
+    invoke-static {}, Lm0i;->e()V
+
+    :cond_0
+    iget v2, p0, Lv07;->b:I
+
+    if-eq v2, v3, :cond_1
+
+    filled-new-array {v2}, [I
+
+    move-result-object v2
+
+    invoke-static {v1, v2, v0}, Landroid/opengl/GLES20;->glDeleteFramebuffers(I[II)V
+
+    invoke-static {}, Lm0i;->e()V
+
+    :cond_1
     return-void
 .end method

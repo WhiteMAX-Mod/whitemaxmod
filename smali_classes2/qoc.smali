@@ -1,63 +1,105 @@
-.class public final Lqoc;
-.super Lie0;
+.class public abstract Lqoc;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Lqoc;
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public static a([B)Lsoc;
+    .locals 14
 
-    new-instance v0, Lqoc;
+    new-instance v0, Lru/ok/tamtam/nano/Tasks$Profile;
 
-    const/16 v1, 0xe
+    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$Profile;-><init>()V
 
-    invoke-direct {v0, v1}, Lie0;-><init>(I)V
+    :try_start_0
+    invoke-static {v0, p0}, Lhr9;->mergeFrom(Lhr9;[B)Lhr9;
 
-    sput-object v0, Lqoc;->b:Lqoc;
+    move-result-object p0
 
-    return-void
-.end method
+    check-cast p0, Lru/ok/tamtam/nano/Tasks$Profile;
+    :try_end_0
+    .catch Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException; {:try_start_0 .. :try_end_0} :catch_0
 
+    iget-object v0, p0, Lru/ok/tamtam/nano/Tasks$Profile;->crop:Lru/ok/tamtam/nano/Tasks$Rect;
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    if-eqz v0, :cond_0
 
-    const/4 v0, 0x1
+    new-instance v1, Lq30;
 
-    if-ne p0, p1, :cond_0
+    iget v2, v0, Lru/ok/tamtam/nano/Tasks$Rect;->left:F
 
-    return v0
+    iget v3, v0, Lru/ok/tamtam/nano/Tasks$Rect;->top:F
+
+    iget v4, v0, Lru/ok/tamtam/nano/Tasks$Rect;->right:F
+
+    iget v5, v0, Lru/ok/tamtam/nano/Tasks$Rect;->bottom:F
+
+    const/4 v6, 0x2
+
+    invoke-direct/range {v1 .. v6}, Lq30;-><init>(FFFFI)V
+
+    :goto_0
+    move-object v10, v1
+
+    goto :goto_1
 
     :cond_0
-    instance-of p1, p1, Lqoc;
+    const/4 v1, 0x0
 
-    if-nez p1, :cond_1
+    goto :goto_0
 
-    const/4 p1, 0x0
+    :goto_1
+    new-instance v2, Lsoc;
 
-    return p1
+    iget-wide v3, p0, Lru/ok/tamtam/nano/Tasks$Profile;->requestId:J
+
+    iget-object v5, p0, Lru/ok/tamtam/nano/Tasks$Profile;->firstName:Ljava/lang/String;
+
+    iget-object v6, p0, Lru/ok/tamtam/nano/Tasks$Profile;->lastName:Ljava/lang/String;
+
+    iget-object v7, p0, Lru/ok/tamtam/nano/Tasks$Profile;->photoToken:Ljava/lang/String;
+
+    iget-wide v8, p0, Lru/ok/tamtam/nano/Tasks$Profile;->photoId:J
+
+    iget-object v11, p0, Lru/ok/tamtam/nano/Tasks$Profile;->description:Ljava/lang/String;
+
+    iget-object v12, p0, Lru/ok/tamtam/nano/Tasks$Profile;->link:Ljava/lang/String;
+
+    iget-object p0, p0, Lru/ok/tamtam/nano/Tasks$Profile;->avatarType:Ljava/lang/String;
+
+    const-string v0, "PRESET_AVATAR"
+
+    invoke-virtual {p0, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_1
+
+    const/4 p0, 0x1
+
+    :goto_2
+    move v13, p0
+
+    goto :goto_3
 
     :cond_1
-    return v0
-.end method
+    const/4 p0, 0x2
 
-.method public final hashCode()I
-    .locals 1
+    goto :goto_2
 
-    const v0, 0x5dad53ff
+    :goto_3
+    invoke-direct/range {v2 .. v13}, Lsoc;-><init>(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;JLq30;Ljava/lang/String;Ljava/lang/String;I)V
 
-    return v0
-.end method
+    return-object v2
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    :catch_0
+    move-exception v0
 
-    const-string v0, "SelectPhotoFromGallery"
+    move-object p0, v0
 
-    return-object v0
+    new-instance v0, Lru/ok/tamtam/nano/ProtoException;
+
+    invoke-direct {v0, p0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v0
 .end method

@@ -1,89 +1,89 @@
-.class public final La5h;
-.super Lo84;
+.class public final enum La5h;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public A0:I
+# static fields
+.field public static final enum a:La5h;
 
-.field public B0:I
+.field public static final enum b:La5h;
 
-.field public C0:I
-
-.field public D0:I
-
-.field public E0:I
-
-.field public F0:J
-
-.field public G0:J
-
-.field public H0:J
-
-.field public synthetic I0:Ljava/lang/Object;
-
-.field public final synthetic J0:Lc5h;
-
-.field public K0:I
-
-.field public X:[J
-
-.field public Y:[J
-
-.field public Z:[J
-
-.field public d:Ljava/lang/String;
-
-.field public o:Ltea;
-
-.field public t0:Ljava/lang/Object;
-
-.field public u0:Ljava/io/Serializable;
-
-.field public v0:I
-
-.field public w0:I
-
-.field public x0:I
-
-.field public y0:I
-
-.field public z0:I
+.field public static final synthetic c:[La5h;
 
 
 # direct methods
-.method public constructor <init>(Lc5h;Lo84;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
-    iput-object p1, p0, La5h;->J0:Lc5h;
+    new-instance v0, La5h;
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    const-string v1, "CREATE_PASSWORD"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, La5h;->a:La5h;
+
+    new-instance v1, La5h;
+
+    const-string v2, "CREATE_HINT"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    new-instance v2, La5h;
+
+    const-string v3, "ADD_EMAIL"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    new-instance v3, La5h;
+
+    const-string v4, "VERIFY_EMAIL"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, La5h;->b:La5h;
+
+    filled-new-array {v0, v1, v2, v3}, [La5h;
+
+    move-result-object v0
+
+    sput-object v0, La5h;->c:[La5h;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public static valueOf(Ljava/lang/String;)La5h;
     .locals 1
 
-    iput-object p1, p0, La5h;->I0:Ljava/lang/Object;
+    const-class v0, La5h;
 
-    iget p1, p0, La5h;->K0:I
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    const/high16 v0, -0x80000000
+    move-result-object p0
 
-    or-int/2addr p1, v0
+    check-cast p0, La5h;
 
-    iput p1, p0, La5h;->K0:I
+    return-object p0
+.end method
 
-    iget-object p1, p0, La5h;->J0:Lc5h;
+.method public static values()[La5h;
+    .locals 1
 
-    const/4 v0, 0x0
+    sget-object v0, La5h;->c:[La5h;
 
-    invoke-virtual {p1, v0, p0}, Lc5h;->e(Lvea;Lo84;)Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object v0
 
-    return-object p1
+    check-cast v0, [La5h;
+
+    return-object v0
 .end method

@@ -1,122 +1,64 @@
 .class public final Ljg9;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Lkg9;
 
 
-# instance fields
-.field public final synthetic X:J
-
-.field public synthetic o:Ljava/lang/Object;
+# static fields
+.field public static final a:Ljg9;
 
 
 # direct methods
-.method public constructor <init>(JLkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-wide p1, p0, Ljg9;->X:J
+    new-instance v0, Ljg9;
 
-    const/4 p1, 0x2
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    sput-object v0, Ljg9;->a:Ljg9;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    check-cast p1, Ley3;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Ljg9;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Ljg9;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Ljg9;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
-
-    new-instance v0, Ljg9;
-
-    iget-wide v1, p0, Ljg9;->X:J
-
-    invoke-direct {v0, v1, v2, p2}, Ljg9;-><init>(JLkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Ljg9;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 9
-
-    iget-object v0, p0, Ljg9;->o:Ljava/lang/Object;
-
-    check-cast v0, Ley3;
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    new-instance v1, Lc6c;
-
-    invoke-virtual {v0}, Ley3;->r()J
-
-    move-result-wide v4
-
-    invoke-virtual {v0}, Ley3;->f()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v2, ""
-
-    if-nez p1, :cond_0
-
-    move-object v7, v2
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    move-object v7, p1
-
-    :goto_0
-    sget-object p1, Lgm0;->a:Lgm0;
-
-    invoke-virtual {v0, p1}, Ley3;->v(Lgm0;)Ljava/lang/String;
-
-    move-result-object p1
+    instance-of p1, p1, Ljg9;
 
     if-nez p1, :cond_1
 
-    move-object v8, v2
+    const/4 p1, 0x0
 
-    goto :goto_1
+    return p1
 
     :cond_1
-    move-object v8, p1
+    return v0
+.end method
 
-    :goto_1
-    invoke-virtual {v0}, Ley3;->p()Ljava/lang/CharSequence;
+.method public final hashCode()I
+    .locals 1
 
-    move-result-object v6
+    const v0, -0x5ca6eb28
 
-    iget-wide v2, p0, Ljg9;->X:J
+    return v0
+.end method
 
-    invoke-direct/range {v1 .. v8}, Lc6c;-><init>(JJLjava/lang/CharSequence;Ljava/lang/String;Ljava/lang/String;)V
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    return-object v1
+    const-string v0, "SelectFileMode"
+
+    return-object v0
 .end method

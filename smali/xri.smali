@@ -1,71 +1,170 @@
-.class public final Lxri;
-.super Lwoi;
+.class public abstract Lxri;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lbsi;
+
+# static fields
+.field public static final a:Ljava/lang/String;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    const-string v0, "WorkerFactory"
+
+    invoke-static {v0}, Lm0j;->n(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lxri;->a:Ljava/lang/String;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final Y(Laxa;Lmri;)Lvri;
-    .locals 4
+.method public abstract a(Landroid/content/Context;Ljava/lang/String;Landroidx/work/WorkerParameters;)Lfh8;
+.end method
 
-    invoke-virtual {p0}, Lwoi;->V()Landroid/os/Parcel;
+.method public final b(Landroid/content/Context;Ljava/lang/String;Landroidx/work/WorkerParameters;)Lfh8;
+    .locals 6
 
-    move-result-object v0
+    sget-object v0, Lxri;->a:Ljava/lang/String;
 
-    sget v1, Lwui;->a:I
+    invoke-virtual {p0, p1, p2, p3}, Lxri;->a(Landroid/content/Context;Ljava/lang/String;Landroidx/work/WorkerParameters;)Lfh8;
 
-    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
+    move-result-object v1
 
-    const/4 p1, 0x1
+    if-nez v1, :cond_0
 
-    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p2, v0, v1}, Lmri;->writeToParcel(Landroid/os/Parcel;I)V
-
-    invoke-virtual {p0, v0, p1}, Lwoi;->W(Landroid/os/Parcel;I)Landroid/os/Parcel;
-
-    move-result-object p2
-
-    invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    const/4 p1, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    const-string v1, "com.google.android.gms.vision.barcode.internal.client.INativeBarcodeDetector"
-
-    invoke-interface {v0, v1}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
+    :try_start_0
+    invoke-static {p2}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v2
 
-    instance-of v3, v2, Lvri;
+    const-class v3, Lfh8;
 
-    if-eqz v3, :cond_1
+    invoke-virtual {v2, v3}, Ljava/lang/Class;->asSubclass(Ljava/lang/Class;)Ljava/lang/Class;
 
-    move-object p1, v2
-
-    check-cast p1, Lvri;
+    move-result-object v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
-    :cond_1
-    new-instance v2, Lvri;
+    :catchall_0
+    move-exception v2
 
-    invoke-direct {v2, v0, v1, p1}, Lwoi;-><init>(Landroid/os/IBinder;Ljava/lang/String;I)V
+    invoke-static {}, Lm0j;->g()Lm0j;
 
-    move-object p1, v2
+    move-result-object v3
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    const-string v5, "Invalid class: "
+
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v4, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v0, v4, v2}, Lm0j;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    const/4 v2, 0x0
 
     :goto_0
-    invoke-virtual {p2}, Landroid/os/Parcel;->recycle()V
+    if-eqz v2, :cond_0
 
-    return-object p1
+    :try_start_1
+    const-class v3, Landroid/content/Context;
+
+    const-class v4, Landroidx/work/WorkerParameters;
+
+    filled-new-array {v3, v4}, [Ljava/lang/Class;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+
+    move-result-object v2
+
+    filled-new-array {p1, p3}, [Ljava/lang/Object;
+
+    move-result-object p1
+
+    invoke-virtual {v2, p1}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lfh8;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    move-object v1, p1
+
+    goto :goto_1
+
+    :catchall_1
+    move-exception p1
+
+    invoke-static {}, Lm0j;->g()Lm0j;
+
+    move-result-object p3
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "Could not instantiate "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {p3, v0, v2, p1}, Lm0j;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_0
+    :goto_1
+    if-eqz v1, :cond_2
+
+    iget-boolean p1, v1, Lfh8;->d:Z
+
+    if-nez p1, :cond_1
+
+    goto :goto_2
+
+    :cond_1
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string p3, ") returned an instance of a ListenableWorker ("
+
+    const-string v0, ") which has already been invoked. createWorker() must always return a new instance of a ListenableWorker."
+
+    const-string v1, "WorkerFactory ("
+
+    invoke-static {v1, p1, p3, p2, v0}, Lau1;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    new-instance p2, Ljava/lang/IllegalStateException;
+
+    invoke-direct {p2, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p2
+
+    :cond_2
+    :goto_2
+    return-object v1
 .end method

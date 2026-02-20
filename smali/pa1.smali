@@ -1,56 +1,48 @@
 .class public final Lpa1;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lky1;
+.super Lda4;
 
 
 # instance fields
-.field public final a:Lv0b;
+.field public final synthetic X:Lx6;
 
-.field public final b:Lo58;
+.field public synthetic d:Ljava/lang/Object;
 
-.field public final c:Ln8g;
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Lo58;Lo58;Lo58;Lv0b;Lo58;Lo58;Lo58;Lo58;Lo58;)V
-    .locals 10
+.method public constructor <init>(Lx6;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lpa1;->X:Lx6;
 
-    iput-object p4, p0, Lpa1;->a:Lv0b;
-
-    move-object/from16 v5, p6
-
-    iput-object v5, p0, Lpa1;->b:Lo58;
-
-    new-instance v0, Lla1;
-
-    move-object v1, p0
-
-    move-object v2, p1
-
-    move-object v8, p2
-
-    move-object v3, p3
-
-    move-object v4, p5
-
-    move-object/from16 v9, p7
-
-    move-object/from16 v6, p8
-
-    move-object/from16 v7, p9
-
-    invoke-direct/range {v0 .. v9}, Lla1;-><init>(Lpa1;Lo58;Lo58;Lo58;Lo58;Lo58;Lo58;Lo58;Lo58;)V
-
-    new-instance p1, Ln8g;
-
-    invoke-direct {p1, v0}, Ln8g;-><init>(Llq6;)V
-
-    iput-object p1, p0, Lpa1;->c:Ln8g;
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lpa1;->d:Ljava/lang/Object;
+
+    iget p1, p0, Lpa1;->o:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lpa1;->o:I
+
+    iget-object p1, p0, Lpa1;->X:Lx6;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lx6;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

@@ -1,27 +1,55 @@
 .class public final Lyog;
-.super Ljava/lang/Object;
+.super Lhpg;
 .source "SourceFile"
 
 
+# static fields
+.field public static final CREATOR:Lxog;
+
+
 # instance fields
-.field public final a:Lzog;
+.field public final c:I
+
+.field public final d:I
 
 
 # direct methods
-.method public constructor <init>(Lzog;)V
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lxog;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lyog;->CREATOR:Lxog;
+
+    return-void
+.end method
+
+.method public constructor <init>(II)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lyog;->a:Lzog;
+    iput p1, p0, Lyog;->c:I
+
+    iput p2, p0, Lyog;->d:I
 
     return-void
 .end method
 
 
 # virtual methods
+.method public final describeContents()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    .locals 4
 
     const/4 v0, 0x1
 
@@ -41,56 +69,79 @@
     :cond_1
     check-cast p1, Lyog;
 
-    iget-object v1, p0, Lyog;->a:Lzog;
+    iget v1, p0, Lyog;->c:I
 
-    iget-object p1, p1, Lyog;->a:Lzog;
+    iget v3, p1, Lyog;->c:I
 
-    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
+    if-eq v1, v3, :cond_2
 
     return v2
 
     :cond_2
+    iget v1, p0, Lyog;->d:I
+
+    iget p1, p1, Lyog;->d:I
+
+    if-eq v1, p1, :cond_3
+
+    return v2
+
+    :cond_3
     return v0
 .end method
 
 .method public final hashCode()I
-    .locals 1
+    .locals 2
 
-    iget-object v0, p0, Lyog;->a:Lzog;
+    iget v0, p0, Lyog;->c:I
 
-    iget-object v0, v0, Lzog;->a:Lapg;
-
-    invoke-virtual {v0}, Lapg;->hashCode()I
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
     move-result v0
 
-    return v0
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Lyog;->d:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 5
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "TopbarStrokeColors(separator="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lyog;->a:Lzog;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-string v0, ", quantity="
 
     const-string v1, ")"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v2, "Plurals(resId="
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget v3, p0, Lyog;->c:I
+
+    iget v4, p0, Lyog;->d:I
+
+    invoke-static {v2, v3, v0, v4, v1}, Lau1;->h(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
+
+    iget p2, p0, Lyog;->c:I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget p2, p0, Lyog;->d:I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    return-void
 .end method

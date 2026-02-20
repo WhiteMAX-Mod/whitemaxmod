@@ -1,282 +1,92 @@
-.class public abstract Lm35;
-.super Ljava/lang/Object;
+.class public final Lm35;
+.super Lkotlinx/coroutines/internal/ScopeCoroutine;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic a:I
+.field public static final synthetic a:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+
+
+# instance fields
+.field private volatile synthetic _decision$volatile:I
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 2
 
-    const-wide/high16 v0, 0x4000000000000000L    # 2.0
+    const-class v0, Lm35;
 
-    invoke-static {v0, v1}, Ljava/lang/Math;->log(D)D
+    const-string v1, "_decision$volatile"
+
+    invoke-static {v0, v1}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+
+    move-result-object v0
+
+    sput-object v0, Lm35;->a:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
 
     return-void
 .end method
 
-.method public static a(D)Z
-    .locals 2
 
-    invoke-static {p0, p1}, Lonj;->c(D)Z
+# virtual methods
+.method public final afterCompletion(Ljava/lang/Object;)V
+    .locals 0
 
-    move-result v0
+    invoke-virtual {p0, p1}, Lm35;->afterResume(Ljava/lang/Object;)V
 
-    if-eqz v0, :cond_1
+    return-void
+.end method
 
-    const-wide/16 v0, 0x0
-
-    cmpl-double v0, p0, v0
-
-    if-eqz v0, :cond_0
-
-    invoke-static {p0, p1}, Lonj;->b(D)J
-
-    move-result-wide v0
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->numberOfTrailingZeros(J)I
-
-    move-result v0
-
-    rsub-int/lit8 v0, v0, 0x34
-
-    invoke-static {p0, p1}, Ljava/lang/Math;->getExponent(D)I
-
-    move-result p0
-
-    if-gt v0, p0, :cond_1
+.method public final afterResume(Ljava/lang/Object;)V
+    .locals 3
 
     :cond_0
-    const/4 p0, 0x1
+    sget-object v0, Lm35;->a:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
 
-    return p0
+    invoke-virtual {v0, p0}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->get(Ljava/lang/Object;)I
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    const/4 v0, 0x1
+
+    if-ne v1, v0, :cond_1
+
+    iget-object v0, p0, Lkotlinx/coroutines/internal/ScopeCoroutine;->uCont:Lkotlin/coroutines/Continuation;
+
+    invoke-static {v0}, Libj;->k(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object v0
+
+    invoke-static {p1}, Lbsj;->b(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    invoke-static {v0, p1}, Lkotlinx/coroutines/internal/DispatchedContinuationKt;->resumeCancellableWith(Lkotlin/coroutines/Continuation;Ljava/lang/Object;)V
+
+    return-void
 
     :cond_1
-    const/4 p0, 0x0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    return p0
-.end method
+    const-string v0, "Already resumed"
 
-.method public static b(D)Z
-    .locals 4
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    const-wide/16 v0, 0x0
+    throw p1
 
-    cmpl-double v0, p0, v0
-
-    const/4 v1, 0x0
-
-    if-lez v0, :cond_0
-
-    invoke-static {p0, p1}, Lonj;->c(D)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-static {p0, p1}, Lonj;->b(D)J
-
-    move-result-wide p0
-
-    const-wide/16 v2, 0x1
-
-    sub-long v2, p0, v2
-
-    and-long/2addr p0, v2
-
-    const-wide/16 v2, 0x0
-
-    cmp-long p0, p0, v2
-
-    if-nez p0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    return v1
-.end method
-
-.method public static c(D)I
-    .locals 6
-
-    sget-object v0, Ljava/math/RoundingMode;->CEILING:Ljava/math/RoundingMode;
-
-    const-wide/16 v1, 0x0
-
-    cmpl-double v1, p0, v1
+    :cond_2
+    const/4 v1, 0x2
 
     const/4 v2, 0x0
 
-    const/4 v3, 0x1
-
-    if-lez v1, :cond_0
-
-    invoke-static {p0, p1}, Lonj;->c(D)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    move v1, v3
-
-    goto :goto_0
-
-    :cond_0
-    move v1, v2
-
-    :goto_0
-    const-string v4, "x must be positive and finite"
-
-    invoke-static {v4, v1}, Lekj;->c(Ljava/lang/String;Z)V
-
-    invoke-static {p0, p1}, Ljava/lang/Math;->getExponent(D)I
-
-    move-result v1
-
-    invoke-static {p0, p1}, Ljava/lang/Math;->getExponent(D)I
-
-    move-result v4
-
-    const/16 v5, -0x3fe
-
-    if-lt v4, v5, :cond_6
-
-    sget-object v4, Ll35;->a:[I
-
-    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {v0, p0, v2, v1}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->compareAndSet(Ljava/lang/Object;II)Z
 
     move-result v0
 
-    aget v0, v4, v0
+    if-eqz v0, :cond_0
 
-    packed-switch v0, :pswitch_data_0
-
-    new-instance p0, Ljava/lang/AssertionError;
-
-    invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
-
-    throw p0
-
-    :pswitch_0
-    invoke-static {p0, p1}, Ljava/lang/Double;->doubleToRawLongBits(D)J
-
-    move-result-wide p0
-
-    const-wide v4, 0xfffffffffffffL
-
-    and-long/2addr p0, v4
-
-    const-wide/high16 v4, 0x3ff0000000000000L    # 1.0
-
-    or-long/2addr p0, v4
-
-    invoke-static {p0, p1}, Ljava/lang/Double;->longBitsToDouble(J)D
-
-    move-result-wide p0
-
-    mul-double/2addr p0, p0
-
-    const-wide/high16 v4, 0x4000000000000000L    # 2.0
-
-    cmpl-double p0, p0, v4
-
-    if-lez p0, :cond_3
-
-    move v2, v3
-
-    goto :goto_2
-
-    :pswitch_1
-    if-ltz v1, :cond_1
-
-    move v2, v3
-
-    :cond_1
-    invoke-static {p0, p1}, Lm35;->b(D)Z
-
-    move-result p0
-
-    :goto_1
-    xor-int/2addr p0, v3
-
-    and-int/2addr v2, p0
-
-    goto :goto_2
-
-    :pswitch_2
-    if-gez v1, :cond_2
-
-    move v2, v3
-
-    :cond_2
-    invoke-static {p0, p1}, Lm35;->b(D)Z
-
-    move-result p0
-
-    goto :goto_1
-
-    :pswitch_3
-    invoke-static {p0, p1}, Lm35;->b(D)Z
-
-    move-result p0
-
-    xor-int/lit8 v2, p0, 0x1
-
-    goto :goto_2
-
-    :pswitch_4
-    invoke-static {p0, p1}, Lm35;->b(D)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_5
-
-    :cond_3
-    :goto_2
-    :pswitch_5
-    if-eqz v2, :cond_4
-
-    add-int/2addr v1, v3
-
-    :cond_4
-    return v1
-
-    :cond_5
-    new-instance p0, Ljava/lang/ArithmeticException;
-
-    const-string p1, "mode was UNNECESSARY, but rounding was necessary"
-
-    invoke-direct {p0, p1}, Ljava/lang/ArithmeticException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_6
-    const-wide/high16 v0, 0x4330000000000000L    # 4.503599627370496E15
-
-    mul-double/2addr p0, v0
-
-    invoke-static {p0, p1}, Lm35;->c(D)I
-
-    move-result p0
-
-    add-int/lit8 p0, p0, -0x34
-
-    return p0
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_4
-        :pswitch_5
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

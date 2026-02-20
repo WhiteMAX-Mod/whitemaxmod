@@ -1,122 +1,74 @@
-.class public final Lukd;
-.super Lp6g;
-.source "SourceFile"
-
-# interfaces
-.implements Lbr6;
+.class public abstract Lukd;
+.super Ljava/lang/Object;
 
 
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
+# static fields
+.field public static oneme_stickers_settings_empty_favorite_title:I = 0x7f130ab7
 
-.field public final synthetic Y:Ldld;
+.field public static oneme_stickers_settings_empty_recent_subtitle:I = 0x7f130ab8
 
-.field public o:I
+.field public static oneme_stickers_settings_empty_recent_title:I = 0x7f130ab9
 
+.field public static oneme_stickers_settings_favorite_title:I = 0x7f130aba
 
-# direct methods
-.method public constructor <init>(Ldld;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.field public static oneme_stickers_settings_favorite_toolbar_title:I = 0x7f130abb
 
-    iput-object p1, p0, Lukd;->Y:Ldld;
+.field public static oneme_stickers_settings_menu_copy_link_title:I = 0x7f130abc
 
-    const/4 p1, 0x2
+.field public static oneme_stickers_settings_menu_copy_set_link_snackbar_title:I = 0x7f130abd
 
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+.field public static oneme_stickers_settings_menu_delete_set_confirm_action:I = 0x7f130abe
 
-    return-void
-.end method
+.field public static oneme_stickers_settings_menu_delete_set_confirm_cancel:I = 0x7f130abf
 
+.field public static oneme_stickers_settings_menu_delete_set_confirm_subtitle:I = 0x7f130ac0
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.field public static oneme_stickers_settings_menu_delete_set_confirm_title:I = 0x7f130ac1
 
-    check-cast p1, Lwkd;
+.field public static oneme_stickers_settings_menu_delete_set_snackbar_title:I = 0x7f130ac2
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+.field public static oneme_stickers_settings_menu_delete_set_title:I = 0x7f130ac3
 
-    invoke-virtual {p0, p1, p2}, Lukd;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.field public static oneme_stickers_settings_menu_forward_title:I = 0x7f130ac4
 
-    move-result-object p1
+.field public static oneme_stickers_settings_menu_share_title:I = 0x7f130ac5
 
-    check-cast p1, Lukd;
+.field public static oneme_stickers_settings_recent_title:I = 0x7f130ac6
 
-    sget-object p2, Lb3h;->a:Lb3h;
+.field public static oneme_stickers_settings_recent_toolbar_title:I = 0x7f130ac7
 
-    invoke-virtual {p1, p2}, Lukd;->n(Ljava/lang/Object;)Ljava/lang/Object;
+.field public static oneme_stickers_settings_sets_title:I = 0x7f130ac8
 
-    move-result-object p1
+.field public static oneme_stickers_settings_stickers_confirm_delete_sticker_title:I = 0x7f130ac9
 
-    return-object p1
-.end method
+.field public static oneme_stickers_settings_stickers_confirm_delete_stickers_title:I = 0x7f130aca
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.field public static oneme_stickers_settings_stickers_confirm_delete_subtitle:I = 0x7f130acb
 
-    new-instance v0, Lukd;
+.field public static oneme_stickers_settings_stickers_favorite_confirm_clear_subtitle:I = 0x7f130acc
 
-    iget-object v1, p0, Lukd;->Y:Ldld;
+.field public static oneme_stickers_settings_stickers_favorite_confirm_clear_title:I = 0x7f130acd
 
-    invoke-direct {v0, v1, p2}, Lukd;-><init>(Ldld;Lkotlin/coroutines/Continuation;)V
+.field public static oneme_stickers_settings_stickers_favorite_delete_all_snackbar:I = 0x7f130ace
 
-    iput-object p1, v0, Lukd;->X:Ljava/lang/Object;
+.field public static oneme_stickers_settings_stickers_favorite_snackbar_from:I = 0x7f130acf
 
-    return-object v0
-.end method
+.field public static oneme_stickers_settings_stickers_menu_change_title:I = 0x7f130ad0
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.field public static oneme_stickers_settings_stickers_recent_confirm_clear_subtitle:I = 0x7f130ad1
 
-    iget-object v0, p0, Lukd;->X:Ljava/lang/Object;
+.field public static oneme_stickers_settings_stickers_recent_confirm_clear_title:I = 0x7f130ad2
 
-    check-cast v0, Lwkd;
+.field public static oneme_stickers_settings_stickers_recent_delete_all_snackbar:I = 0x7f130ad3
 
-    iget v1, p0, Lukd;->o:I
+.field public static oneme_stickers_settings_stickers_recent_menu_clear_title:I = 0x7f130ad4
 
-    const/4 v2, 0x1
+.field public static oneme_stickers_settings_stickers_recent_snackbar_from:I = 0x7f130ad5
 
-    if-eqz v1, :cond_1
+.field public static oneme_stickers_settings_stickers_snackbar_delete_stickers_title:I = 0x7f130ad6
 
-    if-ne v1, v2, :cond_0
+.field public static oneme_stickers_settings_toolbar_title:I = 0x7f130ad7
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+.field public static oneme_strickers_settings_stickers_multiselect_empty_title:I = 0x7f130ad9
 
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    const/4 p1, 0x0
-
-    iput-object p1, p0, Lukd;->X:Ljava/lang/Object;
-
-    iput v2, p0, Lukd;->o:I
-
-    iget-object p1, p0, Lukd;->Y:Ldld;
-
-    invoke-static {p1, v0, p0}, Ldld;->s(Ldld;Lwkd;Lo84;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lac4;->a:Lac4;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
-    :cond_2
-    :goto_0
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
-.end method
+.field public static oneme_strickers_settings_stickers_multiselect_title:I = 0x7f130ada

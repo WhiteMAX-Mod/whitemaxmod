@@ -1,133 +1,118 @@
-.class public final enum Luq1;
-.super Ljava/lang/Enum;
+.class public final Luq1;
+.super Lpdg;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic X:[Luq1;
-
-.field public static final synthetic Y:Lal5;
-
-.field public static final enum a:Luq1;
-
-.field public static final enum b:Luq1;
-
-.field public static final enum c:Luq1;
-
-.field public static final enum d:Luq1;
-
-.field public static final enum o:Luq1;
+# interfaces
+.implements Let6;
 
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 9
+# instance fields
+.field public synthetic X:Z
 
-    new-instance v0, Luq1;
+.field public synthetic Y:Z
 
-    const-string v1, "CALL"
+.field public synthetic Z:Lhc;
 
-    const/4 v2, 0x0
+.field public synthetic o:J
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Luq1;->a:Luq1;
+# virtual methods
+.method public final b(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Lgc6;)Ljava/lang/Object;
+    .locals 3
 
-    new-instance v1, Luq1;
+    check-cast p1, Ljava/lang/Number;
 
-    const-string v2, "STOP"
+    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
 
-    const/4 v3, 0x1
+    move-result-wide v0
 
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    check-cast p2, Ljava/lang/Boolean;
 
-    sput-object v1, Luq1;->b:Luq1;
+    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
 
-    new-instance v2, Luq1;
+    move-result p1
 
-    const-string v3, "UPDATE_ACTIVE_NOTIFICATION"
+    check-cast p3, Ljava/lang/Boolean;
 
-    const/4 v4, 0x2
+    invoke-virtual {p3}, Ljava/lang/Boolean;->booleanValue()Z
 
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    move-result p2
 
-    new-instance v3, Luq1;
+    check-cast p4, Lhc;
 
-    const-string v4, "RESTART_FOREGROUND"
+    new-instance p3, Luq1;
 
-    const/4 v5, 0x3
+    const/4 v2, 0x5
 
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-direct {p3, v2, p5}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    sput-object v3, Luq1;->c:Luq1;
+    iput-wide v0, p3, Luq1;->o:J
 
-    new-instance v4, Luq1;
+    iput-boolean p1, p3, Luq1;->X:Z
 
-    const-string v5, "UPDATE_INCOMING_NOTIFICATION"
+    iput-boolean p2, p3, Luq1;->Y:Z
 
-    const/4 v6, 0x4
+    iput-object p4, p3, Luq1;->Z:Lhc;
 
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    sget-object p1, Lmah;->a:Lmah;
 
-    new-instance v5, Luq1;
+    invoke-virtual {p3, p1}, Luq1;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string v6, "RESTART_FOREGROUND_SCREENSHARING"
+    move-result-object p1
 
-    const/4 v7, 0x5
-
-    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v5, Luq1;->d:Luq1;
-
-    new-instance v6, Luq1;
-
-    const-string v7, "HIDE_INCOMING_NOTIFICATION"
-
-    const/4 v8, 0x6
-
-    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v6, Luq1;->o:Luq1;
-
-    filled-new-array/range {v0 .. v6}, [Luq1;
-
-    move-result-object v0
-
-    sput-object v0, Luq1;->X:[Luq1;
-
-    new-instance v1, Lal5;
-
-    invoke-direct {v1, v0}, Lal5;-><init>([Ljava/lang/Enum;)V
-
-    sput-object v1, Luq1;->Y:Lal5;
-
-    return-void
+    return-object p1
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Luq1;
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
 
-    const-class v0, Luq1;
+    iget-wide v0, p0, Luq1;->o:J
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget-boolean v2, p0, Luq1;->X:Z
 
-    move-result-object p0
+    iget-boolean v3, p0, Luq1;->Y:Z
 
-    check-cast p0, Luq1;
+    iget-object v4, p0, Luq1;->Z:Lhc;
 
-    return-object p0
-.end method
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-.method public static values()[Luq1;
-    .locals 1
+    if-eqz v2, :cond_0
 
-    sget-object v0, Luq1;->X:[Luq1;
+    if-nez v3, :cond_0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    iget-object p1, v4, Lhc;->b:Ljava/util/Set;
 
-    move-result-object v0
+    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
 
-    check-cast v0, [Luq1;
+    move-result p1
 
-    return-object v0
+    if-nez p1, :cond_0
+
+    iget-wide v2, v4, Lhc;->c:J
+
+    cmp-long p1, v0, v2
+
+    if-gez p1, :cond_0
+
+    iget-object p1, v4, Lhc;->a:Ljava/util/Map;
+
+    invoke-interface {p1}, Ljava/util/Map;->isEmpty()Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    return-object p1
 .end method

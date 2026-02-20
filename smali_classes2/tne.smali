@@ -1,51 +1,97 @@
 .class public final Ltne;
-.super Lo84;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lvne;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Le9g;
-
-.field public Z:I
-
-.field public d:Ljava/util/LinkedHashSet;
-
-.field public o:Ljava/util/Iterator;
+.field public final a:Lul0;
 
 
 # direct methods
-.method public constructor <init>(Le9g;Lo84;)V
+.method public constructor <init>(Lul0;)V
     .locals 0
 
-    iput-object p1, p0, Ltne;->Y:Le9g;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Ltne;->a:Lul0;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Ltne;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Ltne;
+
+    iget-object v1, p0, Ltne;->a:Lul0;
+
+    iget-object p1, p1, Ltne;->a:Lul0;
+
+    invoke-static {v1, p1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
     .locals 1
 
-    iput-object p1, p0, Ltne;->X:Ljava/lang/Object;
+    iget-object v0, p0, Ltne;->a:Lul0;
 
-    iget p1, p0, Ltne;->Z:I
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    const/high16 v0, -0x80000000
+    move-result v0
 
-    or-int/2addr p1, v0
+    return v0
+.end method
 
-    iput p1, p0, Ltne;->Z:I
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    iget-object p1, p0, Ltne;->Y:Le9g;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, p0}, Le9g;->E(Lo84;)Ljava/io/Serializable;
+    const-string v1, "SearchError(event="
 
-    move-result-object p1
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    return-object p1
+    iget-object v1, p0, Ltne;->a:Lul0;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

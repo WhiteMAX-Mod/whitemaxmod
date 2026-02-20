@@ -9,10 +9,10 @@
         "\u0000\u000c\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u001a\u0013\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\u0000\u00a2\u0006\u0004\u0008\u0002\u0010\u0003\u00a8\u0006\u0004"
     }
     d2 = {
-        "Lo25;",
+        "Ly35;",
         "Lru/ok/android/externcalls/sdk/utils/cancelable/Cancelable;",
         "toCancelable",
-        "(Lo25;)Lru/ok/android/externcalls/sdk/utils/cancelable/Cancelable;",
+        "(Ly35;)Lru/ok/android/externcalls/sdk/utils/cancelable/Cancelable;",
         "calls-sdk_release"
     }
     k = 0x2
@@ -26,30 +26,30 @@
 
 
 # direct methods
-.method public static synthetic a(Lo25;)V
+.method public static synthetic a(Ly35;)V
     .locals 0
 
-    invoke-static {p0}, Lru/ok/android/externcalls/sdk/utils/cancelable/DisposableCancelableKt;->toCancelable$lambda$0(Lo25;)V
+    invoke-static {p0}, Lru/ok/android/externcalls/sdk/utils/cancelable/DisposableCancelableKt;->toCancelable$lambda$0(Ly35;)V
 
     return-void
 .end method
 
-.method public static final toCancelable(Lo25;)Lru/ok/android/externcalls/sdk/utils/cancelable/Cancelable;
+.method public static final toCancelable(Ly35;)Lru/ok/android/externcalls/sdk/utils/cancelable/Cancelable;
     .locals 2
 
-    new-instance v0, Lts4;
+    new-instance v0, Lgb2;
 
-    const/4 v1, 0x2
+    const/16 v1, 0x1a
 
-    invoke-direct {v0, v1, p0}, Lts4;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p0}, Lgb2;-><init>(ILjava/lang/Object;)V
 
     return-object v0
 .end method
 
-.method private static final toCancelable$lambda$0(Lo25;)V
+.method private static final toCancelable$lambda$0(Ly35;)V
     .locals 0
 
-    invoke-interface {p0}, Lo25;->dispose()V
+    invoke-interface {p0}, Ly35;->dispose()V
 
     return-void
 .end method

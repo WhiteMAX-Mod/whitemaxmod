@@ -1,103 +1,206 @@
-.class public final Lu8c;
+.class public final synthetic Lu8c;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lks6;
+
 
 # instance fields
-.field public final a:Li7f;
+.field public final synthetic a:I
 
-.field public final b:Lkotlinx/coroutines/internal/ContextScope;
+.field public final synthetic b:Lone/me/chats/picker/chats/PickerChatsListWidget;
 
 
 # direct methods
-.method public constructor <init>(Lcy0;Lmbg;)V
-    .locals 2
+.method public synthetic constructor <init>(Lone/me/chats/picker/chats/PickerChatsListWidget;I)V
+    .locals 0
+
+    iput p2, p0, Lu8c;->a:I
+
+    iput-object p1, p0, Lu8c;->b:Lone/me/chats/picker/chats/PickerChatsListWidget;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x7
-
-    invoke-static {v0, v0, v1}, Lj7f;->b(III)Li7f;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lu8c;->a:Li7f;
-
-    check-cast p2, Lj9b;
-
-    invoke-virtual {p2}, Lj9b;->c()Lzp8;
-
-    move-result-object p2
-
-    invoke-static {p2}, Lilj;->a(Lqb4;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object p2
-
-    iput-object p2, p0, Lu8c;->b:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-virtual {p1, p0}, Lcy0;->d(Ljava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onEvent(Lab3;)V
-    .locals 4
-    .annotation runtime Lu0g;
-    .end annotation
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    new-instance v0, Lvea;
+    iget v0, p0, Lu8c;->a:I
 
-    const/4 v1, 0x0
+    check-cast p1, Ljava/lang/Integer;
 
-    invoke-direct {v0, v1}, Lvea;-><init>(Ljava/lang/Object;)V
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
-    iget-object p1, p1, Lab3;->b:Ljava/util/Collection;
+    move-result p1
 
-    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object p1
+    iget-object v0, p0, Lu8c;->b:Lone/me/chats/picker/chats/PickerChatsListWidget;
 
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    iget-object v1, v0, Lone/me/chats/picker/chats/PickerChatsListWidget;->z0:Ljr3;
 
-    move-result v2
+    invoke-virtual {v1}, Ljr3;->D()Ljava/util/List;
 
-    if-eqz v2, :cond_0
+    move-result-object v1
 
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-static {v1}, Lek3;->D(Ljava/util/List;)Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object v1
 
-    check-cast v2, Ljava/lang/Number;
+    check-cast v1, Lsxd;
 
-    invoke-virtual {v2}, Ljava/lang/Number;->longValue()J
+    iget-object v2, v0, Lone/me/chats/picker/chats/PickerChatsListWidget;->A0:La8c;
 
-    move-result-wide v2
-
-    invoke-virtual {v0, v2, v3}, Lvea;->a(J)Z
+    if-ne v1, v2, :cond_0
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Lfca;
+    iget-object v2, v0, Lone/me/chats/picker/chats/PickerChatsListWidget;->B0:La8c;
 
-    const/16 v0, 0x1b
+    :goto_0
+    invoke-virtual {v2}, Lfg8;->j()I
 
-    invoke-direct {p1, v0}, Lfca;-><init>(I)V
+    move-result v1
 
-    new-instance v0, Lt8c;
+    if-le v1, p1, :cond_1
 
-    invoke-direct {v0, p0, p1, v1}, Lt8c;-><init>(Lu8c;Lfca;Lkotlin/coroutines/Continuation;)V
+    if-ltz p1, :cond_1
 
-    const/4 p1, 0x3
+    invoke-virtual {v0}, Lone/me/chats/picker/chats/PickerChatsListWidget;->N0()Lh8c;
 
-    iget-object v2, p0, Lu8c;->b:Lkotlinx/coroutines/internal/ContextScope;
+    move-result-object v0
 
-    invoke-static {v2, v1, v1, v0, p1}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
+    iget-object v0, v0, Lh8c;->Z:Lmrd;
 
-    return-void
+    iget-object v0, v0, Lmrd;->a:Laxf;
+
+    invoke-interface {v0}, Laxf;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lpha;
+
+    invoke-virtual {v2, p1}, Lfg8;->D(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lmg8;
+
+    check-cast p1, Lc8c;
+
+    iget-object p1, p1, Lc8c;->Z:Ly9c;
+
+    iget-wide v1, p1, Ly9c;->a:J
+
+    invoke-virtual {v0, v1, v2}, Lpha;->d(J)Z
+
+    move-result p1
+
+    goto :goto_1
+
+    :cond_1
+    const/4 p1, 0x0
+
+    :goto_1
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_0
+    iget-object v0, p0, Lu8c;->b:Lone/me/chats/picker/chats/PickerChatsListWidget;
+
+    iget-object v1, v0, Lone/me/chats/picker/chats/PickerChatsListWidget;->A0:La8c;
+
+    invoke-virtual {v1, p1}, Lalf;->H(I)Lmg8;
+
+    move-result-object p1
+
+    check-cast p1, Lc8c;
+
+    if-eqz p1, :cond_2
+
+    iget-object p1, p1, Lc8c;->Z:Ly9c;
+
+    if-eqz p1, :cond_2
+
+    iget p1, p1, Ly9c;->c:I
+
+    goto :goto_2
+
+    :cond_2
+    const/4 p1, 0x0
+
+    :goto_2
+    invoke-virtual {v0}, Lone/me/chats/picker/chats/PickerChatsListWidget;->N0()Lh8c;
+
+    move-result-object v1
+
+    iget-object v1, v1, Lh8c;->u0:Lmrd;
+
+    iget-object v1, v1, Lmrd;->a:Laxf;
+
+    invoke-interface {v1}, Laxf;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/CharSequence;
+
+    if-eqz v1, :cond_3
+
+    invoke-interface {v1}, Ljava/lang/CharSequence;->length()I
+
+    move-result v1
+
+    if-nez v1, :cond_5
+
+    :cond_3
+    const/4 v1, 0x7
+
+    if-ne p1, v1, :cond_4
+
+    sget p1, Lyid;->chat_list_folders_picker_entity_sticky_header_filters:I
+
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    goto :goto_3
+
+    :cond_4
+    if-eqz p1, :cond_5
+
+    sget p1, Lyid;->chat_list_folders_picker_entity_sticky_header_chats:I
+
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    goto :goto_3
+
+    :cond_5
+    const/4 p1, 0x0
+
+    :goto_3
+    return-object p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,237 +1,184 @@
-.class public abstract Lzia;
+.class public final synthetic Lzia;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljt6;
 
-# static fields
-.field public static final a:Ljava/util/concurrent/atomic/AtomicReference;
 
-.field public static final b:Lo58;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final c:Lakj;
-
-.field public static final d:Ln8g;
-
-.field public static final e:Ln8g;
+.field public final synthetic b:Leja;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(Leja;I)V
+    .locals 0
 
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
+    iput p2, p0, Lzia;->a:I
 
-    new-instance v1, Ljava/util/HashMap;
+    iput-object p1, p0, Lzia;->b:Leja;
 
-    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
-
-    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
-
-    sput-object v0, Lzia;->a:Ljava/util/concurrent/atomic/AtomicReference;
-
-    sget-object v0, Lccj;->a:Luia;
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    move-object v2, v0
-
-    goto :goto_0
-
-    :cond_0
-    move-object v2, v1
-
-    :goto_0
-    iget-object v2, v2, Luia;->a:Ln8g;
-
-    sput-object v2, Lzia;->b:Lo58;
-
-    if-eqz v0, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    move-object v0, v1
-
-    :goto_1
-    iget-object v0, v0, Luia;->c:Lakj;
-
-    sput-object v0, Lzia;->c:Lakj;
-
-    new-instance v0, Lnn9;
-
-    const/16 v1, 0x9
-
-    invoke-direct {v0, v1}, Lnn9;-><init>(I)V
-
-    new-instance v1, Ln8g;
-
-    invoke-direct {v1, v0}, Ln8g;-><init>(Llq6;)V
-
-    sput-object v1, Lzia;->d:Ln8g;
-
-    new-instance v0, Lnn9;
-
-    const/16 v1, 0xa
-
-    invoke-direct {v0, v1}, Lnn9;-><init>(I)V
-
-    new-instance v1, Ln8g;
-
-    invoke-direct {v1, v0}, Ln8g;-><init>(Llq6;)V
-
-    sput-object v1, Lzia;->e:Ln8g;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static final a(Ljava/lang/String;IZ)Lxia;
-    .locals 11
+
+# virtual methods
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    iget v0, p0, Lzia;->a:I
+
+    check-cast p1, Ldl8;
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lzia;->b:Leja;
+
+    iget-object v0, v0, Leja;->t0:Lu5c;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, v0, Lu5c;->b:Landroid/net/Uri;
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
 
     :goto_0
-    sget-object v0, Lzia;->a:Ljava/util/concurrent/atomic/AtomicReference;
+    iput-boolean v0, p1, Ldl8;->l:Z
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    return-object p1
+
+    :pswitch_0
+    iget-object v0, p0, Lzia;->b:Leja;
+
+    iget-object v1, v0, Leja;->v0:Lkue;
+
+    iget-object v0, v0, Leja;->o:Lik8;
+
+    invoke-virtual {v1, v0}, Lkue;->g(Lik8;)I
+
+    move-result v0
+
+    if-gtz v0, :cond_2
+
+    invoke-virtual {v1}, Lkue;->c()Ljava/util/List;
 
     move-result-object v1
 
-    check-cast v1, Ljava/util/HashMap;
+    invoke-interface {v1}, Ljava/util/List;->size()I
 
-    new-instance v2, Ljava/util/HashMap;
+    move-result v1
 
-    invoke-direct {v2, v1}, Ljava/util/HashMap;-><init>(Ljava/util/Map;)V
+    const/16 v2, 0x64
 
-    invoke-virtual {v2, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lxia;
-
-    const/4 v4, 0x1
-
-    if-nez v3, :cond_3
-
-    new-instance v5, Lxia;
-
-    sget-object v3, Lccj;->a:Luia;
-
-    if-eqz v3, :cond_0
+    if-ge v1, v2, :cond_1
 
     goto :goto_1
 
-    :cond_0
-    const/4 v3, 0x0
-
-    :goto_1
-    iget-object v6, v3, Luia;->b:Lkp8;
-
-    invoke-static {p1}, Lt02;->t(I)I
-
-    move-result v3
-
-    if-eqz v3, :cond_2
-
-    if-ne v3, v4, :cond_1
-
-    sget-object v3, Lzia;->e:Ln8g;
-
-    invoke-virtual {v3}, Ln8g;->getValue()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lks4;
-
-    :goto_2
-    move-object v7, v3
-
-    goto :goto_3
-
     :cond_1
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p0
-
-    :cond_2
-    sget-object v3, Lzia;->d:Ln8g;
-
-    invoke-virtual {v3}, Ln8g;->getValue()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lks4;
+    const/4 v1, 0x0
 
     goto :goto_2
 
+    :cond_2
+    :goto_1
+    const/4 v1, 0x1
+
+    :goto_2
+    iput-boolean v1, p1, Ldl8;->j:Z
+
+    iput v0, p1, Ldl8;->k:I
+
+    return-object p1
+
+    :pswitch_1
+    iget-object v0, p0, Lzia;->b:Leja;
+
+    iget-boolean v0, v0, Leja;->A0:Z
+
+    iput-boolean v0, p1, Ldl8;->g:Z
+
+    iput-boolean v0, p1, Ldl8;->h:Z
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p1, Ldl8;->e:Z
+
+    return-object p1
+
+    :pswitch_2
+    iget-object v0, p0, Lzia;->b:Leja;
+
+    iget-boolean v1, v0, Leja;->A0:Z
+
+    iput-boolean v1, p1, Ldl8;->e:Z
+
+    const/4 v2, 0x0
+
+    iput-boolean v2, p1, Ldl8;->g:Z
+
+    iput-boolean v2, p1, Ldl8;->h:Z
+
+    iput-boolean v1, p1, Ldl8;->a:Z
+
+    iget-object v0, v0, Leja;->c:Lru/ok/messages/media/mediabar/ActLocalMedias;
+
+    invoke-virtual {v0}, Lru/ok/messages/media/mediabar/ActLocalMedias;->P()Lru/ok/messages/media/mediabar/FrgLocalMedia;
+
+    move-result-object v0
+
+    if-nez v0, :cond_3
+
+    goto :goto_3
+
+    :cond_3
+    instance-of v2, v0, Lru/ok/messages/media/mediabar/FrgLocalVideo;
+
     :goto_3
-    sget-object v3, Lzia;->b:Lo58;
+    iput-boolean v2, p1, Ldl8;->f:Z
 
-    invoke-interface {v3}, Lo58;->getValue()Ljava/lang/Object;
+    return-object p1
 
-    move-result-object v3
+    :pswitch_3
+    iget-object v0, p0, Lzia;->b:Leja;
 
-    move-object v8, v3
+    iget-object v0, v0, Leja;->t0:Lu5c;
 
-    check-cast v8, Ljava/util/concurrent/ExecutorService;
+    if-eqz v0, :cond_4
 
-    move-object v9, p0
+    iget-object v0, v0, Lu5c;->d:Lbf5;
 
-    move v10, p2
+    if-eqz v0, :cond_4
 
-    invoke-direct/range {v5 .. v10}, Lxia;-><init>(Lkp8;Lks4;Ljava/util/concurrent/ExecutorService;Ljava/lang/String;Z)V
-
-    invoke-virtual {v2, v9, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-virtual {v5}, Lxia;->d()V
-
-    invoke-virtual {v2, v9, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-object v3, v5
+    const/4 v0, 0x1
 
     goto :goto_4
 
-    :cond_3
-    move-object v9, p0
-
-    move v10, p2
-
     :cond_4
+    const/4 v0, 0x0
+
     :goto_4
-    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iput-boolean v0, p1, Ldl8;->m:Z
 
-    move-result p0
+    return-object p1
 
-    if-eqz p0, :cond_6
+    nop
 
-    if-eqz v10, :cond_5
-
-    iget-boolean p0, v3, Lxia;->e:Z
-
-    iput-boolean v4, v3, Lxia;->e:Z
-
-    if-nez p0, :cond_5
-
-    iget-boolean p0, v3, Lxia;->e:Z
-
-    if-eqz p0, :cond_5
-
-    invoke-virtual {v3}, Lxia;->d()V
-
-    :cond_5
-    return-object v3
-
-    :cond_6
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object p0
-
-    if-eq p0, v1, :cond_4
-
-    move-object p0, v9
-
-    move p2, v10
-
-    goto :goto_0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

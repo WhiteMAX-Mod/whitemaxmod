@@ -1,119 +1,209 @@
 .class public final Lp81;
-.super Lih;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lq81;
 
 
 # instance fields
-.field public final v0:Z
+.field public final a:Lcpg;
+
+.field public final b:I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 3
-
-    const-wide/16 v0, -0x1
-
-    const/4 v2, 0x1
-
-    .line 1
-    invoke-direct {p0, v0, v1, v2}, Lp81;-><init>(JZ)V
-
-    return-void
-.end method
-
-.method public constructor <init>(JZ)V
+.method public constructor <init>(Lcpg;)V
     .locals 1
 
-    const/4 v0, 0x2
+    sget v0, Lu8b;->u:I
 
-    .line 2
-    invoke-direct {p0, p1, p2, v0}, Lih;-><init>(JI)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
-    iput-boolean p3, p0, Lp81;->v0:Z
+    iput-object p1, p0, Lp81;->a:Lcpg;
+
+    sget p1, Lt8b;->I:I
+
+    iput p1, p0, Lp81;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d()Z
+.method public final a()I
     .locals 1
 
-    iget-boolean v0, p0, Lp81;->v0:Z
+    const/4 v0, 0x4
 
     return v0
 .end method
 
-.method public final l(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;ZZ)Landroid/animation/Animator;
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    new-instance p1, Landroid/animation/AnimatorSet;
+    const/4 v0, 0x1
 
-    invoke-direct {p1}, Landroid/animation/AnimatorSet;-><init>()V
+    if-ne p0, p1, :cond_0
 
-    new-instance p5, Ljava/util/ArrayList;
+    return v0
 
-    invoke-direct {p5}, Ljava/util/ArrayList;-><init>()V
+    :cond_0
+    instance-of v1, p1, Lp81;
 
-    if-eqz p4, :cond_0
-
-    if-eqz p3, :cond_0
-
-    sget-object p2, Landroid/view/View;->ALPHA:Landroid/util/Property;
-
-    const/4 p4, 0x2
-
-    new-array p4, p4, [F
-
-    fill-array-data p4, :array_0
-
-    invoke-static {p3, p2, p4}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
-
-    move-result-object p2
-
-    invoke-interface {p5, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    if-nez v1, :cond_1
 
     goto :goto_0
 
-    :cond_0
-    if-nez p4, :cond_1
+    :cond_1
+    check-cast p1, Lp81;
 
-    if-eqz p2, :cond_1
+    iget-object v1, p0, Lp81;->a:Lcpg;
 
-    sget-object p3, Landroid/view/View;->ALPHA:Landroid/util/Property;
+    iget-object p1, p1, Lp81;->a:Lcpg;
 
-    const/4 p4, 0x1
+    invoke-virtual {v1, p1}, Lcpg;->equals(Ljava/lang/Object;)Z
 
-    new-array p4, p4, [F
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    sget-wide v1, Lu8b;->p:J
+
+    cmp-long p1, v1, v1
+
+    if-eqz p1, :cond_3
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_3
+    return v0
+.end method
+
+.method public final g()Z
+    .locals 1
 
     const/4 v0, 0x0
 
-    const/4 v1, 0x0
-
-    aput v0, p4, v1
-
-    invoke-static {p2, p3, p4}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
-
-    move-result-object p2
-
-    invoke-interface {p5, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    :cond_1
-    :goto_0
-    invoke-virtual {p1, p5}, Landroid/animation/AnimatorSet;->playTogether(Ljava/util/Collection;)V
-
-    return-object p1
-
-    :array_0
-    .array-data 4
-        0x0
-        0x3f800000    # 1.0f
-    .end array-data
+    return v0
 .end method
 
-.method public final n(Landroid/view/View;)V
-    .locals 0
+.method public final getItemId()J
+    .locals 2
 
-    return-void
+    sget-wide v0, Lu8b;->p:J
+
+    return-wide v0
+.end method
+
+.method public final getTitle()Lhpg;
+    .locals 1
+
+    iget-object v0, p0, Lp81;->a:Lcpg;
+
+    return-object v0
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    iget-object v0, p0, Lp81;->a:Lcpg;
+
+    iget v0, v0, Lcpg;->c:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    const/4 v2, 0x0
+
+    invoke-static {v2, v0, v1}, Ljye;->d(III)I
+
+    move-result v0
+
+    sget-wide v2, Lu8b;->p:J
+
+    invoke-static {v0, v1, v2, v3}, Leni;->a(IIJ)I
+
+    move-result v0
+
+    const/4 v1, 0x4
+
+    invoke-static {v1}, Ly12;->t(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final m()I
+    .locals 1
+
+    iget v0, p0, Lp81;->b:I
+
+    return v0
+.end method
+
+.method public final t()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    sget-wide v0, Lu8b;->p:J
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "Header(title="
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v3, p0, Lp81;->a:Lcpg;
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v3, ", sectionId=0, itemId="
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v0, ", sectionItemType="
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/4 v0, 0x4
+
+    invoke-static {v0}, Ln8d;->o(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, ")"
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

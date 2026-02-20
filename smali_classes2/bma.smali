@@ -1,122 +1,31 @@
 .class public final Lbma;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
+.field public final a:Lama;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final b:Ljava/lang/String;
+
+.field public final c:Lorg/webrtc/SessionDescription;
+
+.field public final d:Lorg/webrtc/SessionDescription;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/login/neuroavatars/NeuroAvatarsScreen;)V
+.method public constructor <init>(Lama;Ljava/lang/String;Lorg/webrtc/SessionDescription;Lorg/webrtc/SessionDescription;)V
     .locals 0
 
-    iput-object p2, p0, Lbma;->X:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    iput-object p1, p0, Lbma;->a:Lama;
 
-    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lbma;->b:Ljava/lang/String;
+
+    iput-object p3, p0, Lbma;->c:Lorg/webrtc/SessionDescription;
+
+    iput-object p4, p0, Lbma;->d:Lorg/webrtc/SessionDescription;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lbma;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lbma;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lbma;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lbma;
-
-    iget-object v1, p0, Lbma;->X:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
-
-    invoke-direct {v0, p2, v1}, Lbma;-><init>(Lkotlin/coroutines/Continuation;Lone/me/login/neuroavatars/NeuroAvatarsScreen;)V
-
-    iput-object p1, v0, Lbma;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    iget-object v0, p0, Lbma;->o:Ljava/lang/Object;
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    check-cast v0, Lhja;
-
-    instance-of p1, v0, Lola;
-
-    if-eqz p1, :cond_0
-
-    sget-object p1, Lcm8;->c:Lcm8;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {p1}, Ld3;->p0()Ljm4;
-
-    move-result-object p1
-
-    const/4 v0, 0x0
-
-    const-string v1, ":chat-list"
-
-    invoke-virtual {p1, v1, v0}, Ljm4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
-
-    goto :goto_0
-
-    :cond_0
-    instance-of p1, v0, Lfm4;
-
-    if-eqz p1, :cond_1
-
-    sget-object p1, Lcm8;->c:Lcm8;
-
-    check-cast v0, Lfm4;
-
-    invoke-virtual {p1, v0}, Ld3;->s0(Lfm4;)V
-
-    goto :goto_0
-
-    :cond_1
-    instance-of p1, v0, Lag3;
-
-    if-eqz p1, :cond_2
-
-    iget-object p1, p0, Lbma;->X:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
-
-    invoke-virtual {p1}, La94;->getRouter()Lw4e;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lw4e;->C()Z
-
-    :cond_2
-    :goto_0
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
 .end method

@@ -1,136 +1,188 @@
 .class public final Lp9;
-.super Lsw4;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/app/Application$ActivityLifecycleCallbacks;
 
 
 # instance fields
-.field public final synthetic c:I
+.field public X:Z
+
+.field public a:Ljava/lang/Object;
+
+.field public b:Landroid/app/Activity;
+
+.field public final c:I
+
+.field public d:Z
+
+.field public o:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lzj0;I)V
-    .locals 0
+.method public constructor <init>(Landroid/app/Activity;)V
+    .locals 1
 
-    iput p2, p0, Lp9;->c:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1}, Lsw4;-><init>(Lzj0;)V
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lp9;->d:Z
+
+    iput-boolean v0, p0, Lp9;->o:Z
+
+    iput-boolean v0, p0, Lp9;->X:Z
+
+    iput-object p1, p0, Lp9;->b:Landroid/app/Activity;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
+
+    move-result p1
+
+    iput p1, p0, Lp9;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final h(ILjava/lang/Object;)V
-    .locals 2
+.method public final onActivityCreated(Landroid/app/Activity;Landroid/os/Bundle;)V
+    .locals 0
 
-    iget v0, p0, Lp9;->c:I
+    return-void
+.end method
 
-    packed-switch v0, :pswitch_data_0
+.method public final onActivityDestroyed(Landroid/app/Activity;)V
+    .locals 1
 
-    invoke-static {p1}, Lzj0;->a(I)Z
+    iget-object v0, p0, Lp9;->b:Landroid/app/Activity;
 
-    move-result p2
+    if-ne v0, p1, :cond_0
 
-    if-eqz p2, :cond_0
+    const/4 p1, 0x0
 
-    iget-object p2, p0, Lsw4;->b:Lzj0;
+    iput-object p1, p0, Lp9;->b:Landroid/app/Activity;
 
-    const/4 v0, 0x0
+    const/4 p1, 0x1
 
-    invoke-virtual {p2, p1, v0}, Lzj0;->g(ILjava/lang/Object;)V
+    iput-boolean p1, p0, Lp9;->o:Z
 
     :cond_0
     return-void
+.end method
 
-    :pswitch_0
-    check-cast p2, Lei5;
+.method public final onActivityPaused(Landroid/app/Activity;)V
+    .locals 4
 
-    const/4 v0, 0x0
+    iget-boolean v0, p0, Lp9;->o:Z
+
+    if-eqz v0, :cond_1
+
+    iget-boolean v0, p0, Lp9;->X:Z
+
+    if-nez v0, :cond_1
+
+    iget-boolean v0, p0, Lp9;->d:Z
+
+    if-nez v0, :cond_1
+
+    iget-object v0, p0, Lp9;->a:Ljava/lang/Object;
 
     :try_start_0
-    invoke-static {p2}, Lei5;->B0(Lei5;)Z
+    sget-object v1, Lq9;->c:Ljava/lang/reflect/Field;
 
-    move-result v1
+    invoke-virtual {v1, p1}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-eqz v1, :cond_1
+    move-result-object v1
 
-    if-eqz p2, :cond_1
+    if-ne v1, v0, :cond_1
 
-    iget-object p2, p2, Lei5;->a:Lkg3;
+    invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
 
-    invoke-static {p2}, Lkg3;->H(Lkg3;)Lkg3;
-
-    move-result-object v0
-
-    :cond_1
-    iget-object p2, p0, Lsw4;->b:Lzj0;
-
-    invoke-virtual {p2, p1, v0}, Lzj0;->g(ILjava/lang/Object;)V
+    move-result v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-static {v0}, Lkg3;->f0(Lkg3;)V
+    iget v2, p0, Lp9;->c:I
+
+    if-eq v0, v2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    :try_start_1
+    sget-object v0, Lq9;->b:Ljava/lang/reflect/Field;
+
+    invoke-virtual {v0, p1}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lq9;->g:Landroid/os/Handler;
+
+    new-instance v2, Lbu6;
+
+    const/4 v3, 0x3
+
+    invoke-direct {v2, p1, v3, v1}, Lbu6;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {v0, v2}, Landroid/os/Handler;->postAtFrontOfQueue(Ljava/lang/Runnable;)Z
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lp9;->X:Z
+
+    const/4 p1, 0x0
+
+    iput-object p1, p0, Lp9;->a:Ljava/lang/Object;
 
     return-void
 
     :catchall_0
     move-exception p1
 
-    invoke-static {v0}, Lkg3;->f0(Lkg3;)V
+    const-string v0, "ActivityRecreator"
 
-    throw p1
+    const-string v1, "Exception while fetching field values"
 
-    :pswitch_1
-    check-cast p2, Lkg3;
+    invoke-static {v0, v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    invoke-static {p1}, Lzj0;->b(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v0, p0, Lsw4;->b:Lzj0;
-
-    invoke-virtual {v0, p1, p2}, Lzj0;->g(ILjava/lang/Object;)V
-
+    :cond_1
     :goto_0
     return-void
+.end method
 
-    :pswitch_2
-    check-cast p2, Lei5;
+.method public final onActivityResumed(Landroid/app/Activity;)V
+    .locals 0
 
-    iget-object v0, p0, Lsw4;->b:Lzj0;
-
-    if-nez p2, :cond_3
-
-    const/4 p2, 0x0
-
-    invoke-virtual {v0, p1, p2}, Lzj0;->g(ILjava/lang/Object;)V
-
-    goto :goto_1
-
-    :cond_3
-    invoke-static {p2}, Lei5;->z0(Lei5;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    invoke-virtual {p2}, Lei5;->p0()V
-
-    :cond_4
-    invoke-virtual {v0, p1, p2}, Lzj0;->g(ILjava/lang/Object;)V
-
-    :goto_1
     return-void
+.end method
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+.method public final onActivitySaveInstanceState(Landroid/app/Activity;Landroid/os/Bundle;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final onActivityStarted(Landroid/app/Activity;)V
+    .locals 1
+
+    iget-object v0, p0, Lp9;->b:Landroid/app/Activity;
+
+    if-ne v0, p1, :cond_0
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lp9;->d:Z
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onActivityStopped(Landroid/app/Activity;)V
+    .locals 0
+
+    return-void
 .end method

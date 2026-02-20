@@ -1,116 +1,145 @@
-.class public final synthetic Ln68;
-.super Ljava/lang/Object;
+.class public final Ln68;
+.super Lk2;
 .source "SourceFile"
-
-# interfaces
-.implements Lnm4;
 
 
 # instance fields
-.field public final synthetic a:J
+.field public final X:Ljava/lang/Object;
 
-.field public final synthetic b:J
+.field public final synthetic d:I
 
-.field public final synthetic c:Lcj8;
-
-.field public final synthetic d:F
-
-.field public final synthetic o:Ljava/lang/Long;
+.field public final o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(JJLcj8;FLjava/lang/Long;)V
-    .locals 0
+.method public constructor <init>(Landroidx/recyclerview/widget/GridLayoutManager;Lsxd;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x1
 
-    iput-wide p1, p0, Ln68;->a:J
+    iput v0, p0, Ln68;->d:I
 
-    iput-wide p3, p0, Ln68;->b:J
+    .line 1
+    invoke-direct {p0}, Lk2;-><init>()V
 
-    iput-object p5, p0, Ln68;->c:Lcj8;
+    .line 2
+    iput-object p1, p0, Ln68;->o:Ljava/lang/Object;
 
-    iput p6, p0, Ln68;->d:F
+    .line 3
+    iput-object p2, p0, Ln68;->X:Ljava/lang/Object;
 
-    iput-object p7, p0, Ln68;->o:Ljava/lang/Long;
+    return-void
+.end method
+
+.method public constructor <init>(Lone/me/keyboardmedia/emoji/KeyboardEmojiWidget;Landroidx/recyclerview/widget/RecyclerView;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Ln68;->d:I
+
+    iput-object p1, p0, Ln68;->o:Ljava/lang/Object;
+
+    iput-object p2, p0, Ln68;->X:Ljava/lang/Object;
+
+    .line 4
+    invoke-direct {p0}, Lk2;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 8
+.method public final Y(I)I
+    .locals 3
 
-    new-instance v0, Landroidx/fragment/app/FragmentWrapperWidget;
+    iget v0, p0, Ln68;->d:I
 
-    iget-wide v1, p0, Ln68;->a:J
+    packed-switch v0, :pswitch_data_0
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    iget-object v0, p0, Ln68;->X:Ljava/lang/Object;
 
-    move-result-object v1
+    check-cast v0, Lsxd;
 
-    new-instance v2, Lktb;
+    invoke-virtual {v0}, Lsxd;->j()I
 
-    const-string v3, "ru.ok.tamtam.extra.CHAT_ID"
+    move-result v1
 
-    invoke-direct {v2, v3, v1}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    if-ge p1, v1, :cond_1
 
-    iget-wide v3, p0, Ln68;->b:J
+    invoke-virtual {v0, p1}, Lsxd;->l(I)I
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    move-result p1
 
-    move-result-object v1
+    sget v0, Ldkb;->k:I
 
-    new-instance v3, Lktb;
+    if-eq p1, v0, :cond_0
 
-    const-string v4, "ru.ok.tamtam.extra.MESSAGE_ID"
+    sget v0, Ldkb;->l:I
 
-    invoke-direct {v3, v4, v1}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    if-eq p1, v0, :cond_0
 
-    new-instance v1, Lktb;
+    sget v0, Lkeb;->s:I
 
-    const-string v4, "ru.ok.tamtam.extra.LOCATION"
+    if-ne p1, v0, :cond_1
 
-    iget-object v5, p0, Ln68;->c:Lcj8;
+    :cond_0
+    iget-object p1, p0, Ln68;->o:Ljava/lang/Object;
 
-    invoke-direct {v1, v4, v5}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    check-cast p1, Landroidx/recyclerview/widget/GridLayoutManager;
 
-    iget v4, p0, Ln68;->d:F
+    iget p1, p1, Landroidx/recyclerview/widget/GridLayoutManager;->F:I
 
-    invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    goto :goto_0
 
-    move-result-object v4
+    :cond_1
+    const/4 p1, 0x1
 
-    new-instance v5, Lktb;
+    :goto_0
+    return p1
 
-    const-string v6, "ru.ok.tamtam.extra.ZOOM"
+    :pswitch_0
+    iget-object v0, p0, Ln68;->o:Ljava/lang/Object;
 
-    invoke-direct {v5, v6, v4}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    check-cast v0, Lone/me/keyboardmedia/emoji/KeyboardEmojiWidget;
 
-    new-instance v4, Lktb;
+    iget-object v1, v0, Lone/me/keyboardmedia/emoji/KeyboardEmojiWidget;->X:Lbg5;
 
-    const-string v6, "ru.ok.tamtam.extra.CONTACT_ID"
+    invoke-virtual {v1}, Lfg8;->j()I
 
-    iget-object v7, p0, Ln68;->o:Ljava/lang/Long;
+    move-result v1
 
-    invoke-direct {v4, v6, v7}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    const/4 v2, 0x1
 
-    filled-new-array {v2, v3, v1, v5, v4}, [Lktb;
+    if-ge p1, v1, :cond_2
 
-    move-result-object v1
+    iget-object v0, v0, Lone/me/keyboardmedia/emoji/KeyboardEmojiWidget;->X:Lbg5;
 
-    invoke-static {v1}, Laaj;->c([Lktb;)Landroid/os/Bundle;
+    invoke-virtual {v0, p1}, Lbg5;->l(I)I
 
-    move-result-object v1
+    move-result p1
 
-    const v2, 0x7a3a1dca
+    sget v0, Lkeb;->r:I
 
-    const-class v3, Lru/ok/messages/location/FrgLocationMap;
+    if-ne p1, v0, :cond_2
 
-    const-string v4, "ru.ok.messages.location.FrgLocationMap"
+    iget-object p1, p0, Ln68;->X:Ljava/lang/Object;
 
-    invoke-direct {v0, v2, v3, v4, v1}, Landroidx/fragment/app/FragmentWrapperWidget;-><init>(ILjava/lang/Class;Ljava/lang/String;Landroid/os/Bundle;)V
+    check-cast p1, Landroidx/recyclerview/widget/RecyclerView;
 
-    return-object v0
+    invoke-static {p1}, Lpuj;->c(Landroidx/recyclerview/widget/RecyclerView;)Landroidx/recyclerview/widget/GridLayoutManager;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_2
+
+    iget v2, p1, Landroidx/recyclerview/widget/GridLayoutManager;->F:I
+
+    :cond_2
+    return v2
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

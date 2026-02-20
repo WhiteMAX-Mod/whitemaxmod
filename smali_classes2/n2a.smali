@@ -1,59 +1,153 @@
 .class public final Ln2a;
-.super Lo84;
+.super Lpdg;
 .source "SourceFile"
+
+# interfaces
+.implements Lat6;
 
 
 # instance fields
-.field public X:Ljava/util/Iterator;
+.field public synthetic X:Ljava/lang/Throwable;
 
-.field public Y:I
+.field public final synthetic Y:Lone/me/messages/list/ui/MessagesListWidget;
 
-.field public synthetic Z:Ljava/lang/Object;
-
-.field public d:J
-
-.field public o:J
-
-.field public final synthetic t0:Lo2a;
-
-.field public u0:I
+.field public final synthetic o:I
 
 
 # direct methods
-.method public constructor <init>(Lo2a;Lo84;)V
+.method public synthetic constructor <init>(Lone/me/messages/list/ui/MessagesListWidget;Lkotlin/coroutines/Continuation;I)V
     .locals 0
 
-    iput-object p1, p0, Ln2a;->t0:Lo2a;
+    iput p3, p0, Ln2a;->o:I
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Ln2a;->Y:Lone/me/messages/list/ui/MessagesListWidget;
+
+    const/4 p1, 0x3
+
+    invoke-direct {p0, p1, p2}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Ln2a;->o:I
+
+    check-cast p1, Ld96;
+
+    check-cast p2, Ljava/lang/Throwable;
+
+    check-cast p3, Lkotlin/coroutines/Continuation;
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance p1, Ln2a;
+
+    iget-object v0, p0, Ln2a;->Y:Lone/me/messages/list/ui/MessagesListWidget;
+
+    const/4 v1, 0x1
+
+    invoke-direct {p1, v0, p3, v1}, Ln2a;-><init>(Lone/me/messages/list/ui/MessagesListWidget;Lkotlin/coroutines/Continuation;I)V
+
+    iput-object p2, p1, Ln2a;->X:Ljava/lang/Throwable;
+
+    sget-object p2, Lmah;->a:Lmah;
+
+    invoke-virtual {p1, p2}, Ln2a;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+
+    :pswitch_0
+    new-instance p1, Ln2a;
+
+    iget-object v0, p0, Ln2a;->Y:Lone/me/messages/list/ui/MessagesListWidget;
+
+    const/4 v1, 0x0
+
+    invoke-direct {p1, v0, p3, v1}, Ln2a;-><init>(Lone/me/messages/list/ui/MessagesListWidget;Lkotlin/coroutines/Continuation;I)V
+
+    iput-object p2, p1, Ln2a;->X:Ljava/lang/Throwable;
+
+    sget-object p2, Lmah;->a:Lmah;
+
+    invoke-virtual {p1, p2}, Ln2a;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+    .locals 4
 
-    iput-object p1, p0, Ln2a;->Z:Ljava/lang/Object;
+    iget v0, p0, Ln2a;->o:I
 
-    iget p1, p0, Ln2a;->u0:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-object v0, p0, Ln2a;->X:Ljava/lang/Throwable;
 
-    or-int/2addr p1, v0
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    iput p1, p0, Ln2a;->u0:I
+    instance-of p1, v0, Ljava/util/concurrent/CancellationException;
 
-    const-wide/16 v0, 0x0
+    if-nez p1, :cond_0
 
-    const/4 p1, 0x0
+    iget-object p1, p0, Ln2a;->Y:Lone/me/messages/list/ui/MessagesListWidget;
 
-    iget-object v2, p0, Ln2a;->t0:Lo2a;
+    iget-object p1, p1, Lone/me/messages/list/ui/MessagesListWidget;->a:Ljava/lang/String;
 
-    invoke-virtual {v2, v0, v1, p0, p1}, Lo2a;->a(JLo84;Ljava/util/List;)Ljava/lang/Object;
+    new-instance v1, Lone/me/messages/list/ui/MessagesListHandleEventException;
 
-    move-result-object p1
+    const-string v2, "ONEME-29384"
+
+    const/4 v3, 0x0
+
+    invoke-direct {v1, v2, v3, v0}, Lru/ok/tamtam/exception/IssueKeyException;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    const-string v0, "fail to handleEvent"
+
+    invoke-static {p1, v0, v1}, Ltej;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    sget-object p1, Lmah;->a:Lmah;
 
     return-object p1
+
+    :cond_0
+    throw v0
+
+    :pswitch_0
+    iget-object v0, p0, Ln2a;->X:Ljava/lang/Throwable;
+
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Ln2a;->Y:Lone/me/messages/list/ui/MessagesListWidget;
+
+    iget-object p1, p1, Lone/me/messages/list/ui/MessagesListWidget;->a:Ljava/lang/String;
+
+    const/4 v1, 0x0
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    const-string v2, "messages list update error"
+
+    invoke-static {p1, v0, v2, v1}, Ltej;->i(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

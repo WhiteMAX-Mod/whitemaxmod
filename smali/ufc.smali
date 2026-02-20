@@ -2,601 +2,520 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lwyg;
+
 
 # instance fields
-.field public final a:Landroid/text/TextPaint;
+.field public final a:Lxee;
 
-.field public final b:Landroid/text/TextDirectionHeuristic;
+.field public final b:Lilc;
 
-.field public final c:I
+.field public final c:Lk7a;
 
-.field public final d:I
+.field public d:J
+
+.field public final synthetic e:Lvfc;
 
 
 # direct methods
-.method public constructor <init>(Landroid/text/PrecomputedText$Params;)V
+.method public constructor <init>(Lvfc;Lho4;)V
     .locals 1
 
-    .line 12
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 13
-    invoke-static {p1}, Lw4;->m(Landroid/text/PrecomputedText$Params;)Landroid/text/TextPaint;
+    iput-object p1, p0, Lufc;->e:Lvfc;
 
-    move-result-object v0
+    new-instance p1, Lxee;
 
-    iput-object v0, p0, Lufc;->a:Landroid/text/TextPaint;
+    const/4 v0, 0x0
 
-    .line 14
-    invoke-static {p1}, Lw4;->l(Landroid/text/PrecomputedText$Params;)Landroid/text/TextDirectionHeuristic;
+    invoke-direct {p1, p2, v0, v0}, Lxee;-><init>(Lho4;Lya5;Lra5;)V
 
-    move-result-object v0
+    iput-object p1, p0, Lufc;->a:Lxee;
 
-    iput-object v0, p0, Lufc;->b:Landroid/text/TextDirectionHeuristic;
+    new-instance p1, Lilc;
 
-    .line 15
-    invoke-static {p1}, Lw4;->c(Landroid/text/PrecomputedText$Params;)I
+    const/16 p2, 0xe
 
-    move-result v0
+    const/4 v0, 0x0
 
-    iput v0, p0, Lufc;->c:I
+    invoke-direct {p1, v0, p2}, Lilc;-><init>(CI)V
 
-    .line 16
-    invoke-static {p1}, Lw4;->A(Landroid/text/PrecomputedText$Params;)I
+    iput-object p1, p0, Lufc;->b:Lilc;
 
-    move-result p1
+    new-instance p1, Lk7a;
 
-    iput p1, p0, Lufc;->d:I
+    const/4 p2, 0x1
 
-    return-void
-.end method
+    invoke-direct {p1, p2}, Ldn4;-><init>(I)V
 
-.method public constructor <init>(Landroid/text/TextPaint;Landroid/text/TextDirectionHeuristic;II)V
-    .locals 2
+    iput-object p1, p0, Lufc;->c:Lk7a;
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-wide p1, -0x7fffffffffffffffL    # -4.9E-324
 
-    .line 2
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x1d
-
-    if-lt v0, v1, :cond_0
-
-    .line 3
-    invoke-static {p1}, Ltfc;->i(Landroid/text/TextPaint;)Landroid/text/PrecomputedText$Params$Builder;
-
-    move-result-object v0
-
-    .line 4
-    invoke-static {v0, p3}, Lw4;->k(Landroid/text/PrecomputedText$Params$Builder;I)Landroid/text/PrecomputedText$Params$Builder;
-
-    move-result-object v0
-
-    .line 5
-    invoke-static {v0, p4}, Ltfc;->g(Landroid/text/PrecomputedText$Params$Builder;I)Landroid/text/PrecomputedText$Params$Builder;
-
-    move-result-object v0
-
-    .line 6
-    invoke-static {v0, p2}, Ltfc;->h(Landroid/text/PrecomputedText$Params$Builder;Landroid/text/TextDirectionHeuristic;)Landroid/text/PrecomputedText$Params$Builder;
-
-    move-result-object v0
-
-    .line 7
-    invoke-static {v0}, Ltfc;->q(Landroid/text/PrecomputedText$Params$Builder;)V
-
-    .line 8
-    :cond_0
-    iput-object p1, p0, Lufc;->a:Landroid/text/TextPaint;
-
-    .line 9
-    iput-object p2, p0, Lufc;->b:Landroid/text/TextDirectionHeuristic;
-
-    .line 10
-    iput p3, p0, Lufc;->c:I
-
-    .line 11
-    iput p4, p0, Lufc;->d:I
+    iput-wide p1, p0, Lufc;->d:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final a(JIIILuyg;)V
+    .locals 7
 
-    if-ne p1, p0, :cond_0
+    iget-object v0, p0, Lufc;->a:Lxee;
+
+    move-wide v1, p1
+
+    move v3, p3
+
+    move v4, p4
+
+    move v5, p5
+
+    move-object v6, p6
+
+    invoke-virtual/range {v0 .. v6}, Lxee;->a(JIIILuyg;)V
+
+    :cond_0
+    :goto_0
+    iget-object p1, p0, Lufc;->a:Lxee;
+
+    const/4 p2, 0x0
+
+    invoke-virtual {p1, p2}, Lxee;->u(Z)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_6
+
+    iget-object p1, p0, Lufc;->c:Lk7a;
+
+    invoke-virtual {p1}, Ldn4;->x()V
+
+    iget-object p3, p0, Lufc;->a:Lxee;
+
+    iget-object p4, p0, Lufc;->b:Lilc;
+
+    invoke-virtual {p3, p4, p1, p2, p2}, Lxee;->z(Lilc;Ldn4;IZ)I
+
+    move-result p3
+
+    const/4 p4, -0x4
+
+    if-ne p3, p4, :cond_1
+
+    invoke-virtual {p1}, Ldn4;->A()V
+
+    goto :goto_1
+
+    :cond_1
+    const/4 p1, 0x0
+
+    :goto_1
+    if-nez p1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-wide p3, p1, Ldn4;->Y:J
+
+    iget-object p5, p0, Lufc;->e:Lvfc;
+
+    iget-object p5, p5, Lvfc;->s0:Ljava/lang/Object;
+
+    check-cast p5, Lrr;
+
+    invoke-virtual {p5, p1}, Lxh0;->a(Lk7a;)Lf7a;
+
+    move-result-object p1
+
+    if-nez p1, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget-object p1, p1, Lf7a;->a:[Ld7a;
+
+    aget-object p1, p1, p2
+
+    check-cast p1, Leo5;
+
+    iget-object p2, p1, Leo5;->a:Ljava/lang/String;
+
+    iget-object p5, p1, Leo5;->b:Ljava/lang/String;
+
+    const-string p6, "urn:mpeg:dash:event:2012"
+
+    invoke-virtual {p6, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_0
+
+    const-string p2, "1"
+
+    invoke-virtual {p2, p5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_4
+
+    const-string p2, "2"
+
+    invoke-virtual {p2, p5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_4
+
+    const-string p2, "3"
+
+    invoke-virtual {p2, p5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_0
+
+    :cond_4
+    const-wide p5, -0x7fffffffffffffffL    # -4.9E-324
+
+    :try_start_0
+    iget-object p1, p1, Leo5;->e:[B
+
+    invoke-static {p1}, Lvih;->q([B)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lvih;->X(Ljava/lang/String;)J
+
+    move-result-wide p1
+    :try_end_0
+    .catch Landroidx/media3/common/ParserException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_2
+
+    :catch_0
+    move-wide p1, p5
+
+    :goto_2
+    cmp-long p5, p1, p5
+
+    if-nez p5, :cond_5
+
+    goto :goto_0
+
+    :cond_5
+    new-instance p5, Lsfc;
+
+    invoke-direct {p5, p3, p4, p1, p2}, Lsfc;-><init>(JJ)V
+
+    iget-object p1, p0, Lufc;->e:Lvfc;
+
+    iget-object p1, p1, Lvfc;->b:Landroid/os/Handler;
+
+    const/4 p2, 0x1
+
+    invoke-virtual {p1, p2, p5}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     goto/16 :goto_0
 
+    :cond_6
+    iget-object p1, p0, Lufc;->a:Lxee;
+
+    iget-object p2, p1, Lxee;->a:Lqee;
+
+    monitor-enter p1
+
+    :try_start_1
+    iget p3, p1, Lxee;->s:I
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    if-nez p3, :cond_7
+
+    monitor-exit p1
+
+    const-wide/16 p3, -0x1
+
+    goto :goto_3
+
+    :cond_7
+    :try_start_2
+    invoke-virtual {p1, p3}, Lxee;->f(I)J
+
+    move-result-wide p3
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    monitor-exit p1
+
+    :goto_3
+    invoke-virtual {p2, p3, p4}, Lqee;->c(J)V
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    move-object p2, v0
+
+    :try_start_3
+    monitor-exit p1
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    throw p2
+.end method
+
+.method public final b(Lmwb;II)V
+    .locals 1
+
+    iget-object p3, p0, Lufc;->a:Lxee;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p3, p1, p2, v0}, Lxee;->b(Lmwb;II)V
+
+    return-void
+.end method
+
+.method public final c(Lyj4;IZ)I
+    .locals 1
+
+    iget-object v0, p0, Lufc;->a:Lxee;
+
+    invoke-virtual {v0, p1, p2, p3}, Lxee;->c(Lyj4;IZ)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final d(Lol6;)V
+    .locals 1
+
+    iget-object v0, p0, Lufc;->a:Lxee;
+
+    invoke-virtual {v0, p1}, Lxee;->d(Lol6;)V
+
+    return-void
+.end method
+
+.method public final e(J)Z
+    .locals 10
+
+    iget-object v0, p0, Lufc;->e:Lvfc;
+
+    iget-object v1, v0, Lvfc;->t0:Ljava/lang/Object;
+
+    check-cast v1, Loi4;
+
+    iget-object v2, v0, Lvfc;->Z:Ljava/lang/Object;
+
+    check-cast v2, Llbb;
+
+    iget-boolean v3, v1, Loi4;->d:Z
+
+    const/4 v4, 0x0
+
+    if-nez v3, :cond_0
+
+    return v4
+
     :cond_0
-    instance-of v0, p1, Lufc;
+    iget-boolean v3, v0, Lvfc;->o:Z
 
-    if-nez v0, :cond_1
+    const/4 v5, 0x1
 
-    goto/16 :goto_1
+    if-eqz v3, :cond_1
+
+    return v5
 
     :cond_1
-    check-cast p1, Lufc;
+    iget-wide v6, v1, Loi4;->h:J
 
-    iget v0, p0, Lufc;->c:I
+    iget-object v1, v0, Lvfc;->c:Ljava/util/TreeMap;
 
-    iget v1, p1, Lufc;->c:I
+    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    if-eq v0, v1, :cond_2
+    move-result-object v3
 
-    goto/16 :goto_1
+    invoke-virtual {v1, v3}, Ljava/util/TreeMap;->ceilingEntry(Ljava/lang/Object;)Ljava/util/Map$Entry;
 
-    :cond_2
-    iget v0, p0, Lufc;->d:I
-
-    iget v1, p1, Lufc;->d:I
-
-    if-eq v0, v1, :cond_3
-
-    goto/16 :goto_1
-
-    :cond_3
-    iget-object v0, p0, Lufc;->a:Landroid/text/TextPaint;
-
-    invoke-virtual {v0}, Landroid/graphics/Paint;->getTextSize()F
-
-    move-result v1
-
-    iget-object v2, p1, Lufc;->a:Landroid/text/TextPaint;
-
-    invoke-virtual {v2}, Landroid/graphics/Paint;->getTextSize()F
-
-    move-result v3
-
-    cmpl-float v1, v1, v3
+    move-result-object v1
 
     if-eqz v1, :cond_4
 
-    goto/16 :goto_1
+    invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/lang/Long;
+
+    invoke-virtual {v3}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v6
+
+    cmp-long p1, v6, p1
+
+    if-gez p1, :cond_4
+
+    invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Long;
+
+    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide p1
+
+    iget-object v1, v2, Llbb;->a:Ljava/lang/Object;
+
+    check-cast v1, Lgj4;
+
+    iget-wide v6, v1, Lgj4;->N:J
+
+    const-wide v8, -0x7fffffffffffffffL    # -4.9E-324
+
+    cmp-long v3, v6, v8
+
+    if-eqz v3, :cond_2
+
+    cmp-long v3, v6, p1
+
+    if-gez v3, :cond_3
+
+    :cond_2
+    iput-wide p1, v1, Lgj4;->N:J
+
+    :cond_3
+    move p1, v5
+
+    goto :goto_0
 
     :cond_4
-    invoke-virtual {v0}, Landroid/graphics/Paint;->getTextScaleX()F
-
-    move-result v1
-
-    invoke-virtual {v2}, Landroid/graphics/Paint;->getTextScaleX()F
-
-    move-result v3
-
-    cmpl-float v1, v1, v3
-
-    if-eqz v1, :cond_5
-
-    goto/16 :goto_1
-
-    :cond_5
-    invoke-virtual {v0}, Landroid/graphics/Paint;->getTextSkewX()F
-
-    move-result v1
-
-    invoke-virtual {v2}, Landroid/graphics/Paint;->getTextSkewX()F
-
-    move-result v3
-
-    cmpl-float v1, v1, v3
-
-    if-eqz v1, :cond_6
-
-    goto :goto_1
-
-    :cond_6
-    invoke-virtual {v0}, Landroid/graphics/Paint;->getLetterSpacing()F
-
-    move-result v1
-
-    invoke-virtual {v2}, Landroid/graphics/Paint;->getLetterSpacing()F
-
-    move-result v3
-
-    cmpl-float v1, v1, v3
-
-    if-eqz v1, :cond_7
-
-    goto :goto_1
-
-    :cond_7
-    invoke-virtual {v0}, Landroid/graphics/Paint;->getFontFeatureSettings()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v2}, Landroid/graphics/Paint;->getFontFeatureSettings()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v1, v3}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_8
-
-    goto :goto_1
-
-    :cond_8
-    invoke-virtual {v0}, Landroid/graphics/Paint;->getFlags()I
-
-    move-result v1
-
-    invoke-virtual {v2}, Landroid/graphics/Paint;->getFlags()I
-
-    move-result v3
-
-    if-eq v1, v3, :cond_9
-
-    goto :goto_1
-
-    :cond_9
-    invoke-virtual {v0}, Landroid/graphics/Paint;->getTextLocales()Landroid/os/LocaleList;
-
-    move-result-object v1
-
-    invoke-virtual {v2}, Landroid/graphics/Paint;->getTextLocales()Landroid/os/LocaleList;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v3}, Landroid/os/LocaleList;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_a
-
-    goto :goto_1
-
-    :cond_a
-    invoke-virtual {v0}, Landroid/graphics/Paint;->getTypeface()Landroid/graphics/Typeface;
-
-    move-result-object v1
-
-    if-nez v1, :cond_b
-
-    invoke-virtual {v2}, Landroid/graphics/Paint;->getTypeface()Landroid/graphics/Typeface;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_c
-
-    goto :goto_1
-
-    :cond_b
-    invoke-virtual {v0}, Landroid/graphics/Paint;->getTypeface()Landroid/graphics/Typeface;
-
-    move-result-object v0
-
-    invoke-virtual {v2}, Landroid/graphics/Paint;->getTypeface()Landroid/graphics/Typeface;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/graphics/Typeface;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_c
-
-    goto :goto_1
-
-    :cond_c
-    iget-object v0, p0, Lufc;->b:Landroid/text/TextDirectionHeuristic;
-
-    iget-object p1, p1, Lufc;->b:Landroid/text/TextDirectionHeuristic;
-
-    if-ne v0, p1, :cond_d
+    move p1, v4
 
     :goto_0
-    const/4 p1, 0x1
+    if-eqz p1, :cond_6
 
-    return p1
+    iget-boolean p2, v0, Lvfc;->d:Z
 
-    :cond_d
+    if-nez p2, :cond_5
+
+    goto :goto_1
+
+    :cond_5
+    iput-boolean v5, v0, Lvfc;->o:Z
+
+    iput-boolean v4, v0, Lvfc;->d:Z
+
+    iget-object p2, v2, Llbb;->a:Ljava/lang/Object;
+
+    check-cast p2, Lgj4;
+
+    iget-object v0, p2, Lgj4;->D:Landroid/os/Handler;
+
+    iget-object v1, p2, Lgj4;->w:Lzi4;
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+
+    invoke-virtual {p2}, Lgj4;->A()V
+
+    :cond_6
     :goto_1
-    const/4 p1, 0x0
-
     return p1
 .end method
 
-.method public final hashCode()I
-    .locals 13
+.method public final f(Lje3;)Z
+    .locals 7
 
-    iget-object v0, p0, Lufc;->a:Landroid/text/TextPaint;
+    iget-wide v0, p0, Lufc;->d:J
 
-    invoke-virtual {v0}, Landroid/graphics/Paint;->getTextSize()F
+    const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
 
-    move-result v1
+    cmp-long v2, v0, v2
 
-    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    const/4 v3, 0x0
 
-    move-result-object v2
+    const/4 v4, 0x1
 
-    invoke-virtual {v0}, Landroid/graphics/Paint;->getTextScaleX()F
+    if-eqz v2, :cond_0
 
-    move-result v1
+    iget-wide v5, p1, Lje3;->Y:J
 
-    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    cmp-long p1, v0, v5
 
-    move-result-object v3
+    if-gez p1, :cond_0
 
-    invoke-virtual {v0}, Landroid/graphics/Paint;->getTextSkewX()F
+    move p1, v4
 
-    move-result v1
+    goto :goto_0
 
-    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    :cond_0
+    move p1, v3
 
-    move-result-object v4
+    :goto_0
+    iget-object v0, p0, Lufc;->e:Lvfc;
 
-    invoke-virtual {v0}, Landroid/graphics/Paint;->getLetterSpacing()F
+    iget-object v1, v0, Lvfc;->t0:Ljava/lang/Object;
 
-    move-result v1
+    check-cast v1, Loi4;
 
-    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    iget-boolean v1, v1, Loi4;->d:Z
 
-    move-result-object v5
+    if-nez v1, :cond_1
 
-    invoke-virtual {v0}, Landroid/graphics/Paint;->getFlags()I
+    goto :goto_2
 
-    move-result v1
+    :cond_1
+    iget-boolean v1, v0, Lvfc;->o:Z
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    if-eqz v1, :cond_2
 
-    move-result-object v6
+    goto :goto_1
 
-    invoke-virtual {v0}, Landroid/graphics/Paint;->getTextLocales()Landroid/os/LocaleList;
+    :cond_2
+    if-eqz p1, :cond_4
 
-    move-result-object v7
+    iget-boolean p1, v0, Lvfc;->d:Z
 
-    invoke-virtual {v0}, Landroid/graphics/Paint;->getTypeface()Landroid/graphics/Typeface;
+    if-nez p1, :cond_3
 
-    move-result-object v8
+    :goto_1
+    return v4
 
-    invoke-virtual {v0}, Landroid/graphics/Paint;->isElegantTextHeight()Z
+    :cond_3
+    iput-boolean v4, v0, Lvfc;->o:Z
 
-    move-result v0
+    iput-boolean v3, v0, Lvfc;->d:Z
 
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    iget-object p1, v0, Lvfc;->Z:Ljava/lang/Object;
 
-    move-result-object v9
+    check-cast p1, Llbb;
 
-    iget v0, p0, Lufc;->c:I
+    iget-object p1, p1, Llbb;->a:Ljava/lang/Object;
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    check-cast p1, Lgj4;
 
-    move-result-object v11
+    iget-object v0, p1, Lgj4;->D:Landroid/os/Handler;
 
-    iget v0, p0, Lufc;->d:I
+    iget-object v1, p1, Lgj4;->w:Lzi4;
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    move-result-object v12
+    invoke-virtual {p1}, Lgj4;->A()V
 
-    iget-object v10, p0, Lufc;->b:Landroid/text/TextDirectionHeuristic;
+    return v4
 
-    filled-new-array/range {v2 .. v12}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "{"
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "textSize="
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v2, p0, Lufc;->a:Landroid/text/TextPaint;
-
-    invoke-virtual {v2}, Landroid/graphics/Paint;->getTextSize()F
-
-    move-result v3
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v3, ", textScaleX="
-
-    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2}, Landroid/graphics/Paint;->getTextScaleX()F
-
-    move-result v3
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v3, ", textSkewX="
-
-    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2}, Landroid/graphics/Paint;->getTextSkewX()F
-
-    move-result v3
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v3, ", letterSpacing="
-
-    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2}, Landroid/graphics/Paint;->getLetterSpacing()F
-
-    move-result v3
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v3, ", elegantTextHeight="
-
-    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2}, Landroid/graphics/Paint;->isElegantTextHeight()Z
-
-    move-result v3
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v3, ", textLocale="
-
-    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2}, Landroid/graphics/Paint;->getTextLocales()Landroid/os/LocaleList;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v3, ", typeface="
-
-    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2}, Landroid/graphics/Paint;->getTypeface()Landroid/graphics/Typeface;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v3, ", variationSettings="
-
-    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2}, Landroid/graphics/Paint;->getFontVariationSettings()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, ", textDir="
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v2, p0, Lufc;->b:Landroid/text/TextDirectionHeuristic;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, ", breakStrategy="
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v2, p0, Lufc;->c:I
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, ", hyphenationFrequency="
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v2, p0, Lufc;->d:I
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "}"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :cond_4
+    :goto_2
+    return v3
 .end method

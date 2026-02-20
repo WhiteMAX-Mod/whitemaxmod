@@ -1,167 +1,54 @@
-.class public final Lakd;
+.class public abstract Lakd;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
-# instance fields
-.field public final a:Lbjd;
+# static fields
+.field public static audio_record_active_call_error_snackbar_title:I = 0x7f130086
 
-.field public final b:J
+.field public static audio_record_confirm_exit_accept:I = 0x7f130089
 
-.field public final c:Ljava/lang/String;
+.field public static audio_record_confirm_exit_description:I = 0x7f13008a
 
+.field public static audio_record_confirm_exit_title:I = 0x7f13008b
 
-# direct methods
-.method public constructor <init>(JLbjd;Ljava/lang/String;)V
-    .locals 0
+.field public static audio_record_error_common:I = 0x7f13008e
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static audio_record_error_limit:I = 0x7f13008f
 
-    iput-object p3, p0, Lakd;->a:Lbjd;
+.field public static audio_record_error_short:I = 0x7f130090
 
-    iput-wide p1, p0, Lakd;->b:J
+.field public static audio_record_hold_to_start:I = 0x7f130091
 
-    iput-object p4, p0, Lakd;->c:Ljava/lang/String;
+.field public static channel_input_hint:I = 0x7f1302c3
 
-    return-void
-.end method
+.field public static chat_input_hint:I = 0x7f13031c
 
+.field public static messagewrite_edit_quote_title:I = 0x7f13070d
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 5
+.field public static reply_quote_self:I = 0x7f130ced
 
-    const/4 v0, 0x1
+.field public static reply_quote_to_somebody:I = 0x7f130cee
 
-    if-ne p0, p1, :cond_0
+.field public static video_message_record_error_common:I = 0x7f130ef5
 
-    return v0
+.field public static video_message_record_error_no_camera:I = 0x7f130ef6
 
-    :cond_0
-    instance-of v1, p1, Lakd;
+.field public static video_record_active_call_error_snackbar_title:I = 0x7f130f01
 
-    if-nez v1, :cond_1
+.field public static writebar__add_link_button:I = 0x7f130f1e
 
-    goto :goto_0
+.field public static writebar__add_link_error_has_space:I = 0x7f130f1f
 
-    :cond_1
-    check-cast p1, Lakd;
+.field public static writebar__add_link_error_not_valid_link:I = 0x7f130f20
 
-    iget-object v1, p0, Lakd;->a:Lbjd;
+.field public static writebar__add_link_error_not_valid_scheme:I = 0x7f130f21
 
-    iget-object v2, p1, Lakd;->a:Lbjd;
+.field public static writebar__add_link_error_short_link:I = 0x7f130f22
 
-    invoke-static {v1, v2}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+.field public static writebar__add_link_title:I = 0x7f130f23
 
-    move-result v1
+.field public static writebar_commands_not_found:I = 0x7f130f24
 
-    if-nez v1, :cond_2
+.field public static writebar_mentions_not_found:I = 0x7f130f25
 
-    goto :goto_0
-
-    :cond_2
-    iget-wide v1, p0, Lakd;->b:J
-
-    iget-wide v3, p1, Lakd;->b:J
-
-    cmp-long v1, v1, v3
-
-    if-eqz v1, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget-object v1, p0, Lakd;->c:Ljava/lang/String;
-
-    iget-object p1, p1, Lakd;->c:Ljava/lang/String;
-
-    invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_4
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_4
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 4
-
-    iget-object v0, p0, Lakd;->a:Lbjd;
-
-    invoke-virtual {v0}, Lbjd;->hashCode()I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-wide v2, p0, Lakd;->b:J
-
-    invoke-static {v0, v1, v2, v3}, Lcbh;->i(IIJ)I
-
-    move-result v0
-
-    const-wide/16 v2, 0x0
-
-    invoke-static {v0, v1, v2, v3}, Lcbh;->i(IIJ)I
-
-    move-result v0
-
-    iget-object v2, p0, Lakd;->c:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Lxi4;->e(IILjava/lang/String;)I
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "AddReaction(selfReaction="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lakd;->a:Lbjd;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", msgLocalId="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lakd;->b:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", msgTime=0, effectLottieUrl="
-
-    const-string v2, ", checkIsVisibleInWindow=false)"
-
-    iget-object v3, p0, Lakd;->c:Ljava/lang/String;
-
-    invoke-static {v0, v1, v3, v2}, Lmrf;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
+.field public static writebar_mentions_title:I = 0x7f130f26

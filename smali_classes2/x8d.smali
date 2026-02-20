@@ -1,26 +1,64 @@
-.class public abstract Lx8d;
+.class public final Lx8d;
 .super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lb9d;
 
 
 # static fields
-.field public static oneme_main_bottom_bar:I = 0x7f0a06de
+.field public static final a:Lx8d;
 
-.field public static oneme_main_calls_bottom_item:I = 0x7f0a06df
 
-.field public static oneme_main_calls_container:I = 0x7f0a06e0
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-.field public static oneme_main_chats_bottom_item:I = 0x7f0a06e1
+    new-instance v0, Lx8d;
 
-.field public static oneme_main_chats_container:I = 0x7f0a06e2
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-.field public static oneme_main_contacts_bottom_item:I = 0x7f0a06e3
+    sput-object v0, Lx8d;->a:Lx8d;
 
-.field public static oneme_main_contacts_container:I = 0x7f0a06e4
+    return-void
+.end method
 
-.field public static oneme_main_container:I = 0x7f0a06e5
 
-.field public static oneme_main_root:I = 0x7f0a06e6
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-.field public static oneme_main_settings_bottom_item:I = 0x7f0a06e7
+    const/4 v0, 0x1
 
-.field public static oneme_main_settings_container:I = 0x7f0a06e8
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of p1, p1, Lx8d;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, -0x38ae5339
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "ModePhoto"
+
+    return-object v0
+.end method

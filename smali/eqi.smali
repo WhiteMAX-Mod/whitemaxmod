@@ -1,155 +1,263 @@
 .class public final Leqi;
-.super Lhpi;
+.super Lwgj;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:Lieg;
+.field public final a:Landroid/view/Window;
+
+.field public final b:Lpff;
 
 
 # direct methods
-.method public constructor <init>(Loe8;Lieg;)V
+.method public constructor <init>(Landroid/view/Window;Lpff;)V
     .locals 0
 
-    const/4 p1, 0x4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1}, Lhqi;-><init>(I)V
+    iput-object p1, p0, Leqi;->a:Landroid/view/Window;
 
-    iput-object p2, p0, Leqi;->b:Lieg;
+    iput-object p2, p0, Leqi;->b:Lpff;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/google/android/gms/common/api/Status;)V
-    .locals 1
+.method public final c(I)V
+    .locals 3
 
-    new-instance v0, Lcom/google/android/gms/common/api/ApiException;
+    const/4 v0, 0x1
 
-    invoke-direct {v0, p1}, Lcom/google/android/gms/common/api/ApiException;-><init>(Lcom/google/android/gms/common/api/Status;)V
+    move v1, v0
 
-    iget-object p1, p0, Leqi;->b:Lieg;
+    :goto_0
+    const/16 v2, 0x100
 
-    invoke-virtual {p1, v0}, Lieg;->c(Ljava/lang/Exception;)Z
+    if-gt v1, v2, :cond_4
+
+    and-int v2, p1, v1
+
+    if-nez v2, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    if-eq v1, v0, :cond_3
+
+    const/4 v2, 0x2
+
+    if-eq v1, v2, :cond_2
+
+    const/16 v2, 0x8
+
+    if-eq v1, v2, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    iget-object v2, p0, Leqi;->b:Lpff;
+
+    iget-object v2, v2, Lpff;->a:Ljava/lang/Object;
+
+    check-cast v2, Llbb;
+
+    invoke-virtual {v2}, Llbb;->r()V
+
+    goto :goto_1
+
+    :cond_2
+    invoke-virtual {p0, v2}, Leqi;->i(I)V
+
+    goto :goto_1
+
+    :cond_3
+    const/4 v2, 0x4
+
+    invoke-virtual {p0, v2}, Leqi;->i(I)V
+
+    :goto_1
+    shl-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_4
+    return-void
+.end method
+
+.method public final e(Z)V
+    .locals 2
+
+    const/16 v0, 0x10
+
+    if-eqz p1, :cond_0
+
+    const/high16 p1, 0x8000000
+
+    iget-object v1, p0, Leqi;->a:Landroid/view/Window;
+
+    invoke-virtual {v1, p1}, Landroid/view/Window;->clearFlags(I)V
+
+    const/high16 p1, -0x80000000
+
+    invoke-virtual {v1, p1}, Landroid/view/Window;->addFlags(I)V
+
+    invoke-virtual {p0, v0}, Leqi;->i(I)V
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p0, v0}, Leqi;->j(I)V
 
     return-void
 .end method
 
-.method public final b(Ljava/lang/Exception;)V
-    .locals 1
+.method public final f(Z)V
+    .locals 2
 
-    iget-object v0, p0, Leqi;->b:Lieg;
+    const/16 v0, 0x2000
 
-    invoke-virtual {v0, p1}, Lieg;->c(Ljava/lang/Exception;)Z
+    if-eqz p1, :cond_0
+
+    const/high16 p1, 0x4000000
+
+    iget-object v1, p0, Leqi;->a:Landroid/view/Window;
+
+    invoke-virtual {v1, p1}, Landroid/view/Window;->clearFlags(I)V
+
+    const/high16 p1, -0x80000000
+
+    invoke-virtual {v1, p1}, Landroid/view/Window;->addFlags(I)V
+
+    invoke-virtual {p0, v0}, Leqi;->i(I)V
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p0, v0}, Leqi;->j(I)V
 
     return-void
 .end method
 
-.method public final c(Lepi;)V
+.method public final g()V
     .locals 1
 
-    :try_start_0
-    invoke-virtual {p0, p1}, Leqi;->h(Lepi;)V
-    :try_end_0
-    .catch Landroid/os/DeadObjectException; {:try_start_0 .. :try_end_0} :catch_2
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
+    const/16 v0, 0x800
+
+    invoke-virtual {p0, v0}, Leqi;->j(I)V
+
+    const/16 v0, 0x1000
+
+    invoke-virtual {p0, v0}, Leqi;->i(I)V
 
     return-void
+.end method
 
-    :catch_0
-    move-exception p1
+.method public final h(I)V
+    .locals 4
 
-    iget-object v0, p0, Leqi;->b:Lieg;
+    const/4 v0, 0x1
 
-    invoke-virtual {v0, p1}, Lieg;->c(Ljava/lang/Exception;)Z
+    move v1, v0
 
+    :goto_0
+    const/16 v2, 0x100
+
+    if-gt v1, v2, :cond_4
+
+    and-int v2, p1, v1
+
+    if-nez v2, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    if-eq v1, v0, :cond_3
+
+    const/4 v2, 0x2
+
+    if-eq v1, v2, :cond_2
+
+    const/16 v2, 0x8
+
+    if-eq v1, v2, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    iget-object v2, p0, Leqi;->b:Lpff;
+
+    iget-object v2, v2, Lpff;->a:Ljava/lang/Object;
+
+    check-cast v2, Llbb;
+
+    invoke-virtual {v2}, Llbb;->w()V
+
+    goto :goto_1
+
+    :cond_2
+    invoke-virtual {p0, v2}, Leqi;->j(I)V
+
+    goto :goto_1
+
+    :cond_3
+    const/4 v2, 0x4
+
+    invoke-virtual {p0, v2}, Leqi;->j(I)V
+
+    const/16 v2, 0x400
+
+    iget-object v3, p0, Leqi;->a:Landroid/view/Window;
+
+    invoke-virtual {v3, v2}, Landroid/view/Window;->clearFlags(I)V
+
+    :goto_1
+    shl-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_4
     return-void
+.end method
 
-    :catch_1
-    move-exception p1
+.method public final i(I)V
+    .locals 2
 
-    invoke-static {p1}, Lhqi;->e(Landroid/os/RemoteException;)Lcom/google/android/gms/common/api/Status;
+    iget-object v0, p0, Leqi;->a:Landroid/view/Window;
 
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Leqi;->a(Lcom/google/android/gms/common/api/Status;)V
-
-    return-void
-
-    :catch_2
-    move-exception p1
-
-    invoke-static {p1}, Lhqi;->e(Landroid/os/RemoteException;)Lcom/google/android/gms/common/api/Status;
+    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Leqi;->a(Lcom/google/android/gms/common/api/Status;)V
+    invoke-virtual {v0}, Landroid/view/View;->getSystemUiVisibility()I
 
-    throw p1
-.end method
+    move-result v1
 
-.method public final bridge synthetic d(Lvnb;Z)V
-    .locals 0
+    or-int/2addr p1, v1
+
+    invoke-virtual {v0, p1}, Landroid/view/View;->setSystemUiVisibility(I)V
 
     return-void
 .end method
 
-.method public final f(Lepi;)Z
-    .locals 1
+.method public final j(I)V
+    .locals 2
 
-    iget-object p1, p1, Lepi;->h:Ljava/util/HashMap;
+    iget-object v0, p0, Leqi;->a:Landroid/view/Window;
 
-    const/4 v0, 0x0
+    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
 
-    invoke-virtual {p1, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object v0
 
-    move-result-object p1
+    invoke-virtual {v0}, Landroid/view/View;->getSystemUiVisibility()I
 
-    check-cast p1, Lopi;
+    move-result v1
 
-    const/4 p1, 0x0
+    not-int p1, p1
 
-    return p1
-.end method
+    and-int/2addr p1, v1
 
-.method public final g(Lepi;)[Lvx5;
-    .locals 1
-
-    iget-object p1, p1, Lepi;->h:Ljava/util/HashMap;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lopi;
-
-    const/4 p1, 0x0
-
-    return-object p1
-.end method
-
-.method public final h(Lepi;)V
-    .locals 1
-
-    iget-object p1, p1, Lepi;->h:Ljava/util/HashMap;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lopi;
-
-    iget-object p1, p0, Leqi;->b:Lieg;
-
-    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    invoke-virtual {p1, v0}, Lieg;->d(Ljava/lang/Object;)V
+    invoke-virtual {v0, p1}, Landroid/view/View;->setSystemUiVisibility(I)V
 
     return-void
 .end method

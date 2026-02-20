@@ -1,68 +1,137 @@
-.class public final enum La4j;
-.super Ljava/lang/Enum;
+.class public final La4j;
+.super Lc4j;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/concurrent/Executor;
 
+# instance fields
+.field public final transient c:I
 
-# static fields
-.field public static final enum a:La4j;
+.field public final transient d:I
 
-.field public static final synthetic b:[La4j;
+.field public final synthetic o:Lc4j;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lc4j;II)V
+    .locals 0
 
-    new-instance v0, La4j;
+    iput-object p1, p0, La4j;->o:Lc4j;
 
-    const-string v1, "INSTANCE"
+    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
 
-    const/4 v2, 0x0
+    iput p2, p0, La4j;->c:I
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, La4j;->a:La4j;
-
-    filled-new-array {v0}, [La4j;
-
-    move-result-object v0
-
-    sput-object v0, La4j;->b:[La4j;
+    iput p3, p0, La4j;->d:I
 
     return-void
-.end method
-
-.method public static values()[La4j;
-    .locals 1
-
-    sget-object v0, La4j;->b:[La4j;
-
-    invoke-virtual {v0}, [La4j;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [La4j;
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public final execute(Ljava/lang/Runnable;)V
+.method public final b()I
+    .locals 2
+
+    iget-object v0, p0, La4j;->o:Lc4j;
+
+    invoke-virtual {v0}, Lt3j;->c()I
+
+    move-result v0
+
+    iget v1, p0, La4j;->c:I
+
+    add-int/2addr v0, v1
+
+    iget v1, p0, La4j;->d:I
+
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final c()I
+    .locals 2
+
+    iget-object v0, p0, La4j;->o:Lc4j;
+
+    invoke-virtual {v0}, Lt3j;->c()I
+
+    move-result v0
+
+    iget v1, p0, La4j;->c:I
+
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final d()[Ljava/lang/Object;
     .locals 1
 
-    invoke-static {}, Lkp8;->j()Lkp8;
+    iget-object v0, p0, La4j;->o:Lc4j;
+
+    invoke-virtual {v0}, Lt3j;->d()[Ljava/lang/Object;
 
     move-result-object v0
 
-    iget-object v0, v0, Lkp8;->a:Ljava/lang/Object;
+    return-object v0
+.end method
 
-    check-cast v0, Lz7a;
+.method public final e(II)Lc4j;
+    .locals 1
 
-    invoke-virtual {v0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    iget v0, p0, La4j;->d:I
 
-    return-void
+    invoke-static {p1, p2, v0}, Lrij;->d(III)V
+
+    iget v0, p0, La4j;->c:I
+
+    add-int/2addr p1, v0
+
+    add-int/2addr p2, v0
+
+    iget-object v0, p0, La4j;->o:Lc4j;
+
+    invoke-virtual {v0, p1, p2}, Lc4j;->e(II)Lc4j;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final get(I)Ljava/lang/Object;
+    .locals 1
+
+    iget v0, p0, La4j;->d:I
+
+    invoke-static {p1, v0}, Lrij;->c(II)V
+
+    iget v0, p0, La4j;->c:I
+
+    add-int/2addr p1, v0
+
+    iget-object v0, p0, La4j;->o:Lc4j;
+
+    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final size()I
+    .locals 1
+
+    iget v0, p0, La4j;->d:I
+
+    return v0
+.end method
+
+.method public final bridge synthetic subList(II)Ljava/util/List;
+    .locals 0
+
+    invoke-virtual {p0, p1, p2}, La4j;->e(II)Lc4j;
+
+    move-result-object p1
+
+    return-object p1
 .end method

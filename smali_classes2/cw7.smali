@@ -1,26 +1,26 @@
 .class public final Lcw7;
-.super Lp6g;
+.super Lpdg;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Lys6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;
+.field public final synthetic X:Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;
 
 .field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;)V
     .locals 0
 
-    iput-object p1, p0, Lcw7;->X:Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;
+    iput-object p2, p0, Lcw7;->X:Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;
 
-    const/4 p1, 0x2
+    const/4 p2, 0x2
 
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2, p1}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -30,8 +30,6 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Ls0d;
-
     check-cast p2, Lkotlin/coroutines/Continuation;
 
     invoke-virtual {p0, p1, p2}, Lcw7;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
@@ -40,7 +38,7 @@
 
     check-cast p1, Lcw7;
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    sget-object p2, Lmah;->a:Lmah;
 
     invoke-virtual {p1, p2}, Lcw7;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -52,9 +50,9 @@
 
     new-instance v0, Lcw7;
 
-    iget-object v1, p0, Lcw7;->X:Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;
+    iget-object v1, p0, Lcw7;->X:Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;
 
-    invoke-direct {v0, v1, p2}, Lcw7;-><init>(Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, p2, v1}, Lcw7;-><init>(Lkotlin/coroutines/Continuation;Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;)V
 
     iput-object p1, v0, Lcw7;->o:Ljava/lang/Object;
 
@@ -66,170 +64,93 @@
 
     iget-object v0, p0, Lcw7;->o:Ljava/lang/Object;
 
-    check-cast v0, Ls0d;
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    check-cast v0, Lae4;
 
-    const-class p1, Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;
+    iget-object p1, p0, Lcw7;->X:Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;
 
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p1
-
-    sget-object v1, Lc5j;->a:Ledb;
+    iget-object v1, p1, Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;->x0:Lqu7;
 
     if-nez v1, :cond_0
+
+    new-instance v1, Lqu7;
+
+    iget-object v2, p1, Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;->w0:Lj88;
+
+    invoke-interface {v2}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lo3c;
+
+    iget-object v3, v0, Lae4;->a:Ljbb;
+
+    iget-object v4, v3, Ljbb;->a:Ljava/lang/String;
+
+    iget v3, v3, Ljbb;->b:I
+
+    iget v5, v0, Lae4;->b:I
+
+    invoke-direct {v1, v2, v4, v3, v5}, Lqu7;-><init>(Lo3c;Ljava/lang/String;II)V
+
+    iput-object v1, p1, Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;->x0:Lqu7;
+
+    invoke-virtual {p1}, Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;->J0()Lfhb;
+
+    move-result-object v2
+
+    iget-object v2, v2, Lfhb;->v0:Landroid/widget/EditText;
+
+    invoke-virtual {v2, v1}, Landroid/widget/TextView;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
     goto :goto_0
 
     :cond_0
-    sget-object v2, Lkk8;->d:Lkk8;
+    iget-object v2, v0, Lae4;->a:Ljbb;
 
-    invoke-virtual {v1, v2}, Ledb;->b(Lkk8;)Z
+    iget-object v3, v2, Ljbb;->a:Ljava/lang/String;
 
-    move-result v3
+    iget v2, v2, Ljbb;->b:I
 
-    if-eqz v3, :cond_1
+    invoke-virtual {v1, v2, v3}, Lqu7;->b(ILjava/lang/String;)V
 
-    const-string v3, "Show qr code in bottom sheet"
+    iget-object v1, p1, Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;->x0:Lqu7;
 
-    const/4 v4, 0x0
+    if-eqz v1, :cond_1
 
-    invoke-virtual {v1, v2, p1, v3, v4}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    iget v2, v0, Lae4;->b:I
+
+    iput v2, v1, Lqu7;->X:I
 
     :cond_1
     :goto_0
-    iget-object p1, p0, Lcw7;->X:Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;
+    iget-object v1, v0, Lae4;->c:Lhpg;
 
-    iget-object v1, v0, Ls0d;->b:Landroid/graphics/Bitmap;
-
-    invoke-virtual {v1}, Landroid/graphics/Bitmap;->getHeight()I
-
-    move-result v1
-
-    const/16 v2, 0x4e
-
-    int-to-float v2, v2
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    invoke-static {v2, v3, v1}, Lxi4;->r(FFI)I
-
-    move-result v1
-
-    if-gtz v1, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    invoke-virtual {p1}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->C0()Landroid/view/View;
+    invoke-virtual {p1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v2
-
-    if-nez v2, :cond_3
-
-    new-instance v2, Landroid/view/ViewGroup$LayoutParams;
-
-    const/4 v3, -0x1
-
-    invoke-direct {v2, v3, v1}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
-
-    invoke-virtual {p1}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->C0()Landroid/view/View;
-
-    move-result-object v3
-
-    invoke-virtual {v3, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    :cond_3
-    iget v3, v2, Landroid/view/ViewGroup$LayoutParams;->height:I
-
-    if-ne v3, v1, :cond_4
-
-    goto :goto_1
-
-    :cond_4
-    iput v1, v2, Landroid/view/ViewGroup$LayoutParams;->height:I
-
-    invoke-virtual {p1}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->C0()Landroid/view/View;
+    invoke-virtual {v1, v2}, Lhpg;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
 
     move-result-object v1
 
-    invoke-virtual {v1, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    if-nez v1, :cond_2
 
-    invoke-virtual {p1}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->C0()Landroid/view/View;
+    const-string v1, ""
 
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/view/View;->requestLayout()V
-
-    :goto_1
-    iget-object p1, p0, Lcw7;->X:Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;
-
-    iget-object v1, p1, Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;->F0:Ljld;
-
-    sget-object v2, Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;->P0:[Lz28;
-
-    const/4 v3, 0x1
-
-    aget-object v4, v2, v3
-
-    invoke-interface {v1, p1, v4}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+    :cond_2
+    invoke-virtual {p1}, Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;->J0()Lfhb;
 
     move-result-object p1
 
-    check-cast p1, Landroidx/appcompat/widget/AppCompatImageView;
+    invoke-virtual {p1, v1}, Lfhb;->setHint(Ljava/lang/CharSequence;)V
 
-    new-instance v1, Landroid/widget/FrameLayout$LayoutParams;
+    iget-object v0, v0, Lae4;->a:Ljbb;
 
-    iget-object v4, v0, Ls0d;->b:Landroid/graphics/Bitmap;
+    invoke-virtual {p1, v0}, Lfhb;->setCountry(Ljbb;)V
 
-    invoke-virtual {v4}, Landroid/graphics/Bitmap;->getWidth()I
-
-    move-result v4
-
-    iget-object v5, v0, Ls0d;->b:Landroid/graphics/Bitmap;
-
-    invoke-virtual {v5}, Landroid/graphics/Bitmap;->getHeight()I
-
-    move-result v5
-
-    invoke-direct {v1, v4, v5}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
-
-    const/16 v4, 0x50
-
-    iput v4, v1, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    iget-object p1, p0, Lcw7;->X:Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;
-
-    iget-object v1, p1, Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;->F0:Ljld;
-
-    aget-object v2, v2, v3
-
-    invoke-interface {v1, p1, v2}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroidx/appcompat/widget/AppCompatImageView;
-
-    iget-object v0, v0, Ls0d;->b:Landroid/graphics/Bitmap;
-
-    invoke-virtual {p1, v0}, Landroidx/appcompat/widget/AppCompatImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
-
-    sget-object p1, Lb3h;->a:Lb3h;
+    sget-object p1, Lmah;->a:Lmah;
 
     return-object p1
 .end method

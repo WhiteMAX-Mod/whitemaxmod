@@ -1,73 +1,78 @@
-.class public final enum Luz3;
-.super Ljava/lang/Enum;
+.class public final synthetic Luz3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lis6;
 
-# static fields
-.field public static final enum a:Luz3;
 
-.field public static final enum b:Luz3;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final synthetic c:[Luz3;
+.field public final synthetic b:Landroid/content/Context;
+
+.field public final synthetic c:Lwz3;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public synthetic constructor <init>(Landroid/content/Context;Lwz3;I)V
+    .locals 0
 
-    new-instance v0, Luz3;
+    iput p3, p0, Luz3;->a:I
 
-    const-string v1, "USER_LIST"
+    iput-object p1, p0, Luz3;->b:Landroid/content/Context;
 
-    const/4 v2, 0x0
+    iput-object p2, p0, Luz3;->c:Lwz3;
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Luz3;->a:Luz3;
-
-    new-instance v1, Luz3;
-
-    const-string v2, "EXTERNAL"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Luz3;->b:Luz3;
-
-    filled-new-array {v0, v1}, [Luz3;
-
-    move-result-object v0
-
-    sput-object v0, Luz3;->c:[Luz3;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Luz3;
-    .locals 1
 
-    const-class v0, Luz3;
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 2
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget v0, p0, Luz3;->a:I
 
-    move-result-object p0
+    packed-switch v0, :pswitch_data_0
 
-    check-cast p0, Luz3;
+    iget-object v0, p0, Luz3;->b:Landroid/content/Context;
 
-    return-object p0
-.end method
+    iget-object v1, p0, Luz3;->c:Lwz3;
 
-.method public static values()[Luz3;
-    .locals 1
-
-    sget-object v0, Luz3;->c:[Luz3;
-
-    invoke-virtual {v0}, [Luz3;->clone()Ljava/lang/Object;
+    invoke-static {v0, v1}, Lwz3;->u(Landroid/content/Context;Lwz3;)Landroid/widget/ImageView;
 
     move-result-object v0
 
-    check-cast v0, [Luz3;
+    return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Luz3;->b:Landroid/content/Context;
+
+    iget-object v1, p0, Luz3;->c:Lwz3;
+
+    invoke-static {v0, v1}, Lwz3;->v(Landroid/content/Context;Lwz3;)Landroid/widget/ImageView;
+
+    move-result-object v0
 
     return-object v0
+
+    :pswitch_1
+    iget-object v0, p0, Luz3;->b:Landroid/content/Context;
+
+    iget-object v1, p0, Luz3;->c:Lwz3;
+
+    invoke-static {v0, v1}, Lwz3;->w(Landroid/content/Context;Lwz3;)Landroid/widget/TextView;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

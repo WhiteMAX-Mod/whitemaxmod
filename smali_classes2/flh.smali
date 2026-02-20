@@ -1,188 +1,109 @@
-.class public final Lflh;
-.super Lp6g;
+.class public final enum Lflh;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Lbr6;
 
+# static fields
+.field public static final enum a:Lflh;
 
-# instance fields
-.field public final synthetic X:Lqoh;
+.field public static final enum b:Lflh;
 
-.field public final synthetic Y:Ljlh;
+.field public static final enum c:Lflh;
 
-.field public o:I
+.field public static final synthetic d:[Lflh;
 
 
 # direct methods
-.method public constructor <init>(Lqoh;Ljlh;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 8
 
-    iput-object p1, p0, Lflh;->X:Lqoh;
+    new-instance v0, Lflh;
 
-    iput-object p2, p0, Lflh;->Y:Ljlh;
+    const-string v1, "ACTION_PLAY"
 
-    const/4 p1, 0x2
+    const/4 v2, 0x0
 
-    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lflh;->a:Lflh;
+
+    new-instance v1, Lflh;
+
+    const-string v2, "FIRST_FRAME"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lflh;->b:Lflh;
+
+    new-instance v2, Lflh;
+
+    const-string v3, "FIRST_BYTES"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lflh;->c:Lflh;
+
+    new-instance v3, Lflh;
+
+    const-string v4, "CONTENT_ERROR"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    new-instance v4, Lflh;
+
+    const-string v5, "EMPTY_BUFFER"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    new-instance v5, Lflh;
+
+    const-string v6, "CLOSE_AT_EMPTY_BUFFER"
+
+    const/4 v7, 0x5
+
+    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    filled-new-array/range {v0 .. v5}, [Lflh;
+
+    move-result-object v0
+
+    sput-object v0, Lflh;->d:[Lflh;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lflh;
+    .locals 1
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    const-class v0, Lflh;
 
-    check-cast p1, Lzb4;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    move-result-object p0
 
-    invoke-virtual {p0, p1, p2}, Lflh;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    check-cast p0, Lflh;
 
-    move-result-object p1
-
-    check-cast p1, Lflh;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lflh;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-object p0
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public static values()[Lflh;
+    .locals 1
 
-    new-instance p1, Lflh;
+    sget-object v0, Lflh;->d:[Lflh;
 
-    iget-object v0, p0, Lflh;->X:Lqoh;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    iget-object v1, p0, Lflh;->Y:Ljlh;
+    move-result-object v0
 
-    invoke-direct {p1, v0, v1, p2}, Lflh;-><init>(Lqoh;Ljlh;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
-
-    iget v0, p0, Lflh;->o:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    :goto_0
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    :cond_2
-    iget-object p1, p0, Lflh;->X:Lqoh;
-
-    invoke-interface {p1}, Lqoh;->d()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    iget-object v0, p0, Lo84;->b:Lqb4;
-
-    invoke-static {v0}, Lk2j;->f(Lqb4;)V
-
-    iget-object v0, p0, Lflh;->Y:Ljlh;
-
-    iget-object v2, v0, Ljlh;->h:Lold;
-
-    iget-object v2, v2, Lold;->a:Le7f;
-
-    invoke-interface {v2}, Le7f;->b()Ljava/util/List;
-
-    move-result-object v2
-
-    invoke-static {v2}, Lpi3;->F(Ljava/util/List;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Llmh;
-
-    if-eqz v2, :cond_3
-
-    iget-object v0, v0, Ljlh;->g:Li7f;
-
-    sget-object v3, Lkmh;->c:Lkmh;
-
-    iput-object v3, v2, Llmh;->X:Lkmh;
-
-    invoke-interface {p1}, Lqoh;->e()J
-
-    move-result-wide v3
-
-    long-to-float v3, v3
-
-    invoke-interface {p1}, Lqoh;->getDuration()J
-
-    move-result-wide v4
-
-    long-to-float v4, v4
-
-    div-float/2addr v3, v4
-
-    const/high16 v4, 0x42c80000    # 100.0f
-
-    mul-float/2addr v3, v4
-
-    iput v3, v2, Llmh;->Y:F
-
-    invoke-interface {p1}, Lqoh;->e()J
-
-    move-result-wide v3
-
-    iput-wide v3, v2, Llmh;->Z:J
-
-    invoke-virtual {v0, v2}, Li7f;->h(Ljava/lang/Object;)Z
-
-    :cond_3
-    sget p1, Lta5;->d:I
-
-    const/16 p1, 0x64
-
-    sget-object v0, Lza5;->c:Lza5;
-
-    invoke-static {p1, v0}, Laoj;->g(ILza5;)J
-
-    move-result-wide v2
-
-    iput v1, p0, Lflh;->o:I
-
-    invoke-static {v2, v3, p0}, Lumj;->d(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lac4;->a:Lac4;
-
-    if-ne p1, v0, :cond_2
+    check-cast v0, [Lflh;
 
     return-object v0
-
-    :cond_4
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
 .end method

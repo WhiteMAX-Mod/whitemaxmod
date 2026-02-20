@@ -1,179 +1,217 @@
 .class public final Lx71;
-.super Lzcf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final o:La4a;
+.field public final a:Lrz1;
+
+.field public final b:Lj88;
+
+.field public final c:Lj88;
 
 
 # direct methods
-.method public constructor <init>(La4a;Ljava/util/concurrent/ExecutorService;)V
+.method public constructor <init>(Lrz1;Lj88;Lj88;)V
     .locals 0
 
-    invoke-direct {p0, p2}, Lzcf;-><init>(Ljava/util/concurrent/Executor;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lx71;->o:La4a;
+    iput-object p1, p0, Lx71;->a:Lrz1;
+
+    iput-object p2, p0, Lx71;->b:Lj88;
+
+    iput-object p3, p0, Lx71;->c:Lj88;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final I(Ljef;I)V
-    .locals 3
+.method public final a(Lyt1;Lsuf;Lwy1;Lp6;)Lw71;
+    .locals 11
 
-    instance-of v0, p1, Lw71;
+    invoke-virtual {p0}, Lx71;->c()J
 
-    if-eqz v0, :cond_1
+    move-result-wide v3
 
-    check-cast p1, Lw71;
+    new-instance v2, Lorg/json/JSONObject;
 
-    iget-object v0, p1, Ltsd;->a:Landroid/view/View;
+    invoke-direct {v2}, Lorg/json/JSONObject;-><init>()V
 
-    invoke-virtual {p0, p2}, Lnd8;->D(I)Ljava/lang/Object;
+    const-string v0, "is_video"
+
+    iget-boolean v1, p2, Lsuf;->b:Z
+
+    invoke-virtual {v2, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
+
+    new-instance v9, Lw71;
+
+    iget-object v0, p0, Lx71;->a:Lrz1;
+
+    invoke-static {v0}, Lrz1;->a(Lrz1;)Lru/ok/android/externcalls/sdk/ConversationFactory;
+
+    move-result-object v10
+
+    new-instance v0, Lt71;
+
+    move-object v6, p0
+
+    move-object v1, p1
+
+    move-object v5, p2
+
+    move-object v7, p3
+
+    move-object v8, p4
+
+    invoke-direct/range {v0 .. v8}, Lt71;-><init>(Lyt1;Lorg/json/JSONObject;JLsuf;Lx71;Lwy1;Lp6;)V
+
+    invoke-virtual {v10, v0}, Lru/ok/android/externcalls/sdk/ConversationFactory;->call(Lks6;)Lru/ok/android/externcalls/sdk/Conversation;
+
+    move-result-object p1
+
+    const/4 p2, 0x1
+
+    const/4 p3, 0x0
+
+    invoke-direct {v9, p1, v1, p2, p3}, Lw71;-><init>(Lru/ok/android/externcalls/sdk/Conversation;Lpkj;ZZ)V
+
+    return-object v9
+.end method
+
+.method public final b(Lwt1;Lsuf;ZLwy1;Lp6;)Lw71;
+    .locals 9
+
+    invoke-virtual {p0}, Lx71;->c()J
+
+    move-result-wide v2
+
+    new-instance v1, Lorg/json/JSONObject;
+
+    invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
+
+    const-string v0, "chat_id"
+
+    iget-wide v4, p1, Lwt1;->a:J
+
+    invoke-virtual {v1, v0, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
+
+    const-string v0, "is_video"
+
+    invoke-virtual {v1, v0, p3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
+
+    new-instance p3, Lw71;
+
+    iget-object v0, p0, Lx71;->a:Lrz1;
+
+    invoke-static {v0}, Lrz1;->a(Lrz1;)Lru/ok/android/externcalls/sdk/ConversationFactory;
+
+    move-result-object v8
+
+    new-instance v0, Lu71;
+
+    move-object v5, p0
+
+    move-object v4, p2
+
+    move-object v6, p4
+
+    move-object v7, p5
+
+    invoke-direct/range {v0 .. v7}, Lu71;-><init>(Lorg/json/JSONObject;JLsuf;Lx71;Lwy1;Lp6;)V
+
+    invoke-virtual {v8, v0}, Lru/ok/android/externcalls/sdk/ConversationFactory;->createConfRoom(Lks6;)Lru/ok/android/externcalls/sdk/Conversation;
 
     move-result-object p2
 
-    check-cast p2, Lud8;
+    const/4 p4, 0x1
 
-    instance-of v1, p2, Lb81;
+    const/4 p5, 0x0
 
-    if-nez v1, :cond_0
+    invoke-direct {p3, p2, p1, p4, p5}, Lw71;-><init>(Lru/ok/android/externcalls/sdk/Conversation;Lpkj;ZZ)V
 
-    return-void
-
-    :cond_0
-    move-object v1, v0
-
-    check-cast v1, Lt0f;
-
-    sget-object v2, Lo0f;->b:Lo0f;
-
-    invoke-virtual {v1, v2}, Lt0f;->setThemeDepended(Lo0f;)V
-
-    invoke-virtual {p1, p2}, Lw71;->y(Lud8;)V
-
-    move-object p1, p2
-
-    check-cast p1, Lb81;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 p1, 0x1
-
-    invoke-virtual {v1, p1}, Landroid/view/View;->setEnabled(Z)V
-
-    new-instance p1, Lub;
-
-    check-cast p2, Lb81;
-
-    const/4 v1, 0x3
-
-    iget-object v2, p0, Lx71;->o:La4a;
-
-    invoke-direct {p1, v2, v1, p2}, Lub;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-static {v0, p1}, Ljmj;->d(Landroid/view/View;Landroid/view/View$OnClickListener;)V
-
-    return-void
-
-    :cond_1
-    invoke-virtual {p0, p2}, Lnd8;->D(I)Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Lud8;
-
-    invoke-virtual {p1, p2}, Ljef;->y(Lud8;)V
-
-    return-void
+    return-object p3
 .end method
 
-.method public final bridge synthetic s(Ltsd;I)V
-    .locals 0
-
-    check-cast p1, Ljef;
-
-    invoke-virtual {p0, p1, p2}, Lx71;->I(Ljef;I)V
-
-    return-void
-.end method
-
-.method public final u(Landroid/view/ViewGroup;I)Ltsd;
+.method public final c()J
     .locals 2
 
-    sget v0, Ly6b;->G:I
+    iget-object v0, p0, Lx71;->c:Lj88;
 
-    if-ne p2, v0, :cond_0
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
 
-    new-instance p2, Lw71;
+    move-result-object v0
 
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    check-cast v0, Lqv1;
 
-    move-result-object p1
+    iget-object v0, v0, Lqv1;->a:Lj88;
 
-    new-instance v0, Lt0f;
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
 
-    const/4 v1, 0x0
+    move-result-object v0
 
-    invoke-direct {v0, p1, v1}, Lt0f;-><init>(Landroid/content/Context;I)V
+    check-cast v0, Lug3;
 
-    invoke-direct {p2, v0}, Ltsd;-><init>(Landroid/view/View;)V
+    check-cast v0, Lqme;
 
-    return-object p2
+    invoke-virtual {v0}, Lqme;->s()J
 
-    :cond_0
-    sget v0, Ly6b;->F:I
+    move-result-wide v0
 
-    if-ne p2, v0, :cond_1
+    return-wide v0
+.end method
 
-    new-instance p2, Ld21;
+.method public final d(Ljava/lang/String;ZLsuf;ZLwy1;Lp6;)Lw71;
+    .locals 11
 
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lx71;->c()J
 
-    move-result-object p1
+    move-result-wide v3
 
-    new-instance v0, Landroid/widget/TextView;
+    new-instance v1, Lorg/json/JSONObject;
 
-    invoke-direct {v0, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
 
-    sget-object p1, Lr1h;->q:Lrhg;
+    const-string v0, "is_video"
 
-    invoke-static {p1, v0}, Lrhg;->d(Lrhg;Landroid/widget/TextView;)V
+    invoke-virtual {v1, v0, p4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
 
-    sget-object p1, Lpc3;->t0:Lkme;
+    new-instance v9, Lw71;
 
-    invoke-virtual {p1, v0}, Lkme;->s(Landroid/view/View;)Lzbb;
+    iget-object v0, p0, Lx71;->a:Lrz1;
 
-    move-result-object p1
+    invoke-static {v0}, Lrz1;->a(Lrz1;)Lru/ok/android/externcalls/sdk/ConversationFactory;
 
-    iget-object p1, p1, Lzbb;->c:Lzlb;
+    move-result-object v10
 
-    invoke-interface {p1}, Lzlb;->getText()Lrfg;
+    new-instance v0, Lt71;
 
-    move-result-object p1
+    move-object v6, p0
 
-    iget p1, p1, Lrfg;->g:I
+    move-object v2, p1
 
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
+    move-object v5, p3
 
-    const/4 p1, 0x2
+    move-object/from16 v7, p5
 
-    invoke-direct {p2, v0, p1}, Ld21;-><init>(Landroid/view/View;I)V
+    move-object/from16 v8, p6
 
-    return-object p2
+    invoke-direct/range {v0 .. v8}, Lt71;-><init>(Lorg/json/JSONObject;Ljava/lang/String;JLsuf;Lx71;Lwy1;Lp6;)V
 
-    :cond_1
-    new-instance p1, Ljava/lang/IllegalStateException;
+    invoke-virtual {v10, v0}, Lru/ok/android/externcalls/sdk/ConversationFactory;->joinByLink(Lks6;)Lru/ok/android/externcalls/sdk/Conversation;
 
-    const-string v0, "unknown item viewType "
+    move-result-object p3
 
-    invoke-static {p2, v0}, Lmrf;->h(ILjava/lang/String;)Ljava/lang/String;
+    new-instance v0, Lxt1;
 
-    move-result-object p2
+    invoke-direct {v0, p1, p2}, Lxt1;-><init>(Ljava/lang/String;Z)V
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    xor-int/lit8 p1, p2, 0x1
 
-    throw p1
+    const/4 p2, 0x0
+
+    invoke-direct {v9, p3, v0, p1, p2}, Lw71;-><init>(Lru/ok/android/externcalls/sdk/Conversation;Lpkj;ZZ)V
+
+    return-object v9
 .end method

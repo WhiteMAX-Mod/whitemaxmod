@@ -1,117 +1,60 @@
-.class public abstract Lmkj;
+.class public final Lmkj;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Loza;
+
+
+# static fields
+.field public static final a:Lmkj;
+
 
 # direct methods
-.method public static final a(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-static {p0, p1}, Lq74;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    new-instance v0, Lmkj;
 
-    move-result-object p0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz p0, :cond_0
+    sput-object v0, Lmkj;->a:Lmkj;
 
-    return-object p0
+    new-instance v0, Lp7j;
 
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    const/4 v1, 0x1
 
-    const-string p1, "Required value was null."
+    invoke-direct {v0, v1}, Lp7j;-><init>(I)V
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    const-class v1, Lh8j;
 
-    throw p0
-.end method
-
-.method public static b(Landroid/content/Context;)Ln92;
-    .locals 5
-
-    sget-object v0, Lkic;->f:Lkic;
-
-    iget-object v1, v0, Lkic;->a:Ljava/lang/Object;
-
-    monitor-enter v1
-
-    :try_start_0
-    iget-object v2, v0, Lkic;->b:Ltw1;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-eqz v2, :cond_0
-
-    monitor-exit v1
-
-    goto :goto_0
-
-    :cond_0
-    :try_start_1
-    new-instance v2, Lj52;
-
-    invoke-direct {v2, p0}, Lj52;-><init>(Landroid/content/Context;)V
-
-    new-instance v3, Lvz9;
-
-    const/16 v4, 0x9
-
-    invoke-direct {v3, v0, v4, v2}, Lvz9;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-static {v3}, Libj;->b(Lrw1;)Ltw1;
-
-    move-result-object v2
-
-    iput-object v2, v0, Lkic;->b:Ltw1;
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    monitor-exit v1
-
-    :goto_0
-    new-instance v0, Ley7;
-
-    const/4 v1, 0x3
-
-    invoke-direct {v0, v1, p0}, Ley7;-><init>(ILjava/lang/Object;)V
-
-    new-instance p0, Lm32;
-
-    invoke-direct {p0, v1, v0}, Lm32;-><init>(ILjava/lang/Object;)V
-
-    invoke-static {}, Lacj;->a()Lc15;
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
 
     move-result-object v0
 
-    new-instance v1, Lkp8;
+    const/4 v2, 0x2
 
-    invoke-direct {v1, p0}, Lkp8;-><init>(Ljava/lang/Object;)V
+    invoke-static {v0, v2}, Leni;->i(Ljava/util/HashMap;I)Lp7j;
 
-    invoke-static {v2, v1, v0}, Lnge;->l(Lie8;Lcv;Ljava/util/concurrent/Executor;)Ln92;
+    move-result-object v0
 
-    move-result-object p0
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
 
-    return-object p0
+    move-result-object v0
 
-    :catchall_0
-    move-exception p0
+    invoke-static {v0}, Leni;->m(Ljava/util/HashMap;)V
 
-    monitor-exit v1
-
-    throw p0
+    return-void
 .end method
 
-.method public static final c(Landroid/content/Context;)I
+
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    invoke-static {p1}, Lkb0;->d(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    move-result-object p0
+    move-result-object p1
 
-    invoke-virtual {p0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object p0
-
-    iget p0, p0, Landroid/util/DisplayMetrics;->widthPixels:I
-
-    return p0
+    throw p1
 .end method

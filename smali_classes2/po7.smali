@@ -1,231 +1,200 @@
 .class public final Lpo7;
-.super Ljava/lang/Object;
+.super Lpdg;
 .source "SourceFile"
 
 # interfaces
-.implements Lro7;
+.implements Lys6;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public synthetic X:Z
 
-.field public final b:Lqhg;
+.field public final synthetic Y:Lyo7;
 
-.field public final c:Lqhg;
-
-.field public final d:Lone/me/rlottie/RLottieDrawable;
-
-.field public final e:Z
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Lqhg;Lqhg;Lone/me/rlottie/RLottieDrawable;Z)V
+.method public constructor <init>(Lyo7;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lpo7;->Y:Lyo7;
 
-    iput-object p1, p0, Lpo7;->a:Ljava/lang/String;
+    const/4 p1, 0x2
 
-    iput-object p2, p0, Lpo7;->b:Lqhg;
-
-    iput-object p3, p0, Lpo7;->c:Lqhg;
-
-    iput-object p4, p0, Lpo7;->d:Lone/me/rlottie/RLottieDrawable;
-
-    iput-boolean p5, p0, Lpo7;->e:Z
+    invoke-direct {p0, p1, p2}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p1, Ljava/lang/Boolean;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    return v0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of v1, p1, Lpo7;
+    invoke-virtual {p0, p1, p2}, Lpo7;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    const/4 v2, 0x0
+    move-result-object p1
 
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
     check-cast p1, Lpo7;
 
-    iget-object v1, p0, Lpo7;->a:Ljava/lang/String;
+    sget-object p2, Lmah;->a:Lmah;
 
-    iget-object v3, p1, Lpo7;->a:Ljava/lang/String;
+    invoke-virtual {p1, p2}, Lpo7;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-result-object p1
 
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lpo7;->b:Lqhg;
-
-    iget-object v3, p1, Lpo7;->b:Lqhg;
-
-    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lpo7;->c:Lqhg;
-
-    iget-object v3, p1, Lpo7;->c:Lqhg;
-
-    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-object v1, p0, Lpo7;->d:Lone/me/rlottie/RLottieDrawable;
-
-    iget-object v3, p1, Lpo7;->d:Lone/me/rlottie/RLottieDrawable;
-
-    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_5
-
-    return v2
-
-    :cond_5
-    iget-boolean v1, p0, Lpo7;->e:Z
-
-    iget-boolean p1, p1, Lpo7;->e:Z
-
-    if-eq v1, p1, :cond_6
-
-    return v2
-
-    :cond_6
-    return v0
+    return-object p1
 .end method
 
-.method public final hashCode()I
-    .locals 3
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iget-object v0, p0, Lpo7;->a:Ljava/lang/String;
+    new-instance v0, Lpo7;
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    iget-object v1, p0, Lpo7;->Y:Lyo7;
 
-    move-result v0
+    invoke-direct {v0, v1, p2}, Lpo7;-><init>(Lyo7;Lkotlin/coroutines/Continuation;)V
 
-    const/16 v1, 0x1f
+    check-cast p1, Ljava/lang/Boolean;
 
-    mul-int/2addr v0, v1
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    iget-object v2, p0, Lpo7;->b:Lqhg;
+    move-result p1
 
-    invoke-static {v0, v1, v2}, Lhc0;->d(IILqhg;)I
+    iput-boolean p1, v0, Lpo7;->X:Z
 
-    move-result v0
+    return-object v0
+.end method
 
-    iget-object v2, p0, Lpo7;->c:Lqhg;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
 
-    invoke-static {v0, v1, v2}, Lhc0;->d(IILqhg;)I
+    iget-boolean v0, p0, Lpo7;->X:Z
 
-    move-result v0
+    iget v1, p0, Lpo7;->o:I
 
-    iget-object v2, p0, Lpo7;->d:Lone/me/rlottie/RLottieDrawable;
+    sget-object v2, Lmah;->a:Lmah;
 
-    if-nez v2, :cond_0
+    const/4 v3, 0x2
 
-    const/4 v2, 0x0
+    const/4 v4, 0x1
+
+    if-eqz v1, :cond_2
+
+    if-eq v1, v4, :cond_1
+
+    if-ne v1, v3, :cond_0
+
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    return-object v2
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    return-object v2
+
+    :cond_2
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lpo7;->Y:Lyo7;
+
+    sget-object v1, Lod4;->a:Lod4;
+
+    if-eqz v0, :cond_5
+
+    iget-object v3, p1, Lyo7;->h:Ln8;
+
+    sget-object v5, Lyo7;->o:[Lv58;
+
+    const/4 v6, 0x0
+
+    aget-object v6, v5, v6
+
+    invoke-virtual {v3, p1, v6}, Ln8;->D(Ljava/lang/Object;Lv58;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lvy7;
+
+    const/4 v6, 0x0
+
+    if-eqz v3, :cond_3
+
+    invoke-interface {v3, v6}, Lvy7;->cancel(Ljava/util/concurrent/CancellationException;)V
+
+    :cond_3
+    iget-object v3, p1, Lyo7;->i:Ln8;
+
+    aget-object v5, v5, v4
+
+    invoke-virtual {v3, p1, v5}, Ln8;->D(Ljava/lang/Object;Lv58;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lvy7;
+
+    if-eqz v3, :cond_4
+
+    invoke-interface {v3, v6}, Lvy7;->cancel(Ljava/util/concurrent/CancellationException;)V
+
+    :cond_4
+    iget-object p1, p1, Lyo7;->k:Lhxf;
+
+    iput-boolean v0, p0, Lpo7;->X:Z
+
+    iput v4, p0, Lpo7;->o:I
+
+    sget-object v0, Ljp7;->a:Ljp7;
+
+    invoke-virtual {p1, v6, v0}, Lhxf;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    if-ne v2, v1, :cond_6
 
     goto :goto_0
 
-    :cond_0
-    invoke-virtual {v2}, Lone/me/rlottie/RLottieDrawable;->hashCode()I
+    :cond_5
+    iget-object v4, p1, Lyo7;->l:Lmrd;
 
-    move-result v2
+    iget-object v4, v4, Lmrd;->a:Laxf;
+
+    invoke-interface {v4}, Laxf;->getValue()Ljava/lang/Object;
+
+    move-result-object v4
+
+    instance-of v4, v4, Ljp7;
+
+    if-eqz v4, :cond_6
+
+    iput-boolean v0, p0, Lpo7;->X:Z
+
+    iput v3, p0, Lpo7;->o:I
+
+    invoke-static {p1, p0}, Lyo7;->b(Lyo7;Lda4;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v1, :cond_6
 
     :goto_0
-    add-int/2addr v0, v2
+    return-object v1
 
-    mul-int/2addr v0, v1
-
-    iget-boolean v1, p0, Lpo7;->e:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Content(id="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lpo7;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", title="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lpo7;->b:Lqhg;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", description="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lpo7;->c:Lqhg;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", drawable="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lpo7;->d:Lone/me/rlottie/RLottieDrawable;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", useTextShimmer="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    iget-boolean v2, p0, Lpo7;->e:Z
-
-    invoke-static {v0, v2, v1}, Lt02;->j(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :cond_6
+    return-object v2
 .end method

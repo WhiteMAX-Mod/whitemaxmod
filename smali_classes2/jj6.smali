@@ -1,98 +1,41 @@
-.class public final Ljj6;
-.super Ljava/util/concurrent/ForkJoinTask;
+.class public final synthetic Ljj6;
+.super Lv3d;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ln22;
-
-.field public final b:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-.field public final c:Ljava/util/concurrent/atomic/AtomicReference;
-
-.field public volatile d:Ljava/lang/Throwable;
+# static fields
+.field public static final a:Ljj6;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ln22;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/util/concurrent/ForkJoinTask;-><init>()V
+    new-instance v0, Ljj6;
 
-    iput-object p2, p0, Ljj6;->a:Ln22;
+    const-string v1, "getId()Ljava/lang/String;"
 
-    new-instance p2, Ljava/util/concurrent/atomic/AtomicBoolean;
+    const/4 v2, 0x0
 
-    const/4 v0, 0x0
+    const-class v3, Lfe6;
 
-    invoke-direct {p2, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
+    const-string v4, "id"
 
-    iput-object p2, p0, Ljj6;->b:Ljava/util/concurrent/atomic/AtomicBoolean;
+    invoke-direct {v0, v3, v4, v1, v2}, Lv3d;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance p2, Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-direct {p2, p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object p2, p0, Ljj6;->c:Ljava/util/concurrent/atomic/AtomicReference;
+    sput-object v0, Ljj6;->a:Ljj6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final exec()Z
-    .locals 3
+.method public final get(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Ljj6;->b:Ljava/util/concurrent/atomic/AtomicBoolean;
+    check-cast p1, Lfe6;
 
-    const/4 v1, 0x0
+    iget-object p1, p1, Lfe6;->a:Ljava/lang/String;
 
-    const/4 v2, 0x1
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    :try_start_0
-    iget-object v0, p0, Ljj6;->a:Ln22;
-
-    invoke-virtual {v0}, Ln22;->run()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    return v2
-
-    :catchall_0
-    move-exception v0
-
-    iput-object v0, p0, Ljj6;->d:Ljava/lang/Throwable;
-
-    throw v0
-
-    :cond_0
-    return v1
-.end method
-
-.method public final getRawResult()Ljava/lang/Object;
-    .locals 1
-
-    iget-object v0, p0, Ljj6;->c:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final setRawResult(Ljava/lang/Object;)V
-    .locals 1
-
-    iget-object v0, p0, Ljj6;->c:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
-
-    return-void
+    return-object p1
 .end method

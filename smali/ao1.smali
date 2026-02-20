@@ -1,203 +1,70 @@
 .class public final Lao1;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Landroid/view/View$OnLayoutChangeListener;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/calls/ui/ui/call/CallScreen;
+.field public final synthetic a:I
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic b:Lone/me/calls/ui/ui/call/CallScreen;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/call/CallScreen;)V
+.method public synthetic constructor <init>(Lone/me/calls/ui/ui/call/CallScreen;I)V
     .locals 0
 
-    iput-object p2, p0, Lao1;->X:Lone/me/calls/ui/ui/call/CallScreen;
+    iput p2, p0, Lao1;->a:I
 
-    const/4 p2, 0x2
+    iput-object p1, p0, Lao1;->b:Lone/me/calls/ui/ui/call/CallScreen;
 
-    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final onLayoutChange(Landroid/view/View;IIIIIIII)V
     .locals 0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget p2, p0, Lao1;->a:I
 
-    invoke-virtual {p0, p1, p2}, Lao1;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object p3, p0, Lao1;->b:Lone/me/calls/ui/ui/call/CallScreen;
 
-    move-result-object p1
+    packed-switch p2, :pswitch_data_0
 
-    check-cast p1, Lao1;
+    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    sget-object p1, Lone/me/calls/ui/ui/call/CallScreen;->P0:Lote;
 
-    invoke-virtual {p1, p2}, Lao1;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lao1;
-
-    iget-object v1, p0, Lao1;->X:Lone/me/calls/ui/ui/call/CallScreen;
-
-    invoke-direct {v0, p2, v1}, Lao1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/call/CallScreen;)V
-
-    iput-object p1, v0, Lao1;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
-
-    iget-object v0, p0, Lao1;->o:Ljava/lang/Object;
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    check-cast v0, Ljava/lang/Boolean;
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p1
-
-    const/4 v0, 0x1
-
-    const/4 v1, 0x0
-
-    iget-object v2, p0, Lao1;->X:Lone/me/calls/ui/ui/call/CallScreen;
-
-    if-ne p1, v0, :cond_0
-
-    invoke-static {v2}, Lone/me/calls/ui/ui/call/CallScreen;->z0(Lone/me/calls/ui/ui/call/CallScreen;)Lrb3;
+    invoke-virtual {p3}, Lone/me/calls/ui/ui/call/CallScreen;->Q0()Lucc;
 
     move-result-object p1
 
-    iget-object p1, p1, Lrb3;->a:Lw4e;
+    invoke-virtual {p1}, Lucc;->c()V
 
-    invoke-static {p1}, Lvmj;->b(Lw4e;)La94;
+    return-void
 
-    move-result-object p1
+    :pswitch_0
+    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
 
-    if-nez p1, :cond_3
+    sget-object p1, Lone/me/calls/ui/ui/call/CallScreen;->P0:Lote;
 
-    invoke-static {v2}, Lone/me/calls/ui/ui/call/CallScreen;->z0(Lone/me/calls/ui/ui/call/CallScreen;)Lrb3;
-
-    move-result-object p1
-
-    iget-object v0, p1, Lrb3;->a:Lw4e;
-
-    invoke-virtual {p1}, Lrb3;->b()Ljava/lang/String;
+    invoke-virtual {p3}, Lone/me/calls/ui/ui/call/CallScreen;->Q0()Lucc;
 
     move-result-object p1
 
-    const-string v3, "call_vpn_panel_widget_tag"
+    invoke-virtual {p1}, Lucc;->c()V
 
-    invoke-static {p1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    return-void
 
-    move-result p1
+    nop
 
-    if-nez p1, :cond_3
-
-    const/4 p1, 0x0
-
-    invoke-virtual {v0, p1}, Lw4e;->R(Z)V
-
-    new-instance p1, Lone/me/calls/ui/ui/call/panels/VpnPanelWidget;
-
-    iget-object v4, v2, Lone/me/calls/ui/ui/call/CallScreen;->t0:Ljava/lang/String;
-
-    invoke-direct {p1, v4, v1}, Lone/me/calls/ui/ui/call/panels/VpnPanelWidget;-><init>(Ljava/lang/String;Lso4;)V
-
-    new-instance v4, Li5;
-
-    const/4 v5, 0x5
-
-    invoke-direct {v4, v5, v2}, Li5;-><init>(ILjava/lang/Object;)V
-
-    iput-object v4, p1, Lone/me/calls/ui/ui/call/panels/VpnPanelWidget;->a:Li5;
-
-    invoke-static {p1, v1, v1}, Lwmj;->a(La94;Lih;Lih;)Lz4e;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v3}, Lz4e;->e(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1}, Lw4e;->S(Lz4e;)V
-
-    goto :goto_1
-
-    :cond_0
-    if-nez p1, :cond_4
-
-    invoke-static {v2}, Lone/me/calls/ui/ui/call/CallScreen;->z0(Lone/me/calls/ui/ui/call/CallScreen;)Lrb3;
-
-    move-result-object p1
-
-    iget-object p1, p1, Lrb3;->a:Lw4e;
-
-    invoke-static {p1}, Lvmj;->b(Lw4e;)La94;
-
-    move-result-object p1
-
-    instance-of v0, p1, Lone/me/calls/ui/ui/call/panels/VpnPanelWidget;
-
-    if-eqz v0, :cond_1
-
-    check-cast p1, Lone/me/calls/ui/ui/call/panels/VpnPanelWidget;
-
-    goto :goto_0
-
-    :cond_1
-    move-object p1, v1
-
-    :goto_0
-    if-eqz p1, :cond_3
-
-    invoke-virtual {p1}, La94;->getRouter()Lw4e;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Lw4e;->B(La94;)Z
-
-    iget-object v0, p1, Lone/me/calls/ui/ui/call/panels/VpnPanelWidget;->a:Li5;
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, v0, Li5;->b:Ljava/lang/Object;
-
-    check-cast v0, Lone/me/calls/ui/ui/call/CallScreen;
-
-    invoke-static {v0}, Lone/me/calls/ui/ui/call/CallScreen;->z0(Lone/me/calls/ui/ui/call/CallScreen;)Lrb3;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lrb3;->a()V
-
-    :cond_2
-    iput-object v1, p1, Lone/me/calls/ui/ui/call/panels/VpnPanelWidget;->a:Li5;
-
-    :cond_3
-    :goto_1
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
-
-    :cond_4
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

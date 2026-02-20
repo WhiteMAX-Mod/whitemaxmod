@@ -1,56 +1,58 @@
 .class public final Lrlc;
-.super Licg;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/io/Serializable;
 
 
 # instance fields
-.field public c:Ljjc;
+.field public final a:I
+
+.field public final b:Lzlc;
 
 
-# virtual methods
-.method public final d(Lpq9;Ljava/lang/String;)V
-    .locals 1
+# direct methods
+.method public constructor <init>(ILzlc;)V
+    .locals 0
 
-    const-string v0, "profile"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    iput p1, p0, Lrlc;->a:I
 
-    move-result p2
-
-    if-eqz p2, :cond_0
-
-    invoke-static {p1}, Lqkj;->c(Lpq9;)Ljjc;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lrlc;->c:Ljjc;
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p1}, Lpq9;->B()V
+    iput-object p2, p0, Lrlc;->b:Lzlc;
 
     return-void
 .end method
 
+
+# virtual methods
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 2
 
-    iget-object v0, p0, Lrlc;->c:Ljjc;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    const-string v1, "Presence(seen="
 
-    const-string v2, "{profile="
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget v1, p0, Lrlc;->a:I
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v0, "}"
+    const-string v1, ", status="
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-object v1, p0, Lrlc;->b:Lzlc;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

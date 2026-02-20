@@ -2,232 +2,230 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/animation/Animator$AnimatorListener;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lj88;
 
-.field public final synthetic b:Leo9;
+.field public final b:Lj88;
+
+.field public volatile c:Z
+
+.field public volatile d:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Leo9;I)V
+.method public constructor <init>(Lj88;Lj88;)V
     .locals 0
-
-    iput p2, p0, Lbo9;->a:I
-
-    iput-object p1, p0, Lbo9;->b:Leo9;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    iput-object p1, p0, Lbo9;->a:Lj88;
 
-.method private final a(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final b(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final c(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final d(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final e(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final f(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final g(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final h(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final i(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final j(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final k(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final l(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final m(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final n(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final o(Landroid/animation/Animator;)V
-    .locals 0
+    iput-object p2, p0, Lbo9;->b:Lj88;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 0
+.method public final a(JILlrf;I)V
+    .locals 3
 
-    iget p1, p0, Lbo9;->a:I
+    iget-object v0, p0, Lbo9;->a:Lj88;
 
-    return-void
-.end method
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
 
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 1
+    move-result-object v0
 
-    iget p1, p0, Lbo9;->a:I
+    check-cast v0, Lte;
 
-    packed-switch p1, :pswitch_data_0
+    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    return-void
+    move-result-object p1
+
+    new-instance p2, Lyvb;
+
+    const-string v1, "message_id"
+
+    invoke-direct {p2, v1, p1}, Lyvb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    const/4 p1, 0x1
+
+    if-eq p3, p1, :cond_1
+
+    const/4 p1, 0x2
+
+    if-eq p3, p1, :cond_1
+
+    const/4 p1, 0x3
+
+    if-eq p3, p1, :cond_1
+
+    const/4 p1, 0x4
+
+    if-eq p3, p1, :cond_1
+
+    const/4 p1, 0x5
+
+    if-ne p3, p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    throw p1
+
+    :cond_1
+    :goto_0
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    new-instance p3, Lyvb;
+
+    const-string v1, "element_type"
+
+    invoke-direct {p3, v1, p1}, Lyvb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    iget-wide v1, p4, Llrf;->a:J
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    new-instance v1, Lyvb;
+
+    const-string v2, "source_id"
+
+    invoke-direct {v1, v2, p1}, Lyvb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    iget p1, p4, Llrf;->b:I
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    new-instance p4, Lyvb;
+
+    const-string v2, "source_type"
+
+    invoke-direct {p4, v2, p1}, Lyvb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    filled-new-array {p2, p3, v1, p4}, [Lyvb;
+
+    move-result-object p1
+
+    invoke-static {p1}, Ljej;->a([Lyvb;)Lju;
+
+    move-result-object p1
+
+    new-instance p2, Lpu7;
+
+    invoke-direct {p2}, Ljava/lang/Object;-><init>()V
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide p3
+
+    iput-wide p3, p2, Lpu7;->a:J
+
+    const-string p3, "MESSAGE_CLICKABLE_ELEMENT_ACTIONS"
+
+    iput-object p3, p2, Lpu7;->o:Ljava/lang/Object;
+
+    packed-switch p5, :pswitch_data_0
+
+    const/4 p1, 0x0
+
+    throw p1
 
     :pswitch_0
-    iget-object p1, p0, Lbo9;->b:Leo9;
+    const-string p3, "clicked_update_app"
 
-    iget-object p1, p1, Leo9;->x0:Landroid/widget/ImageView;
-
-    const/high16 v0, 0x3f800000    # 1.0f
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
-
-    return-void
+    goto :goto_1
 
     :pswitch_1
-    iget-object p1, p0, Lbo9;->b:Leo9;
+    const-string p3, "shown_update_app"
 
-    iget-object p1, p1, Leo9;->x0:Landroid/widget/ImageView;
-
-    const/high16 v0, 0x3f800000    # 1.0f
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
+    goto :goto_1
 
     :pswitch_2
-    return-void
+    const-string p3, "clicked_call"
+
+    goto :goto_1
 
     :pswitch_3
-    iget-object p1, p0, Lbo9;->b:Leo9;
+    const-string p3, "clicked_open_mail"
 
-    iget-object p1, p1, Leo9;->x0:Landroid/widget/ImageView;
+    goto :goto_1
 
-    const/high16 v0, 0x3f800000    # 1.0f
+    :pswitch_4
+    const-string p3, "clicked_open_link"
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
+    goto :goto_1
 
-    return-void
+    :pswitch_5
+    const-string p3, "clicked_copy"
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
+    goto :goto_1
 
-.method public final onAnimationRepeat(Landroid/animation/Animator;)V
-    .locals 0
+    :pswitch_6
+    const-string p3, "clicked_clickable_element"
 
-    iget p1, p0, Lbo9;->a:I
+    :goto_1
+    iput-object p3, p2, Lpu7;->X:Ljava/io/Serializable;
 
-    return-void
-.end method
+    iget-object p3, p0, Lbo9;->b:Lj88;
 
-.method public final onAnimationStart(Landroid/animation/Animator;)V
-    .locals 2
+    invoke-interface {p3}, Lj88;->getValue()Ljava/lang/Object;
 
-    iget p1, p0, Lbo9;->a:I
+    move-result-object p4
 
-    packed-switch p1, :pswitch_data_0
+    check-cast p4, Lug3;
 
-    iget-object p1, p0, Lbo9;->b:Leo9;
+    check-cast p4, Lqme;
 
-    iget-object p1, p1, Leo9;->x0:Landroid/widget/ImageView;
+    invoke-virtual {p4}, Lqme;->s()J
 
-    const/4 v0, 0x4
+    move-result-wide p4
 
-    invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setVisibility(I)V
+    iput-wide p4, p2, Lpu7;->b:J
 
-    :pswitch_0
-    return-void
+    invoke-virtual {p2, p1}, Lpu7;->b(Ljava/util/Map;)V
 
-    :pswitch_1
-    iget-object p1, p0, Lbo9;->b:Leo9;
+    invoke-interface {p3}, Lj88;->getValue()Ljava/lang/Object;
 
-    iget-object v0, p1, Leo9;->x0:Landroid/widget/ImageView;
+    move-result-object p1
 
-    const/4 v1, 0x0
+    check-cast p1, Lug3;
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setAlpha(F)V
+    check-cast p1, Lhl8;
 
-    iget-object p1, p1, Leo9;->x0:Landroid/widget/ImageView;
+    invoke-virtual {p1}, Lhl8;->O()J
 
-    const/4 v0, 0x0
+    move-result-wide p3
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
+    iput-wide p3, p2, Lpu7;->c:J
 
-    :pswitch_2
+    invoke-virtual {p2}, Lpu7;->d()Lvm8;
+
+    move-result-object p1
+
+    invoke-interface {v0, p1}, Lte;->b(Lvm8;)V
+
     return-void
 
     nop
 
     :pswitch_data_0
-    .packed-switch 0x0
+    .packed-switch 0x1
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
         :pswitch_2
         :pswitch_1
-        :pswitch_0
         :pswitch_0
     .end packed-switch
 .end method

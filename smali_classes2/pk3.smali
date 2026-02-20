@@ -1,67 +1,117 @@
-.class public abstract synthetic Lpk3;
-.super Ljava/lang/Object;
+.class public final Lpk3;
+.super Ld3;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+# instance fields
+.field public final synthetic c:I
+
+.field public final synthetic d:Lqk3;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lqk3;I)V
+    .locals 0
 
-    invoke-static {}, Lo10;->values()[Lo10;
+    iput p2, p0, Lpk3;->c:I
 
-    move-result-object v0
+    packed-switch p2, :pswitch_data_0
 
-    array-length v0, v0
+    sget-object p2, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    new-array v0, v0, [I
+    iput-object p1, p0, Lpk3;->d:Lqk3;
 
-    const/4 v1, 0x1
+    const/16 p1, 0xd
 
-    :try_start_0
-    aput v1, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    const/4 v1, 0x2
-
-    :try_start_1
-    aput v1, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
-    const/16 v1, 0x8
-
-    const/4 v2, 0x3
-
-    :try_start_2
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    :catch_2
-    const/4 v1, 0x4
-
-    :try_start_3
-    aput v1, v0, v2
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
-
-    :catch_3
-    const/4 v2, 0x5
-
-    :try_start_4
-    aput v2, v0, v1
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
-
-    :catch_4
-    sput-object v0, Lpk3;->$EnumSwitchMapping$0:[I
+    invoke-direct {p0, p1, p2}, Ld3;-><init>(ILjava/lang/Object;)V
 
     return-void
+
+    :pswitch_0
+    const/4 p2, -0x1
+
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p2
+
+    iput-object p1, p0, Lpk3;->d:Lqk3;
+
+    const/16 p1, 0xd
+
+    invoke-direct {p0, p1, p2}, Ld3;-><init>(ILjava/lang/Object;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+
+# virtual methods
+.method public final Y(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 1
+
+    iget v0, p0, Lpk3;->c:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-static {p1, p2}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    check-cast p2, Ljava/lang/Number;
+
+    invoke-virtual {p2}, Ljava/lang/Number;->intValue()I
+
+    move-result p2
+
+    check-cast p1, Ljava/lang/Number;
+
+    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
+
+    iget-object p1, p0, Lpk3;->d:Lqk3;
+
+    iget-object v0, p1, Lqk3;->d:Landroid/graphics/Paint;
+
+    invoke-virtual {v0, p2}, Landroid/graphics/Paint;->setColor(I)V
+
+    iget-object v0, p1, Lqk3;->c:Landroid/graphics/Paint;
+
+    invoke-virtual {v0, p2}, Landroid/graphics/Paint;->setColor(I)V
+
+    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
+
+    :cond_0
+    return-void
+
+    :pswitch_0
+    invoke-static {p1, p2}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    check-cast p2, Ljava/lang/Boolean;
+
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object p1, p0, Lpk3;->d:Lqk3;
+
+    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
+
+    :cond_1
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

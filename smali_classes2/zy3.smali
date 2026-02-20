@@ -1,50 +1,23 @@
-.class public final synthetic Lzy3;
-.super Lt8;
+.class public final Lzy3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ldr6;
 
+# instance fields
+.field public final a:Lj88;
 
-# static fields
-.field public static final Z:Lzy3;
+.field public final b:Lj88;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
-
-    new-instance v0, Lzy3;
-
-    const-string v1, "<init>(Lone/me/profileedit/screens/changelink/ChangeLinkScreenState;Ljava/util/List;)V"
-
-    const/4 v2, 0x4
-
-    const/4 v3, 0x3
-
-    const-class v4, Lfa2;
-
-    invoke-direct {v0, v3, v4, v1, v2}, Lt8;-><init>(ILjava/lang/Class;Ljava/lang/String;I)V
-
-    sput-object v0, Lzy3;->Z:Lzy3;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public constructor <init>(Lj88;Lj88;)V
     .locals 0
 
-    check-cast p1, Lta2;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    check-cast p2, Ljava/util/List;
+    iput-object p1, p0, Lzy3;->a:Lj88;
 
-    check-cast p3, Lkotlin/coroutines/Continuation;
+    iput-object p2, p0, Lzy3;->b:Lj88;
 
-    new-instance p3, Lfa2;
-
-    invoke-direct {p3, p1, p2}, Lfa2;-><init>(Lta2;Ljava/util/List;)V
-
-    return-object p3
+    return-void
 .end method

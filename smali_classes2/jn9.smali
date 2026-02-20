@@ -1,33 +1,51 @@
-.class public abstract Ljn9;
-.super Ljava/lang/Object;
+.class public final Ljn9;
+.super Lda4;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:J
+# instance fields
+.field public final synthetic X:Lln9;
 
-.field public static final synthetic b:I
+.field public Y:I
+
+.field public d:J
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(Lln9;Lda4;)V
+    .locals 0
 
-    const/4 v0, -0x1
+    iput-object p1, p0, Ljn9;->X:Lln9;
 
-    int-to-long v0, v0
-
-    const/16 v2, 0x20
-
-    shl-long v2, v0, v2
-
-    const-wide v4, 0xffffffffL
-
-    and-long/2addr v0, v4
-
-    or-long/2addr v0, v2
-
-    sput-wide v0, Ljn9;->a:J
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iput-object p1, p0, Ljn9;->o:Ljava/lang/Object;
+
+    iget p1, p0, Ljn9;->Y:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Ljn9;->Y:I
+
+    iget-object p1, p0, Ljn9;->X:Lln9;
+
+    const-wide/16 v0, 0x0
+
+    invoke-virtual {p1, v0, v1, p0}, Lln9;->h(JLda4;)Ljava/io/Serializable;
+
+    move-result-object p1
+
+    return-object p1
 .end method

@@ -1,20 +1,14 @@
-.class public abstract La46;
+.class public interface abstract La46;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# direct methods
-.method public static a(Landroid/graphics/drawable/Drawable;)V
-    .locals 1
+# virtual methods
+.method public abstract j(Ljava/io/File;)V
+.end method
 
-    instance-of v0, p0, Landroid/graphics/drawable/AnimatedVectorDrawable;
+.method public abstract n(Ljava/io/File;)V
+.end method
 
-    if-eqz v0, :cond_0
-
-    check-cast p0, Landroid/graphics/drawable/AnimatedVectorDrawable;
-
-    invoke-virtual {p0}, Landroid/graphics/drawable/AnimatedVectorDrawable;->start()V
-
-    :cond_0
-    return-void
+.method public abstract o(Ljava/io/File;)V
 .end method

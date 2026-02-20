@@ -1,120 +1,48 @@
-.class public final synthetic Lrph;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
+.class public final Lrph;
+.super Lda4;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Ludf;
 
-.field public final synthetic b:I
+.field public synthetic d:Ljava/lang/Object;
 
-.field public final synthetic c:J
-
-.field public final synthetic d:Ljava/lang/Object;
+.field public o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;IJI)V
+.method public constructor <init>(Ludf;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p5, p0, Lrph;->a:I
+    iput-object p1, p0, Lrph;->X:Ludf;
 
-    iput-object p1, p0, Lrph;->d:Ljava/lang/Object;
-
-    iput p2, p0, Lrph;->b:I
-
-    iput-wide p3, p0, Lrph;->c:J
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 7
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget v0, p0, Lrph;->a:I
+    iput-object p1, p0, Lrph;->d:Ljava/lang/Object;
 
-    const/16 v1, 0x3fa
+    iget p1, p0, Lrph;->o:I
 
-    iget-wide v2, p0, Lrph;->c:J
+    const/high16 v0, -0x80000000
 
-    iget v4, p0, Lrph;->b:I
+    or-int/2addr p1, v0
 
-    iget-object v5, p0, Lrph;->d:Ljava/lang/Object;
+    iput p1, p0, Lrph;->o:I
 
-    packed-switch v0, :pswitch_data_0
+    iget-object p1, p0, Lrph;->X:Ludf;
 
-    check-cast v5, Lo2b;
+    const/4 v0, 0x0
 
-    iget-object v0, v5, Lo2b;->c:Ljava/lang/Object;
+    invoke-virtual {p1, v0, p0}, Ludf;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    check-cast v0, Lxp5;
+    move-result-object p1
 
-    sget-object v5, Lmbh;->a:Ljava/lang/String;
-
-    iget-object v0, v0, Lxp5;->a:Ldq5;
-
-    iget-object v0, v0, Ldq5;->E0:Lon4;
-
-    iget-object v5, v0, Lon4;->d:Le40;
-
-    iget-object v5, v5, Le40;->e:Ljava/lang/Object;
-
-    check-cast v5, Lvc9;
-
-    invoke-virtual {v0, v5}, Lon4;->E(Lvc9;)Lid;
-
-    move-result-object v5
-
-    new-instance v6, Lvm4;
-
-    invoke-direct {v6, v5, v4, v2, v3}, Lvm4;-><init>(Lid;IJ)V
-
-    invoke-virtual {v0, v5, v1, v6}, Lon4;->I(Lid;ILqe8;)V
-
-    return-void
-
-    :pswitch_0
-    check-cast v5, Le1b;
-
-    iget-object v0, v5, Le1b;->c:Ljava/lang/Object;
-
-    check-cast v0, Lwp5;
-
-    sget v5, Lkbh;->a:I
-
-    iget-object v0, v0, Lwp5;->a:Lcq5;
-
-    iget-object v0, v0, Lcq5;->C0:Lnn4;
-
-    iget-object v5, v0, Lnn4;->d:Lv1i;
-
-    iget-object v5, v5, Lv1i;->e:Ljava/lang/Object;
-
-    check-cast v5, Luc9;
-
-    invoke-virtual {v0, v5}, Lnn4;->b(Luc9;)Lhd;
-
-    move-result-object v5
-
-    new-instance v6, Ldn4;
-
-    invoke-direct {v6, v5, v4, v2, v3}, Ldn4;-><init>(Lhd;IJ)V
-
-    invoke-virtual {v0, v5, v1, v6}, Lnn4;->K(Lhd;ILpe8;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

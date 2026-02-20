@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Llq6;
+.implements Lis6;
 
 
 # instance fields
@@ -34,7 +34,7 @@
 
     iget-boolean v1, p0, Lru/ok/android/externcalls/sdk/o;->b:Z
 
-    invoke-static {v0, v1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->e(Lru/ok/android/externcalls/sdk/ConversationImpl;Z)Ljava/lang/Boolean;
+    invoke-static {v0, v1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->f(Lru/ok/android/externcalls/sdk/ConversationImpl;Z)Ljava/lang/Boolean;
 
     move-result-object v0
 

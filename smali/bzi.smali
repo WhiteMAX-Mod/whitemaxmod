@@ -1,70 +1,184 @@
 .class public final Lbzi;
-.super Ljava/lang/Object;
+.super Lobh;
 .source "SourceFile"
 
 # interfaces
-.implements Lvwa;
+.implements Ljava/util/ListIterator;
 
 
-# static fields
-.field public static final a:Lbzi;
+# instance fields
+.field public final b:I
+
+.field public c:I
+
+.field public final d:Lhzi;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lhzi;I)V
+    .locals 2
 
-    new-instance v0, Lbzi;
+    invoke-virtual {p1}, Ljava/util/AbstractCollection;->size()I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    move-result v0
 
-    sput-object v0, Lbzi;->a:Lbzi;
+    const/4 v1, 0x2
 
-    new-instance v0, Lbri;
+    invoke-direct {p0, v1}, Lobh;-><init>(I)V
 
-    const/4 v1, 0x1
+    invoke-static {p2, v0}, Lkjj;->f(II)V
 
-    invoke-direct {v0, v1}, Lbri;-><init>(I)V
+    iput v0, p0, Lbzi;->b:I
 
-    const-class v1, Lpri;
+    iput p2, p0, Lbzi;->c:I
 
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
+    iput-object p1, p0, Lbzi;->d:Lhzi;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final a(I)Ljava/lang/Object;
+    .locals 1
 
-    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    iget-object v0, p0, Lbzi;->d:Lhzi;
+
+    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final add(Ljava/lang/Object;)V
+    .locals 0
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+.end method
+
+.method public final hasNext()Z
+    .locals 2
+
+    iget v0, p0, Lbzi;->c:I
+
+    iget v1, p0, Lbzi;->b:I
+
+    if-ge v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final hasPrevious()Z
+    .locals 1
+
+    iget v0, p0, Lbzi;->c:I
+
+    if-lez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final next()Ljava/lang/Object;
+    .locals 2
+
+    invoke-virtual {p0}, Lbzi;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget v0, p0, Lbzi;->c:I
+
+    add-int/lit8 v1, v0, 0x1
+
+    iput v1, p0, Lbzi;->c:I
+
+    invoke-virtual {p0, v0}, Lbzi;->a(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_0
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw v0
+.end method
+
+.method public final nextIndex()I
+    .locals 1
+
+    iget v0, p0, Lbzi;->c:I
+
+    return v0
+.end method
+
+.method public final previous()Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p0}, Lbzi;->hasPrevious()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget v0, p0, Lbzi;->c:I
+
+    add-int/lit8 v0, v0, -0x1
+
+    iput v0, p0, Lbzi;->c:I
+
+    invoke-virtual {p0, v0}, Lbzi;->a(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_0
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw v0
+.end method
+
+.method public final previousIndex()I
+    .locals 1
+
+    iget v0, p0, Lbzi;->c:I
+
+    add-int/lit8 v0, v0, -0x1
+
+    return v0
+.end method
+
+.method public final set(Ljava/lang/Object;)V
+    .locals 0
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
 
     throw p1
 .end method

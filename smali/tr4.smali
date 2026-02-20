@@ -1,123 +1,58 @@
-.class public abstract synthetic Ltr4;
+.class public abstract Ltr4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+.field public static final a:Lqx4;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 2
 
-    invoke-static {}, Ln78;->values()[Ln78;
+    const-string v0, "kotlinx.coroutines.main.delay"
 
-    move-result-object v0
+    const/4 v1, 0x0
 
-    array-length v0, v0
+    invoke-static {v0, v1}, Lkotlinx/coroutines/internal/SystemPropsKt;->systemProp(Ljava/lang/String;Z)Z
 
-    new-array v0, v0, [I
+    move-result v0
 
-    :try_start_0
-    sget-object v1, Ln78;->ON_CREATE:Ln78;
+    if-nez v0, :cond_0
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    sget-object v0, Lsr4;->Z:Lsr4;
 
-    move-result v1
+    goto :goto_1
 
-    const/4 v2, 0x1
+    :cond_0
+    sget-object v0, Lp35;->a:Llu4;
 
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    sget-object v0, Lkotlinx/coroutines/internal/MainDispatcherLoader;->dispatcher:Los8;
 
-    :catch_0
-    :try_start_1
-    sget-object v1, Ln78;->ON_START:Ln78;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    invoke-static {v0}, Lkotlinx/coroutines/internal/MainDispatchersKt;->isMissing(Los8;)Z
 
     move-result v1
 
-    const/4 v2, 0x2
+    if-nez v1, :cond_2
 
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    instance-of v1, v0, Lqx4;
 
-    :catch_1
-    :try_start_2
-    sget-object v1, Ln78;->ON_RESUME:Ln78;
+    if-nez v1, :cond_1
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    goto :goto_0
 
-    move-result v1
+    :cond_1
+    check-cast v0, Lqx4;
 
-    const/4 v2, 0x3
+    goto :goto_1
 
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    :cond_2
+    :goto_0
+    sget-object v0, Lsr4;->Z:Lsr4;
 
-    :catch_2
-    :try_start_3
-    sget-object v1, Ln78;->ON_PAUSE:Ln78;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x4
-
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
-
-    :catch_3
-    :try_start_4
-    sget-object v1, Ln78;->ON_STOP:Ln78;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x5
-
-    aput v2, v0, v1
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
-
-    :catch_4
-    :try_start_5
-    sget-object v1, Ln78;->ON_DESTROY:Ln78;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x6
-
-    aput v2, v0, v1
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
-
-    :catch_5
-    :try_start_6
-    sget-object v1, Ln78;->ON_ANY:Ln78;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x7
-
-    aput v2, v0, v1
-    :try_end_6
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
-
-    :catch_6
-    sput-object v0, Ltr4;->$EnumSwitchMapping$0:[I
+    :goto_1
+    sput-object v0, Ltr4;->a:Lqx4;
 
     return-void
 .end method

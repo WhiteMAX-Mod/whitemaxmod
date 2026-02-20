@@ -1,50 +1,59 @@
 .class public final Lg0j;
-.super Ljava/lang/Object;
+.super Lhzi;
 .source "SourceFile"
 
-# interfaces
-.implements Lvwa;
 
+# instance fields
+.field public final transient c:[Ljava/lang/Object;
 
-# static fields
-.field public static final a:Lg0j;
+.field public final transient d:I
+
+.field public final transient o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(II[Ljava/lang/Object;)V
+    .locals 0
 
-    new-instance v0, Lg0j;
+    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p3, p0, Lg0j;->c:[Ljava/lang/Object;
 
-    sput-object v0, Lg0j;->a:Lg0j;
+    iput p1, p0, Lg0j;->d:I
 
-    new-instance v0, Lbri;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lbri;-><init>(I)V
-
-    const-class v1, Lpri;
-
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
+    iput p2, p0, Lg0j;->o:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final get(I)Ljava/lang/Object;
+    .locals 1
 
-    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    iget v0, p0, Lg0j;->o:I
 
-    move-result-object p1
+    invoke-static {p1, v0}, Lkjj;->e(II)V
 
-    throw p1
+    add-int/2addr p1, p1
+
+    iget v0, p0, Lg0j;->d:I
+
+    add-int/2addr p1, v0
+
+    iget-object v0, p0, Lg0j;->c:[Ljava/lang/Object;
+
+    aget-object p1, v0, p1
+
+    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+.end method
+
+.method public final size()I
+    .locals 1
+
+    iget v0, p0, Lg0j;->o:I
+
+    return v0
 .end method

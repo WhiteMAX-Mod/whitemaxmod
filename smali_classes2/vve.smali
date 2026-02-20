@@ -1,244 +1,136 @@
 .class public final Lvve;
-.super Ljava/lang/Object;
+.super Lk2;
 .source "SourceFile"
 
-
-# instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:Ljava/lang/String;
-
-.field public final c:Ljava/lang/Long;
-
-.field public final d:Ljava/lang/String;
-
-.field public final e:Ljava/lang/String;
+# interfaces
+.implements Lxve;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Long;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lvzd;
 
-    iput-object p2, p0, Lvve;->a:Ljava/lang/String;
+    const/16 v1, 0xf
 
-    iput-object p3, p0, Lvve;->b:Ljava/lang/String;
+    invoke-direct {v0, v1}, Lvzd;-><init>(I)V
 
-    iput-object p1, p0, Lvve;->c:Ljava/lang/Long;
-
-    iput-object p4, p0, Lvve;->d:Ljava/lang/String;
-
-    iput-object p5, p0, Lvve;->e:Ljava/lang/String;
+    invoke-direct {p0, v0}, Lk2;-><init>(Lks6;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final q0()I
+    .locals 3
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lk2;->c:Ljava/lang/Object;
 
-    if-ne p0, p1, :cond_0
+    invoke-static {v0}, Lfej;->s(Lj88;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Lk2;->Q()I
+
+    move-result v0
+
+    const/4 v1, 0x4
+
+    int-to-float v1, v1
+
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v2
+
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+
+    invoke-static {v1, v2, v0}, Lj64;->b(FFI)I
+
+    move-result v0
 
     return v0
 
     :cond_0
-    instance-of v1, p1, Lvve;
+    const/4 v0, 0x0
 
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lvve;
-
-    iget-object v1, p0, Lvve;->a:Ljava/lang/String;
-
-    iget-object v3, p1, Lvve;->a:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lvve;->b:Ljava/lang/String;
-
-    iget-object v3, p1, Lvve;->b:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lvve;->c:Ljava/lang/Long;
-
-    iget-object v3, p1, Lvve;->c:Ljava/lang/Long;
-
-    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-object v1, p0, Lvve;->d:Ljava/lang/String;
-
-    iget-object v3, p1, Lvve;->d:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_5
-
-    return v2
-
-    :cond_5
-    iget-object v1, p0, Lvve;->e:Ljava/lang/String;
-
-    iget-object p1, p1, Lvve;->e:Ljava/lang/String;
-
-    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_6
-
-    return v2
-
-    :cond_6
     return v0
 .end method
 
-.method public final hashCode()I
-    .locals 4
+.method public final setAlias(Landroid/text/Layout;)V
+    .locals 1
 
-    iget-object v0, p0, Lvve;->a:Ljava/lang/String;
+    if-nez p1, :cond_1
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    iget-object p1, p0, Lk2;->c:Ljava/lang/Object;
 
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lvve;->b:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Lxi4;->e(IILjava/lang/String;)I
+    invoke-interface {p1}, Lj88;->e()Z
 
     move-result v0
 
-    const/4 v2, 0x0
+    if-eqz v0, :cond_0
 
-    iget-object v3, p0, Lvve;->c:Ljava/lang/Long;
+    invoke-interface {p1}, Lj88;->getValue()Ljava/lang/Object;
 
-    if-nez v3, :cond_0
+    move-result-object p1
 
-    move v3, v2
+    check-cast p1, Lwve;
 
-    goto :goto_0
+    const/16 v0, 0x8
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
     :cond_0
-    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
-
-    move-result v3
-
-    :goto_0
-    add-int/2addr v0, v3
-
-    mul-int/2addr v0, v1
-
-    iget-object v3, p0, Lvve;->d:Ljava/lang/String;
-
-    if-nez v3, :cond_1
-
-    move v3, v2
-
-    goto :goto_1
+    return-void
 
     :cond_1
-    invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
+    invoke-virtual {p0}, Lk2;->Z()Landroid/view/View;
 
-    move-result v3
+    move-result-object v0
 
-    :goto_1
-    add-int/2addr v0, v3
+    check-cast v0, Lwve;
 
-    mul-int/2addr v0, v1
+    invoke-virtual {v0, p1}, Lwve;->setLayout(Landroid/text/Layout;)V
 
-    iget-object v1, p0, Lvve;->e:Ljava/lang/String;
+    invoke-virtual {p0}, Lk2;->Z()Landroid/view/View;
 
-    if-nez v1, :cond_2
+    move-result-object p1
 
-    goto :goto_2
+    const/4 v0, 0x0
 
-    :cond_2
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
-    move-result v2
+    invoke-virtual {p0}, Lk2;->B()V
 
-    :goto_2
-    add-int/2addr v0, v2
-
-    return v0
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+.method public final setAliasColor(I)V
+    .locals 2
 
-    const-string v0, ", title="
+    iget-object v0, p0, Lk2;->c:Ljava/lang/Object;
 
-    const-string v1, ", appId="
+    invoke-interface {v0}, Lj88;->e()Z
 
-    const-string v2, "SettingEntryBanner(iconUrl="
+    move-result v1
 
-    iget-object v3, p0, Lvve;->a:Ljava/lang/String;
+    if-eqz v1, :cond_0
 
-    iget-object v4, p0, Lvve;->b:Ljava/lang/String;
-
-    invoke-static {v2, v3, v0, v4, v1}, Lkz1;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    iget-object v1, p0, Lvve;->c:Ljava/lang/Long;
+    check-cast v0, Lwve;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1}, Lwve;->setTextColor(I)V
 
-    const-string v1, ", url="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lvve;->d:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", startParam="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    iget-object v2, p0, Lvve;->e:Ljava/lang/String;
-
-    invoke-static {v0, v2, v1}, Lj27;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :cond_0
+    return-void
 .end method

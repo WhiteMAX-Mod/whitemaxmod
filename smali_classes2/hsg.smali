@@ -1,140 +1,79 @@
-.class public final Lhsg;
+.class public abstract Lhsg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lzv0;
 
+# static fields
+.field public static final a:Lbgg;
 
-# instance fields
-.field public final a:Lv05;
-
-.field public final b:Ljava/util/concurrent/atomic/LongAdder;
-
-.field public final c:Ljava/util/concurrent/atomic/LongAdder;
-
-.field public final d:Ljava/util/concurrent/atomic/AtomicLong;
-
-.field public final e:Ljava/util/concurrent/atomic/LongAccumulator;
-
-.field public final f:Ljava/util/concurrent/atomic/LongAdder;
-
-.field public final g:Ljava/util/concurrent/atomic/LongAdder;
+.field public static final b:Lbgg;
 
 
 # direct methods
-.method public constructor <init>(Lv05;)V
-    .locals 3
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lq6g;
 
-    iput-object p1, p0, Lhsg;->a:Lv05;
+    const/16 v1, 0x8
 
-    new-instance p1, Ljava/util/concurrent/atomic/LongAdder;
+    invoke-direct {v0, v1}, Lq6g;-><init>(I)V
 
-    invoke-direct {p1}, Ljava/util/concurrent/atomic/LongAdder;-><init>()V
+    new-instance v1, Lbgg;
 
-    iput-object p1, p0, Lhsg;->b:Ljava/util/concurrent/atomic/LongAdder;
+    invoke-direct {v1, v0}, Lbgg;-><init>(Lis6;)V
 
-    new-instance p1, Ljava/util/concurrent/atomic/LongAdder;
+    sput-object v1, Lhsg;->a:Lbgg;
 
-    invoke-direct {p1}, Ljava/util/concurrent/atomic/LongAdder;-><init>()V
+    new-instance v0, Lq6g;
 
-    iput-object p1, p0, Lhsg;->c:Ljava/util/concurrent/atomic/LongAdder;
+    const/16 v1, 0x9
 
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicLong;
+    invoke-direct {v0, v1}, Lq6g;-><init>(I)V
 
-    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicLong;-><init>()V
+    new-instance v1, Lbgg;
 
-    iput-object p1, p0, Lhsg;->d:Ljava/util/concurrent/atomic/AtomicLong;
+    invoke-direct {v1, v0}, Lbgg;-><init>(Lis6;)V
 
-    new-instance p1, Ljava/util/concurrent/atomic/LongAccumulator;
-
-    new-instance v0, Lgsg;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    const-wide/16 v1, 0x0
-
-    invoke-direct {p1, v0, v1, v2}, Ljava/util/concurrent/atomic/LongAccumulator;-><init>(Ljava/util/function/LongBinaryOperator;J)V
-
-    iput-object p1, p0, Lhsg;->e:Ljava/util/concurrent/atomic/LongAccumulator;
-
-    new-instance p1, Ljava/util/concurrent/atomic/LongAdder;
-
-    invoke-direct {p1}, Ljava/util/concurrent/atomic/LongAdder;-><init>()V
-
-    iput-object p1, p0, Lhsg;->f:Ljava/util/concurrent/atomic/LongAdder;
-
-    new-instance p1, Ljava/util/concurrent/atomic/LongAdder;
-
-    invoke-direct {p1}, Ljava/util/concurrent/atomic/LongAdder;-><init>()V
-
-    iput-object p1, p0, Lhsg;->g:Ljava/util/concurrent/atomic/LongAdder;
+    sput-object v1, Lhsg;->b:Lbgg;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final a(I)Ljava/nio/ByteBuffer;
+.method public static final a(Ljava/lang/String;)Ljava/io/ByteArrayOutputStream;
     .locals 3
 
-    int-to-long v0, p1
+    const/16 v0, 0x100
 
-    iget-object v2, p0, Lhsg;->b:Ljava/util/concurrent/atomic/LongAdder;
+    sget-object v1, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
-    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/atomic/LongAdder;->add(J)V
+    invoke-static {v0, v0, v1}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
 
-    iget-object v2, p0, Lhsg;->d:Ljava/util/concurrent/atomic/AtomicLong;
+    move-result-object v0
 
-    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/atomic/AtomicLong;->addAndGet(J)J
+    new-instance v1, Landroid/graphics/Canvas;
 
-    iget-object v0, p0, Lhsg;->f:Ljava/util/concurrent/atomic/LongAdder;
+    invoke-direct {v1, v0}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/LongAdder;->increment()V
+    invoke-static {p0}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
 
-    invoke-static {p1}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
+    move-result p0
 
-    move-result-object p1
+    invoke-virtual {v1, p0}, Landroid/graphics/Canvas;->drawColor(I)V
 
-    return-object p1
-.end method
+    new-instance p0, Ljava/io/ByteArrayOutputStream;
 
-.method public final b(Ljava/nio/ByteBuffer;)V
-    .locals 6
+    invoke-virtual {v0}, Landroid/graphics/Bitmap;->getAllocationByteCount()I
 
-    invoke-virtual {p1}, Ljava/nio/Buffer;->capacity()I
+    move-result v1
 
-    move-result v0
+    invoke-direct {p0, v1}, Ljava/io/ByteArrayOutputStream;-><init>(I)V
 
-    int-to-long v0, v0
+    sget-object v1, Landroid/graphics/Bitmap$CompressFormat;->PNG:Landroid/graphics/Bitmap$CompressFormat;
 
-    iget-object v2, p0, Lhsg;->c:Ljava/util/concurrent/atomic/LongAdder;
+    const/16 v2, 0x64
 
-    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/atomic/LongAdder;->add(J)V
+    invoke-virtual {v0, v1, v2, p0}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
 
-    iget-object v2, p0, Lhsg;->d:Ljava/util/concurrent/atomic/AtomicLong;
-
-    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicLong;->longValue()J
-
-    move-result-wide v3
-
-    iget-object v5, p0, Lhsg;->e:Ljava/util/concurrent/atomic/LongAccumulator;
-
-    invoke-virtual {v5, v3, v4}, Ljava/util/concurrent/atomic/LongAccumulator;->accumulate(J)V
-
-    neg-long v0, v0
-
-    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/atomic/AtomicLong;->addAndGet(J)J
-
-    iget-object v0, p0, Lhsg;->g:Ljava/util/concurrent/atomic/LongAdder;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/LongAdder;->increment()V
-
-    iget-object v0, p0, Lhsg;->a:Lv05;
-
-    invoke-virtual {v0, p1}, Lv05;->b(Ljava/nio/ByteBuffer;)V
-
-    return-void
+    return-object p0
 .end method

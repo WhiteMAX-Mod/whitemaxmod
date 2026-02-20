@@ -1,23 +1,31 @@
 .class public final Lg8e;
-.super Ljava/lang/Object;
+.super Ll8e;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Loj6;
-
-.field public final b:Lc01;
+.field public final synthetic a:Ld8e;
 
 
 # direct methods
-.method public constructor <init>(Lc01;Loj6;)V
+.method public constructor <init>(Ld8e;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lg8e;->a:Loj6;
+    iput-object p1, p0, Lg8e;->a:Ld8e;
 
-    iput-object p1, p0, Lg8e;->b:Lc01;
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Lacg;)V
+    .locals 1
+
+    iget-object v0, p0, Lg8e;->a:Ld8e;
+
+    invoke-virtual {v0, p1}, Ld8e;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method

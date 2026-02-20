@@ -1,52 +1,53 @@
-.class public final synthetic Lq27;
-.super Lt8;
+.class public final Lq27;
+.super Lda4;
 .source "SourceFile"
 
-# interfaces
-.implements Ldr6;
 
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
 
-# static fields
-.field public static final Z:Lq27;
+.field public final synthetic Y:Lt27;
+
+.field public Z:I
+
+.field public d:Ljava/lang/String;
+
+.field public o:Ljava/io/Serializable;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(Lt27;Lda4;)V
+    .locals 0
 
-    new-instance v0, Lq27;
+    iput-object p1, p0, Lq27;->Y:Lt27;
 
-    const-string v1, "<init>(Ljava/lang/Object;Ljava/lang/Object;)V"
-
-    const/4 v2, 0x4
-
-    const/4 v3, 0x3
-
-    const-class v4, Lktb;
-
-    invoke-direct {v0, v3, v4, v1, v2}, Lt8;-><init>(ILjava/lang/Class;Ljava/lang/String;I)V
-
-    sput-object v0, Lq27;->Z:Lq27;
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    check-cast p1, Lnd2;
+    iput-object p1, p0, Lq27;->X:Ljava/lang/Object;
 
-    check-cast p2, Lye4;
+    iget p1, p0, Lq27;->Z:I
 
-    check-cast p3, Lkotlin/coroutines/Continuation;
+    const/high16 v0, -0x80000000
 
-    sget-object p3, Lu27;->j:Lktb;
+    or-int/2addr p1, v0
 
-    new-instance p3, Lktb;
+    iput p1, p0, Lq27;->Z:I
 
-    invoke-direct {p3, p1, p2}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    iget-object p1, p0, Lq27;->Y:Lt27;
 
-    return-object p3
+    const/4 v0, 0x0
+
+    invoke-static {p1, v0, p0}, Lt27;->a(Lt27;Ljava/lang/String;Lda4;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

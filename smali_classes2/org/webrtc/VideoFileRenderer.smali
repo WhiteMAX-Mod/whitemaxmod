@@ -91,7 +91,7 @@
 
     const-string v2, "YUV4MPEG2 C420 W"
 
-    invoke-static {v2, p2, p1, p3, v1}, Lkz1;->g(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, p2, p1, p3, v1}, Lau1;->h(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -558,11 +558,11 @@
 
     iget-object v0, p0, Lorg/webrtc/VideoFileRenderer;->fileThreadHandler:Landroid/os/Handler;
 
-    new-instance v2, Lxqd;
+    new-instance v2, Lgtd;
 
-    const/16 v3, 0x11
+    const/16 v3, 0x12
 
-    invoke-direct {v2, p0, v1, p1, v3}, Lxqd;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    invoke-direct {v2, p0, v1, p1, v3}, Lgtd;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -578,11 +578,11 @@
 
     iget-object v0, p0, Lorg/webrtc/VideoFileRenderer;->renderThreadHandler:Landroid/os/Handler;
 
-    new-instance v1, Loue;
+    new-instance v1, Lemh;
 
-    const/16 v2, 0x1d
+    const/4 v2, 0x2
 
-    invoke-direct {v1, p0, v2, p1}, Loue;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v1, p0, v2, p1}, Lemh;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -600,11 +600,11 @@
 
     iget-object v1, p0, Lorg/webrtc/VideoFileRenderer;->renderThreadHandler:Landroid/os/Handler;
 
-    new-instance v2, Lghh;
+    new-instance v2, Lemh;
 
-    const/4 v3, 0x0
+    const/4 v3, 0x3
 
-    invoke-direct {v2, p0, v3, v0}, Lghh;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v2, p0, v3, v0}, Lemh;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -612,11 +612,11 @@
 
     iget-object v0, p0, Lorg/webrtc/VideoFileRenderer;->fileThreadHandler:Landroid/os/Handler;
 
-    new-instance v1, Lhgh;
+    new-instance v1, Ldmh;
 
-    const/4 v2, 0x2
+    const/4 v2, 0x3
 
-    invoke-direct {v1, v2, p0}, Lhgh;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v2, p0}, Ldmh;-><init>(ILjava/lang/Object;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 

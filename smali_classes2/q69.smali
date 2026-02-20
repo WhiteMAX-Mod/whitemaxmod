@@ -3,58 +3,88 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lnm4;
+.implements Lis6;
 
 
 # instance fields
-.field public final synthetic a:Z
+.field public final synthetic a:I
 
-.field public final synthetic b:Ljava/lang/Long;
+.field public final synthetic b:[Landroid/view/View;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Long;Z)V
+.method public synthetic constructor <init>([Landroid/view/View;I)V
     .locals 0
 
+    iput p2, p0, Lq69;->a:I
+
+    iput-object p1, p0, Lq69;->b:[Landroid/view/View;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-boolean p2, p0, Lq69;->a:Z
-
-    iput-object p1, p0, Lq69;->b:Ljava/lang/Long;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 10
+.method public final invoke()Ljava/lang/Object;
+    .locals 6
 
-    new-instance v0, Lone/me/mediapicker/MediaPickerScreen;
+    iget v0, p0, Lq69;->a:I
 
-    new-instance v1, Lft6;
-
-    const/4 v7, 0x0
-
-    const/4 v8, 0x0
+    sget-object v1, Lmah;->a:Lmah;
 
     const/4 v2, 0x0
 
-    const/4 v3, 0x0
+    iget-object v3, p0, Lq69;->b:[Landroid/view/View;
 
-    const/4 v4, 0x0
+    packed-switch v0, :pswitch_data_0
 
-    const/4 v5, 0x0
+    sget-object v0, Lone/me/keyboardmedia/MediaKeyboardWidget;->C0:[Lv58;
 
-    sget-object v6, Ldh5;->a:Ldh5;
+    array-length v0, v3
 
-    iget-boolean v9, p0, Lq69;->a:Z
+    :goto_0
+    if-ge v2, v0, :cond_0
 
-    invoke-direct/range {v1 .. v9}, Lft6;-><init>(ZZZZLjava/util/List;ZZZ)V
+    aget-object v4, v3, v2
 
-    iget-object v2, p0, Lq69;->b:Ljava/lang/Long;
+    const/16 v5, 0x8
 
-    invoke-direct {v0, v1, v2}, Lone/me/mediapicker/MediaPickerScreen;-><init>(Lft6;Ljava/lang/Long;)V
+    invoke-virtual {v4, v5}, Landroid/view/View;->setVisibility(I)V
 
-    return-object v0
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    return-object v1
+
+    :pswitch_0
+    sget-object v0, Lone/me/keyboardmedia/MediaKeyboardWidget;->C0:[Lv58;
+
+    array-length v0, v3
+
+    move v4, v2
+
+    :goto_1
+    if-ge v4, v0, :cond_1
+
+    aget-object v5, v3, v4
+
+    invoke-virtual {v5, v2}, Landroid/view/View;->setVisibility(I)V
+
+    add-int/lit8 v4, v4, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    return-object v1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

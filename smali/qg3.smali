@@ -1,11 +1,69 @@
-.class public interface abstract Lqg3;
-.super Ljava/lang/Object;
+.class public final enum Lqg3;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a(Lpj6;Landroid/view/Surface;ZLandroid/media/metrics/LogSessionId;)Lro4;
+# static fields
+.field public static final enum a:Lqg3;
+
+.field public static final synthetic b:[Lqg3;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 4
+
+    new-instance v0, Lqg3;
+
+    const-string v1, "UNKNOWN"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    new-instance v1, Lqg3;
+
+    const-string v2, "ANDROID_FIREBASE"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lqg3;->a:Lqg3;
+
+    filled-new-array {v0, v1}, [Lqg3;
+
+    move-result-object v0
+
+    sput-object v0, Lqg3;->b:[Lqg3;
+
+    return-void
 .end method
 
-.method public abstract c(Lpj6;Landroid/media/metrics/LogSessionId;)Lro4;
+.method public static valueOf(Ljava/lang/String;)Lqg3;
+    .locals 1
+
+    const-class v0, Lqg3;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lqg3;
+
+    return-object p0
+.end method
+
+.method public static values()[Lqg3;
+    .locals 1
+
+    sget-object v0, Lqg3;->b:[Lqg3;
+
+    invoke-virtual {v0}, [Lqg3;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lqg3;
+
+    return-object v0
 .end method

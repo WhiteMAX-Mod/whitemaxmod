@@ -1,66 +1,59 @@
-.class public final synthetic Lgj8;
-.super Ljava/lang/Object;
+.class public final Lgj8;
+.super Lda4;
 .source "SourceFile"
-
-# interfaces
-.implements Lnm4;
 
 
 # instance fields
-.field public final synthetic X:Ljava/lang/Float;
+.field public X:Ljava/util/Iterator;
 
-.field public final synthetic a:Ljava/lang/Long;
+.field public Y:Lte2;
 
-.field public final synthetic b:Ljava/lang/Long;
+.field public Z:Z
 
-.field public final synthetic c:Ljava/lang/Long;
+.field public d:Ljava/util/List;
 
-.field public final synthetic d:D
+.field public o:Ljava/util/LinkedHashMap;
 
-.field public final synthetic o:D
+.field public synthetic s0:Ljava/lang/Object;
+
+.field public final synthetic t0:Llj8;
+
+.field public u0:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;DDLjava/lang/Float;)V
+.method public constructor <init>(Llj8;Lda4;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lgj8;->t0:Llj8;
 
-    iput-object p1, p0, Lgj8;->a:Ljava/lang/Long;
-
-    iput-object p2, p0, Lgj8;->b:Ljava/lang/Long;
-
-    iput-object p3, p0, Lgj8;->c:Ljava/lang/Long;
-
-    iput-wide p4, p0, Lgj8;->d:D
-
-    iput-wide p6, p0, Lgj8;->o:D
-
-    iput-object p8, p0, Lgj8;->X:Ljava/lang/Float;
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 9
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    new-instance v0, Lone/me/location/map/show/ShowLocationScreen;
+    iput-object p1, p0, Lgj8;->s0:Ljava/lang/Object;
 
-    iget-object v1, p0, Lgj8;->a:Ljava/lang/Long;
+    iget p1, p0, Lgj8;->u0:I
 
-    iget-object v2, p0, Lgj8;->b:Ljava/lang/Long;
+    const/high16 v0, -0x80000000
 
-    iget-object v3, p0, Lgj8;->c:Ljava/lang/Long;
+    or-int/2addr p1, v0
 
-    iget-wide v4, p0, Lgj8;->d:D
+    iput p1, p0, Lgj8;->u0:I
 
-    iget-wide v6, p0, Lgj8;->o:D
+    iget-object p1, p0, Lgj8;->t0:Llj8;
 
-    iget-object v8, p0, Lgj8;->X:Ljava/lang/Float;
+    const/4 v0, 0x0
 
-    invoke-direct/range {v0 .. v8}, Lone/me/location/map/show/ShowLocationScreen;-><init>(Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;DDLjava/lang/Float;)V
+    invoke-virtual {p1, v0, p0}, Llj8;->K0(Lpha;Lda4;)Ljava/lang/Object;
 
-    return-object v0
+    move-result-object p1
+
+    return-object p1
 .end method

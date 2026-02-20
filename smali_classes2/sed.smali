@@ -3,26 +3,36 @@
 
 
 # static fields
-.field public static oneme_settings_ringtone_custom_section_add:I = 0x7f1309ec
+.field public static pinbars_block_user_confirmation_sheet_cancel:I = 0x7f0a08db
 
-.field public static oneme_settings_ringtone_custom_section_bottom:I = 0x7f1309ed
+.field public static pinbars_block_user_confirmation_sheet_confirm:I = 0x7f0a08dc
 
-.field public static oneme_settings_ringtone_custom_section_bottom_full:I = 0x7f1309ee
+.field public static pinbars_group_call_bar:I = 0x7f0a08dd
 
-.field public static oneme_settings_ringtone_custom_section_header:I = 0x7f1309ef
+.field public static pinbars_group_call_bar_button:I = 0x7f0a08de
 
-.field public static oneme_settings_ringtone_custom_section_wrong_duration:I = 0x7f1309f0
+.field public static pinbars_group_call_bar_divider:I = 0x7f0a08df
 
-.field public static oneme_settings_ringtone_custom_section_wrong_format:I = 0x7f1309f1
+.field public static pinbars_group_call_bar_stack:I = 0x7f0a08e0
 
-.field public static oneme_settings_ringtone_custom_section_wrong_size:I = 0x7f1309f2
+.field public static pinbars_group_call_bar_subtitle:I = 0x7f0a08e1
 
-.field public static oneme_settings_ringtone_default_section:I = 0x7f1309f3
+.field public static pinbars_group_call_bar_title:I = 0x7f0a08e2
 
-.field public static oneme_settings_ringtone_low_volume_level:I = 0x7f1309f4
+.field public static pinbars_informer:I = 0x7f0a08e3
 
-.field public static oneme_settings_ringtone_system_section:I = 0x7f1309f5
+.field public static pinbars_message:I = 0x7f0a08e4
 
-.field public static oneme_settings_ringtone_system_title:I = 0x7f1309f6
+.field public static pinbars_miniplayer:I = 0x7f0a08e5
 
-.field public static oneme_settings_ringtone_title:I = 0x7f1309f7
+.field public static pinbars_pending_join_requests:I = 0x7f0a08e6
+
+.field public static pinbars_report_and_leave:I = 0x7f0a08e7
+
+.field public static pinbars_report_and_leave_dialog_cancel:I = 0x7f0a08e8
+
+.field public static pinbars_report_and_leave_dialog_confirm:I = 0x7f0a08e9
+
+.field public static pinbars_root:I = 0x7f0a08ea
+
+.field public static unknown_contact:I = 0x7f0a0c4e

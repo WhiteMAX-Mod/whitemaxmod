@@ -2,405 +2,349 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lecg;
+.implements Ldcg;
+
 
 # static fields
-.field public static final f:[Ljava/lang/Class;
+.field public static final s0:Ljava/util/TreeMap;
 
 
 # instance fields
-.field public final a:Ljava/util/LinkedHashMap;
+.field public final X:[[B
 
-.field public final b:Ljava/util/LinkedHashMap;
+.field public final Y:[I
 
-.field public final c:Ljava/util/LinkedHashMap;
+.field public Z:I
 
-.field public final d:Ljava/util/LinkedHashMap;
+.field public final a:I
 
-.field public final e:Ln9e;
+.field public volatile b:Ljava/lang/String;
+
+.field public final c:[J
+
+.field public final d:[D
+
+.field public final o:[Ljava/lang/String;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 30
+    .locals 1
 
-    const-class v28, Landroid/util/Size;
+    new-instance v0, Ljava/util/TreeMap;
 
-    const-class v29, Landroid/util/SizeF;
+    invoke-direct {v0}, Ljava/util/TreeMap;-><init>()V
 
-    sget-object v1, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
-
-    const-class v2, [Z
-
-    sget-object v3, Ljava/lang/Double;->TYPE:Ljava/lang/Class;
-
-    const-class v4, [D
-
-    sget-object v5, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
-
-    const-class v6, [I
-
-    sget-object v7, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
-
-    const-class v8, [J
-
-    const-class v9, Ljava/lang/String;
-
-    const-class v10, [Ljava/lang/String;
-
-    const-class v11, Landroid/os/Binder;
-
-    const-class v12, Landroid/os/Bundle;
-
-    sget-object v13, Ljava/lang/Byte;->TYPE:Ljava/lang/Class;
-
-    const-class v14, [B
-
-    sget-object v15, Ljava/lang/Character;->TYPE:Ljava/lang/Class;
-
-    const-class v16, [C
-
-    const-class v17, Ljava/lang/CharSequence;
-
-    const-class v18, [Ljava/lang/CharSequence;
-
-    const-class v19, Ljava/util/ArrayList;
-
-    sget-object v20, Ljava/lang/Float;->TYPE:Ljava/lang/Class;
-
-    const-class v21, [F
-
-    const-class v22, Landroid/os/Parcelable;
-
-    const-class v23, [Landroid/os/Parcelable;
-
-    const-class v24, Ljava/io/Serializable;
-
-    sget-object v25, Ljava/lang/Short;->TYPE:Ljava/lang/Class;
-
-    const-class v26, [S
-
-    const-class v27, Landroid/util/SparseArray;
-
-    filled-new-array/range {v1 .. v29}, [Ljava/lang/Class;
-
-    move-result-object v0
-
-    sput-object v0, Li9e;->f:[Ljava/lang/Class;
+    sput-object v0, Li9e;->s0:Ljava/util/TreeMap;
 
     return-void
 .end method
 
-.method public constructor <init>()V
-    .locals 2
+.method public constructor <init>(I)V
+    .locals 1
 
-    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 9
-    new-instance v0, Ljava/util/LinkedHashMap;
+    iput p1, p0, Li9e;->a:I
 
-    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
+    add-int/lit8 p1, p1, 0x1
 
-    iput-object v0, p0, Li9e;->a:Ljava/util/LinkedHashMap;
+    new-array v0, p1, [I
 
-    .line 10
-    new-instance v0, Ljava/util/LinkedHashMap;
+    iput-object v0, p0, Li9e;->Y:[I
 
-    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
+    new-array v0, p1, [J
 
-    iput-object v0, p0, Li9e;->b:Ljava/util/LinkedHashMap;
+    iput-object v0, p0, Li9e;->c:[J
 
-    .line 11
-    new-instance v0, Ljava/util/LinkedHashMap;
+    new-array v0, p1, [D
 
-    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
+    iput-object v0, p0, Li9e;->d:[D
 
-    iput-object v0, p0, Li9e;->c:Ljava/util/LinkedHashMap;
+    new-array v0, p1, [Ljava/lang/String;
 
-    .line 12
-    new-instance v0, Ljava/util/LinkedHashMap;
+    iput-object v0, p0, Li9e;->o:[Ljava/lang/String;
 
-    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
+    new-array p1, p1, [[B
 
-    iput-object v0, p0, Li9e;->d:Ljava/util/LinkedHashMap;
+    iput-object p1, p0, Li9e;->X:[[B
 
-    .line 13
-    new-instance v0, Lsm6;
+    return-void
+.end method
+
+
+# virtual methods
+.method public final E(Ldcg;)V
+    .locals 6
+
+    iget v0, p0, Li9e;->Z:I
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, v1, p0}, Lsm6;-><init>(ILjava/lang/Object;)V
+    if-gt v1, v0, :cond_7
 
-    iput-object v0, p0, Li9e;->e:Ln9e;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/util/HashMap;)V
-    .locals 3
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    new-instance v0, Ljava/util/LinkedHashMap;
-
-    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
-
-    iput-object v0, p0, Li9e;->a:Ljava/util/LinkedHashMap;
-
-    .line 3
-    new-instance v1, Ljava/util/LinkedHashMap;
-
-    invoke-direct {v1}, Ljava/util/LinkedHashMap;-><init>()V
-
-    iput-object v1, p0, Li9e;->b:Ljava/util/LinkedHashMap;
-
-    .line 4
-    new-instance v1, Ljava/util/LinkedHashMap;
-
-    invoke-direct {v1}, Ljava/util/LinkedHashMap;-><init>()V
-
-    iput-object v1, p0, Li9e;->c:Ljava/util/LinkedHashMap;
-
-    .line 5
-    new-instance v1, Ljava/util/LinkedHashMap;
-
-    invoke-direct {v1}, Ljava/util/LinkedHashMap;-><init>()V
-
-    iput-object v1, p0, Li9e;->d:Ljava/util/LinkedHashMap;
-
-    .line 6
-    new-instance v1, Lsm6;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v1, v2, p0}, Lsm6;-><init>(ILjava/lang/Object;)V
-
-    iput-object v1, p0, Li9e;->e:Ln9e;
-
-    .line 7
-    invoke-interface {v0, p1}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
-
-    return-void
-.end method
-
-.method public static a(Li9e;)Landroid/os/Bundle;
-    .locals 6
-
-    iget-object v0, p0, Li9e;->a:Ljava/util/LinkedHashMap;
-
-    iget-object v1, p0, Li9e;->b:Ljava/util/LinkedHashMap;
-
-    invoke-static {v1}, Lss8;->o(Ljava/util/Map;)Ljava/util/Map;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
+    move v2, v1
 
     :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    iget-object v3, p0, Li9e;->Y:[I
 
-    move-result v2
+    aget v3, v3, v2
 
-    if-eqz v2, :cond_6
+    if-eq v3, v1, :cond_6
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    const/4 v4, 0x2
 
-    move-result-object v2
+    if-eq v3, v4, :cond_5
 
-    check-cast v2, Ljava/util/Map$Entry;
+    const/4 v4, 0x3
 
-    invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+    if-eq v3, v4, :cond_4
 
-    move-result-object v3
+    const/4 v4, 0x4
 
-    check-cast v3, Ljava/lang/String;
+    const-string v5, "Required value was null."
 
-    invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+    if-eq v3, v4, :cond_2
 
-    move-result-object v2
+    const/4 v4, 0x5
 
-    check-cast v2, Ln9e;
+    if-eq v3, v4, :cond_0
 
-    invoke-interface {v2}, Ln9e;->a()Landroid/os/Bundle;
-
-    move-result-object v2
-
-    if-nez v2, :cond_0
-
-    goto :goto_2
+    goto :goto_1
 
     :cond_0
-    const/4 v4, 0x0
+    iget-object v3, p0, Li9e;->X:[[B
 
-    :goto_1
-    const/16 v5, 0x1d
+    aget-object v3, v3, v2
 
-    if-ge v4, v5, :cond_5
+    if-eqz v3, :cond_1
 
-    sget-object v5, Li9e;->f:[Ljava/lang/Class;
+    invoke-interface {p1, v2, v3}, Ldcg;->c(I[B)V
 
-    aget-object v5, v5, v4
-
-    invoke-virtual {v5, v2}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_4
-
-    :goto_2
-    iget-object v4, p0, Li9e;->c:Ljava/util/LinkedHashMap;
-
-    invoke-virtual {v4, v3}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v4
-
-    instance-of v5, v4, Lrea;
-
-    if-eqz v5, :cond_1
-
-    check-cast v4, Lrea;
-
-    goto :goto_3
+    goto :goto_1
 
     :cond_1
-    const/4 v4, 0x0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    :goto_3
-    if-eqz v4, :cond_2
+    invoke-direct {p1, v5}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v4, v2}, Ldf8;->k(Ljava/lang/Object;)V
-
-    goto :goto_4
+    throw p1
 
     :cond_2
-    invoke-interface {v0, v3, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v3, p0, Li9e;->o:[Ljava/lang/String;
 
-    :goto_4
-    iget-object v4, p0, Li9e;->d:Ljava/util/LinkedHashMap;
+    aget-object v3, v3, v2
 
-    invoke-virtual {v4, v3}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    if-eqz v3, :cond_3
 
-    move-result-object v3
+    invoke-interface {p1, v2, v3}, Ldcg;->h(ILjava/lang/String;)V
 
-    check-cast v3, Lmfa;
-
-    if-nez v3, :cond_3
-
-    goto :goto_0
+    goto :goto_1
 
     :cond_3
-    invoke-interface {v3, v2}, Lmfa;->setValue(Ljava/lang/Object;)V
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    goto :goto_0
+    invoke-direct {p1, v5}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 
     :cond_4
-    add-int/lit8 v4, v4, 0x1
+    iget-object v3, p0, Li9e;->d:[D
+
+    aget-wide v4, v3, v2
+
+    invoke-interface {p1, v2, v4, v5}, Ldcg;->a(ID)V
 
     goto :goto_1
 
     :cond_5
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    iget-object v3, p0, Li9e;->c:[J
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    aget-wide v4, v3, v2
 
-    const-string v1, "Can\'t put value with type "
+    invoke-interface {p1, v2, v4, v5}, Ldcg;->b(IJ)V
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    goto :goto_1
 
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :cond_6
+    invoke-interface {p1, v2}, Ldcg;->e(I)V
+
+    :goto_1
+    if-eq v2, v0, :cond_7
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_7
+    return-void
+.end method
+
+.method public final H()V
+    .locals 4
+
+    sget-object v0, Li9e;->s0:Ljava/util/TreeMap;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget v1, p0, Li9e;->a:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-interface {v0, v1, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string v1, " into saved state"
+    invoke-virtual {v0}, Ljava/util/TreeMap;->size()I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result v1
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const/16 v2, 0xf
 
-    move-result-object v0
+    if-le v1, v2, :cond_0
 
-    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0}, Ljava/util/TreeMap;->size()I
 
-    throw p0
+    move-result v1
 
-    :cond_6
-    invoke-virtual {v0}, Ljava/util/LinkedHashMap;->keySet()Ljava/util/Set;
+    add-int/lit8 v1, v1, -0xa
 
-    move-result-object p0
+    invoke-virtual {v0}, Ljava/util/TreeMap;->descendingKeySet()Ljava/util/NavigableSet;
 
-    new-instance v1, Ljava/util/ArrayList;
+    move-result-object v2
 
-    invoke-interface {p0}, Ljava/util/Set;->size()I
+    invoke-interface {v2}, Ljava/util/NavigableSet;->iterator()Ljava/util/Iterator;
 
-    move-result v2
+    move-result-object v2
 
-    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(I)V
+    :goto_0
+    add-int/lit8 v3, v1, -0x1
 
-    new-instance v2, Ljava/util/ArrayList;
+    if-lez v1, :cond_0
 
-    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result v3
+    invoke-interface {v2}, Ljava/util/Iterator;->remove()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-direct {v2, v3}, Ljava/util/ArrayList;-><init>(I)V
+    move v1, v3
 
-    invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    goto :goto_0
 
-    move-result-object p0
+    :cond_0
+    monitor-exit v0
 
-    :goto_5
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+    return-void
 
-    move-result v3
+    :catchall_0
+    move-exception v1
 
-    if-eqz v3, :cond_7
+    monitor-exit v0
 
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    throw v1
+.end method
 
-    move-result-object v3
+.method public final a(ID)V
+    .locals 2
 
-    check-cast v3, Ljava/lang/String;
+    iget-object v0, p0, Li9e;->Y:[I
 
-    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    const/4 v1, 0x3
 
-    invoke-virtual {v0, v3}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    aput v1, v0, p1
 
-    move-result-object v3
+    iget-object v0, p0, Li9e;->d:[D
 
-    invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    aput-wide p2, v0, p1
 
-    goto :goto_5
+    return-void
+.end method
 
-    :cond_7
-    new-instance p0, Lktb;
+.method public final b(IJ)V
+    .locals 2
 
-    const-string v0, "keys"
+    iget-object v0, p0, Li9e;->Y:[I
 
-    invoke-direct {p0, v0, v1}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    const/4 v1, 0x2
 
-    new-instance v0, Lktb;
+    aput v1, v0, p1
 
-    const-string v1, "values"
+    iget-object v0, p0, Li9e;->c:[J
 
-    invoke-direct {v0, v1, v2}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    aput-wide p2, v0, p1
 
-    filled-new-array {p0, v0}, [Lktb;
+    return-void
+.end method
 
-    move-result-object p0
+.method public final c(I[B)V
+    .locals 2
 
-    invoke-static {p0}, Laaj;->c([Lktb;)Landroid/os/Bundle;
+    iget-object v0, p0, Li9e;->Y:[I
 
-    move-result-object p0
+    const/4 v1, 0x5
 
-    return-object p0
+    aput v1, v0, p1
+
+    iget-object v0, p0, Li9e;->X:[[B
+
+    aput-object p2, v0, p1
+
+    return-void
+.end method
+
+.method public final close()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final e(I)V
+    .locals 2
+
+    iget-object v0, p0, Li9e;->Y:[I
+
+    const/4 v1, 0x1
+
+    aput v1, v0, p1
+
+    return-void
+.end method
+
+.method public final h(ILjava/lang/String;)V
+    .locals 2
+
+    iget-object v0, p0, Li9e;->Y:[I
+
+    const/4 v1, 0x4
+
+    aput v1, v0, p1
+
+    iget-object v0, p0, Li9e;->o:[Ljava/lang/String;
+
+    aput-object p2, v0, p1
+
+    return-void
+.end method
+
+.method public final l()Ljava/lang/String;
+    .locals 2
+
+    iget-object v0, p0, Li9e;->b:Ljava/lang/String;
+
+    if-eqz v0, :cond_0
+
+    return-object v0
+
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "Required value was null."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method

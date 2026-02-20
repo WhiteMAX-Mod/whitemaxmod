@@ -1,180 +1,145 @@
 .class public final Lyk1;
-.super Ljava/lang/Object;
+.super Lpdg;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lyk1;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field public static final c:Lyk1;
+.implements Lys6;
 
 
 # instance fields
-.field public final a:J
+.field public final synthetic X:Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;
 
-.field public final b:I
+.field public final synthetic Y:Lpl1;
+
+.field public o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
-
-    new-instance v0, Lz7;
-
-    const/16 v1, 0xb
-
-    invoke-direct {v0, v1}, Lz7;-><init>(I)V
-
-    sput-object v0, Lyk1;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    new-instance v0, Lyk1;
-
-    const-wide/16 v1, 0x0
-
-    const/4 v3, 0x0
-
-    invoke-direct {v0, v1, v2, v3}, Lyk1;-><init>(JI)V
-
-    sput-object v0, Lyk1;->c:Lyk1;
-
-    return-void
-.end method
-
-.method public constructor <init>(JI)V
+.method public constructor <init>(Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;Lpl1;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lyk1;->X:Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;
 
-    iput-wide p1, p0, Lyk1;->a:J
+    iput-object p2, p0, Lyk1;->Y:Lpl1;
 
-    iput p3, p0, Lyk1;->b:I
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x0
+    check-cast p1, Lnd4;
 
-    return v0
-.end method
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+    invoke-virtual {p0, p1, p2}, Lyk1;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    const/4 v0, 0x1
+    move-result-object p1
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lyk1;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
     check-cast p1, Lyk1;
 
-    iget-wide v3, p0, Lyk1;->a:J
+    sget-object p2, Lmah;->a:Lmah;
 
-    iget-wide v5, p1, Lyk1;->a:J
+    invoke-virtual {p1, p2}, Lyk1;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    cmp-long v1, v3, v5
+    move-result-object p1
 
-    if-eqz v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget v1, p0, Lyk1;->b:I
-
-    iget p1, p1, Lyk1;->b:I
-
-    if-eq v1, p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
+    return-object p1
 .end method
 
-.method public final hashCode()I
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    iget-wide v0, p0, Lyk1;->a:J
+    new-instance p1, Lyk1;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    iget-object v0, p0, Lyk1;->X:Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;
 
-    move-result v0
+    iget-object v1, p0, Lyk1;->Y:Lpl1;
 
-    mul-int/lit8 v0, v0, 0x1f
+    invoke-direct {p1, v0, v1, p2}, Lyk1;-><init>(Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;Lpl1;Lkotlin/coroutines/Continuation;)V
 
-    iget v1, p0, Lyk1;->b:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    return-object p1
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget v0, p0, Lyk1;->o:I
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    sget-object v1, Lmah;->a:Lmah;
 
-    iget-wide v1, p0, Lyk1;->a:J
+    const/4 v2, 0x1
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    if-eqz v0, :cond_1
 
-    const-string v1, ":"
+    if-ne v0, v2, :cond_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    iget v1, p0, Lyk1;->b:I
+    return-object v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    sget-object p1, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->H0:[Lv58;
+
+    iget-object p1, p0, Lyk1;->X:Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;
+
+    invoke-virtual {p1}, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->N0()Lqk1;
+
+    move-result-object p1
+
+    iput v2, p0, Lyk1;->o:I
+
+    iget-object v0, p1, Lqk1;->o:Lbjg;
+
+    check-cast v0, Lcbb;
+
+    invoke-virtual {v0}, Lcbb;->b()Lgd4;
 
     move-result-object v0
 
+    new-instance v2, Lnk1;
+
+    const/4 v3, 0x0
+
+    iget-object v4, p0, Lyk1;->Y:Lpl1;
+
+    invoke-direct {v2, p1, v4, v3}, Lnk1;-><init>(Lqk1;Lpl1;Lkotlin/coroutines/Continuation;)V
+
+    invoke-static {v0, v2, p0}, Lea9;->r(Led4;Lys6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lod4;->a:Lod4;
+
+    if-ne p1, v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    move-object p1, v1
+
+    :goto_0
+    if-ne p1, v0, :cond_3
+
     return-object v0
-.end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 2
-
-    iget-wide v0, p0, Lyk1;->a:J
-
-    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
-
-    iget p2, p0, Lyk1;->b:I
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    return-void
+    :cond_3
+    return-object v1
 .end method

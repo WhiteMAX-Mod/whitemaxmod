@@ -1,33 +1,100 @@
 .class public final Lfd8;
-.super Ljd8;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lod8;
 
-# instance fields
-.field public final X:Ljava/lang/String;
 
-.field public final o:Landroid/net/Uri;
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lfd8;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static final a:Lfd8;
 
 
 # direct methods
-.method public constructor <init>(Landroid/net/Uri;Ljava/lang/String;)V
-    .locals 9
+.method static constructor <clinit>()V
+    .locals 2
 
-    const-wide/16 v5, 0x0
+    new-instance v0, Lfd8;
 
-    const-wide/16 v7, 0x0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const-wide/16 v1, 0x0
+    sput-object v0, Lfd8;->a:Lfd8;
 
-    const-wide/16 v3, 0x0
+    new-instance v0, Le88;
 
-    move-object v0, p0
+    const/16 v1, 0x10
 
-    invoke-direct/range {v0 .. v8}, Ljd8;-><init>(JJJJ)V
+    invoke-direct {v0, v1}, Le88;-><init>(I)V
 
-    iput-object p1, v0, Lfd8;->o:Landroid/net/Uri;
+    sput-object v0, Lfd8;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    iput-object p2, v0, Lfd8;->X:Ljava/lang/String;
+    return-void
+.end method
+
+
+# virtual methods
+.method public final describeContents()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of p1, p1, Lfd8;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, 0x4057c762
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "Progress"
+
+    return-object v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
+
+    const/4 p2, 0x1
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
     return-void
 .end method

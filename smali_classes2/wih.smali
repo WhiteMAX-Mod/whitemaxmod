@@ -1,91 +1,99 @@
-.class public final Lwih;
+.class public abstract synthetic Lwih;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final g:Ljava/util/List;
-
-
-# instance fields
-.field public final a:I
-
-.field public final b:I
-
-.field public final c:I
-
-.field public final d:Ljava/util/concurrent/Executor;
-
-.field public final e:Lplh;
-
-.field public final f:Lhha;
+.field public static final synthetic a:[I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 3
 
-    const/4 v0, 0x1
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {}, Llq6;->values()[Llq6;
 
     move-result-object v0
 
-    const/4 v1, 0x2
+    array-length v0, v0
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    new-array v0, v0, [I
 
-    move-result-object v1
+    const/4 v1, 0x1
 
-    const/4 v2, 0x3
+    const/4 v2, 0x0
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    :try_start_0
+    aput v1, v0, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    move-result-object v2
+    :catch_0
+    const/4 v2, 0x2
 
-    const/4 v3, 0x7
+    :try_start_1
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    filled-new-array {v0, v1, v2, v3}, [Ljava/lang/Integer;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v0
-
-    sput-object v0, Lwih;->g:Ljava/util/List;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/util/concurrent/Executor;Lplh;Lhha;)V
-    .locals 2
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    sget-object v0, Lwih;->g:Ljava/util/List;
-
+    :catch_1
     const/4 v1, 0x3
 
-    invoke-static {v1, v0}, Lkgi;->b(ILjava/util/Collection;)V
+    :try_start_2
+    aput v1, v0, v2
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    iput v1, p0, Lwih;->a:I
+    :catch_2
+    const/4 v2, 0x4
 
-    const/4 v0, 0x1
+    :try_start_3
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
 
-    iput v0, p0, Lwih;->b:I
+    :catch_3
+    const/4 v1, 0x5
 
-    iput v0, p0, Lwih;->c:I
+    :try_start_4
+    aput v1, v0, v2
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
 
-    iput-object p1, p0, Lwih;->d:Ljava/util/concurrent/Executor;
+    :catch_4
+    const/4 v2, 0x6
 
-    iput-object p2, p0, Lwih;->e:Lplh;
+    :try_start_5
+    aput v2, v0, v1
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
 
-    iput-object p3, p0, Lwih;->f:Lhha;
+    :catch_5
+    const/4 v1, 0x7
+
+    :try_start_6
+    aput v1, v0, v2
+    :try_end_6
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
+
+    :catch_6
+    const/16 v2, 0x8
+
+    :try_start_7
+    aput v2, v0, v1
+    :try_end_7
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
+
+    :catch_7
+    const/16 v1, 0x9
+
+    :try_start_8
+    aput v1, v0, v2
+    :try_end_8
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_8
+
+    :catch_8
+    sput-object v0, Lwih;->a:[I
 
     return-void
 .end method

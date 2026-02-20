@@ -1,264 +1,304 @@
 .class public final Lhuc;
-.super Lp6g;
+.super Lpdg;
 .source "SourceFile"
 
 # interfaces
-.implements Ldr6;
+.implements Lys6;
 
 
 # instance fields
-.field public final synthetic A0:Landroid/graphics/drawable/ShapeDrawable;
+.field public final synthetic X:Lone/me/profileedit/ProfileEditScreen;
 
-.field public final synthetic B0:Landroid/graphics/drawable/RippleDrawable;
-
-.field public synthetic X:Lzlb;
-
-.field public final synthetic Y:Landroid/widget/TextView;
-
-.field public final synthetic Z:Landroid/widget/TextView;
-
-.field public synthetic o:Landroid/widget/LinearLayout;
-
-.field public final synthetic t0:Landroid/widget/TextView;
-
-.field public final synthetic u0:Landroid/widget/TextView;
-
-.field public final synthetic v0:Landroid/widget/TextView;
-
-.field public final synthetic w0:Landroid/graphics/drawable/ShapeDrawable;
-
-.field public final synthetic x0:Landroid/graphics/drawable/ShapeDrawable;
-
-.field public final synthetic y0:Landroid/graphics/drawable/ShapeDrawable;
-
-.field public final synthetic z0:Landroid/graphics/drawable/ShapeDrawable;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Landroid/widget/TextView;Landroid/widget/TextView;Landroid/widget/TextView;Landroid/widget/TextView;Landroid/widget/TextView;Landroid/graphics/drawable/ShapeDrawable;Landroid/graphics/drawable/ShapeDrawable;Landroid/graphics/drawable/ShapeDrawable;Landroid/graphics/drawable/ShapeDrawable;Landroid/graphics/drawable/ShapeDrawable;Landroid/graphics/drawable/RippleDrawable;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lone/me/profileedit/ProfileEditScreen;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lhuc;->Y:Landroid/widget/TextView;
+    iput-object p1, p0, Lhuc;->X:Lone/me/profileedit/ProfileEditScreen;
 
-    iput-object p2, p0, Lhuc;->Z:Landroid/widget/TextView;
+    const/4 p1, 0x2
 
-    iput-object p3, p0, Lhuc;->t0:Landroid/widget/TextView;
-
-    iput-object p4, p0, Lhuc;->u0:Landroid/widget/TextView;
-
-    iput-object p5, p0, Lhuc;->v0:Landroid/widget/TextView;
-
-    iput-object p6, p0, Lhuc;->w0:Landroid/graphics/drawable/ShapeDrawable;
-
-    iput-object p7, p0, Lhuc;->x0:Landroid/graphics/drawable/ShapeDrawable;
-
-    iput-object p8, p0, Lhuc;->y0:Landroid/graphics/drawable/ShapeDrawable;
-
-    iput-object p9, p0, Lhuc;->z0:Landroid/graphics/drawable/ShapeDrawable;
-
-    iput-object p10, p0, Lhuc;->A0:Landroid/graphics/drawable/ShapeDrawable;
-
-    iput-object p11, p0, Lhuc;->B0:Landroid/graphics/drawable/RippleDrawable;
-
-    const/4 p1, 0x3
-
-    invoke-direct {p0, p1, p12}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 16
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    move-object/from16 v0, p0
+    check-cast p1, Lquc;
 
-    move-object/from16 v1, p1
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    check-cast v1, Landroid/widget/LinearLayout;
+    invoke-virtual {p0, p1, p2}, Lhuc;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    move-object/from16 v2, p2
+    move-result-object p1
 
-    check-cast v2, Lzlb;
+    check-cast p1, Lhuc;
 
-    move-object/from16 v15, p3
+    sget-object p2, Lmah;->a:Lmah;
 
-    check-cast v15, Lkotlin/coroutines/Continuation;
+    invoke-virtual {p1, p2}, Lhuc;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v3, Lhuc;
+    return-object p2
+.end method
 
-    iget-object v13, v0, Lhuc;->A0:Landroid/graphics/drawable/ShapeDrawable;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iget-object v14, v0, Lhuc;->B0:Landroid/graphics/drawable/RippleDrawable;
+    new-instance v0, Lhuc;
 
-    iget-object v4, v0, Lhuc;->Y:Landroid/widget/TextView;
+    iget-object v1, p0, Lhuc;->X:Lone/me/profileedit/ProfileEditScreen;
 
-    iget-object v5, v0, Lhuc;->Z:Landroid/widget/TextView;
+    invoke-direct {v0, v1, p2}, Lhuc;-><init>(Lone/me/profileedit/ProfileEditScreen;Lkotlin/coroutines/Continuation;)V
 
-    iget-object v6, v0, Lhuc;->t0:Landroid/widget/TextView;
+    iput-object p1, v0, Lhuc;->o:Ljava/lang/Object;
 
-    iget-object v7, v0, Lhuc;->u0:Landroid/widget/TextView;
-
-    iget-object v8, v0, Lhuc;->v0:Landroid/widget/TextView;
-
-    iget-object v9, v0, Lhuc;->w0:Landroid/graphics/drawable/ShapeDrawable;
-
-    iget-object v10, v0, Lhuc;->x0:Landroid/graphics/drawable/ShapeDrawable;
-
-    iget-object v11, v0, Lhuc;->y0:Landroid/graphics/drawable/ShapeDrawable;
-
-    iget-object v12, v0, Lhuc;->z0:Landroid/graphics/drawable/ShapeDrawable;
-
-    invoke-direct/range {v3 .. v15}, Lhuc;-><init>(Landroid/widget/TextView;Landroid/widget/TextView;Landroid/widget/TextView;Landroid/widget/TextView;Landroid/widget/TextView;Landroid/graphics/drawable/ShapeDrawable;Landroid/graphics/drawable/ShapeDrawable;Landroid/graphics/drawable/ShapeDrawable;Landroid/graphics/drawable/ShapeDrawable;Landroid/graphics/drawable/ShapeDrawable;Landroid/graphics/drawable/RippleDrawable;Lkotlin/coroutines/Continuation;)V
-
-    iput-object v1, v3, Lhuc;->o:Landroid/widget/LinearLayout;
-
-    iput-object v2, v3, Lhuc;->X:Lzlb;
-
-    sget-object v1, Lb3h;->a:Lb3h;
-
-    invoke-virtual {v3, v1}, Lhuc;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object v1
+    return-object v0
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    .locals 18
 
-    iget-object v0, p0, Lhuc;->o:Landroid/widget/LinearLayout;
+    move-object/from16 v0, p0
 
-    iget-object v1, p0, Lhuc;->X:Lzlb;
+    iget-object v1, v0, Lhuc;->o:Ljava/lang/Object;
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    check-cast v1, Lquc;
 
-    invoke-interface {v1}, Lzlb;->b()Lxf0;
+    invoke-static/range {p1 .. p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    move-result-object p1
+    instance-of v2, v1, Lnuc;
 
-    iget p1, p1, Lxf0;->k:I
+    const/4 v3, 0x0
 
-    invoke-virtual {v0, p1}, Landroid/view/View;->setBackgroundColor(I)V
+    sget-object v4, Lmah;->a:Lmah;
 
-    invoke-interface {v1}, Lzlb;->getText()Lrfg;
+    iget-object v5, v0, Lhuc;->X:Lone/me/profileedit/ProfileEditScreen;
 
-    move-result-object p1
+    if-eqz v2, :cond_1
 
-    iget p1, p1, Lrfg;->g:I
+    check-cast v1, Lnuc;
 
-    iget-object v0, p0, Lhuc;->Y:Landroid/widget/TextView;
+    iget-object v2, v1, Lnuc;->a:Lcpg;
 
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
+    invoke-virtual {v5}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    invoke-interface {v1}, Lzlb;->getText()Lrfg;
+    move-result-object v6
 
-    move-result-object p1
+    invoke-virtual {v2, v6}, Lhpg;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
 
-    iget p1, p1, Lrfg;->i:I
+    move-result-object v2
 
-    iget-object v0, p0, Lhuc;->Z:Landroid/widget/TextView;
+    if-nez v2, :cond_0
 
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
+    goto/16 :goto_2
 
-    invoke-interface {v1}, Lzlb;->getText()Lrfg;
+    :cond_0
+    new-instance v6, Lrlb;
 
-    move-result-object p1
+    invoke-direct {v6, v5}, Lrlb;-><init>(Lone/me/sdk/arch/Widget;)V
 
-    iget p1, p1, Lrfg;->e:I
+    sget-object v5, Limb;->a:Limb;
 
-    iget-object v0, p0, Lhuc;->t0:Landroid/widget/TextView;
+    invoke-virtual {v6, v5}, Lrlb;->e(Ljmb;)V
 
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
+    invoke-virtual {v6, v2}, Lrlb;->i(Ljava/lang/CharSequence;)V
 
-    invoke-interface {v1}, Lzlb;->getText()Lrfg;
+    sget-object v2, Lkmb;->a:Lkmb;
 
-    move-result-object p1
+    invoke-virtual {v6, v2}, Lrlb;->f(Lpmb;)V
 
-    iget p1, p1, Lrfg;->i:I
+    new-instance v2, Lzlb;
 
-    iget-object v0, p0, Lhuc;->u0:Landroid/widget/TextView;
+    iget v5, v1, Lnuc;->b:I
 
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
+    const/4 v7, 0x3
 
-    invoke-interface {v1}, Lzlb;->getText()Lrfg;
+    invoke-direct {v2, v3, v3, v5, v7}, Lzlb;-><init>(IIII)V
 
-    move-result-object p1
+    invoke-virtual {v6, v2}, Lrlb;->c(Lzlb;)V
 
-    iget p1, p1, Lrfg;->g:I
+    iget-object v1, v1, Lnuc;->c:Lgb2;
 
-    iget-object v0, p0, Lhuc;->v0:Landroid/widget/TextView;
+    invoke-virtual {v6, v1}, Lrlb;->d(Lslb;)V
 
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
+    invoke-virtual {v6}, Lrlb;->j()Lqlb;
 
-    invoke-interface {v1}, Lzlb;->b()Lxf0;
+    return-object v4
 
-    move-result-object p1
+    :cond_1
+    instance-of v2, v1, Louc;
 
-    iget p1, p1, Lxf0;->h:I
+    if-eqz v2, :cond_5
 
-    iget-object v0, p0, Lhuc;->w0:Landroid/graphics/drawable/ShapeDrawable;
+    invoke-static {v5}, Lvcj;->c(Lpa4;)V
 
-    invoke-static {v0, p1}, Lpti;->f(Landroid/graphics/drawable/Drawable;I)V
+    sget-object v2, Lone/me/sdk/bottomsheet/BottomSheetWidget;->B0:[Lv58;
 
-    invoke-interface {v1}, Lzlb;->b()Lxf0;
+    check-cast v1, Louc;
 
-    move-result-object p1
+    iget-object v2, v1, Louc;->a:Lhpg;
 
-    iget p1, p1, Lxf0;->h:I
+    const/4 v6, 0x6
 
-    iget-object v0, p0, Lhuc;->x0:Landroid/graphics/drawable/ShapeDrawable;
+    const/4 v7, 0x0
 
-    invoke-static {v0, p1}, Lpti;->f(Landroid/graphics/drawable/Drawable;I)V
+    invoke-static {v2, v7, v7, v6}, Lrsj;->a(Lhpg;Landroid/os/Bundle;Laje;I)Ltu3;
 
-    invoke-interface {v1}, Lzlb;->b()Lxf0;
+    move-result-object v10
 
-    move-result-object p1
+    iget-object v2, v1, Louc;->b:Lhpg;
 
-    iget p1, p1, Lxf0;->h:I
+    invoke-virtual {v10, v2}, Ltu3;->f(Lhpg;)V
 
-    iget-object v0, p0, Lhuc;->y0:Landroid/graphics/drawable/ShapeDrawable;
+    iget-object v1, v1, Louc;->c:Ljava/util/List;
 
-    invoke-static {v0, p1}, Lpti;->f(Landroid/graphics/drawable/Drawable;I)V
+    new-instance v8, Lgu2;
 
-    invoke-interface {v1}, Lzlb;->b()Lxf0;
+    const/16 v14, 0x8
 
-    move-result-object p1
+    const/16 v15, 0xb
 
-    iget p1, p1, Lxf0;->h:I
+    const/4 v9, 0x1
 
-    iget-object v0, p0, Lhuc;->z0:Landroid/graphics/drawable/ShapeDrawable;
+    const-class v11, Ltu3;
 
-    invoke-static {v0, p1}, Lpti;->f(Landroid/graphics/drawable/Drawable;I)V
+    const-string v12, "addButton"
 
-    invoke-interface {v1}, Lzlb;->b()Lxf0;
+    const-string v13, "addButton([Lone/me/sdk/bottomsheet/ConfirmationBottomSheet$Button;)Lone/me/sdk/bottomsheet/ConfirmationBottomSheet$Builder;"
 
-    move-result-object p1
+    invoke-direct/range {v8 .. v15}, Lgu2;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
 
-    iget p1, p1, Lxf0;->h:I
+    new-instance v2, Lh4;
 
-    iget-object v0, p0, Lhuc;->A0:Landroid/graphics/drawable/ShapeDrawable;
+    const/16 v6, 0xe
 
-    invoke-static {v0, p1}, Lpti;->f(Landroid/graphics/drawable/Drawable;I)V
+    invoke-direct {v2, v6, v8}, Lh4;-><init>(ILjava/lang/Object;)V
 
-    invoke-interface {v1}, Lzlb;->c()Leqf;
+    invoke-interface {v1, v2}, Ljava/lang/Iterable;->forEach(Ljava/util/function/Consumer;)V
 
-    move-result-object p1
+    invoke-virtual {v10}, Ltu3;->e()Lone/me/sdk/bottomsheet/ConfirmationBottomSheet;
 
-    iget-object p1, p1, Leqf;->a:Lcqf;
+    move-result-object v12
 
-    iget-object p1, p1, Lcqf;->a:Lbqf;
+    invoke-virtual {v12, v5}, Lone/me/sdk/arch/Widget;->setTargetController(Lpa4;)V
 
-    iget p1, p1, Lbqf;->i:I
+    :goto_0
+    invoke-virtual {v5}, Lpa4;->getParentController()Lpa4;
 
-    invoke-static {p1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+    move-result-object v1
 
-    move-result-object p1
+    if-eqz v1, :cond_2
 
-    iget-object v0, p0, Lhuc;->B0:Landroid/graphics/drawable/RippleDrawable;
+    invoke-virtual {v5}, Lpa4;->getParentController()Lpa4;
 
-    invoke-virtual {v0, p1}, Landroid/graphics/drawable/RippleDrawable;->setColor(Landroid/content/res/ColorStateList;)V
+    move-result-object v5
 
-    sget-object p1, Lb3h;->a:Lb3h;
+    goto :goto_0
 
-    return-object p1
+    :cond_2
+    instance-of v1, v5, Lpbe;
+
+    if-eqz v1, :cond_3
+
+    check-cast v5, Lpbe;
+
+    goto :goto_1
+
+    :cond_3
+    move-object v5, v7
+
+    :goto_1
+    if-eqz v5, :cond_4
+
+    check-cast v5, Lone/me/android/root/RootController;
+
+    invoke-virtual {v5}, Lone/me/android/root/RootController;->N0()Ljbe;
+
+    move-result-object v7
+
+    :cond_4
+    if-eqz v7, :cond_6
+
+    new-instance v11, Lmbe;
+
+    const/16 v16, 0x0
+
+    const/16 v17, -0x1
+
+    const/4 v13, 0x0
+
+    const/4 v14, 0x0
+
+    const/4 v15, 0x0
+
+    invoke-direct/range {v11 .. v17}, Lmbe;-><init>(Lpa4;Ljava/lang/String;Lua4;Lua4;ZI)V
+
+    const/4 v1, 0x1
+
+    const-string v2, "BottomSheetWidget"
+
+    invoke-static {v3, v11, v1, v2}, Ly12;->s(ZLmbe;ZLjava/lang/String;)V
+
+    invoke-virtual {v7, v11}, Ljbe;->H(Lmbe;)V
+
+    return-object v4
+
+    :cond_5
+    instance-of v2, v1, Lpuc;
+
+    if-eqz v2, :cond_8
+
+    check-cast v1, Lpuc;
+
+    iget-object v2, v1, Lpuc;->a:Lhpg;
+
+    invoke-virtual {v5}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Lhpg;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
+
+    move-result-object v2
+
+    if-nez v2, :cond_7
+
+    :cond_6
+    :goto_2
+    return-object v4
+
+    :cond_7
+    new-instance v3, Lrlb;
+
+    invoke-direct {v3, v5}, Lrlb;-><init>(Lone/me/sdk/arch/Widget;)V
+
+    invoke-virtual {v3, v2}, Lrlb;->i(Ljava/lang/CharSequence;)V
+
+    iget-object v1, v1, Lpuc;->b:Ljava/lang/Integer;
+
+    new-instance v2, Lfmb;
+
+    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
+
+    move-result v1
+
+    invoke-direct {v2, v1}, Lfmb;-><init>(I)V
+
+    invoke-virtual {v3, v2}, Lrlb;->e(Ljmb;)V
+
+    invoke-virtual {v3}, Lrlb;->j()Lqlb;
+
+    return-object v4
+
+    :cond_8
+    new-instance v1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {v1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw v1
 .end method

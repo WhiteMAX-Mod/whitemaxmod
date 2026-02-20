@@ -1,233 +1,130 @@
 .class public final Lkw2;
-.super Ljava/lang/Object;
+.super Lpdg;
 .source "SourceFile"
+
+# interfaces
+.implements Lat6;
 
 
 # instance fields
-.field public final a:J
+.field public synthetic X:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
-.field public final b:Z
+.field public final synthetic Y:Lv4g;
 
-.field public final c:J
-
-.field public final d:I
-
-.field public final e:Z
-
-.field public final f:Ljava/util/List;
+.field public final synthetic o:I
 
 
 # direct methods
-.method public constructor <init>(JZJIZLjava/util/List;)V
+.method public synthetic constructor <init>(Lv4g;Lkotlin/coroutines/Continuation;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p3, p0, Lkw2;->o:I
 
-    iput-wide p1, p0, Lkw2;->a:J
+    iput-object p1, p0, Lkw2;->Y:Lv4g;
 
-    iput-boolean p3, p0, Lkw2;->b:Z
+    const/4 p1, 0x3
 
-    iput-wide p4, p0, Lkw2;->c:J
-
-    iput p6, p0, Lkw2;->d:I
-
-    iput-boolean p7, p0, Lkw2;->e:Z
-
-    iput-object p8, p0, Lkw2;->f:Ljava/util/List;
+    invoke-direct {p0, p1, p2}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    const/4 v0, 0x1
+    iget v0, p0, Lkw2;->o:I
 
-    if-ne p0, p1, :cond_0
+    check-cast p1, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
-    return v0
+    check-cast p2, Llob;
 
-    :cond_0
-    instance-of v1, p1, Lkw2;
+    check-cast p3, Lkotlin/coroutines/Continuation;
 
-    const/4 v2, 0x0
+    packed-switch v0, :pswitch_data_0
 
-    if-nez v1, :cond_1
+    new-instance p2, Lkw2;
 
-    return v2
+    iget-object v0, p0, Lkw2;->Y:Lv4g;
 
-    :cond_1
-    check-cast p1, Lkw2;
+    const/4 v1, 0x1
 
-    iget-wide v3, p0, Lkw2;->a:J
+    invoke-direct {p2, v0, p3, v1}, Lkw2;-><init>(Lv4g;Lkotlin/coroutines/Continuation;I)V
 
-    iget-wide v5, p1, Lkw2;->a:J
+    iput-object p1, p2, Lkw2;->X:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
-    cmp-long v1, v3, v5
+    sget-object p1, Lmah;->a:Lmah;
 
-    if-eqz v1, :cond_2
+    invoke-virtual {p2, p1}, Lkw2;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return v2
+    return-object p1
 
-    :cond_2
-    iget-boolean v1, p0, Lkw2;->b:Z
+    :pswitch_0
+    new-instance p2, Lkw2;
 
-    iget-boolean v3, p1, Lkw2;->b:Z
-
-    if-eq v1, v3, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-wide v3, p0, Lkw2;->c:J
-
-    iget-wide v5, p1, Lkw2;->c:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget v1, p0, Lkw2;->d:I
-
-    iget v3, p1, Lkw2;->d:I
-
-    if-eq v1, v3, :cond_5
-
-    return v2
-
-    :cond_5
-    iget-boolean v1, p0, Lkw2;->e:Z
-
-    iget-boolean v3, p1, Lkw2;->e:Z
-
-    if-eq v1, v3, :cond_6
-
-    return v2
-
-    :cond_6
-    iget-object v1, p0, Lkw2;->f:Ljava/util/List;
-
-    iget-object p1, p1, Lkw2;->f:Ljava/util/List;
-
-    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_7
-
-    return v2
-
-    :cond_7
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 4
-
-    iget-wide v0, p0, Lkw2;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-boolean v2, p0, Lkw2;->b:Z
-
-    invoke-static {v0, v1, v2}, Lcbh;->j(IIZ)I
-
-    move-result v0
-
-    iget-wide v2, p0, Lkw2;->c:J
-
-    invoke-static {v0, v1, v2, v3}, Lcbh;->i(IIJ)I
-
-    move-result v0
-
-    iget v2, p0, Lkw2;->d:I
-
-    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
-
-    move-result v0
-
-    iget-boolean v2, p0, Lkw2;->e:Z
-
-    invoke-static {v0, v1, v2}, Lcbh;->j(IIZ)I
-
-    move-result v0
-
-    iget-object v1, p0, Lkw2;->f:Ljava/util/List;
-
-    if-nez v1, :cond_0
+    iget-object v0, p0, Lkw2;->Y:Lv4g;
 
     const/4 v1, 0x0
 
-    goto :goto_0
+    invoke-direct {p2, v0, p3, v1}, Lkw2;-><init>(Lv4g;Lkotlin/coroutines/Continuation;I)V
 
-    :cond_0
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    iput-object p1, p2, Lkw2;->X:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
-    move-result v1
+    sget-object p1, Lmah;->a:Lmah;
 
-    :goto_0
-    add-int/2addr v0, v1
+    invoke-virtual {p2, p1}, Lkw2;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return v0
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    const-string v0, "ChatReactionsSettings(chatId="
+    iget v0, p0, Lkw2;->o:I
 
-    const-string v1, ", isActive="
+    packed-switch v0, :pswitch_data_0
 
-    iget-wide v2, p0, Lkw2;->a:J
+    iget-object v0, p0, Lkw2;->X:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
-    iget-boolean v4, p0, Lkw2;->b:Z
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    invoke-static {v2, v3, v0, v1, v4}, Lhc0;->k(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
+    iget-object p1, p0, Lkw2;->Y:Lv4g;
 
-    move-result-object v0
+    invoke-virtual {p1}, Lv4g;->k()V
 
-    const-string v1, ", updateTime="
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->Z()V
 
-    const-string v2, ", count="
+    sget-object p1, Lmah;->a:Lmah;
 
-    iget-wide v3, p0, Lkw2;->c:J
+    return-object p1
 
-    invoke-static {v3, v4, v1, v2, v0}, Lt02;->p(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+    :pswitch_0
+    iget-object v0, p0, Lkw2;->X:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
-    iget v1, p0, Lkw2;->d:I
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    iget-object p1, p0, Lkw2;->Y:Lv4g;
 
-    const-string v1, ", included="
+    invoke-virtual {p1}, Lv4g;->k()V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->Z()V
 
-    iget-boolean v1, p0, Lkw2;->e:Z
+    sget-object p1, Lmah;->a:Lmah;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    return-object p1
 
-    const-string v1, ", reactionIds="
+    nop
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    iget-object v2, p0, Lkw2;->f:Ljava/util/List;
-
-    invoke-static {v0, v2, v1}, Lecj;->b(Ljava/lang/StringBuilder;Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -27,7 +27,7 @@
         "<init>",
         "(Ljava/lang/String;J)V",
         "value",
-        "Lb3h;",
+        "Lmah;",
         "update",
         "(J)V",
         "Ljava/lang/String;",
@@ -111,7 +111,7 @@
 
     const/4 v5, 0x0
 
-    invoke-direct/range {v2 .. v7}, Lru/ok/android/externcalls/sdk/stat/signaling/OnlineQuantilesApproximator;-><init>(FFIILso4;)V
+    invoke-direct/range {v2 .. v7}, Lru/ok/android/externcalls/sdk/stat/signaling/OnlineQuantilesApproximator;-><init>(FFIILfq4;)V
 
     iput-object v2, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTracker$StatisticsInfo;->approximator50:Lru/ok/android/externcalls/sdk/stat/signaling/OnlineQuantilesApproximator;
 
@@ -127,7 +127,7 @@
 
     const/4 v6, 0x0
 
-    invoke-direct/range {v3 .. v8}, Lru/ok/android/externcalls/sdk/stat/signaling/OnlineQuantilesApproximator;-><init>(FFIILso4;)V
+    invoke-direct/range {v3 .. v8}, Lru/ok/android/externcalls/sdk/stat/signaling/OnlineQuantilesApproximator;-><init>(FFIILfq4;)V
 
     iput-object v3, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingTracker$StatisticsInfo;->approximator95:Lru/ok/android/externcalls/sdk/stat/signaling/OnlineQuantilesApproximator;
 

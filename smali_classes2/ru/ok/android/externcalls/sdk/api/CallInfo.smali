@@ -54,10 +54,10 @@
 # static fields
 .field public static final Companion:Lru/ok/android/externcalls/sdk/api/CallInfo$Companion;
 
-.field private static final PARSER:Lq18;
+.field private static final PARSER:Ln48;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lq18;"
+            "Ln48;"
         }
     .end annotation
 .end field
@@ -111,17 +111,17 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/api/CallInfo$Companion;-><init>(Lso4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/api/CallInfo$Companion;-><init>(Lfq4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/api/CallInfo;->Companion:Lru/ok/android/externcalls/sdk/api/CallInfo$Companion;
 
-    new-instance v1, Lv4e;
+    new-instance v1, Libe;
 
-    const/16 v2, 0xb
+    const/16 v2, 0xa
 
-    invoke-direct {v1, v2, v0}, Lv4e;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v2, v0}, Libe;-><init>(ILjava/lang/Object;)V
 
-    sput-object v1, Lru/ok/android/externcalls/sdk/api/CallInfo;->PARSER:Lq18;
+    sput-object v1, Lru/ok/android/externcalls/sdk/api/CallInfo;->PARSER:Ln48;
 
     return-void
 .end method
@@ -158,7 +158,7 @@
 
     move-object v0, p0
 
-    invoke-direct/range {v0 .. v13}, Lru/ok/android/externcalls/sdk/api/CallInfo;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/util/List;Ljava/util/List;ZIILso4;)V
+    invoke-direct/range {v0 .. v13}, Lru/ok/android/externcalls/sdk/api/CallInfo;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/util/List;Ljava/util/List;ZIILfq4;)V
 
     return-void
 .end method
@@ -225,7 +225,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/util/List;Ljava/util/List;ZIILso4;)V
+.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/util/List;Ljava/util/List;ZIILfq4;)V
     .locals 2
 
     and-int/lit8 p13, p12, 0x1
@@ -284,7 +284,7 @@
     and-int/lit16 p13, p12, 0x80
 
     .line 14
-    sget-object v1, Ldh5;->a:Ldh5;
+    sget-object v1, Lsi5;->a:Lsi5;
 
     if-eqz p13, :cond_7
 
@@ -347,15 +347,15 @@
     return-void
 .end method
 
-.method public static final synthetic access$getPARSER$cp()Lq18;
+.method public static final synthetic access$getPARSER$cp()Ln48;
     .locals 1
 
-    sget-object v0, Lru/ok/android/externcalls/sdk/api/CallInfo;->PARSER:Lq18;
+    sget-object v0, Lru/ok/android/externcalls/sdk/api/CallInfo;->PARSER:Ln48;
 
     return-object v0
 .end method
 
-.method private static final parse(Lz18;)Lru/ok/android/externcalls/sdk/api/CallInfo;
+.method private static final parse(Lx48;)Lru/ok/android/externcalls/sdk/api/CallInfo;
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -366,7 +366,7 @@
 
     sget-object v0, Lru/ok/android/externcalls/sdk/api/CallInfo;->Companion:Lru/ok/android/externcalls/sdk/api/CallInfo$Companion;
 
-    invoke-static {v0, p0}, Lru/ok/android/externcalls/sdk/api/CallInfo$Companion;->access$parse(Lru/ok/android/externcalls/sdk/api/CallInfo$Companion;Lz18;)Lru/ok/android/externcalls/sdk/api/CallInfo;
+    invoke-static {v0, p0}, Lru/ok/android/externcalls/sdk/api/CallInfo$Companion;->access$parse(Lru/ok/android/externcalls/sdk/api/CallInfo$Companion;Lx48;)Lru/ok/android/externcalls/sdk/api/CallInfo;
 
     move-result-object p0
 
@@ -380,7 +380,7 @@
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/CallInfo;->joinLink:Ljava/lang/String;
 
-    invoke-static {p1, v0}, Lhc0;->f(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v0}, Lkb0;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 

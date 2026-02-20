@@ -1,45 +1,20 @@
-.class public final Lw56;
-.super Loo0;
+.class public abstract Lw56;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # direct methods
-.method public static f(I[B)I
-    .locals 2
+.method public static a(Landroid/graphics/drawable/Drawable;)V
+    .locals 1
 
-    aget-byte v0, p1, p0
+    instance-of v0, p0, Landroid/graphics/drawable/AnimatedVectorDrawable;
 
-    and-int/lit16 v0, v0, 0xff
+    if-eqz v0, :cond_0
 
-    shl-int/lit8 v0, v0, 0x18
+    check-cast p0, Landroid/graphics/drawable/AnimatedVectorDrawable;
 
-    add-int/lit8 v1, p0, 0x1
+    invoke-virtual {p0}, Landroid/graphics/drawable/AnimatedVectorDrawable;->start()V
 
-    aget-byte v1, p1, v1
-
-    and-int/lit16 v1, v1, 0xff
-
-    shl-int/lit8 v1, v1, 0x10
-
-    or-int/2addr v0, v1
-
-    add-int/lit8 v1, p0, 0x2
-
-    aget-byte v1, p1, v1
-
-    and-int/lit16 v1, v1, 0xff
-
-    shl-int/lit8 v1, v1, 0x8
-
-    or-int/2addr v0, v1
-
-    add-int/lit8 p0, p0, 0x3
-
-    aget-byte p0, p1, p0
-
-    and-int/lit16 p0, p0, 0xff
-
-    or-int/2addr p0, v0
-
-    return p0
+    :cond_0
+    return-void
 .end method

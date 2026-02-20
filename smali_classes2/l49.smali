@@ -1,23 +1,21 @@
 .class public final Ll49;
-.super Lm49;
+.super Lt5;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:J
-
-.field public final b:Loba;
+# static fields
+.field public static final a:Ll49;
 
 
 # direct methods
-.method public constructor <init>(JLoba;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ll49;
 
-    iput-wide p1, p0, Ll49;->a:J
+    invoke-direct {v0}, Lt5;-><init>()V
 
-    iput-object p3, p0, Ll49;->b:Loba;
+    sput-object v0, Ll49;->a:Ll49;
 
     return-void
 .end method

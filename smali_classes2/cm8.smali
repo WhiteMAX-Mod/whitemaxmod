@@ -1,23 +1,21 @@
 .class public final Lcm8;
-.super Ld3;
+.super Lt5;
 .source "SourceFile"
 
 
 # static fields
-.field public static final c:Lcm8;
+.field public static final a:Lcm8;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 1
 
     new-instance v0, Lcm8;
 
-    const/16 v1, 0xc
+    invoke-direct {v0}, Lt5;-><init>()V
 
-    invoke-direct {v0, v1}, Ld3;-><init>(I)V
-
-    sput-object v0, Lcm8;->c:Lcm8;
+    sput-object v0, Lcm8;->a:Lcm8;
 
     return-void
 .end method

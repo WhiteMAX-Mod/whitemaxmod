@@ -1,163 +1,282 @@
 .class public final Laaf;
-.super Lp6g;
+.super Lyxd;
 .source "SourceFile"
 
 # interfaces
-.implements Ldr6;
+.implements Ljqg;
 
 
 # instance fields
-.field public synthetic X:Lzlb;
+.field public final a:Landroid/graphics/Rect;
 
-.field public final synthetic Y:Lymb;
-
-.field public final synthetic Z:Ljdb;
-
-.field public synthetic o:Landroidx/constraintlayout/widget/ConstraintLayout;
-
-.field public final synthetic t0:Lcom/facebook/drawee/view/SimpleDraweeView;
-
-.field public final synthetic u0:Lone/me/location/map/show/ShowLocationScreen;
+.field public final b:Landroid/graphics/Paint;
 
 
 # direct methods
-.method public constructor <init>(Lymb;Ljdb;Lcom/facebook/drawee/view/SimpleDraweeView;Lone/me/location/map/show/ShowLocationScreen;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 2
 
-    iput-object p1, p0, Laaf;->Y:Lymb;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Laaf;->Z:Ljdb;
+    new-instance v0, Landroid/graphics/Rect;
 
-    iput-object p3, p0, Laaf;->t0:Lcom/facebook/drawee/view/SimpleDraweeView;
+    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    iput-object p4, p0, Laaf;->u0:Lone/me/location/map/show/ShowLocationScreen;
+    iput-object v0, p0, Laaf;->a:Landroid/graphics/Rect;
 
-    const/4 p1, 0x3
+    new-instance v0, Landroid/graphics/Paint;
 
-    invoke-direct {p0, p1, p5}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
+
+    sget-object v1, Lfe3;->t0:Ltea;
+
+    invoke-virtual {v1, p1}, Ltea;->n(Landroid/content/Context;)Lfe3;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lfe3;->j()Llob;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Llob;->x()Lyh5;
+
+    move-result-object p1
+
+    iget p1, p1, Lyh5;->b:I
+
+    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
+
+    iput-object v0, p0, Laaf;->b:Landroid/graphics/Paint;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+.method public final g(Landroid/graphics/Rect;Landroid/view/View;Landroidx/recyclerview/widget/RecyclerView;Llyd;)V
+    .locals 3
 
-    check-cast p1, Landroidx/constraintlayout/widget/ConstraintLayout;
+    invoke-virtual {p3, p2}, Landroidx/recyclerview/widget/RecyclerView;->S(Landroid/view/View;)J
 
-    check-cast p2, Lzlb;
+    move-result-wide p2
 
-    move-object v5, p3
+    const-wide/16 v0, -0x1
 
-    check-cast v5, Lkotlin/coroutines/Continuation;
+    cmp-long p4, p2, v0
 
-    new-instance v0, Laaf;
+    if-nez p4, :cond_0
 
-    iget-object v3, p0, Laaf;->t0:Lcom/facebook/drawee/view/SimpleDraweeView;
-
-    iget-object v4, p0, Laaf;->u0:Lone/me/location/map/show/ShowLocationScreen;
-
-    iget-object v1, p0, Laaf;->Y:Lymb;
-
-    iget-object v2, p0, Laaf;->Z:Ljdb;
-
-    invoke-direct/range {v0 .. v5}, Laaf;-><init>(Lymb;Ljdb;Lcom/facebook/drawee/view/SimpleDraweeView;Lone/me/location/map/show/ShowLocationScreen;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Laaf;->o:Landroidx/constraintlayout/widget/ConstraintLayout;
-
-    iput-object p2, v0, Laaf;->X:Lzlb;
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    invoke-virtual {v0, p1}, Laaf;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
-
-    iget-object v0, p0, Laaf;->o:Landroidx/constraintlayout/widget/ConstraintLayout;
-
-    iget-object v1, p0, Laaf;->X:Lzlb;
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    sget-object p1, Lpc3;->t0:Lkme;
-
-    invoke-virtual {p1, v0}, Lkme;->p(Landroid/view/View;)Lzlb;
-
-    move-result-object v2
-
-    invoke-interface {v2}, Lzlb;->b()Lxf0;
-
-    move-result-object v2
-
-    iget v2, v2, Lxf0;->c:I
-
-    iget-object v3, p0, Laaf;->Y:Lymb;
-
-    invoke-virtual {v3, v2}, Landroid/view/View;->setBackgroundColor(I)V
-
-    iget-object v2, p0, Laaf;->Z:Ljdb;
-
-    invoke-virtual {p1, v0}, Lkme;->p(Landroid/view/View;)Lzlb;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ljdb;->c(Lzlb;)V
-
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    sget-object v3, Lone/me/location/map/show/ShowLocationScreen;->C0:[Lz28;
-
-    iget-object v3, p0, Laaf;->u0:Lone/me/location/map/show/ShowLocationScreen;
-
-    iget-object v4, v3, Lone/me/location/map/show/ShowLocationScreen;->B0:Lo58;
-
-    invoke-interface {v4}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lgre;
-
-    check-cast v4, Lidc;
-
-    invoke-virtual {v4}, Lidc;->n()Lxx6;
-
-    move-result-object v4
-
-    iget-object v5, p0, Laaf;->t0:Lcom/facebook/drawee/view/SimpleDraweeView;
-
-    invoke-static {v5, v2, v4}, Lts8;->b(Lcom/facebook/drawee/view/SimpleDraweeView;Landroid/content/Context;Lxx6;)V
-
-    iget-object v2, v3, Lone/me/location/map/show/ShowLocationScreen;->y0:Lq07;
-
-    if-eqz v2, :cond_0
-
-    invoke-virtual {p1, v0}, Lkme;->p(Landroid/view/View;)Lzlb;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4, v2}, Lone/me/location/map/show/ShowLocationScreen;->B0(Lzlb;Lq07;)V
+    goto :goto_0
 
     :cond_0
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    sget-wide v0, Lzkb;->i:J
+
+    cmp-long p4, p2, v0
+
+    const/high16 v0, 0x3f000000    # 0.5f
+
+    if-nez p4, :cond_1
+
+    iget p2, p1, Landroid/graphics/Rect;->bottom:I
+
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
+
+    move-result-object p3
+
+    invoke-virtual {p3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object p3
+
+    iget p3, p3, Landroid/util/DisplayMetrics;->density:F
+
+    invoke-static {v0, p3, p2}, Lj64;->b(FFI)I
+
+    move-result p2
+
+    iput p2, p1, Landroid/graphics/Rect;->bottom:I
+
+    return-void
+
+    :cond_1
+    sget-wide v1, Lzkb;->n:J
+
+    cmp-long p2, p2, v1
+
+    if-nez p2, :cond_2
+
+    iget p2, p1, Landroid/graphics/Rect;->top:I
+
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
+
+    move-result-object p3
+
+    invoke-virtual {p3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object p3
+
+    iget p3, p3, Landroid/util/DisplayMetrics;->density:F
+
+    invoke-static {v0, p3, p2}, Lj64;->b(FFI)I
+
+    move-result p2
+
+    iput p2, p1, Landroid/graphics/Rect;->top:I
+
+    :cond_2
+    :goto_0
+    return-void
+.end method
+
+.method public final i(Landroid/graphics/Canvas;Landroidx/recyclerview/widget/RecyclerView;)V
+    .locals 11
+
+    invoke-virtual {p2}, Landroid/view/ViewGroup;->getChildCount()I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    :goto_0
+    if-ge v1, v0, :cond_3
+
+    invoke-virtual {p2, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
-    invoke-virtual {p1, v2}, Lkme;->n(Landroid/content/Context;)Lpc3;
+    if-nez v2, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    invoke-virtual {p2, v2}, Landroidx/recyclerview/widget/RecyclerView;->S(Landroid/view/View;)J
+
+    move-result-wide v3
+
+    sget-wide v5, Lzkb;->i:J
+
+    cmp-long v5, v3, v5
+
+    iget-object v6, p0, Laaf;->b:Landroid/graphics/Paint;
+
+    const/high16 v7, 0x3f000000    # 0.5f
+
+    iget-object v8, p0, Laaf;->a:Landroid/graphics/Rect;
+
+    if-nez v5, :cond_1
+
+    invoke-virtual {v2}, Landroid/view/View;->getLeft()I
+
+    move-result p2
+
+    iput p2, v8, Landroid/graphics/Rect;->left:I
+
+    invoke-virtual {v2}, Landroid/view/View;->getBottom()I
+
+    move-result p2
+
+    iput p2, v8, Landroid/graphics/Rect;->top:I
+
+    invoke-virtual {v2}, Landroid/view/View;->getBottom()I
+
+    move-result p2
+
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v0
+
+    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
+
+    invoke-static {v7, v0, p2}, Lj64;->b(FFI)I
+
+    move-result p2
+
+    iput p2, v8, Landroid/graphics/Rect;->bottom:I
+
+    invoke-virtual {v2}, Landroid/view/View;->getRight()I
+
+    move-result p2
+
+    iput p2, v8, Landroid/graphics/Rect;->right:I
+
+    invoke-virtual {p1, v8, v6}, Landroid/graphics/Canvas;->drawRect(Landroid/graphics/Rect;Landroid/graphics/Paint;)V
+
+    return-void
+
+    :cond_1
+    sget-wide v9, Lzkb;->n:J
+
+    cmp-long v3, v3, v9
+
+    if-nez v3, :cond_2
+
+    invoke-virtual {v2}, Landroid/view/View;->getLeft()I
+
+    move-result p2
+
+    iput p2, v8, Landroid/graphics/Rect;->left:I
+
+    invoke-virtual {v2}, Landroid/view/View;->getTop()I
+
+    move-result p2
+
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v0
+
+    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
+
+    invoke-static {v7, v0, p2}, Lj64;->b(FFI)I
+
+    move-result p2
+
+    iput p2, v8, Landroid/graphics/Rect;->top:I
+
+    invoke-virtual {v2}, Landroid/view/View;->getTop()I
+
+    move-result p2
+
+    iput p2, v8, Landroid/graphics/Rect;->bottom:I
+
+    invoke-virtual {v2}, Landroid/view/View;->getRight()I
+
+    move-result p2
+
+    iput p2, v8, Landroid/graphics/Rect;->right:I
+
+    invoke-virtual {p1, v8, v6}, Landroid/graphics/Canvas;->drawRect(Landroid/graphics/Rect;Landroid/graphics/Paint;)V
+
+    return-void
+
+    :cond_2
+    :goto_1
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_3
+    return-void
+.end method
+
+.method public final onThemeChanged(Llob;)V
+    .locals 1
+
+    invoke-interface {p1}, Llob;->x()Lyh5;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget p1, p1, Lyh5;->b:I
 
-    invoke-static {v0, v1}, Lpc3;->f(Landroid/view/ViewGroup;Lzlb;)V
+    iget-object v0, p0, Laaf;->b:Landroid/graphics/Paint;
 
-    sget-object p1, Lb3h;->a:Lb3h;
+    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
 
-    return-object p1
+    return-void
 .end method

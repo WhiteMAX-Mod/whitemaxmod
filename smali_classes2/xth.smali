@@ -4,8 +4,5 @@
 
 
 # virtual methods
-.method public abstract attach(Landroid/view/View;)V
-.end method
-
-.method public abstract detach(Landroid/view/View;)V
+.method public abstract getTitle()Ljava/lang/String;
 .end method

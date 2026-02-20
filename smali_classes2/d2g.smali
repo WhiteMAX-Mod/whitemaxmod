@@ -1,141 +1,150 @@
-.class public final enum Ld2g;
-.super Ljava/lang/Enum;
+.class public final Ld2g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Enum<",
-        "Ld2g;",
-        ">;"
-    }
-.end annotation
+# instance fields
+.field public final a:Ljava/lang/String;
 
-
-# static fields
-.field public static final Companion:Lc2g;
-
-.field public static final enum X:Ld2g;
-
-.field public static final synthetic Y:[Ld2g;
-
-.field public static final a:Ljava/lang/Object;
-
-.field public static final enum b:Ld2g;
-
-.field public static final enum c:Ld2g;
-
-.field public static final enum d:Ld2g;
-
-.field public static final enum o:Ld2g;
+.field public final b:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 8
+.method public synthetic constructor <init>(Ljava/lang/String;I)V
+    .locals 2
 
-    new-instance v0, Ld2g;
+    and-int/lit8 p2, p2, 0x1
 
-    const-string v1, "UPDATED"
+    if-eqz p2, :cond_0
 
-    const/4 v2, 0x0
+    const/4 p1, 0x0
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    :cond_0
+    const-wide/16 v0, 0x0
 
-    sput-object v0, Ld2g;->b:Ld2g;
-
-    new-instance v1, Ld2g;
-
-    const-string v2, "REMOVED"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Ld2g;->c:Ld2g;
-
-    new-instance v2, Ld2g;
-
-    const-string v3, "CLEARED"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Ld2g;->d:Ld2g;
-
-    new-instance v3, Ld2g;
-
-    const-string v5, "OPENED"
-
-    const/4 v6, 0x3
-
-    invoke-direct {v3, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Ld2g;->o:Ld2g;
-
-    new-instance v5, Ld2g;
-
-    const-string v6, "AUTHORIZED"
-
-    const/4 v7, 0x4
-
-    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v5, Ld2g;->X:Ld2g;
-
-    filled-new-array {v0, v1, v2, v3, v5}, [Ld2g;
-
-    move-result-object v0
-
-    sput-object v0, Ld2g;->Y:[Ld2g;
-
-    new-instance v0, Lc2g;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Ld2g;->Companion:Lc2g;
-
-    new-instance v0, Lmnf;
-
-    const/16 v1, 0x10
-
-    invoke-direct {v0, v1}, Lmnf;-><init>(I)V
-
-    invoke-static {v4, v0}, Le8;->b(ILlq6;)Lo58;
-
-    move-result-object v0
-
-    sput-object v0, Ld2g;->a:Ljava/lang/Object;
+    .line 1
+    invoke-direct {p0, p1, v0, v1}, Ld2g;-><init>(Ljava/lang/String;J)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Ld2g;
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;J)V
+    .locals 0
 
-    const-class v0, Ld2g;
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    .line 3
+    iput-object p1, p0, Ld2g;->a:Ljava/lang/String;
 
-    move-result-object p0
+    .line 4
+    iput-wide p2, p0, Ld2g;->b:J
 
-    check-cast p0, Ld2g;
-
-    return-object p0
+    return-void
 .end method
 
-.method public static values()[Ld2g;
-    .locals 1
 
-    sget-object v0, Ld2g;->Y:[Ld2g;
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Ld2g;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Ld2g;
+
+    iget-object v1, p0, Ld2g;->a:Ljava/lang/String;
+
+    iget-object v3, p1, Ld2g;->a:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-wide v3, p0, Ld2g;->b:J
+
+    iget-wide v5, p1, Ld2g;->b:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-object v0, p0, Ld2g;->a:Ljava/lang/String;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    :goto_0
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-wide v1, p0, Ld2g;->b:J
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, "QueryState(query="
+
+    const-string v1, ", marker="
+
+    iget-wide v2, p0, Ld2g;->b:J
+
+    iget-object v4, p0, Ld2g;->a:Ljava/lang/String;
+
+    invoke-static {v0, v2, v3, v4, v1}, Ljye;->m(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    check-cast v0, [Ld2g;
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

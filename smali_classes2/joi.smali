@@ -2,68 +2,90 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lj88;
+
 
 # instance fields
-.field public final a:Z
+.field public a:Lx0i;
 
-.field public final b:Ljava/util/List;
+.field public final synthetic b:Lone/me/sdk/arch/Widget;
 
-.field public final c:Z
+.field public final synthetic c:Ljava/lang/Class;
+
+.field public final synthetic d:Lw0i;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/ArrayList;ZZ)V
+.method public constructor <init>(Lone/me/sdk/arch/Widget;Ljava/lang/Class;Lw0i;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean p2, p0, Ljoi;->a:Z
+    iput-object p1, p0, Ljoi;->b:Lone/me/sdk/arch/Widget;
 
-    iput-object p1, p0, Ljoi;->b:Ljava/util/List;
+    iput-object p2, p0, Ljoi;->c:Ljava/lang/Class;
 
-    iput-boolean p3, p0, Ljoi;->c:Z
+    iput-object p3, p0, Ljoi;->d:Lw0i;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final e()Z
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object v0, p0, Ljoi;->a:Lx0i;
 
-    const-string v1, "HandleConversationParticipantsResult{isMeRestricted="
+    if-eqz v0, :cond_0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const/4 v0, 0x1
 
-    iget-boolean v1, p0, Ljoi;->a:Z
+    return v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    :cond_0
+    const/4 v0, 0x0
 
-    const-string v1, ", responders="
+    return v0
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public final getValue()Ljava/lang/Object;
+    .locals 3
 
-    iget-object v1, p0, Ljoi;->b:Ljava/util/List;
+    iget-object v0, p0, Ljoi;->a:Lx0i;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    if-nez v0, :cond_1
 
-    const-string v1, ", callToGroup="
+    iget-object v0, p0, Ljoi;->b:Lone/me/sdk/arch/Widget;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Ljoi;->c:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x7d
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewModelStore$arch_release()Lbpi;
 
     move-result-object v0
 
+    iget-object v1, p0, Ljoi;->c:Ljava/lang/Class;
+
+    iget-object v2, p0, Ljoi;->d:Lw0i;
+
+    invoke-virtual {v0, v1, v2}, Lbpi;->a(Ljava/lang/Class;Lw0i;)Lx0i;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    iput-object v0, p0, Ljoi;->a:Lx0i;
+
+    return-object v0
+
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "Required value was null."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_1
     return-object v0
 .end method

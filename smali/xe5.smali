@@ -2,69 +2,99 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lsr4;
-
 
 # instance fields
-.field public final synthetic a:Ll88;
+.field public final a:Lf0e;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/emoji2/text/EmojiCompatInitializer;Ll88;)V
-    .locals 0
+.method public constructor <init>(La1e;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lxe5;->a:Ll88;
+    iget-object p1, p1, La1e;->b:Ljava/lang/Object;
+
+    check-cast p1, Lyk7;
+
+    invoke-virtual {p1}, Lyk7;->h()Lf0e;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lxe5;->a:Lf0e;
+
+    invoke-virtual {p1}, Ljava/util/AbstractCollection;->isEmpty()Z
+
+    move-result v0
+
+    xor-int/lit8 v0, v0, 0x1
+
+    const-string v1, "The sequence must contain at least one EditedMediaItem."
+
+    invoke-static {v1, v0}, Lxej;->a(Ljava/lang/Object;Z)V
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Lf0e;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lwe5;
+
+    iget-object p1, p1, Lwe5;->a:Ly59;
+
+    invoke-static {p1}, Lwe5;->c(Ly59;)Z
+
+    move-result p1
+
+    xor-int/lit8 p1, p1, 0x1
+
+    const-string v0, "If the first item in the sequence is a Gap, then forceAudioTrack or forceVideoTrack flag must be set"
+
+    invoke-static {v0, p1}, Lxej;->a(Ljava/lang/Object;Z)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onResume(Lj88;)V
-    .locals 3
+.method public final a()Z
+    .locals 4
 
-    sget p1, Landroid/os/Build$VERSION;->SDK_INT:I
+    const/4 v0, 0x0
 
-    const/16 v0, 0x1c
+    move v1, v0
 
-    if-lt p1, v0, :cond_0
+    :goto_0
+    iget-object v2, p0, Lxe5;->a:Lf0e;
 
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+    iget v3, v2, Lf0e;->d:I
 
-    move-result-object p1
+    if-ge v1, v3, :cond_1
 
-    invoke-static {p1}, Lgr3;->a(Landroid/os/Looper;)Landroid/os/Handler;
+    invoke-virtual {v2, v1}, Lf0e;->get(I)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object v2
+
+    check-cast v2, Lwe5;
+
+    iget-object v2, v2, Lwe5;->a:Ly59;
+
+    invoke-static {v2}, Lwe5;->c(Ly59;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    :cond_0
-    new-instance p1, Landroid/os/Handler;
-
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
-
-    move-result-object v0
-
-    invoke-direct {p1, v0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
-
-    :goto_0
-    new-instance v0, Lh6;
-
-    const/4 v1, 0x2
-
-    invoke-direct {v0, v1}, Lh6;-><init>(I)V
-
-    const-wide/16 v1, 0x1f4
-
-    invoke-virtual {p1, v0, v1, v2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
-
-    iget-object p1, p0, Lxe5;->a:Ll88;
-
-    invoke-virtual {p1, p0}, Ll88;->f(Lg88;)V
-
-    return-void
+    :cond_1
+    return v0
 .end method

@@ -1,30 +1,26 @@
 .class public final Lqr2;
-.super Lp6g;
+.super Lpdg;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Lys6;
 
 
 # instance fields
-.field public final synthetic X:Lc49;
-
-.field public final synthetic Y:Lws2;
+.field public final synthetic X:Lone/me/chatmedia/viewer/ChatMediaViewerScreen;
 
 .field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lc49;Lws2;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chatmedia/viewer/ChatMediaViewerScreen;)V
     .locals 0
 
-    iput-object p1, p0, Lqr2;->X:Lc49;
+    iput-object p2, p0, Lqr2;->X:Lone/me/chatmedia/viewer/ChatMediaViewerScreen;
 
-    iput-object p2, p0, Lqr2;->Y:Lws2;
+    const/4 p2, 0x2
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2, p1}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -34,8 +30,6 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lnii;
-
     check-cast p2, Lkotlin/coroutines/Continuation;
 
     invoke-virtual {p0, p1, p2}, Lqr2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
@@ -44,7 +38,7 @@
 
     check-cast p1, Lqr2;
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    sget-object p2, Lmah;->a:Lmah;
 
     invoke-virtual {p1, p2}, Lqr2;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -52,15 +46,13 @@
 .end method
 
 .method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
+    .locals 2
 
     new-instance v0, Lqr2;
 
-    iget-object v1, p0, Lqr2;->X:Lc49;
+    iget-object v1, p0, Lqr2;->X:Lone/me/chatmedia/viewer/ChatMediaViewerScreen;
 
-    iget-object v2, p0, Lqr2;->Y:Lws2;
-
-    invoke-direct {v0, v1, v2, p2}, Lqr2;-><init>(Lc49;Lws2;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, p2, v1}, Lqr2;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatmedia/viewer/ChatMediaViewerScreen;)V
 
     iput-object p1, v0, Lqr2;->o:Ljava/lang/Object;
 
@@ -72,163 +64,35 @@
 
     iget-object v0, p0, Lqr2;->o:Ljava/lang/Object;
 
-    check-cast v0, Lnii;
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    check-cast v0, Ljs2;
 
-    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
+    iget-object p1, p0, Lqr2;->X:Lone/me/chatmedia/viewer/ChatMediaViewerScreen;
 
-    move-result p1
+    iget-object v1, p1, Lone/me/chatmedia/viewer/ChatMediaViewerScreen;->I0:Ltp2;
 
-    if-eqz p1, :cond_9
+    invoke-virtual {v1}, Ltp2;->j()I
 
-    const/4 v0, 0x1
+    move-result v2
 
-    if-eq p1, v0, :cond_9
+    iget-object v3, v0, Ljs2;->a:Ljava/util/List;
 
-    const/4 v0, 0x2
+    new-instance v4, Las2;
 
-    const/4 v1, 0x4
+    invoke-direct {v4, p1, v2, v0}, Las2;-><init>(Lone/me/chatmedia/viewer/ChatMediaViewerScreen;ILjs2;)V
 
-    sget-object v2, Lqhg;->b:Lphg;
+    iget-object p1, v1, Ltp2;->x0:Lcy;
 
-    iget-object v3, p0, Lqr2;->X:Lc49;
+    new-instance v0, Ljy1;
 
-    iget-object v4, p0, Lqr2;->Y:Lws2;
+    const/16 v1, 0x11
 
-    if-eq p1, v0, :cond_5
+    invoke-direct {v0, v1, v4}, Ljy1;-><init>(ILjava/lang/Object;)V
 
-    const/4 v0, 0x3
+    invoke-virtual {p1, v3, v0}, Lcy;->b(Ljava/util/List;Ljava/lang/Runnable;)V
 
-    if-eq p1, v0, :cond_1
-
-    if-eq p1, v1, :cond_9
-
-    const/4 v0, 0x5
-
-    if-ne p1, v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
-
-    :cond_1
-    :goto_0
-    iget-object p1, v4, Lws2;->W0:Lcm5;
-
-    instance-of v0, v3, Lu39;
-
-    if-eqz v0, :cond_2
-
-    sget v0, Lfdd;->oneme_chatmedia_viewer_photo_download_error:I
-
-    new-instance v2, Llhg;
-
-    invoke-direct {v2, v0}, Llhg;-><init>(I)V
-
-    goto :goto_1
-
-    :cond_2
-    instance-of v0, v3, La49;
-
-    if-eqz v0, :cond_3
-
-    sget v0, Lfdd;->oneme_chatmedia_viewer_video_download_error:I
-
-    new-instance v2, Llhg;
-
-    invoke-direct {v2, v0}, Llhg;-><init>(I)V
-
-    goto :goto_1
-
-    :cond_3
-    instance-of v0, v3, Lm39;
-
-    if-eqz v0, :cond_4
-
-    :goto_1
-    new-instance v0, Lvl5;
-
-    sget v3, Lf6e;->l:I
-
-    new-instance v4, Ljava/lang/Integer;
-
-    invoke-direct {v4, v3}, Ljava/lang/Integer;-><init>(I)V
-
-    invoke-direct {v0, v2, v4, v1}, Lvl5;-><init>(Lqhg;Ljava/lang/Integer;I)V
-
-    invoke-static {p1, v0}, Lnth;->q(Lcm5;Ljava/lang/Object;)V
-
-    goto :goto_3
-
-    :cond_4
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
-
-    :cond_5
-    instance-of p1, v3, Lu39;
-
-    if-eqz p1, :cond_6
-
-    const/4 v2, 0x0
-
-    goto :goto_2
-
-    :cond_6
-    instance-of p1, v3, La49;
-
-    if-eqz p1, :cond_7
-
-    sget p1, Lfdd;->oneme_chatmedia_viewer_video_download_complete:I
-
-    new-instance v2, Llhg;
-
-    invoke-direct {v2, p1}, Llhg;-><init>(I)V
-
-    goto :goto_2
-
-    :cond_7
-    instance-of p1, v3, Lm39;
-
-    if-eqz p1, :cond_8
-
-    :goto_2
-    if-eqz v2, :cond_9
-
-    iget-object p1, v4, Lws2;->W0:Lcm5;
-
-    new-instance v0, Lvl5;
-
-    sget v3, Lf6e;->p:I
-
-    new-instance v4, Ljava/lang/Integer;
-
-    invoke-direct {v4, v3}, Ljava/lang/Integer;-><init>(I)V
-
-    invoke-direct {v0, v2, v4, v1}, Lvl5;-><init>(Lqhg;Ljava/lang/Integer;I)V
-
-    invoke-static {p1, v0}, Lnth;->q(Lcm5;Ljava/lang/Object;)V
-
-    goto :goto_3
-
-    :cond_8
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
-
-    :cond_9
-    :goto_3
-    sget-object p1, Lb3h;->a:Lb3h;
+    sget-object p1, Lmah;->a:Lmah;
 
     return-object p1
 .end method

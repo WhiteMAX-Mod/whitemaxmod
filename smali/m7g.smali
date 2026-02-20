@@ -1,471 +1,327 @@
-.class public final Lm7g;
-.super Lq5j;
+.class public final synthetic Lm7g;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lys6;
 
 
 # instance fields
-.field public a:I
+.field public final synthetic a:Ljava/util/List;
 
-.field public b:I
-
-.field public final synthetic c:Lcom/google/android/material/behavior/SwipeDismissBehavior;
+.field public final synthetic b:Z
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/behavior/SwipeDismissBehavior;)V
+.method public synthetic constructor <init>(Ljava/util/List;Z)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lm7g;->c:Lcom/google/android/material/behavior/SwipeDismissBehavior;
+    iput-object p1, p0, Lm7g;->a:Ljava/util/List;
 
-    const/4 p1, -0x1
-
-    iput p1, p0, Lm7g;->b:I
+    iput-boolean p2, p0, Lm7g;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/view/View;I)I
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 12
 
-    sget-object v0, Lxsh;->a:Ljava/util/WeakHashMap;
+    move-object v2, p1
 
-    invoke-virtual {p1}, Landroid/view/View;->getLayoutDirection()I
+    check-cast v2, Ljava/lang/CharSequence;
 
-    move-result v0
+    check-cast p2, Ljava/lang/Integer;
+
+    invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    iget-object p2, p0, Lm7g;->a:Ljava/util/List;
+
+    iget-boolean v4, p0, Lm7g;->b:Z
+
+    const/4 v0, 0x0
 
     const/4 v1, 0x1
 
-    if-ne v0, v1, :cond_0
+    const/4 v9, 0x0
 
-    move v0, v1
+    if-nez v4, :cond_4
 
-    goto :goto_0
+    invoke-interface {p2}, Ljava/util/Collection;->size()I
+
+    move-result v3
+
+    if-ne v3, v1, :cond_4
+
+    invoke-interface {p2}, Ljava/util/List;->size()I
+
+    move-result v3
+
+    if-eqz v3, :cond_3
+
+    if-ne v3, v1, :cond_2
+
+    invoke-interface {p2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Ljava/lang/String;
+
+    const/4 v1, 0x4
+
+    invoke-static {v2, p2, p1, v0, v1}, Ld7g;->E(Ljava/lang/CharSequence;Ljava/lang/String;IZI)I
+
+    move-result p1
+
+    if-gez p1, :cond_1
 
     :cond_0
-    const/4 v0, 0x0
+    move-object v0, v9
 
-    :goto_0
-    iget-object v2, p0, Lm7g;->c:Lcom/google/android/material/behavior/SwipeDismissBehavior;
-
-    iget v2, v2, Lcom/google/android/material/behavior/SwipeDismissBehavior;->d:I
-
-    if-nez v2, :cond_2
-
-    if-eqz v0, :cond_1
-
-    iget v0, p0, Lm7g;->a:I
-
-    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
-
-    move-result p1
-
-    sub-int/2addr v0, p1
-
-    iget p1, p0, Lm7g;->a:I
-
-    goto :goto_2
+    goto/16 :goto_5
 
     :cond_1
-    iget v0, p0, Lm7g;->a:I
-
-    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
-
-    move-result p1
-
-    :goto_1
-    add-int/2addr p1, v0
-
-    goto :goto_2
-
-    :cond_2
-    if-ne v2, v1, :cond_4
-
-    if-eqz v0, :cond_3
-
-    iget v0, p0, Lm7g;->a:I
-
-    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
-
-    move-result p1
-
-    goto :goto_1
-
-    :cond_3
-    iget v0, p0, Lm7g;->a:I
-
-    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
-
-    move-result p1
-
-    sub-int/2addr v0, p1
-
-    iget p1, p0, Lm7g;->a:I
-
-    goto :goto_2
-
-    :cond_4
-    iget v0, p0, Lm7g;->a:I
-
-    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
-
-    move-result v1
-
-    sub-int/2addr v0, v1
-
-    iget v1, p0, Lm7g;->a:I
-
-    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
-
-    move-result p1
-
-    add-int/2addr p1, v1
-
-    :goto_2
-    invoke-static {v0, p2}, Ljava/lang/Math;->max(II)I
-
-    move-result p2
-
-    invoke-static {p2, p1}, Ljava/lang/Math;->min(II)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final b(Landroid/view/View;I)I
-    .locals 0
-
-    invoke-virtual {p1}, Landroid/view/View;->getTop()I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final d(Landroid/view/View;)I
-    .locals 0
-
-    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final f(Landroid/view/View;I)V
-    .locals 1
-
-    iput p2, p0, Lm7g;->b:I
-
-    invoke-virtual {p1}, Landroid/view/View;->getLeft()I
-
-    move-result p2
-
-    iput p2, p0, Lm7g;->a:I
-
-    invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
-    if-eqz p1, :cond_0
+    new-instance v0, Lyvb;
 
-    iget-object p2, p0, Lm7g;->c:Lcom/google/android/material/behavior/SwipeDismissBehavior;
+    invoke-direct {v0, p1, p2}, Lyvb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    const/4 v0, 0x1
-
-    iput-boolean v0, p2, Lcom/google/android/material/behavior/SwipeDismissBehavior;->c:Z
-
-    invoke-interface {p1, v0}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
-
-    const/4 p1, 0x0
-
-    iput-boolean p1, p2, Lcom/google/android/material/behavior/SwipeDismissBehavior;->c:Z
-
-    :cond_0
-    return-void
-.end method
-
-.method public final g(I)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final h(Landroid/view/View;II)V
-    .locals 4
-
-    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
-
-    move-result p3
-
-    int-to-float p3, p3
-
-    iget-object v0, p0, Lm7g;->c:Lcom/google/android/material/behavior/SwipeDismissBehavior;
-
-    iget v1, v0, Lcom/google/android/material/behavior/SwipeDismissBehavior;->e:F
-
-    mul-float/2addr p3, v1
-
-    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
-
-    move-result v1
-
-    int-to-float v1, v1
-
-    iget v0, v0, Lcom/google/android/material/behavior/SwipeDismissBehavior;->f:F
-
-    mul-float/2addr v1, v0
-
-    iget v0, p0, Lm7g;->a:I
-
-    sub-int/2addr p2, v0
-
-    invoke-static {p2}, Ljava/lang/Math;->abs(I)I
-
-    move-result p2
-
-    int-to-float p2, p2
-
-    cmpg-float v0, p2, p3
-
-    const/high16 v2, 0x3f800000    # 1.0f
-
-    if-gtz v0, :cond_0
-
-    invoke-virtual {p1, v2}, Landroid/view/View;->setAlpha(F)V
-
-    return-void
-
-    :cond_0
-    cmpl-float v0, p2, v1
-
-    const/4 v3, 0x0
-
-    if-ltz v0, :cond_1
-
-    invoke-virtual {p1, v3}, Landroid/view/View;->setAlpha(F)V
-
-    return-void
-
-    :cond_1
-    sub-float/2addr p2, p3
-
-    sub-float/2addr v1, p3
-
-    div-float/2addr p2, v1
-
-    sub-float p2, v2, p2
-
-    invoke-static {v3, p2}, Ljava/lang/Math;->max(FF)F
-
-    move-result p2
-
-    invoke-static {p2, v2}, Ljava/lang/Math;->min(FF)F
-
-    move-result p2
-
-    invoke-virtual {p1, p2}, Landroid/view/View;->setAlpha(F)V
-
-    return-void
-.end method
-
-.method public final i(Landroid/view/View;FF)V
-    .locals 8
-
-    const/4 p3, -0x1
-
-    iput p3, p0, Lm7g;->b:I
-
-    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
-
-    move-result p3
-
-    const/4 v0, 0x0
-
-    cmpl-float v1, p2, v0
-
-    const/4 v2, 0x0
-
-    iget-object v3, p0, Lm7g;->c:Lcom/google/android/material/behavior/SwipeDismissBehavior;
-
-    const/4 v4, 0x1
-
-    if-eqz v1, :cond_5
-
-    sget-object v5, Lxsh;->a:Ljava/util/WeakHashMap;
-
-    invoke-virtual {p1}, Landroid/view/View;->getLayoutDirection()I
-
-    move-result v5
-
-    if-ne v5, v4, :cond_0
-
-    move v5, v4
-
-    goto :goto_0
-
-    :cond_0
-    move v5, v2
-
-    :goto_0
-    iget v6, v3, Lcom/google/android/material/behavior/SwipeDismissBehavior;->d:I
-
-    const/4 v7, 0x2
-
-    if-ne v6, v7, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    if-nez v6, :cond_3
-
-    if-eqz v5, :cond_2
-
-    cmpg-float v1, p2, v0
-
-    if-gez v1, :cond_8
-
-    goto :goto_1
+    goto/16 :goto_5
 
     :cond_2
-    if-lez v1, :cond_8
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    goto :goto_1
+    const-string p2, "List has more than one element."
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 
     :cond_3
-    if-ne v6, v4, :cond_8
+    new-instance p1, Ljava/util/NoSuchElementException;
 
-    if-eqz v5, :cond_4
+    const-string p2, "List is empty."
 
-    if-lez v1, :cond_8
+    invoke-direct {p1, p2}, Ljava/util/NoSuchElementException;-><init>(Ljava/lang/String;)V
 
-    goto :goto_1
+    throw p1
 
     :cond_4
-    cmpg-float v1, p2, v0
+    new-instance v3, Lkt7;
 
-    if-gez v1, :cond_8
+    if-gez p1, :cond_5
+
+    move p1, v0
+
+    :cond_5
+    invoke-interface {v2}, Ljava/lang/CharSequence;->length()I
+
+    move-result v0
+
+    invoke-direct {v3, p1, v0, v1}, Lit7;-><init>(III)V
+
+    instance-of v0, v2, Ljava/lang/String;
+
+    iget v10, v3, Lit7;->c:I
+
+    iget v11, v3, Lit7;->b:I
+
+    if-eqz v0, :cond_c
+
+    if-lez v10, :cond_6
+
+    if-le p1, v11, :cond_7
+
+    :cond_6
+    if-gez v10, :cond_0
+
+    if-gt v11, p1, :cond_0
+
+    :cond_7
+    move v7, p1
+
+    :goto_0
+    invoke-interface {p2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :cond_8
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_a
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v3, v0
+
+    check-cast v3, Ljava/lang/String;
+
+    move-object v6, v2
+
+    check-cast v6, Ljava/lang/String;
+
+    invoke-virtual {v3}, Ljava/lang/String;->length()I
+
+    move-result v8
+
+    const/4 v5, 0x0
+
+    if-nez v4, :cond_9
+
+    invoke-virtual {v3, v5, v6, v7, v8}, Ljava/lang/String;->regionMatches(ILjava/lang/String;II)Z
+
+    move-result v1
 
     goto :goto_1
 
-    :cond_5
-    invoke-virtual {p1}, Landroid/view/View;->getLeft()I
+    :cond_9
+    invoke-virtual/range {v3 .. v8}, Ljava/lang/String;->regionMatches(ZILjava/lang/String;II)Z
 
     move-result v1
-
-    iget v5, p0, Lm7g;->a:I
-
-    sub-int/2addr v1, v5
-
-    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
-
-    move-result v5
-
-    int-to-float v5, v5
-
-    const/high16 v6, 0x3f000000    # 0.5f
-
-    mul-float/2addr v5, v6
-
-    invoke-static {v5}, Ljava/lang/Math;->round(F)I
-
-    move-result v5
-
-    invoke-static {v1}, Ljava/lang/Math;->abs(I)I
-
-    move-result v1
-
-    if-lt v1, v5, :cond_8
 
     :goto_1
-    cmpg-float p2, p2, v0
-
-    if-ltz p2, :cond_7
-
-    invoke-virtual {p1}, Landroid/view/View;->getLeft()I
-
-    move-result p2
-
-    iget v0, p0, Lm7g;->a:I
-
-    if-ge p2, v0, :cond_6
+    if-eqz v1, :cond_8
 
     goto :goto_2
 
-    :cond_6
-    add-int/2addr v0, p3
+    :cond_a
+    move-object v0, v9
 
-    goto :goto_3
-
-    :cond_7
     :goto_2
-    iget p2, p0, Lm7g;->a:I
+    check-cast v0, Ljava/lang/String;
 
-    sub-int v0, p2, p3
+    if-eqz v0, :cond_b
+
+    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    new-instance p2, Lyvb;
+
+    invoke-direct {p2, p1, v0}, Lyvb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    move-object v0, p2
+
+    goto :goto_5
+
+    :cond_b
+    if-eq v7, v11, :cond_0
+
+    add-int/2addr v7, v10
+
+    goto :goto_0
+
+    :cond_c
+    if-lez v10, :cond_d
+
+    if-le p1, v11, :cond_e
+
+    :cond_d
+    if-gez v10, :cond_0
+
+    if-gt v11, p1, :cond_0
+
+    :cond_e
+    move v3, p1
 
     :goto_3
-    move v2, v4
+    invoke-interface {p2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :cond_f
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_10
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v6
+
+    move-object v0, v6
+
+    check-cast v0, Ljava/lang/String;
+
+    const/4 v1, 0x0
+
+    move v5, v4
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v4
+
+    invoke-static/range {v0 .. v5}, Ld7g;->M(Ljava/lang/CharSequence;ILjava/lang/CharSequence;IIZ)Z
+
+    move-result v0
+
+    move v4, v5
+
+    if-eqz v0, :cond_f
 
     goto :goto_4
 
-    :cond_8
-    iget v0, p0, Lm7g;->a:I
+    :cond_10
+    move-object v6, v9
 
     :goto_4
-    iget-object p2, v3, Lcom/google/android/material/behavior/SwipeDismissBehavior;->a:Lbth;
+    check-cast v6, Ljava/lang/String;
 
-    invoke-virtual {p1}, Landroid/view/View;->getTop()I
+    if-eqz v6, :cond_11
 
-    move-result p3
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-virtual {p2, v0, p3}, Lbth;->o(II)Z
+    move-result-object p1
+
+    new-instance v0, Lyvb;
+
+    invoke-direct {v0, p1, v6}, Lyvb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    goto :goto_5
+
+    :cond_11
+    if-eq v3, v11, :cond_0
+
+    add-int/2addr v3, v10
+
+    goto :goto_3
+
+    :goto_5
+    if-eqz v0, :cond_12
+
+    iget-object p1, v0, Lyvb;->a:Ljava/lang/Object;
+
+    iget-object p2, v0, Lyvb;->b:Ljava/lang/Object;
+
+    check-cast p2, Ljava/lang/String;
+
+    invoke-virtual {p2}, Ljava/lang/String;->length()I
 
     move-result p2
 
-    if-eqz p2, :cond_9
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    new-instance p2, Lkuf;
+    move-result-object p2
 
-    invoke-direct {p2, v3, p1, v2}, Lkuf;-><init>(Lcom/google/android/material/behavior/SwipeDismissBehavior;Landroid/view/View;Z)V
+    new-instance v0, Lyvb;
 
-    sget-object p3, Lxsh;->a:Ljava/util/WeakHashMap;
+    invoke-direct {v0, p1, p2}, Lyvb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    invoke-virtual {p1, p2}, Landroid/view/View;->postOnAnimation(Ljava/lang/Runnable;)V
+    return-object v0
 
-    :cond_9
-    return-void
-.end method
-
-.method public final k(Landroid/view/View;I)Z
-    .locals 2
-
-    iget v0, p0, Lm7g;->b:I
-
-    const/4 v1, -0x1
-
-    if-eq v0, v1, :cond_0
-
-    if-ne v0, p2, :cond_1
-
-    :cond_0
-    iget-object p2, p0, Lm7g;->c:Lcom/google/android/material/behavior/SwipeDismissBehavior;
-
-    invoke-virtual {p2, p1}, Lcom/google/android/material/behavior/SwipeDismissBehavior;->t(Landroid/view/View;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_1
-    const/4 p1, 0x0
-
-    return p1
+    :cond_12
+    return-object v9
 .end method

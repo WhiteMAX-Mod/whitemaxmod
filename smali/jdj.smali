@@ -1,99 +1,70 @@
-.class public abstract Ljdj;
+.class public final Ljdj;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Loza;
+
+
+# static fields
+.field public static final a:Ljdj;
+
 
 # direct methods
-.method public static final a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 3
 
-    const/4 v0, 0x0
+    new-instance v0, Ljdj;
 
-    invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    move-result v1
+    sput-object v0, Ljdj;->a:Ljdj;
 
-    invoke-interface {p0, v0, v1}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
+    new-instance v0, Lp7j;
 
-    move-result-object p0
+    const/4 v1, 0x1
 
-    return-object p0
+    invoke-direct {v0, v1}, Lp7j;-><init>(I)V
+
+    const-class v1, Lh8j;
+
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x2
+
+    invoke-static {v0, v2}, Leni;->i(Ljava/util/HashMap;I)Lp7j;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x3
+
+    invoke-static {v0, v2}, Leni;->i(Ljava/util/HashMap;I)Lp7j;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, Leni;->m(Ljava/util/HashMap;)V
+
+    return-void
 .end method
 
-.method public static b(Ldxa;Lay3;Lay3;Li6;)V
-    .locals 1
 
-    new-instance v0, Lz48;
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    invoke-direct {v0, p1, p2, p3}, Lz48;-><init>(Lay3;Lay3;Li6;)V
+    invoke-static {p1}, Lkb0;->d(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    new-instance p1, Ljava/util/concurrent/LinkedBlockingQueue;
+    move-result-object p1
 
-    invoke-direct {p1}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V
-
-    new-instance p2, Ldo3;
-
-    const/4 p3, 0x1
-
-    invoke-direct {p2, p3, p1}, Ldo3;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v0, p2}, Lz48;->c(Lo25;)V
-
-    invoke-virtual {p0, p2}, Ldxa;->a(Le0b;)V
-
-    :cond_0
-    invoke-virtual {p2}, Ldo3;->e()Z
-
-    move-result p0
-
-    if-eqz p0, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {p1}, Ljava/util/concurrent/LinkedBlockingQueue;->poll()Ljava/lang/Object;
-
-    move-result-object p0
-
-    if-nez p0, :cond_2
-
-    :try_start_0
-    invoke-virtual {p1}, Ljava/util/concurrent/LinkedBlockingQueue;->take()Ljava/lang/Object;
-
-    move-result-object p0
-    :try_end_0
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception p0
-
-    invoke-virtual {p2}, Ldo3;->dispose()V
-
-    invoke-virtual {v0, p0}, Lz48;->onError(Ljava/lang/Throwable;)V
-
-    return-void
-
-    :cond_2
-    :goto_0
-    invoke-virtual {p2}, Ldo3;->e()Z
-
-    move-result p3
-
-    if-nez p3, :cond_3
-
-    sget-object p3, Ldo3;->c:Ljava/lang/Object;
-
-    if-eq p0, p3, :cond_3
-
-    invoke-static {v0, p0}, Lzsa;->b(Le0b;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    :cond_3
-    :goto_1
-    return-void
+    throw p1
 .end method

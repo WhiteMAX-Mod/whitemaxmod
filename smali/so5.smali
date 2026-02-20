@@ -1,59 +1,96 @@
-.class public final Lso5;
+.class public final synthetic Lso5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lks6;
+
 
 # instance fields
-.field public final a:I
+.field public final synthetic a:I
 
-.field public final b:Ljava/lang/String;
-
-.field public final c:I
-
-.field public final d:I
+.field public final synthetic b:Lks6;
 
 
 # direct methods
-.method public constructor <init>(ILjava/lang/String;II)V
+.method public synthetic constructor <init>(ILks6;)V
     .locals 0
 
-    .line 6
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 7
-    iput-object p2, p0, Lso5;->b:Ljava/lang/String;
-
-    .line 8
     iput p1, p0, Lso5;->a:I
 
-    .line 9
-    iput p3, p0, Lso5;->c:I
+    iput-object p2, p0, Lso5;->b:Lks6;
 
-    .line 10
-    iput p4, p0, Lso5;->d:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;II)V
-    .locals 0
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    .line 2
-    iput-object p1, p0, Lso5;->b:Ljava/lang/String;
+    iget v0, p0, Lso5;->a:I
 
-    .line 3
-    iput p2, p0, Lso5;->a:I
+    packed-switch v0, :pswitch_data_0
 
-    .line 4
-    iput p3, p0, Lso5;->c:I
+    iget-object v0, p0, Lso5;->b:Lks6;
 
-    const/4 p1, -0x1
+    invoke-interface {v0, p1}, Lks6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 5
-    iput p1, p0, Lso5;->d:I
+    return-object p1
 
-    return-void
+    :pswitch_0
+    check-cast p1, Ljava/lang/Integer;
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    iget-object v0, p0, Lso5;->b:Lks6;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0, p1}, Lks6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    const/4 v0, 0x1
+
+    if-ne p1, v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_1
+    iget-object v0, p0, Lso5;->b:Lks6;
+
+    check-cast p1, Ljava/lang/Throwable;
+
+    invoke-static {v0, p1}, Lkotlinx/coroutines/internal/ExceptionsConstructorKt;->b(Lks6;Ljava/lang/Throwable;)Ljava/lang/Throwable;
+
+    move-result-object p1
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

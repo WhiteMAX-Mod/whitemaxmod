@@ -6,15 +6,15 @@
 # instance fields
 .field public final d:Landroid/content/Context;
 
-.field public final e:Li7f;
+.field public final e:Lzef;
 
 .field public final f:Ljava/lang/String;
 
-.field public final g:Lr58;
+.field public final g:Lm88;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Lm16;)V
+.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Lh36;)V
     .locals 8
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,11 +27,11 @@
 
     const/4 v2, 0x0
 
-    invoke-static {v2, v0, v1}, Lj7f;->b(III)Li7f;
+    invoke-static {v2, v0, v1}, Laff;->b(III)Lzef;
 
     move-result-object v0
 
-    iput-object v0, p0, Lx3;->e:Li7f;
+    iput-object v0, p0, Lx3;->e:Lzef;
 
     new-instance v0, Lp3;
 
@@ -41,7 +41,7 @@
 
     const-string v2, ""
 
-    invoke-static {p2, v1, v2}, Lzzf;->s(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2, v1, v2}, Ll7g;->r(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -53,17 +53,19 @@
 
     iput-object v1, p0, Lx3;->f:Ljava/lang/String;
 
-    new-instance v2, Lr58;
+    new-instance v2, Lm88;
 
-    new-instance v4, Ll16;
+    new-instance v4, Lg36;
 
-    invoke-direct {v4, p2}, Ll16;-><init>(Ljava/lang/String;)V
+    const/4 v1, 0x2
 
-    new-instance v6, Limf;
+    invoke-direct {v4, p2, v1}, Lg36;-><init>(Ljava/lang/String;I)V
+
+    new-instance v6, La1e;
 
     const/4 p2, 0x1
 
-    invoke-direct {v6, p2, p0}, Limf;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v6, p2, p0}, La1e;-><init>(ILjava/lang/Object;)V
 
     const/16 v7, 0x8
 
@@ -71,11 +73,11 @@
 
     move-object v5, p3
 
-    invoke-direct/range {v2 .. v7}, Lr58;-><init>(Landroid/content/Context;Ll16;Lm16;Limf;I)V
+    invoke-direct/range {v2 .. v7}, Lm88;-><init>(Landroid/content/Context;Lg36;Lh36;La1e;I)V
 
-    invoke-virtual {v2, v0}, Lr58;->registerOnSharedPreferenceChangeListener(Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;)V
+    invoke-virtual {v2, v0}, Lm88;->registerOnSharedPreferenceChangeListener(Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;)V
 
-    iput-object v2, p0, Lx3;->g:Lr58;
+    iput-object v2, p0, Lx3;->g:Lm88;
 
     return-void
 .end method
@@ -101,17 +103,17 @@
 
     const-string v2, "clear: %s"
 
-    invoke-static {v1, v2, v0}, Lc5j;->c(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v0}, Ltej;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iget-object v0, p0, Lx3;->g:Lr58;
+    iget-object v0, p0, Lx3;->g:Lm88;
 
-    invoke-virtual {v0}, Lr58;->edit()Landroid/content/SharedPreferences$Editor;
+    invoke-virtual {v0}, Lm88;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    check-cast v0, Lj16;
+    check-cast v0, Le36;
 
-    invoke-virtual {v0}, Lj16;->clear()Landroid/content/SharedPreferences$Editor;
+    invoke-virtual {v0}, Le36;->clear()Landroid/content/SharedPreferences$Editor;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
@@ -125,11 +127,11 @@
 
     move-result-object p1
 
-    iget-object v0, p0, Lx3;->g:Lr58;
+    iget-object v0, p0, Lx3;->g:Lm88;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, p1, v1}, Lr58;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, p1, v1}, Lm88;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -155,11 +157,11 @@
 .method public final e(Ljava/lang/String;Ljava/util/List;)Ljava/util/List;
     .locals 3
 
-    iget-object v0, p0, Lx3;->g:Lr58;
+    iget-object v0, p0, Lx3;->g:Lm88;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, p1, v1}, Lr58;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, p1, v1}, Lm88;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -222,15 +224,15 @@
 .method public final f(Ljava/lang/String;Z)V
     .locals 1
 
-    iget-object v0, p0, Lx3;->g:Lr58;
+    iget-object v0, p0, Lx3;->g:Lm88;
 
-    invoke-virtual {v0}, Lr58;->edit()Landroid/content/SharedPreferences$Editor;
+    invoke-virtual {v0}, Lm88;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    check-cast v0, Lj16;
+    check-cast v0, Le36;
 
-    invoke-virtual {v0, p1, p2}, Lj16;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+    invoke-virtual {v0, p1, p2}, Le36;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
@@ -240,15 +242,15 @@
 .method public final g(ILjava/lang/String;)V
     .locals 1
 
-    iget-object v0, p0, Lx3;->g:Lr58;
+    iget-object v0, p0, Lx3;->g:Lm88;
 
-    invoke-virtual {v0}, Lr58;->edit()Landroid/content/SharedPreferences$Editor;
+    invoke-virtual {v0}, Lm88;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    check-cast v0, Lj16;
+    check-cast v0, Le36;
 
-    invoke-virtual {v0, p2, p1}, Lj16;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
+    invoke-virtual {v0, p2, p1}, Le36;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
@@ -258,15 +260,15 @@
 .method public final h(JLjava/lang/String;)V
     .locals 1
 
-    iget-object v0, p0, Lx3;->g:Lr58;
+    iget-object v0, p0, Lx3;->g:Lm88;
 
-    invoke-virtual {v0}, Lr58;->edit()Landroid/content/SharedPreferences$Editor;
+    invoke-virtual {v0}, Lm88;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    check-cast v0, Lj16;
+    check-cast v0, Le36;
 
-    invoke-virtual {v0, p3, p1, p2}, Lj16;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
+    invoke-virtual {v0, p3, p1, p2}, Le36;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
@@ -276,15 +278,15 @@
 .method public final i(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    iget-object v0, p0, Lx3;->g:Lr58;
+    iget-object v0, p0, Lx3;->g:Lm88;
 
-    invoke-virtual {v0}, Lr58;->edit()Landroid/content/SharedPreferences$Editor;
+    invoke-virtual {v0}, Lm88;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    check-cast v0, Lj16;
+    check-cast v0, Le36;
 
-    invoke-virtual {v0, p1, p2}, Lj16;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    invoke-virtual {v0, p1, p2}, Le36;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 

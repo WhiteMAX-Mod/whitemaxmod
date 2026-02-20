@@ -1,48 +1,63 @@
 .class public final Llh5;
-.super Ljava/lang/Object;
+.super Ljava/lang/Throwable;
 .source "SourceFile"
 
-# interfaces
-.implements Lud8;
 
-
-# static fields
-.field public static final a:Llh5;
-
-.field public static final b:I
+# instance fields
+.field public final synthetic a:I
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public synthetic constructor <init>(Ljava/lang/String;)V
     .locals 1
 
-    new-instance v0, Llh5;
+    .line 1
+    const/4 v0, 0x1
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput v0, p0, Llh5;->a:I
 
-    sput-object v0, Llh5;->a:Llh5;
+    invoke-direct {p0, p1}, Ljava/lang/Throwable;-><init>(Ljava/lang/String;)V
 
-    sget v0, Ly7b;->p:I
+    return-void
+.end method
 
-    sput v0, Llh5;->b:I
+.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/Throwable;I)V
+    .locals 0
+
+    .line 2
+    iput p3, p0, Llh5;->a:I
+
+    invoke-direct {p0, p1, p2}, Ljava/lang/Throwable;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getItemId()J
-    .locals 2
-
-    const-wide/16 v0, 0x0
-
-    return-wide v0
-.end method
-
-.method public final m()I
+.method public declared-synchronized fillInStackTrace()Ljava/lang/Throwable;
     .locals 1
 
-    sget v0, Llh5;->b:I
+    iget v0, p0, Llh5;->a:I
 
-    return v0
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0}, Ljava/lang/Throwable;->fillInStackTrace()Ljava/lang/Throwable;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_0
+    monitor-enter p0
+
+    monitor-exit p0
+
+    return-object p0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method

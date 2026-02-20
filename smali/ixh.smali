@@ -2,773 +2,164 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final n:J
-
-.field public static volatile o:Ljava/util/concurrent/ScheduledExecutorService;
-
-.field public static final p:Ljava/lang/Object;
+# interfaces
+.implements Lnph;
 
 
 # instance fields
-.field public final a:Ljava/lang/Object;
+.field public final a:Loph;
 
-.field public final b:Landroid/os/PowerManager$WakeLock;
+.field public final b:Ljava/lang/Object;
 
-.field public c:I
+.field public final c:Lswf;
 
-.field public d:Ljava/util/concurrent/ScheduledFuture;
+.field public final d:Z
 
-.field public e:J
+.field public final e:J
 
-.field public final f:Ljava/util/HashSet;
+.field public final f:I
 
-.field public g:Z
+.field public g:I
 
-.field public h:Leti;
+.field public h:I
 
-.field public final i:Lwna;
-
-.field public final j:Ljava/lang/String;
-
-.field public final k:Ljava/util/HashMap;
-
-.field public final l:Ljava/util/concurrent/atomic/AtomicInteger;
-
-.field public final m:Ljava/util/concurrent/ScheduledExecutorService;
+.field public final synthetic i:Ljxh;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
-
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->DAYS:Ljava/util/concurrent/TimeUnit;
-
-    const-wide/16 v1, 0x16e
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
-
-    move-result-wide v0
-
-    sput-wide v0, Lixh;->n:J
-
-    const/4 v0, 0x0
-
-    sput-object v0, Lixh;->o:Ljava/util/concurrent/ScheduledExecutorService;
-
-    new-instance v0, Ljava/lang/Object;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lixh;->p:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 7
-
-    const-string v0, "wake:com.google.firebase.iid.WakeLockHolder"
-
-    invoke-virtual {p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
-
-    move-result-object v1
+.method public constructor <init>(Ljxh;Landroid/content/Context;Lmph;Lok3;Lp01;Lpqa;Ljava/util/List;Lswf;JIZ)V
+    .locals 9
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v2, Ljava/lang/Object;
+    iput-object p1, p0, Lixh;->i:Ljxh;
 
-    invoke-direct {v2}, Ljava/lang/Object;-><init>()V
+    move-object/from16 p1, p8
 
-    iput-object v2, p0, Lixh;->a:Ljava/lang/Object;
+    iput-object p1, p0, Lixh;->c:Lswf;
 
-    const/4 v2, 0x0
+    new-instance p1, Ljava/lang/Object;
 
-    iput v2, p0, Lixh;->c:I
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
 
-    new-instance v3, Ljava/util/HashSet;
+    iput-object p1, p0, Lixh;->b:Ljava/lang/Object;
 
-    invoke-direct {v3}, Ljava/util/HashSet;-><init>()V
+    move/from16 v8, p12
 
-    iput-object v3, p0, Lixh;->f:Ljava/util/HashSet;
+    iput-boolean v8, p0, Lixh;->d:Z
 
-    const/4 v3, 0x1
+    move-wide/from16 v6, p9
 
-    iput-boolean v3, p0, Lixh;->g:Z
+    iput-wide v6, p0, Lixh;->e:J
 
-    sget-object v4, Lwna;->w0:Lwna;
+    move/from16 p1, p11
 
-    iput-object v4, p0, Lixh;->i:Lwna;
+    iput p1, p0, Lixh;->f:I
 
-    new-instance v4, Ljava/util/HashMap;
+    sget-object v5, Ll25;->a:Ll25;
 
-    invoke-direct {v4}, Ljava/util/HashMap;-><init>()V
+    move-object v4, p0
 
-    iput-object v4, p0, Lixh;->k:Ljava/util/HashMap;
+    move-object v1, p2
 
-    new-instance v4, Ljava/util/concurrent/atomic/AtomicInteger;
+    move-object v0, p3
 
-    invoke-direct {v4, v2}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+    move-object v2, p4
 
-    iput-object v4, p0, Lixh;->l:Ljava/util/concurrent/atomic/AtomicInteger;
+    move-object v3, p5
 
-    const-string v4, "WakeLock: wakeLockName must not be empty"
-
-    invoke-static {v0, v4}, Ldkj;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
-
-    const/4 v4, 0x0
-
-    iput-object v4, p0, Lixh;->h:Leti;
-
-    const-string v5, "com.google.android.gms"
-
-    invoke-virtual {p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v5
-
-    if-nez v5, :cond_1
-
-    const-string v5, "*gcore*:"
-
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result v6
-
-    if-eqz v6, :cond_0
-
-    invoke-virtual {v5, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v5
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v6, Ljava/lang/String;
-
-    invoke-direct {v6, v5}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
-
-    move-object v5, v6
-
-    :goto_0
-    iput-object v5, p0, Lixh;->j:Ljava/lang/String;
-
-    goto :goto_1
-
-    :cond_1
-    iput-object v0, p0, Lixh;->j:Ljava/lang/String;
-
-    :goto_1
-    const-string v5, "power"
-
-    invoke-virtual {p1, v5}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Landroid/os/PowerManager;
-
-    if-eqz v5, :cond_d
-
-    invoke-virtual {v5, v3, v0}, Landroid/os/PowerManager;->newWakeLock(ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lixh;->b:Landroid/os/PowerManager$WakeLock;
-
-    sget-object v0, Leji;->a:Ljava/lang/reflect/Method;
-
-    const-class v0, Leji;
-
-    monitor-enter v0
-
-    :try_start_0
-    sget-object v5, Leji;->e:Ljava/lang/Boolean;
-
-    if-eqz v5, :cond_2
-
-    invoke-virtual {v5}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v5
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit v0
-
-    goto :goto_3
-
-    :catchall_0
-    move-exception p1
-
-    goto/16 :goto_c
-
-    :cond_2
-    :try_start_1
-    const-string v5, "android.permission.UPDATE_DEVICE_STATS"
-
-    invoke-static {p1, v5}, Lu7;->b(Landroid/content/Context;Ljava/lang/String;)I
-
-    move-result v5
-
-    if-nez v5, :cond_3
-
-    move v5, v3
-
-    goto :goto_2
-
-    :cond_3
-    move v5, v2
-
-    :goto_2
-    invoke-static {v5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v6
-
-    sput-object v6, Leji;->e:Ljava/lang/Boolean;
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    monitor-exit v0
-
-    :goto_3
-    if-eqz v5, :cond_a
-
-    sget v0, Lqzf;->a:I
-
-    if-eqz v1, :cond_5
-
-    invoke-virtual {v1}, Ljava/lang/String;->trim()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    goto :goto_4
-
-    :cond_4
-    move v0, v2
-
-    goto :goto_5
-
-    :cond_5
-    :goto_4
-    move v0, v3
-
-    :goto_5
-    if-eqz v0, :cond_6
-
-    invoke-virtual {p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
-
-    move-result-object v1
-
-    :cond_6
-    const-string v0, "WorkSourceUtil"
-
-    invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
-
-    move-result-object v5
-
-    if-eqz v5, :cond_9
-
-    if-eqz v1, :cond_9
-
-    :try_start_2
-    invoke-static {p1}, Lfki;->a(Landroid/content/Context;)Ltki;
+    invoke-interface/range {v0 .. v8}, Lmph;->a(Landroid/content/Context;Lok3;Lp01;Lnph;Ljava/util/concurrent/Executor;JZ)Loph;
 
     move-result-object p1
 
-    iget-object p1, p1, Ltki;->a:Landroid/content/Context;
+    iput-object p1, p0, Lixh;->a:Loph;
 
-    invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+    move-object/from16 p2, p7
 
-    move-result-object p1
+    invoke-interface {p1, p2}, Loph;->i(Ljava/util/List;)V
 
-    invoke-virtual {p1, v1, v2}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
-
-    move-result-object p1
-    :try_end_2
-    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_2 .. :try_end_2} :catch_2
-
-    if-nez p1, :cond_7
-
-    const-string p1, "Could not get applicationInfo from package: "
-
-    invoke-virtual {p1, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_6
-
-    :cond_7
-    iget p1, p1, Landroid/content/pm/ApplicationInfo;->uid:I
-
-    new-instance v4, Landroid/os/WorkSource;
-
-    invoke-direct {v4}, Landroid/os/WorkSource;-><init>()V
-
-    const-string v2, "Unable to assign blame through WorkSource"
-
-    sget-object v5, Leji;->b:Ljava/lang/reflect/Method;
-
-    if-eqz v5, :cond_8
-
-    :try_start_3
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    filled-new-array {p1, v1}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    invoke-virtual {v5, v4, p1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_3
-    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
-
-    goto :goto_6
-
-    :catch_0
-    move-exception p1
-
-    invoke-static {v0, v2, p1}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    goto :goto_6
-
-    :cond_8
-    sget-object v1, Leji;->a:Ljava/lang/reflect/Method;
-
-    if-eqz v1, :cond_9
-
-    :try_start_4
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    filled-new-array {p1}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    invoke-virtual {v1, v4, p1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_4
-    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_1
-
-    goto :goto_6
-
-    :catch_1
-    move-exception p1
-
-    invoke-static {v0, v2, p1}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    goto :goto_6
-
-    :catch_2
-    const-string p1, "Could not find package: "
-
-    invoke-virtual {p1, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_9
-    :goto_6
-    if-eqz v4, :cond_a
-
-    iget-object p1, p0, Lixh;->b:Landroid/os/PowerManager$WakeLock;
-
-    :try_start_5
-    invoke-virtual {p1, v4}, Landroid/os/PowerManager$WakeLock;->setWorkSource(Landroid/os/WorkSource;)V
-    :try_end_5
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_5 .. :try_end_5} :catch_4
-    .catch Ljava/lang/ArrayIndexOutOfBoundsException; {:try_start_5 .. :try_end_5} :catch_3
-
-    goto :goto_8
-
-    :catch_3
-    move-exception p1
-
-    goto :goto_7
-
-    :catch_4
-    move-exception p1
-
-    :goto_7
-    const-string v0, "WakeLock"
-
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {v0, p1}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_a
-    :goto_8
-    sget-object p1, Lixh;->o:Ljava/util/concurrent/ScheduledExecutorService;
-
-    if-nez p1, :cond_c
-
-    sget-object v0, Lixh;->p:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_6
-    sget-object p1, Lixh;->o:Ljava/util/concurrent/ScheduledExecutorService;
-
-    if-nez p1, :cond_b
-
-    invoke-static {v3}, Ljava/util/concurrent/Executors;->newScheduledThreadPool(I)Ljava/util/concurrent/ScheduledExecutorService;
-
-    move-result-object p1
-
-    invoke-static {p1}, Ljava/util/concurrent/Executors;->unconfigurableScheduledExecutorService(Ljava/util/concurrent/ScheduledExecutorService;)Ljava/util/concurrent/ScheduledExecutorService;
-
-    move-result-object p1
-
-    sput-object p1, Lixh;->o:Ljava/util/concurrent/ScheduledExecutorService;
-
-    goto :goto_9
-
-    :catchall_1
-    move-exception p1
-
-    goto :goto_a
-
-    :cond_b
-    :goto_9
-    monitor-exit v0
-
-    goto :goto_b
-
-    :goto_a
-    monitor-exit v0
-    :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_1
-
-    throw p1
-
-    :cond_c
-    :goto_b
-    iput-object p1, p0, Lixh;->m:Ljava/util/concurrent/ScheduledExecutorService;
+    invoke-interface {p1, p6}, Loph;->h(Lpqa;)V
 
     return-void
-
-    :goto_c
-    :try_start_7
-    monitor-exit v0
-    :try_end_7
-    .catchall {:try_start_7 .. :try_end_7} :catchall_0
-
-    throw p1
-
-    :cond_d
-    new-instance p1, Lcom/google/android/gms/internal/stats/zzi;
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x1d
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    const-string v3, "expected a non-null reference"
-
-    invoke-virtual {v0, v3, v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;II)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method
 
 
 # virtual methods
 .method public final a(J)V
-    .locals 8
+    .locals 1
 
-    iget-object v0, p0, Lixh;->l:Ljava/util/concurrent/atomic/AtomicInteger;
+    iget-object v0, p0, Lixh;->i:Ljxh;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
-
-    sget-wide v0, Lixh;->n:J
-
-    const-wide v2, 0x7fffffffffffffffL
-
-    invoke-static {v2, v3, v0, v1}, Ljava/lang/Math;->min(JJ)J
-
-    move-result-wide v0
-
-    const-wide/16 v4, 0x1
-
-    invoke-static {v0, v1, v4, v5}, Ljava/lang/Math;->max(JJ)J
-
-    move-result-wide v0
-
-    const-wide/16 v4, 0x0
-
-    cmp-long v4, p1, v4
-
-    if-lez v4, :cond_0
-
-    invoke-static {p1, p2, v0, v1}, Ljava/lang/Math;->min(JJ)J
-
-    move-result-wide v0
-
-    :cond_0
-    iget-object p1, p0, Lixh;->a:Ljava/lang/Object;
-
-    monitor-enter p1
+    iput-wide p1, v0, Ljxh;->h:J
 
     :try_start_0
-    invoke-virtual {p0}, Lixh;->b()Z
+    iget-object p1, p0, Lixh;->i:Ljxh;
 
-    move-result p2
+    iget-object p1, p1, Ljxh;->f:Lgxh;
 
-    if-nez p2, :cond_1
-
-    sget-object p2, Leti;->a:Leti;
-
-    iput-object p2, p0, Lixh;->h:Leti;
-
-    iget-object p2, p0, Lixh;->b:Landroid/os/PowerManager$WakeLock;
-
-    invoke-virtual {p2}, Landroid/os/PowerManager$WakeLock;->acquire()V
-
-    iget-object p2, p0, Lixh;->i:Lwna;
-
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p2
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    iget p2, p0, Lixh;->c:I
-
-    add-int/lit8 p2, p2, 0x1
-
-    iput p2, p0, Lixh;->c:I
-
-    iget-boolean p2, p0, Lixh;->g:Z
-
-    const/4 v4, 0x0
-
-    if-eqz p2, :cond_2
-
-    invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    :cond_2
-    iget-object p2, p0, Lixh;->k:Ljava/util/HashMap;
-
-    invoke-virtual {p2, v4}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Lxui;
-
-    if-nez p2, :cond_3
-
-    new-instance p2, Lxui;
-
-    invoke-direct {p2}, Ljava/lang/Object;-><init>()V
-
-    iget-object v5, p0, Lixh;->k:Ljava/util/HashMap;
-
-    invoke-virtual {v5, v4, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_3
-    iget v4, p2, Lxui;->a:I
-
-    add-int/lit8 v4, v4, 0x1
-
-    iput v4, p2, Lxui;->a:I
-
-    iget-object p2, p0, Lixh;->i:Lwna;
-
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v4
-
-    sub-long v6, v2, v4
-
-    cmp-long p2, v6, v0
-
-    if-lez p2, :cond_4
-
-    add-long v2, v4, v0
-
-    :cond_4
-    iget-wide v4, p0, Lixh;->e:J
-
-    cmp-long p2, v2, v4
-
-    if-lez p2, :cond_6
-
-    iput-wide v2, p0, Lixh;->e:J
-
-    iget-object p2, p0, Lixh;->d:Ljava/util/concurrent/ScheduledFuture;
-
-    if-eqz p2, :cond_5
-
-    const/4 v2, 0x0
-
-    invoke-interface {p2, v2}, Ljava/util/concurrent/Future;->cancel(Z)Z
-
-    :cond_5
-    iget-object p2, p0, Lixh;->m:Ljava/util/concurrent/ScheduledExecutorService;
-
-    new-instance v2, Lcuh;
-
-    const/16 v3, 0x9
-
-    invoke-direct {v2, v3, p0}, Lcuh;-><init>(ILjava/lang/Object;)V
-
-    sget-object v3, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
-
-    invoke-interface {p2, v2, v0, v1, v3}, Ljava/util/concurrent/ScheduledExecutorService;->schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
-
-    move-result-object p2
-
-    iput-object p2, p0, Lixh;->d:Ljava/util/concurrent/ScheduledFuture;
-
-    :cond_6
-    monitor-exit p1
+    invoke-virtual {p1}, Lgxh;->b()V
+    :try_end_0
+    .catch Landroidx/media3/transformer/ExportException; {:try_start_0 .. :try_end_0} :catch_0
 
     return-void
 
-    :goto_1
-    monitor-exit p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    :catch_0
+    move-exception p1
 
-    throw p2
+    iget-object p2, p0, Lixh;->c:Lswf;
+
+    invoke-virtual {p2, p1}, Lswf;->accept(Ljava/lang/Object;)V
+
+    return-void
 .end method
 
-.method public final b()Z
-    .locals 2
+.method public final b(Landroidx/media3/common/VideoFrameProcessingException;)V
+    .locals 4
 
-    iget-object v0, p0, Lixh;->a:Ljava/lang/Object;
+    new-instance v0, Landroidx/media3/transformer/ExportException;
 
-    monitor-enter v0
+    const/16 v1, 0x1389
 
-    :try_start_0
-    iget v1, p0, Lixh;->c:I
+    const/4 v2, 0x0
 
-    if-lez v1, :cond_0
+    const-string v3, "Video frame processing error"
 
-    const/4 v1, 0x1
+    invoke-direct {v0, v3, p1, v1, v2}, Landroidx/media3/transformer/ExportException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;II)V
 
-    goto :goto_0
+    iget-object p1, p0, Lixh;->c:Lswf;
 
-    :cond_0
-    const/4 v1, 0x0
+    invoke-virtual {p1, v0}, Lswf;->accept(Ljava/lang/Object;)V
 
-    :goto_0
-    monitor-exit v0
-
-    return v1
-
-    :catchall_0
-    move-exception v1
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v1
+    return-void
 .end method
 
 .method public final c()V
     .locals 4
 
-    iget-object v0, p0, Lixh;->l:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
-
-    move-result v0
-
-    if-gez v0, :cond_0
-
-    const-string v0, "WakeLock"
-
-    iget-object v1, p0, Lixh;->j:Ljava/lang/String;
-
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, " release without a matched acquire!"
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    iget-object v0, p0, Lixh;->a:Ljava/lang/Object;
+    iget-object v0, p0, Lixh;->b:Ljava/lang/Object;
 
     monitor-enter v0
 
     :try_start_0
-    iget-boolean v1, p0, Lixh;->g:Z
+    iget v1, p0, Lixh;->h:I
 
-    const/4 v2, 0x0
+    if-lez v1, :cond_0
 
-    if-eqz v1, :cond_1
+    iget v2, p0, Lixh;->g:I
 
-    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    iget v3, p0, Lixh;->f:I
 
-    :cond_1
-    iget-object v1, p0, Lixh;->k:Ljava/util/HashMap;
+    if-ge v2, v3, :cond_0
 
-    invoke-virtual {v1, v2}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
+    const/4 v3, 0x1
 
-    move-result v1
+    add-int/2addr v2, v3
 
-    if-eqz v1, :cond_2
+    iput v2, p0, Lixh;->g:I
 
-    iget-object v1, p0, Lixh;->k:Ljava/util/HashMap;
+    sub-int/2addr v1, v3
 
-    invoke-virtual {v1, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lxui;
-
-    if-eqz v1, :cond_3
-
-    iget v3, v1, Lxui;->a:I
-
-    add-int/lit8 v3, v3, -0x1
-
-    iput v3, v1, Lxui;->a:I
-
-    if-nez v3, :cond_3
-
-    iget-object v1, p0, Lixh;->k:Ljava/util/HashMap;
-
-    invoke-virtual {v1, v2}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    iput v1, p0, Lixh;->h:I
 
     goto :goto_0
 
@@ -777,299 +168,103 @@
 
     goto :goto_1
 
-    :cond_2
-    const-string v1, "WakeLock"
-
-    iget-object v2, p0, Lixh;->j:Ljava/lang/String;
-
-    invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, " counter does not exist"
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_3
-    :goto_0
-    invoke-virtual {p0}, Lixh;->e()V
-
-    monitor-exit v0
-
-    return-void
-
-    :goto_1
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v1
-.end method
-
-.method public final d()V
-    .locals 2
-
-    iget-object v0, p0, Lixh;->f:Ljava/util/HashSet;
-
-    invoke-virtual {v0}, Ljava/util/HashSet;->isEmpty()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    goto :goto_0
-
     :cond_0
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-direct {v1, v0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    invoke-virtual {v0}, Ljava/util/HashSet;->clear()V
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    if-gtz v0, :cond_1
-
-    :goto_0
-    return-void
-
-    :cond_1
-    const/4 v0, 0x0
-
-    invoke-static {v1, v0}, Lmrf;->g(Ljava/util/ArrayList;I)Ljava/lang/ClassCastException;
-
-    move-result-object v0
-
-    throw v0
-.end method
-
-.method public final e()V
-    .locals 6
-
-    iget-object v0, p0, Lixh;->a:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    invoke-virtual {p0}, Lixh;->b()Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    monitor-exit v0
-
-    return-void
-
-    :catchall_0
-    move-exception v1
-
-    goto/16 :goto_4
-
-    :cond_0
-    iget-boolean v1, p0, Lixh;->g:Z
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_2
-
-    iget v1, p0, Lixh;->c:I
-
-    add-int/lit8 v1, v1, -0x1
-
-    iput v1, p0, Lixh;->c:I
-
-    if-gtz v1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    monitor-exit v0
-
-    return-void
-
-    :cond_2
-    iput v2, p0, Lixh;->c:I
-
-    :goto_0
-    invoke-virtual {p0}, Lixh;->d()V
-
-    iget-object v1, p0, Lixh;->k:Ljava/util/HashMap;
-
-    invoke-virtual {v1}, Ljava/util/HashMap;->values()Ljava/util/Collection;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_1
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_3
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lxui;
-
-    iput v2, v3, Lxui;->a:I
-
-    goto :goto_1
-
-    :cond_3
-    iget-object v1, p0, Lixh;->k:Ljava/util/HashMap;
-
-    invoke-virtual {v1}, Ljava/util/HashMap;->clear()V
-
-    iget-object v1, p0, Lixh;->d:Ljava/util/concurrent/ScheduledFuture;
-
     const/4 v3, 0x0
 
-    if-eqz v1, :cond_4
-
-    invoke-interface {v1, v2}, Ljava/util/concurrent/Future;->cancel(Z)Z
-
-    iput-object v3, p0, Lixh;->d:Ljava/util/concurrent/ScheduledFuture;
-
-    const-wide/16 v1, 0x0
-
-    iput-wide v1, p0, Lixh;->e:J
-
-    :cond_4
-    iget-object v1, p0, Lixh;->b:Landroid/os/PowerManager$WakeLock;
-
-    invoke-virtual {v1}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
-
-    move-result v1
+    :goto_0
+    monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    if-eqz v1, :cond_7
+    if-eqz v3, :cond_1
 
+    iget-object v0, p0, Lixh;->a:Loph;
+
+    const-wide/16 v1, -0x3
+
+    invoke-interface {v0, v1, v2}, Loph;->l(J)V
+
+    :cond_1
+    return-void
+
+    :goto_1
     :try_start_1
-    iget-object v1, p0, Lixh;->b:Landroid/os/PowerManager$WakeLock;
-
-    invoke-virtual {v1}, Landroid/os/PowerManager$WakeLock;->release()V
+    monitor-exit v0
     :try_end_1
-    .catch Ljava/lang/RuntimeException; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    :try_start_2
-    iget-object v1, p0, Lixh;->h:Leti;
+    throw v1
+.end method
 
-    if-eqz v1, :cond_8
+.method public final l(II)V
+    .locals 1
 
-    iput-object v3, p0, Lixh;->h:Leti;
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    :try_start_0
+    iget-object v0, p0, Lixh;->i:Ljxh;
 
-    goto :goto_3
+    iget-object v0, v0, Ljxh;->f:Lgxh;
 
-    :catchall_1
-    move-exception v1
+    invoke-virtual {v0, p1, p2}, Lgxh;->a(II)Lucg;
 
-    goto :goto_2
+    move-result-object p1
+    :try_end_0
+    .catch Landroidx/media3/transformer/ExportException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
 
     :catch_0
-    move-exception v1
+    move-exception p1
 
-    :try_start_3
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object p2, p0, Lixh;->c:Lswf;
 
-    move-result-object v2
+    invoke-virtual {p2, p1}, Lswf;->accept(Ljava/lang/Object;)V
 
-    const-class v4, Ljava/lang/RuntimeException;
+    const/4 p1, 0x0
 
-    invoke-virtual {v2, v4}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    :goto_0
+    iget-object p2, p0, Lixh;->a:Loph;
 
-    move-result v2
+    invoke-interface {p2, p1}, Loph;->p(Lucg;)V
 
-    if-eqz v2, :cond_5
+    return-void
+.end method
 
-    const-string v2, "WakeLock"
+.method public final p(JZ)V
+    .locals 0
 
-    iget-object v4, p0, Lixh;->j:Ljava/lang/String;
+    iget-boolean p1, p0, Lixh;->d:Z
 
-    invoke-static {v4}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    if-nez p1, :cond_0
 
-    move-result-object v4
+    iget-object p1, p0, Lixh;->b:Ljava/lang/Object;
 
-    const-string v5, " failed to release!"
+    monitor-enter p1
 
-    invoke-virtual {v4, v5}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    :try_start_0
+    iget p2, p0, Lixh;->h:I
 
-    move-result-object v4
+    add-int/lit8 p2, p2, 0x1
 
-    invoke-static {v2, v4, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+    iput p2, p0, Lixh;->h:I
 
-    :try_start_4
-    iget-object v1, p0, Lixh;->h:Leti;
+    monitor-exit p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    if-eqz v1, :cond_8
-
-    iput-object v3, p0, Lixh;->h:Leti;
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
-
-    goto :goto_3
-
-    :cond_5
-    :try_start_5
-    throw v1
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_1
-
-    :goto_2
-    :try_start_6
-    iget-object v2, p0, Lixh;->h:Leti;
-
-    if-eqz v2, :cond_6
-
-    iput-object v3, p0, Lixh;->h:Leti;
-
-    :cond_6
-    throw v1
-
-    :cond_7
-    const-string v1, "WakeLock"
-
-    iget-object v2, p0, Lixh;->j:Ljava/lang/String;
-
-    invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, " should be held!"
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_8
-    :goto_3
-    monitor-exit v0
+    invoke-virtual {p0}, Lixh;->c()V
 
     return-void
 
-    :goto_4
-    monitor-exit v0
-    :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_0
+    :catchall_0
+    move-exception p2
 
-    throw v1
+    :try_start_1
+    monitor-exit p1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p2
+
+    :cond_0
+    return-void
 .end method

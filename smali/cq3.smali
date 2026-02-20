@@ -1,90 +1,28 @@
-.class public final Lcq3;
+.class public interface abstract Lcq3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lope;
 
-
-# instance fields
-.field public final a:Lope;
-
-.field public final b:Lhk7;
+# static fields
+.field public static final n:Lnb3;
 
 
 # direct methods
-.method public constructor <init>(Lope;Ljava/util/List;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lnb3;
 
-    iput-object p1, p0, Lcq3;->a:Lope;
+    const/4 v1, 0x3
 
-    invoke-static {p2}, Lhk7;->j(Ljava/util/Collection;)Lhk7;
+    invoke-direct {v0, v1}, Lnb3;-><init>(I)V
 
-    move-result-object p1
-
-    iput-object p1, p0, Lcq3;->b:Lhk7;
+    sput-object v0, Lcq3;->n:Lnb3;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d()J
-    .locals 2
-
-    iget-object v0, p0, Lcq3;->a:Lope;
-
-    invoke-interface {v0}, Lope;->d()J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public final i()Z
-    .locals 1
-
-    iget-object v0, p0, Lcq3;->a:Lope;
-
-    invoke-interface {v0}, Lope;->i()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final m()J
-    .locals 2
-
-    iget-object v0, p0, Lcq3;->a:Lope;
-
-    invoke-interface {v0}, Lope;->m()J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public final n(J)V
-    .locals 1
-
-    iget-object v0, p0, Lcq3;->a:Lope;
-
-    invoke-interface {v0, p1, p2}, Lope;->n(J)V
-
-    return-void
-.end method
-
-.method public final s(Ljg8;)Z
-    .locals 1
-
-    iget-object v0, p0, Lcq3;->a:Lope;
-
-    invoke-interface {v0, p1}, Lope;->s(Ljg8;)Z
-
-    move-result p1
-
-    return p1
+.method public abstract c(Lcom/google/firebase/components/ComponentRegistrar;)Ljava/util/List;
 .end method

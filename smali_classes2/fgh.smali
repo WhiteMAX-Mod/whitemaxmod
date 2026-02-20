@@ -1,43 +1,49 @@
 .class public final Lfgh;
-.super Ljava/lang/Object;
+.super Lda4;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Llgb;
+.field public X:I
+
+.field public synthetic d:Ljava/lang/Object;
+
+.field public final synthetic o:Ljgh;
 
 
 # direct methods
-.method public constructor <init>(Llgb;)V
+.method public constructor <init>(Ljgh;Lda4;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lfgh;->o:Ljgh;
 
-    iput-object p1, p0, Lfgh;->a:Llgb;
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lsef;
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-object v0, p0, Lfgh;->a:Llgb;
+    iput-object p1, p0, Lfgh;->d:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Llgb;->E()Lrza;
+    iget p1, p0, Lfgh;->X:I
 
-    move-result-object v0
+    const/high16 v0, -0x80000000
 
-    new-instance v1, Lisg;
+    or-int/2addr p1, v0
 
-    const/16 v2, 0x1c
+    iput p1, p0, Lfgh;->X:I
 
-    invoke-direct {v1, v2}, Lisg;-><init>(I)V
+    iget-object p1, p0, Lfgh;->o:Ljgh;
 
-    invoke-virtual {v0, v1}, Lkef;->h(Lcr6;)Lsef;
+    const/4 v0, 0x0
 
-    move-result-object v0
+    invoke-virtual {p1, v0, p0}, Ljgh;->g(Lme7;Lda4;)Ljava/lang/Object;
 
-    return-object v0
+    move-result-object p1
+
+    return-object p1
 .end method

@@ -1,64 +1,92 @@
-.class public final synthetic Lm22;
+.class public final Lm22;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lo32;
 
 
 # instance fields
-.field public final synthetic a:Lj02;
+.field public final a:Ljava/util/concurrent/Executor;
 
-.field public final synthetic b:Landroid/hardware/camera2/CameraCaptureSession;
+.field public final b:Lq22;
 
-.field public final synthetic c:Landroid/hardware/camera2/CaptureRequest;
-
-.field public final synthetic d:J
-
-.field public final synthetic o:J
+.field public final c:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lj02;Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;JJ)V
+.method public constructor <init>(Lq22;Lywe;I)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lm22;->a:Lj02;
+    iput-object p1, p0, Lm22;->b:Lq22;
 
-    iput-object p2, p0, Lm22;->b:Landroid/hardware/camera2/CameraCaptureSession;
+    iput-object p2, p0, Lm22;->a:Ljava/util/concurrent/Executor;
 
-    iput-object p3, p0, Lm22;->c:Landroid/hardware/camera2/CaptureRequest;
-
-    iput-wide p4, p0, Lm22;->d:J
-
-    iput-wide p6, p0, Lm22;->o:J
+    iput p3, p0, Lm22;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 8
+.method public final a()Lah8;
+    .locals 4
 
-    iget-object v0, p0, Lm22;->a:Lj02;
+    const-string v0, "Camera2CapturePipeline"
 
-    iget-object v0, v0, Lj02;->b:Ljava/lang/Object;
+    const-string v1, "invokePreCapture"
 
-    move-object v1, v0
+    invoke-static {v0, v1}, Ljfj;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    check-cast v1, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;
+    iget-object v0, p0, Lm22;->b:Lq22;
 
-    iget-object v2, p0, Lm22;->b:Landroid/hardware/camera2/CameraCaptureSession;
+    iget v1, p0, Lm22;->c:I
 
-    iget-object v3, p0, Lm22;->c:Landroid/hardware/camera2/CaptureRequest;
+    invoke-virtual {v0, v1}, Lq22;->a(I)Lah8;
 
-    iget-wide v4, p0, Lm22;->d:J
+    move-result-object v0
 
-    iget-wide v6, p0, Lm22;->o:J
+    invoke-static {v0}, Lwt6;->b(Lah8;)Lwt6;
 
-    invoke-virtual/range {v1 .. v7}, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;->onCaptureStarted(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;JJ)V
+    move-result-object v0
 
-    return-void
+    new-instance v1, Lj22;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v1, v2}, Lj22;-><init>(I)V
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v2, Li5;
+
+    const/16 v3, 0xd
+
+    invoke-direct {v2, v3, v1}, Li5;-><init>(ILjava/lang/Object;)V
+
+    iget-object v1, p0, Lm22;->a:Ljava/util/concurrent/Executor;
+
+    invoke-static {v0, v2, v1}, Lr8h;->w(Lah8;Lqw;Ljava/util/concurrent/Executor;)Lra2;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final b()Lah8;
+    .locals 2
+
+    new-instance v0, Libe;
+
+    const/16 v1, 0x15
+
+    invoke-direct {v0, v1, p0}, Libe;-><init>(ILjava/lang/Object;)V
+
+    invoke-static {v0}, Lrkj;->b(Lux1;)Lwx1;
+
+    move-result-object v0
+
+    return-object v0
 .end method

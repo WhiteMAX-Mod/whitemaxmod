@@ -1,14 +1,13 @@
-.class public interface abstract Lca5;
+.class public final Lca5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lfpe;
 
+# instance fields
+.field public a:F
 
-# virtual methods
-.method public abstract a(I)Lfpe;
-.end method
+.field public b:F
 
-.method public abstract b(I)Lfpe;
-.end method
+.field public c:I
+
+.field public d:I

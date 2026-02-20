@@ -1,73 +1,51 @@
-.class public abstract Lrdb;
-.super Ljava/lang/Object;
+.class public final Lrdb;
+.super Lda4;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
+# instance fields
+.field public final synthetic X:Lxdb;
 
-.field public static final b:I
+.field public Y:I
 
-.field public static final c:I
+.field public d:Ljava/util/Iterator;
 
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lxdb;Lda4;)V
+    .locals 0
 
-    sget v0, Lwdd;->media_picker_default_toolbar_title:I
+    iput-object p1, p0, Lrdb;->X:Lxdb;
 
-    sput v0, Lrdb;->a:I
-
-    sget v0, Lwdd;->media_picker_default_toolbar_title_only_photo:I
-
-    sput v0, Lrdb;->b:I
-
-    sget v0, Lwdd;->media_picker_empty_media_data:I
-
-    sput v0, Lrdb;->c:I
-
-    sget v0, Lwdd;->media_type_picker__permissions_dialog__button:I
-
-    sput v0, Lrdb;->d:I
-
-    sget v0, Lwdd;->media_type_picker__permissions_dialog__gallery_camera_subtitle:I
-
-    sput v0, Lrdb;->e:I
-
-    sget v0, Lwdd;->media_type_picker__permissions_dialog__gallery_camera_title:I
-
-    sput v0, Lrdb;->f:I
-
-    sget v0, Lwdd;->media_type_picker__permissions_dialog__gallery_subtitle:I
-
-    sput v0, Lrdb;->g:I
-
-    sget v0, Lwdd;->media_type_picker__permissions_dialog__gallery_title:I
-
-    sput v0, Lrdb;->h:I
-
-    sget v0, Lwdd;->media_type_picker__permissions_dialog__subtitle:I
-
-    sput v0, Lrdb;->i:I
-
-    sget v0, Lwdd;->media_type_picker__permissions_dialog__title:I
-
-    sput v0, Lrdb;->j:I
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lrdb;->o:Ljava/lang/Object;
+
+    iget p1, p0, Lrdb;->Y:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lrdb;->Y:I
+
+    iget-object p1, p0, Lrdb;->X:Lxdb;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, v0, p0}, Lxdb;->b(Ljava/io/File;Ljava/lang/String;Lda4;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

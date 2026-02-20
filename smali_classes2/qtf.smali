@@ -1,60 +1,47 @@
-.class public final Lqtf;
-.super Licg;
+.class public abstract Lqtf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public c:Ljava/lang/String;
+.field public final a:I
+
+.field public final b:I
+
+.field public final c:J
+
+.field public final d:Ljava/lang/String;
+
+.field public final e:Ljava/lang/String;
+
+.field public final f:Lkyc;
+
+.field public final g:Ljava/util/HashMap;
 
 
 # direct methods
-.method public constructor <init>(Lpq9;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Licg;-><init>(Lpq9;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final d(Lpq9;Ljava/lang/String;)V
+.method public constructor <init>(IIJLjava/lang/String;Ljava/lang/String;Lkyc;)V
     .locals 1
 
-    const-string v0, "url"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    new-instance v0, Ljava/util/HashMap;
 
-    move-result p2
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    if-eqz p2, :cond_0
+    iput-object v0, p0, Lqtf;->g:Ljava/util/HashMap;
 
-    invoke-virtual {p1}, Lpq9;->O0()Ljava/lang/String;
+    iput p1, p0, Lqtf;->a:I
 
-    move-result-object p1
+    iput p2, p0, Lqtf;->b:I
 
-    iput-object p1, p0, Lqtf;->c:Ljava/lang/String;
+    iput-wide p3, p0, Lqtf;->c:J
+
+    iput-object p5, p0, Lqtf;->d:Ljava/lang/String;
+
+    iput-object p6, p0, Lqtf;->e:Ljava/lang/String;
+
+    iput-object p7, p0, Lqtf;->f:Lkyc;
 
     return-void
-
-    :cond_0
-    invoke-virtual {p1}, Lpq9;->B()V
-
-    return-void
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    iget-object v0, p0, Lqtf;->c:Ljava/lang/String;
-
-    const-string v1, "{url=\'"
-
-    const-string v2, "\'}"
-
-    invoke-static {v1, v0, v2}, Lj27;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

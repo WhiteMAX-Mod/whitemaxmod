@@ -1,231 +1,79 @@
-.class public final Loce;
-.super Landroid/media/projection/MediaProjection$Callback;
+.class public abstract Loce;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lorg/webrtc/ScreenCapturerAndroid;
+# static fields
+.field public static final a:I
 
-.field public final b:Lahd;
+.field public static final b:I
 
-.field public volatile c:Z
+.field public static final c:I
 
-.field public volatile d:Z
+.field public static final d:I
 
-.field public e:I
+.field public static final e:I
 
-.field public f:I
+.field public static final f:I
 
-.field public g:I
+.field public static final g:I
 
-.field public final h:Ljava/util/concurrent/Executor;
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Intent;Ljava/util/concurrent/Executor;Lahd;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Landroid/media/projection/MediaProjection$Callback;-><init>()V
+    sget v0, Lkgd;->link_context_menu_action_copy_call:I
 
-    iput-object p3, p0, Loce;->b:Lahd;
+    sput v0, Loce;->a:I
 
-    iput-object p2, p0, Loce;->h:Ljava/util/concurrent/Executor;
+    sget v0, Lkgd;->link_context_menu_action_copy_link:I
 
-    new-instance p2, Lorg/webrtc/ScreenCapturerAndroid;
+    sput v0, Loce;->b:I
 
-    invoke-direct {p2, p1, p0}, Lorg/webrtc/ScreenCapturerAndroid;-><init>(Landroid/content/Intent;Landroid/media/projection/MediaProjection$Callback;)V
+    sget v0, Lkgd;->link_context_menu_action_copy_mail:I
 
-    iput-object p2, p0, Loce;->a:Lorg/webrtc/ScreenCapturerAndroid;
+    sput v0, Loce;->c:I
 
-    return-void
-.end method
+    sget v0, Lkgd;->link_context_menu_action_copy_profile:I
 
+    sput v0, Loce;->d:I
 
-# virtual methods
-.method public final a(II)V
-    .locals 4
+    sget v0, Lkgd;->link_context_menu_action_open_call:I
 
-    iget-object v0, p0, Loce;->b:Lahd;
+    sput v0, Loce;->e:I
 
-    const-string v1, "x"
+    sget v0, Lkgd;->link_context_menu_action_open_chat:I
 
-    const-string v2, "@30"
+    sput v0, Loce;->f:I
 
-    const-string v3, "changeFormat, "
+    sget v0, Lkgd;->link_context_menu_action_open_link:I
 
-    invoke-static {v3, p1, v1, p2, v2}, Lkz1;->g(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    sput v0, Loce;->g:I
 
-    move-result-object v1
+    sget v0, Lkgd;->link_context_menu_action_open_mail:I
 
-    const-string v2, "ScreenCapturerAdapter"
+    sput v0, Loce;->h:I
 
-    invoke-interface {v0, v2, v1}, Lahd;->log(Ljava/lang/String;Ljava/lang/String;)V
+    sget v0, Lkgd;->link_context_menu_action_open_profile:I
 
-    iget v0, p0, Loce;->g:I
+    sput v0, Loce;->i:I
 
-    const/16 v1, 0x1e
+    sget v0, Lkgd;->link_context_menu_action_open_user_chat:I
 
-    if-ne v0, p1, :cond_1
+    sput v0, Loce;->j:I
 
-    iget v0, p0, Loce;->f:I
+    sget v0, Lkgd;->send_context_menu_action_scheduled_send:I
 
-    if-ne v0, p2, :cond_1
-
-    iget v0, p0, Loce;->e:I
-
-    if-eq v0, v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-
-    :cond_1
-    :goto_0
-    iput v1, p0, Loce;->e:I
-
-    iput p2, p0, Loce;->f:I
-
-    iput p1, p0, Loce;->g:I
-
-    iget-boolean v0, p0, Loce;->d:Z
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Loce;->b:Lahd;
-
-    const-string v3, "Screen capture is already started, just change capture format"
-
-    invoke-interface {v0, v2, v3}, Lahd;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    :try_start_0
-    iget-object v0, p0, Loce;->a:Lorg/webrtc/ScreenCapturerAndroid;
-
-    invoke-virtual {v0, p1, p2, v1}, Lorg/webrtc/ScreenCapturerAndroid;->changeCaptureFormat(III)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_1
-
-    :catch_0
-    move-exception p1
-
-    iget-object p2, p0, Loce;->b:Lahd;
-
-    new-instance v0, Ljava/lang/RuntimeException;
-
-    const-string v1, "Cant change screen capture format"
-
-    invoke-direct {v0, v1, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    const-string p1, "screen.capture.change.format"
-
-    invoke-interface {p2, v2, p1, v0}, Lahd;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_2
-    :goto_1
-    return-void
-.end method
-
-.method public final b()V
-    .locals 3
-
-    const-string v0, "ScreenCapturerAdapter"
-
-    const-string v1, "release"
-
-    iget-object v2, p0, Loce;->b:Lahd;
-
-    invoke-interface {v2, v0, v1}, Lahd;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Loce;->c()V
-
-    iget-object v0, p0, Loce;->a:Lorg/webrtc/ScreenCapturerAndroid;
-
-    invoke-virtual {v0}, Lorg/webrtc/ScreenCapturerAndroid;->dispose()V
-
-    return-void
-.end method
-
-.method public final c()V
-    .locals 5
-
-    iget-object v0, p0, Loce;->b:Lahd;
-
-    const-string v1, "stop"
-
-    const-string v2, "ScreenCapturerAdapter"
-
-    invoke-interface {v0, v2, v1}, Lahd;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-boolean v0, p0, Loce;->d:Z
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Loce;->b:Lahd;
-
-    const-string v1, "Screen capturer is not yet started"
-
-    invoke-interface {v0, v2, v1}, Lahd;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    :cond_0
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Loce;->d:Z
-
-    :try_start_0
-    iget-object v0, p0, Loce;->a:Lorg/webrtc/ScreenCapturerAndroid;
-
-    invoke-virtual {v0}, Lorg/webrtc/ScreenCapturerAndroid;->stopCapture()V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-void
-
-    :catch_0
-    move-exception v0
-
-    iget-object v1, p0, Loce;->b:Lahd;
-
-    new-instance v3, Ljava/lang/RuntimeException;
-
-    const-string v4, "Stop screen capture failed"
-
-    invoke-direct {v3, v4, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    const-string v0, "screen.capture.stop"
-
-    invoke-interface {v1, v2, v0, v3}, Lahd;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-void
-.end method
-
-.method public final onStop()V
-    .locals 3
-
-    iget-object v0, p0, Loce;->b:Lahd;
-
-    const-string v1, "ScreenCapturerAdapter"
-
-    const-string v2, "onStop, screen capture session stopped"
-
-    invoke-interface {v0, v1, v2}, Lahd;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Loce;->c:Z
-
-    iget-object v0, p0, Loce;->h:Ljava/util/concurrent/Executor;
-
-    new-instance v1, Lk9b;
-
-    const/16 v2, 0x18
-
-    invoke-direct {v1, v2, p0}, Lk9b;-><init>(ILjava/lang/Object;)V
-
-    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    sput v0, Loce;->k:I
 
     return-void
 .end method

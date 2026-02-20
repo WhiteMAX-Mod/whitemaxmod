@@ -1,781 +1,410 @@
-.class public final synthetic Lm7h;
-.super Lt8;
+.class public final Lm7h;
+.super Lx0i;
 .source "SourceFile"
 
-# interfaces
-.implements Lbr6;
+
+# static fields
+.field public static final synthetic x0:[Lv58;
 
 
 # instance fields
-.field public final synthetic Z:I
+.field public final X:Lj88;
+
+.field public final Y:Lhxf;
+
+.field public final Z:Lmrd;
+
+.field public final b:Ljava/lang/String;
+
+.field public final c:Lj88;
+
+.field public final d:Lj88;
+
+.field public final o:Lj88;
+
+.field public final s0:Ltn5;
+
+.field public final t0:Ltn5;
+
+.field public final u0:Ljava/util/concurrent/atomic/AtomicReference;
+
+.field public final v0:Ln8;
+
+.field public final w0:Ln8;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput p7, p0, Lm7h;->Z:I
+    new-instance v0, Laia;
 
-    move-object p7, p4
+    const-string v1, "disableTwoFAJob"
 
-    move-object p4, p3
+    const-string v2, "getDisableTwoFAJob()Lkotlinx/coroutines/Job;"
 
-    move p3, p6
+    const-class v3, Lm7h;
 
-    move-object p6, p7
+    invoke-direct {v0, v3, v1, v2}, Laia;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
 
-    move-object p7, p5
+    sget-object v1, Lazd;->a:Lbzd;
 
-    move-object p5, p2
+    const-string v2, "loadDetailsJob"
 
-    move p2, p1
+    const-string v4, "getLoadDetailsJob()Lkotlinx/coroutines/Job;"
 
-    move-object p1, p0
+    invoke-static {v1, v3, v2, v4}, Lo16;->f(Lbzd;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)Laia;
 
-    invoke-direct/range {p1 .. p7}, Lt8;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
+    move-result-object v1
+
+    const/4 v2, 0x2
+
+    new-array v2, v2, [Lv58;
+
+    const/4 v3, 0x0
+
+    aput-object v0, v2, v3
+
+    const/4 v0, 0x1
+
+    aput-object v1, v2, v0
+
+    sput-object v2, Lm7h;->x0:[Lv58;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;Lj88;Lj88;Lj88;Lj88;)V
+    .locals 3
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 16
+    invoke-direct {p0}, Lx0i;-><init>()V
 
-    move-object/from16 v0, p0
+    iput-object p1, p0, Lm7h;->b:Ljava/lang/String;
 
-    iget v1, v0, Lm7h;->Z:I
+    iput-object p2, p0, Lm7h;->c:Lj88;
+
+    iput-object p4, p0, Lm7h;->d:Lj88;
+
+    iput-object p3, p0, Lm7h;->o:Lj88;
+
+    iput-object p5, p0, Lm7h;->X:Lj88;
+
+    sget-object p1, Lsi5;->a:Lsi5;
+
+    invoke-static {p1}, Lixf;->a(Ljava/lang/Object;)Lhxf;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lm7h;->Y:Lhxf;
+
+    new-instance p2, Lmrd;
+
+    invoke-direct {p2, p1}, Lmrd;-><init>(Lgia;)V
+
+    iput-object p2, p0, Lm7h;->Z:Lmrd;
+
+    new-instance p1, Ltn5;
+
+    const/4 p2, 0x0
+
+    invoke-direct {p1, p2}, Ltn5;-><init>(I)V
+
+    iput-object p1, p0, Lm7h;->s0:Ltn5;
+
+    new-instance p1, Ltn5;
+
+    invoke-direct {p1, p2}, Ltn5;-><init>(I)V
+
+    iput-object p1, p0, Lm7h;->t0:Ltn5;
+
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
+
+    const/4 p2, 0x0
+
+    invoke-direct {p1, p2}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object p1, p0, Lm7h;->u0:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-static {}, Lytj;->a()Ln8;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lm7h;->v0:Ln8;
+
+    invoke-static {}, Lytj;->a()Ln8;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lm7h;->w0:Ln8;
+
+    invoke-interface {p5}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ll0d;
+
+    invoke-interface {p3}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object p3
+
+    check-cast p3, Lug3;
+
+    check-cast p3, Lqme;
+
+    invoke-virtual {p3}, Lqme;->s()J
+
+    move-result-wide p3
+
+    iget-object p5, p1, Ll0d;->f:Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-static {p3, p4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    new-instance v1, Lu74;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v1, p1, p3, p4, v2}, Lu74;-><init>(Ljava/lang/Object;JI)V
+
+    new-instance p1, Ldk;
+
+    const/16 p3, 0x1a
+
+    invoke-direct {p1, p3, v1}, Ldk;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {p5, v0, p1}, Ljava/util/concurrent/ConcurrentHashMap;->computeIfAbsent(Ljava/lang/Object;Ljava/util/function/Function;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lgia;
+
+    new-instance p3, Lmrd;
+
+    invoke-direct {p3, p1}, Lmrd;-><init>(Lgia;)V
+
+    new-instance p1, Lf7h;
+
+    invoke-direct {p1, p0, p2}, Lf7h;-><init>(Lm7h;Lkotlin/coroutines/Continuation;)V
+
+    new-instance p2, Llb6;
+
+    const/4 p4, 0x1
+
+    invoke-direct {p2, p3, p1, p4}, Llb6;-><init>(Lb96;Lys6;I)V
+
+    iget-object p1, p0, Lx0i;->a:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {p2, p1}, Lzka;->w(Lb96;Lnd4;)Lcuf;
+
+    return-void
+.end method
+
+.method public static final p(Lm7h;Lig8;Lda4;)Ljava/lang/Object;
+    .locals 12
+
+    instance-of v0, p2, Lg7h;
+
+    if-eqz v0, :cond_0
+
+    move-object v0, p2
+
+    check-cast v0, Lg7h;
+
+    iget v1, v0, Lg7h;->Y:I
+
+    const/high16 v2, -0x80000000
+
+    and-int v3, v1, v2
+
+    if-eqz v3, :cond_0
+
+    sub-int/2addr v1, v2
+
+    iput v1, v0, Lg7h;->Y:I
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v0, Lg7h;
+
+    invoke-direct {v0, p0, p2}, Lg7h;-><init>(Lm7h;Lda4;)V
+
+    :goto_0
+    iget-object p2, v0, Lg7h;->o:Ljava/lang/Object;
+
+    iget v1, v0, Lg7h;->Y:I
 
     const/4 v2, 0x1
 
     const/4 v3, 0x0
 
-    const/4 v4, 0x0
+    if-eqz v1, :cond_2
 
-    packed-switch v1, :pswitch_data_0
+    if-ne v1, v2, :cond_1
 
-    move-object/from16 v1, p1
+    iget-object p1, v0, Lg7h;->d:Lig8;
 
-    check-cast v1, Lugh;
-
-    move-object/from16 v2, p2
-
-    check-cast v2, Lkotlin/coroutines/Continuation;
-
-    iget-object v2, v0, Lt8;->a:Ljava/lang/Object;
-
-    check-cast v2, Lseh;
-
-    if-eqz v1, :cond_4
-
-    iget-object v1, v2, Lseh;->f:Landroidx/recyclerview/widget/RecyclerView;
-
-    if-nez v1, :cond_0
+    invoke-static {p2}, Lbvj;->i(Ljava/lang/Object;)V
 
     goto :goto_1
 
-    :cond_0
-    iget-object v5, v2, Lseh;->e:Ljava/lang/String;
-
-    sget-object v6, Lc5j;->a:Ledb;
-
-    if-nez v6, :cond_1
-
-    goto :goto_0
-
     :cond_1
-    sget-object v7, Lkk8;->d:Lkk8;
+    new-instance p0, Ljava/lang/IllegalStateException;
 
-    invoke-virtual {v6, v7}, Ledb;->b(Lkk8;)Z
+    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
 
-    move-result v8
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    if-eqz v8, :cond_2
-
-    const-string v8, "Player autoplay. Handle fetch event, try start autoplay."
-
-    invoke-virtual {v6, v7, v5, v8, v4}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    throw p0
 
     :cond_2
-    :goto_0
-    invoke-virtual {v1}, Landroidx/recyclerview/widget/RecyclerView;->getScrollState()I
+    invoke-static {p2}, Lbvj;->i(Ljava/lang/Object;)V
 
-    move-result v4
+    iget-object p2, p0, Lm7h;->c:Lj88;
 
-    if-nez v4, :cond_3
+    invoke-interface {p2}, Lj88;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {v2, v1, v3}, Lseh;->f(Landroidx/recyclerview/widget/RecyclerView;Z)V
+    move-result-object p2
+
+    check-cast p2, Lbjg;
+
+    check-cast p2, Lcbb;
+
+    invoke-virtual {p2}, Lcbb;->b()Lgd4;
+
+    move-result-object p2
+
+    new-instance v1, Lh7h;
+
+    invoke-direct {v1, p0, v3}, Lh7h;-><init>(Lm7h;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lg7h;->d:Lig8;
+
+    iput v2, v0, Lg7h;->Y:I
+
+    invoke-static {p2, v1, v0}, Lea9;->r(Led4;Lys6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p2
+
+    sget-object v0, Lod4;->a:Lod4;
+
+    if-ne p2, v0, :cond_3
+
+    return-object v0
 
     :cond_3
     :goto_1
-    sget-object v1, Lb3h;->a:Lb3h;
+    check-cast p2, Looc;
 
-    return-object v1
+    iget-object p0, p0, Lm7h;->u0:Ljava/util/concurrent/atomic/AtomicReference;
 
-    :cond_4
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-    new-instance v1, Lkotlin/NoWhenBranchMatchedException;
+    move-result-object p0
 
-    invoke-direct {v1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    check-cast p0, Ln90;
 
-    throw v1
+    if-eqz p0, :cond_4
 
-    :pswitch_0
-    move-object/from16 v1, p1
-
-    check-cast v1, Lp7h;
-
-    move-object/from16 v2, p2
-
-    check-cast v2, Lkotlin/coroutines/Continuation;
-
-    iget-object v2, v0, Lt8;->a:Ljava/lang/Object;
-
-    check-cast v2, Lo7h;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v3, Ld7h;
-
-    invoke-direct {v3, v2, v1, v4}, Ld7h;-><init>(Lo7h;Lp7h;Lkotlin/coroutines/Continuation;)V
-
-    invoke-static {v3}, Lgu0;->f(Lbr6;)Ltb2;
-
-    move-result-object v1
-
-    return-object v1
-
-    :pswitch_1
-    move-object/from16 v1, p1
-
-    check-cast v1, Ltq9;
-
-    move-object/from16 v5, p2
-
-    check-cast v5, Lkotlin/coroutines/Continuation;
-
-    iget-object v5, v0, Lt8;->a:Ljava/lang/Object;
-
-    check-cast v5, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;
-
-    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const-string v6, "onUploadUpdate %s"
-
-    filled-new-array {v1}, [Ljava/lang/Object;
-
-    move-result-object v7
-
-    const-string v8, "UploadFileAttachWorker"
-
-    invoke-static {v8, v6, v7}, Lc5j;->c(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    iget-object v6, v1, Ltq9;->a:Lq6h;
-
-    iget-object v7, v6, Lq6h;->g:Lh9h;
-
-    invoke-virtual {v6}, Lq6h;->a()Z
-
-    move-result v6
-
-    if-eqz v6, :cond_5
-
-    invoke-virtual {v5}, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;->r()Lqq9;
-
-    move-result-object v2
-
-    iget-object v2, v2, Lqq9;->a:Lyo9;
-
-    filled-new-array {v2, v1}, [Ljava/lang/Object;
-
-    move-result-object v2
-
-    const-string v3, "onUploadSuccess: key=%s, messageUploadState=%s"
-
-    invoke-static {v8, v3, v2}, Lc5j;->c(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    invoke-virtual {v5}, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;->r()Lqq9;
-
-    move-result-object v2
-
-    iget-object v2, v2, Lqq9;->a:Lyo9;
-
-    iget-wide v7, v2, Lyo9;->a:J
-
-    invoke-virtual {v5}, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;->r()Lqq9;
-
-    move-result-object v2
-
-    iget-object v2, v2, Lqq9;->a:Lyo9;
-
-    iget-object v11, v2, Lyo9;->c:Ljava/lang/String;
-
-    invoke-virtual {v5}, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;->r()Lqq9;
-
-    move-result-object v2
-
-    iget-object v2, v2, Lqq9;->a:Lyo9;
-
-    iget-wide v2, v2, Lyo9;->b:J
-
-    invoke-virtual {v5}, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;->s()Lhm9;
-
-    move-result-object v4
-
-    new-instance v6, Lahg;
-
-    const/4 v9, 0x3
-
-    invoke-direct {v6, v1, v9, v5}, Lahg;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {v4, v7, v8, v11, v6}, Lhm9;->q(JLjava/lang/String;Lay3;)V
-
-    iget-object v4, v5, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;->K0:Ln8g;
-
-    invoke-virtual {v4}, Ln8g;->getValue()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lm00;
-
-    new-instance v6, Lwid;
-
-    iget-object v1, v1, Ltq9;->a:Lq6h;
-
-    iget-wide v9, v1, Lq6h;->f:J
-
-    invoke-direct/range {v6 .. v11}, Lwid;-><init>(JJLjava/lang/String;)V
-
-    invoke-virtual {v4, v6}, Lm00;->a(Lyid;)V
-
-    invoke-virtual {v5}, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;->x()V
-
-    invoke-virtual {v5}, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;->u()Lcy0;
-
-    move-result-object v1
-
-    new-instance v6, Le6h;
-
-    const/4 v11, 0x0
-
-    move-wide v9, v7
-
-    move-wide v7, v2
-
-    invoke-direct/range {v6 .. v11}, Le6h;-><init>(JJZ)V
-
-    invoke-virtual {v1, v6}, Lcy0;->c(Ljava/lang/Object;)V
-
-    iget-object v1, v5, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;->C0:Ln8g;
-
-    invoke-virtual {v1}, Ln8g;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ltji;
-
-    invoke-static {v1}, Late;->u(Ltji;)V
-
-    new-instance v1, Lle8;
-
-    invoke-direct {v1}, Lle8;-><init>()V
-
-    iput-object v1, v5, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;->Q0:Lme8;
-
-    iget-object v1, v5, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;->M0:Ln8g;
-
-    invoke-virtual {v1}, Ln8g;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/util/List;
-
-    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_2
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_f
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lpmh;
-
-    invoke-virtual {v5}, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;->r()Lqq9;
-
-    move-result-object v3
-
-    iget-object v3, v3, Lqq9;->d:Li9h;
-
-    invoke-static {v3}, Le8;->a(Li9h;)Le10;
-
-    invoke-virtual {v5}, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;->r()Lqq9;
-
-    move-result-object v3
-
-    iget-object v3, v3, Lqq9;->b:Ljava/lang/String;
-
-    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {v5}, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;->r()Lqq9;
-
-    move-result-object v3
-
-    iget-object v3, v3, Lqq9;->a:Lyo9;
-
-    iget-wide v3, v3, Lyo9;->a:J
-
-    invoke-virtual {v5}, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;->r()Lqq9;
-
-    move-result-object v3
-
-    iget-object v3, v3, Lqq9;->a:Lyo9;
-
-    iget-wide v3, v3, Lyo9;->b:J
-
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object p0, p0, Ln90;->c:Ljava/lang/String;
 
     goto :goto_2
 
+    :cond_4
+    move-object p0, v3
+
+    :goto_2
+    iget-object p2, p2, Looc;->c:Ljava/lang/Object;
+
+    sget-object v0, Lkzc;->c:Lkzc;
+
+    invoke-interface {p2, v0}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_5
+
+    if-eqz p0, :cond_5
+
+    new-instance v3, Lgpg;
+
+    invoke-direct {v3, p0}, Lgpg;-><init>(Ljava/lang/CharSequence;)V
+
     :cond_5
-    sget-object v6, Lh9h;->c:Lh9h;
+    move-object v10, v3
 
-    if-ne v7, v6, :cond_e
+    new-instance p0, Lw6h;
 
-    invoke-virtual {v5}, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;->r()Lqq9;
+    sget p2, Lwce;->l1:I
 
-    move-result-object v6
+    new-instance v0, Lcpg;
 
-    filled-new-array {v6, v1}, [Ljava/lang/Object;
+    invoke-direct {v0, p2}, Lcpg;-><init>(I)V
 
-    move-result-object v6
+    invoke-direct {p0, v0}, Lw6h;-><init>(Lcpg;)V
 
-    const-string v7, "onUploadProgress %s, %s"
+    invoke-interface {p1, p0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    invoke-static {v8, v7, v6}, Lc5j;->c(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    sget p0, Lwfd;->oneme_settings_twofa_configuration_setting_password:I
 
-    invoke-virtual {v5}, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;->r()Lqq9;
+    int-to-long v4, p0
 
-    move-result-object v6
+    sget p0, Lpkd;->oneme_settings_twofa_change_password_title:I
 
-    iget-object v6, v6, Lqq9;->a:Lyo9;
+    new-instance v2, Lcpg;
 
-    iget-wide v10, v6, Lyo9;->a:J
+    invoke-direct {v2, p0}, Lcpg;-><init>(I)V
 
-    invoke-virtual {v5}, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;->r()Lqq9;
+    new-instance v0, Lx6h;
 
-    move-result-object v6
+    const/4 v6, 0x0
 
-    iget-object v6, v6, Lqq9;->a:Lyo9;
+    const/16 v7, 0x70
 
-    iget-object v15, v6, Lyo9;->c:Ljava/lang/String;
+    const/4 v1, 0x1
 
-    invoke-virtual {v5}, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;->r()Lqq9;
+    const/4 v3, 0x0
 
-    move-result-object v6
+    invoke-direct/range {v0 .. v7}, Lx6h;-><init>(ILcpg;IJLgpg;I)V
 
-    iget-object v6, v6, Lqq9;->a:Lyo9;
+    invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    iget-wide v6, v6, Lyo9;->b:J
+    sget p0, Lwfd;->oneme_settings_twofa_configuration_setting_email:I
 
-    iget-object v1, v1, Ltq9;->a:Lq6h;
+    int-to-long v8, p0
 
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+    sget p0, Lpkd;->oneme_settings_twofa_change_email_title:I
 
-    move-result-wide v12
+    new-instance v6, Lcpg;
 
-    iget-wide v3, v5, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;->R0:J
+    invoke-direct {v6, p0}, Lcpg;-><init>(I)V
 
-    sub-long v3, v12, v3
+    new-instance v4, Lx6h;
 
-    move-wide/from16 p1, v10
+    const/4 v7, 0x0
 
-    iget-wide v9, v5, Lru/ok/tamtam/upload/workers/ForegroundWorker;->x0:J
+    const/16 v11, 0x50
 
-    cmp-long v3, v3, v9
+    const/4 v5, 0x3
 
-    if-gez v3, :cond_6
+    invoke-direct/range {v4 .. v11}, Lx6h;-><init>(ILcpg;IJLgpg;I)V
 
-    iget-object v2, v5, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;->K0:Ln8g;
+    invoke-interface {p1, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    invoke-virtual {v2}, Ln8g;->getValue()Ljava/lang/Object;
+    sget p0, Lpkd;->oneme_settings_twofa_configuration_description:I
 
-    move-result-object v2
+    new-instance p2, Lcpg;
 
-    check-cast v2, Lm00;
+    invoke-direct {p2, p0}, Lcpg;-><init>(I)V
 
-    iget v14, v1, Lq6h;->e:F
+    new-instance p0, Lv6h;
 
-    iget-wide v12, v1, Lq6h;->f:J
+    invoke-direct {p0, p2}, Lv6h;-><init>(Lcpg;)V
 
-    new-instance v9, Lxid;
+    invoke-interface {p1, p0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    move-wide/from16 v10, p1
+    sget-object p0, Lmah;->a:Lmah;
 
-    invoke-direct/range {v9 .. v15}, Lxid;-><init>(JJFLjava/lang/String;)V
-
-    invoke-virtual {v2, v9}, Lm00;->a(Lyid;)V
-
-    invoke-virtual {v5}, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;->u()Lcy0;
-
-    move-result-object v1
-
-    new-instance v9, Le6h;
-
-    const/4 v14, 0x0
-
-    move-wide v12, v10
-
-    move-wide v10, v6
-
-    invoke-direct/range {v9 .. v14}, Le6h;-><init>(JJZ)V
-
-    invoke-virtual {v1, v9}, Lcy0;->c(Ljava/lang/Object;)V
-
-    goto/16 :goto_6
-
-    :cond_6
-    move-wide/from16 v10, p1
-
-    move-wide v3, v6
-
-    const/4 v9, 0x0
-
-    iput-wide v12, v5, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;->R0:J
-
-    invoke-virtual {v5}, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;->s()Lhm9;
-
-    move-result-object v6
-
-    invoke-virtual {v5}, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;->r()Lqq9;
-
-    move-result-object v7
-
-    iget-object v7, v7, Lqq9;->a:Lyo9;
-
-    iget-wide v12, v7, Lyo9;->a:J
-
-    invoke-virtual {v6, v12, v13}, Lhm9;->m(J)Ljm9;
-
-    move-result-object v6
-
-    if-eqz v6, :cond_d
-
-    iget v7, v6, Ljm9;->S0:I
-
-    const/4 v12, 0x2
-
-    if-eq v7, v12, :cond_d
-
-    iget-object v6, v6, Ljm9;->x0:Lk20;
-
-    if-eqz v6, :cond_d
-
-    invoke-virtual {v6}, Lk20;->b()I
-
-    move-result v7
-
-    if-gtz v7, :cond_7
-
-    goto/16 :goto_5
-
-    :cond_7
-    iget-object v6, v6, Lk20;->a:Ljava/util/List;
-
-    invoke-interface {v6}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v6
-
-    :cond_8
-    invoke-interface {v6}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v7
-
-    if-eqz v7, :cond_d
-
-    invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v7
-
-    check-cast v7, Li20;
-
-    iget-object v7, v7, Li20;->r:Ljava/lang/String;
-
-    invoke-virtual {v5}, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;->r()Lqq9;
-
-    move-result-object v12
-
-    iget-object v12, v12, Lqq9;->a:Lyo9;
-
-    iget-object v12, v12, Lyo9;->c:Ljava/lang/String;
-
-    invoke-static {v7, v12}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v7
-
-    if-eqz v7, :cond_8
-
-    iget-object v6, v1, Lq6h;->a:Lp7h;
-
-    iget-object v6, v6, Lp7h;->c:Li9h;
-
-    invoke-static {v6}, Le8;->a(Li9h;)Le10;
-
-    move-result-object v6
-
-    invoke-virtual {v5, v6}, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;->z(Le10;)V
-
-    iget v6, v1, Lq6h;->e:F
-
-    invoke-static {v6}, Ljava/lang/Float;->isNaN(F)Z
-
-    move-result v7
-
-    if-eqz v7, :cond_9
-
-    :goto_3
-    move v2, v9
-
-    goto :goto_4
-
-    :cond_9
-    invoke-static {v6}, Lq7j;->c(F)I
-
-    move-result v6
-
-    if-gez v6, :cond_a
-
-    const/4 v2, -0x1
-
-    goto :goto_4
-
-    :cond_a
-    if-nez v6, :cond_b
-
-    goto :goto_3
-
-    :cond_b
-    if-gt v2, v6, :cond_c
-
-    const/16 v2, 0x65
-
-    if-ge v6, v2, :cond_c
-
-    move v2, v6
-
-    goto :goto_4
-
-    :cond_c
-    const/16 v2, 0x64
-
-    :goto_4
-    iput v2, v5, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;->P0:I
-
-    invoke-virtual {v5}, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;->s()Lhm9;
-
-    move-result-object v2
-
-    new-instance v6, Ld8h;
-
-    invoke-direct {v6, v1}, Ld8h;-><init>(Lq6h;)V
-
-    invoke-virtual {v2, v10, v11, v15, v6}, Lhm9;->q(JLjava/lang/String;Lay3;)V
-
-    iget-object v2, v5, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;->K0:Ln8g;
-
-    invoke-virtual {v2}, Ln8g;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lm00;
-
-    iget v14, v1, Lq6h;->e:F
-
-    iget-wide v12, v1, Lq6h;->f:J
-
-    new-instance v9, Lxid;
-
-    invoke-direct/range {v9 .. v15}, Lxid;-><init>(JJFLjava/lang/String;)V
-
-    invoke-virtual {v2, v9}, Lm00;->a(Lyid;)V
-
-    invoke-virtual {v5}, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;->u()Lcy0;
-
-    move-result-object v1
-
-    new-instance v9, Le6h;
-
-    const/4 v14, 0x0
-
-    move-wide v12, v10
-
-    move-wide v10, v3
-
-    invoke-direct/range {v9 .. v14}, Le6h;-><init>(JJZ)V
-
-    invoke-virtual {v1, v9}, Lcy0;->c(Ljava/lang/Object;)V
-
-    goto :goto_6
-
-    :cond_d
-    :goto_5
-    invoke-virtual {v5}, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;->r()Lqq9;
-
-    move-result-object v1
-
-    filled-new-array {v1}, [Ljava/lang/Object;
-
-    move-result-object v1
-
-    invoke-static {v1, v2}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object v1
-
-    const-string v2, "cancelUploadIfMessageIsDeleted: message or attach is deleted %s"
-
-    const/4 v14, 0x0
-
-    invoke-static {v8, v14, v2, v1}, Lc5j;->q(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    invoke-virtual {v5}, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;->x()V
-
-    invoke-static {}, Lme8;->a()Lje8;
-
-    move-result-object v1
-
-    iput-object v1, v5, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;->Q0:Lme8;
-
-    invoke-virtual {v5}, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;->t()Lv8h;
-
-    move-result-object v1
-
-    sget-object v2, Lu8h;->c:Lu8h;
-
-    invoke-virtual {v5}, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;->r()Lqq9;
-
-    move-result-object v3
-
-    iget-object v3, v3, Lqq9;->f:Ljava/lang/String;
-
-    invoke-static {v1, v2, v3}, Lhyb;->f(Lv8h;Luxb;Ljava/lang/String;)V
-
-    goto :goto_6
-
-    :cond_e
-    new-instance v2, Ljava/lang/Throwable;
-
-    const-string v3, "Internal error. Unknown upload state"
-
-    invoke-direct {v2, v3}, Ljava/lang/Throwable;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v5}, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;->r()Lqq9;
-
-    move-result-object v3
-
-    iget-object v3, v3, Lqq9;->a:Lyo9;
-
-    filled-new-array {v3, v1}, [Ljava/lang/Object;
-
-    move-result-object v1
-
-    const-string v3, "onUploadUpdate: failed. Unknown upload state. key=%s, state=%s"
-
-    invoke-static {v8, v2, v3, v1}, Lc5j;->h(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    invoke-virtual {v5, v2}, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;->v(Ljava/lang/Throwable;)V
-
-    :cond_f
-    :goto_6
-    sget-object v1, Lb3h;->a:Lb3h;
-
-    return-object v1
-
-    :pswitch_2
-    move-object/from16 v1, p1
-
-    check-cast v1, Lq6h;
-
-    move-object/from16 v3, p2
-
-    check-cast v3, Lkotlin/coroutines/Continuation;
-
-    iget-object v3, v0, Lt8;->a:Ljava/lang/Object;
-
-    check-cast v3, Lo7h;
-
-    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v4, Lf7h;
-
-    const/4 v14, 0x0
-
-    invoke-direct {v4, v3, v1, v14}, Lf7h;-><init>(Lo7h;Lq6h;Lkotlin/coroutines/Continuation;)V
-
-    new-instance v5, Lq7e;
-
-    invoke-direct {v5, v4}, Lq7e;-><init>(Lbr6;)V
-
-    new-instance v4, Lu61;
-
-    const/16 v6, 0x8
-
-    invoke-direct {v4, v5, v1, v3, v6}, Lu61;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    sget v5, Lta5;->d:I
-
-    const/16 v5, 0x1f4
-
-    sget-object v6, Lza5;->c:Lza5;
-
-    invoke-static {v5, v6}, Laoj;->g(ILza5;)J
-
-    move-result-wide v5
-
-    invoke-static {v4, v5, v6}, Leg0;->h(Ld76;J)Ltb2;
-
-    move-result-object v4
-
-    new-instance v5, Liq1;
-
-    const/16 v6, 0xb
-
-    const/4 v14, 0x0
-
-    invoke-direct {v5, v3, v1, v14, v6}, Liq1;-><init>(Ljava/lang/Object;Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
-
-    new-instance v6, Lt76;
-
-    invoke-direct {v6, v4, v5}, Lt76;-><init>(Ld76;Ldr6;)V
-
-    new-instance v4, Lg7h;
-
-    invoke-direct {v4, v3, v1, v14}, Lg7h;-><init>(Lo7h;Lq6h;Lkotlin/coroutines/Continuation;)V
-
-    new-instance v1, Lt76;
-
-    invoke-direct {v1, v6, v4}, Lt76;-><init>(Ld76;Lfr6;)V
-
-    new-instance v4, Lh7h;
-
-    invoke-direct {v4, v3, v14}, Lh7h;-><init>(Lo7h;Lkotlin/coroutines/Continuation;)V
-
-    new-instance v3, Lm96;
-
-    invoke-direct {v3, v1, v4, v2}, Lm96;-><init>(Ld76;Lbr6;I)V
-
-    return-object v3
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p0
 .end method

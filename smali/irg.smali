@@ -1,131 +1,54 @@
-.class public final Lirg;
+.class public abstract Lirg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:J
-
-.field public b:J
-
-.field public c:I
-
-.field public d:I
-
-.field public e:[J
-
-.field public f:[I
-
-.field public g:[I
-
-.field public h:[J
-
-.field public i:[Z
-
-.field public j:Z
-
-.field public k:[Z
-
-.field public l:Z
-
-.field public m:J
-
-.field public n:Z
-
-.field public o:Ljava/lang/Object;
-
-.field public p:Ljava/lang/Object;
-
-.field public final q:Ljava/lang/Object;
+# static fields
+.field public static final a:Ljava/lang/ThreadLocal;
 
 
 # direct methods
-.method public constructor <init>(I)V
+.method static constructor <clinit>()V
     .locals 2
 
-    packed-switch p1, :pswitch_data_0
+    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v1, "ThreadLocalEventLoop"
 
-    const/4 p1, 0x0
+    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
 
-    new-array v0, p1, [J
+    invoke-static {v0}, Lkotlinx/coroutines/internal/ThreadLocalKt;->commonThreadLocal(Lkotlinx/coroutines/internal/Symbol;)Ljava/lang/ThreadLocal;
 
-    iput-object v0, p0, Lirg;->e:[J
+    move-result-object v0
 
-    new-array v0, p1, [I
-
-    iput-object v0, p0, Lirg;->f:[I
-
-    new-array v0, p1, [I
-
-    iput-object v0, p0, Lirg;->g:[I
-
-    new-array v0, p1, [J
-
-    iput-object v0, p0, Lirg;->h:[J
-
-    new-array v0, p1, [Z
-
-    iput-object v0, p0, Lirg;->i:[Z
-
-    new-array p1, p1, [Z
-
-    iput-object p1, p0, Lirg;->k:[Z
-
-    new-instance p1, Ldch;
-
-    const/4 v0, 0x2
-
-    const/4 v1, 0x0
-
-    invoke-direct {p1, v0, v1}, Ldch;-><init>(IZ)V
-
-    iput-object p1, p0, Lirg;->q:Ljava/lang/Object;
+    sput-object v0, Lirg;->a:Ljava/lang/ThreadLocal;
 
     return-void
+.end method
 
-    :pswitch_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.method public static a()Lbo5;
+    .locals 3
 
-    const/4 p1, 0x0
+    sget-object v0, Lirg;->a:Ljava/lang/ThreadLocal;
 
-    new-array v0, p1, [J
+    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
 
-    iput-object v0, p0, Lirg;->e:[J
+    move-result-object v1
 
-    new-array v0, p1, [I
+    check-cast v1, Lbo5;
 
-    iput-object v0, p0, Lirg;->f:[I
+    if-nez v1, :cond_0
 
-    new-array v0, p1, [I
+    new-instance v1, Lgt0;
 
-    iput-object v0, p0, Lirg;->g:[I
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
-    new-array v0, p1, [J
+    move-result-object v2
 
-    iput-object v0, p0, Lirg;->h:[J
+    invoke-direct {v1, v2}, Lgt0;-><init>(Ljava/lang/Thread;)V
 
-    new-array v0, p1, [Z
+    invoke-virtual {v0, v1}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
 
-    iput-object v0, p0, Lirg;->i:[Z
-
-    new-array p1, p1, [Z
-
-    iput-object p1, p0, Lirg;->k:[Z
-
-    new-instance p1, Lwtb;
-
-    invoke-direct {p1}, Lwtb;-><init>()V
-
-    iput-object p1, p0, Lirg;->q:Ljava/lang/Object;
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
+    :cond_0
+    return-object v1
 .end method

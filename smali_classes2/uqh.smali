@@ -1,63 +1,78 @@
-.class public final Luqh;
+.class public final synthetic Luqh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
+
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic a:I
 
-.field public final b:J
-
-.field public final c:Ljava/lang/String;
+.field public final synthetic b:Lxqh;
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;)V
+.method public synthetic constructor <init>(Lxqh;I)V
     .locals 0
 
+    iput p2, p0, Luqh;->a:I
+
+    iput-object p1, p0, Luqh;->b:Lxqh;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p3, p0, Luqh;->a:Ljava/lang/String;
-
-    iput-wide p1, p0, Luqh;->b:J
-
-    iput-object p4, p0, Luqh;->c:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 6
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 1
 
-    iget-object v0, p0, Luqh;->c:Ljava/lang/String;
+    iget v0, p0, Luqh;->a:I
 
-    invoke-static {v0}, Lzsi;->e(Ljava/lang/CharSequence;)Z
+    packed-switch v0, :pswitch_data_0
 
-    move-result v0
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
-    xor-int/lit8 v0, v0, 0x1
+    move-result-object p1
 
-    const-string v1, "VideoUploadInfo{url=\'"
+    check-cast p1, Ljava/lang/Float;
 
-    const-string v2, "\', videoId="
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
 
-    iget-wide v3, p0, Luqh;->b:J
+    move-result p1
 
-    iget-object v5, p0, Luqh;->a:Ljava/lang/String;
+    iget-object v0, p0, Luqh;->b:Lxqh;
 
-    invoke-static {v1, v3, v4, v5, v2}, Lmrf;->m(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iput p1, v0, Lxqh;->A0:F
 
-    move-result-object v1
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
 
-    const-string v2, ", token=\'"
+    return-void
 
-    const-string v3, "\'}"
+    :pswitch_0
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
-    invoke-static {v1, v2, v0, v3}, Lva9;->g(Ljava/lang/StringBuilder;Ljava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
+    move-result-object p1
 
-    move-result-object v0
+    check-cast p1, Ljava/lang/Float;
 
-    return-object v0
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+
+    move-result p1
+
+    iget-object v0, p0, Luqh;->b:Lxqh;
+
+    invoke-virtual {v0, p1}, Lxqh;->setProgressForced(F)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

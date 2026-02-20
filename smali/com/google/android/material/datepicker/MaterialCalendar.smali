@@ -16,27 +16,27 @@
 
 
 # instance fields
-.field public j1:I
+.field public i1:I
 
-.field public k1:Lu01;
+.field public j1:Li11;
 
-.field public l1:Lh8a;
+.field public k1:Luaa;
 
-.field public m1:I
+.field public l1:I
 
-.field public n1:Lws8;
+.field public m1:Lpmi;
+
+.field public n1:Landroidx/recyclerview/widget/RecyclerView;
 
 .field public o1:Landroidx/recyclerview/widget/RecyclerView;
 
-.field public p1:Landroidx/recyclerview/widget/RecyclerView;
+.field public p1:Landroid/view/View;
 
 .field public q1:Landroid/view/View;
 
 .field public r1:Landroid/view/View;
 
 .field public s1:Landroid/view/View;
-
-.field public t1:Landroid/view/View;
 
 
 # direct methods
@@ -50,10 +50,10 @@
 
 
 # virtual methods
-.method public final K(Landroid/os/Bundle;)V
+.method public final F(Landroid/os/Bundle;)V
     .locals 1
 
-    invoke-super {p0, p1}, Landroidx/fragment/app/a;->K(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Landroidx/fragment/app/a;->F(Landroid/os/Bundle;)V
 
     if-nez p1, :cond_0
 
@@ -66,7 +66,7 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->j1:I
+    iput v0, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->i1:I
 
     const-string v0, "GRID_SELECTOR_KEY"
 
@@ -82,9 +82,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lu01;
+    check-cast v0, Li11;
 
-    iput-object v0, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->k1:Lu01;
+    iput-object v0, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->j1:Li11;
 
     const-string v0, "DAY_VIEW_DECORATOR_KEY"
 
@@ -100,9 +100,9 @@
 
     move-result-object p1
 
-    check-cast p1, Lh8a;
+    check-cast p1, Luaa;
 
-    iput-object p1, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->l1:Lh8a;
+    iput-object p1, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->k1:Luaa;
 
     return-void
 
@@ -121,36 +121,36 @@
     throw p1
 .end method
 
-.method public final M(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+.method public final H(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 10
 
     new-instance p3, Landroid/view/ContextThemeWrapper;
 
-    invoke-virtual {p0}, Landroidx/fragment/app/a;->t()Landroid/content/Context;
+    invoke-virtual {p0}, Landroidx/fragment/app/a;->o()Landroid/content/Context;
 
     move-result-object v0
 
-    iget v1, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->j1:I
+    iget v1, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->i1:I
 
     invoke-direct {p3, v0, v1}, Landroid/view/ContextThemeWrapper;-><init>(Landroid/content/Context;I)V
 
-    new-instance v0, Lws8;
+    new-instance v0, Lpmi;
 
-    invoke-direct {v0, p3}, Lws8;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p3}, Lpmi;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->n1:Lws8;
+    iput-object v0, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->m1:Lpmi;
 
     invoke-virtual {p1, p3}, Landroid/view/LayoutInflater;->cloneInContext(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object p1
 
-    iget-object v0, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->k1:Lu01;
+    iget-object v0, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->j1:Li11;
 
-    iget-object v0, v0, Lu01;->a:Lh8a;
+    iget-object v0, v0, Li11;->a:Luaa;
 
     const v1, 0x101020d
 
-    invoke-static {p3, v1}, Lcom/google/android/material/datepicker/MaterialDatePicker;->u0(Landroid/content/Context;I)Z
+    invoke-static {p3, v1}, Lcom/google/android/material/datepicker/MaterialDatePicker;->o0(Landroid/content/Context;I)Z
 
     move-result v2
 
@@ -160,14 +160,14 @@
 
     if-eqz v2, :cond_0
 
-    sget v2, Llbd;->mtrl_calendar_vertical:I
+    sget v2, Lbhd;->mtrl_calendar_vertical:I
 
     move v5, v4
 
     goto :goto_0
 
     :cond_0
-    sget v2, Llbd;->mtrl_calendar_horizontal:I
+    sget v2, Lbhd;->mtrl_calendar_horizontal:I
 
     move v5, v3
 
@@ -176,7 +176,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p0}, Landroidx/fragment/app/a;->h0()Landroid/content/Context;
+    invoke-virtual {p0}, Landroidx/fragment/app/a;->a0()Landroid/content/Context;
 
     move-result-object p2
 
@@ -184,13 +184,13 @@
 
     move-result-object p2
 
-    sget v2, Lb6d;->mtrl_calendar_navigation_height:I
+    sget v2, Lnbd;->mtrl_calendar_navigation_height:I
 
     invoke-virtual {p2, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v2
 
-    sget v6, Lb6d;->mtrl_calendar_navigation_top_padding:I
+    sget v6, Lnbd;->mtrl_calendar_navigation_top_padding:I
 
     invoke-virtual {p2, v6}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
@@ -198,7 +198,7 @@
 
     add-int/2addr v6, v2
 
-    sget v2, Lb6d;->mtrl_calendar_navigation_bottom_padding:I
+    sget v2, Lnbd;->mtrl_calendar_navigation_bottom_padding:I
 
     invoke-virtual {p2, v2}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
@@ -206,15 +206,15 @@
 
     add-int/2addr v2, v6
 
-    sget v6, Lb6d;->mtrl_calendar_days_of_week_height:I
+    sget v6, Lnbd;->mtrl_calendar_days_of_week_height:I
 
     invoke-virtual {p2, v6}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v6
 
-    sget v7, Li8a;->d:I
+    sget v7, Lvaa;->d:I
 
-    sget v8, Lb6d;->mtrl_calendar_day_height:I
+    sget v8, Lnbd;->mtrl_calendar_day_height:I
 
     invoke-virtual {p2, v8}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -224,7 +224,7 @@
 
     sub-int/2addr v7, v4
 
-    sget v9, Lb6d;->mtrl_calendar_month_vertical_padding:I
+    sget v9, Lnbd;->mtrl_calendar_month_vertical_padding:I
 
     invoke-virtual {p2, v9}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
@@ -234,7 +234,7 @@
 
     add-int/2addr v9, v8
 
-    sget v7, Lb6d;->mtrl_calendar_bottom_padding:I
+    sget v7, Lnbd;->mtrl_calendar_bottom_padding:I
 
     invoke-virtual {p2, v7}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
@@ -248,7 +248,7 @@
 
     invoke-virtual {p1, v2}, Landroid/view/View;->setMinimumHeight(I)V
 
-    sget p2, Lt7d;->mtrl_calendar_days_of_week:I
+    sget p2, Lfdd;->mtrl_calendar_days_of_week:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -256,39 +256,39 @@
 
     check-cast p2, Landroid/widget/GridView;
 
-    new-instance v2, Leu8;
+    new-instance v2, Lvv8;
 
     const/4 v6, 0x0
 
-    invoke-direct {v2, v6}, Leu8;-><init>(I)V
+    invoke-direct {v2, v6}, Lvv8;-><init>(I)V
 
-    invoke-static {p2, v2}, Lxsh;->n(Landroid/view/View;Lu4;)V
+    invoke-static {p2, v2}, Lh0i;->n(Landroid/view/View;Lt4;)V
 
-    iget-object v2, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->k1:Lu01;
+    iget-object v2, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->j1:Li11;
 
-    iget v2, v2, Lu01;->o:I
+    iget v2, v2, Li11;->o:I
 
-    new-instance v6, Ldk4;
+    new-instance v6, Lrl4;
 
     if-lez v2, :cond_1
 
-    invoke-direct {v6, v2}, Ldk4;-><init>(I)V
+    invoke-direct {v6, v2}, Lrl4;-><init>(I)V
 
     goto :goto_1
 
     :cond_1
-    invoke-direct {v6}, Ldk4;-><init>()V
+    invoke-direct {v6}, Lrl4;-><init>()V
 
     :goto_1
     invoke-virtual {p2, v6}, Landroid/widget/GridView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    iget v0, v0, Lh8a;->d:I
+    iget v0, v0, Luaa;->d:I
 
     invoke-virtual {p2, v0}, Landroid/widget/GridView;->setNumColumns(I)V
 
     invoke-virtual {p2, v3}, Landroid/view/View;->setEnabled(Z)V
 
-    sget p2, Lt7d;->mtrl_calendar_months:I
+    sget p2, Lfdd;->mtrl_calendar_months:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -296,17 +296,17 @@
 
     check-cast p2, Landroidx/recyclerview/widget/RecyclerView;
 
-    iput-object p2, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->p1:Landroidx/recyclerview/widget/RecyclerView;
+    iput-object p2, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->o1:Landroidx/recyclerview/widget/RecyclerView;
 
-    new-instance p2, Lfu8;
+    new-instance p2, Lwv8;
 
-    invoke-direct {p2, p0, v5, v5}, Lfu8;-><init>(Lcom/google/android/material/datepicker/MaterialCalendar;II)V
+    invoke-direct {p2, p0, v5, v5}, Lwv8;-><init>(Lcom/google/android/material/datepicker/MaterialCalendar;II)V
 
-    iget-object v0, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->p1:Landroidx/recyclerview/widget/RecyclerView;
+    iget-object v0, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->o1:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-virtual {v0, p2}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/a;)V
 
-    iget-object p2, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->p1:Landroidx/recyclerview/widget/RecyclerView;
+    iget-object p2, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->o1:Landroidx/recyclerview/widget/RecyclerView;
 
     const-string v0, "MONTHS_VIEW_GROUP_TAG"
 
@@ -314,31 +314,29 @@
 
     new-instance p2, Lcom/google/android/material/datepicker/c;
 
-    iget-object v0, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->k1:Lu01;
+    iget-object v0, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->j1:Li11;
 
-    new-instance v2, Lig5;
+    new-instance v2, Lm6a;
 
-    const/16 v5, 0x15
+    invoke-direct {v2, p0}, Lm6a;-><init>(Ljava/lang/Object;)V
 
-    invoke-direct {v2, v5, p0}, Lig5;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p2, p3, v0, v2}, Lcom/google/android/material/datepicker/c;-><init>(Landroid/view/ContextThemeWrapper;Li11;Lm6a;)V
 
-    invoke-direct {p2, p3, v0, v2}, Lcom/google/android/material/datepicker/c;-><init>(Landroid/view/ContextThemeWrapper;Lu01;Lig5;)V
+    iget-object v0, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->o1:Landroidx/recyclerview/widget/RecyclerView;
 
-    iget-object v0, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->p1:Landroidx/recyclerview/widget/RecyclerView;
-
-    invoke-virtual {v0, p2}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Lwrd;)V
+    invoke-virtual {v0, p2}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Lsxd;)V
 
     invoke-virtual {p3}, Landroid/view/ContextThemeWrapper;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    sget v2, Lbbd;->mtrl_calendar_year_selector_span:I
+    sget v2, Lsgd;->mtrl_calendar_year_selector_span:I
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v0
 
-    sget v2, Lt7d;->mtrl_calendar_year_selector_frame:I
+    sget v2, Lfdd;->mtrl_calendar_year_selector_frame:I
 
     invoke-virtual {p1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -346,13 +344,13 @@
 
     check-cast v2, Landroidx/recyclerview/widget/RecyclerView;
 
-    iput-object v2, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->o1:Landroidx/recyclerview/widget/RecyclerView;
+    iput-object v2, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->n1:Landroidx/recyclerview/widget/RecyclerView;
 
     if-eqz v2, :cond_2
 
     invoke-virtual {v2, v4}, Landroidx/recyclerview/widget/RecyclerView;->setHasFixedSize(Z)V
 
-    iget-object v2, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->o1:Landroidx/recyclerview/widget/RecyclerView;
+    iget-object v2, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->n1:Landroidx/recyclerview/widget/RecyclerView;
 
     new-instance v5, Landroidx/recyclerview/widget/GridLayoutManager;
 
@@ -360,24 +358,26 @@
 
     invoke-virtual {v2, v5}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/a;)V
 
-    iget-object v0, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->o1:Landroidx/recyclerview/widget/RecyclerView;
+    iget-object v0, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->n1:Landroidx/recyclerview/widget/RecyclerView;
 
-    new-instance v2, Lbli;
+    new-instance v2, Ldti;
 
-    invoke-direct {v2, p0}, Lbli;-><init>(Lcom/google/android/material/datepicker/MaterialCalendar;)V
+    invoke-direct {v2, p0}, Ldti;-><init>(Lcom/google/android/material/datepicker/MaterialCalendar;)V
 
-    invoke-virtual {v0, v2}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Lwrd;)V
+    invoke-virtual {v0, v2}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Lsxd;)V
 
-    iget-object v0, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->o1:Landroidx/recyclerview/widget/RecyclerView;
+    iget-object v0, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->n1:Landroidx/recyclerview/widget/RecyclerView;
 
-    new-instance v2, Lu91;
+    new-instance v2, Lha1;
 
-    invoke-direct {v2, p0}, Lu91;-><init>(Lcom/google/android/material/datepicker/MaterialCalendar;)V
+    invoke-direct {v2, p0}, Lha1;-><init>(Lcom/google/android/material/datepicker/MaterialCalendar;)V
 
-    invoke-virtual {v0, v2}, Landroidx/recyclerview/widget/RecyclerView;->j(Lcsd;)V
+    const/4 v3, -0x1
+
+    invoke-virtual {v0, v2, v3}, Landroidx/recyclerview/widget/RecyclerView;->j(Lyxd;I)V
 
     :cond_2
-    sget v0, Lt7d;->month_navigation_fragment_toggle:I
+    sget v0, Lfdd;->month_navigation_fragment_toggle:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -385,7 +385,7 @@
 
     if-eqz v0, :cond_3
 
-    sget v0, Lt7d;->month_navigation_fragment_toggle:I
+    sget v0, Lfdd;->month_navigation_fragment_toggle:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -397,15 +397,27 @@
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    new-instance v2, Lib3;
+    new-instance v2, Lad3;
 
     const/4 v3, 0x2
 
-    invoke-direct {v2, v3, p0}, Lib3;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v2, v3, p0}, Lad3;-><init>(ILjava/lang/Object;)V
 
-    invoke-static {v0, v2}, Lxsh;->n(Landroid/view/View;Lu4;)V
+    invoke-static {v0, v2}, Lh0i;->n(Landroid/view/View;Lt4;)V
 
-    sget v2, Lt7d;->month_navigation_previous:I
+    sget v2, Lfdd;->month_navigation_previous:I
+
+    invoke-virtual {p1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v2
+
+    iput-object v2, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->p1:Landroid/view/View;
+
+    const-string v3, "NAVIGATION_PREV_TAG"
+
+    invoke-virtual {v2, v3}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
+
+    sget v2, Lfdd;->month_navigation_next:I
 
     invoke-virtual {p1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -413,11 +425,11 @@
 
     iput-object v2, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->q1:Landroid/view/View;
 
-    const-string v3, "NAVIGATION_PREV_TAG"
+    const-string v3, "NAVIGATION_NEXT_TAG"
 
     invoke-virtual {v2, v3}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    sget v2, Lt7d;->month_navigation_next:I
+    sget v2, Lfdd;->mtrl_calendar_year_selector_frame:I
 
     invoke-virtual {p1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -425,11 +437,7 @@
 
     iput-object v2, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->r1:Landroid/view/View;
 
-    const-string v3, "NAVIGATION_NEXT_TAG"
-
-    invoke-virtual {v2, v3}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
-
-    sget v2, Lt7d;->mtrl_calendar_year_selector_frame:I
+    sget v2, Lfdd;->mtrl_calendar_day_selector_frame:I
 
     invoke-virtual {p1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -437,111 +445,101 @@
 
     iput-object v2, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->s1:Landroid/view/View;
 
-    sget v2, Lt7d;->mtrl_calendar_day_selector_frame:I
+    invoke-virtual {p0, v4}, Lcom/google/android/material/datepicker/MaterialCalendar;->k0(I)V
 
-    invoke-virtual {p1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    iget-object v2, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->k1:Luaa;
 
-    move-result-object v2
-
-    iput-object v2, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->t1:Landroid/view/View;
-
-    invoke-virtual {p0, v4}, Lcom/google/android/material/datepicker/MaterialCalendar;->q0(I)V
-
-    iget-object v2, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->l1:Lh8a;
-
-    invoke-virtual {v2}, Lh8a;->d()Ljava/lang/String;
+    invoke-virtual {v2}, Luaa;->d()Ljava/lang/String;
 
     move-result-object v2
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    iget-object v2, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->p1:Landroidx/recyclerview/widget/RecyclerView;
+    iget-object v2, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->o1:Landroidx/recyclerview/widget/RecyclerView;
 
-    new-instance v3, Lgu8;
+    new-instance v3, Lxv8;
 
-    invoke-direct {v3, p0, p2, v0}, Lgu8;-><init>(Lcom/google/android/material/datepicker/MaterialCalendar;Lcom/google/android/material/datepicker/c;Lcom/google/android/material/button/MaterialButton;)V
+    invoke-direct {v3, p0, p2, v0}, Lxv8;-><init>(Lcom/google/android/material/datepicker/MaterialCalendar;Lcom/google/android/material/datepicker/c;Lcom/google/android/material/button/MaterialButton;)V
 
-    invoke-virtual {v2, v3}, Landroidx/recyclerview/widget/RecyclerView;->m(Lisd;)V
+    invoke-virtual {v2, v3}, Landroidx/recyclerview/widget/RecyclerView;->m(Leyd;)V
 
-    new-instance v2, Lk6;
+    new-instance v2, Lu7;
 
     const/4 v3, 0x4
 
-    invoke-direct {v2, v3, p0}, Lk6;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    iget-object v0, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->r1:Landroid/view/View;
-
-    new-instance v2, Ldu8;
-
-    const/4 v3, 0x1
-
-    invoke-direct {v2, p0, p2, v3}, Ldu8;-><init>(Lcom/google/android/material/datepicker/MaterialCalendar;Lcom/google/android/material/datepicker/c;I)V
+    invoke-direct {v2, v3, p0}, Lu7;-><init>(ILjava/lang/Object;)V
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     iget-object v0, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->q1:Landroid/view/View;
 
-    new-instance v2, Ldu8;
+    new-instance v2, Luv8;
+
+    const/4 v3, 0x1
+
+    invoke-direct {v2, p0, p2, v3}, Luv8;-><init>(Lcom/google/android/material/datepicker/MaterialCalendar;Lcom/google/android/material/datepicker/c;I)V
+
+    invoke-virtual {v0, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    iget-object v0, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->p1:Landroid/view/View;
+
+    new-instance v2, Luv8;
 
     const/4 v3, 0x0
 
-    invoke-direct {v2, p0, p2, v3}, Ldu8;-><init>(Lcom/google/android/material/datepicker/MaterialCalendar;Lcom/google/android/material/datepicker/c;I)V
+    invoke-direct {v2, p0, p2, v3}, Luv8;-><init>(Lcom/google/android/material/datepicker/MaterialCalendar;Lcom/google/android/material/datepicker/c;I)V
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     :cond_3
-    invoke-static {p3, v1}, Lcom/google/android/material/datepicker/MaterialDatePicker;->u0(Landroid/content/Context;I)Z
+    invoke-static {p3, v1}, Lcom/google/android/material/datepicker/MaterialDatePicker;->o0(Landroid/content/Context;I)Z
 
     move-result p3
 
     if-nez p3, :cond_4
 
-    new-instance p3, Lhj4;
+    new-instance p3, Lvvb;
 
-    const/4 v0, 0x1
+    invoke-direct {p3}, Lfqf;-><init>()V
 
-    invoke-direct {p3, v0}, Lhj4;-><init>(I)V
+    iget-object v0, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->o1:Landroidx/recyclerview/widget/RecyclerView;
 
-    iget-object v0, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->p1:Landroidx/recyclerview/widget/RecyclerView;
-
-    invoke-virtual {p3, v0}, Lhj4;->a(Landroidx/recyclerview/widget/RecyclerView;)V
+    invoke-virtual {p3, v0}, Lfqf;->b(Landroidx/recyclerview/widget/RecyclerView;)V
 
     :cond_4
-    iget-object p3, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->p1:Landroidx/recyclerview/widget/RecyclerView;
+    iget-object p3, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->o1:Landroidx/recyclerview/widget/RecyclerView;
 
-    iget-object v0, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->l1:Lh8a;
+    iget-object v0, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->k1:Luaa;
 
-    iget-object p2, p2, Lcom/google/android/material/datepicker/c;->d:Lu01;
+    iget-object p2, p2, Lcom/google/android/material/datepicker/c;->d:Li11;
 
-    iget-object p2, p2, Lu01;->a:Lh8a;
+    iget-object p2, p2, Li11;->a:Luaa;
 
-    invoke-virtual {p2, v0}, Lh8a;->e(Lh8a;)I
+    invoke-virtual {p2, v0}, Luaa;->f(Luaa;)I
 
     move-result p2
 
-    invoke-virtual {p3, p2}, Landroidx/recyclerview/widget/RecyclerView;->x0(I)V
+    invoke-virtual {p3, p2}, Landroidx/recyclerview/widget/RecyclerView;->y0(I)V
 
-    iget-object p2, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->p1:Landroidx/recyclerview/widget/RecyclerView;
+    iget-object p2, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->o1:Landroidx/recyclerview/widget/RecyclerView;
 
-    new-instance p3, Leu8;
+    new-instance p3, Lvv8;
 
     const/4 v0, 0x1
 
-    invoke-direct {p3, v0}, Leu8;-><init>(I)V
+    invoke-direct {p3, v0}, Lvv8;-><init>(I)V
 
-    invoke-static {p2, p3}, Lxsh;->n(Landroid/view/View;Lu4;)V
+    invoke-static {p2, p3}, Lh0i;->n(Landroid/view/View;Lt4;)V
 
     return-object p1
 .end method
 
-.method public final Z(Landroid/os/Bundle;)V
+.method public final T(Landroid/os/Bundle;)V
     .locals 3
 
     const-string v0, "THEME_RES_ID_KEY"
 
-    iget v1, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->j1:I
+    iget v1, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->i1:I
 
     invoke-virtual {p1, v0, v1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
 
@@ -553,7 +551,7 @@
 
     const-string v0, "CALENDAR_CONSTRAINTS_KEY"
 
-    iget-object v2, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->k1:Lu01;
+    iget-object v2, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->j1:Li11;
 
     invoke-virtual {p1, v0, v2}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
@@ -563,39 +561,39 @@
 
     const-string v0, "CURRENT_MONTH_KEY"
 
-    iget-object v1, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->l1:Lh8a;
+    iget-object v1, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->k1:Luaa;
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
     return-void
 .end method
 
-.method public final p0(Lh8a;)V
+.method public final j0(Luaa;)V
     .locals 6
 
-    iget-object v0, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->p1:Landroidx/recyclerview/widget/RecyclerView;
+    iget-object v0, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->o1:Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lwrd;
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lsxd;
 
     move-result-object v0
 
     check-cast v0, Lcom/google/android/material/datepicker/c;
 
-    iget-object v1, v0, Lcom/google/android/material/datepicker/c;->d:Lu01;
+    iget-object v1, v0, Lcom/google/android/material/datepicker/c;->d:Li11;
 
-    iget-object v1, v1, Lu01;->a:Lh8a;
+    iget-object v1, v1, Li11;->a:Luaa;
 
-    invoke-virtual {v1, p1}, Lh8a;->e(Lh8a;)I
+    invoke-virtual {v1, p1}, Luaa;->f(Luaa;)I
 
     move-result v1
 
-    iget-object v2, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->l1:Lh8a;
+    iget-object v2, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->k1:Luaa;
 
-    iget-object v0, v0, Lcom/google/android/material/datepicker/c;->d:Lu01;
+    iget-object v0, v0, Lcom/google/android/material/datepicker/c;->d:Li11;
 
-    iget-object v0, v0, Lu01;->a:Lh8a;
+    iget-object v0, v0, Li11;->a:Luaa;
 
-    invoke-virtual {v0, v2}, Lh8a;->e(Lh8a;)I
+    invoke-virtual {v0, v2}, Luaa;->f(Luaa;)I
 
     move-result v0
 
@@ -626,25 +624,25 @@
     move v4, v5
 
     :cond_1
-    iput-object p1, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->l1:Lh8a;
+    iput-object p1, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->k1:Luaa;
 
     if-eqz v2, :cond_2
 
     if-eqz v4, :cond_2
 
-    iget-object p1, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->p1:Landroidx/recyclerview/widget/RecyclerView;
+    iget-object p1, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->o1:Landroidx/recyclerview/widget/RecyclerView;
 
     add-int/lit8 v0, v1, -0x3
 
-    invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->x0(I)V
+    invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->y0(I)V
 
-    iget-object p1, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->p1:Landroidx/recyclerview/widget/RecyclerView;
+    iget-object p1, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->o1:Landroidx/recyclerview/widget/RecyclerView;
 
-    new-instance v0, Ltl0;
+    new-instance v0, Lan0;
 
     const/4 v2, 0x3
 
-    invoke-direct {v0, p0, v1, v2}, Ltl0;-><init>(Ljava/lang/Object;II)V
+    invoke-direct {v0, p0, v1, v2}, Lan0;-><init>(Ljava/lang/Object;II)V
 
     invoke-virtual {p1, v0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
@@ -653,42 +651,42 @@
     :cond_2
     if-eqz v2, :cond_3
 
-    iget-object p1, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->p1:Landroidx/recyclerview/widget/RecyclerView;
+    iget-object p1, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->o1:Landroidx/recyclerview/widget/RecyclerView;
 
     add-int/lit8 v0, v1, 0x3
 
-    invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->x0(I)V
+    invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->y0(I)V
 
-    iget-object p1, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->p1:Landroidx/recyclerview/widget/RecyclerView;
+    iget-object p1, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->o1:Landroidx/recyclerview/widget/RecyclerView;
 
-    new-instance v0, Ltl0;
+    new-instance v0, Lan0;
 
     const/4 v2, 0x3
 
-    invoke-direct {v0, p0, v1, v2}, Ltl0;-><init>(Ljava/lang/Object;II)V
+    invoke-direct {v0, p0, v1, v2}, Lan0;-><init>(Ljava/lang/Object;II)V
 
     invoke-virtual {p1, v0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
     return-void
 
     :cond_3
-    iget-object p1, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->p1:Landroidx/recyclerview/widget/RecyclerView;
+    iget-object p1, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->o1:Landroidx/recyclerview/widget/RecyclerView;
 
-    new-instance v0, Ltl0;
+    new-instance v0, Lan0;
 
     const/4 v2, 0x3
 
-    invoke-direct {v0, p0, v1, v2}, Ltl0;-><init>(Ljava/lang/Object;II)V
+    invoke-direct {v0, p0, v1, v2}, Lan0;-><init>(Ljava/lang/Object;II)V
 
     invoke-virtual {p1, v0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method
 
-.method public final q0(I)V
+.method public final k0(I)V
     .locals 4
 
-    iput p1, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->m1:I
+    iput p1, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->l1:I
 
     const/4 v0, 0x2
 
@@ -698,49 +696,49 @@
 
     if-ne p1, v0, :cond_0
 
-    iget-object p1, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->o1:Landroidx/recyclerview/widget/RecyclerView;
+    iget-object p1, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->n1:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
 
     move-result-object p1
 
-    iget-object v0, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->o1:Landroidx/recyclerview/widget/RecyclerView;
+    iget-object v0, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->n1:Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lwrd;
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lsxd;
 
     move-result-object v0
 
-    check-cast v0, Lbli;
+    check-cast v0, Ldti;
 
-    iget-object v3, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->l1:Lh8a;
+    iget-object v3, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->k1:Luaa;
 
-    iget v3, v3, Lh8a;->c:I
+    iget v3, v3, Luaa;->c:I
 
-    iget-object v0, v0, Lbli;->d:Lcom/google/android/material/datepicker/MaterialCalendar;
+    iget-object v0, v0, Ldti;->d:Lcom/google/android/material/datepicker/MaterialCalendar;
 
-    iget-object v0, v0, Lcom/google/android/material/datepicker/MaterialCalendar;->k1:Lu01;
+    iget-object v0, v0, Lcom/google/android/material/datepicker/MaterialCalendar;->j1:Li11;
 
-    iget-object v0, v0, Lu01;->a:Lh8a;
+    iget-object v0, v0, Li11;->a:Luaa;
 
-    iget v0, v0, Lh8a;->c:I
+    iget v0, v0, Luaa;->c:I
 
     sub-int/2addr v3, v0
 
     invoke-virtual {p1, v3}, Landroidx/recyclerview/widget/a;->A0(I)V
 
-    iget-object p1, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->s1:Landroid/view/View;
+    iget-object p1, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->r1:Landroid/view/View;
 
     invoke-virtual {p1, v2}, Landroid/view/View;->setVisibility(I)V
 
-    iget-object p1, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->t1:Landroid/view/View;
+    iget-object p1, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->s1:Landroid/view/View;
+
+    invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
+
+    iget-object p1, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->p1:Landroid/view/View;
 
     invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
 
     iget-object p1, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->q1:Landroid/view/View;
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object p1, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->r1:Landroid/view/View;
 
     invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
 
@@ -751,11 +749,15 @@
 
     if-ne p1, v0, :cond_1
 
-    iget-object p1, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->s1:Landroid/view/View;
+    iget-object p1, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->r1:Landroid/view/View;
 
     invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
 
-    iget-object p1, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->t1:Landroid/view/View;
+    iget-object p1, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->s1:Landroid/view/View;
+
+    invoke-virtual {p1, v2}, Landroid/view/View;->setVisibility(I)V
+
+    iget-object p1, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->p1:Landroid/view/View;
 
     invoke-virtual {p1, v2}, Landroid/view/View;->setVisibility(I)V
 
@@ -763,13 +765,9 @@
 
     invoke-virtual {p1, v2}, Landroid/view/View;->setVisibility(I)V
 
-    iget-object p1, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->r1:Landroid/view/View;
+    iget-object p1, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->k1:Luaa;
 
-    invoke-virtual {p1, v2}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object p1, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->l1:Lh8a;
-
-    invoke-virtual {p0, p1}, Lcom/google/android/material/datepicker/MaterialCalendar;->p0(Lh8a;)V
+    invoke-virtual {p0, p1}, Lcom/google/android/material/datepicker/MaterialCalendar;->j0(Luaa;)V
 
     :cond_1
     return-void

@@ -14,7 +14,7 @@
         "completion",
         "probeCoroutineCreated",
         "(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;",
-        "Lb3h;",
+        "Lmah;",
         "probeCoroutineResumed",
         "(Lkotlin/coroutines/Continuation;)V",
         "kotlinx-coroutines-core"

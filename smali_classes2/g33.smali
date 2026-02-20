@@ -1,209 +1,126 @@
-.class public interface abstract Lg33;
+.class public final Lg33;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lks6;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lsla;
+
 
 # direct methods
-.method public static a(Lg33;JLku9;Ld9e;Lo84;)Ljava/lang/Object;
-    .locals 9
+.method public synthetic constructor <init>(Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;Lsla;I)V
+    .locals 0
 
-    instance-of v0, p5, Lf33;
+    iput p3, p0, Lg33;->a:I
 
-    if-eqz v0, :cond_0
+    iput-object p2, p0, Lg33;->b:Lsla;
 
-    move-object v0, p5
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    check-cast v0, Lf33;
+    return-void
+.end method
 
-    iget v1, v0, Lf33;->t0:I
 
-    const/high16 v2, -0x80000000
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    and-int v3, v1, v2
+    iget v0, p0, Lg33;->a:I
 
-    if-eqz v3, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    sub-int/2addr v1, v2
+    check-cast p1, Lyuf;
 
-    iput v1, v0, Lf33;->t0:I
+    invoke-virtual {p1}, Lyuf;->K0()V
 
-    goto :goto_0
+    iget-object v0, p0, Lg33;->b:Lsla;
 
-    :cond_0
-    new-instance v0, Lf33;
+    check-cast v0, Lv23;
 
-    invoke-direct {v0, p0, p5}, Lf33;-><init>(Lg33;Lo84;)V
+    iget-wide v0, v0, Lv23;->b:J
 
-    :goto_0
-    iget-object p5, v0, Lf33;->Y:Ljava/lang/Object;
+    const-string v2, ":start-conversation/add-subscribers?id="
 
-    iget v1, v0, Lf33;->t0:I
+    invoke-static {v0, v1, v2}, Ltx8;->h(JLjava/lang/String;)Ljava/lang/String;
 
-    const/4 v2, 0x0
+    move-result-object v0
 
-    const/4 v3, 0x3
+    invoke-virtual {p1}, Ld3;->n0()Lyn4;
 
-    const/4 v4, 0x2
+    move-result-object p1
 
-    sget-object v5, Lb3h;->a:Lb3h;
+    const/4 v1, 0x0
 
-    const/4 v6, 0x1
+    const/4 v2, 0x6
 
-    const/4 v7, 0x0
+    invoke-static {p1, v0, v1, v2}, Lyn4;->b(Lyn4;Ljava/lang/String;Landroid/os/Bundle;I)Z
 
-    sget-object v8, Lac4;->a:Lac4;
+    sget-object p1, Lmah;->a:Lmah;
 
-    if-eqz v1, :cond_4
+    return-object p1
 
-    if-eq v1, v6, :cond_3
+    :pswitch_0
+    check-cast p1, Lyuf;
 
-    if-eq v1, v4, :cond_2
+    invoke-virtual {p1}, Lyuf;->K0()V
 
-    if-ne v1, v3, :cond_1
+    iget-object v0, p0, Lg33;->b:Lsla;
 
-    invoke-static {p5}, Lpmj;->b(Ljava/lang/Object;)V
+    check-cast v0, Lw23;
 
-    return-object v5
+    iget-wide v0, v0, Lw23;->b:J
 
-    :cond_1
-    new-instance p0, Ljava/lang/IllegalStateException;
+    const-string v2, ":profile/edit/link?id="
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+    const-string v3, "&type=local_chat&flow=create"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lfvg;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    throw p0
+    move-result-object v0
 
-    :cond_2
-    iget-wide p0, v0, Lf33;->X:J
+    invoke-virtual {p1}, Ld3;->n0()Lyn4;
 
-    iget-object p2, v0, Lf33;->o:Ld9e;
+    move-result-object p1
 
-    invoke-static {p5}, Lpmj;->b(Ljava/lang/Object;)V
+    const/4 v1, 0x0
 
-    goto :goto_4
+    const/4 v2, 0x6
 
-    :cond_3
-    iget-wide p1, v0, Lf33;->X:J
+    invoke-static {p1, v0, v1, v2}, Lyn4;->b(Lyn4;Ljava/lang/String;Landroid/os/Bundle;I)Z
 
-    iget-object p4, v0, Lf33;->o:Ld9e;
+    sget-object p1, Lmah;->a:Lmah;
 
-    iget-object p0, v0, Lf33;->d:Lg33;
+    return-object p1
 
-    invoke-static {p5}, Lpmj;->b(Ljava/lang/Object;)V
+    :pswitch_1
+    check-cast p1, Lyuf;
 
-    goto :goto_2
+    invoke-virtual {p1}, Lyuf;->K0()V
 
-    :cond_4
-    invoke-static {p5}, Lpmj;->b(Ljava/lang/Object;)V
+    iget-object v0, p0, Lg33;->b:Lsla;
 
-    iput-object p0, v0, Lf33;->d:Lg33;
+    check-cast v0, Lx23;
 
-    iput-object p4, v0, Lf33;->o:Ld9e;
+    iget-wide v0, v0, Lx23;->b:J
 
-    iput-wide p1, v0, Lf33;->X:J
+    invoke-virtual {p1, v0, v1}, Lyuf;->J0(J)Lun4;
 
-    iput v6, v0, Lf33;->t0:I
+    move-result-object v0
 
-    check-cast p3, Liv9;
+    invoke-virtual {p1, v0}, Ld3;->q0(Lun4;)V
 
-    iget-object p3, p3, Liv9;->a:Lb2e;
+    sget-object p1, Lmah;->a:Lmah;
 
-    new-instance p5, Ln33;
+    return-object p1
 
-    const/16 v1, 0xa
-
-    invoke-direct {p5, p1, p2, v1}, Ln33;-><init>(JI)V
-
-    invoke-static {p5, p3, v0, v2, v6}, Lulj;->f(Lnq6;Lb2e;Lkotlin/coroutines/Continuation;ZZ)Ljava/lang/Object;
-
-    move-result-object p3
-
-    if-ne p3, v8, :cond_5
-
-    goto :goto_1
-
-    :cond_5
-    move-object p3, v5
-
-    :goto_1
-    if-ne p3, v8, :cond_6
-
-    goto :goto_6
-
-    :cond_6
-    :goto_2
-    iput-object v7, v0, Lf33;->d:Lg33;
-
-    iput-object p4, v0, Lf33;->o:Ld9e;
-
-    iput-wide p1, v0, Lf33;->X:J
-
-    iput v4, v0, Lf33;->t0:I
-
-    check-cast p0, Lr33;
-
-    iget-object p3, p0, Lr33;->a:Lb2e;
-
-    new-instance p5, Lp33;
-
-    invoke-direct {p5, p0, p1, p2, v7}, Lp33;-><init>(Lr33;JLkotlin/coroutines/Continuation;)V
-
-    invoke-static {p5, p3, v0}, Lulj;->e(Lnq6;Lb2e;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    if-ne p0, v8, :cond_7
-
-    goto :goto_3
-
-    :cond_7
-    move-object p0, v5
-
-    :goto_3
-    if-ne p0, v8, :cond_8
-
-    goto :goto_6
-
-    :cond_8
-    move-wide p0, p1
-
-    move-object p2, p4
-
-    :goto_4
-    iput-object v7, v0, Lf33;->d:Lg33;
-
-    iput-object v7, v0, Lf33;->o:Ld9e;
-
-    iput-wide p0, v0, Lf33;->X:J
-
-    iput v3, v0, Lf33;->t0:I
-
-    iget-object p2, p2, Ld9e;->a:Lb2e;
-
-    new-instance p3, Ln33;
-
-    const/16 p4, 0x12
-
-    invoke-direct {p3, p0, p1, p4}, Ln33;-><init>(JI)V
-
-    invoke-static {p3, p2, v0, v2, v6}, Lulj;->f(Lnq6;Lb2e;Lkotlin/coroutines/Continuation;ZZ)Ljava/lang/Object;
-
-    move-result-object p0
-
-    if-ne p0, v8, :cond_9
-
-    goto :goto_5
-
-    :cond_9
-    move-object p0, v5
-
-    :goto_5
-    if-ne p0, v8, :cond_a
-
-    :goto_6
-    return-object v8
-
-    :cond_a
-    return-object v5
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,120 +1,129 @@
 .class public final Lvx8;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:Lfy8;
+.field public final a:D
 
-.field public o:I
+.field public final b:D
 
 
 # direct methods
-.method public constructor <init>(Lfy8;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(DD)V
     .locals 0
 
-    iput-object p1, p0, Lvx8;->X:Lfy8;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput-wide p1, p0, Lvx8;->a:D
 
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-wide p3, p0, Lvx8;->b:D
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    check-cast p1, Lzb4;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lvx8;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lvx8;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lvx8;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Lvx8;
-
-    iget-object v0, p0, Lvx8;->X:Lfy8;
-
-    invoke-direct {p1, v0, p2}, Lvx8;-><init>(Lfy8;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    iget v0, p0, Lvx8;->o:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
+    return v0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    instance-of v1, p1, Lvx8;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    const/4 v2, 0x0
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    if-nez v1, :cond_1
 
-    throw p1
+    return v2
 
     :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    check-cast p1, Lvx8;
 
-    iget-object p1, p0, Lvx8;->X:Lfy8;
+    iget-wide v3, p0, Lvx8;->a:D
 
-    iget-object v0, p1, Lfy8;->y0:Lspf;
+    iget-wide v5, p1, Lvx8;->a:D
 
-    new-instance v2, Lm40;
+    invoke-static {v3, v4, v5, v6}, Ljava/lang/Double;->compare(DD)I
 
-    const/16 v3, 0x8
+    move-result v1
 
-    invoke-direct {v2, v3, p1}, Lm40;-><init>(ILjava/lang/Object;)V
+    if-eqz v1, :cond_2
 
-    iput v1, p0, Lvx8;->o:I
+    return v2
 
-    new-instance p1, Lzsd;
+    :cond_2
+    iget-wide v3, p0, Lvx8;->b:D
 
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+    iget-wide v5, p1, Lvx8;->b:D
 
-    new-instance v1, Lr3;
+    invoke-static {v3, v4, v5, v6}, Ljava/lang/Double;->compare(DD)I
 
-    const/16 v3, 0x19
+    move-result p1
 
-    invoke-direct {v1, p1, v2, v3}, Lr3;-><init>(Ljava/io/Serializable;Lf76;I)V
+    if-eqz p1, :cond_3
 
-    invoke-interface {v0, v1, p0}, Ld76;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    return v2
 
-    sget-object p1, Lac4;->a:Lac4;
+    :cond_3
+    return v0
+.end method
 
-    return-object p1
+.method public final hashCode()I
+    .locals 3
+
+    iget-wide v0, p0, Lvx8;->a:D
+
+    invoke-static {v0, v1}, Ljava/lang/Double;->hashCode(D)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-wide v1, p0, Lvx8;->b:D
+
+    invoke-static {v1, v2}, Ljava/lang/Double;->hashCode(D)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "NetworkState(roundTripTimeMs="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v1, p0, Lvx8;->a:D
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    const-string v1, ", lostPacketsFraction="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lvx8;->b:D
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

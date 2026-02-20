@@ -15,53 +15,53 @@
 
 
 # instance fields
-.field public A1:I
+.field public A1:Lcom/google/android/material/datepicker/PickerFragment;
 
-.field public B1:Lcom/google/android/material/datepicker/PickerFragment;
+.field public B1:Li11;
 
-.field public C1:Lu01;
+.field public C1:Lcom/google/android/material/datepicker/MaterialCalendar;
 
-.field public D1:Lcom/google/android/material/datepicker/MaterialCalendar;
+.field public D1:I
 
-.field public E1:I
+.field public E1:Ljava/lang/CharSequence;
 
-.field public F1:Ljava/lang/CharSequence;
+.field public F1:Z
 
-.field public G1:Z
+.field public G1:I
 
 .field public H1:I
 
-.field public I1:I
+.field public I1:Ljava/lang/CharSequence;
 
-.field public J1:Ljava/lang/CharSequence;
+.field public J1:I
 
-.field public K1:I
+.field public K1:Ljava/lang/CharSequence;
 
-.field public L1:Ljava/lang/CharSequence;
+.field public L1:I
 
-.field public M1:I
+.field public M1:Ljava/lang/CharSequence;
 
-.field public N1:Ljava/lang/CharSequence;
+.field public N1:I
 
-.field public O1:I
+.field public O1:Ljava/lang/CharSequence;
 
-.field public P1:Ljava/lang/CharSequence;
+.field public P1:Landroid/widget/TextView;
 
-.field public Q1:Landroid/widget/TextView;
+.field public Q1:Lcom/google/android/material/internal/CheckableImageButton;
 
-.field public R1:Lcom/google/android/material/internal/CheckableImageButton;
+.field public R1:Lew8;
 
-.field public S1:Lou8;
+.field public S1:Z
 
-.field public T1:Z
+.field public T1:Ljava/lang/CharSequence;
 
 .field public U1:Ljava/lang/CharSequence;
 
-.field public V1:Ljava/lang/CharSequence;
+.field public final x1:Ljava/util/LinkedHashSet;
 
 .field public final y1:Ljava/util/LinkedHashSet;
 
-.field public final z1:Ljava/util/LinkedHashSet;
+.field public z1:I
 
 
 # direct methods
@@ -82,31 +82,31 @@
 
     invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
 
-    iput-object v0, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->y1:Ljava/util/LinkedHashSet;
+    iput-object v0, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->x1:Ljava/util/LinkedHashSet;
 
     new-instance v0, Ljava/util/LinkedHashSet;
 
     invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
 
-    iput-object v0, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->z1:Ljava/util/LinkedHashSet;
+    iput-object v0, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->y1:Ljava/util/LinkedHashSet;
 
     return-void
 .end method
 
-.method public static t0(Landroid/content/Context;)I
+.method public static n0(Landroid/content/Context;)I
     .locals 6
 
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
 
-    sget v0, Lb6d;->mtrl_calendar_content_padding:I
+    sget v0, Lnbd;->mtrl_calendar_content_padding:I
 
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
     move-result v0
 
-    invoke-static {}, Libh;->b()Ljava/util/Calendar;
+    invoke-static {}, Lqih;->b()Ljava/util/Calendar;
 
     move-result-object v1
 
@@ -116,7 +116,7 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/util/Calendar;->set(II)V
 
-    invoke-static {v1}, Libh;->a(Ljava/util/Calendar;)Ljava/util/Calendar;
+    invoke-static {v1}, Lqih;->a(Ljava/util/Calendar;)Ljava/util/Calendar;
 
     move-result-object v1
 
@@ -136,13 +136,13 @@
 
     invoke-virtual {v1}, Ljava/util/Calendar;->getTimeInMillis()J
 
-    sget v1, Lb6d;->mtrl_calendar_day_width:I
+    sget v1, Lnbd;->mtrl_calendar_day_width:I
 
     invoke-virtual {p0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v1
 
-    sget v2, Lb6d;->mtrl_calendar_month_horizontal_padding:I
+    sget v2, Lnbd;->mtrl_calendar_month_horizontal_padding:I
 
     invoke-virtual {p0, v2}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
@@ -163,10 +163,10 @@
     return v5
 .end method
 
-.method public static u0(Landroid/content/Context;I)Z
+.method public static o0(Landroid/content/Context;I)Z
     .locals 2
 
-    sget v0, Lf5d;->materialCalendarStyle:I
+    sget v0, Lsad;->materialCalendarStyle:I
 
     const-class v1, Lcom/google/android/material/datepicker/MaterialCalendar;
 
@@ -174,7 +174,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, p0, v1}, Lc7j;->d(ILandroid/content/Context;Ljava/lang/String;)Landroid/util/TypedValue;
+    invoke-static {v0, p0, v1}, Lehj;->n(ILandroid/content/Context;Ljava/lang/String;)Landroid/util/TypedValue;
 
     move-result-object v0
 
@@ -201,10 +201,10 @@
 
 
 # virtual methods
-.method public final K(Landroid/os/Bundle;)V
+.method public final F(Landroid/os/Bundle;)V
     .locals 3
 
-    invoke-super {p0, p1}, Landroidx/fragment/app/DialogFragment;->K(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Landroidx/fragment/app/DialogFragment;->F(Landroid/os/Bundle;)V
 
     if-nez p1, :cond_0
 
@@ -217,7 +217,7 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->A1:I
+    iput v0, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->z1:I
 
     const-string v0, "DATE_SELECTOR_KEY"
 
@@ -233,9 +233,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lu01;
+    check-cast v0, Li11;
 
-    iput-object v0, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->C1:Lu01;
+    iput-object v0, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->B1:Li11;
 
     const-string v0, "DAY_VIEW_DECORATOR_KEY"
 
@@ -251,7 +251,7 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->E1:I
+    iput v0, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->D1:I
 
     const-string v0, "TITLE_TEXT_KEY"
 
@@ -259,7 +259,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->F1:Ljava/lang/CharSequence;
+    iput-object v0, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->E1:Ljava/lang/CharSequence;
 
     const-string v0, "INPUT_MODE_KEY"
 
@@ -267,7 +267,7 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->H1:I
+    iput v0, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->G1:I
 
     const-string v0, "POSITIVE_BUTTON_TEXT_RES_ID_KEY"
 
@@ -275,7 +275,7 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->I1:I
+    iput v0, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->H1:I
 
     const-string v0, "POSITIVE_BUTTON_TEXT_KEY"
 
@@ -283,7 +283,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->J1:Ljava/lang/CharSequence;
+    iput-object v0, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->I1:Ljava/lang/CharSequence;
 
     const-string v0, "POSITIVE_BUTTON_CONTENT_DESCRIPTION_RES_ID_KEY"
 
@@ -291,7 +291,7 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->K1:I
+    iput v0, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->J1:I
 
     const-string v0, "POSITIVE_BUTTON_CONTENT_DESCRIPTION_KEY"
 
@@ -299,7 +299,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->L1:Ljava/lang/CharSequence;
+    iput-object v0, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->K1:Ljava/lang/CharSequence;
 
     const-string v0, "NEGATIVE_BUTTON_TEXT_RES_ID_KEY"
 
@@ -307,7 +307,7 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->M1:I
+    iput v0, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->L1:I
 
     const-string v0, "NEGATIVE_BUTTON_TEXT_KEY"
 
@@ -315,7 +315,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->N1:Ljava/lang/CharSequence;
+    iput-object v0, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->M1:Ljava/lang/CharSequence;
 
     const-string v0, "NEGATIVE_BUTTON_CONTENT_DESCRIPTION_RES_ID_KEY"
 
@@ -323,7 +323,7 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->O1:I
+    iput v0, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->N1:I
 
     const-string v0, "NEGATIVE_BUTTON_CONTENT_DESCRIPTION_KEY"
 
@@ -331,16 +331,16 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->P1:Ljava/lang/CharSequence;
+    iput-object p1, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->O1:Ljava/lang/CharSequence;
 
-    iget-object p1, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->F1:Ljava/lang/CharSequence;
+    iget-object p1, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->E1:Ljava/lang/CharSequence;
 
     if-eqz p1, :cond_1
 
     goto :goto_0
 
     :cond_1
-    invoke-virtual {p0}, Landroidx/fragment/app/a;->h0()Landroid/content/Context;
+    invoke-virtual {p0}, Landroidx/fragment/app/a;->a0()Landroid/content/Context;
 
     move-result-object p1
 
@@ -348,14 +348,14 @@
 
     move-result-object p1
 
-    iget v0, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->E1:I
+    iget v0, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->D1:I
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object p1
 
     :goto_0
-    iput-object p1, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->U1:Ljava/lang/CharSequence;
+    iput-object p1, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->T1:Ljava/lang/CharSequence;
 
     if-eqz p1, :cond_2
 
@@ -386,7 +386,7 @@
 
     :cond_3
     :goto_1
-    iput-object p1, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->V1:Ljava/lang/CharSequence;
+    iput-object p1, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->U1:Ljava/lang/CharSequence;
 
     return-void
 
@@ -405,19 +405,19 @@
     throw p1
 .end method
 
-.method public final M(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+.method public final H(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 5
 
-    iget-boolean p3, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->G1:Z
+    iget-boolean p3, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->F1:Z
 
     if-eqz p3, :cond_0
 
-    sget p3, Llbd;->mtrl_picker_fullscreen:I
+    sget p3, Lbhd;->mtrl_picker_fullscreen:I
 
     goto :goto_0
 
     :cond_0
-    sget p3, Llbd;->mtrl_picker_dialog:I
+    sget p3, Lbhd;->mtrl_picker_dialog:I
 
     :goto_0
     invoke-virtual {p1, p3, p2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
@@ -428,11 +428,11 @@
 
     move-result-object p2
 
-    iget-boolean p3, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->G1:Z
+    iget-boolean p3, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->F1:Z
 
     if-eqz p3, :cond_1
 
-    sget p3, Lt7d;->mtrl_calendar_frame:I
+    sget p3, Lfdd;->mtrl_calendar_frame:I
 
     invoke-virtual {p1, p3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -440,7 +440,7 @@
 
     new-instance v0, Landroid/widget/LinearLayout$LayoutParams;
 
-    invoke-static {p2}, Lcom/google/android/material/datepicker/MaterialDatePicker;->t0(Landroid/content/Context;)I
+    invoke-static {p2}, Lcom/google/android/material/datepicker/MaterialDatePicker;->n0(Landroid/content/Context;)I
 
     move-result v1
 
@@ -453,7 +453,7 @@
     goto :goto_1
 
     :cond_1
-    sget p3, Lt7d;->mtrl_calendar_main_pane:I
+    sget p3, Lfdd;->mtrl_calendar_main_pane:I
 
     invoke-virtual {p1, p3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -461,7 +461,7 @@
 
     new-instance v0, Landroid/widget/LinearLayout$LayoutParams;
 
-    invoke-static {p2}, Lcom/google/android/material/datepicker/MaterialDatePicker;->t0(Landroid/content/Context;)I
+    invoke-static {p2}, Lcom/google/android/material/datepicker/MaterialDatePicker;->n0(Landroid/content/Context;)I
 
     move-result v1
 
@@ -472,7 +472,7 @@
     invoke-virtual {p3, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     :goto_1
-    sget p3, Lt7d;->mtrl_picker_header_selection_text:I
+    sget p3, Lfdd;->mtrl_picker_header_selection_text:I
 
     invoke-virtual {p1, p3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -480,13 +480,13 @@
 
     check-cast p3, Landroid/widget/TextView;
 
-    sget-object v0, Lxsh;->a:Ljava/util/WeakHashMap;
+    sget-object v0, Lh0i;->a:Ljava/util/WeakHashMap;
 
     const/4 v0, 0x1
 
     invoke-virtual {p3, v0}, Landroid/view/View;->setAccessibilityLiveRegion(I)V
 
-    sget p3, Lt7d;->mtrl_picker_header_toggle:I
+    sget p3, Lfdd;->mtrl_picker_header_toggle:I
 
     invoke-virtual {p1, p3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -494,9 +494,9 @@
 
     check-cast p3, Lcom/google/android/material/internal/CheckableImageButton;
 
-    iput-object p3, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->R1:Lcom/google/android/material/internal/CheckableImageButton;
+    iput-object p3, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->Q1:Lcom/google/android/material/internal/CheckableImageButton;
 
-    sget p3, Lt7d;->mtrl_picker_title_text:I
+    sget p3, Lfdd;->mtrl_picker_title_text:I
 
     invoke-virtual {p1, p3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -504,15 +504,15 @@
 
     check-cast p3, Landroid/widget/TextView;
 
-    iput-object p3, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->Q1:Landroid/widget/TextView;
+    iput-object p3, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->P1:Landroid/widget/TextView;
 
-    iget-object p3, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->R1:Lcom/google/android/material/internal/CheckableImageButton;
+    iget-object p3, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->Q1:Lcom/google/android/material/internal/CheckableImageButton;
 
     const-string v1, "TOGGLE_BUTTON_TAG"
 
     invoke-virtual {p3, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    iget-object p3, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->R1:Lcom/google/android/material/internal/CheckableImageButton;
+    iget-object p3, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->Q1:Lcom/google/android/material/internal/CheckableImageButton;
 
     new-instance v1, Landroid/graphics/drawable/StateListDrawable;
 
@@ -524,9 +524,9 @@
 
     move-result-object v2
 
-    sget v3, Lk7d;->material_ic_calendar_black_24dp:I
+    sget v3, Lwcd;->material_ic_calendar_black_24dp:I
 
-    invoke-static {p2, v3}, Lg5j;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {p2, v3}, Lbej;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v3
 
@@ -536,9 +536,9 @@
 
     new-array v3, v2, [I
 
-    sget v4, Lk7d;->material_ic_edit_black_24dp:I
+    sget v4, Lwcd;->material_ic_edit_black_24dp:I
 
-    invoke-static {p2, v4}, Lg5j;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {p2, v4}, Lbej;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p2
 
@@ -546,9 +546,9 @@
 
     invoke-virtual {p3, v1}, Landroidx/appcompat/widget/AppCompatImageButton;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    iget-object p2, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->R1:Lcom/google/android/material/internal/CheckableImageButton;
+    iget-object p2, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->Q1:Lcom/google/android/material/internal/CheckableImageButton;
 
-    iget p3, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->H1:I
+    iget p3, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->G1:I
 
     if-eqz p3, :cond_2
 
@@ -557,15 +557,15 @@
     :cond_2
     invoke-virtual {p2, v2}, Lcom/google/android/material/internal/CheckableImageButton;->setChecked(Z)V
 
-    iget-object p2, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->R1:Lcom/google/android/material/internal/CheckableImageButton;
+    iget-object p2, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->Q1:Lcom/google/android/material/internal/CheckableImageButton;
 
     const/4 p3, 0x0
 
-    invoke-static {p2, p3}, Lxsh;->n(Landroid/view/View;Lu4;)V
+    invoke-static {p2, p3}, Lh0i;->n(Landroid/view/View;Lt4;)V
 
-    iget-object p2, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->R1:Lcom/google/android/material/internal/CheckableImageButton;
+    iget-object p2, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->Q1:Lcom/google/android/material/internal/CheckableImageButton;
 
-    iget v1, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->H1:I
+    iget v1, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->G1:I
 
     if-ne v1, v0, :cond_3
 
@@ -573,7 +573,7 @@
 
     move-result-object p2
 
-    sget v0, Ltcd;->mtrl_picker_toggle_to_calendar_input_mode:I
+    sget v0, Lkid;->mtrl_picker_toggle_to_calendar_input_mode:I
 
     invoke-virtual {p2, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -586,28 +586,28 @@
 
     move-result-object p2
 
-    sget v0, Ltcd;->mtrl_picker_toggle_to_text_input_mode:I
+    sget v0, Lkid;->mtrl_picker_toggle_to_text_input_mode:I
 
     invoke-virtual {p2, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object p2
 
     :goto_2
-    iget-object v0, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->R1:Lcom/google/android/material/internal/CheckableImageButton;
+    iget-object v0, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->Q1:Lcom/google/android/material/internal/CheckableImageButton;
 
     invoke-virtual {v0, p2}, Landroid/view/View;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    iget-object p2, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->R1:Lcom/google/android/material/internal/CheckableImageButton;
+    iget-object p2, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->Q1:Lcom/google/android/material/internal/CheckableImageButton;
 
-    new-instance v0, Lgj6;
+    new-instance v0, Lxk6;
 
-    const/16 v1, 0xc
+    const/16 v1, 0xd
 
-    invoke-direct {v0, v1, p0}, Lgj6;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p0}, Lxk6;-><init>(ILjava/lang/Object;)V
 
     invoke-virtual {p2, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    sget p2, Lt7d;->confirm_button:I
+    sget p2, Lfdd;->confirm_button:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -615,19 +615,19 @@
 
     check-cast p1, Landroid/widget/Button;
 
-    invoke-virtual {p0}, Lcom/google/android/material/datepicker/MaterialDatePicker;->s0()V
+    invoke-virtual {p0}, Lcom/google/android/material/datepicker/MaterialDatePicker;->m0()V
 
     throw p3
 .end method
 
-.method public final Z(Landroid/os/Bundle;)V
+.method public final T(Landroid/os/Bundle;)V
     .locals 14
 
-    invoke-super {p0, p1}, Landroidx/fragment/app/DialogFragment;->Z(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Landroidx/fragment/app/DialogFragment;->T(Landroid/os/Bundle;)V
 
     const-string v0, "OVERRIDE_THEME_RES_ID"
 
-    iget v1, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->A1:I
+    iget v1, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->z1:I
 
     invoke-virtual {p1, v0, v1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
 
@@ -637,39 +637,39 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    new-instance v0, Lt01;
+    new-instance v0, Lh11;
 
-    iget-object v2, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->C1:Lu01;
+    iget-object v2, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->B1:Li11;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sget v3, Lt01;->b:I
+    sget v3, Lh11;->b:I
 
-    sget v3, Lt01;->b:I
+    sget v3, Lh11;->b:I
 
-    iget-object v3, v2, Lu01;->a:Lh8a;
+    iget-object v3, v2, Li11;->a:Luaa;
 
-    iget-wide v3, v3, Lh8a;->X:J
+    iget-wide v3, v3, Luaa;->X:J
 
-    iget-object v5, v2, Lu01;->b:Lh8a;
+    iget-object v5, v2, Li11;->b:Luaa;
 
-    iget-wide v5, v5, Lh8a;->X:J
+    iget-wide v5, v5, Luaa;->X:J
 
-    iget-object v7, v2, Lu01;->d:Lh8a;
+    iget-object v7, v2, Li11;->d:Luaa;
 
-    iget-wide v7, v7, Lh8a;->X:J
+    iget-wide v7, v7, Luaa;->X:J
 
     invoke-static {v7, v8}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v7
 
-    iput-object v7, v0, Lt01;->a:Ljava/lang/Long;
+    iput-object v7, v0, Lh11;->a:Ljava/lang/Long;
 
-    iget v13, v2, Lu01;->o:I
+    iget v13, v2, Li11;->o:I
 
-    iget-object v2, v2, Lu01;->c:Lvj4;
+    iget-object v2, v2, Li11;->c:Ljl4;
 
-    iget-object v7, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->D1:Lcom/google/android/material/datepicker/MaterialCalendar;
+    iget-object v7, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->C1:Lcom/google/android/material/datepicker/MaterialCalendar;
 
     if-nez v7, :cond_0
 
@@ -678,18 +678,18 @@
     goto :goto_0
 
     :cond_0
-    iget-object v7, v7, Lcom/google/android/material/datepicker/MaterialCalendar;->l1:Lh8a;
+    iget-object v7, v7, Lcom/google/android/material/datepicker/MaterialCalendar;->k1:Luaa;
 
     :goto_0
     if-eqz v7, :cond_1
 
-    iget-wide v7, v7, Lh8a;->X:J
+    iget-wide v7, v7, Luaa;->X:J
 
     invoke-static {v7, v8}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v7
 
-    iput-object v7, v0, Lt01;->a:Ljava/lang/Long;
+    iput-object v7, v0, Lh11;->a:Ljava/lang/Long;
 
     :cond_1
     new-instance v7, Landroid/os/Bundle;
@@ -702,13 +702,13 @@
 
     move-object v2, v8
 
-    new-instance v8, Lu01;
+    new-instance v8, Li11;
 
-    invoke-static {v3, v4}, Lh8a;->b(J)Lh8a;
+    invoke-static {v3, v4}, Luaa;->b(J)Luaa;
 
     move-result-object v9
 
-    invoke-static {v5, v6}, Lh8a;->b(J)Lh8a;
+    invoke-static {v5, v6}, Luaa;->b(J)Luaa;
 
     move-result-object v10
 
@@ -718,9 +718,9 @@
 
     move-object v11, v2
 
-    check-cast v11, Lvj4;
+    check-cast v11, Ljl4;
 
-    iget-object v0, v0, Lt01;->a:Ljava/lang/Long;
+    iget-object v0, v0, Lh11;->a:Ljava/lang/Long;
 
     if-nez v0, :cond_2
 
@@ -733,14 +733,14 @@
 
     move-result-wide v2
 
-    invoke-static {v2, v3}, Lh8a;->b(J)Lh8a;
+    invoke-static {v2, v3}, Luaa;->b(J)Luaa;
 
     move-result-object v0
 
     move-object v12, v0
 
     :goto_1
-    invoke-direct/range {v8 .. v13}, Lu01;-><init>(Lh8a;Lh8a;Lvj4;Lh8a;I)V
+    invoke-direct/range {v8 .. v13}, Li11;-><init>(Luaa;Luaa;Ljl4;Luaa;I)V
 
     const-string v0, "CALENDAR_CONSTRAINTS_KEY"
 
@@ -752,79 +752,79 @@
 
     const-string v0, "TITLE_TEXT_RES_ID_KEY"
 
-    iget v1, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->E1:I
+    iget v1, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->D1:I
 
     invoke-virtual {p1, v0, v1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
 
     const-string v0, "TITLE_TEXT_KEY"
 
-    iget-object v1, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->F1:Ljava/lang/CharSequence;
+    iget-object v1, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->E1:Ljava/lang/CharSequence;
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putCharSequence(Ljava/lang/String;Ljava/lang/CharSequence;)V
 
     const-string v0, "INPUT_MODE_KEY"
 
-    iget v1, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->H1:I
+    iget v1, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->G1:I
 
     invoke-virtual {p1, v0, v1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
 
     const-string v0, "POSITIVE_BUTTON_TEXT_RES_ID_KEY"
 
-    iget v1, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->I1:I
+    iget v1, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->H1:I
 
     invoke-virtual {p1, v0, v1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
 
     const-string v0, "POSITIVE_BUTTON_TEXT_KEY"
 
-    iget-object v1, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->J1:Ljava/lang/CharSequence;
+    iget-object v1, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->I1:Ljava/lang/CharSequence;
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putCharSequence(Ljava/lang/String;Ljava/lang/CharSequence;)V
 
     const-string v0, "POSITIVE_BUTTON_CONTENT_DESCRIPTION_RES_ID_KEY"
 
-    iget v1, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->K1:I
+    iget v1, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->J1:I
 
     invoke-virtual {p1, v0, v1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
 
     const-string v0, "POSITIVE_BUTTON_CONTENT_DESCRIPTION_KEY"
 
-    iget-object v1, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->L1:Ljava/lang/CharSequence;
+    iget-object v1, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->K1:Ljava/lang/CharSequence;
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putCharSequence(Ljava/lang/String;Ljava/lang/CharSequence;)V
 
     const-string v0, "NEGATIVE_BUTTON_TEXT_RES_ID_KEY"
 
-    iget v1, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->M1:I
+    iget v1, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->L1:I
 
     invoke-virtual {p1, v0, v1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
 
     const-string v0, "NEGATIVE_BUTTON_TEXT_KEY"
 
-    iget-object v1, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->N1:Ljava/lang/CharSequence;
+    iget-object v1, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->M1:Ljava/lang/CharSequence;
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putCharSequence(Ljava/lang/String;Ljava/lang/CharSequence;)V
 
     const-string v0, "NEGATIVE_BUTTON_CONTENT_DESCRIPTION_RES_ID_KEY"
 
-    iget v1, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->O1:I
+    iget v1, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->N1:I
 
     invoke-virtual {p1, v0, v1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
 
     const-string v0, "NEGATIVE_BUTTON_CONTENT_DESCRIPTION_KEY"
 
-    iget-object v1, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->P1:Ljava/lang/CharSequence;
+    iget-object v1, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->O1:Ljava/lang/CharSequence;
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putCharSequence(Ljava/lang/String;Ljava/lang/CharSequence;)V
 
     return-void
 .end method
 
-.method public final a0()V
+.method public final U()V
     .locals 14
 
-    invoke-super {p0}, Landroidx/fragment/app/DialogFragment;->a0()V
+    invoke-super {p0}, Landroidx/fragment/app/DialogFragment;->U()V
 
-    iget-object v0, p0, Landroidx/fragment/app/DialogFragment;->t1:Landroid/app/Dialog;
+    iget-object v0, p0, Landroidx/fragment/app/DialogFragment;->s1:Landroid/app/Dialog;
 
     const-string v1, " does not have a Dialog."
 
@@ -836,7 +836,7 @@
 
     move-result-object v0
 
-    iget-boolean v3, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->G1:Z
+    iget-boolean v3, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->F1:Z
 
     const/4 v4, 0x1
 
@@ -848,19 +848,19 @@
 
     invoke-virtual {v0, v1, v1}, Landroid/view/Window;->setLayout(II)V
 
-    iget-object v1, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->S1:Lou8;
+    iget-object v1, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->R1:Lew8;
 
     invoke-virtual {v0, v1}, Landroid/view/Window;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    iget-boolean v1, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->T1:Z
+    iget-boolean v1, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->S1:Z
 
     if-nez v1, :cond_c
 
-    invoke-virtual {p0}, Landroidx/fragment/app/a;->i0()Landroid/view/View;
+    invoke-virtual {p0}, Landroidx/fragment/app/a;->b0()Landroid/view/View;
 
     move-result-object v1
 
-    sget v2, Lt7d;->fullscreen_header:I
+    sget v2, Lfdd;->fullscreen_header:I
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -870,7 +870,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lwnj;->b(Landroid/graphics/drawable/Drawable;)Landroid/content/res/ColorStateList;
+    invoke-static {v2}, Lgwj;->b(Landroid/graphics/drawable/Drawable;)Landroid/content/res/ColorStateList;
 
     move-result-object v2
 
@@ -922,7 +922,7 @@
 
     const/high16 v10, -0x1000000
 
-    invoke-static {v9, v10, v8}, Le7j;->b(IILandroid/content/Context;)I
+    invoke-static {v9, v10, v8}, Lghj;->c(IILandroid/content/Context;)I
 
     move-result v8
 
@@ -933,7 +933,7 @@
     move-result-object v2
 
     :cond_3
-    invoke-static {v0, v6}, Ln8j;->d(Landroid/view/Window;Z)V
+    invoke-static {v0, v6}, Lsgj;->a(Landroid/view/Window;Z)V
 
     invoke-virtual {v0}, Landroid/view/Window;->getContext()Landroid/content/Context;
 
@@ -947,13 +947,13 @@
 
     const v3, 0x1010452
 
-    invoke-static {v3, v10, v7}, Le7j;->b(IILandroid/content/Context;)I
+    invoke-static {v3, v10, v7}, Lghj;->c(IILandroid/content/Context;)I
 
     move-result v3
 
     const/16 v7, 0x80
 
-    invoke-static {v3, v7}, Ljj3;->i(II)I
+    invoke-static {v3, v7}, Lgl3;->i(II)I
 
     move-result v3
 
@@ -975,7 +975,7 @@
 
     if-eqz v2, :cond_5
 
-    invoke-static {v2}, Ljj3;->e(I)D
+    invoke-static {v2}, Lgl3;->e(I)D
 
     move-result-wide v11
 
@@ -995,9 +995,9 @@
 
     move-result-object v7
 
-    new-instance v11, Lcrd;
+    new-instance v11, Lpff;
 
-    invoke-direct {v11, v7}, Lcrd;-><init>(Landroid/view/View;)V
+    invoke-direct {v11, v7}, Lpff;-><init>(Landroid/view/View;)V
 
     sget v7, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -1005,29 +1005,29 @@
 
     if-lt v7, v12, :cond_6
 
-    new-instance v7, Lzhi;
+    new-instance v7, Lfqi;
 
-    invoke-static {v0}, Lnhi;->d(Landroid/view/Window;)Landroid/view/WindowInsetsController;
+    invoke-static {v0}, Ltpi;->d(Landroid/view/Window;)Landroid/view/WindowInsetsController;
 
     move-result-object v13
 
-    invoke-direct {v7, v13, v11}, Lzhi;-><init>(Landroid/view/WindowInsetsController;Lcrd;)V
+    invoke-direct {v7, v13, v11}, Lfqi;-><init>(Landroid/view/WindowInsetsController;Lpff;)V
 
-    iput-object v0, v7, Lzhi;->c:Landroid/view/Window;
+    iput-object v0, v7, Lfqi;->c:Landroid/view/Window;
 
     goto :goto_5
 
     :cond_6
-    new-instance v7, Lyhi;
+    new-instance v7, Leqi;
 
-    invoke-direct {v7, v0, v11}, Lyhi;-><init>(Landroid/view/Window;Lcrd;)V
+    invoke-direct {v7, v0, v11}, Leqi;-><init>(Landroid/view/Window;Lpff;)V
 
     :goto_5
-    invoke-virtual {v7, v2}, Lr8j;->d(Z)V
+    invoke-virtual {v7, v2}, Lwgj;->f(Z)V
 
     if-eqz v8, :cond_7
 
-    invoke-static {v8}, Ljj3;->e(I)D
+    invoke-static {v8}, Lgl3;->e(I)D
 
     move-result-wide v7
 
@@ -1045,7 +1045,7 @@
     :goto_6
     if-eqz v3, :cond_8
 
-    invoke-static {v3}, Ljj3;->e(I)D
+    invoke-static {v3}, Lgl3;->e(I)D
 
     move-result-wide v7
 
@@ -1068,33 +1068,33 @@
 
     move-result-object v2
 
-    new-instance v3, Lcrd;
+    new-instance v3, Lpff;
 
-    invoke-direct {v3, v2}, Lcrd;-><init>(Landroid/view/View;)V
+    invoke-direct {v3, v2}, Lpff;-><init>(Landroid/view/View;)V
 
     sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
     if-lt v2, v12, :cond_a
 
-    new-instance v2, Lzhi;
+    new-instance v2, Lfqi;
 
-    invoke-static {v0}, Lnhi;->d(Landroid/view/Window;)Landroid/view/WindowInsetsController;
+    invoke-static {v0}, Ltpi;->d(Landroid/view/Window;)Landroid/view/WindowInsetsController;
 
     move-result-object v7
 
-    invoke-direct {v2, v7, v3}, Lzhi;-><init>(Landroid/view/WindowInsetsController;Lcrd;)V
+    invoke-direct {v2, v7, v3}, Lfqi;-><init>(Landroid/view/WindowInsetsController;Lpff;)V
 
-    iput-object v0, v2, Lzhi;->c:Landroid/view/Window;
+    iput-object v0, v2, Lfqi;->c:Landroid/view/Window;
 
     goto :goto_8
 
     :cond_a
-    new-instance v2, Lyhi;
+    new-instance v2, Leqi;
 
-    invoke-direct {v2, v0, v3}, Lyhi;-><init>(Landroid/view/Window;Lcrd;)V
+    invoke-direct {v2, v0, v3}, Leqi;-><init>(Landroid/view/Window;Lpff;)V
 
     :goto_8
-    invoke-virtual {v2, v6}, Lr8j;->c(Z)V
+    invoke-virtual {v2, v6}, Lwgj;->e(Z)V
 
     invoke-virtual {v1}, Landroid/view/View;->getPaddingTop()I
 
@@ -1106,17 +1106,17 @@
 
     iget v2, v2, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    new-instance v3, Lp0b;
+    new-instance v3, Lg3b;
 
-    const/16 v6, 0x8
+    const/16 v6, 0xa
 
-    invoke-direct {v3, v1, v2, v0, v6}, Lp0b;-><init>(Ljava/lang/Object;III)V
+    invoke-direct {v3, v1, v2, v0, v6}, Lg3b;-><init>(Ljava/lang/Object;III)V
 
-    sget-object v0, Lxsh;->a:Ljava/util/WeakHashMap;
+    sget-object v0, Lh0i;->a:Ljava/util/WeakHashMap;
 
-    invoke-static {v1, v3}, Llsh;->u(Landroid/view/View;Ll1b;)V
+    invoke-static {v1, v3}, Lvzh;->u(Landroid/view/View;La4b;)V
 
-    iput-boolean v4, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->T1:Z
+    iput-boolean v4, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->S1:Z
 
     goto :goto_9
 
@@ -1125,7 +1125,7 @@
 
     invoke-virtual {v0, v3, v3}, Landroid/view/Window;->setLayout(II)V
 
-    invoke-virtual {p0}, Landroidx/fragment/app/a;->h0()Landroid/content/Context;
+    invoke-virtual {p0}, Landroidx/fragment/app/a;->a0()Landroid/content/Context;
 
     move-result-object v3
 
@@ -1133,7 +1133,7 @@
 
     move-result-object v3
 
-    sget v6, Lb6d;->mtrl_calendar_dialog_background_inset:I
+    sget v6, Lnbd;->mtrl_calendar_dialog_background_inset:I
 
     invoke-virtual {v3, v6}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
@@ -1145,7 +1145,7 @@
 
     new-instance v7, Landroid/graphics/drawable/InsetDrawable;
 
-    iget-object v8, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->S1:Lou8;
+    iget-object v8, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->R1:Lew8;
 
     move v10, v9
 
@@ -1161,27 +1161,27 @@
 
     move-result-object v0
 
-    new-instance v6, Las7;
+    new-instance v6, Lqs7;
 
-    iget-object v7, p0, Landroidx/fragment/app/DialogFragment;->t1:Landroid/app/Dialog;
+    iget-object v7, p0, Landroidx/fragment/app/DialogFragment;->s1:Landroid/app/Dialog;
 
     if-eqz v7, :cond_10
 
-    invoke-direct {v6, v7, v3}, Las7;-><init>(Landroid/app/Dialog;Landroid/graphics/Rect;)V
+    invoke-direct {v6, v7, v3}, Lqs7;-><init>(Landroid/app/Dialog;Landroid/graphics/Rect;)V
 
     invoke-virtual {v0, v6}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
     :cond_c
     :goto_9
-    invoke-virtual {p0}, Landroidx/fragment/app/a;->h0()Landroid/content/Context;
+    invoke-virtual {p0}, Landroidx/fragment/app/a;->a0()Landroid/content/Context;
 
-    iget v0, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->A1:I
+    iget v0, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->z1:I
 
     if-eqz v0, :cond_f
 
-    invoke-virtual {p0}, Lcom/google/android/material/datepicker/MaterialDatePicker;->s0()V
+    invoke-virtual {p0}, Lcom/google/android/material/datepicker/MaterialDatePicker;->m0()V
 
-    iget-object v1, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->C1:Lu01;
+    iget-object v1, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->B1:Li11;
 
     new-instance v2, Lcom/google/android/material/datepicker/MaterialCalendar;
 
@@ -1209,21 +1209,21 @@
 
     const-string v8, "CURRENT_MONTH_KEY"
 
-    iget-object v1, v1, Lu01;->d:Lh8a;
+    iget-object v1, v1, Li11;->d:Luaa;
 
     invoke-virtual {v3, v8, v1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    invoke-virtual {v2, v3}, Landroidx/fragment/app/a;->k0(Landroid/os/Bundle;)V
+    invoke-virtual {v2, v3}, Landroidx/fragment/app/a;->e0(Landroid/os/Bundle;)V
 
-    iput-object v2, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->D1:Lcom/google/android/material/datepicker/MaterialCalendar;
+    iput-object v2, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->C1:Lcom/google/android/material/datepicker/MaterialCalendar;
 
-    iget v1, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->H1:I
+    iget v1, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->G1:I
 
     if-ne v1, v4, :cond_d
 
-    invoke-virtual {p0}, Lcom/google/android/material/datepicker/MaterialDatePicker;->s0()V
+    invoke-virtual {p0}, Lcom/google/android/material/datepicker/MaterialDatePicker;->m0()V
 
-    iget-object v1, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->C1:Lu01;
+    iget-object v1, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->B1:Li11;
 
     new-instance v2, Lcom/google/android/material/datepicker/MaterialTextInputPicker;
 
@@ -1241,18 +1241,18 @@
 
     invoke-virtual {v3, v7, v1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    invoke-virtual {v2, v3}, Landroidx/fragment/app/a;->k0(Landroid/os/Bundle;)V
+    invoke-virtual {v2, v3}, Landroidx/fragment/app/a;->e0(Landroid/os/Bundle;)V
 
     :cond_d
-    iput-object v2, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->B1:Lcom/google/android/material/datepicker/PickerFragment;
+    iput-object v2, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->A1:Lcom/google/android/material/datepicker/PickerFragment;
 
-    iget-object v0, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->Q1:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->P1:Landroid/widget/TextView;
 
-    iget v1, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->H1:I
+    iget v1, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->G1:I
 
     if-ne v1, v4, :cond_e
 
-    invoke-virtual {p0}, Landroidx/fragment/app/a;->h0()Landroid/content/Context;
+    invoke-virtual {p0}, Landroidx/fragment/app/a;->a0()Landroid/content/Context;
 
     move-result-object v1
 
@@ -1270,22 +1270,22 @@
 
     if-ne v1, v2, :cond_e
 
-    iget-object v1, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->V1:Ljava/lang/CharSequence;
+    iget-object v1, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->U1:Ljava/lang/CharSequence;
 
     goto :goto_a
 
     :cond_e
-    iget-object v1, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->U1:Ljava/lang/CharSequence;
+    iget-object v1, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->T1:Ljava/lang/CharSequence;
 
     :goto_a
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    invoke-virtual {p0}, Lcom/google/android/material/datepicker/MaterialDatePicker;->s0()V
+    invoke-virtual {p0}, Lcom/google/android/material/datepicker/MaterialDatePicker;->m0()V
 
     throw v5
 
     :cond_f
-    invoke-virtual {p0}, Lcom/google/android/material/datepicker/MaterialDatePicker;->s0()V
+    invoke-virtual {p0}, Lcom/google/android/material/datepicker/MaterialDatePicker;->m0()V
 
     throw v5
 
@@ -1328,24 +1328,146 @@
     throw v0
 .end method
 
-.method public final b0()V
+.method public final V()V
     .locals 1
 
-    iget-object v0, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->B1:Lcom/google/android/material/datepicker/PickerFragment;
+    iget-object v0, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->A1:Lcom/google/android/material/datepicker/PickerFragment;
 
-    iget-object v0, v0, Lcom/google/android/material/datepicker/PickerFragment;->i1:Ljava/util/LinkedHashSet;
+    iget-object v0, v0, Lcom/google/android/material/datepicker/PickerFragment;->h1:Ljava/util/LinkedHashSet;
 
     invoke-virtual {v0}, Ljava/util/AbstractCollection;->clear()V
 
-    invoke-super {p0}, Landroidx/fragment/app/DialogFragment;->b0()V
+    invoke-super {p0}, Landroidx/fragment/app/DialogFragment;->V()V
 
     return-void
+.end method
+
+.method public final k0()Landroid/app/Dialog;
+    .locals 6
+
+    new-instance v0, Landroid/app/Dialog;
+
+    invoke-virtual {p0}, Landroidx/fragment/app/a;->a0()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Landroidx/fragment/app/a;->a0()Landroid/content/Context;
+
+    iget v2, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->z1:I
+
+    const/4 v3, 0x0
+
+    if-eqz v2, :cond_0
+
+    invoke-direct {v0, v1, v2}, Landroid/app/Dialog;-><init>(Landroid/content/Context;I)V
+
+    invoke-virtual {v0}, Landroid/app/Dialog;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    const v2, 0x101020d
+
+    invoke-static {v1, v2}, Lcom/google/android/material/datepicker/MaterialDatePicker;->o0(Landroid/content/Context;I)Z
+
+    move-result v2
+
+    iput-boolean v2, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->F1:Z
+
+    new-instance v2, Lew8;
+
+    sget v4, Lsad;->materialCalendarStyle:I
+
+    sget v5, Lkld;->Widget_MaterialComponents_MaterialCalendar:I
+
+    invoke-direct {v2, v1, v3, v4, v5}, Lew8;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
+
+    iput-object v2, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->R1:Lew8;
+
+    sget-object v2, Lvld;->MaterialCalendar:[I
+
+    sget v4, Lsad;->materialCalendarStyle:I
+
+    sget v5, Lkld;->Widget_MaterialComponents_MaterialCalendar:I
+
+    invoke-virtual {v1, v3, v2, v4, v5}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
+
+    move-result-object v2
+
+    sget v3, Lvld;->MaterialCalendar_backgroundTint:I
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v2, v3, v4}, Landroid/content/res/TypedArray;->getColor(II)I
+
+    move-result v3
+
+    invoke-virtual {v2}, Landroid/content/res/TypedArray;->recycle()V
+
+    iget-object v2, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->R1:Lew8;
+
+    invoke-virtual {v2, v1}, Lew8;->i(Landroid/content/Context;)V
+
+    iget-object v1, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->R1:Lew8;
+
+    invoke-static {v3}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Lew8;->k(Landroid/content/res/ColorStateList;)V
+
+    iget-object v1, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->R1:Lew8;
+
+    invoke-virtual {v0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+
+    move-result-object v2
+
+    sget-object v3, Lh0i;->a:Ljava/util/WeakHashMap;
+
+    invoke-static {v2}, Lvzh;->i(Landroid/view/View;)F
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Lew8;->j(F)V
+
+    return-object v0
+
+    :cond_0
+    invoke-virtual {p0}, Lcom/google/android/material/datepicker/MaterialDatePicker;->m0()V
+
+    throw v3
+.end method
+
+.method public final m0()V
+    .locals 2
+
+    iget-object v0, p0, Landroidx/fragment/app/a;->X:Landroid/os/Bundle;
+
+    const-string v1, "DATE_SELECTOR_KEY"
+
+    invoke-virtual {v0, v1}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance v0, Ljava/lang/ClassCastException;
+
+    invoke-direct {v0}, Ljava/lang/ClassCastException;-><init>()V
+
+    throw v0
 .end method
 
 .method public final onCancel(Landroid/content/DialogInterface;)V
     .locals 2
 
-    iget-object v0, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->y1:Ljava/util/LinkedHashSet;
+    iget-object v0, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->x1:Ljava/util/LinkedHashSet;
 
     invoke-virtual {v0}, Ljava/util/AbstractCollection;->iterator()Ljava/util/Iterator;
 
@@ -1375,7 +1497,7 @@
 .method public final onDismiss(Landroid/content/DialogInterface;)V
     .locals 2
 
-    iget-object v0, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->z1:Ljava/util/LinkedHashSet;
+    iget-object v0, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->y1:Ljava/util/LinkedHashSet;
 
     invoke-virtual {v0}, Ljava/util/AbstractCollection;->iterator()Ljava/util/Iterator;
 
@@ -1399,7 +1521,7 @@
     goto :goto_0
 
     :cond_0
-    iget-object v0, p0, Landroidx/fragment/app/a;->T0:Landroid/view/View;
+    iget-object v0, p0, Landroidx/fragment/app/a;->S0:Landroid/view/View;
 
     check-cast v0, Landroid/view/ViewGroup;
 
@@ -1411,126 +1533,4 @@
     invoke-super {p0, p1}, Landroidx/fragment/app/DialogFragment;->onDismiss(Landroid/content/DialogInterface;)V
 
     return-void
-.end method
-
-.method public final q0()Landroid/app/Dialog;
-    .locals 6
-
-    new-instance v0, Landroid/app/Dialog;
-
-    invoke-virtual {p0}, Landroidx/fragment/app/a;->h0()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-virtual {p0}, Landroidx/fragment/app/a;->h0()Landroid/content/Context;
-
-    iget v2, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->A1:I
-
-    const/4 v3, 0x0
-
-    if-eqz v2, :cond_0
-
-    invoke-direct {v0, v1, v2}, Landroid/app/Dialog;-><init>(Landroid/content/Context;I)V
-
-    invoke-virtual {v0}, Landroid/app/Dialog;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    const v2, 0x101020d
-
-    invoke-static {v1, v2}, Lcom/google/android/material/datepicker/MaterialDatePicker;->u0(Landroid/content/Context;I)Z
-
-    move-result v2
-
-    iput-boolean v2, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->G1:Z
-
-    new-instance v2, Lou8;
-
-    sget v4, Lf5d;->materialCalendarStyle:I
-
-    sget v5, Lqfd;->Widget_MaterialComponents_MaterialCalendar:I
-
-    invoke-direct {v2, v1, v3, v4, v5}, Lou8;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
-
-    iput-object v2, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->S1:Lou8;
-
-    sget-object v2, Lcgd;->MaterialCalendar:[I
-
-    sget v4, Lf5d;->materialCalendarStyle:I
-
-    sget v5, Lqfd;->Widget_MaterialComponents_MaterialCalendar:I
-
-    invoke-virtual {v1, v3, v2, v4, v5}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
-
-    move-result-object v2
-
-    sget v3, Lcgd;->MaterialCalendar_backgroundTint:I
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v2, v3, v4}, Landroid/content/res/TypedArray;->getColor(II)I
-
-    move-result v3
-
-    invoke-virtual {v2}, Landroid/content/res/TypedArray;->recycle()V
-
-    iget-object v2, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->S1:Lou8;
-
-    invoke-virtual {v2, v1}, Lou8;->i(Landroid/content/Context;)V
-
-    iget-object v1, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->S1:Lou8;
-
-    invoke-static {v3}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Lou8;->k(Landroid/content/res/ColorStateList;)V
-
-    iget-object v1, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->S1:Lou8;
-
-    invoke-virtual {v0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/view/Window;->getDecorView()Landroid/view/View;
-
-    move-result-object v2
-
-    sget-object v3, Lxsh;->a:Ljava/util/WeakHashMap;
-
-    invoke-static {v2}, Llsh;->i(Landroid/view/View;)F
-
-    move-result v2
-
-    invoke-virtual {v1, v2}, Lou8;->j(F)V
-
-    return-object v0
-
-    :cond_0
-    invoke-virtual {p0}, Lcom/google/android/material/datepicker/MaterialDatePicker;->s0()V
-
-    throw v3
-.end method
-
-.method public final s0()V
-    .locals 2
-
-    iget-object v0, p0, Landroidx/fragment/app/a;->X:Landroid/os/Bundle;
-
-    const-string v1, "DATE_SELECTOR_KEY"
-
-    invoke-virtual {v0, v1}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    return-void
-
-    :cond_0
-    new-instance v0, Ljava/lang/ClassCastException;
-
-    invoke-direct {v0}, Ljava/lang/ClassCastException;-><init>()V
-
-    throw v0
 .end method

@@ -1,43 +1,60 @@
-.class public abstract synthetic Lh64;
-.super Ljava/lang/Object;
+.class public final Lh64;
+.super Lujg;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+# instance fields
+.field public c:Lk24;
 
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 4
+# virtual methods
+.method public final d(Lws9;Ljava/lang/String;)V
+    .locals 1
 
-    const/4 v0, 0x2
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {v0}, Lt02;->w(I)[I
+    const-string v0, "contact"
 
-    move-result-object v1
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    array-length v1, v1
+    move-result p2
 
-    new-array v1, v1, [I
+    if-nez p2, :cond_0
 
-    const/4 v2, 0x1
-
-    const/4 v3, 0x0
-
-    :try_start_0
-    aput v2, v1, v3
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    :try_start_1
-    aput v0, v1, v2
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
-    sput-object v1, Lh64;->$EnumSwitchMapping$0:[I
+    invoke-virtual {p1}, Lws9;->B()V
 
     return-void
+
+    :cond_0
+    invoke-static {p1}, Lk24;->g(Lws9;)Lk24;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lh64;->c:Lk24;
+
+    return-void
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    iget-object v0, p0, Lh64;->c:Lk24;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "{contact="
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, "}"
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

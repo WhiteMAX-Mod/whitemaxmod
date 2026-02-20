@@ -1,35 +1,21 @@
-.class public final Leia;
+.class public interface abstract Leia;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public final a:I
-
-.field public final b:I
-
-.field public final c:I
-
-.field public final d:I
-
-.field public final e:I
+# interfaces
+.implements Lvef;
+.implements Ld96;
 
 
-# direct methods
-.method public constructor <init>(IIIII)V
-    .locals 0
+# virtual methods
+.method public abstract a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+.end method
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.method public abstract d()V
+.end method
 
-    iput p1, p0, Leia;->a:I
+.method public abstract h(Ljava/lang/Object;)Z
+.end method
 
-    iput p2, p0, Leia;->b:I
-
-    iput p3, p0, Leia;->c:I
-
-    iput p4, p0, Leia;->d:I
-
-    iput p5, p0, Leia;->e:I
-
-    return-void
+.method public abstract i()Laxf;
 .end method

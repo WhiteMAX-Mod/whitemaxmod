@@ -1,55 +1,43 @@
 .class public final Lhec;
-.super Lo84;
+.super Lo3;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:Llw3;
-
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Liec;
-
-.field public d:Ljava/lang/String;
-
-.field public o:Lnq6;
-
-.field public t0:I
-
-
-# direct methods
-.method public constructor <init>(Liec;Lo84;)V
-    .locals 0
-
-    iput-object p1, p0, Lhec;->Z:Liec;
-
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final e(J)J
     .locals 1
 
-    iput-object p1, p0, Lhec;->Y:Ljava/lang/Object;
+    invoke-static {}, Ljava/util/concurrent/ThreadLocalRandom;->current()Ljava/util/concurrent/ThreadLocalRandom;
 
-    iget p1, p0, Lhec;->t0:I
+    move-result-object v0
 
-    const/high16 v0, -0x80000000
+    invoke-virtual {v0, p1, p2}, Ljava/util/concurrent/ThreadLocalRandom;->nextLong(J)J
 
-    or-int/2addr p1, v0
+    move-result-wide p1
 
-    iput p1, p0, Lhec;->t0:I
+    return-wide p1
+.end method
 
-    iget-object p1, p0, Lhec;->Z:Liec;
+.method public final f(JJ)J
+    .locals 1
 
-    const/4 v0, 0x0
+    invoke-static {}, Ljava/util/concurrent/ThreadLocalRandom;->current()Ljava/util/concurrent/ThreadLocalRandom;
 
-    invoke-virtual {p1, v0, v0, p0}, Liec;->a(Ljava/lang/String;Lnq6;Lo84;)Ljava/lang/Object;
+    move-result-object v0
 
-    move-result-object p1
+    invoke-virtual {v0, p1, p2, p3, p4}, Ljava/util/concurrent/ThreadLocalRandom;->nextLong(JJ)J
 
-    return-object p1
+    move-result-wide p1
+
+    return-wide p1
+.end method
+
+.method public final g()Ljava/util/Random;
+    .locals 1
+
+    invoke-static {}, Ljava/util/concurrent/ThreadLocalRandom;->current()Ljava/util/concurrent/ThreadLocalRandom;
+
+    move-result-object v0
+
+    return-object v0
 .end method

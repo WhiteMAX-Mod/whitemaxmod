@@ -3,110 +3,98 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lb51;
+.implements Lks6;
 
 
-# static fields
-.field public static final a:Ly41;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
+.field public final synthetic b:Lj88;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public synthetic constructor <init>(Lj88;I)V
+    .locals 0
 
-    new-instance v0, Ly41;
+    iput p2, p0, Ly41;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ly41;->b:Lj88;
 
-    sput-object v0, Ly41;->a:Ly41;
-
-    const/16 v0, 0x3a
-
-    int-to-float v0, v0
-
-    invoke-static {v0}, Liwd;->f(F)I
-
-    move-result v0
-
-    sput v0, Ly41;->b:I
-
-    const/16 v0, 0x1c
-
-    int-to-float v0, v0
-
-    invoke-static {v0}, Liwd;->f(F)I
-
-    move-result v0
-
-    sput v0, Ly41;->c:I
-
-    invoke-static {}, Lt05;->c()F
-
-    move-result v0
-
-    float-to-double v0, v0
-
-    const-wide/high16 v2, 0x4004000000000000L    # 2.5
-
-    mul-double/2addr v0, v2
-
-    invoke-static {v0, v1}, Lq7j;->b(D)I
-
-    move-result v0
-
-    sput v0, Ly41;->d:I
-
-    const/4 v0, 0x7
-
-    int-to-float v0, v0
-
-    invoke-static {v0}, Liwd;->f(F)I
-
-    move-result v0
-
-    sput v0, Ly41;->e:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()I
-    .locals 1
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    sget v0, Ly41;->c:I
+    iget v0, p0, Ly41;->a:I
 
-    return v0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final b()I
-    .locals 1
+    check-cast p1, Ljava/lang/Boolean;
 
-    sget v0, Ly41;->d:I
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    return v0
-.end method
+    iget-object v0, p0, Ly41;->b:Lj88;
 
-.method public final c()I
-    .locals 1
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
 
-    sget v0, Ly41;->b:I
+    move-result-object v0
 
-    return v0
-.end method
+    check-cast v0, Lug3;
 
-.method public final d()I
-    .locals 1
+    check-cast v0, Lhl8;
 
-    sget v0, Ly41;->e:I
+    iget-object v1, v0, Lhl8;->E0:Lvye;
 
-    return v0
+    sget-object v2, Lhl8;->U0:[Lv58;
+
+    const/16 v3, 0x16
+
+    aget-object v2, v2, v3
+
+    invoke-virtual {v1, v0, v2, p1}, Lvye;->N(Ljava/lang/Object;Lv58;Ljava/lang/Object;)V
+
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
+
+    :pswitch_0
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    iget-object v0, p0, Ly41;->b:Lj88;
+
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lug3;
+
+    check-cast v0, Lhl8;
+
+    iget-object v1, v0, Lhl8;->H0:Lvye;
+
+    sget-object v2, Lhl8;->U0:[Lv58;
+
+    const/16 v3, 0x19
+
+    aget-object v2, v2, v3
+
+    invoke-virtual {v1, v0, v2, p1}, Lvye;->N(Ljava/lang/Object;Lv58;Ljava/lang/Object;)V
+
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,124 +1,53 @@
-.class public final Lmy1;
-.super Lp6g;
+.class public abstract synthetic Lmy1;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lbr6;
 
-
-# instance fields
-.field public final synthetic X:Loy1;
-
-.field public final synthetic Y:Lm71;
-
-.field public o:I
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
-.method public constructor <init>(Loy1;Lm71;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lmy1;->X:Loy1;
-
-    iput-object p2, p0, Lmy1;->Y:Lm71;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lzb4;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lmy1;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lmy1;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lmy1;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance p1, Lmy1;
-
-    iget-object v0, p0, Lmy1;->X:Loy1;
-
-    iget-object v1, p0, Lmy1;->Y:Lm71;
-
-    invoke-direct {p1, v0, v1, p2}, Lmy1;-><init>(Loy1;Lm71;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method static constructor <clinit>()V
     .locals 3
 
-    iget v0, p0, Lmy1;->o:I
+    invoke-static {}, Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$AudioDeviceType;->values()[Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$AudioDeviceType;
 
-    const/4 v1, 0x1
+    move-result-object v0
 
-    if-eqz v0, :cond_1
+    array-length v0, v0
 
-    if-ne v0, v1, :cond_0
+    new-array v0, v0, [I
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    :try_start_0
+    sget-object v1, Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$AudioDeviceType;->EARPIECE:Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$AudioDeviceType;
 
-    goto :goto_0
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    move-result v1
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    const/4 v2, 0x1
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    throw p1
+    :catch_0
+    :try_start_1
+    sget-object v1, Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$AudioDeviceType;->SPEAKER_PHONE:Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$AudioDeviceType;
 
-    :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    iget-object p1, p0, Lmy1;->X:Loy1;
+    move-result v1
 
-    iget-object p1, p1, Loy1;->a:Li7f;
+    const/4 v2, 0x2
 
-    new-instance v0, Lwb1;
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    iget-object v2, p0, Lmy1;->Y:Lm71;
+    :catch_1
+    sput-object v0, Lmy1;->$EnumSwitchMapping$0:[I
 
-    invoke-direct {v0, v2}, Lwb1;-><init>(Lm71;)V
-
-    iput v1, p0, Lmy1;->o:I
-
-    invoke-virtual {p1, v0, p0}, Li7f;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lac4;->a:Lac4;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
-    :cond_2
-    :goto_0
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
+    return-void
 .end method

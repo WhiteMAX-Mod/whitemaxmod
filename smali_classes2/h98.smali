@@ -1,401 +1,834 @@
 .class public final Lh98;
-.super Li98;
+.super Ly2b;
 .source "SourceFile"
+
+# interfaces
+.implements Lxf5;
+
+
+# static fields
+.field public static final w0:Landroid/graphics/Rect;
+
+.field public static final x0:Ljava/util/regex/Pattern;
 
 
 # instance fields
-.field public final a:J
+.field public b:Z
 
-.field public final b:Ljava/lang/Long;
+.field public c:Z
 
-.field public final c:Ljava/lang/Long;
+.field public d:Ljava/lang/CharSequence;
 
-.field public final d:Lo44;
+.field public o:I
 
-.field public final e:La37;
+.field public s0:F
 
-.field public final f:Lnfh;
+.field public t0:F
 
-.field public final g:Ljava/lang/Long;
+.field public u0:Ljava/util/regex/Pattern;
 
-.field public final h:Ljava/lang/String;
+.field public v0:Z
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/Long;Ljava/lang/Long;Lo44;La37;Lnfh;Ljava/lang/Long;Ljava/lang/String;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Landroid/graphics/Rect;
 
-    iput-wide p1, p0, Lh98;->a:J
+    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    iput-object p3, p0, Lh98;->b:Ljava/lang/Long;
+    sput-object v0, Lh98;->w0:Landroid/graphics/Rect;
 
-    iput-object p4, p0, Lh98;->c:Ljava/lang/Long;
+    const-string v0, "[\\.,\u2026\\:\\s]*$"
 
-    iput-object p5, p0, Lh98;->d:Lo44;
+    const/16 v1, 0x20
 
-    iput-object p6, p0, Lh98;->e:La37;
+    invoke-static {v0, v1}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;I)Ljava/util/regex/Pattern;
 
-    iput-object p7, p0, Lh98;->f:Lnfh;
+    move-result-object v0
 
-    iput-object p8, p0, Lh98;->g:Ljava/lang/Long;
-
-    iput-object p9, p0, Lh98;->h:Ljava/lang/String;
+    sput-object v0, Lh98;->x0:Ljava/util/regex/Pattern;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final a()J
+.method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
-    iget-wide v0, p0, Lh98;->a:J
+    const/4 v0, 0x0
 
-    return-wide v0
+    const/4 v1, 0x0
+
+    invoke-direct {p0, p1, v0, v1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+
+    const p1, 0x7fffffff
+
+    iput p1, p0, Lh98;->o:I
+
+    const/high16 p1, 0x3f800000    # 1.0f
+
+    iput p1, p0, Lh98;->s0:F
+
+    sget-object p1, Lh98;->x0:Ljava/util/regex/Pattern;
+
+    iput-object p1, p0, Lh98;->u0:Ljava/util/regex/Pattern;
+
+    return-void
 .end method
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method private final getFullyVisibleLinesCount()I
+    .locals 3
+
+    const-string v0, ""
+
+    invoke-virtual {p0, v0}, Lh98;->a(Ljava/lang/CharSequence;)Landroid/text/StaticLayout;
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
+
+    move-result v1
+
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingTop()I
+
+    move-result v2
+
+    sub-int/2addr v1, v2
+
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingBottom()I
+
+    move-result v2
+
+    sub-int/2addr v1, v2
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v2}, Landroid/text/Layout;->getLineBottom(I)I
+
+    move-result v0
+
+    div-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method private final getLinesCount()I
+    .locals 2
+
+    invoke-direct {p0}, Lh98;->getFullyVisibleLinesCount()I
+
+    move-result v0
+
+    const/4 v1, -0x1
+
+    if-ne v0, v1, :cond_0
 
     const/4 v0, 0x1
 
-    if-ne p0, p1, :cond_0
+    :cond_0
+    return v0
+.end method
+
+
+# virtual methods
+.method public final a(Ljava/lang/CharSequence;)Landroid/text/StaticLayout;
+    .locals 12
+
+    invoke-virtual {p0}, Landroid/widget/TextView;->getCompoundDrawables()[Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    aget-object v2, v0, v1
+
+    if-eqz v2, :cond_0
+
+    invoke-virtual {v2}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
+
+    move-result v2
+
+    invoke-virtual {p0}, Landroid/widget/TextView;->getCompoundDrawablePadding()I
+
+    move-result v3
+
+    goto :goto_0
+
+    :cond_0
+    move v2, v1
+
+    move v3, v2
+
+    :goto_0
+    const/4 v4, 0x2
+
+    aget-object v0, v0, v4
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
+
+    move-result v1
+
+    invoke-virtual {p0}, Landroid/widget/TextView;->getCompoundDrawablePadding()I
+
+    move-result v0
+
+    add-int/2addr v3, v0
+
+    :cond_1
+    new-instance v4, Landroid/text/StaticLayout;
+
+    invoke-virtual {p0}, Landroid/widget/TextView;->getPaint()Landroid/text/TextPaint;
+
+    move-result-object v6
+
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
+
+    move-result v0
+
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingLeft()I
+
+    move-result v5
+
+    sub-int/2addr v0, v5
+
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingRight()I
+
+    move-result v5
+
+    sub-int/2addr v0, v5
+
+    sub-int/2addr v0, v2
+
+    sub-int/2addr v0, v1
+
+    sub-int v7, v0, v3
+
+    sget-object v8, Landroid/text/Layout$Alignment;->ALIGN_NORMAL:Landroid/text/Layout$Alignment;
+
+    iget v9, p0, Lh98;->s0:F
+
+    iget v10, p0, Lh98;->t0:F
+
+    const/4 v11, 0x0
+
+    move-object v5, p1
+
+    invoke-direct/range {v4 .. v11}, Landroid/text/StaticLayout;-><init>(Ljava/lang/CharSequence;Landroid/text/TextPaint;ILandroid/text/Layout$Alignment;FFZ)V
+
+    return-object v4
+.end method
+
+.method public final b()Z
+    .locals 1
+
+    invoke-virtual {p0}, Landroid/view/View;->getVisibility()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
 
     return v0
 
     :cond_0
-    instance-of v1, p1, Lh98;
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final c()Landroid/graphics/Rect;
+    .locals 5
+
+    invoke-virtual {p0}, Landroid/widget/TextView;->getLayout()Landroid/text/Layout;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/text/Layout;->getLineStart(I)I
+
+    move-result v0
+
+    invoke-virtual {p0}, Landroid/widget/TextView;->getLayout()Landroid/text/Layout;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v1}, Landroid/text/Layout;->getLineWidth(I)F
+
+    move-result v2
+
+    invoke-virtual {p0}, Landroid/widget/TextView;->getLayout()Landroid/text/Layout;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v1}, Landroid/text/Layout;->getLineTop(I)I
+
+    move-result v1
+
+    sget-object v3, Lh98;->w0:Landroid/graphics/Rect;
+
+    iput v1, v3, Landroid/graphics/Rect;->top:I
+
+    invoke-virtual {p0}, Landroid/widget/TextView;->getLayout()Landroid/text/Layout;
+
+    move-result-object v1
+
+    const/4 v4, 0x1
+
+    invoke-virtual {v1, v4}, Landroid/text/Layout;->getLineTop(I)I
+
+    move-result v1
+
+    iput v1, v3, Landroid/graphics/Rect;->bottom:I
+
+    iput v0, v3, Landroid/graphics/Rect;->left:I
+
+    int-to-float v0, v0
+
+    add-float/2addr v0, v2
+
+    invoke-static {v0}, Lmhj;->f(F)I
+
+    move-result v0
+
+    iput v0, v3, Landroid/graphics/Rect;->right:I
+
+    return-object v3
+.end method
+
+.method public final d(Llob;)V
+    .locals 4
+
+    invoke-virtual {p0}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    instance-of v1, v0, Landroid/text/Spanned;
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    if-eqz v1, :cond_0
 
-    return v2
+    check-cast v0, Landroid/text/Spanned;
+
+    goto :goto_0
+
+    :cond_0
+    move-object v0, v2
+
+    :goto_0
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p0}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
+
+    move-result-object v2
+
+    invoke-interface {v2}, Ljava/lang/CharSequence;->length()I
+
+    move-result v2
+
+    const-class v3, Ljqg;
+
+    invoke-interface {v0, v1, v2, v3}, Landroid/text/Spanned;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
+
+    move-result-object v2
 
     :cond_1
-    check-cast p1, Lh98;
+    if-nez v2, :cond_2
 
-    iget-wide v3, p0, Lh98;->a:J
-
-    iget-wide v5, p1, Lh98;->a:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_2
-
-    return v2
+    new-array v2, v1, [Ljqg;
 
     :cond_2
-    iget-object v1, p0, Lh98;->b:Ljava/lang/Long;
+    array-length v0, v2
 
-    iget-object v3, p1, Lh98;->b:Ljava/lang/Long;
+    :goto_1
+    if-ge v1, v0, :cond_3
 
-    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    aget-object v3, v2, v1
 
-    move-result v1
+    check-cast v3, Ljqg;
 
-    if-nez v1, :cond_3
+    invoke-interface {v3, p1}, Ljqg;->onThemeChanged(Llob;)V
 
-    return v2
+    invoke-static {p0, v3}, Lqpg;->b(Landroid/widget/TextView;Ljava/lang/Object;)V
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_1
 
     :cond_3
-    iget-object v1, p0, Lh98;->c:Ljava/lang/Long;
+    return-void
+.end method
 
-    iget-object v3, p1, Lh98;->c:Ljava/lang/Long;
+.method public final e(Ljava/lang/String;)F
+    .locals 1
 
-    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {p0}, Landroid/widget/TextView;->getPaint()Landroid/text/TextPaint;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->measureText(Ljava/lang/String;)F
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final f(Lipg;)V
+    .locals 1
+
+    sget-object v0, Lc9h;->a:Lipg;
+
+    invoke-static {p1, p0}, Lipg;->d(Lipg;Landroid/widget/TextView;)V
+
+    return-void
+.end method
+
+.method public getAsView()Landroid/view/View;
+    .locals 0
+
+    return-object p0
+.end method
+
+.method public getMaxLines()I
+    .locals 1
+
+    iget v0, p0, Lh98;->o:I
+
+    return v0
+.end method
+
+.method public getMaxLinesValue()I
+    .locals 1
+
+    iget v0, p0, Lh98;->o:I
+
+    return v0
+.end method
+
+.method public getSpannableText()Ljava/lang/CharSequence;
+    .locals 1
+
+    iget-object v0, p0, Lh98;->d:Ljava/lang/CharSequence;
+
+    return-object v0
+.end method
+
+.method public getTextColor()I
+    .locals 1
+
+    invoke-virtual {p0}, Landroid/widget/TextView;->getCurrentTextColor()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public getTextValue()Ljava/lang/CharSequence;
+    .locals 1
+
+    iget-object v0, p0, Lh98;->d:Ljava/lang/CharSequence;
+
+    return-object v0
+.end method
+
+.method public final onDraw(Landroid/graphics/Canvas;)V
+    .locals 8
+
+    iget-boolean v0, p0, Lh98;->b:Z
+
+    if-eqz v0, :cond_8
+
+    iget-object v0, p0, Lh98;->d:Ljava/lang/CharSequence;
+
+    if-nez v0, :cond_0
+
+    goto/16 :goto_3
+
+    :cond_0
+    iget-boolean v1, p0, Lh98;->v0:Z
+
+    const/4 v2, 0x2
+
+    const/4 v3, 0x1
+
+    const/4 v4, 0x0
+
+    const-string v5, "\u2026"
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
 
     move-result v1
 
-    if-nez v1, :cond_4
+    sub-int/2addr v1, v3
 
-    return v2
+    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
+
+    move-result v6
+
+    invoke-interface {v0, v1, v6}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
+
+    move-result-object v1
+
+    new-array v6, v2, [Ljava/lang/CharSequence;
+
+    aput-object v5, v6, v4
+
+    aput-object v1, v6, v3
+
+    invoke-static {v6}, Landroid/text/TextUtils;->concat([Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    move-result-object v5
+
+    :cond_1
+    invoke-virtual {p0, v0}, Lh98;->a(Ljava/lang/CharSequence;)Landroid/text/StaticLayout;
+
+    move-result-object v1
+
+    invoke-direct {p0}, Lh98;->getLinesCount()I
+
+    move-result v6
+
+    if-lez v6, :cond_6
+
+    invoke-virtual {v1}, Landroid/text/Layout;->getLineCount()I
+
+    move-result v7
+
+    if-le v7, v6, :cond_6
+
+    add-int/lit8 v7, v6, -0x1
+
+    invoke-virtual {v1, v7}, Landroid/text/Layout;->getLineEnd(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v3
+
+    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
+
+    move-result v7
+
+    if-lt v1, v7, :cond_2
+
+    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
+
+    move-result v1
+
+    sub-int/2addr v1, v3
+
+    :cond_2
+    invoke-interface {v0, v4, v1}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    :goto_0
+    new-array v7, v2, [Ljava/lang/CharSequence;
+
+    aput-object v0, v7, v4
+
+    aput-object v5, v7, v3
+
+    invoke-static {v7}, Landroid/text/TextUtils;->concat([Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    move-result-object v7
+
+    invoke-virtual {p0, v7}, Lh98;->a(Ljava/lang/CharSequence;)Landroid/text/StaticLayout;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Landroid/text/Layout;->getLineCount()I
+
+    move-result v7
+
+    if-le v7, v6, :cond_3
+
+    add-int/lit8 v1, v1, -0x1
+
+    if-lez v1, :cond_3
+
+    invoke-interface {v0, v4, v1}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_3
+    instance-of v1, v0, Landroid/text/Spanned;
+
+    if-eqz v1, :cond_5
+
+    new-instance v1, Landroid/text/SpannableStringBuilder;
+
+    invoke-direct {v1, v0}, Landroid/text/SpannableStringBuilder;-><init>(Ljava/lang/CharSequence;)V
+
+    iget-object v2, p0, Lh98;->u0:Ljava/util/regex/Pattern;
+
+    invoke-virtual {v2, v0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/util/regex/Matcher;->find()Z
+
+    move-result v6
+
+    if-eqz v6, :cond_4
+
+    invoke-virtual {v2}, Ljava/util/regex/Matcher;->start()I
+
+    move-result v2
+
+    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
+
+    move-result v0
+
+    invoke-virtual {v1, v2, v0, v5}, Landroid/text/SpannableStringBuilder;->replace(IILjava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
 
     :cond_4
-    iget-object v1, p0, Lh98;->d:Lo44;
+    move-object v0, v1
 
-    iget-object v3, p1, Lh98;->d:Lo44;
-
-    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_5
-
-    return v2
+    goto :goto_1
 
     :cond_5
-    iget-object v1, p0, Lh98;->e:La37;
+    iget-object v1, p0, Lh98;->u0:Ljava/util/regex/Pattern;
 
-    iget-object v3, p1, Lh98;->e:La37;
+    invoke-virtual {v1, v0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
-    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-result-object v0
 
-    move-result v1
+    const-string v1, ""
 
-    if-nez v1, :cond_6
+    invoke-virtual {v0, v1}, Ljava/util/regex/Matcher;->replaceFirst(Ljava/lang/String;)Ljava/lang/String;
 
-    return v2
+    move-result-object v0
+
+    new-array v1, v2, [Ljava/lang/CharSequence;
+
+    aput-object v0, v1, v4
+
+    aput-object v5, v1, v3
+
+    invoke-static {v1}, Landroid/text/TextUtils;->concat([Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    move-result-object v0
 
     :cond_6
-    iget-object v1, p0, Lh98;->f:Lnfh;
+    :goto_1
+    invoke-virtual {p0}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
-    iget-object v3, p1, Lh98;->f:Lnfh;
+    move-result-object v1
 
-    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-nez v1, :cond_7
 
-    return v2
+    iput-boolean v3, p0, Lh98;->c:Z
 
-    :cond_7
-    iget-object v1, p0, Lh98;->g:Ljava/lang/Long;
+    :try_start_0
+    invoke-virtual {p0, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    iget-object v3, p1, Lh98;->g:Ljava/lang/Long;
-
-    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_8
-
-    return v2
-
-    :cond_8
-    iget-object v1, p0, Lh98;->h:Ljava/lang/String;
-
-    iget-object p1, p1, Lh98;->h:Ljava/lang/String;
-
-    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_9
-
-    return v2
-
-    :cond_9
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-wide v0, p0, Lh98;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    const/4 v1, 0x0
-
-    iget-object v2, p0, Lh98;->b:Ljava/lang/Long;
-
-    if-nez v2, :cond_0
-
-    move v2, v1
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v2
-
-    :goto_0
-    add-int/2addr v0, v2
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v2, p0, Lh98;->c:Ljava/lang/Long;
-
-    if-nez v2, :cond_1
-
-    move v2, v1
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v2
-
-    :goto_1
-    add-int/2addr v0, v2
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v2, p0, Lh98;->d:Lo44;
-
-    if-nez v2, :cond_2
-
-    move v2, v1
+    iput-boolean v4, p0, Lh98;->c:Z
 
     goto :goto_2
 
-    :cond_2
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+    :catchall_0
+    move-exception p1
 
-    move-result v2
+    iput-boolean v4, p0, Lh98;->c:Z
 
+    throw p1
+
+    :cond_7
     :goto_2
-    add-int/2addr v0, v2
+    iput-boolean v4, p0, Lh98;->b:Z
 
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v2, p0, Lh98;->e:La37;
-
-    if-nez v2, :cond_3
-
-    move v2, v1
-
-    goto :goto_3
-
-    :cond_3
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v2
-
+    :cond_8
     :goto_3
-    add-int/2addr v0, v2
+    invoke-super {p0, p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
 
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v2, p0, Lh98;->f:Lnfh;
-
-    if-nez v2, :cond_4
-
-    move v2, v1
-
-    goto :goto_4
-
-    :cond_4
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v2
-
-    :goto_4
-    add-int/2addr v0, v2
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v2, p0, Lh98;->g:Ljava/lang/Long;
-
-    if-nez v2, :cond_5
-
-    move v2, v1
-
-    goto :goto_5
-
-    :cond_5
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v2
-
-    :goto_5
-    add-int/2addr v0, v2
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v2, p0, Lh98;->h:Ljava/lang/String;
-
-    if-nez v2, :cond_6
-
-    goto :goto_6
-
-    :cond_6
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    :goto_6
-    add-int/2addr v0, v1
-
-    return v0
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final onSizeChanged(IIII)V
+    .locals 0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-super {p0, p1, p2, p3, p4}, Landroid/view/View;->onSizeChanged(IIII)V
 
-    const-string v1, "SuccessLinkInfo(requestId="
+    const/4 p1, 0x1
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iput-boolean p1, p0, Lh98;->b:Z
 
-    iget-wide v1, p0, Lh98;->a:J
+    return-void
+.end method
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+.method public final onTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 0
 
-    const-string v1, ", chatId="
+    invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/TextView;->onTextChanged(Ljava/lang/CharSequence;III)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-boolean p2, p0, Lh98;->c:Z
 
-    iget-object v1, p0, Lh98;->b:Ljava/lang/Long;
+    const/4 p3, 0x1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    if-nez p2, :cond_0
 
-    const-string v1, ", messageId="
+    iget-object p2, p0, Lh98;->d:Ljava/lang/CharSequence;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eqz p2, :cond_1
 
-    iget-object v1, p0, Lh98;->c:Ljava/lang/Long;
+    :cond_0
+    if-eqz p1, :cond_1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget-object p2, p0, Lh98;->d:Ljava/lang/CharSequence;
 
-    const-string v1, ", contactSearchResult="
+    invoke-virtual {p1, p2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result p2
 
-    iget-object v1, p0, Lh98;->d:Lo44;
+    if-ne p2, p3, :cond_1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    return-void
 
-    const-string v1, ", groupChatInfo="
+    :cond_1
+    iput-object p1, p0, Lh98;->d:Ljava/lang/CharSequence;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iput-boolean p3, p0, Lh98;->b:Z
 
-    iget-object v1, p0, Lh98;->e:La37;
+    return-void
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+.method public setEllipsizing(Landroid/text/TextUtils$TruncateAt;)V
+    .locals 0
 
-    const-string v1, ", videoConference="
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return-void
+.end method
 
-    iget-object v1, p0, Lh98;->f:Lnfh;
+.method public final setEndPunctuationPattern(Ljava/util/regex/Pattern;)V
+    .locals 0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    if-nez p1, :cond_0
 
-    const-string v1, ", stickerSetId="
+    sget-object p1, Lh98;->x0:Ljava/util/regex/Pattern;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_0
+    iput-object p1, p0, Lh98;->u0:Ljava/util/regex/Pattern;
 
-    iget-object v1, p0, Lh98;->g:Ljava/lang/Long;
+    return-void
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+.method public setFallbackLineSpace(Z)V
+    .locals 0
 
-    const-string v1, ", startPayload="
+    invoke-static {p0, p1}, Ln1j;->f(Landroid/widget/TextView;Z)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return-void
+.end method
 
-    iget-object v1, p0, Lh98;->h:Ljava/lang/String;
+.method public setLayout(Llog;)V
+    .locals 0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return-void
+.end method
 
-    const-string v1, ")"
+.method public final setLineSpacing(FF)V
+    .locals 0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iput p1, p0, Lh98;->t0:F
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iput p2, p0, Lh98;->s0:F
 
-    move-result-object v0
+    invoke-super {p0, p1, p2}, Landroid/widget/TextView;->setLineSpacing(FF)V
 
-    return-object v0
+    return-void
+.end method
+
+.method public setMaxLines(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Landroid/widget/TextView;->setMaxLines(I)V
+
+    iput p1, p0, Lh98;->o:I
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lh98;->b:Z
+
+    return-void
+.end method
+
+.method public setMaxLinesValue(I)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Lh98;->setMaxLines(I)V
+
+    return-void
+.end method
+
+.method public final setPadding(IIII)V
+    .locals 0
+
+    invoke-super {p0, p1, p2, p3, p4}, Landroid/view/View;->setPadding(IIII)V
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lh98;->b:Z
+
+    return-void
+.end method
+
+.method public final setPaddingRelative(IIII)V
+    .locals 0
+
+    invoke-super {p0, p1, p2, p3, p4}, Landroid/view/View;->setPaddingRelative(IIII)V
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lh98;->b:Z
+
+    return-void
+.end method
+
+.method public setSaveLastCharPosition(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lh98;->v0:Z
+
+    return-void
+.end method
+
+.method public setTextValue(Ljava/lang/CharSequence;)V
+    .locals 1
+
+    iget-object v0, p0, Lh98;->d:Ljava/lang/CharSequence;
+
+    invoke-static {v0, p1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iput-object p1, p0, Lh98;->d:Ljava/lang/CharSequence;
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lh98;->b:Z
+
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    :cond_0
+    return-void
 .end method

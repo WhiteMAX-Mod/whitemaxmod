@@ -1,49 +1,47 @@
-.class public abstract Lsl4;
-.super Ljava/lang/Object;
+.class public final Lsl4;
+.super Lda4;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lws8;
+# instance fields
+.field public X:I
 
-.field public static final b:Lws8;
+.field public synthetic d:Ljava/lang/Object;
 
-.field public static final c:Lws8;
+.field public final synthetic o:Lru/ok/tamtam/android/services/DbCleanUpScheduler$DbCleanUpWorker;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lru/ok/tamtam/android/services/DbCleanUpScheduler$DbCleanUpWorker;Lda4;)V
+    .locals 0
 
-    new-instance v0, Lws8;
+    iput-object p1, p0, Lsl4;->o:Lru/ok/tamtam/android/services/DbCleanUpScheduler$DbCleanUpWorker;
 
-    const-string v1, "video/avc"
-
-    invoke-direct {v0, v1}, Lws8;-><init>(Ljava/lang/String;)V
-
-    new-instance v0, Lws8;
-
-    const-string v1, "video/x-vnd.on2.vp9"
-
-    invoke-direct {v0, v1}, Lws8;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Lsl4;->a:Lws8;
-
-    new-instance v0, Lws8;
-
-    const-string v1, "video/av01"
-
-    invoke-direct {v0, v1}, Lws8;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Lsl4;->b:Lws8;
-
-    new-instance v0, Lws8;
-
-    const-string v1, "audio/opus"
-
-    invoke-direct {v0, v1}, Lws8;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Lsl4;->c:Lws8;
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lsl4;->d:Ljava/lang/Object;
+
+    iget p1, p0, Lsl4;->X:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lsl4;->X:I
+
+    iget-object p1, p0, Lsl4;->o:Lru/ok/tamtam/android/services/DbCleanUpScheduler$DbCleanUpWorker;
+
+    invoke-virtual {p1, p0}, Lru/ok/tamtam/android/services/DbCleanUpScheduler$DbCleanUpWorker;->g(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

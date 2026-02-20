@@ -3,22 +3,20 @@
 
 
 # static fields
-.field public static share_bottom_button_copy_link:I = 0x7f130d2a
+.field public static qrscanner_allow_permission:I = 0x7f0a0a0b
 
-.field public static share_confirm_cancel:I = 0x7f130d2c
+.field public static qrscanner_blackout_view:I = 0x7f0a0a0c
 
-.field public static share_confirm_close:I = 0x7f130d2d
+.field public static qrscanner_camera_preview:I = 0x7f0a0a0d
 
-.field public static share_confirmation_close_title:I = 0x7f130d2e
+.field public static qrscanner_gallery_button_image:I = 0x7f0a0a0e
 
-.field public static share_message_hint:I = 0x7f130d37
+.field public static qrscanner_hint_view:I = 0x7f0a0a0f
 
-.field public static share_search_hint:I = 0x7f130d39
+.field public static qrscanner_not_allow_permission:I = 0x7f0a0a10
 
-.field public static share_success_link_send:I = 0x7f130d3a
+.field public static qrscanner_overlay_view:I = 0x7f0a0a11
 
-.field public static share_toolbar_action_cancel_selection:I = 0x7f130d3c
+.field public static qrscanner_toolbar:I = 0x7f0a0a12
 
-.field public static share_toolbar_action_select:I = 0x7f130d3d
-
-.field public static share_toolbar_title:I = 0x7f130d3e
+.field public static qrscanner_torch_button_image:I = 0x7f0a0a13

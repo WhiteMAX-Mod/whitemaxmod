@@ -4,34 +4,40 @@
 
 
 # static fields
-.field public static final a:Lt8g;
+.field public static final c:Lt8g;
+
+
+# instance fields
+.field public a:Z
+
+.field public b:J
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 4
 
     new-instance v0, Lt8g;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const-wide v1, -0x7fffffffffffffffL    # -4.9E-324
 
-    sput-object v0, Lt8g;->a:Lt8g;
+    const/4 v3, 0x0
+
+    invoke-direct {v0, v1, v2, v3}, Lt8g;-><init>(JZ)V
+
+    sput-object v0, Lt8g;->c:Lt8g;
 
     return-void
 .end method
 
+.method public constructor <init>(JZ)V
+    .locals 0
 
-# virtual methods
-.method public final a(Landroid/os/Looper;Landroid/os/Handler$Callback;)Lb9g;
-    .locals 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lb9g;
+    iput-wide p1, p0, Lt8g;->b:J
 
-    new-instance v1, Landroid/os/Handler;
+    iput-boolean p3, p0, Lt8g;->a:Z
 
-    invoke-direct {v1, p1, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;)V
-
-    invoke-direct {v0, v1}, Lb9g;-><init>(Landroid/os/Handler;)V
-
-    return-object v0
+    return-void
 .end method

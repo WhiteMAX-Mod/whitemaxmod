@@ -1,120 +1,138 @@
-.class public Lutb;
+.class public final Lutb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lutb;",
-            ">;"
-        }
-    .end annotation
-.end field
-
 
 # instance fields
-.field public final a:I
-
-.field public final b:I
-
-.field public final c:I
-
-.field public final d:I
-
-.field public final o:I
+.field public final a:Lwtb;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(ILandroid/view/Surface;)V
+    .locals 3
 
-    new-instance v0, Lxjb;
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x4
+    .line 2
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    invoke-direct {v0, v1}, Lxjb;-><init>(I)V
+    const/16 v1, 0x21
 
-    sput-object v0, Lutb;->CREATOR:Landroid/os/Parcelable$Creator;
+    if-lt v0, v1, :cond_0
+
+    .line 3
+    new-instance v0, Lztb;
+
+    .line 4
+    new-instance v1, Landroid/hardware/camera2/params/OutputConfiguration;
+
+    invoke-direct {v1, p1, p2}, Landroid/hardware/camera2/params/OutputConfiguration;-><init>(ILandroid/view/Surface;)V
+
+    .line 5
+    invoke-direct {v0, v1}, Lwtb;-><init>(Ljava/lang/Object;)V
+
+    .line 6
+    iput-object v0, p0, Lutb;->a:Lwtb;
+
+    return-void
+
+    :cond_0
+    const/16 v1, 0x1c
+
+    if-lt v0, v1, :cond_1
+
+    .line 7
+    new-instance v0, Lytb;
+
+    .line 8
+    new-instance v1, Lxtb;
+
+    new-instance v2, Landroid/hardware/camera2/params/OutputConfiguration;
+
+    invoke-direct {v2, p1, p2}, Landroid/hardware/camera2/params/OutputConfiguration;-><init>(ILandroid/view/Surface;)V
+
+    invoke-direct {v1, v2}, Lxtb;-><init>(Landroid/hardware/camera2/params/OutputConfiguration;)V
+
+    .line 9
+    invoke-direct {v0, v1}, Lwtb;-><init>(Ljava/lang/Object;)V
+
+    .line 10
+    iput-object v0, p0, Lutb;->a:Lwtb;
+
+    return-void
+
+    .line 11
+    :cond_1
+    new-instance v0, Lwtb;
+
+    .line 12
+    new-instance v1, Lvtb;
+
+    new-instance v2, Landroid/hardware/camera2/params/OutputConfiguration;
+
+    invoke-direct {v2, p1, p2}, Landroid/hardware/camera2/params/OutputConfiguration;-><init>(ILandroid/view/Surface;)V
+
+    invoke-direct {v1, v2}, Lvtb;-><init>(Landroid/hardware/camera2/params/OutputConfiguration;)V
+
+    .line 13
+    invoke-direct {v0, v1}, Lwtb;-><init>(Ljava/lang/Object;)V
+
+    .line 14
+    iput-object v0, p0, Lutb;->a:Lwtb;
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/os/Parcel;)V
-    .locals 1
+.method public constructor <init>(Lwtb;)V
+    .locals 0
 
+    .line 15
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result v0
-
-    iput v0, p0, Lutb;->a:I
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result v0
-
-    iput v0, p0, Lutb;->c:I
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result v0
-
-    iput v0, p0, Lutb;->d:I
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result v0
-
-    iput v0, p0, Lutb;->o:I
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result p1
-
-    iput p1, p0, Lutb;->b:I
+    .line 16
+    iput-object p1, p0, Lutb;->a:Lwtb;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    const/4 v0, 0x0
+    instance-of v0, p1, Lutb;
 
-    return v0
+    if-nez v0, :cond_0
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_0
+    check-cast p1, Lutb;
+
+    iget-object p1, p1, Lutb;->a:Lwtb;
+
+    iget-object v0, p0, Lutb;->a:Lwtb;
+
+    invoke-virtual {v0, p1}, Lwtb;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
 .end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
+.method public final hashCode()I
+    .locals 1
 
-    iget p2, p0, Lutb;->a:I
+    iget-object v0, p0, Lutb;->a:Lwtb;
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    iget-object v0, v0, Lwtb;->a:Ljava/lang/Object;
 
-    iget p2, p0, Lutb;->c:I
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    move-result v0
 
-    iget p2, p0, Lutb;->d:I
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget p2, p0, Lutb;->o:I
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget p2, p0, Lutb;->b:I
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    return-void
+    return v0
 .end method

@@ -9,8 +9,8 @@ sdkInfo:
 packageInfo:
   forcedPackageId: 127
 versionInfo:
-  versionCode: 6507
-  versionName: 26.1.0
+  versionCode: 6554
+  versionName: 26.4.4
 doNotCompress:
 - arsc
 - m4a
@@ -69,7 +69,6 @@ doNotCompress:
 - META-INF/androidx.media_media.version
 - META-INF/androidx.mediarouter_mediarouter.version
 - META-INF/androidx.palette_palette.version
-- META-INF/androidx.preference_preference-ktx.version
 - META-INF/androidx.preference_preference.version
 - META-INF/androidx.print_print.version
 - META-INF/androidx.profileinstaller_profileinstaller.version
@@ -106,8 +105,8 @@ doNotCompress:
 - META-INF/kotlinx_coroutines_rx3.version
 - META-INF/kotlinx_coroutines_test.version
 - META-INF/services/ru.ok.android.onelog.OneLogAppender
-- META-INF/services/tqg
-- META-INF/services/z08
+- META-INF/services/w38
+- META-INF/services/yxg
 - assets/dexopt/baseline.prof
 - assets/dexopt/baseline.profm
 - okhttp3/internal/publicsuffix/publicsuffixes.gz

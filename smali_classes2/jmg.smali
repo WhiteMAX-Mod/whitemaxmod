@@ -1,131 +1,134 @@
 .class public final Ljmg;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lbr6;
+
+# static fields
+.field public static final synthetic b:I
 
 
 # instance fields
-.field public final synthetic X:Lxmg;
-
-.field public final synthetic Y:Ljava/nio/ByteBuffer;
-
-.field public o:I
+.field public final a:Lj88;
 
 
 # direct methods
-.method public constructor <init>(Lxmg;Ljava/nio/ByteBuffer;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Lj88;Lfae;Lbjg;)V
+    .locals 2
 
-    iput-object p1, p0, Ljmg;->X:Lxmg;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Ljmg;->Y:Ljava/nio/ByteBuffer;
+    iput-object p1, p0, Ljmg;->a:Lj88;
 
-    const/4 p1, 0x2
+    check-cast p3, Lcbb;
 
-    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-virtual {p3}, Lcbb;->b()Lgd4;
+
+    move-result-object p1
+
+    new-instance p3, Ldmg;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p3, p0, v0}, Ldmg;-><init>(Ljmg;Lkotlin/coroutines/Continuation;)V
+
+    const/4 v1, 0x2
+
+    invoke-static {p2, p1, v0, p3, v1}, Lea9;->d(Lnd4;Led4;Lqd4;Lys6;I)Lcuf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a()V
+    .locals 6
 
-    check-cast p1, Lzb4;
+    sget-object v0, Lkmg;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
-    invoke-virtual {p0, p1, p2}, Ljmg;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    move-result v0
 
-    move-result-object p1
+    const-string v1, "jmg"
 
-    check-cast p1, Ljmg;
+    if-eqz v0, :cond_0
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    const-string v0, "executePersistedTasks fail, TaskMonitor already running"
 
-    invoke-virtual {p1, p2}, Ljmg;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v1, v0}, Ltej;->t(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance p1, Ljmg;
-
-    iget-object v0, p0, Ljmg;->X:Lxmg;
-
-    iget-object v1, p0, Ljmg;->Y:Ljava/nio/ByteBuffer;
-
-    invoke-direct {p1, v0, v1, p2}, Ljmg;-><init>(Lxmg;Ljava/nio/ByteBuffer;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    iget v0, p0, Ljmg;->o:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    return-object p1
+    return-void
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    new-instance v0, Lcqb;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    const-class v2, Lone/me/sdk/tasks/TaskMonitor$TaskMonitorWorker;
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v2}, Lcqb;-><init>(Ljava/lang/Class;)V
 
-    throw p1
+    const-wide/16 v2, 0x2710
 
-    :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    sget-object v4, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    iget-object p1, p0, Ljmg;->X:Lxmg;
+    sget-object v5, Loi0;->a:Loi0;
 
-    iget-object p1, p1, Lxmg;->b:Ljava/nio/channels/AsynchronousByteChannel;
+    invoke-virtual {v0, v5, v2, v3, v4}, Landroidx/work/WorkRequest$Builder;->setBackoffCriteria(Loi0;JLjava/util/concurrent/TimeUnit;)Landroidx/work/WorkRequest$Builder;
 
-    iput v1, p0, Ljmg;->o:I
+    move-result-object v0
 
-    new-instance v0, Lg62;
+    check-cast v0, Lcqb;
 
-    invoke-static {p0}, Lo1j;->d(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    const-string v2, "TASK_MONITOR_ONE_TIME_TASK"
 
-    move-result-object v2
+    invoke-virtual {v0, v2}, Landroidx/work/WorkRequest$Builder;->addTag(Ljava/lang/String;)Landroidx/work/WorkRequest$Builder;
 
-    invoke-direct {v0, v1, v2}, Lg62;-><init>(ILkotlin/coroutines/Continuation;)V
+    move-result-object v0
 
-    invoke-virtual {v0}, Lg62;->o()V
+    check-cast v0, Lcqb;
 
-    sget-object v1, Ldv;->b:Ldv;
+    invoke-virtual {v0}, Landroidx/work/WorkRequest$Builder;->build()Landroidx/work/WorkRequest;
 
-    iget-object v2, p0, Ljmg;->Y:Ljava/nio/ByteBuffer;
+    move-result-object v0
 
-    invoke-interface {p1, v2, v0, v1}, Ljava/nio/channels/AsynchronousByteChannel;->write(Ljava/nio/ByteBuffer;Ljava/lang/Object;Ljava/nio/channels/CompletionHandler;)V
+    check-cast v0, Ldqb;
 
-    invoke-virtual {v0}, Lg62;->n()Ljava/lang/Object;
+    invoke-virtual {v0}, Landroidx/work/WorkRequest;->getId()Ljava/util/UUID;
 
-    move-result-object p1
+    move-result-object v3
 
-    sget-object v0, Lac4;->a:Lac4;
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    if-ne p1, v0, :cond_2
+    const-string v5, "work "
 
-    return-object v0
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    :cond_2
-    return-object p1
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v3, " try to add TASK_MONITOR_ONE_TIME_TASK request"
+
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v1, v3}, Ltej;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v1, p0, Ljmg;->a:Lj88;
+
+    invoke-interface {v1}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Leri;
+
+    sget-object v3, Lkq5;->b:Lkq5;
+
+    invoke-virtual {v1, v2, v3, v0}, Leri;->b(Ljava/lang/String;Lkq5;Ldqb;)Lhb8;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lhb8;->b()Lbs3;
+
+    return-void
 .end method

@@ -1,13 +1,21 @@
 .class public final Lw36;
-.super Ljava/util/concurrent/ScheduledThreadPoolExecutor;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final finalize()V
-    .locals 0
+# static fields
+.field public static final a:Lw36;
 
-    invoke-virtual {p0}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->shutdown()V
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lw36;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lw36;->a:Lw36;
 
     return-void
 .end method

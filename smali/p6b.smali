@@ -1,19 +1,46 @@
-.class public abstract Lp6b;
+.class public final Lp6b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lh36;
 
-# static fields
-.field public static final a:I
+
+# instance fields
+.field public final synthetic a:Lr5;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lr5;)V
+    .locals 0
 
-    sget v0, Lacd;->call_history_item_call_count_users:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput v0, Lp6b;->a:I
+    iput-object p1, p0, Lp6b;->a:Lr5;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final a()Lgd4;
+    .locals 2
+
+    iget-object v0, p0, Lp6b;->a:Lr5;
+
+    const/16 v1, 0xe
+
+    invoke-virtual {v0, v1}, Lr5;->c(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lbjg;
+
+    check-cast v0, Lcbb;
+
+    invoke-virtual {v0}, Lcbb;->b()Lgd4;
+
+    move-result-object v0
+
+    return-object v0
 .end method

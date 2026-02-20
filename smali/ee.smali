@@ -1,295 +1,207 @@
-.class public Lee;
+.class public abstract Lee;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lsif;
-
 
 # static fields
-.field public static final f:Lfca;
-
-
-# instance fields
-.field public final a:Ljava/lang/reflect/Method;
-
-.field public final b:Ljava/lang/reflect/Method;
-
-.field public final c:Ljava/lang/reflect/Method;
-
-.field public final d:Ljava/lang/reflect/Method;
-
-.field public final e:Ljava/lang/Class;
+.field public static final a:Ljava/lang/String;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 1
 
-    new-instance v0, Lfca;
+    const-string v0, "Alarms"
 
-    const/16 v1, 0xd
+    invoke-static {v0}, Lm0j;->n(Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-direct {v0, v1}, Lfca;-><init>(I)V
+    move-result-object v0
 
-    sput-object v0, Lee;->f:Lfca;
+    sput-object v0, Lee;->a:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/Class;)V
-    .locals 2
+.method public static a(Landroid/content/Context;Lsqi;I)V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "alarm"
 
-    iput-object p1, p0, Lee;->e:Ljava/lang/Class;
-
-    sget-object v0, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
-
-    filled-new-array {v0}, [Ljava/lang/Class;
+    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
-    const-string v1, "setUseSessionTickets"
+    check-cast v0, Landroid/app/AlarmManager;
 
-    invoke-virtual {p1, v1, v0}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    sget-object v1, Lql3;->o:Ljava/lang/String;
 
-    move-result-object v0
+    new-instance v1, Landroid/content/Intent;
 
-    iput-object v0, p0, Lee;->a:Ljava/lang/reflect/Method;
+    const-class v2, Landroidx/work/impl/background/systemalarm/SystemAlarmService;
 
-    const-class v0, Ljava/lang/String;
+    invoke-direct {v1, p0, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    filled-new-array {v0}, [Ljava/lang/Class;
+    const-string v2, "ACTION_DELAY_MET"
 
-    move-result-object v0
+    invoke-virtual {v1, v2}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    const-string v1, "setHostname"
+    invoke-static {v1, p1}, Lql3;->d(Landroid/content/Intent;Lsqi;)V
 
-    invoke-virtual {p1, v1, v0}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    const/high16 v2, 0x24000000
 
-    move-result-object v0
+    invoke-static {p0, p2, v1, v2}, Landroid/app/PendingIntent;->getService(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
 
-    iput-object v0, p0, Lee;->b:Ljava/lang/reflect/Method;
+    move-result-object p0
 
-    const-string v0, "getAlpnSelectedProtocol"
+    if-eqz p0, :cond_0
 
-    const/4 v1, 0x0
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p1, v0, v1}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lee;->c:Ljava/lang/reflect/Method;
-
-    const-class v0, [B
-
-    filled-new-array {v0}, [Ljava/lang/Class;
-
-    move-result-object v0
-
-    const-string v1, "setAlpnProtocols"
-
-    invoke-virtual {p1, v1, v0}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lee;->d:Ljava/lang/reflect/Method;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a(Ljavax/net/ssl/SSLSocket;)Z
-    .locals 1
-
-    iget-object v0, p0, Lee;->e:Ljava/lang/Class;
-
-    invoke-virtual {v0, p1}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final b()Z
-    .locals 1
-
-    sget-boolean v0, Lzd;->e:Z
-
-    sget-boolean v0, Lzd;->e:Z
-
-    return v0
-.end method
-
-.method public final c(Ljavax/net/ssl/SSLSocket;)Ljava/lang/String;
-    .locals 3
-
-    iget-object v0, p0, Lee;->e:Ljava/lang/Class;
-
-    invoke-virtual {v0, p1}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_0
-
-    goto :goto_3
-
-    :cond_0
-    :try_start_0
-    iget-object v0, p0, Lee;->c:Ljava/lang/reflect/Method;
-
-    invoke-virtual {v0, p1, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, [B
-
-    if-eqz p1, :cond_1
-
-    sget-object v0, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
-
-    new-instance v2, Ljava/lang/String;
-
-    invoke-direct {v2, p1, v0}, Ljava/lang/String;-><init>([BLjava/nio/charset/Charset;)V
-    :try_end_0
-    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_2
-    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object v2
-
-    :catch_0
-    move-exception p1
-
-    goto :goto_0
-
-    :catch_1
-    move-exception p1
-
-    goto :goto_1
-
-    :catch_2
-    move-exception p1
-
-    goto :goto_2
-
-    :goto_0
-    new-instance v0, Ljava/lang/AssertionError;
-
-    invoke-direct {v0, p1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
-
-    throw v0
-
-    :goto_1
-    new-instance v0, Ljava/lang/AssertionError;
-
-    invoke-direct {v0, p1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
-
-    throw v0
-
-    :goto_2
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v2, "ssl == null"
-
-    invoke-static {v0, v2}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    :cond_1
-    :goto_3
-    return-object v1
-
-    :cond_2
-    throw p1
-.end method
-
-.method public final d(Ljavax/net/ssl/SSLSocket;Ljava/lang/String;Ljava/util/List;)V
-    .locals 2
-
-    iget-object v0, p0, Lee;->e:Ljava/lang/Class;
-
-    invoke-virtual {v0, p1}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    :try_start_0
-    iget-object v0, p0, Lee;->a:Ljava/lang/reflect/Method;
-
-    sget-object v1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
-
-    filled-new-array {v1}, [Ljava/lang/Object;
+    invoke-static {}, Lm0j;->g()Lm0j;
 
     move-result-object v1
 
-    invoke-virtual {v0, p1, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    if-eqz p2, :cond_0
+    const-string v3, "Cancelling existing alarm with (workSpecId, systemId) ("
 
-    iget-object v0, p0, Lee;->b:Ljava/lang/reflect/Method;
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    filled-new-array {p2}, [Ljava/lang/Object;
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object p2
+    const-string p1, ", "
 
-    invoke-virtual {v0, p1, p2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_0
+    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    :catch_0
-    move-exception p1
+    const-string p1, ")"
 
-    goto :goto_1
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :catch_1
-    move-exception p1
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    goto :goto_2
+    move-result-object p1
+
+    sget-object p2, Lee;->a:Ljava/lang/String;
+
+    invoke-virtual {v1, p2, p1}, Lm0j;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v0, p0}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
     :cond_0
-    :goto_0
-    iget-object p2, p0, Lee;->d:Ljava/lang/reflect/Method;
+    return-void
+.end method
 
-    sget-object v0, Lmac;->a:Lmac;
+.method public static b(Landroid/content/Context;Landroidx/work/impl/WorkDatabase;Lsqi;J)V
+    .locals 9
 
-    invoke-static {p3}, Ltna;->c(Ljava/util/List;)[B
+    invoke-virtual {p1}, Landroidx/work/impl/WorkDatabase;->A()Lsgg;
 
-    move-result-object p3
+    move-result-object v0
 
-    filled-new-array {p3}, [Ljava/lang/Object;
+    invoke-virtual {v0, p2}, Lsgg;->z(Lsqi;)Lqgg;
 
-    move-result-object p3
+    move-result-object v1
 
-    invoke-virtual {p2, p1, p3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_0
-    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
+    const/4 v2, 0x0
+
+    const-string v3, "ACTION_DELAY_MET"
+
+    const-class v4, Landroidx/work/impl/background/systemalarm/SystemAlarmService;
+
+    const/high16 v5, 0xc000000
+
+    const-string v6, "alarm"
+
+    if-eqz v1, :cond_0
+
+    iget p1, v1, Lqgg;->c:I
+
+    invoke-static {p0, p2, p1}, Lee;->a(Landroid/content/Context;Lsqi;I)V
+
+    invoke-virtual {p0, v6}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/app/AlarmManager;
+
+    sget-object v1, Lql3;->o:Ljava/lang/String;
+
+    new-instance v1, Landroid/content/Intent;
+
+    invoke-direct {v1, p0, v4}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    invoke-virtual {v1, v3}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+
+    invoke-static {v1, p2}, Lql3;->d(Landroid/content/Intent;Lsqi;)V
+
+    invoke-static {p0, p1, v1, v5}, Landroid/app/PendingIntent;->getService(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
+
+    move-result-object p0
+
+    if-eqz v0, :cond_1
+
+    invoke-static {v0, v2, p3, p4, p0}, Lde;->a(Landroid/app/AlarmManager;IJLandroid/app/PendingIntent;)V
 
     return-void
 
-    :goto_1
-    new-instance p2, Ljava/lang/AssertionError;
+    :cond_0
+    new-instance v1, Le05;
 
-    invoke-direct {p2, p1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+    const/16 v7, 0x12
 
-    throw p2
+    invoke-direct {v1, v7, p1}, Le05;-><init>(ILjava/lang/Object;)V
 
-    :goto_2
-    new-instance p2, Ljava/lang/AssertionError;
+    new-instance v7, Lqx0;
 
-    invoke-direct {p2, p1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+    const/4 v8, 0x4
 
-    throw p2
+    invoke-direct {v7, v8, v1}, Lqx0;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {p1, v7}, Lm8e;->u(Ljava/util/concurrent/Callable;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Number;
+
+    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
+
+    move-result p1
+
+    new-instance v1, Lqgg;
+
+    iget-object v7, p2, Lsqi;->a:Ljava/lang/String;
+
+    iget v8, p2, Lsqi;->b:I
+
+    invoke-direct {v1, v7, v8, p1}, Lqgg;-><init>(Ljava/lang/String;II)V
+
+    invoke-virtual {v0, v1}, Lsgg;->A(Lqgg;)V
+
+    invoke-virtual {p0, v6}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/app/AlarmManager;
+
+    sget-object v1, Lql3;->o:Ljava/lang/String;
+
+    new-instance v1, Landroid/content/Intent;
+
+    invoke-direct {v1, p0, v4}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    invoke-virtual {v1, v3}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+
+    invoke-static {v1, p2}, Lql3;->d(Landroid/content/Intent;Lsqi;)V
+
+    invoke-static {p0, p1, v1, v5}, Landroid/app/PendingIntent;->getService(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
+
+    move-result-object p0
+
+    if-eqz v0, :cond_1
+
+    invoke-static {v0, v2, p3, p4, p0}, Lde;->a(Landroid/app/AlarmManager;IJLandroid/app/PendingIntent;)V
 
     :cond_1
     return-void

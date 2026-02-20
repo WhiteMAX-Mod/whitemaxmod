@@ -1,49 +1,109 @@
 .class public final Luy5;
-.super Lo84;
+.super Lda4;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Z
+.field public A0:Lyyd;
 
-.field public synthetic Y:Ljava/lang/Object;
+.field public B0:Ljava/lang/Object;
 
-.field public Z:I
+.field public C0:Ljava/lang/Object;
 
-.field public d:Lcj7;
+.field public D0:Lte2;
 
-.field public o:Z
+.field public E0:Laz5;
+
+.field public F0:Ljava/lang/String;
+
+.field public G0:Ljava/lang/String;
+
+.field public H0:Ljava/lang/Long;
+
+.field public I0:Ljava/lang/String;
+
+.field public J0:Z
+
+.field public K0:I
+
+.field public L0:I
+
+.field public M0:I
+
+.field public N0:J
+
+.field public O0:J
+
+.field public P0:J
+
+.field public Q0:J
+
+.field public R0:J
+
+.field public synthetic S0:Ljava/lang/Object;
+
+.field public final synthetic T0:Lxy5;
+
+.field public U0:I
+
+.field public X:Ljava/util/LinkedHashMap;
+
+.field public Y:Ljava/util/List;
+
+.field public Z:Ljava/util/Iterator;
+
+.field public d:Lk68;
+
+.field public o:Ljava/util/Set;
+
+.field public s0:Ljava/lang/Long;
+
+.field public t0:Ljava/util/List;
+
+.field public u0:Ljava/util/ArrayList;
+
+.field public v0:Ljava/util/ArrayList;
+
+.field public w0:Lj88;
+
+.field public x0:Laz5;
+
+.field public y0:Luv2;
+
+.field public z0:Ljava/lang/String;
+
+
+# direct methods
+.method public constructor <init>(Lxy5;Lda4;)V
+    .locals 0
+
+    iput-object p1, p0, Luy5;->T0:Lxy5;
+
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
+    .locals 1
 
-    iput-object p1, p0, Luy5;->Y:Ljava/lang/Object;
+    iput-object p1, p0, Luy5;->S0:Ljava/lang/Object;
 
-    iget p1, p0, Luy5;->Z:I
+    iget p1, p0, Luy5;->U0:I
 
     const/high16 v0, -0x80000000
 
     or-int/2addr p1, v0
 
-    iput p1, p0, Luy5;->Z:I
+    iput p1, p0, Luy5;->U0:I
 
-    const/4 v5, 0x0
-
-    const/4 v6, 0x0
+    iget-object p1, p0, Luy5;->T0:Lxy5;
 
     const/4 v0, 0x0
 
-    const/4 v1, 0x0
-
-    const-wide/16 v2, 0x0
-
-    const/4 v4, 0x0
-
-    move-object v7, p0
-
-    invoke-static/range {v0 .. v7}, Lopj;->a(Loi7;Lcj7;JLjava/lang/Object;ZZLo84;)Ljava/lang/Object;
+    invoke-virtual {p1, v0, v0, p0}, Lxy5;->O0(Ljava/util/ArrayList;Lpha;Lda4;)Ljava/io/Serializable;
 
     move-result-object p1
 

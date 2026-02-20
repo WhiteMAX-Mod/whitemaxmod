@@ -15,18 +15,18 @@
 
 .field public d:Ljava/util/Iterator;
 
-.field public final synthetic o:Lg2;
+.field public final synthetic o:Li2;
 
 
 # direct methods
-.method public constructor <init>(Lg2;)V
+.method public constructor <init>(Li2;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll2;->o:Lg2;
+    iput-object p1, p0, Ll2;->o:Li2;
 
-    iget-object p1, p1, Lg2;->d:Ljava/util/Map;
+    iget-object p1, p1, Li2;->d:Ljava/util/Map;
 
     invoke-interface {p1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
@@ -44,7 +44,7 @@
 
     iput-object p1, p0, Ll2;->c:Ljava/util/Collection;
 
-    sget-object p1, Ljx7;->a:Ljx7;
+    sget-object p1, Ley7;->a:Ley7;
 
     iput-object p1, p0, Ll2;->d:Ljava/util/Iterator;
 
@@ -157,13 +157,13 @@
     invoke-interface {v0}, Ljava/util/Iterator;->remove()V
 
     :cond_0
-    iget-object v0, p0, Ll2;->o:Lg2;
+    iget-object v0, p0, Ll2;->o:Li2;
 
-    iget v1, v0, Lg2;->o:I
+    iget v1, v0, Li2;->o:I
 
     add-int/lit8 v1, v1, -0x1
 
-    iput v1, v0, Lg2;->o:I
+    iput v1, v0, Li2;->o:I
 
     return-void
 .end method

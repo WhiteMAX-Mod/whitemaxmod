@@ -1,83 +1,110 @@
-.class public final Ll6f;
-.super Lo84;
+.class public final synthetic Ll6f;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lis6;
 
 
 # instance fields
-.field public synthetic A0:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public final synthetic B0:Lm6f;
-
-.field public C0:I
-
-.field public X:Ljava/util/List;
-
-.field public Y:Ljava/lang/String;
-
-.field public Z:Ljava/util/List;
-
-.field public d:Lru/ok/tamtam/android/util/share/ShareData;
-
-.field public o:Ljava/util/List;
-
-.field public t0:Loba;
-
-.field public u0:Lefa;
-
-.field public v0:Ljava/util/Collection;
-
-.field public w0:Ljava/util/Iterator;
-
-.field public x0:I
-
-.field public y0:I
-
-.field public z0:I
+.field public final synthetic b:Lone/me/settings/devices/SettingsDevicesScreen;
 
 
 # direct methods
-.method public constructor <init>(Lm6f;Lo84;)V
+.method public synthetic constructor <init>(Lone/me/settings/devices/SettingsDevicesScreen;I)V
     .locals 0
 
-    iput-object p1, p0, Ll6f;->B0:Lm6f;
+    iput p2, p0, Ll6f;->a:I
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Ll6f;->b:Lone/me/settings/devices/SettingsDevicesScreen;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final invoke()Ljava/lang/Object;
     .locals 7
 
-    iput-object p1, p0, Ll6f;->A0:Ljava/lang/Object;
+    iget v0, p0, Ll6f;->a:I
 
-    iget p1, p0, Ll6f;->C0:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-object v0, p0, Ll6f;->b:Lone/me/settings/devices/SettingsDevicesScreen;
 
-    or-int/2addr p1, v0
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    iput p1, p0, Ll6f;->C0:I
+    move-result-object v0
 
-    const/4 v4, 0x0
+    return-object v0
 
-    const/4 v5, 0x0
+    :pswitch_0
+    new-instance v0, Lw6f;
 
-    iget-object v0, p0, Ll6f;->B0:Lm6f;
+    new-instance v1, Lo4f;
 
-    const/4 v1, 0x0
+    sget-object v2, Lg6f;->a:Lg6f;
 
-    const/4 v2, 0x0
+    invoke-virtual {v2}, Lscout/Component;->getAccessor()Lr5;
 
-    const/4 v3, 0x0
+    move-result-object v3
 
-    move-object v6, p0
+    const/16 v4, 0x3f
 
-    invoke-virtual/range {v0 .. v6}, Lm6f;->b(Lru/ok/tamtam/android/util/share/ShareData;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Loba;Lo84;)Ljava/lang/Object;
+    invoke-virtual {v3, v4}, Lr5;->d(I)Lbgg;
 
-    move-result-object p1
+    move-result-object v3
 
-    return-object p1
+    invoke-virtual {v2}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v4
+
+    const/16 v5, 0xe
+
+    invoke-virtual {v4, v5}, Lr5;->c(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lbjg;
+
+    invoke-direct {v1, v3, v4}, Lo4f;-><init>(Lj88;Lbjg;)V
+
+    new-instance v3, Lkde;
+
+    invoke-virtual {v2}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v2
+
+    const/16 v4, 0x3e
+
+    invoke-virtual {v2, v4}, Lr5;->d(I)Lbgg;
+
+    move-result-object v2
+
+    new-instance v4, Ll6f;
+
+    const/4 v5, 0x1
+
+    iget-object v6, p0, Ll6f;->b:Lone/me/settings/devices/SettingsDevicesScreen;
+
+    invoke-direct {v4, v6, v5}, Ll6f;-><init>(Lone/me/settings/devices/SettingsDevicesScreen;I)V
+
+    const/4 v5, 0x4
+
+    const/4 v6, 0x0
+
+    invoke-direct {v3, v2, v4, v6, v5}, Lkde;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
+
+    invoke-direct {v0, v1, v3}, Lw6f;-><init>(Lo4f;Lkde;)V
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

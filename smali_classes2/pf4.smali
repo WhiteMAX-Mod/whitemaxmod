@@ -1,49 +1,51 @@
 .class public final Lpf4;
-.super Landroid/text/style/TypefaceSpan;
+.super Lda4;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Landroid/graphics/Typeface;
+.field public final synthetic X:Lwf4;
+
+.field public Y:I
+
+.field public d:Ldia;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public constructor <init>(Lwf4;Lda4;)V
+    .locals 0
 
-    sget-object v0, Landroid/graphics/Typeface;->DEFAULT_BOLD:Landroid/graphics/Typeface;
+    iput-object p1, p0, Lpf4;->X:Lwf4;
 
-    const/4 v1, 0x0
-
-    invoke-direct {p0, v1}, Landroid/text/style/TypefaceSpan;-><init>(Ljava/lang/String;)V
-
-    iput-object v0, p0, Lpf4;->a:Landroid/graphics/Typeface;
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final updateDrawState(Landroid/text/TextPaint;)V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Lpf4;->a:Landroid/graphics/Typeface;
+    iput-object p1, p0, Lpf4;->o:Ljava/lang/Object;
 
-    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setTypeface(Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
+    iget p1, p0, Lpf4;->Y:I
 
-    invoke-super {p0, p1}, Landroid/text/style/TypefaceSpan;->updateDrawState(Landroid/text/TextPaint;)V
+    const/high16 v0, -0x80000000
 
-    return-void
-.end method
+    or-int/2addr p1, v0
 
-.method public final updateMeasureState(Landroid/text/TextPaint;)V
-    .locals 1
+    iput p1, p0, Lpf4;->Y:I
 
-    iget-object v0, p0, Lpf4;->a:Landroid/graphics/Typeface;
+    iget-object p1, p0, Lpf4;->X:Lwf4;
 
-    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setTypeface(Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
+    const/4 v0, 0x0
 
-    invoke-super {p0, p1}, Landroid/text/style/TypefaceSpan;->updateMeasureState(Landroid/text/TextPaint;)V
+    invoke-static {p1, v0, p0}, Lwf4;->b(Lwf4;Ldia;Lda4;)Ljava/lang/Object;
 
-    return-void
+    move-result-object p1
+
+    return-object p1
 .end method

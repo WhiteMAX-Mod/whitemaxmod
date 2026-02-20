@@ -1,45 +1,31 @@
-.class public abstract synthetic Lbjb;
+.class public abstract Lbjb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+.field public static final a:I
+
+.field public static final b:I
+
+.field public static final c:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 1
 
-    const/4 v0, 0x5
+    sget v0, Lyjd;->oneme_too_many_requests_bottomsheet_positive_button:I
 
-    invoke-static {v0}, Lt02;->w(I)[I
+    sput v0, Lbjb;->a:I
 
-    move-result-object v0
+    sget v0, Lyjd;->oneme_too_many_requests_bottomsheet_subtitle:I
 
-    array-length v0, v0
+    sput v0, Lbjb;->b:I
 
-    new-array v0, v0, [I
+    sget v0, Lyjd;->oneme_too_many_requests_bottomsheet_title:I
 
-    const/4 v1, 0x1
-
-    const/4 v2, 0x2
-
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    const/4 v1, 0x4
-
-    :try_start_1
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
-    sput-object v0, Lbjb;->$EnumSwitchMapping$0:[I
+    sput v0, Lbjb;->c:I
 
     return-void
 .end method

@@ -1,82 +1,211 @@
 .class public final Lgr8;
-.super Lp6g;
+.super Lone/me/rlottie/RLottieImageView;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Lone/me/rlottie/RLottieDrawable$OnNextFrameRenderedListener;
+.implements Lone/me/rlottie/RLottieDrawable$DrawableLoadListener;
+.implements Lhr8;
 
 
 # instance fields
-.field public final synthetic o:Led6;
+.field public w0:Ljava/lang/String;
+
+.field public x0:Z
+
+.field public y0:Lfr8;
+
+.field public z0:Ler8;
 
 
-# direct methods
-.method public constructor <init>(Led6;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+# virtual methods
+.method public final a(IILjava/lang/String;)Z
+    .locals 3
 
-    iput-object p1, p0, Lgr8;->o:Led6;
+    const/4 v0, 0x1
 
-    const/4 p1, 0x2
+    if-eqz p3, :cond_2
 
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-interface {p3}, Ljava/lang/CharSequence;->length()I
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v1, p0, Lgr8;->w0:Ljava/lang/String;
+
+    if-eqz v1, :cond_1
+
+    invoke-static {v1, p3}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    iput-boolean v0, p0, Lgr8;->x0:Z
+
+    iput-object p3, p0, Lgr8;->w0:Ljava/lang/String;
+
+    new-instance v1, Lone/me/rlottie/RLottieFactory$Config$Builder;
+
+    invoke-direct {v1}, Lone/me/rlottie/RLottieFactory$Config$Builder;-><init>()V
+
+    invoke-virtual {v1, v0}, Lone/me/rlottie/RLottieFactory$Config$Builder;->setAutoStart(Z)Lone/me/rlottie/RLottieFactory$Config$Builder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Lone/me/rlottie/RLottieFactory$Config$Builder;->setAutoRepeat(Z)Lone/me/rlottie/RLottieFactory$Config$Builder;
+
+    move-result-object v1
+
+    new-instance v2, Lone/me/rlottie/RLottieFactory$Way$Url$Builder;
+
+    invoke-direct {v2}, Lone/me/rlottie/RLottieFactory$Way$Url$Builder;-><init>()V
+
+    invoke-virtual {v2, p3}, Lone/me/rlottie/RLottieFactory$Way$Url$Builder;->setUrl(Ljava/lang/String;)Lone/me/rlottie/RLottieFactory$Way$Url$Builder;
+
+    move-result-object p3
+
+    invoke-virtual {p3, p1, p2}, Lone/me/rlottie/RLottieFactory$Way$Builder;->setSize(II)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lone/me/rlottie/RLottieFactory$Way$Url$Builder;
+
+    invoke-virtual {p1, v0}, Lone/me/rlottie/RLottieFactory$Way$Url$Builder;->setNetworkFetchEnabled(Z)Lone/me/rlottie/RLottieFactory$Way$Url$Builder;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lone/me/rlottie/RLottieFactory$Way$Url$Builder;->build()Lone/me/rlottie/RLottieFactory$Way$Url;
+
+    move-result-object p1
+
+    invoke-virtual {v1, p1}, Lone/me/rlottie/RLottieFactory$Config$Builder;->setWay(Lone/me/rlottie/RLottieFactory$Way;)Lone/me/rlottie/RLottieFactory$Config$Builder;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lone/me/rlottie/RLottieFactory$Config$Builder;->build()Lone/me/rlottie/RLottieFactory$Config;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lone/me/rlottie/RLottieFactory;->create(Lone/me/rlottie/RLottieFactory$Config;)Lone/me/rlottie/RLottieDrawable;
+
+    move-result-object p1
+
+    invoke-virtual {p1, p0}, Lone/me/rlottie/RLottieDrawable;->addDrawableLoadListener(Lone/me/rlottie/RLottieDrawable$DrawableLoadListener;)V
+
+    invoke-virtual {p1, p0}, Lone/me/rlottie/RLottieDrawable;->addOnNextFrameRenderedListener(Lone/me/rlottie/RLottieDrawable$OnNextFrameRenderedListener;)V
+
+    invoke-static {p0, p1}, Lone/me/rlottie/RLottieImageViewUtils;->setLottieDrawable(Lone/me/rlottie/RLottieImageView;Lone/me/rlottie/RLottieDrawable;)Z
+
+    return v0
+
+    :cond_2
+    :goto_0
+    invoke-virtual {p0}, Lgr8;->f()V
+
+    return v0
+.end method
+
+.method public final f()V
+    .locals 1
+
+    invoke-static {p0}, Lone/me/rlottie/RLottieImageViewUtils;->release(Lone/me/rlottie/RLottieImageView;)V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lgr8;->w0:Ljava/lang/String;
 
     return-void
 .end method
 
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 2
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    iget-object v0, p0, Lgr8;->z0:Ler8;
 
-    check-cast p1, Lzb4;
+    if-eqz v0, :cond_0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const-class v0, Lkr8;
 
-    invoke-virtual {p0, p1, p2}, Lgr8;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "lottie set animation failed: "
+
+    invoke-static {v0, v1, p1}, Ltej;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onLoaded(Lone/me/rlottie/RLottieDrawable;)V
+    .locals 2
+
+    const-class v0, Lgr8;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "onLoaded %s"
+
+    filled-new-array {p1}, [Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lgr8;
+    invoke-static {v0, v1, p1}, Ltej;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lgr8;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
+    return-void
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+.method public final onNextFrameRendered(Lone/me/rlottie/RLottieDrawable;I)V
+    .locals 0
 
-    new-instance p1, Lgr8;
+    iget-boolean p1, p0, Lgr8;->x0:Z
 
-    iget-object v0, p0, Lgr8;->o:Led6;
+    if-eqz p1, :cond_1
 
-    invoke-direct {p1, v0, p2}, Lgr8;-><init>(Led6;Lkotlin/coroutines/Continuation;)V
+    iget-object p1, p0, Lgr8;->y0:Lfr8;
 
-    return-object p1
+    if-eqz p1, :cond_0
+
+    invoke-interface {p1}, Lfr8;->d()V
+
+    :cond_0
+    const/4 p1, 0x0
+
+    iput-boolean p1, p0, Lgr8;->x0:Z
+
+    :cond_1
+    return-void
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final setFailureListener(Ler8;)V
+    .locals 0
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    iput-object p1, p0, Lgr8;->z0:Ler8;
 
-    sget-object p1, Lpic;->t0:Lpic;
+    return-void
+.end method
 
-    iget-object p1, p1, Lpic;->X:Ll88;
+.method public final setOnFirstFrameListener(Lfr8;)V
+    .locals 0
 
-    new-instance v0, Lurd;
+    iput-object p1, p0, Lgr8;->y0:Lfr8;
 
-    iget-object v1, p0, Lgr8;->o:Led6;
+    const/4 p1, 0x1
 
-    const/4 v2, 0x5
+    iput-boolean p1, p0, Lgr8;->x0:Z
 
-    invoke-direct {v0, v2, v1}, Lurd;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {p1, v0}, Ll88;->a(Lg88;)V
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
+    return-void
 .end method

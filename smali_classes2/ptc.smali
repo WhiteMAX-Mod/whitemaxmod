@@ -1,21 +1,25 @@
 .class public final Lptc;
-.super Lie0;
+.super Ldg0;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:Lfm4;
+.field public final b:Ljava/lang/String;
+
+.field public final c:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lfm4;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
     const/16 v0, 0x10
 
-    invoke-direct {p0, v0}, Lie0;-><init>(I)V
+    invoke-direct {p0, v0}, Ldg0;-><init>(I)V
 
-    iput-object p1, p0, Lptc;->b:Lfm4;
+    iput-object p1, p0, Lptc;->b:Ljava/lang/String;
+
+    iput-object p2, p0, Lptc;->c:Ljava/lang/String;
 
     return-void
 .end method
@@ -23,7 +27,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    .locals 4
 
     const/4 v0, 0x1
 
@@ -43,52 +47,71 @@
     :cond_1
     check-cast p1, Lptc;
 
-    iget-object v1, p0, Lptc;->b:Lfm4;
+    iget-object v1, p0, Lptc;->b:Ljava/lang/String;
 
-    iget-object p1, p1, Lptc;->b:Lfm4;
+    iget-object v3, p1, Lptc;->b:Ljava/lang/String;
 
-    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result p1
+    move-result v1
 
-    if-nez p1, :cond_2
+    if-nez v1, :cond_2
 
     return v2
 
     :cond_2
+    iget-object v1, p0, Lptc;->c:Ljava/lang/String;
+
+    iget-object p1, p1, Lptc;->c:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
     return v0
 .end method
 
 .method public final hashCode()I
-    .locals 1
+    .locals 2
 
-    iget-object v0, p0, Lptc;->b:Lfm4;
+    iget-object v0, p0, Lptc;->b:Ljava/lang/String;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
-    return v0
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lptc;->c:Ljava/lang/String;
+
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 5
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "OpenFromChatList(link="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lptc;->b:Lfm4;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-string v0, ", path="
 
     const-string v1, ")"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v2, "CropAvatar(uriAsString="
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-object v3, p0, Lptc;->b:Ljava/lang/String;
+
+    iget-object v4, p0, Lptc;->c:Ljava/lang/String;
+
+    invoke-static {v2, v3, v0, v4, v1}, Lau1;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

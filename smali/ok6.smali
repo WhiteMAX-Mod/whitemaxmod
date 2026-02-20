@@ -2,50 +2,44 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lqk6;
+
+# instance fields
+.field public final a:Landroid/graphics/Typeface;
+
+.field public final b:I
 
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+# direct methods
+.method public constructor <init>(I)V
     .locals 1
 
-    if-ne p0, p1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    instance-of v0, p1, Lok6;
-
-    if-nez v0, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    check-cast p1, Lok6;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    :goto_0
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 1
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    return v0
+    .line 2
+    iput-object v0, p0, Lok6;->a:Landroid/graphics/Typeface;
+
+    .line 3
+    iput p1, p0, Lok6;->b:I
+
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+.method public constructor <init>(Landroid/graphics/Typeface;)V
+    .locals 0
 
-    const-string v0, "MultiselectEnabled(selectedIds=null)"
+    .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-object v0
+    .line 5
+    iput-object p1, p0, Lok6;->a:Landroid/graphics/Typeface;
+
+    const/4 p1, 0x0
+
+    .line 6
+    iput p1, p0, Lok6;->b:I
+
+    return-void
 .end method

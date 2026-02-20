@@ -1,124 +1,266 @@
-.class public final synthetic Lhga;
-.super Ljava/lang/Object;
+.class public final Lhga;
+.super Lilj;
 .source "SourceFile"
-
-# interfaces
-.implements Lmr6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:J
 
-.field public final synthetic b:Ljga;
+.field public final b:J
 
-.field public final synthetic c:Ljava/lang/Object;
+.field public final c:Lvx4;
+
+.field public final d:Ljava/lang/String;
+
+.field public final e:Ljava/lang/String;
+
+.field public final f:Ljava/lang/String;
+
+.field public final g:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljga;Ljava/lang/Object;I)V
+.method public constructor <init>(JJLvx4;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    iput p3, p0, Lhga;->a:I
-
-    iput-object p1, p0, Lhga;->b:Ljga;
-
-    iput-object p2, p0, Lhga;->c:Ljava/lang/Object;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Lhga;->a:J
+
+    iput-wide p3, p0, Lhga;->b:J
+
+    iput-object p5, p0, Lhga;->c:Lvx4;
+
+    iput-object p6, p0, Lhga;->d:Ljava/lang/String;
+
+    iput-object p7, p0, Lhga;->e:Ljava/lang/String;
+
+    iput-object p8, p0, Lhga;->f:Ljava/lang/String;
+
+    iput-object p9, p0, Lhga;->g:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lhga;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lhga;
+
+    iget-wide v3, p0, Lhga;->a:J
+
+    iget-wide v5, p1, Lhga;->a:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-wide v3, p0, Lhga;->b:J
+
+    iget-wide v5, p1, Lhga;->b:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Lhga;->c:Lvx4;
+
+    iget-object v3, p1, Lhga;->c:Lvx4;
+
+    if-eq v1, v3, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-object v1, p0, Lhga;->d:Ljava/lang/String;
+
+    iget-object v3, p1, Lhga;->d:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_5
+
+    return v2
+
+    :cond_5
+    iget-object v1, p0, Lhga;->e:Ljava/lang/String;
+
+    iget-object v3, p1, Lhga;->e:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_6
+
+    return v2
+
+    :cond_6
+    iget-object v1, p0, Lhga;->f:Ljava/lang/String;
+
+    iget-object v3, p1, Lhga;->f:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_7
+
+    return v2
+
+    :cond_7
+    iget-object v1, p0, Lhga;->g:Ljava/lang/String;
+
+    iget-object p1, p1, Lhga;->g:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_8
+
+    return v2
+
+    :cond_8
+    return v0
+.end method
+
+.method public final hashCode()I
     .locals 4
 
-    iget v0, p0, Lhga;->a:I
+    iget-wide v0, p0, Lhga;->a:J
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
-    iget-object v0, p0, Lhga;->c:Ljava/lang/Object;
+    move-result v0
 
-    check-cast v0, Lh2d;
+    const/16 v1, 0x1f
 
-    check-cast p1, Lmi8;
+    mul-int/2addr v0, v1
 
-    iget-object v1, p0, Lhga;->b:Ljga;
+    iget-wide v2, p0, Lhga;->b:J
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-static {v0, v1, v2, v3}, Leni;->a(IIJ)I
 
-    const/4 v2, 0x0
+    move-result v0
 
-    iput-boolean v2, p1, Lmi8;->a:Z
+    iget-object v2, p0, Lhga;->c:Lvx4;
 
-    const/4 v3, 0x1
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
 
-    iput-boolean v3, p1, Lmi8;->b:Z
+    move-result v2
 
-    iput-boolean v2, p1, Lmi8;->c:Z
+    add-int/2addr v2, v0
 
-    iput-object v0, p1, Lmi8;->i:Lh2d;
+    mul-int/2addr v2, v1
 
-    iput-boolean v2, p1, Lmi8;->g:Z
+    iget-object v0, p0, Lhga;->d:Ljava/lang/String;
 
-    iput-boolean v2, p1, Lmi8;->h:Z
+    invoke-static {v2, v1, v0}, Lj64;->d(IILjava/lang/String;)I
 
-    iget-object v0, v1, Ljga;->t0:Lzfh;
+    move-result v0
 
-    iget-boolean v0, v0, Lzfh;->d:Z
+    iget-object v2, p0, Lhga;->e:Ljava/lang/String;
 
-    iput-boolean v0, p1, Lmi8;->n:Z
+    invoke-static {v0, v1, v2}, Lj64;->d(IILjava/lang/String;)I
 
-    return-object p1
+    move-result v0
 
-    :pswitch_0
-    iget-object v0, p0, Lhga;->c:Ljava/lang/Object;
+    iget-object v2, p0, Lhga;->f:Ljava/lang/String;
 
-    check-cast v0, Liga;
+    invoke-static {v0, v1, v2}, Lj64;->d(IILjava/lang/String;)I
 
-    check-cast p1, Lmi8;
+    move-result v0
 
-    iget-object v1, p0, Lhga;->b:Ljga;
+    iget-object v1, p0, Lhga;->g:Ljava/lang/String;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
-    iget-object v2, v0, Liga;->b:Lzfh;
+    move-result v1
 
-    iget-object v2, v2, Lzfh;->a:Lh2d;
+    add-int/2addr v1, v0
 
-    iput-object v2, p1, Lmi8;->i:Lh2d;
+    return v1
+.end method
 
-    const/4 v2, 0x1
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    iput-boolean v2, p1, Lmi8;->a:Z
+    const-string v0, "AudioAttach(chatId="
 
-    iput-boolean v2, p1, Lmi8;->b:Z
+    const-string v1, ", messageId="
 
-    const/4 v2, 0x0
+    iget-wide v2, p0, Lhga;->a:J
 
-    iput-boolean v2, p1, Lmi8;->g:Z
+    invoke-static {v2, v3, v0, v1}, Ly12;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iput-boolean v2, p1, Lmi8;->h:Z
+    move-result-object v0
 
-    iput-boolean v2, p1, Lmi8;->c:Z
+    iget-wide v1, p0, Lhga;->b:J
 
-    iget-object v1, v1, Ljga;->t0:Lzfh;
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    iget-boolean v1, v1, Lzfh;->d:Z
+    const-string v1, ", itemType="
 
-    iput-boolean v1, p1, Lmi8;->n:Z
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v0, v0, Liga;->e:Z
+    iget-object v1, p0, Lhga;->c:Lvx4;
 
-    iput-boolean v0, p1, Lmi8;->o:Z
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    return-object p1
+    const-string v1, ", attachLocalId="
 
-    nop
+    const-string v2, ", audioUrl="
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    iget-object v3, p0, Lhga;->d:Ljava/lang/String;
+
+    iget-object v4, p0, Lhga;->e:Ljava/lang/String;
+
+    invoke-static {v0, v1, v3, v2, v4}, Lfvg;->q(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v1, ", attachTitle="
+
+    const-string v2, ", attachSubtitle="
+
+    iget-object v3, p0, Lhga;->f:Ljava/lang/String;
+
+    iget-object v4, p0, Lhga;->g:Ljava/lang/String;
+
+    invoke-static {v0, v1, v3, v2, v4}, Lfvg;->q(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

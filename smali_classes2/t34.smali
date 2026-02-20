@@ -1,93 +1,126 @@
-.class public final enum Lt34;
-.super Ljava/lang/Enum;
+.class public final Lt34;
+.super Lpdg;
 .source "SourceFile"
 
+# interfaces
+.implements Lys6;
 
-# static fields
-.field public static final enum a:Lt34;
 
-.field public static final enum b:Lt34;
+# instance fields
+.field public final synthetic X:Lg44;
 
-.field public static final enum c:Lt34;
+.field public final synthetic Y:J
 
-.field public static final synthetic d:[Lt34;
+.field public o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(Lg44;JLkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Lt34;
+    iput-object p1, p0, Lt34;->X:Lg44;
 
-    const-string v1, "CUSTOM"
+    iput-wide p2, p0, Lt34;->Y:J
 
-    const/4 v2, 0x0
+    const/4 p1, 0x2
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lt34;->a:Lt34;
-
-    new-instance v1, Lt34;
-
-    const-string v2, "DEVICE"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v2, Lt34;
-
-    const-string v3, "ONEME"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lt34;->b:Lt34;
-
-    new-instance v3, Lt34;
-
-    const-string v4, "UNKNOWN"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lt34;->c:Lt34;
-
-    filled-new-array {v0, v1, v2, v3}, [Lt34;
-
-    move-result-object v0
-
-    sput-object v0, Lt34;->d:[Lt34;
+    invoke-direct {p0, p1, p4}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lt34;
-    .locals 1
 
-    const-class v0, Lt34;
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    check-cast p1, Lnd4;
 
-    move-result-object p0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    check-cast p0, Lt34;
+    invoke-virtual {p0, p1, p2}, Lt34;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    return-object p0
+    move-result-object p1
+
+    check-cast p1, Lt34;
+
+    sget-object p2, Lmah;->a:Lmah;
+
+    invoke-virtual {p1, p2}, Lt34;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public static values()[Lt34;
-    .locals 1
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
 
-    sget-object v0, Lt34;->d:[Lt34;
+    new-instance p1, Lt34;
 
-    invoke-virtual {v0}, [Lt34;->clone()Ljava/lang/Object;
+    iget-object v0, p0, Lt34;->X:Lg44;
 
-    move-result-object v0
+    iget-wide v1, p0, Lt34;->Y:J
 
-    check-cast v0, [Lt34;
+    invoke-direct {p1, v0, v1, v2, p2}, Lt34;-><init>(Lg44;JLkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Lt34;->o:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lt34;->X:Lg44;
+
+    iget-object p1, p1, Lg44;->Z:Lj88;
+
+    invoke-interface {p1}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Le64;
+
+    iput v1, p0, Lt34;->o:I
+
+    iget-wide v0, p0, Lt34;->Y:J
+
+    invoke-virtual {p1, v0, v1, p0}, Le64;->a(JLpdg;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lod4;->a:Lod4;
+
+    if-ne p1, v0, :cond_2
 
     return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
 .end method

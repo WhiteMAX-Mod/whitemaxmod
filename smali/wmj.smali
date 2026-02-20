@@ -1,132 +1,68 @@
-.class public abstract Lwmj;
+.class public final synthetic Lwmj;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/util/concurrent/Callable;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lhff;
+
 
 # direct methods
-.method public static final a(La94;Lih;Lih;)Lz4e;
-    .locals 7
+.method public synthetic constructor <init>(Lhff;I)V
+    .locals 0
 
-    new-instance v0, Lz4e;
+    iput p2, p0, Lwmj;->a:I
 
-    const/4 v5, 0x0
+    iput-object p1, p0, Lwmj;->b:Lhff;
 
-    const/4 v6, -0x1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    move-object v1, p0
-
-    invoke-direct/range {v0 .. v6}, Lz4e;-><init>(La94;Ljava/lang/String;Lf94;Lf94;ZI)V
-
-    invoke-virtual {v0, p2}, Lz4e;->c(Lf94;)V
-
-    invoke-virtual {v0, p1}, Lz4e;->a(Lf94;)V
-
-    return-object v0
+    return-void
 .end method
 
-.method public static b(Lrx1;)Z
-    .locals 4
 
-    const-string v0, "Illegal thread"
+# virtual methods
+.method public final call()Ljava/lang/Object;
+    .locals 1
 
-    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+    iget v0, p0, Lwmj;->a:I
 
-    move-result-object v1
+    packed-switch v0, :pswitch_data_0
 
-    if-nez v1, :cond_2
+    iget-object v0, p0, Lwmj;->b:Lhff;
 
-    sget-object v1, Liy4;->c:Ln8g;
+    invoke-virtual {v0}, Lhff;->a()Ljava/lang/String;
 
-    invoke-virtual {v1}, Ln8g;->getValue()Ljava/lang/Object;
+    move-result-object v0
 
-    move-result-object v2
+    return-object v0
 
-    check-cast v2, Ljava/lang/ThreadLocal;
+    :pswitch_0
+    iget-object v0, p0, Lwmj;->b:Lhff;
 
-    if-eqz v2, :cond_2
+    invoke-virtual {v0}, Lhff;->a()Ljava/lang/String;
 
-    new-instance v2, Liy4;
+    move-result-object v0
 
-    invoke-virtual {v1}, Ln8g;->getValue()Ljava/lang/Object;
+    return-object v0
 
-    move-result-object v1
+    :pswitch_1
+    iget-object v0, p0, Lwmj;->b:Lhff;
 
-    check-cast v1, Ljava/lang/ThreadLocal;
+    invoke-virtual {v0}, Lhff;->a()Ljava/lang/String;
 
-    invoke-direct {v2, v1}, Liy4;-><init>(Ljava/lang/ThreadLocal;)V
+    move-result-object v0
 
-    iget-object v3, v2, Liy4;->b:Landroid/os/Looper;
+    return-object v0
 
-    :try_start_0
-    invoke-virtual {p0, v2}, Lrx1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-virtual {v3}, Landroid/os/Looper;->getThread()Ljava/lang/Thread;
-
-    move-result-object p0
-
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
-
-    move-result-object v2
-
-    invoke-static {p0, v2}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {v1}, Ljava/lang/ThreadLocal;->remove()V
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :catchall_0
-    move-exception p0
-
-    invoke-virtual {v3}, Landroid/os/Looper;->getThread()Ljava/lang/Thread;
-
-    move-result-object v1
-
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
-
-    move-result-object v3
-
-    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    iget-object v0, v2, Liy4;->a:Ljava/lang/ThreadLocal;
-
-    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->remove()V
-
-    throw p0
-
-    :cond_1
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_2
-    const/4 p0, 0x0
-
-    return p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,50 +1,145 @@
-.class public interface abstract Ldp5;
-.super Ljava/lang/Object;
+.class public final Ldp5;
+.super Ljava/util/concurrent/atomic/AtomicReference;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
+.implements Ly35;
 
-# virtual methods
-.method public abstract B([BLjava/util/List;ILjava/util/HashMap;)Lbp5;
-.end method
 
-.method public abstract D()I
-.end method
+# instance fields
+.field public final a:Lo72;
 
-.method public E([BLkcc;)V
-    .locals 0
+.field public final b:Lo72;
+
+
+# direct methods
+.method public constructor <init>(Ljava/lang/Runnable;)V
+    .locals 1
+
+    invoke-direct {p0, p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
+
+    new-instance p1, Lo72;
+
+    const/4 v0, 0x3
+
+    invoke-direct {p1, v0}, Lo72;-><init>(I)V
+
+    iput-object p1, p0, Ldp5;->a:Lo72;
+
+    new-instance p1, Lo72;
+
+    invoke-direct {p1, v0}, Lo72;-><init>(I)V
+
+    iput-object p1, p0, Ldp5;->b:Lo72;
 
     return-void
 .end method
 
-.method public abstract F(Ljava/lang/String;[B)Z
+
+# virtual methods
+.method public final dispose()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Ldp5;->a:Lo72;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v0}, Lc45;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
+
+    iget-object v0, p0, Ldp5;->b:Lo72;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v0}, Lc45;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
+
+    :cond_0
+    return-void
 .end method
 
-.method public abstract c([B)Ljava/util/Map;
+.method public final f()Z
+    .locals 1
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
 .end method
 
-.method public abstract l()Lcp5;
-.end method
+.method public final run()V
+    .locals 5
 
-.method public abstract o(Lig5;)V
-.end method
+    iget-object v0, p0, Ldp5;->b:Lo72;
 
-.method public abstract p([B)Lje4;
-.end method
+    iget-object v1, p0, Ldp5;->a:Lo72;
 
-.method public abstract release()V
-.end method
+    sget-object v2, Lc45;->a:Lc45;
 
-.method public abstract s()[B
-.end method
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-.method public abstract u([B[B)V
-.end method
+    move-result-object v3
 
-.method public abstract w([B)V
-.end method
+    check-cast v3, Ljava/lang/Runnable;
 
-.method public abstract y([B[B)[B
-.end method
+    if-eqz v3, :cond_0
 
-.method public abstract z([B)V
+    const/4 v4, 0x0
+
+    :try_start_0
+    invoke-interface {v3}, Ljava/lang/Runnable;->run()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+
+    :try_start_1
+    invoke-virtual {p0, v4}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
+
+    invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
+
+    invoke-virtual {v0, v2}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_0
+
+    :catchall_1
+    move-exception v3
+
+    invoke-virtual {p0, v4}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
+
+    invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
+
+    invoke-virtual {v0, v2}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
+
+    throw v3
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :goto_0
+    invoke-static {v0}, Lsvj;->a(Ljava/lang/Throwable;)V
+
+    throw v0
+
+    :cond_0
+    return-void
 .end method

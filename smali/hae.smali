@@ -1,42 +1,117 @@
 .class public final Lhae;
-.super Lp0;
+.super Lg4;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lhae;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
+# instance fields
+.field public final a:I
+
+.field public final b:Z
+
+.field public final c:Z
+
+.field public final d:I
+
+.field public final o:I
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lvzi;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lvzi;-><init>(I)V
+
+    sput-object v0, Lhae;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(IIIZZ)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Lhae;->a:I
+
+    iput-boolean p4, p0, Lhae;->b:Z
+
+    iput-boolean p5, p0, Lhae;->c:Z
+
+    iput p2, p0, Lhae;->d:I
+
+    iput p3, p0, Lhae;->o:I
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final run()V
+.method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 2
 
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+    const/16 p2, 0x4f45
 
-    move-result-object v0
+    invoke-static {p1, p2}, Lcwj;->j(Landroid/os/Parcel;I)I
 
-    iput-object v0, p0, Lp0;->c:Ljava/lang/Thread;
+    move-result p2
 
-    const/4 v0, 0x0
+    const/4 v0, 0x1
 
-    :try_start_0
-    iget-object v1, p0, Lp0;->a:Ljava/lang/Runnable;
+    const/4 v1, 0x4
 
-    invoke-interface {v1}, Ljava/lang/Runnable;->run()V
+    invoke-static {p1, v0, v1}, Lcwj;->l(Landroid/os/Parcel;II)V
 
-    iput-object v0, p0, Lp0;->c:Ljava/lang/Thread;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    iget v0, p0, Lhae;->a:I
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    const/4 v0, 0x2
+
+    invoke-static {p1, v0, v1}, Lcwj;->l(Landroid/os/Parcel;II)V
+
+    iget-boolean v0, p0, Lhae;->b:Z
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    const/4 v0, 0x3
+
+    invoke-static {p1, v0, v1}, Lcwj;->l(Landroid/os/Parcel;II)V
+
+    iget-boolean v0, p0, Lhae;->c:Z
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    invoke-static {p1, v1, v1}, Lcwj;->l(Landroid/os/Parcel;II)V
+
+    iget v0, p0, Lhae;->d:I
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    const/4 v0, 0x5
+
+    invoke-static {p1, v0, v1}, Lcwj;->l(Landroid/os/Parcel;II)V
+
+    iget v0, p0, Lhae;->o:I
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    invoke-static {p1, p2}, Lcwj;->k(Landroid/os/Parcel;I)V
 
     return-void
-
-    :catchall_0
-    move-exception v1
-
-    invoke-virtual {p0}, Lp0;->dispose()V
-
-    iput-object v0, p0, Lp0;->c:Ljava/lang/Thread;
-
-    invoke-static {v1}, Lknj;->b(Ljava/lang/Throwable;)V
-
-    throw v1
 .end method

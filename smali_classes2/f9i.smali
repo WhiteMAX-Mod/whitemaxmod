@@ -1,48 +1,165 @@
 .class public final Lf9i;
-.super Lo84;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation runtime Lgxe;
+.end annotation
+
+
+# static fields
+.field public static final Companion:Le9i;
 
 
 # instance fields
-.field public final synthetic X:Lyve;
+.field public final a:Ljava/lang/String;
 
-.field public synthetic d:Ljava/lang/Object;
-
-.field public o:I
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lyve;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lf9i;->X:Lyve;
+    new-instance v0, Le9i;
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lf9i;->Companion:Le9i;
 
     return-void
 .end method
 
+.method public synthetic constructor <init>(ILjava/lang/String;Ljava/lang/String;)V
+    .locals 2
+
+    and-int/lit8 v0, p1, 0x3
+
+    const/4 v1, 0x3
+
+    if-ne v1, v0, :cond_0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p2, p0, Lf9i;->a:Ljava/lang/String;
+
+    iput-object p3, p0, Lf9i;->b:Ljava/lang/String;
+
+    return-void
+
+    :cond_0
+    sget-object p2, Ld9i;->a:Ld9i;
+
+    invoke-virtual {p2}, Ld9i;->d()Lzwe;
+
+    move-result-object p2
+
+    invoke-static {p1, v1, p2}, Lesj;->c(IILzwe;)V
+
+    const/4 p1, 0x0
+
+    throw p1
+.end method
+
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iput-object p1, p0, Lf9i;->d:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    iget p1, p0, Lf9i;->o:I
+    if-ne p0, p1, :cond_0
 
-    const/high16 v0, -0x80000000
+    return v0
 
-    or-int/2addr p1, v0
+    :cond_0
+    instance-of v1, p1, Lf9i;
 
-    iput p1, p0, Lf9i;->o:I
+    const/4 v2, 0x0
 
-    iget-object p1, p0, Lf9i;->X:Lyve;
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lf9i;
+
+    iget-object v1, p0, Lf9i;->a:Ljava/lang/String;
+
+    iget-object v3, p1, Lf9i;->a:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lf9i;->b:Ljava/lang/String;
+
+    iget-object p1, p1, Lf9i;->b:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lf9i;->a:Ljava/lang/String;
+
+    if-nez v0, :cond_0
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0, p0}, Lyve;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    goto :goto_0
 
-    move-result-object p1
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
-    return-object p1
+    move-result v0
+
+    :goto_0
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lf9i;->b:Ljava/lang/String;
+
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, ", requestId="
+
+    const-string v1, ")"
+
+    const-string v2, "WebAppBiometryOpenSettingsRequest(queryId="
+
+    iget-object v3, p0, Lf9i;->a:Ljava/lang/String;
+
+    iget-object v4, p0, Lf9i;->b:Ljava/lang/String;
+
+    invoke-static {v2, v3, v0, v4, v1}, Lau1;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

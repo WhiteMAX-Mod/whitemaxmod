@@ -1,101 +1,51 @@
 .class public final Lxb7;
-.super Ltb7;
+.super Lda4;
 .source "SourceFile"
 
 
 # instance fields
-.field public d:Z
+.field public final synthetic X:Lyb7;
+
+.field public Y:I
+
+.field public d:Lyyd;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
-# virtual methods
-.method public final close()V
-    .locals 1
+# direct methods
+.method public constructor <init>(Lyb7;Lda4;)V
+    .locals 0
 
-    iget-boolean v0, p0, Ltb7;->b:Z
+    iput-object p1, p0, Lxb7;->X:Lyb7;
 
-    if-eqz v0, :cond_0
-
-    return-void
-
-    :cond_0
-    iget-boolean v0, p0, Lxb7;->d:Z
-
-    if-nez v0, :cond_1
-
-    invoke-virtual {p0}, Ltb7;->l()V
-
-    :cond_1
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Ltb7;->b:Z
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public final g(Lxv0;J)J
-    .locals 3
 
-    const-wide/16 v0, 0x0
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    cmp-long v0, p2, v0
+    iput-object p1, p0, Lxb7;->o:Ljava/lang/Object;
 
-    if-ltz v0, :cond_3
+    iget p1, p0, Lxb7;->Y:I
 
-    iget-boolean v0, p0, Ltb7;->b:Z
+    const/high16 v0, -0x80000000
 
-    if-nez v0, :cond_2
+    or-int/2addr p1, v0
 
-    iget-boolean v0, p0, Lxb7;->d:Z
+    iput p1, p0, Lxb7;->Y:I
 
-    const-wide/16 v1, -0x1
+    iget-object p1, p0, Lxb7;->X:Lyb7;
 
-    if-eqz v0, :cond_0
+    const/4 v0, 0x0
 
-    return-wide v1
-
-    :cond_0
-    invoke-super {p0, p1, p2, p3}, Ltb7;->g(Lxv0;J)J
-
-    move-result-wide p1
-
-    cmp-long p3, p1, v1
-
-    if-nez p3, :cond_1
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Lxb7;->d:Z
-
-    invoke-virtual {p0}, Ltb7;->l()V
-
-    return-wide v1
-
-    :cond_1
-    return-wide p1
-
-    :cond_2
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string p2, "closed"
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_3
-    const-string p1, "byteCount < 0: "
-
-    invoke-static {p2, p3, p1}, Lpqb;->j(JLjava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v0, p0}, Lyb7;->a(Lyb7;Ljava/lang/String;Lda4;)Ljava/lang/Object;
 
     move-result-object p1
 
-    new-instance p2, Ljava/lang/IllegalArgumentException;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p2, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p2
+    return-object p1
 .end method

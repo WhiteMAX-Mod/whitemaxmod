@@ -1,84 +1,115 @@
 .class public final Lg2h;
-.super Ljava/lang/Object;
+.super Lpdg;
 .source "SourceFile"
 
 # interfaces
-.implements La38;
+.implements Lys6;
 
 
-# static fields
-.field public static final a:Lg2h;
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
 
-.field public static final b:Lop7;
+.field public final synthetic Y:Lo2h;
+
+.field public o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lo2h;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Lg2h;
+    iput-object p1, p0, Lg2h;->Y:Lo2h;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 p1, 0x2
 
-    sput-object v0, Lg2h;->a:Lg2h;
-
-    const-string v0, "kotlin.ULong"
-
-    sget-object v1, Ldo8;->a:Ldo8;
-
-    invoke-static {v1, v0}, Leui;->a(La38;Ljava/lang/String;)Lop7;
-
-    move-result-object v0
-
-    sput-object v0, Lg2h;->b:Lop7;
+    invoke-direct {p0, p1, p2}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lkotlinx/serialization/json/internal/b;Ljava/lang/Object;)V
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    check-cast p2, Lc2h;
+    check-cast p1, Lxxb;
 
-    iget-wide v0, p2, Lc2h;->a:J
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    sget-object p2, Lg2h;->b:Lop7;
-
-    invoke-virtual {p1, p2}, Lkotlinx/serialization/json/internal/b;->i(Lxpe;)Lkotlinx/serialization/json/internal/b;
+    invoke-virtual {p0, p1, p2}, Lg2h;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    invoke-virtual {p1, v0, v1}, Lkotlinx/serialization/json/internal/b;->l(J)V
+    check-cast p1, Lg2h;
 
-    return-void
-.end method
+    sget-object p2, Lmah;->a:Lmah;
 
-.method public final b(Lkl4;)Ljava/lang/Object;
-    .locals 2
-
-    sget-object v0, Lg2h;->b:Lop7;
-
-    invoke-interface {p1, v0}, Lkl4;->o(Lxpe;)Lkl4;
+    invoke-virtual {p1, p2}, Lg2h;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
-
-    invoke-interface {p1}, Lkl4;->t()J
-
-    move-result-wide v0
-
-    new-instance p1, Lc2h;
-
-    invoke-direct {p1, v0, v1}, Lc2h;-><init>(J)V
 
     return-object p1
 .end method
 
-.method public final d()Lxpe;
-    .locals 1
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    sget-object v0, Lg2h;->b:Lop7;
+    new-instance v0, Lg2h;
+
+    iget-object v1, p0, Lg2h;->Y:Lo2h;
+
+    invoke-direct {v0, v1, p2}, Lg2h;-><init>(Lo2h;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lg2h;->X:Ljava/lang/Object;
 
     return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Lg2h;->o:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    return-object p1
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lg2h;->X:Ljava/lang/Object;
+
+    check-cast p1, Lxxb;
+
+    iput v1, p0, Lg2h;->o:I
+
+    iget-object v0, p0, Lg2h;->Y:Lo2h;
+
+    invoke-static {v0, p1, p0}, Lo2h;->a(Lo2h;Ljjc;Lda4;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lod4;->a:Lod4;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    return-object p1
 .end method

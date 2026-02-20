@@ -1,563 +1,195 @@
-.class public final Lsx4;
-.super Le3;
+.class public final synthetic Lsx4;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic d:I
+.field public final synthetic a:I
+
+.field public final synthetic b:Ltx4;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lb2e;I)V
+.method public synthetic constructor <init>(Ltx4;I)V
     .locals 0
 
-    iput p2, p0, Lsx4;->d:I
+    iput p2, p0, Lsx4;->a:I
 
-    invoke-direct {p0, p1}, Le3;-><init>(Lb2e;)V
+    iput-object p1, p0, Lsx4;->b:Ltx4;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final A(Ldp6;Ljava/lang/Object;)V
-    .locals 10
+.method public final run()V
+    .locals 8
 
-    iget v0, p0, Lsx4;->d:I
+    iget v0, p0, Lsx4;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    check-cast p2, Lkji;
+    iget-object v0, p0, Lsx4;->b:Ltx4;
 
-    iget-object v0, p2, Lkji;->a:Ljava/lang/String;
+    iget v1, v0, Ltx4;->Y:I
+
+    if-nez v1, :cond_1
 
     const/4 v1, 0x1
 
-    if-nez v0, :cond_0
+    iput v1, v0, Ltx4;->Y:I
 
-    invoke-interface {p1, v1}, Lz4g;->e(I)V
+    invoke-static {}, Lm0j;->g()Lm0j;
+
+    move-result-object v1
+
+    sget-object v2, Ltx4;->w0:Ljava/lang/String;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "onAllConstraintsMet for "
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v4, v0, Ltx4;->c:Lsqi;
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v2, v3}, Lm0j;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v1, v0, Ltx4;->d:Legg;
+
+    iget-object v1, v1, Legg;->d:Laoc;
+
+    iget-object v2, v0, Ltx4;->v0:Lfwf;
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v1, v2, v3}, Laoc;->g(Lfwf;Lqh3;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, v0, Ltx4;->d:Legg;
+
+    iget-object v1, v1, Legg;->c:Lvri;
+
+    iget-object v2, v0, Ltx4;->c:Lsqi;
+
+    const-string v3, "Starting timer for "
+
+    iget-object v4, v1, Lvri;->d:Ljava/lang/Object;
+
+    monitor-enter v4
+
+    :try_start_0
+    invoke-static {}, Lm0j;->g()Lm0j;
+
+    move-result-object v5
+
+    sget-object v6, Lvri;->e:Ljava/lang/String;
+
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    invoke-direct {v7, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v7, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v5, v6, v3}, Lm0j;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v1, v2}, Lvri;->a(Lsqi;)V
+
+    new-instance v3, Luri;
+
+    invoke-direct {v3, v1, v2}, Luri;-><init>(Lvri;Lsqi;)V
+
+    iget-object v5, v1, Lvri;->b:Ljava/util/HashMap;
+
+    invoke-virtual {v5, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget-object v5, v1, Lvri;->c:Ljava/util/HashMap;
+
+    invoke-virtual {v5, v2, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget-object v0, v1, Lvri;->a:Lztf;
+
+    iget-object v0, v0, Lztf;->b:Ljava/lang/Object;
+
+    check-cast v0, Landroid/os/Handler;
+
+    const-wide/32 v1, 0x927c0
+
+    invoke-virtual {v0, v3, v1, v2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    monitor-exit v4
 
     goto :goto_0
 
-    :cond_0
-    invoke-interface {p1, v1, v0}, Lz4g;->i(ILjava/lang/String;)V
+    :catchall_0
+    move-exception v0
 
-    :goto_0
-    iget-object p2, p2, Lkji;->b:Ljava/lang/String;
-
-    const/4 v0, 0x2
-
-    if-nez p2, :cond_1
-
-    invoke-interface {p1, v0}, Lz4g;->e(I)V
-
-    goto :goto_1
-
-    :cond_1
-    invoke-interface {p1, v0, p2}, Lz4g;->i(ILjava/lang/String;)V
-
-    :goto_1
-    return-void
-
-    :pswitch_0
-    check-cast p2, Lhji;
-
-    iget-object v0, p2, Lhji;->a:Ljava/lang/String;
-
-    const/4 v1, 0x1
-
-    if-nez v0, :cond_2
-
-    invoke-interface {p1, v1}, Lz4g;->e(I)V
-
-    goto :goto_2
-
-    :cond_2
-    invoke-interface {p1, v1, v0}, Lz4g;->i(ILjava/lang/String;)V
-
-    :goto_2
-    iget-object v0, p2, Lhji;->b:Lnii;
-
-    invoke-static {v0}, Lz8j;->m(Lnii;)I
-
-    move-result v0
-
-    const/4 v1, 0x2
-
-    int-to-long v2, v0
-
-    invoke-interface {p1, v1, v2, v3}, Lz4g;->b(IJ)V
-
-    iget-object v0, p2, Lhji;->c:Ljava/lang/String;
-
-    const/4 v1, 0x3
-
-    if-nez v0, :cond_3
-
-    invoke-interface {p1, v1}, Lz4g;->e(I)V
-
-    goto :goto_3
-
-    :cond_3
-    invoke-interface {p1, v1, v0}, Lz4g;->i(ILjava/lang/String;)V
-
-    :goto_3
-    iget-object v0, p2, Lhji;->d:Ljava/lang/String;
-
-    const/4 v1, 0x4
-
-    if-nez v0, :cond_4
-
-    invoke-interface {p1, v1}, Lz4g;->e(I)V
-
-    goto :goto_4
-
-    :cond_4
-    invoke-interface {p1, v1, v0}, Lz4g;->i(ILjava/lang/String;)V
-
-    :goto_4
-    iget-object v0, p2, Lhji;->e:Lyh4;
-
-    invoke-static {v0}, Lyh4;->e(Lyh4;)[B
-
-    move-result-object v0
-
-    const/4 v1, 0x5
-
-    if-nez v0, :cond_5
-
-    invoke-interface {p1, v1}, Lz4g;->e(I)V
-
-    goto :goto_5
-
-    :cond_5
-    invoke-interface {p1, v1, v0}, Lz4g;->c(I[B)V
-
-    :goto_5
-    iget-object v0, p2, Lhji;->f:Lyh4;
-
-    invoke-static {v0}, Lyh4;->e(Lyh4;)[B
-
-    move-result-object v0
-
-    const/4 v1, 0x6
-
-    if-nez v0, :cond_6
-
-    invoke-interface {p1, v1}, Lz4g;->e(I)V
-
-    goto :goto_6
-
-    :cond_6
-    invoke-interface {p1, v1, v0}, Lz4g;->c(I[B)V
-
-    :goto_6
-    const/4 v0, 0x7
-
-    iget-wide v1, p2, Lhji;->g:J
-
-    invoke-interface {p1, v0, v1, v2}, Lz4g;->b(IJ)V
-
-    const/16 v0, 0x8
-
-    iget-wide v1, p2, Lhji;->h:J
-
-    invoke-interface {p1, v0, v1, v2}, Lz4g;->b(IJ)V
-
-    const/16 v0, 0x9
-
-    iget-wide v1, p2, Lhji;->i:J
-
-    invoke-interface {p1, v0, v1, v2}, Lz4g;->b(IJ)V
-
-    iget v0, p2, Lhji;->k:I
-
-    int-to-long v0, v0
-
-    const/16 v2, 0xa
-
-    invoke-interface {p1, v2, v0, v1}, Lz4g;->b(IJ)V
-
-    iget-object v0, p2, Lhji;->l:Lah0;
-
-    invoke-static {v0}, Lz8j;->a(Lah0;)I
-
-    move-result v0
-
-    const/16 v1, 0xb
-
-    int-to-long v2, v0
-
-    invoke-interface {p1, v1, v2, v3}, Lz4g;->b(IJ)V
-
-    const/16 v0, 0xc
-
-    iget-wide v1, p2, Lhji;->m:J
-
-    invoke-interface {p1, v0, v1, v2}, Lz4g;->b(IJ)V
-
-    const/16 v0, 0xd
-
-    iget-wide v1, p2, Lhji;->n:J
-
-    invoke-interface {p1, v0, v1, v2}, Lz4g;->b(IJ)V
-
-    const/16 v0, 0xe
-
-    iget-wide v1, p2, Lhji;->o:J
-
-    invoke-interface {p1, v0, v1, v2}, Lz4g;->b(IJ)V
-
-    const/16 v0, 0xf
-
-    iget-wide v1, p2, Lhji;->p:J
-
-    invoke-interface {p1, v0, v1, v2}, Lz4g;->b(IJ)V
-
-    iget-boolean v0, p2, Lhji;->q:Z
-
-    const/16 v1, 0x10
-
-    int-to-long v2, v0
-
-    invoke-interface {p1, v1, v2, v3}, Lz4g;->b(IJ)V
-
-    iget-object v0, p2, Lhji;->r:Lxqb;
-
-    invoke-static {v0}, Lz8j;->j(Lxqb;)I
-
-    move-result v0
-
-    const/16 v1, 0x11
-
-    int-to-long v2, v0
-
-    invoke-interface {p1, v1, v2, v3}, Lz4g;->b(IJ)V
-
-    iget v0, p2, Lhji;->s:I
-
-    int-to-long v0, v0
-
-    const/16 v2, 0x12
-
-    invoke-interface {p1, v2, v0, v1}, Lz4g;->b(IJ)V
-
-    iget v0, p2, Lhji;->t:I
-
-    int-to-long v0, v0
-
-    const/16 v2, 0x13
-
-    invoke-interface {p1, v2, v0, v1}, Lz4g;->b(IJ)V
-
-    iget-object p2, p2, Lhji;->j:Lvx3;
-
-    const/16 v0, 0x1b
-
-    const/16 v1, 0x1a
-
-    const/16 v2, 0x19
-
-    const/16 v3, 0x18
-
-    const/16 v4, 0x17
-
-    const/16 v5, 0x16
-
-    const/16 v6, 0x15
-
-    const/16 v7, 0x14
-
-    if-eqz p2, :cond_7
-
-    iget v8, p2, Lvx3;->a:I
-
-    invoke-static {v8}, Lz8j;->i(I)I
-
-    move-result v8
-
-    int-to-long v8, v8
-
-    invoke-interface {p1, v7, v8, v9}, Lz4g;->b(IJ)V
-
-    iget-boolean v7, p2, Lvx3;->b:Z
-
-    int-to-long v7, v7
-
-    invoke-interface {p1, v6, v7, v8}, Lz4g;->b(IJ)V
-
-    iget-boolean v6, p2, Lvx3;->c:Z
-
-    int-to-long v6, v6
-
-    invoke-interface {p1, v5, v6, v7}, Lz4g;->b(IJ)V
-
-    iget-boolean v5, p2, Lvx3;->d:Z
-
-    int-to-long v5, v5
-
-    invoke-interface {p1, v4, v5, v6}, Lz4g;->b(IJ)V
-
-    iget-boolean v4, p2, Lvx3;->e:Z
-
-    int-to-long v4, v4
-
-    invoke-interface {p1, v3, v4, v5}, Lz4g;->b(IJ)V
-
-    iget-wide v3, p2, Lvx3;->f:J
-
-    invoke-interface {p1, v2, v3, v4}, Lz4g;->b(IJ)V
-
-    iget-wide v2, p2, Lvx3;->g:J
-
-    invoke-interface {p1, v1, v2, v3}, Lz4g;->b(IJ)V
-
-    iget-object p2, p2, Lvx3;->h:Ljava/util/Set;
-
-    invoke-static {p2}, Lz8j;->l(Ljava/util/Set;)[B
-
-    move-result-object p2
-
-    invoke-interface {p1, v0, p2}, Lz4g;->c(I[B)V
-
-    goto :goto_7
-
-    :cond_7
-    invoke-interface {p1, v7}, Lz4g;->e(I)V
-
-    invoke-interface {p1, v6}, Lz4g;->e(I)V
-
-    invoke-interface {p1, v5}, Lz4g;->e(I)V
-
-    invoke-interface {p1, v4}, Lz4g;->e(I)V
-
-    invoke-interface {p1, v3}, Lz4g;->e(I)V
-
-    invoke-interface {p1, v2}, Lz4g;->e(I)V
-
-    invoke-interface {p1, v1}, Lz4g;->e(I)V
-
-    invoke-interface {p1, v0}, Lz4g;->e(I)V
-
-    :goto_7
-    return-void
-
-    :pswitch_1
-    new-instance p1, Ljava/lang/ClassCastException;
-
-    invoke-direct {p1}, Ljava/lang/ClassCastException;-><init>()V
-
-    throw p1
-
-    :pswitch_2
-    check-cast p2, Lyii;
-
-    iget-object v0, p2, Lyii;->a:Ljava/lang/String;
-
-    const/4 v1, 0x1
-
-    if-nez v0, :cond_8
-
-    invoke-interface {p1, v1}, Lz4g;->e(I)V
-
-    goto :goto_8
-
-    :cond_8
-    invoke-interface {p1, v1, v0}, Lz4g;->i(ILjava/lang/String;)V
-
-    :goto_8
-    iget-object p2, p2, Lyii;->b:Ljava/lang/String;
-
-    const/4 v0, 0x2
-
-    if-nez p2, :cond_9
-
-    invoke-interface {p1, v0}, Lz4g;->e(I)V
-
-    goto :goto_9
-
-    :cond_9
-    invoke-interface {p1, v0, p2}, Lz4g;->i(ILjava/lang/String;)V
-
-    :goto_9
-    return-void
-
-    :pswitch_3
-    check-cast p2, Lc9g;
-
-    iget-object v0, p2, Lc9g;->a:Ljava/lang/String;
-
-    const/4 v1, 0x1
-
-    if-nez v0, :cond_a
-
-    invoke-interface {p1, v1}, Lz4g;->e(I)V
-
-    goto :goto_a
-
-    :cond_a
-    invoke-interface {p1, v1, v0}, Lz4g;->i(ILjava/lang/String;)V
-
-    :goto_a
-    iget v0, p2, Lc9g;->b:I
-
-    int-to-long v0, v0
-
-    const/4 v2, 0x2
-
-    invoke-interface {p1, v2, v0, v1}, Lz4g;->b(IJ)V
-
-    iget p2, p2, Lc9g;->c:I
-
-    int-to-long v0, p2
-
-    const/4 p2, 0x3
-
-    invoke-interface {p1, p2, v0, v1}, Lz4g;->b(IJ)V
-
-    return-void
-
-    :pswitch_4
-    check-cast p2, Lcgc;
-
-    const/4 v0, 0x1
-
-    iget-object v1, p2, Lcgc;->a:Ljava/lang/String;
-
-    invoke-interface {p1, v0, v1}, Lz4g;->i(ILjava/lang/String;)V
-
-    iget-object p2, p2, Lcgc;->b:Ljava/lang/Long;
-
-    invoke-virtual {p2}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v0
-
-    const/4 p2, 0x2
-
-    invoke-interface {p1, p2, v0, v1}, Lz4g;->b(IJ)V
-
-    return-void
-
-    :pswitch_5
-    check-cast p2, Lpx4;
-
-    iget-object v0, p2, Lpx4;->a:Ljava/lang/String;
-
-    const/4 v1, 0x1
-
-    if-nez v0, :cond_b
-
-    invoke-interface {p1, v1}, Lz4g;->e(I)V
-
-    goto :goto_b
-
-    :cond_b
-    invoke-interface {p1, v1, v0}, Lz4g;->i(ILjava/lang/String;)V
-
-    :goto_b
-    iget-object p2, p2, Lpx4;->b:Ljava/lang/String;
-
-    const/4 v0, 0x2
-
-    if-nez p2, :cond_c
-
-    invoke-interface {p1, v0}, Lz4g;->e(I)V
-
-    goto :goto_c
-
-    :cond_c
-    invoke-interface {p1, v0, p2}, Lz4g;->i(ILjava/lang/String;)V
-
-    :goto_c
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final B(Ljava/lang/Object;)V
-    .locals 1
-
-    invoke-virtual {p0}, Le3;->a()Ldp6;
-
-    move-result-object v0
-
-    :try_start_0
-    invoke-virtual {p0, v0, p1}, Lsx4;->A(Ldp6;Ljava/lang/Object;)V
-
-    iget-object p1, v0, Ldp6;->c:Landroid/database/sqlite/SQLiteStatement;
-
-    invoke-virtual {p1}, Landroid/database/sqlite/SQLiteStatement;->executeInsert()J
+    monitor-exit v4
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-virtual {p0, v0}, Le3;->t(Ldp6;)V
+    throw v0
+
+    :cond_0
+    invoke-virtual {v0}, Ltx4;->b()V
+
+    goto :goto_0
+
+    :cond_1
+    invoke-static {}, Lm0j;->g()Lm0j;
+
+    move-result-object v1
+
+    sget-object v2, Ltx4;->w0:Ljava/lang/String;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "Already started work for "
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v0, v0, Ltx4;->c:Lsqi;
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v2, v0}, Lm0j;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    :goto_0
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lsx4;->b:Ltx4;
+
+    invoke-static {v0}, Ltx4;->a(Ltx4;)V
 
     return-void
 
-    :catchall_0
-    move-exception p1
-
-    invoke-virtual {p0, v0}, Le3;->t(Ldp6;)V
-
-    throw p1
-.end method
-
-.method public final d()Ljava/lang/String;
-    .locals 1
-
-    iget v0, p0, Lsx4;->d:I
-
-    packed-switch v0, :pswitch_data_0
-
-    const-string v0, "INSERT OR IGNORE INTO `WorkTag` (`tag`,`work_spec_id`) VALUES (?,?)"
-
-    return-object v0
-
-    :pswitch_0
-    const-string v0, "INSERT OR IGNORE INTO `WorkSpec` (`id`,`state`,`worker_class_name`,`input_merger_class_name`,`input`,`output`,`initial_delay`,`interval_duration`,`flex_duration`,`run_attempt_count`,`backoff_policy`,`backoff_delay_duration`,`last_enqueue_time`,`minimum_retention_duration`,`schedule_requested_at`,`run_in_foreground`,`out_of_quota_policy`,`period_count`,`generation`,`required_network_type`,`requires_charging`,`requires_device_idle`,`requires_battery_not_low`,`requires_storage_not_low`,`trigger_content_update_delay`,`trigger_max_content_delay`,`content_uri_triggers`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"
-
-    return-object v0
-
-    :pswitch_1
-    const-string v0, "INSERT OR REPLACE INTO `WorkProgress` (`work_spec_id`,`progress`) VALUES (?,?)"
-
-    return-object v0
-
-    :pswitch_2
-    const-string v0, "INSERT OR IGNORE INTO `WorkName` (`name`,`work_spec_id`) VALUES (?,?)"
-
-    return-object v0
-
-    :pswitch_3
-    const-string v0, "INSERT OR REPLACE INTO `SystemIdInfo` (`work_spec_id`,`generation`,`system_id`) VALUES (?,?,?)"
-
-    return-object v0
-
-    :pswitch_4
-    const-string v0, "INSERT OR REPLACE INTO `Preference` (`key`,`long_value`) VALUES (?,?)"
-
-    return-object v0
-
-    :pswitch_5
-    const-string v0, "INSERT OR IGNORE INTO `Dependency` (`work_spec_id`,`prerequisite_id`) VALUES (?,?)"
-
-    return-object v0
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

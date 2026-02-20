@@ -3,40 +3,32 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lgu9;
+.implements Lhu9;
 
 
 # instance fields
-.field public final a:J
+.field public final a:Landroid/net/Uri;
 
-.field public final b:Loih;
+.field public final b:Lbea;
 
 
 # direct methods
-.method public constructor <init>(JLoih;)V
+.method public constructor <init>(Landroid/net/Uri;Lbea;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lcu9;->a:J
+    iput-object p1, p0, Lcu9;->a:Landroid/net/Uri;
 
-    iput-object p3, p0, Lcu9;->b:Loih;
+    iput-object p2, p0, Lcu9;->b:Lbea;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()Loih;
-    .locals 1
-
-    iget-object v0, p0, Lcu9;->b:Loih;
-
-    return-object v0
-.end method
-
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+    .locals 4
 
     const/4 v0, 0x1
 
@@ -56,22 +48,24 @@
     :cond_1
     check-cast p1, Lcu9;
 
-    iget-wide v3, p0, Lcu9;->a:J
+    iget-object v1, p0, Lcu9;->a:Landroid/net/Uri;
 
-    iget-wide v5, p1, Lcu9;->a:J
+    iget-object v3, p1, Lcu9;->a:Landroid/net/Uri;
 
-    cmp-long v1, v3, v5
+    invoke-static {v1, v3}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    if-eqz v1, :cond_2
+    move-result v1
+
+    if-nez v1, :cond_2
 
     return v2
 
     :cond_2
-    iget-object v1, p0, Lcu9;->b:Loih;
+    iget-object v1, p0, Lcu9;->b:Lbea;
 
-    iget-object p1, p1, Lcu9;->b:Loih;
+    iget-object p1, p1, Lcu9;->b:Lbea;
 
-    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -86,17 +80,17 @@
 .method public final hashCode()I
     .locals 2
 
-    iget-wide v0, p0, Lcu9;->a:J
+    iget-object v0, p0, Lcu9;->a:Landroid/net/Uri;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    invoke-virtual {v0}, Landroid/net/Uri;->hashCode()I
 
     move-result v0
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v1, p0, Lcu9;->b:Loih;
+    iget-object v1, p0, Lcu9;->b:Lbea;
 
-    invoke-virtual {v1}, Loih;->hashCode()I
+    invoke-virtual {v1}, Lbea;->hashCode()I
 
     move-result v1
 
@@ -105,32 +99,24 @@
     return v1
 .end method
 
-.method public final j()J
-    .locals 2
-
-    iget-wide v0, p0, Lcu9;->a:J
-
-    return-wide v0
-.end method
-
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 2
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "OnPlayRequested(messageId="
+    const-string v1, "SendImage(mediaUri="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-wide v1, p0, Lcu9;->a:J
+    iget-object v1, p0, Lcu9;->a:Landroid/net/Uri;
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", model="
+    const-string v1, ", sliceData="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcu9;->b:Loih;
+    iget-object v1, p0, Lcu9;->b:Lbea;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

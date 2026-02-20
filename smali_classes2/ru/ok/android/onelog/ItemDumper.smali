@@ -103,7 +103,7 @@
     throw p0
 .end method
 
-.method public static dump(Lru/ok/android/onelog/OneLogItem;Li28;)V
+.method public static dump(Lru/ok/android/onelog/OneLogItem;Lf58;)V
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -117,7 +117,7 @@
     .line 9
     sget-object v0, Lru/ok/android/onelog/ItemSerializer;->INSTANCE:Lru/ok/android/onelog/ItemSerializer;
 
-    invoke-virtual {v0, p1, p0}, Lru/ok/android/onelog/ItemSerializer;->serialize(Li28;Lru/ok/android/onelog/OneLogItem;)V
+    invoke-virtual {v0, p1, p0}, Lru/ok/android/onelog/ItemSerializer;->serialize(Lf58;Lru/ok/android/onelog/OneLogItem;)V
 
     return-void
 .end method
@@ -134,9 +134,9 @@
     .end annotation
 
     .line 5
-    new-instance v0, Lnrb;
+    new-instance v0, Laub;
 
-    invoke-direct {v0, p1}, Lnrb;-><init>(Ljava/io/OutputStream;)V
+    invoke-direct {v0, p1}, Laub;-><init>(Ljava/io/OutputStream;)V
 
     invoke-static {p0, v0}, Lru/ok/android/onelog/ItemDumper;->dump(Lru/ok/android/onelog/OneLogItem;Ljava/io/Writer;)V
 
@@ -155,15 +155,15 @@
     .end annotation
 
     .line 6
-    new-instance v0, Llac;
+    new-instance v0, Lbec;
 
-    invoke-direct {v0, p1}, Llac;-><init>(Ljava/io/Writer;)V
+    invoke-direct {v0, p1}, Lbec;-><init>(Ljava/io/Writer;)V
 
     .line 7
-    invoke-static {p0, v0}, Lru/ok/android/onelog/ItemDumper;->dump(Lru/ok/android/onelog/OneLogItem;Li28;)V
+    invoke-static {p0, v0}, Lru/ok/android/onelog/ItemDumper;->dump(Lru/ok/android/onelog/OneLogItem;Lf58;)V
 
     .line 8
-    invoke-virtual {v0}, Llac;->flush()V
+    invoke-virtual {v0}, Lbec;->flush()V
 
     return-void
 .end method

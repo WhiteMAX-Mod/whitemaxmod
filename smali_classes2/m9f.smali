@@ -1,30 +1,21 @@
 .class public final Lm9f;
-.super Ljava/lang/Object;
+.super Ldg0;
 .source "SourceFile"
-
-# interfaces
-.implements Llw9;
 
 
 # instance fields
-.field public final a:J
-
-.field public final b:Lebe;
-
-.field public final c:J
+.field public final b:Landroid/content/Intent;
 
 
 # direct methods
-.method public constructor <init>(JLebe;J)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Intent;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/16 v0, 0x16
 
-    iput-wide p1, p0, Lm9f;->a:J
+    invoke-direct {p0, v0}, Ldg0;-><init>(I)V
 
-    iput-object p3, p0, Lm9f;->b:Lebe;
-
-    iput-wide p4, p0, Lm9f;->c:J
+    iput-object p1, p0, Lm9f;->b:Landroid/content/Intent;
 
     return-void
 .end method
@@ -32,7 +23,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+    .locals 3
 
     const/4 v0, 0x1
 
@@ -52,100 +43,52 @@
     :cond_1
     check-cast p1, Lm9f;
 
-    iget-wide v3, p0, Lm9f;->a:J
+    iget-object v1, p0, Lm9f;->b:Landroid/content/Intent;
 
-    iget-wide v5, p1, Lm9f;->a:J
+    iget-object p1, p1, Lm9f;->b:Landroid/content/Intent;
 
-    cmp-long v1, v3, v5
+    invoke-static {v1, p1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    if-eqz v1, :cond_2
+    move-result p1
+
+    if-nez p1, :cond_2
 
     return v2
 
     :cond_2
-    iget-object v1, p0, Lm9f;->b:Lebe;
-
-    iget-object v3, p1, Lm9f;->b:Lebe;
-
-    if-eq v1, v3, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-wide v3, p0, Lm9f;->c:J
-
-    iget-wide v5, p1, Lm9f;->c:J
-
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_4
-
-    return v2
-
-    :cond_4
     return v0
 .end method
 
 .method public final hashCode()I
-    .locals 4
+    .locals 1
 
-    iget-wide v0, p0, Lm9f;->a:J
+    iget-object v0, p0, Lm9f;->b:Landroid/content/Intent;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lm9f;->b:Lebe;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-wide v2, p0, Lm9f;->c:J
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->hashCode(J)I
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
-
-    add-int/2addr v0, v1
 
     return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 5
+    .locals 2
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "ShowEditFireTimeDialog(messageId="
+    const-string v1, "SelectPhotoFromCamera(intent="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-wide v1, p0, Lm9f;->a:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", pickerMode="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lm9f;->b:Lebe;
+    iget-object v1, p0, Lm9f;->b:Landroid/content/Intent;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", currentFireTime="
+    const-string v1, ")"
 
-    const-string v2, ")"
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v3, p0, Lm9f;->c:J
-
-    invoke-static {v3, v4, v1, v2, v0}, Lxi4;->h(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

@@ -1,110 +1,85 @@
-.class public final Liuf;
-.super Lp6g;
+.class public abstract synthetic Liuf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lbr6;
 
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
-# instance fields
-.field public final synthetic X:Lone/me/stickerssettings/stickersscreen/StickersScreen;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public static final synthetic $EnumSwitchMapping$1:[I
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/stickerssettings/stickersscreen/StickersScreen;)V
-    .locals 0
-
-    iput-object p2, p0, Liuf;->X:Lone/me/stickerssettings/stickersscreen/StickersScreen;
-
-    const/4 p2, 0x2
-
-    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Liuf;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Liuf;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Liuf;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Liuf;
-
-    iget-object v1, p0, Liuf;->X:Lone/me/stickerssettings/stickersscreen/StickersScreen;
-
-    invoke-direct {v0, p2, v1}, Liuf;-><init>(Lkotlin/coroutines/Continuation;Lone/me/stickerssettings/stickersscreen/StickersScreen;)V
-
-    iput-object p1, v0, Liuf;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method static constructor <clinit>()V
     .locals 4
 
-    iget-object v0, p0, Liuf;->o:Ljava/lang/Object;
+    const/4 v0, 0x2
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    check-cast v0, Lpwf;
-
-    sget-object p1, Lone/me/stickerssettings/stickersscreen/StickersScreen;->v0:[Lz28;
-
-    iget-object p1, p0, Liuf;->X:Lone/me/stickerssettings/stickersscreen/StickersScreen;
-
-    invoke-virtual {p1}, Lone/me/stickerssettings/stickersscreen/StickersScreen;->A0()Lymb;
+    invoke-static {v0}, Ly12;->x(I)[I
 
     move-result-object v1
 
-    iget-object v2, v0, Lpwf;->a:Lqhg;
+    array-length v1, v1
 
-    invoke-virtual {p1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    new-array v1, v1, [I
 
-    move-result-object v3
+    const/4 v2, 0x1
 
-    invoke-virtual {v2, v3}, Lqhg;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
+    const/4 v3, 0x0
 
-    move-result-object v2
+    :try_start_0
+    aput v2, v1, v3
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    if-nez v2, :cond_0
+    :catch_0
+    :try_start_1
+    aput v0, v1, v2
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    const-string v2, ""
+    :catch_1
+    sput-object v1, Liuf;->$EnumSwitchMapping$0:[I
 
-    :cond_0
-    invoke-virtual {v1, v2}, Lymb;->setTitle(Ljava/lang/CharSequence;)V
+    invoke-static {}, Lv30;->values()[Lv30;
 
-    iget-object v0, v0, Lpwf;->b:Ljava/lang/String;
+    move-result-object v1
 
-    if-eqz v0, :cond_1
+    array-length v1, v1
 
-    invoke-virtual {p1}, Lone/me/stickerssettings/stickersscreen/StickersScreen;->A0()Lymb;
+    new-array v1, v1, [I
 
-    move-result-object p1
+    :try_start_2
+    aput v2, v1, v0
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    invoke-virtual {p1, v0}, Lymb;->setSubtitle(Ljava/lang/CharSequence;)V
+    :catch_2
+    const/4 v2, 0x3
 
-    :cond_1
-    sget-object p1, Lb3h;->a:Lb3h;
+    :try_start_3
+    aput v0, v1, v2
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
 
-    return-object p1
+    :catch_3
+    const/4 v0, 0x4
+
+    :try_start_4
+    aput v2, v1, v0
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+
+    :catch_4
+    const/16 v2, 0x9
+
+    :try_start_5
+    aput v0, v1, v2
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
+
+    :catch_5
+    sput-object v1, Liuf;->$EnumSwitchMapping$1:[I
+
+    return-void
 .end method

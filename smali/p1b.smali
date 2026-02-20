@@ -1,72 +1,56 @@
 .class public final Lp1b;
-.super Ly48;
+.super Lg3;
 .source "SourceFile"
-
-# interfaces
-.implements Llq6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final b:Leie;
 
-.field public final synthetic b:Lv1b;
+.field public final c:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lv1b;I)V
+.method public constructor <init>(Luza;Leie;I)V
     .locals 0
 
-    iput p2, p0, Lp1b;->a:I
+    invoke-direct {p0, p1}, Lg3;-><init>(Li2b;)V
 
-    iput-object p1, p0, Lp1b;->b:Lv1b;
+    iput-object p2, p0, Lp1b;->b:Leie;
 
-    const/4 p1, 0x0
-
-    invoke-direct {p0, p1}, Ly48;-><init>(I)V
+    iput p3, p0, Lp1b;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 1
+.method public final l(Lv2b;)V
+    .locals 4
 
-    iget v0, p0, Lp1b;->a:I
+    iget-object v0, p0, Lp1b;->b:Leie;
 
-    packed-switch v0, :pswitch_data_0
+    instance-of v1, v0, Luzg;
 
-    iget-object v0, p0, Lp1b;->b:Lv1b;
+    iget-object v2, p0, Lg3;->a:Li2b;
 
-    invoke-virtual {v0}, Lv1b;->d()V
+    if-eqz v1, :cond_0
 
-    sget-object v0, Lb3h;->a:Lb3h;
+    invoke-interface {v2, p1}, Li2b;->a(Lv2b;)V
 
-    return-object v0
+    return-void
 
-    :pswitch_0
-    iget-object v0, p0, Lp1b;->b:Lv1b;
+    :cond_0
+    invoke-virtual {v0}, Leie;->a()Lcie;
 
-    invoke-virtual {v0}, Lv1b;->c()V
+    move-result-object v0
 
-    sget-object v0, Lb3h;->a:Lb3h;
+    new-instance v1, Lo1b;
 
-    return-object v0
+    iget v3, p0, Lp1b;->c:I
 
-    :pswitch_1
-    iget-object v0, p0, Lp1b;->b:Lv1b;
+    invoke-direct {v1, p1, v0, v3}, Lo1b;-><init>(Lv2b;Lcie;I)V
 
-    invoke-virtual {v0}, Lv1b;->d()V
+    invoke-interface {v2, v1}, Li2b;->a(Lv2b;)V
 
-    sget-object v0, Lb3h;->a:Lb3h;
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

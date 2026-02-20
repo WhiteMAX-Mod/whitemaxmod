@@ -35,7 +35,7 @@
         "W",
         "",
         "Ljava/lang/Class;",
-        "Lne8;",
+        "Lfh8;",
         "workerClass",
         "<init>",
         "(Ljava/lang/Class;)V",
@@ -43,25 +43,25 @@
         "id",
         "setId",
         "(Ljava/util/UUID;)Landroidx/work/WorkRequest$Builder;",
-        "Lah0;",
+        "Loi0;",
         "backoffPolicy",
         "",
         "backoffDelay",
         "Ljava/util/concurrent/TimeUnit;",
         "timeUnit",
         "setBackoffCriteria",
-        "(Lah0;JLjava/util/concurrent/TimeUnit;)Landroidx/work/WorkRequest$Builder;",
+        "(Loi0;JLjava/util/concurrent/TimeUnit;)Landroidx/work/WorkRequest$Builder;",
         "Ljava/time/Duration;",
         "duration",
-        "(Lah0;Ljava/time/Duration;)Landroidx/work/WorkRequest$Builder;",
-        "Lvx3;",
+        "(Loi0;Ljava/time/Duration;)Landroidx/work/WorkRequest$Builder;",
+        "Lny3;",
         "constraints",
         "setConstraints",
-        "(Lvx3;)Landroidx/work/WorkRequest$Builder;",
-        "Lyh4;",
+        "(Lny3;)Landroidx/work/WorkRequest$Builder;",
+        "Lmj4;",
         "inputData",
         "setInputData",
-        "(Lyh4;)Landroidx/work/WorkRequest$Builder;",
+        "(Lmj4;)Landroidx/work/WorkRequest$Builder;",
         "",
         "tag",
         "addTag",
@@ -70,18 +70,18 @@
         "(JLjava/util/concurrent/TimeUnit;)Landroidx/work/WorkRequest$Builder;",
         "(Ljava/time/Duration;)Landroidx/work/WorkRequest$Builder;",
         "setInitialDelay",
-        "Lxqb;",
+        "Lktb;",
         "policy",
         "setExpedited",
-        "(Lxqb;)Landroidx/work/WorkRequest$Builder;",
+        "(Lktb;)Landroidx/work/WorkRequest$Builder;",
         "build",
         "()Landroidx/work/WorkRequest;",
         "buildInternal$work_runtime_release",
         "buildInternal",
-        "Lnii;",
+        "Ltqi;",
         "state",
         "setInitialState",
-        "(Lnii;)Landroidx/work/WorkRequest$Builder;",
+        "(Ltqi;)Landroidx/work/WorkRequest$Builder;",
         "",
         "runAttemptCount",
         "setInitialRunAttemptCount",
@@ -105,13 +105,13 @@
         "()Ljava/util/UUID;",
         "setId$work_runtime_release",
         "(Ljava/util/UUID;)V",
-        "Lhji;",
+        "Lori;",
         "workSpec",
-        "Lhji;",
+        "Lori;",
         "getWorkSpec$work_runtime_release",
-        "()Lhji;",
+        "()Lori;",
         "setWorkSpec$work_runtime_release",
-        "(Lhji;)V",
+        "(Lori;)V",
         "",
         "tags",
         "Ljava/util/Set;",
@@ -147,14 +147,14 @@
     .end annotation
 .end field
 
-.field private workSpec:Lhji;
+.field private workSpec:Lori;
 
 .field private final workerClass:Ljava/lang/Class;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/Class<",
             "+",
-            "Lne8;",
+            "Lfh8;",
             ">;"
         }
     .end annotation
@@ -169,7 +169,7 @@
             "(",
             "Ljava/lang/Class<",
             "+",
-            "Lne8;",
+            "Lfh8;",
             ">;)V"
         }
     .end annotation
@@ -188,7 +188,7 @@
 
     iput-object v2, v0, Landroidx/work/WorkRequest$Builder;->id:Ljava/util/UUID;
 
-    new-instance v3, Lhji;
+    new-instance v3, Lori;
 
     iget-object v2, v0, Landroidx/work/WorkRequest$Builder;->id:Ljava/util/UUID;
 
@@ -238,9 +238,9 @@
 
     const/16 v29, 0x0
 
-    invoke-direct/range {v3 .. v31}, Lhji;-><init>(Ljava/lang/String;Lnii;Ljava/lang/String;Ljava/lang/String;Lyh4;Lyh4;JJJLvx3;ILah0;JJJJZLxqb;III)V
+    invoke-direct/range {v3 .. v31}, Lori;-><init>(Ljava/lang/String;Ltqi;Ljava/lang/String;Ljava/lang/String;Lmj4;Lmj4;JJJLny3;ILoi0;JJJJZLktb;III)V
 
-    iput-object v3, v0, Landroidx/work/WorkRequest$Builder;->workSpec:Lhji;
+    iput-object v3, v0, Landroidx/work/WorkRequest$Builder;->workSpec:Lori;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -254,13 +254,13 @@
 
     const/4 v3, 0x1
 
-    invoke-static {v3}, Lss8;->h(I)I
+    invoke-static {v3}, Lmu8;->d(I)I
 
     move-result v3
 
     invoke-direct {v2, v3}, Ljava/util/LinkedHashSet;-><init>(I)V
 
-    invoke-static {v1, v2}, Lct;->A([Ljava/lang/Object;Ljava/util/HashSet;)V
+    invoke-static {v1, v2}, Lnu;->D([Ljava/lang/Object;Ljava/util/HashSet;)V
 
     iput-object v2, v0, Landroidx/work/WorkRequest$Builder;->tags:Ljava/util/Set;
 
@@ -302,11 +302,11 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Landroidx/work/WorkRequest$Builder;->workSpec:Lhji;
+    iget-object v1, p0, Landroidx/work/WorkRequest$Builder;->workSpec:Lori;
 
-    iget-object v1, v1, Lhji;->j:Lvx3;
+    iget-object v1, v1, Lori;->j:Lny3;
 
-    iget-object v2, v1, Lvx3;->h:Ljava/util/Set;
+    iget-object v2, v1, Lny3;->h:Ljava/util/Set;
 
     invoke-interface {v2}, Ljava/util/Collection;->isEmpty()Z
 
@@ -314,15 +314,15 @@
 
     if-eqz v2, :cond_1
 
-    iget-boolean v2, v1, Lvx3;->d:Z
+    iget-boolean v2, v1, Lny3;->d:Z
 
     if-nez v2, :cond_1
 
-    iget-boolean v2, v1, Lvx3;->b:Z
+    iget-boolean v2, v1, Lny3;->b:Z
 
     if-nez v2, :cond_1
 
-    iget-boolean v1, v1, Lvx3;->c:Z
+    iget-boolean v1, v1, Lny3;->c:Z
 
     if-eqz v1, :cond_0
 
@@ -338,15 +338,15 @@
     const/4 v1, 0x1
 
     :goto_1
-    iget-object v2, p0, Landroidx/work/WorkRequest$Builder;->workSpec:Lhji;
+    iget-object v2, p0, Landroidx/work/WorkRequest$Builder;->workSpec:Lori;
 
-    iget-boolean v3, v2, Lhji;->q:Z
+    iget-boolean v3, v2, Lori;->q:Z
 
     if-eqz v3, :cond_4
 
     if-nez v1, :cond_3
 
-    iget-wide v1, v2, Lhji;->g:J
+    iget-wide v1, v2, Lori;->g:J
 
     const-wide/16 v3, 0x0
 
@@ -433,10 +433,10 @@
     .end annotation
 .end method
 
-.method public final getWorkSpec$work_runtime_release()Lhji;
+.method public final getWorkSpec$work_runtime_release()Lori;
     .locals 1
 
-    iget-object v0, p0, Landroidx/work/WorkRequest$Builder;->workSpec:Lhji;
+    iget-object v0, p0, Landroidx/work/WorkRequest$Builder;->workSpec:Lori;
 
     return-object v0
 .end method
@@ -448,7 +448,7 @@
             "()",
             "Ljava/lang/Class<",
             "+",
-            "Lne8;",
+            "Lfh8;",
             ">;"
         }
     .end annotation
@@ -469,13 +469,13 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/work/WorkRequest$Builder;->workSpec:Lhji;
+    iget-object v0, p0, Landroidx/work/WorkRequest$Builder;->workSpec:Lori;
 
     invoke-virtual {p3, p1, p2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
 
     move-result-wide p1
 
-    iput-wide p1, v0, Lhji;->o:J
+    iput-wide p1, v0, Lori;->o:J
 
     .line 2
     invoke-virtual {p0}, Landroidx/work/WorkRequest$Builder;->getThisObject$work_runtime_release()Landroidx/work/WorkRequest$Builder;
@@ -496,13 +496,13 @@
     .end annotation
 
     .line 3
-    iget-object v0, p0, Landroidx/work/WorkRequest$Builder;->workSpec:Lhji;
+    iget-object v0, p0, Landroidx/work/WorkRequest$Builder;->workSpec:Lori;
 
-    invoke-static {p1}, Lua5;->a(Ljava/time/Duration;)J
+    invoke-static {p1}, Lhc5;->a(Ljava/time/Duration;)J
 
     move-result-wide v1
 
-    iput-wide v1, v0, Lhji;->o:J
+    iput-wide v1, v0, Lori;->o:J
 
     .line 4
     invoke-virtual {p0}, Landroidx/work/WorkRequest$Builder;->getThisObject$work_runtime_release()Landroidx/work/WorkRequest$Builder;
@@ -512,12 +512,12 @@
     return-object p1
 .end method
 
-.method public final setBackoffCriteria(Lah0;JLjava/util/concurrent/TimeUnit;)Landroidx/work/WorkRequest$Builder;
+.method public final setBackoffCriteria(Loi0;JLjava/util/concurrent/TimeUnit;)Landroidx/work/WorkRequest$Builder;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lah0;",
+            "Loi0;",
             "J",
             "Ljava/util/concurrent/TimeUnit;",
             ")TB;"
@@ -530,16 +530,16 @@
     iput-boolean v0, p0, Landroidx/work/WorkRequest$Builder;->backoffCriteriaSet:Z
 
     .line 2
-    iget-object v0, p0, Landroidx/work/WorkRequest$Builder;->workSpec:Lhji;
+    iget-object v0, p0, Landroidx/work/WorkRequest$Builder;->workSpec:Lori;
 
-    iput-object p1, v0, Lhji;->l:Lah0;
+    iput-object p1, v0, Lori;->l:Loi0;
 
     .line 3
     invoke-virtual {p4, p2, p3}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
 
     move-result-wide p1
 
-    invoke-virtual {v0, p1, p2}, Lhji;->e(J)V
+    invoke-virtual {v0, p1, p2}, Lori;->e(J)V
 
     .line 4
     invoke-virtual {p0}, Landroidx/work/WorkRequest$Builder;->getThisObject$work_runtime_release()Landroidx/work/WorkRequest$Builder;
@@ -549,12 +549,12 @@
     return-object p1
 .end method
 
-.method public final setBackoffCriteria(Lah0;Ljava/time/Duration;)Landroidx/work/WorkRequest$Builder;
+.method public final setBackoffCriteria(Loi0;Ljava/time/Duration;)Landroidx/work/WorkRequest$Builder;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lah0;",
+            "Loi0;",
             "Ljava/time/Duration;",
             ")TB;"
         }
@@ -566,16 +566,16 @@
     iput-boolean v0, p0, Landroidx/work/WorkRequest$Builder;->backoffCriteriaSet:Z
 
     .line 6
-    iget-object v0, p0, Landroidx/work/WorkRequest$Builder;->workSpec:Lhji;
+    iget-object v0, p0, Landroidx/work/WorkRequest$Builder;->workSpec:Lori;
 
-    iput-object p1, v0, Lhji;->l:Lah0;
+    iput-object p1, v0, Lori;->l:Loi0;
 
     .line 7
-    invoke-static {p2}, Lua5;->a(Ljava/time/Duration;)J
+    invoke-static {p2}, Lhc5;->a(Ljava/time/Duration;)J
 
     move-result-wide p1
 
-    invoke-virtual {v0, p1, p2}, Lhji;->e(J)V
+    invoke-virtual {v0, p1, p2}, Lori;->e(J)V
 
     .line 8
     invoke-virtual {p0}, Landroidx/work/WorkRequest$Builder;->getThisObject$work_runtime_release()Landroidx/work/WorkRequest$Builder;
@@ -593,19 +593,19 @@
     return-void
 .end method
 
-.method public final setConstraints(Lvx3;)Landroidx/work/WorkRequest$Builder;
+.method public final setConstraints(Lny3;)Landroidx/work/WorkRequest$Builder;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lvx3;",
+            "Lny3;",
             ")TB;"
         }
     .end annotation
 
-    iget-object v0, p0, Landroidx/work/WorkRequest$Builder;->workSpec:Lhji;
+    iget-object v0, p0, Landroidx/work/WorkRequest$Builder;->workSpec:Lori;
 
-    iput-object p1, v0, Lhji;->j:Lvx3;
+    iput-object p1, v0, Lori;->j:Lny3;
 
     invoke-virtual {p0}, Landroidx/work/WorkRequest$Builder;->getThisObject$work_runtime_release()Landroidx/work/WorkRequest$Builder;
 
@@ -614,7 +614,7 @@
     return-object p1
 .end method
 
-.method public setExpedited(Lxqb;)Landroidx/work/WorkRequest$Builder;
+.method public setExpedited(Lktb;)Landroidx/work/WorkRequest$Builder;
     .locals 2
     .annotation build Landroid/annotation/SuppressLint;
         value = {
@@ -625,18 +625,18 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lxqb;",
+            "Lktb;",
             ")TB;"
         }
     .end annotation
 
-    iget-object v0, p0, Landroidx/work/WorkRequest$Builder;->workSpec:Lhji;
+    iget-object v0, p0, Landroidx/work/WorkRequest$Builder;->workSpec:Lori;
 
     const/4 v1, 0x1
 
-    iput-boolean v1, v0, Lhji;->q:Z
+    iput-boolean v1, v0, Lori;->q:Z
 
-    iput-object p1, v0, Lhji;->r:Lxqb;
+    iput-object p1, v0, Lori;->r:Lktb;
 
     invoke-virtual {p0}, Landroidx/work/WorkRequest$Builder;->getThisObject$work_runtime_release()Landroidx/work/WorkRequest$Builder;
 
@@ -661,123 +661,123 @@
 
     iput-object v1, v0, Landroidx/work/WorkRequest$Builder;->id:Ljava/util/UUID;
 
-    new-instance v1, Lhji;
+    new-instance v1, Lori;
 
     invoke-virtual/range {p1 .. p1}, Ljava/util/UUID;->toString()Ljava/lang/String;
 
     move-result-object v2
 
-    iget-object v3, v0, Landroidx/work/WorkRequest$Builder;->workSpec:Lhji;
+    iget-object v3, v0, Landroidx/work/WorkRequest$Builder;->workSpec:Lori;
 
-    iget-object v4, v3, Lhji;->c:Ljava/lang/String;
+    iget-object v4, v3, Lori;->c:Ljava/lang/String;
 
-    iget-object v5, v3, Lhji;->b:Lnii;
+    iget-object v5, v3, Lori;->b:Ltqi;
 
     move-object v6, v5
 
-    iget-object v5, v3, Lhji;->d:Ljava/lang/String;
+    iget-object v5, v3, Lori;->d:Ljava/lang/String;
 
     move-object v7, v6
 
-    new-instance v6, Lyh4;
+    new-instance v6, Lmj4;
 
-    iget-object v8, v3, Lhji;->e:Lyh4;
+    iget-object v8, v3, Lori;->e:Lmj4;
 
-    invoke-direct {v6, v8}, Lyh4;-><init>(Lyh4;)V
+    invoke-direct {v6, v8}, Lmj4;-><init>(Lmj4;)V
 
     move-object v8, v7
 
-    new-instance v7, Lyh4;
+    new-instance v7, Lmj4;
 
-    iget-object v9, v3, Lhji;->f:Lyh4;
+    iget-object v9, v3, Lori;->f:Lmj4;
 
-    invoke-direct {v7, v9}, Lyh4;-><init>(Lyh4;)V
+    invoke-direct {v7, v9}, Lmj4;-><init>(Lmj4;)V
 
     move-object v10, v8
 
-    iget-wide v8, v3, Lhji;->g:J
+    iget-wide v8, v3, Lori;->g:J
 
     move-object v12, v10
 
-    iget-wide v10, v3, Lhji;->h:J
+    iget-wide v10, v3, Lori;->h:J
 
     move-object v14, v12
 
-    iget-wide v12, v3, Lhji;->i:J
+    iget-wide v12, v3, Lori;->i:J
 
-    new-instance v15, Lvx3;
+    new-instance v15, Lny3;
 
     move-object/from16 v26, v1
 
-    iget-object v1, v3, Lhji;->j:Lvx3;
+    iget-object v1, v3, Lori;->j:Lny3;
 
     move-object/from16 p1, v2
 
-    iget-boolean v2, v1, Lvx3;->b:Z
+    iget-boolean v2, v1, Lny3;->b:Z
 
     move/from16 v17, v2
 
-    iget-boolean v2, v1, Lvx3;->c:Z
+    iget-boolean v2, v1, Lny3;->c:Z
 
     move/from16 v18, v2
 
-    iget v2, v1, Lvx3;->a:I
+    iget v2, v1, Lny3;->a:I
 
     move/from16 v16, v2
 
-    iget-boolean v2, v1, Lvx3;->d:Z
+    iget-boolean v2, v1, Lny3;->d:Z
 
     move/from16 v19, v2
 
-    iget-boolean v2, v1, Lvx3;->e:Z
+    iget-boolean v2, v1, Lny3;->e:Z
 
     move/from16 v20, v2
 
-    iget-object v2, v1, Lvx3;->h:Ljava/util/Set;
+    iget-object v2, v1, Lny3;->h:Ljava/util/Set;
 
     move-object/from16 v27, v4
 
     move-object/from16 v28, v5
 
-    iget-wide v4, v1, Lvx3;->f:J
+    iget-wide v4, v1, Lny3;->f:J
 
     move-object/from16 v25, v2
 
-    iget-wide v1, v1, Lvx3;->g:J
+    iget-wide v1, v1, Lny3;->g:J
 
     move-wide/from16 v23, v1
 
     move-wide/from16 v21, v4
 
-    invoke-direct/range {v15 .. v25}, Lvx3;-><init>(IZZZZJJLjava/util/Set;)V
+    invoke-direct/range {v15 .. v25}, Lny3;-><init>(IZZZZJJLjava/util/Set;)V
 
-    iget v1, v3, Lhji;->k:I
+    iget v1, v3, Lori;->k:I
 
-    iget-object v2, v3, Lhji;->l:Lah0;
+    iget-object v2, v3, Lori;->l:Loi0;
 
-    iget-wide v4, v3, Lhji;->m:J
+    iget-wide v4, v3, Lori;->m:J
 
     move/from16 v16, v1
 
     move-object/from16 v17, v2
 
-    iget-wide v1, v3, Lhji;->n:J
+    iget-wide v1, v3, Lori;->n:J
 
     move-wide/from16 v19, v1
 
-    iget-wide v1, v3, Lhji;->o:J
+    iget-wide v1, v3, Lori;->o:J
 
     move-wide/from16 v21, v1
 
-    iget-wide v1, v3, Lhji;->p:J
+    iget-wide v1, v3, Lori;->p:J
 
     move-wide/from16 v23, v1
 
-    iget-boolean v1, v3, Lhji;->q:Z
+    iget-boolean v1, v3, Lori;->q:Z
 
-    iget-object v2, v3, Lhji;->r:Lxqb;
+    iget-object v2, v3, Lori;->r:Lktb;
 
-    iget v3, v3, Lhji;->s:I
+    iget v3, v3, Lori;->s:I
 
     move-object/from16 v30, v27
 
@@ -809,9 +809,9 @@
 
     move-object/from16 v2, p1
 
-    invoke-direct/range {v1 .. v29}, Lhji;-><init>(Ljava/lang/String;Lnii;Ljava/lang/String;Ljava/lang/String;Lyh4;Lyh4;JJJLvx3;ILah0;JJJJZLxqb;III)V
+    invoke-direct/range {v1 .. v29}, Lori;-><init>(Ljava/lang/String;Ltqi;Ljava/lang/String;Ljava/lang/String;Lmj4;Lmj4;JJJLny3;ILoi0;JJJJZLktb;III)V
 
-    iput-object v1, v0, Landroidx/work/WorkRequest$Builder;->workSpec:Lhji;
+    iput-object v1, v0, Landroidx/work/WorkRequest$Builder;->workSpec:Lori;
 
     invoke-virtual {v0}, Landroidx/work/WorkRequest$Builder;->getThisObject$work_runtime_release()Landroidx/work/WorkRequest$Builder;
 
@@ -839,13 +839,13 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/work/WorkRequest$Builder;->workSpec:Lhji;
+    iget-object v0, p0, Landroidx/work/WorkRequest$Builder;->workSpec:Lori;
 
     invoke-virtual {p3, p1, p2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
 
     move-result-wide p1
 
-    iput-wide p1, v0, Lhji;->g:J
+    iput-wide p1, v0, Lori;->g:J
 
     const-wide p1, 0x7fffffffffffffffL
 
@@ -856,9 +856,9 @@
 
     sub-long/2addr p1, v0
 
-    iget-object p3, p0, Landroidx/work/WorkRequest$Builder;->workSpec:Lhji;
+    iget-object p3, p0, Landroidx/work/WorkRequest$Builder;->workSpec:Lori;
 
-    iget-wide v0, p3, Lhji;->g:J
+    iget-wide v0, p3, Lori;->g:J
 
     cmp-long p1, p1, v0
 
@@ -893,13 +893,13 @@
     .end annotation
 
     .line 5
-    iget-object v0, p0, Landroidx/work/WorkRequest$Builder;->workSpec:Lhji;
+    iget-object v0, p0, Landroidx/work/WorkRequest$Builder;->workSpec:Lori;
 
-    invoke-static {p1}, Lua5;->a(Ljava/time/Duration;)J
+    invoke-static {p1}, Lhc5;->a(Ljava/time/Duration;)J
 
     move-result-wide v1
 
-    iput-wide v1, v0, Lhji;->g:J
+    iput-wide v1, v0, Lori;->g:J
 
     const-wide v0, 0x7fffffffffffffffL
 
@@ -910,9 +910,9 @@
 
     sub-long/2addr v0, v2
 
-    iget-object p1, p0, Landroidx/work/WorkRequest$Builder;->workSpec:Lhji;
+    iget-object p1, p0, Landroidx/work/WorkRequest$Builder;->workSpec:Lori;
 
-    iget-wide v2, p1, Lhji;->g:J
+    iget-wide v2, p1, Lori;->g:J
 
     cmp-long p1, v0, v2
 
@@ -944,30 +944,9 @@
         }
     .end annotation
 
-    iget-object v0, p0, Landroidx/work/WorkRequest$Builder;->workSpec:Lhji;
+    iget-object v0, p0, Landroidx/work/WorkRequest$Builder;->workSpec:Lori;
 
-    iput p1, v0, Lhji;->k:I
-
-    invoke-virtual {p0}, Landroidx/work/WorkRequest$Builder;->getThisObject$work_runtime_release()Landroidx/work/WorkRequest$Builder;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final setInitialState(Lnii;)Landroidx/work/WorkRequest$Builder;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lnii;",
-            ")TB;"
-        }
-    .end annotation
-
-    iget-object v0, p0, Landroidx/work/WorkRequest$Builder;->workSpec:Lhji;
-
-    iput-object p1, v0, Lhji;->b:Lnii;
+    iput p1, v0, Lori;->k:I
 
     invoke-virtual {p0}, Landroidx/work/WorkRequest$Builder;->getThisObject$work_runtime_release()Landroidx/work/WorkRequest$Builder;
 
@@ -976,19 +955,40 @@
     return-object p1
 .end method
 
-.method public final setInputData(Lyh4;)Landroidx/work/WorkRequest$Builder;
+.method public final setInitialState(Ltqi;)Landroidx/work/WorkRequest$Builder;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lyh4;",
+            "Ltqi;",
             ")TB;"
         }
     .end annotation
 
-    iget-object v0, p0, Landroidx/work/WorkRequest$Builder;->workSpec:Lhji;
+    iget-object v0, p0, Landroidx/work/WorkRequest$Builder;->workSpec:Lori;
 
-    iput-object p1, v0, Lhji;->e:Lyh4;
+    iput-object p1, v0, Lori;->b:Ltqi;
+
+    invoke-virtual {p0}, Landroidx/work/WorkRequest$Builder;->getThisObject$work_runtime_release()Landroidx/work/WorkRequest$Builder;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final setInputData(Lmj4;)Landroidx/work/WorkRequest$Builder;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lmj4;",
+            ")TB;"
+        }
+    .end annotation
+
+    iget-object v0, p0, Landroidx/work/WorkRequest$Builder;->workSpec:Lori;
+
+    iput-object p1, v0, Lori;->e:Lmj4;
 
     invoke-virtual {p0}, Landroidx/work/WorkRequest$Builder;->getThisObject$work_runtime_release()Landroidx/work/WorkRequest$Builder;
 
@@ -1007,13 +1007,13 @@
         }
     .end annotation
 
-    iget-object v0, p0, Landroidx/work/WorkRequest$Builder;->workSpec:Lhji;
+    iget-object v0, p0, Landroidx/work/WorkRequest$Builder;->workSpec:Lori;
 
     invoke-virtual {p3, p1, p2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
 
     move-result-wide p1
 
-    iput-wide p1, v0, Lhji;->n:J
+    iput-wide p1, v0, Lori;->n:J
 
     invoke-virtual {p0}, Landroidx/work/WorkRequest$Builder;->getThisObject$work_runtime_release()Landroidx/work/WorkRequest$Builder;
 
@@ -1032,13 +1032,13 @@
         }
     .end annotation
 
-    iget-object v0, p0, Landroidx/work/WorkRequest$Builder;->workSpec:Lhji;
+    iget-object v0, p0, Landroidx/work/WorkRequest$Builder;->workSpec:Lori;
 
     invoke-virtual {p3, p1, p2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
 
     move-result-wide p1
 
-    iput-wide p1, v0, Lhji;->p:J
+    iput-wide p1, v0, Lori;->p:J
 
     invoke-virtual {p0}, Landroidx/work/WorkRequest$Builder;->getThisObject$work_runtime_release()Landroidx/work/WorkRequest$Builder;
 
@@ -1047,10 +1047,10 @@
     return-object p1
 .end method
 
-.method public final setWorkSpec$work_runtime_release(Lhji;)V
+.method public final setWorkSpec$work_runtime_release(Lori;)V
     .locals 0
 
-    iput-object p1, p0, Landroidx/work/WorkRequest$Builder;->workSpec:Lhji;
+    iput-object p1, p0, Landroidx/work/WorkRequest$Builder;->workSpec:Lori;
 
     return-void
 .end method

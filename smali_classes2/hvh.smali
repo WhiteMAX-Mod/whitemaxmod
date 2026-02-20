@@ -1,261 +1,122 @@
-.class public abstract Lhvh;
+.class public final Lhvh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lks6;
 
-# static fields
-.field public static final a:Landroid/graphics/Rect;
 
-.field public static final b:[I
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lone/me/chatscreen/videomsg/VideoMessageWidget;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Lone/me/chatscreen/videomsg/VideoMessageWidget;I)V
+    .locals 0
 
-    new-instance v0, Landroid/graphics/Rect;
+    iput p2, p0, Lhvh;->a:I
 
-    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
+    iput-object p1, p0, Lhvh;->b:Lone/me/chatscreen/videomsg/VideoMessageWidget;
 
-    sput-object v0, Lhvh;->a:Landroid/graphics/Rect;
-
-    const/4 v0, 0x2
-
-    new-array v0, v0, [I
-
-    sput-object v0, Lhvh;->b:[I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static final a(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;Landroid/view/ViewTreeObserver;Landroid/view/View;)V
-    .locals 1
 
-    invoke-virtual {p1}, Landroid/view/ViewTreeObserver;->isAlive()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p1, p0}, Landroid/view/ViewTreeObserver;->removeOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p2}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
-
-    move-result-object p1
-
-    invoke-virtual {p1, p0}, Landroid/view/ViewTreeObserver;->removeOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
-
-    return-void
-.end method
-
-.method public static final b(Landroid/view/ViewGroup;Llq6;)Lfvh;
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 6
 
-    invoke-virtual {p0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+    iget v0, p0, Lhvh;->a:I
 
-    move-result-object v3
+    sget-object v1, Lmah;->a:Lmah;
 
-    new-instance v2, Lgvh;
+    const/16 v2, 0x8
 
-    invoke-direct {v2, p1, v3, p0}, Lgvh;-><init>(Llq6;Landroid/view/ViewTreeObserver;Landroid/view/View;)V
+    const/4 v3, 0x1
 
-    invoke-virtual {v3, v2}, Landroid/view/ViewTreeObserver;->addOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
+    iget-object v4, p0, Lhvh;->b:Lone/me/chatscreen/videomsg/VideoMessageWidget;
 
-    invoke-virtual {p0}, Landroid/view/View;->isAttachedToWindow()Z
+    packed-switch v0, :pswitch_data_0
 
-    move-result p1
+    check-cast p1, Landroid/widget/ImageView;
 
-    if-eqz p1, :cond_1
+    sget v0, Lw9b;->B:I
 
-    invoke-virtual {p0}, Landroid/view/View;->isAttachedToWindow()Z
+    invoke-virtual {p1, v0}, Landroid/view/View;->setId(I)V
 
-    move-result p1
+    const/4 v0, 0x0
 
-    if-nez p1, :cond_0
+    invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
 
-    invoke-static {v2, v3, p0}, Lhvh;->a(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;Landroid/view/ViewTreeObserver;Landroid/view/View;)V
+    new-instance v0, Lgvh;
 
-    move-object v1, p0
+    invoke-direct {v0, v4, v3}, Lgvh;-><init>(Lone/me/chatscreen/videomsg/VideoMessageWidget;I)V
 
-    goto :goto_0
+    invoke-static {p1, v0}, Lwuj;->c(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
-    :cond_0
-    new-instance v0, Levh;
+    invoke-virtual {p1, v2}, Landroid/view/View;->setVisibility(I)V
 
-    const/4 v5, 0x1
+    return-object v1
 
-    move-object v4, p0
+    :pswitch_0
+    check-cast p1, Landroid/widget/ImageView;
 
-    move-object v1, p0
+    sget v0, Lw9b;->z:I
 
-    invoke-direct/range {v0 .. v5}, Levh;-><init>(Landroid/view/View;Lgvh;Landroid/view/ViewTreeObserver;Landroid/view/View;I)V
+    invoke-virtual {p1, v0}, Landroid/view/View;->setId(I)V
 
-    invoke-virtual {v1, v0}, Landroid/view/View;->addOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+    sget v0, Lice;->k:I
 
-    goto :goto_0
+    invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    :cond_1
-    move-object v1, p0
+    sget-object v0, Lone/me/chatscreen/videomsg/VideoMessageWidget;->I0:[Lv58;
 
-    invoke-virtual {v1}, Landroid/view/View;->isAttachedToWindow()Z
+    invoke-virtual {v4}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    move-result p0
+    move-result-object v0
 
-    if-eqz p0, :cond_3
+    const-string v5, "camera"
 
-    invoke-virtual {v1}, Landroid/view/View;->isAttachedToWindow()Z
+    invoke-virtual {v0, v5}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
-    move-result p0
+    move-result-object v0
 
-    if-nez p0, :cond_2
+    check-cast v0, Landroid/hardware/camera2/CameraManager;
 
-    invoke-static {v2, v3, v1}, Lhvh;->a(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;Landroid/view/ViewTreeObserver;Landroid/view/View;)V
+    invoke-virtual {v0}, Landroid/hardware/camera2/CameraManager;->getCameraIdList()[Ljava/lang/String;
 
-    goto :goto_0
+    move-result-object v0
 
-    :cond_2
-    new-instance v0, Levh;
-
-    const/4 v5, 0x2
-
-    move-object v4, v1
-
-    invoke-direct/range {v0 .. v5}, Levh;-><init>(Landroid/view/View;Lgvh;Landroid/view/ViewTreeObserver;Landroid/view/View;I)V
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->addOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
-
-    goto :goto_0
-
-    :cond_3
-    new-instance v0, Levh;
+    array-length v0, v0
 
     const/4 v5, 0x0
 
-    move-object v4, v1
-
-    invoke-direct/range {v0 .. v5}, Levh;-><init>(Landroid/view/View;Lgvh;Landroid/view/ViewTreeObserver;Landroid/view/View;I)V
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->addOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
-
-    :goto_0
-    new-instance p0, Lfvh;
-
-    invoke-direct {p0, v3, v1, v2}, Lfvh;-><init>(Landroid/view/ViewTreeObserver;Landroid/view/View;Lgvh;)V
-
-    return-object p0
-.end method
-
-.method public static final c(Landroid/view/View;Landroid/view/View;)Landroid/graphics/Rect;
-    .locals 4
-
-    invoke-virtual {p0}, Landroid/view/View;->getLeft()I
-
-    move-result v0
-
-    invoke-virtual {p0}, Landroid/view/View;->getTop()I
-
-    move-result v1
-
-    invoke-virtual {p0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
-
-    move-result-object v2
-
-    :goto_0
-    if-eq v2, p1, :cond_1
-
-    instance-of v3, v2, Landroid/view/View;
-
-    if-nez v3, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    check-cast v2, Landroid/view/View;
-
-    invoke-virtual {v2}, Landroid/view/View;->getScrollX()I
-
-    move-result v3
-
-    sub-int/2addr v0, v3
-
-    invoke-virtual {v2}, Landroid/view/View;->getScrollY()I
-
-    move-result v3
-
-    sub-int/2addr v1, v3
-
-    invoke-virtual {v2}, Landroid/view/View;->getLeft()I
-
-    move-result v3
-
-    add-int/2addr v0, v3
-
-    invoke-virtual {v2}, Landroid/view/View;->getTop()I
-
-    move-result v3
-
-    add-int/2addr v1, v3
-
-    invoke-virtual {v2}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
-
-    move-result-object v2
+    if-le v0, v3, :cond_0
 
     goto :goto_0
 
-    :cond_1
-    :goto_1
-    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
+    :cond_0
+    move v3, v5
 
-    move-result p1
+    :goto_0
+    invoke-virtual {p1, v3}, Landroid/view/View;->setEnabled(Z)V
 
-    add-int/2addr p1, v0
+    new-instance v0, Lgvh;
 
-    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
+    invoke-direct {v0, v4, v5}, Lgvh;-><init>(Lone/me/chatscreen/videomsg/VideoMessageWidget;I)V
 
-    move-result p0
+    invoke-static {p1, v0}, Lwuj;->c(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
-    add-int/2addr p0, v1
+    invoke-virtual {p1, v2}, Landroid/view/View;->setVisibility(I)V
 
-    sget-object v2, Lhvh;->a:Landroid/graphics/Rect;
+    return-object v1
 
-    invoke-virtual {v2, v0, v1, p1, p0}, Landroid/graphics/Rect;->set(IIII)V
-
-    return-object v2
-.end method
-
-.method public static final d(Landroid/graphics/Rect;Landroid/view/View;)V
-    .locals 5
-
-    sget-object v0, Lhvh;->b:[I
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->getLocationInWindow([I)V
-
-    const/4 v1, 0x0
-
-    aget v1, v0, v1
-
-    const/4 v2, 0x1
-
-    aget v3, v0, v2
-
-    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
-
-    move-result v4
-
-    add-int/2addr v4, v1
-
-    aget v0, v0, v2
-
-    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
-
-    move-result p1
-
-    add-int/2addr p1, v0
-
-    invoke-virtual {p0, v1, v3, v4, p1}, Landroid/graphics/Rect;->set(IIII)V
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="28.0dip" android:width="28.0dip" android:viewportWidth="28.0" android:viewportHeight="28.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <group android:name="_R_G">
+        <group android:name="_R_G_L_7_G" android:scaleX="0.8" android:scaleY="0.8" android:translateX="14.0" android:translateY="14.0">
+            <path android:name="_R_G_L_7_G_D_0_P_0" android:pathData=" M0 -10.5 C5.79,-10.5 10.5,-5.79 10.5,0 C10.5,5.79 5.79,10.5 0,10.5 C-5.79,10.5 -10.5,5.79 -10.5,0 C-10.5,-5.79 -5.79,-10.5 0,-10.5c " android:strokeColor="#ffffffff" android:strokeWidth="2.333" android:trimPathStart="0.0" android:trimPathEnd="0.0" android:trimPathOffset="0.0" android:strokeLineCap="round" android:strokeLineJoin="round" android:strokeAlpha="1.0" />
+        </group>
+        <group android:name="_R_G_L_6_G" android:scaleY="0.0" android:translateX="4.438" android:translateY="4.5">
+            <path android:name="_R_G_L_6_G_D_0_P_0" android:pathData=" M1.25 1.25 C1.25,1.25 -1.25,-1.25 -1.25,-1.25 " android:strokeColor="#ffffffff" android:strokeWidth="1.5" android:trimPathStart="0.0" android:trimPathEnd="0.0" android:trimPathOffset="0.0" android:strokeLineCap="round" android:strokeLineJoin="round" android:strokeAlpha="1.0" />
+        </group>
+        <group android:name="_R_G_L_5_G" android:scaleY="0.0" android:translateX="4.188" android:translateY="23.688">
+            <path android:name="_R_G_L_5_G_D_0_P_0" android:pathData=" M1.5 1.5 C1.5,1.5 -1.5,-1.5 -1.5,-1.5 " android:strokeColor="#ffffffff" android:strokeWidth="1.5" android:trimPathStart="0.0" android:trimPathEnd="0.0" android:trimPathOffset="0.0" android:strokeLineCap="round" android:strokeLineJoin="round" android:strokeAlpha="1.0" />
+        </group>
+        <group android:name="_R_G_L_4_G" android:scaleX="-1.0" android:scaleY="0.0" android:translateX="23.0" android:translateY="4.5">
+            <path android:name="_R_G_L_4_G_D_0_P_0" android:pathData=" M1.25 1.25 C1.25,1.25 -1.25,-1.25 -1.25,-1.25 " android:strokeColor="#ffffffff" android:strokeWidth="1.5" android:trimPathStart="0.0" android:trimPathEnd="0.0" android:trimPathOffset="0.0" android:strokeLineCap="round" android:strokeLineJoin="round" android:strokeAlpha="1.0" />
+        </group>
+        <group android:name="_R_G_L_3_G" android:scaleX="-1.0" android:scaleY="0.0" android:translateX="23.25" android:translateY="23.25">
+            <path android:name="_R_G_L_3_G_D_0_P_0" android:pathData=" M1.5 1.5 C1.5,1.5 -1.5,-1.5 -1.5,-1.5 " android:strokeColor="#ffffffff" android:strokeWidth="1.5" android:trimPathStart="0.0" android:trimPathEnd="0.0" android:trimPathOffset="0.0" android:strokeLineCap="round" android:strokeLineJoin="round" android:strokeAlpha="1.0" />
+        </group>
+        <group android:name="_R_G_L_2_G" android:scaleY="0.0" android:translateX="2.0" android:translateY="14.0">
+            <path android:name="_R_G_L_2_G_D_0_P_0" android:pathData=" M1 0 C1,0 -1,0 -1,0 " android:strokeColor="#ffffffff" android:strokeWidth="1.5" android:trimPathStart="0.0" android:trimPathEnd="0.0" android:trimPathOffset="0.0" android:strokeLineCap="round" android:strokeLineJoin="round" android:strokeAlpha="1.0" />
+        </group>
+        <group android:name="_R_G_L_1_G" android:scaleY="0.0" android:translateX="26.0" android:translateY="14.0">
+            <path android:name="_R_G_L_1_G_D_0_P_0" android:pathData=" M1 0 C1,0 -1,0 -1,0 " android:strokeColor="#ffffffff" android:strokeWidth="1.5" android:trimPathStart="1.0" android:trimPathEnd="1.0" android:trimPathOffset="0.0" android:strokeLineCap="round" android:strokeLineJoin="round" android:strokeAlpha="1.0" />
+        </group>
+        <group android:name="_R_G_L_0_G" android:scaleX="0.0" android:scaleY="0.0" android:translateX="14.0" android:translateY="14.0">
+            <path android:name="_R_G_L_0_G_D_0_P_0" android:fillColor="#ffffffff" android:pathData=" M-4.96 0.83 C-4.51,0.37 -4.47,-0.38 -4.93,-0.84 C-5.39,-1.29 -4.33,-0.25 -4.92,-0.82 C-4.92,-0.82 -4.93,-0.8 -4.93,-0.8 C-4.93,-0.8 -5.01,-0.82 -5.01,-0.82 C-5.46,-1.28 -6.2,-1.28 -6.66,-0.82 C-7.11,-0.37 -7.11,0.37 -6.66,0.83 C-6.66,0.83 -6.63,0.83 -6.63,0.83 C-6.17,1.29 -5.44,1.25 -4.98,0.8 C-4.98,0.8 -4.96,0.83 -4.96,0.83c  M0 -11.67 C6.44,-11.67 11.67,-6.44 11.67,0 C11.67,6.44 6.44,11.67 0,11.67 C-6.44,11.67 -11.67,6.44 -11.67,0 C-11.67,-6.44 -6.44,-11.67 0,-11.67c " android:fillAlpha="1.0" android:fillType="nonZero" />
+        </group>
+    </group>
+    <group android:name="time_group" />
+</vector>

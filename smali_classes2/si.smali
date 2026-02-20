@@ -1,120 +1,158 @@
-.class public final Lsi;
-.super Ljava/lang/Object;
+.class public abstract Lsi;
+.super Lk2;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lqi;
-
-.field public final b:Landroid/content/Context;
-
-
-# direct methods
-.method public constructor <init>(Lqi;Landroid/content/Context;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lsi;->a:Lqi;
-
-    iput-object p2, p0, Lsi;->b:Landroid/content/Context;
-
-    return-void
-.end method
-
-
 # virtual methods
-.method public final a(JLjava/lang/String;Ljava/lang/String;Landroid/graphics/drawable/Drawable;II)Lqk;
-    .locals 12
+.method public final G(Landroid/content/Context;Landroid/content/res/XmlResourceParser;I)Ljava/lang/Object;
+    .locals 3
 
-    move-object/from16 v0, p5
+    sget-object v0, Lqi;->w0:Lqi;
 
-    new-instance v1, Lni;
+    invoke-virtual {v0, p1, p2}, Lk2;->J(Landroid/content/Context;Landroid/content/res/XmlResourceParser;)Ljava/lang/Object;
 
-    if-eqz p3, :cond_1
+    move-result-object v0
 
-    invoke-virtual {p3}, Ljava/lang/String;->length()I
+    check-cast v0, Lgj;
 
-    move-result v2
+    instance-of v1, v0, Lbj;
 
-    if-nez v2, :cond_0
+    if-nez v1, :cond_0
 
-    goto :goto_1
+    invoke-interface {p2, p3}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    const/16 v2, 0x23
+
+    invoke-static {v1, v2}, Ld7g;->V(Ljava/lang/String;C)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    new-instance v0, Lbj;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lbj;-><init>(I)V
 
     :cond_0
-    const/4 v2, 0x1
+    instance-of v1, v0, Lbj;
 
-    :goto_0
-    move-wide v4, p1
+    if-eqz v1, :cond_1
 
-    move-object v7, p3
+    new-instance p1, Lbj;
 
-    move-object/from16 v6, p4
+    invoke-interface {p2, p3}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
 
-    move v3, v2
+    move-result-object p2
 
-    move/from16 v2, p6
+    invoke-static {p2}, Lixj;->c(Ljava/lang/String;)I
 
-    goto :goto_2
+    move-result p2
+
+    invoke-direct {p1, p2}, Lbj;-><init>(I)V
+
+    return-object p1
 
     :cond_1
-    :goto_1
-    const/4 v2, 0x3
+    instance-of v1, v0, Lcj;
+
+    if-eqz v1, :cond_2
+
+    new-instance v0, Lcj;
+
+    invoke-interface {p2, p3}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
+
+    move-result-object p2
+
+    :try_start_0
+    invoke-static {p1, p2}, Lb25;->a(Landroid/content/Context;Ljava/lang/String;)F
+
+    move-result p1
+    :try_end_0
+    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    :goto_2
-    invoke-direct/range {v1 .. v7}, Lni;-><init>(IIJLjava/lang/String;Ljava/lang/String;)V
+    :catch_0
+    invoke-static {p2}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
 
-    invoke-static {v1}, Ltpf;->a(Ljava/lang/Object;)Lspf;
+    move-result p1
 
-    move-result-object v11
+    :goto_0
+    invoke-direct {v0, p1}, Lcj;-><init>(F)V
 
-    if-nez v0, :cond_2
-
-    sget-object p3, Lui;->a:Lui;
-
-    :goto_3
-    move-object v8, p3
-
-    goto :goto_4
+    return-object v0
 
     :cond_2
-    new-instance p3, Lti;
-
-    invoke-direct {p3, v0}, Lti;-><init>(Landroid/graphics/drawable/Drawable;)V
-
-    goto :goto_3
-
-    :goto_4
-    new-instance v3, Lqk;
-
-    const/4 v7, 0x1
-
-    iget-object v9, p0, Lsi;->a:Lqi;
-
-    iget-object v10, p0, Lsi;->b:Landroid/content/Context;
-
-    move-wide v4, p1
-
-    move/from16 v6, p6
-
-    invoke-direct/range {v3 .. v11}, Lqk;-><init>(JIZLvi;Lqi;Landroid/content/Context;Ld76;)V
-
-    const/4 p1, 0x0
-
-    move/from16 v2, p6
-
-    invoke-virtual {v3, p1, p1, v2, v2}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
-
-    iget-object p1, v3, Lqk;->A0:Lone/me/rlottie/RLottieDrawable;
+    instance-of p1, v0, Ldj;
 
     if-eqz p1, :cond_3
 
-    move/from16 p2, p7
+    new-instance p1, Ldj;
 
-    invoke-virtual {p1, p2}, Lone/me/rlottie/RLottieDrawable;->setAutoRepeat(I)V
+    invoke-interface {p2, p3}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-static {p2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result p2
+
+    invoke-direct {p1, p2}, Ldj;-><init>(I)V
+
+    return-object p1
 
     :cond_3
-    return-object v3
+    instance-of p1, v0, Lej;
+
+    if-eqz p1, :cond_4
+
+    new-instance p1, Lej;
+
+    invoke-interface {p2, p3}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Lej;-><init>(Ljava/lang/String;)V
+
+    return-object p1
+
+    :cond_4
+    sget-object p1, Lfj;->a:Lfj;
+
+    invoke-static {v0, p1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_5
+
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    iget-object p2, p0, Lk2;->b:Ljava/lang/Object;
+
+    check-cast p2, Lpi;
+
+    iget-object p2, p2, Lpi;->a:Ljava/lang/String;
+
+    const-string p3, "Undefined "
+
+    const-string v0, " type"
+
+    invoke-static {p3, p2, v0}, Ltx8;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_5
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
 .end method

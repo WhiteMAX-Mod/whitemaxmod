@@ -1,58 +1,31 @@
 .class public final Lxig;
-.super Ljava/lang/Object;
+.super Lcjg;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Landroid/util/LruCache;
-
-
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 2
 
-    new-instance v0, Landroid/util/LruCache;
+    if-eqz p1, :cond_0
 
-    const/4 v1, 0x2
+    const-string v0, "io connection error: "
 
-    invoke-direct {v0, v1}, Landroid/util/LruCache;-><init>(I)V
+    invoke-virtual {v0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    sput-object v0, Lxig;->a:Landroid/util/LruCache;
+    move-result-object p1
 
-    return-void
-.end method
-
-.method public static a(Lkg0;Lcjg;)V
-    .locals 2
-
-    if-nez p0, :cond_0
-
-    return-void
+    goto :goto_0
 
     :cond_0
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string p1, "io connection error"
 
-    const-string v1, "Save theme "
+    :goto_0
+    const/4 v0, 0x0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v1, "io.exception"
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, " to cache."
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "ThemeBackgroundCache"
-
-    invoke-static {v1, v0}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    sget-object v0, Lxig;->a:Landroid/util/LruCache;
-
-    invoke-virtual {v0, p0, p1}, Landroid/util/LruCache;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {p0, v1, p1, v0}, Lcjg;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

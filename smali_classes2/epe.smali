@@ -2,197 +2,176 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/hardware/SensorEventListener;
-
 
 # static fields
-.field public static final synthetic d:I
+.field public static final c:Lepe;
 
 
 # instance fields
-.field public final a:Landroid/hardware/SensorManager;
+.field public final a:I
 
-.field public final b:Landroid/hardware/Sensor;
-
-.field public final c:Ljava/util/Set;
+.field public final b:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 3
+
+    new-instance v0, Lepe;
+
+    const/4 v1, 0x1
+
+    sget-object v2, Lsi5;->a:Lsi5;
+
+    invoke-direct {v0, v1, v2}, Lepe;-><init>(ILjava/util/List;)V
+
+    sput-object v0, Lepe;->c:Lepe;
+
+    return-void
+.end method
+
+.method public constructor <init>(ILjava/util/List;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/LinkedHashSet;
+    iput p1, p0, Lepe;->a:I
 
-    invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
-
-    invoke-static {v0}, Ljava/util/Collections;->synchronizedSet(Ljava/util/Set;)Ljava/util/Set;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lepe;->c:Ljava/util/Set;
-
-    new-instance v0, Ljava/util/LinkedHashSet;
-
-    invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
-
-    invoke-static {v0}, Ljava/util/Collections;->synchronizedSet(Ljava/util/Set;)Ljava/util/Set;
-
-    const-string v0, "sensor"
-
-    invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/hardware/SensorManager;
-
-    iput-object p1, p0, Lepe;->a:Landroid/hardware/SensorManager;
-
-    const/16 v0, 0x8
-
-    invoke-virtual {p1, v0}, Landroid/hardware/SensorManager;->getDefaultSensor(I)Landroid/hardware/Sensor;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lepe;->b:Landroid/hardware/Sensor;
-
-    const/4 v0, 0x5
-
-    invoke-virtual {p1, v0}, Landroid/hardware/SensorManager;->getDefaultSensor(I)Landroid/hardware/Sensor;
+    iput-object p2, p0, Lepe;->b:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAccuracyChanged(Landroid/hardware/Sensor;I)V
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    return-void
-.end method
+    if-ne p0, p1, :cond_0
 
-.method public final onSensorChanged(Landroid/hardware/SensorEvent;)V
-    .locals 5
-
-    iget-object v0, p0, Lepe;->c:Ljava/util/Set;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-object v1, p1, Landroid/hardware/SensorEvent;->sensor:Landroid/hardware/Sensor;
-
-    invoke-virtual {v1}, Landroid/hardware/Sensor;->getType()I
-
-    move-result v1
-
-    const/16 v2, 0x8
-
-    if-ne v1, v2, :cond_5
-
-    iget-object v1, p1, Landroid/hardware/SensorEvent;->values:[F
-
-    const/4 v2, 0x0
-
-    aget v1, v1, v2
-
-    iget-object p1, p1, Landroid/hardware/SensorEvent;->sensor:Landroid/hardware/Sensor;
-
-    invoke-virtual {p1}, Landroid/hardware/Sensor;->getMaximumRange()F
-
-    move-result p1
-
-    cmpg-float p1, v1, p1
-
-    if-gez p1, :cond_0
-
-    const/4 v2, 0x1
+    goto :goto_1
 
     :cond_0
-    iget-object p1, p0, Lepe;->c:Ljava/util/Set;
+    instance-of v0, p1, Lepe;
 
-    invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    if-nez v0, :cond_1
 
-    move-result-object p1
+    goto :goto_0
 
     :cond_1
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    check-cast p1, Lepe;
 
-    move-result v1
+    iget v0, p0, Lepe;->a:I
 
-    if-eqz v1, :cond_5
+    iget v1, p1, Lepe;->a:I
 
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lr30;
-
-    if-eqz v2, :cond_4
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const-string v3, "r30"
-
-    const-string v4, "onDeviceNextToEar"
-
-    invoke-static {v3, v4}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v3, v1, Lr30;->c:Ljea;
-
-    iget-boolean v4, v3, Ljea;->J0:Z
-
-    if-nez v4, :cond_2
+    if-eq v0, v1, :cond_2
 
     goto :goto_0
 
     :cond_2
-    invoke-virtual {v1}, Lr30;->k()Z
+    iget-object v0, p0, Lepe;->b:Ljava/util/List;
 
-    move-result v4
+    iget-object p1, p1, Lepe;->b:Ljava/util/List;
 
-    if-nez v4, :cond_3
+    invoke-static {v0, p1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    iget-object v1, v1, Lr30;->i:Ln8g;
+    move-result p1
 
-    invoke-virtual {v1}, Ln8g;->getValue()Ljava/lang/Object;
+    if-nez p1, :cond_3
 
-    move-result-object v1
+    :goto_0
+    const/4 p1, 0x0
 
-    check-cast v1, Landroid/os/PowerManager$WakeLock;
-
-    invoke-virtual {v1}, Landroid/os/PowerManager$WakeLock;->acquire()V
+    return p1
 
     :cond_3
-    iget-boolean v1, v3, Ljea;->J0:Z
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v3}, Ljea;->k()Le49;
-
-    goto :goto_0
-
-    :cond_4
-    invoke-virtual {v1}, Lr30;->n()V
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
-    :cond_5
-    monitor-exit v0
-
-    return-void
-
     :goto_1
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    const/4 p1, 0x1
 
-    throw p1
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget v0, p0, Lepe;->a:I
+
+    invoke-static {v0}, Ly12;->t(I)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lepe;->b:Ljava/util/List;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "SearchState(state="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    const/4 v1, 0x1
+
+    iget v2, p0, Lepe;->a:I
+
+    if-eq v2, v1, :cond_2
+
+    const/4 v1, 0x2
+
+    if-eq v2, v1, :cond_1
+
+    const/4 v1, 0x3
+
+    if-eq v2, v1, :cond_0
+
+    const-string v1, "null"
+
+    goto :goto_0
+
+    :cond_0
+    const-string v1, "EMPTY"
+
+    goto :goto_0
+
+    :cond_1
+    const-string v1, "CONTENT"
+
+    goto :goto_0
+
+    :cond_2
+    const-string v1, "LOADING"
+
+    :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", content="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lepe;->b:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

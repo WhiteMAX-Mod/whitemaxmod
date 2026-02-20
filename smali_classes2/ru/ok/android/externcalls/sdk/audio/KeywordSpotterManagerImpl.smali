@@ -20,21 +20,21 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;",
         "Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManager;",
-        "Ls11;",
+        "Lf21;",
         "call",
         "Lru/ok/android/externcalls/sdk/stat/kws/ConversationKwsStat;",
         "stat",
         "Lru/ok/android/externcalls/sdk/audio/internal/KeywordSpotterConfigProvider;",
         "configProvider",
-        "Lxkg;",
+        "Losg;",
         "timeProvider",
-        "Lahd;",
+        "Ltmd;",
         "logger",
         "<init>",
-        "(Ls11;Lru/ok/android/externcalls/sdk/stat/kws/ConversationKwsStat;Lru/ok/android/externcalls/sdk/audio/internal/KeywordSpotterConfigProvider;Lxkg;Lahd;)V",
+        "(Lf21;Lru/ok/android/externcalls/sdk/stat/kws/ConversationKwsStat;Lru/ok/android/externcalls/sdk/audio/internal/KeywordSpotterConfigProvider;Losg;Ltmd;)V",
         "",
         "timeout",
-        "Lb3h;",
+        "Lmah;",
         "scheduleTurnOff",
         "(J)V",
         "Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManager$KeywordSpotterParams;",
@@ -43,19 +43,19 @@
         "(Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManager$KeywordSpotterParams;)V",
         "release",
         "()V",
-        "Ls11;",
+        "Lf21;",
         "Lru/ok/android/externcalls/sdk/stat/kws/ConversationKwsStat;",
-        "Lxkg;",
-        "Lahd;",
-        "Lmn0;",
+        "Losg;",
+        "Ltmd;",
+        "Lso0;",
         "kotlin.jvm.PlatformType",
         "turnOffInMs",
-        "Lmn0;",
+        "Lso0;",
         "startTimeMs",
         "J",
-        "Lo25;",
+        "Ly35;",
         "turnOffDisposable",
-        "Lo25;",
+        "Ly35;",
         "shutDownDisposable",
         "initDisposable",
         "Landroid/os/Handler;",
@@ -84,30 +84,30 @@
 
 
 # instance fields
-.field private final call:Ls11;
+.field private final call:Lf21;
 
 .field private final consumer:Lorg/webrtc/NativeDoubleArrayConsumer$Consumer;
 
-.field private final initDisposable:Lo25;
+.field private final initDisposable:Ly35;
 
-.field private final logger:Lahd;
+.field private final logger:Ltmd;
 
 .field private final mainHandler:Landroid/os/Handler;
 
-.field private shutDownDisposable:Lo25;
+.field private shutDownDisposable:Ly35;
 
 .field private startTimeMs:J
 
 .field private final stat:Lru/ok/android/externcalls/sdk/stat/kws/ConversationKwsStat;
 
-.field private final timeProvider:Lxkg;
+.field private final timeProvider:Losg;
 
-.field private turnOffDisposable:Lo25;
+.field private turnOffDisposable:Ly35;
 
-.field private final turnOffInMs:Lmn0;
+.field private final turnOffInMs:Lso0;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lmn0;"
+            "Lso0;"
         }
     .end annotation
 .end field
@@ -121,49 +121,49 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl$Companion;-><init>(Lso4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl$Companion;-><init>(Lfq4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->Companion:Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl$Companion;
 
     return-void
 .end method
 
-.method public constructor <init>(Ls11;Lru/ok/android/externcalls/sdk/stat/kws/ConversationKwsStat;Lru/ok/android/externcalls/sdk/audio/internal/KeywordSpotterConfigProvider;Lxkg;Lahd;)V
+.method public constructor <init>(Lf21;Lru/ok/android/externcalls/sdk/stat/kws/ConversationKwsStat;Lru/ok/android/externcalls/sdk/audio/internal/KeywordSpotterConfigProvider;Losg;Ltmd;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->call:Ls11;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->call:Lf21;
 
     iput-object p2, p0, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->stat:Lru/ok/android/externcalls/sdk/stat/kws/ConversationKwsStat;
 
-    iput-object p4, p0, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->timeProvider:Lxkg;
+    iput-object p4, p0, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->timeProvider:Losg;
 
-    iput-object p5, p0, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->logger:Lahd;
+    iput-object p5, p0, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->logger:Ltmd;
 
-    new-instance p1, Lmn0;
+    new-instance p1, Lso0;
 
     const/4 p2, 0x0
 
-    invoke-direct {p1, p2}, Lmn0;-><init>(Ljava/lang/Object;)V
+    invoke-direct {p1, p2}, Lso0;-><init>(Ljava/lang/Object;)V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->turnOffInMs:Lmn0;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->turnOffInMs:Lso0;
 
-    sget-object p1, Lyg5;->a:Lyg5;
+    sget-object p1, Lni5;->a:Lni5;
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->turnOffDisposable:Lo25;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->turnOffDisposable:Ly35;
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->shutDownDisposable:Lo25;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->shutDownDisposable:Ly35;
 
-    invoke-interface {p3}, Lru/ok/android/externcalls/sdk/config/ConfigProvider;->getConfig()Lkef;
+    invoke-interface {p3}, Lru/ok/android/externcalls/sdk/config/ConfigProvider;->getConfig()Luw8;
 
     move-result-object p1
 
-    invoke-static {}, Lde;->a()Lpbe;
+    invoke-static {}, Lsf;->a()Leie;
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lkef;->i(Lpbe;)Lcff;
+    invoke-virtual {p1, p2}, Luw8;->e(Leie;)Lix8;
 
     move-result-object p1
 
@@ -175,11 +175,17 @@
 
     invoke-direct {p3, p0}, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl$initDisposable$2;-><init>(Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;)V
 
-    invoke-virtual {p1, p2, p3}, Lkef;->k(Lay3;Lay3;)Lnw1;
+    new-instance p4, Ln78;
 
-    move-result-object p1
+    invoke-direct {p4, p0}, Ln78;-><init>(Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;)V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->initDisposable:Lo25;
+    new-instance p5, Lvw8;
+
+    invoke-direct {p5, p2, p3, p4}, Lvw8;-><init>(Lsy3;Lsy3;Ls7;)V
+
+    invoke-virtual {p1, p5}, Luw8;->f(Ljx8;)V
+
+    iput-object p5, p0, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->initDisposable:Ly35;
 
     new-instance p1, Landroid/os/Handler;
 
@@ -191,37 +197,35 @@
 
     iput-object p1, p0, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->mainHandler:Landroid/os/Handler;
 
-    new-instance p1, Lgg7;
+    new-instance p1, Ln78;
 
-    const/4 p2, 0x4
-
-    invoke-direct {p1, p2, p0}, Lgg7;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p1, p0}, Ln78;-><init>(Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;)V
 
     iput-object p1, p0, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->consumer:Lorg/webrtc/NativeDoubleArrayConsumer$Consumer;
 
     return-void
 .end method
 
-.method public static synthetic a(Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;[Ljava/lang/Double;)V
+.method public static synthetic a(Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;)V
     .locals 0
 
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->consumer$lambda$2(Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;[Ljava/lang/Double;)V
+    invoke-static {p0}, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->initDisposable$lambda$0(Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;)V
 
     return-void
 .end method
 
-.method public static final synthetic access$getCall$p(Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;)Ls11;
+.method public static final synthetic access$getCall$p(Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;)Lf21;
     .locals 0
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->call:Ls11;
+    iget-object p0, p0, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->call:Lf21;
 
     return-object p0
 .end method
 
-.method public static final synthetic access$getLogger$p(Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;)Lahd;
+.method public static final synthetic access$getLogger$p(Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;)Ltmd;
     .locals 0
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->logger:Lahd;
+    iget-object p0, p0, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->logger:Ltmd;
 
     return-object p0
 .end method
@@ -234,18 +238,18 @@
     return-wide v0
 .end method
 
-.method public static final synthetic access$getTimeProvider$p(Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;)Lxkg;
+.method public static final synthetic access$getTimeProvider$p(Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;)Losg;
     .locals 0
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->timeProvider:Lxkg;
+    iget-object p0, p0, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->timeProvider:Losg;
 
     return-object p0
 .end method
 
-.method public static final synthetic access$getTurnOffInMs$p(Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;)Lmn0;
+.method public static final synthetic access$getTurnOffInMs$p(Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;)Lso0;
     .locals 0
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->turnOffInMs:Lmn0;
+    iget-object p0, p0, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->turnOffInMs:Lso0;
 
     return-object p0
 .end method
@@ -261,12 +265,20 @@
 .method public static synthetic b(Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;[Ljava/lang/Double;)V
     .locals 0
 
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->consumer$lambda$2$lambda$1(Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;[Ljava/lang/Double;)V
+    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->consumer$lambda$3$lambda$2(Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;[Ljava/lang/Double;)V
 
     return-void
 .end method
 
-.method private static final consumer$lambda$2(Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;[Ljava/lang/Double;)V
+.method public static synthetic c(Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;[Ljava/lang/Double;)V
+    .locals 0
+
+    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->consumer$lambda$3(Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;[Ljava/lang/Double;)V
+
+    return-void
+.end method
+
+.method private static final consumer$lambda$3(Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;[Ljava/lang/Double;)V
     .locals 5
 
     array-length v0, p1
@@ -278,7 +290,7 @@
 
     aget-object v2, p1, v1
 
-    iget-object v3, p0, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->logger:Lahd;
+    iget-object v3, p0, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->logger:Ltmd;
 
     filled-new-array {v2}, [Ljava/lang/Object;
 
@@ -304,7 +316,7 @@
 
     const-string v4, "KeywordSpotterManagerImpl"
 
-    invoke-interface {v3, v4, v2}, Lahd;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v3, v4, v2}, Ltmd;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     add-int/lit8 v1, v1, 0x1
 
@@ -320,18 +332,18 @@
     :cond_1
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->mainHandler:Landroid/os/Handler;
 
-    new-instance v1, Lu36;
+    new-instance v1, Lp56;
 
     const/16 v2, 0x10
 
-    invoke-direct {v1, p0, v2, p1}, Lu36;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v1, p0, v2, p1}, Lp56;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method
 
-.method private static final consumer$lambda$2$lambda$1(Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;[Ljava/lang/Double;)V
+.method private static final consumer$lambda$3$lambda$2(Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;[Ljava/lang/Double;)V
     .locals 6
 
     iget-object p0, p0, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->stat:Lru/ok/android/externcalls/sdk/stat/kws/ConversationKwsStat;
@@ -388,26 +400,40 @@
     throw p0
 .end method
 
+.method private static final initDisposable$lambda$0(Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;)V
+    .locals 2
+
+    iget-object p0, p0, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->logger:Ltmd;
+
+    const-string v0, "KeywordSpotterManagerImpl"
+
+    const-string v1, "Wordspotter control config has not been provided"
+
+    invoke-interface {p0, v0, v1}, Ltmd;->log(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method
+
 .method private final scheduleTurnOff(J)V
     .locals 3
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->logger:Lahd;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->logger:Ltmd;
 
     const-string v1, "Schedule wordspotter shutdown in "
 
     const-string v2, " ms"
 
-    invoke-static {p1, p2, v1, v2}, Lcbh;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, p2, v1, v2}, Lfvg;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     const-string v2, "KeywordSpotterManagerImpl"
 
-    invoke-interface {v0, v2, v1}, Lahd;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v2, v1}, Ltmd;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-static {}, Lace;->a()Lpbe;
+    invoke-static {}, Lpie;->a()Leie;
 
     move-result-object v1
 
@@ -419,15 +445,15 @@
 
     invoke-static {v1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    new-instance v0, Lzff;
+    new-instance v0, Lynf;
 
-    invoke-direct {v0, p1, p2, v1}, Lzff;-><init>(JLpbe;)V
+    invoke-direct {v0, p1, p2, v1}, Lynf;-><init>(JLeie;)V
 
-    invoke-static {}, Lde;->a()Lpbe;
+    invoke-static {}, Lsf;->a()Leie;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lkef;->i(Lpbe;)Lcff;
+    invoke-virtual {v0, p1}, Limf;->j(Leie;)Lbnf;
 
     move-result-object p1
 
@@ -439,11 +465,11 @@
 
     invoke-direct {v0, p0}, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl$scheduleTurnOff$2;-><init>(Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;)V
 
-    invoke-virtual {p1, p2, v0}, Lkef;->k(Lay3;Lay3;)Lnw1;
+    invoke-virtual {p1, p2, v0}, Limf;->l(Lsy3;Lsy3;)Lqx1;
 
     move-result-object p1
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->shutDownDisposable:Lo25;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->shutDownDisposable:Ly35;
 
     return-void
 .end method
@@ -453,25 +479,25 @@
 .method public final release()V
     .locals 3
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->logger:Lahd;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->logger:Ltmd;
 
     const-string v1, "KeywordSpotterManagerImpl"
 
     const-string v2, "Releasing wordspotter manager"
 
-    invoke-interface {v0, v1, v2}, Lahd;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v1, v2}, Ltmd;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->initDisposable:Lo25;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->initDisposable:Ly35;
 
-    invoke-interface {v0}, Lo25;->dispose()V
+    invoke-interface {v0}, Ly35;->dispose()V
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->turnOffDisposable:Lo25;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->turnOffDisposable:Ly35;
 
-    invoke-interface {v0}, Lo25;->dispose()V
+    invoke-interface {v0}, Ly35;->dispose()V
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->shutDownDisposable:Lo25;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->shutDownDisposable:Ly35;
 
-    invoke-interface {v0}, Lo25;->dispose()V
+    invoke-interface {v0}, Ly35;->dispose()V
 
     return-void
 .end method
@@ -479,23 +505,23 @@
 .method public setKeywordSpotterParams(Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManager$KeywordSpotterParams;)V
     .locals 6
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->logger:Lahd;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->logger:Ltmd;
 
     const-string v1, "Cleaning scheduled actions"
 
     const-string v2, "KeywordSpotterManagerImpl"
 
-    invoke-interface {v0, v2, v1}, Lahd;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v2, v1}, Ltmd;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->turnOffDisposable:Lo25;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->turnOffDisposable:Ly35;
 
-    invoke-interface {v0}, Lo25;->dispose()V
+    invoke-interface {v0}, Ly35;->dispose()V
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->shutDownDisposable:Lo25;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->shutDownDisposable:Ly35;
 
-    invoke-interface {v0}, Lo25;->dispose()V
+    invoke-interface {v0}, Ly35;->dispose()V
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->logger:Lahd;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->logger:Ltmd;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -509,11 +535,11 @@
 
     move-result-object v1
 
-    invoke-interface {v0, v2, v1}, Lahd;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v2, v1}, Ltmd;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->call:Ls11;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->call:Lf21;
 
-    new-instance v1, Lr48;
+    new-instance v1, Lo78;
 
     invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManager$KeywordSpotterParams;->isEnabled()Z
 
@@ -525,22 +551,22 @@
 
     iget-object v4, p0, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->consumer:Lorg/webrtc/NativeDoubleArrayConsumer$Consumer;
 
-    invoke-direct {v1, v2, v3, v4}, Lr48;-><init>(ZLjava/lang/String;Lorg/webrtc/NativeDoubleArrayConsumer$Consumer;)V
+    invoke-direct {v1, v2, v3, v4}, Lo78;-><init>(ZLjava/lang/String;Lorg/webrtc/NativeDoubleArrayConsumer$Consumer;)V
 
-    iget-object v2, v0, Ls11;->f0:Lq7f;
+    iget-object v2, v0, Lf21;->f0:Lgff;
 
     if-nez v2, :cond_0
 
     goto :goto_0
 
     :cond_0
-    iget-object v3, v0, Ls11;->c:Ljava/util/concurrent/ExecutorService;
+    iget-object v3, v0, Lf21;->c:Ljava/util/concurrent/ExecutorService;
 
-    new-instance v4, Lzi;
+    new-instance v4, Lnk;
 
     const/4 v5, 0x7
 
-    invoke-direct {v4, v0, v2, v1, v5}, Lzi;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    invoke-direct {v4, v0, v2, v1, v5}, Lnk;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
     invoke-interface {v3, v4}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
@@ -554,21 +580,21 @@
     return-void
 
     :cond_1
-    iget-object p1, p0, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->timeProvider:Lxkg;
+    iget-object p1, p0, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->timeProvider:Losg;
 
-    invoke-interface {p1}, Lxkg;->getMsSinceBoot()J
+    invoke-interface {p1}, Losg;->getMsSinceBoot()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->startTimeMs:J
 
-    iget-object p1, p0, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->turnOffInMs:Lmn0;
+    iget-object p1, p0, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->turnOffInMs:Lso0;
 
-    invoke-static {}, Lde;->a()Lpbe;
+    invoke-static {}, Lsf;->a()Leie;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Ldxa;->i(Lpbe;)Laza;
+    invoke-virtual {p1, v0}, Luza;->j(Leie;)Lp1b;
 
     move-result-object p1
 
@@ -580,15 +606,15 @@
 
     invoke-direct {v1, p0}, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl$setKeywordSpotterParams$2;-><init>(Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;)V
 
-    new-instance v2, Lz48;
+    new-instance v2, Lw78;
 
-    sget-object v3, Lhbe;->c:Lsr6;
+    sget-object v3, Lq4h;->c:Lmqa;
 
-    invoke-direct {v2, v0, v1, v3}, Lz48;-><init>(Lay3;Lay3;Li6;)V
+    invoke-direct {v2, v0, v1, v3}, Lw78;-><init>(Lsy3;Lsy3;Ls7;)V
 
-    invoke-virtual {p1, v2}, Ldxa;->a(Le0b;)V
+    invoke-virtual {p1, v2}, Luza;->a(Lv2b;)V
 
-    iput-object v2, p0, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->turnOffDisposable:Lo25;
+    iput-object v2, p0, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->turnOffDisposable:Ly35;
 
     return-void
 .end method

@@ -1,64 +1,141 @@
-.class public final Lkrf;
-.super Ljava/lang/Object;
+.class public final enum Lkrf;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Lyia;
+
+# static fields
+.field public static final enum X:Lkrf;
+
+.field public static final synthetic Y:[Lkrf;
+
+.field public static final synthetic Z:Lpm5;
+
+.field public static final enum b:Lkrf;
+
+.field public static final enum c:Lkrf;
+
+.field public static final enum d:Lkrf;
+
+.field public static final enum o:Lkrf;
 
 
 # instance fields
-.field public final synthetic a:Llrf;
+.field public final a:I
 
 
 # direct methods
-.method public constructor <init>(Llrf;)V
+.method static constructor <clinit>()V
+    .locals 9
+
+    new-instance v0, Lkrf;
+
+    const-string v1, "DIALOG_USER_ID"
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    invoke-direct {v0, v1, v2, v3}, Lkrf;-><init>(Ljava/lang/String;II)V
+
+    sput-object v0, Lkrf;->b:Lkrf;
+
+    new-instance v1, Lkrf;
+
+    const-string v2, "DIALOG_BOT_ID"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v1, v2, v3, v4}, Lkrf;-><init>(Ljava/lang/String;II)V
+
+    sput-object v1, Lkrf;->c:Lkrf;
+
+    new-instance v2, Lkrf;
+
+    const-string v3, "CHAT_ID"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v2, v3, v4, v5}, Lkrf;-><init>(Ljava/lang/String;II)V
+
+    sput-object v2, Lkrf;->d:Lkrf;
+
+    new-instance v3, Lkrf;
+
+    const-string v4, "CHANNEL_ID"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v3, v4, v5, v6}, Lkrf;-><init>(Ljava/lang/String;II)V
+
+    new-instance v4, Lkrf;
+
+    const-string v5, "FOLDER_ID"
+
+    const/4 v7, 0x5
+
+    invoke-direct {v4, v5, v6, v7}, Lkrf;-><init>(Ljava/lang/String;II)V
+
+    sput-object v4, Lkrf;->o:Lkrf;
+
+    new-instance v5, Lkrf;
+
+    const-string v6, "WEBAPP_ID"
+
+    const/4 v8, 0x6
+
+    invoke-direct {v5, v6, v7, v8}, Lkrf;-><init>(Ljava/lang/String;II)V
+
+    sput-object v5, Lkrf;->X:Lkrf;
+
+    filled-new-array/range {v0 .. v5}, [Lkrf;
+
+    move-result-object v0
+
+    sput-object v0, Lkrf;->Y:[Lkrf;
+
+    new-instance v1, Lpm5;
+
+    invoke-direct {v1, v0}, Lpm5;-><init>([Ljava/lang/Enum;)V
+
+    sput-object v1, Lkrf;->Z:Lpm5;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iput-object p1, p0, Lkrf;->a:Llrf;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onFailed(Ljava/lang/Throwable;)V
-    .locals 2
-
-    iget-object v0, p0, Lkrf;->a:Llrf;
-
-    iget-object v1, v0, Llrf;->f:Ley;
-
-    invoke-virtual {v0, v1, p1}, Ltz;->a(Ley;Ljava/lang/Throwable;)V
+    iput p3, p0, Lkrf;->a:I
 
     return-void
 .end method
 
-.method public final onFinished(Ljava/lang/String;Ljava/io/File;Ljava/lang/String;)V
-    .locals 2
+.method public static valueOf(Ljava/lang/String;)Lkrf;
+    .locals 1
 
-    iget-object p1, p0, Lkrf;->a:Llrf;
+    const-class v0, Lkrf;
 
-    iget-object p1, p1, Llrf;->c:Ln8g;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    invoke-virtual {p1}, Ln8g;->getValue()Ljava/lang/Object;
+    move-result-object p0
 
-    move-result-object p1
+    check-cast p0, Lkrf;
 
-    check-cast p1, Lyab;
+    return-object p0
+.end method
 
-    invoke-virtual {p1}, Lyab;->c()Ljava/util/concurrent/ExecutorService;
+.method public static values()[Lkrf;
+    .locals 1
 
-    move-result-object p1
+    sget-object v0, Lkrf;->Y:[Lkrf;
 
-    new-instance v0, Lxqd;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    const/16 v1, 0x8
+    move-result-object v0
 
-    invoke-direct {v0, p0, p2, p3, v1}, Lxqd;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    check-cast v0, [Lkrf;
 
-    invoke-interface {p1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
-    return-void
+    return-object v0
 .end method

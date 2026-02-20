@@ -1,80 +1,169 @@
 .class public final Lt82;
-.super Lm1g;
+.super Ltb8;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Comparable;
 
 
 # instance fields
-.field public u0:J
+.field public final synthetic q:I
+
+
+# direct methods
+.method public synthetic constructor <init>(Landroid/content/Context;I)V
+    .locals 0
+
+    .line 1
+    iput p2, p0, Lt82;->q:I
+
+    invoke-direct {p0, p1}, Ltb8;-><init>(Landroid/content/Context;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Lcom/google/android/material/carousel/CarouselLayoutManager;Landroid/content/Context;)V
+    .locals 0
+
+    const/4 p1, 0x0
+
+    iput p1, p0, Lt82;->q:I
+
+    .line 2
+    invoke-direct {p0, p2}, Ltb8;-><init>(Landroid/content/Context;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final compareTo(Ljava/lang/Object;)I
-    .locals 6
+.method public b(Landroid/view/View;I)I
+    .locals 1
 
-    check-cast p1, Lt82;
+    iget v0, p0, Lt82;->q:I
 
-    const/4 v0, 0x4
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, v0}, Laz;->g(I)Z
-
-    move-result v1
-
-    invoke-virtual {p1, v0}, Laz;->g(I)Z
-
-    move-result v2
-
-    if-eq v1, v2, :cond_0
-
-    invoke-virtual {p0, v0}, Laz;->g(I)Z
+    invoke-super {p0, p1, p2}, Ltb8;->b(Landroid/view/View;I)I
 
     move-result p1
 
-    if-eqz p1, :cond_2
+    return p1
 
-    goto :goto_0
-
-    :cond_0
-    iget-wide v0, p0, Lnl4;->X:J
-
-    iget-wide v2, p1, Lnl4;->X:J
-
-    sub-long/2addr v0, v2
-
-    const-wide/16 v2, 0x0
-
-    cmp-long v4, v0, v2
-
-    if-nez v4, :cond_1
-
-    iget-wide v0, p0, Lt82;->u0:J
-
-    iget-wide v4, p1, Lt82;->u0:J
-
-    sub-long/2addr v0, v4
-
-    cmp-long p1, v0, v2
-
-    if-nez p1, :cond_1
-
+    :pswitch_0
     const/4 p1, 0x0
 
     return p1
 
-    :cond_1
-    cmp-long p1, v0, v2
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    if-lez p1, :cond_2
+.method public c(Landroid/view/View;I)I
+    .locals 1
 
-    :goto_0
-    const/4 p1, 0x1
+    iget v0, p0, Lt82;->q:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0, p1, p2}, Ltb8;->c(Landroid/view/View;I)I
+
+    move-result p1
 
     return p1
 
-    :cond_2
-    const/4 p1, -0x1
+    :pswitch_0
+    const/4 p1, 0x0
 
     return p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public d(Landroid/util/DisplayMetrics;)F
+    .locals 1
+
+    iget v0, p0, Lt82;->q:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0, p1}, Ltb8;->d(Landroid/util/DisplayMetrics;)F
+
+    move-result p1
+
+    return p1
+
+    :pswitch_0
+    iget p1, p1, Landroid/util/DisplayMetrics;->densityDpi:I
+
+    int-to-float p1, p1
+
+    const/high16 v0, 0x42c80000    # 100.0f
+
+    div-float/2addr v0, p1
+
+    return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x3
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public g(I)Landroid/graphics/PointF;
+    .locals 1
+
+    iget v0, p0, Lt82;->q:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0, p1}, Ltb8;->g(I)Landroid/graphics/PointF;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_0
+    const/4 p1, 0x0
+
+    return-object p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public h()I
+    .locals 1
+
+    iget v0, p0, Lt82;->q:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0}, Ltb8;->h()I
+
+    move-result v0
+
+    return v0
+
+    :pswitch_0
+    const/4 v0, -0x1
+
+    return v0
+
+    :pswitch_1
+    const/4 v0, -0x1
+
+    return v0
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

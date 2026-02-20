@@ -1,69 +1,161 @@
-.class public abstract Llmj;
-.super Ljava/lang/Object;
+.class public final Llmj;
+.super Lfxi;
 .source "SourceFile"
+
+# interfaces
+.implements Lmsj;
+
+
+# instance fields
+.field public final synthetic d:I
+
+.field public final synthetic e:Ldgj;
 
 
 # direct methods
-.method public static final a(Ljava/lang/reflect/Field;Ljava/lang/String;)Ljava/lang/reflect/Field;
-    .locals 2
+.method public constructor <init>(Ldgj;I)V
+    .locals 0
 
-    :try_start_0
-    const-class v0, Lcom/google/firebase/concurrent/ExecutorsRegistrar;
+    iput p2, p0, Llmj;->d:I
 
-    invoke-virtual {v0, p1}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+    iput-object p1, p0, Llmj;->e:Ldgj;
 
-    move-result-object v0
+    const-string p1, "com.google.android.gms.auth.api.signin.internal.ISignInCallbacks"
 
-    const/4 v1, 0x1
+    const/4 p2, 0x6
 
-    invoke-virtual {v0, v1}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+    invoke-direct {p0, p1, p2}, Lfxi;-><init>(Ljava/lang/String;I)V
 
-    invoke-virtual {v0}, Ljava/lang/reflect/Field;->getModifiers()I
-
-    move-result v1
-
-    and-int/lit8 v1, v1, -0x11
-
-    invoke-virtual {p0, v0, v1}, Ljava/lang/reflect/Field;->setInt(Ljava/lang/Object;I)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    return-object v0
-
-    :catchall_0
-    move-exception p0
-
-    const-string v0, "fail to fetch executor field "
-
-    invoke-virtual {v0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v0, "ReplaceExecutorRegistrarLogic"
-
-    invoke-static {v0, p1, p0}, Lc5j;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    const/4 p0, 0x0
-
-    return-object p0
+    return-void
 .end method
 
-.method public static final b(Ljava/lang/reflect/Field;Llq6;)V
-    .locals 3
 
-    new-instance v0, Lp58;
+# virtual methods
+.method public final V(ILandroid/os/Parcel;Landroid/os/Parcel;)Z
+    .locals 0
 
-    new-instance v1, Lip3;
-
-    const/4 v2, 0x3
-
-    invoke-direct {v1, v2, p1}, Lip3;-><init>(ILjava/lang/Object;)V
-
-    invoke-direct {v0, v1}, Lp58;-><init>(Llzc;)V
+    packed-switch p1, :pswitch_data_0
 
     const/4 p1, 0x0
 
-    invoke-virtual {p0, p1, v0}, Ljava/lang/reflect/Field;->set(Ljava/lang/Object;Ljava/lang/Object;)V
+    return p1
+
+    :pswitch_0
+    sget-object p1, Lcom/google/android/gms/common/api/Status;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-static {p2, p1}, Lx7j;->a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/google/android/gms/common/api/Status;
+
+    invoke-interface {p0, p1}, Lmsj;->l(Lcom/google/android/gms/common/api/Status;)V
+
+    goto :goto_0
+
+    :pswitch_1
+    sget-object p1, Lcom/google/android/gms/common/api/Status;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-static {p2, p1}, Lx7j;->a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/google/android/gms/common/api/Status;
+
+    invoke-interface {p0, p1}, Lmsj;->h(Lcom/google/android/gms/common/api/Status;)V
+
+    :goto_0
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :pswitch_2
+    sget-object p1, Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-static {p2, p1}, Lx7j;->a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;
+
+    sget-object p1, Lcom/google/android/gms/common/api/Status;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-static {p2, p1}, Lx7j;->a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/google/android/gms/common/api/Status;
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x65
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public h(Lcom/google/android/gms/common/api/Status;)V
+    .locals 1
+
+    iget v0, p0, Llmj;->d:I
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+
+    :pswitch_0
+    iget-object v0, p0, Llmj;->e:Ldgj;
+
+    invoke-virtual {v0, p1}, Lcom/google/android/gms/common/api/internal/BasePendingResult;->f(Lg6e;)V
 
     return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public l(Lcom/google/android/gms/common/api/Status;)V
+    .locals 1
+
+    iget v0, p0, Llmj;->d:I
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+
+    :pswitch_0
+    iget-object v0, p0, Llmj;->e:Ldgj;
+
+    invoke-virtual {v0, p1}, Lcom/google/android/gms/common/api/internal/BasePendingResult;->f(Lg6e;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method

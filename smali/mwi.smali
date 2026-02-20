@@ -1,76 +1,31 @@
-.class public abstract Lmwi;
-.super Lzvi;
+.class public final Lmwi;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/util/Set;
 
 
 # instance fields
-.field public transient b:Liwi;
+.field public final a:Ljava/lang/String;
+
+.field public final b:Lru/ok/android/externcalls/analytics/events/EventItemValue;
+
+.field public final c:Lru/ok/android/externcalls/analytics/events/EventItemsMap;
+
+.field public final d:Ljava/lang/Long;
 
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+# direct methods
+.method public constructor <init>(Ljava/lang/String;Lru/ok/android/externcalls/analytics/events/EventItemValue;Lru/ok/android/externcalls/analytics/events/EventItemsMap;Ljava/lang/Long;)V
+    .locals 0
 
-    if-ne p1, p0, :cond_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x1
+    iput-object p1, p0, Lmwi;->a:Ljava/lang/String;
 
-    return p1
+    iput-object p2, p0, Lmwi;->b:Lru/ok/android/externcalls/analytics/events/EventItemValue;
 
-    :cond_0
-    if-ne p0, p1, :cond_1
+    iput-object p3, p0, Lmwi;->c:Lru/ok/android/externcalls/analytics/events/EventItemsMap;
 
-    goto :goto_0
+    iput-object p4, p0, Lmwi;->d:Ljava/lang/Long;
 
-    :cond_1
-    instance-of v0, p1, Ljava/util/Set;
-
-    if-eqz v0, :cond_2
-
-    check-cast p1, Ljava/util/Set;
-
-    :try_start_0
-    invoke-interface {p0}, Ljava/util/Set;->size()I
-
-    move-result v0
-
-    invoke-interface {p1}, Ljava/util/Set;->size()I
-
-    move-result v1
-
-    if-ne v0, v1, :cond_2
-
-    invoke-interface {p0, p1}, Ljava/util/Set;->containsAll(Ljava/util/Collection;)Z
-
-    move-result p1
-    :try_end_0
-    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/lang/ClassCastException; {:try_start_0 .. :try_end_0} :catch_0
-
-    if-eqz p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x1
-
-    goto :goto_1
-
-    :catch_0
-    :cond_2
-    const/4 p1, 0x0
-
-    :goto_1
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    invoke-static {p0}, Labj;->f(Ljava/util/Set;)I
-
-    move-result v0
-
-    return v0
+    return-void
 .end method

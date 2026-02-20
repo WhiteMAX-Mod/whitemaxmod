@@ -1,21 +1,35 @@
 .class public final Lm1f;
-.super Laq;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lm1f;
+# instance fields
+.field public final a:Lwo8;
+
+.field public final b:Lj88;
+
+.field public final c:Lj88;
+
+.field public final d:Lj88;
+
+.field public final e:Lj88;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lj88;Lj88;Lj88;Lj88;Lwo8;)V
+    .locals 0
 
-    new-instance v0, Lm1f;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Laq;-><init>()V
+    iput-object p5, p0, Lm1f;->a:Lwo8;
 
-    sput-object v0, Lm1f;->a:Lm1f;
+    iput-object p1, p0, Lm1f;->b:Lj88;
+
+    iput-object p2, p0, Lm1f;->c:Lj88;
+
+    iput-object p3, p0, Lm1f;->d:Lj88;
+
+    iput-object p4, p0, Lm1f;->e:Lj88;
 
     return-void
 .end method

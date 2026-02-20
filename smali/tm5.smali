@@ -1,59 +1,74 @@
-.class public final Ltm5;
-.super Ljava/lang/Object;
+.class public Ltm5;
+.super Landroid/app/DialogFragment;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:[Lnm5;
+.field public a:Landroid/app/Dialog;
 
-.field public final b:[J
+.field public b:Landroid/content/DialogInterface$OnCancelListener;
 
-.field public final c:Ljava/lang/String;
-
-.field public final d:Ljava/lang/String;
+.field public c:Landroid/app/AlertDialog;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;[J[Lnm5;)V
+.method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ltm5;->c:Ljava/lang/String;
-
-    iput-object p2, p0, Ltm5;->d:Ljava/lang/String;
-
-    iput-object p3, p0, Ltm5;->b:[J
-
-    iput-object p4, p0, Ltm5;->a:[Lnm5;
+    invoke-direct {p0}, Landroid/app/DialogFragment;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/String;
-    .locals 2
+.method public final onCancel(Landroid/content/DialogInterface;)V
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object v0, p0, Ltm5;->b:Landroid/content/DialogInterface$OnCancelListener;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    if-eqz v0, :cond_0
 
-    iget-object v1, p0, Ltm5;->c:Ljava/lang/String;
+    invoke-interface {v0, p1}, Landroid/content/DialogInterface$OnCancelListener;->onCancel(Landroid/content/DialogInterface;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_0
+    return-void
+.end method
 
-    const-string v1, "/"
+.method public final onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
+    .locals 1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object p1, p0, Ltm5;->a:Landroid/app/Dialog;
 
-    iget-object v1, p0, Ltm5;->d:Ljava/lang/String;
+    if-nez p1, :cond_1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 p1, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p0, p1}, Landroid/app/DialogFragment;->setShowsDialog(Z)V
+
+    iget-object p1, p0, Ltm5;->c:Landroid/app/AlertDialog;
+
+    if-nez p1, :cond_0
+
+    new-instance p1, Landroid/app/AlertDialog$Builder;
+
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    return-object v0
+    invoke-static {v0}, Lftj;->g(Ljava/lang/Object;)V
+
+    invoke-direct {p1, v0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
+
+    invoke-virtual {p1}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
+
+    move-result-object p1
+
+    iput-object p1, p0, Ltm5;->c:Landroid/app/AlertDialog;
+
+    :cond_0
+    iget-object p1, p0, Ltm5;->c:Landroid/app/AlertDialog;
+
+    :cond_1
+    return-object p1
 .end method

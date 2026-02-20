@@ -1,78 +1,61 @@
 .class public final Lmz6;
-.super Ljava/lang/Object;
+.super Lda4;
 .source "SourceFile"
-
-# interfaces
-.implements Lud8;
 
 
 # instance fields
-.field public final X:Landroid/net/Uri;
+.field public X:Ljava/lang/String;
 
-.field public final Y:Lc14;
+.field public synthetic Y:Ljava/lang/Object;
 
-.field public final Z:Ljava/util/List;
+.field public final synthetic Z:Lnz6;
 
-.field public final a:J
+.field public d:J
 
-.field public final b:Ljava/lang/String;
+.field public o:Ljava/lang/String;
 
-.field public final c:Lofc;
-
-.field public final d:Lofc;
-
-.field public final o:Z
-
-.field public final t0:I
-
-.field public final u0:J
+.field public s0:I
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;Lofc;Lofc;ZLandroid/net/Uri;Lc14;Ljava/util/List;)V
+.method public constructor <init>(Lnz6;Lda4;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lmz6;->Z:Lnz6;
 
-    iput-wide p1, p0, Lmz6;->a:J
-
-    iput-object p3, p0, Lmz6;->b:Ljava/lang/String;
-
-    iput-object p4, p0, Lmz6;->c:Lofc;
-
-    iput-object p5, p0, Lmz6;->d:Lofc;
-
-    iput-boolean p6, p0, Lmz6;->o:Z
-
-    iput-object p7, p0, Lmz6;->X:Landroid/net/Uri;
-
-    iput-object p8, p0, Lmz6;->Y:Lc14;
-
-    iput-object p9, p0, Lmz6;->Z:Ljava/util/List;
-
-    sget p3, Lk8b;->r:I
-
-    iput p3, p0, Lmz6;->t0:I
-
-    iput-wide p1, p0, Lmz6;->u0:J
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getItemId()J
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    iget-wide v0, p0, Lmz6;->u0:J
+    iput-object p1, p0, Lmz6;->Y:Ljava/lang/Object;
 
-    return-wide v0
-.end method
+    iget p1, p0, Lmz6;->s0:I
 
-.method public final m()I
-    .locals 1
+    const/high16 v0, -0x80000000
 
-    iget v0, p0, Lmz6;->t0:I
+    or-int/2addr p1, v0
 
-    return v0
+    iput p1, p0, Lmz6;->s0:I
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    iget-object v0, p0, Lmz6;->Z:Lnz6;
+
+    const-wide/16 v1, 0x0
+
+    move-object v5, p0
+
+    invoke-virtual/range {v0 .. v5}, Lnz6;->a(JLjava/lang/Long;Ljava/lang/String;Lda4;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

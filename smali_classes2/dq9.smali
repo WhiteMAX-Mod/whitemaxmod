@@ -1,3 +1,3 @@
-.class public final Ldq9;
-.super Ltsd;
+.class public interface abstract Ldq9;
+.super Ljava/lang/Object;
 .source "SourceFile"

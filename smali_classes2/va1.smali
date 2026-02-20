@@ -1,19 +1,31 @@
-.class public final Lva1;
+.class public interface abstract Lva1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/lang/Object;
-
-
 # direct methods
-.method public constructor <init>(Ljava/util/Map;)V
-    .locals 0
+.method public static synthetic a(Lva1;Ljava/lang/String;Lru/ok/android/externcalls/analytics/events/EventItemValue;Lru/ok/android/externcalls/analytics/events/EventItemsMap;I)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    and-int/lit8 v0, p4, 0x2
 
-    iput-object p1, p0, Lva1;->a:Ljava/lang/Object;
+    if-eqz v0, :cond_0
+
+    const/4 p2, 0x0
+
+    :cond_0
+    and-int/lit8 p4, p4, 0x4
+
+    if-eqz p4, :cond_1
+
+    new-instance p3, Lru/ok/android/externcalls/analytics/events/EventItemsMap;
+
+    invoke-direct {p3}, Lru/ok/android/externcalls/analytics/events/EventItemsMap;-><init>()V
+
+    :cond_1
+    check-cast p0, Lwa1;
+
+    invoke-virtual {p0, p1, p2, p3}, Lwa1;->c(Ljava/lang/String;Lru/ok/android/externcalls/analytics/events/EventItemValue;Lru/ok/android/externcalls/analytics/events/EventItemsMap;)V
 
     return-void
 .end method

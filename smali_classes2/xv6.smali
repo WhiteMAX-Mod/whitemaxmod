@@ -1,78 +1,58 @@
-.class public final Lxv6;
-.super Landroid/view/GestureDetector$SimpleOnGestureListener;
+.class public final synthetic Lxv6;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lhue;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Llq6;
+.field public final synthetic a:Lww6;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILlq6;)V
+.method public synthetic constructor <init>(Lww6;)V
     .locals 0
 
-    iput p1, p0, Lxv6;->a:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lxv6;->b:Llq6;
-
-    invoke-direct {p0}, Landroid/view/GestureDetector$SimpleOnGestureListener;-><init>()V
+    iput-object p1, p0, Lxv6;->a:Lww6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onDown(Landroid/view/MotionEvent;)Z
-    .locals 0
+.method public final P(Lmue;)V
+    .locals 4
 
-    iget p1, p0, Lxv6;->a:I
+    iget-object v0, p0, Lxv6;->a:Lww6;
 
-    packed-switch p1, :pswitch_data_0
+    invoke-virtual {v0}, Lww6;->s()Lbjg;
 
-    const/4 p1, 0x1
+    move-result-object v1
 
-    return p1
+    check-cast v1, Lcbb;
 
-    :pswitch_0
-    const/4 p1, 0x1
+    invoke-virtual {v1}, Lcbb;->f()Lgd4;
 
-    return p1
+    move-result-object v1
 
-    nop
+    iget-object v2, v0, Lww6;->d:Lhd4;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+    invoke-virtual {v1, v2}, Lo0;->plus(Led4;)Led4;
 
-.method public final onSingleTapUp(Landroid/view/MotionEvent;)Z
-    .locals 0
+    move-result-object v1
 
-    iget p1, p0, Lxv6;->a:I
+    new-instance v2, Low6;
 
-    packed-switch p1, :pswitch_data_0
+    const/4 v3, 0x0
 
-    iget-object p1, p0, Lxv6;->b:Llq6;
+    invoke-direct {v2, v0, p1, v3}, Low6;-><init>(Lww6;Lmue;Lkotlin/coroutines/Continuation;)V
 
-    invoke-interface {p1}, Llq6;->invoke()Ljava/lang/Object;
+    const/4 p1, 0x2
 
-    :goto_0
-    const/4 p1, 0x1
+    invoke-static {v0, v1, v2, p1}, Lx0i;->l(Lx0i;Led4;Lys6;I)Lcuf;
 
-    return p1
-
-    :pswitch_0
-    iget-object p1, p0, Lxv6;->b:Llq6;
-
-    invoke-interface {p1}, Llq6;->invoke()Ljava/lang/Object;
-
-    goto :goto_0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

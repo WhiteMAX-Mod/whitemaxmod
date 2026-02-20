@@ -1,64 +1,148 @@
-.class public final synthetic Lp22;
-.super Ljava/lang/Object;
+.class public final Lp22;
+.super Li32;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:Lj02;
+.field public final synthetic a:I
 
-.field public final synthetic b:Landroid/hardware/camera2/CameraCaptureSession;
-
-.field public final synthetic c:Landroid/hardware/camera2/CaptureRequest;
-
-.field public final synthetic d:Landroid/view/Surface;
-
-.field public final synthetic o:J
+.field public final synthetic b:Ltx1;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lj02;Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/view/Surface;J)V
+.method public synthetic constructor <init>(Ltx1;I)V
     .locals 0
 
+    iput p2, p0, Lp22;->a:I
+
+    iput-object p1, p0, Lp22;->b:Ltx1;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lp22;->a:Lj02;
-
-    iput-object p2, p0, Lp22;->b:Landroid/hardware/camera2/CameraCaptureSession;
-
-    iput-object p3, p0, Lp22;->c:Landroid/hardware/camera2/CaptureRequest;
-
-    iput-object p4, p0, Lp22;->d:Landroid/view/Surface;
-
-    iput-wide p5, p0, Lp22;->o:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 7
+.method public final a(I)V
+    .locals 2
 
-    iget-object v0, p0, Lp22;->a:Lj02;
+    iget p1, p0, Lp22;->a:I
 
-    iget-object v0, v0, Lj02;->b:Ljava/lang/Object;
+    packed-switch p1, :pswitch_data_0
 
-    move-object v1, v0
+    iget-object p1, p0, Lp22;->b:Ltx1;
 
-    check-cast v1, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;
+    if-eqz p1, :cond_0
 
-    iget-object v2, p0, Lp22;->b:Landroid/hardware/camera2/CameraCaptureSession;
+    new-instance v0, Landroidx/camera/core/CameraControl$OperationCanceledException;
 
-    iget-object v3, p0, Lp22;->c:Landroid/hardware/camera2/CaptureRequest;
+    const-string v1, "Camera is closed"
 
-    iget-object v4, p0, Lp22;->d:Landroid/view/Surface;
+    invoke-direct {v0, v1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
-    iget-wide v5, p0, Lp22;->o:J
+    invoke-virtual {p1, v0}, Ltx1;->d(Ljava/lang/Throwable;)Z
 
-    invoke-virtual/range {v1 .. v6}, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;->onCaptureBufferLost(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/view/Surface;J)V
+    :cond_0
+    return-void
+
+    :pswitch_0
+    new-instance p1, Landroidx/camera/core/ImageCaptureException;
+
+    const/4 v0, 0x0
+
+    const-string v1, "Capture request is cancelled because camera is closed"
+
+    invoke-direct {p1, v1, v0}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    iget-object v0, p0, Lp22;->b:Ltx1;
+
+    invoke-virtual {v0, p1}, Ltx1;->d(Ljava/lang/Throwable;)Z
 
     return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final b(ILp32;)V
+    .locals 0
+
+    iget p1, p0, Lp22;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    const-string p1, "FocusMeteringControl"
+
+    const-string p2, "triggerAePrecapture: triggering capture request completed"
+
+    invoke-static {p1, p2}, Ljfj;->b(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 p1, 0x0
+
+    iget-object p2, p0, Lp22;->b:Ltx1;
+
+    invoke-virtual {p2, p1}, Ltx1;->b(Ljava/lang/Object;)Z
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lp22;->b:Ltx1;
+
+    const/4 p2, 0x0
+
+    invoke-virtual {p1, p2}, Ltx1;->b(Ljava/lang/Object;)Z
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final c(ILluj;)V
+    .locals 1
+
+    iget p1, p0, Lp22;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    new-instance p1, Landroidx/camera/core/impl/CameraControlInternal$CameraControlException;
+
+    invoke-direct {p1}, Ljava/lang/Exception;-><init>()V
+
+    iget-object p2, p0, Lp22;->b:Ltx1;
+
+    invoke-virtual {p2, p1}, Ltx1;->d(Ljava/lang/Throwable;)Z
+
+    return-void
+
+    :pswitch_0
+    const-string p1, "ERROR"
+
+    const-string p2, "Capture request failed with reason "
+
+    invoke-virtual {p2, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    new-instance p2, Landroidx/camera/core/ImageCaptureException;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p2, p1, v0}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    iget-object p1, p0, Lp22;->b:Ltx1;
+
+    invoke-virtual {p1, p2}, Ltx1;->d(Ljava/lang/Throwable;)Z
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

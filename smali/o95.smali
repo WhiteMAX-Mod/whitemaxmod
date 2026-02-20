@@ -4,20 +4,10 @@
 
 
 # direct methods
-.method public static a(Landroid/widget/AbsListView;)Z
+.method public static a(Landroid/graphics/Outline;Landroid/graphics/Path;)V
     .locals 0
 
-    invoke-virtual {p0}, Landroid/widget/AbsListView;->isSelectedChildViewEnabled()Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static b(Landroid/widget/AbsListView;Z)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/widget/AbsListView;->setSelectedChildViewEnabled(Z)V
+    invoke-virtual {p0, p1}, Landroid/graphics/Outline;->setConvexPath(Landroid/graphics/Path;)V
 
     return-void
 .end method

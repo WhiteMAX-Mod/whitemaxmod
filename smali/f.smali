@@ -1,106 +1,57 @@
 .class public final Lf;
-.super Ljava/lang/Object;
+.super Lt5;
 .source "SourceFile"
-
-# interfaces
-.implements Lem4;
-
-
-# static fields
-.field public static final a:Lf;
-
-.field public static final b:Lg;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lf;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lf;->a:Lf;
-
-    sget-object v0, Lg;->b:Lg;
-
-    sput-object v0, Lf;->b:Lg;
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final a()Llm4;
-    .locals 1
+.method public a()Lncb;
+    .locals 2
 
-    sget-object v0, Lf;->b:Lg;
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v0
+
+    const/16 v1, 0x58
+
+    invoke-virtual {v0, v1}, Lr5;->c(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lncb;
 
     return-object v0
 .end method
 
-.method public final b(Ljava/lang/String;Lhm4;Landroid/os/Bundle;)Lom4;
-    .locals 9
+.method public b()Loye;
+    .locals 2
 
-    sget-object v0, Lf;->b:Lg;
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lr5;
 
-    iget-object v0, v0, Llm4;->a:Ljava/util/LinkedHashSet;
+    move-result-object v0
 
-    invoke-interface {v0, p2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
+    const/16 v1, 0x2b
 
-    move-result v0
+    invoke-virtual {v0, v1}, Lr5;->c(I)Ljava/lang/Object;
 
-    if-nez v0, :cond_0
+    move-result-object v0
 
-    const/4 p1, 0x0
+    check-cast v0, Loye;
 
-    return-object p1
+    return-object v0
+.end method
 
-    :cond_0
-    sget-object v0, Lg;->c:Lhm4;
+.method public c()Lj88;
+    .locals 2
 
-    invoke-virtual {p2, v0}, Lhm4;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lr5;
 
-    move-result v0
+    move-result-object v0
 
-    if-eqz v0, :cond_1
+    const/16 v1, 0xe
 
-    new-instance v7, Le;
+    invoke-virtual {v0, v1}, Lr5;->d(I)Lbgg;
 
-    const/4 v0, 0x0
+    move-result-object v0
 
-    invoke-direct {v7, v0}, Le;-><init>(I)V
-
-    new-instance v1, Lom4;
-
-    const/4 v6, 0x0
-
-    const/16 v8, 0x10
-
-    const/4 v5, 0x1
-
-    move-object v2, p1
-
-    move-object v3, p2
-
-    move-object v4, p3
-
-    invoke-direct/range {v1 .. v8}, Lom4;-><init>(Ljava/lang/String;Lhm4;Landroid/os/Bundle;ILmm4;Lnm4;I)V
-
-    return-object v1
-
-    :cond_1
-    move-object v3, p2
-
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string p2, "Unknown route="
-
-    invoke-static {p2, v3}, Lt02;->i(Ljava/lang/String;Lhm4;)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    return-object v0
 .end method

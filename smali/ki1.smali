@@ -1,89 +1,176 @@
 .class public final Lki1;
-.super Lp6g;
+.super Lpi1;
 .source "SourceFile"
-
-# interfaces
-.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/calls/ui/bottomsheet/more/CallMoreBottomSheet;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final b:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/bottomsheet/more/CallMoreBottomSheet;)V
-    .locals 0
+.method public constructor <init>(Lc37;)V
+    .locals 1
 
-    iput-object p2, p0, Lki1;->X:Lone/me/calls/ui/bottomsheet/more/CallMoreBottomSheet;
+    if-eqz p1, :cond_0
 
-    const/4 p2, 0x2
+    iget-object p1, p1, Lc37;->a:Ljava/util/List;
 
-    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    if-nez p1, :cond_1
+
+    sget-object p1, Lsi5;->a:Lsi5;
+
+    :cond_1
+    sget-object v0, Lv0i;->c:Lv0i;
+
+    invoke-direct {p0, v0}, Lpi1;-><init>(Lv0i;)V
+
+    iput-object p1, p0, Lki1;->b:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/4 v0, 0x1
 
-    invoke-virtual {p0, p1, p2}, Lki1;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    move-result-object p1
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lki1;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lki1;
+
+    iget-object v1, p0, Lki1;->b:Ljava/util/List;
+
+    iget-object p1, p1, Lki1;->b:Ljava/util/List;
+
+    invoke-static {v1, p1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final getItemId()J
+    .locals 2
+
+    const-wide/16 v0, 0xde
+
+    return-wide v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lki1;->b:Ljava/util/List;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final k(Lmg8;)Ljava/lang/Object;
+    .locals 3
+
+    instance-of v0, p1, Lki1;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
 
     check-cast p1, Lki1;
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    goto :goto_0
 
-    invoke-virtual {p1, p2}, Lki1;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    :cond_0
+    move-object p1, v1
 
-    return-object p2
-.end method
+    :goto_0
+    if-nez p1, :cond_1
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    return-object v1
 
-    new-instance v0, Lki1;
+    :cond_1
+    new-instance v0, Lji1;
 
-    iget-object v1, p0, Lki1;->X:Lone/me/calls/ui/bottomsheet/more/CallMoreBottomSheet;
+    const/16 v1, 0xa
 
-    invoke-direct {v0, p2, v1}, Lki1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/bottomsheet/more/CallMoreBottomSheet;)V
+    invoke-direct {v0, v1}, Ld3;-><init>(I)V
 
-    iput-object p1, v0, Lki1;->o:Ljava/lang/Object;
+    iget-object v1, p0, Lki1;->b:Ljava/util/List;
+
+    iget-object p1, p1, Lki1;->b:Ljava/util/List;
+
+    invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    xor-int/lit8 p1, p1, 0x1
+
+    iget-object v1, v0, Ld3;->b:Ljava/lang/Object;
+
+    check-cast v1, Ljava/util/BitSet;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v2, p1}, Ljava/util/BitSet;->set(IZ)V
 
     return-object v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final m()I
     .locals 1
 
-    iget-object v0, p0, Lki1;->o:Ljava/lang/Object;
+    const/16 v0, 0xde
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    return v0
+.end method
 
-    check-cast v0, Lhja;
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    sget-object p1, Lho1;->D:Lho1;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-static {v0, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    const-string v1, "Grid(opponentsPages="
 
-    move-result p1
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    if-eqz p1, :cond_0
+    iget-object v1, p0, Lki1;->b:Ljava/util/List;
 
-    iget-object p1, p0, Lki1;->X:Lone/me/calls/ui/bottomsheet/more/CallMoreBottomSheet;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const/4 v0, 0x1
+    const-string v1, ")"
 
-    invoke-virtual {p1, v0}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->F0(Z)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_0
-    sget-object p1, Lb3h;->a:Lb3h;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    return-object p1
+    move-result-object v0
+
+    return-object v0
 .end method

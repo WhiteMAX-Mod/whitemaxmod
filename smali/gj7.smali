@@ -1,33 +1,228 @@
-.class public final Lgj7;
+.class public interface abstract Lgj7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljrd;
+
 
 # static fields
-.field public static final a:Lxz0;
+.field public static final A:Loc0;
 
-.field public static final b:Lgj7;
+.field public static final B:Loc0;
+
+.field public static final C:Loc0;
+
+.field public static final D:Loc0;
+
+.field public static final E:Loc0;
+
+.field public static final F:Loc0;
+
+.field public static final G:Loc0;
+
+.field public static final H:Loc0;
+
+.field public static final I:Loc0;
+
+.field public static final J:Loc0;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 5
 
-    new-instance v0, Lxz0;
+    new-instance v0, Loc0;
 
-    const-string v1, "MLKitImageUtils"
+    const-string v1, "camerax.core.imageOutput.targetAspectRatio"
 
-    const-string v2, ""
+    const-class v2, Lwu;
 
-    invoke-direct {v0, v1, v2}, Lxz0;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    const/4 v3, 0x0
 
-    sput-object v0, Lgj7;->a:Lxz0;
+    invoke-direct {v0, v1, v2, v3}, Loc0;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
 
-    new-instance v0, Lgj7;
+    sput-object v0, Lgj7;->A:Loc0;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Loc0;
 
-    sput-object v0, Lgj7;->b:Lgj7;
+    const-string v1, "camerax.core.imageOutput.targetRotation"
+
+    sget-object v2, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+
+    invoke-direct {v0, v1, v2, v3}, Loc0;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Lgj7;->B:Loc0;
+
+    new-instance v0, Loc0;
+
+    const-string v1, "camerax.core.imageOutput.appTargetRotation"
+
+    invoke-direct {v0, v1, v2, v3}, Loc0;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Lgj7;->C:Loc0;
+
+    new-instance v0, Loc0;
+
+    const-string v1, "camerax.core.imageOutput.mirrorMode"
+
+    invoke-direct {v0, v1, v2, v3}, Loc0;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Lgj7;->D:Loc0;
+
+    new-instance v0, Loc0;
+
+    const-string v1, "camerax.core.imageOutput.targetResolution"
+
+    const-class v2, Landroid/util/Size;
+
+    invoke-direct {v0, v1, v2, v3}, Loc0;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Lgj7;->E:Loc0;
+
+    new-instance v0, Loc0;
+
+    const-string v1, "camerax.core.imageOutput.defaultResolution"
+
+    invoke-direct {v0, v1, v2, v3}, Loc0;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Lgj7;->F:Loc0;
+
+    new-instance v0, Loc0;
+
+    const-string v1, "camerax.core.imageOutput.maxResolution"
+
+    invoke-direct {v0, v1, v2, v3}, Loc0;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Lgj7;->G:Loc0;
+
+    new-instance v0, Loc0;
+
+    const-string v1, "camerax.core.imageOutput.supportedResolutions"
+
+    const-class v2, Ljava/util/List;
+
+    invoke-direct {v0, v1, v2, v3}, Loc0;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Lgj7;->H:Loc0;
+
+    new-instance v0, Loc0;
+
+    const-string v1, "camerax.core.imageOutput.resolutionSelector"
+
+    const-class v4, Lt4e;
+
+    invoke-direct {v0, v1, v4, v3}, Loc0;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Lgj7;->I:Loc0;
+
+    new-instance v0, Loc0;
+
+    const-string v1, "camerax.core.imageOutput.customOrderedResolutions"
+
+    invoke-direct {v0, v1, v2, v3}, Loc0;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Lgj7;->J:Loc0;
 
     return-void
+.end method
+
+.method public static A(Lgj7;)V
+    .locals 4
+
+    sget-object v0, Lgj7;->A:Loc0;
+
+    invoke-interface {p0, v0}, Ljrd;->h(Loc0;)Z
+
+    move-result v0
+
+    sget-object v1, Lgj7;->E:Loc0;
+
+    const/4 v2, 0x0
+
+    invoke-interface {p0, v1, v2}, Ljrd;->a(Loc0;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/util/Size;
+
+    if-eqz v1, :cond_0
+
+    const/4 v1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    :goto_0
+    if-eqz v0, :cond_2
+
+    if-nez v1, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "Cannot use both setTargetResolution and setTargetAspectRatio on the same config."
+
+    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_2
+    :goto_1
+    sget-object v3, Lgj7;->I:Loc0;
+
+    invoke-interface {p0, v3, v2}, Ljrd;->a(Loc0;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lt4e;
+
+    if-eqz p0, :cond_4
+
+    if-nez v0, :cond_3
+
+    if-nez v1, :cond_3
+
+    goto :goto_2
+
+    :cond_3
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "Cannot use setTargetResolution or setTargetAspectRatio with setResolutionSelector on the same config."
+
+    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_4
+    :goto_2
+    return-void
+.end method
+
+
+# virtual methods
+.method public B(I)I
+    .locals 1
+
+    sget-object v0, Lgj7;->B:Loc0;
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    invoke-interface {p0, v0, p1}, Ljrd;->a(Loc0;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Integer;
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    return p1
 .end method

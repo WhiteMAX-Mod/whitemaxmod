@@ -1,65 +1,59 @@
 .class public final Lp2i;
-.super Ls2i;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
 
-# static fields
-.field public static final c:Lp2i;
+
+# instance fields
+.field public final synthetic a:Lis6;
+
+.field public final synthetic b:Landroid/view/ViewTreeObserver;
+
+.field public final synthetic c:Landroid/view/View;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lis6;Landroid/view/ViewTreeObserver;Landroid/view/View;)V
+    .locals 0
 
-    new-instance v0, Lp2i;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "cancelled"
+    iput-object p1, p0, Lp2i;->a:Lis6;
 
-    const/4 v2, 0x3
+    iput-object p2, p0, Lp2i;->b:Landroid/view/ViewTreeObserver;
 
-    invoke-direct {v0, v1, v2}, Ls2i;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lp2i;->c:Lp2i;
+    iput-object p3, p0, Lp2i;->c:Landroid/view/View;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final onGlobalLayout()V
+    .locals 2
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lp2i;->a:Lis6;
 
-    if-ne p0, p1, :cond_0
+    invoke-interface {v0}, Lis6;->invoke()Ljava/lang/Object;
 
-    return v0
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lp2i;->b:Landroid/view/ViewTreeObserver;
+
+    iget-object v1, p0, Lp2i;->c:Landroid/view/View;
+
+    invoke-static {p0, v0, v1}, Lq2i;->a(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;Landroid/view/ViewTreeObserver;Landroid/view/View;)V
 
     :cond_0
-    instance-of p1, p1, Lp2i;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, 0x28d53415
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "Cancelled"
-
-    return-object v0
+    return-void
 .end method

@@ -1,139 +1,97 @@
-.class public final La2f;
-.super Lie0;
+.class public final enum La2f;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public final b:Lqhg;
+# static fields
+.field public static final enum a:La2f;
 
-.field public final c:Ljava/lang/Integer;
+.field public static final enum b:La2f;
+
+.field public static final enum c:La2f;
+
+.field public static final enum d:La2f;
+
+.field public static final synthetic o:[La2f;
 
 
 # direct methods
-.method public constructor <init>(Lqhg;Ljava/lang/Integer;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 6
 
-    const/16 v0, 0x14
+    new-instance v0, La2f;
 
-    invoke-direct {p0, v0}, Lie0;-><init>(I)V
+    const-string v1, "UPDATE"
 
-    iput-object p1, p0, La2f;->b:Lqhg;
+    const/4 v2, 0x0
 
-    iput-object p2, p0, La2f;->c:Ljava/lang/Integer;
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, La2f;->a:La2f;
+
+    new-instance v1, La2f;
+
+    const-string v2, "REMOVE"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, La2f;->b:La2f;
+
+    new-instance v2, La2f;
+
+    const-string v3, "ACTIVATE"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, La2f;->c:La2f;
+
+    new-instance v3, La2f;
+
+    const-string v4, "TIMEOUT"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, La2f;->d:La2f;
+
+    filled-new-array {v0, v1, v2, v3}, [La2f;
+
+    move-result-object v0
+
+    sput-object v0, La2f;->o:[La2f;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)La2f;
+    .locals 1
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    const-class v0, La2f;
 
-    const/4 v0, 0x1
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    if-ne p0, p1, :cond_0
+    move-result-object p0
 
-    return v0
+    check-cast p0, La2f;
 
-    :cond_0
-    instance-of v1, p1, La2f;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, La2f;
-
-    iget-object v1, p0, La2f;->b:Lqhg;
-
-    iget-object v3, p1, La2f;->b:Lqhg;
-
-    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, La2f;->c:Ljava/lang/Integer;
-
-    iget-object p1, p1, La2f;->c:Ljava/lang/Integer;
-
-    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
+    return-object p0
 .end method
 
-.method public final hashCode()I
-    .locals 2
+.method public static values()[La2f;
+    .locals 1
 
-    iget-object v0, p0, La2f;->b:Lqhg;
+    sget-object v0, La2f;->o:[La2f;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, La2f;->c:Ljava/lang/Integer;
-
-    if-nez v1, :cond_0
-
-    const/4 v1, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    :goto_0
-    add-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ShowSnackbar(title="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, La2f;->b:Lqhg;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", icon="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, La2f;->c:Ljava/lang/Integer;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
+
+    check-cast v0, [La2f;
 
     return-object v0
 .end method

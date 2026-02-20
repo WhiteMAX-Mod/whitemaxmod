@@ -1,91 +1,52 @@
 .class public final Lac6;
-.super Lx1;
-.source "SourceFile"
+.super Lda4;
 
 
 # instance fields
-.field public final synthetic d:I
+.field public final synthetic X:Lba3;
 
-.field public final o:Ljava/lang/Iterable;
+.field public Y:Ld96;
+
+.field public Z:Lyyd;
+
+.field public synthetic d:Ljava/lang/Object;
+
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Lbc6;I)V
-    .locals 1
+.method public constructor <init>(Lba3;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    const/4 v0, 0x0
+    iput-object p1, p0, Lac6;->X:Lba3;
 
-    iput v0, p0, Lac6;->d:I
-
-    .line 1
-    iput-object p1, p0, Lac6;->o:Ljava/lang/Iterable;
-
-    const/4 p1, 0x0
-
-    .line 2
-    invoke-direct {p0, p2, p1}, Lx1;-><init>(II)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Lhk7;I)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lac6;->d:I
-
-    .line 3
-    invoke-virtual {p1}, Ljava/util/AbstractCollection;->size()I
-
-    move-result v0
-
-    invoke-direct {p0, v0, p2}, Lx1;-><init>(II)V
-
-    .line 4
-    iput-object p1, p0, Lac6;->o:Ljava/lang/Iterable;
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(I)Ljava/lang/Object;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget v0, p0, Lac6;->d:I
+    iput-object p1, p0, Lac6;->d:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Lac6;->o:I
 
-    iget-object v0, p0, Lac6;->o:Ljava/lang/Iterable;
+    const/high16 v0, -0x80000000
 
-    check-cast v0, Lhk7;
+    or-int/2addr p1, v0
 
-    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    iput p1, p0, Lac6;->o:I
 
-    move-result-object p1
+    iget-object p1, p0, Lac6;->X:Lba3;
 
-    return-object p1
+    const/4 v0, 0x0
 
-    :pswitch_0
-    iget-object v0, p0, Lac6;->o:Ljava/lang/Iterable;
-
-    check-cast v0, Lbc6;
-
-    iget-object v0, v0, Lbc6;->a:[Ljava/lang/Iterable;
-
-    aget-object p1, v0, p1
-
-    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    invoke-virtual {p1, v0, p0}, Lba3;->e(Ld96;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 
     return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

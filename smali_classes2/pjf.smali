@@ -1,23 +1,23 @@
-.class public abstract Lpjf;
+.class public interface abstract Lpjf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:J
+# virtual methods
+.method public abstract dispose()V
+.end method
 
-.field public final b:I
+.method public abstract registerListener(Lojf;)V
+.end method
 
+.method public abstract restart(Ljava/lang/String;)V
+.end method
 
-# direct methods
-.method public constructor <init>(JI)V
-    .locals 0
+.method public abstract send(Ljava/lang/String;)V
+.end method
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.method public abstract type()Lu1h;
+.end method
 
-    iput-wide p1, p0, Lpjf;->a:J
-
-    iput p3, p0, Lpjf;->b:I
-
-    return-void
+.method public abstract updateActivityTimeout(J)V
 .end method

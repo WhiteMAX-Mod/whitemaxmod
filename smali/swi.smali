@@ -1,33 +1,45 @@
-.class public final Lswi;
-.super Ljava/lang/Object;
+.class public final synthetic Lswi;
+.super Lv3d;
 .source "SourceFile"
 
-# interfaces
-.implements Lzzi;
-.implements Landroid/os/IInterface;
 
-
-# instance fields
-.field public final c:Landroid/os/IBinder;
+# static fields
+.field public static final a:Lswi;
 
 
 # direct methods
-.method public constructor <init>(Landroid/os/IBinder;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lswi;
 
-    iput-object p1, p0, Lswi;->c:Landroid/os/IBinder;
+    const-string v1, "getFirSent()J"
+
+    const/4 v2, 0x0
+
+    const-class v3, Lotf;
+
+    const-string v4, "firSent"
+
+    invoke-direct {v0, v3, v4, v1, v2}, Lv3d;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    sput-object v0, Lswi;->a:Lswi;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final asBinder()Landroid/os/IBinder;
-    .locals 1
+.method public final get(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    iget-object v0, p0, Lswi;->c:Landroid/os/IBinder;
+    check-cast p1, Lotf;
 
-    return-object v0
+    iget-wide v0, p1, Lotf;->n:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    return-object p1
 .end method

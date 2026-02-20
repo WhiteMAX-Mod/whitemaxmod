@@ -1,61 +1,57 @@
-.class public final Lhrj;
-.super Lvij;
+.class public abstract Lhrj;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final transient c:[Ljava/lang/Object;
-
-.field public final transient d:I
-
-.field public final transient o:I
-
-
 # direct methods
-.method public constructor <init>(I[Ljava/lang/Object;)V
-    .locals 0
+.method public static a(ILjava/lang/String;)V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
-
-    iput-object p2, p0, Lhrj;->c:[Ljava/lang/Object;
-
-    iput p1, p0, Lhrj;->d:I
-
-    const/4 p1, 0x1
-
-    iput p1, p0, Lhrj;->o:I
+    if-ltz p0, :cond_0
 
     return-void
+
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, " cannot be negative but was: "
+
+    invoke-static {p0, p1, v1}, Lkb0;->e(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method
 
+.method public static final b(Landroid/content/pm/PackageManager;Ljava/lang/String;)Landroid/content/pm/PackageInfo;
+    .locals 3
 
-# virtual methods
-.method public final get(I)Ljava/lang/Object;
-    .locals 1
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    iget v0, p0, Lhrj;->o:I
+    const/16 v1, 0x21
 
-    invoke-static {p1, v0}, Lgbj;->d(II)V
+    const/4 v2, 0x0
 
-    add-int/2addr p1, p1
+    if-lt v0, v1, :cond_0
 
-    iget v0, p0, Lhrj;->d:I
+    int-to-long v0, v2
 
-    add-int/2addr p1, v0
+    invoke-static {v0, v1}, Ly4;->e(J)Landroid/content/pm/PackageManager$PackageInfoFlags;
 
-    iget-object v0, p0, Lhrj;->c:[Ljava/lang/Object;
+    move-result-object v0
 
-    aget-object p1, v0, p1
+    invoke-static {p0, p1, v0}, Lxub;->a(Landroid/content/pm/PackageManager;Ljava/lang/String;Landroid/content/pm/PackageManager$PackageInfoFlags;)Landroid/content/pm/PackageInfo;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-object p0
 
-    return-object p1
-.end method
+    return-object p0
 
-.method public final size()I
-    .locals 1
+    :cond_0
+    invoke-virtual {p0, p1, v2}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
 
-    iget v0, p0, Lhrj;->o:I
+    move-result-object p0
 
-    return v0
+    return-object p0
 .end method

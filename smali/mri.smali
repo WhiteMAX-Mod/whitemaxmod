@@ -1,40 +1,12 @@
 .class public final Lmri;
-.super Lg4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lmri;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
 # instance fields
-.field public a:I
+.field public a:Ljava/lang/String;
 
-.field public b:Z
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Leri;
-
-    const/4 v1, 0x6
-
-    invoke-direct {v0, v1}, Leri;-><init>(I)V
-
-    sput-object v0, Lmri;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
+.field public b:Ltqi;
 
 
 # virtual methods
@@ -43,7 +15,7 @@
 
     const/4 v0, 0x1
 
-    if-ne p1, p0, :cond_0
+    if-ne p0, p1, :cond_0
 
     return v0
 
@@ -59,90 +31,81 @@
     :cond_1
     check-cast p1, Lmri;
 
-    iget v1, p0, Lmri;->a:I
+    iget-object v1, p0, Lmri;->a:Ljava/lang/String;
 
-    iget v3, p1, Lmri;->a:I
+    iget-object v3, p1, Lmri;->a:Ljava/lang/String;
 
-    if-ne v1, v3, :cond_2
+    invoke-static {v1, v3}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    iget-boolean v1, p0, Lmri;->b:Z
+    move-result v1
 
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    if-nez v1, :cond_2
 
-    move-result-object v1
-
-    iget-boolean p1, p1, Lmri;->b:Z
-
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p1
-
-    invoke-static {v1, p1}, Lddj;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    return v0
+    return v2
 
     :cond_2
+    iget-object v1, p0, Lmri;->b:Ltqi;
+
+    iget-object p1, p1, Lmri;->b:Ltqi;
+
+    if-eq v1, p1, :cond_3
+
     return v2
+
+    :cond_3
+    return v0
 .end method
 
 .method public final hashCode()I
     .locals 2
 
-    iget v0, p0, Lmri;->a:I
+    iget-object v0, p0, Lmri;->a:Ljava/lang/String;
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    iget-boolean v1, p0, Lmri;->b:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v1
-
-    filled-new-array {v0, v1}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
-    return v0
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lmri;->b:Ltqi;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 3
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    const/16 p2, 0x4f45
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-static {p1, p2}, Lsnj;->k(Landroid/os/Parcel;I)I
+    const-string v1, "IdAndState(id="
 
-    move-result p2
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v0, p0, Lmri;->a:I
+    iget-object v1, p0, Lmri;->a:Ljava/lang/String;
 
-    const/4 v1, 0x2
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v2, 0x4
+    const-string v1, ", state="
 
-    invoke-static {p1, v1, v2}, Lsnj;->m(Landroid/os/Parcel;II)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    iget-object v1, p0, Lmri;->b:Ltqi;
 
-    iget-boolean v0, p0, Lmri;->b:Z
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const/4 v1, 0x3
+    const/16 v1, 0x29
 
-    invoke-static {p1, v1, v2}, Lsnj;->m(Landroid/os/Parcel;II)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-static {p1, p2}, Lsnj;->l(Landroid/os/Parcel;I)V
+    move-result-object v0
 
-    return-void
+    return-object v0
 .end method

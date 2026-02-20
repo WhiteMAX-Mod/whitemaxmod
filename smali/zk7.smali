@@ -1,68 +1,181 @@
 .class public final Lzk7;
-.super Ljava/lang/Object;
+.super Lal7;
 .source "SourceFile"
 
-# interfaces
-.implements Lvfa;
+
+# instance fields
+.field public final transient c:I
+
+.field public final transient d:I
+
+.field public final synthetic o:Lal7;
+
+
+# direct methods
+.method public constructor <init>(Lal7;II)V
+    .locals 0
+
+    iput-object p1, p0, Lzk7;->o:Lal7;
+
+    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
+
+    iput p2, p0, Lzk7;->c:I
+
+    iput p3, p0, Lzk7;->d:I
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a(I)Lhud;
+.method public final c()[Ljava/lang/Object;
     .locals 1
 
-    const/4 v0, 0x2
+    iget-object v0, p0, Lzk7;->o:Lal7;
 
-    if-ne p1, v0, :cond_0
+    invoke-virtual {v0}, Lsk7;->c()[Ljava/lang/Object;
 
-    sget-object p1, Ly9a;->Y:Lhud;
+    move-result-object v0
 
-    return-object p1
+    return-object v0
+.end method
 
-    :cond_0
+.method public final d()I
+    .locals 2
+
+    iget-object v0, p0, Lzk7;->o:Lal7;
+
+    invoke-virtual {v0}, Lsk7;->e()I
+
+    move-result v0
+
+    iget v1, p0, Lzk7;->c:I
+
+    add-int/2addr v0, v1
+
+    iget v1, p0, Lzk7;->d:I
+
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final e()I
+    .locals 2
+
+    iget-object v0, p0, Lzk7;->o:Lal7;
+
+    invoke-virtual {v0}, Lsk7;->e()I
+
+    move-result v0
+
+    iget v1, p0, Lzk7;->c:I
+
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final f()Z
+    .locals 1
+
     const/4 v0, 0x1
 
-    if-ne p1, v0, :cond_1
+    return v0
+.end method
 
-    sget-object p1, Ly9a;->Z:Lhud;
+.method public final get(I)Ljava/lang/Object;
+    .locals 1
 
-    return-object p1
+    iget v0, p0, Lzk7;->d:I
 
-    :cond_1
-    sget-object p1, Lhk7;->b:Lac6;
+    invoke-static {p1, v0}, Lgtj;->d(II)V
 
-    sget-object p1, Lhud;->o:Lhud;
+    iget v0, p0, Lzk7;->c:I
+
+    add-int/2addr p1, v0
+
+    iget-object v0, p0, Lzk7;->o:Lal7;
+
+    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
 
     return-object p1
 .end method
 
-.method public final d(Ljava/lang/String;)Lyfa;
-    .locals 2
+.method public final iterator()Ljava/util/Iterator;
+    .locals 1
 
-    :try_start_0
-    new-instance v0, Ljava/io/FileOutputStream;
+    const/4 v0, 0x0
 
-    invoke-direct {v0, p1}, Ljava/io/FileOutputStream;-><init>(Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-virtual {p0, v0}, Lal7;->l(I)Ltd6;
 
-    new-instance p1, Ly9a;
-
-    invoke-direct {p1, v0}, Ly9a;-><init>(Ljava/io/FileOutputStream;)V
-
-    new-instance v0, Lal7;
-
-    invoke-direct {v0, p1}, Lal7;-><init>(Ly9a;)V
+    move-result-object v0
 
     return-object v0
+.end method
 
-    :catch_0
-    move-exception p1
+.method public final listIterator()Ljava/util/ListIterator;
+    .locals 1
 
-    new-instance v0, Landroidx/media3/muxer/MuxerException;
+    const/4 v0, 0x0
 
-    const-string v1, "Error creating file output stream"
+    .line 1
+    invoke-virtual {p0, v0}, Lal7;->l(I)Ltd6;
 
-    invoke-direct {v0, v1, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    move-result-object v0
 
-    throw v0
+    return-object v0
+.end method
+
+.method public final bridge synthetic listIterator(I)Ljava/util/ListIterator;
+    .locals 0
+
+    .line 2
+    invoke-virtual {p0, p1}, Lal7;->l(I)Ltd6;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final s(II)Lal7;
+    .locals 1
+
+    iget v0, p0, Lzk7;->d:I
+
+    invoke-static {p1, p2, v0}, Lgtj;->g(III)V
+
+    iget v0, p0, Lzk7;->c:I
+
+    add-int/2addr p1, v0
+
+    add-int/2addr p2, v0
+
+    iget-object v0, p0, Lzk7;->o:Lal7;
+
+    invoke-virtual {v0, p1, p2}, Lal7;->s(II)Lal7;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final size()I
+    .locals 1
+
+    iget v0, p0, Lzk7;->d:I
+
+    return v0
+.end method
+
+.method public final bridge synthetic subList(II)Ljava/util/List;
+    .locals 0
+
+    invoke-virtual {p0, p1, p2}, Lzk7;->s(II)Lal7;
+
+    move-result-object p1
+
+    return-object p1
 .end method

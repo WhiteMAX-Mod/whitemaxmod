@@ -13,7 +13,7 @@
         "",
         "Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStartedData;",
         "startInfo",
-        "Lb3h;",
+        "Lmah;",
         "onVideoStarted",
         "(Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStartedData;)V",
         "Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStates;",

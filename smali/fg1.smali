@@ -1,114 +1,82 @@
-.class public final synthetic Lfg1;
-.super Ljava/lang/Object;
+.class public final Lfg1;
+.super Lhg1;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;
+.field public final a:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;I)V
+.method public constructor <init>(Z)V
     .locals 0
 
-    iput p2, p0, Lfg1;->a:I
-
-    iput-object p1, p0, Lfg1;->b:Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-boolean p1, p0, Lfg1;->a:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 9
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    iget p1, p0, Lfg1;->a:I
+    const/4 v0, 0x1
 
-    iget-object v0, p0, Lfg1;->b:Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;
+    if-ne p0, p1, :cond_0
 
-    packed-switch p1, :pswitch_data_0
+    return v0
 
-    sget-object p1, Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;->B0:[Lz28;
+    :cond_0
+    instance-of v1, p1, Lfg1;
 
-    invoke-virtual {v0}, Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;->D0()Ldg1;
+    const/4 v2, 0x0
 
-    move-result-object p1
+    if-nez v1, :cond_1
 
-    iget-object v0, p1, Ldg1;->y0:Lspf;
+    return v2
 
-    invoke-virtual {v0}, Lspf;->getValue()Ljava/lang/Object;
+    :cond_1
+    check-cast p1, Lfg1;
+
+    iget-boolean v1, p0, Lfg1;->a:Z
+
+    iget-boolean p1, p1, Lfg1;->a:Z
+
+    if-eq v1, p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-boolean v0, p0, Lfg1;->a:Z
+
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "TalkingState(isEnabled="
+
+    const-string v1, ")"
+
+    iget-boolean v2, p0, Lfg1;->a:Z
+
+    invoke-static {v0, v1, v2}, Ljye;->k(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Lxf1;
-
-    iget-object v1, p1, Ldg1;->B0:Lcm5;
-
-    new-instance v2, Lme1;
-
-    iget-object v3, p1, Ldg1;->b:Ljava/lang/String;
-
-    iget-boolean v4, p1, Ldg1;->X:Z
-
-    iget-object p1, v0, Lxf1;->c:Lzv8;
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x1
-
-    sget-object v7, Lzv8;->b:Lzv8;
-
-    if-ne p1, v7, :cond_0
-
-    move p1, v5
-
-    move v5, v6
-
-    goto :goto_0
-
-    :cond_0
-    move p1, v5
-
-    :goto_0
-    iget-object v8, v0, Lxf1;->b:Lzv8;
-
-    if-ne v8, v7, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    move v6, p1
-
-    :goto_1
-    iget-boolean v7, v0, Lxf1;->d:Z
-
-    invoke-direct/range {v2 .. v7}, Lme1;-><init>(Ljava/lang/String;ZZZZ)V
-
-    invoke-static {v1, v2}, Lnth;->q(Lcm5;Ljava/lang/Object;)V
-
-    return-void
-
-    :pswitch_0
-    sget-object p1, Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;->B0:[Lz28;
-
-    invoke-virtual {v0}, La94;->getRouter()Lw4e;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v0}, Lw4e;->B(La94;)Z
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

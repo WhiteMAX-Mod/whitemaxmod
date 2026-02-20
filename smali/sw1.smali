@@ -1,60 +1,295 @@
 .class public final Lsw1;
-.super Lf4;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ltw1;
 
 
 # instance fields
-.field public final synthetic Z:Ltw1;
+.field public final a:Lpl1;
+
+.field public final b:Lgpg;
+
+.field public final c:Lgpg;
+
+.field public final d:Ljf0;
+
+.field public final e:Ljava/lang/String;
+
+.field public final f:J
 
 
 # direct methods
-.method public constructor <init>(Ltw1;)V
+.method public constructor <init>(Lpl1;Lgpg;Lgpg;Ljf0;Ljava/lang/String;J)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lsw1;->Z:Ltw1;
+    iput-object p1, p0, Lsw1;->a:Lpl1;
+
+    iput-object p2, p0, Lsw1;->b:Lgpg;
+
+    iput-object p3, p0, Lsw1;->c:Lgpg;
+
+    iput-object p4, p0, Lsw1;->d:Ljf0;
+
+    iput-object p5, p0, Lsw1;->e:Ljava/lang/String;
+
+    iput-wide p6, p0, Lsw1;->f:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final k()Ljava/lang/String;
-    .locals 3
+.method public final a()J
+    .locals 2
 
-    iget-object v0, p0, Lsw1;->Z:Ltw1;
+    iget-wide v0, p0, Lsw1;->f:J
 
-    iget-object v0, v0, Ltw1;->a:Ljava/lang/ref/WeakReference;
+    return-wide v0
+.end method
 
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 5
 
-    move-result-object v0
+    const/4 v0, 0x1
 
-    check-cast v0, Lqw1;
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lsw1;
+
+    if-nez v1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lsw1;
+
+    iget-object v1, p0, Lsw1;->a:Lpl1;
+
+    iget-object v2, p1, Lsw1;->a:Lpl1;
+
+    invoke-static {v1, v2}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v1, p0, Lsw1;->b:Lgpg;
+
+    iget-object v2, p1, Lsw1;->b:Lgpg;
+
+    invoke-virtual {v1, v2}, Lgpg;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget-object v1, p0, Lsw1;->c:Lgpg;
+
+    iget-object v2, p1, Lsw1;->c:Lgpg;
+
+    invoke-virtual {v1, v2}, Lgpg;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    iget-object v1, p0, Lsw1;->d:Ljf0;
+
+    iget-object v2, p1, Lsw1;->d:Ljf0;
+
+    invoke-virtual {v1, v2}, Ljf0;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_5
+
+    goto :goto_0
+
+    :cond_5
+    iget-object v1, p0, Lsw1;->e:Ljava/lang/String;
+
+    iget-object v2, p1, Lsw1;->e:Ljava/lang/String;
+
+    invoke-static {v1, v2}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_6
+
+    goto :goto_0
+
+    :cond_6
+    iget-wide v1, p0, Lsw1;->f:J
+
+    iget-wide v3, p1, Lsw1;->f:J
+
+    cmp-long p1, v1, v3
+
+    if-eqz p1, :cond_7
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_7
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 5
+
+    iget-object v0, p0, Lsw1;->a:Lpl1;
+
+    invoke-virtual {v0}, Lpl1;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lsw1;->b:Lgpg;
+
+    invoke-virtual {v2}, Lgpg;->hashCode()I
+
+    move-result v2
+
+    add-int/2addr v2, v0
+
+    mul-int/2addr v2, v1
+
+    iget-object v0, p0, Lsw1;->c:Lgpg;
+
+    invoke-virtual {v0}, Lgpg;->hashCode()I
+
+    move-result v0
+
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lsw1;->d:Ljf0;
+
+    invoke-virtual {v2}, Ljf0;->hashCode()I
+
+    move-result v2
+
+    add-int/2addr v2, v0
+
+    mul-int/2addr v2, v1
+
+    iget-object v0, p0, Lsw1;->e:Ljava/lang/String;
 
     if-nez v0, :cond_0
 
-    const-string v0, "Completer object has been garbage collected, future will fail soon"
+    const/4 v0, 0x0
 
-    return-object v0
+    goto :goto_0
 
     :cond_0
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
-    const-string v2, "tag=["
+    move-result v0
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    :goto_0
+    add-int/2addr v2, v0
 
-    iget-object v0, v0, Lqw1;->a:Ljava/lang/Object;
+    mul-int/2addr v2, v1
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget-wide v3, p0, Lsw1;->f:J
 
-    const-string v0, "]"
+    invoke-static {v2, v1, v3, v4}, Leni;->a(IIJ)I
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result v0
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const/4 v1, 0x1
+
+    invoke-static {v1}, Ly12;->t(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Single(id="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lsw1;->a:Lpl1;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", title="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lsw1;->b:Lgpg;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", subtitle="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lsw1;->c:Lgpg;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", avatarAbbreviationModel="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lsw1;->d:Ljf0;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", url="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lsw1;->e:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", lastUpdate="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lsw1;->f:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, "END"
+
+    const-string v2, ")"
+
+    const-string v3, ", titleEllipsizeMode="
+
+    invoke-static {v0, v3, v1, v2}, Ljye;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

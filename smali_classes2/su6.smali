@@ -1,83 +1,75 @@
 .class public final Lsu6;
-.super Ljava/lang/Object;
+.super Lvu6;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:Lbv6;
+# static fields
+.field public static final a:Lsu6;
+
+.field public static final b:Llu6;
+
+.field public static final c:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Lbv6;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lsu6;
 
-    iput-object p1, p0, Lsu6;->a:Lbv6;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lsu6;->a:Lsu6;
+
+    new-instance v0, Llu6;
+
+    sget v1, Lqjb;->a:I
+
+    invoke-direct {v0, v1}, Llu6;-><init>(I)V
+
+    sput-object v0, Lsu6;->b:Llu6;
+
+    sget-object v0, Lou6;->e:Lou6;
+
+    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    sput-object v0, Lsu6;->c:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljne;)V
-    .locals 2
+.method public final b()Ljava/lang/String;
+    .locals 1
 
-    const-string v0, "bv6"
+    const-string v0, "ru.ok.tamtam.ALL_PHOTO"
 
-    const-string v1, "onMediaDeselect()"
-
-    invoke-static {v0, v1}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Lsu6;->a:Lbv6;
-
-    iget-boolean v1, v0, Lbv6;->G0:Z
-
-    if-eqz v1, :cond_0
-
-    return-void
-
-    :cond_0
-    iget-object p1, p1, Ljne;->a:Lqh8;
-
-    invoke-static {p1}, Lt4j;->e(Lqh8;)Lwh8;
-
-    move-result-object p1
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, p1, v1}, Lbv6;->w(Lwh8;Z)I
-
-    return-void
+    return-object v0
 .end method
 
-.method public final b(Ljne;)V
-    .locals 2
+.method public final c()Lg4;
+    .locals 1
 
-    const-string v0, "bv6"
+    sget-object v0, Lsu6;->b:Llu6;
 
-    const-string v1, "onMediaSelect()"
+    return-object v0
+.end method
 
-    invoke-static {v0, v1}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+.method public final d()Ljava/util/List;
+    .locals 1
 
-    iget-object v0, p0, Lsu6;->a:Lbv6;
+    sget-object v0, Lsu6;->c:Ljava/util/List;
 
-    iget-boolean v1, v0, Lbv6;->G0:Z
+    return-object v0
+.end method
 
-    if-eqz v1, :cond_0
+.method public final f()Llu6;
+    .locals 1
 
-    return-void
+    sget-object v0, Lsu6;->b:Llu6;
 
-    :cond_0
-    iget-object p1, p1, Ljne;->a:Lqh8;
-
-    invoke-static {p1}, Lt4j;->e(Lqh8;)Lwh8;
-
-    move-result-object p1
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, p1, v1}, Lbv6;->w(Lwh8;Z)I
-
-    return-void
+    return-object v0
 .end method

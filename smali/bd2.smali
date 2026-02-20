@@ -1,136 +1,144 @@
 .class public final Lbd2;
-.super Ljava/lang/Object;
+.super Lpdg;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/Iterator;
-.implements Lo28;
+.implements Lys6;
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic X:Lb96;
 
-.field public final b:I
+.field public final synthetic Y:Lewe;
 
-.field public c:Z
+.field public final synthetic Z:Ldve;
 
-.field public d:I
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(CCI)V
-    .locals 2
+.method public constructor <init>(Lb96;Lewe;Ldve;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lbd2;->X:Lb96;
 
-    iput p3, p0, Lbd2;->a:I
+    iput-object p2, p0, Lbd2;->Y:Lewe;
 
-    iput p2, p0, Lbd2;->b:I
+    iput-object p3, p0, Lbd2;->Z:Ldve;
 
-    const/4 v0, 0x0
+    const/4 p1, 0x2
 
-    const/4 v1, 0x1
-
-    if-lez p3, :cond_0
-
-    invoke-static {p1, p2}, Le1j;->b(II)I
-
-    move-result p3
-
-    if-gtz p3, :cond_1
-
-    :goto_0
-    move v0, v1
-
-    goto :goto_1
-
-    :cond_0
-    invoke-static {p1, p2}, Le1j;->b(II)I
-
-    move-result p3
-
-    if-ltz p3, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    :goto_1
-    iput-boolean v0, p0, Lbd2;->c:Z
-
-    if-eqz v0, :cond_2
-
-    goto :goto_2
-
-    :cond_2
-    move p1, p2
-
-    :goto_2
-    iput p1, p0, Lbd2;->d:I
+    invoke-direct {p0, p1, p4}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final hasNext()Z
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-boolean v0, p0, Lbd2;->c:Z
+    check-cast p1, Lnd4;
 
-    return v0
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lbd2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lbd2;
+
+    sget-object p2, Lmah;->a:Lmah;
+
+    invoke-virtual {p1, p2}, Lbd2;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public final next()Ljava/lang/Object;
-    .locals 2
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
 
-    iget v0, p0, Lbd2;->d:I
+    new-instance p1, Lbd2;
 
-    iget v1, p0, Lbd2;->b:I
+    iget-object v0, p0, Lbd2;->Y:Lewe;
 
-    if-ne v0, v1, :cond_1
+    iget-object v1, p0, Lbd2;->Z:Ldve;
 
-    iget-boolean v1, p0, Lbd2;->c:Z
+    iget-object v2, p0, Lbd2;->X:Lb96;
 
-    if-eqz v1, :cond_0
+    invoke-direct {p1, v2, v0, v1, p2}, Lbd2;-><init>(Lb96;Lewe;Ldve;Lkotlin/coroutines/Continuation;)V
 
-    const/4 v1, 0x0
+    return-object p1
+.end method
 
-    iput-boolean v1, p0, Lbd2;->c:Z
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    iget v0, p0, Lbd2;->o:I
+
+    iget-object v1, p0, Lbd2;->Z:Ldve;
+
+    const/4 v2, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v2, :cond_0
+
+    :try_start_0
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
     :cond_0
-    new-instance v0, Ljava/util/NoSuchElementException;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    throw v0
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 
     :cond_1
-    iget v1, p0, Lbd2;->a:I
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    add-int/2addr v1, v0
+    :try_start_1
+    iget-object p1, p0, Lbd2;->X:Lb96;
 
-    iput v1, p0, Lbd2;->d:I
+    iget-object v0, p0, Lbd2;->Y:Lewe;
 
-    :goto_0
-    int-to-char v0, v0
+    iput v2, p0, Lbd2;->o:I
 
-    invoke-static {v0}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+    invoke-interface {p1, v0, p0}, Lb96;->e(Ld96;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    sget-object v0, Lod4;->a:Lod4;
+
+    if-ne p1, v0, :cond_2
 
     return-object v0
-.end method
 
-.method public final remove()V
-    .locals 2
+    :cond_2
+    :goto_0
+    invoke-virtual {v1}, Lcve;->c()V
 
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
+    sget-object p1, Lmah;->a:Lmah;
 
-    const-string v1, "Operation is not supported for read-only collection"
+    return-object p1
 
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    :goto_1
+    invoke-virtual {v1}, Lcve;->c()V
 
-    throw v0
+    throw p1
 .end method

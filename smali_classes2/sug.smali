@@ -1,58 +1,47 @@
 .class public final Lsug;
-.super Luug;
+.super Lda4;
 .source "SourceFile"
 
 
 # instance fields
-.field public b:Z
+.field public X:I
 
-.field public final synthetic c:Ll26;
+.field public synthetic d:Ljava/lang/Object;
+
+.field public final synthetic o:Luug;
 
 
 # direct methods
-.method public constructor <init>(Ll26;Ljava/lang/Object;)V
+.method public constructor <init>(Luug;Lda4;)V
     .locals 0
 
-    iput-object p1, p0, Lsug;->c:Ll26;
+    iput-object p1, p0, Lsug;->o:Luug;
 
-    invoke-direct {p0, p2}, Luug;-><init>(Ljava/lang/Object;)V
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-boolean v0, p0, Lsug;->b:Z
+    iput-object p1, p0, Lsug;->d:Ljava/lang/Object;
 
-    if-eqz v0, :cond_0
+    iget p1, p0, Lsug;->X:I
 
-    const/4 v0, 0x0
+    const/high16 v0, -0x80000000
 
-    return-object v0
+    or-int/2addr p1, v0
 
-    :cond_0
-    const/4 v0, 0x1
+    iput p1, p0, Lsug;->X:I
 
-    iput-boolean v0, p0, Lsug;->b:Z
+    iget-object p1, p0, Lsug;->o:Luug;
 
-    iget-object v0, p0, Lsug;->c:Ll26;
+    invoke-virtual {p1, p0}, Luug;->a(Lda4;)Ljava/lang/Object;
 
-    iget-object v0, v0, Ll26;->o:Lfpe;
+    move-result-object p1
 
-    check-cast v0, Lh66;
-
-    iget-object v0, v0, Lh66;->c:Lnq6;
-
-    iget-object v1, p0, Luug;->a:Ljava/lang/Object;
-
-    invoke-interface {v0, v1}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Boolean;
-
-    return-object v1
+    return-object p1
 .end method

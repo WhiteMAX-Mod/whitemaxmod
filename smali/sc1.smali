@@ -1,176 +1,180 @@
-.class public final Lsc1;
-.super Lp6g;
+.class public final synthetic Lsc1;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Lis6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/calllist/ui/CallHistoryScreen;
+.field public final synthetic a:I
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic b:Lone/me/calllist/ui/page/CallHistoryPageScreen;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calllist/ui/CallHistoryScreen;)V
+.method public synthetic constructor <init>(Lone/me/calllist/ui/page/CallHistoryPageScreen;I)V
     .locals 0
 
-    iput-object p2, p0, Lsc1;->X:Lone/me/calllist/ui/CallHistoryScreen;
+    iput p2, p0, Lsc1;->a:I
 
-    const/4 p2, 0x2
+    iput-object p1, p0, Lsc1;->b:Lone/me/calllist/ui/page/CallHistoryPageScreen;
 
-    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke()Ljava/lang/Object;
+    .locals 5
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget v0, p0, Lsc1;->a:I
 
-    invoke-virtual {p0, p1, p2}, Lsc1;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v1, p0, Lsc1;->b:Lone/me/calllist/ui/page/CallHistoryPageScreen;
 
-    move-result-object p1
+    packed-switch v0, :pswitch_data_0
 
-    check-cast p1, Lsc1;
+    sget-object v0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->u0:Lkqa;
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    invoke-virtual {v1}, Lpa4;->getRouter()Ljbe;
 
-    invoke-virtual {p1, p2}, Lsc1;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lsc1;
-
-    iget-object v1, p0, Lsc1;->X:Lone/me/calllist/ui/CallHistoryScreen;
-
-    invoke-direct {v0, p2, v1}, Lsc1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calllist/ui/CallHistoryScreen;)V
-
-    iput-object p1, v0, Lsc1;->o:Ljava/lang/Object;
+    move-result-object v0
 
     return-object v0
-.end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+    :pswitch_0
+    sget-object v0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->u0:Lkqa;
 
-    iget-object v0, p0, Lsc1;->o:Ljava/lang/Object;
+    new-instance v0, Lqc1;
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    new-instance v2, Ln8;
 
-    check-cast v0, Luc1;
+    const/4 v3, 0x3
 
-    sget-object p1, Lone/me/calllist/ui/CallHistoryScreen;->E0:[Lz28;
+    invoke-direct {v2, v3, v1}, Ln8;-><init>(ILjava/lang/Object;)V
 
-    iget-boolean p1, v0, Luc1;->a:Z
+    sget-object v1, Lsme;->a:Lsme;
 
-    iget-object v0, p0, Lsc1;->X:Lone/me/calllist/ui/CallHistoryScreen;
+    invoke-virtual {v1}, Lsme;->d()Lncb;
 
-    if-nez p1, :cond_0
+    move-result-object v1
 
-    invoke-virtual {v0}, Lone/me/calllist/ui/CallHistoryScreen;->D0()V
+    invoke-virtual {v1}, Lncb;->c()Ljava/util/concurrent/ExecutorService;
+
+    move-result-object v1
+
+    invoke-direct {v0, v2, v1}, Lqc1;-><init>(Ln8;Ljava/util/concurrent/ExecutorService;)V
+
+    return-object v0
+
+    :pswitch_1
+    sget-object v0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->u0:Lkqa;
+
+    invoke-virtual {v1}, Lone/me/calllist/ui/page/CallHistoryPageScreen;->H0()Lkd1;
+
+    move-result-object v0
+
+    sget-object v2, Lkd1;->c:Lkd1;
+
+    if-ne v0, v2, :cond_0
+
+    new-instance v0, Lgcb;
+
+    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lgcb;-><init>(Landroid/content/Context;)V
+
+    const/16 v1, 0x8
+
+    invoke-virtual {v0, v1}, Lgcb;->setVisibility(I)V
+
+    sget v1, Lmdd;->call_history_page_empty:I
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
+
+    sget v1, Lice;->l0:I
+
+    invoke-virtual {v0, v1}, Lgcb;->setIcon(I)V
+
+    sget v1, Lqid;->call_history_missed_calls_empty_state_title:I
+
+    new-instance v2, Lcpg;
+
+    invoke-direct {v2, v1}, Lcpg;-><init>(I)V
+
+    invoke-virtual {v0, v2}, Lgcb;->setTitle(Lhpg;)V
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v0}, Lone/me/calllist/ui/CallHistoryScreen;->B0()Lymb;
+    const/4 v0, 0x0
 
-    move-result-object p1
+    :goto_0
+    return-object v0
 
-    invoke-virtual {v0}, Lone/me/calllist/ui/CallHistoryScreen;->C0()Lwc1;
+    :pswitch_2
+    sget-object v0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->u0:Lkqa;
 
-    move-result-object v1
+    new-instance v0, Lzl1;
 
-    iget-object v1, v1, Lwc1;->o:Lspf;
+    new-instance v2, Lsc1;
 
-    invoke-virtual {v1}, Lspf;->getValue()Ljava/lang/Object;
+    const/4 v3, 0x4
 
-    move-result-object v1
+    invoke-direct {v2, v1, v3}, Lsc1;-><init>(Lone/me/calllist/ui/page/CallHistoryPageScreen;I)V
 
-    check-cast v1, Luc1;
+    new-instance v3, Lbgg;
 
-    iget-object v1, v1, Luc1;->b:Ljava/util/Map;
+    invoke-direct {v3, v2}, Lbgg;-><init>(Lis6;)V
 
-    invoke-interface {v1}, Ljava/util/Map;->size()I
+    new-instance v2, Looi;
 
-    move-result v1
+    const/4 v4, 0x0
 
-    invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+    invoke-direct {v2, v1, v4}, Looi;-><init>(Lone/me/sdk/arch/Widget;I)V
 
-    move-result-object v1
+    invoke-direct {v0, v3, v2}, Lzl1;-><init>(Lbgg;Looi;)V
 
-    new-instance v2, Lvmb;
+    return-object v0
 
-    sget v3, Lzcd;->call_history_item_call_toolbar_action_remove:I
+    :pswitch_3
+    sget-object v0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->u0:Lkqa;
 
-    sget v4, Lh6d;->ic_delete_22:I
+    new-instance v0, Lyc1;
 
-    const/4 v5, 0x0
-
-    invoke-direct {v2, v5, v3, v4}, Lvmb;-><init>(III)V
-
-    invoke-static {v2}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->requireActivity()Ldp;
 
     move-result-object v2
 
-    new-instance v3, Lnc1;
+    invoke-virtual {v2}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
-    invoke-direct {v3, v0, v5}, Lnc1;-><init>(Lone/me/calllist/ui/CallHistoryScreen;I)V
+    move-result-object v2
 
-    new-instance v4, Li;
+    invoke-virtual {v1}, Lone/me/calllist/ui/page/CallHistoryPageScreen;->H0()Lkd1;
 
-    const/16 v5, 0x15
+    move-result-object v3
 
-    invoke-direct {v4, v5, v0}, Li;-><init>(ILjava/lang/Object;)V
+    iget-object v1, v1, Lone/me/calllist/ui/page/CallHistoryPageScreen;->c:Ljava/lang/Object;
 
-    invoke-virtual {p1, v1, v2, v3, v4}, Lymb;->c(Ljava/lang/String;Ljava/util/List;Llq6;Lnq6;)V
+    invoke-interface {v1}, Lj88;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {v0}, Lone/me/calllist/ui/CallHistoryScreen;->B0()Lymb;
+    move-result-object v1
 
-    move-result-object p1
+    check-cast v1, Lzl1;
 
-    invoke-virtual {v0}, Lone/me/calllist/ui/CallHistoryScreen;->C0()Lwc1;
+    invoke-direct {v0, v2, v3, v1}, Lyc1;-><init>(Landroid/content/Context;Lkd1;Lzl1;)V
 
-    move-result-object v0
+    return-object v0
 
-    iget-object v0, v0, Lwc1;->o:Lspf;
-
-    invoke-virtual {v0}, Lspf;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Luc1;
-
-    iget-object v0, v0, Luc1;->b:Ljava/util/Map;
-
-    invoke-interface {v0}, Ljava/util/Map;->size()I
-
-    move-result v0
-
-    invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    iget-object p1, p1, Lymb;->z0:Ljava/lang/Object;
-
-    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lbnb;
-
-    invoke-virtual {p1, v0}, Lbnb;->setSelectionTitle(Ljava/lang/String;)V
-
-    :goto_0
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

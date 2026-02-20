@@ -1,154 +1,127 @@
 .class public final Lez4;
-.super Ljava/lang/Object;
+.super Ll3b;
 .source "SourceFile"
-
-# interfaces
-.implements Lfz4;
 
 
 # instance fields
-.field public final a:J
+.field public final b:Lfz4;
 
-.field public final b:J
+.field public final c:Lgde;
 
-.field public final c:Lpld;
+.field public final d:Lsri;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 12
+.method public constructor <init>(Lfe3;Lat3;Llvg;Ljava/util/List;)V
+    .locals 6
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, Ll3b;-><init>(Lfe3;)V
 
-    sget-object v0, Lly4;->b:Ljava/util/concurrent/atomic/AtomicLong;
+    new-instance v2, Lhn;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicLong;->incrementAndGet()J
+    invoke-direct {v2, p2}, Lhn;-><init>(Ljava/lang/Object;)V
 
-    move-result-wide v2
+    new-instance v1, Liyb;
 
-    iput-wide v2, p0, Lez4;->a:J
+    new-instance p2, Lnqa;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicLong;->incrementAndGet()J
+    const/16 v0, 0x1a
 
-    move-result-wide v9
+    invoke-direct {p2, v0}, Lnqa;-><init>(I)V
 
-    iput-wide v9, p0, Lez4;->b:J
+    invoke-direct {v1, p2}, Liyb;-><init>(Lxd7;)V
 
-    new-instance v1, Lxk4;
+    iget-object p2, p1, Lfe3;->o:Ljava/lang/Object;
 
-    sget v0, Lkdd;->oneme_settings_old_dev_menu:I
+    check-cast p2, Lao;
 
-    new-instance v4, Llhg;
+    iput-object p2, v1, Liyb;->X:Ljava/lang/Object;
 
-    invoke-direct {v4, v0}, Llhg;-><init>(I)V
+    new-instance p2, Lm45;
 
-    sget v5, Lv5e;->W:I
+    new-instance v0, Le05;
 
-    const/16 v8, 0x8
+    const/16 v3, 0xa
 
-    const/4 v6, 0x0
+    invoke-direct {v0, v3, v2}, Le05;-><init>(ILjava/lang/Object;)V
 
-    sget-object v7, Lvk4;->a:Lvk4;
+    invoke-direct {p2, v0}, Lm45;-><init>(Le05;)V
 
-    invoke-direct/range {v1 .. v8}, Lxk4;-><init>(JLqhg;ILqhg;Llmj;I)V
+    iget-object v0, v1, Liyb;->b:Ljava/lang/Object;
 
-    new-instance v4, Lxk4;
+    check-cast v0, Lhn;
 
-    sget v0, Lkdd;->oneme_settings_old_logs_menu:I
+    iput-object p2, v0, Lhn;->b:Ljava/lang/Object;
 
-    move-wide v5, v9
+    new-instance v0, Lfz4;
 
-    move-object v10, v7
+    iget-object p1, p1, Lfe3;->d:Ljava/lang/Object;
 
-    new-instance v7, Llhg;
+    move-object v4, p1
 
-    invoke-direct {v7, v0}, Llhg;-><init>(I)V
+    check-cast v4, Libe;
 
-    sget v8, Lv5e;->g:I
+    move-object v3, p3
 
-    const/4 v9, 0x0
+    move-object v5, p4
 
-    const/16 v11, 0x8
+    invoke-direct/range {v0 .. v5}, Lfz4;-><init>(Liyb;Lhn;Llvg;Libe;Ljava/util/List;)V
 
-    invoke-direct/range {v4 .. v11}, Lxk4;-><init>(JLqhg;ILqhg;Llmj;I)V
+    new-instance p1, Lsri;
 
-    filled-new-array {v1, v4}, [Lxk4;
+    const/4 p2, 0x6
 
-    move-result-object v0
+    invoke-direct {p1, v2, v0, v1, p2}, Lsri;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
-    invoke-static {v0}, Lqi3;->h([Ljava/lang/Object;)Ljava/util/List;
+    iput-object p1, p0, Lez4;->d:Lsri;
 
-    move-result-object v0
+    iput-object v0, p0, Lez4;->b:Lfz4;
 
-    invoke-static {v0}, Ltpf;->a(Ljava/lang/Object;)Lspf;
+    new-instance p1, Lgde;
 
-    move-result-object v0
+    invoke-direct {p1, v0}, Lgde;-><init>(Lcn;)V
 
-    new-instance v1, Lpld;
-
-    invoke-direct {v1, v0}, Lpld;-><init>(Lmfa;)V
-
-    iput-object v1, p0, Lez4;->c:Lpld;
+    iput-object p1, p0, Lez4;->c:Lgde;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Llpf;
+.method public final b()Lcn;
     .locals 1
 
-    iget-object v0, p0, Lez4;->c:Lpld;
+    iget-object v0, p0, Lez4;->b:Lfz4;
 
     return-object v0
 .end method
 
-.method public final d(Lxk4;)V
-    .locals 5
+.method public final e()Lm3b;
+    .locals 1
 
-    iget-wide v0, p1, Lxk4;->a:J
+    iget-object v0, p0, Lez4;->d:Lsri;
 
-    iget-wide v2, p0, Lez4;->b:J
+    return-object v0
+.end method
 
-    invoke-static {v0, v1, v2, v3}, Lly4;->a(JJ)Z
+.method public final f()Lgde;
+    .locals 1
 
-    move-result p1
+    iget-object v0, p0, Lez4;->c:Lgde;
 
-    const/4 v2, 0x0
+    return-object v0
+.end method
 
-    if-eqz p1, :cond_0
+.method public final g()Lfe3;
+    .locals 2
 
-    sget-object p1, Lwy4;->c:Lwy4;
+    new-instance v0, Lfe3;
 
-    invoke-virtual {p1}, Ld3;->p0()Ljm4;
+    const/4 v1, 0x5
 
-    move-result-object p1
+    invoke-direct {v0, v1}, Lfe3;-><init>(I)V
 
-    const-string v0, ":settings/dev/logsviewer"
+    invoke-virtual {p0, v0}, Ll3b;->a(Lfe3;)V
 
-    invoke-virtual {p1, v0, v2}, Ljm4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
-
-    return-void
-
-    :cond_0
-    iget-wide v3, p0, Lez4;->a:J
-
-    invoke-static {v0, v1, v3, v4}, Lly4;->a(JJ)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    sget-object p1, Lwy4;->c:Lwy4;
-
-    invoke-virtual {p1}, Ld3;->p0()Ljm4;
-
-    move-result-object p1
-
-    const-string v0, ":settings/dev/showroom"
-
-    invoke-virtual {p1, v0, v2}, Ljm4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
-
-    :cond_1
-    return-void
+    return-object v0
 .end method

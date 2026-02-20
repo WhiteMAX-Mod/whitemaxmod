@@ -1,186 +1,154 @@
 .class public final Lgt8;
-.super Ljava/lang/Object;
+.super Lqy0;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/util/Comparator;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final b:J
+.field public final i:Landroid/os/Handler;
 
 
 # direct methods
-.method public synthetic constructor <init>(JI)V
+.method public constructor <init>()V
+    .locals 2
+
+    invoke-direct {p0}, Lqy0;-><init>()V
+
+    new-instance v0, Landroid/os/Handler;
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    iput-object v0, p0, Lgt8;->i:Landroid/os/Handler;
+
+    return-void
+.end method
+
+.method public static synthetic g(Lgt8;Ljava/lang/Object;)V
     .locals 0
 
-    iput p3, p0, Lgt8;->a:I
+    invoke-super {p0, p1}, Lqy0;->c(Ljava/lang/Object;)V
 
-    iput-wide p1, p0, Lgt8;->b:J
+    return-void
+.end method
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.method public static synthetic h(Lgt8;Ljava/lang/Object;)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lqy0;->d(Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public static synthetic i(Lgt8;Ljava/lang/Object;)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lqy0;->f(Ljava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 8
+.method public final c(Ljava/lang/Object;)V
+    .locals 2
 
-    iget v0, p0, Lgt8;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    check-cast p2, Lqxh;
-
-    iget-wide v0, p0, Lgt8;->b:J
-
-    invoke-virtual {p2, v0, v1}, Lqxh;->a(J)J
-
-    move-result-wide v2
-
-    new-instance p2, Lta5;
-
-    invoke-direct {p2, v2, v3}, Lta5;-><init>(J)V
-
-    check-cast p1, Lqxh;
-
-    invoke-virtual {p1, v0, v1}, Lqxh;->a(J)J
-
-    move-result-wide v0
-
-    new-instance p1, Lta5;
-
-    invoke-direct {p1, v0, v1}, Lta5;-><init>(J)V
-
-    invoke-static {p2, p1}, Lijj;->b(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
-
-    move-result p1
-
-    return p1
-
-    :pswitch_0
-    const-wide v0, 0x7fffffffffffffffL
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v0
 
-    check-cast p2, Luhe;
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
-    iget-object v1, p2, Luhe;->d:Lnd2;
+    move-result-object v1
 
-    const/4 v2, 0x0
+    if-ne v0, v1, :cond_0
 
-    const/4 v3, 0x1
+    invoke-super {p0, p1}, Lqy0;->c(Ljava/lang/Object;)V
 
-    iget-wide v4, p0, Lgt8;->b:J
-
-    if-eqz v1, :cond_0
-
-    iget-object v1, v1, Lnd2;->b:Luh2;
-
-    invoke-virtual {v1, v4, v5}, Luh2;->e(J)Z
-
-    move-result v1
-
-    if-ne v1, v3, :cond_0
-
-    move-object p2, v0
-
-    goto :goto_0
+    return-void
 
     :cond_0
-    iget-object p2, p2, Luhe;->d:Lnd2;
+    new-instance v0, Lft8;
 
-    if-eqz p2, :cond_1
+    const/4 v1, 0x0
 
-    invoke-virtual {p2}, Lnd2;->p()J
+    invoke-direct {v0, p0, p1, v1}, Lft8;-><init>(Lgt8;Ljava/lang/Object;I)V
 
-    move-result-wide v6
+    iget-object p1, p0, Lgt8;->i:Landroid/os/Handler;
 
-    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    move-result-object p2
+    return-void
+.end method
 
-    goto :goto_0
+.method public final d(Ljava/lang/Object;)V
+    .locals 2
 
-    :cond_1
-    move-object p2, v2
-
-    :goto_0
-    check-cast p1, Luhe;
-
-    iget-object v1, p1, Luhe;->d:Lnd2;
-
-    if-eqz v1, :cond_2
-
-    iget-object v1, v1, Lnd2;->b:Luh2;
-
-    invoke-virtual {v1, v4, v5}, Luh2;->e(J)Z
-
-    move-result v1
-
-    if-ne v1, v3, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    iget-object p1, p1, Luhe;->d:Lnd2;
-
-    if-eqz p1, :cond_3
-
-    invoke-virtual {p1}, Lnd2;->p()J
-
-    move-result-wide v0
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v0
 
-    goto :goto_1
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
-    :cond_3
-    move-object v0, v2
+    move-result-object v1
 
-    :goto_1
-    invoke-static {p2, v0}, Lijj;->b(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
+    if-ne v0, v1, :cond_0
 
-    move-result p1
+    :try_start_0
+    invoke-super {p0, p1}, Lqy0;->d(Ljava/lang/Object;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    return p1
+    :catch_0
+    return-void
 
-    :pswitch_1
-    check-cast p1, Lit8;
+    :cond_0
+    new-instance v0, Lft8;
 
-    check-cast p2, Lit8;
+    const/4 v1, 0x1
 
-    iget-wide p1, p1, Lit8;->c:J
+    invoke-direct {v0, p0, p1, v1}, Lft8;-><init>(Lgt8;Ljava/lang/Object;I)V
 
-    iget-wide v0, p0, Lgt8;->b:J
+    iget-object p1, p0, Lgt8;->i:Landroid/os/Handler;
 
-    cmp-long p1, p1, v0
+    invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    if-nez p1, :cond_4
+    return-void
+.end method
 
-    const/4 p1, -0x1
+.method public final f(Ljava/lang/Object;)V
+    .locals 2
 
-    goto :goto_2
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
-    :cond_4
-    const/4 p1, 0x0
+    move-result-object v0
 
-    :goto_2
-    return p1
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
-    nop
+    move-result-object v1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    if-ne v0, v1, :cond_0
+
+    :try_start_0
+    invoke-super {p0, p1}, Lqy0;->f(Ljava/lang/Object;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    return-void
+
+    :cond_0
+    new-instance v0, Lft8;
+
+    const/4 v1, 0x2
+
+    invoke-direct {v0, p0, p1, v1}, Lft8;-><init>(Lgt8;Ljava/lang/Object;I)V
+
+    iget-object p1, p0, Lgt8;->i:Landroid/os/Handler;
+
+    invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
 .end method

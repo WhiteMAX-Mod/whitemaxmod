@@ -1,80 +1,303 @@
-.class public final synthetic Lmf6;
-.super Ljava/lang/Object;
+.class public final Lmf6;
+.super Lhmf;
 .source "SourceFile"
-
-# interfaces
-.implements Lnq6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final E0:Lznb;
 
-.field public final synthetic b:Lnf6;
+.field public F0:Lone/me/folders/edit/FolderEditScreen;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lnf6;I)V
-    .locals 0
+.method public constructor <init>(Landroid/view/ViewGroup;)V
+    .locals 6
 
-    iput p2, p0, Lmf6;->a:I
+    new-instance v0, Landroid/widget/FrameLayout;
 
-    iput-object p1, p0, Lmf6;->b:Lnf6;
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
+
+    invoke-direct {p0, v0}, Lpyd;-><init>(Landroid/view/View;)V
+
+    new-instance p1, Lznb;
+
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-direct {p1, v1}, Lznb;-><init>(Landroid/content/Context;)V
+
+    iput-object p1, p0, Lmf6;->E0:Lznb;
+
+    sget v1, Lded;->oneme_folders_edit_folder_name_field:I
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
+
+    new-instance v1, Landroid/view/ViewGroup$MarginLayoutParams;
+
+    const/4 v2, -0x1
+
+    const/4 v3, -0x2
+
+    invoke-direct {v1, v2, v3}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(II)V
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    sget v1, Lmdb;->p:I
+
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v4
+
+    invoke-static {v4, v1}, Ln94;->K(Landroid/content/Context;I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p1, v1}, Lznb;->setHint(Ljava/lang/String;)V
+
+    new-instance v1, Lq62;
+
+    const/16 v4, 0x19
+
+    invoke-direct {v1, v4, p0}, Lq62;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {p1, v1}, Lznb;->f(Lks6;)Landroid/text/TextWatcher;
+
+    new-instance v1, Landroid/text/InputFilter$LengthFilter;
+
+    const/16 v4, 0x14
+
+    invoke-direct {v1, v4}, Landroid/text/InputFilter$LengthFilter;-><init>(I)V
+
+    const/4 v4, 0x1
+
+    new-array v4, v4, [Landroid/text/InputFilter;
+
+    const/4 v5, 0x0
+
+    aput-object v1, v4, v5
+
+    invoke-virtual {p1, v4}, Lznb;->setFilters([Landroid/text/InputFilter;)V
+
+    const/4 v1, 0x6
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {p1, v1}, Lznb;->setImeOptions(Ljava/lang/Integer;)V
+
+    new-instance v1, Landroid/widget/FrameLayout$LayoutParams;
+
+    const/16 v4, 0x11
+
+    invoke-direct {v1, v2, v3, v4}, Landroid/widget/FrameLayout$LayoutParams;-><init>(III)V
+
+    invoke-virtual {v0, p1, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    new-instance p1, Lhz;
+
+    const/16 v1, 0x13
+
+    const/4 v2, 0x0
+
+    invoke-direct {p1, p0, v2, v1}, Lhz;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
+
+    invoke-static {p1, v0}, Lxej;->l(Lat6;Landroid/view/View;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final A()V
+    .locals 7
+
+    iget-object v0, p0, Lmf6;->E0:Lznb;
+
+    invoke-virtual {v0}, Lznb;->getText()Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
+
+    move-result v1
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    :try_start_0
+    instance-of v4, v0, Landroid/text/Spanned;
+
+    if-eqz v4, :cond_0
+
+    check-cast v0, Landroid/text/Spanned;
+
+    goto :goto_0
+
+    :cond_0
+    move-object v0, v2
+
+    :goto_0
+    if-eqz v0, :cond_1
+
+    const-class v4, Lone/me/sdk/uikit/common/span/FitFontImageSpan;
+
+    invoke-interface {v0, v3, v1, v4}, Landroid/text/Spanned;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
+
+    move-result-object v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :catchall_0
+    :cond_1
+    if-nez v2, :cond_2
+
+    new-array v2, v3, [Lone/me/sdk/uikit/common/span/FitFontImageSpan;
+
+    :cond_2
+    array-length v0, v2
+
+    move v1, v3
+
+    :goto_1
+    if-ge v1, v0, :cond_3
+
+    aget-object v4, v2, v1
+
+    check-cast v4, Lone/me/sdk/uikit/common/span/FitFontImageSpan;
+
+    const/16 v5, 0xf
+
+    int-to-float v5, v5
+
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v6
+
+    iget v6, v6, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v5, v6
+
+    invoke-static {v5}, Lmhj;->f(F)I
+
+    move-result v5
+
+    sget-object v6, Lc76;->c:Lc76;
+
+    invoke-virtual {v4, v5, v6, v3}, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->updateDrawableSize(ILc76;Z)V
+
+    invoke-virtual {v4, v3}, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->setOverrideAlpha(Z)V
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_1
+
+    :cond_3
+    return-void
+.end method
+
+.method public final C()V
     .locals 1
 
-    iget v0, p0, Lmf6;->a:I
+    const/4 v0, 0x0
 
-    check-cast p1, Luf6;
+    iput-object v0, p0, Lmf6;->F0:Lone/me/folders/edit/FolderEditScreen;
 
-    packed-switch v0, :pswitch_data_0
+    return-void
+.end method
 
-    iget-object v0, p0, Lmf6;->b:Lnf6;
+.method public final E(Llf6;)V
+    .locals 4
 
-    iget-object v0, v0, Lnf6;->X:Ljava/lang/Object;
+    iget-boolean v0, p1, Llf6;->b:Z
 
-    check-cast v0, Lyf6;
+    iget-object v1, p0, Lmf6;->E0:Lznb;
+
+    invoke-virtual {v1, v0}, Lznb;->setEnabled(Z)V
 
     if-eqz v0, :cond_0
 
-    check-cast v0, Ls82;
+    sget v0, Lcjb;->Z:I
 
-    invoke-virtual {v0, p1}, Ls82;->e(Luf6;)V
+    goto :goto_0
 
     :cond_0
-    sget-object p1, Lb3h;->a:Lb3h;
+    sget v0, Lcjb;->W:I
 
-    return-object p1
+    :goto_0
+    invoke-virtual {v1, v0}, Lznb;->setTextColorAttr(I)V
 
-    :pswitch_0
-    iget-object v0, p0, Lmf6;->b:Lnf6;
+    invoke-virtual {v1}, Lznb;->getText()Ljava/lang/CharSequence;
 
-    iget-object v0, v0, Lnf6;->X:Ljava/lang/Object;
+    move-result-object v0
 
-    check-cast v0, Lyf6;
+    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
+
+    move-result v0
+
+    const/4 v2, 0x0
+
+    if-nez v0, :cond_3
+
+    iget-object v0, p1, Llf6;->a:Lhpg;
 
     if-eqz v0, :cond_1
 
-    check-cast v0, Ls82;
+    invoke-virtual {v0, p0}, Lhpg;->a(Lpyd;)Ljava/lang/CharSequence;
 
-    invoke-virtual {v0, p1}, Ls82;->e(Luf6;)V
+    move-result-object v0
+
+    goto :goto_1
 
     :cond_1
-    sget-object p1, Lb3h;->a:Lb3h;
+    move-object v0, v2
 
-    return-object p1
+    :goto_1
+    if-nez v0, :cond_2
 
-    nop
+    const-string v0, ""
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    :cond_2
+    invoke-virtual {v1, v0}, Lznb;->setText(Ljava/lang/CharSequence;)V
+
+    :cond_3
+    new-instance v0, Landroid/text/InputFilter$LengthFilter;
+
+    iget p1, p1, Llf6;->c:I
+
+    invoke-direct {v0, p1}, Landroid/text/InputFilter$LengthFilter;-><init>(I)V
+
+    const/4 p1, 0x1
+
+    new-array p1, p1, [Landroid/text/InputFilter;
+
+    const/4 v3, 0x0
+
+    aput-object v0, p1, v3
+
+    invoke-virtual {v1, p1}, Lznb;->setFilters([Landroid/text/InputFilter;)V
+
+    iput-object v2, p0, Lmf6;->F0:Lone/me/folders/edit/FolderEditScreen;
+
+    return-void
+.end method
+
+.method public final bridge synthetic y(Lmg8;)V
+    .locals 0
+
+    check-cast p1, Llf6;
+
+    invoke-virtual {p0, p1}, Lmf6;->E(Llf6;)V
+
+    return-void
 .end method

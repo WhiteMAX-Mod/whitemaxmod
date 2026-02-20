@@ -1,198 +1,99 @@
 .class public final Lbmb;
-.super Ljava/lang/Object;
+.super Ldmb;
 .source "SourceFile"
 
 
 # static fields
-.field public static final d:[Lzbb;
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lbmb;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-
-# instance fields
-.field public final a:Ln8g;
-
-.field public final b:Ljava/util/Map;
-
-.field public final c:Ljava/util/concurrent/ConcurrentHashMap;
+.field public static final b:Lbmb;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 9
+    .locals 3
 
-    sget-object v0, Lzbb;->d:Lzbb;
+    new-instance v0, Lbmb;
 
-    sget-object v1, Lzbb;->d:Lzbb;
+    const-wide/16 v1, 0xdac
 
-    sget-object v2, Lzbb;->j:Lzbb;
+    invoke-direct {v0, v1, v2}, Ldmb;-><init>(J)V
 
-    sget-object v3, Lzbb;->k:Lzbb;
+    sput-object v0, Lbmb;->b:Lbmb;
 
-    sget-object v4, Lzbb;->e:Lzbb;
+    new-instance v0, Lz09;
 
-    sget-object v5, Lzbb;->f:Lzbb;
+    const/16 v1, 0x14
 
-    sget-object v6, Lzbb;->h:Lzbb;
+    invoke-direct {v0, v1}, Lz09;-><init>(I)V
 
-    sget-object v7, Lzbb;->i:Lzbb;
+    sput-object v0, Lbmb;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    sget-object v8, Lzbb;->g:Lzbb;
-
-    filled-new-array/range {v1 .. v8}, [Lzbb;
-
-    move-result-object v0
-
-    sput-object v0, Lbmb;->d:[Lzbb;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ln8g;)V
-    .locals 4
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lbmb;->a:Ln8g;
-
-    new-instance p1, Ljava/util/LinkedHashMap;
-
-    sget-object v0, Lbmb;->d:[Lzbb;
-
-    array-length v1, v0
-
-    invoke-direct {p1, v1}, Ljava/util/LinkedHashMap;-><init>(I)V
-
-    invoke-static {p1}, Ljava/util/Collections;->synchronizedMap(Ljava/util/Map;)Ljava/util/Map;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lbmb;->b:Ljava/util/Map;
-
-    new-instance p1, Ljava/util/concurrent/ConcurrentHashMap;
-
-    array-length v1, v0
-
-    mul-int/lit8 v1, v1, 0x2
-
-    invoke-direct {p1, v1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>(I)V
-
-    iput-object p1, p0, Lbmb;->c:Ljava/util/concurrent/ConcurrentHashMap;
-
-    array-length p1, v0
-
-    const/4 v1, 0x0
-
-    :goto_0
-    if-ge v1, p1, :cond_0
-
-    aget-object v2, v0, v1
-
-    iget-object v3, v2, Lzbb;->a:Ljava/lang/String;
-
-    invoke-virtual {p0, v3, v2}, Lbmb;->b(Ljava/lang/String;Lzbb;)V
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;)Lzbb;
-    .locals 3
+.method public final describeContents()I
+    .locals 1
 
-    new-instance v0, Lir7;
+    const/4 v0, 0x0
 
-    const/16 v1, 0x11
-
-    invoke-direct {v0, p0, v1, p1}, Lir7;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    new-instance v1, Lpi;
-
-    const/16 v2, 0x17
-
-    invoke-direct {v1, v2, v0}, Lpi;-><init>(ILjava/lang/Object;)V
-
-    iget-object v0, p0, Lbmb;->b:Ljava/util/Map;
-
-    invoke-interface {v0, p1, v1}, Ljava/util/Map;->computeIfAbsent(Ljava/lang/Object;Ljava/util/function/Function;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lzbb;
-
-    return-object p1
+    return v0
 .end method
 
-.method public final b(Ljava/lang/String;Lzbb;)V
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget-object v0, p0, Lbmb;->b:Ljava/util/Map;
+    const/4 v0, 0x1
 
-    invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, p2, Lzbb;->b:Lzlb;
-
-    iget-object p2, p2, Lzbb;->c:Lzlb;
-
-    invoke-interface {p2}, Lzlb;->getName()Ljava/lang/String;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lbmb;->c:Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-virtual {v2, v1, p2}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-interface {v0}, Lzlb;->getName()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-virtual {v2, p2, v0}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object p2, Lbmb;->d:[Lzbb;
-
-    array-length v0, p2
-
-    const/4 v1, 0x0
-
-    :goto_0
-    if-ge v1, v0, :cond_1
-
-    aget-object v2, p2, v1
-
-    iget-object v2, v2, Lzbb;->a:Ljava/lang/String;
-
-    invoke-virtual {v2, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    return-void
+    return v0
 
     :cond_0
-    add-int/lit8 v1, v1, 0x1
+    instance-of p1, p1, Lbmb;
 
-    goto :goto_0
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
 
     :cond_1
-    iget-object p1, p0, Lbmb;->a:Ln8g;
+    return v0
+.end method
 
-    invoke-virtual {p1}, Ln8g;->getValue()Ljava/lang/Object;
+.method public final hashCode()I
+    .locals 1
 
-    move-result-object p1
+    const v0, -0x16da368a
 
-    check-cast p1, Landroid/content/SharedPreferences;
+    return v0
+.end method
 
-    invoke-interface {p1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    new-instance p1, Ltoa;
+    const-string v0, "Standard"
 
-    const-string p2, "An operation is not implemented: ONEME-18754 \u0414\u043e\u0431\u0430\u0432\u0438\u0442\u044c \u043f\u043e\u0434\u0434\u0435\u0440\u0436\u043a\u0443 \u043a\u0430\u0441\u0442\u043e\u043c\u043d\u044b\u0445 \u0442\u0435\u043c"
+    return-object v0
+.end method
 
-    invoke-direct {p1, p2}, Ljava/lang/Error;-><init>(Ljava/lang/String;)V
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    throw p1
+    const/4 p2, 0x1
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    return-void
 .end method

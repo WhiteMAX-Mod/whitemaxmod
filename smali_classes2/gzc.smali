@@ -1,236 +1,81 @@
 .class public final Lgzc;
-.super Lbp9;
+.super Lda4;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:F
+.field public A0:I
 
-.field public b:F
+.field public X:Lwrc;
 
-.field public c:I
+.field public Y:Lyrc;
 
-.field public d:Z
+.field public Z:Ljava/lang/Long;
+
+.field public d:Lwy3;
+
+.field public o:Lte2;
+
+.field public s0:Ljava/util/List;
+
+.field public t0:Ljava/util/List;
+
+.field public u0:Lqlc;
+
+.field public v0:Ljava/lang/String;
+
+.field public w0:Lhpg;
+
+.field public x0:I
+
+.field public synthetic y0:Ljava/lang/Object;
+
+.field public final synthetic z0:Ljzc;
+
+
+# direct methods
+.method public constructor <init>(Ljzc;Lda4;)V
+    .locals 0
+
+    iput-object p1, p0, Lgzc;->z0:Ljzc;
+
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final computeSerializedSize()I
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
 
-    iget v0, p0, Lgzc;->a:F
+    iput-object p1, p0, Lgzc;->y0:Ljava/lang/Object;
 
-    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
+    iget p1, p0, Lgzc;->A0:I
 
-    move-result v0
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lgzc;->A0:I
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    iget-object v0, p0, Lgzc;->z0:Ljzc;
 
     const/4 v1, 0x0
 
-    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+    const/4 v2, 0x0
 
-    move-result v2
+    const/4 v3, 0x0
 
-    if-eq v0, v2, :cond_0
+    move-object v6, p0
 
-    const/4 v0, 0x1
+    invoke-virtual/range {v0 .. v6}, Ljzc;->g(Lwy3;Lte2;Lwrc;Lyrc;Ljava/lang/Long;Lda4;)Ljava/io/Serializable;
 
-    invoke-static {v0}, Lwg3;->e(I)I
+    move-result-object p1
 
-    move-result v0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    iget v2, p0, Lgzc;->b:F
-
-    invoke-static {v2}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v2
-
-    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v1
-
-    if-eq v2, v1, :cond_1
-
-    const/4 v1, 0x2
-
-    invoke-static {v1}, Lwg3;->e(I)I
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    :cond_1
-    iget v1, p0, Lgzc;->c:I
-
-    if-eqz v1, :cond_2
-
-    const/4 v2, 0x3
-
-    invoke-static {v2, v1}, Lwg3;->f(II)I
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    :cond_2
-    iget-boolean v1, p0, Lgzc;->d:Z
-
-    if-eqz v1, :cond_3
-
-    const/4 v1, 0x4
-
-    invoke-static {v1}, Lwg3;->a(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-
-    :cond_3
-    return v0
-.end method
-
-.method public final mergeFrom(Lvg3;)Lbp9;
-    .locals 2
-
-    :cond_0
-    :goto_0
-    invoke-virtual {p1}, Lvg3;->s()I
-
-    move-result v0
-
-    if-eqz v0, :cond_5
-
-    const/16 v1, 0xd
-
-    if-eq v0, v1, :cond_4
-
-    const/16 v1, 0x15
-
-    if-eq v0, v1, :cond_3
-
-    const/16 v1, 0x18
-
-    if-eq v0, v1, :cond_2
-
-    const/16 v1, 0x20
-
-    if-eq v0, v1, :cond_1
-
-    invoke-virtual {p1, v0}, Lvg3;->u(I)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {p1}, Lvg3;->f()Z
-
-    move-result v0
-
-    iput-boolean v0, p0, Lgzc;->d:Z
-
-    goto :goto_0
-
-    :cond_2
-    invoke-virtual {p1}, Lvg3;->p()I
-
-    move-result v0
-
-    iput v0, p0, Lgzc;->c:I
-
-    goto :goto_0
-
-    :cond_3
-    invoke-virtual {p1}, Lvg3;->i()F
-
-    move-result v0
-
-    iput v0, p0, Lgzc;->b:F
-
-    goto :goto_0
-
-    :cond_4
-    invoke-virtual {p1}, Lvg3;->i()F
-
-    move-result v0
-
-    iput v0, p0, Lgzc;->a:F
-
-    goto :goto_0
-
-    :cond_5
-    :goto_1
-    return-object p0
-.end method
-
-.method public final writeTo(Lwg3;)V
-    .locals 3
-
-    iget v0, p0, Lgzc;->a:F
-
-    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v2
-
-    if-eq v0, v2, :cond_0
-
-    const/4 v0, 0x1
-
-    iget v2, p0, Lgzc;->a:F
-
-    invoke-virtual {p1, v0, v2}, Lwg3;->v(IF)V
-
-    :cond_0
-    iget v0, p0, Lgzc;->b:F
-
-    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v0
-
-    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v1
-
-    if-eq v0, v1, :cond_1
-
-    const/4 v0, 0x2
-
-    iget v1, p0, Lgzc;->b:F
-
-    invoke-virtual {p1, v0, v1}, Lwg3;->v(IF)V
-
-    :cond_1
-    iget v0, p0, Lgzc;->c:I
-
-    if-eqz v0, :cond_2
-
-    const/4 v1, 0x3
-
-    invoke-virtual {p1, v1, v0}, Lwg3;->w(II)V
-
-    :cond_2
-    iget-boolean v0, p0, Lgzc;->d:Z
-
-    if-eqz v0, :cond_3
-
-    const/4 v1, 0x4
-
-    invoke-virtual {p1, v1, v0}, Lwg3;->r(IZ)V
-
-    :cond_3
-    return-void
+    return-object p1
 .end method

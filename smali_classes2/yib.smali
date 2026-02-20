@@ -9,16 +9,16 @@
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lajb;
+.field public final synthetic b:Lzib;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lajb;I)V
+.method public synthetic constructor <init>(Lzib;I)V
     .locals 0
 
     iput p2, p0, Lyib;->a:I
 
-    iput-object p1, p0, Lyib;->b:Lajb;
+    iput-object p1, p0, Lyib;->b:Lzib;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -34,73 +34,73 @@
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lyib;->b:Lajb;
+    iget-object v0, p0, Lyib;->b:Lzib;
 
-    iget-object v1, v0, Lajb;->C0:Ljava/util/ArrayList;
+    iget-object v1, v0, Lzib;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
-    move-result-object v1
+    move-result v1
 
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    if-eqz v1, :cond_0
 
-    move-result v2
+    const-string v0, "OneMeScheduledFuture"
 
-    if-eqz v2, :cond_0
+    const-string v1, "Early return in executeTask cuz of isCancelled.get()"
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lzib;
-
-    iget-object v3, v0, Lajb;->c:Lxgf;
-
-    iget v3, v3, Lxgf;->d:F
-
-    const/4 v4, 0x0
-
-    invoke-interface {v2, v3, v4}, Lzib;->a(FZ)V
+    invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
     :cond_0
+    iget-object v1, v0, Lzib;->b:Ljava/util/concurrent/ExecutorService;
+
+    new-instance v2, Lfk;
+
+    const/16 v3, 0xa
+
+    const/4 v4, 0x0
+
+    invoke-direct {v2, v3, v0, v4}, Lfk;-><init>(ILjava/lang/Object;Z)V
+
+    invoke-interface {v1, v2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    :goto_0
     return-void
 
     :pswitch_0
-    iget-object v0, p0, Lyib;->b:Lajb;
+    iget-object v0, p0, Lyib;->b:Lzib;
 
-    iget-object v1, v0, Lajb;->C0:Ljava/util/ArrayList;
+    iget-object v1, v0, Lzib;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
-    move-result-object v1
+    move-result v1
 
-    :goto_1
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    if-eqz v1, :cond_1
 
-    move-result v2
+    const-string v0, "OneMeScheduledFuture"
 
-    if-eqz v2, :cond_1
+    const-string v1, "Early return in executeTask cuz of isCancelled.get()"
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lzib;
-
-    iget-object v3, v0, Lajb;->c:Lxgf;
-
-    iget v3, v3, Lxgf;->d:F
-
-    const/4 v4, 0x1
-
-    invoke-interface {v2, v3, v4}, Lzib;->a(FZ)V
+    invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_1
 
     :cond_1
+    iget-object v1, v0, Lzib;->b:Ljava/util/concurrent/ExecutorService;
+
+    new-instance v2, Lfk;
+
+    const/16 v3, 0xa
+
+    const/4 v4, 0x1
+
+    invoke-direct {v2, v3, v0, v4}, Lfk;-><init>(ILjava/lang/Object;Z)V
+
+    invoke-interface {v1, v2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    :goto_1
     return-void
 
     nop

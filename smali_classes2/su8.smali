@@ -1,572 +1,243 @@
-.class public final Lsu8;
-.super Lih;
+.class public final enum Lsu8;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic x0:I
+.field public static final enum X:Lsu8;
+
+.field public static final synthetic Y:[Lsu8;
+
+.field public static final c:Lluj;
+
+.field public static final d:Ljava/util/LinkedHashSet;
+
+.field public static final o:Ljava/util/LinkedHashSet;
 
 
 # instance fields
-.field public final v0:I
+.field public final a:I
 
-.field public final w0:I
+.field public final b:I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    .line 1
-    invoke-direct {p0, v0}, Lsu8;-><init>(I)V
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(I)V
-    .locals 1
-
-    const/4 p1, 0x1
-
-    const/4 v0, 0x0
-
-    .line 2
-    invoke-direct {p0, p1, v0}, Lsu8;-><init>(ILt02;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(ILt02;)V
-    .locals 2
-
-    const-wide/16 v0, 0x12c
-
-    const/4 p2, 0x2
-
-    .line 3
-    invoke-direct {p0, v0, v1, p2}, Lih;-><init>(JI)V
-
-    .line 4
-    iput p1, p0, Lsu8;->v0:I
-
-    const/16 p1, 0x1e
-
-    int-to-float p1, p1
-
-    .line 5
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object p2
-
-    invoke-virtual {p2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object p2
-
-    iget p2, p2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p1, p2
-
-    invoke-static {p1}, Lq7j;->c(F)I
-
-    move-result p1
-
-    .line 6
-    iput p1, p0, Lsu8;->w0:I
-
-    return-void
-.end method
-
-.method public static p(Landroid/view/View;FF)Landroid/animation/ObjectAnimator;
-    .locals 8
-
-    invoke-virtual {p0}, Landroid/view/View;->getScaleX()F
-
-    move-result v0
-
-    invoke-virtual {p0}, Landroid/view/View;->getScaleY()F
-
-    move-result v1
-
-    sget-object v2, Landroid/view/View;->SCALE_X:Landroid/util/Property;
-
-    mul-float v3, v0, p1
-
-    mul-float v4, v0, p2
-
-    const/4 v5, 0x2
-
-    new-array v6, v5, [F
-
-    const/4 v7, 0x0
-
-    aput v3, v6, v7
-
-    const/4 v3, 0x1
-
-    aput v4, v6, v3
-
-    invoke-static {v2, v6}, Landroid/animation/PropertyValuesHolder;->ofFloat(Landroid/util/Property;[F)Landroid/animation/PropertyValuesHolder;
-
-    move-result-object v2
-
-    sget-object v4, Landroid/view/View;->SCALE_Y:Landroid/util/Property;
-
-    mul-float/2addr p1, v1
-
-    mul-float/2addr p2, v1
-
-    new-array v5, v5, [F
-
-    aput p1, v5, v7
-
-    aput p2, v5, v3
-
-    invoke-static {v4, v5}, Landroid/animation/PropertyValuesHolder;->ofFloat(Landroid/util/Property;[F)Landroid/animation/PropertyValuesHolder;
-
-    move-result-object p1
-
-    filled-new-array {v2, p1}, [Landroid/animation/PropertyValuesHolder;
-
-    move-result-object p1
-
-    invoke-static {p0, p1}, Landroid/animation/ObjectAnimator;->ofPropertyValuesHolder(Ljava/lang/Object;[Landroid/animation/PropertyValuesHolder;)Landroid/animation/ObjectAnimator;
-
-    move-result-object p1
-
-    new-instance p2, Lru8;
-
-    invoke-direct {p2, p0, v0, v1}, Lru8;-><init>(Landroid/view/View;FF)V
-
-    invoke-virtual {p1, p2}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
-
-    return-object p1
-.end method
-
-.method public static q(Landroid/view/View;FFF)Landroid/animation/ObjectAnimator;
-    .locals 4
-
-    sget-object v0, Landroid/view/View;->TRANSLATION_X:Landroid/util/Property;
-
-    const/4 v1, 0x2
-
-    new-array v2, v1, [F
-
-    const/4 v3, 0x0
-
-    aput p1, v2, v3
-
-    const/4 p1, 0x1
-
-    aput p2, v2, p1
-
-    invoke-static {v0, v2}, Landroid/animation/PropertyValuesHolder;->ofFloat(Landroid/util/Property;[F)Landroid/animation/PropertyValuesHolder;
-
-    move-result-object p1
-
-    filled-new-array {p1}, [Landroid/animation/PropertyValuesHolder;
-
-    move-result-object p1
-
-    invoke-static {p0, p1}, Landroid/animation/ObjectAnimator;->ofPropertyValuesHolder(Ljava/lang/Object;[Landroid/animation/PropertyValuesHolder;)Landroid/animation/ObjectAnimator;
-
-    move-result-object p1
-
-    new-instance p2, Lqu8;
-
-    invoke-direct {p2, p0, p3, v1}, Lqu8;-><init>(Landroid/view/View;FI)V
-
-    invoke-virtual {p1, p2}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
-
-    return-object p1
-.end method
-
-
-# virtual methods
-.method public final b()Lf94;
-    .locals 3
+.method static constructor <clinit>()V
+    .locals 14
 
     new-instance v0, Lsu8;
 
-    iget v1, p0, Lsu8;->v0:I
+    sget v1, Llgd;->markdown_original:I
 
-    const/4 v2, 0x0
+    sget v2, Lwce;->c1:I
 
-    invoke-direct {v0, v1, v2}, Lsu8;-><init>(ILt02;)V
+    const/4 v3, 0x0
 
-    return-object v0
-.end method
+    const-string v4, "ORIGINAL"
 
-.method public final l(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;ZZ)Landroid/animation/Animator;
-    .locals 9
+    invoke-direct {v0, v3, v4, v1, v2}, Lsu8;-><init>(ILjava/lang/String;II)V
 
-    new-instance p1, Landroid/animation/AnimatorSet;
+    new-instance v1, Lsu8;
 
-    invoke-direct {p1}, Landroid/animation/AnimatorSet;-><init>()V
+    sget v2, Llgd;->markdown_heading:I
 
-    new-instance p5, Lvu5;
+    sget v3, Lwce;->Z0:I
 
-    invoke-direct {p5}, Lvu5;-><init>()V
+    const/4 v4, 0x1
 
-    invoke-virtual {p1, p5}, Landroid/animation/AnimatorSet;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+    const-string v5, "HEADING"
 
-    const/high16 p5, 0x3f800000    # 1.0f
+    invoke-direct {v1, v4, v5, v2, v3}, Lsu8;-><init>(ILjava/lang/String;II)V
 
-    const/4 v0, 0x0
+    new-instance v2, Lsu8;
 
-    if-eqz p3, :cond_1
+    sget v3, Llgd;->markdown_bold:I
 
-    invoke-virtual {p3}, Landroid/view/View;->getAlpha()F
+    sget v4, Lwce;->Y0:I
 
-    move-result v1
+    const/4 v5, 0x2
 
-    cmpg-float v1, v1, v0
+    const-string v6, "BOLD"
 
-    if-nez v1, :cond_0
+    invoke-direct {v2, v5, v6, v3, v4}, Lsu8;-><init>(ILjava/lang/String;II)V
 
-    move v5, p5
+    new-instance v3, Lsu8;
 
-    goto :goto_0
+    sget v4, Llgd;->markdown_italic:I
 
-    :cond_0
-    invoke-virtual {p3}, Landroid/view/View;->getAlpha()F
+    sget v5, Lwce;->a1:I
 
-    move-result v1
+    const/4 v6, 0x3
 
-    move v5, v1
+    const-string v7, "ITALIC"
 
-    :goto_0
-    const v1, -0x41e66666    # -0.15f
+    invoke-direct {v3, v6, v7, v4, v5}, Lsu8;-><init>(ILjava/lang/String;II)V
 
-    invoke-static {v1, v0, p5}, Lamj;->c(FFF)F
+    new-instance v4, Lsu8;
 
-    move-result v6
+    sget v5, Llgd;->markdown_underline:I
 
-    const/high16 v7, 0x3f800000    # 1.0f
+    sget v6, Lwce;->g1:I
 
-    const/4 v4, 0x0
+    const/4 v7, 0x4
 
-    move v8, v5
+    const-string v8, "UNDERLINE"
 
-    move-object v2, p0
+    invoke-direct {v4, v7, v8, v5, v6}, Lsu8;-><init>(ILjava/lang/String;II)V
 
-    move-object v3, p3
+    new-instance v5, Lsu8;
 
-    invoke-virtual/range {v2 .. v8}, Lsu8;->o(Landroid/view/View;FFFFF)Landroid/animation/ValueAnimator;
+    sget v6, Llgd;->markdown_mono:I
 
-    move-result-object p3
+    sget v7, Lwce;->b1:I
 
-    move-object v1, v2
+    const/4 v8, 0x5
 
-    move-object v8, v3
+    const-string v9, "MONO"
 
-    invoke-virtual {p1, p3}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
+    invoke-direct {v5, v8, v9, v6, v7}, Lsu8;-><init>(ILjava/lang/String;II)V
 
-    goto :goto_1
+    new-instance v6, Lsu8;
 
-    :cond_1
-    move-object v1, p0
+    sget v7, Llgd;->markdown_strikethrough:I
 
-    move-object v8, p3
+    sget v8, Lwce;->f1:I
 
-    :goto_1
-    if-eqz p2, :cond_2
+    const/4 v9, 0x6
 
-    if-eqz p4, :cond_3
+    const-string v10, "STRIKETHROUGH"
 
-    iget-boolean p3, v1, Lih;->u0:Z
+    invoke-direct {v6, v9, v10, v7, v8}, Lsu8;-><init>(ILjava/lang/String;II)V
 
-    if-eqz p3, :cond_2
+    new-instance v7, Lsu8;
 
-    goto :goto_2
+    sget v8, Llgd;->markdown_link:I
 
-    :cond_2
-    move-object v2, p2
+    sget v9, Lwce;->X0:I
 
-    goto :goto_4
+    const/4 v10, 0x7
 
-    :cond_3
-    :goto_2
-    invoke-virtual {p2}, Landroid/view/View;->getAlpha()F
+    const-string v11, "LINK"
 
-    move-result p3
+    invoke-direct {v7, v10, v11, v8, v9}, Lsu8;-><init>(ILjava/lang/String;II)V
 
-    cmpg-float p3, p3, v0
+    new-instance v8, Lsu8;
 
-    if-nez p3, :cond_4
+    sget v9, Llgd;->markdown_quote:I
 
-    move v3, p5
+    sget v10, Lwce;->d1:I
 
-    goto :goto_3
+    const/16 v11, 0x8
 
-    :cond_4
-    invoke-virtual {p2}, Landroid/view/View;->getAlpha()F
+    const-string v12, "QUOTE"
 
-    move-result p3
+    invoke-direct {v8, v11, v12, v9, v10}, Lsu8;-><init>(ILjava/lang/String;II)V
 
-    move v3, p3
+    sput-object v8, Lsu8;->X:Lsu8;
 
-    :goto_3
-    const p3, 0x3f59999a    # 0.85f
+    new-instance v9, Lsu8;
 
-    invoke-static {p3, v0, p5}, Lamj;->c(FFF)F
+    sget v10, Llgd;->markdown_regular:I
 
-    move-result v6
+    sget v11, Lwce;->e1:I
 
-    const/4 v4, 0x0
+    const/16 v12, 0x9
 
-    const/4 v5, 0x0
+    const-string v13, "REGULAR"
 
-    move v7, v3
+    invoke-direct {v9, v12, v13, v10, v11}, Lsu8;-><init>(ILjava/lang/String;II)V
 
-    move-object v2, p2
+    filled-new-array/range {v0 .. v9}, [Lsu8;
 
-    invoke-virtual/range {v1 .. v7}, Lsu8;->o(Landroid/view/View;FFFFF)Landroid/animation/ValueAnimator;
+    move-result-object v10
 
-    move-result-object p2
+    sput-object v10, Lsu8;->Y:[Lsu8;
 
-    invoke-virtual {p1, p2}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
+    new-instance v10, Lluj;
 
-    :goto_4
-    iget p2, v1, Lsu8;->v0:I
+    const/16 v11, 0x13
 
-    invoke-static {p2}, Lt02;->t(I)I
+    invoke-direct {v10, v11}, Lluj;-><init>(I)V
 
-    move-result p2
+    sput-object v10, Lsu8;->c:Lluj;
 
-    if-eqz p2, :cond_9
+    filled-new-array {v0, v1, v2, v8}, [Lsu8;
 
-    const/4 p3, 0x1
+    move-result-object v0
 
-    if-ne p2, p3, :cond_8
+    invoke-static {v0}, Lx2f;->c([Ljava/lang/Object;)Ljava/util/LinkedHashSet;
 
-    const p2, 0x3f8ccccd    # 1.1f
+    move-result-object v0
 
-    const p3, 0x3f4ccccd    # 0.8f
+    sput-object v0, Lsu8;->d:Ljava/util/LinkedHashSet;
 
-    if-eqz p4, :cond_6
+    move-object v10, v6
 
-    if-eqz v8, :cond_5
+    move-object v11, v7
 
-    invoke-static {v8, p3, p5}, Lsu8;->p(Landroid/view/View;FF)Landroid/animation/ObjectAnimator;
+    move-object v12, v8
 
-    move-result-object p3
+    move-object v13, v9
 
-    invoke-virtual {p1, p3}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
+    move-object v6, v2
 
-    :cond_5
-    if-eqz v2, :cond_d
+    move-object v7, v3
 
-    invoke-static {v2, p5, p2}, Lsu8;->p(Landroid/view/View;FF)Landroid/animation/ObjectAnimator;
+    move-object v8, v4
 
-    move-result-object p2
+    move-object v9, v5
 
-    invoke-virtual {p1, p2}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
+    move-object v5, v1
 
-    return-object p1
+    filled-new-array/range {v5 .. v13}, [Lsu8;
 
-    :cond_6
-    if-eqz v8, :cond_7
+    move-result-object v0
 
-    invoke-static {v8, p2, p5}, Lsu8;->p(Landroid/view/View;FF)Landroid/animation/ObjectAnimator;
+    invoke-static {v0}, Lx2f;->c([Ljava/lang/Object;)Ljava/util/LinkedHashSet;
 
-    move-result-object p2
+    move-result-object v0
 
-    invoke-virtual {p1, p2}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
-
-    :cond_7
-    if-eqz v2, :cond_d
-
-    invoke-static {v2, p5, p3}, Lsu8;->p(Landroid/view/View;FF)Landroid/animation/ObjectAnimator;
-
-    move-result-object p2
-
-    invoke-virtual {p1, p2}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
-
-    return-object p1
-
-    :cond_8
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
-
-    :cond_9
-    iget p2, v1, Lsu8;->w0:I
-
-    if-eqz p4, :cond_b
-
-    if-eqz v8, :cond_a
-
-    invoke-virtual {v8}, Landroid/view/View;->getTranslationX()F
-
-    move-result p3
-
-    int-to-float p4, p2
-
-    add-float/2addr p3, p4
-
-    invoke-virtual {v8}, Landroid/view/View;->getTranslationX()F
-
-    move-result p4
-
-    invoke-virtual {v8}, Landroid/view/View;->getTranslationX()F
-
-    move-result p5
-
-    invoke-static {v8, p3, p4, p5}, Lsu8;->q(Landroid/view/View;FFF)Landroid/animation/ObjectAnimator;
-
-    move-result-object p3
-
-    invoke-virtual {p1, p3}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
-
-    :cond_a
-    if-eqz v2, :cond_d
-
-    invoke-virtual {v2}, Landroid/view/View;->getTranslationX()F
-
-    move-result p3
-
-    invoke-virtual {v2}, Landroid/view/View;->getTranslationX()F
-
-    move-result p4
-
-    int-to-float p2, p2
-
-    sub-float/2addr p4, p2
-
-    invoke-virtual {v2}, Landroid/view/View;->getTranslationX()F
-
-    move-result p2
-
-    invoke-static {v2, p3, p4, p2}, Lsu8;->q(Landroid/view/View;FFF)Landroid/animation/ObjectAnimator;
-
-    move-result-object p2
-
-    invoke-virtual {p1, p2}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
-
-    return-object p1
-
-    :cond_b
-    if-eqz v8, :cond_c
-
-    invoke-virtual {v8}, Landroid/view/View;->getTranslationX()F
-
-    move-result p3
-
-    int-to-float p4, p2
-
-    sub-float/2addr p3, p4
-
-    invoke-virtual {v8}, Landroid/view/View;->getTranslationX()F
-
-    move-result p4
-
-    invoke-virtual {v8}, Landroid/view/View;->getTranslationX()F
-
-    move-result p5
-
-    invoke-static {v8, p3, p4, p5}, Lsu8;->q(Landroid/view/View;FFF)Landroid/animation/ObjectAnimator;
-
-    move-result-object p3
-
-    invoke-virtual {p1, p3}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
-
-    :cond_c
-    if-eqz v2, :cond_d
-
-    invoke-virtual {v2}, Landroid/view/View;->getTranslationX()F
-
-    move-result p3
-
-    invoke-virtual {v2}, Landroid/view/View;->getTranslationX()F
-
-    move-result p4
-
-    int-to-float p2, p2
-
-    add-float/2addr p4, p2
-
-    invoke-virtual {v2}, Landroid/view/View;->getTranslationX()F
-
-    move-result p2
-
-    invoke-static {v2, p3, p4, p2}, Lsu8;->q(Landroid/view/View;FFF)Landroid/animation/ObjectAnimator;
-
-    move-result-object p2
-
-    invoke-virtual {p1, p2}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
-
-    :cond_d
-    return-object p1
-.end method
-
-.method public final n(Landroid/view/View;)V
-    .locals 1
-
-    const/high16 v0, 0x3f800000    # 1.0f
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
+    sput-object v0, Lsu8;->o:Ljava/util/LinkedHashSet;
 
     return-void
 .end method
 
-.method public final o(Landroid/view/View;FFFFF)Landroid/animation/ValueAnimator;
-    .locals 9
+.method public constructor <init>(ILjava/lang/String;II)V
+    .locals 0
 
-    const/4 v0, 0x2
+    invoke-direct {p0, p2, p1}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    new-array v0, v0, [F
+    iput p3, p0, Lsu8;->a:I
 
-    fill-array-data v0, :array_0
+    iput p4, p0, Lsu8;->b:I
 
-    invoke-static {v0}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
+    return-void
+.end method
 
-    move-result-object v2
+.method public static valueOf(Ljava/lang/String;)Lsu8;
+    .locals 1
 
-    new-instance v1, Lpu8;
+    const-class v0, Lsu8;
 
-    move-object v4, p0
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    move-object v3, p1
+    move-result-object p0
 
-    move v5, p2
+    check-cast p0, Lsu8;
 
-    move v6, p3
+    return-object p0
+.end method
 
-    move v7, p4
+.method public static values()[Lsu8;
+    .locals 1
 
-    move v8, p5
+    sget-object v0, Lsu8;->Y:[Lsu8;
 
-    invoke-direct/range {v1 .. v8}, Lpu8;-><init>(Landroid/animation/ValueAnimator;Landroid/view/View;Lsu8;FFFF)V
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    invoke-virtual {v2, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+    move-result-object v0
 
-    new-instance p1, Lqu8;
+    check-cast v0, [Lsu8;
 
-    const/4 p2, 0x1
-
-    invoke-direct {p1, v3, p6, p2}, Lqu8;-><init>(Landroid/view/View;FI)V
-
-    invoke-virtual {v2, p1}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
-
-    new-instance p1, Lqu8;
-
-    const/4 p2, 0x0
-
-    invoke-direct {p1, v3, p6, p2}, Lqu8;-><init>(Landroid/view/View;FI)V
-
-    invoke-virtual {v2, p1}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
-
-    return-object v2
-
-    nop
-
-    :array_0
-    .array-data 4
-        0x0
-        0x3f800000    # 1.0f
-    .end array-data
+    return-object v0
 .end method

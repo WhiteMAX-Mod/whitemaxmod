@@ -1,21 +1,51 @@
 .class public final Lq06;
-.super Laq;
+.super Lda4;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lq06;
+# instance fields
+.field public X:Z
+
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public Z:I
+
+.field public d:Lwj7;
+
+.field public o:Z
 
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
 
-    new-instance v0, Lq06;
+    iput-object p1, p0, Lq06;->Y:Ljava/lang/Object;
 
-    invoke-direct {v0}, Laq;-><init>()V
+    iget p1, p0, Lq06;->Z:I
 
-    sput-object v0, Lq06;->a:Lq06;
+    const/high16 v0, -0x80000000
 
-    return-void
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lq06;->Z:I
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x0
+
+    const-wide/16 v2, 0x0
+
+    const/4 v4, 0x0
+
+    move-object v7, p0
+
+    invoke-static/range {v0 .. v7}, Lou0;->b(Lij7;Lwj7;JLjava/lang/Object;ZZLda4;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

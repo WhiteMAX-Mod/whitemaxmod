@@ -1,81 +1,59 @@
 .class public final Lkmf;
-.super Lg4;
+.super Ljava/util/concurrent/atomic/AtomicBoolean;
 .source "SourceFile"
 
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lkmf;",
-            ">;"
-        }
-    .end annotation
-.end field
+# interfaces
+.implements Ly35;
 
 
 # instance fields
-.field public final a:Lxp0;
+.field public final a:Lcnf;
+
+.field public final b:Llmf;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lcnf;Llmf;)V
+    .locals 0
 
-    new-instance v0, Lwij;
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>()V
 
-    const/4 v1, 0x5
+    iput-object p1, p0, Lkmf;->a:Lcnf;
 
-    invoke-direct {v0, v1}, Lwij;-><init>(I)V
-
-    sput-object v0, Lkmf;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/os/IBinder;)V
-    .locals 1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Lxp0;
-
-    invoke-static {p1}, Laxa;->Y(Landroid/os/IBinder;)Lte7;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Lxp0;-><init>(Lte7;)V
-
-    iput-object v0, p0, Lkmf;->a:Lxp0;
+    iput-object p2, p0, Lkmf;->b:Llmf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final writeToParcel(Landroid/os/Parcel;I)V
+.method public final dispose()V
     .locals 2
 
-    const/16 p2, 0x4f45
+    const/4 v0, 0x0
 
-    invoke-static {p1, p2}, Lsnj;->k(Landroid/os/Parcel;I)I
+    const/4 v1, 0x1
 
-    move-result p2
+    invoke-virtual {p0, v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
 
-    iget-object v0, p0, Lkmf;->a:Lxp0;
+    move-result v0
 
-    iget-object v0, v0, Lxp0;->a:Lte7;
+    if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;
+    iget-object v0, p0, Lkmf;->b:Llmf;
 
-    move-result-object v0
+    invoke-virtual {v0, p0}, Llmf;->q(Lkmf;)V
 
-    const/4 v1, 0x2
-
-    invoke-static {p1, v1, v0}, Lsnj;->e(Landroid/os/Parcel;ILandroid/os/IBinder;)V
-
-    invoke-static {p1, p2}, Lsnj;->l(Landroid/os/Parcel;I)V
-
+    :cond_0
     return-void
+.end method
+
+.method public final f()Z
+    .locals 1
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v0
+
+    return v0
 .end method

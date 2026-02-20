@@ -1,82 +1,143 @@
 .class public final Lb98;
-.super Lml0;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lcw3;
 
 
 # instance fields
-.field public h:I
+.field public final a:Liw3;
 
-.field public i:I
+.field public final synthetic b:Lr5;
 
-.field public j:Z
 
-.field public k:I
+# direct methods
+.method public constructor <init>(Lr5;Landroid/content/Context;Ljava/util/concurrent/ExecutorService;Le5;Lbgg;Lj88;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lb98;->b:Lr5;
+
+    new-instance p1, Liw3;
+
+    invoke-direct/range {p1 .. p6}, Liw3;-><init>(Landroid/content/Context;Ljava/util/concurrent/ExecutorService;Le5;Lbgg;Lj88;)V
+
+    iput-object p1, p0, Lb98;->a:Liw3;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a()V
+.method public final a()Z
+    .locals 1
+
+    iget-object v0, p0, Lb98;->a:Liw3;
+
+    invoke-virtual {v0}, Liw3;->a()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final b()Lax3;
+    .locals 1
+
+    iget-object v0, p0, Lb98;->a:Liw3;
+
+    invoke-virtual {v0}, Liw3;->b()Lax3;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final c(Lbw3;)V
+    .locals 1
+
+    iget-object v0, p0, Lb98;->a:Liw3;
+
+    invoke-virtual {v0, p1}, Liw3;->c(Lbw3;)V
+
+    return-void
+.end method
+
+.method public final d()Z
+    .locals 1
+
+    iget-object v0, p0, Lb98;->a:Liw3;
+
+    invoke-virtual {v0}, Liw3;->d()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final e(Lbw3;)V
+    .locals 1
+
+    iget-object v0, p0, Lb98;->a:Liw3;
+
+    invoke-virtual {v0, p1}, Liw3;->e(Lbw3;)V
+
+    return-void
+.end method
+
+.method public final f()Z
+    .locals 1
+
+    iget-object v0, p0, Lb98;->a:Liw3;
+
+    invoke-virtual {v0}, Liw3;->f()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final g()Z
     .locals 2
 
-    invoke-super {p0}, Lml0;->a()V
+    iget-object v0, p0, Lb98;->a:Liw3;
 
-    iget v0, p0, Lb98;->k:I
+    invoke-virtual {v0}, Liw3;->g()Z
 
-    if-ltz v0, :cond_4
+    move-result v0
 
-    iget v0, p0, Lb98;->h:I
+    if-nez v0, :cond_0
 
-    if-nez v0, :cond_3
+    iget-object v0, p0, Lb98;->b:Lr5;
 
-    iget v0, p0, Lml0;->b:I
+    const/16 v1, 0x32
 
-    if-lez v0, :cond_1
+    invoke-virtual {v0, v1}, Lr5;->c(I)Ljava/lang/Object;
 
-    iget v0, p0, Lml0;->g:I
+    move-result-object v0
 
-    if-eqz v0, :cond_0
+    check-cast v0, Lu05;
 
-    goto :goto_0
+    invoke-virtual {v0}, Lu05;->e()V
+
+    const/4 v0, 0x0
+
+    return v0
 
     :cond_0
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    const/4 v0, 0x1
 
-    const-string v1, "Rounded corners without gap are not supported in contiguous indeterminate animation."
+    return v0
+.end method
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+.method public final invalidate()V
+    .locals 1
 
-    throw v0
+    iget-object v0, p0, Lb98;->a:Liw3;
 
-    :cond_1
-    :goto_0
-    iget-object v0, p0, Lml0;->c:[I
+    invoke-virtual {v0}, Liw3;->invalidate()V
 
-    array-length v0, v0
-
-    const/4 v1, 0x3
-
-    if-lt v0, v1, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "Contiguous indeterminate animation must be used with 3 or more indicator colors."
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_3
-    :goto_1
     return-void
-
-    :cond_4
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "Stop indicator size must be >= 0."
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
 .end method

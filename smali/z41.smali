@@ -3,104 +3,166 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lb51;
+.implements Lr05;
 
 
-# static fields
-.field public static final a:Lz41;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
+.field public final b:Lhxf;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(I)V
+    .locals 8
 
-    new-instance v0, Lz41;
+    iput p1, p0, Lz41;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    packed-switch p1, :pswitch_data_0
 
-    sput-object v0, Lz41;->a:Lz41;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v0, 0x40
+    new-instance v0, Lmm4;
 
-    int-to-float v0, v0
+    sget-object p1, Ltz4;->b:Ljava/util/concurrent/atomic/AtomicLong;
 
-    invoke-static {v0}, Liwd;->f(F)I
+    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicLong;->incrementAndGet()J
 
-    move-result v0
+    move-result-wide v1
 
-    sput v0, Lz41;->b:I
+    new-instance v3, Lgpg;
 
-    const/16 v0, 0x20
+    const-string p1, "0.1.3"
 
-    int-to-float v0, v0
+    invoke-direct {v3, p1}, Lgpg;-><init>(Ljava/lang/CharSequence;)V
 
-    invoke-static {v0}, Liwd;->f(F)I
+    sget v4, Lqcd;->ic_statusbar_call_24:I
 
-    move-result v0
+    new-instance v5, Lgpg;
 
-    sput v0, Lz41;->c:I
+    const-string p1, "\u0412\u0435\u0440\u0441\u0438\u044f SDK \u0417\u0432\u043e\u043d\u043a\u043e\u0432"
 
-    const/4 v0, 0x2
+    invoke-direct {v5, p1}, Lgpg;-><init>(Ljava/lang/CharSequence;)V
 
-    int-to-float v0, v0
+    const/4 v6, 0x0
 
-    invoke-static {v0}, Liwd;->f(F)I
+    const/16 v7, 0x10
 
-    move-result v0
+    invoke-direct/range {v0 .. v7}, Lmm4;-><init>(JLhpg;ILhpg;Lyuj;I)V
 
-    sput v0, Lz41;->d:I
+    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
-    const/4 v0, 0x6
+    move-result-object p1
 
-    int-to-float v0, v0
+    invoke-static {p1}, Lixf;->a(Ljava/lang/Object;)Lhxf;
 
-    invoke-static {v0}, Liwd;->f(F)I
+    move-result-object p1
 
-    move-result v0
+    iput-object p1, p0, Lz41;->b:Lhxf;
 
-    sput v0, Lz41;->e:I
+    return-void
+
+    :pswitch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    sget-object p1, Ltz4;->b:Ljava/util/concurrent/atomic/AtomicLong;
+
+    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicLong;->incrementAndGet()J
+
+    move-result-wide v1
+
+    new-instance v3, Lgpg;
+
+    const-string p1, "Test crash"
+
+    invoke-direct {v3, p1}, Lgpg;-><init>(Ljava/lang/CharSequence;)V
+
+    new-instance v5, Lgpg;
+
+    const-string p1, "\u0422\u0435\u0441\u0442\u043e\u0432\u044b\u0439 \u043a\u0440\u0435\u0448 \u0434\u043b\u044f \u043e\u0442\u043f\u0440\u0430\u0432\u043a\u0438 \u0432 tracer"
+
+    invoke-direct {v5, p1}, Lgpg;-><init>(Ljava/lang/CharSequence;)V
+
+    sget v4, Lsce;->H:I
+
+    new-instance v0, Lmm4;
+
+    const/4 v6, 0x0
+
+    const/16 v7, 0x10
+
+    invoke-direct/range {v0 .. v7}, Lmm4;-><init>(JLhpg;ILhpg;Lyuj;I)V
+
+    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lixf;->a(Ljava/lang/Object;)Lhxf;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lz41;->b:Lhxf;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method private final d(Lmm4;)V
+    .locals 0
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()I
+.method public final a()Laxf;
     .locals 1
 
-    sget v0, Lz41;->c:I
+    iget v0, p0, Lz41;->a:I
 
-    return v0
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lz41;->b:Lhxf;
+
+    return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Lz41;->b:Lhxf;
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final b()I
-    .locals 1
+.method public final c(Lmm4;)V
+    .locals 0
 
-    sget v0, Lz41;->d:I
+    iget p1, p0, Lz41;->a:I
 
-    return v0
-.end method
+    packed-switch p1, :pswitch_data_0
 
-.method public final c()I
-    .locals 1
+    new-instance p1, Lone/me/devmenu/tools/TestCrash;
 
-    sget v0, Lz41;->b:I
+    invoke-direct {p1}, Lone/me/devmenu/tools/TestCrash;-><init>()V
 
-    return v0
-.end method
+    throw p1
 
-.method public final d()I
-    .locals 1
+    :pswitch_0
+    return-void
 
-    sget v0, Lz41;->e:I
-
-    return v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

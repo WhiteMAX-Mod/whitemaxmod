@@ -1,40 +1,26 @@
 .class public final Lphe;
-.super Lp6g;
+.super Lpdg;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Lys6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic X:Lru/ok/tamtam/messages/scheduled/widget/ScheduledSendPickerBottomSheet;
 
-.field public final synthetic Y:Ljava/lang/String;
-
-.field public final synthetic Z:Lshe;
-
-.field public o:I
-
-.field public final synthetic t0:I
-
-.field public final synthetic u0:Ljava/lang/Long;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(ILshe;Ljava/lang/Long;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lru/ok/tamtam/messages/scheduled/widget/ScheduledSendPickerBottomSheet;)V
     .locals 0
 
-    iput-object p4, p0, Lphe;->Y:Ljava/lang/String;
+    iput-object p2, p0, Lphe;->X:Lru/ok/tamtam/messages/scheduled/widget/ScheduledSendPickerBottomSheet;
 
-    iput-object p2, p0, Lphe;->Z:Lshe;
+    const/4 p2, 0x2
 
-    iput p1, p0, Lphe;->t0:I
-
-    iput-object p3, p0, Lphe;->u0:Ljava/lang/Long;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p5}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2, p1}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -44,8 +30,6 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lf76;
-
     check-cast p2, Lkotlin/coroutines/Continuation;
 
     invoke-virtual {p0, p1, p2}, Lphe;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
@@ -54,322 +38,139 @@
 
     check-cast p1, Lphe;
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    sget-object p2, Lmah;->a:Lmah;
 
     invoke-virtual {p1, p2}, Lphe;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
-
-    return-object p1
+    return-object p2
 .end method
 
 .method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 6
+    .locals 2
 
     new-instance v0, Lphe;
 
-    iget v1, p0, Lphe;->t0:I
+    iget-object v1, p0, Lphe;->X:Lru/ok/tamtam/messages/scheduled/widget/ScheduledSendPickerBottomSheet;
 
-    iget-object v3, p0, Lphe;->u0:Ljava/lang/Long;
+    invoke-direct {v0, p2, v1}, Lphe;-><init>(Lkotlin/coroutines/Continuation;Lru/ok/tamtam/messages/scheduled/widget/ScheduledSendPickerBottomSheet;)V
 
-    iget-object v2, p0, Lphe;->Z:Lshe;
-
-    iget-object v4, p0, Lphe;->Y:Ljava/lang/String;
-
-    move-object v5, p2
-
-    invoke-direct/range {v0 .. v5}, Lphe;-><init>(ILshe;Ljava/lang/Long;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lphe;->X:Ljava/lang/Object;
+    iput-object p1, v0, Lphe;->o:Ljava/lang/Object;
 
     return-object v0
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 18
+    .locals 6
 
-    move-object/from16 v0, p0
+    iget-object v0, p0, Lphe;->o:Ljava/lang/Object;
 
-    sget-object v1, Lb3h;->a:Lb3h;
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    sget-object v2, Lkk8;->d:Lkk8;
+    check-cast v0, Lal4;
 
-    iget-object v3, v0, Lphe;->X:Ljava/lang/Object;
+    sget-object p1, Lru/ok/tamtam/messages/scheduled/widget/ScheduledSendPickerBottomSheet;->K0:[Lv58;
 
-    check-cast v3, Lf76;
+    iget-object p1, p0, Lphe;->X:Lru/ok/tamtam/messages/scheduled/widget/ScheduledSendPickerBottomSheet;
 
-    sget-object v4, Lac4;->a:Lac4;
+    iget-object v1, p1, Lru/ok/tamtam/messages/scheduled/widget/ScheduledSendPickerBottomSheet;->F0:Lwt;
 
-    iget v5, v0, Lphe;->o:I
+    sget-object v2, Lru/ok/tamtam/messages/scheduled/widget/ScheduledSendPickerBottomSheet;->K0:[Lv58;
 
-    const/4 v6, 0x3
+    const/4 v3, 0x2
 
-    const/4 v7, 0x2
+    aget-object v3, v2, v3
 
-    const/4 v8, 0x1
+    invoke-virtual {v1, p1}, Lwt;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
-    const/4 v9, 0x0
+    move-result-object v1
 
-    if-eqz v5, :cond_3
+    check-cast v1, Lthe;
 
-    if-eq v5, v8, :cond_2
+    sget-object v3, Lmhe;->$EnumSwitchMapping$0:[I
 
-    if-eq v5, v7, :cond_1
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    if-ne v5, v6, :cond_0
+    move-result v1
 
-    invoke-static/range {p1 .. p1}, Lpmj;->b(Ljava/lang/Object;)V
+    aget v1, v3, v1
 
-    return-object v1
+    const/4 v3, 0x1
 
-    :cond_0
-    new-instance v1, Ljava/lang/IllegalStateException;
+    if-ne v1, v3, :cond_0
 
-    const-string v2, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v1
-
-    :cond_1
-    invoke-static/range {p1 .. p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    move-object/from16 v5, p1
-
-    goto :goto_1
-
-    :cond_2
-    invoke-static/range {p1 .. p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    return-object v1
-
-    :cond_3
-    invoke-static/range {p1 .. p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v5
-
-    sget-object v10, Lc5j;->a:Ledb;
-
-    if-nez v10, :cond_4
+    sget v1, Lbld;->scheduled_remind_button_text:I
 
     goto :goto_0
 
-    :cond_4
-    invoke-virtual {v10, v2}, Ledb;->b(Lkk8;)Z
+    :cond_0
+    sget v1, Lbld;->scheduled_send_button_text:I
 
-    move-result v11
-
-    if-eqz v11, :cond_5
-
-    const-string v11, "[search][chats] public search started"
-
-    invoke-virtual {v10, v2, v5, v11, v9}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_5
     :goto_0
-    iget-object v5, v0, Lphe;->Y:Ljava/lang/String;
+    iget-object v3, p1, Lru/ok/tamtam/messages/scheduled/widget/ScheduledSendPickerBottomSheet;->J0:Lgrd;
 
-    if-eqz v5, :cond_b
+    const/4 v4, 0x5
 
-    invoke-static {v5}, Lrzf;->H(Ljava/lang/CharSequence;)Z
+    aget-object v2, v2, v4
 
-    move-result v5
+    invoke-interface {v3, p1, v2}, Lgrd;->D(Ljava/lang/Object;Lv58;)Ljava/lang/Object;
 
-    if-eqz v5, :cond_6
+    move-result-object v2
 
-    goto/16 :goto_4
+    check-cast v2, Lu7b;
 
-    :cond_6
-    sget-wide v10, Lthe;->a:J
+    invoke-virtual {p1}, Lpa4;->getResources()Landroid/content/res/Resources;
 
-    new-instance v12, Lohe;
+    move-result-object p1
 
-    iget-object v14, v0, Lphe;->Z:Lshe;
+    if-eqz p1, :cond_1
 
-    iget-object v5, v0, Lphe;->Y:Ljava/lang/String;
+    iget-object v3, v0, Lal4;->a:Lml4;
 
-    iget v13, v0, Lphe;->t0:I
+    iget-object v3, v3, Lml4;->X:Ljava/lang/String;
 
-    iget-object v15, v0, Lphe;->u0:Ljava/lang/Long;
+    sget-object v4, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
 
-    const/16 v17, 0x0
+    invoke-virtual {v3, v4}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
 
-    move-object/from16 v16, v5
+    move-result-object v3
 
-    invoke-direct/range {v12 .. v17}, Lohe;-><init>(ILshe;Ljava/lang/Long;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
+    iget-object v4, v0, Lal4;->b:Ljsg;
 
-    iput-object v3, v0, Lphe;->X:Ljava/lang/Object;
+    iget-object v0, v0, Lal4;->c:Ljsg;
 
-    iput v7, v0, Lphe;->o:I
+    new-instance v5, Ljava/lang/StringBuilder;
 
-    invoke-static {v10, v11}, Lumj;->j(J)J
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-result-wide v7
+    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-static {v7, v8, v12, v0}, Ldui;->f(JLbr6;Lo84;)Ljava/lang/Object;
+    const-string v4, ":"
 
-    move-result-object v5
+    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-ne v5, v4, :cond_7
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    goto/16 :goto_5
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    :cond_7
+    move-result-object v0
+
+    filled-new-array {v3, v0}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v1, v0}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    goto :goto_1
+
+    :cond_1
+    const/4 p1, 0x0
+
     :goto_1
-    check-cast v5, Lb0d;
+    invoke-virtual {v2, p1}, Lu7b;->setText(Ljava/lang/CharSequence;)V
 
-    iget-object v7, v5, Lb0d;->c:Ljava/util/List;
+    sget-object p1, Lmah;->a:Lmah;
 
-    iget-object v8, v0, Lphe;->Y:Ljava/lang/String;
-
-    iget v10, v0, Lphe;->t0:I
-
-    iget-object v11, v0, Lphe;->u0:Ljava/lang/Long;
-
-    sget-object v12, Lc5j;->a:Ledb;
-
-    if-nez v12, :cond_8
-
-    goto :goto_2
-
-    :cond_8
-    invoke-virtual {v12, v2}, Ledb;->b(Lkk8;)Z
-
-    move-result v13
-
-    if-eqz v13, :cond_9
-
-    iget-object v13, v5, Lb0d;->c:Ljava/util/List;
-
-    invoke-interface {v13}, Ljava/util/List;->size()I
-
-    move-result v13
-
-    new-instance v14, Ljava/lang/StringBuilder;
-
-    const-string v15, "[search][chats] search public done: "
-
-    invoke-direct {v14, v15}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v14, v13}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v13, " results for "
-
-    invoke-virtual {v14, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v14, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v8, ", "
-
-    invoke-virtual {v14, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v14, v10}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v14, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v14, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v14}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v8
-
-    const-string v10, "she"
-
-    invoke-virtual {v12, v2, v10, v8, v9}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_9
-    :goto_2
-    iget-object v2, v5, Lb0d;->o:Ljava/lang/Long;
-
-    if-eqz v2, :cond_a
-
-    const-wide/16 v10, 0x0
-
-    invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v12
-
-    cmp-long v2, v12, v10
-
-    if-nez v2, :cond_a
-
-    iget-object v2, v0, Lphe;->Z:Lshe;
-
-    iget-object v2, v2, Lshe;->b:Lo58;
-
-    invoke-interface {v2}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lwc4;
-
-    new-instance v8, Lone/me/search/usecase/InvalidSearchResultMarkerException;
-
-    iget-object v10, v5, Lb0d;->o:Ljava/lang/Long;
-
-    invoke-static {v10}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v10
-
-    invoke-direct {v8, v10}, Lone/me/search/usecase/InvalidSearchResultMarkerException;-><init>(Ljava/lang/String;)V
-
-    const-string v10, "ONEME-21055"
-
-    invoke-virtual {v2, v10, v8}, Lwc4;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    move-object v2, v9
-
-    goto :goto_3
-
-    :cond_a
-    iget-object v2, v5, Lb0d;->o:Ljava/lang/Long;
-
-    :goto_3
-    new-instance v8, Lyhe;
-
-    iget-object v5, v5, Lb0d;->X:Ljava/lang/String;
-
-    invoke-direct {v8, v7, v2, v5}, Lyhe;-><init>(Ljava/util/List;Ljava/lang/Object;Ljava/lang/String;)V
-
-    iput-object v9, v0, Lphe;->X:Ljava/lang/Object;
-
-    iput v6, v0, Lphe;->o:I
-
-    invoke-interface {v3, v8, v0}, Lf76;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    if-ne v2, v4, :cond_c
-
-    goto :goto_5
-
-    :cond_b
-    :goto_4
-    new-instance v2, Lyhe;
-
-    sget-object v5, Ldh5;->a:Ldh5;
-
-    invoke-direct {v2, v5, v9, v9}, Lyhe;-><init>(Ljava/util/List;Ljava/lang/Object;Ljava/lang/String;)V
-
-    iput-object v9, v0, Lphe;->X:Ljava/lang/Object;
-
-    iput v8, v0, Lphe;->o:I
-
-    invoke-interface {v3, v2, v0}, Lf76;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    if-ne v2, v4, :cond_c
-
-    :goto_5
-    return-object v4
-
-    :cond_c
-    return-object v1
+    return-object p1
 .end method

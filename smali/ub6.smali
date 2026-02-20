@@ -1,90 +1,37 @@
 .class public final Lub6;
-.super Ljava/lang/Object;
+.super Lda4;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final b:J
+.field public Y:I
 
-.field public final c:Ljava/lang/Object;
+.field public d:Lyyd;
 
-
-# direct methods
-.method public constructor <init>(JLb1g;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lub6;->a:I
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    iput-object p3, p0, Lub6;->c:Ljava/lang/Object;
-
-    .line 3
-    iput-wide p1, p0, Lub6;->b:J
-
-    return-void
-.end method
-
-.method public constructor <init>(JLyza;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lub6;->a:I
-
-    .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 5
-    iput-wide p1, p0, Lub6;->b:J
-
-    .line 6
-    iput-object p3, p0, Lub6;->c:Ljava/lang/Object;
-
-    return-void
-.end method
+.field public o:Lob6;
 
 
 # virtual methods
-.method public final run()V
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget v0, p0, Lub6;->a:I
+    iput-object p1, p0, Lub6;->X:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Lub6;->Y:I
 
-    iget-object v0, p0, Lub6;->c:Ljava/lang/Object;
+    const/high16 v0, -0x80000000
 
-    iget-wide v1, p0, Lub6;->b:J
+    or-int/2addr p1, v0
 
-    invoke-interface {v0, v1, v2}, Lyza;->a(J)V
+    iput p1, p0, Lub6;->Y:I
 
-    return-void
+    const/4 p1, 0x0
 
-    :pswitch_0
-    iget-object v0, p0, Lub6;->c:Ljava/lang/Object;
+    invoke-static {p1, p0}, Lzka;->r(Lb96;Lda4;)Ljava/lang/Object;
 
-    check-cast v0, Lb1g;
+    move-result-object p1
 
-    iget-wide v1, p0, Lub6;->b:J
-
-    invoke-interface {v0, v1, v2}, Lb1g;->f(J)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

@@ -1,57 +1,312 @@
-.class public final Lr43;
-.super Lo84;
+.class public final synthetic Lr43;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lks6;
 
 
 # instance fields
-.field public X:Lbt;
+.field public final synthetic a:I
 
-.field public Y:Lbt;
+.field public final synthetic b:Ljava/lang/String;
 
-.field public synthetic Z:Ljava/lang/Object;
-
-.field public d:Lu33;
-
-.field public o:Ljava/lang/Object;
-
-.field public final synthetic t0:Li53;
-
-.field public u0:I
+.field public final synthetic c:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Li53;Lo84;)V
+.method public synthetic constructor <init>(ILjava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lr43;->t0:Li53;
+    iput p1, p0, Lr43;->a:I
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lr43;->b:Ljava/lang/String;
+
+    iput-object p3, p0, Lr43;->c:Ljava/lang/String;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    iput-object p1, p0, Lr43;->Z:Ljava/lang/Object;
+    iget v0, p0, Lr43;->a:I
 
-    iget p1, p0, Lr43;->u0:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-object v0, p0, Lr43;->b:Ljava/lang/String;
 
-    or-int/2addr p1, v0
+    iget-object v1, p0, Lr43;->c:Ljava/lang/String;
 
-    iput p1, p0, Lr43;->u0:I
+    check-cast p1, Lsde;
 
-    iget-object p1, p0, Lr43;->t0:Li53;
+    const-string v2, "SELECT docid FROM contact_title WHERE allOriginalTitles MATCH ? OR allNormalizedTitles MATCH ? OR link MATCH ?"
 
-    const/4 v0, 0x0
-
-    invoke-static {p1, v0, p0}, Li53;->a(Li53;Lu33;Lo84;)Ljava/lang/Object;
+    invoke-interface {p1, v2}, Lsde;->y0(Ljava/lang/String;)Lxde;
 
     move-result-object p1
 
-    return-object p1
+    const/4 v2, 0x1
+
+    :try_start_0
+    invoke-interface {p1, v2, v0}, Lxde;->G(ILjava/lang/String;)V
+
+    const/4 v0, 0x2
+
+    invoke-interface {p1, v0, v1}, Lxde;->G(ILjava/lang/String;)V
+
+    const/4 v0, 0x3
+
+    invoke-interface {p1, v0, v1}, Lxde;->G(ILjava/lang/String;)V
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    :goto_0
+    invoke-interface {p1}, Lxde;->u0()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const/4 v1, 0x0
+
+    invoke-interface {p1, v1}, Lxde;->getLong(I)J
+
+    move-result-wide v1
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_1
+
+    :cond_0
+    invoke-interface {p1}, Ljava/lang/AutoCloseable;->close()V
+
+    return-object v0
+
+    :goto_1
+    invoke-interface {p1}, Ljava/lang/AutoCloseable;->close()V
+
+    throw v0
+
+    :pswitch_0
+    iget-object v0, p0, Lr43;->b:Ljava/lang/String;
+
+    iget-object v1, p0, Lr43;->c:Ljava/lang/String;
+
+    check-cast p1, Lsde;
+
+    const-string v2, "SELECT docid FROM contact_title WHERE (allOriginalTitles LIKE ? OR allNormalizedTitles LIKE ? OR link LIKE ?)"
+
+    invoke-interface {p1, v2}, Lsde;->y0(Ljava/lang/String;)Lxde;
+
+    move-result-object p1
+
+    const/4 v2, 0x1
+
+    :try_start_1
+    invoke-interface {p1, v2, v0}, Lxde;->G(ILjava/lang/String;)V
+
+    const/4 v0, 0x2
+
+    invoke-interface {p1, v0, v1}, Lxde;->G(ILjava/lang/String;)V
+
+    const/4 v0, 0x3
+
+    invoke-interface {p1, v0, v1}, Lxde;->G(ILjava/lang/String;)V
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    :goto_2
+    invoke-interface {p1}, Lxde;->u0()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    const/4 v1, 0x0
+
+    invoke-interface {p1, v1}, Lxde;->getLong(I)J
+
+    move-result-wide v1
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    goto :goto_2
+
+    :catchall_1
+    move-exception v0
+
+    goto :goto_3
+
+    :cond_1
+    invoke-interface {p1}, Ljava/lang/AutoCloseable;->close()V
+
+    return-object v0
+
+    :goto_3
+    invoke-interface {p1}, Ljava/lang/AutoCloseable;->close()V
+
+    throw v0
+
+    :pswitch_1
+    iget-object v0, p0, Lr43;->b:Ljava/lang/String;
+
+    iget-object v1, p0, Lr43;->c:Ljava/lang/String;
+
+    check-cast p1, Lsde;
+
+    const-string v2, "SELECT docid FROM chat_title WHERE originalTitle LIKE ? OR normalizedTitle LIKE ? ORDER BY sortTime DESC "
+
+    invoke-interface {p1, v2}, Lsde;->y0(Ljava/lang/String;)Lxde;
+
+    move-result-object p1
+
+    const/4 v2, 0x1
+
+    :try_start_2
+    invoke-interface {p1, v2, v0}, Lxde;->G(ILjava/lang/String;)V
+
+    const/4 v0, 0x2
+
+    invoke-interface {p1, v0, v1}, Lxde;->G(ILjava/lang/String;)V
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    :goto_4
+    invoke-interface {p1}, Lxde;->u0()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    const/4 v1, 0x0
+
+    invoke-interface {p1, v1}, Lxde;->getLong(I)J
+
+    move-result-wide v1
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_2
+
+    goto :goto_4
+
+    :catchall_2
+    move-exception v0
+
+    goto :goto_5
+
+    :cond_2
+    invoke-interface {p1}, Ljava/lang/AutoCloseable;->close()V
+
+    return-object v0
+
+    :goto_5
+    invoke-interface {p1}, Ljava/lang/AutoCloseable;->close()V
+
+    throw v0
+
+    :pswitch_2
+    iget-object v0, p0, Lr43;->b:Ljava/lang/String;
+
+    iget-object v1, p0, Lr43;->c:Ljava/lang/String;
+
+    check-cast p1, Lsde;
+
+    const-string v2, "SELECT docid FROM chat_title WHERE originalTitle MATCH ? OR normalizedTitle MATCH ? || \'*\' ORDER BY sortTime DESC "
+
+    invoke-interface {p1, v2}, Lsde;->y0(Ljava/lang/String;)Lxde;
+
+    move-result-object p1
+
+    const/4 v2, 0x1
+
+    :try_start_3
+    invoke-interface {p1, v2, v0}, Lxde;->G(ILjava/lang/String;)V
+
+    const/4 v0, 0x2
+
+    invoke-interface {p1, v0, v1}, Lxde;->G(ILjava/lang/String;)V
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    :goto_6
+    invoke-interface {p1}, Lxde;->u0()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    const/4 v1, 0x0
+
+    invoke-interface {p1, v1}, Lxde;->getLong(I)J
+
+    move-result-wide v1
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_3
+
+    goto :goto_6
+
+    :catchall_3
+    move-exception v0
+
+    goto :goto_7
+
+    :cond_3
+    invoke-interface {p1}, Ljava/lang/AutoCloseable;->close()V
+
+    return-object v0
+
+    :goto_7
+    invoke-interface {p1}, Ljava/lang/AutoCloseable;->close()V
+
+    throw v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

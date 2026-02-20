@@ -8,7 +8,7 @@
     value = 0x15
 .end annotation
 
-.annotation build Ld35;
+.annotation build Ln45;
 .end annotation
 
 
@@ -23,13 +23,13 @@
 
 .method public static fallocateIfSupported(Ljava/io/FileDescriptor;J)V
     .locals 2
-    .annotation build Ld35;
-    .end annotation
-
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
         }
+    .end annotation
+
+    .annotation build Ln45;
     .end annotation
 
     const-wide/16 v0, 0x0
@@ -80,7 +80,7 @@
 
 .method public static getSupportedAbis()[Ljava/lang/String;
     .locals 7
-    .annotation build Ld35;
+    .annotation build Ln45;
     .end annotation
 
     sget-object v0, Landroid/os/Build;->SUPPORTED_ABIS:[Ljava/lang/String;
@@ -200,13 +200,13 @@
 
 .method public static is64Bit()Z
     .locals 2
-    .annotation build Ld35;
-    .end annotation
-
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/system/ErrnoException;
         }
+    .end annotation
+
+    .annotation build Ln45;
     .end annotation
 
     const-string v0, "/proc/self/exe"

@@ -1,5 +1,5 @@
 .class public final Lone/me/android/di/ConcurrentComponent;
-.super Laq;
+.super Lt5;
 .source "SourceFile"
 
 
@@ -13,20 +13,20 @@
     }
     d2 = {
         "Lone/me/android/di/ConcurrentComponent;",
-        "Laq;",
+        "Lt5;",
         "<init>",
         "()V",
-        "Lyab;",
+        "Lncb;",
         "getExecutors",
-        "()Lyab;",
+        "()Lncb;",
         "executors",
-        "Ljcg;",
+        "Lvjg;",
         "getSchedulers",
-        "()Ljcg;",
+        "()Lvjg;",
         "schedulers",
-        "Lmbg;",
+        "Lbjg;",
         "getDispatchers",
-        "()Lmbg;",
+        "()Lbjg;",
         "dispatchers",
         "oneme_googleRelease"
     }
@@ -58,65 +58,78 @@
 .end method
 
 .method private constructor <init>()V
-    .locals 0
+    .locals 2
 
-    invoke-direct {p0}, Laq;-><init>()V
+    sget-object v0, Livj;->a:Lvie;
+
+    if-eqz v0, :cond_0
+
+    invoke-direct {p0, v0}, Lscout/Component;-><init>(Lvie;)V
 
     return-void
+
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "Root scope not initialized!"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method
 
 
 # virtual methods
-.method public final getDispatchers()Lmbg;
+.method public final getDispatchers()Lbjg;
     .locals 2
 
     invoke-virtual {p0}, Lscout/Component;->getAccessor()Lr5;
 
     move-result-object v0
 
-    const/16 v1, 0xc
+    const/16 v1, 0xe
 
     invoke-virtual {v0, v1}, Lr5;->c(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lmbg;
+    check-cast v0, Lbjg;
 
     return-object v0
 .end method
 
-.method public final getExecutors()Lyab;
+.method public final getExecutors()Lncb;
     .locals 2
 
     invoke-virtual {p0}, Lscout/Component;->getAccessor()Lr5;
 
     move-result-object v0
 
-    const/16 v1, 0x4e
+    const/16 v1, 0x58
 
     invoke-virtual {v0, v1}, Lr5;->c(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lyab;
+    check-cast v0, Lncb;
 
     return-object v0
 .end method
 
-.method public final getSchedulers()Ljcg;
+.method public final getSchedulers()Lvjg;
     .locals 2
 
     invoke-virtual {p0}, Lscout/Component;->getAccessor()Lr5;
 
     move-result-object v0
 
-    const/16 v1, 0x193
+    const/16 v1, 0x1ad
 
     invoke-virtual {v0, v1}, Lr5;->c(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Ljcg;
+    check-cast v0, Lvjg;
 
     return-object v0
 .end method

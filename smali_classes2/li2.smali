@@ -1,51 +1,85 @@
-.class public final Lli2;
-.super Lo84;
+.class public final enum Lli2;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic X:Lti2;
+# static fields
+.field public static final enum a:Lli2;
 
-.field public Y:I
+.field public static final enum b:Lli2;
 
-.field public d:Ljava/util/concurrent/atomic/AtomicLong;
+.field public static final enum c:Lli2;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public static final synthetic d:[Lli2;
 
 
 # direct methods
-.method public constructor <init>(Lti2;Lo84;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput-object p1, p0, Lli2;->X:Lti2;
+    new-instance v0, Lli2;
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    const-string v1, "SOUND"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lli2;->a:Lli2;
+
+    new-instance v1, Lli2;
+
+    const-string v2, "VIBRATION"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lli2;->b:Lli2;
+
+    new-instance v2, Lli2;
+
+    const-string v3, "LED"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lli2;->c:Lli2;
+
+    filled-new-array {v0, v1, v2}, [Lli2;
+
+    move-result-object v0
+
+    sput-object v0, Lli2;->d:[Lli2;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public static valueOf(Ljava/lang/String;)Lli2;
     .locals 1
 
-    iput-object p1, p0, Lli2;->o:Ljava/lang/Object;
+    const-class v0, Lli2;
 
-    iget p1, p0, Lli2;->Y:I
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    const/high16 v0, -0x80000000
+    move-result-object p0
 
-    or-int/2addr p1, v0
+    check-cast p0, Lli2;
 
-    iput p1, p0, Lli2;->Y:I
+    return-object p0
+.end method
 
-    iget-object p1, p0, Lli2;->X:Lti2;
+.method public static values()[Lli2;
+    .locals 1
 
-    const/4 v0, 0x0
+    sget-object v0, Lli2;->d:[Lli2;
 
-    invoke-virtual {p1, v0, v0, p0}, Lti2;->h(Ljava/lang/String;Landroid/graphics/RectF;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {v0}, [Lli2;->clone()Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object v0
 
-    return-object p1
+    check-cast v0, [Lli2;
+
+    return-object v0
 .end method

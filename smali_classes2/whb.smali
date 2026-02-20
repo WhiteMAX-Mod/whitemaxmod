@@ -1,89 +1,37 @@
-.class public final synthetic Lwhb;
+.class public abstract Lwhb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/view/View$OnClickListener;
 
+# static fields
+.field public static final a:I
 
-# instance fields
-.field public final synthetic a:I
+.field public static final b:I
 
-.field public final synthetic b:Ldib;
+.field public static final c:I
+
+.field public static final d:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Ldib;I)V
-    .locals 0
-
-    iput p2, p0, Lwhb;->a:I
-
-    iput-object p1, p0, Lwhb;->b:Ldib;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method static constructor <clinit>()V
     .locals 1
 
-    iget p1, p0, Lwhb;->a:I
+    sget v0, Lkhd;->inactive_ttl:I
 
-    packed-switch p1, :pswitch_data_0
+    sput v0, Lwhb;->a:I
 
-    iget-object p1, p0, Lwhb;->b:Ldib;
+    sget v0, Lkhd;->inactive_ttl_item:I
 
-    iget-object p1, p1, Ldib;->D0:Ljava/lang/Object;
+    sput v0, Lwhb;->b:I
 
-    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
+    sget v0, Lkhd;->profile_delete_dates_days_left:I
 
-    move-result-object p1
+    sput v0, Lwhb;->c:I
 
-    check-cast p1, Loab;
+    sget v0, Lkhd;->profile_edit_reactions_settings_slider_current_value:I
 
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    sput v0, Lwhb;->d:I
 
     return-void
-
-    :pswitch_0
-    iget-object p1, p0, Lwhb;->b:Ldib;
-
-    invoke-virtual {p1}, Ldib;->b()V
-
-    iget-object p1, p1, Ldib;->u0:Laib;
-
-    if-eqz p1, :cond_0
-
-    invoke-interface {p1}, Laib;->q()V
-
-    :cond_0
-    return-void
-
-    :pswitch_1
-    iget-object p1, p0, Lwhb;->b:Ldib;
-
-    invoke-virtual {p1}, Ldib;->d()V
-
-    return-void
-
-    :pswitch_2
-    iget-object p1, p0, Lwhb;->b:Ldib;
-
-    invoke-virtual {p1}, Ldib;->d()V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

@@ -1,94 +1,172 @@
-.class public final Lozb;
-.super Lp6g;
+.class public final synthetic Lozb;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic X:Luzb;
+.field public final synthetic a:I
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic b:Ltzb;
+
+.field public final synthetic c:Lorg/webrtc/SessionDescription;
 
 
 # direct methods
-.method public constructor <init>(Luzb;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Ltzb;Lorg/webrtc/SessionDescription;I)V
     .locals 0
 
-    iput-object p1, p0, Lozb;->X:Luzb;
+    iput p3, p0, Lozb;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lozb;->b:Ltzb;
 
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lozb;->c:Lorg/webrtc/SessionDescription;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final run()V
+    .locals 10
 
-    check-cast p1, Lvzb;
+    iget v0, p0, Lozb;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Lozb;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Lozb;->b:Ltzb;
 
-    move-result-object p1
+    iget-object v1, v0, Ltzb;->K:Ld66;
 
-    check-cast p1, Lozb;
+    iget-object v2, p0, Lozb;->c:Lorg/webrtc/SessionDescription;
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    iget-object v3, v2, Lorg/webrtc/SessionDescription;->description:Ljava/lang/String;
 
-    invoke-virtual {p1, p2}, Lozb;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-boolean v4, v1, Ld66;->c:Z
 
-    return-object p2
-.end method
+    const-wide/16 v5, 0x0
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lozb;
-
-    iget-object v1, p0, Lozb;->X:Luzb;
-
-    invoke-direct {v0, v1, p2}, Lozb;-><init>(Luzb;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lozb;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    iget-object v0, p0, Lozb;->o:Ljava/lang/Object;
-
-    check-cast v0, Lvzb;
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    sget-object p1, Lvzb;->a:Lvzb;
-
-    if-ne v0, p1, :cond_0
-
-    const-string p1, "allowed"
+    if-nez v4, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const-string p1, "denied"
+    iput-wide v5, v1, Ld66;->b:J
+
+    iput-wide v5, v1, Ld66;->a:J
+
+    const/4 v4, 0x0
+
+    iput-boolean v4, v1, Ld66;->c:Z
 
     :goto_0
-    iget-object v0, p0, Lozb;->X:Luzb;
+    invoke-static {v3}, Ld66;->a(Ljava/lang/String;)J
 
-    const-string v1, "contacts"
+    move-result-wide v3
 
-    invoke-static {v0, v1, p1}, Luzb;->a(Luzb;Ljava/lang/String;Ljava/lang/String;)V
+    iput-wide v3, v1, Ld66;->a:J
 
-    sget-object p1, Lb3h;->a:Lb3h;
+    iget-wide v7, v1, Ld66;->b:J
 
-    return-object p1
+    cmp-long v9, v7, v5
+
+    if-eqz v9, :cond_1
+
+    cmp-long v5, v3, v5
+
+    if-eqz v5, :cond_1
+
+    xor-long/2addr v3, v7
+
+    const/4 v5, 0x1
+
+    iput-boolean v5, v1, Ld66;->c:Z
+
+    iget-object v1, v1, Ld66;->d:Lc66;
+
+    invoke-interface {v1, v3, v4}, Lc66;->c(J)V
+
+    :cond_1
+    iget-object v1, v0, Ltzb;->T:Ljava/lang/Object;
+
+    if-eqz v1, :cond_2
+
+    invoke-interface {v1, v0, v2}, Lszb;->b(Ltzb;Lorg/webrtc/SessionDescription;)V
+
+    :cond_2
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lozb;->b:Ltzb;
+
+    iget-object v1, v0, Ltzb;->K:Ld66;
+
+    iget-object v2, p0, Lozb;->c:Lorg/webrtc/SessionDescription;
+
+    iget-object v3, v2, Lorg/webrtc/SessionDescription;->description:Ljava/lang/String;
+
+    iget-boolean v4, v1, Ld66;->c:Z
+
+    const-wide/16 v5, 0x0
+
+    if-nez v4, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    iput-wide v5, v1, Ld66;->b:J
+
+    iput-wide v5, v1, Ld66;->a:J
+
+    const/4 v4, 0x0
+
+    iput-boolean v4, v1, Ld66;->c:Z
+
+    :goto_1
+    invoke-static {v3}, Ld66;->a(Ljava/lang/String;)J
+
+    move-result-wide v3
+
+    iput-wide v3, v1, Ld66;->b:J
+
+    cmp-long v7, v3, v5
+
+    if-eqz v7, :cond_4
+
+    iget-wide v7, v1, Ld66;->a:J
+
+    cmp-long v5, v7, v5
+
+    if-eqz v5, :cond_4
+
+    xor-long/2addr v3, v7
+
+    const/4 v5, 0x1
+
+    iput-boolean v5, v1, Ld66;->c:Z
+
+    iget-object v1, v1, Ld66;->d:Lc66;
+
+    invoke-interface {v1, v3, v4}, Lc66;->c(J)V
+
+    :cond_4
+    iget-object v1, v0, Ltzb;->T:Ljava/lang/Object;
+
+    if-eqz v1, :cond_5
+
+    invoke-interface {v1, v0, v2}, Lszb;->k(Ltzb;Lorg/webrtc/SessionDescription;)V
+
+    :cond_5
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,26 +1,32 @@
 .class public final Lh34;
-.super Lp6g;
+.super Lpdg;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Lys6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/contactlist/ContactListWidget;
+.field public final synthetic X:Lju;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic Y:Lo34;
+
+.field public final synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/contactlist/ContactListWidget;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;Lju;Lo34;)V
     .locals 0
 
-    iput-object p1, p0, Lh34;->X:Lone/me/contactlist/ContactListWidget;
+    iput-object p1, p0, Lh34;->o:Ljava/lang/Object;
+
+    iput-object p3, p0, Lh34;->X:Lju;
+
+    iput-object p4, p0, Lh34;->Y:Lo34;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -30,7 +36,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lqhg;
+    check-cast p1, Lnd4;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -40,77 +46,68 @@
 
     check-cast p1, Lh34;
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    sget-object p2, Lmah;->a:Lmah;
 
     invoke-virtual {p1, p2}, Lh34;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object p2
+    move-result-object p1
+
+    return-object p1
 .end method
 
 .method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    .locals 3
 
-    new-instance v0, Lh34;
+    new-instance p1, Lh34;
 
-    iget-object v1, p0, Lh34;->X:Lone/me/contactlist/ContactListWidget;
+    iget-object v0, p0, Lh34;->X:Lju;
 
-    invoke-direct {v0, v1, p2}, Lh34;-><init>(Lone/me/contactlist/ContactListWidget;Lkotlin/coroutines/Continuation;)V
+    iget-object v1, p0, Lh34;->Y:Lo34;
 
-    iput-object p1, v0, Lh34;->o:Ljava/lang/Object;
+    iget-object v2, p0, Lh34;->o:Ljava/lang/Object;
 
-    return-object v0
+    invoke-direct {p1, v2, p2, v0, v1}, Lh34;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;Lju;Lo34;)V
+
+    return-object p1
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    iget-object v0, p0, Lh34;->o:Ljava/lang/Object;
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    check-cast v0, Lqhg;
+    iget-object p1, p0, Lh34;->o:Ljava/lang/Object;
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    check-cast p1, Ljava/lang/Number;
 
-    iget-object p1, p0, Lh34;->X:Lone/me/contactlist/ContactListWidget;
+    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
 
-    invoke-virtual {p1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    move-result-wide v0
 
-    move-result-object v1
+    new-instance p1, Ljava/lang/Long;
 
-    invoke-virtual {v0, v1}, Lqhg;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
+    invoke-direct {p1, v0, v1}, Ljava/lang/Long;-><init>(J)V
 
-    move-result-object v0
+    iget-object v0, p0, Lh34;->X:Lju;
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0, p1}, Lblf;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    move-result-object p1
 
-    move-result-object v0
+    check-cast p1, Lwy3;
 
-    goto :goto_0
+    if-eqz p1, :cond_0
+
+    iget-object v0, p0, Lh34;->Y:Lo34;
+
+    invoke-static {v0, p1}, Lo34;->f(Lo34;Lwy3;)La34;
+
+    move-result-object p1
+
+    return-object p1
 
     :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    if-nez v0, :cond_1
-
-    const-string v0, ""
-
-    :cond_1
-    invoke-virtual {p1}, Lone/me/contactlist/ContactListWidget;->C0()Lymb;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lymb;->getSearchView()Ldib;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p1, v0}, Ldib;->setSearchHint(Ljava/lang/String;)V
-
-    :cond_2
-    sget-object p1, Lb3h;->a:Lb3h;
+    const/4 p1, 0x0
 
     return-object p1
 .end method

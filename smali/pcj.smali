@@ -1,122 +1,540 @@
-.class public final Lpcj;
-.super Landroid/os/Binder;
-
-# interfaces
-.implements Landroid/os/IInterface;
-
-
-# instance fields
-.field public final synthetic c:Lqpi;
+.class public abstract Lpcj;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # direct methods
-.method public constructor <init>(Lqpi;)V
-    .locals 0
+.method public static a(Landroid/content/Context;I)I
+    .locals 1
 
-    iput-object p1, p0, Lpcj;->c:Lqpi;
+    int-to-float p1, p1
 
-    invoke-direct {p0}, Landroid/os/Binder;-><init>()V
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    const-string p1, "com.google.android.gms.auth.api.phone.internal.ISmsRetrieverResultCallback"
+    move-result-object p0
 
-    invoke-virtual {p0, p0, p1}, Landroid/os/Binder;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
+    invoke-virtual {p0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    return-void
+    move-result-object p0
+
+    const/4 v0, 0x1
+
+    invoke-static {v0, p1, p0}, Landroid/util/TypedValue;->applyDimension(IFLandroid/util/DisplayMetrics;)F
+
+    move-result p0
+
+    float-to-int p0, p0
+
+    return p0
 .end method
 
+.method public static final b(Landroid/view/View;Z)Landroid/animation/ObjectAnimator;
+    .locals 5
 
-# virtual methods
-.method public final asBinder()Landroid/os/IBinder;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public final onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
-    .locals 2
-
-    const v0, 0xffffff
+    const/high16 v0, 0x3f800000    # 1.0f
 
     const/4 v1, 0x0
 
-    if-le p1, v0, :cond_0
+    if-eqz p1, :cond_0
 
-    invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
-
-    move-result p3
+    move v2, v1
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p0}, Landroid/os/Binder;->getInterfaceDescriptor()Ljava/lang/String;
-
-    move-result-object p3
-
-    invoke-virtual {p2, p3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    move p3, v1
+    move v2, v0
 
     :goto_0
-    const/4 p4, 0x1
-
-    if-eqz p3, :cond_1
-
-    return p4
-
-    :cond_1
-    if-ne p1, p4, :cond_4
-
-    sget-object p1, Lcom/google/android/gms/common/api/Status;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    sget p3, Levi;->a:I
-
-    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
-
-    move-result p3
-
-    const/4 v0, 0x0
-
-    if-nez p3, :cond_2
-
-    move-object p1, v0
+    if-eqz p1, :cond_1
 
     goto :goto_1
 
-    :cond_2
-    invoke-interface {p1, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/os/Parcelable;
+    :cond_1
+    move v0, v1
 
     :goto_1
-    check-cast p1, Lcom/google/android/gms/common/api/Status;
+    sget-object v1, Landroid/view/View;->ALPHA:Landroid/util/Property;
 
-    iget-object p2, p0, Lpcj;->c:Lqpi;
+    const/4 v3, 0x2
 
-    iget-object p2, p2, Lqpi;->e:Ljava/lang/Object;
+    new-array v3, v3, [F
 
-    check-cast p2, Lieg;
+    const/4 v4, 0x0
 
-    invoke-virtual {p1}, Lcom/google/android/gms/common/api/Status;->b()Z
+    aput v2, v3, v4
 
-    move-result p3
+    const/4 v2, 0x1
 
-    if-eqz p3, :cond_3
+    aput v0, v3, v2
 
-    invoke-virtual {p2, v0}, Lieg;->b(Ljava/lang/Object;)V
+    invoke-static {p0, v1, v3}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
 
-    return p4
+    move-result-object v0
+
+    new-instance v1, Lth;
+
+    invoke-direct {v1, v4, p0, p1}, Lth;-><init>(ILjava/lang/Object;Z)V
+
+    invoke-virtual {v0, v1}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+
+    return-object v0
+.end method
+
+.method public static final c(Li58;)Ljava/lang/Class;
+    .locals 2
+
+    check-cast p0, Lff3;
+
+    invoke-interface {p0}, Lff3;->b()Ljava/lang/Class;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Ljava/lang/Class;->isPrimitive()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto/16 :goto_0
+
+    :cond_0
+    invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    sparse-switch v1, :sswitch_data_0
+
+    goto/16 :goto_0
+
+    :sswitch_0
+    const-string v1, "short"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    const-class p0, Ljava/lang/Short;
+
+    return-object p0
+
+    :sswitch_1
+    const-string v1, "float"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    const-class p0, Ljava/lang/Float;
+
+    return-object p0
+
+    :sswitch_2
+    const-string v1, "boolean"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    goto :goto_0
 
     :cond_3
-    invoke-static {p1}, La5j;->d(Lcom/google/android/gms/common/api/Status;)Lcom/google/android/gms/common/api/ApiException;
+    const-class p0, Ljava/lang/Boolean;
+
+    return-object p0
+
+    :sswitch_3
+    const-string v1, "void"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    const-class p0, Ljava/lang/Void;
+
+    return-object p0
+
+    :sswitch_4
+    const-string v1, "long"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_5
+
+    goto :goto_0
+
+    :cond_5
+    const-class p0, Ljava/lang/Long;
+
+    return-object p0
+
+    :sswitch_5
+    const-string v1, "char"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_6
+
+    goto :goto_0
+
+    :cond_6
+    const-class p0, Ljava/lang/Character;
+
+    return-object p0
+
+    :sswitch_6
+    const-string v1, "byte"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_7
+
+    goto :goto_0
+
+    :cond_7
+    const-class p0, Ljava/lang/Byte;
+
+    return-object p0
+
+    :sswitch_7
+    const-string v1, "int"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_8
+
+    goto :goto_0
+
+    :cond_8
+    const-class p0, Ljava/lang/Integer;
+
+    return-object p0
+
+    :sswitch_8
+    const-string v1, "double"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_9
+
+    :goto_0
+    return-object p0
+
+    :cond_9
+    const-class p0, Ljava/lang/Double;
+
+    return-object p0
+
+    nop
+
+    :sswitch_data_0
+    .sparse-switch
+        -0x4f08842f -> :sswitch_8
+        0x197ef -> :sswitch_7
+        0x2e6108 -> :sswitch_6
+        0x2e9356 -> :sswitch_5
+        0x32c67c -> :sswitch_4
+        0x375194 -> :sswitch_3
+        0x3db6c28 -> :sswitch_2
+        0x5d0225c -> :sswitch_1
+        0x685847c -> :sswitch_0
+    .end sparse-switch
+.end method
+
+.method public static d(Landroid/widget/Space;Lkb4;Lkb4;I)Landroid/animation/ValueAnimator;
+    .locals 7
+
+    and-int/lit8 v0, p3, 0x1
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    move-object p1, v1
+
+    :cond_0
+    and-int/lit8 p3, p3, 0x2
+
+    if-eqz p3, :cond_1
+
+    move-object p2, v1
+
+    :cond_1
+    invoke-static {}, Lfk3;->c()Lig8;
+
+    move-result-object p3
+
+    const/4 v0, -0x1
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x0
+
+    if-eqz p1, :cond_7
+
+    iget v4, p1, Lkb4;->b:I
+
+    iget v5, p1, Lkb4;->f:I
+
+    sub-int/2addr v4, v5
+
+    invoke-virtual {p0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v5
+
+    instance-of v6, v5, Landroid/view/ViewGroup$MarginLayoutParams;
+
+    if-eqz v6, :cond_2
+
+    check-cast v5, Landroid/view/ViewGroup$MarginLayoutParams;
+
+    goto :goto_0
+
+    :cond_2
+    move-object v5, v1
+
+    :goto_0
+    if-eqz v5, :cond_3
+
+    iget v5, v5, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
+
+    goto :goto_1
+
+    :cond_3
+    move v5, v3
+
+    :goto_1
+    iget-boolean p1, p1, Lkb4;->a:Z
+
+    if-eqz p1, :cond_4
+
+    move p1, v2
+
+    goto :goto_2
+
+    :cond_4
+    move p1, v0
+
+    :goto_2
+    mul-int/2addr p1, v4
+
+    add-int/2addr p1, v5
+
+    invoke-virtual {p0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v4
+
+    instance-of v5, v4, Landroid/view/ViewGroup$MarginLayoutParams;
+
+    if-eqz v5, :cond_5
+
+    check-cast v4, Landroid/view/ViewGroup$MarginLayoutParams;
+
+    goto :goto_3
+
+    :cond_5
+    move-object v4, v1
+
+    :goto_3
+    if-eqz v4, :cond_6
+
+    iget v4, v4, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
+
+    goto :goto_4
+
+    :cond_6
+    move v4, v3
+
+    :goto_4
+    filled-new-array {v4, p1}, [I
 
     move-result-object p1
 
-    invoke-virtual {p2, p1}, Lieg;->a(Ljava/lang/Exception;)V
+    const-string v4, "top"
 
-    return p4
+    invoke-static {v4, p1}, Landroid/animation/PropertyValuesHolder;->ofInt(Ljava/lang/String;[I)Landroid/animation/PropertyValuesHolder;
 
-    :cond_4
-    return v1
+    move-result-object p1
+
+    invoke-virtual {p3, p1}, Lig8;->add(Ljava/lang/Object;)Z
+
+    :cond_7
+    if-eqz p2, :cond_d
+
+    iget p1, p2, Lkb4;->b:I
+
+    iget v4, p2, Lkb4;->f:I
+
+    sub-int/2addr p1, v4
+
+    invoke-virtual {p0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v4
+
+    instance-of v5, v4, Landroid/view/ViewGroup$MarginLayoutParams;
+
+    if-eqz v5, :cond_8
+
+    check-cast v4, Landroid/view/ViewGroup$MarginLayoutParams;
+
+    goto :goto_5
+
+    :cond_8
+    move-object v4, v1
+
+    :goto_5
+    if-eqz v4, :cond_9
+
+    iget v4, v4, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+
+    goto :goto_6
+
+    :cond_9
+    move v4, v3
+
+    :goto_6
+    iget-boolean p2, p2, Lkb4;->a:Z
+
+    if-eqz p2, :cond_a
+
+    move v0, v2
+
+    :cond_a
+    mul-int/2addr v0, p1
+
+    add-int/2addr v0, v4
+
+    invoke-virtual {p0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object p1
+
+    instance-of p2, p1, Landroid/view/ViewGroup$MarginLayoutParams;
+
+    if-eqz p2, :cond_b
+
+    move-object v1, p1
+
+    check-cast v1, Landroid/view/ViewGroup$MarginLayoutParams;
+
+    :cond_b
+    if-eqz v1, :cond_c
+
+    iget p1, v1, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+
+    goto :goto_7
+
+    :cond_c
+    move p1, v3
+
+    :goto_7
+    filled-new-array {p1, v0}, [I
+
+    move-result-object p1
+
+    const-string p2, "bottom"
+
+    invoke-static {p2, p1}, Landroid/animation/PropertyValuesHolder;->ofInt(Ljava/lang/String;[I)Landroid/animation/PropertyValuesHolder;
+
+    move-result-object p1
+
+    invoke-virtual {p3, p1}, Lig8;->add(Ljava/lang/Object;)Z
+
+    :cond_d
+    invoke-static {p3}, Lfk3;->b(Ljava/util/List;)Lig8;
+
+    move-result-object p1
+
+    new-array p2, v3, [Landroid/animation/PropertyValuesHolder;
+
+    invoke-virtual {p1, p2}, Lig8;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, [Landroid/animation/PropertyValuesHolder;
+
+    array-length p2, p1
+
+    invoke-static {p1, p2}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, [Landroid/animation/PropertyValuesHolder;
+
+    invoke-static {p1}, Landroid/animation/ValueAnimator;->ofPropertyValuesHolder([Landroid/animation/PropertyValuesHolder;)Landroid/animation/ValueAnimator;
+
+    move-result-object p1
+
+    new-instance p2, Lsh;
+
+    const/4 p3, 0x0
+
+    invoke-direct {p2, p0, p3}, Lsh;-><init>(Landroid/view/View;I)V
+
+    invoke-virtual {p1, p2}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+
+    return-object p1
+.end method
+
+.method public static final e(Landroid/view/View;F)Landroid/animation/ObjectAnimator;
+    .locals 4
+
+    sget-object v0, Landroid/view/View;->TRANSLATION_Y:Landroid/util/Property;
+
+    invoke-virtual {p0}, Landroid/view/View;->getTranslationY()F
+
+    move-result v1
+
+    invoke-virtual {p0}, Landroid/view/View;->getTranslationY()F
+
+    move-result v2
+
+    add-float/2addr v2, p1
+
+    const/4 p1, 0x2
+
+    new-array p1, p1, [F
+
+    const/4 v3, 0x0
+
+    aput v1, p1, v3
+
+    const/4 v1, 0x1
+
+    aput v2, p1, v1
+
+    invoke-static {p0, v0, p1}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
+
+    move-result-object p0
+
+    return-object p0
 .end method

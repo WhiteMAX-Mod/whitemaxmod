@@ -1,196 +1,278 @@
-.class public abstract Lw40;
+.class public final Lw40;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static a:Landroid/media/AudioManager;
+.field public static final d:Lw40;
 
-.field public static final b:[Lkotlin/coroutines/Continuation;
+
+# instance fields
+.field public final a:I
+
+.field public final b:I
+
+.field public final c:Lkl7;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    new-array v0, v0, [Lkotlin/coroutines/Continuation;
-
-    sput-object v0, Lw40;->b:[Lkotlin/coroutines/Continuation;
-
-    return-void
-.end method
-
-.method public static a(Landroid/text/SpannableStringBuilder;Ljava/lang/Object;II)V
     .locals 6
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    move-result-object v0
+    const/16 v1, 0x21
 
-    invoke-interface {p0, p2, p3, v0}, Landroid/text/Spanned;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
+    const/16 v2, 0xa
 
-    move-result-object v0
+    const/4 v3, 0x2
 
-    array-length v1, v0
+    if-lt v0, v1, :cond_1
 
-    const/4 v2, 0x0
+    new-instance v0, Lw40;
+
+    new-instance v1, Ljl7;
+
+    const/4 v4, 0x4
+
+    invoke-direct {v1, v4}, Lrk7;-><init>(I)V
+
+    const/4 v4, 0x1
 
     :goto_0
-    const/16 v3, 0x21
+    if-gt v4, v2, :cond_0
 
-    if-ge v2, v1, :cond_1
-
-    aget-object v4, v0, v2
-
-    invoke-interface {p0, v4}, Landroid/text/Spanned;->getSpanStart(Ljava/lang/Object;)I
+    invoke-static {v4}, Lvih;->s(I)I
 
     move-result v5
 
-    if-ne v5, p2, :cond_0
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-interface {p0, v4}, Landroid/text/Spanned;->getSpanEnd(Ljava/lang/Object;)I
+    move-result-object v5
 
-    move-result v5
+    invoke-virtual {v1, v5}, Lrk7;->a(Ljava/lang/Object;)V
 
-    if-ne v5, p3, :cond_0
-
-    invoke-interface {p0, v4}, Landroid/text/Spanned;->getSpanFlags(Ljava/lang/Object;)I
-
-    move-result v5
-
-    if-ne v5, v3, :cond_0
-
-    invoke-interface {p0, v4}, Landroid/text/Spannable;->removeSpan(Ljava/lang/Object;)V
-
-    :cond_0
-    add-int/lit8 v2, v2, 0x1
+    add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
-    :cond_1
-    invoke-interface {p0, p1, p2, p3, v3}, Landroid/text/Spannable;->setSpan(Ljava/lang/Object;III)V
-
-    return-void
-.end method
-
-.method public static declared-synchronized b(Landroid/content/Context;)Landroid/media/AudioManager;
-    .locals 5
-
-    const-class v0, Lw40;
-
-    monitor-enter v0
-
-    :try_start_0
-    invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_0
-
-    const/4 v1, 0x0
-
-    sput-object v1, Lw40;->a:Landroid/media/AudioManager;
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p0
-
-    goto :goto_2
-
     :cond_0
-    :goto_0
-    sget-object v1, Lw40;->a:Landroid/media/AudioManager;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-eqz v1, :cond_1
-
-    monitor-exit v0
-
-    return-object v1
-
-    :cond_1
-    :try_start_1
-    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+    invoke-virtual {v1}, Ljl7;->i()Lkl7;
 
     move-result-object v1
 
-    if-eqz v1, :cond_3
-
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
-
-    move-result-object v2
-
-    if-ne v1, v2, :cond_2
+    invoke-direct {v0, v3, v1}, Lw40;-><init>(ILjava/util/Set;)V
 
     goto :goto_1
 
-    :cond_2
-    new-instance v1, Lkr3;
+    :cond_1
+    new-instance v0, Lw40;
 
-    invoke-direct {v1}, Lkr3;-><init>()V
+    invoke-direct {v0, v3, v2}, Lw40;-><init>(II)V
 
-    invoke-static {}, Leg0;->e()Ljava/util/concurrent/Executor;
-
-    move-result-object v2
-
-    new-instance v3, Lud;
-
-    const/4 v4, 0x6
-
-    invoke-direct {v3, p0, v4, v1}, Lud;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-interface {v2, v3}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
-    invoke-virtual {v1}, Lkr3;->b()V
-
-    sget-object p0, Lw40;->a:Landroid/media/AudioManager;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    monitor-exit v0
-
-    return-object p0
-
-    :cond_3
     :goto_1
-    :try_start_2
-    const-string v1, "audio"
+    sput-object v0, Lw40;->d:Lw40;
 
-    invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    return-void
+.end method
 
-    move-result-object p0
+.method public constructor <init>(II)V
+    .locals 0
 
-    check-cast p0, Landroid/media/AudioManager;
+    .line 7
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput-object p0, Lw40;->a:Landroid/media/AudioManager;
+    .line 8
+    iput p1, p0, Lw40;->a:I
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    .line 9
+    iput p2, p0, Lw40;->b:I
 
-    monitor-exit v0
+    const/4 p1, 0x0
 
-    return-object p0
+    .line 10
+    iput-object p1, p0, Lw40;->c:Lkl7;
 
-    :goto_2
-    :try_start_3
-    monitor-exit v0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+    return-void
+.end method
 
-    throw p0
+.method public constructor <init>(ILjava/util/Set;)V
+    .locals 1
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    iput p1, p0, Lw40;->a:I
+
+    .line 3
+    invoke-static {p2}, Lkl7;->j(Ljava/util/Collection;)Lkl7;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lw40;->c:Lkl7;
+
+    .line 4
+    invoke-virtual {p1}, Lsk7;->g()Lobh;
+
+    move-result-object p1
+
+    const/4 p2, 0x0
+
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    .line 5
+    invoke-static {v0}, Ljava/lang/Integer;->bitCount(I)I
+
+    move-result v0
+
+    invoke-static {p2, v0}, Ljava/lang/Math;->max(II)I
+
+    move-result p2
+
+    goto :goto_0
+
+    .line 6
+    :cond_0
+    iput p2, p0, Lw40;->b:I
+
+    return-void
 .end method
 
 
 # virtual methods
-.method public abstract c(Ljava/lang/Object;)F
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lw40;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lw40;
+
+    iget v1, p0, Lw40;->a:I
+
+    iget v3, p1, Lw40;->a:I
+
+    if-ne v1, v3, :cond_2
+
+    iget v1, p0, Lw40;->b:I
+
+    iget v3, p1, Lw40;->b:I
+
+    if-ne v1, v3, :cond_2
+
+    iget-object v1, p0, Lw40;->c:Lkl7;
+
+    iget-object p1, p1, Lw40;->c:Lkl7;
+
+    invoke-static {v1, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    return v0
+
+    :cond_2
+    return v2
 .end method
 
-.method public abstract d(Ljava/lang/Object;F)V
+.method public final hashCode()I
+    .locals 2
+
+    iget v0, p0, Lw40;->a:I
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Lw40;->b:I
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lw40;->c:Lkl7;
+
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Lkl7;->hashCode()I
+
+    move-result v1
+
+    :goto_0
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "AudioProfile[format="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v1, p0, Lw40;->a:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", maxChannelCount="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lw40;->b:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", channelMasks="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lw40;->c:Lkl7;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, "]"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -1,91 +1,71 @@
-.class public abstract Lepj;
-.super Ljava/lang/Object;
+.class public final Lepj;
+.super Lg4;
 .source "SourceFile"
 
 
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lepj;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
+# instance fields
+.field public a:D
+
+.field public b:D
+
+
 # direct methods
-.method public static final a(Landroid/graphics/Bitmap;)Ljava/lang/String;
-    .locals 7
-
-    invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
-
-    move-result v0
-
-    const-string v1, "@"
-
-    invoke-static {v0, v1}, Lj27;->g(ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
-
-    move-result v1
-
-    invoke-virtual {p0}, Landroid/graphics/Bitmap;->getHeight()I
-
-    move-result v2
-
-    invoke-virtual {p0}, Landroid/graphics/Bitmap;->isRecycled()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    const-string v3, "|recycled"
-
-    goto :goto_0
-
-    :cond_0
-    const-string v3, ""
-
-    :goto_0
-    invoke-virtual {p0}, Landroid/graphics/Bitmap;->getGenerationId()I
-
-    move-result p0
-
-    const-string v4, "("
-
-    const-string v5, "x"
-
-    const-string v6, "Bitmap"
-
-    invoke-static {v1, v6, v0, v4, v5}, Lpqb;->m(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "|genId="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static final b(Lr4h;)V
+.method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Lffe;
+    new-instance v0, Lc4i;
 
-    const/16 v1, 0x8
+    const/16 v1, 0x16
 
-    invoke-direct {v0, v1}, Lffe;-><init>(I)V
+    invoke-direct {v0, v1}, Lc4i;-><init>(I)V
 
-    const/4 v1, 0x1
+    sput-object v0, Lepj;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    invoke-virtual {p0, v1, v0}, Lr4h;->c(ILhs7;)V
+    return-void
+.end method
+
+
+# virtual methods
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 4
+
+    const/16 p2, 0x4f45
+
+    invoke-static {p1, p2}, Lcwj;->j(Landroid/os/Parcel;I)I
+
+    move-result p2
+
+    iget-wide v0, p0, Lepj;->a:D
+
+    const/4 v2, 0x2
+
+    const/16 v3, 0x8
+
+    invoke-static {p1, v2, v3}, Lcwj;->l(Landroid/os/Parcel;II)V
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeDouble(D)V
+
+    iget-wide v0, p0, Lepj;->b:D
+
+    const/4 v2, 0x3
+
+    invoke-static {p1, v2, v3}, Lcwj;->l(Landroid/os/Parcel;II)V
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeDouble(D)V
+
+    invoke-static {p1, p2}, Lcwj;->k(Landroid/os/Parcel;I)V
 
     return-void
 .end method

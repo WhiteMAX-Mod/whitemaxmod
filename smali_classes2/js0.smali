@@ -1,98 +1,87 @@
-.class public final synthetic Ljs0;
+.class public final Ljs0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/ViewTreeObserver$OnPreDrawListener;
+.implements Lks0;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ljava/lang/Object;
+.field public final a:J
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method public constructor <init>(J)V
     .locals 0
 
-    iput p1, p0, Ljs0;->a:I
-
-    iput-object p2, p0, Ljs0;->b:Ljava/lang/Object;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Ljs0;->a:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onPreDraw()Z
-    .locals 4
-
-    iget v0, p0, Ljs0;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Ljs0;->b:Ljava/lang/Object;
-
-    check-cast v0, Lfr5;
-
-    iget-boolean v1, v0, Lfr5;->x0:Z
-
-    const/4 v2, 0x1
-
-    if-nez v1, :cond_0
-
-    invoke-virtual {v0}, Landroid/view/View;->getMeasuredWidth()I
-
-    move-result v1
-
-    if-lez v1, :cond_0
-
-    invoke-virtual {v0}, Landroid/view/View;->getMeasuredWidth()I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Lfr5;->b(I)V
-
-    iput-boolean v2, v0, Lfr5;->x0:Z
-
-    invoke-virtual {v0}, Landroid/view/View;->requestLayout()V
-
-    :cond_0
-    iget-boolean v1, v0, Lfr5;->x0:Z
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
-
-    move-result-object v1
-
-    iget-object v3, v0, Lfr5;->B0:Ljs0;
-
-    invoke-virtual {v1, v3}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
-
-    const/4 v1, 0x0
-
-    iput-object v1, v0, Lfr5;->B0:Ljs0;
-
-    :cond_1
-    return v2
-
-    :pswitch_0
-    iget-object v0, p0, Ljs0;->b:Ljava/lang/Object;
-
-    check-cast v0, Lks0;
-
-    invoke-virtual {v0}, Lks0;->c()V
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
     const/4 v0, 0x1
 
+    if-ne p0, p1, :cond_0
+
     return v0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    :cond_0
+    instance-of v1, p1, Ljs0;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Ljs0;
+
+    iget-wide v3, p0, Ljs0;->a:J
+
+    iget-wide v5, p1, Ljs0;->a:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Ljs0;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    const-string v0, "Error(requestId="
+
+    const-string v1, ")"
+
+    iget-wide v2, p0, Ljs0;->a:J
+
+    invoke-static {v2, v3, v0, v1}, Lfvg;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

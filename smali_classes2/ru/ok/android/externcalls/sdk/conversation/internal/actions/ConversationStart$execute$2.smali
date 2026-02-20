@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcr6;
+.implements Lzs6;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart;->execute(Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart$Params;)Lkef;
+    value = Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart;->execute(Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart$Params;)Limf;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lcr6;"
+        "Lzs6;"
     }
 .end annotation
 
@@ -50,15 +50,32 @@
 .end annotation
 
 
-# instance fields
-.field final synthetic this$0:Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart;
+# static fields
+.field public static final INSTANCE:Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart$execute$2;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart$execute$2<",
+            "TT;TR;>;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart$execute$2;->this$0:Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart;
+    new-instance v0, Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart$execute$2;
+
+    invoke-direct {v0}, Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart$execute$2;-><init>()V
+
+    sput-object v0, Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart$execute$2;->INSTANCE:Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart$execute$2;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -102,56 +119,8 @@
     :cond_0
     instance-of v0, p1, Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Result$Error;
 
-    if-eqz v0, :cond_3
-
-    .line 4
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart$execute$2;->this$0:Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart;
-
-    invoke-static {v0}, Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart;->access$isNewCallFinishStatEnabled$p(Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    .line 5
-    check-cast p1, Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Result$Error;
-
-    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Result$Error;->getErrorCode()Ljava/lang/String;
-
-    move-result-object v0
-
     if-eqz v0, :cond_1
 
-    .line 6
-    new-instance v0, Lru/ok/android/api/core/ApiInvocationException;
-
-    const/4 v1, 0x1
-
-    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Result$Error;->getErrorCode()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v0, v1, p1}, Lru/ok/android/api/core/ApiInvocationException;-><init>(ILjava/lang/String;)V
-
-    goto :goto_0
-
-    .line 7
-    :cond_1
-    new-instance v0, Lru/ok/android/api/core/ApiException;
-
-    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Result$Error;->getThrowable()Ljava/lang/Throwable;
-
-    move-result-object p1
-
-    .line 8
-    invoke-direct {v0, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/Throwable;)V
-
-    .line 9
-    :goto_0
-    throw v0
-
-    .line 10
-    :cond_2
     new-instance v0, Lru/ok/android/externcalls/sdk/conversation/internal/FastStartException;
 
     check-cast p1, Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Result$Error;
@@ -168,8 +137,7 @@
 
     throw v0
 
-    .line 11
-    :cond_3
+    :cond_1
     new-instance p1, Lkotlin/NoWhenBranchMatchedException;
 
     invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V

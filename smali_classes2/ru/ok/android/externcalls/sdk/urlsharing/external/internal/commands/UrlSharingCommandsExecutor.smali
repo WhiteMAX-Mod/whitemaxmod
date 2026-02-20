@@ -14,15 +14,15 @@
         "",
         "url",
         "Lkotlin/Function0;",
-        "Lb3h;",
+        "Lmah;",
         "onSuccess",
         "Lkotlin/Function1;",
         "",
         "onError",
         "start",
-        "(Ljava/lang/String;Llq6;Lnq6;)V",
+        "(Ljava/lang/String;Lis6;Lks6;)V",
         "stop",
-        "(Llq6;Lnq6;)V",
+        "(Lis6;Lks6;)V",
         "calls-sdk_release"
     }
     k = 0x1
@@ -36,24 +36,24 @@
 
 
 # virtual methods
-.method public abstract start(Ljava/lang/String;Llq6;Lnq6;)V
+.method public abstract start(Ljava/lang/String;Lis6;Lks6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
-            "Llq6;",
-            "Lnq6;",
+            "Lis6;",
+            "Lks6;",
             ")V"
         }
     .end annotation
 .end method
 
-.method public abstract stop(Llq6;Lnq6;)V
+.method public abstract stop(Lis6;Lks6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Llq6;",
-            "Lnq6;",
+            "Lis6;",
+            "Lks6;",
             ")V"
         }
     .end annotation

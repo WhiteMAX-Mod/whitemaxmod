@@ -1,47 +1,61 @@
-.class public interface abstract Lkl4;
+.class public abstract Lkl4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract A()S
-.end method
+# static fields
+.field public static final a:Loy0;
 
-.method public abstract B()F
-.end method
 
-.method public abstract C()D
-.end method
+# direct methods
+.method static constructor <clinit>()V
+    .locals 17
 
-.method public abstract b()Z
-.end method
+    new-instance v0, Loy0;
 
-.method public abstract c()C
-.end method
+    const/4 v1, 0x2
 
-.method public abstract d(La38;)Ljava/lang/Object;
-.end method
+    invoke-direct {v0, v1}, Loy0;-><init>(I)V
 
-.method public abstract k()I
-.end method
+    sput-object v0, Lkl4;->a:Loy0;
 
-.method public abstract o(Lxpe;)Lkl4;
-.end method
+    const-string v15, "EEE, dd-MM-yyyy HH:mm:ss z"
 
-.method public abstract q()Ljava/lang/String;
-.end method
+    const-string v16, "EEE MMM d yyyy HH:mm:ss z"
 
-.method public abstract r(Lxpe;)Lqp3;
-.end method
+    const-string v2, "EEE, dd MMM yyyy HH:mm:ss zzz"
 
-.method public abstract s(Lxpe;)I
-.end method
+    const-string v3, "EEEE, dd-MMM-yy HH:mm:ss zzz"
 
-.method public abstract t()J
-.end method
+    const-string v4, "EEE MMM d HH:mm:ss yyyy"
 
-.method public abstract v()Z
-.end method
+    const-string v5, "EEE, dd-MMM-yyyy HH:mm:ss z"
 
-.method public abstract z()B
+    const-string v6, "EEE, dd-MMM-yyyy HH-mm-ss z"
+
+    const-string v7, "EEE, dd MMM yy HH:mm:ss z"
+
+    const-string v8, "EEE dd-MMM-yyyy HH:mm:ss z"
+
+    const-string v9, "EEE dd MMM yyyy HH:mm:ss z"
+
+    const-string v10, "EEE dd-MMM-yyyy HH-mm-ss z"
+
+    const-string v11, "EEE dd-MMM-yy HH:mm:ss z"
+
+    const-string v12, "EEE dd MMM yy HH:mm:ss z"
+
+    const-string v13, "EEE,dd-MMM-yy HH:mm:ss z"
+
+    const-string v14, "EEE,dd-MMM-yyyy HH:mm:ss z"
+
+    filled-new-array/range {v2 .. v16}, [Ljava/lang/String;
+
+    move-result-object v0
+
+    array-length v0, v0
+
+    new-array v0, v0, [Ljava/text/DateFormat;
+
+    return-void
 .end method

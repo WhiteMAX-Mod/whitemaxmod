@@ -13,7 +13,7 @@
         "",
         "Lru/ok/android/externcalls/sdk/asr_online/AsrOnlineChunk;",
         "asrChunk",
-        "Lb3h;",
+        "Lmah;",
         "onAsrChunk",
         "(Lru/ok/android/externcalls/sdk/asr_online/AsrOnlineChunk;)V",
         "",

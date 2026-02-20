@@ -1,56 +1,42 @@
-.class public final synthetic Lyi5;
+.class public final Lyi5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lzee;
 
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lmi5;
-
-
-# direct methods
-.method public synthetic constructor <init>(Lmi5;I)V
+# virtual methods
+.method public final b()V
     .locals 0
-
-    iput p2, p0, Lyi5;->a:I
-
-    iput-object p1, p0, Lyi5;->b:Lmi5;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final run()V
+.method public final e()Z
     .locals 1
 
-    iget v0, p0, Lyi5;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    return v0
+.end method
 
-    iget-object v0, p0, Lyi5;->b:Lmi5;
+.method public final h(J)I
+    .locals 0
 
-    invoke-interface {v0}, Lmi5;->j()V
+    const/4 p1, 0x0
 
-    return-void
+    return p1
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, Lyi5;->b:Lmi5;
+.method public final p(Lilc;Ldn4;I)I
+    .locals 0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const/4 p1, 0x4
 
-    return-void
+    iput p1, p2, Ls00;->b:I
 
-    nop
+    const/4 p1, -0x4
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return p1
 .end method

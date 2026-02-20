@@ -1,121 +1,108 @@
-.class public final synthetic Lr49;
-.super Ljava/lang/Object;
+.class public final Lr49;
+.super Lpdg;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
+.implements Lys6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lone/me/sdk/gallery/MediaGalleryWidget;
 
-.field public final synthetic b:Lu49;
+.field public synthetic o:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lu49;I)V
+.method public constructor <init>(Lone/me/sdk/gallery/MediaGalleryWidget;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lr49;->a:I
+    iput-object p1, p0, Lr49;->X:Lone/me/sdk/gallery/MediaGalleryWidget;
 
-    iput-object p1, p0, Lr49;->b:Lu49;
+    const/4 p1, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lr49;->a:I
+    check-cast p1, Ljava/lang/Boolean;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Integer;
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    iget-object v0, p0, Lr49;->b:Lu49;
-
-    iget-object v0, v0, Lu49;->c:Landroid/view/View;
-
-    invoke-virtual {v0}, Landroid/view/View;->getPaddingLeft()I
-
-    move-result v1
-
-    invoke-virtual {v0}, Landroid/view/View;->getPaddingTop()I
-
-    move-result v2
-
-    invoke-virtual {v0}, Landroid/view/View;->getPaddingRight()I
-
-    move-result v3
-
-    invoke-virtual {v0, v1, v2, v3, p1}, Landroid/view/View;->setPadding(IIII)V
-
-    return-void
-
-    :pswitch_0
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    invoke-virtual {p0, p1, p2}, Lr49;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    check-cast p1, Ljava/lang/Integer;
+    check-cast p1, Lr49;
 
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+    sget-object p2, Lmah;->a:Lmah;
+
+    invoke-virtual {p1, p2}, Lr49;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lr49;
+
+    iget-object v1, p0, Lr49;->X:Lone/me/sdk/gallery/MediaGalleryWidget;
+
+    invoke-direct {v0, v1, p2}, Lr49;-><init>(Lone/me/sdk/gallery/MediaGalleryWidget;Lkotlin/coroutines/Continuation;)V
+
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result p1
 
-    iget-object v0, p0, Lr49;->b:Lu49;
+    iput-boolean p1, v0, Lr49;->o:Z
 
-    invoke-virtual {v0}, Lu49;->d()Lone/me/keyboardmedia/MediaKeyboardWidget;
+    return-object v0
+.end method
 
-    move-result-object v0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    if-eqz v0, :cond_1
+    iget-boolean v0, p0, Lr49;->o:Z
 
-    invoke-virtual {v0}, La94;->getView()Landroid/view/View;
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    move-result-object v0
+    new-instance p1, Ljava/lang/StringBuilder;
 
-    if-eqz v0, :cond_1
+    const-string v1, "isItemsLoading = "
 
-    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    invoke-direct {p1, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result-object v1
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    if-eqz v1, :cond_0
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    iput p1, v1, Landroid/view/ViewGroup$LayoutParams;->height:I
+    move-result-object p1
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    const-string v1, "MediaGalleryWidget"
 
-    goto :goto_0
+    invoke-static {v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_0
-    new-instance p1, Ljava/lang/NullPointerException;
+    sget-object p1, Lone/me/sdk/gallery/MediaGalleryWidget;->Y:[Lv58;
 
-    const-string v0, "null cannot be cast to non-null type android.view.ViewGroup.LayoutParams"
+    iget-object p1, p0, Lr49;->X:Lone/me/sdk/gallery/MediaGalleryWidget;
 
-    invoke-direct {p1, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p1}, Lone/me/sdk/gallery/MediaGalleryWidget;->H0()Lml5;
 
-    throw p1
+    move-result-object p1
 
-    :cond_1
-    :goto_0
-    return-void
+    invoke-virtual {p1, v0}, Lml5;->setRefreshingNext(Z)V
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
 .end method

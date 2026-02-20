@@ -1,49 +1,63 @@
 .class public final Lvtc;
-.super Lo84;
+.super Ldg0;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:I
-
-.field public synthetic d:Ljava/lang/Object;
-
-.field public final synthetic o:Lxtc;
+# static fields
+.field public static final b:Lvtc;
 
 
 # direct methods
-.method public constructor <init>(Lxtc;Lo84;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lvtc;->o:Lxtc;
+    new-instance v0, Lvtc;
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    const/16 v1, 0x10
+
+    invoke-direct {v0, v1}, Ldg0;-><init>(I)V
+
+    sput-object v0, Lvtc;->b:Lvtc;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    iput-object p1, p0, Lvtc;->d:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    iget p1, p0, Lvtc;->X:I
+    if-ne p0, p1, :cond_0
 
-    const/high16 v0, -0x80000000
+    return v0
 
-    or-int/2addr p1, v0
+    :cond_0
+    instance-of p1, p1, Lvtc;
 
-    iput p1, p0, Lvtc;->X:I
+    if-nez p1, :cond_1
 
-    iget-object p1, p0, Lvtc;->o:Lxtc;
+    const/4 p1, 0x0
 
-    const/4 v0, 0x0
+    return p1
 
-    invoke-virtual {p1, v0, p0}, Lxtc;->i(Ljava/lang/Long;Lo84;)Ljava/lang/Object;
+    :cond_1
+    return v0
+.end method
 
-    move-result-object p1
+.method public final hashCode()I
+    .locals 1
 
-    return-object p1
+    const v0, 0x5dad53ff
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "SelectPhotoFromGallery"
+
+    return-object v0
 .end method

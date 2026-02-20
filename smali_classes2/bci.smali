@@ -1,19 +1,23 @@
-.class public final Lbci;
-.super Ljava/lang/Object;
+.class public abstract Lbci;
+.super Ljava/lang/Throwable;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final serializer()La38;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "La38;"
-        }
-    .end annotation
+# instance fields
+.field public final a:Ljava/lang/String;
 
-    sget-object v0, Laci;->a:Laci;
+.field public final b:I
 
-    return-object v0
+
+# direct methods
+.method public constructor <init>(Ljava/lang/String;I)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Throwable;-><init>()V
+
+    iput-object p1, p0, Lbci;->a:Ljava/lang/String;
+
+    iput p2, p0, Lbci;->b:I
+
+    return-void
 .end method

@@ -40,7 +40,7 @@
 
 .field private static final MIN_JS_SAFE_LONG:J = -0x1fffffffffffffL
 
-.field private static final PEER_ID_RANGE:Lco8;
+.field private static final PEER_ID_RANGE:Ltq8;
 
 
 # direct methods
@@ -51,19 +51,19 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/id/peer/PeerIdGenerator$Companion;-><init>(Lso4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/id/peer/PeerIdGenerator$Companion;-><init>(Lfq4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/id/peer/PeerIdGenerator;->Companion:Lru/ok/android/externcalls/sdk/id/peer/PeerIdGenerator$Companion;
 
-    new-instance v0, Lco8;
+    new-instance v0, Ltq8;
 
     const-wide v1, -0x1fffffffffffffL
 
     const-wide v3, 0x1fffffffffffffL
 
-    invoke-direct {v0, v1, v2, v3, v4}, Lco8;-><init>(JJ)V
+    invoke-direct {v0, v1, v2, v3, v4}, Ltq8;-><init>(JJ)V
 
-    sput-object v0, Lru/ok/android/externcalls/sdk/id/peer/PeerIdGenerator;->PEER_ID_RANGE:Lco8;
+    sput-object v0, Lru/ok/android/externcalls/sdk/id/peer/PeerIdGenerator;->PEER_ID_RANGE:Ltq8;
 
     return-void
 .end method
@@ -81,20 +81,20 @@
 .method public final generatePeerId()J
     .locals 9
 
-    sget-object v0, Lru/ok/android/externcalls/sdk/id/peer/PeerIdGenerator;->PEER_ID_RANGE:Lco8;
+    sget-object v0, Lru/ok/android/externcalls/sdk/id/peer/PeerIdGenerator;->PEER_ID_RANGE:Ltq8;
 
-    sget-object v1, Lmhd;->a:Llhd;
+    sget-object v1, Lfnd;->a:Lend;
 
     :try_start_0
-    iget-wide v1, v0, Lco8;->a:J
+    iget-wide v1, v0, Ltq8;->a:J
 
-    invoke-virtual {v0}, Lco8;->isEmpty()Z
+    invoke-virtual {v0}, Ltq8;->isEmpty()Z
 
     move-result v3
 
     if-nez v3, :cond_2
 
-    iget-wide v3, v0, Lco8;->b:J
+    iget-wide v3, v0, Ltq8;->b:J
 
     const-wide v5, 0x7fffffffffffffffL
 
@@ -106,9 +106,9 @@
 
     add-long/2addr v3, v5
 
-    sget-object v0, Lmhd;->b:Lo3;
+    sget-object v0, Lfnd;->b:Lo3;
 
-    invoke-virtual {v0, v1, v2, v3, v4}, Lmhd;->f(JJ)J
+    invoke-virtual {v0, v1, v2, v3, v4}, Lfnd;->f(JJ)J
 
     move-result-wide v0
 
@@ -123,9 +123,9 @@
 
     sub-long/2addr v1, v5
 
-    sget-object v0, Lmhd;->b:Lo3;
+    sget-object v0, Lfnd;->b:Lo3;
 
-    invoke-virtual {v0, v1, v2, v3, v4}, Lmhd;->f(JJ)J
+    invoke-virtual {v0, v1, v2, v3, v4}, Lfnd;->f(JJ)J
 
     move-result-wide v0
 
@@ -134,7 +134,7 @@
     return-wide v0
 
     :cond_1
-    sget-object v0, Lmhd;->b:Lo3;
+    sget-object v0, Lfnd;->b:Lo3;
 
     invoke-virtual {v0}, Lo3;->d()J
 

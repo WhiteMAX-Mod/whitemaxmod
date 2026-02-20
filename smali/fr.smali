@@ -1,39 +1,31 @@
 .class public final Lfr;
-.super Llm4;
+.super Ler;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Lfr;
-
-.field public static final c:Lhm4;
+# instance fields
+.field public final synthetic o:Landroidx/appcompat/widget/AppCompatTextView;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(Landroidx/appcompat/widget/AppCompatTextView;)V
+    .locals 0
 
-    new-instance v0, Lfr;
+    iput-object p1, p0, Lfr;->o:Landroidx/appcompat/widget/AppCompatTextView;
 
-    invoke-direct {v0}, Llm4;-><init>()V
+    invoke-direct {p0, p1}, Ler;-><init>(Landroidx/appcompat/widget/AppCompatTextView;)V
 
-    sput-object v0, Lfr;->b:Lfr;
+    return-void
+.end method
 
-    const/4 v1, 0x0
 
-    new-array v1, v1, [Ljava/lang/String;
+# virtual methods
+.method public final D(IF)V
+    .locals 1
 
-    const/4 v2, 0x0
+    iget-object v0, p0, Lfr;->o:Landroidx/appcompat/widget/AppCompatTextView;
 
-    const/16 v3, 0xe
-
-    const-string v4, ":settings/appearance"
-
-    invoke-static {v0, v4, v1, v2, v3}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
-
-    move-result-object v0
-
-    sput-object v0, Lfr;->c:Lhm4;
+    invoke-static {v0, p1, p2}, Landroidx/appcompat/widget/AppCompatTextView;->h(Landroidx/appcompat/widget/AppCompatTextView;IF)V
 
     return-void
 .end method

@@ -1,117 +1,134 @@
-.class public final enum Lgm0;
-.super Ljava/lang/Enum;
+.class public final synthetic Lgm0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
 
-# static fields
-.field public static final synthetic X:[Lgm0;
 
-.field public static final synthetic Y:Lal5;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final enum a:Lgm0;
-
-.field public static final enum b:Lgm0;
-
-.field public static final enum c:Lgm0;
-
-.field public static final enum d:Lgm0;
-
-.field public static final enum o:Lgm0;
+.field public final synthetic b:Lkfb;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public synthetic constructor <init>(Lkfb;I)V
+    .locals 0
 
-    new-instance v0, Lgm0;
+    iput p2, p0, Lgm0;->a:I
 
-    const-string v1, "SMALLEST"
+    iput-object p1, p0, Lgm0;->b:Lkfb;
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lgm0;->a:Lgm0;
-
-    new-instance v1, Lgm0;
-
-    const-string v2, "SMALL"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lgm0;->b:Lgm0;
-
-    new-instance v2, Lgm0;
-
-    const-string v3, "MEDIUM"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lgm0;->c:Lgm0;
-
-    new-instance v3, Lgm0;
-
-    const-string v4, "BIG"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lgm0;->d:Lgm0;
-
-    new-instance v4, Lgm0;
-
-    const-string v5, "MAX"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v4, Lgm0;->o:Lgm0;
-
-    filled-new-array {v0, v1, v2, v3, v4}, [Lgm0;
-
-    move-result-object v0
-
-    sput-object v0, Lgm0;->X:[Lgm0;
-
-    new-instance v1, Lal5;
-
-    invoke-direct {v1, v0}, Lal5;-><init>([Ljava/lang/Enum;)V
-
-    sput-object v1, Lgm0;->Y:Lal5;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lgm0;
-    .locals 1
 
-    const-class v0, Lgm0;
+# virtual methods
+.method public final run()V
+    .locals 7
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget v0, p0, Lgm0;->a:I
 
-    move-result-object p0
+    packed-switch v0, :pswitch_data_0
 
-    check-cast p0, Lgm0;
+    iget-object v0, p0, Lgm0;->b:Lkfb;
 
-    return-object p0
-.end method
+    iget-object v0, v0, Lkfb;->g:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-.method public static values()[Lgm0;
-    .locals 1
-
-    sget-object v0, Lgm0;->X:[Lgm0;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    check-cast v0, [Lgm0;
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    return-object v0
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lwlh;
+
+    invoke-virtual {v1}, Lwlh;->d()V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lgm0;->b:Lkfb;
+
+    iget-object v0, v0, Lkfb;->g:Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :cond_1
+    :goto_1
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_4
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lwlh;
+
+    iget-object v2, v1, Lwlh;->e:Ljava/lang/String;
+
+    sget-object v3, Ltej;->a:Lafb;
+
+    if-nez v3, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    sget-object v4, Lzm8;->d:Lzm8;
+
+    invoke-virtual {v3, v4}, Lafb;->b(Lzm8;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_3
+
+    const-string v5, "Player autoplay. onMediaProcessingFinished."
+
+    const/4 v6, 0x0
+
+    invoke-virtual {v3, v4, v2, v5, v6}, Lafb;->c(Lzm8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_3
+    :goto_2
+    const/4 v2, 0x0
+
+    iput-boolean v2, v1, Lwlh;->t:Z
+
+    iget-object v3, v1, Lwlh;->f:Landroidx/recyclerview/widget/RecyclerView;
+
+    if-eqz v3, :cond_1
+
+    invoke-virtual {v1, v3, v2}, Lwlh;->f(Landroidx/recyclerview/widget/RecyclerView;Z)V
+
+    goto :goto_1
+
+    :cond_4
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

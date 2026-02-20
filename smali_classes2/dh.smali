@@ -1,58 +1,23 @@
-.class public final Ldh;
-.super Lj2;
+.class public final synthetic Ldh;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final d:Ldh;
+# instance fields
+.field public final synthetic a:Lfh;
+
+.field public final synthetic b:Lu7b;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public synthetic constructor <init>(Lfh;Lu7b;)V
+    .locals 0
 
-    new-instance v0, Ldh;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v1, Landroid/view/animation/AccelerateDecelerateInterpolator;
+    iput-object p1, p0, Ldh;->a:Lfh;
 
-    invoke-direct {v1}, Landroid/view/animation/AccelerateDecelerateInterpolator;-><init>()V
-
-    const/4 v2, 0x1
-
-    sget-object v3, Lbh;->b:Lbh;
-
-    invoke-direct {v0, v3, v2, v1}, Lj2;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    sput-object v0, Ldh;->d:Ldh;
+    iput-object p2, p0, Ldh;->b:Lu7b;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final G(Landroid/content/Context;Landroid/content/res/XmlResourceParser;I)Ljava/lang/Object;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    invoke-interface {p2, p3, v0}, Landroid/util/AttributeSet;->getAttributeResourceValue(II)I
-
-    move-result p2
-
-    if-eqz p2, :cond_0
-
-    invoke-static {p1, p2}, Landroid/view/animation/AnimationUtils;->loadInterpolator(Landroid/content/Context;I)Landroid/view/animation/Interpolator;
-
-    move-result-object p1
-
-    return-object p1
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string p2, "Can\'t parse interpolator"
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method

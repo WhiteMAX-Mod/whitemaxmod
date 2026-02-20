@@ -3,14 +3,14 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lmp7;
+.implements Lfq7;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lmp7;"
+        "Lfq7;"
     }
 .end annotation
 
@@ -20,8 +20,8 @@
     }
     d2 = {
         "Lru/ok/tracer/utils/LoggerInitializer;",
-        "Lmp7;",
-        "Lko4;",
+        "Lfq7;",
+        "Ll67;",
         "<init>",
         "()V",
         "tracer-commons_release"
@@ -59,17 +59,17 @@
     .locals 1
 
     :try_start_0
-    instance-of v0, p1, Lt47;
+    instance-of v0, p1, Lo57;
 
     if-eqz v0, :cond_0
 
-    check-cast p1, Lt47;
+    check-cast p1, Lo57;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     :catch_0
     :cond_0
-    sget-object p1, Lko4;->z0:Lko4;
+    sget-object p1, Ll67;->Y:Ll67;
 
     return-object p1
 .end method

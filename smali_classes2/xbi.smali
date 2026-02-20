@@ -1,19 +1,8 @@
-.class public final Lxbi;
-.super Lzbi;
+.class public abstract Lxbi;
+.super Ln28;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Z
-
-
-# direct methods
-.method public constructor <init>(Z)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Throwable;-><init>()V
-
-    iput-boolean p1, p0, Lxbi;->a:Z
-
-    return-void
+# virtual methods
+.method public abstract f()Z
 .end method

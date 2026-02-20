@@ -1,131 +1,106 @@
 .class public final Lp3f;
-.super Lie0;
+.super Lpdg;
 .source "SourceFile"
+
+# interfaces
+.implements Lys6;
 
 
 # instance fields
-.field public final b:Llhg;
+.field public final synthetic X:Landroid/graphics/RectF;
 
-.field public final c:I
+.field public final synthetic o:Lv3f;
 
 
 # direct methods
-.method public constructor <init>(ILlhg;)V
-    .locals 1
+.method public constructor <init>(Lv3f;Landroid/graphics/RectF;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    const/16 v0, 0x15
+    iput-object p1, p0, Lp3f;->o:Lv3f;
 
-    invoke-direct {p0, v0}, Lie0;-><init>(I)V
+    iput-object p2, p0, Lp3f;->X:Landroid/graphics/RectF;
 
-    iput-object p2, p0, Lp3f;->b:Llhg;
+    const/4 p1, 0x2
 
-    iput p1, p0, Lp3f;->c:I
+    invoke-direct {p0, p1, p3}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    if-ne p0, p1, :cond_0
+    check-cast p1, Lnd4;
 
-    goto :goto_1
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of v0, p1, Lp3f;
+    invoke-virtual {p0, p1, p2}, Lp3f;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    if-nez v0, :cond_1
+    move-result-object p1
 
-    goto :goto_0
-
-    :cond_1
     check-cast p1, Lp3f;
 
-    iget-object v0, p0, Lp3f;->b:Llhg;
+    sget-object p2, Lmah;->a:Lmah;
 
-    iget-object v1, p1, Lp3f;->b:Llhg;
+    invoke-virtual {p1, p2}, Lp3f;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Llhg;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget v0, p0, Lp3f;->c:I
-
-    iget p1, p1, Lp3f;->c:I
-
-    if-eq v0, p1, :cond_3
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_3
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
+    return-object p2
 .end method
 
-.method public final hashCode()I
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    iget-object v0, p0, Lp3f;->b:Llhg;
+    new-instance p1, Lp3f;
 
-    iget v0, v0, Llhg;->c:I
+    iget-object v0, p0, Lp3f;->o:Lv3f;
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    iget-object v1, p0, Lp3f;->X:Landroid/graphics/RectF;
 
-    move-result v0
+    invoke-direct {p1, v0, v1, p2}, Lp3f;-><init>(Lv3f;Landroid/graphics/RectF;Lkotlin/coroutines/Continuation;)V
 
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget v1, p0, Lp3f;->c:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    return-object p1
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    const-string v1, "ShowSnackbar(message="
+    sget-object p1, Lv3f;->M0:[Lv58;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object p1, p0, Lp3f;->o:Lv3f;
 
-    iget-object v1, p0, Lp3f;->b:Llhg;
+    iget-object v0, p1, Lv3f;->s0:Lj88;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", icon="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lp3f;->c:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
+    check-cast v0, Lh56;
+
+    iget-object v1, p1, Lv3f;->H0:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Lh56;->o(Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lp3f;->X:Landroid/graphics/RectF;
+
+    invoke-virtual {p1, v0, v1}, Lv3f;->v(Ljava/lang/String;Landroid/graphics/RectF;)V
+
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
 .end method

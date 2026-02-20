@@ -1,25 +1,21 @@
-.class public abstract La7b;
+.class public final La7b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:I
-
-.field public static final b:I
+.field public static final a:La7b;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    sget v0, Lbcd;->call_users_in_wait_room_count:I
+    new-instance v0, La7b;
 
-    sput v0, La7b;->a:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sget v0, Lbcd;->call_users_info_count:I
-
-    sput v0, La7b;->b:I
+    sput-object v0, La7b;->a:La7b;
 
     return-void
 .end method

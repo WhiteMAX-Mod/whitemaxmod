@@ -1,90 +1,53 @@
 .class public final Lcr9;
-.super Ler9;
+.super Lda4;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lpn9;
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Ldr9;
+
+.field public Z:I
+
+.field public d:J
+
+.field public o:Lpo9;
 
 
 # direct methods
-.method public constructor <init>(Lpn9;)V
+.method public constructor <init>(Ldr9;Lda4;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lcr9;->Y:Ldr9;
 
-    iput-object p1, p0, Lcr9;->a:Lpn9;
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lcr9;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lcr9;
-
-    iget-object v1, p0, Lcr9;->a:Lpn9;
-
-    iget-object p1, p1, Lcr9;->a:Lpn9;
-
-    if-eq v1, p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lcr9;->a:Lpn9;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iput-object p1, p0, Lcr9;->X:Ljava/lang/Object;
 
-    const-string v1, "NewInputState(expandableState="
+    iget p1, p0, Lcr9;->Z:I
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const/high16 v0, -0x80000000
 
-    iget-object v1, p0, Lcr9;->a:Lpn9;
+    or-int/2addr p1, v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iput p1, p0, Lcr9;->Z:I
 
-    const-string v1, ")"
+    iget-object p1, p0, Lcr9;->Y:Ldr9;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-wide/16 v0, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p1, v0, v1, p0}, Ldr9;->a(JLda4;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p1
 
-    return-object v0
+    return-object p1
 .end method

@@ -1,215 +1,300 @@
-.class public Ln7g;
-.super Landroid/widget/FrameLayout;
+.class public final Ln7g;
+.super Landroid/graphics/drawable/Drawable;
 .source "SourceFile"
 
 # interfaces
-.implements Lu7g;
+.implements Lt23;
+
+
+# static fields
+.field public static final synthetic X:[Lv58;
 
 
 # instance fields
-.field public final synthetic a:Lv7g;
+.field public final a:F
+
+.field public final b:F
+
+.field public final c:Legf;
+
+.field public final d:Landroid/graphics/Paint;
+
+.field public final o:Landroid/graphics/RectF;
 
 
 # direct methods
+.method static constructor <clinit>()V
+    .locals 4
+
+    new-instance v0, Laia;
+
+    const-string v1, "gradientStrokeColors"
+
+    const-string v2, "getGradientStrokeColors()[I"
+
+    const-class v3, Ln7g;
+
+    invoke-direct {v0, v3, v1, v2}, Laia;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+
+    sget-object v1, Lazd;->a:Lbzd;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 v1, 0x1
+
+    new-array v1, v1, [Lv58;
+
+    const/4 v2, 0x0
+
+    aput-object v0, v1, v2
+
+    sput-object v1, Ln7g;->X:[Lv58;
+
+    return-void
+.end method
+
 .method public constructor <init>(Landroid/content/Context;)V
-    .locals 0
+    .locals 3
 
-    invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
 
-    new-instance p1, Lv7g;
+    move-result-object v0
 
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    iput-object p1, p0, Ln7g;->a:Lv7g;
+    move-result-object v0
+
+    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
+
+    const/high16 v1, 0x41c00000    # 24.0f
+
+    mul-float/2addr v0, v1
+
+    invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
+
+    const/4 v1, 0x0
+
+    iput v1, p0, Ln7g;->a:F
+
+    iput v0, p0, Ln7g;->b:F
+
+    sget-object v0, Lfe3;->t0:Ltea;
+
+    invoke-virtual {v0, p1}, Ltea;->n(Landroid/content/Context;)Lfe3;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lfe3;->j()Llob;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Llob;->i()Lkyc;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lkyc;->c:Ljava/lang/Object;
+
+    check-cast p1, Lvd0;
+
+    iget-object p1, p1, Lvd0;->f:Ljava/lang/Object;
+
+    check-cast p1, [I
+
+    new-instance v0, Legf;
+
+    const/4 v2, 0x3
+
+    invoke-direct {v0, p1, p0, v2}, Legf;-><init>(Ljava/lang/Object;Landroid/graphics/drawable/Drawable;I)V
+
+    iput-object v0, p0, Ln7g;->c:Legf;
+
+    new-instance p1, Landroid/graphics/Paint;
+
+    const/4 v0, 0x1
+
+    invoke-direct {p1, v0}, Landroid/graphics/Paint;-><init>(I)V
+
+    sget-object v0, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
+
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
+
+    invoke-virtual {p1, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
+
+    iput-object p1, p0, Ln7g;->d:Landroid/graphics/Paint;
+
+    new-instance p1, Landroid/graphics/RectF;
+
+    invoke-direct {p1}, Landroid/graphics/RectF;-><init>()V
+
+    iput-object p1, p0, Ln7g;->o:Landroid/graphics/RectF;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final dispatchTouchEvent(Landroid/view/MotionEvent;)Z
-    .locals 0
+.method public final c(Llob;)V
+    .locals 8
 
-    invoke-super {p0, p1}, Landroid/view/View;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
+    new-instance v0, Landroid/graphics/LinearGradient;
 
-    const/4 p1, 0x1
+    iget-object p1, p0, Ln7g;->o:Landroid/graphics/RectF;
 
-    return p1
-.end method
+    iget v1, p1, Landroid/graphics/RectF;->left:F
 
-.method public getOnRequestInterceptTouchEvent()Llq6;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Llq6;"
-        }
-    .end annotation
+    iget v2, p1, Landroid/graphics/RectF;->top:F
 
-    iget-object v0, p0, Ln7g;->a:Lv7g;
+    iget v3, p1, Landroid/graphics/RectF;->right:F
 
-    iget-object v0, v0, Lv7g;->b:Llq6;
+    iget v4, p1, Landroid/graphics/RectF;->bottom:F
 
-    return-object v0
-.end method
+    sget-object p1, Ln7g;->X:[Lv58;
 
-.method public getOnTouch()Lnq6;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lnq6;"
-        }
-    .end annotation
+    const/4 v5, 0x0
 
-    iget-object v0, p0, Ln7g;->a:Lv7g;
+    aget-object p1, p1, v5
 
-    iget-object v0, v0, Lv7g;->a:Lnq6;
+    iget-object p1, p0, Ln7g;->c:Legf;
 
-    return-object v0
-.end method
+    iget-object p1, p1, Ld3;->b:Ljava/lang/Object;
 
-.method public final onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
-    .locals 2
+    move-object v5, p1
 
-    iget-object v0, p0, Ln7g;->a:Lv7g;
+    check-cast v5, [I
 
-    iget-object v0, v0, Lv7g;->a:Lnq6;
+    const/4 v6, 0x0
 
-    const/4 v1, 0x0
+    sget-object v7, Landroid/graphics/Shader$TileMode;->CLAMP:Landroid/graphics/Shader$TileMode;
 
-    if-eqz v0, :cond_0
+    invoke-direct/range {v0 .. v7}, Landroid/graphics/LinearGradient;-><init>(FFFF[I[FLandroid/graphics/Shader$TileMode;)V
 
-    invoke-interface {v0, p1}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object p1, p0, Ln7g;->d:Landroid/graphics/Paint;
 
-    move-result-object v0
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
 
-    check-cast v0, Ljava/lang/Boolean;
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
-
-    goto :goto_0
-
-    :cond_0
-    move v0, v1
-
-    :goto_0
-    if-nez v0, :cond_2
-
-    invoke-super {p0, p1}, Landroid/view/ViewGroup;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    return v1
-
-    :cond_2
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final onTouchEvent(Landroid/view/MotionEvent;)Z
-    .locals 2
-
-    iget-object v0, p0, Ln7g;->a:Lv7g;
-
-    iget-object v0, v0, Lv7g;->a:Lnq6;
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0, p1}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Boolean;
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
-
-    goto :goto_0
-
-    :cond_0
-    move v0, v1
-
-    :goto_0
-    if-nez v0, :cond_2
-
-    invoke-super {p0, p1}, Landroid/view/View;->onTouchEvent(Landroid/view/MotionEvent;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    return v1
-
-    :cond_2
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final requestDisallowInterceptTouchEvent(Z)V
-    .locals 0
-
-    invoke-super {p0, p1}, Landroid/view/ViewGroup;->requestDisallowInterceptTouchEvent(Z)V
-
-    iget-object p1, p0, Ln7g;->a:Lv7g;
-
-    iget-object p1, p1, Lv7g;->b:Llq6;
-
-    if-eqz p1, :cond_0
-
-    invoke-interface {p1}, Llq6;->invoke()Ljava/lang/Object;
-
-    :cond_0
-    return-void
-.end method
-
-.method public setOnRequestInterceptTouchEvent(Llq6;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Llq6;",
-            ")V"
-        }
-    .end annotation
-
-    iget-object v0, p0, Ln7g;->a:Lv7g;
-
-    iput-object p1, v0, Lv7g;->b:Llq6;
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     return-void
 .end method
 
-.method public setOnTouch(Lnq6;)V
+.method public final draw(Landroid/graphics/Canvas;)V
+    .locals 3
+
+    iget v0, p0, Ln7g;->b:F
+
+    iget-object v1, p0, Ln7g;->d:Landroid/graphics/Paint;
+
+    iget-object v2, p0, Ln7g;->o:Landroid/graphics/RectF;
+
+    invoke-virtual {p1, v2, v0, v0, v1}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
+
+    return-void
+.end method
+
+.method public final getOpacity()I
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lnq6;",
-            ")V"
-        }
-    .end annotation
 
-    iget-object v0, p0, Ln7g;->a:Lv7g;
+    const/4 v0, -0x3
 
-    iput-object p1, v0, Lv7g;->a:Lnq6;
+    return v0
+.end method
+
+.method public final onBoundsChange(Landroid/graphics/Rect;)V
+    .locals 12
+
+    invoke-super {p0, p1}, Landroid/graphics/drawable/Drawable;->onBoundsChange(Landroid/graphics/Rect;)V
+
+    iget v0, p0, Ln7g;->a:F
+
+    const/high16 v1, 0x40000000    # 2.0f
+
+    div-float/2addr v0, v1
+
+    iget v1, p1, Landroid/graphics/Rect;->left:I
+
+    int-to-float v1, v1
+
+    add-float/2addr v1, v0
+
+    iget v2, p1, Landroid/graphics/Rect;->top:I
+
+    int-to-float v2, v2
+
+    add-float/2addr v2, v0
+
+    iget v3, p1, Landroid/graphics/Rect;->right:I
+
+    int-to-float v3, v3
+
+    sub-float/2addr v3, v0
+
+    iget p1, p1, Landroid/graphics/Rect;->bottom:I
+
+    int-to-float p1, p1
+
+    sub-float/2addr p1, v0
+
+    iget-object v0, p0, Ln7g;->o:Landroid/graphics/RectF;
+
+    invoke-virtual {v0, v1, v2, v3, p1}, Landroid/graphics/RectF;->set(FFFF)V
+
+    new-instance v4, Landroid/graphics/LinearGradient;
+
+    iget v6, v0, Landroid/graphics/RectF;->top:F
+
+    iget v8, v0, Landroid/graphics/RectF;->bottom:F
+
+    sget-object p1, Ln7g;->X:[Lv58;
+
+    const/4 v0, 0x0
+
+    aget-object p1, p1, v0
+
+    iget-object p1, p0, Ln7g;->c:Legf;
+
+    iget-object p1, p1, Ld3;->b:Ljava/lang/Object;
+
+    move-object v9, p1
+
+    check-cast v9, [I
+
+    const/4 v10, 0x0
+
+    sget-object v11, Landroid/graphics/Shader$TileMode;->CLAMP:Landroid/graphics/Shader$TileMode;
+
+    const/4 v5, 0x0
+
+    const/4 v7, 0x0
+
+    invoke-direct/range {v4 .. v11}, Landroid/graphics/LinearGradient;-><init>(FFFF[I[FLandroid/graphics/Shader$TileMode;)V
+
+    iget-object p1, p0, Ln7g;->d:Landroid/graphics/Paint;
+
+    invoke-virtual {p1, v4}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
+
+    return-void
+.end method
+
+.method public final setAlpha(I)V
+    .locals 1
+
+    iget-object v0, p0, Ln7g;->d:Landroid/graphics/Paint;
+
+    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setAlpha(I)V
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+
+    return-void
+.end method
+
+.method public final setColorFilter(Landroid/graphics/ColorFilter;)V
+    .locals 1
+
+    iget-object v0, p0, Ln7g;->d:Landroid/graphics/Paint;
+
+    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColorFilter(Landroid/graphics/ColorFilter;)Landroid/graphics/ColorFilter;
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     return-void
 .end method

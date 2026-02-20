@@ -1,464 +1,273 @@
-.class public final Lr0;
-.super Ljava/lang/Object;
+.class public abstract Lr0;
+.super Ljava/util/concurrent/atomic/AtomicReference;
 .source "SourceFile"
 
 # interfaces
-.implements Ll94;
+.implements Ly35;
+
+
+# static fields
+.field public static final d:Ljava/util/concurrent/FutureTask;
+
+.field public static final o:Ljava/util/concurrent/FutureTask;
 
 
 # instance fields
-.field public final a:Ljava/util/ArrayList;
+.field public final a:Ljava/lang/Runnable;
+
+.field public final b:Z
+
+.field public c:Ljava/lang/Thread;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ljava/util/concurrent/FutureTask;
 
-    new-instance v0, Ljava/util/ArrayList;
+    sget-object v1, Lq4h;->b:Lr7;
 
-    const/4 v1, 0x2
+    const/4 v2, 0x0
 
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
+    invoke-direct {v0, v1, v2}, Ljava/util/concurrent/FutureTask;-><init>(Ljava/lang/Runnable;Ljava/lang/Object;)V
 
-    iput-object v0, p0, Lr0;->a:Ljava/util/ArrayList;
+    sput-object v0, Lr0;->d:Ljava/util/concurrent/FutureTask;
+
+    new-instance v0, Ljava/util/concurrent/FutureTask;
+
+    invoke-direct {v0, v1, v2}, Ljava/util/concurrent/FutureTask;-><init>(Ljava/lang/Runnable;Ljava/lang/Object;)V
+
+    sput-object v0, Lr0;->o:Ljava/util/concurrent/FutureTask;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/Runnable;Z)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+
+    iput-object p1, p0, Lr0;->a:Ljava/lang/Runnable;
+
+    iput-boolean p2, p0, Lr0;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final declared-synchronized a(Ll94;)V
-    .locals 1
+.method public final a(Ljava/util/concurrent/Future;)V
+    .locals 2
 
-    monitor-enter p0
+    :cond_0
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-    :try_start_0
-    iget-object v0, p0, Lr0;->a:Ljava/util/ArrayList;
+    move-result-object v0
 
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    check-cast v0, Ljava/util/concurrent/Future;
 
-    monitor-exit p0
+    sget-object v1, Lr0;->d:Ljava/util/concurrent/FutureTask;
 
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
-.end method
-
-.method public final declared-synchronized b(Ljava/lang/String;Ljava/lang/Object;Landroid/graphics/drawable/Animatable;)V
-    .locals 4
-
-    monitor-enter p0
-
-    :try_start_0
-    iget-object v0, p0, Lr0;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    const/4 v1, 0x0
-
-    :goto_0
-    if-ge v1, v0, :cond_1
-
-    :try_start_1
-    iget-object v2, p0, Lr0;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ll94;
-
-    if-eqz v2, :cond_0
-
-    invoke-interface {v2, p1, p2, p3}, Ll94;->b(Ljava/lang/String;Ljava/lang/Object;Landroid/graphics/drawable/Animatable;)V
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    if-ne v0, v1, :cond_1
 
     goto :goto_1
 
-    :catchall_0
-    move-exception p1
+    :cond_1
+    sget-object v1, Lr0;->o:Ljava/util/concurrent/FutureTask;
 
-    goto :goto_2
+    if-ne v0, v1, :cond_3
 
-    :catch_0
-    move-exception v2
+    iget-object v0, p0, Lr0;->c:Ljava/lang/Thread;
 
-    :try_start_2
-    const-string v3, "InternalListener exception in onFinalImageSet"
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
-    invoke-virtual {p0, v2, v3}, Lr0;->c(Ljava/lang/Exception;Ljava/lang/String;)V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    move-result-object v1
 
-    :cond_0
-    :goto_1
-    add-int/lit8 v1, v1, 0x1
+    if-ne v0, v1, :cond_2
+
+    const/4 v0, 0x0
+
+    invoke-interface {p1, v0}, Ljava/util/concurrent/Future;->cancel(Z)Z
 
     goto :goto_0
 
-    :cond_1
-    monitor-exit p0
+    :cond_2
+    iget-boolean v0, p0, Lr0;->b:Z
 
-    return-void
-
-    :goto_2
-    :try_start_3
-    monitor-exit p0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    throw p1
-.end method
-
-.method public final declared-synchronized c(Ljava/lang/Exception;Ljava/lang/String;)V
-    .locals 1
-
-    monitor-enter p0
-
-    :try_start_0
-    const-string v0, "FdingControllerListener"
-
-    invoke-static {v0, p2, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p0
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
-.end method
-
-.method public final declared-synchronized d(Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 4
-
-    monitor-enter p0
-
-    :try_start_0
-    iget-object v0, p0, Lr0;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    const/4 v1, 0x0
+    invoke-interface {p1, v0}, Ljava/util/concurrent/Future;->cancel(Z)Z
 
     :goto_0
-    if-ge v1, v0, :cond_1
-
-    :try_start_1
-    iget-object v2, p0, Lr0;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ll94;
-
-    if-eqz v2, :cond_0
-
-    invoke-interface {v2, p1, p2}, Ll94;->d(Ljava/lang/String;Ljava/lang/Throwable;)V
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    goto :goto_1
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_2
-
-    :catch_0
-    move-exception v2
-
-    :try_start_2
-    const-string v3, "InternalListener exception in onFailure"
-
-    invoke-virtual {p0, v2, v3}, Lr0;->c(Ljava/lang/Exception;Ljava/lang/String;)V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    :cond_0
-    :goto_1
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    monitor-exit p0
-
     return-void
 
-    :goto_2
-    :try_start_3
-    monitor-exit p0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    throw p1
-.end method
-
-.method public final declared-synchronized e(Ljava/lang/String;)V
-    .locals 4
-
-    monitor-enter p0
-
-    :try_start_0
-    iget-object v0, p0, Lr0;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+    :cond_3
+    invoke-virtual {p0, v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    const/4 v1, 0x0
+    if-eqz v0, :cond_0
 
-    :goto_0
-    if-ge v1, v0, :cond_1
-
-    :try_start_1
-    iget-object v2, p0, Lr0;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ll94;
-
-    if-eqz v2, :cond_0
-
-    invoke-interface {v2, p1}, Ll94;->e(Ljava/lang/String;)V
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    goto :goto_1
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_2
-
-    :catch_0
-    move-exception v2
-
-    :try_start_2
-    const-string v3, "InternalListener exception in onRelease"
-
-    invoke-virtual {p0, v2, v3}, Lr0;->c(Ljava/lang/Exception;Ljava/lang/String;)V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    :cond_0
     :goto_1
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    monitor-exit p0
-
     return-void
-
-    :goto_2
-    :try_start_3
-    monitor-exit p0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    throw p1
 .end method
 
-.method public final declared-synchronized g(Ljava/lang/String;)V
-    .locals 4
+.method public final dispose()V
+    .locals 3
 
-    monitor-enter p0
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-    :try_start_0
-    iget-object v0, p0, Lr0;->a:Ljava/util/ArrayList;
+    move-result-object v0
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+    check-cast v0, Ljava/util/concurrent/Future;
 
-    move-result v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    sget-object v1, Lr0;->d:Ljava/util/concurrent/FutureTask;
 
-    const/4 v1, 0x0
+    if-eq v0, v1, :cond_1
 
-    :goto_0
-    if-ge v1, v0, :cond_1
+    sget-object v1, Lr0;->o:Ljava/util/concurrent/FutureTask;
 
-    :try_start_1
-    iget-object v2, p0, Lr0;->a:Ljava/util/ArrayList;
+    if-eq v0, v1, :cond_1
 
-    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ll94;
-
-    if-eqz v2, :cond_0
-
-    invoke-interface {v2, p1}, Ll94;->g(Ljava/lang/String;)V
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    goto :goto_1
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_2
-
-    :catch_0
-    move-exception v2
-
-    :try_start_2
-    const-string v3, "InternalListener exception in onSubmit"
-
-    invoke-virtual {p0, v2, v3}, Lr0;->c(Ljava/lang/Exception;Ljava/lang/String;)V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    :cond_0
-    :goto_1
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    monitor-exit p0
-
-    return-void
-
-    :goto_2
-    :try_start_3
-    monitor-exit p0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    throw p1
-.end method
-
-.method public final j(Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 5
-
-    iget-object v0, p0, Lr0;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+    invoke-virtual {p0, v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
-    const/4 v2, 0x0
+    if-eqz v1, :cond_1
 
-    :goto_0
-    if-ge v2, v1, :cond_1
+    if-eqz v0, :cond_1
 
-    :try_start_0
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    iget-object v1, p0, Lr0;->c:Ljava/lang/Thread;
 
-    move-result-object v3
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
-    check-cast v3, Ll94;
+    move-result-object v2
 
-    if-eqz v3, :cond_0
+    if-ne v1, v2, :cond_0
 
-    invoke-interface {v3, p1, p2}, Ll94;->j(Ljava/lang/String;Ljava/lang/Throwable;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    const/4 v1, 0x0
 
-    goto :goto_1
+    invoke-interface {v0, v1}, Ljava/util/concurrent/Future;->cancel(Z)Z
 
-    :catch_0
-    move-exception v3
-
-    const-string v4, "InternalListener exception in onIntermediateImageFailed"
-
-    invoke-virtual {p0, v3, v4}, Lr0;->c(Ljava/lang/Exception;Ljava/lang/String;)V
+    return-void
 
     :cond_0
-    :goto_1
-    add-int/lit8 v2, v2, 0x1
+    iget-boolean v1, p0, Lr0;->b:Z
 
-    goto :goto_0
+    invoke-interface {v0, v1}, Ljava/util/concurrent/Future;->cancel(Z)Z
 
     :cond_1
     return-void
 .end method
 
-.method public final onIntermediateImageSet(Ljava/lang/String;Ljava/lang/Object;)V
-    .locals 5
+.method public final f()Z
+    .locals 2
 
-    iget-object v0, p0, Lr0;->a:Ljava/util/ArrayList;
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+    move-result-object v0
 
-    move-result v1
+    check-cast v0, Ljava/util/concurrent/Future;
 
-    const/4 v2, 0x0
+    sget-object v1, Lr0;->d:Ljava/util/concurrent/FutureTask;
 
-    :goto_0
-    if-ge v2, v1, :cond_1
+    if-eq v0, v1, :cond_1
 
-    :try_start_0
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    sget-object v1, Lr0;->o:Ljava/util/concurrent/FutureTask;
 
-    move-result-object v3
+    if-ne v0, v1, :cond_0
 
-    check-cast v3, Ll94;
-
-    if-eqz v3, :cond_0
-
-    invoke-interface {v3, p1, p2}, Ll94;->onIntermediateImageSet(Ljava/lang/String;Ljava/lang/Object;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_1
-
-    :catch_0
-    move-exception v3
-
-    const-string v4, "InternalListener exception in onIntermediateImageSet"
-
-    invoke-virtual {p0, v3, v4}, Lr0;->c(Ljava/lang/Exception;Ljava/lang/String;)V
+    goto :goto_0
 
     :cond_0
-    :goto_1
-    add-int/lit8 v2, v2, 0x1
+    const/4 v0, 0x0
+
+    return v0
+
+    :cond_1
+    :goto_0
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/concurrent/Future;
+
+    sget-object v1, Lr0;->d:Ljava/util/concurrent/FutureTask;
+
+    if-ne v0, v1, :cond_0
+
+    const-string v0, "Finished"
+
+    goto :goto_0
+
+    :cond_0
+    sget-object v1, Lr0;->o:Ljava/util/concurrent/FutureTask;
+
+    if-ne v0, v1, :cond_1
+
+    const-string v0, "Disposed"
 
     goto :goto_0
 
     :cond_1
-    return-void
+    iget-object v0, p0, Lr0;->c:Ljava/lang/Thread;
+
+    if-eqz v0, :cond_2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Running on "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lr0;->c:Ljava/lang/Thread;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_2
+    const-string v0, "Waiting"
+
+    :goto_0
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, "["
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, "]"
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

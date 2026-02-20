@@ -23,7 +23,7 @@
         "",
         "w",
         "h",
-        "Lb3h;",
+        "Lmah;",
         "onTextureSizeChanged",
         "(II)V",
         "onFrameSizeChanged",

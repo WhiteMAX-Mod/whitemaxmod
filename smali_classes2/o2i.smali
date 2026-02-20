@@ -1,65 +1,128 @@
-.class public final Lo2i;
-.super Ls2i;
+.class public final synthetic Lo2i;
+.super Lnt6;
 .source "SourceFile"
 
+# interfaces
+.implements Lis6;
 
-# static fields
-.field public static final c:Lo2i;
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Landroid/view/View;
+
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Landroid/view/ViewTreeObserver;Landroid/view/View;Lp2i;)V
+    .locals 8
 
-    new-instance v0, Lo2i;
+    const/4 v0, 0x0
 
-    const-string v1, "permission_denied"
+    iput v0, p0, Lo2i;->a:I
 
-    const/4 v2, 0x2
+    iput-object p1, p0, Lo2i;->c:Ljava/lang/Object;
 
-    invoke-direct {v0, v1, v2}, Ls2i;-><init>(Ljava/lang/String;I)V
+    iput-object p2, p0, Lo2i;->b:Landroid/view/View;
 
-    sput-object v0, Lo2i;->c:Lo2i;
+    const-string v7, "doOnGlobalLayout$dispose(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;Landroid/view/ViewTreeObserver;Landroid/view/View;)V"
+
+    const/4 v3, 0x0
+
+    const/4 v2, 0x0
+
+    .line 2
+    const-class v4, Ltu7;
+
+    const-string v6, "dispose"
+
+    move-object v1, p0
+
+    move-object v5, p3
+
+    invoke-direct/range {v1 .. v7}, Lmt6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Lf3i;Landroid/view/View;Landroid/view/ViewTreeObserver;)V
+    .locals 8
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Lo2i;->a:I
+
+    iput-object p1, p0, Lo2i;->c:Ljava/lang/Object;
+
+    iput-object p2, p0, Lo2i;->b:Landroid/view/View;
+
+    const-string v7, "attach$dispose(Landroid/view/ViewTreeObserver;Lone/me/sdk/contextmenu/helper/ViewWatcher$attach$listener$1;Landroid/view/View;)V"
+
+    const/4 v3, 0x0
+
+    const/4 v2, 0x0
+
+    .line 1
+    const-class v4, Ltu7;
+
+    const-string v6, "dispose"
+
+    move-object v1, p0
+
+    move-object v5, p3
+
+    invoke-direct/range {v1 .. v7}, Lmt6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 3
 
-    const/4 v0, 0x1
+    iget v0, p0, Lo2i;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    iget-object v0, p0, Lnx1;->receiver:Ljava/lang/Object;
 
-    :cond_0
-    instance-of p1, p1, Lo2i;
+    check-cast v0, Landroid/view/ViewTreeObserver;
 
-    if-nez p1, :cond_1
+    iget-object v1, p0, Lo2i;->c:Ljava/lang/Object;
 
-    const/4 p1, 0x0
+    check-cast v1, Lf3i;
 
-    return p1
+    iget-object v2, p0, Lo2i;->b:Landroid/view/View;
 
-    :cond_1
-    return v0
-.end method
+    invoke-static {v1, v2, v0}, Lh00;->b(Lf3i;Landroid/view/View;Landroid/view/ViewTreeObserver;)V
 
-.method public final hashCode()I
-    .locals 1
-
-    const v0, -0x5a2e4a44
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "CameraPermissionDeny"
+    sget-object v0, Lmah;->a:Lmah;
 
     return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Lnx1;->receiver:Ljava/lang/Object;
+
+    check-cast v0, Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
+
+    iget-object v1, p0, Lo2i;->c:Ljava/lang/Object;
+
+    check-cast v1, Landroid/view/ViewTreeObserver;
+
+    iget-object v2, p0, Lo2i;->b:Landroid/view/View;
+
+    invoke-static {v0, v1, v2}, Lq2i;->a(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;Landroid/view/ViewTreeObserver;Landroid/view/View;)V
+
+    sget-object v0, Lmah;->a:Lmah;
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

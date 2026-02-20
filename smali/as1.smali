@@ -1,63 +1,92 @@
-.class public final Las1;
-.super Lie0;
+.class public final synthetic Las1;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
-# static fields
-.field public static final b:Las1;
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lcs1;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Lcs1;I)V
+    .locals 0
 
-    new-instance v0, Las1;
+    iput p2, p0, Las1;->a:I
 
-    sget-object v1, Lb3h;->a:Lb3h;
+    iput-object p1, p0, Las1;->b:Lcs1;
 
-    invoke-direct {v0, v1}, Lhja;-><init>(Ljava/lang/Object;)V
-
-    sput-object v0, Las1;->b:Las1;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final onClick(Landroid/view/View;)V
+    .locals 0
 
-    const/4 v0, 0x1
+    iget p1, p0, Las1;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch p1, :pswitch_data_0
 
-    return v0
+    iget-object p1, p0, Las1;->b:Lcs1;
+
+    iget-object p1, p1, Lcs1;->F0:Lbs1;
+
+    if-eqz p1, :cond_0
+
+    invoke-interface {p1}, Lbs1;->f()V
 
     :cond_0
-    instance-of p1, p1, Las1;
+    return-void
 
-    if-nez p1, :cond_1
+    :pswitch_0
+    iget-object p1, p0, Las1;->b:Lcs1;
 
-    const/4 p1, 0x0
+    iget-object p1, p1, Lcs1;->F0:Lbs1;
 
-    return p1
+    if-eqz p1, :cond_1
+
+    invoke-interface {p1}, Lbs1;->b()V
 
     :cond_1
-    return v0
-.end method
+    return-void
 
-.method public final hashCode()I
-    .locals 1
+    :pswitch_1
+    iget-object p1, p0, Las1;->b:Lcs1;
 
-    const v0, -0x34cc058a    # -1.1795062E7f
+    iget-object p1, p1, Lcs1;->F0:Lbs1;
 
-    return v0
-.end method
+    if-eqz p1, :cond_2
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    invoke-interface {p1}, Lbs1;->c()V
 
-    const-string v0, "ShowCreateP2PLinkCallErrorBanner"
+    :cond_2
+    return-void
 
-    return-object v0
+    :pswitch_2
+    iget-object p1, p0, Las1;->b:Lcs1;
+
+    iget-object p1, p1, Lcs1;->F0:Lbs1;
+
+    if-eqz p1, :cond_3
+
+    invoke-interface {p1}, Lbs1;->d()V
+
+    :cond_3
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

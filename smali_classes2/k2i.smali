@@ -1,181 +1,132 @@
-.class public final synthetic Lk2i;
-.super Ljava/lang/Object;
+.class public final Lk2i;
+.super Lpdg;
 .source "SourceFile"
 
 # interfaces
-.implements Liv6;
+.implements Lys6;
 
 
-# static fields
-.field public static final a:Lk2i;
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
 
-.field private static final descriptor:Lxpe;
+.field public final synthetic Y:Lpdg;
+
+.field public final synthetic Z:Landroid/view/View;
+
+.field public o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Lat6;Landroid/view/View;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Lk2i;
+    check-cast p1, Lpdg;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lk2i;->Y:Lpdg;
 
-    sput-object v0, Lk2i;->a:Lk2i;
+    iput-object p2, p0, Lk2i;->Z:Landroid/view/View;
 
-    new-instance v1, Lgdc;
+    const/4 p1, 0x2
 
-    const-string v2, "one.me.webapp.domain.jsbridge.delegates.brightness.WebAppChangeScreenBrightness"
-
-    const/4 v3, 0x2
-
-    invoke-direct {v1, v2, v0, v3}, Lgdc;-><init>(Ljava/lang/String;Liv6;I)V
-
-    const-string v0, "requestId"
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v0, v2}, Lgdc;->k(Ljava/lang/String;Z)V
-
-    const-string v0, "maxBrightness"
-
-    invoke-virtual {v1, v0, v2}, Lgdc;->k(Ljava/lang/String;Z)V
-
-    sput-object v1, Lk2i;->descriptor:Lxpe;
+    invoke-direct {p0, p1, p3}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lkotlinx/serialization/json/internal/b;Ljava/lang/Object;)V
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    check-cast p2, Lm2i;
+    check-cast p1, Llob;
 
-    sget-object v0, Lk2i;->descriptor:Lxpe;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {p1, v0}, Lkotlinx/serialization/json/internal/b;->a(Lxpe;)Lkotlinx/serialization/json/internal/b;
-
-    move-result-object p1
-
-    iget-object v1, p2, Lm2i;->a:Ljava/lang/String;
-
-    const/4 v2, 0x0
-
-    invoke-virtual {p1, v0, v2, v1}, Lkotlinx/serialization/json/internal/b;->s(Lxpe;ILjava/lang/String;)V
-
-    const/4 v1, 0x1
-
-    iget-boolean p2, p2, Lm2i;->b:Z
-
-    invoke-virtual {p1, v0, v1, p2}, Lkotlinx/serialization/json/internal/b;->c(Lxpe;IZ)V
-
-    invoke-virtual {p1}, Lkotlinx/serialization/json/internal/b;->t()V
-
-    return-void
-.end method
-
-.method public final b(Lkl4;)Ljava/lang/Object;
-    .locals 9
-
-    sget-object v0, Lk2i;->descriptor:Lxpe;
-
-    invoke-interface {p1, v0}, Lkl4;->r(Lxpe;)Lqp3;
+    invoke-virtual {p0, p1, p2}, Lk2i;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    const/4 v1, 0x1
+    check-cast p1, Lk2i;
 
-    const/4 v2, 0x0
+    sget-object p2, Lmah;->a:Lmah;
 
-    const/4 v3, 0x0
+    invoke-virtual {p1, p2}, Lk2i;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move v4, v1
-
-    move v5, v2
-
-    move v6, v5
-
-    :goto_0
-    if-eqz v4, :cond_3
-
-    invoke-interface {p1, v0}, Lqp3;->e(Lxpe;)I
-
-    move-result v7
-
-    const/4 v8, -0x1
-
-    if-eq v7, v8, :cond_2
-
-    if-eqz v7, :cond_1
-
-    if-ne v7, v1, :cond_0
-
-    invoke-interface {p1, v0, v1}, Lqp3;->y(Lxpe;I)Z
-
-    move-result v6
-
-    or-int/lit8 v5, v5, 0x2
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Lkotlinx/serialization/UnknownFieldException;
-
-    invoke-direct {p1, v7}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
-
-    throw p1
-
-    :cond_1
-    invoke-interface {p1, v0, v2}, Lqp3;->j(Lxpe;I)Ljava/lang/String;
-
-    move-result-object v3
-
-    or-int/lit8 v5, v5, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    move v4, v2
-
-    goto :goto_0
-
-    :cond_3
-    invoke-interface {p1, v0}, Lqp3;->m(Lxpe;)V
-
-    new-instance p1, Lm2i;
-
-    invoke-direct {p1, v3, v5, v6}, Lm2i;-><init>(Ljava/lang/String;IZ)V
+    move-result-object p1
 
     return-object p1
 .end method
 
-.method public final c()[La38;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 3
 
-    const/4 v0, 0x2
+    new-instance v0, Lk2i;
 
-    new-array v0, v0, [La38;
+    iget-object v1, p0, Lk2i;->Y:Lpdg;
 
-    sget-object v1, Lnzf;->a:Lnzf;
+    iget-object v2, p0, Lk2i;->Z:Landroid/view/View;
 
-    const/4 v2, 0x0
+    invoke-direct {v0, v1, v2, p2}, Lk2i;-><init>(Lat6;Landroid/view/View;Lkotlin/coroutines/Continuation;)V
 
-    aput-object v1, v0, v2
-
-    sget-object v1, Lss0;->a:Lss0;
-
-    const/4 v2, 0x1
-
-    aput-object v1, v0, v2
+    iput-object p1, v0, Lk2i;->X:Ljava/lang/Object;
 
     return-object v0
 .end method
 
-.method public final d()Lxpe;
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    sget-object v0, Lk2i;->descriptor:Lxpe;
+    iget-object v0, p0, Lk2i;->X:Ljava/lang/Object;
+
+    check-cast v0, Llob;
+
+    iget v1, p0, Lk2i;->o:I
+
+    const/4 v2, 0x1
+
+    if-eqz v1, :cond_1
+
+    if-ne v1, v2, :cond_0
+
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    const/4 p1, 0x0
+
+    iput-object p1, p0, Lk2i;->X:Ljava/lang/Object;
+
+    iput v2, p0, Lk2i;->o:I
+
+    iget-object p1, p0, Lk2i;->Y:Lpdg;
+
+    iget-object v1, p0, Lk2i;->Z:Landroid/view/View;
+
+    invoke-interface {p1, v1, v0, p0}, Lat6;->invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lod4;->a:Lod4;
+
+    if-ne p1, v0, :cond_2
 
     return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
 .end method

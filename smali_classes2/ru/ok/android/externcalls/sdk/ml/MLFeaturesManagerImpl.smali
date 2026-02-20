@@ -14,7 +14,7 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/ml/MLFeaturesManagerImpl;",
         "Lru/ok/android/externcalls/sdk/ml/MLFeaturesManager;",
-        "Ljp8;",
+        "Las8;",
         "mlFeaturesInfoDataSource",
         "Lru/ok/android/externcalls/sdk/net/DownloadService;",
         "downloadService",
@@ -22,31 +22,31 @@
         "context",
         "Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManager;",
         "keywordSpotterManager",
-        "Lahd;",
+        "Ltmd;",
         "logger",
         "Lru/ok/android/externcalls/sdk/api/RemoteSettings;",
         "settings",
         "Lru/ok/android/externcalls/sdk/stat/ConversationStats;",
         "conversationStats",
         "<init>",
-        "(Ljp8;Lru/ok/android/externcalls/sdk/net/DownloadService;Landroid/content/Context;Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManager;Lahd;Lru/ok/android/externcalls/sdk/api/RemoteSettings;Lru/ok/android/externcalls/sdk/stat/ConversationStats;)V",
+        "(Las8;Lru/ok/android/externcalls/sdk/net/DownloadService;Landroid/content/Context;Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManager;Ltmd;Lru/ok/android/externcalls/sdk/api/RemoteSettings;Lru/ok/android/externcalls/sdk/stat/ConversationStats;)V",
         "Ljava/io/File;",
         "file",
-        "Lb3h;",
+        "Lmah;",
         "setKwsParams",
         "(Ljava/io/File;)V",
         "start",
         "()V",
         "dispose",
-        "Ljp8;",
+        "Las8;",
         "Lru/ok/android/externcalls/sdk/net/DownloadService;",
         "Landroid/content/Context;",
         "Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManager;",
-        "Lahd;",
+        "Ltmd;",
         "Lru/ok/android/externcalls/sdk/stat/ConversationStats;",
-        "Lrp3;",
+        "Ljq3;",
         "disposables",
-        "Lrp3;",
+        "Ljq3;",
         "Lru/ok/android/externcalls/sdk/ml/config/KwsFeaturesConfigProviderImpl;",
         "kwsConfigProvider",
         "Lru/ok/android/externcalls/sdk/ml/config/KwsFeaturesConfigProviderImpl;",
@@ -83,7 +83,7 @@
     .end annotation
 .end field
 
-.field private final disposables:Lrp3;
+.field private final disposables:Ljq3;
 
 .field private final downloadService:Lru/ok/android/externcalls/sdk/net/DownloadService;
 
@@ -93,18 +93,18 @@
 
 .field private final kwsFeatureDelegate:Lru/ok/android/externcalls/sdk/ml/delegate/KwsFeatureDelegate;
 
-.field private final logger:Lahd;
+.field private final logger:Ltmd;
 
-.field private final mlFeaturesInfoDataSource:Ljp8;
+.field private final mlFeaturesInfoDataSource:Las8;
 
 
 # direct methods
-.method public constructor <init>(Ljp8;Lru/ok/android/externcalls/sdk/net/DownloadService;Landroid/content/Context;Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManager;Lahd;Lru/ok/android/externcalls/sdk/api/RemoteSettings;Lru/ok/android/externcalls/sdk/stat/ConversationStats;)V
+.method public constructor <init>(Las8;Lru/ok/android/externcalls/sdk/net/DownloadService;Landroid/content/Context;Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManager;Ltmd;Lru/ok/android/externcalls/sdk/api/RemoteSettings;Lru/ok/android/externcalls/sdk/stat/ConversationStats;)V
     .locals 7
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/ml/MLFeaturesManagerImpl;->mlFeaturesInfoDataSource:Ljp8;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/ml/MLFeaturesManagerImpl;->mlFeaturesInfoDataSource:Las8;
 
     iput-object p2, p0, Lru/ok/android/externcalls/sdk/ml/MLFeaturesManagerImpl;->downloadService:Lru/ok/android/externcalls/sdk/net/DownloadService;
 
@@ -112,15 +112,15 @@
 
     iput-object p4, p0, Lru/ok/android/externcalls/sdk/ml/MLFeaturesManagerImpl;->keywordSpotterManager:Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManager;
 
-    iput-object p5, p0, Lru/ok/android/externcalls/sdk/ml/MLFeaturesManagerImpl;->logger:Lahd;
+    iput-object p5, p0, Lru/ok/android/externcalls/sdk/ml/MLFeaturesManagerImpl;->logger:Ltmd;
 
     iput-object p7, p0, Lru/ok/android/externcalls/sdk/ml/MLFeaturesManagerImpl;->conversationStats:Lru/ok/android/externcalls/sdk/stat/ConversationStats;
 
-    new-instance p4, Lrp3;
+    new-instance p4, Ljq3;
 
     invoke-direct {p4}, Ljava/lang/Object;-><init>()V
 
-    iput-object p4, p0, Lru/ok/android/externcalls/sdk/ml/MLFeaturesManagerImpl;->disposables:Lrp3;
+    iput-object p4, p0, Lru/ok/android/externcalls/sdk/ml/MLFeaturesManagerImpl;->disposables:Ljq3;
 
     new-instance v2, Lru/ok/android/externcalls/sdk/ml/config/KwsFeaturesConfigProviderImpl;
 
@@ -142,7 +142,7 @@
 
     move-result-object p4
 
-    invoke-direct {v2, p6, p5, p4}, Lru/ok/android/externcalls/sdk/ml/config/KwsFeaturesConfigProviderImpl;-><init>(Lru/ok/android/externcalls/sdk/api/RemoteSettings;Lahd;Ljava/lang/String;)V
+    invoke-direct {v2, p6, p5, p4}, Lru/ok/android/externcalls/sdk/ml/config/KwsFeaturesConfigProviderImpl;-><init>(Lru/ok/android/externcalls/sdk/api/RemoteSettings;Ltmd;Ljava/lang/String;)V
 
     iput-object v2, p0, Lru/ok/android/externcalls/sdk/ml/MLFeaturesManagerImpl;->kwsConfigProvider:Lru/ok/android/externcalls/sdk/ml/config/KwsFeaturesConfigProviderImpl;
 
@@ -158,7 +158,7 @@
 
     move-object v6, p5
 
-    invoke-direct/range {v0 .. v6}, Lru/ok/android/externcalls/sdk/ml/delegate/KwsFeatureDelegate;-><init>(Ljp8;Lru/ok/android/externcalls/sdk/ml/config/MLFeaturesConfigProvider;Lru/ok/android/externcalls/sdk/net/DownloadService;Lru/ok/android/externcalls/sdk/stat/mldownload/MLDownloadStat;Landroid/content/Context;Lahd;)V
+    invoke-direct/range {v0 .. v6}, Lru/ok/android/externcalls/sdk/ml/delegate/KwsFeatureDelegate;-><init>(Las8;Lru/ok/android/externcalls/sdk/ml/config/MLFeaturesConfigProvider;Lru/ok/android/externcalls/sdk/net/DownloadService;Lru/ok/android/externcalls/sdk/stat/mldownload/MLDownloadStat;Landroid/content/Context;Ltmd;)V
 
     iput-object v0, p0, Lru/ok/android/externcalls/sdk/ml/MLFeaturesManagerImpl;->kwsFeatureDelegate:Lru/ok/android/externcalls/sdk/ml/delegate/KwsFeatureDelegate;
 
@@ -228,9 +228,9 @@
 .method public dispose()V
     .locals 2
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ml/MLFeaturesManagerImpl;->disposables:Lrp3;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ml/MLFeaturesManagerImpl;->disposables:Ljq3;
 
-    invoke-virtual {v0}, Lrp3;->dispose()V
+    invoke-virtual {v0}, Ljq3;->dispose()V
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/ml/MLFeaturesManagerImpl;->delegates:Ljava/util/List;
 
@@ -264,7 +264,7 @@
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/ml/MLFeaturesManagerImpl;->kwsFeatureDelegate:Lru/ok/android/externcalls/sdk/ml/delegate/KwsFeatureDelegate;
 
-    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate;->checkModel()Lkef;
+    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate;->checkModel()Limf;
 
     move-result-object v0
 
@@ -276,13 +276,13 @@
 
     invoke-direct {v2, p0}, Lru/ok/android/externcalls/sdk/ml/MLFeaturesManagerImpl$start$2;-><init>(Lru/ok/android/externcalls/sdk/ml/MLFeaturesManagerImpl;)V
 
-    invoke-virtual {v0, v1, v2}, Lkef;->k(Lay3;Lay3;)Lnw1;
+    invoke-virtual {v0, v1, v2}, Limf;->l(Lsy3;Lsy3;)Lqx1;
 
     move-result-object v0
 
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/ml/MLFeaturesManagerImpl;->disposables:Lrp3;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/ml/MLFeaturesManagerImpl;->disposables:Ljq3;
 
-    invoke-virtual {v1, v0}, Lrp3;->a(Lo25;)Z
+    invoke-virtual {v1, v0}, Ljq3;->a(Ly35;)Z
 
     return-void
 .end method

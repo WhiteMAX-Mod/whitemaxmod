@@ -1,6 +1,6 @@
 .class public abstract Lrhd;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
-# interfaces
-.implements Ljava/io/Serializable;
+
+# static fields
+.field public static call_history_item_call_count_users:I = 0x7f110005

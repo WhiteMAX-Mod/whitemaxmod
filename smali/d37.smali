@@ -1,354 +1,174 @@
 .class public final Ld37;
-.super Lqgi;
+.super Lv1i;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:Ljava/lang/ref/WeakReference;
+
+.field public b:I
+
+.field public c:I
+
+
+# direct methods
+.method public constructor <init>(Li37;)V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Ljava/lang/ref/WeakReference;
+
+    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object v0, p0, Ld37;->a:Ljava/lang/ref/WeakReference;
+
+    const/4 p1, 0x0
+
+    iput p1, p0, Ld37;->b:I
+
+    iput p1, p0, Ld37;->c:I
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public final a(Lrx4;)V
+.method public final e(I)V
+    .locals 1
+
+    iget v0, p0, Ld37;->c:I
+
+    iput v0, p0, Ld37;->b:I
+
+    iput p1, p0, Ld37;->c:I
+
+    return-void
+.end method
+
+.method public final f(IFI)V
     .locals 2
 
-    iget-object p1, p0, Lqgi;->h:Lvx4;
+    iget-object p3, p0, Ld37;->a:Ljava/lang/ref/WeakReference;
 
-    iget-boolean v0, p1, Lvx4;->c:Z
+    invoke-virtual {p3}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
-    if-nez v0, :cond_0
+    move-result-object p3
 
-    goto :goto_0
+    check-cast p3, Li37;
 
-    :cond_0
-    iget-boolean v0, p1, Lvx4;->j:Z
+    if-eqz p3, :cond_0
 
-    if-eqz v0, :cond_1
+    :try_start_0
+    iget-object v0, p3, Li37;->c:Lh37;
 
-    :goto_0
+    iget v0, v0, Lh37;->a:I
+
+    invoke-static {v0, p1}, Li37;->a(II)V
+
+    invoke-virtual {p3, p1, p2}, Li37;->c(IF)V
+    :try_end_0
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
+
     return-void
 
-    :cond_1
-    iget-object v0, p1, Lvx4;->l:Ljava/util/ArrayList;
+    :catch_0
+    move-exception p1
 
-    const/4 v1, 0x0
+    const-class p2, Ld37;
 
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-virtual {p2}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object p3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "updatePagesNumber error: "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p3
+
+    invoke-static {p2, p3, p1}, Ltej;->r(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final g(I)V
+    .locals 4
+
+    iget-object v0, p0, Ld37;->a:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lvx4;
+    check-cast v0, Li37;
 
-    iget-object v1, p0, Lqgi;->b:Lsx3;
+    :try_start_0
+    iget v1, p0, Ld37;->c:I
 
-    check-cast v1, Lc37;
+    if-eqz v1, :cond_0
 
-    iget v0, v0, Lvx4;->g:I
+    const/4 v2, 0x2
 
-    int-to-float v0, v0
+    if-ne v1, v2, :cond_1
 
-    iget v1, v1, Lc37;->q0:F
+    iget v1, p0, Ld37;->b:I
 
-    mul-float/2addr v0, v1
-
-    const/high16 v1, 0x3f000000    # 0.5f
-
-    add-float/2addr v0, v1
-
-    float-to-int v0, v0
-
-    invoke-virtual {p1, v0}, Lvx4;->d(I)V
-
-    return-void
-.end method
-
-.method public final d()V
-    .locals 7
-
-    iget-object v0, p0, Lqgi;->b:Lsx3;
-
-    move-object v1, v0
-
-    check-cast v1, Lc37;
-
-    iget v2, v1, Lc37;->r0:I
-
-    iget v3, v1, Lc37;->s0:I
-
-    iget v1, v1, Lc37;->u0:I
-
-    const/4 v4, -0x1
-
-    iget-object v5, p0, Lqgi;->h:Lvx4;
-
-    const/4 v6, 0x1
-
-    if-ne v1, v6, :cond_2
-
-    if-eq v2, v4, :cond_0
-
-    iget-object v1, v5, Lvx4;->l:Ljava/util/ArrayList;
-
-    iget-object v0, v0, Lsx3;->T:Lsx3;
-
-    iget-object v0, v0, Lsx3;->d:Lpa7;
-
-    iget-object v0, v0, Lqgi;->h:Lvx4;
-
-    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    iget-object v0, p0, Lqgi;->b:Lsx3;
-
-    iget-object v0, v0, Lsx3;->T:Lsx3;
-
-    iget-object v0, v0, Lsx3;->d:Lpa7;
-
-    iget-object v0, v0, Lqgi;->h:Lvx4;
-
-    iget-object v0, v0, Lvx4;->k:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    iput v2, v5, Lvx4;->f:I
+    if-nez v1, :cond_1
 
     goto :goto_0
+
+    :catch_0
+    move-exception p1
+
+    goto :goto_1
 
     :cond_0
-    if-eq v3, v4, :cond_1
+    :goto_0
+    if-eqz v0, :cond_1
 
-    iget-object v1, v5, Lvx4;->l:Ljava/util/ArrayList;
-
-    iget-object v0, v0, Lsx3;->T:Lsx3;
-
-    iget-object v0, v0, Lsx3;->d:Lpa7;
-
-    iget-object v0, v0, Lqgi;->i:Lvx4;
-
-    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    iget-object v0, p0, Lqgi;->b:Lsx3;
-
-    iget-object v0, v0, Lsx3;->T:Lsx3;
-
-    iget-object v0, v0, Lsx3;->d:Lpa7;
-
-    iget-object v0, v0, Lqgi;->i:Lvx4;
-
-    iget-object v0, v0, Lvx4;->k:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    neg-int v0, v3
-
-    iput v0, v5, Lvx4;->f:I
-
-    goto :goto_0
+    invoke-virtual {v0, p1}, Li37;->setSelectedPageIndex(I)V
+    :try_end_0
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
     :cond_1
-    iput-boolean v6, v5, Lvx4;->b:Z
-
-    iget-object v1, v5, Lvx4;->l:Ljava/util/ArrayList;
-
-    iget-object v0, v0, Lsx3;->T:Lsx3;
-
-    iget-object v0, v0, Lsx3;->d:Lpa7;
-
-    iget-object v0, v0, Lqgi;->i:Lvx4;
-
-    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    iget-object v0, p0, Lqgi;->b:Lsx3;
-
-    iget-object v0, v0, Lsx3;->T:Lsx3;
-
-    iget-object v0, v0, Lsx3;->d:Lpa7;
-
-    iget-object v0, v0, Lqgi;->i:Lvx4;
-
-    iget-object v0, v0, Lvx4;->k:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    :goto_0
-    iget-object v0, p0, Lqgi;->b:Lsx3;
-
-    iget-object v0, v0, Lsx3;->d:Lpa7;
-
-    iget-object v0, v0, Lqgi;->h:Lvx4;
-
-    invoke-virtual {p0, v0}, Ld37;->m(Lvx4;)V
-
-    iget-object v0, p0, Lqgi;->b:Lsx3;
-
-    iget-object v0, v0, Lsx3;->d:Lpa7;
-
-    iget-object v0, v0, Lqgi;->i:Lvx4;
-
-    invoke-virtual {p0, v0}, Ld37;->m(Lvx4;)V
-
     return-void
-
-    :cond_2
-    if-eq v2, v4, :cond_3
-
-    iget-object v1, v5, Lvx4;->l:Ljava/util/ArrayList;
-
-    iget-object v0, v0, Lsx3;->T:Lsx3;
-
-    iget-object v0, v0, Lsx3;->e:Lvdh;
-
-    iget-object v0, v0, Lqgi;->h:Lvx4;
-
-    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    iget-object v0, p0, Lqgi;->b:Lsx3;
-
-    iget-object v0, v0, Lsx3;->T:Lsx3;
-
-    iget-object v0, v0, Lsx3;->e:Lvdh;
-
-    iget-object v0, v0, Lqgi;->h:Lvx4;
-
-    iget-object v0, v0, Lvx4;->k:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    iput v2, v5, Lvx4;->f:I
-
-    goto :goto_1
-
-    :cond_3
-    if-eq v3, v4, :cond_4
-
-    iget-object v1, v5, Lvx4;->l:Ljava/util/ArrayList;
-
-    iget-object v0, v0, Lsx3;->T:Lsx3;
-
-    iget-object v0, v0, Lsx3;->e:Lvdh;
-
-    iget-object v0, v0, Lqgi;->i:Lvx4;
-
-    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    iget-object v0, p0, Lqgi;->b:Lsx3;
-
-    iget-object v0, v0, Lsx3;->T:Lsx3;
-
-    iget-object v0, v0, Lsx3;->e:Lvdh;
-
-    iget-object v0, v0, Lqgi;->i:Lvx4;
-
-    iget-object v0, v0, Lvx4;->k:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    neg-int v0, v3
-
-    iput v0, v5, Lvx4;->f:I
-
-    goto :goto_1
-
-    :cond_4
-    iput-boolean v6, v5, Lvx4;->b:Z
-
-    iget-object v1, v5, Lvx4;->l:Ljava/util/ArrayList;
-
-    iget-object v0, v0, Lsx3;->T:Lsx3;
-
-    iget-object v0, v0, Lsx3;->e:Lvdh;
-
-    iget-object v0, v0, Lqgi;->i:Lvx4;
-
-    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    iget-object v0, p0, Lqgi;->b:Lsx3;
-
-    iget-object v0, v0, Lsx3;->T:Lsx3;
-
-    iget-object v0, v0, Lsx3;->e:Lvdh;
-
-    iget-object v0, v0, Lqgi;->i:Lvx4;
-
-    iget-object v0, v0, Lvx4;->k:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :goto_1
-    iget-object v0, p0, Lqgi;->b:Lsx3;
+    const-class v0, Ld37;
 
-    iget-object v0, v0, Lsx3;->e:Lvdh;
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    iget-object v0, v0, Lqgi;->h:Lvx4;
+    move-result-object v0
 
-    invoke-virtual {p0, v0}, Ld37;->m(Lvx4;)V
+    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
-    iget-object v0, p0, Lqgi;->b:Lsx3;
+    move-result-object v1
 
-    iget-object v0, v0, Lsx3;->e:Lvdh;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    iget-object v0, v0, Lqgi;->i:Lvx4;
+    const-string v3, "updatePagesNumber error: "
 
-    invoke-virtual {p0, v0}, Ld37;->m(Lvx4;)V
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    return-void
-.end method
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public final e()V
-    .locals 4
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    iget-object v0, p0, Lqgi;->b:Lsx3;
+    move-result-object v1
 
-    move-object v1, v0
-
-    check-cast v1, Lc37;
-
-    iget v1, v1, Lc37;->u0:I
-
-    const/4 v2, 0x1
-
-    iget-object v3, p0, Lqgi;->h:Lvx4;
-
-    if-ne v1, v2, :cond_0
-
-    iget v1, v3, Lvx4;->g:I
-
-    iput v1, v0, Lsx3;->Y:I
-
-    return-void
-
-    :cond_0
-    iget v1, v3, Lvx4;->g:I
-
-    iput v1, v0, Lsx3;->Z:I
-
-    return-void
-.end method
-
-.method public final f()V
-    .locals 1
-
-    iget-object v0, p0, Lqgi;->h:Lvx4;
-
-    invoke-virtual {v0}, Lvx4;->c()V
-
-    return-void
-.end method
-
-.method public final k()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final m(Lvx4;)V
-    .locals 2
-
-    iget-object v0, p0, Lqgi;->h:Lvx4;
-
-    iget-object v1, v0, Lvx4;->k:Ljava/util/ArrayList;
-
-    invoke-virtual {v1, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    iget-object p1, p1, Lvx4;->l:Ljava/util/ArrayList;
-
-    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-static {v0, v1, p1}, Ltej;->r(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method

@@ -1,65 +1,109 @@
 .class public final Lof6;
-.super Lpab;
+.super Lpdg;
 .source "SourceFile"
+
+# interfaces
+.implements Lys6;
+
+
+# instance fields
+.field public final synthetic X:Lone/me/folders/edit/FolderEditScreen;
+
+.field public synthetic o:Ljava/lang/Object;
+
+
+# direct methods
+.method public constructor <init>(Lone/me/folders/edit/FolderEditScreen;Lkotlin/coroutines/Continuation;)V
+    .locals 0
+
+    iput-object p1, p0, Lof6;->X:Lone/me/folders/edit/FolderEditScreen;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final onMeasure(II)V
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
+    check-cast p1, Lrf6;
 
-    move-result p2
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    const/16 v0, 0x8
+    invoke-virtual {p0, p1, p2}, Lof6;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    int-to-float v0, v0
+    move-result-object p1
 
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+    check-cast p1, Lof6;
 
-    move-result-object v1
+    sget-object p2, Lmah;->a:Lmah;
 
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    invoke-virtual {p1, p2}, Lof6;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v1
+    return-object p2
+.end method
 
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    const/4 v2, 0x2
+    new-instance v0, Lof6;
 
-    invoke-static {v0, v1, v2, p2}, Lxi4;->d(FFII)I
+    iget-object v1, p0, Lof6;->X:Lone/me/folders/edit/FolderEditScreen;
 
-    move-result p2
+    invoke-direct {v0, v1, p2}, Lof6;-><init>(Lone/me/folders/edit/FolderEditScreen;Lkotlin/coroutines/Continuation;)V
 
-    const/16 v0, 0x80
+    iput-object p1, v0, Lof6;->o:Ljava/lang/Object;
 
-    int-to-float v0, v0
+    return-object v0
+.end method
 
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    move-result-object v1
+    iget-object v0, p0, Lof6;->o:Ljava/lang/Object;
 
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    check-cast v0, Lrf6;
 
-    move-result-object v1
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+    instance-of p1, v0, Lpf6;
 
-    mul-float/2addr v0, v1
+    iget-object v1, p0, Lof6;->X:Lone/me/folders/edit/FolderEditScreen;
 
-    invoke-static {v0}, Lq7j;->c(F)I
+    if-eqz p1, :cond_0
 
-    move-result v0
+    check-cast v0, Lpf6;
 
-    sub-int/2addr p2, v0
+    iget-boolean p1, v0, Lpf6;->b:Z
 
-    const/high16 v0, 0x40000000    # 2.0f
+    invoke-static {v1, p1}, Lone/me/folders/edit/FolderEditScreen;->H0(Lone/me/folders/edit/FolderEditScreen;Z)V
 
-    invoke-static {p2, v0}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
+    goto :goto_0
 
-    move-result p2
+    :cond_0
+    instance-of p1, v0, Lqf6;
 
-    invoke-super {p0, p1, p2}, Lpab;->onMeasure(II)V
+    if-eqz p1, :cond_1
 
-    return-void
+    check-cast v0, Lqf6;
+
+    iget-boolean p1, v0, Lqf6;->c:Z
+
+    invoke-static {v1, p1}, Lone/me/folders/edit/FolderEditScreen;->H0(Lone/me/folders/edit/FolderEditScreen;Z)V
+
+    :goto_0
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
+
+    :cond_1
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
 .end method

@@ -1,163 +1,95 @@
-.class public abstract Lahb;
-.super Ljava/lang/Object;
+.class public final Lahb;
+.super Ld3;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
+# instance fields
+.field public final synthetic c:I
 
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
-
-.field public static final s:I
-
-.field public static final t:I
-
-.field public static final u:I
-
-.field public static final v:I
-
-.field public static final w:I
-
-.field public static final x:I
-
-.field public static final y:I
+.field public final synthetic d:Lbhb;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lbhb;I)V
+    .locals 0
 
-    sget v0, Lu6d;->emoji_sprite_0:I
+    iput p2, p0, Lahb;->c:I
 
-    sput v0, Lahb;->a:I
+    iput-object p1, p0, Lahb;->d:Lbhb;
 
-    sget v0, Lu6d;->emoji_sprite_1:I
+    const/16 p1, 0xd
 
-    sput v0, Lahb;->b:I
+    packed-switch p2, :pswitch_data_0
 
-    sget v0, Lu6d;->emoji_sprite_10:I
+    sget-object p2, Lzgb;->a:Lzgb;
 
-    sput v0, Lahb;->c:I
-
-    sget v0, Lu6d;->emoji_sprite_11:I
-
-    sput v0, Lahb;->d:I
-
-    sget v0, Lu6d;->emoji_sprite_12:I
-
-    sput v0, Lahb;->e:I
-
-    sget v0, Lu6d;->emoji_sprite_13:I
-
-    sput v0, Lahb;->f:I
-
-    sget v0, Lu6d;->emoji_sprite_14:I
-
-    sput v0, Lahb;->g:I
-
-    sget v0, Lu6d;->emoji_sprite_15:I
-
-    sput v0, Lahb;->h:I
-
-    sget v0, Lu6d;->emoji_sprite_16:I
-
-    sput v0, Lahb;->i:I
-
-    sget v0, Lu6d;->emoji_sprite_17:I
-
-    sput v0, Lahb;->j:I
-
-    sget v0, Lu6d;->emoji_sprite_18:I
-
-    sput v0, Lahb;->k:I
-
-    sget v0, Lu6d;->emoji_sprite_19:I
-
-    sput v0, Lahb;->l:I
-
-    sget v0, Lu6d;->emoji_sprite_2:I
-
-    sput v0, Lahb;->m:I
-
-    sget v0, Lu6d;->emoji_sprite_20:I
-
-    sput v0, Lahb;->n:I
-
-    sget v0, Lu6d;->emoji_sprite_21:I
-
-    sput v0, Lahb;->o:I
-
-    sget v0, Lu6d;->emoji_sprite_22:I
-
-    sput v0, Lahb;->p:I
-
-    sget v0, Lu6d;->emoji_sprite_23:I
-
-    sput v0, Lahb;->q:I
-
-    sget v0, Lu6d;->emoji_sprite_24:I
-
-    sput v0, Lahb;->r:I
-
-    sget v0, Lu6d;->emoji_sprite_3:I
-
-    sput v0, Lahb;->s:I
-
-    sget v0, Lu6d;->emoji_sprite_4:I
-
-    sput v0, Lahb;->t:I
-
-    sget v0, Lu6d;->emoji_sprite_5:I
-
-    sput v0, Lahb;->u:I
-
-    sget v0, Lu6d;->emoji_sprite_6:I
-
-    sput v0, Lahb;->v:I
-
-    sget v0, Lu6d;->emoji_sprite_7:I
-
-    sput v0, Lahb;->w:I
-
-    sget v0, Lu6d;->emoji_sprite_8:I
-
-    sput v0, Lahb;->x:I
-
-    sget v0, Lu6d;->emoji_sprite_9:I
-
-    sput v0, Lahb;->y:I
+    invoke-direct {p0, p1, p2}, Ld3;-><init>(ILjava/lang/Object;)V
 
     return-void
+
+    :pswitch_0
+    sget-object p2, Lygb;->a:Lygb;
+
+    invoke-direct {p0, p1, p2}, Ld3;-><init>(ILjava/lang/Object;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+
+# virtual methods
+.method public final Y(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 1
+
+    iget v0, p0, Lahb;->c:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-static {p1, p2}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    check-cast p2, Lygb;
+
+    check-cast p1, Lygb;
+
+    iget-object p1, p0, Lahb;->d:Lbhb;
+
+    invoke-virtual {p1}, Lbhb;->c()V
+
+    :cond_0
+    return-void
+
+    :pswitch_0
+    invoke-static {p1, p2}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    check-cast p2, Lzgb;
+
+    check-cast p1, Lzgb;
+
+    iget-object p1, p0, Lahb;->d:Lbhb;
+
+    invoke-virtual {p1}, Lbhb;->d()V
+
+    :cond_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

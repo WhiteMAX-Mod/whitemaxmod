@@ -3,246 +3,304 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static final e:Landroid/util/Range;
+
+.field public static final f:Landroid/util/Range;
+
+.field public static final g:Laoi;
+
+
 # instance fields
-.field public final a:Ljava/util/ArrayList;
+.field public final a:Laoi;
 
-.field public final b:I
+.field public final b:Landroid/util/Range;
 
-.field public final c:I
+.field public final c:Landroid/util/Range;
 
 .field public final d:I
 
-.field public final e:F
-
-.field public final f:Ljava/lang/String;
-
 
 # direct methods
-.method public constructor <init>(Ljava/util/ArrayList;IIIFLjava/lang/String;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Landroid/util/Range;
 
-    iput-object p1, p0, Lcf0;->a:Ljava/util/ArrayList;
+    const/4 v1, 0x0
 
-    iput p2, p0, Lcf0;->b:I
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    iput p3, p0, Lcf0;->c:I
+    move-result-object v1
 
-    iput p4, p0, Lcf0;->d:I
+    const v2, 0x7fffffff
 
-    iput p5, p0, Lcf0;->e:F
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    iput-object p6, p0, Lcf0;->f:Ljava/lang/String;
+    move-result-object v2
+
+    invoke-direct {v0, v1, v2}, Landroid/util/Range;-><init>(Ljava/lang/Comparable;Ljava/lang/Comparable;)V
+
+    sput-object v0, Lcf0;->e:Landroid/util/Range;
+
+    new-instance v0, Landroid/util/Range;
+
+    invoke-direct {v0, v1, v2}, Landroid/util/Range;-><init>(Ljava/lang/Comparable;Ljava/lang/Comparable;)V
+
+    sput-object v0, Lcf0;->f:Landroid/util/Range;
+
+    sget-object v0, Lbe0;->f:Lbe0;
+
+    sget-object v1, Lbe0;->e:Lbe0;
+
+    sget-object v2, Lbe0;->d:Lbe0;
+
+    filled-new-array {v0, v1, v2}, [Lbe0;
+
+    move-result-object v1
+
+    invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v1
+
+    new-instance v2, Lzc0;
+
+    const/4 v3, 0x1
+
+    invoke-direct {v2, v0, v3}, Lzc0;-><init>(Lbe0;I)V
+
+    invoke-static {v1, v2}, Laoi;->D(Ljava/util/List;Lzc0;)Laoi;
+
+    move-result-object v0
+
+    sput-object v0, Lcf0;->g:Laoi;
 
     return-void
 .end method
 
-.method public static a(Ldch;)Lcf0;
-    .locals 12
+.method public constructor <init>(Laoi;Landroid/util/Range;Landroid/util/Range;I)V
+    .locals 0
 
-    const/4 v0, 0x4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    :try_start_0
-    invoke-virtual {p0, v0}, Ldch;->F(I)V
+    iput-object p1, p0, Lcf0;->a:Laoi;
 
-    invoke-virtual {p0}, Ldch;->s()I
+    iput-object p2, p0, Lcf0;->b:Landroid/util/Range;
 
-    move-result v1
+    iput-object p3, p0, Lcf0;->c:Landroid/util/Range;
 
-    const/4 v2, 0x3
+    iput p4, p0, Lcf0;->d:I
 
-    and-int/2addr v1, v2
+    return-void
+.end method
 
-    add-int/lit8 v5, v1, 0x1
+.method public static a()Lbf0;
+    .locals 2
 
-    if-eq v5, v2, :cond_3
+    new-instance v0, Lbf0;
 
-    new-instance v4, Ljava/util/ArrayList;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
+    sget-object v1, Lcf0;->g:Laoi;
 
-    invoke-virtual {p0}, Ldch;->s()I
+    if-eqz v1, :cond_2
 
-    move-result v1
-    :try_end_0
-    .catch Ljava/lang/ArrayIndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
+    iput-object v1, v0, Lbf0;->a:Laoi;
 
-    and-int/lit8 v1, v1, 0x1f
+    sget-object v1, Lcf0;->e:Landroid/util/Range;
+
+    if-eqz v1, :cond_1
+
+    iput-object v1, v0, Lbf0;->b:Landroid/util/Range;
+
+    sget-object v1, Lcf0;->f:Landroid/util/Range;
+
+    if-eqz v1, :cond_0
+
+    iput-object v1, v0, Lbf0;->c:Landroid/util/Range;
+
+    const/4 v1, -0x1
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lbf0;->d:Ljava/lang/Integer;
+
+    return-object v0
+
+    :cond_0
+    new-instance v0, Ljava/lang/NullPointerException;
+
+    const-string v1, "Null bitrate"
+
+    invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_1
+    new-instance v0, Ljava/lang/NullPointerException;
+
+    const-string v1, "Null frameRate"
+
+    invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_2
+    new-instance v0, Ljava/lang/NullPointerException;
+
+    const-string v1, "Null qualitySelector"
+
+    invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p1, p0, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lcf0;
 
     const/4 v2, 0x0
 
-    move v3, v2
+    if-eqz v1, :cond_1
 
-    :goto_0
-    sget-object v6, Lwf4;->a:[B
+    check-cast p1, Lcf0;
 
-    if-ge v3, v1, :cond_0
+    iget-object v1, p0, Lcf0;->a:Laoi;
 
-    :try_start_1
-    invoke-virtual {p0}, Ldch;->x()I
+    iget-object v3, p1, Lcf0;->a:Laoi;
 
-    move-result v7
+    invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    iget v8, p0, Ldch;->b:I
+    move-result v1
 
-    invoke-virtual {p0, v7}, Ldch;->F(I)V
+    if-eqz v1, :cond_1
 
-    iget-object v9, p0, Ldch;->a:[B
+    iget-object v1, p0, Lcf0;->b:Landroid/util/Range;
 
-    add-int/lit8 v10, v7, 0x4
+    iget-object v3, p1, Lcf0;->b:Landroid/util/Range;
 
-    new-array v10, v10, [B
+    invoke-virtual {v1, v3}, Landroid/util/Range;->equals(Ljava/lang/Object;)Z
 
-    invoke-static {v6, v2, v10, v2, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    move-result v1
 
-    invoke-static {v9, v8, v10, v0, v7}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    if-eqz v1, :cond_1
 
-    invoke-virtual {v4, v10}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    iget-object v1, p0, Lcf0;->c:Landroid/util/Range;
 
-    add-int/lit8 v3, v3, 0x1
+    iget-object v3, p1, Lcf0;->c:Landroid/util/Range;
 
-    goto :goto_0
+    invoke-virtual {v1, v3}, Landroid/util/Range;->equals(Ljava/lang/Object;)Z
 
-    :cond_0
-    invoke-virtual {p0}, Ldch;->s()I
+    move-result v1
 
-    move-result v3
+    if-eqz v1, :cond_1
 
-    move v7, v2
+    iget v1, p0, Lcf0;->d:I
 
-    :goto_1
-    if-ge v7, v3, :cond_1
+    iget p1, p1, Lcf0;->d:I
 
-    invoke-virtual {p0}, Ldch;->x()I
+    if-ne v1, p1, :cond_1
 
-    move-result v8
-
-    iget v9, p0, Ldch;->b:I
-
-    invoke-virtual {p0, v8}, Ldch;->F(I)V
-
-    iget-object v10, p0, Ldch;->a:[B
-
-    add-int/lit8 v11, v8, 0x4
-
-    new-array v11, v11, [B
-
-    invoke-static {v6, v2, v11, v2, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    invoke-static {v10, v9, v11, v0, v8}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    invoke-virtual {v4, v11}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v7, v7, 0x1
-
-    goto :goto_1
+    return v0
 
     :cond_1
-    if-lez v1, :cond_2
+    return v2
+.end method
 
-    invoke-virtual {v4, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+.method public final hashCode()I
+    .locals 3
 
-    move-result-object p0
+    iget-object v0, p0, Lcf0;->a:Laoi;
 
-    check-cast p0, [B
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    invoke-virtual {v4, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    move-result v0
+
+    const v1, 0xf4243
+
+    xor-int/2addr v0, v1
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lcf0;->b:Landroid/util/Range;
+
+    invoke-virtual {v2}, Landroid/util/Range;->hashCode()I
+
+    move-result v2
+
+    xor-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lcf0;->c:Landroid/util/Range;
+
+    invoke-virtual {v2}, Landroid/util/Range;->hashCode()I
+
+    move-result v2
+
+    xor-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget v1, p0, Lcf0;->d:I
+
+    xor-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "VideoSpec{qualitySelector="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lcf0;->a:Laoi;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", frameRate="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lcf0;->b:Landroid/util/Range;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", bitrate="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lcf0;->c:Landroid/util/Range;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", aspectRatio="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lcf0;->d:I
+
+    const-string v2, "}"
+
+    invoke-static {v0, v1, v2}, Ltx8;->m(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, [B
-
-    array-length p0, p0
-
-    invoke-static {v5, v0, p0}, Lgti;->f(I[BI)Lkia;
-
-    move-result-object p0
-
-    iget v0, p0, Lkia;->e:I
-
-    iget v1, p0, Lkia;->f:I
-
-    iget v2, p0, Lkia;->g:F
-
-    iget v3, p0, Lkia;->a:I
-
-    iget v6, p0, Lkia;->b:I
-
-    iget p0, p0, Lkia;->c:I
-
-    const-string v7, "avc1.%02X%02X%02X"
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v6
-
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p0
-
-    filled-new-array {v3, v6, p0}, [Ljava/lang/Object;
-
-    move-result-object p0
-
-    invoke-static {v7, p0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p0
-
-    move v6, v0
-
-    move v7, v1
-
-    :goto_2
-    move-object v9, p0
-
-    move v8, v2
-
-    goto :goto_3
-
-    :cond_2
-    const/4 v0, -0x1
-
-    const/high16 v2, 0x3f800000    # 1.0f
-
-    const/4 p0, 0x0
-
-    move v6, v0
-
-    move v7, v6
-
-    goto :goto_2
-
-    :goto_3
-    new-instance v3, Lcf0;
-
-    invoke-direct/range {v3 .. v9}, Lcf0;-><init>(Ljava/util/ArrayList;IIIFLjava/lang/String;)V
-
-    return-object v3
-
-    :cond_3
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    invoke-direct {p0}, Ljava/lang/IllegalStateException;-><init>()V
-
-    throw p0
-    :try_end_1
-    .catch Ljava/lang/ArrayIndexOutOfBoundsException; {:try_start_1 .. :try_end_1} :catch_0
-
-    :catch_0
-    move-exception v0
-
-    move-object p0, v0
-
-    const-string v0, "Error parsing AVC config"
-
-    invoke-static {p0, v0}, Lcom/google/android/exoplayer2/ParserException;->a(Ljava/lang/RuntimeException;Ljava/lang/String;)Lcom/google/android/exoplayer2/ParserException;
-
-    move-result-object p0
-
-    throw p0
+    return-object v0
 .end method

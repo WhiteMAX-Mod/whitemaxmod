@@ -1,114 +1,64 @@
-.class public final synthetic Lik;
+.class public final Lik;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/function/Supplier;
+.implements Ljk;
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static final a:Lik;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p1, p0, Lik;->a:I
+    new-instance v0, Lik;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lik;->a:Lik;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget v0, p0, Lik;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    new-instance v0, Ltech/kwik/agent15/alert/MissingExtensionAlert;
+    return v0
 
-    invoke-direct {v0}, Ltech/kwik/agent15/alert/MissingExtensionAlert;-><init>()V
+    :cond_0
+    instance-of p1, p1, Lik;
 
-    return-object v0
+    if-nez p1, :cond_1
 
-    :pswitch_0
-    new-instance v0, Ltech/kwik/agent15/alert/HandshakeFailureAlert;
+    const/4 p1, 0x0
 
-    const-string v1, "failed to negotiate signature scheme"
+    return p1
 
-    invoke-direct {v0, v1}, Ltech/kwik/agent15/alert/HandshakeFailureAlert;-><init>(Ljava/lang/String;)V
+    :cond_1
+    return v0
+.end method
 
-    return-object v0
+.method public final hashCode()I
+    .locals 1
 
-    :pswitch_1
-    new-instance v0, Ltech/kwik/agent15/alert/IllegalParameterAlert;
+    const v0, -0x17c656d8
 
-    const-string v1, ""
+    return v0
+.end method
 
-    invoke-direct {v0, v1}, Ltech/kwik/agent15/alert/IllegalParameterAlert;-><init>(Ljava/lang/String;)V
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    return-object v0
-
-    :pswitch_2
-    new-instance v0, Landroid/util/ArraySet;
-
-    invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
-
-    return-object v0
-
-    :pswitch_3
-    new-instance v0, Lgl9;
-
-    invoke-direct {v0}, Lgl9;-><init>()V
+    const-string v0, "Empty"
 
     return-object v0
-
-    :pswitch_4
-    new-instance v0, Landroid/text/BoringLayout$Metrics;
-
-    invoke-direct {v0}, Landroid/text/BoringLayout$Metrics;-><init>()V
-
-    return-object v0
-
-    :pswitch_5
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "Can\'t find connection id that is not retired"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    return-object v0
-
-    :pswitch_6
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    return-object v0
-
-    :pswitch_7
-    new-instance v0, Landroid/graphics/Picture;
-
-    invoke-direct {v0}, Landroid/graphics/Picture;-><init>()V
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

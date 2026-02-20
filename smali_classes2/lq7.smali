@@ -1,218 +1,159 @@
 .class public final Llq7;
-.super Lp6g;
+.super Lb10;
 .source "SourceFile"
-
-# interfaces
-.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/login/inputname/InputNameScreen;
+.field public final d:Lk68;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final o:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/login/inputname/InputNameScreen;)V
-    .locals 0
+.method public constructor <init>(Lk68;Ljava/lang/String;ZZ)V
+    .locals 1
 
-    iput-object p2, p0, Llq7;->X:Lone/me/login/inputname/InputNameScreen;
+    sget-object v0, Lw20;->x0:Lw20;
 
-    const/4 p2, 0x2
+    invoke-direct {p0, v0, p3, p4}, Lb10;-><init>(Lw20;ZZ)V
 
-    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Llq7;->d:Lk68;
+
+    iput-object p2, p0, Llq7;->o:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a()Ljava/util/HashMap;
+    .locals 9
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-super {p0}, Lb10;->a()Ljava/util/HashMap;
 
-    invoke-virtual {p0, p1, p2}, Llq7;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    move-result-object v0
 
-    move-result-object p1
+    new-instance v1, Ljava/util/ArrayList;
 
-    check-cast p1, Llq7;
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    iget-object v2, p0, Llq7;->d:Lk68;
 
-    invoke-virtual {p1, p2}, Llq7;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v2, v2, Lk68;->a:Ljava/io/Serializable;
 
-    return-object p2
-.end method
+    check-cast v2, Ljava/util/ArrayList;
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    new-instance v0, Llq7;
-
-    iget-object v1, p0, Llq7;->X:Lone/me/login/inputname/InputNameScreen;
-
-    invoke-direct {v0, p2, v1}, Llq7;-><init>(Lkotlin/coroutines/Continuation;Lone/me/login/inputname/InputNameScreen;)V
-
-    iput-object p1, v0, Llq7;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
-
-    iget-object v0, p0, Llq7;->X:Lone/me/login/inputname/InputNameScreen;
-
-    iget-object v1, v0, Lone/me/login/inputname/InputNameScreen;->Y:Lo58;
-
-    iget-object v2, v0, Lone/me/login/inputname/InputNameScreen;->X:Lo58;
-
-    iget-object v3, p0, Llq7;->o:Ljava/lang/Object;
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    check-cast v3, Ljava/lang/Boolean;
-
-    invoke-virtual {v3}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    sget-object p1, Lone/me/login/inputname/InputNameScreen;->B0:[Lz28;
-
-    invoke-interface {v2}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lyzb;
-
-    sget-object v3, Lyzb;->f:[Ljava/lang/String;
-
-    invoke-virtual {p1, v3}, Lyzb;->c([Ljava/lang/String;)Z
-
-    move-result p1
-
-    const/4 v3, 0x1
-
-    if-nez p1, :cond_0
-
-    invoke-interface {v1}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lef3;
-
-    check-cast p1, Lyfe;
-
-    invoke-virtual {p1}, Lyfe;->J()V
-
-    invoke-interface {v2}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lyzb;
-
-    new-instance v1, Ljgi;
-
-    invoke-direct {v1, v0, v3}, Ljgi;-><init>(Lone/me/sdk/arch/Widget;I)V
-
-    invoke-static {p1, v1}, Lyzb;->g(Lyzb;Ljgi;)V
-
-    goto :goto_0
+    move-result-object v2
 
     :cond_0
-    invoke-interface {v2}, Lo58;->getValue()Ljava/lang/Object;
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result-object p1
+    move-result v3
 
-    check-cast p1, Lyzb;
+    if-eqz v3, :cond_2
 
-    sget-object v4, Lyzb;->g:[Ljava/lang/String;
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    invoke-virtual {p1, v4}, Lyzb;->c([Ljava/lang/String;)Z
+    move-result-object v3
 
-    move-result p1
+    check-cast v3, Ljava/util/List;
 
-    if-nez p1, :cond_2
+    new-instance v4, Ljava/util/ArrayList;
 
-    invoke-interface {v1}, Lo58;->getValue()Ljava/lang/Object;
+    invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    move-result-object p1
+    invoke-virtual {v1, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    check-cast p1, Lef3;
+    invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    check-cast p1, Lyfe;
+    move-result-object v3
 
-    iget-object v4, p1, Lyfe;->L:Lnre;
+    :goto_0
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
-    sget-object v5, Lyfe;->f0:[Lz28;
+    move-result v5
 
-    const/16 v6, 0x1d
+    if-eqz v5, :cond_0
 
-    aget-object v5, v5, v6
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    invoke-virtual {v4, p1, v5}, Lnre;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+    move-result-object v5
 
-    move-result-object p1
+    check-cast v5, Lvy0;
 
-    check-cast p1, Ljava/lang/Boolean;
+    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    new-instance v6, Ljava/util/HashMap;
 
-    move-result p1
+    invoke-direct {v6}, Ljava/util/HashMap;-><init>()V
 
-    if-nez p1, :cond_2
+    iget-object v7, v5, Lvy0;->d:Ljava/lang/String;
 
-    invoke-interface {v1}, Lo58;->getValue()Ljava/lang/Object;
+    if-eqz v7, :cond_1
 
-    move-result-object p1
+    const-string v8, "url"
 
-    check-cast p1, Lef3;
+    invoke-virtual {v6, v8, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    check-cast p1, Lyfe;
+    :cond_1
+    iget-object v7, v5, Lvy0;->a:Lty0;
 
-    invoke-virtual {p1}, Lyfe;->J()V
+    iget-object v7, v7, Lty0;->a:Ljava/lang/String;
 
-    invoke-interface {v2}, Lo58;->getValue()Ljava/lang/Object;
+    const-string v8, "type"
 
-    move-result-object p1
+    invoke-virtual {v6, v8, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    check-cast p1, Lyzb;
+    const-string v7, "text"
 
-    new-instance v1, Ljgi;
+    iget-object v8, v5, Lvy0;->b:Ljava/lang/String;
 
-    invoke-direct {v1, v0, v3}, Ljgi;-><init>(Lone/me/sdk/arch/Widget;I)V
+    invoke-virtual {v6, v7, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {p1, v1}, Lyzb;->g(Lyzb;Ljgi;)V
+    iget-object v7, v5, Lvy0;->c:Lsy0;
+
+    iget-object v7, v7, Lsy0;->a:Ljava/lang/String;
+
+    const-string v8, "intent"
+
+    invoke-virtual {v6, v8, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v7, "payload"
+
+    iget-object v8, v5, Lvy0;->o:Ljava/lang/String;
+
+    invoke-virtual {v6, v7, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget-boolean v7, v5, Lvy0;->X:Z
+
+    invoke-static {v7}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v7
+
+    const-string v8, "isQuick"
+
+    invoke-virtual {v6, v8, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget-wide v7, v5, Lvy0;->Y:J
+
+    invoke-static {v7, v8}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v5
+
+    const-string v7, "contactId"
+
+    invoke-virtual {v6, v7, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {v4, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    :cond_1
-    sget p1, La48;->a:I
-
-    sget p1, La48;->c:I
-
-    invoke-static {p1}, La48;->b(I)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    sget-object p1, Lone/me/login/inputname/InputNameScreen;->B0:[Lz28;
-
-    invoke-virtual {v0}, Lone/me/login/inputname/InputNameScreen;->A0()Lwlb;
-
-    move-result-object p1
-
-    iget-object p1, p1, Lwlb;->a:Loab;
-
-    invoke-static {p1}, Lg3j;->i(Landroid/view/View;)V
-
     :cond_2
-    :goto_0
-    sget-object p1, Lb3h;->a:Lb3h;
+    const-string v2, "buttons"
 
-    return-object p1
+    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object v0
 .end method

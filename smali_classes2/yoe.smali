@@ -1,36 +1,76 @@
-.class public final synthetic Lyoe;
+.class public final Lyoe;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Llq6;
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lyoe;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Landroid/text/style/ForegroundColorSpan;
+
+.field public final b:Landroid/text/style/BackgroundColorSpan;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lnmb;
+
+    const/16 v1, 0x1b
+
+    invoke-direct {v0, v1}, Lnmb;-><init>(I)V
+
+    sput-object v0, Lyoe;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/text/style/ForegroundColorSpan;Landroid/text/style/BackgroundColorSpan;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lyoe;->a:I
+    iput-object p1, p0, Lyoe;->a:Landroid/text/style/ForegroundColorSpan;
+
+    iput-object p2, p0, Lyoe;->b:Landroid/text/style/BackgroundColorSpan;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 2
+.method public final describeContents()I
+    .locals 1
 
-    new-instance v0, Lzo8;
+    const/4 v0, 0x0
 
-    iget v1, p0, Lyoe;->a:I
+    return v0
+.end method
 
-    invoke-direct {v0, v1}, Lzo8;-><init>(I)V
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 1
 
-    return-object v0
+    iget-object v0, p0, Lyoe;->a:Landroid/text/style/ForegroundColorSpan;
+
+    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
+
+    iget-object v0, p0, Lyoe;->b:Landroid/text/style/BackgroundColorSpan;
+
+    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
+
+    return-void
 .end method

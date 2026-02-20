@@ -1,215 +1,349 @@
 .class public final Leo6;
-.super Lbo6;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final f:Loi7;
+.field public final synthetic a:I
 
-.field public final g:Liz4;
-
-.field public h:Lfh8;
-
-.field public i:Ltud;
+.field public final b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ljcg;Lym5;Loi7;Liz4;)V
+.method public constructor <init>()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Leo6;->a:I
+
+    .line 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 4
+    new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
+
+    iput-object v0, p0, Leo6;->b:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lc5b;)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Leo6;->a:I
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    iput-object p1, p0, Leo6;->b:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method private final c(Lvqb;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lbo6;-><init>(Ljcg;Lym5;)V
+    return-void
+.end method
 
-    iput-object p3, p0, Leo6;->f:Loi7;
+.method private final e(Lkqb;Landroid/net/Uri;JZ)V
+    .locals 0
 
-    iput-object p4, p0, Leo6;->g:Liz4;
+    return-void
+.end method
+
+.method private final g(Lkqb;Landroid/net/Uri;JZ)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final i(Lkqb;Landroid/net/Uri;JZ)V
+    .locals 0
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lpfh;II)V
-    .locals 4
+.method public final a(Lkqb;Landroid/net/Uri;JZI)V
+    .locals 9
 
-    invoke-super {p0, p1, p2, p3}, Lbo6;->a(Lpfh;II)V
+    iget v0, p0, Leo6;->a:I
 
-    move-object v0, p1
+    packed-switch v0, :pswitch_data_0
 
-    check-cast v0, Lkm0;
+    iget-object p1, p0, Leo6;->b:Ljava/lang/Object;
 
-    invoke-interface {v0}, Lpfh;->a()Landroid/net/Uri;
+    check-cast p1, Lc5b;
+
+    iget-object p1, p1, Lc5b;->f:Ljava/util/concurrent/atomic/AtomicLong;
+
+    int-to-long p2, p6
+
+    invoke-virtual {p1, p2, p3}, Ljava/util/concurrent/atomic/AtomicLong;->addAndGet(J)J
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Leo6;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    sget v1, Lkbh;->a:I
-
-    invoke-virtual {v0}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v1
 
-    iget-object v2, p0, Lbo6;->b:Lym5;
+    if-eqz v1, :cond_0
 
-    iget-object v3, p0, Lbo6;->a:Ljcg;
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    if-nez v1, :cond_2
+    move-result-object v1
 
-    const-string v1, "file"
+    move-object v2, v1
 
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    check-cast v2, Leo6;
 
-    move-result v0
+    move-object v3, p1
 
-    if-eqz v0, :cond_0
+    move-object v4, p2
+
+    move-wide v5, p3
+
+    move v7, p5
+
+    move v8, p6
+
+    invoke-virtual/range {v2 .. v8}, Leo6;->a(Lkqb;Landroid/net/Uri;JZI)V
 
     goto :goto_0
 
     :cond_0
-    iget-object v0, p0, Leo6;->i:Ltud;
-
-    if-nez v0, :cond_1
-
-    new-instance v0, Ltud;
-
-    iget-object v1, p0, Leo6;->f:Loi7;
-
-    invoke-direct {v0, v3, v2, v1}, Ltud;-><init>(Ljcg;Lym5;Loi7;)V
-
-    iput-object v0, p0, Leo6;->i:Ltud;
-
-    :cond_1
-    iget-object v0, p0, Leo6;->i:Ltud;
-
-    invoke-virtual {v0, p1, p2, p3}, Lbo6;->a(Lpfh;II)V
-
     return-void
 
-    :cond_2
-    :goto_0
-    iget-object v0, p0, Leo6;->h:Lfh8;
+    nop
 
-    if-nez v0, :cond_3
-
-    new-instance v0, Lfh8;
-
-    iget-object v1, p0, Leo6;->g:Liz4;
-
-    invoke-direct {v0, v3, v2, v1}, Lfh8;-><init>(Ljcg;Lym5;Liz4;)V
-
-    iput-object v0, p0, Leo6;->h:Lfh8;
-
-    :cond_3
-    iget-object v0, p0, Leo6;->h:Lfh8;
-
-    invoke-virtual {v0, p1, p2, p3}, Lbo6;->a(Lpfh;II)V
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final b()Z
-    .locals 5
+.method public final b(Lvqb;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 2
 
-    iget-object v0, p0, Lbo6;->e:Lpfh;
+    iget v0, p0, Leo6;->a:I
 
-    const/4 v1, 0x0
+    packed-switch v0, :pswitch_data_0
 
-    if-nez v0, :cond_0
+    return-void
 
-    const-string v0, "eo6"
+    :pswitch_0
+    iget-object v0, p0, Leo6;->b:Ljava/lang/Object;
 
-    const-string v2, "You should call setVideoContent before prepare!"
+    check-cast v0, Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    invoke-static {v0, v2}, Lc5j;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    return v1
-
-    :cond_0
-    check-cast v0, Lkm0;
-
-    invoke-interface {v0}, Lpfh;->a()Landroid/net/Uri;
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    sget v2, Lkbh;->a:I
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-virtual {v0}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
+    move-result v1
 
-    move-result-object v0
+    if-eqz v1, :cond_0
 
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result v2
+    move-result-object v1
 
-    const/4 v3, 0x1
+    check-cast v1, Leo6;
 
-    const-string v4, "file"
-
-    if-nez v2, :cond_3
-
-    invoke-virtual {v4, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
+    invoke-virtual {v1, p1, p2, p3}, Leo6;->b(Lvqb;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    :cond_1
-    iget-object v0, p0, Leo6;->i:Ltud;
+    :cond_0
+    return-void
 
-    iget-object v0, v0, Lbo6;->e:Lpfh;
+    nop
 
-    if-eqz v0, :cond_2
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    check-cast v0, Lkm0;
+.method public final d(Lkqb;Landroid/net/Uri;JZ)V
+    .locals 8
 
-    iget-object v0, v0, Lkm0;->e:Ldz;
+    iget v0, p0, Leo6;->a:I
 
-    if-eqz v0, :cond_2
+    packed-switch v0, :pswitch_data_0
 
-    move v1, v3
+    return-void
 
-    :cond_2
-    return v1
+    :pswitch_0
+    iget-object v0, p0, Leo6;->b:Ljava/lang/Object;
 
-    :cond_3
+    check-cast v0, Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
     :goto_0
-    iget-object v0, p0, Leo6;->h:Lfh8;
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    iget-object v0, v0, Lbo6;->e:Lpfh;
+    move-result v1
 
-    if-eqz v0, :cond_5
+    if-eqz v1, :cond_0
 
-    check-cast v0, Lkm0;
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    invoke-interface {v0}, Lpfh;->a()Landroid/net/Uri;
+    move-result-object v1
+
+    move-object v2, v1
+
+    check-cast v2, Leo6;
+
+    move-object v3, p1
+
+    move-object v4, p2
+
+    move-wide v5, p3
+
+    move v7, p5
+
+    invoke-virtual/range {v2 .. v7}, Leo6;->d(Lkqb;Landroid/net/Uri;JZ)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final f(Lkqb;Landroid/net/Uri;JZ)V
+    .locals 8
+
+    iget v0, p0, Leo6;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Leo6;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    sget v2, Lkbh;->a:I
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-virtual {v0}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    move-object v2, v1
+
+    check-cast v2, Leo6;
+
+    move-object v3, p1
+
+    move-object v4, p2
+
+    move-wide v5, p3
+
+    move v7, p5
+
+    invoke-virtual/range {v2 .. v7}, Leo6;->f(Lkqb;Landroid/net/Uri;JZ)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final h(Lkqb;Landroid/net/Uri;JZ)V
+    .locals 8
+
+    iget v0, p0, Leo6;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Leo6;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v2
+    move-result v1
 
-    if-nez v2, :cond_4
+    if-eqz v1, :cond_0
 
-    invoke-virtual {v4, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result v0
+    move-result-object v1
 
-    if-eqz v0, :cond_5
+    move-object v2, v1
 
-    :cond_4
-    move v1, v3
+    check-cast v2, Leo6;
 
-    :cond_5
-    return v1
+    move-object v3, p1
+
+    move-object v4, p2
+
+    move-wide v5, p3
+
+    move v7, p5
+
+    invoke-virtual/range {v2 .. v7}, Leo6;->h(Lkqb;Landroid/net/Uri;JZ)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

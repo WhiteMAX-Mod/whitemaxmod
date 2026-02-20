@@ -1,101 +1,132 @@
 .class public final Lj7;
-.super Ljava/lang/Object;
+.super Lpdg;
 .source "SourceFile"
 
-
-# static fields
-.field public static final d:Ljava/util/List;
+# interfaces
+.implements Lys6;
 
 
 # instance fields
-.field public final a:Lja1;
+.field public final synthetic X:Li7;
 
-.field public final b:Lo7;
-
-.field public final c:Lws8;
+.field public o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Li7;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    const-string v0, "libvpx"
+    iput-object p1, p0, Lj7;->X:Li7;
 
-    const-string v1, "unknown"
+    const/4 p1, 0x2
 
-    const-string v2, ""
-
-    const-string v3, "null"
-
-    filled-new-array {v2, v3, v0, v1}, [Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lqi3;->h([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v0
-
-    sput-object v0, Lj7;->d:Ljava/util/List;
+    invoke-direct {p0, p1, p2}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Lja1;Lxkg;)V
-    .locals 9
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iput-object p1, p0, Lj7;->a:Lja1;
+    check-cast p1, Lnd4;
 
-    new-instance v8, Lo7;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    new-instance v0, Ldw9;
+    invoke-virtual {p0, p1, p2}, Lj7;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    const/4 v6, 0x0
+    move-result-object p1
 
-    const/16 v7, 0x16
+    check-cast p1, Lj7;
 
-    const/4 v1, 0x2
+    sget-object p2, Lmah;->a:Lmah;
 
-    const-class v3, Lj7;
+    invoke-virtual {p1, p2}, Lj7;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string v4, "onVideoCodec"
+    move-result-object p1
 
-    const-string v5, "onVideoCodec(Lru/ok/android/webrtc/stat/codec/ActiveEncodersStats$NamedCodecInfo;J)V"
+    return-object p1
+.end method
 
-    move-object v2, p0
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    invoke-direct/range {v0 .. v7}, Ldw9;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+    new-instance p1, Lj7;
 
-    invoke-direct {v8}, Ljava/lang/Object;-><init>()V
+    iget-object v0, p0, Lj7;->X:Li7;
 
-    iput-object p2, v8, Lo7;->c:Ljava/lang/Object;
+    invoke-direct {p1, v0, p2}, Lj7;-><init>(Li7;Lkotlin/coroutines/Continuation;)V
 
-    iput-object v0, v8, Lo7;->d:Ljava/io/Serializable;
+    return-object p1
+.end method
 
-    iput-object v8, p0, Lj7;->b:Lo7;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    new-instance v8, Lws8;
+    iget v0, p0, Lj7;->o:I
 
-    new-instance v0, Le0a;
+    iget-object v1, p0, Lj7;->X:Li7;
 
-    const/16 v7, 0x14
+    const/4 v2, 0x1
 
-    const/4 v1, 0x1
+    if-eqz v0, :cond_1
 
-    const-class v3, Lj7;
+    if-ne v0, v2, :cond_0
 
-    const-string v4, "onAudioCodec"
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    const-string v5, "onAudioCodec(Lru/ok/android/webrtc/stat/codec/ActiveEncodersStats$NamedCodecInfo;)V"
+    goto :goto_0
 
-    invoke-direct/range {v0 .. v7}, Le0a;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    const/4 v1, 0x2
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    invoke-direct {v8, v1, v0}, Lws8;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    iput-object v8, p0, Lj7;->c:Lws8;
+    throw p1
 
-    return-void
+    :cond_1
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    iget-object p1, v1, Li7;->J0:Ly49;
+
+    iget-object p1, p1, Ly49;->c:Ljava/lang/Object;
+
+    check-cast p1, Lar3;
+
+    check-cast p1, Lcab;
+
+    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object p1
+
+    const/16 v0, 0x188
+
+    invoke-virtual {p1, v0}, Lr5;->c(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljp8;
+
+    iput v2, p0, Lj7;->o:I
+
+    invoke-virtual {p1, p0}, Ljp8;->a(Lpdg;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lod4;->a:Lod4;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    invoke-virtual {v1}, Li7;->J()V
+
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
 .end method

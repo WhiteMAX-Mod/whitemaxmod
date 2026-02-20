@@ -1,13 +1,10 @@
 .class public final Lc5c;
-.super Ljava/lang/Object;
+.super Ld5c;
 .source "SourceFile"
-
-# interfaces
-.implements Le5c;
 
 
 # static fields
-.field public static final a:Lc5c;
+.field public static final b:Lc5c;
 
 
 # direct methods
@@ -16,9 +13,9 @@
 
     new-instance v0, Lc5c;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Ld5c;-><init>()V
 
-    sput-object v0, Lc5c;->a:Lc5c;
+    sput-object v0, Lc5c;->b:Lc5c;
 
     return-void
 .end method
@@ -50,7 +47,7 @@
 .method public final hashCode()I
     .locals 1
 
-    const v0, 0x1e302f13
+    const v0, -0x451ad5f8
 
     return v0
 .end method
@@ -58,7 +55,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "ClearSearch"
+    const-string v0, "ShowExitConfirmationDialog"
 
     return-object v0
 .end method

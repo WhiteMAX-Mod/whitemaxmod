@@ -1,72 +1,138 @@
-.class public final Lhx6;
-.super Ljava/lang/Object;
+.class public Lhx6;
+.super Lmm0;
 .source "SourceFile"
-
-# interfaces
-.implements Lxpf;
 
 
 # instance fields
-.field public final a:Lieg;
+.field public final t0:[I
 
 
 # direct methods
-.method public constructor <init>(Lieg;)V
-    .locals 0
+.method public constructor <init>(Lpl9;Lfjc;Lpqa;)V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2, p3}, Lmm0;-><init>(Lpl9;Lfjc;Lgjc;)V
 
-    iput-object p1, p0, Lhx6;->a:Lieg;
+    iget-object p1, p2, Lfjc;->c:Landroid/util/SparseIntArray;
+
+    const/4 p2, 0x0
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p1}, Landroid/util/SparseIntArray;->size()I
+
+    move-result p3
+
+    new-array p3, p3, [I
+
+    iput-object p3, p0, Lhx6;->t0:[I
+
+    invoke-virtual {p1}, Landroid/util/SparseIntArray;->size()I
+
+    move-result p3
+
+    :goto_0
+    if-ge p2, p3, :cond_1
+
+    iget-object v0, p0, Lhx6;->t0:[I
+
+    invoke-virtual {p1, p2}, Landroid/util/SparseIntArray;->keyAt(I)I
+
+    move-result v1
+
+    aput v1, v0, p2
+
+    add-int/lit8 p2, p2, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    new-array p1, p2, [I
+
+    iput-object p1, p0, Lhx6;->t0:[I
+
+    :cond_1
+    iget-object p1, p0, Lmm0;->b:Lpl9;
+
+    invoke-interface {p1, p0}, Lpl9;->a(Lnl9;)V
+
+    iget-object p1, p0, Lmm0;->s0:Lgjc;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Exception;)Z
+.method public final d(I)Ljava/lang/Object;
     .locals 0
 
-    const/4 p1, 0x0
+    new-array p1, p1, [B
 
-    return p1
+    return-object p1
 .end method
 
-.method public final b(Lbc0;)Z
-    .locals 2
+.method public final bridge synthetic g(Ljava/lang/Object;)V
+    .locals 0
 
-    iget v0, p1, Lbc0;->b:I
+    check-cast p1, [B
 
-    const/4 v1, 0x3
+    return-void
+.end method
 
-    if-ne v0, v1, :cond_0
+.method public final i(I)I
+    .locals 4
 
-    goto :goto_0
+    if-lez p1, :cond_2
+
+    iget-object v0, p0, Lhx6;->t0:[I
+
+    array-length v1, v0
+
+    const/4 v2, 0x0
+
+    :goto_0
+    if-ge v2, v1, :cond_1
+
+    aget v3, v0, v2
+
+    if-lt v3, p1, :cond_0
+
+    return v3
 
     :cond_0
-    const/4 v1, 0x4
-
-    if-ne v0, v1, :cond_1
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
     :cond_1
-    const/4 v1, 0x5
-
-    if-ne v0, v1, :cond_2
-
-    :goto_0
-    iget-object v0, p0, Lhx6;->a:Lieg;
-
-    iget-object p1, p1, Lbc0;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, p1}, Lieg;->d(Ljava/lang/Object;)V
-
-    const/4 p1, 0x1
-
     return p1
 
     :cond_2
-    const/4 p1, 0x0
+    new-instance v0, Lcom/facebook/imagepipeline/memory/BasePool$InvalidSizeException;
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Lcom/facebook/imagepipeline/memory/BasePool$InvalidSizeException;-><init>(Ljava/lang/Integer;)V
+
+    throw v0
+.end method
+
+.method public final j(Ljava/lang/Object;)I
+    .locals 0
+
+    check-cast p1, [B
+
+    array-length p1, p1
+
+    return p1
+.end method
+
+.method public final k(I)I
+    .locals 0
 
     return p1
 .end method

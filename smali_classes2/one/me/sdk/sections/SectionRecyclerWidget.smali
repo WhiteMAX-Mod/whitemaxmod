@@ -26,20 +26,20 @@
 
 
 # static fields
-.field public static final synthetic c:[Lz28;
+.field public static final synthetic c:[Lv58;
 
 
 # instance fields
-.field public final a:Ljld;
+.field public final a:Lgrd;
 
-.field public final b:Lu4e;
+.field public final b:Ltqe;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 5
 
-    new-instance v0, Liyc;
+    new-instance v0, Lv3d;
 
     const-class v1, Lone/me/sdk/sections/SectionRecyclerWidget;
 
@@ -49,19 +49,19 @@
 
     const/4 v4, 0x0
 
-    invoke-direct {v0, v1, v2, v3, v4}, Liyc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v2, v3, v4}, Lv3d;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    sget-object v1, Lctd;->a:Ldtd;
+    sget-object v1, Lazd;->a:Lbzd;
 
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     const/4 v1, 0x1
 
-    new-array v1, v1, [Lz28;
+    new-array v1, v1, [Lv58;
 
     aput-object v0, v1, v4
 
-    sput-object v1, Lone/me/sdk/sections/SectionRecyclerWidget;->c:[Lz28;
+    sput-object v1, Lone/me/sdk/sections/SectionRecyclerWidget;->c:[Lv58;
 
     return-void
 .end method
@@ -75,41 +75,42 @@
 
     const/4 v2, 0x0
 
-    invoke-direct {p0, v2, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILso4;)V
+    invoke-direct {p0, v2, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILfq4;)V
 
-    sget v0, Lohb;->t:I
+    sget v0, Lzjb;->t:I
 
-    invoke-virtual {p0, v0}, Lone/me/sdk/arch/Widget;->viewBinding(I)Ljld;
+    invoke-virtual {p0, v0}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lgrd;
 
     move-result-object v0
 
-    iput-object v0, p0, Lone/me/sdk/sections/SectionRecyclerWidget;->a:Ljld;
+    iput-object v0, p0, Lone/me/sdk/sections/SectionRecyclerWidget;->a:Lgrd;
 
-    new-instance v0, Lu4e;
+    new-instance v0, Ltqe;
 
-    const/4 v1, 0x1
+    invoke-direct {v0, p0}, Ltqe;-><init>(Ljava/lang/Object;)V
 
-    invoke-direct {v0, v1, p0}, Lu4e;-><init>(ILjava/lang/Object;)V
-
-    iput-object v0, p0, Lone/me/sdk/sections/SectionRecyclerWidget;->b:Lu4e;
+    iput-object v0, p0, Lone/me/sdk/sections/SectionRecyclerWidget;->b:Ltqe;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final A0()Landroidx/recyclerview/widget/RecyclerView;
+.method public abstract H0()Lia1;
+.end method
+
+.method public final I0()Landroidx/recyclerview/widget/RecyclerView;
     .locals 2
 
-    sget-object v0, Lone/me/sdk/sections/SectionRecyclerWidget;->c:[Lz28;
+    sget-object v0, Lone/me/sdk/sections/SectionRecyclerWidget;->c:[Lv58;
 
     const/4 v1, 0x0
 
     aget-object v0, v0, v1
 
-    iget-object v1, p0, Lone/me/sdk/sections/SectionRecyclerWidget;->a:Ljld;
+    iget-object v1, p0, Lone/me/sdk/sections/SectionRecyclerWidget;->a:Lgrd;
 
-    invoke-interface {v1, p0, v0}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+    invoke-interface {v1, p0, v0}, Lgrd;->D(Ljava/lang/Object;Lv58;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -118,25 +119,25 @@
     return-object v0
 .end method
 
-.method public abstract B0()Ll0f;
+.method public abstract J0()Ly7f;
 .end method
 
-.method public final C0(I)Landroidx/recyclerview/widget/RecyclerView;
+.method public final K0(I)Landroidx/recyclerview/widget/RecyclerView;
     .locals 11
 
-    new-instance v0, Lrq3;
+    new-instance v0, Ljr3;
 
-    invoke-virtual {p0}, Lone/me/sdk/sections/SectionRecyclerWidget;->B0()Ll0f;
+    invoke-virtual {p0}, Lone/me/sdk/sections/SectionRecyclerWidget;->J0()Ly7f;
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lone/me/sdk/sections/SectionRecyclerWidget;->z0()Lv91;
+    invoke-virtual {p0}, Lone/me/sdk/sections/SectionRecyclerWidget;->H0()Lia1;
 
     move-result-object v2
 
     const/4 v3, 0x2
 
-    new-array v3, v3, [Lwrd;
+    new-array v3, v3, [Lsxd;
 
     const/4 v4, 0x0
 
@@ -146,7 +147,7 @@
 
     aput-object v2, v3, v1
 
-    invoke-direct {v0, v3}, Lrq3;-><init>([Lwrd;)V
+    invoke-direct {v0, v3}, Ljr3;-><init>([Lsxd;)V
 
     new-instance v1, Landroidx/recyclerview/widget/RecyclerView;
 
@@ -158,11 +159,11 @@
 
     invoke-direct {v1, v2, v3}, Landroidx/recyclerview/widget/RecyclerView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    sget v2, Lohb;->t:I
+    sget v2, Lzjb;->t:I
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setId(I)V
 
-    invoke-virtual {v1, v0}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Lwrd;)V
+    invoke-virtual {v1, v0}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Lsxd;)V
 
     new-instance v0, Landroid/view/ViewGroup$LayoutParams;
 
@@ -176,23 +177,7 @@
 
     int-to-float v0, v0
 
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v2, v0
-
-    invoke-static {v2}, Lq7j;->c(F)I
-
-    move-result v2
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -202,21 +187,37 @@
 
     iget v3, v3, Landroid/util/DisplayMetrics;->density:F
 
-    mul-float/2addr v0, v3
+    mul-float/2addr v3, v0
 
-    invoke-static {v0}, Lq7j;->c(F)I
+    invoke-static {v3}, Lmhj;->f(F)I
+
+    move-result v3
+
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v5
+
+    iget v5, v5, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v0, v5
+
+    invoke-static {v0}, Lmhj;->f(F)I
 
     move-result v0
 
     invoke-virtual {v1}, Landroid/view/View;->getPaddingTop()I
 
-    move-result v3
+    move-result v5
 
     invoke-virtual {v1}, Landroid/view/View;->getPaddingBottom()I
 
-    move-result v5
+    move-result v6
 
-    invoke-virtual {v1, v2, v3, v0, v5}, Landroid/view/View;->setPaddingRelative(IIII)V
+    invoke-virtual {v1, v3, v5, v0, v6}, Landroid/view/View;->setPaddingRelative(IIII)V
 
     new-instance v0, Landroidx/recyclerview/widget/LinearLayoutManager;
 
@@ -228,11 +229,11 @@
 
     invoke-virtual {v1, v4}, Landroidx/recyclerview/widget/RecyclerView;->setClipToPadding(Z)V
 
-    new-instance v5, Ldke;
+    new-instance v5, Lfre;
 
-    sget-object v0, Lpc3;->t0:Lkme;
+    sget-object v0, Lfe3;->t0:Ltea;
 
-    invoke-virtual {v0, v1}, Lkme;->p(Landroid/view/View;)Lzlb;
+    invoke-static {v1, v0}, Ly12;->i(Landroidx/recyclerview/widget/RecyclerView;Ltea;)Llob;
 
     move-result-object v6
 
@@ -240,22 +241,19 @@
 
     const/16 v10, 0x1c
 
-    iget-object v7, p0, Lone/me/sdk/sections/SectionRecyclerWidget;->b:Lu4e;
+    iget-object v7, p0, Lone/me/sdk/sections/SectionRecyclerWidget;->b:Ltqe;
 
     const/4 v8, 0x0
 
-    invoke-direct/range {v5 .. v10}, Ldke;-><init>(Lzlb;Lbke;Lnq6;Lk1e;I)V
+    invoke-direct/range {v5 .. v10}, Lfre;-><init>(Llob;Ldre;Lks6;Lmic;I)V
 
-    invoke-virtual {v1, v5}, Landroidx/recyclerview/widget/RecyclerView;->j(Lcsd;)V
+    invoke-virtual {v1, v5, v2}, Landroidx/recyclerview/widget/RecyclerView;->j(Lyxd;I)V
 
-    new-instance v0, La35;
+    new-instance v0, Lk45;
 
-    invoke-direct {v0, v7, p1}, La35;-><init>(Lu4e;I)V
+    invoke-direct {v0, v7, p1}, Lk45;-><init>(Ltqe;I)V
 
-    invoke-virtual {v1, v0}, Landroidx/recyclerview/widget/RecyclerView;->j(Lcsd;)V
+    invoke-virtual {v1, v0, v2}, Landroidx/recyclerview/widget/RecyclerView;->j(Lyxd;I)V
 
     return-object v1
-.end method
-
-.method public abstract z0()Lv91;
 .end method

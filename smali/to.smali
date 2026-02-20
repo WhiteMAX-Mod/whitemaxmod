@@ -1,99 +1,149 @@
-.class public final Lto;
-.super Landroid/widget/RatingBar;
+.class public final synthetic Lto;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # instance fields
-.field public final a:Lws8;
+.field public final synthetic a:Lap;
+
+.field public final synthetic b:Landroid/content/res/ColorStateList;
+
+.field public final synthetic c:Landroid/content/res/ColorStateList;
+
+.field public final synthetic d:Lew8;
+
+.field public final synthetic o:Ljava/lang/Integer;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-    .locals 2
+.method public synthetic constructor <init>(Lap;Landroid/content/res/ColorStateList;Landroid/content/res/ColorStateList;Lew8;Ljava/lang/Integer;)V
+    .locals 0
 
-    sget v0, Lh5d;->ratingBarStyle:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1, p2, v0}, Landroid/widget/RatingBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    iput-object p1, p0, Lto;->a:Lap;
 
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    iput-object p2, p0, Lto;->b:Landroid/content/res/ColorStateList;
 
-    move-result-object p1
+    iput-object p3, p0, Lto;->c:Landroid/content/res/ColorStateList;
 
-    invoke-static {p0, p1}, Ljjg;->a(Landroid/view/View;Landroid/content/Context;)V
+    iput-object p4, p0, Lto;->d:Lew8;
 
-    new-instance p1, Lws8;
-
-    const/4 v1, 0x1
-
-    invoke-direct {p1, v1, p0}, Lws8;-><init>(ILjava/lang/Object;)V
-
-    iput-object p1, p0, Lto;->a:Lws8;
-
-    invoke-virtual {p1, p2, v0}, Lws8;->z(Landroid/util/AttributeSet;I)V
+    iput-object p5, p0, Lto;->o:Ljava/lang/Integer;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final declared-synchronized onMeasure(II)V
-    .locals 1
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 5
 
-    monitor-enter p0
+    iget-object v0, p0, Lto;->a:Lap;
 
-    :try_start_0
-    invoke-super {p0, p1, p2}, Landroid/widget/RatingBar;->onMeasure(II)V
+    iget-object v1, v0, Lap;->E0:Ljava/util/ArrayList;
 
-    iget-object p2, p0, Lto;->a:Lws8;
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
-    iget-object p2, p2, Lws8;->c:Ljava/lang/Object;
+    move-result-object p1
 
-    check-cast p2, Landroid/graphics/Bitmap;
+    check-cast p1, Ljava/lang/Float;
 
-    if-eqz p2, :cond_0
-
-    invoke-virtual {p2}, Landroid/graphics/Bitmap;->getWidth()I
-
-    move-result p2
-
-    invoke-virtual {p0}, Landroid/widget/RatingBar;->getNumStars()I
-
-    move-result v0
-
-    mul-int/2addr p2, v0
-
-    const/4 v0, 0x0
-
-    invoke-static {p2, p1, v0}, Landroid/view/View;->resolveSizeAndState(III)I
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
 
     move-result p1
 
-    invoke-virtual {p0}, Landroid/view/View;->getMeasuredHeight()I
+    iget-object v2, p0, Lto;->b:Landroid/content/res/ColorStateList;
 
-    move-result p2
+    invoke-virtual {v2}, Landroid/content/res/ColorStateList;->getDefaultColor()I
 
-    invoke-virtual {p0, p1, p2}, Landroid/view/View;->setMeasuredDimension(II)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    move-result v2
+
+    iget-object v3, p0, Lto;->c:Landroid/content/res/ColorStateList;
+
+    invoke-virtual {v3}, Landroid/content/res/ColorStateList;->getDefaultColor()I
+
+    move-result v3
+
+    invoke-static {v2, p1, v3}, Lghj;->f(IFI)I
+
+    move-result p1
+
+    invoke-static {p1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lto;->d:Lew8;
+
+    invoke-virtual {v3, v2}, Lew8;->k(Landroid/content/res/ColorStateList;)V
+
+    iget-object v2, v0, Lap;->I0:Landroid/graphics/drawable/Drawable;
+
+    if-eqz v2, :cond_0
+
+    iget-object v2, v0, Lap;->J0:Ljava/lang/Integer;
+
+    if-eqz v2, :cond_0
+
+    iget-object v4, p0, Lto;->o:Ljava/lang/Integer;
+
+    invoke-virtual {v2, v4}, Ljava/lang/Integer;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    iget-object v0, v0, Lap;->I0:Landroid/graphics/drawable/Drawable;
+
+    invoke-static {v0, p1}, Lg95;->g(Landroid/graphics/drawable/Drawable;I)V
+
+    :cond_0
+    invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-nez v0, :cond_2
+
+    iget-object v0, v3, Lew8;->a:Ldw8;
+
+    iget-object v0, v0, Ldw8;->c:Landroid/content/res/ColorStateList;
+
+    if-nez v0, :cond_1
 
     goto :goto_0
 
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    monitor-exit p0
-
-    return-void
-
-    :goto_1
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    :cond_1
+    const/4 p1, 0x0
 
     throw p1
+
+    :cond_2
+    new-instance p1, Ljava/lang/ClassCastException;
+
+    invoke-direct {p1}, Ljava/lang/ClassCastException;-><init>()V
+
+    throw p1
+
+    :cond_3
+    return-void
 .end method

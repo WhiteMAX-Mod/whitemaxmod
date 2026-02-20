@@ -11,11 +11,11 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    new-instance v0, Lrha;
+    new-instance v0, Lbka;
 
     const/4 v1, 0x2
 
-    invoke-direct {v0, v1}, Lrha;-><init>(I)V
+    invoke-direct {v0, v1}, Lbka;-><init>(I)V
 
     const-string v1, "userlifecycle"
 

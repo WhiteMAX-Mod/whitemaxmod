@@ -16,23 +16,23 @@
 
 .field analyticsSender:Lru/ok/android/externcalls/analytics/CallAnalyticsSender;
 
-.field animojiRenderProvider:Lii;
+.field animojiRenderProvider:Lwj;
 
 .field anonToken:Ljava/lang/String;
 
 .field answerAsContact:Z
 
-.field api:Lv0b;
+.field api:Ll3b;
 
 .field audioCodecs:[Ljava/lang/String;
 
 .field audioLevelFrequencyMs:I
 
-.field badNetworkIndicatorConfig:Ljh0;
+.field badNetworkIndicatorConfig:Lxi0;
 
-.field bitrates:Lok1;
+.field bitrates:Lfl1;
 
-.field cameraCapturerFactory:Lowa;
+.field cameraCapturerFactory:Lhza;
 
 .field chatId:Ljava/lang/Long;
 
@@ -60,13 +60,13 @@
 
 .field executorService:Ljava/util/concurrent/ExecutorService;
 
-.field experiments:Lpk1;
+.field experiments:Lgl1;
 
 .field externalIdsMapper:Lru/ok/android/externcalls/sdk/id/mapping/IdsMapper;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lru/ok/android/externcalls/sdk/id/mapping/IdsMapper<",
-            "Lsk1;",
+            "Ljl1;",
             "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
             ">;"
         }
@@ -77,9 +77,9 @@
 
 .field forceRelayPolicy:Z
 
-.field frameInterceptor:Ln72;
+.field frameInterceptor:Ls82;
 
-.field groupCallMediaAdaptationConfig:Lfw8;
+.field groupCallMediaAdaptationConfig:Lyx8;
 
 .field hasVideo:Z
 
@@ -94,7 +94,7 @@
         value = {
             "Lru/ok/android/externcalls/sdk/id/mapping/IdsMapper<",
             "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
-            "Lsk1;",
+            "Ljl1;",
             ">;"
         }
     .end annotation
@@ -140,9 +140,9 @@
 
 .field locale:Ljava/util/Locale;
 
-.field log:Lahd;
+.field log:Ltmd;
 
-.field logConfiguration:Lbhd;
+.field logConfiguration:Lumd;
 
 .field me:Lru/ok/android/externcalls/sdk/ConversationParticipant;
 
@@ -156,13 +156,13 @@
 
 .field payload:Ljava/lang/String;
 
-.field ptpCallMediaAdaptationConfig:Lfw8;
+.field ptpCallMediaAdaptationConfig:Lyx8;
 
-.field rotationProvider:Lz3e;
+.field rotationProvider:Lnae;
 
 .field rttRateHintConfig:Lru/ok/android/externcalls/sdk/rate/rtt/RttRateHintConfig;
 
-.field screenCapturePermissionProvider:Lnce;
+.field screenCapturePermissionProvider:Lcje;
 
 .field serverTopologySuspendBelowMinBitrate:Z
 
@@ -172,7 +172,7 @@
 
 .field stat:Lru/ok/android/externcalls/sdk/log/ExtLogger;
 
-.field timeProvider:Lxkg;
+.field timeProvider:Losg;
 
 .field version:Ljava/lang/String;
 
@@ -199,7 +199,7 @@
 
     const/4 v1, 0x0
 
-    iput-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->bitrates:Lok1;
+    iput-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->bitrates:Lfl1;
 
     iput v0, p0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->videoTracksCount:I
 
@@ -213,9 +213,9 @@
 
     iput-object v1, p0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->videoCodecs:[Ljava/lang/String;
 
-    sget-object v2, Lz3e;->W:Lfzf;
+    sget-object v2, Lnae;->V:Ll67;
 
-    iput-object v2, p0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->rotationProvider:Lz3e;
+    iput-object v2, p0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->rotationProvider:Lnae;
 
     const/4 v2, 0x1
 
@@ -285,10 +285,10 @@
     return-object p0
 .end method
 
-.method public setAnimojiDataSupplier(Lii;)Lru/ok/android/externcalls/sdk/ConversationBuilder;
+.method public setAnimojiDataSupplier(Lwj;)Lru/ok/android/externcalls/sdk/ConversationBuilder;
     .locals 0
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->animojiRenderProvider:Lii;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->animojiRenderProvider:Lwj;
 
     return-object p0
 .end method
@@ -309,10 +309,10 @@
     return-object p0
 .end method
 
-.method public setApi(Lv0b;)Lru/ok/android/externcalls/sdk/ConversationBuilder;
+.method public setApi(Ll3b;)Lru/ok/android/externcalls/sdk/ConversationBuilder;
     .locals 0
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->api:Lv0b;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->api:Ll3b;
 
     return-object p0
 .end method
@@ -341,26 +341,26 @@
     return-object p0
 .end method
 
-.method public setBadNetworkIndicatorConfig(Ljh0;)Lru/ok/android/externcalls/sdk/ConversationBuilder;
+.method public setBadNetworkIndicatorConfig(Lxi0;)Lru/ok/android/externcalls/sdk/ConversationBuilder;
     .locals 0
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->badNetworkIndicatorConfig:Ljh0;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->badNetworkIndicatorConfig:Lxi0;
 
     return-object p0
 .end method
 
-.method public setBitrates(Lok1;)Lru/ok/android/externcalls/sdk/ConversationBuilder;
+.method public setBitrates(Lfl1;)Lru/ok/android/externcalls/sdk/ConversationBuilder;
     .locals 0
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->bitrates:Lok1;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->bitrates:Lfl1;
 
     return-object p0
 .end method
 
-.method public setCameraCapturerFactory(Lowa;)Lru/ok/android/externcalls/sdk/ConversationBuilder;
+.method public setCameraCapturerFactory(Lhza;)Lru/ok/android/externcalls/sdk/ConversationBuilder;
     .locals 0
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->cameraCapturerFactory:Lowa;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->cameraCapturerFactory:Lhza;
 
     return-object p0
 .end method
@@ -501,10 +501,10 @@
     return-object p0
 .end method
 
-.method public setExperiments(Lpk1;)Lru/ok/android/externcalls/sdk/ConversationBuilder;
+.method public setExperiments(Lgl1;)Lru/ok/android/externcalls/sdk/ConversationBuilder;
     .locals 0
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->experiments:Lpk1;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->experiments:Lgl1;
 
     return-object p0
 .end method
@@ -515,7 +515,7 @@
         value = {
             "(",
             "Lru/ok/android/externcalls/sdk/id/mapping/IdsMapper<",
-            "Lsk1;",
+            "Ljl1;",
             "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
             ">;)",
             "Lru/ok/android/externcalls/sdk/ConversationBuilder;"
@@ -546,9 +546,9 @@
 .method public setFieldTrials(Ljava/lang/String;)Lru/ok/android/externcalls/sdk/ConversationBuilder;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->experiments:Lpk1;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->experiments:Lgl1;
 
-    iput-object p1, v0, Lpk1;->r:Ljava/lang/String;
+    iput-object p1, v0, Lgl1;->p:Ljava/lang/String;
 
     return-object p0
 .end method
@@ -561,16 +561,16 @@
     return-object p0
 .end method
 
-.method public setFrameInterceptor(Ln72;)Lru/ok/android/externcalls/sdk/ConversationBuilder;
+.method public setFrameInterceptor(Ls82;)Lru/ok/android/externcalls/sdk/ConversationBuilder;
     .locals 0
 
     return-object p0
 .end method
 
-.method public setGroupCallMediaAdaptationConfig(Lfw8;)Lru/ok/android/externcalls/sdk/ConversationBuilder;
+.method public setGroupCallMediaAdaptationConfig(Lyx8;)Lru/ok/android/externcalls/sdk/ConversationBuilder;
     .locals 0
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->groupCallMediaAdaptationConfig:Lfw8;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->groupCallMediaAdaptationConfig:Lyx8;
 
     return-object p0
 .end method
@@ -598,7 +598,7 @@
             "(",
             "Lru/ok/android/externcalls/sdk/id/mapping/IdsMapper<",
             "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
-            "Lsk1;",
+            "Ljl1;",
             ">;)",
             "Lru/ok/android/externcalls/sdk/ConversationBuilder;"
         }
@@ -657,18 +657,18 @@
     return-object p0
 .end method
 
-.method public setLog(Lahd;)Lru/ok/android/externcalls/sdk/ConversationBuilder;
+.method public setLog(Ltmd;)Lru/ok/android/externcalls/sdk/ConversationBuilder;
     .locals 0
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->log:Lahd;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->log:Ltmd;
 
     return-object p0
 .end method
 
-.method public setLogConfiguration(Lbhd;)Lru/ok/android/externcalls/sdk/ConversationBuilder;
+.method public setLogConfiguration(Lumd;)Lru/ok/android/externcalls/sdk/ConversationBuilder;
     .locals 0
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->logConfiguration:Lbhd;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->logConfiguration:Lumd;
 
     return-object p0
 .end method
@@ -760,10 +760,10 @@
     return-object p0
 .end method
 
-.method public setP2PCallMediaAdaptationConfig(Lfw8;)Lru/ok/android/externcalls/sdk/ConversationBuilder;
+.method public setP2PCallMediaAdaptationConfig(Lyx8;)Lru/ok/android/externcalls/sdk/ConversationBuilder;
     .locals 0
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->ptpCallMediaAdaptationConfig:Lfw8;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->ptpCallMediaAdaptationConfig:Lyx8;
 
     return-object p0
 .end method
@@ -776,10 +776,10 @@
     return-object p0
 .end method
 
-.method public setRotationProvider(Lz3e;)Lru/ok/android/externcalls/sdk/ConversationBuilder;
+.method public setRotationProvider(Lnae;)Lru/ok/android/externcalls/sdk/ConversationBuilder;
     .locals 0
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->rotationProvider:Lz3e;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->rotationProvider:Lnae;
 
     return-object p0
 .end method
@@ -792,10 +792,10 @@
     return-object p0
 .end method
 
-.method public setScreenCapturePermissionProvider(Lnce;)Lru/ok/android/externcalls/sdk/ConversationBuilder;
+.method public setScreenCapturePermissionProvider(Lcje;)Lru/ok/android/externcalls/sdk/ConversationBuilder;
     .locals 0
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->screenCapturePermissionProvider:Lnce;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->screenCapturePermissionProvider:Lcje;
 
     return-object p0
 .end method
@@ -840,10 +840,10 @@
     return-object p0
 .end method
 
-.method public setTimeProvider(Lxkg;)Lru/ok/android/externcalls/sdk/ConversationBuilder;
+.method public setTimeProvider(Losg;)Lru/ok/android/externcalls/sdk/ConversationBuilder;
     .locals 0
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->timeProvider:Lxkg;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->timeProvider:Losg;
 
     return-object p0
 .end method

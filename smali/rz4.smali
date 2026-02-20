@@ -1,35 +1,39 @@
 .class public final Lrz4;
-.super Ljava/lang/Object;
+.super Lht8;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Z
+# virtual methods
+.method public final c(Ljava/lang/Object;)F
+    .locals 1
 
+    check-cast p1, Lsz4;
 
-# direct methods
-.method public constructor <init>()V
-    .locals 2
+    iget-object p1, p1, Lsz4;->y0:Lca5;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget p1, p1, Lca5;->b:F
 
-    sget-object v0, Lj8b;->a:Lj8b;
+    const v0, 0x461c4000    # 10000.0f
 
-    invoke-virtual {v0}, Lj8b;->c()Lt5b;
+    mul-float/2addr p1, v0
 
-    move-result-object v1
+    return p1
+.end method
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+.method public final e(Ljava/lang/Object;F)V
+    .locals 1
 
-    const/4 v1, 0x1
+    check-cast p1, Lsz4;
 
-    iput-boolean v1, p0, Lrz4;->a:Z
+    const v0, 0x461c4000    # 10000.0f
 
-    invoke-virtual {v0}, Lj8b;->c()Lt5b;
+    div-float/2addr p2, v0
 
-    move-result-object v0
+    iget-object v0, p1, Lsz4;->y0:Lca5;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iput p2, v0, Lca5;->b:F
+
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     return-void
 .end method

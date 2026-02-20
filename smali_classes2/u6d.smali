@@ -1,54 +1,130 @@
-.class public abstract Lu6d;
+.class public final Lu6d;
 .super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lv6d;
 
 
-# static fields
-.field public static emoji_sprite_0:I = 0x7f080353
+# instance fields
+.field public final a:Ljava/util/ArrayList;
 
-.field public static emoji_sprite_1:I = 0x7f080354
+.field public final b:Z
 
-.field public static emoji_sprite_10:I = 0x7f080355
 
-.field public static emoji_sprite_11:I = 0x7f080356
+# direct methods
+.method public constructor <init>(Ljava/util/ArrayList;Z)V
+    .locals 0
 
-.field public static emoji_sprite_12:I = 0x7f080357
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static emoji_sprite_13:I = 0x7f080358
+    iput-object p1, p0, Lu6d;->a:Ljava/util/ArrayList;
 
-.field public static emoji_sprite_14:I = 0x7f080359
+    iput-boolean p2, p0, Lu6d;->b:Z
 
-.field public static emoji_sprite_15:I = 0x7f08035a
+    return-void
+.end method
 
-.field public static emoji_sprite_16:I = 0x7f08035b
 
-.field public static emoji_sprite_17:I = 0x7f08035c
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-.field public static emoji_sprite_18:I = 0x7f08035d
+    if-ne p0, p1, :cond_0
 
-.field public static emoji_sprite_19:I = 0x7f08035e
+    goto :goto_1
 
-.field public static emoji_sprite_2:I = 0x7f08035f
+    :cond_0
+    instance-of v0, p1, Lu6d;
 
-.field public static emoji_sprite_20:I = 0x7f080360
+    if-nez v0, :cond_1
 
-.field public static emoji_sprite_21:I = 0x7f080361
+    goto :goto_0
 
-.field public static emoji_sprite_22:I = 0x7f080362
+    :cond_1
+    check-cast p1, Lu6d;
 
-.field public static emoji_sprite_23:I = 0x7f080363
+    iget-object v0, p0, Lu6d;->a:Ljava/util/ArrayList;
 
-.field public static emoji_sprite_24:I = 0x7f080364
+    iget-object v1, p1, Lu6d;->a:Ljava/util/ArrayList;
 
-.field public static emoji_sprite_3:I = 0x7f080365
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-.field public static emoji_sprite_4:I = 0x7f080366
+    move-result v0
 
-.field public static emoji_sprite_5:I = 0x7f080367
+    if-nez v0, :cond_2
 
-.field public static emoji_sprite_6:I = 0x7f080368
+    goto :goto_0
 
-.field public static emoji_sprite_7:I = 0x7f080369
+    :cond_2
+    iget-boolean v0, p0, Lu6d;->b:Z
 
-.field public static emoji_sprite_8:I = 0x7f08036a
+    iget-boolean p1, p1, Lu6d;->b:Z
 
-.field public static emoji_sprite_9:I = 0x7f08036b
+    if-eq v0, p1, :cond_3
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_3
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lu6d;->a:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Lu6d;->b:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Success(codes="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lu6d;->a:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", fromLocalFile="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lu6d;->b:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method

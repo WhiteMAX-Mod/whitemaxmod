@@ -1,153 +1,82 @@
 .class public final Laac;
-.super Lkpc;
+.super Lpdg;
 .source "SourceFile"
+
+# interfaces
+.implements Lys6;
 
 
 # instance fields
-.field public final synthetic F0:I
+.field public final synthetic X:Lone/me/chats/picker/members/PickerMembersListWidget;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 2
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Laac;->F0:I
-
-    .line 2
-    new-instance v0, Landroid/widget/TextView;
-
-    invoke-direct {v0, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
-
-    .line 3
-    invoke-direct {p0, v0}, Ltsd;-><init>(Landroid/view/View;)V
-
-    .line 4
-    new-instance p1, Landroid/view/ViewGroup$LayoutParams;
-
-    const/4 v1, -0x2
-
-    invoke-direct {p1, v1, v1}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Landroid/view/View;I)V
+.method public constructor <init>(Lone/me/chats/picker/members/PickerMembersListWidget;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    .line 1
-    iput p2, p0, Laac;->F0:I
+    iput-object p1, p0, Laac;->X:Lone/me/chats/picker/members/PickerMembersListWidget;
 
-    invoke-direct {p0, p1}, Ltsd;-><init>(Landroid/view/View;)V
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final y(Lud8;)V
-    .locals 5
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Laac;->F0:I
+    check-cast p1, Ljava/util/List;
 
-    const/4 v1, 0x0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    const-string v2, ""
-
-    iget-object v3, p0, Ltsd;->a:Landroid/view/View;
-
-    packed-switch v0, :pswitch_data_0
-
-    check-cast p1, Lr8f;
-
-    return-void
-
-    :pswitch_0
-    check-cast p1, Lbje;
-
-    check-cast v3, Landroid/widget/TextView;
-
-    iget-object v0, p1, Lbje;->a:Llhg;
-
-    invoke-virtual {v3}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v4
-
-    invoke-virtual {v0, v4}, Lqhg;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    move-object v2, v0
-
-    :goto_0
-    invoke-virtual {v3, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    new-instance v0, Loqd;
-
-    const/4 v2, 0x2
-
-    invoke-direct {v0, p1, v1, v2}, Loqd;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
-
-    invoke-static {v0, v3}, Lp6j;->b(Ldr6;Landroid/view/View;)V
-
-    sget-object v0, Lr1h;->a:Lrhg;
-
-    iget-object p1, p1, Lbje;->c:Lrhg;
-
-    invoke-static {p1, v3}, Lrhg;->d(Lrhg;Landroid/widget/TextView;)V
-
-    return-void
-
-    :pswitch_1
-    check-cast p1, Lhac;
-
-    check-cast v3, Landroid/widget/TextView;
-
-    iget-object p1, p1, Lhac;->a:Llhg;
-
-    invoke-virtual {v3}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Lqhg;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
+    invoke-virtual {p0, p1, p2}, Laac;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    if-nez p1, :cond_1
+    check-cast p1, Laac;
 
-    goto :goto_1
+    sget-object p2, Lmah;->a:Lmah;
 
-    :cond_1
-    move-object v2, p1
+    invoke-virtual {p1, p2}, Laac;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :goto_1
-    invoke-virtual {v3, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    return-object p2
+.end method
 
-    new-instance p1, Lz9c;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    const/4 v0, 0x3
+    new-instance v0, Laac;
 
-    const/4 v2, 0x0
+    iget-object v1, p0, Laac;->X:Lone/me/chats/picker/members/PickerMembersListWidget;
 
-    invoke-direct {p1, v0, v1, v2}, Lz9c;-><init>(ILkotlin/coroutines/Continuation;I)V
+    invoke-direct {v0, v1, p2}, Laac;-><init>(Lone/me/chats/picker/members/PickerMembersListWidget;Lkotlin/coroutines/Continuation;)V
 
-    invoke-static {p1, v3}, Lp6j;->b(Ldr6;Landroid/view/View;)V
+    iput-object p1, v0, Laac;->o:Ljava/lang/Object;
 
-    return-void
+    return-object v0
+.end method
 
-    nop
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    iget-object v0, p0, Laac;->o:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/List;
+
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Laac;->X:Lone/me/chats/picker/members/PickerMembersListWidget;
+
+    iget-object p1, p1, Lone/me/chats/picker/members/PickerMembersListWidget;->s0:La8c;
+
+    invoke-virtual {p1, v0}, Lfg8;->F(Ljava/util/List;)V
+
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
 .end method

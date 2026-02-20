@@ -1,31 +1,20 @@
 .class public abstract Ldo0;
-.super Ljava/lang/Object;
+.super Ljava/util/concurrent/atomic/AtomicInteger;
 .source "SourceFile"
 
+# interfaces
+.implements Ld8d;
 
-# static fields
-.field public static final synthetic a:I
 
+# virtual methods
+.method public final offer(Ljava/lang/Object;)Z
+    .locals 1
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 3
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
 
-    new-instance v0, Ljava/math/BigInteger;
+    const-string v0, "Should not be called!"
 
-    const-string v1, "16a09e667f3bcc908b2fb1366ea957d3e3adec17512775099da2f590b0667322a"
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    const/16 v2, 0x10
-
-    invoke-direct {v0, v1, v2}, Ljava/math/BigInteger;-><init>(Ljava/lang/String;I)V
-
-    const-wide/high16 v0, 0x4024000000000000L    # 10.0
-
-    invoke-static {v0, v1}, Ljava/lang/Math;->log(D)D
-
-    const-wide/high16 v0, 0x4000000000000000L    # 2.0
-
-    invoke-static {v0, v1}, Ljava/lang/Math;->log(D)D
-
-    return-void
+    throw p1
 .end method

@@ -1,9 +1,9 @@
 .class public final Lcom/facebook/soloader/b;
-.super Lrif;
+.super Llqf;
 .source "SourceFile"
 
 # interfaces
-.implements Lmrd;
+.implements Lixd;
 
 
 # instance fields
@@ -130,7 +130,7 @@
     :cond_1
     const-string v1, "!/lib/"
 
-    invoke-static {p0, v1}, Lj27;->o(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {p0, v1}, Ltx8;->p(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object p0
 
@@ -183,7 +183,7 @@
 
 
 # virtual methods
-.method public final a(Landroid/content/Context;)Lrif;
+.method public final a(Landroid/content/Context;)Llqf;
     .locals 1
 
     new-instance v0, Lcom/facebook/soloader/b;
@@ -222,7 +222,7 @@
 
     move-object/from16 v2, p1
 
-    sget-object v0, Lcom/facebook/soloader/SoLoader;->b:Lnre;
+    sget-object v0, Lcom/facebook/soloader/SoLoader;->b:Lb5b;
 
     if-eqz v0, :cond_9
 
@@ -348,14 +348,14 @@
 
     if-eqz v12, :cond_2
 
-    new-instance v12, Lfe5;
+    new-instance v12, Lwf5;
 
-    invoke-direct {v12, v7, v11}, Lfe5;-><init>(Ljava/util/zip/ZipFile;Ljava/util/zip/ZipEntry;)V
+    invoke-direct {v12, v7, v11}, Lwf5;-><init>(Ljava/util/zip/ZipFile;Ljava/util/zip/ZipEntry;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
     :try_start_1
-    invoke-static {v2, v12}, Lcom/facebook/soloader/d;->a(Ljava/lang/String;Lde5;)[Ljava/lang/String;
+    invoke-static {v2, v12}, Lcom/facebook/soloader/d;->a(Ljava/lang/String;Luf5;)[Ljava/lang/String;
 
     move-result-object v11
 
@@ -395,7 +395,7 @@
 
     :cond_4
     :try_start_2
-    invoke-virtual {v12}, Lfe5;->close()V
+    invoke-virtual {v12}, Lwf5;->close()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
@@ -403,7 +403,7 @@
 
     :goto_4
     :try_start_3
-    invoke-virtual {v12}, Lfe5;->close()V
+    invoke-virtual {v12}, Lwf5;->close()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
@@ -508,9 +508,9 @@
 
     or-int/lit8 v4, v4, 0x4
 
-    sget-object v5, Lcom/facebook/soloader/SoLoader;->b:Lnre;
+    sget-object v5, Lcom/facebook/soloader/SoLoader;->b:Lb5b;
 
-    invoke-virtual {v5, v4, v0}, Lnre;->H(ILjava/lang/String;)V
+    invoke-virtual {v5, v4, v0}, Lb5b;->A(ILjava/lang/String;)V
     :try_end_6
     .catch Ljava/lang/UnsatisfiedLinkError; {:try_start_6 .. :try_end_6} :catch_0
 
@@ -530,7 +530,7 @@
 
     move-result-object v0
 
-    invoke-static {v9, v0}, Li5j;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v9, v0}, Lzej;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x1
 
@@ -578,7 +578,7 @@
 
     move-result-object v0
 
-    invoke-static {v9, v0}, Li5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v9, v0}, Lzej;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 

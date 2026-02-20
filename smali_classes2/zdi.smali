@@ -1,81 +1,152 @@
-.class public final Lzdi;
-.super Lru/ok/tamtam/exception/IssueKeyException;
+.class public final synthetic Lzdi;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lex6;
 
-# instance fields
-.field public final synthetic b:I
 
-.field public final c:Ljava/lang/Throwable;
+# static fields
+.field public static final a:Lzdi;
+
+.field private static final descriptor:Lzwe;
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/Throwable;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    iput p4, p0, Lzdi;->b:I
+    new-instance v0, Lzdi;
 
-    packed-switch p4, :pswitch_data_0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const-string p4, "Fail decryption, botId:"
+    sput-object v0, Lzdi;->a:Lzdi;
 
-    invoke-static {p1, p2, p4}, Lpqb;->j(JLjava/lang/String;)Ljava/lang/String;
+    new-instance v1, Lxgc;
 
-    move-result-object p1
+    const-string v2, "one.me.webapp.domain.jsbridge.delegates.link.WebAppOpenLinkRequest"
 
-    const-string p2, "ONEME-31137"
+    const/4 v3, 0x1
 
-    invoke-direct {p0, p2, p1, p3}, Lru/ok/tamtam/exception/IssueKeyException;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-direct {v1, v2, v0, v3}, Lxgc;-><init>(Ljava/lang/String;Lex6;I)V
 
-    iput-object p3, p0, Lzdi;->c:Ljava/lang/Throwable;
+    const-string v0, "url"
 
-    return-void
+    const/4 v2, 0x0
 
-    :pswitch_0
-    const-string p4, "Fail encryption, botId:"
+    invoke-virtual {v1, v0, v2}, Lxgc;->k(Ljava/lang/String;Z)V
 
-    invoke-static {p1, p2, p4}, Lpqb;->j(JLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string p2, "ONEME-31137"
-
-    invoke-direct {p0, p2, p1, p3}, Lru/ok/tamtam/exception/IssueKeyException;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    iput-object p3, p0, Lzdi;->c:Ljava/lang/Throwable;
+    sput-object v1, Lzdi;->descriptor:Lzwe;
 
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final getCause()Ljava/lang/Throwable;
+.method public final a(Lj6g;Ljava/lang/Object;)V
+    .locals 2
+
+    check-cast p2, Lbei;
+
+    sget-object v0, Lzdi;->descriptor:Lzwe;
+
+    invoke-virtual {p1, v0}, Lj6g;->a(Lzwe;)Lj6g;
+
+    move-result-object p1
+
+    iget-object p2, p2, Lbei;->a:Ljava/lang/String;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p1, v0, v1, p2}, Lj6g;->t(Lzwe;ILjava/lang/String;)V
+
+    invoke-virtual {p1}, Lj6g;->u()V
+
+    return-void
+.end method
+
+.method public final b(Lzm4;)Ljava/lang/Object;
+    .locals 8
+
+    sget-object v0, Lzdi;->descriptor:Lzwe;
+
+    invoke-interface {p1, v0}, Lzm4;->r(Lzwe;)Liq3;
+
+    move-result-object p1
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    move v4, v1
+
+    move v5, v2
+
+    :goto_0
+    if-eqz v4, :cond_2
+
+    invoke-interface {p1, v0}, Liq3;->e(Lzwe;)I
+
+    move-result v6
+
+    const/4 v7, -0x1
+
+    if-eq v6, v7, :cond_1
+
+    if-nez v6, :cond_0
+
+    invoke-interface {p1, v0, v2}, Liq3;->j(Lzwe;I)Ljava/lang/String;
+
+    move-result-object v3
+
+    move v5, v1
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Lkotlinx/serialization/UnknownFieldException;
+
+    invoke-direct {p1, v6}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
+
+    throw p1
+
+    :cond_1
+    move v4, v2
+
+    goto :goto_0
+
+    :cond_2
+    invoke-interface {p1, v0}, Liq3;->m(Lzwe;)V
+
+    new-instance p1, Lbei;
+
+    invoke-direct {p1, v5, v3}, Lbei;-><init>(ILjava/lang/String;)V
+
+    return-object p1
+.end method
+
+.method public final c()[Lw58;
+    .locals 3
+
+    const/4 v0, 0x1
+
+    new-array v0, v0, [Lw58;
+
+    sget-object v1, Lz6g;->a:Lz6g;
+
+    const/4 v2, 0x0
+
+    aput-object v1, v0, v2
+
+    return-object v0
+.end method
+
+.method public final d()Lzwe;
     .locals 1
 
-    iget v0, p0, Lzdi;->b:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lzdi;->c:Ljava/lang/Throwable;
+    sget-object v0, Lzdi;->descriptor:Lzwe;
 
     return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Lzdi;->c:Ljava/lang/Throwable;
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

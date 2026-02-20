@@ -1,147 +1,146 @@
-.class public final La43;
+.class public abstract La43;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:La43;
-
-
-# instance fields
-.field public final a:Ljava/lang/Object;
-
-.field public final b:Z
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public static a([B)Lb43;
+    .locals 21
 
-    new-instance v0, La43;
+    new-instance v0, Lru/ok/tamtam/nano/Tasks$ChatUpdate;
 
-    sget-object v1, Ldh5;->a:Ldh5;
+    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$ChatUpdate;-><init>()V
 
-    const/4 v2, 0x1
+    move-object/from16 v1, p0
 
-    invoke-direct {v0, v1, v2}, La43;-><init>(Ljava/util/List;Z)V
-
-    sput-object v0, La43;->c:La43;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/util/List;Z)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, La43;->a:Ljava/lang/Object;
-
-    iput-boolean p2, p0, La43;->b:Z
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
-
-    if-ne p0, p1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, La43;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, La43;
-
-    iget-object v0, p0, La43;->a:Ljava/lang/Object;
-
-    iget-object v1, p1, La43;->a:Ljava/lang/Object;
-
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-boolean v0, p0, La43;->b:Z
-
-    iget-boolean p1, p1, La43;->b:Z
-
-    if-eq v0, p1, :cond_3
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_3
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, La43;->a:Ljava/lang/Object;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean v1, p0, La43;->b:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ChatsList(chats="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, La43;->a:Ljava/lang/Object;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", hasMore="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, La43;->b:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :try_start_0
+    invoke-static {v0, v1}, Lhr9;->mergeFrom(Lhr9;[B)Lhr9;
 
     move-result-object v0
 
-    return-object v0
+    check-cast v0, Lru/ok/tamtam/nano/Tasks$ChatUpdate;
+    :try_end_0
+    .catch Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException; {:try_start_0 .. :try_end_0} :catch_0
+
+    iget-object v1, v0, Lru/ok/tamtam/nano/Tasks$ChatUpdate;->crop:Lru/ok/tamtam/nano/Tasks$Rect;
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_0
+
+    new-instance v3, Lq30;
+
+    iget v4, v1, Lru/ok/tamtam/nano/Tasks$Rect;->left:F
+
+    iget v5, v1, Lru/ok/tamtam/nano/Tasks$Rect;->top:F
+
+    iget v6, v1, Lru/ok/tamtam/nano/Tasks$Rect;->right:F
+
+    iget v7, v1, Lru/ok/tamtam/nano/Tasks$Rect;->bottom:F
+
+    const/4 v8, 0x2
+
+    invoke-direct/range {v3 .. v8}, Lq30;-><init>(FFFFI)V
+
+    move-object/from16 v18, v3
+
+    goto :goto_0
+
+    :cond_0
+    move-object/from16 v18, v2
+
+    :goto_0
+    new-instance v4, Lb43;
+
+    iget-wide v5, v0, Lru/ok/tamtam/nano/Tasks$ChatUpdate;->requestId:J
+
+    iget-wide v7, v0, Lru/ok/tamtam/nano/Tasks$ChatUpdate;->chatId:J
+
+    iget-wide v9, v0, Lru/ok/tamtam/nano/Tasks$ChatUpdate;->chatServerId:J
+
+    iget-boolean v1, v0, Lru/ok/tamtam/nano/Tasks$ChatUpdate;->descriptionIsNull:Z
+
+    if-eqz v1, :cond_1
+
+    move-object v14, v2
+
+    goto :goto_1
+
+    :cond_1
+    iget-object v1, v0, Lru/ok/tamtam/nano/Tasks$ChatUpdate;->description:Ljava/lang/String;
+
+    move-object v14, v1
+
+    :goto_1
+    iget-boolean v1, v0, Lru/ok/tamtam/nano/Tasks$ChatUpdate;->themeIsNull:Z
+
+    if-eqz v1, :cond_2
+
+    move-object/from16 v16, v2
+
+    goto :goto_2
+
+    :cond_2
+    iget-object v1, v0, Lru/ok/tamtam/nano/Tasks$ChatUpdate;->theme:Ljava/lang/String;
+
+    move-object/from16 v16, v1
+
+    :goto_2
+    iget-boolean v1, v0, Lru/ok/tamtam/nano/Tasks$ChatUpdate;->photoTokenIsNull:Z
+
+    if-eqz v1, :cond_3
+
+    move-object/from16 v17, v2
+
+    goto :goto_3
+
+    :cond_3
+    iget-object v1, v0, Lru/ok/tamtam/nano/Tasks$ChatUpdate;->photoToken:Ljava/lang/String;
+
+    move-object/from16 v17, v1
+
+    :goto_3
+    iget-boolean v1, v0, Lru/ok/tamtam/nano/Tasks$ChatUpdate;->pinMessageIdIsNull:Z
+
+    if-eqz v1, :cond_4
+
+    :goto_4
+    move-object/from16 v19, v2
+
+    goto :goto_5
+
+    :cond_4
+    iget-wide v1, v0, Lru/ok/tamtam/nano/Tasks$ChatUpdate;->pinMessageId:J
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    goto :goto_4
+
+    :goto_5
+    iget-boolean v0, v0, Lru/ok/tamtam/nano/Tasks$ChatUpdate;->notifyPin:Z
+
+    const/4 v11, 0x0
+
+    const/4 v12, 0x0
+
+    const/4 v13, 0x0
+
+    const/4 v15, 0x0
+
+    move/from16 v20, v0
+
+    invoke-direct/range {v4 .. v20}, Lb43;-><init>(JJJILjava/lang/String;ZLjava/lang/String;Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;Lq30;Ljava/lang/Long;Z)V
+
+    return-object v4
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Lru/ok/tamtam/nano/ProtoException;
+
+    invoke-direct {v1, v0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v1
 .end method

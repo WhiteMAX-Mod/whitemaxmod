@@ -2,23 +2,30 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lds5;
 
+# instance fields
+.field public final a:Ljava/util/ArrayList;
 
-# static fields
-.field public static final a:Las5;
+.field public final b:Lfjf;
+
+.field public final c:I
+
+.field public final d:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Ljava/util/ArrayList;Lfjf;IJ)V
+    .locals 0
 
-    new-instance v0, Las5;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Las5;->a:Ljava/util/ArrayList;
 
-    sput-object v0, Las5;->a:Las5;
+    iput-object p2, p0, Las5;->b:Lfjf;
+
+    iput p3, p0, Las5;->c:I
+
+    iput-wide p4, p0, Las5;->d:J
 
     return-void
 .end method

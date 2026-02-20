@@ -1,177 +1,357 @@
 .class public final Llka;
-.super Lpx3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final f:Landroid/net/ConnectivityManager;
+.field public final synthetic a:I
 
-.field public final g:Lov3;
+.field public final b:I
+
+.field public c:Z
+
+.field public d:Z
+
+.field public e:[B
+
+.field public f:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lbg8;)V
-    .locals 0
+.method public constructor <init>(II)V
+    .locals 1
 
-    invoke-direct {p0, p1, p2}, Lpx3;-><init>(Landroid/content/Context;Lbg8;)V
+    iput p2, p0, Llka;->a:I
 
-    iget-object p1, p0, Lpx3;->b:Ljava/lang/Object;
+    packed-switch p2, :pswitch_data_0
 
-    check-cast p1, Landroid/content/Context;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string p2, "connectivity"
+    iput p1, p0, Llka;->b:I
 
-    invoke-virtual {p1, p2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    const/16 p1, 0x83
 
-    move-result-object p1
+    new-array p1, p1, [B
 
-    check-cast p1, Landroid/net/ConnectivityManager;
+    iput-object p1, p0, Llka;->e:[B
 
-    iput-object p1, p0, Llka;->f:Landroid/net/ConnectivityManager;
+    const/4 p2, 0x2
 
-    new-instance p1, Lov3;
+    const/4 v0, 0x1
 
-    const/4 p2, 0x1
-
-    invoke-direct {p1, p2, p0}, Lov3;-><init>(ILjava/lang/Object;)V
-
-    iput-object p1, p0, Llka;->g:Lov3;
+    aput-byte v0, p1, p2
 
     return-void
+
+    :pswitch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Llka;->b:I
+
+    const/16 p1, 0x83
+
+    new-array p1, p1, [B
+
+    iput-object p1, p0, Llka;->e:[B
+
+    const/4 p2, 0x2
+
+    const/4 v0, 0x1
+
+    aput-byte v0, p1, p2
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final i()Ljava/lang/Object;
-    .locals 1
+.method public final a(I[BI)V
+    .locals 4
 
-    iget-object v0, p0, Llka;->f:Landroid/net/ConnectivityManager;
+    iget v0, p0, Llka;->a:I
 
-    invoke-static {v0}, Lmka;->a(Landroid/net/ConnectivityManager;)Lkka;
+    packed-switch v0, :pswitch_data_0
+
+    iget-boolean v0, p0, Llka;->c:Z
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sub-int/2addr p3, p1
+
+    iget-object v0, p0, Llka;->e:[B
+
+    array-length v1, v0
+
+    iget v2, p0, Llka;->f:I
+
+    add-int v3, v2, p3
+
+    if-ge v1, v3, :cond_1
+
+    add-int/2addr v2, p3
+
+    mul-int/lit8 v2, v2, 0x2
+
+    invoke-static {v0, v2}, Ljava/util/Arrays;->copyOf([BI)[B
 
     move-result-object v0
 
-    return-object v0
-.end method
+    iput-object v0, p0, Llka;->e:[B
 
-.method public final r()V
-    .locals 4
+    :cond_1
+    iget-object v0, p0, Llka;->e:[B
 
-    const-string v0, "Received exception while registering network callback"
+    iget v1, p0, Llka;->f:I
 
-    :try_start_0
-    invoke-static {}, Lkgi;->g()Lkgi;
+    invoke-static {p2, p1, v0, v1, p3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    move-result-object v1
+    iget p1, p0, Llka;->f:I
 
-    sget-object v2, Lmka;->a:Ljava/lang/String;
+    add-int/2addr p1, p3
 
-    const-string v3, "Registering network callback"
+    iput p1, p0, Llka;->f:I
 
-    invoke-virtual {v1, v2, v3}, Lkgi;->c(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v1, p0, Llka;->f:Landroid/net/ConnectivityManager;
-
-    iget-object v2, p0, Llka;->g:Lov3;
-
-    invoke-static {v1, v2}, Ldka;->a(Landroid/net/ConnectivityManager;Landroid/net/ConnectivityManager$NetworkCallback;)V
-    :try_end_0
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
-
+    :goto_0
     return-void
 
-    :catch_0
-    move-exception v1
+    :pswitch_0
+    iget-boolean v0, p0, Llka;->c:Z
 
-    goto :goto_0
-
-    :catch_1
-    move-exception v1
+    if-nez v0, :cond_2
 
     goto :goto_1
 
-    :goto_0
-    invoke-static {}, Lkgi;->g()Lkgi;
+    :cond_2
+    sub-int/2addr p3, p1
 
-    move-result-object v2
+    iget-object v0, p0, Llka;->e:[B
 
-    sget-object v3, Lmka;->a:Ljava/lang/String;
+    array-length v1, v0
 
-    invoke-virtual {v2, v3, v0, v1}, Lkgi;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    iget v2, p0, Llka;->f:I
 
-    goto :goto_2
+    add-int v3, v2, p3
+
+    if-ge v1, v3, :cond_3
+
+    add-int/2addr v2, p3
+
+    mul-int/lit8 v2, v2, 0x2
+
+    invoke-static {v0, v2}, Ljava/util/Arrays;->copyOf([BI)[B
+
+    move-result-object v0
+
+    iput-object v0, p0, Llka;->e:[B
+
+    :cond_3
+    iget-object v0, p0, Llka;->e:[B
+
+    iget v1, p0, Llka;->f:I
+
+    invoke-static {p2, p1, v0, v1, p3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    iget p1, p0, Llka;->f:I
+
+    add-int/2addr p1, p3
+
+    iput p1, p0, Llka;->f:I
 
     :goto_1
-    invoke-static {}, Lkgi;->g()Lkgi;
-
-    move-result-object v2
-
-    sget-object v3, Lmka;->a:Ljava/lang/String;
-
-    invoke-virtual {v2, v3, v0, v1}, Lkgi;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :goto_2
     return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final s()V
-    .locals 4
+.method public final b(I)Z
+    .locals 2
 
-    const-string v0, "Received exception while unregistering network callback"
+    iget v0, p0, Llka;->a:I
 
-    :try_start_0
-    invoke-static {}, Lkgi;->g()Lkgi;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object v1
+    iget-boolean v0, p0, Llka;->c:Z
 
-    sget-object v2, Lmka;->a:Ljava/lang/String;
+    const/4 v1, 0x0
 
-    const-string v3, "Unregistering network callback"
-
-    invoke-virtual {v1, v2, v3}, Lkgi;->c(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v1, p0, Llka;->f:Landroid/net/ConnectivityManager;
-
-    iget-object v2, p0, Llka;->g:Lov3;
-
-    invoke-static {v1, v2}, Lbka;->c(Landroid/net/ConnectivityManager;Landroid/net/ConnectivityManager$NetworkCallback;)V
-    :try_end_0
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-void
-
-    :catch_0
-    move-exception v1
+    if-nez v0, :cond_0
 
     goto :goto_0
 
-    :catch_1
-    move-exception v1
+    :cond_0
+    iget v0, p0, Llka;->f:I
+
+    sub-int/2addr v0, p1
+
+    iput v0, p0, Llka;->f:I
+
+    iput-boolean v1, p0, Llka;->c:Z
+
+    const/4 v1, 0x1
+
+    iput-boolean v1, p0, Llka;->d:Z
+
+    :goto_0
+    return v1
+
+    :pswitch_0
+    iget-boolean v0, p0, Llka;->c:Z
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_1
 
     goto :goto_1
 
-    :goto_0
-    invoke-static {}, Lkgi;->g()Lkgi;
+    :cond_1
+    iget v0, p0, Llka;->f:I
 
-    move-result-object v2
+    sub-int/2addr v0, p1
 
-    sget-object v3, Lmka;->a:Ljava/lang/String;
+    iput v0, p0, Llka;->f:I
 
-    invoke-virtual {v2, v3, v0, v1}, Lkgi;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    iput-boolean v1, p0, Llka;->c:Z
 
-    goto :goto_2
+    const/4 v1, 0x1
+
+    iput-boolean v1, p0, Llka;->d:Z
 
     :goto_1
-    invoke-static {}, Lkgi;->g()Lkgi;
+    return v1
 
-    move-result-object v2
+    nop
 
-    sget-object v3, Lmka;->a:Ljava/lang/String;
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    invoke-virtual {v2, v3, v0, v1}, Lkgi;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+.method public final c()V
+    .locals 1
 
-    :goto_2
+    iget v0, p0, Llka;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Llka;->c:Z
+
+    iput-boolean v0, p0, Llka;->d:Z
+
     return-void
+
+    :pswitch_0
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Llka;->c:Z
+
+    iput-boolean v0, p0, Llka;->d:Z
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final d(I)V
+    .locals 3
+
+    iget v0, p0, Llka;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-boolean v0, p0, Llka;->c:Z
+
+    const/4 v1, 0x1
+
+    xor-int/2addr v0, v1
+
+    invoke-static {v0}, Lxej;->g(Z)V
+
+    iget v0, p0, Llka;->b:I
+
+    const/4 v2, 0x0
+
+    if-ne p1, v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    move v1, v2
+
+    :goto_0
+    iput-boolean v1, p0, Llka;->c:Z
+
+    if-eqz v1, :cond_1
+
+    const/4 p1, 0x3
+
+    iput p1, p0, Llka;->f:I
+
+    iput-boolean v2, p0, Llka;->d:Z
+
+    :cond_1
+    return-void
+
+    :pswitch_0
+    iget-boolean v0, p0, Llka;->c:Z
+
+    const/4 v1, 0x1
+
+    xor-int/2addr v0, v1
+
+    invoke-static {v0}, Lvej;->e(Z)V
+
+    iget v0, p0, Llka;->b:I
+
+    const/4 v2, 0x0
+
+    if-ne p1, v0, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    move v1, v2
+
+    :goto_1
+    iput-boolean v1, p0, Llka;->c:Z
+
+    if-eqz v1, :cond_3
+
+    const/4 p1, 0x3
+
+    iput p1, p0, Llka;->f:I
+
+    iput-boolean v2, p0, Llka;->d:Z
+
+    :cond_3
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

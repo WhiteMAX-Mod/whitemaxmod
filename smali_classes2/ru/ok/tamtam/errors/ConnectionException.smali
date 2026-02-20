@@ -27,13 +27,15 @@
 
 # direct methods
 .method public constructor <init>()V
-    .locals 1
+    .locals 2
 
-    new-instance v0, Libg;
+    new-instance v0, Lxig;
 
-    invoke-direct {v0}, Libg;-><init>()V
+    const/4 v1, 0x0
 
-    invoke-direct {p0, v0}, Lru/ok/tamtam/errors/TamErrorException;-><init>(Lnbg;)V
+    invoke-direct {v0, v1}, Lxig;-><init>(Ljava/lang/String;)V
+
+    invoke-direct {p0, v0}, Lru/ok/tamtam/errors/TamErrorException;-><init>(Lcjg;)V
 
     return-void
 .end method

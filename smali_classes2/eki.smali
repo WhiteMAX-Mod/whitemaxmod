@@ -1,180 +1,154 @@
 .class public final Leki;
-.super Ljava/lang/Object;
+.super Lpdg;
 .source "SourceFile"
 
 # interfaces
-.implements Lysg;
+.implements Lys6;
 
 
 # instance fields
-.field public final a:Lsi4;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final b:Lysg;
+.field public final synthetic Y:Llki;
+
+.field public final synthetic Z:Lbki;
+
+.field public o:I
+
+.field public final synthetic s0:Loji;
 
 
 # direct methods
-.method public constructor <init>(Lsi4;Lysg;)V
+.method public constructor <init>(Loji;Lbki;Llki;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p3, p0, Leki;->Y:Llki;
 
-    iput-object p1, p0, Leki;->a:Lsi4;
+    iput-object p2, p0, Leki;->Z:Lbki;
 
-    iput-object p2, p0, Leki;->b:Lysg;
+    iput-object p1, p0, Leki;->s0:Loji;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p4}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c(Lsi4;Laj4;Z)V
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object p1, p0, Leki;->b:Lysg;
+    check-cast p1, Ljava/lang/Throwable;
 
-    iget-object v0, p0, Leki;->a:Lsi4;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-interface {p1, v0, p2, p3}, Lysg;->c(Lsi4;Laj4;Z)V
+    invoke-virtual {p0, p1, p2}, Leki;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    return-void
-.end method
+    move-result-object p1
 
-.method public final d(Lsi4;Laj4;ZI)V
-    .locals 1
-
-    iget-object p1, p0, Leki;->b:Lysg;
-
-    iget-object v0, p0, Leki;->a:Lsi4;
-
-    invoke-interface {p1, v0, p2, p3, p4}, Lysg;->d(Lsi4;Laj4;ZI)V
-
-    return-void
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Leki;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
     check-cast p1, Leki;
 
-    iget-object v1, p0, Leki;->a:Lsi4;
+    sget-object p2, Lmah;->a:Lmah;
 
-    iget-object v3, p1, Leki;->a:Lsi4;
+    invoke-virtual {p1, p2}, Leki;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-result-object p1
 
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Leki;->b:Lysg;
-
-    iget-object p1, p1, Leki;->b:Lysg;
-
-    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
+    return-object p1
 .end method
 
-.method public final h(Lsi4;Laj4;Z)V
-    .locals 1
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 4
 
-    iget-object p1, p0, Leki;->b:Lysg;
+    new-instance v0, Leki;
 
-    iget-object v0, p0, Leki;->a:Lsi4;
+    iget-object v1, p0, Leki;->Z:Lbki;
 
-    invoke-interface {p1, v0, p2, p3}, Lysg;->h(Lsi4;Laj4;Z)V
+    iget-object v2, p0, Leki;->s0:Loji;
 
-    return-void
-.end method
+    iget-object v3, p0, Leki;->Y:Llki;
 
-.method public final hashCode()I
-    .locals 2
+    invoke-direct {v0, v2, v1, v3, p2}, Leki;-><init>(Loji;Lbki;Llki;Lkotlin/coroutines/Continuation;)V
 
-    iget-object v0, p0, Leki;->a:Lsi4;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Leki;->b:Lysg;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final i(Lsi4;Laj4;Z)V
-    .locals 1
-
-    iget-object p1, p0, Leki;->b:Lysg;
-
-    iget-object v0, p0, Leki;->a:Lsi4;
-
-    invoke-interface {p1, v0, p2, p3}, Lysg;->i(Lsi4;Laj4;Z)V
-
-    return-void
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "WrapperTransferListener(dataSource="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Leki;->a:Lsi4;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", listener="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Leki;->b:Lysg;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    iput-object p1, v0, Leki;->X:Ljava/lang/Object;
 
     return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
+
+    iget-object v0, p0, Leki;->X:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/Throwable;
+
+    iget v1, p0, Leki;->o:I
+
+    const/4 v2, 0x1
+
+    if-eqz v1, :cond_1
+
+    if-ne v1, v2, :cond_0
+
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    invoke-static {v0}, Llki;->f(Ljava/lang/Throwable;)Ly28;
+
+    move-result-object v3
+
+    iget-object p1, p0, Leki;->Y:Llki;
+
+    invoke-virtual {p1}, Llki;->g()Lvm3;
+
+    move-result-object v1
+
+    iget-object p1, p1, Llki;->e:Lmx0;
+
+    iget-object v0, p0, Leki;->s0:Loji;
+
+    iget-object v5, v0, Loji;->b:Ljava/lang/String;
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Leki;->X:Ljava/lang/Object;
+
+    iput v2, p0, Leki;->o:I
+
+    iget-object v4, p0, Leki;->Z:Lbki;
+
+    move-object v6, p0
+
+    move-object v2, p1
+
+    invoke-virtual/range {v1 .. v6}, Lvm3;->a(Ltc2;Ly28;Lrdi;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lod4;->a:Lod4;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
 .end method

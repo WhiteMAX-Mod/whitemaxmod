@@ -1,35 +1,25 @@
-.class public abstract synthetic Lpl7;
+.class public final Lpl7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+# virtual methods
+.method public final serializer()Lw58;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lw58;"
+        }
+    .end annotation
 
+    sget-object v0, Lql7;->a:Ljava/lang/Object;
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 3
-
-    invoke-static {}, Lt5a;->values()[Lt5a;
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    array-length v0, v0
+    check-cast v0, Lw58;
 
-    new-array v0, v0, [I
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    sput-object v0, Lpl7;->$EnumSwitchMapping$0:[I
-
-    return-void
+    return-object v0
 .end method

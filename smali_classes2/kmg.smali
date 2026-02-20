@@ -1,51 +1,23 @@
-.class public final Lkmg;
-.super Lo84;
+.class public abstract Lkmg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic X:Lxmg;
-
-.field public Y:I
-
-.field public d:Lp0b;
-
-.field public synthetic o:Ljava/lang/Object;
+# static fields
+.field public static final a:Ljava/util/concurrent/atomic/AtomicBoolean;
 
 
 # direct methods
-.method public constructor <init>(Lxmg;Lo84;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lkmg;->X:Lxmg;
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
+
+    sput-object v0, Lkmg;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Lkmg;->o:Ljava/lang/Object;
-
-    iget p1, p0, Lkmg;->Y:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lkmg;->Y:I
-
-    iget-object p1, p0, Lkmg;->X:Lxmg;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lxmg;->c(Lp0b;Lo84;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
 .end method

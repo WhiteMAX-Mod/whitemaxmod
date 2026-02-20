@@ -1,248 +1,178 @@
 .class public final Lpu6;
-.super Lp6g;
+.super Lqu6;
 .source "SourceFile"
 
-# interfaces
-.implements Lbr6;
 
+# static fields
+.field public static final e:Lpu6;
 
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public static final f:Landroid/net/Uri;
 
-.field public final synthetic Y:Lbv6;
+.field public static final g:Ljava/lang/String;
 
-.field public o:I
+.field public static final h:Ljava/lang/String;
+
+.field public static final i:Ljava/lang/String;
+
+.field public static final j:Ljava/lang/String;
+
+.field public static final k:Ljava/lang/String;
+
+.field public static final l:Ljava/lang/String;
+
+.field public static final m:Ljava/lang/String;
+
+.field public static final n:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lbv6;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lpu6;->Y:Lbv6;
+    new-instance v0, Lpu6;
 
-    const/4 p1, 0x2
+    const-string v1, "_size > 0"
 
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, v1}, Lqu6;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Lpu6;->e:Lpu6;
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x1d
+
+    if-lt v0, v1, :cond_1
+
+    const-string v0, "external"
+
+    invoke-static {v0}, Landroid/provider/MediaStore$Video$Media;->getContentUri(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "no content uri for MediaStore.Video.Media"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_1
+    sget-object v0, Landroid/provider/MediaStore$Video$Media;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
+
+    :goto_0
+    sput-object v0, Lpu6;->f:Landroid/net/Uri;
+
+    const-string v0, "_id"
+
+    sput-object v0, Lpu6;->g:Ljava/lang/String;
+
+    const-string v0, "bucket_id"
+
+    sput-object v0, Lpu6;->h:Ljava/lang/String;
+
+    const-string v0, "bucket_display_name"
+
+    sput-object v0, Lpu6;->i:Ljava/lang/String;
+
+    const-string v0, "_data"
+
+    sput-object v0, Lpu6;->j:Ljava/lang/String;
+
+    const-string v0, "date_modified"
+
+    sput-object v0, Lpu6;->k:Ljava/lang/String;
+
+    const-string v0, "mime_type"
+
+    sput-object v0, Lpu6;->l:Ljava/lang/String;
+
+    const-string v0, "duration"
+
+    sput-object v0, Lpu6;->m:Ljava/lang/String;
+
+    const-string v0, "video/mp4"
+
+    sput-object v0, Lpu6;->n:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a()Ljava/lang/String;
+    .locals 1
 
-    check-cast p1, Lktb;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lpu6;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lpu6;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lpu6;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lpu6;
-
-    iget-object v1, p0, Lpu6;->Y:Lbv6;
-
-    invoke-direct {v0, v1, p2}, Lpu6;-><init>(Lbv6;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lpu6;->X:Ljava/lang/Object;
+    sget-object v0, Lpu6;->i:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+.method public final b()Ljava/lang/String;
+    .locals 1
 
-    iget-object v0, p0, Lpu6;->Y:Lbv6;
+    sget-object v0, Lpu6;->h:Ljava/lang/String;
 
-    iget-object v1, v0, Lbv6;->X:Lut6;
+    return-object v0
+.end method
 
-    iget-object v2, v0, Lbv6;->D0:Lyw0;
+.method public final c()Ljava/lang/String;
+    .locals 1
 
-    iget-object v3, p0, Lpu6;->X:Ljava/lang/Object;
+    sget-object v0, Lpu6;->j:Ljava/lang/String;
 
-    check-cast v3, Lktb;
+    return-object v0
+.end method
 
-    iget v4, p0, Lpu6;->o:I
+.method public final d()Ljava/lang/String;
+    .locals 1
 
-    const/4 v5, 0x2
+    sget-object v0, Lpu6;->k:Ljava/lang/String;
 
-    const/4 v6, 0x1
+    return-object v0
+.end method
 
-    if-eqz v4, :cond_2
+.method public final e()Ljava/lang/String;
+    .locals 1
 
-    if-eq v4, v6, :cond_1
+    sget-object v0, Lpu6;->m:Ljava/lang/String;
 
-    if-ne v4, v5, :cond_0
+    return-object v0
+.end method
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+.method public final f()Ljava/lang/String;
+    .locals 1
 
-    goto/16 :goto_2
+    sget-object v0, Lpu6;->g:Ljava/lang/String;
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    return-object v0
+.end method
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+.method public final h()Ljava/lang/String;
+    .locals 1
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    sget-object v0, Lpu6;->l:Ljava/lang/String;
 
-    throw p1
+    return-object v0
+.end method
 
-    :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+.method public final j()Landroid/net/Uri;
+    .locals 1
 
-    goto :goto_0
+    sget-object v0, Lpu6;->f:Landroid/net/Uri;
 
-    :cond_2
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    return-object v0
+.end method
 
-    iget-object p1, v3, Lktb;->a:Ljava/lang/Object;
+.method public final k()Ljava/lang/String;
+    .locals 1
 
-    check-cast p1, Ljava/lang/Number;
+    sget-object v0, Lpu6;->n:Ljava/lang/String;
 
-    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
-
-    move-result p1
-
-    iget-object v3, v3, Lktb;->b:Ljava/lang/Object;
-
-    check-cast v3, Lxt6;
-
-    sget-object v4, Lvt6;->b:Lvt6;
-
-    invoke-static {v3, v4}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_5
-
-    iget-object p1, v0, Lbv6;->Z:Lo58;
-
-    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lyzb;
-
-    sget-object v0, Lyzb;->m:[Ljava/lang/String;
-
-    invoke-virtual {p1, v0}, Lyzb;->c([Ljava/lang/String;)Z
-
-    move-result p1
-
-    const/4 v0, 0x0
-
-    sget-object v3, Lac4;->a:Lac4;
-
-    if-eqz p1, :cond_4
-
-    iput-object v0, p0, Lpu6;->X:Ljava/lang/Object;
-
-    iput v6, p0, Lpu6;->o:I
-
-    sget-object p1, Lgt6;->a:Lgt6;
-
-    invoke-interface {v2, p1, p0}, Lioe;->h(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v3, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    :goto_0
-    iget-object p1, v1, Lut6;->c:Lcm5;
-
-    sget-object v0, Lnt6;->a:Lnt6;
-
-    invoke-static {p1, v0}, Lnth;->q(Lcm5;Ljava/lang/Object;)V
-
-    goto :goto_2
-
-    :cond_4
-    iput-object v0, p0, Lpu6;->X:Ljava/lang/Object;
-
-    iput v5, p0, Lpu6;->o:I
-
-    sget-object p1, Lht6;->a:Lht6;
-
-    invoke-interface {v2, p1, p0}, Lioe;->h(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v3, :cond_7
-
-    :goto_1
-    return-object v3
-
-    :cond_5
-    instance-of v2, v3, Lwt6;
-
-    if-eqz v2, :cond_8
-
-    iget-object v1, v1, Lut6;->c:Lcm5;
-
-    new-instance v2, Lpt6;
-
-    iget-object v4, v0, Lbv6;->b:Lft6;
-
-    iget-boolean v4, v4, Lft6;->a:Z
-
-    if-eqz v4, :cond_6
-
-    add-int/lit8 p1, p1, -0x1
-
-    :cond_6
-    iget-object v0, v0, Lbv6;->C0:Lpld;
-
-    iget-object v0, v0, Lpld;->a:Llpf;
-
-    invoke-interface {v0}, Llpf;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ldt6;
-
-    iget-object v0, v0, Ldt6;->a:Lct6;
-
-    invoke-virtual {v0}, Lct6;->b()Ljava/lang/String;
-
-    move-result-object v0
-
-    check-cast v3, Lwt6;
-
-    iget-object v3, v3, Lwt6;->c:Lwh8;
-
-    invoke-direct {v2, p1, v0, v3}, Lpt6;-><init>(ILjava/lang/String;Lwh8;)V
-
-    invoke-static {v1, v2}, Lnth;->q(Lcm5;Ljava/lang/Object;)V
-
-    :cond_7
-    :goto_2
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
-
-    :cond_8
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
+    return-object v0
 .end method

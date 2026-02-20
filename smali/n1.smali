@@ -1,31 +1,18 @@
-.class public abstract synthetic Ln1;
-.super Ljava/lang/Object;
+.class public abstract Ln1;
+.super Lv1;
 .source "SourceFile"
 
+# interfaces
+.implements Lm1;
 
-# direct methods
-.method public static synthetic a(Lsun/misc/Unsafe;Lt1;JLc1;Lc1;)Z
+
+# virtual methods
+.method public final isCancelled()Z
     .locals 1
 
-    :cond_0
-    invoke-virtual/range {p0 .. p5}, Lsun/misc/Unsafe;->compareAndSwapObject(Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z
+    iget-object v0, p0, Lv1;->a:Ljava/lang/Object;
 
-    move-result v0
+    instance-of v0, v0, La1;
 
-    if-eqz v0, :cond_1
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_1
-    invoke-virtual {p0, p1, p2, p3}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
-
-    move-result-object v0
-
-    if-eq v0, p4, :cond_0
-
-    const/4 p0, 0x0
-
-    return p0
+    return v0
 .end method

@@ -1,60 +1,37 @@
-.class public final Lvxi;
+.class public abstract Lvxi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lvwa;
-
 
 # static fields
-.field public static final a:Lvxi;
+.field public static final a:Lbxi;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 3
 
-    new-instance v0, Lvxi;
+    new-instance v0, Lbxi;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 v1, 0x0
 
-    sput-object v0, Lvxi;->a:Lvxi;
+    invoke-direct {v0, v1}, Lbxi;-><init>(I)V
 
-    new-instance v0, Lbri;
+    sput-object v0, Lvxi;->a:Lbxi;
+
+    new-instance v0, Lcom/google/android/gms/common/api/Scope;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, v1}, Lbri;-><init>(I)V
+    const-string v2, "profile"
 
-    const-class v1, Lpri;
+    invoke-direct {v0, v1, v2}, Lcom/google/android/gms/common/api/Scope;-><init>(ILjava/lang/String;)V
 
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
+    new-instance v0, Lcom/google/android/gms/common/api/Scope;
 
-    move-result-object v0
+    const-string v2, "email"
 
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
+    invoke-direct {v0, v1, v2}, Lcom/google/android/gms/common/api/Scope;-><init>(ILjava/lang/String;)V
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
-
-    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
-
-    move-result-object p1
-
-    throw p1
 .end method

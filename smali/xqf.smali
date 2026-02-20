@@ -3,151 +3,205 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lsi4;
+.implements Larf;
 
 
 # instance fields
-.field public final a:Lsi4;
+.field public final a:I
 
-.field public b:J
-
-.field public c:Landroid/net/Uri;
+.field public final b:Ljava/lang/Integer;
 
 
 # direct methods
-.method public constructor <init>(Lsi4;)V
+.method public constructor <init>(ILjava/lang/Integer;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iput p1, p0, Lxqf;->a:I
 
-    iput-object p1, p0, Lxqf;->a:Lsi4;
-
-    sget-object p1, Landroid/net/Uri;->EMPTY:Landroid/net/Uri;
-
-    iput-object p1, p0, Lxqf;->c:Landroid/net/Uri;
-
-    sget-object p1, Ljava/util/Collections;->EMPTY_MAP:Ljava/util/Map;
+    iput-object p2, p0, Lxqf;->b:Ljava/lang/Integer;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final G(Laj4;)J
+.method public final a(Landroid/media/MediaPlayer;Landroid/content/Context;)Z
     .locals 3
 
-    iget-object v0, p0, Lxqf;->a:Lsi4;
+    iget-object v0, p0, Lxqf;->b:Ljava/lang/Integer;
 
-    iget-object v1, p1, Laj4;->a:Landroid/net/Uri;
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
-    iput-object v1, p0, Lxqf;->c:Landroid/net/Uri;
-
-    sget-object v1, Ljava/util/Collections;->EMPTY_MAP:Ljava/util/Map;
+    move-result v0
 
     :try_start_0
-    invoke-interface {v0, p1}, Lsi4;->G(Laj4;)J
+    invoke-virtual {p2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    move-result-wide v1
+    move-result-object p2
+
+    invoke-virtual {p2, v0}, Landroid/content/res/Resources;->openRawResourceFd(I)Landroid/content/res/AssetFileDescriptor;
+
+    move-result-object p2
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-interface {v0}, Lsi4;->getUri()Landroid/net/Uri;
+    :try_start_1
+    invoke-virtual {p1, p2}, Landroid/media/MediaPlayer;->setDataSource(Landroid/content/res/AssetFileDescriptor;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    move-result-object p1
+    const/4 p1, 0x0
 
-    if-eqz p1, :cond_0
+    :try_start_2
+    invoke-static {p2, p1}, Lerj;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+    :try_end_2
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
 
-    iput-object p1, p0, Lxqf;->c:Landroid/net/Uri;
+    const/4 p1, 0x1
 
-    :cond_0
-    invoke-interface {v0}, Lsi4;->w()Ljava/util/Map;
+    return p1
 
-    return-wide v1
+    :catch_0
+    move-exception p1
+
+    goto :goto_0
 
     :catchall_0
     move-exception p1
 
-    invoke-interface {v0}, Lsi4;->getUri()Landroid/net/Uri;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_1
-
-    iput-object v1, p0, Lxqf;->c:Landroid/net/Uri;
-
-    :cond_1
-    invoke-interface {v0}, Lsi4;->w()Ljava/util/Map;
-
+    :try_start_3
     throw p1
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    :catchall_1
+    move-exception v0
+
+    :try_start_4
+    invoke-static {p2, p1}, Lerj;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+
+    throw v0
+    :try_end_4
+    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_0
+
+    :goto_0
+    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object p2
+
+    const/4 v0, 0x0
+
+    new-array v1, v0, [Ljava/lang/Object;
+
+    const-string v2, "SoundConfigTag"
+
+    invoke-static {v2, p1, p2, v1}, Ltej;->i(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    return v0
 .end method
 
-.method public final H(Lysg;)V
-    .locals 1
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object v0, p0, Lxqf;->a:Lsi4;
-
-    invoke-interface {v0, p1}, Lsi4;->H(Lysg;)V
-
-    return-void
-.end method
-
-.method public final close()V
-    .locals 1
-
-    iget-object v0, p0, Lxqf;->a:Lsi4;
-
-    invoke-interface {v0}, Lsi4;->close()V
-
-    return-void
-.end method
-
-.method public final getUri()Landroid/net/Uri;
-    .locals 1
-
-    iget-object v0, p0, Lxqf;->a:Lsi4;
-
-    invoke-interface {v0}, Lsi4;->getUri()Landroid/net/Uri;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final read([BII)I
+.method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
-    iget-object v0, p0, Lxqf;->a:Lsi4;
+    if-ne p0, p1, :cond_0
 
-    invoke-interface {v0, p1, p2, p3}, Lki4;->read([BII)I
+    goto :goto_1
+
+    :cond_0
+    instance-of v0, p1, Lxqf;
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lxqf;
+
+    iget v0, p0, Lxqf;->a:I
+
+    iget v1, p1, Lxqf;->a:I
+
+    if-eq v0, v1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v0, p0, Lxqf;->b:Ljava/lang/Integer;
+
+    iget-object p1, p1, Lxqf;->b:Ljava/lang/Integer;
+
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
-    const/4 p2, -0x1
+    if-nez p1, :cond_3
 
-    if-eq p1, p2, :cond_0
+    :goto_0
+    const/4 p1, 0x0
 
-    iget-wide p2, p0, Lxqf;->b:J
+    return p1
 
-    int-to-long v0, p1
+    :cond_3
+    :goto_1
+    const/4 p1, 0x1
 
-    add-long/2addr p2, v0
-
-    iput-wide p2, p0, Lxqf;->b:J
-
-    :cond_0
     return p1
 .end method
 
-.method public final w()Ljava/util/Map;
-    .locals 1
+.method public final hashCode()I
+    .locals 2
 
-    iget-object v0, p0, Lxqf;->a:Lsi4;
+    iget v0, p0, Lxqf;->a:I
 
-    invoke-interface {v0}, Lsi4;->w()Ljava/util/Map;
+    invoke-static {v0}, Ly12;->t(I)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lxqf;->b:Ljava/lang/Integer;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Asset(type="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v1, p0, Lxqf;->a:I
+
+    invoke-static {v1}, Ljye;->u(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", asset="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lxqf;->b:Ljava/lang/Integer;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

@@ -1,25 +1,66 @@
-.class public abstract Lnra;
+.class public final Lnra;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lw58;
+
+
+# static fields
+.field public static final a:Lnra;
+
+.field public static final b:Lmra;
+
 
 # direct methods
-.method public static a(Landroid/app/Notification$MediaStyle;Ljava/lang/CharSequence;ILandroid/app/PendingIntent;Ljava/lang/Boolean;)Landroid/app/Notification$MediaStyle;
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lnra;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lnra;->a:Lnra;
+
+    sget-object v0, Lmra;->a:Lmra;
+
+    sput-object v0, Lnra;->b:Lmra;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Lj6g;Ljava/lang/Object;)V
     .locals 0
-    .annotation build Landroid/annotation/SuppressLint;
-        value = {
-            "MissingPermission"
-        }
-    .end annotation
 
-    invoke-virtual {p4}, Ljava/lang/Boolean;->booleanValue()Z
+    check-cast p2, Ljava/lang/Void;
 
-    move-result p4
+    new-instance p1, Lkotlinx/serialization/SerializationException;
 
-    if-eqz p4, :cond_0
+    const-string p2, "\'kotlin.Nothing\' cannot be serialized"
 
-    invoke-virtual {p0, p1, p2, p3}, Landroid/app/Notification$MediaStyle;->setRemotePlaybackInfo(Ljava/lang/CharSequence;ILandroid/app/PendingIntent;)Landroid/app/Notification$MediaStyle;
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    :cond_0
-    return-object p0
+    throw p1
+.end method
+
+.method public final b(Lzm4;)Ljava/lang/Object;
+    .locals 1
+
+    new-instance p1, Lkotlinx/serialization/SerializationException;
+
+    const-string v0, "\'kotlin.Nothing\' does not have instances"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final d()Lzwe;
+    .locals 1
+
+    sget-object v0, Lnra;->b:Lmra;
+
+    return-object v0
 .end method

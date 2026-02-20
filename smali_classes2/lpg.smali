@@ -1,129 +1,474 @@
-.class public final enum Llpg;
-.super Ljava/lang/Enum;
+.class public final Llpg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic X:[Llpg;
-
-.field public static final enum b:Llpg;
-
-.field public static final enum c:Llpg;
-
-.field public static final enum d:Llpg;
-
-.field public static final enum o:Llpg;
-
-
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:F
+
+.field public final b:Ljava/lang/CharSequence;
+
+.field public final c:Z
+
+.field public final d:Z
+
+.field public final e:I
+
+.field public final f:Landroid/text/TextUtils$TruncateAt;
+
+.field public final g:Lcn9;
+
+.field public final h:I
+
+.field public final i:I
+
+.field public final j:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 8
+.method public synthetic constructor <init>(FLjava/lang/CharSequence;ZI)V
+    .locals 10
+
+    and-int/lit8 p4, p4, 0x8
+
+    if-eqz p4, :cond_0
+
+    const/4 p4, 0x0
+
+    :goto_0
+    move v4, p4
+
+    goto :goto_1
+
+    :cond_0
+    const/4 p4, 0x1
+
+    goto :goto_0
+
+    :goto_1
+    const/4 v8, 0x0
+
+    const/4 v9, 0x0
+
+    const v5, 0x7fffffff
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    move-object v0, p0
+
+    move v1, p1
+
+    move-object v2, p2
+
+    move v3, p3
+
+    .line 1
+    invoke-direct/range {v0 .. v9}, Llpg;-><init>(FLjava/lang/CharSequence;ZZILandroid/text/TextUtils$TruncateAt;Lcn9;II)V
+
+    return-void
+.end method
+
+.method public constructor <init>(FLjava/lang/CharSequence;ZZILandroid/text/TextUtils$TruncateAt;Lcn9;II)V
+    .locals 0
+
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 3
+    iput p1, p0, Llpg;->a:F
+
+    .line 4
+    iput-object p2, p0, Llpg;->b:Ljava/lang/CharSequence;
+
+    .line 5
+    iput-boolean p3, p0, Llpg;->c:Z
+
+    .line 6
+    iput-boolean p4, p0, Llpg;->d:Z
+
+    .line 7
+    iput p5, p0, Llpg;->e:I
+
+    .line 8
+    iput-object p6, p0, Llpg;->f:Landroid/text/TextUtils$TruncateAt;
+
+    .line 9
+    iput-object p7, p0, Llpg;->g:Lcn9;
+
+    .line 10
+    iput p8, p0, Llpg;->h:I
+
+    .line 11
+    iput p9, p0, Llpg;->i:I
+
+    const p1, 0x7fffffff
+
+    if-eq p5, p1, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    .line 12
+    :goto_0
+    iput-boolean p1, p0, Llpg;->j:Z
+
+    return-void
+.end method
+
+.method public static a(Llpg;Ljava/lang/CharSequence;I)Llpg;
+    .locals 10
+
+    iget v1, p0, Llpg;->a:F
+
+    and-int/lit8 v0, p2, 0x2
+
+    if-eqz v0, :cond_0
+
+    iget-object p1, p0, Llpg;->b:Ljava/lang/CharSequence;
+
+    :cond_0
+    move-object v2, p1
+
+    iget-boolean v3, p0, Llpg;->c:Z
+
+    and-int/lit8 p1, p2, 0x8
+
+    if-eqz p1, :cond_1
+
+    iget-boolean p1, p0, Llpg;->d:Z
+
+    :goto_0
+    move v4, p1
+
+    goto :goto_1
+
+    :cond_1
+    const/4 p1, 0x0
+
+    goto :goto_0
+
+    :goto_1
+    and-int/lit8 p1, p2, 0x10
+
+    if-eqz p1, :cond_2
+
+    iget p1, p0, Llpg;->e:I
+
+    :goto_2
+    move v5, p1
+
+    goto :goto_3
+
+    :cond_2
+    const/4 p1, 0x1
+
+    goto :goto_2
+
+    :goto_3
+    iget-object v6, p0, Llpg;->f:Landroid/text/TextUtils$TruncateAt;
+
+    iget-object v7, p0, Llpg;->g:Lcn9;
+
+    iget v8, p0, Llpg;->h:I
+
+    iget v9, p0, Llpg;->i:I
 
     new-instance v0, Llpg;
 
-    const/4 v1, 0x0
+    invoke-direct/range {v0 .. v9}, Llpg;-><init>(FLjava/lang/CharSequence;ZZILandroid/text/TextUtils$TruncateAt;Lcn9;II)V
 
-    const-string v2, "no_connection_timeout"
+    return-object v0
+.end method
 
-    const-string v3, "NO_CONNECTION_TIMEOUT"
 
-    invoke-direct {v0, v3, v1, v2}, Llpg;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    sput-object v0, Llpg;->b:Llpg;
+    const/4 v0, 0x1
 
-    new-instance v1, Llpg;
+    if-ne p0, p1, :cond_0
 
-    const/4 v2, 0x1
+    return v0
 
-    const-string v3, "no_data_timeout"
+    :cond_0
+    instance-of v1, p1, Llpg;
 
-    const-string v4, "NO_DATA_TIMEOUT"
+    const/4 v2, 0x0
 
-    invoke-direct {v1, v4, v2, v3}, Llpg;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    if-nez v1, :cond_1
 
-    sput-object v1, Llpg;->c:Llpg;
+    return v2
 
-    new-instance v2, Llpg;
+    :cond_1
+    check-cast p1, Llpg;
 
-    const/4 v3, 0x2
+    iget v1, p0, Llpg;->a:F
 
-    const-string v4, "connection_failed"
+    iget v3, p1, Llpg;->a:F
 
-    const-string v5, "CONNECTION_FAILED"
+    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
 
-    invoke-direct {v2, v5, v3, v4}, Llpg;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    move-result v1
 
-    new-instance v3, Llpg;
+    if-eqz v1, :cond_2
 
-    const/4 v4, 0x3
+    return v2
 
-    const-string v5, "success_audio"
+    :cond_2
+    iget-object v1, p0, Llpg;->b:Ljava/lang/CharSequence;
 
-    const-string v6, "SUCCESS_AUDIO"
+    iget-object v3, p1, Llpg;->b:Ljava/lang/CharSequence;
 
-    invoke-direct {v3, v6, v4, v5}, Llpg;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-static {v1, v3}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    sput-object v3, Llpg;->d:Llpg;
+    move-result v1
 
-    new-instance v4, Llpg;
+    if-nez v1, :cond_3
 
-    const/4 v5, 0x4
+    return v2
 
-    const-string v6, "success_connection"
+    :cond_3
+    iget-boolean v1, p0, Llpg;->c:Z
 
-    const-string v7, "SUCCESS_CONNECTION"
+    iget-boolean v3, p1, Llpg;->c:Z
 
-    invoke-direct {v4, v7, v5, v6}, Llpg;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    if-eq v1, v3, :cond_4
 
-    sput-object v4, Llpg;->o:Llpg;
+    return v2
 
-    filled-new-array {v0, v1, v2, v3, v4}, [Llpg;
+    :cond_4
+    iget-boolean v1, p0, Llpg;->d:Z
+
+    iget-boolean v3, p1, Llpg;->d:Z
+
+    if-eq v1, v3, :cond_5
+
+    return v2
+
+    :cond_5
+    iget v1, p0, Llpg;->e:I
+
+    iget v3, p1, Llpg;->e:I
+
+    if-eq v1, v3, :cond_6
+
+    return v2
+
+    :cond_6
+    iget-object v1, p0, Llpg;->f:Landroid/text/TextUtils$TruncateAt;
+
+    iget-object v3, p1, Llpg;->f:Landroid/text/TextUtils$TruncateAt;
+
+    if-eq v1, v3, :cond_7
+
+    return v2
+
+    :cond_7
+    iget-object v1, p0, Llpg;->g:Lcn9;
+
+    iget-object v3, p1, Llpg;->g:Lcn9;
+
+    invoke-static {v1, v3}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_8
+
+    return v2
+
+    :cond_8
+    iget v1, p0, Llpg;->h:I
+
+    iget v3, p1, Llpg;->h:I
+
+    if-eq v1, v3, :cond_9
+
+    return v2
+
+    :cond_9
+    iget v1, p0, Llpg;->i:I
+
+    iget p1, p1, Llpg;->i:I
+
+    if-eq v1, p1, :cond_a
+
+    return v2
+
+    :cond_a
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    iget v0, p0, Llpg;->a:F
+
+    invoke-static {v0}, Ljava/lang/Float;->hashCode(F)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Llpg;->b:Ljava/lang/CharSequence;
+
+    invoke-static {v0, v1, v2}, Lo16;->e(IILjava/lang/CharSequence;)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Llpg;->c:Z
+
+    invoke-static {v0, v1, v2}, Leni;->b(IIZ)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Llpg;->d:Z
+
+    invoke-static {v0, v1, v2}, Leni;->b(IIZ)I
+
+    move-result v0
+
+    iget v2, p0, Llpg;->e:I
+
+    invoke-static {v2, v0, v1}, Ljye;->d(III)I
+
+    move-result v0
+
+    const/4 v2, 0x0
+
+    iget-object v3, p0, Llpg;->f:Landroid/text/TextUtils$TruncateAt;
+
+    if-nez v3, :cond_0
+
+    move v3, v2
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
+
+    move-result v3
+
+    :goto_0
+    add-int/2addr v0, v3
+
+    mul-int/2addr v0, v1
+
+    iget-object v3, p0, Llpg;->g:Lcn9;
+
+    if-nez v3, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
+
+    move-result v2
+
+    :goto_1
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Llpg;->h:I
+
+    invoke-static {v2, v0, v1}, Ljye;->d(III)I
+
+    move-result v0
+
+    iget v1, p0, Llpg;->i:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "PreprocessTextResult(textSize="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v1, p0, Llpg;->a:F
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v1, ", text="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Llpg;->b:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", includeFontPadding="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", postProcessing="
+
+    const-string v2, ", maxLines="
+
+    iget-boolean v3, p0, Llpg;->c:Z
+
+    iget-boolean v4, p0, Llpg;->d:Z
+
+    invoke-static {v1, v2, v0, v3, v4}, Ly12;->r(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
+
+    iget v1, p0, Llpg;->e:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", truncateAt="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Llpg;->f:Landroid/text/TextUtils$TruncateAt;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", replied="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Llpg;->g:Lcn9;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", startPadding="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Llpg;->h:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", endPadding="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    iget v2, p0, Llpg;->i:I
+
+    invoke-static {v0, v2, v1}, Ltx8;->m(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
-
-    sput-object v0, Llpg;->X:[Llpg;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    iput-object p3, p0, Llpg;->a:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Llpg;
-    .locals 1
-
-    const-class v0, Llpg;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Llpg;
-
-    return-object p0
-.end method
-
-.method public static values()[Llpg;
-    .locals 1
-
-    sget-object v0, Llpg;->X:[Llpg;
-
-    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Llpg;
 
     return-object v0
 .end method

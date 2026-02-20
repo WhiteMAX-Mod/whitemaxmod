@@ -4,28 +4,28 @@
 
 
 # annotations
-.annotation build Le35;
+.annotation build Lo45;
 .end annotation
 
 
 # instance fields
-.field public final a:Loac;
+.field public final a:Leec;
 
-.field public final b:Lao5;
+.field public final b:Lrp5;
 
-.field public final c:Ljc4;
+.field public final c:Lxd4;
 
 .field public final d:Z
 
-.field public e:Lhf;
+.field public e:Lwg;
 
-.field public f:Lcvd;
+.field public f:Lh78;
 
-.field public g:Lsna;
+.field public g:Lp9j;
 
-.field public h:Lfo4;
+.field public h:Ltp4;
 
-.field public final i:Lbqe;
+.field public final i:Lexe;
 
 .field public final j:I
 
@@ -35,30 +35,30 @@
 
 
 # direct methods
-.method public constructor <init>(Loac;Lao5;Ljc4;ZZIILbqe;)V
+.method public constructor <init>(Leec;Lrp5;Lxd4;ZZIILexe;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Loac;",
-            "Lao5;",
-            "Ljc4;",
+            "Leec;",
+            "Lrp5;",
+            "Lxd4;",
             "ZZII",
-            "Lbqe;",
+            "Lexe;",
             ")V"
         }
     .end annotation
 
-    .annotation build Le35;
+    .annotation build Lo45;
     .end annotation
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/facebook/fresco/animation/factory/AnimatedFactoryV2Impl;->a:Loac;
+    iput-object p1, p0, Lcom/facebook/fresco/animation/factory/AnimatedFactoryV2Impl;->a:Leec;
 
-    iput-object p2, p0, Lcom/facebook/fresco/animation/factory/AnimatedFactoryV2Impl;->b:Lao5;
+    iput-object p2, p0, Lcom/facebook/fresco/animation/factory/AnimatedFactoryV2Impl;->b:Lrp5;
 
-    iput-object p3, p0, Lcom/facebook/fresco/animation/factory/AnimatedFactoryV2Impl;->c:Ljc4;
+    iput-object p3, p0, Lcom/facebook/fresco/animation/factory/AnimatedFactoryV2Impl;->c:Lxd4;
 
     iput p6, p0, Lcom/facebook/fresco/animation/factory/AnimatedFactoryV2Impl;->j:I
 
@@ -66,7 +66,7 @@
 
     iput-boolean p4, p0, Lcom/facebook/fresco/animation/factory/AnimatedFactoryV2Impl;->d:Z
 
-    iput-object p8, p0, Lcom/facebook/fresco/animation/factory/AnimatedFactoryV2Impl;->i:Lbqe;
+    iput-object p8, p0, Lcom/facebook/fresco/animation/factory/AnimatedFactoryV2Impl;->i:Lexe;
 
     iput p7, p0, Lcom/facebook/fresco/animation/factory/AnimatedFactoryV2Impl;->l:I
 

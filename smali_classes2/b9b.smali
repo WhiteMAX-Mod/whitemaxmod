@@ -1,85 +1,73 @@
-.class public final Lb9b;
-.super Lo84;
+.class public final enum Lb9b;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public A0:I
+# static fields
+.field public static final enum a:Lb9b;
 
-.field public B0:I
+.field public static final enum b:Lb9b;
 
-.field public C0:I
-
-.field public D0:I
-
-.field public E0:J
-
-.field public F0:J
-
-.field public synthetic G0:Ljava/lang/Object;
-
-.field public final synthetic H0:Lh9b;
-
-.field public I0:I
-
-.field public X:Ljm9;
-
-.field public Y:Ljava/lang/Object;
-
-.field public Z:Ljava/lang/Object;
-
-.field public d:Lhs8;
-
-.field public o:Lxz;
-
-.field public t0:Ljava/lang/Object;
-
-.field public u0:Ljava/lang/Object;
-
-.field public v0:Lh9b;
-
-.field public w0:Lxz;
-
-.field public x0:Landroid/text/Layout;
-
-.field public y0:Z
-
-.field public z0:Z
+.field public static final synthetic c:[Lb9b;
 
 
 # direct methods
-.method public constructor <init>(Lh9b;Lo84;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    iput-object p1, p0, Lb9b;->H0:Lh9b;
+    new-instance v0, Lb9b;
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    const-string v1, "NEUTRAL"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lb9b;->a:Lb9b;
+
+    new-instance v1, Lb9b;
+
+    const-string v2, "NEGATIVE_AND_POSITIVE"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lb9b;->b:Lb9b;
+
+    filled-new-array {v0, v1}, [Lb9b;
+
+    move-result-object v0
+
+    sput-object v0, Lb9b;->c:[Lb9b;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public static valueOf(Ljava/lang/String;)Lb9b;
     .locals 1
 
-    iput-object p1, p0, Lb9b;->G0:Ljava/lang/Object;
+    const-class v0, Lb9b;
 
-    iget p1, p0, Lb9b;->I0:I
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    const/high16 v0, -0x80000000
+    move-result-object p0
 
-    or-int/2addr p1, v0
+    check-cast p0, Lb9b;
 
-    iput p1, p0, Lb9b;->I0:I
+    return-object p0
+.end method
 
-    iget-object p1, p0, Lb9b;->H0:Lh9b;
+.method public static values()[Lb9b;
+    .locals 1
 
-    const/4 v0, 0x0
+    sget-object v0, Lb9b;->c:[Lb9b;
 
-    invoke-static {p1, v0, v0, p0}, Lh9b;->a(Lh9b;Lfs8;Lxz;Lo84;)Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object v0
 
-    return-object p1
+    check-cast v0, [Lb9b;
+
+    return-object v0
 .end method

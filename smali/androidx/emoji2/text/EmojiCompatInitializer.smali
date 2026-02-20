@@ -3,14 +3,14 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lnp7;
+.implements Lgq7;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lnp7;"
+        "Lgq7;"
     }
 .end annotation
 
@@ -41,36 +41,38 @@
 .method public final b(Landroid/content/Context;)Ljava/lang/Object;
     .locals 3
 
-    new-instance v0, Lli6;
+    new-instance v0, Lmk6;
 
-    new-instance v1, Lski;
+    new-instance v1, Ljq0;
 
-    invoke-direct {v1, p1}, Lski;-><init>(Landroid/content/Context;)V
+    const/4 v2, 0x1
 
-    invoke-direct {v0, v1}, Lre5;-><init>(Lue5;)V
+    invoke-direct {v1, p1, v2}, Ljq0;-><init>(Landroid/content/Context;I)V
+
+    invoke-direct {v0, v1}, Lig5;-><init>(Llg5;)V
 
     const/4 v1, 0x1
 
-    iput v1, v0, Lre5;->a:I
+    iput v1, v0, Lig5;->a:I
 
-    sget-object v1, Lve5;->k:Lve5;
+    sget-object v1, Lmg5;->k:Lmg5;
 
     if-nez v1, :cond_1
 
-    sget-object v1, Lve5;->j:Ljava/lang/Object;
+    sget-object v1, Lmg5;->j:Ljava/lang/Object;
 
     monitor-enter v1
 
     :try_start_0
-    sget-object v2, Lve5;->k:Lve5;
+    sget-object v2, Lmg5;->k:Lmg5;
 
     if-nez v2, :cond_0
 
-    new-instance v2, Lve5;
+    new-instance v2, Lmg5;
 
-    invoke-direct {v2, v0}, Lve5;-><init>(Lli6;)V
+    invoke-direct {v2, v0}, Lmg5;-><init>(Lmk6;)V
 
-    sput-object v2, Lve5;->k:Lve5;
+    sput-object v2, Lmg5;->k:Lmg5;
 
     goto :goto_0
 
@@ -94,7 +96,7 @@
 
     :cond_1
     :goto_2
-    invoke-static {p1}, Lbg8;->r(Landroid/content/Context;)Lbg8;
+    invoke-static {p1}, Lsi8;->q(Landroid/content/Context;)Lsi8;
 
     move-result-object p1
 
@@ -102,12 +104,12 @@
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-object v1, Lbg8;->Z:Ljava/lang/Object;
+    sget-object v1, Lsi8;->Z:Ljava/lang/Object;
 
     monitor-enter v1
 
     :try_start_1
-    iget-object v2, p1, Lbg8;->a:Ljava/lang/Object;
+    iget-object v2, p1, Lsi8;->a:Ljava/lang/Object;
 
     check-cast v2, Ljava/util/HashMap;
 
@@ -121,7 +123,7 @@
 
     invoke-direct {v2}, Ljava/util/HashSet;-><init>()V
 
-    invoke-virtual {p1, v0, v2}, Lbg8;->l(Ljava/lang/Class;Ljava/util/HashSet;)Ljava/lang/Object;
+    invoke-virtual {p1, v0, v2}, Lsi8;->p(Ljava/lang/Class;Ljava/util/HashSet;)Ljava/lang/Object;
 
     move-result-object v2
 
@@ -138,17 +140,17 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    check-cast v2, Lj88;
+    check-cast v2, Lab8;
 
-    invoke-interface {v2}, Lj88;->p()Ll88;
+    invoke-interface {v2}, Lab8;->p()Lcb8;
 
     move-result-object p1
 
-    new-instance v0, Lxe5;
+    new-instance v0, Log5;
 
-    invoke-direct {v0, p0, p1}, Lxe5;-><init>(Landroidx/emoji2/text/EmojiCompatInitializer;Ll88;)V
+    invoke-direct {v0, p0, p1}, Log5;-><init>(Landroidx/emoji2/text/EmojiCompatInitializer;Lcb8;)V
 
-    invoke-virtual {p1, v0}, Ll88;->a(Lg88;)V
+    invoke-virtual {p1, v0}, Lcb8;->a(Lxa8;)V
 
     sget-object p1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 

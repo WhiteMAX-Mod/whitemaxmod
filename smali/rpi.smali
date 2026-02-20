@@ -1,132 +1,248 @@
 .class public final Lrpi;
-.super Ljava/lang/Object;
+.super Lvpi;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+
+# static fields
+.field public static e:Ljava/lang/reflect/Field; = null
+
+.field public static f:Z = false
+
+.field public static g:Ljava/lang/reflect/Constructor; = null
+
+.field public static h:Z = false
 
 
 # instance fields
-.field public final synthetic a:I
+.field public c:Landroid/view/WindowInsets;
 
-.field public final synthetic b:Landroid/content/Intent;
-
-.field public final synthetic c:Ljava/lang/Object;
+.field public d:Lss7;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/content/Intent;Ljava/lang/Object;I)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    iput p3, p0, Lrpi;->a:I
+    .line 1
+    invoke-direct {p0}, Lvpi;-><init>()V
 
-    iput-object p1, p0, Lrpi;->b:Landroid/content/Intent;
+    .line 2
+    invoke-static {}, Lrpi;->j()Landroid/view/WindowInsets;
 
-    iput-object p2, p0, Lrpi;->c:Ljava/lang/Object;
+    move-result-object v0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object v0, p0, Lrpi;->c:Landroid/view/WindowInsets;
 
     return-void
+.end method
+
+.method public constructor <init>(Ldqi;)V
+    .locals 0
+
+    .line 3
+    invoke-direct {p0, p1}, Lvpi;-><init>(Ldqi;)V
+
+    .line 4
+    invoke-virtual {p1}, Ldqi;->g()Landroid/view/WindowInsets;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lrpi;->c:Landroid/view/WindowInsets;
+
+    return-void
+.end method
+
+.method private static j()Landroid/view/WindowInsets;
+    .locals 6
+
+    sget-boolean v0, Lrpi;->f:Z
+
+    const/4 v1, 0x1
+
+    const-class v2, Landroid/view/WindowInsets;
+
+    const-string v3, "WindowInsetsCompat"
+
+    if-nez v0, :cond_0
+
+    :try_start_0
+    const-string v0, "CONSUMED"
+
+    invoke-virtual {v2, v0}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+
+    move-result-object v0
+
+    sput-object v0, Lrpi;->e:Ljava/lang/reflect/Field;
+    :try_end_0
+    .catch Ljava/lang/ReflectiveOperationException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    const-string v4, "Could not retrieve WindowInsets.CONSUMED field"
+
+    invoke-static {v3, v4, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :goto_0
+    sput-boolean v1, Lrpi;->f:Z
+
+    :cond_0
+    sget-object v0, Lrpi;->e:Ljava/lang/reflect/Field;
+
+    const/4 v4, 0x0
+
+    if-eqz v0, :cond_1
+
+    :try_start_1
+    invoke-virtual {v0, v4}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/WindowInsets;
+
+    if-eqz v0, :cond_1
+
+    new-instance v5, Landroid/view/WindowInsets;
+
+    invoke-direct {v5, v0}, Landroid/view/WindowInsets;-><init>(Landroid/view/WindowInsets;)V
+    :try_end_1
+    .catch Ljava/lang/ReflectiveOperationException; {:try_start_1 .. :try_end_1} :catch_1
+
+    return-object v5
+
+    :catch_1
+    move-exception v0
+
+    const-string v5, "Could not get value from WindowInsets.CONSUMED field"
+
+    invoke-static {v3, v5, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :cond_1
+    sget-boolean v0, Lrpi;->h:Z
+
+    if-nez v0, :cond_2
+
+    :try_start_2
+    const-class v0, Landroid/graphics/Rect;
+
+    filled-new-array {v0}, [Ljava/lang/Class;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+
+    move-result-object v0
+
+    sput-object v0, Lrpi;->g:Ljava/lang/reflect/Constructor;
+    :try_end_2
+    .catch Ljava/lang/ReflectiveOperationException; {:try_start_2 .. :try_end_2} :catch_2
+
+    goto :goto_1
+
+    :catch_2
+    move-exception v0
+
+    const-string v2, "Could not retrieve WindowInsets(Rect) constructor"
+
+    invoke-static {v3, v2, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :goto_1
+    sput-boolean v1, Lrpi;->h:Z
+
+    :cond_2
+    sget-object v0, Lrpi;->g:Ljava/lang/reflect/Constructor;
+
+    if-eqz v0, :cond_3
+
+    :try_start_3
+    new-instance v1, Landroid/graphics/Rect;
+
+    invoke-direct {v1}, Landroid/graphics/Rect;-><init>()V
+
+    filled-new-array {v1}, [Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/WindowInsets;
+    :try_end_3
+    .catch Ljava/lang/ReflectiveOperationException; {:try_start_3 .. :try_end_3} :catch_3
+
+    return-object v0
+
+    :catch_3
+    move-exception v0
+
+    const-string v1, "Could not invoke WindowInsets(Rect) constructor"
+
+    invoke-static {v3, v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :cond_3
+    return-object v4
 .end method
 
 
 # virtual methods
-.method public final a()V
+.method public b()Ldqi;
     .locals 3
 
-    iget v0, p0, Lrpi;->a:I
+    invoke-virtual {p0}, Lvpi;->a()V
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v0, p0, Lrpi;->c:Landroid/view/WindowInsets;
 
-    iget-object v0, p0, Lrpi;->b:Landroid/content/Intent;
+    const/4 v1, 0x0
+
+    invoke-static {v1, v0}, Ldqi;->h(Landroid/view/View;Landroid/view/WindowInsets;)Ldqi;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lvpi;->b:[Lss7;
+
+    iget-object v2, v0, Ldqi;->a:Lbqi;
+
+    invoke-virtual {v2, v1}, Lbqi;->p([Lss7;)V
+
+    iget-object v1, p0, Lrpi;->d:Lss7;
+
+    invoke-virtual {v2, v1}, Lbqi;->r(Lss7;)V
+
+    return-object v0
+.end method
+
+.method public e(Lss7;)V
+    .locals 0
+
+    iput-object p1, p0, Lrpi;->d:Lss7;
+
+    return-void
+.end method
+
+.method public g(Lss7;)V
+    .locals 4
+
+    iget-object v0, p0, Lrpi;->c:Landroid/view/WindowInsets;
 
     if-eqz v0, :cond_0
 
-    iget-object v1, p0, Lrpi;->c:Ljava/lang/Object;
+    iget v1, p1, Lss7;->a:I
 
-    const/4 v2, 0x2
+    iget v2, p1, Lss7;->b:I
 
-    invoke-interface {v1, v0, v2}, Ld88;->b(Landroid/content/Intent;I)V
+    iget v3, p1, Lss7;->c:I
 
-    :cond_0
-    return-void
+    iget p1, p1, Lss7;->d:I
 
-    :pswitch_0
-    iget-object v0, p0, Lrpi;->b:Landroid/content/Intent;
+    invoke-virtual {v0, v1, v2, v3, p1}, Landroid/view/WindowInsets;->replaceSystemWindowInsets(IIII)Landroid/view/WindowInsets;
 
-    if-eqz v0, :cond_1
+    move-result-object p1
 
-    iget-object v1, p0, Lrpi;->c:Ljava/lang/Object;
-
-    check-cast v1, Lcom/google/android/gms/common/api/GoogleApiActivity;
-
-    const/4 v2, 0x2
-
-    invoke-virtual {v1, v0, v2}, Landroid/app/Activity;->startActivityForResult(Landroid/content/Intent;I)V
-
-    :cond_1
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final onClick(Landroid/content/DialogInterface;I)V
-    .locals 4
-
-    :try_start_0
-    invoke-virtual {p0}, Lrpi;->a()V
-    :try_end_0
-    .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p2
-
-    goto :goto_1
-
-    :catch_0
-    move-exception p2
-
-    :try_start_1
-    const-string v0, "Failed to start resolution intent."
-
-    const-string v1, "Failed to start resolution intent. This may occur when resolving Google Play services connection issues on emulators with Google APIs but not Google Play Store."
-
-    sget-object v2, Landroid/os/Build;->FINGERPRINT:Ljava/lang/String;
-
-    const-string v3, "generic"
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    const/4 v3, 0x1
-
-    if-ne v3, v2, :cond_0
-
-    move-object v0, v1
+    iput-object p1, p0, Lrpi;->c:Landroid/view/WindowInsets;
 
     :cond_0
-    const-string v1, "DialogRedirect"
-
-    invoke-static {v1, v0, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    :goto_0
-    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
-
     return-void
-
-    :goto_1
-    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
-
-    throw p2
 .end method

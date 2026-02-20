@@ -1,31 +1,39 @@
 .class public final Lb5e;
-.super Ltsd;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic K0:I
-
-
 # instance fields
-.field public final F0:Lda2;
+.field public final a:Landroid/content/res/ColorStateList;
 
-.field public G0:Lw4e;
+.field public final b:Landroid/content/res/Configuration;
 
-.field public H0:I
-
-.field public I0:J
-
-.field public J0:Z
+.field public final c:I
 
 
 # direct methods
-.method public constructor <init>(Lda2;)V
+.method public constructor <init>(Landroid/content/res/ColorStateList;Landroid/content/res/Configuration;Landroid/content/res/Resources$Theme;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Ltsd;-><init>(Landroid/view/View;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lb5e;->F0:Lda2;
+    iput-object p1, p0, Lb5e;->a:Landroid/content/res/ColorStateList;
+
+    iput-object p2, p0, Lb5e;->b:Landroid/content/res/Configuration;
+
+    if-nez p3, :cond_0
+
+    const/4 p1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p3}, Landroid/content/res/Resources$Theme;->hashCode()I
+
+    move-result p1
+
+    :goto_0
+    iput p1, p0, Lb5e;->c:I
 
     return-void
 .end method

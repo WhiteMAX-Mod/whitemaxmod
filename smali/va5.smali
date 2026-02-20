@@ -1,37 +1,60 @@
-.class public abstract Lva5;
+.class public final Lva5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lya5;
 
-# static fields
-.field public static final a:[Ljava/lang/ThreadLocal;
 
+# virtual methods
+.method public final a(Lra5;Lol6;)Lna5;
+    .locals 2
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 4
+    iget-object p1, p2, Lol6;->r:Lma5;
 
-    const/4 v0, 0x4
+    if-nez p1, :cond_0
 
-    new-array v1, v0, [Ljava/lang/ThreadLocal;
+    const/4 p1, 0x0
 
-    const/4 v2, 0x0
-
-    :goto_0
-    if-ge v2, v0, :cond_0
-
-    new-instance v3, Ljava/lang/ThreadLocal;
-
-    invoke-direct {v3}, Ljava/lang/ThreadLocal;-><init>()V
-
-    aput-object v3, v1, v2
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
+    return-object p1
 
     :cond_0
-    sput-object v1, Lva5;->a:[Ljava/lang/ThreadLocal;
+    new-instance p1, Lbn5;
+
+    new-instance p2, Landroidx/media3/exoplayer/drm/DrmSession$DrmSessionException;
+
+    new-instance v0, Landroidx/media3/exoplayer/drm/UnsupportedDrmException;
+
+    invoke-direct {v0}, Ljava/lang/Exception;-><init>()V
+
+    const/16 v1, 0x1771
+
+    invoke-direct {p2, v1, v0}, Landroidx/media3/exoplayer/drm/DrmSession$DrmSessionException;-><init>(ILjava/lang/Throwable;)V
+
+    invoke-direct {p1, p2}, Lbn5;-><init>(Landroidx/media3/exoplayer/drm/DrmSession$DrmSessionException;)V
+
+    return-object p1
+.end method
+
+.method public final c(Landroid/os/Looper;Lzfc;)V
+    .locals 0
 
     return-void
+.end method
+
+.method public final d(Lol6;)I
+    .locals 0
+
+    iget-object p1, p1, Lol6;->r:Lma5;
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
 .end method

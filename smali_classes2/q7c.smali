@@ -1,186 +1,87 @@
 .class public final Lq7c;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Ldr6;
 
 
 # instance fields
-.field public synthetic X:Lifb;
+.field public final a:Lzef;
 
-.field public synthetic Y:Lzlb;
-
-.field public final synthetic o:I
+.field public final b:Lkotlinx/coroutines/internal/ContextScope;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
-    .locals 0
+.method public constructor <init>(Lqy0;Lbjg;)V
+    .locals 2
 
-    iput p3, p0, Lq7c;->o:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/4 v0, 0x0
+
+    const/4 v1, 0x7
+
+    invoke-static {v0, v0, v1}, Laff;->b(III)Lzef;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lq7c;->a:Lzef;
+
+    check-cast p2, Lcbb;
+
+    invoke-virtual {p2}, Lcbb;->a()Lgd4;
+
+    move-result-object p2
+
+    invoke-static {p2}, Lztj;->a(Led4;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object p2
+
+    iput-object p2, p0, Lq7c;->b:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-virtual {p1, p0}, Lqy0;->d(Ljava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final onEvent(Lsu2;)V
     .locals 3
+    .annotation runtime Lx7g;
+    .end annotation
 
-    iget v0, p0, Lq7c;->o:I
+    .line 1
+    new-instance v0, Lo7c;
 
-    check-cast p1, Lifb;
+    const/4 v1, 0x0
 
-    check-cast p2, Lzlb;
+    invoke-direct {v0, p0, p1, v1}, Lo7c;-><init>(Lq7c;Lsu2;Lkotlin/coroutines/Continuation;)V
 
-    check-cast p3, Lkotlin/coroutines/Continuation;
+    const/4 p1, 0x3
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v2, p0, Lq7c;->b:Lkotlinx/coroutines/internal/ContextScope;
 
-    new-instance v0, Lq7c;
+    invoke-static {v2, v1, v1, v0, p1}, Lea9;->d(Lnd4;Led4;Lqd4;Lys6;I)Lcuf;
 
-    const/4 v1, 0x3
-
-    const/4 v2, 0x1
-
-    invoke-direct {v0, v1, p3, v2}, Lq7c;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, v0, Lq7c;->X:Lifb;
-
-    iput-object p2, v0, Lq7c;->Y:Lzlb;
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    invoke-virtual {v0, p1}, Lq7c;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_0
-    new-instance v0, Lq7c;
-
-    const/4 v1, 0x3
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, p3, v2}, Lq7c;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, v0, Lq7c;->X:Lifb;
-
-    iput-object p2, v0, Lq7c;->Y:Lzlb;
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    invoke-virtual {v0, p1}, Lq7c;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+.method public final onEvent(Lul0;)V
+    .locals 3
+    .annotation runtime Lx7g;
+    .end annotation
 
-    iget v0, p0, Lq7c;->o:I
+    .line 2
+    new-instance v0, Lp7c;
 
-    packed-switch v0, :pswitch_data_0
+    const/4 v1, 0x0
 
-    iget-object v0, p0, Lq7c;->X:Lifb;
+    invoke-direct {v0, p0, p1, v1}, Lp7c;-><init>(Lq7c;Lul0;Lkotlin/coroutines/Continuation;)V
 
-    iget-object v1, p0, Lq7c;->Y:Lzlb;
+    const/4 p1, 0x3
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    iget-object v2, p0, Lq7c;->b:Lkotlinx/coroutines/internal/ContextScope;
 
-    invoke-interface {v1}, Lzlb;->c()Leqf;
+    invoke-static {v2, v1, v1, v0, p1}, Lea9;->d(Lnd4;Led4;Lqd4;Lys6;I)Lcuf;
 
-    move-result-object p1
-
-    iget-object p1, p1, Leqf;->a:Lcqf;
-
-    iget-object p1, p1, Lcqf;->a:Lbqf;
-
-    iget p1, p1, Lbqf;->e:I
-
-    new-instance v1, Landroid/graphics/drawable/ColorDrawable;
-
-    const/high16 v2, -0x10000
-
-    invoke-direct {v1, v2}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
-
-    new-instance v2, Landroid/graphics/drawable/RippleDrawable;
-
-    invoke-static {p1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
-
-    move-result-object p1
-
-    const/4 v3, 0x0
-
-    invoke-direct {v2, p1, v3, v1}, Landroid/graphics/drawable/RippleDrawable;-><init>(Landroid/content/res/ColorStateList;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
-
-    :pswitch_0
-    iget-object v0, p0, Lq7c;->X:Lifb;
-
-    iget-object v1, p0, Lq7c;->Y:Lzlb;
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    new-instance p1, Landroid/graphics/drawable/ColorDrawable;
-
-    invoke-interface {v1}, Lzlb;->b()Lxf0;
-
-    move-result-object v2
-
-    iget v2, v2, Lxf0;->n:I
-
-    invoke-direct {p1, v2}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
-
-    invoke-interface {v1}, Lzlb;->c()Leqf;
-
-    move-result-object v1
-
-    iget-object v1, v1, Leqf;->a:Lcqf;
-
-    iget-object v1, v1, Lcqf;->a:Lbqf;
-
-    iget v1, v1, Lbqf;->e:I
-
-    new-instance v2, Landroid/graphics/drawable/ColorDrawable;
-
-    const/high16 v3, -0x10000
-
-    invoke-direct {v2, v3}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
-
-    new-instance v3, Landroid/graphics/drawable/RippleDrawable;
-
-    invoke-static {v1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
-
-    move-result-object v1
-
-    invoke-direct {v3, v1, p1, v2}, Landroid/graphics/drawable/RippleDrawable;-><init>(Landroid/content/res/ColorStateList;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
-
-    invoke-virtual {v0, v3}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

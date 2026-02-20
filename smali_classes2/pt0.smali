@@ -1,178 +1,108 @@
 .class public final Lpt0;
-.super Ljava/lang/Object;
+.super Landroid/text/style/StyleSpan;
 .source "SourceFile"
 
-
-# static fields
-.field public static final c:Lpt0;
+# interfaces
+.implements Lxu8;
 
 
 # instance fields
-.field public a:Z
+.field public final synthetic a:I
 
-.field public b:Z
+.field public final b:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(I)V
+    .locals 0
 
-    new-instance v0, Lpt0;
+    iput p1, p0, Lpt0;->a:I
 
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1, v1}, Lpt0;-><init>(ZZ)V
-
-    sput-object v0, Lpt0;->c:Lpt0;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lrz6;I)V
-    .locals 1
-
-    packed-switch p2, :pswitch_data_0
-
-    .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 5
-    const-class p2, Landroidx/camera/camera2/internal/compat/quirk/ImageCaptureFailWithAutoFlashQuirk;
-
-    .line 6
-    invoke-virtual {p1, p2}, Lrz6;->L(Ljava/lang/Class;)Z
-
-    move-result p1
-
-    iput-boolean p1, p0, Lpt0;->a:Z
-
-    .line 7
-    const-class p1, Landroidx/camera/camera2/internal/compat/quirk/CrashWhenTakingPhotoWithAutoFlashAEModeQuirk;
-
-    .line 8
-    sget-object p2, Loz4;->a:Lrz6;
-
-    invoke-virtual {p2, p1}, Lrz6;->M(Ljava/lang/Class;)Ld4d;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_0
+    packed-switch p1, :pswitch_data_0
 
     const/4 p1, 0x1
 
-    goto :goto_0
+    invoke-direct {p0, p1}, Landroid/text/style/StyleSpan;-><init>(I)V
 
-    :cond_0
-    const/4 p1, 0x0
+    const/4 p1, 0x2
 
-    .line 9
-    :goto_0
-    iput-boolean p1, p0, Lpt0;->b:Z
+    iput p1, p0, Lpt0;->b:I
 
     return-void
 
-    .line 10
     :pswitch_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 p1, 0x2
 
-    .line 11
-    const-class p2, Landroidx/camera/camera2/internal/compat/quirk/CaptureIntentPreviewQuirk;
+    invoke-direct {p0, p1}, Landroid/text/style/StyleSpan;-><init>(I)V
 
-    invoke-virtual {p1, p2}, Lrz6;->N(Ljava/lang/Class;)Ljava/util/ArrayList;
+    const/4 p1, 0x3
 
-    move-result-object p2
-
-    invoke-virtual {p2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object p2
-
-    :cond_1
-    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroidx/camera/camera2/internal/compat/quirk/CaptureIntentPreviewQuirk;
-
-    .line 12
-    invoke-interface {v0}, Landroidx/camera/camera2/internal/compat/quirk/CaptureIntentPreviewQuirk;->c()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    const/4 p2, 0x1
-
-    goto :goto_1
-
-    :cond_2
-    const/4 p2, 0x0
-
-    .line 13
-    :goto_1
-    iput-boolean p2, p0, Lpt0;->a:Z
-
-    .line 14
-    const-class p2, Landroidx/camera/camera2/internal/compat/quirk/ImageCaptureFailedForVideoSnapshotQuirk;
-
-    invoke-virtual {p1, p2}, Lrz6;->L(Ljava/lang/Class;)Z
-
-    move-result p1
-
-    iput-boolean p1, p0, Lpt0;->b:Z
-
-    return-void
-
-    .line 15
-    :pswitch_1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 p2, 0x0
-
-    .line 16
-    iput-boolean p2, p0, Lpt0;->b:Z
-
-    .line 17
-    const-class v0, Landroidx/camera/camera2/internal/compat/quirk/AutoFlashUnderExposedQuirk;
-
-    invoke-virtual {p1, v0}, Lrz6;->M(Ljava/lang/Class;)Ld4d;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_3
-
-    const/4 p2, 0x1
-
-    :cond_3
-    iput-boolean p2, p0, Lpt0;->a:Z
+    iput p1, p0, Lpt0;->b:I
 
     return-void
 
     nop
 
     :pswitch_data_0
-    .packed-switch 0x3
-        :pswitch_1
+    .packed-switch 0x1
         :pswitch_0
     .end packed-switch
 .end method
 
-.method public constructor <init>(ZZ)V
-    .locals 0
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+# virtual methods
+.method public final copy()Lrc4;
+    .locals 2
 
-    .line 2
-    iput-boolean p1, p0, Lpt0;->a:Z
+    iget v0, p0, Lpt0;->a:I
 
-    .line 3
-    iput-boolean p2, p0, Lpt0;->b:Z
+    packed-switch v0, :pswitch_data_0
 
-    return-void
+    new-instance v0, Lpt0;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lpt0;-><init>(I)V
+
+    return-object v0
+
+    :pswitch_0
+    new-instance v0, Lpt0;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lpt0;-><init>(I)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final getType()I
+    .locals 1
+
+    iget v0, p0, Lpt0;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget v0, p0, Lpt0;->b:I
+
+    return v0
+
+    :pswitch_0
+    iget v0, p0, Lpt0;->b:I
+
+    return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

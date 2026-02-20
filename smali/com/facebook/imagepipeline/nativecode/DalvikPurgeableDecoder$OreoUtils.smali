@@ -4,9 +4,6 @@
 
 
 # annotations
-.annotation build Ld35;
-.end annotation
-
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Lcom/facebook/imagepipeline/nativecode/DalvikPurgeableDecoder;
 .end annotation
@@ -14,6 +11,9 @@
 .annotation system Ldalvik/annotation/InnerClass;
     accessFlags = 0x9
     name = "OreoUtils"
+.end annotation
+
+.annotation build Ln45;
 .end annotation
 
 

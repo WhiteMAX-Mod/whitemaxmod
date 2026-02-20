@@ -115,7 +115,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/log/stat/item/ProductAnalyticsEvent$Companion;-><init>(Lso4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/log/stat/item/ProductAnalyticsEvent$Companion;-><init>(Lfq4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/log/stat/item/ProductAnalyticsEvent;->Companion:Lru/ok/android/externcalls/sdk/log/stat/item/ProductAnalyticsEvent$Companion;
 
@@ -397,7 +397,7 @@
 
     const/4 v6, 0x0
 
-    invoke-static/range {v3 .. v8}, Lpi3;->K(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lnq6;I)Ljava/lang/String;
+    invoke-static/range {v3 .. v8}, Lek3;->K(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lks6;I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -407,7 +407,7 @@
 
     const-string v5, "ProductAnalyticsEvent apiMethod="
 
-    invoke-static {v5, v0, v3, v1, v4}, Lkz1;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v5, v0, v3, v1, v4}, Lau1;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 

@@ -1,133 +1,120 @@
 .class public final Lufi;
-.super Landroid/text/style/ClickableSpan;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ligi;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljava/lang/String;
 
-.field public final synthetic b:Lone/me/login/welcome/WelcomeScreen;
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/login/welcome/WelcomeScreen;I)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    iput p2, p0, Lufi;->a:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lufi;->b:Lone/me/login/welcome/WelcomeScreen;
+    iput-object p1, p0, Lufi;->a:Ljava/lang/String;
 
-    invoke-direct {p0}, Landroid/text/style/ClickableSpan;-><init>()V
+    iput-object p2, p0, Lufi;->b:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget p1, p0, Lufi;->a:I
+    const/4 v0, 0x1
 
-    packed-switch p1, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    iget-object p1, p0, Lufi;->b:Lone/me/login/welcome/WelcomeScreen;
+    return v0
 
-    iget-object v0, p1, Lone/me/login/welcome/WelcomeScreen;->c:Lo58;
+    :cond_0
+    instance-of v1, p1, Lufi;
 
-    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+    const/4 v2, 0x0
 
-    move-result-object v0
+    if-nez v1, :cond_1
 
-    check-cast v0, Ldd;
+    return v2
 
-    const-string v1, "MESSAGE_LINK_OPEN"
+    :cond_1
+    check-cast p1, Lufi;
 
-    const-string v2, "text"
+    iget-object v1, p0, Lufi;->a:Ljava/lang/String;
 
-    invoke-virtual {v0, v1, v2}, Ldd;->f(Ljava/lang/String;Ljava/lang/String;)V
+    iget-object v3, p1, Lufi;->a:Ljava/lang/String;
 
-    sget v0, Lj6e;->Y0:I
+    invoke-static {v1, v3}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-virtual {p1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    move-result v1
 
-    move-result-object v1
+    if-nez v1, :cond_2
 
-    invoke-static {v1, v0}, Lu7;->e(Landroid/content/Context;I)Ljava/lang/String;
+    return v2
 
-    move-result-object v0
+    :cond_2
+    iget-object v1, p0, Lufi;->b:Ljava/lang/String;
 
-    invoke-static {p1, v0}, Lone/me/login/welcome/WelcomeScreen;->z0(Lone/me/login/welcome/WelcomeScreen;Ljava/lang/String;)V
+    iget-object p1, p1, Lufi;->b:Ljava/lang/String;
 
-    return-void
+    invoke-static {v1, p1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    :pswitch_0
-    iget-object p1, p0, Lufi;->b:Lone/me/login/welcome/WelcomeScreen;
+    move-result p1
 
-    iget-object v0, p1, Lone/me/login/welcome/WelcomeScreen;->c:Lo58;
+    if-nez p1, :cond_3
 
-    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+    return v2
 
-    move-result-object v0
-
-    check-cast v0, Ldd;
-
-    const-string v1, "MESSAGE_LINK_OPEN"
-
-    const-string v2, "text"
-
-    invoke-virtual {v0, v1, v2}, Ldd;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    sget v0, Lj6e;->X0:I
-
-    invoke-virtual {p1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-static {v1, v0}, Lu7;->e(Landroid/content/Context;I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {p1, v0}, Lone/me/login/welcome/WelcomeScreen;->z0(Lone/me/login/welcome/WelcomeScreen;Ljava/lang/String;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    :cond_3
+    return v0
 .end method
 
-.method public final updateDrawState(Landroid/text/TextPaint;)V
-    .locals 1
+.method public final hashCode()I
+    .locals 2
 
-    iget v0, p0, Lufi;->a:I
+    iget-object v0, p0, Lufi;->a:Ljava/lang/String;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
-    invoke-super {p0, p1}, Landroid/text/style/ClickableSpan;->updateDrawState(Landroid/text/TextPaint;)V
+    move-result v0
 
-    const/4 v0, 0x0
+    mul-int/lit8 v0, v0, 0x1f
 
-    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setUnderlineText(Z)V
+    iget-object v1, p0, Lufi;->b:Ljava/lang/String;
 
-    return-void
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
-    :pswitch_0
-    invoke-super {p0, p1}, Landroid/text/style/ClickableSpan;->updateDrawState(Landroid/text/TextPaint;)V
+    move-result v1
 
-    const/4 v0, 0x0
+    add-int/2addr v1, v0
 
-    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setUnderlineText(Z)V
+    return v1
+.end method
 
-    return-void
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    nop
+    const-string v0, ", data="
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    const-string v1, ")"
+
+    const-string v2, "SendJsEvent(name="
+
+    iget-object v3, p0, Lufi;->a:Ljava/lang/String;
+
+    iget-object v4, p0, Lufi;->b:Ljava/lang/String;
+
+    invoke-static {v2, v3, v0, v4, v1}, Lau1;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -1,52 +1,70 @@
 .class public final Lq4e;
-.super Lp4e;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Leoc;
+
+
+# instance fields
+.field public final a:Ljava/util/concurrent/Executor;
+
+.field public final b:Lsc9;
+
+.field public final c:Leoc;
+
+.field public final d:Z
+
+.field public final e:Lzj7;
+
+
+# direct methods
+.method public constructor <init>(Ljava/util/concurrent/Executor;Lsc9;Leoc;ZLzj7;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iput-object p1, p0, Lq4e;->a:Ljava/util/concurrent/Executor;
+
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iput-object p2, p0, Lq4e;->b:Lsc9;
+
+    iput-object p3, p0, Lq4e;->c:Leoc;
+
+    invoke-virtual {p5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iput-object p5, p0, Lq4e;->e:Lzj7;
+
+    iput-boolean p4, p0, Lq4e;->d:Z
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final draw(Landroid/graphics/Canvas;)V
-    .locals 2
+.method public final a(Lkl0;Lfoc;)V
+    .locals 6
 
-    invoke-static {}, Lvp6;->e()Lup6;
+    new-instance v0, Lp4e;
 
-    iget-boolean v0, p0, Lp4e;->b:Z
+    iget-boolean v4, p0, Lq4e;->d:Z
 
-    if-nez v0, :cond_1
+    iget-object v5, p0, Lq4e;->e:Lzj7;
 
-    iget-boolean v0, p0, Lp4e;->c:Z
+    move-object v1, p0
 
-    if-nez v0, :cond_1
+    move-object v2, p1
 
-    iget v0, p0, Lp4e;->d:F
+    move-object v3, p2
 
-    const/4 v1, 0x0
+    invoke-direct/range {v0 .. v5}, Lp4e;-><init>(Lq4e;Lkl0;Lfoc;ZLzj7;)V
 
-    cmpl-float v0, v0, v1
+    iget-object p1, v1, Lq4e;->c:Leoc;
 
-    if-lez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-super {p0, p1}, Lp4e;->draw(Landroid/graphics/Canvas;)V
-
-    invoke-static {}, Lvp6;->e()Lup6;
-
-    return-void
-
-    :cond_1
-    :goto_0
-    invoke-virtual {p0}, Lp4e;->e()V
-
-    invoke-virtual {p0}, Lp4e;->d()V
-
-    iget-object v0, p0, Lp4e;->o:Landroid/graphics/Path;
-
-    invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->clipPath(Landroid/graphics/Path;)Z
-
-    invoke-super {p0, p1}, Lp4e;->draw(Landroid/graphics/Canvas;)V
-
-    invoke-static {}, Lvp6;->e()Lup6;
+    invoke-interface {p1, v0, v3}, Leoc;->a(Lkl0;Lfoc;)V
 
     return-void
 .end method

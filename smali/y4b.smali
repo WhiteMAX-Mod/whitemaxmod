@@ -1,47 +1,83 @@
-.class public final Ly4b;
-.super Ljava/lang/Object;
+.class public final synthetic Ly4b;
+.super Lnt6;
 .source "SourceFile"
 
+# interfaces
+.implements Lat6;
 
-# instance fields
-.field public final a:Lo58;
+
+# static fields
+.field public static final a:Ly4b;
 
 
 # direct methods
-.method public constructor <init>(Lr5;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 6
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ly4b;
 
-    const/16 v0, 0xf
+    const-string v4, "register(Lkotlinx/coroutines/selects/SelectInstance;Ljava/lang/Object;)V"
 
-    invoke-virtual {p1, v0}, Lr5;->d(I)Ln8g;
+    const/4 v5, 0x0
 
-    move-result-object p1
+    const/4 v1, 0x3
 
-    iput-object p1, p0, Ly4b;->a:Lo58;
+    const-class v2, Lz4b;
+
+    const-string v3, "register"
+
+    invoke-direct/range {v0 .. v5}, Lnt6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    sput-object v0, Ly4b;->a:Ly4b;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    iget-object v0, p0, Ly4b;->a:Lo58;
+    check-cast p1, Lz4b;
 
-    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+    check-cast p2, Lute;
 
-    move-result-object v0
+    iget-wide v0, p1, Lz4b;->a:J
 
-    check-cast v0, Lyzb;
+    const-wide/16 v2, 0x0
 
-    sget-object v1, Lyzb;->f:[Ljava/lang/String;
+    cmp-long p3, v0, v2
 
-    invoke-virtual {v0, v1}, Lyzb;->c([Ljava/lang/String;)Z
+    sget-object v2, Lmah;->a:Lmah;
 
-    move-result v0
+    if-gtz p3, :cond_0
 
-    return v0
+    check-cast p2, Ltte;
+
+    iput-object v2, p2, Ltte;->o:Ljava/lang/Object;
+
+    return-object v2
+
+    :cond_0
+    new-instance p3, Lvc9;
+
+    const/16 v3, 0xf
+
+    invoke-direct {p3, p2, v3, p1}, Lvc9;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    check-cast p2, Ltte;
+
+    iget-object p1, p2, Ltte;->a:Led4;
+
+    invoke-static {p1}, Lhvj;->f(Led4;)Lqx4;
+
+    move-result-object v3
+
+    invoke-interface {v3, v0, v1, p3, p1}, Lqx4;->invokeOnTimeout(JLjava/lang/Runnable;Led4;)Lb45;
+
+    move-result-object p1
+
+    iput-object p1, p2, Ltte;->c:Ljava/lang/Object;
+
+    return-object v2
 .end method

@@ -1,251 +1,50 @@
-.class public final synthetic Lrkd;
+.class public abstract Lrkd;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
-# interfaces
-.implements Llq6;
 
+# static fields
+.field public static oneme_startconversation_channel_add_subscribers_error:I = 0x7f130a95
 
-# instance fields
-.field public final synthetic a:I
+.field public static oneme_startconversation_channel_create_error:I = 0x7f130a96
 
-.field public final synthetic b:Ldld;
+.field public static oneme_startconversation_channel_select_subscribers_skip_button:I = 0x7f130a97
 
+.field public static oneme_startconversation_channel_select_subscribers_toolbar_title:I = 0x7f130a98
 
-# direct methods
-.method public synthetic constructor <init>(Ldld;I)V
-    .locals 0
+.field public static oneme_startconversation_title:I = 0x7f130a99
 
-    iput p2, p0, Lrkd;->a:I
+.field public static oneme_startconversations_chat_members:I = 0x7f130a9a
 
-    iput-object p1, p0, Lrkd;->b:Ldld;
+.field public static oneme_startconversations_chat_titleicon_avatar_bottomsheet_title:I = 0x7f130a9b
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static oneme_startconversations_chat_titleicon_avatars_load_from_gallery_action:I = 0x7f130a9c
 
-    return-void
-.end method
+.field public static oneme_startconversations_chat_titleicon_avatars_take_photo_action:I = 0x7f130a9d
 
+.field public static oneme_startconversations_chat_titleicon_confirm_button_title:I = 0x7f130a9e
 
-# virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 15
+.field public static oneme_startconversations_chat_titleicon_confirm_button_title_channel:I = 0x7f130a9f
 
-    iget v0, p0, Lrkd;->a:I
+.field public static oneme_startconversations_chat_titleicon_hint:I = 0x7f130aa0
 
-    packed-switch v0, :pswitch_data_0
+.field public static oneme_startconversations_chat_titleicon_hint_channel:I = 0x7f130aa1
 
-    iget-object v0, p0, Lrkd;->b:Ldld;
+.field public static oneme_startconversations_chat_titleicon_input_description_hint:I = 0x7f130aa2
 
-    invoke-virtual {v0}, Ldld;->x()Z
+.field public static oneme_startconversations_chat_titleicon_input_hint:I = 0x7f130aa3
 
-    move-result v0
+.field public static oneme_startconversations_chat_titleicon_input_hint_channel:I = 0x7f130aa4
 
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+.field public static oneme_startconversations_chat_titleicon_toolbar_title:I = 0x7f130aa5
 
-    move-result-object v0
+.field public static oneme_startconversations_chat_titleicon_toolbar_title_channel:I = 0x7f130aa6
 
-    return-object v0
+.field public static oneme_startconversations_continue_create_chat:I = 0x7f130aa7
 
-    :pswitch_0
-    iget-object v0, p0, Lrkd;->b:Ldld;
+.field public static oneme_startconversations_create_empty_chat:I = 0x7f130aa8
 
-    iget-object v1, v0, Ldld;->w0:Lo58;
+.field public static oneme_startconversations_member_search_hint:I = 0x7f130aa9
 
-    invoke-virtual {v0}, Ldld;->v()Lnd2;
+.field public static oneme_startconversations_phonebook_section_header:I = 0x7f130aaa
 
-    move-result-object v2
-
-    if-eqz v2, :cond_0
-
-    iget-object v2, v2, Lnd2;->b:Luh2;
-
-    if-eqz v2, :cond_0
-
-    iget-object v2, v2, Luh2;->p:Lih2;
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v2, 0x0
-
-    :goto_0
-    if-nez v2, :cond_1
-
-    invoke-interface {v1}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ltj;
-
-    invoke-virtual {v1}, Ltj;->k()Ljava/util/List;
-
-    move-result-object v1
-
-    goto :goto_3
-
-    :cond_1
-    iget-object v3, v2, Lih2;->e:Ljava/util/List;
-
-    invoke-interface {v1}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ltj;
-
-    invoke-virtual {v1}, Ltj;->k()Ljava/util/List;
-
-    move-result-object v1
-
-    new-instance v4, Ljava/util/ArrayList;
-
-    invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :cond_2
-    :goto_1
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v5
-
-    if-eqz v5, :cond_4
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v5
-
-    move-object v6, v5
-
-    check-cast v6, Lvh;
-
-    iget-boolean v7, v2, Lih2;->d:Z
-
-    if-eqz v7, :cond_3
-
-    if-eqz v3, :cond_2
-
-    iget-object v6, v6, Lvh;->b:Ljava/lang/String;
-
-    invoke-interface {v3, v6}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
-
-    move-result v6
-
-    const/4 v7, 0x1
-
-    if-ne v6, v7, :cond_2
-
-    goto :goto_2
-
-    :cond_3
-    if-eqz v3, :cond_2
-
-    iget-object v6, v6, Lvh;->b:Ljava/lang/String;
-
-    invoke-interface {v3, v6}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
-
-    move-result v6
-
-    if-nez v6, :cond_2
-
-    :goto_2
-    invoke-virtual {v4, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_1
-
-    :cond_4
-    move-object v1, v4
-
-    :goto_3
-    new-instance v2, Ljava/util/ArrayList;
-
-    const/16 v3, 0xa
-
-    invoke-static {v1, v3}, Lri3;->n(Ljava/lang/Iterable;I)I
-
-    move-result v3
-
-    invoke-direct {v2, v3}, Ljava/util/ArrayList;-><init>(I)V
-
-    invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_4
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_5
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lvh;
-
-    iget-object v4, v0, Ldld;->v0:Lo58;
-
-    invoke-interface {v4}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lup9;
-
-    iget-wide v5, v3, Lvh;->a:J
-
-    iget-object v7, v3, Lvh;->b:Ljava/lang/String;
-
-    iget-object v8, v0, Ldld;->X:Lsjd;
-
-    invoke-virtual {v8}, Lsjd;->a()I
-
-    move-result v8
-
-    int-to-float v8, v8
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v9
-
-    invoke-virtual {v9}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v9
-
-    iget v9, v9, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v8, v9
-
-    invoke-static {v8}, Lq7j;->c(F)I
-
-    move-result v8
-
-    invoke-virtual {v4, v5, v6, v7, v8}, Lup9;->b(JLjava/lang/String;I)Lbjd;
-
-    move-result-object v12
-
-    new-instance v9, Lpjd;
-
-    iget-wide v10, v3, Lvh;->a:J
-
-    invoke-static {v12}, Ldld;->u(Lbjd;)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v13
-
-    const/4 v14, 0x0
-
-    invoke-direct/range {v9 .. v14}, Lpjd;-><init>(JLbjd;Landroid/graphics/drawable/Drawable;Z)V
-
-    invoke-virtual {v2, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_4
-
-    :cond_5
-    return-object v2
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+.field public static oneme_startconversations_search_hint:I = 0x7f130aab

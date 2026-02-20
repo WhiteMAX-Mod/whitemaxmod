@@ -1,247 +1,151 @@
 .class public final Lgv8;
-.super Ljava/util/concurrent/atomic/AtomicInteger;
+.super Lhtg;
 .source "SourceFile"
-
-# interfaces
-.implements Lrv8;
-.implements Lb1g;
 
 
 # instance fields
-.field public X:I
-
-.field public Y:J
-
-.field public final a:Lz0g;
-
-.field public final b:Ljava/util/concurrent/atomic/AtomicLong;
-
-.field public final c:Ljava/util/concurrent/atomic/AtomicReference;
-
-.field public final d:Li62;
-
-.field public final o:[Lev8;
+.field public final b:Lw59;
 
 
 # direct methods
-.method public constructor <init>(Lz0g;[Lev8;)V
+.method public constructor <init>(Lw59;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lgv8;->a:Lz0g;
-
-    iput-object p2, p0, Lgv8;->o:[Lev8;
-
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicLong;
-
-    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicLong;-><init>()V
-
-    iput-object p1, p0, Lgv8;->b:Ljava/util/concurrent/atomic/AtomicLong;
-
-    new-instance p1, Li62;
-
-    const/4 p2, 0x3
-
-    invoke-direct {p1, p2}, Li62;-><init>(I)V
-
-    iput-object p1, p0, Lgv8;->d:Li62;
-
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
-
-    sget-object p2, Lzsa;->a:Lzsa;
-
-    invoke-direct {p1, p2}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object p1, p0, Lgv8;->c:Ljava/util/concurrent/atomic/AtomicReference;
+    iput-object p1, p0, Lgv8;->b:Lw59;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;)V
+.method public final b(Ljava/lang/Object;)I
     .locals 1
 
-    iget-object v0, p0, Lgv8;->c:Ljava/util/concurrent/atomic/AtomicReference;
+    sget-object v0, Lev8;->o:Ljava/lang/Object;
 
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
+    if-ne p1, v0, :cond_0
 
-    invoke-virtual {p0}, Lgv8;->d()V
+    const/4 p1, 0x0
 
-    return-void
-.end method
-
-.method public final b()V
-    .locals 2
-
-    iget-object v0, p0, Lgv8;->c:Ljava/util/concurrent/atomic/AtomicReference;
-
-    sget-object v1, Lzsa;->a:Lzsa;
-
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
-
-    invoke-virtual {p0}, Lgv8;->d()V
-
-    return-void
-.end method
-
-.method public final c(Lo25;)V
-    .locals 1
-
-    iget-object v0, p0, Lgv8;->d:Li62;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {v0, p1}, Ls25;->d(Ljava/util/concurrent/atomic/AtomicReference;Lo25;)Z
-
-    return-void
-.end method
-
-.method public final cancel()V
-    .locals 1
-
-    iget-object v0, p0, Lgv8;->d:Li62;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {v0}, Ls25;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
-
-    return-void
-.end method
-
-.method public final d()V
-    .locals 10
-
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    goto :goto_1
+    return p1
 
     :cond_0
-    iget-object v0, p0, Lgv8;->d:Li62;
+    const/4 p1, -0x1
 
-    invoke-virtual {v0}, Li62;->e()Z
+    return p1
+.end method
 
-    move-result v1
+.method public final f(ILctg;Z)Lctg;
+    .locals 11
 
-    const/4 v2, 0x0
+    const/4 p1, 0x0
 
-    iget-object v3, p0, Lgv8;->c:Ljava/util/concurrent/atomic/AtomicReference;
+    if-eqz p3, :cond_0
 
-    if-eqz v1, :cond_1
+    const/4 v0, 0x0
 
-    invoke-virtual {v3, v2}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    return-void
+    move-result-object v0
 
-    :cond_1
-    invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_4
-
-    sget-object v4, Lzsa;->a:Lzsa;
-
-    iget-object v5, p0, Lgv8;->a:Lz0g;
-
-    if-eq v1, v4, :cond_2
-
-    iget-wide v6, p0, Lgv8;->Y:J
-
-    iget-object v4, p0, Lgv8;->b:Ljava/util/concurrent/atomic/AtomicLong;
-
-    invoke-virtual {v4}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
-
-    move-result-wide v8
-
-    cmp-long v4, v6, v8
-
-    if-eqz v4, :cond_4
-
-    const-wide/16 v8, 0x1
-
-    add-long/2addr v6, v8
-
-    iput-wide v6, p0, Lgv8;->Y:J
-
-    invoke-virtual {v3, v2}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
-
-    invoke-interface {v5, v1}, Lz0g;->r(Ljava/lang/Object;)V
+    move-object v2, v0
 
     goto :goto_0
 
-    :cond_2
-    invoke-virtual {v3, v2}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
+    :cond_0
+    move-object v2, p1
 
     :goto_0
-    invoke-virtual {v0}, Li62;->e()Z
+    if-eqz p3, :cond_1
 
-    move-result v0
+    sget-object p1, Lev8;->o:Ljava/lang/Object;
 
-    if-nez v0, :cond_4
+    :cond_1
+    move-object v3, p1
 
-    iget v0, p0, Lgv8;->X:I
+    sget-object v9, Lfa;->X:Lfa;
 
-    iget-object v1, p0, Lgv8;->o:[Lev8;
+    const/4 v10, 0x1
 
-    array-length v2, v1
+    const/4 v4, 0x0
 
-    if-ne v0, v2, :cond_3
+    const-wide v5, -0x7fffffffffffffffL    # -4.9E-324
 
-    invoke-interface {v5}, Lz0g;->b()V
+    const-wide/16 v7, 0x0
 
-    return-void
+    move-object v1, p2
 
-    :cond_3
-    add-int/lit8 v2, v0, 0x1
+    invoke-virtual/range {v1 .. v10}, Lctg;->g(Ljava/lang/Object;Ljava/lang/Object;IJJLfa;Z)V
 
-    iput v2, p0, Lgv8;->X:I
-
-    aget-object v0, v1, v0
-
-    invoke-virtual {v0, p0}, Lev8;->e(Lrv8;)V
-
-    :cond_4
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    :goto_1
-    return-void
+    return-object v1
 .end method
 
-.method public final f(J)V
+.method public final h()I
     .locals 1
 
-    invoke-static {p1, p2}, Le1g;->e(J)Z
+    const/4 v0, 0x1
 
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lgv8;->b:Ljava/util/concurrent/atomic/AtomicLong;
-
-    invoke-static {v0, p1, p2}, Ln8j;->a(Ljava/util/concurrent/atomic/AtomicLong;J)J
-
-    invoke-virtual {p0}, Lgv8;->d()V
-
-    :cond_0
-    return-void
+    return v0
 .end method
 
-.method public final onError(Ljava/lang/Throwable;)V
+.method public final l(I)Ljava/lang/Object;
+    .locals 0
+
+    sget-object p1, Lev8;->o:Ljava/lang/Object;
+
+    return-object p1
+.end method
+
+.method public final m(ILftg;J)Lftg;
+    .locals 21
+
+    sget-object v1, Lftg;->B0:Ljava/lang/Object;
+
+    const/16 v18, 0x0
+
+    const-wide/16 v19, 0x0
+
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lgv8;->b:Lw59;
+
+    const/4 v3, 0x0
+
+    const-wide v4, -0x7fffffffffffffffL    # -4.9E-324
+
+    const-wide v6, -0x7fffffffffffffffL    # -4.9E-324
+
+    const-wide v8, -0x7fffffffffffffffL    # -4.9E-324
+
+    const/4 v10, 0x0
+
+    const/4 v11, 0x1
+
+    const/4 v12, 0x0
+
+    const-wide/16 v13, 0x0
+
+    const-wide v15, -0x7fffffffffffffffL    # -4.9E-324
+
+    const/16 v17, 0x0
+
+    move-object/from16 v0, p2
+
+    invoke-virtual/range {v0 .. v20}, Lftg;->b(Ljava/lang/Object;Lw59;Ljava/lang/Object;JJJZZLm59;JJIIJ)V
+
+    const/4 v1, 0x1
+
+    iput-boolean v1, v0, Lftg;->v0:Z
+
+    return-object v0
+.end method
+
+.method public final o()I
     .locals 1
 
-    iget-object v0, p0, Lgv8;->a:Lz0g;
+    const/4 v0, 0x1
 
-    invoke-interface {v0, p1}, Lz0g;->onError(Ljava/lang/Throwable;)V
-
-    return-void
+    return v0
 .end method

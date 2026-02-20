@@ -1,64 +1,121 @@
 .class public final Lqw8;
-.super Ljava/lang/Object;
+.super Ljava/util/LinkedHashMap;
 .source "SourceFile"
 
-# interfaces
-.implements Lxw8;
 
+# instance fields
+.field public final synthetic a:I
 
-# static fields
-.field public static final a:Lqw8;
+.field public final b:I
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>()V
     .locals 1
 
-    new-instance v0, Lqw8;
+    const/4 v0, 0x1
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput v0, p0, Lqw8;->a:I
 
-    sput-object v0, Lqw8;->a:Lqw8;
+    .line 5
+    invoke-direct {p0}, Ljava/util/LinkedHashMap;-><init>()V
+
+    const/16 v0, 0xa
+
+    .line 6
+    iput v0, p0, Lqw8;->b:I
+
+    return-void
+.end method
+
+.method public constructor <init>(I)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lqw8;->a:I
+
+    .line 1
+    invoke-direct {p0}, Ljava/util/LinkedHashMap;-><init>()V
+
+    .line 2
+    iput p1, p0, Lqw8;->b:I
+
+    return-void
+.end method
+
+.method public constructor <init>(II)V
+    .locals 2
+
+    const/4 p2, 0x0
+
+    iput p2, p0, Lqw8;->a:I
+
+    const/high16 p2, 0x3f400000    # 0.75f
+
+    const/4 v0, 0x1
+
+    const/4 v1, 0x4
+
+    .line 3
+    invoke-direct {p0, v1, p2, v0}, Ljava/util/LinkedHashMap;-><init>(IFZ)V
+
+    .line 4
+    iput p1, p0, Lqw8;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final removeEldestEntry(Ljava/util/Map$Entry;)Z
     .locals 1
 
-    const/4 v0, 0x1
+    iget p1, p0, Lqw8;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch p1, :pswitch_data_0
 
-    return v0
+    invoke-virtual {p0}, Ljava/util/AbstractMap;->size()I
+
+    move-result p1
+
+    iget v0, p0, Lqw8;->b:I
+
+    if-le p1, v0, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
 
     :cond_0
-    instance-of p1, p1, Lqw8;
-
-    if-nez p1, :cond_1
-
     const/4 p1, 0x0
 
+    :goto_0
     return p1
 
+    :pswitch_0
+    invoke-super {p0}, Ljava/util/AbstractMap;->size()I
+
+    move-result p1
+
+    iget v0, p0, Lqw8;->b:I
+
+    if-le p1, v0, :cond_1
+
+    const/4 p1, 0x1
+
+    goto :goto_1
+
     :cond_1
-    return v0
-.end method
+    const/4 p1, 0x0
 
-.method public final hashCode()I
-    .locals 1
+    :goto_1
+    return p1
 
-    const v0, 0x390d5872
+    nop
 
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "ShowCloseConfirmationDialog"
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

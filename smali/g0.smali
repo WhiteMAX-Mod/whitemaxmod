@@ -3,245 +3,137 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/Collection;
-.implements Lo28;
+.implements Landroid/os/Parcelable;
 
 
-# virtual methods
-.method public final add(Ljava/lang/Object;)Z
-    .locals 1
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lg0;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+.field public static final b:Le0;
 
-    const-string v0, "Operation is not supported for read-only collection"
 
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+# instance fields
+.field public final a:Landroid/os/Parcelable;
 
-    throw p1
-.end method
 
-.method public final addAll(Ljava/util/Collection;)Z
-    .locals 1
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string v0, "Operation is not supported for read-only collection"
-
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final clear()V
+# direct methods
+.method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
+    new-instance v0, Le0;
 
-    const-string v1, "Operation is not supported for read-only collection"
+    invoke-direct {v0}, Lg0;-><init>()V
 
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    sput-object v0, Lg0;->b:Le0;
 
-    throw v0
-.end method
-
-.method public contains(Ljava/lang/Object;)Z
-    .locals 3
-
-    invoke-interface {p0}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result v0
+    new-instance v0, Lf0;
 
     const/4 v1, 0x0
 
-    if-eqz v0, :cond_0
+    invoke-direct {v0, v1}, Lf0;-><init>(I)V
 
-    return v1
+    sput-object v0, Lg0;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    :cond_0
-    invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :cond_1
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    invoke-static {v2, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_2
-    return v1
+    return-void
 .end method
 
-.method public containsAll(Ljava/util/Collection;)Z
-    .locals 2
+.method public constructor <init>()V
+    .locals 1
 
-    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result v0
+    const/4 v0, 0x0
 
-    const/4 v1, 0x1
+    .line 2
+    iput-object v0, p0, Lg0;->a:Landroid/os/Parcelable;
 
-    if-eqz v0, :cond_0
+    return-void
+.end method
 
-    return v1
+.method public constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
+    .locals 0
 
-    :cond_0
-    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    .line 6
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 7
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
 
     move-result-object p1
 
-    :cond_1
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    if-eqz p1, :cond_0
 
-    move-result v0
+    goto :goto_0
 
-    if-eqz v0, :cond_2
+    .line 8
+    :cond_0
+    sget-object p1, Lg0;->b:Le0;
 
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    :goto_0
+    iput-object p1, p0, Lg0;->a:Landroid/os/Parcelable;
 
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lg0;->contains(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_2
-    return v1
+    return-void
 .end method
 
-.method public abstract getSize()I
-.end method
-
-.method public isEmpty()Z
+.method public constructor <init>(Landroid/os/Parcelable;)V
     .locals 1
 
-    invoke-virtual {p0}, Lg0;->getSize()I
+    .line 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result v0
+    if-eqz p1, :cond_1
 
-    if-nez v0, :cond_0
+    .line 4
+    sget-object v0, Lg0;->b:Le0;
 
-    const/4 v0, 0x1
+    if-eq p1, v0, :cond_0
 
-    return v0
+    goto :goto_0
 
     :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    iput-object p1, p0, Lg0;->a:Landroid/os/Parcelable;
+
+    return-void
+
+    .line 5
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "superState must not be null"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+
+# virtual methods
+.method public final describeContents()I
+    .locals 1
+
     const/4 v0, 0x0
 
     return v0
 .end method
 
-.method public final remove(Ljava/lang/Object;)Z
+.method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 1
 
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    iget-object v0, p0, Lg0;->a:Landroid/os/Parcelable;
 
-    const-string v0, "Operation is not supported for read-only collection"
+    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final removeAll(Ljava/util/Collection;)Z
-    .locals 1
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string v0, "Operation is not supported for read-only collection"
-
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final retainAll(Ljava/util/Collection;)Z
-    .locals 1
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string v0, "Operation is not supported for read-only collection"
-
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final bridge size()I
-    .locals 1
-
-    invoke-virtual {p0}, Lg0;->getSize()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public toArray()[Ljava/lang/Object;
-    .locals 1
-
-    .line 1
-    invoke-static {p0}, Lei4;->d(Ljava/util/Collection;)[Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public toArray([Ljava/lang/Object;)[Ljava/lang/Object;
-    .locals 0
-
-    .line 2
-    invoke-static {p0, p1}, Lei4;->e(Ljava/util/Collection;[Ljava/lang/Object;)[Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 6
-
-    new-instance v4, Li;
-
-    const/4 v0, 0x1
-
-    invoke-direct {v4, v0, p0}, Li;-><init>(ILjava/lang/Object;)V
-
-    const/16 v5, 0x18
-
-    const-string v1, ", "
-
-    const-string v2, "["
-
-    const-string v3, "]"
-
-    move-object v0, p0
-
-    invoke-static/range {v0 .. v5}, Lpi3;->K(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lnq6;I)Ljava/lang/String;
-
-    move-result-object v1
-
-    return-object v1
+    return-void
 .end method

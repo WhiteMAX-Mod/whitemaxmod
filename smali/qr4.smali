@@ -1,15 +1,8 @@
-.class public final Lqr4;
+.class public interface abstract Lqr4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:Ltsd;
-
-.field public b:I
-
-.field public c:I
-
-.field public d:I
-
-.field public e:I
+# virtual methods
+.method public abstract a(Landroid/media/MediaCodecInfo;)I
+.end method

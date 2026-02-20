@@ -1,17 +1,31 @@
-.class public Loc5;
-.super Lnc5;
+.class public final Loc5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public a(Landroid/view/Window;)V
+# instance fields
+.field public final a:I
+
+.field public final b:[I
+
+.field public final c:[I
+
+.field public final d:[I
+
+
+# direct methods
+.method public constructor <init>(I[I[I[I)V
     .locals 0
 
-    invoke-virtual {p1}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p1
+    iput p1, p0, Loc5;->a:I
 
-    invoke-static {p1}, Lw4;->v(Landroid/view/WindowManager$LayoutParams;)V
+    iput-object p2, p0, Loc5;->b:[I
+
+    iput-object p3, p0, Loc5;->c:[I
+
+    iput-object p4, p0, Loc5;->d:[I
 
     return-void
 .end method

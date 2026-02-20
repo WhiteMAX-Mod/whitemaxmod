@@ -1,82 +1,110 @@
-.class public interface abstract Lar5;
+.class public final Lar5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lf2e;
+
+
+# instance fields
+.field public final a:Lu62;
+
+.field public final b:Z
+
+.field public final c:Z
+
+.field public final d:Lg4c;
+
+.field public final e:I
+
+.field public final f:Lrv;
+
+.field public final g:Landroid/media/metrics/LogSessionId;
+
+
+# direct methods
+.method public constructor <init>(ZZLg4c;ILrv;Landroid/media/metrics/LogSessionId;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-boolean p1, p0, Lar5;->b:Z
+
+    iput-boolean p2, p0, Lar5;->c:Z
+
+    iput-object p3, p0, Lar5;->d:Lg4c;
+
+    iput p4, p0, Lar5;->e:I
+
+    iput-object p5, p0, Lar5;->f:Lrv;
+
+    iput-object p6, p0, Lar5;->g:Landroid/media/metrics/LogSessionId;
+
+    new-instance p1, Lu62;
+
+    const/16 p2, 0x12
+
+    invoke-direct {p1, p2}, Lu62;-><init>(I)V
+
+    iput-object p1, p0, Lar5;->a:Lu62;
+
+    return-void
+.end method
+
 
 # virtual methods
-.method public abstract a()Lkrg;
-.end method
+.method public final b(Landroid/os/Handler;Lor5;Lor5;Lor5;Lor5;)[Lvm0;
+    .locals 6
 
-.method public abstract b()I
-.end method
+    new-instance p1, Ljava/util/ArrayList;
 
-.method public abstract c(Z)V
-.end method
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-.method public abstract d(I)Lpj6;
-.end method
+    iget-boolean p2, p0, Lar5;->b:Z
 
-.method public abstract e()V
-.end method
+    iget-object v4, p0, Lar5;->f:Lrv;
 
-.method public abstract f(I)I
-.end method
+    iget-object v1, p0, Lar5;->d:Lg4c;
 
-.method public abstract g(JLjava/util/List;)I
-.end method
+    if-nez p2, :cond_0
 
-.method public abstract h()V
-.end method
+    new-instance p2, Llq5;
 
-.method public abstract i()I
-.end method
+    iget-object p3, p0, Lar5;->a:Lu62;
 
-.method public abstract j()Lpj6;
-.end method
+    iget-object p4, p0, Lar5;->g:Landroid/media/metrics/LogSessionId;
 
-.method public abstract k()I
-.end method
+    invoke-direct {p2, v1, p3, v4, p4}, Llq5;-><init>(Lg4c;Lu62;Lrv;Landroid/media/metrics/LogSessionId;)V
 
-.method public abstract l(F)V
-.end method
+    invoke-virtual {p1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-.method public abstract length()I
-.end method
+    :cond_0
+    iget-boolean p2, p0, Lar5;->c:Z
 
-.method public abstract m()Ljava/lang/Object;
-.end method
+    if-nez p2, :cond_1
 
-.method public n()V
-    .locals 0
+    new-instance v0, Lnq5;
 
-    return-void
-.end method
+    iget-object v3, p0, Lar5;->a:Lu62;
 
-.method public o()V
-    .locals 0
+    iget-object v5, p0, Lar5;->g:Landroid/media/metrics/LogSessionId;
 
-    return-void
-.end method
+    iget v2, p0, Lar5;->e:I
 
-.method public abstract p(I)I
-.end method
+    invoke-direct/range {v0 .. v5}, Lnq5;-><init>(Lg4c;ILu62;Lrv;Landroid/media/metrics/LogSessionId;)V
 
-.method public abstract q(IJ)Z
-.end method
+    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-.method public abstract r(JJJLjava/util/List;[Lvz8;)V
-.end method
+    :cond_1
+    const/4 p2, 0x0
 
-.method public abstract s(Lpj6;)I
-.end method
+    new-array p2, p2, [Lvm0;
 
-.method public t(JLtc3;Ljava/util/List;)Z
-    .locals 0
+    invoke-virtual {p1, p2}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
-    const/4 p1, 0x0
+    move-result-object p1
 
-    return p1
-.end method
+    check-cast p1, [Lvm0;
 
-.method public abstract u(IJ)Z
+    return-object p1
 .end method

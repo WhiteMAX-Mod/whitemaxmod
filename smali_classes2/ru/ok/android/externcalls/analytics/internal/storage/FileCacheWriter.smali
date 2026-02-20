@@ -2,6 +2,9 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lru/ok/android/externcalls/analytics/internal/storage/CacheWriter;
+
 
 # static fields
 .field private static final LOG_TAG:Ljava/lang/String; = "CallAnalyticsFileCacheWriter"
@@ -191,7 +194,7 @@
     invoke-interface {v2, v4, v3}, Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :try_start_0
-    invoke-static {p1}, Ll36;->d(Ljava/io/File;)Z
+    invoke-static {p1}, Lg56;->d(Ljava/io/File;)Z
 
     move-result p1
 
@@ -308,27 +311,27 @@
 
     if-eqz p1, :cond_0
 
-    sget-object p1, Ll36;->a:[B
+    sget-object p1, Lg56;->a:[B
 
     invoke-virtual {p3, p1}, Ljava/io/OutputStream;->write([B)V
 
     :cond_0
-    new-instance p1, Llac;
+    new-instance p1, Lbec;
 
-    new-instance v0, Lnrb;
+    new-instance v0, Laub;
 
-    invoke-direct {v0, p3}, Lnrb;-><init>(Ljava/io/OutputStream;)V
+    invoke-direct {v0, p3}, Laub;-><init>(Ljava/io/OutputStream;)V
 
-    invoke-direct {p1, v0}, Llac;-><init>(Ljava/io/Writer;)V
+    invoke-direct {p1, v0}, Lbec;-><init>(Ljava/io/Writer;)V
 
     :try_start_0
     sget-object p3, Lru/ok/android/externcalls/analytics/internal/event/EventSerializer;->INSTANCE:Lru/ok/android/externcalls/analytics/internal/event/EventSerializer;
 
-    invoke-virtual {p3, p1, p2}, Lru/ok/android/externcalls/analytics/internal/event/EventSerializer;->serialize(Li28;Lru/ok/android/externcalls/analytics/events/CallAnalyticsEvent;)V
+    invoke-virtual {p3, p1, p2}, Lru/ok/android/externcalls/analytics/internal/event/EventSerializer;->serialize(Lf58;Lru/ok/android/externcalls/analytics/events/CallAnalyticsEvent;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-virtual {p1}, Llac;->close()V
+    invoke-virtual {p1}, Lbec;->close()V
 
     return-void
 
@@ -336,7 +339,7 @@
     move-exception p2
 
     :try_start_1
-    invoke-virtual {p1}, Llac;->close()V
+    invoke-virtual {p1}, Lbec;->close()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
@@ -353,6 +356,14 @@
 
 
 # virtual methods
+.method public count()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
 .method public drop()V
     .locals 5
     .annotation system Ldalvik/annotation/Throws;
@@ -406,7 +417,7 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     :goto_0
-    invoke-static {v2}, Ll36;->e(Ljava/io/File;)J
+    invoke-static {v2}, Lg56;->e(Ljava/io/File;)J
 
     move-result-wide v0
 
@@ -425,7 +436,7 @@
 
     :cond_0
     :try_start_2
-    invoke-static {v2}, Ll36;->b(Ljava/io/File;)V
+    invoke-static {v2}, Lg56;->b(Ljava/io/File;)V
 
     iget-object v1, p0, Lru/ok/android/externcalls/analytics/internal/storage/FileCacheWriter;->logger:Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;
 
@@ -446,7 +457,7 @@
     goto :goto_0
 
     :goto_1
-    invoke-static {v2}, Ll36;->e(Ljava/io/File;)J
+    invoke-static {v2}, Lg56;->e(Ljava/io/File;)J
 
     move-result-wide v1
 
@@ -517,7 +528,7 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     :goto_0
-    invoke-static {v3}, Ll36;->e(Ljava/io/File;)J
+    invoke-static {v3}, Lg56;->e(Ljava/io/File;)J
 
     move-result-wide v0
 
@@ -589,7 +600,7 @@
 
     invoke-interface {v2, v5, v1}, Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {p1}, Ll36;->e(Ljava/io/File;)J
+    invoke-static {p1}, Lg56;->e(Ljava/io/File;)J
 
     move-result-wide v1
 
@@ -599,18 +610,18 @@
 
     if-lez v1, :cond_2
 
-    invoke-static {p1}, Ll36;->b(Ljava/io/File;)V
+    invoke-static {p1}, Lg56;->b(Ljava/io/File;)V
 
     :cond_2
-    invoke-static {p1}, Ll36;->e(Ljava/io/File;)J
+    invoke-static {p1}, Lg56;->e(Ljava/io/File;)J
 
     move-result-wide v1
 
     iget-boolean v4, p0, Lru/ok/android/externcalls/analytics/internal/storage/FileCacheWriter;->compressContent:Z
 
-    invoke-static {p1, v3, v4}, Ll36;->a(Ljava/io/File;Ljava/io/File;Z)V
+    invoke-static {p1, v3, v4}, Lg56;->a(Ljava/io/File;Ljava/io/File;Z)V
 
-    invoke-static {p1}, Ll36;->e(Ljava/io/File;)J
+    invoke-static {p1}, Lg56;->e(Ljava/io/File;)J
 
     move-result-wide v6
 
@@ -639,7 +650,7 @@
     goto :goto_0
 
     :goto_1
-    invoke-static {v3}, Ll36;->e(Ljava/io/File;)J
+    invoke-static {v3}, Lg56;->e(Ljava/io/File;)J
 
     move-result-wide v0
 
@@ -679,7 +690,7 @@
 
     invoke-interface {v1}, Ljava/util/concurrent/locks/Lock;->lock()V
 
-    invoke-static {v0}, Ll36;->e(Ljava/io/File;)J
+    invoke-static {v0}, Lg56;->e(Ljava/io/File;)J
 
     move-result-wide v4
 
@@ -776,7 +787,7 @@
 
     invoke-interface {v4}, Ljava/util/concurrent/locks/Lock;->lock()V
 
-    invoke-static {v3}, Ll36;->g(Ljava/io/File;)V
+    invoke-static {v3}, Lg56;->g(Ljava/io/File;)V
 
     new-instance v4, Ljava/io/FileOutputStream;
 
@@ -788,7 +799,7 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     :try_start_2
-    invoke-static {v3}, Ll36;->e(Ljava/io/File;)J
+    invoke-static {v3}, Lg56;->e(Ljava/io/File;)J
 
     move-result-wide v7
 
@@ -837,7 +848,7 @@
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
     :goto_2
-    invoke-static {v3}, Ll36;->e(Ljava/io/File;)J
+    invoke-static {v3}, Lg56;->e(Ljava/io/File;)J
 
     move-result-wide v0
 
@@ -900,7 +911,7 @@
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
     :try_start_7
-    invoke-static {v3}, Ll36;->b(Ljava/io/File;)V
+    invoke-static {v3}, Lg56;->b(Ljava/io/File;)V
     :try_end_7
     .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_2
     .catchall {:try_start_7 .. :try_end_7} :catchall_0
@@ -935,7 +946,7 @@
     return-void
 
     :goto_6
-    invoke-static {v3}, Ll36;->e(Ljava/io/File;)J
+    invoke-static {v3}, Lg56;->e(Ljava/io/File;)J
 
     move-result-wide v0
 

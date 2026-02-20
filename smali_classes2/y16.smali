@@ -4,282 +4,289 @@
 
 
 # instance fields
-.field public a:J
+.field public final a:Lv36;
 
-.field public b:J
+.field public b:Ljava/io/File;
 
-.field public c:J
+.field public c:Ljava/io/File;
 
-.field public d:J
+.field public d:Ljava/io/File;
 
-.field public final e:F
+.field public e:Ljava/io/File;
 
-.field public f:J
+.field public f:Ljava/io/File;
 
-.field public final g:Landroid/view/animation/AccelerateInterpolator;
+.field public g:Ljava/io/File;
 
-.field public h:F
+.field public h:Ljava/io/File;
 
-.field public i:F
+.field public i:Ljava/io/File;
 
-.field public j:F
+.field public j:Ljava/io/File;
 
-.field public final synthetic k:La26;
+.field public k:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(La26;)V
-    .locals 3
+.method public constructor <init>(Lv36;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ly16;->k:La26;
-
-    const/4 p1, 0x0
-
-    int-to-float p1, p1
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v0, p1
-
-    invoke-static {v0}, Lq7j;->c(F)I
-
-    move-result v0
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v1, p1
-
-    invoke-static {v1}, Lq7j;->c(F)I
-
-    move-result v1
-
-    int-to-float v0, v0
-
-    int-to-float v1, v1
-
-    invoke-static {v0, v1}, Ls66;->a(FF)J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Ly16;->a:J
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v0, p1
-
-    invoke-static {v0}, Lq7j;->c(F)I
-
-    move-result v0
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v1, p1
-
-    invoke-static {v1}, Lq7j;->c(F)I
-
-    move-result v1
-
-    int-to-float v0, v0
-
-    int-to-float v1, v1
-
-    invoke-static {v0, v1}, Ls66;->a(FF)J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Ly16;->b:J
-
-    const/16 v0, 0x8
-
-    int-to-float v0, v0
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v1, v0
-
-    invoke-static {v1}, Lq7j;->c(F)I
-
-    move-result v1
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v2, p1
-
-    invoke-static {v2}, Lq7j;->c(F)I
-
-    move-result v2
-
-    int-to-float v1, v1
-
-    int-to-float v2, v2
-
-    invoke-static {v1, v2}, Ls66;->a(FF)J
-
-    move-result-wide v1
-
-    iput-wide v1, p0, Ly16;->c:J
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v0, v1
-
-    invoke-static {v0}, Lq7j;->c(F)I
-
-    move-result v0
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p1, v1
-
-    invoke-static {p1}, Lq7j;->c(F)I
-
-    move-result p1
-
-    int-to-float v0, v0
-
-    int-to-float p1, p1
-
-    invoke-static {v0, p1}, Ls66;->a(FF)J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Ly16;->d:J
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object p1
-
-    iget p1, p1, Landroid/util/DisplayMetrics;->density:F
-
-    const/high16 v0, 0x3fc00000    # 1.5f
-
-    mul-float/2addr p1, v0
-
-    iput p1, p0, Ly16;->e:F
-
-    const/4 p1, -0x1
-
-    invoke-static {p1, p1}, Los7;->a(II)J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Ly16;->f:J
-
-    new-instance p1, Landroid/view/animation/AccelerateInterpolator;
-
-    invoke-direct {p1}, Landroid/view/animation/AccelerateInterpolator;-><init>()V
-
-    iput-object p1, p0, Ly16;->g:Landroid/view/animation/AccelerateInterpolator;
-
-    const/high16 p1, 0x3f800000    # 1.0f
-
-    iput p1, p0, Ly16;->h:F
+    iput-object p1, p0, Ly16;->a:Lv36;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final a(Lu01;)Ljava/io/File;
+    .locals 1
 
-    iget v0, p0, Ly16;->i:F
+    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
 
-    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    move-result p1
+
+    iget-object v0, p0, Ly16;->a:Lv36;
+
+    packed-switch p1, :pswitch_data_0
+
+    const/4 p1, 0x0
+
+    return-object p1
+
+    :pswitch_0
+    iget-object p1, p0, Ly16;->j:Ljava/io/File;
+
+    if-nez p1, :cond_0
+
+    check-cast v0, Lh56;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v0}, Lh56;->b()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "ringtones"
+
+    invoke-static {p1, v0}, Lh56;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object p1
+
+    iput-object p1, p0, Ly16;->j:Ljava/io/File;
+
+    :cond_0
+    iget-object p1, p0, Ly16;->j:Ljava/io/File;
+
+    return-object p1
+
+    :pswitch_1
+    iget-object p1, p0, Ly16;->i:Ljava/io/File;
+
+    if-nez p1, :cond_1
+
+    check-cast v0, Lh56;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v0}, Lh56;->b()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "videoCache"
+
+    invoke-static {p1, v0}, Lh56;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object p1
+
+    iput-object p1, p0, Ly16;->i:Ljava/io/File;
+
+    :cond_1
+    iget-object p1, p0, Ly16;->i:Ljava/io/File;
+
+    return-object p1
+
+    :pswitch_2
+    iget-object p1, p0, Ly16;->h:Ljava/io/File;
+
+    if-nez p1, :cond_2
+
+    check-cast v0, Lh56;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v0}, Lh56;->b()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "exo_files_cache"
+
+    invoke-static {p1, v0}, Lh56;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object p1
+
+    iput-object p1, p0, Ly16;->h:Ljava/io/File;
+
+    :cond_2
+    iget-object p1, p0, Ly16;->h:Ljava/io/File;
+
+    return-object p1
+
+    :pswitch_3
+    iget-object p1, p0, Ly16;->c:Ljava/io/File;
+
+    if-nez p1, :cond_3
+
+    check-cast v0, Lh56;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v0}, Lh56;->b()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "upload"
+
+    invoke-static {p1, v0}, Lh56;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object p1
+
+    iput-object p1, p0, Ly16;->c:Ljava/io/File;
+
+    :cond_3
+    iget-object p1, p0, Ly16;->c:Ljava/io/File;
+
+    return-object p1
+
+    :pswitch_4
+    iget-object p1, p0, Ly16;->f:Ljava/io/File;
+
+    if-nez p1, :cond_4
+
+    check-cast v0, Lh56;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v0}, Lh56;->b()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "stickerCache"
+
+    invoke-static {p1, v0}, Lh56;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object p1
+
+    iput-object p1, p0, Ly16;->f:Ljava/io/File;
+
+    :cond_4
+    iget-object p1, p0, Ly16;->f:Ljava/io/File;
+
+    return-object p1
+
+    :pswitch_5
+    iget-object p1, p0, Ly16;->g:Ljava/io/File;
+
+    if-nez p1, :cond_5
+
+    check-cast v0, Lh56;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v0}, Lh56;->b()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "gifCache"
+
+    invoke-static {p1, v0}, Lh56;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object p1
+
+    iput-object p1, p0, Ly16;->g:Ljava/io/File;
+
+    :cond_5
+    iget-object p1, p0, Ly16;->g:Ljava/io/File;
+
+    return-object p1
+
+    :pswitch_6
+    iget-object p1, p0, Ly16;->e:Ljava/io/File;
+
+    if-nez p1, :cond_6
+
+    check-cast v0, Lh56;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v0}, Lh56;->b()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "audioCache"
+
+    invoke-static {p1, v0}, Lh56;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object p1
+
+    iput-object p1, p0, Ly16;->e:Ljava/io/File;
+
+    :cond_6
+    iget-object p1, p0, Ly16;->e:Ljava/io/File;
+
+    return-object p1
+
+    :pswitch_7
+    iget-object p1, p0, Ly16;->d:Ljava/io/File;
+
+    if-nez p1, :cond_7
+
+    check-cast v0, Lh56;
+
+    invoke-virtual {v0}, Lh56;->k()Ljava/io/File;
+
+    move-result-object p1
+
+    iput-object p1, p0, Ly16;->d:Ljava/io/File;
+
+    :cond_7
+    iget-object p1, p0, Ly16;->d:Ljava/io/File;
+
+    return-object p1
+
+    :pswitch_8
+    iget-object p1, p0, Ly16;->b:Ljava/io/File;
+
+    if-nez p1, :cond_8
+
+    new-instance p1, Ljava/io/File;
+
+    check-cast v0, Lh56;
+
+    invoke-virtual {v0}, Lh56;->b()Ljava/lang/String;
 
     move-result-object v0
 
-    iget v1, p0, Ly16;->j:F
+    invoke-direct {p1, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    iput-object p1, p0, Ly16;->b:Ljava/io/File;
 
-    move-result-object v1
+    :cond_8
+    iget-object p1, p0, Ly16;->b:Ljava/io/File;
 
-    iget v2, p0, Ly16;->h:F
+    return-object p1
 
-    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v2
-
-    filled-new-array {v0, v1, v2}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    const-string v1, "(%.1f, %.1f, %.1f)"
-
-    invoke-static {v1, v0}, Llbh;->h(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -3,266 +3,156 @@
 .source "SourceFile"
 
 # interfaces
-.implements Llli;
+.implements Loza;
 
 
-# instance fields
-.field public final a:F
+# static fields
+.field public static final a:Llb0;
 
-.field public final b:F
+.field public static final b:Ld16;
 
-.field public final c:F
+.field public static final c:Ld16;
 
-.field public final d:F
+.field public static final d:Ld16;
+
+.field public static final e:Ld16;
 
 
 # direct methods
-.method public constructor <init>(FFFF)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, Llb0;->a:F
-
-    iput p2, p0, Llb0;->b:F
-
-    iput p3, p0, Llb0;->c:F
-
-    iput p4, p0, Llb0;->d:F
-
-    return-void
-.end method
-
-.method public static e(Llli;)Llb0;
+.method static constructor <clinit>()V
     .locals 4
 
     new-instance v0, Llb0;
 
-    invoke-interface {p0}, Llli;->c()F
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    move-result v1
+    sput-object v0, Llb0;->a:Llb0;
 
-    invoke-interface {p0}, Llli;->a()F
+    new-instance v0, Lp00;
 
-    move-result v2
+    const/4 v1, 0x1
 
-    invoke-interface {p0}, Llli;->b()F
+    invoke-direct {v0, v1}, Lp00;-><init>(I)V
 
-    move-result v3
+    const-class v1, Li4d;
 
-    invoke-interface {p0}, Llli;->d()F
+    invoke-static {v1, v0}, Ly12;->n(Ljava/lang/Class;Lp00;)Ljava/util/HashMap;
 
-    move-result p0
+    move-result-object v0
 
-    invoke-direct {v0, v1, v2, v3, p0}, Llb0;-><init>(FFFF)V
+    new-instance v2, Ld16;
 
-    return-object v0
+    invoke-static {v0}, Lkb0;->o(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "window"
+
+    invoke-direct {v2, v3, v0}, Ld16;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Llb0;->b:Ld16;
+
+    new-instance v0, Lp00;
+
+    const/4 v2, 0x2
+
+    invoke-direct {v0, v2}, Lp00;-><init>(I)V
+
+    invoke-static {v1, v0}, Ly12;->n(Ljava/lang/Class;Lp00;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Ld16;
+
+    invoke-static {v0}, Lkb0;->o(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "logSourceMetrics"
+
+    invoke-direct {v2, v3, v0}, Ld16;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Llb0;->c:Ld16;
+
+    new-instance v0, Lp00;
+
+    const/4 v2, 0x3
+
+    invoke-direct {v0, v2}, Lp00;-><init>(I)V
+
+    invoke-static {v1, v0}, Ly12;->n(Ljava/lang/Class;Lp00;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Ld16;
+
+    invoke-static {v0}, Lkb0;->o(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "globalMetrics"
+
+    invoke-direct {v2, v3, v0}, Ld16;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Llb0;->d:Ld16;
+
+    new-instance v0, Lp00;
+
+    const/4 v2, 0x4
+
+    invoke-direct {v0, v2}, Lp00;-><init>(I)V
+
+    invoke-static {v1, v0}, Ly12;->n(Ljava/lang/Class;Lp00;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v1, Ld16;
+
+    invoke-static {v0}, Lkb0;->o(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v2, "appNamespace"
+
+    invoke-direct {v1, v2, v0}, Ld16;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v1, Llb0;->e:Ld16;
+
+    return-void
 .end method
 
 
 # virtual methods
-.method public final a()F
-    .locals 1
-
-    iget v0, p0, Llb0;->b:F
-
-    return v0
-.end method
-
-.method public final b()F
-    .locals 1
-
-    iget v0, p0, Llb0;->c:F
-
-    return v0
-.end method
-
-.method public final c()F
-    .locals 1
-
-    iget v0, p0, Llb0;->a:F
-
-    return v0
-.end method
-
-.method public final d()F
-    .locals 1
-
-    iget v0, p0, Llb0;->d:F
-
-    return v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p1, p0, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Llb0;
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_1
-
-    check-cast p1, Llb0;
-
-    iget v1, p0, Llb0;->a:F
-
-    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v1
-
-    iget v3, p1, Llb0;->a:F
-
-    invoke-static {v3}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v3
-
-    if-ne v1, v3, :cond_1
-
-    iget v1, p0, Llb0;->b:F
-
-    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v1
-
-    iget v3, p1, Llb0;->b:F
-
-    invoke-static {v3}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v3
-
-    if-ne v1, v3, :cond_1
-
-    iget v1, p0, Llb0;->c:F
-
-    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v1
-
-    iget v3, p1, Llb0;->c:F
-
-    invoke-static {v3}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v3
-
-    if-ne v1, v3, :cond_1
-
-    iget v1, p0, Llb0;->d:F
-
-    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v1
-
-    iget p1, p1, Llb0;->d:F
-
-    invoke-static {p1}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result p1
-
-    if-ne v1, p1, :cond_1
-
-    return v0
-
-    :cond_1
-    return v2
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget v0, p0, Llb0;->a:F
-
-    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v0
-
-    const v1, 0xf4243
-
-    xor-int/2addr v0, v1
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Llb0;->b:F
-
-    invoke-static {v2}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v2
-
-    xor-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Llb0;->c:F
-
-    invoke-static {v2}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v2
-
-    xor-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget v1, p0, Llb0;->d:F
-
-    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v1
-
-    xor-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    check-cast p1, Ltg3;
 
-    const-string v1, "ImmutableZoomState{zoomRatio="
+    check-cast p2, Lpza;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    sget-object v0, Llb0;->b:Ld16;
 
-    iget v1, p0, Llb0;->a:F
+    iget-object v1, p1, Ltg3;->a:Lvsg;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    invoke-interface {p2, v0, v1}, Lpza;->a(Ld16;Ljava/lang/Object;)Lpza;
 
-    const-string v1, ", maxZoomRatio="
+    sget-object v0, Llb0;->c:Ld16;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v1, p1, Ltg3;->b:Ljava/util/List;
 
-    iget v1, p0, Llb0;->b:F
+    invoke-interface {p2, v0, v1}, Lpza;->a(Ld16;Ljava/lang/Object;)Lpza;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    sget-object v0, Llb0;->d:Ld16;
 
-    const-string v1, ", minZoomRatio="
+    iget-object v1, p1, Ltg3;->c:Lm17;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-interface {p2, v0, v1}, Lpza;->a(Ld16;Ljava/lang/Object;)Lpza;
 
-    iget v1, p0, Llb0;->c:F
+    sget-object v0, Llb0;->e:Ld16;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    iget-object p1, p1, Ltg3;->d:Ljava/lang/String;
 
-    const-string v1, ", linearZoom="
+    invoke-interface {p2, v0, p1}, Lpza;->a(Ld16;Ljava/lang/Object;)Lpza;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Llb0;->d:F
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v1, "}"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

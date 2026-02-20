@@ -1,48 +1,33 @@
-.class public final Lxj1;
-.super Lo84;
+.class public interface abstract Lxj1;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lbs1;
+.implements Lvv1;
 
 
-# instance fields
-.field public final synthetic X:Ll51;
-
-.field public synthetic d:Ljava/lang/Object;
-
-.field public o:I
-
-
-# direct methods
-.method public constructor <init>(Ll51;Lkotlin/coroutines/Continuation;)V
+# virtual methods
+.method public b()V
     .locals 0
-
-    iput-object p1, p0, Lxj1;->X:Ll51;
-
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
+.method public c()V
+    .locals 0
 
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    return-void
+.end method
 
-    iput-object p1, p0, Lxj1;->d:Ljava/lang/Object;
+.method public d()V
+    .locals 0
 
-    iget p1, p0, Lxj1;->o:I
+    return-void
+.end method
 
-    const/high16 v0, -0x80000000
+.method public f()V
+    .locals 0
 
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lxj1;->o:I
-
-    iget-object p1, p0, Lxj1;->X:Ll51;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Ll51;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

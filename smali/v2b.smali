@@ -1,31 +1,17 @@
-.class public abstract Lv2b;
+.class public interface abstract Lv2b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
+# virtual methods
+.method public abstract b(Ljava/lang/Object;)V
+.end method
 
-.field public static final b:I
+.method public abstract c()V
+.end method
 
-.field public static final c:I
+.method public abstract d(Ly35;)V
+.end method
 
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    sget v0, Lwcd;->force_update_subtitle:I
-
-    sput v0, Lv2b;->a:I
-
-    sget v0, Lwcd;->force_update_title:I
-
-    sput v0, Lv2b;->b:I
-
-    sget v0, Lwcd;->update_button:I
-
-    sput v0, Lv2b;->c:I
-
-    return-void
+.method public abstract onError(Ljava/lang/Throwable;)V
 .end method

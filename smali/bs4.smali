@@ -3,22 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lj4g;
+.implements Laq3;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final synthetic b:Ls7d;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method public synthetic constructor <init>(Ls7d;I)V
     .locals 0
 
-    iput p1, p0, Lbs4;->a:I
+    iput p2, p0, Lbs4;->a:I
 
-    iput-object p2, p0, Lbs4;->b:Ljava/lang/Object;
+    iput-object p1, p0, Lbs4;->b:Ls7d;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,108 +27,78 @@
 
 
 # virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 2
+.method public final f(Ljx4;)Ljava/lang/Object;
+    .locals 6
 
     iget v0, p0, Lbs4;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lbs4;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lbs4;->b:Ls7d;
 
-    check-cast v0, Lqnb;
+    invoke-static {v0, p1}, Lcom/google/firebase/messaging/FirebaseMessagingRegistrar;->a(Ls7d;Ljx4;)Lcom/google/firebase/messaging/FirebaseMessaging;
 
-    return-object v0
+    move-result-object p1
+
+    return-object p1
 
     :pswitch_0
-    iget-object v0, p0, Lbs4;->b:Ljava/lang/Object;
+    new-instance v0, Lds4;
 
-    check-cast v0, Lyu4;
+    const-class v1, Landroid/content/Context;
 
-    return-object v0
+    invoke-virtual {p1, v1}, Ljx4;->a(Ljava/lang/Class;)Ljava/lang/Object;
 
-    :pswitch_1
-    iget-object v0, p0, Lbs4;->b:Ljava/lang/Object;
+    move-result-object v1
 
-    check-cast v0, Ljf8;
+    check-cast v1, Landroid/content/Context;
 
-    return-object v0
+    const-class v2, Lh66;
 
-    :pswitch_2
-    iget-object v0, p0, Lbs4;->b:Ljava/lang/Object;
+    invoke-virtual {p1, v2}, Ljx4;->a(Ljava/lang/Class;)Ljava/lang/Object;
 
-    check-cast v0, Lloe;
+    move-result-object v2
 
-    return-object v0
+    check-cast v2, Lh66;
 
-    :pswitch_3
-    iget-object v0, p0, Lbs4;->b:Ljava/lang/Object;
+    invoke-virtual {v2}, Lh66;->c()Ljava/lang/String;
 
-    check-cast v0, Lxu4;
+    move-result-object v2
 
-    return-object v0
+    const-class v3, Ll67;
 
-    :pswitch_4
-    iget-object v0, p0, Lbs4;->b:Ljava/lang/Object;
+    invoke-static {v3}, Ls7d;->a(Ljava/lang/Class;)Ls7d;
 
-    check-cast v0, Lfwd;
+    move-result-object v3
 
-    return-object v0
+    invoke-virtual {p1, v3}, Ljx4;->b(Ls7d;)Ljava/util/Set;
 
-    :pswitch_5
-    iget-object v0, p0, Lbs4;->b:Ljava/lang/Object;
+    move-result-object v3
 
-    check-cast v0, Ltc9;
+    const-class v4, Ljw4;
 
-    return-object v0
+    invoke-virtual {p1, v4}, Ljx4;->c(Ljava/lang/Class;)Ly4d;
 
-    :pswitch_6
-    iget-object v0, p0, Lbs4;->b:Ljava/lang/Object;
+    move-result-object v4
 
-    check-cast v0, Lxr4;
+    iget-object v5, p0, Lbs4;->b:Ls7d;
 
-    return-object v0
+    invoke-virtual {p1, v5}, Ljx4;->g(Ls7d;)Ljava/lang/Object;
 
-    :pswitch_7
-    iget-object v0, p0, Lbs4;->b:Ljava/lang/Object;
+    move-result-object p1
 
-    check-cast v0, Ljava/lang/Class;
+    move-object v5, p1
 
-    const/4 v1, 0x0
+    check-cast v5, Ljava/util/concurrent/Executor;
 
-    :try_start_0
-    invoke-virtual {v0, v1}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ltc9;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-direct/range {v0 .. v5}, Lds4;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/util/Set;Ly4d;Ljava/util/concurrent/Executor;)V
 
     return-object v0
 
-    :catch_0
-    move-exception v0
-
-    new-instance v1, Ljava/lang/IllegalStateException;
-
-    invoke-direct {v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v1
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

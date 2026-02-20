@@ -1,89 +1,88 @@
-.class public final enum Lz40;
-.super Ljava/lang/Enum;
+.class public final Lz40;
+.super Landroid/media/AudioDeviceCallback;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum a:Lz40;
-
-.field public static final enum b:Lz40;
-
-.field public static final synthetic c:[Lz40;
+# instance fields
+.field public final synthetic a:Lb50;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(Lb50;)V
+    .locals 0
 
-    new-instance v0, Lz40;
+    iput-object p1, p0, Lz40;->a:Lb50;
 
-    const-string v1, "ACTION_PLAY"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v1, Lz40;
-
-    const-string v2, "FIRST_BYTES"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lz40;->a:Lz40;
-
-    new-instance v2, Lz40;
-
-    const-string v3, "ACTION_READY"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lz40;->b:Lz40;
-
-    new-instance v3, Lz40;
-
-    const-string v4, "CONTENT_ERROR"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    filled-new-array {v0, v1, v2, v3}, [Lz40;
-
-    move-result-object v0
-
-    sput-object v0, Lz40;->c:[Lz40;
+    invoke-direct {p0}, Landroid/media/AudioDeviceCallback;-><init>()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lz40;
-    .locals 1
 
-    const-class v0, Lz40;
+# virtual methods
+.method public final onAudioDevicesAdded([Landroid/media/AudioDeviceInfo;)V
+    .locals 3
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget-object p1, p0, Lz40;->a:Lb50;
 
-    move-result-object p0
+    iget-object v0, p1, Lb50;->b:Ljava/lang/Object;
 
-    check-cast p0, Lz40;
+    check-cast v0, Landroid/content/Context;
 
-    return-object p0
-.end method
+    iget-object v1, p1, Lb50;->j:Ljava/lang/Object;
 
-.method public static values()[Lz40;
-    .locals 1
+    check-cast v1, Lo40;
 
-    sget-object v0, Lz40;->c:[Lz40;
+    iget-object v2, p1, Lb50;->i:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    check-cast v2, Lztf;
+
+    invoke-static {v0, v1, v2}, Ly40;->b(Landroid/content/Context;Lo40;Lztf;)Ly40;
 
     move-result-object v0
 
-    check-cast v0, [Lz40;
+    invoke-virtual {p1, v0}, Lb50;->a(Ly40;)V
 
-    return-object v0
+    return-void
+.end method
+
+.method public final onAudioDevicesRemoved([Landroid/media/AudioDeviceInfo;)V
+    .locals 3
+
+    iget-object v0, p0, Lz40;->a:Lb50;
+
+    iget-object v1, v0, Lb50;->i:Ljava/lang/Object;
+
+    check-cast v1, Lztf;
+
+    invoke-static {p1, v1}, Lvih;->l([Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x0
+
+    iput-object p1, v0, Lb50;->i:Ljava/lang/Object;
+
+    :cond_0
+    iget-object p1, v0, Lb50;->b:Ljava/lang/Object;
+
+    check-cast p1, Landroid/content/Context;
+
+    iget-object v1, v0, Lb50;->j:Ljava/lang/Object;
+
+    check-cast v1, Lo40;
+
+    iget-object v2, v0, Lb50;->i:Ljava/lang/Object;
+
+    check-cast v2, Lztf;
+
+    invoke-static {p1, v1, v2}, Ly40;->b(Landroid/content/Context;Lo40;Lztf;)Ly40;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Lb50;->a(Ly40;)V
+
+    return-void
 .end method

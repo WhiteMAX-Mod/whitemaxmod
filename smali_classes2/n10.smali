@@ -3,65 +3,121 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static final synthetic h:[Lv58;
+
+
 # instance fields
-.field public a:Lo10;
+.field public final a:Lt45;
 
-.field public b:J
+.field public final b:Lt45;
 
-.field public c:Ljava/util/List;
+.field public final c:Lt45;
 
-.field public d:Ljava/lang/String;
+.field public final d:Lt45;
 
-.field public e:Ljava/lang/String;
+.field public final e:Lt45;
 
-.field public f:Ljava/lang/String;
+.field public final f:Lt45;
 
-.field public g:Ljava/lang/String;
-
-.field public h:Lz10;
-
-.field public i:Ljava/lang/String;
-
-.field public j:Ljava/lang/String;
-
-.field public k:Z
-
-.field public l:I
-
-.field public m:J
-
-.field public n:J
-
-.field public o:Ljava/lang/String;
+.field public final g:Lt45;
 
 
-# virtual methods
-.method public final a()Lp10;
-    .locals 1
+# direct methods
+.method static constructor <clinit>()V
+    .locals 9
 
-    iget-object v0, p0, Ln10;->c:Ljava/util/List;
+    new-instance v0, Lv3d;
 
-    if-nez v0, :cond_0
+    const-class v1, Ln10;
 
-    new-instance v0, Ljava/util/ArrayList;
+    const-string v2, "api"
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    const-string v3, "getApi()Lru/ok/tamtam/api/Api;"
 
-    iput-object v0, p0, Ln10;->c:Ljava/util/List;
+    const/4 v4, 0x0
 
-    :cond_0
-    iget-object v0, p0, Ln10;->a:Lo10;
+    invoke-direct {v0, v1, v2, v3, v4}, Lv3d;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    if-nez v0, :cond_1
+    sget-object v2, Lazd;->a:Lbzd;
 
-    sget-object v0, Lo10;->a:Lo10;
+    const-string v3, "clientPrefs"
 
-    iput-object v0, p0, Ln10;->a:Lo10;
+    const-string v5, "getClientPrefs()Lru/ok/tamtam/prefs/ClientPrefs;"
 
-    :cond_1
-    new-instance v0, Lp10;
+    invoke-static {v2, v1, v3, v5, v4}, Lo16;->g(Lbzd;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lv3d;
 
-    invoke-direct {v0, p0}, Lp10;-><init>(Ln10;)V
+    move-result-object v2
 
-    return-object v0
+    new-instance v3, Lv3d;
+
+    const-string v5, "fileAttachDownloader"
+
+    const-string v6, "getFileAttachDownloader()Lru/ok/tamtam/FileAttachDownloader;"
+
+    invoke-direct {v3, v1, v5, v6, v4}, Lv3d;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    new-instance v5, Lv3d;
+
+    const-string v6, "uiBus"
+
+    const-string v7, "getUiBus()Lcom/squareup/otto/Bus;"
+
+    invoke-direct {v5, v1, v6, v7, v4}, Lv3d;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    new-instance v6, Lv3d;
+
+    const-string v7, "fileSystem"
+
+    const-string v8, "getFileSystem()Lru/ok/tamtam/FileSystem;"
+
+    invoke-direct {v6, v1, v7, v8, v4}, Lv3d;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    const/4 v1, 0x5
+
+    new-array v1, v1, [Lv58;
+
+    aput-object v0, v1, v4
+
+    const/4 v0, 0x1
+
+    aput-object v2, v1, v0
+
+    const/4 v0, 0x2
+
+    aput-object v3, v1, v0
+
+    const/4 v0, 0x3
+
+    aput-object v5, v1, v0
+
+    const/4 v0, 0x4
+
+    aput-object v6, v1, v0
+
+    sput-object v1, Ln10;->h:[Lv58;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lt45;Lt45;Lt45;Lt45;Lt45;Lt45;Lt45;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p6, p0, Ln10;->a:Lt45;
+
+    iput-object p7, p0, Ln10;->b:Lt45;
+
+    iput-object p1, p0, Ln10;->c:Lt45;
+
+    iput-object p2, p0, Ln10;->d:Lt45;
+
+    iput-object p3, p0, Ln10;->e:Lt45;
+
+    iput-object p4, p0, Ln10;->f:Lt45;
+
+    iput-object p5, p0, Ln10;->g:Lt45;
+
+    return-void
 .end method

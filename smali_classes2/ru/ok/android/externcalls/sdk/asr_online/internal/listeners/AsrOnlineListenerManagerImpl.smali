@@ -4,7 +4,7 @@
 
 # interfaces
 .implements Lru/ok/android/externcalls/sdk/asr_online/internal/listeners/AsrOnlineListenerManager;
-.implements Ly31;
+.implements Lj41;
 
 
 # annotations
@@ -15,14 +15,14 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/asr_online/internal/listeners/AsrOnlineListenerManagerImpl;",
         "Lru/ok/android/externcalls/sdk/asr_online/internal/listeners/AsrOnlineListenerManager;",
-        "Ly31;",
+        "Lj41;",
         "Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;",
         "store",
         "<init>",
         "(Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;)V",
         "",
         "isAvailable",
-        "Lb3h;",
+        "Lmah;",
         "onAsrAvailableChanged",
         "(Z)V",
         "Lru/ok/android/externcalls/sdk/asr_online/listener/AsrOnlineListener;",
@@ -30,10 +30,10 @@
         "addAsrOnlineListener",
         "(Lru/ok/android/externcalls/sdk/asr_online/listener/AsrOnlineListener;)V",
         "removeAsrOnlineListener",
-        "Lyt;",
+        "Ljv;",
         "asrRecvDataPackage",
         "onAsrDataPackage",
-        "(Lyt;)V",
+        "(Ljv;)V",
         "Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;",
         "lastIsAvailable",
         "Z",
@@ -133,7 +133,7 @@
     return-void
 .end method
 
-.method public onAsrDataPackage(Lyt;)V
+.method public onAsrDataPackage(Ljv;)V
     .locals 4
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/asr_online/internal/listeners/AsrOnlineListenerManagerImpl;->listeners:Ljava/util/concurrent/CopyOnWriteArraySet;
@@ -159,7 +159,7 @@
 
     iget-object v3, p0, Lru/ok/android/externcalls/sdk/asr_online/internal/listeners/AsrOnlineListenerManagerImpl;->store:Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;
 
-    invoke-virtual {v2, v3, p1}, Lru/ok/android/externcalls/sdk/asr_online/AsrOnlineChunk$Companion;->chunkFromPackage$calls_sdk_release(Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;Lyt;)Lru/ok/android/externcalls/sdk/asr_online/AsrOnlineChunk;
+    invoke-virtual {v2, v3, p1}, Lru/ok/android/externcalls/sdk/asr_online/AsrOnlineChunk$Companion;->chunkFromPackage$calls_sdk_release(Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;Ljv;)Lru/ok/android/externcalls/sdk/asr_online/AsrOnlineChunk;
 
     move-result-object v2
 

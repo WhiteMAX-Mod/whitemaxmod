@@ -1,312 +1,428 @@
-.class public final Lxg9;
+.class public final synthetic Lxg9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lxg9;",
-            ">;"
-        }
-    .end annotation
-.end field
+.implements Lis6;
 
 
 # instance fields
-.field public final a:J
+.field public final synthetic a:I
 
-.field public final b:Lzs2;
-
-.field public final c:Z
-
-.field public final d:Ljava/lang/Integer;
+.field public final synthetic b:Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lhu8;
-
-    const/16 v1, 0x9
-
-    invoke-direct {v0, v1}, Lhu8;-><init>(I)V
-
-    sput-object v0, Lxg9;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(JLzs2;I)V
-    .locals 7
-
-    const/16 v0, 0xa
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    and-int/lit8 p4, p4, 0x8
-
-    if-eqz p4, :cond_0
-
-    const/4 v0, 0x0
-
-    :cond_0
-    move-object v6, v0
-
-    const/4 v5, 0x1
-
-    move-object v1, p0
-
-    move-wide v2, p1
-
-    move-object v4, p3
-
-    .line 6
-    invoke-direct/range {v1 .. v6}, Lxg9;-><init>(JLzs2;ZLjava/lang/Integer;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(JLzs2;ZLjava/lang/Integer;)V
+.method public synthetic constructor <init>(Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;I)V
     .locals 0
 
-    .line 1
+    iput p2, p0, Lxg9;->a:I
+
+    iput-object p1, p0, Lxg9;->b:Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    iput-wide p1, p0, Lxg9;->a:J
-
-    .line 3
-    iput-object p3, p0, Lxg9;->b:Lzs2;
-
-    .line 4
-    iput-boolean p4, p0, Lxg9;->c:Z
-
-    .line 5
-    iput-object p5, p0, Lxg9;->d:Ljava/lang/Integer;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 17
 
-    const/4 v0, 0x0
+    move-object/from16 v0, p0
 
-    return v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lxg9;
+    iget v1, v0, Lxg9;->a:I
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    const/4 v3, 0x0
 
-    return v2
+    const/4 v4, 0x1
 
-    :cond_1
-    check-cast p1, Lxg9;
+    iget-object v5, v0, Lxg9;->b:Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;
 
-    iget-wide v3, p0, Lxg9;->a:J
+    packed-switch v1, :pswitch_data_0
 
-    iget-wide v5, p1, Lxg9;->a:J
+    sget-object v1, Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;->Z:[Lv58;
 
-    cmp-long v1, v3, v5
+    new-instance v1, Lfg9;
 
-    if-eqz v1, :cond_2
+    invoke-virtual {v5}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    return v2
+    move-result-object v6
 
-    :cond_2
-    iget-object v1, p0, Lxg9;->b:Lzs2;
+    invoke-direct {v1, v6}, Lfg9;-><init>(Landroid/content/Context;)V
 
-    iget-object v3, p1, Lxg9;->b:Lzs2;
+    invoke-virtual {v5}, Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;->H0()Lng9;
 
-    if-eq v1, v3, :cond_3
+    move-result-object v6
 
-    return v2
+    invoke-virtual {v6}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    :cond_3
-    iget-boolean v1, p0, Lxg9;->c:Z
+    iget-object v7, v6, Lng9;->Y:Lj88;
 
-    iget-boolean v3, p1, Lxg9;->c:Z
+    invoke-static {}, Lfk3;->c()Lig8;
 
-    if-eq v1, v3, :cond_4
+    move-result-object v8
 
-    return v2
+    sget-object v9, Lrg9;->a:Lrg9;
 
-    :cond_4
-    iget-object v1, p0, Lxg9;->d:Ljava/lang/Integer;
+    invoke-virtual {v8, v9}, Lig8;->add(Ljava/lang/Object;)Z
 
-    iget-object p1, p1, Lxg9;->d:Ljava/lang/Integer;
+    sget-object v9, Lqg9;->a:Lqg9;
 
-    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v8, v9}, Lig8;->add(Ljava/lang/Object;)Z
 
-    move-result p1
+    iget-object v9, v6, Lng9;->s0:Lj88;
 
-    if-nez p1, :cond_5
+    invoke-interface {v9}, Lj88;->getValue()Ljava/lang/Object;
 
-    return v2
+    move-result-object v9
 
-    :cond_5
-    return v0
-.end method
+    check-cast v9, Lcc3;
 
-.method public final hashCode()I
-    .locals 3
+    iget-wide v10, v6, Lng9;->c:J
 
-    iget-wide v0, p0, Lxg9;->a:J
+    invoke-virtual {v9, v10, v11}, Lcc3;->l(J)Lmrd;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    move-result-object v9
 
-    move-result v0
+    iget-object v9, v9, Lmrd;->a:Laxf;
 
-    const/16 v1, 0x1f
+    invoke-interface {v9}, Laxf;->getValue()Ljava/lang/Object;
 
-    mul-int/2addr v0, v1
+    move-result-object v9
 
-    iget-object v2, p0, Lxg9;->b:Lzs2;
+    check-cast v9, Lte2;
 
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+    if-nez v9, :cond_0
 
-    move-result v2
+    goto :goto_2
 
-    add-int/2addr v2, v0
+    :cond_0
+    iget-object v10, v9, Lte2;->b:Lzi2;
 
-    mul-int/2addr v2, v1
+    iget-wide v10, v10, Lzi2;->a:J
 
-    iget-boolean v0, p0, Lxg9;->c:Z
+    const-wide/16 v12, 0x0
 
-    invoke-static {v2, v1, v0}, Lcbh;->j(IIZ)I
+    cmp-long v10, v10, v12
 
-    move-result v0
+    if-eqz v10, :cond_1
 
-    iget-object v1, p0, Lxg9;->d:Ljava/lang/Integer;
-
-    if-nez v1, :cond_0
-
-    const/4 v1, 0x0
+    move v10, v4
 
     goto :goto_0
 
-    :cond_0
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
+    :cond_1
+    move v10, v3
 
     :goto_0
-    add-int/2addr v0, v1
+    invoke-virtual {v9}, Lte2;->U()Z
 
-    return v0
-.end method
+    move-result v11
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+    if-eqz v11, :cond_2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-virtual {v9}, Lte2;->O()Z
 
-    const-string v1, "MembersListArgs(chatId="
+    move-result v9
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    if-nez v9, :cond_2
 
-    iget-wide v1, p0, Lxg9;->a:J
+    goto :goto_1
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    :cond_2
+    move v4, v3
 
-    const-string v1, ", chatMemberType="
+    :goto_1
+    iget-object v9, v6, Lng9;->b:Llg9;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v9, v9, Llg9;->b:Lwie;
 
-    iget-object v1, p0, Lxg9;->b:Lzs2;
+    invoke-static {v9}, Liwj;->g(Lwie;)Z
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result v9
 
-    const-string v1, ", isLongClickEnabled="
+    invoke-interface {v7}, Lj88;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v11
 
-    iget-boolean v1, p0, Lxg9;->c:Z
+    check-cast v11, Loye;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    check-cast v11, Lzgc;
 
-    const-string v1, ", memberLimit="
+    invoke-virtual {v11}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    sget-object v14, Lru/ok/tamtam/android/prefs/PmsKey;->money-transfer-botid:Lru/ok/tamtam/android/prefs/PmsKey;
 
-    iget-object v1, p0, Lxg9;->d:Ljava/lang/Integer;
+    invoke-virtual {v11, v14, v12, v13}, Lzgc;->m(Ljava/lang/Enum;J)J
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result-wide v14
 
-    const-string v1, ")"
+    cmp-long v11, v14, v12
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eqz v11, :cond_3
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    if-eqz v4, :cond_3
 
-    move-result-object v0
+    if-eqz v10, :cond_3
 
-    return-object v0
-.end method
+    if-nez v9, :cond_3
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 2
+    sget-object v4, Ltg9;->a:Ltg9;
 
-    iget-wide v0, p0, Lxg9;->a:J
+    invoke-virtual {v8, v4}, Lig8;->add(Ljava/lang/Object;)Z
 
-    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+    :cond_3
+    :goto_2
+    iget-object v4, v6, Lng9;->Z:Lj88;
 
-    iget-object p2, p0, Lxg9;->b:Lzs2;
+    invoke-interface {v4}, Lj88;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {p2}, Ljava/lang/Enum;->name()Ljava/lang/String;
+    move-result-object v4
 
-    move-result-object p2
+    check-cast v4, Liz5;
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    check-cast v4, Lk06;
 
-    iget-boolean p2, p0, Lxg9;->c:Z
+    iget-object v6, v4, Lk06;->V0:Lrz5;
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    sget-object v9, Lk06;->p1:[Lv58;
 
-    iget-object p2, p0, Lxg9;->d:Ljava/lang/Integer;
+    const/16 v10, 0x55
 
-    if-nez p2, :cond_0
+    aget-object v9, v9, v10
 
-    const/4 p2, 0x0
+    invoke-virtual {v6, v4, v9}, Lrz5;->D(Ljava/lang/Object;Lv58;)Ljava/lang/Object;
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    move-result-object v4
 
-    return-void
+    check-cast v4, Ljava/lang/Boolean;
 
-    :cond_0
-    const/4 v0, 0x1
+    invoke-virtual {v4}, Ljava/lang/Boolean;->booleanValue()Z
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    move-result v4
 
-    invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
+    if-eqz v4, :cond_4
 
-    move-result p2
+    sget-object v4, Lug9;->a:Lug9;
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {v8, v4}, Lig8;->add(Ljava/lang/Object;)Z
 
-    return-void
+    :cond_4
+    invoke-interface {v7}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Loye;
+
+    check-cast v4, Lzgc;
+
+    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v6, Lru/ok/tamtam/android/prefs/PmsKey;->send-location-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    invoke-virtual {v4, v6, v3}, Lzgc;->j(Ljava/lang/Enum;Z)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_5
+
+    sget-object v3, Lsg9;->a:Lsg9;
+
+    invoke-virtual {v8, v3}, Lig8;->add(Ljava/lang/Object;)Z
+
+    :cond_5
+    sget-object v3, Lpg9;->a:Lpg9;
+
+    invoke-virtual {v8, v3}, Lig8;->add(Ljava/lang/Object;)Z
+
+    invoke-static {v8}, Lfk3;->b(Ljava/util/List;)Lig8;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v3}, Lfg9;->setState(Ljava/util/List;)V
+
+    new-instance v6, Lah9;
+
+    invoke-virtual {v5}, Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;->H0()Lng9;
+
+    move-result-object v8
+
+    const/4 v12, 0x0
+
+    const/4 v13, 0x0
+
+    const/4 v7, 0x1
+
+    const-class v9, Lng9;
+
+    const-string v10, "onButtonClicked"
+
+    const-string v11, "onButtonClicked(Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerViewState$Button;)V"
+
+    invoke-direct/range {v6 .. v13}, Lah9;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+
+    invoke-virtual {v1, v6}, Lfg9;->setOnClickListener(Lks6;)V
+
+    invoke-virtual {v1}, Landroid/view/View;->isAttachedToWindow()Z
+
+    move-result v3
+
+    const/16 v4, 0x8
+
+    if-eqz v3, :cond_7
+
+    invoke-virtual {v1}, Landroid/view/View;->getRootWindowInsets()Landroid/view/WindowInsets;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Ldqi;->h(Landroid/view/View;Landroid/view/WindowInsets;)Ldqi;
+
+    move-result-object v2
+
+    iget-object v2, v2, Ldqi;->a:Lbqi;
+
+    const/4 v3, 0x2
+
+    invoke-virtual {v2, v3}, Lbqi;->f(I)Lss7;
+
+    move-result-object v2
+
+    iget v2, v2, Lss7;->d:I
+
+    if-lez v2, :cond_6
+
+    int-to-float v2, v3
+
+    :goto_3
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v3
+
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v2, v3
+
+    invoke-static {v2}, Lmhj;->f(F)I
+
+    move-result v2
+
+    goto :goto_4
+
+    :cond_6
+    int-to-float v2, v4
+
+    goto :goto_3
+
+    :goto_4
+    invoke-virtual {v1}, Landroid/view/View;->getPaddingLeft()I
+
+    move-result v3
+
+    invoke-virtual {v1}, Landroid/view/View;->getPaddingTop()I
+
+    move-result v4
+
+    invoke-virtual {v1}, Landroid/view/View;->getPaddingRight()I
+
+    move-result v5
+
+    invoke-virtual {v1, v3, v4, v5, v2}, Landroid/view/View;->setPadding(IIII)V
+
+    goto :goto_5
+
+    :cond_7
+    new-instance v2, Ly60;
+
+    invoke-direct {v2, v1, v4, v1}, Ly60;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {v1, v2}, Landroid/view/View;->addOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+
+    :goto_5
+    return-object v1
+
+    :pswitch_0
+    iget-object v1, v5, Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;->c:Liz2;
+
+    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v1
+
+    const/16 v6, 0x2ae
+
+    invoke-virtual {v1, v6}, Lr5;->c(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Log9;
+
+    iget-object v6, v5, Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;->b:Lwt;
+
+    sget-object v7, Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;->Z:[Lv58;
+
+    aget-object v4, v7, v4
+
+    invoke-virtual {v6, v5}, Lwt;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lwie;
+
+    const-class v6, Llg9;
+
+    invoke-virtual {v5, v4, v6, v2}, Lone/me/sdk/arch/Widget;->getSharedViewModel(Lwie;Ljava/lang/Class;Lis6;)Lj88;
+
+    move-result-object v2
+
+    invoke-interface {v2}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    move-object v9, v2
+
+    check-cast v9, Llg9;
+
+    iget-object v2, v5, Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;->a:Lwt;
+
+    aget-object v3, v7, v3
+
+    invoke-virtual {v2, v5}, Lwt;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Number;
+
+    invoke-virtual {v2}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v10
+
+    new-instance v8, Lng9;
+
+    iget-object v12, v1, Log9;->a:Landroid/content/Context;
+
+    iget-object v13, v1, Log9;->b:Lj88;
+
+    iget-object v14, v1, Log9;->c:Lj88;
+
+    iget-object v15, v1, Log9;->d:Lj88;
+
+    iget-object v1, v1, Log9;->e:Lj88;
+
+    move-object/from16 v16, v1
+
+    invoke-direct/range {v8 .. v16}, Lng9;-><init>(Llg9;JLandroid/content/Context;Lj88;Lj88;Lj88;Lj88;)V
+
+    return-object v8
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

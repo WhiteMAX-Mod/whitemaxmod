@@ -1,129 +1,82 @@
 .class public final Lexg;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Llxg;
-
-.field public o:I
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;Llxg;)V
+.method public synthetic constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lexg;->X:Ljava/lang/Object;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Lexg;->Y:Llxg;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lexg;->a:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    check-cast p1, Lzb4;
+    instance-of v0, p1, Lexg;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-nez v0, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lexg;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lexg;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lexg;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance p1, Lexg;
-
-    iget-object v0, p0, Lexg;->X:Ljava/lang/Object;
-
-    iget-object v1, p0, Lexg;->Y:Llxg;
-
-    invoke-direct {p1, v0, p2, v1}, Lexg;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;Llxg;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    iget v0, p0, Lexg;->o:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    return-object p1
+    goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    check-cast p1, Lexg;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    iget-object p1, p1, Lexg;->a:Ljava/lang/String;
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    iget-object v0, p0, Lexg;->a:Ljava/lang/String;
 
-    throw p1
+    invoke-static {v0, p1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_1
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
 
     :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    const/4 p1, 0x1
 
-    iget-object p1, p0, Lexg;->X:Ljava/lang/Object;
+    return p1
+.end method
 
-    check-cast p1, Lzb4;
+.method public final hashCode()I
+    .locals 1
 
-    sget-object p1, Llxg;->H0:[Lz28;
+    iget-object v0, p0, Lexg;->a:Ljava/lang/String;
 
-    iget-object p1, p0, Lexg;->Y:Llxg;
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
-    invoke-virtual {p1}, Llxg;->w()Lt2b;
+    move-result v0
 
-    move-result-object p1
+    return v0
+.end method
 
-    new-instance v0, Li1b;
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    const/4 v2, 0x0
+    const-string v0, "TraceId(value="
 
-    invoke-direct {v0, v2}, Li1b;-><init>(Ljava/lang/String;)V
+    const-string v1, ")"
 
-    iput v1, p0, Lexg;->o:I
+    iget-object v2, p0, Lexg;->a:Ljava/lang/String;
 
-    invoke-virtual {p1, v0, p0}, Lt2b;->E(Lj2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-static {v0, v2, v1}, Ltx8;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p1
-
-    sget-object v0, Lac4;->a:Lac4;
-
-    if-ne p1, v0, :cond_2
+    move-result-object v0
 
     return-object v0
-
-    :cond_2
-    return-object p1
 .end method

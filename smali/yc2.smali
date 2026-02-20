@@ -1,122 +1,118 @@
 .class public final Lyc2;
-.super Lxc2;
+.super Lpdg;
 .source "SourceFile"
+
+# interfaces
+.implements Lys6;
 
 
 # instance fields
-.field public final a:C
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lzc2;
+
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(C)V
+.method public constructor <init>(Lzc2;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lyc2;->Y:Lzc2;
 
-    iput-char p1, p0, Lyc2;->a:C
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(C)Z
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-char v0, p0, Lyc2;->a:C
+    check-cast p1, Ljoc;
 
-    if-ne p1, v0, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    const/4 p1, 0x1
+    invoke-virtual {p0, p1, p2}, Lyc2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    return p1
+    move-result-object p1
 
-    :cond_0
-    const/4 p1, 0x0
+    check-cast p1, Lyc2;
 
-    return p1
+    sget-object p2, Lmah;->a:Lmah;
+
+    invoke-virtual {p1, p2}, Lyc2;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 8
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance v0, Lyc2;
 
-    const-string v1, "CharMatcher.is(\'"
+    iget-object v1, p0, Lyc2;->Y:Lzc2;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1, p2}, Lyc2;-><init>(Lzc2;Lkotlin/coroutines/Continuation;)V
 
-    const/4 v1, 0x6
+    iput-object p1, v0, Lyc2;->X:Ljava/lang/Object;
 
-    new-array v1, v1, [C
+    return-object v0
+.end method
 
-    const/16 v2, 0x5c
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    const/4 v3, 0x0
+    iget v0, p0, Lyc2;->o:I
 
-    aput-char v2, v1, v3
+    const/4 v1, 0x1
 
-    const/4 v2, 0x1
+    if-eqz v0, :cond_1
 
-    const/16 v4, 0x75
+    if-ne v0, v1, :cond_0
 
-    aput-char v4, v1, v2
-
-    const/4 v2, 0x2
-
-    aput-char v3, v1, v2
-
-    const/4 v2, 0x3
-
-    aput-char v3, v1, v2
-
-    const/4 v2, 0x4
-
-    aput-char v3, v1, v2
-
-    const/4 v4, 0x5
-
-    aput-char v3, v1, v4
-
-    iget-char v4, p0, Lyc2;->a:C
-
-    :goto_0
-    if-ge v3, v2, :cond_0
-
-    rsub-int/lit8 v5, v3, 0x5
-
-    and-int/lit8 v6, v4, 0xf
-
-    const-string v7, "0123456789ABCDEF"
-
-    invoke-virtual {v7, v6}, Ljava/lang/String;->charAt(I)C
-
-    move-result v6
-
-    aput-char v6, v1, v5
-
-    shr-int/2addr v4, v2
-
-    int-to-char v4, v4
-
-    add-int/lit8 v3, v3, 0x1
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
     goto :goto_0
 
     :cond_0
-    invoke-static {v1}, Ljava/lang/String;->copyValueOf([C)Ljava/lang/String;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    move-result-object v1
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    const-string v1, "\')"
+    throw p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_1
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-object p1, p0, Lyc2;->X:Ljava/lang/Object;
 
-    move-result-object v0
+    check-cast p1, Ljoc;
+
+    iput v1, p0, Lyc2;->o:I
+
+    iget-object v0, p0, Lyc2;->Y:Lzc2;
+
+    invoke-virtual {v0, p1, p0}, Lzc2;->j(Ljoc;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lod4;->a:Lod4;
+
+    if-ne p1, v0, :cond_2
 
     return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
 .end method

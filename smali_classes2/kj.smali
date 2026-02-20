@@ -1,51 +1,108 @@
-.class public final Lkj;
-.super Lo84;
+.class public abstract Lkj;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic X:Ltj;
+# static fields
+.field public static final a:Lluj;
 
-.field public Y:I
+.field public static final b:Z
 
-.field public d:Lpkd;
+.field public static final c:Lgl;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public static final d:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ltj;Lo84;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput-object p1, p0, Lkj;->X:Ltj;
+    sget-object v0, Lhj;->a:Lluj;
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    sput-object v0, Lkj;->a:Lluj;
+
+    const-string v0, "animoji.debug"
+
+    const-string v1, "false"
+
+    invoke-static {v0, v1}, Ljava/lang/System;->getProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-static {v0}, Ld7g;->c0(Ljava/lang/String;)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    sput-boolean v0, Lkj;->b:Z
+
+    new-instance v0, Lgl;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v1, Ljava/util/concurrent/atomic/AtomicReference;
+
+    sget-object v2, Lnmf;->c:Lxj;
+
+    invoke-direct {v1, v2}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object v1, v0, Lgl;->a:Ljava/util/concurrent/atomic/AtomicReference;
+
+    new-instance v1, Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-direct {v1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+
+    new-instance v1, Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-direct {v1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+
+    new-instance v1, Ljava/util/HashMap;
+
+    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
+
+    iput-object v1, v0, Lgl;->b:Ljava/util/HashMap;
+
+    sput-object v0, Lkj;->c:Lgl;
+
+    new-instance v0, Lc6;
+
+    const/16 v1, 0x11
+
+    invoke-direct {v0, v1}, Lc6;-><init>(I)V
+
+    const/4 v1, 0x3
+
+    invoke-static {v1, v0}, Lbdj;->d(ILis6;)Lj88;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public static a(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    iput-object p1, p0, Lkj;->o:Ljava/lang/Object;
+    if-nez p1, :cond_0
 
-    iget p1, p0, Lkj;->Y:I
+    const-string p1, ""
 
-    const/high16 v0, -0x80000000
+    :cond_0
+    sget-object v0, Lkj;->a:Lluj;
 
-    or-int/2addr p1, v0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iput p1, p0, Lkj;->Y:I
+    invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-object p1, p0, Lkj;->X:Ltj;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Ltj;->f(Lpkd;Lo84;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

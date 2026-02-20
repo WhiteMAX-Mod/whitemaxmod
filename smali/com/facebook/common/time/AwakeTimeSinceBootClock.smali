@@ -3,17 +3,17 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lf8a;
+.implements Lsaa;
 
 
 # annotations
-.annotation build Le35;
+.annotation build Lo45;
 .end annotation
 
 
 # static fields
 .field private static final INSTANCE:Lcom/facebook/common/time/AwakeTimeSinceBootClock;
-    .annotation build Le35;
+    .annotation build Lo45;
     .end annotation
 .end field
 
@@ -41,7 +41,7 @@
 
 .method public static get()Lcom/facebook/common/time/AwakeTimeSinceBootClock;
     .locals 1
-    .annotation build Le35;
+    .annotation build Lo45;
     .end annotation
 
     sget-object v0, Lcom/facebook/common/time/AwakeTimeSinceBootClock;->INSTANCE:Lcom/facebook/common/time/AwakeTimeSinceBootClock;
@@ -53,10 +53,10 @@
 # virtual methods
 .method public bridge synthetic now()J
     .locals 2
-    .annotation build Le35;
+    .annotation build Lo45;
     .end annotation
 
-    invoke-super {p0}, Le8a;->now()J
+    invoke-super {p0}, Lraa;->now()J
 
     move-result-wide v0
 
@@ -65,7 +65,7 @@
 
 .method public nowNanos()J
     .locals 2
-    .annotation build Le35;
+    .annotation build Lo45;
     .end annotation
 
     invoke-static {}, Ljava/lang/System;->nanoTime()J

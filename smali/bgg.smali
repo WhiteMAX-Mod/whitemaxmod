@@ -2,68 +2,129 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final d:Ljava/lang/String;
-
-.field public static final e:Ljava/lang/String;
-
-.field public static final f:Ljava/lang/String;
+# interfaces
+.implements Lj88;
+.implements Ljava/io/Serializable;
 
 
 # instance fields
-.field public final a:I
+.field public a:Lis6;
 
-.field public final b:I
+.field public volatile b:Ljava/lang/Object;
 
-.field public final c:I
+.field public final c:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    sget-object v0, Lmbh;->a:Ljava/lang/String;
-
-    const/4 v0, 0x0
-
-    const/16 v1, 0x24
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lbgg;->d:Ljava/lang/String;
-
-    const/4 v0, 0x1
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lbgg;->e:Ljava/lang/String;
-
-    const/4 v0, 0x2
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lbgg;->f:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public constructor <init>(III)V
+.method public constructor <init>(Lis6;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lbgg;->a:I
+    iput-object p1, p0, Lbgg;->a:Lis6;
 
-    iput p2, p0, Lbgg;->b:I
+    sget-object p1, Ltea;->s0:Ltea;
 
-    iput p3, p0, Lbgg;->c:I
+    iput-object p1, p0, Lbgg;->b:Ljava/lang/Object;
+
+    iput-object p0, p0, Lbgg;->c:Ljava/lang/Object;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final e()Z
+    .locals 2
+
+    iget-object v0, p0, Lbgg;->b:Ljava/lang/Object;
+
+    sget-object v1, Ltea;->s0:Ltea;
+
+    if-eq v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final getValue()Ljava/lang/Object;
+    .locals 3
+
+    iget-object v0, p0, Lbgg;->b:Ljava/lang/Object;
+
+    sget-object v1, Ltea;->s0:Ltea;
+
+    if-eq v0, v1, :cond_0
+
+    return-object v0
+
+    :cond_0
+    iget-object v0, p0, Lbgg;->c:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-object v2, p0, Lbgg;->b:Ljava/lang/Object;
+
+    if-eq v2, v1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    iget-object v1, p0, Lbgg;->a:Lis6;
+
+    invoke-interface {v1}, Lis6;->invoke()Ljava/lang/Object;
+
+    move-result-object v2
+
+    iput-object v2, p0, Lbgg;->b:Ljava/lang/Object;
+
+    const/4 v1, 0x0
+
+    iput-object v1, p0, Lbgg;->a:Lis6;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :goto_0
+    monitor-exit v0
+
+    return-object v2
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+
+    throw v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    invoke-virtual {p0}, Lbgg;->e()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Lbgg;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_0
+    const-string v0, "Lazy value not initialized yet."
+
+    return-object v0
 .end method

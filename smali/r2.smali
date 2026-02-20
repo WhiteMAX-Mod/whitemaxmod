@@ -7,16 +7,16 @@
 
 
 # instance fields
-.field public final synthetic o:Lida;
+.field public final synthetic o:Laga;
 
 
 # direct methods
-.method public constructor <init>(Lida;Ljava/util/NavigableMap;)V
+.method public constructor <init>(Laga;Ljava/util/NavigableMap;)V
     .locals 0
 
-    iput-object p1, p0, Lr2;->o:Lida;
+    iput-object p1, p0, Lr2;->o:Laga;
 
-    invoke-direct {p0, p1, p2}, Lu2;-><init>(Lida;Ljava/util/SortedMap;)V
+    invoke-direct {p0, p1, p2}, Lu2;-><init>(Laga;Ljava/util/SortedMap;)V
 
     return-void
 .end method
@@ -88,9 +88,9 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lr2;->o:Lida;
+    iget-object v2, p0, Lr2;->o:Laga;
 
-    invoke-direct {v0, v2, v1}, Lr2;-><init>(Lida;Ljava/util/NavigableMap;)V
+    invoke-direct {v0, v2, v1}, Lr2;-><init>(Laga;Ljava/util/NavigableMap;)V
 
     return-object v0
 .end method
@@ -123,9 +123,9 @@
 
     move-result-object p1
 
-    iget-object p2, p0, Lr2;->o:Lida;
+    iget-object p2, p0, Lr2;->o:Laga;
 
-    invoke-direct {v0, p2, p1}, Lr2;-><init>(Lida;Ljava/util/NavigableMap;)V
+    invoke-direct {v0, p2, p1}, Lr2;-><init>(Laga;Ljava/util/NavigableMap;)V
 
     return-object v0
 .end method
@@ -242,9 +242,9 @@
 
     move-result-object p1
 
-    iget-object p2, p0, Lr2;->o:Lida;
+    iget-object p2, p0, Lr2;->o:Laga;
 
-    invoke-direct {v0, p2, p1}, Lr2;-><init>(Lida;Ljava/util/NavigableMap;)V
+    invoke-direct {v0, p2, p1}, Lr2;-><init>(Laga;Ljava/util/NavigableMap;)V
 
     return-object v0
 .end method
@@ -278,9 +278,9 @@
 
     move-result-object p1
 
-    iget-object p2, p0, Lr2;->o:Lida;
+    iget-object p2, p0, Lr2;->o:Laga;
 
-    invoke-direct {v0, p2, p1}, Lr2;-><init>(Lida;Ljava/util/NavigableMap;)V
+    invoke-direct {v0, p2, p1}, Lr2;-><init>(Laga;Ljava/util/NavigableMap;)V
 
     return-object v0
 .end method

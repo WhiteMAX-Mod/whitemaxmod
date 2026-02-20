@@ -1,10 +1,15 @@
 .class public final Lcae;
-.super Ldae;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/view/ViewGroup$OnHierarchyChangeListener;
 
 
 # static fields
 .field public static final a:Lcae;
+
+.field public static final b:Ljava/util/concurrent/CopyOnWriteArrayList;
 
 
 # direct methods
@@ -17,45 +22,140 @@
 
     sput-object v0, Lcae;->a:Lcae;
 
+    new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
+
+    sput-object v0, Lcae;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final onChildViewAdded(Landroid/view/View;Landroid/view/View;)V
+    .locals 4
 
-    const/4 v0, 0x1
+    sget-object v0, Lcae;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    if-ne p0, p1, :cond_0
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    return v0
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/view/ViewGroup$OnHierarchyChangeListener;
+
+    invoke-interface {v1, p1, p2}, Landroid/view/ViewGroup$OnHierarchyChangeListener;->onChildViewAdded(Landroid/view/View;Landroid/view/View;)V
+
+    goto :goto_0
 
     :cond_0
-    instance-of p1, p1, Lcae;
+    instance-of p1, p2, Landroid/view/ViewGroup;
 
-    if-nez p1, :cond_1
+    if-eqz p1, :cond_1
 
-    const/4 p1, 0x0
+    move-object p1, p2
 
-    return p1
+    check-cast p1, Landroid/view/ViewGroup;
+
+    invoke-virtual {p1, p0}, Landroid/view/ViewGroup;->setOnHierarchyChangeListener(Landroid/view/ViewGroup$OnHierarchyChangeListener;)V
+
+    invoke-virtual {p1}, Landroid/view/ViewGroup;->getChildCount()I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    :goto_1
+    if-ge v1, v0, :cond_1
+
+    invoke-virtual {p1, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v2
+
+    sget-object v3, Lcae;->a:Lcae;
+
+    invoke-virtual {v3, p2, v2}, Lcae;->onChildViewAdded(Landroid/view/View;Landroid/view/View;)V
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_1
 
     :cond_1
-    return v0
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 1
+.method public final onChildViewRemoved(Landroid/view/View;Landroid/view/View;)V
+    .locals 5
 
-    const v0, 0x7a48e5f1
+    instance-of v0, p2, Landroid/view/ViewGroup;
 
-    return v0
-.end method
+    if-eqz v0, :cond_1
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    move-object v0, p2
 
-    const-string v0, "Timeout"
+    check-cast v0, Landroid/view/ViewGroup;
 
-    return-object v0
+    invoke-virtual {v0}, Landroid/view/ViewGroup;->getChildCount()I
+
+    move-result v1
+
+    const/4 v2, 0x0
+
+    :goto_0
+    if-ge v2, v1, :cond_0
+
+    invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v3
+
+    sget-object v4, Lcae;->a:Lcae;
+
+    invoke-virtual {v4, p2, v3}, Lcae;->onChildViewRemoved(Landroid/view/View;Landroid/view/View;)V
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setOnHierarchyChangeListener(Landroid/view/ViewGroup$OnHierarchyChangeListener;)V
+
+    :cond_1
+    sget-object v0, Lcae;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_1
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/view/ViewGroup$OnHierarchyChangeListener;
+
+    invoke-interface {v1, p1, p2}, Landroid/view/ViewGroup$OnHierarchyChangeListener;->onChildViewRemoved(Landroid/view/View;Landroid/view/View;)V
+
+    goto :goto_1
+
+    :cond_2
+    return-void
 .end method

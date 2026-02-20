@@ -1,40 +1,177 @@
-.class public abstract Ly9d;
-.super Ljava/lang/Object;
+.class public final Ly9d;
+.super Landroid/widget/FrameLayout;
+.source "SourceFile"
 
 
-# static fields
-.field public static oneme_settings_avatar_select_screen:I = 0x7f0a076d
+# instance fields
+.field public final a:I
 
-.field public static oneme_settings_change_avatar_cancel:I = 0x7f0a076e
+.field public final b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
 
-.field public static oneme_settings_change_avatar_remove_current:I = 0x7f0a076f
+.field public final c:Ljava/lang/Object;
 
-.field public static oneme_settings_change_avatar_upload_from_camera:I = 0x7f0a0770
+.field public final d:Ljava/lang/Object;
 
-.field public static oneme_settings_change_avatar_upload_from_gallery:I = 0x7f0a0771
+.field public final o:Ljava/lang/Object;
 
-.field public static oneme_settings_change_avatar_upload_from_neuroavatars:I = 0x7f0a0772
+.field public final s0:Ljava/lang/Object;
 
-.field public static oneme_settings_collapsingstoolbar:I = 0x7f0a0773
 
-.field public static oneme_settings_container:I = 0x7f0a0774
+# direct methods
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 4
 
-.field public static oneme_settings_list_screen_appbar:I = 0x7f0a077c
+    invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-.field public static oneme_settings_list_screen_pinned_toolbar:I = 0x7f0a077d
+    const/16 v0, 0x28
 
-.field public static oneme_settings_toolbar:I = 0x7f0a0817
+    iput v0, p0, Ly9d;->a:I
 
-.field public static oneme_settings_topbar:I = 0x7f0a0818
+    new-instance v0, Lone/me/sdk/uikit/common/views/OneMeDraweeView;
 
-.field public static oneme_settings_topbar_avatar:I = 0x7f0a0819
+    invoke-direct {v0, p1}, Lone/me/sdk/uikit/common/views/OneMeDraweeView;-><init>(Landroid/content/Context;)V
 
-.field public static oneme_settings_topbar_container:I = 0x7f0a081a
+    new-instance v1, Lbd4;
 
-.field public static oneme_settings_topbar_dotdivider:I = 0x7f0a081b
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
 
-.field public static oneme_settings_topbar_name:I = 0x7f0a081c
+    move-result-object v2
 
-.field public static oneme_settings_topbar_nick:I = 0x7f0a081d
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-.field public static oneme_settings_topbar_phone:I = 0x7f0a081e
+    move-result-object v2
+
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+
+    const/high16 v3, 0x40800000    # 4.0f
+
+    mul-float/2addr v2, v3
+
+    invoke-direct {v1, v2}, Lbd4;-><init>(F)V
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setOutlineProvider(Landroid/view/ViewOutlineProvider;)V
+
+    iput-object v0, p0, Ly9d;->b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+
+    new-instance v1, Liab;
+
+    const/16 v2, 0xf
+
+    invoke-direct {v1, p1, v2}, Liab;-><init>(Landroid/content/Context;I)V
+
+    const/4 v2, 0x3
+
+    invoke-static {v2, v1}, Lbdj;->d(ILis6;)Lj88;
+
+    move-result-object v1
+
+    iput-object v1, p0, Ly9d;->c:Ljava/lang/Object;
+
+    new-instance v1, Lnsa;
+
+    const/16 v3, 0x1b
+
+    invoke-direct {v1, p1, v3, p0}, Lnsa;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-static {v2, v1}, Lbdj;->d(ILis6;)Lj88;
+
+    move-result-object p1
+
+    iput-object p1, p0, Ly9d;->d:Ljava/lang/Object;
+
+    new-instance p1, Lx9d;
+
+    const/4 v1, 0x0
+
+    invoke-direct {p1, p0, v1}, Lx9d;-><init>(Ly9d;I)V
+
+    invoke-static {v2, p1}, Lbdj;->d(ILis6;)Lj88;
+
+    move-result-object p1
+
+    iput-object p1, p0, Ly9d;->o:Ljava/lang/Object;
+
+    new-instance p1, Lx9d;
+
+    const/4 v1, 0x1
+
+    invoke-direct {p1, p0, v1}, Lx9d;-><init>(Ly9d;I)V
+
+    invoke-static {v2, p1}, Lbdj;->d(ILis6;)Lj88;
+
+    move-result-object p1
+
+    iput-object p1, p0, Ly9d;->s0:Ljava/lang/Object;
+
+    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final measureChildren(II)V
+    .locals 2
+
+    iget-object v0, p0, Ly9d;->b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+
+    invoke-virtual {v0, p1, p2}, Landroid/view/View;->measure(II)V
+
+    iget-object v0, p0, Ly9d;->d:Ljava/lang/Object;
+
+    invoke-interface {v0}, Lj88;->e()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/View;
+
+    invoke-virtual {v0, p1, p2}, Landroid/view/View;->measure(II)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final setDrawOverlay(Z)V
+    .locals 1
+
+    iget-object v0, p0, Ly9d;->b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {v0}, Lba5;->getHierarchy()Ly95;
+
+    move-result-object p1
+
+    check-cast p1, Lkx6;
+
+    iget-object v0, p0, Ly9d;->o:Ljava/lang/Object;
+
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {p1, v0}, Lkx6;->k(Landroid/graphics/drawable/Drawable;)V
+
+    return-void
+
+    :cond_0
+    invoke-virtual {v0}, Lba5;->getHierarchy()Ly95;
+
+    move-result-object p1
+
+    check-cast p1, Lkx6;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Lkx6;->k(Landroid/graphics/drawable/Drawable;)V
+
+    return-void
+.end method

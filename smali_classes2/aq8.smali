@@ -1,75 +1,78 @@
 .class public final Laq8;
-.super Ln3e;
+.super Lpdg;
 .source "SourceFile"
 
-
-# static fields
-.field public static final b:Laq8;
-
-.field public static final c:Lhm4;
-
-.field public static final d:Lhm4;
-
-.field public static final e:Lhm4;
-
-.field public static final f:Lhm4;
+# interfaces
+.implements Lys6;
 
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 6
+# instance fields
+.field public synthetic o:Ljava/lang/Object;
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Ljava/io/File;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Laq8;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Laq8;
+
+    sget-object p2, Lmah;->a:Lmah;
+
+    invoke-virtual {p1, p2}, Laq8;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
     new-instance v0, Laq8;
 
-    invoke-direct {v0}, Llm4;-><init>()V
+    const/4 v1, 0x2
 
-    sput-object v0, Laq8;->b:Laq8;
+    invoke-direct {v0, v1, p2}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    const/4 v1, 0x0
+    iput-object p1, v0, Laq8;->o:Ljava/lang/Object;
 
-    new-array v2, v1, [Ljava/lang/String;
+    return-object v0
+.end method
 
-    const-string v3, ":contact-list"
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    const/4 v4, 0x0
+    iget-object v0, p0, Laq8;->o:Ljava/lang/Object;
 
-    const/16 v5, 0xe
+    check-cast v0, Ljava/io/File;
 
-    invoke-static {v0, v3, v2, v4, v5}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    move-result-object v2
+    new-instance p1, Liwe;
 
-    sput-object v2, Laq8;->c:Lhm4;
-
-    const-string v2, ":call-list"
-
-    new-array v3, v1, [Ljava/lang/String;
-
-    invoke-static {v0, v2, v3, v4, v5}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
-
-    move-result-object v2
-
-    sput-object v2, Laq8;->d:Lhm4;
-
-    const-string v2, ":chat-list"
-
-    new-array v3, v1, [Ljava/lang/String;
-
-    invoke-static {v0, v2, v3, v4, v5}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
-
-    move-result-object v2
-
-    sput-object v2, Laq8;->e:Lhm4;
-
-    const-string v2, ":settings"
-
-    new-array v1, v1, [Ljava/lang/String;
-
-    invoke-static {v0, v2, v1, v4, v5}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
+    invoke-virtual {v0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Laq8;->f:Lhm4;
+    invoke-direct {p1, v0}, Liwe;-><init>(Ljava/lang/String;)V
 
-    return-void
+    new-instance v0, Lmig;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p1, v1}, Lmig;-><init>(Liwe;Lkotlin/coroutines/Continuation;)V
+
+    new-instance p1, Lcee;
+
+    invoke-direct {p1, v0}, Lcee;-><init>(Lys6;)V
+
+    return-object p1
 .end method

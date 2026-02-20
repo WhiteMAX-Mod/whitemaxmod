@@ -3,38 +3,40 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lnbf;
+.implements Lnjf;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic a:Lf21;
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final synthetic b:Ljl1;
+
+.field public final synthetic c:Z
+
+.field public final synthetic d:Ljava/util/List;
+
+.field public final synthetic e:Ljava/lang/Runnable;
+
+.field public final synthetic f:Ljava/lang/Runnable;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method public synthetic constructor <init>(Lf21;Ljl1;ZLjava/util/List;Ljava/lang/Runnable;Ljava/lang/Runnable;)V
     .locals 0
-
-    .line 1
-    iput p1, p0, Ll11;->a:I
-
-    iput-object p2, p0, Ll11;->b:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    iput-object p1, p0, Ll11;->a:Lf21;
 
-.method public synthetic constructor <init>(Ljava/lang/Object;Lqr6;I)V
-    .locals 0
+    iput-object p2, p0, Ll11;->b:Ljl1;
 
-    .line 2
-    iput p3, p0, Ll11;->a:I
+    iput-boolean p3, p0, Ll11;->c:Z
 
-    iput-object p2, p0, Ll11;->b:Ljava/lang/Object;
+    iput-object p4, p0, Ll11;->d:Ljava/util/List;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p5, p0, Ll11;->e:Ljava/lang/Runnable;
+
+    iput-object p6, p0, Ll11;->f:Ljava/lang/Runnable;
 
     return-void
 .end method
@@ -42,137 +44,172 @@
 
 # virtual methods
 .method public final onResponse(Lorg/json/JSONObject;)V
-    .locals 4
+    .locals 5
 
-    iget v0, p0, Ll11;->a:I
+    iget-object v0, p0, Ll11;->a:Lf21;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object v0, p0, Ll11;->b:Ljava/lang/Object;
+    const-string v1, "error"
 
-    check-cast v0, Lru/ok/android/externcalls/sdk/dev/MediaDumpManager$RemoteMediaDumpRequestListener;
-
-    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/dev/internal/MediaDumpManagerImpl;->a(Lru/ok/android/externcalls/sdk/dev/MediaDumpManager$RemoteMediaDumpRequestListener;Lorg/json/JSONObject;)V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Ll11;->b:Ljava/lang/Object;
-
-    check-cast v0, Le0a;
-
-    new-instance v1, Ljava/lang/RuntimeException;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "get-rooms error "
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p1, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-direct {v1, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p1}, Ljava/lang/String;->isEmpty()Z
 
-    invoke-virtual {v0, v1}, Le0a;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result p1
 
-    return-void
+    if-eqz p1, :cond_6
 
-    :pswitch_1
-    iget-object v0, p0, Ll11;->b:Ljava/lang/Object;
+    iget-object p1, v0, Lf21;->k0:Ltl1;
 
-    check-cast v0, Le0a;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    new-instance v1, Ljava/lang/RuntimeException;
+    new-instance v1, Ljava/util/LinkedHashSet;
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    invoke-direct {v1}, Ljava/util/LinkedHashSet;-><init>()V
 
-    const-string v3, "get-participant-list-chunk error "
+    iget-object v2, p1, Ltl1;->a:Lol1;
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object v3, v2, Lol1;->a:Ljl1;
 
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget-object v4, p0, Ll11;->b:Ljl1;
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    if-eqz v3, :cond_0
 
-    move-result-object p1
+    invoke-virtual {v3, v4}, Ljl1;->equals(Ljava/lang/Object;)Z
 
-    invoke-direct {v1, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    move-result v3
 
-    invoke-virtual {v0, v1}, Le0a;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    if-eqz v3, :cond_0
 
-    return-void
+    invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    :pswitch_2
-    iget-object v0, p0, Ll11;->b:Ljava/lang/Object;
+    goto :goto_1
 
-    check-cast v0, Lv40;
+    :cond_0
+    iget-object v2, p1, Ltl1;->h:Landroid/util/LongSparseArray;
 
-    iget-object v0, v0, Lv40;->e:Ljava/lang/Object;
+    iget-wide v3, v4, Ljl1;->a:J
 
-    check-cast v0, Lahd;
-
-    const-string v1, "MediaSettingsSender"
-
-    if-eqz p1, :cond_0
-
-    const-string v2, "error"
-
-    invoke-virtual {p1, v2}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v2, v3, v4}, Landroid/util/LongSparseArray;->get(J)Ljava/lang/Object;
 
     move-result-object v2
 
-    const-string v3, "command-discarded"
+    check-cast v2, Ljava/util/Set;
 
-    invoke-virtual {v3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    if-eqz v2, :cond_2
 
-    move-result v2
+    invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    if-eqz v2, :cond_0
+    move-result-object v2
 
-    const-string p1, "change-media-settings command was merged with ongoing one"
+    :cond_1
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-interface {v0, v1, p1}, Lahd;->log(Ljava/lang/String;Ljava/lang/String;)V
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljl1;
+
+    iget-object v4, p1, Ltl1;->g:Ljava/util/HashMap;
+
+    invoke-virtual {v4, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lw1f;
+
+    if-eqz v4, :cond_1
+
+    invoke-virtual {p1, v4}, Ltl1;->d(Lw1f;)Ljava/util/Map;
+
+    move-result-object v4
+
+    invoke-interface {v4, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lol1;
+
+    if-eqz v3, :cond_1
+
+    invoke-interface {v1, v3}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    :cond_0
-    new-instance v2, Ljava/lang/StringBuilder;
+    :cond_2
+    :goto_1
+    invoke-interface {v1}, Ljava/util/Collection;->isEmpty()Z
 
-    const-string v3, "change-media-settings error"
+    move-result p1
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    if-nez p1, :cond_5
 
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-interface {v1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
 
-    invoke-interface {v0, v1, p1}, Lahd;->log(Ljava/lang/String;Ljava/lang/String;)V
+    :goto_2
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    :goto_0
+    move-result v2
+
+    if-eqz v2, :cond_4
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lol1;
+
+    iget-boolean v3, p0, Ll11;->c:Z
+
+    iget-object v4, p0, Ll11;->d:Ljava/util/List;
+
+    if-eqz v3, :cond_3
+
+    iget-object v2, v2, Lol1;->d:Ljava/util/ArrayList;
+
+    invoke-virtual {v2, v4}, Ljava/util/ArrayList;->removeAll(Ljava/util/Collection;)Z
+
+    goto :goto_2
+
+    :cond_3
+    iget-object v2, v2, Lol1;->d:Ljava/util/ArrayList;
+
+    invoke-virtual {v2, v4}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
+
+    goto :goto_2
+
+    :cond_4
+    sget-object p1, Lga1;->G0:Lga1;
+
+    invoke-virtual {v0, p1, v1}, Lf21;->m(Lga1;Ljava/lang/Object;)V
+
+    :cond_5
+    iget-object p1, p0, Ll11;->e:Ljava/lang/Runnable;
+
+    if-eqz p1, :cond_7
+
+    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
+
     return-void
 
-    :pswitch_3
-    iget-object p1, p0, Ll11;->b:Ljava/lang/Object;
+    :cond_6
+    iget-object p1, p0, Ll11;->f:Ljava/lang/Runnable;
 
-    check-cast p1, Lhgh;
+    if-eqz p1, :cond_7
 
-    invoke-virtual {p1}, Lhgh;->run()V
+    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
+    :cond_7
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

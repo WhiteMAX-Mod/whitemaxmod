@@ -1,138 +1,58 @@
-.class public final Llf5;
+.class public final synthetic Llf5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
 
 # instance fields
-.field public final a:I
+.field public final synthetic a:Lorg/webrtc/EglRenderer;
 
-.field public final b:I
+.field public final synthetic b:Lorg/webrtc/RendererCommon$GlDrawer;
 
-.field public final c:I
+.field public final synthetic c:Lorg/webrtc/EglRenderer$FrameListener;
+
+.field public final synthetic d:F
+
+.field public final synthetic o:Z
 
 
 # direct methods
-.method public constructor <init>(III)V
+.method public synthetic constructor <init>(Lorg/webrtc/EglRenderer;Lorg/webrtc/RendererCommon$GlDrawer;Lorg/webrtc/EglRenderer$FrameListener;FZ)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Llf5;->a:I
+    iput-object p1, p0, Llf5;->a:Lorg/webrtc/EglRenderer;
 
-    iput p2, p0, Llf5;->b:I
+    iput-object p2, p0, Llf5;->b:Lorg/webrtc/RendererCommon$GlDrawer;
 
-    iput p3, p0, Llf5;->c:I
+    iput-object p3, p0, Llf5;->c:Lorg/webrtc/EglRenderer$FrameListener;
+
+    iput p4, p0, Llf5;->d:F
+
+    iput-boolean p5, p0, Llf5;->o:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Llf5;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Llf5;
-
-    iget v1, p0, Llf5;->a:I
-
-    iget v3, p1, Llf5;->a:I
-
-    if-eq v1, v3, :cond_2
-
-    return v2
-
-    :cond_2
-    iget v1, p0, Llf5;->b:I
-
-    iget v3, p1, Llf5;->b:I
-
-    if-eq v1, v3, :cond_3
-
-    return v2
-
-    :cond_3
-    iget v1, p0, Llf5;->c:I
-
-    iget p1, p1, Llf5;->c:I
-
-    if-eq v1, p1, :cond_4
-
-    return v2
-
-    :cond_4
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget v0, p0, Llf5;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Llf5;->b:I
-
-    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
-
-    move-result v0
-
-    iget v1, p0, Llf5;->c:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method public final run()V
     .locals 5
 
-    const-string v0, ", x="
+    iget v0, p0, Llf5;->d:F
 
-    const-string v1, ", y="
+    iget-boolean v1, p0, Llf5;->o:Z
 
-    const-string v2, "EmojiLocation(spriteIndex="
+    iget-object v2, p0, Llf5;->a:Lorg/webrtc/EglRenderer;
 
-    iget v3, p0, Llf5;->a:I
+    iget-object v3, p0, Llf5;->b:Lorg/webrtc/RendererCommon$GlDrawer;
 
-    iget v4, p0, Llf5;->b:I
+    iget-object v4, p0, Llf5;->c:Lorg/webrtc/EglRenderer$FrameListener;
 
-    invoke-static {v2, v3, v0, v4, v1}, Lkz1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v2, v3, v4, v0, v1}, Lorg/webrtc/EglRenderer;->e(Lorg/webrtc/EglRenderer;Lorg/webrtc/RendererCommon$GlDrawer;Lorg/webrtc/EglRenderer$FrameListener;FZ)V
 
-    move-result-object v0
-
-    const-string v1, ")"
-
-    iget v2, p0, Llf5;->c:I
-
-    invoke-static {v0, v2, v1}, Lj27;->k(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

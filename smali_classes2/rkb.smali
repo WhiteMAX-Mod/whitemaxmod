@@ -28,58 +28,82 @@
 
 .field public static final l:I
 
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
+
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    sget v0, Liad;->oneme_stickers_preview_action_favorite:I
+    sget v0, Likd;->settings_devices_auth_hint_accept_button_title:I
 
     sput v0, Lrkb;->a:I
 
-    sget v0, Liad;->oneme_stickers_preview_action_forward:I
+    sget v0, Likd;->settings_devices_auth_hint_deny_button_title:I
 
     sput v0, Lrkb;->b:I
 
-    sget v0, Liad;->oneme_stickers_preview_action_send:I
+    sget v0, Likd;->settings_devices_auth_hint_description_full:I
 
     sput v0, Lrkb;->c:I
 
-    sget v0, Liad;->oneme_stickers_preview_content_container:I
+    sget v0, Likd;->settings_devices_auth_hint_description_navigation_arrow:I
 
     sput v0, Lrkb;->d:I
 
-    sget v0, Liad;->oneme_stickers_preview_lottie_cell:I
+    sget v0, Likd;->settings_devices_auth_hint_description_navigation_part:I
 
     sput v0, Lrkb;->e:I
 
-    sget v0, Liad;->oneme_stickers_preview_static_cell:I
+    sget v0, Likd;->settings_devices_auth_hint_title:I
 
     sput v0, Lrkb;->f:I
 
-    sget v0, Liad;->oneme_stickers_preview_sticker_container:I
+    sget v0, Likd;->settings_devices_base_login_qr_error:I
 
     sput v0, Lrkb;->g:I
 
-    sget v0, Liad;->oneme_stickers_preview_stickers_set_container:I
+    sget v0, Likd;->settings_devices_camera_permission_denied_title:I
 
     sput v0, Lrkb;->h:I
 
-    sget v0, Liad;->oneme_stickers_preview_stickers_set_content:I
+    sget v0, Likd;->settings_devices_camera_request_description:I
 
     sput v0, Lrkb;->i:I
 
-    sget v0, Liad;->oneme_stickers_preview_stickers_set_header:I
+    sget v0, Likd;->settings_devices_expired_login_qr_error:I
 
     sput v0, Lrkb;->j:I
 
-    sget v0, Liad;->oneme_stickers_preview_toolbar:I
+    sget v0, Likd;->settings_devices_header_description:I
 
     sput v0, Lrkb;->k:I
 
-    sget v0, Liad;->oneme_stickers_preview_webm_cell:I
+    sget v0, Likd;->settings_devices_header_title:I
 
     sput v0, Lrkb;->l:I
+
+    sget v0, Likd;->settings_devices_login_success:I
+
+    sput v0, Lrkb;->m:I
+
+    sget v0, Likd;->settings_devices_not_login_qr_error:I
+
+    sput v0, Lrkb;->n:I
+
+    sget v0, Likd;->settings_devices_qr_scan_btn:I
+
+    sput v0, Lrkb;->o:I
+
+    sget v0, Likd;->settings_devices_toolbar_title:I
+
+    sput v0, Lrkb;->p:I
 
     return-void
 .end method

@@ -15,9 +15,9 @@
         "args",
         "<init>",
         "(Landroid/os/Bundle;)V",
-        "Lhce;",
+        "Lwie;",
         "scopeId",
-        "(Ljava/lang/String;Lso4;)V",
+        "(Lwie;)V",
         "chat-screen_release"
     }
     k = 0x1
@@ -31,7 +31,7 @@
 
 
 # static fields
-.field public static final synthetic Z:[Lz28;
+.field public static final synthetic Z:[Lv58;
 
 
 # instance fields
@@ -39,32 +39,32 @@
 
 .field public Y:Z
 
-.field public final a:Lo58;
+.field public final a:Lj88;
 
-.field public final b:Lro0;
+.field public final b:Lwp0;
 
-.field public final c:Lro0;
+.field public final c:Lwp0;
 
-.field public final d:Lro0;
+.field public final d:Lwp0;
 
-.field public final o:Lro0;
+.field public final o:Lwp0;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 9
 
-    new-instance v0, Lhfa;
+    new-instance v0, Laia;
 
     const-class v1, Lone/me/chatscreen/search/SearchMessageBottomWidget;
 
     const-string v2, "parentScopeId"
 
-    const-string v3, "getParentScopeId-IluPPks()Ljava/lang/String;"
+    const-string v3, "getParentScopeId()Lone/me/sdk/arch/store/ScopeId;"
 
-    invoke-direct {v0, v1, v2, v3}, Lhfa;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2, v3}, Laia;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
 
-    sget-object v2, Lctd;->a:Ldtd;
+    sget-object v2, Lazd;->a:Lbzd;
 
     const-string v3, "searchResultTextView"
 
@@ -72,37 +72,37 @@
 
     const/4 v5, 0x0
 
-    invoke-static {v2, v1, v3, v4, v5}, Lj27;->e(Ldtd;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Liyc;
+    invoke-static {v2, v1, v3, v4, v5}, Lo16;->g(Lbzd;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lv3d;
 
     move-result-object v2
 
-    new-instance v3, Liyc;
+    new-instance v3, Lv3d;
 
     const-string v4, "upButton"
 
     const-string v6, "getUpButton()Landroidx/appcompat/widget/AppCompatImageView;"
 
-    invoke-direct {v3, v1, v4, v6, v5}, Liyc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v3, v1, v4, v6, v5}, Lv3d;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v4, Liyc;
+    new-instance v4, Lv3d;
 
     const-string v6, "downButton"
 
     const-string v7, "getDownButton()Landroidx/appcompat/widget/AppCompatImageView;"
 
-    invoke-direct {v4, v1, v6, v7, v5}, Liyc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v4, v1, v6, v7, v5}, Lv3d;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v6, Liyc;
+    new-instance v6, Lv3d;
 
     const-string v7, "separatorView"
 
     const-string v8, "getSeparatorView()Landroid/view/View;"
 
-    invoke-direct {v6, v1, v7, v8, v5}, Liyc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v6, v1, v7, v8, v5}, Lv3d;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
     const/4 v1, 0x5
 
-    new-array v1, v1, [Lz28;
+    new-array v1, v1, [Lv58;
 
     aput-object v0, v1, v5
 
@@ -122,7 +122,7 @@
 
     aput-object v6, v1, v0
 
-    sput-object v1, Lone/me/chatscreen/search/SearchMessageBottomWidget;->Z:[Lz28;
+    sput-object v1, Lone/me/chatscreen/search/SearchMessageBottomWidget;->Z:[Lv58;
 
     return-void
 .end method
@@ -136,119 +136,111 @@
 
     const/4 v2, 0x0
 
-    .line 4
-    invoke-direct {p0, p1, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILso4;)V
+    .line 1
+    invoke-direct {p0, p1, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILfq4;)V
 
-    .line 5
-    new-instance p1, Lls;
+    .line 2
+    new-instance p1, Lwt;
 
-    const-class v1, Lhce;
+    const-class v1, Lwie;
 
     const-string v3, "arg_key_scope_id"
 
-    invoke-direct {p1, v1, v3}, Lls;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
+    invoke-direct {p1, v1, v3}, Lwt;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
 
-    .line 6
-    sget-object v1, Lone/me/chatscreen/search/SearchMessageBottomWidget;->Z:[Lz28;
+    .line 3
+    sget-object v1, Lone/me/chatscreen/search/SearchMessageBottomWidget;->Z:[Lv58;
 
     aget-object v0, v1, v0
 
-    invoke-virtual {p1, p0}, Lls;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+    invoke-virtual {p1, p0}, Lwt;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lhce;
+    check-cast p1, Lwie;
+
+    .line 4
+    const-class v0, Lboe;
+
+    .line 5
+    invoke-virtual {p0, p1, v0, v2}, Lone/me/sdk/arch/Widget;->getSharedViewModel(Lwie;Ljava/lang/Class;Lis6;)Lj88;
+
+    move-result-object p1
+
+    .line 6
+    iput-object p1, p0, Lone/me/chatscreen/search/SearchMessageBottomWidget;->a:Lj88;
 
     .line 7
-    iget-object p1, p1, Lhce;->a:Ljava/lang/String;
-
-    .line 8
-    const-class v0, Lche;
-
-    .line 9
-    invoke-virtual {p0, p1, v0, v2}, Lone/me/sdk/arch/Widget;->getSharedViewModel-cp94BC8(Ljava/lang/String;Ljava/lang/Class;Llq6;)Lo58;
-
-    move-result-object p1
-
-    .line 10
-    iput-object p1, p0, Lone/me/chatscreen/search/SearchMessageBottomWidget;->a:Lo58;
-
-    .line 11
-    new-instance p1, Lqge;
+    new-instance p1, Lpne;
 
     const/4 v0, 0x0
 
-    invoke-direct {p1, p0, v0}, Lqge;-><init>(Lone/me/chatscreen/search/SearchMessageBottomWidget;I)V
+    invoke-direct {p1, p0, v0}, Lpne;-><init>(Lone/me/chatscreen/search/SearchMessageBottomWidget;I)V
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->binding(Llq6;)Lro0;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->binding(Lis6;)Lwp0;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/chatscreen/search/SearchMessageBottomWidget;->b:Lro0;
+    iput-object p1, p0, Lone/me/chatscreen/search/SearchMessageBottomWidget;->b:Lwp0;
 
-    .line 12
-    new-instance p1, Lqge;
+    .line 8
+    new-instance p1, Lpne;
 
     const/4 v0, 0x1
 
-    invoke-direct {p1, p0, v0}, Lqge;-><init>(Lone/me/chatscreen/search/SearchMessageBottomWidget;I)V
+    invoke-direct {p1, p0, v0}, Lpne;-><init>(Lone/me/chatscreen/search/SearchMessageBottomWidget;I)V
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->binding(Llq6;)Lro0;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->binding(Lis6;)Lwp0;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/chatscreen/search/SearchMessageBottomWidget;->c:Lro0;
+    iput-object p1, p0, Lone/me/chatscreen/search/SearchMessageBottomWidget;->c:Lwp0;
 
-    .line 13
-    new-instance p1, Lqge;
+    .line 9
+    new-instance p1, Lpne;
 
     const/4 v0, 0x2
 
-    invoke-direct {p1, p0, v0}, Lqge;-><init>(Lone/me/chatscreen/search/SearchMessageBottomWidget;I)V
+    invoke-direct {p1, p0, v0}, Lpne;-><init>(Lone/me/chatscreen/search/SearchMessageBottomWidget;I)V
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->binding(Llq6;)Lro0;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->binding(Lis6;)Lwp0;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/chatscreen/search/SearchMessageBottomWidget;->d:Lro0;
+    iput-object p1, p0, Lone/me/chatscreen/search/SearchMessageBottomWidget;->d:Lwp0;
 
-    .line 14
-    new-instance p1, Lqge;
+    .line 10
+    new-instance p1, Lpne;
 
     const/4 v0, 0x3
 
-    invoke-direct {p1, p0, v0}, Lqge;-><init>(Lone/me/chatscreen/search/SearchMessageBottomWidget;I)V
+    invoke-direct {p1, p0, v0}, Lpne;-><init>(Lone/me/chatscreen/search/SearchMessageBottomWidget;I)V
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->binding(Llq6;)Lro0;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->binding(Lis6;)Lwp0;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/chatscreen/search/SearchMessageBottomWidget;->o:Lro0;
+    iput-object p1, p0, Lone/me/chatscreen/search/SearchMessageBottomWidget;->o:Lwp0;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;Lso4;)V
-    .locals 1
+.method public constructor <init>(Lwie;)V
+    .locals 2
 
-    .line 1
-    new-instance p2, Lhce;
+    .line 11
+    new-instance v0, Lyvb;
 
-    invoke-direct {p2, p1}, Lhce;-><init>(Ljava/lang/String;)V
+    const-string v1, "arg_key_scope_id"
 
-    .line 2
-    new-instance p1, Lktb;
+    invoke-direct {v0, v1, p1}, Lyvb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    const-string v0, "arg_key_scope_id"
-
-    invoke-direct {p1, v0, p2}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    .line 3
-    filled-new-array {p1}, [Lktb;
+    .line 12
+    filled-new-array {v0}, [Lyvb;
 
     move-result-object p1
 
-    invoke-static {p1}, Laaj;->c([Lktb;)Landroid/os/Bundle;
+    invoke-static {p1}, Lejj;->c([Lyvb;)Landroid/os/Bundle;
 
     move-result-object p1
 
@@ -259,58 +251,18 @@
 
 
 # virtual methods
-.method public final A0()Landroidx/appcompat/widget/AppCompatTextView;
+.method public final H0()Landroidx/appcompat/widget/AppCompatImageView;
     .locals 2
 
-    sget-object v0, Lone/me/chatscreen/search/SearchMessageBottomWidget;->Z:[Lz28;
+    sget-object v0, Lone/me/chatscreen/search/SearchMessageBottomWidget;->Z:[Lv58;
 
-    const/4 v1, 0x1
+    const/4 v1, 0x3
 
     aget-object v0, v0, v1
 
-    iget-object v0, p0, Lone/me/chatscreen/search/SearchMessageBottomWidget;->b:Lro0;
+    iget-object v0, p0, Lone/me/chatscreen/search/SearchMessageBottomWidget;->d:Lwp0;
 
-    invoke-virtual {v0}, Lro0;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroidx/appcompat/widget/AppCompatTextView;
-
-    return-object v0
-.end method
-
-.method public final B0()Landroid/view/View;
-    .locals 2
-
-    sget-object v0, Lone/me/chatscreen/search/SearchMessageBottomWidget;->Z:[Lz28;
-
-    const/4 v1, 0x4
-
-    aget-object v0, v0, v1
-
-    iget-object v0, p0, Lone/me/chatscreen/search/SearchMessageBottomWidget;->o:Lro0;
-
-    invoke-virtual {v0}, Lro0;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/view/View;
-
-    return-object v0
-.end method
-
-.method public final C0()Landroidx/appcompat/widget/AppCompatImageView;
-    .locals 2
-
-    sget-object v0, Lone/me/chatscreen/search/SearchMessageBottomWidget;->Z:[Lz28;
-
-    const/4 v1, 0x2
-
-    aget-object v0, v0, v1
-
-    iget-object v0, p0, Lone/me/chatscreen/search/SearchMessageBottomWidget;->c:Lro0;
-
-    invoke-virtual {v0}, Lro0;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Lwp0;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -319,43 +271,127 @@
     return-object v0
 .end method
 
-.method public final D0()Lche;
-    .locals 1
+.method public final I0()Landroidx/appcompat/widget/AppCompatTextView;
+    .locals 2
 
-    iget-object v0, p0, Lone/me/chatscreen/search/SearchMessageBottomWidget;->a:Lo58;
+    sget-object v0, Lone/me/chatscreen/search/SearchMessageBottomWidget;->Z:[Lv58;
 
-    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+    const/4 v1, 0x1
+
+    aget-object v0, v0, v1
+
+    iget-object v0, p0, Lone/me/chatscreen/search/SearchMessageBottomWidget;->b:Lwp0;
+
+    invoke-virtual {v0}, Lwp0;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lche;
+    check-cast v0, Landroidx/appcompat/widget/AppCompatTextView;
 
     return-object v0
 .end method
 
-.method public final E0(Landroidx/appcompat/widget/AppCompatImageView;Z)V
+.method public final J0()Landroid/view/View;
+    .locals 2
+
+    sget-object v0, Lone/me/chatscreen/search/SearchMessageBottomWidget;->Z:[Lv58;
+
+    const/4 v1, 0x4
+
+    aget-object v0, v0, v1
+
+    iget-object v0, p0, Lone/me/chatscreen/search/SearchMessageBottomWidget;->o:Lwp0;
+
+    invoke-virtual {v0}, Lwp0;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/View;
+
+    return-object v0
+.end method
+
+.method public final K0()Llob;
+    .locals 2
+
+    sget-object v0, Lfe3;->t0:Ltea;
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ltea;->n(Landroid/content/Context;)Lfe3;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lfe3;->j()Llob;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final L0()Landroidx/appcompat/widget/AppCompatImageView;
+    .locals 2
+
+    sget-object v0, Lone/me/chatscreen/search/SearchMessageBottomWidget;->Z:[Lv58;
+
+    const/4 v1, 0x2
+
+    aget-object v0, v0, v1
+
+    iget-object v0, p0, Lone/me/chatscreen/search/SearchMessageBottomWidget;->c:Lwp0;
+
+    invoke-virtual {v0}, Lwp0;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroidx/appcompat/widget/AppCompatImageView;
+
+    return-object v0
+.end method
+
+.method public final M0()Lboe;
+    .locals 1
+
+    iget-object v0, p0, Lone/me/chatscreen/search/SearchMessageBottomWidget;->a:Lj88;
+
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lboe;
+
+    return-object v0
+.end method
+
+.method public final N0(Landroidx/appcompat/widget/AppCompatImageView;Z)V
     .locals 0
 
     if-eqz p2, :cond_0
 
-    invoke-virtual {p0}, Lone/me/chatscreen/search/SearchMessageBottomWidget;->F0()Lmki;
+    invoke-virtual {p0}, Lone/me/chatscreen/search/SearchMessageBottomWidget;->K0()Llob;
 
     move-result-object p2
 
-    iget-object p2, p2, Lmki;->d:Lpki;
+    invoke-interface {p2}, Llob;->getText()Lhob;
 
-    iget p2, p2, Lpki;->d:I
+    move-result-object p2
+
+    iget p2, p2, Lhob;->b:I
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p0}, Lone/me/chatscreen/search/SearchMessageBottomWidget;->F0()Lmki;
+    invoke-virtual {p0}, Lone/me/chatscreen/search/SearchMessageBottomWidget;->K0()Llob;
 
     move-result-object p2
 
-    iget-object p2, p2, Lmki;->d:Lpki;
+    invoke-interface {p2}, Llob;->getText()Lhob;
 
-    iget p2, p2, Lpki;->g:I
+    move-result-object p2
+
+    iget p2, p2, Lhob;->d:I
 
     :goto_0
     invoke-static {p2}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
@@ -365,34 +401,6 @@
     invoke-virtual {p1, p2}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
 
     return-void
-.end method
-
-.method public final F0()Lmki;
-    .locals 2
-
-    sget-object v0, Lpc3;->t0:Lkme;
-
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lkme;->n(Landroid/content/Context;)Lpc3;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lpc3;->j()Lzlb;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lzlb;->a()Ln13;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ln13;->k()Lmki;
-
-    move-result-object v0
-
-    return-object v0
 .end method
 
 .method public final onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
@@ -410,7 +418,7 @@
 
     int-to-float p2, p2
 
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
 
     move-result-object p3
 
@@ -422,7 +430,7 @@
 
     mul-float/2addr p3, p2
 
-    invoke-static {p3}, Lq7j;->c(F)I
+    invoke-static {p3}, Lmhj;->f(F)I
 
     move-result p3
 
@@ -430,7 +438,7 @@
 
     int-to-float v1, v0
 
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -442,11 +450,11 @@
 
     mul-float/2addr v2, v1
 
-    invoke-static {v2}, Lq7j;->c(F)I
+    invoke-static {v2}, Lmhj;->f(F)I
 
     move-result v2
 
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -458,11 +466,11 @@
 
     mul-float/2addr v3, p2
 
-    invoke-static {v3}, Lq7j;->c(F)I
+    invoke-static {v3}, Lmhj;->f(F)I
 
     move-result v3
 
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -474,7 +482,7 @@
 
     mul-float/2addr v1, v4
 
-    invoke-static {v1}, Lq7j;->c(F)I
+    invoke-static {v1}, Lmhj;->f(F)I
 
     move-result v1
 
@@ -484,7 +492,7 @@
 
     int-to-float p3, p3
 
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -496,7 +504,7 @@
 
     mul-float/2addr p3, v1
 
-    invoke-static {p3}, Lq7j;->c(F)I
+    invoke-static {p3}, Lmhj;->f(F)I
 
     move-result p3
 
@@ -512,45 +520,45 @@
 
     invoke-virtual {p1, p3}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    invoke-virtual {p0}, Lone/me/chatscreen/search/SearchMessageBottomWidget;->A0()Landroidx/appcompat/widget/AppCompatTextView;
+    invoke-virtual {p0}, Lone/me/chatscreen/search/SearchMessageBottomWidget;->I0()Landroidx/appcompat/widget/AppCompatTextView;
 
     move-result-object p3
 
     invoke-virtual {p1, p3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    invoke-virtual {p0}, Lone/me/chatscreen/search/SearchMessageBottomWidget;->C0()Landroidx/appcompat/widget/AppCompatImageView;
+    invoke-virtual {p0}, Lone/me/chatscreen/search/SearchMessageBottomWidget;->L0()Landroidx/appcompat/widget/AppCompatImageView;
 
     move-result-object p3
 
     invoke-virtual {p1, p3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    invoke-virtual {p0}, Lone/me/chatscreen/search/SearchMessageBottomWidget;->B0()Landroid/view/View;
+    invoke-virtual {p0}, Lone/me/chatscreen/search/SearchMessageBottomWidget;->J0()Landroid/view/View;
 
     move-result-object p3
 
     invoke-virtual {p1, p3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    invoke-virtual {p0}, Lone/me/chatscreen/search/SearchMessageBottomWidget;->z0()Landroidx/appcompat/widget/AppCompatImageView;
+    invoke-virtual {p0}, Lone/me/chatscreen/search/SearchMessageBottomWidget;->H0()Landroidx/appcompat/widget/AppCompatImageView;
 
     move-result-object p3
 
     invoke-virtual {p1, p3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    new-instance p3, Lz0a;
+    new-instance p3, Llz9;
 
     const/4 v1, 0x0
 
-    const/16 v2, 0x17
+    const/16 v2, 0x19
 
-    invoke-direct {p3, p0, v1, v2}, Lz0a;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
+    invoke-direct {p3, p0, v1, v2}, Llz9;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
 
-    invoke-static {p3, p1}, Lp6j;->b(Ldr6;Landroid/view/View;)V
+    invoke-static {p3, p1}, Lxej;->l(Lat6;Landroid/view/View;)V
 
-    invoke-static {p1}, Lsjj;->b(Landroidx/constraintlayout/widget/ConstraintLayout;)Lox3;
+    invoke-static {p1}, Ltsj;->a(Landroidx/constraintlayout/widget/ConstraintLayout;)Lgy3;
 
     move-result-object p3
 
-    invoke-virtual {p0}, Lone/me/chatscreen/search/SearchMessageBottomWidget;->A0()Landroidx/appcompat/widget/AppCompatTextView;
+    invoke-virtual {p0}, Lone/me/chatscreen/search/SearchMessageBottomWidget;->I0()Landroidx/appcompat/widget/AppCompatTextView;
 
     move-result-object v1
 
@@ -562,13 +570,13 @@
 
     const/4 v3, 0x0
 
-    invoke-virtual {p3, v1, v2, v3, v2}, Lox3;->d(IIII)V
+    invoke-virtual {p3, v1, v2, v3, v2}, Lgy3;->d(IIII)V
 
     const/4 v4, 0x3
 
-    invoke-virtual {p3, v1, v4, v3, v4}, Lox3;->d(IIII)V
+    invoke-virtual {p3, v1, v4, v3, v4}, Lgy3;->d(IIII)V
 
-    invoke-virtual {p0}, Lone/me/chatscreen/search/SearchMessageBottomWidget;->C0()Landroidx/appcompat/widget/AppCompatImageView;
+    invoke-virtual {p0}, Lone/me/chatscreen/search/SearchMessageBottomWidget;->L0()Landroidx/appcompat/widget/AppCompatImageView;
 
     move-result-object v5
 
@@ -578,15 +586,15 @@
 
     const/4 v6, 0x7
 
-    invoke-virtual {p3, v1, v6, v5, v2}, Lox3;->d(IIII)V
+    invoke-virtual {p3, v1, v6, v5, v2}, Lgy3;->d(IIII)V
 
-    new-instance v5, Lp0b;
+    new-instance v5, Lg3b;
 
-    const/4 v7, 0x5
+    const/4 v7, 0x6
 
-    invoke-direct {v5, p3, v6, v1, v7}, Lp0b;-><init>(Ljava/lang/Object;III)V
+    invoke-direct {v5, p3, v6, v1, v7}, Lg3b;-><init>(Ljava/lang/Object;III)V
 
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
 
     move-result-object v7
 
@@ -596,31 +604,31 @@
 
     iget v7, v7, Landroid/util/DisplayMetrics;->density:F
 
-    invoke-static {p2, v7, v5}, Lt02;->o(FFLp0b;)V
+    invoke-static {p2, v7, v5}, Ly12;->o(FFLg3b;)V
 
-    invoke-virtual {p3, v1, v0, v3, v0}, Lox3;->d(IIII)V
+    invoke-virtual {p3, v1, v0, v3, v0}, Lgy3;->d(IIII)V
 
-    invoke-virtual {p3, v1}, Lox3;->g(I)Ljx3;
+    invoke-virtual {p3, v1}, Lgy3;->g(I)Lby3;
 
     move-result-object p2
 
-    iget-object p2, p2, Ljx3;->d:Lkx3;
+    iget-object p2, p2, Lby3;->d:Lcy3;
 
     const/4 v5, 0x1
 
-    iput-boolean v5, p2, Lkx3;->l0:Z
+    iput-boolean v5, p2, Lcy3;->l0:Z
 
-    invoke-virtual {p3, v1}, Lox3;->g(I)Ljx3;
+    invoke-virtual {p3, v1}, Lgy3;->g(I)Lby3;
 
     move-result-object p2
 
-    iget-object p2, p2, Ljx3;->d:Lkx3;
+    iget-object p2, p2, Lby3;->d:Lcy3;
 
     const/4 v1, 0x0
 
-    iput v1, p2, Lkx3;->w:F
+    iput v1, p2, Lcy3;->w:F
 
-    invoke-virtual {p0}, Lone/me/chatscreen/search/SearchMessageBottomWidget;->C0()Landroidx/appcompat/widget/AppCompatImageView;
+    invoke-virtual {p0}, Lone/me/chatscreen/search/SearchMessageBottomWidget;->L0()Landroidx/appcompat/widget/AppCompatImageView;
 
     move-result-object p2
 
@@ -628,9 +636,9 @@
 
     move-result p2
 
-    invoke-virtual {p3, p2, v4, v3, v4}, Lox3;->d(IIII)V
+    invoke-virtual {p3, p2, v4, v3, v4}, Lgy3;->d(IIII)V
 
-    invoke-virtual {p0}, Lone/me/chatscreen/search/SearchMessageBottomWidget;->B0()Landroid/view/View;
+    invoke-virtual {p0}, Lone/me/chatscreen/search/SearchMessageBottomWidget;->J0()Landroid/view/View;
 
     move-result-object v1
 
@@ -638,19 +646,19 @@
 
     move-result v1
 
-    invoke-virtual {p3, p2, v6, v1, v2}, Lox3;->d(IIII)V
+    invoke-virtual {p3, p2, v6, v1, v2}, Lgy3;->d(IIII)V
 
-    new-instance v1, Lp0b;
+    new-instance v1, Lg3b;
 
-    const/4 v5, 0x5
+    const/4 v5, 0x6
 
-    invoke-direct {v1, p3, v6, p2, v5}, Lp0b;-><init>(Ljava/lang/Object;III)V
+    invoke-direct {v1, p3, v6, p2, v5}, Lg3b;-><init>(Ljava/lang/Object;III)V
 
     const/16 v5, 0xa
 
     int-to-float v5, v5
 
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
 
     move-result-object v7
 
@@ -660,11 +668,11 @@
 
     iget v7, v7, Landroid/util/DisplayMetrics;->density:F
 
-    invoke-static {v5, v7, v1}, Lt02;->o(FFLp0b;)V
+    invoke-static {v5, v7, v1}, Ly12;->o(FFLg3b;)V
 
-    invoke-virtual {p3, p2, v0, v3, v0}, Lox3;->d(IIII)V
+    invoke-virtual {p3, p2, v0, v3, v0}, Lgy3;->d(IIII)V
 
-    invoke-virtual {p0}, Lone/me/chatscreen/search/SearchMessageBottomWidget;->B0()Landroid/view/View;
+    invoke-virtual {p0}, Lone/me/chatscreen/search/SearchMessageBottomWidget;->J0()Landroid/view/View;
 
     move-result-object p2
 
@@ -672,9 +680,9 @@
 
     move-result p2
 
-    invoke-virtual {p3, p2, v4, v3, v4}, Lox3;->d(IIII)V
+    invoke-virtual {p3, p2, v4, v3, v4}, Lgy3;->d(IIII)V
 
-    invoke-virtual {p0}, Lone/me/chatscreen/search/SearchMessageBottomWidget;->z0()Landroidx/appcompat/widget/AppCompatImageView;
+    invoke-virtual {p0}, Lone/me/chatscreen/search/SearchMessageBottomWidget;->H0()Landroidx/appcompat/widget/AppCompatImageView;
 
     move-result-object v1
 
@@ -682,15 +690,13 @@
 
     move-result v1
 
-    invoke-virtual {p3, p2, v6, v1, v2}, Lox3;->d(IIII)V
+    invoke-virtual {p3, p2, v6, v1, v2}, Lgy3;->d(IIII)V
 
-    new-instance v1, Lp0b;
+    new-instance v1, Lg3b;
 
-    const/4 v2, 0x5
+    invoke-direct {v1, p3, v6, p2, v2}, Lg3b;-><init>(Ljava/lang/Object;III)V
 
-    invoke-direct {v1, p3, v6, p2, v2}, Lp0b;-><init>(Ljava/lang/Object;III)V
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -700,11 +706,11 @@
 
     iget v2, v2, Landroid/util/DisplayMetrics;->density:F
 
-    invoke-static {v5, v2, v1}, Lt02;->o(FFLp0b;)V
+    invoke-static {v5, v2, v1}, Ly12;->o(FFLg3b;)V
 
-    invoke-virtual {p3, p2, v0, v3, v0}, Lox3;->d(IIII)V
+    invoke-virtual {p3, p2, v0, v3, v0}, Lgy3;->d(IIII)V
 
-    invoke-virtual {p0}, Lone/me/chatscreen/search/SearchMessageBottomWidget;->z0()Landroidx/appcompat/widget/AppCompatImageView;
+    invoke-virtual {p0}, Lone/me/chatscreen/search/SearchMessageBottomWidget;->H0()Landroidx/appcompat/widget/AppCompatImageView;
 
     move-result-object p2
 
@@ -712,13 +718,13 @@
 
     move-result p2
 
-    invoke-virtual {p3, p2, v4, v3, v4}, Lox3;->d(IIII)V
+    invoke-virtual {p3, p2, v4, v3, v4}, Lgy3;->d(IIII)V
 
-    invoke-virtual {p3, p2, v6, v3, v6}, Lox3;->d(IIII)V
+    invoke-virtual {p3, p2, v6, v3, v6}, Lgy3;->d(IIII)V
 
-    invoke-virtual {p3, p2, v0, v3, v0}, Lox3;->d(IIII)V
+    invoke-virtual {p3, p2, v0, v3, v0}, Lgy3;->d(IIII)V
 
-    invoke-virtual {p3, p1}, Lox3;->a(Landroidx/constraintlayout/widget/ConstraintLayout;)V
+    invoke-virtual {p3, p1}, Lgy3;->a(Landroidx/constraintlayout/widget/ConstraintLayout;)V
 
     return-object p1
 .end method
@@ -726,13 +732,13 @@
 .method public final onDestroyView(Landroid/view/View;)V
     .locals 0
 
-    invoke-super {p0, p1}, La94;->onDestroyView(Landroid/view/View;)V
+    invoke-super {p0, p1}, Lpa4;->onDestroyView(Landroid/view/View;)V
 
-    invoke-virtual {p0}, Lone/me/chatscreen/search/SearchMessageBottomWidget;->D0()Lche;
+    invoke-virtual {p0}, Lone/me/chatscreen/search/SearchMessageBottomWidget;->M0()Lboe;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lche;->s()V
+    invoke-virtual {p1}, Lboe;->p()V
 
     return-void
 .end method
@@ -742,112 +748,92 @@
 
     invoke-super {p0, p1}, Lone/me/sdk/arch/Widget;->onViewCreated(Landroid/view/View;)V
 
-    invoke-virtual {p0}, La94;->getRouter()Lw4e;
+    invoke-virtual {p0}, Lpa4;->getRouter()Ljbe;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lw4e;->h()Lv1b;
+    invoke-virtual {v0}, Ljbe;->h()Lk4b;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lj88;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lab8;
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lone/me/chatscreen/search/SearchMessageBottomWidget;->D0()Lche;
+    invoke-virtual {p0}, Lone/me/chatscreen/search/SearchMessageBottomWidget;->M0()Lboe;
 
     move-result-object v2
 
-    iget-object v2, v2, Lche;->o:Lx84;
+    iget-object v2, v2, Lboe;->o:Lma4;
 
-    invoke-virtual {v0, v1, v2}, Lv1b;->a(Lj88;Ln1b;)V
+    invoke-virtual {v0, v1, v2}, Lk4b;->a(Lab8;Lc4b;)V
 
     :cond_0
-    invoke-virtual {p0}, Lone/me/chatscreen/search/SearchMessageBottomWidget;->D0()Lche;
+    invoke-virtual {p0}, Lone/me/chatscreen/search/SearchMessageBottomWidget;->M0()Lboe;
 
     move-result-object v0
 
-    iget-object v0, v0, Lche;->X:Lpld;
+    iget-object v0, v0, Lboe;->X:Lmrd;
 
-    new-instance v1, Lsge;
+    new-instance v1, Lrne;
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, p1, p0, v2}, Lsge;-><init>(Landroid/view/View;Lone/me/chatscreen/search/SearchMessageBottomWidget;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v1, p1, p0, v2}, Lrne;-><init>(Landroid/view/View;Lone/me/chatscreen/search/SearchMessageBottomWidget;Lkotlin/coroutines/Continuation;)V
 
-    new-instance p1, Lm96;
+    new-instance p1, Llb6;
 
     const/4 v3, 0x1
 
-    invoke-direct {p1, v0, v1, v3}, Lm96;-><init>(Ld76;Lbr6;I)V
+    invoke-direct {p1, v0, v1, v3}, Llb6;-><init>(Lb96;Lys6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lw78;
-
-    move-result-object v0
-
-    invoke-static {p1, v0}, Lgu0;->x(Ld76;Lzb4;)Lmmf;
-
-    invoke-virtual {p0}, Lone/me/chatscreen/search/SearchMessageBottomWidget;->D0()Lche;
-
-    move-result-object p1
-
-    iget-object p1, p1, Lche;->Z:Lcm5;
-
-    iget-object v0, p0, La94;->lifecycleOwner:Lj88;
-
-    invoke-interface {v0}, Lj88;->p()Ll88;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Loa8;
 
     move-result-object v0
 
-    sget-object v1, Lo78;->d:Lo78;
+    invoke-static {p1, v0}, Lzka;->w(Lb96;Lnd4;)Lcuf;
 
-    invoke-static {p1, v0, v1}, Lmt0;->b(Ld76;Ll88;Lo78;)Lpw1;
+    invoke-virtual {p0}, Lone/me/chatscreen/search/SearchMessageBottomWidget;->M0()Lboe;
 
     move-result-object p1
 
-    new-instance v0, Lr83;
+    iget-object p1, p1, Lboe;->Z:Ltn5;
 
-    const/16 v1, 0xc
+    iget-object v0, p0, Lpa4;->lifecycleOwner:Lab8;
 
-    invoke-direct {v0, p1, v1}, Lr83;-><init>(Ld76;I)V
+    invoke-interface {v0}, Lab8;->p()Lcb8;
 
-    new-instance p1, Ltge;
+    move-result-object v0
 
-    invoke-direct {p1, p0, v2}, Ltge;-><init>(Lone/me/chatscreen/search/SearchMessageBottomWidget;Lkotlin/coroutines/Continuation;)V
+    sget-object v1, Lga8;->d:Lga8;
 
-    new-instance v1, Lm96;
+    invoke-static {p1, v0, v1}, Lsea;->b(Lb96;Lcb8;Lga8;)Lsx1;
+
+    move-result-object p1
+
+    new-instance v0, Lba3;
+
+    const/16 v1, 0xd
+
+    invoke-direct {v0, p1, v1}, Lba3;-><init>(Lb96;I)V
+
+    new-instance p1, Lsne;
+
+    invoke-direct {p1, p0, v2}, Lsne;-><init>(Lone/me/chatscreen/search/SearchMessageBottomWidget;Lkotlin/coroutines/Continuation;)V
+
+    new-instance v1, Llb6;
 
     const/4 v2, 0x1
 
-    invoke-direct {v1, v0, p1, v2}, Lm96;-><init>(Ld76;Lbr6;I)V
+    invoke-direct {v1, v0, p1, v2}, Llb6;-><init>(Lb96;Lys6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lw78;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Loa8;
 
     move-result-object p1
 
-    invoke-static {v1, p1}, Lgu0;->x(Ld76;Lzb4;)Lmmf;
+    invoke-static {v1, p1}, Lzka;->w(Lb96;Lnd4;)Lcuf;
 
     return-void
-.end method
-
-.method public final z0()Landroidx/appcompat/widget/AppCompatImageView;
-    .locals 2
-
-    sget-object v0, Lone/me/chatscreen/search/SearchMessageBottomWidget;->Z:[Lz28;
-
-    const/4 v1, 0x3
-
-    aget-object v0, v0, v1
-
-    iget-object v0, p0, Lone/me/chatscreen/search/SearchMessageBottomWidget;->d:Lro0;
-
-    invoke-virtual {v0}, Lro0;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroidx/appcompat/widget/AppCompatImageView;
-
-    return-object v0
 .end method

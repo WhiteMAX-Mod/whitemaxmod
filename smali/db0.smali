@@ -2,222 +2,71 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Loza;
+
 
 # static fields
-.field public static final f:Ldb0;
+.field public static final a:Ldb0;
 
+.field public static final b:Ld16;
 
-# instance fields
-.field public final a:J
-
-.field public final b:I
-
-.field public final c:I
-
-.field public final d:J
-
-.field public final e:I
+.field public static final c:Ld16;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 8
+    .locals 1
 
     new-instance v0, Ldb0;
 
-    const-wide/32 v5, 0x240c8400
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const v7, 0x14000
+    sput-object v0, Ldb0;->a:Ldb0;
 
-    const/16 v1, 0xc8
+    const-string v0, "clientType"
 
-    const/16 v2, 0x2710
+    invoke-static {v0}, Ld16;->c(Ljava/lang/String;)Ld16;
 
-    const-wide/32 v3, 0xa00000
+    move-result-object v0
 
-    invoke-direct/range {v0 .. v7}, Ldb0;-><init>(IIJJI)V
+    sput-object v0, Ldb0;->b:Ld16;
 
-    sput-object v0, Ldb0;->f:Ldb0;
+    const-string v0, "androidClientInfo"
 
-    return-void
-.end method
+    invoke-static {v0}, Ld16;->c(Ljava/lang/String;)Ld16;
 
-.method public constructor <init>(IIJJI)V
-    .locals 0
+    move-result-object v0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p3, p0, Ldb0;->a:J
-
-    iput p1, p0, Ldb0;->b:I
-
-    iput p2, p0, Ldb0;->c:I
-
-    iput-wide p5, p0, Ldb0;->d:J
-
-    iput p7, p0, Ldb0;->e:I
+    sput-object v0, Ldb0;->c:Ld16;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 2
 
-    const/4 v0, 0x1
+    check-cast p1, Lrg3;
 
-    if-ne p1, p0, :cond_0
+    check-cast p2, Lpza;
 
-    return v0
+    check-cast p1, Lnc0;
 
-    :cond_0
-    instance-of v1, p1, Ldb0;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/4 v2, 0x0
+    sget-object v0, Lqg3;->a:Lqg3;
 
-    if-eqz v1, :cond_1
+    sget-object v1, Ldb0;->b:Ld16;
 
-    check-cast p1, Ldb0;
+    invoke-interface {p2, v1, v0}, Lpza;->a(Ld16;Ljava/lang/Object;)Lpza;
 
-    iget-wide v3, p0, Ldb0;->a:J
+    sget-object v0, Ldb0;->c:Ld16;
 
-    iget-wide v5, p1, Ldb0;->a:J
+    iget-object p1, p1, Lnc0;->a:Lyb0;
 
-    cmp-long v1, v3, v5
+    invoke-interface {p2, v0, p1}, Lpza;->a(Ld16;Ljava/lang/Object;)Lpza;
 
-    if-nez v1, :cond_1
-
-    iget v1, p0, Ldb0;->b:I
-
-    iget v3, p1, Ldb0;->b:I
-
-    if-ne v1, v3, :cond_1
-
-    iget v1, p0, Ldb0;->c:I
-
-    iget v3, p1, Ldb0;->c:I
-
-    if-ne v1, v3, :cond_1
-
-    iget-wide v3, p0, Ldb0;->d:J
-
-    iget-wide v5, p1, Ldb0;->d:J
-
-    cmp-long v1, v3, v5
-
-    if-nez v1, :cond_1
-
-    iget v1, p0, Ldb0;->e:I
-
-    iget p1, p1, Ldb0;->e:I
-
-    if-ne v1, p1, :cond_1
-
-    return v0
-
-    :cond_1
-    return v2
-.end method
-
-.method public final hashCode()I
-    .locals 7
-
-    iget-wide v0, p0, Ldb0;->a:J
-
-    const/16 v2, 0x20
-
-    ushr-long v3, v0, v2
-
-    xor-long/2addr v0, v3
-
-    long-to-int v0, v0
-
-    const v1, 0xf4243
-
-    xor-int/2addr v0, v1
-
-    mul-int/2addr v0, v1
-
-    iget v3, p0, Ldb0;->b:I
-
-    xor-int/2addr v0, v3
-
-    mul-int/2addr v0, v1
-
-    iget v3, p0, Ldb0;->c:I
-
-    xor-int/2addr v0, v3
-
-    mul-int/2addr v0, v1
-
-    iget-wide v3, p0, Ldb0;->d:J
-
-    ushr-long v5, v3, v2
-
-    xor-long v2, v5, v3
-
-    long-to-int v2, v2
-
-    xor-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget v1, p0, Ldb0;->e:I
-
-    xor-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "EventStoreConfig{maxStorageSizeInBytes="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-wide v1, p0, Ldb0;->a:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", loadBatchSize="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Ldb0;->b:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", criticalSectionEnterTimeoutMs="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Ldb0;->c:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", eventCleanUpAge="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Ldb0;->d:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", maxBlobByteSizePerRow="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Ldb0;->e:I
-
-    const-string v2, "}"
-
-    invoke-static {v0, v1, v2}, Lj27;->k(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

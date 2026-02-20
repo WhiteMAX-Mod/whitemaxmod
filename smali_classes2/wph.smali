@@ -1,295 +1,286 @@
-.class public final synthetic Lwph;
+.class public final Lwph;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lsv8;
-.implements Lay3;
+.implements Lmlh;
 
 
 # instance fields
-.field public final synthetic a:Lxph;
+.field public final a:J
 
-.field public final synthetic b:Li20;
+.field public final b:Ljava/lang/String;
 
-.field public final synthetic c:Lh20;
+.field public final c:Ljlh;
+
+.field public final d:Lmrd;
+
+.field public final e:Lvef;
+
+.field public final f:Ljava/lang/CharSequence;
+
+.field public final g:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lxph;Lh20;Li20;)V
+.method public constructor <init>(JLjava/lang/String;Ljlh;Lmrd;Lvef;Ljava/lang/CharSequence;Z)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lwph;->a:Lxph;
+    iput-wide p1, p0, Lwph;->a:J
 
-    iput-object p2, p0, Lwph;->c:Lh20;
+    iput-object p3, p0, Lwph;->b:Ljava/lang/String;
 
-    iput-object p3, p0, Lwph;->b:Li20;
+    iput-object p4, p0, Lwph;->c:Ljlh;
 
-    return-void
-.end method
+    iput-object p5, p0, Lwph;->d:Lmrd;
 
-.method public synthetic constructor <init>(Lxph;Li20;Lh20;)V
-    .locals 0
+    iput-object p6, p0, Lwph;->e:Lvef;
 
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p7, p0, Lwph;->f:Ljava/lang/CharSequence;
 
-    iput-object p1, p0, Lwph;->a:Lxph;
-
-    iput-object p2, p0, Lwph;->b:Li20;
-
-    iput-object p3, p0, Lwph;->c:Lh20;
+    iput-boolean p8, p0, Lwph;->g:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public accept(Ljava/lang/Object;)V
-    .locals 6
+.method public final a()Z
+    .locals 1
 
-    check-cast p1, Laz5;
+    iget-boolean v0, p0, Lwph;->g:Z
 
-    iget-object v0, p0, Lwph;->a:Lxph;
-
-    iget-object v1, v0, Lxph;->a:Lwgh;
-
-    iget-object v2, p0, Lwph;->b:Li20;
-
-    iget-object v2, v2, Li20;->r:Ljava/lang/String;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v1, Lwgh;->a:Ljava/util/Map;
-
-    new-instance v3, Lvgh;
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v4
-
-    invoke-direct {v3, p1, v4, v5}, Lvgh;-><init>(Laz5;J)V
-
-    invoke-interface {v1, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget-object p1, v0, Lxph;->c:Li68;
-
-    invoke-virtual {p1}, Li68;->get()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ldd;
-
-    if-eqz p1, :cond_1
-
-    iget-object v0, p0, Lwph;->c:Lh20;
-
-    iget-object v1, v0, Lh20;->j:Ljava/lang/String;
-
-    invoke-static {v1}, Lzsi;->e(Ljava/lang/CharSequence;)Z
-
-    move-result v1
-
-    const-string v2, "ACTION_VIDEO_FETCH_OK"
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {p1, v2}, Ldd;->e(Ljava/lang/String;)V
-
-    return-void
-
-    :cond_0
-    iget-object v0, v0, Lh20;->j:Ljava/lang/String;
-
-    invoke-virtual {p1, v2, v0}, Ldd;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_1
-    return-void
+    return v0
 .end method
 
-.method public c(Lhv8;)V
-    .locals 8
+.method public final b()Z
+    .locals 7
 
-    iget-object v0, p0, Lwph;->c:Lh20;
+    invoke-virtual {p0}, Lwph;->d()Luth;
 
-    iget-object v1, v0, Lh20;->h:Ljava/lang/String;
+    move-result-object v0
 
-    invoke-static {v1}, Lzsi;->e(Ljava/lang/CharSequence;)Z
+    const/4 v1, 0x0
+
+    iget-wide v2, p0, Lwph;->a:J
+
+    const/4 v4, 0x1
+
+    if-eqz v0, :cond_1
+
+    iget-wide v5, v0, Luth;->b:J
+
+    cmp-long v0, v5, v2
+
+    if-nez v0, :cond_1
+
+    invoke-virtual {p0}, Lwph;->d()Luth;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, v0, Luth;->X:Ltth;
+
+    sget-object v5, Ltth;->o:Ltth;
+
+    if-eq v0, v5, :cond_0
+
+    sget-object v5, Ltth;->X:Ltth;
+
+    if-ne v0, v5, :cond_1
+
+    :cond_0
+    move v0, v4
+
+    goto :goto_0
+
+    :cond_1
+    move v0, v1
+
+    :goto_0
+    iget-object v5, p0, Lwph;->d:Lmrd;
+
+    iget-object v5, v5, Lmrd;->a:Laxf;
+
+    invoke-interface {v5}, Laxf;->getValue()Ljava/lang/Object;
+
+    move-result-object v6
+
+    instance-of v6, v6, La20;
+
+    if-eqz v6, :cond_5
+
+    invoke-interface {v5}, Laxf;->getValue()Ljava/lang/Object;
+
+    move-result-object v6
+
+    instance-of v6, v6, Lb20;
+
+    if-nez v6, :cond_5
+
+    invoke-interface {v5}, Laxf;->getValue()Ljava/lang/Object;
+
+    move-result-object v5
+
+    instance-of v5, v5, Lx10;
+
+    if-eqz v5, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    invoke-virtual {p0}, Lwph;->d()Luth;
+
+    move-result-object v5
+
+    if-eqz v5, :cond_4
+
+    iget-wide v5, v5, Luth;->b:J
+
+    cmp-long v2, v5, v2
+
+    if-nez v2, :cond_4
+
+    if-eqz v0, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    return v1
+
+    :cond_4
+    :goto_1
+    return v4
+
+    :cond_5
+    :goto_2
+    return v1
+.end method
+
+.method public final d()Luth;
+    .locals 1
+
+    iget-object v0, p0, Lwph;->e:Lvef;
+
+    invoke-interface {v0}, Lvef;->b()Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lek3;->F(Ljava/util/List;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Luth;
+
+    return-object v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lwph;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lwph;
+
+    iget-wide v3, p1, Lwph;->a:J
+
+    iget-wide v5, p0, Lwph;->a:J
+
+    cmp-long v1, v5, v3
+
+    if-eqz v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lwph;->b:Ljava/lang/String;
+
+    iget-object v3, p1, Lwph;->b:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
-    if-nez v1, :cond_0
+    if-nez v1, :cond_3
 
-    invoke-virtual {p1}, Lhv8;->e()Z
-
-    move-result v0
-
-    if-nez v0, :cond_6
-
-    new-instance v0, Lru/ok/messages/video/fetcher/FetcherException;
-
-    const/4 v1, 0x5
-
-    const-string v2, "Video hosting in black list"
-
-    invoke-direct {v0, v1, v2}, Lru/ok/messages/video/fetcher/FetcherException;-><init>(ILjava/lang/String;)V
-
-    invoke-virtual {p1, v0}, Lhv8;->d(Ljava/lang/Throwable;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_6
-
-    invoke-static {v0}, Lknj;->b(Ljava/lang/Throwable;)V
-
-    return-void
-
-    :cond_0
-    iget-boolean v1, v0, Lh20;->g:Z
-
-    iget-object v2, p0, Lwph;->a:Lxph;
-
-    if-eqz v1, :cond_1
-
-    iget-wide v0, v0, Lh20;->l:J
-
-    iget-object v3, v2, Lxph;->f:Llgc;
-
-    iget-object v3, v3, Llgc;->a:Lqi8;
-
-    invoke-virtual {v3}, Lyfe;->j()J
-
-    move-result-wide v3
-
-    cmp-long v0, v0, v3
-
-    if-lez v0, :cond_1
-
-    invoke-virtual {p1}, Lhv8;->e()Z
-
-    move-result v0
-
-    if-nez v0, :cond_6
-
-    new-instance v0, Lru/ok/messages/video/fetcher/FetcherException;
-
-    const/4 v1, 0x7
-
-    const-string v2, "live stream not started"
-
-    invoke-direct {v0, v1, v2}, Lru/ok/messages/video/fetcher/FetcherException;-><init>(ILjava/lang/String;)V
-
-    invoke-virtual {p1, v0}, Lhv8;->d(Ljava/lang/Throwable;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_6
-
-    invoke-static {v0}, Lknj;->b(Ljava/lang/Throwable;)V
-
-    return-void
-
-    :cond_1
-    iget-object v0, p0, Lwph;->b:Li20;
-
-    invoke-virtual {v2, v0}, Lxph;->a(Li20;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lzsi;->e(Ljava/lang/CharSequence;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_5
-
-    iget-object v1, v2, Lxph;->a:Lwgh;
-
-    iget-object v0, v0, Li20;->r:Ljava/lang/String;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v1, Lwgh;->a:Ljava/util/Map;
-
-    invoke-interface {v1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lvgh;
-
-    const/4 v3, 0x0
-
-    if-nez v2, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-wide v4, v2, Lvgh;->b:J
-
-    const-wide/32 v6, 0x36ee80
-
-    add-long/2addr v4, v6
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v6
-
-    cmp-long v4, v4, v6
-
-    if-lez v4, :cond_3
-
-    iget-object v3, v2, Lvgh;->a:Laz5;
-
-    goto :goto_0
+    return v2
 
     :cond_3
-    invoke-interface {v1, v0}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v1, p0, Lwph;->c:Ljlh;
 
-    :goto_0
-    if-nez v3, :cond_4
+    iget-object p1, p1, Lwph;->c:Ljlh;
 
-    invoke-virtual {p1}, Lhv8;->e()Z
+    invoke-static {v1, p1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result v0
+    move-result p1
 
-    if-nez v0, :cond_6
+    if-nez p1, :cond_4
 
-    invoke-virtual {p1}, Lhv8;->b()V
-
-    return-void
+    return v2
 
     :cond_4
-    invoke-virtual {p1}, Lhv8;->e()Z
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-wide v0, p0, Lwph;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
     move-result v0
 
-    if-nez v0, :cond_6
+    const/16 v1, 0x1f
 
-    invoke-virtual {p1, v3}, Lhv8;->a(Ljava/lang/Object;)V
+    mul-int/2addr v0, v1
 
-    return-void
+    iget-object v2, p0, Lwph;->b:Ljava/lang/String;
 
-    :cond_5
-    const-string v0, "getVideoContent: local path = %s"
-
-    filled-new-array {v1}, [Ljava/lang/Object;
-
-    move-result-object v1
-
-    const-string v2, "VideoRipper"
-
-    invoke-static {v2, v0, v1}, Lc5j;->c(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    invoke-virtual {p1}, Lhv8;->e()Z
+    invoke-static {v0, v1, v2}, Lj64;->d(IILjava/lang/String;)I
 
     move-result v0
 
-    if-nez v0, :cond_6
+    iget-object v1, p0, Lwph;->c:Ljlh;
 
-    invoke-virtual {p1}, Lhv8;->b()V
+    invoke-virtual {v1}, Ljlh;->hashCode()I
 
-    :cond_6
-    return-void
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final i()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lwph;->b:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final j()J
+    .locals 2
+
+    iget-wide v0, p0, Lwph;->a:J
+
+    return-wide v0
 .end method

@@ -1,51 +1,79 @@
-.class public final Lzdb;
-.super Lo84;
+.class public abstract Lzdb;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:I
+# static fields
+.field public static final a:I
 
-.field public synthetic d:Ljava/lang/Object;
+.field public static final b:I
 
-.field public final synthetic o:Laeb;
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
 
 
 # direct methods
-.method public constructor <init>(Laeb;Lo84;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lzdb;->o:Laeb;
+    sget v0, Leed;->fake_in_app_review_bottom_sheet_rate_view:I
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    sput v0, Lzdb;->a:I
+
+    sget v0, Leed;->fake_in_app_review_bottom_sheet_rate_view_icon:I
+
+    sput v0, Lzdb;->b:I
+
+    sget v0, Leed;->fake_in_app_review_bottom_sheet_rate_view_not_now_btn:I
+
+    sput v0, Lzdb;->c:I
+
+    sget v0, Leed;->fake_in_app_review_bottom_sheet_rate_view_rating_bar:I
+
+    sput v0, Lzdb;->d:I
+
+    sget v0, Leed;->fake_in_app_review_bottom_sheet_rate_view_send_btn:I
+
+    sput v0, Lzdb;->e:I
+
+    sget v0, Leed;->fake_in_app_review_bottom_sheet_rate_view_subtitle:I
+
+    sput v0, Lzdb;->f:I
+
+    sget v0, Leed;->fake_in_app_review_bottom_sheet_rate_view_title:I
+
+    sput v0, Lzdb;->g:I
+
+    sget v0, Leed;->fake_in_app_review_bottom_sheet_thank_view:I
+
+    sput v0, Lzdb;->h:I
+
+    sget v0, Leed;->fake_in_app_review_bottom_sheet_thank_view_close_btn:I
+
+    sput v0, Lzdb;->i:I
+
+    sget v0, Leed;->fake_in_app_review_bottom_sheet_thank_view_icon:I
+
+    sput v0, Lzdb;->j:I
+
+    sget v0, Leed;->fake_in_app_review_bottom_sheet_thank_view_title:I
+
+    sput v0, Lzdb;->k:I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    iput-object p1, p0, Lzdb;->d:Ljava/lang/Object;
-
-    iget p1, p0, Lzdb;->X:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lzdb;->X:I
-
-    const-wide/16 v0, 0x0
-
-    const/4 p1, 0x0
-
-    iget-object v2, p0, Lzdb;->o:Laeb;
-
-    invoke-virtual {v2, v0, v1, p1, p0}, Laeb;->a(J[JLo84;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
 .end method

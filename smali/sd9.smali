@@ -3,22 +3,26 @@
 .source "SourceFile"
 
 # interfaces
-.implements Llq6;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Ltd9;
+.field public final synthetic b:Lone/me/android/media/service/OneMeMediaSessionService;
+
+.field public final synthetic c:Lhc9;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ltd9;I)V
+.method public synthetic constructor <init>(Lone/me/android/media/service/OneMeMediaSessionService;Lhc9;I)V
     .locals 0
 
-    iput p2, p0, Lsd9;->a:I
+    iput p3, p0, Lsd9;->a:I
 
-    iput-object p1, p0, Lsd9;->b:Ltd9;
+    iput-object p1, p0, Lsd9;->b:Lone/me/android/media/service/OneMeMediaSessionService;
+
+    iput-object p2, p0, Lsd9;->c:Lhc9;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,252 +31,221 @@
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 6
+.method public final run()V
+    .locals 15
 
     iget v0, p0, Lsd9;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    new-instance v0, Landroid/widget/ImageView;
+    iget-object v0, p0, Lsd9;->b:Lone/me/android/media/service/OneMeMediaSessionService;
 
-    iget-object v1, p0, Lsd9;->b:Ltd9;
+    invoke-virtual {v0}, Lone/me/android/media/service/OneMeMediaSessionService;->b()Lq79;
 
-    iget-object v2, v1, Ltd9;->a:Ln7g;
+    move-result-object v0
 
-    invoke-virtual {v2}, Landroid/view/View;->getContext()Landroid/content/Context;
+    iget-object v0, v0, Lq79;->Y:Ljava/util/HashMap;
 
-    move-result-object v2
+    iget-object v1, p0, Lsd9;->c:Lhc9;
 
-    invoke-direct {v0, v2}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
+    invoke-virtual {v0, v1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v2, Landroid/widget/FrameLayout$LayoutParams;
+    move-result-object v0
 
-    const/16 v3, 0x34
+    check-cast v0, Lo79;
 
-    int-to-float v3, v3
+    if-eqz v0, :cond_1
 
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+    iget-object v0, v0, Lo79;->a:Lm39;
 
-    move-result-object v4
+    const/4 v2, 0x0
 
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    invoke-virtual {v0, v2}, Lv1;->cancel(Z)Z
 
-    move-result-object v4
+    move-result v2
 
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
+    if-eqz v2, :cond_0
 
-    mul-float/2addr v4, v3
+    goto :goto_1
 
-    invoke-static {v4}, Lq7j;->c(F)I
+    :cond_0
+    :try_start_0
+    invoke-static {v0}, Lf0j;->a(Ljava/util/concurrent/Future;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ld39;
+    :try_end_0
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/util/concurrent/ExecutionException; {:try_start_0 .. :try_end_0} :catch_0
+
+    invoke-virtual {v0}, Ld39;->w()V
+
+    goto :goto_1
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_0
+
+    :catch_1
+    move-exception v0
+
+    :goto_0
+    const-string v2, "MediaController"
+
+    const-string v3, "MediaController future failed (so we couldn\'t release it)"
+
+    invoke-static {v2, v3, v0}, Lk0j;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
+    :goto_1
+    iget-object v0, v1, Lhc9;->a:Lzc9;
+
+    const/4 v1, 0x0
+
+    iput-object v1, v0, Lzc9;->w:Lorj;
+
+    return-void
+
+    :pswitch_0
+    iget-object v6, p0, Lsd9;->c:Lhc9;
+
+    iget-object v0, v6, Lhc9;->a:Lzc9;
+
+    iget-object v1, p0, Lsd9;->b:Lone/me/android/media/service/OneMeMediaSessionService;
+
+    invoke-virtual {v1}, Lone/me/android/media/service/OneMeMediaSessionService;->b()Lq79;
+
+    move-result-object v3
+
+    iget-object v8, v3, Lq79;->a:Lone/me/android/media/service/OneMeMediaSessionService;
+
+    iget-object v2, v3, Lq79;->Y:Ljava/util/HashMap;
+
+    invoke-virtual {v2, v6}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
     move-result v4
 
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+    if-eqz v4, :cond_2
 
-    move-result-object v5
+    goto :goto_4
 
-    invoke-virtual {v5}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    :cond_2
+    new-instance v5, Lp79;
 
-    move-result-object v5
+    invoke-direct {v5, v3, v8, v6}, Lp79;-><init>(Lq79;Lone/me/android/media/service/OneMeMediaSessionService;Lhc9;)V
 
-    iget v5, v5, Landroid/util/DisplayMetrics;->density:F
+    new-instance v4, Landroid/os/Bundle;
 
-    mul-float/2addr v3, v5
+    invoke-direct {v4}, Landroid/os/Bundle;-><init>()V
 
-    invoke-static {v3}, Lq7j;->c(F)I
+    const-string v7, "androidx.media3.session.MediaNotificationManager"
 
-    move-result v3
+    const/4 v9, 0x1
 
-    const/16 v5, 0x11
+    invoke-virtual {v4, v7, v9}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
 
-    invoke-direct {v2, v4, v3, v5}, Landroid/widget/FrameLayout$LayoutParams;-><init>(III)V
+    iget-object v9, v0, Lzc9;->j:Lk2f;
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v9}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-object v2, Lpc3;->t0:Lkme;
+    sget-object v7, Landroid/os/Bundle;->EMPTY:Landroid/os/Bundle;
 
-    invoke-virtual {v2, v0}, Lkme;->s(Landroid/view/View;)Lzbb;
+    invoke-static {}, Lvih;->z()Landroid/os/Looper;
 
-    move-result-object v3
+    new-instance v10, Landroid/os/Bundle;
 
-    iget-object v3, v3, Lzbb;->c:Lzlb;
+    invoke-direct {v10, v4}, Landroid/os/Bundle;-><init>(Landroid/os/Bundle;)V
 
-    invoke-interface {v3}, Lzlb;->c()Leqf;
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
-    move-result-object v3
+    move-result-object v12
 
-    iget-object v3, v3, Leqf;->a:Lcqf;
+    invoke-virtual {v12}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object v3, v3, Lcqf;->a:Lbqf;
+    new-instance v4, Lm39;
 
-    iget v3, v3, Lbqf;->i:I
+    invoke-direct {v4, v12}, Lm39;-><init>(Landroid/os/Looper;)V
 
-    new-instance v4, Landroid/graphics/drawable/ShapeDrawable;
+    iget-object v7, v9, Lk2f;->a:Lj2f;
 
-    new-instance v5, Landroid/graphics/drawable/shapes/OvalShape;
+    invoke-interface {v7}, Lj2f;->d()Z
 
-    invoke-direct {v5}, Landroid/graphics/drawable/shapes/OvalShape;-><init>()V
+    move-result v7
 
-    invoke-direct {v4, v5}, Landroid/graphics/drawable/ShapeDrawable;-><init>(Landroid/graphics/drawable/shapes/Shape;)V
+    if-eqz v7, :cond_3
 
-    invoke-virtual {v2, v0}, Lkme;->s(Landroid/view/View;)Lzbb;
+    new-instance v7, Lsc9;
 
-    move-result-object v2
+    new-instance v11, Lik4;
 
-    iget-object v2, v2, Lzbb;->c:Lzlb;
+    invoke-direct {v11, v8}, Lik4;-><init>(Landroid/content/Context;)V
 
-    const/high16 v2, -0x67000000
+    const/4 v13, 0x5
 
-    invoke-static {v4, v2}, Lpti;->f(Landroid/graphics/drawable/Drawable;I)V
+    invoke-direct {v7, v13, v11}, Lsc9;-><init>(ILjava/lang/Object;)V
 
-    new-instance v2, Landroid/graphics/drawable/RippleDrawable;
+    :goto_2
+    move-object v14, v7
 
-    invoke-static {v3}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+    goto :goto_3
 
-    move-result-object v3
+    :cond_3
+    const/4 v7, 0x0
 
-    const/4 v5, 0x0
+    goto :goto_2
 
-    invoke-direct {v2, v3, v4, v5}, Landroid/graphics/drawable/RippleDrawable;-><init>(Landroid/content/res/ColorStateList;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+    :goto_3
+    new-instance v7, Ld39;
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
+    move-object v13, v4
 
-    const/16 v2, 0xe
+    move-object v11, v5
 
-    int-to-float v2, v2
+    invoke-direct/range {v7 .. v14}, Ld39;-><init>(Landroid/content/Context;Lk2f;Landroid/os/Bundle;Lb39;Landroid/os/Looper;Lm39;Lsc9;)V
 
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+    new-instance v8, Landroid/os/Handler;
 
-    move-result-object v3
+    invoke-direct {v8, v12}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    new-instance v9, La39;
 
-    move-result-object v3
+    const/4 v10, 0x0
 
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
+    invoke-direct {v9, v4, v7, v10}, La39;-><init>(Lm39;Ld39;I)V
 
-    invoke-static {v2, v3, v0}, Lxi4;->m(FFLandroid/widget/ImageView;)V
+    invoke-static {v8, v9}, Lvih;->a0(Landroid/os/Handler;Ljava/lang/Runnable;)V
 
-    iget-object v2, v1, Ltd9;->f:Ljava/lang/Object;
+    new-instance v7, Lo79;
 
-    invoke-interface {v2}, Lo58;->getValue()Ljava/lang/Object;
+    invoke-direct {v7, v4}, Lo79;-><init>(Lm39;)V
 
-    move-result-object v2
+    invoke-virtual {v2, v6, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    check-cast v2, Landroid/graphics/drawable/Drawable;
+    new-instance v2, Ls32;
 
-    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+    const/4 v7, 0x6
 
-    new-instance v2, Lgj6;
+    invoke-direct/range {v2 .. v7}, Ls32;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
-    const/16 v3, 0x10
+    iget-object v3, v3, Lq79;->o:Lfy1;
 
-    invoke-direct {v2, v3, v1}, Lgj6;-><init>(ILjava/lang/Object;)V
+    invoke-virtual {v4, v2, v3}, Lv1;->a(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
 
-    invoke-static {v0, v2}, Ljmj;->d(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+    :goto_4
+    new-instance v2, Lorj;
 
-    return-object v0
+    const/16 v3, 0x14
 
-    :pswitch_0
-    iget-object v0, p0, Lsd9;->b:Ltd9;
+    invoke-direct {v2, v3, v1}, Lorj;-><init>(ILjava/lang/Object;)V
 
-    iget-object v0, v0, Ltd9;->a:Ln7g;
+    iput-object v2, v0, Lzc9;->w:Lorj;
 
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    sget v2, Lv5e;->J0:I
-
-    sget-object v3, Lpc3;->t0:Lkme;
-
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-virtual {v3, v0}, Lkme;->r(Landroid/content/Context;)Lzbb;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lzbb;->c:Lzlb;
-
-    const/4 v0, -0x1
-
-    invoke-static {v2, v0, v1}, Lpti;->d(IILandroid/content/Context;)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_1
-    iget-object v0, p0, Lsd9;->b:Ltd9;
-
-    iget-object v0, v0, Ltd9;->a:Ln7g;
-
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    sget v2, Lv5e;->M0:I
-
-    sget-object v3, Lpc3;->t0:Lkme;
-
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-virtual {v3, v0}, Lkme;->r(Landroid/content/Context;)Lzbb;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lzbb;->c:Lzlb;
-
-    const/4 v0, -0x1
-
-    invoke-static {v2, v0, v1}, Lpti;->d(IILandroid/content/Context;)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_2
-    iget-object v0, p0, Lsd9;->b:Ltd9;
-
-    iget-object v0, v0, Ltd9;->a:Ln7g;
-
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    sget v2, Lv5e;->S1:I
-
-    sget-object v3, Lpc3;->t0:Lkme;
-
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-virtual {v3, v0}, Lkme;->r(Landroid/content/Context;)Lzbb;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lzbb;->c:Lzlb;
-
-    const/4 v0, -0x1
-
-    invoke-static {v2, v0, v1}, Lpti;->d(IILandroid/content/Context;)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    return-object v0
-
-    nop
+    return-void
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

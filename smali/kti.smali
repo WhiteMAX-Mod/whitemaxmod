@@ -1,6 +1,3 @@
 .class public final Lkti;
-.super Lwoi;
+.super Luhj;
 .source "SourceFile"
-
-# interfaces
-.implements Lte7;

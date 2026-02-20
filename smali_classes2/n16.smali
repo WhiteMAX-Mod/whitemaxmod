@@ -4,15 +4,8 @@
 
 
 # virtual methods
-.method public abstract error(Ljava/lang/String;Ljava/lang/Throwable;)V
+.method public abstract a()Ljava/lang/String;
 .end method
 
-.method public log(Ljava/lang/String;)V
-    .locals 1
-
-    const-string v0, "Default"
-
-    invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    return-void
+.method public abstract b()Lf16;
 .end method

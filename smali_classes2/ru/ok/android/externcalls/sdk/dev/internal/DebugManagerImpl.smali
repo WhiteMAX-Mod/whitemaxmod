@@ -20,53 +20,53 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;",
         "Lru/ok/android/externcalls/sdk/dev/DebugManager;",
-        "Ls11;",
+        "Lf21;",
         "underlyingCall",
         "Lru/ok/android/externcalls/sdk/log/ExtLogger;",
         "stat",
-        "Lma4;",
+        "Lbc4;",
         "cidProvider",
-        "Lahd;",
+        "Ltmd;",
         "log",
         "Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;",
         "signalingProvider",
         "<init>",
-        "(Ls11;Lru/ok/android/externcalls/sdk/log/ExtLogger;Lma4;Lahd;Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;)V",
-        "Lfpf;",
+        "(Lf21;Lru/ok/android/externcalls/sdk/log/ExtLogger;Lbc4;Ltmd;Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;)V",
+        "Lqwf;",
         "operation",
         "",
         "param",
-        "Lb3h;",
+        "Lmah;",
         "report",
-        "(Lfpf;Ljava/lang/String;)V",
+        "(Lqwf;Ljava/lang/String;)V",
         "",
         "error",
         "reportError",
         "(Ljava/lang/Throwable;)V",
         "Lkotlin/Function1;",
-        "Ld52;",
+        "Li62;",
         "updater",
         "updateCameraToggles",
-        "(Lnq6;)V",
+        "(Lks6;)V",
         "dumpPath",
         "enableFullAudioDump",
         "(Ljava/lang/String;)V",
-        "Lsqf;",
+        "Lyxf;",
         "listener",
         "",
         "period",
         "Ljava/util/concurrent/TimeUnit;",
         "unit",
         "registerStatListener",
-        "(Lsqf;ILjava/util/concurrent/TimeUnit;)V",
+        "(Lyxf;ILjava/util/concurrent/TimeUnit;)V",
         "removeStatListener",
-        "(Lsqf;)V",
-        "Ls11;",
+        "(Lyxf;)V",
+        "Lf21;",
         "getUnderlyingCall",
-        "()Ls11;",
+        "()Lf21;",
         "Lru/ok/android/externcalls/sdk/log/ExtLogger;",
-        "Lma4;",
-        "Lahd;",
+        "Lbc4;",
+        "Ltmd;",
         "Lru/ok/android/externcalls/sdk/dev/internal/MediaDumpManagerImpl;",
         "mediaDumpManager",
         "Lru/ok/android/externcalls/sdk/dev/internal/MediaDumpManagerImpl;",
@@ -92,15 +92,15 @@
 
 
 # instance fields
-.field private final cidProvider:Lma4;
+.field private final cidProvider:Lbc4;
 
-.field private final log:Lahd;
+.field private final log:Ltmd;
 
 .field private final mediaDumpManager:Lru/ok/android/externcalls/sdk/dev/internal/MediaDumpManagerImpl;
 
 .field private final stat:Lru/ok/android/externcalls/sdk/log/ExtLogger;
 
-.field private final underlyingCall:Ls11;
+.field private final underlyingCall:Lf21;
 
 
 # direct methods
@@ -111,33 +111,33 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl$Companion;-><init>(Lso4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl$Companion;-><init>(Lfq4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->Companion:Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl$Companion;
 
     return-void
 .end method
 
-.method public constructor <init>(Ls11;Lru/ok/android/externcalls/sdk/log/ExtLogger;Lma4;Lahd;Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;)V
+.method public constructor <init>(Lf21;Lru/ok/android/externcalls/sdk/log/ExtLogger;Lbc4;Ltmd;Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->underlyingCall:Ls11;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->underlyingCall:Lf21;
 
     iput-object p2, p0, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->stat:Lru/ok/android/externcalls/sdk/log/ExtLogger;
 
-    iput-object p3, p0, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->cidProvider:Lma4;
+    iput-object p3, p0, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->cidProvider:Lbc4;
 
-    iput-object p4, p0, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->log:Lahd;
+    iput-object p4, p0, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->log:Ltmd;
 
     new-instance p1, Lru/ok/android/externcalls/sdk/dev/internal/MediaDumpManagerImpl;
 
-    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->getUnderlyingCall()Ls11;
+    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->getUnderlyingCall()Lf21;
 
     move-result-object p2
 
-    invoke-direct {p1, p2, p5}, Lru/ok/android/externcalls/sdk/dev/internal/MediaDumpManagerImpl;-><init>(Ls11;Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;)V
+    invoke-direct {p1, p2, p5}, Lru/ok/android/externcalls/sdk/dev/internal/MediaDumpManagerImpl;-><init>(Lf21;Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;)V
 
     iput-object p1, p0, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->mediaDumpManager:Lru/ok/android/externcalls/sdk/dev/internal/MediaDumpManagerImpl;
 
@@ -149,24 +149,24 @@
 .method public enableFullAudioDump(Ljava/lang/String;)V
     .locals 5
 
-    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->getUnderlyingCall()Ls11;
+    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->getUnderlyingCall()Lf21;
 
     move-result-object v0
 
-    iget-object v1, v0, Ls11;->f0:Lq7f;
+    iget-object v1, v0, Lf21;->f0:Lgff;
 
     if-nez v1, :cond_0
 
     return-void
 
     :cond_0
-    iget-object v2, v0, Ls11;->c:Ljava/util/concurrent/ExecutorService;
+    iget-object v2, v0, Lf21;->c:Ljava/util/concurrent/ExecutorService;
 
-    new-instance v3, Lzi;
+    new-instance v3, Lnk;
 
     const/4 v4, 0x6
 
-    invoke-direct {v3, v0, v1, p1, v4}, Lzi;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    invoke-direct {v3, v0, v1, p1, v4}, Lnk;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
     invoke-interface {v2, v3}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
@@ -193,48 +193,48 @@
     return-object v0
 .end method
 
-.method public getUnderlyingCall()Ls11;
+.method public getUnderlyingCall()Lf21;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->underlyingCall:Ls11;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->underlyingCall:Lf21;
 
     return-object v0
 .end method
 
-.method public registerStatListener(Lsqf;ILjava/util/concurrent/TimeUnit;)V
+.method public registerStatListener(Lyxf;ILjava/util/concurrent/TimeUnit;)V
     .locals 3
 
-    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->getUnderlyingCall()Ls11;
+    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->getUnderlyingCall()Lf21;
 
     move-result-object v0
 
-    iget-object v0, v0, Ls11;->M0:Lwh6;
+    iget-object v0, v0, Lf21;->M0:Lwj6;
 
     int-to-long v1, p2
 
-    iget-object p2, v0, Lwh6;->v0:Ljava/lang/Object;
+    iget-object p2, v0, Lwj6;->u0:Ljava/lang/Object;
 
     check-cast p2, Ljava/util/HashMap;
 
-    new-instance v0, Lcoi;
+    new-instance v0, Lfwi;
 
-    invoke-direct {v0, v1, v2, p3}, Lcoi;-><init>(JLjava/util/concurrent/TimeUnit;)V
+    invoke-direct {v0, v1, v2, p3}, Lfwi;-><init>(JLjava/util/concurrent/TimeUnit;)V
 
     invoke-virtual {p2, p1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
 
-.method public removeStatListener(Lsqf;)V
+.method public removeStatListener(Lyxf;)V
     .locals 1
 
-    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->getUnderlyingCall()Ls11;
+    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->getUnderlyingCall()Lf21;
 
     move-result-object v0
 
-    iget-object v0, v0, Ls11;->M0:Lwh6;
+    iget-object v0, v0, Lf21;->M0:Lwj6;
 
-    iget-object v0, v0, Lwh6;->v0:Ljava/lang/Object;
+    iget-object v0, v0, Lwj6;->u0:Ljava/lang/Object;
 
     check-cast v0, Ljava/util/HashMap;
 
@@ -243,18 +243,18 @@
     return-void
 .end method
 
-.method public report(Lfpf;Ljava/lang/String;)V
+.method public report(Lqwf;Ljava/lang/String;)V
     .locals 2
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->stat:Lru/ok/android/externcalls/sdk/log/ExtLogger;
 
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->cidProvider:Lma4;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->cidProvider:Lbc4;
 
-    check-cast v1, Lna4;
+    check-cast v1, Lcc4;
 
-    iget-object v1, v1, Lna4;->a:Ljava/lang/String;
+    iget-object v1, v1, Lcc4;->a:Ljava/lang/String;
 
-    invoke-virtual {v0, p1, v1, p2}, Lru/ok/android/externcalls/sdk/log/ExtLogger;->logSimple(Lfpf;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, p1, v1, p2}, Lru/ok/android/externcalls/sdk/log/ExtLogger;->logSimple(Lqwf;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -262,53 +262,53 @@
 .method public reportError(Ljava/lang/Throwable;)V
     .locals 3
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->log:Lahd;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->log:Ltmd;
 
     const-string v1, "DebugManager"
 
     const-string v2, "error"
 
-    invoke-interface {v0, v1, v2, p1}, Lahd;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v0, v1, v2, p1}, Ltmd;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method
 
-.method public updateCameraToggles(Lnq6;)V
+.method public updateCameraToggles(Lks6;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lnq6;",
+            "Lks6;",
             ")V"
         }
     .end annotation
 
-    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->getUnderlyingCall()Ls11;
+    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->getUnderlyingCall()Lf21;
 
     move-result-object v0
 
-    iget-object v0, v0, Ls11;->h0:Ld94;
+    iget-object v0, v0, Lf21;->h0:Lsa4;
 
-    iget-object v0, v0, Ld94;->h:Ljava/lang/Object;
+    iget-object v0, v0, Lsa4;->h:Ljava/lang/Object;
 
-    check-cast v0, Ltl;
+    check-cast v0, Lhn;
 
-    iget-object v1, v0, Ltl;->b:Ljava/lang/Object;
+    iget-object v1, v0, Lhn;->a:Ljava/lang/Object;
 
     monitor-enter v1
 
     :try_start_0
-    iget-object v2, v0, Ltl;->c:Ljava/lang/Object;
+    iget-object v2, v0, Lhn;->b:Ljava/lang/Object;
 
-    check-cast v2, Ld52;
+    check-cast v2, Li62;
 
-    invoke-interface {p1, v2}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v2}, Lks6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Ld52;
+    check-cast p1, Li62;
 
-    iput-object p1, v0, Ltl;->c:Ljava/lang/Object;
+    iput-object p1, v0, Lhn;->b:Ljava/lang/Object;
 
     monitor-exit v1
 

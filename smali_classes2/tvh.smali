@@ -1,17 +1,31 @@
-.class public interface abstract Ltvh;
+.class public final Ltvh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a()V
-.end method
+# instance fields
+.field public final a:Ljava/lang/String;
 
-.method public b()V
+.field public final b:I
+
+.field public final c:I
+
+.field public final d:J
+
+
+# direct methods
+.method public constructor <init>(JLjava/lang/String;II)V
     .locals 0
 
-    return-void
-.end method
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public abstract c(Landroid/graphics/Rect;Landroid/view/View;)V
+    iput-object p3, p0, Ltvh;->a:Ljava/lang/String;
+
+    iput p4, p0, Ltvh;->b:I
+
+    iput p5, p0, Ltvh;->c:I
+
+    iput-wide p1, p0, Ltvh;->d:J
+
+    return-void
 .end method

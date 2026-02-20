@@ -1,225 +1,198 @@
-.class public final synthetic Lmb9;
+.class public abstract Lmb9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public X:Z
 
-.field public final synthetic b:Lxcc;
+.field public Y:Lnb9;
 
-.field public final synthetic c:I
+.field public Z:Z
+
+.field public final a:Landroid/content/Context;
+
+.field public final b:La1e;
+
+.field public final c:Li00;
+
+.field public d:Lj8;
+
+.field public o:Lua9;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lxcc;II)V
-    .locals 0
-
-    iput p3, p0, Lmb9;->a:I
-
-    iput-object p1, p0, Lmb9;->b:Lxcc;
-
-    iput p2, p0, Lmb9;->c:I
+.method public constructor <init>(Landroid/content/Context;La1e;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    new-instance v0, Li00;
+
+    const/16 v1, 0x9
+
+    invoke-direct {v0, v1, p0}, Li00;-><init>(ILjava/lang/Object;)V
+
+    iput-object v0, p0, Lmb9;->c:Li00;
+
+    if-eqz p1, :cond_1
+
+    iput-object p1, p0, Lmb9;->a:Landroid/content/Context;
+
+    if-nez p2, :cond_0
+
+    new-instance p2, La1e;
+
+    new-instance v0, Landroid/content/ComponentName;
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v1
+
+    invoke-direct {v0, p1, v1}, Landroid/content/ComponentName;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    const/16 p1, 0x14
+
+    invoke-direct {p2, p1, v0}, La1e;-><init>(ILjava/lang/Object;)V
+
+    iput-object p2, p0, Lmb9;->b:La1e;
+
     return-void
+
+    :cond_0
+    iput-object p2, p0, Lmb9;->b:La1e;
+
+    return-void
+
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "context must not be null"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 5
+.method public c(Ljava/lang/String;)Lkb9;
+    .locals 1
 
-    iget v0, p0, Lmb9;->a:I
+    if-eqz p1, :cond_0
 
-    packed-switch v0, :pswitch_data_0
+    const/4 p1, 0x0
 
-    const/16 v0, 0x1a
-
-    iget-object v1, p0, Lmb9;->b:Lxcc;
-
-    invoke-virtual {v1, v0}, Lxcc;->S(I)Z
-
-    move-result v0
-
-    const/16 v2, 0x22
-
-    if-nez v0, :cond_0
-
-    invoke-virtual {v1, v2}, Lxcc;->S(I)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    goto/16 :goto_0
+    return-object p1
 
     :cond_0
-    const/16 v0, -0x64
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    iget v3, p0, Lmb9;->c:I
+    const-string v0, "initialMemberRouteId cannot be null."
 
-    const/4 v4, 0x1
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    if-eq v3, v0, :cond_9
+    throw p1
+.end method
 
-    const/4 v0, -0x1
+.method public abstract d(Ljava/lang/String;)Llb9;
+.end method
 
-    if-eq v3, v0, :cond_7
+.method public e(Ljava/lang/String;Ljava/lang/String;)Llb9;
+    .locals 0
 
-    if-eq v3, v4, :cond_5
+    if-eqz p1, :cond_1
 
-    const/16 v0, 0x64
+    if-eqz p2, :cond_0
 
-    if-eq v3, v0, :cond_3
+    invoke-virtual {p0, p1}, Lmb9;->d(Ljava/lang/String;)Llb9;
 
-    const/16 v0, 0x65
+    move-result-object p1
 
-    if-eq v3, v0, :cond_1
+    return-object p1
 
-    const-string v0, "VolumeProviderCompat"
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string v1, "onAdjustVolume: Ignoring unknown direction: "
+    const-string p2, "routeGroupId cannot be null"
 
-    invoke-static {v3, v1, v0}, Lob3;->e(ILjava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    goto :goto_0
+    throw p1
 
     :cond_1
-    invoke-virtual {v1, v2}, Lxcc;->S(I)Z
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "routeId cannot be null"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public abstract f(Lua9;)V
+.end method
+
+.method public final g(Lnb9;)V
+    .locals 1
+
+    invoke-static {}, Lwb9;->b()V
+
+    iget-object v0, p0, Lmb9;->Y:Lnb9;
+
+    if-eq v0, p1, :cond_0
+
+    iput-object p1, p0, Lmb9;->Y:Lnb9;
+
+    iget-boolean p1, p0, Lmb9;->Z:Z
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lmb9;->Z:Z
+
+    iget-object v0, p0, Lmb9;->c:Li00;
+
+    invoke-virtual {v0, p1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
+
+    :cond_0
+    return-void
+.end method
+
+.method public final h(Lua9;)V
+    .locals 1
+
+    invoke-static {}, Lwb9;->b()V
+
+    iget-object v0, p0, Lmb9;->o:Lua9;
+
+    invoke-static {v0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_2
-
-    invoke-virtual {v1}, Lxcc;->P()Z
-
-    invoke-virtual {v1, v4, v4}, Lxcc;->e0(IZ)V
+    if-eqz v0, :cond_0
 
     goto :goto_0
 
-    :cond_2
-    invoke-virtual {v1}, Lxcc;->P()Z
+    :cond_0
+    iput-object p1, p0, Lmb9;->o:Lua9;
 
-    invoke-virtual {v1, v4}, Lxcc;->f0(Z)V
+    iget-boolean p1, p0, Lmb9;->X:Z
 
-    goto :goto_0
+    if-nez p1, :cond_1
 
-    :cond_3
-    invoke-virtual {v1, v2}, Lxcc;->S(I)Z
+    const/4 p1, 0x1
 
-    move-result v0
+    iput-boolean p1, p0, Lmb9;->X:Z
 
-    const/4 v2, 0x0
+    iget-object p1, p0, Lmb9;->c:Li00;
 
-    if-eqz v0, :cond_4
+    const/4 v0, 0x2
 
-    invoke-virtual {v1, v4, v2}, Lxcc;->e0(IZ)V
+    invoke-virtual {p1, v0}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    goto :goto_0
-
-    :cond_4
-    invoke-virtual {v1, v2}, Lxcc;->f0(Z)V
-
-    goto :goto_0
-
-    :cond_5
-    invoke-virtual {v1, v2}, Lxcc;->S(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_6
-
-    invoke-virtual {v1, v4}, Lxcc;->N(I)V
-
-    goto :goto_0
-
-    :cond_6
-    invoke-virtual {v1}, Lxcc;->M()V
-
-    goto :goto_0
-
-    :cond_7
-    invoke-virtual {v1, v2}, Lxcc;->S(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_8
-
-    invoke-virtual {v1, v4}, Lxcc;->r(I)V
-
-    goto :goto_0
-
-    :cond_8
-    invoke-virtual {v1}, Lxcc;->o()V
-
-    goto :goto_0
-
-    :cond_9
-    invoke-virtual {v1, v2}, Lxcc;->S(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_a
-
-    invoke-virtual {v1, v4, v4}, Lxcc;->e0(IZ)V
-
-    goto :goto_0
-
-    :cond_a
-    invoke-virtual {v1, v4}, Lxcc;->f0(Z)V
-
+    :cond_1
     :goto_0
     return-void
-
-    :pswitch_0
-    const/16 v0, 0x19
-
-    iget-object v1, p0, Lmb9;->b:Lxcc;
-
-    invoke-virtual {v1, v0}, Lxcc;->S(I)Z
-
-    move-result v0
-
-    const/16 v2, 0x21
-
-    if-nez v0, :cond_b
-
-    invoke-virtual {v1, v2}, Lxcc;->S(I)Z
-
-    move-result v0
-
-    if-nez v0, :cond_b
-
-    goto :goto_1
-
-    :cond_b
-    invoke-virtual {v1, v2}, Lxcc;->S(I)Z
-
-    move-result v0
-
-    iget v2, p0, Lmb9;->c:I
-
-    if-eqz v0, :cond_c
-
-    const/4 v0, 0x1
-
-    invoke-virtual {v1, v2, v0}, Lxcc;->h0(II)V
-
-    goto :goto_1
-
-    :cond_c
-    invoke-virtual {v1, v2}, Lxcc;->g0(I)V
-
-    :goto_1
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

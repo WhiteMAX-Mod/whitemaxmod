@@ -1,217 +1,82 @@
 .class public final Lt53;
-.super Ljava/lang/Object;
+.super Lpdg;
 .source "SourceFile"
 
 # interfaces
-.implements Laib;
+.implements Lys6;
 
 
 # instance fields
-.field public final synthetic a:Lone/me/chats/search/ChatsListSearchScreen;
+.field public final synthetic X:Lv53;
 
-.field public final synthetic b:Lymb;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/chats/search/ChatsListSearchScreen;Lymb;)V
+.method public constructor <init>(Lv53;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lt53;->X:Lv53;
 
-    iput-object p1, p0, Lt53;->a:Lone/me/chats/search/ChatsListSearchScreen;
+    const/4 p1, 0x2
 
-    iput-object p2, p0, Lt53;->b:Lymb;
+    invoke-direct {p0, p1, p2}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final M(Ljava/lang/CharSequence;)V
-    .locals 9
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    sget-object v0, Lone/me/chats/search/ChatsListSearchScreen;->J0:[Lz28;
+    check-cast p1, Lfe6;
 
-    iget-object v0, p0, Lt53;->a:Lone/me/chats/search/ChatsListSearchScreen;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {v0}, Lone/me/chats/search/ChatsListSearchScreen;->A0()Ln73;
-
-    move-result-object v0
-
-    if-eqz p1, :cond_1
-
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-virtual {p0, p1, p2}, Lt53;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    if-nez p1, :cond_0
+    check-cast p1, Lt53;
 
-    goto :goto_1
+    sget-object p2, Lmah;->a:Lmah;
 
-    :cond_0
-    :goto_0
-    move-object v3, p1
+    invoke-virtual {p1, p2}, Lt53;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    goto :goto_2
-
-    :cond_1
-    :goto_1
-    const-string p1, ""
-
-    goto :goto_0
-
-    :goto_2
-    iget-object p1, v0, Ln73;->L0:Lspf;
-
-    invoke-virtual {p1}, Lspf;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lh63;
-
-    iget-object v1, v1, Lh63;->b:Ljava/lang/String;
-
-    invoke-virtual {v3, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    iget-object p1, v0, Ln73;->S0:Ljava/lang/String;
-
-    const-string v0, "Same query for search, ignore it"
-
-    invoke-static {p1, v0}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    :cond_2
-    invoke-virtual {p1}, Lspf;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lh63;
-
-    iget-object v1, v1, Lh63;->b:Ljava/lang/String;
-
-    move-object v2, v1
-
-    new-instance v1, Lh63;
-
-    sget-object v4, Lbg7;->d:Lbg7;
-
-    invoke-virtual {v3}, Ljava/lang/String;->length()I
-
-    move-result v5
-
-    const/4 v8, 0x0
-
-    if-lez v5, :cond_3
-
-    invoke-static {v2, v3, v8}, Lrzf;->V(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_3
-
-    invoke-virtual {p1}, Lspf;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lh63;
-
-    iget-object v2, v2, Lh63;->d:Ljava/util/List;
-
-    :goto_3
-    move-object v5, v2
-
-    goto :goto_4
-
-    :cond_3
-    sget-object v2, Ldh5;->a:Ldh5;
-
-    goto :goto_3
-
-    :goto_4
-    const/4 v6, 0x1
-
-    const/4 v7, 0x0
-
-    sget-object v2, Lg63;->a:Lg63;
-
-    invoke-direct/range {v1 .. v7}, Lh63;-><init>(Lg63;Ljava/lang/String;Lbg7;Ljava/util/List;ZZ)V
-
-    const/4 v2, 0x0
-
-    invoke-virtual {p1, v2, v1}, Lspf;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    invoke-virtual {v3}, Ljava/lang/String;->length()I
-
-    move-result p1
-
-    if-nez p1, :cond_4
-
-    invoke-virtual {v0}, Ln73;->x()V
-
-    return-void
-
-    :cond_4
-    iget-object p1, v0, Ln73;->V0:Lmmf;
-
-    if-eqz p1, :cond_5
-
-    invoke-virtual {p1, v2}, Lvy7;->cancel(Ljava/util/concurrent/CancellationException;)V
-
-    :cond_5
-    iget-object p1, v0, Ln73;->d:Lxq8;
-
-    invoke-virtual {p1}, Lxq8;->c()V
-
-    iget-object p1, v0, Ln73;->W0:Lmmf;
-
-    if-eqz p1, :cond_6
-
-    invoke-virtual {p1, v2}, Lvy7;->cancel(Ljava/util/concurrent/CancellationException;)V
-
-    :cond_6
-    iget-object p1, v0, Ln73;->Y0:Lx07;
-
-    sget-object v1, Ln73;->a1:[Lz28;
-
-    aget-object v1, v1, v8
-
-    invoke-virtual {p1, v0, v1}, Lx07;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lsx7;
-
-    if-eqz p1, :cond_7
-
-    invoke-interface {p1, v2}, Lsx7;->cancel(Ljava/util/concurrent/CancellationException;)V
-
-    :cond_7
-    iget-object p1, v0, Ln73;->N0:Lspf;
-
-    invoke-virtual {p1, v2, v3}, Lspf;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    return-void
+    return-object p2
 .end method
 
-.method public final q()V
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lt53;
+
+    iget-object v1, p0, Lt53;->X:Lv53;
+
+    invoke-direct {v0, v1, p2}, Lt53;-><init>(Lv53;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lt53;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Lt53;->b:Lymb;
+    iget-object v0, p0, Lt53;->o:Ljava/lang/Object;
 
-    invoke-static {v0}, Lg3j;->f(Landroid/view/View;)V
+    check-cast v0, Lfe6;
 
-    sget-object v0, Ln93;->c:Ln93;
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    invoke-virtual {v0}, Ld3;->p0()Ljm4;
+    iget-object p1, p0, Lt53;->X:Lv53;
 
-    move-result-object v0
+    iget-object p1, p1, Lv53;->c:Lhxf;
 
-    invoke-virtual {v0}, Ljm4;->d()Z
+    invoke-virtual {p1, v0}, Lhxf;->setValue(Ljava/lang/Object;)V
 
-    return-void
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
 .end method

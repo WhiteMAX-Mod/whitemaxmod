@@ -1,62 +1,158 @@
-.class public abstract Lv5d;
+.class public final Lv5d;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
-# static fields
-.field public static activity_horizontal_margin:I = 0x7f070051
+# instance fields
+.field public volatile a:Z
 
-.field public static activity_vertical_margin:I = 0x7f070052
+.field public final b:Ljava/lang/Object;
 
-.field public static avatar_large:I = 0x7f070057
 
-.field public static avatar_medium:I = 0x7f070058
+# direct methods
+.method public constructor <init>()V
+    .locals 1
 
-.field public static avatar_small:I = 0x7f070059
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static folder_filter_item_height:I = 0x7f0700f2
+    const/4 v0, 0x0
 
-.field public static font_large:I = 0x7f0700f4
+    iput-boolean v0, p0, Lv5d;->a:Z
 
-.field public static font_larger:I = 0x7f0700f5
+    new-instance v0, Ljava/lang/Object;
 
-.field public static font_medium:I = 0x7f0700f6
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-.field public static font_normal:I = 0x7f0700f7
+    iput-object v0, p0, Lv5d;->b:Ljava/lang/Object;
 
-.field public static font_normal_subtitle:I = 0x7f0700f8
+    return-void
+.end method
 
-.field public static font_only_emoji:I = 0x7f0700f9
 
-.field public static font_small:I = 0x7f0700fa
+# virtual methods
+.method public final a()V
+    .locals 2
 
-.field public static font_smaller:I = 0x7f0700fb
+    iget-object v0, p0, Lv5d;->b:Ljava/lang/Object;
 
-.field public static font_subtitle:I = 0x7f0700fc
+    monitor-enter v0
 
-.field public static font_toolbar_subtitle:I = 0x7f0700fd
+    const/4 v1, 0x1
 
-.field public static font_toolbar_title:I = 0x7f0700fe
+    :try_start_0
+    iput-boolean v1, p0, Lv5d;->a:Z
 
-.field public static font_very_small:I = 0x7f0700ff
+    iget-object v1, p0, Lv5d;->b:Ljava/lang/Object;
 
-.field public static huge_horizontal_margin:I = 0x7f070135
+    invoke-virtual {v1}, Ljava/lang/Object;->notify()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-.field public static match_parent:I = 0x7f070312
+    monitor-exit v0
 
-.field public static progress_bar_medium:I = 0x7f070440
+    return-void
 
-.field public static progress_bar_small:I = 0x7f070441
+    :catchall_0
+    move-exception v1
 
-.field public static rounded_button_margin:I = 0x7f070448
+    monitor-exit v0
 
-.field public static small_vertical_margin:I = 0x7f070452
+    throw v1
+.end method
 
-.field public static spacing_normal:I = 0x7f070453
+.method public final b(J)V
+    .locals 5
 
-.field public static spacing_small:I = 0x7f07045d
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-.field public static spacing_tiny:I = 0x7f07045e
+    move-result-wide v0
 
-.field public static tiny_vertical_margin:I = 0x7f070497
+    add-long/2addr p1, v0
 
-.field public static wrap_content:I = 0x7f0704a1
+    cmp-long v2, p1, v0
+
+    const/4 v3, 0x0
+
+    if-gez v2, :cond_1
+
+    iget-object p1, p0, Lv5d;->b:Ljava/lang/Object;
+
+    monitor-enter p1
+
+    :goto_0
+    :try_start_0
+    iget-boolean p2, p0, Lv5d;->a:Z
+
+    if-nez p2, :cond_0
+
+    iget-object p2, p0, Lv5d;->b:Ljava/lang/Object;
+
+    invoke-virtual {p2}, Ljava/lang/Object;->wait()V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p2
+
+    goto :goto_1
+
+    :cond_0
+    iput-boolean v3, p0, Lv5d;->a:Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p1
+
+    return-void
+
+    :goto_1
+    monitor-exit p1
+
+    throw p2
+
+    :cond_1
+    iget-object v2, p0, Lv5d;->b:Ljava/lang/Object;
+
+    monitor-enter v2
+
+    :goto_2
+    :try_start_1
+    iget-boolean v4, p0, Lv5d;->a:Z
+
+    if-nez v4, :cond_2
+
+    cmp-long v4, v0, p1
+
+    if-gez v4, :cond_2
+
+    iget-object v4, p0, Lv5d;->b:Ljava/lang/Object;
+
+    sub-long v0, p1, v0
+
+    invoke-virtual {v4, v0, v1}, Ljava/lang/Object;->wait(J)V
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    goto :goto_2
+
+    :catchall_1
+    move-exception p1
+
+    goto :goto_3
+
+    :cond_2
+    iput-boolean v3, p0, Lv5d;->a:Z
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    monitor-exit v2
+
+    return-void
+
+    :goto_3
+    monitor-exit v2
+
+    throw p1
+.end method

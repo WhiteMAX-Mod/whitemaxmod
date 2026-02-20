@@ -1,47 +1,20 @@
 .class public abstract Ldhd;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
 # static fields
-.field public static COLLECTOR_VIDEO:Ljava/lang/String; = "ok.mobile.apps.video"
+.field public static oneme_layout_quick_camera_api_view:I = 0x7f0d00d9
 
-.field public static COLLECTOR_WEBRTC:Ljava/lang/String; = "webrtc.aggregation"
+.field public static oneme_ll_chat_media_progress:I = 0x7f0d00da
 
+.field public static oneme_media_bar_header_view:I = 0x7f0d00dc
 
-# instance fields
-.field public conversationId:Ljava/lang/String;
+.field public static oneme_row_gallery_camera:I = 0x7f0d00dd
 
+.field public static oneme_row_gallery_media:I = 0x7f0d00de
 
-# virtual methods
-.method public final log(Lfpf;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 6
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
+.field public static oneme_row_gallery_media_check_button_layout:I = 0x7f0d00df
 
-    .line 1
-    iget-object v1, p1, Lfpf;->a:Ljava/lang/String;
+.field public static oneme_view_media_permissions:I = 0x7f0d00e0
 
-    invoke-virtual {p0}, Ldhd;->time()J
-
-    move-result-wide v2
-
-    move-object v0, p0
-
-    move-object v4, p2
-
-    move-object v5, p3
-
-    invoke-virtual/range {v0 .. v5}, Ldhd;->log(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public abstract log(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)V
-.end method
-
-.method public abstract log(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
-.end method
-
-.method public abstract time()J
-.end method
+.field public static row_media_bar_extra_actions:I = 0x7f0d011d

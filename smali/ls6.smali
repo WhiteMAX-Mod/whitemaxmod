@@ -1,3 +1,6 @@
-.class public final Lls6;
-.super Lns6;
+.class public interface abstract Lls6;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ldt6;

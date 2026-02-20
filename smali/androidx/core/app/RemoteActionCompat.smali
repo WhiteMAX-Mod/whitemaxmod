@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ltdh;
+.implements Lblh;
 
 
 # instance fields

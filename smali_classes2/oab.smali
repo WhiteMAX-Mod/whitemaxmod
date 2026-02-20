@@ -1,76 +1,61 @@
-.class public Loab;
-.super Landroid/widget/EditText;
+.class public final Loab;
+.super Lda4;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Z
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Ltab;
+
+.field public Z:I
+
+.field public d:Lzt8;
+
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;I)V
-    .locals 2
+.method public constructor <init>(Ltab;Lda4;)V
+    .locals 0
 
-    const p2, 0x101006e
+    iput-object p1, p0, Loab;->Y:Ltab;
 
-    const/4 v0, 0x0
-
-    const/4 v1, 0x0
-
-    invoke-direct {p0, p1, v1, p2, v0}, Landroid/widget/EditText;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
-
-    sget-object p2, Lpc3;->t0:Lkme;
-
-    invoke-virtual {p2, p1}, Lkme;->n(Landroid/content/Context;)Lpc3;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lpc3;->j()Lzlb;
-
-    move-result-object p1
-
-    invoke-static {p0, p1}, Lgti;->b(Landroid/widget/TextView;Lzlb;)V
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Loab;->a:Z
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setClickable(Z)V
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setLongClickable(Z)V
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setFocusable(Z)V
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setFocusableInTouchMode(Z)V
-
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setCursorVisible(Z)V
-
-    const p1, 0x20001
-
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setInputType(I)V
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getDefaultEditable()Z
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    iget-boolean v0, p0, Loab;->a:Z
+    iput-object p1, p0, Loab;->X:Ljava/lang/Object;
 
-    return v0
-.end method
+    iget p1, p0, Loab;->Z:I
 
-.method public final setText(Ljava/lang/CharSequence;Landroid/widget/TextView$BufferType;)V
-    .locals 1
+    const/high16 v0, -0x80000000
 
-    iget-boolean v0, p0, Loab;->a:Z
+    or-int/2addr p1, v0
 
-    if-eqz v0, :cond_0
+    iput p1, p0, Loab;->Z:I
 
-    invoke-super {p0, p1, p2}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;Landroid/widget/TextView$BufferType;)V
+    const/4 v3, 0x0
 
-    :cond_0
-    return-void
+    const/4 v4, 0x0
+
+    iget-object v0, p0, Loab;->Y:Ltab;
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    move-object v5, p0
+
+    invoke-virtual/range {v0 .. v5}, Ltab;->e(Lzt8;IIILda4;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

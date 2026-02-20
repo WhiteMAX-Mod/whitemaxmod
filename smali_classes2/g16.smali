@@ -1,80 +1,61 @@
 .class public final Lg16;
-.super Lp6g;
+.super Lda4;
 .source "SourceFile"
-
-# interfaces
-.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:Lh16;
+.field public X:I
 
-.field public synthetic o:Ljava/lang/Object;
+.field public synthetic d:Ljava/lang/Object;
+
+.field public final synthetic o:Lj16;
 
 
 # direct methods
-.method public constructor <init>(Lh16;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lj16;Lda4;)V
     .locals 0
 
-    iput-object p1, p0, Lg16;->X:Lh16;
+    iput-object p1, p0, Lg16;->o:Lj16;
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 10
 
-    check-cast p1, Lk00;
+    iput-object p1, p0, Lg16;->d:Ljava/lang/Object;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget p1, p0, Lg16;->X:I
 
-    invoke-virtual {p0, p1, p2}, Lg16;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lg16;->X:I
+
+    const/4 v7, 0x0
+
+    const/4 v8, 0x0
+
+    iget-object v0, p0, Lg16;->o:Lj16;
+
+    const-wide/16 v1, 0x0
+
+    const-wide/16 v3, 0x0
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    move-object v9, p0
+
+    invoke-virtual/range {v0 .. v9}, Lj16;->a(JJLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Lq16;Lda4;)Ljava/lang/Object;
 
     move-result-object p1
-
-    check-cast p1, Lg16;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lg16;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lg16;
-
-    iget-object v1, p0, Lg16;->X:Lh16;
-
-    invoke-direct {v0, v1, p2}, Lg16;-><init>(Lh16;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lg16;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iget-object v0, p0, Lg16;->o:Ljava/lang/Object;
-
-    check-cast v0, Lk00;
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lg16;->X:Lh16;
-
-    invoke-virtual {p1, v0}, Lh16;->I(Lk00;)V
-
-    sget-object p1, Lb3h;->a:Lb3h;
 
     return-object p1
 .end method

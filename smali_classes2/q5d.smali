@@ -1,18 +1,76 @@
-.class public abstract Lq5d;
+.class public final Lq5d;
 .super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ljava/io/Serializable;
 
 
-# static fields
-.field public static led_1:I = 0x7f0600b7
+# instance fields
+.field public final a:Lue2;
 
-.field public static led_2:I = 0x7f0600b8
+.field public final b:Ljava/util/List;
 
-.field public static led_3:I = 0x7f0600b9
+.field public final c:Ly54;
 
-.field public static led_4:I = 0x7f0600ba
 
-.field public static led_5:I = 0x7f0600bb
+# direct methods
+.method public constructor <init>(Lue2;Lw10;Ly54;)V
+    .locals 0
 
-.field public static led_6:I = 0x7f0600bc
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static led_7:I = 0x7f0600bd
+    iput-object p1, p0, Lq5d;->a:Lue2;
+
+    iput-object p2, p0, Lq5d;->b:Ljava/util/List;
+
+    iput-object p3, p0, Lq5d;->c:Ly54;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    iget-object v0, p0, Lq5d;->b:Ljava/util/List;
+
+    invoke-static {v0}, Ll0j;->b(Ljava/util/Collection;)I
+
+    move-result v0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "{chat="
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v2, p0, Lq5d;->a:Lue2;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v2, ", highlights="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v0, ", contactSearchResult="
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v0, p0, Lq5d;->c:Ly54;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, "}"
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method

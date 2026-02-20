@@ -1,143 +1,90 @@
 .class public final Lj20;
-.super Ljava/lang/Object;
+.super Lpdg;
 .source "SourceFile"
+
+# interfaces
+.implements Lys6;
 
 
 # instance fields
-.field public a:Ljava/util/List;
+.field public final synthetic X:Lk20;
 
-.field public b:Lrp7;
-
-.field public c:Ltwd;
+.field public synthetic o:Ljava/lang/Object;
 
 
-# virtual methods
-.method public final a(Li20;)V
-    .locals 1
+# direct methods
+.method public constructor <init>(Lk20;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    iget-object v0, p0, Lj20;->a:Ljava/util/List;
+    iput-object p1, p0, Lj20;->X:Lk20;
 
-    if-nez v0, :cond_0
+    const/4 p1, 0x2
 
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lj20;->a:Ljava/util/List;
-
-    :cond_0
-    iget-object v0, p0, Lj20;->a:Ljava/util/List;
-
-    invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-direct {p0, p1, p2}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public final b()I
-    .locals 1
 
-    iget-object v0, p0, Lj20;->a:Ljava/util/List;
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    if-eqz v0, :cond_0
+    check-cast p1, Lrod;
 
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-result v0
+    invoke-virtual {p0, p1, p2}, Lj20;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    return v0
+    move-result-object p1
 
-    :cond_0
-    const/4 v0, 0x0
+    check-cast p1, Lj20;
 
-    return v0
+    sget-object p2, Lmah;->a:Lmah;
+
+    invoke-virtual {p1, p2}, Lj20;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public final c()Lk20;
-    .locals 1
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iget-object v0, p0, Lj20;->a:Ljava/util/List;
+    new-instance v0, Lj20;
 
-    if-nez v0, :cond_0
+    iget-object v1, p0, Lj20;->X:Lk20;
 
-    new-instance v0, Ljava/util/ArrayList;
+    invoke-direct {v0, v1, p2}, Lj20;-><init>(Lk20;Lkotlin/coroutines/Continuation;)V
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lj20;->a:Ljava/util/List;
-
-    :cond_0
-    new-instance v0, Lk20;
-
-    invoke-direct {v0, p0}, Lk20;-><init>(Lj20;)V
+    iput-object p1, v0, Lj20;->o:Ljava/lang/Object;
 
     return-object v0
 .end method
 
-.method public final d(I)Li20;
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    if-ltz p1, :cond_0
+    iget-object v0, p0, Lj20;->o:Ljava/lang/Object;
 
-    invoke-virtual {p0}, Lj20;->b()I
+    check-cast v0, Lrod;
 
-    move-result v0
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    if-ge p1, v0, :cond_0
+    sget-object p1, Lk20;->g:[Lv58;
 
-    iget-object v0, p0, Lj20;->a:Ljava/util/List;
+    iget-object p1, p0, Lj20;->X:Lk20;
 
-    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Lk20;->b(Lrod;)Lc20;
 
-    move-result-object p1
+    move-result-object v0
 
-    check-cast p1, Li20;
+    iget-object p1, p1, Lk20;->f:Lhxf;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p1, v1, v0}, Lhxf;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    sget-object p1, Lmah;->a:Lmah;
 
     return-object p1
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "index < 0 or index >= attaches.size()"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final e(ILi20;)V
-    .locals 1
-
-    iget-object v0, p0, Lj20;->a:Ljava/util/List;
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lj20;->a:Ljava/util/List;
-
-    :cond_0
-    if-ltz p1, :cond_1
-
-    invoke-virtual {p0}, Lj20;->b()I
-
-    move-result v0
-
-    if-ge p1, v0, :cond_1
-
-    iget-object v0, p0, Lj20;->a:Ljava/util/List;
-
-    invoke-interface {v0, p1, p2}, Ljava/util/List;->set(ILjava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-
-    :cond_1
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string p2, "index < 0 or index >= attaches.size()"
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method

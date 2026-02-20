@@ -1,48 +1,202 @@
 .class public final Ln6c;
-.super Lo84;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lp6c;
 
 
 # instance fields
-.field public final synthetic X:Ldr7;
+.field public final a:D
 
-.field public synthetic d:Ljava/lang/Object;
+.field public final b:D
 
-.field public o:I
+.field public final c:Ljava/lang/Float;
+
+.field public final d:Z
 
 
 # direct methods
-.method public constructor <init>(Ldr7;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(DDLjava/lang/Float;Z)V
     .locals 0
 
-    iput-object p1, p0, Ln6c;->X:Ldr7;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-wide p1, p0, Ln6c;->a:D
+
+    iput-wide p3, p0, Ln6c;->b:D
+
+    iput-object p5, p0, Ln6c;->c:Ljava/lang/Float;
+
+    iput-boolean p6, p0, Ln6c;->d:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iput-object p1, p0, Ln6c;->d:Ljava/lang/Object;
+    if-ne p0, p1, :cond_0
 
-    iget p1, p0, Ln6c;->o:I
+    goto :goto_1
 
-    const/high16 v0, -0x80000000
+    :cond_0
+    instance-of v0, p1, Ln6c;
 
-    or-int/2addr p1, v0
+    if-nez v0, :cond_1
 
-    iput p1, p0, Ln6c;->o:I
+    goto :goto_0
 
-    iget-object p1, p0, Ln6c;->X:Ldr7;
+    :cond_1
+    check-cast p1, Ln6c;
+
+    iget-wide v0, p0, Ln6c;->a:D
+
+    iget-wide v2, p1, Ln6c;->a:D
+
+    invoke-static {v0, v1, v2, v3}, Ljava/lang/Double;->compare(DD)I
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-wide v0, p0, Ln6c;->b:D
+
+    iget-wide v2, p1, Ln6c;->b:D
+
+    invoke-static {v0, v1, v2, v3}, Ljava/lang/Double;->compare(DD)I
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget-object v0, p0, Ln6c;->c:Ljava/lang/Float;
+
+    iget-object v1, p1, Ln6c;->c:Ljava/lang/Float;
+
+    invoke-static {v0, v1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    iget-boolean v0, p0, Ln6c;->d:Z
+
+    iget-boolean p1, p1, Ln6c;->d:Z
+
+    if-eq v0, p1, :cond_5
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_5
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-wide v0, p0, Ln6c;->a:D
+
+    invoke-static {v0, v1}, Ljava/lang/Double;->hashCode(D)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-wide v1, p0, Ln6c;->b:D
+
+    invoke-static {v1, v2}, Ljava/lang/Double;->hashCode(D)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v0, p0, Ln6c;->c:Ljava/lang/Float;
+
+    if-nez v0, :cond_0
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0, p0}, Ldr7;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    goto :goto_0
 
-    move-result-object p1
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    return-object p1
+    move-result v0
+
+    :goto_0
+    add-int/2addr v1, v0
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-boolean v0, p0, Ln6c;->d:Z
+
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v0
+
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "MoveCamera(lat="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v1, p0, Ln6c;->a:D
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    const-string v1, ", lon="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Ln6c;->b:D
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    const-string v1, ", zoom="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ln6c;->c:Ljava/lang/Float;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", animate="
+
+    const-string v2, ")"
+
+    iget-boolean v3, p0, Ln6c;->d:Z
+
+    invoke-static {v0, v1, v3, v2}, Ldna;->g(Ljava/lang/StringBuilder;Ljava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

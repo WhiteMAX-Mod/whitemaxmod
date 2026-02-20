@@ -1,3 +1,3 @@
-.class public interface abstract Lb76;
+.class public final Lb76;
 .super Ljava/lang/Object;
 .source "SourceFile"

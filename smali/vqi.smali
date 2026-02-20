@@ -1,31 +1,31 @@
-.class public abstract Lvqi;
+.class public final Lvqi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
+# instance fields
+.field public final a:Ljava/util/concurrent/Executor;
+
+.field public final b:Lio5;
+
+.field public final c:Lxy7;
+
+.field public final d:Lvfg;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Ljava/util/concurrent/Executor;Lio5;Lxy7;Lvfg;)V
+    .locals 0
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v1, 0x1f
+    iput-object p1, p0, Lvqi;->a:Ljava/util/concurrent/Executor;
 
-    if-lt v0, v1, :cond_0
+    iput-object p2, p0, Lvqi;->b:Lio5;
 
-    const/high16 v0, 0x2000000
+    iput-object p3, p0, Lvqi;->c:Lxy7;
 
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    sput v0, Lvqi;->a:I
+    iput-object p4, p0, Lvqi;->d:Lvfg;
 
     return-void
 .end method

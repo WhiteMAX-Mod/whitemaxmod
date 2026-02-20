@@ -1,127 +1,245 @@
-.class public final Lyqj;
-.super Lg4;
+.class public abstract Lyqj;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lyqj;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
-# instance fields
-.field public final X:Lxqj;
-
-.field public final Y:Lxqj;
-
-.field public final a:Ljava/lang/String;
-
-.field public final b:Ljava/lang/String;
-
-.field public final c:Ljava/lang/String;
-
-.field public final d:Ljava/lang/String;
-
-.field public final o:Ljava/lang/String;
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public static final a(Ltp7;Lni6;)Ln8a;
+    .locals 30
 
-    new-instance v0, Lwij;
+    move-object/from16 v0, p0
 
-    const/16 v1, 0xc
+    iget-wide v1, v0, Ltp7;->a:J
 
-    invoke-direct {v0, v1}, Lwij;-><init>(I)V
+    iget-object v3, v0, Ltp7;->b:Ljava/lang/String;
 
-    sput-object v0, Lyqj;->CREATOR:Landroid/os/Parcelable$Creator;
+    iget-object v4, v0, Ltp7;->c:Ljava/lang/String;
 
-    return-void
+    invoke-virtual {v4}, Ljava/lang/String;->length()I
+
+    move-result v5
+
+    const/4 v6, 0x0
+
+    if-nez v5, :cond_0
+
+    move-object v4, v6
+
+    :cond_0
+    iget-object v5, v0, Ltp7;->d:Ljava/lang/String;
+
+    iget-object v7, v0, Ltp7;->q:[Lxp7;
+
+    array-length v8, v7
+
+    if-nez v8, :cond_1
+
+    move-object v7, v6
+
+    :cond_1
+    iget-object v8, v0, Ltp7;->p:Ljava/lang/String;
+
+    invoke-virtual {v8}, Ljava/lang/String;->length()I
+
+    move-result v9
+
+    if-nez v9, :cond_2
+
+    move-object v8, v6
+
+    :cond_2
+    iget-object v9, v0, Ltp7;->e:Ljava/lang/String;
+
+    move-object v11, v6
+
+    move-object v6, v7
+
+    move-object v7, v8
+
+    move-object v8, v9
+
+    iget-wide v9, v0, Ltp7;->f:J
+
+    move-object v12, v11
+
+    iget v11, v0, Ltp7;->g:I
+
+    move-object v13, v12
+
+    iget v12, v0, Ltp7;->h:I
+
+    move-object v14, v13
+
+    iget-boolean v13, v0, Ltp7;->i:Z
+
+    move-object v15, v14
+
+    iget-boolean v14, v0, Ltp7;->j:Z
+
+    move-object/from16 v16, v15
+
+    iget-boolean v15, v0, Ltp7;->k:Z
+
+    move-wide/from16 v17, v1
+
+    iget-wide v1, v0, Ltp7;->l:J
+
+    move-wide/from16 v19, v1
+
+    iget-wide v1, v0, Ltp7;->m:J
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v21
+
+    const-wide/16 v22, 0x0
+
+    cmp-long v1, v1, v22
+
+    if-lez v1, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    move-object/from16 v21, v16
+
+    :goto_0
+    iget-wide v1, v0, Ltp7;->r:J
+
+    move-wide/from16 v22, v1
+
+    iget-object v1, v0, Ltp7;->n:Ljava/lang/String;
+
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    if-nez v2, :cond_4
+
+    move-object/from16 v1, v16
+
+    :cond_4
+    iget-object v2, v0, Ltp7;->o:[B
+
+    move-object/from16 v24, v1
+
+    array-length v1, v2
+
+    if-nez v1, :cond_5
+
+    goto :goto_1
+
+    :cond_5
+    move-object/from16 v16, v2
+
+    :goto_1
+    iget-object v1, v0, Ltp7;->s:Ljava/lang/String;
+
+    move-object/from16 v2, p1
+
+    invoke-virtual {v2, v0}, Lni6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/CharSequence;
+
+    iget-boolean v0, v0, Ltp7;->t:Z
+
+    move/from16 v25, v0
+
+    new-instance v0, Ln8a;
+
+    move-object/from16 v26, v21
+
+    move-object/from16 v21, v1
+
+    move-object/from16 v27, v24
+
+    move-object/from16 v24, v2
+
+    move-wide/from16 v1, v17
+
+    move-object/from16 v18, v26
+
+    move-wide/from16 v28, v22
+
+    move-object/from16 v23, v16
+
+    move-wide/from16 v16, v19
+
+    move-wide/from16 v19, v28
+
+    move-object/from16 v22, v27
+
+    invoke-direct/range {v0 .. v25}, Ln8a;-><init>(JLjava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/CharSequence;Ljava/lang/String;JIIZZZJLjava/lang/Long;JLjava/lang/CharSequence;Ljava/lang/String;[BLjava/lang/CharSequence;Z)V
+
+    return-object v0
 .end method
 
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lxqj;Lxqj;)V
-    .locals 0
+.method public static final b(Lkqb;Lwmh;)J
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    instance-of v0, p1, Lmr3;
 
-    iput-object p1, p0, Lyqj;->a:Ljava/lang/String;
+    const-wide/16 v1, 0x0
 
-    iput-object p2, p0, Lyqj;->b:Ljava/lang/String;
+    if-eqz v0, :cond_1
 
-    iput-object p3, p0, Lyqj;->c:Ljava/lang/String;
+    invoke-virtual {p0}, Lkqb;->q()I
 
-    iput-object p4, p0, Lyqj;->d:Ljava/lang/String;
+    move-result p0
 
-    iput-object p5, p0, Lyqj;->o:Ljava/lang/String;
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    iput-object p6, p0, Lyqj;->X:Lxqj;
+    move-result-object v0
 
-    iput-object p7, p0, Lyqj;->Y:Lxqj;
+    if-lez p0, :cond_0
 
-    return-void
-.end method
+    goto :goto_0
 
+    :cond_0
+    const/4 v0, 0x0
 
-# virtual methods
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 3
+    :goto_0
+    if-eqz v0, :cond_1
 
-    const/16 v0, 0x4f45
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
-    invoke-static {p1, v0}, Lsnj;->k(Landroid/os/Parcel;I)I
+    move-result p0
+
+    check-cast p1, Lmr3;
+
+    iget-object v0, p1, Lmr3;->a:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v0
 
-    const/4 v1, 0x1
+    invoke-static {p0, v0}, Ljava/lang/Math;->min(II)I
 
-    iget-object v2, p0, Lyqj;->a:Ljava/lang/String;
+    move-result p0
 
-    invoke-static {p1, v1, v2}, Lsnj;->g(Landroid/os/Parcel;ILjava/lang/String;)V
+    const/4 v0, 0x0
 
-    const/4 v1, 0x2
+    :goto_1
+    if-ge v0, p0, :cond_1
 
-    iget-object v2, p0, Lyqj;->b:Ljava/lang/String;
+    iget-object v3, p1, Lmr3;->a:Ljava/util/List;
 
-    invoke-static {p1, v1, v2}, Lsnj;->g(Landroid/os/Parcel;ILjava/lang/String;)V
+    invoke-interface {v3, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    const/4 v1, 0x3
+    move-result-object v3
 
-    iget-object v2, p0, Lyqj;->c:Ljava/lang/String;
+    check-cast v3, Llr3;
 
-    invoke-static {p1, v1, v2}, Lsnj;->g(Landroid/os/Parcel;ILjava/lang/String;)V
+    iget-wide v3, v3, Llr3;->d:J
 
-    const/4 v1, 0x4
+    add-long/2addr v1, v3
 
-    iget-object v2, p0, Lyqj;->d:Ljava/lang/String;
+    add-int/lit8 v0, v0, 0x1
 
-    invoke-static {p1, v1, v2}, Lsnj;->g(Landroid/os/Parcel;ILjava/lang/String;)V
+    goto :goto_1
 
-    const/4 v1, 0x5
-
-    iget-object v2, p0, Lyqj;->o:Ljava/lang/String;
-
-    invoke-static {p1, v1, v2}, Lsnj;->g(Landroid/os/Parcel;ILjava/lang/String;)V
-
-    const/4 v1, 0x6
-
-    iget-object v2, p0, Lyqj;->X:Lxqj;
-
-    invoke-static {p1, v1, v2, p2}, Lsnj;->f(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
-
-    const/4 v1, 0x7
-
-    iget-object v2, p0, Lyqj;->Y:Lxqj;
-
-    invoke-static {p1, v1, v2, p2}, Lsnj;->f(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
-
-    invoke-static {p1, v0}, Lsnj;->l(Landroid/os/Parcel;I)V
-
-    return-void
+    :cond_1
+    return-wide v1
 .end method

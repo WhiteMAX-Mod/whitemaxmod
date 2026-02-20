@@ -1,45 +1,51 @@
 .class public final Lbc6;
-.super Lcc6;
+.super Lda4;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:[Ljava/lang/Iterable;
+.field public final synthetic X:Lva6;
+
+.field public Y:I
+
+.field public d:Lva6;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>([Ljava/lang/Iterable;)V
+.method public constructor <init>(Lva6;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lbc6;->X:Lva6;
 
-    iput-object p1, p0, Lbc6;->a:[Ljava/lang/Iterable;
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final iterator()Ljava/util/Iterator;
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    new-instance v0, Lac6;
+    iput-object p1, p0, Lbc6;->o:Ljava/lang/Object;
 
-    iget-object v1, p0, Lbc6;->a:[Ljava/lang/Iterable;
+    iget p1, p0, Lbc6;->Y:I
 
-    array-length v1, v1
+    const/high16 v0, -0x80000000
 
-    invoke-direct {v0, p0, v1}, Lac6;-><init>(Lbc6;I)V
+    or-int/2addr p1, v0
 
-    new-instance v1, Lix7;
+    iput p1, p0, Lbc6;->Y:I
 
-    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+    iget-object p1, p0, Lbc6;->X:Lva6;
 
-    sget-object v2, Lhx7;->o:Lhx7;
+    const/4 v0, 0x0
 
-    iput-object v2, v1, Lix7;->b:Ljava/util/Iterator;
+    invoke-virtual {p1, v0, p0}, Lva6;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    iput-object v0, v1, Lix7;->c:Ljava/util/Iterator;
+    move-result-object p1
 
-    return-object v1
+    return-object p1
 .end method

@@ -30,7 +30,7 @@
         "autoDetectContentCompression",
         "<init>",
         "(Ljavax/inject/Provider;Ljava/util/concurrent/locks/Lock;Lru/ok/android/externcalls/analytics/internal/event/EventChannel;ZZZ)V",
-        "Lb3h;",
+        "Lmah;",
         "upload",
         "()V",
         "getSink",
@@ -67,7 +67,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/analytics/internal/upload/SingleFileUploader$Companion;-><init>(Lso4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/analytics/internal/upload/SingleFileUploader$Companion;-><init>(Lfq4;)V
 
     sput-object v0, Lru/ok/android/externcalls/analytics/internal/upload/SingleFileUploader;->Companion:Lru/ok/android/externcalls/analytics/internal/upload/SingleFileUploader$Companion;
 
@@ -111,7 +111,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljavax/inject/Provider;Ljava/util/concurrent/locks/Lock;Lru/ok/android/externcalls/analytics/internal/event/EventChannel;ZZZILso4;)V
+.method public synthetic constructor <init>(Ljavax/inject/Provider;Ljava/util/concurrent/locks/Lock;Lru/ok/android/externcalls/analytics/internal/event/EventChannel;ZZZILfq4;)V
     .locals 7
 
     and-int/lit8 p7, p7, 0x8
@@ -144,19 +144,33 @@
 
 # virtual methods
 .method public getSink()Ljava/io/File;
-    .locals 1
+    .locals 2
 
-    new-instance v0, Lru/ok/android/externcalls/analytics/internal/upload/SingleFileUploader$getSink$1;
-
-    invoke-direct {v0, p0}, Lru/ok/android/externcalls/analytics/internal/upload/SingleFileUploader$getSink$1;-><init>(Lru/ok/android/externcalls/analytics/internal/upload/SingleFileUploader;)V
-
-    invoke-virtual {p0, v0}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->withLock(Llq6;)Ljava/lang/Object;
+    invoke-virtual {p0}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->getLock()Ljava/util/concurrent/locks/Lock;
 
     move-result-object v0
 
-    check-cast v0, Ljava/io/File;
+    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->lock()V
 
-    return-object v0
+    const/4 v1, 0x0
+
+    :try_start_0
+    invoke-virtual {p0, v1}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->ensureStorageIsOfCorrectType(Z)Ljava/io/File;
+
+    move-result-object v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->unlock()V
+
+    return-object v1
+
+    :catchall_0
+    move-exception v1
+
+    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->unlock()V
+
+    throw v1
 .end method
 
 .method public upload()V
@@ -215,7 +229,7 @@
 
     move-result-object v2
 
-    new-instance v3, Lru/ok/android/externcalls/analytics/internal/upload/UploadException;
+    new-instance v3, Lru/ok/android/externcalls/analytics/internal/upload/StatDeliveryException;
 
     invoke-virtual {p0}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->getChannel()Lru/ok/android/externcalls/analytics/internal/event/EventChannel;
 
@@ -225,7 +239,7 @@
 
     move-result-object v4
 
-    invoke-direct {v3, v4, v0}, Lru/ok/android/externcalls/analytics/internal/upload/UploadException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-direct {v3, v4, v0}, Lru/ok/android/externcalls/analytics/internal/upload/StatDeliveryException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     const-string v0, "Upload failed"
 

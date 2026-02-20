@@ -22,7 +22,7 @@
         "",
         "Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$AudioDeviceInfoChangedEvent;",
         "event",
-        "Lb3h;",
+        "Lmah;",
         "onAudioDeviceChanged",
         "(Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$AudioDeviceInfoChangedEvent;)V",
         "calls-audiomanager_release"

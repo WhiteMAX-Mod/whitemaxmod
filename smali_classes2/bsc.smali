@@ -1,108 +1,40 @@
 .class public final Lbsc;
-.super Ldsc;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:I
+.field public final a:Ljava/util/List;
 
-.field public final b:I
+.field public final b:Z
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 0
+.method public synthetic constructor <init>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 4
+    sget-object v0, Lsi5;->a:Lsi5;
 
-    iput p1, p0, Lbsc;->a:I
+    const/4 v1, 0x0
 
-    iput p1, p0, Lbsc;->b:I
+    .line 5
+    invoke-direct {p0, v0, v1}, Lbsc;-><init>(Ljava/util/List;Z)V
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/util/List;Z)V
+    .locals 0
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x1
+    .line 2
+    iput-object p1, p0, Lbsc;->a:Ljava/util/List;
 
-    if-ne p0, p1, :cond_0
+    .line 3
+    iput-boolean p2, p0, Lbsc;->b:Z
 
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lbsc;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lbsc;
-
-    iget v1, p0, Lbsc;->a:I
-
-    iget p1, p1, Lbsc;->a:I
-
-    if-ne v1, p1, :cond_2
-
-    return v0
-
-    :cond_2
-    return v2
-.end method
-
-.method public final getItemId()J
-    .locals 2
-
-    const/high16 v0, 0x20000
-
-    int-to-long v0, v0
-
-    return-wide v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget v0, p0, Lbsc;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final m()I
-    .locals 1
-
-    iget v0, p0, Lbsc;->b:I
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    iget v0, p0, Lbsc;->a:I
-
-    invoke-static {v0}, Lukj;->c(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "RknLabel(itemViewType="
-
-    const-string v2, ")"
-
-    invoke-static {v1, v0, v2}, Lj27;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

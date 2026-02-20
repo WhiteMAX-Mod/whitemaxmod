@@ -1,133 +1,181 @@
 .class public final Lktf;
-.super Ljava/lang/Object;
+.super Lmtf;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Llgb;
+.field public final l:D
+
+.field public final m:D
+
+.field public final n:J
+
+.field public final o:J
+
+.field public final p:J
+
+.field public final q:J
+
+.field public final r:J
+
+.field public final s:J
 
 
 # direct methods
-.method public constructor <init>(Llgb;)V
-    .locals 0
+.method public constructor <init>(JLjava/lang/String;Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigInteger;DDJLjava/lang/String;JJJJJJLkyc;)V
+    .locals 12
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v1, 0x1
 
-    iput-object p1, p0, Lktf;->a:Llgb;
+    move-object v0, p0
+
+    move-wide v2, p1
+
+    move-object v4, p3
+
+    move-object/from16 v5, p4
+
+    move-object/from16 v6, p5
+
+    move-object/from16 v7, p6
+
+    move-wide/from16 v8, p11
+
+    move-object/from16 v10, p13
+
+    move-object/from16 v11, p26
+
+    invoke-direct/range {v0 .. v11}, Lmtf;-><init>(IJLjava/lang/String;Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigInteger;JLjava/lang/String;Lkyc;)V
+
+    move-wide/from16 p1, p7
+
+    iput-wide p1, p0, Lktf;->l:D
+
+    move-wide/from16 p1, p9
+
+    iput-wide p1, p0, Lktf;->m:D
+
+    move-wide/from16 p1, p14
+
+    iput-wide p1, p0, Lktf;->n:J
+
+    move-wide/from16 p1, p16
+
+    iput-wide p1, p0, Lktf;->o:J
+
+    move-wide/from16 p1, p18
+
+    iput-wide p1, p0, Lktf;->p:J
+
+    move-wide/from16 p1, p20
+
+    iput-wide p1, p0, Lktf;->q:J
+
+    move-wide/from16 p1, p22
+
+    iput-wide p1, p0, Lktf;->r:J
+
+    move-wide/from16 p1, p24
+
+    iput-wide p1, p0, Lktf;->s:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a([J)Lmv8;
+.method public final toString()Ljava/lang/String;
     .locals 3
 
-    iget-object v0, p0, Lktf;->a:Llgb;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Llgb;->E()Lrza;
+    const-string v1, "AudioRecv{ssrc="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v1, p0, Lqtf;->c:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", transportId=\'"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lqtf;->d:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "\', trackId=\'"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lqtf;->e:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "\', packetsReceived="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lmtf;->h:Ljava/math/BigInteger;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", packetsLost="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lmtf;->i:Ljava/math/BigInteger;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", bytesReceived="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lmtf;->j:Ljava/math/BigInteger;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", jitterBufferMs="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lmtf;->k:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", audioLevel="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lktf;->l:D
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    const-string v1, ", totalAudioEnergy="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lktf;->m:D
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    const-string v1, ", unknown="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lqtf;->g:Ljava/util/HashMap;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x7d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    new-instance v1, Letf;
-
-    const/16 v2, 0x8
-
-    invoke-direct {v1, v2}, Letf;-><init>(I)V
-
-    invoke-virtual {v0, v1}, Lkef;->h(Lcr6;)Lsef;
-
-    move-result-object v0
-
-    new-instance v1, Lqwe;
-
-    const/16 v2, 0xa
-
-    invoke-direct {v1, v2, p1}, Lqwe;-><init>(ILjava/lang/Object;)V
-
-    new-instance p1, Lmv8;
-
-    const/4 v2, 0x1
-
-    invoke-direct {p1, v0, v1, v2}, Lmv8;-><init>(Ljava/lang/Object;Lcr6;I)V
-
-    new-instance v0, Letf;
-
-    const/4 v1, 0x4
-
-    invoke-direct {v0, v1}, Letf;-><init>(I)V
-
-    new-instance v1, Llv8;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, p1, v0, v2}, Llv8;-><init>(Ljava/lang/Object;Lcr6;I)V
-
-    new-instance p1, Letf;
-
-    const/4 v0, 0x5
-
-    invoke-direct {p1, v0}, Letf;-><init>(I)V
-
-    new-instance v0, Lvxa;
-
-    const/4 v2, 0x4
-
-    invoke-direct {v0, v1, p1, v2}, Lvxa;-><init>(Ldxa;Lcr6;I)V
-
-    invoke-virtual {v0}, Ldxa;->o()Lhxa;
-
-    move-result-object p1
-
-    new-instance v0, Letf;
-
-    const/4 v1, 0x6
-
-    invoke-direct {v0, v1}, Letf;-><init>(I)V
-
-    new-instance v1, Lmv8;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v1, p1, v0, v2}, Lmv8;-><init>(Ljava/lang/Object;Lcr6;I)V
-
-    return-object v1
-.end method
-
-.method public final b(Ljava/util/List;)Lco3;
-    .locals 3
-
-    invoke-static {p1}, Ldxa;->f(Ljava/lang/Iterable;)Loo3;
-
-    move-result-object p1
-
-    new-instance v0, Letf;
-
-    const/4 v1, 0x7
-
-    invoke-direct {v0, v1}, Letf;-><init>(I)V
-
-    new-instance v1, Lvxa;
-
-    const/4 v2, 0x4
-
-    invoke-direct {v1, p1, v0, v2}, Lvxa;-><init>(Ldxa;Lcr6;I)V
-
-    invoke-virtual {v1}, Ldxa;->o()Lhxa;
-
-    move-result-object p1
-
-    new-instance v0, Lgtf;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, p0, v1}, Lgtf;-><init>(Lktf;I)V
-
-    new-instance v1, Lco3;
-
-    const/4 v2, 0x2
-
-    invoke-direct {v1, p1, v2, v0}, Lco3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    return-object v1
+    return-object v0
 .end method

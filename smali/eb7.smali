@@ -1,612 +1,181 @@
-.class public abstract Leb7;
-.super Ljava/lang/Object;
+.class public final Leb7;
+.super Lwi;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:[I
-
-.field public static final b:Ljava/lang/Object;
-
-.field public static final c:[I
-
-.field public static final d:Ljava/lang/Object;
-
-.field public static final e:[I
-
-.field public static final f:Ljava/lang/Object;
-
-.field public static final g:[I
-
-.field public static final h:Ljava/lang/Object;
-
-.field public static final i:[I
-
-.field public static final j:Ljava/lang/Object;
-
-.field public static final k:[I
-
-.field public static final l:Ljava/lang/Object;
-
-.field public static final m:[I
-
-.field public static final n:Ljava/lang/Object;
-
-.field public static final o:[I
-
-.field public static final p:Ljava/lang/Object;
-
-.field public static final q:[I
-
-.field public static final r:Ljava/lang/Object;
-
-.field public static final s:[I
-
-.field public static final t:Ljava/lang/Object;
-
-.field public static final u:[I
-
-.field public static final v:Ljava/lang/Object;
-
-.field public static final w:[I
-
-.field public static final x:Ljava/lang/Object;
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>()V
+    .locals 1
 
-    const/16 v0, 0xb
+    const/4 v0, 0x0
 
-    new-array v0, v0, [I
+    .line 1
+    invoke-direct {p0, v0}, Lwi;-><init>(I)V
 
-    fill-array-data v0, :array_0
+    return-void
+.end method
 
-    sput-object v0, Leb7;->a:[I
+.method public constructor <init>(I)V
+    .locals 2
 
-    new-instance v0, Lss5;
+    const-wide/16 v0, 0xc8
 
-    const/16 v1, 0x18
+    const/4 p1, 0x2
 
-    invoke-direct {v0, v1}, Lss5;-><init>(I)V
+    .line 2
+    invoke-direct {p0, v0, v1, p1}, Lwi;-><init>(JI)V
 
-    const/4 v1, 0x2
+    return-void
+.end method
 
-    invoke-static {v1, v0}, Le8;->b(ILlq6;)Lo58;
 
-    move-result-object v0
+# virtual methods
+.method public final b()Lua4;
+    .locals 4
 
-    sput-object v0, Leb7;->b:Ljava/lang/Object;
+    new-instance v0, Leb7;
 
-    const/16 v0, 0x10
+    iget-wide v1, p0, Lwi;->d:J
 
-    new-array v0, v0, [I
+    iget-boolean v3, p0, Lwi;->t0:Z
 
-    fill-array-data v0, :array_1
+    invoke-direct {v0, v1, v2, v3}, Lwi;-><init>(JZ)V
 
-    sput-object v0, Leb7;->c:[I
+    return-object v0
+.end method
 
-    new-instance v0, Lss5;
+.method public final l(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;ZZ)Landroid/animation/Animator;
+    .locals 5
 
-    const/16 v2, 0x1d
+    new-instance p1, Landroid/animation/AnimatorSet;
 
-    invoke-direct {v0, v2}, Lss5;-><init>(I)V
+    invoke-direct {p1}, Landroid/animation/AnimatorSet;-><init>()V
 
-    invoke-static {v1, v0}, Le8;->b(ILlq6;)Lo58;
+    const/4 p5, 0x2
 
-    move-result-object v0
+    const/4 v0, 0x0
 
-    sput-object v0, Leb7;->d:Ljava/lang/Object;
-
-    const/16 v0, 0xe
-
-    new-array v0, v0, [I
-
-    fill-array-data v0, :array_2
-
-    sput-object v0, Leb7;->e:[I
-
-    new-instance v0, Ldb7;
+    const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v2}, Ldb7;-><init>(I)V
+    if-eqz p4, :cond_1
 
-    invoke-static {v1, v0}, Le8;->b(ILlq6;)Lo58;
+    if-eqz p2, :cond_0
 
-    move-result-object v0
+    sget-object p4, Landroid/view/View;->TRANSLATION_X:Landroid/util/Property;
 
-    sput-object v0, Leb7;->f:Ljava/lang/Object;
+    invoke-virtual {p2}, Landroid/view/View;->getWidth()I
 
-    const/16 v0, 0xc
+    move-result v3
 
-    new-array v0, v0, [I
+    int-to-float v3, v3
 
-    fill-array-data v0, :array_3
+    neg-float v3, v3
 
-    sput-object v0, Leb7;->g:[I
+    new-array v4, v1, [F
 
-    new-instance v0, Ldb7;
+    aput v3, v4, v0
 
-    const/4 v2, 0x1
+    invoke-static {p2, p4, v4}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
 
-    invoke-direct {v0, v2}, Ldb7;-><init>(I)V
+    move-result-object p2
 
-    invoke-static {v1, v0}, Le8;->b(ILlq6;)Lo58;
+    invoke-virtual {p1, p2}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
 
-    move-result-object v0
+    :cond_0
+    if-eqz p3, :cond_4
 
-    sput-object v0, Leb7;->h:Ljava/lang/Object;
+    sget-object p2, Landroid/view/View;->TRANSLATION_X:Landroid/util/Property;
 
-    const/16 v0, 0x11
+    invoke-virtual {p3}, Landroid/view/View;->getWidth()I
 
-    new-array v0, v0, [I
+    move-result p4
 
-    fill-array-data v0, :array_4
+    int-to-float p4, p4
 
-    sput-object v0, Leb7;->i:[I
+    new-array p5, p5, [F
 
-    new-instance v0, Ldb7;
+    aput p4, p5, v0
 
-    const/4 v2, 0x2
+    aput v2, p5, v1
 
-    invoke-direct {v0, v2}, Ldb7;-><init>(I)V
+    invoke-static {p3, p2, p5}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
 
-    invoke-static {v1, v0}, Le8;->b(ILlq6;)Lo58;
+    move-result-object p2
 
-    move-result-object v0
+    invoke-virtual {p1, p2}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
 
-    sput-object v0, Leb7;->j:Ljava/lang/Object;
+    return-object p1
 
-    const/16 v0, 0x10
+    :cond_1
+    if-eqz p2, :cond_2
 
-    new-array v0, v0, [I
+    sget-object p4, Landroid/view/View;->TRANSLATION_X:Landroid/util/Property;
 
-    fill-array-data v0, :array_5
+    invoke-virtual {p2}, Landroid/view/View;->getWidth()I
 
-    sput-object v0, Leb7;->k:[I
+    move-result v3
 
-    new-instance v0, Ldb7;
+    int-to-float v3, v3
 
-    const/4 v2, 0x3
+    new-array v4, v1, [F
 
-    invoke-direct {v0, v2}, Ldb7;-><init>(I)V
+    aput v3, v4, v0
 
-    invoke-static {v1, v0}, Le8;->b(ILlq6;)Lo58;
+    invoke-static {p2, p4, v4}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
 
-    move-result-object v0
+    move-result-object p4
 
-    sput-object v0, Leb7;->l:Ljava/lang/Object;
+    invoke-virtual {p1, p4}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
 
-    const/16 v0, 0x2a
+    :cond_2
+    if-eqz p3, :cond_4
 
-    new-array v0, v0, [I
+    if-eqz p2, :cond_3
 
-    fill-array-data v0, :array_6
+    invoke-virtual {p2}, Landroid/view/View;->getTranslationX()F
 
-    sput-object v0, Leb7;->m:[I
+    move-result p2
 
-    new-instance v0, Ldb7;
+    goto :goto_0
 
-    const/4 v2, 0x4
+    :cond_3
+    move p2, v2
 
-    invoke-direct {v0, v2}, Ldb7;-><init>(I)V
+    :goto_0
+    sget-object p4, Landroid/view/View;->TRANSLATION_X:Landroid/util/Property;
 
-    invoke-static {v1, v0}, Le8;->b(ILlq6;)Lo58;
+    invoke-virtual {p3}, Landroid/view/View;->getWidth()I
 
-    move-result-object v0
+    move-result v3
 
-    sput-object v0, Leb7;->n:Ljava/lang/Object;
+    int-to-float v3, v3
 
-    const/16 v0, 0x2a
+    sub-float/2addr p2, v3
 
-    new-array v0, v0, [I
+    new-array p5, p5, [F
 
-    fill-array-data v0, :array_7
+    aput p2, p5, v0
 
-    sput-object v0, Leb7;->o:[I
+    aput v2, p5, v1
 
-    new-instance v0, Ldb7;
+    invoke-static {p3, p4, p5}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
 
-    const/4 v2, 0x5
+    move-result-object p2
 
-    invoke-direct {v0, v2}, Ldb7;-><init>(I)V
+    invoke-virtual {p1, p2}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
 
-    invoke-static {v1, v0}, Le8;->b(ILlq6;)Lo58;
+    :cond_4
+    return-object p1
+.end method
 
-    move-result-object v0
+.method public final n(Landroid/view/View;)V
+    .locals 1
 
-    sput-object v0, Leb7;->p:Ljava/lang/Object;
+    const/4 v0, 0x0
 
-    const/16 v0, 0x16
-
-    new-array v0, v0, [I
-
-    fill-array-data v0, :array_8
-
-    sput-object v0, Leb7;->q:[I
-
-    new-instance v0, Lss5;
-
-    const/16 v2, 0x19
-
-    invoke-direct {v0, v2}, Lss5;-><init>(I)V
-
-    invoke-static {v1, v0}, Le8;->b(ILlq6;)Lo58;
-
-    move-result-object v0
-
-    sput-object v0, Leb7;->r:Ljava/lang/Object;
-
-    const/16 v0, 0x15
-
-    new-array v0, v0, [I
-
-    fill-array-data v0, :array_9
-
-    sput-object v0, Leb7;->s:[I
-
-    new-instance v0, Lss5;
-
-    const/16 v2, 0x1a
-
-    invoke-direct {v0, v2}, Lss5;-><init>(I)V
-
-    invoke-static {v1, v0}, Le8;->b(ILlq6;)Lo58;
-
-    move-result-object v0
-
-    sput-object v0, Leb7;->t:Ljava/lang/Object;
-
-    const/16 v0, 0x1d
-
-    new-array v0, v0, [I
-
-    fill-array-data v0, :array_a
-
-    sput-object v0, Leb7;->u:[I
-
-    new-instance v0, Lss5;
-
-    const/16 v2, 0x1b
-
-    invoke-direct {v0, v2}, Lss5;-><init>(I)V
-
-    invoke-static {v1, v0}, Le8;->b(ILlq6;)Lo58;
-
-    move-result-object v0
-
-    sput-object v0, Leb7;->v:Ljava/lang/Object;
-
-    const/16 v0, 0x13
-
-    new-array v0, v0, [I
-
-    fill-array-data v0, :array_b
-
-    sput-object v0, Leb7;->w:[I
-
-    new-instance v0, Lss5;
-
-    const/16 v2, 0x1c
-
-    invoke-direct {v0, v2}, Lss5;-><init>(I)V
-
-    invoke-static {v1, v0}, Le8;->b(ILlq6;)Lo58;
-
-    move-result-object v0
-
-    sput-object v0, Leb7;->x:Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Landroid/view/View;->setTranslationX(F)V
 
     return-void
-
-    :array_0
-    .array-data 4
-        0x67
-        0x73
-        0x74
-        0x61
-        0x74
-        0x69
-        0x63
-        0x2e
-        0x63
-        0x6f
-        0x6d
-    .end array-data
-
-    :array_1
-    .array-data 4
-        0x6d
-        0x74
-        0x61
-        0x6c
-        0x6b
-        0x2e
-        0x67
-        0x6f
-        0x6f
-        0x67
-        0x6c
-        0x65
-        0x2e
-        0x63
-        0x6f
-        0x6d
-    .end array-data
-
-    :array_2
-    .array-data 4
-        0x63
-        0x61
-        0x6c
-        0x6c
-        0x73
-        0x2e
-        0x6f
-        0x6b
-        0x63
-        0x64
-        0x6e
-        0x2e
-        0x72
-        0x75
-    .end array-data
-
-    :array_3
-    .array-data 4
-        0x67
-        0x6f
-        0x73
-        0x75
-        0x73
-        0x6c
-        0x75
-        0x67
-        0x69
-        0x2e
-        0x72
-        0x75
-    .end array-data
-
-    :array_4
-    .array-data 4
-        0x6d
-        0x61
-        0x69
-        0x6e
-        0x2e
-        0x74
-        0x65
-        0x6c
-        0x65
-        0x67
-        0x72
-        0x61
-        0x6d
-        0x2e
-        0x6f
-        0x72
-        0x67
-    .end array-data
-
-    :array_5
-    .array-data 4
-        0x6d
-        0x6d
-        0x67
-        0x2e
-        0x77
-        0x68
-        0x61
-        0x74
-        0x73
-        0x61
-        0x70
-        0x70
-        0x2e
-        0x6e
-        0x65
-        0x74
-    .end array-data
-
-    :array_6
-    .array-data 4
-        0x68
-        0x74
-        0x74
-        0x70
-        0x73
-        0x3a
-        0x2f
-        0x2f
-        0x69
-        0x70
-        0x76
-        0x34
-        0x2d
-        0x69
-        0x6e
-        0x74
-        0x65
-        0x72
-        0x6e
-        0x65
-        0x74
-        0x2e
-        0x79
-        0x61
-        0x6e
-        0x64
-        0x65
-        0x78
-        0x2e
-        0x6e
-        0x65
-        0x74
-        0x2f
-        0x61
-        0x70
-        0x69
-        0x2f
-        0x76
-        0x30
-        0x2f
-        0x69
-        0x70
-    .end array-data
-
-    :array_7
-    .array-data 4
-        0x68
-        0x74
-        0x74
-        0x70
-        0x73
-        0x3a
-        0x2f
-        0x2f
-        0x69
-        0x70
-        0x76
-        0x36
-        0x2d
-        0x69
-        0x6e
-        0x74
-        0x65
-        0x72
-        0x6e
-        0x65
-        0x74
-        0x2e
-        0x79
-        0x61
-        0x6e
-        0x64
-        0x65
-        0x78
-        0x2e
-        0x6e
-        0x65
-        0x74
-        0x2f
-        0x61
-        0x70
-        0x69
-        0x2f
-        0x76
-        0x30
-        0x2f
-        0x69
-        0x70
-    .end array-data
-
-    :array_8
-    .array-data 4
-        0x68
-        0x74
-        0x74
-        0x70
-        0x73
-        0x3a
-        0x2f
-        0x2f
-        0x69
-        0x66
-        0x63
-        0x6f
-        0x6e
-        0x66
-        0x69
-        0x67
-        0x2e
-        0x6d
-        0x65
-        0x2f
-        0x69
-        0x70
-    .end array-data
-
-    :array_9
-    .array-data 4
-        0x68
-        0x74
-        0x74
-        0x70
-        0x73
-        0x3a
-        0x2f
-        0x2f
-        0x61
-        0x70
-        0x69
-        0x2e
-        0x69
-        0x70
-        0x69
-        0x66
-        0x79
-        0x2e
-        0x6f
-        0x72
-        0x67
-    .end array-data
-
-    :array_a
-    .array-data 4
-        0x68
-        0x74
-        0x74
-        0x70
-        0x73
-        0x3a
-        0x2f
-        0x2f
-        0x63
-        0x68
-        0x65
-        0x63
-        0x6b
-        0x69
-        0x70
-        0x2e
-        0x61
-        0x6d
-        0x61
-        0x7a
-        0x6f
-        0x6e
-        0x61
-        0x77
-        0x73
-        0x2e
-        0x63
-        0x6f
-        0x6d
-    .end array-data
-
-    :array_b
-    .array-data 4
-        0x68
-        0x74
-        0x74
-        0x70
-        0x73
-        0x3a
-        0x2f
-        0x2f
-        0x69
-        0x70
-        0x2e
-        0x6d
-        0x61
-        0x69
-        0x6c
-        0x2e
-        0x72
-        0x75
-        0x2f
-    .end array-data
 .end method

@@ -1,9 +1,9 @@
 .class final Lru/ok/android/externcalls/sdk/ui/FrameDecorator$Companion$EMPTY$2;
-.super Ly48;
+.super Lv78;
 .source "SourceFile"
 
 # interfaces
-.implements Llq6;
+.implements Lis6;
 
 
 # annotations
@@ -18,8 +18,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Ly48;",
-        "Llq6;"
+        "Lv78;",
+        "Lis6;"
     }
 .end annotation
 
@@ -64,7 +64,7 @@
 
     const/4 v0, 0x0
 
-    invoke-direct {p0, v0}, Ly48;-><init>(I)V
+    invoke-direct {p0, v0}, Lv78;-><init>(I)V
 
     return-void
 .end method

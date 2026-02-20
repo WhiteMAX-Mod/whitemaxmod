@@ -1,232 +1,163 @@
-.class public final Lor2;
-.super Lp6g;
+.class public abstract synthetic Lor2;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lbr6;
 
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
-# instance fields
-.field public final synthetic X:I
+.field public static final synthetic $EnumSwitchMapping$1:[I
 
-.field public final synthetic Y:Lws2;
+.field public static final synthetic $EnumSwitchMapping$2:[I
 
-.field public final synthetic Z:I
+.field public static final synthetic $EnumSwitchMapping$3:[I
 
-.field public synthetic o:Ljava/lang/Object;
+.field public static final synthetic $EnumSwitchMapping$4:[I
 
 
 # direct methods
-.method public constructor <init>(ILws2;ILkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput p1, p0, Lor2;->X:I
-
-    iput-object p2, p0, Lor2;->Y:Lws2;
-
-    iput p3, p0, Lor2;->Z:I
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p4}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lnii;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lor2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lor2;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lor2;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 4
-
-    new-instance v0, Lor2;
-
-    iget-object v1, p0, Lor2;->Y:Lws2;
-
-    iget v2, p0, Lor2;->Z:I
-
-    iget v3, p0, Lor2;->X:I
-
-    invoke-direct {v0, v3, v1, v2, p2}, Lor2;-><init>(ILws2;ILkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lor2;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method static constructor <clinit>()V
     .locals 6
 
-    iget-object v0, p0, Lor2;->o:Ljava/lang/Object;
+    const/4 v0, 0x5
 
-    check-cast v0, Lnii;
+    invoke-static {v0}, Ly12;->x(I)[I
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    move-result-object v0
 
-    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
+    array-length v0, v0
 
-    move-result p1
+    new-array v0, v0, [I
 
-    if-eqz p1, :cond_7
+    const/4 v1, 0x1
 
-    const/4 v0, 0x1
+    :try_start_0
+    aput v1, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    if-eq p1, v0, :cond_7
+    :catch_0
+    const/4 v2, 0x2
 
-    const/4 v1, 0x4
+    :try_start_1
+    aput v2, v0, v2
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    iget v2, p0, Lor2;->X:I
+    :catch_1
+    const/4 v3, 0x4
 
-    iget-object v3, p0, Lor2;->Y:Lws2;
+    const/4 v4, 0x3
 
-    const/4 v4, 0x2
+    :try_start_2
+    aput v4, v0, v3
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    if-eq p1, v4, :cond_4
+    :catch_2
+    sput-object v0, Lor2;->$EnumSwitchMapping$0:[I
 
-    const/4 v5, 0x3
+    invoke-static {}, Ljb4;->values()[Ljb4;
 
-    if-eq p1, v5, :cond_1
+    move-result-object v0
 
-    if-eq p1, v1, :cond_7
+    array-length v0, v0
 
-    const/4 v5, 0x5
+    new-array v0, v0, [I
 
-    if-ne p1, v5, :cond_0
+    :try_start_3
+    aput v1, v0, v2
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
 
-    goto :goto_0
+    :catch_3
+    const/4 v5, 0x0
 
-    :cond_0
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+    :try_start_4
+    aput v2, v0, v5
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
 
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    :catch_4
+    :try_start_5
+    aput v4, v0, v1
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
 
-    throw p1
+    :catch_5
+    :try_start_6
+    aput v3, v0, v4
+    :try_end_6
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
 
-    :cond_1
-    :goto_0
-    iget-object p1, v3, Lws2;->W0:Lcm5;
+    :catch_6
+    sput-object v0, Lor2;->$EnumSwitchMapping$1:[I
 
-    if-eq v2, v0, :cond_3
+    invoke-static {}, Lva4;->values()[Lva4;
 
-    if-eq v2, v4, :cond_2
+    move-result-object v0
 
-    sget v0, Lfdd;->oneme_chatmedia_viewer_media_download_error:I
+    array-length v0, v0
 
-    goto :goto_1
+    new-array v0, v0, [I
 
-    :cond_2
-    sget v0, Lfdd;->oneme_chatmedia_viewer_video_download_error:I
+    :try_start_7
+    aput v1, v0, v1
+    :try_end_7
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
 
-    goto :goto_1
+    :catch_7
+    :try_start_8
+    aput v2, v0, v2
+    :try_end_8
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_8
 
-    :cond_3
-    sget v0, Lfdd;->oneme_chatmedia_viewer_photo_download_error:I
+    :catch_8
+    sput-object v0, Lor2;->$EnumSwitchMapping$2:[I
 
-    :goto_1
-    new-instance v2, Lvl5;
+    invoke-static {}, Lyo9;->values()[Lyo9;
 
-    new-instance v3, Llhg;
+    move-result-object v0
 
-    invoke-direct {v3, v0}, Llhg;-><init>(I)V
+    array-length v0, v0
 
-    sget v0, Lf6e;->l:I
+    new-array v0, v0, [I
 
-    new-instance v4, Ljava/lang/Integer;
+    :try_start_9
+    aput v1, v0, v5
+    :try_end_9
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_9 .. :try_end_9} :catch_9
 
-    invoke-direct {v4, v0}, Ljava/lang/Integer;-><init>(I)V
+    :catch_9
+    sput-object v0, Lor2;->$EnumSwitchMapping$3:[I
 
-    invoke-direct {v2, v3, v4, v1}, Lvl5;-><init>(Lqhg;Ljava/lang/Integer;I)V
+    invoke-static {}, Lc82;->values()[Lc82;
 
-    invoke-static {p1, v2}, Lnth;->q(Lcm5;Ljava/lang/Object;)V
+    move-result-object v0
 
-    goto :goto_3
+    array-length v0, v0
 
-    :cond_4
-    if-eq v2, v0, :cond_6
+    new-array v0, v0, [I
 
-    if-eq v2, v4, :cond_5
+    :try_start_a
+    aput v1, v0, v5
+    :try_end_a
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_a .. :try_end_a} :catch_a
 
-    sget p1, Lfdd;->oneme_chatmedia_viewer_all_media_download_complete:I
+    :catch_a
+    :try_start_b
+    aput v2, v0, v1
+    :try_end_b
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_b .. :try_end_b} :catch_b
 
-    new-instance v0, Ljava/lang/Integer;
+    :catch_b
+    :try_start_c
+    aput v4, v0, v2
+    :try_end_c
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_c .. :try_end_c} :catch_c
 
-    invoke-direct {v0, p1}, Ljava/lang/Integer;-><init>(I)V
+    :catch_c
+    sput-object v0, Lor2;->$EnumSwitchMapping$4:[I
 
-    goto :goto_2
-
-    :cond_5
-    sget p1, Lfdd;->oneme_chatmedia_viewer_all_video_download_complete:I
-
-    new-instance v0, Ljava/lang/Integer;
-
-    invoke-direct {v0, p1}, Ljava/lang/Integer;-><init>(I)V
-
-    goto :goto_2
-
-    :cond_6
-    const/4 v0, 0x0
-
-    :goto_2
-    if-eqz v0, :cond_7
-
-    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
-
-    move-result p1
-
-    iget-object v0, v3, Lws2;->W0:Lcm5;
-
-    new-instance v2, Lvl5;
-
-    new-instance v3, Ljava/lang/Integer;
-
-    iget v4, p0, Lor2;->Z:I
-
-    invoke-direct {v3, v4}, Ljava/lang/Integer;-><init>(I)V
-
-    filled-new-array {v3}, [Ljava/lang/Object;
-
-    move-result-object v3
-
-    new-instance v4, Lnhg;
-
-    invoke-static {v3}, Lct;->C([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v3
-
-    invoke-direct {v4, p1, v3}, Lnhg;-><init>(ILjava/util/List;)V
-
-    sget p1, Lf6e;->p:I
-
-    new-instance v3, Ljava/lang/Integer;
-
-    invoke-direct {v3, p1}, Ljava/lang/Integer;-><init>(I)V
-
-    invoke-direct {v2, v4, v3, v1}, Lvl5;-><init>(Lqhg;Ljava/lang/Integer;I)V
-
-    invoke-static {v0, v2}, Lnth;->q(Lcm5;Ljava/lang/Object;)V
-
-    :cond_7
-    :goto_3
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
+    return-void
 .end method

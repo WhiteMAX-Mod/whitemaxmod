@@ -1,28 +1,43 @@
-.class public interface abstract Lqi4;
+.class public final Lqi4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lji4;
+
+# instance fields
+.field public final a:Lnl6;
+
+.field public final b:Lal7;
+
+.field public final c:Ljse;
+
+.field public final d:Ljava/lang/String;
+
+.field public final e:Ljava/util/ArrayList;
+
+.field public final f:Ljava/util/ArrayList;
 
 
-# virtual methods
-.method public abstract R(Lzi4;)J
-.end method
+# direct methods
+.method public constructor <init>(Lnl6;Ljava/util/ArrayList;Ljse;Ljava/lang/String;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
+    .locals 0
 
-.method public abstract S(Lxsg;)V
-.end method
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public abstract close()V
-.end method
+    iput-object p1, p0, Lqi4;->a:Lnl6;
 
-.method public abstract getUri()Landroid/net/Uri;
-.end method
+    invoke-static {p2}, Lal7;->j(Ljava/util/Collection;)Lal7;
 
-.method public w()Ljava/util/Map;
-    .locals 1
+    move-result-object p1
 
-    sget-object v0, Ljava/util/Collections;->EMPTY_MAP:Ljava/util/Map;
+    iput-object p1, p0, Lqi4;->b:Lal7;
 
-    return-object v0
+    iput-object p3, p0, Lqi4;->c:Ljse;
+
+    iput-object p4, p0, Lqi4;->d:Ljava/lang/String;
+
+    iput-object p5, p0, Lqi4;->e:Ljava/util/ArrayList;
+
+    iput-object p6, p0, Lqi4;->f:Ljava/util/ArrayList;
+
+    return-void
 .end method

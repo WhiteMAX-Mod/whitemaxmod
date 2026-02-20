@@ -1,252 +1,194 @@
-.class public interface abstract Lj0f;
-.super Ljava/lang/Object;
+.class public final Lj0f;
+.super Lwye;
 .source "SourceFile"
 
-# interfaces
-.implements Lud8;
 
+# instance fields
+.field public final b:J
 
-# static fields
-.field public static final a0:Lvze;
+.field public final c:J
+
+.field public final d:J
+
+.field public final e:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(JJZJ)V
+    .locals 0
 
-    sget-object v0, Lvze;->a:Lvze;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lj0f;->a0:Lvze;
+    iput-wide p1, p0, Lj0f;->b:J
+
+    iput-wide p3, p0, Lj0f;->c:J
+
+    iput-wide p6, p0, Lj0f;->d:J
+
+    iput-boolean p5, p0, Lj0f;->e:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract b()Lqhg;
-.end method
+.method public final x()V
+    .locals 14
 
-.method public abstract c()Lyze;
-.end method
+    invoke-virtual {p0}, Lwye;->p()Lno9;
 
-.method public abstract d()Lqhg;
-.end method
+    move-result-object v0
 
-.method public abstract e()Lg0f;
-.end method
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-.method public abstract f()Ly58;
-.end method
+    iget-wide v1, p0, Lj0f;->d:J
 
-.method public abstract getTitle()Lqhg;
-.end method
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-.method public getType()Li0f;
-    .locals 1
+    move-result-object v3
 
-    sget-object v0, Li0f;->b:Li0f;
+    iget-boolean v4, p0, Lj0f;->e:Z
 
-    return-object v0
-.end method
+    invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-.method public h(Lud8;)Z
-    .locals 4
+    move-result-object v5
 
-    invoke-interface {p0}, Lud8;->getItemId()J
+    filled-new-array {v3, v5}, [Ljava/lang/Object;
 
-    move-result-wide v0
+    move-result-object v3
 
-    invoke-interface {p1}, Lud8;->getItemId()J
+    const-string v5, "no9"
 
-    move-result-wide v2
+    const-string v6, "updateDelayedAttrs %d, %b"
 
-    cmp-long p1, v0, v2
+    invoke-static {v5, v6, v3}, Ltej;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    if-nez p1, :cond_0
+    iget-object v3, v0, Lno9;->a:Lwj4;
 
-    const/4 p1, 0x1
+    iget-object v3, v3, Lwj4;->c:Le9e;
 
-    return p1
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    :cond_0
-    const/4 p1, 0x0
+    move-result-object v6
 
-    return p1
-.end method
+    invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-.method public k(Lud8;)Ljava/lang/Object;
-    .locals 6
+    move-result-object v7
 
-    instance-of v0, p1, Lv0f;
+    invoke-virtual {v3}, Le9e;->d()Lrw9;
+
+    move-result-object v1
+
+    check-cast v1, Lqx9;
+
+    iget-object v1, v1, Lqx9;->a:Lm8e;
+
+    new-instance v5, Lzw9;
+
+    const/4 v10, 0x0
+
+    iget-wide v8, p0, Lj0f;->c:J
+
+    invoke-direct/range {v5 .. v10}, Lzw9;-><init>(Ljava/lang/Object;Ljava/lang/Object;JI)V
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    invoke-static {v1, v2, v3, v5}, Lfuj;->f(Lm8e;ZZLks6;)Ljava/lang/Object;
+
+    iget-object v0, v0, Lno9;->e:Lru/ok/tamtam/messages/b;
+
+    invoke-virtual {v0, v8, v9}, Lru/ok/tamtam/messages/b;->e(J)V
+
+    invoke-virtual {p0}, Lwye;->p()Lno9;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v8, v9}, Lno9;->m(J)Lpo9;
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Lwye;->p()Lno9;
+
+    move-result-object v1
+
+    sget-object v2, Luo9;->d:Luo9;
+
+    invoke-virtual {v1, v0, v2}, Lno9;->s(Lpo9;Luo9;)V
+
+    new-instance v4, Lndh;
+
+    invoke-virtual {p0}, Lwye;->l()Lug3;
+
+    move-result-object v0
+
+    check-cast v0, Lqme;
+
+    invoke-virtual {v0}, Lqme;->k()J
+
+    move-result-wide v5
+
+    iget-wide v11, p0, Lj0f;->d:J
+
+    iget-boolean v13, p0, Lj0f;->e:Z
+
+    iget-wide v7, p0, Lj0f;->b:J
+
+    iget-wide v9, p0, Lj0f;->c:J
+
+    invoke-direct/range {v4 .. v13}, Lndh;-><init>(JJJJZ)V
+
+    iget-object v0, p0, Lwye;->a:Lxye;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    check-cast p1, Lv0f;
-
     goto :goto_0
 
     :cond_0
-    move-object p1, v1
+    move-object v0, v1
 
     :goto_0
-    if-nez p1, :cond_1
+    iget-object v0, v0, Lxye;->j:Lj88;
 
-    return-object v1
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lvkg;
+
+    const/4 v2, 0x4
+
+    invoke-static {v0, v4, v3, v2}, Lvkg;->d(Lvkg;Lko;ZI)J
+
+    iget-object v0, p0, Lwye;->a:Lxye;
+
+    if-eqz v0, :cond_1
+
+    move-object v1, v0
 
     :cond_1
-    new-instance v0, Lh0f;
+    iget-object v0, v1, Lxye;->c:Lj88;
 
-    const/16 v1, 0xa
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
 
-    invoke-direct {v0, v1}, Ld3;-><init>(I)V
+    move-result-object v0
 
-    iget-object v1, v0, Ld3;->b:Ljava/lang/Object;
+    check-cast v0, Lqy0;
 
-    check-cast v1, Ljava/util/BitSet;
+    new-instance v1, Lvdh;
 
-    invoke-interface {p0}, Lj0f;->t()I
+    iget-wide v4, p0, Lj0f;->c:J
 
-    move-result v2
+    const/4 v6, 0x0
 
-    iget v3, p1, Lv0f;->b:I
+    iget-wide v2, p0, Lj0f;->b:J
 
-    const/4 v4, 0x0
+    invoke-direct/range {v1 .. v6}, Lvdh;-><init>(JJZ)V
 
-    const/4 v5, 0x1
+    invoke-virtual {v0, v1}, Lqy0;->c(Ljava/lang/Object;)V
 
-    if-eq v2, v3, :cond_2
-
-    move v2, v5
-
-    goto :goto_1
-
-    :cond_2
-    move v2, v4
-
-    :goto_1
-    invoke-virtual {v1, v4, v2}, Ljava/util/BitSet;->set(IZ)V
-
-    invoke-interface {p0}, Lj0f;->getTitle()Lqhg;
-
-    move-result-object v2
-
-    iget-object v3, p1, Lv0f;->c:Lqhg;
-
-    invoke-static {v2, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    xor-int/2addr v2, v5
-
-    invoke-virtual {v1, v5, v2}, Ljava/util/BitSet;->set(IZ)V
-
-    invoke-interface {p0}, Lj0f;->getType()Li0f;
-
-    move-result-object v2
-
-    iget-object v3, p1, Lv0f;->d:Li0f;
-
-    if-eq v2, v3, :cond_3
-
-    move v4, v5
-
-    :cond_3
-    const/4 v2, 0x2
-
-    invoke-virtual {v1, v2, v4}, Ljava/util/BitSet;->set(IZ)V
-
-    invoke-interface {p0}, Lj0f;->b()Lqhg;
-
-    move-result-object v2
-
-    iget-object v3, p1, Lv0f;->o:Lqhg;
-
-    invoke-static {v2, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    xor-int/2addr v2, v5
-
-    const/4 v3, 0x3
-
-    invoke-virtual {v1, v3, v2}, Ljava/util/BitSet;->set(IZ)V
-
-    invoke-interface {p0}, Lj0f;->e()Lg0f;
-
-    move-result-object v2
-
-    iget-object v3, p1, Lv0f;->Y:Lg0f;
-
-    invoke-static {v2, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    xor-int/2addr v2, v5
-
-    const/4 v3, 0x4
-
-    invoke-virtual {v1, v3, v2}, Ljava/util/BitSet;->set(IZ)V
-
-    invoke-interface {p0}, Lj0f;->c()Lyze;
-
-    move-result-object v2
-
-    iget-object v3, p1, Lv0f;->Z:Lyze;
-
-    invoke-static {v2, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    xor-int/2addr v2, v5
-
-    const/4 v3, 0x5
-
-    invoke-virtual {v1, v3, v2}, Ljava/util/BitSet;->set(IZ)V
-
-    invoke-interface {p0}, Lj0f;->d()Lqhg;
-
-    move-result-object v2
-
-    iget-object v3, p1, Lv0f;->t0:Lqhg;
-
-    invoke-static {v2, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    xor-int/2addr v2, v5
-
-    const/4 v3, 0x6
-
-    invoke-virtual {v1, v3, v2}, Ljava/util/BitSet;->set(IZ)V
-
-    invoke-interface {p0}, Lj0f;->f()Ly58;
-
-    move-result-object v2
-
-    iget-object p1, p1, Lv0f;->X:Ly58;
-
-    invoke-static {v2, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    xor-int/2addr p1, v5
-
-    const/4 v2, 0x7
-
-    invoke-virtual {v1, v2, p1}, Ljava/util/BitSet;->set(IZ)V
-
-    return-object v0
-.end method
-
-.method public m()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public abstract t()I
+    return-void
 .end method

@@ -3,51 +3,62 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/widget/AdapterView$OnItemClickListener;
-
-
-# instance fields
-.field public final synthetic a:Ltc;
-
-.field public final synthetic b:Lqc;
-
-
-# direct methods
-.method public constructor <init>(Lqc;Ltc;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lpc;->b:Lqc;
-
-    iput-object p2, p0, Lpc;->a:Ltc;
-
-    return-void
-.end method
+.implements Lcd;
 
 
 # virtual methods
-.method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    iget-object p1, p0, Lpc;->b:Lqc;
+    const/4 v0, 0x1
 
-    iget-object p2, p1, Lqc;->q:Landroid/content/DialogInterface$OnClickListener;
+    if-ne p0, p1, :cond_0
 
-    iget-object p4, p0, Lpc;->a:Ltc;
-
-    iget-object p5, p4, Ltc;->b:Lvc;
-
-    invoke-interface {p2, p5, p3}, Landroid/content/DialogInterface$OnClickListener;->onClick(Landroid/content/DialogInterface;I)V
-
-    iget-boolean p1, p1, Lqc;->s:Z
-
-    if-nez p1, :cond_0
-
-    iget-object p1, p4, Ltc;->b:Lvc;
-
-    invoke-virtual {p1}, Lmo;->dismiss()V
+    return v0
 
     :cond_0
-    return-void
+    instance-of v1, p1, Lpc;
+
+    if-nez v1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    check-cast p1, Lpc;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    const/4 v0, 0x1
+
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    const/4 v1, 0x0
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "DisableAllCameraAndMicInCall(isSuccess=true, isEnabled=false)"
+
+    return-object v0
 .end method

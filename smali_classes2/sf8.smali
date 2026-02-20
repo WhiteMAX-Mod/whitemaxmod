@@ -1,27 +1,29 @@
 .class public final Lsf8;
-.super Ljava/lang/Object;
+.super Lbg8;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Landroid/content/Context;
-
-.field public final b:Lo58;
-
-.field public final c:Lo58;
+.field public final o:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lo58;Lo58;Landroid/content/Context;)V
-    .locals 0
+.method public constructor <init>(JLjava/lang/String;)V
+    .locals 9
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-wide/16 v5, 0x0
 
-    iput-object p3, p0, Lsf8;->a:Landroid/content/Context;
+    const-wide/16 v7, 0x0
 
-    iput-object p2, p0, Lsf8;->b:Lo58;
+    const-wide/16 v1, 0x0
 
-    iput-object p1, p0, Lsf8;->c:Lo58;
+    move-object v0, p0
+
+    move-wide v3, p1
+
+    invoke-direct/range {v0 .. v8}, Lbg8;-><init>(JJJJ)V
+
+    iput-object p3, v0, Lsf8;->o:Ljava/lang/String;
 
     return-void
 .end method

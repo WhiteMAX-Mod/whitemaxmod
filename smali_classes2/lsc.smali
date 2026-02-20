@@ -1,243 +1,174 @@
 .class public final Llsc;
-.super Ljava/lang/Object;
+.super Lpdg;
 .source "SourceFile"
+
+# interfaces
+.implements Lat6;
 
 
 # instance fields
-.field public final a:Z
+.field public synthetic X:Lmpb;
 
-.field public final b:Z
+.field public synthetic Y:Llob;
 
-.field public final c:Z
-
-.field public final d:Z
-
-.field public final e:Z
+.field public final synthetic o:I
 
 
 # direct methods
-.method public constructor <init>(ZZZZZ)V
+.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p3, p0, Llsc;->o:I
 
-    iput-boolean p1, p0, Llsc;->a:Z
-
-    iput-boolean p2, p0, Llsc;->b:Z
-
-    iput-boolean p3, p0, Llsc;->c:Z
-
-    iput-boolean p4, p0, Llsc;->d:Z
-
-    iput-boolean p5, p0, Llsc;->e:Z
+    invoke-direct {p0, p1, p2}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static a(Llsc;ZZZZZI)Llsc;
-    .locals 6
 
-    and-int/lit8 v0, p6, 0x1
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    if-eqz v0, :cond_0
+    iget v0, p0, Llsc;->o:I
 
-    iget-boolean p1, p0, Llsc;->a:Z
+    check-cast p1, Lmpb;
 
-    :cond_0
-    move v1, p1
+    check-cast p2, Llob;
 
-    and-int/lit8 p1, p6, 0x2
+    check-cast p3, Lkotlin/coroutines/Continuation;
 
-    if-eqz p1, :cond_1
-
-    iget-boolean p2, p0, Llsc;->b:Z
-
-    :cond_1
-    move v2, p2
-
-    and-int/lit8 p1, p6, 0x4
-
-    if-eqz p1, :cond_2
-
-    iget-boolean p3, p0, Llsc;->c:Z
-
-    :cond_2
-    move v3, p3
-
-    and-int/lit8 p1, p6, 0x8
-
-    if-eqz p1, :cond_3
-
-    iget-boolean p4, p0, Llsc;->d:Z
-
-    :cond_3
-    move v4, p4
-
-    and-int/lit8 p1, p6, 0x10
-
-    if-eqz p1, :cond_4
-
-    iget-boolean p5, p0, Llsc;->e:Z
-
-    :cond_4
-    move v5, p5
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    packed-switch v0, :pswitch_data_0
 
     new-instance v0, Llsc;
 
-    invoke-direct/range {v0 .. v5}, Llsc;-><init>(ZZZZZ)V
+    const/4 v1, 0x3
 
-    return-object v0
-.end method
+    const/4 v2, 0x2
 
+    invoke-direct {v0, v1, p3, v2}, Llsc;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    iput-object p1, v0, Llsc;->X:Lmpb;
 
-    const/4 v0, 0x1
+    iput-object p2, v0, Llsc;->Y:Llob;
 
-    if-ne p0, p1, :cond_0
+    sget-object p1, Lmah;->a:Lmah;
 
-    return v0
+    invoke-virtual {v0, p1}, Llsc;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_0
-    instance-of v1, p1, Llsc;
+    return-object p1
+
+    :pswitch_0
+    new-instance v0, Llsc;
+
+    const/4 v1, 0x3
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, v1, p3, v2}, Llsc;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    iput-object p1, v0, Llsc;->X:Lmpb;
+
+    iput-object p2, v0, Llsc;->Y:Llob;
+
+    sget-object p1, Lmah;->a:Lmah;
+
+    invoke-virtual {v0, p1}, Llsc;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    :pswitch_1
+    new-instance v0, Llsc;
+
+    const/4 v1, 0x3
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    invoke-direct {v0, v1, p3, v2}, Llsc;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    return v2
+    iput-object p1, v0, Llsc;->X:Lmpb;
 
-    :cond_1
-    check-cast p1, Llsc;
+    iput-object p2, v0, Llsc;->Y:Llob;
 
-    iget-boolean v1, p0, Llsc;->a:Z
+    sget-object p1, Lmah;->a:Lmah;
 
-    iget-boolean v3, p1, Llsc;->a:Z
+    invoke-virtual {v0, p1}, Llsc;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-eq v1, v3, :cond_2
+    return-object p1
 
-    return v2
-
-    :cond_2
-    iget-boolean v1, p0, Llsc;->b:Z
-
-    iget-boolean v3, p1, Llsc;->b:Z
-
-    if-eq v1, v3, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-boolean v1, p0, Llsc;->c:Z
-
-    iget-boolean v3, p1, Llsc;->c:Z
-
-    if-eq v1, v3, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-boolean v1, p0, Llsc;->d:Z
-
-    iget-boolean v3, p1, Llsc;->d:Z
-
-    if-eq v1, v3, :cond_5
-
-    return v2
-
-    :cond_5
-    iget-boolean v1, p0, Llsc;->e:Z
-
-    iget-boolean p1, p1, Llsc;->e:Z
-
-    if-eq v1, p1, :cond_6
-
-    return v2
-
-    :cond_6
-    return v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final hashCode()I
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    iget-boolean v0, p0, Llsc;->a:Z
+    iget v0, p0, Llsc;->o:I
 
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+    packed-switch v0, :pswitch_data_0
 
-    move-result v0
+    iget-object v0, p0, Llsc;->X:Lmpb;
 
-    const/16 v1, 0x1f
+    iget-object v1, p0, Llsc;->Y:Llob;
 
-    mul-int/2addr v0, v1
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    iget-boolean v2, p0, Llsc;->b:Z
+    invoke-interface {v1}, Llob;->r()Ljob;
 
-    invoke-static {v0, v1, v2}, Lcbh;->j(IIZ)I
+    move-result-object p1
 
-    move-result v0
+    iget p1, p1, Ljob;->c:I
 
-    iget-boolean v2, p0, Llsc;->c:Z
+    invoke-virtual {v0, p1}, Landroid/view/View;->setBackgroundColor(I)V
 
-    invoke-static {v0, v1, v2}, Lcbh;->j(IIZ)I
+    sget-object p1, Lmah;->a:Lmah;
 
-    move-result v0
+    return-object p1
 
-    iget-boolean v2, p0, Llsc;->d:Z
+    :pswitch_0
+    iget-object v0, p0, Llsc;->X:Lmpb;
 
-    invoke-static {v0, v1, v2}, Lcbh;->j(IIZ)I
+    iget-object v1, p0, Llsc;->Y:Llob;
 
-    move-result v0
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    iget-boolean v1, p0, Llsc;->e:Z
+    invoke-interface {v1}, Llob;->b()Lqc5;
 
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+    move-result-object p1
 
-    move-result v1
+    iget p1, p1, Lqc5;->b:I
 
-    add-int/2addr v1, v0
+    invoke-virtual {v0, p1}, Landroid/view/View;->setBackgroundColor(I)V
 
-    return v1
-.end method
+    sget-object p1, Lmah;->a:Lmah;
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+    return-object p1
 
-    const-string v0, ", canAddMembers="
+    :pswitch_1
+    iget-object v0, p0, Llsc;->X:Lmpb;
 
-    const-string v1, ", canPinMessage="
+    iget-object v1, p0, Llsc;->Y:Llob;
 
-    const-string v2, "ProfileMemberPermissionsModel(changePhoto="
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    iget-boolean v3, p0, Llsc;->a:Z
+    invoke-interface {v1}, Llob;->b()Lqc5;
 
-    iget-boolean v4, p0, Llsc;->b:Z
+    move-result-object p1
 
-    invoke-static {v2, v3, v0, v4, v1}, Lj27;->p(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/StringBuilder;
+    iget p1, p1, Lqc5;->a:I
 
-    move-result-object v0
+    invoke-virtual {v0, p1}, Landroid/view/View;->setBackgroundColor(I)V
 
-    const-string v1, ", canCallInChat="
+    sget-object p1, Lmah;->a:Lmah;
 
-    const-string v2, ", canSeePrivateChatLink="
+    return-object p1
 
-    iget-boolean v3, p0, Llsc;->c:Z
-
-    iget-boolean v4, p0, Llsc;->d:Z
-
-    invoke-static {v1, v2, v0, v3, v4}, Lt02;->r(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
-
-    const-string v1, ")"
-
-    iget-boolean v2, p0, Llsc;->e:Z
-
-    invoke-static {v0, v2, v1}, Lt02;->j(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

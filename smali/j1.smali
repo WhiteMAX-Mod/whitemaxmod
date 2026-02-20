@@ -1,135 +1,65 @@
 .class public final Lj1;
-.super Ly2j;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
 
-# virtual methods
-.method public final a(Lu1;Ld1;Ld1;)Z
-    .locals 1
 
-    monitor-enter p1
+# instance fields
+.field public final a:Lz2f;
 
-    :try_start_0
-    iget-object v0, p1, Lu1;->b:Ld1;
+.field public final b:Lah8;
 
-    if-ne v0, p2, :cond_0
 
-    iput-object p3, p1, Lu1;->b:Ld1;
-
-    const/4 p2, 0x1
-
-    monitor-exit p1
-
-    return p2
-
-    :catchall_0
-    move-exception p2
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p2, 0x0
-
-    monitor-exit p1
-
-    return p2
-
-    :goto_0
-    monitor-exit p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p2
-.end method
-
-.method public final b(Lu1;Ljava/lang/Object;Ljava/lang/Object;)Z
-    .locals 1
-
-    monitor-enter p1
-
-    :try_start_0
-    iget-object v0, p1, Lu1;->a:Ljava/lang/Object;
-
-    if-ne v0, p2, :cond_0
-
-    iput-object p3, p1, Lu1;->a:Ljava/lang/Object;
-
-    const/4 p2, 0x1
-
-    monitor-exit p1
-
-    return p2
-
-    :catchall_0
-    move-exception p2
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p2, 0x0
-
-    monitor-exit p1
-
-    return p2
-
-    :goto_0
-    monitor-exit p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p2
-.end method
-
-.method public final c(Lu1;Ls1;Ls1;)Z
-    .locals 1
-
-    monitor-enter p1
-
-    :try_start_0
-    iget-object v0, p1, Lu1;->c:Ls1;
-
-    if-ne v0, p2, :cond_0
-
-    iput-object p3, p1, Lu1;->c:Ls1;
-
-    const/4 p2, 0x1
-
-    monitor-exit p1
-
-    return p2
-
-    :catchall_0
-    move-exception p2
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p2, 0x0
-
-    monitor-exit p1
-
-    return p2
-
-    :goto_0
-    monitor-exit p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p2
-.end method
-
-.method public final h(Ls1;Ls1;)V
+# direct methods
+.method public constructor <init>(Lz2f;Lah8;)V
     .locals 0
 
-    iput-object p2, p1, Ls1;->b:Ls1;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lj1;->a:Lz2f;
+
+    iput-object p2, p0, Lj1;->b:Lah8;
 
     return-void
 .end method
 
-.method public final i(Ls1;Ljava/lang/Thread;)V
-    .locals 0
 
-    iput-object p2, p1, Ls1;->a:Ljava/lang/Thread;
+# virtual methods
+.method public final run()V
+    .locals 3
 
+    iget-object v0, p0, Lj1;->a:Lz2f;
+
+    iget-object v0, v0, Lw1;->a:Ljava/lang/Object;
+
+    if-eq v0, p0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, p0, Lj1;->b:Lah8;
+
+    invoke-static {v0}, Lw1;->f(Lah8;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    sget-object v1, Lw1;->X:Lkbj;
+
+    iget-object v2, p0, Lj1;->a:Lz2f;
+
+    invoke-virtual {v1, v2, p0, v0}, Lkbj;->c(Lw1;Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lj1;->a:Lz2f;
+
+    invoke-static {v0}, Lw1;->c(Lw1;)V
+
+    :cond_1
+    :goto_0
     return-void
 .end method

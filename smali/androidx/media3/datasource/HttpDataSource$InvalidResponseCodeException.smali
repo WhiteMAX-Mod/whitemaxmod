@@ -17,7 +17,7 @@
 
     const-string p2, "Response code: "
 
-    invoke-static {p1, p2}, Lj27;->g(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, p2}, Ltx8;->g(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 

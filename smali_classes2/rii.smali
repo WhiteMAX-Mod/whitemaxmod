@@ -1,37 +1,152 @@
-.class public final Lrii;
-.super Ljava/lang/Object;
+.class public final enum Lrii;
+.super Ljava/lang/Enum;
 .source "SourceFile"
+
+# interfaces
+.implements Lrdi;
+
+
+# static fields
+.field public static final synthetic X:[Lrii;
+
+.field public static final synthetic Y:Lpm5;
+
+.field public static final enum d:Lrii;
+
+.field public static final enum o:Lrii;
 
 
 # instance fields
-.field public final a:Lru/ok/messages/a;
+.field public final a:Ljava/lang/String;
 
-.field public final b:Lxii;
+.field public final b:Ljava/lang/String;
 
-.field public final c:Lo58;
+.field public final c:Ljava/lang/Integer;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/messages/a;Lxii;Lo58;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 7
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lrii;
 
-    iput-object p1, p0, Lrii;->a:Lru/ok/messages/a;
+    const/16 v1, 0xe
 
-    iput-object p2, p0, Lrii;->b:Lxii;
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    iput-object p3, p0, Lrii;->c:Lo58;
+    move-result-object v5
 
-    new-instance p1, Lroh;
+    const-string v1, "SHARE"
 
-    const/16 p2, 0x8
+    const/4 v2, 0x0
 
-    invoke-direct {p1, p2, p0}, Lroh;-><init>(ILjava/lang/Object;)V
+    const-string v3, "WebAppShare"
 
-    const/4 p2, 0x3
+    const-string v4, "web_app_share"
 
-    invoke-static {p2, p1}, Le8;->b(ILlq6;)Lo58;
+    invoke-direct/range {v0 .. v5}, Lrii;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
+
+    sput-object v0, Lrii;->d:Lrii;
+
+    new-instance v1, Lrii;
+
+    const/16 v2, 0xf
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v6
+
+    const-string v2, "MAX_SHARE"
+
+    const/4 v3, 0x1
+
+    const-string v4, "WebAppMaxShare"
+
+    const-string v5, "web_app_max_share"
+
+    invoke-direct/range {v1 .. v6}, Lrii;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
+
+    sput-object v1, Lrii;->o:Lrii;
+
+    filled-new-array {v0, v1}, [Lrii;
+
+    move-result-object v0
+
+    sput-object v0, Lrii;->X:[Lrii;
+
+    new-instance v1, Lpm5;
+
+    invoke-direct {v1, v0}, Lpm5;-><init>([Ljava/lang/Enum;)V
+
+    sput-object v1, Lrii;->Y:Lpm5;
 
     return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    iput-object p3, p0, Lrii;->a:Ljava/lang/String;
+
+    iput-object p4, p0, Lrii;->b:Ljava/lang/String;
+
+    iput-object p5, p0, Lrii;->c:Ljava/lang/Integer;
+
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lrii;
+    .locals 1
+
+    const-class v0, Lrii;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lrii;
+
+    return-object p0
+.end method
+
+.method public static values()[Lrii;
+    .locals 1
+
+    sget-object v0, Lrii;->X:[Lrii;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lrii;
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final a()Ljava/lang/Integer;
+    .locals 1
+
+    iget-object v0, p0, Lrii;->c:Ljava/lang/Integer;
+
+    return-object v0
+.end method
+
+.method public final b()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lrii;->a:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final d()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lrii;->b:Ljava/lang/String;
+
+    return-object v0
 .end method

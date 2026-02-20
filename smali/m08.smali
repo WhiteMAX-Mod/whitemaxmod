@@ -1,147 +1,43 @@
 .class public final Lm08;
-.super Ljava/lang/Object;
+.super Lao4;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Z
+# static fields
+.field public static final b:Lm08;
 
-.field public final b:Z
-
-.field public final c:Z
-
-.field public final d:Ljava/lang/String;
-
-.field public final e:Ljava/lang/String;
-
-.field public final f:Z
-
-.field public final g:I
+.field public static final c:Lwn4;
 
 
 # direct methods
-.method public constructor <init>(ILjava/lang/String;Ljava/lang/String;ZZZZ)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lm08;
 
-    iput-boolean p4, p0, Lm08;->a:Z
+    invoke-direct {v0}, Lao4;-><init>()V
 
-    iput-boolean p5, p0, Lm08;->b:Z
+    sput-object v0, Lm08;->b:Lm08;
 
-    iput-boolean p6, p0, Lm08;->c:Z
+    const-string v1, "id"
 
-    iput-object p2, p0, Lm08;->d:Ljava/lang/String;
+    const-string v2, "link"
 
-    iput-object p3, p0, Lm08;->e:Ljava/lang/String;
+    filled-new-array {v1, v2}, [Ljava/lang/String;
 
-    iput-boolean p7, p0, Lm08;->f:Z
+    move-result-object v1
 
-    iput p1, p0, Lm08;->g:I
+    const/4 v2, 0x0
 
-    return-void
-.end method
+    const/16 v3, 0xe
 
+    const-string v4, ":join"
 
-# virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "JsonConfiguration(encodeDefaults=false, ignoreUnknownKeys="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-boolean v1, p0, Lm08;->a:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isLenient="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lm08;->b:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", allowStructuredMapKeys=false, prettyPrint=false, explicitNulls="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lm08;->c:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", prettyPrintIndent=\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lm08;->d:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\', coerceInputValues=false, useArrayPolymorphism=false, classDiscriminator=\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lm08;->e:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\', allowSpecialFloatingPointValues=false, useAlternativeNames="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lm08;->f:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", namingStrategy=null, decodeEnumsCaseInsensitive=false, allowTrailingComma=false, allowComments=false, classDiscriminatorMode="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/4 v1, 0x1
-
-    iget v2, p0, Lm08;->g:I
-
-    if-eq v2, v1, :cond_2
-
-    const/4 v1, 0x2
-
-    if-eq v2, v1, :cond_1
-
-    const/4 v1, 0x3
-
-    if-eq v2, v1, :cond_0
-
-    const-string v1, "null"
-
-    goto :goto_0
-
-    :cond_0
-    const-string v1, "POLYMORPHIC"
-
-    goto :goto_0
-
-    :cond_1
-    const-string v1, "ALL_JSON_OBJECTS"
-
-    goto :goto_0
-
-    :cond_2
-    const-string v1, "NONE"
-
-    :goto_0
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x29
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, v4, v1, v2, v3}, Lao4;->c(Lao4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lwn4;
 
     move-result-object v0
 
-    return-object v0
+    sput-object v0, Lm08;->c:Lwn4;
+
+    return-void
 .end method

@@ -1,126 +1,242 @@
 .class public final Lny1;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Lb5d;
 
 
 # instance fields
-.field public final synthetic X:Loy1;
-
-.field public final synthetic Y:Ljk0;
-
-.field public o:I
+.field public final synthetic a:Lsy1;
 
 
 # direct methods
-.method public constructor <init>(Loy1;Ljk0;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lsy1;)V
     .locals 0
 
-    iput-object p1, p0, Lny1;->X:Loy1;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lny1;->Y:Ljk0;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lny1;->a:Lsy1;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a()V
+    .locals 9
 
-    check-cast p1, Lzb4;
+    iget-object v0, p0, Lny1;->a:Lsy1;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v1, v0, Lsy1;->d:Ldxb;
 
-    invoke-virtual {p0, p1, p2}, Lny1;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    check-cast v1, Ltxb;
 
-    move-result-object p1
+    invoke-virtual {v1}, Ltxb;->c()Luwb;
 
-    check-cast p1, Lny1;
+    move-result-object v1
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    iget-object v2, v0, Lsy1;->b:Lq41;
 
-    invoke-virtual {p1, p2}, Lny1;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    check-cast v2, Lr41;
 
-    move-result-object p1
+    invoke-virtual {v2}, Lr41;->b()Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
 
-    return-object p1
-.end method
+    move-result-object v2
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    invoke-virtual {v2}, Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;->getDeviceType()Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$AudioDeviceType;
 
-    new-instance p1, Lny1;
+    move-result-object v2
 
-    iget-object v0, p0, Lny1;->X:Loy1;
+    invoke-virtual {v2}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
-    iget-object v1, p0, Lny1;->Y:Ljk0;
+    move-result-object v2
 
-    invoke-direct {p1, v0, v1, p2}, Lny1;-><init>(Loy1;Ljk0;Lkotlin/coroutines/Continuation;)V
+    const-string v3, "speakerphone"
 
-    return-object p1
-.end method
+    invoke-static {v2, v3}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+    move-result v2
 
-    iget v0, p0, Lny1;->o:I
+    iget-object v3, v0, Lsy1;->h:Lbje;
 
-    const/4 v1, 0x1
+    invoke-virtual {v3}, Lbje;->c()Z
 
-    if-eqz v0, :cond_1
+    move-result v3
 
-    if-ne v0, v1, :cond_0
+    iget-object v4, v0, Lsy1;->a:Lvy1;
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    check-cast v4, Lkz1;
+
+    invoke-virtual {v4}, Lkz1;->m()Lng4;
+
+    move-result-object v4
+
+    iget-boolean v4, v4, Lng4;->i:Z
+
+    const/4 v5, 0x1
+
+    const/4 v6, 0x0
+
+    if-nez v4, :cond_1
+
+    iget-object v4, v0, Lsy1;->d:Ldxb;
+
+    check-cast v4, Ltxb;
+
+    iget-object v4, v4, Ltxb;->z0:Lhxf;
+
+    invoke-virtual {v4}, Lhxf;->getValue()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lexb;
+
+    iget-boolean v4, v4, Lexb;->h:Z
+
+    if-eqz v4, :cond_0
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    move v4, v6
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    goto :goto_1
 
     :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    :goto_0
+    move v4, v5
 
-    iget-object p1, p0, Lny1;->X:Loy1;
+    :goto_1
+    invoke-virtual {v0}, Lsy1;->f()Lhxf;
 
-    iget-object p1, p1, Loy1;->a:Li7f;
+    move-result-object v7
 
-    new-instance v0, Lxb1;
+    invoke-virtual {v7}, Lhxf;->getValue()Ljava/lang/Object;
 
-    iget-object v2, p0, Lny1;->Y:Ljk0;
+    move-result-object v7
 
-    iget-wide v2, v2, Lkk0;->a:J
+    check-cast v7, Lake;
 
-    invoke-direct {v0, v2, v3}, Lxb1;-><init>(J)V
+    iget-object v7, v7, Lake;->a:Lbke;
 
-    iput v1, p0, Lny1;->o:I
+    sget-object v8, Lbke;->a:Lbke;
 
-    invoke-virtual {p1, v0, p0}, Li7f;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    if-ne v7, v8, :cond_3
 
-    move-result-object p1
+    invoke-virtual {v0}, Lsy1;->f()Lhxf;
 
-    sget-object v0, Lac4;->a:Lac4;
+    move-result-object v7
 
-    if-ne p1, v0, :cond_2
+    invoke-virtual {v7}, Lhxf;->getValue()Ljava/lang/Object;
 
-    return-object v0
+    move-result-object v7
+
+    check-cast v7, Lake;
+
+    iget-object v7, v7, Lake;->b:Loje;
+
+    if-eqz v7, :cond_2
+
+    iget-object v7, v7, Loje;->c:Lpl1;
+
+    goto :goto_2
 
     :cond_2
-    :goto_0
-    sget-object p1, Lb3h;->a:Lb3h;
+    const/4 v7, 0x0
 
-    return-object p1
+    :goto_2
+    iget-object v8, v1, Luwb;->a:Lrl1;
+
+    invoke-interface {v8}, Lrl1;->getId()Lpl1;
+
+    move-result-object v8
+
+    invoke-static {v7, v8}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v7
+
+    if-nez v7, :cond_4
+
+    iget-object v1, v1, Luwb;->a:Lrl1;
+
+    invoke-interface {v1}, Lrl1;->m()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    goto :goto_3
+
+    :cond_3
+    move v5, v6
+
+    :cond_4
+    :goto_3
+    if-nez v4, :cond_7
+
+    if-nez v2, :cond_7
+
+    if-nez v3, :cond_7
+
+    if-eqz v5, :cond_5
+
+    goto :goto_5
+
+    :cond_5
+    iget-object v0, v0, Lsy1;->j:Lc5d;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    :try_start_0
+    iget-object v0, v0, Lc5d;->f:Landroid/os/PowerManager$WakeLock;
+
+    if-eqz v0, :cond_6
+
+    invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->acquire()V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_4
+
+    :cond_6
+    return-void
+
+    :goto_4
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object v1
+
+    new-array v2, v6, [Ljava/lang/Object;
+
+    const-string v3, "ProximityHelperTag"
+
+    invoke-static {v3, v0, v1, v2}, Ltej;->i(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    return-void
+
+    :cond_7
+    :goto_5
+    iget-object v0, v0, Lsy1;->j:Lc5d;
+
+    invoke-virtual {v0}, Lc5d;->c()V
+
+    return-void
+.end method
+
+.method public final b()V
+    .locals 1
+
+    iget-object v0, p0, Lny1;->a:Lsy1;
+
+    iget-object v0, v0, Lsy1;->j:Lc5d;
+
+    invoke-virtual {v0}, Lc5d;->c()V
+
+    return-void
 .end method

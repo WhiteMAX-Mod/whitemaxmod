@@ -2,993 +2,790 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final f:Landroid/graphics/PorterDuff$Mode;
-
-.field public static g:Loyd;
-
-.field public static final h:Lgq0;
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public a:Ljava/util/WeakHashMap;
+.field public X:Z
 
-.field public final b:Ljava/util/WeakHashMap;
+.field public final synthetic Y:Landroidx/recyclerview/widget/RecyclerView;
 
-.field public c:Landroid/util/TypedValue;
+.field public a:I
 
-.field public d:Z
+.field public b:I
 
-.field public e:Lkf6;
+.field public c:Landroid/widget/OverScroller;
+
+.field public d:Landroid/view/animation/Interpolator;
+
+.field public o:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
-
-    sget-object v0, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
-
-    sput-object v0, Loyd;->f:Landroid/graphics/PorterDuff$Mode;
-
-    new-instance v0, Lgq0;
-
-    const/4 v1, 0x6
-
-    const/4 v2, 0x2
-
-    invoke-direct {v0, v1, v2}, Lgq0;-><init>(II)V
-
-    sput-object v0, Loyd;->h:Lgq0;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
+.method public constructor <init>(Landroidx/recyclerview/widget/RecyclerView;)V
     .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/WeakHashMap;
+    iput-object p1, p0, Loyd;->Y:Landroidx/recyclerview/widget/RecyclerView;
+
+    sget-object v0, Landroidx/recyclerview/widget/RecyclerView;->S1:Lvx7;
+
+    iput-object v0, p0, Loyd;->d:Landroid/view/animation/Interpolator;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Ljava/util/WeakHashMap;-><init>(I)V
+    iput-boolean v1, p0, Loyd;->o:Z
 
-    iput-object v0, p0, Loyd;->b:Ljava/util/WeakHashMap;
+    iput-boolean v1, p0, Loyd;->X:Z
+
+    new-instance v1, Landroid/widget/OverScroller;
+
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    invoke-direct {v1, p1, v0}, Landroid/widget/OverScroller;-><init>(Landroid/content/Context;Landroid/view/animation/Interpolator;)V
+
+    iput-object v1, p0, Loyd;->c:Landroid/widget/OverScroller;
 
     return-void
 .end method
 
-.method public static declared-synchronized b()Loyd;
-    .locals 2
-
-    const-class v0, Loyd;
-
-    monitor-enter v0
-
-    :try_start_0
-    sget-object v1, Loyd;->g:Loyd;
-
-    if-nez v1, :cond_0
-
-    new-instance v1, Loyd;
-
-    invoke-direct {v1}, Loyd;-><init>()V
-
-    sput-object v1, Loyd;->g:Loyd;
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v1
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    sget-object v1, Loyd;->g:Loyd;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit v0
-
-    return-object v1
-
-    :goto_1
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v1
-.end method
-
-.method public static declared-synchronized e(ILandroid/graphics/PorterDuff$Mode;)Landroid/graphics/PorterDuffColorFilter;
-    .locals 4
-
-    const-class v0, Loyd;
-
-    monitor-enter v0
-
-    :try_start_0
-    sget-object v1, Loyd;->h:Lgq0;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/16 v2, 0x1f
-
-    add-int v3, v2, p0
-
-    mul-int/2addr v3, v2
-
-    invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v2
-
-    add-int/2addr v2, v3
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Lzo8;->c(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/graphics/PorterDuffColorFilter;
-
-    if-nez v2, :cond_0
-
-    new-instance v2, Landroid/graphics/PorterDuffColorFilter;
-
-    invoke-direct {v2, p0, p1}, Landroid/graphics/PorterDuffColorFilter;-><init>(ILandroid/graphics/PorterDuff$Mode;)V
-
-    invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
-
-    move-result p0
-
-    add-int/2addr p0, v3
-
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p0
-
-    invoke-virtual {v1, p0, v2}, Lzo8;->d(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Landroid/graphics/PorterDuffColorFilter;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p0
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    monitor-exit v0
-
-    return-object v2
-
-    :goto_1
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p0
-.end method
-
 
 # virtual methods
-.method public final a(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-    .locals 6
+.method public final a(II)V
+    .locals 12
 
-    iget-object v0, p0, Loyd;->c:Landroid/util/TypedValue;
+    const/4 v0, 0x2
 
-    if-nez v0, :cond_0
+    iget-object v1, p0, Loyd;->Y:Landroidx/recyclerview/widget/RecyclerView;
 
-    new-instance v0, Landroid/util/TypedValue;
-
-    invoke-direct {v0}, Landroid/util/TypedValue;-><init>()V
-
-    iput-object v0, p0, Loyd;->c:Landroid/util/TypedValue;
-
-    :cond_0
-    iget-object v0, p0, Loyd;->c:Landroid/util/TypedValue;
-
-    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v1, p2, v0, v2}, Landroid/content/res/Resources;->getValue(ILandroid/util/TypedValue;Z)V
-
-    iget v1, v0, Landroid/util/TypedValue;->assetCookie:I
-
-    int-to-long v1, v1
-
-    const/16 v3, 0x20
-
-    shl-long/2addr v1, v3
-
-    iget v3, v0, Landroid/util/TypedValue;->data:I
-
-    int-to-long v3, v3
-
-    or-long/2addr v1, v3
-
-    monitor-enter p0
-
-    :try_start_0
-    iget-object v3, p0, Loyd;->b:Ljava/util/WeakHashMap;
-
-    invoke-virtual {v3, p1}, Ljava/util/WeakHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lfo8;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    const/4 v4, 0x0
-
-    if-nez v3, :cond_1
-
-    monitor-exit p0
-
-    goto :goto_0
-
-    :cond_1
-    :try_start_1
-    invoke-virtual {v3, v1, v2}, Lfo8;->b(J)Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Ljava/lang/ref/WeakReference;
-
-    if-eqz v5, :cond_3
-
-    invoke-virtual {v5}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Landroid/graphics/drawable/Drawable$ConstantState;
-
-    if-eqz v5, :cond_2
-
-    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v5, v3}, Landroid/graphics/drawable/Drawable$ConstantState;->newDrawable(Landroid/content/res/Resources;)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v4
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    monitor-exit p0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    goto/16 :goto_5
-
-    :cond_2
-    :try_start_2
-    invoke-virtual {v3, v1, v2}, Lfo8;->f(J)V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    :cond_3
-    monitor-exit p0
-
-    :goto_0
-    if-eqz v4, :cond_4
-
-    return-object v4
-
-    :cond_4
-    iget-object v3, p0, Loyd;->e:Lkf6;
-
-    const/4 v4, 0x0
-
-    if-nez v3, :cond_5
-
-    goto :goto_1
-
-    :cond_5
-    sget v3, Ln7d;->abc_cab_background_top_material:I
-
-    if-ne p2, v3, :cond_6
-
-    new-instance v4, Landroid/graphics/drawable/LayerDrawable;
-
-    sget p2, Ln7d;->abc_cab_background_internal_bg:I
-
-    invoke-virtual {p0, p1, p2}, Loyd;->d(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object p2
-
-    sget v3, Ln7d;->abc_cab_background_top_mtrl_alpha:I
-
-    invoke-virtual {p0, p1, v3}, Loyd;->d(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v3
-
-    filled-new-array {p2, v3}, [Landroid/graphics/drawable/Drawable;
-
-    move-result-object p2
-
-    invoke-direct {v4, p2}, Landroid/graphics/drawable/LayerDrawable;-><init>([Landroid/graphics/drawable/Drawable;)V
-
-    goto :goto_1
-
-    :cond_6
-    sget v3, Ln7d;->abc_ratingbar_material:I
-
-    if-ne p2, v3, :cond_7
-
-    sget p2, Lg6d;->abc_star_big:I
-
-    invoke-static {p0, p1, p2}, Lkf6;->e(Loyd;Landroid/content/Context;I)Landroid/graphics/drawable/LayerDrawable;
-
-    move-result-object v4
-
-    goto :goto_1
-
-    :cond_7
-    sget v3, Ln7d;->abc_ratingbar_indicator_material:I
-
-    if-ne p2, v3, :cond_8
-
-    sget p2, Lg6d;->abc_star_medium:I
-
-    invoke-static {p0, p1, p2}, Lkf6;->e(Loyd;Landroid/content/Context;I)Landroid/graphics/drawable/LayerDrawable;
-
-    move-result-object v4
-
-    goto :goto_1
-
-    :cond_8
-    sget v3, Ln7d;->abc_ratingbar_small_material:I
-
-    if-ne p2, v3, :cond_9
-
-    sget p2, Lg6d;->abc_star_small:I
-
-    invoke-static {p0, p1, p2}, Lkf6;->e(Loyd;Landroid/content/Context;I)Landroid/graphics/drawable/LayerDrawable;
-
-    move-result-object v4
-
-    :cond_9
-    :goto_1
-    if-eqz v4, :cond_c
-
-    iget p2, v0, Landroid/util/TypedValue;->changingConfigurations:I
-
-    invoke-virtual {v4, p2}, Landroid/graphics/drawable/Drawable;->setChangingConfigurations(I)V
-
-    monitor-enter p0
-
-    :try_start_3
-    invoke-virtual {v4}, Landroid/graphics/drawable/Drawable;->getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;
-
-    move-result-object p2
-
-    if-eqz p2, :cond_b
-
-    iget-object v0, p0, Loyd;->b:Ljava/util/WeakHashMap;
-
-    invoke-virtual {v0, p1}, Ljava/util/WeakHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lfo8;
-
-    if-nez v0, :cond_a
-
-    new-instance v0, Lfo8;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v0, v3}, Lfo8;-><init>(Ljava/lang/Object;)V
-
-    iget-object v3, p0, Loyd;->b:Ljava/util/WeakHashMap;
-
-    invoke-virtual {v3, p1, v0}, Ljava/util/WeakHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    goto :goto_2
-
-    :catchall_1
-    move-exception p1
-
-    goto :goto_4
-
-    :cond_a
-    :goto_2
-    new-instance p1, Ljava/lang/ref/WeakReference;
-
-    invoke-direct {p1, p2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    invoke-virtual {v0, v1, v2, p1}, Lfo8;->e(JLjava/lang/Object;)V
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
-    monitor-exit p0
-
-    goto :goto_3
-
-    :cond_b
-    monitor-exit p0
-
-    :goto_3
-    return-object v4
-
-    :goto_4
-    :try_start_4
-    monitor-exit p0
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_1
-
-    throw p1
-
-    :cond_c
-    return-object v4
-
-    :goto_5
-    :try_start_5
-    monitor-exit p0
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_0
-
-    throw p1
-.end method
-
-.method public final declared-synchronized c(ILandroid/content/Context;Z)Landroid/graphics/drawable/Drawable;
-    .locals 2
-
-    monitor-enter p0
-
-    :try_start_0
-    iget-boolean v0, p0, Loyd;->d:Z
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Loyd;->d:Z
-
-    sget v0, Lr6d;->abc_vector_test:I
-
-    invoke-virtual {p0, p2, v0}, Loyd;->d(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_5
-
-    instance-of v1, v0, Lwch;
-
-    if-nez v1, :cond_1
-
-    const-string v1, "android.graphics.drawable.VectorDrawable"
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_5
-
-    :cond_1
-    :goto_0
-    invoke-virtual {p0, p2, p1}, Loyd;->a(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    if-nez v0, :cond_2
-
-    invoke-static {p2, p1}, Lq74;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    goto :goto_1
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_2
-
-    :cond_2
-    :goto_1
-    if-eqz v0, :cond_3
-
-    invoke-virtual {p0, p2, p1, p3, v0}, Loyd;->g(Landroid/content/Context;IZLandroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    :cond_3
-    if-eqz v0, :cond_4
-
-    invoke-static {v0}, Lf85;->a(Landroid/graphics/drawable/Drawable;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :cond_4
-    monitor-exit p0
-
-    return-object v0
-
-    :cond_5
-    const/4 p1, 0x0
-
-    :try_start_1
-    iput-boolean p1, p0, Loyd;->d:Z
-
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string p2, "This app has been built with an incorrect configuration. Please configure your build for VectorDrawableCompat."
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :goto_2
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
-.end method
-
-.method public final declared-synchronized d(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-    .locals 1
-
-    monitor-enter p0
+    invoke-virtual {v1, v0}, Landroidx/recyclerview/widget/RecyclerView;->setScrollState(I)V
 
     const/4 v0, 0x0
 
-    :try_start_0
-    invoke-virtual {p0, p2, p1, v0}, Loyd;->c(ILandroid/content/Context;Z)Landroid/graphics/drawable/Drawable;
+    iput v0, p0, Loyd;->b:I
 
-    move-result-object p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    iput v0, p0, Loyd;->a:I
 
-    monitor-exit p0
+    iget-object v0, p0, Loyd;->d:Landroid/view/animation/Interpolator;
 
-    return-object p1
+    sget-object v2, Landroidx/recyclerview/widget/RecyclerView;->S1:Lvx7;
 
-    :catchall_0
-    move-exception p1
+    if-eq v0, v2, :cond_0
 
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    iput-object v2, p0, Loyd;->d:Landroid/view/animation/Interpolator;
 
-    throw p1
-.end method
+    new-instance v0, Landroid/widget/OverScroller;
 
-.method public final declared-synchronized f(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
-    .locals 3
-
-    monitor-enter p0
-
-    :try_start_0
-    iget-object v0, p0, Loyd;->a:Ljava/util/WeakHashMap;
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0, p1}, Ljava/util/WeakHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lakf;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0, p2}, Lakf;->b(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/content/res/ColorStateList;
-
-    goto :goto_0
-
-    :cond_0
-    move-object v0, v1
-
-    :goto_0
-    if-nez v0, :cond_5
-
-    iget-object v0, p0, Loyd;->e:Lkf6;
-
-    if-nez v0, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v0, p1, p2}, Lkf6;->g(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
+    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    :goto_1
-    if-eqz v1, :cond_4
+    invoke-direct {v0, v1, v2}, Landroid/widget/OverScroller;-><init>(Landroid/content/Context;Landroid/view/animation/Interpolator;)V
 
-    iget-object v0, p0, Loyd;->a:Ljava/util/WeakHashMap;
+    iput-object v0, p0, Loyd;->c:Landroid/widget/OverScroller;
 
-    if-nez v0, :cond_2
+    :cond_0
+    iget-object v3, p0, Loyd;->c:Landroid/widget/OverScroller;
 
-    new-instance v0, Ljava/util/WeakHashMap;
+    const/high16 v10, -0x80000000
 
-    invoke-direct {v0}, Ljava/util/WeakHashMap;-><init>()V
+    const v11, 0x7fffffff
 
-    iput-object v0, p0, Loyd;->a:Ljava/util/WeakHashMap;
+    const/4 v4, 0x0
 
-    :cond_2
-    iget-object v0, p0, Loyd;->a:Ljava/util/WeakHashMap;
+    const/4 v5, 0x0
 
-    invoke-virtual {v0, p1}, Ljava/util/WeakHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    const/high16 v8, -0x80000000
 
-    move-result-object v0
+    const v9, 0x7fffffff
 
-    check-cast v0, Lakf;
+    move v6, p1
 
-    if-nez v0, :cond_3
+    move v7, p2
 
-    new-instance v0, Lakf;
+    invoke-virtual/range {v3 .. v11}, Landroid/widget/OverScroller;->fling(IIIIIIII)V
 
-    const/4 v2, 0x0
+    invoke-virtual {p0}, Loyd;->b()V
 
-    invoke-direct {v0, v2}, Lakf;-><init>(I)V
-
-    iget-object v2, p0, Loyd;->a:Ljava/util/WeakHashMap;
-
-    invoke-virtual {v2, p1, v0}, Ljava/util/WeakHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_3
-    invoke-virtual {v0, p2, v1}, Lakf;->a(ILjava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :cond_4
-    move-object v0, v1
-
-    goto :goto_2
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_3
-
-    :cond_5
-    :goto_2
-    monitor-exit p0
-
-    return-object v0
-
-    :goto_3
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
+    return-void
 .end method
 
-.method public final g(Landroid/content/Context;IZLandroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
-    .locals 7
+.method public final b()V
+    .locals 2
 
-    invoke-virtual {p0, p1, p2}, Loyd;->f(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
+    iget-boolean v0, p0, Loyd;->o:Z
 
-    move-result-object v0
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Loyd;->X:Z
+
+    return-void
+
+    :cond_0
+    iget-object v0, p0, Loyd;->Y:Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-virtual {v0, p0}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
+
+    sget-object v1, Lh0i;->a:Ljava/util/WeakHashMap;
+
+    invoke-virtual {v0, p0}, Landroid/view/View;->postOnAnimation(Ljava/lang/Runnable;)V
+
+    return-void
+.end method
+
+.method public final c(IIILandroid/view/animation/Interpolator;)V
+    .locals 9
+
+    const/high16 v0, -0x80000000
 
     const/4 v1, 0x0
 
-    if-eqz v0, :cond_3
+    iget-object v2, p0, Loyd;->Y:Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-virtual {p4}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+    if-ne p3, v0, :cond_3
 
-    move-result-object p1
+    invoke-static {p1}, Ljava/lang/Math;->abs(I)I
 
-    invoke-static {p1, v0}, Lv75;->h(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
+    move-result p3
 
-    iget-object p3, p0, Loyd;->e:Lkf6;
+    invoke-static {p2}, Ljava/lang/Math;->abs(I)I
 
-    if-nez p3, :cond_0
+    move-result v0
+
+    if-le p3, v0, :cond_0
+
+    const/4 v3, 0x1
 
     goto :goto_0
 
     :cond_0
-    sget p3, Ln7d;->abc_switch_thumb_material:I
+    move v3, v1
 
-    if-ne p2, p3, :cond_1
+    :goto_0
+    if-eqz v3, :cond_1
 
-    sget-object v1, Landroid/graphics/PorterDuff$Mode;->MULTIPLY:Landroid/graphics/PorterDuff$Mode;
+    invoke-virtual {v2}, Landroid/view/View;->getWidth()I
+
+    move-result v4
+
+    goto :goto_1
 
     :cond_1
-    :goto_0
-    if-eqz v1, :cond_2
-
-    invoke-static {p1, v1}, Lv75;->i(Landroid/graphics/drawable/Drawable;Landroid/graphics/PorterDuff$Mode;)V
-
-    :cond_2
-    return-object p1
-
-    :cond_3
-    iget-object v0, p0, Loyd;->e:Lkf6;
-
-    if-eqz v0, :cond_6
-
-    sget v0, Ln7d;->abc_seekbar_track_material:I
-
-    const v2, 0x102000d
-
-    const v3, 0x102000f
-
-    const/high16 v4, 0x1020000
-
-    if-ne p2, v0, :cond_4
-
-    move-object p2, p4
-
-    check-cast p2, Landroid/graphics/drawable/LayerDrawable;
-
-    invoke-virtual {p2, v4}, Landroid/graphics/drawable/LayerDrawable;->findDrawableByLayerId(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object p3
-
-    sget v0, Lh5d;->colorControlNormal:I
-
-    invoke-static {p1, v0}, Ljjg;->c(Landroid/content/Context;I)I
-
-    move-result v0
-
-    sget-object v1, Lno;->b:Landroid/graphics/PorterDuff$Mode;
-
-    invoke-static {p3, v0, v1}, Lkf6;->i(Landroid/graphics/drawable/Drawable;ILandroid/graphics/PorterDuff$Mode;)V
-
-    invoke-virtual {p2, v3}, Landroid/graphics/drawable/LayerDrawable;->findDrawableByLayerId(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object p3
-
-    sget v0, Lh5d;->colorControlNormal:I
-
-    invoke-static {p1, v0}, Ljjg;->c(Landroid/content/Context;I)I
-
-    move-result v0
-
-    invoke-static {p3, v0, v1}, Lkf6;->i(Landroid/graphics/drawable/Drawable;ILandroid/graphics/PorterDuff$Mode;)V
-
-    invoke-virtual {p2, v2}, Landroid/graphics/drawable/LayerDrawable;->findDrawableByLayerId(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object p2
-
-    sget p3, Lh5d;->colorControlActivated:I
-
-    invoke-static {p1, p3}, Ljjg;->c(Landroid/content/Context;I)I
-
-    move-result p1
-
-    invoke-static {p2, p1, v1}, Lkf6;->i(Landroid/graphics/drawable/Drawable;ILandroid/graphics/PorterDuff$Mode;)V
-
-    return-object p4
-
-    :cond_4
-    sget v0, Ln7d;->abc_ratingbar_material:I
-
-    if-eq p2, v0, :cond_5
-
-    sget v0, Ln7d;->abc_ratingbar_indicator_material:I
-
-    if-eq p2, v0, :cond_5
-
-    sget v0, Ln7d;->abc_ratingbar_small_material:I
-
-    if-ne p2, v0, :cond_6
-
-    :cond_5
-    move-object p2, p4
-
-    check-cast p2, Landroid/graphics/drawable/LayerDrawable;
-
-    invoke-virtual {p2, v4}, Landroid/graphics/drawable/LayerDrawable;->findDrawableByLayerId(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object p3
-
-    sget v0, Lh5d;->colorControlNormal:I
-
-    invoke-static {p1, v0}, Ljjg;->b(Landroid/content/Context;I)I
-
-    move-result v0
-
-    sget-object v1, Lno;->b:Landroid/graphics/PorterDuff$Mode;
-
-    invoke-static {p3, v0, v1}, Lkf6;->i(Landroid/graphics/drawable/Drawable;ILandroid/graphics/PorterDuff$Mode;)V
-
-    invoke-virtual {p2, v3}, Landroid/graphics/drawable/LayerDrawable;->findDrawableByLayerId(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object p3
-
-    sget v0, Lh5d;->colorControlActivated:I
-
-    invoke-static {p1, v0}, Ljjg;->c(Landroid/content/Context;I)I
-
-    move-result v0
-
-    invoke-static {p3, v0, v1}, Lkf6;->i(Landroid/graphics/drawable/Drawable;ILandroid/graphics/PorterDuff$Mode;)V
-
-    invoke-virtual {p2, v2}, Landroid/graphics/drawable/LayerDrawable;->findDrawableByLayerId(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object p2
-
-    sget p3, Lh5d;->colorControlActivated:I
-
-    invoke-static {p1, p3}, Ljjg;->c(Landroid/content/Context;I)I
-
-    move-result p1
-
-    invoke-static {p2, p1, v1}, Lkf6;->i(Landroid/graphics/drawable/Drawable;ILandroid/graphics/PorterDuff$Mode;)V
-
-    return-object p4
-
-    :cond_6
-    iget-object v0, p0, Loyd;->e:Lkf6;
-
-    const/4 v2, 0x0
-
-    if-eqz v0, :cond_d
-
-    sget-object v3, Lno;->b:Landroid/graphics/PorterDuff$Mode;
-
-    iget-object v4, v0, Lkf6;->a:Ljava/lang/Object;
-
-    check-cast v4, [I
-
-    invoke-static {p2, v4}, Lkf6;->a(I[I)Z
+    invoke-virtual {v2}, Landroid/view/View;->getHeight()I
 
     move-result v4
-
-    const/4 v5, 0x1
-
-    const/4 v6, -0x1
-
-    if-eqz v4, :cond_7
-
-    sget p2, Lh5d;->colorControlNormal:I
 
     :goto_1
-    move v4, v5
-
-    :goto_2
-    move v0, v6
-
-    goto :goto_4
-
-    :cond_7
-    iget-object v4, v0, Lkf6;->c:Ljava/lang/Object;
-
-    check-cast v4, [I
-
-    invoke-static {p2, v4}, Lkf6;->a(I[I)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_8
-
-    sget p2, Lh5d;->colorControlActivated:I
-
-    goto :goto_1
-
-    :cond_8
-    iget-object v0, v0, Lkf6;->d:Ljava/lang/Object;
-
-    check-cast v0, [I
-
-    invoke-static {p2, v0}, Lkf6;->a(I[I)Z
-
-    move-result v0
-
-    const v4, 0x1010031
-
-    if-eqz v0, :cond_9
-
-    sget-object v3, Landroid/graphics/PorterDuff$Mode;->MULTIPLY:Landroid/graphics/PorterDuff$Mode;
-
-    :goto_3
-    move p2, v4
-
-    goto :goto_1
-
-    :cond_9
-    sget v0, Ln7d;->abc_list_divider_mtrl_alpha:I
-
-    if-ne p2, v0, :cond_a
-
-    const p2, 0x42233333    # 40.8f
-
-    invoke-static {p2}, Ljava/lang/Math;->round(F)I
-
-    move-result p2
-
-    const v0, 0x1010030
-
-    move v4, v0
-
-    move v0, p2
-
-    move p2, v4
-
-    move v4, v5
-
-    goto :goto_4
-
-    :cond_a
-    sget v0, Ln7d;->abc_dialog_material_background:I
-
-    if-ne p2, v0, :cond_b
-
-    goto :goto_3
-
-    :cond_b
-    move p2, v2
-
-    move v4, p2
+    if-eqz v3, :cond_2
 
     goto :goto_2
 
-    :goto_4
-    if-eqz v4, :cond_d
+    :cond_2
+    move p3, v0
 
-    invoke-virtual {p4}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+    :goto_2
+    int-to-float p3, p3
 
-    move-result-object v2
+    int-to-float v0, v4
 
-    invoke-static {p1, p2}, Ljjg;->c(Landroid/content/Context;I)I
+    div-float/2addr p3, v0
 
-    move-result p1
+    const/high16 v0, 0x3f800000    # 1.0f
 
-    invoke-static {p1, v3}, Lno;->c(ILandroid/graphics/PorterDuff$Mode;)Landroid/graphics/PorterDuffColorFilter;
+    add-float/2addr p3, v0
 
-    move-result-object p1
+    const/high16 v0, 0x43960000    # 300.0f
 
-    invoke-virtual {v2, p1}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
+    mul-float/2addr p3, v0
 
-    if-eq v0, v6, :cond_c
+    float-to-int p3, p3
 
-    invoke-virtual {v2, v0}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
+    const/16 v0, 0x7d0
+
+    invoke-static {p3, v0}, Ljava/lang/Math;->min(II)I
+
+    move-result p3
+
+    :cond_3
+    move v8, p3
+
+    if-nez p4, :cond_4
+
+    sget-object p4, Landroidx/recyclerview/widget/RecyclerView;->S1:Lvx7;
+
+    :cond_4
+    iget-object p3, p0, Loyd;->d:Landroid/view/animation/Interpolator;
+
+    if-eq p3, p4, :cond_5
+
+    iput-object p4, p0, Loyd;->d:Landroid/view/animation/Interpolator;
+
+    new-instance p3, Landroid/widget/OverScroller;
+
+    invoke-virtual {v2}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-direct {p3, v0, p4}, Landroid/widget/OverScroller;-><init>(Landroid/content/Context;Landroid/view/animation/Interpolator;)V
+
+    iput-object p3, p0, Loyd;->c:Landroid/widget/OverScroller;
+
+    :cond_5
+    iput v1, p0, Loyd;->b:I
+
+    iput v1, p0, Loyd;->a:I
+
+    const/4 p3, 0x2
+
+    invoke-virtual {v2, p3}, Landroidx/recyclerview/widget/RecyclerView;->setScrollState(I)V
+
+    iget-object v3, p0, Loyd;->c:Landroid/widget/OverScroller;
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    move v6, p1
+
+    move v7, p2
+
+    invoke-virtual/range {v3 .. v8}, Landroid/widget/OverScroller;->startScroll(IIIII)V
+
+    invoke-virtual {p0}, Loyd;->b()V
+
+    return-void
+.end method
+
+.method public final run()V
+    .locals 14
+
+    iget-object v0, p0, Loyd;->Y:Landroidx/recyclerview/widget/RecyclerView;
+
+    iget-object v8, v0, Landroidx/recyclerview/widget/RecyclerView;->D1:[I
+
+    iget-object v1, v0, Landroidx/recyclerview/widget/RecyclerView;->A0:Landroidx/recyclerview/widget/a;
+
+    if-nez v1, :cond_0
+
+    invoke-virtual {v0, p0}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
+
+    iget-object v0, p0, Loyd;->c:Landroid/widget/OverScroller;
+
+    invoke-virtual {v0}, Landroid/widget/OverScroller;->abortAnimation()V
+
+    return-void
+
+    :cond_0
+    const/4 v9, 0x0
+
+    iput-boolean v9, p0, Loyd;->X:Z
+
+    const/4 v10, 0x1
+
+    iput-boolean v10, p0, Loyd;->o:Z
+
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->s()V
+
+    iget-object v11, p0, Loyd;->c:Landroid/widget/OverScroller;
+
+    invoke-virtual {v11}, Landroid/widget/OverScroller;->computeScrollOffset()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1d
+
+    invoke-virtual {v11}, Landroid/widget/OverScroller;->getCurrX()I
+
+    move-result v1
+
+    invoke-virtual {v11}, Landroid/widget/OverScroller;->getCurrY()I
+
+    move-result v2
+
+    iget v3, p0, Loyd;->a:I
+
+    sub-int v3, v1, v3
+
+    iget v4, p0, Loyd;->b:I
+
+    sub-int v4, v2, v4
+
+    iput v1, p0, Loyd;->a:I
+
+    iput v2, p0, Loyd;->b:I
+
+    iget-object v1, v0, Landroidx/recyclerview/widget/RecyclerView;->V0:Landroid/widget/EdgeEffect;
+
+    iget-object v2, v0, Landroidx/recyclerview/widget/RecyclerView;->X0:Landroid/widget/EdgeEffect;
+
+    invoke-virtual {v0}, Landroid/view/View;->getWidth()I
+
+    move-result v5
+
+    invoke-static {v3, v1, v2, v5}, Landroidx/recyclerview/widget/RecyclerView;->r(ILandroid/widget/EdgeEffect;Landroid/widget/EdgeEffect;I)I
+
+    move-result v1
+
+    iget-object v2, v0, Landroidx/recyclerview/widget/RecyclerView;->W0:Landroid/widget/EdgeEffect;
+
+    iget-object v3, v0, Landroidx/recyclerview/widget/RecyclerView;->Y0:Landroid/widget/EdgeEffect;
+
+    invoke-virtual {v0}, Landroid/view/View;->getHeight()I
+
+    move-result v5
+
+    invoke-static {v4, v2, v3, v5}, Landroidx/recyclerview/widget/RecyclerView;->r(ILandroid/widget/EdgeEffect;Landroid/widget/EdgeEffect;I)I
+
+    move-result v2
+
+    iget-object v4, v0, Landroidx/recyclerview/widget/RecyclerView;->D1:[I
+
+    aput v9, v4, v9
+
+    aput v9, v4, v10
+
+    const/4 v5, 0x0
+
+    const/4 v3, 0x1
+
+    invoke-virtual/range {v0 .. v5}, Landroidx/recyclerview/widget/RecyclerView;->y(III[I[I)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    aget v3, v8, v9
+
+    sub-int/2addr v1, v3
+
+    aget v3, v8, v10
+
+    sub-int/2addr v2, v3
+
+    :cond_1
+    invoke-virtual {v0}, Landroid/view/View;->getOverScrollMode()I
+
+    move-result v3
+
+    const/4 v12, 0x2
+
+    if-eq v3, v12, :cond_2
+
+    invoke-virtual {v0, v1, v2}, Landroidx/recyclerview/widget/RecyclerView;->q(II)V
+
+    :cond_2
+    iget-object v3, v0, Landroidx/recyclerview/widget/RecyclerView;->z0:Lsxd;
+
+    if-eqz v3, :cond_6
+
+    aput v9, v8, v9
+
+    aput v9, v8, v10
+
+    invoke-virtual {v0, v1, v2, v8}, Landroidx/recyclerview/widget/RecyclerView;->x0(II[I)V
+
+    aget v3, v8, v9
+
+    aget v4, v8, v10
+
+    sub-int/2addr v1, v3
+
+    sub-int/2addr v2, v4
+
+    iget-object v5, v0, Landroidx/recyclerview/widget/RecyclerView;->A0:Landroidx/recyclerview/widget/a;
+
+    iget-object v5, v5, Landroidx/recyclerview/widget/a;->e:Ltb8;
+
+    if-eqz v5, :cond_5
+
+    iget-boolean v6, v5, Ltb8;->d:Z
+
+    if-nez v6, :cond_5
+
+    iget-boolean v6, v5, Ltb8;->e:Z
+
+    if-eqz v6, :cond_5
+
+    iget-object v6, v0, Landroidx/recyclerview/widget/RecyclerView;->r1:Llyd;
+
+    invoke-virtual {v6}, Llyd;->b()I
+
+    move-result v6
+
+    if-nez v6, :cond_3
+
+    invoke-virtual {v5}, Ltb8;->m()V
+
+    goto :goto_0
+
+    :cond_3
+    iget v7, v5, Ltb8;->a:I
+
+    if-lt v7, v6, :cond_4
+
+    sub-int/2addr v6, v10
+
+    iput v6, v5, Ltb8;->a:I
+
+    invoke-virtual {v5, v3, v4}, Ltb8;->i(II)V
+
+    goto :goto_0
+
+    :cond_4
+    invoke-virtual {v5, v3, v4}, Ltb8;->i(II)V
+
+    :cond_5
+    :goto_0
+    move v13, v3
+
+    move v3, v1
+
+    move v1, v13
+
+    move v13, v4
+
+    move v4, v2
+
+    move v2, v13
+
+    goto :goto_1
+
+    :cond_6
+    move v3, v1
+
+    move v4, v2
+
+    move v1, v9
+
+    move v2, v1
+
+    :goto_1
+    iget-object v5, v0, Landroidx/recyclerview/widget/RecyclerView;->C0:Ljava/util/ArrayList;
+
+    invoke-virtual {v5}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v5
+
+    if-nez v5, :cond_7
+
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+
+    :cond_7
+    iget-object v7, v0, Landroidx/recyclerview/widget/RecyclerView;->D1:[I
+
+    aput v9, v7, v9
+
+    aput v9, v7, v10
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x1
+
+    invoke-virtual/range {v0 .. v7}, Landroidx/recyclerview/widget/RecyclerView;->z(IIII[II[I)V
+
+    aget v5, v8, v9
+
+    sub-int/2addr v3, v5
+
+    aget v5, v8, v10
+
+    sub-int/2addr v4, v5
+
+    if-nez v1, :cond_8
+
+    if-eqz v2, :cond_9
+
+    :cond_8
+    invoke-virtual {v0, v1, v2}, Landroidx/recyclerview/widget/RecyclerView;->A(II)V
+
+    :cond_9
+    invoke-static {v0}, Landroidx/recyclerview/widget/RecyclerView;->e(Landroidx/recyclerview/widget/RecyclerView;)Z
+
+    move-result v5
+
+    if-nez v5, :cond_a
+
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+
+    :cond_a
+    invoke-virtual {v11}, Landroid/widget/OverScroller;->getCurrX()I
+
+    move-result v5
+
+    invoke-virtual {v11}, Landroid/widget/OverScroller;->getFinalX()I
+
+    move-result v6
+
+    if-ne v5, v6, :cond_b
+
+    move v5, v10
+
+    goto :goto_2
+
+    :cond_b
+    move v5, v9
+
+    :goto_2
+    invoke-virtual {v11}, Landroid/widget/OverScroller;->getCurrY()I
+
+    move-result v6
+
+    invoke-virtual {v11}, Landroid/widget/OverScroller;->getFinalY()I
+
+    move-result v7
+
+    if-ne v6, v7, :cond_c
+
+    move v6, v10
+
+    goto :goto_3
 
     :cond_c
-    move v2, v5
+    move v6, v9
+
+    :goto_3
+    invoke-virtual {v11}, Landroid/widget/OverScroller;->isFinished()Z
+
+    move-result v7
+
+    if-nez v7, :cond_f
+
+    if-nez v5, :cond_d
+
+    if-eqz v3, :cond_e
 
     :cond_d
-    if-nez v2, :cond_e
+    if-nez v6, :cond_f
 
-    if-eqz p3, :cond_e
+    if-eqz v4, :cond_e
 
-    return-object v1
+    goto :goto_4
 
     :cond_e
-    return-object p4
+    move v5, v9
+
+    goto :goto_5
+
+    :cond_f
+    :goto_4
+    move v5, v10
+
+    :goto_5
+    iget-object v6, v0, Landroidx/recyclerview/widget/RecyclerView;->A0:Landroidx/recyclerview/widget/a;
+
+    iget-object v6, v6, Landroidx/recyclerview/widget/a;->e:Ltb8;
+
+    if-eqz v6, :cond_10
+
+    iget-boolean v6, v6, Ltb8;->d:Z
+
+    if-eqz v6, :cond_10
+
+    goto/16 :goto_a
+
+    :cond_10
+    if-eqz v5, :cond_1c
+
+    invoke-virtual {v0}, Landroid/view/View;->getOverScrollMode()I
+
+    move-result v1
+
+    if-eq v1, v12, :cond_1a
+
+    invoke-virtual {v11}, Landroid/widget/OverScroller;->getCurrVelocity()F
+
+    move-result v1
+
+    float-to-int v1, v1
+
+    if-gez v3, :cond_11
+
+    neg-int v2, v1
+
+    goto :goto_6
+
+    :cond_11
+    if-lez v3, :cond_12
+
+    move v2, v1
+
+    goto :goto_6
+
+    :cond_12
+    move v2, v9
+
+    :goto_6
+    if-gez v4, :cond_13
+
+    neg-int v1, v1
+
+    goto :goto_7
+
+    :cond_13
+    if-lez v4, :cond_14
+
+    goto :goto_7
+
+    :cond_14
+    move v1, v9
+
+    :goto_7
+    if-gez v2, :cond_15
+
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->C()V
+
+    iget-object v3, v0, Landroidx/recyclerview/widget/RecyclerView;->V0:Landroid/widget/EdgeEffect;
+
+    invoke-virtual {v3}, Landroid/widget/EdgeEffect;->isFinished()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_16
+
+    iget-object v3, v0, Landroidx/recyclerview/widget/RecyclerView;->V0:Landroid/widget/EdgeEffect;
+
+    neg-int v4, v2
+
+    invoke-virtual {v3, v4}, Landroid/widget/EdgeEffect;->onAbsorb(I)V
+
+    goto :goto_8
+
+    :cond_15
+    if-lez v2, :cond_16
+
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->D()V
+
+    iget-object v3, v0, Landroidx/recyclerview/widget/RecyclerView;->X0:Landroid/widget/EdgeEffect;
+
+    invoke-virtual {v3}, Landroid/widget/EdgeEffect;->isFinished()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_16
+
+    iget-object v3, v0, Landroidx/recyclerview/widget/RecyclerView;->X0:Landroid/widget/EdgeEffect;
+
+    invoke-virtual {v3, v2}, Landroid/widget/EdgeEffect;->onAbsorb(I)V
+
+    :cond_16
+    :goto_8
+    if-gez v1, :cond_17
+
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->E()V
+
+    iget-object v3, v0, Landroidx/recyclerview/widget/RecyclerView;->W0:Landroid/widget/EdgeEffect;
+
+    invoke-virtual {v3}, Landroid/widget/EdgeEffect;->isFinished()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_18
+
+    iget-object v3, v0, Landroidx/recyclerview/widget/RecyclerView;->W0:Landroid/widget/EdgeEffect;
+
+    neg-int v4, v1
+
+    invoke-virtual {v3, v4}, Landroid/widget/EdgeEffect;->onAbsorb(I)V
+
+    goto :goto_9
+
+    :cond_17
+    if-lez v1, :cond_18
+
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->B()V
+
+    iget-object v3, v0, Landroidx/recyclerview/widget/RecyclerView;->Y0:Landroid/widget/EdgeEffect;
+
+    invoke-virtual {v3}, Landroid/widget/EdgeEffect;->isFinished()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_18
+
+    iget-object v3, v0, Landroidx/recyclerview/widget/RecyclerView;->Y0:Landroid/widget/EdgeEffect;
+
+    invoke-virtual {v3, v1}, Landroid/widget/EdgeEffect;->onAbsorb(I)V
+
+    :cond_18
+    :goto_9
+    if-nez v2, :cond_19
+
+    if-eqz v1, :cond_1a
+
+    :cond_19
+    sget-object v1, Lh0i;->a:Ljava/util/WeakHashMap;
+
+    invoke-virtual {v0}, Landroid/view/View;->postInvalidateOnAnimation()V
+
+    :cond_1a
+    sget-boolean v1, Landroidx/recyclerview/widget/RecyclerView;->Q1:Z
+
+    if-eqz v1, :cond_1d
+
+    iget-object v1, v0, Landroidx/recyclerview/widget/RecyclerView;->q1:Lbf3;
+
+    iget-object v2, v1, Lbf3;->c:[I
+
+    if-eqz v2, :cond_1b
+
+    const/4 v3, -0x1
+
+    invoke-static {v2, v3}, Ljava/util/Arrays;->fill([II)V
+
+    :cond_1b
+    iput v9, v1, Lbf3;->d:I
+
+    goto :goto_b
+
+    :cond_1c
+    :goto_a
+    invoke-virtual {p0}, Loyd;->b()V
+
+    iget-object v3, v0, Landroidx/recyclerview/widget/RecyclerView;->p1:Lax6;
+
+    if-eqz v3, :cond_1d
+
+    invoke-virtual {v3, v0, v1, v2}, Lax6;->a(Landroidx/recyclerview/widget/RecyclerView;II)V
+
+    :cond_1d
+    :goto_b
+    iget-object v1, v0, Landroidx/recyclerview/widget/RecyclerView;->A0:Landroidx/recyclerview/widget/a;
+
+    iget-object v1, v1, Landroidx/recyclerview/widget/a;->e:Ltb8;
+
+    if-eqz v1, :cond_1e
+
+    iget-boolean v2, v1, Ltb8;->d:Z
+
+    if-eqz v2, :cond_1e
+
+    invoke-virtual {v1, v9, v9}, Ltb8;->i(II)V
+
+    :cond_1e
+    iput-boolean v9, p0, Loyd;->o:Z
+
+    iget-boolean v1, p0, Loyd;->X:Z
+
+    if-eqz v1, :cond_1f
+
+    invoke-virtual {v0, p0}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
+
+    sget-object v1, Lh0i;->a:Ljava/util/WeakHashMap;
+
+    invoke-virtual {v0, p0}, Landroid/view/View;->postOnAnimation(Ljava/lang/Runnable;)V
+
+    return-void
+
+    :cond_1f
+    invoke-virtual {v0, v9}, Landroidx/recyclerview/widget/RecyclerView;->setScrollState(I)V
+
+    invoke-virtual {v0, v10}, Landroidx/recyclerview/widget/RecyclerView;->a(I)V
+
+    return-void
 .end method

@@ -1,179 +1,100 @@
 .class public final Li0e;
-.super Ljava/io/BufferedOutputStream;
+.super Lkl7;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final transient d:Ldl7;
 
-.field public b:Z
+.field public final transient o:Lj0e;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/io/OutputStream;I)V
+.method public constructor <init>(Ldl7;Lj0e;)V
     .locals 0
 
-    .line 1
-    iput p2, p0, Li0e;->a:I
+    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
 
-    invoke-direct {p0, p1}, Ljava/io/BufferedOutputStream;-><init>(Ljava/io/OutputStream;)V
+    iput-object p1, p0, Li0e;->d:Ldl7;
 
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Ljava/io/OutputStream;II)V
-    .locals 0
-
-    .line 2
-    iput p3, p0, Li0e;->a:I
-
-    invoke-direct {p0, p1, p2}, Ljava/io/BufferedOutputStream;-><init>(Ljava/io/OutputStream;I)V
+    iput-object p2, p0, Li0e;->o:Lj0e;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final close()V
-    .locals 3
+.method public final a()Lal7;
+    .locals 1
 
-    iget v0, p0, Li0e;->a:I
+    iget-object v0, p0, Li0e;->o:Lj0e;
+
+    return-object v0
+.end method
+
+.method public final b(I[Ljava/lang/Object;)I
+    .locals 1
+
+    iget-object v0, p0, Li0e;->o:Lj0e;
+
+    invoke-virtual {v0, p1, p2}, Lal7;->b(I[Ljava/lang/Object;)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final contains(Ljava/lang/Object;)Z
+    .locals 1
+
+    iget-object v0, p0, Li0e;->d:Ldl7;
+
+    invoke-virtual {v0, p1}, Ldl7;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final f()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final g()Lobh;
+    .locals 2
+
+    iget-object v0, p0, Li0e;->o:Lj0e;
 
     const/4 v1, 0x0
 
-    const/4 v2, 0x1
+    invoke-virtual {v0, v1}, Lal7;->l(I)Ltd6;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object v0
 
-    iput-boolean v2, p0, Li0e;->b:Z
-
-    :try_start_0
-    invoke-virtual {p0}, Ljava/io/OutputStream;->flush()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v1
-
-    :goto_0
-    :try_start_1
-    iget-object v0, p0, Ljava/io/BufferedOutputStream;->out:Ljava/io/OutputStream;
-
-    invoke-virtual {v0}, Ljava/io/OutputStream;->close()V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    goto :goto_1
-
-    :catchall_1
-    move-exception v0
-
-    if-nez v1, :cond_0
-
-    move-object v1, v0
-
-    :cond_0
-    :goto_1
-    if-nez v1, :cond_1
-
-    return-void
-
-    :cond_1
-    sget-object v0, Lmbh;->a:Ljava/lang/String;
-
-    throw v1
-
-    :pswitch_0
-    iput-boolean v2, p0, Li0e;->b:Z
-
-    :try_start_2
-    invoke-virtual {p0}, Ljava/io/OutputStream;->flush()V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_2
-
-    goto :goto_2
-
-    :catchall_2
-    move-exception v1
-
-    :goto_2
-    :try_start_3
-    iget-object v0, p0, Ljava/io/BufferedOutputStream;->out:Ljava/io/OutputStream;
-
-    invoke-virtual {v0}, Ljava/io/OutputStream;->close()V
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_3
-
-    goto :goto_3
-
-    :catchall_3
-    move-exception v0
-
-    if-nez v1, :cond_2
-
-    move-object v1, v0
-
-    :cond_2
-    :goto_3
-    if-nez v1, :cond_3
-
-    return-void
-
-    :cond_3
-    sget v0, Lkbh;->a:I
-
-    throw v1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method
 
-.method public final d(Ljava/io/OutputStream;)V
+.method public final size()I
     .locals 1
 
-    iget v0, p0, Li0e;->a:I
+    iget-object v0, p0, Li0e;->d:Ldl7;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-interface {v0}, Ljava/util/Map;->size()I
 
-    iget-boolean v0, p0, Li0e;->b:Z
+    move-result v0
 
-    invoke-static {v0}, Lh6j;->g(Z)V
-
-    iput-object p1, p0, Ljava/io/BufferedOutputStream;->out:Ljava/io/OutputStream;
-
-    const/4 p1, 0x0
-
-    iput p1, p0, Ljava/io/BufferedOutputStream;->count:I
-
-    iput-boolean p1, p0, Li0e;->b:Z
-
-    return-void
-
-    :pswitch_0
-    iget-boolean v0, p0, Li0e;->b:Z
-
-    invoke-static {v0}, Ly5j;->d(Z)V
-
-    iput-object p1, p0, Ljava/io/BufferedOutputStream;->out:Ljava/io/OutputStream;
-
-    const/4 p1, 0x0
-
-    iput p1, p0, Ljava/io/BufferedOutputStream;->count:I
-
-    iput-boolean p1, p0, Li0e;->b:Z
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return v0
 .end method

@@ -1,64 +1,23 @@
-.class public final Lz0;
-.super Ljava/lang/Object;
+.class public abstract Lz0;
+.super Loc6;
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:Lz0;
-
-.field public static final d:Lz0;
-
-
 # instance fields
-.field public final a:Z
-
-.field public final b:Ljava/lang/Throwable;
+.field public final b:Loc6;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
-
-    sget-boolean v0, Lu1;->d:Z
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    sput-object v1, Lz0;->d:Lz0;
-
-    sput-object v1, Lz0;->c:Lz0;
-
-    return-void
-
-    :cond_0
-    new-instance v0, Lz0;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Lz0;-><init>(Ljava/lang/Throwable;Z)V
-
-    sput-object v0, Lz0;->d:Lz0;
-
-    new-instance v0, Lz0;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v0, v1, v2}, Lz0;-><init>(Ljava/lang/Throwable;Z)V
-
-    sput-object v0, Lz0;->c:Lz0;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/Throwable;Z)V
-    .locals 0
+.method public constructor <init>(Loc6;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean p2, p0, Lz0;->a:Z
+    const-string v0, "source is null"
 
-    iput-object p1, p0, Lz0;->b:Ljava/lang/Throwable;
+    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    iput-object p1, p0, Lz0;->b:Loc6;
 
     return-void
 .end method

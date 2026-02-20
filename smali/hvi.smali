@@ -1,70 +1,96 @@
-.class public final Lhvi;
+.class public final synthetic Lhvi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lvwa;
+.implements Lcom/my/tracker/core/EngineCore$EventPacker;
 
 
-# static fields
-.field public static final a:Lhvi;
+# instance fields
+.field public final synthetic X:J
+
+.field public final synthetic a:I
+
+.field public final synthetic b:Lcom/my/tracker/applifecycle/o/d;
+
+.field public final synthetic c:Ljava/lang/String;
+
+.field public final synthetic d:Ljava/lang/String;
+
+.field public final synthetic o:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(Lcom/my/tracker/applifecycle/o/d;Ljava/lang/String;Ljava/lang/String;JJI)V
+    .locals 0
 
-    new-instance v0, Lhvi;
+    iput p8, p0, Lhvi;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lhvi;->b:Lcom/my/tracker/applifecycle/o/d;
 
-    sput-object v0, Lhvi;->a:Lhvi;
+    iput-object p2, p0, Lhvi;->c:Ljava/lang/String;
 
-    new-instance v0, Lbri;
+    iput-object p3, p0, Lhvi;->d:Ljava/lang/String;
 
-    const/4 v1, 0x1
+    iput-wide p4, p0, Lhvi;->o:J
 
-    invoke-direct {v0, v1}, Lbri;-><init>(I)V
+    iput-wide p6, p0, Lhvi;->X:J
 
-    const-class v1, Lpri;
-
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final invoke(Lcom/my/tracker/core/EngineCore$InsertEventTools;)[B
+    .locals 9
 
-    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    iget v0, p0, Lhvi;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-wide v4, p0, Lhvi;->o:J
+
+    iget-wide v6, p0, Lhvi;->X:J
+
+    iget-object v1, p0, Lhvi;->b:Lcom/my/tracker/applifecycle/o/d;
+
+    iget-object v2, p0, Lhvi;->c:Ljava/lang/String;
+
+    iget-object v3, p0, Lhvi;->d:Ljava/lang/String;
+
+    move-object v8, p1
+
+    invoke-static/range {v1 .. v8}, Lcom/my/tracker/applifecycle/o/d;->g(Lcom/my/tracker/applifecycle/o/d;Ljava/lang/String;Ljava/lang/String;JJLcom/my/tracker/core/EngineCore$InsertEventTools;)[B
 
     move-result-object p1
 
-    throw p1
+    return-object p1
+
+    :pswitch_0
+    move-object v7, p1
+
+    iget-wide v3, p0, Lhvi;->o:J
+
+    iget-wide v5, p0, Lhvi;->X:J
+
+    iget-object v0, p0, Lhvi;->b:Lcom/my/tracker/applifecycle/o/d;
+
+    iget-object v1, p0, Lhvi;->c:Ljava/lang/String;
+
+    iget-object v2, p0, Lhvi;->d:Ljava/lang/String;
+
+    invoke-static/range {v0 .. v7}, Lcom/my/tracker/applifecycle/o/d;->d(Lcom/my/tracker/applifecycle/o/d;Ljava/lang/String;Ljava/lang/String;JJLcom/my/tracker/core/EngineCore$InsertEventTools;)[B
+
+    move-result-object p1
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

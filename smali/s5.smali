@@ -1,9 +1,9 @@
 .class public abstract Ls5;
-.super Lcpi;
+.super Lfxi;
 .source "SourceFile"
 
 # interfaces
-.implements Lae7;
+.implements Lye7;
 
 
 # static fields

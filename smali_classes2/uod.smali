@@ -3,70 +3,100 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lxod;
+.implements Ljava/lang/Comparable;
+.implements Ljava/lang/CharSequence;
+.implements Ljava/io/Serializable;
 
 
 # instance fields
-.field public final a:Z
-
-.field public final b:Z
+.field public final a:Ljava/lang/CharSequence;
 
 
 # direct methods
-.method public constructor <init>(ZZ)V
+.method public constructor <init>(Ljava/lang/CharSequence;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean p1, p0, Luod;->a:Z
-
-    iput-boolean p2, p0, Luod;->b:Z
+    iput-object p1, p0, Luod;->a:Ljava/lang/CharSequence;
 
     return-void
 .end method
 
 
 # virtual methods
+.method public final charAt(I)C
+    .locals 1
+
+    iget-object v0, p0, Luod;->a:Ljava/lang/CharSequence;
+
+    invoke-interface {v0, p1}, Ljava/lang/CharSequence;->charAt(I)C
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final compareTo(Ljava/lang/Object;)I
+    .locals 1
+
+    check-cast p1, Luod;
+
+    iget-object v0, p0, Luod;->a:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    iget-object p1, p1, Luod;->a:Ljava/lang/CharSequence;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
+
+    move-result p1
+
+    return p1
+.end method
+
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    .locals 1
 
     if-ne p0, p1, :cond_0
 
-    goto :goto_1
+    const/4 p1, 0x1
+
+    return p1
 
     :cond_0
     instance-of v0, p1, Luod;
 
     if-nez v0, :cond_1
 
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Luod;
-
-    iget-boolean v0, p0, Luod;->a:Z
-
-    iget-boolean v1, p1, Luod;->a:Z
-
-    if-eq v0, v1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-boolean v0, p0, Luod;->b:Z
-
-    iget-boolean p1, p1, Luod;->b:Z
-
-    if-eq v0, p1, :cond_3
-
-    :goto_0
     const/4 p1, 0x0
 
     return p1
 
-    :cond_3
-    :goto_1
-    const/4 p1, 0x1
+    :cond_1
+    iget-object v0, p0, Luod;->a:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    check-cast p1, Luod;
+
+    iget-object p1, p1, Luod;->a:Ljava/lang/CharSequence;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v0, p1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
 
     return p1
 .end method
@@ -74,39 +104,55 @@
 .method public final hashCode()I
     .locals 2
 
-    iget-boolean v0, p0, Luod;->a:Z
+    const-class v0, Luod;
 
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    iget-object v1, p0, Luod;->a:Ljava/lang/CharSequence;
 
-    iget-boolean v1, p0, Luod;->b:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
     move-result v1
+
+    mul-int/lit8 v1, v1, 0x1f
 
     add-int/2addr v1, v0
 
     return v1
 .end method
 
+.method public final length()I
+    .locals 1
+
+    iget-object v0, p0, Luod;->a:Ljava/lang/CharSequence;
+
+    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final subSequence(II)Ljava/lang/CharSequence;
+    .locals 1
+
+    iget-object v0, p0, Luod;->a:Ljava/lang/CharSequence;
+
+    invoke-interface {v0, p1, p2}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
 .method public final toString()Ljava/lang/String;
-    .locals 5
+    .locals 1
 
-    const-string v0, ", isForced="
+    iget-object v0, p0, Luod;->a:Ljava/lang/CharSequence;
 
-    const-string v1, ")"
-
-    const-string v2, "PauseWithoutResume(wasLocked="
-
-    iget-boolean v3, p0, Luod;->a:Z
-
-    iget-boolean v4, p0, Luod;->b:Z
-
-    invoke-static {v2, v3, v0, v4, v1}, Lhc0;->h(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v0
 

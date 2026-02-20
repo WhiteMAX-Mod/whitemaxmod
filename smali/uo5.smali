@@ -1,223 +1,297 @@
 .class public final Luo5;
-.super Lvo5;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljof;
 
 
 # instance fields
-.field public final P0:Llji;
+.field public final synthetic X:Lmg;
 
-.field public final Q0:Landroid/media/metrics/LogSessionId;
+.field public final a:Ljof;
 
-.field public R0:Z
+.field public final b:J
+
+.field public c:Z
+
+.field public d:J
+
+.field public o:Z
 
 
 # direct methods
-.method public constructor <init>(Llji;Lp52;Ldu;Landroid/media/metrics/LogSessionId;)V
-    .locals 1
+.method public constructor <init>(Lmg;Ljof;J)V
+    .locals 0
 
-    const/4 v0, 0x1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, v0, p2, p3}, Lvo5;-><init>(ILp52;Ldu;)V
+    iput-object p1, p0, Luo5;->X:Lmg;
 
-    iput-object p1, p0, Luo5;->P0:Llji;
+    iput-object p2, p0, Luo5;->a:Ljof;
 
-    iput-object p4, p0, Luo5;->Q0:Landroid/media/metrics/LogSessionId;
+    iput-wide p3, p0, Luo5;->b:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final C()Z
-    .locals 6
+.method public final E(Ljava/io/IOException;)Ljava/io/IOException;
+    .locals 3
 
-    iget-object v0, p0, Lvo5;->E0:Ld8e;
+    iget-boolean v0, p0, Luo5;->c:Z
 
-    invoke-interface {v0}, Ld8e;->e()Lol4;
+    if-eqz v0, :cond_0
 
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_0
-
-    goto :goto_1
+    return-object p1
 
     :cond_0
-    iget-boolean v2, p0, Luo5;->R0:Z
+    const/4 v0, 0x1
 
-    const/4 v3, 0x1
+    iput-boolean v0, p0, Luo5;->c:Z
 
-    if-nez v2, :cond_4
+    iget-object v1, p0, Luo5;->X:Lmg;
 
-    iget-object v2, p0, Lvo5;->F0:Lro4;
-
-    invoke-virtual {v2}, Lro4;->e()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    iget-object v2, v0, Lol4;->o:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {v2, v1}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
-
-    const/4 v2, 0x4
-
-    invoke-virtual {v0, v2}, Laz;->a(I)V
-
-    iget-object v0, p0, Lvo5;->E0:Ld8e;
-
-    invoke-interface {v0}, Ld8e;->g()Z
-
-    move-result v0
-
-    iput-boolean v0, p0, Lvo5;->G0:Z
-
-    return v1
-
-    :cond_1
-    iget-object v2, p0, Lvo5;->F0:Lro4;
-
-    invoke-virtual {v2}, Lro4;->d()Ljava/nio/ByteBuffer;
-
-    move-result-object v2
-
-    if-nez v2, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    invoke-virtual {v2}, Ljava/nio/Buffer;->limit()I
-
-    move-result v4
-
-    invoke-virtual {v0, v4}, Lol4;->z(I)V
-
-    iget-object v4, v0, Lol4;->o:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v4, v2}, Ljava/nio/ByteBuffer;->put(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
-
-    iget-object v2, p0, Lvo5;->F0:Lro4;
-
-    invoke-virtual {v2, v1}, Lro4;->g(Z)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_3
-
-    iget-object v2, v2, Lro4;->a:Landroid/media/MediaCodec$BufferInfo;
-
-    goto :goto_0
-
-    :cond_3
     const/4 v2, 0x0
 
-    :goto_0
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-wide v4, v2, Landroid/media/MediaCodec$BufferInfo;->presentationTimeUs:J
-
-    iput-wide v4, v0, Lol4;->Y:J
-
-    iget v2, v2, Landroid/media/MediaCodec$BufferInfo;->flags:I
-
-    iput v2, v0, Laz;->b:I
-
-    iget-object v0, p0, Lvo5;->F0:Lro4;
-
-    invoke-virtual {v0}, Lro4;->j()V
-
-    iput-boolean v3, p0, Luo5;->R0:Z
-
-    :cond_4
-    iget-object v0, p0, Lvo5;->E0:Ld8e;
-
-    invoke-interface {v0}, Ld8e;->g()Z
-
-    move-result v0
-
-    if-nez v0, :cond_5
-
-    :goto_1
-    return v1
-
-    :cond_5
-    iput-boolean v1, p0, Luo5;->R0:Z
-
-    return v3
-.end method
-
-.method public final D(Lpj6;)V
-    .locals 2
-
-    iget-object v0, p0, Luo5;->P0:Llji;
-
-    iget-object v1, p0, Luo5;->Q0:Landroid/media/metrics/LogSessionId;
-
-    invoke-virtual {v0, p1, v1}, Llji;->c(Lpj6;Landroid/media/metrics/LogSessionId;)Lro4;
+    invoke-virtual {v1, v2, v0, p1}, Lmg;->c(ZZLjava/io/IOException;)Ljava/io/IOException;
 
     move-result-object p1
 
-    iput-object p1, p0, Lvo5;->F0:Lro4;
+    return-object p1
+.end method
+
+.method public final H()V
+    .locals 1
+
+    iget-object v0, p0, Luo5;->a:Ljof;
+
+    invoke-interface {v0}, Ljof;->flush()V
 
     return-void
 .end method
 
-.method public final L(Lol4;)Z
-    .locals 6
+.method public final close()V
+    .locals 4
 
-    const/4 v0, 0x4
-
-    invoke-virtual {p1, v0}, Laz;->g(I)Z
-
-    move-result v0
-
-    const/4 v1, 0x0
+    iget-boolean v0, p0, Luo5;->o:Z
 
     if-eqz v0, :cond_0
 
-    return v1
+    return-void
 
     :cond_0
-    iget-wide v2, p1, Lol4;->Y:J
+    const/4 v0, 0x1
 
-    iget-wide v4, p0, Lvo5;->D0:J
+    iput-boolean v0, p0, Luo5;->o:Z
 
-    sub-long/2addr v2, v4
+    const-wide/16 v0, -0x1
 
-    iput-wide v2, p1, Lol4;->Y:J
+    iget-wide v2, p0, Luo5;->b:J
 
-    iget-object v0, p0, Lvo5;->F0:Lro4;
+    cmp-long v0, v2, v0
+
+    if-eqz v0, :cond_2
+
+    iget-wide v0, p0, Luo5;->d:J
+
+    cmp-long v0, v0, v2
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    new-instance v0, Ljava/net/ProtocolException;
+
+    const-string v1, "unexpected end of stream"
+
+    invoke-direct {v0, v1}, Ljava/net/ProtocolException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_2
+    :goto_0
+    :try_start_0
+    invoke-virtual {p0}, Luo5;->l()V
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Luo5;->E(Ljava/io/IOException;)Ljava/io/IOException;
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {p0, v0}, Luo5;->E(Ljava/io/IOException;)Ljava/io/IOException;
+
+    move-result-object v0
+
+    throw v0
+.end method
+
+.method public final flush()V
+    .locals 1
+
+    :try_start_0
+    invoke-virtual {p0}, Luo5;->H()V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {p0, v0}, Luo5;->E(Ljava/io/IOException;)Ljava/io/IOException;
+
+    move-result-object v0
+
+    throw v0
+.end method
+
+.method public final k0(JLnw0;)V
+    .locals 4
+
+    iget-boolean v0, p0, Luo5;->o:Z
+
+    if-nez v0, :cond_2
+
+    const-wide/16 v0, -0x1
+
+    iget-wide v2, p0, Luo5;->b:J
+
+    cmp-long v0, v2, v0
 
     if-eqz v0, :cond_1
 
-    const-wide/16 v4, 0x0
+    iget-wide v0, p0, Luo5;->d:J
 
-    cmp-long v0, v2, v4
+    add-long/2addr v0, p1
 
-    if-gez v0, :cond_1
+    cmp-long v0, v0, v2
 
-    invoke-virtual {p1}, Lol4;->x()V
+    if-gtz v0, :cond_0
 
-    const/4 p1, 0x1
+    goto :goto_0
 
-    return p1
+    :cond_0
+    new-instance p3, Ljava/net/ProtocolException;
+
+    const-string v0, "expected "
+
+    const-string v1, " bytes but received "
+
+    invoke-static {v2, v3, v0, v1}, Ly12;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-wide v1, p0, Luo5;->d:J
+
+    add-long/2addr v1, p1
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p3, p1}, Ljava/net/ProtocolException;-><init>(Ljava/lang/String;)V
+
+    throw p3
 
     :cond_1
-    return v1
+    :goto_0
+    :try_start_0
+    iget-object v0, p0, Luo5;->a:Ljof;
+
+    invoke-interface {v0, p1, p2, p3}, Ljof;->k0(JLnw0;)V
+
+    iget-wide v0, p0, Luo5;->d:J
+
+    add-long/2addr v0, p1
+
+    iput-wide v0, p0, Luo5;->d:J
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception p1
+
+    invoke-virtual {p0, p1}, Luo5;->E(Ljava/io/IOException;)Ljava/io/IOException;
+
+    move-result-object p1
+
+    throw p1
+
+    :cond_2
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p2, "closed"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
-.method public final h()Ljava/lang/String;
+.method public final l()V
     .locals 1
 
-    const-string v0, "ExoAssetLoaderAudioRenderer"
+    iget-object v0, p0, Luo5;->a:Ljof;
+
+    invoke-interface {v0}, Ljof;->close()V
+
+    return-void
+.end method
+
+.method public final m()Lktg;
+    .locals 1
+
+    iget-object v0, p0, Luo5;->a:Ljof;
+
+    invoke-interface {v0}, Ljof;->m()Lktg;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-class v1, Luo5;
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x28
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Luo5;->a:Ljof;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x29
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

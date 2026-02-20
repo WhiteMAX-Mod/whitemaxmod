@@ -1,5 +1,5 @@
 .class public final Lyo1;
-.super Lcp1;
+.super Lpp1;
 .source "SourceFile"
 
 
@@ -13,7 +13,7 @@
 
     new-instance v0, Lyo1;
 
-    invoke-direct {v0}, Lcp1;-><init>()V
+    invoke-direct {v0}, Lpp1;-><init>()V
 
     sput-object v0, Lyo1;->D:Lyo1;
 
@@ -47,7 +47,7 @@
 .method public final hashCode()I
     .locals 1
 
-    const v0, -0x5c3a39ad
+    const v0, -0x377eee04
 
     return v0
 .end method
@@ -55,7 +55,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "ShowMembersInCall"
+    const-string v0, "InviteToP2PCall"
 
     return-object v0
 .end method

@@ -1,63 +1,35 @@
-.class public final Lxf5;
-.super Ljava/lang/Throwable;
+.class public interface abstract Lxf5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:I
-
-
-# direct methods
-.method public synthetic constructor <init>(Ljava/lang/String;)V
-    .locals 1
-
-    .line 1
-    const/4 v0, 0x1
-
-    iput v0, p0, Lxf5;->a:I
-
-    invoke-direct {p0, p1}, Ljava/lang/Throwable;-><init>(Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/Throwable;I)V
-    .locals 0
-
-    .line 2
-    iput p3, p0, Lxf5;->a:I
-
-    invoke-direct {p0, p1, p2}, Ljava/lang/Throwable;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-void
-.end method
-
-
 # virtual methods
-.method public declared-synchronized fillInStackTrace()Ljava/lang/Throwable;
-    .locals 1
+.method public abstract b()Z
+.end method
 
-    iget v0, p0, Lxf5;->a:I
+.method public abstract c()Landroid/graphics/Rect;
+.end method
 
-    packed-switch v0, :pswitch_data_0
+.method public abstract d(Llob;)V
+.end method
 
-    invoke-super {p0}, Ljava/lang/Throwable;->fillInStackTrace()Ljava/lang/Throwable;
+.method public abstract e(Ljava/lang/String;)F
+.end method
 
-    move-result-object v0
+.method public abstract getAsView()Landroid/view/View;
+.end method
 
-    return-object v0
+.method public abstract getLineHeight()I
+.end method
 
-    :pswitch_0
-    monitor-enter p0
+.method public abstract getSpannableText()Ljava/lang/CharSequence;
+.end method
 
-    monitor-exit p0
+.method public abstract getTextValue()Ljava/lang/CharSequence;
+.end method
 
-    return-object p0
+.method public abstract setTextColor(I)V
+.end method
 
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
+.method public abstract setTextValue(Ljava/lang/CharSequence;)V
 .end method

@@ -1,194 +1,80 @@
-.class public final synthetic Ltm2;
-.super Ljava/lang/Object;
+.class public final Ltm2;
+.super Lpdg;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/function/UnaryOperator;
+.implements Lys6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lvm2;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method public constructor <init>(Lvm2;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p1, p0, Ltm2;->a:I
+    iput-object p1, p0, Ltm2;->X:Lvm2;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 10
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Ltm2;->a:I
+    check-cast p1, Ld70;
 
-    const/4 v1, 0x0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    packed-switch v0, :pswitch_data_0
-
-    check-cast p1, Lhte;
-
-    if-eqz p1, :cond_0
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p1, v0}, Lhte;->f(Z)V
-
-    :cond_0
-    return-object v1
-
-    :pswitch_0
-    check-cast p1, Lsuf;
-
-    new-instance p1, Lsuf;
-
-    const/4 v0, 0x3
-
-    invoke-direct {p1, v1, v0}, Lsuf;-><init>(Ljava/lang/String;I)V
-
-    return-object p1
-
-    :pswitch_1
-    check-cast p1, Ljava/util/Set;
-
-    sget-object p1, Lnh5;->a:Lnh5;
-
-    return-object p1
-
-    :pswitch_2
-    check-cast p1, Ljava/lang/String;
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v0
-
-    invoke-static {v0, v1}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+    invoke-virtual {p0, p1, p2}, Ltm2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    return-object p1
+    check-cast p1, Ltm2;
 
-    :pswitch_3
-    check-cast p1, Lt2a;
+    sget-object p2, Lmah;->a:Lmah;
 
-    return-object v1
+    invoke-virtual {p1, p2}, Ltm2;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :pswitch_4
-    check-cast p1, Lt2a;
+    return-object p2
+.end method
 
-    sget-object p1, Lh3a;->r:[Lz28;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    return-object v1
+    new-instance v0, Ltm2;
 
-    :pswitch_5
-    check-cast p1, Lio3;
+    iget-object v1, p0, Ltm2;->X:Lvm2;
 
-    check-cast p1, Ltx7;
+    invoke-direct {v0, v1, p2}, Ltm2;-><init>(Lvm2;Lkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {p1}, Ltx7;->C()Z
+    iput-object p1, v0, Ltm2;->o:Ljava/lang/Object;
 
-    invoke-static {}, Lk2j;->a()Ltx7;
+    return-object v0
+.end method
 
-    move-result-object p1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    return-object p1
+    iget-object v0, p0, Ltm2;->o:Ljava/lang/Object;
 
-    :pswitch_6
-    check-cast p1, Lvea;
+    check-cast v0, Ld70;
 
-    invoke-static {}, Leo8;->a()Lvea;
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    move-result-object p1
+    iget-object p1, p0, Ltm2;->X:Lvm2;
 
-    return-object p1
+    invoke-static {p1, v0}, Lvm2;->u(Lvm2;Ld70;)V
 
-    :pswitch_7
-    check-cast p1, Ljava/util/Set;
-
-    new-instance p1, Ljava/util/LinkedHashSet;
-
-    invoke-direct {p1}, Ljava/util/LinkedHashSet;-><init>()V
+    sget-object p1, Lmah;->a:Lmah;
 
     return-object p1
-
-    :pswitch_8
-    check-cast p1, Lvea;
-
-    invoke-static {}, Leo8;->a()Lvea;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_9
-    check-cast p1, Ljava/util/Set;
-
-    new-instance p1, Ljava/util/LinkedHashSet;
-
-    invoke-direct {p1}, Ljava/util/LinkedHashSet;-><init>()V
-
-    return-object p1
-
-    :pswitch_a
-    check-cast p1, Ljava/util/Set;
-
-    new-instance p1, Ljava/util/LinkedHashSet;
-
-    invoke-direct {p1}, Ljava/util/LinkedHashSet;-><init>()V
-
-    return-object p1
-
-    :pswitch_b
-    check-cast p1, Lrm2;
-
-    if-eqz p1, :cond_1
-
-    iget-wide v3, p1, Lrm2;->a:J
-
-    iget-wide v5, p1, Lrm2;->b:J
-
-    iget-object v7, p1, Lrm2;->c:Ljava/lang/String;
-
-    iget-object v8, p1, Lrm2;->d:Ln45;
-
-    new-instance v2, Lrm2;
-
-    const/4 v9, 0x1
-
-    invoke-direct/range {v2 .. v9}, Lrm2;-><init>(JJLjava/lang/String;Ln45;Z)V
-
-    move-object v1, v2
-
-    :cond_1
-    return-object v1
-
-    :pswitch_c
-    check-cast p1, Lrm2;
-
-    return-object v1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

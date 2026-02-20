@@ -2,59 +2,88 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lfqh;
-
 
 # instance fields
-.field public final synthetic a:Ld09;
+.field public final a:Landroid/content/Context;
 
-.field public final synthetic b:I
+.field public final b:Landroid/media/browse/MediaBrowser;
 
-.field public final synthetic c:Lc19;
+.field public final c:Landroid/os/Bundle;
+
+.field public final d:Lw09;
+
+.field public final e:Lju;
+
+.field public f:Lgri;
+
+.field public g:Landroid/os/Messenger;
+
+.field public h:Lrc9;
 
 
 # direct methods
-.method public constructor <init>(Lc19;Ld09;IJ)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;Landroid/content/ComponentName;Lll8;Landroid/os/Bundle;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ly09;->c:Lc19;
+    new-instance v0, Lw09;
 
-    iput-object p2, p0, Ly09;->a:Ld09;
+    invoke-direct {v0, p0}, Lw09;-><init>(Ly09;)V
 
-    iput p3, p0, Ly09;->b:I
+    iput-object v0, p0, Ly09;->d:Lw09;
 
-    return-void
-.end method
+    new-instance v0, Lju;
 
+    const/4 v1, 0x0
 
-# virtual methods
-.method public final F()V
-    .locals 3
+    invoke-direct {v0, v1}, Lblf;-><init>(I)V
 
-    iget-object v0, p0, Ly09;->a:Ld09;
+    iput-object v0, p0, Ly09;->e:Lju;
 
-    iget v1, p0, Ly09;->b:I
+    iput-object p1, p0, Ly09;->a:Landroid/content/Context;
 
-    iget-object v2, p0, Ly09;->c:Lc19;
+    new-instance v0, Landroid/os/Bundle;
 
-    invoke-virtual {v2, v0, v1}, Lc19;->N0(Ld09;I)V
+    if-eqz p4, :cond_0
 
-    return-void
-.end method
+    invoke-direct {v0, p4}, Landroid/os/Bundle;-><init>(Landroid/os/Bundle;)V
 
-.method public final a(J)V
-    .locals 3
+    goto :goto_0
 
-    iget-object v0, p0, Ly09;->a:Ld09;
+    :cond_0
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    iget v1, p0, Ly09;->b:I
+    :goto_0
+    iput-object v0, p0, Ly09;->c:Landroid/os/Bundle;
 
-    iget-object v2, p0, Ly09;->c:Lc19;
+    const-string p4, "extra_client_version"
 
-    invoke-virtual {v2, v0, v1, p1, p2}, Lc19;->J0(Ld09;IJ)V
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, p4, v1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+
+    const-string p4, "extra_calling_pid"
+
+    invoke-static {}, Landroid/os/Process;->myPid()I
+
+    move-result v1
+
+    invoke-virtual {v0, p4, v1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+
+    iput-object p0, p3, Lll8;->c:Ljava/lang/Object;
+
+    new-instance p4, Landroid/media/browse/MediaBrowser;
+
+    iget-object p3, p3, Lll8;->b:Ljava/lang/Object;
+
+    check-cast p3, Lx09;
+
+    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-direct {p4, p1, p2, p3, v0}, Landroid/media/browse/MediaBrowser;-><init>(Landroid/content/Context;Landroid/content/ComponentName;Landroid/media/browse/MediaBrowser$ConnectionCallback;Landroid/os/Bundle;)V
+
+    iput-object p4, p0, Ly09;->b:Landroid/media/browse/MediaBrowser;
 
     return-void
 .end method

@@ -1,50 +1,31 @@
 .class public final Leyi;
-.super Ljava/lang/Object;
+.super Lcom/google/android/gms/common/api/internal/BasePendingResult;
 .source "SourceFile"
 
-# interfaces
-.implements Lvwa;
 
-
-# static fields
-.field public static final a:Leyi;
+# instance fields
+.field public final k:Lcom/google/android/gms/common/api/Status;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lcom/google/android/gms/common/api/Status;)V
+    .locals 1
 
-    new-instance v0, Leyi;
+    const/4 v0, 0x0
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, v0}, Lcom/google/android/gms/common/api/internal/BasePendingResult;-><init>(Ljxi;)V
 
-    sput-object v0, Leyi;->a:Leyi;
-
-    new-instance v0, Lbri;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lbri;-><init>(I)V
-
-    const-class v1, Lpri;
-
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
+    iput-object p1, p0, Leyi;->k:Lcom/google/android/gms/common/api/Status;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+.method public final c(Lcom/google/android/gms/common/api/Status;)Lg6e;
     .locals 0
 
-    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    iget-object p1, p0, Leyi;->k:Lcom/google/android/gms/common/api/Status;
 
-    move-result-object p1
-
-    throw p1
+    return-object p1
 .end method

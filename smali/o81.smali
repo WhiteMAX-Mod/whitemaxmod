@@ -1,213 +1,276 @@
 .class public final Lo81;
-.super Llm4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lq81;
 
-# static fields
-.field public static final b:Lo81;
 
-.field public static final c:Lhm4;
+# instance fields
+.field public final a:I
 
-.field public static final d:Lhm4;
+.field public final b:Lcpg;
 
-.field public static final e:Lhm4;
+.field public final c:J
 
-.field public static final f:Lhm4;
-
-.field public static final g:Lhm4;
-
-.field public static final h:Lhm4;
-
-.field public static final i:Lhm4;
-
-.field public static final j:Lhm4;
-
-.field public static final k:Lhm4;
-
-.field public static final l:Lhm4;
-
-.field public static final m:Lhm4;
-
-.field public static final n:Lhm4;
-
-.field public static final o:Lhm4;
+.field public final d:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public constructor <init>(IJLcpg;)V
+    .locals 0
 
-    new-instance v0, Lo81;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Llm4;-><init>()V
+    iput p1, p0, Lo81;->a:I
 
-    sput-object v0, Lo81;->b:Lo81;
+    iput-object p4, p0, Lo81;->b:Lcpg;
 
-    const-string v1, "opponent_id"
+    iput-wide p2, p0, Lo81;->c:J
 
-    filled-new-array {v1}, [Ljava/lang/String;
+    sget p1, Lt8b;->J:I
 
-    move-result-object v1
+    iput p1, p0, Lo81;->d:I
 
-    const-string v2, ":call-user"
+    return-void
+.end method
 
-    const/4 v3, 0x0
 
-    const/16 v4, 0xe
+# virtual methods
+.method public final a()I
+    .locals 1
 
-    invoke-static {v0, v2, v1, v3, v4}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
+    iget v0, p0, Lo81;->a:I
 
-    move-result-object v1
+    return v0
+.end method
 
-    sput-object v1, Lo81;->c:Lhm4;
+.method public final b()Lhpg;
+    .locals 1
 
-    const-string v1, "link"
+    const/4 v0, 0x0
 
-    filled-new-array {v1}, [Ljava/lang/String;
+    return-object v0
+.end method
 
-    move-result-object v2
+.method public final e()Lt7f;
+    .locals 1
 
-    const-string v5, ":call-join-link"
+    const/4 v0, 0x0
 
-    invoke-static {v0, v5, v2, v3, v4}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
+    return-object v0
+.end method
 
-    move-result-object v2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 5
 
-    sput-object v2, Lo81;->d:Lhm4;
+    const/4 v0, 0x1
 
-    const-string v2, "chat_id"
+    if-ne p0, p1, :cond_0
 
-    filled-new-array {v2}, [Ljava/lang/String;
+    return v0
 
-    move-result-object v5
+    :cond_0
+    instance-of v1, p1, Lo81;
 
-    const-string v6, ":call-chat"
+    if-nez v1, :cond_1
 
-    invoke-static {v0, v6, v5, v3, v4}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
+    goto :goto_0
 
-    move-result-object v5
+    :cond_1
+    check-cast p1, Lo81;
 
-    sput-object v5, Lo81;->e:Lhm4;
+    iget v1, p0, Lo81;->a:I
 
-    const-string v5, "call_name"
+    iget v2, p1, Lo81;->a:I
 
-    filled-new-array {v2, v5}, [Ljava/lang/String;
+    if-eq v1, v2, :cond_2
 
-    move-result-object v2
+    goto :goto_0
 
-    const-string v5, ":call-incoming"
+    :cond_2
+    iget-object v1, p0, Lo81;->b:Lcpg;
 
-    invoke-static {v0, v5, v2, v3, v4}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
+    iget-object v2, p1, Lo81;->b:Lcpg;
 
-    move-result-object v2
+    invoke-virtual {v1, v2}, Lcpg;->equals(Ljava/lang/Object;)Z
 
-    sput-object v2, Lo81;->f:Lhm4;
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget-wide v1, p0, Lo81;->c:J
+
+    iget-wide v3, p1, Lo81;->c:J
+
+    cmp-long p1, v1, v3
+
+    if-eqz p1, :cond_4
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_4
+    return v0
+.end method
+
+.method public final f()Lt88;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final getItemId()J
+    .locals 2
+
+    iget-wide v0, p0, Lo81;->c:J
+
+    return-wide v0
+.end method
+
+.method public final getTitle()Lhpg;
+    .locals 1
+
+    iget-object v0, p0, Lo81;->b:Lcpg;
+
+    return-object v0
+.end method
+
+.method public final getType()Lv7f;
+    .locals 1
+
+    sget-object v0, Lv7f;->b:Lv7f;
+
+    return-object v0
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    iget v0, p0, Lo81;->a:I
+
+    invoke-static {v0}, Ly12;->t(I)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lo81;->b:Lcpg;
+
+    iget v2, v2, Lcpg;->c:I
+
+    invoke-static {v2, v0, v1}, Ljye;->d(III)I
+
+    move-result v0
 
     const/4 v2, 0x0
 
-    new-array v5, v2, [Ljava/lang/String;
+    invoke-static {v2, v0, v1}, Ljye;->d(III)I
 
-    const-string v6, ":call-active"
+    move-result v0
 
-    invoke-static {v0, v6, v5, v3, v4}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
+    iget-wide v2, p0, Lo81;->c:J
 
-    move-result-object v5
+    invoke-static {v0, v1, v2, v3}, Leni;->a(IIJ)I
 
-    sput-object v5, Lo81;->g:Lhm4;
+    move-result v0
 
-    const-string v5, ":call-join-preview"
+    sget-object v1, Lv7f;->b:Lv7f;
 
-    filled-new-array {v1}, [Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
-    move-result-object v1
+    move-result v1
 
-    invoke-static {v0, v5, v1, v3, v4}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
+    add-int/2addr v1, v0
 
-    move-result-object v1
+    const v0, 0xe1781
 
-    sput-object v1, Lo81;->h:Lhm4;
+    mul-int/2addr v1, v0
 
-    const-string v1, ":call-opponents-list"
+    const/4 v0, 0x1
 
-    new-array v5, v2, [Ljava/lang/String;
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    invoke-static {v0, v1, v5, v3, v4}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
+    move-result v0
 
-    move-result-object v1
+    add-int/2addr v0, v1
 
-    sput-object v1, Lo81;->i:Lhm4;
+    return v0
+.end method
 
-    const-string v1, ":call-admin-settings"
+.method public final m()I
+    .locals 1
 
-    new-array v5, v2, [Ljava/lang/String;
+    iget v0, p0, Lo81;->d:I
 
-    invoke-static {v0, v1, v5, v3, v4}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
+    return v0
+.end method
 
-    move-result-object v1
+.method public final t()I
+    .locals 1
 
-    sput-object v1, Lo81;->j:Lhm4;
+    const/4 v0, 0x0
 
-    const-string v1, ":call-debug-menu"
+    return v0
+.end method
 
-    new-array v5, v2, [Ljava/lang/String;
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    invoke-static {v0, v1, v5, v3, v4}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    move-result-object v1
+    const-string v1, "CallDebugMenuItem(sectionItemType="
 
-    sput-object v1, Lo81;->k:Lhm4;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const-string v1, ":call-pip"
+    iget v1, p0, Lo81;->a:I
 
-    new-array v5, v2, [Ljava/lang/String;
-
-    invoke-static {v0, v1, v5, v3, v4}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
-
-    move-result-object v1
-
-    sput-object v1, Lo81;->l:Lhm4;
-
-    const-string v1, ":call-admin-waiting-room"
-
-    new-array v2, v2, [Ljava/lang/String;
-
-    invoke-static {v0, v1, v2, v3, v4}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
+    invoke-static {v1}, Ln8d;->o(I)Ljava/lang/String;
 
     move-result-object v1
 
-    sput-object v1, Lo81;->m:Lhm4;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, "is_group"
+    const-string v1, ", title="
 
-    const-string v2, "is_video"
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v5, "call_id"
+    iget-object v1, p0, Lo81;->b:Lcpg;
 
-    filled-new-array {v5, v1, v2}, [Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object v1
+    const-string v1, ", sectionId=0, itemId="
 
-    const-string v2, ":call-rate"
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v0, v2, v1, v3, v4}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
+    iget-wide v1, p0, Lo81;->c:J
 
-    move-result-object v1
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    sput-object v1, Lo81;->n:Lhm4;
+    const-string v1, ", type="
 
-    const-string v1, "caller_id"
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    filled-new-array {v5, v1}, [Ljava/lang/String;
+    sget-object v1, Lv7f;->b:Lv7f;
 
-    move-result-object v1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v2, ":unknown-call"
+    const-string v1, ", descriptionRes=null, endView=null, leadingElementProperties=null, clickable=true)"
 
-    invoke-static {v0, v2, v1, v3, v4}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lo81;->o:Lhm4;
-
-    return-void
+    return-object v0
 .end method

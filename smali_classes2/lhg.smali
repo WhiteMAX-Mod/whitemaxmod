@@ -1,116 +1,126 @@
 .class public final Llhg;
-.super Lqhg;
+.super Lpdg;
 .source "SourceFile"
 
-
-# static fields
-.field public static final CREATOR:Lkhg;
+# interfaces
+.implements Lys6;
 
 
 # instance fields
-.field public final c:I
+.field public final synthetic o:Lphg;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lkhg;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Llhg;->CREATOR:Lkhg;
-
-    return-void
-.end method
-
-.method public constructor <init>(I)V
+.method public constructor <init>(Lphg;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Llhg;->o:Lphg;
 
-    iput p1, p0, Llhg;->c:I
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x0
+    check-cast p1, Lnd4;
 
-    return v0
-.end method
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    invoke-virtual {p0, p1, p2}, Llhg;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    const/4 v0, 0x1
+    move-result-object p1
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Llhg;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
     check-cast p1, Llhg;
 
-    iget v1, p0, Llhg;->c:I
+    sget-object p2, Lmah;->a:Lmah;
 
-    iget p1, p1, Llhg;->c:I
+    invoke-virtual {p1, p2}, Llhg;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-eq v1, p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
+    return-object p2
 .end method
 
-.method public final hashCode()I
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 1
 
-    iget v0, p0, Llhg;->c:I
+    new-instance p1, Llhg;
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    iget-object v0, p0, Llhg;->o:Lphg;
 
-    move-result v0
+    invoke-direct {p1, v0, p2}, Llhg;-><init>(Lphg;Lkotlin/coroutines/Continuation;)V
 
-    return v0
+    return-object p1
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
 
-    const-string v0, "Resource(resId="
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    const-string v1, ")"
+    iget-object p1, p0, Llhg;->o:Lphg;
 
-    iget v2, p0, Llhg;->c:I
+    iget-object v0, p1, Lphg;->a:Landroid/content/Context;
 
-    invoke-static {v2, v0, v1}, Lkz1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
     move-result-object v0
 
-    return-object v0
-.end method
+    invoke-static {v0}, Lj79;->a(Landroid/content/pm/ApplicationInfo;)I
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
+    move-result v1
 
-    iget p2, p0, Llhg;->c:I
+    const/16 v2, 0x23
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    if-ne v1, v2, :cond_0
 
-    return-void
+    invoke-static {v0}, Lj79;->m(Landroid/content/pm/ApplicationInfo;)Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "15"
+
+    invoke-static {v1, v2}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    :cond_0
+    new-instance v1, Lone/me/sdk/vendor/CheckCompileSdkVersionException;
+
+    invoke-static {v0}, Lj79;->a(Landroid/content/pm/ApplicationInfo;)I
+
+    move-result v2
+
+    invoke-static {v0}, Lj79;->m(Landroid/content/pm/ApplicationInfo;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v3, "invalid compile sdk versions: "
+
+    const-string v4, ", "
+
+    invoke-static {v3, v2, v4, v0}, Lkb0;->g(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1}, Lphg;->d()Lje4;
+
+    move-result-object p1
+
+    const-string v0, "20416"
+
+    invoke-virtual {p1, v0, v1}, Lje4;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
 .end method

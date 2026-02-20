@@ -1,90 +1,79 @@
 .class public final Lgo6;
-.super Ljava/lang/Object;
+.super Lr8h;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lpj6;
-
-.field public final b:J
+.field public final synthetic a:Landroidx/fragment/app/a;
 
 
 # direct methods
-.method public constructor <init>(Lpj6;J)V
-    .locals 7
+.method public constructor <init>(Landroidx/fragment/app/a;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v0, p1, Lpj6;->D:Lzi3;
+    iput-object p1, p0, Lgo6;->a:Landroidx/fragment/app/a;
 
-    iget v1, p1, Lpj6;->v:I
+    return-void
+.end method
 
-    iget v2, p1, Lpj6;->u:I
 
-    const/4 v3, 0x0
+# virtual methods
+.method public final o(I)Landroid/view/View;
+    .locals 3
 
-    const/4 v4, 0x1
+    iget-object v0, p0, Lgo6;->a:Landroidx/fragment/app/a;
 
-    if-eqz v0, :cond_0
+    iget-object v1, v0, Landroidx/fragment/app/a;->S0:Landroid/view/View;
 
-    move v0, v4
+    if-eqz v1, :cond_0
 
-    goto :goto_0
+    invoke-virtual {v1, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object p1
+
+    return-object p1
 
     :cond_0
-    move v0, v3
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    :goto_0
-    const-string v5, "format colorInfo must be set"
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-static {v5, v0}, Lh6j;->a(Ljava/lang/Object;Z)V
+    const-string v2, "Fragment "
 
-    if-lez v2, :cond_1
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move v0, v4
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    goto :goto_1
+    const-string v0, " does not have a view"
 
-    :cond_1
-    move v0, v3
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :goto_1
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    const-string v6, "format width must be positive, but is: "
-
-    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v2, v0}, Lh6j;->a(Ljava/lang/Object;Z)V
-
-    if-lez v1, :cond_2
-
-    move v3, v4
-
-    :cond_2
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v2, "format height must be positive, but is: "
-
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0, v3}, Lh6j;->a(Ljava/lang/Object;Z)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    iput-object p1, p0, Lgo6;->a:Lpj6;
+    throw p1
+.end method
 
-    iput-wide p2, p0, Lgo6;->b:J
+.method public final q()Z
+    .locals 1
 
-    return-void
+    iget-object v0, p0, Lgo6;->a:Landroidx/fragment/app/a;
+
+    iget-object v0, v0, Landroidx/fragment/app/a;->S0:Landroid/view/View;
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
 .end method

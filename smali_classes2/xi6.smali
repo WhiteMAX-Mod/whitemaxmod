@@ -1,22 +1,8 @@
-.class public final Lxi6;
-.super Landroid/text/style/ForegroundColorSpan;
+.class public interface abstract Lxi6;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Ldb4;
 
 
 # virtual methods
-.method public final copy()Ldb4;
-    .locals 2
-
-    new-instance v0, Lxi6;
-
-    invoke-virtual {p0}, Landroid/text/style/ForegroundColorSpan;->getForegroundColor()I
-
-    move-result v1
-
-    invoke-direct {v0, v1}, Landroid/text/style/ForegroundColorSpan;-><init>(I)V
-
-    return-object v0
+.method public abstract b(Ljava/lang/String;Lcj8;Landroidx/recyclerview/widget/b;)Lone/me/sdk/arch/Widget;
 .end method

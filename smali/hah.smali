@@ -1,209 +1,114 @@
-.class public interface abstract Lhah;
-.super Ljava/lang/Object;
+.class public final Lhah;
+.super Lpdg;
 .source "SourceFile"
 
 # interfaces
-.implements Lvdg;
-.implements Lci7;
+.implements Lys6;
 
 
-# static fields
-.field public static final i0:Lta0;
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
 
-.field public static final j0:Lta0;
+.field public final synthetic Y:Ld96;
 
-.field public static final k0:Lta0;
-
-.field public static final l0:Lta0;
-
-.field public static final m0:Lta0;
-
-.field public static final n0:Lta0;
-
-.field public static final o0:Lta0;
-
-.field public static final p0:Lta0;
-
-.field public static final q0:Lta0;
-
-.field public static final r0:Lta0;
-
-.field public static final s0:Lta0;
+.field public o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(Ld96;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Lta0;
+    iput-object p1, p0, Lhah;->Y:Ld96;
 
-    const-string v1, "camerax.core.useCase.defaultSessionConfig"
+    const/4 p1, 0x2
 
-    const-class v2, Lpte;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v0, v1, v2, v3}, Lta0;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lhah;->i0:Lta0;
-
-    new-instance v0, Lta0;
-
-    const-string v1, "camerax.core.useCase.defaultCaptureConfig"
-
-    const-class v2, Ld72;
-
-    invoke-direct {v0, v1, v2, v3}, Lta0;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lhah;->j0:Lta0;
-
-    new-instance v0, Lta0;
-
-    const-string v1, "camerax.core.useCase.sessionConfigUnpacker"
-
-    const-class v2, Ly12;
-
-    invoke-direct {v0, v1, v2, v3}, Lta0;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lhah;->k0:Lta0;
-
-    new-instance v0, Lta0;
-
-    const-string v1, "camerax.core.useCase.captureConfigUnpacker"
-
-    const-class v2, Ld12;
-
-    invoke-direct {v0, v1, v2, v3}, Lta0;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lhah;->l0:Lta0;
-
-    new-instance v0, Lta0;
-
-    const-string v1, "camerax.core.useCase.surfaceOccupancyPriority"
-
-    sget-object v2, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
-
-    invoke-direct {v0, v1, v2, v3}, Lta0;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lhah;->m0:Lta0;
-
-    new-instance v0, Lta0;
-
-    const-string v1, "camerax.core.useCase.targetFrameRate"
-
-    const-class v4, Landroid/util/Range;
-
-    invoke-direct {v0, v1, v4, v3}, Lta0;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lhah;->n0:Lta0;
-
-    new-instance v0, Lta0;
-
-    const-string v1, "camerax.core.useCase.zslDisabled"
-
-    sget-object v4, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
-
-    invoke-direct {v0, v1, v4, v3}, Lta0;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lhah;->o0:Lta0;
-
-    new-instance v0, Lta0;
-
-    const-string v1, "camerax.core.useCase.highResolutionDisabled"
-
-    invoke-direct {v0, v1, v4, v3}, Lta0;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lhah;->p0:Lta0;
-
-    new-instance v0, Lta0;
-
-    const-string v1, "camerax.core.useCase.captureType"
-
-    const-class v4, Ljah;
-
-    invoke-direct {v0, v1, v4, v3}, Lta0;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lhah;->q0:Lta0;
-
-    new-instance v0, Lta0;
-
-    const-string v1, "camerax.core.useCase.previewStabilizationMode"
-
-    invoke-direct {v0, v1, v2, v3}, Lta0;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lhah;->r0:Lta0;
-
-    new-instance v0, Lta0;
-
-    const-string v1, "camerax.core.useCase.videoStabilizationMode"
-
-    invoke-direct {v0, v1, v2, v3}, Lta0;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lhah;->s0:Lta0;
+    invoke-direct {p0, p1, p2}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public B()Ljah;
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    sget-object v0, Lhah;->q0:Lta0;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-interface {p0, v0}, Lmld;->d(Lta0;)Ljava/lang/Object;
+    invoke-virtual {p0, p1, p2}, Lhah;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    move-result-object v0
+    move-result-object p1
 
-    check-cast v0, Ljah;
+    check-cast p1, Lhah;
+
+    sget-object p2, Lmah;->a:Lmah;
+
+    invoke-virtual {p1, p2}, Lhah;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lhah;
+
+    iget-object v1, p0, Lhah;->Y:Ld96;
+
+    invoke-direct {v0, v1, p2}, Lhah;-><init>(Ld96;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lhah;->X:Ljava/lang/Object;
 
     return-object v0
 .end method
 
-.method public C()I
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    const/4 v0, 0x0
+    iget v0, p0, Lhah;->o:I
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    const/4 v1, 0x1
 
-    move-result-object v0
+    if-eqz v0, :cond_1
 
-    sget-object v1, Lhah;->s0:Lta0;
+    if-ne v0, v1, :cond_0
 
-    invoke-interface {p0, v1, v0}, Lmld;->a(Lta0;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    move-result-object v0
+    goto :goto_0
 
-    check-cast v0, Ljava/lang/Integer;
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    move-result v0
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    return v0
-.end method
+    throw p1
 
-.method public J()I
-    .locals 2
+    :cond_1
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    const/4 v0, 0x0
+    iget-object p1, p0, Lhah;->X:Ljava/lang/Object;
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iput v1, p0, Lhah;->o:I
 
-    move-result-object v0
+    iget-object v0, p0, Lhah;->Y:Ld96;
 
-    sget-object v1, Lhah;->r0:Lta0;
+    invoke-interface {v0, p1, p0}, Ld96;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    invoke-interface {p0, v1, v0}, Lmld;->a(Lta0;Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object p1
 
-    move-result-object v0
+    sget-object v0, Lod4;->a:Lod4;
 
-    check-cast v0, Ljava/lang/Integer;
+    if-ne p1, v0, :cond_2
 
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+    return-object v0
 
-    move-result v0
+    :cond_2
+    :goto_0
+    sget-object p1, Lmah;->a:Lmah;
 
-    return v0
+    return-object p1
 .end method

@@ -1,1019 +1,238 @@
 .class public final Llk8;
-.super Ly84;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final b:Llk8;
+.field public static final synthetic h:I
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lqy0;
+
+.field public final b:Lhd4;
+
+.field public final c:Lxk8;
+
+.field public final d:Lbjg;
+
+.field public final e:Lkotlinx/coroutines/internal/ContextScope;
+
+.field public final f:Lkue;
+
+.field public g:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Llk8;
-
-    invoke-direct {v0}, Llk8;-><init>()V
-
-    sput-object v0, Llk8;->b:Llk8;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>()V
-    .locals 1
-
-    .line 1
-    const/4 v0, 0x0
-
-    iput v0, p0, Llk8;->a:I
+.method public constructor <init>(Lqy0;Lhd4;Lplc;Lxk8;Lbjg;Landroid/content/ContentResolver;Lv36;)V
+    .locals 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    iput-object p1, p0, Llk8;->a:Lqy0;
 
-.method public synthetic constructor <init>(Lone/me/sdk/arch/Widget;I)V
-    .locals 0
+    iput-object p2, p0, Llk8;->b:Lhd4;
 
-    .line 2
-    iput p2, p0, Llk8;->a:I
+    iput-object p4, p0, Llk8;->c:Lxk8;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p5, p0, Llk8;->d:Lbjg;
+
+    check-cast p5, Lcbb;
+
+    invoke-virtual {p5}, Lcbb;->a()Lgd4;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lztj;->a(Led4;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object p1
+
+    iput-object p1, p0, Llk8;->e:Lkotlinx/coroutines/internal/ContextScope;
+
+    new-instance v0, Lkue;
+
+    iget-object p3, p3, Lplc;->c:Lnih;
+
+    new-instance v1, Lsc9;
+
+    const/16 v2, 0x13
+
+    invoke-direct {v1, p6, v2, p7}, Lsc9;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-direct {v0, p3, v1}, Lkue;-><init>(Lnih;Lsc9;)V
+
+    iput-object v0, p0, Llk8;->f:Lkue;
+
+    sget-object p3, Lti5;->a:Lti5;
+
+    iput-object p3, p0, Llk8;->g:Ljava/lang/Object;
+
+    check-cast p4, Len7;
+
+    iget-object p3, p4, Len7;->v0:Lxd3;
+
+    new-instance p4, Ljk8;
+
+    const/4 p6, 0x0
+
+    invoke-direct {p4, p0, p6}, Ljk8;-><init>(Llk8;Lkotlin/coroutines/Continuation;)V
+
+    new-instance p6, Llb6;
+
+    const/4 p7, 0x1
+
+    invoke-direct {p6, p3, p4, p7}, Llb6;-><init>(Lb96;Lys6;I)V
+
+    invoke-virtual {p5}, Lcbb;->a()Lgd4;
+
+    move-result-object p3
+
+    invoke-static {p6, p3}, Lzka;->v(Lb96;Led4;)Lb96;
+
+    move-result-object p3
+
+    invoke-static {p1, p2}, Lztj;->h(Lnd4;Led4;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object p1
+
+    invoke-static {p3, p1}, Lzka;->w(Lb96;Lnd4;)Lcuf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(La94;Lf94;Lg94;)V
+.method public final a(Ljava/lang/String;)Ljava/util/List;
     .locals 3
 
-    iget p2, p0, Llk8;->a:I
+    sget-object v0, Lsi5;->a:Lsi5;
 
-    packed-switch p2, :pswitch_data_0
+    if-nez p1, :cond_0
 
-    return-void
-
-    :pswitch_0
-    invoke-static {p1}, Lg5j;->c(La94;)Ljava/lang/String;
-
-    move-result-object p1
-
-    sget-object p2, Lc5j;->a:Ledb;
-
-    if-nez p2, :cond_0
-
-    goto :goto_0
+    goto :goto_1
 
     :cond_0
-    sget-object v0, Lkk8;->c:Lkk8;
+    const-string v1, "SELECTED_MEDIA_ALBUM"
 
-    invoke-virtual {p2, v0}, Ledb;->b(Lkk8;)Z
+    invoke-virtual {p1, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_3
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    iget-object p1, p0, Llk8;->f:Lkue;
 
-    const-string v2, "onChangeEnd, changeType="
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    new-instance v0, Ljava/util/ArrayList;
 
-    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-object p1, p1, Lkue;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    move-result-object p3
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "lifecycle: "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p3
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p2, v0, p1, p3, v1}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
-    :goto_0
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public b(La94;Lf94;Lg94;)V
-    .locals 3
-
-    iget p2, p0, Llk8;->a:I
-
-    packed-switch p2, :pswitch_data_0
-
-    return-void
-
-    :pswitch_0
-    invoke-static {p1}, Lg5j;->c(La94;)Ljava/lang/String;
+    invoke-virtual {p1}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
 
-    sget-object p2, Lc5j;->a:Ledb;
-
-    if-nez p2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v0, Lkk8;->c:Lkk8;
-
-    invoke-virtual {p2, v0}, Ledb;->b(Lkk8;)Z
+    :cond_1
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v1
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_2
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    const-string v2, "onChangeStart, changeType="
+    move-result-object v1
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    check-cast v1, Lmue;
 
-    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget-boolean v2, v1, Lmue;->f:Z
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    if-eqz v2, :cond_1
 
-    move-result-object p3
+    iget-object v1, v1, Lmue;->a:Lik8;
 
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "lifecycle: "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p3
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p2, v0, p1, p3, v1}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
-    :goto_0
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public c(La94;Landroid/os/Bundle;)V
-    .locals 3
-
-    iget p2, p0, Llk8;->a:I
-
-    packed-switch p2, :pswitch_data_0
-
-    return-void
-
-    :pswitch_0
-    invoke-static {p1}, Lg5j;->c(La94;)Ljava/lang/String;
-
-    move-result-object p1
-
-    sget-object p2, Lc5j;->a:Ledb;
-
-    if-nez p2, :cond_0
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    :cond_0
-    sget-object v0, Lkk8;->c:Lkk8;
+    :cond_2
+    return-object v0
 
-    invoke-virtual {p2, v0}, Ledb;->b(Lkk8;)Z
+    :cond_3
+    iget-object v1, p0, Llk8;->g:Ljava/lang/Object;
+
+    invoke-interface {v1, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lxu6;
+
+    if-nez p1, :cond_4
+
+    :goto_1
+    return-object v0
+
+    :cond_4
+    iget-object p1, p1, Lxu6;->a:Lwu6;
+
+    iget-object v1, p0, Llk8;->c:Lxk8;
+
+    check-cast v1, Len7;
+
+    iget-object v1, v1, Len7;->z0:Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-virtual {v1, p1}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/util/List;
+
+    if-nez p1, :cond_5
+
+    goto :goto_2
+
+    :cond_5
+    move-object v0, p1
+
+    :goto_2
+    new-instance p1, Ljava/util/ArrayList;
+
+    const/16 v1, 0xa
+
+    invoke-static {v0, v1}, Lgk3;->n(Ljava/lang/Iterable;I)I
 
     move-result v1
 
-    if-eqz v1, :cond_1
+    invoke-direct {p1, v1}, Ljava/util/ArrayList;-><init>(I)V
 
-    const-string v1, "lifecycle: onRestoreInstanceState"
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    const/4 v2, 0x0
+    move-result-object v0
 
-    invoke-virtual {p2, v0, p1, v1, v2}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
-    :goto_0
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public d(La94;)V
-    .locals 4
-
-    iget v0, p0, Llk8;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    return-void
-
-    :pswitch_0
-    invoke-static {p1}, Lg5j;->c(La94;)Ljava/lang/String;
-
-    move-result-object p1
-
-    sget-object v0, Lc5j;->a:Ledb;
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v1, Lkk8;->c:Lkk8;
-
-    invoke-virtual {v0, v1}, Ledb;->b(Lkk8;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    const-string v2, "lifecycle: onRestoreViewState"
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v0, v1, p1, v2, v3}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
-    :goto_0
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public e(La94;Landroid/os/Bundle;)V
-    .locals 3
-
-    iget p2, p0, Llk8;->a:I
-
-    packed-switch p2, :pswitch_data_0
-
-    return-void
-
-    :pswitch_0
-    invoke-static {p1}, Lg5j;->c(La94;)Ljava/lang/String;
-
-    move-result-object p1
-
-    sget-object p2, Lc5j;->a:Ledb;
-
-    if-nez p2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v0, Lkk8;->c:Lkk8;
-
-    invoke-virtual {p2, v0}, Ledb;->b(Lkk8;)Z
+    :goto_3
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v1
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_6
 
-    const-string v1, "lifecycle: onSaveInstanceState"
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    const/4 v2, 0x0
+    move-result-object v1
 
-    invoke-virtual {p2, v0, p1, v1, v2}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    check-cast v1, Lok8;
 
-    :cond_1
-    :goto_0
-    return-void
+    invoke-static {v1}, Ljej;->c(Lok8;)Lik8;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+    move-result-object v1
 
-.method public f(La94;)V
-    .locals 4
+    invoke-virtual {p1, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    iget v0, p0, Llk8;->a:I
+    goto :goto_3
 
-    packed-switch v0, :pswitch_data_0
-
-    return-void
-
-    :pswitch_0
-    invoke-static {p1}, Lg5j;->c(La94;)Ljava/lang/String;
-
-    move-result-object p1
-
-    sget-object v0, Lc5j;->a:Ledb;
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v1, Lkk8;->c:Lkk8;
-
-    invoke-virtual {v0, v1}, Ledb;->b(Lkk8;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    const-string v2, "lifecycle: onSaveViewState"
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v0, v1, p1, v2, v3}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
-    :goto_0
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public g(La94;)V
-    .locals 4
-
-    iget v0, p0, Llk8;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    return-void
-
-    :pswitch_0
-    invoke-static {p1}, Lg5j;->c(La94;)Ljava/lang/String;
-
-    move-result-object p1
-
-    sget-object v0, Lc5j;->a:Ledb;
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v1, Lkk8;->c:Lkk8;
-
-    invoke-virtual {v0, v1}, Ledb;->b(Lkk8;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    const-string v2, "lifecycle: postAttach"
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v0, v1, p1, v2, v3}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
-    :goto_0
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public h(La94;)V
-    .locals 4
-
-    iget v0, p0, Llk8;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    return-void
-
-    :pswitch_0
-    invoke-static {p1}, Lg5j;->c(La94;)Ljava/lang/String;
-
-    move-result-object p1
-
-    sget-object v0, Lc5j;->a:Ledb;
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v1, Lkk8;->c:Lkk8;
-
-    invoke-virtual {v0, v1}, Ledb;->b(Lkk8;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    const-string v2, "lifecycle: postContextAvailable"
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v0, v1, p1, v2, v3}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
-    :goto_0
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public i(La94;)V
-    .locals 4
-
-    iget v0, p0, Llk8;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    return-void
-
-    :pswitch_0
-    invoke-static {p1}, Lg5j;->c(La94;)Ljava/lang/String;
-
-    move-result-object p1
-
-    sget-object v0, Lc5j;->a:Ledb;
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v1, Lkk8;->c:Lkk8;
-
-    invoke-virtual {v0, v1}, Ledb;->b(Lkk8;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    const-string v2, "lifecycle: postContextUnavailable"
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v0, v1, p1, v2, v3}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
-    :goto_0
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public j(La94;Landroid/view/View;)V
-    .locals 3
-
-    iget p2, p0, Llk8;->a:I
-
-    packed-switch p2, :pswitch_data_0
-
-    return-void
-
-    :pswitch_0
-    invoke-static {p1}, Lg5j;->c(La94;)Ljava/lang/String;
-
-    move-result-object p1
-
-    sget-object p2, Lc5j;->a:Ledb;
-
-    if-nez p2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v0, Lkk8;->c:Lkk8;
-
-    invoke-virtual {p2, v0}, Ledb;->b(Lkk8;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    const-string v1, "lifecycle: postCreateView"
-
-    const/4 v2, 0x0
-
-    invoke-virtual {p2, v0, p1, v1, v2}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
-    :goto_0
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final k(La94;)V
-    .locals 4
-
-    iget v0, p0, Llk8;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    sget-object p1, Laze;->c:Laze;
-
-    invoke-virtual {p1}, Ld3;->p0()Ljm4;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljm4;->d()Z
-
-    return-void
-
-    :pswitch_0
-    sget-object p1, Lone/me/complaintbottomsheet/ComplaintBottomSheet;->u0:[Lz28;
-
-    sget-object p1, Lsn3;->c:Lsn3;
-
-    invoke-virtual {p1}, Ld3;->p0()Ljm4;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljm4;->d()Z
-
-    return-void
-
-    :pswitch_1
-    invoke-static {p1}, Lg5j;->c(La94;)Ljava/lang/String;
-
-    move-result-object p1
-
-    sget-object v0, Lc5j;->a:Ledb;
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v1, Lkk8;->c:Lkk8;
-
-    invoke-virtual {v0, v1}, Ledb;->b(Lkk8;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    const-string v2, "lifecycle: postDestroy"
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v0, v1, p1, v2, v3}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
-    :goto_0
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public l(La94;)V
-    .locals 4
-
-    iget v0, p0, Llk8;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    return-void
-
-    :pswitch_0
-    invoke-static {p1}, Lg5j;->c(La94;)Ljava/lang/String;
-
-    move-result-object p1
-
-    sget-object v0, Lc5j;->a:Ledb;
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v1, Lkk8;->c:Lkk8;
-
-    invoke-virtual {v0, v1}, Ledb;->b(Lkk8;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    const-string v2, "lifecycle: postDestroyView"
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v0, v1, p1, v2, v3}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
-    :goto_0
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public m(La94;)V
-    .locals 4
-
-    iget v0, p0, Llk8;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    return-void
-
-    :pswitch_0
-    invoke-static {p1}, Lg5j;->c(La94;)Ljava/lang/String;
-
-    move-result-object p1
-
-    sget-object v0, Lc5j;->a:Ledb;
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v1, Lkk8;->c:Lkk8;
-
-    invoke-virtual {v0, v1}, Ledb;->b(Lkk8;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    const-string v2, "lifecycle: postDetach"
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v0, v1, p1, v2, v3}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
-    :goto_0
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public n(La94;Landroid/view/View;)V
-    .locals 3
-
-    iget p2, p0, Llk8;->a:I
-
-    packed-switch p2, :pswitch_data_0
-
-    return-void
-
-    :pswitch_0
-    invoke-static {p1}, Lg5j;->c(La94;)Ljava/lang/String;
-
-    move-result-object p1
-
-    sget-object p2, Lc5j;->a:Ledb;
-
-    if-nez p2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v0, Lkk8;->c:Lkk8;
-
-    invoke-virtual {p2, v0}, Ledb;->b(Lkk8;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    const-string v1, "lifecycle: preAttach"
-
-    const/4 v2, 0x0
-
-    invoke-virtual {p2, v0, p1, v1, v2}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
-    :goto_0
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public o(La94;)V
-    .locals 4
-
-    iget v0, p0, Llk8;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    return-void
-
-    :pswitch_0
-    invoke-static {p1}, Lg5j;->c(La94;)Ljava/lang/String;
-
-    move-result-object p1
-
-    sget-object v0, Lc5j;->a:Ledb;
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v1, Lkk8;->c:Lkk8;
-
-    invoke-virtual {v0, v1}, Ledb;->b(Lkk8;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    const-string v2, "lifecycle: preContextAvailable"
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v0, v1, p1, v2, v3}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
-    :goto_0
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public p(La94;)V
-    .locals 4
-
-    iget v0, p0, Llk8;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    return-void
-
-    :pswitch_0
-    invoke-static {p1}, Lg5j;->c(La94;)Ljava/lang/String;
-
-    move-result-object p1
-
-    sget-object v0, Lc5j;->a:Ledb;
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v1, Lkk8;->c:Lkk8;
-
-    invoke-virtual {v0, v1}, Ledb;->b(Lkk8;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    const-string v2, "lifecycle: preContextUnavailable"
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v0, v1, p1, v2, v3}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
-    :goto_0
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public q(La94;)V
-    .locals 4
-
-    iget v0, p0, Llk8;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    return-void
-
-    :pswitch_0
-    invoke-static {p1}, Lg5j;->c(La94;)Ljava/lang/String;
-
-    move-result-object p1
-
-    sget-object v0, Lc5j;->a:Ledb;
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v1, Lkk8;->c:Lkk8;
-
-    invoke-virtual {v0, v1}, Ledb;->b(Lkk8;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    const-string v2, "lifecycle: preCreateView"
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v0, v1, p1, v2, v3}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
-    :goto_0
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public r(La94;)V
-    .locals 4
-
-    iget v0, p0, Llk8;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    return-void
-
-    :pswitch_0
-    invoke-static {p1}, Lg5j;->c(La94;)Ljava/lang/String;
-
-    move-result-object p1
-
-    sget-object v0, Lc5j;->a:Ledb;
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v1, Lkk8;->c:Lkk8;
-
-    invoke-virtual {v0, v1}, Ledb;->b(Lkk8;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    const-string v2, "lifecycle: preDestroy"
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v0, v1, p1, v2, v3}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
-    :goto_0
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public s(La94;Landroid/view/View;)V
-    .locals 3
-
-    iget p2, p0, Llk8;->a:I
-
-    packed-switch p2, :pswitch_data_0
-
-    return-void
-
-    :pswitch_0
-    invoke-static {p1}, Lg5j;->c(La94;)Ljava/lang/String;
-
-    move-result-object p1
-
-    sget-object p2, Lc5j;->a:Ledb;
-
-    if-nez p2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v0, Lkk8;->c:Lkk8;
-
-    invoke-virtual {p2, v0}, Ledb;->b(Lkk8;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    const-string v1, "lifecycle: preDestroyView"
-
-    const/4 v2, 0x0
-
-    invoke-virtual {p2, v0, p1, v1, v2}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
-    :goto_0
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public t(La94;)V
-    .locals 4
-
-    iget v0, p0, Llk8;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    return-void
-
-    :pswitch_0
-    invoke-static {p1}, Lg5j;->c(La94;)Ljava/lang/String;
-
-    move-result-object p1
-
-    sget-object v0, Lc5j;->a:Ledb;
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v1, Lkk8;->c:Lkk8;
-
-    invoke-virtual {v0, v1}, Ledb;->b(Lkk8;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    const-string v2, "lifecycle: preDetach"
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v0, v1, p1, v2, v3}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
-    :goto_0
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    :cond_6
+    return-object p1
 .end method

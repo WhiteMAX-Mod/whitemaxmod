@@ -1,55 +1,99 @@
 .class public final Liw;
-.super Lo84;
+.super Lujg;
 .source "SourceFile"
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Luw;
-
-.field public Z:I
+.field public c:Z
 
 .field public d:J
 
-.field public o:Z
-
 
 # direct methods
-.method public constructor <init>(Luw;Lo84;)V
+.method public constructor <init>(Lws9;)V
     .locals 0
 
-    iput-object p1, p0, Liw;->Y:Luw;
-
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1}, Lujg;-><init>(Lws9;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final d(Lws9;Ljava/lang/String;)V
+    .locals 2
 
-    iput-object p1, p0, Liw;->X:Ljava/lang/Object;
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget p1, p0, Liw;->Z:I
+    const-string v0, "success"
 
-    const/high16 v0, -0x80000000
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    or-int/2addr p1, v0
+    move-result v0
 
-    iput p1, p0, Liw;->Z:I
+    if-nez v0, :cond_1
 
+    const-string v0, "updateTime"
+
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_0
+
+    invoke-virtual {p1}, Lws9;->B()V
+
+    return-void
+
+    :cond_0
     const-wide/16 v0, 0x0
 
-    const/4 p1, 0x0
+    invoke-static {p1, v0, v1}, Lm1j;->o(Lws9;J)J
 
-    iget-object v2, p0, Liw;->Y:Luw;
+    move-result-wide p1
 
-    invoke-static {v2, v0, v1, p1, p0}, Luw;->b(Luw;JZLo84;)Ljava/lang/Object;
+    iput-wide p1, p0, Liw;->d:J
 
-    move-result-object p1
+    return-void
 
-    return-object p1
+    :cond_1
+    invoke-static {p1}, Lm1j;->h(Lws9;)Z
+
+    move-result p1
+
+    iput-boolean p1, p0, Liw;->c:Z
+
+    return-void
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    iget-boolean v0, p0, Liw;->c:Z
+
+    iget-wide v1, p0, Liw;->d:J
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "Response{success="
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v0, ", updateTime="
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v0, "}"
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

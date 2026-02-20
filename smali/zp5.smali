@@ -1,107 +1,138 @@
 .class public final Lzp5;
-.super Ljava/lang/Object;
+.super Landroid/media/MediaDataSource;
 .source "SourceFile"
-
-# interfaces
-.implements Lkhh;
-.implements Lrcc;
 
 
 # instance fields
-.field public a:Lkhh;
+.field public a:J
 
-.field public b:Lzp5;
+.field public final synthetic b:Leq5;
+
+
+# direct methods
+.method public constructor <init>(Leq5;)V
+    .locals 0
+
+    iput-object p1, p0, Lzp5;->b:Leq5;
+
+    invoke-direct {p0}, Landroid/media/MediaDataSource;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a(ILjava/lang/Object;)V
-    .locals 1
-
-    const/4 v0, 0x7
-
-    if-eq p1, v0, :cond_3
-
-    const/16 v0, 0x8
-
-    if-eq p1, v0, :cond_2
-
-    const/16 v0, 0x2710
-
-    if-eq p1, v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    if-nez p2, :cond_1
-
-    :goto_0
-    return-void
-
-    :cond_1
-    new-instance p1, Ljava/lang/ClassCastException;
-
-    invoke-direct {p1}, Ljava/lang/ClassCastException;-><init>()V
-
-    throw p1
-
-    :cond_2
-    check-cast p2, Lzp5;
-
-    iput-object p2, p0, Lzp5;->b:Lzp5;
-
-    return-void
-
-    :cond_3
-    check-cast p2, Lkhh;
-
-    iput-object p2, p0, Lzp5;->a:Lkhh;
+.method public final close()V
+    .locals 0
 
     return-void
 .end method
 
-.method public final b(JJLpj6;Landroid/media/MediaFormat;)V
+.method public final getSize()J
+    .locals 2
+
+    const-wide/16 v0, -0x1
+
+    return-wide v0
+.end method
+
+.method public final readAt(J[BII)I
     .locals 7
 
-    iget-object v0, p0, Lzp5;->a:Lkhh;
+    if-nez p5, :cond_0
 
-    if-eqz v0, :cond_0
+    const/4 p1, 0x0
 
-    move-wide v1, p1
-
-    move-wide v3, p3
-
-    move-object v5, p5
-
-    move-object v6, p6
-
-    invoke-interface/range {v0 .. v6}, Lkhh;->b(JJLpj6;Landroid/media/MediaFormat;)V
+    return p1
 
     :cond_0
-    return-void
-.end method
+    const-wide/16 v0, 0x0
 
-.method public final c()V
-    .locals 1
+    cmp-long v2, p1, v0
 
-    iget-object v0, p0, Lzp5;->b:Lzp5;
+    const/4 v3, -0x1
 
-    if-eqz v0, :cond_0
+    if-gez v2, :cond_1
 
-    invoke-virtual {v0}, Lzp5;->c()V
+    return v3
 
-    :cond_0
-    return-void
-.end method
+    :cond_1
+    :try_start_0
+    iget-wide v4, p0, Lzp5;->a:J
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-.method public final d()V
-    .locals 1
+    cmp-long v2, v4, p1
 
-    iget-object v0, p0, Lzp5;->b:Lzp5;
+    iget-object v6, p0, Lzp5;->b:Leq5;
 
-    if-eqz v0, :cond_0
+    if-eqz v2, :cond_3
 
-    invoke-virtual {v0}, Lzp5;->d()V
+    cmp-long v0, v4, v0
 
-    :cond_0
-    return-void
+    if-ltz v0, :cond_2
+
+    :try_start_1
+    iget-object v0, v6, Laq5;->a:Ljava/io/DataInputStream;
+
+    invoke-virtual {v0}, Ljava/io/InputStream;->available()I
+
+    move-result v0
+
+    int-to-long v0, v0
+
+    add-long/2addr v4, v0
+
+    cmp-long v0, p1, v4
+
+    if-ltz v0, :cond_2
+
+    return v3
+
+    :cond_2
+    invoke-virtual {v6, p1, p2}, Leq5;->k(J)V
+
+    iput-wide p1, p0, Lzp5;->a:J
+
+    :cond_3
+    iget-object p1, v6, Laq5;->a:Ljava/io/DataInputStream;
+
+    invoke-virtual {p1}, Ljava/io/InputStream;->available()I
+
+    move-result p1
+
+    if-le p5, p1, :cond_4
+
+    iget-object p1, v6, Laq5;->a:Ljava/io/DataInputStream;
+
+    invoke-virtual {p1}, Ljava/io/InputStream;->available()I
+
+    move-result p5
+
+    :cond_4
+    invoke-virtual {v6, p3, p4, p5}, Laq5;->read([BII)I
+
+    move-result p1
+
+    if-ltz p1, :cond_5
+
+    iget-wide p2, p0, Lzp5;->a:J
+
+    int-to-long p4, p1
+
+    add-long/2addr p2, p4
+
+    iput-wide p2, p0, Lzp5;->a:J
+    :try_end_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
+
+    return p1
+
+    :catch_0
+    :cond_5
+    const-wide/16 p1, -0x1
+
+    iput-wide p1, p0, Lzp5;->a:J
+
+    return v3
 .end method

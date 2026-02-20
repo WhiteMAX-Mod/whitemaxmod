@@ -1,22 +1,25 @@
 .class public final Lc53;
-.super Lo84;
+.super Lda4;
+.source "SourceFile"
 
 
 # instance fields
-.field public final synthetic X:Lnq1;
+.field public final synthetic X:Ld53;
 
-.field public synthetic d:Ljava/lang/Object;
+.field public Y:I
 
-.field public o:I
+.field public d:Z
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lnq1;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Ld53;Lda4;)V
     .locals 0
 
-    iput-object p1, p0, Lc53;->X:Lnq1;
+    iput-object p1, p0, Lc53;->X:Ld53;
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -24,23 +27,25 @@
 
 # virtual methods
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    .locals 2
 
-    iput-object p1, p0, Lc53;->d:Ljava/lang/Object;
+    iput-object p1, p0, Lc53;->o:Ljava/lang/Object;
 
-    iget p1, p0, Lc53;->o:I
+    iget p1, p0, Lc53;->Y:I
 
     const/high16 v0, -0x80000000
 
     or-int/2addr p1, v0
 
-    iput p1, p0, Lc53;->o:I
+    iput p1, p0, Lc53;->Y:I
 
-    iget-object p1, p0, Lc53;->X:Lnq1;
+    const/4 p1, 0x0
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0, p0}, Lnq1;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    iget-object v1, p0, Lc53;->X:Ld53;
+
+    invoke-virtual {v1, p1, v0, p0}, Ld53;->a(Ljava/util/Set;ZLda4;)Ljava/lang/Object;
 
     move-result-object p1
 

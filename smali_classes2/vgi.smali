@@ -1,120 +1,233 @@
 .class public final Lvgi;
-.super Ljava/lang/Object;
+.super Lpdg;
 .source "SourceFile"
+
+# interfaces
+.implements Lys6;
 
 
 # instance fields
-.field public final a:Ljfa;
+.field public final synthetic X:Lbhi;
 
-.field public final b:Ljfa;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public constructor <init>(Lbhi;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lvgi;->X:Lbhi;
 
-    new-instance v0, Ljfa;
+    const/4 p1, 0x2
 
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Ljfa;-><init>(I)V
-
-    iput-object v0, p0, Lvgi;->a:Ljfa;
-
-    new-instance v0, Ljfa;
-
-    invoke-direct {v0, v1}, Ljfa;-><init>(I)V
-
-    iput-object v0, p0, Lvgi;->b:Ljfa;
+    invoke-direct {p0, p1, p2}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Class;Lmth;)Lnth;
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-virtual {p1}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
+    check-cast p1, Lnd4;
 
-    move-result-object v0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    const-string v1, "one.me.sdk.arch.ViewModelStore:key:"
-
-    invoke-static {v1, v0}, Lkz1;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lvgi;->a:Ljfa;
-
-    invoke-virtual {v1, v0}, Ljfa;->f(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lnth;
-
-    invoke-virtual {p1, v2}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    invoke-virtual {p1, v2}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p0, p1, p2}, Lvgi;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    if-eqz p1, :cond_0
+    check-cast p1, Lvgi;
 
-    check-cast p1, Lnth;
+    sget-object p2, Lmah;->a:Lmah;
 
-    return-object p1
+    invoke-virtual {p1, p2}, Lvgi;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    return-object p2
+.end method
 
-    const-string p2, "Required value was null."
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    new-instance v0, Lvgi;
 
-    throw p1
+    iget-object v1, p0, Lvgi;->X:Lbhi;
 
-    :cond_1
-    iget-object v2, p0, Lvgi;->b:Ljfa;
+    invoke-direct {v0, v1, p2}, Lvgi;-><init>(Lbhi;Lkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {v2, v0}, Ljfa;->f(Ljava/lang/Object;)Ljava/lang/Object;
+    iput-object p1, v0, Lvgi;->o:Ljava/lang/Object;
 
-    move-result-object v2
+    return-object v0
+.end method
 
-    check-cast v2, Lmth;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    if-nez v2, :cond_2
+    iget-object v0, p0, Lvgi;->o:Ljava/lang/Object;
+
+    check-cast v0, Lnd4;
+
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lvgi;->X:Lbhi;
+
+    :try_start_0
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v2, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v0, ".jpg"
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p1, Lbhi;->V0:Ljava/lang/String;
+
+    iget-object v0, p1, Lbhi;->C0:Lj88;
+
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lh56;
+
+    iget-object v1, p1, Lbhi;->V0:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Lh56;->o(Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object v0
+
+    invoke-static {v0}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/net/Uri;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "content://"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
 
     goto :goto_0
 
-    :cond_2
-    move-object p2, v2
+    :cond_0
+    iget-object v1, p1, Lbhi;->C0:Lj88;
 
-    :goto_0
-    if-nez p2, :cond_3
+    invoke-interface {v1}, Lj88;->getValue()Ljava/lang/Object;
 
-    const-string p1, "WidgetViewModelStore"
+    move-result-object v1
 
-    const-string p2, "Wrong usage of ViewModelStore - trying to access ViewModel without adding its Factory"
+    check-cast v1, Lh56;
 
-    invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    iget-object p1, p1, Lbhi;->D0:Lj88;
 
-    const/4 p1, 0x0
-
-    return-object p1
-
-    :cond_3
-    invoke-interface {p2, p1}, Lmth;->a(Ljava/lang/Class;)Lnth;
+    invoke-interface {p1}, Lj88;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-virtual {v1, v0, p1}, Ljfa;->l(Ljava/lang/Object;Ljava/lang/Object;)V
+    check-cast p1, Landroid/content/Context;
+
+    invoke-static {v0}, Lfcj;->f(Landroid/net/Uri;)Ljava/io/File;
+
+    move-result-object v0
+
+    invoke-virtual {v1, p1, v0}, Lh56;->f(Landroid/content/Context;Ljava/io/File;)Landroid/net/Uri;
+
+    move-result-object v0
+
+    :goto_0
+    new-instance p1, Landroid/content/Intent;
+
+    const-string v1, "android.media.action.IMAGE_CAPTURE"
+
+    invoke-direct {p1, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    const-string v1, "output"
+
+    invoke-virtual {p1, v1, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
+
+    const-string v0, "outputFormat"
+
+    sget-object v1, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p1, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception p1
+
+    new-instance v0, Lc6e;
+
+    invoke-direct {v0, p1}, Lc6e;-><init>(Ljava/lang/Throwable;)V
+
+    move-object p1, v0
+
+    :goto_1
+    iget-object v0, p0, Lvgi;->X:Lbhi;
+
+    invoke-static {p1}, Le6e;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_1
+
+    iget-object v2, v0, Lbhi;->H0:Ljava/lang/String;
+
+    const-string v3, "capturePhoto: failed to capture photo"
+
+    invoke-static {v2, v3, v1}, Ltej;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    const/4 v1, 0x0
+
+    iput-object v1, v0, Lbhi;->V0:Ljava/lang/String;
+
+    iget-object v0, v0, Lbhi;->c1:Ltn5;
+
+    sget-object v1, Ljfi;->a:Ljfi;
+
+    invoke-static {v0, v1}, Lx0i;->n(Ltn5;Ljava/lang/Object;)V
+
+    :cond_1
+    iget-object v0, p0, Lvgi;->X:Lbhi;
+
+    instance-of v1, p1, Lc6e;
+
+    if-nez v1, :cond_2
+
+    check-cast p1, Landroid/content/Intent;
+
+    iget-object v0, v0, Lbhi;->c1:Ltn5;
+
+    new-instance v1, Llfi;
+
+    invoke-direct {v1, p1}, Llfi;-><init>(Landroid/content/Intent;)V
+
+    invoke-static {v0, v1}, Lx0i;->n(Ltn5;Ljava/lang/Object;)V
+
+    :cond_2
+    sget-object p1, Lmah;->a:Lmah;
 
     return-object p1
 .end method

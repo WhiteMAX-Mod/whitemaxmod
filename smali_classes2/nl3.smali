@@ -1,63 +1,120 @@
 .class public final Lnl3;
-.super Lo84;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Ljava/lang/String;
-
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lol3;
-
-.field public d:Lb08;
-
-.field public o:Lf6i;
-
-.field public t0:I
+.field public final a:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Lol3;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Ljava/util/List;)V
     .locals 0
 
-    iput-object p1, p0, Lnl3;->Z:Lol3;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lnl3;->a:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final a(Landroid/content/Context;)Ljava/lang/String;
     .locals 6
 
-    iput-object p1, p0, Lnl3;->Y:Ljava/lang/Object;
+    new-instance v4, Lsg0;
 
-    iget p1, p0, Lnl3;->t0:I
+    const/4 v0, 0x2
 
-    const/high16 v0, -0x80000000
+    invoke-direct {v4, p1, v0}, Lsg0;-><init>(Landroid/content/Context;I)V
 
-    or-int/2addr p1, v0
+    const/16 v5, 0x1e
 
-    iput p1, p0, Lnl3;->t0:I
+    iget-object v0, p0, Lnl3;->a:Ljava/util/List;
 
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    iget-object v0, p0, Lnl3;->Z:Lol3;
-
-    const/4 v1, 0x0
+    const-string v1, "\n"
 
     const/4 v2, 0x0
 
-    move-object v5, p0
+    const/4 v3, 0x0
 
-    invoke-virtual/range {v0 .. v5}, Lol3;->a(Lmb2;Lb08;Lf6i;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-static/range {v0 .. v5}, Lek3;->K(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lks6;I)Ljava/lang/String;
 
     move-result-object p1
 
     return-object p1
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lnl3;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lnl3;
+
+    iget-object v1, p0, Lnl3;->a:Ljava/util/List;
+
+    iget-object p1, p1, Lnl3;->a:Ljava/util/List;
+
+    invoke-static {v1, p1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lnl3;->a:Ljava/util/List;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "CombinedError(errors="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lnl3;->a:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

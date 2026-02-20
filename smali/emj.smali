@@ -1,60 +1,60 @@
-.class public abstract Lemj;
+.class public final Lemj;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Loza;
+
+
+# static fields
+.field public static final a:Lemj;
+
 
 # direct methods
-.method public static a(Ljava/lang/Exception;)Lidf;
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 3
 
-    new-instance v0, Lidf;
+    new-instance v0, Lemj;
 
-    invoke-direct {v0}, Lo0;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    sput-object v0, Lemj;->a:Lemj;
 
-    const/4 v1, 0x0
+    new-instance v0, Lp7j;
 
-    invoke-virtual {v0, p0, v1}, Lo0;->i(Ljava/lang/Throwable;Ljava/util/Map;)Z
+    const/4 v1, 0x1
 
-    return-object v0
-.end method
+    invoke-direct {v0, v1}, Lp7j;-><init>(I)V
 
-.method public static b(Ljava/lang/Integer;)Lmnd;
-    .locals 6
+    const-class v1, Lh8j;
 
-    if-eqz p0, :cond_1
-
-    invoke-static {}, Lmnd;->values()[Lmnd;
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
 
     move-result-object v0
 
-    array-length v1, v0
+    const/4 v2, 0x2
 
-    const/4 v2, 0x0
+    invoke-static {v0, v2}, Leni;->i(Ljava/util/HashMap;I)Lp7j;
 
-    :goto_0
-    if-ge v2, v1, :cond_1
+    move-result-object v0
 
-    aget-object v3, v0, v2
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
 
-    iget v4, v3, Lmnd;->a:I
+    move-result-object v0
 
-    invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
+    invoke-static {v0}, Leni;->m(Ljava/util/HashMap;)V
 
-    move-result v5
+    return-void
+.end method
 
-    if-ne v4, v5, :cond_0
 
-    return-object v3
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    :cond_0
-    add-int/lit8 v2, v2, 0x1
+    invoke-static {p1}, Lkb0;->d(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    goto :goto_0
+    move-result-object p1
 
-    :cond_1
-    sget-object p0, Lmnd;->b:Lmnd;
-
-    return-object p0
+    throw p1
 .end method

@@ -13,7 +13,7 @@
         "",
         "Lru/ok/android/externcalls/sdk/chat/message/InboundMessage;",
         "message",
-        "Lb3h;",
+        "Lmah;",
         "onNewMessage",
         "(Lru/ok/android/externcalls/sdk/chat/message/InboundMessage;)V",
         "calls-sdk_release"

@@ -1,148 +1,50 @@
 .class public final Lbb6;
-.super Lx0;
-.source "SourceFile"
+.super Lda4;
 
 
 # instance fields
-.field public final c:Lxcg;
+.field public final synthetic X:Lba3;
 
-.field public final d:I
+.field public Y:Ljava/lang/Object;
 
-.field public final o:I
+.field public synthetic d:Ljava/lang/Object;
+
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Lpa6;Lxcg;II)V
+.method public constructor <init>(Lba3;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lx0;-><init>(Lpa6;)V
+    iput-object p1, p0, Lbb6;->X:Lba3;
 
-    iput-object p2, p0, Lbb6;->c:Lxcg;
-
-    iput p3, p0, Lbb6;->d:I
-
-    iput p4, p0, Lbb6;->o:I
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final f(Lxb6;)V
-    .locals 5
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-object v0, p0, Lx0;->b:Lpa6;
+    iput-object p1, p0, Lbb6;->d:Ljava/lang/Object;
 
-    instance-of v1, v0, Lk4g;
+    iget p1, p0, Lbb6;->o:I
 
-    iget-object v2, p0, Lbb6;->c:Lxcg;
+    const/high16 v0, -0x80000000
 
-    if-eqz v1, :cond_3
+    or-int/2addr p1, v0
 
-    :try_start_0
-    check-cast v0, Lk4g;
+    iput p1, p0, Lbb6;->o:I
 
-    invoke-interface {v0}, Lk4g;->get()Ljava/lang/Object;
+    iget-object p1, p0, Lbb6;->X:Lba3;
 
-    move-result-object v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_2
+    const/4 v0, 0x0
 
-    sget-object v1, Lzh5;->a:Lzh5;
+    invoke-virtual {p1, v0, p0}, Lba3;->e(Ld96;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    if-nez v0, :cond_0
+    move-result-object p1
 
-    invoke-interface {p1, v1}, Lz0g;->d(Lb1g;)V
-
-    invoke-interface {p1}, Lz0g;->b()V
-
-    return-void
-
-    :cond_0
-    :try_start_1
-    invoke-virtual {v2, v0}, Lxcg;->apply(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lf0d;
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    instance-of v2, v0, Lk4g;
-
-    if-eqz v2, :cond_2
-
-    :try_start_2
-    check-cast v0, Lk4g;
-
-    invoke-interface {v0}, Lk4g;->get()Ljava/lang/Object;
-
-    move-result-object v0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    if-nez v0, :cond_1
-
-    invoke-interface {p1, v1}, Lz0g;->d(Lb1g;)V
-
-    invoke-interface {p1}, Lz0g;->b()V
-
-    return-void
-
-    :cond_1
-    new-instance v1, Lr9e;
-
-    invoke-direct {v1, p1, v0}, Lr9e;-><init>(Lz0g;Ljava/lang/Object;)V
-
-    invoke-interface {p1, v1}, Lz0g;->d(Lb1g;)V
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    invoke-static {v0}, Lzoj;->a(Ljava/lang/Throwable;)V
-
-    invoke-static {v0, p1}, Lzh5;->a(Ljava/lang/Throwable;Lz0g;)V
-
-    goto :goto_0
-
-    :cond_2
-    check-cast v0, Lpa6;
-
-    invoke-virtual {v0, p1}, Lpa6;->e(Lz0g;)V
-
-    return-void
-
-    :catchall_1
-    move-exception v0
-
-    invoke-static {v0}, Lzoj;->a(Ljava/lang/Throwable;)V
-
-    invoke-static {v0, p1}, Lzh5;->a(Ljava/lang/Throwable;Lz0g;)V
-
-    goto :goto_0
-
-    :catchall_2
-    move-exception v0
-
-    invoke-static {v0}, Lzoj;->a(Ljava/lang/Throwable;)V
-
-    invoke-static {v0, p1}, Lzh5;->a(Ljava/lang/Throwable;Lz0g;)V
-
-    :goto_0
-    return-void
-
-    :cond_3
-    new-instance v1, Lab6;
-
-    iget v3, p0, Lbb6;->d:I
-
-    iget v4, p0, Lbb6;->o:I
-
-    invoke-direct {v1, p1, v2, v3, v4}, Lab6;-><init>(Lz0g;Lxcg;II)V
-
-    invoke-virtual {v0, v1}, Lpa6;->c(Lxb6;)V
-
-    return-void
+    return-object p1
 .end method

@@ -13,7 +13,7 @@
         "Lone/me/sdk/bottomsheet/BottomSheetWidget;",
         "<init>",
         "()V",
-        "he3",
+        "yf3",
         "chats-list_release"
     }
     k = 0x1
@@ -34,23 +34,23 @@
 
     const/4 v1, 0x1
 
-    invoke-direct {p0, v0, v1, v0}, Lone/me/sdk/bottomsheet/BottomSheetWidget;-><init>(Landroid/os/Bundle;ILso4;)V
+    invoke-direct {p0, v0, v1, v0}, Lone/me/sdk/bottomsheet/BottomSheetWidget;-><init>(Landroid/os/Bundle;ILfq4;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final M0(Landroid/view/LayoutInflater;Landroid/widget/FrameLayout;)Landroid/view/View;
+.method public final U0(Landroid/view/LayoutInflater;Landroid/widget/FrameLayout;)Landroid/view/View;
     .locals 1
 
     invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
-    new-instance v0, Lje3;
+    new-instance v0, Lag3;
 
-    invoke-direct {v0, p2, p0, p1}, Lje3;-><init>(Landroid/widget/FrameLayout;Lone/me/chats/search/views/ClearRecentSearchBottomSheet;Landroid/content/Context;)V
+    invoke-direct {v0, p2, p0, p1}, Lag3;-><init>(Landroid/widget/FrameLayout;Lone/me/chats/search/views/ClearRecentSearchBottomSheet;Landroid/content/Context;)V
 
     return-object v0
 .end method

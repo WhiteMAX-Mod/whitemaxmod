@@ -4,35 +4,72 @@
 
 
 # instance fields
-.field public a:I
+.field public final a:Landroid/widget/TextView;
 
-.field public b:Landroid/view/View;
+.field public final b:Landroid/widget/TextView;
 
-.field public c:Lcom/google/android/material/tabs/TabLayout;
+.field public final c:Landroid/widget/ImageView;
 
-.field public d:Loag;
+.field public final d:Landroid/widget/ImageView;
+
+.field public final e:Landroid/widget/ImageView;
 
 
-# virtual methods
-.method public final a()V
-    .locals 2
+# direct methods
+.method public constructor <init>(Landroid/view/View;)V
+    .locals 1
 
-    iget-object v0, p0, Lmag;->c:Lcom/google/android/material/tabs/TabLayout;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz v0, :cond_0
+    const v0, 0x1020014
 
-    const/4 v1, 0x1
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    invoke-virtual {v0, p0, v1}, Lcom/google/android/material/tabs/TabLayout;->n(Lmag;Z)V
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, p0, Lmag;->a:Landroid/widget/TextView;
+
+    const v0, 0x1020015
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, p0, Lmag;->b:Landroid/widget/TextView;
+
+    const v0, 0x1020007
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ImageView;
+
+    iput-object v0, p0, Lmag;->c:Landroid/widget/ImageView;
+
+    const v0, 0x1020008
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ImageView;
+
+    iput-object v0, p0, Lmag;->d:Landroid/widget/ImageView;
+
+    sget v0, Lkdd;->edit_query:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/widget/ImageView;
+
+    iput-object p1, p0, Lmag;->e:Landroid/widget/ImageView;
 
     return-void
-
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "Tab not attached to a TabLayout"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
 .end method

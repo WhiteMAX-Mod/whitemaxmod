@@ -1,145 +1,68 @@
-.class public final Lrwf;
-.super Lp6g;
+.class public final synthetic Lrwf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic X:Ldxf;
+.field public final synthetic a:I
 
-.field public o:I
+.field public final synthetic b:Lwj6;
+
+.field public final synthetic c:Lmvi;
 
 
 # direct methods
-.method public constructor <init>(Ldxf;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lwj6;Lmvi;I)V
     .locals 0
 
-    iput-object p1, p0, Lrwf;->X:Ldxf;
+    iput p3, p0, Lrwf;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lrwf;->b:Lwj6;
 
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lrwf;->c:Lmvi;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final run()V
+    .locals 2
 
-    check-cast p1, Lzb4;
+    iget v0, p0, Lrwf;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Lrwf;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Lrwf;->b:Lwj6;
 
-    move-result-object p1
+    iget-object v0, v0, Lwj6;->b:Ljava/lang/Object;
 
-    check-cast p1, Lrwf;
+    check-cast v0, Ljava/util/LinkedHashSet;
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    iget-object v1, p0, Lrwf;->c:Lmvi;
 
-    invoke-virtual {p1, p2}, Lrwf;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    move-result-object p1
+    return-void
 
-    return-object p1
-.end method
+    :pswitch_0
+    iget-object v0, p0, Lrwf;->b:Lwj6;
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    iget-object v1, p0, Lrwf;->c:Lmvi;
 
-    new-instance p1, Lrwf;
+    invoke-virtual {v0, v1}, Lwj6;->v(Lmvi;)V
 
-    iget-object v0, p0, Lrwf;->X:Ldxf;
+    return-void
 
-    invoke-direct {p1, v0, p2}, Lrwf;-><init>(Ldxf;Lkotlin/coroutines/Continuation;)V
+    nop
 
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
-
-    iget v0, p0, Lrwf;->o:I
-
-    iget-object v1, p0, Lrwf;->X:Ldxf;
-
-    const/4 v2, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v2, :cond_0
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    iget-object p1, v1, Ldxf;->X:Lo58;
-
-    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lpnd;
-
-    iput v2, p0, Lrwf;->o:I
-
-    invoke-virtual {p1, p0}, Lpnd;->a(Lo84;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lac4;->a:Lac4;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
-    :cond_2
-    :goto_0
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p1
-
-    sget-object v0, Lb3h;->a:Lb3h;
-
-    if-nez p1, :cond_3
-
-    return-object v0
-
-    :cond_3
-    iget-object p1, v1, Ldxf;->z0:Lcm5;
-
-    new-instance v1, Lrze;
-
-    sget v2, Lv5e;->A:I
-
-    sget v3, Lxkb;->C:I
-
-    new-instance v4, Llhg;
-
-    invoke-direct {v4, v3}, Llhg;-><init>(I)V
-
-    invoke-direct {v1, v2, v4}, Lrze;-><init>(ILqhg;)V
-
-    invoke-static {p1, v1}, Lnth;->q(Lcm5;Ljava/lang/Object;)V
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,2009 +1,1104 @@
-.class public abstract Lq23;
-.super Ljava/lang/Object;
+.class public final Lq23;
+.super Landroid/view/ViewGroup;
 .source "SourceFile"
 
+# interfaces
+.implements Ljqg;
 
-# static fields
-.field public static final a:Lrhg;
 
-.field public static final b:Lrhg;
+# instance fields
+.field public final a:Ljava/lang/Object;
 
-.field public static final c:Lrhg;
+.field public final b:Ljava/lang/Object;
 
-.field public static final d:Lrhg;
+.field public final c:Lb6b;
 
-.field public static final e:Lrhg;
+.field public final d:Landroid/widget/TextView;
 
-.field public static final f:Lrhg;
+.field public final o:Lkpa;
 
-.field public static final g:Lrhg;
+.field public final s0:Lu7b;
 
-.field public static final h:Lrhg;
+.field public final t0:Ljava/lang/Object;
 
-.field public static final i:Lrhg;
-
-.field public static final j:Lrhg;
-
-.field public static final k:Lrhg;
-
-.field public static final l:Lrhg;
-
-.field public static final m:Lrhg;
-
-.field public static final n:Lrhg;
+.field public u0:Lskh;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 69
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 8
 
-    const/4 v0, 0x1
+    invoke-direct {p0, p1}, Landroid/view/ViewGroup;-><init>(Landroid/content/Context;)V
 
-    const/high16 v1, 0x41880000    # 17.0f
+    new-instance v0, Lp23;
 
-    invoke-static {v0, v1}, Lq05;->b(IF)J
+    const/4 v1, 0x0
 
-    move-result-wide v2
+    invoke-direct {v0, p0, v1}, Lp23;-><init>(Lq23;I)V
 
-    const/high16 v4, 0x41a00000    # 20.0f
+    const/4 v1, 0x3
 
-    invoke-static {v0, v4}, Lq05;->b(IF)J
+    invoke-static {v1, v0}, Lbdj;->d(ILis6;)Lj88;
 
-    move-result-wide v5
+    move-result-object v0
 
-    const/4 v7, 0x0
+    iput-object v0, p0, Lq23;->a:Ljava/lang/Object;
 
-    const/4 v8, 0x0
+    new-instance v0, Lp23;
 
-    const-class v9, Lub5;
+    const/4 v2, 0x1
 
-    invoke-static {v7, v8, v9}, Lmrf;->n(FILjava/lang/Class;)Ljava/util/EnumMap;
+    invoke-direct {v0, p0, v2}, Lp23;-><init>(Lq23;I)V
 
-    move-result-object v10
+    invoke-static {v1, v0}, Lbdj;->d(ILis6;)Lj88;
 
-    sget-object v11, Lub5;->b:Lub5;
+    move-result-object v0
 
-    invoke-static {v2, v3, v10, v11, v9}, Lmrf;->o(JLjava/util/EnumMap;Lub5;Ljava/lang/Class;)Ljava/util/EnumMap;
+    iput-object v0, p0, Lq23;->b:Ljava/lang/Object;
 
-    move-result-object v2
+    new-instance v0, Lb6b;
 
-    invoke-static {v5, v6, v2, v11}, Lmrf;->q(JLjava/util/EnumMap;Lub5;)V
+    invoke-direct {v0, p1}, Lb6b;-><init>(Landroid/content/Context;)V
 
-    invoke-static {v0, v1}, Lq05;->b(IF)J
+    const/4 v2, 0x0
 
-    move-result-wide v5
+    invoke-virtual {v0, v2}, Landroid/view/View;->setFocusable(I)V
 
-    invoke-static {v0, v4}, Lq05;->b(IF)J
+    iput-object v0, p0, Lq23;->c:Lb6b;
 
-    move-result-wide v12
+    new-instance v3, Landroid/widget/TextView;
 
-    invoke-static {v8, v7}, Lq05;->b(IF)J
+    invoke-direct {v3, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    move-result-wide v21
+    sget-object v4, Lc9h;->R:Lipg;
 
-    new-instance v3, Ljava/util/EnumMap;
+    invoke-static {v4, v3}, Lipg;->d(Lipg;Landroid/widget/TextView;)V
 
-    invoke-direct {v3, v9}, Ljava/util/EnumMap;-><init>(Ljava/lang/Class;)V
+    sget-object v4, Lfe3;->t0:Ltea;
 
-    invoke-static {v5, v6, v3, v11, v9}, Lmrf;->o(JLjava/util/EnumMap;Lub5;Ljava/lang/Class;)Ljava/util/EnumMap;
-
-    move-result-object v3
-
-    new-instance v5, Lq05;
-
-    invoke-direct {v5, v12, v13}, Lq05;-><init>(J)V
-
-    invoke-virtual {v3, v11, v5}, Ljava/util/EnumMap;->put(Ljava/lang/Enum;Ljava/lang/Object;)Ljava/lang/Object;
-
-    new-instance v23, Lrhg;
-
-    invoke-static {v0, v1}, Lq05;->b(IF)J
-
-    move-result-wide v25
-
-    const/high16 v3, 0x41b00000    # 22.0f
-
-    invoke-static {v0, v3}, Lq05;->b(IF)J
-
-    move-result-wide v27
-
-    invoke-static {v8, v7}, Lq05;->b(IF)J
-
-    move-result-wide v30
-
-    const/4 v13, 0x0
-
-    const/16 v16, 0x0
-
-    const-string v19, "sans-serif"
-
-    const/16 v20, 0x1
-
-    move/from16 v24, v13
-
-    move/from16 v29, v16
-
-    move-object/from16 v32, v19
-
-    move/from16 v33, v20
-
-    invoke-direct/range {v23 .. v33}, Lrhg;-><init>(ZJJZJLjava/lang/String;I)V
-
-    move-object/from16 v5, v23
-
-    sput-object v5, Lq23;->a:Lrhg;
-
-    new-instance v32, Lrhg;
-
-    const/high16 v6, 0x41600000    # 14.0f
-
-    invoke-static {v0, v6}, Lq05;->b(IF)J
-
-    move-result-wide v34
-
-    const/high16 v12, 0x41900000    # 18.0f
-
-    invoke-static {v0, v12}, Lq05;->b(IF)J
-
-    move-result-wide v36
-
-    const v14, 0x3c23d70a    # 0.01f
-
-    invoke-static {v8, v14}, Lq05;->b(IF)J
-
-    move-result-wide v17
-
-    move/from16 v33, v13
-
-    move/from16 v38, v16
-
-    move-wide/from16 v39, v17
-
-    move-object/from16 v41, v19
-
-    move/from16 v42, v20
-
-    invoke-direct/range {v32 .. v42}, Lrhg;-><init>(ZJJZJLjava/lang/String;I)V
-
-    move-object/from16 v13, v32
-
-    move-wide/from16 v25, v39
-
-    sput-object v13, Lq23;->b:Lrhg;
-
-    const/high16 v15, 0x41400000    # 12.0f
-
-    move-object/from16 v28, v2
-
-    invoke-static {v0, v15}, Lq05;->b(IF)J
-
-    move-result-wide v1
-
-    invoke-static {v0, v4}, Lq05;->b(IF)J
-
-    move-result-wide v14
-
-    const v3, 0x3d4ccccd    # 0.05f
-
-    invoke-static {v3, v8, v9}, Lmrf;->n(FILjava/lang/Class;)Ljava/util/EnumMap;
-
-    move-result-object v7
-
-    invoke-static {v1, v2, v7, v11, v9}, Lmrf;->o(JLjava/util/EnumMap;Lub5;Ljava/lang/Class;)Ljava/util/EnumMap;
-
-    move-result-object v1
-
-    new-instance v2, Lq05;
-
-    invoke-direct {v2, v14, v15}, Lq05;-><init>(J)V
-
-    invoke-virtual {v1, v11, v2}, Ljava/util/EnumMap;->put(Ljava/lang/Enum;Ljava/lang/Object;)Ljava/lang/Object;
-
-    new-instance v2, Ljava/util/EnumMap;
-
-    iget-object v14, v13, Lrhg;->b:Ljava/util/EnumMap;
-
-    invoke-direct {v2, v14}, Ljava/util/EnumMap;-><init>(Ljava/util/EnumMap;)V
-
-    new-instance v15, Ljava/util/EnumMap;
-
-    iget-object v13, v13, Lrhg;->c:Ljava/util/EnumMap;
-
-    invoke-direct {v15, v13}, Ljava/util/EnumMap;-><init>(Ljava/util/EnumMap;)V
-
-    invoke-static {v0, v6}, Lq05;->b(IF)J
-
-    move-result-wide v3
-
-    move-object/from16 v43, v7
-
-    invoke-static {v0, v12}, Lq05;->b(IF)J
-
-    move-result-wide v6
-
-    move-object/from16 v44, v13
-
-    const v12, 0x3c23d70a    # 0.01f
-
-    invoke-static {v12, v8, v9}, Lmrf;->n(FILjava/lang/Class;)Ljava/util/EnumMap;
-
-    move-result-object v13
-
-    invoke-static {v3, v4, v13, v11, v9}, Lmrf;->o(JLjava/util/EnumMap;Lub5;Ljava/lang/Class;)Ljava/util/EnumMap;
-
-    move-result-object v3
-
-    invoke-static {v6, v7, v3, v11}, Lmrf;->q(JLjava/util/EnumMap;Lub5;)V
-
-    const/high16 v4, 0x41400000    # 12.0f
-
-    invoke-static {v0, v4}, Lq05;->b(IF)J
-
-    move-result-wide v6
-
-    move-object/from16 v45, v13
-
-    const/high16 v4, 0x41600000    # 14.0f
-
-    invoke-static {v0, v4}, Lq05;->b(IF)J
-
-    move-result-wide v12
-
-    const v4, 0x3cf5c28f    # 0.03f
-
-    move-object/from16 v23, v15
-
-    invoke-static {v4, v8, v9}, Lmrf;->n(FILjava/lang/Class;)Ljava/util/EnumMap;
-
-    move-result-object v15
-
-    invoke-static {v6, v7, v15, v11, v9}, Lmrf;->o(JLjava/util/EnumMap;Lub5;Ljava/lang/Class;)Ljava/util/EnumMap;
-
-    move-result-object v6
-
-    new-instance v7, Lq05;
-
-    invoke-direct {v7, v12, v13}, Lq05;-><init>(J)V
-
-    invoke-virtual {v6, v11, v7}, Ljava/util/EnumMap;->put(Ljava/lang/Enum;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-object v7, v14
-
-    new-instance v14, Lrhg;
-
-    const/high16 v12, 0x42600000    # 56.0f
-
-    invoke-static {v0, v12}, Lq05;->b(IF)J
-
-    move-result-wide v12
-
-    const/high16 v4, 0x42800000    # 64.0f
-
-    invoke-static {v0, v4}, Lq05;->b(IF)J
-
-    move-result-wide v34
-
-    move-object/from16 v46, v7
-
-    move-object v7, v15
-
-    move/from16 v24, v20
-
-    move-object/from16 v4, v23
-
-    move/from16 v15, v33
-
-    move/from16 v20, v16
-
-    move-object/from16 v23, v19
-
-    move-wide/from16 v18, v34
-
-    move-wide/from16 v16, v12
-
-    const v12, 0x3c23d70a    # 0.01f
-
-    const/high16 v13, 0x41400000    # 12.0f
-
-    invoke-direct/range {v14 .. v24}, Lrhg;-><init>(ZJJZJLjava/lang/String;I)V
-
-    move/from16 v16, v20
-
-    move-object/from16 v19, v23
-
-    move/from16 v20, v24
-
-    sput-object v14, Lq23;->c:Lrhg;
-
-    new-instance v32, Lrhg;
-
-    const/high16 v14, 0x41300000    # 11.0f
-
-    invoke-static {v0, v14}, Lq05;->b(IF)J
-
-    move-result-wide v34
-
-    const/high16 v14, 0x41600000    # 14.0f
-
-    invoke-static {v0, v14}, Lq05;->b(IF)J
-
-    move-result-wide v36
-
-    const v14, 0x3cf5c28f    # 0.03f
-
-    invoke-static {v8, v14}, Lq05;->b(IF)J
-
-    move-result-wide v39
-
-    move/from16 v38, v16
-
-    move-object/from16 v41, v19
-
-    move/from16 v42, v20
-
-    invoke-direct/range {v32 .. v42}, Lrhg;-><init>(ZJJZJLjava/lang/String;I)V
-
-    sput-object v32, Lq23;->d:Lrhg;
-
-    new-instance v32, Lrhg;
-
-    const/high16 v15, 0x41200000    # 10.0f
-
-    invoke-static {v0, v15}, Lq05;->b(IF)J
-
-    move-result-wide v34
-
-    invoke-static {v0, v13}, Lq05;->b(IF)J
-
-    move-result-wide v36
-
-    invoke-static {v8, v14}, Lq05;->b(IF)J
-
-    move-result-wide v39
-
-    const/16 v42, 0x2
-
-    invoke-direct/range {v32 .. v42}, Lrhg;-><init>(ZJJZJLjava/lang/String;I)V
-
-    move/from16 v24, v33
-
-    move/from16 v21, v42
-
-    sput-object v32, Lq23;->e:Lrhg;
-
-    move-object/from16 v22, v6
-
-    move-object/from16 v23, v7
-
-    invoke-static {v0, v15}, Lq05;->b(IF)J
-
-    move-result-wide v6
-
-    move-object/from16 v47, v3
-
-    move-object/from16 v48, v4
-
-    invoke-static {v0, v13}, Lq05;->b(IF)J
-
-    move-result-wide v3
-
-    invoke-static {v14, v8, v9}, Lmrf;->n(FILjava/lang/Class;)Ljava/util/EnumMap;
-
-    move-result-object v13
-
-    invoke-static {v6, v7, v13, v11, v9}, Lmrf;->o(JLjava/util/EnumMap;Lub5;Ljava/lang/Class;)Ljava/util/EnumMap;
-
-    move-result-object v6
-
-    invoke-static {v3, v4, v6, v11}, Lmrf;->q(JLjava/util/EnumMap;Lub5;)V
-
-    const/high16 v3, 0x41500000    # 13.0f
-
-    move-object v4, v13
-
-    invoke-static {v0, v3}, Lq05;->b(IF)J
-
-    move-result-wide v12
-
-    const/high16 v7, 0x41800000    # 16.0f
-
-    move-object v14, v4
-
-    invoke-static {v0, v7}, Lq05;->b(IF)J
-
-    move-result-wide v3
-
-    const v15, 0x3ca3d70a    # 0.02f
-
-    invoke-static {v15, v8, v9}, Lmrf;->n(FILjava/lang/Class;)Ljava/util/EnumMap;
-
-    move-result-object v15
-
-    invoke-static {v12, v13, v15, v11, v9}, Lmrf;->o(JLjava/util/EnumMap;Lub5;Ljava/lang/Class;)Ljava/util/EnumMap;
-
-    move-result-object v12
-
-    invoke-static {v3, v4, v12, v11}, Lmrf;->q(JLjava/util/EnumMap;Lub5;)V
-
-    const/high16 v4, 0x41400000    # 12.0f
-
-    invoke-static {v0, v4}, Lq05;->b(IF)J
-
-    move-result-wide v12
-
-    move-object v15, v5
-
-    const/high16 v3, 0x41600000    # 14.0f
-
-    invoke-static {v0, v3}, Lq05;->b(IF)J
-
-    move-result-wide v4
-
-    const v3, 0x3cf5c28f    # 0.03f
-
-    invoke-static {v3, v8, v9}, Lmrf;->n(FILjava/lang/Class;)Ljava/util/EnumMap;
-
-    move-result-object v7
-
-    invoke-static {v12, v13, v7, v11, v9}, Lmrf;->o(JLjava/util/EnumMap;Lub5;Ljava/lang/Class;)Ljava/util/EnumMap;
-
-    move-result-object v3
-
-    new-instance v7, Lq05;
-
-    invoke-direct {v7, v4, v5}, Lq05;-><init>(J)V
-
-    invoke-virtual {v3, v11, v7}, Ljava/util/EnumMap;->put(Ljava/lang/Enum;Ljava/lang/Object;)Ljava/lang/Object;
-
-    new-instance v3, Ljava/util/EnumMap;
-
-    invoke-direct {v3, v10}, Ljava/util/EnumMap;-><init>(Ljava/util/EnumMap;)V
-
-    new-instance v3, Ljava/util/EnumMap;
-
-    move-object/from16 v4, v28
-
-    invoke-direct {v3, v4}, Ljava/util/EnumMap;-><init>(Ljava/util/EnumMap;)V
-
-    const/high16 v3, 0x41a00000    # 20.0f
-
-    invoke-static {v0, v3}, Lq05;->b(IF)J
-
-    move-result-wide v4
-
-    const/high16 v7, 0x41c00000    # 24.0f
-
-    invoke-static {v0, v7}, Lq05;->b(IF)J
-
-    move-result-wide v12
-
-    const/4 v10, 0x0
-
-    invoke-static {v10, v8, v9}, Lmrf;->n(FILjava/lang/Class;)Ljava/util/EnumMap;
-
-    move-result-object v7
-
-    invoke-static {v4, v5, v7, v11, v9}, Lmrf;->o(JLjava/util/EnumMap;Lub5;Ljava/lang/Class;)Ljava/util/EnumMap;
-
-    move-result-object v4
-
-    new-instance v5, Lq05;
-
-    invoke-direct {v5, v12, v13}, Lq05;-><init>(J)V
-
-    invoke-virtual {v4, v11, v5}, Ljava/util/EnumMap;->put(Ljava/lang/Enum;Ljava/lang/Object;)Ljava/lang/Object;
-
-    new-instance v32, Lrhg;
-
-    const/high16 v4, 0x41800000    # 16.0f
-
-    invoke-static {v0, v4}, Lq05;->b(IF)J
-
-    move-result-wide v34
-
-    invoke-static {v0, v3}, Lq05;->b(IF)J
-
-    move-result-wide v36
-
-    const v5, 0x3c75c28f    # 0.015f
-
-    invoke-static {v8, v5}, Lq05;->b(IF)J
-
-    move-result-wide v39
-
-    const/16 v33, 0x0
-
-    const/16 v38, 0x0
-
-    const-string v41, "sans-serif"
-
-    move/from16 v42, v20
-
-    invoke-direct/range {v32 .. v42}, Lrhg;-><init>(ZJJZJLjava/lang/String;I)V
-
-    move-object/from16 v7, v32
-
-    move/from16 v36, v38
-
-    move-wide/from16 v37, v39
-
-    move-object/from16 v39, v41
-
-    sput-object v7, Lq23;->f:Lrhg;
-
-    invoke-static {v0, v4}, Lq05;->b(IF)J
-
-    move-result-wide v12
-
-    move-object v10, v14
-
-    move-object/from16 v32, v15
-
-    invoke-static {v0, v3}, Lq05;->b(IF)J
-
-    move-result-wide v14
-
-    invoke-static {v5, v8, v9}, Lmrf;->n(FILjava/lang/Class;)Ljava/util/EnumMap;
-
-    move-result-object v3
-
-    invoke-static {v12, v13, v3, v11, v9}, Lmrf;->o(JLjava/util/EnumMap;Lub5;Ljava/lang/Class;)Ljava/util/EnumMap;
-
-    move-result-object v12
-
-    invoke-static {v14, v15, v12, v11}, Lmrf;->q(JLjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v0, v4}, Lq05;->b(IF)J
-
-    move-result-wide v13
-
-    move-object/from16 v34, v6
-
-    move-object/from16 v35, v7
-
-    const/high16 v15, 0x41a00000    # 20.0f
-
-    invoke-static {v0, v15}, Lq05;->b(IF)J
-
-    move-result-wide v6
-
-    invoke-static {v5, v8, v9}, Lmrf;->n(FILjava/lang/Class;)Ljava/util/EnumMap;
-
-    move-result-object v15
-
-    invoke-static {v13, v14, v15, v11, v9}, Lmrf;->o(JLjava/util/EnumMap;Lub5;Ljava/lang/Class;)Ljava/util/EnumMap;
-
-    move-result-object v13
-
-    invoke-static {v6, v7, v13, v11}, Lmrf;->q(JLjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v0, v4}, Lq05;->b(IF)J
-
-    move-result-wide v6
-
-    move-object/from16 v40, v12
-
-    move-object/from16 v41, v13
-
-    const/high16 v14, 0x41a00000    # 20.0f
-
-    invoke-static {v0, v14}, Lq05;->b(IF)J
-
-    move-result-wide v12
-
-    invoke-static {v5, v8, v9}, Lmrf;->n(FILjava/lang/Class;)Ljava/util/EnumMap;
-
-    move-result-object v14
-
-    invoke-static {v6, v7, v14, v11, v9}, Lmrf;->o(JLjava/util/EnumMap;Lub5;Ljava/lang/Class;)Ljava/util/EnumMap;
-
-    move-result-object v6
-
-    invoke-static {v12, v13, v6, v11}, Lmrf;->q(JLjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v0, v4}, Lq05;->b(IF)J
-
-    move-result-wide v12
-
-    move-object/from16 v49, v14
-
-    move-object/from16 v42, v15
-
-    const/high16 v7, 0x41a00000    # 20.0f
-
-    invoke-static {v0, v7}, Lq05;->b(IF)J
-
-    move-result-wide v14
-
-    invoke-static {v5, v8, v9}, Lmrf;->n(FILjava/lang/Class;)Ljava/util/EnumMap;
-
-    move-result-object v7
-
-    invoke-static {v12, v13, v7, v11, v9}, Lmrf;->o(JLjava/util/EnumMap;Lub5;Ljava/lang/Class;)Ljava/util/EnumMap;
-
-    move-result-object v12
-
-    invoke-static {v14, v15, v12, v11}, Lmrf;->q(JLjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v0, v4}, Lq05;->b(IF)J
-
-    move-result-wide v13
-
-    move-object/from16 v50, v6
-
-    move-object/from16 v51, v7
-
-    const/high16 v15, 0x41a00000    # 20.0f
-
-    invoke-static {v0, v15}, Lq05;->b(IF)J
-
-    move-result-wide v6
-
-    invoke-static {v5, v8, v9}, Lmrf;->n(FILjava/lang/Class;)Ljava/util/EnumMap;
-
-    move-result-object v15
-
-    invoke-static {v13, v14, v15, v11, v9}, Lmrf;->o(JLjava/util/EnumMap;Lub5;Ljava/lang/Class;)Ljava/util/EnumMap;
-
-    move-result-object v13
-
-    invoke-static {v6, v7, v13, v11}, Lmrf;->q(JLjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v0, v4}, Lq05;->b(IF)J
-
-    move-result-wide v6
-
-    move-object/from16 v52, v12
-
-    move-object/from16 v53, v13
-
-    const/high16 v14, 0x41a00000    # 20.0f
-
-    invoke-static {v0, v14}, Lq05;->b(IF)J
-
-    move-result-wide v12
-
-    invoke-static {v5, v8, v9}, Lmrf;->n(FILjava/lang/Class;)Ljava/util/EnumMap;
-
-    move-result-object v14
-
-    invoke-static {v6, v7, v14, v11, v9}, Lmrf;->o(JLjava/util/EnumMap;Lub5;Ljava/lang/Class;)Ljava/util/EnumMap;
-
-    move-result-object v6
-
-    invoke-static {v12, v13, v6, v11}, Lmrf;->q(JLjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v0, v4}, Lq05;->b(IF)J
-
-    move-result-wide v12
-
-    move-object/from16 v54, v14
-
-    move-object v4, v15
-
-    const/high16 v7, 0x41a00000    # 20.0f
-
-    invoke-static {v0, v7}, Lq05;->b(IF)J
-
-    move-result-wide v14
-
-    invoke-static {v5, v8, v9}, Lmrf;->n(FILjava/lang/Class;)Ljava/util/EnumMap;
+    invoke-static {v3, v4}, Ly12;->h(Landroid/widget/TextView;Ltea;)Lhob;
 
     move-result-object v5
 
-    invoke-static {v12, v13, v5, v11, v9}, Lmrf;->o(JLjava/util/EnumMap;Lub5;Ljava/lang/Class;)Ljava/util/EnumMap;
+    iget v5, v5, Lhob;->b:I
+
+    invoke-virtual {v3, v5}, Landroid/widget/TextView;->setTextColor(I)V
+
+    invoke-virtual {v3}, Landroid/widget/TextView;->setSingleLine()V
+
+    invoke-static {v3, v2}, Ln1j;->f(Landroid/widget/TextView;Z)V
+
+    sget-object v5, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
+
+    invoke-virtual {v3, v5}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
+
+    iput-object v3, p0, Lq23;->d:Landroid/widget/TextView;
+
+    new-instance v6, Lkpa;
+
+    invoke-direct {v6, p1}, Lkpa;-><init>(Landroid/content/Context;)V
+
+    sget-object v7, Lc9h;->H:Lipg;
+
+    invoke-virtual {v6, v7}, Lkpa;->k(Lipg;)V
+
+    invoke-virtual {v6}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v7
 
-    new-instance v9, Lq05;
+    invoke-virtual {v4, v7}, Ltea;->n(Landroid/content/Context;)Lfe3;
 
-    invoke-direct {v9, v14, v15}, Lq05;-><init>(J)V
+    move-result-object v4
 
-    invoke-virtual {v7, v11, v9}, Ljava/util/EnumMap;->put(Ljava/lang/Enum;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v4}, Lfe3;->j()Llob;
 
-    new-instance v12, Lrhg;
+    move-result-object v4
 
-    new-instance v14, Ljava/util/EnumMap;
+    invoke-interface {v4}, Llob;->getText()Lhob;
 
-    move-object/from16 v15, v32
+    move-result-object v4
 
-    iget-object v9, v15, Lrhg;->b:Ljava/util/EnumMap;
+    iget v4, v4, Lhob;->d:I
 
-    invoke-direct {v14, v9}, Ljava/util/EnumMap;-><init>(Ljava/util/EnumMap;)V
+    invoke-virtual {v6, v4}, Lkpa;->setTextColor(I)V
 
-    new-instance v9, Ljava/util/EnumMap;
+    const/4 v4, 0x2
 
-    iget-object v13, v15, Lrhg;->c:Ljava/util/EnumMap;
+    invoke-virtual {v6, v4}, Lkpa;->setMaxLinesValue(I)V
 
-    invoke-direct {v9, v13}, Ljava/util/EnumMap;-><init>(Ljava/util/EnumMap;)V
+    invoke-virtual {v6, v2}, Landroid/view/View;->setFocusable(I)V
 
-    const/4 v13, 0x0
+    invoke-virtual {v6, v2}, Lkpa;->setFallbackLineSpace(Z)V
 
-    invoke-static {v8, v13}, Lq05;->b(IF)J
+    invoke-virtual {v6, v5}, Lkpa;->setEllipsizing(Landroid/text/TextUtils$TruncateAt;)V
 
-    move-result-wide v55
+    iput-object v6, p0, Lq23;->o:Lkpa;
 
-    move-object/from16 v60, v4
+    new-instance v2, Lu7b;
 
-    move-object v15, v9
+    invoke-direct {v2, p1}, Lu7b;-><init>(Landroid/content/Context;)V
 
-    move-object/from16 v30, v11
+    sget-object p1, Ls7b;->a:Ls7b;
 
-    move/from16 v13, v24
+    invoke-virtual {v2, p1}, Lu7b;->setSize(Ls7b;)V
 
-    move-object/from16 v9, v40
+    sget-object p1, Lr7b;->a:Lr7b;
 
-    move-object/from16 v57, v41
+    invoke-virtual {v2, p1}, Lu7b;->setMode(Lr7b;)V
 
-    move-object/from16 v0, v42
+    sget-object p1, Lp7b;->a:Lp7b;
 
-    move-object/from16 v8, v44
+    invoke-virtual {v2, p1}, Lu7b;->setAppearance(Lp7b;)V
 
-    move-object/from16 v4, v45
+    invoke-direct {p0}, Lq23;->getPlusDrawable()Landroid/graphics/drawable/Drawable;
 
-    move-object/from16 v58, v49
+    move-result-object p1
 
-    move-object/from16 v59, v52
+    invoke-static {v2, p1}, Lu7b;->e(Lu7b;Landroid/graphics/drawable/Drawable;)V
 
-    move-object/from16 v61, v53
+    iput-object v2, p0, Lq23;->s0:Lu7b;
 
-    move-object/from16 v62, v54
+    new-instance p1, Lp23;
 
-    move-wide/from16 v17, v55
+    invoke-direct {p1, p0, v4}, Lp23;-><init>(Lq23;I)V
 
-    const v11, 0x3c23d70a    # 0.01f
+    invoke-static {v1, p1}, Lbdj;->d(ILis6;)Lj88;
 
-    invoke-direct/range {v12 .. v20}, Lrhg;-><init>(ZLjava/util/EnumMap;Ljava/util/EnumMap;ZJLjava/lang/String;I)V
+    move-result-object p1
 
-    sput-object v12, Lq23;->g:Lrhg;
+    iput-object p1, p0, Lq23;->t0:Ljava/lang/Object;
 
-    new-instance v12, Lrhg;
+    invoke-direct {p0}, Lq23;->getRippleDrawable()Landroid/graphics/drawable/RippleDrawable;
 
-    move-object/from16 v17, v14
+    move-result-object p1
 
-    new-instance v14, Ljava/util/EnumMap;
+    invoke-virtual {p0, p1}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    move-object/from16 v13, v46
+    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    invoke-direct {v14, v13}, Ljava/util/EnumMap;-><init>(Ljava/util/EnumMap;)V
+    invoke-virtual {p0, v3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    move-object v13, v15
+    invoke-virtual {p0, v6}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    new-instance v15, Ljava/util/EnumMap;
+    invoke-virtual {p0, v2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    invoke-direct {v15, v8}, Ljava/util/EnumMap;-><init>(Ljava/util/EnumMap;)V
+    const/16 p1, 0xc
 
-    move-object/from16 v40, v13
+    int-to-float p1, p1
 
-    move-object/from16 v32, v17
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
 
-    const/4 v8, 0x0
+    move-result-object v0
 
-    const/4 v13, 0x0
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    invoke-static {v8, v11}, Lq05;->b(IF)J
+    move-result-object v0
 
-    move-result-wide v17
+    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
 
-    move-object/from16 v63, v32
+    mul-float/2addr v0, p1
 
-    move-object/from16 v64, v40
+    invoke-static {v0}, Lmhj;->f(F)I
 
-    invoke-direct/range {v12 .. v20}, Lrhg;-><init>(ZLjava/util/EnumMap;Ljava/util/EnumMap;ZJLjava/lang/String;I)V
+    move-result v0
 
-    sput-object v12, Lq23;->h:Lrhg;
+    const/16 v1, 0x8
 
-    new-instance v12, Lrhg;
+    int-to-float v1, v1
 
-    move-object/from16 v17, v14
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
 
-    new-instance v14, Ljava/util/EnumMap;
+    move-result-object v2
 
-    move-object/from16 v13, v43
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    invoke-direct {v14, v13}, Ljava/util/EnumMap;-><init>(Ljava/util/EnumMap;)V
+    move-result-object v2
 
-    move-object v13, v15
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
 
-    new-instance v15, Ljava/util/EnumMap;
+    mul-float/2addr v2, v1
 
-    invoke-direct {v15, v1}, Ljava/util/EnumMap;-><init>(Ljava/util/EnumMap;)V
+    invoke-static {v2}, Lmhj;->f(F)I
 
-    const v1, 0x3d4ccccd    # 0.05f
+    move-result v2
 
-    invoke-static {v8, v1}, Lq05;->b(IF)J
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
 
-    move-result-wide v40
+    move-result-object v3
 
-    move-object v8, v13
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    move-object/from16 v1, v17
+    move-result-object v3
 
-    move-wide/from16 v17, v40
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
 
-    const/4 v13, 0x0
+    mul-float/2addr p1, v3
 
-    invoke-direct/range {v12 .. v20}, Lrhg;-><init>(ZLjava/util/EnumMap;Ljava/util/EnumMap;ZJLjava/lang/String;I)V
+    invoke-static {p1}, Lmhj;->f(F)I
 
-    move/from16 v42, v20
+    move-result p1
 
-    sput-object v12, Lq23;->i:Lrhg;
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
 
-    new-instance v12, Lrhg;
+    move-result-object v3
 
-    move-object/from16 v17, v14
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    new-instance v14, Ljava/util/EnumMap;
+    move-result-object v3
 
-    invoke-direct {v14, v2}, Ljava/util/EnumMap;-><init>(Ljava/util/EnumMap;)V
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
 
-    move-object v2, v15
+    mul-float/2addr v1, v3
 
-    new-instance v15, Ljava/util/EnumMap;
+    invoke-static {v1}, Lmhj;->f(F)I
 
-    move-object/from16 v13, v48
+    move-result v1
 
-    invoke-direct {v15, v13}, Ljava/util/EnumMap;-><init>(Ljava/util/EnumMap;)V
+    invoke-virtual {p0, v0, v2, p1, v1}, Landroid/view/View;->setPadding(IIII)V
 
-    move-object/from16 v65, v2
+    return-void
+.end method
 
-    move-object/from16 v2, v17
+.method private final getCheckDrawable()Landroid/graphics/drawable/Drawable;
+    .locals 1
 
-    move/from16 v20, v21
+    iget-object v0, p0, Lq23;->b:Ljava/lang/Object;
 
-    move-wide/from16 v17, v25
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
 
-    const/4 v13, 0x0
+    move-result-object v0
 
-    invoke-direct/range {v12 .. v20}, Lrhg;-><init>(ZLjava/util/EnumMap;Ljava/util/EnumMap;ZJLjava/lang/String;I)V
+    check-cast v0, Landroid/graphics/drawable/Drawable;
 
-    sput-object v12, Lq23;->j:Lrhg;
+    return-object v0
+.end method
 
-    new-instance v12, Lrhg;
+.method private final getPlusDrawable()Landroid/graphics/drawable/Drawable;
+    .locals 1
 
-    move-object/from16 v17, v14
+    iget-object v0, p0, Lq23;->a:Ljava/lang/Object;
 
-    new-instance v14, Ljava/util/EnumMap;
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
 
-    invoke-direct {v14, v4}, Ljava/util/EnumMap;-><init>(Ljava/util/EnumMap;)V
+    move-result-object v0
 
-    move-object v4, v15
+    check-cast v0, Landroid/graphics/drawable/Drawable;
 
-    new-instance v15, Ljava/util/EnumMap;
+    return-object v0
+.end method
 
-    move-object/from16 v13, v47
+.method private final getRippleDrawable()Landroid/graphics/drawable/RippleDrawable;
+    .locals 1
 
-    invoke-direct {v15, v13}, Ljava/util/EnumMap;-><init>(Ljava/util/EnumMap;)V
+    iget-object v0, p0, Lq23;->t0:Ljava/lang/Object;
 
-    const/4 v13, 0x0
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
 
-    invoke-static {v13, v11}, Lq05;->b(IF)J
+    move-result-object v0
 
-    move-result-wide v25
+    check-cast v0, Landroid/graphics/drawable/RippleDrawable;
 
-    move-object/from16 v21, v4
+    return-object v0
+.end method
 
-    move v11, v13
 
-    move-object/from16 v4, v17
+# virtual methods
+.method public final onLayout(ZIIII)V
+    .locals 6
 
-    move-wide/from16 v17, v25
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingStart()I
 
-    const/4 v13, 0x0
+    move-result p1
 
-    invoke-direct/range {v12 .. v20}, Lrhg;-><init>(ZLjava/util/EnumMap;Ljava/util/EnumMap;ZJLjava/lang/String;I)V
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingTop()I
 
-    sput-object v12, Lq23;->k:Lrhg;
+    move-result p2
 
-    move-object/from16 v17, v12
+    iget-object p3, p0, Lq23;->c:Lb6b;
 
-    new-instance v12, Lrhg;
+    const/4 p4, 0x0
 
-    move-object/from16 v18, v14
+    const/16 p5, 0xc
 
-    new-instance v14, Ljava/util/EnumMap;
+    invoke-static {p3, p1, p2, p4, p5}, Lnfj;->c(Landroid/view/View;IIII)V
 
-    move-object/from16 v13, v23
+    iget-object p1, p0, Lq23;->o:Lkpa;
 
-    invoke-direct {v14, v13}, Ljava/util/EnumMap;-><init>(Ljava/util/EnumMap;)V
+    invoke-virtual {p1}, Landroid/view/View;->getMeasuredHeight()I
 
-    move-object v13, v15
+    move-result p2
 
-    new-instance v15, Ljava/util/EnumMap;
+    iget-object v0, p0, Lq23;->d:Landroid/widget/TextView;
 
-    move-object/from16 v23, v12
+    invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
 
-    move-object/from16 v12, v22
+    move-result v1
 
-    invoke-direct {v15, v12}, Ljava/util/EnumMap;-><init>(Ljava/util/EnumMap;)V
+    const/4 v2, 0x2
 
-    move-object/from16 v22, v17
+    if-ge p2, v1, :cond_0
 
-    move-object/from16 v26, v18
+    invoke-virtual {p3}, Landroid/view/View;->getRight()I
 
-    const v12, 0x3cf5c28f    # 0.03f
+    move-result p2
 
-    invoke-static {v11, v12}, Lq05;->b(IF)J
+    int-to-float v1, p5
 
-    move-result-wide v17
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
 
-    move-object/from16 v68, v13
+    move-result-object v3
 
-    move-object/from16 v66, v22
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    move-object/from16 v67, v26
+    move-result-object v3
 
-    const/4 v13, 0x0
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
 
-    move-object/from16 v22, v4
+    invoke-static {v1, v3, p2}, Lj64;->b(FFI)I
 
-    move v4, v12
+    move-result p2
 
-    move-object/from16 v12, v23
+    invoke-virtual {p0}, Landroid/view/View;->getMeasuredHeight()I
 
-    invoke-direct/range {v12 .. v20}, Lrhg;-><init>(ZLjava/util/EnumMap;Ljava/util/EnumMap;ZJLjava/lang/String;I)V
+    move-result v3
 
-    sput-object v23, Lq23;->l:Lrhg;
+    div-int/2addr v3, v2
 
-    new-instance v12, Lrhg;
+    int-to-float v4, v2
 
-    new-instance v14, Ljava/util/EnumMap;
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
 
-    invoke-direct {v14, v10}, Ljava/util/EnumMap;-><init>(Ljava/util/EnumMap;)V
+    move-result-object v5
 
-    new-instance v15, Ljava/util/EnumMap;
+    invoke-virtual {v5}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    move-object/from16 v10, v34
+    move-result-object v5
 
-    invoke-direct {v15, v10}, Ljava/util/EnumMap;-><init>(Ljava/util/EnumMap;)V
+    iget v5, v5, Landroid/util/DisplayMetrics;->density:F
 
-    invoke-static {v11, v4}, Lq05;->b(IF)J
+    mul-float/2addr v5, v4
 
-    move-result-wide v17
+    invoke-static {v5}, Lmhj;->f(F)I
 
-    move-object/from16 v4, v23
+    move-result v5
 
-    invoke-direct/range {v12 .. v20}, Lrhg;-><init>(ZLjava/util/EnumMap;Ljava/util/EnumMap;ZJLjava/lang/String;I)V
+    div-int/2addr v5, v2
 
-    sput-object v12, Lq23;->m:Lrhg;
+    sub-int/2addr v3, v5
 
-    new-instance v32, Lrhg;
+    invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
 
-    new-instance v10, Ljava/util/EnumMap;
+    move-result v5
 
-    move-object/from16 v11, v35
+    sub-int/2addr v3, v5
 
-    iget-object v13, v11, Lrhg;->b:Ljava/util/EnumMap;
+    invoke-static {v0, p2, v3, p4, p5}, Lnfj;->c(Landroid/view/View;IIII)V
 
-    invoke-direct {v10, v13}, Ljava/util/EnumMap;-><init>(Ljava/util/EnumMap;)V
+    invoke-virtual {p3}, Landroid/view/View;->getRight()I
 
-    new-instance v13, Ljava/util/EnumMap;
+    move-result p2
 
-    iget-object v11, v11, Lrhg;->c:Ljava/util/EnumMap;
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
 
-    invoke-direct {v13, v11}, Ljava/util/EnumMap;-><init>(Ljava/util/EnumMap;)V
+    move-result-object p3
 
-    move-object/from16 v34, v10
+    invoke-virtual {p3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    move-object/from16 v35, v13
+    move-result-object p3
 
-    move/from16 v40, v42
+    iget p3, p3, Landroid/util/DisplayMetrics;->density:F
 
-    invoke-direct/range {v32 .. v40}, Lrhg;-><init>(ZLjava/util/EnumMap;Ljava/util/EnumMap;ZJLjava/lang/String;I)V
+    invoke-static {v1, p3, p2}, Lj64;->b(FFI)I
 
-    move-object/from16 v10, v32
+    move-result p2
 
-    sput-object v10, Lq23;->n:Lrhg;
+    invoke-virtual {v0}, Landroid/view/View;->getBottom()I
 
-    new-instance v11, Ljava/util/EnumMap;
+    move-result p3
 
-    invoke-direct {v11, v3}, Ljava/util/EnumMap;-><init>(Ljava/util/EnumMap;)V
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
 
-    new-instance v3, Ljava/util/EnumMap;
+    move-result-object v0
 
-    invoke-direct {v3, v9}, Ljava/util/EnumMap;-><init>(Ljava/util/EnumMap;)V
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    new-instance v9, Ljava/util/EnumMap;
+    move-result-object v0
 
-    invoke-direct {v9, v0}, Ljava/util/EnumMap;-><init>(Ljava/util/EnumMap;)V
+    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
 
-    new-instance v0, Ljava/util/EnumMap;
+    invoke-static {v4, v0, p3}, Lj64;->b(FFI)I
 
-    move-object/from16 v13, v57
+    move-result p3
 
-    invoke-direct {v0, v13}, Ljava/util/EnumMap;-><init>(Ljava/util/EnumMap;)V
+    invoke-static {p1, p2, p3, p4, p5}, Lnfj;->c(Landroid/view/View;IIII)V
 
-    new-instance v13, Ljava/util/EnumMap;
+    goto :goto_0
 
-    move-object/from16 v14, v58
+    :cond_0
+    invoke-virtual {p3}, Landroid/view/View;->getRight()I
 
-    invoke-direct {v13, v14}, Ljava/util/EnumMap;-><init>(Ljava/util/EnumMap;)V
+    move-result p2
 
-    new-instance v14, Ljava/util/EnumMap;
+    int-to-float v1, p5
 
-    move-object/from16 v15, v50
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
 
-    invoke-direct {v14, v15}, Ljava/util/EnumMap;-><init>(Ljava/util/EnumMap;)V
+    move-result-object v3
 
-    new-instance v15, Ljava/util/EnumMap;
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    move-object/from16 v16, v14
+    move-result-object v3
 
-    move-object/from16 v14, v51
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
 
-    invoke-direct {v15, v14}, Ljava/util/EnumMap;-><init>(Ljava/util/EnumMap;)V
+    invoke-static {v1, v3, p2}, Lj64;->b(FFI)I
 
-    new-instance v14, Ljava/util/EnumMap;
+    move-result p2
 
-    move-object/from16 v17, v15
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingTop()I
 
-    move-object/from16 v15, v59
+    move-result v3
 
-    invoke-direct {v14, v15}, Ljava/util/EnumMap;-><init>(Ljava/util/EnumMap;)V
+    invoke-static {v0, p2, v3, p4, p5}, Lnfj;->c(Landroid/view/View;IIII)V
 
-    new-instance v15, Ljava/util/EnumMap;
+    invoke-virtual {p3}, Landroid/view/View;->getRight()I
 
-    move-object/from16 v18, v14
+    move-result p2
 
-    move-object/from16 v14, v60
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
 
-    invoke-direct {v15, v14}, Ljava/util/EnumMap;-><init>(Ljava/util/EnumMap;)V
+    move-result-object p3
 
-    new-instance v14, Ljava/util/EnumMap;
+    invoke-virtual {p3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    move-object/from16 v19, v15
+    move-result-object p3
 
-    move-object/from16 v15, v61
+    iget p3, p3, Landroid/util/DisplayMetrics;->density:F
 
-    invoke-direct {v14, v15}, Ljava/util/EnumMap;-><init>(Ljava/util/EnumMap;)V
+    invoke-static {v1, p3, p2}, Lj64;->b(FFI)I
 
-    new-instance v15, Ljava/util/EnumMap;
+    move-result p2
 
-    move-object/from16 v20, v14
+    invoke-virtual {v0}, Landroid/view/View;->getBottom()I
 
-    move-object/from16 v14, v62
+    move-result p3
 
-    invoke-direct {v15, v14}, Ljava/util/EnumMap;-><init>(Ljava/util/EnumMap;)V
+    int-to-float v0, v2
 
-    new-instance v14, Ljava/util/EnumMap;
-
-    invoke-direct {v14, v6}, Ljava/util/EnumMap;-><init>(Ljava/util/EnumMap;)V
-
-    new-instance v6, Ljava/util/EnumMap;
-
-    invoke-direct {v6, v5}, Ljava/util/EnumMap;-><init>(Ljava/util/EnumMap;)V
-
-    new-instance v5, Ljava/util/EnumMap;
-
-    invoke-direct {v5, v7}, Ljava/util/EnumMap;-><init>(Ljava/util/EnumMap;)V
-
-    const/high16 v7, 0x41700000    # 15.0f
-
-    move-object/from16 v23, v5
-
-    move-object/from16 v25, v14
-
-    move-object/from16 v24, v15
-
-    const/4 v5, 0x1
-
-    invoke-static {v5, v7}, Lq05;->b(IF)J
-
-    move-result-wide v14
-
-    sget-object v7, Lub5;->a:Lub5;
-
-    move-object/from16 v32, v6
-
-    move-object/from16 v6, v63
-
-    invoke-static {v14, v15, v6, v7}, Lmrf;->t(JLjava/util/EnumMap;Lub5;)V
-
-    move-object/from16 v33, v9
-
-    move-object v15, v10
-
-    const/high16 v14, 0x41a00000    # 20.0f
-
-    invoke-static {v5, v14}, Lq05;->b(IF)J
-
-    move-result-wide v9
-
-    move-object/from16 v14, v64
-
-    invoke-static {v9, v10, v14, v7}, Lmrf;->t(JLjava/util/EnumMap;Lub5;)V
-
-    const/high16 v9, 0x41880000    # 17.0f
-
-    invoke-static {v5, v9}, Lq05;->b(IF)J
-
-    move-result-wide v9
-
-    move-object/from16 v27, v15
-
-    move-object/from16 v15, v30
-
-    invoke-static {v9, v10, v6, v15}, Lmrf;->t(JLjava/util/EnumMap;Lub5;)V
-
-    move-object/from16 v30, v11
-
-    const/high16 v9, 0x41b00000    # 22.0f
-
-    invoke-static {v5, v9}, Lq05;->b(IF)J
-
-    move-result-wide v10
-
-    invoke-static {v10, v11, v14, v15}, Lmrf;->t(JLjava/util/EnumMap;Lub5;)V
-
-    const/high16 v9, 0x41a00000    # 20.0f
-
-    invoke-static {v5, v9}, Lq05;->b(IF)J
-
-    move-result-wide v10
-
-    sget-object v9, Lub5;->c:Lub5;
-
-    invoke-static {v10, v11, v6, v9}, Lmrf;->t(JLjava/util/EnumMap;Lub5;)V
-
-    move-object/from16 v34, v12
-
-    const/high16 v10, 0x41c00000    # 24.0f
-
-    invoke-static {v5, v10}, Lq05;->b(IF)J
-
-    move-result-wide v11
-
-    invoke-static {v11, v12, v14, v9}, Lmrf;->t(JLjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v5, v10}, Lq05;->b(IF)J
-
-    move-result-wide v11
-
-    sget-object v10, Lub5;->d:Lub5;
-
-    invoke-static {v11, v12, v6, v10}, Lmrf;->t(JLjava/util/EnumMap;Lub5;)V
-
-    const/high16 v11, 0x41e00000    # 28.0f
-
-    move-object/from16 v35, v13
-
-    invoke-static {v5, v11}, Lq05;->b(IF)J
-
-    move-result-wide v12
-
-    invoke-static {v12, v13, v14, v10}, Lmrf;->t(JLjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v5, v11}, Lq05;->b(IF)J
-
-    move-result-wide v12
-
-    sget-object v11, Lub5;->o:Lub5;
-
-    invoke-static {v12, v13, v6, v11}, Lmrf;->t(JLjava/util/EnumMap;Lub5;)V
-
-    const/high16 v12, 0x42000000    # 32.0f
-
-    move-object/from16 v37, v3
-
-    move-object v13, v4
-
-    invoke-static {v5, v12}, Lq05;->b(IF)J
-
-    move-result-wide v3
-
-    invoke-static {v3, v4, v14, v11}, Lmrf;->t(JLjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v5, v12}, Lq05;->b(IF)J
-
-    move-result-wide v3
-
-    sget-object v12, Lub5;->X:Lub5;
-
-    invoke-static {v3, v4, v6, v12}, Lmrf;->t(JLjava/util/EnumMap;Lub5;)V
-
-    const/high16 v3, 0x42100000    # 36.0f
-
-    move-object v4, v10
-
-    move-object v6, v11
-
-    invoke-static {v5, v3}, Lq05;->b(IF)J
-
-    move-result-wide v10
-
-    invoke-static {v10, v11, v14, v12}, Lmrf;->t(JLjava/util/EnumMap;Lub5;)V
-
-    move-object v14, v4
-
-    const/high16 v10, 0x41400000    # 12.0f
-
-    invoke-static {v5, v10}, Lq05;->b(IF)J
-
-    move-result-wide v3
-
-    invoke-static {v3, v4, v1, v7}, Lmrf;->t(JLjava/util/EnumMap;Lub5;)V
-
-    const/high16 v4, 0x41800000    # 16.0f
-
-    invoke-static {v5, v4}, Lq05;->b(IF)J
-
-    move-result-wide v10
-
-    invoke-static {v10, v11, v8, v7}, Lmrf;->t(JLjava/util/EnumMap;Lub5;)V
-
-    const/high16 v10, 0x41600000    # 14.0f
-
-    invoke-static {v5, v10}, Lq05;->b(IF)J
-
-    move-result-wide v3
-
-    invoke-static {v3, v4, v1, v15}, Lmrf;->t(JLjava/util/EnumMap;Lub5;)V
-
-    move-object v4, v12
-
-    const/high16 v3, 0x41900000    # 18.0f
-
-    invoke-static {v5, v3}, Lq05;->b(IF)J
-
-    move-result-wide v11
-
-    invoke-static {v11, v12, v8, v15}, Lmrf;->t(JLjava/util/EnumMap;Lub5;)V
-
-    move-object v12, v4
-
-    const/high16 v11, 0x41800000    # 16.0f
-
-    invoke-static {v5, v11}, Lq05;->b(IF)J
-
-    move-result-wide v3
-
-    invoke-static {v3, v4, v1, v9}, Lmrf;->t(JLjava/util/EnumMap;Lub5;)V
-
-    const/high16 v3, 0x41a00000    # 20.0f
-
-    invoke-static {v5, v3}, Lq05;->b(IF)J
-
-    move-result-wide v10
-
-    invoke-static {v10, v11, v8, v9}, Lmrf;->t(JLjava/util/EnumMap;Lub5;)V
-
-    const/high16 v10, 0x41900000    # 18.0f
-
-    invoke-static {v5, v10}, Lq05;->b(IF)J
-
-    move-result-wide v3
-
-    invoke-static {v3, v4, v1, v14}, Lmrf;->t(JLjava/util/EnumMap;Lub5;)V
-
-    move-object v4, v12
-
-    const/high16 v3, 0x41b00000    # 22.0f
-
-    invoke-static {v5, v3}, Lq05;->b(IF)J
-
-    move-result-wide v11
-
-    invoke-static {v11, v12, v8, v14}, Lmrf;->t(JLjava/util/EnumMap;Lub5;)V
-
-    move-object v12, v4
-
-    const/high16 v11, 0x41a00000    # 20.0f
-
-    invoke-static {v5, v11}, Lq05;->b(IF)J
-
-    move-result-wide v3
-
-    invoke-static {v3, v4, v1, v6}, Lmrf;->t(JLjava/util/EnumMap;Lub5;)V
-
-    const/high16 v3, 0x41c00000    # 24.0f
-
-    invoke-static {v5, v3}, Lq05;->b(IF)J
-
-    move-result-wide v10
-
-    invoke-static {v10, v11, v8, v6}, Lmrf;->t(JLjava/util/EnumMap;Lub5;)V
-
-    const/high16 v3, 0x41b00000    # 22.0f
-
-    invoke-static {v5, v3}, Lq05;->b(IF)J
-
-    move-result-wide v10
-
-    invoke-static {v10, v11, v1, v12}, Lmrf;->t(JLjava/util/EnumMap;Lub5;)V
-
-    const/high16 v1, 0x41d00000    # 26.0f
-
-    invoke-static {v5, v1}, Lq05;->b(IF)J
-
-    move-result-wide v10
-
-    invoke-static {v10, v11, v8, v12}, Lmrf;->t(JLjava/util/EnumMap;Lub5;)V
-
-    const/high16 v10, 0x41400000    # 12.0f
-
-    invoke-static {v5, v10}, Lq05;->b(IF)J
-
-    move-result-wide v3
-
-    invoke-static {v3, v4, v2, v7}, Lmrf;->t(JLjava/util/EnumMap;Lub5;)V
-
-    move-object v3, v12
-
-    const/high16 v4, 0x41800000    # 16.0f
-
-    invoke-static {v5, v4}, Lq05;->b(IF)J
-
-    move-result-wide v11
-
-    move-object/from16 v8, v65
-
-    invoke-static {v11, v12, v8, v7}, Lmrf;->t(JLjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v5, v10}, Lq05;->b(IF)J
-
-    move-result-wide v11
-
-    invoke-static {v11, v12, v2, v15}, Lmrf;->t(JLjava/util/EnumMap;Lub5;)V
-
-    move-object v10, v2
-
-    const/high16 v11, 0x41a00000    # 20.0f
-
-    invoke-static {v5, v11}, Lq05;->b(IF)J
-
-    move-result-wide v1
-
-    invoke-static {v1, v2, v8, v15}, Lmrf;->t(JLjava/util/EnumMap;Lub5;)V
-
-    move-object v2, v13
-
-    const/high16 v1, 0x41600000    # 14.0f
-
-    invoke-static {v5, v1}, Lq05;->b(IF)J
-
-    move-result-wide v12
-
-    invoke-static {v12, v13, v10, v9}, Lmrf;->t(JLjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v5, v4}, Lq05;->b(IF)J
-
-    move-result-wide v12
-
-    invoke-static {v12, v13, v8, v9}, Lmrf;->t(JLjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v5, v4}, Lq05;->b(IF)J
-
-    move-result-wide v12
-
-    invoke-static {v12, v13, v10, v14}, Lmrf;->t(JLjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v5, v11}, Lq05;->b(IF)J
-
-    move-result-wide v12
-
-    invoke-static {v12, v13, v8, v14}, Lmrf;->t(JLjava/util/EnumMap;Lub5;)V
-
-    const/high16 v1, 0x41900000    # 18.0f
-
-    invoke-static {v5, v1}, Lq05;->b(IF)J
-
-    move-result-wide v12
-
-    invoke-static {v12, v13, v10, v6}, Lmrf;->t(JLjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v5, v11}, Lq05;->b(IF)J
-
-    move-result-wide v12
-
-    invoke-static {v12, v13, v8, v6}, Lmrf;->t(JLjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v5, v11}, Lq05;->b(IF)J
-
-    move-result-wide v12
-
-    move-object v4, v3
-
-    invoke-static {v12, v13, v10, v4}, Lmrf;->t(JLjava/util/EnumMap;Lub5;)V
-
-    const/high16 v3, 0x41c00000    # 24.0f
-
-    invoke-static {v5, v3}, Lq05;->b(IF)J
-
-    move-result-wide v10
-
-    invoke-static {v10, v11, v8, v4}, Lmrf;->t(JLjava/util/EnumMap;Lub5;)V
-
-    const/high16 v10, 0x41400000    # 12.0f
-
-    invoke-static {v5, v10}, Lq05;->b(IF)J
-
-    move-result-wide v11
-
-    move-object/from16 v1, v22
-
-    invoke-static {v11, v12, v1, v7}, Lmrf;->t(JLjava/util/EnumMap;Lub5;)V
-
-    const/high16 v11, 0x41800000    # 16.0f
-
-    invoke-static {v5, v11}, Lq05;->b(IF)J
-
-    move-result-wide v12
-
-    move-object/from16 v3, v21
-
-    invoke-static {v12, v13, v3, v7}, Lmrf;->t(JLjava/util/EnumMap;Lub5;)V
-
-    const/high16 v10, 0x41600000    # 14.0f
-
-    invoke-static {v5, v10}, Lq05;->b(IF)J
-
-    move-result-wide v12
-
-    invoke-static {v12, v13, v1, v15}, Lmrf;->t(JLjava/util/EnumMap;Lub5;)V
-
-    const/high16 v10, 0x41900000    # 18.0f
-
-    invoke-static {v5, v10}, Lq05;->b(IF)J
-
-    move-result-wide v12
-
-    invoke-static {v12, v13, v3, v15}, Lmrf;->t(JLjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v5, v11}, Lq05;->b(IF)J
-
-    move-result-wide v12
-
-    invoke-static {v12, v13, v1, v9}, Lmrf;->t(JLjava/util/EnumMap;Lub5;)V
-
-    const/high16 v11, 0x41a00000    # 20.0f
-
-    invoke-static {v5, v11}, Lq05;->b(IF)J
-
-    move-result-wide v12
-
-    invoke-static {v12, v13, v3, v9}, Lmrf;->t(JLjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v5, v10}, Lq05;->b(IF)J
-
-    move-result-wide v12
-
-    invoke-static {v12, v13, v1, v14}, Lmrf;->t(JLjava/util/EnumMap;Lub5;)V
-
-    const/high16 v8, 0x41b00000    # 22.0f
-
-    invoke-static {v5, v8}, Lq05;->b(IF)J
-
-    move-result-wide v12
-
-    invoke-static {v12, v13, v3, v14}, Lmrf;->t(JLjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v5, v11}, Lq05;->b(IF)J
-
-    move-result-wide v12
-
-    invoke-static {v12, v13, v1, v6}, Lmrf;->t(JLjava/util/EnumMap;Lub5;)V
-
-    const/high16 v10, 0x41c00000    # 24.0f
-
-    invoke-static {v5, v10}, Lq05;->b(IF)J
-
-    move-result-wide v11
-
-    invoke-static {v11, v12, v3, v6}, Lmrf;->t(JLjava/util/EnumMap;Lub5;)V
-
-    const/high16 v8, 0x41e00000    # 28.0f
-
-    invoke-static {v5, v8}, Lq05;->b(IF)J
-
-    move-result-wide v10
-
-    invoke-static {v10, v11, v1, v4}, Lmrf;->t(JLjava/util/EnumMap;Lub5;)V
-
-    const/high16 v1, 0x42000000    # 32.0f
-
-    invoke-static {v5, v1}, Lq05;->b(IF)J
-
-    move-result-wide v10
-
-    invoke-static {v10, v11, v3, v4}, Lmrf;->t(JLjava/util/EnumMap;Lub5;)V
-
-    const/high16 v1, 0x41500000    # 13.0f
-
-    invoke-static {v5, v1}, Lq05;->b(IF)J
-
-    move-result-wide v10
-
-    invoke-static {v10, v11}, Lq05;->a(J)Lq05;
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    move-object/from16 v3, v67
-
-    invoke-virtual {v3, v7, v1}, Ljava/util/EnumMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const/high16 v11, 0x41800000    # 16.0f
-
-    invoke-static {v5, v11}, Lq05;->b(IF)J
-
-    move-result-wide v12
-
-    invoke-static {v12, v13}, Lq05;->a(J)Lq05;
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
     move-result-object v1
 
-    move-object/from16 v13, v68
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
 
-    invoke-virtual {v13, v7, v1}, Ljava/util/EnumMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0, v1, p3}, Lj64;->b(FFI)I
 
-    move-object/from16 v12, v66
+    move-result p3
 
-    iget-object v1, v12, Lrhg;->b:Ljava/util/EnumMap;
+    invoke-static {p1, p2, p3, p4, p5}, Lnfj;->c(Landroid/view/View;IIII)V
 
-    const/high16 v10, 0x41600000    # 14.0f
+    :goto_0
+    invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
 
-    invoke-static {v10, v5, v1, v15, v12}, Lkz1;->m(FILjava/util/EnumMap;Lub5;Lrhg;)Ljava/util/EnumMap;
+    move-result p1
+
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingEnd()I
+
+    move-result p2
+
+    sub-int/2addr p1, p2
+
+    iget-object p2, p0, Lq23;->s0:Lu7b;
+
+    invoke-virtual {p2}, Landroid/view/View;->getMeasuredWidth()I
+
+    move-result p3
+
+    sub-int/2addr p1, p3
+
+    invoke-virtual {p0}, Landroid/view/View;->getMeasuredHeight()I
+
+    move-result p3
+
+    div-int/2addr p3, v2
+
+    invoke-virtual {p2}, Landroid/view/View;->getMeasuredHeight()I
+
+    move-result v0
+
+    div-int/2addr v0, v2
+
+    sub-int/2addr p3, v0
+
+    invoke-static {p2, p1, p3, p4, p5}, Lnfj;->c(Landroid/view/View;IIII)V
+
+    return-void
+.end method
+
+.method public final onMeasure(II)V
+    .locals 5
+
+    iget-object p2, p0, Lq23;->d:Landroid/widget/TextView;
+
+    invoke-static {p2}, Lqpg;->c(Landroid/widget/TextView;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p0, v0}, Lq23;->setVerified(Z)V
+
+    :cond_0
+    invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
+
+    move-result p1
+
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingStart()I
+
+    move-result v0
+
+    sub-int v0, p1, v0
+
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingEnd()I
+
+    move-result v1
+
+    sub-int/2addr v0, v1
+
+    const/16 v1, 0x36
+
+    int-to-float v1, v1
+
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v2
+
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+
+    const/high16 v3, 0x40000000    # 2.0f
+
+    invoke-static {v1, v2, v3}, Lau1;->e(FFI)I
+
+    move-result v2
+
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v4
+
+    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v1, v4
+
+    invoke-static {v1}, Lmhj;->f(F)I
+
+    move-result v1
+
+    invoke-static {v1, v3}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
+
+    move-result v1
+
+    iget-object v4, p0, Lq23;->c:Lb6b;
+
+    invoke-virtual {v4, v2, v1}, Landroid/view/View;->measure(II)V
+
+    invoke-virtual {v4}, Landroid/view/View;->getMeasuredWidth()I
+
+    move-result v1
+
+    const/16 v2, 0xc
+
+    int-to-float v2, v2
+
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v4
+
+    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v4, v2
+
+    invoke-static {v4}, Lmhj;->f(F)I
+
+    move-result v4
+
+    add-int/2addr v4, v1
+
+    sub-int/2addr v0, v4
+
+    iget-object v1, p0, Lq23;->s0:Lu7b;
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v1, v4, v4}, Landroid/view/View;->measure(II)V
+
+    invoke-virtual {v1}, Landroid/view/View;->getMeasuredWidth()I
+
+    move-result v1
+
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v4
+
+    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v2, v4
+
+    invoke-static {v2}, Lmhj;->f(F)I
+
+    move-result v2
+
+    add-int/2addr v2, v1
+
+    sub-int/2addr v0, v2
+
+    invoke-virtual {p2}, Landroid/view/View;->forceLayout()V
+
+    const/high16 v1, -0x80000000
+
+    invoke-static {v0, v1}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
+
+    move-result v1
+
+    invoke-virtual {p2}, Landroid/widget/TextView;->getLineHeight()I
+
+    move-result v2
+
+    invoke-static {v2, v3}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
+
+    move-result v2
+
+    invoke-virtual {p2, v1, v2}, Landroid/view/View;->measure(II)V
+
+    iget-object v1, p0, Lq23;->o:Lkpa;
+
+    invoke-virtual {v1}, Lkpa;->getLineHeight()I
+
+    move-result v2
+
+    const/4 v4, 0x2
+
+    mul-int/2addr v2, v4
+
+    invoke-static {v2, v3}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
+
+    move-result v2
+
+    invoke-virtual {v1}, Lkpa;->getAsView()Landroid/view/View;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/view/View;->forceLayout()V
+
+    invoke-virtual {v1}, Lkpa;->getAsView()Landroid/view/View;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v0, v2}, Landroid/view/View;->measure(II)V
+
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingTop()I
+
+    move-result v0
+
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingBottom()I
+
+    move-result v2
+
+    add-int/2addr v2, v0
+
+    invoke-virtual {p2}, Landroid/view/View;->getMeasuredHeight()I
+
+    move-result p2
+
+    add-int/2addr p2, v2
+
+    int-to-float v0, v4
+
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v2
+
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+
+    invoke-static {v0, v2, p2}, Lj64;->b(FFI)I
+
+    move-result p2
+
+    invoke-virtual {v1}, Landroid/view/View;->getMeasuredHeight()I
+
+    move-result v0
+
+    add-int/2addr v0, p2
+
+    const/16 p2, 0x48
+
+    int-to-float p2, p2
+
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const/high16 v3, 0x41900000    # 18.0f
-
-    invoke-static {v3, v5, v1, v15, v12}, Lkz1;->p(FILjava/util/EnumMap;Lub5;Lrhg;)Ljava/util/EnumMap;
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
     move-result-object v1
 
-    invoke-static {v11, v5, v1, v9, v12}, Lkz1;->m(FILjava/util/EnumMap;Lub5;Lrhg;)Ljava/util/EnumMap;
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr p2, v1
+
+    invoke-static {p2}, Lmhj;->f(F)I
+
+    move-result p2
+
+    invoke-static {v0, p2}, Ljava/lang/Math;->max(II)I
+
+    move-result p2
+
+    invoke-virtual {p0, p1, p2}, Landroid/view/View;->setMeasuredDimension(II)V
+
+    return-void
+.end method
+
+.method public final onThemeChanged(Llob;)V
+    .locals 2
+
+    iget-object v0, p0, Lq23;->c:Lb6b;
+
+    invoke-virtual {v0, p1}, Lb6b;->onThemeChanged(Llob;)V
+
+    invoke-interface {p1}, Llob;->getText()Lhob;
+
+    move-result-object v0
+
+    iget v0, v0, Lhob;->b:I
+
+    iget-object v1, p0, Lq23;->d:Landroid/widget/TextView;
+
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setTextColor(I)V
+
+    invoke-interface {p1}, Llob;->getText()Lhob;
+
+    move-result-object v0
+
+    iget v0, v0, Lhob;->d:I
+
+    iget-object v1, p0, Lq23;->o:Lkpa;
+
+    invoke-virtual {v1, v0}, Lkpa;->setTextColor(I)V
+
+    iget-object v0, p0, Lq23;->s0:Lu7b;
+
+    invoke-virtual {v0, p1}, Lu7b;->onThemeChanged(Llob;)V
+
+    invoke-direct {p0}, Lq23;->getRippleDrawable()Landroid/graphics/drawable/RippleDrawable;
+
+    move-result-object v0
+
+    invoke-interface {p1}, Llob;->n()Lut1;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lut1;->g:Ljava/lang/Object;
+
+    check-cast p1, Lxe0;
+
+    iget-object p1, p1, Lxe0;->Y:Ljava/lang/Object;
+
+    check-cast p1, Lzu;
+
+    iget p1, p1, Lzu;->c:I
+
+    invoke-static {p1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/RippleDrawable;->setColor(Landroid/content/res/ColorStateList;)V
+
+    return-void
+.end method
+
+.method public final setItem(Ly9g;)V
+    .locals 5
+
+    iget-object v0, p1, Ly9g;->d:Ljava/lang/CharSequence;
+
+    iget-object v1, p1, Ly9g;->b:Landroid/net/Uri;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    const/high16 v11, 0x41a00000    # 20.0f
+    goto :goto_0
 
-    invoke-static {v11, v5, v1, v9, v12}, Lkz1;->p(FILjava/util/EnumMap;Lub5;Lrhg;)Ljava/util/EnumMap;
+    :cond_0
+    const/4 v1, 0x0
+
+    :goto_0
+    iget-wide v2, p1, Ly9g;->o:J
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    iget-object v3, p1, Ly9g;->X:Ljava/lang/CharSequence;
+
+    if-nez v3, :cond_1
+
+    const-string v3, ""
+
+    :cond_1
+    iget-object v4, p0, Lq23;->c:Lb6b;
+
+    invoke-static {v4, v1, v2, v3}, Lb6b;->o(Lb6b;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/CharSequence;)V
+
+    iget-object v1, p0, Lq23;->d:Landroid/widget/TextView;
+
+    iget-object v2, p1, Ly9g;->c:Ljava/lang/CharSequence;
+
+    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    const/16 v1, 0x8
+
+    goto :goto_1
+
+    :cond_2
+    const/4 v1, 0x0
+
+    :goto_1
+    iget-object v2, p0, Lq23;->o:Lkpa;
+
+    invoke-virtual {v2, v1}, Landroid/view/View;->setVisibility(I)V
+
+    invoke-virtual {v2, v0}, Lkpa;->setTextValue(Ljava/lang/CharSequence;)V
+
+    iget-boolean v0, p1, Ly9g;->Y:Z
+
+    invoke-virtual {p0, v0}, Lq23;->setVerified(Z)V
+
+    iget-object p1, p1, Ly9g;->s0:Lx9g;
+
+    invoke-virtual {p0, p1}, Lq23;->setStatus(Lx9g;)V
+
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+
+    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
+
+    return-void
+.end method
+
+.method public final setStatus(Lx9g;)V
+    .locals 3
+
+    sget-object v0, Lx9g;->b:Lx9g;
+
+    const/4 v1, 0x1
+
+    if-ne p1, v0, :cond_0
+
+    move v0, v1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    iget-object v2, p0, Lq23;->s0:Lu7b;
+
+    invoke-virtual {v2, v0}, Lu7b;->setProgressEnabled(Z)V
+
+    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result p1
+
+    if-eqz p1, :cond_3
+
+    if-eq p1, v1, :cond_2
+
+    const/4 v0, 0x2
+
+    if-ne p1, v0, :cond_1
+
+    invoke-direct {p0}, Lq23;->getCheckDrawable()Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    invoke-static {v2, p1}, Lu7b;->e(Lu7b;Landroid/graphics/drawable/Drawable;)V
+
+    return-void
+
+    :cond_1
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
+
+    :cond_2
+    return-void
+
+    :cond_3
+    invoke-direct {p0}, Lq23;->getPlusDrawable()Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    invoke-static {v2, p1}, Lu7b;->e(Lu7b;Landroid/graphics/drawable/Drawable;)V
+
+    return-void
+.end method
+
+.method public final setVerified(Z)V
+    .locals 5
+
+    sget-object v0, Lfe3;->t0:Ltea;
+
+    iget-object v1, p0, Lq23;->d:Landroid/widget/TextView;
+
+    invoke-static {v1}, Lqpg;->e(Landroid/widget/TextView;)F
+
+    move-result v2
+
+    invoke-static {v2}, Lhdj;->f(F)I
+
+    move-result v2
+
+    const/4 v3, 0x0
+
+    if-eqz p1, :cond_2
+
+    invoke-static {v1}, Lqpg;->a(Landroid/widget/TextView;)Lskh;
+
+    move-result-object v4
+
+    if-eqz v4, :cond_0
+
+    iget v4, v4, Lskh;->a:I
+
+    goto :goto_0
+
+    :cond_0
+    move v4, v3
+
+    :goto_0
+    if-ne v4, v2, :cond_2
+
+    iget-object p1, p0, Lq23;->u0:Lskh;
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-static {v3, v5, v1, v14, v12}, Lkz1;->m(FILjava/util/EnumMap;Lub5;Lrhg;)Ljava/util/EnumMap;
+    invoke-virtual {v0, v1}, Ltea;->n(Landroid/content/Context;)Lfe3;
 
-    move-result-object v1
+    move-result-object v0
 
-    const/high16 v3, 0x41b00000    # 22.0f
+    invoke-virtual {v0}, Lfe3;->j()Llob;
 
-    invoke-static {v3, v5, v1, v14, v12}, Lkz1;->p(FILjava/util/EnumMap;Lub5;Lrhg;)Ljava/util/EnumMap;
+    move-result-object v0
 
-    move-result-object v1
+    invoke-virtual {p1, v0}, Lskh;->onThemeChanged(Llob;)V
 
-    invoke-static {v11, v5, v1, v6, v12}, Lkz1;->m(FILjava/util/EnumMap;Lub5;Lrhg;)Ljava/util/EnumMap;
+    :cond_1
+    return-void
 
-    move-result-object v1
+    :cond_2
+    if-eqz p1, :cond_5
 
-    const/high16 v8, 0x41c00000    # 24.0f
+    invoke-static {v1}, Lqpg;->a(Landroid/widget/TextView;)Lskh;
 
-    invoke-static {v8, v5, v1, v6, v12}, Lkz1;->p(FILjava/util/EnumMap;Lub5;Lrhg;)Ljava/util/EnumMap;
+    move-result-object p1
 
-    move-result-object v1
+    if-eqz p1, :cond_3
 
-    invoke-static {v3, v5, v1, v4, v12}, Lkz1;->m(FILjava/util/EnumMap;Lub5;Lrhg;)Ljava/util/EnumMap;
+    iget v3, p1, Lskh;->a:I
 
-    move-result-object v1
+    :cond_3
+    if-eq v3, v2, :cond_5
 
-    const/high16 v12, 0x41d00000    # 26.0f
+    iget-object p1, p0, Lq23;->u0:Lskh;
 
-    invoke-static {v12, v5, v1, v4, v2}, Lkz1;->p(FILjava/util/EnumMap;Lub5;Lrhg;)Ljava/util/EnumMap;
+    if-eqz p1, :cond_4
 
-    move-result-object v1
+    iget v3, p1, Lskh;->a:I
 
-    const/high16 v13, 0x41400000    # 12.0f
+    if-ne v3, v2, :cond_4
 
-    invoke-static {v13, v5, v1, v7, v2}, Lkz1;->m(FILjava/util/EnumMap;Lub5;Lrhg;)Ljava/util/EnumMap;
+    goto :goto_1
 
-    move-result-object v1
+    :cond_4
+    new-instance p1, Lskh;
 
-    invoke-static {v10, v5, v1, v7, v2}, Lkz1;->p(FILjava/util/EnumMap;Lub5;Lrhg;)Ljava/util/EnumMap;
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    move-result-object v1
+    move-result-object v3
 
-    invoke-static {v13, v5, v1, v15, v2}, Lkz1;->m(FILjava/util/EnumMap;Lub5;Lrhg;)Ljava/util/EnumMap;
+    sget-object v4, Lnmf;->o:Lnmf;
 
-    move-result-object v1
+    invoke-direct {p1, v3, v2, v4}, Lskh;-><init>(Landroid/content/Context;ILrkh;)V
 
-    invoke-static {v10, v5, v1, v15, v2}, Lkz1;->p(FILjava/util/EnumMap;Lub5;Lrhg;)Ljava/util/EnumMap;
+    iput-object p1, p0, Lq23;->u0:Lskh;
 
-    move-result-object v1
+    goto :goto_1
 
-    const/high16 v3, 0x41800000    # 16.0f
+    :cond_5
+    const/4 p1, 0x0
 
-    invoke-static {v3, v5, v1, v9, v2}, Lkz1;->m(FILjava/util/EnumMap;Lub5;Lrhg;)Ljava/util/EnumMap;
+    :goto_1
+    iget-object v2, p0, Lq23;->u0:Lskh;
 
-    move-result-object v1
+    if-eqz v2, :cond_6
 
-    invoke-static {v11, v5, v1, v9, v2}, Lkz1;->p(FILjava/util/EnumMap;Lub5;Lrhg;)Ljava/util/EnumMap;
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    move-result-object v1
+    move-result-object v3
 
-    const/high16 v3, 0x41900000    # 18.0f
+    invoke-virtual {v0, v3}, Ltea;->n(Landroid/content/Context;)Lfe3;
 
-    invoke-static {v3, v5, v1, v14, v2}, Lkz1;->m(FILjava/util/EnumMap;Lub5;Lrhg;)Ljava/util/EnumMap;
+    move-result-object v0
 
-    move-result-object v1
+    invoke-virtual {v0}, Lfe3;->j()Llob;
 
-    invoke-static {v11, v5, v1, v14, v2}, Lkz1;->p(FILjava/util/EnumMap;Lub5;Lrhg;)Ljava/util/EnumMap;
+    move-result-object v0
 
-    move-result-object v1
+    invoke-virtual {v2, v0}, Lskh;->onThemeChanged(Llob;)V
 
-    invoke-static {v11, v5, v1, v6, v2}, Lkz1;->m(FILjava/util/EnumMap;Lub5;Lrhg;)Ljava/util/EnumMap;
-
-    move-result-object v1
-
-    const/high16 v3, 0x41c00000    # 24.0f
-
-    invoke-static {v3, v5, v1, v6, v2}, Lkz1;->p(FILjava/util/EnumMap;Lub5;Lrhg;)Ljava/util/EnumMap;
-
-    move-result-object v1
-
-    const/high16 v3, 0x41b00000    # 22.0f
-
-    invoke-static {v3, v5, v1, v4, v2}, Lkz1;->m(FILjava/util/EnumMap;Lub5;Lrhg;)Ljava/util/EnumMap;
-
-    move-result-object v1
-
-    move-object/from16 v12, v34
-
-    const/high16 v2, 0x41d00000    # 26.0f
-
-    invoke-static {v2, v5, v1, v4, v12}, Lkz1;->p(FILjava/util/EnumMap;Lub5;Lrhg;)Ljava/util/EnumMap;
-
-    move-result-object v1
-
-    const/high16 v2, 0x41200000    # 10.0f
-
-    invoke-static {v2, v5, v1, v7, v12}, Lkz1;->m(FILjava/util/EnumMap;Lub5;Lrhg;)Ljava/util/EnumMap;
-
-    move-result-object v1
-
-    invoke-static {v13, v5, v1, v7, v12}, Lkz1;->p(FILjava/util/EnumMap;Lub5;Lrhg;)Ljava/util/EnumMap;
-
-    move-result-object v1
-
-    invoke-static {v2, v5, v1, v15, v12}, Lkz1;->m(FILjava/util/EnumMap;Lub5;Lrhg;)Ljava/util/EnumMap;
-
-    move-result-object v1
-
-    invoke-static {v13, v5, v1, v15, v12}, Lkz1;->p(FILjava/util/EnumMap;Lub5;Lrhg;)Ljava/util/EnumMap;
-
-    move-result-object v1
-
-    invoke-static {v13, v5, v1, v9, v12}, Lkz1;->m(FILjava/util/EnumMap;Lub5;Lrhg;)Ljava/util/EnumMap;
-
-    move-result-object v1
-
-    const/high16 v11, 0x41800000    # 16.0f
-
-    invoke-static {v11, v5, v1, v9, v12}, Lkz1;->p(FILjava/util/EnumMap;Lub5;Lrhg;)Ljava/util/EnumMap;
-
-    move-result-object v1
-
-    const/high16 v10, 0x41600000    # 14.0f
-
-    invoke-static {v10, v5, v1, v14, v12}, Lkz1;->m(FILjava/util/EnumMap;Lub5;Lrhg;)Ljava/util/EnumMap;
-
-    move-result-object v1
-
-    invoke-static {v11, v5, v1, v14, v12}, Lkz1;->p(FILjava/util/EnumMap;Lub5;Lrhg;)Ljava/util/EnumMap;
-
-    move-result-object v1
-
-    invoke-static {v11, v5, v1, v6, v12}, Lkz1;->m(FILjava/util/EnumMap;Lub5;Lrhg;)Ljava/util/EnumMap;
-
-    move-result-object v1
-
-    const/high16 v3, 0x41a00000    # 20.0f
-
-    invoke-static {v3, v5, v1, v6, v12}, Lkz1;->p(FILjava/util/EnumMap;Lub5;Lrhg;)Ljava/util/EnumMap;
-
-    move-result-object v1
-
-    const/high16 v10, 0x41900000    # 18.0f
-
-    invoke-static {v10, v5, v1, v4, v12}, Lkz1;->m(FILjava/util/EnumMap;Lub5;Lrhg;)Ljava/util/EnumMap;
-
-    move-result-object v1
-
-    move-object/from16 v10, v27
-
-    invoke-static {v3, v5, v1, v4, v10}, Lkz1;->p(FILjava/util/EnumMap;Lub5;Lrhg;)Ljava/util/EnumMap;
-
-    move-result-object v1
-
-    const/high16 v2, 0x41700000    # 15.0f
-
-    invoke-static {v2, v5, v1, v7, v10}, Lkz1;->m(FILjava/util/EnumMap;Lub5;Lrhg;)Ljava/util/EnumMap;
-
-    move-result-object v1
-
-    invoke-static {v3, v5, v1, v7, v10}, Lkz1;->p(FILjava/util/EnumMap;Lub5;Lrhg;)Ljava/util/EnumMap;
-
-    move-result-object v1
-
-    invoke-static {v11, v5, v1, v15, v10}, Lkz1;->m(FILjava/util/EnumMap;Lub5;Lrhg;)Ljava/util/EnumMap;
-
-    move-result-object v1
-
-    invoke-static {v3, v5, v1, v15, v10}, Lkz1;->p(FILjava/util/EnumMap;Lub5;Lrhg;)Ljava/util/EnumMap;
-
-    move-result-object v1
-
-    invoke-static {v3, v5, v1, v9, v10}, Lkz1;->m(FILjava/util/EnumMap;Lub5;Lrhg;)Ljava/util/EnumMap;
-
-    move-result-object v1
-
-    const/high16 v8, 0x41c00000    # 24.0f
-
-    invoke-static {v8, v5, v1, v9, v10}, Lkz1;->p(FILjava/util/EnumMap;Lub5;Lrhg;)Ljava/util/EnumMap;
-
-    move-result-object v1
-
-    invoke-static {v8, v5, v1, v14, v10}, Lkz1;->m(FILjava/util/EnumMap;Lub5;Lrhg;)Ljava/util/EnumMap;
-
-    move-result-object v1
-
-    const/high16 v2, 0x41e00000    # 28.0f
-
-    invoke-static {v2, v5, v1, v14, v10}, Lkz1;->p(FILjava/util/EnumMap;Lub5;Lrhg;)Ljava/util/EnumMap;
-
-    move-result-object v1
-
-    invoke-static {v2, v5, v1, v6, v10}, Lkz1;->m(FILjava/util/EnumMap;Lub5;Lrhg;)Ljava/util/EnumMap;
-
-    move-result-object v1
-
-    const/high16 v12, 0x42000000    # 32.0f
-
-    invoke-static {v12, v5, v1, v6, v10}, Lkz1;->p(FILjava/util/EnumMap;Lub5;Lrhg;)Ljava/util/EnumMap;
-
-    move-result-object v1
-
-    invoke-static {v12, v5, v1, v4, v10}, Lkz1;->m(FILjava/util/EnumMap;Lub5;Lrhg;)Ljava/util/EnumMap;
-
-    move-result-object v1
-
-    const/high16 v11, 0x42100000    # 36.0f
-
-    invoke-static {v11, v5, v1, v4}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    move-object/from16 v1, v30
-
-    const/high16 v10, 0x41700000    # 15.0f
-
-    invoke-static {v10, v5, v1, v7}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    move-object/from16 v10, v37
-
-    invoke-static {v3, v5, v10, v7}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    const/high16 v13, 0x41800000    # 16.0f
-
-    invoke-static {v13, v5, v1, v15}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v3, v5, v10, v15}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v3, v5, v1, v9}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v8, v5, v10, v9}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v8, v5, v1, v14}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v2, v5, v10, v14}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v2, v5, v1, v6}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v12, v5, v10, v6}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v12, v5, v1, v4}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    const/high16 v11, 0x42100000    # 36.0f
-
-    invoke-static {v11, v5, v10, v4}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    move-object/from16 v1, v33
-
-    const/high16 v10, 0x41700000    # 15.0f
-
-    invoke-static {v10, v5, v1, v7}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v3, v5, v0, v7}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    const/high16 v13, 0x41800000    # 16.0f
-
-    invoke-static {v13, v5, v1, v15}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v3, v5, v0, v15}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v3, v5, v1, v9}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v8, v5, v0, v9}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v8, v5, v1, v14}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v2, v5, v0, v14}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v2, v5, v1, v6}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v12, v5, v0, v6}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v12, v5, v1, v4}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    const/high16 v11, 0x42100000    # 36.0f
-
-    invoke-static {v11, v5, v0, v4}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    move-object/from16 v0, v35
-
-    const/high16 v10, 0x41700000    # 15.0f
-
-    invoke-static {v10, v5, v0, v7}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    move-object/from16 v1, v16
-
-    invoke-static {v3, v5, v1, v7}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    const/high16 v13, 0x41800000    # 16.0f
-
-    invoke-static {v13, v5, v0, v15}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v3, v5, v1, v15}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v3, v5, v0, v9}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v8, v5, v1, v9}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v8, v5, v0, v14}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v2, v5, v1, v14}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v2, v5, v0, v6}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v12, v5, v1, v6}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v12, v5, v0, v4}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    const/high16 v11, 0x42100000    # 36.0f
-
-    invoke-static {v11, v5, v1, v4}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    move-object/from16 v0, v17
-
-    const/high16 v10, 0x41700000    # 15.0f
-
-    invoke-static {v10, v5, v0, v7}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    move-object/from16 v1, v18
-
-    invoke-static {v3, v5, v1, v7}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    const/high16 v13, 0x41800000    # 16.0f
-
-    invoke-static {v13, v5, v0, v15}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v3, v5, v1, v15}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v3, v5, v0, v9}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v8, v5, v1, v9}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v8, v5, v0, v14}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v2, v5, v1, v14}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v2, v5, v0, v6}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v12, v5, v1, v6}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v12, v5, v0, v4}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    const/high16 v11, 0x42100000    # 36.0f
-
-    invoke-static {v11, v5, v1, v4}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    move-object/from16 v0, v19
-
-    const/high16 v10, 0x41700000    # 15.0f
-
-    invoke-static {v10, v5, v0, v7}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    move-object/from16 v1, v20
-
-    invoke-static {v3, v5, v1, v7}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    const/high16 v13, 0x41800000    # 16.0f
-
-    invoke-static {v13, v5, v0, v15}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v3, v5, v1, v15}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v3, v5, v0, v9}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v8, v5, v1, v9}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v8, v5, v0, v14}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v2, v5, v1, v14}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v2, v5, v0, v6}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v12, v5, v1, v6}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v12, v5, v0, v4}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    const/high16 v11, 0x42100000    # 36.0f
-
-    invoke-static {v11, v5, v1, v4}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    move-object/from16 v0, v24
-
-    const/high16 v10, 0x41700000    # 15.0f
-
-    invoke-static {v10, v5, v0, v7}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    move-object/from16 v1, v25
-
-    invoke-static {v3, v5, v1, v7}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    const/high16 v13, 0x41800000    # 16.0f
-
-    invoke-static {v13, v5, v0, v15}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v3, v5, v1, v15}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v3, v5, v0, v9}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v8, v5, v1, v9}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v8, v5, v0, v14}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v2, v5, v1, v14}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v2, v5, v0, v6}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v12, v5, v1, v6}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v12, v5, v0, v4}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    const/high16 v11, 0x42100000    # 36.0f
-
-    invoke-static {v11, v5, v1, v4}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    move-object/from16 v0, v32
-
-    const/high16 v10, 0x41700000    # 15.0f
-
-    invoke-static {v10, v5, v0, v7}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    move-object/from16 v1, v23
-
-    invoke-static {v3, v5, v1, v7}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    const/high16 v13, 0x41800000    # 16.0f
-
-    invoke-static {v13, v5, v0, v15}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v3, v5, v1, v15}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v3, v5, v0, v9}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v8, v5, v1, v9}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v8, v5, v0, v14}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v2, v5, v1, v14}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v2, v5, v0, v6}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v12, v5, v1, v6}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    invoke-static {v12, v5, v0, v4}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
-
-    const/high16 v11, 0x42100000    # 36.0f
-
-    invoke-static {v11, v5, v1, v4}, Lkz1;->n(FILjava/util/EnumMap;Lub5;)V
+    :cond_6
+    invoke-static {v1, p1}, Lqpg;->d(Landroid/widget/TextView;Lskh;)V
 
     return-void
 .end method

@@ -1,51 +1,40 @@
 .class public final Lza8;
-.super Lo84;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lxo;
 
 
 # instance fields
-.field public final synthetic X:Lab8;
-
-.field public Y:I
-
-.field public d:Lqa8;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic a:Lxo;
 
 
 # direct methods
-.method public constructor <init>(Lab8;Lo84;)V
+.method public constructor <init>(Lap;Lcb8;Lzo;)V
     .locals 0
 
-    iput-object p1, p0, Lza8;->X:Lab8;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p3, p0, Lza8;->a:Lxo;
+
+    new-instance p3, Lso6;
+
+    invoke-direct {p3, p1, p0, p2}, Lso6;-><init>(Lap;Lza8;Lcb8;)V
+
+    invoke-virtual {p2, p3}, Lcb8;->a(Lxa8;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final i0(Lap;I)V
     .locals 1
 
-    iput-object p1, p0, Lza8;->o:Ljava/lang/Object;
+    iget-object v0, p0, Lza8;->a:Lxo;
 
-    iget p1, p0, Lza8;->Y:I
+    invoke-interface {v0, p1, p2}, Lxo;->i0(Lap;I)V
 
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lza8;->Y:I
-
-    iget-object p1, p0, Lza8;->X:Lab8;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lab8;->b(Lqa8;Lo84;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

@@ -1,118 +1,144 @@
 .class public final Lxda;
-.super Ljava/lang/Object;
+.super Lpdg;
 .source "SourceFile"
 
 # interfaces
-.implements Lvda;
+.implements Lys6;
 
 
 # instance fields
-.field public final synthetic a:Lrda;
+.field public final synthetic X:Lyda;
+
+.field public final synthetic Y:Lwr9;
+
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Lrda;)V
+.method public constructor <init>(Lyda;Lwr9;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lxda;->X:Lyda;
 
-    iput-object p1, p0, Lxda;->a:Lrda;
+    iput-object p2, p0, Lxda;->Y:Lwr9;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(JLe49;)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    return-void
+    check-cast p1, Lnd4;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lxda;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lxda;
+
+    sget-object p2, Lmah;->a:Lmah;
+
+    invoke-virtual {p1, p2}, Lxda;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public final b(JLe49;)V
-    .locals 0
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iget-object p1, p0, Lxda;->a:Lrda;
+    new-instance p1, Lxda;
 
-    invoke-interface {p1}, Lrda;->n()V
+    iget-object v0, p0, Lxda;->X:Lyda;
 
-    return-void
+    iget-object v1, p0, Lxda;->Y:Lwr9;
+
+    invoke-direct {p1, v0, v1, p2}, Lxda;-><init>(Lyda;Lwr9;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
 .end method
 
-.method public final c(JLe49;JLe49;)V
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 9
 
-    iget-object p1, p0, Lxda;->a:Lrda;
+    iget v0, p0, Lxda;->o:I
 
-    invoke-interface {p1}, Lrda;->z()V
+    const/4 v1, 0x1
 
-    return-void
-.end method
+    if-eqz v0, :cond_1
 
-.method public final d(JLe49;)V
-    .locals 0
+    if-ne v0, v1, :cond_0
 
-    return-void
-.end method
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-.method public final e(JLe49;J)V
-    .locals 0
+    goto :goto_1
 
-    iget-object p1, p0, Lxda;->a:Lrda;
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    invoke-interface {p1}, Lrda;->e()V
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    return-void
-.end method
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-.method public final f(JLe49;)V
-    .locals 0
+    throw p1
 
-    iget-object p3, p0, Lxda;->a:Lrda;
+    :cond_1
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    invoke-interface {p3, p1, p2}, Lrda;->q(J)V
+    iget-object p1, p0, Lxda;->X:Lyda;
 
-    return-void
-.end method
+    iget-object v0, p1, Lko;->c:Llo;
 
-.method public final g(JLe49;)V
-    .locals 0
+    if-eqz v0, :cond_2
 
-    return-void
-.end method
+    goto :goto_0
 
-.method public final h(JLe49;)V
-    .locals 0
+    :cond_2
+    const/4 v0, 0x0
 
-    iget-object p1, p0, Lxda;->a:Lrda;
+    :goto_0
+    iget-object v0, v0, Llo;->I:Lj88;
 
-    invoke-interface {p1}, Lrda;->F()V
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
 
-    return-void
-.end method
+    move-result-object v0
 
-.method public final i(JLe49;)V
-    .locals 0
+    move-object v2, v0
 
-    iget-object p1, p0, Lxda;->a:Lrda;
+    check-cast v2, Lgs9;
 
-    invoke-interface {p1}, Lrda;->i()V
+    iget-wide v3, p1, Lyda;->f:J
 
-    return-void
-.end method
+    iget-wide v5, p1, Lyda;->g:J
 
-.method public final j(JLe49;)V
-    .locals 0
+    iput v1, p0, Lxda;->o:I
 
-    return-void
-.end method
+    iget-object v7, p0, Lxda;->Y:Lwr9;
 
-.method public final l()V
-    .locals 1
+    move-object v8, p0
 
-    iget-object v0, p0, Lxda;->a:Lrda;
+    invoke-virtual/range {v2 .. v8}, Lgs9;->c(JJLwr9;Lda4;)Ljava/lang/Object;
 
-    invoke-interface {v0}, Lrda;->l()V
+    move-result-object p1
 
-    return-void
+    sget-object v0, Lod4;->a:Lod4;
+
+    if-ne p1, v0, :cond_3
+
+    return-object v0
+
+    :cond_3
+    :goto_1
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
 .end method

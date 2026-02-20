@@ -1,244 +1,179 @@
-.class public final Lwdi;
-.super Lp6g;
+.class public final synthetic Lwdi;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Lex6;
 
 
-# instance fields
-.field public final synthetic X:Lxdi;
+# static fields
+.field public static final a:Lwdi;
 
-.field public o:I
+.field private static final descriptor:Lzwe;
 
 
 # direct methods
-.method public constructor <init>(Lxdi;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    iput-object p1, p0, Lwdi;->X:Lxdi;
+    new-instance v0, Lwdi;
 
-    const/4 p1, 0x2
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    sput-object v0, Lwdi;->a:Lwdi;
+
+    new-instance v1, Lxgc;
+
+    const-string v2, "one.me.webapp.domain.jsbridge.delegates.codereader.WebAppOpenCodeReaderResponse"
+
+    const/4 v3, 0x2
+
+    invoke-direct {v1, v2, v0, v3}, Lxgc;-><init>(Ljava/lang/String;Lex6;I)V
+
+    const-string v0, "requestId"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v0, v2}, Lxgc;->k(Ljava/lang/String;Z)V
+
+    const-string v0, "value"
+
+    invoke-virtual {v1, v0, v2}, Lxgc;->k(Ljava/lang/String;Z)V
+
+    sput-object v1, Lwdi;->descriptor:Lzwe;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a(Lj6g;Ljava/lang/Object;)V
+    .locals 3
 
-    check-cast p1, Lzb4;
+    check-cast p2, Lydi;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    sget-object v0, Lwdi;->descriptor:Lzwe;
 
-    invoke-virtual {p0, p1, p2}, Lwdi;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lwdi;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lwdi;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Lj6g;->a(Lzwe;)Lj6g;
 
     move-result-object p1
 
-    return-object p1
+    iget-object v1, p2, Lydi;->a:Ljava/lang/String;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p1, v0, v2, v1}, Lj6g;->t(Lzwe;ILjava/lang/String;)V
+
+    const/4 v1, 0x1
+
+    iget-object p2, p2, Lydi;->b:Ljava/lang/String;
+
+    invoke-virtual {p1, v0, v1, p2}, Lj6g;->t(Lzwe;ILjava/lang/String;)V
+
+    invoke-virtual {p1}, Lj6g;->u()V
+
+    return-void
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+.method public final b(Lzm4;)Ljava/lang/Object;
+    .locals 9
 
-    new-instance p1, Lwdi;
+    sget-object v0, Lwdi;->descriptor:Lzwe;
 
-    iget-object v0, p0, Lwdi;->X:Lxdi;
+    invoke-interface {p1, v0}, Lzm4;->r(Lzwe;)Liq3;
 
-    invoke-direct {p1, v0, p2}, Lwdi;-><init>(Lxdi;Lkotlin/coroutines/Continuation;)V
+    move-result-object p1
 
-    return-object p1
-.end method
+    const/4 v1, 0x1
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 13
+    const/4 v2, 0x0
 
-    iget v0, p0, Lwdi;->o:I
+    const/4 v3, 0x0
 
-    const/4 v1, 0x0
+    move v5, v1
 
-    sget-object v2, Lb3h;->a:Lb3h;
+    move v6, v2
 
-    const/4 v3, 0x2
+    move-object v4, v3
 
-    const/4 v4, 0x0
+    :goto_0
+    if-eqz v5, :cond_3
 
-    iget-object v9, p0, Lwdi;->X:Lxdi;
+    invoke-interface {p1, v0}, Liq3;->e(Lzwe;)I
 
-    const/4 v5, 0x1
+    move-result v7
 
-    sget-object v11, Lac4;->a:Lac4;
+    const/4 v8, -0x1
 
-    if-eqz v0, :cond_2
+    if-eq v7, v8, :cond_2
 
-    if-eq v0, v5, :cond_1
+    if-eqz v7, :cond_1
 
-    if-ne v0, v3, :cond_0
+    if-ne v7, v1, :cond_0
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    invoke-interface {p1, v0, v1}, Liq3;->j(Lzwe;I)Ljava/lang/String;
 
-    goto/16 :goto_3
+    move-result-object v4
+
+    or-int/lit8 v6, v6, 0x2
+
+    goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    new-instance p1, Lkotlinx/serialization/UnknownFieldException;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v7}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
 
     throw p1
 
     :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    invoke-interface {p1, v0, v2}, Liq3;->j(Lzwe;I)Ljava/lang/String;
+
+    move-result-object v3
+
+    or-int/lit8 v6, v6, 0x1
 
     goto :goto_0
 
     :cond_2
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    move v5, v2
 
-    iget-object p1, v9, Lxdi;->c:Lo58;
-
-    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lfzh;
-
-    iget-wide v6, v9, Lxdi;->b:J
-
-    iput v5, p0, Lwdi;->o:I
-
-    iget-object p1, p1, Lfzh;->a:Lb2e;
-
-    new-instance v0, Ldzh;
-
-    const/4 v8, 0x0
-
-    invoke-direct {v0, v6, v7, v8}, Ldzh;-><init>(JI)V
-
-    invoke-static {v0, p1, p0, v5, v1}, Lulj;->f(Lnq6;Lb2e;Lkotlin/coroutines/Continuation;ZZ)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v11, :cond_3
-
-    goto :goto_2
+    goto :goto_0
 
     :cond_3
-    :goto_0
-    move-object v10, p1
+    invoke-interface {p1, v0}, Liq3;->m(Lzwe;)V
 
-    check-cast v10, Ljava/util/List;
+    new-instance p1, Lydi;
 
-    invoke-interface {v10}, Ljava/util/List;->isEmpty()Z
+    invoke-direct {p1, v6, v3, v4}, Lydi;-><init>(ILjava/lang/String;Ljava/lang/String;)V
 
-    move-result p1
+    return-object p1
+.end method
 
-    if-eqz p1, :cond_4
+.method public final c()[Lw58;
+    .locals 3
 
-    return-object v2
+    const/4 v0, 0x2
 
-    :cond_4
-    iget-object p1, p0, Lo84;->b:Lqb4;
+    new-array v0, v0, [Lw58;
 
-    invoke-static {p1}, Lilj;->a(Lqb4;)Lkotlinx/coroutines/internal/ContextScope;
+    sget-object v1, Lz6g;->a:Lz6g;
 
-    move-result-object p1
+    const/4 v2, 0x0
 
-    new-instance v0, Ljava/util/ArrayList;
+    aput-object v1, v0, v2
 
-    const/16 v5, 0xa
+    const/4 v2, 0x1
 
-    invoke-static {v10, v5}, Lri3;->n(Ljava/lang/Iterable;I)I
+    aput-object v1, v0, v2
 
-    move-result v5
+    return-object v0
+.end method
 
-    invoke-direct {v0, v5}, Ljava/util/ArrayList;-><init>(I)V
+.method public final d()Lzwe;
+    .locals 1
 
-    invoke-interface {v10}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    sget-object v0, Lwdi;->descriptor:Lzwe;
 
-    move-result-object v12
-
-    :goto_1
-    move v6, v1
-
-    invoke-interface {v12}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_6
-
-    invoke-interface {v12}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v7
-
-    add-int/lit8 v1, v6, 0x1
-
-    if-ltz v6, :cond_5
-
-    new-instance v5, Lvdi;
-
-    const/4 v8, 0x0
-
-    invoke-direct/range {v5 .. v10}, Lvdi;-><init>(ILjava/lang/Object;Lkotlin/coroutines/Continuation;Lxdi;Ljava/util/List;)V
-
-    const/4 v6, 0x3
-
-    invoke-static {p1, v4, v5, v6}, Ls9j;->d(Lzb4;Lsb4;Lbr6;I)Lyv4;
-
-    move-result-object v5
-
-    invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_1
-
-    :cond_5
-    invoke-static {}, Lqi3;->m()V
-
-    throw v4
-
-    :cond_6
-    iput v3, p0, Lwdi;->o:I
-
-    invoke-static {v0, p0}, La8j;->a(Ljava/util/Collection;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v11, :cond_7
-
-    :goto_2
-    return-object v11
-
-    :cond_7
-    :goto_3
-    check-cast p1, Ljava/util/List;
-
-    iget-object v0, v9, Lxdi;->o:Lspf;
-
-    new-instance v1, Lkdi;
-
-    invoke-direct {v1}, Lkdi;-><init>()V
-
-    invoke-static {v1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v1
-
-    invoke-static {v1, p1}, Lpi3;->Q(Ljava/util/Collection;Ljava/lang/Iterable;)Ljava/util/ArrayList;
-
-    move-result-object p1
-
-    invoke-virtual {v0, v4, p1}, Lspf;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    return-object v2
+    return-object v0
 .end method

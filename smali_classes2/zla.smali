@@ -1,199 +1,167 @@
-.class public final Lzla;
-.super Lp6g;
+.class public abstract synthetic Lzla;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lbr6;
 
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
-# instance fields
-.field public final synthetic X:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public static final synthetic $EnumSwitchMapping$1:[I
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/login/neuroavatars/NeuroAvatarsScreen;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
-    iput-object p2, p0, Lzla;->X:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
+    invoke-static {}, Lorg/webrtc/SessionDescription$Type;->values()[Lorg/webrtc/SessionDescription$Type;
 
-    const/4 p2, 0x2
+    move-result-object v0
 
-    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    array-length v0, v0
 
-    return-void
-.end method
+    new-array v0, v0, [I
 
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lzla;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lzla;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lzla;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lzla;
-
-    iget-object v1, p0, Lzla;->X:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
-
-    invoke-direct {v0, p2, v1}, Lzla;-><init>(Lkotlin/coroutines/Continuation;Lone/me/login/neuroavatars/NeuroAvatarsScreen;)V
-
-    iput-object p1, v0, Lzla;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
-
-    iget-object v0, p0, Lzla;->o:Ljava/lang/Object;
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    check-cast v0, Lwd0;
-
-    sget-object p1, Ltd0;->a:Ltd0;
-
-    invoke-static {v0, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    iget-object p1, p0, Lzla;->X:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
-
-    sget-object v0, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->L0:[Lz28;
-
-    iget-object p1, p1, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->y0:Lo58;
-
-    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lyzb;
-
-    iget-object v0, p0, Lzla;->X:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
-
-    new-instance v1, Ljgi;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v1, v0, v2}, Ljgi;-><init>(Lone/me/sdk/arch/Widget;I)V
-
-    invoke-virtual {p1, v1}, Lyzb;->k(Ljgi;)V
-
-    goto :goto_0
-
-    :cond_0
-    instance-of p1, v0, Lud0;
-
-    if-eqz p1, :cond_2
+    const/4 v1, 0x1
 
     :try_start_0
-    iget-object p1, p0, Lzla;->X:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
+    sget-object v2, Lorg/webrtc/SessionDescription$Type;->OFFER:Lorg/webrtc/SessionDescription$Type;
 
-    check-cast v0, Lud0;
+    invoke-virtual {v2}, Ljava/lang/Enum;->ordinal()I
 
-    iget-object v0, v0, Lud0;->a:Landroid/content/Intent;
+    move-result v2
 
-    const/16 v1, 0x22b
-
-    invoke-virtual {p1, v0, v1}, La94;->startActivityForResult(Landroid/content/Intent;I)V
-
-    iget-object p1, p0, Lzla;->X:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
-
-    iget-object p1, p1, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->z0:Lo58;
-
-    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Llja;
-
-    sget-object v0, Llce;->F0:Llce;
-
-    invoke-static {p1, v0}, Llja;->g(Llja;Llce;)V
+    aput v1, v0, v2
     :try_end_0
-    .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
     :catch_0
-    const-class p1, Lone/me/login/neuroavatars/NeuroAvatarsScreen;
+    const/4 v2, 0x2
 
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    :try_start_1
+    sget-object v3, Lorg/webrtc/SessionDescription$Type;->PRANSWER:Lorg/webrtc/SessionDescription$Type;
 
-    move-result-object v2
+    invoke-virtual {v3}, Ljava/lang/Enum;->ordinal()I
 
-    sget-object v0, Lc5j;->a:Ledb;
+    move-result v3
 
-    if-eqz v0, :cond_1
+    aput v2, v0, v3
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    sget-object v1, Lkk8;->Y:Lkk8;
+    :catch_1
+    const/4 v3, 0x3
+
+    :try_start_2
+    sget-object v4, Lorg/webrtc/SessionDescription$Type;->ANSWER:Lorg/webrtc/SessionDescription$Type;
+
+    invoke-virtual {v4}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v4
+
+    aput v3, v0, v4
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
+    const/4 v4, 0x4
+
+    :try_start_3
+    sget-object v5, Lorg/webrtc/SessionDescription$Type;->ROLLBACK:Lorg/webrtc/SessionDescription$Type;
+
+    invoke-virtual {v5}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v5
+
+    aput v4, v0, v5
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+
+    :catch_3
+    sput-object v0, Lzla;->$EnumSwitchMapping$0:[I
+
+    invoke-static {}, Lama;->values()[Lama;
+
+    move-result-object v0
+
+    array-length v0, v0
+
+    new-array v0, v0, [I
 
     const/4 v5, 0x0
 
-    const/16 v6, 0x8
+    :try_start_4
+    aput v1, v0, v5
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
 
-    const-string v3, "failed open camera"
+    :catch_4
+    :try_start_5
+    aput v2, v0, v2
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
 
-    const/4 v4, 0x0
+    :catch_5
+    :try_start_6
+    aput v3, v0, v3
+    :try_end_6
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
 
-    invoke-static/range {v0 .. v6}, Ledb;->f(Ledb;Lkk8;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/Throwable;I)V
+    :catch_6
+    :try_start_7
+    aput v4, v0, v1
+    :try_end_7
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
 
-    :cond_1
-    iget-object p1, p0, Lzla;->X:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
+    :catch_7
+    const/4 v1, 0x5
 
-    invoke-virtual {p1}, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->D0()Lqma;
+    :try_start_8
+    aput v1, v0, v4
+    :try_end_8
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_8
 
-    move-result-object p1
+    :catch_8
+    const/4 v2, 0x6
 
-    iget-object p1, p1, Lqma;->b:Lzka;
+    :try_start_9
+    aput v2, v0, v1
+    :try_end_9
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_9 .. :try_end_9} :catch_9
 
-    invoke-virtual {p1}, Lzka;->b()V
+    :catch_9
+    const/4 v1, 0x7
 
-    goto :goto_0
+    :try_start_a
+    aput v1, v0, v2
+    :try_end_a
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_a .. :try_end_a} :catch_a
 
-    :cond_2
-    instance-of p1, v0, Lvd0;
+    :catch_a
+    const/16 v2, 0x8
 
-    if-eqz p1, :cond_3
+    :try_start_b
+    aput v2, v0, v1
+    :try_end_b
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_b .. :try_end_b} :catch_b
 
-    sget-object p1, Lu69;->c:Lu69;
+    :catch_b
+    const/16 v1, 0x9
 
-    check-cast v0, Lvd0;
+    :try_start_c
+    aput v1, v0, v2
+    :try_end_c
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_c .. :try_end_c} :catch_c
 
-    iget-object v1, v0, Lvd0;->a:Ljava/lang/String;
+    :catch_c
+    const/16 v2, 0xa
 
-    iget-object v0, v0, Lvd0;->b:Ljava/lang/String;
+    :try_start_d
+    aput v2, v0, v1
+    :try_end_d
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_d .. :try_end_d} :catch_d
 
-    invoke-virtual {p1, v1, v0}, Lu69;->L0(Ljava/lang/String;Ljava/lang/String;)V
+    :catch_d
+    sput-object v0, Lzla;->$EnumSwitchMapping$1:[I
 
-    :goto_0
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
-
-    :cond_3
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
+    return-void
 .end method

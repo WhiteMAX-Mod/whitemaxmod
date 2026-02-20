@@ -1,72 +1,118 @@
 .class public final Lwy9;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Lbyd;
 
 
 # instance fields
-.field public final synthetic o:Lsz9;
+.field public final a:Landroidx/recyclerview/widget/RecyclerView;
+
+.field public final b:Lk2a;
+
+.field public final c:Lj88;
+
+.field public d:Z
 
 
 # direct methods
-.method public constructor <init>(Lsz9;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Lone/me/sdk/lists/widgets/EndlessRecyclerView2;Lk2a;)V
+    .locals 2
 
-    iput-object p1, p0, Lwy9;->o:Lsz9;
+    sget-object v0, Lpw9;->a:Lj88;
 
-    const/4 p1, 0x2
+    sget-object v0, Lqw9;->a:Lqw9;
 
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v0
+
+    const/16 v1, 0xa
+
+    invoke-virtual {v0, v1}, Lr5;->d(I)Lbgg;
+
+    move-result-object v0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lwy9;->a:Landroidx/recyclerview/widget/RecyclerView;
+
+    iput-object p2, p0, Lwy9;->b:Lk2a;
+
+    iput-object v0, p0, Lwy9;->c:Lj88;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final b(Landroid/view/View;)V
     .locals 0
 
-    check-cast p1, Lzb4;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lwy9;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lwy9;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lwy9;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
+    return-void
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+.method public final e(Landroid/view/View;)V
+    .locals 3
 
-    new-instance p1, Lwy9;
+    iget-object v0, p0, Lwy9;->a:Landroidx/recyclerview/widget/RecyclerView;
 
-    iget-object v0, p0, Lwy9;->o:Lsz9;
+    invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/RecyclerView;->I(Landroid/view/View;)Landroid/view/View;
 
-    invoke-direct {p1, v0, p2}, Lwy9;-><init>(Lsz9;Lkotlin/coroutines/Continuation;)V
+    move-result-object v1
 
-    return-object p1
-.end method
+    if-nez v1, :cond_0
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    const/4 v0, 0x0
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    goto :goto_0
 
-    iget-object p1, p0, Lwy9;->o:Lsz9;
+    :cond_0
+    invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->U(Landroid/view/View;)Lpyd;
 
-    invoke-static {p1}, Lsz9;->y(Lsz9;)V
+    move-result-object v0
 
-    sget-object p1, Lb3h;->a:Lb3h;
+    :goto_0
+    instance-of v1, v0, Lht9;
 
-    return-object p1
+    if-nez v1, :cond_2
+
+    instance-of v0, v0, Ljj2;
+
+    if-eqz v0, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    return-void
+
+    :cond_2
+    :goto_1
+    new-instance v0, Lni6;
+
+    const/16 v1, 0x17
+
+    invoke-direct {v0, v1, p0}, Lni6;-><init>(ILjava/lang/Object;)V
+
+    new-instance v1, Lf95;
+
+    invoke-direct {v1, p1, v0}, Lf95;-><init>(Landroid/view/View;Lks6;)V
+
+    invoke-virtual {p1}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/ViewTreeObserver;->isAlive()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    invoke-virtual {v0, v1}, Landroid/view/ViewTreeObserver;->addOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
+
+    :cond_3
+    invoke-virtual {p1, v1}, Landroid/view/View;->addOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+
+    return-void
 .end method

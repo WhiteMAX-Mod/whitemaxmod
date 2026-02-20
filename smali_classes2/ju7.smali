@@ -1,103 +1,73 @@
-.class public abstract Lju7;
-.super Ljava/lang/Object;
+.class public final enum Lju7;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
+# static fields
+.field public static final enum a:Lju7;
+
+.field public static final enum b:Lju7;
+
+.field public static final synthetic c:[Lju7;
+
+
 # direct methods
-.method public static a([B)Lku7;
-    .locals 30
+.method static constructor <clinit>()V
+    .locals 4
 
-    new-instance v0, Lru/ok/tamtam/nano/Tasks$InvalidateAndDownloadAudio;
+    new-instance v0, Lju7;
 
-    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$InvalidateAndDownloadAudio;-><init>()V
+    const-string v1, "AUTH"
 
-    move-object/from16 v1, p0
+    const/4 v2, 0x0
 
-    :try_start_0
-    invoke-static {v0, v1}, Lbp9;->mergeFrom(Lbp9;[B)Lbp9;
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lju7;->a:Lju7;
+
+    new-instance v1, Lju7;
+
+    const-string v2, "SETTINGS"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lju7;->b:Lju7;
+
+    filled-new-array {v0, v1}, [Lju7;
 
     move-result-object v0
 
-    check-cast v0, Lru/ok/tamtam/nano/Tasks$InvalidateAndDownloadAudio;
-    :try_end_0
-    .catch Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException; {:try_start_0 .. :try_end_0} :catch_0
+    sput-object v0, Lju7;->c:[Lju7;
 
-    iget-object v1, v0, Lru/ok/tamtam/nano/Tasks$InvalidateAndDownloadAudio;->fileDownload:Lru/ok/tamtam/nano/Tasks$FileDownload;
+    return-void
+.end method
 
-    iget-wide v3, v1, Lru/ok/tamtam/nano/Tasks$FileDownload;->messageId:J
+.method public static valueOf(Ljava/lang/String;)Lju7;
+    .locals 1
 
-    iget-object v5, v1, Lru/ok/tamtam/nano/Tasks$FileDownload;->attachId:Ljava/lang/String;
+    const-class v0, Lju7;
 
-    iget-wide v6, v1, Lru/ok/tamtam/nano/Tasks$FileDownload;->videoId:J
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    iget-wide v8, v1, Lru/ok/tamtam/nano/Tasks$FileDownload;->audioId:J
+    move-result-object p0
 
-    iget-wide v10, v1, Lru/ok/tamtam/nano/Tasks$FileDownload;->mp4GifId:J
+    check-cast p0, Lju7;
 
-    iget-wide v12, v1, Lru/ok/tamtam/nano/Tasks$FileDownload;->stickerId:J
+    return-object p0
+.end method
 
-    iget-wide v14, v1, Lru/ok/tamtam/nano/Tasks$FileDownload;->fileId:J
+.method public static values()[Lju7;
+    .locals 1
 
-    iget-object v2, v1, Lru/ok/tamtam/nano/Tasks$FileDownload;->fileName:Ljava/lang/String;
+    sget-object v0, Lju7;->c:[Lju7;
 
-    move-wide/from16 v17, v14
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    iget-object v14, v1, Lru/ok/tamtam/nano/Tasks$FileDownload;->url:Ljava/lang/String;
+    move-result-object v0
 
-    iget-boolean v15, v1, Lru/ok/tamtam/nano/Tasks$FileDownload;->notifyProgress:Z
+    check-cast v0, [Lju7;
 
-    move-object/from16 v19, v2
-
-    iget-boolean v2, v1, Lru/ok/tamtam/nano/Tasks$FileDownload;->checkAutoloadConnection:Z
-
-    move/from16 v16, v2
-
-    iget v2, v1, Lru/ok/tamtam/nano/Tasks$FileDownload;->invalidateCount:I
-
-    move/from16 v20, v2
-
-    iget-boolean v2, v1, Lru/ok/tamtam/nano/Tasks$FileDownload;->useOriginalExtension:Z
-
-    iget-boolean v1, v1, Lru/ok/tamtam/nano/Tasks$FileDownload;->notCopyVideoToGallery:Z
-
-    new-instance v29, Lheg;
-
-    move/from16 v22, v1
-
-    move/from16 v21, v2
-
-    move-object/from16 v2, v29
-
-    invoke-direct/range {v2 .. v22}, Lheg;-><init>(JLjava/lang/String;JJJJLjava/lang/String;ZZJLjava/lang/String;IZZ)V
-
-    new-instance v21, Lku7;
-
-    iget-wide v3, v0, Lru/ok/tamtam/nano/Tasks$InvalidateAndDownloadAudio;->requestId:J
-
-    iget-object v1, v0, Lru/ok/tamtam/nano/Tasks$InvalidateAndDownloadAudio;->outputPath:Ljava/lang/String;
-
-    iget-wide v5, v0, Lru/ok/tamtam/nano/Tasks$InvalidateAndDownloadAudio;->chatServerId:J
-
-    iget-wide v7, v0, Lru/ok/tamtam/nano/Tasks$InvalidateAndDownloadAudio;->serverMessageId:J
-
-    move-object/from16 v24, v1
-
-    move-wide/from16 v22, v3
-
-    move-wide/from16 v25, v5
-
-    move-wide/from16 v27, v7
-
-    invoke-direct/range {v21 .. v29}, Lku7;-><init>(JLjava/lang/String;JJLheg;)V
-
-    return-object v21
-
-    :catch_0
-    move-exception v0
-
-    new-instance v1, Lru/ok/tamtam/nano/ProtoException;
-
-    invoke-direct {v1, v0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v1
+    return-object v0
 .end method

@@ -3,296 +3,204 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lc7a;
 
 
 # static fields
-.field public static final Z:Ljava/lang/Object;
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lypf;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public X:I
+.field public final a:F
 
-.field public Y:Z
-
-.field public final a:Ljava/util/concurrent/Executor;
-
-.field public final b:Lcxa;
-
-.field public final c:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-.field public final d:Ljava/util/concurrent/atomic/AtomicReference;
-
-.field public o:Ljava/lang/Object;
+.field public final b:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 2
 
-    new-instance v0, Ljava/lang/Object;
+    new-instance v0, Ll7f;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/16 v1, 0xa
 
-    sput-object v0, Lypf;->Z:Ljava/lang/Object;
+    invoke-direct {v0, v1}, Ll7f;-><init>(I)V
+
+    sput-object v0, Lypf;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/util/concurrent/atomic/AtomicReference;Ljava/util/concurrent/Executor;Lcxa;)V
-    .locals 2
+.method public constructor <init>(IF)V
+    .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
+    .line 2
+    iput p2, p0, Lypf;->a:F
 
-    const/4 v1, 0x1
+    .line 3
+    iput p1, p0, Lypf;->b:I
 
-    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
+    return-void
+.end method
 
-    iput-object v0, p0, Lypf;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
+.method public constructor <init>(Landroid/os/Parcel;)V
+    .locals 1
 
-    sget-object v0, Lypf;->Z:Ljava/lang/Object;
+    .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object v0, p0, Lypf;->o:Ljava/lang/Object;
+    .line 5
+    invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
 
-    const/4 v0, -0x1
+    move-result v0
 
-    iput v0, p0, Lypf;->X:I
+    iput v0, p0, Lypf;->a:F
 
-    const/4 v0, 0x0
+    .line 6
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
-    iput-boolean v0, p0, Lypf;->Y:Z
+    move-result p1
 
-    iput-object p1, p0, Lypf;->d:Ljava/util/concurrent/atomic/AtomicReference;
-
-    iput-object p2, p0, Lypf;->a:Ljava/util/concurrent/Executor;
-
-    iput-object p3, p0, Lypf;->b:Lcxa;
+    iput p1, p0, Lypf;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(I)V
+.method public final describeContents()I
     .locals 1
 
-    monitor-enter p0
+    const/4 v0, 0x0
 
-    :try_start_0
-    iget-object v0, p0, Lypf;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
+    return v0
+.end method
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    move-result v0
+    const/4 v0, 0x1
 
-    if-nez v0, :cond_0
+    if-ne p0, p1, :cond_0
 
-    monitor-exit p0
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    iget v0, p0, Lypf;->X:I
-
-    if-gt p1, v0, :cond_1
-
-    monitor-exit p0
-
-    return-void
-
-    :cond_1
-    iput p1, p0, Lypf;->X:I
-
-    iget-boolean p1, p0, Lypf;->Y:Z
+    const/4 v1, 0x0
 
     if-eqz p1, :cond_2
 
-    monitor-exit p0
+    const-class v2, Lypf;
 
-    return-void
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    :cond_2
-    const/4 p1, 0x1
+    move-result-object v3
 
-    iput-boolean p1, p0, Lypf;->Y:Z
-
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :try_start_1
-    iget-object p1, p0, Lypf;->a:Ljava/util/concurrent/Executor;
-
-    invoke-interface {p1, p0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    return-void
-
-    :catchall_1
-    monitor-enter p0
-
-    const/4 p1, 0x0
-
-    :try_start_2
-    iput-boolean p1, p0, Lypf;->Y:Z
-
-    monitor-exit p0
-
-    return-void
-
-    :catchall_2
-    move-exception p1
-
-    monitor-exit p0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_2
-
-    throw p1
-
-    :goto_0
-    :try_start_3
-    monitor-exit p0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    throw p1
-.end method
-
-.method public final run()V
-    .locals 4
-
-    monitor-enter p0
-
-    :try_start_0
-    iget-object v0, p0, Lypf;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_0
-
-    iput-boolean v1, p0, Lypf;->Y:Z
-
-    monitor-exit p0
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_4
-
-    :cond_0
-    iget-object v0, p0, Lypf;->d:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    iget v2, p0, Lypf;->X:I
-
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :goto_0
-    iget-object v3, p0, Lypf;->o:Ljava/lang/Object;
-
-    invoke-static {v3, v0}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_2
-
-    iput-object v0, p0, Lypf;->o:Ljava/lang/Object;
-
-    instance-of v3, v0, Loc0;
-
-    if-eqz v3, :cond_1
-
-    iget-object v3, p0, Lypf;->b:Lcxa;
-
-    check-cast v0, Loc0;
-
-    iget-object v0, v0, Loc0;->a:Ljava/lang/Throwable;
-
-    invoke-interface {v3, v0}, Lcxa;->onError(Ljava/lang/Throwable;)V
-
-    goto :goto_1
-
-    :cond_1
-    iget-object v3, p0, Lypf;->b:Lcxa;
-
-    invoke-interface {v3, v0}, Lcxa;->a(Ljava/lang/Object;)V
-
-    :cond_2
-    :goto_1
-    monitor-enter p0
-
-    :try_start_1
-    iget v0, p0, Lypf;->X:I
-
-    if-eq v2, v0, :cond_4
-
-    iget-object v0, p0, Lypf;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    goto :goto_2
-
-    :cond_3
-    iget-object v0, p0, Lypf;->d:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    iget v2, p0, Lypf;->X:I
-
-    monitor-exit p0
+    if-eq v2, v3, :cond_1
 
     goto :goto_0
 
-    :catchall_1
-    move-exception v0
+    :cond_1
+    check-cast p1, Lypf;
 
-    goto :goto_3
+    iget v2, p0, Lypf;->a:F
 
-    :cond_4
-    :goto_2
-    iput-boolean v1, p0, Lypf;->Y:Z
+    iget v3, p1, Lypf;->a:F
 
-    monitor-exit p0
+    cmpl-float v2, v2, v3
+
+    if-nez v2, :cond_2
+
+    iget v2, p0, Lypf;->b:I
+
+    iget p1, p1, Lypf;->b:I
+
+    if-ne v2, p1, :cond_2
+
+    return v0
+
+    :cond_2
+    :goto_0
+    return v1
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget v0, p0, Lypf;->a:F
+
+    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Float;->hashCode()I
+
+    move-result v0
+
+    add-int/lit16 v0, v0, 0x20f
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Lypf;->b:I
+
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x49
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    const-string v1, "smta: captureFrameRate="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lypf;->a:F
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v1, ", svcTemporalLayerCount="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lypf;->b:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
+
+    iget p2, p0, Lypf;->a:F
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
+
+    iget p2, p0, Lypf;->b:I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
     return-void
-
-    :goto_3
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    throw v0
-
-    :goto_4
-    :try_start_2
-    monitor-exit p0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    throw v0
 .end method

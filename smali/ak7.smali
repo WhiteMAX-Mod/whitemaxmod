@@ -1,58 +1,33 @@
 .class public final Lak7;
-.super Lx2;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/io/Serializable;
 
+# static fields
+.field public static final a:Ltq4;
 
-# instance fields
-.field public final b:Ljava/lang/Object;
-
-.field public final c:Ljava/lang/Object;
+.field public static final b:Lak7;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 3
 
-    const/4 v0, 0x0
+    new-instance v0, Ltq4;
 
-    const/4 v1, 0x0
+    const-string v1, "MLKitImageUtils"
 
-    invoke-direct {p0, v0, v1}, Lx2;-><init>(ZI)V
+    const-string v2, ""
 
-    iput-object p1, p0, Lak7;->b:Ljava/lang/Object;
+    invoke-direct {v0, v1, v2}, Ltq4;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    iput-object p2, p0, Lak7;->c:Ljava/lang/Object;
+    sput-object v0, Lak7;->a:Ltq4;
+
+    new-instance v0, Lak7;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lak7;->b:Lak7;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final getKey()Ljava/lang/Object;
-    .locals 1
-
-    iget-object v0, p0, Lak7;->b:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final getValue()Ljava/lang/Object;
-    .locals 1
-
-    iget-object v0, p0, Lak7;->c:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final setValue(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
 .end method

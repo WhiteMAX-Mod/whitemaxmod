@@ -1,47 +1,50 @@
 .class public final Ldb6;
-.super Lx0;
-.source "SourceFile"
+.super Lda4;
 
 
 # instance fields
-.field public final c:Lv1j;
+.field public final synthetic X:Lxd3;
 
-.field public final d:I
+.field public Y:Lfb6;
+
+.field public synthetic d:Ljava/lang/Object;
+
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Lpa6;)V
+.method public constructor <init>(Lxd3;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lx0;-><init>(Lpa6;)V
+    iput-object p1, p0, Ldb6;->X:Lxd3;
 
-    sget-object p1, Lhbe;->a:Lv1j;
-
-    iput-object p1, p0, Ldb6;->c:Lv1j;
-
-    const p1, 0x7fffffff
-
-    iput p1, p0, Ldb6;->d:I
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final f(Lxb6;)V
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    new-instance v0, Lcb6;
+    iput-object p1, p0, Ldb6;->d:Ljava/lang/Object;
 
-    iget-object v1, p0, Ldb6;->c:Lv1j;
+    iget p1, p0, Ldb6;->o:I
 
-    iget v2, p0, Ldb6;->d:I
+    const/high16 v0, -0x80000000
 
-    invoke-direct {v0, p1, v1, v2}, Lcb6;-><init>(Lz0g;Lv1j;I)V
+    or-int/2addr p1, v0
 
-    iget-object p1, p0, Lx0;->b:Lpa6;
+    iput p1, p0, Ldb6;->o:I
 
-    invoke-virtual {p1, v0}, Lpa6;->c(Lxb6;)V
+    iget-object p1, p0, Ldb6;->X:Lxd3;
 
-    return-void
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lxd3;->e(Ld96;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

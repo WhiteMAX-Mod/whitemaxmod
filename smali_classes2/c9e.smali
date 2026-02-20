@@ -1,92 +1,53 @@
 .class public final Lc9e;
-.super Ljava/lang/Object;
+.super Lda4;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic X:Le9e;
 
-.field public final b:Lo58;
+.field public Y:I
 
-.field public final c:Lo58;
+.field public d:J
 
-.field public final d:Lo58;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lo58;Lo58;Lo58;)V
-    .locals 1
+.method public constructor <init>(Le9e;Lda4;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lc9e;->X:Le9e;
 
-    const-class v0, Lc9e;
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lc9e;->a:Ljava/lang/String;
-
-    iput-object p1, p0, Lc9e;->b:Lo58;
-
-    iput-object p2, p0, Lc9e;->c:Lo58;
-
-    iput-object p3, p0, Lc9e;->d:Lo58;
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(JLjava/lang/String;JJZLp6g;)Ljava/lang/Object;
-    .locals 12
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    iget-object v0, p0, Lc9e;->d:Lo58;
+    iput-object p1, p0, Lc9e;->o:Ljava/lang/Object;
 
-    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+    iget p1, p0, Lc9e;->Y:I
 
-    move-result-object v0
+    const/high16 v0, -0x80000000
 
-    check-cast v0, Lmbg;
+    or-int/2addr p1, v0
 
-    check-cast v0, Lj9b;
+    iput p1, p0, Lc9e;->Y:I
 
-    invoke-virtual {v0}, Lj9b;->b()Lsb4;
+    const-wide/16 v0, 0x0
 
-    move-result-object v0
+    const/4 p1, 0x0
 
-    new-instance v1, Lb9e;
+    iget-object v2, p0, Lc9e;->X:Le9e;
 
-    const/4 v11, 0x0
-
-    move-object v2, p0
-
-    move-wide v8, p1
-
-    move-object v7, p3
-
-    move-wide/from16 v5, p4
-
-    move-wide/from16 v3, p6
-
-    move/from16 v10, p8
-
-    invoke-direct/range {v1 .. v11}, Lb9e;-><init>(Lc9e;JJLjava/lang/String;JZLkotlin/coroutines/Continuation;)V
-
-    move-object/from16 p1, p9
-
-    invoke-static {v0, v1, p1}, Ls9j;->k(Lqb4;Lbr6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {v2, v0, v1, p1, p0}, Le9e;->r(J[JLda4;)Ljava/lang/Object;
 
     move-result-object p1
-
-    sget-object p2, Lac4;->a:Lac4;
-
-    if-ne p1, p2, :cond_0
-
-    return-object p1
-
-    :cond_0
-    sget-object p1, Lb3h;->a:Lb3h;
 
     return-object p1
 .end method

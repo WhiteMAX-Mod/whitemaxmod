@@ -1,51 +1,37 @@
-.class public final synthetic Lhv4;
+.class public abstract Lhv4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lxy6;
-.implements Lmhh;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lqhh;
-
 
 # direct methods
-.method public synthetic constructor <init>(Lqhh;I)V
+.method public static a(Landroid/os/Looper;)Landroid/os/Handler;
     .locals 0
 
-    iput p2, p0, Lhv4;->a:I
+    invoke-static {p0}, Landroid/os/Handler;->createAsync(Landroid/os/Looper;)Landroid/os/Handler;
 
-    iput-object p1, p0, Lhv4;->b:Lqhh;
+    move-result-object p0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
+    return-object p0
 .end method
 
+.method public static b(Landroid/os/Looper;)Landroid/os/Handler;
+    .locals 0
 
-# virtual methods
-.method public final b(Landroidx/media3/common/VideoFrameProcessingException;)V
+    invoke-static {p0}, Landroid/os/Handler;->createAsync(Landroid/os/Looper;)Landroid/os/Handler;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static c(Landroid/os/Handler;Ln62;J)Z
     .locals 1
 
-    iget v0, p0, Lhv4;->a:I
+    const-string v0, "retry_token"
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p0, p1, v0, p2, p3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;Ljava/lang/Object;J)Z
 
-    :pswitch_0
-    iget-object v0, p0, Lhv4;->b:Lqhh;
+    move-result p0
 
-    invoke-interface {v0, p1}, Lqhh;->b(Landroidx/media3/common/VideoFrameProcessingException;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return p0
 .end method

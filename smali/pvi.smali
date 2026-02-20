@@ -3,78 +3,126 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lvwa;
+.implements Lxvi;
 
 
 # static fields
-.field public static final a:Lpvi;
+.field public static final b:[F
+
+.field public static final c:[F
+
+
+# instance fields
+.field public final a:Lxvi;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 2
 
-    new-instance v0, Lpvi;
+    const/16 v0, 0x8
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    new-array v1, v0, [F
 
-    sput-object v0, Lpvi;->a:Lpvi;
+    fill-array-data v1, :array_0
 
-    new-instance v0, Lbri;
+    sput-object v1, Lpvi;->b:[F
 
-    const/4 v1, 0x1
+    new-array v0, v0, [F
 
-    invoke-direct {v0, v1}, Lbri;-><init>(I)V
+    fill-array-data v0, :array_1
 
-    const-class v1, Lpri;
+    sput-object v0, Lpvi;->c:[F
 
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
+    return-void
+
+    nop
+
+    :array_0
+    .array-data 4
+        -0x40800000    # -1.0f
+        -0x40800000    # -1.0f
+        0x3f800000    # 1.0f
+        -0x40800000    # -1.0f
+        -0x40800000    # -1.0f
+        0x3f800000    # 1.0f
+        0x3f800000    # 1.0f
+        0x3f800000    # 1.0f
+    .end array-data
+
+    :array_1
+    .array-data 4
+        0x0
+        0x0
+        0x3f800000    # 1.0f
+        0x0
+        0x0
+        0x3f800000    # 1.0f
+        0x3f800000    # 1.0f
+        0x3f800000    # 1.0f
+    .end array-data
+.end method
+
+.method public constructor <init>(II)V
+    .locals 4
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/16 v0, 0x1f02
+
+    invoke-static {v0}, Landroid/opengl/GLES20;->glGetString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    const/4 v2, 0x2
+    sget-object v1, Lpvi;->b:[F
 
-    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
+    sget-object v2, Lpvi;->c:[F
 
-    move-result-object v0
+    if-eqz v0, :cond_0
 
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
+    const-string v3, "3."
 
-    move-result-object v0
+    invoke-virtual {v0, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
-    const/4 v2, 0x3
+    move-result v0
 
-    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
+    if-eqz v0, :cond_0
 
-    move-result-object v0
+    new-instance v0, Lxrd;
 
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
+    invoke-direct {v0, p1, p2, v1, v2}, Lxrd;-><init>(II[F[F)V
 
-    move-result-object v0
+    goto :goto_0
 
-    const/4 v2, 0x4
+    :cond_0
+    new-instance v0, Lytf;
 
-    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
+    invoke-direct {v0, p1, p2, v1, v2}, Lytf;-><init>(II[F[F)V
 
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
+    :goto_0
+    iput-object v0, p0, Lpvi;->a:Lxvi;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final a()V
+    .locals 1
 
-    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    iget-object v0, p0, Lpvi;->a:Lxvi;
 
-    move-result-object p1
+    invoke-interface {v0}, Lxvi;->a()V
 
-    throw p1
+    return-void
+.end method
+
+.method public final b()V
+    .locals 1
+
+    iget-object v0, p0, Lpvi;->a:Lxvi;
+
+    invoke-interface {v0}, Lxvi;->b()V
+
+    return-void
 .end method

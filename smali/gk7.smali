@@ -1,82 +1,142 @@
 .class public final Lgk7;
-.super Lhk7;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lah8;
+
+
+# static fields
+.field public static final b:Lgk7;
+
+.field public static final c:Lfe4;
 
 
 # instance fields
-.field public final transient c:I
-
-.field public final transient d:I
-
-.field public final synthetic o:Lhk7;
+.field public final a:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lhk7;II)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lgk7;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lgk7;-><init>(Ljava/lang/Object;)V
+
+    sput-object v0, Lgk7;->b:Lgk7;
+
+    new-instance v0, Lfe4;
+
+    const-class v1, Lgk7;
+
+    invoke-direct {v0, v1}, Lfe4;-><init>(Ljava/lang/Class;)V
+
+    sput-object v0, Lgk7;->c:Lfe4;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/Object;)V
     .locals 0
 
-    iput-object p1, p0, Lgk7;->o:Lhk7;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
-
-    iput p2, p0, Lgk7;->c:I
-
-    iput p3, p0, Lgk7;->d:I
+    iput-object p1, p0, Lgk7;->a:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c()[Ljava/lang/Object;
+.method public final a(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+    .locals 5
+
+    const-string v0, "Executor was null."
+
+    invoke-static {p2, v0}, Lgtj;->e(Ljava/lang/Object;Ljava/lang/String;)V
+
+    :try_start_0
+    invoke-interface {p2, p1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    sget-object v1, Lgk7;->c:Lfe4;
+
+    invoke-virtual {v1}, Lfe4;->a()Ljava/util/logging/Logger;
+
+    move-result-object v1
+
+    sget-object v2, Ljava/util/logging/Level;->SEVERE:Ljava/util/logging/Level;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "RuntimeException while executing runnable "
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p1, " with executor "
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v1, v2, p1, v0}, Ljava/util/logging/Logger;->log(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-void
+.end method
+
+.method public final cancel(Z)Z
+    .locals 0
+
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final get()Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Lgk7;->o:Lhk7;
-
-    invoke-virtual {v0}, Lyj7;->c()[Ljava/lang/Object;
-
-    move-result-object v0
+    .line 1
+    iget-object v0, p0, Lgk7;->a:Ljava/lang/Object;
 
     return-object v0
 .end method
 
-.method public final d()I
-    .locals 2
+.method public final get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lgk7;->o:Lhk7;
+    .line 2
+    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {v0}, Lyj7;->e()I
+    .line 3
+    iget-object p1, p0, Lgk7;->a:Ljava/lang/Object;
 
-    move-result v0
+    return-object p1
+.end method
 
-    iget v1, p0, Lgk7;->c:I
+.method public final isCancelled()Z
+    .locals 1
 
-    add-int/2addr v0, v1
-
-    iget v1, p0, Lgk7;->d:I
-
-    add-int/2addr v0, v1
+    const/4 v0, 0x0
 
     return v0
 .end method
 
-.method public final e()I
-    .locals 2
-
-    iget-object v0, p0, Lgk7;->o:Lhk7;
-
-    invoke-virtual {v0}, Lyj7;->e()I
-
-    move-result v0
-
-    iget v1, p0, Lgk7;->c:I
-
-    add-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final f()Z
+.method public final isDone()Z
     .locals 1
 
     const/4 v0, 0x1
@@ -84,98 +144,34 @@
     return v0
 .end method
 
-.method public final get(I)Ljava/lang/Object;
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    iget v0, p0, Lgk7;->d:I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-static {p1, v0}, Lekj;->d(II)V
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget v0, p0, Lgk7;->c:I
+    invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    add-int/2addr p1, v0
+    move-result-object v1
 
-    iget-object v0, p0, Lgk7;->o:Lhk7;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    const-string v1, "[status=SUCCESS, result=["
 
-    move-result-object p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-object p1
-.end method
+    iget-object v1, p0, Lgk7;->a:Ljava/lang/Object;
 
-.method public final iterator()Ljava/util/Iterator;
-    .locals 1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const/4 v0, 0x0
+    const-string v1, "]]"
 
-    invoke-virtual {p0, v0}, Lhk7;->l(I)Lac6;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final listIterator()Ljava/util/ListIterator;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    .line 1
-    invoke-virtual {p0, v0}, Lhk7;->l(I)Lac6;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
-.end method
-
-.method public final bridge synthetic listIterator(I)Ljava/util/ListIterator;
-    .locals 0
-
-    .line 2
-    invoke-virtual {p0, p1}, Lhk7;->l(I)Lac6;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final s(II)Lhk7;
-    .locals 1
-
-    iget v0, p0, Lgk7;->d:I
-
-    invoke-static {p1, p2, v0}, Lekj;->g(III)V
-
-    iget v0, p0, Lgk7;->c:I
-
-    add-int/2addr p1, v0
-
-    add-int/2addr p2, v0
-
-    iget-object v0, p0, Lgk7;->o:Lhk7;
-
-    invoke-virtual {v0, p1, p2}, Lhk7;->s(II)Lhk7;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final size()I
-    .locals 1
-
-    iget v0, p0, Lgk7;->d:I
-
-    return v0
-.end method
-
-.method public final bridge synthetic subList(II)Ljava/util/List;
-    .locals 0
-
-    invoke-virtual {p0, p1, p2}, Lgk7;->s(II)Lhk7;
-
-    move-result-object p1
-
-    return-object p1
 .end method

@@ -3,26 +3,28 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lnq6;
+.implements Lzs6;
+.implements Ls7;
+.implements Lsy3;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Ltw5;
+.field public final synthetic b:J
 
-.field public final synthetic c:Ljava/util/List;
+.field public final synthetic c:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Ltw5;Ljava/util/List;I)V
+.method public synthetic constructor <init>(IJZ)V
     .locals 0
 
-    iput p3, p0, Lrw5;->a:I
+    iput p1, p0, Lrw5;->a:I
 
-    iput-object p1, p0, Lrw5;->b:Ltw5;
+    iput-wide p2, p0, Lrw5;->b:J
 
-    iput-object p2, p0, Lrw5;->c:Ljava/util/List;
+    iput-boolean p4, p0, Lrw5;->c:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -31,97 +33,218 @@
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+.method public accept(Ljava/lang/Object;)V
     .locals 6
 
     iget v0, p0, Lrw5;->a:I
 
-    check-cast p1, Lf7e;
+    const-string v1, " favorite="
+
+    iget-boolean v2, p0, Lrw5;->c:Z
+
+    iget-wide v3, p0, Lrw5;->b:J
+
+    check-cast p1, Ljava/lang/Throwable;
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object p1, p0, Lrw5;->b:Ltw5;
+    sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
-    iget-object v0, p1, Ltw5;->a:Lb2e;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    new-instance v1, Lm75;
+    const-string v5, "markAsFavorite: failed for stickerId="
 
-    const/16 v2, 0xb
+    invoke-direct {v0, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v1, v2}, Lm75;-><init>(I)V
+    invoke-virtual {v0, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    const/4 v2, 0x0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v3, 0x1
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    invoke-static {v0, v2, v3, v1}, Lulj;->d(Lb2e;ZZLnq6;)Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    iget-object v1, p0, Lrw5;->c:Ljava/util/List;
+    move-result-object v0
 
-    invoke-static {v2, v1}, Ltw5;->b(ILjava/util/List;)Ljava/util/ArrayList;
+    const-string v1, "by5"
 
-    move-result-object v1
+    invoke-static {v1, v0, p1}, Ltej;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    new-instance v4, Lsw5;
+    return-void
 
-    const/4 v5, 0x0
+    :pswitch_0
+    sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
-    invoke-direct {v4, p1, v1, v5}, Lsw5;-><init>(Ltw5;Ljava/util/ArrayList;I)V
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-static {v0, v2, v3, v4}, Lulj;->d(Lb2e;ZZLnq6;)Ljava/lang/Object;
+    const-string v5, "markAsFavorite: failed for setId="
 
-    :goto_0
-    sget-object p1, Lb3h;->a:Lb3h;
+    invoke-direct {v0, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "dx5"
+
+    invoke-static {v1, v0, p1}, Ltej;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x3
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 9
+
+    iget v0, p0, Lrw5;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    move-object v2, p1
+
+    check-cast v2, Ltx5;
+
+    new-instance v1, Ltw5;
+
+    const/4 v4, 0x1
+
+    iget-boolean v3, p0, Lrw5;->c:Z
+
+    iget-wide v5, p0, Lrw5;->b:J
+
+    invoke-direct/range {v1 .. v6}, Ltw5;-><init>(Ljava/lang/Object;ZIJ)V
+
+    new-instance p1, Lvo3;
+
+    const/4 v0, 0x2
+
+    invoke-direct {p1, v0, v1}, Lvo3;-><init>(ILjava/lang/Object;)V
 
     return-object p1
 
     :pswitch_0
-    iget-object p1, p0, Lrw5;->b:Ltw5;
+    check-cast p1, Lhx5;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {p1}, Lhx5;->a()Lrmf;
 
-    iget-object v0, p1, Ltw5;->a:Lb2e;
+    move-result-object p1
 
-    new-instance v1, Lm75;
+    new-instance v0, Lrw5;
 
-    const/16 v2, 0xc
+    const/4 v1, 0x4
 
-    invoke-direct {v1, v2}, Lm75;-><init>(I)V
+    iget-wide v2, p0, Lrw5;->b:J
 
-    const/4 v2, 0x1
+    iget-boolean v4, p0, Lrw5;->c:Z
 
-    const/4 v3, 0x0
+    invoke-direct {v0, v1, v2, v3, v4}, Lrw5;-><init>(IJZ)V
 
-    invoke-static {v0, v2, v3, v1}, Lulj;->d(Lb2e;ZZLnq6;)Ljava/lang/Object;
+    new-instance v1, Lto3;
 
-    move-result-object v1
+    const/4 v2, 0x2
 
-    check-cast v1, Ljava/lang/Number;
+    invoke-direct {v1, p1, v2, v0}, Lto3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-virtual {v1}, Ljava/lang/Number;->intValue()I
+    return-object v1
 
-    move-result v1
+    :pswitch_1
+    move-object v4, p1
 
-    add-int/2addr v1, v2
+    check-cast v4, Ley5;
 
-    iget-object v2, p0, Lrw5;->c:Ljava/util/List;
+    new-instance v3, Ltw5;
 
-    invoke-static {v1, v2}, Ltw5;->b(ILjava/util/List;)Ljava/util/ArrayList;
+    const/4 v6, 0x0
 
-    move-result-object v1
+    iget-boolean v5, p0, Lrw5;->c:Z
 
-    new-instance v2, Lsw5;
+    iget-wide v7, p0, Lrw5;->b:J
 
-    const/4 v3, 0x1
+    invoke-direct/range {v3 .. v8}, Ltw5;-><init>(Ljava/lang/Object;ZIJ)V
 
-    invoke-direct {v2, p1, v1, v3}, Lsw5;-><init>(Ltw5;Ljava/util/ArrayList;I)V
+    new-instance p1, Lvo3;
 
-    invoke-static {v0, v2}, Lmnj;->a(Lb2e;Lnq6;)Leo3;
+    const/4 v0, 0x2
 
-    goto :goto_0
+    invoke-direct {p1, v0, v3}, Lvo3;-><init>(ILjava/lang/Object;)V
+
+    return-object p1
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public run()V
+    .locals 4
+
+    iget v0, p0, Lrw5;->a:I
+
+    iget-boolean v1, p0, Lrw5;->c:Z
+
+    iget-wide v2, p0, Lrw5;->b:J
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v1
+
+    filled-new-array {v0, v1}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    const-string v1, "by5"
+
+    const-string v2, "markAsFavorite: complete for stickerId=%d favorite=%b"
+
+    invoke-static {v1, v2, v0}, Ltej;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    return-void
+
+    :pswitch_0
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v1
+
+    filled-new-array {v0, v1}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    const-string v1, "dx5"
+
+    const-string v2, "markAsFavorite: complete for setId=%d favorite=%b"
+
+    invoke-static {v1, v2, v0}, Ltej;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x2
         :pswitch_0
     .end packed-switch
 .end method

@@ -1,108 +1,142 @@
-.class public final Lyrc;
-.super Ldsc;
+.class public final enum Lyrc;
+.super Ljava/lang/Enum;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lyrc;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static final enum b:Lyrc;
+
+.field public static final enum c:Lyrc;
+
+.field public static final synthetic d:[Lyrc;
+
+.field public static final synthetic o:Lpm5;
 
 
 # instance fields
-.field public final a:I
-
-.field public final b:I
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lyrc;
 
-    iput p1, p0, Lyrc;->a:I
+    const/4 v1, 0x0
 
-    iput p1, p0, Lyrc;->b:I
+    const-string v2, "setup_new_admin"
+
+    const-string v3, "SETUP_NEW_ADMIN"
+
+    invoke-direct {v0, v3, v1, v2}, Lyrc;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lyrc;->b:Lyrc;
+
+    new-instance v1, Lyrc;
+
+    const/4 v2, 0x1
+
+    const-string v3, "change_admin"
+
+    const-string v4, "CHANGE_ADMIN"
+
+    invoke-direct {v1, v4, v2, v3}, Lyrc;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v1, Lyrc;->c:Lyrc;
+
+    filled-new-array {v0, v1}, [Lyrc;
+
+    move-result-object v0
+
+    sput-object v0, Lyrc;->d:[Lyrc;
+
+    new-instance v1, Lpm5;
+
+    invoke-direct {v1, v0}, Lpm5;-><init>([Ljava/lang/Enum;)V
+
+    sput-object v1, Lyrc;->o:Lpm5;
+
+    new-instance v0, Lnmb;
+
+    const/16 v1, 0xf
+
+    invoke-direct {v0, v1}, Lnmb;-><init>(I)V
+
+    sput-object v0, Lyrc;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 0
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    const/4 v0, 0x1
+    iput-object p3, p0, Lyrc;->a:Ljava/lang/String;
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lyrc;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lyrc;
-
-    iget v1, p0, Lyrc;->a:I
-
-    iget p1, p1, Lyrc;->a:I
-
-    if-ne v1, p1, :cond_2
-
-    return v0
-
-    :cond_2
-    return v2
+    return-void
 .end method
 
-.method public final getItemId()J
-    .locals 2
-
-    const/high16 v0, 0x80000
-
-    int-to-long v0, v0
-
-    return-wide v0
-.end method
-
-.method public final hashCode()I
+.method public static valueOf(Ljava/lang/String;)Lyrc;
     .locals 1
 
-    iget v0, p0, Lyrc;->a:I
+    const-class v0, Lyrc;
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    move-result v0
+    move-result-object p0
 
-    return v0
+    check-cast p0, Lyrc;
+
+    return-object p0
 .end method
 
-.method public final m()I
+.method public static values()[Lyrc;
     .locals 1
 
-    iget v0, p0, Lyrc;->b:I
+    sget-object v0, Lyrc;->d:[Lyrc;
 
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    iget v0, p0, Lyrc;->a:I
-
-    invoke-static {v0}, Lukj;->c(I)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    const-string v1, "OfficialOrgLabel(itemViewType="
-
-    const-string v2, ")"
-
-    invoke-static {v1, v0, v2}, Lj27;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    check-cast v0, [Lyrc;
 
     return-object v0
+.end method
+
+
+# virtual methods
+.method public final describeContents()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
+
+    invoke-virtual {p0}, Ljava/lang/Enum;->name()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    return-void
 .end method

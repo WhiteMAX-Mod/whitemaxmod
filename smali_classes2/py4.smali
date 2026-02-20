@@ -1,113 +1,130 @@
 .class public final Lpy4;
-.super Llm4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Lpy4;
-
-.field public static final c:Lhm4;
-
-.field public static final d:Lhm4;
-
-.field public static final e:Lhm4;
-
-.field public static final f:Lhm4;
-
-.field public static final g:Lhm4;
-
-.field public static final h:Lhm4;
-
-.field public static final i:Lhm4;
+# instance fields
+.field public final a:Lj88;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(Lj88;)V
+    .locals 0
 
-    new-instance v0, Lpy4;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Llm4;-><init>()V
+    iput-object p1, p0, Lpy4;->a:Lj88;
 
-    sput-object v0, Lpy4;->b:Lpy4;
+    return-void
+.end method
 
-    const/4 v1, 0x0
 
-    new-array v2, v1, [Ljava/lang/String;
+# virtual methods
+.method public final a(JJLjava/util/List;Z)V
+    .locals 19
 
-    sget-object v3, Lfca;->w0:Lbm4;
-
-    const-string v4, ":settings/dev"
-
-    const/4 v5, 0x2
-
-    invoke-static {v0, v4, v2, v3, v5}, Llm4;->b(Llm4;Ljava/lang/String;[Ljava/lang/String;Lcm4;I)Lhm4;
-
-    move-result-object v2
-
-    sput-object v2, Lpy4;->c:Lhm4;
-
-    const-string v2, ":settings/dev/logsviewer"
-
-    new-array v4, v1, [Ljava/lang/String;
-
-    invoke-static {v0, v2, v4, v3, v5}, Llm4;->b(Llm4;Ljava/lang/String;[Ljava/lang/String;Lcm4;I)Lhm4;
-
-    move-result-object v2
-
-    sput-object v2, Lpy4;->d:Lhm4;
-
-    new-array v2, v1, [Ljava/lang/String;
-
-    const-string v4, ":settings/dev/showroom"
-
-    const/16 v5, 0xa
-
-    invoke-static {v0, v4, v2, v3, v5}, Llm4;->b(Llm4;Ljava/lang/String;[Ljava/lang/String;Lcm4;I)Lhm4;
-
-    move-result-object v2
-
-    sput-object v2, Lpy4;->e:Lhm4;
-
-    const-string v2, ":settings/dev/threadsviewer"
-
-    new-array v4, v1, [Ljava/lang/String;
-
-    invoke-static {v0, v2, v4, v3, v5}, Llm4;->b(Llm4;Ljava/lang/String;[Ljava/lang/String;Lcm4;I)Lhm4;
-
-    move-result-object v2
-
-    sput-object v2, Lpy4;->f:Lhm4;
-
-    const-string v2, ":settings/magic-room"
-
-    new-array v4, v1, [Ljava/lang/String;
-
-    invoke-static {v0, v2, v4, v3, v5}, Llm4;->b(Llm4;Ljava/lang/String;[Ljava/lang/String;Lcm4;I)Lhm4;
-
-    move-result-object v2
-
-    sput-object v2, Lpy4;->g:Lhm4;
-
-    const-string v2, ":settings/server-host"
-
-    new-array v4, v1, [Ljava/lang/String;
-
-    invoke-static {v0, v2, v4, v3, v5}, Llm4;->b(Llm4;Ljava/lang/String;[Ljava/lang/String;Lcm4;I)Lhm4;
-
-    move-result-object v2
-
-    sput-object v2, Lpy4;->h:Lhm4;
-
-    const-string v2, ":settings/server-port"
-
-    new-array v1, v1, [Ljava/lang/String;
-
-    invoke-static {v0, v2, v1, v3, v5}, Llm4;->b(Llm4;Ljava/lang/String;[Ljava/lang/String;Lcm4;I)Lhm4;
+    invoke-interface/range {p5 .. p5}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    sput-object v0, Lpy4;->i:Lhm4;
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/Number;
+
+    invoke-virtual {v1}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v1
+
+    move-object/from16 v3, p0
+
+    iget-object v4, v3, Lpy4;->a:Lj88;
+
+    invoke-interface {v4}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Li5b;
+
+    new-instance v5, Ljava/lang/Long;
+
+    invoke-direct {v5, v1, v2}, Ljava/lang/Long;-><init>(J)V
+
+    invoke-static {v5}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v14
+
+    if-eqz p6, :cond_0
+
+    const/4 v1, -0x1
+
+    :goto_1
+    move-wide/from16 v9, p1
+
+    move/from16 v17, v1
+
+    goto :goto_2
+
+    :cond_0
+    const/4 v1, 0x0
+
+    goto :goto_1
+
+    :goto_2
+    invoke-virtual {v4, v9, v10}, Li5b;->i(J)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    new-instance v6, Lpu2;
+
+    invoke-virtual {v4}, Li5b;->s()Lplc;
+
+    move-result-object v1
+
+    iget-object v1, v1, Lplc;->a:Lhl8;
+
+    invoke-virtual {v1}, Lqme;->k()J
+
+    move-result-wide v7
+
+    const/16 v16, 0x1
+
+    const/16 v18, 0x0
+
+    sget-object v13, Lqu2;->c:Lqu2;
+
+    sget-object v15, Lcu2;->b:Lcu2;
+
+    move-wide/from16 v11, p3
+
+    invoke-direct/range {v6 .. v18}, Lpu2;-><init>(JJJLqu2;Ljava/util/List;Lcu2;ZII)V
+
+    if-nez v17, :cond_2
+
+    invoke-static {v4, v6}, Li5b;->r(Li5b;Lko;)J
+
+    goto :goto_0
+
+    :cond_2
+    invoke-static {v4, v6}, Li5b;->q(Li5b;Lko;)J
+
+    goto :goto_0
+
+    :cond_3
+    move-object/from16 v3, p0
 
     return-void
 .end method

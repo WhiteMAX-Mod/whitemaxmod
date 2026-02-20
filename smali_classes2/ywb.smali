@@ -1,42 +1,134 @@
-.class public final synthetic Lywb;
+.class public final Lywb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lorg/webrtc/RtpReceiver$Observer;
+.implements Lorg/webrtc/VideoSink;
 
 
 # instance fields
-.field public final synthetic a:Lfxb;
+.field public final a:Ljava/lang/String;
+
+.field public b:J
+
+.field public final synthetic c:Lzwb;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lfxb;)V
-    .locals 0
-
-    iput-object p1, p0, Lywb;->a:Lfxb;
+.method public constructor <init>(Lzwb;Ljava/lang/String;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lywb;->c:Lzwb;
+
+    const-wide/16 v0, -0x1
+
+    iput-wide v0, p0, Lywb;->b:J
+
+    iput-object p2, p0, Lywb;->a:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onFirstPacketReceived(Lorg/webrtc/MediaStreamTrack$MediaType;)V
-    .locals 3
+.method public final onFrame(Lorg/webrtc/VideoFrame;)V
+    .locals 6
 
-    iget-object p1, p0, Lywb;->a:Lfxb;
+    invoke-virtual {p1}, Lorg/webrtc/VideoFrame;->getCompactParticipantId()Ljava/lang/Long;
 
-    iget-object v0, p1, Lfxb;->v:Landroid/os/Handler;
+    move-result-object p1
 
-    new-instance v1, Lpwb;
+    const-wide/16 v0, -0x1
 
-    const/4 v2, 0x6
+    if-nez p1, :cond_0
 
-    invoke-direct {v1, p1, v2}, Lpwb;-><init>(Lfxb;I)V
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    move-result-object p1
 
+    :cond_0
+    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v2
+
+    iget-wide v4, p0, Lywb;->b:J
+
+    cmp-long v2, v2, v4
+
+    if-eqz v2, :cond_3
+
+    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v2
+
+    iput-wide v2, p0, Lywb;->b:J
+
+    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v2
+
+    cmp-long v0, v2, v0
+
+    if-nez v0, :cond_1
+
+    const/4 p1, 0x0
+
+    :cond_1
+    iget-object v0, p0, Lywb;->c:Lzwb;
+
+    iget-object v1, v0, Lzwb;->k:Ljava/util/concurrent/ConcurrentHashMap;
+
+    iget-object v2, v0, Lzwb;->l:Ljava/util/concurrent/ConcurrentHashMap;
+
+    iget-object v3, p0, Lywb;->a:Ljava/lang/String;
+
+    invoke-virtual {v1, v3}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Ldw1;
+
+    if-eqz v4, :cond_2
+
+    invoke-virtual {v1, v3, v4}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    invoke-virtual {v2, v4, v3}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    :cond_2
+    if-eqz p1, :cond_3
+
+    iget-object v0, v0, Lhy3;->e:Ljava/lang/Object;
+
+    check-cast v0, Lo27;
+
+    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v4
+
+    long-to-int p1, v4
+
+    iget-object v0, v0, Lo27;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ldw1;
+
+    if-eqz p1, :cond_3
+
+    invoke-virtual {v1, v3, p1}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {v2, p1, v3}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_3
     return-void
 .end method

@@ -1,460 +1,236 @@
-.class public abstract Lrbf;
-.super Ljava/lang/Object;
+.class public final Lrbf;
+.super Lpdg;
 .source "SourceFile"
+
+# interfaces
+.implements Lys6;
 
 
 # instance fields
-.field public a:J
+.field public final synthetic X:Lone/me/settings/storage/ui/SettingsStorageScreen;
 
-.field public b:Ljava/lang/Runnable;
+.field public synthetic o:Ljava/lang/Object;
 
-.field public c:Lncf;
 
-.field public d:Ljava/util/concurrent/ExecutorService;
+# direct methods
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/storage/ui/SettingsStorageScreen;)V
+    .locals 0
 
-.field public e:Lahd;
+    iput-object p2, p0, Lrbf;->X:Lone/me/settings/storage/ui/SettingsStorageScreen;
 
-.field public f:Lbhd;
+    const/4 p2, 0x2
 
-.field public g:J
+    invoke-direct {p0, p2, p1}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
-.field public h:Z
-
-.field public i:Lak5;
-
-.field public j:Z
-
-.field public k:Lxkg;
-
-.field public l:Z
-
-.field public m:Z
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract build()Lpbf;
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lrbf;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lrbf;
+
+    sget-object p2, Lmah;->a:Lmah;
+
+    invoke-virtual {p1, p2}, Lrbf;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public final getEndpointParameters()Lak5;
-    .locals 1
-
-    iget-object v0, p0, Lrbf;->i:Lak5;
-
-    return-object v0
-.end method
-
-.method public final getExecutor()Ljava/util/concurrent/ExecutorService;
-    .locals 1
-
-    iget-object v0, p0, Lrbf;->d:Ljava/util/concurrent/ExecutorService;
-
-    return-object v0
-.end method
-
-.method public final getLog()Lahd;
-    .locals 1
-
-    iget-object v0, p0, Lrbf;->e:Lahd;
-
-    return-object v0
-.end method
-
-.method public final getLogConfiguration()Lbhd;
-    .locals 1
-
-    iget-object v0, p0, Lrbf;->f:Lbhd;
-
-    return-object v0
-.end method
-
-.method public final getReconnectTimeoutAction()Ljava/lang/Runnable;
-    .locals 1
-
-    iget-object v0, p0, Lrbf;->b:Ljava/lang/Runnable;
-
-    return-object v0
-.end method
-
-.method public final getServerPingTimeoutMs()J
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    iget-wide v0, p0, Lrbf;->g:J
+    new-instance v0, Lrbf;
 
-    return-wide v0
-.end method
+    iget-object v1, p0, Lrbf;->X:Lone/me/settings/storage/ui/SettingsStorageScreen;
 
-.method public final getSignalingStat()Lncf;
-    .locals 1
+    invoke-direct {v0, p2, v1}, Lrbf;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/storage/ui/SettingsStorageScreen;)V
 
-    iget-object v0, p0, Lrbf;->c:Lncf;
+    iput-object p1, v0, Lrbf;->o:Ljava/lang/Object;
 
     return-object v0
 .end method
 
-.method public final getTimeProvider()Lxkg;
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 13
 
-    iget-object v0, p0, Lrbf;->k:Lxkg;
+    iget-object v0, p0, Lrbf;->o:Ljava/lang/Object;
 
-    return-object v0
-.end method
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-.method public final getTimeoutMS()J
-    .locals 2
+    check-cast v0, Lsla;
 
-    iget-wide v0, p0, Lrbf;->a:J
+    instance-of p1, v0, Lpbf;
 
-    return-wide v0
-.end method
+    iget-object v1, p0, Lrbf;->X:Lone/me/settings/storage/ui/SettingsStorageScreen;
 
-.method public final isFastRecoverEnabled()Z
-    .locals 1
+    if-eqz p1, :cond_6
 
-    iget-boolean v0, p0, Lrbf;->h:Z
+    check-cast v0, Lpbf;
 
-    return v0
-.end method
+    sget-object p1, Lone/me/settings/storage/ui/SettingsStorageScreen;->X:[Lv58;
 
-.method public final isReplaceParametersInEndpointEnabled()Z
-    .locals 1
+    sget-object p1, Lone/me/sdk/bottomsheet/BottomSheetWidget;->B0:[Lv58;
 
-    iget-boolean v0, p0, Lrbf;->j:Z
+    iget-object p1, v0, Lpbf;->b:Lhpg;
 
-    return v0
-.end method
+    const/4 v2, 0x4
 
-.method public final isSignalingLogThrottlingEnabled()Z
-    .locals 1
+    const/4 v3, 0x0
 
-    iget-boolean v0, p0, Lrbf;->l:Z
+    invoke-static {p1, v3, v3, v2}, Lrsj;->a(Lhpg;Landroid/os/Bundle;Laje;I)Ltu3;
 
-    return v0
-.end method
+    move-result-object p1
 
-.method public final isSummaryStatsEnabled()Z
-    .locals 1
+    iget-object v2, v0, Lpbf;->d:Lhpg;
 
-    iget-boolean v0, p0, Lrbf;->m:Z
+    if-eqz v2, :cond_0
 
-    return v0
-.end method
+    invoke-virtual {p1, v2}, Ltu3;->f(Lhpg;)V
 
-.method public final setEndpointParameters(Lak5;)Lrbf;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lak5;",
-            ")",
-            "Lrbf;"
-        }
-    .end annotation
+    :cond_0
+    iget-object v0, v0, Lpbf;->c:Ljava/util/List;
 
-    .line 2
-    iput-object p1, p0, Lrbf;->i:Lak5;
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    return-object p0
-.end method
+    move-result-object v0
 
-.method public final setEndpointParameters(Lak5;)V
-    .locals 0
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 1
-    iput-object p1, p0, Lrbf;->i:Lak5;
+    move-result v2
 
-    return-void
-.end method
+    if-eqz v2, :cond_2
 
-.method public final setExecutor(Ljava/util/concurrent/ExecutorService;)Lrbf;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/concurrent/ExecutorService;",
-            ")",
-            "Lrbf;"
-        }
-    .end annotation
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 2
-    iput-object p1, p0, Lrbf;->d:Ljava/util/concurrent/ExecutorService;
+    move-result-object v2
 
-    return-object p0
-.end method
+    check-cast v2, Lobf;
 
-.method public final setExecutor(Ljava/util/concurrent/ExecutorService;)V
-    .locals 0
+    iget-boolean v4, v2, Lobf;->c:Z
 
-    .line 1
-    iput-object p1, p0, Lrbf;->d:Ljava/util/concurrent/ExecutorService;
+    iget-object v5, v2, Lobf;->b:Lcpg;
 
-    return-void
-.end method
+    iget v2, v2, Lobf;->a:I
 
-.method public final setFastRecoverEnabled(Z)Lrbf;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(Z)",
-            "Lrbf;"
-        }
-    .end annotation
-
-    .line 2
-    iput-boolean p1, p0, Lrbf;->h:Z
-
-    return-object p0
-.end method
-
-.method public final setFastRecoverEnabled(Z)V
-    .locals 0
-
-    .line 1
-    iput-boolean p1, p0, Lrbf;->h:Z
-
-    return-void
-.end method
-
-.method public final setIsReplaceParametersInEndpointEnabled(Z)Lrbf;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(Z)",
-            "Lrbf;"
-        }
-    .end annotation
-
-    iput-boolean p1, p0, Lrbf;->j:Z
-
-    return-object p0
-.end method
-
-.method public final setIsSignalingLogThrottlingEnabled(Z)Lrbf;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(Z)",
-            "Lrbf;"
-        }
-    .end annotation
-
-    iput-boolean p1, p0, Lrbf;->l:Z
-
-    return-object p0
-.end method
-
-.method public final setIsSummaryStatsEnabled(Z)Lrbf;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(Z)",
-            "Lrbf;"
-        }
-    .end annotation
-
-    iput-boolean p1, p0, Lrbf;->m:Z
-
-    return-object p0
-.end method
-
-.method public final setLog(Lahd;)Lrbf;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lahd;",
-            ")",
-            "Lrbf;"
-        }
-    .end annotation
-
-    .line 2
-    iput-object p1, p0, Lrbf;->e:Lahd;
-
-    return-object p0
-.end method
-
-.method public final setLog(Lahd;)V
-    .locals 0
-
-    .line 1
-    iput-object p1, p0, Lrbf;->e:Lahd;
-
-    return-void
-.end method
-
-.method public final setLogConfiguration(Lbhd;)Lrbf;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lbhd;",
-            ")",
-            "Lrbf;"
-        }
-    .end annotation
-
-    .line 2
-    iput-object p1, p0, Lrbf;->f:Lbhd;
-
-    return-object p0
-.end method
-
-.method public final setLogConfiguration(Lbhd;)V
-    .locals 0
-
-    .line 1
-    iput-object p1, p0, Lrbf;->f:Lbhd;
-
-    return-void
-.end method
-
-.method public final setReconnectTimeoutAction(Ljava/lang/Runnable;)Lrbf;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/Runnable;",
-            ")",
-            "Lrbf;"
-        }
-    .end annotation
-
-    .line 2
-    iput-object p1, p0, Lrbf;->b:Ljava/lang/Runnable;
-
-    return-object p0
-.end method
-
-.method public final setReconnectTimeoutAction(Ljava/lang/Runnable;)V
-    .locals 0
-
-    .line 1
-    iput-object p1, p0, Lrbf;->b:Ljava/lang/Runnable;
-
-    return-void
-.end method
-
-.method public final setReplaceParametersInEndpointEnabled(Z)V
-    .locals 0
-
-    iput-boolean p1, p0, Lrbf;->j:Z
-
-    return-void
-.end method
-
-.method public final setServerPingTimeoutMs(J)Lrbf;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(J)",
-            "Lrbf;"
-        }
-    .end annotation
-
-    .line 2
-    iput-wide p1, p0, Lrbf;->g:J
-
-    return-object p0
-.end method
-
-.method public final setServerPingTimeoutMs(J)V
-    .locals 0
-
-    .line 1
-    iput-wide p1, p0, Lrbf;->g:J
-
-    return-void
-.end method
-
-.method public final setSignalingLogThrottlingEnabled(Z)V
-    .locals 0
-
-    iput-boolean p1, p0, Lrbf;->l:Z
-
-    return-void
-.end method
-
-.method public final setSignalingStat(Lncf;)Lrbf;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lncf;",
-            ")",
-            "Lrbf;"
-        }
-    .end annotation
-
-    .line 2
-    iput-object p1, p0, Lrbf;->c:Lncf;
-
-    return-object p0
-.end method
-
-.method public final setSignalingStat(Lncf;)V
-    .locals 0
-
-    .line 1
-    iput-object p1, p0, Lrbf;->c:Lncf;
-
-    return-void
-.end method
-
-.method public final setSummaryStatsEnabled(Z)V
-    .locals 0
-
-    iput-boolean p1, p0, Lrbf;->m:Z
-
-    return-void
-.end method
-
-.method public final setTimeProvider(Lxkg;)Lrbf;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lxkg;",
-            ")",
-            "Lrbf;"
-        }
-    .end annotation
-
-    .line 2
-    iput-object p1, p0, Lrbf;->k:Lxkg;
-
-    return-object p0
-.end method
-
-.method public final setTimeProvider(Lxkg;)V
-    .locals 0
-
-    .line 1
-    iput-object p1, p0, Lrbf;->k:Lxkg;
-
-    return-void
-.end method
-
-.method public final setTimeoutMS(J)Lrbf;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(J)",
-            "Lrbf;"
-        }
-    .end annotation
-
-    .line 2
-    iput-wide p1, p0, Lrbf;->a:J
-
-    return-object p0
-.end method
-
-.method public final setTimeoutMS(J)V
-    .locals 0
-
-    .line 1
-    iput-wide p1, p0, Lrbf;->a:J
-
-    return-void
+    if-eqz v4, :cond_1
+
+    invoke-virtual {p1, v2, v5}, Ltu3;->b(ILhpg;)V
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {p1, v2, v5}, Ltu3;->d(ILhpg;)V
+
+    goto :goto_0
+
+    :cond_2
+    invoke-virtual {p1}, Ltu3;->e()Lone/me/sdk/bottomsheet/ConfirmationBottomSheet;
+
+    move-result-object v7
+
+    invoke-virtual {v7, v1}, Lone/me/sdk/arch/Widget;->setTargetController(Lpa4;)V
+
+    :goto_1
+    invoke-virtual {v1}, Lpa4;->getParentController()Lpa4;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_3
+
+    invoke-virtual {v1}, Lpa4;->getParentController()Lpa4;
+
+    move-result-object v1
+
+    goto :goto_1
+
+    :cond_3
+    instance-of p1, v1, Lpbe;
+
+    if-eqz p1, :cond_4
+
+    check-cast v1, Lpbe;
+
+    goto :goto_2
+
+    :cond_4
+    move-object v1, v3
+
+    :goto_2
+    if-eqz v1, :cond_5
+
+    check-cast v1, Lone/me/android/root/RootController;
+
+    invoke-virtual {v1}, Lone/me/android/root/RootController;->N0()Ljbe;
+
+    move-result-object v3
+
+    :cond_5
+    if-eqz v3, :cond_7
+
+    new-instance v6, Lmbe;
+
+    const/4 v11, 0x0
+
+    const/4 v12, -0x1
+
+    const/4 v8, 0x0
+
+    const/4 v9, 0x0
+
+    const/4 v10, 0x0
+
+    invoke-direct/range {v6 .. v12}, Lmbe;-><init>(Lpa4;Ljava/lang/String;Lua4;Lua4;ZI)V
+
+    const/4 p1, 0x0
+
+    const/4 v0, 0x1
+
+    const-string v1, "BottomSheetWidget"
+
+    invoke-static {p1, v6, v0, v1}, Ly12;->s(ZLmbe;ZLjava/lang/String;)V
+
+    invoke-virtual {v3, v6}, Ljbe;->H(Lmbe;)V
+
+    goto :goto_3
+
+    :cond_6
+    instance-of p1, v0, Lqbf;
+
+    if-eqz p1, :cond_7
+
+    new-instance p1, Lrlb;
+
+    invoke-direct {p1, v1}, Lrlb;-><init>(Lone/me/sdk/arch/Widget;)V
+
+    check-cast v0, Lqbf;
+
+    iget-object v0, v0, Lqbf;->b:Lepg;
+
+    invoke-virtual {p1, v0}, Lrlb;->h(Lhpg;)V
+
+    new-instance v0, Lfmb;
+
+    sget v1, Lsce;->p:I
+
+    invoke-direct {v0, v1}, Lfmb;-><init>(I)V
+
+    invoke-virtual {p1, v0}, Lrlb;->e(Ljmb;)V
+
+    invoke-virtual {p1}, Lrlb;->j()Lqlb;
+
+    :cond_7
+    :goto_3
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
 .end method

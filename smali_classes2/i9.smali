@@ -1,92 +1,226 @@
 .class public final Li9;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Lp21;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/profile/screens/addmembers/AddChatMembersScreen;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/profile/screens/addmembers/AddChatMembersScreen;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    iput-object p2, p0, Li9;->X:Lone/me/profile/screens/addmembers/AddChatMembersScreen;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
+
+    iput-object v0, p0, Li9;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Ljava/util/Set;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Li9;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Li9;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Li9;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final onActiveParticipantUpdated(Lo21;)V
     .locals 2
 
-    new-instance v0, Li9;
+    iget-object v0, p0, Li9;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    iget-object v1, p0, Li9;->X:Lone/me/profile/screens/addmembers/AddChatMembersScreen;
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
 
-    invoke-direct {v0, p2, v1}, Li9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profile/screens/addmembers/AddChatMembersScreen;)V
+    move-result-object v0
 
-    iput-object p1, v0, Li9;->o:Ljava/lang/Object;
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    return-object v0
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lp21;
+
+    invoke-interface {v1, p1}, Lp21;->onActiveParticipantUpdated(Lo21;)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+.method public final onActiveParticipantsAdded(Lk21;)V
+    .locals 2
 
-    iget-object v0, p0, Li9;->o:Ljava/lang/Object;
+    iget-object v0, p1, Lk21;->a:Ljava/util/Collection;
 
-    check-cast v0, Ljava/util/Set;
+    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    move-result v0
 
-    invoke-static {v0}, Lpi3;->a0(Ljava/util/Collection;)[J
+    if-eqz v0, :cond_0
 
-    move-result-object p1
+    goto :goto_1
 
-    iget-object v0, p0, Li9;->X:Lone/me/profile/screens/addmembers/AddChatMembersScreen;
+    :cond_0
+    iget-object v0, p0, Li9;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    iget-object v1, v0, Lone/me/profile/screens/addmembers/AddChatMembersScreen;->w0:Lls;
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
 
-    sget-object v2, Lone/me/profile/screens/addmembers/AddChatMembersScreen;->z0:[Lz28;
+    move-result-object v0
 
-    const/4 v3, 0x2
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    aget-object v2, v2, v3
+    move-result v1
 
-    invoke-virtual {v1, v0, p1}, Lls;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
+    if-eqz v1, :cond_1
 
-    sget-object p1, Lb3h;->a:Lb3h;
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    return-object p1
+    move-result-object v1
+
+    check-cast v1, Lp21;
+
+    invoke-interface {v1, p1}, Lp21;->onActiveParticipantsAdded(Lk21;)V
+
+    goto :goto_0
+
+    :cond_1
+    :goto_1
+    return-void
+.end method
+
+.method public final onActiveParticipantsChanged(Ll21;)V
+    .locals 2
+
+    iget-object v0, p1, Ll21;->a:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    iget-object v0, p0, Li9;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lp21;
+
+    invoke-interface {v1, p1}, Lp21;->onActiveParticipantsChanged(Ll21;)V
+
+    goto :goto_0
+
+    :cond_1
+    :goto_1
+    return-void
+.end method
+
+.method public final onActiveParticipantsDeAnonimized(Lm21;)V
+    .locals 2
+
+    iget-object v0, p1, Lm21;->a:Ljava/util/Collection;
+
+    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    iget-object v0, p0, Li9;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lp21;
+
+    invoke-interface {v1, p1}, Lp21;->onActiveParticipantsDeAnonimized(Lm21;)V
+
+    goto :goto_0
+
+    :cond_1
+    :goto_1
+    return-void
+.end method
+
+.method public final onActiveParticipantsRemoved(Ln21;)V
+    .locals 2
+
+    iget-object v0, p1, Ln21;->a:Ljava/util/Collection;
+
+    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    iget-object v0, p0, Li9;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lp21;
+
+    invoke-interface {v1, p1}, Lp21;->onActiveParticipantsRemoved(Ln21;)V
+
+    goto :goto_0
+
+    :cond_1
+    :goto_1
+    return-void
 .end method

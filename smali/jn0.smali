@@ -4,20 +4,26 @@
 
 
 # static fields
-.field public static final a:Ljava/lang/String;
+.field public static final synthetic a:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 3
 
-    const-string v0, "BatteryChrgTracker"
+    sget-object v0, Lfi;->a:Landroid/view/animation/LinearInterpolator;
 
-    invoke-static {v0}, Lkgi;->k(Ljava/lang/String;)Ljava/lang/String;
+    new-instance v0, Landroid/os/Handler;
 
-    move-result-object v0
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
-    sput-object v0, Ljn0;->a:Ljava/lang/String;
+    move-result-object v1
+
+    new-instance v2, Lhn0;
+
+    invoke-direct {v2}, Ljava/lang/Object;-><init>()V
+
+    invoke-direct {v0, v1, v2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;)V
 
     return-void
 .end method

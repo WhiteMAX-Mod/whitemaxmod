@@ -1,25 +1,26 @@
 .class public final Ljo2;
-.super Lie0;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Llo2;
 
 
 # instance fields
-.field public final b:J
+.field public final a:J
 
-.field public final c:J
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(JJ)V
-    .locals 1
+.method public constructor <init>(JLjava/lang/String;)V
+    .locals 0
 
-    const/4 v0, 0x4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, v0}, Lie0;-><init>(I)V
+    iput-wide p1, p0, Ljo2;->a:J
 
-    iput-wide p1, p0, Ljo2;->b:J
-
-    iput-wide p3, p0, Ljo2;->c:J
+    iput-object p3, p0, Ljo2;->b:Ljava/lang/String;
 
     return-void
 .end method
@@ -47,9 +48,9 @@
     :cond_1
     check-cast p1, Ljo2;
 
-    iget-wide v3, p0, Ljo2;->b:J
+    iget-wide v3, p0, Ljo2;->a:J
 
-    iget-wide v5, p1, Ljo2;->b:J
+    iget-wide v5, p1, Ljo2;->a:J
 
     cmp-long v1, v3, v5
 
@@ -58,13 +59,15 @@
     return v2
 
     :cond_2
-    iget-wide v3, p0, Ljo2;->c:J
+    iget-object v1, p0, Ljo2;->b:Ljava/lang/String;
 
-    iget-wide v5, p1, Ljo2;->c:J
+    iget-object p1, p1, Ljo2;->b:Ljava/lang/String;
 
-    cmp-long p1, v3, v5
+    invoke-static {v1, p1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    if-eqz p1, :cond_3
+    move-result p1
+
+    if-nez p1, :cond_3
 
     return v2
 
@@ -73,9 +76,9 @@
 .end method
 
 .method public final hashCode()I
-    .locals 3
+    .locals 2
 
-    iget-wide v0, p0, Ljo2;->b:J
+    iget-wide v0, p0, Ljo2;->a:J
 
     invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
@@ -83,9 +86,9 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-wide v1, p0, Ljo2;->c:J
+    iget-object v1, p0, Ljo2;->b:Ljava/lang/String;
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
     move-result v1
 
@@ -95,23 +98,25 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 4
+    .locals 5
 
-    const-string v0, "OpenMessage(chatId="
+    const-string v0, "DownloadComplete(messageId="
 
-    const-string v1, ", messageId="
+    const-string v1, ", attachLocalId="
 
-    iget-wide v2, p0, Ljo2;->b:J
+    iget-wide v2, p0, Ljo2;->a:J
 
-    invoke-static {v2, v3, v0, v1}, Lt02;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v4, p0, Ljo2;->b:Ljava/lang/String;
+
+    invoke-static {v0, v2, v3, v1, v4}, Lo16;->i(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
     const-string v1, ")"
 
-    iget-wide v2, p0, Ljo2;->c:J
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v0, v2, v3, v1}, Lva9;->f(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

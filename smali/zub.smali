@@ -1,74 +1,136 @@
-.class public final Lzub;
-.super Lp6g;
+.class public abstract Lzub;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lbr6;
 
-
-# instance fields
-.field public final synthetic o:Ldvb;
+# static fields
+.field public static final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Ldvb;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lzub;->o:Ldvb;
+    const-string v0, "PackageManagerHelper"
 
-    const/4 p1, 0x2
+    invoke-static {v0}, Lm0j;->n(Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    move-result-object v0
+
+    sput-object v0, Lzub;->a:Ljava/lang/String;
 
     return-void
 .end method
 
+.method public static a(Landroid/content/Context;Ljava/lang/Class;Z)V
+    .locals 6
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    const-string v0, "disabled"
 
-    check-cast p1, Ls04;
+    const-string v1, "enabled"
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    sget-object v2, Lzub;->a:Ljava/lang/String;
 
-    invoke-virtual {p0, p1, p2}, Lzub;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    :try_start_0
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v3
+
+    new-instance v4, Landroid/content/ComponentName;
+
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-direct {v4, p0, v5}, Landroid/content/ComponentName;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+
+    const/4 p0, 0x1
+
+    if-eqz p2, :cond_0
+
+    move v5, p0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v5, 0x2
+
+    :goto_0
+    invoke-virtual {v3, v4, v5, p0}, Landroid/content/pm/PackageManager;->setComponentEnabledSetting(Landroid/content/ComponentName;II)V
+
+    invoke-static {}, Lm0j;->g()Lm0j;
+
+    move-result-object p0
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v4, " "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    if-eqz p2, :cond_1
+
+    move-object v4, v1
+
+    goto :goto_1
+
+    :cond_1
+    move-object v4, v0
+
+    :goto_1
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {p0, v2, v3}, Lm0j;->c(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception p0
+
+    invoke-static {}, Lm0j;->g()Lm0j;
+
+    move-result-object v3
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object p1
 
-    check-cast p1, Lzub;
+    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    const-string p1, "could not be "
 
-    invoke-virtual {p1, p2}, Lzub;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-object p2
-.end method
+    if-eqz p2, :cond_2
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    move-object v0, v1
 
-    new-instance p1, Lzub;
+    :cond_2
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lzub;->o:Ldvb;
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-direct {p1, v0, p2}, Lzub;-><init>(Ldvb;Lkotlin/coroutines/Continuation;)V
+    move-result-object p1
 
-    return-object p1
-.end method
+    invoke-virtual {v3, v2, p1, p0}, Lm0j;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    sget-object p1, Ldvb;->B0:[Lz28;
-
-    iget-object p1, p0, Lzub;->o:Ldvb;
-
-    invoke-virtual {p1}, Ldvb;->d()V
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
+    return-void
 .end method

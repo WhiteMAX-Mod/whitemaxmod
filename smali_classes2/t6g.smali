@@ -1,165 +1,133 @@
 .class public final Lt6g;
-.super Lp6g;
+.super Landroid/text/style/CharacterStyle;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Lxu8;
+.implements Landroid/text/style/UpdateAppearance;
 
 
 # instance fields
-.field public final synthetic X:Lb7g;
+.field public final synthetic a:I
 
-.field public o:I
+.field public final b:I
 
 
 # direct methods
-.method public constructor <init>(Lb7g;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(I)V
     .locals 0
 
-    iput-object p1, p0, Lt6g;->X:Lb7g;
+    iput p1, p0, Lt6g;->a:I
 
-    const/4 p1, 0x2
+    packed-switch p1, :pswitch_data_0
 
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Landroid/text/style/CharacterStyle;-><init>()V
+
+    const/4 p1, 0x7
+
+    iput p1, p0, Lt6g;->b:I
 
     return-void
+
+    :pswitch_0
+    invoke-direct {p0}, Landroid/text/style/CharacterStyle;-><init>()V
+
+    const/4 p1, 0x4
+
+    iput p1, p0, Lt6g;->b:I
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final copy()Lrc4;
+    .locals 2
 
-    check-cast p1, Lzb4;
+    iget v0, p0, Lt6g;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Lt6g;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    new-instance v0, Lt6g;
 
-    move-result-object p1
+    const/4 v1, 0x1
 
-    check-cast p1, Lt6g;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lt6g;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Lt6g;
-
-    iget-object v0, p0, Lt6g;->X:Lb7g;
-
-    invoke-direct {p1, v0, p2}, Lt6g;-><init>(Lb7g;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    sget-object v0, Lac4;->a:Lac4;
-
-    iget v1, p0, Lt6g;->o:I
-
-    const/4 v2, 0x1
-
-    if-eqz v1, :cond_1
-
-    if-ne v1, v2, :cond_0
-
-    :try_start_0
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-    :try_end_0
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_1
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_0
-
-    :catch_0
-    move-exception p1
-
-    goto :goto_2
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lt6g;->X:Lb7g;
-
-    :try_start_1
-    iget-object v1, p1, Lb7g;->f:Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-virtual {v1}, Ljava/util/concurrent/ConcurrentHashMap;->clear()V
-
-    sget-object v1, Lb7g;->g:Ljava/lang/String;
-
-    const-string v3, "clear: jobs cleared"
-
-    invoke-static {v1, v3}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object p1, p1, Lb7g;->b:Ld7g;
-
-    iput v2, p0, Lt6g;->o:I
-
-    invoke-virtual {p1, p0}, Ld7g;->a(Lt6g;)Ljava/lang/Object;
-
-    move-result-object p1
-    :try_end_1
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    if-ne p1, v0, :cond_3
+    invoke-direct {v0, v1}, Lt6g;-><init>(I)V
 
     return-object v0
 
-    :goto_0
-    sget-object v0, Lb7g;->g:Ljava/lang/String;
+    :pswitch_0
+    new-instance v0, Lt6g;
 
-    sget-object v1, Lc5j;->a:Ledb;
+    const/4 v1, 0x0
 
-    if-nez v1, :cond_2
+    invoke-direct {v0, v1}, Lt6g;-><init>(I)V
 
-    goto :goto_1
+    return-object v0
 
-    :cond_2
-    sget-object v2, Lkk8;->Y:Lkk8;
+    nop
 
-    invoke-virtual {v1, v2}, Ledb;->b(Lkk8;)Z
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    move-result v3
+.method public final getType()I
+    .locals 1
 
-    if-eqz v3, :cond_3
+    iget v0, p0, Lt6g;->a:I
 
-    const-string v3, "clear: failed"
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {v1, v2, v0, v3, p1}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    iget v0, p0, Lt6g;->b:I
 
-    :cond_3
-    :goto_1
-    sget-object p1, Lb3h;->a:Lb3h;
+    return v0
 
-    return-object p1
+    :pswitch_0
+    iget v0, p0, Lt6g;->b:I
 
-    :goto_2
-    throw p1
+    return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final updateDrawState(Landroid/text/TextPaint;)V
+    .locals 1
+
+    iget v0, p0, Lt6g;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setUnderlineText(Z)V
+
+    return-void
+
+    :pswitch_0
+    const/4 v0, 0x1
+
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setStrikeThruText(Z)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

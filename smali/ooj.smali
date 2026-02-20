@@ -1,79 +1,90 @@
-.class public abstract Looj;
+.class public final Looj;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Loza;
+
+
+# static fields
+.field public static final a:Looj;
+
 
 # direct methods
-.method public static final c(Lple;I)I
-    .locals 4
+.method static constructor <clinit>()V
+    .locals 3
 
-    iget-object v0, p0, Lple;->X:[I
+    new-instance v0, Looj;
 
-    add-int/lit8 p1, p1, 0x1
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iget-object p0, p0, Lple;->o:[[B
+    sput-object v0, Looj;->a:Looj;
 
-    array-length p0, p0
+    new-instance v0, Lp7j;
 
-    add-int/lit8 p0, p0, -0x1
+    const/4 v1, 0x1
 
-    const/4 v1, 0x0
+    invoke-direct {v0, v1}, Lp7j;-><init>(I)V
 
-    :goto_0
-    if-gt v1, p0, :cond_1
+    const-class v1, Lh8j;
 
-    add-int v2, v1, p0
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
 
-    ushr-int/lit8 v2, v2, 0x1
+    move-result-object v0
 
-    aget v3, v0, v2
+    const/4 v2, 0x2
 
-    if-ge v3, p1, :cond_0
+    invoke-static {v0, v2}, Leni;->i(Ljava/util/HashMap;I)Lp7j;
 
-    add-int/lit8 v2, v2, 0x1
+    move-result-object v0
 
-    move v1, v2
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
 
-    goto :goto_0
+    move-result-object v0
 
-    :cond_0
-    if-le v3, p1, :cond_2
+    const/4 v2, 0x3
 
-    add-int/lit8 v2, v2, -0x1
+    invoke-static {v0, v2}, Leni;->i(Ljava/util/HashMap;I)Lp7j;
 
-    move p0, v2
+    move-result-object v0
 
-    goto :goto_0
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
 
-    :cond_1
-    neg-int p0, v1
+    move-result-object v0
 
-    add-int/lit8 v2, p0, -0x1
+    const/4 v2, 0x4
 
-    :cond_2
-    if-ltz v2, :cond_3
+    invoke-static {v0, v2}, Leni;->i(Ljava/util/HashMap;I)Lp7j;
 
-    return v2
+    move-result-object v0
 
-    :cond_3
-    not-int p0, v2
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
 
-    return p0
+    move-result-object v0
+
+    const/4 v2, 0x5
+
+    invoke-static {v0, v2}, Leni;->i(Ljava/util/HashMap;I)Lp7j;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, Leni;->m(Ljava/util/HashMap;)V
+
+    return-void
 .end method
 
 
 # virtual methods
-.method public abstract a([Landroid/text/InputFilter;)[Landroid/text/InputFilter;
-.end method
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-.method public abstract b()Z
-.end method
+    invoke-static {p1}, Lkb0;->d(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-.method public abstract d(Z)V
-.end method
+    move-result-object p1
 
-.method public abstract e(Z)V
-.end method
-
-.method public abstract f(Landroid/text/method/TransformationMethod;)Landroid/text/method/TransformationMethod;
+    throw p1
 .end method

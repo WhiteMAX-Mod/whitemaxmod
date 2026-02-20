@@ -45,28 +45,30 @@
 
 
 # static fields
-.field public static final synthetic J0:[Lz28;
+.field public static final synthetic J0:[Lv58;
 
 
 # instance fields
-.field public final D0:Lo58;
+.field public final C0:Lf;
+
+.field public final D0:Lj88;
 
 .field public final E0:Ljava/lang/Object;
 
-.field public final F0:Lo58;
+.field public final F0:Lj88;
 
-.field public G0:Lpw4;
+.field public G0:Lyx4;
 
-.field public final H0:Lls;
+.field public final H0:Lwt;
 
-.field public final I0:Lls;
+.field public final I0:Lwt;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 6
 
-    new-instance v0, Liyc;
+    new-instance v0, Lv3d;
 
     const-class v1, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;
 
@@ -76,21 +78,21 @@
 
     const/4 v4, 0x0
 
-    invoke-direct {v0, v1, v2, v3, v4}, Liyc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v2, v3, v4}, Lv3d;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    sget-object v2, Lctd;->a:Ldtd;
+    sget-object v2, Lazd;->a:Lbzd;
 
     const-string v3, "snackbarBottomMargin"
 
     const-string v5, "getSnackbarBottomMargin()Ljava/lang/Integer;"
 
-    invoke-static {v2, v1, v3, v5, v4}, Lj27;->e(Ldtd;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Liyc;
+    invoke-static {v2, v1, v3, v5, v4}, Lo16;->g(Lbzd;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lv3d;
 
     move-result-object v1
 
     const/4 v2, 0x2
 
-    new-array v2, v2, [Lz28;
+    new-array v2, v2, [Lv58;
 
     aput-object v0, v2, v4
 
@@ -98,7 +100,7 @@
 
     aput-object v1, v2, v0
 
-    sput-object v2, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->J0:[Lz28;
+    sput-object v2, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->J0:[Lv58;
 
     return-void
 .end method
@@ -106,59 +108,59 @@
 .method public constructor <init>(JJLjava/lang/String;ILjava/lang/Integer;Ljava/lang/Boolean;)V
     .locals 1
 
-    .line 24
+    .line 27
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p1
 
-    .line 25
-    new-instance p2, Lktb;
+    .line 28
+    new-instance p2, Lyvb;
 
     const-string v0, "arg:msg_id"
 
-    invoke-direct {p2, v0, p1}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p2, v0, p1}, Lyvb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 26
+    .line 29
     invoke-static {p3, p4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p1
 
-    .line 27
-    new-instance p3, Lktb;
+    .line 30
+    new-instance p3, Lyvb;
 
     const-string p4, "arg:attach_id"
 
-    invoke-direct {p3, p4, p1}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p3, p4, p1}, Lyvb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 28
-    new-instance p4, Lktb;
+    .line 31
+    new-instance p4, Lyvb;
 
     const-string p1, "arg:local_attach_id"
 
-    invoke-direct {p4, p1, p5}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p4, p1, p5}, Lyvb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 29
+    .line 32
     invoke-static {p6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
-    .line 30
-    new-instance p5, Lktb;
+    .line 33
+    new-instance p5, Lyvb;
 
     const-string p6, "arg:cause"
 
-    invoke-direct {p5, p6, p1}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p5, p6, p1}, Lyvb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 31
-    new-instance p6, Lktb;
+    .line 34
+    new-instance p6, Lyvb;
 
     const-string p1, "arg:snack_bot_margin"
 
-    invoke-direct {p6, p1, p7}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p6, p1, p7}, Lyvb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     if-eqz p8, :cond_0
 
-    .line 32
+    .line 35
     invoke-virtual {p8}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result p1
@@ -173,24 +175,24 @@
 
     move-result-object p1
 
-    .line 33
-    new-instance p7, Lktb;
+    .line 36
+    new-instance p7, Lyvb;
 
     const-string p8, "arg:force_dark"
 
-    invoke-direct {p7, p8, p1}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p7, p8, p1}, Lyvb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 34
-    filled-new-array/range {p2 .. p7}, [Lktb;
-
-    move-result-object p1
-
-    .line 35
-    invoke-static {p1}, Laaj;->c([Lktb;)Landroid/os/Bundle;
+    .line 37
+    filled-new-array/range {p2 .. p7}, [Lyvb;
 
     move-result-object p1
 
-    .line 36
+    .line 38
+    invoke-static {p1}, Lejj;->c([Lyvb;)Landroid/os/Bundle;
+
+    move-result-object p1
+
+    .line 39
     invoke-direct {p0, p1}, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;-><init>(Landroid/os/Bundle;)V
 
     return-void
@@ -203,110 +205,121 @@
     invoke-direct {p0, p1}, Lone/me/sdk/bottomsheet/BottomSheetWidget;-><init>(Landroid/os/Bundle;)V
 
     .line 2
-    new-instance v0, Lwd2;
+    new-instance v0, Lf;
 
-    const/16 v1, 0x10
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getAccountScope-uqN4xOY()Lvie;
 
-    invoke-direct {v0, v1}, Lwd2;-><init>(I)V
+    move-result-object v1
 
     .line 3
-    new-instance v1, Lo;
-
-    const/16 v2, 0x1d
-
-    invoke-direct {v1, v2, v0}, Lo;-><init>(ILlq6;)V
-
-    const-class v0, Lgn2;
-
-    invoke-virtual {p0, v0, v1}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Llq6;)Lo58;
-
-    move-result-object v0
+    invoke-direct {v0, v1}, Lscout/Component;-><init>(Lvie;)V
 
     .line 4
-    iput-object v0, p0, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->D0:Lo58;
+    iput-object v0, p0, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->C0:Lf;
 
     .line 5
-    new-instance v1, Lil1;
+    new-instance v1, Lnn2;
 
-    const/16 v2, 0xf
+    const/4 v2, 0x0
 
-    invoke-direct {v1, v2, p0}, Lil1;-><init>(ILjava/lang/Object;)V
-
-    const/4 v2, 0x3
+    invoke-direct {v1, p0, v2}, Lnn2;-><init>(Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;I)V
 
     .line 6
-    invoke-static {v2, v1}, Le8;->b(ILlq6;)Lo58;
+    new-instance v2, Lq;
+
+    const/16 v3, 0x1d
+
+    invoke-direct {v2, v3, v1}, Lq;-><init>(ILis6;)V
+
+    const-class v1, Lho2;
+
+    invoke-virtual {p0, v1, v2}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Lis6;)Lj88;
 
     move-result-object v1
 
     .line 7
-    iput-object v1, p0, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->E0:Ljava/lang/Object;
+    iput-object v1, p0, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->D0:Lj88;
 
     .line 8
-    sget-object v1, Lp6f;->a:Lp6f;
+    new-instance v2, Lnn2;
+
+    const/4 v3, 0x1
+
+    invoke-direct {v2, p0, v3}, Lnn2;-><init>(Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;I)V
+
+    const/4 v3, 0x3
 
     .line 9
-    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lr5;
+    invoke-static {v3, v2}, Lbdj;->d(ILis6;)Lj88;
 
-    move-result-object v1
-
-    const/16 v2, 0x1d5
-
-    invoke-virtual {v1, v2}, Lr5;->d(I)Ln8g;
-
-    move-result-object v1
+    move-result-object v2
 
     .line 10
-    iput-object v1, p0, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->F0:Lo58;
+    iput-object v2, p0, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->E0:Ljava/lang/Object;
 
     .line 11
-    new-instance v1, Lls;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v0
+
+    const/16 v2, 0x1dc
+
+    .line 12
+    invoke-virtual {v0, v2}, Lr5;->d(I)Lbgg;
+
+    move-result-object v0
+
+    .line 13
+    iput-object v0, p0, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->F0:Lj88;
+
+    .line 14
+    new-instance v0, Lwt;
 
     const-class v2, Ljava/lang/Boolean;
 
     const-string v3, "arg:force_dark"
 
-    invoke-direct {v1, v2, v3}, Lls;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
+    invoke-direct {v0, v2, v3}, Lwt;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
 
-    .line 12
-    iput-object v1, p0, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->H0:Lls;
+    .line 15
+    iput-object v0, p0, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->H0:Lwt;
 
-    .line 13
-    new-instance v1, Lls;
+    .line 16
+    new-instance v0, Lwt;
 
     const-class v2, Ljava/lang/Integer;
 
     const-string v3, "arg:snack_bot_margin"
 
-    invoke-direct {v1, v2, v3}, Lls;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
+    invoke-direct {v0, v2, v3}, Lwt;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
 
-    .line 14
-    iput-object v1, p0, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->I0:Lls;
+    .line 17
+    iput-object v0, p0, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->I0:Lwt;
 
-    .line 15
-    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+    .line 18
+    invoke-interface {v1}, Lj88;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
     move-object v2, v0
 
-    check-cast v2, Lgn2;
+    check-cast v2, Lho2;
 
-    .line 16
+    .line 19
     const-string v0, "arg:msg_id"
 
     invoke-virtual {p1, v0}, Landroid/os/BaseBundle;->getLong(Ljava/lang/String;)J
 
     move-result-wide v3
 
-    .line 17
+    .line 20
     const-string v0, "arg:attach_id"
 
     invoke-virtual {p1, v0}, Landroid/os/BaseBundle;->getLong(Ljava/lang/String;)J
 
     move-result-wide v7
 
-    .line 18
+    .line 21
     const-string v0, "arg:local_attach_id"
 
     invoke-virtual {p1, v0}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -315,51 +328,51 @@
 
     if-eqz v5, :cond_0
 
-    .line 19
+    .line 22
     const-string v0, "arg:cause"
 
     invoke-virtual {p1, v0}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;)I
 
     move-result p1
 
-    .line 20
-    sget-object v0, Ln45;->Z:Lal5;
+    .line 23
+    sget-object v0, Ly55;->Z:Lpm5;
 
-    invoke-virtual {v0, p1}, Lal5;->get(I)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Lpm5;->get(I)Ljava/lang/Object;
 
     move-result-object p1
 
     move-object v6, p1
 
-    check-cast v6, Ln45;
+    check-cast v6, Ly55;
 
-    .line 21
-    iget-object p1, v2, Lgn2;->c:Lmbg;
+    .line 24
+    iget-object p1, v2, Lho2;->d:Lbjg;
 
-    .line 22
-    check-cast p1, Lj9b;
+    .line 25
+    check-cast p1, Lcbb;
 
-    invoke-virtual {p1}, Lj9b;->b()Lsb4;
+    invoke-virtual {p1}, Lcbb;->b()Lgd4;
 
     move-result-object p1
 
-    new-instance v1, Lwm2;
+    new-instance v1, Lxn2;
 
     const/4 v9, 0x0
 
-    invoke-direct/range {v1 .. v9}, Lwm2;-><init>(Lgn2;JLjava/lang/String;Ln45;JLkotlin/coroutines/Continuation;)V
+    invoke-direct/range {v1 .. v9}, Lxn2;-><init>(Lho2;JLjava/lang/String;Ly55;JLkotlin/coroutines/Continuation;)V
 
     const/4 v0, 0x2
 
-    invoke-static {v2, p1, v1, v0}, Lnth;->n(Lnth;Lqb4;Lbr6;I)Lmmf;
+    invoke-static {v2, p1, v1, v0}, Lx0i;->l(Lx0i;Led4;Lys6;I)Lcuf;
 
     move-result-object p1
 
-    iput-object p1, v2, Lgn2;->z0:Lmmf;
+    iput-object p1, v2, Lho2;->A0:Lcuf;
 
     return-void
 
-    .line 23
+    .line 26
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -372,42 +385,42 @@
 
 
 # virtual methods
-.method public final A0()Lrec;
+.method public final I0()Lzjc;
     .locals 2
 
-    new-instance v0, Lom2;
+    new-instance v0, Lpn2;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Lom2;-><init>(Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;I)V
+    invoke-direct {v0, p0, v1}, Lpn2;-><init>(Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;I)V
 
     return-object v0
 .end method
 
-.method public final D0()Lzlb;
+.method public final L0()Llob;
     .locals 3
 
-    sget-object v0, Lpc3;->t0:Lkme;
+    sget-object v0, Lfe3;->t0:Ltea;
 
     invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lkme;->r(Landroid/content/Context;)Lzbb;
+    invoke-virtual {v0, v1}, Ltea;->p(Landroid/content/Context;)Loob;
 
     move-result-object v0
 
-    iget-object v0, v0, Lzbb;->c:Lzlb;
+    iget-object v0, v0, Loob;->b:Llob;
 
-    sget-object v1, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->J0:[Lz28;
+    sget-object v1, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->J0:[Lv58;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    iget-object v1, p0, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->H0:Lls;
+    iget-object v1, p0, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->H0:Lwt;
 
-    invoke-virtual {v1, p0}, Lls;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+    invoke-virtual {v1, p0}, Lwt;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -427,7 +440,7 @@
     return-object v0
 .end method
 
-.method public final M0(Landroid/view/LayoutInflater;Landroid/widget/FrameLayout;)Landroid/view/View;
+.method public final U0(Landroid/view/LayoutInflater;Landroid/widget/FrameLayout;)Landroid/view/View;
     .locals 6
 
     invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
@@ -456,7 +469,7 @@
 
     int-to-float v2, v2
 
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -468,7 +481,7 @@
 
     mul-float/2addr v2, v3
 
-    invoke-static {v2}, Lq7j;->c(F)I
+    invoke-static {v2}, Lmhj;->f(F)I
 
     move-result v2
 
@@ -500,7 +513,7 @@
 
     int-to-float v3, v3
 
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
 
     move-result-object v5
 
@@ -512,7 +525,7 @@
 
     mul-float/2addr v3, v5
 
-    invoke-static {v3}, Lq7j;->c(F)I
+    invoke-static {v3}, Lmhj;->f(F)I
 
     move-result v3
 
@@ -522,36 +535,44 @@
 
     invoke-virtual {p1, v4}, Landroid/widget/TextView;->setGravity(I)V
 
-    invoke-virtual {p0}, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->D0()Lzlb;
+    invoke-virtual {p0}, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->L0()Llob;
 
     move-result-object p2
 
     if-nez p2, :cond_0
 
-    sget-object p2, Lpc3;->t0:Lkme;
+    sget-object p2, Lfe3;->t0:Ltea;
 
-    invoke-virtual {p2, p1}, Lkme;->p(Landroid/view/View;)Lzlb;
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v3
+
+    invoke-virtual {p2, v3}, Ltea;->n(Landroid/content/Context;)Lfe3;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Lfe3;->j()Llob;
 
     move-result-object p2
 
     :cond_0
-    invoke-interface {p2}, Lzlb;->getText()Lrfg;
+    invoke-interface {p2}, Llob;->getText()Lhob;
 
     move-result-object p2
 
-    iget p2, p2, Lrfg;->e:I
+    iget p2, p2, Lhob;->b:I
 
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setTextColor(I)V
 
     iget-object p2, p0, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->E0:Ljava/lang/Object;
 
-    invoke-interface {p2}, Lo58;->getValue()Ljava/lang/Object;
+    invoke-interface {p2}, Lj88;->getValue()Ljava/lang/Object;
 
     move-result-object p2
 
-    check-cast p2, Ld10;
+    check-cast p2, Lv20;
 
-    sget-object v3, Lzhg;->a:Ljava/util/ArrayList;
+    sget-object v3, Lqpg;->a:Ljava/util/ArrayList;
 
     const/4 v3, 0x0
 
@@ -561,25 +582,25 @@
 
     int-to-float p2, p2
 
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
 
-    move-result-object v4
+    move-result-object v3
 
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    move-result-object v4
+    move-result-object v3
 
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
 
-    mul-float/2addr p2, v4
+    mul-float/2addr p2, v3
 
-    invoke-static {p2}, Lq7j;->c(F)I
+    invoke-static {p2}, Lmhj;->f(F)I
 
     move-result p2
 
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setCompoundDrawablePadding(I)V
 
-    sget p2, Lndd;->media_share_dialog_generic_share_text:I
+    sget p2, Lejd;->media_share_dialog_generic_share_text:I
 
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setText(I)V
 
@@ -587,13 +608,13 @@
 
     invoke-virtual {v1, v2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    new-instance p1, Lone/me/sdk/uikit/common/button/OneMeButton;
+    new-instance p1, Lu7b;
 
     invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object p2
 
-    invoke-direct {p1, p2, v3}, Lone/me/sdk/uikit/common/button/OneMeButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {p1, p2}, Lu7b;-><init>(Landroid/content/Context;)V
 
     new-instance p2, Landroid/widget/FrameLayout$LayoutParams;
 
@@ -601,7 +622,7 @@
 
     int-to-float v2, v2
 
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -613,7 +634,7 @@
 
     mul-float/2addr v2, v3
 
-    invoke-static {v2}, Lq7j;->c(F)I
+    invoke-static {v2}, Lmhj;->f(F)I
 
     move-result v2
 
@@ -623,77 +644,77 @@
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    invoke-virtual {p0}, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->D0()Lzlb;
+    invoke-virtual {p0}, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->L0()Llob;
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lone/me/sdk/uikit/common/button/OneMeButton;->setCustomTheme(Lzlb;)V
+    invoke-virtual {p1, p2}, Lu7b;->setCustomTheme(Llob;)V
 
-    sget-object p2, Ly5b;->c:Ly5b;
+    sget-object p2, Ls7b;->c:Ls7b;
 
-    invoke-virtual {p1, p2}, Lone/me/sdk/uikit/common/button/OneMeButton;->setSize(Ly5b;)V
+    invoke-virtual {p1, p2}, Lu7b;->setSize(Ls7b;)V
 
-    sget-object p2, Lx5b;->c:Lx5b;
+    sget-object p2, Lr7b;->c:Lr7b;
 
-    invoke-virtual {p1, p2}, Lone/me/sdk/uikit/common/button/OneMeButton;->setMode(Lx5b;)V
+    invoke-virtual {p1, p2}, Lu7b;->setMode(Lr7b;)V
 
-    sget-object p2, Lv5b;->d:Lv5b;
+    sget-object p2, Lp7b;->d:Lp7b;
 
-    invoke-virtual {p1, p2}, Lone/me/sdk/uikit/common/button/OneMeButton;->setAppearance(Lv5b;)V
+    invoke-virtual {p1, p2}, Lu7b;->setAppearance(Lp7b;)V
 
-    sget p2, Lx5e;->o:I
+    sget p2, Lkce;->o:I
 
-    invoke-virtual {p1, p2}, Lone/me/sdk/uikit/common/button/OneMeButton;->setText(I)V
+    invoke-virtual {p1, p2}, Lu7b;->setText(I)V
 
-    new-instance p2, Lk6;
+    new-instance p2, Lu7;
 
     const/4 v0, 0x3
 
-    invoke-direct {p2, v0, p0}, Lk6;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p2, v0, p0}, Lu7;-><init>(ILjava/lang/Object;)V
 
-    invoke-static {p1, p2}, Ljmj;->d(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+    invoke-static {p1, p2}, Lwuj;->c(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
     invoke-virtual {v1, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
     return-object v1
 .end method
 
-.method public final O0(II)V
+.method public final W0(II)V
     .locals 3
 
-    iget-object v0, p0, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->F0:Lo58;
+    iget-object v0, p0, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->F0:Lj88;
 
-    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Ldjb;
+    check-cast v0, Lrlb;
 
     invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-static {v1, p1}, Lu7;->e(Landroid/content/Context;I)Ljava/lang/String;
+    invoke-static {v1, p1}, Ln94;->K(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Ldjb;->h(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, p1}, Lrlb;->i(Ljava/lang/CharSequence;)V
 
-    new-instance p1, Lrjb;
+    new-instance p1, Lfmb;
 
-    invoke-direct {p1, p2}, Lrjb;-><init>(I)V
+    invoke-direct {p1, p2}, Lfmb;-><init>(I)V
 
-    invoke-virtual {v0, p1}, Ldjb;->e(Lvjb;)V
+    invoke-virtual {v0, p1}, Lrlb;->e(Ljmb;)V
 
-    sget-object p1, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->J0:[Lz28;
+    sget-object p1, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->J0:[Lv58;
 
     const/4 p2, 0x1
 
     aget-object p1, p1, p2
 
-    iget-object p1, p0, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->I0:Lls;
+    iget-object p1, p0, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->I0:Lwt;
 
-    invoke-virtual {p1, p0}, Lls;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+    invoke-virtual {p1, p0}, Lwt;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -705,32 +726,32 @@
 
     move-result p1
 
-    new-instance p2, Lljb;
+    new-instance p2, Lzlb;
 
     const/4 v1, 0x3
 
     const/4 v2, 0x0
 
-    invoke-direct {p2, v2, v2, p1, v1}, Lljb;-><init>(IIII)V
+    invoke-direct {p2, v2, v2, p1, v1}, Lzlb;-><init>(IIII)V
 
-    invoke-virtual {v0, p2}, Ldjb;->c(Lljb;)V
+    invoke-virtual {v0, p2}, Lrlb;->c(Lzlb;)V
 
     :cond_0
-    invoke-virtual {v0}, Ldjb;->i()Lcjb;
+    invoke-virtual {v0}, Lrlb;->j()Lqlb;
 
     return-void
 .end method
 
-.method public final onChangeStarted(Lf94;Lg94;)V
+.method public final onChangeStarted(Lua4;Lva4;)V
     .locals 0
 
-    invoke-super {p0, p1, p2}, Lone/me/sdk/arch/Widget;->onChangeStarted(Lf94;Lg94;)V
+    invoke-super {p0, p1, p2}, Lone/me/sdk/arch/Widget;->onChangeStarted(Lua4;Lva4;)V
 
-    instance-of p2, p1, Lpw4;
+    instance-of p2, p1, Lyx4;
 
     if-eqz p2, :cond_0
 
-    check-cast p1, Lpw4;
+    check-cast p1, Lyx4;
 
     goto :goto_0
 
@@ -738,7 +759,7 @@
     const/4 p1, 0x0
 
     :goto_0
-    iput-object p1, p0, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->G0:Lpw4;
+    iput-object p1, p0, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->G0:Lyx4;
 
     return-void
 .end method
@@ -748,19 +769,19 @@
 
     invoke-super {p0, p1}, Lone/me/sdk/bottomsheet/BottomSheetWidget;->onDestroyView(Landroid/view/View;)V
 
-    iget-object p1, p0, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->D0:Lo58;
+    iget-object p1, p0, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->D0:Lj88;
 
-    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
+    invoke-interface {p1}, Lj88;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lgn2;
+    check-cast p1, Lho2;
 
-    invoke-virtual {p1}, Lgn2;->u()V
+    invoke-virtual {p1}, Lho2;->s()V
 
     const/4 p1, 0x0
 
-    iput-object p1, p0, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->G0:Lpw4;
+    iput-object p1, p0, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->G0:Lyx4;
 
     return-void
 .end method
@@ -768,47 +789,47 @@
 .method public final onViewCreated(Landroid/view/View;)V
     .locals 3
 
-    iget-object p1, p0, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->D0:Lo58;
+    iget-object p1, p0, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->D0:Lj88;
 
-    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lgn2;
-
-    iget-object p1, p1, Lgn2;->y0:Lpld;
-
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lj88;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lj88;->p()Ll88;
-
-    move-result-object v0
-
-    sget-object v1, Lo78;->d:Lo78;
-
-    invoke-static {p1, v0, v1}, Lmt0;->b(Ld76;Ll88;Lo78;)Lpw1;
+    invoke-interface {p1}, Lj88;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    new-instance v0, Lpm2;
+    check-cast p1, Lho2;
+
+    iget-object p1, p1, Lho2;->z0:Lmrd;
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lab8;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lab8;->p()Lcb8;
+
+    move-result-object v0
+
+    sget-object v1, Lga8;->d:Lga8;
+
+    invoke-static {p1, v0, v1}, Lsea;->b(Lb96;Lcb8;Lga8;)Lsx1;
+
+    move-result-object p1
+
+    new-instance v0, Lqn2;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1, p0}, Lpm2;-><init>(Lkotlin/coroutines/Continuation;Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;)V
+    invoke-direct {v0, v1, p0}, Lqn2;-><init>(Lkotlin/coroutines/Continuation;Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;)V
 
-    new-instance v1, Lm96;
+    new-instance v1, Llb6;
 
     const/4 v2, 0x1
 
-    invoke-direct {v1, p1, v0, v2}, Lm96;-><init>(Ld76;Lbr6;I)V
+    invoke-direct {v1, p1, v0, v2}, Llb6;-><init>(Lb96;Lys6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lw78;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Loa8;
 
     move-result-object p1
 
-    invoke-static {v1, p1}, Lgu0;->x(Ld76;Lzb4;)Lmmf;
+    invoke-static {v1, p1}, Lzka;->w(Lb96;Lnd4;)Lcuf;
 
     return-void
 .end method

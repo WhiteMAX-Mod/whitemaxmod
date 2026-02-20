@@ -1,104 +1,66 @@
 .class public final Ll04;
-.super Lp6g;
+.super Landroid/text/style/ClickableSpan;
 .source "SourceFile"
-
-# interfaces
-.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:Lbbh;
+.field public final a:J
 
-.field public final synthetic o:Lp04;
+.field public b:Lgb2;
 
 
 # direct methods
-.method public constructor <init>(Lp04;Lbbh;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(J)V
     .locals 0
 
-    iput-object p1, p0, Ll04;->o:Lp04;
+    invoke-direct {p0}, Landroid/text/style/ClickableSpan;-><init>()V
 
-    iput-object p2, p0, Ll04;->X:Lbbh;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-wide p1, p0, Ll04;->a:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lzb4;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Ll04;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Ll04;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Ll04;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final onClick(Landroid/view/View;)V
     .locals 2
 
-    new-instance p1, Ll04;
+    iget-object p1, p0, Ll04;->b:Lgb2;
 
-    iget-object v0, p0, Ll04;->o:Lp04;
+    if-eqz p1, :cond_0
 
-    iget-object v1, p0, Ll04;->X:Lbbh;
+    iget-object p1, p1, Lgb2;->b:Ljava/lang/Object;
 
-    invoke-direct {p1, v0, v1, p2}, Ll04;-><init>(Lp04;Lbbh;Lkotlin/coroutines/Continuation;)V
+    check-cast p1, Lga4;
 
-    return-object p1
-.end method
+    iget-object p1, p1, Lga4;->I0:Lm6a;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    if-eqz p1, :cond_0
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    iget-object p1, p1, Lm6a;->a:Ljava/lang/Object;
 
-    iget-object p1, p0, Ll04;->o:Lp04;
+    check-cast p1, Lone/me/messages/list/ui/MessagesListWidget;
 
-    iget-object p1, p1, Lp04;->z:Lo58;
+    sget-object v0, Lone/me/messages/list/ui/MessagesListWidget;->g1:[Lv58;
 
-    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
+    invoke-virtual {p1}, Lone/me/messages/list/ui/MessagesListWidget;->U0()Lh2a;
 
     move-result-object p1
 
-    check-cast p1, Lt2b;
+    iget-wide v0, p0, Ll04;->a:J
 
-    new-instance v0, Lzah;
+    invoke-virtual {p1, v0, v1}, Lh2a;->G(J)V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    :cond_0
+    return-void
+.end method
 
-    iget-object v1, p0, Ll04;->X:Lbbh;
+.method public final updateDrawState(Landroid/text/TextPaint;)V
+    .locals 1
 
-    iput-object v1, v0, Lzah;->q:Lbbh;
+    const/4 v0, 0x1
 
-    new-instance v1, Ldbh;
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setUnderlineText(Z)V
 
-    invoke-direct {v1, v0}, Ldbh;-><init>(Lzah;)V
-
-    invoke-virtual {p1, v1}, Lt2b;->n(Ldbh;)J
-
-    move-result-wide v0
-
-    new-instance p1, Ljava/lang/Long;
-
-    invoke-direct {p1, v0, v1}, Ljava/lang/Long;-><init>(J)V
-
-    return-object p1
+    return-void
 .end method

@@ -3,20 +3,20 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lq91;
+.implements Lda1;
 
 
 # instance fields
-.field public final a:Ljava/util/Set;
+.field public final a:Lrc3;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/Set;)V
+.method public constructor <init>(Lrc3;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lo91;->a:Ljava/util/Set;
+    iput-object p1, p0, Lo91;->a:Lrc3;
 
     return-void
 .end method
@@ -44,11 +44,11 @@
     :cond_1
     check-cast p1, Lo91;
 
-    iget-object v1, p0, Lo91;->a:Ljava/util/Set;
+    iget-object v1, p0, Lo91;->a:Lrc3;
 
-    iget-object p1, p1, Lo91;->a:Ljava/util/Set;
+    iget-object p1, p1, Lo91;->a:Lrc3;
 
-    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -63,9 +63,9 @@
 .method public final hashCode()I
     .locals 1
 
-    iget-object v0, p0, Lo91;->a:Ljava/util/Set;
+    iget-object v0, p0, Lo91;->a:Lrc3;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v0}, Lrc3;->hashCode()I
 
     move-result v0
 
@@ -77,11 +77,11 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "UpdateContacts(contactIds="
+    const-string v1, "ChatsUpdate(info="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lo91;->a:Ljava/util/Set;
+    iget-object v1, p0, Lo91;->a:Lrc3;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

@@ -1,53 +1,23 @@
-.class public interface abstract Lgih;
+.class public abstract Lgih;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract d()V
-.end method
+# direct methods
+.method public static a(Landroid/content/Context;)Z
+    .locals 1
 
-.method public abstract e()V
-.end method
+    const-class v0, Landroid/os/UserManager;
 
-.method public abstract f(I)Z
-.end method
+    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
 
-.method public abstract flush()V
-.end method
+    move-result-object p0
 
-.method public abstract g(I)I
-.end method
+    check-cast p0, Landroid/os/UserManager;
 
-.method public abstract h(Ljava/util/List;)V
-.end method
+    invoke-virtual {p0}, Landroid/os/UserManager;->isUserUnlocked()Z
 
-.method public abstract i(I)V
-.end method
+    move-result p0
 
-.method public abstract j(I)Landroid/view/Surface;
-.end method
-
-.method public abstract k(J)V
-.end method
-
-.method public abstract l(IILpj6;Ljava/util/List;J)V
-.end method
-
-.method public abstract m(Lko4;)V
-.end method
-
-.method public abstract n(ILandroid/graphics/Bitmap;Lxw3;)Z
-.end method
-
-.method public abstract o()Z
-.end method
-
-.method public abstract p(Lq5g;)V
-.end method
-
-.method public abstract q(I)V
-.end method
-
-.method public abstract release()V
+    return p0
 .end method

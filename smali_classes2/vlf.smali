@@ -1,53 +1,138 @@
-.class public abstract Lvlf;
-.super Lylf;
+.class public final Lvlf;
+.super Lpdg;
 .source "SourceFile"
+
+# interfaces
+.implements Lys6;
 
 
 # instance fields
-.field public final h:Ljava/math/BigInteger;
+.field public final synthetic X:Ljava/lang/String;
 
-.field public final i:Ljava/math/BigInteger;
+.field public final synthetic Y:Lbmf;
 
-.field public final j:Ljava/math/BigInteger;
-
-.field public final k:Ljava/lang/Long;
-
-.field public final l:Ljava/lang/Boolean;
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(IJLjava/lang/String;Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/lang/Long;Ljava/lang/String;La2c;Ljava/lang/Boolean;)V
-    .locals 8
+.method public constructor <init>(Ljava/lang/String;Lbmf;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    const/4 v2, 0x2
+    iput-object p1, p0, Lvlf;->X:Ljava/lang/String;
 
-    move-object v0, p0
+    iput-object p2, p0, Lvlf;->Y:Lbmf;
 
-    move v1, p1
+    const/4 p1, 0x2
 
-    move-wide v3, p2
-
-    move-object v5, p4
-
-    move-object/from16 v6, p9
-
-    move-object/from16 v7, p10
-
-    invoke-direct/range {v0 .. v7}, Lylf;-><init>(IIJLjava/lang/String;Ljava/lang/String;La2c;)V
-
-    iput-object p5, p0, Lvlf;->h:Ljava/math/BigInteger;
-
-    iput-object p6, p0, Lvlf;->i:Ljava/math/BigInteger;
-
-    iput-object p7, p0, Lvlf;->j:Ljava/math/BigInteger;
-
-    move-object/from16 p1, p11
-
-    iput-object p1, p0, Lvlf;->l:Ljava/lang/Boolean;
-
-    move-object/from16 p1, p8
-
-    iput-object p1, p0, Lvlf;->k:Ljava/lang/Long;
+    invoke-direct {p0, p1, p3}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lnd4;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lvlf;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lvlf;
+
+    sget-object p2, Lmah;->a:Lmah;
+
+    invoke-virtual {p1, p2}, Lvlf;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance p1, Lvlf;
+
+    iget-object v0, p0, Lvlf;->X:Ljava/lang/String;
+
+    iget-object v1, p0, Lvlf;->Y:Lbmf;
+
+    invoke-direct {p1, v0, v1, p2}, Lvlf;-><init>(Ljava/lang/String;Lbmf;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Lvlf;->o:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    const-string v0, "Playback("
+
+    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v0, p0, Lvlf;->X:Ljava/lang/String;
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, ") | releasing safely player on completion"
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "SimpleRingtonePlayer"
+
+    invoke-static {v0, p1}, Ltej;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    iput v1, p0, Lvlf;->o:I
+
+    iget-object p1, p0, Lvlf;->Y:Lbmf;
+
+    invoke-static {p1, p0}, Lbmf;->f(Lbmf;Lda4;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lod4;->a:Lod4;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
 .end method

@@ -2,84 +2,110 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lkn2;
-
 
 # instance fields
-.field public final a:J
+.field public final a:Lbgg;
+
+.field public final b:Lbgg;
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Ljn2;->a:J
+    new-instance v0, Liy1;
+
+    const/16 v1, 0x17
+
+    invoke-direct {v0, v1}, Liy1;-><init>(I)V
+
+    new-instance v1, Lbgg;
+
+    invoke-direct {v1, v0}, Lbgg;-><init>(Lis6;)V
+
+    iput-object v1, p0, Ljn2;->a:Lbgg;
+
+    new-instance v0, Liy1;
+
+    const/16 v1, 0x18
+
+    invoke-direct {v0, v1}, Liy1;-><init>(I)V
+
+    new-instance v1, Lbgg;
+
+    invoke-direct {v1, v0}, Lbgg;-><init>(Lis6;)V
+
+    iput-object v1, p0, Ljn2;->b:Lbgg;
 
     return-void
 .end method
 
+.method public static a(I)Lr94;
+    .locals 6
+
+    new-instance v0, Lr94;
+
+    sget v1, Lyhb;->o0:I
+
+    new-instance v2, Lcpg;
+
+    invoke-direct {v2, p0}, Lcpg;-><init>(I)V
+
+    sget p0, Lejb;->k:I
+
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    const/4 v4, 0x0
+
+    const/16 v5, 0x14
+
+    invoke-direct/range {v0 .. v5}, Lr94;-><init>(ILhpg;Ljava/lang/Integer;Ljava/lang/Integer;I)V
+
+    return-object v0
+.end method
+
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Ljn2;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Ljn2;
-
-    iget-wide v3, p0, Ljn2;->a:J
-
-    iget-wide v5, p1, Ljn2;->a:J
-
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
+.method public final b()Lig8;
     .locals 2
 
-    iget-wide v0, p0, Ljn2;->a:J
+    invoke-static {}, Lfk3;->c()Lig8;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    move-result-object v0
 
-    move-result v0
+    iget-object v1, p0, Ljn2;->b:Lbgg;
 
-    return v0
-.end method
+    invoke-virtual {v1}, Lbgg;->getValue()Ljava/lang/Object;
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+    move-result-object v1
 
-    const-string v0, "DownloadError(messageId="
+    check-cast v1, Lr94;
 
-    const-string v1, ")"
+    invoke-virtual {v0, v1}, Lig8;->add(Ljava/lang/Object;)Z
 
-    iget-wide v2, p0, Ljn2;->a:J
+    sget v1, Lbib;->C1:I
 
-    invoke-static {v2, v3, v0, v1}, Lcbh;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Ljn2;->a(I)Lr94;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lig8;->add(Ljava/lang/Object;)Z
+
+    iget-object v1, p0, Ljn2;->a:Lbgg;
+
+    invoke-virtual {v1}, Lbgg;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lr94;
+
+    invoke-virtual {v0, v1}, Lig8;->add(Ljava/lang/Object;)Z
+
+    invoke-static {v0}, Lfk3;->b(Ljava/util/List;)Lig8;
 
     move-result-object v0
 

@@ -6,46 +6,28 @@
 # instance fields
 .field public final a:Ljava/lang/String;
 
-.field public final b:J
+.field public final b:Ljava/lang/String;
 
-.field public final c:I
+.field public final c:Ljava/lang/String;
+
+.field public final d:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;JI)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lbd0;->a:Ljava/lang/String;
 
-    iput-wide p2, p0, Lbd0;->b:J
+    iput-object p2, p0, Lbd0;->b:Ljava/lang/String;
 
-    iput p4, p0, Lbd0;->c:I
+    iput-object p3, p0, Lbd0;->c:Ljava/lang/String;
+
+    iput-object p4, p0, Lbd0;->d:Ljava/lang/String;
 
     return-void
-.end method
-
-.method public static a()Lto6;
-    .locals 3
-
-    new-instance v0, Lto6;
-
-    const/4 v1, 0x3
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v2, v1}, Lto6;-><init>(CI)V
-
-    const-wide/16 v1, 0x0
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    iput-object v1, v0, Lto6;->d:Ljava/lang/Object;
-
-    return-object v0
 .end method
 
 
@@ -53,124 +35,108 @@
 .method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
+    const/4 v0, 0x1
+
     if-ne p1, p0, :cond_0
 
-    goto :goto_1
+    return v0
 
     :cond_0
-    instance-of v0, p1, Lbd0;
+    instance-of v1, p1, Lbd0;
 
-    if-eqz v0, :cond_3
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_1
 
     check-cast p1, Lbd0;
 
-    iget-object v0, p0, Lbd0;->a:Ljava/lang/String;
+    iget-object v1, p0, Lbd0;->a:Ljava/lang/String;
 
-    if-nez v0, :cond_1
+    iget-object v3, p1, Lbd0;->a:Ljava/lang/String;
 
-    iget-object v0, p1, Lbd0;->a:Ljava/lang/String;
+    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    if-nez v0, :cond_3
+    move-result v1
 
-    goto :goto_0
+    if-eqz v1, :cond_1
 
-    :cond_1
-    iget-object v1, p1, Lbd0;->a:Ljava/lang/String;
+    iget-object v1, p0, Lbd0;->b:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    iget-object v3, p1, Lbd0;->b:Ljava/lang/String;
 
-    move-result v0
+    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    if-eqz v0, :cond_3
+    move-result v1
 
-    :goto_0
-    iget-wide v0, p1, Lbd0;->b:J
+    if-eqz v1, :cond_1
 
-    iget p1, p1, Lbd0;->c:I
+    iget-object v1, p0, Lbd0;->c:Ljava/lang/String;
 
-    iget-wide v2, p0, Lbd0;->b:J
+    iget-object v3, p1, Lbd0;->c:Ljava/lang/String;
 
-    cmp-long v0, v2, v0
+    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    if-nez v0, :cond_3
+    move-result v1
 
-    iget v0, p0, Lbd0;->c:I
+    if-eqz v1, :cond_1
 
-    if-nez v0, :cond_2
+    iget-object v1, p0, Lbd0;->d:Ljava/lang/String;
 
-    if-nez p1, :cond_3
+    iget-object p1, p1, Lbd0;->d:Ljava/lang/String;
 
-    goto :goto_1
-
-    :cond_2
-    invoke-static {v0, p1}, Lt02;->d(II)Z
+    invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_3
+    if-eqz p1, :cond_1
 
-    :goto_1
-    const/4 p1, 0x1
+    return v0
 
-    return p1
-
-    :cond_3
-    const/4 p1, 0x0
-
-    return p1
+    :cond_1
+    return v2
 .end method
 
 .method public final hashCode()I
-    .locals 8
+    .locals 3
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lbd0;->a:Ljava/lang/String;
 
-    iget-object v1, p0, Lbd0;->a:Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
-    if-nez v1, :cond_0
+    move-result v0
 
-    move v1, v0
+    const v1, 0xf4243
 
-    goto :goto_0
+    xor-int/2addr v0, v1
 
-    :cond_0
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lbd0;->b:Ljava/lang/String;
+
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+
+    move-result v2
+
+    xor-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lbd0;->c:Ljava/lang/String;
+
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+
+    move-result v2
+
+    xor-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget-object v1, p0, Lbd0;->d:Ljava/lang/String;
+
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
     move-result v1
 
-    :goto_0
-    const v2, 0xf4243
-
-    xor-int/2addr v1, v2
-
-    mul-int/2addr v1, v2
-
-    const/16 v3, 0x20
-
-    iget-wide v4, p0, Lbd0;->b:J
-
-    ushr-long v6, v4, v3
-
-    xor-long v3, v6, v4
-
-    long-to-int v3, v3
-
-    xor-int/2addr v1, v3
-
-    mul-int/2addr v1, v2
-
-    iget v2, p0, Lbd0;->c:I
-
-    if-nez v2, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    invoke-static {v2}, Lt02;->t(I)I
-
-    move-result v0
-
-    :goto_1
     xor-int/2addr v0, v1
 
     return v0
@@ -181,7 +147,7 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "TokenResult{token="
+    const-string v1, "GraphicDeviceInfo{glVersion="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -189,57 +155,31 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", tokenExpirationTimestamp="
+    const-string v1, ", eglVersion="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v1, p0, Lbd0;->b:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", responseCode="
+    iget-object v1, p0, Lbd0;->b:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v1, 0x1
-
-    iget v2, p0, Lbd0;->c:I
-
-    if-eq v2, v1, :cond_2
-
-    const/4 v1, 0x2
-
-    if-eq v2, v1, :cond_1
-
-    const/4 v1, 0x3
-
-    if-eq v2, v1, :cond_0
-
-    const-string v1, "null"
-
-    goto :goto_0
-
-    :cond_0
-    const-string v1, "AUTH_ERROR"
-
-    goto :goto_0
-
-    :cond_1
-    const-string v1, "BAD_CONFIG"
-
-    goto :goto_0
-
-    :cond_2
-    const-string v1, "OK"
-
-    :goto_0
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "}"
+    const-string v1, ", glExtensions="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-object v1, p0, Lbd0;->c:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", eglExtensions="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lbd0;->d:Ljava/lang/String;
+
+    const-string v2, "}"
+
+    invoke-static {v0, v1, v2}, Ltx8;->n(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

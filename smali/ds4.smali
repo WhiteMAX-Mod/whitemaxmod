@@ -3,269 +3,124 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lgt5;
+.implements Lm67;
+.implements Ln67;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Leq3;
 
-.field public final b:Ljava/lang/Object;
+.field public final b:Landroid/content/Context;
+
+.field public final c:Ly4d;
+
+.field public final d:Ljava/util/Set;
+
+.field public final e:Ljava/util/concurrent/Executor;
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 3
+.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Ljava/util/Set;Ly4d;Ljava/util/concurrent/Executor;)V
+    .locals 2
 
-    const/4 v0, 0x1
+    new-instance v0, Leq3;
 
-    iput v0, p0, Lds4;->a:I
+    const/4 v1, 0x1
 
-    .line 1
+    invoke-direct {v0, p1, v1, p2}, Leq3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    and-int/lit8 p1, p1, 0x1
+    iput-object v0, p0, Lds4;->a:Leq3;
 
-    if-eqz p1, :cond_0
+    iput-object p3, p0, Lds4;->d:Ljava/util/Set;
 
-    .line 2
-    new-instance p1, Liff;
+    iput-object p5, p0, Lds4;->e:Ljava/util/concurrent/Executor;
 
-    const/4 v0, 0x2
+    iput-object p4, p0, Lds4;->c:Ly4d;
 
-    const-string v1, "image/jpeg"
-
-    const v2, 0xffd8
-
-    invoke-direct {p1, v2, v0, v1}, Liff;-><init>(IILjava/lang/String;)V
-
-    iput-object p1, p0, Lds4;->b:Ljava/lang/Object;
-
-    goto :goto_0
-
-    .line 3
-    :cond_0
-    new-instance p1, Llz7;
-
-    invoke-direct {p1}, Llz7;-><init>()V
-
-    iput-object p1, p0, Lds4;->b:Ljava/lang/Object;
-
-    :goto_0
-    return-void
-.end method
-
-.method public constructor <init>(Lpj6;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lds4;->a:I
-
-    .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 5
-    iput-object p1, p0, Lds4;->b:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method private final a()V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final b(JJ)V
-    .locals 0
+    iput-object p1, p0, Lds4;->b:Landroid/content/Context;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final H(Lkt5;)V
-    .locals 4
+.method public final a()Lvxj;
+    .locals 2
 
-    iget v0, p0, Lds4;->a:I
+    iget-object v0, p0, Lds4;->b:Landroid/content/Context;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {v0}, Lgih;->a(Landroid/content/Context;)Z
 
-    iget-object v0, p0, Lds4;->b:Ljava/lang/Object;
+    move-result v0
 
-    check-cast v0, Lgt5;
+    if-nez v0, :cond_0
 
-    invoke-interface {v0, p1}, Lgt5;->H(Lkt5;)V
+    const-string v0, ""
 
-    return-void
-
-    :pswitch_0
-    const/4 v0, 0x0
-
-    const/4 v1, 0x3
-
-    invoke-interface {p1, v0, v1}, Lkt5;->A(II)Lrrg;
+    invoke-static {v0}, La1j;->f(Ljava/lang/Object;)Lvxj;
 
     move-result-object v0
 
-    new-instance v1, Lff0;
-
-    const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
-
-    invoke-direct {v1, v2, v3}, Lff0;-><init>(J)V
-
-    invoke-interface {p1, v1}, Lkt5;->Q(Like;)V
-
-    invoke-interface {p1}, Lkt5;->v()V
-
-    iget-object p1, p0, Lds4;->b:Ljava/lang/Object;
-
-    check-cast p1, Lpj6;
-
-    invoke-virtual {p1}, Lpj6;->a()Lnj6;
-
-    move-result-object v1
-
-    const-string v2, "text/x-unknown"
-
-    invoke-static {v2}, Lw5a;->n(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    iput-object v2, v1, Lnj6;->m:Ljava/lang/String;
-
-    iget-object p1, p1, Lpj6;->n:Ljava/lang/String;
-
-    iput-object p1, v1, Lnj6;->j:Ljava/lang/String;
-
-    invoke-static {v1, v0}, Lcbh;->s(Lnj6;Lrrg;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final d(JJ)V
-    .locals 1
-
-    iget v0, p0, Lds4;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lds4;->b:Ljava/lang/Object;
-
-    check-cast v0, Lgt5;
-
-    invoke-interface {v0, p1, p2, p3, p4}, Lgt5;->d(JJ)V
-
-    :pswitch_0
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final f0(Lit5;Lf7;)I
-    .locals 1
-
-    iget v0, p0, Lds4;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lds4;->b:Ljava/lang/Object;
-
-    check-cast v0, Lgt5;
-
-    invoke-interface {v0, p1, p2}, Lgt5;->f0(Lit5;Lf7;)I
-
-    move-result p1
-
-    return p1
-
-    :pswitch_0
-    const p2, 0x7fffffff
-
-    invoke-interface {p1, p2}, Lit5;->K(I)I
-
-    move-result p1
-
-    const/4 p2, -0x1
-
-    if-ne p1, p2, :cond_0
-
-    goto :goto_0
+    return-object v0
 
     :cond_0
-    const/4 p2, 0x0
+    new-instance v0, Lcs4;
 
-    :goto_0
-    return p2
+    const/4 v1, 0x0
 
-    nop
+    invoke-direct {v0, p0, v1}, Lcs4;-><init>(Lds4;I)V
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    iget-object v1, p0, Lds4;->e:Ljava/util/concurrent/Executor;
+
+    invoke-static {v0, v1}, La1j;->c(Ljava/util/concurrent/Callable;Ljava/util/concurrent/Executor;)Lvxj;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
-.method public final l(Lit5;)Z
-    .locals 1
+.method public final b()V
+    .locals 2
 
-    iget v0, p0, Lds4;->a:I
+    iget-object v0, p0, Lds4;->d:Ljava/util/Set;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-interface {v0}, Ljava/util/Set;->size()I
 
-    iget-object v0, p0, Lds4;->b:Ljava/lang/Object;
+    move-result v0
 
-    check-cast v0, Lgt5;
+    const/4 v1, 0x0
 
-    invoke-interface {v0, p1}, Lgt5;->l(Lit5;)Z
+    if-gtz v0, :cond_0
 
-    move-result p1
+    invoke-static {v1}, La1j;->f(Ljava/lang/Object;)Lvxj;
 
-    return p1
-
-    :pswitch_0
-    const/4 p1, 0x1
-
-    return p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final release()V
-    .locals 1
-
-    iget v0, p0, Lds4;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lds4;->b:Ljava/lang/Object;
-
-    check-cast v0, Lgt5;
-
-    invoke-interface {v0}, Lgt5;->release()V
-
-    :pswitch_0
     return-void
 
-    nop
+    :cond_0
+    iget-object v0, p0, Lds4;->b:Landroid/content/Context;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-static {v0}, Lgih;->a(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    invoke-static {v1}, La1j;->f(Ljava/lang/Object;)Lvxj;
+
+    return-void
+
+    :cond_1
+    new-instance v0, Lcs4;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, p0, v1}, Lcs4;-><init>(Lds4;I)V
+
+    iget-object v1, p0, Lds4;->e:Ljava/util/concurrent/Executor;
+
+    invoke-static {v0, v1}, La1j;->c(Ljava/util/concurrent/Callable;Ljava/util/concurrent/Executor;)Lvxj;
+
+    return-void
 .end method

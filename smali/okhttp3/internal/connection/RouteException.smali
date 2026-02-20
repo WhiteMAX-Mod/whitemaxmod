@@ -17,16 +17,17 @@
     k = 0x1
     mv = {
         0x1,
-        0x4,
+        0x8,
         0x0
     }
+    xi = 0x30
 .end annotation
 
 
 # instance fields
-.field public a:Ljava/io/IOException;
+.field public final a:Ljava/io/IOException;
 
-.field public final b:Ljava/io/IOException;
+.field public b:Ljava/io/IOException;
 
 
 # direct methods
@@ -35,9 +36,9 @@
 
     invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
 
-    iput-object p1, p0, Lokhttp3/internal/connection/RouteException;->b:Ljava/io/IOException;
-
     iput-object p1, p0, Lokhttp3/internal/connection/RouteException;->a:Ljava/io/IOException;
+
+    iput-object p1, p0, Lokhttp3/internal/connection/RouteException;->b:Ljava/io/IOException;
 
     return-void
 .end method

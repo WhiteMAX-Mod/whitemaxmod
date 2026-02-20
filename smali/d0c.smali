@@ -1,150 +1,84 @@
 .class public final Ld0c;
-.super Ly48;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Landroid/os/Parcelable;
 
 
 # static fields
-.field public static final X:Ld0c;
-
-.field public static final b:Ld0c;
-
-.field public static final c:Ld0c;
-
-.field public static final d:Ld0c;
-
-.field public static final o:Ld0c;
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Ld0c;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljava/lang/String;
+
+.field public final b:[Ljava/lang/String;
+
+.field public final c:I
 
 
 # direct methods
-.method static synthetic constructor <clinit>()V
-    .locals 3
+.method static constructor <clinit>()V
+    .locals 2
 
-    new-instance v0, Ld0c;
+    new-instance v0, Lnmb;
 
-    const/4 v1, 0x2
+    const/4 v1, 0x3
 
-    const/4 v2, 0x0
+    invoke-direct {v0, v1}, Lnmb;-><init>(I)V
 
-    invoke-direct {v0, v1, v2}, Ld0c;-><init>(II)V
-
-    sput-object v0, Ld0c;->b:Ld0c;
-
-    new-instance v0, Ld0c;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v0, v1, v2}, Ld0c;-><init>(II)V
-
-    sput-object v0, Ld0c;->c:Ld0c;
-
-    new-instance v0, Ld0c;
-
-    const/4 v2, 0x2
-
-    invoke-direct {v0, v1, v2}, Ld0c;-><init>(II)V
-
-    sput-object v0, Ld0c;->d:Ld0c;
-
-    new-instance v0, Ld0c;
-
-    const/4 v2, 0x3
-
-    invoke-direct {v0, v1, v2}, Ld0c;-><init>(II)V
-
-    sput-object v0, Ld0c;->o:Ld0c;
-
-    new-instance v0, Ld0c;
-
-    const/4 v2, 0x4
-
-    invoke-direct {v0, v1, v2}, Ld0c;-><init>(II)V
-
-    sput-object v0, Ld0c;->X:Ld0c;
+    sput-object v0, Ld0c;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(II)V
+.method public constructor <init>(Ljava/lang/String;[Ljava/lang/String;I)V
     .locals 0
 
-    iput p2, p0, Ld0c;->a:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1}, Ly48;-><init>(I)V
+    iput-object p1, p0, Ld0c;->a:Ljava/lang/String;
+
+    iput-object p2, p0, Ld0c;->b:[Ljava/lang/String;
+
+    iput p3, p0, Ld0c;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final describeContents()I
     .locals 1
 
-    iget v0, p0, Ld0c;->a:I
+    const/4 v0, 0x0
 
-    packed-switch v0, :pswitch_data_0
+    return v0
+.end method
 
-    check-cast p1, Lt91;
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    sget-object p1, Lb3h;->a:Lb3h;
+    iget-object p2, p0, Ld0c;->a:Ljava/lang/String;
 
-    return-object p1
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    :pswitch_0
-    invoke-static {p1, p2}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iget-object p2, p0, Ld0c;->b:[Ljava/lang/String;
 
-    move-result p1
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeStringArray([Ljava/lang/String;)V
 
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    iget p2, p0, Ld0c;->c:I
 
-    move-result-object p1
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    return-object p1
-
-    :pswitch_1
-    invoke-static {p1, p2}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_2
-    invoke-static {p1, p2}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_3
-    invoke-static {p1, p2}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

@@ -1,22 +1,27 @@
 .class public final Loze;
-.super Ljava/lang/Object;
+.super Lvze;
 .source "SourceFile"
-
-# interfaces
-.implements Lsze;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public h:Ljava/lang/String;
+
+.field public i:J
+
+.field public j:I
+
+.field public k:Ljava/lang/String;
+
+.field public l:Ljava/lang/String;
 
 
-# direct methods
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 0
+# virtual methods
+.method public final a()Lwze;
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lpze;
 
-    iput-object p1, p0, Loze;->a:Ljava/lang/String;
+    invoke-direct {v0, p0}, Lpze;-><init>(Loze;)V
 
-    return-void
+    return-object v0
 .end method

@@ -3,132 +3,140 @@
 
 
 # static fields
-.field public static ActionBarTheme:I = 0x7f140000
+.field public static oneme_settings_privacy_black_list_empty_state:I = 0x7f0a0798
 
-.field public static AttachButton:I = 0x7f14000c
+.field public static oneme_settings_privacy_black_list_rv:I = 0x7f0a0799
 
-.field public static AttachButton_QuickCamera:I = 0x7f14000d
+.field public static oneme_settings_privacy_black_list_toolbar:I = 0x7f0a079a
 
-.field public static AttachButton_SmallQuickCameraButton:I = 0x7f14000e
+.field public static oneme_settings_privacy_black_list_unblock_action:I = 0x7f0a079b
 
-.field public static ComposeMessage:I = 0x7f140177
+.field public static oneme_settings_privacy_black_list_unblock_cancel_action:I = 0x7f0a079c
 
-.field public static ContactLastSeen:I = 0x7f140178
+.field public static oneme_settings_privacy_content_level_access:I = 0x7f0a079d
 
-.field public static ContactName:I = 0x7f140179
+.field public static oneme_settings_privacy_enter_pin_code_root:I = 0x7f0a079e
 
-.field public static DrawerArrowStyle:I = 0x7f14017b
+.field public static oneme_settings_privacy_family_protection:I = 0x7f0a079f
 
-.field public static ExtraActionButton:I = 0x7f14019d
+.field public static oneme_settings_privacy_info_header:I = 0x7f0a07a0
 
-.field public static ExtraActionButton_Down:I = 0x7f14019e
+.field public static oneme_settings_privacy_onboarding_content:I = 0x7f0a07a1
 
-.field public static ExtraActionButton_Up:I = 0x7f14019f
+.field public static oneme_settings_privacy_onboarding_content_subtitle:I = 0x7f0a07a2
 
-.field public static LandscapeAttachButton:I = 0x7f1401e8
+.field public static oneme_settings_privacy_onboarding_content_title:I = 0x7f0a07a3
 
-.field public static LandscapeAttachButton_LandscapeQuickCamera:I = 0x7f1401e9
+.field public static oneme_settings_privacy_onboarding_item_1:I = 0x7f0a07a4
 
-.field public static LandscapeAttachButton_LandscapeSmallQuickCameraButton:I = 0x7f1401ea
+.field public static oneme_settings_privacy_onboarding_item_2:I = 0x7f0a07a5
 
-.field public static LayoutPadding:I = 0x7f1401eb
+.field public static oneme_settings_privacy_onboarding_item_3:I = 0x7f0a07a6
 
-.field public static MenuActionButtonNoCaps:I = 0x7f140201
+.field public static oneme_settings_privacy_onboarding_item_4:I = 0x7f0a07a7
 
-.field public static MenuOverflow:I = 0x7f140202
+.field public static oneme_settings_privacy_onboarding_lock:I = 0x7f0a07a8
 
-.field public static MenuOverflowWhite:I = 0x7f140203
+.field public static oneme_settings_privacy_onboarding_lock_background:I = 0x7f0a07a9
 
-.field public static MessagesProgressBar:I = 0x7f140204
+.field public static oneme_settings_privacy_onboarding_root:I = 0x7f0a07aa
 
-.field public static NavigationDrawerTheme:I = 0x7f140205
+.field public static oneme_settings_privacy_onboarding_scroll_view:I = 0x7f0a07ab
 
-.field public static ProgressBarOrange:I = 0x7f14023b
+.field public static oneme_settings_privacy_onboarding_set_password_button:I = 0x7f0a07ac
 
-.field public static ProgressBarWhite:I = 0x7f14023c
+.field public static oneme_settings_privacy_onboarding_set_pin_code_button:I = 0x7f0a07ad
 
-.field public static RoundedButton24:I = 0x7f14023d
+.field public static oneme_settings_privacy_onboarding_toolbar:I = 0x7f0a07ae
 
-.field public static RoundedButton24_Blue:I = 0x7f14023e
+.field public static oneme_settings_privacy_onboarding_top_guideline:I = 0x7f0a07af
 
-.field public static RoundedButton24_Orange:I = 0x7f14023f
+.field public static oneme_settings_privacy_onboarding_without_code_button:I = 0x7f0a07b0
 
-.field public static RoundedButton24_Serif:I = 0x7f140240
+.field public static oneme_settings_privacy_pin_code_toolbar:I = 0x7f0a07b1
 
-.field public static RoundedButton24_Transparent:I = 0x7f140241
+.field public static oneme_settings_privacy_screen_add_me_to_chat:I = 0x7f0a07b2
 
-.field public static RoundedButton24_Transparent_WhiteText:I = 0x7f140242
+.field public static oneme_settings_privacy_screen_black_list:I = 0x7f0a07b3
 
-.field public static RoundedButton24_White:I = 0x7f140243
+.field public static oneme_settings_privacy_screen_blacklist:I = 0x7f0a07b4
 
-.field public static RowPadding:I = 0x7f140244
+.field public static oneme_settings_privacy_screen_call_me:I = 0x7f0a07b5
 
-.field public static SearchTabText:I = 0x7f14025e
+.field public static oneme_settings_privacy_screen_dialog_add_chat_button_all:I = 0x7f0a07b6
 
-.field public static SmallProgressBar:I = 0x7f14029d
+.field public static oneme_settings_privacy_screen_dialog_add_chat_button_contacts:I = 0x7f0a07b7
 
-.field public static SpinnerDropDown:I = 0x7f14029e
+.field public static oneme_settings_privacy_screen_dialog_call_button_all:I = 0x7f0a07b8
 
-.field public static SubtitleCollapsed:I = 0x7f14029f
+.field public static oneme_settings_privacy_screen_dialog_call_button_contacts:I = 0x7f0a07b9
 
-.field public static SubtitleExpanded:I = 0x7f1402a0
+.field public static oneme_settings_privacy_screen_dialog_content_level_access_all:I = 0x7f0a07ba
 
-.field public static TabText:I = 0x7f1402a1
+.field public static oneme_settings_privacy_screen_dialog_content_level_access_safe:I = 0x7f0a07bb
 
-.field public static TamTamFab:I = 0x7f1402a2
+.field public static oneme_settings_privacy_screen_dialog_finished_session_cancel_btn:I = 0x7f0a07bc
 
-.field public static TamTamTheme:I = 0x7f1402a3
+.field public static oneme_settings_privacy_screen_dialog_finished_session_finish_btn:I = 0x7f0a07bd
 
-.field public static TamTamTheme_Base:I = 0x7f1402a4
+.field public static oneme_settings_privacy_screen_dialog_online_button_contacts:I = 0x7f0a07be
 
-.field public static TamTamTheme_Base_Dark:I = 0x7f1402a5
+.field public static oneme_settings_privacy_screen_dialog_online_button_nobody:I = 0x7f0a07bf
 
-.field public static TamTamTheme_Base_PopupNotification:I = 0x7f1402a6
+.field public static oneme_settings_privacy_screen_dialog_online_never_accept_btn:I = 0x7f0a07c0
 
-.field public static TamTamTheme_CloseMode:I = 0x7f1402a7
+.field public static oneme_settings_privacy_screen_dialog_online_never_cancel_btn:I = 0x7f0a07c1
 
-.field public static Text:I = 0x7f1402a8
+.field public static oneme_settings_privacy_screen_dialog_search_by_phone_all:I = 0x7f0a07c2
 
-.field public static TextInputLayoutHint:I = 0x7f140336
+.field public static oneme_settings_privacy_screen_dialog_search_by_phone_contacts:I = 0x7f0a07c3
 
-.field public static Text_Attach:I = 0x7f1402a9
+.field public static oneme_settings_privacy_screen_finished_sessions:I = 0x7f0a07c4
 
-.field public static Text_Large:I = 0x7f1402aa
+.field public static oneme_settings_privacy_screen_how_can_section:I = 0x7f0a07c5
 
-.field public static Text_Largest:I = 0x7f1402ab
+.field public static oneme_settings_privacy_screen_how_session:I = 0x7f0a07c6
 
-.field public static Text_LocalMediaCount:I = 0x7f1402ac
+.field public static oneme_settings_privacy_screen_list:I = 0x7f0a07c7
 
-.field public static Text_LocalMediaCount_FullScreen:I = 0x7f1402ad
+.field public static oneme_settings_privacy_screen_online_state_all:I = 0x7f0a07c8
 
-.field public static Text_Normal:I = 0x7f1402ae
+.field public static oneme_settings_privacy_screen_online_state_nobody:I = 0x7f0a07c9
 
-.field public static Text_Small:I = 0x7f1402af
+.field public static oneme_settings_privacy_screen_safe_mode:I = 0x7f0a07ca
 
-.field public static Theme_Transparent:I = 0x7f1403a8
+.field public static oneme_settings_privacy_screen_search_by_phone:I = 0x7f0a07cb
 
-.field public static Theme_Transparent_DarkMenuOverflow:I = 0x7f1403a9
+.field public static oneme_settings_privacy_screen_see_online_state:I = 0x7f0a07cc
 
-.field public static Theme_Transparent_WhiteMenuOverflow:I = 0x7f1403aa
+.field public static oneme_settings_privacy_screen_settings_header_vh:I = 0x7f0a07cd
 
-.field public static Theme_Transparent_WhiteMenuOverflow_NoCaps:I = 0x7f1403ab
+.field public static oneme_settings_privacy_screen_settings_item_vh:I = 0x7f0a07ce
 
-.field public static Theme_Transparent_WhiteMenuOverflow_NoCaps_Portrait:I = 0x7f1403ac
+.field public static oneme_settings_privacy_screen_settings_warning_vh:I = 0x7f0a07cf
 
-.field public static TimePicker:I = 0x7f140423
+.field public static oneme_settings_privacy_screen_toolbar:I = 0x7f0a07d0
 
-.field public static TimePickerShape:I = 0x7f140426
+.field public static oneme_settings_privacy_screen_twofa:I = 0x7f0a07d1
 
-.field public static TimePicker_Day:I = 0x7f140424
+.field public static oneme_settings_privacy_screen_twofa_profile_delete:I = 0x7f0a07d2
 
-.field public static TimePicker_Night:I = 0x7f140425
+.field public static oneme_settings_privacy_screen_twofa_warning_item:I = 0x7f0a07d3
 
-.field public static TitleCollapsed:I = 0x7f140427
+.field public static oneme_settings_privacy_screen_web_apps:I = 0x7f0a07d4
 
-.field public static TitleExpanded:I = 0x7f140428
+.field public static oneme_settings_privacy_setup_pin_code_description:I = 0x7f0a07d5
 
-.field public static TitleExpandedSmall:I = 0x7f140429
+.field public static oneme_settings_privacy_setup_pin_code_error:I = 0x7f0a07d6
 
-.field public static frg_auth_native_ok__common:I = 0x7f14069e
+.field public static oneme_settings_privacy_setup_pin_code_forgot:I = 0x7f0a07d7
 
-.field public static frg_auth_native_ok__et_login:I = 0x7f14069f
+.field public static oneme_settings_privacy_setup_pin_code_input:I = 0x7f0a07d8
+
+.field public static oneme_settings_privacy_setup_pin_code_lock:I = 0x7f0a07d9
+
+.field public static oneme_settings_privacy_setup_pin_code_root_view:I = 0x7f0a07da
+
+.field public static oneme_settings_privacy_setup_pin_code_title:I = 0x7f0a07db
+
+.field public static top_barrier:I = 0x7f0a0c2a

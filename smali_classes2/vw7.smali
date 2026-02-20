@@ -1,85 +1,235 @@
 .class public final Lvw7;
-.super Ljava/lang/Object;
+.super Lpdg;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/Comparator;
+.implements Lys6;
+
+
+# instance fields
+.field public final synthetic X:Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;
+
+.field public synthetic o:Ljava/lang/Object;
+
+
+# direct methods
+.method public constructor <init>(Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;Lkotlin/coroutines/Continuation;)V
+    .locals 0
+
+    iput-object p1, p0, Lvw7;->X:Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lg6d;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lvw7;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lvw7;
+
+    sget-object p2, Lmah;->a:Lmah;
+
+    invoke-virtual {p1, p2}, Lvw7;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    check-cast p1, Luw7;
+    new-instance v0, Lvw7;
 
-    check-cast p2, Luw7;
+    iget-object v1, p0, Lvw7;->X:Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;
 
-    iget v0, p1, Luw7;->b:I
+    invoke-direct {v0, v1, p2}, Lvw7;-><init>(Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;Lkotlin/coroutines/Continuation;)V
 
-    if-nez v0, :cond_0
+    iput-object p1, v0, Lvw7;->o:Ljava/lang/Object;
 
-    iget v0, p2, Luw7;->b:I
+    return-object v0
+.end method
 
-    if-eqz v0, :cond_0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    const/4 p1, -0x1
+    iget-object v0, p0, Lvw7;->o:Ljava/lang/Object;
 
-    return p1
+    check-cast v0, Lg6d;
 
-    :cond_0
-    iget v0, p1, Luw7;->b:I
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    if-eqz v0, :cond_1
+    const-class p1, Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;
 
-    iget v0, p2, Luw7;->b:I
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    if-nez v0, :cond_1
+    move-result-object p1
 
-    const/4 p1, 0x1
+    sget-object v1, Ltej;->a:Lafb;
 
-    return p1
-
-    :cond_1
-    iget v0, p2, Luw7;->c:I
-
-    const/high16 v1, 0x3f800000    # 1.0f
-
-    if-eqz v0, :cond_2
-
-    iget v0, p2, Luw7;->d:I
-
-    int-to-float v0, v0
-
-    iget p2, p2, Luw7;->c:I
-
-    int-to-float p2, p2
-
-    div-float/2addr v0, p2
+    if-nez v1, :cond_0
 
     goto :goto_0
 
-    :cond_2
-    move v0, v1
+    :cond_0
+    sget-object v2, Lzm8;->d:Lzm8;
 
+    invoke-virtual {v1, v2}, Lafb;->b(Lzm8;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    const-string v3, "Show qr code in bottom sheet"
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v1, v2, p1, v3, v4}, Lafb;->c(Lzm8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
     :goto_0
-    iget p2, p1, Luw7;->c:I
+    iget-object p1, p0, Lvw7;->X:Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;
 
-    if-eqz p2, :cond_3
+    iget-object v1, v0, Lg6d;->b:Landroid/graphics/Bitmap;
 
-    iget p2, p1, Luw7;->d:I
+    invoke-virtual {v1}, Landroid/graphics/Bitmap;->getHeight()I
 
-    int-to-float p2, p2
+    move-result v1
 
-    iget p1, p1, Luw7;->c:I
+    const/16 v2, 0x4e
 
-    int-to-float p1, p1
+    int-to-float v2, v2
 
-    div-float v1, p2, p1
+    invoke-static {}, Ld25;->d()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v3
+
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
+
+    invoke-static {v2, v3, v1}, Lj64;->p(FFI)I
+
+    move-result v1
+
+    if-gtz v1, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    invoke-virtual {p1}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->K0()Landroid/view/View;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v2
+
+    if-nez v2, :cond_3
+
+    new-instance v2, Landroid/view/ViewGroup$LayoutParams;
+
+    const/4 v3, -0x1
+
+    invoke-direct {v2, v3, v1}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+
+    invoke-virtual {p1}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->K0()Landroid/view/View;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     :cond_3
-    invoke-static {v0, v1}, Ljava/lang/Float;->compare(FF)I
+    iget v3, v2, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    move-result p1
+    if-ne v3, v1, :cond_4
 
-    return p1
+    goto :goto_1
+
+    :cond_4
+    iput v1, v2, Landroid/view/ViewGroup$LayoutParams;->height:I
+
+    invoke-virtual {p1}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->K0()Landroid/view/View;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    invoke-virtual {p1}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->K0()Landroid/view/View;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/view/View;->requestLayout()V
+
+    :goto_1
+    iget-object p1, p0, Lvw7;->X:Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;
+
+    iget-object v1, p1, Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;->E0:Lgrd;
+
+    sget-object v2, Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;->P0:[Lv58;
+
+    const/4 v3, 0x1
+
+    aget-object v4, v2, v3
+
+    invoke-interface {v1, p1, v4}, Lgrd;->D(Ljava/lang/Object;Lv58;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroidx/appcompat/widget/AppCompatImageView;
+
+    new-instance v1, Landroid/widget/FrameLayout$LayoutParams;
+
+    iget-object v4, v0, Lg6d;->b:Landroid/graphics/Bitmap;
+
+    invoke-virtual {v4}, Landroid/graphics/Bitmap;->getWidth()I
+
+    move-result v4
+
+    iget-object v5, v0, Lg6d;->b:Landroid/graphics/Bitmap;
+
+    invoke-virtual {v5}, Landroid/graphics/Bitmap;->getHeight()I
+
+    move-result v5
+
+    invoke-direct {v1, v4, v5}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+
+    const/16 v4, 0x50
+
+    iput v4, v1, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
+
+    invoke-virtual {p1, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    iget-object p1, p0, Lvw7;->X:Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;
+
+    iget-object v1, p1, Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;->E0:Lgrd;
+
+    aget-object v2, v2, v3
+
+    invoke-interface {v1, p1, v2}, Lgrd;->D(Ljava/lang/Object;Lv58;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroidx/appcompat/widget/AppCompatImageView;
+
+    iget-object v0, v0, Lg6d;->b:Landroid/graphics/Bitmap;
+
+    invoke-virtual {p1, v0}, Landroidx/appcompat/widget/AppCompatImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
+
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
 .end method

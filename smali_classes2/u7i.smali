@@ -1,97 +1,135 @@
 .class public final Lu7i;
-.super Ljava/lang/Object;
+.super Lpdg;
 .source "SourceFile"
 
 # interfaces
-.implements Lq8i;
+.implements Lys6;
 
 
 # instance fields
-.field public final a:Landroid/content/Intent;
+.field public final synthetic X:Lv7i;
+
+.field public final synthetic Y:Ljava/lang/String;
+
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Intent;)V
+.method public constructor <init>(Lv7i;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lu7i;->X:Lv7i;
 
-    iput-object p1, p0, Lu7i;->a:Landroid/content/Intent;
+    iput-object p2, p0, Lu7i;->Y:Ljava/lang/String;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p1, Lnd4;
 
-    if-ne p0, p1, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return v0
+    invoke-virtual {p0, p1, p2}, Lu7i;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of v1, p1, Lu7i;
+    move-result-object p1
 
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
     check-cast p1, Lu7i;
 
-    iget-object v1, p0, Lu7i;->a:Landroid/content/Intent;
+    sget-object p2, Lmah;->a:Lmah;
 
-    iget-object p1, p1, Lu7i;->a:Landroid/content/Intent;
+    invoke-virtual {p1, p2}, Lu7i;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-result-object p1
 
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
+    return-object p1
 .end method
 
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lu7i;->a:Landroid/content/Intent;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance p1, Lu7i;
 
-    const-string v1, "CameraScreenIntentReady(intent="
+    iget-object v0, p0, Lu7i;->X:Lv7i;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object v1, p0, Lu7i;->Y:Ljava/lang/String;
 
-    iget-object v1, p0, Lu7i;->a:Landroid/content/Intent;
+    invoke-direct {p1, v0, v1, p2}, Lu7i;-><init>(Lv7i;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    return-object p1
+.end method
 
-    const-string v1, ")"
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget v0, p0, Lu7i;->o:I
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    return-object p1
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lu7i;->X:Lv7i;
+
+    iget-object v0, p1, Lv7i;->i:Lj88;
+
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
+    check-cast v0, Ls6i;
+
+    iget-wide v4, p1, Lv7i;->a:J
+
+    iget-wide v6, p1, Lv7i;->b:J
+
+    iput v1, p0, Lu7i;->o:I
+
+    iget-object p1, v0, Ls6i;->a:Lm8e;
+
+    new-instance v2, Lbt9;
+
+    iget-object v3, p0, Lu7i;->Y:Ljava/lang/String;
+
+    invoke-direct/range {v2 .. v7}, Lbt9;-><init>(Ljava/lang/String;JJ)V
+
+    const/4 v0, 0x0
+
+    invoke-static {v2, p1, p0, v0, v1}, Lfuj;->h(Lks6;Lm8e;Lkotlin/coroutines/Continuation;ZZ)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lod4;->a:Lod4;
+
+    if-ne p1, v0, :cond_2
+
     return-object v0
+
+    :cond_2
+    return-object p1
 .end method

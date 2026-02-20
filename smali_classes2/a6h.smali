@@ -1,68 +1,60 @@
 .class public final La6h;
-.super Ljava/lang/Object;
+.super Lda4;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lo58;
+.field public X:I
 
-.field public final b:Lo58;
+.field public synthetic d:Ljava/lang/Object;
 
-.field public final c:Lo58;
+.field public final synthetic o:Lb6d;
 
 
 # direct methods
-.method public constructor <init>(Lo58;Lo58;Lo58;)V
+.method public constructor <init>(Lb6d;Lda4;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, La6h;->o:Lb6d;
 
-    iput-object p1, p0, La6h;->a:Lo58;
-
-    iput-object p2, p0, La6h;->b:Lo58;
-
-    iput-object p3, p0, La6h;->c:Lo58;
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(ILe3f;)Ljava/lang/Object;
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-object v0, p0, La6h;->c:Lo58;
+    iput-object p1, p0, La6h;->d:Ljava/lang/Object;
 
-    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+    iget p1, p0, La6h;->X:I
 
-    move-result-object v0
+    const/high16 v0, -0x80000000
 
-    check-cast v0, Lmbg;
+    or-int/2addr p1, v0
 
-    check-cast v0, Lj9b;
+    iput p1, p0, La6h;->X:I
 
-    invoke-virtual {v0}, Lj9b;->b()Lsb4;
+    iget-object p1, p0, La6h;->o:Lb6d;
 
-    move-result-object v0
+    const/4 v0, 0x0
 
-    new-instance v1, Lz5h;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, p0, p1, v2}, Lz5h;-><init>(La6h;ILkotlin/coroutines/Continuation;)V
-
-    invoke-static {v0, v1, p2}, Ls9j;->k(Lqb4;Lbr6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {p1, v0, v0, p0}, Lb6d;->a(Ljava/lang/String;Lju7;Lda4;)Ljava/io/Serializable;
 
     move-result-object p1
 
-    sget-object p2, Lac4;->a:Lac4;
+    sget-object v0, Lod4;->a:Lod4;
 
-    if-ne p1, p2, :cond_0
+    if-ne p1, v0, :cond_0
 
     return-object p1
 
     :cond_0
-    sget-object p1, Lb3h;->a:Lb3h;
+    new-instance v0, Le6e;
 
-    return-object p1
+    invoke-direct {v0, p1}, Le6e;-><init>(Ljava/lang/Object;)V
+
+    return-object v0
 .end method

@@ -1,92 +1,78 @@
-.class public final Lc25;
-.super Lkotlinx/coroutines/internal/ScopeCoroutine;
+.class public Lc25;
+.super Ldz4;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic a:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
-
-
 # instance fields
-.field private volatile synthetic _decision$volatile:I
+.field public m:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lvoi;)V
+    .locals 0
 
-    const-class v0, Lc25;
+    invoke-direct {p0, p1}, Ldz4;-><init>(Lvoi;)V
 
-    const-string v1, "_decision$volatile"
+    instance-of p1, p1, Lmb7;
 
-    invoke-static {v0, v1}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+    if-eqz p1, :cond_0
 
-    move-result-object v0
+    const/4 p1, 0x2
 
-    sput-object v0, Lc25;->a:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+    iput p1, p0, Ldz4;->e:I
+
+    return-void
+
+    :cond_0
+    const/4 p1, 0x3
+
+    iput p1, p0, Ldz4;->e:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final afterCompletion(Ljava/lang/Object;)V
-    .locals 0
+.method public final d(I)V
+    .locals 1
 
-    invoke-virtual {p0, p1}, Lc25;->afterResume(Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final afterResume(Ljava/lang/Object;)V
-    .locals 3
-
-    :cond_0
-    sget-object v0, Lc25;->a:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
-
-    invoke-virtual {v0, p0}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->get(Ljava/lang/Object;)I
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    const/4 v0, 0x1
-
-    if-ne v1, v0, :cond_1
-
-    iget-object v0, p0, Lkotlinx/coroutines/internal/ScopeCoroutine;->uCont:Lkotlin/coroutines/Continuation;
-
-    invoke-static {v0}, Lo1j;->d(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object v0
-
-    invoke-static {p1}, Lkjj;->b(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    invoke-static {v0, p1}, Lkotlinx/coroutines/internal/DispatchedContinuationKt;->resumeCancellableWith(Lkotlin/coroutines/Continuation;Ljava/lang/Object;)V
-
-    return-void
-
-    :cond_1
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "Already resumed"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_2
-    const/4 v1, 0x2
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, p0, v2, v1}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->compareAndSet(Ljava/lang/Object;II)Z
-
-    move-result v0
+    iget-boolean v0, p0, Ldz4;->j:Z
 
     if-eqz v0, :cond_0
 
+    goto :goto_1
+
+    :cond_0
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Ldz4;->j:Z
+
+    iput p1, p0, Ldz4;->g:I
+
+    iget-object p1, p0, Ldz4;->k:Ljava/util/ArrayList;
+
+    invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lzy4;
+
+    invoke-interface {v0, v0}, Lzy4;->a(Lzy4;)V
+
+    goto :goto_0
+
+    :cond_1
+    :goto_1
     return-void
 .end method

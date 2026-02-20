@@ -1,103 +1,191 @@
-.class public abstract Lwnj;
-.super Ljava/lang/Object;
+.class public final Lwnj;
+.super Lxfj;
 .source "SourceFile"
 
-# interfaces
-.implements Lw9e;
+
+# instance fields
+.field public final synthetic b:I
+
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method public static b(Landroid/graphics/drawable/Drawable;)Landroid/content/res/ColorStateList;
-    .locals 2
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
+    .locals 0
 
-    instance-of v0, p0, Landroid/graphics/drawable/ColorDrawable;
+    iput p1, p0, Lwnj;->b:I
 
-    if-eqz v0, :cond_0
+    iput-object p2, p0, Lwnj;->c:Ljava/lang/Object;
 
-    check-cast p0, Landroid/graphics/drawable/ColorDrawable;
+    invoke-direct {p0}, Lxfj;-><init>()V
 
-    invoke-virtual {p0}, Landroid/graphics/drawable/ColorDrawable;->getColor()I
-
-    move-result p0
-
-    invoke-static {p0}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_0
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x1d
-
-    if-lt v0, v1, :cond_1
-
-    invoke-static {p0}, Lx4;->t(Landroid/graphics/drawable/Drawable;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-static {p0}, La85;->e(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/ColorStateListDrawable;
-
-    move-result-object p0
-
-    invoke-static {p0}, La85;->b(Landroid/graphics/drawable/ColorStateListDrawable;)Landroid/content/res/ColorStateList;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_1
-    const/4 p0, 0x0
-
-    return-object p0
+    return-void
 .end method
 
 
 # virtual methods
-.method public a(Landroid/graphics/Matrix;Landroid/graphics/Rect;IIFF)Landroid/graphics/Matrix;
-    .locals 10
+.method public final a()V
+    .locals 5
 
-    invoke-virtual {p2}, Landroid/graphics/Rect;->width()I
+    iget v0, p0, Lwnj;->b:I
 
-    move-result v0
+    packed-switch v0, :pswitch_data_0
 
-    int-to-float v0, v0
+    iget-object v0, p0, Lwnj;->c:Ljava/lang/Object;
 
-    int-to-float v1, p3
+    check-cast v0, Lzea;
 
-    div-float v8, v0, v1
+    iget-object v0, v0, Lzea;->b:Ljava/lang/Object;
 
-    invoke-virtual {p2}, Landroid/graphics/Rect;->height()I
+    check-cast v0, Ltuj;
 
-    move-result v0
+    iget-object v1, v0, Ltuj;->b:Lusi;
 
-    int-to-float v0, v0
+    const-string v2, "unlinkToDeath"
 
-    int-to-float v1, p4
+    const/4 v3, 0x0
 
-    div-float v9, v0, v1
+    new-array v4, v3, [Ljava/lang/Object;
 
-    move-object v1, p0
+    invoke-virtual {v1, v2, v4}, Lusi;->e(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    move-object v2, p1
+    iget-object v1, v0, Ltuj;->m:Lt7j;
 
-    move-object v3, p2
+    invoke-interface {v1}, Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;
 
-    move v4, p3
+    move-result-object v1
 
-    move v5, p4
+    iget-object v2, v0, Ltuj;->j:Liij;
 
-    move v6, p5
+    invoke-interface {v1, v2, v3}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
 
-    move/from16 v7, p6
+    const/4 v1, 0x0
 
-    invoke-virtual/range {v1 .. v9}, Lwnj;->c(Landroid/graphics/Matrix;Landroid/graphics/Rect;IIFFFF)V
+    iput-object v1, v0, Ltuj;->m:Lt7j;
 
-    return-object p1
-.end method
+    iput-boolean v3, v0, Ltuj;->g:Z
 
-.method public abstract c(Landroid/graphics/Matrix;Landroid/graphics/Rect;IIFFFF)V
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lwnj;->c:Ljava/lang/Object;
+
+    check-cast v0, Ltuj;
+
+    iget-object v0, v0, Ltuj;->f:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-object v1, p0, Lwnj;->c:Ljava/lang/Object;
+
+    check-cast v1, Ltuj;
+
+    iget-object v1, v1, Ltuj;->k:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result v1
+
+    const/4 v2, 0x0
+
+    if-lez v1, :cond_0
+
+    iget-object v1, p0, Lwnj;->c:Ljava/lang/Object;
+
+    check-cast v1, Ltuj;
+
+    iget-object v1, v1, Ltuj;->k:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
+
+    move-result v1
+
+    if-lez v1, :cond_0
+
+    iget-object v1, p0, Lwnj;->c:Ljava/lang/Object;
+
+    check-cast v1, Ltuj;
+
+    iget-object v1, v1, Ltuj;->b:Lusi;
+
+    const-string v3, "Leaving the connection open for other ongoing calls."
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    invoke-virtual {v1, v3, v2}, Lusi;->e(Ljava/lang/String;[Ljava/lang/Object;)V
+
+    monitor-exit v0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v1
+
+    goto :goto_1
+
+    :cond_0
+    iget-object v1, p0, Lwnj;->c:Ljava/lang/Object;
+
+    check-cast v1, Ltuj;
+
+    iget-object v3, v1, Ltuj;->m:Lt7j;
+
+    if-eqz v3, :cond_1
+
+    iget-object v1, v1, Ltuj;->b:Lusi;
+
+    const-string v3, "Unbind from service."
+
+    new-array v4, v2, [Ljava/lang/Object;
+
+    invoke-virtual {v1, v3, v4}, Lusi;->e(Ljava/lang/String;[Ljava/lang/Object;)V
+
+    iget-object v1, p0, Lwnj;->c:Ljava/lang/Object;
+
+    check-cast v1, Ltuj;
+
+    iget-object v3, v1, Ltuj;->a:Landroid/content/Context;
+
+    iget-object v1, v1, Ltuj;->l:Lzea;
+
+    invoke-virtual {v3, v1}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
+
+    iget-object v1, p0, Lwnj;->c:Ljava/lang/Object;
+
+    check-cast v1, Ltuj;
+
+    iput-boolean v2, v1, Ltuj;->g:Z
+
+    const/4 v2, 0x0
+
+    iput-object v2, v1, Ltuj;->m:Lt7j;
+
+    iput-object v2, v1, Ltuj;->l:Lzea;
+
+    :cond_1
+    iget-object v1, p0, Lwnj;->c:Ljava/lang/Object;
+
+    check-cast v1, Ltuj;
+
+    invoke-virtual {v1}, Ltuj;->c()V
+
+    monitor-exit v0
+
+    :goto_0
+    return-void
+
+    :goto_1
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

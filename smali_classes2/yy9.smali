@@ -1,72 +1,64 @@
 .class public final Lyy9;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Lcz9;
 
 
-# instance fields
-.field public final synthetic o:Lsz9;
+# static fields
+.field public static final a:Lyy9;
 
 
 # direct methods
-.method public constructor <init>(Lsz9;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lyy9;->o:Lsz9;
+    new-instance v0, Lyy9;
 
-    const/4 p1, 0x2
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    sput-object v0, Lyy9;->a:Lyy9;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lzb4;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lyy9;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lyy9;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lyy9;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    new-instance p1, Lyy9;
+    const/4 v0, 0x1
 
-    iget-object v0, p0, Lyy9;->o:Lsz9;
+    if-ne p0, p1, :cond_0
 
-    invoke-direct {p1, v0, p2}, Lyy9;-><init>(Lsz9;Lkotlin/coroutines/Continuation;)V
+    return v0
 
-    return-object p1
+    :cond_0
+    instance-of p1, p1, Lyy9;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final hashCode()I
+    .locals 1
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    const v0, -0x2d4a0842
 
-    iget-object p1, p0, Lyy9;->o:Lsz9;
+    return v0
+.end method
 
-    invoke-static {p1}, Lsz9;->y(Lsz9;)V
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    sget-object p1, Lb3h;->a:Lb3h;
+    const-string v0, "OnKeyboardSwap"
 
-    return-object p1
+    return-object v0
 .end method

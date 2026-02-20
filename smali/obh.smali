@@ -1,121 +1,76 @@
-.class public abstract enum Lobh;
-.super Ljava/lang/Enum;
+.class public abstract Lobh;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/util/Iterator;
 
-# static fields
-.field public static final a:Ljava/nio/ByteOrder;
 
-.field public static final b:Z
-
-.field public static final synthetic c:[Lobh;
+# instance fields
+.field public final synthetic a:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(I)V
+    .locals 0
 
-    const/4 v0, 0x0
+    iput p1, p0, Lobh;->a:I
 
-    new-array v1, v0, [Lobh;
-
-    sput-object v1, Lobh;->c:[Lobh;
-
-    invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
-
-    move-result-object v1
-
-    sput-object v1, Lobh;->a:Ljava/nio/ByteOrder;
-
-    const-string v1, "os.arch"
-
-    invoke-static {v1}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "i386"
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    const-string v2, "x86"
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    const-string v2, "amd64"
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    const-string v2, "x86_64"
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    const-string v2, "aarch64"
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    const-string v2, "ppc64le"
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    :cond_0
-    const/4 v0, 0x1
-
-    :cond_1
-    sput-boolean v0, Lobh;->b:Z
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lobh;
+
+# virtual methods
+.method public final remove()V
     .locals 1
 
-    const-class v0, Lobh;
+    iget v0, p0, Lobh;->a:I
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object p0
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    invoke-static {p0}, Lxi4;->s(Ljava/lang/Object;)V
+    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
 
-    const/4 p0, 0x0
+    throw v0
 
-    throw p0
-.end method
+    :pswitch_0
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-.method public static values()[Lobh;
-    .locals 1
+    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
 
-    sget-object v0, Lobh;->c:[Lobh;
+    throw v0
 
-    invoke-virtual {v0}, [Lobh;->clone()Ljava/lang/Object;
+    :pswitch_1
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    move-result-object v0
+    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
 
-    check-cast v0, [Lobh;
+    throw v0
 
-    return-object v0
+    :pswitch_2
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw v0
+
+    :pswitch_3
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

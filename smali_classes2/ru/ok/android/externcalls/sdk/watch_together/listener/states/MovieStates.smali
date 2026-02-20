@@ -12,7 +12,7 @@
         "Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStates;",
         "",
         "",
-        "Lz8a;",
+        "Lmba;",
         "Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;",
         "states",
         "<init>",
@@ -50,7 +50,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
-            "Lz8a;",
+            "Lmba;",
             "Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;",
             ">;"
         }
@@ -65,7 +65,7 @@
         value = {
             "(",
             "Ljava/util/Map<",
-            "Lz8a;",
+            "Lmba;",
             "Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;",
             ">;)V"
         }
@@ -103,7 +103,7 @@
         value = {
             "()",
             "Ljava/util/Map<",
-            "Lz8a;",
+            "Lmba;",
             "Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;",
             ">;"
         }
@@ -120,7 +120,7 @@
         value = {
             "(",
             "Ljava/util/Map<",
-            "Lz8a;",
+            "Lmba;",
             "Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;",
             ">;)",
             "Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStates;"
@@ -159,7 +159,7 @@
 
     iget-object p1, p1, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStates;->states:Ljava/util/Map;
 
-    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -177,7 +177,7 @@
         value = {
             "()",
             "Ljava/util/Map<",
-            "Lz8a;",
+            "Lmba;",
             "Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieState;",
             ">;"
         }

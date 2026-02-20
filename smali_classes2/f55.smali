@@ -1,53 +1,33 @@
 .class public final Lf55;
-.super Lo84;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public a:Le55;
 
-.field public final synthetic Y:Lo55;
+.field public final b:Landroid/view/GestureDetector;
 
-.field public Z:I
-
-.field public d:Z
-
-.field public o:Z
+.field public c:I
 
 
 # direct methods
-.method public constructor <init>(Lo55;Lo84;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 3
 
-    iput-object p1, p0, Lf55;->Y:Lo55;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    new-instance v0, Landroid/view/GestureDetector;
+
+    new-instance v1, Lfz0;
+
+    const/16 v2, 0x9
+
+    invoke-direct {v1, v2, p0}, Lfz0;-><init>(ILjava/lang/Object;)V
+
+    invoke-direct {v0, p1, v1}, Landroid/view/GestureDetector;-><init>(Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;)V
+
+    iput-object v0, p0, Lf55;->b:Landroid/view/GestureDetector;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Lf55;->X:Ljava/lang/Object;
-
-    iget p1, p0, Lf55;->Z:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lf55;->Z:I
-
-    iget-object p1, p0, Lf55;->Y:Lo55;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, v0, p0}, Lo55;->g(ZZLo84;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
 .end method

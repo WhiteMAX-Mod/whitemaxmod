@@ -17,7 +17,7 @@
 
 
 # virtual methods
-.method public final c()Z
+.method public final d()Z
     .locals 2
 
     const-string v0, "samsung"

@@ -1,72 +1,70 @@
-.class public abstract Lwoj;
+.class public final Lwoj;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Loza;
+
+
+# static fields
+.field public static final a:Lwoj;
+
 
 # direct methods
-.method public static a(Ljava/lang/String;)Z
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 3
 
-    const-string v0, "service.unavailable"
+    new-instance v0, Lwoj;
 
-    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    move-result v0
+    sput-object v0, Lwoj;->a:Lwoj;
 
-    if-nez v0, :cond_1
+    new-instance v0, Lp7j;
 
-    const-string v0, "io.exception"
+    const/4 v1, 0x1
 
-    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-direct {v0, v1}, Lp7j;-><init>(I)V
 
-    move-result v0
+    const-class v1, Lh8j;
 
-    if-nez v0, :cond_1
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
 
-    const-string v0, "service.timeout"
+    move-result-object v0
 
-    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    const/4 v2, 0x2
 
-    move-result p0
+    invoke-static {v0, v2}, Leni;->i(Ljava/util/HashMap;I)Lp7j;
 
-    if-eqz p0, :cond_0
+    move-result-object v0
 
-    goto :goto_0
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
 
-    :cond_0
-    const/4 p0, 0x0
+    move-result-object v0
 
-    return p0
+    const/4 v2, 0x3
 
-    :cond_1
-    :goto_0
-    const/4 p0, 0x1
+    invoke-static {v0, v2}, Leni;->i(Ljava/util/HashMap;I)Lp7j;
 
-    return p0
-.end method
+    move-result-object v0
 
-.method public static final b(Lr4h;)V
-    .locals 2
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
 
-    new-instance v0, Lgfe;
+    move-result-object v0
 
-    const/16 v1, 0x19
-
-    invoke-direct {v0, v1}, Lgfe;-><init>(I)V
-
-    const/16 v1, 0x273
-
-    invoke-virtual {p0, v1, v0}, Lr4h;->e(ILhs7;)V
-
-    new-instance v0, Lgfe;
-
-    const/16 v1, 0x1a
-
-    invoke-direct {v0, v1}, Lgfe;-><init>(I)V
-
-    const/16 v1, 0x274
-
-    invoke-virtual {p0, v1, v0}, Lr4h;->e(ILhs7;)V
+    invoke-static {v0}, Leni;->m(Ljava/util/HashMap;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
+
+    invoke-static {p1}, Lkb0;->d(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+
+    move-result-object p1
+
+    throw p1
 .end method

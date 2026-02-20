@@ -1,34 +1,23 @@
-.class public final synthetic Ldsb;
-.super Ljava/lang/Object;
+.class public final Ldsb;
+.super Ldg0;
 .source "SourceFile"
 
-# interfaces
-.implements Lcrf;
 
-
-# instance fields
-.field public final synthetic a:Loef;
+# static fields
+.field public static final b:Ldsb;
 
 
 # direct methods
-.method public synthetic constructor <init>(Loef;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ldsb;
 
-    iput-object p1, p0, Ldsb;->a:Loef;
+    sget-object v1, Lmah;->a:Lmah;
 
-    return-void
-.end method
+    invoke-direct {v0, v1}, Lsla;-><init>(Ljava/lang/Object;)V
 
-
-# virtual methods
-.method public final a([Lorg/webrtc/StatsReport;[Lorg/webrtc/StatsReport;[Lbu0;Ljava/util/Map;Lzt1;)V
-    .locals 0
-
-    iget-object p2, p0, Ldsb;->a:Loef;
-
-    invoke-virtual {p2, p1}, Loef;->a(Ljava/lang/Object;)V
+    sput-object v0, Ldsb;->b:Ldsb;
 
     return-void
 .end method

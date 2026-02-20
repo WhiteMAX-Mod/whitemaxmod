@@ -1,39 +1,42 @@
-.class public final Lla4;
+.class public final synthetic Lla4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lkbe;
+
 
 # instance fields
-.field public final a:Ljava/util/concurrent/atomic/AtomicReference;
+.field public final synthetic a:Lpa4;
+
+.field public final synthetic b:Landroid/content/Intent;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public synthetic constructor <init>(Lpa4;Landroid/content/Intent;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
+    iput-object p1, p0, Lla4;->a:Lpa4;
 
-    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
-
-    iput-object v0, p0, Lla4;->a:Ljava/util/concurrent/atomic/AtomicReference;
+    iput-object p2, p0, Lla4;->b:Landroid/content/Intent;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lru/ok/android/externcalls/sdk/Conversation;
-    .locals 1
+.method public final a()V
+    .locals 2
 
-    iget-object v0, p0, Lla4;->a:Ljava/util/concurrent/atomic/AtomicReference;
+    iget-object v0, p0, Lla4;->b:Landroid/content/Intent;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    iget-object v1, p0, Lla4;->a:Lpa4;
 
-    move-result-object v0
+    iget-object v1, v1, Lpa4;->router:Ljbe;
 
-    check-cast v0, Lru/ok/android/externcalls/sdk/Conversation;
+    invoke-virtual {v1, v0}, Ljbe;->U(Landroid/content/Intent;)V
 
-    return-object v0
+    return-void
 .end method

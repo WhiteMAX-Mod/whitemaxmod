@@ -1,96 +1,93 @@
 .class public final Ldq2;
-.super Lp6g;
+.super Lx0i;
 .source "SourceFile"
-
-# interfaces
-.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic o:Ljq2;
+.field public final b:Lhxf;
+
+.field public final c:Lmrd;
 
 
 # direct methods
-.method public constructor <init>(Ljq2;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(J)V
+    .locals 5
 
-    iput-object p1, p0, Ldq2;->o:Ljq2;
+    sget-object v0, Lwqc;->a:Lwqc;
 
-    const/4 p1, 0x2
+    invoke-virtual {v0}, Lwqc;->b()Lj88;
 
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    move-result-object v1
+
+    check-cast v1, Lbgg;
+
+    invoke-virtual {v1}, Lbgg;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcc3;
+
+    invoke-virtual {v0}, Lwqc;->e()Lj88;
+
+    move-result-object v0
+
+    check-cast v0, Lbgg;
+
+    invoke-virtual {v0}, Lbgg;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lbjg;
+
+    invoke-direct {p0}, Lx0i;-><init>()V
+
+    const/4 v2, 0x0
+
+    invoke-static {v2}, Lixf;->a(Ljava/lang/Object;)Lhxf;
+
+    move-result-object v3
+
+    iput-object v3, p0, Ldq2;->b:Lhxf;
+
+    new-instance v4, Lmrd;
+
+    invoke-direct {v4, v3}, Lmrd;-><init>(Lgia;)V
+
+    iput-object v4, p0, Ldq2;->c:Lmrd;
+
+    invoke-virtual {v1, p1, p2}, Lcc3;->l(J)Lmrd;
+
+    move-result-object p1
+
+    new-instance p2, Lba3;
+
+    const/16 v1, 0xd
+
+    invoke-direct {p2, p1, v1}, Lba3;-><init>(Lb96;I)V
+
+    new-instance p1, Lbq2;
+
+    invoke-direct {p1, p0, v2}, Lbq2;-><init>(Ldq2;Lkotlin/coroutines/Continuation;)V
+
+    new-instance v1, Llb6;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v1, p2, p1, v2}, Llb6;-><init>(Lb96;Lys6;I)V
+
+    check-cast v0, Lcbb;
+
+    invoke-virtual {v0}, Lcbb;->a()Lgd4;
+
+    move-result-object p1
+
+    invoke-static {v1, p1}, Lzka;->v(Lb96;Led4;)Lb96;
+
+    move-result-object p1
+
+    iget-object p2, p0, Lx0i;->a:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {p1, p2}, Lzka;->w(Lb96;Lnd4;)Lcuf;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lzb4;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Ldq2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Ldq2;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Ldq2;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Ldq2;
-
-    iget-object v0, p0, Ldq2;->o:Ljq2;
-
-    invoke-direct {p1, v0, p2}, Ldq2;-><init>(Ljq2;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    sget-object p1, Ljq2;->Z0:[Lz28;
-
-    iget-object p1, p0, Ldq2;->o:Ljq2;
-
-    invoke-virtual {p1}, Ljq2;->z()Ldjb;
-
-    move-result-object p1
-
-    sget v0, Lj6e;->G:I
-
-    new-instance v1, Llhg;
-
-    invoke-direct {v1, v0}, Llhg;-><init>(I)V
-
-    invoke-virtual {p1, v1}, Ldjb;->g(Lqhg;)V
-
-    new-instance v0, Lrjb;
-
-    sget v1, Lv5e;->M:I
-
-    invoke-direct {v0, v1}, Lrjb;-><init>(I)V
-
-    invoke-virtual {p1, v0}, Ldjb;->e(Lvjb;)V
-
-    invoke-virtual {p1}, Ldjb;->i()Lcjb;
-
-    move-result-object p1
-
-    return-object p1
 .end method

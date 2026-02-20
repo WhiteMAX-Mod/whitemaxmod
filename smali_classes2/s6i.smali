@@ -3,119 +3,65 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final Companion:Lr6i;
-
-
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:Lm8e;
+
+.field public final b:Loj;
+
+.field public final c:Lwwa;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Lm8e;)V
     .locals 1
-
-    new-instance v0, Lr6i;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Ls6i;->Companion:Lr6i;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(ILjava/lang/String;)V
-    .locals 2
-
-    and-int/lit8 v0, p1, 0x1
-
-    const/4 v1, 0x1
-
-    if-ne v1, v0, :cond_0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Ls6i;->a:Ljava/lang/String;
+    iput-object p1, p0, Ls6i;->a:Lm8e;
+
+    new-instance p1, Loj;
+
+    const/16 v0, 0x1a
+
+    invoke-direct {p1, v0}, Loj;-><init>(I)V
+
+    iput-object p1, p0, Ls6i;->b:Loj;
+
+    new-instance p1, Lwwa;
+
+    const/4 v0, 0x3
+
+    invoke-direct {p1, v0}, Lwwa;-><init>(I)V
+
+    iput-object p1, p0, Ls6i;->c:Lwwa;
 
     return-void
-
-    :cond_0
-    sget-object p2, Lq6i;->a:Lq6i;
-
-    invoke-virtual {p2}, Lq6i;->d()Lxpe;
-
-    move-result-object p2
-
-    invoke-static {p1, v1, p2}, Lqjj;->b(IILxpe;)V
-
-    const/4 p1, 0x0
-
-    throw p1
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final a(JJLpdg;)Ljava/lang/Object;
+    .locals 6
 
-    const/4 v0, 0x1
+    new-instance v0, Lhy5;
 
-    if-ne p0, p1, :cond_0
+    const/16 v1, 0xc
 
-    return v0
+    move-wide v2, p1
 
-    :cond_0
-    instance-of v1, p1, Ls6i;
+    move-wide v4, p3
 
-    const/4 v2, 0x0
+    invoke-direct/range {v0 .. v5}, Lhy5;-><init>(IJJ)V
 
-    if-nez v1, :cond_1
+    iget-object p1, p0, Ls6i;->a:Lm8e;
 
-    return v2
+    const/4 p2, 0x1
 
-    :cond_1
-    check-cast p1, Ls6i;
+    const/4 p3, 0x0
 
-    iget-object v1, p0, Ls6i;->a:Ljava/lang/String;
+    invoke-static {v0, p1, p5, p2, p3}, Lfuj;->h(Lks6;Lm8e;Lkotlin/coroutines/Continuation;ZZ)Ljava/lang/Object;
 
-    iget-object p1, p1, Ls6i;->a:Ljava/lang/String;
+    move-result-object p1
 
-    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Ls6i;->a:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    const-string v0, "WebAppOpenMaxLinkRequest(url="
-
-    const-string v1, ")"
-
-    iget-object v2, p0, Ls6i;->a:Ljava/lang/String;
-
-    invoke-static {v0, v2, v1}, Lj27;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

@@ -1,181 +1,107 @@
-.class public final Lngh;
-.super Ljava/lang/Object;
+.class public final enum Lngh;
+.super Ljava/lang/Enum;
 .source "SourceFile"
+
+
+# static fields
+.field public static final synthetic X:[Lngh;
+
+.field public static final enum b:Lngh;
+
+.field public static final enum c:Lngh;
+
+.field public static final enum d:Lngh;
+
+.field public static final o:[Lngh;
 
 
 # instance fields
 .field public final a:I
 
-.field public final b:I
-
-.field public final c:I
-
 
 # direct methods
-.method public constructor <init>(Lk80;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lngh;
 
-    iget v0, p1, Lk80;->b:I
+    const-string v1, "UNKNOWN"
 
-    iput v0, p0, Lngh;->a:I
+    const/4 v2, 0x0
 
-    iget v0, p1, Lk80;->c:I
+    invoke-direct {v0, v1, v2, v2}, Lngh;-><init>(Ljava/lang/String;II)V
 
-    iput v0, p0, Lngh;->b:I
+    sput-object v0, Lngh;->b:Lngh;
 
-    iget p1, p1, Lk80;->d:I
+    new-instance v1, Lngh;
 
-    iput p1, p0, Lngh;->c:I
+    const-string v2, "UPLOADING"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3, v3}, Lngh;-><init>(Ljava/lang/String;II)V
+
+    sput-object v1, Lngh;->c:Lngh;
+
+    new-instance v2, Lngh;
+
+    const-string v3, "UPLOADED"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4, v4}, Lngh;-><init>(Ljava/lang/String;II)V
+
+    sput-object v2, Lngh;->d:Lngh;
+
+    filled-new-array {v0, v1, v2}, [Lngh;
+
+    move-result-object v0
+
+    sput-object v0, Lngh;->X:[Lngh;
+
+    invoke-static {}, Lngh;->values()[Lngh;
+
+    move-result-object v0
+
+    sput-object v0, Lngh;->o:[Lngh;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;II)V
+    .locals 0
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    if-ne p0, p1, :cond_0
+    iput p3, p0, Lngh;->a:I
 
-    goto :goto_0
-
-    :cond_0
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v0
-
-    const-class v1, Lngh;
-
-    if-eq v1, v0, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    check-cast p1, Lngh;
-
-    iget v0, p0, Lngh;->a:I
-
-    iget v1, p1, Lngh;->a:I
-
-    if-ne v0, v1, :cond_2
-
-    iget v0, p0, Lngh;->b:I
-
-    iget v1, p1, Lngh;->b:I
-
-    if-ne v0, v1, :cond_2
-
-    iget v0, p0, Lngh;->c:I
-
-    iget p1, p1, Lngh;->c:I
-
-    if-ne v0, p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_2
-    :goto_1
-    const/4 p1, 0x0
-
-    return p1
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 3
+.method public static valueOf(Ljava/lang/String;)Lngh;
+    .locals 1
 
-    iget v0, p0, Lngh;->a:I
+    const-class v0, Lngh;
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    move-result-object v0
+    move-result-object p0
 
-    iget v1, p0, Lngh;->b:I
+    check-cast p0, Lngh;
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    iget v2, p0, Lngh;->c:I
-
-    invoke-static {v2}, Lt02;->b(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    filled-new-array {v0, v1, v2}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
-
-    move-result v0
-
-    return v0
+    return-object p0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public static values()[Lngh;
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    sget-object v0, Lngh;->X:[Lngh;
 
-    const-string v1, "VideoDisplayLayout{width="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v1, p0, Lngh;->a:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", height="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lngh;->b:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", fit="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/4 v1, 0x1
-
-    iget v2, p0, Lngh;->c:I
-
-    if-eq v2, v1, :cond_1
-
-    const/4 v1, 0x2
-
-    if-eq v2, v1, :cond_0
-
-    const-string v1, "null"
-
-    goto :goto_0
-
-    :cond_0
-    const-string v1, "CONTAIN"
-
-    goto :goto_0
-
-    :cond_1
-    const-string v1, "COVER"
-
-    :goto_0
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x7d
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, [Lngh;->clone()Ljava/lang/Object;
 
     move-result-object v0
+
+    check-cast v0, [Lngh;
 
     return-object v0
 .end method

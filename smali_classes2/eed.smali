@@ -3,18 +3,24 @@
 
 
 # static fields
-.field public static oneme_qrscanner_camera_request_description:I = 0x7f130962
+.field public static fake_in_app_review_bottom_sheet_rate_view:I = 0x7f0a035f
 
-.field public static oneme_qrscanner_context_menu_title:I = 0x7f130963
+.field public static fake_in_app_review_bottom_sheet_rate_view_icon:I = 0x7f0a0360
 
-.field public static oneme_qrscanner_error_snackbar_title:I = 0x7f130964
+.field public static fake_in_app_review_bottom_sheet_rate_view_not_now_btn:I = 0x7f0a0361
 
-.field public static oneme_qrscanner_hint_login:I = 0x7f130965
+.field public static fake_in_app_review_bottom_sheet_rate_view_rating_bar:I = 0x7f0a0362
 
-.field public static oneme_qrscanner_hint_with_gallery:I = 0x7f130966
+.field public static fake_in_app_review_bottom_sheet_rate_view_send_btn:I = 0x7f0a0363
 
-.field public static oneme_qrscanner_hint_without_gallery:I = 0x7f130967
+.field public static fake_in_app_review_bottom_sheet_rate_view_subtitle:I = 0x7f0a0364
 
-.field public static oneme_qrscanner_storage_request_description:I = 0x7f130968
+.field public static fake_in_app_review_bottom_sheet_rate_view_title:I = 0x7f0a0365
 
-.field public static oneme_qrscanner_toolbar_title:I = 0x7f130969
+.field public static fake_in_app_review_bottom_sheet_thank_view:I = 0x7f0a0366
+
+.field public static fake_in_app_review_bottom_sheet_thank_view_close_btn:I = 0x7f0a0367
+
+.field public static fake_in_app_review_bottom_sheet_thank_view_icon:I = 0x7f0a0368
+
+.field public static fake_in_app_review_bottom_sheet_thank_view_title:I = 0x7f0a0369

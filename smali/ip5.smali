@@ -1,334 +1,239 @@
 .class public final Lip5;
-.super Ljava/lang/Object;
+.super Leie;
 .source "SourceFile"
-
-# interfaces
-.implements Lobc;
 
 
 # instance fields
-.field public final a:Ldu;
+.field public final c:Z
 
-.field public final synthetic b:Lfsg;
+.field public final d:Ljava/util/concurrent/Executor;
 
 
 # direct methods
-.method public constructor <init>(Lfsg;Ldu;)V
+.method public constructor <init>(Ljava/util/concurrent/Executor;Z)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lip5;->b:Lfsg;
+    iput-object p1, p0, Lip5;->d:Ljava/util/concurrent/Executor;
 
-    iput-object p2, p0, Lip5;->a:Ldu;
+    iput-boolean p2, p0, Lip5;->c:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final L0(Landroidx/media3/common/PlaybackException;)V
+.method public final a()Lcie;
     .locals 3
 
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+    new-instance v0, Lgp5;
 
-    move-result-object v0
+    iget-object v1, p0, Lip5;->d:Ljava/util/concurrent/Executor;
 
-    instance-of v1, v0, Landroidx/media3/exoplayer/ExoTimeoutException;
+    iget-boolean v2, p0, Lip5;->c:Z
+
+    invoke-direct {v0, v1, v2}, Lgp5;-><init>(Ljava/util/concurrent/Executor;Z)V
+
+    return-object v0
+.end method
+
+.method public final b(Ljava/lang/Runnable;)Ly35;
+    .locals 3
+
+    iget-object v0, p0, Lip5;->d:Ljava/util/concurrent/Executor;
+
+    :try_start_0
+    instance-of v1, v0, Ljava/util/concurrent/ExecutorService;
+    :try_end_0
+    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_0 .. :try_end_0} :catch_0
+
+    iget-boolean v2, p0, Lip5;->c:Z
 
     if-eqz v1, :cond_0
 
-    check-cast v0, Landroidx/media3/exoplayer/ExoTimeoutException;
+    :try_start_1
+    new-instance v1, Lxge;
 
-    iget v0, v0, Landroidx/media3/exoplayer/ExoTimeoutException;->a:I
+    invoke-direct {v1, p1, v2}, Lr0;-><init>(Ljava/lang/Runnable;Z)V
 
-    const/4 v1, 0x1
+    check-cast v0, Ljava/util/concurrent/ExecutorService;
 
-    if-ne v0, v1, :cond_0
-
-    const-string v0, "ExoPlayerAssetLoader"
-
-    const-string v1, "Releasing the player timed out."
-
-    invoke-static {v0, v1, p1}, Li1h;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-void
-
-    :cond_0
-    sget-object v0, Landroidx/media3/transformer/ExportException;->b:Lgud;
-
-    invoke-virtual {p1}, Landroidx/media3/common/PlaybackException;->b()Ljava/lang/String;
-
-    move-result-object v1
-
-    const/16 v2, 0x3e8
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1}, Lgud;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    move-object v2, v0
-
-    :cond_1
-    check-cast v2, Ljava/lang/Integer;
-
-    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
-
-    move-result v0
-
-    iget-object v1, p0, Lip5;->a:Ldu;
-
-    invoke-static {v0, p1}, Landroidx/media3/transformer/ExportException;->a(ILjava/lang/Throwable;)Landroidx/media3/transformer/ExportException;
+    invoke-interface {v0, v1}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
 
     move-result-object p1
 
-    invoke-interface {v1, p1}, Ldu;->c(Landroidx/media3/transformer/ExportException;)V
+    invoke-virtual {v1, p1}, Lr0;->a(Ljava/util/concurrent/Future;)V
 
-    return-void
-.end method
-
-.method public final e0(Lksg;)V
-    .locals 7
-
-    iget-object v0, p0, Lip5;->a:Ldu;
-
-    const/4 v1, 0x1
-
-    :try_start_0
-    invoke-virtual {p1, v1}, Lksg;->a(I)Z
-
-    move-result v2
-
-    const/4 v3, 0x2
-
-    invoke-virtual {p1, v3}, Lksg;->a(I)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    add-int/lit8 v2, v2, 0x1
-
-    :cond_0
-    const/4 v3, 0x0
-
-    :goto_0
-    iget-object v4, p1, Lksg;->a:Lhk7;
-
-    invoke-virtual {v4}, Ljava/util/AbstractCollection;->size()I
-
-    move-result v4
-
-    if-ge v3, v4, :cond_3
-
-    iget-object v4, p1, Lksg;->a:Lhk7;
-
-    invoke-interface {v4, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Ljsg;
-
-    iget-object v4, v4, Ljsg;->b:Lkrg;
-
-    iget v4, v4, Lkrg;->c:I
-
-    const/4 v5, 0x1
-
-    if-eq v4, v5, :cond_2
-
-    const/4 v5, 0x2
-
-    if-ne v4, v5, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    const-string v5, "ExoPlayerAssetLoader"
-
-    const-string v6, "Unsupported track type: "
-
-    invoke-static {v4, v6, v5}, Lob3;->e(ILjava/lang/String;Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
-
-    :cond_2
-    :goto_1
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_0
-
-    :cond_3
-    iget-object p1, p0, Lip5;->b:Lfsg;
-
-    if-lez v2, :cond_4
-
-    :try_start_1
-    invoke-interface {v0, v2}, Ldu;->a(I)V
-
-    iget-object p1, p1, Lfsg;->c:Ljava/lang/Object;
-
-    check-cast p1, Ldq5;
-
-    invoke-virtual {p1}, Ld3;->play()V
-
-    return-void
+    return-object v1
 
     :catch_0
     move-exception p1
 
-    goto :goto_3
-
-    :cond_4
-    const-string v2, "The asset loader has no audio or video track to output."
-
-    iget-object v3, p1, Lfsg;->d:Ljava/lang/Object;
-
-    check-cast v3, Landroid/content/Context;
-
-    iget-object p1, p1, Lfsg;->o:Ljava/lang/Object;
-
-    check-cast p1, Lhd5;
-
-    iget-object p1, p1, Lhd5;->a:Ld49;
-
-    invoke-static {v3, p1}, Lu1j;->d(Landroid/content/Context;Ld49;)Ljava/lang/String;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_5
-
-    invoke-static {p1}, Lw5a;->k(Ljava/lang/String;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_5
-
-    goto :goto_2
-
-    :cond_5
-    const/4 v1, 0x0
-
-    :goto_2
-    if-eqz v1, :cond_6
-
-    const-string v2, "The asset loader has no audio or video track to output. Try setting an image duration on input image MediaItems."
-
-    :cond_6
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    invoke-direct {p1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    const/16 v1, 0x3e9
-
-    invoke-static {v1, p1}, Landroidx/media3/transformer/ExportException;->a(ILjava/lang/Throwable;)Landroidx/media3/transformer/ExportException;
-
-    move-result-object p1
-
-    invoke-interface {v0, p1}, Ldu;->c(Landroidx/media3/transformer/ExportException;)V
-    :try_end_1
-    .catch Ljava/lang/RuntimeException; {:try_start_1 .. :try_end_1} :catch_0
-
-    return-void
-
-    :goto_3
-    const/16 v1, 0x3e8
-
-    invoke-static {v1, p1}, Landroidx/media3/transformer/ExportException;->a(ILjava/lang/Throwable;)Landroidx/media3/transformer/ExportException;
-
-    move-result-object p1
-
-    invoke-interface {v0, p1}, Ldu;->c(Landroidx/media3/transformer/ExportException;)V
-
-    return-void
-.end method
-
-.method public final n0(Lrlg;I)V
-    .locals 5
-
-    iget-object p2, p0, Lip5;->a:Ldu;
-
-    iget-object v0, p0, Lip5;->b:Lfsg;
-
-    :try_start_0
-    iget v1, v0, Lfsg;->b:I
-
-    const/4 v2, 0x1
-
-    if-eq v1, v2, :cond_0
-
-    goto :goto_2
+    goto :goto_0
 
     :cond_0
-    new-instance v1, Lplg;
+    if-eqz v2, :cond_1
 
-    invoke-direct {v1}, Lplg;-><init>()V
+    new-instance v1, Lfp5;
 
     const/4 v2, 0x0
 
-    invoke-virtual {p1, v2, v1}, Lrlg;->n(ILplg;)V
+    invoke-direct {v1, p1, v2}, Lfp5;-><init>(Ljava/lang/Runnable;Lz35;)V
 
-    iget-boolean p1, v1, Lplg;->k:Z
+    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    if-nez p1, :cond_3
-
-    iget-wide v1, v1, Lplg;->m:J
-
-    const-wide/16 v3, 0x0
-
-    cmp-long p1, v1, v3
-
-    if-lez p1, :cond_2
-
-    const-wide v3, -0x7fffffffffffffffL    # -4.9E-324
-
-    cmp-long p1, v1, v3
-
-    if-nez p1, :cond_1
-
-    goto :goto_0
+    return-object v1
 
     :cond_1
-    const/4 p1, 0x2
+    new-instance v1, Lep5;
 
-    goto :goto_1
+    invoke-direct {v1, p1}, Lep5;-><init>(Ljava/lang/Runnable;)V
 
-    :cond_2
+    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    :try_end_1
+    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_1 .. :try_end_1} :catch_0
+
+    return-object v1
+
     :goto_0
-    const/4 p1, 0x3
+    invoke-static {p1}, Lsvj;->a(Ljava/lang/Throwable;)V
 
-    :goto_1
-    iput p1, v0, Lfsg;->b:I
+    sget-object p1, Lni5;->a:Lni5;
 
-    invoke-interface {p2, v1, v2}, Ldu;->d(J)V
+    return-object p1
+.end method
+
+.method public final c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ly35;
+    .locals 4
+
+    const-string v0, "run is null"
+
+    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    iget-object v0, p0, Lip5;->d:Ljava/util/concurrent/Executor;
+
+    instance-of v1, v0, Ljava/util/concurrent/ScheduledExecutorService;
+
+    if-eqz v1, :cond_0
+
+    :try_start_0
+    new-instance v1, Lxge;
+
+    iget-boolean v2, p0, Lip5;->c:Z
+
+    invoke-direct {v1, p1, v2}, Lr0;-><init>(Ljava/lang/Runnable;Z)V
+
+    check-cast v0, Ljava/util/concurrent/ScheduledExecutorService;
+
+    invoke-interface {v0, v1, p2, p3, p4}, Ljava/util/concurrent/ScheduledExecutorService;->schedule(Ljava/util/concurrent/Callable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+
+    move-result-object p1
+
+    invoke-virtual {v1, p1}, Lr0;->a(Ljava/util/concurrent/Future;)V
     :try_end_0
-    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_0 .. :try_end_0} :catch_0
 
-    return-void
+    return-object v1
 
     :catch_0
     move-exception p1
 
-    goto :goto_3
+    invoke-static {p1}, Lsvj;->a(Ljava/lang/Throwable;)V
 
-    :cond_3
-    :goto_2
-    return-void
+    sget-object p1, Lni5;->a:Lni5;
 
-    :goto_3
-    const/16 v0, 0x3e8
+    return-object p1
 
-    invoke-static {v0, p1}, Landroidx/media3/transformer/ExportException;->a(ILjava/lang/Throwable;)Landroidx/media3/transformer/ExportException;
+    :cond_0
+    new-instance v0, Ldp5;
+
+    invoke-direct {v0, p1}, Ldp5;-><init>(Ljava/lang/Runnable;)V
+
+    sget-object p1, Lhp5;->a:Leie;
+
+    new-instance v1, Lcu6;
+
+    const/16 v2, 0x8
+
+    const/4 v3, 0x0
+
+    invoke-direct {v1, p0, v0, v3, v2}, Lcu6;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
+
+    invoke-virtual {p1, v1, p2, p3, p4}, Leie;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ly35;
 
     move-result-object p1
 
-    invoke-interface {p2, p1}, Ldu;->c(Landroidx/media3/transformer/ExportException;)V
+    iget-object p2, v0, Ldp5;->a:Lo72;
 
-    return-void
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {p2, p1}, Lc45;->d(Ljava/util/concurrent/atomic/AtomicReference;Ly35;)Z
+
+    return-object v0
+.end method
+
+.method public final d(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ly35;
+    .locals 9
+
+    iget-object v0, p0, Lip5;->d:Ljava/util/concurrent/Executor;
+
+    instance-of v1, v0, Ljava/util/concurrent/ScheduledExecutorService;
+
+    if-eqz v1, :cond_0
+
+    :try_start_0
+    new-instance v3, Lwge;
+
+    iget-boolean v1, p0, Lip5;->c:Z
+
+    invoke-direct {v3, p1, v1}, Lr0;-><init>(Ljava/lang/Runnable;Z)V
+
+    move-object v2, v0
+
+    check-cast v2, Ljava/util/concurrent/ScheduledExecutorService;
+
+    move-wide v4, p2
+
+    move-wide v6, p4
+
+    move-object v8, p6
+
+    invoke-interface/range {v2 .. v8}, Ljava/util/concurrent/ScheduledExecutorService;->scheduleAtFixedRate(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+
+    move-result-object p1
+
+    invoke-virtual {v3, p1}, Lr0;->a(Ljava/util/concurrent/Future;)V
+    :try_end_0
+    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object v3
+
+    :catch_0
+    move-exception v0
+
+    move-object p1, v0
+
+    invoke-static {p1}, Lsvj;->a(Ljava/lang/Throwable;)V
+
+    sget-object p1, Lni5;->a:Lni5;
+
+    return-object p1
+
+    :cond_0
+    move-object v1, p0
+
+    move-object v2, p1
+
+    move-wide v3, p2
+
+    move-wide v5, p4
+
+    move-object v7, p6
+
+    invoke-super/range {v1 .. v7}, Leie;->d(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ly35;
+
+    move-result-object p1
+
+    return-object p1
 .end method

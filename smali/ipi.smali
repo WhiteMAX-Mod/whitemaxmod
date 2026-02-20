@@ -1,698 +1,1528 @@
-.class public abstract Lipi;
-.super Ljava/lang/Object;
+.class public final Lipi;
+.super Lacj;
 .source "SourceFile"
+
+# interfaces
+.implements Lx7;
 
 
 # static fields
-.field public static final a:Ladf;
+.field public static final y:Landroid/view/animation/AccelerateInterpolator;
 
-.field public static b:Ljava/util/Locale;
+.field public static final z:Landroid/view/animation/DecelerateInterpolator;
+
+
+# instance fields
+.field public a:Landroid/content/Context;
+
+.field public b:Landroid/content/Context;
+
+.field public c:Landroidx/appcompat/widget/ActionBarOverlayLayout;
+
+.field public d:Landroidx/appcompat/widget/ActionBarContainer;
+
+.field public e:Lln4;
+
+.field public f:Landroidx/appcompat/widget/ActionBarContextView;
+
+.field public final g:Landroid/view/View;
+
+.field public h:Z
+
+.field public i:Lhpi;
+
+.field public j:Lhpi;
+
+.field public k:Lgri;
+
+.field public l:Z
+
+.field public final m:Ljava/util/ArrayList;
+
+.field public n:I
+
+.field public o:Z
+
+.field public p:Z
+
+.field public q:Z
+
+.field public r:Z
+
+.field public s:Lw49;
+
+.field public t:Z
+
+.field public u:Z
+
+.field public final v:Lgpi;
+
+.field public final w:Lgpi;
+
+.field public final x:Lhde;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 1
 
-    new-instance v0, Ladf;
+    new-instance v0, Landroid/view/animation/AccelerateInterpolator;
 
-    const/4 v1, 0x0
+    invoke-direct {v0}, Landroid/view/animation/AccelerateInterpolator;-><init>()V
 
-    invoke-direct {v0, v1}, Ladf;-><init>(I)V
+    sput-object v0, Lipi;->y:Landroid/view/animation/AccelerateInterpolator;
 
-    sput-object v0, Lipi;->a:Ladf;
+    new-instance v0, Landroid/view/animation/DecelerateInterpolator;
+
+    invoke-direct {v0}, Landroid/view/animation/DecelerateInterpolator;-><init>()V
+
+    sput-object v0, Lipi;->z:Landroid/view/animation/DecelerateInterpolator;
 
     return-void
 .end method
 
-.method public static a(Landroid/content/Context;)Ljava/lang/String;
-    .locals 4
+.method public constructor <init>(Landroid/app/Activity;Z)V
+    .locals 2
 
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
+    .line 2
+    new-instance v0, Ljava/util/ArrayList;
 
-    :try_start_0
-    invoke-static {p0}, Lfki;->a(Landroid/content/Context;)Ltki;
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    move-result-object v1
+    .line 3
+    new-instance v0, Ljava/util/ArrayList;
 
-    iget-object v1, v1, Ltki;->a:Landroid/content/Context;
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-virtual {v1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+    iput-object v0, p0, Lipi;->m:Ljava/util/ArrayList;
 
-    move-result-object v2
+    const/4 v0, 0x0
 
-    invoke-virtual {v1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
-
-    move-result-object v1
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v1, v0, v3}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
-
-    move-result-object v1
-
-    invoke-virtual {v2, v1}, Landroid/content/pm/PackageManager;->getApplicationLabel(Landroid/content/pm/ApplicationInfo;)Ljava/lang/CharSequence;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object p0
-    :try_end_0
-    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object p0
-
-    :catch_0
-    invoke-virtual {p0}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
-
-    move-result-object p0
-
-    iget-object p0, p0, Landroid/content/pm/ApplicationInfo;->name:Ljava/lang/String;
-
-    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    return-object v0
-
-    :cond_0
-    return-object p0
-.end method
-
-.method public static b(Landroid/content/Context;I)Ljava/lang/String;
-    .locals 1
-
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p0
+    .line 4
+    iput v0, p0, Lipi;->n:I
 
     const/4 v0, 0x1
 
-    if-eq p1, v0, :cond_2
+    .line 5
+    iput-boolean v0, p0, Lipi;->o:Z
 
-    const/4 v0, 0x2
+    .line 6
+    iput-boolean v0, p0, Lipi;->r:Z
 
-    if-eq p1, v0, :cond_1
-
-    const/4 v0, 0x3
-
-    if-eq p1, v0, :cond_0
-
-    const p1, 0x104000a
-
-    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_0
-    sget p1, Lkfd;->common_google_play_services_enable_button:I
-
-    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_1
-    sget p1, Lkfd;->common_google_play_services_update_button:I
-
-    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_2
-    sget p1, Lkfd;->common_google_play_services_install_button:I
-
-    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static c(Landroid/content/Context;I)Ljava/lang/String;
-    .locals 3
-
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-static {p0}, Lipi;->a(Landroid/content/Context;)Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v2, 0x1
-
-    if-eq p1, v2, :cond_7
-
-    const/4 v2, 0x2
-
-    if-eq p1, v2, :cond_5
-
-    const/4 v2, 0x3
-
-    if-eq p1, v2, :cond_4
-
-    const/4 v2, 0x5
-
-    if-eq p1, v2, :cond_3
-
-    const/4 v2, 0x7
-
-    if-eq p1, v2, :cond_2
-
-    const/16 v2, 0x9
-
-    if-eq p1, v2, :cond_1
-
-    const/16 v2, 0x14
-
-    if-eq p1, v2, :cond_0
-
-    packed-switch p1, :pswitch_data_0
-
-    sget p0, Llfd;->common_google_play_services_unknown_issue:I
-
-    filled-new-array {v1}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p0, p1}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_0
-    sget p0, Lkfd;->common_google_play_services_updating_text:I
-
-    filled-new-array {v1}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p0, p1}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_1
-    const-string p1, "common_google_play_services_sign_in_failed_text"
-
-    invoke-static {p0, p1, v1}, Lipi;->e(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_2
-    const-string p1, "common_google_play_services_api_unavailable_text"
-
-    invoke-static {p0, p1, v1}, Lipi;->e(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_0
-    const-string p1, "common_google_play_services_restricted_profile_text"
-
-    invoke-static {p0, p1, v1}, Lipi;->e(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_1
-    sget p0, Lkfd;->common_google_play_services_unsupported_text:I
-
-    filled-new-array {v1}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p0, p1}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_2
-    const-string p1, "common_google_play_services_network_error_text"
-
-    invoke-static {p0, p1, v1}, Lipi;->e(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_3
-    const-string p1, "common_google_play_services_invalid_account_text"
-
-    invoke-static {p0, p1, v1}, Lipi;->e(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_4
-    sget p0, Lkfd;->common_google_play_services_enable_text:I
-
-    filled-new-array {v1}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p0, p1}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_5
-    invoke-static {p0}, Ldnj;->b(Landroid/content/Context;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_6
-
-    sget p0, Lkfd;->common_google_play_services_wear_update_text:I
-
-    invoke-virtual {v0, p0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_6
-    sget p0, Lkfd;->common_google_play_services_update_text:I
-
-    filled-new-array {v1}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p0, p1}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_7
-    sget p0, Lkfd;->common_google_play_services_install_text:I
-
-    filled-new-array {v1}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p0, p1}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_data_0
-    .packed-switch 0x10
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public static d(Landroid/content/Context;I)Ljava/lang/String;
-    .locals 3
-
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
+    .line 7
+    new-instance v0, Lgpi;
 
     const/4 v1, 0x0
 
-    const-string v2, "GoogleApiAvailability"
+    invoke-direct {v0, p0, v1}, Lgpi;-><init>(Lipi;I)V
 
-    packed-switch p1, :pswitch_data_0
+    iput-object v0, p0, Lipi;->v:Lgpi;
 
-    :pswitch_0
-    new-instance p0, Ljava/lang/StringBuilder;
+    .line 8
+    new-instance v0, Lgpi;
 
-    const-string v0, "Unexpected error code "
+    const/4 v1, 0x1
 
-    invoke-direct {p0, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p0, v1}, Lgpi;-><init>(Lipi;I)V
 
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    iput-object v0, p0, Lipi;->w:Lgpi;
 
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .line 9
+    new-instance v0, Lhde;
 
-    move-result-object p0
+    const/16 v1, 0x8
 
-    invoke-static {v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-direct {v0, v1, p0}, Lhde;-><init>(ILjava/lang/Object;)V
 
-    return-object v1
+    iput-object v0, p0, Lipi;->x:Lhde;
 
-    :pswitch_1
-    const-string p1, "The current user profile is restricted and could not use authenticated features."
-
-    invoke-static {v2, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    const-string p1, "common_google_play_services_restricted_profile_title"
-
-    invoke-static {p0, p1}, Lipi;->f(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_2
-    const-string p1, "The specified account could not be signed in."
-
-    invoke-static {v2, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    const-string p1, "common_google_play_services_sign_in_failed_title"
-
-    invoke-static {p0, p1}, Lipi;->f(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_3
-    const-string p0, "One of the API components you attempted to connect to is not available."
-
-    invoke-static {v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    return-object v1
-
-    :pswitch_4
-    const-string p0, "The application is not licensed to the user."
-
-    invoke-static {v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    return-object v1
-
-    :pswitch_5
-    const-string p0, "Developer error occurred. Please see logs for detailed information"
-
-    invoke-static {v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    return-object v1
-
-    :pswitch_6
-    const-string p0, "Google Play services is invalid. Cannot recover."
-
-    invoke-static {v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    return-object v1
-
-    :pswitch_7
-    const-string p0, "Internal error occurred. Please see logs for detailed information"
-
-    invoke-static {v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    return-object v1
-
-    :pswitch_8
-    const-string p1, "Network error occurred. Please retry request later."
-
-    invoke-static {v2, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    const-string p1, "common_google_play_services_network_error_title"
-
-    invoke-static {p0, p1}, Lipi;->f(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_9
-    const-string p1, "An invalid account was specified when connecting. Please provide a valid account."
-
-    invoke-static {v2, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    const-string p1, "common_google_play_services_invalid_account_title"
-
-    invoke-static {p0, p1}, Lipi;->f(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_a
-    return-object v1
-
-    :pswitch_b
-    sget p0, Lkfd;->common_google_play_services_enable_title:I
-
-    invoke-virtual {v0, p0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_c
-    sget p0, Lkfd;->common_google_play_services_update_title:I
-
-    invoke-virtual {v0, p0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_d
-    sget p0, Lkfd;->common_google_play_services_install_title:I
-
-    invoke-virtual {v0, p0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_d
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_a
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_a
-        :pswitch_0
-        :pswitch_1
-    .end packed-switch
-.end method
-
-.method public static e(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-    .locals 1
-
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-static {p0, p1}, Lipi;->f(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    if-nez p0, :cond_0
-
-    sget p0, Llfd;->common_google_play_services_unknown_issue:I
-
-    invoke-virtual {v0, p0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    :cond_0
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    .line 10
+    invoke-virtual {p1}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
     move-result-object p1
 
-    iget-object p1, p1, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
+    .line 11
+    invoke-virtual {p1}, Landroid/view/Window;->getDecorView()Landroid/view/View;
 
-    filled-new-array {p2}, [Ljava/lang/Object;
+    move-result-object p1
 
-    move-result-object p2
+    .line 12
+    invoke-virtual {p0, p1}, Lipi;->s(Landroid/view/View;)V
 
-    invoke-static {p1, p0, p2}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    if-nez p2, :cond_0
 
-    move-result-object p0
+    const p2, 0x1020002
 
-    return-object p0
+    .line 13
+    invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lipi;->g:Landroid/view/View;
+
+    :cond_0
+    return-void
 .end method
 
-.method public static f(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
-    .locals 6
+.method public constructor <init>(Landroid/app/Dialog;)V
+    .locals 2
 
-    const-string v0, "Got empty resource: "
+    .line 14
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "Missing resource: "
+    .line 15
+    new-instance v0, Ljava/util/ArrayList;
 
-    sget-object v2, Lipi;->a:Ladf;
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    monitor-enter v2
+    .line 16
+    new-instance v0, Ljava/util/ArrayList;
 
-    :try_start_0
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    move-result-object v3
+    iput-object v0, p0, Lipi;->m:Ljava/util/ArrayList;
 
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    const/4 v0, 0x0
 
-    move-result-object v3
+    .line 17
+    iput v0, p0, Lipi;->n:I
 
-    invoke-static {v3}, Lfs3;->a(Landroid/content/res/Configuration;)Landroid/os/LocaleList;
+    const/4 v0, 0x1
 
-    move-result-object v3
+    .line 18
+    iput-boolean v0, p0, Lipi;->o:Z
 
-    new-instance v4, Lxi8;
+    .line 19
+    iput-boolean v0, p0, Lipi;->r:Z
 
-    const/4 v4, 0x0
+    .line 20
+    new-instance v0, Lgpi;
 
-    invoke-virtual {v3, v4}, Landroid/os/LocaleList;->get(I)Ljava/util/Locale;
+    const/4 v1, 0x0
 
-    move-result-object v3
+    invoke-direct {v0, p0, v1}, Lgpi;-><init>(Lipi;I)V
 
-    sget-object v4, Lipi;->b:Ljava/util/Locale;
+    iput-object v0, p0, Lipi;->v:Lgpi;
 
-    invoke-virtual {v3, v4}, Ljava/util/Locale;->equals(Ljava/lang/Object;)Z
+    .line 21
+    new-instance v0, Lgpi;
 
-    move-result v4
+    const/4 v1, 0x1
 
-    if-nez v4, :cond_0
+    invoke-direct {v0, p0, v1}, Lgpi;-><init>(Lipi;I)V
 
-    invoke-virtual {v2}, Ladf;->clear()V
+    iput-object v0, p0, Lipi;->w:Lgpi;
 
-    sput-object v3, Lipi;->b:Ljava/util/Locale;
+    .line 22
+    new-instance v0, Lhde;
+
+    const/16 v1, 0x8
+
+    invoke-direct {v0, v1, p0}, Lhde;-><init>(ILjava/lang/Object;)V
+
+    iput-object v0, p0, Lipi;->x:Lhde;
+
+    .line 23
+    invoke-virtual {p1}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Lipi;->s(Landroid/view/View;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final b()Z
+    .locals 2
+
+    iget-object v0, p0, Lipi;->e:Lln4;
+
+    if-eqz v0, :cond_2
+
+    move-object v1, v0
+
+    check-cast v1, Lxvg;
+
+    iget-object v1, v1, Lxvg;->a:Landroidx/appcompat/widget/Toolbar;
+
+    iget-object v1, v1, Landroidx/appcompat/widget/Toolbar;->Z0:Lovg;
+
+    if-eqz v1, :cond_2
+
+    iget-object v1, v1, Lovg;->b:Lxl9;
+
+    if-eqz v1, :cond_2
+
+    check-cast v0, Lxvg;
+
+    iget-object v0, v0, Lxvg;->a:Landroidx/appcompat/widget/Toolbar;
+
+    iget-object v0, v0, Landroidx/appcompat/widget/Toolbar;->Z0:Lovg;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
 
     goto :goto_0
 
-    :catchall_0
-    move-exception p0
-
-    goto :goto_3
-
     :cond_0
+    iget-object v0, v0, Lovg;->b:Lxl9;
+
     :goto_0
-    invoke-virtual {v2, p1}, Ladf;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    if-eqz v0, :cond_1
 
-    move-result-object v3
-
-    check-cast v3, Ljava/lang/String;
-
-    if-eqz v3, :cond_1
-
-    monitor-exit v2
-
-    return-object v3
+    invoke-virtual {v0}, Lxl9;->collapseActionView()Z
 
     :cond_1
-    sget v3, Lu07;->e:I
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    const/4 v0, 0x1
 
-    const/4 v3, 0x0
+    return v0
 
-    :try_start_1
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+    :cond_2
+    const/4 v0, 0x0
 
-    move-result-object p0
+    return v0
+.end method
 
-    const-string v4, "com.google.android.gms"
+.method public final c(Z)V
+    .locals 1
 
-    invoke-virtual {p0, v4}, Landroid/content/pm/PackageManager;->getResourcesForApplication(Ljava/lang/String;)Landroid/content/res/Resources;
+    iget-boolean v0, p0, Lipi;->l:Z
 
-    move-result-object p0
-    :try_end_1
-    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    if-ne p1, v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iput-boolean p1, p0, Lipi;->l:Z
+
+    iget-object p1, p0, Lipi;->m:Ljava/util/ArrayList;
+
+    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    if-gtz v0, :cond_1
+
+    :goto_0
+    return-void
+
+    :cond_1
+    const/4 v0, 0x0
+
+    invoke-static {p1, v0}, Lfvg;->k(Ljava/util/ArrayList;I)Ljava/lang/ClassCastException;
+
+    move-result-object p1
+
+    throw p1
+.end method
+
+.method public final e()I
+    .locals 1
+
+    iget-object v0, p0, Lipi;->e:Lln4;
+
+    check-cast v0, Lxvg;
+
+    iget v0, v0, Lxvg;->b:I
+
+    return v0
+.end method
+
+.method public final f()Landroid/content/Context;
+    .locals 4
+
+    iget-object v0, p0, Lipi;->b:Landroid/content/Context;
+
+    if-nez v0, :cond_1
+
+    new-instance v0, Landroid/util/TypedValue;
+
+    invoke-direct {v0}, Landroid/util/TypedValue;-><init>()V
+
+    iget-object v1, p0, Lipi;->a:Landroid/content/Context;
+
+    invoke-virtual {v1}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
+
+    move-result-object v1
+
+    sget v2, Luad;->actionBarWidgetTheme:I
+
+    const/4 v3, 0x1
+
+    invoke-virtual {v1, v2, v0, v3}, Landroid/content/res/Resources$Theme;->resolveAttribute(ILandroid/util/TypedValue;Z)Z
+
+    iget v0, v0, Landroid/util/TypedValue;->resourceId:I
+
+    if-eqz v0, :cond_0
+
+    new-instance v1, Landroid/view/ContextThemeWrapper;
+
+    iget-object v2, p0, Lipi;->a:Landroid/content/Context;
+
+    invoke-direct {v1, v2, v0}, Landroid/view/ContextThemeWrapper;-><init>(Landroid/content/Context;I)V
+
+    iput-object v1, p0, Lipi;->b:Landroid/content/Context;
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, p0, Lipi;->a:Landroid/content/Context;
+
+    iput-object v0, p0, Lipi;->b:Landroid/content/Context;
+
+    :cond_1
+    :goto_0
+    iget-object v0, p0, Lipi;->b:Landroid/content/Context;
+
+    return-object v0
+.end method
+
+.method public final i()V
+    .locals 2
+
+    iget-object v0, p0, Lipi;->a:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    sget v1, Lyad;->abc_action_bar_embed_tabs:I
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
+
+    move-result v0
+
+    invoke-virtual {p0, v0}, Lipi;->t(Z)V
+
+    return-void
+.end method
+
+.method public final k(ILandroid/view/KeyEvent;)Z
+    .locals 4
+
+    iget-object v0, p0, Lipi;->i:Lhpi;
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_0
 
     goto :goto_1
 
-    :catch_0
-    move-object p0, v3
+    :cond_0
+    iget-object v0, v0, Lhpi;->d:Ltl9;
 
-    :goto_1
-    if-nez p0, :cond_2
+    if-eqz v0, :cond_2
 
-    :try_start_2
-    monitor-exit v2
+    invoke-virtual {p2}, Landroid/view/KeyEvent;->getDeviceId()I
 
-    goto :goto_2
+    move-result v2
+
+    invoke-static {v2}, Landroid/view/KeyCharacterMap;->load(I)Landroid/view/KeyCharacterMap;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/view/KeyCharacterMap;->getKeyboardType()I
+
+    move-result v2
+
+    const/4 v3, 0x1
+
+    if-eq v2, v3, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    move v3, v1
+
+    :goto_0
+    invoke-virtual {v0, v3}, Ltl9;->setQwertyMode(Z)V
+
+    invoke-virtual {v0, p1, p2, v1}, Ltl9;->performShortcut(ILandroid/view/KeyEvent;I)Z
+
+    move-result p1
+
+    return p1
 
     :cond_2
-    const-string v4, "string"
+    :goto_1
+    return v1
+.end method
 
-    const-string v5, "com.google.android.gms"
+.method public final n(Z)V
+    .locals 4
 
-    invoke-virtual {p0, p1, v4, v5}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
+    iget-boolean v0, p0, Lipi;->h:Z
 
-    move-result v4
+    if-nez v0, :cond_1
 
-    if-nez v4, :cond_3
+    const/4 v0, 0x4
 
-    const-string p0, "GoogleApiAvailability"
+    if-eqz p1, :cond_0
 
-    invoke-virtual {v1, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    move p1, v0
 
-    move-result-object p1
+    goto :goto_0
 
-    invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    :cond_0
+    const/4 p1, 0x0
 
-    monitor-exit v2
+    :goto_0
+    iget-object v1, p0, Lipi;->e:Lln4;
 
-    goto :goto_2
+    check-cast v1, Lxvg;
+
+    iget v2, v1, Lxvg;->b:I
+
+    const/4 v3, 0x1
+
+    iput-boolean v3, p0, Lipi;->h:Z
+
+    and-int/2addr p1, v0
+
+    and-int/lit8 v0, v2, -0x5
+
+    or-int/2addr p1, v0
+
+    invoke-virtual {v1, p1}, Lxvg;->a(I)V
+
+    :cond_1
+    return-void
+.end method
+
+.method public final o(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lipi;->t:Z
+
+    if-nez p1, :cond_0
+
+    iget-object p1, p0, Lipi;->s:Lw49;
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p1}, Lw49;->a()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final p(Ljava/lang/CharSequence;)V
+    .locals 3
+
+    iget-object v0, p0, Lipi;->e:Lln4;
+
+    check-cast v0, Lxvg;
+
+    iget-boolean v1, v0, Lxvg;->g:Z
+
+    if-nez v1, :cond_0
+
+    iget-object v1, v0, Lxvg;->a:Landroidx/appcompat/widget/Toolbar;
+
+    iput-object p1, v0, Lxvg;->h:Ljava/lang/CharSequence;
+
+    iget v2, v0, Lxvg;->b:I
+
+    and-int/lit8 v2, v2, 0x8
+
+    if-eqz v2, :cond_0
+
+    invoke-virtual {v1, p1}, Landroidx/appcompat/widget/Toolbar;->setTitle(Ljava/lang/CharSequence;)V
+
+    iget-boolean v0, v0, Lxvg;->g:Z
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v1}, Landroid/view/View;->getRootView()Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-static {v0, p1}, Lh0i;->o(Landroid/view/View;Ljava/lang/CharSequence;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final q(Lgri;)Lp8;
+    .locals 2
+
+    iget-object v0, p0, Lipi;->i:Lhpi;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Lhpi;->a()V
+
+    :cond_0
+    iget-object v0, p0, Lipi;->c:Landroidx/appcompat/widget/ActionBarOverlayLayout;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroidx/appcompat/widget/ActionBarOverlayLayout;->setHideOnContentScrollEnabled(Z)V
+
+    iget-object v0, p0, Lipi;->f:Landroidx/appcompat/widget/ActionBarContextView;
+
+    invoke-virtual {v0}, Landroidx/appcompat/widget/ActionBarContextView;->e()V
+
+    new-instance v0, Lhpi;
+
+    iget-object v1, p0, Lipi;->f:Landroidx/appcompat/widget/ActionBarContextView;
+
+    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-direct {v0, p0, v1, p1}, Lhpi;-><init>(Lipi;Landroid/content/Context;Lgri;)V
+
+    iget-object p1, v0, Lhpi;->d:Ltl9;
+
+    invoke-virtual {p1}, Ltl9;->w()V
+
+    :try_start_0
+    iget-object v1, v0, Lhpi;->o:Lgri;
+
+    iget-object v1, v1, Lgri;->b:Ljava/lang/Object;
+
+    check-cast v1, Lvye;
+
+    invoke-virtual {v1, v0, p1}, Lvye;->G(Lp8;Landroid/view/Menu;)Z
+
+    move-result v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {p1}, Ltl9;->v()V
+
+    if-eqz v1, :cond_1
+
+    iput-object v0, p0, Lipi;->i:Lhpi;
+
+    invoke-virtual {v0}, Lhpi;->h()V
+
+    iget-object p1, p0, Lipi;->f:Landroidx/appcompat/widget/ActionBarContextView;
+
+    invoke-virtual {p1, v0}, Landroidx/appcompat/widget/ActionBarContextView;->c(Lp8;)V
+
+    const/4 p1, 0x1
+
+    invoke-virtual {p0, p1}, Lipi;->r(Z)V
+
+    return-object v0
+
+    :cond_1
+    const/4 p1, 0x0
+
+    return-object p1
+
+    :catchall_0
+    move-exception v0
+
+    invoke-virtual {p1}, Ltl9;->v()V
+
+    throw v0
+.end method
+
+.method public final r(Z)V
+    .locals 9
+
+    const/4 v0, 0x0
+
+    if-eqz p1, :cond_1
+
+    iget-boolean v1, p0, Lipi;->q:Z
+
+    if-nez v1, :cond_3
+
+    const/4 v1, 0x1
+
+    iput-boolean v1, p0, Lipi;->q:Z
+
+    iget-object v2, p0, Lipi;->c:Landroidx/appcompat/widget/ActionBarOverlayLayout;
+
+    if-eqz v2, :cond_0
+
+    invoke-virtual {v2, v1}, Landroidx/appcompat/widget/ActionBarOverlayLayout;->setShowingForActionMode(Z)V
+
+    :cond_0
+    invoke-virtual {p0, v0}, Lipi;->u(Z)V
+
+    goto :goto_0
+
+    :cond_1
+    iget-boolean v1, p0, Lipi;->q:Z
+
+    if-eqz v1, :cond_3
+
+    iput-boolean v0, p0, Lipi;->q:Z
+
+    iget-object v1, p0, Lipi;->c:Landroidx/appcompat/widget/ActionBarOverlayLayout;
+
+    if-eqz v1, :cond_2
+
+    invoke-virtual {v1, v0}, Landroidx/appcompat/widget/ActionBarOverlayLayout;->setShowingForActionMode(Z)V
+
+    :cond_2
+    invoke-virtual {p0, v0}, Lipi;->u(Z)V
 
     :cond_3
-    invoke-virtual {p0, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    :goto_0
+    iget-object v1, p0, Lipi;->d:Landroidx/appcompat/widget/ActionBarContainer;
 
-    move-result-object p0
-
-    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-virtual {v1}, Landroid/view/View;->isLaidOut()Z
 
     move-result v1
 
-    if-eqz v1, :cond_4
+    const/16 v2, 0x8
 
-    const-string p0, "GoogleApiAvailability"
+    const/4 v3, 0x4
 
-    invoke-virtual {v0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    if-eqz v1, :cond_7
+
+    const-wide/16 v4, 0xc8
+
+    const-wide/16 v6, 0x64
+
+    if-eqz p1, :cond_4
+
+    iget-object p1, p0, Lipi;->e:Lln4;
+
+    check-cast p1, Lxvg;
+
+    iget-object v1, p1, Lxvg;->a:Landroidx/appcompat/widget/Toolbar;
+
+    invoke-static {v1}, Lh0i;->a(Landroid/view/View;)Lc2i;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v2}, Lc2i;->a(F)V
+
+    invoke-virtual {v1, v6, v7}, Lc2i;->c(J)V
+
+    new-instance v2, Lwvg;
+
+    invoke-direct {v2, p1, v3}, Lwvg;-><init>(Lxvg;I)V
+
+    invoke-virtual {v1, v2}, Lc2i;->d(Ld2i;)V
+
+    iget-object p1, p0, Lipi;->f:Landroidx/appcompat/widget/ActionBarContextView;
+
+    invoke-virtual {p1, v0, v4, v5}, Landroidx/appcompat/widget/ActionBarContextView;->i(IJ)Lc2i;
 
     move-result-object p1
 
-    invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    monitor-exit v2
-
-    :goto_2
-    return-object v3
+    goto :goto_1
 
     :cond_4
-    sget-object v0, Lipi;->a:Ladf;
+    iget-object p1, p0, Lipi;->e:Lln4;
 
-    invoke-virtual {v0, p1, p0}, Ladf;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    check-cast p1, Lxvg;
 
-    monitor-exit v2
+    iget-object v1, p1, Lxvg;->a:Landroidx/appcompat/widget/Toolbar;
 
-    return-object p0
+    invoke-static {v1}, Lh0i;->a(Landroid/view/View;)Lc2i;
+
+    move-result-object v1
+
+    const/high16 v3, 0x3f800000    # 1.0f
+
+    invoke-virtual {v1, v3}, Lc2i;->a(F)V
+
+    invoke-virtual {v1, v4, v5}, Lc2i;->c(J)V
+
+    new-instance v3, Lwvg;
+
+    invoke-direct {v3, p1, v0}, Lwvg;-><init>(Lxvg;I)V
+
+    invoke-virtual {v1, v3}, Lc2i;->d(Ld2i;)V
+
+    iget-object p1, p0, Lipi;->f:Landroidx/appcompat/widget/ActionBarContextView;
+
+    invoke-virtual {p1, v2, v6, v7}, Landroidx/appcompat/widget/ActionBarContextView;->i(IJ)Lc2i;
+
+    move-result-object p1
+
+    move-object v8, v1
+
+    move-object v1, p1
+
+    move-object p1, v8
+
+    :goto_1
+    new-instance v0, Lw49;
+
+    invoke-direct {v0}, Lw49;-><init>()V
+
+    iget-object v2, v0, Lw49;->a:Ljava/util/ArrayList;
+
+    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    iget-object v1, v1, Lc2i;->a:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/view/View;
+
+    if-eqz v1, :cond_5
+
+    invoke-virtual {v1}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/view/ViewPropertyAnimator;->getDuration()J
+
+    move-result-wide v3
+
+    goto :goto_2
+
+    :cond_5
+    const-wide/16 v3, 0x0
+
+    :goto_2
+    iget-object v1, p1, Lc2i;->a:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/view/View;
+
+    if-eqz v1, :cond_6
+
+    invoke-virtual {v1}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v3, v4}, Landroid/view/ViewPropertyAnimator;->setStartDelay(J)Landroid/view/ViewPropertyAnimator;
+
+    :cond_6
+    invoke-virtual {v2, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    invoke-virtual {v0}, Lw49;->b()V
+
+    return-void
+
+    :cond_7
+    if-eqz p1, :cond_8
+
+    iget-object p1, p0, Lipi;->e:Lln4;
+
+    check-cast p1, Lxvg;
+
+    iget-object p1, p1, Lxvg;->a:Landroidx/appcompat/widget/Toolbar;
+
+    invoke-virtual {p1, v3}, Landroid/view/View;->setVisibility(I)V
+
+    iget-object p1, p0, Lipi;->f:Landroidx/appcompat/widget/ActionBarContextView;
+
+    invoke-virtual {p1, v0}, Landroidx/appcompat/widget/ActionBarContextView;->setVisibility(I)V
+
+    return-void
+
+    :cond_8
+    iget-object p1, p0, Lipi;->e:Lln4;
+
+    check-cast p1, Lxvg;
+
+    iget-object p1, p1, Lxvg;->a:Landroidx/appcompat/widget/Toolbar;
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
+
+    iget-object p1, p0, Lipi;->f:Landroidx/appcompat/widget/ActionBarContextView;
+
+    invoke-virtual {p1, v2}, Landroidx/appcompat/widget/ActionBarContextView;->setVisibility(I)V
+
+    return-void
+.end method
+
+.method public final s(Landroid/view/View;)V
+    .locals 5
+
+    sget v0, Lkdd;->decor_content_parent:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroidx/appcompat/widget/ActionBarOverlayLayout;
+
+    iput-object v0, p0, Lipi;->c:Landroidx/appcompat/widget/ActionBarOverlayLayout;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, p0}, Landroidx/appcompat/widget/ActionBarOverlayLayout;->setActionBarVisibilityCallback(Lx7;)V
+
+    :cond_0
+    sget v0, Lkdd;->action_bar:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    instance-of v1, v0, Lln4;
+
+    if-eqz v1, :cond_1
+
+    check-cast v0, Lln4;
+
+    goto :goto_0
+
+    :cond_1
+    instance-of v1, v0, Landroidx/appcompat/widget/Toolbar;
+
+    if-eqz v1, :cond_8
+
+    check-cast v0, Landroidx/appcompat/widget/Toolbar;
+
+    invoke-virtual {v0}, Landroidx/appcompat/widget/Toolbar;->getWrapper()Lln4;
+
+    move-result-object v0
+
+    :goto_0
+    iput-object v0, p0, Lipi;->e:Lln4;
+
+    sget v0, Lkdd;->action_context_bar:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroidx/appcompat/widget/ActionBarContextView;
+
+    iput-object v0, p0, Lipi;->f:Landroidx/appcompat/widget/ActionBarContextView;
+
+    sget v0, Lkdd;->action_bar_container:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object p1
+
+    check-cast p1, Landroidx/appcompat/widget/ActionBarContainer;
+
+    iput-object p1, p0, Lipi;->d:Landroidx/appcompat/widget/ActionBarContainer;
+
+    iget-object v0, p0, Lipi;->e:Lln4;
+
+    if-eqz v0, :cond_7
+
+    iget-object v1, p0, Lipi;->f:Landroidx/appcompat/widget/ActionBarContextView;
+
+    if-eqz v1, :cond_7
+
+    if-eqz p1, :cond_7
+
+    check-cast v0, Lxvg;
+
+    iget-object p1, v0, Lxvg;->a:Landroidx/appcompat/widget/Toolbar;
+
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lipi;->a:Landroid/content/Context;
+
+    iget-object v0, p0, Lipi;->e:Lln4;
+
+    check-cast v0, Lxvg;
+
+    iget v0, v0, Lxvg;->b:I
+
+    and-int/lit8 v0, v0, 0x4
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    if-eqz v0, :cond_2
+
+    move v0, v1
+
+    goto :goto_1
+
+    :cond_2
+    move v0, v2
+
+    :goto_1
+    if-eqz v0, :cond_3
+
+    iput-boolean v1, p0, Lipi;->h:Z
+
+    :cond_3
+    invoke-virtual {p1}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
+
+    move-result-object v3
+
+    iget v3, v3, Landroid/content/pm/ApplicationInfo;->targetSdkVersion:I
+
+    const/16 v4, 0xe
+
+    iget-object v0, p0, Lipi;->e:Lln4;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p1
+
+    sget v0, Lyad;->abc_action_bar_embed_tabs:I
+
+    invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getBoolean(I)Z
+
+    move-result p1
+
+    invoke-virtual {p0, p1}, Lipi;->t(Z)V
+
+    iget-object p1, p0, Lipi;->a:Landroid/content/Context;
+
+    sget-object v0, Lkmd;->ActionBar:[I
+
+    sget v3, Luad;->actionBarStyle:I
+
+    const/4 v4, 0x0
+
+    invoke-virtual {p1, v4, v0, v3, v2}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
+
+    move-result-object p1
+
+    sget v0, Lkmd;->ActionBar_hideOnContentScroll:I
+
+    invoke-virtual {p1, v0, v2}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    iget-object v0, p0, Lipi;->c:Landroidx/appcompat/widget/ActionBarOverlayLayout;
+
+    iget-boolean v3, v0, Landroidx/appcompat/widget/ActionBarOverlayLayout;->t0:Z
+
+    if-eqz v3, :cond_4
+
+    iput-boolean v1, p0, Lipi;->u:Z
+
+    invoke-virtual {v0, v1}, Landroidx/appcompat/widget/ActionBarOverlayLayout;->setHideOnContentScrollEnabled(Z)V
+
+    goto :goto_2
+
+    :cond_4
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "Action bar must be in overlay mode (Window.FEATURE_OVERLAY_ACTION_BAR) to enable hide on content scroll"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_5
+    :goto_2
+    sget v0, Lkmd;->ActionBar_elevation:I
+
+    invoke-virtual {p1, v0, v2}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
+
+    move-result v0
+
+    if-eqz v0, :cond_6
+
+    int-to-float v0, v0
+
+    iget-object v1, p0, Lipi;->d:Landroidx/appcompat/widget/ActionBarContainer;
+
+    sget-object v2, Lh0i;->a:Ljava/util/WeakHashMap;
+
+    invoke-static {v1, v0}, Lvzh;->s(Landroid/view/View;F)V
+
+    :cond_6
+    invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
+
+    return-void
+
+    :cond_7
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-class v0, Lipi;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, " can only be used with a compatible window decor layout"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_8
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    if-eqz v0, :cond_9
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_3
+
+    :cond_9
+    const-string v0, "null"
 
     :goto_3
-    monitor-exit v2
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    const-string v1, "Can\'t make a decor toolbar out of "
 
-    throw p0
+    invoke-virtual {v1, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final t(Z)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    if-nez p1, :cond_0
+
+    iget-object p1, p0, Lipi;->e:Lln4;
+
+    check-cast p1, Lxvg;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object p1, p0, Lipi;->d:Landroidx/appcompat/widget/ActionBarContainer;
+
+    invoke-virtual {p1, v0}, Landroidx/appcompat/widget/ActionBarContainer;->setTabContainer(Ltle;)V
+
+    goto :goto_0
+
+    :cond_0
+    iget-object p1, p0, Lipi;->d:Landroidx/appcompat/widget/ActionBarContainer;
+
+    invoke-virtual {p1, v0}, Landroidx/appcompat/widget/ActionBarContainer;->setTabContainer(Ltle;)V
+
+    iget-object p1, p0, Lipi;->e:Lln4;
+
+    check-cast p1, Lxvg;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    :goto_0
+    iget-object p1, p0, Lipi;->e:Lln4;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object p1, p0, Lipi;->e:Lln4;
+
+    check-cast p1, Lxvg;
+
+    iget-object p1, p1, Lxvg;->a:Landroidx/appcompat/widget/Toolbar;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Landroidx/appcompat/widget/Toolbar;->setCollapsible(Z)V
+
+    iget-object p1, p0, Lipi;->c:Landroidx/appcompat/widget/ActionBarOverlayLayout;
+
+    invoke-virtual {p1, v0}, Landroidx/appcompat/widget/ActionBarOverlayLayout;->setHasNonEmbeddedTabs(Z)V
+
+    return-void
+.end method
+
+.method public final u(Z)V
+    .locals 12
+
+    iget-boolean v0, p0, Lipi;->p:Z
+
+    iget-boolean v1, p0, Lipi;->q:Z
+
+    const/4 v2, 0x7
+
+    const-wide/16 v3, 0xfa
+
+    const/4 v5, 0x0
+
+    const/high16 v6, 0x3f800000    # 1.0f
+
+    iget-object v7, p0, Lipi;->x:Lhde;
+
+    iget-object v8, p0, Lipi;->g:Landroid/view/View;
+
+    const/4 v9, 0x1
+
+    const/4 v10, 0x0
+
+    if-eqz v1, :cond_0
+
+    goto/16 :goto_0
+
+    :cond_0
+    if-eqz v0, :cond_c
+
+    iget-boolean v0, p0, Lipi;->r:Z
+
+    if-eqz v0, :cond_19
+
+    iput-boolean v10, p0, Lipi;->r:Z
+
+    iget-object v0, p0, Lipi;->s:Lw49;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Lw49;->a()V
+
+    :cond_1
+    iget v0, p0, Lipi;->n:I
+
+    iget-object v1, p0, Lipi;->v:Lgpi;
+
+    if-nez v0, :cond_b
+
+    iget-boolean v0, p0, Lipi;->t:Z
+
+    if-nez v0, :cond_2
+
+    if-eqz p1, :cond_b
+
+    :cond_2
+    iget-object v0, p0, Lipi;->d:Landroidx/appcompat/widget/ActionBarContainer;
+
+    invoke-virtual {v0, v6}, Landroid/view/View;->setAlpha(F)V
+
+    iget-object v0, p0, Lipi;->d:Landroidx/appcompat/widget/ActionBarContainer;
+
+    invoke-virtual {v0, v9}, Landroidx/appcompat/widget/ActionBarContainer;->setTransitioning(Z)V
+
+    new-instance v0, Lw49;
+
+    invoke-direct {v0}, Lw49;-><init>()V
+
+    iget-object v6, p0, Lipi;->d:Landroidx/appcompat/widget/ActionBarContainer;
+
+    invoke-virtual {v6}, Landroid/view/View;->getHeight()I
+
+    move-result v6
+
+    neg-int v6, v6
+
+    int-to-float v6, v6
+
+    if-eqz p1, :cond_3
+
+    filled-new-array {v10, v10}, [I
+
+    move-result-object p1
+
+    iget-object v10, p0, Lipi;->d:Landroidx/appcompat/widget/ActionBarContainer;
+
+    invoke-virtual {v10, p1}, Landroid/view/View;->getLocationInWindow([I)V
+
+    aget p1, p1, v9
+
+    int-to-float p1, p1
+
+    sub-float/2addr v6, p1
+
+    :cond_3
+    iget-object p1, p0, Lipi;->d:Landroidx/appcompat/widget/ActionBarContainer;
+
+    invoke-static {p1}, Lh0i;->a(Landroid/view/View;)Lc2i;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v6}, Lc2i;->e(F)V
+
+    iget-object v9, p1, Lc2i;->a:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v9}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v9
+
+    check-cast v9, Landroid/view/View;
+
+    if-eqz v9, :cond_5
+
+    if-eqz v7, :cond_4
+
+    new-instance v5, Lgi;
+
+    invoke-direct {v5, v7, v2, v9}, Lgi;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    :cond_4
+    invoke-virtual {v9}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v5}, Landroid/view/ViewPropertyAnimator;->setUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)Landroid/view/ViewPropertyAnimator;
+
+    :cond_5
+    iget-boolean v2, v0, Lw49;->c:Z
+
+    iget-object v5, v0, Lw49;->a:Ljava/util/ArrayList;
+
+    if-nez v2, :cond_6
+
+    invoke-virtual {v5, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_6
+    iget-boolean p1, p0, Lipi;->o:Z
+
+    if-eqz p1, :cond_7
+
+    if-eqz v8, :cond_7
+
+    invoke-static {v8}, Lh0i;->a(Landroid/view/View;)Lc2i;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v6}, Lc2i;->e(F)V
+
+    iget-boolean v2, v0, Lw49;->c:Z
+
+    if-nez v2, :cond_7
+
+    invoke-virtual {v5, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_7
+    iget-boolean p1, v0, Lw49;->c:Z
+
+    if-nez p1, :cond_8
+
+    sget-object v2, Lipi;->y:Landroid/view/animation/AccelerateInterpolator;
+
+    iput-object v2, v0, Lw49;->d:Ljava/lang/Object;
+
+    :cond_8
+    if-nez p1, :cond_9
+
+    iput-wide v3, v0, Lw49;->b:J
+
+    :cond_9
+    if-nez p1, :cond_a
+
+    iput-object v1, v0, Lw49;->o:Ljava/lang/Object;
+
+    :cond_a
+    iput-object v0, p0, Lipi;->s:Lw49;
+
+    invoke-virtual {v0}, Lw49;->b()V
+
+    return-void
+
+    :cond_b
+    invoke-virtual {v1}, Lgpi;->c()V
+
+    return-void
+
+    :cond_c
+    :goto_0
+    iget-boolean v0, p0, Lipi;->r:Z
+
+    if-nez v0, :cond_19
+
+    iput-boolean v9, p0, Lipi;->r:Z
+
+    iget-object v0, p0, Lipi;->s:Lw49;
+
+    if-eqz v0, :cond_d
+
+    invoke-virtual {v0}, Lw49;->a()V
+
+    :cond_d
+    iget-object v0, p0, Lipi;->d:Landroidx/appcompat/widget/ActionBarContainer;
+
+    invoke-virtual {v0, v10}, Landroidx/appcompat/widget/ActionBarContainer;->setVisibility(I)V
+
+    iget v0, p0, Lipi;->n:I
+
+    iget-object v1, p0, Lipi;->w:Lgpi;
+
+    const/4 v11, 0x0
+
+    if-nez v0, :cond_17
+
+    iget-boolean v0, p0, Lipi;->t:Z
+
+    if-nez v0, :cond_e
+
+    if-eqz p1, :cond_17
+
+    :cond_e
+    iget-object v0, p0, Lipi;->d:Landroidx/appcompat/widget/ActionBarContainer;
+
+    invoke-virtual {v0, v11}, Landroid/view/View;->setTranslationY(F)V
+
+    iget-object v0, p0, Lipi;->d:Landroidx/appcompat/widget/ActionBarContainer;
+
+    invoke-virtual {v0}, Landroid/view/View;->getHeight()I
+
+    move-result v0
+
+    neg-int v0, v0
+
+    int-to-float v0, v0
+
+    if-eqz p1, :cond_f
+
+    filled-new-array {v10, v10}, [I
+
+    move-result-object p1
+
+    iget-object v6, p0, Lipi;->d:Landroidx/appcompat/widget/ActionBarContainer;
+
+    invoke-virtual {v6, p1}, Landroid/view/View;->getLocationInWindow([I)V
+
+    aget p1, p1, v9
+
+    int-to-float p1, p1
+
+    sub-float/2addr v0, p1
+
+    :cond_f
+    iget-object p1, p0, Lipi;->d:Landroidx/appcompat/widget/ActionBarContainer;
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setTranslationY(F)V
+
+    new-instance p1, Lw49;
+
+    invoke-direct {p1}, Lw49;-><init>()V
+
+    iget-object v6, p0, Lipi;->d:Landroidx/appcompat/widget/ActionBarContainer;
+
+    invoke-static {v6}, Lh0i;->a(Landroid/view/View;)Lc2i;
+
+    move-result-object v6
+
+    invoke-virtual {v6, v11}, Lc2i;->e(F)V
+
+    iget-object v9, v6, Lc2i;->a:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v9}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v9
+
+    check-cast v9, Landroid/view/View;
+
+    if-eqz v9, :cond_11
+
+    if-eqz v7, :cond_10
+
+    new-instance v5, Lgi;
+
+    invoke-direct {v5, v7, v2, v9}, Lgi;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    :cond_10
+    invoke-virtual {v9}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v5}, Landroid/view/ViewPropertyAnimator;->setUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)Landroid/view/ViewPropertyAnimator;
+
+    :cond_11
+    iget-boolean v2, p1, Lw49;->c:Z
+
+    iget-object v5, p1, Lw49;->a:Ljava/util/ArrayList;
+
+    if-nez v2, :cond_12
+
+    invoke-virtual {v5, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_12
+    iget-boolean v2, p0, Lipi;->o:Z
+
+    if-eqz v2, :cond_13
+
+    if-eqz v8, :cond_13
+
+    invoke-virtual {v8, v0}, Landroid/view/View;->setTranslationY(F)V
+
+    invoke-static {v8}, Lh0i;->a(Landroid/view/View;)Lc2i;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v11}, Lc2i;->e(F)V
+
+    iget-boolean v2, p1, Lw49;->c:Z
+
+    if-nez v2, :cond_13
+
+    invoke-virtual {v5, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_13
+    iget-boolean v0, p1, Lw49;->c:Z
+
+    if-nez v0, :cond_14
+
+    sget-object v2, Lipi;->z:Landroid/view/animation/DecelerateInterpolator;
+
+    iput-object v2, p1, Lw49;->d:Ljava/lang/Object;
+
+    :cond_14
+    if-nez v0, :cond_15
+
+    iput-wide v3, p1, Lw49;->b:J
+
+    :cond_15
+    if-nez v0, :cond_16
+
+    iput-object v1, p1, Lw49;->o:Ljava/lang/Object;
+
+    :cond_16
+    iput-object p1, p0, Lipi;->s:Lw49;
+
+    invoke-virtual {p1}, Lw49;->b()V
+
+    goto :goto_1
+
+    :cond_17
+    iget-object p1, p0, Lipi;->d:Landroidx/appcompat/widget/ActionBarContainer;
+
+    invoke-virtual {p1, v6}, Landroid/view/View;->setAlpha(F)V
+
+    iget-object p1, p0, Lipi;->d:Landroidx/appcompat/widget/ActionBarContainer;
+
+    invoke-virtual {p1, v11}, Landroid/view/View;->setTranslationY(F)V
+
+    iget-boolean p1, p0, Lipi;->o:Z
+
+    if-eqz p1, :cond_18
+
+    if-eqz v8, :cond_18
+
+    invoke-virtual {v8, v11}, Landroid/view/View;->setTranslationY(F)V
+
+    :cond_18
+    invoke-virtual {v1}, Lgpi;->c()V
+
+    :goto_1
+    iget-object p1, p0, Lipi;->c:Landroidx/appcompat/widget/ActionBarOverlayLayout;
+
+    if-eqz p1, :cond_19
+
+    sget-object v0, Lh0i;->a:Ljava/util/WeakHashMap;
+
+    invoke-static {p1}, Ltzh;->c(Landroid/view/View;)V
+
+    :cond_19
+    return-void
 .end method

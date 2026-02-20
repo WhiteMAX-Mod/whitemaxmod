@@ -1,162 +1,224 @@
-.class public final synthetic Lr8i;
-.super Ljava/lang/Object;
+.class public final Lr8i;
+.super Lpdg;
 .source "SourceFile"
 
 # interfaces
-.implements Llq6;
+.implements Lys6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lh8i;
+
+.field public final synthetic Z:Lc9i;
+
+.field public o:I
+
+.field public final synthetic s0:Ll8i;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method public constructor <init>(Lh8i;Ll8i;Lc9i;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p1, p0, Lr8i;->a:I
+    iput-object p1, p0, Lr8i;->Y:Lh8i;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p3, p0, Lr8i;->Z:Lc9i;
+
+    iput-object p2, p0, Lr8i;->s0:Ll8i;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p4}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lwq0;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lr8i;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lr8i;
+
+    sget-object p2, Lmah;->a:Lmah;
+
+    invoke-virtual {p1, p2}, Lr8i;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 4
 
-    iget v0, p0, Lr8i;->a:I
+    new-instance v0, Lr8i;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v1, p0, Lr8i;->Z:Lc9i;
 
-    new-instance v0, Ldoi;
+    iget-object v2, p0, Lr8i;->s0:Ll8i;
 
-    invoke-direct {v0}, Ldoi;-><init>()V
+    iget-object v3, p0, Lr8i;->Y:Lh8i;
 
-    return-object v0
+    invoke-direct {v0, v3, v2, v1, p2}, Lr8i;-><init>(Lh8i;Ll8i;Lc9i;Lkotlin/coroutines/Continuation;)V
 
-    :pswitch_0
-    sget-object v0, Lone/me/login/welcome/WelcomeScreen;->Z:[Lz28;
-
-    sget-object v0, Lil8;->a:Lil8;
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v0
-
-    const/16 v1, 0x49
-
-    invoke-virtual {v0, v1}, Lr5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lt5b;
+    iput-object p1, v0, Lr8i;->X:Ljava/lang/Object;
 
     return-object v0
+.end method
 
-    :pswitch_1
-    sget-object v0, Lone/me/login/welcome/WelcomeScreen;->Z:[Lz28;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 14
 
-    sget-object v0, Llce;->c:Llce;
+    iget-object v0, p0, Lr8i;->Z:Lc9i;
 
-    return-object v0
+    iget-object v1, v0, Lc9i;->a:Lc38;
 
-    :pswitch_2
-    sget-object v0, Lone/me/webapp/settings/WebAppsSettingScreen;->o:[Lz28;
+    iget-object v2, v0, Lc9i;->e:Lbgg;
 
-    new-instance v0, Lxdi;
+    iget-object v3, p0, Lr8i;->X:Ljava/lang/Object;
 
-    sget-object v1, Lz2i;->a:Lz2i;
+    check-cast v3, Lwq0;
 
-    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lr5;
+    iget v4, p0, Lr8i;->o:I
 
-    move-result-object v1
+    iget-object v5, p0, Lr8i;->s0:Ll8i;
 
-    const/16 v2, 0x33
+    const/4 v6, 0x1
 
-    invoke-virtual {v1, v2}, Lr5;->c(I)Ljava/lang/Object;
+    if-eqz v4, :cond_1
 
-    move-result-object v1
+    if-ne v4, v6, :cond_0
 
-    check-cast v1, Lef3;
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    check-cast v1, Lyfe;
+    goto :goto_1
 
-    invoke-virtual {v1}, Lyfe;->s()J
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    move-result-wide v1
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    invoke-direct {v0, v1, v2}, Lxdi;-><init>(J)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    return-object v0
+    throw p1
 
-    :pswitch_3
-    sget-object v0, Lone/me/webapp/settings/WebAppsSettingScreen;->o:[Lz28;
+    :cond_1
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    sget-object v0, Llce;->F1:Llce;
+    iget-boolean p1, v3, Lwq0;->a:Z
 
-    return-object v0
+    iget-object v4, p0, Lr8i;->Y:Lh8i;
 
-    :pswitch_4
-    invoke-static {}, Lqbi;->values()[Lqbi;
+    if-eqz p1, :cond_2
 
-    move-result-object v0
+    new-instance v7, Lk8i;
 
-    const-string v1, "shared"
+    iget-object v8, v4, Lh8i;->b:Ljava/lang/String;
 
-    const-string v2, "cancelled"
+    sget-object v9, Lc9i;->i:Ljava/util/List;
 
-    filled-new-array {v1, v2}, [Ljava/lang/String;
+    iget-boolean v10, v3, Lwq0;->b:Z
 
-    move-result-object v1
+    iget-boolean v11, v3, Lwq0;->c:Z
 
-    const/4 v2, 0x0
+    iget-boolean v12, v3, Lwq0;->d:Z
 
-    filled-new-array {v2, v2}, [[Ljava/lang/annotation/Annotation;
+    invoke-virtual {v2}, Lbgg;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    move-object v13, p1
+
+    check-cast v13, Ljava/lang/String;
+
+    invoke-direct/range {v7 .. v13}, Lk8i;-><init>(Ljava/lang/String;Ljava/util/List;ZZZLjava/lang/String;)V
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object p1, Lk8i;->Companion:Lj8i;
+
+    invoke-virtual {p1}, Lj8i;->serializer()Lw58;
+
+    move-result-object p1
+
+    check-cast p1, Lw58;
+
+    invoke-virtual {v1, p1, v7}, Lc38;->b(Lw58;Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    goto :goto_0
+
+    :cond_2
+    new-instance p1, Ll9i;
+
+    iget-object v3, v4, Lh8i;->b:Ljava/lang/String;
+
+    invoke-virtual {v2}, Lbgg;->getValue()Ljava/lang/Object;
 
     move-result-object v2
 
-    const-string v3, "one.me.webapp.domain.jsbridge.delegates.share.WebAppShareStatus"
+    check-cast v2, Ljava/lang/String;
 
-    invoke-static {v3, v0, v1, v2}, Lvoj;->a(Ljava/lang/String;[Ljava/lang/Enum;[Ljava/lang/String;[[Ljava/lang/annotation/Annotation;)Lbl5;
+    invoke-direct {p1, v3, v2}, Ll9i;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result-object v0
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    return-object v0
+    sget-object v2, Ll9i;->Companion:Lk9i;
 
-    :pswitch_5
-    sget-object v0, Lqbi;->Companion:Lpbi;
+    invoke-virtual {v2}, Lk9i;->serializer()Lw58;
 
-    invoke-virtual {v0}, Lpbi;->serializer()La38;
+    move-result-object v2
 
-    move-result-object v0
+    check-cast v2, Lw58;
 
-    return-object v0
+    invoke-virtual {v1, v2, p1}, Lc38;->b(Lw58;Ljava/lang/Object;)Ljava/lang/String;
 
-    :pswitch_6
-    sget-object v0, Lone/me/webapp/settings/WebAppSettingsScreen;->Z:[Lz28;
+    move-result-object p1
 
-    sget-object v0, Llce;->G1:Llce;
+    :goto_0
+    iget-object v1, v0, Lc9i;->g:Lmx0;
 
-    return-object v0
+    new-instance v2, Lo28;
 
-    :pswitch_7
-    new-instance v0, Le6i;
+    iget-object v3, v5, Ll8i;->a:Ljava/lang/String;
 
-    invoke-direct {v0}, Le6i;-><init>()V
+    invoke-direct {v2, v3, p1}, Lo28;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    return-object v0
+    const/4 p1, 0x0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    iput-object p1, p0, Lr8i;->X:Ljava/lang/Object;
+
+    iput v6, p0, Lr8i;->o:I
+
+    invoke-interface {v1, v2, p0}, Ljve;->h(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v1, Lod4;->a:Lod4;
+
+    if-ne p1, v1, :cond_3
+
+    return-object v1
+
+    :cond_3
+    :goto_1
+    iget-object p1, v5, Ll8i;->a:Ljava/lang/String;
+
+    invoke-static {v0, p1}, Lc9i;->e(Lc9i;Ljava/lang/String;)V
+
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
 .end method

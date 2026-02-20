@@ -1,13 +1,24 @@
-.class public abstract Luyd;
+.class public final Luyd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/io/Serializable;
 
-# direct methods
-.method public static a(Landroid/content/res/Resources$Theme;)V
-    .locals 0
 
-    invoke-virtual {p0}, Landroid/content/res/Resources$Theme;->rebase()V
+# instance fields
+.field public a:Z
 
-    return-void
+
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    iget-boolean v0, p0, Luyd;->a:Z
+
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Z)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -1,241 +1,136 @@
-.class public abstract Lts8;
-.super Ljava/lang/Object;
+.class public final Lts8;
+.super Lpdg;
 .source "SourceFile"
 
+# interfaces
+.implements Lys6;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:I
+# instance fields
+.field public final synthetic X:Lyp1;
+
+.field public final synthetic Y:Lfe3;
+
+.field public final synthetic o:Lone/me/main/MainScreen;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lone/me/main/MainScreen;Lyp1;Lfe3;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    const/16 v0, 0x72
+    iput-object p1, p0, Lts8;->o:Lone/me/main/MainScreen;
 
-    int-to-float v0, v0
+    iput-object p2, p0, Lts8;->X:Lyp1;
 
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+    iput-object p3, p0, Lts8;->Y:Lfe3;
 
-    move-result-object v1
+    const/4 p1, 0x2
 
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v0, v1
-
-    invoke-static {v0}, Lq7j;->c(F)I
-
-    move-result v0
-
-    sput v0, Lts8;->a:I
-
-    const/16 v0, 0x30
-
-    int-to-float v0, v0
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v0, v1
-
-    invoke-static {v0}, Lq7j;->c(F)I
-
-    move-result v0
-
-    sput v0, Lts8;->b:I
+    invoke-direct {p0, p1, p4}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static final a(Landroid/content/Context;Lo58;Lxx6;)Lcom/facebook/drawee/view/SimpleDraweeView;
-    .locals 4
 
-    new-instance v0, Lcom/facebook/drawee/view/SimpleDraweeView;
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-direct {v0, p0}, Lcom/facebook/drawee/view/SimpleDraweeView;-><init>(Landroid/content/Context;)V
+    check-cast p1, Llob;
 
-    sget v1, Lv8d;->oneme_location_map_logo_view:I
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
+    invoke-virtual {p0, p1, p2}, Lts8;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    const/16 v1, 0xc
+    move-result-object p1
 
-    int-to-float v1, v1
+    check-cast p1, Lts8;
 
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+    sget-object p2, Lmah;->a:Lmah;
 
-    move-result-object v2
+    invoke-virtual {p1, p2}, Lts8;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    return-object p2
+.end method
 
-    move-result-object v2
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
 
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+    new-instance p1, Lts8;
 
-    mul-float/2addr v1, v2
+    iget-object v0, p0, Lts8;->X:Lyp1;
 
-    invoke-static {v1}, Lq7j;->c(F)I
+    iget-object v1, p0, Lts8;->Y:Lfe3;
 
-    move-result v1
+    iget-object v2, p0, Lts8;->o:Lone/me/main/MainScreen;
 
-    const/16 v2, 0x10
+    invoke-direct {p1, v2, v0, v1, p2}, Lts8;-><init>(Lone/me/main/MainScreen;Lyp1;Lfe3;Lkotlin/coroutines/Continuation;)V
 
-    int-to-float v2, v2
+    return-object p1
+.end method
 
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    move-result-object v3
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    iget-object p1, p0, Lts8;->o:Lone/me/main/MainScreen;
 
-    move-result-object v3
+    iget-object p1, p1, Lone/me/main/MainScreen;->o:Ljava/util/LinkedHashMap;
 
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
+    invoke-virtual {p1}, Ljava/util/LinkedHashMap;->entrySet()Ljava/util/Set;
 
-    mul-float/2addr v2, v3
+    move-result-object p1
 
-    invoke-static {v2}, Lq7j;->c(F)I
+    invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :cond_0
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    iget-object v1, p0, Lts8;->Y:Lfe3;
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/Map$Entry;
+
+    invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/ViewGroup;
+
+    invoke-virtual {v0}, Landroid/view/View;->isAttachedToWindow()Z
 
     move-result v2
 
-    invoke-virtual {v0, v1, v2, v1, v2}, Landroid/view/View;->setPadding(IIII)V
+    if-nez v2, :cond_0
 
-    invoke-virtual {v0}, Lq85;->getHierarchy()Ln85;
-
-    move-result-object v1
-
-    check-cast v1, Lov6;
-
-    sget-object v2, Lx9e;->f:Lx9e;
-
-    invoke-virtual {v1, v2}, Lov6;->h(Lw9e;)V
-
-    invoke-static {v0, p0, p2}, Lts8;->b(Lcom/facebook/drawee/view/SimpleDraweeView;Landroid/content/Context;Lxx6;)V
-
-    new-instance p2, Ltk6;
-
-    const/16 v1, 0xa
-
-    invoke-direct {p2, p0, v1, p1}, Ltk6;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-static {v0, p2}, Ljmj;->d(Landroid/view/View;Landroid/view/View$OnClickListener;)V
-
-    return-object v0
-.end method
-
-.method public static final b(Lcom/facebook/drawee/view/SimpleDraweeView;Landroid/content/Context;Lxx6;)V
-    .locals 1
-
-    sget-object v0, Lpc3;->t0:Lkme;
-
-    invoke-virtual {v0, p1}, Lkme;->n(Landroid/content/Context;)Lpc3;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lpc3;->k()Z
-
-    move-result p1
-
-    const/4 v0, 0x0
-
-    if-eqz p1, :cond_0
-
-    if-eqz p2, :cond_1
-
-    iget-object p1, p2, Lxx6;->e:Ljava/lang/Object;
-
-    move-object v0, p1
-
-    check-cast v0, Ljava/lang/String;
+    invoke-static {v1, v0}, Lfe3;->f(Lfe3;Landroid/view/ViewGroup;)V
 
     goto :goto_0
 
-    :cond_0
-    if-eqz p2, :cond_1
-
-    iget-object p1, p2, Lxx6;->d:Ljava/lang/Object;
-
-    move-object v0, p1
-
-    check-cast v0, Ljava/lang/String;
-
     :cond_1
-    :goto_0
-    if-eqz v0, :cond_4
+    iget-object p1, p0, Lts8;->X:Lyp1;
 
-    invoke-static {v0}, Lrzf;->H(Ljava/lang/CharSequence;)Z
+    invoke-virtual {p1}, Landroid/view/View;->isAttachedToWindow()Z
 
-    move-result p1
+    move-result v0
 
-    if-eqz p1, :cond_2
+    if-nez v0, :cond_2
 
-    goto :goto_2
+    invoke-static {v1, p1}, Lfe3;->f(Lfe3;Landroid/view/ViewGroup;)V
 
     :cond_2
-    sget-object p1, Lhp6;->a:Lni7;
+    sget-object p1, Lmah;->a:Lmah;
 
-    invoke-virtual {p1}, Lni7;->a()Ly9c;
-
-    move-result-object p1
-
-    invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
-
-    move-result p2
-
-    if-eqz p2, :cond_3
-
-    invoke-static {v0}, Lcj7;->b(Ljava/lang/String;)Lcj7;
-
-    move-result-object p2
-
-    iput-object p2, p1, Lv0;->b:Lcj7;
-
-    goto :goto_1
-
-    :cond_3
-    invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object p2
-
-    invoke-virtual {p1, p2}, Ly9c;->c(Landroid/net/Uri;)V
-
-    :goto_1
-    invoke-virtual {p0}, Lq85;->getController()Lk85;
-
-    move-result-object p2
-
-    iput-object p2, p1, Lv0;->i:Lk85;
-
-    invoke-virtual {p1}, Lv0;->a()Lx9c;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Lq85;->setController(Lk85;)V
-
-    const/4 p1, 0x0
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setVisibility(I)V
-
-    return-void
-
-    :cond_4
-    :goto_2
-    const/16 p1, 0x8
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setVisibility(I)V
-
-    return-void
+    return-object p1
 .end method

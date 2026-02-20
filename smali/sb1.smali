@@ -3,52 +3,84 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lnm4;
+.implements Lis6;
 
 
 # instance fields
-.field public final synthetic a:Ljava/lang/Long;
+.field public final synthetic a:I
 
-.field public final synthetic b:Ljava/lang/String;
-
-.field public final synthetic c:Ljava/lang/String;
-
-.field public final synthetic d:Z
+.field public final synthetic b:Lyb1;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Long;Ljava/lang/String;Ljava/lang/String;Z)V
+.method public synthetic constructor <init>(Lyb1;I)V
     .locals 0
 
+    iput p2, p0, Lsb1;->a:I
+
+    iput-object p1, p0, Lsb1;->b:Lyb1;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lsb1;->a:Ljava/lang/Long;
-
-    iput-object p2, p0, Lsb1;->b:Ljava/lang/String;
-
-    iput-object p3, p0, Lsb1;->c:Ljava/lang/String;
-
-    iput-boolean p4, p0, Lsb1;->d:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 5
+.method public final invoke()Ljava/lang/Object;
+    .locals 2
 
-    new-instance v0, Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;
+    iget v0, p0, Lsb1;->a:I
 
-    iget-object v1, p0, Lsb1;->a:Ljava/lang/Long;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v2, p0, Lsb1;->b:Ljava/lang/String;
+    iget-object v0, p0, Lsb1;->b:Lyb1;
 
-    iget-object v3, p0, Lsb1;->c:Ljava/lang/String;
+    iget-object v0, v0, Lyb1;->K0:Lpsb;
 
-    iget-boolean v4, p0, Lsb1;->d:Z
+    iget v0, v0, Lpsb;->a:I
 
-    invoke-direct {v0, v1, v2, v3, v4}, Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;-><init>(Ljava/lang/Long;Ljava/lang/String;Ljava/lang/String;Z)V
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
 
     return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Lsb1;->b:Lyb1;
+
+    iget-object v0, v0, Lyb1;->L0:Lis6;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Lis6;->invoke()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lsph;
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    return-object v0
+
+    :pswitch_1
+    new-instance v0, Lwb1;
+
+    iget-object v1, p0, Lsb1;->b:Lyb1;
+
+    invoke-direct {v0, v1}, Lwb1;-><init>(Lyb1;)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

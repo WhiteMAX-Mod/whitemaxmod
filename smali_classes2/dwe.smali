@@ -1,128 +1,221 @@
 .class public final Ldwe;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:Lowe;
+.field public final a:Landroid/view/ViewGroup;
 
-.field public o:I
+.field public final b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lowe;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Landroid/view/ViewGroup;)V
+    .locals 1
 
-    iput-object p1, p0, Ldwe;->X:Lowe;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Ldwe;->a:Landroid/view/ViewGroup;
 
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    new-instance p1, Lgrc;
+
+    const/16 v0, 0x1c
+
+    invoke-direct {p1, v0, p0}, Lgrc;-><init>(ILjava/lang/Object;)V
+
+    const/4 v0, 0x3
+
+    invoke-static {v0, p1}, Lbdj;->d(ILis6;)Lj88;
+
+    move-result-object p1
+
+    iput-object p1, p0, Ldwe;->b:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lzb4;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Ldwe;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Ldwe;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Ldwe;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final a()I
     .locals 1
 
-    new-instance p1, Ldwe;
+    iget-object v0, p0, Ldwe;->b:Ljava/lang/Object;
 
-    iget-object v0, p0, Ldwe;->X:Lowe;
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
 
-    invoke-direct {p1, v0, p2}, Ldwe;-><init>(Lowe;Lkotlin/coroutines/Continuation;)V
+    move-result-object v0
 
-    return-object p1
+    check-cast v0, Lbwe;
+
+    invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
+
+    move-result v0
+
+    return v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+.method public final b()I
+    .locals 1
 
-    iget v0, p0, Ldwe;->o:I
+    iget-object v0, p0, Ldwe;->b:Ljava/lang/Object;
 
-    iget-object v1, p0, Ldwe;->X:Lowe;
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
 
-    const/4 v2, 0x1
+    move-result-object v0
 
-    if-eqz v0, :cond_1
+    check-cast v0, Lbwe;
 
-    if-ne v0, v2, :cond_0
+    invoke-virtual {v0}, Landroid/view/View;->getMeasuredWidth()I
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    move-result v0
 
-    goto :goto_0
+    return v0
+.end method
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+.method public final c(II)V
+    .locals 3
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    iget-object v0, p0, Ldwe;->b:Ljava/lang/Object;
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
 
-    throw p1
+    move-result-object v0
 
-    :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    check-cast v0, Landroid/view/View;
 
-    iget-object p1, v1, Lowe;->b:Lvw6;
+    const/4 v1, 0x0
 
-    iput v2, p0, Ldwe;->o:I
+    const/16 v2, 0xc
 
-    invoke-virtual {p1, p0}, Lvw6;->b(Lo84;)Ljava/lang/Object;
+    invoke-static {v0, p1, p2, v1, v2}, Lnfj;->c(Landroid/view/View;IIII)V
+
+    return-void
+.end method
+
+.method public final d(II)V
+    .locals 1
+
+    iget-object v0, p0, Ldwe;->b:Ljava/lang/Object;
+
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lbwe;
+
+    invoke-virtual {v0, p1, p2}, Landroid/view/View;->measure(II)V
+
+    return-void
+.end method
+
+.method public final e(Landroid/text/Layout;)V
+    .locals 2
+
+    iget-object v0, p0, Ldwe;->b:Ljava/lang/Object;
+
+    if-nez p1, :cond_1
+
+    invoke-interface {v0}, Lj88;->e()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    sget-object v0, Lac4;->a:Lac4;
+    check-cast p1, Lbwe;
 
-    if-ne p1, v0, :cond_2
+    const/16 v0, 0x8
 
-    return-object v0
+    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
+
+    :cond_0
+    return-void
+
+    :cond_1
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lbwe;
+
+    iput-object p1, v0, Lbwe;->a:Landroid/text/Layout;
+
+    invoke-virtual {p1}, Landroid/text/Layout;->getPaint()Landroid/text/TextPaint;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_2
+
+    iget v1, v0, Lbwe;->b:I
+
+    invoke-virtual {p1, v1}, Landroid/graphics/Paint;->setColor(I)V
 
     :cond_2
-    :goto_0
-    check-cast p1, Ljava/lang/String;
+    invoke-virtual {v0}, Landroid/view/View;->requestLayout()V
 
-    iget-object v0, v1, Lowe;->D0:Lcm5;
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
 
-    new-instance v1, Lz0f;
+    invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
-    sget v2, Lpib;->t:I
+    move-result-object p1
 
-    new-instance v3, Llhg;
+    if-nez p1, :cond_3
 
-    invoke-direct {v3, v2}, Llhg;-><init>(I)V
+    new-instance p1, Landroid/view/ViewGroup$LayoutParams;
 
-    invoke-direct {v1, p1, v3}, Lz0f;-><init>(Ljava/lang/String;Llhg;)V
+    const/4 v1, -0x2
 
-    invoke-static {v0, v1}, Lnth;->q(Lcm5;Ljava/lang/Object;)V
+    invoke-direct {p1, v1, v1}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
 
-    sget-object p1, Lb3h;->a:Lb3h;
+    iget-object v1, p0, Ldwe;->a:Landroid/view/ViewGroup;
 
-    return-object p1
+    invoke-virtual {v1, v0, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    :cond_3
+    const/4 p1, 0x0
+
+    invoke-virtual {v0, p1}, Landroid/view/View;->setVisibility(I)V
+
+    return-void
+.end method
+
+.method public final f(I)V
+    .locals 2
+
+    iget-object v0, p0, Ldwe;->b:Ljava/lang/Object;
+
+    invoke-interface {v0}, Lj88;->e()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lbwe;
+
+    iput p1, v0, Lbwe;->b:I
+
+    iget-object v1, v0, Lbwe;->a:Landroid/text/Layout;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1}, Landroid/text/Layout;->getPaint()Landroid/text/TextPaint;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1, p1}, Landroid/graphics/Paint;->setColor(I)V
+
+    :cond_0
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+
+    :cond_1
+    return-void
 .end method

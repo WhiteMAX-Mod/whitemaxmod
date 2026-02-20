@@ -327,11 +327,11 @@
 
     move-result-object v3
 
-    new-instance v4, Ldni;
+    new-instance v4, Lgvi;
 
-    invoke-direct {v4, p0, v1, v0}, Ldni;-><init>(Lcom/my/tracker/core/o/d;ILjava/lang/String;)V
+    invoke-direct {v4, p0, v1, v0}, Lgvi;-><init>(Lcom/my/tracker/core/o/d;ILjava/lang/String;)V
 
-    invoke-virtual {v3, v2, v4}, Lcom/google/android/gms/tasks/Task;->d(Ljava/util/concurrent/Executor;Lh2b;)Liqj;
+    invoke-virtual {v3, v2, v4}, Lcom/google/android/gms/tasks/Task;->d(Ljava/util/concurrent/Executor;Lx4b;)Lvxj;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 

@@ -1,87 +1,72 @@
-.class public final Lboh;
-.super Lp6g;
+.class public abstract Lboh;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lbr6;
 
-
-# instance fields
-.field public final synthetic X:Lone/me/chatscreen/videomsg/VideoMessageWidget;
-
-.field public synthetic o:Ljava/lang/Object;
+# static fields
+.field public static final a:Ljava/util/LinkedHashMap;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/videomsg/VideoMessageWidget;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    iput-object p2, p0, Lboh;->X:Lone/me/chatscreen/videomsg/VideoMessageWidget;
+    const/16 v0, 0xa
 
-    const/4 p2, 0x2
+    sget-object v1, Lk5e;->c:Lpm5;
 
-    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-static {v1, v0}, Lgk3;->n(Ljava/lang/Iterable;I)I
 
-    return-void
-.end method
+    move-result v0
 
+    invoke-static {v0}, Lmu8;->d(I)I
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    move-result v0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/16 v2, 0x10
 
-    invoke-virtual {p0, p1, p2}, Lboh;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    if-ge v0, v2, :cond_0
 
-    move-result-object p1
-
-    check-cast p1, Lboh;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lboh;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lboh;
-
-    iget-object v1, p0, Lboh;->X:Lone/me/chatscreen/videomsg/VideoMessageWidget;
-
-    invoke-direct {v0, p2, v1}, Lboh;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/videomsg/VideoMessageWidget;)V
-
-    iput-object p1, v0, Lboh;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iget-object v0, p0, Lboh;->o:Ljava/lang/Object;
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    check-cast v0, Ljava/lang/String;
-
-    sget-object p1, Lone/me/chatscreen/videomsg/VideoMessageWidget;->I0:[Lz28;
-
-    iget-object p1, p0, Lboh;->X:Lone/me/chatscreen/videomsg/VideoMessageWidget;
-
-    invoke-virtual {p1}, Lone/me/chatscreen/videomsg/VideoMessageWidget;->E0()Landroid/widget/TextView;
-
-    move-result-object p1
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    move v0, v2
 
     :cond_0
-    sget-object p1, Lb3h;->a:Lb3h;
+    new-instance v2, Ljava/util/LinkedHashMap;
 
-    return-object p1
+    invoke-direct {v2, v0}, Ljava/util/LinkedHashMap;-><init>(I)V
+
+    new-instance v0, Le2;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v0, v3, v1}, Le2;-><init>(ILjava/lang/Object;)V
+
+    :goto_0
+    invoke-virtual {v0}, Le2;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v0}, Le2;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    move-object v3, v1
+
+    check-cast v3, Lk5e;
+
+    iget v3, v3, Lk5e;->a:I
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    invoke-interface {v2, v3, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_0
+
+    :cond_1
+    sput-object v2, Lboh;->a:Ljava/util/LinkedHashMap;
+
+    return-void
 .end method

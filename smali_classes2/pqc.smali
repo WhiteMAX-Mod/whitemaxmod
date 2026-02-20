@@ -1,21 +1,19 @@
 .class public final Lpqc;
-.super Lie0;
+.super Luqc;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:Lnhg;
+.field public final b:Lepg;
 
 
 # direct methods
-.method public constructor <init>(Lnhg;)V
-    .locals 1
+.method public constructor <init>(Lepg;)V
+    .locals 0
 
-    const/16 v0, 0xf
+    invoke-direct {p0}, Luqc;-><init>()V
 
-    invoke-direct {p0, v0}, Lie0;-><init>(I)V
-
-    iput-object p1, p0, Lpqc;->b:Lnhg;
+    iput-object p1, p0, Lpqc;->b:Lepg;
 
     return-void
 .end method
@@ -39,11 +37,11 @@
     :cond_1
     check-cast p1, Lpqc;
 
-    iget-object v0, p0, Lpqc;->b:Lnhg;
+    iget-object v0, p0, Lpqc;->b:Lepg;
 
-    iget-object p1, p1, Lpqc;->b:Lnhg;
+    iget-object p1, p1, Lpqc;->b:Lepg;
 
-    invoke-virtual {v0, p1}, Lnhg;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Lepg;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -64,9 +62,9 @@
 .method public final hashCode()I
     .locals 1
 
-    iget-object v0, p0, Lpqc;->b:Lnhg;
+    iget-object v0, p0, Lpqc;->b:Lepg;
 
-    invoke-virtual {v0}, Lnhg;->hashCode()I
+    invoke-virtual {v0}, Lepg;->hashCode()I
 
     move-result v0
 
@@ -78,11 +76,11 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "ShareLink(link="
+    const-string v1, "ShareLinkToChat(text="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lpqc;->b:Lnhg;
+    iget-object v1, p0, Lpqc;->b:Lepg;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

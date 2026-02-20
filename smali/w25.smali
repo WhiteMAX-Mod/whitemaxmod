@@ -1,49 +1,260 @@
 .class public final Lw25;
-.super Lo84;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lca4;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public synthetic d:Ljava/lang/Object;
+.field public final synthetic b:Ljava/lang/Object;
 
-.field public final synthetic o:Lsx;
+.field public final synthetic c:Ljava/lang/Object;
+
+.field public final synthetic d:Ljava/lang/Object;
+
+.field public final synthetic e:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lsx;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Ljava/util/concurrent/Callable;Lca4;Ljava/util/concurrent/Executor;Lztf;)V
+    .locals 1
 
-    iput-object p1, p0, Lw25;->o:Lsx;
+    const/4 v0, 0x1
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput v0, p0, Lw25;->a:I
+
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lw25;->b:Ljava/lang/Object;
+
+    iput-object p2, p0, Lw25;->c:Ljava/lang/Object;
+
+    iput-object p3, p0, Lw25;->d:Ljava/lang/Object;
+
+    iput-object p4, p0, Lw25;->e:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lx25;Lioc;Lfoc;Lkl0;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lw25;->a:I
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lw25;->e:Ljava/lang/Object;
+
+    iput-object p2, p0, Lw25;->b:Ljava/lang/Object;
+
+    iput-object p3, p0, Lw25;->c:Ljava/lang/Object;
+
+    iput-object p4, p0, Lw25;->d:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final a(Lbolts/Task;)Ljava/lang/Object;
+    .locals 7
 
-    iput-object p1, p0, Lw25;->d:Ljava/lang/Object;
+    iget v0, p0, Lw25;->a:I
 
-    iget p1, p0, Lw25;->X:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-object p1, p0, Lw25;->d:Ljava/lang/Object;
 
-    or-int/2addr p1, v0
+    check-cast p1, Ljava/util/concurrent/Executor;
 
-    iput p1, p0, Lw25;->X:I
+    iget-object v0, p0, Lw25;->b:Ljava/lang/Object;
 
-    iget-object p1, p0, Lw25;->o:Lsx;
+    check-cast v0, Ljava/util/concurrent/Callable;
 
-    const/4 v0, 0x0
+    invoke-interface {v0}, Ljava/util/concurrent/Callable;->call()Ljava/lang/Object;
 
-    invoke-virtual {p1, v0, p0}, Lsx;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    invoke-static {v1}, Lbolts/Task;->forResult(Ljava/lang/Object;)Lbolts/Task;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lw25;->c:Ljava/lang/Object;
+
+    check-cast v1, Lca4;
+
+    invoke-virtual {v0, v1, p1}, Lbolts/Task;->onSuccessTask(Lca4;Ljava/util/concurrent/Executor;)Lbolts/Task;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lw25;->e:Ljava/lang/Object;
+
+    check-cast v1, Lztf;
+
+    iget-object v1, v1, Lztf;->b:Ljava/lang/Object;
+
+    check-cast v1, Lw25;
+
+    invoke-virtual {v0, v1, p1}, Lbolts/Task;->onSuccessTask(Lca4;Ljava/util/concurrent/Executor;)Lbolts/Task;
 
     move-result-object p1
 
+    goto :goto_0
+
+    :cond_0
+    invoke-static {v1}, Lbolts/Task;->forResult(Ljava/lang/Object;)Lbolts/Task;
+
+    move-result-object p1
+
+    :goto_0
     return-object p1
+
+    :pswitch_0
+    iget-object v0, p0, Lw25;->e:Ljava/lang/Object;
+
+    check-cast v0, Lx25;
+
+    iget-object v0, v0, Lx25;->d:Ljava/lang/Object;
+
+    check-cast v0, Lx25;
+
+    iget-object v1, p0, Lw25;->d:Ljava/lang/Object;
+
+    check-cast v1, Lkl0;
+
+    iget-object v2, p0, Lw25;->b:Ljava/lang/Object;
+
+    check-cast v2, Lioc;
+
+    iget-object v3, p0, Lw25;->c:Ljava/lang/Object;
+
+    check-cast v3, Lfoc;
+
+    invoke-virtual {p1}, Lbolts/Task;->isCancelled()Z
+
+    move-result v4
+
+    const/4 v5, 0x0
+
+    const-string v6, "DiskCacheProducer"
+
+    if-nez v4, :cond_4
+
+    invoke-virtual {p1}, Lbolts/Task;->isFaulted()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    invoke-virtual {p1}, Lbolts/Task;->getError()Ljava/lang/Exception;
+
+    move-result-object v4
+
+    instance-of v4, v4, Ljava/util/concurrent/CancellationException;
+
+    if-eqz v4, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {p1}, Lbolts/Task;->isFaulted()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_2
+
+    invoke-virtual {p1}, Lbolts/Task;->getError()Ljava/lang/Exception;
+
+    move-result-object p1
+
+    invoke-interface {v2, v3, v6, p1, v5}, Lioc;->d(Lfoc;Ljava/lang/String;Ljava/lang/Throwable;Ljava/util/Map;)V
+
+    invoke-virtual {v0, v1, v3}, Lx25;->a(Lkl0;Lfoc;)V
+
+    goto :goto_2
+
+    :cond_2
+    invoke-virtual {p1}, Lbolts/Task;->getResult()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lsj5;
+
+    if-eqz p1, :cond_3
+
+    invoke-virtual {p1}, Lsj5;->d0()I
+
+    move-result v0
+
+    const/4 v4, 0x1
+
+    invoke-static {v2, v3, v4, v0}, Lx25;->c(Lioc;Lfoc;ZI)Ljava/util/Map;
+
+    move-result-object v0
+
+    invoke-interface {v2, v3, v6, v0}, Lioc;->a(Lfoc;Ljava/lang/String;Ljava/util/Map;)V
+
+    invoke-interface {v2, v3, v6, v4}, Lioc;->e(Lfoc;Ljava/lang/String;Z)V
+
+    check-cast v3, Lom0;
+
+    const-string v0, "default"
+
+    const-string v2, "disk"
+
+    invoke-virtual {v3, v2, v0}, Lom0;->h(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/high16 v0, 0x3f800000    # 1.0f
+
+    invoke-virtual {v1, v0}, Lkl0;->i(F)V
+
+    invoke-virtual {v1, v4, p1}, Lkl0;->g(ILjava/lang/Object;)V
+
+    invoke-virtual {p1}, Lsj5;->close()V
+
+    goto :goto_2
+
+    :cond_3
+    const/4 p1, 0x0
+
+    invoke-static {v2, v3, p1, p1}, Lx25;->c(Lioc;Lfoc;ZI)Ljava/util/Map;
+
+    move-result-object p1
+
+    invoke-interface {v2, v3, v6, p1}, Lioc;->a(Lfoc;Ljava/lang/String;Ljava/util/Map;)V
+
+    invoke-virtual {v0, v1, v3}, Lx25;->a(Lkl0;Lfoc;)V
+
+    goto :goto_2
+
+    :cond_4
+    :goto_1
+    invoke-interface {v2, v3, v6}, Lioc;->k(Lfoc;Ljava/lang/String;)V
+
+    invoke-virtual {v1}, Lkl0;->c()V
+
+    :goto_2
+    return-object v5
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

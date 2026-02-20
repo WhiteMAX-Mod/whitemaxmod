@@ -1,40 +1,97 @@
-.class public abstract Ls8d;
+.class public final Ls8d;
 .super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lv8d;
 
 
-# static fields
-.field public static oneme_contact_not_found_bottom_sheet_negative_button:I = 0x7f0a0631
+# instance fields
+.field public final a:Ljava/io/File;
 
-.field public static oneme_contact_not_found_bottom_sheet_positive_button:I = 0x7f0a0632
 
-.field public static oneme_invite_action_view_type:I = 0x7f0a0688
+# direct methods
+.method public constructor <init>(Ljava/io/File;)V
+    .locals 0
 
-.field public static oneme_invite_by_link_action_menu_item:I = 0x7f0a0689
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static oneme_invite_by_phone_action_menu_item:I = 0x7f0a068a
+    iput-object p1, p0, Ls8d;->a:Ljava/io/File;
 
-.field public static oneme_invite_by_phone_continue_button:I = 0x7f0a068b
+    return-void
+.end method
 
-.field public static oneme_invite_by_phone_description:I = 0x7f0a068c
 
-.field public static oneme_invite_by_phone_input:I = 0x7f0a068d
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-.field public static oneme_invite_by_phone_title:I = 0x7f0a068e
+    const/4 v0, 0x1
 
-.field public static oneme_invite_by_phone_toolbar:I = 0x7f0a068f
+    if-ne p0, p1, :cond_0
 
-.field public static oneme_invite_by_qr_action_menu_item:I = 0x7f0a0690
+    return v0
 
-.field public static oneme_invite_by_qr_bottom_sheet_name:I = 0x7f0a0691
+    :cond_0
+    instance-of v1, p1, Ls8d;
 
-.field public static oneme_invite_by_qr_bottom_sheet_qr_code:I = 0x7f0a0692
+    const/4 v2, 0x0
 
-.field public static oneme_invite_by_qr_bottom_sheet_qr_code_share:I = 0x7f0a0693
+    if-nez v1, :cond_1
 
-.field public static oneme_invite_by_qr_bottom_sheet_short_name:I = 0x7f0a0694
+    return v2
 
-.field public static oneme_invite_friends_to_max_bottom_sheet_image_stack:I = 0x7f0a0695
+    :cond_1
+    check-cast p1, Ls8d;
 
-.field public static oneme_invite_friends_to_max_bottom_sheet_invite_button:I = 0x7f0a0696
+    iget-object v1, p0, Ls8d;->a:Ljava/io/File;
 
-.field public static oneme_invite_friends_to_max_bottom_sheet_title:I = 0x7f0a0697
+    iget-object p1, p1, Ls8d;->a:Ljava/io/File;
+
+    invoke-static {v1, p1}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Ls8d;->a:Ljava/io/File;
+
+    invoke-virtual {v0}, Ljava/io/File;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "StartRecordVideo(file="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Ls8d;->a:Ljava/io/File;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method

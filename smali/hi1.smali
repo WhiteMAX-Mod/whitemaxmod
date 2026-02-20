@@ -1,81 +1,81 @@
-.class public final enum Lhi1;
-.super Ljava/lang/Enum;
+.class public final Lhi1;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum a:Lhi1;
+# instance fields
+.field public final a:Landroidx/viewpager2/widget/ViewPager2;
 
-.field public static final enum b:Lhi1;
+.field public final b:Landroid/view/ViewStub;
 
-.field public static final synthetic c:[Lhi1;
+.field public final c:Lo61;
+
+.field public final d:Landroid/view/ViewStub;
+
+.field public final e:Lypa;
+
+.field public final f:Lqi1;
+
+.field public final g:Lk;
+
+.field public final h:Lwp1;
+
+.field public final i:Lwp1;
+
+.field public final j:Lj88;
+
+.field public final k:Ljava/lang/Object;
+
+.field public final l:Lii1;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(Lj88;Landroidx/viewpager2/widget/ViewPager2;Landroid/view/ViewStub;Lo61;Landroid/view/ViewStub;Lypa;Lqi1;Lk;Lwp1;Lwp1;)V
+    .locals 0
 
-    new-instance v0, Lhi1;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "UNDEFINE"
+    iput-object p2, p0, Lhi1;->a:Landroidx/viewpager2/widget/ViewPager2;
 
-    const/4 v2, 0x0
+    iput-object p3, p0, Lhi1;->b:Landroid/view/ViewStub;
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-object p4, p0, Lhi1;->c:Lo61;
 
-    new-instance v1, Lhi1;
+    iput-object p5, p0, Lhi1;->d:Landroid/view/ViewStub;
 
-    const-string v2, "MENU"
+    iput-object p6, p0, Lhi1;->e:Lypa;
 
-    const/4 v3, 0x1
+    iput-object p7, p0, Lhi1;->f:Lqi1;
 
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-object p8, p0, Lhi1;->g:Lk;
 
-    sput-object v1, Lhi1;->a:Lhi1;
+    iput-object p9, p0, Lhi1;->h:Lwp1;
 
-    new-instance v2, Lhi1;
+    iput-object p10, p0, Lhi1;->i:Lwp1;
 
-    const-string v3, "RECORD"
+    iput-object p1, p0, Lhi1;->j:Lj88;
 
-    const/4 v4, 0x2
+    new-instance p1, Lnd1;
 
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    const/4 p2, 0x5
 
-    sput-object v2, Lhi1;->b:Lhi1;
+    invoke-direct {p1, p2, p0}, Lnd1;-><init>(ILjava/lang/Object;)V
 
-    filled-new-array {v0, v1, v2}, [Lhi1;
+    const/4 p2, 0x3
 
-    move-result-object v0
+    invoke-static {p2, p1}, Lbdj;->d(ILis6;)Lj88;
 
-    sput-object v0, Lhi1;->c:[Lhi1;
+    move-result-object p1
+
+    iput-object p1, p0, Lhi1;->k:Ljava/lang/Object;
+
+    invoke-interface {p1}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lii1;
+
+    iput-object p1, p0, Lhi1;->l:Lii1;
 
     return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lhi1;
-    .locals 1
-
-    const-class v0, Lhi1;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lhi1;
-
-    return-object p0
-.end method
-
-.method public static values()[Lhi1;
-    .locals 1
-
-    sget-object v0, Lhi1;->c:[Lhi1;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lhi1;
-
-    return-object v0
 .end method

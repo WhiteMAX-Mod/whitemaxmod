@@ -1,101 +1,193 @@
-.class public final synthetic Lyx6;
-.super Ljava/lang/Object;
+.class public final Lyx6;
+.super Lpdg;
 .source "SourceFile"
 
 # interfaces
-.implements Lnbf;
+.implements Lys6;
 
 
 # instance fields
-.field public final synthetic a:Ltx4;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic b:Lski;
+.field public final synthetic Y:Lzx6;
 
-.field public final synthetic c:Le0a;
+.field public final synthetic Z:J
 
-.field public final synthetic d:Lsmi;
+.field public o:I
+
+.field public final synthetic s0:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Ltx4;Lski;Le0a;Lsmi;)V
+.method public constructor <init>(Lzx6;JJLkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lyx6;->Y:Lzx6;
 
-    iput-object p1, p0, Lyx6;->a:Ltx4;
+    iput-wide p2, p0, Lyx6;->Z:J
 
-    iput-object p2, p0, Lyx6;->b:Lski;
+    iput-wide p4, p0, Lyx6;->s0:J
 
-    iput-object p3, p0, Lyx6;->c:Le0a;
+    const/4 p1, 0x2
 
-    iput-object p4, p0, Lyx6;->d:Lsmi;
+    invoke-direct {p0, p1, p6}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onResponse(Lorg/json/JSONObject;)V
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lyx6;->b:Lski;
+    check-cast p1, Lnd4;
 
-    iget-object v0, v0, Lski;->b:Ljava/lang/Object;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    check-cast v0, Lnue;
+    invoke-virtual {p0, p1, p2}, Lyx6;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    const-string v1, "chunk"
+    move-result-object p1
 
-    invoke-virtual {p1, v1}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+    check-cast p1, Lyx6;
 
-    move-result-object v1
+    sget-object p2, Lmah;->a:Lmah;
 
-    if-eqz v1, :cond_0
+    invoke-virtual {p1, p2}, Lyx6;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v2, p0, Lyx6;->a:Ltx4;
+    move-result-object p1
 
-    iget-object v2, v2, Ltx4;->b:Ljava/lang/Object;
+    return-object p1
+.end method
 
-    check-cast v2, Lxz0;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 7
 
-    invoke-virtual {v2, v1, v0}, Lxz0;->L(Lorg/json/JSONObject;Lnue;)Lhcf;
+    new-instance v0, Lyx6;
 
-    move-result-object v0
+    iget-wide v2, p0, Lyx6;->Z:J
+
+    iget-wide v4, p0, Lyx6;->s0:J
+
+    iget-object v1, p0, Lyx6;->Y:Lzx6;
+
+    move-object v6, p2
+
+    invoke-direct/range {v0 .. v6}, Lyx6;-><init>(Lzx6;JJLkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lyx6;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 11
+
+    iget-object v0, p0, Lyx6;->X:Ljava/lang/Object;
+
+    move-object v2, v0
+
+    check-cast v2, Lnd4;
+
+    iget v0, p0, Lyx6;->o:I
+
+    const/4 v9, 0x1
+
+    const/4 v10, 0x0
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v9, :cond_0
+
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
     goto :goto_0
 
     :cond_0
-    const/4 v0, 0x0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    :goto_0
-    if-nez v0, :cond_1
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    new-instance v0, Ljava/lang/RuntimeException;
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    throw p1
 
-    const-string v2, "Can\'t parse chunk "
+    :cond_1
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object p1, p0, Lyx6;->Y:Lzx6;
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget-object p1, p1, Lzx6;->a:Lj88;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-interface {p1}, Lj88;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-direct {v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    check-cast p1, Lc84;
 
-    iget-object p1, p0, Lyx6;->c:Le0a;
+    iget-wide v0, p0, Lyx6;->Z:J
 
-    invoke-virtual {p1, v0}, Le0a;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1, v0, v1}, Lc84;->e(J)Lmrd;
 
-    return-void
+    move-result-object p1
 
-    :cond_1
-    iget-object p1, p0, Lyx6;->d:Lsmi;
+    new-instance v1, Lwx6;
 
-    invoke-virtual {p1, v0}, Lsmi;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-wide v6, p0, Lyx6;->s0:J
 
-    return-void
+    const/4 v8, 0x0
+
+    iget-wide v3, p0, Lyx6;->Z:J
+
+    iget-object v5, p0, Lyx6;->Y:Lzx6;
+
+    invoke-direct/range {v1 .. v8}, Lwx6;-><init>(Lnd4;JLzx6;JLkotlin/coroutines/Continuation;)V
+
+    invoke-static {p1, v1}, Lzka;->t(Lb96;Lys6;)Lba3;
+
+    move-result-object p1
+
+    iget-wide v0, p0, Lyx6;->s0:J
+
+    invoke-static {v0, v1}, Lgc5;->g(J)J
+
+    move-result-wide v0
+
+    new-instance v2, Lxx6;
+
+    const/4 v3, 0x2
+
+    invoke-direct {v2, v3, v10}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    invoke-static {p1, v0, v1, v2}, Llu8;->c(Lb96;JLys6;)Lq96;
+
+    move-result-object p1
+
+    iput-object v10, p0, Lyx6;->X:Ljava/lang/Object;
+
+    iput v9, p0, Lyx6;->o:I
+
+    invoke-static {p1, p0}, Lzka;->q(Lb96;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lod4;->a:Lod4;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    check-cast p1, Le6e;
+
+    iget-object p1, p1, Le6e;->a:Ljava/lang/Object;
+
+    instance-of v0, p1, Lc6e;
+
+    if-eqz v0, :cond_3
+
+    return-object v10
+
+    :cond_3
+    return-object p1
 .end method

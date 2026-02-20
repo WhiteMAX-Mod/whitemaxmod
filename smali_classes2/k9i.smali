@@ -1,3 +1,19 @@
-.class public interface abstract Lk9i;
+.class public final Lk9i;
 .super Ljava/lang/Object;
 .source "SourceFile"
+
+
+# virtual methods
+.method public final serializer()Lw58;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lw58;"
+        }
+    .end annotation
+
+    sget-object v0, Lj9i;->a:Lj9i;
+
+    return-object v0
+.end method

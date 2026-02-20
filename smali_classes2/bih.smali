@@ -1,72 +1,51 @@
 .class public final Lbih;
-.super Ljava/lang/Object;
+.super Lhmf;
 .source "SourceFile"
 
 # interfaces
-.implements Lcih;
+.implements Lzx7;
 
 
-# static fields
-.field public static final a:Lbih;
+# instance fields
+.field public E0:La1e;
 
 
-# direct methods
-.method static constructor <clinit>()V
+# virtual methods
+.method public final C()V
     .locals 1
 
-    new-instance v0, Lbih;
+    const/4 v0, 0x0
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lbih;->a:Lbih;
+    iput-object v0, p0, Lbih;->E0:La1e;
 
     return-void
 .end method
 
+.method public final y(Lmg8;)V
+    .locals 2
 
-# virtual methods
-.method public final a(Landroid/graphics/Matrix;II)Lorg/webrtc/SurfaceTextureHelper$FrameGeometry;
-    .locals 0
+    check-cast p1, Lyhh;
 
-    const/4 p1, 0x0
+    iget-object v0, p0, Lpyd;->a:Landroid/view/View;
 
-    return-object p1
-.end method
+    check-cast v0, Laih;
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    iget-object v1, p1, Lyhh;->b:Lxhh;
 
-    const/4 v0, 0x1
+    invoke-virtual {v0, v1}, Laih;->setType(Lxhh;)V
 
-    if-ne p0, p1, :cond_0
+    iget-object p1, p1, Lyhh;->c:Lhpg;
 
-    return v0
+    invoke-virtual {p1, p0}, Lhpg;->a(Lpyd;)Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    if-nez p1, :cond_0
+
+    const-string p1, ""
 
     :cond_0
-    instance-of p1, p1, Lbih;
+    invoke-virtual {v0, p1}, Laih;->setTitle(Ljava/lang/CharSequence;)V
 
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, -0x62c43bf4
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "NoOp"
-
-    return-object v0
+    return-void
 .end method

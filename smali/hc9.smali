@@ -1,115 +1,124 @@
-.class public final synthetic Lhc9;
+.class public Lhc9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
+
+# static fields
+.field public static final b:Ljava/lang/Object;
+
+.field public static final c:Ljava/util/HashMap;
 
 
 # instance fields
-.field public final synthetic X:I
-
-.field public final synthetic Y:Lqc9;
-
-.field public final synthetic a:Lrc9;
-
-.field public final synthetic b:Lla9;
-
-.field public final synthetic c:Lite;
-
-.field public final synthetic d:Lgb9;
-
-.field public final synthetic o:I
+.field public final a:Lzc9;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lrc9;Lla9;Lite;Lgb9;IILqc9;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ljava/lang/Object;
 
-    iput-object p1, p0, Lhc9;->a:Lrc9;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lhc9;->b:Lla9;
+    sput-object v0, Lhc9;->b:Ljava/lang/Object;
 
-    iput-object p3, p0, Lhc9;->c:Lite;
+    new-instance v0, Ljava/util/HashMap;
 
-    iput-object p4, p0, Lhc9;->d:Lgb9;
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput p5, p0, Lhc9;->o:I
-
-    iput p6, p0, Lhc9;->X:I
-
-    iput-object p7, p0, Lhc9;->Y:Lqc9;
+    sput-object v0, Lhc9;->c:Ljava/util/HashMap;
 
     return-void
 .end method
 
+.method public constructor <init>(Lone/me/android/media/service/OneMeMediaSessionService;Lur5;Lal7;Lal7;Lal7;Lh78;Landroid/os/Bundle;Landroid/os/Bundle;Lsc9;)V
+    .locals 11
 
-# virtual methods
-.method public final run()V
-    .locals 6
+    const-string v0, ""
 
-    iget-object v0, p0, Lhc9;->a:Lrc9;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v0, v0, Lrc9;->d:Lnre;
+    sget-object v2, Lhc9;->b:Ljava/lang/Object;
 
-    iget-object v1, p0, Lhc9;->b:Lla9;
+    monitor-enter v2
 
-    invoke-virtual {v0, v1}, Lnre;->z(Lla9;)Z
+    :try_start_0
+    sget-object v3, Lhc9;->c:Ljava/util/HashMap;
 
-    move-result v2
+    invoke-virtual {v3, v0}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
-    if-nez v2, :cond_0
+    move-result v4
+
+    if-nez v4, :cond_0
+
+    invoke-virtual {v3, v0, p0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    monitor-exit v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    new-instance v0, Lzc9;
+
+    move-object v1, p0
+
+    move-object v2, p1
+
+    move-object v3, p2
+
+    move-object v4, p3
+
+    move-object v5, p4
+
+    move-object/from16 v6, p5
+
+    move-object/from16 v7, p6
+
+    move-object/from16 v8, p7
+
+    move-object/from16 v9, p8
+
+    move-object/from16 v10, p9
+
+    invoke-direct/range {v0 .. v10}, Lzc9;-><init>(Lhc9;Lone/me/android/media/service/OneMeMediaSessionService;Lur5;Lal7;Lal7;Lal7;Lh78;Landroid/os/Bundle;Landroid/os/Bundle;Lsc9;)V
+
+    iput-object v0, p0, Lhc9;->a:Lzc9;
 
     return-void
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_0
 
     :cond_0
-    iget-object v2, p0, Lhc9;->c:Lite;
+    :try_start_1
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    iget-object v3, p0, Lhc9;->d:Lgb9;
+    const-string v3, "Session ID must be unique. ID="
 
-    iget v4, p0, Lhc9;->o:I
+    invoke-direct {v0, v3}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    const/4 v5, -0x4
+    throw v0
 
-    if-eqz v2, :cond_1
+    :goto_0
+    monitor-exit v2
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    invoke-virtual {v0, v1, v2}, Lnre;->D(Lla9;Lite;)Z
+    throw v0
+.end method
 
-    move-result v0
 
-    if-nez v0, :cond_2
+# virtual methods
+.method public final a()Lgfc;
+    .locals 1
 
-    new-instance v0, Lgue;
+    iget-object v0, p0, Lhc9;->a:Lzc9;
 
-    invoke-direct {v0, v5}, Lgue;-><init>(I)V
+    iget-object v0, v0, Lzc9;->t:Lmgc;
 
-    invoke-static {v3, v1, v4, v0}, Lrc9;->Z(Lgb9;Lla9;ILgue;)V
+    iget-object v0, v0, Lmgc;->a:Lur5;
 
-    return-void
-
-    :cond_1
-    iget v2, p0, Lhc9;->X:I
-
-    invoke-virtual {v0, v1, v2}, Lnre;->C(Lla9;I)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    new-instance v0, Lgue;
-
-    invoke-direct {v0, v5}, Lgue;-><init>(I)V
-
-    invoke-static {v3, v1, v4, v0}, Lrc9;->Z(Lgb9;Lla9;ILgue;)V
-
-    return-void
-
-    :cond_2
-    iget-object v0, p0, Lhc9;->Y:Lqc9;
-
-    invoke-interface {v0, v3, v1, v4}, Lqc9;->o(Lgb9;Lla9;I)Ljava/lang/Object;
-
-    return-void
+    return-object v0
 .end method

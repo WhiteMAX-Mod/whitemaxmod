@@ -1,125 +1,161 @@
 .class public final Lem7;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Ljava/lang/Thread$UncaughtExceptionHandler;
 
 
 # instance fields
-.field public final synthetic X:Lmm7;
+.field public final a:Lj88;
 
-.field public o:I
+.field public final b:Lj88;
+
+.field public final c:Lj88;
+
+.field public final d:Landroid/content/SharedPreferences;
+
+.field public final e:Ljava/lang/Thread$UncaughtExceptionHandler;
 
 
 # direct methods
-.method public constructor <init>(Lmm7;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lj88;Lj88;Lj88;Landroid/content/Context;)V
     .locals 0
 
-    iput-object p1, p0, Lem7;->X:Lmm7;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lem7;->a:Lj88;
 
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lem7;->b:Lj88;
+
+    iput-object p3, p0, Lem7;->c:Lj88;
+
+    const-string p1, "app_crash_prefs"
+
+    const/4 p2, 0x0
+
+    invoke-virtual {p4, p1, p2}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lem7;->d:Landroid/content/SharedPreferences;
+
+    invoke-static {}, Ljava/lang/Thread;->getDefaultUncaughtExceptionHandler()Ljava/lang/Thread$UncaughtExceptionHandler;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lem7;->e:Ljava/lang/Thread$UncaughtExceptionHandler;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final uncaughtException(Ljava/lang/Thread;Ljava/lang/Throwable;)V
+    .locals 5
 
-    check-cast p1, Lzb4;
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    move-result-wide v0
 
-    invoke-virtual {p0, p1, p2}, Lem7;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v2, p0, Lem7;->d:Landroid/content/SharedPreferences;
 
-    move-result-object p1
+    invoke-interface {v2}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
-    check-cast p1, Lem7;
+    move-result-object v2
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    const-string v3, "pref_last_crash_time"
 
-    invoke-virtual {p1, p2}, Lem7;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v2, v3, v0, v1}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
 
-    move-result-object p1
+    move-result-object v0
 
-    return-object p1
-.end method
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    iget-object v0, p0, Lem7;->a:Lj88;
 
-    new-instance p1, Lem7;
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
 
-    iget-object v0, p0, Lem7;->X:Lmm7;
+    move-result-object v0
 
-    invoke-direct {p1, v0, p2}, Lem7;-><init>(Lmm7;Lkotlin/coroutines/Continuation;)V
+    check-cast v0, Lzwf;
 
-    return-object p1
-.end method
+    iget-object v1, p0, Lem7;->b:Lj88;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+    invoke-interface {v1}, Lj88;->getValue()Ljava/lang/Object;
 
-    iget v0, p0, Lem7;->o:I
+    move-result-object v1
 
-    sget-object v1, Lb3h;->a:Lb3h;
+    check-cast v1, Lq3i;
 
-    const/4 v2, 0x1
+    invoke-virtual {v1}, Lq3i;->e()Z
 
-    if-eqz v0, :cond_1
+    move-result v1
 
-    if-ne v0, v2, :cond_0
+    if-eqz v1, :cond_0
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    instance-of v1, p2, Ljava/lang/OutOfMemoryError;
 
-    return-object v1
+    if-eqz v1, :cond_0
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    iput v2, p0, Lem7;->o:I
-
-    sget-object p1, Lmm7;->E0:Ljava/lang/String;
-
-    new-instance p1, Lam7;
-
-    const/4 v0, 0x0
-
-    iget-object v2, p0, Lem7;->X:Lmm7;
-
-    invoke-direct {p1, v2, v0}, Lam7;-><init>(Lmm7;Lkotlin/coroutines/Continuation;)V
-
-    invoke-static {p1, p0}, Lilj;->c(Lbr6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lac4;->a:Lac4;
-
-    if-ne p1, v0, :cond_2
+    const/4 v1, 0x3
 
     goto :goto_0
 
-    :cond_2
-    move-object p1, v1
+    :cond_0
+    instance-of v1, p2, Ljava/lang/OutOfMemoryError;
+
+    if-eqz v1, :cond_1
+
+    const/4 v1, 0x2
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v1, 0x1
 
     :goto_0
-    if-ne p1, v0, :cond_3
+    check-cast v0, Lenb;
 
-    return-object v0
+    iget-object v2, v0, Lenb;->m:Lvye;
+
+    sget-object v3, Lenb;->p:[Lv58;
+
+    const/4 v4, 0x5
+
+    aget-object v3, v3, v4
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v2, v0, v3, v1}, Lvye;->N(Ljava/lang/Object;Lv58;Ljava/lang/Object;)V
+
+    instance-of v0, p2, Ljava/lang/OutOfMemoryError;
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lem7;->c:Lj88;
+
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lfl9;
+
+    sget-object v1, Ljl9;->d:Ljl9;
+
+    const/high16 v2, -0x80000000
+
+    invoke-virtual {v0, v1, v2}, Lfl9;->c(Ljl9;I)V
+
+    :cond_2
+    iget-object v0, p0, Lem7;->e:Ljava/lang/Thread$UncaughtExceptionHandler;
+
+    if-eqz v0, :cond_3
+
+    invoke-interface {v0, p1, p2}, Ljava/lang/Thread$UncaughtExceptionHandler;->uncaughtException(Ljava/lang/Thread;Ljava/lang/Throwable;)V
 
     :cond_3
-    return-object v1
+    return-void
 .end method

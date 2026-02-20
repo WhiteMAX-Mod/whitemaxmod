@@ -1,45 +1,74 @@
 .class public final Lfx7;
-.super Lcc6;
+.super Ljz7;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:Ljava/lang/Iterable;
+# static fields
+.field public static final synthetic c:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
 
-.field public final synthetic b:Lwfc;
+
+# instance fields
+.field private volatile synthetic _invoked$volatile:I
+
+.field public final b:Lks6;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Iterable;Lwfc;)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    const-class v0, Lfx7;
+
+    const-string v1, "_invoked$volatile"
+
+    invoke-static {v0, v1}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+
+    move-result-object v0
+
+    sput-object v0, Lfx7;->c:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lks6;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lkotlinx/coroutines/internal/LockFreeLinkedListNode;-><init>()V
 
-    iput-object p1, p0, Lfx7;->a:Ljava/lang/Iterable;
-
-    iput-object p2, p0, Lfx7;->b:Lwfc;
+    iput-object p1, p0, Lfx7;->b:Lks6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final iterator()Ljava/util/Iterator;
+.method public final c()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final d(Ljava/lang/Throwable;)V
     .locals 3
 
-    iget-object v0, p0, Lfx7;->a:Ljava/lang/Iterable;
+    const/4 v0, 0x0
 
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    const/4 v1, 0x1
 
-    move-result-object v0
+    sget-object v2, Lfx7;->c:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v2, p0, v0, v1}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->compareAndSet(Ljava/lang/Object;II)Z
 
-    new-instance v1, Lgx7;
+    move-result v0
 
-    iget-object v2, p0, Lfx7;->b:Lwfc;
+    if-eqz v0, :cond_0
 
-    invoke-direct {v1, v0, v2}, Lgx7;-><init>(Ljava/util/Iterator;Lwfc;)V
+    iget-object v0, p0, Lfx7;->b:Lks6;
 
-    return-object v1
+    invoke-interface {v0, p1}, Lks6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_0
+    return-void
 .end method

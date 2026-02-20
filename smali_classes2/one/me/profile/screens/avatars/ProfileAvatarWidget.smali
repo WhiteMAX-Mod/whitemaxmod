@@ -27,10 +27,10 @@
         "",
         "urls",
         "(JLjava/util/List;)V",
-        "Lpjc;",
+        "Luoc;",
         "model",
-        "(Lpjc;)V",
-        "rjc",
+        "(Luoc;)V",
+        "woc",
         "profile_release"
     }
     k = 0x1
@@ -44,24 +44,24 @@
 
 
 # static fields
-.field public static final synthetic o:[Lz28;
+.field public static final synthetic o:[Lv58;
 
 
 # instance fields
-.field public final a:Ln8g;
+.field public final a:Lbgg;
 
-.field public final b:Lls;
+.field public final b:Lwt;
 
-.field public final c:Lls;
+.field public final c:Lwt;
 
-.field public final d:Ljld;
+.field public final d:Lgrd;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 7
 
-    new-instance v0, Liyc;
+    new-instance v0, Lv3d;
 
     const-class v1, Lone/me/profile/screens/avatars/ProfileAvatarWidget;
 
@@ -71,29 +71,29 @@
 
     const/4 v4, 0x0
 
-    invoke-direct {v0, v1, v2, v3, v4}, Liyc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v2, v3, v4}, Lv3d;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    sget-object v2, Lctd;->a:Ldtd;
+    sget-object v2, Lazd;->a:Lbzd;
 
     const-string v3, "imageUrls"
 
     const-string v5, "getImageUrls()Ljava/util/List;"
 
-    invoke-static {v2, v1, v3, v5, v4}, Lj27;->e(Ldtd;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Liyc;
+    invoke-static {v2, v1, v3, v5, v4}, Lo16;->g(Lbzd;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lv3d;
 
     move-result-object v2
 
-    new-instance v3, Liyc;
+    new-instance v3, Lv3d;
 
     const-string v5, "imageView"
 
     const-string v6, "getImageView()Lone/me/sdk/zoom/ZoomableDraweeView;"
 
-    invoke-direct {v3, v1, v5, v6, v4}, Liyc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v3, v1, v5, v6, v4}, Lv3d;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
     const/4 v1, 0x3
 
-    new-array v1, v1, [Lz28;
+    new-array v1, v1, [Lv58;
 
     aput-object v0, v1, v4
 
@@ -105,7 +105,7 @@
 
     aput-object v3, v1, v0
 
-    sput-object v1, Lone/me/profile/screens/avatars/ProfileAvatarWidget;->o:[Lz28;
+    sput-object v1, Lone/me/profile/screens/avatars/ProfileAvatarWidget;->o:[Lv58;
 
     return-void
 .end method
@@ -127,26 +127,26 @@
     move-result-object p1
 
     .line 15
-    new-instance p2, Lktb;
+    new-instance p2, Lyvb;
 
     const-string v0, "extra.id"
 
-    invoke-direct {p2, v0, p1}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p2, v0, p1}, Lyvb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 16
-    new-instance p1, Lktb;
+    new-instance p1, Lyvb;
 
     const-string v0, "extra.urls"
 
-    invoke-direct {p1, v0, p3}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p1, v0, p3}, Lyvb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 17
-    filled-new-array {p2, p1}, [Lktb;
+    filled-new-array {p2, p1}, [Lyvb;
 
     move-result-object p1
 
     .line 18
-    invoke-static {p1}, Laaj;->c([Lktb;)Landroid/os/Bundle;
+    invoke-static {p1}, Lejj;->c([Lyvb;)Landroid/os/Bundle;
 
     move-result-object p1
 
@@ -166,22 +166,22 @@
     const/4 v2, 0x0
 
     .line 4
-    invoke-direct {p0, p1, v2, v0, v1}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILso4;)V
+    invoke-direct {p0, p1, v2, v0, v1}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILfq4;)V
 
     .line 5
-    new-instance p1, Ll7b;
+    new-instance p1, Lrfa;
 
-    const/16 v0, 0x17
+    const/16 v0, 0x1c
 
-    invoke-direct {p1, v0, p0}, Ll7b;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p1, v0, p0}, Lrfa;-><init>(ILjava/lang/Object;)V
 
     .line 6
-    new-instance v0, Ln8g;
+    new-instance v0, Lbgg;
 
-    invoke-direct {v0, p1}, Ln8g;-><init>(Llq6;)V
+    invoke-direct {v0, p1}, Lbgg;-><init>(Lis6;)V
 
     .line 7
-    iput-object v0, p0, Lone/me/profile/screens/avatars/ProfileAvatarWidget;->a:Ln8g;
+    iput-object v0, p0, Lone/me/profile/screens/avatars/ProfileAvatarWidget;->a:Lbgg;
 
     const-wide/16 v0, 0x0
 
@@ -191,51 +191,51 @@
     move-result-object p1
 
     .line 9
-    new-instance v0, Lls;
+    new-instance v0, Lwt;
 
     const-class v1, Ljava/lang/Long;
 
     const-string v2, "extra.id"
 
-    invoke-direct {v0, v1, p1, v2}, Lls;-><init>(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-direct {v0, v1, p1, v2}, Lwt;-><init>(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 10
-    iput-object v0, p0, Lone/me/profile/screens/avatars/ProfileAvatarWidget;->b:Lls;
+    iput-object v0, p0, Lone/me/profile/screens/avatars/ProfileAvatarWidget;->b:Lwt;
 
     .line 11
-    new-instance p1, Lls;
+    new-instance p1, Lwt;
 
     const-class v0, Ljava/util/List;
 
-    sget-object v1, Ldh5;->a:Ldh5;
+    sget-object v1, Lsi5;->a:Lsi5;
 
     const-string v2, "extra.urls"
 
-    invoke-direct {p1, v0, v1, v2}, Lls;-><init>(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-direct {p1, v0, v1, v2}, Lwt;-><init>(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 12
-    iput-object p1, p0, Lone/me/profile/screens/avatars/ProfileAvatarWidget;->c:Lls;
+    iput-object p1, p0, Lone/me/profile/screens/avatars/ProfileAvatarWidget;->c:Lwt;
 
     .line 13
-    sget p1, Le9d;->profile_contact_avatars_image_view:I
+    sget p1, Lued;->profile_contact_avatars_image_view:I
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Ljld;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lgrd;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/profile/screens/avatars/ProfileAvatarWidget;->d:Ljld;
+    iput-object p1, p0, Lone/me/profile/screens/avatars/ProfileAvatarWidget;->d:Lgrd;
 
     return-void
 .end method
 
-.method public constructor <init>(Lpjc;)V
+.method public constructor <init>(Luoc;)V
     .locals 2
 
     .line 1
-    iget-wide v0, p1, Lpjc;->a:J
+    iget-wide v0, p1, Luoc;->a:J
 
     .line 2
-    iget-object p1, p1, Lpjc;->b:Ljava/util/List;
+    iget-object p1, p1, Luoc;->b:Ljava/util/List;
 
     .line 3
     invoke-direct {p0, v0, v1, p1}, Lone/me/profile/screens/avatars/ProfileAvatarWidget;-><init>(JLjava/util/List;)V
@@ -264,15 +264,15 @@
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    sget p2, Le9d;->profile_contact_avatars_image_view:I
+    sget p2, Lued;->profile_contact_avatars_image_view:I
 
-    new-instance v0, Lrli;
+    new-instance v0, Ltti;
 
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lrli;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Ltti;-><init>(Landroid/content/Context;)V
 
     invoke-virtual {v0, p2}, Landroid/view/View;->setId(I)V
 
@@ -300,15 +300,15 @@
 
     invoke-super {p0, p1}, Lone/me/sdk/arch/Widget;->onViewCreated(Landroid/view/View;)V
 
-    invoke-virtual {p0}, La94;->getParentController()La94;
+    invoke-virtual {p0}, Lpa4;->getParentController()Lpa4;
 
     move-result-object p1
 
-    instance-of v0, p1, Lrjc;
+    instance-of v0, p1, Lwoc;
 
     if-eqz v0, :cond_0
 
-    check-cast p1, Lrjc;
+    check-cast p1, Lwoc;
 
     goto :goto_0
 
@@ -318,45 +318,45 @@
     :goto_0
     const/4 v0, 0x2
 
-    sget-object v1, Lone/me/profile/screens/avatars/ProfileAvatarWidget;->o:[Lz28;
+    sget-object v1, Lone/me/profile/screens/avatars/ProfileAvatarWidget;->o:[Lv58;
 
     aget-object v0, v1, v0
 
-    iget-object v2, p0, Lone/me/profile/screens/avatars/ProfileAvatarWidget;->d:Ljld;
+    iget-object v2, p0, Lone/me/profile/screens/avatars/ProfileAvatarWidget;->d:Lgrd;
 
-    invoke-interface {v2, p0, v0}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+    invoke-interface {v2, p0, v0}, Lgrd;->D(Ljava/lang/Object;Lv58;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lrli;
+    check-cast v0, Ltti;
 
-    iget-object v2, p0, Lone/me/profile/screens/avatars/ProfileAvatarWidget;->a:Ln8g;
+    iget-object v2, p0, Lone/me/profile/screens/avatars/ProfileAvatarWidget;->a:Lbgg;
 
-    invoke-virtual {v2}, Ln8g;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lzlb;
-
-    invoke-interface {v2}, Lzlb;->getIcon()Lwe7;
+    invoke-virtual {v2}, Lbgg;->getValue()Ljava/lang/Object;
 
     move-result-object v2
 
-    iget v2, v2, Lwe7;->f:I
+    check-cast v2, Llob;
 
-    new-instance v3, Lpv6;
+    invoke-interface {v2}, Llob;->getIcon()Lhob;
+
+    move-result-object v2
+
+    iget v2, v2, Lhob;->b:I
+
+    new-instance v3, Llx6;
 
     invoke-virtual {v0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
-    invoke-direct {v3, v4}, Lpv6;-><init>(Landroid/content/res/Resources;)V
+    invoke-direct {v3, v4}, Llx6;-><init>(Landroid/content/res/Resources;)V
 
-    sget-object v4, Lx9e;->f:Lx9e;
+    sget-object v4, Lmge;->f:Lmge;
 
-    iput-object v4, v3, Lpv6;->l:Lw9e;
+    iput-object v4, v3, Llx6;->l:Llge;
 
-    new-instance v4, Lp20;
+    new-instance v4, Lh40;
 
     invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -364,43 +364,43 @@
 
     const/4 v6, 0x0
 
-    invoke-direct {v4, v5, v6}, Lp20;-><init>(Landroid/content/Context;I)V
+    invoke-direct {v4, v5, v6}, Lh40;-><init>(Landroid/content/Context;I)V
 
-    iput-object v4, v3, Lpv6;->j:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v4
-
-    sget v5, Lf6e;->T:I
-
-    invoke-static {v5, v2, v4}, Lpti;->d(IILandroid/content/Context;)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v4
-
-    iput-object v4, v3, Lpv6;->f:Landroid/graphics/drawable/Drawable;
+    iput-object v4, v3, Llx6;->j:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v4
 
-    invoke-static {v5, v2, v4}, Lpti;->d(IILandroid/content/Context;)Landroid/graphics/drawable/Drawable;
+    sget v5, Lsce;->c0:I
+
+    invoke-static {v5, v2, v4}, Lu1j;->c(IILandroid/content/Context;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v4
+
+    iput-object v4, v3, Llx6;->f:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v4
+
+    invoke-static {v5, v2, v4}, Lu1j;->c(IILandroid/content/Context;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v2
 
-    iput-object v2, v3, Lpv6;->h:Landroid/graphics/drawable/Drawable;
+    iput-object v2, v3, Llx6;->h:Landroid/graphics/drawable/Drawable;
 
-    iput v6, v3, Lpv6;->b:I
+    iput v6, v3, Llx6;->b:I
 
-    invoke-virtual {v3}, Lpv6;->a()Lov6;
+    invoke-virtual {v3}, Llx6;->a()Lkx6;
 
     move-result-object v2
 
-    invoke-virtual {v0, v2}, Lq85;->setHierarchy(Ln85;)V
+    invoke-virtual {v0, v2}, Lba5;->setHierarchy(Ly95;)V
 
     const/4 v2, 0x1
 
-    invoke-virtual {v0, v2}, Lrli;->setZoomEnabled(Z)V
+    invoke-virtual {v0, v2}, Ltti;->setZoomEnabled(Z)V
 
     new-instance v3, Landroid/view/GestureDetector;
 
@@ -408,27 +408,27 @@
 
     move-result-object v4
 
-    new-instance v5, Lgj3;
+    new-instance v5, Lal3;
 
-    const/4 v7, 0x5
+    const/4 v7, 0x4
 
-    invoke-direct {v5, p1, v7, p0}, Lgj3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v5, p1, v7, p0}, Lal3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     invoke-direct {v3, v4, v5}, Landroid/view/GestureDetector;-><init>(Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;)V
 
-    new-instance p1, Lwv6;
+    new-instance p1, Lsx6;
 
     const/4 v4, 0x6
 
-    invoke-direct {p1, v3, v4}, Lwv6;-><init>(Landroid/view/GestureDetector;I)V
+    invoke-direct {p1, v3, v4}, Lsx6;-><init>(Landroid/view/GestureDetector;I)V
 
     invoke-virtual {v0, p1}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
     aget-object p1, v1, v2
 
-    iget-object p1, p0, Lone/me/profile/screens/avatars/ProfileAvatarWidget;->c:Lls;
+    iget-object p1, p0, Lone/me/profile/screens/avatars/ProfileAvatarWidget;->c:Lwt;
 
-    invoke-virtual {p1, p0}, Lls;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+    invoke-virtual {p1, p0}, Lwt;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -438,7 +438,7 @@
 
     const/16 v3, 0xa
 
-    invoke-static {p1, v3}, Lri3;->n(Ljava/lang/Iterable;I)I
+    invoke-static {p1, v3}, Lgk3;->n(Ljava/lang/Iterable;I)I
 
     move-result v3
 
@@ -461,21 +461,21 @@
 
     check-cast v3, Ljava/lang/String;
 
-    invoke-static {v3}, Lcj7;->b(Ljava/lang/String;)Lcj7;
+    invoke-static {v3}, Lwj7;->b(Ljava/lang/String;)Lwj7;
 
     move-result-object v4
 
     if-eqz v4, :cond_1
 
-    invoke-static {}, Lhp6;->i()Loi7;
+    invoke-static {}, Lfr6;->a()Lij7;
 
     move-result-object v5
 
     invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    new-instance v7, Lni7;
+    new-instance v7, Lhj7;
 
-    invoke-direct {v7, v5, v4, v3}, Lni7;-><init>(Loi7;Lcj7;Ljava/lang/String;)V
+    invoke-direct {v7, v5, v4, v3}, Lhj7;-><init>(Lij7;Lwj7;Ljava/lang/String;)V
 
     invoke-virtual {v1, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -497,31 +497,31 @@
 
     if-nez p1, :cond_3
 
-    sget-object p1, Lhp6;->a:Lni7;
+    sget-object p1, Lfr6;->a:Lhj7;
 
-    invoke-virtual {p1}, Lni7;->a()Ly9c;
+    invoke-virtual {p1}, Lhj7;->a()Lpdc;
 
     move-result-object p1
 
-    new-instance v3, Lym7;
+    new-instance v3, Lqn7;
 
-    invoke-direct {v3, v1, v6}, Lym7;-><init>(Ljava/util/List;Z)V
+    invoke-direct {v3, v1, v6}, Lqn7;-><init>(Ljava/util/List;Z)V
 
-    iput-object v3, p1, Lv0;->d:Li4g;
+    iput-object v3, p1, Lx0;->d:Lmbg;
 
-    iput-boolean v2, p1, Lv0;->f:Z
+    iput-boolean v2, p1, Lx0;->f:Z
 
-    invoke-virtual {v0}, Lq85;->getController()Lk85;
+    invoke-virtual {v0}, Lba5;->getController()Lv95;
 
     move-result-object v1
 
-    iput-object v1, p1, Lv0;->i:Lk85;
+    iput-object v1, p1, Lx0;->i:Lv95;
 
-    invoke-virtual {p1}, Lv0;->a()Lx9c;
+    invoke-virtual {p1}, Lx0;->a()Lodc;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lrli;->setController(Lk85;)V
+    invoke-virtual {v0, p1}, Ltti;->setController(Lv95;)V
 
     :cond_3
     return-void

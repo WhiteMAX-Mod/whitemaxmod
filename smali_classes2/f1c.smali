@@ -4,95 +4,124 @@
 
 
 # instance fields
-.field public a:J
+.field public final a:Ljava/util/List;
 
-.field public b:I
+.field public final b:J
 
-.field public c:Ljava/lang/String;
 
-.field public d:J
+# direct methods
+.method public constructor <init>(Lig8;J)V
+    .locals 0
 
-.field public e:Ljava/lang/String;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public f:Ljava/lang/String;
+    iput-object p1, p0, Lf1c;->a:Ljava/util/List;
 
-.field public g:Ljava/lang/String;
+    iput-wide p2, p0, Lf1c;->b:J
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a()Lg1c;
-    .locals 14
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    new-instance v0, Lg1c;
+    const/4 v0, 0x1
 
-    iget-wide v3, p0, Lf1c;->a:J
+    if-ne p0, p1, :cond_0
 
-    iget v5, p0, Lf1c;->b:I
+    return v0
 
-    iget-object v6, p0, Lf1c;->c:Ljava/lang/String;
+    :cond_0
+    instance-of v1, p1, Lf1c;
 
-    iget-wide v7, p0, Lf1c;->d:J
+    const/4 v2, 0x0
 
-    iget-object v10, p0, Lf1c;->e:Ljava/lang/String;
+    if-nez v1, :cond_1
 
-    iget-object v11, p0, Lf1c;->f:Ljava/lang/String;
+    return v2
 
-    iget-object v12, p0, Lf1c;->g:Ljava/lang/String;
+    :cond_1
+    check-cast p1, Lf1c;
 
-    const/4 v13, 0x0
+    iget-object v1, p0, Lf1c;->a:Ljava/util/List;
 
-    const-wide/16 v1, 0x0
+    iget-object v3, p1, Lf1c;->a:Ljava/util/List;
 
-    const/4 v9, 0x0
+    invoke-static {v1, v3}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-direct/range {v0 .. v13}, Lg1c;-><init>(JJILjava/lang/String;JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
+    move-result v1
 
-    return-object v0
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-wide v3, p0, Lf1c;->b:J
+
+    iget-wide v5, p1, Lf1c;->b:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
 .end method
 
-.method public final b()Ljava/lang/String;
-    .locals 2
+.method public final hashCode()I
+    .locals 3
 
-    iget-object v0, p0, Lf1c;->e:Ljava/lang/String;
+    iget-object v0, p0, Lf1c;->a:Ljava/util/List;
 
-    invoke-static {v0}, Lzsi;->f(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lf1c;->f:Ljava/lang/String;
-
-    invoke-static {v0}, Lzsi;->f(Ljava/lang/CharSequence;)Z
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-wide v1, p0, Lf1c;->b:J
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    const-string v1, "PerfSpansPreparedForEvent(spans="
 
-    iget-object v1, p0, Lf1c;->e:Ljava/lang/String;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lf1c;->a:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", totalDuration="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, " "
+    iget-wide v1, p0, Lf1c;->b:J
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lf1c;->f:Ljava/lang/String;
+    const-string v1, ")"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
-
-    return-object v0
-
-    :cond_0
-    iget-object v0, p0, Lf1c;->e:Ljava/lang/String;
 
     return-object v0
 .end method

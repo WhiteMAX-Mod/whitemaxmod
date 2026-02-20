@@ -1,266 +1,256 @@
-.class public abstract Lf85;
+.class public final Lf85;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lu75;
 
-# static fields
-.field public static final a:[I
 
-.field public static final b:[I
+# instance fields
+.field public final a:Landroid/content/Context;
 
-.field public static final c:Landroid/graphics/Rect;
+.field public final b:Lw75;
+
+.field public final c:Z
+
+.field public final d:Ljava/lang/Class;
+
+.field public e:Lg85;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Landroid/content/Context;Lw75;ZLjava/lang/Class;)V
+    .locals 0
 
-    const v0, 0x10100a0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    filled-new-array {v0}, [I
+    iput-object p1, p0, Lf85;->a:Landroid/content/Context;
 
-    move-result-object v0
+    iput-object p2, p0, Lf85;->b:Lw75;
 
-    sput-object v0, Lf85;->a:[I
+    iput-boolean p3, p0, Lf85;->c:Z
 
-    const/4 v0, 0x0
+    iput-object p4, p0, Lf85;->d:Ljava/lang/Class;
 
-    new-array v0, v0, [I
+    iget-object p1, p2, Lw75;->e:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    sput-object v0, Lf85;->b:[I
-
-    new-instance v0, Landroid/graphics/Rect;
-
-    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
-
-    sput-object v0, Lf85;->c:Landroid/graphics/Rect;
+    invoke-virtual {p1, p0}, Ljava/util/concurrent/CopyOnWriteArraySet;->add(Ljava/lang/Object;)Z
 
     return-void
 .end method
 
-.method public static a(Landroid/graphics/drawable/Drawable;)V
-    .locals 3
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+# virtual methods
+.method public final a(Lw75;)V
+    .locals 1
 
-    move-result-object v0
+    iget-object v0, p0, Lf85;->e:Lg85;
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    if-eqz v0, :cond_0
 
-    move-result-object v0
+    iget-object p1, p1, Lw75;->l:Ljava/util/List;
 
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+    invoke-static {v0, p1}, Lg85;->a(Lg85;Ljava/util/List;)V
 
-    const/16 v2, 0x1d
+    :cond_0
+    return-void
+.end method
 
-    if-lt v1, v2, :cond_2
+.method public final b()V
+    .locals 0
 
-    const/16 v2, 0x1f
+    return-void
+.end method
 
-    if-ge v1, v2, :cond_2
+.method public final c()V
+    .locals 1
 
-    const-string v1, "android.graphics.drawable.ColorStateListDrawable"
+    iget-object v0, p0, Lf85;->e:Lg85;
 
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    if-eqz v0, :cond_0
 
-    move-result v0
+    invoke-virtual {v0}, Lg85;->b()V
 
-    if-eqz v0, :cond_2
+    :cond_0
+    return-void
+.end method
 
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getState()[I
+.method public final d(Lw75;Z)V
+    .locals 1
 
-    move-result-object v0
+    if-nez p2, :cond_3
 
-    if-eqz v0, :cond_1
+    iget-boolean p2, p1, Lw75;->i:Z
 
-    array-length v1, v0
+    if-nez p2, :cond_3
 
-    if-nez v1, :cond_0
+    iget-object p2, p0, Lf85;->e:Lg85;
+
+    if-eqz p2, :cond_1
+
+    iget-boolean p2, p2, Lg85;->o:Z
+
+    if-eqz p2, :cond_0
 
     goto :goto_0
 
     :cond_0
-    sget-object v1, Lf85;->b:[I
-
-    invoke-virtual {p0, v1}, Landroid/graphics/drawable/Drawable;->setState([I)Z
-
-    goto :goto_1
+    return-void
 
     :cond_1
     :goto_0
-    sget-object v1, Lf85;->a:[I
+    iget-object p1, p1, Lw75;->l:Ljava/util/List;
 
-    invoke-virtual {p0, v1}, Landroid/graphics/drawable/Drawable;->setState([I)Z
+    const/4 p2, 0x0
 
     :goto_1
-    invoke-virtual {p0, v0}, Landroid/graphics/drawable/Drawable;->setState([I)Z
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    if-ge p2, v0, :cond_3
+
+    invoke-interface {p1, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lh55;
+
+    iget v0, v0, Lh55;->b:I
+
+    if-nez v0, :cond_2
+
+    invoke-virtual {p0}, Lf85;->g()V
+
+    return-void
 
     :cond_2
+    add-int/lit8 p2, p2, 0x1
+
+    goto :goto_1
+
+    :cond_3
     return-void
 .end method
 
-.method public static b(Landroid/graphics/drawable/Drawable;)Landroid/graphics/Rect;
-    .locals 5
+.method public final e(Lh55;Ljava/lang/Exception;)V
+    .locals 0
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    iget-object p2, p0, Lf85;->e:Lg85;
 
-    const/16 v1, 0x1d
+    if-eqz p2, :cond_1
 
-    if-lt v0, v1, :cond_0
+    iget-boolean p2, p2, Lg85;->o:Z
 
-    invoke-static {p0}, Lc85;->a(Landroid/graphics/drawable/Drawable;)Landroid/graphics/Insets;
+    if-eqz p2, :cond_0
 
-    move-result-object p0
-
-    new-instance v0, Landroid/graphics/Rect;
-
-    invoke-static {p0}, Lx4;->c(Landroid/graphics/Insets;)I
-
-    move-result v1
-
-    invoke-static {p0}, La85;->a(Landroid/graphics/Insets;)I
-
-    move-result v2
-
-    invoke-static {p0}, La85;->w(Landroid/graphics/Insets;)I
-
-    move-result v3
-
-    invoke-static {p0}, La85;->B(Landroid/graphics/Insets;)I
-
-    move-result p0
-
-    invoke-direct {v0, v1, v2, v3, p0}, Landroid/graphics/Rect;-><init>(IIII)V
-
-    return-object v0
+    goto :goto_0
 
     :cond_0
-    instance-of v2, p0, Lcki;
-
-    const/4 v3, 0x0
-
-    if-eqz v2, :cond_1
-
-    check-cast p0, Lcki;
-
-    check-cast p0, Ldki;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-object p0, v3
+    return-void
 
     :cond_1
-    if-ge v0, v1, :cond_2
+    :goto_0
+    iget p1, p1, Lh55;->b:I
 
-    sget-boolean v0, Lb85;->a:Z
+    const/4 p2, 0x2
 
-    if-eqz v0, :cond_3
+    if-eq p1, p2, :cond_3
 
-    :try_start_0
-    sget-object v0, Lb85;->b:Ljava/lang/reflect/Method;
+    const/4 p2, 0x5
 
-    invoke-virtual {v0, p0, v3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    if-eq p1, p2, :cond_3
 
-    move-result-object p0
+    const/4 p2, 0x7
 
-    if-eqz p0, :cond_3
+    if-ne p1, p2, :cond_2
 
-    new-instance v0, Landroid/graphics/Rect;
-
-    sget-object v1, Lb85;->c:Ljava/lang/reflect/Field;
-
-    invoke-virtual {v1, p0}, Ljava/lang/reflect/Field;->getInt(Ljava/lang/Object;)I
-
-    move-result v1
-
-    sget-object v2, Lb85;->d:Ljava/lang/reflect/Field;
-
-    invoke-virtual {v2, p0}, Ljava/lang/reflect/Field;->getInt(Ljava/lang/Object;)I
-
-    move-result v2
-
-    sget-object v3, Lb85;->e:Ljava/lang/reflect/Field;
-
-    invoke-virtual {v3, p0}, Ljava/lang/reflect/Field;->getInt(Ljava/lang/Object;)I
-
-    move-result v3
-
-    sget-object v4, Lb85;->f:Ljava/lang/reflect/Field;
-
-    invoke-virtual {v4, p0}, Ljava/lang/reflect/Field;->getInt(Ljava/lang/Object;)I
-
-    move-result p0
-
-    invoke-direct {v0, v1, v2, v3, p0}, Landroid/graphics/Rect;-><init>(IIII)V
-    :try_end_0
-    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object v0
+    goto :goto_1
 
     :cond_2
-    sget-boolean p0, Lb85;->a:Z
+    return-void
 
-    :catch_0
     :cond_3
-    sget-object p0, Lf85;->c:Landroid/graphics/Rect;
+    :goto_1
+    const-string p1, "DownloadService"
 
-    return-object p0
+    const-string p2, "DownloadService wasn\'t running. Restarting."
+
+    invoke-static {p1, p2}, Lk0j;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Lf85;->g()V
+
+    return-void
 .end method
 
-.method public static c(ILandroid/graphics/PorterDuff$Mode;)Landroid/graphics/PorterDuff$Mode;
-    .locals 1
+.method public final f(Lw75;Lh55;)V
+    .locals 0
 
-    const/4 v0, 0x3
+    return-void
+.end method
 
-    if-eq p0, v0, :cond_2
+.method public final g()V
+    .locals 5
 
-    const/4 v0, 0x5
+    iget-boolean v0, p0, Lf85;->c:Z
 
-    if-eq p0, v0, :cond_1
+    const-string v1, "DownloadService"
 
-    const/16 v0, 0x9
+    iget-object v2, p0, Lf85;->d:Ljava/lang/Class;
 
-    if-eq p0, v0, :cond_0
+    iget-object v3, p0, Lf85;->a:Landroid/content/Context;
 
-    packed-switch p0, :pswitch_data_0
+    if-eqz v0, :cond_0
 
-    return-object p1
+    :try_start_0
+    const-string v0, "androidx.media3.exoplayer.downloadService.action.RESTART"
 
-    :pswitch_0
-    sget-object p0, Landroid/graphics/PorterDuff$Mode;->ADD:Landroid/graphics/PorterDuff$Mode;
+    new-instance v4, Landroid/content/Intent;
 
-    return-object p0
+    invoke-direct {v4, v3, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    :pswitch_1
-    sget-object p0, Landroid/graphics/PorterDuff$Mode;->SCREEN:Landroid/graphics/PorterDuff$Mode;
+    invoke-virtual {v4, v0}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    return-object p0
+    move-result-object v0
 
-    :pswitch_2
-    sget-object p0, Landroid/graphics/PorterDuff$Mode;->MULTIPLY:Landroid/graphics/PorterDuff$Mode;
+    sget-object v2, Lvih;->a:Ljava/lang/String;
 
-    return-object p0
+    invoke-virtual {v3, v0}, Landroid/content/Context;->startForegroundService(Landroid/content/Intent;)Landroid/content/ComponentName;
+    :try_end_0
+    .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    const-string v0, "Failed to restart (foreground launch restriction)"
+
+    invoke-static {v1, v0}, Lk0j;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
 
     :cond_0
-    sget-object p0, Landroid/graphics/PorterDuff$Mode;->SRC_ATOP:Landroid/graphics/PorterDuff$Mode;
+    :try_start_1
+    const-string v0, "androidx.media3.exoplayer.downloadService.action.INIT"
 
-    return-object p0
+    new-instance v4, Landroid/content/Intent;
 
-    :cond_1
-    sget-object p0, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
+    invoke-direct {v4, v3, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    return-object p0
+    invoke-virtual {v4, v0}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    :cond_2
-    sget-object p0, Landroid/graphics/PorterDuff$Mode;->SRC_OVER:Landroid/graphics/PorterDuff$Mode;
+    move-result-object v0
 
-    return-object p0
+    invoke-virtual {v3, v0}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
+    :try_end_1
+    .catch Ljava/lang/IllegalStateException; {:try_start_1 .. :try_end_1} :catch_1
 
-    :pswitch_data_0
-    .packed-switch 0xe
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-void
+
+    :catch_1
+    const-string v0, "Failed to restart (process is idle)"
+
+    invoke-static {v1, v0}, Lk0j;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    :goto_0
+    return-void
 .end method

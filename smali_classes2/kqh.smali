@@ -1,199 +1,85 @@
-.class public abstract Lkqh;
-.super Ljava/lang/Object;
+.class public final Lkqh;
+.super Lpdg;
 .source "SourceFile"
+
+# interfaces
+.implements Lys6;
 
 
 # instance fields
-.field public final a:I
-
-.field public final b:Landroid/net/Uri;
-
-.field public final c:Z
+.field public final synthetic o:Lpqh;
 
 
 # direct methods
-.method public constructor <init>(ILandroid/net/Uri;Z)V
+.method public constructor <init>(Lpqh;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lkqh;->o:Lpqh;
 
-    iput p1, p0, Lkqh;->a:I
+    const/4 p1, 0x2
 
-    iput-object p2, p0, Lkqh;->b:Landroid/net/Uri;
-
-    iput-boolean p3, p0, Lkqh;->c:Z
+    invoke-direct {p0, p1, p2}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static b(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
-
-    move-result-object p0
-
-    invoke-virtual {p0, p1}, Landroid/net/Uri$Builder;->authority(Ljava/lang/String;)Landroid/net/Uri$Builder;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
 
 # virtual methods
-.method public abstract a(Ljava/lang/String;)Lkqh;
-.end method
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    check-cast p1, Lnd4;
 
-    if-ne p0, p1, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    goto :goto_2
+    invoke-virtual {p0, p1, p2}, Lkqh;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-object p1
 
-    move-result-object v0
-
-    if-eqz p1, :cond_1
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v1, 0x0
-
-    :goto_0
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    goto :goto_1
-
-    :cond_2
     check-cast p1, Lkqh;
 
-    iget-object v0, p0, Lkqh;->b:Landroid/net/Uri;
+    sget-object p2, Lmah;->a:Lmah;
 
-    iget-object v1, p1, Lkqh;->b:Landroid/net/Uri;
+    invoke-virtual {p1, p2}, Lkqh;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    iget v0, p0, Lkqh;->a:I
-
-    iget v1, p1, Lkqh;->a:I
-
-    if-eq v0, v1, :cond_4
-
-    goto :goto_1
-
-    :cond_4
-    iget-boolean v0, p0, Lkqh;->c:Z
-
-    iget-boolean p1, p1, Lkqh;->c:Z
-
-    if-eq v0, p1, :cond_5
-
-    :goto_1
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_5
-    :goto_2
-    const/4 p1, 0x1
-
-    return p1
+    return-object p2
 .end method
 
-.method public final hashCode()I
-    .locals 3
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    iget-object v0, p0, Lkqh;->b:Landroid/net/Uri;
+    new-instance p1, Lkqh;
 
-    invoke-virtual {v0}, Landroid/net/Uri;->hashCode()I
+    iget-object v0, p0, Lkqh;->o:Lpqh;
 
-    move-result v0
+    invoke-direct {p1, v0, p2}, Lkqh;-><init>(Lpqh;Lkotlin/coroutines/Continuation;)V
 
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Lkqh;->a:I
-
-    invoke-static {v2, v0, v1}, Lpqb;->i(III)I
-
-    move-result v0
-
-    iget-boolean v1, p0, Lkqh;->c:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    return-object p1
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    const-string v1, "VideoSource(type: "
+    iget-object p1, p0, Lkqh;->o:Lpqh;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object p1, p1, Lpqh;->b:Lj88;
 
-    iget v1, p0, Lkqh;->a:I
+    invoke-interface {p1}, Lj88;->getValue()Ljava/lang/Object;
 
-    invoke-static {v1}, Lcbh;->z(I)Ljava/lang/String;
+    move-result-object p1
 
-    move-result-object v1
+    check-cast p1, Lush;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object p1, p1, Lush;->f:Lbwh;
 
-    const-string v1, ", isLive: "
+    if-eqz p1, :cond_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-interface {p1}, Lbwh;->stop()V
 
-    iget-boolean v1, p0, Lkqh;->c:Z
+    :cond_0
+    sget-object p1, Lmah;->a:Lmah;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", uri: "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lkqh;->b:Landroid/net/Uri;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

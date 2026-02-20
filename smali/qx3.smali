@@ -4,20 +4,22 @@
 
 
 # static fields
-.field public static final a:Ljava/lang/String;
+.field public static final a:J
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 3
 
-    const-string v0, "ConstraintTracker"
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->MINUTES:Ljava/util/concurrent/TimeUnit;
 
-    invoke-static {v0}, Lkgi;->k(Ljava/lang/String;)Ljava/lang/String;
+    const-wide/16 v1, 0x3
 
-    move-result-object v0
+    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
 
-    sput-object v0, Lqx3;->a:Ljava/lang/String;
+    move-result-wide v0
+
+    sput-wide v0, Lqx3;->a:J
 
     return-void
 .end method

@@ -1,79 +1,80 @@
-.class public abstract Lh4j;
+.class public final Lh4j;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Loza;
+
+
+# static fields
+.field public static final a:Lh4j;
+
 
 # direct methods
-.method public static final a(Lj88;)Ly78;
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-interface {p0}, Lj88;->p()Ll88;
+    new-instance v0, Lh4j;
 
-    move-result-object p0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {p0}, Ld4j;->c(Ll88;)Ly78;
+    sput-object v0, Lh4j;->a:Lh4j;
 
-    move-result-object p0
+    new-instance v0, Lczi;
 
-    return-object p0
-.end method
+    const/4 v1, 0x1
 
-.method public static d(Ljava/lang/Object;)Ljava/lang/String;
-    .locals 2
+    invoke-direct {v0, v1}, Lczi;-><init>(I)V
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-class v1, Lozi;
 
-    const-string v1, "\'"
+    invoke-static {v1, v0}, Leni;->f(Ljava/lang/Class;Lczi;)Ljava/util/HashMap;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
-    invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    const/4 v2, 0x2
 
-    move-result-object p0
+    invoke-static {v0, v2}, Leni;->h(Ljava/util/HashMap;I)Lczi;
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1, v0}, Leni;->f(Ljava/lang/Class;Lczi;)Ljava/util/HashMap;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v0
 
-    move-result-object p0
+    const/4 v2, 0x3
 
-    return-object p0
-.end method
+    invoke-static {v0, v2}, Leni;->h(Ljava/util/HashMap;I)Lczi;
 
-.method public static e(Ljava/lang/String;)Z
-    .locals 0
+    move-result-object v0
 
-    if-eqz p0, :cond_0
+    invoke-static {v1, v0}, Leni;->f(Ljava/lang/Class;Lczi;)Ljava/util/HashMap;
 
-    invoke-virtual {p0}, Ljava/lang/String;->trim()Ljava/lang/String;
+    move-result-object v0
 
-    move-result-object p0
+    const/4 v2, 0x4
 
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
+    invoke-static {v0, v2}, Leni;->h(Ljava/util/HashMap;I)Lczi;
 
-    move-result p0
+    move-result-object v0
 
-    if-lez p0, :cond_0
+    invoke-static {v1, v0}, Leni;->f(Ljava/lang/Class;Lczi;)Ljava/util/HashMap;
 
-    const/4 p0, 0x1
+    move-result-object v0
 
-    return p0
+    invoke-static {v0}, Leni;->m(Ljava/util/HashMap;)V
 
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
+    return-void
 .end method
 
 
 # virtual methods
-.method public abstract b()V
-.end method
-
-.method public c()V
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
-    return-void
+    invoke-static {p1}, Lkb0;->d(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+
+    move-result-object p1
+
+    throw p1
 .end method

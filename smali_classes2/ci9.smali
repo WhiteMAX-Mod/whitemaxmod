@@ -1,97 +1,122 @@
-.class public interface abstract Lci9;
-.super Ljava/lang/Object;
+.class public final Lci9;
+.super Lpdg;
 .source "SourceFile"
+
+# interfaces
+.implements Lys6;
+
+
+# instance fields
+.field public final synthetic X:J
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public static c(Lnd2;Ljava/util/List;)Ljava/util/ArrayList;
-    .locals 4
+.method public constructor <init>(JLkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Ljava/util/ArrayList;
+    iput-wide p1, p0, Lci9;->X:J
 
-    const/16 v1, 0xa
+    const/4 p1, 0x2
 
-    invoke-static {p1, v1}, Lri3;->n(Ljava/lang/Iterable;I)I
+    invoke-direct {p0, p1, p3}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    move-result v1
-
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
-
-    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ley3;
-
-    invoke-virtual {v1}, Ley3;->r()J
-
-    move-result-wide v2
-
-    invoke-virtual {p0, v2, v3}, Lnd2;->g0(J)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    const/4 v2, 0x1
-
-    goto :goto_1
-
-    :cond_0
-    invoke-virtual {v1}, Ley3;->r()J
-
-    move-result-wide v2
-
-    invoke-virtual {p0, v2, v3}, Lnd2;->K(J)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    const/4 v2, 0x2
-
-    goto :goto_1
-
-    :cond_1
-    const/4 v2, 0x3
-
-    :goto_1
-    new-instance v3, Lxs2;
-
-    invoke-direct {v3, v1, v2}, Lxs2;-><init>(Ley3;I)V
-
-    invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :cond_2
-    return-object v0
+    return-void
 .end method
 
 
 # virtual methods
-.method public abstract a(Ljava/lang/String;)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lwy3;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lci9;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lci9;
+
+    sget-object p2, Lmah;->a:Lmah;
+
+    invoke-virtual {p1, p2}, Lci9;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public abstract b()Ld76;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
+
+    new-instance v0, Lci9;
+
+    iget-wide v1, p0, Lci9;->X:J
+
+    invoke-direct {v0, v1, v2, p2}, Lci9;-><init>(JLkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lci9;->o:Ljava/lang/Object;
+
+    return-object v0
 .end method
 
-.method public abstract d()Z
-.end method
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 9
 
-.method public abstract e()Lpld;
-.end method
+    iget-object v0, p0, Lci9;->o:Ljava/lang/Object;
 
-.method public abstract f()V
+    check-cast v0, Lwy3;
+
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    new-instance v1, Lk9c;
+
+    invoke-virtual {v0}, Lwy3;->r()J
+
+    move-result-wide v4
+
+    invoke-virtual {v0}, Lwy3;->g()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v2, ""
+
+    if-nez p1, :cond_0
+
+    move-object v7, v2
+
+    goto :goto_0
+
+    :cond_0
+    move-object v7, p1
+
+    :goto_0
+    sget-object p1, Lnn0;->a:Lnn0;
+
+    invoke-virtual {v0, p1}, Lwy3;->v(Lnn0;)Ljava/lang/String;
+
+    move-result-object p1
+
+    if-nez p1, :cond_1
+
+    move-object v8, v2
+
+    goto :goto_1
+
+    :cond_1
+    move-object v8, p1
+
+    :goto_1
+    invoke-virtual {v0}, Lwy3;->q()Ljava/lang/CharSequence;
+
+    move-result-object v6
+
+    iget-wide v2, p0, Lci9;->X:J
+
+    invoke-direct/range {v1 .. v8}, Lk9c;-><init>(JJLjava/lang/CharSequence;Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object v1
 .end method

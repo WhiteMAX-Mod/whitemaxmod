@@ -1,195 +1,110 @@
-.class public abstract Laui;
+.class public final synthetic Laui;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lcom/my/tracker/core/utils/Consumer;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:J
+
+.field public final synthetic c:I
+
+.field public final synthetic d:Z
+
+.field public final synthetic e:Z
+
+.field public final synthetic f:J
+
+.field public final synthetic g:Lcom/my/tracker/core/EngineCore$EventPacker;
+
 
 # direct methods
-.method static constructor <clinit>()V
+.method public synthetic constructor <init>(JIZZJLcom/my/tracker/core/EngineCore$EventPacker;I)V
     .locals 0
 
-    return-void
-.end method
+    iput p9, p0, Laui;->a:I
 
-.method public static final c(IILiyd;)Z
-    .locals 2
+    iput-wide p1, p0, Laui;->b:J
 
-    const v0, 0x3faaaaab
+    iput p3, p0, Laui;->c:I
 
-    if-nez p2, :cond_0
+    iput-boolean p4, p0, Laui;->d:Z
 
-    int-to-float p0, p0
+    iput-boolean p5, p0, Laui;->e:Z
 
-    mul-float/2addr p0, v0
+    iput-wide p6, p0, Laui;->f:J
 
-    float-to-int p0, p0
+    iput-object p8, p0, Laui;->g:Lcom/my/tracker/core/EngineCore$EventPacker;
 
-    int-to-float p0, p0
-
-    const/high16 p2, 0x45000000    # 2048.0f
-
-    cmpl-float p0, p0, p2
-
-    if-ltz p0, :cond_1
-
-    int-to-float p0, p1
-
-    mul-float/2addr p0, v0
-
-    float-to-int p0, p0
-
-    const/16 p1, 0x800
-
-    if-lt p0, p1, :cond_1
-
-    goto :goto_0
-
-    :cond_0
-    int-to-float p0, p0
-
-    mul-float/2addr p0, v0
-
-    float-to-int p0, p0
-
-    iget v1, p2, Liyd;->a:I
-
-    if-lt p0, v1, :cond_1
-
-    int-to-float p0, p1
-
-    mul-float/2addr p0, v0
-
-    float-to-int p0, p0
-
-    iget p1, p2, Liyd;->b:I
-
-    if-lt p0, p1, :cond_1
-
-    :goto_0
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_1
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public static final d(Lei5;Liyd;)Z
-    .locals 2
-
-    if-nez p0, :cond_0
-
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_0
-    invoke-virtual {p0}, Lei5;->C0()V
-
-    iget v0, p0, Lei5;->c:I
-
-    const/16 v1, 0x5a
-
-    if-eq v0, v1, :cond_1
-
-    const/16 v1, 0x10e
-
-    if-eq v0, v1, :cond_1
-
-    invoke-virtual {p0}, Lei5;->C0()V
-
-    iget v0, p0, Lei5;->o:I
-
-    invoke-virtual {p0}, Lei5;->C0()V
-
-    iget p0, p0, Lei5;->X:I
-
-    invoke-static {v0, p0, p1}, Laui;->c(IILiyd;)Z
-
-    move-result p0
-
-    return p0
-
-    :cond_1
-    invoke-virtual {p0}, Lei5;->C0()V
-
-    iget v0, p0, Lei5;->X:I
-
-    invoke-virtual {p0}, Lei5;->C0()V
-
-    iget p0, p0, Lei5;->o:I
-
-    invoke-static {v0, p0, p1}, Laui;->c(IILiyd;)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static final e(Lr4h;)V
-    .locals 2
-
-    new-instance v0, Lh07;
-
-    const/4 v1, 0x3
-
-    invoke-direct {v0, v1}, Lh07;-><init>(I)V
-
-    const/16 v1, 0x1d6
-
-    invoke-virtual {p0, v1, v0}, Lr4h;->e(ILhs7;)V
-
-    new-instance v0, Lmy4;
-
-    const/16 v1, 0xb
-
-    invoke-direct {v0, v1}, Lmy4;-><init>(I)V
-
-    const/16 v1, 0x1d7
-
-    invoke-virtual {p0, v1, v0}, Lr4h;->e(ILhs7;)V
-
-    new-instance v0, Lh07;
-
-    const/4 v1, 0x4
-
-    invoke-direct {v0, v1}, Lh07;-><init>(I)V
-
-    const/16 v1, 0x1d8
-
-    invoke-virtual {p0, v1, v0}, Lr4h;->e(ILhs7;)V
-
-    new-instance v0, Lmy4;
-
-    const/16 v1, 0xa
-
-    invoke-direct {v0, v1}, Lmy4;-><init>(I)V
-
-    const/4 v1, 0x1
-
-    invoke-virtual {p0, v1, v0}, Lr4h;->c(ILhs7;)V
-
-    new-instance v0, Luj6;
-
-    const/4 v1, 0x5
-
-    invoke-direct {v0, v1}, Luj6;-><init>(I)V
-
-    const/16 v1, 0x1d9
-
-    invoke-virtual {p0, v1, v0}, Lr4h;->e(ILhs7;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract a()J
-.end method
+.method public final accept(Ljava/lang/Object;)V
+    .locals 20
 
-.method public abstract b()Lle9;
-.end method
+    move-object/from16 v0, p0
 
-.method public abstract f(Lqld;)V
+    iget v1, v0, Laui;->a:I
+
+    packed-switch v1, :pswitch_data_0
+
+    iget-object v9, v0, Laui;->g:Lcom/my/tracker/core/EngineCore$EventPacker;
+
+    move-object/from16 v10, p1
+
+    check-cast v10, Lcom/my/tracker/core/EngineCore;
+
+    iget-wide v2, v0, Laui;->b:J
+
+    iget v4, v0, Laui;->c:I
+
+    iget-boolean v5, v0, Laui;->d:Z
+
+    iget-boolean v6, v0, Laui;->e:Z
+
+    iget-wide v7, v0, Laui;->f:J
+
+    invoke-static/range {v2 .. v10}, Lcom/my/tracker/core/b;->b(JIZZJLcom/my/tracker/core/EngineCore$EventPacker;Lcom/my/tracker/core/EngineCore;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v1, v0, Laui;->g:Lcom/my/tracker/core/EngineCore$EventPacker;
+
+    move-object/from16 v19, p1
+
+    check-cast v19, Lcom/my/tracker/core/EngineCore;
+
+    iget-wide v11, v0, Laui;->b:J
+
+    iget v13, v0, Laui;->c:I
+
+    iget-boolean v14, v0, Laui;->d:Z
+
+    iget-boolean v15, v0, Laui;->e:Z
+
+    iget-wide v2, v0, Laui;->f:J
+
+    move-object/from16 v18, v1
+
+    move-wide/from16 v16, v2
+
+    invoke-static/range {v11 .. v19}, Lcom/my/tracker/core/a;->b(JIZZJLcom/my/tracker/core/EngineCore$EventPacker;Lcom/my/tracker/core/EngineCore;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

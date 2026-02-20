@@ -1,63 +1,74 @@
-.class public final Lt1f;
-.super Lie0;
+.class public final synthetic Lt1f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lnjf;
 
-# static fields
-.field public static final b:Lt1f;
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomCommandExecutorImpl;
+
+.field public final synthetic c:Lks6;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomCommandExecutorImpl;Lks6;I)V
+    .locals 0
 
-    new-instance v0, Lt1f;
+    iput p3, p0, Lt1f;->a:I
 
-    const/16 v1, 0x14
+    iput-object p1, p0, Lt1f;->b:Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomCommandExecutorImpl;
 
-    invoke-direct {v0, v1}, Lie0;-><init>(I)V
+    iput-object p2, p0, Lt1f;->c:Lks6;
 
-    sput-object v0, Lt1f;->b:Lt1f;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final onResponse(Lorg/json/JSONObject;)V
+    .locals 2
 
-    const/4 v0, 0x1
+    iget v0, p0, Lt1f;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    iget-object v0, p0, Lt1f;->b:Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomCommandExecutorImpl;
 
-    :cond_0
-    instance-of p1, p1, Lt1f;
+    iget-object v1, p0, Lt1f;->c:Lks6;
 
-    if-nez p1, :cond_1
+    invoke-static {v0, v1, p1}, Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomCommandExecutorImpl;->f(Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomCommandExecutorImpl;Lks6;Lorg/json/JSONObject;)V
 
-    const/4 p1, 0x0
+    return-void
 
-    return p1
+    :pswitch_0
+    iget-object v0, p0, Lt1f;->b:Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomCommandExecutorImpl;
 
-    :cond_1
-    return v0
-.end method
+    iget-object v1, p0, Lt1f;->c:Lks6;
 
-.method public final hashCode()I
-    .locals 1
+    invoke-static {v0, v1, p1}, Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomCommandExecutorImpl;->c(Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomCommandExecutorImpl;Lks6;Lorg/json/JSONObject;)V
 
-    const v0, -0x631275ef
+    return-void
 
-    return v0
-.end method
+    :pswitch_1
+    iget-object v0, p0, Lt1f;->b:Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomCommandExecutorImpl;
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    iget-object v1, p0, Lt1f;->c:Lks6;
 
-    const-string v0, "AvatarsBottomSheet"
+    invoke-static {v0, v1, p1}, Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomCommandExecutorImpl;->b(Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomCommandExecutorImpl;Lks6;Lorg/json/JSONObject;)V
 
-    return-object v0
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

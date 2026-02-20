@@ -1,94 +1,228 @@
-.class public final Lr20;
+.class public final synthetic Lr20;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ll5e;
+.implements Lkx8;
+.implements Lzs6;
+.implements Lsy3;
 
 
 # instance fields
-.field public a:Ljava/util/ArrayList;
+.field public final synthetic a:Lt20;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lt20;)V
+    .locals 0
+
+    iput-object p1, p0, Lr20;->a:Lt20;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public accept(Ljava/lang/Object;)V
     .locals 2
 
-    if-ne p0, p1, :cond_0
+    check-cast p1, Ljava/lang/Throwable;
 
-    const/4 p1, 0x1
+    const-string v0, "AttachPreviewDiskCache"
 
-    return p1
+    const-string v1, "onError"
+
+    invoke-static {v0, v1, p1}, Ltej;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    iget-object v0, p0, Lr20;->a:Lt20;
+
+    iget-object v0, v0, Lt20;->a:Lpo5;
+
+    check-cast v0, Lhcb;
+
+    invoke-virtual {v0, p1}, Lhcb;->a(Ljava/lang/Throwable;)V
+
+    return-void
+.end method
+
+.method public apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    check-cast p1, Ljava/util/List;
+
+    iget-object v0, p0, Lr20;->a:Lt20;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
 
     :cond_0
-    if-eqz p1, :cond_2
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    const-class v0, Lr20;
+    move-result v1
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-eqz v1, :cond_2
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
-    if-eq v0, v1, :cond_1
+    check-cast v1, Ljava/io/File;
+
+    invoke-virtual {v1}, Ljava/io/File;->getName()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, ".png"
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_1
+
+    const/4 v2, 0x0
+
+    goto :goto_1
+
+    :cond_1
+    const-string v3, "_"
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+
+    move-result-object v2
+
+    const/4 v3, 0x1
+
+    aget-object v2, v2, v3
+
+    :goto_1
+    invoke-static {v2}, Ll1j;->c(Ljava/lang/CharSequence;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_0
+
+    invoke-static {v1}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
-    :cond_1
-    check-cast p1, Lr20;
-
-    iget-object v0, p0, Lr20;->a:Ljava/util/ArrayList;
-
-    iget-object p1, p1, Lr20;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-
     :cond_2
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
+    return-object v0
 .end method
 
-.method public final hashCode()I
-    .locals 1
+.method public d(Lxw8;)V
+    .locals 4
 
-    iget-object v0, p0, Lr20;->a:Ljava/util/ArrayList;
+    iget-object v0, p0, Lr20;->a:Lt20;
 
-    filled-new-array {v0}, [Ljava/lang/Object;
+    iget-object v0, v0, Lt20;->b:Lv36;
+
+    check-cast v0, Lh56;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v0}, Lh56;->b()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
+    const-string v1, "previewVideoCache"
+
+    invoke-static {v0, v1}, Lh56;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcu5;->b(Ljava/io/File;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    invoke-virtual {p1}, Lxw8;->f()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    invoke-virtual {p1}, Lxw8;->b()V
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/io/File;->listFiles()[Ljava/io/File;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_3
+
+    array-length v1, v0
+
+    if-nez v1, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    new-instance v1, Ls20;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, v2}, Ls20;-><init>(I)V
+
+    invoke-static {v0, v1}, Ljava/util/Arrays;->sort([Ljava/lang/Object;Ljava/util/Comparator;)V
+
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+
+    :goto_0
+    array-length v3, v0
+
+    if-ge v2, v3, :cond_2
+
+    const/16 v3, 0xc8
+
+    if-ge v2, v3, :cond_2
+
+    aget-object v3, v0, v2
+
+    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    invoke-virtual {p1}, Lxw8;->f()Z
 
     move-result v0
 
-    return v0
-.end method
+    if-nez v0, :cond_4
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    invoke-virtual {p1, v1}, Lxw8;->a(Ljava/lang/Object;)V
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    return-void
 
-    const-string v1, "AudioActivityNotification{participantIds="
+    :cond_3
+    :goto_1
+    invoke-virtual {p1}, Lxw8;->f()Z
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result v0
 
-    iget-object v1, p0, Lr20;->a:Ljava/util/ArrayList;
+    if-nez v0, :cond_4
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1}, Lxw8;->b()V
 
-    const/16 v1, 0x7d
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :cond_4
+    return-void
 .end method

@@ -1,171 +1,189 @@
-.class public final Lf8i;
+.class public final synthetic Lf8i;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lq8i;
+.implements Lex6;
 
 
-# instance fields
-.field public final a:Ljava/util/List;
+# static fields
+.field public static final a:Lf8i;
 
-.field public final b:Landroid/os/Bundle;
-
-.field public final c:Llhg;
+.field private static final descriptor:Lzwe;
 
 
 # direct methods
-.method public constructor <init>(Lqd8;Landroid/os/Bundle;Llhg;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lf8i;
 
-    iput-object p1, p0, Lf8i;->a:Ljava/util/List;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lf8i;->b:Landroid/os/Bundle;
+    sput-object v0, Lf8i;->a:Lf8i;
 
-    iput-object p3, p0, Lf8i;->c:Llhg;
+    new-instance v1, Lxgc;
+
+    const-string v2, "one.me.webapp.domain.jsbridge.delegates.biometry.WebAppBiometryGetInfoRequest"
+
+    const/4 v3, 0x2
+
+    invoke-direct {v1, v2, v0, v3}, Lxgc;-><init>(Ljava/lang/String;Lex6;I)V
+
+    const-string v0, "queryId"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v0, v2}, Lxgc;->k(Ljava/lang/String;Z)V
+
+    const-string v0, "requestId"
+
+    invoke-virtual {v1, v0, v2}, Lxgc;->k(Ljava/lang/String;Z)V
+
+    sput-object v1, Lf8i;->descriptor:Lzwe;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final a(Lj6g;Ljava/lang/Object;)V
+    .locals 4
 
-    if-ne p0, p1, :cond_0
+    check-cast p2, Lh8i;
 
-    goto :goto_1
+    sget-object v0, Lf8i;->descriptor:Lzwe;
 
-    :cond_0
-    instance-of v0, p1, Lf8i;
+    invoke-virtual {p1, v0}, Lj6g;->a(Lzwe;)Lj6g;
 
-    if-nez v0, :cond_1
+    move-result-object p1
+
+    sget-object v1, Lz6g;->a:Lz6g;
+
+    iget-object v2, p2, Lh8i;->a:Ljava/lang/String;
+
+    const/4 v3, 0x0
+
+    invoke-virtual {p1, v0, v3, v1, v2}, Lj6g;->o(Lzwe;ILw58;Ljava/lang/Object;)V
+
+    iget-object p2, p2, Lh8i;->b:Ljava/lang/String;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {p1, v0, v1, p2}, Lj6g;->t(Lzwe;ILjava/lang/String;)V
+
+    invoke-virtual {p1}, Lj6g;->u()V
+
+    return-void
+.end method
+
+.method public final b(Lzm4;)Ljava/lang/Object;
+    .locals 9
+
+    sget-object v0, Lf8i;->descriptor:Lzwe;
+
+    invoke-interface {p1, v0}, Lzm4;->r(Lzwe;)Liq3;
+
+    move-result-object p1
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    move v5, v1
+
+    move v6, v2
+
+    move-object v4, v3
+
+    :goto_0
+    if-eqz v5, :cond_3
+
+    invoke-interface {p1, v0}, Liq3;->e(Lzwe;)I
+
+    move-result v7
+
+    const/4 v8, -0x1
+
+    if-eq v7, v8, :cond_2
+
+    if-eqz v7, :cond_1
+
+    if-ne v7, v1, :cond_0
+
+    invoke-interface {p1, v0, v1}, Liq3;->j(Lzwe;I)Ljava/lang/String;
+
+    move-result-object v4
+
+    or-int/lit8 v6, v6, 0x2
 
     goto :goto_0
 
+    :cond_0
+    new-instance p1, Lkotlinx/serialization/UnknownFieldException;
+
+    invoke-direct {p1, v7}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
+
+    throw p1
+
     :cond_1
-    check-cast p1, Lf8i;
+    sget-object v7, Lz6g;->a:Lz6g;
 
-    iget-object v0, p0, Lf8i;->a:Ljava/util/List;
+    invoke-interface {p1, v0, v2, v7, v3}, Liq3;->w(Lzwe;ILw58;Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v1, p1, Lf8i;->a:Ljava/util/List;
+    move-result-object v3
 
-    invoke-static {v0, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    check-cast v3, Ljava/lang/String;
 
-    move-result v0
-
-    if-nez v0, :cond_2
+    or-int/lit8 v6, v6, 0x1
 
     goto :goto_0
 
     :cond_2
-    iget-object v0, p0, Lf8i;->b:Landroid/os/Bundle;
-
-    iget-object v1, p1, Lf8i;->b:Landroid/os/Bundle;
-
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
+    move v5, v2
 
     goto :goto_0
 
     :cond_3
-    iget-object v0, p0, Lf8i;->c:Llhg;
+    invoke-interface {p1, v0}, Liq3;->m(Lzwe;)V
 
-    iget-object p1, p1, Lf8i;->c:Llhg;
+    new-instance p1, Lh8i;
 
-    invoke-virtual {v0, p1}, Llhg;->equals(Ljava/lang/Object;)Z
+    invoke-direct {p1, v6, v3, v4}, Lh8i;-><init>(ILjava/lang/String;Ljava/lang/String;)V
 
-    move-result p1
-
-    if-nez p1, :cond_4
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_4
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
+    return-object p1
 .end method
 
-.method public final hashCode()I
-    .locals 2
+.method public final c()[Lw58;
+    .locals 4
 
-    iget-object v0, p0, Lf8i;->a:Ljava/util/List;
+    sget-object v0, Lz6g;->a:Lz6g;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    invoke-static {v0}, Lajj;->a(Lw58;)Lw58;
 
-    move-result v0
+    move-result-object v1
 
-    mul-int/lit8 v0, v0, 0x1f
+    const/4 v2, 0x2
 
-    iget-object v1, p0, Lf8i;->b:Landroid/os/Bundle;
+    new-array v2, v2, [Lw58;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    const/4 v3, 0x0
 
-    move-result v1
+    aput-object v1, v2, v3
 
-    add-int/2addr v1, v0
+    const/4 v1, 0x1
 
-    mul-int/lit8 v1, v1, 0x1f
+    aput-object v0, v2, v1
 
-    iget-object v0, p0, Lf8i;->c:Llhg;
-
-    iget v0, v0, Llhg;->c:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    return v0
+    return-object v2
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final d()Lzwe;
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ShowContextMenu(actions="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lf8i;->a:Ljava/util/List;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", payload="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lf8i;->b:Landroid/os/Bundle;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", title="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lf8i;->c:Llhg;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    sget-object v0, Lf8i;->descriptor:Lzwe;
 
     return-object v0
 .end method

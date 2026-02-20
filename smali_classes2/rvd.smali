@@ -1,283 +1,89 @@
-.class public abstract synthetic Lrvd;
-.super Ljava/lang/Object;
+.class public final Lrvd;
+.super Lpdg;
 .source "SourceFile"
+
+# interfaces
+.implements Lys6;
+
+
+# instance fields
+.field public final synthetic X:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public static bridge synthetic A(Landroid/widget/TextView;Landroid/graphics/drawable/Drawable;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;)V
     .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setTextSelectHandleLeft(Landroid/graphics/drawable/Drawable;)V
+    iput-object p2, p0, Lrvd;->X:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+
+    const/4 p2, 0x2
+
+    invoke-direct {p0, p2, p1}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static bridge synthetic B(Landroid/widget/TextView;)Landroid/graphics/drawable/Drawable;
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    invoke-virtual {p0}, Landroid/widget/TextView;->getTextSelectHandleLeft()Landroid/graphics/drawable/Drawable;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-result-object p0
+    invoke-virtual {p0, p1, p2}, Lrvd;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    return-object p0
+    move-result-object p1
+
+    check-cast p1, Lrvd;
+
+    sget-object p2, Lmah;->a:Lmah;
+
+    invoke-virtual {p1, p2}, Lrvd;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public static bridge synthetic C(Landroid/widget/TextView;Landroid/graphics/drawable/Drawable;)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setTextSelectHandleRight(Landroid/graphics/drawable/Drawable;)V
-
-    return-void
-.end method
-
-.method public static bridge synthetic D(Landroid/widget/TextView;)Landroid/graphics/drawable/Drawable;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/widget/TextView;->getTextSelectHandleRight()Landroid/graphics/drawable/Drawable;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic a(Landroid/view/View;)F
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/view/View;->getTransitionAlpha()F
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static bridge synthetic b(Landroid/view/accessibility/AccessibilityNodeInfo$TouchDelegateInfo;)I
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo$TouchDelegateInfo;->getRegionCount()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static bridge synthetic c(Landroid/graphics/RenderNode;)Landroid/graphics/RecordingCanvas;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/graphics/RenderNode;->beginRecording()Landroid/graphics/RecordingCanvas;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic d(Landroid/view/accessibility/AccessibilityNodeInfo$TouchDelegateInfo;)Landroid/graphics/Region;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0}, Landroid/view/accessibility/AccessibilityNodeInfo$TouchDelegateInfo;->getRegionAt(I)Landroid/graphics/Region;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic e()Landroid/graphics/RenderNode;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    new-instance v0, Landroid/graphics/RenderNode;
+    new-instance v0, Lrvd;
 
-    const-string v1, "blur"
+    iget-object v1, p0, Lrvd;->X:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
 
-    invoke-direct {v0, v1}, Landroid/graphics/RenderNode;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p2, v1}, Lrvd;-><init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;)V
+
+    iput-object p1, v0, Lrvd;->o:Ljava/lang/Object;
 
     return-object v0
 .end method
 
-.method public static bridge synthetic f(Ljava/lang/Object;)Landroid/graphics/RenderNode;
-    .locals 0
-
-    check-cast p0, Landroid/graphics/RenderNode;
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic g(Landroid/widget/EditText;)Landroid/graphics/drawable/Drawable;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/widget/EditText;->getTextCursorDrawable()Landroid/graphics/drawable/Drawable;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic h(Landroid/widget/TextView;)Landroid/graphics/drawable/Drawable;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/widget/TextView;->getTextCursorDrawable()Landroid/graphics/drawable/Drawable;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic i(Landroid/view/Display;)Landroid/view/DisplayCutout;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/view/Display;->getCutout()Landroid/view/DisplayCutout;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic j(Landroid/view/TouchDelegate;)Landroid/view/accessibility/AccessibilityNodeInfo$TouchDelegateInfo;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/view/TouchDelegate;->getTouchDelegateInfo()Landroid/view/accessibility/AccessibilityNodeInfo$TouchDelegateInfo;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic k(J)V
-    .locals 1
-
-    const-string v0, "RenderWindow"
-
-    invoke-static {v0, p0, p1}, Landroid/os/Trace;->setCounter(Ljava/lang/String;J)V
-
-    return-void
-.end method
-
-.method public static bridge synthetic l(Landroid/app/Activity;Lywd$a;)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/app/Activity;->registerActivityLifecycleCallbacks(Landroid/app/Application$ActivityLifecycleCallbacks;)V
-
-    return-void
-.end method
-
-.method public static bridge synthetic m(Landroid/app/Service;ILandroid/app/Notification;I)V
-    .locals 0
-
-    invoke-virtual {p0, p1, p2, p3}, Landroid/app/Service;->startForeground(ILandroid/app/Notification;I)V
-
-    return-void
-.end method
-
-.method public static bridge synthetic n(Landroid/content/pm/ShortcutInfo$Builder;Landroid/content/LocusId;)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/content/pm/ShortcutInfo$Builder;->setLocusId(Landroid/content/LocusId;)Landroid/content/pm/ShortcutInfo$Builder;
-
-    return-void
-.end method
-
-.method public static bridge synthetic o(Landroid/content/pm/ShortcutInfo$Builder;Z)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/content/pm/ShortcutInfo$Builder;->setLongLived(Z)Landroid/content/pm/ShortcutInfo$Builder;
-
-    return-void
-.end method
-
-.method public static bridge synthetic p(Landroid/graphics/Canvas;Landroid/graphics/RenderNode;)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/graphics/Canvas;->drawRenderNode(Landroid/graphics/RenderNode;)V
-
-    return-void
-.end method
-
-.method public static bridge synthetic q(Landroid/graphics/RecordingCanvas;Landroid/graphics/Bitmap;)V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lrvd;->o:Ljava/lang/Object;
 
-    const/4 v1, 0x0
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
 
-    invoke-virtual {p0, p1, v0, v0, v1}, Landroid/graphics/RecordingCanvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
+    check-cast v0, Ljava/lang/String;
 
-    return-void
-.end method
+    iget-object p1, p0, Lrvd;->X:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
 
-.method public static bridge synthetic r(Landroid/graphics/RenderNode;)V
-    .locals 0
+    iget-object v1, p1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->F0:Ls5i;
 
-    invoke-virtual {p0}, Landroid/graphics/RenderNode;->endRecording()V
+    if-eqz v1, :cond_0
 
-    return-void
-.end method
+    invoke-virtual {v1, v0}, Ls5i;->setDurationText(Ljava/lang/String;)V
 
-.method public static bridge synthetic s(Landroid/graphics/RenderNode;F)V
-    .locals 0
+    :cond_0
+    invoke-virtual {p1}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->R0()Landroid/widget/TextView;
 
-    invoke-virtual {p0, p1}, Landroid/graphics/RenderNode;->setAlpha(F)Z
+    move-result-object p1
 
-    return-void
-.end method
+    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-.method public static bridge synthetic t(Landroid/graphics/RenderNode;II)V
-    .locals 1
+    sget-object p1, Lmah;->a:Lmah;
 
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0, v0, p1, p2}, Landroid/graphics/RenderNode;->setPosition(IIII)Z
-
-    return-void
-.end method
-
-.method public static bridge synthetic u(Landroid/view/View;F)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setTransitionAlpha(F)V
-
-    return-void
-.end method
-
-.method public static bridge synthetic v(Landroid/view/Window;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0}, Landroid/view/Window;->setNavigationBarContrastEnforced(Z)V
-
-    return-void
-.end method
-
-.method public static bridge synthetic w(Landroid/widget/EditText;Landroid/graphics/drawable/Drawable;)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setTextCursorDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    return-void
-.end method
-
-.method public static bridge synthetic x(Landroid/widget/TextView;Landroid/graphics/drawable/Drawable;)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setTextSelectHandle(Landroid/graphics/drawable/Drawable;)V
-
-    return-void
-.end method
-
-.method public static bridge synthetic y(Landroid/widget/TextView;)Landroid/graphics/drawable/Drawable;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/widget/TextView;->getTextSelectHandle()Landroid/graphics/drawable/Drawable;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic z(Landroid/graphics/RenderNode;)V
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/graphics/RenderNode;->discardDisplayList()V
-
-    return-void
+    return-object p1
 .end method

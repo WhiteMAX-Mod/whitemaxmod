@@ -1,189 +1,97 @@
-.class public final Lwhh;
-.super Ljava/lang/Object;
+.class public final enum Lwhh;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/hardware/display/DisplayManager$DisplayListener;
-.implements Lvhh;
 
+# static fields
+.field public static final enum a:Lwhh;
 
-# instance fields
-.field public final synthetic a:I
+.field public static final enum b:Lwhh;
 
-.field public final b:Landroid/hardware/display/DisplayManager;
+.field public static final enum c:Lwhh;
 
-.field public c:Ljava/lang/Object;
+.field public static final enum d:Lwhh;
+
+.field public static final synthetic o:[Lwhh;
 
 
 # direct methods
-.method public constructor <init>(Landroid/hardware/display/DisplayManager;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 6
 
-    const/4 v0, 0x1
+    new-instance v0, Lwhh;
 
-    iput v0, p0, Lwhh;->a:I
+    const-string v1, "ENABLED"
 
-    .line 3
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v2, 0x0
 
-    .line 4
-    iput-object p1, p0, Lwhh;->b:Landroid/hardware/display/DisplayManager;
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    return-void
-.end method
+    sput-object v0, Lwhh;->a:Lwhh;
 
-.method public constructor <init>(Lzhh;Landroid/hardware/display/DisplayManager;)V
-    .locals 1
+    new-instance v1, Lwhh;
 
-    const/4 v0, 0x0
+    const-string v2, "DISABLED"
 
-    iput v0, p0, Lwhh;->a:I
+    const/4 v3, 0x1
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iput-object p1, p0, Lwhh;->c:Ljava/lang/Object;
+    sput-object v1, Lwhh;->b:Lwhh;
 
-    .line 2
-    iput-object p2, p0, Lwhh;->b:Landroid/hardware/display/DisplayManager;
+    new-instance v2, Lwhh;
 
-    return-void
-.end method
+    const-string v3, "USER_IGNORED"
 
-.method private final a(I)V
-    .locals 0
+    const/4 v4, 0x2
 
-    return-void
-.end method
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-.method private final c(I)V
-    .locals 0
+    sput-object v2, Lwhh;->c:Lwhh;
 
-    return-void
-.end method
+    new-instance v3, Lwhh;
 
-.method private final d(I)V
-    .locals 0
+    const-string v4, "UNKNOWN"
 
-    return-void
-.end method
+    const/4 v5, 0x3
 
-.method private final e(I)V
-    .locals 0
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    return-void
-.end method
+    sput-object v3, Lwhh;->d:Lwhh;
 
-
-# virtual methods
-.method public b(Lq9h;)V
-    .locals 2
-
-    iput-object p1, p0, Lwhh;->c:Ljava/lang/Object;
-
-    const/4 v0, 0x0
-
-    invoke-static {v0}, Lkbh;->l(Landroid/os/Handler$Callback;)Landroid/os/Handler;
+    filled-new-array {v0, v1, v2, v3}, [Lwhh;
 
     move-result-object v0
 
-    iget-object v1, p0, Lwhh;->b:Landroid/hardware/display/DisplayManager;
-
-    invoke-virtual {v1, p0, v0}, Landroid/hardware/display/DisplayManager;->registerDisplayListener(Landroid/hardware/display/DisplayManager$DisplayListener;Landroid/os/Handler;)V
-
-    const/4 v0, 0x0
-
-    invoke-virtual {v1, v0}, Landroid/hardware/display/DisplayManager;->getDisplay(I)Landroid/view/Display;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Lq9h;->b(Landroid/view/Display;)V
+    sput-object v0, Lwhh;->o:[Lwhh;
 
     return-void
 .end method
 
-.method public f()V
+.method public static valueOf(Ljava/lang/String;)Lwhh;
     .locals 1
 
-    iget-object v0, p0, Lwhh;->b:Landroid/hardware/display/DisplayManager;
+    const-class v0, Lwhh;
 
-    invoke-virtual {v0, p0}, Landroid/hardware/display/DisplayManager;->unregisterDisplayListener(Landroid/hardware/display/DisplayManager$DisplayListener;)V
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    const/4 v0, 0x0
+    move-result-object p0
 
-    iput-object v0, p0, Lwhh;->c:Ljava/lang/Object;
+    check-cast p0, Lwhh;
 
-    return-void
+    return-object p0
 .end method
 
-.method public final onDisplayAdded(I)V
-    .locals 0
+.method public static values()[Lwhh;
+    .locals 1
 
-    iget p1, p0, Lwhh;->a:I
+    sget-object v0, Lwhh;->o:[Lwhh;
 
-    return-void
-.end method
-
-.method public final onDisplayChanged(I)V
-    .locals 2
-
-    iget v0, p0, Lwhh;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lwhh;->c:Ljava/lang/Object;
-
-    check-cast v0, Lq9h;
-
-    if-eqz v0, :cond_0
-
-    if-nez p1, :cond_0
-
-    iget-object p1, p0, Lwhh;->b:Landroid/hardware/display/DisplayManager;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, v1}, Landroid/hardware/display/DisplayManager;->getDisplay(I)Landroid/view/Display;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Lq9h;->b(Landroid/view/Display;)V
-
-    :cond_0
-    return-void
-
-    :pswitch_0
-    if-nez p1, :cond_1
-
-    iget-object p1, p0, Lwhh;->c:Ljava/lang/Object;
-
-    check-cast p1, Lzhh;
-
-    iget-object v0, p0, Lwhh;->b:Landroid/hardware/display/DisplayManager;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/hardware/display/DisplayManager;->getDisplay(I)Landroid/view/Display;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Lzhh;->a(Lzhh;Landroid/view/Display;)V
+    check-cast v0, [Lwhh;
 
-    :cond_1
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final onDisplayRemoved(I)V
-    .locals 0
-
-    iget p1, p0, Lwhh;->a:I
-
-    return-void
+    return-object v0
 .end method

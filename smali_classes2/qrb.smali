@@ -1,8 +1,17 @@
-.class public interface abstract Lqrb;
-.super Ljava/lang/Object;
+.class public final Lqrb;
+.super Ldg0;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract setDependOnOutsideView(Z)V
+# direct methods
+.method public constructor <init>(J)V
+    .locals 0
+
+    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Lsla;-><init>(Ljava/lang/Object;)V
+
+    return-void
 .end method

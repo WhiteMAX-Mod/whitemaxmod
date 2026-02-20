@@ -1,130 +1,146 @@
 .class public final Lec8;
-.super Landroid/text/style/URLSpan;
+.super Lpdg;
 .source "SourceFile"
+
+# interfaces
+.implements Lys6;
 
 
 # instance fields
-.field public a:Lfc8;
+.field public final synthetic X:Lgc8;
 
-.field public b:I
+.field public final synthetic Y:Ldc8;
 
-.field public final c:Z
-
-.field public final d:Lf7;
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;IZ)V
+.method public constructor <init>(Lgc8;Ldc8;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Landroid/text/style/URLSpan;-><init>(Ljava/lang/String;)V
+    iput-object p1, p0, Lec8;->X:Lgc8;
 
-    const/4 p1, 0x0
+    iput-object p2, p0, Lec8;->Y:Ldc8;
 
-    iput-object p1, p0, Lec8;->a:Lfc8;
+    const/4 p1, 0x2
 
-    iput p2, p0, Lec8;->b:I
-
-    iput-boolean p3, p0, Lec8;->c:Z
-
-    new-instance p1, Lf7;
-
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lec8;->d:Lf7;
+    invoke-direct {p0, p1, p3}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 7
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    check-cast p1, Lnd4;
 
-    move-result-wide v0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object v2, p0, Lec8;->d:Lf7;
-
-    iget-wide v3, v2, Lf7;->a:J
-
-    sub-long v3, v0, v3
-
-    const-wide/16 v5, 0x12c
-
-    cmp-long v3, v3, v5
-
-    if-lez v3, :cond_3
-
-    iput-wide v0, v2, Lf7;->a:J
-
-    instance-of v0, p1, Landroid/widget/TextView;
-
-    if-eqz v0, :cond_0
-
-    move-object v0, p1
-
-    check-cast v0, Landroid/widget/TextView;
-
-    invoke-virtual {v0}, Landroid/widget/TextView;->getLinksClickable()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    iget-object v0, p0, Lec8;->a:Lfc8;
-
-    if-nez v0, :cond_2
-
-    instance-of v0, p1, Lfc8;
-
-    if-eqz v0, :cond_1
-
-    move-object v0, p1
-
-    check-cast v0, Lfc8;
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    :cond_2
-    :goto_0
-    if-eqz v0, :cond_3
-
-    invoke-virtual {p0}, Landroid/text/style/URLSpan;->getURL()Ljava/lang/String;
+    invoke-virtual {p0, p1, p2}, Lec8;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    sget-object v1, Lkc8;->a:Lkc8;
+    check-cast p1, Lec8;
 
-    invoke-interface {v0, p1, v1, p0}, Lfc8;->b(Ljava/lang/String;Lkc8;Landroid/text/style/ClickableSpan;)V
+    sget-object p2, Lmah;->a:Lmah;
 
-    :cond_3
-    :goto_1
-    return-void
+    invoke-virtual {p1, p2}, Lec8;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public final updateDrawState(Landroid/text/TextPaint;)V
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    iget v0, p1, Landroid/text/TextPaint;->bgColor:I
+    new-instance p1, Lec8;
 
-    iget v1, p0, Lec8;->b:I
+    iget-object v0, p0, Lec8;->X:Lgc8;
 
-    if-eq v0, v1, :cond_0
+    iget-object v1, p0, Lec8;->Y:Ldc8;
 
-    invoke-virtual {p1, v1}, Landroid/graphics/Paint;->setColor(I)V
+    invoke-direct {p1, v0, v1, p2}, Lec8;-><init>(Lgc8;Ldc8;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 12
+
+    iget v0, p0, Lec8;->o:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    goto :goto_0
 
     :cond_0
-    iget-boolean v0, p0, Lec8;->c:Z
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setUnderlineText(Z)V
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    return-void
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lec8;->X:Lgc8;
+
+    iget-object p1, p1, Lgc8;->a:Lzef;
+
+    new-instance v2, Lyb8;
+
+    iget-object v0, p0, Lec8;->Y:Ldc8;
+
+    iget-wide v3, v0, Lvl0;->a:J
+
+    iget-object v5, v0, Ldc8;->b:Ljava/lang/Long;
+
+    iget-wide v6, v0, Ldc8;->c:J
+
+    move-wide v7, v6
+
+    new-instance v6, Ljava/lang/Long;
+
+    invoke-direct {v6, v7, v8}, Ljava/lang/Long;-><init>(J)V
+
+    iget-object v7, v0, Ldc8;->d:Ly54;
+
+    iget-object v8, v0, Ldc8;->o:Lv37;
+
+    iget-object v9, v0, Ldc8;->X:Ltmh;
+
+    iget-object v10, v0, Ldc8;->Y:Ljava/lang/Long;
+
+    iget-object v11, v0, Ldc8;->Z:Ljava/lang/String;
+
+    invoke-direct/range {v2 .. v11}, Lyb8;-><init>(JLjava/lang/Long;Ljava/lang/Long;Ly54;Lv37;Ltmh;Ljava/lang/Long;Ljava/lang/String;)V
+
+    iput v1, p0, Lec8;->o:I
+
+    invoke-virtual {p1, v2, p0}, Lzef;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lod4;->a:Lod4;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
 .end method

@@ -1,56 +1,51 @@
 .class public final Lwue;
-.super Ljava/lang/Object;
+.super Lda4;
 .source "SourceFile"
-
-# interfaces
-.implements Liv3;
 
 
 # instance fields
-.field public final synthetic a:Lxue;
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lvye;
+
+.field public Z:I
+
+.field public d:Ljava/util/LinkedHashSet;
+
+.field public o:Ljava/util/Iterator;
 
 
 # direct methods
-.method public constructor <init>(Lxue;)V
+.method public constructor <init>(Lvye;Lda4;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lwue;->Y:Lvye;
 
-    iput-object p1, p0, Lwue;->a:Lxue;
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-object v0, p0, Lwue;->a:Lxue;
+    iput-object p1, p0, Lwue;->X:Ljava/lang/Object;
 
-    iget-object v1, v0, Lxue;->c:Ljava/lang/String;
+    iget p1, p0, Lwue;->Z:I
 
-    const-string v2, "onBackgroundDataEnabledChange"
+    const/high16 v0, -0x80000000
 
-    invoke-static {v1, v2}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+    or-int/2addr p1, v0
 
-    invoke-virtual {v0}, Lxue;->d()V
+    iput p1, p0, Lwue;->Z:I
 
-    return-void
-.end method
+    iget-object p1, p0, Lwue;->Y:Lvye;
 
-.method public final b()V
-    .locals 3
+    invoke-virtual {p1, p0}, Lvye;->u(Lda4;)Ljava/io/Serializable;
 
-    iget-object v0, p0, Lwue;->a:Lxue;
+    move-result-object p1
 
-    iget-object v1, v0, Lxue;->c:Ljava/lang/String;
-
-    const-string v2, "onConnectionTypeChange"
-
-    invoke-static {v1, v2}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {v0}, Lxue;->d()V
-
-    return-void
+    return-object p1
 .end method

@@ -1,43 +1,11 @@
-.class public interface abstract annotation Lsk4;
+.class public interface abstract Lsk4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/annotation/Annotation;
-
-
-# annotations
-.annotation system Ldalvik/annotation/AnnotationDefault;
-    value = .subannotation Lsk4;
-        c = ""
-        f = ""
-        i = {}
-        l = {}
-        m = ""
-        n = {}
-        nl = {}
-        s = {}
-        v = 0x2
-    .end subannotation
-.end annotation
-
-.annotation runtime Ljava/lang/annotation/Retention;
-    value = .enum Ljava/lang/annotation/RetentionPolicy;->RUNTIME:Ljava/lang/annotation/RetentionPolicy;
-.end annotation
-
 
 # virtual methods
-.method public abstract c()Ljava/lang/String;
+.method public abstract getReadableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 .end method
 
-.method public abstract f()Ljava/lang/String;
-.end method
-
-.method public abstract l()[I
-.end method
-
-.method public abstract m()Ljava/lang/String;
-.end method
-
-.method public abstract v()I
+.method public abstract getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 .end method

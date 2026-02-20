@@ -1,99 +1,134 @@
-.class public final Lmt4;
-.super Landroid/animation/AnimatorListenerAdapter;
+.class public final synthetic Lmt4;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lnbg;
 
 
 # instance fields
-.field public final synthetic a:Landroid/view/ViewGroup;
+.field public final synthetic a:I
 
-.field public final synthetic b:Landroid/view/View;
-
-.field public final synthetic c:Z
-
-.field public final synthetic d:Lekf;
-
-.field public final synthetic e:Lnt4;
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/ViewGroup;Landroid/view/View;ZLekf;Lnt4;)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
-    iput-object p1, p0, Lmt4;->a:Landroid/view/ViewGroup;
+    iput p1, p0, Lmt4;->a:I
 
-    iput-object p2, p0, Lmt4;->b:Landroid/view/View;
+    iput-object p2, p0, Lmt4;->b:Ljava/lang/Object;
 
-    iput-boolean p3, p0, Lmt4;->c:Z
-
-    iput-object p4, p0, Lmt4;->d:Lekf;
-
-    iput-object p5, p0, Lmt4;->e:Lnt4;
-
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 3
+.method public final get()Ljava/lang/Object;
+    .locals 2
 
-    iget-object p1, p0, Lmt4;->a:Landroid/view/ViewGroup;
+    iget v0, p0, Lmt4;->a:I
 
-    iget-object v0, p0, Lmt4;->b:Landroid/view/View;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->endViewTransition(Landroid/view/View;)V
+    iget-object v0, p0, Lmt4;->b:Ljava/lang/Object;
 
-    iget-boolean v1, p0, Lmt4;->c:Z
+    check-cast v0, Lfqb;
 
-    iget-object v2, p0, Lmt4;->d:Lekf;
+    return-object v0
 
-    if-eqz v1, :cond_0
+    :pswitch_0
+    iget-object v0, p0, Lmt4;->b:Ljava/lang/Object;
 
-    iget v1, v2, Lekf;->a:I
+    check-cast v0, Lhw4;
 
-    invoke-static {v1, v0, p1}, Liwd;->a(ILandroid/view/View;Landroid/view/ViewGroup;)V
+    return-object v0
 
-    :cond_0
-    iget-object p1, p0, Lmt4;->e:Lnt4;
+    :pswitch_1
+    iget-object v0, p0, Lmt4;->b:Ljava/lang/Object;
 
-    iget-object v0, p1, Lnt4;->c:Llt4;
+    check-cast v0, Lai8;
 
-    iget-object v0, v0, Ld3;->b:Ljava/lang/Object;
+    return-object v0
 
-    check-cast v0, Lekf;
+    :pswitch_2
+    iget-object v0, p0, Lmt4;->b:Ljava/lang/Object;
 
-    invoke-virtual {v0, p1}, Lekf;->c(Ldkf;)V
+    check-cast v0, Lsgg;
 
-    const/4 p1, 0x2
+    return-object v0
 
-    invoke-static {p1}, Landroidx/fragment/app/c;->K(I)Z
+    :pswitch_3
+    iget-object v0, p0, Lmt4;->b:Ljava/lang/Object;
 
-    move-result p1
+    check-cast v0, Lgw4;
 
-    if-eqz p1, :cond_1
+    return-object v0
 
-    new-instance p1, Ljava/lang/StringBuilder;
+    :pswitch_4
+    iget-object v0, p0, Lmt4;->b:Ljava/lang/Object;
 
-    const-string v0, "Animator from operation "
+    check-cast v0, Lf2e;
 
-    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    return-object v0
 
-    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    :pswitch_5
+    iget-object v0, p0, Lmt4;->b:Ljava/lang/Object;
 
-    const-string v0, " has ended."
+    check-cast v0, Lle9;
 
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return-object v0
 
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :pswitch_6
+    iget-object v0, p0, Lmt4;->b:Ljava/lang/Object;
 
-    move-result-object p1
+    check-cast v0, Lit4;
 
-    const-string v0, "FragmentManager"
+    return-object v0
 
-    invoke-static {v0, p1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+    :pswitch_7
+    iget-object v0, p0, Lmt4;->b:Ljava/lang/Object;
 
-    :cond_1
-    return-void
+    check-cast v0, Ljava/lang/Class;
+
+    const/4 v1, 0x0
+
+    :try_start_0
+    invoke-virtual {v0, v1}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lle9;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object v0
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Ljava/lang/IllegalStateException;
+
+    invoke-direct {v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

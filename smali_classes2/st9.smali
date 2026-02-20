@@ -1,219 +1,212 @@
 .class public final Lst9;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/sdk/messagewrite/MessageWriteWidget;
+.field public final a:J
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final b:Ljava/lang/CharSequence;
+
+.field public final c:Lyt9;
+
+.field public final d:Z
+
+.field public final e:Z
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/MessageWriteWidget;)V
+.method public constructor <init>(JLjava/lang/CharSequence;Lyt9;ZZ)V
     .locals 0
 
-    iput-object p2, p0, Lst9;->X:Lone/me/sdk/messagewrite/MessageWriteWidget;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    iput-wide p1, p0, Lst9;->a:J
 
-    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p3, p0, Lst9;->b:Ljava/lang/CharSequence;
+
+    iput-object p4, p0, Lst9;->c:Lyt9;
+
+    iput-boolean p5, p0, Lst9;->d:Z
+
+    iput-boolean p6, p0, Lst9;->e:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    check-cast p1, Lv9;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lst9;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lst9;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lst9;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lst9;
-
-    iget-object v1, p0, Lst9;->X:Lone/me/sdk/messagewrite/MessageWriteWidget;
-
-    invoke-direct {v0, p2, v1}, Lst9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/MessageWriteWidget;)V
-
-    iput-object p1, v0, Lst9;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 11
-
-    sget-object v0, Lpc3;->t0:Lkme;
-
-    iget-object v1, p0, Lst9;->o:Ljava/lang/Object;
-
-    check-cast v1, Lv9;
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    sget-object p1, Lone/me/sdk/messagewrite/MessageWriteWidget;->M0:[Lz28;
-
-    iget-object p1, p0, Lst9;->X:Lone/me/sdk/messagewrite/MessageWriteWidget;
-
-    invoke-virtual {p1}, Lone/me/sdk/messagewrite/MessageWriteWidget;->E0()Leo9;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/view/View;->requestFocus()Z
-
-    iget-object p1, p1, Lone/me/sdk/messagewrite/MessageWriteWidget;->E0:Lct8;
-
-    if-eqz p1, :cond_5
-
-    iget-object p1, p1, Lct8;->a:Landroid/widget/EditText;
-
-    iget v4, v1, Lv9;->a:I
-
-    iget v5, v1, Lv9;->b:I
-
-    iget-object v3, v1, Lv9;->c:Ljava/lang/String;
-
-    if-nez v3, :cond_0
-
-    goto :goto_2
+    return v0
 
     :cond_0
-    invoke-virtual {p1}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
+    instance-of v1, p1, Lst9;
 
-    move-result-object v2
-
-    if-eqz v2, :cond_5
-
-    invoke-interface {v2}, Ljava/lang/CharSequence;->length()I
-
-    move-result v1
+    const/4 v2, 0x0
 
     if-nez v1, :cond_1
 
-    goto :goto_2
+    return v2
 
     :cond_1
-    const-class v1, Lcc8;
+    check-cast p1, Lst9;
 
-    invoke-interface {v2, v4, v5, v1}, Landroid/text/Spanned;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
+    iget-wide v3, p0, Lst9;->a:J
 
-    move-result-object v1
+    iget-wide v5, p1, Lst9;->a:J
 
-    check-cast v1, [Lcc8;
+    cmp-long v1, v3, v5
 
-    if-eqz v1, :cond_4
+    if-eqz v1, :cond_2
 
-    array-length v6, v1
-
-    if-nez v6, :cond_2
-
-    goto :goto_1
+    return v2
 
     :cond_2
-    array-length v6, v1
+    iget-object v1, p0, Lst9;->b:Ljava/lang/CharSequence;
 
-    const/4 v7, 0x0
+    iget-object v3, p1, Lst9;->b:Ljava/lang/CharSequence;
 
-    :goto_0
-    if-ge v7, v6, :cond_5
+    invoke-static {v1, v3}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    aget-object v8, v1, v7
+    move-result v1
 
-    invoke-interface {v2, v8}, Landroid/text/Spanned;->getSpanStart(Ljava/lang/Object;)I
+    if-nez v1, :cond_3
 
-    move-result v9
-
-    invoke-interface {v2, v8}, Landroid/text/Spanned;->getSpanEnd(Ljava/lang/Object;)I
-
-    move-result v10
-
-    if-ne v9, v4, :cond_3
-
-    if-ne v10, v5, :cond_3
-
-    invoke-interface {v2, v8}, Landroid/text/Spannable;->removeSpan(Ljava/lang/Object;)V
-
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Lkme;->n(Landroid/content/Context;)Lpc3;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lpc3;->j()Lzlb;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Lzlb;->getText()Lrfg;
-
-    move-result-object p1
-
-    iget v6, p1, Lrfg;->j:I
-
-    const/4 v7, 0x0
-
-    const/16 v8, 0x20
-
-    invoke-static/range {v2 .. v8}, Ly6j;->e(Landroid/text/Spannable;Ljava/lang/String;IIILs82;I)V
-
-    goto :goto_2
+    return v2
 
     :cond_3
-    add-int/lit8 v7, v7, 0x1
+    iget-object v1, p0, Lst9;->c:Lyt9;
 
-    goto :goto_0
+    iget-object v3, p1, Lst9;->c:Lyt9;
+
+    invoke-static {v1, v3}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    return v2
 
     :cond_4
-    :goto_1
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    iget-boolean v1, p0, Lst9;->d:Z
 
-    move-result-object p1
+    iget-boolean v3, p1, Lst9;->d:Z
 
-    invoke-virtual {v0, p1}, Lkme;->n(Landroid/content/Context;)Lpc3;
+    if-eq v1, v3, :cond_5
 
-    move-result-object p1
-
-    invoke-virtual {p1}, Lpc3;->j()Lzlb;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Lzlb;->getText()Lrfg;
-
-    move-result-object p1
-
-    iget v6, p1, Lrfg;->j:I
-
-    const/4 v7, 0x0
-
-    const/16 v8, 0x20
-
-    invoke-static/range {v2 .. v8}, Ly6j;->e(Landroid/text/Spannable;Ljava/lang/String;IIILs82;I)V
+    return v2
 
     :cond_5
-    :goto_2
-    sget-object p1, Lb3h;->a:Lb3h;
+    iget-boolean v1, p0, Lst9;->e:Z
 
-    return-object p1
+    iget-boolean p1, p1, Lst9;->e:Z
+
+    if-eq v1, p1, :cond_6
+
+    return v2
+
+    :cond_6
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-wide v0, p0, Lst9;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lst9;->b:Ljava/lang/CharSequence;
+
+    invoke-static {v0, v1, v2}, Lo16;->e(IILjava/lang/CharSequence;)I
+
+    move-result v0
+
+    iget-object v2, p0, Lst9;->c:Lyt9;
+
+    invoke-virtual {v2}, Lyt9;->hashCode()I
+
+    move-result v2
+
+    add-int/2addr v2, v0
+
+    mul-int/2addr v2, v1
+
+    iget-boolean v0, p0, Lst9;->d:Z
+
+    invoke-static {v2, v1, v0}, Leni;->b(IIZ)I
+
+    move-result v0
+
+    iget-boolean v1, p0, Lst9;->e:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "EditMessageData(messageId="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v1, p0, Lst9;->a:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", messageText="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lst9;->b:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", quoteData="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lst9;->c:Lyt9;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", hasMediaAttaches="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lst9;->d:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", shouldInsertOriginalText="
+
+    const-string v2, ")"
+
+    iget-boolean v3, p0, Lst9;->e:Z
+
+    invoke-static {v0, v1, v3, v2}, Ldna;->g(Ljava/lang/StringBuilder;Ljava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -1,22 +1,53 @@
-.class public abstract La62;
+.class public final La62;
 .super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final b:Ljava/lang/Object;
+.field public b:I
+
+.field public c:J
+
+.field public d:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public synthetic constructor <init>(I)V
+    .locals 0
 
-    const/4 v0, 0x0
+    .line 1
+    iput p1, p0, La62;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public constructor <init>(IJ)V
+    .locals 1
+
+    const/4 v0, 0x2
+
+    iput v0, p0, La62;->a:I
+
+    .line 25
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 26
+    iput p1, p0, La62;->b:I
+
+    .line 27
+    iput-wide p2, p0, La62;->c:J
+
+    return-void
+.end method
+
+.method public constructor <init>(IJLjava/lang/Long;)V
+    .locals 1
+
+    const/4 v0, 0x4
 
     iput v0, p0, La62;->a:I
 
@@ -24,271 +55,276 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 3
-    new-instance v0, Lo2b;
+    iput p1, p0, La62;->b:I
 
-    const/4 v1, 0x1
+    .line 4
+    iput-wide p2, p0, La62;->c:J
 
-    invoke-direct {v0, v1}, Lo2b;-><init>(I)V
-
-    iput-object v0, p0, La62;->b:Ljava/lang/Object;
+    .line 5
+    iput-object p4, p0, La62;->d:Ljava/lang/Object;
 
     return-void
 .end method
 
-.method public constructor <init>(Lfxb;)V
+.method public constructor <init>(ILjava/net/URL;J)V
     .locals 1
 
     const/4 v0, 0x1
 
     iput v0, p0, La62;->a:I
 
-    .line 1
+    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, La62;->b:Ljava/lang/Object;
+    .line 22
+    iput p1, p0, La62;->b:I
+
+    .line 23
+    iput-object p2, p0, La62;->d:Ljava/lang/Object;
+
+    .line 24
+    iput-wide p3, p0, La62;->c:J
 
     return-void
 .end method
 
-.method public static b(Ltii;Ljava/lang/String;)V
-    .locals 6
+.method public constructor <init>(JLjava/lang/Exception;)V
+    .locals 2
 
-    iget-object v0, p0, Ltii;->c:Landroidx/work/impl/WorkDatabase;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, Landroidx/work/impl/WorkDatabase;->D()Ljji;
+    iput v0, p0, La62;->a:I
 
-    move-result-object v1
+    .line 6
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {v0}, Landroidx/work/impl/WorkDatabase;->y()Ltx4;
+    .line 7
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    move-result-object v0
+    move-result-wide v0
 
-    new-instance v2, Ljava/util/LinkedList;
+    sub-long/2addr v0, p1
 
-    invoke-direct {v2}, Ljava/util/LinkedList;-><init>()V
+    iput-wide v0, p0, La62;->c:J
 
-    invoke-virtual {v2, p1}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
+    .line 8
+    instance-of p1, p3, Landroidx/camera/core/impl/CameraValidator$CameraIdListIncorrectException;
 
-    :goto_0
-    invoke-virtual {v2}, Ljava/util/AbstractCollection;->isEmpty()Z
+    const/4 p2, 0x2
 
-    move-result v3
+    if-eqz p1, :cond_0
 
-    if-nez v3, :cond_1
+    .line 9
+    iput p2, p0, La62;->b:I
 
-    invoke-virtual {v2}, Ljava/util/LinkedList;->remove()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/lang/String;
-
-    invoke-virtual {v1, v3}, Ljji;->n(Ljava/lang/String;)Lnii;
-
-    move-result-object v4
-
-    sget-object v5, Lnii;->c:Lnii;
-
-    if-eq v4, v5, :cond_0
-
-    sget-object v5, Lnii;->d:Lnii;
-
-    if-eq v4, v5, :cond_0
-
-    sget-object v4, Lnii;->X:Lnii;
-
-    invoke-virtual {v1, v4, v3}, Ljji;->w(Lnii;Ljava/lang/String;)V
-
-    :cond_0
-    invoke-virtual {v0, v3}, Ltx4;->k(Ljava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ljava/util/LinkedList;->addAll(Ljava/util/Collection;)Z
+    .line 10
+    iput-object p3, p0, La62;->d:Ljava/lang/Object;
 
     goto :goto_0
 
+    .line 11
+    :cond_0
+    instance-of p1, p3, Landroidx/camera/core/InitializationException;
+
+    const/4 v0, 0x0
+
+    if-eqz p1, :cond_4
+
+    .line 12
+    invoke-virtual {p3}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_1
+
+    move-object p3, p1
+
+    .line 13
     :cond_1
-    iget-object v0, p0, Ltii;->f:Lwic;
+    iput-object p3, p0, La62;->d:Ljava/lang/Object;
 
-    const-string v1, "Processor cancelling "
+    .line 14
+    instance-of p1, p3, Landroidx/camera/core/CameraUnavailableException;
 
-    iget-object v2, v0, Lwic;->w0:Ljava/lang/Object;
+    if-eqz p1, :cond_2
 
-    monitor-enter v2
+    .line 15
+    iput p2, p0, La62;->b:I
 
-    :try_start_0
-    invoke-static {}, Lkgi;->g()Lkgi;
+    goto :goto_0
 
-    move-result-object v3
-
-    sget-object v4, Lwic;->x0:Ljava/lang/String;
-
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    invoke-direct {v5, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v5, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v3, v4, v1}, Lkgi;->c(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v1, v0, Lwic;->u0:Ljava/util/HashSet;
-
-    invoke-virtual {v1, p1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    iget-object v1, v0, Lwic;->X:Ljava/util/HashMap;
-
-    invoke-virtual {v1, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lvji;
-
-    if-eqz v1, :cond_2
-
-    const/4 v3, 0x1
-
-    goto :goto_1
-
+    .line 16
     :cond_2
-    const/4 v3, 0x0
+    instance-of p1, p3, Ljava/lang/IllegalArgumentException;
 
-    :goto_1
-    if-nez v1, :cond_3
+    if-eqz p1, :cond_3
 
-    iget-object v1, v0, Lwic;->Y:Ljava/util/HashMap;
+    const/4 p1, 0x1
 
-    invoke-virtual {v1, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 17
+    iput p1, p0, La62;->b:I
 
-    move-result-object v1
+    goto :goto_0
 
-    check-cast v1, Lvji;
-
-    goto :goto_2
-
-    :catchall_0
-    move-exception p0
-
-    goto :goto_4
-
+    .line 18
     :cond_3
-    :goto_2
-    if-eqz v1, :cond_4
+    iput v0, p0, La62;->b:I
 
-    iget-object v4, v0, Lwic;->Z:Ljava/util/HashMap;
+    goto :goto_0
 
-    invoke-virtual {v4, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
+    .line 19
     :cond_4
-    monitor-exit v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    iput v0, p0, La62;->b:I
 
-    invoke-static {p1, v1}, Lwic;->c(Ljava/lang/String;Lvji;)Z
+    .line 20
+    iput-object p3, p0, La62;->d:Ljava/lang/Object;
 
-    if-eqz v3, :cond_5
-
-    invoke-virtual {v0}, Lwic;->h()V
-
-    :cond_5
-    iget-object p0, p0, Ltii;->e:Ljava/util/List;
-
-    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :goto_3
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_6
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lqbe;
-
-    invoke-interface {v0, p1}, Lqbe;->c(Ljava/lang/String;)V
-
-    goto :goto_3
-
-    :cond_6
+    :goto_0
     return-void
-
-    :goto_4
-    :try_start_1
-    monitor-exit v2
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p0
 .end method
 
 
 # virtual methods
-.method public abstract a(Lorg/webrtc/PeerConnection;)V
+.method public a()I
+    .locals 4
+
+    iget-object v0, p0, La62;->d:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/Date;
+
+    invoke-virtual {v0}, Ljava/util/Date;->getTime()J
+
+    move-result-wide v0
+
+    iget v2, p0, La62;->b:I
+
+    mul-int/lit16 v2, v2, 0x3e8
+
+    int-to-long v2, v2
+
+    add-long/2addr v0, v2
+
+    new-instance v2, Ljava/util/Date;
+
+    invoke-direct {v2}, Ljava/util/Date;-><init>()V
+
+    invoke-virtual {v2}, Ljava/util/Date;->getTime()J
+
+    move-result-wide v2
+
+    sub-long/2addr v0, v2
+
+    long-to-int v0, v0
+
+    div-int/lit16 v0, v0, 0x3e8
+
+    const/4 v1, 0x0
+
+    invoke-static {v1, v0}, Ljava/lang/Integer;->max(II)I
+
+    move-result v0
+
+    return v0
 .end method
 
-.method public abstract c()V
-.end method
-
-.method public final run()V
-    .locals 3
+.method public toString()Ljava/lang/String;
+    .locals 6
 
     iget v0, p0, La62;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, La62;->b:Ljava/lang/Object;
-
-    check-cast v0, Lfxb;
-
-    invoke-virtual {v0}, Lfxb;->H()Lorg/webrtc/PeerConnection;
+    invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0, v0}, La62;->a(Lorg/webrtc/PeerConnection;)V
-
-    :cond_0
-    return-void
+    return-object v0
 
     :pswitch_0
-    iget-object v0, p0, La62;->b:Ljava/lang/Object;
+    iget v0, p0, La62;->b:I
 
-    check-cast v0, Lo2b;
+    iget-wide v1, p0, La62;->c:J
 
-    :try_start_0
-    invoke-virtual {p0}, La62;->c()V
+    iget-object v3, p0, La62;->d:Ljava/lang/Object;
 
-    sget-object v1, Lypb;->Q:Lxpb;
+    check-cast v3, Ljava/lang/Long;
 
-    invoke-virtual {v0, v1}, Lo2b;->u(Lxfj;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    const-string v4, "itemIndex: "
+
+    const-string v5, ", position: "
+
+    invoke-static {v0, v1, v2, v4, v5}, Lj64;->j(IJLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, " real: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_1
+    iget-object v0, p0, La62;->d:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/Date;
+
+    iget v1, p0, La62;->b:I
+
+    invoke-virtual {p0}, La62;->a()I
+
+    move-result v2
+
+    if-lez v2, :cond_0
+
+    invoke-virtual {p0}, La62;->a()I
+
+    move-result v2
+
+    const-string v3, " (still valid for "
+
+    const-string v4, " seconds)"
+
+    invoke-static {v2, v3, v4}, Lau1;->g(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
 
     goto :goto_0
 
-    :catchall_0
-    move-exception v1
-
-    new-instance v2, Lvpb;
-
-    invoke-direct {v2, v1}, Lvpb;-><init>(Ljava/lang/Throwable;)V
-
-    invoke-virtual {v0, v2}, Lo2b;->u(Lxfj;)V
+    :cond_0
+    const-string v2, " (not valid anymore)"
 
     :goto_0
-    return-void
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "Ticket, creation date = "
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, ", ticket lifetime = "
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 
     :pswitch_data_0
-    .packed-switch 0x0
+    .packed-switch 0x3
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

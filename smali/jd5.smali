@@ -2,30 +2,305 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/AutoCloseable;
+
+# static fields
+.field public static final c:Ljd5;
+
+.field public static final d:Ljd5;
+
+.field public static final e:Ljd5;
+
+.field public static final f:Ljd5;
+
+.field public static final g:Ljd5;
+
+.field public static final h:Ljd5;
+
+.field public static final i:Ljd5;
 
 
 # instance fields
-.field public a:Landroid/media/metrics/EditingSession;
+.field public final a:I
 
-.field public b:Z
+.field public final b:I
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 4
+
+    new-instance v0, Ljd5;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1, v1}, Ljd5;-><init>(II)V
+
+    sput-object v0, Ljd5;->c:Ljd5;
+
+    new-instance v0, Ljd5;
+
+    const/4 v1, 0x1
+
+    const/16 v2, 0x8
+
+    invoke-direct {v0, v1, v2}, Ljd5;-><init>(II)V
+
+    sput-object v0, Ljd5;->d:Ljd5;
+
+    new-instance v0, Ljd5;
+
+    const/4 v1, 0x3
+
+    const/16 v3, 0xa
+
+    invoke-direct {v0, v1, v3}, Ljd5;-><init>(II)V
+
+    sput-object v0, Ljd5;->e:Ljd5;
+
+    new-instance v0, Ljd5;
+
+    const/4 v1, 0x4
+
+    invoke-direct {v0, v1, v3}, Ljd5;-><init>(II)V
+
+    sput-object v0, Ljd5;->f:Ljd5;
+
+    new-instance v0, Ljd5;
+
+    const/4 v1, 0x5
+
+    invoke-direct {v0, v1, v3}, Ljd5;-><init>(II)V
+
+    sput-object v0, Ljd5;->g:Ljd5;
+
+    new-instance v0, Ljd5;
+
+    const/4 v1, 0x6
+
+    invoke-direct {v0, v1, v3}, Ljd5;-><init>(II)V
+
+    sput-object v0, Ljd5;->h:Ljd5;
+
+    new-instance v0, Ljd5;
+
+    invoke-direct {v0, v1, v2}, Ljd5;-><init>(II)V
+
+    sput-object v0, Ljd5;->i:Ljd5;
+
+    return-void
+.end method
+
+.method public constructor <init>(II)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Ljd5;->a:I
+
+    iput p2, p0, Ljd5;->b:I
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final close()V
-    .locals 1
+.method public final a()Z
+    .locals 3
 
-    iget-object v0, p0, Ljd5;->a:Landroid/media/metrics/EditingSession;
+    invoke-virtual {p0}, Ljd5;->b()Z
+
+    move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-static {v0}, Lz4;->x(Landroid/media/metrics/EditingSession;)V
+    iget v0, p0, Ljd5;->a:I
 
-    const/4 v0, 0x0
+    const/4 v1, 0x1
 
-    iput-object v0, p0, Ljd5;->a:Landroid/media/metrics/EditingSession;
+    if-eq v0, v1, :cond_0
+
+    iget v0, p0, Ljd5;->b:I
+
+    const/16 v2, 0xa
+
+    if-ne v0, v2, :cond_0
+
+    return v1
 
     :cond_0
-    return-void
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final b()Z
+    .locals 2
+
+    iget v0, p0, Ljd5;->a:I
+
+    if-eqz v0, :cond_0
+
+    const/4 v1, 0x2
+
+    if-eq v0, v1, :cond_0
+
+    iget v0, p0, Ljd5;->b:I
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p1, p0, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Ljd5;
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_1
+
+    check-cast p1, Ljd5;
+
+    iget v1, p0, Ljd5;->a:I
+
+    iget v3, p1, Ljd5;->a:I
+
+    if-ne v1, v3, :cond_1
+
+    iget v1, p0, Ljd5;->b:I
+
+    iget p1, p1, Ljd5;->b:I
+
+    if-ne v1, p1, :cond_1
+
+    return v0
+
+    :cond_1
+    return v2
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget v0, p0, Ljd5;->a:I
+
+    const v1, 0xf4243
+
+    xor-int/2addr v0, v1
+
+    mul-int/2addr v0, v1
+
+    iget v1, p0, Ljd5;->b:I
+
+    xor-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "DynamicRange@"
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
+
+    move-result v1
+
+    invoke-static {v1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "{encoding="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Ljd5;->a:I
+
+    packed-switch v1, :pswitch_data_0
+
+    const-string v1, "<Unknown>"
+
+    goto :goto_0
+
+    :pswitch_0
+    const-string v1, "DOLBY_VISION"
+
+    goto :goto_0
+
+    :pswitch_1
+    const-string v1, "HDR10_PLUS"
+
+    goto :goto_0
+
+    :pswitch_2
+    const-string v1, "HDR10"
+
+    goto :goto_0
+
+    :pswitch_3
+    const-string v1, "HLG"
+
+    goto :goto_0
+
+    :pswitch_4
+    const-string v1, "HDR_UNSPECIFIED"
+
+    goto :goto_0
+
+    :pswitch_5
+    const-string v1, "SDR"
+
+    goto :goto_0
+
+    :pswitch_6
+    const-string v1, "UNSPECIFIED"
+
+    :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", bitDepth="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Ljd5;->b:I
+
+    const-string v2, "}"
+
+    invoke-static {v0, v1, v2}, Ltx8;->m(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

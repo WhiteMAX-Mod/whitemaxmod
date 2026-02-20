@@ -1,88 +1,112 @@
 .class public final Lrsg;
-.super Ljava/lang/Object;
+.super Lfsf;
 .source "SourceFile"
-
-# interfaces
-.implements Lob4;
 
 
 # static fields
-.field public static final b:Lmif;
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lrsg;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final a:Lp84;
+.field public final a:J
+
+.field public final b:J
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 2
 
-    new-instance v0, Lmif;
+    new-instance v0, Ll7f;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/16 v1, 0x16
 
-    sput-object v0, Lrsg;->b:Lmif;
+    invoke-direct {v0, v1}, Ll7f;-><init>(I)V
+
+    sput-object v0, Lrsg;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-.method public constructor <init>(Lp84;)V
+.method public constructor <init>(JJ)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lrsg;->a:Lp84;
+    iput-wide p1, p0, Lrsg;->a:J
+
+    iput-wide p3, p0, Lrsg;->b:J
 
     return-void
 .end method
 
+.method public static a(JLmjh;)J
+    .locals 6
+
+    invoke-virtual {p2}, Lmjh;->s()I
+
+    move-result v0
+
+    int-to-long v0, v0
+
+    const-wide/16 v2, 0x80
+
+    and-long/2addr v2, v0
+
+    const-wide/16 v4, 0x0
+
+    cmp-long v2, v2, v4
+
+    if-eqz v2, :cond_0
+
+    const-wide/16 v2, 0x1
+
+    and-long/2addr v0, v2
+
+    const/16 v2, 0x20
+
+    shl-long/2addr v0, v2
+
+    invoke-virtual {p2}, Lmjh;->t()J
+
+    move-result-wide v2
+
+    or-long/2addr v0, v2
+
+    add-long/2addr v0, p0
+
+    const-wide p0, 0x1ffffffffL
+
+    and-long/2addr p0, v0
+
+    return-wide p0
+
+    :cond_0
+    const-wide p0, -0x7fffffffffffffffL    # -4.9E-324
+
+    return-wide p0
+.end method
+
 
 # virtual methods
-.method public final fold(Ljava/lang/Object;Lbr6;)Ljava/lang/Object;
-    .locals 0
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 2
 
-    invoke-interface {p2, p1, p0}, Lbr6;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iget-wide v0, p0, Lrsg;->a:J
 
-    move-result-object p1
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    return-object p1
-.end method
+    iget-wide v0, p0, Lrsg;->b:J
 
-.method public final get(Lpb4;)Lob4;
-    .locals 0
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    invoke-static {p0, p1}, Lukj;->a(Lob4;Lpb4;)Lob4;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final getKey()Lpb4;
-    .locals 1
-
-    sget-object v0, Lrsg;->b:Lmif;
-
-    return-object v0
-.end method
-
-.method public final minusKey(Lpb4;)Lqb4;
-    .locals 0
-
-    invoke-static {p0, p1}, Lukj;->b(Lob4;Lpb4;)Lqb4;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final plus(Lqb4;)Lqb4;
-    .locals 0
-
-    invoke-static {p0, p1}, Ltkj;->a(Lqb4;Lqb4;)Lqb4;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

@@ -1,92 +1,230 @@
-.class public final synthetic Lkr1;
+.class public final Lkr1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/view/View$OnClickListener;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lmr1;
-
 
 # direct methods
-.method public synthetic constructor <init>(Lmr1;I)V
-    .locals 0
+.method public static final a(I)Ljava/lang/String;
+    .locals 6
 
-    iput p2, p0, Lkr1;->a:I
+    sget-object v0, Lone/me/calls/impl/service/CallServiceImpl;->v0:Lkr1;
 
-    iput-object p1, p0, Lkr1;->b:Lmr1;
+    sget v0, Luye;->a:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    if-nez p0, :cond_0
 
-    return-void
-.end method
+    const/4 p0, 0x0
 
+    invoke-static {p0}, Lkr1;->b(I)Ljava/lang/String;
 
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 0
+    move-result-object p0
 
-    iget p1, p0, Lkr1;->a:I
-
-    packed-switch p1, :pswitch_data_0
-
-    iget-object p1, p0, Lkr1;->b:Lmr1;
-
-    iget-object p1, p1, Lmr1;->G0:Llr1;
-
-    if-eqz p1, :cond_0
-
-    invoke-interface {p1}, Llr1;->h()V
+    return-object p0
 
     :cond_0
-    return-void
+    const/4 v0, -0x1
 
-    :pswitch_0
-    iget-object p1, p0, Lkr1;->b:Lmr1;
+    if-ne p0, v0, :cond_1
 
-    iget-object p1, p1, Lmr1;->G0:Llr1;
+    sget p0, Luye;->f:I
 
-    if-eqz p1, :cond_1
+    invoke-static {p0}, Lkr1;->b(I)Ljava/lang/String;
 
-    invoke-interface {p1}, Llr1;->d()V
+    move-result-object p0
+
+    return-object p0
 
     :cond_1
-    return-void
+    new-instance v0, Ljava/util/ArrayList;
 
-    :pswitch_1
-    iget-object p1, p0, Lkr1;->b:Lmr1;
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iget-object p1, p1, Lmr1;->G0:Llr1;
+    sget-object v1, Lone/me/calls/impl/service/CallServiceImpl;->x0:Ljava/util/Set;
 
-    if-eqz p1, :cond_2
+    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
-    invoke-interface {p1}, Llr1;->e()V
+    move-result-object v1
 
     :cond_2
-    return-void
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    :pswitch_2
-    iget-object p1, p0, Lkr1;->b:Lmr1;
+    move-result v2
 
-    iget-object p1, p1, Lmr1;->G0:Llr1;
+    if-eqz v2, :cond_3
 
-    if-eqz p1, :cond_3
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    invoke-interface {p1}, Llr1;->f()V
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Number;
+
+    invoke-virtual {v2}, Ljava/lang/Number;->intValue()I
+
+    move-result v2
+
+    sget v3, Luye;->f:I
+
+    if-eq v2, v3, :cond_2
+
+    and-int v3, p0, v2
+
+    if-eqz v3, :cond_2
+
+    invoke-static {v2}, Lkr1;->b(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
 
     :cond_3
+    const/4 v4, 0x0
+
+    const/16 v5, 0x3e
+
+    const-string v1, "|"
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    invoke-static/range {v0 .. v5}, Lek3;->K(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lks6;I)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static b(I)Ljava/lang/String;
+    .locals 2
+
+    sget v0, Luye;->b:I
+
+    if-ne p0, v0, :cond_0
+
+    const-string p0, "mediaPlayback"
+
+    return-object p0
+
+    :cond_0
+    sget v0, Luye;->f:I
+
+    if-ne p0, v0, :cond_1
+
+    const-string p0, "manifest"
+
+    return-object p0
+
+    :cond_1
+    sget v0, Luye;->c:I
+
+    if-ne p0, v0, :cond_2
+
+    const-string p0, "mediaProjection"
+
+    return-object p0
+
+    :cond_2
+    sget v0, Luye;->e:I
+
+    if-ne p0, v0, :cond_3
+
+    const-string p0, "microphone"
+
+    return-object p0
+
+    :cond_3
+    sget v0, Luye;->d:I
+
+    if-ne p0, v0, :cond_4
+
+    const-string p0, "camera"
+
+    return-object p0
+
+    :cond_4
+    if-nez p0, :cond_5
+
+    const-string p0, "none"
+
+    return-object p0
+
+    :cond_5
+    const-string v0, "unknown("
+
+    const-string v1, ")"
+
+    invoke-static {p0, v0, v1}, Lau1;->g(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static c()Landroid/os/Handler;
+    .locals 2
+
+    sget-object v0, Lone/me/calls/impl/service/CallServiceImpl;->w0:Landroid/os/Handler;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Landroid/os/Handler;
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    sput-object v0, Lone/me/calls/impl/service/CallServiceImpl;->w0:Landroid/os/Handler;
+
+    :cond_0
+    sget-object v0, Lone/me/calls/impl/service/CallServiceImpl;->w0:Landroid/os/Handler;
+
+    if-eqz v0, :cond_1
+
+    return-object v0
+
+    :cond_1
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "Required value was null."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public static d(Landroid/content/Context;)V
+    .locals 4
+
+    new-instance v0, Landroid/content/Intent;
+
+    const-class v1, Lone/me/calls/impl/service/CallServiceImpl;
+
+    invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    const-string v1, "ACTION"
+
+    const/4 v2, 0x3
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    move-result-object v0
+
+    invoke-static {}, Lkr1;->c()Landroid/os/Handler;
+
+    move-result-object v1
+
+    new-instance v2, Ljf;
+
+    const/16 v3, 0x13
+
+    invoke-direct {v2, p0, v3, v0}, Ljf;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

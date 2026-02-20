@@ -1,52 +1,39 @@
 .class public final Lf6a;
-.super Lo84;
+.super Lao4;
+.source "SourceFile"
 
 
-# instance fields
-.field public final synthetic X:Ldr7;
+# static fields
+.field public static final b:Lf6a;
 
-.field public Y:Lf76;
-
-.field public Z:I
-
-.field public synthetic d:Ljava/lang/Object;
-
-.field public o:I
+.field public static final c:Lwn4;
 
 
 # direct methods
-.method public constructor <init>(Ldr7;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput-object p1, p0, Lf6a;->X:Ldr7;
+    new-instance v0, Lf6a;
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0}, Lao4;-><init>()V
+
+    sput-object v0, Lf6a;->b:Lf6a;
+
+    const/4 v1, 0x0
+
+    new-array v1, v1, [Ljava/lang/String;
+
+    const/4 v2, 0x0
+
+    const/16 v3, 0xe
+
+    const-string v4, ":settings/messages"
+
+    invoke-static {v0, v4, v1, v2, v3}, Lao4;->c(Lao4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lwn4;
+
+    move-result-object v0
+
+    sput-object v0, Lf6a;->c:Lwn4;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Lf6a;->d:Ljava/lang/Object;
-
-    iget p1, p0, Lf6a;->o:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lf6a;->o:I
-
-    iget-object p1, p0, Lf6a;->X:Ldr7;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Ldr7;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
 .end method

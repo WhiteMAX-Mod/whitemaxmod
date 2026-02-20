@@ -3,26 +3,30 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lby3;
+.implements Lis6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final synthetic b:Lru/ok/android/externcalls/sdk/ConversationImpl;
 
-.field public final synthetic c:Z
+.field public final synthetic c:Lru/ok/android/externcalls/sdk/id/mapping/MappingContext;
+
+.field public final synthetic d:Ljava/io/Serializable;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;Z)V
+.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/ConversationImpl;Ljava/io/Serializable;Lru/ok/android/externcalls/sdk/id/mapping/MappingContext;I)V
     .locals 0
 
-    iput p1, p0, Lru/ok/android/externcalls/sdk/d;->a:I
+    iput p4, p0, Lru/ok/android/externcalls/sdk/d;->a:I
 
-    iput-object p2, p0, Lru/ok/android/externcalls/sdk/d;->b:Ljava/lang/Object;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/d;->b:Lru/ok/android/externcalls/sdk/ConversationImpl;
 
-    iput-boolean p3, p0, Lru/ok/android/externcalls/sdk/d;->c:Z
+    iput-object p2, p0, Lru/ok/android/externcalls/sdk/d;->d:Ljava/io/Serializable;
+
+    iput-object p3, p0, Lru/ok/android/externcalls/sdk/d;->c:Lru/ok/android/externcalls/sdk/id/mapping/MappingContext;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -31,56 +35,46 @@
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 2
+.method public final invoke()Ljava/lang/Object;
+    .locals 3
 
     iget v0, p0, Lru/ok/android/externcalls/sdk/d;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/d;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/d;->d:Ljava/io/Serializable;
 
-    check-cast v0, Lqbf;
+    check-cast v0, Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
-    iget-boolean v1, p0, Lru/ok/android/externcalls/sdk/d;->c:Z
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/d;->c:Lru/ok/android/externcalls/sdk/id/mapping/MappingContext;
 
-    check-cast p1, Lsk1;
+    iget-object v2, p0, Lru/ok/android/externcalls/sdk/d;->b:Lru/ok/android/externcalls/sdk/ConversationImpl;
 
-    invoke-static {v0, v1, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->b(Lqbf;ZLsk1;)V
+    invoke-static {v2, v0, v1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->C(Lru/ok/android/externcalls/sdk/ConversationImpl;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lru/ok/android/externcalls/sdk/id/mapping/MappingContext;)Ljava/util/Map;
 
-    return-void
+    move-result-object v0
+
+    return-object v0
 
     :pswitch_0
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/d;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/d;->d:Ljava/io/Serializable;
 
-    check-cast v0, Lru/ok/android/externcalls/sdk/ConversationImpl;
+    check-cast v0, Ljava/util/ArrayList;
 
-    iget-boolean v1, p0, Lru/ok/android/externcalls/sdk/d;->c:Z
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/d;->c:Lru/ok/android/externcalls/sdk/id/mapping/MappingContext;
 
-    check-cast p1, Lsk1;
+    iget-object v2, p0, Lru/ok/android/externcalls/sdk/d;->b:Lru/ok/android/externcalls/sdk/ConversationImpl;
 
-    invoke-static {v0, v1, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->f(Lru/ok/android/externcalls/sdk/ConversationImpl;ZLsk1;)V
+    invoke-static {v2, v0, v1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->s(Lru/ok/android/externcalls/sdk/ConversationImpl;Ljava/util/ArrayList;Lru/ok/android/externcalls/sdk/id/mapping/MappingContext;)Ljava/util/Map;
 
-    return-void
+    move-result-object v0
 
-    :pswitch_1
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/d;->b:Ljava/lang/Object;
-
-    check-cast v0, Lru/ok/android/externcalls/sdk/ConversationImpl;
-
-    iget-boolean v1, p0, Lru/ok/android/externcalls/sdk/d;->c:Z
-
-    check-cast p1, Lsk1;
-
-    invoke-static {v0, v1, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->j(Lru/ok/android/externcalls/sdk/ConversationImpl;ZLsk1;)V
-
-    return-void
+    return-object v0
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

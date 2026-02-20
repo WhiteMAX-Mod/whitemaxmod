@@ -1,48 +1,48 @@
 .class public final Lezd;
-.super Lo84;
+.super Ljava/util/LinkedHashMap;
+.source "SourceFile"
 
 
 # instance fields
-.field public final synthetic X:Lg4a;
-
-.field public synthetic d:Ljava/lang/Object;
-
-.field public o:I
+.field public final synthetic a:Lmk;
 
 
 # direct methods
-.method public constructor <init>(Lg4a;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Lmk;I)V
+    .locals 1
 
-    iput-object p1, p0, Lezd;->X:Lg4a;
+    iput-object p1, p0, Lezd;->a:Lmk;
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    const/high16 p1, 0x3f400000    # 0.75f
+
+    const/4 v0, 0x1
+
+    invoke-direct {p0, p2, p1, v0}, Ljava/util/LinkedHashMap;-><init>(IFZ)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final removeEldestEntry(Ljava/util/Map$Entry;)Z
     .locals 1
 
-    iput-object p1, p0, Lezd;->d:Ljava/lang/Object;
+    invoke-virtual {p0}, Ljava/util/AbstractMap;->size()I
 
-    iget p1, p0, Lezd;->o:I
+    move-result p1
 
-    const/high16 v0, -0x80000000
+    iget-object v0, p0, Lezd;->a:Lmk;
 
-    or-int/2addr p1, v0
+    iget v0, v0, Lmk;->b:I
 
-    iput p1, p0, Lezd;->o:I
+    if-le p1, v0, :cond_0
 
-    iget-object p1, p0, Lezd;->X:Lg4a;
+    const/4 p1, 0x1
 
-    const/4 v0, 0x0
+    return p1
 
-    invoke-virtual {p1, v0, p0}, Lg4a;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    :cond_0
+    const/4 p1, 0x0
 
-    move-result-object p1
-
-    return-object p1
+    return p1
 .end method

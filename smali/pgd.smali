@@ -3,38 +3,40 @@
 
 
 # static fields
-.field public static MediaRouteButton:[I = null
+.field public static action0:I = 0x7f0a008b
 
-.field public static MediaRouteButton_android_minHeight:I = 0x1
+.field public static action_divider:I = 0x7f0a0098
 
-.field public static MediaRouteButton_android_minWidth:I = 0x0
+.field public static cancel_action:I = 0x7f0a0223
 
-.field public static MediaRouteButton_externalRouteEnabledDrawable:I = 0x2
+.field public static chronometer:I = 0x7f0a02a1
 
-.field public static MediaRouteButton_externalRouteEnabledDrawableStatic:I = 0x3
+.field public static end_padder:I = 0x7f0a0323
 
-.field public static MediaRouteButton_mediaRouteButtonTint:I = 0x4
+.field public static icon:I = 0x7f0a03d2
 
+.field public static info:I = 0x7f0a03e1
 
-# direct methods
-.method public static constructor <clinit>()V
-    .locals 5
+.field public static line1:I = 0x7f0a0400
 
-    const v0, 0x7f0403a5
+.field public static line3:I = 0x7f0a0401
 
-    const v1, 0x7f040655
+.field public static media_actions:I = 0x7f0a0451
 
-    const v2, 0x101013f
+.field public static media_controller_compat_view_tag:I = 0x7f0a047a
 
-    const v3, 0x1010140
+.field public static notification_main_column:I = 0x7f0a05a1
 
-    const v4, 0x7f0403a4
+.field public static notification_main_column_container:I = 0x7f0a05a2
 
-    filled-new-array {v2, v3, v4, v0, v1}, [I
+.field public static right_side:I = 0x7f0a0a24
 
-    move-result-object v0
+.field public static status_bar_latest_event_content:I = 0x7f0a0bd9
 
-    sput-object v0, Lpgd;->MediaRouteButton:[I
+.field public static text:I = 0x7f0a0bf4
 
-    return-void
-.end method
+.field public static text2:I = 0x7f0a0bf5
+
+.field public static time:I = 0x7f0a0c12
+
+.field public static title:I = 0x7f0a0c13

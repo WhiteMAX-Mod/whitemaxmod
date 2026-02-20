@@ -1,53 +1,84 @@
 .class public final Lskh;
-.super Lo84;
+.super Lone/me/sdk/richvector/EnhancedVectorDrawable;
 .source "SourceFile"
+
+# interfaces
+.implements Ljqg;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:I
 
-.field public final synthetic Y:Lykh;
-
-.field public Z:I
-
-.field public d:Landroid/net/Uri;
-
-.field public o:Ltfa;
+.field public final b:Lrkh;
 
 
 # direct methods
-.method public constructor <init>(Lykh;Lo84;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;ILrkh;)V
+    .locals 1
 
-    iput-object p1, p0, Lskh;->Y:Lykh;
+    const/4 v0, 0x1
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    if-ne p2, v0, :cond_0
+
+    sget v0, Lice;->n2:I
+
+    goto :goto_0
+
+    :cond_0
+    sget v0, Lice;->o2:I
+
+    :goto_0
+    invoke-direct {p0, p1, v0}, Lone/me/sdk/richvector/EnhancedVectorDrawable;-><init>(Landroid/content/Context;I)V
+
+    iput p2, p0, Lskh;->a:I
+
+    iput-object p3, p0, Lskh;->b:Lrkh;
+
+    sget-object p2, Lfe3;->t0:Ltea;
+
+    invoke-virtual {p2, p1}, Ltea;->n(Landroid/content/Context;)Lfe3;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lfe3;->j()Llob;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Lskh;->onThemeChanged(Llob;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final onThemeChanged(Llob;)V
+    .locals 4
 
-    iput-object p1, p0, Lskh;->X:Ljava/lang/Object;
+    iget-object v0, p0, Lskh;->b:Lrkh;
 
-    iget p1, p0, Lskh;->Z:I
+    invoke-interface {v0, p1}, Lrkh;->i(Llob;)J
 
-    const/high16 v0, -0x80000000
+    move-result-wide v0
 
-    or-int/2addr p1, v0
+    const/16 p1, 0x20
 
-    iput p1, p0, Lskh;->Z:I
+    shr-long v2, v0, p1
 
-    iget-object p1, p0, Lskh;->Y:Lykh;
+    long-to-int p1, v2
 
-    const/4 v0, 0x0
+    const-string v2, "mark_path"
 
-    invoke-virtual {p1, v0, p0}, Lykh;->e(Landroid/net/Uri;Lo84;)Ljava/lang/Object;
+    invoke-static {p0, v2, p1}, Lgxj;->b(Likh;Ljava/lang/String;I)V
 
-    move-result-object p1
+    const-wide v2, 0xffffffffL
 
-    return-object p1
+    and-long/2addr v0, v2
+
+    long-to-int p1, v0
+
+    const-string v0, "background_path"
+
+    invoke-static {p0, v0, p1}, Lgxj;->b(Likh;Ljava/lang/String;I)V
+
+    return-void
 .end method

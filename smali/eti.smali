@@ -1,32 +1,27 @@
 .class public final Leti;
-.super Ljava/lang/Object;
+.super Lo0;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/io/Closeable;
 
 
 # static fields
-.field public static final a:Leti;
+.field public static final b:Lyp4;
+
+
+# instance fields
+.field public a:Z
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 2
 
-    new-instance v0, Leti;
+    new-instance v0, Lyp4;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/16 v1, 0x1c
 
-    sput-object v0, Leti;->a:Leti;
+    invoke-direct {v0, v1}, Lyp4;-><init>(I)V
 
-    return-void
-.end method
-
-
-# virtual methods
-.method public final close()V
-    .locals 0
+    sput-object v0, Leti;->b:Lyp4;
 
     return-void
 .end method

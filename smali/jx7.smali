@@ -1,96 +1,175 @@
-.class public final enum Ljx7;
-.super Ljava/lang/Enum;
+.class public final Ljx7;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/Iterator;
+.implements Ljava/util/concurrent/Executor;
 
 
 # static fields
-.field public static final enum a:Ljx7;
+.field public static volatile c:Ljx7;
 
-.field public static final synthetic b:[Ljx7;
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final b:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(I)V
     .locals 3
 
-    new-instance v0, Ljx7;
+    iput p1, p0, Ljx7;->a:I
 
-    const-string v1, "INSTANCE"
+    packed-switch p1, :pswitch_data_0
 
-    const/4 v2, 0x0
+    .line 3
+    :pswitch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    .line 4
+    new-instance p1, Ll50;
 
-    sput-object v0, Ljx7;->a:Ljx7;
+    const/4 v0, 0x3
 
-    filled-new-array {v0}, [Ljx7;
+    invoke-direct {p1, v0}, Ll50;-><init>(I)V
+
+    const/4 v0, 0x2
+
+    .line 5
+    invoke-static {v0, p1}, Ljava/util/concurrent/Executors;->newFixedThreadPool(ILjava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;
+
+    move-result-object p1
+
+    iput-object p1, p0, Ljx7;->b:Ljava/lang/Object;
+
+    return-void
+
+    .line 6
+    :pswitch_1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance p1, Lmaa;
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v0
 
-    sput-object v0, Ljx7;->b:[Ljx7;
+    const/4 v1, 0x3
+
+    const/4 v2, 0x0
+
+    .line 7
+    invoke-direct {p1, v0, v1, v2}, Lmaa;-><init>(Landroid/os/Looper;IZ)V
+
+    .line 8
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    .line 9
+    iput-object p1, p0, Ljx7;->b:Ljava/lang/Object;
+
+    return-void
+
+    .line 10
+    :pswitch_2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 11
+    new-instance p1, Landroid/os/Handler;
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v0
+
+    invoke-direct {p1, v0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    iput-object p1, p0, Ljx7;->b:Ljava/lang/Object;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_2
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
+.end method
+
+.method public constructor <init>(Ljava/util/concurrent/ExecutorService;)V
+    .locals 1
+
+    const/4 v0, 0x2
+
+    iput v0, p0, Ljx7;->a:I
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    iput-object p1, p0, Ljx7;->b:Ljava/lang/Object;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Ljx7;
-    .locals 1
-
-    const-class v0, Ljx7;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Ljx7;
-
-    return-object p0
-.end method
-
-.method public static values()[Ljx7;
-    .locals 1
-
-    sget-object v0, Ljx7;->b:[Ljx7;
-
-    invoke-virtual {v0}, [Ljx7;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Ljx7;
-
-    return-object v0
-.end method
-
 
 # virtual methods
-.method public final hasNext()Z
-    .locals 1
+.method public final execute(Ljava/lang/Runnable;)V
+    .locals 3
 
-    const/4 v0, 0x0
+    iget v0, p0, Ljx7;->a:I
 
-    return v0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final next()Ljava/lang/Object;
-    .locals 1
+    iget-object v0, p0, Ljx7;->b:Ljava/lang/Object;
 
-    new-instance v0, Ljava/util/NoSuchElementException;
+    check-cast v0, Lmaa;
 
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+    invoke-virtual {v0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    throw v0
-.end method
+    return-void
 
-.method public final remove()V
-    .locals 2
+    :pswitch_0
+    iget-object v0, p0, Ljx7;->b:Ljava/lang/Object;
 
-    new-instance v0, Ljava/lang/IllegalStateException;
+    check-cast v0, Ljava/util/concurrent/Executor;
 
-    const-string v1, "no calls to next() since the last call to remove()"
+    new-instance v1, Ljee;
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    const/4 v2, 0x0
 
-    throw v0
+    invoke-direct {v1, p1, v2}, Ljee;-><init>(Ljava/lang/Runnable;I)V
+
+    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Ljx7;->b:Ljava/lang/Object;
+
+    check-cast v0, Landroid/os/Handler;
+
+    invoke-virtual {v0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+
+    :pswitch_2
+    iget-object v0, p0, Ljx7;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/concurrent/ExecutorService;
+
+    invoke-interface {v0, p1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

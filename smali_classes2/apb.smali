@@ -1,3 +1,3 @@
-.class public final Lapb;
-.super Lie0;
+.class public interface abstract Lapb;
+.super Ljava/lang/Object;
 .source "SourceFile"

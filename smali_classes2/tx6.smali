@@ -1,94 +1,78 @@
 .class public final Ltx6;
-.super Ljava/lang/Object;
+.super Landroid/view/GestureDetector$SimpleOnGestureListener;
 .source "SourceFile"
-
-# interfaces
-.implements Lmj8;
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/atomic/AtomicBoolean;
+.field public final synthetic a:I
 
-.field public final synthetic b:Lg62;
+.field public final synthetic b:Lis6;
 
 
 # direct methods
-.method public constructor <init>(Lg62;)V
-    .locals 1
+.method public synthetic constructor <init>(ILis6;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p1, p0, Ltx6;->a:I
 
-    iput-object p1, p0, Ltx6;->b:Lg62;
+    iput-object p2, p0, Ltx6;->b:Lis6;
 
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p1, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
-
-    iput-object p1, p0, Ltx6;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
+    invoke-direct {p0}, Landroid/view/GestureDetector$SimpleOnGestureListener;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final F()V
-    .locals 4
+.method public final onDown(Landroid/view/MotionEvent;)Z
+    .locals 0
 
-    iget-object v0, p0, Ltx6;->b:Lg62;
+    iget p1, p0, Ltx6;->a:I
 
-    invoke-virtual {v0}, Lg62;->r()Z
+    packed-switch p1, :pswitch_data_0
 
-    move-result v1
+    const/4 p1, 0x1
 
-    if-eqz v1, :cond_0
+    return p1
 
-    const/4 v1, 0x0
+    :pswitch_0
+    const/4 p1, 0x1
 
-    const/4 v2, 0x1
+    return p1
 
-    iget-object v3, p0, Ltx6;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
+    nop
 
-    invoke-virtual {v3, v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lg62;->resumeWith(Ljava/lang/Object;)V
-
-    :cond_0
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final P(Lcj8;)V
-    .locals 4
+.method public final onSingleTapUp(Landroid/view/MotionEvent;)Z
+    .locals 0
 
-    iget-object v0, p0, Ltx6;->b:Lg62;
+    iget p1, p0, Ltx6;->a:I
 
-    invoke-virtual {v0}, Lg62;->r()Z
+    packed-switch p1, :pswitch_data_0
 
-    move-result v1
+    iget-object p1, p0, Ltx6;->b:Lis6;
 
-    if-eqz v1, :cond_0
+    invoke-interface {p1}, Lis6;->invoke()Ljava/lang/Object;
 
-    const/4 v1, 0x0
+    :goto_0
+    const/4 p1, 0x1
 
-    const/4 v2, 0x1
+    return p1
 
-    iget-object v3, p0, Ltx6;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
+    :pswitch_0
+    iget-object p1, p0, Ltx6;->b:Lis6;
 
-    invoke-virtual {v3, v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+    invoke-interface {p1}, Lis6;->invoke()Ljava/lang/Object;
 
-    move-result v1
+    goto :goto_0
 
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v0, p1}, Lg62;->resumeWith(Ljava/lang/Object;)V
-
-    :cond_0
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

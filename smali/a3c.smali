@@ -1,249 +1,629 @@
 .class public final La3c;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Lf3h;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;
+.field public final a:Lrf5;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final b:Lv92;
+
+.field public c:I
+
+.field public d:I
+
+.field public e:Lotg;
+
+.field public f:Z
+
+.field public g:Z
+
+.field public h:Z
+
+.field public i:I
+
+.field public j:I
+
+.field public k:Z
+
+.field public l:J
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;)V
-    .locals 0
+.method public constructor <init>(Lrf5;)V
+    .locals 4
 
-    iput-object p2, p0, La3c;->X:Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    iput-object p1, p0, La3c;->a:Lrf5;
 
-    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    new-instance p1, Lv92;
+
+    const/16 v0, 0xa
+
+    new-array v1, v0, [B
+
+    const/4 v2, 0x2
+
+    const/4 v3, 0x0
+
+    invoke-direct {p1, v1, v0, v2, v3}, Lv92;-><init>([BIIB)V
+
+    iput-object p1, p0, La3c;->b:Lv92;
+
+    const/4 p1, 0x0
+
+    iput p1, p0, La3c;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a()V
+    .locals 1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/4 v0, 0x0
 
-    invoke-virtual {p0, p1, p2}, La3c;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iput v0, p0, La3c;->c:I
 
-    move-result-object p1
+    iput v0, p0, La3c;->d:I
 
-    check-cast p1, La3c;
+    iput-boolean v0, p0, La3c;->h:Z
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    iget-object v0, p0, La3c;->a:Lrf5;
 
-    invoke-virtual {p1, p2}, La3c;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0}, Lrf5;->a()V
 
-    return-object p2
+    return-void
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public final b(ILmjh;)V
+    .locals 19
 
-    new-instance v0, La3c;
+    move-object/from16 v0, p0
 
-    iget-object v1, p0, La3c;->X:Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;
+    move-object/from16 v1, p2
 
-    invoke-direct {v0, p2, v1}, La3c;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;)V
+    iget-object v2, v0, La3c;->e:Lotg;
 
-    iput-object p1, v0, La3c;->o:Ljava/lang/Object;
+    invoke-static {v2}, Lvej;->f(Ljava/lang/Object;)V
 
-    return-object v0
-.end method
+    and-int/lit8 v2, p1, 0x1
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+    const-string v3, "PesReader"
 
-    iget-object v0, p0, La3c;->o:Ljava/lang/Object;
+    iget-object v4, v0, La3c;->a:Lrf5;
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    const/4 v5, -0x1
 
-    check-cast v0, Lzl5;
+    const/4 v6, 0x3
 
-    sget-object p1, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->o:[Lz28;
+    const/4 v7, 0x2
 
-    instance-of p1, v0, Lpl5;
+    const/4 v8, 0x0
 
-    iget-object v1, p0, La3c;->X:Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;
+    const/4 v9, 0x1
 
-    if-eqz p1, :cond_3
+    if-eqz v2, :cond_4
 
-    check-cast v0, Lpl5;
+    iget v2, v0, La3c;->c:I
 
-    iget-object p1, v0, Lpl5;->a:Lc49;
+    if-eqz v2, :cond_3
 
-    invoke-interface {p1}, Lc49;->w()Ljava/lang/String;
+    if-eq v2, v9, :cond_3
 
-    move-result-object p1
+    if-eq v2, v7, :cond_2
 
-    invoke-virtual {v1}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->z0()Ljava/lang/String;
+    if-ne v2, v6, :cond_1
+
+    iget v2, v0, La3c;->j:I
+
+    if-eq v2, v5, :cond_0
+
+    new-instance v10, Ljava/lang/StringBuilder;
+
+    const/16 v11, 0x3b
+
+    invoke-direct {v10, v11}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    const-string v11, "Unexpected start indicator: expected "
+
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v10, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v2, " more bytes"
+
+    invoke-virtual {v10, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {p1, v2}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v3, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    move-result p1
-
-    if-eqz p1, :cond_4
-
-    iget-object p1, v0, Lpl5;->a:Lc49;
-
-    invoke-interface {p1}, Lc49;->j()J
-
-    move-result-wide v2
-
-    invoke-virtual {v1}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->A0()J
-
-    move-result-wide v4
-
-    cmp-long p1, v2, v4
-
-    if-nez p1, :cond_4
-
-    invoke-virtual {v1}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->C0()Lws2;
-
-    move-result-object p1
-
-    invoke-virtual {v1}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->A0()J
-
-    move-result-wide v2
-
-    invoke-virtual {v1}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->z0()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v2, v3, v0}, Lws2;->E(JLjava/lang/String;)Lc49;
-
-    move-result-object p1
-
-    instance-of v0, p1, Lu39;
-
-    if-eqz v0, :cond_0
-
-    check-cast p1, Lu39;
+    :cond_0
+    invoke-interface {v4}, Lrf5;->l()V
 
     goto :goto_0
 
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    if-nez p1, :cond_1
-
-    goto :goto_1
-
     :cond_1
-    invoke-virtual {v1}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->B0()Ly2c;
+    new-instance v1, Ljava/lang/IllegalStateException;
 
-    move-result-object v0
+    invoke-direct {v1}, Ljava/lang/IllegalStateException;-><init>()V
 
-    invoke-virtual {v0}, Ly2c;->getFailure()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {v1}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->C0()Lws2;
-
-    move-result-object v0
-
-    invoke-virtual {v1}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->A0()J
-
-    move-result-wide v2
-
-    invoke-virtual {v1}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->z0()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v0, v2, v3, v4}, Lws2;->J(JLjava/lang/String;)V
-
-    invoke-virtual {v1}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->B0()Ly2c;
-
-    move-result-object v0
-
-    iget-object p1, p1, Lu39;->d:Lyg7;
-
-    invoke-virtual {v1}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->B0()Ly2c;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ly2c;->getFailure()Z
-
-    move-result v1
-
-    invoke-virtual {v0, p1, v1}, Ly2c;->k(Lyg7;Z)V
-
-    goto :goto_1
+    throw v1
 
     :cond_2
-    invoke-virtual {v1}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->C0()Lws2;
+    const-string v2, "Unexpected start indicator reading extended header"
 
-    move-result-object p1
-
-    invoke-virtual {v1}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->A0()J
-
-    move-result-wide v2
-
-    invoke-virtual {v1}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->z0()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v2, v3, v0}, Lws2;->K(JLjava/lang/String;)V
-
-    goto :goto_1
+    invoke-static {v3, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_3
-    instance-of p1, v0, Lrl5;
+    :goto_0
+    iput v9, v0, La3c;->c:I
 
-    if-eqz p1, :cond_4
+    iput v8, v0, La3c;->d:I
 
-    check-cast v0, Lrl5;
+    :cond_4
+    move/from16 v2, p1
 
-    iget-object p1, v0, Lrl5;->a:Lu39;
+    :goto_1
+    invoke-virtual {v1}, Lmjh;->c()I
 
-    iget-object v0, p1, Lu39;->X:Ljava/lang/String;
+    move-result v10
 
-    invoke-virtual {v1}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->z0()Ljava/lang/String;
+    if-lez v10, :cond_13
 
-    move-result-object v2
+    iget v10, v0, La3c;->c:I
 
-    invoke-static {v0, v2}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    if-eqz v10, :cond_12
+
+    iget-object v11, v0, La3c;->b:Lv92;
+
+    if-eq v10, v9, :cond_d
+
+    if-eq v10, v7, :cond_9
+
+    if-ne v10, v6, :cond_8
+
+    invoke-virtual {v1}, Lmjh;->c()I
+
+    move-result v10
+
+    iget v11, v0, La3c;->j:I
+
+    if-ne v11, v5, :cond_5
+
+    move v11, v8
+
+    goto :goto_2
+
+    :cond_5
+    sub-int v11, v10, v11
+
+    :goto_2
+    if-lez v11, :cond_6
+
+    sub-int/2addr v10, v11
+
+    iget v11, v1, Lmjh;->b:I
+
+    add-int/2addr v11, v10
+
+    invoke-virtual {v1, v11}, Lmjh;->D(I)V
+
+    :cond_6
+    invoke-interface {v4, v1}, Lrf5;->j(Lmjh;)V
+
+    iget v11, v0, La3c;->j:I
+
+    if-eq v11, v5, :cond_7
+
+    sub-int/2addr v11, v10
+
+    iput v11, v0, La3c;->j:I
+
+    if-nez v11, :cond_7
+
+    invoke-interface {v4}, Lrf5;->l()V
+
+    iput v9, v0, La3c;->c:I
+
+    iput v8, v0, La3c;->d:I
+
+    :cond_7
+    move v10, v7
+
+    move v7, v8
+
+    goto/16 :goto_6
+
+    :cond_8
+    new-instance v1, Ljava/lang/IllegalStateException;
+
+    invoke-direct {v1}, Ljava/lang/IllegalStateException;-><init>()V
+
+    throw v1
+
+    :cond_9
+    const/16 v10, 0xa
+
+    iget v12, v0, La3c;->i:I
+
+    invoke-static {v10, v12}, Ljava/lang/Math;->min(II)I
+
+    move-result v10
+
+    iget-object v12, v11, Lv92;->d:[B
+
+    invoke-virtual {v0, v1, v12, v10}, La3c;->c(Lmjh;[BI)Z
+
+    move-result v10
+
+    if-eqz v10, :cond_7
+
+    const/4 v10, 0x0
+
+    iget v12, v0, La3c;->i:I
+
+    invoke-virtual {v0, v1, v10, v12}, La3c;->c(Lmjh;[BI)Z
+
+    move-result v10
+
+    if-eqz v10, :cond_7
+
+    invoke-virtual {v11, v8}, Lv92;->q(I)V
+
+    const-wide v12, -0x7fffffffffffffffL    # -4.9E-324
+
+    iput-wide v12, v0, La3c;->l:J
+
+    iget-boolean v10, v0, La3c;->f:Z
+
+    const/4 v12, 0x4
+
+    if-eqz v10, :cond_b
+
+    invoke-virtual {v11, v12}, Lv92;->t(I)V
+
+    invoke-virtual {v11, v6}, Lv92;->i(I)I
+
+    move-result v10
+
+    int-to-long v13, v10
+
+    const/16 v10, 0x1e
+
+    shl-long/2addr v13, v10
+
+    invoke-virtual {v11, v9}, Lv92;->t(I)V
+
+    const/16 v15, 0xf
+
+    invoke-virtual {v11, v15}, Lv92;->i(I)I
+
+    move-result v16
+
+    move/from16 p1, v10
+
+    shl-int/lit8 v10, v16, 0xf
+
+    int-to-long v7, v10
+
+    or-long/2addr v7, v13
+
+    invoke-virtual {v11, v9}, Lv92;->t(I)V
+
+    invoke-virtual {v11, v15}, Lv92;->i(I)I
+
+    move-result v10
+
+    int-to-long v13, v10
+
+    or-long/2addr v7, v13
+
+    invoke-virtual {v11, v9}, Lv92;->t(I)V
+
+    iget-boolean v10, v0, La3c;->h:Z
+
+    if-nez v10, :cond_a
+
+    iget-boolean v10, v0, La3c;->g:Z
+
+    if-eqz v10, :cond_a
+
+    invoke-virtual {v11, v12}, Lv92;->t(I)V
+
+    invoke-virtual {v11, v6}, Lv92;->i(I)I
+
+    move-result v10
+
+    int-to-long v13, v10
+
+    shl-long v13, v13, p1
+
+    invoke-virtual {v11, v9}, Lv92;->t(I)V
+
+    invoke-virtual {v11, v15}, Lv92;->i(I)I
+
+    move-result v10
+
+    shl-int/2addr v10, v15
+
+    move-wide/from16 v17, v13
+
+    int-to-long v12, v10
+
+    or-long v12, v17, v12
+
+    invoke-virtual {v11, v9}, Lv92;->t(I)V
+
+    invoke-virtual {v11, v15}, Lv92;->i(I)I
+
+    move-result v10
+
+    int-to-long v14, v10
+
+    or-long/2addr v12, v14
+
+    invoke-virtual {v11, v9}, Lv92;->t(I)V
+
+    iget-object v10, v0, La3c;->e:Lotg;
+
+    invoke-virtual {v10, v12, v13}, Lotg;->b(J)J
+
+    iput-boolean v9, v0, La3c;->h:Z
+
+    :cond_a
+    iget-object v10, v0, La3c;->e:Lotg;
+
+    invoke-virtual {v10, v7, v8}, Lotg;->b(J)J
+
+    move-result-wide v7
+
+    iput-wide v7, v0, La3c;->l:J
+
+    :cond_b
+    iget-boolean v7, v0, La3c;->k:Z
+
+    if-eqz v7, :cond_c
+
+    const/4 v12, 0x4
+
+    goto :goto_3
+
+    :cond_c
+    const/4 v12, 0x0
+
+    :goto_3
+    or-int/2addr v2, v12
+
+    iget-wide v7, v0, La3c;->l:J
+
+    invoke-interface {v4, v2, v7, v8}, Lrf5;->k(IJ)V
+
+    iput v6, v0, La3c;->c:I
+
+    const/4 v7, 0x0
+
+    iput v7, v0, La3c;->d:I
+
+    move v8, v7
+
+    const/4 v7, 0x2
+
+    goto/16 :goto_1
+
+    :cond_d
+    move v7, v8
+
+    iget-object v8, v11, Lv92;->d:[B
+
+    const/16 v10, 0x9
+
+    invoke-virtual {v0, v1, v8, v10}, La3c;->c(Lmjh;[BI)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_11
+
+    invoke-virtual {v11, v7}, Lv92;->q(I)V
+
+    const/16 v7, 0x18
+
+    invoke-virtual {v11, v7}, Lv92;->i(I)I
+
+    move-result v7
+
+    if-eq v7, v9, :cond_e
+
+    const/16 v8, 0x29
+
+    const-string v10, "Unexpected start code prefix: "
+
+    invoke-static {v10, v8, v7, v3}, Ly12;->q(Ljava/lang/String;IILjava/lang/String;)V
+
+    iput v5, v0, La3c;->j:I
+
+    const/4 v7, 0x0
+
+    const/4 v10, 0x2
+
+    goto :goto_5
+
+    :cond_e
+    const/16 v7, 0x8
+
+    invoke-virtual {v11, v7}, Lv92;->t(I)V
+
+    const/16 v8, 0x10
+
+    invoke-virtual {v11, v8}, Lv92;->i(I)I
+
+    move-result v8
+
+    const/4 v10, 0x5
+
+    invoke-virtual {v11, v10}, Lv92;->t(I)V
+
+    invoke-virtual {v11}, Lv92;->h()Z
+
+    move-result v10
+
+    iput-boolean v10, v0, La3c;->k:Z
+
+    const/4 v10, 0x2
+
+    invoke-virtual {v11, v10}, Lv92;->t(I)V
+
+    invoke-virtual {v11}, Lv92;->h()Z
+
+    move-result v12
+
+    iput-boolean v12, v0, La3c;->f:Z
+
+    invoke-virtual {v11}, Lv92;->h()Z
+
+    move-result v12
+
+    iput-boolean v12, v0, La3c;->g:Z
+
+    const/4 v12, 0x6
+
+    invoke-virtual {v11, v12}, Lv92;->t(I)V
+
+    invoke-virtual {v11, v7}, Lv92;->i(I)I
+
+    move-result v7
+
+    iput v7, v0, La3c;->i:I
+
+    if-nez v8, :cond_f
+
+    iput v5, v0, La3c;->j:I
+
+    goto :goto_4
+
+    :cond_f
+    add-int/lit8 v8, v8, -0x3
+
+    sub-int/2addr v8, v7
+
+    iput v8, v0, La3c;->j:I
+
+    if-gez v8, :cond_10
+
+    const/16 v7, 0x2f
+
+    const-string v11, "Found negative packet payload size: "
+
+    invoke-static {v11, v7, v8, v3}, Ly12;->q(Ljava/lang/String;IILjava/lang/String;)V
+
+    iput v5, v0, La3c;->j:I
+
+    :cond_10
+    :goto_4
+    move v7, v10
+
+    :goto_5
+    iput v7, v0, La3c;->c:I
+
+    const/4 v7, 0x0
+
+    iput v7, v0, La3c;->d:I
+
+    goto :goto_6
+
+    :cond_11
+    const/4 v10, 0x2
+
+    goto :goto_6
+
+    :cond_12
+    move v10, v7
+
+    move v7, v8
+
+    invoke-virtual {v1}, Lmjh;->c()I
+
+    move-result v8
+
+    invoke-virtual {v1, v8}, Lmjh;->F(I)V
+
+    :goto_6
+    move v8, v7
+
+    move v7, v10
+
+    goto/16 :goto_1
+
+    :cond_13
+    return-void
+.end method
+
+.method public final c(Lmjh;[BI)Z
+    .locals 3
+
+    invoke-virtual {p1}, Lmjh;->c()I
 
     move-result v0
 
-    if-eqz v0, :cond_4
+    iget v1, p0, La3c;->d:I
 
-    iget-wide v2, p1, Lu39;->a:J
+    sub-int v1, p3, v1
 
-    invoke-virtual {v1}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->A0()J
+    invoke-static {v0, v1}, Ljava/lang/Math;->min(II)I
 
-    move-result-wide v4
-
-    cmp-long v0, v2, v4
-
-    if-nez v0, :cond_4
-
-    invoke-virtual {v1}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->B0()Ly2c;
-
-    move-result-object v0
-
-    iget-object p1, p1, Lu39;->d:Lyg7;
+    move-result v0
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, p1, v1}, Ly2c;->k(Lyg7;Z)V
+    if-gtz v0, :cond_0
 
-    :cond_4
-    :goto_1
-    sget-object p1, Lb3h;->a:Lb3h;
+    return v1
 
-    return-object p1
+    :cond_0
+    if-nez p2, :cond_1
+
+    invoke-virtual {p1, v0}, Lmjh;->F(I)V
+
+    goto :goto_0
+
+    :cond_1
+    iget v2, p0, La3c;->d:I
+
+    invoke-virtual {p1, v2, p2, v0}, Lmjh;->e(I[BI)V
+
+    :goto_0
+    iget p1, p0, La3c;->d:I
+
+    add-int/2addr p1, v0
+
+    iput p1, p0, La3c;->d:I
+
+    if-ne p1, p3, :cond_2
+
+    return v1
+
+    :cond_2
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final g(Lotg;Lxu5;Le3h;)V
+    .locals 0
+
+    iput-object p1, p0, La3c;->e:Lotg;
+
+    iget-object p1, p0, La3c;->a:Lrf5;
+
+    invoke-interface {p1, p2, p3}, Lrf5;->o(Lxu5;Le3h;)V
+
+    return-void
 .end method

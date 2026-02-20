@@ -1,139 +1,194 @@
-.class public abstract Ltrc;
-.super Ldsc;
+.class public final Ltrc;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lurc;
+
+
+# instance fields
+.field public final a:Lhpg;
+
+.field public final b:Ljava/lang/Integer;
+
+.field public final c:Z
+
+
+# direct methods
+.method public constructor <init>(Lhpg;Ljava/lang/Integer;Z)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    iput-object p1, p0, Ltrc;->a:Lhpg;
+
+    .line 3
+    iput-object p2, p0, Ltrc;->b:Ljava/lang/Integer;
+
+    .line 4
+    iput-boolean p3, p0, Ltrc;->c:Z
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Lhpg;Ljava/lang/Integer;ZI)V
+    .locals 1
+
+    and-int/lit8 v0, p4, 0x2
+
+    if-eqz v0, :cond_0
+
+    const/4 p2, 0x0
+
+    :cond_0
+    and-int/lit8 p4, p4, 0x4
+
+    if-eqz p4, :cond_1
+
+    const/4 p3, 0x1
+
+    .line 5
+    :cond_1
+    invoke-direct {p0, p1, p2, p3}, Ltrc;-><init>(Lhpg;Ljava/lang/Integer;Z)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final h(Lud8;)Z
+.method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
-    sget-object v0, Lqrc;->a:Lqrc;
+    const/4 v0, 0x1
 
-    invoke-virtual {p0, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    if-ne p0, p1, :cond_0
 
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    instance-of p1, p1, Lqrc;
-
-    return p1
+    return v0
 
     :cond_0
-    instance-of v0, p0, Lrrc;
+    instance-of v1, p1, Ltrc;
 
-    if-eqz v0, :cond_1
+    const/4 v2, 0x0
 
-    instance-of p1, p1, Lrrc;
+    if-nez v1, :cond_1
 
-    return p1
+    return v2
 
     :cond_1
-    instance-of v0, p0, Lsrc;
+    check-cast p1, Ltrc;
 
-    if-eqz v0, :cond_3
+    iget-object v1, p0, Ltrc;->a:Lhpg;
 
-    instance-of v0, p1, Lsrc;
+    iget-object v3, p1, Ltrc;->a:Lhpg;
 
-    if-eqz v0, :cond_2
+    invoke-static {v1, v3}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-object v0, p0
+    move-result v1
 
-    check-cast v0, Lsrc;
+    if-nez v1, :cond_2
 
-    iget-object v0, v0, Lsrc;->a:Ltlc;
-
-    iget-wide v0, v0, Ltlc;->a:J
-
-    check-cast p1, Lsrc;
-
-    iget-object p1, p1, Lsrc;->a:Ltlc;
-
-    iget-wide v2, p1, Ltlc;->a:J
-
-    cmp-long p1, v0, v2
-
-    if-nez p1, :cond_2
-
-    const/4 p1, 0x1
-
-    return p1
+    return v2
 
     :cond_2
-    const/4 p1, 0x0
+    iget-object v1, p0, Ltrc;->b:Ljava/lang/Integer;
 
-    return p1
+    iget-object v3, p1, Ltrc;->b:Ljava/lang/Integer;
+
+    invoke-static {v1, v3}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
 
     :cond_3
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+    iget-boolean v1, p0, Ltrc;->c:Z
 
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    iget-boolean p1, p1, Ltrc;->c:Z
 
-    throw p1
+    if-eq v1, p1, :cond_4
+
+    return v2
+
+    :cond_4
+    return v0
 .end method
 
-.method public final q(Lud8;)Z
-    .locals 1
+.method public final hashCode()I
+    .locals 2
 
-    sget-object v0, Lqrc;->a:Lqrc;
+    iget-object v0, p0, Ltrc;->a:Lhpg;
 
-    invoke-virtual {p0, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    mul-int/lit8 v0, v0, 0x1f
 
-    instance-of p1, p1, Lqrc;
+    iget-object v1, p0, Ltrc;->b:Ljava/lang/Integer;
 
-    return p1
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x0
+
+    goto :goto_0
 
     :cond_0
-    instance-of v0, p0, Lrrc;
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
-    if-eqz v0, :cond_1
+    move-result v1
 
-    instance-of p1, p1, Lrrc;
+    :goto_0
+    add-int/2addr v0, v1
 
-    return p1
+    mul-int/lit8 v0, v0, 0x1f
 
-    :cond_1
-    instance-of v0, p0, Lsrc;
+    iget-boolean v1, p0, Ltrc;->c:Z
 
-    if-eqz v0, :cond_3
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    instance-of v0, p1, Lsrc;
+    move-result v1
 
-    if-eqz v0, :cond_2
+    add-int/2addr v1, v0
 
-    move-object v0, p0
+    return v1
+.end method
 
-    check-cast v0, Lsrc;
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    check-cast p1, Lsrc;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object p1, p1, Lsrc;->a:Ltlc;
+    const-string v1, "ShowSnackbar(title="
 
-    iget-object v0, v0, Lsrc;->a:Ltlc;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, p1}, Ltlc;->equals(Ljava/lang/Object;)Z
+    iget-object v1, p0, Ltrc;->a:Lhpg;
 
-    move-result p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    if-eqz p1, :cond_2
+    const-string v1, ", iconRes="
 
-    const/4 p1, 0x1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return p1
+    iget-object v1, p0, Ltrc;->b:Ljava/lang/Integer;
 
-    :cond_2
-    const/4 p1, 0x0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    return p1
+    const-string v1, ", checkContainerParams="
 
-    :cond_3
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    const-string v1, ")"
 
-    throw p1
+    iget-boolean v2, p0, Ltrc;->c:Z
+
+    invoke-static {v0, v2, v1}, Ly12;->k(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

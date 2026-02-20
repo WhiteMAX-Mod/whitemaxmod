@@ -1,744 +1,231 @@
-.class public final synthetic Lpi;
-.super Ljava/lang/Object;
+.class public final enum Lpi;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/function/Function;
+
+# static fields
+.field public static final enum X:Lpi;
+
+.field public static final enum Y:Lpi;
+
+.field public static final enum Z:Lpi;
+
+.field public static final enum b:Lpi;
+
+.field public static final enum c:Lpi;
+
+.field public static final enum d:Lpi;
+
+.field public static final enum o:Lpi;
+
+.field public static final enum s0:Lpi;
+
+.field public static final enum t0:Lpi;
+
+.field public static final enum u0:Lpi;
+
+.field public static final enum v0:Lpi;
+
+.field public static final enum w0:Lpi;
+
+.field public static final synthetic x0:[Lpi;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ljava/lang/Object;
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 15
 
-    iput p1, p0, Lpi;->a:I
+    new-instance v0, Lpi;
 
-    iput-object p2, p0, Lpi;->b:Ljava/lang/Object;
+    const/4 v1, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v2, "interpolator"
+
+    const-string v3, "INTERPOLATOR"
+
+    invoke-direct {v0, v3, v1, v2}, Lpi;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lpi;->b:Lpi;
+
+    new-instance v1, Lpi;
+
+    const/4 v2, 0x1
+
+    const-string v3, "duration"
+
+    const-string v4, "DURATION"
+
+    invoke-direct {v1, v4, v2, v3}, Lpi;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v1, Lpi;->c:Lpi;
+
+    new-instance v2, Lpi;
+
+    const/4 v3, 0x2
+
+    const-string v4, "valueFrom"
+
+    const-string v5, "VALUE_FROM"
+
+    invoke-direct {v2, v5, v3, v4}, Lpi;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v2, Lpi;->d:Lpi;
+
+    new-instance v3, Lpi;
+
+    const/4 v4, 0x3
+
+    const-string v5, "valueTo"
+
+    const-string v6, "VALUE_TO"
+
+    invoke-direct {v3, v6, v4, v5}, Lpi;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v3, Lpi;->o:Lpi;
+
+    new-instance v4, Lpi;
+
+    const/4 v5, 0x4
+
+    const-string v6, "valueType"
+
+    const-string v7, "VALUE_TYPE"
+
+    invoke-direct {v4, v7, v5, v6}, Lpi;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v4, Lpi;->X:Lpi;
+
+    new-instance v5, Lpi;
+
+    const/4 v6, 0x5
+
+    const-string v7, "propertyName"
+
+    const-string v8, "PROPERTY_NAME"
+
+    invoke-direct {v5, v8, v6, v7}, Lpi;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v5, Lpi;->Y:Lpi;
+
+    new-instance v6, Lpi;
+
+    const/4 v7, 0x6
+
+    const-string v8, "propertyXName"
+
+    const-string v9, "PROPERTY_X_NAME"
+
+    invoke-direct {v6, v9, v7, v8}, Lpi;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v6, Lpi;->Z:Lpi;
+
+    new-instance v7, Lpi;
+
+    const/4 v8, 0x7
+
+    const-string v9, "propertyYName"
+
+    const-string v10, "PROPERTY_Y_NAME"
+
+    invoke-direct {v7, v10, v8, v9}, Lpi;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v7, Lpi;->s0:Lpi;
+
+    new-instance v8, Lpi;
+
+    const/16 v9, 0x8
+
+    const-string v10, "pathData"
+
+    const-string v11, "PATH_DATA"
+
+    invoke-direct {v8, v11, v9, v10}, Lpi;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v8, Lpi;->t0:Lpi;
+
+    new-instance v9, Lpi;
+
+    const/16 v10, 0x9
+
+    const-string v11, "startOffset"
+
+    const-string v12, "START_OFFSET"
+
+    invoke-direct {v9, v12, v10, v11}, Lpi;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v9, Lpi;->u0:Lpi;
+
+    new-instance v10, Lpi;
+
+    const/16 v11, 0xa
+
+    const-string v12, "repeatCount"
+
+    const-string v13, "REPEAT_COUNT"
+
+    invoke-direct {v10, v13, v11, v12}, Lpi;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v10, Lpi;->v0:Lpi;
+
+    new-instance v11, Lpi;
+
+    const/16 v12, 0xb
+
+    const-string v13, "repeatMode"
+
+    const-string v14, "REPEAT_MODE"
+
+    invoke-direct {v11, v14, v12, v13}, Lpi;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v11, Lpi;->w0:Lpi;
+
+    filled-new-array/range {v0 .. v11}, [Lpi;
+
+    move-result-object v0
+
+    sput-object v0, Lpi;->x0:[Lpi;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 0
 
-# virtual methods
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iget v0, p0, Lpi;->a:I
+    iput-object p3, p0, Lpi;->a:Ljava/lang/String;
 
-    packed-switch v0, :pswitch_data_0
+    return-void
+.end method
 
-    iget-object v0, p0, Lpi;->b:Ljava/lang/Object;
+.method public static valueOf(Ljava/lang/String;)Lpi;
+    .locals 1
 
-    check-cast v0, Lk1e;
+    const-class v0, Lpi;
 
-    invoke-virtual {v0, p1}, Lk1e;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Landroid/content/SharedPreferences;
+    check-cast p0, Lpi;
 
-    return-object p1
+    return-object p0
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, Lpi;->b:Ljava/lang/Object;
+.method public static values()[Lpi;
+    .locals 1
 
-    check-cast v0, Lg64;
+    sget-object v0, Lpi;->x0:[Lpi;
 
-    invoke-virtual {v0, p1}, Lg64;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lmfa;
-
-    return-object p1
-
-    :pswitch_1
-    iget-object v0, p0, Lpi;->b:Ljava/lang/Object;
-
-    check-cast v0, Lg3b;
-
-    invoke-virtual {v0, p1}, Lg3b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lmfa;
-
-    return-object p1
-
-    :pswitch_2
-    iget-object v0, p0, Lpi;->b:Ljava/lang/Object;
-
-    check-cast v0, Lrx1;
-
-    invoke-virtual {v0, p1}, Lrx1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lmfc;
-
-    return-object p1
-
-    :pswitch_3
-    iget-object v0, p0, Lpi;->b:Ljava/lang/Object;
-
-    check-cast v0, Lir7;
-
-    invoke-virtual {v0, p1}, Lir7;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lmfc;
-
-    return-object p1
-
-    :pswitch_4
-    iget-object v0, p0, Lpi;->b:Ljava/lang/Object;
-
-    check-cast v0, Lemb;
-
-    invoke-virtual {v0, p1}, Lemb;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/util/concurrent/ThreadFactory;
-
-    return-object p1
-
-    :pswitch_5
-    iget-object v0, p0, Lpi;->b:Ljava/lang/Object;
-
-    check-cast v0, Lir7;
-
-    invoke-virtual {v0, p1}, Lir7;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    const/4 p1, 0x0
-
-    return-object p1
-
-    :pswitch_6
-    iget-object v0, p0, Lpi;->b:Ljava/lang/Object;
-
-    check-cast v0, Lku1;
-
-    invoke-virtual {v0, p1}, Lku1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Integer;
-
-    return-object p1
-
-    :pswitch_7
-    iget-object v0, p0, Lpi;->b:Ljava/lang/Object;
-
-    check-cast v0, Ludb;
-
-    invoke-virtual {v0, p1}, Ludb;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lqk;
-
-    return-object p1
-
-    :pswitch_8
-    iget-object v0, p0, Lpi;->b:Ljava/lang/Object;
-
-    check-cast v0, Lir7;
-
-    invoke-virtual {v0, p1}, Lir7;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/util/concurrent/ExecutorService;
-
-    return-object p1
-
-    :pswitch_9
-    iget-object v0, p0, Lpi;->b:Ljava/lang/Object;
-
-    check-cast v0, Ls1a;
-
-    invoke-virtual {v0, p1}, Ls1a;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lqfa;
-
-    return-object p1
-
-    :pswitch_a
-    iget-object v0, p0, Lpi;->b:Ljava/lang/Object;
-
-    check-cast v0, Lmo8;
-
-    check-cast p1, Ljava/lang/Long;
-
-    iget-object v0, v0, Lmo8;->g:Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lvsb;
-
-    return-object p1
-
-    :pswitch_b
-    iget-object v0, p0, Lpi;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/function/BiPredicate;
-
-    check-cast p1, Ljava/util/Map$Entry;
-
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/util/List;
-
-    invoke-interface {v1}, Ljava/util/Collection;->stream()Ljava/util/stream/Stream;
-
-    move-result-object v1
-
-    new-instance v2, Lzq4;
-
-    const/4 v3, 0x1
-
-    invoke-direct {v2, v0, v3, p1}, Lzq4;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-interface {v1, v2}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-static {}, Ljava/util/stream/Collectors;->toList()Ljava/util/stream/Collector;
+    check-cast v0, [Lpi;
 
-    move-result-object v1
-
-    invoke-interface {v0, v1}, Ljava/util/stream/Stream;->collect(Ljava/util/stream/Collector;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-static {}, Ljava/util/Optional;->empty()Ljava/util/Optional;
-
-    move-result-object p1
-
-    goto :goto_0
-
-    :cond_0
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/String;
-
-    new-instance v1, Ljava/util/AbstractMap$SimpleImmutableEntry;
-
-    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-direct {v1, p1, v0}, Ljava/util/AbstractMap$SimpleImmutableEntry;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    invoke-static {v1}, Ljava/util/Optional;->of(Ljava/lang/Object;)Ljava/util/Optional;
-
-    move-result-object p1
-
-    :goto_0
-    return-object p1
-
-    :pswitch_c
-    iget-object v0, p0, Lpi;->b:Ljava/lang/Object;
-
-    check-cast v0, Li57;
-
-    check-cast p1, Ljava/util/Map$Entry;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/String;
-
-    filled-new-array {p1}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
-
-    const/4 v1, 0x0
-
-    aget-object p1, p1, v1
-
-    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_d
-    iget-object v0, p0, Lpi;->b:Ljava/lang/Object;
-
-    check-cast v0, Lqe5;
-
-    check-cast p1, Lij5;
-
-    iget-object v0, v0, Lqe5;->a:Ljava/lang/Object;
-
-    check-cast v0, [Lsoe;
-
-    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result p1
-
-    aget-object p1, v0, p1
-
-    return-object p1
-
-    :pswitch_e
-    iget-object v0, p0, Lpi;->b:Ljava/lang/Object;
-
-    check-cast v0, Ll8;
-
-    invoke-virtual {v0, p1}, Ll8;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lsx7;
-
-    return-object p1
-
-    :pswitch_f
-    iget-object v0, p0, Lpi;->b:Ljava/lang/Object;
-
-    check-cast v0, Lpe4;
-
-    check-cast p1, Ljava/lang/Integer;
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    iget v1, v0, Lpe4;->n:I
-
-    iget v2, v0, Lpe4;->m:I
-
-    sub-int/2addr v1, v2
-
-    const/16 v2, 0xa
-
-    sub-int/2addr p1, v2
-
-    invoke-static {v1, p1}, Ljava/lang/Integer;->min(II)I
-
-    move-result p1
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    goto/16 :goto_2
-
-    :cond_1
-    if-ge p1, v1, :cond_2
-
-    iget-object v1, v0, Lpe4;->e:Lxoe;
-
-    new-instance v3, Lpi;
-
-    const/16 v4, 0xd
-
-    invoke-direct {v3, v4, v0}, Lpi;-><init>(ILjava/lang/Object;)V
-
-    iget-object v4, v0, Lpe4;->b:Lij5;
-
-    new-instance v5, Lh4;
-
-    const/4 v6, 0x7
-
-    invoke-direct {v5, v6, v0}, Lh4;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v1, v3, v2, v4, v5}, Lxoe;->g(Ljava/util/function/Function;ILij5;Ljava/util/function/Consumer;)V
-
-    :cond_2
-    new-array v1, p1, [B
-
-    const/4 v2, 0x0
-
-    move v3, v2
-
-    :goto_1
-    if-ge v3, p1, :cond_4
-
-    sub-int v4, p1, v3
-
-    iget-object v5, v0, Lpe4;->k:Ljava/util/ArrayList;
-
-    invoke-virtual {v5, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v5}, Ljava/nio/Buffer;->remaining()I
-
-    move-result v5
-
-    invoke-static {v4, v5}, Ljava/lang/Integer;->min(II)I
-
-    move-result v4
-
-    iget-object v5, v0, Lpe4;->k:Ljava/util/ArrayList;
-
-    invoke-virtual {v5, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v5, v1, v3, v4}, Ljava/nio/ByteBuffer;->get([BII)Ljava/nio/ByteBuffer;
-
-    iget-object v5, v0, Lpe4;->k:Ljava/util/ArrayList;
-
-    invoke-virtual {v5, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v5}, Ljava/nio/Buffer;->remaining()I
-
-    move-result v5
-
-    if-nez v5, :cond_3
-
-    iget-object v5, v0, Lpe4;->k:Ljava/util/ArrayList;
-
-    invoke-virtual {v5, v2}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
-
-    :cond_3
-    add-int/2addr v3, v4
-
-    goto :goto_1
-
-    :cond_4
-    new-instance v2, Lke4;
-
-    iget-object v3, v0, Lpe4;->a:Lzue;
-
-    iget-object v3, v3, Lzue;->b:Ljava/lang/Object;
-
-    iget v3, v0, Lpe4;->m:I
-
-    int-to-long v3, v3
-
-    invoke-direct {v2}, Ljava/lang/Object;-><init>()V
-
-    iput-wide v3, v2, Lke4;->a:J
-
-    iput-object v1, v2, Lke4;->c:[B
-
-    iput p1, v2, Lke4;->b:I
-
-    add-int/lit8 v5, p1, 0xc
-
-    invoke-static {v5}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
-
-    move-result-object v5
-
-    const/4 v6, 0x6
-
-    invoke-static {v6, v5}, Lv4j;->b(ILjava/nio/ByteBuffer;)I
-
-    invoke-static {v3, v4, v5}, Lv4j;->c(JLjava/nio/ByteBuffer;)I
-
-    invoke-static {p1, v5}, Lv4j;->b(ILjava/nio/ByteBuffer;)I
-
-    invoke-virtual {v5, v1}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v5}, Ljava/nio/Buffer;->position()I
-
-    move-result v1
-
-    new-array v1, v1, [B
-
-    invoke-virtual {v5}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v5, v1}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
-
-    iget v1, v0, Lpe4;->m:I
-
-    add-int/2addr v1, p1
-
-    iput v1, v0, Lpe4;->m:I
-
-    move-object p1, v2
-
-    :goto_2
-    return-object p1
-
-    :pswitch_10
-    iget-object v0, p0, Lpi;->b:Ljava/lang/Object;
-
-    check-cast v0, Lia;
-
-    invoke-virtual {v0, p1}, Lia;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lmfa;
-
-    return-object p1
-
-    :pswitch_11
-    iget-object v0, p0, Lpi;->b:Ljava/lang/Object;
-
-    check-cast v0, Lg64;
-
-    invoke-virtual {v0, p1}, Lg64;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lmfa;
-
-    return-object p1
-
-    :pswitch_12
-    iget-object v0, p0, Lpi;->b:Ljava/lang/Object;
-
-    check-cast v0, Ls93;
-
-    invoke-virtual {v0, p1}, Ls93;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lmfa;
-
-    return-object p1
-
-    :pswitch_13
-    iget-object v0, p0, Lpi;->b:Ljava/lang/Object;
-
-    check-cast v0, Ls93;
-
-    invoke-virtual {v0, p1}, Ls93;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lmfa;
-
-    return-object p1
-
-    :pswitch_14
-    iget-object v0, p0, Lpi;->b:Ljava/lang/Object;
-
-    check-cast v0, Lr93;
-
-    invoke-virtual {v0, p1}, Lr93;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lmfa;
-
-    return-object p1
-
-    :pswitch_15
-    iget-object v0, p0, Lpi;->b:Ljava/lang/Object;
-
-    check-cast v0, Lr93;
-
-    invoke-virtual {v0, p1}, Lr93;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lmfa;
-
-    return-object p1
-
-    :pswitch_16
-    iget-object v0, p0, Lpi;->b:Ljava/lang/Object;
-
-    check-cast v0, Ll52;
-
-    invoke-virtual {v0, p1}, Ll52;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lmfa;
-
-    return-object p1
-
-    :pswitch_17
-    iget-object v0, p0, Lpi;->b:Ljava/lang/Object;
-
-    check-cast v0, Ls93;
-
-    invoke-virtual {v0, p1}, Ls93;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lmfa;
-
-    return-object p1
-
-    :pswitch_18
-    iget-object v0, p0, Lpi;->b:Ljava/lang/Object;
-
-    check-cast v0, Lia;
-
-    invoke-virtual {v0, p1}, Lia;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lsx7;
-
-    return-object p1
-
-    :pswitch_19
-    iget-object v0, p0, Lpi;->b:Ljava/lang/Object;
-
-    check-cast v0, Lc92;
-
-    check-cast p1, Ljava/security/cert/X509Certificate;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    :try_start_0
-    invoke-virtual {p1}, Ljava/security/cert/Certificate;->getEncoded()[B
-
-    move-result-object p1
-    :try_end_0
-    .catch Ljava/security/cert/CertificateEncodingException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object p1
-
-    :catch_0
-    move-exception p1
-
-    new-instance v0, Ljava/lang/RuntimeException;
-
-    invoke-direct {v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v0
-
-    :pswitch_1a
-    iget-object v0, p0, Lpi;->b:Ljava/lang/Object;
-
-    check-cast v0, Lxj0;
-
-    check-cast p1, Ljava/lang/String;
-
-    :try_start_1
-    iget-object v1, v0, Lxj0;->a:Lyja;
-
-    iget-object v1, v1, Lyja;->a:Liz4;
-
-    invoke-virtual {v1}, Liz4;->e()V
-
-    iget-object v0, v0, Lxj0;->c:Lplf;
-
-    invoke-virtual {v0, p1}, Lplf;->a(Ljava/lang/String;)Ljavax/net/ssl/SSLSocketFactory;
-
-    move-result-object p1
-    :try_end_1
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
-
-    return-object p1
-
-    :catch_1
-    move-exception p1
-
-    new-instance v0, Lone/me/sdk/net/client/impl/internal/SocketFactoryCreateException;
-
-    invoke-direct {v0, p1}, Lone/me/sdk/net/client/impl/internal/SocketFactoryCreateException;-><init>(Ljava/io/IOException;)V
-
-    throw v0
-
-    :pswitch_1b
-    iget-object v0, p0, Lpi;->b:Ljava/lang/Object;
-
-    check-cast v0, Li8;
-
-    invoke-virtual {v0, p1}, Li8;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lmfa;
-
-    return-object p1
-
-    :pswitch_1c
-    iget-object v0, p0, Lpi;->b:Ljava/lang/Object;
-
-    check-cast v0, Li;
-
-    invoke-virtual {v0, p1}, Li;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lone/me/rlottie/RLottieDrawable;
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1c
-        :pswitch_1b
-        :pswitch_1a
-        :pswitch_19
-        :pswitch_18
-        :pswitch_17
-        :pswitch_16
-        :pswitch_15
-        :pswitch_14
-        :pswitch_13
-        :pswitch_12
-        :pswitch_11
-        :pswitch_10
-        :pswitch_f
-        :pswitch_e
-        :pswitch_d
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

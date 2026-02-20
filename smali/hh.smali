@@ -1,122 +1,426 @@
 .class public final Lhh;
-.super Landroid/animation/AnimatorListenerAdapter;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/graphics/drawable/Drawable$Callback;
 
 
 # instance fields
-.field public final synthetic a:Landroid/view/View;
+.field public final synthetic a:I
 
-.field public final synthetic b:Landroid/view/View;
-
-.field public final synthetic c:Landroid/view/ViewGroup;
-
-.field public final synthetic d:Lih;
-
-.field public final synthetic e:Ld94;
-
-.field public final synthetic f:Z
+.field public b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lih;Ld94;Landroid/view/View;Landroid/view/View;Landroid/view/ViewGroup;Z)V
+.method public synthetic constructor <init>()V
+    .locals 1
+
+    .line 1
+    const/4 v0, 0x2
+
+    iput v0, p0, Lhh;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
-    iput-object p3, p0, Lhh;->a:Landroid/view/View;
+    .line 2
+    iput p1, p0, Lhh;->a:I
 
-    iput-object p4, p0, Lhh;->b:Landroid/view/View;
+    iput-object p2, p0, Lhh;->b:Ljava/lang/Object;
 
-    iput-object p5, p0, Lhh;->c:Landroid/view/ViewGroup;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lhh;->d:Lih;
+    return-void
+.end method
 
-    iput-object p2, p0, Lhh;->e:Ld94;
+.method private final a(Landroid/graphics/drawable/Drawable;)V
+    .locals 0
 
-    iput-boolean p6, p0, Lhh;->f:Z
+    return-void
+.end method
 
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+.method private final b(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;J)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final c(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V
+    .locals 0
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationCancel(Landroid/animation/Animator;)V
+.method public final invalidateDrawable(Landroid/graphics/drawable/Drawable;)V
     .locals 3
 
-    iget-object p1, p0, Lhh;->d:Lih;
+    iget v0, p0, Lhh;->a:I
 
-    iget-object v0, p0, Lhh;->a:Landroid/view/View;
+    packed-switch v0, :pswitch_data_0
 
-    if-eqz v0, :cond_0
+    iget-object p1, p0, Lhh;->b:Ljava/lang/Object;
 
-    invoke-virtual {p1, v0}, Lih;->n(Landroid/view/View;)V
+    check-cast p1, Lfhh;
+
+    invoke-virtual {p1}, Lfhh;->invalidateSelf()V
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lhh;->b:Ljava/lang/Object;
+
+    check-cast p1, Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {p1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lb6b;
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
 
     :cond_0
-    iget-object v0, p0, Lhh;->b:Landroid/view/View;
+    return-void
+
+    :pswitch_1
+    iget-object p1, p0, Lhh;->b:Ljava/lang/Object;
+
+    check-cast p1, Lzmb;
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/os/Looper;->isCurrentThread()Z
+
+    move-result v0
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
 
-    move-result-object v1
-
-    iget-object v2, p0, Lhh;->c:Landroid/view/ViewGroup;
-
-    if-ne v1, v2, :cond_1
-
-    invoke-virtual {v2, v0}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
+    goto :goto_0
 
     :cond_1
-    iget-object v0, p0, Lhh;->e:Ld94;
+    invoke-virtual {p1}, Landroid/view/View;->getHandler()Landroid/os/Handler;
 
-    invoke-virtual {p1, v0, p0}, Lih;->k(Ld94;Lhh;)V
-
-    return-void
-.end method
-
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 3
-
-    iget-object p1, p0, Lhh;->d:Lih;
-
-    iget-boolean v0, p1, Lih;->o:Z
-
-    if-nez v0, :cond_2
-
-    iget-object v0, p1, Lih;->Z:Landroid/animation/Animator;
+    move-result-object v0
 
     if-eqz v0, :cond_2
 
-    iget-boolean v0, p0, Lhh;->f:Z
+    new-instance v1, Lymb;
 
-    iget-object v1, p0, Lhh;->a:Landroid/view/View;
+    const/4 v2, 0x0
 
-    if-eqz v1, :cond_1
+    invoke-direct {v1, p1, v2}, Lymb;-><init>(Lzmb;I)V
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->postAtFrontOfQueue(Ljava/lang/Runnable;)Z
+
+    goto :goto_0
+
+    :cond_2
+    new-instance v0, Lymb;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, p1, v1}, Lymb;-><init>(Lzmb;I)V
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+
+    :goto_0
+    return-void
+
+    :pswitch_2
+    iget-object p1, p0, Lhh;->b:Ljava/lang/Object;
+
+    check-cast p1, Lp5b;
+
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+
+    return-void
+
+    :pswitch_3
+    iget-object p1, p0, Lhh;->b:Ljava/lang/Object;
+
+    check-cast p1, Lyl5;
+
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+
+    :pswitch_4
+    return-void
+
+    :pswitch_5
+    iget-object v0, p0, Lhh;->b:Ljava/lang/Object;
+
+    check-cast v0, Lem;
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getCallback()Landroid/graphics/drawable/Drawable$Callback;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_3
+
+    invoke-interface {v0, p1}, Landroid/graphics/drawable/Drawable$Callback;->invalidateDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    :cond_3
+    return-void
+
+    :pswitch_6
+    iget-object p1, p0, Lhh;->b:Ljava/lang/Object;
+
+    check-cast p1, Lkh;
+
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final scheduleDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;J)V
+    .locals 1
+
+    iget v0, p0, Lhh;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object p1, p0, Lhh;->b:Ljava/lang/Object;
+
+    check-cast p1, Lfhh;
+
+    invoke-virtual {p1, p2, p3, p4}, Landroid/graphics/drawable/Drawable;->scheduleSelf(Ljava/lang/Runnable;J)V
+
+    :pswitch_0
+    return-void
+
+    :pswitch_1
+    iget-object p1, p0, Lhh;->b:Ljava/lang/Object;
+
+    check-cast p1, Lzmb;
+
+    invoke-virtual {p1, p2, p3, p4}, Landroid/view/View;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    return-void
+
+    :pswitch_2
+    iget-object p1, p0, Lhh;->b:Ljava/lang/Object;
+
+    check-cast p1, Lp5b;
+
+    invoke-virtual {p1, p2, p3, p4}, Landroid/graphics/drawable/Drawable;->scheduleSelf(Ljava/lang/Runnable;J)V
+
+    return-void
+
+    :pswitch_3
+    iget-object p1, p0, Lhh;->b:Ljava/lang/Object;
+
+    check-cast p1, Lyl5;
+
+    invoke-virtual {p1, p2, p3, p4}, Landroid/graphics/drawable/Drawable;->scheduleSelf(Ljava/lang/Runnable;J)V
+
+    return-void
+
+    :pswitch_4
+    iget-object v0, p0, Lhh;->b:Ljava/lang/Object;
+
+    check-cast v0, Landroid/graphics/drawable/Drawable$Callback;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p1}, Lih;->d()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
+    invoke-interface {v0, p1, p2, p3, p4}, Landroid/graphics/drawable/Drawable$Callback;->scheduleDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;J)V
 
     :cond_0
-    iget-object v2, p0, Lhh;->c:Landroid/view/ViewGroup;
+    return-void
 
-    invoke-virtual {v2, v1}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
+    :pswitch_5
+    iget-object v0, p0, Lhh;->b:Ljava/lang/Object;
+
+    check-cast v0, Lem;
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getCallback()Landroid/graphics/drawable/Drawable$Callback;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0, p1, p2, p3, p4}, Landroid/graphics/drawable/Drawable$Callback;->scheduleDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;J)V
 
     :cond_1
-    iget-object v2, p0, Lhh;->e:Ld94;
+    return-void
 
-    invoke-virtual {p1, v2, p0}, Lih;->k(Ld94;Lhh;)V
+    :pswitch_6
+    iget-object p1, p0, Lhh;->b:Ljava/lang/Object;
+
+    check-cast p1, Lkh;
+
+    invoke-virtual {p1, p2, p3, p4}, Landroid/graphics/drawable/Drawable;->scheduleSelf(Ljava/lang/Runnable;J)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final unscheduleDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V
+    .locals 3
+
+    iget v0, p0, Lhh;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object p1, p0, Lhh;->b:Ljava/lang/Object;
+
+    check-cast p1, Lfhh;
+
+    invoke-virtual {p1, p2}, Landroid/graphics/drawable/Drawable;->unscheduleSelf(Ljava/lang/Runnable;)V
+
+    :pswitch_0
+    return-void
+
+    :pswitch_1
+    iget-object p1, p0, Lhh;->b:Ljava/lang/Object;
+
+    check-cast p1, Lzmb;
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/os/Looper;->isCurrentThread()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p1, p2}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p1}, Landroid/view/View;->getHandler()Landroid/os/Handler;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    new-instance v1, Lcu6;
+
+    const/16 v2, 0x16
+
+    invoke-direct {v1, p1, v2, p2}, Lcu6;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->postAtFrontOfQueue(Ljava/lang/Runnable;)Z
+
+    goto :goto_0
+
+    :cond_1
+    new-instance v0, Lbu6;
+
+    const/16 v1, 0x19
+
+    invoke-direct {v0, p1, v1, p2}, Lbu6;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+
+    :goto_0
+    return-void
+
+    :pswitch_2
+    iget-object p1, p0, Lhh;->b:Ljava/lang/Object;
+
+    check-cast p1, Lp5b;
+
+    invoke-virtual {p1, p2}, Landroid/graphics/drawable/Drawable;->unscheduleSelf(Ljava/lang/Runnable;)V
+
+    return-void
+
+    :pswitch_3
+    iget-object p1, p0, Lhh;->b:Ljava/lang/Object;
+
+    check-cast p1, Lyl5;
+
+    invoke-virtual {p1, p2}, Landroid/graphics/drawable/Drawable;->unscheduleSelf(Ljava/lang/Runnable;)V
+
+    return-void
+
+    :pswitch_4
+    iget-object v0, p0, Lhh;->b:Ljava/lang/Object;
+
+    check-cast v0, Landroid/graphics/drawable/Drawable$Callback;
 
     if-eqz v0, :cond_2
 
-    if-eqz v1, :cond_2
-
-    invoke-virtual {p1, v1}, Lih;->n(Landroid/view/View;)V
+    invoke-interface {v0, p1, p2}, Landroid/graphics/drawable/Drawable$Callback;->unscheduleDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V
 
     :cond_2
     return-void
+
+    :pswitch_5
+    iget-object v0, p0, Lhh;->b:Ljava/lang/Object;
+
+    check-cast v0, Lem;
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getCallback()Landroid/graphics/drawable/Drawable$Callback;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_3
+
+    invoke-interface {v0, p1, p2}, Landroid/graphics/drawable/Drawable$Callback;->unscheduleDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V
+
+    :cond_3
+    return-void
+
+    :pswitch_6
+    iget-object p1, p0, Lhh;->b:Ljava/lang/Object;
+
+    check-cast p1, Lkh;
+
+    invoke-virtual {p1, p2}, Landroid/graphics/drawable/Drawable;->unscheduleSelf(Ljava/lang/Runnable;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

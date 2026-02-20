@@ -1,91 +1,40 @@
-.class public final enum Ljjd;
-.super Ljava/lang/Enum;
-.source "SourceFile"
+.class public abstract Ljjd;
+.super Ljava/lang/Object;
 
 
 # static fields
-.field public static final enum b:Ljjd;
+.field public static oneme_media_keyboard_emoji_animals_and_plants:I = 0x7f1308dd
 
-.field public static final synthetic c:[Ljjd;
+.field public static oneme_media_keyboard_emoji_classic:I = 0x7f1308de
 
-.field public static final synthetic d:Lal5;
+.field public static oneme_media_keyboard_emoji_flags:I = 0x7f1308df
 
+.field public static oneme_media_keyboard_emoji_food_and_drink:I = 0x7f1308e0
 
-# instance fields
-.field public final a:I
+.field public static oneme_media_keyboard_emoji_gestures_and_people:I = 0x7f1308e1
 
+.field public static oneme_media_keyboard_emoji_objects:I = 0x7f1308e2
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.field public static oneme_media_keyboard_emoji_sport_and_activity:I = 0x7f1308e3
 
-    new-instance v0, Ljjd;
+.field public static oneme_media_keyboard_emoji_symbols:I = 0x7f1308e4
 
-    const-string v1, "EMOJI"
+.field public static oneme_media_keyboard_emoji_travels_and_transport:I = 0x7f1308e5
 
-    const/4 v2, 0x0
+.field public static oneme_media_keyboard_favorite:I = 0x7f1308e6
 
-    invoke-direct {v0, v1, v2, v2}, Ljjd;-><init>(Ljava/lang/String;II)V
+.field public static oneme_media_keyboard_popular:I = 0x7f1308e7
 
-    sput-object v0, Ljjd;->b:Ljjd;
+.field public static oneme_media_keyboard_recent:I = 0x7f1308e8
 
-    new-instance v1, Ljjd;
+.field public static oneme_media_keyboard_recent_clear_action:I = 0x7f1308e9
 
-    const-string v2, "STICKER"
+.field public static oneme_media_keyboard_recent_clear_cancel:I = 0x7f1308ea
 
-    const/4 v3, 0x1
+.field public static oneme_media_keyboard_recent_clear_title:I = 0x7f1308eb
 
-    invoke-direct {v1, v2, v3, v3}, Ljjd;-><init>(Ljava/lang/String;II)V
+.field public static oneme_media_keyboard_tab_emoji:I = 0x7f1308ec
 
-    filled-new-array {v0, v1}, [Ljjd;
+.field public static oneme_media_keyboard_tab_gifs:I = 0x7f1308ed
 
-    move-result-object v0
-
-    sput-object v0, Ljjd;->c:[Ljjd;
-
-    new-instance v1, Lal5;
-
-    invoke-direct {v1, v0}, Lal5;-><init>([Ljava/lang/Enum;)V
-
-    sput-object v1, Ljjd;->d:Lal5;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;II)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    iput p3, p0, Ljjd;->a:I
-
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Ljjd;
-    .locals 1
-
-    const-class v0, Ljjd;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Ljjd;
-
-    return-object p0
-.end method
-
-.method public static values()[Ljjd;
-    .locals 1
-
-    sget-object v0, Ljjd;->c:[Ljjd;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Ljjd;
-
-    return-object v0
-.end method
+.field public static oneme_media_keyboard_tab_stickers:I = 0x7f1308ee

@@ -3,54 +3,62 @@
 
 
 # static fields
-.field public static oneme_settings_media_action_always:I = 0x7f13098f
+.field public static oneme_notifications_settings_chat_enable_notifications_button:I = 0x7f0a0719
 
-.field public static oneme_settings_media_action_disabled:I = 0x7f130990
+.field public static oneme_notifications_settings_chat_linearlayout:I = 0x7f0a071a
 
-.field public static oneme_settings_media_action_dont_load:I = 0x7f130991
+.field public static oneme_notifications_settings_chat_recycler_view:I = 0x7f0a071b
 
-.field public static oneme_settings_media_action_video_quality_1080:I = 0x7f130992
+.field public static oneme_notifications_settings_chat_settings_button:I = 0x7f0a071c
 
-.field public static oneme_settings_media_action_video_quality_480:I = 0x7f130993
+.field public static oneme_notifications_settings_chat_toolbar:I = 0x7f0a071d
 
-.field public static oneme_settings_media_action_video_quality_720:I = 0x7f130994
+.field public static oneme_notifications_settings_chat_type_all_button:I = 0x7f0a071e
 
-.field public static oneme_settings_media_action_wifi:I = 0x7f130995
+.field public static oneme_notifications_settings_chat_type_pin_reply_button:I = 0x7f0a071f
 
-.field public static oneme_settings_media_animoji:I = 0x7f130996
+.field public static oneme_notifications_settings_dialog_enable_notifications_button:I = 0x7f0a0720
 
-.field public static oneme_settings_media_caching:I = 0x7f130997
+.field public static oneme_notifications_settings_dialog_linearlayout:I = 0x7f0a0721
 
-.field public static oneme_settings_media_gif:I = 0x7f130998
+.field public static oneme_notifications_settings_dialog_recycler_view:I = 0x7f0a0722
 
-.field public static oneme_settings_media_gif_play:I = 0x7f130999
+.field public static oneme_notifications_settings_dialog_settings_button:I = 0x7f0a0723
 
-.field public static oneme_settings_media_gif_title:I = 0x7f13099a
+.field public static oneme_notifications_settings_dialog_toolbar:I = 0x7f0a0724
 
-.field public static oneme_settings_media_load_media_in_roaming:I = 0x7f13099b
+.field public static oneme_notifications_settings_enable_all_notifications_button:I = 0x7f0a0725
 
-.field public static oneme_settings_media_photo:I = 0x7f13099c
+.field public static oneme_notifications_settings_header_vh:I = 0x7f0a0726
 
-.field public static oneme_settings_media_photo_title:I = 0x7f13099d
+.field public static oneme_notifications_settings_item_vh:I = 0x7f0a0727
 
-.field public static oneme_settings_media_playlist:I = 0x7f13099e
+.field public static oneme_notifications_settings_linearlayout:I = 0x7f0a0728
 
-.field public static oneme_settings_media_screen_autoloading_section:I = 0x7f13099f
+.field public static oneme_notifications_settings_open_settings_button:I = 0x7f0a0729
 
-.field public static oneme_settings_media_screen_autoplaying_section:I = 0x7f1309a0
+.field public static oneme_notifications_settings_open_settings_call_ringtone_title:I = 0x7f0a072a
 
-.field public static oneme_settings_media_screen_datapressing_section:I = 0x7f1309a1
+.field public static oneme_notifications_settings_open_settings_calls_ringtone:I = 0x7f0a072b
 
-.field public static oneme_settings_media_screen_toolbar_title:I = 0x7f1309a2
+.field public static oneme_notifications_settings_open_settings_calls_vibration:I = 0x7f0a072c
 
-.field public static oneme_settings_media_video:I = 0x7f1309a3
+.field public static oneme_notifications_settings_other_in_app_push_button:I = 0x7f0a072d
 
-.field public static oneme_settings_media_video_messages:I = 0x7f1309a4
+.field public static oneme_notifications_settings_other_linearlayout:I = 0x7f0a072e
 
-.field public static oneme_settings_media_video_messages_title:I = 0x7f1309a5
+.field public static oneme_notifications_settings_other_new_user_button:I = 0x7f0a072f
 
-.field public static oneme_settings_media_video_quality:I = 0x7f1309a6
+.field public static oneme_notifications_settings_other_recycler_view:I = 0x7f0a0730
 
-.field public static oneme_settings_media_video_quality_title:I = 0x7f1309a7
+.field public static oneme_notifications_settings_other_settings_button:I = 0x7f0a0731
 
-.field public static oneme_settings_media_video_title:I = 0x7f1309a8
+.field public static oneme_notifications_settings_other_toolbar:I = 0x7f0a0732
+
+.field public static oneme_notifications_settings_recycler_view:I = 0x7f0a0733
+
+.field public static oneme_notifications_settings_reset_default_button:I = 0x7f0a0734
+
+.field public static oneme_notifications_settings_show_content_button:I = 0x7f0a0735
+
+.field public static oneme_notifications_settings_toolbar:I = 0x7f0a0736

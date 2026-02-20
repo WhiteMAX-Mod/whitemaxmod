@@ -19,7 +19,7 @@
         "",
         "tag",
         "message",
-        "Lb3h;",
+        "Lmah;",
         "v",
         "(Ljava/lang/String;Ljava/lang/String;)V",
         "",

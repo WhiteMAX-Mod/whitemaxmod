@@ -1,36 +1,40 @@
-.class public final synthetic Liti;
+.class public final Liti;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/concurrent/Callable;
+.implements Lq12;
 
 
-# static fields
-.field public static final synthetic a:Liti;
+# instance fields
+.field public final synthetic a:Lnt4;
 
 
 # direct methods
-.method static synthetic constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lnt4;)V
+    .locals 0
 
-    new-instance v0, Liti;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Liti;->a:Liti;
+    iput-object p1, p0, Liti;->a:Lnt4;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final call()Ljava/lang/Object;
+.method public final a(Landroid/hardware/camera2/TotalCaptureResult;)Z
     .locals 1
 
-    sget-object v0, Lv7a;->o:Lxz0;
+    iget-object v0, p0, Liti;->a:Lnt4;
 
-    const/4 v0, 0x0
+    iget-object v0, v0, Lnt4;->X:Ljava/lang/Object;
 
-    return-object v0
+    check-cast v0, Ljti;
+
+    invoke-interface {v0, p1}, Ljti;->a(Landroid/hardware/camera2/TotalCaptureResult;)V
+
+    const/4 p1, 0x0
+
+    return p1
 .end method

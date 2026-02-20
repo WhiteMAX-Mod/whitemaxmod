@@ -3,9 +3,9 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ld4d;
+.implements Lq9d;
 
 
 # virtual methods
-.method public abstract a(Le42;Lgc0;)Z
+.method public abstract a(Lj52;Lbe0;)Z
 .end method

@@ -1,50 +1,44 @@
-.class public final Lw2c;
-.super Licg;
+.class public interface abstract Lw2c;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public c:Ljava/lang/String;
-
-
 # virtual methods
-.method public final d(Lpq9;Ljava/lang/String;)V
+.method public b()Z
     .locals 1
 
-    const-string v0, "url"
+    const/4 v0, 0x1
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_0
-
-    invoke-virtual {p1}, Lpq9;->O0()Ljava/lang/String;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lw2c;->c:Ljava/lang/String;
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p1}, Lpq9;->B()V
-
-    return-void
+    return v0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public abstract f()I
+.end method
 
-    iget-object v0, p0, Lw2c;->c:Ljava/lang/String;
+.method public abstract g()V
+.end method
 
-    const-string v1, "{url=\'"
+.method public abstract getId()J
+.end method
 
-    const-string v2, "\'}"
+.method public abstract getType()Lx2c;
+.end method
 
-    invoke-static {v1, v0, v2}, Lj27;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+.method public h()Z
+    .locals 1
 
-    move-result-object v0
+    const/4 v0, 0x0
 
-    return-object v0
+    return v0
+.end method
+
+.method public abstract i()[B
+.end method
+
+.method public j()I
+    .locals 1
+
+    const/4 v0, 0x5
+
+    return v0
 .end method

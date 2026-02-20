@@ -9,9 +9,9 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 4
 
-    invoke-static {}, Lfp2;->values()[Lfp2;
+    invoke-static {}, Ly55;->values()[Ly55;
 
     move-result-object v0
 
@@ -32,27 +32,51 @@
     const/4 v2, 0x2
 
     :try_start_1
-    aput v2, v0, v1
+    aput v2, v0, v2
     :try_end_1
     .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
     :catch_1
-    const/4 v1, 0x3
+    const/4 v2, 0x3
+
+    const/4 v3, 0x4
 
     :try_start_2
-    aput v1, v0, v2
+    aput v2, v0, v3
     :try_end_2
     .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
     :catch_2
-    const/4 v2, 0x4
-
     :try_start_3
-    aput v2, v0, v1
+    aput v3, v0, v1
     :try_end_3
     .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
 
     :catch_3
+    const/4 v1, 0x5
+
+    :try_start_4
+    aput v1, v0, v2
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+
+    :catch_4
+    const/4 v2, 0x6
+
+    :try_start_5
+    aput v2, v0, v1
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
+
+    :catch_5
+    const/4 v1, 0x7
+
+    :try_start_6
+    aput v1, v0, v2
+    :try_end_6
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
+
+    :catch_6
     sput-object v0, Ltn2;->$EnumSwitchMapping$0:[I
 
     return-void

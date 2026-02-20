@@ -193,7 +193,7 @@
 
     iget-object v3, p1, Lru/ok/android/externcalls/sdk/stat/p2prelay/P2PRelayRequestReason;->trigger:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lgbj;->D(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -264,7 +264,7 @@
 
     iget-wide v2, p0, Lru/ok/android/externcalls/sdk/stat/p2prelay/P2PRelayRequestReason;->threshold:J
 
-    invoke-static {v0, v1, v2, v3}, Lcbh;->i(IIJ)I
+    invoke-static {v0, v1, v2, v3}, Leni;->a(IIJ)I
 
     move-result v0
 
@@ -292,21 +292,15 @@
 
     const-string v5, ", threshold="
 
-    invoke-static {v4, v1, v2, v0, v5}, Lmrf;->m(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v4, v1, v2, v0, v5}, Ljye;->m(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
     const-string v1, ", violationsCount="
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v2, ")"
 
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, v1, v3, v2}, Lj64;->i(Ljava/lang/StringBuilder;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

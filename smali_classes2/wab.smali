@@ -1,39 +1,57 @@
 .class public final Lwab;
-.super Ljava/lang/Object;
+.super Lda4;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Z
+.field public X:Z
 
-.field public final b:J
+.field public synthetic Y:Ljava/lang/Object;
 
-.field public final c:J
+.field public final synthetic Z:Labb;
 
-.field public final d:Lnq6;
+.field public d:Lpo9;
 
-.field public final e:Lnq6;
+.field public o:Lp10;
 
-.field public final f:Lvn5;
+.field public s0:I
 
 
 # direct methods
-.method public constructor <init>(ZJJLnq6;Lnq6;Lvn5;)V
+.method public constructor <init>(Labb;Lda4;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lwab;->Z:Labb;
 
-    iput-boolean p1, p0, Lwab;->a:Z
-
-    iput-wide p2, p0, Lwab;->b:J
-
-    iput-wide p4, p0, Lwab;->c:J
-
-    iput-object p6, p0, Lwab;->d:Lnq6;
-
-    iput-object p7, p0, Lwab;->e:Lnq6;
-
-    iput-object p8, p0, Lwab;->f:Lvn5;
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iput-object p1, p0, Lwab;->Y:Ljava/lang/Object;
+
+    iget p1, p0, Lwab;->s0:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lwab;->s0:I
+
+    const/4 p1, 0x0
+
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Lwab;->Z:Labb;
+
+    invoke-virtual {v1, p1, p1, v0, p0}, Labb;->d(Lpo9;Lp10;ZLda4;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

@@ -1,116 +1,372 @@
 .class public final Lu5c;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lu5c;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final synthetic X:Lone/me/chats/picker/chats/PickerChatsListWidget;
+.field public final a:Landroid/net/Uri;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final b:Landroid/net/Uri;
+
+.field public final c:Lef4;
+
+.field public final d:Lbf5;
+
+.field public final o:Landroid/net/Uri;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chats/picker/chats/PickerChatsListWidget;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p2, p0, Lu5c;->X:Lone/me/chats/picker/chats/PickerChatsListWidget;
+    new-instance v0, Lnmb;
 
-    const/4 p2, 0x2
+    const/4 v1, 0x6
 
-    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, v1}, Lnmb;-><init>(I)V
+
+    sput-object v0, Lu5c;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public constructor <init>(Landroid/net/Uri;Landroid/net/Uri;Lef4;Lbf5;Landroid/net/Uri;)V
     .locals 0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p0, p1, p2}, Lu5c;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iput-object p1, p0, Lu5c;->a:Landroid/net/Uri;
+
+    iput-object p2, p0, Lu5c;->b:Landroid/net/Uri;
+
+    iput-object p3, p0, Lu5c;->c:Lef4;
+
+    iput-object p4, p0, Lu5c;->d:Lbf5;
+
+    iput-object p5, p0, Lu5c;->o:Landroid/net/Uri;
+
+    return-void
+.end method
+
+.method public static a(Lu5c;Lik8;)Landroid/net/Uri;
+    .locals 1
+
+    if-nez p0, :cond_0
+
+    invoke-virtual {p1}, Lik8;->a()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {p0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_0
+    iget-object v0, p0, Lu5c;->b:Landroid/net/Uri;
+
+    if-eqz v0, :cond_1
+
+    return-object v0
+
+    :cond_1
+    iget-object p0, p0, Lu5c;->a:Landroid/net/Uri;
+
+    if-eqz p0, :cond_2
+
+    return-object p0
+
+    :cond_2
+    invoke-virtual {p1}, Lik8;->a()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {p0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static b(Lu5c;Lik8;)Z
+    .locals 2
+
+    const/4 v0, 0x0
+
+    if-nez p0, :cond_0
+
+    return v0
+
+    :cond_0
+    iget-object v1, p0, Lu5c;->d:Lbf5;
+
+    if-nez v1, :cond_2
+
+    iget-object v1, p0, Lu5c;->c:Lef4;
+
+    if-nez v1, :cond_2
+
+    invoke-static {p0, p1}, Lu5c;->a(Lu5c;Lik8;)Landroid/net/Uri;
+
+    move-result-object p0
+
+    invoke-virtual {p1}, Lik8;->a()Ljava/lang/String;
 
     move-result-object p1
 
-    check-cast p1, Lu5c;
+    invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    move-result-object p1
 
-    invoke-virtual {p1, p2}, Lu5c;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p0, p1}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
 
-    return-object p2
+    move-result p0
+
+    if-nez p0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    return v0
+
+    :cond_2
+    :goto_0
+    const/4 p0, 0x1
+
+    return p0
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
 
-    new-instance v0, Lu5c;
+# virtual methods
+.method public final describeContents()I
+    .locals 1
 
-    iget-object v1, p0, Lu5c;->X:Lone/me/chats/picker/chats/PickerChatsListWidget;
+    const/4 v0, 0x0
 
-    invoke-direct {v0, p2, v1}, Lu5c;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chats/picker/chats/PickerChatsListWidget;)V
-
-    iput-object p1, v0, Lu5c;->o:Ljava/lang/Object;
-
-    return-object v0
+    return v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 3
 
-    iget-object v0, p0, Lu5c;->X:Lone/me/chats/picker/chats/PickerChatsListWidget;
+    if-ne p0, p1, :cond_0
 
-    iget-object v1, v0, Lone/me/chats/picker/chats/PickerChatsListWidget;->A0:Ljava/lang/Object;
+    const/4 p1, 0x1
 
-    iget-object v2, p0, Lu5c;->o:Ljava/lang/Object;
+    return p1
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    :cond_0
+    const/4 v0, 0x0
 
-    check-cast v2, Ljava/lang/Boolean;
+    if-eqz p1, :cond_6
 
-    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
+    const-class v1, Lu5c;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v2
+
+    if-eq v1, v2, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lu5c;
+
+    iget-object v1, p0, Lu5c;->a:Landroid/net/Uri;
+
+    iget-object v2, p1, Lu5c;->a:Landroid/net/Uri;
+
+    invoke-static {v1, v2}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v0
+
+    :cond_2
+    iget-object v1, p0, Lu5c;->b:Landroid/net/Uri;
+
+    iget-object v2, p1, Lu5c;->b:Landroid/net/Uri;
+
+    invoke-static {v1, v2}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v0
+
+    :cond_3
+    iget-object v1, p0, Lu5c;->c:Lef4;
+
+    iget-object v2, p1, Lu5c;->c:Lef4;
+
+    invoke-static {v1, v2}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    return v0
+
+    :cond_4
+    iget-object v1, p0, Lu5c;->d:Lbf5;
+
+    iget-object v2, p1, Lu5c;->d:Lbf5;
+
+    invoke-static {v1, v2}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_5
+
+    return v0
+
+    :cond_5
+    iget-object v0, p0, Lu5c;->o:Landroid/net/Uri;
+
+    iget-object p1, p1, Lu5c;->o:Landroid/net/Uri;
+
+    invoke-static {v0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_0
+    return p1
 
-    sget-object p1, Lone/me/chats/picker/chats/PickerChatsListWidget;->C0:[Lz28;
+    :cond_6
+    :goto_0
+    return v0
+.end method
 
-    invoke-virtual {v0}, Lone/me/chats/picker/chats/PickerChatsListWidget;->F0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+.method public final hashCode()I
+    .locals 3
 
-    move-result-object p1
+    const/4 v0, 0x0
 
-    invoke-interface {v1}, Lo58;->getValue()Ljava/lang/Object;
+    iget-object v1, p0, Lu5c;->a:Landroid/net/Uri;
 
-    move-result-object v0
+    if-eqz v1, :cond_0
 
-    check-cast v0, Lkb3;
+    invoke-virtual {v1}, Landroid/net/Uri;->hashCode()I
 
-    invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->j(Lcsd;)V
+    move-result v1
 
     goto :goto_0
 
     :cond_0
-    sget-object p1, Lone/me/chats/picker/chats/PickerChatsListWidget;->C0:[Lz28;
-
-    invoke-virtual {v0}, Lone/me/chats/picker/chats/PickerChatsListWidget;->F0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
-
-    move-result-object p1
-
-    invoke-interface {v1}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lkb3;
-
-    invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->p0(Lcsd;)V
+    move v1, v0
 
     :goto_0
-    sget-object p1, Lb3h;->a:Lb3h;
+    mul-int/lit8 v1, v1, 0x1f
 
-    return-object p1
+    iget-object v2, p0, Lu5c;->b:Landroid/net/Uri;
+
+    if-eqz v2, :cond_1
+
+    invoke-virtual {v2}, Landroid/net/Uri;->hashCode()I
+
+    move-result v2
+
+    goto :goto_1
+
+    :cond_1
+    move v2, v0
+
+    :goto_1
+    add-int/2addr v1, v2
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v2, p0, Lu5c;->c:Lef4;
+
+    if-eqz v2, :cond_2
+
+    invoke-virtual {v2}, Lef4;->hashCode()I
+
+    move-result v2
+
+    goto :goto_2
+
+    :cond_2
+    move v2, v0
+
+    :goto_2
+    add-int/2addr v1, v2
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v2, p0, Lu5c;->d:Lbf5;
+
+    if-eqz v2, :cond_3
+
+    invoke-virtual {v2}, Lbf5;->hashCode()I
+
+    move-result v2
+
+    goto :goto_3
+
+    :cond_3
+    move v2, v0
+
+    :goto_3
+    add-int/2addr v1, v2
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v2, p0, Lu5c;->o:Landroid/net/Uri;
+
+    if-eqz v2, :cond_4
+
+    invoke-virtual {v2}, Landroid/net/Uri;->hashCode()I
+
+    move-result v0
+
+    :cond_4
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 1
+
+    iget-object v0, p0, Lu5c;->a:Landroid/net/Uri;
+
+    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
+
+    iget-object v0, p0, Lu5c;->b:Landroid/net/Uri;
+
+    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
+
+    iget-object v0, p0, Lu5c;->c:Lef4;
+
+    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
+
+    iget-object v0, p0, Lu5c;->d:Lbf5;
+
+    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
+
+    iget-object v0, p0, Lu5c;->o:Landroid/net/Uri;
+
+    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
+
+    return-void
 .end method

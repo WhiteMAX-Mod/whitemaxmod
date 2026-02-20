@@ -1,37 +1,152 @@
-.class public abstract Lcsd;
-.super Ljava/lang/Object;
+.class public final Lcsd;
+.super Lslg;
 .source "SourceFile"
 
 
+# instance fields
+.field public final synthetic e:Ldsd;
+
+.field public final synthetic f:J
+
+
+# direct methods
+.method public constructor <init>(Ljava/lang/String;Ldsd;J)V
+    .locals 0
+
+    iput-object p2, p0, Lcsd;->e:Ldsd;
+
+    iput-wide p3, p0, Lcsd;->f:J
+
+    const/4 p2, 0x1
+
+    invoke-direct {p0, p1, p2}, Lslg;-><init>(Ljava/lang/String;Z)V
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public g(Landroid/graphics/Rect;Landroid/view/View;Landroidx/recyclerview/widget/RecyclerView;Lpsd;)V
-    .locals 0
+.method public final a()J
+    .locals 8
 
-    invoke-virtual {p2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    iget-object v0, p0, Lcsd;->e:Ldsd;
 
-    move-result-object p2
+    monitor-enter v0
 
-    check-cast p2, Lesd;
+    :try_start_0
+    iget-boolean v1, v0, Ldsd;->u:Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    iget-object p2, p2, Lesd;->a:Ltsd;
+    if-eqz v1, :cond_0
 
-    invoke-virtual {p2}, Ltsd;->h()I
+    monitor-exit v0
 
-    const/4 p2, 0x0
+    goto :goto_1
 
-    invoke-virtual {p1, p2, p2, p2, p2}, Landroid/graphics/Rect;->set(IIII)V
+    :cond_0
+    :try_start_1
+    iget-object v1, v0, Ldsd;->k:Lcmi;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    return-void
-.end method
+    if-nez v1, :cond_1
 
-.method public h(Landroid/graphics/Canvas;Landroidx/recyclerview/widget/RecyclerView;Lpsd;)V
-    .locals 0
+    monitor-exit v0
 
-    return-void
-.end method
+    goto :goto_1
 
-.method public i(Landroid/graphics/Canvas;Landroidx/recyclerview/widget/RecyclerView;)V
-    .locals 0
+    :cond_1
+    :try_start_2
+    iget-boolean v2, v0, Ldsd;->w:Z
 
-    return-void
+    const/4 v3, -0x1
+
+    if-eqz v2, :cond_2
+
+    iget v2, v0, Ldsd;->v:I
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v1
+
+    goto :goto_2
+
+    :cond_2
+    move v2, v3
+
+    :goto_0
+    iget v4, v0, Ldsd;->v:I
+
+    const/4 v5, 0x1
+
+    add-int/2addr v4, v5
+
+    iput v4, v0, Ldsd;->v:I
+
+    iput-boolean v5, v0, Ldsd;->w:Z
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    monitor-exit v0
+
+    if-eq v2, v3, :cond_3
+
+    new-instance v1, Ljava/net/SocketTimeoutException;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "sent ping but didn\'t receive pong within "
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v6, v0, Ldsd;->d:J
+
+    invoke-virtual {v3, v6, v7}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v4, "ms (after "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sub-int/2addr v2, v5
+
+    const-string v4, " successful ping/pongs)"
+
+    invoke-static {v3, v2, v4}, Ltx8;->m(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Ljava/net/SocketTimeoutException;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v1}, Ldsd;->c(Ljava/lang/Exception;)V
+
+    goto :goto_1
+
+    :cond_3
+    :try_start_3
+    sget-object v2, Ltz0;->d:Ltz0;
+
+    const/16 v3, 0x9
+
+    invoke-virtual {v1, v3, v2}, Lcmi;->d(ILtz0;)V
+    :try_end_3
+    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_0
+
+    goto :goto_1
+
+    :catch_0
+    move-exception v1
+
+    invoke-virtual {v0, v1}, Ldsd;->c(Ljava/lang/Exception;)V
+
+    :goto_1
+    iget-wide v0, p0, Lcsd;->f:J
+
+    return-wide v0
+
+    :goto_2
+    monitor-exit v0
+
+    throw v1
 .end method

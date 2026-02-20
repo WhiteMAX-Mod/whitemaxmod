@@ -1,27 +1,45 @@
 .class public final Lvrc;
-.super Ldsc;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:J
+.field public final a:Z
+
+.field public final b:Z
 
 
 # direct methods
-.method public constructor <init>(J)V
+.method public constructor <init>(ZZ)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lvrc;->a:J
+    iput-boolean p1, p0, Lvrc;->a:Z
+
+    iput-boolean p2, p0, Lvrc;->b:Z
 
     return-void
+.end method
+
+.method public static a(Lvrc;Z)Lvrc;
+    .locals 1
+
+    iget-boolean v0, p0, Lvrc;->b:Z
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance p0, Lvrc;
+
+    invoke-direct {p0, p1, v0}, Lvrc;-><init>(ZZ)V
+
+    return-object p0
 .end method
 
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+    .locals 4
 
     const/4 v0, 0x1
 
@@ -41,60 +59,63 @@
     :cond_1
     check-cast p1, Lvrc;
 
-    iget-wide v3, p0, Lvrc;->a:J
+    iget-boolean v1, p0, Lvrc;->a:Z
 
-    iget-wide v5, p1, Lvrc;->a:J
+    iget-boolean v3, p1, Lvrc;->a:Z
 
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_2
+    if-eq v1, v3, :cond_2
 
     return v2
 
     :cond_2
+    iget-boolean v1, p0, Lvrc;->b:Z
+
+    iget-boolean p1, p1, Lvrc;->b:Z
+
+    if-eq v1, p1, :cond_3
+
+    return v2
+
+    :cond_3
     return v0
-.end method
-
-.method public final getItemId()J
-    .locals 2
-
-    const/16 v0, 0x1000
-
-    int-to-long v0, v0
-
-    return-wide v0
 .end method
 
 .method public final hashCode()I
     .locals 2
 
-    iget-wide v0, p0, Lvrc;->a:J
+    iget-boolean v0, p0, Lvrc;->a:Z
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
 
     move-result v0
 
-    return v0
-.end method
+    mul-int/lit8 v0, v0, 0x1f
 
-.method public final m()I
-    .locals 1
+    iget-boolean v1, p0, Lvrc;->b:Z
 
-    const/16 v0, 0x1000
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    return v0
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 4
+    .locals 5
 
-    const-string v0, "DebugProfileInfo(id="
+    const-string v0, ", isEnabled="
 
     const-string v1, ")"
 
-    iget-wide v2, p0, Lvrc;->a:J
+    const-string v2, "State(isChecked="
 
-    invoke-static {v2, v3, v0, v1}, Lcbh;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    iget-boolean v3, p0, Lvrc;->a:Z
+
+    iget-boolean v4, p0, Lvrc;->b:Z
+
+    invoke-static {v2, v3, v0, v4, v1}, Lkb0;->j(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

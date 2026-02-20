@@ -1,49 +1,93 @@
-.class public final Ldkc;
-.super Lo84;
+.class public final enum Ldkc;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic X:Lvs8;
+# static fields
+.field public static final enum a:Ldkc;
 
-.field public Y:I
+.field public static final enum b:Ldkc;
 
-.field public d:Lvs8;
+.field public static final enum c:Ldkc;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public static final synthetic d:[Ldkc;
+
+.field public static final synthetic o:Lpm5;
 
 
 # direct methods
-.method public constructor <init>(Lvs8;Lo84;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput-object p1, p0, Ldkc;->X:Lvs8;
+    new-instance v0, Ldkc;
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    const-string v1, "INVISIBLE"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Ldkc;->a:Ldkc;
+
+    new-instance v1, Ldkc;
+
+    const-string v2, "HALF_SCREEN"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Ldkc;->b:Ldkc;
+
+    new-instance v2, Ldkc;
+
+    const-string v3, "FULL_SCREEN"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Ldkc;->c:Ldkc;
+
+    filled-new-array {v0, v1, v2}, [Ldkc;
+
+    move-result-object v0
+
+    sput-object v0, Ldkc;->d:[Ldkc;
+
+    new-instance v1, Lpm5;
+
+    invoke-direct {v1, v0}, Lpm5;-><init>([Ljava/lang/Enum;)V
+
+    sput-object v1, Ldkc;->o:Lpm5;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public static valueOf(Ljava/lang/String;)Ldkc;
     .locals 1
 
-    iput-object p1, p0, Ldkc;->o:Ljava/lang/Object;
+    const-class v0, Ldkc;
 
-    iget p1, p0, Ldkc;->Y:I
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    const/high16 v0, -0x80000000
+    move-result-object p0
 
-    or-int/2addr p1, v0
+    check-cast p0, Ldkc;
 
-    iput p1, p0, Ldkc;->Y:I
+    return-object p0
+.end method
 
-    iget-object p1, p0, Ldkc;->X:Lvs8;
+.method public static values()[Ldkc;
+    .locals 1
 
-    invoke-virtual {p1, p0}, Lvs8;->a(Lo84;)Ljava/lang/Object;
+    sget-object v0, Ldkc;->d:[Ldkc;
 
-    move-result-object p1
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    return-object p1
+    move-result-object v0
+
+    check-cast v0, [Ldkc;
+
+    return-object v0
 .end method

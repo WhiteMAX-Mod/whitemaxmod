@@ -1,144 +1,177 @@
-.class public final synthetic Ljg2;
-.super Ljava/lang/Object;
+.class public final Ljg2;
+.super Lpdg;
 .source "SourceFile"
 
 # interfaces
-.implements Lcy3;
+.implements Lys6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lah2;
 
-.field public final synthetic b:Ljava/util/List;
+.field public final synthetic Y:Z
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/util/List;)V
+.method public constructor <init>(Lah2;ZLkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p1, p0, Ljg2;->a:I
+    iput-object p1, p0, Ljg2;->X:Lah2;
 
-    iput-object p2, p0, Ljg2;->b:Ljava/util/List;
+    iput-boolean p2, p0, Ljg2;->Y:Z
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Lpdg;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 5
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Ljg2;->a:I
+    check-cast p1, Lnd4;
 
-    check-cast p1, Lch2;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p0, p1, p2}, Ljg2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-object p1
 
-    iget-object v0, p0, Ljg2;->b:Ljava/util/List;
+    check-cast p1, Ljg2;
 
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    sget-object p2, Lmah;->a:Lmah;
 
-    move-result-object v0
+    invoke-virtual {p1, p2}, Ljg2;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    return-object p2
+.end method
 
-    move-result v1
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
 
-    if-eqz v1, :cond_0
+    new-instance v0, Ljg2;
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    iget-object v1, p0, Ljg2;->X:Lah2;
+
+    iget-boolean v2, p0, Ljg2;->Y:Z
+
+    invoke-direct {v0, v1, v2, p2}, Ljg2;-><init>(Lah2;ZLkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Ljg2;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 13
+
+    iget-object v0, p0, Ljg2;->o:Ljava/lang/Object;
+
+    check-cast v0, Lnd4;
+
+    invoke-static {p1}, Lbvj;->i(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Ljg2;->X:Lah2;
+
+    invoke-virtual {p1}, Lah2;->r()Lte2;
 
     move-result-object v1
 
-    check-cast v1, Ljava/lang/Long;
+    sget-object v2, Lmah;->a:Lmah;
 
-    iget-object v2, p1, Lch2;->S:Lys;
+    if-nez v1, :cond_0
 
-    invoke-virtual {v2, v1}, Ladf;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    goto :goto_0
+    return-object v2
 
     :cond_0
-    return-void
+    iget-object v3, v1, Lte2;->b:Lzi2;
 
-    :pswitch_0
-    iget-object v0, p0, Ljg2;->b:Ljava/util/List;
+    iget-wide v4, v3, Lzi2;->a:J
 
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    const-wide/16 v6, 0x0
+
+    cmp-long v4, v4, v6
+
+    if-nez v4, :cond_1
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
 
-    :goto_1
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    move-result v1
+    move-result-object v0
 
-    if-eqz v1, :cond_1
+    const-string v1, "Try update revokePrivateLink with charServerId == 0"
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-static {v0, v1}, Ltej;->t(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result-object v1
+    iget-object p1, p1, Lah2;->r:Lj88;
 
-    check-cast v1, Ljava/lang/Long;
+    invoke-interface {p1}, Lj88;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {p1}, Lch2;->c()Ljava/util/Map;
+    move-result-object p1
 
-    move-result-object v2
+    check-cast p1, Lje4;
 
-    invoke-interface {v2, v1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    goto :goto_1
+    const-string v1, "Try update revokePrivateLink with charServerId == 0. ChatChangeLink"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    const-string v1, "ONEME-18920"
+
+    invoke-virtual {p1, v1, v0}, Lje4;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-object v2
 
     :cond_1
-    return-void
+    iget-object v0, p1, Lah2;->q:Lj88;
 
-    :pswitch_1
-    iget-object v0, p0, Ljg2;->b:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    invoke-interface {v0}, Lj88;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    :goto_2
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    move-object v4, v0
 
-    move-result v1
+    check-cast v4, Li5b;
 
-    if-eqz v1, :cond_2
+    iget-wide v5, v1, Lte2;->a:J
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    iget-wide v7, v3, Lzi2;->a:J
 
-    move-result-object v1
+    const/4 v9, 0x0
 
-    check-cast v1, Ljava/lang/Long;
+    const/4 v10, 0x0
 
-    invoke-virtual {p1}, Lch2;->c()Ljava/util/Map;
+    const/4 v11, 0x1
 
-    move-result-object v2
+    const/4 v12, 0x0
 
-    const-wide/16 v3, 0x0
+    invoke-virtual/range {v4 .. v12}, Li5b;->f(JJILjava/lang/String;ZLjava/util/Map;)J
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    move-result-wide v0
 
-    move-result-object v3
+    iget-boolean v3, p0, Ljg2;->Y:Z
 
-    invoke-interface {v2, v1, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    if-eqz v3, :cond_2
 
-    goto :goto_2
+    iget-object p1, p1, Lah2;->A:Ljava/util/concurrent/atomic/AtomicLong;
+
+    invoke-virtual {p1, v0, v1}, Ljava/util/concurrent/atomic/AtomicLong;->set(J)V
+
+    return-object v2
 
     :cond_2
-    return-void
+    iget-object p1, p1, Lah2;->B:Ljava/util/concurrent/atomic/AtomicLong;
 
-    nop
+    invoke-virtual {p1, v0, v1}, Ljava/util/concurrent/atomic/AtomicLong;->set(J)V
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v2
 .end method

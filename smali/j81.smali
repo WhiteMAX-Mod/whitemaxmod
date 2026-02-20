@@ -1,98 +1,26 @@
 .class public final Lj81;
-.super Ljava/lang/Object;
+.super Lhmf;
 .source "SourceFile"
-
-# interfaces
-.implements Lnm4;
-
-
-# instance fields
-.field public final synthetic a:J
-
-.field public final synthetic b:Ljava/lang/String;
-
-.field public final synthetic c:Ljava/lang/String;
-
-.field public final synthetic d:Z
-
-
-# direct methods
-.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;Z)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Lj81;->a:J
-
-    iput-object p3, p0, Lj81;->b:Ljava/lang/String;
-
-    iput-object p4, p0, Lj81;->c:Ljava/lang/String;
-
-    iput-boolean p5, p0, Lj81;->d:Z
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 7
+.method public final y(Lmg8;)V
+    .locals 1
 
-    sget-object v0, Lone/me/calls/ui/ui/incoming/CallIncomingScreen;->t0:Lwna;
+    instance-of v0, p1, Lo81;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-nez v0, :cond_0
 
-    new-instance v0, Lone/me/calls/ui/ui/incoming/CallIncomingScreen;
+    return-void
 
-    new-instance v1, Lktb;
+    :cond_0
+    iget-object v0, p0, Lpyd;->a:Landroid/view/View;
 
-    const-string v2, "call_incoming_avatar"
+    check-cast v0, Lf8f;
 
-    iget-object v3, p0, Lj81;->c:Ljava/lang/String;
+    check-cast p1, Lw7f;
 
-    invoke-direct {v1, v2, v3}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-virtual {v0, p1}, Lf8f;->setModelItem(Lw7f;)V
 
-    new-instance v2, Lktb;
-
-    const-string v3, "call_incoming_name"
-
-    iget-object v4, p0, Lj81;->b:Ljava/lang/String;
-
-    invoke-direct {v2, v3, v4}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    iget-wide v3, p0, Lj81;->a:J
-
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v3
-
-    new-instance v4, Lktb;
-
-    const-string v5, "call_incoming_chat_id"
-
-    invoke-direct {v4, v5, v3}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    iget-boolean v3, p0, Lj81;->d:Z
-
-    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v3
-
-    new-instance v5, Lktb;
-
-    const-string v6, "call_incoming_video"
-
-    invoke-direct {v5, v6, v3}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    filled-new-array {v1, v2, v4, v5}, [Lktb;
-
-    move-result-object v1
-
-    invoke-static {v1}, Laaj;->c([Lktb;)Landroid/os/Bundle;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Lone/me/calls/ui/ui/incoming/CallIncomingScreen;-><init>(Landroid/os/Bundle;)V
-
-    return-object v0
+    return-void
 .end method

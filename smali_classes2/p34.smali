@@ -1,80 +1,80 @@
-.class public final synthetic Lp34;
-.super Ljava/lang/Object;
+.class public final Lp34;
+.super Lhmf;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/view/View$OnClickListener;
 
+# virtual methods
+.method public final E(La34;)V
+    .locals 5
 
-# instance fields
-.field public final synthetic a:I
+    iget-object v0, p0, Lpyd;->a:Landroid/view/View;
 
-.field public final synthetic b:Lr34;
+    check-cast v0, Lf9b;
 
-.field public final synthetic c:Lmy3;
+    iget-wide v1, p1, La34;->a:J
 
+    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
 
-# direct methods
-.method public synthetic constructor <init>(Lr34;Lmy3;I)V
-    .locals 0
+    move-result v3
 
-    iput p3, p0, Lp34;->a:I
+    invoke-virtual {v0, v3}, Landroid/view/View;->setId(I)V
 
-    iput-object p1, p0, Lp34;->b:Lr34;
+    iget-object v3, p1, La34;->b:Ljava/lang/CharSequence;
 
-    iput-object p2, p0, Lp34;->c:Lmy3;
+    invoke-virtual {v0, v3}, Lf9b;->setTitle(Ljava/lang/CharSequence;)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget-object v3, p1, La34;->o:Lhpg;
+
+    const/4 v4, 0x0
+
+    if-eqz v3, :cond_0
+
+    invoke-virtual {v3, p0}, Lhpg;->a(Lpyd;)Ljava/lang/CharSequence;
+
+    move-result-object v3
+
+    goto :goto_0
+
+    :cond_0
+    move-object v3, v4
+
+    :goto_0
+    invoke-virtual {v0, v3}, Lf9b;->setSubtitle(Ljava/lang/CharSequence;)V
+
+    iget-boolean v3, p1, La34;->s0:Z
+
+    invoke-virtual {v0, v3}, Lf9b;->setVerified(Z)V
+
+    invoke-virtual {v0}, Lf9b;->f()V
+
+    invoke-virtual {v0, v4}, Lf9b;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    iget-object v3, p1, La34;->t0:Ljava/lang/CharSequence;
+
+    iget-object p1, p1, La34;->Y:Landroid/net/Uri;
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    :cond_1
+    invoke-virtual {v0, v1, v2, v3, v4}, Lf9b;->g(JLjava/lang/CharSequence;Ljava/lang/String;)V
+
+    const/4 p1, 0x0
+
+    invoke-virtual {v0, p1}, Lf9b;->setSelectionEnabled(Z)V
 
     return-void
 .end method
 
+.method public final bridge synthetic y(Lmg8;)V
+    .locals 0
 
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 4
+    check-cast p1, La34;
 
-    iget p1, p0, Lp34;->a:I
-
-    packed-switch p1, :pswitch_data_0
-
-    iget-object p1, p0, Lp34;->b:Lr34;
-
-    iget-object p1, p1, Lr34;->d:Lnq6;
-
-    new-instance v0, Lwt9;
-
-    iget-object v1, p0, Lp34;->c:Lmy3;
-
-    iget-wide v2, v1, Lmy3;->j:J
-
-    invoke-direct {v0, v2, v3, v1}, Lwt9;-><init>(JLy00;)V
-
-    invoke-interface {p1, v0}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p0, p1}, Lp34;->E(La34;)V
 
     return-void
-
-    :pswitch_0
-    iget-object p1, p0, Lp34;->b:Lr34;
-
-    iget-object p1, p1, Lr34;->d:Lnq6;
-
-    new-instance v0, Lvt9;
-
-    iget-object v1, p0, Lp34;->c:Lmy3;
-
-    iget-wide v2, v1, Lmy3;->j:J
-
-    invoke-direct {v0, v2, v3, v1}, Lvt9;-><init>(JLy00;)V
-
-    invoke-interface {p1, v0}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

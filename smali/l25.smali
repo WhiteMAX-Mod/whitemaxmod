@@ -1,48 +1,82 @@
-.class public final Ll25;
-.super Lo84;
+.class public final enum Ll25;
+.super Ljava/lang/Enum;
+.source "SourceFile"
+
+# interfaces
+.implements Ljava/util/concurrent/Executor;
 
 
-# instance fields
-.field public final synthetic X:Ld83;
+# static fields
+.field public static final enum a:Ll25;
 
-.field public synthetic d:Ljava/lang/Object;
-
-.field public o:I
+.field public static final synthetic b:[Ll25;
 
 
 # direct methods
-.method public constructor <init>(Ld83;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput-object p1, p0, Ll25;->X:Ld83;
+    new-instance v0, Ll25;
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    const-string v1, "INSTANCE"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Ll25;->a:Ll25;
+
+    filled-new-array {v0}, [Ll25;
+
+    move-result-object v0
+
+    sput-object v0, Ll25;->b:[Ll25;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public static valueOf(Ljava/lang/String;)Ll25;
     .locals 1
 
-    iput-object p1, p0, Ll25;->d:Ljava/lang/Object;
+    const-class v0, Ll25;
 
-    iget p1, p0, Ll25;->o:I
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    const/high16 v0, -0x80000000
+    move-result-object p0
 
-    or-int/2addr p1, v0
+    check-cast p0, Ll25;
 
-    iput p1, p0, Ll25;->o:I
+    return-object p0
+.end method
 
-    iget-object p1, p0, Ll25;->X:Ld83;
+.method public static values()[Ll25;
+    .locals 1
 
-    const/4 v0, 0x0
+    sget-object v0, Ll25;->b:[Ll25;
 
-    invoke-virtual {p1, v0, p0}, Ld83;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {v0}, [Ll25;->clone()Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object v0
 
-    return-object p1
+    check-cast v0, [Ll25;
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final execute(Ljava/lang/Runnable;)V
+    .locals 0
+
+    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
+
+    return-void
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "MoreExecutors.directExecutor()"
+
+    return-object v0
 .end method

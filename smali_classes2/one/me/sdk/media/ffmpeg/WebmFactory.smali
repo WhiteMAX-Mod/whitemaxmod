@@ -359,7 +359,7 @@
     if-eqz p1, :cond_0
 
     .line 8
-    new-instance p1, Lyq0;
+    new-instance p1, Lcs0;
 
     .line 9
     invoke-direct {p1}, Ljava/lang/Object;-><init>()V
@@ -384,7 +384,7 @@
     move v3, p3
 
     .line 10
-    invoke-direct/range {v0 .. v5}, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;-><init>(Ljava/io/File;IILyq0;Ljava/lang/String;)V
+    invoke-direct/range {v0 .. v5}, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;-><init>(Ljava/io/File;IILcs0;Ljava/lang/String;)V
 
     .line 11
     invoke-virtual {v0, p4}, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->setLimitFps(Z)V
@@ -642,7 +642,7 @@
 
     move v3, p2
 
-    invoke-direct/range {v0 .. v5}, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;-><init>(Ljava/io/File;IILyq0;Ljava/lang/String;)V
+    invoke-direct/range {v0 .. v5}, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;-><init>(Ljava/io/File;IILcs0;Ljava/lang/String;)V
 
     .line 7
     invoke-virtual {v0, p3}, Lone/me/sdk/media/ffmpeg/AnimatedFileDrawable;->setLimitFps(Z)V
@@ -661,11 +661,11 @@
     const/4 p0, 0x2
 
     .line 10
-    invoke-static {v5, p0, p4}, Lzia;->a(Ljava/lang/String;IZ)Lxia;
+    invoke-static {v5, p0, p4}, Lkla;->a(Ljava/lang/String;IZ)Lila;
 
     move-result-object p0
 
-    invoke-virtual {p0, v0}, Lxia;->e(Lyia;)V
+    invoke-virtual {p0, v0}, Lila;->e(Ljla;)V
 
     return-object v0
 .end method

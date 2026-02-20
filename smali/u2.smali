@@ -7,16 +7,16 @@
 
 
 # instance fields
-.field public final synthetic d:Lida;
+.field public final synthetic d:Laga;
 
 
 # direct methods
-.method public constructor <init>(Lida;Ljava/util/SortedMap;)V
+.method public constructor <init>(Laga;Ljava/util/SortedMap;)V
     .locals 0
 
-    iput-object p1, p0, Lu2;->d:Lida;
+    iput-object p1, p0, Lu2;->d:Laga;
 
-    invoke-direct {p0, p1, p2}, Lp2;-><init>(Lg2;Ljava/util/Map;)V
+    invoke-direct {p0, p1, p2}, Lp2;-><init>(Li2;Ljava/util/Map;)V
 
     return-void
 .end method
@@ -74,9 +74,9 @@
 
     move-result-object p1
 
-    iget-object v1, p0, Lu2;->d:Lida;
+    iget-object v1, p0, Lu2;->d:Laga;
 
-    invoke-direct {v0, v1, p1}, Lu2;-><init>(Lida;Ljava/util/SortedMap;)V
+    invoke-direct {v0, v1, p1}, Lu2;-><init>(Laga;Ljava/util/SortedMap;)V
 
     return-object v0
 .end method
@@ -108,9 +108,9 @@
 
     move-result-object p1
 
-    iget-object p2, p0, Lu2;->d:Lida;
+    iget-object p2, p0, Lu2;->d:Laga;
 
-    invoke-direct {v0, p2, p1}, Lu2;-><init>(Lida;Ljava/util/SortedMap;)V
+    invoke-direct {v0, p2, p1}, Lu2;-><init>(Laga;Ljava/util/SortedMap;)V
 
     return-object v0
 .end method
@@ -128,9 +128,9 @@
 
     move-result-object p1
 
-    iget-object v1, p0, Lu2;->d:Lida;
+    iget-object v1, p0, Lu2;->d:Laga;
 
-    invoke-direct {v0, v1, p1}, Lu2;-><init>(Lida;Ljava/util/SortedMap;)V
+    invoke-direct {v0, v1, p1}, Lu2;-><init>(Laga;Ljava/util/SortedMap;)V
 
     return-object v0
 .end method

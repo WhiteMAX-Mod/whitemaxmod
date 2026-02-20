@@ -1,40 +1,65 @@
 .class public final Lfoh;
-.super Ljava/lang/Object;
+.super Ljava/lang/Throwable;
 .source "SourceFile"
-
-# interfaces
-.implements Lr25;
 
 
 # instance fields
-.field public final synthetic a:Lzih;
-
-.field public final synthetic b:Lmv1;
+.field public final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(Lzih;Lmv1;)V
-    .locals 0
+.method public synthetic constructor <init>(Ljava/lang/String;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 1
+    const/4 v0, 0x1
 
-    iput-object p1, p0, Lfoh;->a:Lzih;
+    iput v0, p0, Lfoh;->a:I
 
-    iput-object p2, p0, Lfoh;->b:Lmv1;
+    invoke-direct {p0, p1}, Ljava/lang/Throwable;-><init>(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    .locals 1
+
+    .line 2
+    const/4 v0, 0x0
+
+    iput v0, p0, Lfoh;->a:I
+
+    invoke-direct {p0, p1, p2}, Ljava/lang/Throwable;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final dispose()V
-    .locals 2
+.method public declared-synchronized fillInStackTrace()Ljava/lang/Throwable;
+    .locals 1
 
-    iget-object v0, p0, Lfoh;->a:Lzih;
+    iget v0, p0, Lfoh;->a:I
 
-    iget-object v1, p0, Lfoh;->b:Lmv1;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->removeOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
+    invoke-super {p0}, Ljava/lang/Throwable;->fillInStackTrace()Ljava/lang/Throwable;
 
-    return-void
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_0
+    monitor-enter p0
+
+    monitor-exit p0
+
+    return-object p0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method

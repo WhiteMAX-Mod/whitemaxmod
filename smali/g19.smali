@@ -1,42 +1,65 @@
-.class public interface abstract Lg19;
-.super Ljava/lang/Object;
+.class public final Lg19;
+.super Lf19;
 .source "SourceFile"
 
 
+# instance fields
+.field public final synthetic g:Lud9;
+
+
+# direct methods
+.method public constructor <init>(Lud9;)V
+    .locals 0
+
+    iput-object p1, p0, Lg19;->g:Lud9;
+
+    invoke-direct {p0, p1}, Lf19;-><init>(Lud9;)V
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public I()V
-    .locals 0
+.method public final l()Lld9;
+    .locals 2
 
-    return-void
-.end method
+    iget-object v0, p0, Lg19;->g:Lud9;
 
-.method public abstract L(Li19;)V
-.end method
+    iget-object v1, v0, Lud9;->X:Ld19;
 
-.method public R(Lite;)Lmj7;
-    .locals 1
+    if-eqz v1, :cond_1
 
-    new-instance p1, Lgue;
+    iget-object v0, v0, Lud9;->c:Ld19;
 
-    const/4 v0, -0x6
+    if-ne v1, v0, :cond_0
 
-    invoke-direct {p1, v0}, Lgue;-><init>(I)V
+    new-instance v0, Lld9;
 
-    invoke-static {p1}, Lrs8;->c(Ljava/lang/Object;)Lmj7;
+    iget-object v1, p0, Lyl0;->b:Ljava/lang/Object;
 
-    move-result-object p1
+    check-cast v1, Le19;
 
-    return-object p1
-.end method
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-.method public u(Lute;)V
-    .locals 0
+    invoke-static {v1}, Lv4;->h(Le19;)Landroid/media/session/MediaSessionManager$RemoteUserInfo;
 
-    return-void
-.end method
+    move-result-object v1
 
-.method public v()V
-    .locals 0
+    invoke-direct {v0, v1}, Lld9;-><init>(Landroid/media/session/MediaSessionManager$RemoteUserInfo;)V
 
-    return-void
+    return-object v0
+
+    :cond_0
+    iget-object v0, v1, Ld19;->d:Lld9;
+
+    return-object v0
+
+    :cond_1
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "This should be called inside of onGetRoot, onLoadChildren, onLoadItem, onSearch, or onCustomAction methods"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method

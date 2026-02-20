@@ -1,159 +1,115 @@
-.class public final enum Ltn3;
-.super Ljava/lang/Enum;
+.class public final synthetic Ltn3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final enum X:Ltn3;
-
-.field public static final enum Y:Ltn3;
-
-.field public static final synthetic Z:[Ltn3;
-
-.field public static final o:Lbg3;
+# interfaces
+.implements Lks6;
 
 
 # instance fields
-.field public final a:Llhg;
-
-.field public final b:Llhg;
-
-.field public final c:Llhg;
-
-.field public final d:Lrjb;
+.field public final synthetic a:B
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 8
-
-    new-instance v0, Ltn3;
-
-    sget v1, Ly9b;->e:I
-
-    new-instance v3, Llhg;
-
-    invoke-direct {v3, v1}, Llhg;-><init>(I)V
-
-    sget v1, Ly9b;->a:I
-
-    new-instance v4, Llhg;
-
-    invoke-direct {v4, v1}, Llhg;-><init>(I)V
-
-    sget v1, Lj6e;->q:I
-
-    new-instance v5, Llhg;
-
-    invoke-direct {v5, v1}, Llhg;-><init>(I)V
-
-    new-instance v6, Lrjb;
-
-    sget v1, Lv5e;->Y1:I
-
-    invoke-direct {v6, v1}, Lrjb;-><init>(I)V
-
-    const-string v1, "DEFAULT"
-
-    const/4 v2, 0x0
-
-    invoke-direct/range {v0 .. v6}, Ltn3;-><init>(Ljava/lang/String;ILlhg;Llhg;Llhg;Lrjb;)V
-
-    sput-object v0, Ltn3;->X:Ltn3;
-
-    new-instance v1, Ltn3;
-
-    sget v2, Ly9b;->c:I
-
-    new-instance v4, Llhg;
-
-    invoke-direct {v4, v2}, Llhg;-><init>(I)V
-
-    sget v2, Ly9b;->b:I
-
-    new-instance v5, Llhg;
-
-    invoke-direct {v5, v2}, Llhg;-><init>(I)V
-
-    sget v2, Lj6e;->E:I
-
-    new-instance v6, Llhg;
-
-    invoke-direct {v6, v2}, Llhg;-><init>(I)V
-
-    new-instance v7, Lrjb;
-
-    sget v2, Lf6e;->J0:I
-
-    invoke-direct {v7, v2}, Lrjb;-><init>(I)V
-
-    const-string v2, "P2P"
-
-    const/4 v3, 0x1
-
-    invoke-direct/range {v1 .. v7}, Ltn3;-><init>(Ljava/lang/String;ILlhg;Llhg;Llhg;Lrjb;)V
-
-    sput-object v1, Ltn3;->Y:Ltn3;
-
-    filled-new-array {v0, v1}, [Ltn3;
-
-    move-result-object v0
-
-    sput-object v0, Ltn3;->Z:[Ltn3;
-
-    new-instance v0, Lbg3;
-
-    const/16 v1, 0x11
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Lbg3;-><init>(IB)V
-
-    sput-object v0, Ltn3;->o:Lbg3;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;ILlhg;Llhg;Llhg;Lrjb;)V
+.method public synthetic constructor <init>(B)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Ltn3;->a:Llhg;
-
-    iput-object p4, p0, Ltn3;->b:Llhg;
-
-    iput-object p5, p0, Ltn3;->c:Llhg;
-
-    iput-object p6, p0, Ltn3;->d:Lrjb;
+    iput-byte p1, p0, Ltn3;->a:B
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Ltn3;
-    .locals 1
 
-    const-class v0, Ltn3;
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget-byte v0, p0, Ltn3;->a:B
 
-    move-result-object p0
+    check-cast p1, Lsde;
 
-    check-cast p0, Ltn3;
+    const-string v1, "SELECT * FROM complain_reasons WHERE type_id = ?"
 
-    return-object p0
-.end method
+    invoke-interface {p1, v1}, Lsde;->y0(Ljava/lang/String;)Lxde;
 
-.method public static values()[Ltn3;
-    .locals 1
+    move-result-object p1
 
-    sget-object v0, Ltn3;->Z:[Ltn3;
+    const/4 v1, 0x1
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    int-to-long v2, v0
 
-    move-result-object v0
+    :try_start_0
+    invoke-interface {p1, v1, v2, v3}, Lxde;->b(IJ)V
 
-    check-cast v0, [Ltn3;
+    const-string v0, "id"
 
-    return-object v0
+    invoke-static {p1, v0}, Lawj;->b(Lxde;Ljava/lang/String;)I
+
+    move-result v0
+
+    const-string v1, "type_id"
+
+    invoke-static {p1, v1}, Lawj;->b(Lxde;Ljava/lang/String;)I
+
+    move-result v1
+
+    const-string v2, "complain_reasons"
+
+    invoke-static {p1, v2}, Lawj;->b(Lxde;Ljava/lang/String;)I
+
+    move-result v2
+
+    invoke-interface {p1}, Lxde;->u0()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    invoke-interface {p1, v0}, Lxde;->getLong(I)J
+
+    move-result-wide v3
+
+    invoke-interface {p1, v1}, Lxde;->getLong(I)J
+
+    move-result-wide v0
+
+    long-to-int v0, v0
+
+    int-to-byte v0, v0
+
+    invoke-interface {p1, v2}, Lxde;->c0(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lzrj;->b(Ljava/lang/String;)Ljava/util/ArrayList;
+
+    move-result-object v1
+
+    new-instance v2, Lvn3;
+
+    invoke-direct {v2, v3, v4, v0, v1}, Lvn3;-><init>(JBLjava/util/List;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_1
+
+    :cond_0
+    const/4 v2, 0x0
+
+    :goto_0
+    invoke-interface {p1}, Ljava/lang/AutoCloseable;->close()V
+
+    return-object v2
+
+    :goto_1
+    invoke-interface {p1}, Ljava/lang/AutoCloseable;->close()V
+
+    throw v0
 .end method

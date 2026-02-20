@@ -4,16 +4,20 @@
 
 
 # instance fields
-.field public final a:Lby6;
+.field public final a:J
+
+.field public final b:J
 
 
 # direct methods
-.method public constructor <init>(Lby6;)V
+.method public constructor <init>(JJ)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lrfc;->a:Lby6;
+    iput-wide p1, p0, Lrfc;->a:J
+
+    iput-wide p3, p0, Lrfc;->b:J
 
     return-void
 .end method

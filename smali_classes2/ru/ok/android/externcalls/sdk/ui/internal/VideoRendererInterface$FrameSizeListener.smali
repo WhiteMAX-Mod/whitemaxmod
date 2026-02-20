@@ -23,7 +23,7 @@
         "",
         "width",
         "height",
-        "Lb3h;",
+        "Lmah;",
         "onFrame",
         "(II)V",
         "calls-sdk_release"

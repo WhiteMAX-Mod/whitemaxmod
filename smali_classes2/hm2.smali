@@ -1,232 +1,323 @@
 .class public final Lhm2;
-.super Licg;
+.super Lmi3;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:J
+# static fields
+.field public static final j:Lhm2;
 
-.field public Y:J
+.field public static volatile k:Z
 
-.field public c:Ljava/util/ArrayList;
-
-.field public d:I
-
-.field public o:I
+.field public static final l:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lpq9;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0, p1}, Licg;-><init>(Lpq9;)V
+    new-instance v0, Lhm2;
 
-    iget-object p1, p0, Lhm2;->c:Ljava/util/ArrayList;
+    new-instance v1, Lr0c;
 
-    if-nez p1, :cond_0
+    invoke-direct {v1}, Lr0c;-><init>()V
 
-    new-instance p1, Ljava/util/ArrayList;
+    const/4 v2, 0x1
 
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+    iput-boolean v2, v1, Lr0c;->a:Z
 
-    iput-object p1, p0, Lhm2;->c:Ljava/util/ArrayList;
+    invoke-virtual {v1}, Lr0c;->a()Lu0c;
 
-    :cond_0
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lmi3;-><init>(Lu0c;)V
+
+    sput-object v0, Lhm2;->j:Lhm2;
+
+    const-string v0, "open_chats_to_render"
+
+    sput-object v0, Lhm2;->l:Ljava/lang/String;
+
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(Lpq9;Ljava/lang/String;)V
+.method public final i()Ljava/lang/String;
     .locals 1
 
-    if-eqz p2, :cond_5
+    sget-object v0, Lhm2;->l:Ljava/lang/String;
 
-    invoke-virtual {p2}, Ljava/lang/String;->hashCode()I
+    return-object v0
+.end method
+
+.method public final n()Lcia;
+    .locals 2
+
+    invoke-virtual {p0}, Lc1c;->j()Lh1c;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lh1c;->a()B
 
     move-result v0
 
-    sparse-switch v0, :sswitch_data_0
+    invoke-static {v0}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
-    goto :goto_0
+    move-result-object v0
 
-    :sswitch_0
-    const-string v0, "backward"
+    const-string v1, "class"
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lhwj;->b(Ljava/lang/Object;Ljava/lang/String;)Lcia;
 
-    move-result p2
+    move-result-object v0
 
-    if-nez p2, :cond_0
+    return-object v0
+.end method
+
+.method public final r(Z)V
+    .locals 0
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x1
+
+    sput-boolean p1, Lhm2;->k:Z
+
+    :cond_0
+    return-void
+.end method
+
+.method public final s()V
+    .locals 9
+
+    iget-object v0, p0, Lmi3;->h:Ljava/lang/String;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    new-instance v2, Lexg;
+
+    invoke-direct {v2, v0}, Lexg;-><init>(Ljava/lang/String;)V
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p1}, Lpq9;->L0()J
+    move-object v2, v1
 
-    move-result-wide p1
+    :goto_0
+    if-eqz v2, :cond_1
 
-    iput-wide p1, p0, Lhm2;->Y:J
+    iget-object v0, v2, Lexg;->a:Ljava/lang/String;
 
-    return-void
+    move-object v5, v0
 
-    :sswitch_1
-    const-string v0, "total"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_1
-
-    goto :goto_0
+    goto :goto_1
 
     :cond_1
-    invoke-virtual {p1}, Lpq9;->K0()I
+    move-object v5, v1
 
-    move-result p1
+    :goto_1
+    if-nez v5, :cond_4
 
-    iput p1, p0, Lhm2;->o:I
+    iget-object v0, p0, Lc1c;->b:Ljava/lang/String;
 
-    return-void
+    sget-object v2, Ltej;->a:Lafb;
 
-    :sswitch_2
-    const-string v0, "pos"
+    if-nez v2, :cond_2
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_2
-
-    goto :goto_0
+    goto :goto_2
 
     :cond_2
-    invoke-virtual {p1}, Lpq9;->K0()I
+    sget-object v3, Lzm8;->X:Lzm8;
 
-    move-result p1
+    invoke-virtual {v2, v3}, Lafb;->b(Lzm8;)Z
 
-    iput p1, p0, Lhm2;->d:I
+    move-result v4
 
-    return-void
+    if-eqz v4, :cond_3
 
-    :sswitch_3
-    const-string v0, "messages"
+    const-string v4, "Invoked \'onAppCreated\', but traceId is null or empty!"
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_3
-
-    goto :goto_0
+    invoke-virtual {v2, v3, v0, v4, v1}, Lafb;->c(Lzm8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_3
-    invoke-static {p1}, Le00;->e(Lpq9;)Le00;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lhm2;->c:Ljava/util/ArrayList;
-
+    :goto_2
     return-void
-
-    :sswitch_4
-    const-string v0, "forward"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_4
-
-    goto :goto_0
 
     :cond_4
-    invoke-virtual {p1}, Lpq9;->L0()J
+    sget-object v2, Lhm2;->j:Lhm2;
 
-    move-result-wide p1
+    const/4 v7, 0x0
 
-    iput-wide p1, p0, Lhm2;->X:J
+    const/16 v8, 0x78
+
+    const-string v3, "app_init"
+
+    const/4 v4, 0x0
+
+    const/4 v6, 0x0
+
+    invoke-static/range {v2 .. v8}, Lc1c;->c(Lc1c;Ljava/lang/String;ILjava/lang/String;Ljava/lang/Long;Lcia;I)V
 
     return-void
-
-    :cond_5
-    :goto_0
-    invoke-virtual {p1}, Lpq9;->B()V
-
-    return-void
-
-    :sswitch_data_0
-    .sparse-switch
-        -0x285c6d3b -> :sswitch_4
-        -0x1b8afeb4 -> :sswitch_3
-        0x1b254 -> :sswitch_2
-        0x696db44 -> :sswitch_1
-        0x7e7acbe3 -> :sswitch_0
-    .end sparse-switch
 .end method
 
-.method public final e()Ljava/util/List;
-    .locals 1
+.method public final t(Lcia;)Ljava/lang/String;
+    .locals 6
 
-    iget-object v0, p0, Lhm2;->c:Ljava/util/ArrayList;
-
-    if-nez v0, :cond_0
+    sget-boolean p1, Lhm2;->k:Z
 
     const/4 v0, 0x0
 
+    if-eqz p1, :cond_2
+
+    iget-object p1, p0, Lc1c;->b:Ljava/lang/String;
+
+    sget-object v1, Ltej;->a:Lafb;
+
+    if-nez v1, :cond_0
+
+    goto :goto_0
+
     :cond_0
-    invoke-static {v0}, Lpi3;->Z(Ljava/lang/Iterable;)Ljava/util/List;
+    sget-object v2, Lzm8;->X:Lzm8;
 
-    move-result-object v0
+    invoke-virtual {v1, v2}, Lafb;->b(Lzm8;)Z
 
-    return-object v0
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    sget-object v3, Lhm2;->j:Lhm2;
+
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v3, Lhm2;->l:Ljava/lang/String;
+
+    const-string v4, "Metric \'"
+
+    const-string v5, "\' was already collected once, skip collecting again!"
+
+    invoke-static {v4, v3, v5}, Ltx8;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v2, p1, v3, v0}, Lafb;->c(Lzm8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
+    :goto_0
+    const-string p1, ""
+
+    return-object p1
+
+    :cond_2
+    const/4 p1, 0x1
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    const-string v1, "warm"
+
+    invoke-static {p1, v1}, Lhwj;->b(Ljava/lang/Object;Ljava/lang/String;)Lcia;
+
+    move-result-object p1
+
+    const/4 v1, 0x5
+
+    invoke-static {p0, v0, p1, v0, v1}, Lc1c;->o(Lc1c;Ljava/lang/String;Lcia;Ljava/lang/Long;I)Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 10
+.method public final v(I)V
+    .locals 9
 
-    invoke-virtual {p0}, Lhm2;->e()Ljava/util/List;
+    iget-object v0, p0, Lmi3;->h:Ljava/lang/String;
 
-    move-result-object v0
+    const/4 v1, 0x0
 
-    invoke-interface {v0}, Ljava/util/Collection;->size()I
+    if-eqz v0, :cond_0
 
-    move-result v0
+    new-instance v2, Lexg;
 
-    iget v1, p0, Lhm2;->d:I
+    invoke-direct {v2, v0}, Lexg;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lhm2;->o:I
+    goto :goto_0
 
-    iget-wide v3, p0, Lhm2;->X:J
+    :cond_0
+    move-object v2, v1
 
-    iget-wide v5, p0, Lhm2;->Y:J
+    :goto_0
+    if-eqz v2, :cond_1
 
-    const-string v7, ", pos="
+    iget-object v0, v2, Lexg;->a:Ljava/lang/String;
 
-    const-string v8, ", total="
+    move-object v5, v0
 
-    const-string v9, "{messages="
+    goto :goto_1
 
-    invoke-static {v9, v0, v7, v1, v8}, Lkz1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_1
+    move-object v5, v1
 
-    move-result-object v0
+    :goto_1
+    if-nez v5, :cond_4
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    iget-object p1, p0, Lc1c;->b:Ljava/lang/String;
 
-    const-string v1, ", forward="
+    sget-object v0, Ltej;->a:Lafb;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-nez v0, :cond_2
 
-    invoke-virtual {v0, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    goto :goto_2
 
-    const-string v1, ", backward="
+    :cond_2
+    sget-object v2, Lzm8;->X:Lzm8;
 
-    const-string v2, "}"
+    invoke-virtual {v0, v2}, Lafb;->b(Lzm8;)Z
 
-    invoke-static {v5, v6, v1, v2, v0}, Lxi4;->h(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    move-result v3
 
-    move-result-object v0
+    if-eqz v3, :cond_3
 
-    return-object v0
+    const-string v3, "Invoked \'onReadyToDraw\', but traceId is null or empty!"
+
+    invoke-virtual {v0, v2, p1, v3, v1}, Lafb;->c(Lzm8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_3
+    :goto_2
+    return-void
+
+    :cond_4
+    sget-object v2, Lhm2;->j:Lhm2;
+
+    new-instance v7, Lcia;
+
+    invoke-direct {v7}, Lcia;-><init>()V
+
+    if-eqz p1, :cond_5
+
+    const-string v0, "waited_frames"
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    invoke-virtual {v7, v0, p1}, Lcia;->j(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    :cond_5
+    const/4 v6, 0x0
+
+    const/16 v8, 0x50
+
+    const-string v3, "chat_list_render"
+
+    const/4 v4, 0x3
+
+    invoke-static/range {v2 .. v8}, Lc1c;->c(Lc1c;Ljava/lang/String;ILjava/lang/String;Ljava/lang/Long;Lcia;I)V
+
+    return-void
 .end method

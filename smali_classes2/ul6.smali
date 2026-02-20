@@ -1,76 +1,59 @@
-.class public final synthetic Lul6;
-.super Ljava/lang/Object;
+.class public final Lul6;
+.super Lda4;
 .source "SourceFile"
-
-# interfaces
-.implements Llq6;
 
 
 # instance fields
-.field public final synthetic a:Lxl6;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic b:Lpm0;
+.field public final synthetic Y:Lvl6;
 
-.field public final synthetic c:I
+.field public Z:I
 
-.field public final synthetic d:I
+.field public d:Lvl6;
+
+.field public o:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lxl6;Lpm0;II)V
+.method public constructor <init>(Lvl6;Lda4;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lul6;->Y:Lvl6;
 
-    iput-object p1, p0, Lul6;->a:Lxl6;
-
-    iput-object p2, p0, Lul6;->b:Lpm0;
-
-    iput p3, p0, Lul6;->c:I
-
-    iput p4, p0, Lul6;->d:I
+    invoke-direct {p0, p2}, Lda4;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 5
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    iget-object v0, p0, Lul6;->a:Lxl6;
+    iput-object p1, p0, Lul6;->X:Ljava/lang/Object;
 
-    iget-object v0, v0, Lxl6;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+    iget p1, p0, Lul6;->Z:I
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+    const/high16 v0, -0x80000000
 
-    move-result-object v0
+    or-int/2addr p1, v0
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    iput p1, p0, Lul6;->Z:I
 
-    move-result v1
+    const-wide/16 v1, 0x0
 
-    if-eqz v1, :cond_0
+    const/4 v5, 0x0
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    iget-object v0, p0, Lul6;->Y:Lvl6;
 
-    move-result-object v1
+    const/4 v4, 0x0
 
-    check-cast v1, Leob;
+    move-object v3, p0
 
-    iget-object v2, p0, Lul6;->b:Lpm0;
+    invoke-virtual/range {v0 .. v5}, Lvl6;->b(JLda4;Ljava/util/List;Z)Ljava/lang/Object;
 
-    iget v3, p0, Lul6;->c:I
+    move-result-object p1
 
-    iget v4, p0, Lul6;->d:I
-
-    invoke-interface {v1, v2, v3, v4}, Leob;->s(Lpm0;II)V
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v0, Lb3h;->a:Lb3h;
-
-    return-object v0
+    return-object p1
 .end method

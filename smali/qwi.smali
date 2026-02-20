@@ -1,100 +1,118 @@
 .class public final Lqwi;
-.super Ljava/lang/Object;
+.super Lv78;
 .source "SourceFile"
 
 # interfaces
-.implements Lvwa;
+.implements Lks6;
 
 
-# static fields
-.field public static final a:Lqwi;
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lnj1;
+
+.field public final synthetic c:Loj1;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lnj1;Loj1;)V
+    .locals 1
 
-    new-instance v0, Lqwi;
+    const/4 v0, 0x1
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput v0, p0, Lqwi;->a:I
 
-    sput-object v0, Lqwi;->a:Lqwi;
+    .line 1
+    iput-object p1, p0, Lqwi;->b:Lnj1;
 
-    new-instance v0, Lbri;
+    iput-object p2, p0, Lqwi;->c:Loj1;
 
-    const/4 v1, 0x1
+    const/4 p1, 0x1
 
-    invoke-direct {v0, v1}, Lbri;-><init>(I)V
+    invoke-direct {p0, p1}, Lv78;-><init>(I)V
 
-    const-class v1, Lpri;
+    return-void
+.end method
 
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
+.method public constructor <init>(Loj1;Lnj1;)V
+    .locals 1
 
-    move-result-object v0
+    const/4 v0, 0x0
 
-    const/4 v2, 0x2
+    iput v0, p0, Lqwi;->a:I
 
-    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
+    .line 2
+    iput-object p1, p0, Lqwi;->c:Loj1;
 
-    move-result-object v0
+    iput-object p2, p0, Lqwi;->b:Lnj1;
 
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
+    const/4 p1, 0x1
 
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x4
-
-    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x5
-
-    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x6
-
-    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
+    invoke-direct {p0, p1}, Lv78;-><init>(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    iget v0, p0, Lqwi;->a:I
 
-    move-result-object p1
+    packed-switch v0, :pswitch_data_0
 
-    throw p1
+    check-cast p1, Lmj1;
+
+    iget-object v0, p0, Lqwi;->b:Lnj1;
+
+    iget-object v1, p0, Lqwi;->c:Loj1;
+
+    invoke-virtual {v0, v1, p1}, Lnj1;->d(Loj1;Lmj1;)V
+
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
+
+    :pswitch_0
+    check-cast p1, Lmj1;
+
+    iget-object v0, p0, Lqwi;->c:Loj1;
+
+    iget-object v1, v0, Loj1;->i:Ljava/util/ArrayList;
+
+    iget-object v2, p0, Lqwi;->b:Lnj1;
+
+    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v0, v2, Lnj1;->a:Landroid/opengl/EGLSurface;
+
+    const/4 v1, 0x0
+
+    iput-object v1, v2, Lnj1;->a:Landroid/opengl/EGLSurface;
+
+    invoke-virtual {p1, v0}, Lmj1;->d(Landroid/opengl/EGLSurface;)V
+
+    invoke-virtual {v2, p1}, Lnj1;->c(Lmj1;)V
+
+    :goto_0
+    sget-object p1, Lmah;->a:Lmah;
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

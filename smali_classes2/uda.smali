@@ -1,49 +1,86 @@
 .class public final Luda;
-.super Lo84;
+.super Lujg;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic X:Lku0;
-
-.field public Y:I
-
-.field public d:Ljm9;
-
-.field public synthetic o:Ljava/lang/Object;
-
-
-# direct methods
-.method public constructor <init>(Lku0;Lo84;)V
-    .locals 0
-
-    iput-object p1, p0, Luda;->X:Lku0;
-
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+.field public c:Ljava/util/Map;
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final d(Lws9;Ljava/lang/String;)V
+    .locals 4
 
-    iput-object p1, p0, Luda;->o:Ljava/lang/Object;
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget p1, p0, Luda;->Y:I
+    const-string v0, "stats"
 
-    const/high16 v0, -0x80000000
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    or-int/2addr p1, v0
+    move-result p2
 
-    iput p1, p0, Luda;->Y:I
+    if-nez p2, :cond_0
 
-    iget-object p1, p0, Luda;->X:Lku0;
+    invoke-virtual {p1}, Lws9;->B()V
 
-    invoke-virtual {p1, p0}, Lku0;->e(Lo84;)Ljava/lang/Comparable;
+    return-void
 
-    move-result-object p1
+    :cond_0
+    new-instance p2, Ljava/util/HashMap;
 
-    return-object p1
+    invoke-direct {p2}, Ljava/util/HashMap;-><init>()V
+
+    iput-object p2, p0, Luda;->c:Ljava/util/Map;
+
+    invoke-static {p1}, Lm1j;->p(Lws9;)I
+
+    move-result p2
+
+    const/4 v0, 0x0
+
+    :goto_0
+    if-ge v0, p2, :cond_1
+
+    iget-object v1, p0, Luda;->c:Ljava/util/Map;
+
+    invoke-virtual {p1}, Lws9;->M0()J
+
+    move-result-wide v2
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-static {p1}, Lks9;->a(Lws9;)Lks9;
+
+    move-result-object v3
+
+    invoke-interface {v1, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    return-void
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    iget-object v0, p0, Luda;->c:Ljava/util/Map;
+
+    invoke-static {v0}, Ll0j;->c(Ljava/util/Map;)I
+
+    move-result v0
+
+    const-string v1, "{stats="
+
+    const-string v2, "}"
+
+    invoke-static {v0, v1, v2}, Lau1;->g(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

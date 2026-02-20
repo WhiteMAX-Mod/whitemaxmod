@@ -1,128 +1,80 @@
-.class public abstract Ltjj;
+.class public final Ltjj;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Loza;
+
+
+# static fields
+.field public static final a:Ltjj;
+
 
 # direct methods
-.method public static final a(Lpdc;Lqp3;Ljava/lang/String;)V
-    .locals 4
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-interface {p1}, Lqp3;->n()Lkme;
+    new-instance v0, Ltjj;
 
-    move-result-object p1
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    sput-object v0, Ltjj;->a:Ltjj;
 
-    const/4 p1, 0x0
+    new-instance v0, Lp7j;
 
-    const/4 v0, 0x1
+    const/4 v1, 0x1
 
-    invoke-static {v0, p1}, Li1h;->p(ILjava/lang/Object;)Z
+    invoke-direct {v0, v1}, Lp7j;-><init>(I)V
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const-class v1, Lh8j;
 
-    new-instance p0, Ljava/lang/StringBuilder;
-
-    const-string p1, "in the polymorphic scope of \'"
-
-    invoke-direct {p0, p1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const/4 p1, 0x0
-
-    invoke-virtual {p1}, Lrd3;->c()Ljava/lang/String;
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v2, 0x2
 
-    const/16 v0, 0x27
+    invoke-static {v0, v2}, Leni;->i(Ljava/util/HashMap;I)Lp7j;
 
-    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
 
-    move-result-object p0
+    move-result-object v0
 
-    new-instance v0, Lkotlinx/serialization/SerializationException;
+    const/4 v2, 0x3
 
-    if-nez p2, :cond_0
+    invoke-static {v0, v2}, Leni;->i(Ljava/util/HashMap;I)Lp7j;
 
-    new-instance p1, Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    const-string p2, "Class discriminator was missing and no default serializers were registered "
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
 
-    invoke-direct {p1, p2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v2, 0x4
 
-    const/16 p0, 0x2e
+    invoke-static {v0, v2}, Leni;->i(Ljava/util/HashMap;I)Lp7j;
 
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v1, v0}, Leni;->g(Ljava/lang/Class;Lp7j;)Ljava/util/HashMap;
 
-    move-result-object p0
+    move-result-object v0
 
-    goto :goto_0
+    invoke-static {v0}, Leni;->m(Ljava/util/HashMap;)V
 
-    :cond_0
-    const-string v1, "\' is not found "
+    return-void
+.end method
 
-    const-string v2, ".\nCheck if class with serial name \'"
 
-    const-string v3, "Serializer for subclass \'"
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    invoke-static {v3, p2, v1, p0, v2}, Lkz1;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object p0
-
-    const-string v1, "\' exists and serializer is registered in a corresponding SerializersModule.\nTo be registered automatically, class \'"
-
-    const-string v2, "\' has to be \'@Serializable\', and the base class \'"
-
-    invoke-static {p0, p2, v1, p2, v2}, Lmrf;->s(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {p1}, Lrd3;->c()Ljava/lang/String;
+    invoke-static {p1}, Lkb0;->d(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p1, "\' has to be sealed and \'@Serializable\'."
-
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    :goto_0
-    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public static final b(Ley3;)Z
-    .locals 0
-
-    if-eqz p0, :cond_1
-
-    invoke-virtual {p0}, Ley3;->E()Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_1
-    :goto_0
-    const/4 p0, 0x1
-
-    return p0
+    throw p1
 .end method

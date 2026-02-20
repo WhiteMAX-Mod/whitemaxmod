@@ -1,131 +1,98 @@
 .class public final Lk3c;
-.super Lhja;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:D
+.field public a:J
 
-.field public final c:D
+.field public b:I
 
+.field public c:Ljava/lang/String;
 
-# direct methods
-.method public constructor <init>(DD)V
-    .locals 1
+.field public d:J
 
-    sget-object v0, Lb3h;->a:Lb3h;
+.field public e:Ljava/lang/String;
 
-    invoke-direct {p0, v0}, Lhja;-><init>(Ljava/lang/Object;)V
+.field public f:Ljava/lang/String;
 
-    iput-wide p1, p0, Lk3c;->b:D
-
-    iput-wide p3, p0, Lk3c;->c:D
-
-    return-void
-.end method
+.field public g:Ljava/lang/String;
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final a()Ll3c;
+    .locals 14
 
-    const/4 v0, 0x1
+    new-instance v0, Ll3c;
 
-    if-ne p0, p1, :cond_0
+    iget-wide v3, p0, Lk3c;->a:J
 
-    return v0
+    iget v5, p0, Lk3c;->b:I
 
-    :cond_0
-    instance-of v1, p1, Lk3c;
+    iget-object v6, p0, Lk3c;->c:Ljava/lang/String;
 
-    const/4 v2, 0x0
+    iget-wide v7, p0, Lk3c;->d:J
 
-    if-nez v1, :cond_1
+    iget-object v10, p0, Lk3c;->e:Ljava/lang/String;
 
-    return v2
+    iget-object v11, p0, Lk3c;->f:Ljava/lang/String;
 
-    :cond_1
-    check-cast p1, Lk3c;
+    iget-object v12, p0, Lk3c;->g:Ljava/lang/String;
 
-    iget-wide v3, p0, Lk3c;->b:D
+    const/4 v13, 0x0
 
-    iget-wide v5, p1, Lk3c;->b:D
+    const-wide/16 v1, 0x0
 
-    invoke-static {v3, v4, v5, v6}, Ljava/lang/Double;->compare(DD)I
+    const/4 v9, 0x0
 
-    move-result v1
+    invoke-direct/range {v0 .. v13}, Ll3c;-><init>(JJILjava/lang/String;JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
 
-    if-eqz v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-wide v3, p0, Lk3c;->c:D
-
-    iget-wide v5, p1, Lk3c;->c:D
-
-    invoke-static {v3, v4, v5, v6}, Ljava/lang/Double;->compare(DD)I
-
-    move-result p1
-
-    if-eqz p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
+    return-object v0
 .end method
 
-.method public final hashCode()I
-    .locals 3
+.method public final b()Ljava/lang/String;
+    .locals 2
 
-    iget-wide v0, p0, Lk3c;->b:D
+    iget-object v0, p0, Lk3c;->e:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Ljava/lang/Double;->hashCode(D)I
+    invoke-static {v0}, Ll1j;->d(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    if-eqz v0, :cond_0
 
-    iget-wide v1, p0, Lk3c;->c:D
+    iget-object v0, p0, Lk3c;->f:Ljava/lang/String;
 
-    invoke-static {v1, v2}, Ljava/lang/Double;->hashCode(D)I
+    invoke-static {v0}, Ll1j;->d(Ljava/lang/CharSequence;)Z
 
-    move-result v1
+    move-result v0
 
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
+    if-eqz v0, :cond_0
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "SendLocation(lat="
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-wide v1, p0, Lk3c;->b:D
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    const-string v1, ", lon="
+    iget-object v1, p0, Lk3c;->e:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v1, p0, Lk3c;->c:D
+    const-string v1, " "
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, ")"
+    iget-object v1, p0, Lk3c;->f:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
+
+    return-object v0
+
+    :cond_0
+    iget-object v0, p0, Lk3c;->e:Ljava/lang/String;
 
     return-object v0
 .end method
