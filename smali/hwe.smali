@@ -492,7 +492,7 @@
     invoke-virtual {v2}, Ly49;->s()Lzc4;
 
     :cond_10
-    const-string v2, "https://sdk-api.apptracer.ru"
+    const-string v2, "https://0.0.0.0"
 
     invoke-static {v2}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 

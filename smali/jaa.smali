@@ -1773,7 +1773,7 @@
     invoke-virtual {v10}, Ly49;->s()Lzc4;
 
     :cond_f
-    const-string v7, "https://sdk-api.apptracer.ru"
+    const-string v7, "https://0.0.0.0"
 
     invoke-static {v7}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
