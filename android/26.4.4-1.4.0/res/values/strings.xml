@@ -1231,9 +1231,9 @@
     <string name="oneme_login_welcome_continue_btn">Войти</string>
     <string name="oneme_login_welcome_description">Здесь всё для общения</string>
     <string name="oneme_login_welcome_privacy_policy_clickable_part">политику конфиденциальности</string>
-    <string name="oneme_login_welcome_terms">Нажимая «Продолжить», вы принимаете политику конфиденциальности и пользовательское соглашение</string>
+    <string name="oneme_login_welcome_terms">Нажимая «Продолжить», вы принимаете политику конфиденциальности и пользовательское соглашение WhiteMAX и MAX</string>
     <string name="oneme_login_welcome_title">Привет</string>
-    <string name="oneme_login_welcome_user_agreement_clickable_part">пользовательское соглашение</string>
+    <string name="oneme_login_welcome_user_agreement_clickable_part">пользовательское соглашение WhiteMAX и MAX</string>
     <string name="oneme_main_calls_title">Звонки</string>
     <string name="oneme_main_chats_title">Чаты</string>
     <string name="oneme_main_contacts_title">Контакты</string>
@@ -1733,7 +1733,7 @@
     <string name="oneme_too_many_requests_bottomsheet_title">Превышено количество запросов</string>
     <string name="oneme_unknown_contact_snackbar_add_contact">Вы добавили контакт</string>
     <string name="oneme_unsupported_attach_message">Обновите WhiteMAX, чтобы увидеть сообщение. Эта версия устарела</string>
-    <string name="oneme_user_agreement_link">https://legal.max.ru/ps</string>
+    <string name="oneme_user_agreement_link">https://telegra.ph/tos-links-03-01</string>
     <string name="oneme_video_message">видеосообщение</string>
     <string name="oneme_wait_please">Пожалуйста, подождите</string>
     <string name="original">оригинал</string>
