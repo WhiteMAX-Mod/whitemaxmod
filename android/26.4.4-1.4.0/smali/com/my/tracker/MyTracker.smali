@@ -462,52 +462,18 @@
 .end method
 
 .method public static handleDeeplink(Landroid/content/Intent;)Ljava/lang/String;
-    .locals 3
+    .locals 1
 
-    sget-object v0, Lcom/my/tracker/MyTracker;->b:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
-
-    move-result v0
-
-    const/4 v1, 0x2
-
-    const/4 v2, 0x0
-
-    if-eq v0, v1, :cond_0
-
-    new-instance p0, Ljava/lang/StringBuilder;
-
-    const-string v1, "MyTracker hasn\'t been initialized yet. You should call MyTracker.initTracker() method first. InitState="
-
-    invoke-direct {p0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
+    invoke-virtual {p0}, Landroid/content/Intent;->getData()Landroid/net/Uri;
     move-result-object p0
 
-    invoke-static {p0}, Lcom/my/tracker/core/Tracer;->e(Ljava/lang/String;)V
-
-    return-object v2
+    if-eqz p0, :cond_0
+        invoke-virtual {p0}, Landroid/net/Uri;->toString()Ljava/lang/String;
+        move-result-object p0
+        return-object p0
 
     :cond_0
-    sget-object v0, Lcom/my/tracker/MyTracker;->f:Lcom/my/tracker/core/b;
-
-    if-nez v0, :cond_1
-
-    const-string p0, "MyTracker hasn\'t been initialized yet. You should call MyTracker.initTracker() method first. engine is null"
-
-    invoke-static {p0}, Lcom/my/tracker/core/Tracer;->e(Ljava/lang/String;)V
-
-    return-object v2
-
-    :cond_1
-    invoke-virtual {v0, p0}, Lcom/my/tracker/core/b;->a(Landroid/content/Intent;)Ljava/lang/String;
-
-    move-result-object p0
-
+    const/4 p0, 0x0
     return-object p0
 .end method
 
