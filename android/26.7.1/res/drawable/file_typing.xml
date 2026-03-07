@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector android:drawable="@drawable/$file_typing__0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <target android:name="_R_G_L_4_G" android:animation="@drawable/$file_typing__1" />
+    <target android:name="_R_G_L_4_G" android:animation="@drawable/$file_typing__3" />
+    <target android:name="_R_G_L_3_G_D_0_P_0" android:animation="@drawable/$file_typing__8" />
+    <target android:name="_R_G_L_3_G_N_2_T_0" android:animation="@drawable/$file_typing__12" />
+    <target android:name="_R_G_L_2_G_D_0_P_0" android:animation="@drawable/$file_typing__19" />
+    <target android:name="_R_G_L_2_G_N_2_T_0" android:animation="@drawable/$file_typing__23" />
+    <target android:name="_R_G_L_1_G_D_0_P_0" android:animation="@drawable/$file_typing__30" />
+    <target android:name="_R_G_L_1_G_D_0_P_0" android:animation="@drawable/$file_typing__35" />
+    <target android:name="_R_G_L_1_G" android:animation="@drawable/$file_typing__40" />
+    <target android:name="_R_G_L_0_G_D_0_P_0" android:animation="@drawable/$file_typing__47" />
+    <target android:name="_R_G_L_0_G" android:animation="@drawable/$file_typing__49" />
+</animated-vector>

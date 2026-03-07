@@ -1,0 +1,25 @@
+.class public final Lmx7;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# virtual methods
+.method public final serializer()Lli8;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lli8;"
+        }
+    .end annotation
+
+    sget-object v0, Lnx7;->a:Ljava/lang/Object;
+
+    invoke-interface {v0}, Lxk8;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lli8;
+
+    return-object v0
+.end method

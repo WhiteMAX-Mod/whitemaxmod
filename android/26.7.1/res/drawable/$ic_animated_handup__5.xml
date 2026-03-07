@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set android:ordering="together"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <objectAnimator android:interpolator="@drawable/$ic_animated_handup__6" android:duration="167" android:startOffset="0" android:valueFrom="0" android:valueTo="16" android:valueType="floatType" android:propertyName="rotation" />
+    <objectAnimator android:interpolator="@drawable/$ic_animated_handup__7" android:duration="200" android:startOffset="167" android:valueFrom="16" android:valueTo="-14" android:valueType="floatType" android:propertyName="rotation" />
+    <objectAnimator android:interpolator="@drawable/$ic_animated_handup__8" android:duration="217" android:startOffset="367" android:valueFrom="-14" android:valueTo="10" android:valueType="floatType" android:propertyName="rotation" />
+    <objectAnimator android:interpolator="@drawable/$ic_animated_handup__9" android:duration="200" android:startOffset="583" android:valueFrom="10" android:valueTo="-2" android:valueType="floatType" android:propertyName="rotation" />
+    <objectAnimator android:interpolator="@drawable/$ic_animated_handup__10" android:duration="217" android:startOffset="783" android:valueFrom="-2" android:valueTo="0" android:valueType="floatType" android:propertyName="rotation" />
+</set>

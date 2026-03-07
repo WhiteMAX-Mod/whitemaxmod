@@ -1,0 +1,26 @@
+.class public abstract Ly1e;
+.super Ljava/lang/Object;
+
+
+# static fields
+.field public static oneme_main_bottom_bar:I = 0x7f0a06e1
+
+.field public static oneme_main_calls_bottom_item:I = 0x7f0a06e2
+
+.field public static oneme_main_calls_container:I = 0x7f0a06e3
+
+.field public static oneme_main_chats_bottom_item:I = 0x7f0a06e4
+
+.field public static oneme_main_chats_container:I = 0x7f0a06e5
+
+.field public static oneme_main_contacts_bottom_item:I = 0x7f0a06e6
+
+.field public static oneme_main_contacts_container:I = 0x7f0a06e7
+
+.field public static oneme_main_container:I = 0x7f0a06e8
+
+.field public static oneme_main_root:I = 0x7f0a06e9
+
+.field public static oneme_main_settings_bottom_item:I = 0x7f0a06ea
+
+.field public static oneme_main_settings_container:I = 0x7f0a06eb

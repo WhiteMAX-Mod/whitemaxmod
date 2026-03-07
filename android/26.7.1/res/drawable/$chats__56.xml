@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set android:ordering="together"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <objectAnimator android:interpolator="@drawable/$chats__57" android:duration="100" android:startOffset="0" android:valueFrom="0" android:valueTo="-7" android:valueType="floatType" android:propertyName="rotation" />
+    <objectAnimator android:interpolator="@drawable/$chats__58" android:duration="234" android:startOffset="100" android:valueFrom="-7" android:valueTo="7" android:valueType="floatType" android:propertyName="rotation" />
+    <objectAnimator android:interpolator="@drawable/$chats__59" android:duration="250" android:startOffset="334" android:valueFrom="7" android:valueTo="-7" android:valueType="floatType" android:propertyName="rotation" />
+    <objectAnimator android:interpolator="@drawable/$chats__60" android:duration="250" android:startOffset="583" android:valueFrom="-7" android:valueTo="0" android:valueType="floatType" android:propertyName="rotation" />
+</set>

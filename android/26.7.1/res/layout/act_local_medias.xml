@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/act_local_medias__fl_root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.viewpager2.widget.ViewPager2 android:id="@id/act_local_medias__view_pager" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <include android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?android:actionBarSize" app:layout_constraintTop_toTopOf="parent" layout="@layout/toolbar" />
+    <ViewStub android:id="@id/act_local_medias__vs_toolbox" android:layout="@layout/cl_local_media_toolbox" android:inflatedId="@id/act_local_medias__vs_toolbox" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toTopOf="@id/act_local_medias__preview" />
+    <ru.ok.messages.media.mediabar.MediaBarPreviewLayout android:id="@id/act_local_medias__preview" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

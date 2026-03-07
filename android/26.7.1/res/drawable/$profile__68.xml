@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set android:ordering="together"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <objectAnimator android:interpolator="@drawable/$profile__69" android:duration="117" android:startOffset="0" android:valueFrom="0.15625" android:valueTo="0.16562" android:valueType="floatType" android:propertyName="scaleX" />
+    <objectAnimator android:interpolator="@drawable/$profile__70" android:duration="117" android:startOffset="0" android:valueFrom="0.15625" android:valueTo="0.16562" android:valueType="floatType" android:propertyName="scaleY" />
+    <objectAnimator android:interpolator="@drawable/$profile__71" android:duration="200" android:startOffset="117" android:valueFrom="0.16562" android:valueTo="0.14375" android:valueType="floatType" android:propertyName="scaleX" />
+    <objectAnimator android:interpolator="@drawable/$profile__72" android:duration="200" android:startOffset="117" android:valueFrom="0.16562" android:valueTo="0.14375" android:valueType="floatType" android:propertyName="scaleY" />
+    <objectAnimator android:interpolator="@drawable/$profile__73" android:duration="217" android:startOffset="317" android:valueFrom="0.14375" android:valueTo="0.17188" android:valueType="floatType" android:propertyName="scaleX" />
+    <objectAnimator android:interpolator="@drawable/$profile__74" android:duration="217" android:startOffset="317" android:valueFrom="0.14375" android:valueTo="0.17188" android:valueType="floatType" android:propertyName="scaleY" />
+    <objectAnimator android:interpolator="@drawable/$profile__75" android:duration="267" android:startOffset="533" android:valueFrom="0.17188" android:valueTo="0.15625" android:valueType="floatType" android:propertyName="scaleX" />
+    <objectAnimator android:interpolator="@drawable/$profile__76" android:duration="267" android:startOffset="533" android:valueFrom="0.17188" android:valueTo="0.15625" android:valueType="floatType" android:propertyName="scaleY" />
+</set>

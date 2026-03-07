@@ -1,0 +1,428 @@
+.class public final Lv20;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lzgg;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final b:Ljava/lang/Object;
+
+.field public final c:Ljava/lang/Object;
+
+
+# direct methods
+.method public synthetic constructor <init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    .locals 0
+
+    iput p2, p0, Lv20;->a:I
+
+    iput-object p1, p0, Lv20;->b:Ljava/lang/Object;
+
+    iput-object p3, p0, Lv20;->c:Ljava/lang/Object;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final close()V
+    .locals 3
+
+    iget v0, p0, Lv20;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lv20;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/io/InputStream;
+
+    invoke-virtual {v0}, Ljava/io/InputStream;->close()V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lv20;->b:Ljava/lang/Object;
+
+    check-cast v0, Lkgg;
+
+    iget-object v1, p0, Lv20;->c:Ljava/lang/Object;
+
+    check-cast v1, Lv20;
+
+    invoke-virtual {v0}, Lw20;->i()V
+
+    :try_start_0
+    invoke-virtual {v1}, Lv20;->close()V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v0}, Lw20;->j()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    return-void
+
+    :cond_0
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lkgg;->l(Ljava/io/IOException;)Ljava/io/IOException;
+
+    move-result-object v0
+
+    throw v0
+
+    :catchall_0
+    move-exception v1
+
+    goto :goto_1
+
+    :catch_0
+    move-exception v1
+
+    :try_start_1
+    invoke-virtual {v0}, Lw20;->j()Z
+
+    move-result v2
+
+    if-nez v2, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {v0, v1}, Lkgg;->l(Ljava/io/IOException;)Ljava/io/IOException;
+
+    move-result-object v1
+
+    :goto_0
+    throw v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :goto_1
+    invoke-virtual {v0}, Lw20;->j()Z
+
+    throw v1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final m()Ltkh;
+    .locals 1
+
+    iget v0, p0, Lv20;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lv20;->c:Ljava/lang/Object;
+
+    check-cast v0, Ltkh;
+
+    return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Lv20;->b:Ljava/lang/Object;
+
+    check-cast v0, Lkgg;
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final p0(JLo01;)J
+    .locals 5
+
+    iget p1, p0, Lv20;->a:I
+
+    iget-object p2, p0, Lv20;->b:Ljava/lang/Object;
+
+    iget-object v0, p0, Lv20;->c:Ljava/lang/Object;
+
+    const-wide/16 v1, 0x2000
+
+    packed-switch p1, :pswitch_data_0
+
+    const/4 p1, 0x1
+
+    :try_start_0
+    check-cast v0, Ltkh;
+
+    invoke-virtual {v0}, Ltkh;->f()V
+
+    invoke-virtual {p3, p1}, Lo01;->F0(I)Lfhf;
+
+    move-result-object v0
+
+    iget v3, v0, Lfhf;->c:I
+
+    rsub-int v3, v3, 0x2000
+
+    int-to-long v3, v3
+
+    invoke-static {v1, v2, v3, v4}, Ljava/lang/Math;->min(JJ)J
+
+    move-result-wide v1
+
+    long-to-int v1, v1
+
+    check-cast p2, Ljava/io/InputStream;
+
+    iget-object v2, v0, Lfhf;->a:[B
+
+    iget v3, v0, Lfhf;->c:I
+
+    invoke-virtual {p2, v2, v3, v1}, Ljava/io/InputStream;->read([BII)I
+
+    move-result p2
+
+    const/4 v1, -0x1
+
+    if-ne p2, v1, :cond_1
+
+    iget p2, v0, Lfhf;->b:I
+
+    iget v1, v0, Lfhf;->c:I
+
+    if-ne p2, v1, :cond_0
+
+    invoke-virtual {v0}, Lfhf;->a()Lfhf;
+
+    move-result-object p2
+
+    iput-object p2, p3, Lo01;->a:Lfhf;
+
+    invoke-static {v0}, Lyhf;->a(Lfhf;)V
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p2
+
+    goto :goto_2
+
+    :cond_0
+    :goto_0
+    const-wide/16 p1, -0x1
+
+    goto :goto_1
+
+    :cond_1
+    iget v1, v0, Lfhf;->c:I
+
+    add-int/2addr v1, p2
+
+    iput v1, v0, Lfhf;->c:I
+
+    iget-wide v0, p3, Lo01;->b:J
+
+    int-to-long v2, p2
+
+    add-long/2addr v0, v2
+
+    iput-wide v0, p3, Lo01;->b:J
+    :try_end_0
+    .catch Ljava/lang/AssertionError; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-wide p1, v2
+
+    :goto_1
+    return-wide p1
+
+    :goto_2
+    sget-object p3, Lqkb;->a:Ljava/util/logging/Logger;
+
+    invoke-virtual {p2}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+
+    move-result-object p3
+
+    const/4 v0, 0x0
+
+    if-eqz p3, :cond_3
+
+    invoke-virtual {p2}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object p3
+
+    if-eqz p3, :cond_2
+
+    const-string v1, "getsockname failed"
+
+    invoke-static {p3, v1, v0}, Lsxg;->Q0(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
+
+    move-result p3
+
+    goto :goto_3
+
+    :cond_2
+    move p3, v0
+
+    :goto_3
+    if-eqz p3, :cond_3
+
+    goto :goto_4
+
+    :cond_3
+    move p1, v0
+
+    :goto_4
+    if-eqz p1, :cond_4
+
+    new-instance p1, Ljava/io/IOException;
+
+    invoke-direct {p1, p2}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
+
+    throw p1
+
+    :cond_4
+    throw p2
+
+    :pswitch_0
+    check-cast p2, Lkgg;
+
+    check-cast v0, Lv20;
+
+    invoke-virtual {p2}, Lw20;->i()V
+
+    :try_start_1
+    invoke-virtual {v0, v1, v2, p3}, Lv20;->p0(JLo01;)J
+
+    move-result-wide v0
+    :try_end_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    invoke-virtual {p2}, Lw20;->j()Z
+
+    move-result p1
+
+    if-nez p1, :cond_5
+
+    return-wide v0
+
+    :cond_5
+    const/4 p1, 0x0
+
+    invoke-virtual {p2, p1}, Lkgg;->l(Ljava/io/IOException;)Ljava/io/IOException;
+
+    move-result-object p1
+
+    throw p1
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_6
+
+    :catch_1
+    move-exception p1
+
+    :try_start_2
+    invoke-virtual {p2}, Lw20;->j()Z
+
+    move-result p3
+
+    if-nez p3, :cond_6
+
+    goto :goto_5
+
+    :cond_6
+    invoke-virtual {p2, p1}, Lkgg;->l(Ljava/io/IOException;)Ljava/io/IOException;
+
+    move-result-object p1
+
+    :goto_5
+    throw p1
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    :goto_6
+    invoke-virtual {p2}, Lw20;->j()Z
+
+    throw p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    iget v0, p0, Lv20;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "source("
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lv20;->b:Ljava/lang/Object;
+
+    check-cast v1, Ljava/io/InputStream;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x29
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_0
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "AsyncTimeout.source("
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lv20;->c:Ljava/lang/Object;
+
+    check-cast v1, Lv20;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x29
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method

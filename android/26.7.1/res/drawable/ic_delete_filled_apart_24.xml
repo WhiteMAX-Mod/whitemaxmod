@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="24.0dip" android:width="24.0dip" android:viewportWidth="24.0" android:viewportHeight="24.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:name="circle_background" android:fillColor="#ff000000" android:pathData="M22 12c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2s10 4.477 10 10z" android:fillType="evenOdd" />
+    <path android:name="cross" android:fillColor="#ffffffff" android:pathData="M8.707 7.293c-0.39-0.39-1.024-0.39-1.414 0-0.39 0.39-0.39 1.024 0 1.414L10.586 12l-3.293 3.292c-0.39 0.39-0.39 1.024 0 1.415 0.39 0.39 1.024 0.39 1.414 0L12 13.414l3.292 3.293c0.39 0.39 1.024 0.39 1.415 0 0.39-0.39 0.39-1.024 0-1.415L13.414 12l3.293-3.293c0.39-0.39 0.39-1.024 0-1.414-0.39-0.39-1.024-0.39-1.415 0L12 10.586 8.707 7.293z" />
+</vector>

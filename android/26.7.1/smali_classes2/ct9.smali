@@ -1,0 +1,169 @@
+.class public final synthetic Lct9;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lmt9;
+.implements Lnt9;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lpt9;
+
+.field public final synthetic c:I
+
+
+# direct methods
+.method public synthetic constructor <init>(Lpt9;II)V
+    .locals 0
+
+    iput p3, p0, Lct9;->a:I
+
+    iput-object p1, p0, Lct9;->b:Lpt9;
+
+    iput p2, p0, Lct9;->c:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public b(Lpzc;Lir9;)V
+    .locals 2
+
+    iget v0, p0, Lct9;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lct9;->b:Lpt9;
+
+    iget v1, p0, Lct9;->c:I
+
+    invoke-virtual {v0, p2, p1, v1}, Lpt9;->V(Lir9;Lpzc;I)I
+
+    move-result p2
+
+    invoke-virtual {p1, p2}, Lpzc;->U(I)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lct9;->b:Lpt9;
+
+    iget v1, p0, Lct9;->c:I
+
+    invoke-virtual {v0, p2, p1, v1}, Lpt9;->V(Lir9;Lpzc;I)I
+
+    move-result p2
+
+    invoke-virtual {p1, p2}, Lpzc;->Z(I)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public c(Lpzc;Lir9;Ljava/util/List;)V
+    .locals 4
+
+    iget v0, p0, Lct9;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lct9;->b:Lpt9;
+
+    iget v1, p0, Lct9;->c:I
+
+    invoke-virtual {v0, p2, p1, v1}, Lpt9;->V(Lir9;Lpzc;I)I
+
+    move-result p2
+
+    invoke-virtual {p1, p2, p3}, Lpzc;->c(ILjava/util/List;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lct9;->b:Lpt9;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-interface {p3}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    iget v2, p0, Lct9;->c:I
+
+    const/4 v3, 0x1
+
+    if-ne v1, v3, :cond_0
+
+    invoke-virtual {v0, p2, p1, v2}, Lpt9;->V(Lir9;Lpzc;I)I
+
+    move-result p2
+
+    const/4 v0, 0x0
+
+    invoke-interface {p3, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p3
+
+    check-cast p3, Lwk9;
+
+    invoke-virtual {p1}, Lpzc;->m0()V
+
+    iget-object p1, p1, Lpzc;->a:Lt16;
+
+    add-int/lit8 v0, p2, 0x1
+
+    invoke-static {p3}, Lvw7;->m(Ljava/lang/Object;)Ldoe;
+
+    move-result-object p3
+
+    invoke-virtual {p1, p3, p2, v0}, Lt16;->C0(Ljava/util/List;II)V
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0, p2, p1, v2}, Lpt9;->V(Lir9;Lpzc;I)I
+
+    move-result v1
+
+    add-int/2addr v2, v3
+
+    invoke-virtual {v0, p2, p1, v2}, Lpt9;->V(Lir9;Lpzc;I)I
+
+    move-result p2
+
+    invoke-virtual {p1, p3, v1, p2}, Lpzc;->V(Ljava/util/List;II)V
+
+    :goto_0
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lct9;->b:Lpt9;
+
+    iget v1, p0, Lct9;->c:I
+
+    invoke-virtual {v0, p2, p1, v1}, Lpt9;->V(Lir9;Lpzc;I)I
+
+    move-result p2
+
+    invoke-virtual {p1, p2, p3}, Lpzc;->c(ILjava/util/List;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method

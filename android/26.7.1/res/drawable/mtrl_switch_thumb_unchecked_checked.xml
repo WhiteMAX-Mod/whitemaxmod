@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector android:drawable="@drawable/mtrl_switch_thumb_unchecked"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <set android:interpolator="@interpolator/m3_sys_motion_easing_emphasized" android:shareInterpolator="true">
+        <target android:name="@string/mtrl_switch_thumb_path_name" android:animation="@drawable/$mtrl_switch_thumb_unchecked_checked__0" />
+        <target android:name="@string/mtrl_switch_thumb_path_name" android:animation="@drawable/$mtrl_switch_thumb_unchecked_checked__1" />
+    </set>
+</animated-vector>

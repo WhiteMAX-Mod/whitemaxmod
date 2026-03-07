@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:state_enabled="false" android:color="?colorOutline" android:alpha="@dimen/m3_comp_outlined_card_disabled_outline_opacity" />
+    <item android:state_checked="true" android:color="?colorSecondary" />
+    <item android:color="?colorOutlineVariant" android:state_hovered="true" />
+    <item android:state_focused="true" android:color="?colorOnSurface" />
+    <item android:state_pressed="true" android:color="?colorOutlineVariant" />
+    <item android:color="?colorOutlineVariant" app:state_dragged="true" />
+    <item android:color="?colorOutlineVariant" />
+</selector>

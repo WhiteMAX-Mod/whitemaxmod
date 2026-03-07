@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set android:ordering="together"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <objectAnimator android:interpolator="@drawable/$profile__2" android:duration="117" android:startOffset="0" android:valueFrom="0.15625" android:valueTo="0.16562" android:valueType="floatType" android:propertyName="scaleX" />
+    <objectAnimator android:interpolator="@drawable/$profile__3" android:duration="117" android:startOffset="0" android:valueFrom="0.15625" android:valueTo="0.16562" android:valueType="floatType" android:propertyName="scaleY" />
+    <objectAnimator android:interpolator="@drawable/$profile__4" android:duration="200" android:startOffset="117" android:valueFrom="0.16562" android:valueTo="0.14375" android:valueType="floatType" android:propertyName="scaleX" />
+    <objectAnimator android:interpolator="@drawable/$profile__5" android:duration="200" android:startOffset="117" android:valueFrom="0.16562" android:valueTo="0.14375" android:valueType="floatType" android:propertyName="scaleY" />
+    <objectAnimator android:interpolator="@drawable/$profile__6" android:duration="217" android:startOffset="317" android:valueFrom="0.14375" android:valueTo="0.17188" android:valueType="floatType" android:propertyName="scaleX" />
+    <objectAnimator android:interpolator="@drawable/$profile__7" android:duration="217" android:startOffset="317" android:valueFrom="0.14375" android:valueTo="0.17188" android:valueType="floatType" android:propertyName="scaleY" />
+    <objectAnimator android:interpolator="@drawable/$profile__8" android:duration="267" android:startOffset="533" android:valueFrom="0.17188" android:valueTo="0.15625" android:valueType="floatType" android:propertyName="scaleX" />
+    <objectAnimator android:interpolator="@drawable/$profile__9" android:duration="267" android:startOffset="533" android:valueFrom="0.17188" android:valueTo="0.15625" android:valueType="floatType" android:propertyName="scaleY" />
+</set>

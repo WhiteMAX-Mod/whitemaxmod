@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-selector
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:state_checked="true" android:id="@id/checked" android:drawable="@drawable/mtrl_ic_check_mark" />
+    <item android:id="@id/indeterminate" android:drawable="@drawable/mtrl_ic_indeterminate" app:state_indeterminate="true" />
+    <item android:state_checked="false" android:id="@id/unchecked" android:drawable="@android:color/transparent" />
+    <transition android:drawable="@drawable/mtrl_checkbox_button_icon_checked_unchecked" android:toId="@id/unchecked" android:fromId="@id/checked" />
+    <transition android:drawable="@drawable/mtrl_checkbox_button_icon_unchecked_checked" android:toId="@id/checked" android:fromId="@id/unchecked" />
+    <transition android:drawable="@drawable/mtrl_checkbox_button_icon_indeterminate_unchecked" android:toId="@id/unchecked" android:fromId="@id/indeterminate" />
+    <transition android:drawable="@drawable/mtrl_checkbox_button_icon_unchecked_indeterminate" android:toId="@id/indeterminate" android:fromId="@id/unchecked" />
+    <transition android:drawable="@drawable/mtrl_checkbox_button_icon_indeterminate_checked" android:toId="@id/checked" android:fromId="@id/indeterminate" />
+    <transition android:drawable="@drawable/mtrl_checkbox_button_icon_checked_indeterminate" android:toId="@id/indeterminate" android:fromId="@id/checked" />
+</animated-selector>

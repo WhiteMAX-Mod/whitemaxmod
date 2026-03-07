@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set android:ordering="together"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <objectAnimator android:interpolator="@drawable/$heart__4" android:duration="583" android:startOffset="0" android:valueFrom="0.9" android:valueTo="0.9" android:valueType="floatType" android:propertyName="scaleX" />
+    <objectAnimator android:interpolator="@drawable/$heart__5" android:duration="583" android:startOffset="0" android:valueFrom="0.9" android:valueTo="0.9" android:valueType="floatType" android:propertyName="scaleY" />
+    <objectAnimator android:interpolator="@drawable/$heart__6" android:duration="167" android:startOffset="583" android:valueFrom="0.9" android:valueTo="0.9" android:valueType="floatType" android:propertyName="scaleX" />
+    <objectAnimator android:interpolator="@drawable/$heart__7" android:duration="167" android:startOffset="583" android:valueFrom="0.9" android:valueTo="0.9" android:valueType="floatType" android:propertyName="scaleY" />
+    <objectAnimator android:interpolator="@drawable/$heart__8" android:duration="333" android:startOffset="750" android:valueFrom="0.9" android:valueTo="1.1" android:valueType="floatType" android:propertyName="scaleX" />
+    <objectAnimator android:interpolator="@drawable/$heart__9" android:duration="333" android:startOffset="750" android:valueFrom="0.9" android:valueTo="1.1" android:valueType="floatType" android:propertyName="scaleY" />
+</set>

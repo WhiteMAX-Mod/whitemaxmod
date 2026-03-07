@@ -1,0 +1,153 @@
+.class public final Lhia;
+.super Lm4h;
+.source "SourceFile"
+
+# interfaces
+.implements Lu37;
+
+
+# instance fields
+.field public synthetic X:Ljava/lang/Throwable;
+
+.field public final synthetic Y:Lone/me/messages/list/ui/MessagesListWidget;
+
+.field public final synthetic o:I
+
+
+# direct methods
+.method public synthetic constructor <init>(Lone/me/messages/list/ui/MessagesListWidget;Lkotlin/coroutines/Continuation;I)V
+    .locals 0
+
+    iput p3, p0, Lhia;->o:I
+
+    iput-object p1, p0, Lhia;->Y:Lone/me/messages/list/ui/MessagesListWidget;
+
+    const/4 p1, 0x3
+
+    invoke-direct {p0, p1, p2}, Lm4h;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Lhia;->o:I
+
+    check-cast p1, Lkj6;
+
+    check-cast p2, Ljava/lang/Throwable;
+
+    check-cast p3, Lkotlin/coroutines/Continuation;
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance p1, Lhia;
+
+    iget-object v0, p0, Lhia;->Y:Lone/me/messages/list/ui/MessagesListWidget;
+
+    const/4 v1, 0x1
+
+    invoke-direct {p1, v0, p3, v1}, Lhia;-><init>(Lone/me/messages/list/ui/MessagesListWidget;Lkotlin/coroutines/Continuation;I)V
+
+    iput-object p2, p1, Lhia;->X:Ljava/lang/Throwable;
+
+    sget-object p2, Ld2i;->a:Ld2i;
+
+    invoke-virtual {p1, p2}, Lhia;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+
+    :pswitch_0
+    new-instance p1, Lhia;
+
+    iget-object v0, p0, Lhia;->Y:Lone/me/messages/list/ui/MessagesListWidget;
+
+    const/4 v1, 0x0
+
+    invoke-direct {p1, v0, p3, v1}, Lhia;-><init>(Lone/me/messages/list/ui/MessagesListWidget;Lkotlin/coroutines/Continuation;I)V
+
+    iput-object p2, p1, Lhia;->X:Ljava/lang/Throwable;
+
+    sget-object p2, Ld2i;->a:Ld2i;
+
+    invoke-virtual {p1, p2}, Lhia;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    iget v0, p0, Lhia;->o:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lhia;->X:Ljava/lang/Throwable;
+
+    invoke-static {p1}, Lqsf;->K(Ljava/lang/Object;)V
+
+    instance-of p1, v0, Ljava/util/concurrent/CancellationException;
+
+    if-nez p1, :cond_0
+
+    iget-object p1, p0, Lhia;->Y:Lone/me/messages/list/ui/MessagesListWidget;
+
+    iget-object p1, p1, Lone/me/messages/list/ui/MessagesListWidget;->a:Ljava/lang/String;
+
+    new-instance v1, Lone/me/messages/list/ui/MessagesListHandleEventException;
+
+    const-string v2, "ONEME-29384"
+
+    const/4 v3, 0x0
+
+    invoke-direct {v1, v2, v3, v0}, Lru/ok/tamtam/exception/IssueKeyException;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    const-string v0, "fail to handleEvent"
+
+    invoke-static {p1, v0, v1}, Lg0i;->K(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    sget-object p1, Ld2i;->a:Ld2i;
+
+    return-object p1
+
+    :cond_0
+    throw v0
+
+    :pswitch_0
+    iget-object v0, p0, Lhia;->X:Ljava/lang/Throwable;
+
+    invoke-static {p1}, Lqsf;->K(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lhia;->Y:Lone/me/messages/list/ui/MessagesListWidget;
+
+    iget-object p1, p1, Lone/me/messages/list/ui/MessagesListWidget;->a:Ljava/lang/String;
+
+    const/4 v1, 0x0
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    const-string v2, "messages list update error"
+
+    invoke-static {p1, v0, v2, v1}, Lg0i;->M(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    sget-object p1, Ld2i;->a:Ld2i;
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method

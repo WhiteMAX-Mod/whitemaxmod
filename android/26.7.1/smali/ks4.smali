@@ -1,0 +1,122 @@
+.class public final synthetic Lks4;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lf2h;
+
+
+# instance fields
+.field public final synthetic a:I
+
+
+# direct methods
+.method public synthetic constructor <init>(I)V
+    .locals 0
+
+    iput p1, p0, Lks4;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final get()Ljava/lang/Object;
+    .locals 8
+
+    iget v0, p0, Lks4;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
+
+    throw v0
+
+    :pswitch_0
+    new-instance v1, Lw15;
+
+    new-instance v2, Llw4;
+
+    invoke-direct {v2}, Llw4;-><init>()V
+
+    const/16 v6, 0x7d0
+
+    const/4 v7, 0x0
+
+    const v3, 0xc350
+
+    const v4, 0xc350
+
+    const/16 v5, 0x3e8
+
+    invoke-direct/range {v1 .. v7}, Lw15;-><init>(Llw4;IIIIZ)V
+
+    return-object v1
+
+    :pswitch_1
+    const/16 v0, 0xc
+
+    new-array v0, v0, [B
+
+    sget-object v1, Lq25;->i:Ljava/util/Random;
+
+    invoke-virtual {v1, v0}, Ljava/util/Random;->nextBytes([B)V
+
+    const/16 v1, 0xa
+
+    invoke-static {v0, v1}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_2
+    invoke-static {}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor()Ljava/util/concurrent/ExecutorService;
+
+    move-result-object v0
+
+    instance-of v1, v0, Lpu8;
+
+    if-eqz v1, :cond_0
+
+    check-cast v0, Lpu8;
+
+    goto :goto_1
+
+    :cond_0
+    instance-of v1, v0, Ljava/util/concurrent/ScheduledExecutorService;
+
+    if-eqz v1, :cond_1
+
+    new-instance v1, Ldra;
+
+    check-cast v0, Ljava/util/concurrent/ScheduledExecutorService;
+
+    invoke-direct {v1, v0}, Ldra;-><init>(Ljava/util/concurrent/ScheduledExecutorService;)V
+
+    :goto_0
+    move-object v0, v1
+
+    goto :goto_1
+
+    :cond_1
+    new-instance v1, Lara;
+
+    invoke-direct {v1, v0}, Lara;-><init>(Ljava/util/concurrent/ExecutorService;)V
+
+    goto :goto_0
+
+    :goto_1
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method

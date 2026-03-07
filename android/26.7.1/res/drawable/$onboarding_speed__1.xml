@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set android:ordering="together"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <objectAnimator android:interpolator="@drawable/$onboarding_speed__2" android:duration="167" android:startOffset="0" android:valueFrom="0" android:valueTo="0" android:valueType="floatType" android:propertyName="rotation" />
+    <objectAnimator android:interpolator="@drawable/$onboarding_speed__3" android:duration="483" android:startOffset="167" android:valueFrom="0" android:valueTo="33" android:valueType="floatType" android:propertyName="rotation" />
+    <objectAnimator android:interpolator="@drawable/$onboarding_speed__4" android:duration="468" android:startOffset="650" android:valueFrom="33" android:valueTo="-15" android:valueType="floatType" android:propertyName="rotation" />
+    <objectAnimator android:interpolator="@drawable/$onboarding_speed__5" android:duration="566" android:startOffset="1118" android:valueFrom="-15" android:valueTo="0" android:valueType="floatType" android:propertyName="rotation" />
+</set>

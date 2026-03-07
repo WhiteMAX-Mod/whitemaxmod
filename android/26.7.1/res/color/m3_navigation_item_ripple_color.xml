@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true" android:state_pressed="true" android:color="?colorOnSecondaryContainer" android:alpha="@dimen/m3_comp_navigation_drawer_pressed_state_layer_opacity" />
+    <item android:state_focused="true" android:state_selected="true" android:color="?colorOnSecondaryContainer" android:alpha="@dimen/m3_comp_navigation_drawer_focus_state_layer_opacity" />
+    <item android:state_selected="true" android:color="?colorOnSecondaryContainer" android:alpha="@dimen/m3_comp_navigation_drawer_hover_state_layer_opacity" android:state_hovered="true" />
+    <item android:state_selected="true" android:color="?colorPrimary" android:alpha="@dimen/m3_ripple_default_alpha" />
+    <item android:state_pressed="true" android:color="?colorOnSecondaryContainer" android:alpha="@dimen/m3_comp_navigation_drawer_pressed_state_layer_opacity" />
+    <item android:state_focused="true" android:color="?colorOnSurface" android:alpha="@dimen/m3_comp_navigation_drawer_focus_state_layer_opacity" />
+    <item android:color="?colorOnSurface" android:alpha="@dimen/m3_comp_navigation_drawer_hover_state_layer_opacity" android:state_hovered="true" />
+    <item android:color="?colorOnSurfaceVariant" android:alpha="@dimen/m3_ripple_default_alpha" />
+</selector>

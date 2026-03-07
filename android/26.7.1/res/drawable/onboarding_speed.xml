@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector android:drawable="@drawable/$onboarding_speed__0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <target android:name="_R_G_L_2_G_N_1_T_0" android:animation="@drawable/$onboarding_speed__1" />
+    <target android:name="_R_G_L_1_G_T_1" android:animation="@drawable/$onboarding_speed__6" />
+    <target android:name="_R_G_L_0_G_T_1" android:animation="@drawable/$onboarding_speed__11" />
+    <target android:name="time_group" android:animation="@drawable/$onboarding_speed__16" />
+</animated-vector>
