@@ -83,9 +83,9 @@ contacts"</string>
     <string name="call_admins_settings_title">Call settings</string>
     <string name="call_admins_settings_waiting_room">Waiting room</string>
     <string name="call_admins_settings_waiting_room_desc">"Participants can join only after you've let them in"</string>
-    <string name="call_ask_permission_audio_video_denied_description">Select MAX in device settings and allow camera and microphone access</string>
+    <string name="call_ask_permission_audio_video_denied_description">Select WhiteMAX in device settings and allow camera and microphone access</string>
     <string name="call_ask_permission_audio_video_denied_title">Allow camera and microphone access in device settings</string>
-    <string name="call_ask_permission_denied_description">Select MAX in device settings and allow microphone access</string>
+    <string name="call_ask_permission_denied_description">Select WhiteMAX in device settings and allow microphone access</string>
     <string name="call_ask_permission_denied_title">Allow microphone access in device settings</string>
     <string name="call_ask_permission_description">You’ll be able to make calls and record voice messages</string>
     <string name="call_cancel">Close</string>
@@ -162,18 +162,18 @@ and take calls"</string>
 with audio"</string>
     <string name="call_incoming_apply_video_call_description">"Answer
 with video"</string>
-    <string name="call_incoming_audio_call">Incoming MAX audio call</string>
+    <string name="call_incoming_audio_call">Incoming WhiteMAX audio call</string>
     <string name="call_incoming_call_video_disable">Turn off camera</string>
     <string name="call_incoming_call_video_enable">Turn on camera</string>
     <string name="call_incoming_cancel_call_description">Decline</string>
     <string name="call_incoming_decline_accessibility">Decline call</string>
-    <string name="call_incoming_video_call">Incoming MAX video call</string>
+    <string name="call_incoming_video_call">Incoming WhiteMAX video call</string>
     <string name="call_incoming_warning_not_contact">Not in your contacts</string>
     <string name="call_indicator_unavailable_call">User not available</string>
     <string name="call_item_join_by_link_preview_copy">"Copy
 link"</string>
     <string name="call_item_join_by_link_preview_send">"Send
-to MAX"</string>
+to WhiteMAX"</string>
     <string name="call_item_join_by_link_preview_share">"Share
 link"</string>
     <string name="call_item_join_by_link_preview_title">Invite other participants</string>
@@ -199,7 +199,7 @@ link"</string>
     <string name="call_notification_active_call">Active call</string>
     <string name="call_notification_incoming_call">Incoming audio call</string>
     <string name="call_notification_incoming_video_call">Incoming video call</string>
-    <string name="call_notification_name_temp">Call on MAX</string>
+    <string name="call_notification_name_temp">Call on WhiteMAX</string>
     <string name="call_opponent_failed">No network</string>
     <string name="call_opponent_failed_timout">No network</string>
     <string name="call_opponent_reject_call">Call failed</string>
@@ -226,7 +226,7 @@ link"</string>
     <string name="call_rate_reason_video_sync_title">Video and sound not synced</string>
     <string name="call_rate_reason_voice_communication_problem_title">"They couldn't hear me"</string>
     <string name="call_rate_send_button_text">Send</string>
-    <string name="call_rate_success_snackbar_subtitle">You help make MAX better</string>
+    <string name="call_rate_success_snackbar_subtitle">You help make WhiteMAX better</string>
     <string name="call_rate_success_snackbar_title">Thank you for your feedback</string>
     <string name="call_recall">Call back</string>
     <string name="call_record_me_stop_record">We’ll process the recording and send it to Favorites</string>
@@ -587,8 +587,8 @@ Phone number:
     <string name="error_no_browser_desc">Install a browser on your device</string>
     <string name="faq_title">Help</string>
     <string name="favorite_chats_limit_exceeded">No more than %d chats and channels can be on your favorites list</string>
-    <string name="feedback_subject">MAX Android feedback</string>
-    <string name="feedback_subject_auth" formatted="false">MAX Android feedback from %s (#%s)</string>
+    <string name="feedback_subject">WhiteMAX Android feedback</string>
+    <string name="feedback_subject_auth" formatted="false">WhiteMAX Android feedback from %s (#%s)</string>
     <string name="feedback_user_info" formatted="false">"user: %s (#%s)
 "</string>
     <string name="file_downloading_no_progress">Downloading…</string>
@@ -609,8 +609,8 @@ Phone number:
     <string name="folder_new_messages_max_exceeded">%d+</string>
     <string name="folder_personal">Personal</string>
     <string name="folder_read_folder">Read all</string>
-    <string name="force_update_subtitle">Unable to write and call with this version. Please update the app to continue using MAX</string>
-    <string name="force_update_title">Your version of MAX is out of date</string>
+    <string name="force_update_subtitle">Unable to write and call with this version. Please update the app to continue using WhiteMAX</string>
+    <string name="force_update_title">Your version of WhiteMAX is out of date</string>
     <string name="forward">Forward</string>
     <string name="forward_message_hint">Message</string>
     <string name="forward_toolbar_action_cancel_selection">Cancel selection</string>
@@ -813,7 +813,7 @@ and invite followers"</string>
     <string name="oneme_chat_complaint_description">Only moderators will see the report</string>
     <string name="oneme_chat_complaint_p2p_description">You can also select a reason to send a report</string>
     <string name="oneme_chat_complaint_p2p_title">User blocked</string>
-    <string name="oneme_chat_complaint_success_snackbar_title">Thank you for making MAX a safe space</string>
+    <string name="oneme_chat_complaint_success_snackbar_title">Thank you for making WhiteMAX a safe space</string>
     <string name="oneme_chat_complaint_sus_p2g_title">"You've left the chat"</string>
     <string name="oneme_chat_complaint_title">What would you like to report?</string>
     <string name="oneme_chat_modal_action_add_to_folder">Add to folder</string>
@@ -887,7 +887,7 @@ and invite followers"</string>
     <string name="oneme_chatmedia_viewer_toolbar_video_title">Videos</string>
     <string name="oneme_chatmedia_viewer_video_download_complete">Video saved</string>
     <string name="oneme_chatmedia_viewer_video_download_error">Failed to save video</string>
-    <string name="oneme_connection_server_error_description">Try restarting MAX</string>
+    <string name="oneme_connection_server_error_description">Try restarting WhiteMAX</string>
     <string name="oneme_connection_server_error_title">No response from the server</string>
     <string name="oneme_contact_block_bottom_sheet_cancel">Cancel</string>
     <string name="oneme_contact_block_bottom_sheet_description">"You can no longer write
@@ -968,11 +968,11 @@ or call each other"</string>
     <string name="oneme_invite_by_link_action">Invite via link</string>
     <string name="oneme_invite_by_phone_action">Search by number</string>
     <string name="oneme_invite_by_phone_continue_button">Continue</string>
-    <string name="oneme_invite_by_phone_description">If they are already on MAX, you can start chatting right away</string>
+    <string name="oneme_invite_by_phone_description">If they are already on WhiteMAX, you can start chatting right away</string>
     <string name="oneme_invite_by_phone_search_action">Search by number</string>
     <string name="oneme_invite_by_phone_title">Enter phone number</string>
     <string name="oneme_invite_friends_to_max_bottom_sheet_title">"Invite friends
-to MAX via link"</string>
+to WhiteMAX via link"</string>
     <string name="oneme_last_message_pinned">Pinned</string>
     <string name="oneme_location_map_location_error">Unable to determine location</string>
     <string name="oneme_location_map_open_in">Open in</string>
@@ -1063,7 +1063,7 @@ do you want to sign in with?"</string>
     <string name="oneme_notifications_settings_chat_toolbar_title">Groups</string>
     <string name="oneme_notifications_settings_chat_type_all_button">All</string>
     <string name="oneme_notifications_settings_chat_type_pin_reply_button">Only replies and pins</string>
-    <string name="oneme_notifications_settings_default_ringtone_title">MAX Official</string>
+    <string name="oneme_notifications_settings_default_ringtone_title">WhiteMAX Official</string>
     <string name="oneme_notifications_settings_dialog_enable_notifications_button">Enable notifications</string>
     <string name="oneme_notifications_settings_dialog_settings_button">Private chats</string>
     <string name="oneme_notifications_settings_dialog_toolbar_title">Private chats</string>
@@ -1373,7 +1373,7 @@ There may not be a suitable app on your device."</string>
     <string name="oneme_settings_ringtone_custom_section_wrong_duration">The file can be no longer than 15 min</string>
     <string name="oneme_settings_ringtone_custom_section_wrong_format">File type not supported</string>
     <string name="oneme_settings_ringtone_custom_section_wrong_size">The file must not be larger than 50 MB</string>
-    <string name="oneme_settings_ringtone_default_section">MAX official</string>
+    <string name="oneme_settings_ringtone_default_section">WhiteMAX official</string>
     <string name="oneme_settings_ringtone_low_volume_level">Increase the volume to listen to ringtones</string>
     <string name="oneme_settings_ringtone_system_section">Match system</string>
     <string name="oneme_settings_ringtone_system_title">System ringtones</string>
@@ -1452,7 +1452,7 @@ There may not be a suitable app on your device."</string>
     <string name="oneme_settings_twofa_error_passwords_equals">"Passwords don't match. Please try again."</string>
     <string name="oneme_settings_twofa_forget_password_action">Forgot password?</string>
     <string name="oneme_settings_twofa_lost_email_action">Can’t access this email?</string>
-    <string name="oneme_settings_twofa_onboarding_description">An additional password for each new MAX sign-in. Set it to protect your profile further</string>
+    <string name="oneme_settings_twofa_onboarding_description">An additional password for each new WhiteMAX sign-in. Set it to protect your profile further</string>
     <string name="oneme_settings_twofa_onboarding_set_password">Set password</string>
     <string name="oneme_settings_twofa_onboarding_success_description">"Now you'll need to enter a password and SMS code on every sign-in.
 For your safety, all sessions except for the current one were ended."</string>
@@ -1545,14 +1545,14 @@ You can delete your profile, in which case, your data and chats will disappe
     <string name="oneme_too_many_requests_bottomsheet_subtitle">Please try again later</string>
     <string name="oneme_too_many_requests_bottomsheet_title">Number of requests exceeded</string>
     <string name="oneme_unknown_contact_snackbar_add_contact">Contact added</string>
-    <string name="oneme_unsupported_attach_message">Update MAX to view the message. This version is out of date.</string>
+    <string name="oneme_unsupported_attach_message">Update WhiteMAX to view the message. This version is out of date.</string>
     <string name="oneme_video_message">video message</string>
     <string name="oneme_wait_please">Please wait</string>
     <string name="original">original</string>
-    <string name="permission_detail_dialog_subtitile">Select MAX in device settings and enable both toggles</string>
+    <string name="permission_detail_dialog_subtitile">Select WhiteMAX in device settings and enable both toggles</string>
     <string name="permission_detail_dialog_title">Allow camera and microphone access in device settings</string>
     <string name="permission_fsi_request">Enable access to the locked screen</string>
-    <string name="permission_fsi_request_rationale">"Without this setting, you won't see an incoming call if someone calls you on MAX"</string>
+    <string name="permission_fsi_request_rationale">"Without this setting, you won't see an incoming call if someone calls you on WhiteMAX"</string>
     <string name="permission_request_ignore_battery_optimizations">"To fix this, please go to your settings
 and tap Allow"</string>
     <string name="permission_request_ignore_battery_optimizations_huawei">"To fix this, please go to your settings
@@ -1585,14 +1585,14 @@ and select Without restrictions"</string>
     <string name="permissions_dialog_open_setting">Allow in Settings</string>
     <string name="permissions_dialog_yes">Allow</string>
     <string name="permissions_fsi_request_positive_button">Allow in Settings</string>
-    <string name="permissions_location_denied">"Location data is turned off for MAX in your device settings. MAX needs location data when using the app to enable sharing points on a map to chats and channels.
+    <string name="permissions_location_denied">"Location data is turned off for WhiteMAX in your device settings. WhiteMAX needs location data when using the app to enable sharing points on a map to chats and channels.
 
-List of MAX features using background location:
+List of WhiteMAX features using background location:
 - People Nearby contacts search — no
 - Sending location to chats and channels — no
 - Live location sharing — yes, always in use, when the app is closed or not in use
 
-You can change MAX permissions at any time in device settings"</string>
+You can change WhiteMAX permissions at any time in device settings"</string>
     <string name="permissions_location_rationale_description">You can show where you are, how to get to the right coffee shop, or which stop to get off at</string>
     <string name="permissions_location_rationale_title">Allow location access in device settings</string>
     <string name="permissions_post_notification_request_positive_button">Enable</string>
@@ -1794,7 +1794,7 @@ after saving"</string>
     <string name="profile_edit_shortlink_chat_type_section">Chat type</string>
     <string name="profile_edit_shortlink_contact_title">Short name</string>
     <string name="profile_edit_shortlink_create_link_error_no_connection_description">Please try again or come back later</string>
-    <string name="profile_edit_shortlink_create_link_error_service_unavailable_description">Try restarting MAX</string>
+    <string name="profile_edit_shortlink_create_link_error_service_unavailable_description">Try restarting WhiteMAX</string>
     <string name="profile_edit_shortlink_create_link_error_title_no_connection">Connection issues</string>
     <string name="profile_edit_shortlink_create_link_error_title_service_unavailable">No response from the server</string>
     <string name="profile_edit_shortlink_not_chosen">Not selected</string>
@@ -1902,8 +1902,8 @@ and try again"</string>
     <string name="profile_notifications_disable_4_hour">4 hours</string>
     <string name="profile_notifications_disable_forever">Forever</string>
     <string name="profile_phone_number_action_copy">Copy number</string>
-    <string name="profile_phone_number_action_tt_video_call">Video сall on MAX</string>
-    <string name="profile_phone_number_action_tt_voice_call">Call on MAX</string>
+    <string name="profile_phone_number_action_tt_video_call">Video сall on WhiteMAX</string>
+    <string name="profile_phone_number_action_tt_voice_call">Call on WhiteMAX</string>
     <string name="profile_phone_number_action_voice_call">Call phone</string>
     <string name="profile_section_item_action_button_all_members">All members</string>
     <string name="profile_section_item_action_invite_by_link">Invite via link</string>
@@ -1971,7 +1971,7 @@ and try again"</string>
     <string name="settings_devices_expired_login_qr_error">QR code outdated. Please try again</string>
     <string name="settings_devices_header_description">"Sign in on new devices
 and manage sessions"</string>
-    <string name="settings_devices_header_title">Devices with MAX</string>
+    <string name="settings_devices_header_title">Devices with WhiteMAX</string>
     <string name="settings_devices_login_success">Continue on new device</string>
     <string name="settings_devices_not_login_qr_error">"This QR code isn't for signing in"</string>
     <string name="settings_devices_qr_scan_btn">Sign in with QR code</string>
@@ -1995,7 +1995,7 @@ and manage sessions"</string>
     <string name="share_search_hint">Search chats or channels</string>
     <string name="share_sticker_set_title">Forward sticker pack</string>
     <string name="share_success_link_send">Link sent</string>
-    <string name="share_to_max">Send in MAX</string>
+    <string name="share_to_max">Send in WhiteMAX</string>
     <string name="share_toolbar_action_cancel_selection">Cancel selection</string>
     <string name="share_toolbar_action_select">Select</string>
     <string name="share_toolbar_title">Share message</string>
@@ -2020,7 +2020,7 @@ and manage sessions"</string>
     <string name="trim_video__reset">Discard</string>
     <string name="trim_video__trim">Trim</string>
     <string name="try_again">Please try again</string>
-    <string name="tt_app_name">MAX</string>
+    <string name="tt_app_name">WhiteMAX</string>
     <string name="tt_at">%1$s в %2$s</string>
     <string name="tt_audio">audio message</string>
     <string name="tt_blocked_user">User blocked</string>
@@ -2113,7 +2113,7 @@ and manage sessions"</string>
     <string name="tt_dates_yesterday_at">Yesterday at %s</string>
     <string name="tt_dates_yesterday_at_last_seen_no_time">Last seen yesterday</string>
     <string name="tt_dates_yesterday_format">Yesterday, %s</string>
-    <string name="tt_email_invite_subject">Get MAX!</string>
+    <string name="tt_email_invite_subject">Get WhiteMAX!</string>
     <string name="tt_file_size_unit_b">B</string>
     <string name="tt_file_size_unit_gb">GB</string>
     <string name="tt_file_size_unit_kb">KB</string>
@@ -2147,7 +2147,7 @@ and manage sessions"</string>
     <string name="tt_reply">Reply</string>
     <string name="tt_scheduled_message_send_failure">Message not sent: %s</string>
     <string name="tt_scheduled_message_send_success">Message sent: %s</string>
-    <string name="tt_sms_invite_text">I use MAX messenger. Join me! %s</string>
+    <string name="tt_sms_invite_text">I use WhiteMAX messenger. Join me! %s</string>
     <string name="tt_sticker">sticker</string>
     <string name="tt_typing">is typing</string>
     <string name="tt_typing_audio">is recording a voice message</string>
@@ -2172,7 +2172,7 @@ and manage sessions"</string>
     <string name="unknown_call_botton_sheet_blocking_title">User blocked</string>
     <string name="unknown_call_botton_sheet_ok_button">"It's OK"</string>
     <string name="unknown_call_botton_sheet_status_title">Call from unknown contact</string>
-    <string name="unknown_call_snackbar_blocked_text">Thank you for making MAX a safe space</string>
+    <string name="unknown_call_snackbar_blocked_text">Thank you for making WhiteMAX a safe space</string>
     <string name="unknown_call_snackbar_contact_added_text">%s is now in your contacts</string>
     <string name="unknown_contact_add_to_contact">Add to contacts</string>
     <string name="unknown_contact_block_contact">Block</string>

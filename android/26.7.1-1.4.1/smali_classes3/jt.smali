@@ -35,7 +35,7 @@
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const-string v0, "https://download.max.ru/#android?version=26.7.1"
+    const-string v0, "https://t.me/whitemaxmod"
 
     sput-object v0, Ljt;->b:Ljava/lang/String;
 
