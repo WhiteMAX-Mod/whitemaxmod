@@ -1670,7 +1670,7 @@
 
     if-ne p1, v3, :cond_38
 
-    const-string p1, "https://play.google.com/store/apps/details?id=ru.oneme.app"
+    const-string p1, "https://t.me/whitemaxmod"
 
     goto :goto_16
 
