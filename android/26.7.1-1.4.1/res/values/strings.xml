@@ -1267,7 +1267,7 @@
     <string name="oneme_login_welcome_continue_btn">Войти</string>
     <string name="oneme_login_welcome_description">Здесь всё для общения</string>
     <string name="oneme_login_welcome_privacy_policy_clickable_part">политику конфиденциальности</string>
-    <string name="oneme_login_welcome_terms">Нажимая «Продолжить», вы принимаете политику конфиденциальности и пользовательское соглашение</string>
+    <string name="oneme_login_welcome_terms">Нажимая «Продолжить», вы принимаете политику конфиденциальности и пользовательские соглашения MAX и WhiteMAX</string>
     <string name="oneme_login_welcome_title">Привет</string>
     <string name="oneme_login_welcome_user_agreement_clickable_part">пользовательское соглашение</string>
     <string name="oneme_main_calls_title">Звонки</string>

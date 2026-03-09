@@ -1026,7 +1026,7 @@ do you want to sign in with?"</string>
     <string name="oneme_login_welcome_continue_btn">Sign in</string>
     <string name="oneme_login_welcome_description">Everything you need for chatting</string>
     <string name="oneme_login_welcome_privacy_policy_clickable_part">Privacy Policy</string>
-    <string name="oneme_login_welcome_terms">By pressing Continue, you accept the Privacy Policy and User Agreement</string>
+    <string name="oneme_login_welcome_terms">By pressing Continue, you accept the Privacy Policy and User Agreements MAX & WhiteMAX</string>
     <string name="oneme_login_welcome_title">Hi</string>
     <string name="oneme_login_welcome_user_agreement_clickable_part">User Agreement</string>
     <string name="oneme_main_calls_title">Calls</string>
