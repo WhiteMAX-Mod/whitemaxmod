@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list android:oneshot="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="42" android:drawable="@drawable/ic_mr_button_connecting_00_dark" />
+    <item android:duration="42" android:drawable="@drawable/ic_mr_button_connecting_01_dark" />
+    <item android:duration="42" android:drawable="@drawable/ic_mr_button_connecting_02_dark" />
+    <item android:duration="42" android:drawable="@drawable/ic_mr_button_connecting_03_dark" />
+    <item android:duration="42" android:drawable="@drawable/ic_mr_button_connecting_04_dark" />
+    <item android:duration="42" android:drawable="@drawable/ic_mr_button_connecting_05_dark" />
+    <item android:duration="42" android:drawable="@drawable/ic_mr_button_connecting_06_dark" />
+    <item android:duration="42" android:drawable="@drawable/ic_mr_button_connecting_07_dark" />
+    <item android:duration="42" android:drawable="@drawable/ic_mr_button_connecting_08_dark" />
+    <item android:duration="42" android:drawable="@drawable/ic_mr_button_connecting_09_dark" />
+    <item android:duration="42" android:drawable="@drawable/ic_mr_button_connecting_10_dark" />
+    <item android:duration="42" android:drawable="@drawable/ic_mr_button_connecting_11_dark" />
+    <item android:duration="42" android:drawable="@drawable/ic_mr_button_connecting_12_dark" />
+    <item android:duration="42" android:drawable="@drawable/ic_mr_button_connecting_13_dark" />
+    <item android:duration="42" android:drawable="@drawable/ic_mr_button_connecting_14_dark" />
+    <item android:duration="42" android:drawable="@drawable/ic_mr_button_connecting_15_dark" />
+    <item android:duration="42" android:drawable="@drawable/ic_mr_button_connecting_16_dark" />
+    <item android:duration="42" android:drawable="@drawable/ic_mr_button_connecting_17_dark" />
+    <item android:duration="42" android:drawable="@drawable/ic_mr_button_connecting_18_dark" />
+    <item android:duration="42" android:drawable="@drawable/ic_mr_button_connecting_19_dark" />
+    <item android:duration="42" android:drawable="@drawable/ic_mr_button_connecting_20_dark" />
+    <item android:duration="42" android:drawable="@drawable/ic_mr_button_connecting_21_dark" />
+    <item android:duration="42" android:drawable="@drawable/ic_mr_button_connecting_22_dark" />
+    <item android:duration="42" android:drawable="@drawable/ic_mr_button_connecting_23_dark" />
+    <item android:duration="42" android:drawable="@drawable/ic_mr_button_connecting_24_dark" />
+    <item android:duration="42" android:drawable="@drawable/ic_mr_button_connecting_25_dark" />
+    <item android:duration="42" android:drawable="@drawable/ic_mr_button_connecting_26_dark" />
+    <item android:duration="42" android:drawable="@drawable/ic_mr_button_connecting_27_dark" />
+    <item android:duration="42" android:drawable="@drawable/ic_mr_button_connecting_28_dark" />
+    <item android:duration="42" android:drawable="@drawable/ic_mr_button_connecting_29_dark" />
+    <item android:duration="42" android:drawable="@drawable/ic_mr_button_connecting_30_dark" />
+</animation-list>

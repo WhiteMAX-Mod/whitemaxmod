@@ -1,0 +1,89 @@
+.class public abstract Lco2;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# direct methods
+.method public static a([B)Ldo2;
+    .locals 12
+
+    new-instance v0, Lru/ok/tamtam/nano/Tasks$ChangeProfileOrChatPhoto;
+
+    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$ChangeProfileOrChatPhoto;-><init>()V
+
+    :try_start_0
+    invoke-static {v0, p0}, Lusa;->mergeFrom(Lusa;[B)Lusa;
+
+    move-result-object p0
+
+    check-cast p0, Lru/ok/tamtam/nano/Tasks$ChangeProfileOrChatPhoto;
+    :try_end_0
+    .catch Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException; {:try_start_0 .. :try_end_0} :catch_0
+
+    iget-object v0, p0, Lru/ok/tamtam/nano/Tasks$ChangeProfileOrChatPhoto;->crop:Lru/ok/tamtam/nano/Tasks$Rect;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    new-instance v2, Lp70;
+
+    iget v3, v0, Lru/ok/tamtam/nano/Tasks$Rect;->left:F
+
+    iget v4, v0, Lru/ok/tamtam/nano/Tasks$Rect;->top:F
+
+    iget v5, v0, Lru/ok/tamtam/nano/Tasks$Rect;->right:F
+
+    iget v6, v0, Lru/ok/tamtam/nano/Tasks$Rect;->bottom:F
+
+    const/4 v7, 0x2
+
+    invoke-direct/range {v2 .. v7}, Lp70;-><init>(FFFFI)V
+
+    move-object v9, v2
+
+    goto :goto_0
+
+    :cond_0
+    move-object v9, v1
+
+    :goto_0
+    iget-wide v4, p0, Lru/ok/tamtam/nano/Tasks$ChangeProfileOrChatPhoto;->requestId:J
+
+    iget-object v0, p0, Lru/ok/tamtam/nano/Tasks$ChangeProfileOrChatPhoto;->file:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    if-nez v2, :cond_1
+
+    move-object v6, v1
+
+    goto :goto_1
+
+    :cond_1
+    move-object v6, v0
+
+    :goto_1
+    iget-wide v7, p0, Lru/ok/tamtam/nano/Tasks$ChangeProfileOrChatPhoto;->chatId:J
+
+    iget-wide v10, p0, Lru/ok/tamtam/nano/Tasks$ChangeProfileOrChatPhoto;->lastModified:J
+
+    new-instance v3, Ldo2;
+
+    invoke-direct/range {v3 .. v11}, Ldo2;-><init>(JLjava/lang/String;JLp70;J)V
+
+    return-object v3
+
+    :catch_0
+    move-exception v0
+
+    move-object p0, v0
+
+    new-instance v0, Lru/ok/tamtam/nano/ProtoException;
+
+    invoke-direct {v0, p0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v0
+.end method

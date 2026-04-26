@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true" android:color="?colorOnSurface" android:alpha="@dimen/m3_ripple_pressed_alpha" />
+    <item android:state_selected="true" android:state_pressed="false" android:color="?colorOnSurface" android:alpha="@dimen/m3_simple_item_color_selected_alpha" />
+    <item android:state_pressed="false" android:color="?colorOnSurface" android:alpha="@dimen/m3_simple_item_color_hovered_alpha" android:state_hovered="true" />
+</selector>

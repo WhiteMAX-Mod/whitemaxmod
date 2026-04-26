@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ru.ok.messages.views.widgets.SlideOutLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ru.ok.messages.media.mediabar.SimpleTransitionDraweeView android:layout_gravity="center" android:id="@id/frg_local_gif__drawee" android:layout_width="fill_parent" android:layout_height="fill_parent" android:adjustViewBounds="true" app:actualImageScaleType="fitCenter" />
+    <include layout="@layout/local_media_progress_background" />
+    <include layout="@layout/local_media_progressbar" />
+</ru.ok.messages.views.widgets.SlideOutLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector android:drawable="@drawable/$heart__0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <target android:name="_R_G_L_8_G_D_1_P_0" android:animation="@drawable/$heart__1" />
+    <target android:name="_R_G_L_8_G" android:animation="@drawable/$heart__3" />
+    <target android:name="_R_G_L_7_G_D_0_P_0" android:animation="@drawable/$heart__10" />
+    <target android:name="_R_G_L_7_G_D_0_P_0" android:animation="@drawable/$heart__13" />
+    <target android:name="_R_G_L_7_G" android:animation="@drawable/$heart__16" />
+    <target android:name="_R_G_L_6_G_D_0_P_0" android:animation="@drawable/$heart__17" />
+    <target android:name="_R_G_L_6_G_D_0_P_0" android:animation="@drawable/$heart__20" />
+    <target android:name="_R_G_L_6_G" android:animation="@drawable/$heart__23" />
+    <target android:name="_R_G_L_5_G_D_0_P_0" android:animation="@drawable/$heart__24" />
+    <target android:name="_R_G_L_5_G_D_0_P_0" android:animation="@drawable/$heart__27" />
+    <target android:name="_R_G_L_5_G" android:animation="@drawable/$heart__30" />
+    <target android:name="_R_G_L_4_G_D_0_P_0" android:animation="@drawable/$heart__31" />
+    <target android:name="_R_G_L_4_G_D_0_P_0" android:animation="@drawable/$heart__34" />
+    <target android:name="_R_G_L_4_G" android:animation="@drawable/$heart__37" />
+    <target android:name="_R_G_L_3_G_D_0_P_0" android:animation="@drawable/$heart__38" />
+    <target android:name="_R_G_L_3_G_D_0_P_0" android:animation="@drawable/$heart__41" />
+    <target android:name="_R_G_L_3_G" android:animation="@drawable/$heart__44" />
+    <target android:name="_R_G_L_2_G_D_0_P_0" android:animation="@drawable/$heart__45" />
+    <target android:name="_R_G_L_2_G_D_0_P_0" android:animation="@drawable/$heart__48" />
+    <target android:name="_R_G_L_2_G" android:animation="@drawable/$heart__51" />
+    <target android:name="_R_G_L_1_G" android:animation="@drawable/$heart__52" />
+    <target android:name="_R_G_L_1_G" android:animation="@drawable/$heart__57" />
+    <target android:name="_R_G_L_0_G_D_0_P_0" android:animation="@drawable/$heart__58" />
+    <target android:name="_R_G_L_0_G" android:animation="@drawable/$heart__63" />
+    <target android:name="_R_G_L_0_G" android:animation="@drawable/$heart__68" />
+    <target android:name="time_group" android:animation="@drawable/$heart__69" />
+</animated-vector>

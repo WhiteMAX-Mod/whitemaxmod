@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector android:drawable="@drawable/mtrl_ic_checkbox_checked"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <target android:name="@string/mtrl_checkbox_button_path_group_name" android:animation="@drawable/$mtrl_checkbox_button_unchecked_checked__0" />
+    <target android:name="@string/mtrl_checkbox_button_path_group_name" android:animation="@drawable/$mtrl_checkbox_button_unchecked_checked__1" />
+    <target android:name="@string/mtrl_checkbox_button_path_name" android:animation="@drawable/$mtrl_checkbox_button_unchecked_checked__2" />
+</animated-vector>

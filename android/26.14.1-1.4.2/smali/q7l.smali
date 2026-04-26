@@ -1,0 +1,119 @@
+.class public final Lq7l;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# instance fields
+.field public final a:Lsql;
+
+.field public final b:Landroid/content/Context;
+
+
+# direct methods
+.method public constructor <init>(Lsql;Landroid/content/Context;)V
+    .locals 2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Landroid/os/Handler;
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    iput-object p1, p0, Lq7l;->a:Lsql;
+
+    iput-object p2, p0, Lq7l;->b:Landroid/content/Context;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()Lfwl;
+    .locals 6
+
+    iget-object v0, p0, Lq7l;->b:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object v0
+
+    sget-object v1, Lsql;->e:Ldb0;
+
+    iget-object v2, p0, Lq7l;->a:Lsql;
+
+    iget-object v3, v2, Lsql;->a:Lrwl;
+
+    if-nez v3, :cond_1
+
+    const/16 v0, -0x9
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    filled-new-array {v2}, [Ljava/lang/Object;
+
+    move-result-object v2
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 v3, 0x6
+
+    const-string v4, "PlayCore"
+
+    invoke-static {v4, v3}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    iget-object v1, v1, Ldb0;->b:Ljava/lang/Object;
+
+    check-cast v1, Ljava/lang/String;
+
+    const-string v3, "onError(%d)"
+
+    invoke-static {v1, v3, v2}, Ldb0;->D(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v4, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    new-instance v1, Lcom/google/android/play/core/install/InstallException;
+
+    invoke-direct {v1, v0}, Lcom/google/android/play/core/install/InstallException;-><init>(I)V
+
+    invoke-static {v1}, Ldql;->d(Ljava/lang/Exception;)Lfwl;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_1
+    filled-new-array {v0}, [Ljava/lang/Object;
+
+    move-result-object v4
+
+    const-string v5, "requestUpdateInfo(%s)"
+
+    invoke-virtual {v1, v5, v4}, Ldb0;->C(Ljava/lang/String;[Ljava/lang/Object;)V
+
+    new-instance v1, Lobi;
+
+    invoke-direct {v1}, Lobi;-><init>()V
+
+    new-instance v4, Lmkl;
+
+    invoke-direct {v4, v2, v1, v0, v1}, Lmkl;-><init>(Lsql;Lobi;Ljava/lang/String;Lobi;)V
+
+    invoke-virtual {v3, v4, v1}, Lrwl;->c(Lmkl;Lobi;)V
+
+    iget-object v0, v1, Lobi;->a:Lfwl;
+
+    return-object v0
+.end method

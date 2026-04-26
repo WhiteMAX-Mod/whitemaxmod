@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set android:ordering="together"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <objectAnimator android:interpolator="@drawable/$calls_avd__10" android:duration="133" android:startOffset="0" android:valueFrom="0" android:valueTo="10" android:valueType="floatType" android:propertyName="rotation" />
+    <objectAnimator android:interpolator="@drawable/$calls_avd__11" android:duration="97" android:startOffset="133" android:valueFrom="10" android:valueTo="-10" android:valueType="floatType" android:propertyName="rotation" />
+    <objectAnimator android:interpolator="@drawable/$calls_avd__12" android:duration="97" android:startOffset="230" android:valueFrom="-10" android:valueTo="10" android:valueType="floatType" android:propertyName="rotation" />
+    <objectAnimator android:interpolator="@drawable/$calls_avd__13" android:duration="97" android:startOffset="327" android:valueFrom="10" android:valueTo="-10" android:valueType="floatType" android:propertyName="rotation" />
+    <objectAnimator android:interpolator="@drawable/$calls_avd__14" android:duration="93" android:startOffset="423" android:valueFrom="-10" android:valueTo="6" android:valueType="floatType" android:propertyName="rotation" />
+    <objectAnimator android:interpolator="@drawable/$calls_avd__15" android:duration="100" android:startOffset="517" android:valueFrom="6" android:valueTo="-5" android:valueType="floatType" android:propertyName="rotation" />
+    <objectAnimator android:interpolator="@drawable/$calls_avd__16" android:duration="283" android:startOffset="617" android:valueFrom="-5" android:valueTo="0" android:valueType="floatType" android:propertyName="rotation" />
+</set>

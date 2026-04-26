@@ -1,0 +1,28 @@
+version: 2.12.0
+apkFileName: 26.14.1.apk
+usesFramework:
+  ids:
+  - 1
+sdkInfo:
+  minSdkVersion: 26
+  targetSdkVersion: 35
+packageInfo:
+  forcedPackageId: 127
+versionInfo:
+  versionCode: 6686
+  versionName: 26.14.1
+doNotCompress:
+- arsc
+- m4a
+- png
+- so
+- webp
+- META-INF/services/boi
+- META-INF/services/hy8
+- META-INF/services/ru.ok.android.onelog.OneLogAppender
+- assets/dexopt/baseline.prof
+- assets/dexopt/baseline.profm
+- io/opentelemetry/api/version.properties
+- io/opentelemetry/context/version.properties
+- okhttp3/internal/publicsuffix/publicsuffixes.gz
+- tech/kwik/core/version.properties

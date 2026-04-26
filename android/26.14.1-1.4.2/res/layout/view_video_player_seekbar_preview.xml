@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ru.ok.messages.video.widgets.VideoFramePreview android:id="@id/video_frame_preview" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="7.0dip" />
+    <ru.ok.messages.video.widgets.VideoPlayerSeekBar android:id="@id/video_player_seek_bar" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" app:seekBarEnable="true" />
+</merge>
