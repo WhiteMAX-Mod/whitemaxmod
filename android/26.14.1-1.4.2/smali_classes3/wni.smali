@@ -17,7 +17,7 @@
 
     new-instance v0, Lg9h;
 
-    const-string v1, "https://sdk-api.apptracer.ru"
+    const-string v1, "0.0.0.0"
 
     invoke-direct {v0, v1}, Lg9h;-><init>(Ljava/lang/String;)V
 
