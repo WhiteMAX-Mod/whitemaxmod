@@ -738,7 +738,7 @@
     :pswitch_11
     sget-object v16, Lru/ok/tamtam/android/prefs/PmsKey;->calls-android-new-pms:Lru/ok/tamtam/android/prefs/PmsKey;
 
-    sget-object v11, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+    sget-object v11, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     const/4 v2, 0x0
 
