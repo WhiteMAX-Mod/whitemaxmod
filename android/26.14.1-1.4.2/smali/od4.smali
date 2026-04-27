@@ -434,46 +434,8 @@
 .end method
 
 .method public final e()Z
-    .locals 2
-
-    iget-object v0, p0, Lod4;->o:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lld4;
-
-    if-eqz v0, :cond_0
-
-    iget-object v1, p0, Lod4;->f:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    iget-boolean v0, v0, Lld4;->e:Z
-
-    return v0
-
-    :cond_0
-    invoke-static {p0}, Lod4;->j(Lod4;)Landroid/net/NetworkCapabilities;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    const/4 v1, 0x4
-
-    invoke-virtual {v0, v1}, Landroid/net/NetworkCapabilities;->hasTransport(I)Z
-
-    move-result v0
-
-    return v0
-
-    :cond_1
+    .locals 1
+	
     const/4 v0, 0x0
 
     return v0
