@@ -557,7 +557,7 @@
     :pswitch_10
     sget-object v9, Lru/ok/tamtam/android/prefs/PmsKey;->chats-multi-select:Lru/ok/tamtam/android/prefs/PmsKey;
 
-    sget-object v4, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+    sget-object v4, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     const/4 v0, 0x0
 

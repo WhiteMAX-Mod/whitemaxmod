@@ -821,7 +821,7 @@
 
     move-object v2, v4
 
-    sget-object v4, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+    sget-object v4, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     const-string v3, "MVP \u043c\u0443\u043b\u044c\u0442\u0438\u0430\u043a\u043a\u0430\u0443\u043d\u0442\u0430"
 

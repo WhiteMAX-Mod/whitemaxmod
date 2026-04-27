@@ -102,7 +102,7 @@
     :pswitch_3
     sget-object v8, Lru/ok/tamtam/android/prefs/PmsKey;->speedy-upload:Lru/ok/tamtam/android/prefs/PmsKey;
 
-    sget-object v3, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+    sget-object v3, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     const/4 v2, 0x0
 
@@ -268,7 +268,7 @@
     :pswitch_9
     sget-object v2, Lru/ok/tamtam/android/prefs/PmsKey;->analytics-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
 
-    const/4 v3, 0x1
+    const/4 v3, 0x0
 
     const-string v4, "\u0410\u043d\u0430\u043b\u0438\u0442\u0438\u043a\u0430"
 
@@ -432,7 +432,7 @@
     :pswitch_13
     sget-object v11, Lru/ok/tamtam/android/prefs/PmsKey;->new-media-edit-screen:Lru/ok/tamtam/android/prefs/PmsKey;
 
-    sget-object v6, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+    sget-object v6, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     const/4 v2, 0x0
 
