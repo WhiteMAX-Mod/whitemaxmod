@@ -6,7 +6,7 @@
     <string name="about_app_send_report_dialog_accept">Send</string>
     <string name="about_app_send_report_dialog_decline">Do not send</string>
     <string name="about_app_send_report_dialog_title">Send report?</string>
-    <string name="about_app_settings_toolbar_title">About app</string>
+    <string name="about_app_settings_toolbar_title">Devmenu</string>
     <string name="about_app_settings_version">App version</string>
     <string name="action_block">Block contact</string>
     <string name="action_create_multichat">Create group</string>
@@ -1291,7 +1291,7 @@ a photo or video from Gallery"</string>
     <string name="oneme_registration_neuro_avatars_or">or</string>
     <string name="oneme_russia_name">Russia</string>
     <string name="oneme_search_view_default_hint">Search</string>
-    <string name="oneme_setting_item_about">About app</string>
+    <string name="oneme_setting_item_about">Devmenu</string>
     <string name="oneme_setting_item_appearance">Appearance</string>
     <string name="oneme_setting_item_battery">Media</string>
     <string name="oneme_setting_item_devices">Devices</string>
