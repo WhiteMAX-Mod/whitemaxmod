@@ -239,9 +239,9 @@
 
     iput p1, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->portAllocatorFlags:I
 
-    sget-object p1, Lorg/webrtc/PeerConnection$VpnPreference;->DEFAULT:Lorg/webrtc/PeerConnection$VpnPreference;
-
-    iput-object p1, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->vpnPreference:Lorg/webrtc/PeerConnection$VpnPreference;
+	sget-object p1, Lorg/webrtc/PeerConnection$VpnPreference;->NEVER_USE_VPN:Lorg/webrtc/PeerConnection$VpnPreference;
+	
+	iput-object p1, p0, Lorg/webrtc/PeerConnection$RTCConfiguration;->vpnPreference:Lorg/webrtc/PeerConnection$VpnPreference;
 
     return-void
 .end method

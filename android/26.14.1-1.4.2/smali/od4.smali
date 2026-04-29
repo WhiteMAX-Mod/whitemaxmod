@@ -1329,11 +1329,8 @@
     goto :goto_6
 
     :goto_7
-    const/4 v5, 0x4
-
-    invoke-virtual {p1, v5}, Landroid/net/NetworkCapabilities;->hasTransport(I)Z
-
-    move-result v13
+	
+	const/4 v13, 0x0
 
     new-instance v8, Lld4;
 
