@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="@dimen/mtrl_switch_track_height" android:width="@dimen/mtrl_switch_track_width" android:viewportWidth="@integer/mtrl_switch_track_viewport_width" android:viewportHeight="@integer/mtrl_switch_track_viewport_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:name="track" android:fillColor="#ffffffff" android:pathData="@string/mtrl_switch_track_path" />
+</vector>

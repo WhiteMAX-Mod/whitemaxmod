@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set android:ordering="together"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <objectAnimator android:interpolator="@drawable/$chats__24" android:duration="283" android:startOffset="0" android:propertyName="translateXY" android:pathData="M 10.9,10.36C 10.9,10.36 10.9,10.36 10.9,10.36" android:propertyXName="translateX" android:propertyYName="translateY" />
+    <objectAnimator android:interpolator="@drawable/$chats__25" android:duration="83" android:startOffset="283" android:propertyName="translateXY" android:pathData="M 10.9,10.36C 10.9,10.36 10.9,13.7 10.9,13.7" android:propertyXName="translateX" android:propertyYName="translateY" />
+    <objectAnimator android:interpolator="@drawable/$chats__26" android:duration="83" android:startOffset="367" android:propertyName="translateXY" android:pathData="M 10.9,13.7C 10.9,13.7 10.9,10.7 10.9,10.7" android:propertyXName="translateX" android:propertyYName="translateY" />
+    <objectAnimator android:interpolator="@drawable/$chats__27" android:duration="83" android:startOffset="450" android:propertyName="translateXY" android:pathData="M 10.9,10.7C 10.9,10.7 10.9,13.7 10.9,13.7" android:propertyXName="translateX" android:propertyYName="translateY" />
+    <objectAnimator android:interpolator="@drawable/$chats__28" android:duration="200" android:startOffset="533" android:propertyName="translateXY" android:pathData="M 10.9,13.7C 10.9,13.7 10.9,7.6 10.9,7.6" android:propertyXName="translateX" android:propertyYName="translateY" />
+    <objectAnimator android:interpolator="@drawable/$chats__29" android:duration="250" android:startOffset="733" android:propertyName="translateXY" android:pathData="M 10.9,7.6C 10.9,7.6 10.9,10.36 10.9,10.36" android:propertyXName="translateX" android:propertyYName="translateY" />
+</set>

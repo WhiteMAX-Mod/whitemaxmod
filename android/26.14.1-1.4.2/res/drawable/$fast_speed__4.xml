@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set android:ordering="together"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <objectAnimator android:duration="500" android:repeatCount="infinite" android:valueType="floatType">
+        <propertyValuesHolder android:propertyName="translateX">
+            <keyframe android:value="7.606" android:interpolator="@drawable/$fast_speed__5" android:fraction="0.0" />
+            <keyframe android:value="18.354" android:fraction="0.666" />
+            <keyframe android:value="18.354" android:fraction="1.0" />
+        </propertyValuesHolder>
+    </objectAnimator>
+</set>

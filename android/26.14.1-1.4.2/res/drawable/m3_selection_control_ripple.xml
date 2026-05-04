@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple android:color="@color/m3_selection_control_ripple_color_selector" android:radius="20.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

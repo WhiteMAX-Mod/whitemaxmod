@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set android:ordering="together"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <objectAnimator android:duration="500" android:repeatCount="infinite" android:valueType="floatType">
+        <propertyValuesHolder android:propertyName="scaleX">
+            <keyframe android:value="0" android:interpolator="@drawable/$fast_speed__7" android:fraction="0.0" />
+            <keyframe android:value="0.33333" android:fraction="0.666" />
+            <keyframe android:value="0.33333" android:fraction="1.0" />
+        </propertyValuesHolder>
+        <propertyValuesHolder android:propertyName="scaleY">
+            <keyframe android:value="0" android:interpolator="@drawable/$fast_speed__8" android:fraction="0.0" />
+            <keyframe android:value="0.33333" android:fraction="0.666" />
+            <keyframe android:value="0.33333" android:fraction="1.0" />
+        </propertyValuesHolder>
+    </objectAnimator>
+</set>

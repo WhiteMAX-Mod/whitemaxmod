@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProgressBar android:layout_gravity="center" android:id="@id/frg_local_media__progress_bar" android:visibility="gone" android:layout_width="24.0dip" android:layout_height="24.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/SmallProgressBar"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

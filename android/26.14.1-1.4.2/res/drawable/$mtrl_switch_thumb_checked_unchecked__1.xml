@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objectAnimator android:duration="@integer/mtrl_switch_thumb_post_morphing_duration" android:startOffset="@integer/mtrl_switch_thumb_pre_morphing_duration" android:valueFrom="@string/mtrl_switch_thumb_path_morphing" android:valueTo="@string/mtrl_switch_thumb_path_unchecked" android:valueType="pathType" android:propertyName="pathData"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt" />

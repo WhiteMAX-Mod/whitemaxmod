@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="@dimen/mtrl_switch_track_height" android:width="@dimen/mtrl_switch_track_width" android:viewportWidth="@integer/mtrl_switch_track_viewport_width" android:viewportHeight="@integer/mtrl_switch_track_viewport_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:name="outline" android:pathData="@string/mtrl_switch_track_decoration_path" android:strokeColor="?colorOutline" android:strokeWidth="2.0" />
+</vector>

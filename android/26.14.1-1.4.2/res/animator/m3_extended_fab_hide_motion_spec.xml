@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <objectAnimator android:interpolator="?motionEasingEmphasizedAccelerateInterpolator" android:duration="?motionDurationShort3" android:startOffset="0" android:valueFrom="1.0" android:valueTo="0.0" android:valueType="floatType" android:propertyName="opacity" />
+    <objectAnimator android:interpolator="?motionEasingEmphasizedAccelerateInterpolator" android:duration="?motionDurationMedium1" android:startOffset="0" android:valueFrom="1.0" android:valueTo="0.4" android:valueType="floatType" android:propertyName="scale" />
+</set>

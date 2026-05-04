@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-selector android:height="@dimen/mtrl_switch_thumb_size" android:width="@dimen/mtrl_switch_thumb_size"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:state_pressed="true" android:id="@id/pressed" android:drawable="@drawable/mtrl_switch_thumb_pressed" />
+    <item android:state_checked="true" android:id="@id/checked" android:drawable="@drawable/mtrl_switch_thumb_checked" />
+    <item android:id="@id/with_icon" android:drawable="@drawable/mtrl_switch_thumb_checked" app:state_with_icon="true" />
+    <item android:id="@id/unchecked" android:drawable="@drawable/mtrl_switch_thumb_unchecked" />
+    <transition android:drawable="@drawable/mtrl_switch_thumb_pressed_checked" android:toId="@id/checked" android:fromId="@id/pressed" />
+    <transition android:drawable="@drawable/mtrl_switch_thumb_pressed_checked" android:toId="@id/with_icon" android:fromId="@id/pressed" />
+    <transition android:drawable="@drawable/mtrl_switch_thumb_pressed_unchecked" android:toId="@id/unchecked" android:fromId="@id/pressed" />
+    <transition android:drawable="@drawable/mtrl_switch_thumb_checked_pressed" android:toId="@id/pressed" android:fromId="@id/checked" />
+    <transition android:drawable="@drawable/mtrl_switch_thumb_checked_unchecked" android:toId="@id/unchecked" android:fromId="@id/checked" />
+    <transition android:drawable="@drawable/mtrl_switch_thumb_checked_pressed" android:toId="@id/pressed" android:fromId="@id/with_icon" />
+    <transition android:drawable="@drawable/mtrl_switch_thumb_unchecked_pressed" android:toId="@id/pressed" android:fromId="@id/unchecked" />
+    <transition android:drawable="@drawable/mtrl_switch_thumb_unchecked_checked" android:toId="@id/checked" android:fromId="@id/unchecked" />
+</animated-selector>

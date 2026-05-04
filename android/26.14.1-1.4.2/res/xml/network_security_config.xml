@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="false">mobileid.megafon.ru</domain>
+        <domain includeSubdomains="false">idgw.mobileid.mts.ru</domain>
+        <domain includeSubdomains="false">hhe.mts.ru</domain>
+        <domain includeSubdomains="false">he-mc.tele2.ru</domain>
+        <domain includeSubdomains="false">he-mc.t2.ru</domain>
+        <domain includeSubdomains="false">balance.beeline.ru</domain>
+    </domain-config>
+</network-security-config>

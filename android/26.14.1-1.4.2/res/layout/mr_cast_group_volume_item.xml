@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="@dimen/mr_dynamic_volume_group_list_item_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="?mediaRouteHeaderTextAppearance" android:gravity="start" android:id="@id/mr_group_volume_route_name" android:paddingLeft="16.0dip" android:paddingTop="16.0dip" android:paddingRight="16.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" android:textAlignment="viewStart" />
+    <RelativeLayout android:id="@id/mr_cast_volume_layout" android:layout_width="fill_parent" android:layout_height="@dimen/mr_dynamic_dialog_row_height">
+        <ImageButton android:id="@id/mr_cast_mute_button" android:background="?selectableItemBackgroundBorderless" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginLeft="16.0dip" android:layout_centerVertical="true" android:layout_marginStart="16.0dip" />
+        <androidx.mediarouter.app.MediaRouteVolumeSlider android:id="@id/mr_cast_volume_slider" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="16.0dip" android:maxHeight="48.0dip" android:progressDrawable="@drawable/mr_cast_group_seekbar_track" android:minHeight="48.0dip" android:thumb="@drawable/mr_cast_thumb" android:layout_toRightOf="@id/mr_cast_mute_button" android:layout_centerVertical="true" android:contentDescription="@string/mr_controller_volume_slider" android:layout_marginEnd="16.0dip" android:layout_toEndOf="@id/mr_cast_mute_button" android:splitTrack="false" />
+        <View android:id="@id/mr_cast_divider" android:background="?mediaRouteDividerColor" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</LinearLayout>

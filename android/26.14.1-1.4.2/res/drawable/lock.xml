@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector android:drawable="@drawable/$lock__0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <target android:name="_R_G_L_0_G_L_1_G_N_3_T_1" android:animation="@drawable/$lock__1" />
+    <target android:name="_R_G_L_0_G_L_1_G_N_3_T_1" android:animation="@drawable/$lock__4" />
+    <target android:name="shackle" android:animation="@drawable/$lock__9" />
+    <target android:name="_R_G_L_0_G_L_0_G" android:animation="@drawable/$lock__11" />
+    <target android:name="_R_G_L_0_G_L_0_G" android:animation="@drawable/$lock__14" />
+    <target android:name="_R_G_L_0_G_L_0_G_N_1_T_0" android:animation="@drawable/$lock__17" />
+    <target android:name="_R_G_L_0_G_L_0_G_N_1_N_3_T_1" android:animation="@drawable/$lock__20" />
+    <target android:name="_R_G_L_0_G_L_0_G_N_1_N_3_T_1" android:animation="@drawable/$lock__23" />
+    <target android:name="time_group" android:animation="@drawable/$lock__28" />
+</animated-vector>

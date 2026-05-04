@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ru.ok.messages.views.widgets.SquareFrameLayout android:layout_gravity="center" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:fresco="http://schemas.android.com/apk/res-auto">
+    <com.facebook.drawee.view.SimpleDraweeView android:layout_gravity="center" android:id="@id/row_media_bar_selected__drawee" android:layout_width="32.0dip" android:layout_height="32.0dip" fresco:actualImageScaleType="centerCrop" fresco:roundedCornerRadius="4.0dip" />
+    <ru.ok.utils.widgets.RoundedRectFrameLayout android:layout_gravity="center" android:id="@id/row_media_bar_selected__progress_background" android:background="#ff5b5b69" android:visibility="gone" android:layout_width="32.0dip" android:layout_height="32.0dip" android:alpha="0.5" fresco:cornersRadius="4.0dip" />
+    <ProgressBar android:layout_gravity="center" android:id="@id/row_media_bar_selected__progress_bar" android:visibility="gone" style="@style/SmallProgressBar" />
+</ru.ok.messages.views.widgets.SquareFrameLayout>

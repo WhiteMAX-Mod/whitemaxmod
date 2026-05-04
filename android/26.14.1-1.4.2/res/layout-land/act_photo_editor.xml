@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/act_photo_editor__root" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="end" android:orientation="vertical" android:id="@id/act_photo_editor__rl_buttons" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentRight="true" android:layout_alignParentEnd="true">
+        <androidx.appcompat.widget.AppCompatImageButton android:id="@id/act_photo_editor__btn_done" android:background="@null" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_check_24" />
+        <androidx.appcompat.widget.AppCompatImageButton android:layout_gravity="end" android:id="@id/act_photo_editor__btn_sticker" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_draw_sticker_24" android:layout_marginEnd="12.0dip" />
+        <FrameLayout android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <androidx.appcompat.widget.AppCompatTextView android:textSize="15.0sp" android:gravity="center" android:layout_gravity="center" android:id="@id/act_photo_editor__btn_clear" android:padding="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/photo_editor_drawing_clear" android:textAllCaps="true" />
+        </FrameLayout>
+        <androidx.appcompat.widget.AppCompatImageButton android:id="@id/act_photo_editor__btn_undo" android:background="@null" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_undo_24" />
+        <androidx.appcompat.widget.AppCompatImageButton android:id="@id/act_photo_editor__btn_close" android:background="@null" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_cross_24" />
+    </LinearLayout>
+    <RelativeLayout android:id="@id/act_photo_editor__rl_controls" android:layout_width="64.0dip" android:layout_height="fill_parent" android:layout_toLeftOf="@id/act_photo_editor__rl_buttons" android:layout_toStartOf="@id/act_photo_editor__rl_buttons">
+        <ru.ok.tamtam.photoeditor.view.colorselector.ColorSelectorView android:id="@id/act_photo_editor__view_color_selector" android:paddingTop="12.0dip" android:paddingBottom="4.0dip" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="8.0dip" android:layout_marginTop="42.0dip" android:overScrollMode="never" android:layout_marginStart="8.0dip" app:color_selector_orientation="vertical" />
+        <FrameLayout android:id="@id/act_photo_editor__fl_line_width" android:background="@drawable/circle_white" android:padding="3.0dip" android:layout_width="42.0dip" android:layout_height="42.0dip" android:layout_marginLeft="8.0dip" android:layout_marginTop="8.0dip" android:layout_alignParentLeft="true" android:layout_marginStart="8.0dip" android:layout_alignParentStart="true" android:elevation="2.0dip">
+            <androidx.appcompat.widget.AppCompatImageButton android:id="@id/act_photo_editor__btn_line_width" android:background="@null" android:padding="3.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/ic_marker_thickness_24" android:tint="#ffffffff" />
+        </FrameLayout>
+    </RelativeLayout>
+    <ru.ok.tamtam.photoeditor.view.EditorSurfaceViewContainer android:id="@id/act_photo_editor__editor" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_toLeftOf="@id/act_photo_editor__rl_controls" android:layout_alignParentTop="true" />
+    <ru.ok.tamtam.photoeditor.view.BrushWidthViewImpl android:id="@id/act_photo_editor__view_brush_width" android:visibility="invisible" android:layout_width="100.0dip" android:layout_height="200.0dip" android:layout_marginRight="8.0dip" android:layout_toLeftOf="@id/act_photo_editor__rl_controls" android:layout_alignParentTop="true" android:layout_marginEnd="8.0dip" android:layout_toStartOf="@id/act_photo_editor__rl_controls" android:elevation="4.0dip" />
+</RelativeLayout>

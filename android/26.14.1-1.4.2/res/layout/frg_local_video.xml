@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ru.ok.messages.views.widgets.SlideOutLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ru.ok.messages.media.mediabar.SimpleTransitionDraweeView android:id="@id/frg_local_video__iv_video" android:layout_width="fill_parent" android:layout_height="fill_parent" android:adjustViewBounds="true" app:actualImageScaleType="fitCenter" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+        <include android:id="@id/frg_local_video__player" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/view_full_screen_video_player" />
+        <include layout="@layout/local_media_progress_background" />
+        <include layout="@layout/local_media_progressbar" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ru.ok.messages.views.widgets.SlideOutLayout>
