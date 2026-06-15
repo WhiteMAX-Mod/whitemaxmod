@@ -4,11 +4,11 @@
 
 
 # static fields
-.field public static a:Ljava/util/WeakHashMap;
+.field public static a:Ljava/util/WeakHashMap; = null
 
-.field public static b:Ljava/lang/reflect/Field;
+.field public static b:Ljava/lang/reflect/Field; = null
 
-.field public static c:Z
+.field public static c:Z = false
 
 .field public static final d:[I
 

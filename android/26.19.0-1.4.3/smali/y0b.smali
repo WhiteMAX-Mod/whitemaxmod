@@ -620,9 +620,37 @@
 
 # virtual methods
 .method public final verify(Ljava/lang/String;Ljavax/net/ssl/SSLSession;)Z
-    .locals 1
+    .locals 2
 
-    const/4 v0, 0x1
+    invoke-static {p1}, Ly0b;->b(Ljava/lang/String;)Z
 
-    return v0
+    move-result v0
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    :try_start_0
+    invoke-interface {p2}, Ljavax/net/ssl/SSLSession;->getPeerCertificates()[Ljava/security/cert/Certificate;
+
+    move-result-object p2
+
+    aget-object p2, p2, v1
+
+    check-cast p2, Ljava/security/cert/X509Certificate;
+
+    invoke-static {p1, p2}, Ly0b;->c(Ljava/lang/String;Ljava/security/cert/X509Certificate;)Z
+
+    move-result p1
+    :try_end_0
+    .catch Ljavax/net/ssl/SSLException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return p1
+
+    :catch_0
+    :goto_0
+    return v1
 .end method

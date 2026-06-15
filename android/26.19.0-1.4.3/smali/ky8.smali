@@ -418,23 +418,203 @@
 .end method
 
 .method public final checkClientTrusted([Ljava/security/cert/X509Certificate;Ljava/lang/String;)V
-    .locals 0
+    .locals 5
+
+    iget-object v0, p0, Lky8;->b:Ljava/lang/String;
+
+    sget-object v1, Lq98;->y:Ledb;
+
+    if-nez v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sget-object v2, Lqo8;->d:Lqo8;
+
+    invoke-virtual {v1, v2}, Ledb;->b(Lqo8;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    const-string v3, "checkClientTrusted, authType="
+
+    invoke-static {v3, p2}, Lc72;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v1, v2, v0, v3, v4}, Ledb;->c(Lqo8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
+    :goto_0
+    iget-object v0, p0, Lky8;->c:Ljavax/net/ssl/X509TrustManager;
+
+    invoke-interface {v0, p1, p2}, Ljavax/net/ssl/X509TrustManager;->checkClientTrusted([Ljava/security/cert/X509Certificate;Ljava/lang/String;)V
 
     return-void
 .end method
 
 .method public final checkServerTrusted([Ljava/security/cert/X509Certificate;Ljava/lang/String;)V
-    .locals 0
+    .locals 6
+
+    sget-object v0, Lqo8;->d:Lqo8;
+
+    iget-object v1, p0, Lky8;->b:Ljava/lang/String;
+
+    sget-object v2, Lq98;->y:Ledb;
+
+    const/4 v3, 0x0
+
+    if-nez v2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v2, v0}, Ledb;->b(Lqo8;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    const-string v4, "checkServerTrusted, authType="
+
+    invoke-static {v4, p2}, Lc72;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v2, v0, v1, v4, v3}, Ledb;->c(Lqo8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
+    :goto_0
+    iget-object v1, p0, Lky8;->e:Ljava/lang/ThreadLocal;
+
+    invoke-virtual {v1}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/String;
+
+    if-eqz v1, :cond_3
+
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    if-lez v2, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    move-object v1, v3
+
+    :goto_1
+    if-nez v1, :cond_5
+
+    :cond_3
+    iget-object v1, p0, Lky8;->a:Ljava/lang/String;
+
+    if-eqz v1, :cond_4
+
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    if-lez v2, :cond_4
+
+    goto :goto_2
+
+    :cond_4
+    move-object v1, v3
+
+    :cond_5
+    :goto_2
+    iget-object v2, p0, Lky8;->b:Ljava/lang/String;
+
+    sget-object v4, Lq98;->y:Ledb;
+
+    if-nez v4, :cond_6
+
+    goto :goto_3
+
+    :cond_6
+    invoke-virtual {v4, v0}, Ledb;->b(Lqo8;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_7
+
+    const-string v5, "checkServerTrusted, host="
+
+    invoke-static {v5, v1}, Lc72;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v4, v0, v2, v5, v3}, Ledb;->c(Lqo8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_7
+    :goto_3
+    if-eqz v1, :cond_8
+
+    :try_start_0
+    iget-object v0, p0, Lky8;->d:Lvhg;
+
+    invoke-virtual {v0}, Lvhg;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/net/http/X509TrustManagerExtensions;
+
+    invoke-virtual {v0, p1, p2, v1}, Landroid/net/http/X509TrustManagerExtensions;->checkServerTrusted([Ljava/security/cert/X509Certificate;Ljava/lang/String;Ljava/lang/String;)Ljava/util/List;
 
     return-void
+
+    :catchall_0
+    move-exception p2
+
+    goto :goto_4
+
+    :catch_0
+    move-exception p2
+
+    goto :goto_5
+
+    :cond_8
+    iget-object v0, p0, Lky8;->c:Ljavax/net/ssl/X509TrustManager;
+
+    invoke-interface {v0, p1, p2}, Ljavax/net/ssl/X509TrustManager;->checkServerTrusted([Ljava/security/cert/X509Certificate;Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/security/cert/CertificateException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    return-void
+
+    :goto_4
+    invoke-virtual {p0, p1, v3}, Lky8;->a([Ljava/security/cert/X509Certificate;Ljava/security/cert/CertificateException;)V
+
+    new-instance p1, Ljava/security/cert/CertificateException;
+
+    const-string v0, "Verification failed"
+
+    invoke-direct {p1, v0, p2}, Ljava/security/cert/CertificateException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw p1
+
+    :goto_5
+    invoke-virtual {p0, p1, p2}, Lky8;->a([Ljava/security/cert/X509Certificate;Ljava/security/cert/CertificateException;)V
+
+    throw p2
 .end method
 
 .method public final getAcceptedIssuers()[Ljava/security/cert/X509Certificate;
     .locals 1
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lky8;->c:Ljavax/net/ssl/X509TrustManager;
 
-    new-array v0, v0, [Ljava/security/cert/X509Certificate;
+    invoke-interface {v0}, Ljavax/net/ssl/X509TrustManager;->getAcceptedIssuers()[Ljava/security/cert/X509Certificate;
+
+    move-result-object v0
 
     return-object v0
 .end method

@@ -47,11 +47,51 @@
 .method public final checkClientTrusted([Ljava/security/cert/X509Certificate;Ljava/lang/String;)V
     .locals 0
 
+    if-eqz p1, :cond_1
+
+    array-length p1, p1
+
+    if-nez p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    const/4 p1, 0x1
+
+    :goto_1
+    iput-boolean p1, p0, Lone/video/calls/sdk_private/bE$2;->a:Z
+
     return-void
 .end method
 
 .method public final checkServerTrusted([Ljava/security/cert/X509Certificate;Ljava/lang/String;)V
     .locals 0
+
+    if-eqz p1, :cond_1
+
+    array-length p1, p1
+
+    if-nez p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    const/4 p1, 0x1
+
+    :goto_1
+    iput-boolean p1, p0, Lone/video/calls/sdk_private/bE$2;->b:Z
 
     return-void
 .end method
@@ -60,8 +100,6 @@
     .locals 1
 
     const/4 v0, 0x0
-
-    new-array v0, v0, [Ljava/security/cert/X509Certificate;
 
     return-object v0
 .end method

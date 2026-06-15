@@ -4,9 +4,9 @@
 
 
 # static fields
-.field public static a:Lzcc;
+.field public static a:Lzcc; = null
 
-.field public static volatile b:Z
+.field public static volatile b:Z = false
 
 .field public static final c:[Ljava/lang/Object;
 

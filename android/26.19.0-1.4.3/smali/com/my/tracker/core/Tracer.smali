@@ -4,7 +4,7 @@
 
 
 # static fields
-.field private static volatile a:Z
+.field private static volatile a:Z = false
 
 .field private static volatile b:Lcom/my/tracker/MyTrackerConfig$Logger;
 

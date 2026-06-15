@@ -4,13 +4,13 @@
 
 
 # static fields
-.field public static a:Lbtj;
+.field public static a:Lbtj; = null
 
-.field public static b:Z
+.field public static b:Z = false
 
-.field public static c:Ljava/lang/reflect/Method;
+.field public static c:Ljava/lang/reflect/Method; = null
 
-.field public static d:Z
+.field public static d:Z = false
 
 .field public static e:Ljava/lang/reflect/Field;
 

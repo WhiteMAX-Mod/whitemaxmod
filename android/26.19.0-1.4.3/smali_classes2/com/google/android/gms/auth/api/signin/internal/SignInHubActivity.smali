@@ -9,7 +9,7 @@
 
 
 # static fields
-.field public static D:Z
+.field public static D:Z = false
 
 
 # instance fields

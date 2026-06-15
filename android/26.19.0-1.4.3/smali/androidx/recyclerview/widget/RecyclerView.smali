@@ -7,9 +7,9 @@
 
 
 # static fields
-.field public static Q1:Z
+.field public static Q1:Z = false
 
-.field public static R1:Z
+.field public static R1:Z = false
 
 .field public static final S1:[I
 
