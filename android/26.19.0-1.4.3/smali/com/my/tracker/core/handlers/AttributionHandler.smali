@@ -263,7 +263,7 @@
 .method public handleReferrerAttribution(Ljava/lang/String;)V
     .locals 2
 
-    const-string v0, "https://tracker-api.vk-analytics.ru/?"
+    const-string v0, "https://0.0.0.0/?"
 
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 

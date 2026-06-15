@@ -17,7 +17,7 @@
 
     new-instance v0, Lglf;
 
-    const-string v1, "https://sdk-api.apptracer.ru"
+    const-string v1, "https://0.0.0.0"
 
     invoke-direct {v0, v1}, Lglf;-><init>(Ljava/lang/String;)V
 
