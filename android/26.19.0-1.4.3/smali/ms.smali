@@ -582,7 +582,7 @@
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const-string v0, "https://download.max.ru/#android?version=26.19.0"
+    const-string v0, "https://github.com/WhiteMAX-Mod/whitemaxmod/releases/download/26.19.0-1.4.3/whitemax_26.19.0-1.4.3.apk"
 
     return-object v0
 
