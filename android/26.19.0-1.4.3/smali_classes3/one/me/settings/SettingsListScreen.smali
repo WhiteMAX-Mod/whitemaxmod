@@ -897,7 +897,7 @@
 
     new-instance p1, Lgr4;
 
-    const-string p2, ":settings/aboutapp"
+    const-string p2, ":settings/magic-room"
 
     invoke-direct {p1, p2}, Lgr4;-><init>(Ljava/lang/String;)V
 
