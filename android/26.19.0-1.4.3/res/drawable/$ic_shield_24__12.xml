@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set android:ordering="together"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <objectAnimator android:interpolator="@drawable/$ic_shield_24__13" android:duration="83" android:startOffset="0" android:propertyName="translateXY" android:pathData="M 99.999,90.667C 99.999,90.667 99.999,135.667 99.999,135.667" android:propertyXName="translateX" android:propertyYName="translateY" />
+    <objectAnimator android:interpolator="@drawable/$ic_shield_24__14" android:duration="83" android:startOffset="83" android:propertyName="translateXY" android:pathData="M 99.999,135.667C 99.999,135.667 99.999,135.667 99.999,135.667" android:propertyXName="translateX" android:propertyYName="translateY" />
+    <objectAnimator android:interpolator="@drawable/$ic_shield_24__15" android:duration="167" android:startOffset="167" android:propertyName="translateXY" android:pathData="M 99.999,135.667C 99.999,135.667 99.999,90.667 99.999,90.667" android:propertyXName="translateX" android:propertyYName="translateY" />
+</set>

@@ -1,0 +1,135 @@
+.class public final Lj71;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# instance fields
+.field public final a:Lr6;
+
+
+# direct methods
+.method public constructor <init>(Lr6;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lj71;->a:Lr6;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Landroid/view/Window;Lyc4;Lyc4;Z)V
+    .locals 2
+
+    instance-of v0, p3, Lple;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    check-cast p3, Lple;
+
+    goto :goto_0
+
+    :cond_0
+    move-object p3, v1
+
+    :goto_0
+    if-eqz p3, :cond_1
+
+    invoke-interface {p3, p1}, Lple;->c(Landroid/view/Window;)V
+
+    goto :goto_3
+
+    :cond_1
+    if-eqz p4, :cond_6
+
+    iget-object p3, p0, Lj71;->a:Lr6;
+
+    invoke-interface {p3}, Lzt6;->invoke()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lpde;
+
+    if-eqz v0, :cond_2
+
+    check-cast v0, Lone/me/android/root/RootController;
+
+    invoke-virtual {v0}, Lone/me/android/root/RootController;->q1()Lide;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lide;->e()Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lel3;->N0(Ljava/util/List;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lmde;
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, v0, Lmde;->a:Lyc4;
+
+    goto :goto_1
+
+    :cond_2
+    move-object v0, v1
+
+    :goto_1
+    if-nez v0, :cond_4
+
+    invoke-interface {p3}, Lzt6;->invoke()Ljava/lang/Object;
+
+    move-result-object p3
+
+    check-cast p3, Lpde;
+
+    if-eqz p3, :cond_3
+
+    invoke-interface {p3}, Lpde;->F()Lyc4;
+
+    move-result-object p3
+
+    move-object v0, p3
+
+    goto :goto_2
+
+    :cond_3
+    move-object v0, v1
+
+    :cond_4
+    :goto_2
+    instance-of p3, v0, Lple;
+
+    if-eqz p3, :cond_5
+
+    move-object v1, v0
+
+    check-cast v1, Lple;
+
+    :cond_5
+    if-eqz v1, :cond_6
+
+    invoke-interface {v1, p1}, Lple;->c(Landroid/view/Window;)V
+
+    :cond_6
+    :goto_3
+    instance-of p3, p2, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;
+
+    if-eqz p3, :cond_7
+
+    if-nez p4, :cond_7
+
+    check-cast p2, Lple;
+
+    invoke-interface {p2, p1}, Lple;->l(Landroid/view/Window;)V
+
+    :cond_7
+    return-void
+.end method

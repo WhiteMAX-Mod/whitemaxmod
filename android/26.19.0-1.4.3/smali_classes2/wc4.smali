@@ -1,0 +1,85 @@
+.class public final Lwc4;
+.super Ljc4;
+.source "SourceFile"
+
+
+# instance fields
+.field public d:Lbo8;
+
+.field public e:Lbo8;
+
+.field public f:Lgd;
+
+.field public g:Ljava/lang/Long;
+
+.field public h:Ljzd;
+
+.field public i:Lf7e;
+
+.field public j:I
+
+.field public synthetic k:Ljava/lang/Object;
+
+.field public final synthetic l:Lxc4;
+
+.field public m:I
+
+
+# direct methods
+.method public constructor <init>(Lxc4;Ljc4;)V
+    .locals 0
+
+    iput-object p1, p0, Lwc4;->l:Lxc4;
+
+    invoke-direct {p0, p2}, Ljc4;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final m(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 13
+
+    iput-object p1, p0, Lwc4;->k:Ljava/lang/Object;
+
+    iget p1, p0, Lwc4;->m:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lwc4;->m:I
+
+    const/4 v10, 0x0
+
+    const/4 v11, 0x0
+
+    iget-object v0, p0, Lwc4;->l:Lxc4;
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    const/4 v8, 0x0
+
+    const/4 v9, 0x0
+
+    move-object v12, p0
+
+    invoke-virtual/range {v0 .. v12}, Lxc4;->a(Ljava/util/List;Ljava/util/List;Ljava/util/List;Lbo8;Lbo8;Lbo8;Lgd;Lbu6;ILjava/lang/Long;Ljava/lang/Long;Ljc4;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method

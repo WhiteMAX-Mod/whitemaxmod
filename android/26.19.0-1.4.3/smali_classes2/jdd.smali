@@ -1,0 +1,6 @@
+.class public abstract Ljdd;
+.super Ljava/lang/Object;
+
+
+# static fields
+.field public static avd_onboarding_speed:I = 0x7f080457

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="24.0dip" android:width="24.0dip" android:viewportWidth="24.0" android:viewportHeight="24.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:name="circle_background" android:fillColor="#ff007aff" android:pathData="M12,0L12,0A12,12 0,0 1,24 12L24,12A12,12 0,0 1,12 24L12,24A12,12 0,0 1,0 12L0,12A12,12 0,0 1,12 0z" />
+    <path android:name="check_mark" android:fillColor="#ffffffff" android:pathData="M17.743,7.756C18.086,8.098 18.086,8.651 17.743,8.993L10.426,16.244C10.083,16.585 9.527,16.585 9.184,16.244L6.257,13.365C5.914,13.023 5.914,12.469 6.257,12.128C6.6,11.787 7.156,11.787 7.499,12.128L9.805,14.389L16.501,7.756C16.844,7.415 17.4,7.415 17.743,7.756Z" />
+</vector>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector android:drawable="@drawable/$transctipt_loading_avd__0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <target android:name="_R_G_L_0_G_L_3_G_D_0_P_0" android:animation="@drawable/$transctipt_loading_avd__1" />
+    <target android:name="_R_G_L_0_G_L_3_G_D_0_P_0" android:animation="@drawable/$transctipt_loading_avd__3" />
+    <target android:name="_R_G_L_0_G_L_3_G" android:animation="@drawable/$transctipt_loading_avd__5" />
+    <target android:name="_R_G_L_0_G_L_3_G_N_7_T_0" android:animation="@drawable/$transctipt_loading_avd__7" />
+    <target android:name="_R_G_L_0_G_L_3_G_N_7_N_3_T_0" android:animation="@drawable/$transctipt_loading_avd__9" />
+    <target android:name="_R_G_L_0_G_L_2_G_D_0_P_0" android:animation="@drawable/$transctipt_loading_avd__11" />
+    <target android:name="_R_G_L_0_G_L_2_G_D_0_P_0" android:animation="@drawable/$transctipt_loading_avd__13" />
+    <target android:name="_R_G_L_0_G_L_2_G" android:animation="@drawable/$transctipt_loading_avd__15" />
+    <target android:name="_R_G_L_0_G_L_2_G_N_5_T_0" android:animation="@drawable/$transctipt_loading_avd__17" />
+    <target android:name="_R_G_L_0_G_L_2_G_N_5_N_3_T_0" android:animation="@drawable/$transctipt_loading_avd__19" />
+    <target android:name="_R_G_L_0_G_L_1_G_D_0_P_0" android:animation="@drawable/$transctipt_loading_avd__21" />
+    <target android:name="_R_G_L_0_G_L_1_G" android:animation="@drawable/$transctipt_loading_avd__23" />
+    <target android:name="_R_G_L_0_G_L_1_G_N_3_T_0" android:animation="@drawable/$transctipt_loading_avd__25" />
+    <target android:name="_R_G_L_0_G_L_0_G_D_0_P_0" android:animation="@drawable/$transctipt_loading_avd__27" />
+    <target android:name="_R_G_L_0_G_L_0_G" android:animation="@drawable/$transctipt_loading_avd__29" />
+    <target android:name="_R_G_L_0_G_L_0_G_N_3_T_0" android:animation="@drawable/$transctipt_loading_avd__31" />
+    <target android:name="time_group" android:animation="@drawable/$transctipt_loading_avd__33" />
+</animated-vector>

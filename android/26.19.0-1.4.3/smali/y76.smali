@@ -1,0 +1,43 @@
+.class public interface abstract Ly76;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# static fields
+.field public static final a:[Ljava/lang/String;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 11
+
+    const-string v9, "/font/"
+
+    const-string v10, "/ringtones/"
+
+    const-string v0, "/videoCache/"
+
+    const-string v1, "/previewVideoCache/"
+
+    const-string v2, "/stickerCache/"
+
+    const-string v3, "/upload/"
+
+    const-string v4, "/imageCache/"
+
+    const-string v5, "/audioCache/"
+
+    const-string v6, "/gifCache/"
+
+    const-string v7, "/exo_files_cache/"
+
+    const-string v8, "/logsCache/"
+
+    filled-new-array/range {v0 .. v10}, [Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Ly76;->a:[Ljava/lang/String;
+
+    return-void
+.end method

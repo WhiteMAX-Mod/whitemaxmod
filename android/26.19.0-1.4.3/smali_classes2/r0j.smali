@@ -1,0 +1,45 @@
+.class public final synthetic Lr0j;
+.super Ld5d;
+.source "SourceFile"
+
+
+# static fields
+.field public static final a:Lr0j;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 5
+
+    new-instance v0, Lr0j;
+
+    const-string v1, "getFreezeCount()J"
+
+    const/4 v2, 0x0
+
+    const-class v3, Lbtf;
+
+    const-string v4, "freezeCount"
+
+    invoke-direct {v0, v3, v4, v1, v2}, Ld5d;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    sput-object v0, Lr0j;->a:Lr0j;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final get(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    check-cast p1, Lbtf;
+
+    iget-wide v0, p1, Lbtf;->v:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    return-object p1
+.end method

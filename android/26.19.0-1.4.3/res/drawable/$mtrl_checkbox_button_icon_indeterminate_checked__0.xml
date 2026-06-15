@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objectAnimator android:interpolator="?motionEasingEmphasizedAccelerateInterpolator" android:duration="@integer/m3_sys_motion_duration_medium3" android:valueFrom="@string/mtrl_checkbox_button_icon_path_indeterminate" android:valueTo="@string/mtrl_checkbox_button_icon_path_checked" android:valueType="pathType" android:propertyName="pathData"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt" />
