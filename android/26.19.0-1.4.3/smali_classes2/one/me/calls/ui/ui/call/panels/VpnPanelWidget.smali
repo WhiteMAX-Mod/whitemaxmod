@@ -118,125 +118,19 @@
 
 # virtual methods
 .method public final onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
-    .locals 4
-
+    .locals 2
+	
+    new-instance v0, Landroid/view/View;
+	
     invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    new-instance p2, Luy7;
-
-    invoke-direct {p2, p0, p1}, Luy7;-><init>(Lone/me/calls/ui/ui/call/panels/VpnPanelWidget;Landroid/content/Context;)V
-
-    new-instance p1, Ldhg;
-
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object p3
-
-    invoke-direct {p1, p3}, Ldhg;-><init>(Landroid/content/Context;)V
-
-    new-instance p3, Landroid/widget/FrameLayout$LayoutParams;
-
-    const/4 v0, -0x1
-
-    const/4 v1, -0x2
-
-    invoke-direct {p3, v0, v1}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
-
-    invoke-virtual {p1, p3}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
-    const/16 p3, 0xc
-
-    int-to-float p3, p3
-
-    invoke-static {}, Lm45;->d()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v0, p3
-
-    invoke-static {v0}, Lq98;->n0(F)I
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    int-to-float v1, v1
-
-    invoke-static {}, Lm45;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v1, v2
-
-    invoke-static {v1}, Lq98;->n0(F)I
-
-    move-result v1
-
-    invoke-static {}, Lm45;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v2, p3
-
-    invoke-static {v2}, Lq98;->n0(F)I
-
-    move-result v2
-
-    invoke-static {}, Lm45;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p3, v3
-
-    invoke-static {p3}, Lq98;->n0(F)I
-
-    move-result p3
-
-    invoke-virtual {p1, v0, v1, v2, p3}, Landroid/view/View;->setPadding(IIII)V
-
-    new-instance p3, Lb1d;
-
-    const/16 v0, 0x12
-
-    invoke-direct {p3, p0, p1, p2, v0}, Lb1d;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    invoke-virtual {p1, p3}, Ldhg;->setCallback(Lchg;)V
-
-    new-instance p2, Lhz1;
-
-    const/4 p3, 0x2
-
-    invoke-direct {p2, p1, p1, p3}, Lhz1;-><init>(Ldhg;Ldhg;I)V
-
-    invoke-static {p1, p2}, Lypb;->a(Landroid/view/View;Ljava/lang/Runnable;)Lypb;
-
-    return-object p1
+	
+    move-result-object v1
+	
+    invoke-direct {v0, v1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
+	
+    const/16 v1, 0x8
+	
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+	
+    return-object v0
 .end method
