@@ -41,99 +41,10 @@
 
 # virtual methods
 .method public final a()Z
-    .locals 4
-
-    iget-object v0, p0, Lb7i;->b:Lfa8;
-
-    invoke-interface {v0}, Lfa8;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lbze;
-
-    check-cast v0, Ljgc;
-
-    iget-object v0, v0, Ljgc;->b:Lhgc;
-
-    iget-object v0, v0, Lhgc;->u5:Lfgc;
-
-    sget-object v1, Lhgc;->h6:[Lf88;
-
-    const/16 v2, 0x14c
-
-    aget-object v1, v1, v2
-
-    invoke-virtual {v0, v1}, Lfgc;->a(Lf88;)Llgc;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Llgc;->i()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Number;
-
-    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
-
-    move-result v0
-
-    iget-object v1, p0, Lb7i;->a:Lfa8;
-
-    const/4 v2, 0x1
-
-    if-eq v0, v2, :cond_3
-
-    const/4 v3, 0x2
-
-    if-eq v0, v3, :cond_2
-
-    const/4 v3, 0x3
-
-    if-eq v0, v3, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-interface {v1}, Lfa8;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lf04;
-
-    invoke-interface {v0}, Lf04;->e()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget-boolean v0, p0, Lb7i;->c:Z
-
-    if-eqz v0, :cond_1
-
-    return v2
-
-    :cond_1
-    :goto_0
+    .locals 1
+	
     const/4 v0, 0x0
-
-    return v0
-
-    :cond_2
-    iget-boolean v0, p0, Lb7i;->c:Z
-
-    return v0
-
-    :cond_3
-    invoke-interface {v1}, Lfa8;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lf04;
-
-    invoke-interface {v0}, Lf04;->e()Z
-
-    move-result v0
-
+	
     return v0
 .end method
 
