@@ -1,0 +1,111 @@
+.class public final enum Lbxd;
+.super Ljava/lang/Enum;
+.source "SourceFile"
+
+
+# static fields
+.field public static final enum b:Lbxd;
+
+.field public static final synthetic c:[Lbxd;
+
+.field public static final synthetic d:Liv5;
+
+
+# instance fields
+.field public final a:I
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 4
+
+    new-instance v0, Lbxd;
+
+    const-string v1, "EMOJI"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2, v2}, Lbxd;-><init>(Ljava/lang/String;II)V
+
+    sput-object v0, Lbxd;->b:Lbxd;
+
+    new-instance v1, Lbxd;
+
+    const-string v2, "STICKER"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3, v3}, Lbxd;-><init>(Ljava/lang/String;II)V
+
+    filled-new-array {v0, v1}, [Lbxd;
+
+    move-result-object v0
+
+    sput-object v0, Lbxd;->c:[Lbxd;
+
+    new-instance v1, Liv5;
+
+    invoke-direct {v1, v0}, Liv5;-><init>([Ljava/lang/Enum;)V
+
+    sput-object v1, Lbxd;->d:Liv5;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;II)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    iput p3, p0, Lbxd;->a:I
+
+    return-void
+.end method
+
+.method public static final a(I)Lbxd;
+    .locals 0
+
+    invoke-static {p0}, Lkhk;->b(I)Lbxd;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lbxd;
+    .locals 1
+
+    const-class v0, Lbxd;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lbxd;
+
+    return-object p0
+.end method
+
+.method public static values()[Lbxd;
+    .locals 1
+
+    sget-object v0, Lbxd;->c:[Lbxd;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lbxd;
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final c()I
+    .locals 1
+
+    iget v0, p0, Lbxd;->a:I
+
+    return v0
+.end method

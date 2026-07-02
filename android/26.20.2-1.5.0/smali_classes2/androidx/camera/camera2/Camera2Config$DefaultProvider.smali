@@ -1,0 +1,97 @@
+.class public final Landroidx/camera/camera2/Camera2Config$DefaultProvider;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lib2;
+
+
+# annotations
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000\u0012\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0008\u0007\u0018\u00002\u00020\u0001B\u0007\u00a2\u0006\u0004\u0008\u0002\u0010\u0003J\u000f\u0010\u0005\u001a\u00020\u0004H\u0016\u00a2\u0006\u0004\u0008\u0005\u0010\u0006\u00a8\u0006\u0007"
+    }
+    d2 = {
+        "androidx/camera/camera2/Camera2Config$DefaultProvider",
+        "Lib2;",
+        "<init>",
+        "()V",
+        "Ljb2;",
+        "getCameraXConfig",
+        "()Ljb2;",
+        "camera-camera2"
+    }
+    k = 0x1
+    mv = {
+        0x2,
+        0x1,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public getCameraXConfig()Ljb2;
+    .locals 3
+
+    new-instance v0, Lg72;
+
+    invoke-direct {v0}, Lg72;-><init>()V
+
+    new-instance v1, Lnrk;
+
+    const/16 v2, 0x8
+
+    invoke-direct {v1, v2}, Lnrk;-><init>(I)V
+
+    iget-object v1, v1, Lnrk;->b:Ljava/lang/Object;
+
+    check-cast v1, Lcoa;
+
+    sget-object v2, Ljb2;->b:Lpe0;
+
+    invoke-virtual {v1, v2, v0}, Lcoa;->k(Lpe0;Ljava/lang/Object;)V
+
+    new-instance v0, Lo42;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sget-object v2, Ljb2;->c:Lpe0;
+
+    invoke-virtual {v1, v2, v0}, Lcoa;->k(Lpe0;Ljava/lang/Object;)V
+
+    new-instance v0, Lp42;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sget-object v2, Ljb2;->d:Lpe0;
+
+    invoke-virtual {v1, v2, v0}, Lcoa;->k(Lpe0;Ljava/lang/Object;)V
+
+    sget-object v0, Ljb2;->l:Lpe0;
+
+    sget-object v2, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    invoke-virtual {v1, v0, v2}, Lcoa;->k(Lpe0;Ljava/lang/Object;)V
+
+    new-instance v0, Ljb2;
+
+    invoke-static {v1}, Le0c;->a(Luy3;)Le0c;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljb2;-><init>(Le0c;)V
+
+    return-object v0
+.end method

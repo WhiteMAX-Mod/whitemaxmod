@@ -1,0 +1,82 @@
+.class public final Lyt0;
+.super Ln09;
+.source "SourceFile"
+
+
+# instance fields
+.field public final synthetic g:I
+
+
+# direct methods
+.method public synthetic constructor <init>(II)V
+    .locals 0
+
+    iput p2, p0, Lyt0;->g:I
+
+    invoke-direct {p0, p1}, Ln09;-><init>(I)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public b(ZLjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
+
+    iget p1, p0, Lyt0;->g:I
+
+    packed-switch p1, :pswitch_data_0
+
+    return-void
+
+    :pswitch_0
+    check-cast p3, Landroid/graphics/Bitmap;
+
+    check-cast p4, Landroid/graphics/Bitmap;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public h(Ljava/lang/Object;)I
+    .locals 1
+
+    iget v0, p0, Lyt0;->g:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0, p1}, Ln09;->h(Ljava/lang/Object;)I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_0
+    check-cast p1, Landroid/graphics/Bitmap;
+
+    invoke-static {p1}, Lou0;->d(Landroid/graphics/Bitmap;)I
+
+    move-result p1
+
+    const/4 v0, 0x1
+
+    if-ge p1, v0, :cond_0
+
+    move p1, v0
+
+    :cond_0
+    return p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method

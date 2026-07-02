@@ -1,0 +1,63 @@
+.class public final Lqhg;
+.super Lhm0;
+.source "SourceFile"
+
+
+# instance fields
+.field public g:Lkgb;
+
+
+# virtual methods
+.method public final a()V
+    .locals 3
+
+    iget-object v0, p0, Lhm0;->b:Landroid/widget/ImageView;
+
+    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    new-instance v0, Lkgb;
+
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lkgb;-><init>(Landroid/content/Context;)V
+
+    new-instance v1, Landroid/view/ViewGroup$LayoutParams;
+
+    const/4 v2, -0x2
+
+    invoke-direct {v1, v2, v2}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lkgb;->setHasBackground(Z)V
+
+    sget-object v1, Ldph;->f:Lb6h;
+
+    invoke-virtual {v0, v1}, Lkgb;->setTypography(Lb6h;)V
+
+    invoke-virtual {p0}, Lhm0;->getCustomTheme()Lzub;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Lzub;->getText()Luub;
+
+    move-result-object v1
+
+    iget v1, v1, Luub;->b:I
+
+    invoke-virtual {v0, v1}, Lkgb;->setTextColor(I)V
+
+    iput-object v0, p0, Lqhg;->g:Lkgb;
+
+    invoke-virtual {p0, v0}, Lhm0;->setContentView(Landroid/view/View;)V
+
+    iget-object v0, p0, Lqhg;->g:Lkgb;
+
+    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    return-void
+.end method

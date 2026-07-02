@@ -1,0 +1,63 @@
+.class public final Lcgd;
+.super Lcf4;
+.source "SourceFile"
+
+
+# instance fields
+.field public d:Lpfd;
+
+.field public e:Lv8e;
+
+.field public f:J
+
+.field public g:J
+
+.field public synthetic h:Ljava/lang/Object;
+
+.field public final synthetic i:Legd;
+
+.field public j:I
+
+
+# direct methods
+.method public constructor <init>(Legd;Lcf4;)V
+    .locals 0
+
+    iput-object p1, p0, Lcgd;->i:Legd;
+
+    invoke-direct {p0, p2}, Lcf4;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
+
+    iput-object p1, p0, Lcgd;->h:Ljava/lang/Object;
+
+    iget p1, p0, Lcgd;->j:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lcgd;->j:I
+
+    const/4 v2, 0x0
+
+    const-wide/16 v3, 0x0
+
+    iget-object v0, p0, Lcgd;->i:Legd;
+
+    const/4 v1, 0x0
+
+    move-object v5, p0
+
+    invoke-virtual/range {v0 .. v5}, Legd;->e(Lpfd;Lv8e;JLcf4;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method

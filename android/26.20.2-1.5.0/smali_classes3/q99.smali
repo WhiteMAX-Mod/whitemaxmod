@@ -1,0 +1,301 @@
+.class public final synthetic Lq99;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lrz6;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljava/lang/String;
+
+.field public final synthetic c:Ljava/util/ArrayList;
+
+
+# direct methods
+.method public synthetic constructor <init>(Ljava/util/ArrayList;ILjava/lang/String;)V
+    .locals 0
+
+    iput p2, p0, Lq99;->a:I
+
+    iput-object p3, p0, Lq99;->b:Ljava/lang/String;
+
+    iput-object p1, p0, Lq99;->c:Ljava/util/ArrayList;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
+
+    iget v0, p0, Lq99;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lq99;->c:Ljava/util/ArrayList;
+
+    check-cast p1, Lzme;
+
+    iget-object v1, p0, Lq99;->b:Ljava/lang/String;
+
+    invoke-interface {p1, v1}, Lzme;->V0(Ljava/lang/String;)Lene;
+
+    move-result-object p1
+
+    :try_start_0
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Number;
+
+    invoke-virtual {v2}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v2
+
+    invoke-interface {p1, v1, v2, v3}, Lene;->b(IJ)V
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_1
+
+    :cond_0
+    invoke-interface {p1}, Lene;->R0()Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-interface {p1}, Ljava/lang/AutoCloseable;->close()V
+
+    sget-object p1, Lzqh;->a:Lzqh;
+
+    return-object p1
+
+    :goto_1
+    invoke-interface {p1}, Ljava/lang/AutoCloseable;->close()V
+
+    throw v0
+
+    :pswitch_0
+    iget-object v0, p0, Lq99;->c:Ljava/util/ArrayList;
+
+    check-cast p1, Lzme;
+
+    iget-object v1, p0, Lq99;->b:Ljava/lang/String;
+
+    invoke-interface {p1, v1}, Lzme;->V0(Ljava/lang/String;)Lene;
+
+    move-result-object v1
+
+    :try_start_1
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    const/4 v2, 0x1
+
+    :goto_2
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/lang/String;
+
+    invoke-interface {v1, v2, v3}, Lene;->O(ILjava/lang/String;)V
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_2
+
+    :catchall_1
+    move-exception p1
+
+    goto :goto_3
+
+    :cond_1
+    invoke-interface {v1}, Lene;->R0()Z
+
+    invoke-static {p1}, Lfg8;->G(Lzme;)I
+
+    move-result p1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    invoke-interface {v1}, Ljava/lang/AutoCloseable;->close()V
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    return-object p1
+
+    :goto_3
+    invoke-interface {v1}, Ljava/lang/AutoCloseable;->close()V
+
+    throw p1
+
+    :pswitch_1
+    iget-object v0, p0, Lq99;->c:Ljava/util/ArrayList;
+
+    check-cast p1, Lzme;
+
+    iget-object v1, p0, Lq99;->b:Ljava/lang/String;
+
+    invoke-interface {p1, v1}, Lzme;->V0(Ljava/lang/String;)Lene;
+
+    move-result-object p1
+
+    :try_start_2
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    :goto_4
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Number;
+
+    invoke-virtual {v2}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v2
+
+    invoke-interface {p1, v1, v2, v3}, Lene;->b(IJ)V
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_4
+
+    :catchall_2
+    move-exception v0
+
+    goto :goto_6
+
+    :cond_2
+    const-string v0, "attach_id"
+
+    invoke-static {p1, v0}, Lbu8;->v(Lene;Ljava/lang/String;)I
+
+    move-result v0
+
+    const-string v1, "attachCount"
+
+    invoke-static {p1, v1}, Lbu8;->v(Lene;Ljava/lang/String;)I
+
+    move-result v1
+
+    new-instance v2, Ljava/util/LinkedHashMap;
+
+    invoke-direct {v2}, Ljava/util/LinkedHashMap;-><init>()V
+
+    :cond_3
+    :goto_5
+    invoke-interface {p1}, Lene;->R0()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_5
+
+    invoke-interface {p1, v0}, Lene;->getLong(I)J
+
+    move-result-wide v3
+
+    invoke-interface {p1, v1}, Lene;->isNull(I)Z
+
+    move-result v5
+
+    if-nez v5, :cond_4
+
+    invoke-interface {p1, v1}, Lene;->getLong(I)J
+
+    move-result-wide v5
+
+    long-to-int v5, v5
+
+    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v6
+
+    invoke-interface {v2, v6}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
+
+    move-result v6
+
+    if-nez v6, :cond_3
+
+    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v3
+
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_5
+
+    :cond_4
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "The column(s) of the map value object of type \'[@MapColumn(\"attachCount\")] Int\' are NULL but the map\'s value type argument expect it to be NON-NULL"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_2
+
+    :cond_5
+    invoke-interface {p1}, Ljava/lang/AutoCloseable;->close()V
+
+    return-object v2
+
+    :goto_6
+    invoke-interface {p1}, Ljava/lang/AutoCloseable;->close()V
+
+    throw v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method

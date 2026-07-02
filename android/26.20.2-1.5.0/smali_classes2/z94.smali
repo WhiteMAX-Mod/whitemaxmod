@@ -1,0 +1,46 @@
+.class public final Lz94;
+.super Lk7b;
+.source "SourceFile"
+
+
+# instance fields
+.field public final synthetic d:Lone/me/contactlist/ContactListWidget;
+
+
+# direct methods
+.method public constructor <init>(Lone/me/contactlist/ContactListWidget;)V
+    .locals 0
+
+    iput-object p1, p0, Lz94;->d:Lone/me/contactlist/ContactListWidget;
+
+    const/4 p1, 0x0
+
+    invoke-direct {p0, p1}, Lk7b;-><init>(Z)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final b()V
+    .locals 1
+
+    sget-object v0, Lone/me/contactlist/ContactListWidget;->i1:[Lre8;
+
+    iget-object v0, p0, Lz94;->d:Lone/me/contactlist/ContactListWidget;
+
+    invoke-virtual {v0}, Lone/me/contactlist/ContactListWidget;->n1()Lfwb;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lfwb;->getSearchView()Lcqb;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Lcqb;->b()V
+
+    :cond_0
+    return-void
+.end method

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector android:drawable="@drawable/$bad_connection_attention_avd__0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <target android:name="signal_bar_1" android:animation="@drawable/$bad_connection_attention_avd__1" />
+    <target android:name="signal_bar_2" android:animation="@drawable/$bad_connection_attention_avd__5" />
+    <target android:name="signal_bar_3" android:animation="@drawable/$bad_connection_attention_avd__11" />
+    <target android:name="_R_G_L_0_G" android:animation="@drawable/$bad_connection_attention_avd__16" />
+    <target android:name="_R_G_L_0_G" android:animation="@drawable/$bad_connection_attention_avd__19" />
+    <target android:name="time_group" android:animation="@drawable/$bad_connection_attention_avd__24" />
+</animated-vector>

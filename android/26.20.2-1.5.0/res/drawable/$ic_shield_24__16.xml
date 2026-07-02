@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set android:ordering="together"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <objectAnimator android:interpolator="@drawable/$ic_shield_24__17" android:duration="83" android:startOffset="0" android:valueFrom="1" android:valueTo="1" android:valueType="floatType" android:propertyName="scaleX" />
+    <objectAnimator android:interpolator="@drawable/$ic_shield_24__18" android:duration="83" android:startOffset="0" android:valueFrom="1" android:valueTo="0.3" android:valueType="floatType" android:propertyName="scaleY" />
+    <objectAnimator android:interpolator="@drawable/$ic_shield_24__19" android:duration="83" android:startOffset="83" android:valueFrom="1" android:valueTo="1" android:valueType="floatType" android:propertyName="scaleX" />
+    <objectAnimator android:interpolator="@drawable/$ic_shield_24__20" android:duration="83" android:startOffset="83" android:valueFrom="0.3" android:valueTo="0.3" android:valueType="floatType" android:propertyName="scaleY" />
+    <objectAnimator android:interpolator="@drawable/$ic_shield_24__21" android:duration="167" android:startOffset="167" android:valueFrom="1" android:valueTo="1.3" android:valueType="floatType" android:propertyName="scaleX" />
+    <objectAnimator android:interpolator="@drawable/$ic_shield_24__22" android:duration="167" android:startOffset="167" android:valueFrom="0.3" android:valueTo="1.3" android:valueType="floatType" android:propertyName="scaleY" />
+    <objectAnimator android:interpolator="@drawable/$ic_shield_24__23" android:duration="167" android:startOffset="333" android:valueFrom="1.3" android:valueTo="1" android:valueType="floatType" android:propertyName="scaleX" />
+    <objectAnimator android:interpolator="@drawable/$ic_shield_24__24" android:duration="167" android:startOffset="333" android:valueFrom="1.3" android:valueTo="1" android:valueType="floatType" android:propertyName="scaleY" />
+    <objectAnimator android:interpolator="@drawable/$ic_shield_24__25" android:duration="83" android:startOffset="500" android:valueFrom="1" android:valueTo="1.3" android:valueType="floatType" android:propertyName="scaleX" />
+    <objectAnimator android:interpolator="@drawable/$ic_shield_24__26" android:duration="83" android:startOffset="500" android:valueFrom="1" android:valueTo="1.3" android:valueType="floatType" android:propertyName="scaleY" />
+    <objectAnimator android:interpolator="@drawable/$ic_shield_24__27" android:duration="83" android:startOffset="583" android:valueFrom="1.3" android:valueTo="1" android:valueType="floatType" android:propertyName="scaleX" />
+    <objectAnimator android:interpolator="@drawable/$ic_shield_24__28" android:duration="83" android:startOffset="583" android:valueFrom="1.3" android:valueTo="1" android:valueType="floatType" android:propertyName="scaleY" />
+</set>

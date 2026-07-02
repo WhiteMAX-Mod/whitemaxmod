@@ -1,0 +1,156 @@
+.class public final Lhx8;
+.super Lgvg;
+.source "SourceFile"
+
+# interfaces
+.implements Lf07;
+
+
+# instance fields
+.field public e:Llx8;
+
+.field public f:I
+
+.field public final synthetic g:Llx8;
+
+
+# direct methods
+.method public constructor <init>(Llx8;Lkotlin/coroutines/Continuation;)V
+    .locals 0
+
+    iput-object p1, p0, Lhx8;->g:Llx8;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Lgvg;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final create(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Lhx8;
+
+    iget-object v0, p0, Lhx8;->g:Llx8;
+
+    invoke-direct {p1, v0, p2}, Lhx8;-><init>(Llx8;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lui4;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lhx8;->create(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lhx8;
+
+    sget-object p2, Lzqh;->a:Lzqh;
+
+    invoke-virtual {p1, p2}, Lhx8;->invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Lhx8;->f:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    iget-object v0, p0, Lhx8;->e:Llx8;
+
+    :try_start_0
+    invoke-static {p1}, Lrwd;->E(Ljava/lang/Object;)V
+    :try_end_0
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p1
+
+    goto :goto_2
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lrwd;->E(Ljava/lang/Object;)V
+
+    iget-object v0, p0, Lhx8;->g:Llx8;
+
+    :try_start_1
+    iget-object p1, v0, Llx8;->B:Lxg8;
+
+    invoke-interface {p1}, Lxg8;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lmi3;
+
+    iput-object v0, p0, Lhx8;->e:Llx8;
+
+    iput v1, p0, Lhx8;->f:I
+
+    invoke-virtual {p1, p0}, Lmi3;->a(Lcf4;)Ljava/lang/Object;
+
+    move-result-object p1
+    :try_end_1
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    sget-object v0, Lvi4;->a:Lvi4;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :goto_0
+    iget-object v0, v0, Llx8;->M:Ljava/lang/String;
+
+    new-instance v1, Lone/me/sdk/login/LoginException$ClearCache;
+
+    invoke-direct {v1, p1}, Lone/me/sdk/login/LoginException$ClearCache;-><init>(Ljava/lang/Throwable;)V
+
+    const-string p1, "Can\'t clearCache"
+
+    invoke-static {v0, p1, v1}, Lzi0;->l0(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_2
+    :goto_1
+    sget-object p1, Lzqh;->a:Lzqh;
+
+    return-object p1
+
+    :goto_2
+    throw p1
+.end method

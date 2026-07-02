@@ -1,0 +1,122 @@
+.class public final La2j;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation runtime Ln6f;
+.end annotation
+
+
+# static fields
+.field public static final Companion:Lz1j;
+
+
+# instance fields
+.field public final a:Z
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lz1j;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, La2j;->Companion:Lz1j;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(IZ)V
+    .locals 2
+
+    and-int/lit8 v0, p1, 0x1
+
+    const/4 v1, 0x1
+
+    if-ne v1, v0, :cond_0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-boolean p2, p0, La2j;->a:Z
+
+    return-void
+
+    :cond_0
+    sget-object p2, Ly1j;->a:Ly1j;
+
+    invoke-virtual {p2}, Ly1j;->d()Lg6f;
+
+    move-result-object p2
+
+    invoke-static {p1, v1, p2}, Lcek;->b(IILg6f;)V
+
+    const/4 p1, 0x0
+
+    throw p1
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, La2j;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, La2j;
+
+    iget-boolean v1, p0, La2j;->a:Z
+
+    iget-boolean p1, p1, La2j;->a:Z
+
+    if-eq v1, p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-boolean v0, p0, La2j;->a:Z
+
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "WebAppSetupBackButtonRequest(isVisible="
+
+    const-string v1, ")"
+
+    iget-boolean v2, p0, La2j;->a:Z
+
+    invoke-static {v0, v1, v2}, Lf52;->m(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method

@@ -1,0 +1,50 @@
+.class public final Lnnk;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lf4b;
+
+
+# static fields
+.field public static final a:Lnnk;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lnnk;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lnnk;->a:Lnnk;
+
+    new-instance v0, Lf7k;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lf7k;-><init>(I)V
+
+    const-class v1, Lw7k;
+
+    invoke-static {v1, v0}, Lytj;->d(Ljava/lang/Class;Lf7k;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lytj;->g(Ljava/util/HashMap;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
+
+    invoke-static {p1}, Ldtg;->i(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+
+    move-result-object p1
+
+    throw p1
+.end method

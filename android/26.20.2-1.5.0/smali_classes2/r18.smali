@@ -1,0 +1,7 @@
+.class public abstract Lr18;
+.super La4;
+.source "SourceFile"
+
+# interfaces
+.implements Ljava/util/RandomAccess;
+.implements Ldzc;

@@ -1,0 +1,53 @@
+.class public final Lu0a;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# static fields
+.field public static final synthetic b:[Lre8;
+
+
+# instance fields
+.field public final a:Lic5;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 5
+
+    new-instance v0, Lbdd;
+
+    const-class v1, Lu0a;
+
+    const-string v2, "prefs"
+
+    const-string v3, "getPrefs()Lru/ok/tamtam/Prefs;"
+
+    const/4 v4, 0x0
+
+    invoke-direct {v0, v1, v2, v3, v4}, Lbdd;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    sget-object v1, Lr6e;->a:Ls6e;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 v1, 0x1
+
+    new-array v1, v1, [Lre8;
+
+    aput-object v0, v1, v4
+
+    sput-object v1, Lu0a;->b:[Lre8;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lic5;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lu0a;->a:Lic5;
+
+    return-void
+.end method

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="80.0dip" android:width="80.0dip" android:viewportWidth="80.0" android:viewportHeight="80.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:name="avatar_shape" android:fillColor="#ff000000" android:pathData="M23.022,73.998C29.353,78.623 33.004,79.779 40.864,79.779C62.159,79.779 80.001,62.263 80.001,40.111C80.001,17.958 62.709,0 40.655,0C18.601,0 0,17.122 0,39.89C0,57.233 5.755,64.748 5.755,76.311C6.312,83.248 18.993,79.201 23.022,73.998Z" android:fillType="evenOdd" />
+</vector>

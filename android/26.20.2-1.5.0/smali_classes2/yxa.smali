@@ -1,0 +1,33 @@
+.class public final Lyxa;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# instance fields
+.field public final a:Lxg8;
+
+.field public final b:Lxg8;
+
+.field public final c:Ljava/lang/String;
+
+
+# direct methods
+.method public constructor <init>(Lxg8;Lxg8;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lyxa;->a:Lxg8;
+
+    iput-object p2, p0, Lyxa;->b:Lxg8;
+
+    const-class p1, Lyxa;
+
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lyxa;->c:Ljava/lang/String;
+
+    return-void
+.end method

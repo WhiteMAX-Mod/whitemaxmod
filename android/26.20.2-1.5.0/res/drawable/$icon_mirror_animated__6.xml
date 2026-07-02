@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set android:ordering="together"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <objectAnimator android:interpolator="@drawable/$icon_mirror_animated__7" android:duration="167" android:startOffset="0" android:propertyName="translateXY" android:pathData="M 5.744,11.996C 5.744,11.996 12,11.999 12,11.999" android:propertyXName="translateX" android:propertyYName="translateY" />
+    <objectAnimator android:interpolator="@drawable/$icon_mirror_animated__8" android:duration="133" android:startOffset="167" android:propertyName="translateXY" android:pathData="M 12,11.999C 12,11.999 5.744,11.996 5.744,11.996" android:propertyXName="translateX" android:propertyYName="translateY" />
+    <objectAnimator android:interpolator="@drawable/$icon_mirror_animated__9" android:duration="150" android:startOffset="300" android:propertyName="translateXY" android:pathData="M 5.744,11.996C 5.744,11.996 6.995,11.997 6.995,11.997" android:propertyXName="translateX" android:propertyYName="translateY" />
+    <objectAnimator android:interpolator="@drawable/$icon_mirror_animated__10" android:duration="217" android:startOffset="450" android:propertyName="translateXY" android:pathData="M 6.995,11.997C 6.995,11.997 5.744,11.996 5.744,11.996" android:propertyXName="translateX" android:propertyYName="translateY" />
+</set>

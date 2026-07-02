@@ -1,0 +1,7352 @@
+.class public final Ljxb;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lf5c;
+
+
+# static fields
+.field public static final A:Ljava/util/regex/Pattern;
+
+.field public static final A1:Ljava/util/regex/Pattern;
+
+.field public static final B:Ljava/util/regex/Pattern;
+
+.field public static final B1:Ljava/util/regex/Pattern;
+
+.field public static final C:Ljava/util/regex/Pattern;
+
+.field public static final C1:Ljava/util/regex/Pattern;
+
+.field public static final D:Ljava/util/regex/Pattern;
+
+.field public static final D1:Ljava/util/regex/Pattern;
+
+.field public static final E:Ljava/util/regex/Pattern;
+
+.field public static final E1:Ljava/util/regex/Pattern;
+
+.field public static final F:Ljava/util/regex/Pattern;
+
+.field public static final F1:Ljava/util/regex/Pattern;
+
+.field public static final G:Ljava/util/regex/Pattern;
+
+.field public static final G1:Ljava/util/regex/Pattern;
+
+.field public static final H:Ljava/util/regex/Pattern;
+
+.field public static final H1:Ljava/util/regex/Pattern;
+
+.field public static final I:Ljava/util/regex/Pattern;
+
+.field public static final I1:Ljava/util/regex/Pattern;
+
+.field public static final J:Ljava/util/regex/Pattern;
+
+.field public static final J1:Ljava/util/regex/Pattern;
+
+.field public static final K:Ljava/util/regex/Pattern;
+
+.field public static final K1:Ljava/util/regex/Pattern;
+
+.field public static final L1:Ljava/util/regex/Pattern;
+
+.field public static final M1:Ljava/util/regex/Pattern;
+
+.field public static final N1:Ljava/util/regex/Pattern;
+
+.field public static final O1:Ljava/util/regex/Pattern;
+
+.field public static final P1:Ljava/util/regex/Pattern;
+
+.field public static final Q1:Ljava/util/regex/Pattern;
+
+.field public static final R1:Ljava/util/regex/Pattern;
+
+.field public static final S1:Ljava/util/regex/Pattern;
+
+.field public static final T1:Ljava/util/regex/Pattern;
+
+.field public static final U1:Ljava/util/regex/Pattern;
+
+.field public static final V1:Ljava/util/regex/Pattern;
+
+.field public static final X:Ljava/util/regex/Pattern;
+
+.field public static final Y:Ljava/util/regex/Pattern;
+
+.field public static final Z:Ljava/util/regex/Pattern;
+
+.field public static final f:Ljava/util/regex/Pattern;
+
+.field public static final g:Ljava/util/regex/Pattern;
+
+.field public static final h:Ljava/util/regex/Pattern;
+
+.field public static final h1:Ljava/util/regex/Pattern;
+
+.field public static final i:Ljava/util/regex/Pattern;
+
+.field public static final i1:Ljava/util/regex/Pattern;
+
+.field public static final j:Ljava/util/regex/Pattern;
+
+.field public static final j1:Ljava/util/regex/Pattern;
+
+.field public static final k:Ljava/util/regex/Pattern;
+
+.field public static final k1:Ljava/util/regex/Pattern;
+
+.field public static final l:Ljava/util/regex/Pattern;
+
+.field public static final l1:Ljava/util/regex/Pattern;
+
+.field public static final m:Ljava/util/regex/Pattern;
+
+.field public static final m1:Ljava/util/regex/Pattern;
+
+.field public static final n:Ljava/util/regex/Pattern;
+
+.field public static final n1:Ljava/util/regex/Pattern;
+
+.field public static final o:Ljava/util/regex/Pattern;
+
+.field public static final o1:Ljava/util/regex/Pattern;
+
+.field public static final p:Ljava/util/regex/Pattern;
+
+.field public static final p1:Ljava/util/regex/Pattern;
+
+.field public static final q:Ljava/util/regex/Pattern;
+
+.field public static final q1:Ljava/util/regex/Pattern;
+
+.field public static final r:Ljava/util/regex/Pattern;
+
+.field public static final r1:Ljava/util/regex/Pattern;
+
+.field public static final s:Ljava/util/regex/Pattern;
+
+.field public static final s1:Ljava/util/regex/Pattern;
+
+.field public static final t:Ljava/util/regex/Pattern;
+
+.field public static final t1:Ljava/util/regex/Pattern;
+
+.field public static final u:Ljava/util/regex/Pattern;
+
+.field public static final u1:Ljava/util/regex/Pattern;
+
+.field public static final v:Ljava/util/regex/Pattern;
+
+.field public static final v1:Ljava/util/regex/Pattern;
+
+.field public static final w:Ljava/util/regex/Pattern;
+
+.field public static final w1:Ljava/util/regex/Pattern;
+
+.field public static final x:Ljava/util/regex/Pattern;
+
+.field public static final x1:Ljava/util/regex/Pattern;
+
+.field public static final y:Ljava/util/regex/Pattern;
+
+.field public static final y1:Ljava/util/regex/Pattern;
+
+.field public static final z:Ljava/util/regex/Pattern;
+
+.field public static final z1:Ljava/util/regex/Pattern;
+
+
+# instance fields
+.field public final a:Lzh7;
+
+.field public final b:Lvh7;
+
+.field public final c:Landroid/os/Handler;
+
+.field public final d:Lske;
+
+.field public final e:Lyu6;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    const-string v0, "AVERAGE-BANDWIDTH=(\\d+)\\b"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->f:Ljava/util/regex/Pattern;
+
+    const-string v0, "VIDEO=\"((?:.|\u000c)+?)\""
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->g:Ljava/util/regex/Pattern;
+
+    const-string v0, "AUDIO=\"((?:.|\u000c)+?)\""
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->h:Ljava/util/regex/Pattern;
+
+    const-string v0, "SUBTITLES=\"((?:.|\u000c)+?)\""
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->i:Ljava/util/regex/Pattern;
+
+    const-string v0, "CLOSED-CAPTIONS=\"((?:.|\u000c)+?)\""
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->j:Ljava/util/regex/Pattern;
+
+    const-string v0, "[^-]BANDWIDTH=(\\d+)\\b"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->k:Ljava/util/regex/Pattern;
+
+    const-string v0, "CHANNELS=\"((?:.|\u000c)+?)\""
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->l:Ljava/util/regex/Pattern;
+
+    const-string v0, "VIDEO-RANGE=(SDR|PQ|HLG)"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->m:Ljava/util/regex/Pattern;
+
+    const-string v0, "CODECS=\"((?:.|\u000c)+?)\""
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->n:Ljava/util/regex/Pattern;
+
+    const-string v0, "SUPPLEMENTAL-CODECS=\"((?:.|\u000c)+?)\""
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->o:Ljava/util/regex/Pattern;
+
+    const-string v0, "RESOLUTION=(\\d+x\\d+)"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->p:Ljava/util/regex/Pattern;
+
+    const-string v0, "FRAME-RATE=([\\d\\.]+)\\b"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->q:Ljava/util/regex/Pattern;
+
+    const-string v0, "#EXT-X-TARGETDURATION:(\\d+)\\b"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->r:Ljava/util/regex/Pattern;
+
+    const-string v0, "DURATION=([\\d\\.]+)\\b"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->s:Ljava/util/regex/Pattern;
+
+    const-string v0, "[:,]DURATION=([\\d\\.]+)\\b"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->t:Ljava/util/regex/Pattern;
+
+    const-string v0, "PART-TARGET=([\\d\\.]+)\\b"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->u:Ljava/util/regex/Pattern;
+
+    const-string v0, "#EXT-X-VERSION:(\\d+)\\b"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->v:Ljava/util/regex/Pattern;
+
+    const-string v0, "#EXT-X-PLAYLIST-TYPE:(.+)\\b"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->w:Ljava/util/regex/Pattern;
+
+    const-string v0, "CAN-SKIP-UNTIL=([\\d\\.]+)\\b"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->x:Ljava/util/regex/Pattern;
+
+    const-string v0, "CAN-SKIP-DATERANGES"
+
+    invoke-static {v0}, Ljxb;->a(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->y:Ljava/util/regex/Pattern;
+
+    const-string v0, "SKIPPED-SEGMENTS=(\\d+)\\b"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->z:Ljava/util/regex/Pattern;
+
+    const-string v0, "[:|,]HOLD-BACK=([\\d\\.]+)\\b"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->A:Ljava/util/regex/Pattern;
+
+    const-string v0, "PART-HOLD-BACK=([\\d\\.]+)\\b"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->B:Ljava/util/regex/Pattern;
+
+    const-string v0, "CAN-BLOCK-RELOAD"
+
+    invoke-static {v0}, Ljxb;->a(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->C:Ljava/util/regex/Pattern;
+
+    const-string v0, "#EXT-X-MEDIA-SEQUENCE:(\\d+)\\b"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->D:Ljava/util/regex/Pattern;
+
+    const-string v0, "#EXTINF:([\\d\\.]+)\\b"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->E:Ljava/util/regex/Pattern;
+
+    const-string v0, "#EXTINF:[\\d\\.]+\\b,(.+)"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->F:Ljava/util/regex/Pattern;
+
+    const-string v0, "LAST-MSN=(\\d+)\\b"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->G:Ljava/util/regex/Pattern;
+
+    const-string v0, "LAST-PART=(\\d+)\\b"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->H:Ljava/util/regex/Pattern;
+
+    const-string v0, "TIME-OFFSET=(-?[\\d\\.]+)\\b"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->I:Ljava/util/regex/Pattern;
+
+    const-string v0, "#EXT-X-BYTERANGE:(\\d+(?:@\\d+)?)\\b"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->J:Ljava/util/regex/Pattern;
+
+    const-string v0, "BYTERANGE=\"(\\d+(?:@\\d+)?)\\b\""
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->K:Ljava/util/regex/Pattern;
+
+    const-string v0, "BYTERANGE-START=(\\d+)\\b"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->X:Ljava/util/regex/Pattern;
+
+    const-string v0, "BYTERANGE-LENGTH=(\\d+)\\b"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->Y:Ljava/util/regex/Pattern;
+
+    const-string v0, "METHOD=(NONE|AES-128|SAMPLE-AES|SAMPLE-AES-CENC|SAMPLE-AES-CTR)\\s*(?:,|$)"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->Z:Ljava/util/regex/Pattern;
+
+    const-string v0, "KEYFORMAT=\"((?:.|\u000c)+?)\""
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->h1:Ljava/util/regex/Pattern;
+
+    const-string v0, "KEYFORMATVERSIONS=\"((?:.|\u000c)+?)\""
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->i1:Ljava/util/regex/Pattern;
+
+    const-string v0, "URI=\"((?:.|\u000c)+?)\""
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->j1:Ljava/util/regex/Pattern;
+
+    const-string v0, "IV=([^,.*]+)"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->k1:Ljava/util/regex/Pattern;
+
+    const-string v0, "TYPE=(AUDIO|VIDEO|SUBTITLES|CLOSED-CAPTIONS)"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->l1:Ljava/util/regex/Pattern;
+
+    const-string v0, "TYPE=(PART|MAP)"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->m1:Ljava/util/regex/Pattern;
+
+    const-string v0, "LANGUAGE=\"((?:.|\u000c)+?)\""
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->n1:Ljava/util/regex/Pattern;
+
+    const-string v0, "NAME=\"((?:.|\u000c)+?)\""
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->o1:Ljava/util/regex/Pattern;
+
+    const-string v0, "GROUP-ID=\"((?:.|\u000c)+?)\""
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->p1:Ljava/util/regex/Pattern;
+
+    const-string v0, "CHARACTERISTICS=\"((?:.|\u000c)+?)\""
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->q1:Ljava/util/regex/Pattern;
+
+    const-string v0, "INSTREAM-ID=\"((?:CC|SERVICE)\\d+)\""
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->r1:Ljava/util/regex/Pattern;
+
+    const-string v0, "AUTOSELECT"
+
+    invoke-static {v0}, Ljxb;->a(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->s1:Ljava/util/regex/Pattern;
+
+    const-string v0, "DEFAULT"
+
+    invoke-static {v0}, Ljxb;->a(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->t1:Ljava/util/regex/Pattern;
+
+    const-string v0, "FORCED"
+
+    invoke-static {v0}, Ljxb;->a(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->u1:Ljava/util/regex/Pattern;
+
+    const-string v0, "INDEPENDENT"
+
+    invoke-static {v0}, Ljxb;->a(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->v1:Ljava/util/regex/Pattern;
+
+    const-string v0, "GAP"
+
+    invoke-static {v0}, Ljxb;->a(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->w1:Ljava/util/regex/Pattern;
+
+    const-string v0, "PRECISE"
+
+    invoke-static {v0}, Ljxb;->a(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->x1:Ljava/util/regex/Pattern;
+
+    const-string v0, "VALUE=\"((?:.|\u000c)+?)\""
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->y1:Ljava/util/regex/Pattern;
+
+    const-string v0, "IMPORT=\"((?:.|\u000c)+?)\""
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->z1:Ljava/util/regex/Pattern;
+
+    const-string v0, "[:,]ID=\"((?:.|\u000c)+?)\""
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->A1:Ljava/util/regex/Pattern;
+
+    const-string v0, "CLASS=\"((?:.|\u000c)+?)\""
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->B1:Ljava/util/regex/Pattern;
+
+    const-string v0, "START-DATE=\"((?:.|\u000c)+?)\""
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->C1:Ljava/util/regex/Pattern;
+
+    const-string v0, "CUE=\"((?:.|\u000c)+?)\""
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->D1:Ljava/util/regex/Pattern;
+
+    const-string v0, "END-DATE=\"((?:.|\u000c)+?)\""
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->E1:Ljava/util/regex/Pattern;
+
+    const-string v0, "PLANNED-DURATION=([\\d\\.]+)\\b"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->F1:Ljava/util/regex/Pattern;
+
+    const-string v0, "END-ON-NEXT"
+
+    invoke-static {v0}, Ljxb;->a(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->G1:Ljava/util/regex/Pattern;
+
+    const-string v0, "X-ASSET-URI=\"((?:.|\u000c)+?)\""
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->H1:Ljava/util/regex/Pattern;
+
+    const-string v0, "X-ASSET-LIST=\"((?:.|\u000c)+?)\""
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->I1:Ljava/util/regex/Pattern;
+
+    const-string v0, "X-RESUME-OFFSET=(-?[\\d\\.]+)\\b"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->J1:Ljava/util/regex/Pattern;
+
+    const-string v0, "X-PLAYOUT-LIMIT=([\\d\\.]+)\\b"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->K1:Ljava/util/regex/Pattern;
+
+    const-string v0, "X-SNAP=\"((?:.|\u000c)+?)\""
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->L1:Ljava/util/regex/Pattern;
+
+    const-string v0, "X-RESTRICT=\"((?:.|\u000c)+?)\""
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->M1:Ljava/util/regex/Pattern;
+
+    const-string v0, "X-CONTENT-MAY-VARY=\"((?:.|\u000c)+?)\""
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->N1:Ljava/util/regex/Pattern;
+
+    const-string v0, "X-TIMELINE-OCCUPIES=\"((?:.|\u000c)+?)\""
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->O1:Ljava/util/regex/Pattern;
+
+    const-string v0, "X-TIMELINE-STYLE=\"((?:.|\u000c)+?)\""
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->P1:Ljava/util/regex/Pattern;
+
+    const-string v0, "X-SKIP-CONTROL-OFFSET=([\\d\\.]+)\\b"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->Q1:Ljava/util/regex/Pattern;
+
+    const-string v0, "X-SKIP-CONTROL-DURATION=([\\d\\.]+)\\b"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->R1:Ljava/util/regex/Pattern;
+
+    const-string v0, "X-SKIP-CONTROL-LABEL-ID=\"((?:.|\u000c)+?)\""
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->S1:Ljava/util/regex/Pattern;
+
+    const-string v0, "\\{\\$([a-zA-Z0-9\\-_]+)\\}"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->T1:Ljava/util/regex/Pattern;
+
+    const-string v0, "\\b(X-[A-Z0-9-]+)="
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->U1:Ljava/util/regex/Pattern;
+
+    const-string v0, "#EXT-X-VK-PLAYBACK-DURATION:(\\d+)\\b"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ljxb;->V1:Ljava/util/regex/Pattern;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lzh7;Lvh7;Lske;Lyu6;Ljava/util/Set;)V
+    .locals 2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Landroid/os/Handler;
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    iput-object v0, p0, Ljxb;->c:Landroid/os/Handler;
+
+    new-instance v0, Ljava/util/HashSet;
+
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
+
+    iput-object p1, p0, Ljxb;->a:Lzh7;
+
+    iput-object p2, p0, Ljxb;->b:Lvh7;
+
+    iput-object p3, p0, Ljxb;->d:Lske;
+
+    iput-object p4, p0, Ljxb;->e:Lyu6;
+
+    invoke-virtual {v0, p5}, Ljava/util/AbstractCollection;->addAll(Ljava/util/Collection;)Z
+
+    return-void
+.end method
+
+.method public static a(Ljava/lang/String;)Ljava/util/regex/Pattern;
+    .locals 1
+
+    const-string v0, "=(NO|YES)"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {p0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static b(Ljava/lang/String;[Lzg5;)Lah5;
+    .locals 7
+
+    array-length v0, p1
+
+    new-array v0, v0, [Lzg5;
+
+    const/4 v1, 0x0
+
+    :goto_0
+    array-length v2, p1
+
+    if-ge v1, v2, :cond_0
+
+    aget-object v2, p1, v1
+
+    new-instance v3, Lzg5;
+
+    iget-object v4, v2, Lzg5;->b:Ljava/util/UUID;
+
+    iget-object v5, v2, Lzg5;->c:Ljava/lang/String;
+
+    iget-object v2, v2, Lzg5;->d:Ljava/lang/String;
+
+    const/4 v6, 0x0
+
+    invoke-direct {v3, v4, v5, v2, v6}, Lzg5;-><init>(Ljava/util/UUID;Ljava/lang/String;Ljava/lang/String;[B)V
+
+    aput-object v3, v0, v1
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Lah5;
+
+    const/4 v1, 0x1
+
+    invoke-direct {p1, p0, v1, v0}, Lah5;-><init>(Ljava/lang/String;Z[Lzg5;)V
+
+    return-object p1
+.end method
+
+.method public static e(Ljava/lang/String;Ljava/lang/String;Ljava/util/HashMap;)Lzg5;
+    .locals 8
+
+    sget-object v0, Ljxb;->i1:Ljava/util/regex/Pattern;
+
+    const-string v1, "1"
+
+    invoke-static {p0, v0, v1, p2}, Ljxb;->k(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/lang/String;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v2, "urn:uuid:edef8ba9-79d6-4ace-a3c8-27dcd51d21ed"
+
+    invoke-virtual {v2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    const/4 v3, 0x0
+
+    const/16 v4, 0x2c
+
+    const-string v5, "video/mp4"
+
+    sget-object v6, Ljxb;->j1:Ljava/util/regex/Pattern;
+
+    const/4 v7, 0x0
+
+    if-eqz v2, :cond_0
+
+    invoke-static {p0, v6, p2}, Ljxb;->l(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object p0
+
+    new-instance p1, Lzg5;
+
+    sget-object p2, Lu21;->d:Ljava/util/UUID;
+
+    invoke-virtual {p0, v4}, Ljava/lang/String;->indexOf(I)I
+
+    move-result v0
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {p0, v3}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
+
+    move-result-object p0
+
+    invoke-direct {p1, p2, v7, v5, p0}, Lzg5;-><init>(Ljava/util/UUID;Ljava/lang/String;Ljava/lang/String;[B)V
+
+    return-object p1
+
+    :cond_0
+    const-string v2, "com.widevine"
+
+    invoke-virtual {v2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    new-instance p1, Lzg5;
+
+    sget-object p2, Lu21;->d:Ljava/util/UUID;
+
+    sget-object v0, Lq3i;->a:Ljava/lang/String;
+
+    sget-object v0, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
+
+    move-result-object p0
+
+    const-string v0, "hls"
+
+    invoke-direct {p1, p2, v7, v0, p0}, Lzg5;-><init>(Ljava/util/UUID;Ljava/lang/String;Ljava/lang/String;[B)V
+
+    return-object p1
+
+    :cond_1
+    const-string v2, "com.microsoft.playready"
+
+    invoke-virtual {v2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    invoke-static {p0, v6, p2}, Ljxb;->l(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p0, v4}, Ljava/lang/String;->indexOf(I)I
+
+    move-result p1
+
+    invoke-virtual {p0, p1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {p0, v3}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
+
+    move-result-object p0
+
+    sget-object p1, Lu21;->e:Ljava/util/UUID;
+
+    invoke-static {p1, v7, p0}, Lchk;->a(Ljava/util/UUID;[Ljava/util/UUID;[B)[B
+
+    move-result-object p0
+
+    new-instance p2, Lzg5;
+
+    invoke-direct {p2, p1, v7, v5, p0}, Lzg5;-><init>(Ljava/util/UUID;Ljava/lang/String;Ljava/lang/String;[B)V
+
+    return-object p2
+
+    :cond_2
+    return-object v7
+.end method
+
+.method public static f(Lzh7;Lvh7;Lqt8;Ljava/lang/String;)Lvh7;
+    .locals 101
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, p1
+
+    iget-boolean v2, v0, Lai7;->c:Z
+
+    new-instance v3, Ljava/util/HashMap;
+
+    invoke-direct {v3}, Ljava/util/HashMap;-><init>()V
+
+    new-instance v4, Ljava/util/HashMap;
+
+    invoke-direct {v4}, Ljava/util/HashMap;-><init>()V
+
+    new-instance v5, Ljava/util/ArrayList;
+
+    invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
+
+    new-instance v6, Ljava/util/ArrayList;
+
+    invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
+
+    new-instance v7, Ljava/util/ArrayList;
+
+    invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
+
+    new-instance v8, Ljava/util/ArrayList;
+
+    invoke-direct {v8}, Ljava/util/ArrayList;-><init>()V
+
+    new-instance v9, Ljava/util/LinkedHashMap;
+
+    invoke-direct {v9}, Ljava/util/LinkedHashMap;-><init>()V
+
+    new-instance v10, Luh7;
+
+    const-wide v16, -0x7fffffffffffffffL    # -4.9E-324
+
+    const/16 v18, 0x0
+
+    const-wide v11, -0x7fffffffffffffffL    # -4.9E-324
+
+    const/4 v13, 0x0
+
+    const-wide v14, -0x7fffffffffffffffL    # -4.9E-324
+
+    invoke-direct/range {v10 .. v18}, Luh7;-><init>(JZJJZ)V
+
+    new-instance v11, Ljava/util/TreeMap;
+
+    invoke-direct {v11}, Ljava/util/TreeMap;-><init>()V
+
+    const-wide v17, -0x7fffffffffffffffL    # -4.9E-324
+
+    const-wide/16 v19, 0x0
+
+    const-string v15, ""
+
+    const-wide/16 v21, -0x1
+
+    move/from16 v23, v2
+
+    move-object/from16 v74, v15
+
+    move-wide/from16 v45, v17
+
+    move-wide/from16 v77, v45
+
+    move-wide/from16 v24, v19
+
+    move-wide/from16 v35, v24
+
+    move-wide/from16 v40, v35
+
+    move-wide/from16 v42, v40
+
+    move-wide/from16 v57, v42
+
+    move-wide/from16 v72, v57
+
+    move-wide/from16 v75, v72
+
+    move-wide/from16 v79, v75
+
+    move-wide/from16 v38, v21
+
+    move-wide/from16 v81, v38
+
+    const/4 v2, 0x0
+
+    const/4 v12, 0x0
+
+    const/16 v26, 0x0
+
+    const/16 v34, 0x0
+
+    const/16 v37, 0x0
+
+    const/16 v44, 0x0
+
+    const/16 v47, 0x1
+
+    const/16 v48, 0x0
+
+    const/16 v49, 0x0
+
+    const/16 v50, 0x0
+
+    const/16 v53, 0x0
+
+    const/16 v56, 0x0
+
+    const/16 v60, 0x0
+
+    const/16 v69, 0x0
+
+    const/16 v70, 0x0
+
+    const/16 v71, 0x0
+
+    move-wide/from16 v19, v77
+
+    move-wide/from16 v21, v19
+
+    move-wide/from16 v16, v79
+
+    const/16 v18, 0x0
+
+    :cond_0
+    :goto_0
+    invoke-virtual/range {p2 .. p2}, Lqt8;->G()Z
+
+    move-result v27
+
+    if-eqz v27, :cond_85
+
+    invoke-virtual/range {p2 .. p2}, Lqt8;->I()Ljava/lang/String;
+
+    move-result-object v13
+
+    const-string v14, "#EXT"
+
+    invoke-virtual {v13, v14}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v14
+
+    if-eqz v14, :cond_1
+
+    invoke-virtual {v8, v13}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_1
+    const-string v14, "#EXT-X-PLAYLIST-TYPE"
+
+    invoke-virtual {v13, v14}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v14
+
+    const/16 v28, 0x2
+
+    if-eqz v14, :cond_3
+
+    sget-object v14, Ljxb;->w:Ljava/util/regex/Pattern;
+
+    invoke-static {v13, v14, v3}, Ljxb;->l(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v13
+
+    const-string v14, "VOD"
+
+    invoke-virtual {v14, v13}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v14
+
+    if-eqz v14, :cond_2
+
+    const/16 v44, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    const-string v14, "EVENT"
+
+    invoke-virtual {v14, v13}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v13
+
+    if-eqz v13, :cond_0
+
+    move/from16 v44, v28
+
+    goto :goto_0
+
+    :cond_3
+    const-string v14, "#EXT-X-I-FRAMES-ONLY"
+
+    invoke-virtual {v13, v14}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v14
+
+    if-eqz v14, :cond_4
+
+    const/16 v70, 0x1
+
+    goto :goto_0
+
+    :cond_4
+    const-string v14, "#EXT-X-START"
+
+    invoke-virtual {v13, v14}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v14
+
+    const-wide v29, 0x412e848000000000L    # 1000000.0
+
+    if-eqz v14, :cond_5
+
+    sget-object v14, Ljxb;->I:Ljava/util/regex/Pattern;
+
+    move-object/from16 v85, v8
+
+    sget-object v8, Ljava/util/Collections;->EMPTY_MAP:Ljava/util/Map;
+
+    invoke-static {v13, v14, v8}, Ljxb;->l(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-static {v8}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
+
+    move-result-wide v27
+
+    move-object v14, v9
+
+    mul-double v8, v27, v29
+
+    double-to-long v8, v8
+
+    move-wide/from16 v27, v8
+
+    sget-object v8, Ljxb;->x1:Ljava/util/regex/Pattern;
+
+    invoke-static {v13, v8}, Ljxb;->h(Ljava/lang/String;Ljava/util/regex/Pattern;)Z
+
+    move-result v18
+
+    move-object v9, v14
+
+    move-wide/from16 v45, v27
+
+    :goto_1
+    move-object/from16 v8, v85
+
+    goto :goto_0
+
+    :cond_5
+    move-object/from16 v85, v8
+
+    move-object v14, v9
+
+    const-string v8, "#EXT-X-SERVER-CONTROL"
+
+    invoke-virtual {v13, v8}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_9
+
+    sget-object v8, Ljxb;->x:Ljava/util/regex/Pattern;
+
+    const-wide/high16 v9, -0x3c20000000000000L    # -9.223372036854776E18
+
+    invoke-static {v13, v8, v9, v10}, Ljxb;->i(Ljava/lang/String;Ljava/util/regex/Pattern;D)D
+
+    move-result-wide v27
+
+    cmpl-double v8, v27, v9
+
+    if-nez v8, :cond_6
+
+    move-wide/from16 v87, v77
+
+    goto :goto_2
+
+    :cond_6
+    mul-double v9, v27, v29
+
+    double-to-long v8, v9
+
+    move-wide/from16 v87, v8
+
+    :goto_2
+    sget-object v8, Ljxb;->y:Ljava/util/regex/Pattern;
+
+    invoke-static {v13, v8}, Ljxb;->h(Ljava/lang/String;Ljava/util/regex/Pattern;)Z
+
+    move-result v89
+
+    sget-object v8, Ljxb;->A:Ljava/util/regex/Pattern;
+
+    const-wide/high16 v9, -0x3c20000000000000L    # -9.223372036854776E18
+
+    invoke-static {v13, v8, v9, v10}, Ljxb;->i(Ljava/lang/String;Ljava/util/regex/Pattern;D)D
+
+    move-result-wide v27
+
+    cmpl-double v8, v27, v9
+
+    if-nez v8, :cond_7
+
+    move-wide/from16 v90, v77
+
+    goto :goto_3
+
+    :cond_7
+    mul-double v9, v27, v29
+
+    double-to-long v8, v9
+
+    move-wide/from16 v90, v8
+
+    :goto_3
+    sget-object v8, Ljxb;->B:Ljava/util/regex/Pattern;
+
+    const-wide/high16 v9, -0x3c20000000000000L    # -9.223372036854776E18
+
+    invoke-static {v13, v8, v9, v10}, Ljxb;->i(Ljava/lang/String;Ljava/util/regex/Pattern;D)D
+
+    move-result-wide v27
+
+    cmpl-double v8, v27, v9
+
+    if-nez v8, :cond_8
+
+    move-wide/from16 v92, v77
+
+    goto :goto_4
+
+    :cond_8
+    mul-double v8, v27, v29
+
+    double-to-long v8, v8
+
+    move-wide/from16 v92, v8
+
+    :goto_4
+    sget-object v8, Ljxb;->C:Ljava/util/regex/Pattern;
+
+    invoke-static {v13, v8}, Ljxb;->h(Ljava/lang/String;Ljava/util/regex/Pattern;)Z
+
+    move-result v94
+
+    new-instance v86, Luh7;
+
+    invoke-direct/range {v86 .. v94}, Luh7;-><init>(JZJJZ)V
+
+    move-object v9, v14
+
+    move-object/from16 v8, v85
+
+    move-object/from16 v10, v86
+
+    goto/16 :goto_0
+
+    :cond_9
+    const-string v8, "#EXT-X-PART-INF"
+
+    invoke-virtual {v13, v8}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_a
+
+    sget-object v8, Ljxb;->u:Ljava/util/regex/Pattern;
+
+    sget-object v9, Ljava/util/Collections;->EMPTY_MAP:Ljava/util/Map;
+
+    invoke-static {v13, v8, v9}, Ljxb;->l(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-static {v8}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
+
+    move-result-wide v8
+
+    mul-double v8, v8, v29
+
+    double-to-long v8, v8
+
+    move-wide/from16 v21, v8
+
+    move-object v9, v14
+
+    goto :goto_1
+
+    :cond_a
+    const-string v8, "#EXT-X-MAP"
+
+    invoke-virtual {v13, v8}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v8
+
+    sget-object v9, Ljxb;->K:Ljava/util/regex/Pattern;
+
+    move/from16 v31, v8
+
+    const-string v8, "@"
+
+    move-object/from16 v86, v10
+
+    sget-object v10, Ljxb;->j1:Ljava/util/regex/Pattern;
+
+    if-eqz v31, :cond_10
+
+    invoke-static {v13, v10, v3}, Ljxb;->l(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v32
+
+    const/4 v10, 0x0
+
+    invoke-static {v13, v9, v10, v3}, Ljxb;->k(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/lang/String;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v9
+
+    if-eqz v9, :cond_b
+
+    sget-object v10, Lq3i;->a:Ljava/lang/String;
+
+    const/4 v10, -0x1
+
+    invoke-virtual {v9, v8, v10}, Ljava/lang/String;->split(Ljava/lang/String;I)[Ljava/lang/String;
+
+    move-result-object v8
+
+    aget-object v9, v8, v69
+
+    invoke-static {v9}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
+
+    move-result-wide v38
+
+    array-length v9, v8
+
+    const/4 v10, 0x1
+
+    if-le v9, v10, :cond_b
+
+    aget-object v8, v8, v10
+
+    invoke-static {v8}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
+
+    move-result-wide v24
+
+    :cond_b
+    move-wide/from16 v30, v38
+
+    cmp-long v8, v30, v81
+
+    if-nez v8, :cond_c
+
+    move-wide/from16 v28, v79
+
+    goto :goto_5
+
+    :cond_c
+    move-wide/from16 v28, v24
+
+    :goto_5
+    if-eqz v60, :cond_e
+
+    if-eqz v34, :cond_d
+
+    goto :goto_6
+
+    :cond_d
+    const-string v0, "The encryption IV attribute must be present when an initialization segment is encrypted with METHOD=AES-128."
+
+    const/4 v10, 0x0
+
+    invoke-static {v10, v0}, Landroidx/media3/common/ParserException;->b(Ljava/lang/Exception;Ljava/lang/String;)Landroidx/media3/common/ParserException;
+
+    move-result-object v0
+
+    throw v0
+
+    :cond_e
+    :goto_6
+    new-instance v27, Lsh7;
+
+    move-object/from16 v33, v60
+
+    invoke-direct/range {v27 .. v34}, Lsh7;-><init>(JJLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    move-object/from16 v87, v34
+
+    if-eqz v8, :cond_f
+
+    add-long v28, v28, v30
+
+    :cond_f
+    move-wide/from16 v24, v28
+
+    move-object v9, v14
+
+    move-object/from16 v53, v27
+
+    move-wide/from16 v38, v81
+
+    move-object/from16 v8, v85
+
+    move-object/from16 v10, v86
+
+    move-object/from16 v34, v87
+
+    goto/16 :goto_0
+
+    :cond_10
+    move-object/from16 v31, v14
+
+    move-object/from16 v87, v34
+
+    const-string v14, "#EXT-X-TARGETDURATION"
+
+    invoke-virtual {v13, v14}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v14
+
+    move-object/from16 v32, v6
+
+    move-object/from16 v88, v7
+
+    const-wide/32 v6, 0xf4240
+
+    if-eqz v14, :cond_11
+
+    sget-object v8, Ljxb;->r:Ljava/util/regex/Pattern;
+
+    sget-object v9, Ljava/util/Collections;->EMPTY_MAP:Ljava/util/Map;
+
+    invoke-static {v13, v8, v9}, Ljxb;->l(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-static {v8}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v8
+
+    int-to-long v8, v8
+
+    mul-long v19, v8, v6
+
+    :goto_7
+    move-object/from16 v9, v31
+
+    move-object/from16 v6, v32
+
+    :goto_8
+    move-object/from16 v8, v85
+
+    move-object/from16 v10, v86
+
+    move-object/from16 v34, v87
+
+    :goto_9
+    move-object/from16 v7, v88
+
+    goto/16 :goto_0
+
+    :cond_11
+    const-string v14, "#EXT-X-MEDIA-SEQUENCE"
+
+    invoke-virtual {v13, v14}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v14
+
+    if-eqz v14, :cond_12
+
+    sget-object v6, Ljxb;->D:Ljava/util/regex/Pattern;
+
+    sget-object v7, Ljava/util/Collections;->EMPTY_MAP:Ljava/util/Map;
+
+    invoke-static {v13, v6, v7}, Ljxb;->l(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v6}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
+
+    move-result-wide v40
+
+    move-object/from16 v9, v31
+
+    move-object/from16 v6, v32
+
+    move-wide/from16 v16, v40
+
+    goto :goto_8
+
+    :cond_12
+    const-string v14, "#EXT-X-VERSION"
+
+    invoke-virtual {v13, v14}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v14
+
+    if-eqz v14, :cond_13
+
+    sget-object v6, Ljxb;->v:Ljava/util/regex/Pattern;
+
+    sget-object v7, Ljava/util/Collections;->EMPTY_MAP:Ljava/util/Map;
+
+    invoke-static {v13, v6, v7}, Ljxb;->l(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v6}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v47
+
+    goto :goto_7
+
+    :cond_13
+    const-string v14, "#EXT-X-DEFINE"
+
+    invoke-virtual {v13, v14}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v14
+
+    if-eqz v14, :cond_16
+
+    sget-object v6, Ljxb;->z1:Ljava/util/regex/Pattern;
+
+    const/4 v10, 0x0
+
+    invoke-static {v13, v6, v10, v3}, Ljxb;->k(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/lang/String;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v6
+
+    if-eqz v6, :cond_14
+
+    iget-object v7, v0, Lzh7;->j:Ljava/util/Map;
+
+    invoke-interface {v7, v6}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v7
+
+    check-cast v7, Ljava/lang/String;
+
+    if-eqz v7, :cond_15
+
+    invoke-virtual {v3, v6, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_a
+
+    :cond_14
+    sget-object v6, Ljxb;->o1:Ljava/util/regex/Pattern;
+
+    invoke-static {v13, v6, v3}, Ljxb;->l(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v6
+
+    sget-object v7, Ljxb;->y1:Ljava/util/regex/Pattern;
+
+    invoke-static {v13, v7, v3}, Ljxb;->l(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-virtual {v3, v6, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_15
+    :goto_a
+    move-object v6, v4
+
+    move-object v0, v5
+
+    move-object/from16 v63, v11
+
+    move-object/from16 v62, v15
+
+    move-wide/from16 v54, v24
+
+    move-object/from16 v1, v31
+
+    move-object/from16 v59, v53
+
+    move/from16 v9, v69
+
+    move-wide/from16 v28, v72
+
+    move-object/from16 v27, v74
+
+    move-object/from16 v89, v88
+
+    move-object/from16 v88, v2
+
+    move-object/from16 v2, v32
+
+    move-wide/from16 v31, v35
+
+    goto/16 :goto_53
+
+    :cond_16
+    const-string v14, "#EXTINF"
+
+    invoke-virtual {v13, v14}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v14
+
+    if-eqz v14, :cond_17
+
+    sget-object v8, Ljxb;->E:Ljava/util/regex/Pattern;
+
+    sget-object v9, Ljava/util/Collections;->EMPTY_MAP:Ljava/util/Map;
+
+    invoke-static {v13, v8, v9}, Ljxb;->l(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v8
+
+    new-instance v9, Ljava/math/BigDecimal;
+
+    invoke-direct {v9, v8}, Ljava/math/BigDecimal;-><init>(Ljava/lang/String;)V
+
+    new-instance v8, Ljava/math/BigDecimal;
+
+    invoke-direct {v8, v6, v7}, Ljava/math/BigDecimal;-><init>(J)V
+
+    invoke-virtual {v9, v8}, Ljava/math/BigDecimal;->multiply(Ljava/math/BigDecimal;)Ljava/math/BigDecimal;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Ljava/math/BigDecimal;->longValue()J
+
+    move-result-wide v72
+
+    sget-object v6, Ljxb;->F:Ljava/util/regex/Pattern;
+
+    invoke-static {v13, v6, v15, v3}, Ljxb;->k(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/lang/String;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v74
+
+    goto/16 :goto_7
+
+    :cond_17
+    const-string v6, "#EXT-X-SKIP"
+
+    invoke-virtual {v13, v6}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v6
+
+    const-wide/16 v33, 0x1
+
+    if-eqz v6, :cond_1f
+
+    sget-object v6, Ljxb;->z:Ljava/util/regex/Pattern;
+
+    sget-object v7, Ljava/util/Collections;->EMPTY_MAP:Ljava/util/Map;
+
+    invoke-static {v13, v6, v7}, Ljxb;->l(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v6}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v6
+
+    if-eqz v1, :cond_18
+
+    invoke-virtual {v5}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v7
+
+    if-eqz v7, :cond_18
+
+    const/4 v7, 0x1
+
+    goto :goto_b
+
+    :cond_18
+    move/from16 v7, v69
+
+    :goto_b
+    invoke-static {v7}, Lfz6;->v(Z)V
+
+    sget-object v7, Lq3i;->a:Ljava/lang/String;
+
+    iget-wide v7, v1, Lvh7;->k:J
+
+    iget-object v9, v1, Lvh7;->r:Lrs7;
+
+    sub-long v7, v16, v7
+
+    long-to-int v7, v7
+
+    add-int/2addr v6, v7
+
+    if-ltz v7, :cond_1e
+
+    invoke-interface {v9}, Ljava/util/List;->size()I
+
+    move-result v8
+
+    if-gt v6, v8, :cond_1e
+
+    move-wide/from16 v13, v35
+
+    :goto_c
+    if-ge v7, v6, :cond_1d
+
+    invoke-interface {v9, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v8
+
+    check-cast v8, Lsh7;
+
+    move v10, v6
+
+    move/from16 v27, v7
+
+    iget-wide v6, v1, Lvh7;->k:J
+
+    cmp-long v6, v16, v6
+
+    if-eqz v6, :cond_19
+
+    iget v6, v1, Lvh7;->j:I
+
+    sub-int v6, v6, v50
+
+    iget v7, v8, Lth7;->d:I
+
+    add-int/2addr v6, v7
+
+    invoke-virtual {v8, v6, v13, v14}, Lsh7;->a(IJ)Lsh7;
+
+    move-result-object v8
+
+    :cond_19
+    invoke-virtual {v5, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    iget-wide v6, v8, Lth7;->c:J
+
+    iget-object v0, v8, Lth7;->h:Ljava/lang/String;
+
+    add-long v57, v13, v6
+
+    iget-wide v6, v8, Lth7;->j:J
+
+    cmp-long v13, v6, v81
+
+    if-eqz v13, :cond_1a
+
+    iget-wide v13, v8, Lth7;->i:J
+
+    add-long v24, v13, v6
+
+    :cond_1a
+    iget v6, v8, Lth7;->d:I
+
+    iget-object v7, v8, Lth7;->b:Lsh7;
+
+    iget-object v13, v8, Lth7;->f:Lah5;
+
+    iget-object v8, v8, Lth7;->g:Ljava/lang/String;
+
+    if-eqz v0, :cond_1b
+
+    invoke-static/range {v40 .. v41}, Ljava/lang/Long;->toHexString(J)Ljava/lang/String;
+
+    move-result-object v14
+
+    invoke-virtual {v0, v14}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v14
+
+    if-nez v14, :cond_1c
+
+    :cond_1b
+    move-object/from16 v87, v0
+
+    :cond_1c
+    add-long v40, v40, v33
+
+    add-int/lit8 v0, v27, 0x1
+
+    move/from16 v56, v6
+
+    move-object/from16 v53, v7
+
+    move-object/from16 v60, v8
+
+    move v6, v10
+
+    move-object/from16 v37, v13
+
+    move-wide/from16 v13, v57
+
+    move v7, v0
+
+    move-object/from16 v0, p0
+
+    goto :goto_c
+
+    :cond_1d
+    move-object/from16 v0, p0
+
+    move-wide/from16 v35, v13
+
+    goto/16 :goto_7
+
+    :cond_1e
+    new-instance v0, Lone/video/exo/datasource/hls/parser/OneVideoHlsPlaylistParser$DeltaUpdateException;
+
+    invoke-direct {v0}, Lone/video/exo/datasource/hls/parser/OneVideoHlsPlaylistParser$DeltaUpdateException;-><init>()V
+
+    throw v0
+
+    :cond_1f
+    const-string v0, "#EXT-X-KEY"
+
+    invoke-virtual {v13, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_26
+
+    sget-object v0, Ljxb;->Z:Ljava/util/regex/Pattern;
+
+    invoke-static {v13, v0, v3}, Ljxb;->l(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v0
+
+    sget-object v6, Ljxb;->h1:Ljava/util/regex/Pattern;
+
+    const-string v7, "identity"
+
+    invoke-static {v13, v6, v7, v3}, Ljxb;->k(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/lang/String;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v6
+
+    const-string v8, "NONE"
+
+    invoke-virtual {v8, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_20
+
+    invoke-virtual {v11}, Ljava/util/TreeMap;->clear()V
+
+    const/16 v34, 0x0
+
+    :goto_d
+    const/16 v37, 0x0
+
+    :goto_e
+    const/16 v60, 0x0
+
+    goto :goto_12
+
+    :cond_20
+    sget-object v8, Ljxb;->k1:Ljava/util/regex/Pattern;
+
+    const/4 v9, 0x0
+
+    invoke-static {v13, v8, v9, v3}, Ljxb;->k(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/lang/String;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-virtual {v7, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_22
+
+    const-string v6, "AES-128"
+
+    invoke-virtual {v6, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_21
+
+    invoke-static {v13, v10, v3}, Ljxb;->l(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v0
+
+    move-object/from16 v60, v0
+
+    move-object/from16 v34, v8
+
+    goto :goto_12
+
+    :cond_21
+    move-object/from16 v34, v8
+
+    goto :goto_e
+
+    :cond_22
+    if-nez v12, :cond_25
+
+    const-string v7, "SAMPLE-AES-CENC"
+
+    invoke-virtual {v7, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v7
+
+    if-nez v7, :cond_24
+
+    const-string v7, "SAMPLE-AES-CTR"
+
+    invoke-virtual {v7, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_23
+
+    goto :goto_10
+
+    :cond_23
+    const-string v0, "cbcs"
+
+    :goto_f
+    move-object v12, v0
+
+    goto :goto_11
+
+    :cond_24
+    :goto_10
+    const-string v0, "cenc"
+
+    goto :goto_f
+
+    :cond_25
+    :goto_11
+    invoke-static {v13, v6, v3}, Ljxb;->e(Ljava/lang/String;Ljava/lang/String;Ljava/util/HashMap;)Lzg5;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_21
+
+    invoke-virtual {v11, v6, v0}, Ljava/util/TreeMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-object/from16 v34, v8
+
+    goto :goto_d
+
+    :goto_12
+    move-object/from16 v0, p0
+
+    move-object/from16 v9, v31
+
+    move-object/from16 v6, v32
+
+    move-object/from16 v8, v85
+
+    move-object/from16 v10, v86
+
+    goto/16 :goto_9
+
+    :cond_26
+    const-string v0, "#EXT-X-BYTERANGE"
+
+    invoke-virtual {v13, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_28
+
+    sget-object v0, Ljxb;->J:Ljava/util/regex/Pattern;
+
+    invoke-static {v13, v0, v3}, Ljxb;->l(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v0
+
+    sget-object v6, Lq3i;->a:Ljava/lang/String;
+
+    const/4 v10, -0x1
+
+    invoke-virtual {v0, v8, v10}, Ljava/lang/String;->split(Ljava/lang/String;I)[Ljava/lang/String;
+
+    move-result-object v0
+
+    aget-object v6, v0, v69
+
+    invoke-static {v6}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
+
+    move-result-wide v38
+
+    array-length v6, v0
+
+    const/4 v7, 0x1
+
+    if-le v6, v7, :cond_27
+
+    aget-object v0, v0, v7
+
+    invoke-static {v0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
+
+    move-result-wide v8
+
+    move-wide/from16 v24, v8
+
+    :cond_27
+    :goto_13
+    move-object/from16 v0, p0
+
+    goto/16 :goto_7
+
+    :cond_28
+    const/4 v7, 0x1
+
+    const-string v0, "#EXT-X-DISCONTINUITY-SEQUENCE"
+
+    invoke-virtual {v13, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    const/16 v6, 0x3a
+
+    if-eqz v0, :cond_29
+
+    invoke-virtual {v13, v6}, Ljava/lang/String;->indexOf(I)I
+
+    move-result v0
+
+    add-int/2addr v0, v7
+
+    invoke-virtual {v13, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v50
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v9, v31
+
+    move-object/from16 v6, v32
+
+    move-object/from16 v8, v85
+
+    move-object/from16 v10, v86
+
+    move-object/from16 v34, v87
+
+    move-object/from16 v7, v88
+
+    const/16 v49, 0x1
+
+    goto/16 :goto_0
+
+    :cond_29
+    const-string v0, "#EXT-X-DISCONTINUITY"
+
+    invoke-virtual {v13, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2a
+
+    add-int/lit8 v56, v56, 0x1
+
+    goto :goto_13
+
+    :cond_2a
+    const-string v0, "#EXT-X-PROGRAM-DATE-TIME"
+
+    invoke-virtual {v13, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2b
+
+    cmp-long v0, v42, v79
+
+    if-nez v0, :cond_15
+
+    invoke-virtual {v13, v6}, Ljava/lang/String;->indexOf(I)I
+
+    move-result v0
+
+    const/16 v83, 0x1
+
+    add-int/lit8 v0, v0, 0x1
+
+    invoke-virtual {v13, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lq3i;->a0(Ljava/lang/String;)J
+
+    move-result-wide v6
+
+    invoke-static {v6, v7}, Lq3i;->X(J)J
+
+    move-result-wide v6
+
+    sub-long v42, v6, v35
+
+    goto :goto_13
+
+    :cond_2b
+    const-string v0, "#EXT-X-GAP"
+
+    invoke-virtual {v13, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2c
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v9, v31
+
+    move-object/from16 v6, v32
+
+    move-object/from16 v8, v85
+
+    move-object/from16 v10, v86
+
+    move-object/from16 v34, v87
+
+    move-object/from16 v7, v88
+
+    const/16 v71, 0x1
+
+    goto/16 :goto_0
+
+    :cond_2c
+    const-string v0, "#EXT-X-INDEPENDENT-SEGMENTS"
+
+    invoke-virtual {v13, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2d
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v9, v31
+
+    move-object/from16 v6, v32
+
+    move-object/from16 v8, v85
+
+    move-object/from16 v10, v86
+
+    move-object/from16 v34, v87
+
+    move-object/from16 v7, v88
+
+    const/16 v23, 0x1
+
+    goto/16 :goto_0
+
+    :cond_2d
+    const-string v0, "#EXT-X-ENDLIST"
+
+    invoke-virtual {v13, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2e
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v9, v31
+
+    move-object/from16 v6, v32
+
+    move-object/from16 v8, v85
+
+    move-object/from16 v10, v86
+
+    move-object/from16 v34, v87
+
+    move-object/from16 v7, v88
+
+    const/16 v48, 0x1
+
+    goto/16 :goto_0
+
+    :cond_2e
+    const-string v0, "#EXT-X-RENDITION-REPORT"
+
+    invoke-virtual {v13, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_30
+
+    sget-object v0, Ljxb;->G:Ljava/util/regex/Pattern;
+
+    invoke-static {v13, v0}, Ljxb;->j(Ljava/lang/String;Ljava/util/regex/Pattern;)J
+
+    move-result-wide v6
+
+    sget-object v0, Ljxb;->H:Ljava/util/regex/Pattern;
+
+    invoke-virtual {v0, v13}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/regex/Matcher;->find()Z
+
+    move-result v8
+
+    if-eqz v8, :cond_2f
+
+    const/4 v8, 0x1
+
+    invoke-virtual {v0, v8}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v0
+
+    goto :goto_14
+
+    :cond_2f
+    const/4 v0, -0x1
+
+    :goto_14
+    invoke-static {v13, v10, v3}, Ljxb;->l(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v8
+
+    move-object/from16 v14, p3
+
+    invoke-static {v14, v8}, Lavk;->c(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-static {v8}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v8
+
+    new-instance v9, Lrh7;
+
+    invoke-direct {v9, v8, v6, v7, v0}, Lrh7;-><init>(Landroid/net/Uri;JI)V
+
+    move-object/from16 v0, v88
+
+    invoke-virtual {v0, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :goto_15
+    move-object/from16 v89, v0
+
+    move-object/from16 v88, v2
+
+    move-object v6, v4
+
+    move-object v0, v5
+
+    move-object/from16 v63, v11
+
+    move-object/from16 v62, v15
+
+    move-wide/from16 v54, v24
+
+    move-object/from16 v1, v31
+
+    move-object/from16 v2, v32
+
+    move-wide/from16 v31, v35
+
+    move-object/from16 v59, v53
+
+    move/from16 v9, v69
+
+    move-wide/from16 v28, v72
+
+    move-object/from16 v27, v74
+
+    goto/16 :goto_53
+
+    :cond_30
+    move-object/from16 v14, p3
+
+    move-object/from16 v0, v88
+
+    const-string v6, "#EXT-X-PRELOAD-HINT"
+
+    invoke-virtual {v13, v6}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_3a
+
+    if-eqz v2, :cond_31
+
+    :goto_16
+    goto :goto_15
+
+    :cond_31
+    sget-object v6, Ljxb;->m1:Ljava/util/regex/Pattern;
+
+    invoke-static {v13, v6, v3}, Ljxb;->l(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v6
+
+    const-string v7, "PART"
+
+    invoke-virtual {v7, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v6
+
+    if-nez v6, :cond_32
+
+    goto :goto_16
+
+    :cond_32
+    invoke-static {v13, v10, v3}, Ljxb;->l(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v52
+
+    sget-object v6, Ljxb;->X:Ljava/util/regex/Pattern;
+
+    invoke-static {v13, v6}, Ljxb;->j(Ljava/lang/String;Ljava/util/regex/Pattern;)J
+
+    move-result-wide v6
+
+    sget-object v8, Ljxb;->Y:Ljava/util/regex/Pattern;
+
+    invoke-static {v13, v8}, Ljxb;->j(Ljava/lang/String;Ljava/util/regex/Pattern;)J
+
+    move-result-wide v64
+
+    if-nez v60, :cond_33
+
+    const/16 v61, 0x0
+
+    goto :goto_17
+
+    :cond_33
+    if-eqz v87, :cond_34
+
+    move-object/from16 v61, v87
+
+    goto :goto_17
+
+    :cond_34
+    invoke-static/range {v40 .. v41}, Ljava/lang/Long;->toHexString(J)Ljava/lang/String;
+
+    move-result-object v34
+
+    move-object/from16 v61, v34
+
+    :goto_17
+    if-nez v37, :cond_36
+
+    invoke-virtual {v11}, Ljava/util/AbstractMap;->isEmpty()Z
+
+    move-result v8
+
+    if-nez v8, :cond_36
+
+    invoke-virtual {v11}, Ljava/util/TreeMap;->values()Ljava/util/Collection;
+
+    move-result-object v8
+
+    move/from16 v9, v69
+
+    new-array v10, v9, [Lzg5;
+
+    invoke-interface {v8, v10}, Ljava/util/Collection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+
+    move-result-object v8
+
+    check-cast v8, [Lzg5;
+
+    new-instance v9, Lah5;
+
+    const/4 v10, 0x1
+
+    invoke-direct {v9, v12, v10, v8}, Lah5;-><init>(Ljava/lang/String;Z[Lzg5;)V
+
+    if-nez v26, :cond_35
+
+    invoke-static {v12, v8}, Ljxb;->b(Ljava/lang/String;[Lzg5;)Lah5;
+
+    move-result-object v8
+
+    move-object/from16 v26, v8
+
+    :cond_35
+    move-object/from16 v59, v9
+
+    goto :goto_18
+
+    :cond_36
+    move-object/from16 v59, v37
+
+    :goto_18
+    cmp-long v8, v6, v81
+
+    if-eqz v8, :cond_37
+
+    cmp-long v9, v64, v81
+
+    if-eqz v9, :cond_39
+
+    :cond_37
+    new-instance v51, Lqh7;
+
+    if-eqz v8, :cond_38
+
+    move-wide/from16 v62, v6
+
+    goto :goto_19
+
+    :cond_38
+    move-wide/from16 v62, v79
+
+    :goto_19
+    const/16 v67, 0x0
+
+    const/16 v68, 0x1
+
+    const-wide/16 v54, 0x0
+
+    const/16 v66, 0x0
+
+    invoke-direct/range {v51 .. v68}, Lqh7;-><init>(Ljava/lang/String;Lsh7;JIJLah5;Ljava/lang/String;Ljava/lang/String;JJZZZ)V
+
+    move-object/from16 v2, v51
+
+    :cond_39
+    move-object v7, v0
+
+    move-object/from16 v9, v31
+
+    move-object/from16 v6, v32
+
+    move-object/from16 v37, v59
+
+    move-object/from16 v8, v85
+
+    move-object/from16 v10, v86
+
+    move-object/from16 v34, v87
+
+    const/16 v69, 0x0
+
+    :goto_1a
+    move-object/from16 v0, p0
+
+    goto/16 :goto_0
+
+    :cond_3a
+    const-string v6, "#EXT-X-PART"
+
+    invoke-virtual {v13, v6}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_44
+
+    if-nez v60, :cond_3b
+
+    const/16 v61, 0x0
+
+    goto :goto_1b
+
+    :cond_3b
+    if-eqz v87, :cond_3c
+
+    move-object/from16 v61, v87
+
+    goto :goto_1b
+
+    :cond_3c
+    invoke-static/range {v40 .. v41}, Ljava/lang/Long;->toHexString(J)Ljava/lang/String;
+
+    move-result-object v34
+
+    move-object/from16 v61, v34
+
+    :goto_1b
+    invoke-static {v13, v10, v3}, Ljxb;->l(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v52
+
+    sget-object v6, Ljxb;->s:Ljava/util/regex/Pattern;
+
+    sget-object v7, Ljava/util/Collections;->EMPTY_MAP:Ljava/util/Map;
+
+    invoke-static {v13, v6, v7}, Ljxb;->l(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v6}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
+
+    move-result-wide v6
+
+    mul-double v6, v6, v29
+
+    double-to-long v6, v6
+
+    sget-object v10, Ljxb;->v1:Ljava/util/regex/Pattern;
+
+    invoke-static {v13, v10}, Ljxb;->h(Ljava/lang/String;Ljava/util/regex/Pattern;)Z
+
+    move-result v10
+
+    if-eqz v23, :cond_3d
+
+    invoke-interface/range {v32 .. v32}, Ljava/util/List;->isEmpty()Z
+
+    move-result v28
+
+    if-eqz v28, :cond_3d
+
+    const/16 v28, 0x1
+
+    goto :goto_1c
+
+    :cond_3d
+    const/16 v28, 0x0
+
+    :goto_1c
+    or-int v67, v10, v28
+
+    sget-object v10, Ljxb;->w1:Ljava/util/regex/Pattern;
+
+    invoke-static {v13, v10}, Ljxb;->h(Ljava/lang/String;Ljava/util/regex/Pattern;)Z
+
+    move-result v66
+
+    const/4 v10, 0x0
+
+    invoke-static {v13, v9, v10, v3}, Ljxb;->k(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/lang/String;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v9
+
+    if-eqz v9, :cond_3f
+
+    sget-object v10, Lq3i;->a:Ljava/lang/String;
+
+    const/4 v10, -0x1
+
+    invoke-virtual {v9, v8, v10}, Ljava/lang/String;->split(Ljava/lang/String;I)[Ljava/lang/String;
+
+    move-result-object v8
+
+    const/16 v69, 0x0
+
+    aget-object v9, v8, v69
+
+    invoke-static {v9}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
+
+    move-result-wide v9
+
+    array-length v13, v8
+
+    move-wide/from16 v54, v6
+
+    const/4 v6, 0x1
+
+    if-le v13, v6, :cond_3e
+
+    aget-object v7, v8, v6
+
+    invoke-static {v7}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
+
+    move-result-wide v75
+
+    :cond_3e
+    move-wide/from16 v64, v9
+
+    goto :goto_1d
+
+    :cond_3f
+    move-wide/from16 v54, v6
+
+    move-wide/from16 v64, v81
+
+    :goto_1d
+    cmp-long v6, v64, v81
+
+    if-nez v6, :cond_40
+
+    move-wide/from16 v62, v79
+
+    goto :goto_1e
+
+    :cond_40
+    move-wide/from16 v62, v75
+
+    :goto_1e
+    if-nez v37, :cond_42
+
+    invoke-virtual {v11}, Ljava/util/AbstractMap;->isEmpty()Z
+
+    move-result v7
+
+    if-nez v7, :cond_42
+
+    invoke-virtual {v11}, Ljava/util/TreeMap;->values()Ljava/util/Collection;
+
+    move-result-object v7
+
+    const/4 v9, 0x0
+
+    new-array v8, v9, [Lzg5;
+
+    invoke-interface {v7, v8}, Ljava/util/Collection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+
+    move-result-object v7
+
+    check-cast v7, [Lzg5;
+
+    new-instance v8, Lah5;
+
+    const/4 v10, 0x1
+
+    invoke-direct {v8, v12, v10, v7}, Lah5;-><init>(Ljava/lang/String;Z[Lzg5;)V
+
+    if-nez v26, :cond_41
+
+    invoke-static {v12, v7}, Ljxb;->b(Ljava/lang/String;[Lzg5;)Lah5;
+
+    move-result-object v7
+
+    move-object/from16 v26, v7
+
+    :cond_41
+    move-object/from16 v59, v8
+
+    goto :goto_1f
+
+    :cond_42
+    move-object/from16 v59, v37
+
+    :goto_1f
+    new-instance v51, Lqh7;
+
+    const/16 v68, 0x0
+
+    invoke-direct/range {v51 .. v68}, Lqh7;-><init>(Ljava/lang/String;Lsh7;JIJLah5;Ljava/lang/String;Ljava/lang/String;JJZZZ)V
+
+    move-object/from16 v9, v32
+
+    move-object/from16 v10, v51
+
+    move-object/from16 v7, v53
+
+    move/from16 v8, v56
+
+    invoke-interface {v9, v10}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    add-long v57, v57, v54
+
+    if-eqz v6, :cond_43
+
+    add-long v62, v62, v64
+
+    :cond_43
+    move-wide/from16 v75, v62
+
+    move-object/from16 v53, v7
+
+    move/from16 v56, v8
+
+    move-object v6, v9
+
+    move-object/from16 v9, v31
+
+    move-object/from16 v37, v59
+
+    move-object/from16 v8, v85
+
+    move-object/from16 v10, v86
+
+    move-object/from16 v34, v87
+
+    const/16 v69, 0x0
+
+    move-object v7, v0
+
+    goto/16 :goto_1a
+
+    :cond_44
+    move-object/from16 v9, v32
+
+    move-object/from16 v7, v53
+
+    move/from16 v8, v56
+
+    const-string v6, "#EXT-X-DATERANGE"
+
+    invoke-virtual {v13, v6}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_7c
+
+    sget-object v6, Ljxb;->B1:Ljava/util/regex/Pattern;
+
+    invoke-static {v13, v6, v15, v3}, Ljxb;->k(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/lang/String;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v6
+
+    const-string v10, "com.apple.hls.interstitial"
+
+    invoke-virtual {v6, v10}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_7c
+
+    sget-object v6, Ljxb;->A1:Ljava/util/regex/Pattern;
+
+    invoke-static {v13, v6, v3}, Ljxb;->l(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v6
+
+    sget-object v10, Ljxb;->H1:Ljava/util/regex/Pattern;
+
+    move-object/from16 v59, v7
+
+    const/4 v7, 0x0
+
+    invoke-static {v13, v10, v7, v3}, Ljxb;->k(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/lang/String;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v10
+
+    if-eqz v10, :cond_45
+
+    invoke-static {v10}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v84
+
+    move-object/from16 v10, v84
+
+    :goto_20
+    move/from16 v32, v8
+
+    goto :goto_21
+
+    :cond_45
+    move-object v10, v7
+
+    goto :goto_20
+
+    :goto_21
+    sget-object v8, Ljxb;->I1:Ljava/util/regex/Pattern;
+
+    invoke-static {v13, v8, v7, v3}, Ljxb;->k(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/lang/String;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v8
+
+    if-eqz v8, :cond_46
+
+    invoke-static {v8}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v84
+
+    move-object/from16 v8, v84
+
+    :goto_22
+    move-object/from16 v61, v9
+
+    goto :goto_23
+
+    :cond_46
+    move-object v8, v7
+
+    goto :goto_22
+
+    :goto_23
+    sget-object v9, Ljxb;->C1:Ljava/util/regex/Pattern;
+
+    invoke-static {v13, v9, v7, v3}, Ljxb;->k(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/lang/String;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v9
+
+    if-eqz v9, :cond_47
+
+    invoke-static {v9}, Lq3i;->a0(Ljava/lang/String;)J
+
+    move-result-wide v33
+
+    invoke-static/range {v33 .. v34}, Lq3i;->X(J)J
+
+    move-result-wide v33
+
+    move-object/from16 v62, v15
+
+    move-wide/from16 v14, v33
+
+    goto :goto_24
+
+    :cond_47
+    move-object/from16 v62, v15
+
+    move-wide/from16 v14, v77
+
+    :goto_24
+    sget-object v9, Ljxb;->E1:Ljava/util/regex/Pattern;
+
+    invoke-static {v13, v9, v7, v3}, Ljxb;->k(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/lang/String;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v9
+
+    if-eqz v9, :cond_48
+
+    invoke-static {v9}, Lq3i;->a0(Ljava/lang/String;)J
+
+    move-result-wide v33
+
+    invoke-static/range {v33 .. v34}, Lq3i;->X(J)J
+
+    move-result-wide v33
+
+    move-wide/from16 v95, v33
+
+    goto :goto_25
+
+    :cond_48
+    move-wide/from16 v95, v77
+
+    :goto_25
+    new-instance v9, Ljava/util/ArrayList;
+
+    invoke-direct {v9}, Ljava/util/ArrayList;-><init>()V
+
+    move-object/from16 v63, v11
+
+    sget-object v11, Ljxb;->D1:Ljava/util/regex/Pattern;
+
+    invoke-static {v13, v11, v7, v3}, Ljxb;->k(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/lang/String;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v11
+
+    const-string v7, ","
+
+    if-eqz v11, :cond_4c
+
+    sget-object v33, Lq3i;->a:Ljava/lang/String;
+
+    const/4 v1, -0x1
+
+    invoke-virtual {v11, v7, v1}, Ljava/lang/String;->split(Ljava/lang/String;I)[Ljava/lang/String;
+
+    move-result-object v11
+
+    array-length v1, v11
+
+    move-object/from16 v33, v11
+
+    const/4 v11, 0x0
+
+    :goto_26
+    if-ge v11, v1, :cond_4c
+
+    aget-object v34, v33, v11
+
+    move/from16 v51, v1
+
+    invoke-virtual/range {v34 .. v34}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v34
+
+    sparse-switch v34, :sswitch_data_0
+
+    move/from16 v34, v11
+
+    :goto_27
+    const/4 v11, -0x1
+
+    goto :goto_29
+
+    :sswitch_0
+    move/from16 v34, v11
+
+    const-string v11, "POST"
+
+    invoke-virtual {v1, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v11
+
+    if-nez v11, :cond_49
+
+    goto :goto_28
+
+    :cond_49
+    move/from16 v11, v28
+
+    goto :goto_29
+
+    :sswitch_1
+    move/from16 v34, v11
+
+    const-string v11, "ONCE"
+
+    invoke-virtual {v1, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v11
+
+    if-nez v11, :cond_4a
+
+    goto :goto_28
+
+    :cond_4a
+    const/4 v11, 0x1
+
+    goto :goto_29
+
+    :sswitch_2
+    move/from16 v34, v11
+
+    const-string v11, "PRE"
+
+    invoke-virtual {v1, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v11
+
+    if-nez v11, :cond_4b
+
+    :goto_28
+    goto :goto_27
+
+    :cond_4b
+    const/4 v11, 0x0
+
+    :goto_29
+    packed-switch v11, :pswitch_data_0
+
+    goto :goto_2a
+
+    :pswitch_0
+    invoke-virtual {v9, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :goto_2a
+    add-int/lit8 v11, v34, 0x1
+
+    move/from16 v1, v51
+
+    goto :goto_26
+
+    :cond_4c
+    sget-object v1, Ljxb;->t:Ljava/util/regex/Pattern;
+
+    move-object/from16 v64, v12
+
+    const-wide/high16 v11, -0x4010000000000000L    # -1.0
+
+    invoke-static {v13, v1, v11, v12}, Ljxb;->i(Ljava/lang/String;Ljava/util/regex/Pattern;D)D
+
+    move-result-wide v33
+
+    const-wide/16 v51, 0x0
+
+    cmpl-double v1, v33, v51
+
+    if-ltz v1, :cond_4d
+
+    mul-double v11, v33, v29
+
+    double-to-long v11, v11
+
+    goto :goto_2b
+
+    :cond_4d
+    move-wide/from16 v11, v77
+
+    :goto_2b
+    sget-object v1, Ljxb;->F1:Ljava/util/regex/Pattern;
+
+    move-object/from16 v65, v4
+
+    move-object/from16 v66, v5
+
+    const-wide/high16 v4, -0x4010000000000000L    # -1.0
+
+    invoke-static {v13, v1, v4, v5}, Ljxb;->i(Ljava/lang/String;Ljava/util/regex/Pattern;D)D
+
+    move-result-wide v33
+
+    cmpl-double v1, v33, v51
+
+    if-ltz v1, :cond_4e
+
+    mul-double v4, v33, v29
+
+    double-to-long v4, v4
+
+    goto :goto_2c
+
+    :cond_4e
+    move-wide/from16 v4, v77
+
+    :goto_2c
+    sget-object v1, Ljxb;->G1:Ljava/util/regex/Pattern;
+
+    invoke-static {v13, v1}, Ljxb;->h(Ljava/lang/String;Ljava/util/regex/Pattern;)Z
+
+    move-result v1
+
+    move/from16 v33, v1
+
+    sget-object v1, Ljxb;->J1:Ljava/util/regex/Pattern;
+
+    move-wide/from16 v55, v4
+
+    const-wide/16 v4, 0x1
+
+    invoke-static {v13, v1, v4, v5}, Ljxb;->i(Ljava/lang/String;Ljava/util/regex/Pattern;D)D
+
+    move-result-wide v67
+
+    cmpl-double v1, v67, v4
+
+    if-eqz v1, :cond_4f
+
+    mul-double v4, v67, v29
+
+    double-to-long v4, v4
+
+    goto :goto_2d
+
+    :cond_4f
+    move-wide/from16 v4, v77
+
+    :goto_2d
+    sget-object v1, Ljxb;->K1:Ljava/util/regex/Pattern;
+
+    move-wide/from16 v67, v4
+
+    const-wide/high16 v4, -0x4010000000000000L    # -1.0
+
+    invoke-static {v13, v1, v4, v5}, Ljxb;->i(Ljava/lang/String;Ljava/util/regex/Pattern;D)D
+
+    move-result-wide v88
+
+    cmpl-double v1, v88, v51
+
+    if-ltz v1, :cond_50
+
+    mul-double v4, v88, v29
+
+    double-to-long v4, v4
+
+    goto :goto_2e
+
+    :cond_50
+    move-wide/from16 v4, v77
+
+    :goto_2e
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+
+    move-object/from16 v88, v2
+
+    sget-object v2, Ljxb;->L1:Ljava/util/regex/Pattern;
+
+    move-object/from16 v89, v0
+
+    const/4 v0, 0x0
+
+    invoke-static {v13, v2, v0, v3}, Ljxb;->k(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/lang/String;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_52
+
+    sget-object v0, Lq3i;->a:Ljava/lang/String;
+
+    const/4 v0, -0x1
+
+    invoke-virtual {v2, v7, v0}, Ljava/lang/String;->split(Ljava/lang/String;I)[Ljava/lang/String;
+
+    move-result-object v2
+
+    array-length v0, v2
+
+    move-object/from16 v34, v2
+
+    const/4 v2, 0x0
+
+    :goto_2f
+    if-ge v2, v0, :cond_52
+
+    aget-object v90, v34, v2
+
+    move/from16 v91, v0
+
+    invoke-virtual/range {v90 .. v90}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move/from16 v90, v2
+
+    const-string v2, "IN"
+
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_51
+
+    const-string v2, "OUT"
+
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_51
+
+    goto :goto_30
+
+    :cond_51
+    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :goto_30
+    add-int/lit8 v2, v90, 0x1
+
+    move/from16 v0, v91
+
+    goto :goto_2f
+
+    :cond_52
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    sget-object v2, Ljxb;->M1:Ljava/util/regex/Pattern;
+
+    move-object/from16 v34, v1
+
+    const/4 v1, 0x0
+
+    invoke-static {v13, v2, v1, v3}, Ljxb;->k(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/lang/String;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_54
+
+    sget-object v1, Lq3i;->a:Ljava/lang/String;
+
+    const/4 v1, -0x1
+
+    invoke-virtual {v2, v7, v1}, Ljava/lang/String;->split(Ljava/lang/String;I)[Ljava/lang/String;
+
+    move-result-object v2
+
+    array-length v1, v2
+
+    const/4 v7, 0x0
+
+    :goto_31
+    if-ge v7, v1, :cond_54
+
+    aget-object v90, v2, v7
+
+    move/from16 v91, v1
+
+    invoke-virtual/range {v90 .. v90}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-object/from16 v90, v2
+
+    const-string v2, "JUMP"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_53
+
+    const-string v2, "SKIP"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_53
+
+    goto :goto_32
+
+    :cond_53
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :goto_32
+    add-int/lit8 v7, v7, 0x1
+
+    move-object/from16 v2, v90
+
+    move/from16 v1, v91
+
+    goto :goto_31
+
+    :cond_54
+    sget-object v1, Ljxb;->N1:Ljava/util/regex/Pattern;
+
+    const/4 v7, 0x0
+
+    invoke-static {v13, v1, v7, v3}, Ljxb;->k(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/lang/String;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_55
+
+    const-string v2, "NO"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    const/16 v83, 0x1
+
+    xor-int/lit8 v1, v1, 0x1
+
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v84
+
+    move-object/from16 v1, v84
+
+    goto :goto_33
+
+    :cond_55
+    move-object v1, v7
+
+    :goto_33
+    sget-object v2, Ljxb;->O1:Ljava/util/regex/Pattern;
+
+    invoke-static {v13, v2, v7, v3}, Ljxb;->k(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/lang/String;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_57
+
+    const-string v7, "RANGE"
+
+    invoke-virtual {v2, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v90
+
+    if-eqz v90, :cond_56
+
+    goto :goto_34
+
+    :cond_56
+    const-string v7, "POINT"
+
+    invoke-virtual {v2, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_57
+
+    goto :goto_34
+
+    :cond_57
+    const/4 v7, 0x0
+
+    :goto_34
+    sget-object v2, Ljxb;->P1:Ljava/util/regex/Pattern;
+
+    move-object/from16 v90, v7
+
+    const/4 v7, 0x0
+
+    invoke-static {v13, v2, v7, v3}, Ljxb;->k(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/lang/String;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_59
+
+    const-string v7, "PRIMARY"
+
+    invoke-virtual {v2, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v91
+
+    if-eqz v91, :cond_58
+
+    goto :goto_35
+
+    :cond_58
+    const-string v7, "HIGHLIGHT"
+
+    invoke-virtual {v2, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_59
+
+    goto :goto_35
+
+    :cond_59
+    const/4 v7, 0x0
+
+    :goto_35
+    sget-object v2, Ljxb;->Q1:Ljava/util/regex/Pattern;
+
+    move-object/from16 v91, v0
+
+    move-object/from16 v92, v1
+
+    const-wide/high16 v0, -0x4010000000000000L    # -1.0
+
+    invoke-static {v13, v2, v0, v1}, Ljxb;->i(Ljava/lang/String;Ljava/util/regex/Pattern;D)D
+
+    move-result-wide v53
+
+    cmpl-double v2, v53, v51
+
+    if-ltz v2, :cond_5a
+
+    mul-double v0, v53, v29
+
+    double-to-long v0, v0
+
+    goto :goto_36
+
+    :cond_5a
+    move-wide/from16 v0, v77
+
+    :goto_36
+    sget-object v2, Ljxb;->R1:Ljava/util/regex/Pattern;
+
+    move-wide/from16 v53, v0
+
+    const-wide/high16 v0, -0x4010000000000000L    # -1.0
+
+    invoke-static {v13, v2, v0, v1}, Ljxb;->i(Ljava/lang/String;Ljava/util/regex/Pattern;D)D
+
+    move-result-wide v0
+
+    cmpl-double v2, v0, v51
+
+    if-ltz v2, :cond_5b
+
+    mul-double v0, v0, v29
+
+    double-to-long v0, v0
+
+    goto :goto_37
+
+    :cond_5b
+    move-wide/from16 v0, v77
+
+    :goto_37
+    sget-object v2, Ljxb;->S1:Ljava/util/regex/Pattern;
+
+    move-wide/from16 v29, v0
+
+    const/4 v0, 0x0
+
+    invoke-static {v13, v2, v0, v3}, Ljxb;->k(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/lang/String;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v1
+
+    new-instance v2, Ljava/util/ArrayList;
+
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+
+    const/16 v0, 0x11
+
+    invoke-virtual {v13, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    sget-object v13, Ljxb;->U1:Ljava/util/regex/Pattern;
+
+    invoke-virtual {v13, v0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object v13
+
+    :goto_38
+    invoke-virtual {v13}, Ljava/util/regex/Matcher;->find()Z
+
+    move-result v51
+
+    if-eqz v51, :cond_6c
+
+    move-object/from16 v51, v13
+
+    invoke-virtual/range {v51 .. v51}, Ljava/util/regex/Matcher;->group()Ljava/lang/String;
+
+    move-result-object v13
+
+    invoke-virtual {v13}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v13}, Ljava/lang/String;->hashCode()I
+
+    move-result v52
+
+    sparse-switch v52, :sswitch_data_1
+
+    move-object/from16 v52, v1
+
+    :goto_39
+    const/4 v1, -0x1
+
+    goto/16 :goto_3b
+
+    :sswitch_3
+    move-object/from16 v52, v1
+
+    const-string v1, "X-SKIP-CONTROL-LABEL-ID="
+
+    invoke-virtual {v13, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_5c
+
+    goto/16 :goto_3a
+
+    :cond_5c
+    const/16 v1, 0xb
+
+    goto/16 :goto_3b
+
+    :sswitch_4
+    move-object/from16 v52, v1
+
+    const-string v1, "X-ASSET-URI="
+
+    invoke-virtual {v13, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_5d
+
+    goto/16 :goto_3a
+
+    :cond_5d
+    const/16 v1, 0xa
+
+    goto/16 :goto_3b
+
+    :sswitch_5
+    move-object/from16 v52, v1
+
+    const-string v1, "X-RESUME-OFFSET="
+
+    invoke-virtual {v13, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_5e
+
+    goto/16 :goto_3a
+
+    :cond_5e
+    const/16 v1, 0x9
+
+    goto/16 :goto_3b
+
+    :sswitch_6
+    move-object/from16 v52, v1
+
+    const-string v1, "X-RESTRICT="
+
+    invoke-virtual {v13, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_5f
+
+    goto/16 :goto_3a
+
+    :cond_5f
+    const/16 v1, 0x8
+
+    goto/16 :goto_3b
+
+    :sswitch_7
+    move-object/from16 v52, v1
+
+    const-string v1, "X-SKIP-CONTROL-OFFSET="
+
+    invoke-virtual {v13, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_60
+
+    goto/16 :goto_3a
+
+    :cond_60
+    const/4 v1, 0x7
+
+    goto/16 :goto_3b
+
+    :sswitch_8
+    move-object/from16 v52, v1
+
+    const-string v1, "X-SKIP-CONTROL-DURATION="
+
+    invoke-virtual {v13, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_61
+
+    goto :goto_3a
+
+    :cond_61
+    const/4 v1, 0x6
+
+    goto :goto_3b
+
+    :sswitch_9
+    move-object/from16 v52, v1
+
+    const-string v1, "X-TIMELINE-OCCUPIES="
+
+    invoke-virtual {v13, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_62
+
+    goto :goto_3a
+
+    :cond_62
+    const/4 v1, 0x5
+
+    goto :goto_3b
+
+    :sswitch_a
+    move-object/from16 v52, v1
+
+    const-string v1, "X-ASSET-LIST="
+
+    invoke-virtual {v13, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_63
+
+    goto :goto_3a
+
+    :cond_63
+    const/4 v1, 0x4
+
+    goto :goto_3b
+
+    :sswitch_b
+    move-object/from16 v52, v1
+
+    const-string v1, "X-TIMELINE-STYLE="
+
+    invoke-virtual {v13, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_64
+
+    goto :goto_3a
+
+    :cond_64
+    const/4 v1, 0x3
+
+    goto :goto_3b
+
+    :sswitch_c
+    move-object/from16 v52, v1
+
+    const-string v1, "X-PLAYOUT-LIMIT="
+
+    invoke-virtual {v13, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_65
+
+    goto :goto_3a
+
+    :cond_65
+    move/from16 v1, v28
+
+    goto :goto_3b
+
+    :sswitch_d
+    move-object/from16 v52, v1
+
+    const-string v1, "X-CONTENT-MAY-VARY="
+
+    invoke-virtual {v13, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_66
+
+    goto :goto_3a
+
+    :cond_66
+    const/4 v1, 0x1
+
+    goto :goto_3b
+
+    :sswitch_e
+    move-object/from16 v52, v1
+
+    const-string v1, "X-SNAP="
+
+    invoke-virtual {v13, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_67
+
+    :goto_3a
+    goto/16 :goto_39
+
+    :cond_67
+    const/4 v1, 0x0
+
+    :goto_3b
+    packed-switch v1, :pswitch_data_1
+
+    invoke-virtual {v13}, Ljava/lang/String;->length()I
+
+    move-result v1
+
+    const/16 v83, 0x1
+
+    add-int/lit8 v1, v1, -0x1
+
+    move-object/from16 v93, v7
+
+    const/4 v7, 0x0
+
+    invoke-virtual {v13, v7, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v7, "="
+
+    invoke-static {v1, v7}, Ldtg;->o(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-virtual {v0, v7}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
+
+    move-result v13
+
+    invoke-virtual {v7}, Ljava/lang/String;->length()I
+
+    move-result v7
+
+    add-int/2addr v7, v13
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v13
+
+    move-wide/from16 v97, v4
+
+    add-int/lit8 v4, v7, 0x1
+
+    if-ne v13, v4, :cond_68
+
+    const/4 v4, 0x1
+
+    goto :goto_3c
+
+    :cond_68
+    move/from16 v4, v28
+
+    :goto_3c
+    add-int/2addr v4, v7
+
+    invoke-virtual {v0, v7, v4}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v4
+
+    const-string v5, "\""
+
+    invoke-virtual {v4, v5}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_69
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v5, "=\"((?:.|\u000c)+?)\""
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v4}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v4
+
+    invoke-static {v0, v4, v3}, Ljxb;->l(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v4
+
+    new-instance v5, Lnh7;
+
+    const/4 v7, 0x0
+
+    invoke-direct {v5, v7, v1, v4}, Lnh7;-><init>(ILjava/lang/String;Ljava/lang/String;)V
+
+    move-wide/from16 v99, v11
+
+    goto :goto_3e
+
+    :cond_69
+    const-string v5, "0x"
+
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-nez v5, :cond_6a
+
+    const-string v5, "0X"
+
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_6b
+
+    :cond_6a
+    move-wide/from16 v99, v11
+
+    goto :goto_3d
+
+    :cond_6b
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v5, "=([\\d\\.]+)\\b"
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v4}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v4
+
+    new-instance v5, Lnh7;
+
+    sget-object v7, Ljava/util/Collections;->EMPTY_MAP:Ljava/util/Map;
+
+    invoke-static {v0, v4, v7}, Ljxb;->l(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v4
+
+    move-wide/from16 v99, v11
+
+    invoke-static {v4}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
+
+    move-result-wide v11
+
+    invoke-direct {v5, v1, v11, v12}, Lnh7;-><init>(Ljava/lang/String;D)V
+
+    goto :goto_3e
+
+    :goto_3d
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v5, "=(0[xX][A-F0-9]+)"
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v4}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v4
+
+    invoke-static {v0, v4, v3}, Ljxb;->l(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v4
+
+    new-instance v5, Lnh7;
+
+    const/4 v7, 0x1
+
+    invoke-direct {v5, v7, v1, v4}, Lnh7;-><init>(ILjava/lang/String;Ljava/lang/String;)V
+
+    :goto_3e
+    invoke-virtual {v2, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_3f
+
+    :pswitch_1
+    move-wide/from16 v97, v4
+
+    move-object/from16 v93, v7
+
+    move-wide/from16 v99, v11
+
+    :goto_3f
+    move-object/from16 v13, v51
+
+    move-object/from16 v1, v52
+
+    move-object/from16 v7, v93
+
+    move-wide/from16 v4, v97
+
+    move-wide/from16 v11, v99
+
+    goto/16 :goto_38
+
+    :cond_6c
+    move-object/from16 v52, v1
+
+    move-wide/from16 v97, v4
+
+    move-object/from16 v93, v7
+
+    move-wide/from16 v99, v11
+
+    move-object/from16 v1, v31
+
+    invoke-virtual {v1, v6}, Ljava/util/AbstractMap;->containsKey(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_6d
+
+    invoke-virtual {v1, v6}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Loh7;
+
+    goto :goto_40
+
+    :cond_6d
+    new-instance v0, Loh7;
+
+    invoke-direct {v0, v6}, Loh7;-><init>(Ljava/lang/String;)V
+
+    :goto_40
+    if-nez v10, :cond_6e
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    goto :goto_41
+
+    :cond_6e
+    iget-object v4, v0, Loh7;->c:Landroid/net/Uri;
+
+    if-eqz v4, :cond_6f
+
+    invoke-virtual {v4, v10}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    const-string v5, "Can\'t change assetUri from %s to %s"
+
+    iget-object v7, v0, Loh7;->c:Landroid/net/Uri;
+
+    invoke-static {v4, v5, v7, v10}, Lfz6;->n(ZLjava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
+
+    :cond_6f
+    iput-object v10, v0, Loh7;->c:Landroid/net/Uri;
+
+    :goto_41
+    if-nez v8, :cond_70
+
+    goto :goto_42
+
+    :cond_70
+    iget-object v4, v0, Loh7;->d:Landroid/net/Uri;
+
+    if-eqz v4, :cond_71
+
+    invoke-virtual {v4, v8}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    const-string v5, "Can\'t change assetListUri from %s to %s"
+
+    iget-object v7, v0, Loh7;->d:Landroid/net/Uri;
+
+    invoke-static {v4, v5, v7, v8}, Lfz6;->n(ZLjava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
+
+    :cond_71
+    iput-object v8, v0, Loh7;->d:Landroid/net/Uri;
+
+    :goto_42
+    invoke-virtual {v0, v14, v15}, Loh7;->m(J)V
+
+    move-wide/from16 v4, v95
+
+    invoke-virtual {v0, v4, v5}, Loh7;->e(J)V
+
+    move-wide/from16 v11, v99
+
+    invoke-virtual {v0, v11, v12}, Loh7;->d(J)V
+
+    move-wide/from16 v4, v55
+
+    invoke-virtual {v0, v4, v5}, Loh7;->f(J)V
+
+    invoke-virtual {v0, v9}, Loh7;->c(Ljava/util/ArrayList;)V
+
+    if-nez v33, :cond_72
+
+    :goto_43
+    move-wide/from16 v4, v67
+
+    goto :goto_44
+
+    :cond_72
+    const/4 v10, 0x1
+
+    iput-boolean v10, v0, Loh7;->j:Z
+
+    goto :goto_43
+
+    :goto_44
+    invoke-virtual {v0, v4, v5}, Loh7;->i(J)V
+
+    move-wide/from16 v4, v97
+
+    invoke-virtual {v0, v4, v5}, Loh7;->g(J)V
+
+    move-object/from16 v4, v34
+
+    invoke-virtual {v0, v4}, Loh7;->l(Ljava/util/ArrayList;)V
+
+    move-object/from16 v4, v91
+
+    invoke-virtual {v0, v4}, Loh7;->h(Ljava/util/ArrayList;)V
+
+    invoke-virtual {v0, v2}, Loh7;->b(Ljava/util/ArrayList;)V
+
+    if-nez v92, :cond_73
+
+    goto :goto_45
+
+    :cond_73
+    iget-object v2, v0, Loh7;->o:Ljava/lang/Boolean;
+
+    move-object/from16 v7, v92
+
+    if-eqz v2, :cond_74
+
+    invoke-virtual {v2, v7}, Ljava/lang/Boolean;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    const-string v4, "Can\'t change contentMayVary from %s to %s"
+
+    iget-object v5, v0, Loh7;->o:Ljava/lang/Boolean;
+
+    invoke-static {v2, v4, v5, v7}, Lfz6;->n(ZLjava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
+
+    :cond_74
+    iput-object v7, v0, Loh7;->o:Ljava/lang/Boolean;
+
+    :goto_45
+    if-nez v90, :cond_75
+
+    goto :goto_46
+
+    :cond_75
+    iget-object v2, v0, Loh7;->p:Ljava/lang/String;
+
+    move-object/from16 v7, v90
+
+    if-eqz v2, :cond_76
+
+    invoke-virtual {v2, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    const-string v4, "Can\'t change timelineOccupies from %s to %s"
+
+    iget-object v5, v0, Loh7;->p:Ljava/lang/String;
+
+    invoke-static {v2, v4, v5, v7}, Lfz6;->n(ZLjava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
+
+    :cond_76
+    iput-object v7, v0, Loh7;->p:Ljava/lang/String;
+
+    :goto_46
+    if-nez v93, :cond_77
+
+    :goto_47
+    move-wide/from16 v4, v53
+
+    goto :goto_48
+
+    :cond_77
+    iget-object v2, v0, Loh7;->q:Ljava/lang/String;
+
+    move-object/from16 v7, v93
+
+    if-eqz v2, :cond_78
+
+    invoke-virtual {v2, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    const-string v4, "Can\'t change timelineStyle from %s to %s"
+
+    iget-object v5, v0, Loh7;->q:Ljava/lang/String;
+
+    invoke-static {v2, v4, v5, v7}, Lfz6;->n(ZLjava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
+
+    :cond_78
+    iput-object v7, v0, Loh7;->q:Ljava/lang/String;
+
+    goto :goto_47
+
+    :goto_48
+    invoke-virtual {v0, v4, v5}, Loh7;->k(J)V
+
+    move-wide/from16 v4, v29
+
+    invoke-virtual {v0, v4, v5}, Loh7;->j(J)V
+
+    if-nez v52, :cond_79
+
+    goto :goto_49
+
+    :cond_79
+    iget-object v2, v0, Loh7;->t:Ljava/lang/String;
+
+    move-object/from16 v4, v52
+
+    if-eqz v2, :cond_7a
+
+    invoke-virtual {v2, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    const-string v5, "Can\'t change skipControlLabelId from %s to %s"
+
+    iget-object v7, v0, Loh7;->t:Ljava/lang/String;
+
+    invoke-static {v2, v5, v7, v4}, Lfz6;->n(ZLjava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
+
+    :cond_7a
+    iput-object v4, v0, Loh7;->t:Ljava/lang/String;
+
+    :goto_49
+    invoke-virtual {v1, v6, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_7b
+    move-wide/from16 v54, v24
+
+    move/from16 v56, v32
+
+    move-wide/from16 v31, v35
+
+    move-object/from16 v2, v61
+
+    move-object/from16 v12, v64
+
+    move-object/from16 v6, v65
+
+    move-object/from16 v0, v66
+
+    move-wide/from16 v28, v72
+
+    move-object/from16 v27, v74
+
+    const/4 v9, 0x0
+
+    goto/16 :goto_53
+
+    :cond_7c
+    move-object/from16 v89, v0
+
+    move-object/from16 v88, v2
+
+    move-object/from16 v65, v4
+
+    move-object/from16 v66, v5
+
+    move-object/from16 v59, v7
+
+    move/from16 v32, v8
+
+    move-object/from16 v61, v9
+
+    move-object/from16 v63, v11
+
+    move-object/from16 v64, v12
+
+    move-object/from16 v62, v15
+
+    move-object/from16 v1, v31
+
+    const-string v0, "#"
+
+    invoke-virtual {v13, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_7b
+
+    if-nez v60, :cond_7d
+
+    const/4 v0, 0x0
+
+    goto :goto_4a
+
+    :cond_7d
+    if-eqz v87, :cond_7e
+
+    move-object/from16 v0, v87
+
+    goto :goto_4a
+
+    :cond_7e
+    invoke-static/range {v40 .. v41}, Ljava/lang/Long;->toHexString(J)Ljava/lang/String;
+
+    move-result-object v0
+
+    :goto_4a
+    add-long v4, v40, v33
+
+    invoke-static {v13, v3}, Ljxb;->m(Ljava/lang/String;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v2
+
+    move-object/from16 v6, v65
+
+    invoke-virtual {v6, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v7
+
+    check-cast v7, Lsh7;
+
+    cmp-long v8, v38, v81
+
+    if-nez v8, :cond_7f
+
+    move-object/from16 v53, v7
+
+    move-wide/from16 v24, v79
+
+    goto :goto_4b
+
+    :cond_7f
+    if-eqz v70, :cond_80
+
+    if-nez v59, :cond_80
+
+    if-nez v7, :cond_80
+
+    new-instance v51, Lsh7;
+
+    const/16 v57, 0x0
+
+    const/16 v58, 0x0
+
+    const-wide/16 v52, 0x0
+
+    move-object/from16 v56, v2
+
+    move-wide/from16 v54, v24
+
+    invoke-direct/range {v51 .. v58}, Lsh7;-><init>(JJLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    move-object/from16 v7, v51
+
+    invoke-virtual {v6, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-object/from16 v53, v7
+
+    goto :goto_4b
+
+    :cond_80
+    move-wide/from16 v54, v24
+
+    move-object/from16 v53, v7
+
+    move-wide/from16 v24, v54
+
+    :goto_4b
+    if-nez v37, :cond_82
+
+    invoke-virtual/range {v63 .. v63}, Ljava/util/AbstractMap;->isEmpty()Z
+
+    move-result v7
+
+    if-nez v7, :cond_82
+
+    invoke-virtual/range {v63 .. v63}, Ljava/util/TreeMap;->values()Ljava/util/Collection;
+
+    move-result-object v7
+
+    const/4 v9, 0x0
+
+    new-array v10, v9, [Lzg5;
+
+    invoke-interface {v7, v10}, Ljava/util/Collection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+
+    move-result-object v7
+
+    check-cast v7, [Lzg5;
+
+    new-instance v10, Lah5;
+
+    move-object/from16 v12, v64
+
+    const/4 v11, 0x1
+
+    invoke-direct {v10, v12, v11, v7}, Lah5;-><init>(Ljava/lang/String;Z[Lzg5;)V
+
+    if-nez v26, :cond_81
+
+    invoke-static {v12, v7}, Ljxb;->b(Ljava/lang/String;[Lzg5;)Lah5;
+
+    move-result-object v7
+
+    move-object/from16 v33, v10
+
+    :goto_4c
+    move/from16 v56, v32
+
+    move-wide/from16 v31, v35
+
+    :goto_4d
+    move-wide/from16 v36, v24
+
+    goto :goto_4e
+
+    :cond_81
+    move-object/from16 v33, v10
+
+    move-object/from16 v7, v26
+
+    goto :goto_4c
+
+    :cond_82
+    move-object/from16 v12, v64
+
+    const/4 v9, 0x0
+
+    move-object/from16 v7, v26
+
+    move/from16 v56, v32
+
+    move-wide/from16 v31, v35
+
+    move-object/from16 v33, v37
+
+    goto :goto_4d
+
+    :goto_4e
+    new-instance v24, Lsh7;
+
+    if-eqz v59, :cond_83
+
+    move-object/from16 v26, v59
+
+    :goto_4f
+    move-object/from16 v35, v0
+
+    move-object/from16 v25, v2
+
+    move/from16 v30, v56
+
+    move-object/from16 v34, v60
+
+    move-object/from16 v41, v61
+
+    move/from16 v40, v71
+
+    move-wide/from16 v28, v72
+
+    move-object/from16 v27, v74
+
+    goto :goto_50
+
+    :cond_83
+    move-object/from16 v26, v53
+
+    goto :goto_4f
+
+    :goto_50
+    invoke-direct/range {v24 .. v41}, Lsh7;-><init>(Ljava/lang/String;Lsh7;Ljava/lang/String;JIJLah5;Ljava/lang/String;Ljava/lang/String;JJZLjava/util/List;)V
+
+    move-object/from16 v2, v24
+
+    move/from16 v56, v30
+
+    move-object/from16 v60, v34
+
+    move-object/from16 v0, v66
+
+    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    add-long v57, v31, v28
+
+    new-instance v2, Ljava/util/ArrayList;
+
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+
+    if-eqz v8, :cond_84
+
+    add-long v24, v36, v38
+
+    goto :goto_51
+
+    :cond_84
+    move-wide/from16 v24, v36
+
+    :goto_51
+    move-wide/from16 v40, v4
+
+    move-object v4, v6
+
+    move-object/from16 v26, v7
+
+    move/from16 v69, v9
+
+    move/from16 v71, v69
+
+    move-object/from16 v37, v33
+
+    move-wide/from16 v35, v57
+
+    move-object/from16 v53, v59
+
+    move-object/from16 v15, v62
+
+    move-object/from16 v74, v15
+
+    move-object/from16 v11, v63
+
+    move-wide/from16 v72, v79
+
+    move-wide/from16 v38, v81
+
+    move-object/from16 v8, v85
+
+    move-object/from16 v10, v86
+
+    move-object/from16 v34, v87
+
+    move-object/from16 v7, v89
+
+    move-object v5, v0
+
+    move-object v9, v1
+
+    move-object v6, v2
+
+    move-object/from16 v2, v88
+
+    move-object/from16 v0, p0
+
+    :goto_52
+    move-object/from16 v1, p1
+
+    goto/16 :goto_0
+
+    :goto_53
+    move-object v5, v0
+
+    move-object v4, v6
+
+    move/from16 v69, v9
+
+    move-object/from16 v74, v27
+
+    move-wide/from16 v72, v28
+
+    move-wide/from16 v35, v31
+
+    move-wide/from16 v24, v54
+
+    move-object/from16 v53, v59
+
+    move-object/from16 v15, v62
+
+    move-object/from16 v11, v63
+
+    move-object/from16 v8, v85
+
+    move-object/from16 v10, v86
+
+    move-object/from16 v34, v87
+
+    move-object/from16 v7, v89
+
+    move-object/from16 v0, p0
+
+    move-object v9, v1
+
+    move-object v6, v2
+
+    move-object/from16 v2, v88
+
+    goto :goto_52
+
+    :cond_85
+    move-object/from16 v88, v2
+
+    move-object v0, v5
+
+    move-object v2, v6
+
+    move-object/from16 v89, v7
+
+    move-object/from16 v85, v8
+
+    move-object v1, v9
+
+    move-object/from16 v86, v10
+
+    move/from16 v9, v69
+
+    new-instance v3, Ljava/util/HashMap;
+
+    invoke-direct {v3}, Ljava/util/HashMap;-><init>()V
+
+    move v4, v9
+
+    :goto_54
+    invoke-virtual/range {v89 .. v89}, Ljava/util/ArrayList;->size()I
+
+    move-result v5
+
+    if-ge v4, v5, :cond_89
+
+    move-object/from16 v5, v89
+
+    invoke-virtual {v5, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Lrh7;
+
+    iget-wide v7, v6, Lrh7;->b:J
+
+    cmp-long v10, v7, v81
+
+    if-nez v10, :cond_86
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v7
+
+    int-to-long v7, v7
+
+    add-long v7, v16, v7
+
+    invoke-interface {v2}, Ljava/util/List;->isEmpty()Z
+
+    move-result v10
+
+    int-to-long v10, v10
+
+    sub-long/2addr v7, v10
+
+    :cond_86
+    iget v10, v6, Lrh7;->c:I
+
+    const/4 v11, -0x1
+
+    if-ne v10, v11, :cond_88
+
+    cmp-long v12, v21, v77
+
+    if-eqz v12, :cond_88
+
+    invoke-interface {v2}, Ljava/util/List;->isEmpty()Z
+
+    move-result v10
+
+    if-eqz v10, :cond_87
+
+    invoke-static {v0}, Lfv7;->x(Ljava/lang/Iterable;)Ljava/lang/Object;
+
+    move-result-object v10
+
+    check-cast v10, Lsh7;
+
+    iget-object v10, v10, Lsh7;->m:Lrs7;
+
+    goto :goto_55
+
+    :cond_87
+    move-object v10, v2
+
+    :goto_55
+    invoke-interface {v10}, Ljava/util/List;->size()I
+
+    move-result v10
+
+    const/16 v83, 0x1
+
+    add-int/lit8 v10, v10, -0x1
+
+    goto :goto_56
+
+    :cond_88
+    const/16 v83, 0x1
+
+    :goto_56
+    iget-object v6, v6, Lrh7;->a:Landroid/net/Uri;
+
+    new-instance v12, Lrh7;
+
+    invoke-direct {v12, v6, v7, v8, v10}, Lrh7;-><init>(Landroid/net/Uri;JI)V
+
+    invoke-virtual {v3, v6, v12}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    add-int/lit8 v4, v4, 0x1
+
+    move-object/from16 v89, v5
+
+    goto :goto_54
+
+    :cond_89
+    const/16 v83, 0x1
+
+    if-eqz v88, :cond_8a
+
+    move-object/from16 v14, v88
+
+    invoke-interface {v2, v14}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    :cond_8a
+    new-instance v4, Ljava/util/ArrayList;
+
+    invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-virtual {v1}, Ljava/util/LinkedHashMap;->values()Ljava/util/Collection;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :cond_8b
+    :goto_57
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_8c
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Loh7;
+
+    invoke-virtual {v5}, Loh7;->a()Lph7;
+
+    move-result-object v5
+
+    if-eqz v5, :cond_8b
+
+    invoke-virtual {v4, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_57
+
+    :cond_8c
+    cmp-long v1, v42, v79
+
+    if-nez v1, :cond_8d
+
+    if-eqz p1, :cond_8d
+
+    move-object/from16 v1, p1
+
+    iget-boolean v5, v1, Lvh7;->p:Z
+
+    if-eqz v5, :cond_8d
+
+    iget-wide v5, v1, Lvh7;->h:J
+
+    move-wide v12, v5
+
+    goto :goto_58
+
+    :cond_8d
+    move-wide/from16 v12, v42
+
+    :goto_58
+    new-instance v5, Lvh7;
+
+    cmp-long v1, v12, v79
+
+    if-eqz v1, :cond_8e
+
+    move/from16 v25, v83
+
+    :goto_59
+    move-object/from16 v7, p3
+
+    move-object/from16 v27, v0
+
+    move-object/from16 v28, v2
+
+    move-object/from16 v30, v3
+
+    move-object/from16 v31, v4
+
+    move/from16 v11, v18
+
+    move/from16 v6, v44
+
+    move-wide/from16 v9, v45
+
+    move/from16 v18, v47
+
+    move/from16 v24, v48
+
+    move/from16 v14, v49
+
+    move/from16 v15, v50
+
+    move-object/from16 v8, v85
+
+    move-object/from16 v29, v86
+
+    goto :goto_5a
+
+    :cond_8e
+    move/from16 v25, v9
+
+    goto :goto_59
+
+    :goto_5a
+    invoke-direct/range {v5 .. v31}, Lvh7;-><init>(ILjava/lang/String;Ljava/util/List;JZJZIJIJJZZZLah5;Ljava/util/List;Ljava/util/List;Luh7;Ljava/util/Map;Ljava/util/List;)V
+
+    return-object v5
+
+    :sswitch_data_0
+    .sparse-switch
+        0x13683 -> :sswitch_2
+        0x251681 -> :sswitch_1
+        0x2590a0 -> :sswitch_0
+    .end sparse-switch
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+    .end packed-switch
+
+    :sswitch_data_1
+    .sparse-switch
+        -0x7f5b7c02 -> :sswitch_e
+        -0x6ddab8e6 -> :sswitch_d
+        -0x8e0f436 -> :sswitch_c
+        -0x22a979d -> :sswitch_b
+        0x17ad642d -> :sswitch_a
+        0x32acec39 -> :sswitch_9
+        0x3f8488e0 -> :sswitch_8
+        0x4bf74f81 -> :sswitch_7
+        0x57c501cc -> :sswitch_6
+        0x6837ce7f -> :sswitch_5
+        0x6c2295e3 -> :sswitch_4
+        0x7c029fc0 -> :sswitch_3
+    .end sparse-switch
+
+    :pswitch_data_1
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+    .end packed-switch
+.end method
+
+.method public static g(Lqt8;Ljava/lang/String;)Lzh7;
+    .locals 43
+
+    move-object/from16 v1, p1
+
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    new-instance v11, Ljava/util/HashMap;
+
+    invoke-direct {v11}, Ljava/util/HashMap;-><init>()V
+
+    new-instance v2, Ljava/util/ArrayList;
+
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+
+    new-instance v4, Ljava/util/ArrayList;
+
+    invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
+
+    new-instance v5, Ljava/util/ArrayList;
+
+    invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
+
+    new-instance v6, Ljava/util/ArrayList;
+
+    invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
+
+    new-instance v7, Ljava/util/ArrayList;
+
+    invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
+
+    new-instance v3, Ljava/util/ArrayList;
+
+    invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
+
+    new-instance v12, Ljava/util/ArrayList;
+
+    invoke-direct {v12}, Ljava/util/ArrayList;-><init>()V
+
+    new-instance v8, Ljava/util/ArrayList;
+
+    invoke-direct {v8}, Ljava/util/ArrayList;-><init>()V
+
+    const/4 v10, 0x0
+
+    const/4 v13, 0x0
+
+    :goto_0
+    invoke-virtual/range {p0 .. p0}, Lqt8;->G()Z
+
+    move-result v14
+
+    const-string v15, "application/x-mpegURL"
+
+    const/16 v16, 0x0
+
+    sget-object v9, Ljxb;->j1:Ljava/util/regex/Pattern;
+
+    move-object/from16 v17, v7
+
+    const-string v7, "/"
+
+    move/from16 v18, v10
+
+    sget-object v10, Ljxb;->o1:Ljava/util/regex/Pattern;
+
+    move/from16 v19, v13
+
+    const-string v13, ","
+
+    move/from16 v20, v14
+
+    if-eqz v20, :cond_1c
+
+    invoke-virtual/range {p0 .. p0}, Lqt8;->I()Ljava/lang/String;
+
+    move-result-object v14
+
+    move-object/from16 v23, v15
+
+    const-string v15, "#EXT"
+
+    invoke-virtual {v14, v15}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v15
+
+    if-eqz v15, :cond_0
+
+    invoke-virtual {v8, v14}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_0
+    const-string v15, "#EXT-X-I-FRAME-STREAM-INF"
+
+    invoke-virtual {v14, v15}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v15
+
+    move-object/from16 v24, v8
+
+    const-string v8, "#EXT-X-DEFINE"
+
+    invoke-virtual {v14, v8}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_1
+
+    invoke-static {v14, v10, v11}, Ljxb;->l(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v7
+
+    sget-object v8, Ljxb;->y1:Ljava/util/regex/Pattern;
+
+    invoke-static {v14, v8, v11}, Ljxb;->l(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-virtual {v11, v7, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto/16 :goto_3
+
+    :cond_1
+    const-string v8, "#EXT-X-INDEPENDENT-SEGMENTS"
+
+    invoke-virtual {v14, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_2
+
+    move-object/from16 v35, v4
+
+    move-object/from16 v34, v5
+
+    move-object/from16 v33, v6
+
+    move-object/from16 v25, v12
+
+    move/from16 v10, v18
+
+    const/4 v13, 0x1
+
+    goto/16 :goto_11
+
+    :cond_2
+    const-string v8, "#EXT-X-MEDIA"
+
+    invoke-virtual {v14, v8}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_3
+
+    invoke-virtual {v3, v14}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_3
+
+    :cond_3
+    const-string v8, "#EXT-X-SESSION-KEY"
+
+    invoke-virtual {v14, v8}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_6
+
+    sget-object v7, Ljxb;->h1:Ljava/util/regex/Pattern;
+
+    const-string v8, "identity"
+
+    invoke-static {v14, v7, v8, v11}, Ljxb;->k(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/lang/String;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-static {v14, v7, v11}, Ljxb;->e(Ljava/lang/String;Ljava/lang/String;Ljava/util/HashMap;)Lzg5;
+
+    move-result-object v7
+
+    if-eqz v7, :cond_7
+
+    sget-object v8, Ljxb;->Z:Ljava/util/regex/Pattern;
+
+    invoke-static {v14, v8, v11}, Ljxb;->l(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v8
+
+    const-string v9, "SAMPLE-AES-CENC"
+
+    invoke-virtual {v9, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v9
+
+    if-nez v9, :cond_5
+
+    const-string v9, "SAMPLE-AES-CTR"
+
+    invoke-virtual {v9, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_4
+
+    goto :goto_1
+
+    :cond_4
+    const-string v8, "cbcs"
+
+    goto :goto_2
+
+    :cond_5
+    :goto_1
+    const-string v8, "cenc"
+
+    :goto_2
+    new-instance v9, Lah5;
+
+    filled-new-array {v7}, [Lzg5;
+
+    move-result-object v7
+
+    const/4 v10, 0x1
+
+    invoke-direct {v9, v8, v10, v7}, Lah5;-><init>(Ljava/lang/String;Z[Lzg5;)V
+
+    invoke-virtual {v12, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_3
+
+    :cond_6
+    const-string v8, "#EXT-X-STREAM-INF"
+
+    invoke-virtual {v14, v8}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v8
+
+    if-nez v8, :cond_8
+
+    if-eqz v15, :cond_7
+
+    goto :goto_5
+
+    :cond_7
+    :goto_3
+    move-object/from16 v35, v4
+
+    move-object/from16 v34, v5
+
+    move-object/from16 v33, v6
+
+    move-object/from16 v25, v12
+
+    :goto_4
+    move/from16 v10, v18
+
+    move/from16 v13, v19
+
+    goto/16 :goto_11
+
+    :cond_8
+    :goto_5
+    const-string v8, "CLOSED-CAPTIONS=NONE"
+
+    invoke-virtual {v14, v8}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v8
+
+    or-int v10, v18, v8
+
+    if-eqz v15, :cond_9
+
+    const/16 v8, 0x4000
+
+    :goto_6
+    move/from16 v18, v10
+
+    goto :goto_7
+
+    :cond_9
+    move/from16 v8, v16
+
+    goto :goto_6
+
+    :goto_7
+    sget-object v10, Ljxb;->k:Ljava/util/regex/Pattern;
+
+    move-object/from16 v25, v12
+
+    sget-object v12, Ljava/util/Collections;->EMPTY_MAP:Ljava/util/Map;
+
+    invoke-static {v14, v10, v12}, Ljxb;->l(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v10
+
+    invoke-static {v10}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v10
+
+    sget-object v12, Ljxb;->f:Ljava/util/regex/Pattern;
+
+    invoke-virtual {v12, v14}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object v12
+
+    invoke-virtual {v12}, Ljava/util/regex/Matcher;->find()Z
+
+    move-result v26
+
+    if-eqz v26, :cond_a
+
+    move/from16 v26, v15
+
+    const/4 v15, 0x1
+
+    invoke-virtual {v12, v15}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
+
+    move-result-object v12
+
+    invoke-virtual {v12}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v12}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v12
+
+    goto :goto_8
+
+    :cond_a
+    move/from16 v26, v15
+
+    const/4 v12, -0x1
+
+    :goto_8
+    sget-object v15, Ljxb;->m:Ljava/util/regex/Pattern;
+
+    move-object/from16 v33, v6
+
+    const/4 v6, 0x0
+
+    invoke-static {v14, v15, v6, v11}, Ljxb;->k(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/lang/String;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v15
+
+    move-object/from16 v34, v5
+
+    sget-object v5, Ljxb;->n:Ljava/util/regex/Pattern;
+
+    invoke-static {v14, v5, v6, v11}, Ljxb;->k(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/lang/String;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v5
+
+    move-object/from16 v35, v4
+
+    sget-object v4, Ljxb;->o:Ljava/util/regex/Pattern;
+
+    invoke-static {v14, v4, v6, v11}, Ljxb;->k(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/lang/String;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v4
+
+    if-eqz v4, :cond_c
+
+    sget-object v6, Lq3i;->a:Ljava/lang/String;
+
+    const/4 v6, 0x2
+
+    invoke-virtual {v4, v13, v6}, Ljava/lang/String;->split(Ljava/lang/String;I)[Ljava/lang/String;
+
+    move-result-object v4
+
+    aget-object v4, v4, v16
+
+    const/4 v6, -0x1
+
+    invoke-virtual {v4, v7, v6}, Ljava/lang/String;->split(Ljava/lang/String;I)[Ljava/lang/String;
+
+    move-result-object v4
+
+    aget-object v6, v4, v16
+
+    array-length v7, v4
+
+    move-object/from16 v27, v4
+
+    const/4 v4, 0x1
+
+    if-le v7, v4, :cond_b
+
+    aget-object v7, v27, v4
+
+    const/4 v4, 0x2
+
+    goto :goto_a
+
+    :cond_b
+    const/4 v4, 0x2
+
+    :goto_9
+    const/4 v7, 0x0
+
+    goto :goto_a
+
+    :cond_c
+    const/4 v4, 0x2
+
+    const/4 v6, 0x0
+
+    goto :goto_9
+
+    :goto_a
+    invoke-static {v4, v5}, Lq3i;->x(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v4, v6}, Luea;->j(Ljava/lang/String;Ljava/lang/String;)Z
+
+    move-result v21
+
+    if-nez v21, :cond_d
+
+    goto :goto_d
+
+    :cond_d
+    if-nez v6, :cond_e
+
+    move-object/from16 v21, v4
+
+    goto :goto_b
+
+    :cond_e
+    if-eqz v15, :cond_15
+
+    if-nez v7, :cond_f
+
+    goto :goto_d
+
+    :cond_f
+    move-object/from16 v21, v4
+
+    const-string v4, "PQ"
+
+    invoke-virtual {v15, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_10
+
+    const-string v4, "db1p"
+
+    invoke-virtual {v7, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_15
+
+    :cond_10
+    const-string v4, "SDR"
+
+    invoke-virtual {v15, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_11
+
+    const-string v4, "db2g"
+
+    invoke-virtual {v7, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_15
+
+    :cond_11
+    const-string v4, "HLG"
+
+    invoke-virtual {v15, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_12
+
+    const-string v4, "db4"
+
+    invoke-virtual {v7, v4}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_12
+
+    goto :goto_d
+
+    :cond_12
+    :goto_b
+    if-eqz v6, :cond_13
+
+    goto :goto_c
+
+    :cond_13
+    move-object/from16 v6, v21
+
+    :goto_c
+    invoke-static {v5}, Lq3i;->y(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    if-eqz v4, :cond_14
+
+    invoke-static {v6, v13, v4}, Lf52;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    move-object v5, v4
+
+    goto :goto_d
+
+    :cond_14
+    move-object v5, v6
+
+    :cond_15
+    :goto_d
+    sget-object v4, Ljxb;->p:Ljava/util/regex/Pattern;
+
+    const/4 v6, 0x0
+
+    invoke-static {v14, v4, v6, v11}, Ljxb;->k(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/lang/String;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v4
+
+    if-eqz v4, :cond_16
+
+    const-string v6, "x"
+
+    const/4 v7, -0x1
+
+    invoke-virtual {v4, v6, v7}, Ljava/lang/String;->split(Ljava/lang/String;I)[Ljava/lang/String;
+
+    move-result-object v4
+
+    aget-object v6, v4, v16
+
+    invoke-static {v6}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v6
+
+    const/16 v22, 0x1
+
+    aget-object v4, v4, v22
+
+    invoke-static {v4}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v4
+
+    if-lez v6, :cond_16
+
+    if-gtz v4, :cond_17
+
+    :cond_16
+    const/4 v4, -0x1
+
+    const/4 v6, -0x1
+
+    :cond_17
+    sget-object v7, Ljxb;->q:Ljava/util/regex/Pattern;
+
+    const/4 v13, 0x0
+
+    invoke-static {v14, v7, v13, v11}, Ljxb;->k(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/lang/String;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v7
+
+    if-eqz v7, :cond_18
+
+    invoke-static {v7}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
+
+    move-result v7
+
+    goto :goto_e
+
+    :cond_18
+    const/high16 v7, -0x40800000    # -1.0f
+
+    :goto_e
+    sget-object v15, Ljxb;->g:Ljava/util/regex/Pattern;
+
+    invoke-static {v14, v15, v13, v11}, Ljxb;->k(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/lang/String;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v39
+
+    sget-object v15, Ljxb;->h:Ljava/util/regex/Pattern;
+
+    invoke-static {v14, v15, v13, v11}, Ljxb;->k(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/lang/String;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v30
+
+    sget-object v15, Ljxb;->i:Ljava/util/regex/Pattern;
+
+    invoke-static {v14, v15, v13, v11}, Ljxb;->k(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/lang/String;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v31
+
+    sget-object v15, Ljxb;->j:Ljava/util/regex/Pattern;
+
+    invoke-static {v14, v15, v13, v11}, Ljxb;->k(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/lang/String;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v32
+
+    if-eqz v26, :cond_19
+
+    invoke-static {v14, v9, v11}, Ljxb;->l(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-static {v1, v9}, Lavk;->d(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v9
+
+    :goto_f
+    move-object/from16 v37, v9
+
+    goto :goto_10
+
+    :cond_19
+    invoke-virtual/range {p0 .. p0}, Lqt8;->G()Z
+
+    move-result v9
+
+    if-eqz v9, :cond_1b
+
+    invoke-virtual/range {p0 .. p0}, Lqt8;->I()Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-static {v9, v11}, Ljxb;->m(Ljava/lang/String;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-static {v1, v9}, Lavk;->d(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v9
+
+    goto :goto_f
+
+    :goto_10
+    new-instance v9, Let6;
+
+    invoke-direct {v9}, Let6;-><init>()V
+
+    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
+
+    move-result v13
+
+    invoke-static {v13}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
+
+    move-result-object v13
+
+    iput-object v13, v9, Let6;->a:Ljava/lang/String;
+
+    invoke-static/range {v23 .. v23}, Luea;->n(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v13
+
+    iput-object v13, v9, Let6;->l:Ljava/lang/String;
+
+    iput-object v5, v9, Let6;->j:Ljava/lang/String;
+
+    iput v12, v9, Let6;->h:I
+
+    iput v10, v9, Let6;->i:I
+
+    iput v6, v9, Let6;->t:I
+
+    iput v4, v9, Let6;->u:I
+
+    iput v7, v9, Let6;->x:F
+
+    iput v8, v9, Let6;->f:I
+
+    new-instance v4, Lft6;
+
+    invoke-direct {v4, v9}, Lft6;-><init>(Let6;)V
+
+    new-instance v36, Lyh7;
+
+    move-object/from16 v38, v4
+
+    move-object/from16 v40, v30
+
+    move-object/from16 v41, v31
+
+    move-object/from16 v42, v32
+
+    invoke-direct/range {v36 .. v42}, Lyh7;-><init>(Landroid/net/Uri;Lft6;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    move-object/from16 v4, v36
+
+    move-object/from16 v9, v37
+
+    invoke-virtual {v2, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    invoke-virtual {v0, v9}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Ljava/util/ArrayList;
+
+    if-nez v4, :cond_1a
+
+    new-instance v4, Ljava/util/ArrayList;
+
+    invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-virtual {v0, v9, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_1a
+    new-instance v26, Lji7;
+
+    move/from16 v29, v10
+
+    move/from16 v28, v12
+
+    move-object/from16 v27, v39
+
+    invoke-direct/range {v26 .. v32}, Lji7;-><init>(Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    move-object/from16 v5, v26
+
+    invoke-virtual {v4, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto/16 :goto_4
+
+    :goto_11
+    move-object/from16 v7, v17
+
+    move-object/from16 v8, v24
+
+    move-object/from16 v12, v25
+
+    move-object/from16 v6, v33
+
+    move-object/from16 v5, v34
+
+    move-object/from16 v4, v35
+
+    goto/16 :goto_0
+
+    :cond_1b
+    const-string v0, "#EXT-X-STREAM-INF must be followed by another line"
+
+    const/4 v6, 0x0
+
+    invoke-static {v6, v0}, Landroidx/media3/common/ParserException;->b(Ljava/lang/Exception;Ljava/lang/String;)Landroidx/media3/common/ParserException;
+
+    move-result-object v0
+
+    throw v0
+
+    :cond_1c
+    move-object/from16 v35, v4
+
+    move-object/from16 v34, v5
+
+    move-object/from16 v33, v6
+
+    move-object/from16 v24, v8
+
+    move-object/from16 v25, v12
+
+    move-object/from16 v23, v15
+
+    new-instance v4, Ljava/util/ArrayList;
+
+    invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
+
+    new-instance v5, Ljava/util/HashSet;
+
+    invoke-direct {v5}, Ljava/util/HashSet;-><init>()V
+
+    move/from16 v6, v16
+
+    :goto_12
+    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
+
+    move-result v8
+
+    if-ge v6, v8, :cond_1f
+
+    invoke-virtual {v2, v6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v8
+
+    check-cast v8, Lyh7;
+
+    iget-object v12, v8, Lyh7;->a:Landroid/net/Uri;
+
+    iget-object v14, v8, Lyh7;->b:Lft6;
+
+    invoke-virtual {v5, v12}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    move-result v12
+
+    if-eqz v12, :cond_1e
+
+    iget-object v12, v14, Lft6;->l:Lbda;
+
+    if-nez v12, :cond_1d
+
+    const/4 v12, 0x1
+
+    goto :goto_13
+
+    :cond_1d
+    move/from16 v12, v16
+
+    :goto_13
+    invoke-static {v12}, Lfz6;->v(Z)V
+
+    new-instance v12, Lki7;
+
+    iget-object v15, v8, Lyh7;->a:Landroid/net/Uri;
+
+    invoke-virtual {v0, v15}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v15
+
+    check-cast v15, Ljava/util/ArrayList;
+
+    invoke-virtual {v15}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-object/from16 v26, v0
+
+    const/4 v0, 0x0
+
+    invoke-direct {v12, v0, v0, v15}, Lki7;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V
+
+    new-instance v0, Lbda;
+
+    move-object/from16 p0, v5
+
+    const/4 v15, 0x1
+
+    new-array v5, v15, [Lzca;
+
+    aput-object v12, v5, v16
+
+    invoke-direct {v0, v5}, Lbda;-><init>([Lzca;)V
+
+    invoke-virtual {v14}, Lft6;->a()Let6;
+
+    move-result-object v5
+
+    iput-object v0, v5, Let6;->k:Lbda;
+
+    new-instance v0, Lft6;
+
+    invoke-direct {v0, v5}, Lft6;-><init>(Let6;)V
+
+    new-instance v36, Lyh7;
+
+    iget-object v5, v8, Lyh7;->a:Landroid/net/Uri;
+
+    iget-object v12, v8, Lyh7;->c:Ljava/lang/String;
+
+    iget-object v14, v8, Lyh7;->d:Ljava/lang/String;
+
+    iget-object v15, v8, Lyh7;->e:Ljava/lang/String;
+
+    iget-object v8, v8, Lyh7;->f:Ljava/lang/String;
+
+    move-object/from16 v38, v0
+
+    move-object/from16 v37, v5
+
+    move-object/from16 v42, v8
+
+    move-object/from16 v39, v12
+
+    move-object/from16 v40, v14
+
+    move-object/from16 v41, v15
+
+    invoke-direct/range {v36 .. v42}, Lyh7;-><init>(Landroid/net/Uri;Lft6;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    move-object/from16 v0, v36
+
+    invoke-virtual {v4, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_14
+
+    :cond_1e
+    move-object/from16 v26, v0
+
+    move-object/from16 p0, v5
+
+    :goto_14
+    add-int/lit8 v6, v6, 0x1
+
+    move-object/from16 v5, p0
+
+    move-object/from16 v0, v26
+
+    goto :goto_12
+
+    :cond_1f
+    move/from16 v0, v16
+
+    const/4 v6, 0x0
+
+    const/4 v8, 0x0
+
+    :goto_15
+    invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
+
+    move-result v5
+
+    if-ge v0, v5, :cond_3d
+
+    invoke-virtual {v3, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Ljava/lang/String;
+
+    sget-object v12, Ljxb;->p1:Ljava/util/regex/Pattern;
+
+    invoke-static {v5, v12, v11}, Ljxb;->l(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v12
+
+    invoke-static {v5, v10, v11}, Ljxb;->l(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v14
+
+    new-instance v15, Let6;
+
+    invoke-direct {v15}, Let6;-><init>()V
+
+    move/from16 v26, v0
+
+    const-string v0, ":"
+
+    invoke-static {v12, v0, v14}, Lf52;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, v15, Let6;->a:Ljava/lang/String;
+
+    iput-object v14, v15, Let6;->b:Ljava/lang/String;
+
+    invoke-static/range {v23 .. v23}, Luea;->n(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, v15, Let6;->l:Ljava/lang/String;
+
+    sget-object v0, Ljxb;->t1:Ljava/util/regex/Pattern;
+
+    invoke-static {v5, v0}, Ljxb;->h(Ljava/lang/String;Ljava/util/regex/Pattern;)Z
+
+    move-result v0
+
+    move/from16 p0, v0
+
+    sget-object v0, Ljxb;->u1:Ljava/util/regex/Pattern;
+
+    invoke-static {v5, v0}, Ljxb;->h(Ljava/lang/String;Ljava/util/regex/Pattern;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_20
+
+    or-int/lit8 v0, p0, 0x2
+
+    move/from16 p0, v0
+
+    :cond_20
+    sget-object v0, Ljxb;->s1:Ljava/util/regex/Pattern;
+
+    invoke-static {v5, v0}, Ljxb;->h(Ljava/lang/String;Ljava/util/regex/Pattern;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_21
+
+    or-int/lit8 v0, p0, 0x4
+
+    goto :goto_16
+
+    :cond_21
+    move/from16 v0, p0
+
+    :goto_16
+    iput v0, v15, Let6;->e:I
+
+    sget-object v0, Ljxb;->q1:Ljava/util/regex/Pattern;
+
+    move-object/from16 v27, v3
+
+    const/4 v3, 0x0
+
+    invoke-static {v5, v0, v3, v11}, Ljxb;->k(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/lang/String;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_22
+
+    move-object/from16 p0, v4
+
+    move/from16 v3, v16
+
+    goto :goto_19
+
+    :cond_22
+    sget-object v3, Lq3i;->a:Ljava/lang/String;
+
+    const/4 v3, -0x1
+
+    invoke-virtual {v0, v13, v3}, Ljava/lang/String;->split(Ljava/lang/String;I)[Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v3, "public.accessibility.describes-video"
+
+    invoke-static {v0, v3}, Lq3i;->m([Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_23
+
+    const/16 v3, 0x200
+
+    :goto_17
+    move-object/from16 p0, v4
+
+    goto :goto_18
+
+    :cond_23
+    move/from16 v3, v16
+
+    goto :goto_17
+
+    :goto_18
+    const-string v4, "public.accessibility.transcribes-spoken-dialog"
+
+    invoke-static {v0, v4}, Lq3i;->m([Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_24
+
+    or-int/lit16 v3, v3, 0x1000
+
+    :cond_24
+    const-string v4, "public.accessibility.describes-music-and-sound"
+
+    invoke-static {v0, v4}, Lq3i;->m([Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_25
+
+    or-int/lit16 v3, v3, 0x400
+
+    :cond_25
+    const-string v4, "public.easy-to-read"
+
+    invoke-static {v0, v4}, Lq3i;->m([Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_26
+
+    or-int/lit16 v3, v3, 0x2000
+
+    :cond_26
+    :goto_19
+    iput v3, v15, Let6;->f:I
+
+    sget-object v0, Ljxb;->n1:Ljava/util/regex/Pattern;
+
+    const/4 v3, 0x0
+
+    invoke-static {v5, v0, v3, v11}, Ljxb;->k(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/lang/String;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, v15, Let6;->d:Ljava/lang/String;
+
+    invoke-static {v5, v9, v3, v11}, Ljxb;->k(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/lang/String;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-nez v0, :cond_27
+
+    const/4 v0, 0x0
+
+    goto :goto_1a
+
+    :cond_27
+    invoke-static {v1, v0}, Lavk;->d(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v0
+
+    :goto_1a
+    new-instance v3, Lbda;
+
+    new-instance v4, Lki7;
+
+    sget-object v1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    invoke-direct {v4, v12, v14, v1}, Lki7;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V
+
+    move-object/from16 v28, v4
+
+    const/4 v1, 0x1
+
+    new-array v4, v1, [Lzca;
+
+    aput-object v28, v4, v16
+
+    invoke-direct {v3, v4}, Lbda;-><init>([Lzca;)V
+
+    sget-object v1, Ljxb;->l1:Ljava/util/regex/Pattern;
+
+    invoke-static {v5, v1, v11}, Ljxb;->l(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v4
+
+    move/from16 v28, v4
+
+    sparse-switch v28, :sswitch_data_0
+
+    :goto_1b
+    const/4 v1, -0x1
+
+    goto :goto_1c
+
+    :sswitch_0
+    const-string v4, "VIDEO"
+
+    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_28
+
+    goto :goto_1b
+
+    :cond_28
+    const/4 v1, 0x3
+
+    goto :goto_1c
+
+    :sswitch_1
+    const-string v4, "AUDIO"
+
+    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_29
+
+    goto :goto_1b
+
+    :cond_29
+    const/4 v1, 0x2
+
+    goto :goto_1c
+
+    :sswitch_2
+    const-string v4, "CLOSED-CAPTIONS"
+
+    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2a
+
+    goto :goto_1b
+
+    :cond_2a
+    const/4 v1, 0x1
+
+    goto :goto_1c
+
+    :sswitch_3
+    const-string v4, "SUBTITLES"
+
+    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2b
+
+    goto :goto_1b
+
+    :cond_2b
+    move/from16 v1, v16
+
+    :goto_1c
+    packed-switch v1, :pswitch_data_0
+
+    :goto_1d
+    goto/16 :goto_23
+
+    :pswitch_0
+    move/from16 v1, v16
+
+    :goto_1e
+    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
+
+    move-result v4
+
+    if-ge v1, v4, :cond_2d
+
+    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lyh7;
+
+    iget-object v5, v4, Lyh7;->c:Ljava/lang/String;
+
+    invoke-virtual {v12, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_2c
+
+    goto :goto_1f
+
+    :cond_2c
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_1e
+
+    :cond_2d
+    const/4 v4, 0x0
+
+    :goto_1f
+    if-eqz v4, :cond_2e
+
+    iget-object v1, v4, Lyh7;->b:Lft6;
+
+    iget-object v4, v1, Lft6;->k:Ljava/lang/String;
+
+    const/4 v5, 0x2
+
+    invoke-static {v5, v4}, Lq3i;->x(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    iput-object v4, v15, Let6;->j:Ljava/lang/String;
+
+    invoke-static {v4}, Luea;->d(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v4}, Luea;->n(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    iput-object v4, v15, Let6;->m:Ljava/lang/String;
+
+    iget v4, v1, Lft6;->u:I
+
+    iput v4, v15, Let6;->t:I
+
+    iget v4, v1, Lft6;->v:I
+
+    iput v4, v15, Let6;->u:I
+
+    iget v1, v1, Lft6;->y:F
+
+    iput v1, v15, Let6;->x:F
+
+    :cond_2e
+    if-nez v0, :cond_2f
+
+    goto :goto_1d
+
+    :cond_2f
+    iput-object v3, v15, Let6;->k:Lbda;
+
+    new-instance v1, Lxh7;
+
+    new-instance v3, Lft6;
+
+    invoke-direct {v3, v15}, Lft6;-><init>(Let6;)V
+
+    invoke-direct {v1, v0, v3, v14}, Lxh7;-><init>(Landroid/net/Uri;Lft6;Ljava/lang/String;)V
+
+    move-object/from16 v4, v35
+
+    invoke-virtual {v4, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto/16 :goto_23
+
+    :pswitch_1
+    move/from16 v1, v16
+
+    :goto_20
+    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
+
+    move-result v4
+
+    if-ge v1, v4, :cond_31
+
+    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lyh7;
+
+    move/from16 v28, v1
+
+    iget-object v1, v4, Lyh7;->d:Ljava/lang/String;
+
+    invoke-virtual {v12, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_30
+
+    goto :goto_21
+
+    :cond_30
+    add-int/lit8 v1, v28, 0x1
+
+    goto :goto_20
+
+    :cond_31
+    const/4 v4, 0x0
+
+    :goto_21
+    if-eqz v4, :cond_32
+
+    iget-object v1, v4, Lyh7;->b:Lft6;
+
+    iget-object v1, v1, Lft6;->k:Ljava/lang/String;
+
+    const/4 v12, 0x1
+
+    invoke-static {v12, v1}, Lq3i;->x(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    iput-object v1, v15, Let6;->j:Ljava/lang/String;
+
+    invoke-static {v1}, Luea;->d(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    goto :goto_22
+
+    :cond_32
+    const/4 v1, 0x0
+
+    :goto_22
+    sget-object v12, Ljxb;->l:Ljava/util/regex/Pattern;
+
+    move-object/from16 v28, v4
+
+    const/4 v4, 0x0
+
+    invoke-static {v5, v12, v4, v11}, Ljxb;->k(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/lang/String;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v5
+
+    if-eqz v5, :cond_33
+
+    sget-object v12, Lq3i;->a:Ljava/lang/String;
+
+    const/4 v12, 0x2
+
+    invoke-virtual {v5, v7, v12}, Ljava/lang/String;->split(Ljava/lang/String;I)[Ljava/lang/String;
+
+    move-result-object v20
+
+    aget-object v12, v20, v16
+
+    invoke-static {v12}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v12
+
+    iput v12, v15, Let6;->E:I
+
+    const-string v12, "audio/eac3"
+
+    invoke-virtual {v12, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v12
+
+    if-eqz v12, :cond_33
+
+    const-string v12, "/JOC"
+
+    invoke-virtual {v5, v12}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_33
+
+    const-string v1, "ec+3"
+
+    iput-object v1, v15, Let6;->j:Ljava/lang/String;
+
+    const-string v1, "audio/eac3-joc"
+
+    :cond_33
+    invoke-virtual {v15, v1}, Let6;->r(Ljava/lang/String;)V
+
+    if-eqz v0, :cond_34
+
+    iput-object v3, v15, Let6;->k:Lbda;
+
+    new-instance v1, Lxh7;
+
+    new-instance v3, Lft6;
+
+    invoke-direct {v3, v15}, Lft6;-><init>(Let6;)V
+
+    invoke-direct {v1, v0, v3, v14}, Lxh7;-><init>(Landroid/net/Uri;Lft6;Ljava/lang/String;)V
+
+    move-object/from16 v0, v34
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_23
+
+    :cond_34
+    move-object/from16 v0, v34
+
+    if-eqz v28, :cond_37
+
+    new-instance v1, Lft6;
+
+    invoke-direct {v1, v15}, Lft6;-><init>(Let6;)V
+
+    move-object/from16 v34, v0
+
+    move-object v8, v1
+
+    :goto_23
+    move-object/from16 v0, v33
+
+    const/16 v22, 0x1
+
+    goto/16 :goto_28
+
+    :pswitch_2
+    move-object/from16 v0, v34
+
+    const/4 v4, 0x0
+
+    sget-object v1, Ljxb;->r1:Ljava/util/regex/Pattern;
+
+    invoke-static {v5, v1, v11}, Ljxb;->l(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v3, "CC"
+
+    invoke-virtual {v1, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_35
+
+    const/4 v5, 0x2
+
+    invoke-virtual {v1, v5}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v1
+
+    const-string v3, "application/cea-608"
+
+    goto :goto_24
+
+    :cond_35
+    const/4 v5, 0x2
+
+    const/4 v3, 0x7
+
+    invoke-virtual {v1, v3}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v1
+
+    const-string v3, "application/cea-708"
+
+    :goto_24
+    if-nez v6, :cond_36
+
+    new-instance v6, Ljava/util/ArrayList;
+
+    invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
+
+    :cond_36
+    invoke-static {v3}, Luea;->n(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    iput-object v3, v15, Let6;->m:Ljava/lang/String;
+
+    iput v1, v15, Let6;->J:I
+
+    new-instance v1, Lft6;
+
+    invoke-direct {v1, v15}, Lft6;-><init>(Let6;)V
+
+    invoke-interface {v6, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    :cond_37
+    move-object/from16 v34, v0
+
+    goto :goto_23
+
+    :pswitch_3
+    const/16 v22, 0x1
+
+    move/from16 v1, v16
+
+    :goto_25
+    const/4 v5, 0x2
+
+    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
+
+    move-result v4
+
+    if-ge v1, v4, :cond_39
+
+    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lyh7;
+
+    iget-object v5, v4, Lyh7;->e:Ljava/lang/String;
+
+    invoke-virtual {v12, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_38
+
+    goto :goto_26
+
+    :cond_38
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_25
+
+    :cond_39
+    const/4 v4, 0x0
+
+    :goto_26
+    if-eqz v4, :cond_3a
+
+    iget-object v1, v4, Lyh7;->b:Lft6;
+
+    iget-object v1, v1, Lft6;->k:Ljava/lang/String;
+
+    const/4 v4, 0x3
+
+    invoke-static {v4, v1}, Lq3i;->x(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    iput-object v1, v15, Let6;->j:Ljava/lang/String;
+
+    invoke-static {v1}, Luea;->d(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    goto :goto_27
+
+    :cond_3a
+    const/4 v1, 0x0
+
+    :goto_27
+    if-nez v1, :cond_3b
+
+    const-string v1, "text/vtt"
+
+    :cond_3b
+    invoke-static {v1}, Luea;->n(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    iput-object v1, v15, Let6;->m:Ljava/lang/String;
+
+    iput-object v3, v15, Let6;->k:Lbda;
+
+    if-eqz v0, :cond_3c
+
+    new-instance v1, Lxh7;
+
+    new-instance v3, Lft6;
+
+    invoke-direct {v3, v15}, Lft6;-><init>(Let6;)V
+
+    invoke-direct {v1, v0, v3, v14}, Lxh7;-><init>(Landroid/net/Uri;Lft6;Ljava/lang/String;)V
+
+    move-object/from16 v0, v33
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_28
+
+    :cond_3c
+    move-object/from16 v0, v33
+
+    const-string v1, "OVHlsPlaylistParser"
+
+    const-string v3, "EXT-X-MEDIA tag with missing mandatory URI attribute: skipping"
+
+    invoke-static {v1, v3}, Lfv7;->S(Ljava/lang/String;Ljava/lang/String;)V
+
+    :goto_28
+    add-int/lit8 v1, v26, 0x1
+
+    move-object/from16 v4, p0
+
+    move-object/from16 v33, v0
+
+    move v0, v1
+
+    move-object/from16 v3, v27
+
+    move-object/from16 v1, p1
+
+    goto/16 :goto_15
+
+    :cond_3d
+    move-object/from16 p0, v4
+
+    move-object/from16 v0, v33
+
+    if-eqz v18, :cond_3e
+
+    sget-object v6, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    :cond_3e
+    move-object/from16 v33, v0
+
+    move-object v9, v6
+
+    new-instance v0, Lzh7;
+
+    move-object/from16 v3, p0
+
+    move-object/from16 v1, p1
+
+    move-object/from16 v7, v17
+
+    move/from16 v10, v19
+
+    move-object/from16 v2, v24
+
+    move-object/from16 v12, v25
+
+    move-object/from16 v6, v33
+
+    move-object/from16 v5, v34
+
+    move-object/from16 v4, v35
+
+    invoke-direct/range {v0 .. v12}, Lzh7;-><init>(Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lft6;Ljava/util/List;ZLjava/util/Map;Ljava/util/List;)V
+
+    return-object v0
+
+    nop
+
+    :sswitch_data_0
+    .sparse-switch
+        -0x392db8c5 -> :sswitch_3
+        -0x13dc6572 -> :sswitch_2
+        0x3bba3b6 -> :sswitch_1
+        0x4de1c5b -> :sswitch_0
+    .end sparse-switch
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public static h(Ljava/lang/String;Ljava/util/regex/Pattern;)Z
+    .locals 0
+
+    invoke-virtual {p1, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Ljava/util/regex/Matcher;->find()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x1
+
+    invoke-virtual {p0, p1}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string p1, "YES"
+
+    invoke-virtual {p1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public static i(Ljava/lang/String;Ljava/util/regex/Pattern;D)D
+    .locals 0
+
+    invoke-virtual {p1, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Ljava/util/regex/Matcher;->find()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x1
+
+    invoke-virtual {p0, p1}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {p0}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
+
+    move-result-wide p0
+
+    return-wide p0
+
+    :cond_0
+    return-wide p2
+.end method
+
+.method public static j(Ljava/lang/String;Ljava/util/regex/Pattern;)J
+    .locals 0
+
+    invoke-virtual {p1, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Ljava/util/regex/Matcher;->find()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x1
+
+    invoke-virtual {p0, p1}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {p0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
+
+    move-result-wide p0
+
+    return-wide p0
+
+    :cond_0
+    const-wide/16 p0, -0x1
+
+    return-wide p0
+.end method
+
+.method public static k(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/lang/String;Ljava/util/Map;)Ljava/lang/String;
+    .locals 0
+
+    invoke-virtual {p1, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Ljava/util/regex/Matcher;->find()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x1
+
+    invoke-virtual {p0, p1}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    :cond_0
+    invoke-interface {p3}, Ljava/util/Map;->isEmpty()Z
+
+    move-result p0
+
+    if-nez p0, :cond_2
+
+    if-nez p2, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-static {p2, p3}, Ljxb;->m(Ljava/lang/String;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_2
+    :goto_0
+    return-object p2
+.end method
+
+.method public static l(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/util/Map;)Ljava/lang/String;
+    .locals 2
+
+    const/4 v0, 0x0
+
+    invoke-static {p0, p1, v0, p2}, Ljxb;->k(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/lang/String;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object p2
+
+    if-eqz p2, :cond_0
+
+    return-object p2
+
+    :cond_0
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    const-string v1, "Couldn\'t match "
+
+    invoke-direct {p2, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1}, Ljava/util/regex/Pattern;->pattern()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, " in "
+
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v0, p0}, Landroidx/media3/common/ParserException;->b(Ljava/lang/Exception;Ljava/lang/String;)Landroidx/media3/common/ParserException;
+
+    move-result-object p0
+
+    throw p0
+.end method
+
+.method public static m(Ljava/lang/String;Ljava/util/Map;)Ljava/lang/String;
+    .locals 3
+
+    sget-object v0, Ljxb;->T1:Ljava/util/regex/Pattern;
+
+    invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object p0
+
+    new-instance v0, Ljava/lang/StringBuffer;
+
+    invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
+
+    :cond_0
+    :goto_0
+    invoke-virtual {p0}, Ljava/util/regex/Matcher;->find()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    const/4 v1, 0x1
+
+    invoke-virtual {p0, v1}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-interface {p1, v1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    invoke-interface {p1, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/String;
+
+    invoke-static {v1}, Ljava/util/regex/Matcher;->quoteReplacement(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p0, v0, v1}, Ljava/util/regex/Matcher;->appendReplacement(Ljava/lang/StringBuffer;Ljava/lang/String;)Ljava/util/regex/Matcher;
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {p0, v0}, Ljava/util/regex/Matcher;->appendTail(Ljava/lang/StringBuffer;)Ljava/lang/StringBuffer;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+
+# virtual methods
+.method public final c(Ljava/util/List;)V
+    .locals 3
+
+    const/4 v0, 0x0
+
+    :goto_0
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    if-ge v0, v1, :cond_1
+
+    invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/String;
+
+    const-string v2, "#EXT-X-VK-PLAYBACK-DURATION"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    invoke-virtual {p0, v1}, Ljxb;->d(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    :goto_1
+    return-void
+.end method
+
+.method public final d(Ljava/lang/String;)Z
+    .locals 3
+
+    :try_start_0
+    sget-object v0, Ljxb;->V1:Ljava/util/regex/Pattern;
+
+    sget-object v1, Ljava/util/Collections;->EMPTY_MAP:Ljava/util/Map;
+
+    invoke-static {p1, v0, v1}, Ljxb;->l(Ljava/lang/String;Ljava/util/regex/Pattern;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result p1
+
+    int-to-long v0, p1
+
+    iget-object p1, p0, Ljxb;->d:Lske;
+
+    if-eqz p1, :cond_0
+
+    iget-object p1, p0, Ljxb;->c:Landroid/os/Handler;
+
+    new-instance v2, Lrla;
+
+    invoke-direct {v2, p0, v0, v1}, Lrla;-><init>(Ljxb;J)V
+
+    invoke-virtual {p1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    :try_end_0
+    .catch Landroidx/media3/common/ParserException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :cond_0
+    const/4 p1, 0x1
+
+    return p1
+
+    :catch_0
+    const-string p1, "OVHlsPlaylistParser"
+
+    const-string v0, "Error parsing #EXT-X-VK-PLAYBACK-DURATION tag"
+
+    invoke-static {p1, v0}, Lfv7;->q(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final x(Landroid/net/Uri;Lwq4;)Ljava/lang/Object;
+    .locals 11
+
+    iget-object v0, p0, Ljxb;->e:Lyu6;
+
+    const-string v1, "finally recording stream read error"
+
+    const-string v2, "OVHlsPlaylistParser"
+
+    new-instance v3, Ly4e;
+
+    invoke-direct {v3, p2}, Ly4e;-><init>(Lwq4;)V
+
+    iget-object p2, v3, Ly4e;->b:Ljava/io/ByteArrayOutputStream;
+
+    new-instance v4, Ljava/io/BufferedReader;
+
+    new-instance v5, Ljava/io/InputStreamReader;
+
+    invoke-direct {v5, v3}, Ljava/io/InputStreamReader;-><init>(Ljava/io/InputStream;)V
+
+    invoke-direct {v4, v5}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
+
+    new-instance v5, Ljava/util/ArrayDeque;
+
+    invoke-direct {v5}, Ljava/util/ArrayDeque;-><init>()V
+
+    const/4 v6, -0x1
+
+    :try_start_0
+    invoke-virtual {v4}, Ljava/io/BufferedReader;->read()I
+
+    move-result v7
+
+    const/16 v8, 0xef
+
+    const/4 v9, 0x0
+
+    if-ne v7, v8, :cond_1
+
+    invoke-virtual {v4}, Ljava/io/BufferedReader;->read()I
+
+    move-result v7
+
+    const/16 v8, 0xbb
+
+    if-ne v7, v8, :cond_6
+
+    invoke-virtual {v4}, Ljava/io/BufferedReader;->read()I
+
+    move-result v7
+
+    const/16 v8, 0xbf
+
+    if-eq v7, v8, :cond_0
+
+    goto :goto_3
+
+    :cond_0
+    invoke-virtual {v4}, Ljava/io/BufferedReader;->read()I
+
+    move-result v7
+
+    :cond_1
+    :goto_0
+    if-eq v7, v6, :cond_2
+
+    invoke-static {v7}, Ljava/lang/Character;->isWhitespace(I)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_2
+
+    invoke-virtual {v4}, Ljava/io/BufferedReader;->read()I
+
+    move-result v7
+
+    goto :goto_0
+
+    :cond_2
+    move v8, v9
+
+    :goto_1
+    const/4 v10, 0x7
+
+    if-ge v8, v10, :cond_4
+
+    const-string v10, "#EXTM3U"
+
+    invoke-virtual {v10, v8}, Ljava/lang/String;->charAt(I)C
+
+    move-result v10
+
+    if-eq v7, v10, :cond_3
+
+    goto :goto_3
+
+    :cond_3
+    invoke-virtual {v4}, Ljava/io/BufferedReader;->read()I
+
+    move-result v7
+
+    add-int/lit8 v8, v8, 0x1
+
+    goto :goto_1
+
+    :cond_4
+    :goto_2
+    if-eq v7, v6, :cond_5
+
+    invoke-static {v7}, Ljava/lang/Character;->isWhitespace(I)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_5
+
+    invoke-static {v7}, Lq3i;->Q(I)Z
+
+    move-result v8
+
+    if-nez v8, :cond_5
+
+    invoke-virtual {v4}, Ljava/io/BufferedReader;->read()I
+
+    move-result v7
+
+    goto :goto_2
+
+    :cond_5
+    invoke-static {v7}, Lq3i;->Q(I)Z
+
+    move-result v9
+
+    :cond_6
+    :goto_3
+    const/4 v7, 0x0
+
+    if-eqz v9, :cond_12
+
+    :goto_4
+    invoke-virtual {v4}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
+
+    move-result-object v8
+
+    if-eqz v8, :cond_f
+
+    invoke-virtual {v8}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-virtual {v8}, Ljava/lang/String;->isEmpty()Z
+
+    move-result v9
+
+    if-eqz v9, :cond_7
+
+    goto :goto_4
+
+    :cond_7
+    const-string v9, "#EXT-X-STREAM-INF"
+
+    invoke-virtual {v8, v9}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v9
+
+    if-eqz v9, :cond_9
+
+    invoke-virtual {v5, v8}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
+
+    new-instance v7, Lqt8;
+
+    invoke-direct {v7, v5, v4}, Lqt8;-><init>(Ljava/util/ArrayDeque;Ljava/io/BufferedReader;)V
+
+    invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v7, p1}, Ljxb;->g(Lqt8;Ljava/lang/String;)Lzh7;
+
+    move-result-object p1
+
+    iget-object v5, p1, Lai7;->b:Ljava/util/List;
+
+    invoke-virtual {p0, v5}, Ljxb;->c(Ljava/util/List;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-static {v4}, Lq3i;->h(Ljava/io/Closeable;)V
+
+    :goto_5
+    :try_start_1
+    invoke-virtual {v3}, Ly4e;->read()I
+
+    move-result v4
+    :try_end_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
+
+    if-eq v4, v6, :cond_8
+
+    goto :goto_5
+
+    :catch_0
+    move-exception v3
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v2, v1}, Lfv7;->q(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_8
+    if-eqz v0, :cond_e
+
+    :goto_6
+    invoke-virtual {p2}, Ljava/io/ByteArrayOutputStream;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {v0, p2}, Lyu6;->a(Ljava/lang/String;)V
+
+    goto/16 :goto_9
+
+    :catchall_0
+    move-exception p1
+
+    goto/16 :goto_b
+
+    :cond_9
+    :try_start_2
+    const-string v9, "#EXT-X-TARGETDURATION"
+
+    invoke-virtual {v8, v9}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v9
+
+    if-nez v9, :cond_c
+
+    const-string v9, "#EXT-X-MEDIA-SEQUENCE"
+
+    invoke-virtual {v8, v9}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v9
+
+    if-nez v9, :cond_c
+
+    const-string v9, "#EXTINF"
+
+    invoke-virtual {v8, v9}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v9
+
+    if-nez v9, :cond_c
+
+    const-string v9, "#EXT-X-KEY"
+
+    invoke-virtual {v8, v9}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v9
+
+    if-nez v9, :cond_c
+
+    const-string v9, "#EXT-X-BYTERANGE"
+
+    invoke-virtual {v8, v9}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v9
+
+    if-nez v9, :cond_c
+
+    const-string v9, "#EXT-X-DISCONTINUITY"
+
+    invoke-virtual {v8, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v9
+
+    if-nez v9, :cond_c
+
+    const-string v9, "#EXT-X-DISCONTINUITY-SEQUENCE"
+
+    invoke-virtual {v8, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v9
+
+    if-nez v9, :cond_c
+
+    const-string v9, "#EXT-X-ENDLIST"
+
+    invoke-virtual {v8, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v9
+
+    if-eqz v9, :cond_a
+
+    goto :goto_7
+
+    :cond_a
+    const-string v9, "#EXT-X-VK-PLAYBACK-DURATION"
+
+    invoke-virtual {v8, v9}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v9
+
+    if-eqz v9, :cond_b
+
+    invoke-virtual {p0, v8}, Ljxb;->d(Ljava/lang/String;)Z
+
+    goto/16 :goto_4
+
+    :cond_b
+    invoke-virtual {v5, v8}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
+
+    goto/16 :goto_4
+
+    :cond_c
+    :goto_7
+    invoke-virtual {v5, v8}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
+
+    iget-object v7, p0, Ljxb;->a:Lzh7;
+
+    iget-object v8, p0, Ljxb;->b:Lvh7;
+
+    new-instance v9, Lqt8;
+
+    invoke-direct {v9, v5, v4}, Lqt8;-><init>(Ljava/util/ArrayDeque;Ljava/io/BufferedReader;)V
+
+    invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v7, v8, v9, p1}, Ljxb;->f(Lzh7;Lvh7;Lqt8;Ljava/lang/String;)Lvh7;
+
+    move-result-object p1
+
+    iget-object v5, p1, Lai7;->b:Ljava/util/List;
+
+    invoke-virtual {p0, v5}, Ljxb;->c(Ljava/util/List;)V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    invoke-static {v4}, Lq3i;->h(Ljava/io/Closeable;)V
+
+    :goto_8
+    :try_start_3
+    invoke-virtual {v3}, Ly4e;->read()I
+
+    move-result v4
+    :try_end_3
+    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_1
+
+    if-eq v4, v6, :cond_d
+
+    goto :goto_8
+
+    :catch_1
+    move-exception v3
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v2, v1}, Lfv7;->q(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_d
+    if-eqz v0, :cond_e
+
+    goto/16 :goto_6
+
+    :cond_e
+    :goto_9
+    return-object p1
+
+    :cond_f
+    invoke-static {v4}, Lq3i;->h(Ljava/io/Closeable;)V
+
+    :goto_a
+    :try_start_4
+    invoke-virtual {v3}, Ly4e;->read()I
+
+    move-result p1
+    :try_end_4
+    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_2
+
+    if-eq p1, v6, :cond_10
+
+    goto :goto_a
+
+    :catch_2
+    move-exception p1
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v2, p1}, Lfv7;->q(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_10
+    if-eqz v0, :cond_11
+
+    invoke-virtual {p2}, Ljava/io/ByteArrayOutputStream;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Lyu6;->a(Ljava/lang/String;)V
+
+    :cond_11
+    const-string p1, "Failed to parse the playlist, could not identify any tags."
+
+    invoke-static {v7, p1}, Landroidx/media3/common/ParserException;->b(Ljava/lang/Exception;Ljava/lang/String;)Landroidx/media3/common/ParserException;
+
+    move-result-object p1
+
+    throw p1
+
+    :cond_12
+    :try_start_5
+    const-string p1, "Input does not start with the #EXTM3U header."
+
+    invoke-static {v7, p1}, Landroidx/media3/common/ParserException;->b(Ljava/lang/Exception;Ljava/lang/String;)Landroidx/media3/common/ParserException;
+
+    move-result-object p1
+
+    throw p1
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_0
+
+    :goto_b
+    invoke-static {v4}, Lq3i;->h(Ljava/io/Closeable;)V
+
+    :goto_c
+    :try_start_6
+    invoke-virtual {v3}, Ly4e;->read()I
+
+    move-result v4
+    :try_end_6
+    .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_3
+
+    if-eq v4, v6, :cond_13
+
+    goto :goto_c
+
+    :catch_3
+    move-exception v3
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v2, v1}, Lfv7;->q(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_13
+    if-eqz v0, :cond_14
+
+    invoke-virtual {p2}, Ljava/io/ByteArrayOutputStream;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {v0, p2}, Lyu6;->a(Ljava/lang/String;)V
+
+    :cond_14
+    throw p1
+.end method

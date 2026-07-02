@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set android:ordering="together"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <objectAnimator android:interpolator="@drawable/$avd_download__26" android:duration="250" android:startOffset="0" android:valueFrom="M-0.06 -26.07 C-0.06,-26.07 -0.06,4.81 -0.06,4.81 " android:valueTo="M-0.06 -26.07 C-0.06,-26.07 -0.06,-2.69 -0.06,-2.69 " android:valueType="pathType" android:propertyName="pathData" />
+    <objectAnimator android:interpolator="@drawable/$avd_download__27" android:duration="250" android:startOffset="250" android:valueFrom="M-0.06 -26.07 C-0.06,-26.07 -0.06,-2.69 -0.06,-2.69 " android:valueTo="M-0.06 -26.07 C-0.06,-26.07 -0.06,4.81 -0.06,4.81 " android:valueType="pathType" android:propertyName="pathData" />
+</set>
