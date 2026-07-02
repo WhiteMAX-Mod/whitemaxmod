@@ -60,17 +60,9 @@
 .end method
 
 .method public final b(Landroid/content/Context;)Ljava/lang/Object;
-    .locals 2
+    .locals 1
 
-    new-instance v0, Lma5;
+    const/4 v0, 0x0
 
-    const/4 v1, 0x1
-
-    invoke-direct {v0, p1, v1}, Lma5;-><init>(Landroid/content/Context;I)V
-
-    invoke-static {v0}, Lbfh;->a(Ljava/lang/Runnable;)V
-
-    sget-object p1, Lre7;->a:Lre7;
-
-    return-object p1
+    return-object v0
 .end method

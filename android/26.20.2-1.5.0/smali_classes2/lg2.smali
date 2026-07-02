@@ -279,7 +279,7 @@
 
     const/4 v0, 0x3
 
-    if-ne p1, v0, :cond_4
+    if-ne v0, v0, :cond_4
 
     sget-object p1, Ll;->b:Ll;
 

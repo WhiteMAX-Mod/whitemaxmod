@@ -487,6 +487,8 @@
     move-object v6, p3
 
     .line 7
+    const-string v4, ""
+
     invoke-direct/range {v0 .. v6}, Lru/ok/android/externcalls/sdk/stat/webrtc/ConversationWebRTCStat$CandidateReceived;-><init>(Lru/ok/android/externcalls/sdk/stat/webrtc/ConversationWebRTCStat;JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 8

@@ -60,70 +60,9 @@
 .end method
 
 .method public final b(Landroid/content/Context;)Ljava/lang/Object;
-    .locals 2
+    .locals 1
 
-    sget-object v0, Lweh;->a:Lweh;
-
-    sget-object v0, Lwdh;->a:Lwdh;
-
-    invoke-static {}, Lwdh;->c()Ljava/util/Map;
-
-    move-result-object v0
-
-    sget-object v1, Lee4;->c:Lfje;
-
-    invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    instance-of v1, v0, Lqac;
-
-    if-eqz v1, :cond_0
-
-    check-cast v0, Lqac;
-
-    goto :goto_0
-
-    :cond_0
     const/4 v0, 0x0
 
-    :goto_0
-    if-nez v0, :cond_1
-
-    new-instance v0, Ls44;
-
-    invoke-direct {v0}, Ls44;-><init>()V
-
-    new-instance v1, Lqac;
-
-    invoke-direct {v1, v0}, Lqac;-><init>(Ls44;)V
-
-    move-object v0, v1
-
-    :cond_1
-    iget-boolean v0, v0, Lqac;->a:Z
-
-    if-nez v0, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    new-instance v0, Lueh;
-
-    invoke-direct {v0}, Lueh;-><init>()V
-
-    sput-object v0, Lweh;->b:Lveh;
-
-    new-instance v0, Lzp;
-
-    const/4 v1, 0x3
-
-    invoke-direct {v0, p1, v1}, Lzp;-><init>(Landroid/content/Context;I)V
-
-    invoke-static {v0}, Lbfh;->a(Ljava/lang/Runnable;)V
-
-    :goto_1
-    sget-object p1, Lweh;->a:Lweh;
-
-    return-object p1
+    return-object v0
 .end method

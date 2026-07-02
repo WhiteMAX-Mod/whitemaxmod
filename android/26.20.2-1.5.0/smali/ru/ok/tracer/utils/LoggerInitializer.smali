@@ -58,20 +58,7 @@
 .method public final b(Landroid/content/Context;)Ljava/lang/Object;
     .locals 1
 
-    :try_start_0
-    instance-of v0, p1, Lzd7;
+    const/4 v0, 0x0
 
-    if-eqz v0, :cond_0
-
-    check-cast p1, Lzd7;
-
-    sget p1, Ljwb;->a:I
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    :cond_0
-    sget-object p1, Lbwa;->g:Lbwa;
-
-    return-object p1
+    return-object v0
 .end method

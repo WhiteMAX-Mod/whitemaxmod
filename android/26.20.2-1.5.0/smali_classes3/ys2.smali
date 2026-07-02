@@ -170,6 +170,19 @@
 .method public final g()I
     .locals 15
 
+    const-string v0, "noread"
+
+    invoke-static {v0}, Lone/me/mods/Mods;->get(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x3
+
+    return v0
+
+    :cond_0
     invoke-virtual {p0}, Lto;->p()Lfo2;
 
     move-result-object v0
@@ -184,11 +197,11 @@
 
     const/4 v4, 0x3
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_2
 
     iget-boolean v0, p0, Lys2;->h:Z
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
     invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -206,7 +219,7 @@
 
     return v0
 
-    :cond_0
+    :cond_1
     invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -221,12 +234,12 @@
 
     return v4
 
-    :cond_1
+    :cond_2
     invoke-virtual {v0}, Lkl2;->x0()Z
 
     move-result v5
 
-    if-nez v5, :cond_2
+    if-nez v5, :cond_3
 
     invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -242,12 +255,12 @@
 
     return v4
 
-    :cond_2
+    :cond_3
     iget-wide v5, p0, Lys2;->e:J
 
     iget-boolean v7, p0, Lys2;->g:Z
 
-    if-eqz v7, :cond_8
+    if-eqz v7, :cond_9
 
     iget-wide v8, p0, Lys2;->f:J
 
@@ -255,7 +268,7 @@
 
     cmp-long v12, v8, v10
 
-    if-lez v12, :cond_4
+    if-lez v12, :cond_5
 
     invoke-virtual {p0}, Lto;->r()Ldw9;
 
@@ -267,13 +280,13 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_5
 
     iget-object v8, v0, Lfw9;->j:Ls0a;
 
     sget-object v9, Ls0a;->c:Ls0a;
 
-    if-ne v8, v9, :cond_3
+    if-ne v8, v9, :cond_4
 
     const-string v0, "onPreExecute: message deleted, remove task"
 
@@ -281,29 +294,29 @@
 
     return v4
 
-    :cond_3
+    :cond_4
     iget-wide v8, v0, Lfw9;->c:J
 
     goto :goto_0
 
-    :cond_4
+    :cond_5
     move-wide v8, v10
 
     :goto_0
     cmp-long v0, v8, v10
 
-    if-nez v0, :cond_5
+    if-nez v0, :cond_6
 
     move-wide v8, v5
 
-    :cond_5
+    :cond_6
     iget-object v0, p0, Lto;->c:Luo;
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_7
 
     goto :goto_1
 
-    :cond_6
+    :cond_7
     const/4 v0, 0x0
 
     :goto_1
@@ -319,7 +332,7 @@
 
     cmp-long v10, v8, v10
 
-    if-lez v10, :cond_7
+    if-lez v10, :cond_8
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -371,18 +384,18 @@
 
     cmp-long v0, v10, v8
 
-    if-gez v0, :cond_7
+    if-gez v0, :cond_8
 
     goto :goto_2
 
-    :cond_7
+    :cond_8
     const-string v0, "onPreExecute: timeout expired, remove task"
 
     invoke-static {v3, v0}, Lzi0;->s(Ljava/lang/String;Ljava/lang/String;)V
 
     return v4
 
-    :cond_8
+    :cond_9
     :goto_2
     invoke-virtual {p0}, Lto;->v()Lk2h;
 
@@ -396,18 +409,18 @@
 
     move-result-object v0
 
-    if-eqz v7, :cond_a
+    if-eqz v7, :cond_b
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    :cond_9
+    :cond_a
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v3
 
-    if-eqz v3, :cond_c
+    if-eqz v3, :cond_d
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -423,25 +436,25 @@
 
     cmp-long v5, v5, v1
 
-    if-nez v5, :cond_9
+    if-nez v5, :cond_a
 
     iget-boolean v3, v3, Lys2;->g:Z
 
-    if-eqz v3, :cond_9
+    if-eqz v3, :cond_a
 
     goto :goto_3
 
-    :cond_a
+    :cond_b
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    :cond_b
+    :cond_c
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v3
 
-    if-eqz v3, :cond_c
+    if-eqz v3, :cond_d
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -457,22 +470,22 @@
 
     cmp-long v7, v7, v1
 
-    if-nez v7, :cond_b
+    if-nez v7, :cond_c
 
     iget-boolean v7, v3, Lys2;->g:Z
 
-    if-nez v7, :cond_b
+    if-nez v7, :cond_c
 
     iget-wide v7, v3, Lys2;->e:J
 
     cmp-long v3, v7, v5
 
-    if-lez v3, :cond_b
+    if-lez v3, :cond_c
 
     :goto_3
     return v4
 
-    :cond_c
+    :cond_d
     const/4 v0, 0x1
 
     return v0

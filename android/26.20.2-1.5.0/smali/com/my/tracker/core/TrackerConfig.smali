@@ -12,7 +12,7 @@
 
 
 # static fields
-.field public static final KID_MODE_DEFAULT:Z = false
+.field public static final KID_MODE_DEFAULT:Z
 
 
 # instance fields

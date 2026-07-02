@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static a:Z = false
+.field public static a:Z
 
 .field public static final synthetic b:[Lxpa;
 

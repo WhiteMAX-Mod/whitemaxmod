@@ -56,67 +56,11 @@
 
 # virtual methods
 .method public final onStartJob(Landroid/app/job/JobParameters;)Z
-    .locals 5
+    .locals 1
 
-    new-instance v0, Lz4f;
+    const/4 v0, 0x0
 
-    const/4 v1, 0x1
-
-    invoke-direct {v0, p0, v1}, Lz4f;-><init>(Lru/rustore/sdk/metrics/internal/presentation/SendMetricsEventJobService;I)V
-
-    new-instance v2, Levf;
-
-    invoke-direct {v2, v0}, Levf;-><init>(Lpz6;)V
-
-    sget-object v0, Lbb5;->a:Ldxg;
-
-    sget-object v0, Llyk;->e:Llyk;
-
-    monitor-enter v0
-
-    monitor-exit v0
-
-    sget-object v0, Lbb5;->b:Ldxg;
-
-    invoke-virtual {v0}, Ldxg;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lxa5;
-
-    new-instance v3, Lbvf;
-
-    invoke-direct {v3, v2, v0, v1}, Lbvf;-><init>(Lklk;Ljava/lang/Object;I)V
-
-    new-instance v0, Lmn0;
-
-    const/4 v2, 0x7
-
-    invoke-direct {v0, p0, v2, p1}, Lmn0;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    new-instance v2, Lbvf;
-
-    const/4 v4, 0x0
-
-    invoke-direct {v2, v3, v0, v4}, Lbvf;-><init>(Lklk;Ljava/lang/Object;I)V
-
-    new-instance v0, La5f;
-
-    invoke-direct {v0, p0, p1, v4}, La5f;-><init>(Lru/rustore/sdk/metrics/internal/presentation/SendMetricsEventJobService;Landroid/app/job/JobParameters;I)V
-
-    new-instance v3, La5f;
-
-    invoke-direct {v3, p0, p1, v1}, La5f;-><init>(Lru/rustore/sdk/metrics/internal/presentation/SendMetricsEventJobService;Landroid/app/job/JobParameters;I)V
-
-    new-instance p1, Lavf;
-
-    invoke-direct {p1, v0, v3}, Lavf;-><init>(Lrz6;Lrz6;)V
-
-    invoke-virtual {v2, p1}, Lbvf;->c(Lpvf;)V
-
-    iput-object p1, p0, Lru/rustore/sdk/metrics/internal/presentation/SendMetricsEventJobService;->b:Lavf;
-
-    return v1
+    return v0
 .end method
 
 .method public final onStopJob(Landroid/app/job/JobParameters;)Z

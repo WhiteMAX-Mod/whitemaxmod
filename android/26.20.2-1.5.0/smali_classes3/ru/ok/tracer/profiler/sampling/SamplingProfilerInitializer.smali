@@ -60,9 +60,9 @@
 .end method
 
 .method public final b(Landroid/content/Context;)Ljava/lang/Object;
-    .locals 0
+    .locals 1
 
-    sget-object p1, Lgoe;->a:Lgoe;
+    const/4 v0, 0x0
 
-    return-object p1
+    return-object v0
 .end method

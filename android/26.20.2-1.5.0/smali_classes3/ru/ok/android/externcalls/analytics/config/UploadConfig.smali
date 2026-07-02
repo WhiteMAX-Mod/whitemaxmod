@@ -121,7 +121,7 @@
 
 .field public static final DEFAULT_MAX_FILE_SIZE_KB:I = 0xf
 
-.field public static final DEFAULT_USE_DB_CACHE:Z = false
+.field public static final DEFAULT_USE_DB_CACHE:Z
 
 
 # instance fields

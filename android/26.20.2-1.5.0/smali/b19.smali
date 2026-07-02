@@ -771,7 +771,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1, v3}, Landroid/view/Window;->addFlags(I)V
+    invoke-virtual {v1, v3}, Landroid/view/Window;->clearFlags(I)V
 
     :goto_5
     sget-object v1, Lzqh;->a:Lzqh;

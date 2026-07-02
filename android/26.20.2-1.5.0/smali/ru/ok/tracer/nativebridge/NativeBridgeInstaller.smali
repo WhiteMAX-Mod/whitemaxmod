@@ -32,19 +32,11 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    const-string v0, "tracernative"
-
-    invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
-
     return-void
 .end method
 
 .method public static a()V
-    .locals 1
-
-    sget-object v0, Lwj3;->g:Lwj3;
-
-    invoke-static {v0}, Lru/ok/tracer/nativebridge/NativeBridgeInstaller;->nativeInstallBridge(Lru/ok/tracer/nativebridge/NativeBridge;)V
+    .locals 0
 
     return-void
 .end method

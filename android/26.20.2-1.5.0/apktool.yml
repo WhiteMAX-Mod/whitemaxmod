@@ -1,5 +1,5 @@
 version: 2.12.0
-apkFileName: 26.20.2.apk
+apkFileName: 26.20.2_green.apk
 usesFramework:
   ids:
   - 1
@@ -15,7 +15,6 @@ doNotCompress:
 - arsc
 - m4a
 - png
-- so
 - webp
 - META-INF/services/ic8
 - META-INF/services/ru.ok.android.onelog.OneLogAppender

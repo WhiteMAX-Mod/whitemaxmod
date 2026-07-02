@@ -6,11 +6,11 @@
 # static fields
 .field public static final a:Lzzg;
 
-.field public static b:Z = false
+.field public static b:Z
 
-.field public static c:Ljava/lang/reflect/Method; = null
+.field public static c:Ljava/lang/reflect/Method;
 
-.field public static d:Z = false
+.field public static d:Z
 
 .field public static e:Ljava/lang/reflect/Field;
 

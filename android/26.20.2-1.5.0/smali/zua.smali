@@ -1642,17 +1642,28 @@
 .end method
 
 .method public final j(Li0h;ZJLszg;)V
-    .locals 17
+    .locals 18
 
     move-object/from16 v1, p0
 
     move-object/from16 v0, p1
 
+    invoke-virtual {v0}, Li0h;->k()S
+
+    move-result v17
+
+    add-int/lit8 v17, v17, -0x5
+
+    if-nez v17, :cond_0
+
+    return-void
+
+    :cond_0
     move-object/from16 v9, p5
 
     instance-of v2, v0, Ldy8;
 
-    if-eqz v2, :cond_0
+    if-eqz v2, :cond_1
 
     iget-object v2, v1, Lzua;->a:Ljava/lang/String;
 
@@ -1686,11 +1697,11 @@
 
     throw v0
 
-    :cond_0
+    :cond_1
     :goto_0
     instance-of v2, v0, Lpw8;
 
-    if-eqz v2, :cond_3
+    if-eqz v2, :cond_4
 
     move-object v2, v0
 
@@ -1704,7 +1715,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_2
+    if-eqz v3, :cond_3
 
     iget-object v3, v1, Lzua;->f:Ljava/lang/Long;
 
@@ -1714,11 +1725,11 @@
 
     move-result v3
 
-    if-nez v3, :cond_1
+    if-nez v3, :cond_2
 
     goto :goto_1
 
-    :cond_1
+    :cond_2
     iget-object v2, v1, Lzua;->a:Ljava/lang/String;
 
     const-string v3, "Nonce check early success"
@@ -1731,7 +1742,7 @@
 
     goto :goto_2
 
-    :cond_2
+    :cond_3
     :goto_1
     iget-object v3, v1, Lzua;->a:Ljava/lang/String;
 
@@ -1757,7 +1768,7 @@
 
     invoke-static {v3, v4, v10}, Lzi0;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    :cond_3
+    :cond_4
     :goto_2
     invoke-virtual {v0}, Li0h;->i()Z
 
@@ -1765,7 +1776,7 @@
 
     const/4 v3, 0x0
 
-    if-eqz v2, :cond_8
+    if-eqz v2, :cond_9
 
     iget-object v2, v1, Lzua;->a:Ljava/lang/String;
 
@@ -1800,13 +1811,13 @@
 
     move-result-object v4
 
-    :cond_4
+    :cond_5
     :goto_3
     invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v5
 
-    if-eqz v5, :cond_6
+    if-eqz v5, :cond_7
 
     invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -1816,7 +1827,7 @@
 
     iget-object v6, v5, Lc4c;->b:Lb4c;
 
-    if-eqz v6, :cond_4
+    if-eqz v6, :cond_5
 
     iget-object v6, v6, Lb4c;->a:Li0h;
 
@@ -1828,7 +1839,7 @@
 
     move-result v7
 
-    if-ne v6, v7, :cond_4
+    if-ne v6, v7, :cond_5
 
     iget-object v6, v5, Lc4c;->b:Lb4c;
 
@@ -1842,9 +1853,9 @@
 
     move-result v7
 
-    if-ne v6, v7, :cond_4
+    if-ne v6, v7, :cond_5
 
-    if-nez v3, :cond_5
+    if-nez v3, :cond_6
 
     new-instance v3, Ljava/util/ArrayList;
 
@@ -1857,7 +1868,7 @@
 
     goto :goto_6
 
-    :cond_5
+    :cond_6
     :goto_4
     iget-object v6, v5, Lc4c;->b:Lb4c;
 
@@ -1901,8 +1912,8 @@
 
     goto :goto_3
 
-    :cond_6
-    if-eqz v3, :cond_7
+    :cond_7
+    if-eqz v3, :cond_8
 
     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -1913,7 +1924,7 @@
 
     move-result v4
 
-    if-eqz v4, :cond_7
+    if-eqz v4, :cond_8
 
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -1929,7 +1940,7 @@
 
     goto :goto_5
 
-    :cond_7
+    :cond_8
     monitor-exit v2
 
     goto/16 :goto_9
@@ -1941,12 +1952,12 @@
 
     throw v0
 
-    :cond_8
+    :cond_9
     invoke-virtual {v0}, Li0h;->j()Z
 
     move-result v2
 
-    if-eqz v2, :cond_d
+    if-eqz v2, :cond_e
 
     iget-object v2, v1, Lzua;->z:Ljava/lang/Object;
 
@@ -1963,12 +1974,12 @@
 
     move-result-object v5
 
-    :cond_9
+    :cond_a
     invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v6
 
-    if-eqz v6, :cond_c
+    if-eqz v6, :cond_d
 
     invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -1978,7 +1989,7 @@
 
     iget-object v7, v6, Lc4c;->b:Lb4c;
 
-    if-eqz v7, :cond_9
+    if-eqz v7, :cond_a
 
     iget-object v7, v7, Lb4c;->a:Li0h;
 
@@ -1990,7 +2001,7 @@
 
     move-result v8
 
-    if-ne v7, v8, :cond_9
+    if-ne v7, v8, :cond_a
 
     iget-object v6, v6, Lc4c;->b:Lb4c;
 
@@ -2000,7 +2011,7 @@
 
     move-result v6
 
-    if-ne v6, v4, :cond_9
+    if-ne v6, v4, :cond_a
 
     monitor-exit v2
     :try_end_2
@@ -2010,22 +2021,22 @@
 
     sget-object v4, Lzi0;->g:Lyjb;
 
-    if-nez v4, :cond_a
+    if-nez v4, :cond_b
 
     goto :goto_7
 
-    :cond_a
+    :cond_b
     sget-object v5, Lnv8;->d:Lnv8;
 
     invoke-virtual {v4, v5}, Lyjb;->b(Lnv8;)Z
 
     move-result v6
 
-    if-nez v6, :cond_b
+    if-nez v6, :cond_c
 
     goto :goto_7
 
-    :cond_b
+    :cond_c
     sget-object v6, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     const-string v7, "ignore duplicated request: %s, params: %s"
@@ -2070,7 +2081,7 @@
 
     goto :goto_8
 
-    :cond_c
+    :cond_d
     :try_start_3
     monitor-exit v2
 
@@ -2083,7 +2094,7 @@
 
     throw v0
 
-    :cond_d
+    :cond_e
     :goto_9
     sget-object v2, Lzu8;->f:Lzu8;
 

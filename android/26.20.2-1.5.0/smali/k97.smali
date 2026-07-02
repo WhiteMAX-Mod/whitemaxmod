@@ -6,9 +6,9 @@
 # static fields
 .field public static final a:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-.field public static b:Z = false
+.field public static b:Z
 
-.field public static c:Z = false
+.field public static c:Z
 
 .field public static final d:Ljava/util/concurrent/atomic/AtomicBoolean;
 

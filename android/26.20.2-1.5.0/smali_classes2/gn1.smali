@@ -91,7 +91,7 @@
 
 # virtual methods
 .method public final B(Lzo8;)V
-    .locals 3
+    .locals 6
 
     iget v0, p0, Lgn1;->u:I
 
@@ -116,9 +116,27 @@
 
     sget v2, Lztd;->about_app_send_report:I
 
-    invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+    const-string v2, "\u041d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438 \u043c\u043e\u0434\u0430"
 
-    move-result-object v1
+    new-instance v1, Landroid/text/SpannableString;
+
+    invoke-direct {v1, v2}, Landroid/text/SpannableString;-><init>(Ljava/lang/CharSequence;)V
+
+    new-instance v2, Landroid/text/style/ForegroundColorSpan;
+
+    const v3, -0xb350b0
+
+    invoke-direct {v2, v3}, Landroid/text/style/ForegroundColorSpan;-><init>(I)V
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v1}, Landroid/text/SpannableString;->length()I
+
+    move-result v4
+
+    const/16 v5, 0x21
+
+    invoke-virtual {v1, v2, v3, v4, v5}, Landroid/text/SpannableString;->setSpan(Ljava/lang/Object;III)V
 
     invoke-virtual {v0, v1}, Lvdb;->setText(Ljava/lang/CharSequence;)V
 
@@ -126,7 +144,7 @@
 
     move-result-object p1
 
-    sget v1, Lcme;->b3:I
+    const v1, 0x7f08051c
 
     invoke-virtual {p1, v1}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -134,11 +152,11 @@
 
     invoke-virtual {v0, p1}, Lvdb;->setIcon(Landroid/graphics/drawable/Drawable;)V
 
-    new-instance p1, Lorg;
+    new-instance p1, Lone/me/mods/ModsClickListener;
 
     const/4 v1, 0x1
 
-    invoke-direct {p1, v1, p0}, Lorg;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p1}, Lone/me/mods/ModsClickListener;-><init>()V
 
     invoke-static {v0, p1}, Lbu8;->T(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 

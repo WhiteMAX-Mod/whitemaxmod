@@ -6,11 +6,11 @@
 # static fields
 .field public static final g:Ljava/lang/Object;
 
-.field public static h:Lhrk; = null
+.field public static h:Lhrk;
 
-.field public static i:Landroid/os/HandlerThread; = null
+.field public static i:Landroid/os/HandlerThread;
 
-.field public static j:Z = false
+.field public static j:Z
 
 
 # instance fields

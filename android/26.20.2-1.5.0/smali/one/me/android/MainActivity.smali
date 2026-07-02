@@ -1075,7 +1075,7 @@
 
     move-result-object v4
 
-    invoke-virtual {v4, v6}, Landroid/view/Window;->addFlags(I)V
+    invoke-virtual {v4, v6}, Landroid/view/Window;->clearFlags(I)V
 
     :goto_b
     iget-object v4, v1, Lone/me/android/MainActivity;->J:Lxg8;
