@@ -1,0 +1,136 @@
+.class public final Lb04;
+.super Lgqf;
+.source "SourceFile"
+
+
+# static fields
+.field public static final b:Lb04;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lb04;
+
+    invoke-direct {v0}, Lgqf;-><init>()V
+
+    sput-object v0, Lb04;->b:Lb04;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final c()Lk2;
+    .locals 3
+
+    new-instance p0, Lrz4;
+
+    new-instance v0, Ldd3;
+
+    const/4 v1, 0x5
+
+    invoke-direct {v0, v1}, Ldd3;-><init>(I)V
+
+    new-instance v1, Ldd3;
+
+    const/4 v2, 0x6
+
+    invoke-direct {v1, v2}, Ldd3;-><init>(I)V
+
+    invoke-direct {p0, v0, v1}, Lrz4;-><init>(Lv57;Lv57;)V
+
+    return-object p0
+.end method
+
+.method public final d(Landroid/os/Bundle;)Luz4;
+    .locals 8
+
+    new-instance v6, Lcx8;
+
+    const-string p0, "arg_account_id_override"
+
+    invoke-virtual {p1, p0}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;)I
+
+    move-result p0
+
+    invoke-direct {v6, p0}, Lcx8;-><init>(I)V
+
+    const-string p0, "parent_id"
+
+    invoke-static {p1, p0}, Limh;->K(Landroid/os/Bundle;Ljava/lang/String;)Ljava/lang/Long;
+
+    move-result-object v1
+
+    const-string p0, "post_server_id"
+
+    invoke-static {p1, p0}, Limh;->K(Landroid/os/Bundle;Ljava/lang/String;)Ljava/lang/Long;
+
+    move-result-object v2
+
+    const-string p0, "ids"
+
+    invoke-static {p1, p0}, Limh;->L(Landroid/os/Bundle;Ljava/lang/String;)[J
+
+    move-result-object v3
+
+    const-string p0, "type"
+
+    invoke-virtual {p1, p0}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    const-string p0, "source_screen"
+
+    invoke-static {p1, p0}, Limh;->J(Landroid/os/Bundle;Ljava/lang/String;)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    const-string p0, "is_dark"
+
+    invoke-static {p1, p0}, Limh;->I(Landroid/os/Bundle;Ljava/lang/String;)Ljava/lang/Boolean;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p0
+
+    :goto_0
+    move v7, p0
+
+    goto :goto_1
+
+    :cond_0
+    const/4 p0, 0x0
+
+    goto :goto_0
+
+    :goto_1
+    new-instance v0, La04;
+
+    invoke-direct/range {v0 .. v7}, La04;-><init>(Ljava/lang/Long;Ljava/lang/Long;[JLjava/lang/String;Ljava/lang/Integer;Lcx8;Z)V
+
+    return-object v0
+.end method
+
+.method public final e(Lfqf;)V
+    .locals 3
+
+    const/4 p0, 0x0
+
+    new-array p0, p0, [Ljava/lang/String;
+
+    const/4 v0, 0x0
+
+    const/16 v1, 0xe
+
+    const-string v2, ":complaint"
+
+    invoke-static {p1, v2, p0, v0, v1}, Lb33;->d(Lb33;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lnz4;
+
+    return-void
+.end method

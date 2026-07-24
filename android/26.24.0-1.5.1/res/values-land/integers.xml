@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="mtrl_calendar_selection_text_lines">6</integer>
+</resources>

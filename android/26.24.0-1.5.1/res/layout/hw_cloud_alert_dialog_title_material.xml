@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/topPanel" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="start|center" android:orientation="horizontal" android:id="@id/title_template" android:paddingLeft="@dimen/hw_cloud_dialog_title_left_padding" android:paddingRight="@dimen/hw_cloud_dialog_title_right_padding" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:id="@android:id/icon" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginRight="8.0dip" android:src="@null" android:scaleType="fitCenter" android:layout_marginEnd="8.0dip" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="16.0dip">
+            <TextView android:textSize="20.0sp" android:textStyle="bold" android:ellipsize="end" android:layout_gravity="start" android:id="@id/alertTitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textAlignment="viewStart" style="@style/HwCloudAlertDialogTitle" />
+            <TextView android:id="@id/subTitle" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/HwCloudAlertDialogSubTitle" />
+        </LinearLayout>
+    </LinearLayout>
+    <android.widget.Space android:id="@id/titleDividerNoCustom" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/hw_cloud_dialog_button_vertical_divider_bottom_height" />
+</LinearLayout>

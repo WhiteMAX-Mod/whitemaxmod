@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <external-path name="external_files" path="." />
+    <files-path name="internal_files" path="." />
+    <cache-path name="upload" path="upload/" />
+    <cache-path name="imageCache" path="imageCache/" />
+    <cache-path name="videoCache" path="videoCache/" />
+    <cache-path name="previewVideoCache" path="previewVideoCache/" />
+    <cache-path name="audioCache" path="audioCache/" />
+    <cache-path name="gifCache" path="gifCache/" />
+    <cache-path name="logsCache" path="logsCache/" />
+    <cache-path name="font" path="font/" />
+    <cache-path name="ringtones" path="ringtones/" />
+    <cache-path name="copy_media" path="copy/media/" />
+</paths>

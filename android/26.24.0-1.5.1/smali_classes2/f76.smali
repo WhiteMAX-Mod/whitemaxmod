@@ -1,0 +1,64 @@
+.class public final Lf76;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# instance fields
+.field public final synthetic a:Ll76;
+
+
+# direct methods
+.method public constructor <init>(Ll76;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lf76;->a:Ll76;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()V
+    .locals 1
+
+    iget-object p0, p0, Lf76;->a:Ll76;
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Ll76;->q1:Z
+
+    return-void
+.end method
+
+.method public final b()V
+    .locals 1
+
+    iget-object p0, p0, Lf76;->a:Ll76;
+
+    iget-boolean v0, p0, Ll76;->E:Z
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Ll76;->D:Lkne;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    goto :goto_0
+
+    :cond_0
+    iget-boolean v0, p0, Ll76;->r1:Z
+
+    if-eqz v0, :cond_1
+
+    :goto_0
+    iget-object p0, p0, Ll76;->h:Lptg;
+
+    const/4 v0, 0x2
+
+    invoke-virtual {p0, v0}, Lptg;->i(I)V
+
+    :cond_1
+    return-void
+.end method

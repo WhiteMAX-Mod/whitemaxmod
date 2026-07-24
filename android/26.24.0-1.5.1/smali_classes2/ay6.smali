@@ -1,0 +1,71 @@
+.class public final Lay6;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# instance fields
+.field public final a:Landroid/net/Uri;
+
+.field public final b:I
+
+.field public final c:I
+
+.field public final d:Z
+
+.field public final e:I
+
+
+# direct methods
+.method public constructor <init>(Landroid/net/Uri;IIZI)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iput-object p1, p0, Lay6;->a:Landroid/net/Uri;
+
+    iput p2, p0, Lay6;->b:I
+
+    iput p3, p0, Lay6;->c:I
+
+    iput-boolean p4, p0, Lay6;->d:Z
+
+    iput p5, p0, Lay6;->e:I
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()I
+    .locals 0
+
+    iget p0, p0, Lay6;->b:I
+
+    return p0
+.end method
+
+.method public final b()Landroid/net/Uri;
+    .locals 0
+
+    iget-object p0, p0, Lay6;->a:Landroid/net/Uri;
+
+    return-object p0
+.end method
+
+.method public final c()I
+    .locals 0
+
+    iget p0, p0, Lay6;->c:I
+
+    return p0
+.end method
+
+.method public final d()Z
+    .locals 0
+
+    iget-boolean p0, p0, Lay6;->d:Z
+
+    return p0
+.end method

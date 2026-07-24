@@ -1,0 +1,35 @@
+{
+  "applications": [],
+  "services": [
+    {
+      "servings": [
+        {
+          "countryGroup": "DR1",
+          "addresses": {
+            "ROOT": "https://configserver.hicloud.com"
+          }
+        },
+        {
+          "countryGroup": "DR2",
+          "addresses": {
+            "ROOT": "https://configserver-dra.platform.hicloud.com"
+          }
+        },
+        {
+          "countryGroup": "DR3",
+          "addresses": {
+            "ROOT": "https://configserver-dre.platform.hicloud.com"
+          }
+        },
+        {
+          "countryGroup": "DR4",
+          "addresses": {
+            "ROOT": "https://configserver-drru.platform.hicloud.ru"
+          }
+        }
+      ],
+      "routeBy": "ser_country",
+      "name": "com.huawei.configserver"
+    }
+  ]
+}
