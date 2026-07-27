@@ -3,3 +3,4 @@ build
 *.apk*
 *.jks
 .idea
+scripts
