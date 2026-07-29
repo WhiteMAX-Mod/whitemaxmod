@@ -60,31 +60,7 @@
 .end method
 
 .method public final b(Landroid/content/Context;)Ljava/lang/Object;
-    .locals 2
-
-    sget-object p0, Ldbh;->a:Letg;
-
-    new-instance p0, Lxf5;
-
+    .locals 1
     const/4 v0, 0x0
-
-    invoke-direct {p0, p1, v0}, Lxf5;-><init>(Landroid/content/Context;I)V
-
-    new-instance p1, Landroid/os/Handler;
-
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
-
-    move-result-object v1
-
-    invoke-direct {p1, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
-
-    new-instance v1, Lbbh;
-
-    invoke-direct {v1, p0, v0}, Lbbh;-><init>(Ljava/lang/Runnable;I)V
-
-    invoke-virtual {p1, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    sget-object p0, Lsm0;->g:Lsm0;
-
-    return-object p0
+    return-object v0
 .end method

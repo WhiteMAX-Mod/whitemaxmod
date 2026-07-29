@@ -63,69 +63,7 @@
 .end method
 
 .method public static a()V
-    .locals 2
-
-    .line 150
-    sget-object v0, Lcom/my/tracker/MyTracker;->c:Lcom/my/tracker/core/TrackerConfig;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
-
-    move-result-object v0
-
-    .line 151
-    const-string v1, "com.my.tracker.applifecycle.MyTrackerAppLifecycle"
-
-    invoke-static {v1, v0}, Lcom/my/tracker/MyTracker;->a(Ljava/lang/String;Ljava/lang/ClassLoader;)V
-
-    .line 152
-    const-string v1, "com.my.tracker.ads.MyTrackerAds"
-
-    invoke-static {v1, v0}, Lcom/my/tracker/MyTracker;->a(Ljava/lang/String;Ljava/lang/ClassLoader;)V
-
-    .line 153
-    const-string v1, "com.my.tracker.antifraud.MyTrackerAntifraud"
-
-    invoke-static {v1, v0}, Lcom/my/tracker/MyTracker;->a(Ljava/lang/String;Ljava/lang/ClassLoader;)V
-
-    .line 154
-    const-string v1, "com.my.tracker.environment.MyTrackerEnvironment"
-
-    invoke-static {v1, v0}, Lcom/my/tracker/MyTracker;->a(Ljava/lang/String;Ljava/lang/ClassLoader;)V
-
-    .line 155
-    const-string v1, "com.my.tracker.game.MyTrackerGame"
-
-    invoke-static {v1, v0}, Lcom/my/tracker/MyTracker;->a(Ljava/lang/String;Ljava/lang/ClassLoader;)V
-
-    .line 156
-    const-string v1, "com.my.tracker.miniapps.MyTrackerMiniApps"
-
-    invoke-static {v1, v0}, Lcom/my/tracker/MyTracker;->a(Ljava/lang/String;Ljava/lang/ClassLoader;)V
-
-    .line 157
-    const-string v1, "com.my.tracker.purchase.MyTrackerPurchase"
-
-    invoke-static {v1, v0}, Lcom/my/tracker/MyTracker;->a(Ljava/lang/String;Ljava/lang/ClassLoader;)V
-
-    .line 158
-    const-string v1, "com.my.tracker.remoteconfig.MyTrackerRemoteConfig"
-
-    invoke-static {v1, v0}, Lcom/my/tracker/MyTracker;->a(Ljava/lang/String;Ljava/lang/ClassLoader;)V
-
-    .line 159
-    const-string v1, "com.my.tracker.timespent.MyTrackerTimespent"
-
-    invoke-static {v1, v0}, Lcom/my/tracker/MyTracker;->a(Ljava/lang/String;Ljava/lang/ClassLoader;)V
-
-    .line 160
-    const-string v1, "com.my.tracker.userlifecycle.MyTrackerUserLifecycle"
-
-    invoke-static {v1, v0}, Lcom/my/tracker/MyTracker;->a(Ljava/lang/String;Ljava/lang/ClassLoader;)V
-
+    .locals 0
     return-void
 .end method
 
@@ -376,36 +314,14 @@
 .end method
 
 .method public static flush()V
-    .locals 2
-
-    sget-object v0, Lcom/my/tracker/MyTracker;->e:Lcom/my/tracker/core/EngineMiniCore;
-
-    if-nez v0, :cond_0
-
-    const-string v0, "MyTracker hasn\'t been initialized yet. You should call MyTracker.initTracker() method first"
-
-    invoke-static {v0}, Lcom/my/tracker/core/Tracer;->e(Ljava/lang/String;)V
-
-    return-void
-
-    :cond_0
-    new-instance v1, Lcva;
-
-    invoke-direct {v1}, Lcva;-><init>()V
-
-    invoke-interface {v0, v1}, Lcom/my/tracker/core/EngineMiniCore;->onEngineWorkerWithEngineCore(Lcom/my/tracker/core/utils/Consumer;)V
-
+    .locals 0
     return-void
 .end method
 
 .method public static getInstanceId(Landroid/app/Application;)Ljava/lang/String;
-    .locals 0
-
-    invoke-static {p0}, Lcom/my/tracker/core/o/u0;->a(Landroid/app/Application;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    .locals 1
+    const-string v0, ""
+    return-object v0
 .end method
 
 .method public static getTrackerConfig()Lcom/my/tracker/MyTrackerConfig;
@@ -437,212 +353,31 @@
 .end method
 
 .method public static handleDeeplink(Landroid/content/Intent;)Ljava/lang/String;
-    .locals 3
-
-    sget-object v0, Lcom/my/tracker/MyTracker;->b:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
-
-    move-result v0
-
-    const/4 v1, 0x2
-
-    const/4 v2, 0x0
-
-    if-eq v0, v1, :cond_0
-
-    new-instance p0, Ljava/lang/StringBuilder;
-
-    const-string v1, "MyTracker hasn\'t been initialized yet. You should call MyTracker.initTracker() method first. InitState="
-
-    invoke-direct {p0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
+    .locals 2
+    if-nez p0, :c0
+    const/4 p0, 0x0
+    return-object p0
+    :c0
+    invoke-virtual {p0}, Landroid/content/Intent;->getData()Landroid/net/Uri;
     move-result-object p0
-
-    invoke-static {p0}, Lcom/my/tracker/core/Tracer;->e(Ljava/lang/String;)V
-
-    return-object v2
-
-    :cond_0
-    sget-object v0, Lcom/my/tracker/MyTracker;->f:Lcom/my/tracker/core/b;
-
-    if-nez v0, :cond_1
-
-    const-string p0, "MyTracker hasn\'t been initialized yet. You should call MyTracker.initTracker() method first. engine is null"
-
-    invoke-static {p0}, Lcom/my/tracker/core/Tracer;->e(Ljava/lang/String;)V
-
-    return-object v2
-
-    :cond_1
-    invoke-virtual {v0, p0}, Lcom/my/tracker/core/b;->a(Landroid/content/Intent;)Ljava/lang/String;
-
+    if-nez p0, :c1
+    const/4 p0, 0x0
+    return-object p0
+    :c1
+    const-string v0, "mt_deeplink"
+    invoke-virtual {p0, v0}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
+    move-result-object v0
+    if-eqz v0, :c2
+    return-object v0
+    :c2
+    invoke-virtual {p0}, Landroid/net/Uri;->toString()Ljava/lang/String;
     move-result-object p0
-
     return-object p0
 .end method
 
 .method public static initTracker(Ljava/lang/String;Landroid/app/Application;)V
-    .locals 12
-
-    const-string v0, "MyTracker init OK, version: "
-
-    const-string v1, "MyTracker is initialized with id: "
-
-    sget-object v2, Lcom/my/tracker/MyTracker;->a:Ljava/lang/Object;
-
-    monitor-enter v2
-
-    :try_start_0
-    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    const-string p0, "MyTracker initialization failed: id can\'t be empty"
-
-    invoke-static {p0}, Lcom/my/tracker/core/Tracer;->e(Ljava/lang/String;)V
-
-    monitor-exit v2
-
+    .locals 0
     return-void
-
-    :catchall_0
-    move-exception v0
-
-    move-object p0, v0
-
-    goto/16 :goto_0
-
-    :cond_0
-    sget-object v3, Lcom/my/tracker/MyTracker;->b:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    const/4 v4, 0x1
-
-    const/4 v5, 0x0
-
-    invoke-virtual {v3, v5, v4}, Ljava/util/concurrent/atomic/AtomicInteger;->compareAndSet(II)Z
-
-    move-result v3
-
-    if-nez v3, :cond_1
-
-    const-string p0, "MyTracker has already been initialized"
-
-    invoke-static {p0}, Lcom/my/tracker/core/Tracer;->i(Ljava/lang/String;)V
-
-    monitor-exit v2
-
-    return-void
-
-    :cond_1
-    sget-object v6, Lcom/my/tracker/MyTracker;->c:Lcom/my/tracker/core/TrackerConfig;
-
-    invoke-virtual {v6, p0}, Lcom/my/tracker/core/TrackerConfig;->a(Ljava/lang/String;)V
-
-    new-instance p0, Ljava/lang/StringBuilder;
-
-    invoke-direct {p0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v6}, Lcom/my/tracker/core/TrackerConfig;->getId()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lcom/my/tracker/core/Tracer;->i(Ljava/lang/String;)V
-
-    invoke-virtual {v6}, Lcom/my/tracker/core/TrackerConfig;->getBackgroundExecutors()Ljava/util/concurrent/Executor;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lcom/my/tracker/core/o/g;->a(Ljava/util/concurrent/Executor;)V
-
-    invoke-static {}, Lcom/my/tracker/core/o/h;->a()Lcom/my/tracker/core/o/h;
-
-    move-result-object v8
-
-    new-instance p0, Lcom/my/tracker/MyTracker$a;
-
-    invoke-direct {p0}, Lcom/my/tracker/MyTracker$a;-><init>()V
-
-    invoke-static {}, Lcom/my/tracker/core/o/q;->a()Lcom/my/tracker/core/o/q;
-
-    move-result-object v10
-
-    invoke-static {p1, v6, v8, p0, v10}, Lcom/my/tracker/core/a;->a(Landroid/app/Application;Lcom/my/tracker/core/TrackerConfig;Lcom/my/tracker/core/AsyncCore;Lcom/my/tracker/core/TimeCore;Lcom/my/tracker/core/proto/ExternalProtoWritersSetter;)Lcom/my/tracker/core/a;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Lcom/my/tracker/core/a;->a()V
-
-    invoke-static {v7}, Lcom/my/tracker/core/o/a;->a(Lcom/my/tracker/core/EngineMiniCore;)Lcom/my/tracker/core/o/a;
-
-    move-result-object v11
-
-    invoke-virtual {v11}, Lcom/my/tracker/core/o/a;->b()V
-
-    sget-object p0, Lcom/my/tracker/core/o/g;->a:Landroid/os/Handler;
-
-    invoke-static {v6, p0}, Lcom/my/tracker/core/o/a0;->a(Lcom/my/tracker/core/TrackerConfig;Landroid/os/Handler;)Lcom/my/tracker/core/o/a0;
-
-    move-result-object v9
-
-    invoke-static {}, Lcom/my/tracker/MyTracker;->a()V
-
-    new-instance v4, Ljava/util/concurrent/Semaphore;
-
-    invoke-direct {v4, v5, v5}, Ljava/util/concurrent/Semaphore;-><init>(IZ)V
-
-    new-instance v3, Ldva;
-
-    move-object v5, p1
-
-    invoke-direct/range {v3 .. v11}, Ldva;-><init>(Ljava/util/concurrent/Semaphore;Landroid/app/Application;Lcom/my/tracker/core/TrackerConfig;Lcom/my/tracker/core/a;Lcom/my/tracker/core/o/h;Lcom/my/tracker/core/o/a0;Lcom/my/tracker/core/o/q;Lcom/my/tracker/core/o/a;)V
-
-    invoke-static {v3}, Lcom/my/tracker/core/o/g;->b(Ljava/lang/Runnable;)V
-
-    invoke-static {v7}, Lcom/my/tracker/core/MyTrackerInternal;->a(Lcom/my/tracker/core/EngineMiniCore;)V
-
-    sput-object v7, Lcom/my/tracker/MyTracker;->e:Lcom/my/tracker/core/EngineMiniCore;
-
-    invoke-virtual {v4}, Ljava/util/concurrent/Semaphore;->release()V
-
-    new-instance p0, Ljava/lang/StringBuilder;
-
-    invoke-direct {p0, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-static {}, Lcom/my/tracker/MyTracker;->getVersion()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lcom/my/tracker/core/Tracer;->i(Ljava/lang/String;)V
-
-    monitor-exit v2
-
-    return-void
-
-    :goto_0
-    monitor-exit v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p0
 .end method
 
 .method public static isDebugMode()Z
@@ -656,86 +391,26 @@
 .end method
 
 .method public static setAttributionListener(Lcom/my/tracker/MyTracker$AttributionListener;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    .line 6
-    invoke-static {p0, v0}, Lcom/my/tracker/MyTracker;->setAttributionListener(Lcom/my/tracker/MyTracker$AttributionListener;Landroid/os/Handler;)V
-
+    .locals 0
     return-void
 .end method
 
 .method public static setAttributionListener(Lcom/my/tracker/MyTracker$AttributionListener;Landroid/os/Handler;)V
-    .locals 1
-
-    sget-object v0, Lcom/my/tracker/MyTracker;->c:Lcom/my/tracker/core/TrackerConfig;
-
-    invoke-virtual {v0, p0, p1}, Lcom/my/tracker/core/TrackerConfig;->setAttributionListener(Lcom/my/tracker/MyTracker$AttributionListener;Landroid/os/Handler;)V
-
+    .locals 0
     return-void
 .end method
 
 .method public static setDebugMode(Z)V
     .locals 0
-
-    invoke-static {p0}, Lcom/my/tracker/core/Tracer;->setEnabled(Z)V
-
     return-void
 .end method
 
 .method public static trackEvent(Ljava/lang/String;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    .line 31
-    invoke-static {p0, v0}, Lcom/my/tracker/MyTracker;->trackEvent(Ljava/lang/String;Ljava/util/Map;)V
-
+    .locals 0
     return-void
 .end method
 
 .method public static trackEvent(Ljava/lang/String;Ljava/util/Map;)V
-    .locals 4
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/String;",
-            "Ljava/util/Map<",
-            "Ljava/lang/String;",
-            "Ljava/lang/String;",
-            ">;)V"
-        }
-    .end annotation
-
-    sget-object v0, Lcom/my/tracker/MyTracker;->e:Lcom/my/tracker/core/EngineMiniCore;
-
-    if-nez v0, :cond_0
-
-    const-string p0, "MyTracker hasn\'t been initialized yet. You should call MyTracker.initTracker() method first"
-
-    invoke-static {p0}, Lcom/my/tracker/core/Tracer;->e(Ljava/lang/String;)V
-
-    return-void
-
-    :cond_0
-    invoke-interface {v0}, Lcom/my/tracker/core/EngineMiniCore;->getTimeCore()Lcom/my/tracker/core/TimeCore;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Lcom/my/tracker/core/TimeCore;->currentTimeSec()J
-
-    move-result-wide v1
-
-    invoke-static {p1}, Lcom/my/tracker/TrackerUtils;->copyParams(Ljava/util/Map;)Ljava/util/Map;
-
-    move-result-object p1
-
-    new-instance v3, Leva;
-
-    invoke-direct {v3, p0, v1, v2, p1}, Leva;-><init>(Ljava/lang/String;JLjava/util/Map;)V
-
-    invoke-interface {v0, v3}, Lcom/my/tracker/core/EngineMiniCore;->onEngineWorkerWithEngineCore(Lcom/my/tracker/core/utils/Consumer;)V
-
+    .locals 0
     return-void
 .end method

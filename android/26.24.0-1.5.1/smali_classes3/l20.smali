@@ -2487,9 +2487,6 @@
 
     if-eqz v1, :cond_f
 
-    const-string v0, "ip"
-
-    invoke-virtual {v4, v0, v1}, Lh89;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_f
     invoke-interface {v3}, Lon8;->getValue()Ljava/lang/Object;

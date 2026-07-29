@@ -1610,7 +1610,14 @@
 .end method
 
 .method public final j(Ldwg;ZJLnvg;)V
-    .locals 8
+    .locals 9
+
+    invoke-virtual {p1}, Ldwg;->k()S
+    move-result v8
+    add-int/lit8 v8, v8, -0x5
+    if-nez v8, :op5_pass
+    return-void
+    :op5_pass
 
     instance-of v1, p1, Lq39;
 

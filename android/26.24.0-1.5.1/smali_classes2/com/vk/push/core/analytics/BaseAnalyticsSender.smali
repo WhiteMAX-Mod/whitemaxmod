@@ -439,20 +439,7 @@
 .end method
 
 .method public send(Lcom/vk/push/common/analytics/BaseAnalyticsEvent;)V
-    .locals 2
-
-    iget-object v0, p0, Lcom/vk/push/core/analytics/BaseAnalyticsSender;->b:Lcom/vk/push/common/analytics/AnalyticsTimingsStore;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1}, Lcom/vk/push/common/analytics/AnalyticsTimingsStore;->storeTiming(Ljava/lang/Class;)V
-
-    iget-object p0, p0, Lcom/vk/push/core/analytics/BaseAnalyticsSender;->d:Lu11;
-
-    invoke-interface {p0, p1}, Lzwe;->c(Ljava/lang/Object;)Ljava/lang/Object;
-
+    .locals 0
     return-void
 .end method
 

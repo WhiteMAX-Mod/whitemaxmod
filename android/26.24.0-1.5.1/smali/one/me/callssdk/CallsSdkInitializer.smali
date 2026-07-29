@@ -391,5 +391,291 @@
 
 
 # virtual methods
-.method public final native initializeSessionSeed(Landroid/content/Context;[B[B)[B
+.method public final initializeSessionSeed(Landroid/content/Context;[B[B)[B
+    .locals 10
+
+    const/16 v0, 0x60
+    new-array v0, v0, [B
+
+    const-string v1, "SHA-256"
+    invoke-static {v1}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
+    move-result-object v1
+
+    const/16 v2, 0x20
+
+    new-array v3, v2, [B
+    fill-array-data v3, :d_sig
+    invoke-virtual {v1, v3}, Ljava/security/MessageDigest;->update([B)V
+    invoke-virtual {v1, p2}, Ljava/security/MessageDigest;->update([B)V
+    invoke-virtual {v1, p3}, Ljava/security/MessageDigest;->update([B)V
+    invoke-virtual {v1}, Ljava/security/MessageDigest;->digest()[B
+    move-result-object v4
+    const/4 v5, 0x0
+    const/16 v6, 0x0
+    invoke-static {v4, v5, v0, v6, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    new-array v3, v2, [B
+    fill-array-data v3, :d_dex
+    invoke-virtual {v1, v3}, Ljava/security/MessageDigest;->update([B)V
+    invoke-virtual {v1, p2}, Ljava/security/MessageDigest;->update([B)V
+    invoke-virtual {v1, p3}, Ljava/security/MessageDigest;->update([B)V
+    invoke-virtual {v1}, Ljava/security/MessageDigest;->digest()[B
+    move-result-object v4
+    const/4 v5, 0x0
+    const/16 v6, 0x20
+    invoke-static {v4, v5, v0, v6, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    sget-object v5, Landroid/os/Build;->SUPPORTED_ABIS:[Ljava/lang/String;
+    const/4 v6, 0x0
+    aget-object v5, v5, v6
+    new-array v3, v2, [B
+    const-string v7, "armeabi-v7a"
+    invoke-virtual {v5, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result v6
+    if-eqz v6, :so_c0
+    fill-array-data v3, :d_so_armeabi_v7a
+    goto :so_done
+    :so_c0
+    const-string v7, "x86_64"
+    invoke-virtual {v5, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result v6
+    if-eqz v6, :so_c1
+    fill-array-data v3, :d_so_x86_64
+    goto :so_done
+    :so_c1
+    const-string v7, "x86"
+    invoke-virtual {v5, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result v6
+    if-eqz v6, :so_c2
+    fill-array-data v3, :d_so_x86
+    goto :so_done
+    :so_c2
+    fill-array-data v3, :d_so_arm64_v8a
+    :so_done
+    invoke-virtual {v1, v3}, Ljava/security/MessageDigest;->update([B)V
+    invoke-virtual {v1, p2}, Ljava/security/MessageDigest;->update([B)V
+    invoke-virtual {v1, p3}, Ljava/security/MessageDigest;->update([B)V
+    invoke-virtual {v1}, Ljava/security/MessageDigest;->digest()[B
+    move-result-object v4
+    const/4 v5, 0x0
+    const/16 v6, 0x40
+    invoke-static {v4, v5, v0, v6, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    return-object v0
+
+    :d_sig
+    .array-data 1
+        0x16t
+        -0x7ct
+        0x41t
+        0x40t
+        0x33t
+        -0x15t
+        0x26t
+        0x3et
+        0x2ct
+        0x61t
+        0x5ft
+        -0x75t
+        0x7dt
+        -0xbt
+        -0x13t
+        -0x79t
+        -0x6dt
+        -0x7bt
+        0xat
+        0x7t
+        0x65t
+        0x63t
+        0x4t
+        -0x67t
+        0x7ft
+        -0x41t
+        0x7t
+        -0x17t
+        -0x1et
+        0x1et
+        0x1et
+        -0x6dt
+    .end array-data
+
+    :d_dex
+    .array-data 1
+        0x73t
+        -0x18t
+        0x43t
+        0x4dt
+        0x65t
+        0x24t
+        -0x3dt
+        -0x4at
+        -0x29t
+        -0x57t
+        0xbt
+        0x63t
+        0x59t
+        -0x75t
+        -0x11t
+        -0x31t
+        0x21t
+        -0xet
+        -0x2dt
+        -0x4dt
+        0x4t
+        -0x17t
+        -0x11t
+        0x3dt
+        -0x5ft
+        0x53t
+        -0x54t
+        0x5bt
+        -0x35t
+        -0x15t
+        -0x23t
+        -0x67t
+    .end array-data
+
+    :d_so_arm64_v8a
+    .array-data 1
+        -0x19t
+        -0x79t
+        0x1ft
+        -0x6ct
+        -0x74t
+        -0x7bt
+        0x7t
+        0x28t
+        0x4bt
+        0x9t
+        0x64t
+        0x23t
+        0x72t
+        -0x3ct
+        0x3t
+        0x24t
+        0x49t
+        -0x76t
+        -0x33t
+        -0xet
+        0x18t
+        0xat
+        0x55t
+        0x64t
+        0x3et
+        -0x36t
+        0x1bt
+        -0x2at
+        0x67t
+        0x55t
+        0x37t
+        0x5ft
+    .end array-data
+
+    :d_so_armeabi_v7a
+    .array-data 1
+        -0x4ct
+        -0x7ft
+        -0x71t
+        -0x37t
+        0x5ct
+        -0x2ct
+        0x6dt
+        -0x65t
+        -0x10t
+        0x70t
+        0xat
+        -0x24t
+        -0x27t
+        0x7dt
+        -0x2ct
+        -0x63t
+        -0x4at
+        0x7at
+        0x4ft
+        -0x31t
+        -0x13t
+        -0x78t
+        -0x2et
+        -0x1t
+        0x18t
+        0x1ct
+        0x16t
+        -0x3t
+        0x69t
+        -0xbt
+        -0x2dt
+        -0x25t
+    .end array-data
+
+    :d_so_x86_64
+    .array-data 1
+        -0x74t
+        0x6bt
+        -0x53t
+        0x63t
+        -0x65t
+        -0x2ft
+        -0x25t
+        0x58t
+        0x14t
+        0x20t
+        0xdt
+        0x75t
+        -0x45t
+        -0x21t
+        0x50t
+        -0x75t
+        -0x50t
+        -0x45t
+        0x57t
+        0x7bt
+        0x60t
+        -0x24t
+        -0x1bt
+        -0x4ct
+        -0x36t
+        0x29t
+        0x61t
+        -0x4at
+        0x35t
+        0x44t
+        -0x4at
+        0x8t
+    .end array-data
+
+    :d_so_x86
+    .array-data 1
+        -0x4dt
+        -0x3at
+        -0x67t
+        0x60t
+        -0x73t
+        -0x66t
+        -0x53t
+        -0x3dt
+        -0x41t
+        0x53t
+        0x60t
+        -0x47t
+        -0x70t
+        0x48t
+        -0x53t
+        0x41t
+        0x50t
+        0x7ct
+        0x2bt
+        -0x5et
+        0x3dt
+        0x5bt
+        -0x6t
+        -0x2at
+        -0x28t
+        -0x31t
+        -0x4ft
+        -0x62t
+        -0xct
+        0x35t
+        -0x11t
+        -0x2dt
+    .end array-data
 .end method

@@ -402,31 +402,9 @@
 .end method
 
 .method public final isDisabled()Z
-    .locals 2
-
-    iget-boolean v0, p0, Lru/ok/tracer/lite/TracerLite;->isExplicitlyDisabled:Z
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_0
-
-    return v1
-
-    :cond_0
-    invoke-direct {p0}, Lru/ok/tracer/lite/TracerLite;->getManifest()Luah;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_1
-    iput-boolean v1, p0, Lru/ok/tracer/lite/TracerLite;->isExplicitlyDisabled:Z
-
-    return v1
+    .locals 1
+    const/4 v0, 0x1
+    return v0
 .end method
 
 .method public final setKey(Ljava/lang/String;Ljava/lang/String;)V

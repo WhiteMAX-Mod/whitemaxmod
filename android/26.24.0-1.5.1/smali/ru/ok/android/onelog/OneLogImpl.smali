@@ -140,19 +140,6 @@
 
 .method public static upload(Ljava/lang/String;)V
     .locals 0
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-
-    .line 9
-    invoke-static {p0}, Lru/ok/android/onelog/Collector;->getInstance(Ljava/lang/String;)Lru/ok/android/onelog/Collector;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Lru/ok/android/onelog/Collector;->upload()V
-
     return-void
 .end method
 
@@ -160,17 +147,6 @@
 # virtual methods
 .method public append(Lru/ok/android/onelog/OneLogItem;)V
     .locals 0
-
-    invoke-virtual {p1}, Lru/ok/android/onelog/OneLogItem;->collector()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lru/ok/android/onelog/Collector;->getInstance(Ljava/lang/String;)Lru/ok/android/onelog/Collector;
-
-    move-result-object p0
-
-    invoke-virtual {p0, p1}, Lru/ok/android/onelog/Collector;->append(Lru/ok/android/onelog/OneLogItem;)V
-
     return-void
 .end method
 
@@ -212,9 +188,6 @@
 
 .method public flush()V
     .locals 0
-
-    invoke-static {}, Lru/ok/android/onelog/Collector;->flushAll()V
-
     return-void
 .end method
 
@@ -488,46 +461,10 @@
 
 .method public upload(Ljava/util/Collection;)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/Collection<",
-            "Lru/ok/android/onelog/OneLogItem;",
-            ">;)V"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;,
-            Lru/ok/android/api/core/ApiException;
-        }
-    .end annotation
-
-    .line 8
-    invoke-virtual {p0}, Lru/ok/android/onelog/OneLogImpl;->getApiClient()Lko;
-
-    move-result-object p0
-
-    invoke-static {p0, p1}, Lru/ok/android/onelog/Uploader;->execute(Lko;Ljava/util/Collection;)V
-
     return-void
 .end method
 
 .method public upload(Lru/ok/android/onelog/OneLogItem;)V
     .locals 0
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;,
-            Lru/ok/android/api/core/ApiException;
-        }
-    .end annotation
-
-    invoke-virtual {p0}, Lru/ok/android/onelog/OneLogImpl;->getApiClient()Lko;
-
-    move-result-object p0
-
-    invoke-static {p0, p1}, Lru/ok/android/onelog/Uploader;->execute(Lko;Lru/ok/android/onelog/OneLogItem;)V
-
     return-void
 .end method

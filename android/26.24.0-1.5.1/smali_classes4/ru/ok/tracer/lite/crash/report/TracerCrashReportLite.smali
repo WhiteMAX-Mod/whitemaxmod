@@ -1841,13 +1841,7 @@
 .end method
 
 .method public final report(Ljava/lang/Throwable;Ljava/lang/String;)V
-    .locals 1
-
-    .line 42
-    const-string v0, "NON_FATAL"
-
-    invoke-direct {p0, v0, p1, p2}, Lru/ok/tracer/lite/crash/report/TracerCrashReportLite;->reportException(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;)V
-
+    .locals 0
     return-void
 .end method
 

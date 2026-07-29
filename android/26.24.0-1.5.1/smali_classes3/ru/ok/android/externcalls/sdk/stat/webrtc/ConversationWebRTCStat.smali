@@ -471,6 +471,8 @@
 
     move-object v6, p3
 
+    const-string v4, ""
+
     invoke-direct/range {v0 .. v6}, Lru/ok/android/externcalls/sdk/stat/webrtc/ConversationWebRTCStat$CandidateReceived;-><init>(Lru/ok/android/externcalls/sdk/stat/webrtc/ConversationWebRTCStat;JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-direct {v1, v0}, Lru/ok/android/externcalls/sdk/stat/webrtc/ConversationWebRTCStat;->report(Lru/ok/android/externcalls/sdk/stat/webrtc/ConversationWebRTCStat$Event;)V

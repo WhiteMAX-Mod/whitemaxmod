@@ -56,20 +56,7 @@
 .end method
 
 .method public final b(Landroid/content/Context;)Ljava/lang/Object;
-    .locals 0
-
-    :try_start_0
-    instance-of p0, p1, Lone/me/android/OneMeApplication;
-
-    if-eqz p0, :cond_0
-
-    sget p0, Lrwb;->a:I
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    :cond_0
-    sget-object p0, Lh2b;->h:Lh2b;
-
-    return-object p0
+    .locals 1
+    const/4 v0, 0x0
+    return-object v0
 .end method

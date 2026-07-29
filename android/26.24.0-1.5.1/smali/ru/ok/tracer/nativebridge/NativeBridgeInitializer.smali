@@ -60,17 +60,7 @@
 .end method
 
 .method public final b(Landroid/content/Context;)Ljava/lang/Object;
-    .locals 0
-
-    :try_start_0
-    sget p0, Lru/ok/tracer/nativebridge/NativeBridgeInstaller;->a:I
-
-    invoke-static {}, Lru/ok/tracer/nativebridge/NativeBridgeInstaller;->a()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :catchall_0
-    sget-object p0, Lroh;->a:Lroh;
-
-    return-object p0
+    .locals 1
+    const/4 v0, 0x0
+    return-object v0
 .end method

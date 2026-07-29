@@ -271,7 +271,7 @@
 
     const/4 p1, 0x3
 
-    if-ne p0, p1, :cond_4
+    if-ne p1, p1, :cond_4
 
     sget-object p0, Lt;->b:Lt;
 

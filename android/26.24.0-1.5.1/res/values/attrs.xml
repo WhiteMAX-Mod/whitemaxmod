@@ -2001,4 +2001,5 @@
     <attr name="yearStyle" format="reference" />
     <attr name="yearTodayStyle" format="reference" />
     <attr name="zOrderOnTop" format="boolean" />
+    <attr name="state_dragged" format="boolean" />
 </resources>

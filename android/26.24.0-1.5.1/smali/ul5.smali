@@ -1666,64 +1666,7 @@
 .end method
 
 .method public final W()V
-    .locals 3
-
-    iget-boolean v0, p0, Lul5;->o:Z
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget-object v0, p0, Lul5;->p:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v2, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    :goto_0
-    return-void
-
-    :cond_1
-    iget-object v0, p0, Lul5;->n:Lamj;
-
-    if-eqz v0, :cond_2
-
-    iget-object v1, p0, Lul5;->l:Luld;
-
-    invoke-virtual {v1}, Luld;->b()F
-
-    move-result v1
-
-    iget v0, v0, Lamj;->h:F
-
-    cmpl-float v0, v1, v0
-
-    if-ltz v0, :cond_2
-
-    iget-object p0, p0, Lul5;->p:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {p0, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
-
-    return-void
-
-    :cond_2
-    iget-object v0, p0, Lul5;->a:Ljava/util/concurrent/ExecutorService;
-
-    new-instance v1, Lz5;
-
-    const/16 v2, 0xa
-
-    invoke-direct {v1, p0, v2}, Lz5;-><init>(Ljava/lang/Object;I)V
-
-    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
+    .locals 0
     return-void
 .end method
 

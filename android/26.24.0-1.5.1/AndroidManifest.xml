@@ -183,14 +183,14 @@
                 <category android:name="android.intent.category.BROWSABLE"/>
                 <data android:pathPattern="/..*"/>
                 <data android:scheme="http"/>
-                <data android:scheme="@string/web_scheme"/>
+                <data android:scheme="https"/>
                 <data android:host="@string/app_host"/>
             </intent-filter>
             <intent-filter android:label="max">
                 <action android:name="android.intent.action.VIEW"/>
                 <category android:name="android.intent.category.DEFAULT"/>
                 <category android:name="android.intent.category.BROWSABLE"/>
-                <data android:scheme="@string/app_scheme"/>
+                <data android:scheme="max"/>
                 <data android:host="@string/app_host"/>
             </intent-filter>
             <meta-data android:name="android.app.shortcuts" android:resource="@xml/shortcuts"/>
@@ -286,14 +286,6 @@
                 <action android:name="com.vk.push.GET_DEVICE_ID"/>
             </intent-filter>
         </provider>
-        <meta-data android:name="ru.ok.tracer.startup.Initializer@ca60b3bb-9ba5-4307-8c3f-5218111e10c5" android:value="ru.ok.tracer.nativebridge.NativeBridgeInitializer"/>
-        <meta-data android:name="ru.ok.tracer.startup.Initializer@b7b8ba75-c336-4dee-8e2a-64ef488e0218" android:value="ru.ok.tracer.crash.report.CrashReportInitializer"/>
-        <meta-data android:name="ru.ok.tracer.startup.Initializer@06f2fae1-db2b-4f87-bc14-fc15c26da3b9" android:value="ru.ok.tracer.performance.metrics.PerformanceMetricsInitializer"/>
-        <provider android:authorities="ru.oneme.app.tracer-startup" android:exported="false" android:name="ru.ok.tracer.startup.InitializationProvider"/>
-        <meta-data android:name="ru.ok.tracer.startup.Initializer@25573e8a-bb0f-473f-938a-ca5b3541bda1" android:value="ru.ok.tracer.utils.LoggerInitializer"/>
-        <meta-data android:name="ru.ok.tracer.startup.Initializer@e416cfb4-5661-4523-b12c-0ff4ccabd436" android:value="ru.ok.tracer.TracerInitializer"/>
-        <meta-data android:name="ru.ok.tracer.startup.Initializer@c776f0d5-2110-4920-b53e-7b72536d8135" android:value="ru.ok.tracer.heap.dumps.HeapDumpInitializer"/>
-        <meta-data android:name="ru.ok.tracer.startup.Initializer@0d46a772-bffc-4ede-ac88-5dcaf5f822c1" android:value="ru.ok.tracer.disk.usage.DiskUsageInitializer"/>
         <service android:directBootAware="false" android:enabled="@bool/enable_system_job_service_default" android:exported="true" android:name="androidx.work.impl.background.systemjob.SystemJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
         <receiver android:directBootAware="false" android:enabled="true" android:exported="false" android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"/>
         <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver">
