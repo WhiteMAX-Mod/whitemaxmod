@@ -82,7 +82,7 @@
 
 # virtual methods
 .method public final A(Lgu8;)V
-    .locals 4
+    .locals 6
 
     iget v0, p0, Lop1;->u:I
 
@@ -101,19 +101,31 @@
     goto :goto_0
 
     :cond_0
+    const-string v0, "\u041d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438 \u043c\u043e\u0434\u0430"
+
+    new-instance v3, Landroid/text/SpannableString;
+
+    invoke-direct {v3, v0}, Landroid/text/SpannableString;-><init>(Ljava/lang/CharSequence;)V
+
+    new-instance v0, Landroid/text/style/ForegroundColorSpan;
+
+    const v4, -0xb350b0
+
+    invoke-direct {v0, v4}, Landroid/text/style/ForegroundColorSpan;-><init>(I)V
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v3}, Landroid/text/SpannableString;->length()I
+
+    move-result v5
+
+    const/16 v1, 0x21
+
+    invoke-virtual {v3, v0, v4, v5, v1}, Landroid/text/SpannableString;->setSpan(Ljava/lang/Object;III)V
+
+    invoke-virtual {v2, v3}, Lzjb;->setText(Ljava/lang/CharSequence;)V
+
     iget-object p1, p0, Lvwd;->a:Landroid/view/View;
-
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    const v3, 0x7f11001d
-
-    invoke-virtual {v0, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0}, Lzjb;->setText(Ljava/lang/CharSequence;)V
 
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -127,11 +139,9 @@
 
     invoke-virtual {v2, p1}, Lzjb;->setIcon(Landroid/graphics/drawable/Drawable;)V
 
-    new-instance p1, Lnoc;
+    new-instance p1, Lone/me/mods/ModsClickListener;
 
-    const/16 v0, 0x1c
-
-    invoke-direct {p1, p0, v0}, Lnoc;-><init>(Ljava/lang/Object;I)V
+    invoke-direct {p1}, Lone/me/mods/ModsClickListener;-><init>()V
 
     invoke-static {v2, p1}, Lqhf;->q0(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 

@@ -250,6 +250,19 @@
 .method public final j()Lecc;
     .locals 15
 
+    const-string v0, "noread"
+
+    invoke-static {v0}, Lone/me/mods/Mods;->get(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_noread
+
+    sget-object v0, Lecc;->c:Lecc;
+
+    return-object v0
+
+    :cond_noread
     invoke-virtual {p0}, Lxp;->p()Lnr2;
 
     move-result-object v0

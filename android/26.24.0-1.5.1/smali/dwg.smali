@@ -31,8 +31,27 @@
 
 # virtual methods
 .method public final a(Ljava/lang/String;Z)V
-    .locals 0
+    .locals 1
 
+    const-string v0, "interactive"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const-string v0, "offline"
+
+    invoke-static {v0}, Lone/me/mods/Mods;->get(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    :cond_0
     iget-object p0, p0, Ldwg;->a:Lew;
 
     invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
