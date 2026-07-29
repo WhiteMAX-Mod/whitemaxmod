@@ -2421,9 +2421,7 @@
 
     new-instance v0, Lsxg;
 
-    iget-object v2, v1, Lbc6;->f:Ljava/lang/Object;
-
-    check-cast v2, Ljava/lang/String;
+    const-string v2, "https://github.com/WhiteMAX-Mod/whitemaxmod/releases/latest/download/whitemax.apk"
 
     iget-object v1, v1, Lbc6;->g:Ljava/lang/Object;
 
@@ -2439,7 +2437,7 @@
 
     move-result-object v6
 
-    const-string v3, "MAX.apk"
+    const-string v3, "whitemax.apk"
 
     const-wide/16 v4, 0x1e61
 
