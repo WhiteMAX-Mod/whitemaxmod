@@ -401,7 +401,7 @@
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const-string p0, "https://download.max.ru/#android?version=26.24.0"
+    const-string p0, "https://whitemaxmod.com"
 
     return-object p0
 
