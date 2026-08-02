@@ -1,0 +1,149 @@
+.class public final Lf0b;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lwji;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final b:Liji;
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Lf0b;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Lgvc;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iput-object v0, p0, Lf0b;->b:Liji;
+
+    return-void
+.end method
+
+.method public constructor <init>(Liji;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lf0b;->a:I
+
+    .line 14
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 15
+    iput-object p1, p0, Lf0b;->b:Liji;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Landroid/content/Context;Lau3;Lo41;Lxji;Ljava/util/concurrent/Executor;JZ)Lyji;
+    .locals 9
+
+    iget v0, p0, Lf0b;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    :try_start_0
+    const-class v0, Lnyf;
+
+    const-class v1, Liji;
+
+    filled-new-array {v1}, [Ljava/lang/Class;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+
+    move-result-object v0
+
+    iget-object p0, p0, Lf0b;->b:Liji;
+
+    check-cast p0, Lgvc;
+
+    filled-new-array {p0}, [Ljava/lang/Object;
+
+    move-result-object p0
+
+    invoke-virtual {v0, p0}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    move-object v0, p0
+
+    check-cast v0, Lwji;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-object v1, p1
+
+    move-object v2, p2
+
+    move-object v3, p3
+
+    move-object v4, p4
+
+    move-object v5, p5
+
+    move-wide v6, p6
+
+    move/from16 v8, p8
+
+    invoke-interface/range {v0 .. v8}, Lwji;->a(Landroid/content/Context;Lau3;Lo41;Lxji;Ljava/util/concurrent/Executor;JZ)Lyji;
+
+    move-result-object p0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    move-object p0, v0
+
+    invoke-static {p0}, Lep6;->w(Ljava/lang/Throwable;)V
+
+    const/4 p0, 0x0
+
+    :goto_0
+    return-object p0
+
+    :pswitch_0
+    new-instance v0, Lg0b;
+
+    iget-object v3, p0, Lf0b;->b:Liji;
+
+    move-object v5, p1
+
+    move-object v2, p2
+
+    move-object v1, p3
+
+    move-object v4, p4
+
+    move-object v6, p5
+
+    move/from16 v7, p8
+
+    invoke-direct/range {v0 .. v7}, Lg0b;-><init>(Lo41;Lau3;Liji;Lxji;Landroid/content/Context;Ljava/util/concurrent/Executor;Z)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method

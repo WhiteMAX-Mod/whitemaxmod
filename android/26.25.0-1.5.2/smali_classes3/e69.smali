@@ -1,0 +1,320 @@
+.class public final Le69;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# instance fields
+.field public final a:Ld69;
+
+.field public final b:J
+
+
+# direct methods
+.method public constructor <init>(Ld69;J)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Le69;->a:Ld69;
+
+    iput-wide p2, p0, Le69;->b:J
+
+    return-void
+.end method
+
+.method public static a(Lfda;)Le69;
+    .locals 24
+
+    move-object/from16 v0, p0
+
+    invoke-static {v0}, Lbe3;->b0(Lfda;)I
+
+    move-result v1
+
+    const-wide/high16 v2, 0x36a0000000000000L    # 1.401298464324817E-45
+
+    const-wide/16 v4, 0x0
+
+    const-wide/16 v6, 0x0
+
+    const/4 v8, 0x0
+
+    move-wide v11, v2
+
+    move-wide v13, v11
+
+    move-wide/from16 v20, v4
+
+    move-wide v15, v6
+
+    move/from16 v17, v8
+
+    move/from16 v18, v17
+
+    move/from16 v19, v18
+
+    const/4 v8, 0x0
+
+    :goto_0
+    if-ge v8, v1, :cond_7
+
+    invoke-virtual {v0}, Lfda;->S0()Ljava/lang/String;
+
+    move-result-object v10
+
+    invoke-virtual {v10}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v10}, Ljava/lang/String;->hashCode()I
+
+    move-result v22
+
+    const/16 v23, -0x1
+
+    sparse-switch v22, :sswitch_data_0
+
+    goto :goto_1
+
+    :sswitch_0
+    const-string v9, "time"
+
+    invoke-virtual {v10, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v9
+
+    if-nez v9, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    const/16 v23, 0x6
+
+    goto :goto_1
+
+    :sswitch_1
+    const-string v9, "spd"
+
+    invoke-virtual {v10, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v9
+
+    if-nez v9, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    const/16 v23, 0x5
+
+    goto :goto_1
+
+    :sswitch_2
+    const-string v9, "lng"
+
+    invoke-virtual {v10, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v9
+
+    if-nez v9, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    const/16 v23, 0x4
+
+    goto :goto_1
+
+    :sswitch_3
+    const-string v9, "lat"
+
+    invoke-virtual {v10, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v9
+
+    if-nez v9, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    const/16 v23, 0x3
+
+    goto :goto_1
+
+    :sswitch_4
+    const-string v9, "hdn"
+
+    invoke-virtual {v10, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v9
+
+    if-nez v9, :cond_4
+
+    goto :goto_1
+
+    :cond_4
+    const/16 v23, 0x2
+
+    goto :goto_1
+
+    :sswitch_5
+    const-string v9, "epu"
+
+    invoke-virtual {v10, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v9
+
+    if-nez v9, :cond_5
+
+    goto :goto_1
+
+    :cond_5
+    const/16 v23, 0x1
+
+    goto :goto_1
+
+    :sswitch_6
+    const-string v9, "alt"
+
+    invoke-virtual {v10, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v9
+
+    if-nez v9, :cond_6
+
+    goto :goto_1
+
+    :cond_6
+    const/16 v23, 0x0
+
+    :goto_1
+    packed-switch v23, :pswitch_data_0
+
+    invoke-virtual {v0}, Lfda;->x()V
+
+    goto :goto_2
+
+    :pswitch_0
+    invoke-static {v0, v4, v5}, Lbe3;->a0(Lfda;J)J
+
+    move-result-wide v20
+
+    goto :goto_2
+
+    :pswitch_1
+    invoke-static {v0}, Lbe3;->X(Lfda;)F
+
+    move-result v9
+
+    move/from16 v19, v9
+
+    goto :goto_2
+
+    :pswitch_2
+    invoke-static {v0, v2, v3}, Lbe3;->W(Lfda;D)D
+
+    move-result-wide v13
+
+    goto :goto_2
+
+    :pswitch_3
+    invoke-static {v0, v2, v3}, Lbe3;->W(Lfda;D)D
+
+    move-result-wide v11
+
+    goto :goto_2
+
+    :pswitch_4
+    invoke-static {v0}, Lbe3;->X(Lfda;)F
+
+    move-result v9
+
+    move/from16 v18, v9
+
+    goto :goto_2
+
+    :pswitch_5
+    invoke-static {v0}, Lbe3;->X(Lfda;)F
+
+    move-result v9
+
+    move/from16 v17, v9
+
+    goto :goto_2
+
+    :pswitch_6
+    invoke-static {v0, v6, v7}, Lbe3;->W(Lfda;D)D
+
+    move-result-wide v15
+
+    :goto_2
+    add-int/lit8 v8, v8, 0x1
+
+    goto/16 :goto_0
+
+    :cond_7
+    new-instance v0, Le69;
+
+    new-instance v10, Ld69;
+
+    invoke-direct/range {v10 .. v19}, Ld69;-><init>(DDDFFF)V
+
+    move-wide/from16 v4, v20
+
+    invoke-direct {v0, v10, v4, v5}, Le69;-><init>(Ld69;J)V
+
+    return-object v0
+
+    nop
+
+    :sswitch_data_0
+    .sparse-switch
+        0x179a9 -> :sswitch_6
+        0x1892a -> :sswitch_5
+        0x192f2 -> :sswitch_4
+        0x1a19f -> :sswitch_3
+        0x1a325 -> :sswitch_2
+        0x1bda7 -> :sswitch_1
+        0x3652cd -> :sswitch_0
+    .end sparse-switch
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    iget-object v0, p0, Le69;->a:Ld69;
+
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "LocationInfo{location="
+
+    const-string v2, ", time="
+
+    iget-wide v3, p0, Le69;->b:J
+
+    invoke-static {v3, v4, v1, v0, v2}, Lnzg;->A(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object p0
+
+    const-string v0, "}"
+
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method

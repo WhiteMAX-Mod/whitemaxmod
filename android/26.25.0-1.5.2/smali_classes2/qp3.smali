@@ -1,0 +1,113 @@
+.class public final synthetic Lqp3;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lone/me/chats/search/views/ClearRecentSearchBottomSheet;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lone/me/chats/search/views/ClearRecentSearchBottomSheet;I)V
+    .locals 0
+
+    iput p2, p0, Lqp3;->a:I
+
+    iput-object p1, p0, Lqp3;->b:Lone/me/chats/search/views/ClearRecentSearchBottomSheet;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onClick(Landroid/view/View;)V
+    .locals 4
+
+    iget p1, p0, Lqp3;->a:I
+
+    const/4 v0, 0x1
+
+    iget-object p0, p0, Lqp3;->b:Lone/me/chats/search/views/ClearRecentSearchBottomSheet;
+
+    packed-switch p1, :pswitch_data_0
+
+    invoke-virtual {p0, v0}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->r1(Z)V
+
+    return-void
+
+    :pswitch_0
+    invoke-virtual {p0, v0}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->r1(Z)V
+
+    invoke-virtual {p0}, Lwn4;->getTargetController()Lwn4;
+
+    move-result-object p0
+
+    instance-of p1, p0, Lone/me/chats/search/ChatsListSearchScreen;
+
+    const/4 v1, 0x0
+
+    if-eqz p1, :cond_0
+
+    check-cast p0, Lone/me/chats/search/ChatsListSearchScreen;
+
+    goto :goto_0
+
+    :cond_0
+    move-object p0, v1
+
+    :goto_0
+    if-eqz p0, :cond_2
+
+    invoke-virtual {p0}, Lone/me/chats/search/ChatsListSearchScreen;->o1()Lih3;
+
+    move-result-object p0
+
+    iget-object p1, p0, Lih3;->r1:Lq6g;
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p1}, Ldk8;->isActive()Z
+
+    move-result p1
+
+    if-ne p1, v0, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    iget-object p1, p0, Lpui;->b:Lym4;
+
+    iget-object v0, p0, Lih3;->n1:Ltq4;
+
+    new-instance v2, Lqg3;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v2, p0, v1, v3}, Lqg3;-><init>(Lih3;Lgn4;I)V
+
+    const/4 v1, 0x2
+
+    invoke-static {p1, v0, v3, v2, v1}, Lfob;->r0(Lcr4;Lrq4;ILla7;I)Lq6g;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lih3;->r1:Lq6g;
+
+    :cond_2
+    :goto_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method

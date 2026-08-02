@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set android:ordering="together"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <objectAnimator android:interpolator="@drawable/$contacts_avd__22" android:duration="250" android:startOffset="0" android:propertyName="translateXY" android:pathData="M 29.112,16.313C 29.112,16.313 32.237,16.431 32.237,16.431" android:propertyXName="translateX" android:propertyYName="translateY" />
+    <objectAnimator android:interpolator="@drawable/$contacts_avd__23" android:duration="150" android:startOffset="250" android:propertyName="translateXY" android:pathData="M 32.237,16.431C 32.237,16.431 15.049,17.407 15.049,17.407" android:propertyXName="translateX" android:propertyYName="translateY" />
+    <objectAnimator android:interpolator="@drawable/$contacts_avd__24" android:duration="67" android:startOffset="400" android:propertyName="translateXY" android:pathData="M 15.049,17.407C 15.049,17.407 7.354,16.147 7.354,16.147" android:propertyXName="translateX" android:propertyYName="translateY" />
+    <objectAnimator android:interpolator="@drawable/$contacts_avd__25" android:duration="283" android:startOffset="467" android:propertyName="translateXY" android:pathData="M 7.354,16.147C 7.354,16.147 7.158,16.714 7.158,16.714" android:propertyXName="translateX" android:propertyYName="translateY" />
+    <objectAnimator android:interpolator="@drawable/$contacts_avd__26" android:duration="133" android:startOffset="750" android:propertyName="translateXY" android:pathData="M 7.158,16.714C 7.158,16.714 16.143,17.524 16.143,17.524" android:propertyXName="translateX" android:propertyYName="translateY" />
+    <objectAnimator android:interpolator="@drawable/$contacts_avd__27" android:duration="233" android:startOffset="883" android:propertyName="translateXY" android:pathData="M 16.143,17.524C 16.143,17.524 29.112,16.313 29.112,16.313" android:propertyXName="translateX" android:propertyYName="translateY" />
+</set>

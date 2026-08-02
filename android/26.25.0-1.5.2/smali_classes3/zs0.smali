@@ -1,0 +1,19 @@
+.class public final Lzs0;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# instance fields
+.field public final a:[Logj;
+
+
+# direct methods
+.method public constructor <init>([Logj;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lzs0;->a:[Logj;
+
+    return-void
+.end method

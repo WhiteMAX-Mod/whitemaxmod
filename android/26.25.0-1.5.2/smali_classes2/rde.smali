@@ -1,0 +1,142 @@
+.class public final Lrde;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# instance fields
+.field public final a:I
+
+
+# direct methods
+.method public synthetic constructor <init>(I)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Lrde;->a:I
+
+    return-void
+.end method
+
+.method public static final a(I)Ljava/lang/String;
+    .locals 1
+
+    packed-switch p0, :pswitch_data_0
+
+    const-string v0, "UNKNOWN-"
+
+    invoke-static {p0, v0}, Lh45;->h(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_0
+    const-string p0, "TEMPLATE_MANUAL"
+
+    return-object p0
+
+    :pswitch_1
+    const-string p0, "TEMPLATE_ZERO_SHUTTER_LAG"
+
+    return-object p0
+
+    :pswitch_2
+    const-string p0, "TEMPLATE_VIDEO_SNAPSHOT"
+
+    return-object p0
+
+    :pswitch_3
+    const-string p0, "TEMPLATE_RECORD"
+
+    return-object p0
+
+    :pswitch_4
+    const-string p0, "TEMPLATE_STILL_CAPTURE"
+
+    return-object p0
+
+    :pswitch_5
+    const-string p0, "TEMPLATE_PREVIEW"
+
+    return-object p0
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public static b(I)Ljava/lang/String;
+    .locals 2
+
+    const-string v0, "RequestTemplate(value="
+
+    const/16 v1, 0x29
+
+    invoke-static {v0, p0, v1}, Lnzg;->s(Ljava/lang/String;IC)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    instance-of v0, p1, Lrde;
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    check-cast p1, Lrde;
+
+    iget p1, p1, Lrde;->a:I
+
+    iget p0, p0, Lrde;->a:I
+
+    if-eq p0, p1, :cond_1
+
+    :goto_0
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_1
+    const/4 p0, 0x1
+
+    return p0
+.end method
+
+.method public final hashCode()I
+    .locals 0
+
+    iget p0, p0, Lrde;->a:I
+
+    invoke-static {p0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 0
+
+    iget p0, p0, Lrde;->a:I
+
+    invoke-static {p0}, Lrde;->b(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector android:drawable="@drawable/$live_stream__0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <target android:name="_R_G_L_2_G" android:animation="@drawable/$live_stream__1" />
+    <target android:name="_R_G_L_1_G" android:animation="@drawable/$live_stream__10" />
+    <target android:name="_R_G_L_0_G" android:animation="@drawable/$live_stream__19" />
+    <target android:name="time_group" android:animation="@drawable/$live_stream__26" />
+</animated-vector>

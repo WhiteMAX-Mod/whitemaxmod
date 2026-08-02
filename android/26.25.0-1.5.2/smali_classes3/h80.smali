@@ -1,0 +1,170 @@
+.class public final Lh80;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# instance fields
+.field public a:I
+
+.field public b:Z
+
+.field public c:Ljava/lang/Object;
+
+.field public d:Ljava/lang/Object;
+
+.field public e:Ljava/lang/Object;
+
+
+# direct methods
+.method public constructor <init>(I)V
+    .locals 1
+
+    .line 14
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 15
+    sget-object v0, Ld70;->i:Ld70;
+
+    iput-object v0, p0, Lh80;->e:Ljava/lang/Object;
+
+    .line 16
+    iput p1, p0, Lh80;->a:I
+
+    return-void
+.end method
+
+.method public constructor <init>(Ldw7;Lmo;Lho;IZ)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lh80;->e:Ljava/lang/Object;
+
+    iput-object p2, p0, Lh80;->c:Ljava/lang/Object;
+
+    iput-object p3, p0, Lh80;->d:Ljava/lang/Object;
+
+    iput p4, p0, Lh80;->a:I
+
+    iput-boolean p5, p0, Lh80;->b:Z
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public a()Li80;
+    .locals 7
+
+    iget-object v0, p0, Lh80;->c:Ljava/lang/Object;
+
+    move-object v3, v0
+
+    check-cast v3, Landroid/media/AudioManager$OnAudioFocusChangeListener;
+
+    if-eqz v3, :cond_0
+
+    new-instance v1, Li80;
+
+    iget v2, p0, Lh80;->a:I
+
+    iget-object v0, p0, Lh80;->d:Ljava/lang/Object;
+
+    move-object v4, v0
+
+    check-cast v4, Landroid/os/Handler;
+
+    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v0, p0, Lh80;->e:Ljava/lang/Object;
+
+    move-object v5, v0
+
+    check-cast v5, Ld70;
+
+    iget-boolean v6, p0, Lh80;->b:Z
+
+    invoke-direct/range {v1 .. v6}, Li80;-><init>(ILandroid/media/AudioManager$OnAudioFocusChangeListener;Landroid/os/Handler;Ld70;Z)V
+
+    return-object v1
+
+    :cond_0
+    const-string p0, "Can\'t build an AudioFocusRequestCompat instance without a listener"
+
+    invoke-static {p0}, Lkie;->l(Ljava/lang/String;)V
+
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method public b(Ld70;)V
+    .locals 0
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iput-object p1, p0, Lh80;->e:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public c(Lb80;Landroid/os/Handler;)V
+    .locals 0
+
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iput-object p1, p0, Lh80;->c:Ljava/lang/Object;
+
+    iput-object p2, p0, Lh80;->d:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public d(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lh80;->b:Z
+
+    return-void
+.end method
+
+.method public e(Ljava/io/BufferedOutputStream;)V
+    .locals 4
+
+    iget v0, p0, Lh80;->a:I
+
+    iget-object v1, p0, Lh80;->d:Ljava/lang/Object;
+
+    check-cast v1, Lho;
+
+    iget-object v2, p0, Lh80;->c:Ljava/lang/Object;
+
+    check-cast v2, Lbp;
+
+    iget-object v3, p0, Lh80;->e:Ljava/lang/Object;
+
+    check-cast v3, Ldw7;
+
+    iget-object v3, v3, Ldw7;->b:Lfo;
+
+    iget-boolean p0, p0, Lh80;->b:Z
+
+    if-eqz p0, :cond_0
+
+    new-instance p0, Law7;
+
+    invoke-direct {p0, p1}, Ljava/util/zip/GZIPOutputStream;-><init>(Ljava/io/OutputStream;)V
+
+    invoke-virtual {v3, p0, v2, v1, v0}, Lfo;->c(Ljava/io/OutputStream;Lbp;Lho;I)V
+
+    invoke-virtual {p0}, Ljava/util/zip/DeflaterOutputStream;->finish()V
+
+    invoke-virtual {p0}, Law7;->l()V
+
+    return-void
+
+    :cond_0
+    invoke-virtual {v3, p1, v2, v1, v0}, Lfo;->c(Ljava/io/OutputStream;Lbp;Lho;I)V
+
+    return-void
+.end method

@@ -1,0 +1,98 @@
+.class public final Ld1k;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lv0k;
+
+
+# instance fields
+.field public final a:Lexj;
+
+.field public final b:Lj8i;
+
+.field public final c:Lc1k;
+
+.field public final synthetic d:Ll70;
+
+
+# direct methods
+.method public constructor <init>(Ll70;Lexj;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ld1k;->d:Ll70;
+
+    iput-object p2, p0, Ld1k;->a:Lexj;
+
+    new-instance p1, Lj8i;
+
+    invoke-direct {p1, p2}, Lj8i;-><init>(Lexj;)V
+
+    iput-object p1, p0, Ld1k;->b:Lj8i;
+
+    new-instance p1, Lc1k;
+
+    invoke-direct {p1, p0, p2}, Lc1k;-><init>(Ld1k;Lexj;)V
+
+    iput-object p1, p0, Ld1k;->c:Lc1k;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()Ljava/io/OutputStream;
+    .locals 0
+
+    .line 8
+    iget-object p0, p0, Ld1k;->b:Lj8i;
+
+    return-object p0
+.end method
+
+.method public final a(J)V
+    .locals 0
+
+    iget-object p0, p0, Ld1k;->a:Lexj;
+
+    iget-object p0, p0, Lexj;->e:Ljxj;
+
+    invoke-virtual {p0, p1, p2}, Ljxj;->g(J)V
+
+    return-void
+.end method
+
+.method public final b()Ljava/io/InputStream;
+    .locals 0
+
+    .line 8
+    iget-object p0, p0, Ld1k;->c:Lc1k;
+
+    return-object p0
+.end method
+
+.method public final b(J)V
+    .locals 0
+
+    iget-object p0, p0, Ld1k;->a:Lexj;
+
+    iget-object p0, p0, Lexj;->f:Lpxj;
+
+    invoke-virtual {p0, p1, p2}, Lpxj;->b(J)V
+
+    return-void
+.end method
+
+.method public final e()Z
+    .locals 0
+
+    iget-object p0, p0, Ld1k;->a:Lexj;
+
+    invoke-virtual {p0}, Lexj;->d()Z
+
+    move-result p0
+
+    return p0
+.end method

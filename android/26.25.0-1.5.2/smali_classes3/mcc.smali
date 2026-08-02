@@ -1,0 +1,691 @@
+.class public final Lmcc;
+.super Ljava/io/Writer;
+.source "SourceFile"
+
+
+# static fields
+.field public static final e:[C
+
+
+# instance fields
+.field public final a:[C
+
+.field public final b:[B
+
+.field public final c:Ljava/io/OutputStream;
+
+.field public final d:Lgdi;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    const/4 v0, 0x4
+
+    new-array v0, v0, [C
+
+    fill-array-data v0, :array_0
+
+    sput-object v0, Lmcc;->e:[C
+
+    return-void
+
+    nop
+
+    :array_0
+    .array-data 2
+        0x6es
+        0x75s
+        0x6cs
+        0x6cs
+    .end array-data
+.end method
+
+.method public constructor <init>(Ljava/io/OutputStream;)V
+    .locals 3
+
+    new-instance v0, Lgdi;
+
+    invoke-direct {v0}, Lgdi;-><init>()V
+
+    invoke-direct {p0}, Ljava/io/Writer;-><init>()V
+
+    const/4 v1, 0x1
+
+    const/16 v2, 0x80
+
+    invoke-static {v2, v1}, Ljava/lang/Math;->max(II)I
+
+    move-result v1
+
+    new-array v1, v1, [C
+
+    iput-object v1, p0, Lmcc;->a:[C
+
+    iput-object p1, p0, Lmcc;->c:Ljava/io/OutputStream;
+
+    iput-object v0, p0, Lmcc;->d:Lgdi;
+
+    const/4 p1, 0x4
+
+    invoke-static {v2, p1}, Ljava/lang/Math;->max(II)I
+
+    move-result p1
+
+    new-array p1, p1, [B
+
+    iput-object p1, p0, Lmcc;->b:[B
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final append(C)Ljava/io/Writer;
+    .locals 0
+
+    .line 19
+    invoke-virtual {p0, p1}, Lmcc;->write(I)V
+
+    return-object p0
+.end method
+
+.method public final append(Ljava/lang/CharSequence;)Ljava/io/Writer;
+    .locals 2
+
+    const/4 v0, 0x0
+
+    if-nez p1, :cond_0
+
+    sget-object p1, Lmcc;->e:[C
+
+    const/4 v1, 0x4
+
+    invoke-virtual {p0, p1, v0, v1}, Lmcc;->write([CII)V
+
+    return-object p0
+
+    :cond_0
+    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
+
+    move-result v1
+
+    invoke-virtual {p0, v0, v1, p1}, Lmcc;->b(IILjava/lang/CharSequence;)V
+
+    return-object p0
+.end method
+
+.method public final append(Ljava/lang/CharSequence;II)Ljava/io/Writer;
+    .locals 0
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x0
+
+    const/4 p2, 0x4
+
+    .line 22
+    sget-object p3, Lmcc;->e:[C
+
+    invoke-virtual {p0, p3, p1, p2}, Lmcc;->write([CII)V
+
+    return-object p0
+
+    :cond_0
+    sub-int/2addr p3, p2
+
+    .line 23
+    invoke-virtual {p0, p2, p3, p1}, Lmcc;->b(IILjava/lang/CharSequence;)V
+
+    return-object p0
+.end method
+
+.method public final append(C)Ljava/lang/Appendable;
+    .locals 0
+
+    .line 20
+    invoke-virtual {p0, p1}, Lmcc;->write(I)V
+
+    return-object p0
+.end method
+
+.method public final bridge synthetic append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
+    .locals 0
+
+    .line 21
+    invoke-virtual {p0, p1}, Lmcc;->append(Ljava/lang/CharSequence;)Ljava/io/Writer;
+
+    return-object p0
+.end method
+
+.method public final bridge synthetic append(Ljava/lang/CharSequence;II)Ljava/lang/Appendable;
+    .locals 0
+
+    .line 18
+    invoke-virtual {p0, p1, p2, p3}, Lmcc;->append(Ljava/lang/CharSequence;II)Ljava/io/Writer;
+
+    return-object p0
+.end method
+
+.method public final b(IILjava/lang/CharSequence;)V
+    .locals 8
+
+    instance-of v0, p3, Ljava/lang/String;
+
+    if-eqz v0, :cond_0
+
+    check-cast p3, Ljava/lang/String;
+
+    invoke-virtual {p0, p3, p1, p2}, Lmcc;->write(Ljava/lang/String;II)V
+
+    return-void
+
+    :cond_0
+    instance-of v0, p3, Ljava/lang/StringBuilder;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_2
+
+    check-cast p3, Ljava/lang/StringBuilder;
+
+    iget-object v0, p0, Lmcc;->a:[C
+
+    array-length v2, v0
+
+    iget-object v3, p0, Ljava/io/Writer;->lock:Ljava/lang/Object;
+
+    monitor-enter v3
+
+    :goto_0
+    if-lez p2, :cond_1
+
+    :try_start_0
+    invoke-static {v2, p2}, Ljava/lang/Math;->min(II)I
+
+    move-result v4
+
+    add-int v5, p1, v4
+
+    invoke-virtual {p3, p1, v5, v0, v1}, Ljava/lang/StringBuilder;->getChars(II[CI)V
+
+    invoke-virtual {p0, v0, v1, v4}, Lmcc;->write([CII)V
+
+    sub-int/2addr p2, v4
+
+    move p1, v5
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p0
+
+    goto :goto_1
+
+    :cond_1
+    monitor-exit v3
+
+    return-void
+
+    :goto_1
+    monitor-exit v3
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
+
+    :cond_2
+    instance-of v0, p3, Ljava/lang/StringBuffer;
+
+    if-eqz v0, :cond_4
+
+    check-cast p3, Ljava/lang/StringBuffer;
+
+    iget-object v0, p0, Lmcc;->a:[C
+
+    array-length v2, v0
+
+    iget-object v3, p0, Ljava/io/Writer;->lock:Ljava/lang/Object;
+
+    monitor-enter v3
+
+    :goto_2
+    if-lez p2, :cond_3
+
+    :try_start_1
+    invoke-static {v2, p2}, Ljava/lang/Math;->min(II)I
+
+    move-result v4
+
+    add-int v5, p1, v4
+
+    invoke-virtual {p3, p1, v5, v0, v1}, Ljava/lang/StringBuffer;->getChars(II[CI)V
+
+    invoke-virtual {p0, v0, v1, v4}, Lmcc;->write([CII)V
+
+    sub-int/2addr p2, v4
+
+    move p1, v5
+
+    goto :goto_2
+
+    :catchall_1
+    move-exception p0
+
+    goto :goto_3
+
+    :cond_3
+    monitor-exit v3
+
+    return-void
+
+    :goto_3
+    monitor-exit v3
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    throw p0
+
+    :cond_4
+    instance-of v0, p3, Landroid/text/GetChars;
+
+    if-eqz v0, :cond_6
+
+    check-cast p3, Landroid/text/GetChars;
+
+    iget-object v0, p0, Lmcc;->a:[C
+
+    array-length v2, v0
+
+    iget-object v3, p0, Ljava/io/Writer;->lock:Ljava/lang/Object;
+
+    monitor-enter v3
+
+    :goto_4
+    if-lez p2, :cond_5
+
+    :try_start_2
+    invoke-static {v2, p2}, Ljava/lang/Math;->min(II)I
+
+    move-result v4
+
+    add-int v5, p1, v4
+
+    invoke-interface {p3, p1, v5, v0, v1}, Landroid/text/GetChars;->getChars(II[CI)V
+
+    invoke-virtual {p0, v0, v1, v4}, Lmcc;->write([CII)V
+
+    sub-int/2addr p2, v4
+
+    move p1, v5
+
+    goto :goto_4
+
+    :catchall_2
+    move-exception p0
+
+    goto :goto_5
+
+    :cond_5
+    monitor-exit v3
+
+    return-void
+
+    :goto_5
+    monitor-exit v3
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_2
+
+    throw p0
+
+    :cond_6
+    instance-of v0, p3, Ljava/nio/CharBuffer;
+
+    if-eqz v0, :cond_7
+
+    move-object v0, p3
+
+    check-cast v0, Ljava/nio/CharBuffer;
+
+    invoke-virtual {v0}, Ljava/nio/CharBuffer;->hasArray()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_7
+
+    invoke-virtual {v0}, Ljava/nio/CharBuffer;->array()[C
+
+    move-result-object p3
+
+    invoke-virtual {v0}, Ljava/nio/CharBuffer;->arrayOffset()I
+
+    move-result v0
+
+    add-int/2addr v0, p1
+
+    invoke-virtual {p0, p3, v0, p2}, Lmcc;->write([CII)V
+
+    return-void
+
+    :cond_7
+    iget-object v0, p0, Lmcc;->a:[C
+
+    array-length v2, v0
+
+    iget-object v3, p0, Ljava/io/Writer;->lock:Ljava/lang/Object;
+
+    monitor-enter v3
+
+    :goto_6
+    if-lez p2, :cond_9
+
+    :try_start_3
+    invoke-static {v2, p2}, Ljava/lang/Math;->min(II)I
+
+    move-result v4
+
+    add-int v5, p1, v4
+
+    move v6, v1
+
+    :goto_7
+    if-ge v6, v4, :cond_8
+
+    invoke-interface {p3, p1}, Ljava/lang/CharSequence;->charAt(I)C
+
+    move-result v7
+
+    aput-char v7, v0, v6
+
+    add-int/lit8 v6, v6, 0x1
+
+    add-int/lit8 p1, p1, 0x1
+
+    goto :goto_7
+
+    :catchall_3
+    move-exception p0
+
+    goto :goto_8
+
+    :cond_8
+    invoke-virtual {p0, v0, v1, v4}, Lmcc;->write([CII)V
+
+    sub-int/2addr p2, v4
+
+    move p1, v5
+
+    goto :goto_6
+
+    :cond_9
+    monitor-exit v3
+
+    return-void
+
+    :goto_8
+    monitor-exit v3
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_3
+
+    throw p0
+.end method
+
+.method public final close()V
+    .locals 5
+
+    iget-object v0, p0, Ljava/io/Writer;->lock:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-object v1, p0, Lmcc;->d:Lgdi;
+
+    iget-object v2, p0, Lmcc;->b:[B
+
+    array-length v3, v2
+
+    iget-char v3, v1, Lgdi;->c:C
+
+    const/4 v4, 0x0
+
+    if-eqz v3, :cond_0
+
+    invoke-virtual {v1, v4, v2}, Lgdi;->b(I[B)I
+
+    move-result v2
+
+    iput-char v4, v1, Lgdi;->c:C
+
+    goto :goto_0
+
+    :cond_0
+    move v2, v4
+
+    :goto_0
+    iget-object v1, p0, Lmcc;->c:Ljava/io/OutputStream;
+
+    iget-object v3, p0, Lmcc;->b:[B
+
+    invoke-virtual {v1, v3, v4, v2}, Ljava/io/OutputStream;->write([BII)V
+
+    iget-object p0, p0, Lmcc;->c:Ljava/io/OutputStream;
+
+    invoke-virtual {p0}, Ljava/io/OutputStream;->close()V
+
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception p0
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
+.end method
+
+.method public final flush()V
+    .locals 1
+
+    iget-object v0, p0, Ljava/io/Writer;->lock:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-object p0, p0, Lmcc;->c:Ljava/io/OutputStream;
+
+    invoke-virtual {p0}, Ljava/io/OutputStream;->flush()V
+
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception p0
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
+.end method
+
+.method public final write(I)V
+    .locals 2
+
+    int-to-char p1, p1
+
+    .line 43
+    iget-object v0, p0, Lmcc;->a:[C
+
+    const/4 v1, 0x0
+
+    aput-char p1, v0, v1
+
+    const/4 p1, 0x1
+
+    .line 44
+    invoke-virtual {p0, v0, v1, p1}, Lmcc;->write([CII)V
+
+    return-void
+.end method
+
+.method public final write(Ljava/lang/String;)V
+    .locals 2
+
+    const/4 v0, 0x0
+
+    .line 53
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
+
+    move-result v1
+
+    invoke-virtual {p0, p1, v0, v1}, Lmcc;->write(Ljava/lang/String;II)V
+
+    return-void
+.end method
+
+.method public final write(Ljava/lang/String;II)V
+    .locals 6
+
+    .line 45
+    iget-object v0, p0, Lmcc;->a:[C
+
+    .line 46
+    array-length v1, v0
+
+    .line 47
+    iget-object v2, p0, Ljava/io/Writer;->lock:Ljava/lang/Object;
+
+    monitor-enter v2
+
+    :goto_0
+    if-lez p3, :cond_0
+
+    .line 48
+    :try_start_0
+    invoke-static {v1, p3}, Ljava/lang/Math;->min(II)I
+
+    move-result v3
+
+    add-int v4, p2, v3
+
+    const/4 v5, 0x0
+
+    .line 49
+    invoke-virtual {p1, p2, v4, v0, v5}, Ljava/lang/String;->getChars(II[CI)V
+
+    .line 50
+    invoke-virtual {p0, v0, v5, v3}, Lmcc;->write([CII)V
+
+    sub-int/2addr p3, v3
+
+    move p2, v4
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p0
+
+    goto :goto_1
+
+    .line 51
+    :cond_0
+    monitor-exit v2
+
+    return-void
+
+    :goto_1
+    monitor-exit v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
+.end method
+
+.method public final write([C)V
+    .locals 2
+
+    const/4 v0, 0x0
+
+    .line 52
+    array-length v1, p1
+
+    invoke-virtual {p0, p1, v0, v1}, Lmcc;->write([CII)V
+
+    return-void
+.end method
+
+.method public final write([CII)V
+    .locals 8
+
+    iget-object v1, p0, Ljava/io/Writer;->lock:Ljava/lang/Object;
+
+    monitor-enter v1
+
+    add-int v0, p2, p3
+
+    move v4, p2
+
+    move v5, p3
+
+    :goto_0
+    if-ge v4, v0, :cond_0
+
+    :try_start_0
+    iget-object v2, p0, Lmcc;->d:Lgdi;
+
+    iget-object v6, p0, Lmcc;->b:[B
+
+    array-length v7, v6
+
+    move-object v3, p1
+
+    invoke-virtual/range {v2 .. v7}, Lgdi;->a([CII[BI)J
+
+    move-result-wide p1
+
+    long-to-int p3, p1
+
+    iget-object v2, p0, Lmcc;->c:Ljava/io/OutputStream;
+
+    iget-object v4, p0, Lmcc;->b:[B
+
+    const/4 v5, 0x0
+
+    invoke-virtual {v2, v4, v5, p3}, Ljava/io/OutputStream;->write([BII)V
+
+    const/16 p3, 0x20
+
+    shr-long/2addr p1, p3
+
+    long-to-int v4, p1
+
+    sub-int v5, v0, v4
+
+    move-object p1, v3
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    move-object p0, v0
+
+    goto :goto_1
+
+    :cond_0
+    monitor-exit v1
+
+    return-void
+
+    :goto_1
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
+.end method

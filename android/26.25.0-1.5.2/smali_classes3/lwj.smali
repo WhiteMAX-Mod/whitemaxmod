@@ -1,0 +1,223 @@
+.class public final Llwj;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# instance fields
+.field public final a:Lroe;
+
+.field public final b:Lcom/vk/push/core/domain/repository/PackagesRepository;
+
+.field public final c:Lcom/vk/push/common/analytics/AnalyticsSender;
+
+.field public final d:Lj3h;
+
+
+# direct methods
+.method public constructor <init>(Lroe;Lcom/vk/push/core/domain/repository/PackagesRepository;Lcom/vk/push/common/analytics/AnalyticsSender;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Llwj;->a:Lroe;
+
+    iput-object p2, p0, Llwj;->b:Lcom/vk/push/core/domain/repository/PackagesRepository;
+
+    iput-object p3, p0, Llwj;->c:Lcom/vk/push/common/analytics/AnalyticsSender;
+
+    sget-object p1, Lpc5;->p:Lpc5;
+
+    new-instance p2, Lj3h;
+
+    invoke-direct {p2, p1}, Lj3h;-><init>(Lv97;)V
+
+    iput-object p2, p0, Llwj;->d:Lj3h;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Ljava/lang/String;Lin4;)Ljava/lang/Object;
+    .locals 6
+
+    instance-of v0, p2, Lpvj;
+
+    if-eqz v0, :cond_0
+
+    move-object v0, p2
+
+    check-cast v0, Lpvj;
+
+    iget v1, v0, Lpvj;->h:I
+
+    const/high16 v2, -0x80000000
+
+    and-int v3, v1, v2
+
+    if-eqz v3, :cond_0
+
+    sub-int/2addr v1, v2
+
+    iput v1, v0, Lpvj;->h:I
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v0, Lpvj;
+
+    invoke-direct {v0, p0, p2}, Lpvj;-><init>(Llwj;Lin4;)V
+
+    :goto_0
+    iget-object p2, v0, Lpvj;->f:Ljava/lang/Object;
+
+    iget v1, v0, Lpvj;->h:I
+
+    const/4 v2, 0x2
+
+    const-string v3, "Push token "
+
+    const/4 v4, 0x1
+
+    const/4 v5, 0x0
+
+    if-eqz v1, :cond_2
+
+    if-ne v1, v4, :cond_1
+
+    iget-object p1, v0, Lpvj;->e:Ljava/lang/String;
+
+    iget-object p0, v0, Lpvj;->d:Llwj;
+
+    invoke-static {p2}, Lif8;->O(Ljava/lang/Object;)V
+
+    check-cast p2, Ltfe;
+
+    iget-object p2, p2, Ltfe;->a:Ljava/lang/Object;
+
+    goto :goto_1
+
+    :cond_1
+    const-string p0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-static {p0}, Lkie;->l(Ljava/lang/String;)V
+
+    return-object v5
+
+    :cond_2
+    invoke-static {p2}, Lif8;->O(Ljava/lang/Object;)V
+
+    iget-object p2, p0, Llwj;->b:Lcom/vk/push/core/domain/repository/PackagesRepository;
+
+    invoke-interface {p2}, Lcom/vk/push/core/domain/repository/PackagesRepository;->getInitializedHostPackages()Ljava/util/List;
+
+    move-result-object p2
+
+    invoke-interface {p2}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result p2
+
+    if-nez p2, :cond_3
+
+    iget-object p0, p0, Llwj;->d:Lj3h;
+
+    invoke-virtual {p0}, Lj3h;->getValue()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lcom/vk/push/common/Logger;
+
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    invoke-direct {p2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-static {p1}, Lcom/vk/push/core/utils/StringExtensionsKt;->hideSensitive(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, " will not be deleted because host app has been installed"
+
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p0, p1, v5, v2, v5}, Lcom/vk/push/common/Logger$DefaultImpls;->info$default(Lcom/vk/push/common/Logger;Ljava/lang/String;Ljava/lang/Throwable;ILjava/lang/Object;)V
+
+    sget-object p0, Lkzh;->a:Lkzh;
+
+    return-object p0
+
+    :cond_3
+    iput-object p0, v0, Lpvj;->d:Llwj;
+
+    iput-object p1, v0, Lpvj;->e:Ljava/lang/String;
+
+    iput v4, v0, Lpvj;->h:I
+
+    iget-object p2, p0, Llwj;->a:Lroe;
+
+    invoke-virtual {p2, p1, v0}, Lroe;->g(Ljava/lang/String;Lin4;)Ljava/lang/Object;
+
+    move-result-object p2
+
+    sget-object v0, Ldr4;->a:Ldr4;
+
+    if-ne p2, v0, :cond_4
+
+    return-object v0
+
+    :cond_4
+    :goto_1
+    instance-of v0, p2, Lrfe;
+
+    if-nez v0, :cond_5
+
+    move-object v0, p2
+
+    check-cast v0, Lkzh;
+
+    iget-object v0, p0, Llwj;->d:Lj3h;
+
+    invoke-virtual {v0}, Lj3h;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/vk/push/common/Logger;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-static {p1}, Lcom/vk/push/core/utils/StringExtensionsKt;->hideSensitive(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v3, " has been deleted"
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1, v5, v2, v5}, Lcom/vk/push/common/Logger$DefaultImpls;->info$default(Lcom/vk/push/common/Logger;Ljava/lang/String;Ljava/lang/Throwable;ILjava/lang/Object;)V
+
+    iget-object p0, p0, Llwj;->c:Lcom/vk/push/common/analytics/AnalyticsSender;
+
+    new-instance v0, Lbwj;
+
+    const/4 v1, 0x3
+
+    invoke-direct {v0, p1, v1}, Lbwj;-><init>(Ljava/lang/String;I)V
+
+    invoke-interface {p0, v0}, Lcom/vk/push/common/analytics/AnalyticsSender;->send(Lcom/vk/push/common/analytics/BaseAnalyticsEvent;)V
+
+    :cond_5
+    return-object p2
+.end method

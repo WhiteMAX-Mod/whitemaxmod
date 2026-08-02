@@ -1,0 +1,194 @@
+.class public final Lxe1;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lc35;
+
+
+# instance fields
+.field public final synthetic a:Ljava/lang/String;
+
+.field public final synthetic b:Z
+
+.field public final synthetic c:Z
+
+.field public final synthetic d:Z
+
+.field public final synthetic e:Z
+
+.field public final synthetic f:Z
+
+.field public final synthetic g:Lo39;
+
+.field public final synthetic h:Lp12;
+
+
+# direct methods
+.method public constructor <init>(Ljava/lang/String;ZZZZZLo39;Lp12;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lxe1;->a:Ljava/lang/String;
+
+    iput-boolean p2, p0, Lxe1;->b:Z
+
+    iput-boolean p3, p0, Lxe1;->c:Z
+
+    iput-boolean p4, p0, Lxe1;->d:Z
+
+    iput-boolean p5, p0, Lxe1;->e:Z
+
+    iput-boolean p6, p0, Lxe1;->f:Z
+
+    iput-object p7, p0, Lxe1;->g:Lo39;
+
+    iput-object p8, p0, Lxe1;->h:Lp12;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final x()Ljava/lang/Object;
+    .locals 11
+
+    sget-object v0, Lone/me/calls/ui/ui/call/CallScreen;->C1:Lxfl;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v0, Lone/me/calls/ui/ui/call/CallScreen;
+
+    new-instance v1, Liec;
+
+    const-string v2, "type"
+
+    const-string v3, "LINK"
+
+    invoke-direct {v1, v2, v3}, Liec;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    new-instance v2, Liec;
+
+    const-string v3, "link"
+
+    iget-object v4, p0, Lxe1;->a:Ljava/lang/String;
+
+    invoke-direct {v2, v3, v4}, Liec;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    iget-boolean v3, p0, Lxe1;->b:Z
+
+    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v3
+
+    move-object v4, v3
+
+    new-instance v3, Liec;
+
+    const-string v5, "is_video_call"
+
+    invoke-direct {v3, v5, v4}, Liec;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    iget-boolean v4, p0, Lxe1;->c:Z
+
+    invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v4
+
+    move-object v5, v4
+
+    new-instance v4, Liec;
+
+    const-string v6, "video_enabled"
+
+    invoke-direct {v4, v6, v5}, Liec;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    iget-boolean v5, p0, Lxe1;->d:Z
+
+    invoke-static {v5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v5
+
+    move-object v6, v5
+
+    new-instance v5, Liec;
+
+    const-string v7, "microphone_enabled"
+
+    invoke-direct {v5, v7, v6}, Liec;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    iget-boolean v6, p0, Lxe1;->e:Z
+
+    invoke-static {v6}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v6
+
+    move-object v7, v6
+
+    new-instance v6, Liec;
+
+    const-string v8, "front_camera_enabled"
+
+    invoke-direct {v6, v8, v7}, Liec;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    iget-boolean v7, p0, Lxe1;->f:Z
+
+    invoke-static {v7}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v7
+
+    move-object v8, v7
+
+    new-instance v7, Liec;
+
+    const-string v9, "is_new"
+
+    invoke-direct {v7, v9, v8}, Liec;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    iget-object v8, p0, Lxe1;->h:Lp12;
+
+    if-eqz v8, :cond_0
+
+    iget-object v8, v8, Lp12;->a:Ljava/lang/String;
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v8, 0x0
+
+    :goto_0
+    new-instance v9, Liec;
+
+    const-string v10, "call_start_source"
+
+    invoke-direct {v9, v10, v8}, Liec;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    iget-object p0, p0, Lxe1;->g:Lo39;
+
+    iget p0, p0, Lo39;->a:I
+
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p0
+
+    move-object v8, v9
+
+    new-instance v9, Liec;
+
+    const-string v10, "arg_account_id_override"
+
+    invoke-direct {v9, v10, p0}, Liec;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    filled-new-array/range {v1 .. v9}, [Liec;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lywh;->i([Liec;)Landroid/os/Bundle;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Lone/me/calls/ui/ui/call/CallScreen;-><init>(Landroid/os/Bundle;)V
+
+    return-object v0
+.end method

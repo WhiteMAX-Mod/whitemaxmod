@@ -1,0 +1,330 @@
+.class public final Lrk1;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# instance fields
+.field public final a:Landroid/content/Context;
+
+.field public final b:Li4d;
+
+.field public final c:Lks8;
+
+.field public final d:Lks8;
+
+.field public final e:Lks8;
+
+.field public final f:Lks8;
+
+.field public final g:Lks8;
+
+.field public final h:Lks8;
+
+.field public final i:Lks8;
+
+
+# direct methods
+.method public constructor <init>(Landroid/content/Context;Li4d;)V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lrk1;->a:Landroid/content/Context;
+
+    iput-object p2, p0, Lrk1;->b:Li4d;
+
+    new-instance p1, Lqk1;
+
+    const/4 p2, 0x0
+
+    invoke-direct {p1, p0, p2}, Lqk1;-><init>(Lrk1;I)V
+
+    const/4 p2, 0x3
+
+    invoke-static {p2, p1}, Luie;->d0(ILv97;)Lks8;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lrk1;->c:Lks8;
+
+    new-instance p1, Lqk1;
+
+    const/4 v0, 0x1
+
+    invoke-direct {p1, p0, v0}, Lqk1;-><init>(Lrk1;I)V
+
+    invoke-static {p2, p1}, Luie;->d0(ILv97;)Lks8;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lrk1;->d:Lks8;
+
+    new-instance p1, Lqk1;
+
+    const/4 v0, 0x2
+
+    invoke-direct {p1, p0, v0}, Lqk1;-><init>(Lrk1;I)V
+
+    invoke-static {p2, p1}, Luie;->d0(ILv97;)Lks8;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lrk1;->e:Lks8;
+
+    new-instance p1, Lqk1;
+
+    invoke-direct {p1, p0, p2}, Lqk1;-><init>(Lrk1;I)V
+
+    invoke-static {p2, p1}, Luie;->d0(ILv97;)Lks8;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lrk1;->f:Lks8;
+
+    new-instance p1, Lqk1;
+
+    const/4 v0, 0x4
+
+    invoke-direct {p1, p0, v0}, Lqk1;-><init>(Lrk1;I)V
+
+    invoke-static {p2, p1}, Luie;->d0(ILv97;)Lks8;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lrk1;->g:Lks8;
+
+    new-instance p1, Lqk1;
+
+    const/4 v0, 0x5
+
+    invoke-direct {p1, p0, v0}, Lqk1;-><init>(Lrk1;I)V
+
+    invoke-static {p2, p1}, Luie;->d0(ILv97;)Lks8;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lrk1;->h:Lks8;
+
+    new-instance p1, Lqk1;
+
+    const/4 v0, 0x6
+
+    invoke-direct {p1, p0, v0}, Lqk1;-><init>(Lrk1;I)V
+
+    invoke-static {p2, p1}, Luie;->d0(ILv97;)Lks8;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lrk1;->i:Lks8;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Ljava/lang/Long;I)Ljava/lang/String;
+    .locals 5
+
+    const/4 v0, 0x0
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v1
+
+    const-wide/16 v3, 0x0
+
+    cmp-long v1, v1, v3
+
+    if-eqz v1, :cond_0
+
+    move-object v1, p1
+
+    goto :goto_0
+
+    :cond_0
+    move-object v1, v0
+
+    :goto_0
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v1}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v0
+
+    sget-object v2, Ladh;->b:[Ljava/lang/String;
+
+    invoke-static {v0, v1}, Lohl;->a(J)Ljava/lang/String;
+
+    move-result-object v0
+
+    :cond_1
+    iget-object p0, p0, Lrk1;->a:Landroid/content/Context;
+
+    invoke-virtual {p0, p2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object p2
+
+    if-nez v0, :cond_2
+
+    return-object p2
+
+    :cond_2
+    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v1
+
+    const-wide/32 v3, 0xea60
+
+    cmp-long p1, v1, v3
+
+    if-gez p1, :cond_3
+
+    const p1, 0x7f110160
+
+    goto :goto_1
+
+    :cond_3
+    const p1, 0x7f11015f
+
+    :goto_1
+    invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p2, " \u00b7 "
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p2, " "
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public final b(J)Landroid/text/SpannedString;
+    .locals 9
+
+    iget-object v0, p0, Lrk1;->i:Lks8;
+
+    invoke-interface {v0}, Lks8;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v2, v0
+
+    check-cast v2, Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {v2}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
+
+    move-result v0
+
+    invoke-virtual {v2}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
+
+    move-result v1
+
+    const/4 v8, 0x0
+
+    invoke-virtual {v2, v8, v8, v0, v1}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+
+    new-instance v1, Lone/me/sdk/uikit/common/span/FitFontImageSpan;
+
+    const/16 v6, 0xe
+
+    const/4 v7, 0x0
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    invoke-direct/range {v1 .. v7}, Lone/me/sdk/uikit/common/span/FitFontImageSpan;-><init>(Landroid/graphics/drawable/Drawable;Llr6;ZZILr55;)V
+
+    iget-object p0, p0, Lrk1;->a:Landroid/content/Context;
+
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p0
+
+    const v0, 0x7f11015b
+
+    invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    new-instance v0, Landroid/text/SpannableStringBuilder;
+
+    invoke-direct {v0}, Landroid/text/SpannableStringBuilder;-><init>()V
+
+    const/16 v2, 0xa0
+
+    invoke-virtual {v0, v2}, Landroid/text/SpannableStringBuilder;->append(C)Landroid/text/SpannableStringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v2}, Landroid/text/SpannableStringBuilder;->append(C)Landroid/text/SpannableStringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3, p0}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
+
+    const/4 p0, 0x1
+
+    const/16 v3, 0x11
+
+    invoke-virtual {v0, v1, v8, p0, v3}, Landroid/text/SpannableStringBuilder;->setSpan(Ljava/lang/Object;III)V
+
+    const-wide/16 v3, 0x0
+
+    cmp-long p0, p1, v3
+
+    if-eqz p0, :cond_0
+
+    sget-object p0, Ladh;->b:[Ljava/lang/String;
+
+    invoke-static {p1, p2}, Lohl;->a(J)Ljava/lang/String;
+
+    move-result-object p0
+
+    const/16 p1, 0x20
+
+    invoke-virtual {v0, p1}, Landroid/text/SpannableStringBuilder;->append(C)Landroid/text/SpannableStringBuilder;
+
+    move-result-object p1
+
+    const/16 p2, 0xb7
+
+    invoke-virtual {p1, p2}, Landroid/text/SpannableStringBuilder;->append(C)Landroid/text/SpannableStringBuilder;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v2}, Landroid/text/SpannableStringBuilder;->append(C)Landroid/text/SpannableStringBuilder;
+
+    move-result-object p1
+
+    invoke-virtual {p1, p0}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
+
+    :cond_0
+    new-instance p0, Landroid/text/SpannedString;
+
+    invoke-direct {p0, v0}, Landroid/text/SpannedString;-><init>(Ljava/lang/CharSequence;)V
+
+    return-object p0
+.end method

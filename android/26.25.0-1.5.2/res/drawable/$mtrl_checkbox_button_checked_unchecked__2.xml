@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objectAnimator android:interpolator="?motionEasingLinearInterpolator" android:duration="@integer/m3_sys_motion_duration_short1" android:valueFrom="1.0" android:valueTo="0.0" android:valueType="floatType" android:propertyName="fillAlpha"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt" />

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector android:drawable="@drawable/$settings_avd__0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <target android:name="_R_G_L_1_G" android:animation="@drawable/$settings_avd__1" />
+    <target android:name="_R_G_L_1_G" android:animation="@drawable/$settings_avd__3" />
+    <target android:name="_R_G_L_0_G" android:animation="@drawable/$settings_avd__10" />
+    <target android:name="time_group" android:animation="@drawable/$settings_avd__17" />
+</animated-vector>

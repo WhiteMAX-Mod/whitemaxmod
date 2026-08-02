@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set android:ordering="together"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <objectAnimator android:interpolator="@drawable/$file_typing__4" android:duration="217" android:startOffset="0" android:valueFrom="1.06" android:valueTo="0.86" android:valueType="floatType" android:propertyName="scaleX" />
+    <objectAnimator android:interpolator="@drawable/$file_typing__5" android:duration="217" android:startOffset="0" android:valueFrom="1.06" android:valueTo="0.86" android:valueType="floatType" android:propertyName="scaleY" />
+    <objectAnimator android:interpolator="@drawable/$file_typing__6" android:duration="150" android:startOffset="217" android:valueFrom="0.86" android:valueTo="1.06" android:valueType="floatType" android:propertyName="scaleX" />
+    <objectAnimator android:interpolator="@drawable/$file_typing__7" android:duration="150" android:startOffset="217" android:valueFrom="0.86" android:valueTo="1.06" android:valueType="floatType" android:propertyName="scaleY" />
+</set>
