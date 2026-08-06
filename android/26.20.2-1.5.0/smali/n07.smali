@@ -1,6 +1,0 @@
-.class public interface abstract Ln07;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lj07;

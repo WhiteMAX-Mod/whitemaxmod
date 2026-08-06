@@ -1,7 +1,0 @@
-.class public abstract Lbl7;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Loch;
-.implements Ljava/lang/AutoCloseable;
