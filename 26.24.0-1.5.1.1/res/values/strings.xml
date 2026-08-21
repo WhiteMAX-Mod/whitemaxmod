@@ -2571,7 +2571,7 @@ You can change HMS Core settings once it is installed."</string>
     <string name="tt_scheduled_message_send_failure">Сообщение не отправлено: %s</string>
     <string name="tt_scheduled_message_send_success">Сообщение отправлено: %s</string>
     <string name="tt_scheduled_reminder_title">Напоминание</string>
-    <string name="tt_sms_invite_text">Я пользуюсь модом WhiteMAX. Присоединяйся! https://whitemaxmod.com</string>
+    <string name="tt_sms_invite_text">Я пользуюсь модом WhiteMAX, но ты точно так же можешь найти меня в MAX: %s</string>
     <string name="tt_sticker">стикер</string>
     <string name="tt_typing">печатает</string>
     <string name="tt_typing_audio">записывает аудио</string>

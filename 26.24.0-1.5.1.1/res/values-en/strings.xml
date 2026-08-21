@@ -2388,7 +2388,7 @@ and manage sessions"</string>
     <string name="tt_scheduled_message_send_failure">Message not sent: %s</string>
     <string name="tt_scheduled_message_send_success">Message sent: %s</string>
     <string name="tt_scheduled_reminder_title">Reminder</string>
-    <string name="tt_sms_invite_text">I use WhiteMAX modification. Join me! https://whitemaxmod.com</string>
+    <string name="tt_sms_invite_text">I use WhiteMAX mod, but you can also find me on MAX: %s</string>
     <string name="tt_sticker">sticker</string>
     <string name="tt_typing">is typing</string>
     <string name="tt_typing_audio">is recording a voice message</string>
