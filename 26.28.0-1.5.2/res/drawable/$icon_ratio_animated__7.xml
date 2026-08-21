@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set android:ordering="together"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <objectAnimator android:interpolator="@drawable/$icon_ratio_animated__8" android:duration="333" android:startOffset="0" android:valueFrom="M50 47.5 C50,47.5 50,-47.5 50,-47.5 C50,-47.5 -50,-47.5 -50,-47.5 C-50,-47.5 -50,-27.5 -50,-27.5 C-50,-27.5 30,-27.5 30,-27.5 C30,-27.5 30,47.5 30,47.5 C30,47.5 50,47.5 50,47.5c " android:valueTo="M35 75 C35,75 35,-72.62 35,-72.62 C35,-72.62 -35,-72.62 -35,-72.62 C-35,-72.62 -35,-52.62 -35,-52.62 C-35,-52.62 15,-52.62 15,-52.62 C15,-52.62 15,75 15,75 C15,75 35,75 35,75c " android:valueType="pathType" android:propertyName="pathData" />
+    <objectAnimator android:interpolator="@drawable/$icon_ratio_animated__9" android:duration="333" android:startOffset="333" android:valueFrom="M35 75 C35,75 35,-72.62 35,-72.62 C35,-72.62 -35,-72.62 -35,-72.62 C-35,-72.62 -35,-52.62 -35,-52.62 C-35,-52.62 15,-52.62 15,-52.62 C15,-52.62 15,75 15,75 C15,75 35,75 35,75c " android:valueTo="M50 47.5 C50,47.5 50,-47.5 50,-47.5 C50,-47.5 -50,-47.5 -50,-47.5 C-50,-47.5 -50,-27.5 -50,-27.5 C-50,-27.5 30,-27.5 30,-27.5 C30,-27.5 30,47.5 30,47.5 C30,47.5 50,47.5 50,47.5c " android:valueType="pathType" android:propertyName="pathData" />
+</set>

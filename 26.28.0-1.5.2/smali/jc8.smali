@@ -1,0 +1,21 @@
+.class public final Ljc8;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# instance fields
+.field public final a:Lny8;
+
+.field public volatile b:I
+
+
+# direct methods
+.method public constructor <init>(Lny8;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ljc8;->a:Lny8;
+
+    return-void
+.end method

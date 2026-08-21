@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set android:ordering="together"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <objectAnimator android:interpolator="@drawable/$max_id_avd__79" android:duration="167" android:startOffset="0" android:valueFrom="1" android:valueTo="1.1" android:valueType="floatType" android:propertyName="scaleX" />
+    <objectAnimator android:interpolator="@drawable/$max_id_avd__80" android:duration="167" android:startOffset="0" android:valueFrom="1" android:valueTo="1.1" android:valueType="floatType" android:propertyName="scaleY" />
+    <objectAnimator android:interpolator="@drawable/$max_id_avd__81" android:duration="250" android:startOffset="167" android:valueFrom="1.1" android:valueTo="1" android:valueType="floatType" android:propertyName="scaleX" />
+    <objectAnimator android:interpolator="@drawable/$max_id_avd__82" android:duration="250" android:startOffset="167" android:valueFrom="1.1" android:valueTo="1" android:valueType="floatType" android:propertyName="scaleY" />
+    <objectAnimator android:interpolator="@drawable/$max_id_avd__83" android:duration="167" android:startOffset="417" android:valueFrom="1" android:valueTo="1" android:valueType="floatType" android:propertyName="scaleX" />
+    <objectAnimator android:interpolator="@drawable/$max_id_avd__84" android:duration="167" android:startOffset="417" android:valueFrom="1" android:valueTo="1" android:valueType="floatType" android:propertyName="scaleY" />
+    <objectAnimator android:interpolator="@drawable/$max_id_avd__85" android:duration="167" android:startOffset="583" android:valueFrom="1" android:valueTo="1.1" android:valueType="floatType" android:propertyName="scaleX" />
+    <objectAnimator android:interpolator="@drawable/$max_id_avd__86" android:duration="167" android:startOffset="583" android:valueFrom="1" android:valueTo="1.1" android:valueType="floatType" android:propertyName="scaleY" />
+    <objectAnimator android:interpolator="@drawable/$max_id_avd__87" android:duration="250" android:startOffset="750" android:valueFrom="1.1" android:valueTo="1" android:valueType="floatType" android:propertyName="scaleX" />
+    <objectAnimator android:interpolator="@drawable/$max_id_avd__88" android:duration="250" android:startOffset="750" android:valueFrom="1.1" android:valueTo="1" android:valueType="floatType" android:propertyName="scaleY" />
+</set>

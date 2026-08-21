@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set android:ordering="together"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <objectAnimator android:interpolator="@drawable/$transctipt_loading_avd__28" android:duration="500" android:startOffset="0" android:valueFrom="M112.5 0 C112.5,0 -112.5,0 -112.5,0 " android:valueTo="M240 0 C240,0 -240,0 -240,0 " android:valueType="pathType" android:propertyName="pathData" />
+</set>

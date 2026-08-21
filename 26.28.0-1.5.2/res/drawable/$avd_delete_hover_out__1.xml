@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set android:ordering="together"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <objectAnimator android:interpolator="@drawable/$avd_delete_hover_out__2" android:duration="333" android:startOffset="0" android:valueFrom="#ffda0000" android:valueTo="#ff000000" android:valueType="colorType" android:propertyName="fillColor" />
+</set>

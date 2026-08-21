@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set android:ordering="together"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <objectAnimator android:interpolator="@drawable/$contacts_avd__40" android:duration="250" android:startOffset="0" android:propertyName="translateXY" android:pathData="M 14.994,27.841C 14.994,27.841 11.791,27.411 11.791,27.411" android:propertyXName="translateX" android:propertyYName="translateY" />
+    <objectAnimator android:interpolator="@drawable/$contacts_avd__41" android:duration="217" android:startOffset="250" android:propertyName="translateXY" android:pathData="M 11.791,27.411C 11.791,27.411 20,29.013 20,29.013" android:propertyXName="translateX" android:propertyYName="translateY" />
+    <objectAnimator android:interpolator="@drawable/$contacts_avd__42" android:duration="417" android:startOffset="467" android:propertyName="translateXY" android:pathData="M 20,29.013C 20,29.013 20,28.427 20,28.427" android:propertyXName="translateX" android:propertyYName="translateY" />
+    <objectAnimator android:interpolator="@drawable/$contacts_avd__43" android:duration="233" android:startOffset="883" android:propertyName="translateXY" android:pathData="M 20,28.427C 20,28.427 14.994,27.841 14.994,27.841" android:propertyXName="translateX" android:propertyYName="translateY" />
+</set>

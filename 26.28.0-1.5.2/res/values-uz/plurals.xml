@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="call_history_item_call_count_users">
+        <item quantity="other">%1$d ishtirokchi</item>
+        <item quantity="one">%1$d ishtirokchi</item>
+        <item quantity="few">%1$d участника</item>
+    </plurals>
+    <plurals name="call_users_in_wait_room_count">
+        <item quantity="other">%1$d kutilayotgan</item>
+        <item quantity="one">%1$d kutilayotgan</item>
+        <item quantity="few">%1$d ожидающих</item>
+    </plurals>
+    <plurals name="call_users_info_count">
+        <item quantity="other">%1$d ishtirokchi</item>
+        <item quantity="one">%1$d ishtirokchi</item>
+        <item quantity="few">%1$d участника</item>
+    </plurals>
+    <plurals name="channel_screen_confirmation_delete_description">
+        <item quantity="other">Ularni qayta tiklab bo‘lmaydi</item>
+        <item quantity="one">Ularni qayta tiklab bo‘lmaydi</item>
+        <item quantity="two">Восстановить их не получится</item>
+        <item quantity="few">Восстановить их не получится</item>
+        <item quantity="many">Восстановить их не получится</item>
+    </plurals>
+    <plurals name="channel_screen_confirmation_delete_title">
+        <item quantity="other">Postlarni o‘chirish kerakmi?</item>
+        <item quantity="one">Postni o‘chirish kerakmi?</item>
+        <item quantity="two">Удалить посты?</item>
+        <item quantity="few">Удалить посты?</item>
+        <item quantity="many">Удалить посты?</item>
+    </plurals>
+    <plurals name="channel_subscribers_count">
+        <item quantity="other">obunachilar</item>
+        <item quantity="zero">подписчиков</item>
+        <item quantity="one">obunachi</item>
+        <item quantity="two">подписчика</item>
+        <item quantity="few">подписчика</item>
+        <item quantity="many">подписчиков</item>
+    </plurals>
+    <plurals name="chat_list_accessibility_folders_tab_with_unread">
+        <item quantity="other">%1$s papkasi. O‘qilmagan %2$d chat</item>
+        <item quantity="one">%1$s papkasi. O‘qilmagan %2$d chat</item>
+        <item quantity="few">Папка %1$s. Не прочитано %2$d чата</item>
+        <item quantity="many">Папка %1$s. Не прочитано %2$d чатов</item>
+    </plurals>
+    <plurals name="chat_list_accessibility_new_messages">
+        <item quantity="other">%d ta yangi xabar</item>
+        <item quantity="one">%d ta yangi xabar</item>
+        <item quantity="few">%d новых сообщения</item>
+        <item quantity="many">%d новых сообщений</item>
+    </plurals>
+    <plurals name="chat_list_multiselect_delete_count">
+        <item quantity="other">Siz %d ta chatni o‘chirib yubordingiz</item>
+        <item quantity="one">Siz %d ta chatni o‘chirib yubordingiz</item>
+        <item quantity="few">Вы удалили %d чата</item>
+        <item quantity="many">Вы удалили %d чатов</item>
+    </plurals>
+    <plurals name="chat_screen_action_copy_success">
+        <item quantity="other">Siz xabarni ko‘chirdingiz</item>
+        <item quantity="zero">Сообщений скопировано</item>
+        <item quantity="one">Siz xabarni ko‘chirdingiz</item>
+        <item quantity="two">Сообщения скопированы</item>
+        <item quantity="few">Вы скопировали сообщения</item>
+        <item quantity="many">Вы скопировали сообщения</item>
+    </plurals>
+    <plurals name="chat_screen_confirmation_delete_comment_title">
+        <item quantity="other">Sharhni o‘chirish kerakmi?</item>
+        <item quantity="one">Sharhni o‘chirish kerakmi?</item>
+        <item quantity="two">Удалить комментарии?</item>
+        <item quantity="few">Удалить комментарии?</item>
+        <item quantity="many">Удалить комментарии?</item>
+    </plurals>
+    <plurals name="chat_screen_confirmation_delete_title">
+        <item quantity="other">Xabarlarni o‘chirish kerakmi?</item>
+        <item quantity="one">Xabarlarni o‘chirish kerakmi?</item>
+        <item quantity="two">Удалить сообщения?</item>
+        <item quantity="few">Удалить сообщения?</item>
+        <item quantity="many">Удалить сообщения?</item>
+    </plurals>
+    <plurals name="chat_screen_reminder_confirmation_delete_title">
+        <item quantity="other">Eslatmani o‘chirish kerakmi?</item>
+        <item quantity="one">Eslatmani o‘chirish kerakmi?</item>
+        <item quantity="two">Удалить напоминания?</item>
+        <item quantity="few">Удалить напоминания?</item>
+        <item quantity="many">Удалить напоминания?</item>
+    </plurals>
+    <plurals name="chat_screen_share_contact_snackbar_title">
+        <item quantity="other">Siz %d chatda kontaktni ulashdingiz</item>
+        <item quantity="zero">Вы поделились контактом в %d чатах</item>
+        <item quantity="one">Siz %d chatda kontaktni ulashdingiz</item>
+        <item quantity="two">Вы поделились контактом в %d чатах</item>
+        <item quantity="few">Вы поделились контактом в %d чатах</item>
+        <item quantity="many">Вы поделились контактом в %d чатах</item>
+    </plurals>
+    <plurals name="dates_hours">
+        <item quantity="other">%d sort</item>
+        <item quantity="zero">%d часов</item>
+        <item quantity="one">%d soat</item>
+        <item quantity="two">%d часа</item>
+        <item quantity="few">%d часа</item>
+        <item quantity="many">%d часов</item>
+    </plurals>
+    <plurals name="discussions_black_list_toolbar_subtitle">
+        <item quantity="other">%d foydalanuvchi</item>
+        <item quantity="zero">%d пользователей</item>
+        <item quantity="one">%d foydalanuvchi</item>
+        <item quantity="two">%d пользователя</item>
+        <item quantity="few">%d пользователя</item>
+        <item quantity="many">%d пользователей</item>
+    </plurals>
+    <plurals name="forward_snackbar_messages_sent">
+        <item quantity="other">Siz xabarni boshqa birovga yubordingiz</item>
+        <item quantity="one">Siz xabarni boshqa birovga yubordingiz</item>
+    </plurals>
+    <plurals name="inactive_ttl">
+        <item quantity="other">%d oy</item>
+        <item quantity="zero">%d месяцев</item>
+        <item quantity="one">%d oy</item>
+        <item quantity="two">%d месяца</item>
+        <item quantity="few">%d месяца</item>
+        <item quantity="many">%d месяцев</item>
+    </plurals>
+    <plurals name="inactive_ttl_item">
+        <item quantity="other">Agar %d oy davomida tizimga kirmasam</item>
+        <item quantity="zero">Если я не захожу %d месяцев</item>
+        <item quantity="one">Agar %d oy davomida tizimga kirmasam</item>
+        <item quantity="two">Если я не захожу %d месяца</item>
+        <item quantity="few">Если я не захожу %d месяца</item>
+        <item quantity="many">Если я не захожу %d месяцев</item>
+    </plurals>
+    <plurals name="messages_list_discussion_entry_comments_count">
+        <item quantity="other">%s ta izoh</item>
+        <item quantity="one">%s ta izoh</item>
+        <item quantity="few">%s комментария</item>
+    </plurals>
+    <plurals name="messages_list_message_poll_answers_count">
+        <item quantity="other">%d javob</item>
+        <item quantity="one">%d javob</item>
+        <item quantity="few">%d ответа</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d ta yangi bildirishnoma</item>
+        <item quantity="one">%d ta yangi bildirishnoma</item>
+    </plurals>
+    <plurals name="n_contacts">
+        <item quantity="other">%d ta kontakt</item>
+        <item quantity="zero">%d ta kontakt</item>
+        <item quantity="one">%d ta kontakt</item>
+        <item quantity="two">%d ta kontakt</item>
+        <item quantity="few">%d ta kontakt</item>
+        <item quantity="many">%d ta kontakt</item>
+    </plurals>
+    <plurals name="oneme_gallery_max_attach_count_error">
+        <item quantity="other">Xabarda %d dan ortiq ilova bo‘lishi mumkin emas</item>
+        <item quantity="zero">Сообщение не может содержать более чем %d вложений</item>
+        <item quantity="one">Xabarda %d dan ortiq ilova bo‘lishi mumkin emas</item>
+        <item quantity="two">Сообщение не может содержать более чем %d вложения</item>
+        <item quantity="few">Сообщение не может содержать более чем %d вложения</item>
+        <item quantity="many">Сообщение не может содержать более чем %d вложений</item>
+    </plurals>
+    <plurals name="oneme_in_app_review_rating_bar_accessibility">
+        <item quantity="other">%2$d yulduzdan %1$d tasi tanlangan</item>
+        <item quantity="one">%2$d yulduzdan %1$d tasi tanlangan</item>
+        <item quantity="two">%1$d из %2$d звёзд выбрано</item>
+        <item quantity="few">%1$d из %2$d звёзд выбрано</item>
+        <item quantity="many">%1$d из %2$d звёзд выбрано</item>
+    </plurals>
+    <plurals name="oneme_in_app_review_rating_star_accessibility">
+        <item quantity="other">%1$d yulduz</item>
+        <item quantity="one">%1$d yulduz</item>
+        <item quantity="two">%1$d звезды</item>
+        <item quantity="few">%1$d звезды</item>
+        <item quantity="many">%1$d звёзд</item>
+    </plurals>
+    <plurals name="oneme_main_account_switcher_profiles_limit">
+        <item quantity="other">%d tagacha profil qo‘shish mumkin</item>
+        <item quantity="one">%d tagacha profil qo‘shish mumkin</item>
+        <item quantity="few">Можно добавить до %d профилей</item>
+        <item quantity="many">Можно добавить до %d профилей</item>
+    </plurals>
+    <plurals name="oneme_poll_create__answer_limit_hint">
+        <item quantity="other">Yana %d ta javob qo‘shish mumkin</item>
+        <item quantity="one">Yana %d ta javob qo‘shish mumkin</item>
+        <item quantity="few">Можно добавить ещё %d ответа</item>
+    </plurals>
+    <plurals name="oneme_poll_result__vote_count">
+        <item quantity="other">%d ta javob</item>
+        <item quantity="one">%d ta javob</item>
+        <item quantity="few">%d ответа</item>
+    </plurals>
+    <plurals name="oneme_settings_mark_as_read_chats">
+        <item quantity="other">Прочитать %d чата</item>
+        <item quantity="one">Прочитать %d чат</item>
+        <item quantity="few">Прочитать %d чата</item>
+        <item quantity="many">Прочитать %d чатов</item>
+    </plurals>
+    <plurals name="oneme_settings_privacy_twofa_delete_user_days_left_notif">
+        <item quantity="other">Profilingizni o‘chirib tashlaymiz, %1$d kun qoldi</item>
+        <item quantity="one">Profilingizni o‘chirib tashlaymiz, %1$d kun qoldi</item>
+        <item quantity="few">Удаляем ваш профиль, осталось %1$d дня</item>
+    </plurals>
+    <plurals name="oneme_settings_twofa_creation_password_error_symbols_count">
+        <item quantity="other">Kamida %1$d ta belgi kiriting</item>
+        <item quantity="one">Kamida %1$d ta belgi kiriting</item>
+        <item quantity="few">Введите минимум %1$d символа</item>
+    </plurals>
+    <plurals name="oneme_settings_twofa_creation_password_symbols_count">
+        <item quantity="other">"%1$d belgidan boshlab, katta va kichik harflar, raqamlar va maxsus belgilar: $ #  _ @ &amp; *"</item>
+        <item quantity="one">"%1$d belgidan boshlab, katta va kichik harflar, raqamlar va maxsus belgilar: $ #  _ @ &amp; *"</item>
+        <item quantity="few">"От %1$d символов, заглавные и строчные буквы, цифры и специальные символы: $ #  _ @ &amp; *"</item>
+    </plurals>
+    <plurals name="oneme_settings_twofa_delete_user_days_left_description">
+        <item quantity="other">Barcha chatlaringiz va kontaktlaringiz %1$d kundan so‘ng yo‘qoladi - fikringizni o‘zgartirishga hali vaqt bor</item>
+        <item quantity="one">Barcha chatlaringiz va kontaktlaringiz %1$d kundan so‘ng yo‘qoladi - fikringizni o‘zgartirishga hali vaqt bor</item>
+        <item quantity="few">Все ваши чаты и контакты пропадут через %1$d дня — ещё есть время передумать</item>
+    </plurals>
+    <plurals name="oneme_settings_twofa_delete_user_days_notif">
+        <item quantity="other">Profilingizni o‘chirib tashlaymiz, bu %1$d kun davom etadi</item>
+        <item quantity="one">Profilingizni o‘chirib tashlaymiz, bu %1$d kun davom etadi</item>
+        <item quantity="few">Удаляем ваш профиль, это займёт %1$d дня</item>
+    </plurals>
+    <plurals name="oneme_stickers_set_count">
+        <item quantity="other">%d ta stiker</item>
+        <item quantity="zero">%d стикеров</item>
+        <item quantity="one">%d ta stiker</item>
+        <item quantity="two">%d стикера</item>
+        <item quantity="few">%d стикера</item>
+        <item quantity="many">%d стикеров</item>
+    </plurals>
+    <plurals name="picker_chats_channel_limit_add_subscribers_error">
+        <item quantity="other">Bir vaqtning o‘zida %s dan ko‘p bo‘lmagan obunachi qo‘shish mumkin</item>
+        <item quantity="one">Bir vaqtning o‘zida %s dan ko‘p bo‘lmagan obunachi qo‘shish mumkin</item>
+    </plurals>
+    <plurals name="picker_chats_chat_limit_add_participant_error">
+        <item quantity="other">Bir vaqtning o‘zida %s dan ko‘p bo‘lmagan ishtirokchini qo‘shish mumkin</item>
+        <item quantity="one">Bir vaqtning o‘zida %s dan ko‘p bo‘lmagan ishtirokchini qo‘shish mumkin</item>
+    </plurals>
+    <plurals name="picker_chats_chat_participant_count_limit_error">
+        <item quantity="other">Chatda %s dan ortiq ishtirokchi bo‘lishi mumkin emas</item>
+        <item quantity="one">Chatda %s dan ortiq ishtirokchi bo‘lishi mumkin emas</item>
+    </plurals>
+    <plurals name="picker_chats_list_forward_messages">
+        <item quantity="other">%1$d ta xabar %2$s dan qayta yuborilmoqda</item>
+        <item quantity="zero">%1$d пересылаемых сообщений из %2$s</item>
+        <item quantity="one">%1$d ta xabar %2$s dan qayta yuborilmoqda</item>
+        <item quantity="two">%1$d пересылаемых сообщения из %2$s</item>
+        <item quantity="few">%1$d пересылаемых сообщения из %2$s</item>
+        <item quantity="many">%1$d пересылаемых сообщений из %2$s</item>
+    </plurals>
+    <plurals name="picker_chats_list_share_files">
+        <item quantity="other">Fayl</item>
+        <item quantity="one">Fayl</item>
+        <item quantity="two">%d файла</item>
+        <item quantity="few">%d файла</item>
+        <item quantity="many">%d файлов</item>
+    </plurals>
+    <plurals name="picker_chats_list_share_images">
+        <item quantity="other">%d ta rasm</item>
+        <item quantity="one">%d ta rasm</item>
+        <item quantity="two">%d изображения</item>
+        <item quantity="few">%d изображения</item>
+        <item quantity="many">%d изображений</item>
+    </plurals>
+    <plurals name="picker_chats_list_share_videos">
+        <item quantity="other">%d ta video</item>
+        <item quantity="one">%d ta video</item>
+        <item quantity="two">%d видео</item>
+        <item quantity="few">%d видео</item>
+        <item quantity="many">%d видео</item>
+    </plurals>
+    <plurals name="pinbars_group_call_participants_count">
+        <item quantity="other">%1$d ishtirokchi</item>
+        <item quantity="one">%1$d ishtirokchi</item>
+        <item quantity="few">%1$d участника</item>
+    </plurals>
+    <plurals name="profile_chat_members_list_toolbar_subtitle">
+        <item quantity="other">%d ishtirokchi</item>
+        <item quantity="zero">%d участников</item>
+        <item quantity="one">%d ishtirokchi</item>
+        <item quantity="two">%d участника</item>
+        <item quantity="few">%d участника</item>
+        <item quantity="many">%d участников</item>
+    </plurals>
+    <plurals name="profile_delete_dates_days_left">
+        <item quantity="other">Profilingizni %d kundan keyin o‘chirib tashlaymiz</item>
+        <item quantity="zero">Удалим ваш профиль через %d дней</item>
+        <item quantity="one">Profilingizni %d kundan keyin o‘chirib tashlaymiz</item>
+        <item quantity="two">Удалим ваш профиль через %d дня</item>
+        <item quantity="few">Удалим ваш профиль через %d дня</item>
+        <item quantity="many">Удалим ваш профиль через %d дней</item>
+    </plurals>
+    <plurals name="profile_edit_reactions_settings_slider_current_value">
+        <item quantity="other">%d reaksiya</item>
+        <item quantity="zero">%d реакций</item>
+        <item quantity="one">%d reaksiya</item>
+        <item quantity="two">%d реакции</item>
+        <item quantity="few">%d реакции</item>
+        <item quantity="many">%d реакций</item>
+    </plurals>
+    <plurals name="profile_edit_shortlink_no_digital_id_description">
+        <item quantity="other">Uning yordamida siz %1$d tagacha ommaviy kanallar yaratishingiz mumkin</item>
+        <item quantity="zero">С ним вы сможете создать до %1$d публичных каналов</item>
+        <item quantity="one">Uning yordamida siz %1$d tagacha ommaviy kanallar yaratishingiz mumkin</item>
+        <item quantity="two">С ним вы сможете создать до %1$d публичных каналов</item>
+        <item quantity="few">С ним вы сможете создать до %1$d публичных каналов</item>
+        <item quantity="many">С ним вы сможете создать до %1$d публичных каналов</item>
+    </plurals>
+    <plurals name="profile_edit_shortlink_too_many_public_channel_error">
+        <item quantity="other">Turni o‘zgartirib bo‘lmaydi - sizda allaqachon %1$d ta ommaviy kanal mavjud</item>
+        <item quantity="zero">Изменить тип не получится — у вас уже %1$d публичных каналов</item>
+        <item quantity="one">Turni o‘zgartirib bo‘lmaydi - sizda allaqachon %1$d ta ommaviy kanal mavjud</item>
+        <item quantity="two">Изменить тип не получится — у вас уже %1$d публичных канала</item>
+        <item quantity="few">Изменить тип не получится — у вас уже %1$d публичных канала</item>
+        <item quantity="many">Изменить тип не получится — у вас уже %1$d публичных каналов</item>
+    </plurals>
+    <plurals name="profile_members_list_delete_from_channel_snackbar">
+        <item quantity="other">Siz obunachini o‘chirib yubordingiz</item>
+        <item quantity="one">Siz obunachini o‘chirib yubordingiz</item>
+    </plurals>
+    <plurals name="profile_members_list_delete_from_chat_snackbar">
+        <item quantity="other">Siz ishtirokchini o‘chirib yubordingiz</item>
+        <item quantity="one">Siz ishtirokchini o‘chirib yubordingiz</item>
+    </plurals>
+    <plurals name="profile_members_list_restore_in_channel_snackbar">
+        <item quantity="other">Siz obunachi qo‘shdingiz</item>
+        <item quantity="one">Siz obunachi qo‘shdingiz</item>
+    </plurals>
+    <plurals name="profile_members_list_restore_in_chat_snackbar">
+        <item quantity="other">Siz kontakt qo‘shdingiz</item>
+        <item quantity="one">Siz kontakt qo‘shdingiz</item>
+    </plurals>
+    <plurals name="to_chats">
+        <item quantity="other">%d chat</item>
+        <item quantity="zero">в %d чатов</item>
+        <item quantity="one">%d chat</item>
+        <item quantity="two">в %d чата</item>
+        <item quantity="few">в %d чата</item>
+        <item quantity="many">в %d чатов</item>
+    </plurals>
+    <plurals name="tt_chat_subtitle_count">
+        <item quantity="other">%d ta ishtirokchi</item>
+        <item quantity="zero">%d ta ishtirokchi</item>
+        <item quantity="one">%d ta ishtirokchi</item>
+        <item quantity="two">%d ta ishtirokchi</item>
+        <item quantity="few">%d ta ishtirokchi</item>
+        <item quantity="many">%d ta ishtirokchi</item>
+    </plurals>
+    <plurals name="tt_dates_days_past">
+        <item quantity="other">%d kun avval</item>
+        <item quantity="zero">%d kun avval</item>
+        <item quantity="one">%d kun avval</item>
+        <item quantity="two">%d kun avval</item>
+        <item quantity="few">%d kun avval</item>
+        <item quantity="many">%d kun avval</item>
+    </plurals>
+    <plurals name="tt_dates_hours_past">
+        <item quantity="other">%d soat avval</item>
+        <item quantity="zero">%d soat avval</item>
+        <item quantity="one">%d soat avval</item>
+        <item quantity="two">%d soat avval</item>
+        <item quantity="few">%d soat avval</item>
+        <item quantity="many">%d soat avval</item>
+    </plurals>
+    <plurals name="tt_dates_minutes_past">
+        <item quantity="other">%d daqiqa avval</item>
+        <item quantity="zero">%d daqiqa avval</item>
+        <item quantity="one">%d daqiqa avval</item>
+        <item quantity="two">%d daqiqa avval</item>
+        <item quantity="few">%d daqiqa avval</item>
+        <item quantity="many">%d daqiqa avval</item>
+    </plurals>
+    <plurals name="tt_dates_months_past">
+        <item quantity="other">%d oy avval</item>
+        <item quantity="zero">%d oy avval</item>
+        <item quantity="one">%d oy avval</item>
+        <item quantity="two">%d oy avval</item>
+        <item quantity="few">%d oy avval</item>
+        <item quantity="many">%d oy avval</item>
+    </plurals>
+    <plurals name="tt_dates_weeks_past">
+        <item quantity="other">%d hafta avval</item>
+        <item quantity="zero">%d hafta avval</item>
+        <item quantity="one">%d hafta avval</item>
+        <item quantity="two">%d hafta avval</item>
+        <item quantity="few">%d hafta avval</item>
+        <item quantity="many">%d hafta avval</item>
+    </plurals>
+    <plurals name="tt_new_messages">
+        <item quantity="other">%d ta xabar</item>
+        <item quantity="zero">%d ta xabar</item>
+        <item quantity="one">%d ta xabar</item>
+        <item quantity="two">%d ta xabar</item>
+        <item quantity="few">%d ta xabar</item>
+        <item quantity="many">%d ta xabar</item>
+    </plurals>
+    <plurals name="you_sent_messages">
+        <item quantity="other">Siz xabarlar yubordingiz</item>
+        <item quantity="zero">Вы отправили сообщения</item>
+        <item quantity="one">@string/tt_you_send_message</item>
+        <item quantity="two">Вы отправили сообщения</item>
+        <item quantity="few">Вы отправили сообщения</item>
+        <item quantity="many">Вы отправили сообщения</item>
+    </plurals>
+</resources>

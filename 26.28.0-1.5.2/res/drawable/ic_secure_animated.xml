@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector android:drawable="@drawable/$ic_secure_animated__0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <target android:name="_R_G_L_0_G_L_3_G_D_0_P_0" android:animation="@drawable/$ic_secure_animated__1" />
+    <target android:name="_R_G_L_0_G_L_3_G_D_0_P_0" android:animation="@drawable/$ic_secure_animated__4" />
+    <target android:name="_R_G_L_0_G_L_3_G" android:animation="@drawable/$ic_secure_animated__7" />
+    <target android:name="_R_G_L_0_G_L_2_G" android:animation="@drawable/$ic_secure_animated__11" />
+    <target android:name="_R_G_L_0_G_L_2_G" android:animation="@drawable/$ic_secure_animated__12" />
+    <target android:name="_R_G_L_0_G_L_1_G" android:animation="@drawable/$ic_secure_animated__13" />
+    <target android:name="_R_G_L_0_G_L_1_G" android:animation="@drawable/$ic_secure_animated__14" />
+    <target android:name="_R_G_L_0_G_L_0_G_L_0_G_D_0_P_0" android:animation="@drawable/$ic_secure_animated__15" />
+    <target android:name="_R_G_L_0_G_L_0_G_L_0_G" android:animation="@drawable/$ic_secure_animated__21" />
+    <target android:name="_R_G_L_0_G_L_0_G_T_1" android:animation="@drawable/$ic_secure_animated__22" />
+    <target android:name="_R_G_L_0_G_L_0_G_T_1" android:animation="@drawable/$ic_secure_animated__25" />
+    <target android:name="_R_G_L_0_G_L_0_G_T_1" android:animation="@drawable/$ic_secure_animated__30" />
+    <target android:name="_R_G_L_0_G_T_1" android:animation="@drawable/$ic_secure_animated__31" />
+    <target android:name="_R_G_L_0_G_T_1" android:animation="@drawable/$ic_secure_animated__36" />
+    <target android:name="_R_G_L_0_G_T_1" android:animation="@drawable/$ic_secure_animated__41" />
+    <target android:name="time_group" android:animation="@drawable/$ic_secure_animated__44" />
+</animated-vector>

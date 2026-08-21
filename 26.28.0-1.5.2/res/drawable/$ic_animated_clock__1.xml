@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set android:ordering="together"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <objectAnimator android:interpolator="@drawable/$ic_animated_clock__2" android:duration="12000" android:startOffset="0" android:repeatCount="infinite" android:valueFrom="-18.452" android:valueTo="340" android:valueType="floatType" android:propertyName="rotation" />
+</set>

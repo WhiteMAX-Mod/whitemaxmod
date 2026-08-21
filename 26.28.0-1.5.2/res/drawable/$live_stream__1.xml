@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set android:ordering="together"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <objectAnimator android:interpolator="@drawable/$live_stream__2" android:duration="250" android:startOffset="0" android:valueFrom="0.95" android:valueTo="0.95" android:valueType="floatType" android:propertyName="scaleX" />
+    <objectAnimator android:interpolator="@drawable/$live_stream__3" android:duration="250" android:startOffset="0" android:valueFrom="0.95" android:valueTo="0.95" android:valueType="floatType" android:propertyName="scaleY" />
+    <objectAnimator android:interpolator="@drawable/$live_stream__4" android:duration="167" android:startOffset="250" android:valueFrom="0.95" android:valueTo="1" android:valueType="floatType" android:propertyName="scaleX" />
+    <objectAnimator android:interpolator="@drawable/$live_stream__5" android:duration="167" android:startOffset="250" android:valueFrom="0.95" android:valueTo="1" android:valueType="floatType" android:propertyName="scaleY" />
+    <objectAnimator android:interpolator="@drawable/$live_stream__6" android:duration="2000" android:startOffset="417" android:valueFrom="1" android:valueTo="1" android:valueType="floatType" android:propertyName="scaleX" />
+    <objectAnimator android:interpolator="@drawable/$live_stream__7" android:duration="2000" android:startOffset="417" android:valueFrom="1" android:valueTo="1" android:valueType="floatType" android:propertyName="scaleY" />
+    <objectAnimator android:interpolator="@drawable/$live_stream__8" android:duration="167" android:startOffset="2417" android:valueFrom="1" android:valueTo="0.95" android:valueType="floatType" android:propertyName="scaleX" />
+    <objectAnimator android:interpolator="@drawable/$live_stream__9" android:duration="167" android:startOffset="2417" android:valueFrom="1" android:valueTo="0.95" android:valueType="floatType" android:propertyName="scaleY" />
+</set>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="72.0dip" android:width="72.0dip" android:viewportWidth="72.0" android:viewportHeight="72.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <group android:name="_R_G">
+        <group android:name="_R_G_L_2_G" android:scaleX="0.95" android:scaleY="0.95" android:translateX="36.0" android:translateY="36.002">
+            <path android:name="wave_big" android:fillColor="#ff000000" android:pathData=" M22 -24.6 C20.64,-25.81 18.56,-25.7 17.34,-24.34 C16.13,-22.98 16.24,-20.89 17.6,-19.68 C23,-14.84 26.4,-7.82 26.4,0 C26.4,7.82 23,14.84 17.6,19.68 C16.24,20.9 16.13,22.98 17.34,24.34 C18.56,25.7 20.64,25.81 22,24.6 C28.75,18.56 33,9.77 33,0 C33,-9.77 28.75,-18.56 22,-24.6c  M-17.34 -24.34 C-18.55,-25.7 -20.64,-25.81 -22,-24.6 C-28.75,-18.56 -33,-9.77 -33,0 C-33,9.77 -28.75,18.56 -22,24.6 C-20.64,25.81 -18.55,25.7 -17.34,24.34 C-16.12,22.98 -16.24,20.9 -17.6,19.68 C-23,14.84 -26.4,7.82 -26.4,0 C-26.4,-7.82 -23,-14.84 -17.6,-19.68 C-16.24,-20.89 -16.12,-22.98 -17.34,-24.34c " android:fillAlpha="1.0" android:fillType="nonZero" />
+        </group>
+        <group android:name="_R_G_L_1_G" android:scaleX="0.95" android:scaleY="0.95" android:translateX="36.0" android:translateY="36.001">
+            <path android:name="wave_small" android:fillColor="#ff000000" android:pathData=" M11.88 -15.84 C10.43,-16.94 8.36,-16.64 7.26,-15.18 C6.17,-13.73 6.46,-11.65 7.92,-10.56 C11.13,-8.14 13.2,-4.31 13.2,0 C13.2,4.31 11.13,8.15 7.92,10.56 C6.46,11.66 6.16,13.73 7.26,15.19 C8.36,16.64 10.43,16.94 11.88,15.84 C16.68,12.23 19.8,6.48 19.8,0 C19.8,-6.48 16.68,-12.23 11.88,-15.84c  M-7.26 -15.18 C-8.35,-16.64 -10.42,-16.94 -11.88,-15.84 C-16.68,-12.23 -19.8,-6.48 -19.8,0 C-19.8,6.48 -16.68,12.23 -11.88,15.84 C-10.42,16.94 -8.35,16.64 -7.26,15.18 C-6.17,13.73 -6.46,11.66 -7.92,10.56 C-11.13,8.15 -13.2,4.31 -13.2,0 C-13.2,-4.31 -11.13,-8.14 -7.92,-10.56 C-6.46,-11.65 -6.17,-13.73 -7.26,-15.18c " android:fillAlpha="1.0" android:fillType="nonZero" />
+        </group>
+        <group android:name="_R_G_L_0_G" android:scaleX="0.5" android:scaleY="0.5" android:translateX="36.001" android:translateY="36.001">
+            <path android:name="circle" android:fillColor="#ff000000" android:pathData=" M4.95 0 C4.95,-2.73 2.73,-4.95 0,-4.95 C-2.73,-4.95 -4.95,-2.73 -4.95,0 C-4.95,2.73 -2.73,4.95 0,4.95 C2.73,4.95 4.95,2.73 4.95,0c " android:fillAlpha="1.0" android:fillType="nonZero" />
+        </group>
+    </group>
+    <group android:name="time_group" />
+</vector>

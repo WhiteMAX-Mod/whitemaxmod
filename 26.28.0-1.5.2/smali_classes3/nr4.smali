@@ -1,0 +1,98 @@
+.class public final Lnr4;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lfr4;
+
+
+# instance fields
+.field public final a:Ljava/lang/String;
+
+.field public final b:Lq11;
+
+.field public final c:Lq11;
+
+
+# direct methods
+.method public constructor <init>(Ljava/lang/String;Lq11;Lq11;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lnr4;->a:Ljava/lang/String;
+
+    iput-object p2, p0, Lnr4;->b:Lq11;
+
+    iput-object p3, p0, Lnr4;->c:Lq11;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final W0(Lbr4;Lbr4;Z)V
+    .locals 0
+
+    if-eqz p2, :cond_0
+
+    invoke-virtual {p2}, Lbr4;->getInstanceId()Ljava/lang/String;
+
+    move-result-object p1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    iget-object p2, p0, Lnr4;->a:Ljava/lang/String;
+
+    invoke-static {p1, p2}, Lcqk;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    if-nez p3, :cond_1
+
+    iget-object p0, p0, Lnr4;->c:Lq11;
+
+    invoke-virtual {p0}, Lq11;->invoke()Ljava/lang/Object;
+
+    :cond_1
+    return-void
+.end method
+
+.method public final w(Lbr4;Lbr4;Z)V
+    .locals 0
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p1}, Lbr4;->getInstanceId()Ljava/lang/String;
+
+    move-result-object p1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    iget-object p2, p0, Lnr4;->a:Ljava/lang/String;
+
+    invoke-static {p1, p2}, Lcqk;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    if-eqz p3, :cond_1
+
+    iget-object p0, p0, Lnr4;->b:Lq11;
+
+    invoke-virtual {p0}, Lq11;->invoke()Ljava/lang/Object;
+
+    :cond_1
+    return-void
+.end method

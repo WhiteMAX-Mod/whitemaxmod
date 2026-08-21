@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="120.0dip" android:width="120.0dip" android:viewportWidth="120.0" android:viewportHeight="120.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <path android:fillColor="@drawable/$story_image__0" android:pathData="M0 0h120v120H0z" />
+    <group android:pivotX="60.0" android:pivotY="60.0" android:scaleX="0.7407" android:scaleY="0.7407">
+        <path android:pathData="M73.57 83.34a27 27 0 1 1-0.01-46.69m9.66 9.57a27 27 0 0 1 2.94 7.09m0 13.37a27 27 0 0 1-2.94 7.09" android:strokeColor="#ffffffff" android:strokeWidth="6.0" android:strokeLineCap="round" android:strokeLineJoin="round" />
+        <path android:pathData="M60 49.34v21.33M49.33 60h21.33" android:strokeColor="#ffffffff" android:strokeWidth="6.0" android:strokeLineCap="round" />
+    </group>
+</vector>

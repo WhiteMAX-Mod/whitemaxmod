@@ -1,0 +1,112 @@
+.class public final synthetic Ly97;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Laf7;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lga7;
+
+.field public final synthetic c:Laec;
+
+.field public final synthetic d:Z
+
+
+# direct methods
+.method public synthetic constructor <init>(Lga7;Laec;ZI)V
+    .locals 0
+
+    iput p4, p0, Ly97;->a:I
+
+    iput-object p1, p0, Ly97;->b:Lga7;
+
+    iput-object p2, p0, Ly97;->c:Laec;
+
+    iput-boolean p3, p0, Ly97;->d:Z
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 4
+
+    iget v0, p0, Ly97;->a:I
+
+    sget-object v1, Lsbi;->a:Lsbi;
+
+    iget-boolean v2, p0, Ly97;->d:Z
+
+    iget-object v3, p0, Ly97;->c:Laec;
+
+    iget-object p0, p0, Ly97;->b:Lga7;
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object p0, p0, Lga7;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {p0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object p0
+
+    :goto_0
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lxdc;
+
+    invoke-interface {v0, v3, v2}, Lxdc;->m(Laec;Z)V
+
+    goto :goto_0
+
+    :cond_0
+    return-object v1
+
+    :pswitch_0
+    iget-object p0, p0, Lga7;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {p0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object p0
+
+    :goto_1
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lxdc;
+
+    invoke-interface {v0, v3, v2}, Lxdc;->j(Laec;Z)V
+
+    goto :goto_1
+
+    :cond_1
+    return-object v1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
