@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="start|top" android:orientation="vertical" android:id="@id/parentPanel" android:background="@drawable/hw_cloud_dialog_insert" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/hw_cloud_alert_dialog_title_material" />
+    <FrameLayout android:id="@id/contentPanel" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <View android:layout_gravity="top" android:id="@id/scrollIndicatorUp" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <ScrollView android:id="@id/scrollView" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <android.widget.Space android:id="@id/textSpacerNoTitle" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/hw_cloud_dialog_space_dimen" />
+                <TextView android:id="@android:id/message" android:paddingLeft="@dimen/hw_cloud_dialog_title_left_padding" android:paddingRight="@dimen/hw_cloud_dialog_title_right_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/HwCloudAlertDialogMessage" />
+                <android.widget.Space android:id="@id/textSpacerNoButtons" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/hw_cloud_dialog_space_dimen" />
+            </LinearLayout>
+        </ScrollView>
+        <View android:layout_gravity="bottom" android:id="@id/scrollIndicatorDown" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/customPanel" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginBottom="10.0dip" android:minHeight="48.0dip" android:layout_weight="1.0">
+        <FrameLayout android:id="@id/custom" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </FrameLayout>
+    <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" layout="@layout/hw_cloud_alert_dialog_button_bar_material" />
+</LinearLayout>

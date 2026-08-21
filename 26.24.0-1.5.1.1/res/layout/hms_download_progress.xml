@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="16.0dip" android:paddingEnd="16.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="13.0sp" android:id="@id/hms_message_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginRight="8.0dip" android:text="@string/hms_downloading_loading" android:layout_marginEnd="8.0dip" />
+    <TextView android:textSize="13.0sp" android:gravity="center_vertical" android:id="@id/hms_progress_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_alignParentRight="true" android:alpha="0.5" android:layout_alignParentEnd="true" />
+    <RelativeLayout android:id="@id/hms_progress_bar" android:layout_width="fill_parent" android:layout_height="18.0dip" android:layout_marginTop="10.0dip" android:layout_marginBottom="16.0dip" android:layout_below="@id/hms_message_text">
+        <ProgressBar android:id="@id/download_info_progress" android:layout_width="fill_parent" android:layout_height="7.0dip" android:layout_centerVertical="true" style="?android:progressBarStyleHorizontal" />
+    </RelativeLayout>
+</RelativeLayout>

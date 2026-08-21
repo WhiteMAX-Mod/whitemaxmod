@@ -1,0 +1,252 @@
+.class public abstract Lki8;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# static fields
+.field public static final a:Li58;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    const-string v0, "kotlinx.serialization.json.JsonUnquotedLiteral"
+
+    sget-object v1, Lwjg;->a:Lwjg;
+
+    invoke-static {v1, v0}, Lqj4;->a(Lfl8;Ljava/lang/String;)Li58;
+
+    move-result-object v0
+
+    sput-object v0, Lki8;->a:Li58;
+
+    return-void
+.end method
+
+.method public static final a(Ljava/lang/Boolean;)Lpj8;
+    .locals 3
+
+    new-instance v0, Lvi8;
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, p0, v1, v2}, Lvi8;-><init>(Ljava/lang/Object;ZLqye;)V
+
+    return-object v0
+.end method
+
+.method public static final b(Ljava/lang/Number;)Lpj8;
+    .locals 3
+
+    if-nez p0, :cond_0
+
+    sget-object p0, Lzi8;->INSTANCE:Lzi8;
+
+    return-object p0
+
+    :cond_0
+    new-instance v0, Lvi8;
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, p0, v1, v2}, Lvi8;-><init>(Ljava/lang/Object;ZLqye;)V
+
+    return-object v0
+.end method
+
+.method public static final c(Ljava/lang/String;)Lpj8;
+    .locals 3
+
+    if-nez p0, :cond_0
+
+    sget-object p0, Lzi8;->INSTANCE:Lzi8;
+
+    return-object p0
+
+    :cond_0
+    new-instance v0, Lvi8;
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, p0, v1, v2}, Lvi8;-><init>(Ljava/lang/Object;ZLqye;)V
+
+    return-object v0
+.end method
+
+.method public static final d(Lii8;Ljava/lang/String;)V
+    .locals 3
+
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "Element "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lkxd;->a(Ljava/lang/Class;)Lvl3;
+
+    move-result-object p0
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p0, " is not a "
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public static final e(Lpj8;)I
+    .locals 4
+
+    :try_start_0
+    new-instance v0, Lach;
+
+    invoke-virtual {p0}, Lpj8;->a()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lach;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Lach;->m()J
+
+    move-result-wide v0
+    :try_end_0
+    .catch Lkotlinx/serialization/json/internal/JsonDecodingException; {:try_start_0 .. :try_end_0} :catch_0
+
+    const-wide/32 v2, -0x80000000
+
+    cmp-long v2, v2, v0
+
+    if-gtz v2, :cond_0
+
+    const-wide/32 v2, 0x7fffffff
+
+    cmp-long v2, v0, v2
+
+    if-gtz v2, :cond_0
+
+    long-to-int p0, v0
+
+    return p0
+
+    :cond_0
+    new-instance v0, Ljava/lang/NumberFormatException;
+
+    invoke-virtual {p0}, Lpj8;->a()Ljava/lang/String;
+
+    move-result-object p0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p0, " is not an Int"
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Ljava/lang/NumberFormatException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :catch_0
+    move-exception p0
+
+    new-instance v0, Ljava/lang/NumberFormatException;
+
+    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Ljava/lang/NumberFormatException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public static final f(Lii8;)Ldj8;
+    .locals 2
+
+    instance-of v0, p0, Ldj8;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    move-object v0, p0
+
+    check-cast v0, Ldj8;
+
+    goto :goto_0
+
+    :cond_0
+    move-object v0, v1
+
+    :goto_0
+    if-eqz v0, :cond_1
+
+    return-object v0
+
+    :cond_1
+    const-string v0, "JsonObject"
+
+    invoke-static {p0, v0}, Lki8;->d(Lii8;Ljava/lang/String;)V
+
+    throw v1
+.end method
+
+.method public static final g(Lii8;)Lpj8;
+    .locals 2
+
+    instance-of v0, p0, Lpj8;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    move-object v0, p0
+
+    check-cast v0, Lpj8;
+
+    goto :goto_0
+
+    :cond_0
+    move-object v0, v1
+
+    :goto_0
+    if-eqz v0, :cond_1
+
+    return-object v0
+
+    :cond_1
+    const-string v0, "JsonPrimitive"
+
+    invoke-static {p0, v0}, Lki8;->d(Lii8;Ljava/lang/String;)V
+
+    throw v1
+.end method

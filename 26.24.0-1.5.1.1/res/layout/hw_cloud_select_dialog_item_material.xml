@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:textAppearance="@android:style/TextAppearance.Large" android:ellipsize="marquee" android:gravity="center_vertical" android:id="@android:id/text1" android:paddingLeft="@dimen/hw_cloud_list_preferred_item_padding_left" android:paddingRight="@dimen/hw_cloud_list_preferred_item_padding_right" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/hw_cloud_listpreferred_item_height_small"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

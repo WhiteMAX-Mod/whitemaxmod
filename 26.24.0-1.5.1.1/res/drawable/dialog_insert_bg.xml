@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset android:drawable="@drawable/dialog_origin_shape" android:insetLeft="@dimen/hw_cloud_dialog_button_insert_dimen" android:insetRight="@dimen/hw_cloud_dialog_button_insert_dimen"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

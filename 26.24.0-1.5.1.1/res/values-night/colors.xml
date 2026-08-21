@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="hw_cloud_dialog_bg">#ff202224</color>
+    <color name="hw_cloud_dialog_button_error">#ffd94838</color>
+    <color name="hw_cloud_dialog_button_normal">#ff202224</color>
+    <color name="hw_cloud_dialog_button_pressed">#ff404040</color>
+    <color name="hw_cloud_dialog_button_strong">#ff317af7</color>
+    <color name="hw_cloud_dialog_button_strong_text_color">#ffe5e5e5</color>
+    <color name="hw_cloud_dialog_button_text_color">#ff317af7</color>
+    <color name="hw_cloud_dialog_list_divider">#33ffffff</color>
+    <color name="hw_cloud_dialog_msg">#dbffffff</color>
+    <color name="hw_cloud_dialog_subtitle_text_color">#99ffffff</color>
+    <color name="hw_cloud_dialog_title_text_color">#dbffffff</color>
+    <color name="launch_background">#ff191921</color>
+</resources>
