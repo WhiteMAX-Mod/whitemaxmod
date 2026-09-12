@@ -2030,10 +2030,9 @@
 
     check-cast v8, Ljava/lang/String;
 
-    if-eqz v8, :cond_19
+    const/4 v8, 0x0
 
-    goto :goto_e
-
+    # forced fallback to local string
     :cond_19
     const v8, 0x7f110fc6
 

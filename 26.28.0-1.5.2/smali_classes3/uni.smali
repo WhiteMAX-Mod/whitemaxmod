@@ -1166,10 +1166,9 @@
 
     check-cast v4, Ljava/lang/String;
 
-    if-eqz v4, :cond_2c
+    const/4 v4, 0x0
 
-    goto :goto_6
-
+    # forced fallback to local string
     :cond_2c
     const v4, 0x7f110fc6
 

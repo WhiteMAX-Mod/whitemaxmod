@@ -743,12 +743,9 @@
 
     check-cast v5, Ljava/lang/String;
 
-    if-eqz v5, :cond_1
+    const/4 v5, 0x0
 
-    move-object v0, v5
-
-    goto :goto_0
-
+    # forced fallback to local string
     :cond_1
     const v5, 0x7f110fc6
 

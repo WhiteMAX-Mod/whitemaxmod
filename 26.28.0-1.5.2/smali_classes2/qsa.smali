@@ -2011,10 +2011,9 @@
 
     check-cast v3, Ljava/lang/String;
 
-    if-eqz v3, :cond_2c
+    const/4 v3, 0x0
 
-    goto :goto_a
-
+    # forced fallback to local string
     :cond_2c
     const v3, 0x7f110fc6
 
