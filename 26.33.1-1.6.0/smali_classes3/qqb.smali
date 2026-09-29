@@ -1,0 +1,48 @@
+.class public abstract Lqqb;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# static fields
+.field public static final synthetic a:I
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    invoke-static {v0}, Lqqb;->a(F)V
+
+    const/high16 v0, 0x3f800000    # 1.0f
+
+    invoke-static {v0}, Lqqb;->a(F)V
+
+    return-void
+.end method
+
+.method public static a(F)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    cmpg-float v0, v0, p0
+
+    if-gtz v0, :cond_0
+
+    const/high16 v0, 0x3f800000    # 1.0f
+
+    cmpg-float p0, p0, v0
+
+    if-gtz p0, :cond_0
+
+    return-void
+
+    :cond_0
+    const-string p0, "Gain must be in range of 0f and 1f"
+
+    invoke-static {p0}, Lmvf;->t(Ljava/lang/String;)V
+
+    return-void
+.end method

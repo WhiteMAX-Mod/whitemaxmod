@@ -1,0 +1,58 @@
+.class public final synthetic Lzz1;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ljava/util/function/LongSupplier;
+
+
+# instance fields
+.field public final synthetic a:B
+
+
+# direct methods
+.method public synthetic constructor <init>(B)V
+    .locals 0
+
+    iput-byte p1, p0, Lzz1;->a:B
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final getAsLong()J
+    .locals 2
+
+    iget-byte p0, p0, Lzz1;->a:B
+
+    packed-switch p0, :pswitch_data_0
+
+    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+
+    move-result-wide v0
+
+    return-wide v0
+
+    :pswitch_0
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    return-wide v0
+
+    :pswitch_1
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    return-wide v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method

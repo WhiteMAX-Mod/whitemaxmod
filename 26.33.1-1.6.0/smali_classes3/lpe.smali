@@ -1,0 +1,47 @@
+.class public final Llpe;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# instance fields
+.field public final a:Lvj9;
+
+.field public final b:Lvj9;
+
+.field public final c:Lvj9;
+
+.field public final d:Lvj9;
+
+.field public final e:Lvj9;
+
+.field public final f:Lvj9;
+
+.field public final g:Lvj9;
+
+.field public final h:Lvj9;
+
+
+# direct methods
+.method public constructor <init>(Lvj9;Lvj9;Lvj9;Lvj9;Lvj9;Lvj9;Lvj9;Lvj9;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Llpe;->a:Lvj9;
+
+    iput-object p2, p0, Llpe;->b:Lvj9;
+
+    iput-object p3, p0, Llpe;->c:Lvj9;
+
+    iput-object p4, p0, Llpe;->d:Lvj9;
+
+    iput-object p5, p0, Llpe;->e:Lvj9;
+
+    iput-object p6, p0, Llpe;->f:Lvj9;
+
+    iput-object p7, p0, Llpe;->g:Lvj9;
+
+    iput-object p8, p0, Llpe;->h:Lvj9;
+
+    return-void
+.end method

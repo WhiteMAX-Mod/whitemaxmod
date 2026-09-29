@@ -1,0 +1,40 @@
+.class public final Lwj7;
+.super Lkeh;
+.source "SourceFile"
+
+
+# virtual methods
+.method public final B(Lss9;)V
+    .locals 3
+
+    check-cast p1, Ljxj;
+
+    iget v0, p1, Ljxj;->b:I
+
+    const/4 v1, 0x1
+
+    iget-object v2, p0, Laif;->a:Landroid/view/View;
+
+    if-ne v0, v1, :cond_0
+
+    move-object v0, v2
+
+    check-cast v0, Landroid/widget/TextView;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setEnabled(Z)V
+
+    :cond_0
+    check-cast v2, Landroid/widget/TextView;
+
+    iget-object p1, p1, Ljxj;->c:Ltyi;
+
+    invoke-virtual {p1, p0}, Ltyi;->a(Laif;)Ljava/lang/CharSequence;
+
+    move-result-object p0
+
+    invoke-virtual {v2, p0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    return-void
+.end method

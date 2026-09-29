@@ -1,0 +1,55 @@
+.class public final Lj68;
+.super Lf05;
+.source "SourceFile"
+
+
+# instance fields
+.field public d:Ljs0;
+
+.field public e:Ljava/util/List;
+
+.field public f:Landroid/graphics/Bitmap;
+
+.field public synthetic g:Ljava/lang/Object;
+
+.field public final synthetic h:Lk68;
+
+.field public i:I
+
+
+# direct methods
+.method public constructor <init>(Lk68;Lf05;)V
+    .locals 0
+
+    iput-object p1, p0, Lj68;->h:Lk68;
+
+    invoke-direct {p0, p2}, Lf05;-><init>(Ld05;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final w(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lj68;->g:Ljava/lang/Object;
+
+    iget p1, p0, Lj68;->i:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lj68;->i:I
+
+    iget-object p1, p0, Lj68;->h:Lk68;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, v0, p0}, Lk68;->z(Ljs0;Landroid/net/Uri;Lf05;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+.end method

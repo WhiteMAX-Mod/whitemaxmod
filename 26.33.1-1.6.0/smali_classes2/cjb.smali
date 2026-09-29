@@ -1,0 +1,90 @@
+.class public final synthetic Lcjb;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ljava/util/function/UnaryOperator;
+
+
+# instance fields
+.field public final synthetic a:Lmjb;
+
+.field public final synthetic b:J
+
+
+# direct methods
+.method public synthetic constructor <init>(Lmjb;J)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcjb;->a:Lmjb;
+
+    iput-wide p2, p0, Lcjb;->b:J
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 11
+
+    check-cast p1, Lhjb;
+
+    iget-object p1, p0, Lcjb;->a:Lmjb;
+
+    iget-object p1, p1, Lmjb;->a:Lqhb;
+
+    iget-object p1, p1, Lqhb;->b:Le8g;
+
+    invoke-static {p1}, Lkym;->e(Le8g;)Z
+
+    move-result v10
+
+    if-eqz v10, :cond_0
+
+    const/4 p1, 0x4
+
+    :goto_0
+    move v1, p1
+
+    goto :goto_1
+
+    :cond_0
+    const/4 p1, 0x3
+
+    goto :goto_0
+
+    :goto_1
+    if-eqz v10, :cond_1
+
+    sget-object p1, Lq9g;->a:Lq9g;
+
+    :goto_2
+    move-object v8, p1
+
+    goto :goto_3
+
+    :cond_1
+    sget-object p1, Lq9g;->b:Lq9g;
+
+    goto :goto_2
+
+    :goto_3
+    new-instance v0, Lhjb;
+
+    const/4 v2, 0x0
+
+    const/16 v3, 0x62
+
+    iget-wide v4, p0, Lcjb;->b:J
+
+    const-wide/16 v6, 0x0
+
+    const/4 v9, 0x0
+
+    invoke-direct/range {v0 .. v10}, Lhjb;-><init>(IIIJJLq9g;ZZ)V
+
+    return-object v0
+.end method

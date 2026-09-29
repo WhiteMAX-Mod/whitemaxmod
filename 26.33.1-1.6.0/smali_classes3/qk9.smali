@@ -1,0 +1,19 @@
+.class public final Lqk9;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# instance fields
+.field public final synthetic a:Lvj9;
+
+
+# direct methods
+.method public constructor <init>(Lvj9;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lqk9;->a:Lvj9;
+
+    return-void
+.end method

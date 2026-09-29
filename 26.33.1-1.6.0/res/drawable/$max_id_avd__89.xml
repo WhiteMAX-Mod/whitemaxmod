@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set android:ordering="together"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <objectAnimator android:interpolator="@drawable/$max_id_avd__90" android:duration="167" android:startOffset="0" android:valueFrom="0" android:valueTo="0" android:valueType="floatType" android:propertyName="scaleX" />
+    <objectAnimator android:interpolator="@drawable/$max_id_avd__91" android:duration="167" android:startOffset="0" android:valueFrom="0" android:valueTo="0" android:valueType="floatType" android:propertyName="scaleY" />
+    <objectAnimator android:interpolator="@drawable/$max_id_avd__92" android:duration="250" android:startOffset="167" android:valueFrom="0" android:valueTo="0.78" android:valueType="floatType" android:propertyName="scaleX" />
+    <objectAnimator android:interpolator="@drawable/$max_id_avd__93" android:duration="250" android:startOffset="167" android:valueFrom="0" android:valueTo="0.78" android:valueType="floatType" android:propertyName="scaleY" />
+    <objectAnimator android:interpolator="@drawable/$max_id_avd__94" android:duration="167" android:startOffset="417" android:valueFrom="0.78" android:valueTo="0.78" android:valueType="floatType" android:propertyName="scaleX" />
+    <objectAnimator android:interpolator="@drawable/$max_id_avd__95" android:duration="167" android:startOffset="417" android:valueFrom="0.78" android:valueTo="0.78" android:valueType="floatType" android:propertyName="scaleY" />
+    <objectAnimator android:interpolator="@drawable/$max_id_avd__96" android:duration="250" android:startOffset="583" android:valueFrom="0.78" android:valueTo="0" android:valueType="floatType" android:propertyName="scaleX" />
+    <objectAnimator android:interpolator="@drawable/$max_id_avd__97" android:duration="250" android:startOffset="583" android:valueFrom="0.78" android:valueTo="0" android:valueType="floatType" android:propertyName="scaleY" />
+</set>

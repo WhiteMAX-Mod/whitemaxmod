@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set android:ordering="together"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <objectAnimator android:interpolator="@drawable/$contacts_avd__45" android:duration="167" android:startOffset="0" android:valueFrom="0.07812" android:valueTo="0.07188" android:valueType="floatType" android:propertyName="scaleX" />
+    <objectAnimator android:interpolator="@drawable/$contacts_avd__46" android:duration="167" android:startOffset="0" android:valueFrom="0.07812" android:valueTo="0.07188" android:valueType="floatType" android:propertyName="scaleY" />
+    <objectAnimator android:interpolator="@drawable/$contacts_avd__47" android:duration="367" android:startOffset="167" android:valueFrom="0.07188" android:valueTo="0.08906" android:valueType="floatType" android:propertyName="scaleX" />
+    <objectAnimator android:interpolator="@drawable/$contacts_avd__48" android:duration="367" android:startOffset="167" android:valueFrom="0.07188" android:valueTo="0.08906" android:valueType="floatType" android:propertyName="scaleY" />
+    <objectAnimator android:interpolator="@drawable/$contacts_avd__49" android:duration="583" android:startOffset="533" android:valueFrom="0.08906" android:valueTo="0.07812" android:valueType="floatType" android:propertyName="scaleX" />
+    <objectAnimator android:interpolator="@drawable/$contacts_avd__50" android:duration="583" android:startOffset="533" android:valueFrom="0.08906" android:valueTo="0.07812" android:valueType="floatType" android:propertyName="scaleY" />
+</set>

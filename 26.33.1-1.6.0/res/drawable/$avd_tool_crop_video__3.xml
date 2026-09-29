@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set android:ordering="together"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <objectAnimator android:interpolator="@drawable/$avd_tool_crop_video__4" android:duration="500" android:startOffset="0" android:valueFrom="M25.49 -15.36 C25.49,-15.36 25.49,12.64 25.49,12.64 C25.49,12.64 25.55,12.64 25.55,12.64 C25.55,12.64 25.55,-15.36 25.55,-15.36 C25.55,-15.36 25.49,-15.36 25.49,-15.36c " android:valueTo="M67.05 -15.36 C67.05,-15.36 67.05,12.64 67.05,12.64 C67.05,12.64 25.55,12.64 25.55,12.64 C25.55,12.64 25.55,-15.36 25.55,-15.36 C25.55,-15.36 67.05,-15.36 67.05,-15.36c " android:valueType="pathType" android:propertyName="pathData" />
+    <objectAnimator android:interpolator="@drawable/$avd_tool_crop_video__5" android:duration="167" android:startOffset="500" android:valueFrom="M67.05 -15.36 C67.05,-15.36 67.05,12.64 67.05,12.64 C67.05,12.64 25.55,12.64 25.55,12.64 C25.55,12.64 25.55,-15.36 25.55,-15.36 C25.55,-15.36 67.05,-15.36 67.05,-15.36c " android:valueTo="M62.05 -15.36 C62.05,-15.36 62.05,12.64 62.05,12.64 C62.05,12.64 25.55,12.64 25.55,12.64 C25.55,12.64 25.55,-15.36 25.55,-15.36 C25.55,-15.36 62.05,-15.36 62.05,-15.36c " android:valueType="pathType" android:propertyName="pathData" />
+</set>

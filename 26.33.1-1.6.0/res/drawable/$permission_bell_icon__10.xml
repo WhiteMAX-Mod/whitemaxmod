@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set android:ordering="together"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <objectAnimator android:interpolator="@drawable/$permission_bell_icon__11" android:duration="133" android:startOffset="0" android:valueFrom="0" android:valueTo="-10" android:valueType="floatType" android:propertyName="rotation" />
+    <objectAnimator android:interpolator="@drawable/$permission_bell_icon__12" android:duration="100" android:startOffset="133" android:valueFrom="-10" android:valueTo="12" android:valueType="floatType" android:propertyName="rotation" />
+    <objectAnimator android:interpolator="@drawable/$permission_bell_icon__13" android:duration="100" android:startOffset="233" android:valueFrom="12" android:valueTo="-12" android:valueType="floatType" android:propertyName="rotation" />
+    <objectAnimator android:interpolator="@drawable/$permission_bell_icon__14" android:duration="100" android:startOffset="333" android:valueFrom="-12" android:valueTo="12" android:valueType="floatType" android:propertyName="rotation" />
+    <objectAnimator android:interpolator="@drawable/$permission_bell_icon__15" android:duration="133" android:startOffset="433" android:valueFrom="12" android:valueTo="-12" android:valueType="floatType" android:propertyName="rotation" />
+    <objectAnimator android:interpolator="@drawable/$permission_bell_icon__16" android:duration="133" android:startOffset="567" android:valueFrom="-12" android:valueTo="12" android:valueType="floatType" android:propertyName="rotation" />
+    <objectAnimator android:interpolator="@drawable/$permission_bell_icon__17" android:duration="133" android:startOffset="700" android:valueFrom="12" android:valueTo="-5" android:valueType="floatType" android:propertyName="rotation" />
+    <objectAnimator android:interpolator="@drawable/$permission_bell_icon__18" android:duration="167" android:startOffset="833" android:valueFrom="-5" android:valueTo="0" android:valueType="floatType" android:propertyName="rotation" />
+</set>

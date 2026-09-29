@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set android:ordering="together"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <objectAnimator android:interpolator="@drawable/$avd_tool_crop__9" android:duration="250" android:startOffset="0" android:propertyName="translateXY" android:pathData="M 32.303,24.826C 32.303,24.826 35.803,21.326 35.803,21.326" android:propertyXName="translateX" android:propertyYName="translateY" />
+    <objectAnimator android:interpolator="@drawable/$avd_tool_crop__10" android:duration="250" android:startOffset="250" android:propertyName="translateXY" android:pathData="M 35.803,21.326C 35.803,21.326 32.303,24.826 32.303,24.826" android:propertyXName="translateX" android:propertyYName="translateY" />
+</set>

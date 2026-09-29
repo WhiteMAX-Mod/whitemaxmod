@@ -1,0 +1,37 @@
+.class public final Ley;
+.super Li64;
+.source "SourceFile"
+
+
+# instance fields
+.field public final b:Lcy;
+
+
+# direct methods
+.method public constructor <init>(Leh9;)V
+    .locals 1
+
+    invoke-direct {p0, p1}, Lh64;-><init>(Leh9;)V
+
+    new-instance v0, Lcy;
+
+    invoke-interface {p1}, Leh9;->d()Lfog;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Lts9;-><init>(Lfog;)V
+
+    iput-object v0, p0, Ley;->b:Lcy;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final d()Lfog;
+    .locals 0
+
+    iget-object p0, p0, Ley;->b:Lcy;
+
+    return-object p0
+.end method

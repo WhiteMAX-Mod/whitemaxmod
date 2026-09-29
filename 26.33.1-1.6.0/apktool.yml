@@ -1,0 +1,27 @@
+version: 2.12.0
+apkFileName: 26.33.1.apk
+usesFramework:
+  ids:
+  - 1
+sdkInfo:
+  minSdkVersion: 26
+  targetSdkVersion: 37
+packageInfo:
+  forcedPackageId: 127
+versionInfo:
+  versionCode: 6840
+  versionName: 26.33.1
+doNotCompress:
+- arsc
+- m4a
+- png
+- so
+- webp
+- META-INF/services/re9
+- META-INF/services/ru.ok.android.onelog.OneLogAppender
+- META-INF/services/ru.ok.android.onelog.OneLogConfig$Delegate
+- META-INF/services/u8j
+- assets/dexopt/baseline.prof
+- assets/dexopt/baseline.profm
+- io/opentelemetry/api/version.properties
+- io/opentelemetry/context/version.properties

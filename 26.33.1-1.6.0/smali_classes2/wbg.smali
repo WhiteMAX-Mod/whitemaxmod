@@ -1,0 +1,256 @@
+.class public final Lwbg;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lsv7;
+
+
+# instance fields
+.field public final synthetic a:B
+
+.field public final synthetic b:Lx5;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lx5;B)V
+    .locals 0
+
+    iput-byte p2, p0, Lwbg;->a:B
+
+    iput-object p1, p0, Lwbg;->b:Lx5;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final c()Ljava/lang/Object;
+    .locals 1
+
+    iget-byte v0, p0, Lwbg;->a:B
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object p0, p0, Lwbg;->b:Lx5;
+
+    const/16 v0, 0x5b
+
+    invoke-virtual {p0, v0}, Lx5;->c(I)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_0
+    iget-object p0, p0, Lwbg;->b:Lx5;
+
+    const/16 v0, 0x1b9
+
+    invoke-virtual {p0, v0}, Lx5;->c(I)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_1
+    iget-object p0, p0, Lwbg;->b:Lx5;
+
+    const/16 v0, 0x179
+
+    invoke-virtual {p0, v0}, Lx5;->c(I)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_2
+    iget-object p0, p0, Lwbg;->b:Lx5;
+
+    const/16 v0, 0x1ba
+
+    invoke-virtual {p0, v0}, Lx5;->c(I)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_3
+    iget-object p0, p0, Lwbg;->b:Lx5;
+
+    const/16 v0, 0xa2
+
+    invoke-virtual {p0, v0}, Lx5;->c(I)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_4
+    iget-object p0, p0, Lwbg;->b:Lx5;
+
+    const/16 v0, 0x8e
+
+    invoke-virtual {p0, v0}, Lx5;->c(I)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_5
+    iget-object p0, p0, Lwbg;->b:Lx5;
+
+    const/16 v0, 0x205
+
+    invoke-virtual {p0, v0}, Lx5;->c(I)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_6
+    iget-object p0, p0, Lwbg;->b:Lx5;
+
+    const/16 v0, 0x298
+
+    invoke-virtual {p0, v0}, Lx5;->c(I)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_7
+    iget-object p0, p0, Lwbg;->b:Lx5;
+
+    const/16 v0, 0x8e
+
+    invoke-virtual {p0, v0}, Lx5;->c(I)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_8
+    iget-object p0, p0, Lwbg;->b:Lx5;
+
+    const/16 v0, 0x1a
+
+    invoke-virtual {p0, v0}, Lx5;->c(I)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_9
+    iget-object p0, p0, Lwbg;->b:Lx5;
+
+    const/16 v0, 0x12f
+
+    invoke-virtual {p0, v0}, Lx5;->c(I)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_a
+    iget-object p0, p0, Lwbg;->b:Lx5;
+
+    const/16 v0, 0x1f
+
+    invoke-virtual {p0, v0}, Lx5;->c(I)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_b
+    iget-object p0, p0, Lwbg;->b:Lx5;
+
+    const/16 v0, 0x5b
+
+    invoke-virtual {p0, v0}, Lx5;->c(I)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_c
+    iget-object p0, p0, Lwbg;->b:Lx5;
+
+    const/16 v0, 0x107
+
+    invoke-virtual {p0, v0}, Lx5;->c(I)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_d
+    iget-object p0, p0, Lwbg;->b:Lx5;
+
+    const/16 v0, 0x8e
+
+    invoke-virtual {p0, v0}, Lx5;->c(I)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_e
+    iget-object p0, p0, Lwbg;->b:Lx5;
+
+    const/16 v0, 0xa2
+
+    invoke-virtual {p0, v0}, Lx5;->c(I)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_f
+    iget-object p0, p0, Lwbg;->b:Lx5;
+
+    const/16 v0, 0x239
+
+    invoke-virtual {p0, v0}, Lx5;->c(I)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_10
+    iget-object p0, p0, Lwbg;->b:Lx5;
+
+    const/16 v0, 0x1d5
+
+    invoke-virtual {p0, v0}, Lx5;->c(I)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_10
+        :pswitch_f
+        :pswitch_e
+        :pswitch_d
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method

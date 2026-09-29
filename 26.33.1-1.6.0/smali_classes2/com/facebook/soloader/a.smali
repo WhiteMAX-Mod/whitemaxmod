@@ -1,0 +1,536 @@
+.class public final Lcom/facebook/soloader/a;
+.super Lcom/facebook/soloader/e;
+.source "SourceFile"
+
+
+# instance fields
+.field public a:[Lwy6;
+
+.field public final b:Ljava/util/zip/ZipFile;
+
+.field public final c:Z
+
+.field public final d:Ljava/io/File;
+
+
+# direct methods
+.method public constructor <init>(Lvq0;Lvq0;Z)V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance p2, Ljava/util/zip/ZipFile;
+
+    iget-object v0, p1, Lvq0;->e:Ljava/io/File;
+
+    invoke-direct {p2, v0}, Ljava/util/zip/ZipFile;-><init>(Ljava/io/File;)V
+
+    iput-object p2, p0, Lcom/facebook/soloader/a;->b:Ljava/util/zip/ZipFile;
+
+    iput-boolean p3, p0, Lcom/facebook/soloader/a;->c:Z
+
+    new-instance p2, Ljava/io/File;
+
+    iget-object p1, p1, Linj;->d:Landroid/content/Context;
+
+    invoke-virtual {p1}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
+
+    move-result-object p1
+
+    iget-object p1, p1, Landroid/content/pm/ApplicationInfo;->nativeLibraryDir:Ljava/lang/String;
+
+    invoke-direct {p2, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    iput-object p2, p0, Lcom/facebook/soloader/a;->d:Ljava/io/File;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final close()V
+    .locals 0
+
+    iget-object p0, p0, Lcom/facebook/soloader/a;->b:Ljava/util/zip/ZipFile;
+
+    invoke-virtual {p0}, Ljava/util/zip/ZipFile;->close()V
+
+    return-void
+.end method
+
+.method public final m()[Ljt;
+    .locals 0
+
+    invoke-virtual {p0}, Lcom/facebook/soloader/a;->u()[Lwy6;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public final o(Ljava/io/File;)V
+    .locals 8
+
+    invoke-virtual {p0}, Lcom/facebook/soloader/a;->u()[Lwy6;
+
+    move-result-object v0
+
+    const v1, 0x8000
+
+    new-array v1, v1, [B
+
+    array-length v2, v0
+
+    const/4 v3, 0x0
+
+    :goto_0
+    if-ge v3, v2, :cond_1
+
+    aget-object v4, v0, v3
+
+    iget-object v5, p0, Lcom/facebook/soloader/a;->b:Ljava/util/zip/ZipFile;
+
+    iget-object v6, v4, Lwy6;->c:Ljava/util/zip/ZipEntry;
+
+    invoke-virtual {v5, v6}, Ljava/util/zip/ZipFile;->getInputStream(Ljava/util/zip/ZipEntry;)Ljava/io/InputStream;
+
+    move-result-object v5
+
+    :try_start_0
+    new-instance v6, Lk77;
+
+    const/4 v7, 0x2
+
+    invoke-direct {v6, v4, v5, v7}, Lk77;-><init>(Ljava/lang/Object;Ljava/lang/Object;B)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    const/4 v5, 0x0
+
+    :try_start_1
+    invoke-static {v6, v1, p1}, Lcom/facebook/soloader/e;->a(Lk77;[BLjava/io/File;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    :try_start_2
+    invoke-virtual {v6}, Lk77;->close()V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p0
+
+    goto :goto_2
+
+    :catchall_1
+    move-exception p0
+
+    :try_start_3
+    invoke-virtual {v6}, Lk77;->close()V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_2
+
+    goto :goto_1
+
+    :catchall_2
+    move-exception p1
+
+    :try_start_4
+    invoke-virtual {p0, p1}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
+
+    :goto_1
+    throw p0
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+
+    :goto_2
+    if-eqz v5, :cond_0
+
+    invoke-virtual {v5}, Ljava/io/InputStream;->close()V
+
+    :cond_0
+    throw p0
+
+    :cond_1
+    return-void
+.end method
+
+.method public final t()[Lwy6;
+    .locals 9
+
+    new-instance v0, Ljava/util/LinkedHashSet;
+
+    invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
+
+    new-instance v1, Ljava/util/HashMap;
+
+    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
+
+    const-string v2, "^lib/([^/]+)/([^/]+\\.so)$"
+
+    invoke-static {v2}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v2
+
+    invoke-static {}, Lcom/facebook/soloader/SysUtil$MarshmallowSysdeps;->getSupportedAbis()[Ljava/lang/String;
+
+    move-result-object v3
+
+    iget-object p0, p0, Lcom/facebook/soloader/a;->b:Ljava/util/zip/ZipFile;
+
+    invoke-virtual {p0}, Ljava/util/zip/ZipFile;->entries()Ljava/util/Enumeration;
+
+    move-result-object p0
+
+    :cond_0
+    :goto_0
+    invoke-interface {p0}, Ljava/util/Enumeration;->hasMoreElements()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_6
+
+    invoke-interface {p0}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Ljava/util/zip/ZipEntry;
+
+    invoke-virtual {v4}, Ljava/util/zip/ZipEntry;->getName()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v2, v5}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Ljava/util/regex/Matcher;->matches()Z
+
+    move-result v6
+
+    if-nez v6, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v6, 0x1
+
+    invoke-virtual {v5, v6}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
+
+    move-result-object v6
+
+    const/4 v7, 0x2
+
+    invoke-virtual {v5, v7}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
+
+    move-result-object v5
+
+    const/4 v7, 0x0
+
+    :goto_1
+    array-length v8, v3
+
+    if-ge v7, v8, :cond_3
+
+    aget-object v8, v3, v7
+
+    if-eqz v8, :cond_2
+
+    invoke-virtual {v6, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    add-int/lit8 v7, v7, 0x1
+
+    goto :goto_1
+
+    :cond_3
+    const/4 v7, -0x1
+
+    :goto_2
+    if-gez v7, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    invoke-virtual {v0, v6}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+
+    invoke-virtual {v1, v5}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Lwy6;
+
+    if-eqz v6, :cond_5
+
+    iget v6, v6, Lwy6;->d:I
+
+    if-ge v7, v6, :cond_0
+
+    :cond_5
+    new-instance v6, Lwy6;
+
+    invoke-direct {v6, v5, v4, v7}, Lwy6;-><init>(Ljava/lang/String;Ljava/util/zip/ZipEntry;I)V
+
+    invoke-virtual {v1, v5, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_0
+
+    :cond_6
+    invoke-virtual {v0}, Ljava/util/AbstractCollection;->size()I
+
+    move-result p0
+
+    new-array p0, p0, [Ljava/lang/String;
+
+    invoke-virtual {v0, p0}, Ljava/util/AbstractCollection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, [Ljava/lang/String;
+
+    invoke-virtual {v1}, Ljava/util/HashMap;->values()Ljava/util/Collection;
+
+    move-result-object p0
+
+    invoke-virtual {v1}, Ljava/util/HashMap;->size()I
+
+    move-result v0
+
+    new-array v0, v0, [Lwy6;
+
+    invoke-interface {p0, v0}, Ljava/util/Collection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, [Lwy6;
+
+    invoke-static {p0}, Ljava/util/Arrays;->sort([Ljava/lang/Object;)V
+
+    return-object p0
+.end method
+
+.method public final u()[Lwy6;
+    .locals 15
+
+    iget-object v0, p0, Lcom/facebook/soloader/a;->a:[Lwy6;
+
+    if-eqz v0, :cond_0
+
+    return-object v0
+
+    :cond_0
+    invoke-virtual {p0}, Lcom/facebook/soloader/a;->t()[Lwy6;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/facebook/soloader/a;->a:[Lwy6;
+
+    iget-boolean v1, p0, Lcom/facebook/soloader/a;->c:Z
+
+    const-string v2, "BackupSoSource"
+
+    if-eqz v1, :cond_1
+
+    const-string v0, "Unconditonally extracting all DSOs from zip"
+
+    invoke-static {v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget-object p0, p0, Lcom/facebook/soloader/a;->a:[Lwy6;
+
+    return-object p0
+
+    :cond_1
+    array-length v1, v0
+
+    const/4 v3, 0x0
+
+    move v4, v3
+
+    :goto_0
+    if-ge v4, v1, :cond_5
+
+    aget-object v5, v0, v4
+
+    iget-object v6, v5, Lwy6;->c:Ljava/util/zip/ZipEntry;
+
+    iget-object v5, v5, Ljt;->a:Ljava/lang/Object;
+
+    check-cast v5, Ljava/lang/String;
+
+    const-string v7, ": "
+
+    const-string v8, "Not allowing consideration of "
+
+    invoke-virtual {v6}, Ljava/util/zip/ZipEntry;->getName()Ljava/lang/String;
+
+    move-result-object v9
+
+    new-instance v10, Ljava/io/File;
+
+    iget-object v11, p0, Lcom/facebook/soloader/a;->d:Ljava/io/File;
+
+    invoke-direct {v10, v11, v5}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    :try_start_0
+    invoke-virtual {v10}, Ljava/io/File;->getCanonicalPath()Ljava/lang/String;
+
+    move-result-object v12
+
+    invoke-virtual {v11}, Ljava/io/File;->getCanonicalPath()Ljava/lang/String;
+
+    move-result-object v11
+
+    invoke-virtual {v12, v11}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v11
+
+    if-nez v11, :cond_2
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v6, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v10, " not in lib dir."
+
+    invoke-virtual {v6, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v2, v6}, Lvdm;->c(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_3
+
+    :catch_0
+    move-exception v6
+
+    goto :goto_2
+
+    :cond_2
+    invoke-virtual {v10}, Ljava/io/File;->isFile()Z
+
+    move-result v11
+
+    const-string v12, "Allowing consideration of "
+
+    if-nez v11, :cond_3
+
+    const-string v0, " not in system lib dir"
+
+    invoke-static {v12, v9, v7, v5, v0}, Ly2g;->u(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_1
+
+    :cond_3
+    invoke-virtual {v10}, Ljava/io/File;->length()J
+
+    move-result-wide v13
+
+    invoke-virtual {v6}, Ljava/util/zip/ZipEntry;->getSize()J
+
+    move-result-wide v5
+
+    cmp-long v7, v13, v5
+
+    if-eqz v7, :cond_4
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0, v12}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ": sysdir file length is "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v13, v14}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", but the file is "
+
+    const-string v3, " bytes long in the APK"
+
+    invoke-static {v5, v6, v1, v3, v0}, Liw4;->k(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    :goto_1
+    iget-object p0, p0, Lcom/facebook/soloader/a;->a:[Lwy6;
+
+    return-object p0
+
+    :cond_4
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v5, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v6, ": deferring to libdir"
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v2, v5}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_3
+
+    :goto_2
+    const-string v10, ", IOException when constructing path: "
+
+    invoke-static {v8, v9, v7, v5, v10}, Lqr0;->r(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v6}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v2, v5}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    :goto_3
+    add-int/lit8 v4, v4, 0x1
+
+    goto/16 :goto_0
+
+    :cond_5
+    new-array v0, v3, [Lwy6;
+
+    iput-object v0, p0, Lcom/facebook/soloader/a;->a:[Lwy6;
+
+    return-object v0
+.end method

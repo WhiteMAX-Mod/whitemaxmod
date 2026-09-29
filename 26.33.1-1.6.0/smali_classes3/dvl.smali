@@ -1,0 +1,41 @@
+.class public final synthetic Ldvl;
+.super Lste;
+.source "SourceFile"
+
+
+# static fields
+.field public static final b:Ldvl;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 5
+
+    new-instance v0, Ldvl;
+
+    const-string v1, "getFramesDroppedDiff()Ljava/lang/Long;"
+
+    const/4 v2, 0x0
+
+    const-class v3, Lztl;
+
+    const-string v4, "framesDroppedDiff"
+
+    invoke-direct {v0, v3, v4, v1, v2}, Lste;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    sput-object v0, Ldvl;->b:Ldvl;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final get(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lztl;
+
+    iget-object p0, p1, Lztl;->d:Ljava/lang/Long;
+
+    return-object p0
+.end method

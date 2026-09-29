@@ -1,0 +1,43 @@
+.class public final Llxh;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# instance fields
+.field public final a:Landroid/content/Context;
+
+.field public final b:Llri;
+
+.field public final c:Lvj9;
+
+.field public final d:Lvj9;
+
+.field public final e:Lvj9;
+
+.field public final f:Lvj9;
+
+.field public final g:Lvj9;
+
+
+# direct methods
+.method public constructor <init>(Landroid/content/Context;Llri;Lvj9;Lvj9;Lvj9;Lvj9;Lvj9;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Llxh;->a:Landroid/content/Context;
+
+    iput-object p2, p0, Llxh;->b:Llri;
+
+    iput-object p3, p0, Llxh;->c:Lvj9;
+
+    iput-object p4, p0, Llxh;->d:Lvj9;
+
+    iput-object p5, p0, Llxh;->e:Lvj9;
+
+    iput-object p6, p0, Llxh;->f:Lvj9;
+
+    iput-object p7, p0, Llxh;->g:Lvj9;
+
+    return-void
+.end method

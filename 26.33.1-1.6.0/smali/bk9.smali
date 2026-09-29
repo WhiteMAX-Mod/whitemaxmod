@@ -1,0 +1,266 @@
+.class public final Lbk9;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# instance fields
+.field public final a:Ljava/lang/Object;
+
+.field public final b:Ljava/lang/Object;
+
+.field public volatile c:Ljava/lang/Object;
+
+
+# direct methods
+.method public constructor <init>(Ljava/lang/Class;)V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Ljava/lang/Object;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iput-object v0, p0, Lbk9;->a:Ljava/lang/Object;
+
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lbk9;->b:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lwtg;Landroid/content/Context;)V
+    .locals 0
+
+    .line 17
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 18
+    iput-object p1, p0, Lbk9;->a:Ljava/lang/Object;
+
+    .line 19
+    iput-object p2, p0, Lbk9;->b:Ljava/lang/Object;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public a()Ljava/util/logging/Logger;
+    .locals 2
+
+    iget-object v0, p0, Lbk9;->c:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/logging/Logger;
+
+    if-eqz v0, :cond_0
+
+    return-object v0
+
+    :cond_0
+    iget-object v0, p0, Lbk9;->a:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-object v1, p0, Lbk9;->c:Ljava/lang/Object;
+
+    check-cast v1, Ljava/util/logging/Logger;
+
+    if-eqz v1, :cond_1
+
+    monitor-exit v0
+
+    return-object v1
+
+    :catchall_0
+    move-exception p0
+
+    goto :goto_0
+
+    :cond_1
+    iget-object v1, p0, Lbk9;->b:Ljava/lang/Object;
+
+    check-cast v1, Ljava/lang/String;
+
+    invoke-static {v1}, Ljava/util/logging/Logger;->getLogger(Ljava/lang/String;)Ljava/util/logging/Logger;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lbk9;->c:Ljava/lang/Object;
+
+    monitor-exit v0
+
+    return-object v1
+
+    :goto_0
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
+.end method
+
+.method public b(Ljava/util/List;)V
+    .locals 8
+
+    sget-object v0, Lw7j;->a:Lw7j;
+
+    invoke-static {}, Lw7j;->a()Ljava/lang/String;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    invoke-static {}, Lw7j;->b()Le96;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Le96;->e()Ljava/util/Collection;
+
+    move-result-object v5
+
+    new-instance v1, Lorg/json/JSONObject;
+
+    invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
+
+    iget-object v2, p0, Lbk9;->b:Ljava/lang/Object;
+
+    check-cast v2, Landroid/content/Context;
+
+    invoke-static {v2}, Lui9;->m(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "deviceId"
+
+    invoke-virtual {v1, v3, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    check-cast p1, Ljava/lang/Iterable;
+
+    invoke-static {p1}, Loh5;->V(Ljava/lang/Iterable;)Lorg/json/JSONArray;
+
+    move-result-object p1
+
+    const-string v2, "sessions"
+
+    invoke-virtual {v1, v2, p1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    invoke-interface {v5}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result p1
+
+    if-nez p1, :cond_1
+
+    const-string p1, "drops"
+
+    invoke-static {v5}, Lczm;->b(Ljava/util/Collection;)Lorg/json/JSONArray;
+
+    move-result-object v2
+
+    invoke-virtual {v1, p1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    :cond_1
+    invoke-static {}, Lw7j;->c()Ljava/util/Map;
+
+    move-result-object p1
+
+    sget-object v2, Lzhg;->b:Lp6h;
+
+    invoke-interface {p1, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    instance-of v2, p1, Le55;
+
+    if-eqz v2, :cond_2
+
+    check-cast p1, Le55;
+
+    goto :goto_0
+
+    :cond_2
+    const/4 p1, 0x0
+
+    :goto_0
+    if-nez p1, :cond_3
+
+    new-instance p1, Lqqa;
+
+    const/16 v2, 0x12
+
+    invoke-direct {p1, v2}, Lqqa;-><init>(B)V
+
+    new-instance v2, Le55;
+
+    invoke-direct {v2, p1}, Le55;-><init>(Lqqa;)V
+
+    move-object p1, v2
+
+    :cond_3
+    invoke-virtual {p1}, Le55;->b()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
+
+    move-result-object p1
+
+    const-string v2, "api/crash/trackSession"
+
+    invoke-virtual {p1, v2}, Landroid/net/Uri$Builder;->appendEncodedPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
+
+    move-result-object p1
+
+    const-string v2, "crashToken"
+
+    invoke-virtual {p1, v2, v0}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/net/Uri$Builder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    new-instance v3, Lhua;
+
+    const-string v0, "application/json; charset=utf-8"
+
+    invoke-virtual {v1}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lmig;->v(Ljava/lang/String;Ljava/lang/String;)Lk77;
+
+    move-result-object v0
+
+    invoke-direct {v3, p1, v0}, Lhua;-><init>(Ljava/lang/String;Lak8;)V
+
+    new-instance v6, Landroid/os/ConditionVariable;
+
+    invoke-direct {v6}, Landroid/os/ConditionVariable;-><init>()V
+
+    iput-object v6, p0, Lbk9;->c:Ljava/lang/Object;
+
+    new-instance v2, Lse2;
+
+    const/16 v7, 0xf
+
+    move-object v4, p0
+
+    invoke-direct/range {v2 .. v7}, Lse2;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;B)V
+
+    invoke-static {v2}, Lb9j;->b(Ljava/lang/Runnable;)V
+
+    return-void
+.end method

@@ -1,0 +1,239 @@
+.class public abstract Lr5m;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# static fields
+.field public static final a:Lw79;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lw79;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lr5m;->a:Lw79;
+
+    return-void
+.end method
+
+.method public static final a(Ljava/lang/String;Ly91;Ljava/lang/String;Lau5;)Ljava/lang/String;
+    .locals 5
+
+    const/4 v0, 0x0
+
+    if-eqz p2, :cond_0
+
+    invoke-static {p2}, Lefi;->X0(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    sget-object v2, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
+
+    move-result-object v1
+
+    goto :goto_0
+
+    :cond_0
+    move-object v1, v0
+
+    :goto_0
+    if-eqz v1, :cond_3
+
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v2
+
+    sparse-switch v2, :sswitch_data_0
+
+    goto :goto_1
+
+    :sswitch_0
+    const-string v2, "arm64-v8a"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    const-string p2, "arm64"
+
+    goto :goto_3
+
+    :sswitch_1
+    const-string v2, "armeabi-v7a"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    const-string p2, "arm"
+
+    goto :goto_3
+
+    :sswitch_2
+    const-string v2, "x86"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    move-object p2, v2
+
+    goto :goto_3
+
+    :sswitch_3
+    const-string v2, "x86_64"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    :cond_3
+    :goto_1
+    sget-object v1, Loh5;->d:Lnuc;
+
+    if-nez v1, :cond_4
+
+    goto :goto_2
+
+    :cond_4
+    sget-object v2, Lf0a;->f:Lf0a;
+
+    invoke-virtual {v1, v2}, Lnuc;->b(Lf0a;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_5
+
+    const-string v3, "format url fail for abi "
+
+    const-string v4, "SelfService"
+
+    invoke-static {v3, p2, v1, v2, v4}, Lab9;->D(Ljava/lang/String;Ljava/lang/String;Lnuc;Lf0a;Ljava/lang/String;)V
+
+    :cond_5
+    :goto_2
+    move-object p2, v0
+
+    :goto_3
+    invoke-virtual {p1}, Ljava/lang/Enum;->name()Ljava/lang/String;
+
+    move-result-object p1
+
+    sget-object v1, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
+
+    invoke-virtual {p1, v1}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v2, "%vendor%"
+
+    invoke-static {p0, v2, p1}, Lmfi;->g0(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string p1, "/"
+
+    if-eqz p2, :cond_6
+
+    invoke-virtual {p2, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p2
+
+    goto :goto_4
+
+    :cond_6
+    move-object p2, v0
+
+    :goto_4
+    const-string v2, ""
+
+    if-nez p2, :cond_7
+
+    move-object p2, v2
+
+    :cond_7
+    const-string v3, "%abi%/"
+
+    invoke-static {p0, v3, p2}, Lmfi;->g0(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    if-eqz p3, :cond_8
+
+    invoke-virtual {p3}, Ljava/lang/Enum;->name()Ljava/lang/String;
+
+    move-result-object p2
+
+    if-eqz p2, :cond_8
+
+    invoke-virtual {p2, v1}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {p2, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    :cond_8
+    if-nez v0, :cond_9
+
+    goto :goto_5
+
+    :cond_9
+    move-object v2, v0
+
+    :goto_5
+    const-string p1, "%dpi%/"
+
+    invoke-static {p0, p1, v2}, Lmfi;->g0(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :sswitch_data_0
+    .sparse-switch
+        -0x300b59d9 -> :sswitch_3
+        0x1c976 -> :sswitch_2
+        0x8ab4d72 -> :sswitch_1
+        0x5553f3ec -> :sswitch_0
+    .end sparse-switch
+.end method
+
+.method public static b(Lyjj;)Lhh9;
+    .locals 2
+
+    new-instance v0, Lhh9;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1, p0}, Lhh9;-><init>(ILyjj;)V
+
+    return-object v0
+.end method

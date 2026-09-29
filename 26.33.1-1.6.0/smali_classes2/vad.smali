@@ -1,0 +1,325 @@
+.class public final Lvad;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# instance fields
+.field public final a:Z
+
+.field public final b:J
+
+.field public final c:J
+
+.field public final d:J
+
+.field public final e:J
+
+.field public final f:Luad;
+
+.field public final g:Lz50;
+
+
+# direct methods
+.method public constructor <init>(ZJJJJLuad;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-boolean p1, p0, Lvad;->a:Z
+
+    iput-wide p2, p0, Lvad;->b:J
+
+    iput-wide p4, p0, Lvad;->c:J
+
+    iput-wide p6, p0, Lvad;->d:J
+
+    iput-wide p8, p0, Lvad;->e:J
+
+    iput-object p10, p0, Lvad;->f:Luad;
+
+    const/4 p1, 0x0
+
+    invoke-static {p1}, Lagm;->g(Z)Lz50;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lvad;->g:Lz50;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(JLjava/lang/Object;)V
+    .locals 2
+
+    iget-object v0, p0, Lvad;->g:Lz50;
+
+    invoke-virtual {v0}, Lz50;->a()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object p0, p0, Lvad;->f:Luad;
+
+    invoke-interface {p0, p3}, Luad;->i(Ljava/lang/Object;)V
+
+    return-void
+
+    :cond_0
+    new-instance p3, Ljava/lang/StringBuilder;
+
+    const-string v0, "Output "
+
+    invoke-direct {p3, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v0, p0, Lvad;->d:J
+
+    invoke-virtual {p3, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v0, " at "
+
+    invoke-virtual {p3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v0, p0, Lvad;->b:J
+
+    invoke-static {v0, v1}, Lbt7;->a(J)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p0, " for "
+
+    invoke-virtual {p3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p0, " was completed multiple times!"
+
+    invoke-static {p1, p2, p0, p3}, Lab9;->x(JLjava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lmvf;->d(Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 6
+
+    if-ne p0, p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    instance-of v0, p1, Lvad;
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    check-cast p1, Lvad;
+
+    iget-boolean v0, p0, Lvad;->a:Z
+
+    iget-boolean v2, p1, Lvad;->a:Z
+
+    if-eq v0, v2, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    iget-wide v2, p0, Lvad;->b:J
+
+    iget-wide v4, p1, Lvad;->b:J
+
+    cmp-long v0, v2, v4
+
+    if-nez v0, :cond_6
+
+    iget-wide v2, p0, Lvad;->c:J
+
+    iget-wide v4, p1, Lvad;->c:J
+
+    cmp-long v0, v2, v4
+
+    if-nez v0, :cond_6
+
+    iget-wide v2, p0, Lvad;->d:J
+
+    iget-wide v4, p1, Lvad;->d:J
+
+    cmp-long v0, v2, v4
+
+    if-eqz v0, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    iget-wide v2, p0, Lvad;->e:J
+
+    iget-wide v4, p1, Lvad;->e:J
+
+    cmp-long v0, v2, v4
+
+    if-eqz v0, :cond_4
+
+    goto :goto_1
+
+    :cond_4
+    iget-object p0, p0, Lvad;->f:Luad;
+
+    iget-object p1, p1, Lvad;->f:Luad;
+
+    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_5
+
+    goto :goto_1
+
+    :cond_5
+    :goto_0
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_6
+    :goto_1
+    return v1
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    iget-boolean v0, p0, Lvad;->a:Z
+
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-wide v2, p0, Lvad;->b:J
+
+    invoke-static {v0, v1, v2, v3}, Lj55;->h(IIJ)I
+
+    move-result v0
+
+    iget-wide v2, p0, Lvad;->c:J
+
+    invoke-static {v0, v1, v2, v3}, Lj55;->h(IIJ)I
+
+    move-result v0
+
+    iget-wide v2, p0, Lvad;->d:J
+
+    invoke-static {v0, v1, v2, v3}, Lj55;->h(IIJ)I
+
+    move-result v0
+
+    iget-wide v2, p0, Lvad;->e:J
+
+    invoke-static {v0, v1, v2, v3}, Lj55;->h(IIJ)I
+
+    move-result v0
+
+    iget-object p0, p0, Lvad;->f:Luad;
+
+    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
+
+    move-result p0
+
+    add-int/2addr p0, v0
+
+    return p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "StartedOutput(isOutOfOrder="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-boolean v1, p0, Lvad;->a:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", cameraFrameNumber="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lvad;->b:J
+
+    invoke-static {v1, v2}, Lbt7;->a(J)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", cameraTimestamp="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "CameraTimestamp(value="
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v2, p0, Lvad;->c:J
+
+    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const/16 v2, 0x29
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", cameraOutputSequence="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v3, p0, Lvad;->d:J
+
+    invoke-virtual {v0, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", cameraOutputNumber="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v3, p0, Lvad;->e:J
+
+    invoke-virtual {v0, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", outputListener="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object p0, p0, Lvad;->f:Luad;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method

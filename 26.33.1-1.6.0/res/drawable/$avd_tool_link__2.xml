@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set android:ordering="together"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <objectAnimator android:interpolator="@android:interpolator/linear_out_slow_in" android:duration="1667" android:propertyName="rotation">
+        <propertyValuesHolder android:valueType="floatType" android:propertyName="rotation">
+            <keyframe android:value="-45" android:fraction="0.0" />
+            <keyframe android:value="-245" android:fraction="0.27" />
+            <keyframe android:value="-225" android:fraction="0.47" />
+            <keyframe android:value="-225" android:fraction="1.0" />
+        </propertyValuesHolder>
+    </objectAnimator>
+    <objectAnimator android:interpolator="@android:interpolator/linear_out_slow_in" android:duration="1667" android:propertyName="scaleX">
+        <propertyValuesHolder android:valueType="floatType" android:propertyName="scaleX">
+            <keyframe android:value="1" android:fraction="0.0" />
+            <keyframe android:value="1" android:fraction="0.27" />
+            <keyframe android:value="0.9" android:fraction="0.47" />
+            <keyframe android:value="0.9" android:fraction="0.75" />
+            <keyframe android:value="1" android:fraction="0.95" />
+            <keyframe android:value="1" android:fraction="1.0" />
+        </propertyValuesHolder>
+    </objectAnimator>
+    <objectAnimator android:interpolator="@android:interpolator/linear_out_slow_in" android:duration="1667" android:propertyName="scaleY">
+        <propertyValuesHolder android:valueType="floatType" android:propertyName="scaleY">
+            <keyframe android:value="1" android:fraction="0.0" />
+            <keyframe android:value="1" android:fraction="0.27" />
+            <keyframe android:value="0.9" android:fraction="0.47" />
+            <keyframe android:value="0.9" android:fraction="0.75" />
+            <keyframe android:value="1" android:fraction="0.95" />
+            <keyframe android:value="1" android:fraction="1.0" />
+        </propertyValuesHolder>
+    </objectAnimator>
+</set>

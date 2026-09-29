@@ -1,0 +1,90 @@
+.class public final Lt41;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lud7;
+
+
+# instance fields
+.field public final synthetic a:B
+
+.field public final synthetic b:Lm4c;
+
+.field public final synthetic c:Lsq4;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lm4c;Lsq4;B)V
+    .locals 0
+
+    iput-byte p3, p0, Lt41;->a:B
+
+    iput-object p1, p0, Lt41;->b:Lm4c;
+
+    iput-object p2, p0, Lt41;->c:Lsq4;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final d(Lvd7;Ld05;)Ljava/lang/Object;
+    .locals 5
+
+    iget-byte v0, p0, Lt41;->a:B
+
+    sget-object v1, Lhmj;->a:Lhmj;
+
+    sget-object v2, Lb65;->a:Lb65;
+
+    iget-object v3, p0, Lt41;->c:Lsq4;
+
+    iget-object p0, p0, Lt41;->b:Lm4c;
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v0, Ls41;
+
+    const/4 v4, 0x1
+
+    invoke-direct {v0, p1, v3, v4}, Ls41;-><init>(Lvd7;Lsq4;B)V
+
+    invoke-virtual {p0, v0, p2}, Lm4c;->d(Lvd7;Ld05;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    if-ne p0, v2, :cond_0
+
+    move-object v1, p0
+
+    :cond_0
+    return-object v1
+
+    :pswitch_0
+    new-instance v0, Ls41;
+
+    const/4 v4, 0x0
+
+    invoke-direct {v0, p1, v3, v4}, Ls41;-><init>(Lvd7;Lsq4;B)V
+
+    invoke-virtual {p0, v0, p2}, Lm4c;->d(Lvd7;Ld05;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    if-ne p0, v2, :cond_1
+
+    move-object v1, p0
+
+    :cond_1
+    return-object v1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
