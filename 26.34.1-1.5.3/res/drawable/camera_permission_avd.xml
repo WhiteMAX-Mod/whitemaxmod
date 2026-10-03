@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector android:drawable="@drawable/$camera_permission_avd__0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <target android:name="_R_G_L_0_G_L_2_G_L_1_G" android:animation="@drawable/$camera_permission_avd__1" />
+    <target android:name="_R_G_L_0_G_L_2_G_L_0_G_T_1" android:animation="@drawable/$camera_permission_avd__14" />
+    <target android:name="_R_G_L_0_G_L_2_G_L_0_G_T_1" android:animation="@drawable/$camera_permission_avd__18" />
+    <target android:name="stroke_highlight" android:animation="@drawable/$camera_permission_avd__31" />
+    <target android:name="_R_G_L_0_G_L_1_G" android:animation="@drawable/$camera_permission_avd__34" />
+    <target android:name="stroke_outer" android:animation="@drawable/$camera_permission_avd__38" />
+    <target android:name="stroke_outer" android:animation="@drawable/$camera_permission_avd__41" />
+    <target android:name="_R_G_L_0_G_L_0_G" android:animation="@drawable/$camera_permission_avd__44" />
+    <target android:name="time_group" android:animation="@drawable/$camera_permission_avd__48" />
+</animated-vector>

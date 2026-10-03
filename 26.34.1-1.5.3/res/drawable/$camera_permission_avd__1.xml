@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set android:ordering="together"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <objectAnimator android:interpolator="@drawable/$camera_permission_avd__2" android:duration="500" android:startOffset="0" android:valueFrom="1" android:valueTo="1.12" android:valueType="floatType" android:propertyName="scaleX" />
+    <objectAnimator android:interpolator="@drawable/$camera_permission_avd__3" android:duration="500" android:startOffset="0" android:valueFrom="1" android:valueTo="1.12" android:valueType="floatType" android:propertyName="scaleY" />
+    <objectAnimator android:interpolator="@drawable/$camera_permission_avd__4" android:duration="250" android:startOffset="500" android:valueFrom="1.12" android:valueTo="1" android:valueType="floatType" android:propertyName="scaleX" />
+    <objectAnimator android:interpolator="@drawable/$camera_permission_avd__5" android:duration="250" android:startOffset="500" android:valueFrom="1.12" android:valueTo="1" android:valueType="floatType" android:propertyName="scaleY" />
+    <objectAnimator android:interpolator="@drawable/$camera_permission_avd__6" android:duration="125" android:startOffset="750" android:valueFrom="1" android:valueTo="0.97683" android:valueType="floatType" android:propertyName="scaleX" />
+    <objectAnimator android:interpolator="@drawable/$camera_permission_avd__7" android:duration="125" android:startOffset="750" android:valueFrom="1" android:valueTo="0.97683" android:valueType="floatType" android:propertyName="scaleY" />
+    <objectAnimator android:interpolator="@drawable/$camera_permission_avd__8" android:duration="250" android:startOffset="875" android:valueFrom="0.97683" android:valueTo="1.00852" android:valueType="floatType" android:propertyName="scaleX" />
+    <objectAnimator android:interpolator="@drawable/$camera_permission_avd__9" android:duration="250" android:startOffset="875" android:valueFrom="0.97683" android:valueTo="1.00852" android:valueType="floatType" android:propertyName="scaleY" />
+    <objectAnimator android:interpolator="@drawable/$camera_permission_avd__10" android:duration="250" android:startOffset="1125" android:valueFrom="1.00852" android:valueTo="0.99686" android:valueType="floatType" android:propertyName="scaleX" />
+    <objectAnimator android:interpolator="@drawable/$camera_permission_avd__11" android:duration="250" android:startOffset="1125" android:valueFrom="1.00852" android:valueTo="0.99686" android:valueType="floatType" android:propertyName="scaleY" />
+    <objectAnimator android:interpolator="@drawable/$camera_permission_avd__12" android:duration="108" android:startOffset="1375" android:valueFrom="0.99686" android:valueTo="1" android:valueType="floatType" android:propertyName="scaleX" />
+    <objectAnimator android:interpolator="@drawable/$camera_permission_avd__13" android:duration="108" android:startOffset="1375" android:valueFrom="0.99686" android:valueTo="1" android:valueType="floatType" android:propertyName="scaleY" />
+</set>

@@ -1,0 +1,46 @@
+.class public abstract Lbk5;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# instance fields
+.field public final a:Lax7;
+
+.field public final b:Lax7;
+
+
+# direct methods
+.method public synthetic constructor <init>()V
+    .locals 3
+
+    new-instance v0, Lok4;
+
+    const/16 v1, 0xa
+
+    invoke-direct {v0, v1}, Lok4;-><init>(B)V
+
+    new-instance v1, Lok4;
+
+    const/16 v2, 0xb
+
+    invoke-direct {v1, v2}, Lok4;-><init>(B)V
+
+    invoke-direct {p0, v0, v1}, Lbk5;-><init>(Lax7;Lax7;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Lax7;Lax7;)V
+    .locals 0
+
+    .line 18
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 19
+    iput-object p1, p0, Lbk5;->a:Lax7;
+
+    .line 20
+    iput-object p2, p0, Lbk5;->b:Lax7;
+
+    return-void
+.end method

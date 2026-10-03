@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector android:drawable="@drawable/$sticker_typing__0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <target android:name="_R_G_L_4_G_T_1" android:animation="@drawable/$sticker_typing__1" />
+    <target android:name="_R_G_L_4_G_T_1" android:animation="@drawable/$sticker_typing__3" />
+    <target android:name="_R_G_L_3_G_T_1" android:animation="@drawable/$sticker_typing__5" />
+    <target android:name="_R_G_L_3_G_T_1" android:animation="@drawable/$sticker_typing__8" />
+    <target android:name="_R_G_L_2_G_T_1" android:animation="@drawable/$sticker_typing__11" />
+    <target android:name="_R_G_L_2_G_T_1" android:animation="@drawable/$sticker_typing__15" />
+    <target android:name="_R_G_L_2_G_T_1" android:animation="@drawable/$sticker_typing__19" />
+    <target android:name="_R_G_L_1_G_T_1" android:animation="@drawable/$sticker_typing__20" />
+    <target android:name="_R_G_L_1_G_T_1" android:animation="@drawable/$sticker_typing__24" />
+    <target android:name="_R_G_L_1_G_T_1" android:animation="@drawable/$sticker_typing__28" />
+    <target android:name="_R_G_L_0_G_T_1" android:animation="@drawable/$sticker_typing__29" />
+    <target android:name="_R_G_L_0_G_T_1" android:animation="@drawable/$sticker_typing__32" />
+    <target android:name="_R_G_L_0_G_T_1" android:animation="@drawable/$sticker_typing__35" />
+    <target android:name="time_group" android:animation="@drawable/$sticker_typing__36" />
+</animated-vector>

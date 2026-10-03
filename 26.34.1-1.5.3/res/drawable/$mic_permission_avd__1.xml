@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set android:ordering="together"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <objectAnimator android:interpolator="@drawable/$mic_permission_avd__2" android:duration="250" android:startOffset="0" android:valueFrom="0" android:valueTo="0" android:valueType="floatType" android:propertyName="rotation" />
+    <objectAnimator android:interpolator="@drawable/$mic_permission_avd__3" android:duration="250" android:startOffset="250" android:valueFrom="0" android:valueTo="-9" android:valueType="floatType" android:propertyName="rotation" />
+    <objectAnimator android:interpolator="@drawable/$mic_permission_avd__4" android:duration="250" android:startOffset="500" android:valueFrom="-9" android:valueTo="0" android:valueType="floatType" android:propertyName="rotation" />
+    <objectAnimator android:interpolator="@drawable/$mic_permission_avd__5" android:duration="125" android:startOffset="750" android:valueFrom="0" android:valueTo="1.738" android:valueType="floatType" android:propertyName="rotation" />
+    <objectAnimator android:interpolator="@drawable/$mic_permission_avd__6" android:duration="250" android:startOffset="875" android:valueFrom="1.738" android:valueTo="-0.639" android:valueType="floatType" android:propertyName="rotation" />
+    <objectAnimator android:interpolator="@drawable/$mic_permission_avd__7" android:duration="250" android:startOffset="1125" android:valueFrom="-0.639" android:valueTo="0.235" android:valueType="floatType" android:propertyName="rotation" />
+    <objectAnimator android:interpolator="@drawable/$mic_permission_avd__8" android:duration="108" android:startOffset="1375" android:valueFrom="0.235" android:valueTo="0" android:valueType="floatType" android:propertyName="rotation" />
+</set>

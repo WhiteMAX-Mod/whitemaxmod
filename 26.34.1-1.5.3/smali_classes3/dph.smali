@@ -1,0 +1,86 @@
+.class public final Ldph;
+.super Lgph;
+.source "SourceFile"
+
+
+# instance fields
+.field public final c:J
+
+
+# direct methods
+.method public constructor <init>(J)V
+    .locals 1
+
+    const/4 v0, 0x2
+
+    invoke-direct {p0, p1, p2, v0}, Lgph;-><init>(JI)V
+
+    iput-wide p1, p0, Ldph;->c:J
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 5
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Ldph;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Ldph;
+
+    iget-wide v3, p0, Ldph;->c:J
+
+    iget-wide p0, p1, Ldph;->c:J
+
+    cmp-long p0, v3, p0
+
+    if-eqz p0, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Ldph;->c:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    const-string v0, "DialogBotId(botId="
+
+    const-string v1, ")"
+
+    iget-wide v2, p0, Ldph;->c:J
+
+    invoke-static {v0, v1, v2, v3}, Lj65;->p(Ljava/lang/String;Ljava/lang/String;J)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method

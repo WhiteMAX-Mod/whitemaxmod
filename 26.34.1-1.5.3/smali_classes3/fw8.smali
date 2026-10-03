@@ -1,0 +1,47 @@
+.class public final Lfw8;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Landroid/media/MediaScannerConnection$OnScanCompletedListener;
+
+
+# instance fields
+.field public final synthetic a:Lns2;
+
+
+# direct methods
+.method public constructor <init>(Lns2;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lfw8;->a:Lns2;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onScanCompleted(Ljava/lang/String;Landroid/net/Uri;)V
+    .locals 0
+
+    iget-object p0, p0, Lfw8;->a:Lns2;
+
+    invoke-virtual {p0}, Lns2;->v()Ljava/lang/Object;
+
+    move-result-object p1
+
+    instance-of p1, p1, Lgac;
+
+    if-eqz p1, :cond_0
+
+    sget-object p1, Lysj;->a:Lysj;
+
+    sget-object p2, Lew8;->b:Lew8;
+
+    invoke-virtual {p0, p1, p2}, Lns2;->i(Ljava/lang/Object;Ltx7;)V
+
+    :cond_0
+    return-void
+.end method

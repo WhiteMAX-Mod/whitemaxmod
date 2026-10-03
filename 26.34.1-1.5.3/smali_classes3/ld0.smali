@@ -1,0 +1,71 @@
+.class public final Lld0;
+.super Lasa;
+.source "SourceFile"
+
+
+# instance fields
+.field public final f:Lorg/webrtc/PeerConnectionFactory;
+
+
+# direct methods
+.method public constructor <init>(Lorg/webrtc/PeerConnectionFactory;Ljava/lang/String;Lorg/webrtc/MediaStream;Lh14;)V
+    .locals 0
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {p4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-direct {p0, p2, p3, p4}, Lasa;-><init>(Ljava/lang/String;Lorg/webrtc/MediaStream;Ldaf;)V
+
+    iput-object p1, p0, Lld0;->f:Lorg/webrtc/PeerConnectionFactory;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final g()Lorg/webrtc/MediaSource;
+    .locals 1
+
+    new-instance v0, Lorg/webrtc/MediaConstraints;
+
+    invoke-direct {v0}, Lorg/webrtc/MediaConstraints;-><init>()V
+
+    iget-object p0, p0, Lld0;->f:Lorg/webrtc/PeerConnectionFactory;
+
+    invoke-virtual {p0, v0}, Lorg/webrtc/PeerConnectionFactory;->createAudioSource(Lorg/webrtc/MediaConstraints;)Lorg/webrtc/AudioSource;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return-object p0
+.end method
+
+.method public final h(Ljava/lang/String;Lorg/webrtc/MediaSource;)Lorg/webrtc/MediaStreamTrack;
+    .locals 0
+
+    check-cast p2, Lorg/webrtc/AudioSource;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object p0, p0, Lld0;->f:Lorg/webrtc/PeerConnectionFactory;
+
+    invoke-virtual {p0, p1, p2}, Lorg/webrtc/PeerConnectionFactory;->createAudioTrack(Ljava/lang/String;Lorg/webrtc/AudioSource;)Lorg/webrtc/AudioTrack;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return-object p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 0
+
+    const-string p0, "OkSdkAudioRecord"
+
+    return-object p0
+.end method

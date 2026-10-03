@@ -1,0 +1,454 @@
+.class public final Ldx5;
+.super Lsti;
+.source "SourceFile"
+
+# interfaces
+.implements Ltx7;
+
+
+# instance fields
+.field public final synthetic e:B
+
+.field public f:Z
+
+.field public synthetic g:Ldf7;
+
+.field public synthetic h:[Ljava/lang/Object;
+
+
+# direct methods
+.method public synthetic constructor <init>(ILu15;B)V
+    .locals 0
+
+    iput-byte p3, p0, Ldx5;->e:B
+
+    invoke-direct {p0, p1, p2}, Lsti;-><init>(ILu15;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final h(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    iget-byte p0, p0, Ldx5;->e:B
+
+    sget-object v0, Lysj;->a:Lysj;
+
+    const/4 v1, 0x3
+
+    check-cast p1, Ldf7;
+
+    check-cast p2, [Ljava/lang/Object;
+
+    check-cast p3, Lu15;
+
+    packed-switch p0, :pswitch_data_0
+
+    new-instance p0, Ldx5;
+
+    invoke-direct {p0, v1, p3, v1}, Ldx5;-><init>(ILu15;B)V
+
+    iput-object p1, p0, Ldx5;->g:Ldf7;
+
+    iput-object p2, p0, Ldx5;->h:[Ljava/lang/Object;
+
+    invoke-virtual {p0, v0}, Ldx5;->w(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_0
+    new-instance p0, Ldx5;
+
+    const/4 v2, 0x2
+
+    invoke-direct {p0, v1, p3, v2}, Ldx5;-><init>(ILu15;B)V
+
+    iput-object p1, p0, Ldx5;->g:Ldf7;
+
+    iput-object p2, p0, Ldx5;->h:[Ljava/lang/Object;
+
+    invoke-virtual {p0, v0}, Ldx5;->w(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_1
+    new-instance p0, Ldx5;
+
+    const/4 v2, 0x1
+
+    invoke-direct {p0, v1, p3, v2}, Ldx5;-><init>(ILu15;B)V
+
+    iput-object p1, p0, Ldx5;->g:Ldf7;
+
+    iput-object p2, p0, Ldx5;->h:[Ljava/lang/Object;
+
+    invoke-virtual {p0, v0}, Ldx5;->w(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_2
+    new-instance p0, Ldx5;
+
+    const/4 v2, 0x0
+
+    invoke-direct {p0, v1, p3, v2}, Ldx5;-><init>(ILu15;B)V
+
+    iput-object p1, p0, Ldx5;->g:Ldf7;
+
+    iput-object p2, p0, Ldx5;->h:[Ljava/lang/Object;
+
+    invoke-virtual {p0, v0}, Ldx5;->w(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final w(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 12
+
+    iget-byte v0, p0, Ldx5;->e:B
+
+    sget-object v1, Lysj;->a:Lysj;
+
+    const/4 v2, 0x0
+
+    const-string v3, "call to \'resume\' before \'invoke\' with coroutine"
+
+    sget-object v4, Lb75;->a:Lb75;
+
+    const/4 v5, 0x1
+
+    const/4 v6, 0x0
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-boolean v0, p0, Ldx5;->f:Z
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v5, :cond_0
+
+    invoke-static {p1}, Limg;->E(Ljava/lang/Object;)V
+
+    goto :goto_3
+
+    :cond_0
+    invoke-static {v3}, Lvzf;->n(Ljava/lang/String;)V
+
+    move-object v1, v6
+
+    goto :goto_3
+
+    :cond_1
+    invoke-static {p1}, Limg;->E(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Ldx5;->g:Ldf7;
+
+    iget-object v0, p0, Ldx5;->h:[Ljava/lang/Object;
+
+    check-cast v0, [Lyr4;
+
+    array-length v3, v0
+
+    :goto_0
+    sget-object v7, Lwr4;->a:Lwr4;
+
+    if-ge v2, v3, :cond_3
+
+    aget-object v8, v0, v2
+
+    invoke-static {v8, v7}, Lkw8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v9
+
+    if-nez v9, :cond_2
+
+    move-object v6, v8
+
+    goto :goto_1
+
+    :cond_2
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_3
+    :goto_1
+    if-nez v6, :cond_4
+
+    goto :goto_2
+
+    :cond_4
+    move-object v7, v6
+
+    :goto_2
+    iput-boolean v5, p0, Ldx5;->f:Z
+
+    invoke-interface {p1, v7, p0}, Ldf7;->c(Ljava/lang/Object;Lu15;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    if-ne p0, v4, :cond_5
+
+    move-object v1, v4
+
+    :cond_5
+    :goto_3
+    return-object v1
+
+    :pswitch_0
+    iget-boolean v0, p0, Ldx5;->f:Z
+
+    if-eqz v0, :cond_7
+
+    if-ne v0, v5, :cond_6
+
+    invoke-static {p1}, Limg;->E(Ljava/lang/Object;)V
+
+    goto :goto_5
+
+    :cond_6
+    invoke-static {v3}, Lvzf;->n(Ljava/lang/String;)V
+
+    move-object v1, v6
+
+    goto :goto_5
+
+    :cond_7
+    invoke-static {p1}, Limg;->E(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Ldx5;->g:Ldf7;
+
+    iget-object v0, p0, Ldx5;->h:[Ljava/lang/Object;
+
+    check-cast v0, [Ltgd;
+
+    array-length v3, v0
+
+    if-eqz v3, :cond_9
+
+    if-eq v3, v5, :cond_8
+
+    new-instance v2, Ljava/util/LinkedHashMap;
+
+    array-length v3, v0
+
+    invoke-static {v3}, Ljba;->t0(I)I
+
+    move-result v3
+
+    invoke-direct {v2, v3}, Ljava/util/LinkedHashMap;-><init>(I)V
+
+    invoke-static {v2, v0}, Ljba;->z0(Ljava/util/HashMap;[Ltgd;)V
+
+    goto :goto_4
+
+    :cond_8
+    aget-object v0, v0, v2
+
+    iget-object v2, v0, Ltgd;->a:Ljava/lang/Object;
+
+    iget-object v0, v0, Ltgd;->b:Ljava/lang/Object;
+
+    invoke-static {v2, v0}, Ljava/util/Collections;->singletonMap(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map;
+
+    move-result-object v2
+
+    goto :goto_4
+
+    :cond_9
+    sget-object v2, Lhm6;->a:Lhm6;
+
+    :goto_4
+    iput-object v6, p0, Ldx5;->g:Ldf7;
+
+    iput-object v6, p0, Ldx5;->h:[Ljava/lang/Object;
+
+    iput-boolean v5, p0, Ldx5;->f:Z
+
+    invoke-interface {p1, v2, p0}, Ldf7;->c(Ljava/lang/Object;Lu15;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    if-ne p0, v4, :cond_a
+
+    move-object v1, v4
+
+    :cond_a
+    :goto_5
+    return-object v1
+
+    :pswitch_1
+    iget-boolean v0, p0, Ldx5;->f:Z
+
+    if-eqz v0, :cond_c
+
+    if-ne v0, v5, :cond_b
+
+    invoke-static {p1}, Limg;->E(Ljava/lang/Object;)V
+
+    goto :goto_7
+
+    :cond_b
+    invoke-static {v3}, Lvzf;->n(Ljava/lang/String;)V
+
+    move-object v1, v6
+
+    goto :goto_7
+
+    :cond_c
+    invoke-static {p1}, Limg;->E(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Ldx5;->g:Ldf7;
+
+    iget-object v0, p0, Ldx5;->h:[Ljava/lang/Object;
+
+    check-cast v0, [Luvd;
+
+    array-length v3, v0
+
+    invoke-static {v3}, Ljba;->t0(I)I
+
+    move-result v3
+
+    const/16 v7, 0x10
+
+    if-ge v3, v7, :cond_d
+
+    move v3, v7
+
+    :cond_d
+    new-instance v7, Ljava/util/LinkedHashMap;
+
+    invoke-direct {v7, v3}, Ljava/util/LinkedHashMap;-><init>(I)V
+
+    array-length v3, v0
+
+    :goto_6
+    if-ge v2, v3, :cond_e
+
+    aget-object v8, v0, v2
+
+    iget-wide v9, v8, Luvd;->a:J
+
+    new-instance v11, Ljava/lang/Long;
+
+    invoke-direct {v11, v9, v10}, Ljava/lang/Long;-><init>(J)V
+
+    invoke-interface {v7, v11, v8}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_6
+
+    :cond_e
+    iput-object v6, p0, Ldx5;->g:Ldf7;
+
+    iput-object v6, p0, Ldx5;->h:[Ljava/lang/Object;
+
+    iput-boolean v5, p0, Ldx5;->f:Z
+
+    invoke-interface {p1, v7, p0}, Ldf7;->c(Ljava/lang/Object;Lu15;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    if-ne p0, v4, :cond_f
+
+    move-object v1, v4
+
+    :cond_f
+    :goto_7
+    return-object v1
+
+    :pswitch_2
+    iget-boolean v0, p0, Ldx5;->f:Z
+
+    if-eqz v0, :cond_11
+
+    if-ne v0, v5, :cond_10
+
+    invoke-static {p1}, Limg;->E(Ljava/lang/Object;)V
+
+    goto :goto_9
+
+    :cond_10
+    invoke-static {v3}, Lvzf;->n(Ljava/lang/String;)V
+
+    move-object v1, v6
+
+    goto :goto_9
+
+    :cond_11
+    invoke-static {p1}, Limg;->E(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Ldx5;->g:Ldf7;
+
+    iget-object v0, p0, Ldx5;->h:[Ljava/lang/Object;
+
+    check-cast v0, [Ljava/util/List;
+
+    new-instance v3, Ljava/util/ArrayList;
+
+    invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
+
+    array-length v7, v0
+
+    :goto_8
+    if-ge v2, v7, :cond_12
+
+    aget-object v8, v0, v2
+
+    check-cast v8, Ljava/lang/Iterable;
+
+    invoke-static {v8, v3}, Le84;->l0(Ljava/lang/Iterable;Ljava/util/Collection;)V
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_8
+
+    :cond_12
+    iput-object v6, p0, Ldx5;->g:Ldf7;
+
+    iput-object v6, p0, Ldx5;->h:[Ljava/lang/Object;
+
+    iput-boolean v5, p0, Ldx5;->f:Z
+
+    invoke-interface {p1, v3, p0}, Ldf7;->c(Ljava/lang/Object;Lu15;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    if-ne p0, v4, :cond_13
+
+    move-object v1, v4
+
+    :cond_13
+    :goto_9
+    return-object v1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method

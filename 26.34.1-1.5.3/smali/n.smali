@@ -1,0 +1,124 @@
+.class public final Ln;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lpj5;
+
+
+# static fields
+.field public static final a:Ln;
+
+.field public static final b:Lo;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Ln;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Ln;->a:Ln;
+
+    sget-object v0, Lo;->c:Lo;
+
+    sput-object v0, Ln;->b:Lo;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()Lzh3;
+    .locals 0
+
+    sget-object p0, Ln;->b:Lo;
+
+    return-object p0
+.end method
+
+.method public final b(Ljava/lang/String;Ltj5;Landroid/os/Bundle;)Ldk5;
+    .locals 10
+
+    sget-object p0, Ln;->b:Lo;
+
+    iget-object p0, p0, Lzh3;->b:Ljava/lang/Object;
+
+    check-cast p0, Ljava/util/LinkedHashSet;
+
+    invoke-interface {p0, p2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    const/4 v0, 0x0
+
+    if-nez p0, :cond_0
+
+    return-object v0
+
+    :cond_0
+    new-instance p0, Lrx9;
+
+    const-string v1, "arg_account_id_override"
+
+    invoke-virtual {p3, v1}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;)I
+
+    move-result v1
+
+    invoke-direct {p0, v1}, Lrx9;-><init>(I)V
+
+    sget-object v1, Lo;->d:Ltj5;
+
+    invoke-virtual {p2, v1}, Ltj5;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    const-string v0, "autoupdate"
+
+    invoke-virtual {p3, v0}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v8, Lm;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v8, p0, v0, v1}, Lm;-><init>(Lrx9;Ljava/lang/String;B)V
+
+    new-instance v1, Ldk5;
+
+    const/4 v7, 0x0
+
+    const/16 v9, 0x30
+
+    const/4 v5, 0x1
+
+    const/4 v6, 0x0
+
+    move-object v2, p1
+
+    move-object v3, p2
+
+    move-object v4, p3
+
+    invoke-direct/range {v1 .. v9}, Ldk5;-><init>(Ljava/lang/String;Ltj5;Landroid/os/Bundle;ILbk5;ZLck5;I)V
+
+    return-object v1
+
+    :cond_1
+    move-object v3, p2
+
+    const-string p0, "Unknown route="
+
+    invoke-static {p0, v3}, Lj65;->o(Ljava/lang/String;Ltj5;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lvzf;->n(Ljava/lang/String;)V
+
+    return-object v0
+.end method

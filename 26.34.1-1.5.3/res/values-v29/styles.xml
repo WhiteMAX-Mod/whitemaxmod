@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="OneMe.Theme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:forceDarkAllowed">false</item>
+    </style>
+    <style name="Theme.WebView.Dark" parent="">
+        <item name="android:isLightTheme">false</item>
+    </style>
+    <style name="Theme.WebView.Light" parent="">
+        <item name="android:isLightTheme">true</item>
+    </style>
+</resources>

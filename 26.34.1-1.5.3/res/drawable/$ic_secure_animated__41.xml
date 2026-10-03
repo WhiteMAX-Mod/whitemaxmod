@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set android:ordering="together"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <objectAnimator android:interpolator="@drawable/$ic_secure_animated__42" android:duration="300" android:startOffset="0" android:valueFrom="-15" android:valueTo="-15" android:valueType="floatType" android:propertyName="rotation" />
+    <objectAnimator android:interpolator="@drawable/$ic_secure_animated__43" android:duration="583" android:startOffset="300" android:valueFrom="-15" android:valueTo="0" android:valueType="floatType" android:propertyName="rotation" />
+</set>

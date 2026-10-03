@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set android:ordering="together"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <objectAnimator android:interpolator="@drawable/$calls_avd__18" android:duration="133" android:startOffset="0" android:valueFrom="0.07812" android:valueTo="0.07124" android:valueType="floatType" android:propertyName="scaleX" />
+    <objectAnimator android:interpolator="@drawable/$calls_avd__19" android:duration="133" android:startOffset="0" android:valueFrom="0.07812" android:valueTo="0.07124" android:valueType="floatType" android:propertyName="scaleY" />
+    <objectAnimator android:interpolator="@drawable/$calls_avd__20" android:duration="467" android:startOffset="133" android:valueFrom="0.07124" android:valueTo="0.07927" android:valueType="floatType" android:propertyName="scaleX" />
+    <objectAnimator android:interpolator="@drawable/$calls_avd__21" android:duration="467" android:startOffset="133" android:valueFrom="0.07124" android:valueTo="0.07927" android:valueType="floatType" android:propertyName="scaleY" />
+    <objectAnimator android:interpolator="@drawable/$calls_avd__22" android:duration="133" android:startOffset="600" android:valueFrom="0.07927" android:valueTo="0.07124" android:valueType="floatType" android:propertyName="scaleX" />
+    <objectAnimator android:interpolator="@drawable/$calls_avd__23" android:duration="133" android:startOffset="600" android:valueFrom="0.07927" android:valueTo="0.07124" android:valueType="floatType" android:propertyName="scaleY" />
+    <objectAnimator android:interpolator="@drawable/$calls_avd__24" android:duration="167" android:startOffset="733" android:valueFrom="0.07124" android:valueTo="0.07812" android:valueType="floatType" android:propertyName="scaleX" />
+    <objectAnimator android:interpolator="@drawable/$calls_avd__25" android:duration="167" android:startOffset="733" android:valueFrom="0.07124" android:valueTo="0.07812" android:valueType="floatType" android:propertyName="scaleY" />
+</set>

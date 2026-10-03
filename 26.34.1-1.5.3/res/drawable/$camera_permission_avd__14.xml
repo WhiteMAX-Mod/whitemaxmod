@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set android:ordering="together"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <objectAnimator android:interpolator="@drawable/$camera_permission_avd__15" android:duration="333" android:startOffset="0" android:propertyName="translateXY" android:pathData="M 591.54,359.91C 591.54,359.91 591.54,359.91 591.54,359.91" android:propertyXName="translateX" android:propertyYName="translateY" />
+    <objectAnimator android:interpolator="@drawable/$camera_permission_avd__16" android:duration="250" android:startOffset="333" android:propertyName="translateXY" android:pathData="M 591.54,359.91C 591.54,359.91 607.54,359.91 607.54,359.91" android:propertyXName="translateX" android:propertyYName="translateY" />
+    <objectAnimator android:interpolator="@drawable/$camera_permission_avd__17" android:duration="250" android:startOffset="583" android:propertyName="translateXY" android:pathData="M 607.54,359.91C 607.54,359.91 591.54,359.91 591.54,359.91" android:propertyXName="translateX" android:propertyYName="translateY" />
+</set>

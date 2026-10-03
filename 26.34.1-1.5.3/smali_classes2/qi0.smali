@@ -1,0 +1,158 @@
+.class public final Lqi0;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lyic;
+
+
+# static fields
+.field public static final a:Lqi0;
+
+.field public static final b:Lp67;
+
+.field public static final c:Lp67;
+
+.field public static final d:Lp67;
+
+.field public static final e:Lp67;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 4
+
+    new-instance v0, Lqi0;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lqi0;->a:Lqi0;
+
+    new-instance v0, Le60;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Le60;-><init>(I)V
+
+    const-class v1, Ljye;
+
+    invoke-static {v1, v0}, Lu;->g(Ljava/lang/Class;Le60;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lp67;
+
+    invoke-static {v0}, Lu;->h(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "window"
+
+    invoke-direct {v2, v3, v0}, Lp67;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Lqi0;->b:Lp67;
+
+    new-instance v0, Le60;
+
+    const/4 v2, 0x2
+
+    invoke-direct {v0, v2}, Le60;-><init>(I)V
+
+    invoke-static {v1, v0}, Lu;->g(Ljava/lang/Class;Le60;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lp67;
+
+    invoke-static {v0}, Lu;->h(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "logSourceMetrics"
+
+    invoke-direct {v2, v3, v0}, Lp67;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Lqi0;->c:Lp67;
+
+    new-instance v0, Le60;
+
+    const/4 v2, 0x3
+
+    invoke-direct {v0, v2}, Le60;-><init>(I)V
+
+    invoke-static {v1, v0}, Lu;->g(Ljava/lang/Class;Le60;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lp67;
+
+    invoke-static {v0}, Lu;->h(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "globalMetrics"
+
+    invoke-direct {v2, v3, v0}, Lp67;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Lqi0;->d:Lp67;
+
+    new-instance v0, Le60;
+
+    const/4 v2, 0x4
+
+    invoke-direct {v0, v2}, Le60;-><init>(I)V
+
+    invoke-static {v1, v0}, Lu;->g(Ljava/lang/Class;Le60;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v1, Lp67;
+
+    invoke-static {v0}, Lu;->h(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v2, "appNamespace"
+
+    invoke-direct {v1, v2, v0}, Lp67;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v1, Lqi0;->e:Lp67;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 1
+
+    check-cast p1, Ld44;
+
+    check-cast p2, Lzic;
+
+    sget-object p0, Lqi0;->b:Lp67;
+
+    iget-object v0, p1, Ld44;->a:Laaj;
+
+    invoke-interface {p2, p0, v0}, Lzic;->a(Lp67;Ljava/lang/Object;)Lzic;
+
+    sget-object p0, Lqi0;->c:Lp67;
+
+    iget-object v0, p1, Ld44;->b:Ljava/util/List;
+
+    invoke-interface {p2, p0, v0}, Lzic;->a(Lp67;Ljava/lang/Object;)Lzic;
+
+    sget-object p0, Lqi0;->d:Lp67;
+
+    iget-object v0, p1, Ld44;->c:Lr68;
+
+    invoke-interface {p2, p0, v0}, Lzic;->a(Lp67;Ljava/lang/Object;)Lzic;
+
+    sget-object p0, Lqi0;->e:Lp67;
+
+    iget-object p1, p1, Ld44;->d:Ljava/lang/String;
+
+    invoke-interface {p2, p0, p1}, Lzic;->a(Lp67;Ljava/lang/Object;)Lzic;
+
+    return-void
+.end method

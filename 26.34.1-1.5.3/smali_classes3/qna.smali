@@ -1,0 +1,109 @@
+.class public abstract Lqna;
+.super Lcqm;
+.source "SourceFile"
+
+
+# virtual methods
+.method public final c()Z
+    .locals 4
+
+    invoke-virtual {p0}, Lqna;->f()Ljava/lang/String;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p0}, Lqna;->f()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lvpb;->i(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    move v0, v2
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    move v0, v1
+
+    :goto_1
+    invoke-virtual {p0}, Lqna;->l()I
+
+    move-result v3
+
+    if-lez v3, :cond_2
+
+    invoke-virtual {p0}, Lqna;->i()I
+
+    move-result p0
+
+    if-lez p0, :cond_2
+
+    if-eqz v0, :cond_2
+
+    return v1
+
+    :cond_2
+    return v2
+.end method
+
+.method public f()Ljava/lang/String;
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method public abstract g()I
+.end method
+
+.method public h()I
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public abstract i()I
+.end method
+
+.method public abstract j()I
+.end method
+
+.method public abstract k()Z
+.end method
+
+.method public abstract l()I
+.end method
+
+.method public abstract m()Z
+.end method
+
+.method public abstract n()Z
+.end method
+
+.method public abstract o()Z
+.end method
+
+.method public abstract p()Z
+.end method
+
+.method public abstract q()Z
+.end method
+
+.method public abstract r()Z
+.end method

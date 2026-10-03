@@ -1,0 +1,83 @@
+.class public final Lqy3;
+.super Llnc;
+.source "SourceFile"
+
+
+# instance fields
+.field public c:I
+
+.field public d:I
+
+.field public final synthetic e:Lone/me/chats/tab/ChatsTabWidget;
+
+
+# direct methods
+.method public constructor <init>(Lone/me/chats/tab/ChatsTabWidget;)V
+    .locals 0
+
+    iput-object p1, p0, Lqy3;->e:Lone/me/chats/tab/ChatsTabWidget;
+
+    invoke-direct {p0}, Llnc;-><init>()V
+
+    const/4 p1, -0x1
+
+    iput p1, p0, Lqy3;->c:I
+
+    iput p1, p0, Lqy3;->d:I
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final c(II)V
+    .locals 2
+
+    iget v0, p0, Lqy3;->c:I
+
+    if-ne p1, v0, :cond_0
+
+    iget v0, p0, Lqy3;->d:I
+
+    if-eq p2, v0, :cond_1
+
+    :cond_0
+    iput p1, p0, Lqy3;->c:I
+
+    iput p2, p0, Lqy3;->d:I
+
+    sget-object v0, Lone/me/chats/tab/ChatsTabWidget;->r1:[Lvi9;
+
+    iget-object p0, p0, Lqy3;->e:Lone/me/chats/tab/ChatsTabWidget;
+
+    invoke-virtual {p0}, Lone/me/chats/tab/ChatsTabWidget;->B1()Lzo6;
+
+    move-result-object v0
+
+    iget-byte v0, v0, Landroidx/recyclerview/widget/RecyclerView;->e1:B
+
+    if-nez v0, :cond_1
+
+    invoke-virtual {p0}, Lone/me/chats/tab/ChatsTabWidget;->C1()Lk9i;
+
+    move-result-object p0
+
+    new-instance v0, Lmx6;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p1, p2, v1}, Lmx6;-><init>(IIZ)V
+
+    iget-object p0, p0, Lk9i;->m:Lf8i;
+
+    iget-object p0, p0, Lf8i;->f:Ltwh;
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 p1, 0x0
+
+    invoke-virtual {p0, p1, v0}, Ltwh;->j(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    :cond_1
+    return-void
+.end method

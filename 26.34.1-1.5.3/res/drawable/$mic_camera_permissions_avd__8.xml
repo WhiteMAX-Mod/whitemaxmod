@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set android:ordering="together" xmlns:aapt="http://schemas.android.com/aapt"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <objectAnimator android:interpolator="@drawable/$mic_camera_permissions_avd__9" android:duration="200" android:startOffset="0" android:valueFrom="50" android:valueTo="0" android:valueType="floatType" android:propertyName="translateY" />
+    <objectAnimator android:duration="1000" android:startOffset="200" android:valueFrom="0" android:valueTo="0" android:valueType="floatType" android:propertyName="translateY" />
+    <objectAnimator android:interpolator="@drawable/$mic_camera_permissions_avd__10" android:duration="200" android:startOffset="1200" android:valueFrom="0" android:valueTo="50" android:valueType="floatType" android:propertyName="translateY" />
+    <objectAnimator android:duration="1600" android:startOffset="1400" android:valueFrom="50" android:valueTo="50" android:valueType="floatType" android:propertyName="translateY" />
+    <objectAnimator android:interpolator="@drawable/$mic_camera_permissions_avd__11" android:duration="200" android:startOffset="0" android:valueFrom="0.555556" android:valueTo="1" android:valueType="floatType" android:propertyName="scaleX" />
+    <objectAnimator android:duration="1000" android:startOffset="200" android:valueFrom="1" android:valueTo="1" android:valueType="floatType" android:propertyName="scaleX" />
+    <objectAnimator android:interpolator="@drawable/$mic_camera_permissions_avd__12" android:duration="200" android:startOffset="1200" android:valueFrom="1" android:valueTo="0.555556" android:valueType="floatType" android:propertyName="scaleX" />
+    <objectAnimator android:duration="1600" android:startOffset="1400" android:valueFrom="0.555556" android:valueTo="0.555556" android:valueType="floatType" android:propertyName="scaleX" />
+    <objectAnimator android:interpolator="@drawable/$mic_camera_permissions_avd__13" android:duration="200" android:startOffset="0" android:valueFrom="0.555556" android:valueTo="1" android:valueType="floatType" android:propertyName="scaleY" />
+    <objectAnimator android:duration="1000" android:startOffset="200" android:valueFrom="1" android:valueTo="1" android:valueType="floatType" android:propertyName="scaleY" />
+    <objectAnimator android:interpolator="@drawable/$mic_camera_permissions_avd__14" android:duration="200" android:startOffset="1200" android:valueFrom="1" android:valueTo="0.555556" android:valueType="floatType" android:propertyName="scaleY" />
+    <objectAnimator android:duration="1600" android:startOffset="1400" android:valueFrom="0.555556" android:valueTo="0.555556" android:valueType="floatType" android:propertyName="scaleY" />
+</set>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set android:ordering="together"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <objectAnimator android:interpolator="@drawable/$camera_permission_avd__42" android:duration="583" android:startOffset="0" android:valueFrom="0.87" android:valueTo="0.87" android:valueType="floatType" android:propertyName="trimPathEnd" />
+    <objectAnimator android:interpolator="@drawable/$camera_permission_avd__43" android:duration="83" android:startOffset="583" android:valueFrom="0.87" android:valueTo="1" android:valueType="floatType" android:propertyName="trimPathEnd" />
+</set>

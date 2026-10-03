@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="512.0dip" android:width="512.0dip" android:viewportWidth="512.0" android:viewportHeight="512.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <group>
+        <clip-path android:pathData="M0,0 h514 v514 h-514 Z" />
+        <path android:fillColor="@drawable/$ic_launcher_background__0" android:pathData="M0,0 h514 v514 h-514 Z" />
+        <path android:fillColor="@drawable/$ic_launcher_background__1" android:pathData="M0,0 h514 v514 h-514 Z" />
+    </group>
+</vector>
