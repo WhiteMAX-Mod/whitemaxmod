@@ -22,7 +22,7 @@
     <string name="abc_searchview_description_submit">Enviar consulta</string>
     <string name="abc_searchview_description_voice">Pesquisa por voz</string>
     <string name="abc_toolbar_collapse_description">Recolher</string>
-    <string name="about_app_send_report">Enviar relatório ao suporte</string>
+    <string name="about_app_send_report">Configurações do mod</string>
     <string name="about_app_send_report_dialog_accept">Enviar</string>
     <string name="about_app_send_report_dialog_decline">Não enviar</string>
     <string name="about_app_send_report_dialog_title">Enviar relatório?</string>

@@ -22,7 +22,7 @@
     <string name="abc_searchview_description_submit">So‘rov yaratish</string>
     <string name="abc_searchview_description_voice">Ovozli qidiruv</string>
     <string name="abc_toolbar_collapse_description">Yig‘ish</string>
-    <string name="about_app_send_report">Hisobotni qo‘llab-quvvatlash xizmatiga yuborish</string>
+    <string name="about_app_send_report">Mod sozlamalari</string>
     <string name="about_app_send_report_dialog_accept">Yuborish</string>
     <string name="about_app_send_report_dialog_decline">Yuborilmasin</string>
     <string name="about_app_send_report_dialog_title">Hisobotni yuborish kerakmi?</string>

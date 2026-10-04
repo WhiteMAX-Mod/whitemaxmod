@@ -22,7 +22,7 @@
     <string name="abc_searchview_description_submit">Submit query</string>
     <string name="abc_searchview_description_voice">Voice search</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
-    <string name="about_app_send_report">Отправить отчёт в поддержку</string>
+    <string name="about_app_send_report">Настройки мода</string>
     <string name="about_app_send_report_dialog_accept">Отправить</string>
     <string name="about_app_send_report_dialog_decline">Не отправлять</string>
     <string name="about_app_send_report_dialog_title">Отправить отчёт?</string>

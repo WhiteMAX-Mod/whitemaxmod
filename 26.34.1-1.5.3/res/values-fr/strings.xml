@@ -22,7 +22,7 @@
     <string name="abc_searchview_description_submit">Envoyer la requête</string>
     <string name="abc_searchview_description_voice">Recherche vocale</string>
     <string name="abc_toolbar_collapse_description">Réduire</string>
-    <string name="about_app_send_report">Envoyer le rapport au support</string>
+    <string name="about_app_send_report">Paramètres du mod</string>
     <string name="about_app_send_report_dialog_accept">Envoyer</string>
     <string name="about_app_send_report_dialog_decline">Ne pas envoyer</string>
     <string name="about_app_send_report_dialog_title">Envoyer le rapport ?</string>

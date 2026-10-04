@@ -140,6 +140,19 @@
 .method public final f()Laqd;
     .locals 15
 
+    const-string v0, "noread"
+
+    invoke-static {v0}, Lone/me/mods/Mods;->get(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_noread
+
+    sget-object v0, Laqd;->c:Laqd;
+
+    return-object v0
+
+    :cond_noread
     invoke-virtual {p0}, Ltr;->p()Lr63;
 
     move-result-object v0

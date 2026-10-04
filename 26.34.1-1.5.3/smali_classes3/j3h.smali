@@ -31,7 +31,7 @@
 .end method
 
 .method public final P(Lv3h;I)V
-    .locals 3
+    .locals 5
 
     instance-of v0, p1, Lt3h;
 
@@ -59,6 +59,25 @@
 
     iput-object p0, p1, Lt3h;->u:Li3h;
 
+    invoke-interface {p2}, Lmu9;->getItemId()J
+
+    move-result-wide v1
+
+    sget-wide v3, Lloc;->c:J
+
+    cmp-long v1, v1, v3
+
+    if-nez v1, :cond_not_mod
+
+    new-instance v1, Lone/me/mods/ModsClickListener;
+
+    invoke-direct {v1}, Lone/me/mods/ModsClickListener;-><init>()V
+
+    invoke-static {v0, v1}, Lji9;->X(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+
+    return-void
+
+    :cond_not_mod
     invoke-interface {p2}, Lh3h;->d()Lf3h;
 
     move-result-object p1

@@ -2,7 +2,7 @@
 <resources>
     <string name="Oneme_profile_invite_qr_code">Show QR code</string>
     <string name="Oneme_profile_invite_share_link">Share link</string>
-    <string name="about_app_send_report">Send report to support</string>
+    <string name="about_app_send_report">Mod Settings</string>
     <string name="about_app_send_report_dialog_accept">Send</string>
     <string name="about_app_send_report_dialog_decline">Do not send</string>
     <string name="about_app_send_report_dialog_title">Send report?</string>

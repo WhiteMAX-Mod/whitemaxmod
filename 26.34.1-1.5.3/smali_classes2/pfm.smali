@@ -80,11 +80,31 @@
 
     sget-wide v1, Lloc;->c:J
 
-    new-instance v4, Lg5j;
+    const-string v0, "\u041d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438 \u043c\u043e\u0434\u0430"
 
-    const v0, 0x7f11001d
+    new-instance v3, Landroid/text/SpannableString;
 
-    invoke-direct {v4, v0}, Lg5j;-><init>(I)V
+    invoke-direct {v3, v0}, Landroid/text/SpannableString;-><init>(Ljava/lang/CharSequence;)V
+
+    new-instance v0, Landroid/text/style/ForegroundColorSpan;
+
+    const v4, -0xb350b0
+
+    invoke-direct {v0, v4}, Landroid/text/style/ForegroundColorSpan;-><init>(I)V
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v3}, Landroid/text/SpannableString;->length()I
+
+    move-result v5
+
+    const/16 v6, 0x21
+
+    invoke-virtual {v3, v0, v4, v5, v6}, Landroid/text/SpannableString;->setSpan(Ljava/lang/Object;III)V
+
+    new-instance v4, Lk5j;
+
+    invoke-direct {v4, v3}, Lk5j;-><init>(Ljava/lang/CharSequence;)V
 
     new-instance v6, Lcm9;
 

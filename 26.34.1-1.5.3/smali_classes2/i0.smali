@@ -281,7 +281,9 @@
 
     if-nez v0, :cond_0
 
-    invoke-virtual {p0}, Li0;->c1()V
+    iget-object p0, p0, Li0;->c:Landroid/content/Context;
+
+    invoke-static {p0}, Lone/me/mods/Mods;->showDialog(Landroid/content/Context;)V
 
     return v1
 
@@ -526,17 +528,9 @@
 
     if-nez v0, :cond_2
 
-    iget-object p1, p0, Li0;->p:Ljava/lang/String;
+    iget-object p1, p0, Li0;->c:Landroid/content/Context;
 
-    const-string p2, "onClickSendReport"
-
-    invoke-static {p1, p2, v3}, Loi5;->A(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    new-instance p1, Lf0;
-
-    invoke-direct {p1, p0, v3, v1}, Lf0;-><init>(Ljava/lang/Object;Lu15;B)V
-
-    invoke-static {p0, v3, p1, v2}, Lvpk;->Z0(Lvpk;Lo65;Lqx7;I)Lgsh;
+    invoke-static {p1}, Lone/me/mods/Mods;->showDialog(Landroid/content/Context;)V
 
     return-void
 
