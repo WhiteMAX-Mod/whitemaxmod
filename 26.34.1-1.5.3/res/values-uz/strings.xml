@@ -119,8 +119,8 @@ ulang"</string>
     <string name="call_admins_settings_title">Qo‘ng‘iroq sozlamalari</string>
     <string name="call_admins_settings_waiting_room">Kutish zali</string>
     <string name="call_admins_settings_waiting_room_desc">Faqat sizning ruxsatingiz bilan ulanadi</string>
-    <string name="call_ask_permission_audio_video_denied_description">Sozlamalarda MAX ni tanlang va kamera va mikrofonga kirishni yoqing</string>
-    <string name="call_ask_permission_denied_description">Sozlamalarda MAX ni tanlang va mikrofonga kirishni yoqing</string>
+    <string name="call_ask_permission_audio_video_denied_description">Sozlamalarda WhiteMAX ni tanlang va kamera va mikrofonga kirishni yoqing</string>
+    <string name="call_ask_permission_denied_description">Sozlamalarda WhiteMAX ni tanlang va mikrofonga kirishni yoqing</string>
     <string name="call_by_cellular">"Uyali aloqa tarmog‘i 
 orqali qo‘ng‘iroq qilish"</string>
     <string name="call_cancel">Yopish</string>
@@ -215,27 +215,27 @@ va qo‘ng‘iroqlarni qabul qilish uchun"</string>
 bilan javob berish"</string>
     <string name="call_incoming_apply_video_call_description">"Video
 orqali javob berish"</string>
-    <string name="call_incoming_audio_call">MAX kiruvchi audioqo‘ng‘iroq</string>
+    <string name="call_incoming_audio_call">WhiteMAX kiruvchi audioqo‘ng‘iroq</string>
     <string name="call_incoming_audio_call_for">%s uchun qo‘ng‘iroq</string>
-    <string name="call_incoming_audio_call_from_accessibility">Аудиозвонок MAX от %1$s</string>
+    <string name="call_incoming_audio_call_from_accessibility">Аудиозвонок WhiteMAX от %1$s</string>
     <string name="call_incoming_call_video_disable">Kamerani o‘chirish</string>
     <string name="call_incoming_call_video_enable">Kamerani yoqish</string>
     <string name="call_incoming_cancel_call_description">Rad etish</string>
     <string name="call_incoming_from_organization">Tashkilotdan qo‘ng‘iroq bo‘ldi</string>
     <string name="call_incoming_reject_accessibility">Отклонить</string>
-    <string name="call_incoming_video_call">MAX kiruvchi videoqo‘ng‘iroq</string>
+    <string name="call_incoming_video_call">WhiteMAX kiruvchi videoqo‘ng‘iroq</string>
     <string name="call_incoming_video_call_for">%s uchun videoqo‘ng‘iroq</string>
-    <string name="call_incoming_video_call_from_accessibility">Видеозвонок MAX от %1$s</string>
+    <string name="call_incoming_video_call_from_accessibility">Видеозвонок WhiteMAX от %1$s</string>
     <string name="call_incoming_warning_not_contact">Kontaktlarda yo‘q</string>
     <string name="call_indicator_expand_accessibility">Развернуть активный звонок</string>
     <string name="call_indicator_unavailable_call">Telefon orqali bog‘lana olmadik</string>
-    <string name="call_ios_restriction_subtitle">Mobil tarmoq orqali MAXga qo‘ng‘iroq qilib ko‘ring. Qo‘ng‘iroq narxi operatoringizga bog‘liq</string>
+    <string name="call_ios_restriction_subtitle">Mobil tarmoq orqali WhiteMAXga qo‘ng‘iroq qilib ko‘ring. Qo‘ng‘iroq narxi operatoringizga bog‘liq</string>
     <string name="call_ios_restriction_title">Из-за ограничений Apple %s не видит звонки</string>
     <string name="call_item_join_by_link_preview_add_participants">"Добавить 
 участников"</string>
     <string name="call_item_join_by_link_preview_copy">"Havolani
 nusxalash"</string>
-    <string name="call_item_join_by_link_preview_send">"MAXda 
+    <string name="call_item_join_by_link_preview_send">"WhiteMAXda 
 yuborish"</string>
     <string name="call_item_join_by_link_preview_share">"Havolani
 ulashish"</string>
@@ -266,7 +266,7 @@ ulashish"</string>
     <string name="call_main_speaker_phone_disabled">Suhbatdosh mikrofonni o‘chirdi</string>
     <string name="call_main_speaker_share_screen">%s ekranni ko‘rsatmoqda</string>
     <string name="call_max_connect_failed_subtitle">Mobil aloqa tarmog‘i orqali qo‘ng‘iroq qilib ko‘ring. Qo‘ng‘iroq narxi operatoringizga bog‘liq</string>
-    <string name="call_max_connect_failed_title">MAX orqali bog‘lanish imkoni bo‘lmadi</string>
+    <string name="call_max_connect_failed_title">WhiteMAX orqali bog‘lanish imkoni bo‘lmadi</string>
     <string name="call_me_in_waiting_room">Siz kutish zalidasiz</string>
     <string name="call_me_member">Siz</string>
     <string name="call_microphone_disabled_accessibility">Mikrofon o‘chirilgan</string>
@@ -285,7 +285,7 @@ ulashish"</string>
     <string name="call_notification_incoming_take_call">Javob berish</string>
     <string name="call_notification_incoming_text">Kiruvchi chaqiruv</string>
     <string name="call_notification_incoming_video_call">Kiruvchi videoqo‘ng‘iroq</string>
-    <string name="call_notification_name_temp">MAX qo‘ng‘irog‘i</string>
+    <string name="call_notification_name_temp">WhiteMAX qo‘ng‘irog‘i</string>
     <string name="call_notification_ongoing_text">Joriy chaqiruv</string>
     <string name="call_notification_screening_text">Kiruvchi chaqiruvni filtrlash</string>
     <string name="call_opponent_failed">Tarmoq mavjud emas</string>
@@ -315,7 +315,7 @@ ulashish"</string>
     <string name="call_rate_reason_video_sync_title">Video va ovoz sinxronlashtirilmagan</string>
     <string name="call_rate_reason_voice_communication_problem_title">Meni eshitishmadi</string>
     <string name="call_rate_send_button_text">Yuborish</string>
-    <string name="call_rate_success_snackbar_subtitle">Siz MAXni yaxshilashga yordam berdingiz</string>
+    <string name="call_rate_success_snackbar_subtitle">Siz WhiteMAXni yaxshilashga yordam berdingiz</string>
     <string name="call_rate_success_snackbar_title">Fikringiz uchun rahmat</string>
     <string name="call_recall">Qayta qo‘ng‘iroq qilish</string>
     <string name="call_record_me_stop_record">Yozuvni qayta ishlaymiz va sevimlilar ro‘yxatiga qo‘shamiz</string>
@@ -665,7 +665,7 @@ imkoni bo‘lmadi"</string>
     <string name="chat_screen_message_send_error_title">Xabar yuborilmadi</string>
     <string name="chat_screen_message_unpinned_snackbar">Xabar mahkamlashdan olib tashlandi</string>
     <string name="chat_screen_new_messages_decor_title">Yangi xabarlar</string>
-    <string name="chat_screen_portal_blocked_empty_subtitle">MAX foydalanish qoidalari buzilgan</string>
+    <string name="chat_screen_portal_blocked_empty_subtitle">WhiteMAX foydalanish qoidalari buzilgan</string>
     <string name="chat_screen_portal_blocked_empty_subtitle_footer">Xavfsizligingiz uchun yozishmalaringizni yashirdik</string>
     <string name="chat_screen_read_participants_empty">Hozircha boshqa hech kim o‘qimagan</string>
     <string name="chat_screen_read_participants_read_header">O‘qib chiqildi</string>
@@ -819,8 +819,8 @@ imkoni bo‘lmadi"</string>
     <string name="fake_boss_show_mutual_chats">Ko‘rsatish</string>
     <string name="faq_title">Yordam</string>
     <string name="favorite_chats_limit_exceeded">Ko‘pi bilan %d ta chat yoki kanalni tanlanganlarga qo‘shish mumkin</string>
-    <string name="feedback_subject">MAX Android feedback</string>
-    <string name="feedback_subject_auth" formatted="false">MAX Android feedback from %s (#%s)</string>
+    <string name="feedback_subject">WhiteMAX Android feedback</string>
+    <string name="feedback_subject_auth" formatted="false">WhiteMAX Android feedback from %s (#%s)</string>
     <string name="feedback_user_info" formatted="false">"user: %s (#%s)
 "</string>
     <string name="file_deleted">Yuklab olingan fayl topilmadi</string>
@@ -848,8 +848,8 @@ imkoni bo‘lmadi"</string>
     <string name="folder_new">Yangilari</string>
     <string name="folder_personal">Shaxsiy</string>
     <string name="folder_read_folder">Hammasini o‘qish</string>
-    <string name="force_update_subtitle">Ushbu versiyada yozish va qo‘ng‘iroq qilish mumkin emas. MAXdan foydalanishni davom ettirish uchun ilovani yangilang</string>
-    <string name="force_update_title">MAX versiyangiz eskirgan</string>
+    <string name="force_update_subtitle">Ushbu versiyada yozish va qo‘ng‘iroq qilish mumkin emas. WhiteMAXdan foydalanishni davom ettirish uchun ilovani yangilang</string>
+    <string name="force_update_title">WhiteMAX versiyangiz eskirgan</string>
     <string name="forward">Boshqaga yuborish</string>
     <string name="forward_message_hint">Xabar</string>
     <string name="forward_toolbar_action_cancel_selection">Tanlovni bekor qilish</string>
@@ -868,7 +868,7 @@ imkoni bo‘lmadi"</string>
     <string name="go_to_settings">Sozlamalarga o‘tish</string>
     <string name="informer_self_update_finish_subtitle">Осталось только обновить</string>
     <string name="informer_self_update_finish_title">Обновление загружено</string>
-    <string name="informer_self_update_notif_title">Загружаем новую версию MAX</string>
+    <string name="informer_self_update_notif_title">Загружаем новую версию WhiteMAX</string>
     <string name="informer_self_update_snackbar_caption">Загружаем обновление</string>
     <string name="informer_self_update_snackbar_text">Можно продолжить пользоваться приложением</string>
     <string name="item_view_role_description">Tab : Varaq</string>
@@ -929,7 +929,7 @@ imkoni bo‘lmadi"</string>
     <string name="link_interceptor_warning_blocked_description">"Sayt qurilmangizga zarar yetkazishi mumkin
 
 %s"</string>
-    <string name="link_interceptor_warning_blocked_title">MAX himoyasi ishga tushdi</string>
+    <string name="link_interceptor_warning_blocked_title">WhiteMAX himoyasi ishga tushdi</string>
     <string name="link_interceptor_warning_cancel">O‘tmaslik</string>
     <string name="link_interceptor_warning_open_description">"Sayt sizga tanish ekanligiga ishonch hosil qiling. Shaxsiy ma’lumotlaringizni ulashayotganda ehtiyot bo‘ling
 
@@ -1135,14 +1135,14 @@ va obunachilarni taklif qiling"</string>
     <string name="oneme_background_wake_enable_button">Yoqish</string>
     <string name="oneme_background_wake_enabled">Siz fon rejimida ishlashni yoqdingiz - bu aloqada qolishingizga yordam beradi</string>
     <string name="oneme_background_wake_energy_saving_blocks">Energiyani tejash fonda ishlashni bloklaydi</string>
-    <string name="oneme_background_wake_notification_subtitle">"MAX fonda ishlaydi, shunda
+    <string name="oneme_background_wake_notification_subtitle">"WhiteMAX fonda ishlaydi, shunda
 siz xabarlar va qo‘ng‘iroqlarni qabul qilasiz"</string>
-    <string name="oneme_background_wake_notification_title">MAXda bildirishnomalar yoqilgan</string>
+    <string name="oneme_background_wake_notification_title">WhiteMAXda bildirishnomalar yoqilgan</string>
     <string name="oneme_background_wake_sheet_button">O‘z vaqtida olish</string>
-    <string name="oneme_background_wake_sheet_description">MAX tarmoq uzilishlarida ham fonda xabarlar va qo‘ng‘iroqlarni yetkazib bera oladi</string>
+    <string name="oneme_background_wake_sheet_description">WhiteMAX tarmoq uzilishlarida ham fonda xabarlar va qo‘ng‘iroqlarni yetkazib bera oladi</string>
     <string name="oneme_background_wake_sheet_title">Bildirishnomalarni o‘z vaqtida oling</string>
     <string name="oneme_background_wake_suggestion">Internetda uzilishlar bo‘lganda aloqada qoling</string>
-    <string name="oneme_background_wake_suggestion_sticky_caption">MAX ularni fonda yetkazib beradi</string>
+    <string name="oneme_background_wake_suggestion_sticky_caption">WhiteMAX ularni fonda yetkazib beradi</string>
     <string name="oneme_background_wake_suggestion_sticky_title">Tarmoq uzilishlari haqida bildirishnomalarni yoqing</string>
     <string name="oneme_bot_shortlink_action_share_link_text">"Quyidagi havoladagi botdan foydalaning:
 %s"</string>
@@ -1159,7 +1159,7 @@ siz xabarlar va qo‘ng‘iroqlarni qabul qilasiz"</string>
     <string name="oneme_chat_complaint_description">Shikoyatni faqat moderatorlar ko‘ra oladi</string>
     <string name="oneme_chat_complaint_p2p_description">Shikoyat yuborish uchun sababni ham tanlashingiz mumkin</string>
     <string name="oneme_chat_complaint_p2p_title">Foydalanuvchi bloklandi</string>
-    <string name="oneme_chat_complaint_success_snackbar_title">MAXni xavfsiz qilayotganingiz uchun rahmat</string>
+    <string name="oneme_chat_complaint_success_snackbar_title">WhiteMAXni xavfsiz qilayotganingiz uchun rahmat</string>
     <string name="oneme_chat_complaint_sus_p2g_title">Siz chatdan chiqdingiz</string>
     <string name="oneme_chat_complaint_title">Nimadan shikoyat qilmoqchisiz?</string>
     <string name="oneme_chat_modal_action_add_to_folder">Papkaga qo‘shish</string>
@@ -1222,7 +1222,7 @@ siz xabarlar va qo‘ng‘iroqlarni qabul qilasiz"</string>
     <string name="oneme_confirm_send_message_negative">Yubormaslik</string>
     <string name="oneme_confirm_send_message_positive">Yuborish</string>
     <string name="oneme_confirm_send_message_title">Post yubormoqchi ekanligingizga ishonchingiz komilmi?</string>
-    <string name="oneme_connection_server_error_description">MAXni qaytadan ishga tushirib ko‘ring</string>
+    <string name="oneme_connection_server_error_description">WhiteMAXni qaytadan ishga tushirib ko‘ring</string>
     <string name="oneme_connection_server_error_title">Serverdan javob kelmadi</string>
     <string name="oneme_contact_block_bottom_sheet_cancel">Bekor qilish</string>
     <string name="oneme_contact_block_bottom_sheet_description">"Endi siz bir-biringizga xat yozolmaysiz
@@ -1317,7 +1317,7 @@ va qo‘ng‘iroq qila olmaysiz"</string>
     <string name="oneme_invite_by_link_action">Havola orqali taklif qilish</string>
     <string name="oneme_invite_by_phone_action">Raqam bo‘yicha topish</string>
     <string name="oneme_invite_by_phone_continue_button">Davom ettirish</string>
-    <string name="oneme_invite_by_phone_description">Agar egasi allaqachon MAXda bo‘lsa, siz darhol muloqotni boshlashingiz mumkin</string>
+    <string name="oneme_invite_by_phone_description">Agar egasi allaqachon WhiteMAXda bo‘lsa, siz darhol muloqotni boshlashingiz mumkin</string>
     <string name="oneme_invite_by_phone_search_action">Raqam orqali qidirish</string>
     <string name="oneme_invite_by_phone_title">Telefon raqamingizni kiriting</string>
     <string name="oneme_join_chat_error_title">Не удалось вступить в чат</string>
@@ -1346,8 +1346,8 @@ va qo‘ng‘iroq qila olmaysiz"</string>
     <string name="oneme_login_confirm_callout_title">"Позвоните с номера %s,
 чтобы подтвердить вход"</string>
     <string name="oneme_login_confirm_description_confirm_codes">\"Tasdiqlash kodlari\"</string>
-    <string name="oneme_login_confirm_description_foreign_with_chat_name">Kiruvchi raqamning oxirgi 6 ta raqamini kiriting. Agar qo‘ng‘iroq bo‘lmasa, MAX da %s SMS va chatni tekshiring</string>
-    <string name="oneme_login_confirm_description_russian">Agar SMS olmagan bo‘lsangiz, MAXdagi %s chatini tekshiring</string>
+    <string name="oneme_login_confirm_description_foreign_with_chat_name">Kiruvchi raqamning oxirgi 6 ta raqamini kiriting. Agar qo‘ng‘iroq bo‘lmasa, WhiteMAX da %s SMS va chatni tekshiring</string>
+    <string name="oneme_login_confirm_description_russian">Agar SMS olmagan bo‘lsangiz, WhiteMAXdagi %s chatini tekshiring</string>
     <string name="oneme_login_confirm_info_loading_1">Bir daqiqa…</string>
     <string name="oneme_login_confirm_info_loading_2">Yana bir daqiqa…</string>
     <string name="oneme_login_confirm_info_loading_3">Ura! Hammasi to‘g‘ri</string>
@@ -1455,7 +1455,7 @@ QR orqali tasdiqlang"</string>
     <string name="oneme_notifications_settings_chat_type_pin_reply_button">Faqat javoblar va pinlar</string>
     <string name="oneme_notifications_settings_comments_button">Izohlaringizga berilgan javoblar haqida xabar berish</string>
     <string name="oneme_notifications_settings_comments_section_title">Izohlar</string>
-    <string name="oneme_notifications_settings_default_ringtone_title">Brendli MAX</string>
+    <string name="oneme_notifications_settings_default_ringtone_title">Brendli WhiteMAX</string>
     <string name="oneme_notifications_settings_dialog_enable_notifications_button">Bildirishnomalarni yoqish</string>
     <string name="oneme_notifications_settings_dialog_settings_button">Shaxsiy chatlar</string>
     <string name="oneme_notifications_settings_dialog_toolbar_title">Shaxsiy chatlar</string>
@@ -1678,7 +1678,7 @@ yoki galereyadan rasm yuklang"</string>
     <string name="oneme_restrict_login_twofa_subtitle">Buning uchun <b>Sozlamalar</b> → <b>Xavfsizlik</b> → <b>Kirish paroli</b>" bo‘limiga o‘ting
 
 Shundan so‘ng bu yerga kirishingiz mumkin bo‘ladi"</string>
-    <string name="oneme_restrict_login_twofa_title">MAX tizimiga allaqachon kirgan qurilmangizga parol o‘rnating</string>
+    <string name="oneme_restrict_login_twofa_title">WhiteMAX tizimiga allaqachon kirgan qurilmangizga parol o‘rnating</string>
     <string name="oneme_russia_name">Rossiya</string>
     <string name="oneme_search_view_default_hint">Topish</string>
     <string name="oneme_search_view_search_button_accessibility">Поиск</string>
@@ -1732,7 +1732,7 @@ Ehtimol, qurilmada bitta mos ilova mavjud emas."</string>
     <string name="oneme_settings_iar_time_condition">InAppReview’da so‘nggi qulashlar va sharhlarni tekshirishni o‘chirish</string>
     <string name="oneme_settings_item_language">Ilova tili</string>
     <string name="oneme_settings_link_copied_snackbar_title">Siz profilga havolani ko‘chirdingiz</string>
-    <string name="oneme_settings_max_for_business">Biznes uchun MAX</string>
+    <string name="oneme_settings_max_for_business">Biznes uchun WhiteMAX</string>
     <string name="oneme_settings_media_action_always">Doim shunday</string>
     <string name="oneme_settings_media_action_dont_load">Yuklamaslik</string>
     <string name="oneme_settings_media_action_never">Hech qachon</string>
@@ -1854,7 +1854,7 @@ Ehtimol, qurilmada bitta mos ilova mavjud emas."</string>
     <string name="oneme_settings_ringtone_custom_section_wrong_duration">Faylning davomiyligi 15 daqiqadan oshmasligi kerak</string>
     <string name="oneme_settings_ringtone_custom_section_wrong_format">Ushbu fayl turi qo‘llab-quvvatlanmaydi</string>
     <string name="oneme_settings_ringtone_custom_section_wrong_size">Fayl hajmi 50 MB dan oshmasligi kerak</string>
-    <string name="oneme_settings_ringtone_default_section">Brendli MAX</string>
+    <string name="oneme_settings_ringtone_default_section">Brendli WhiteMAX</string>
     <string name="oneme_settings_ringtone_low_volume_level">Ringtonlarni tinglash uchun ovoz balandligini oshiring</string>
     <string name="oneme_settings_ringtone_system_section">Tizimdagi kabi</string>
     <string name="oneme_settings_ringtone_title">Rington</string>
@@ -1925,7 +1925,7 @@ Ehtimol, qurilmada bitta mos ilova mavjud emas."</string>
     <string name="oneme_settings_twofa_error_passwords_equals">Parollar mos kelmadi, qaytadan urinib ko‘ring</string>
     <string name="oneme_settings_twofa_forget_password_action">Parolni unutdingizmi?</string>
     <string name="oneme_settings_twofa_lost_email_action">Pochtaga kirish imkoni yo‘qmi?</string>
-    <string name="oneme_settings_twofa_onboarding_description">MAXga har bir yangi kirish uchun qo‘shimcha parol. Profilingizni yanada ishonchli himoya qilish uchun uni o‘rnating</string>
+    <string name="oneme_settings_twofa_onboarding_description">WhiteMAXga har bir yangi kirish uchun qo‘shimcha parol. Profilingizni yanada ishonchli himoya qilish uchun uni o‘rnating</string>
     <string name="oneme_settings_twofa_onboarding_set_password">Parol o‘rnatish</string>
     <string name="oneme_settings_twofa_onboarding_success_description">"Endi profilingizga kirish uchun har safar parol va SMSdan olingan kodni kiritishingiz kerak bo‘ladi.
 Xavfsizlik maqsadida joriy seansdan tashqari barcha seanslaringizni yakunladingiz"</string>
@@ -2050,7 +2050,7 @@ Profilingizni o‘chirib tashlashingiz mumkin - 7 kundan so‘ng ma’lumotlarin
     <string name="oneme_stories_viewer_reply_sent">Xabar yuborildi</string>
     <string name="oneme_stories_viewer_reply_show">Ko‘rish</string>
     <string name="oneme_stories_viewer_retry_publish">Yuklashni qaytadan boshlash</string>
-    <string name="oneme_stories_viewer_unsupported_message">Ushbu hikoyani ko‘rish va ilovaning eng yangi funksiyalaridan foydalanish uchun MAXni yangilang</string>
+    <string name="oneme_stories_viewer_unsupported_message">Ushbu hikoyani ko‘rish va ilovaning eng yangi funksiyalaridan foydalanish uchun WhiteMAXni yangilang</string>
     <string name="oneme_stories_views_bottom_sheet_no_views_placeholder">Hozircha ko‘rishlar yo‘q</string>
     <string name="oneme_stories_views_bottom_sheet_title">Ko‘rishlar</string>
     <string name="oneme_stories_views_reactions_bottom_sheet_title">Reaksiyalar va ko‘rishlar</string>
@@ -2065,19 +2065,19 @@ hikoya"</string>
     <string name="oneme_too_many_requests_bottomsheet_subtitle">Keyinroq urinib ko‘ring</string>
     <string name="oneme_too_many_requests_bottomsheet_title">So‘rovlar soni cheklangan</string>
     <string name="oneme_unknown_contact_snackbar_add_contact">Siz kontakt qo‘shdingiz</string>
-    <string name="oneme_unsupported_attach_message">Xabarni ko‘rish uchun MAXni yangilang. Ushbu versiya eskirgan</string>
+    <string name="oneme_unsupported_attach_message">Xabarni ko‘rish uchun WhiteMAXni yangilang. Ushbu versiya eskirgan</string>
     <string name="oneme_video_message">videoxabar</string>
-    <string name="oneme_vpn_connected_description">MAX dan foydalanish uchun</string>
+    <string name="oneme_vpn_connected_description">WhiteMAX dan foydalanish uchun</string>
     <string name="oneme_vpn_connected_title">VPNni o‘chiring</string>
     <string name="oneme_wait_please">Iltimos, kuting</string>
     <string name="opponent_no_network">Foydalanuvchi onlayn emas</string>
     <string name="organization_placeholder_description">Tashkilot profili</string>
     <string name="original">asl nusxasi</string>
     <string name="password_toggle_content_description">Parol ochiq tursin</string>
-    <string name="permission_detail_dialog_subtitile">Sozlamalarda MAX ni tanlang va ikkita kalitni yoqing</string>
+    <string name="permission_detail_dialog_subtitile">Sozlamalarda WhiteMAX ni tanlang va ikkita kalitni yoqing</string>
     <string name="permission_detail_dialog_title">Sozlamalarda mikrofon va kameraga kirishga ruxsat bering</string>
     <string name="permission_fsi_request">Bloklangan ekranga kirishga ruxsat bering</string>
-    <string name="permission_fsi_request_rationale">Ushbu sozlama o‘rnatilmagan bo‘lsa, kimdir sizga MAX orqali qo‘ng‘iroq qilsa, kiruvchi qo‘ng‘iroqni ko‘ra olmaysiz</string>
+    <string name="permission_fsi_request_rationale">Ushbu sozlama o‘rnatilmagan bo‘lsa, kimdir sizga WhiteMAX orqali qo‘ng‘iroq qilsa, kiruvchi qo‘ng‘iroqni ko‘ra olmaysiz</string>
     <string name="permission_request_ignore_battery_optimizations">"Buni tuzatish uchun sozlamalarga o‘ting
 va \"Ruxsat berish\" tugmasini bosing"</string>
     <string name="permission_request_ignore_battery_optimizations_huawei">"Buni tuzatish uchun
@@ -2180,9 +2180,9 @@ va \"Cheklovlarsiz\" bandini tanlang"</string>
     <string name="poll_cover_description_limit_reached">Достигнут лимит описания</string>
     <string name="portal_blocked_channel">Kanal bloklangan</string>
     <string name="portal_blocked_chat">Chat bloklangan</string>
-    <string name="portal_blocked_chat_with_reason">MAX qoidalarini buzgani uchun chat bloklandi</string>
+    <string name="portal_blocked_chat_with_reason">WhiteMAX qoidalarini buzgani uchun chat bloklandi</string>
     <string name="portal_blocked_profile">Profil bloklangan</string>
-    <string name="portal_blocked_profile_with_reason">MAX qoidalarini buzgani uchun profil bloklandi</string>
+    <string name="portal_blocked_profile_with_reason">WhiteMAX qoidalarini buzgani uchun profil bloklandi</string>
     <string name="presence_was_long_ago">Anchadan beri onlayn emas</string>
     <string name="presence_was_recently">Yaqinda onlayn edi</string>
     <string name="privacy">Maxfiylik</string>
@@ -2330,7 +2330,7 @@ so‘ng paydo bo‘ladi"</string>
     <string name="profile_edit_shortlink_contact_title">Nikneym</string>
     <string name="profile_edit_shortlink_create_link_error_field_is_required">Ushbu maydonni to‘ldirish zarur</string>
     <string name="profile_edit_shortlink_create_link_error_no_connection_description">Qayta urinib ko‘ring yoki keyinroq qayta urinib ko‘ring</string>
-    <string name="profile_edit_shortlink_create_link_error_service_unavailable_description">MAXni qaytadan ishga tushirib ko‘ring</string>
+    <string name="profile_edit_shortlink_create_link_error_service_unavailable_description">WhiteMAXni qaytadan ishga tushirib ko‘ring</string>
     <string name="profile_edit_shortlink_create_link_error_title_no_connection">Ulanish bilan bog‘liq muammolar</string>
     <string name="profile_edit_shortlink_create_link_error_title_service_unavailable">Serverdan javob kelmadi</string>
     <string name="profile_edit_shortlink_header_description">Endi uni sozlash mumkin</string>
@@ -2435,8 +2435,8 @@ va qaytadan urining"</string>
     <string name="profile_notifications_disable_4_hour">4 soatga</string>
     <string name="profile_notifications_disable_forever">Abadiy</string>
     <string name="profile_phone_number_action_copy">Raqamni nusxalash</string>
-    <string name="profile_phone_number_action_tt_video_call">MAX orqali videoqo‘ng‘iroq</string>
-    <string name="profile_phone_number_action_tt_voice_call">MAX orqali qo‘ng‘iroq qilish</string>
+    <string name="profile_phone_number_action_tt_video_call">WhiteMAX orqali videoqo‘ng‘iroq</string>
+    <string name="profile_phone_number_action_tt_voice_call">WhiteMAX orqali qo‘ng‘iroq qilish</string>
     <string name="profile_phone_number_action_voice_call">Telefon orqali qo‘ng‘iroq qilish</string>
     <string name="profile_section_item_action_button_all_members">Barcha ishtirokchilar</string>
     <string name="profile_section_item_action_invite_by_link">Havola orqali taklif qilish</string>
@@ -2518,7 +2518,7 @@ va qaytadan urining"</string>
     <string name="settings_devices_finished_all">Joriy sessiyadan tashqari barcha sessiyalarni yakunlash</string>
     <string name="settings_devices_header_description">"Yangi qurilmalarda kiring
  va seanslarni boshqaring"</string>
-    <string name="settings_devices_header_title">MAXga ega qurilmalar</string>
+    <string name="settings_devices_header_title">WhiteMAXga ega qurilmalar</string>
     <string name="settings_devices_login_success">Yangi qurilmada davom ettiring</string>
     <string name="settings_devices_not_login_qr_error">Bu QR-kod kirish uchun emas</string>
     <string name="settings_devices_qr_scan_btn">QR-kod orqali kirish</string>
@@ -2543,7 +2543,7 @@ va qaytadan urining"</string>
     <string name="share_sticker_set_title">Stikerlar to‘plamini yo‘naltirish</string>
     <string name="share_story_single_media_snackbar">Tarix uchun bitta surat yoki videoni tanlang</string>
     <string name="share_success_link_send">Siz havolani yubordingiz</string>
-    <string name="share_to_max">MAXga yuborish</string>
+    <string name="share_to_max">WhiteMAXga yuborish</string>
     <string name="share_toolbar_action_cancel_selection">Tanlovni bekor qilish</string>
     <string name="share_toolbar_action_select">Tanlash</string>
     <string name="share_toolbar_title">Xabarni ulashish</string>
@@ -2575,7 +2575,7 @@ va qaytadan urining"</string>
     <string name="to_save">Saqlash</string>
     <string name="too_many_attempt">Juda ko‘p urinishlar bo‘lyapti</string>
     <string name="try_again">Qayta urinib ko‘ring</string>
-    <string name="tt_app_name">MAX</string>
+    <string name="tt_app_name">WhiteMAX</string>
     <string name="tt_at">%1$s %2$s da</string>
     <string name="tt_audio">audio-xabar</string>
     <string name="tt_bot_control_welcome_message">Bot bilan suhbatni boshladingiz</string>
@@ -2667,7 +2667,7 @@ va qaytadan urining"</string>
     <string name="tt_dates_yesterday_at">Kecha %s da</string>
     <string name="tt_dates_yesterday_at_last_seen_no_time">Kecha onlayn edi</string>
     <string name="tt_dates_yesterday_format">Kecha, %s</string>
-    <string name="tt_email_invite_subject">MAXNI o‘rnat!</string>
+    <string name="tt_email_invite_subject">WhiteMAXNI o‘rnat!</string>
     <string name="tt_file_size_unit_b">B</string>
     <string name="tt_file_size_unit_gb">GB</string>
     <string name="tt_file_size_unit_kb">KB</string>
@@ -2702,7 +2702,7 @@ va qaytadan urining"</string>
     <string name="tt_scheduled_message_send_failure">Xabar yuborilmadi: %s</string>
     <string name="tt_scheduled_message_send_success">Xabar yuborildi: %s</string>
     <string name="tt_scheduled_reminder_title">Eslatma</string>
-    <string name="tt_sms_invite_text">Men MAX messenjeridan foydalanaman. Qo‘shil! %s</string>
+    <string name="tt_sms_invite_text">Men WhiteMAX messenjeridan foydalanaman. Qo‘shil! %s</string>
     <string name="tt_sticker">stiker</string>
     <string name="tt_typing">yozmoqda</string>
     <string name="tt_typing_audio">audio yozib olmoqda</string>
@@ -2727,7 +2727,7 @@ va qaytadan urining"</string>
     <string name="unknown_call_botton_sheet_blocking_title">Foydalanuvchi bloklandi</string>
     <string name="unknown_call_botton_sheet_ok_button">Hammasi joyida</string>
     <string name="unknown_call_botton_sheet_status_title">Noma’lum kontakt qo‘ng‘iroq qildi</string>
-    <string name="unknown_call_snackbar_blocked_text">MAXni xavfsiz qilayotganingiz uchun rahmat</string>
+    <string name="unknown_call_snackbar_blocked_text">WhiteMAXni xavfsiz qilayotganingiz uchun rahmat</string>
     <string name="unknown_call_snackbar_contact_added_text">%s endi kontaktlarda</string>
     <string name="unknown_contact_add_to_contact">Kontaktlarga</string>
     <string name="unknown_contact_block_contact">Bloklash</string>
