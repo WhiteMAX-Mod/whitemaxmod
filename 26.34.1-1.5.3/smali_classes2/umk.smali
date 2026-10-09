@@ -2671,10 +2671,8 @@
 .end method
 
 .method public final w(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 26
+    .locals 25
 
-    const/16 v25, 0x0
-    return-object v25
     move-object/from16 v1, p0
 
     iget-byte v0, v1, Lumk;->e:B
