@@ -346,13 +346,9 @@
     return-object v0
 
     :pswitch_4
-    iget-object v0, v0, Ll6;->b:Lone/me/android/initialization/AccountInitializer;
+    sget-object v0, Lysj;->a:Lysj;
 
-    const/16 v1, 0xe7
-
-    invoke-static {v0, v1}, Luc9;->u(Lone/me/android/initialization/AccountInitializer;I)Ljava/lang/Object;
-
-    move-result-object v0
+    return-object v0
 
     check-cast v0, Llgf;
 

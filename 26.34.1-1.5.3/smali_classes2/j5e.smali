@@ -1263,29 +1263,7 @@
     :cond_42
     invoke-static {v0}, Limg;->E(Ljava/lang/Object;)V
 
-    move-object v0, v1
-
-    check-cast v0, Lhqg;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    instance-of v1, v0, Lcqg;
-
-    if-nez v1, :cond_43
-
-    instance-of v0, v0, Lgqg;
-
-    if-nez v0, :cond_43
-
-    move v0, v10
-
-    goto :goto_21
-
-    :cond_43
-    const/4 v0, 0x0
-
-    :goto_21
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     move-result-object v0
 

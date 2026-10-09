@@ -307,13 +307,7 @@
 
     move/from16 v16, v3
 
-    const-wide/16 v17, 0x0
-
-    if-nez v16, :cond_25
-
-    instance-of v13, v13, Lgqg;
-
-    if-nez v13, :cond_25
+    goto/16 :cond_25
 
     iget-object v13, v15, Lcff;->a:Lnwh;
 

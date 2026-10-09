@@ -1002,11 +1002,7 @@
 
     invoke-virtual {v12}, Ltwh;->getValue()Ljava/lang/Object;
 
-    move-result-object v12
-
-    check-cast v12, Lhqg;
-
-    instance-of v12, v12, Lfqg;
+    const/4 v12, 0x0
 
     invoke-virtual {v11}, Ljava/lang/Enum;->ordinal()I
 

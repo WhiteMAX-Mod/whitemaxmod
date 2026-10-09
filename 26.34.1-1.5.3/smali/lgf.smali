@@ -198,7 +198,7 @@
 
     iput-object p1, p0, Llgf;->t:Ljava/lang/String;
 
-    sget-object p1, Lgqg;->a:Lgqg;
+    sget-object p1, Lcqg;->a:Lcqg;
 
     invoke-static {p1}, Lmv7;->a(Ljava/lang/Object;)Ltwh;
 
@@ -417,21 +417,9 @@
 
     move-object/from16 v2, p4
 
-    sget-object v3, Lg2a;->d:Lg2a;
-
     sget-object v4, Lysj;->a:Lysj;
 
-    const-string v5, "runDownloading: force="
-
-    const-string v6, "runDownloading ignored: "
-
-    instance-of v7, v2, Lbgf;
-
-    if-eqz v7, :cond_0
-
-    move-object v7, v2
-
-    check-cast v7, Lbgf;
+    return-object v4
 
     iget v8, v7, Lbgf;->j:I
 
@@ -1686,21 +1674,7 @@
 .end method
 
 .method public final m(Lr49;Z)V
-    .locals 4
-
-    iget-object v0, p0, Llgf;->y:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result v0
-
-    iget-object v1, p0, Llgf;->t:Ljava/lang/String;
-
-    if-nez v0, :cond_0
-
-    const-string p0, "install: service not run"
-
-    invoke-static {v1, p0}, Loi5;->a0(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
 
     return-void
 
@@ -2558,19 +2532,11 @@
 .end method
 
 .method public final p()Z
-    .locals 2
+    .locals 1
 
-    invoke-virtual {p0}, Llgf;->j()Lvzb;
+    const/4 v0, 0x0
 
-    move-result-object v0
-
-    invoke-interface {v0}, Lvzb;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Boolean;
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+    return v0
 
     move-result v0
 
@@ -3021,25 +2987,11 @@
 .end method
 
 .method public final u(Lr49;Z)Lqj5;
-    .locals 6
+    .locals 0
 
-    iget-object v0, p0, Llgf;->y:Ljava/util/concurrent/atomic/AtomicBoolean;
+    const/4 p0, 0x0
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result v0
-
-    iget-object v1, p0, Llgf;->t:Ljava/lang/String;
-
-    const/4 v2, 0x0
-
-    if-nez v0, :cond_0
-
-    const-string p0, "setAutoUpdateEnabled: service not run"
-
-    invoke-static {v1, p0}, Loi5;->a0(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-object v2
+    return-object p0
 
     :cond_0
     sget-object v0, Loi5;->d:Ldxc;
