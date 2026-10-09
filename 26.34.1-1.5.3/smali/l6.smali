@@ -346,56 +346,7 @@
     return-object v0
 
     :pswitch_4
-    iget-object v0, v0, Ll6;->b:Lone/me/android/initialization/AccountInitializer;
-
-    const/16 v1, 0xe7
-
-    invoke-static {v0, v1}, Luc9;->u(Lone/me/android/initialization/AccountInitializer;I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Llgf;
-
-    iget-object v1, v0, Llgf;->y:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v1, v14}, Ljava/util/concurrent/atomic/AtomicBoolean;->getAndSet(Z)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_5
-
-    iget-object v0, v0, Llgf;->t:Ljava/lang/String;
-
-    const-string v1, "already running"
-
-    invoke-static {v0, v1}, Loi5;->a0(Ljava/lang/String;Ljava/lang/String;)V
-
     goto :goto_2
-
-    :cond_5
-    iget-object v1, v0, Llgf;->c:La75;
-
-    iget-object v2, v0, Llgf;->b:Leyi;
-
-    check-cast v2, Lktc;
-
-    invoke-virtual {v2}, Lktc;->b()Lq65;
-
-    move-result-object v2
-
-    new-instance v4, Lggf;
-
-    invoke-direct {v4, v0, v15}, Lggf;-><init>(Llgf;Lu15;)V
-
-    invoke-static {v1, v2, v3, v4, v12}, Lji9;->M(La75;Lo65;ILqx7;I)Lgsh;
-
-    move-result-object v1
-
-    new-instance v2, Lsff;
-
-    invoke-direct {v2, v0, v14}, Lsff;-><init>(Llgf;B)V
-
-    invoke-virtual {v1, v2}, Lic9;->o0(Lcx7;)Lo26;
 
     :goto_2
     sget-object v0, Lysj;->a:Lysj;
